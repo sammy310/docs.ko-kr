@@ -7,14 +7,15 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: 4184b2b34c4503eaf4e9513a85e6c018f6de7366
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8acc792b5217519e2a73c0cdf30c20161373c678
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553820"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283915"
 ---
 # <a name="clr-etw-events"></a>CLR ETW 이벤트
+
 이 섹션의 항목은 ETW(Windows용 이벤트 추적) 이벤트를 설명합니다. 각 이벤트에는 연결된 키워드 및 수준이 있으며, [CLR ETW 키워드 및 수준](clr-etw-keywords-and-levels.md) 항목에서 설명합니다. CLR에는 이벤트에 대한 두 개의 공급자가 있습니다.  
   
 - 런타임 공급자 - 사용하도록 설정된 키워드(이벤트 범주)에 따라 이벤트를 발생시킵니다. CLR 런타임 공급자 GUID는 e13c0d23-ccbc-4e12-931b-d9cc2eee27e4입니다.  
@@ -24,6 +25,7 @@ ms.locfileid: "90553820"
  공급자에 대한 자세한 내용은 [CLR ETW 공급자](clr-etw-providers.md)를 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [런타임 정보 이벤트](runtime-information-etw-events.md)  
  SKU, 버전 번호, 런타임이 활성화된 방법, 시작하는 데 사용된 명령줄 매개 변수, GUID(해당되는 경우) 및 다른 관련 정보를 비롯한 런타임 관련 정보를 캡처합니다.  
   
@@ -60,7 +62,7 @@ ms.locfileid: "90553820"
  [스택 이벤트](stack-etw-event.md)  
  이벤트가 발생한 이후 스택 추적을 생성하기 위해 다른 이벤트와 함께 사용되는 정보를 캡처합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ETW를 사용한 디버깅 및 성능 조정 개선](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
 - [.NET Framework 로깅 제어](controlling-logging.md)

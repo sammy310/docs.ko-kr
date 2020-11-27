@@ -3,14 +3,15 @@ title: 바인딩에 시간 제한 값 구성
 description: WCF 바인딩에 대 한 시간 제한 설정을 관리 하 여 서비스의 성능, 유용성 및 보안을 개선 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-ms.openlocfilehash: c41824a242d9b42290183cd70b9acf5b8ee59e6b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6582568f3579f784d4c91c707dbb35c38533551d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245117"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284045"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>바인딩에 시간 제한 값 구성
+
 WCF 바인딩에서 사용할 수 있는 시간 제한 설정은 여러 가지가 있습니다. 이러한 시간 제한 설정을 정확하게 설정하면 서비스 성능이 향상될 뿐만 아니라 서비스의 유용성과 보안에도 도움이 됩니다. WCF 바인딩에서 사용할 수 있는 시간 제한은 다음과 같습니다.  
   
 1. OpenTimeout  
@@ -22,6 +23,7 @@ WCF 바인딩에서 사용할 수 있는 시간 제한 설정은 여러 가지�
 4. ReceiveTimeout  
   
 ## <a name="wcf-binding-timeouts"></a>WCF 바인딩 시간 제한  
+
  이 항목에서 설명하는 각 설정은 바인딩 자체에서 코드 또는 구성으로 지정합니다. 다음 코드에서는 자체 호스트된 서비스의 컨텍스트에서 WCF 바인딩에 시간 제한을 프로그래밍 방식으로 설정하는 방법을 보여 줍니다.  
   
 ```csharp  
@@ -76,6 +78,7 @@ public static void Main()
  이러한 설정에 대한 자세한 내용은 <xref:System.ServiceModel.Channels.Binding> 클래스 문서를 참조하세요.  
   
 ### <a name="client-side-timeouts"></a>클라이언트 측 시간 제한  
+
  클라이언트 쪽:  
   
 1. SendTimeout - 요청/회신 서비스 작업의 회신 메시지 수신을 포함하여 메시지 보내기의 전체 과정을 제어하는 OperationTimeout을 초기화하는 데 사용합니다. 이 시간 제한은 콜백 계약 메서드에서 회신 메시지를 보낼 때도 적용됩니다.  
@@ -87,6 +90,7 @@ public static void Main()
 4. ReceiveTimeout – 사용 되지 않습니다.  
   
 ### <a name="service-side-timeouts"></a>서비스 측 시간 제한  
+
  서비스 측:  
   
 1. SendTimeout, OpenTimeout, CloseTimeout은 클라이언트에서와 동일 합니다.  

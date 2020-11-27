@@ -2,19 +2,21 @@
 title: 메시지 로깅에 대한 보안 고려 사항
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: df8a1b4382ce4bce60e3214def10c816ced0f13c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8594329fb27aa1d77a2baffee2a7e37ea0d009c4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550549"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283772"
 ---
 # <a name="security-concerns-for-message-logging"></a>메시지 로깅에 대한 보안 고려 사항
+
 이 항목에서는 메시지 로깅에 의해 생성된 이벤트뿐 아니라 중요한 데이터가 메시지 로그에서 노출되지 않도록 보호하는 방법에 대해 설명합니다.  
   
 ## <a name="security-concerns"></a>보안 고려 사항  
   
 ### <a name="logging-sensitive-information"></a>중요한 정보 로깅  
+
  WCF (Windows Communication Foundation)는 응용 프로그램별 헤더 및 본문의 데이터를 수정 하지 않습니다. 또한 WCF는 응용 프로그램별 헤더 또는 본문 데이터에서 개인 정보를 추적 하지 않습니다.  
   
  메시지 로깅을 사용하도록 설정하면 쿼리 문자열 등의 애플리케이션별 헤더와 신용 카드 번호 등의 본문 정보에 있는 개인 정보가 로그에 표시될 수 있습니다. 애플리케이션 배포자는 구성 및 로그 파일에 액세스 제어를 적용하는 작업을 담당합니다. 이런 종류의 정보가 표시되지 않도록 하려면 로깅을 사용하지 않도록 설정하거나 로그를 공유하려는 데이터의 일부를 필터링해야 합니다.  
@@ -94,9 +96,11 @@ ms.locfileid: "90550549"
 > 잘못된 형식의 메시지에서는 PII가 숨겨지지 않습니다. 이와 같은 메시지는 수정 사항 없이 있는 그대로 기록됩니다. 이전에 언급한 특성은 이에 영향을 주지 않습니다.  
   
 ### <a name="custom-trace-listener"></a>사용자 지정 추적 수신기  
+
  관리자에 대해서는 메시지 로깅 추적 소스에 사용자 지정 추적 수신기를 추가하는 권한을 제한해야 합니다. 이는 사용자 지정 수신기가 메시지를 원격으로 보내도록 악의적으로 구성될 수 있으며 이를 통해 중요한 정보가 노출될 수 있기 때문입니다. 또한 원격 데이터베이스와 같은 연결을 통해 메시지를 보내도록 사용자 지정 수신기를 구성할 경우, 원격 컴퓨터의 메시지 로그에 적절한 액세스 제어를 적용해야 합니다.  
   
 ## <a name="events-triggered-by-message-logging"></a>메시지 로깅을 통해 트리거되는 이벤트  
+
  다음은 메시지 로깅을 통해 내보내지는 모든 이벤트의 목록입니다.  
   
 - Message logging on: 이 이벤트는 구성 시 메시지 로깅을 사용하도록 설정하거나 WMI를 통해 내보내집니다. 이벤트의 내용은 "메시지 로깅이 켜졌습니다. 메시지 본문과 같이 통신 중에 암호화된 경우에도 중요한 정보가 일반 텍스트로 기록됩니다."입니다.  
@@ -105,11 +109,11 @@ ms.locfileid: "90550549"
   
 - Log Known PII On: 이 이벤트는 알려진 PII의 로깅을 사용하도록 설정하면 내보내집니다. 이는 `enableLoggingKnownPii` `machineSettings` Machine.config 파일의 요소에 있는 특성이로 설정 되 `true` 고 `logKnownPii` `source` App.config 또는 Web.config 파일에서 요소의 특성이로 설정 된 경우에 발생 `true` 합니다.  
   
-- Log Known PII Not Allowed: 이 이벤트는 알려진 PII의 로깅이 허용되지 않을 때 내보내집니다. 이는 `logKnownPii` `source` App.config 또는 Web.config 파일에 있는 요소의 특성이로 설정 되어 `true` 있지만 `enableLoggingKnownPii` `machineSettings` Machine.config 파일의 요소에 있는 특성이로 설정 `false` 된 경우에 발생 합니다. 예외는 throw되지 않습니다.  
+- Log Known PII Not Allowed: 이 이벤트는 알려진 PII의 로깅이 허용되지 않을 때 내보내집니다. 이는 `logKnownPii` `source` App.config 또는 Web.config 파일에 있는 요소의 특성이로 설정 되어 `true` 있지만 `enableLoggingKnownPii` `machineSettings` Machine.config 파일의 요소에 있는 특성이로 설정 `false` 된 경우에 발생 합니다. 예외가 throw되지 않습니다.  
   
  이러한 이벤트는 Windows에 포함된 이벤트 뷰어 도구에서 볼 수 있습니다. 이에 대 한 자세한 내용은 [이벤트 로깅](./event-logging/index.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메시지 로깅](message-logging.md)
 - [보안 고려 사항 및 추적에 대한 유용한 정보](./tracing/security-concerns-and-useful-tips-for-tracing.md)

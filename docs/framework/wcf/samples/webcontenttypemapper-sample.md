@@ -2,14 +2,15 @@
 title: WebContentTypeMapper 샘플
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: a51d03fab5c6499a0e9685e01a9bbace1c11f28a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 550e763d30a7fa503f6500dcaa8f9b77ea499bca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594558"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283265"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper 샘플
+
 이 샘플에서는 Windows Communication Foundation (WCF) 메시지 본문 형식에 새 콘텐츠 형식을 매핑하는 방법을 보여 줍니다.  
   
  <xref:System.ServiceModel.Description.WebHttpEndpoint>요소는 WCF가 동일한 끝점에서 JSON, XML 또는 원시 이진 메시지를 수신할 수 있도록 웹 메시지 인코더에 연결 합니다. 인코더는 요청의 HTTP 콘텐츠 형식을 확인하여 메시지의 본문 형식을 확인합니다. 이 샘플에서는 콘텐츠 형식과 본문 형식 간의 매핑을 사용자가 제어할 수 있게 하는 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 클래스를 소개합니다.  
@@ -58,7 +59,7 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 2. [Windows Communication Foundation 샘플 빌드](building-the-samples.md)에 설명 된 대로 WebContentTypeMapperSample 솔루션을 빌드합니다.  
   
-3. `http://localhost/ServiceModelSamples/JCTMClientPage.htm`(프로젝트 디렉터리 내에서 브라우저의 JCTMClientPage을 열지 마십시오.)로 이동 합니다.  
+3. 로 이동 `http://localhost/ServiceModelSamples/JCTMClientPage.htm` 합니다 (프로젝트 디렉터리 내에서 브라우저의 JCTMClientPage.htm 열지 않음).  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: d6018c8339cb04471bf9ce0f2ee86e091e1d1e95
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ab608ba954eafd9035335f00c8755629c5703c22
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597529"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284162"
 ---
 # <a name="configuring-system-provided-bindings"></a>시스템 제공 바인딩 구성
+
 바인딩은 엔드포인트와 통신할 때 사용할 통신 메커니즘을 지정하고 엔드포인트에 연결하는 방법을 나타냅니다. 바인딩은 필요한 통신 기능을 제공 하기 위해 WCF (Windows Communication Foundation) 채널이 계층화 되는 방식을 정의 하는 요소로 구성 됩니다. 바인딩에는 다음 세 가지 형식의 요소가 있습니다.  
   
 - 프로토콜 채널 바인딩 요소. 엔드포인트에 보내는 메시지에 사용할 보안, 안정성, 컨텍스트 흐름 설정 또는 사용자 정의 프로토콜을 결정합니다.  
@@ -31,6 +32,7 @@ ms.locfileid: "84597529"
 > 다른 방법으로 네트워크 교환의 보안을 유지하지 않는 한 보안을 지원하지 않거나 보안이 설정되지 않은 바인딩과 함께 이중 계약을 사용하지 마십시오.  
   
 ## <a name="system-provided-bindings"></a>시스템 제공 바인딩  
+
  다음 바인딩은 WCF와 함께 제공 됩니다.  
   
 |바인딩|구성 요소|Description|  
@@ -49,6 +51,7 @@ ms.locfileid: "84597529"
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../configure-apps/file-schema/wcf/msmqintegrationbinding.md)|WCF 응용 프로그램과 기존 메시지 큐 (MSMQ) 응용 프로그램 간의 시스템 간 통신에 적합 한 바인딩입니다.|  
   
 ## <a name="binding-features"></a>바인딩 기능  
+
  다음 표에서는 각 시스템 제공 바인딩의 몇 가지 주요 기능을 보여 줍니다. 바인딩은 첫 번째 열에 나열되어 있고, 기능에 대한 정보는 표에 설명되어 있습니다. 다음 표에는 사용된 바인딩 약어에 대한 키가 나와 있습니다. 바인딩을 선택하려면 필요한 행 기능을 모두 만족하는 열을 결정합니다.  
   
 |바인딩|상호 운용성|보안 모드(기본값)|세션<br /><br /> (기본값)|트랜잭션|이중|  
@@ -57,11 +60,11 @@ ms.locfileid: "84597529"
 |<xref:System.ServiceModel.WSHttpBinding>|WS|None, Transport, (Message), Mixed|(None), Transport, Reliable Session|(None), 예|해당 없음|  
 |<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|None, Transport, (Message), Mixed|(None), Transport, Reliable Session|(None), 예|해당 없음|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|None, (Message)|(Reliable Session)|(None), 예|예|  
-|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|None, (Message), Mixed|(None), Reliable Session|(None), 예|예|  
-|<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|None, (Message), Mixed|(None), Reliable Session|(None), 예|예|  
+|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|None, (Message), Mixed|(None), Reliable Session|(None), 예|아니요|  
+|<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|None, (Message), Mixed|(None), Reliable Session|(None), 예|아니요|  
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|None, (Transport), Message,<br /><br /> 혼합됨|Reliable Session, (Transport)|(None), 예|예|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|None,<br /><br /> (Transport)|None, (Transport)|(None), 예|예|  
-|<xref:System.ServiceModel.NetMsmqBinding>|.NET|None, Message, (Transport), Both|(없음)|(None), 예|예|  
+|<xref:System.ServiceModel.NetMsmqBinding>|.NET|None, Message, (Transport), Both|(없음)|(None), 예|아니요|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|None, Message, (Transport), Mixed|(없음)|(없음)|예|  
 |<xref:System.ServiceModel.WebHttpBinding>|.Net|없음, 전송, 전송|(없음)|(없음)|해당 없음|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|None, (Transport)|(없음)|(None), 예|해당 없음|  

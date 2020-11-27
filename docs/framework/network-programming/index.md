@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 117fce887a04def7f9b3f7654a8e9e675ea462d2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 50f23e1a343f969ad2cbb3422038921c710b2b1b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502407"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241683"
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework의 네트워크 프로그래밍
+
 Microsoft .NET Framework는 더 빠르고 쉽게 애플리케이션에 통합할 수 있는 계층적이고 확장 가능하며 관리되는 인터넷 서비스 구현을 제공합니다. 네트워크 애플리케이션은 플러그 가능한 프로토콜을 바탕으로 빌드하여 새 인터넷 프로토콜을 자동으로 이용하거나, Windows 소켓 인터페이스의 관리되는 구현을 사용하여 소켓 수준에서 네트워크 작업을 수행할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
@@ -87,6 +88,7 @@ Microsoft .NET Framework는 더 빠르고 쉽게 애플리케이션에 통합할
  <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> 네임스페이스의 클래스를 사용하는 다운로드 가능한 네트워크 프로그래밍 샘플에 대한 링크입니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.Net?displayProperty=nameWithType>  
  오늘날 네트워크에 사용되는 여러 프로토콜을 위한 간단한 프로그래밍 인터페이스를 제공합니다. 이 네임스페이스의 <xref:System.Net.WebRequest?displayProperty=nameWithType> 및 <xref:System.Net.WebResponse?displayProperty=nameWithType> 클래스는 플러그 가능한 프로토콜을 위한 기초입니다.  
   

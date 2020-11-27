@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: bdebe0db25d796c2debfb905864fd8bf780c8e66
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 164a939fa7ee0112e1ceae24755854b09dc72603
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558656"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283993"
 ---
 # <a name="message-security-certificate"></a>메시지 보안 인증서
+
 이 샘플에서는 클라이언트에 대해 X.509 v3 인증서를 통한 WS-Security 인증을 사용하며 서버의 X.509 v3 인증서를 사용한 서버 인증을 수행해야 하는 애플리케이션의 구현 방법을 보여 줍니다. 이 샘플에서는 클라이언트와 서버 간의 모든 애플리케이션 메시지가 서명 및 암호화되도록 기본 설정을 사용합니다. 이 샘플은 [WSHttpBinding](wshttpbinding.md) 을 기반으로 하며, 인터넷 정보 서비스 (IIS)에서 호스팅하는 클라이언트 콘솔 프로그램 및 서비스 라이브러리로 구성 됩니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다.  
   
 > [!NOTE]
@@ -202,7 +203,7 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- Message Security 샘플에 포함된 Setup.bat 배치 파일을 사용하면 인증서 기반 보안이 필요한 자체 호스팅 애플리케이션을 실행하도록 관련 인증서가 있는 클라이언트와 서버를 구성할 수 있습니다. 이 배치 파일을 세 가지 모드로 실행할 수 있습니다. 단일 컴퓨터 모드에서 실행 하려면 Visual Studio 용 개발자 명령 프롬프트에서 **setup.bat** 합니다. 서비스 모드의 경우 **setup.bat 서비스**를 입력 합니다. 클라이언트 모드의 경우 ** 클라이언트setup.bat**합니다. 다중 컴퓨터 구성에서 샘플을 실행할 경우 클라이언트 및 서버 모드를 사용합니다. 자세한 내용은 이 항목의 끝에 있는 설치 절차를 참조하세요. 다음 부분에는 적절한 구성으로 실행되게 수정할 수 있도록 배치 파일의 다양한 섹션에 대한 간략한 개요가 소개되어 있습니다.  
+ Message Security 샘플에 포함된 Setup.bat 배치 파일을 사용하면 인증서 기반 보안이 필요한 자체 호스팅 애플리케이션을 실행하도록 관련 인증서가 있는 클라이언트와 서버를 구성할 수 있습니다. 이 배치 파일을 세 가지 모드로 실행할 수 있습니다. 단일 컴퓨터 모드에서 실행 하려면 Visual Studio 용 개발자 명령 프롬프트에서 **setup.bat** 합니다. 서비스 모드의 경우 **setup.bat 서비스** 를 입력 합니다. 클라이언트 모드의 경우 **클라이언트setup.bat** 합니다. 다중 컴퓨터 구성에서 샘플을 실행할 경우 클라이언트 및 서버 모드를 사용합니다. 자세한 내용은 이 항목의 끝에 있는 설치 절차를 참조하세요. 다음 부분에는 적절한 구성으로 실행되게 수정할 수 있도록 배치 파일의 다양한 섹션에 대한 간략한 개요가 소개되어 있습니다.  
   
 - 클라이언트 인증서 만들기  
   
@@ -269,7 +270,7 @@ Press <ENTER> to terminate client.
     > 가 아닌를 사용 하는 경우 영어 버전의 Windows에서는 Setup.bat 파일을 편집 하 고 "NT AUTHORITY\NETWORK SERVICE" 계정 이름을 해당 지역으로 바꾸어야 합니다.  
   
 > [!NOTE]
-> 이 배치 파일에서 사용되는 도구는 C:\Program Files\Microsoft Visual Studio 8\Common7\tools 또는 C:\Program Files\Microsoft SDKs\Windows\v6.0\bin에 있습니다. 이러한 디렉터리 중 하나가 시스템 경로에 있어야 합니다. Visual Studio가 설치 된 경우 경로에이 디렉터리를 가져오는 가장 쉬운 방법은 Visual Studio에 대 한 개발자 명령 프롬프트를 여는 것입니다. **시작**을 클릭 한 다음 **모든 프로그램**, **Visual Studio 2012**, **도구**를 차례로 선택 합니다. 이 명령 프롬프트에는 이미 구성된 적절한 경로가 있습니다. 그렇지 않을 경우 해당 디렉터리를 경로에 수동으로 추가해야 합니다.  
+> 이 배치 파일에서 사용되는 도구는 C:\Program Files\Microsoft Visual Studio 8\Common7\tools 또는 C:\Program Files\Microsoft SDKs\Windows\v6.0\bin에 있습니다. 이러한 디렉터리 중 하나가 시스템 경로에 있어야 합니다. Visual Studio가 설치 된 경우 경로에이 디렉터리를 가져오는 가장 쉬운 방법은 Visual Studio에 대 한 개발자 명령 프롬프트를 여는 것입니다. **시작** 을 클릭 한 다음 **모든 프로그램**, **Visual Studio 2012**, **도구** 를 차례로 선택 합니다. 이 명령 프롬프트에는 이미 구성된 적절한 경로가 있습니다. 그렇지 않을 경우 해당 디렉터리를 경로에 수동으로 추가해야 합니다.  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

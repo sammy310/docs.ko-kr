@@ -8,17 +8,19 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-ms.openlocfilehash: dfbe047640a3a640cf37adeea6fa3656cfd9ec6d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 31426ae0589954d4388ba6d40f156c3eea9a8989
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309679"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283889"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 키워드 및 수준
+
 범주 및 수준별로 ETW(Windows용 이벤트 추적) 이벤트를 필터링할 수 있습니다. 이벤트 [CLR ETW 키워드](#clr-etw-keywords)를 통해 범주별로 이벤트를 필터링할 수 있습니다. 런타임 및 런다운 공급자를 위해 여러 키워드를 조합하여 사용할 수 있습니다. [이벤트 수준](#etw-event-levels) 은 플래그로 식별됩니다.  
   
 ## <a name="clr-etw-keywords"></a>CLR ETW 키워드  
+
  키워드는 값을 생성하기 위해 조합할 수 있는 플래그입니다. 실제로는 명령줄 유틸리티를 호출할 때 키워드 이름 대신 키워드의 16진수 값을 사용합니다.  
   
  다음 표에서는 키워드에 대해 설명합니다.  
@@ -32,7 +34,9 @@ ms.locfileid: "86309679"
 - [런다운 공급자를 위한 기호 확인용 키워드 조합](#rundown_combo)  
   
 <a name="runtime"></a>
+
 ### <a name="clr-etw-runtime-keywords"></a>CLR ETW 런타임 키워드  
+
  다음 표에는 CLR ETW 런타임 키워드, 해당 값 및 용도가 나와 있습니다.  
   
 |런타임 키워드 이름|값|목적|  
@@ -55,7 +59,9 @@ ms.locfileid: "86309679"
 |`StackKeyword`|0x40000000|CLR [스택 추적 이벤트](stack-etw-event.md)를 수집할 수 있도록 합니다.|  
   
 <a name="rundown"></a>
+
 ### <a name="clr-etw-rundown-keywords"></a>CLR ETW 런다운 키워드  
+
  다음 표에는 CLR ETW 런다운 키워드, 해당 값 및 용도가 나와 있습니다.  
   
 |런다운 키워드 이름|값|목적|  
@@ -71,6 +77,7 @@ ms.locfileid: "86309679"
 |`PerfTrackKeyWord`|0x2000000|`ModuleDCStart`, `ModuleDCEnd`, `ModuleRangeDCStart`및 `ModuleRangeDCEnd` 이벤트를 수집할 수 있도록 합니다.|
   
 <a name="runtime_combo"></a>
+
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-runtime-provider"></a>런타임 공급자를 위한 기호 확인용 키워드 조합  
   
 |키워드 및 플래그|애플리케이션 도메인, 어셈블리, 모듈 로드/언로드 이벤트|메서드 로드/언로드 이벤트(동적 이벤트 제외)|동적 메서드 로드/소멸 이벤트|  
@@ -83,6 +90,7 @@ ms.locfileid: "86309679"
 |`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|없음|이벤트를 언로드합니다.|해당 사항 없음|  
   
 <a name="rundown_combo"></a>
+
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-rundown-provider"></a>런다운 공급자를 위한 기호 확인용 키워드 조합  
   
 |키워드 및 플래그|애플리케이션 도메인, 어셈블리, 모듈 DCStart/DCEnd 이벤트|메서드 DCStart/DCEnd 이벤트(동적 메서드 이벤트 포함)|  
@@ -95,6 +103,7 @@ ms.locfileid: "86309679"
 |`NGenKeyword` +<br /><br /> `EndRundownKeyword`|없음|`DCEnd` 이벤트|  
 
 ## <a name="etw-event-levels"></a>ETW 이벤트 수준  
+
  ETW 이벤트는 수준별로도 필터링될 수 있습니다. 수준이 0x5로 설정된 경우 0x5 이하를 포함하여 모든 수준의 이벤트(키워드를 통해 활성화된 범주에 속하는 이벤트)가 발생합니다. 수준이 0x2로 설정된 경우 수준 0x2 이하에 속한 이벤트만 발생합니다.  
   
  수준의 의미는 다음과 같습니다.  

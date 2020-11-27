@@ -7,14 +7,15 @@ helpviewer_keywords:
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: bf1690b094e9d472fd4213f7fa3df545dca6ebac
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 29e0dbc9ba99405dc2cca714efb6589ff427eccd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166053"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282966"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>ListItem 컨트롤 형식에 대한 UI 자동화 지원
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -25,7 +26,9 @@ ms.locfileid: "87166053"
  다음 섹션에서는 ListItem 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , Win32 또는 Windows Forms 모든 목록 컨트롤에 적용 됩니다.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
+
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
+
  다음 표는 목록 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 트리에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.  
   
 |컨트롤 뷰|콘텐츠 뷰|  
@@ -35,7 +38,9 @@ ms.locfileid: "87166053"
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 보기 내에서 목록 항목 컨트롤의 자식은 항상 "0" 이어야 합니다. 컨트롤의 구조가 목록 항목 아래에 다른 항목이 포함 되는 경우에는 [TreeItem 컨트롤 형식 컨트롤 형식에 대 한 UI 자동화 지원](ui-automation-support-for-the-treeitem-control-type.md) 에 대 한 요구 사항을 따라야 합니다.  
   
 <a name="Required_UI_Automation_Properties"></a>
+
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성  
+
  다음 표에서는 값 또는 정의가 목록 항목 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다. 속성에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|참고|  
@@ -55,7 +60,9 @@ ms.locfileid: "87166053"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|개체|이 속성은 Scroll 컨트롤 패턴을 구현하는 부모 컨테이너 내에서 목록 항목이 현재 스크롤해서 표시되는지를 나타내는 값을 반환해야 합니다.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>
+
 ## <a name="required-ui-automation-control-patterns"></a>필요한 UI 자동화 컨트롤 패턴  
+
  다음 표에서는 목록 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)를 참조하세요.  
   
 |컨트롤 패턴|지원|참고|  
@@ -69,10 +76,12 @@ ms.locfileid: "87166053"
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|개체|선택된 항목과 별개로, 항목에서 수행할 수 있는 명령이 있는 경우 이 패턴을 구현해야 합니다. 이는 일반적으로 목록 항목 컨트롤을 두 번 클릭하는 것과 연관된 동작입니다. Microsoft Windows 탐색기에서 문서를 시작 하거나 Microsoft Windows Media Player에서 음악 파일을 재생 하는 경우를 예로 들 수 있습니다.|  
   
 <a name="Required_UI_Automation_Events"></a>
+
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  
+
  다음 표에서는 모든 목록 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](ui-automation-events-overview.md)를 참조하세요.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|참고|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|메모|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|개체|없음|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|필수|없음|  
@@ -89,7 +98,7 @@ ms.locfileid: "87166053"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|없음|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Windows.Automation.ControlType.ListItem>
 - [UI 자동화 컨트롤 형식 개요](ui-automation-control-types-overview.md)

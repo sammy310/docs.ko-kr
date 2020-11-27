@@ -2,17 +2,19 @@
 title: 동작
 ms.date: 03/30/2017
 ms.assetid: b0885b65-4e74-4bc9-bbf0-eb7ebe566da1
-ms.openlocfilehash: 79cc9af5a2050ccee4da3239fa89d704b6378d04
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e963da6d151b82b205f6f52b70aeb69b09eae4f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575566"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283616"
 ---
 # <a name="behaviors"></a>동작
+
 이 섹션에는 WCF (Windows Communication Foundation) 서비스 동작을 보여 주는 샘플이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [동시성](concurrency.md)  
  <xref:System.ServiceModel.ServiceBehaviorAttribute> 열거형과 함께 <xref:System.ServiceModel.ConcurrencyMode>를 사용하여 서비스 인스턴스가 메시지를 순차적으로 처리하는지, 동시에 처리하는지를 제어하는 방법을 보여 줍니다.  
   

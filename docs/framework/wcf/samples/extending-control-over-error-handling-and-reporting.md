@@ -2,14 +2,15 @@
 title: 오류 처리 및 오류 보고에 대한 확장 제어
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: c7ca8d85220d65905bc4d9d220de366c331504a4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2e9298c6a282b9df8499458ad166e320d41e63a9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600544"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283330"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>오류 처리 및 오류 보고에 대한 확장 제어
+
 이 샘플에서는 인터페이스를 사용 하 여 WCF (Windows Communication Foundation) 서비스에서 오류 처리 및 오류 보고에 대 한 제어를 확장 하는 방법을 보여 줍니다 <xref:System.ServiceModel.Dispatcher.IErrorHandler> . 이 샘플은 오류를 처리 하기 위해 서비스에 추가 된 몇 가지 추가 코드를 사용 하 여 [시작](getting-started-sample.md) 을 기반으로 합니다. 클라이언트에서는 몇 가지 오류 조건을 발생시키고 서비스에서는 해당 오류를 가로채서 파일에 기록합니다.  
   
 > [!NOTE]
