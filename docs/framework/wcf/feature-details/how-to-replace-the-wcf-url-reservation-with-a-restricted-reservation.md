@@ -2,12 +2,12 @@
 title: '방법: WCF URL 예약을 제한된 예약으로 바꾸기'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: a7025636bb1ca2ef250d7d25634bda961f2db09d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 52dc74ea1f8e86d6a92a2894b888b8d150ebf47c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811615"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276063"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>방법: WCF URL 예약을 제한된 예약으로 바꾸기
 
@@ -29,18 +29,19 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 ## <a name="to-delete-the-wcf-url-reservation"></a>WCF URL 예약을 삭제하려면  
   
-1. **시작**을 클릭 하 고 **모든 프로그램**을 가리킨 다음 **보조 프로그램**을 클릭 하 고 **명령 프롬프트** 를 마우스 오른쪽 단추로 클릭 하 고 표시 되는 상황에 맞는 메뉴에서 **관리자 권한으로 실행** 을 클릭 합니다. 계속 하려면 사용 권한을 요청할 수 있는 UAC (사용자 계정 컨트롤) 창에서 **계속** 을 클릭 합니다.  
+1. **시작** 을 클릭 하 고 **모든 프로그램** 을 가리킨 다음 **보조 프로그램** 을 클릭 하 고 **명령 프롬프트** 를 마우스 오른쪽 단추로 클릭 하 고 표시 되는 상황에 맞는 메뉴에서 **관리자 권한으로 실행** 을 클릭 합니다. 계속 하려면 사용 권한을 요청할 수 있는 UAC (사용자 계정 컨트롤) 창에서 **계속** 을 클릭 합니다.  
   
 2. `netsh http delete urlacl url=http://+:80/Temporary_Listen_Addresses/`명령 프롬프트 창에을 입력 합니다.  
   
 3. 예약이 삭제되면 다음 메시지가 표시됩니다. **URL 예약을 성공적으로 삭제했습니다.**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>새 보안 그룹 및 새 제한된 URL 예약 만들기  
+
  WCF URL 예약을 제한 된 예약으로 바꾸려면 먼저 새 보안 그룹을 만들어야 합니다. 이 작업은 명령 프롬프트 또는 컴퓨터 관리 콘솔에서 수행할 수 있습니다. 한 가지만 수행하면 됩니다.  
   
 ### <a name="to-create-a-new-security-group-from-a-command-prompt"></a>명령 프롬프트에서 새 보안 그룹을 만들려면  
   
-1. **시작**을 클릭 하 고 **모든 프로그램**을 가리킨 다음 **보조 프로그램**을 클릭 하 고 **명령 프롬프트** 를 마우스 오른쪽 단추로 클릭 하 고 표시 되는 상황에 맞는 메뉴에서 **관리자 권한으로 실행** 을 클릭 합니다. 계속 하려면 사용 권한을 요청할 수 있는 UAC (사용자 계정 컨트롤) 창에서 **계속** 을 클릭 합니다.  
+1. **시작** 을 클릭 하 고 **모든 프로그램** 을 가리킨 다음 **보조 프로그램** 을 클릭 하 고 **명령 프롬프트** 를 마우스 오른쪽 단추로 클릭 하 고 표시 되는 상황에 맞는 메뉴에서 **관리자 권한으로 실행** 을 클릭 합니다. 계속 하려면 사용 권한을 요청할 수 있는 UAC (사용자 계정 컨트롤) 창에서 **계속** 을 클릭 합니다.  
   
 2. 명령 프롬프트에을 입력 `net localgroup "<security group name>" /comment:"<security group description>" /add` 합니다. 을 **\<security group name>** 만들려는 보안 그룹의 이름으로 바꾸고,을 **\<security group description>** 보안 그룹에 대 한 적절 한 설명으로 바꿉니다.  
   
@@ -48,14 +49,14 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 ### <a name="to-create-a-new-security-group-from-the-computer-management-console"></a>컴퓨터 관리 콘솔에서 새 보안 그룹을 만들려면  
   
-1. **시작**, **제어판**, **관리 도구**를 차례로 클릭 한 다음 **컴퓨터 관리** 를 클릭 하 여 컴퓨터 관리 콘솔을 엽니다. 계속 하려면 사용 권한을 요청할 수 있는 UAC (사용자 계정 컨트롤) 창에서 **계속** 을 클릭 합니다.  
+1. **시작**, **제어판**, **관리 도구** 를 차례로 클릭 한 다음 **컴퓨터 관리** 를 클릭 하 여 컴퓨터 관리 콘솔을 엽니다. 계속 하려면 사용 권한을 요청할 수 있는 UAC (사용자 계정 컨트롤) 창에서 **계속** 을 클릭 합니다.  
   
-2. **시스템 도구**, **로컬 사용자 및 그룹**을 차례로 클릭 하 고 **그룹** 폴더를 마우스 오른쪽 단추로 클릭 한 다음 나타나는 상황에 맞는 메뉴에서 **새 그룹** 을 클릭 합니다. 원하는 **그룹 이름**, **설명** 및이 새 보안 그룹의 기타 세부 정보를 입력 하 고 **만들기** 단추를 클릭 하 여 보안 그룹을 만듭니다.  
+2. **시스템 도구**, **로컬 사용자 및 그룹** 을 차례로 클릭 하 고 **그룹** 폴더를 마우스 오른쪽 단추로 클릭 한 다음 나타나는 상황에 맞는 메뉴에서 **새 그룹** 을 클릭 합니다. 원하는 **그룹 이름**, **설명** 및이 새 보안 그룹의 기타 세부 정보를 입력 하 고 **만들기** 단추를 클릭 하 여 보안 그룹을 만듭니다.  
   
 ### <a name="to-create-the-restricted-url-reservation"></a>제한된 URL 예약을 만들려면  
   
-1. **시작**을 클릭 하 고 **모든 프로그램**을 가리킨 다음 **보조 프로그램**을 클릭 하 고 **명령 프롬프트** 를 마우스 오른쪽 단추로 클릭 하 고 표시 되는 상황에 맞는 메뉴에서 **관리자 권한으로 실행** 을 클릭 합니다. 계속 하려면 사용 권한을 요청할 수 있는 UAC (사용자 계정 컨트롤) 창에서 **계속** 을 클릭 합니다.  
+1. **시작** 을 클릭 하 고 **모든 프로그램** 을 가리킨 다음 **보조 프로그램** 을 클릭 하 고 **명령 프롬프트** 를 마우스 오른쪽 단추로 클릭 하 고 표시 되는 상황에 맞는 메뉴에서 **관리자 권한으로 실행** 을 클릭 합니다. 계속 하려면 사용 권한을 요청할 수 있는 UAC (사용자 계정 컨트롤) 창에서 **계속** 을 클릭 합니다.  
   
 2. 명령 프롬프트에을 입력 `netsh http add urlacl url=http://+:80/Temporary_Listen_Addresses/ user="<machine name>\<security group name>` 합니다. 를 **\<machine name>** 그룹이 생성 되어야 하는 컴퓨터 이름으로 바꾸고,을 **\<security group name>** 이전에 만든 보안 그룹의 이름으로 바꿉니다.  
   
-3. 예약이 만들어지면 다음 메시지가 표시됩니다. **URL 예약이 성공적으로 추가**되었습니다.
+3. 예약이 만들어지면 다음 메시지가 표시됩니다. **URL 예약이 성공적으로 추가** 되었습니다.

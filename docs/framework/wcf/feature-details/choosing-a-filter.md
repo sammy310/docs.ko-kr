@@ -2,14 +2,15 @@
 title: 필터 선택
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: 2f96e7001a41682ef595d003e87daa06d0244f3b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f783b6416f2330d272c4c756a3ca0cd332f3c6e7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559391"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276102"
 ---
 # <a name="choosing-a-filter"></a>필터 선택
+
 라우팅 서비스를 구성할 때는 올바른 메시지 필터를 선택하고 수신하는 메시지와 정확히 일치하도록 메시지 필터를 구성해야 합니다. 선택한 필터가 과도하게 광범위하거나 올바르게 구성되지 않은 경우 메시지가 잘못 라우트됩니다. 필터가 너무 제한적인 경우에는 일부 메시지에 유효한 경로가 제공되지 않을 수 있습니다.
 
 ## <a name="filter-types"></a>필터 형식
@@ -144,7 +145,7 @@ XPath 쿼리에는 종종 길거나 복잡한 문자열 값인 고유한 네임�
 
 XPath 쿼리를 디자인 하는 방법에 대 한 자세한 내용은 [Xpath 구문](/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100))을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메시지 필터](message-filters.md)
 - [방법: 필터 사용](how-to-use-filters.md)

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - properties, retrieving
 - UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
-ms.openlocfilehash: 277822c9d89046bfbad50df16bce83da7dd45b3b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 34a42355acce0beafbb9658baf6032e4e7e19fcb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164109"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276427"
 ---
 # <a name="get-ui-automation-element-properties"></a>UI 자동화 요소 속성 가져오기
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -35,12 +36,13 @@ ms.locfileid: "87164109"
 2. <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>를 호출 하거나 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 속성 구조를 검색 하 고 해당 멤버 중 하나에서 값을 가져옵니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는의 현재 속성을 검색 하는 다양 한 방법을 보여 줍니다 <xref:System.Windows.Automation.AutomationElement> .  
   
  [!code-csharp[UIAClient_snip#170](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#170)]
  [!code-vb[UIAClient_snip#170](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#170)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [클라이언트에 대한 UI 자동화 속성](ui-automation-properties-for-clients.md)
 - [UI 자동화에서 캐싱 사용](use-caching-in-ui-automation.md)

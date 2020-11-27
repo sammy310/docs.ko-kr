@@ -2,12 +2,12 @@
 title: 강력한 형식의 확장 샘플
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: e8c3bf202a1fb76d383f0a3fe15084d19a1d51fb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e5b74188d4c9c333858c60ff95a2a90b0e2e9418
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600882"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275933"
 ---
 # <a name="strongly-typed-extensions-sample"></a>강력한 형식의 확장 샘플
 
@@ -18,6 +18,7 @@ ms.locfileid: "84600882"
  한 예로 이 샘플에서는 제안된 Atom Threading Extensions RFC에 정의된 확장명 요소를 구현하는 방법을 보여 줍니다. 이 샘플은 데모용으로만 사용되며 제안된 사양을 전체 구현할 용도는 아닙니다.  
   
 ## <a name="sample-xml"></a>샘플 XML  
+
  다음 XML 예제에서는 추가 `<in-reply-to>` 확장명 요소가 포함된 Atom 1.0 항목을 보여 줍니다.  
   
 ```xml  
@@ -44,6 +45,7 @@ ms.locfileid: "84600882"
  `<in-reply-to>`요소는 세 가지 필수 특성 ( `ref` , `type` 및)을 지정 `href` 하 고 추가 확장 특성 및 확장 요소도 허용 합니다.  
   
 ## <a name="modeling-the-in-reply-to-element"></a>In-Reply-To 요소 모델링  
+
  이 샘플에서는 `<in-reply-to>`와 함께 사용할 수 있도록 <xref:System.Xml.Serialization.IXmlSerializable> 요소가 <xref:System.Runtime.Serialization.DataContractSerializer>을 구현하는 CLR로 모델링됩니다. 또한 다음 샘플 코드에 표시 된 것 처럼 요소 데이터에 액세스 하기 위한 몇 가지 메서드와 속성을 구현 합니다.  
   
 ```csharp  
@@ -186,6 +188,7 @@ public void WriteXml(System.Xml.XmlWriter writer)
 ```  
   
 ## <a name="threadedfeed-and-threadeditem"></a>ThreadedFeed 및 ThreadedItem  
+
  이 샘플에서는 `SyndicationItems` 확장을 포함하는 `InReplyTo`가 `ThreadedItem` 클래스에 의해 모델링됩니다. 마찬가지로 `ThreadedFeed` 클래스는 항목이 `SyndicationFeed`의 모든 인스턴스인 `ThreadedItem`입니다.  
   
  `ThreadedFeed` 클래스는 `SyndicationFeed`에서 상속되고 `OnCreateItem`을 재정의하여 `ThreadedItem`을 반환합니다. 다음 코드에 나온 것처럼 이 클래스는 또한 `Items` 컬렉션에 액세스하기 위한 메서드를 `ThreadedItems`로 구현합니다.  

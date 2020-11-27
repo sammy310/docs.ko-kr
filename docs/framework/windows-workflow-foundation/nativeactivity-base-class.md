@@ -2,18 +2,19 @@
 title: NativeActivity 기본 클래스
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: d875f62dacadb2baf6b5d7e93ddb2933aed9cdb0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989558"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274961"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity 기본 클래스
 
 <xref:System.Activities.NativeActivity>는 protected 생성자를 가진 추상 클래스입니다. <xref:System.Activities.CodeActivity>와 마찬가지로 <xref:System.Activities.NativeActivity>는 <xref:System.Activities.NativeActivity.Execute%2A> 메서드를 구현하여 필수 동작을 작성하는 데 사용됩니다. <xref:System.Activities.CodeActivity>와 달리 <xref:System.Activities.NativeActivity>는 <xref:System.Activities.NativeActivityContext> 메서드에 전달되는 <xref:System.Activities.NativeActivity.Execute%2A> 개체를 통해 워크플로 런타임의 모든 노출된 기능에 액세스할 수 있습니다.
 
 ## <a name="using-nativeactivitycontext"></a>NativeActivityContext 사용
+
  <xref:System.Activities.NativeActivity.Execute%2A> 형식의 `context` 매개 변수 멤버를 사용하여 <xref:System.Activities.NativeActivityContext> 메서드에서 워크플로 런타임 기능에 액세스할 수 있습니다. <xref:System.Activities.NativeActivityContext>를 통해 사용할 수 있는 기능은 다음과 같습니다.
 
 - 인수 및 변수 가져오기 및 설정
@@ -36,11 +37,11 @@ ms.locfileid: "70989558"
 
 1. OpenVisual Studio 2010.
 
-2. **파일**, **새로 만들기**, **프로젝트**를 차례로 선택 합니다. **프로젝트 형식** 창에서 **Visual C#**  아래에 있는 **Workflow 4.0** 을 선택 하 고 **v2010** 노드를 선택 합니다. **템플릿** 창에서 **활동 라이브러리** 를 선택 합니다. 새 프로젝트의 이름을 HelloActivity로 지정합니다.
+2. **파일**, **새로 만들기**, **프로젝트** 를 차례로 선택 합니다. **프로젝트 형식** 창에서 **Visual c #** 아래에 있는 **Workflow 4.0** 을 선택 하 고 **v2010** 노드를 선택 합니다. **템플릿** 창에서 **활동 라이브러리** 를 선택 합니다. 새 프로젝트의 이름을 HelloActivity로 지정합니다.
 
-3. HelloActivity 프로젝트에서 Activity1를 마우스 오른쪽 단추로 클릭 하 고 **삭제**를 선택 합니다.
+3. HelloActivity 프로젝트에서 Activity1를 마우스 오른쪽 단추로 클릭 하 고 **삭제** 를 선택 합니다.
 
-4. HelloActivity 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**를 선택한 다음 **클래스**를 선택 합니다. 새 프로젝트의 이름을 HelloActivity.cs로 지정합니다.
+4. HelloActivity 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가** 를 선택한 다음 **클래스** 를 선택 합니다. 새 프로젝트의 이름을 HelloActivity.cs로 지정합니다.
 
 5. HelloActivity.cs 파일에서 다음 `using` 지시문을 추가합니다.
 

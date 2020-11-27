@@ -6,17 +6,19 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-ms.openlocfilehash: ed0f018e0151e68afeb9a4747bf8a260faa184b1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 796098258601ec5fa208fd8a8060b28c3eeeb4d6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601038"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276024"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF에서의 보안 고려 사항
+
 이 단원의 항목에서는 WCF (Windows Communication Foundation) 응용 프로그램을 디자인할 때 고려해 야 할 다양 한 보안 관련 항목을 나열 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [정보 공개](information-disclosure.md)  
  정보가 공개되거나 공격 받을 수 있는 다양한 방법과 이러한 문제를 줄이는 방법에 대해 설명합니다.  
   
@@ -35,10 +37,11 @@ ms.locfileid: "84601038"
  [보안 세션에 대한 보안 고려 사항](security-considerations-for-secure-sessions.md)  
  보안 세션 구현 시 보안에 영향을 주는 다음 항목에 대해 설명합니다.  
   
- [지원 되지 않는 시나리오](unsupported-scenarios.md)  
+ [지원되지 않는 시나리오](unsupported-scenarios.md)  
  특정 측면의 보안을 지원하지 않고 방지하거나 고려해야 할 다양한 시나리오에 대해 설명합니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.IdentityModel.Tokens>  
   
  <xref:System.IdentityModel.Claims>  
@@ -48,8 +51,9 @@ ms.locfileid: "84601038"
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [보안 지침 및 최선의 방법](security-guidance-and-best-practices.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [보안](security.md)

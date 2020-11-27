@@ -2,14 +2,15 @@
 title: ASP.NET 웹 서비스와의 상호 운용성
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: f38209ffe2161e58528a108b29e730665a65da37
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cca4e1b3da26d8026d41d0a7107432cdd2960545
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598868"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276635"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>ASP.NET 웹 서비스와의 상호 운용성
+
 두 기술을 사용 하 여 구현 된 서비스가 WS-I Basic Profile 1.1 사양을 준수 하도록 하 여 WCF (ASP.NET Web services and Windows Communication Foundation) 웹 서비스 간의 상호 운용성을 실현할 수 있습니다. WS-I Basic Profile 1.1을 준수 하는 ASP.NET 웹 서비스는 WCF 시스템 제공 바인딩를 사용 하 여 WCF 클라이언트와 상호 운용할 수 <xref:System.ServiceModel.BasicHttpBinding> 있습니다.  
   
  <xref:System.Web.Services.WebService> <xref:System.Web.Services.WebMethodAttribute> 다음 샘플 코드에 표시 된 것 처럼, 클래스 대신 인터페이스에 및 특성을 추가 하 고 인터페이스를 구현 하는 클래스를 작성 하는 ASP.NET 2.0 옵션을 사용 합니다.  
@@ -47,6 +48,7 @@ public class Service : IEcho
  IIS(인터넷 정보 서비스)에서 제공하는 인증 옵션은 사용하지 마십시오. WCF 클라이언트는 이러한 기능을 지원 하지 않습니다. 서비스의 보안을 유지 해야 하는 경우에는 WCF에서 제공 하는 옵션을 사용 합니다. 이러한 옵션은 강력 하며 표준 프로토콜을 기반으로 하기 때문입니다.  
   
 ## <a name="performance-impact-caused-by-loading-the-servicemodel-httpmodule"></a>ServiceModel HttpModule 로드에 의한 성능 영향  
+
  .NET Framework 3.0의 경우 WCF `HttpModule`은 모든 ASP.NET 애플리케이션에서 WCF를 사용할 수 있도록 루트 Web.config 파일에 설치되어 있습니다. 이는 성능에 영향을 줄 수 있기 때문에 다음 예제에서처럼 Web.config 파일에 대해 `ServiceModel`을 제거할 수 있습니다.  
   
 ```xml  

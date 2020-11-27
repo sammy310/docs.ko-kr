@@ -6,14 +6,15 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 7673ce4ac88cc36a7c35e2e946a31d23b2ce6eca
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: aaab4639a7573dd090af2e6d9bb06f896c4728f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164187"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276557"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -31,19 +32,20 @@ ms.locfileid: "87164187"
 > 일부 컨트롤은 컨트롤 기능에 따라 몇몇 컨트롤 패턴을 조건부로 지원합니다. 예를 들어, 메뉴 항목 컨트롤은 메뉴 컨트롤의 기능에 따라 <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>또는 <xref:System.Windows.Automation.SelectionItemPattern> 컨트롤 패턴을 조건부로 지원합니다.  
   
 <a name="control_mapping_clients"></a>
+
 ## <a name="ui-automation-control-patterns-for-clients"></a>클라이언트용 UI 자동화 컨트롤 패턴  
   
 |컨트롤 종류|지원됨|조건부 지원|지원되지 않음|  
 |------------------|---------------|-------------------------|-------------------|  
 |단추|없음|Invoke, Toggle, Expand Collapse|없음|  
-|일정|Grid, Table|Selection, Scroll|값|  
+|달력|Grid, Table|Selection, Scroll|값|  
 |확인란|Toggle|없음|없음|  
 |Combo Box|확장 축소|선택, 값|Scroll|  
-|데이터 표|표|Scroll, Selection, Table|없음|  
+|데이터 표|그리드|Scroll, Selection, Table|없음|  
 |Data Item|Selection Item|Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value|없음|  
 |문서|텍스트|Scroll, Value|없음|  
 |편집|없음|Text, Range Value, Value|없음|  
-|그룹화|없음|확장 축소|없음|  
+|그룹|없음|확장 축소|없음|  
 |헤더|없음|변환|없음|  
 |Header Item|없음|Transform, Invoke|없음|  
 |Hyperlink|호출|값|없음|  
@@ -61,7 +63,7 @@ ms.locfileid: "87164187"
 |슬라이더|없음|Range Value, Selection, Value|없음|  
 |Spinner|없음|Range Value, Selection, Value|없음|  
 |분할 단추|Invoke, Expand Collapse|없음|없음|  
-|상태 표시줄|없음|표|없음|  
+|상태 표시줄|없음|그리드|없음|  
 |탭|선택|Scroll|없음|  
 |Tab Item|Selection Item|없음|호출|  
 |테이블|Grid, Grid Item, Table, Table Item|없음|없음|  

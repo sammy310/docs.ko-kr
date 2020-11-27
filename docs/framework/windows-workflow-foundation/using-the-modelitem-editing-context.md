@@ -2,17 +2,19 @@
 title: ModelItem 편집 컨텍스트 사용
 ms.date: 03/30/2017
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
-ms.openlocfilehash: e1481d96e39f837d72834222d2839c520e880cc6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ab002f902833d3b1a69ea0b03b5ca589f4492d1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142516"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275972"
 ---
 # <a name="using-the-modelitem-editing-context"></a>ModelItem 편집 컨텍스트 사용
+
 <xref:System.Activities.Presentation.Model.ModelItem> 편집 컨텍스트는 호스트 애플리케이션이 디자이너와 통신할 때 사용하는 개체입니다. <xref:System.Activities.Presentation.EditingContext>는 사용할 수 있는 메서드 두 개(<xref:System.Activities.Presentation.EditingContext.Items%2A> 및 <xref:System.Activities.Presentation.EditingContext.Services%2A>)를 노출합니다.  
   
 ## <a name="the-items-collection"></a>Items 컬렉션  
+
  <xref:System.Activities.Presentation.EditingContext.Items%2A> 컬렉션은 호스트와 디자이너 간에 공유되는 데이터나 모든 디자이너에서 사용할 수 있는 데이터에 액세스할 때 사용됩니다. 이 컬렉션에는 <xref:System.Activities.Presentation.ContextItemManager> 클래스를 통해 액세스되는 다음 기능이 있습니다.  
   
 1. <xref:System.Activities.Presentation.ContextItemManager.GetValue%2A>  
@@ -24,6 +26,7 @@ ms.locfileid: "79142516"
 4. <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>  
   
 ## <a name="the-services-collection"></a>Services 컬렉션  
+
  <xref:System.Activities.Presentation.EditingContext.Services%2A> 컬렉션은 디자이너가 호스트와 상호 작용하는 데 사용하는 서비스나 모든 디자이너에서 사용하는 서비스에 액세스할 때 사용됩니다. 이 컬렉션에는 다음과 같은 중요한 메서드가 있습니다.  
   
 1. <xref:System.Activities.Presentation.ServiceManager.Publish%2A>  
@@ -35,6 +38,7 @@ ms.locfileid: "79142516"
 4. <xref:System.Activities.Presentation.ServiceManager.GetService%2A>  
   
 ## <a name="assigning-a-designer-an-activity"></a>작업에 디자이너 할당  
+
  작업에 사용되는 디자이너를 지정하려면 Designer 특성을 사용합니다.  
   
 ```csharp  
@@ -45,6 +49,7 @@ public sealed class MyClass : CodeActivity
 ```  
   
 ## <a name="creating-a-service"></a>서비스 만들기  
+
  디자이너와 호스트 간에 정보 전달자 역할을 하는 서비스를 만들려면 인터페이스와 구현을 만들어야 합니다. 인터페이스는 <xref:System.Activities.Presentation.ServiceManager.Publish%2A> 메서드에서 서비스의 멤버를 정의하는 데 사용되고 구현에는 서비스에 대한 논리가 포함됩니다. 다음 코드 예제에서는 서비스 인터페이스와 구현이 생성됩니다.  
   
 ```csharp  
@@ -67,6 +72,7 @@ public interface IMyService
 ```  
   
 ## <a name="publishing-a-service"></a>서비스 게시  
+
  디자이너에서 서비스를 사용하려면 먼저 <xref:System.Activities.Presentation.ServiceManager.Publish%2A> 메서드를 사용하여 호스트가 서비스를 게시해야 합니다.  
   
 ```csharp  
@@ -74,6 +80,7 @@ this.Context.Services.Publish<IMyService>(new MyServiceImpl);
 ```  
   
 ## <a name="subscribing-to-a-service"></a>서비스 구독  
+
  디자이너는 <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A> 메서드에서 <xref:System.Activities.Presentation.WorkflowViewElement.OnModelItemChanged%2A> 메서드를 사용하여 서비스에 대한 액세스 권한을 얻습니다. 다음 코드 조각에서는 서비스를 구독하는 방법을 보여 줍니다.  
   
 ```csharp  
@@ -93,10 +100,12 @@ protected override void OnModelItemChanged(object newItem)
 ```  
   
 ## <a name="sharing-data-using-the-items-collection"></a>Items 컬렉션을 사용하여 데이터 공유  
+
  Items 컬렉션 사용은 Publish 대신 <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>가 사용된다는 점을 제외하고 Services 컬렉션 사용과 유사합니다. 이 컬렉션은 복잡한 기능보다 디자이너와 호스트 간에 간단한 데이터를 공유하는 데 보다 적합합니다.  
   
 ## <a name="editingcontext-host-items-and-services"></a>EditingContext 호스트 항목 및 서비스  
- .NET Framework는 편집 컨텍스트를 통해 액세스하는 여러 기본 제공 항목 및 서비스를 제공합니다.  
+
+ .NET Framework는 편집 컨텍스트를 통해 액세스 되는 여러 기본 제공 항목 및 서비스를 제공 합니다.  
   
  항목:  
   
@@ -128,7 +137,7 @@ protected override void OnModelItemChanged(object newItem)
   
 - <xref:System.Activities.Presentation.Validation.IValidationErrorService>: <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>를 사용하여 유효성 검사 오류에 액세스할 수 있도록 합니다.  
   
-- <xref:System.Activities.Presentation.IWorkflowDesignerStorageService>: 데이터를 저장하고 검색하는 내부 서비스를 제공합니다. 이 서비스는 .NET Framework에서 내부적으로 사용되며 외부 용으로 는 아닙니다.  
+- <xref:System.Activities.Presentation.IWorkflowDesignerStorageService>: 데이터를 저장하고 검색하는 내부 서비스를 제공합니다. 이 서비스는 .NET Framework에서 내부적으로 사용 되며 외부에서 사용 하기 위한 것이 아닙니다.  
   
 - <xref:System.Activities.Presentation.IXamlLoadErrorService>: <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>를 사용하여 XAML 로드 오류 컬렉션에 액세스할 수 있도록 합니다.  
   
