@@ -2,17 +2,19 @@
 title: 영속 제공된 토큰 공급자
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: fed5f44e6cc40cfe2ca963077b6371c14b3b086a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7e0025eb4bc4918b977d9d8c4e2b1435b0425973
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600568"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96291676"
 ---
 # <a name="durable-issued-token-provider"></a>영속 제공된 토큰 공급자
+
 이 샘플에서는 사용자 지정 클라이언트가 발급한 토큰 공급자를 구현하는 방법을 보여 줍니다.  
   
-## <a name="discussion"></a>토론  
+## <a name="discussion"></a>토론(Discussion)  
+
  WCF (Windows Communication Foundation)의 토큰 공급자는 보안 인프라에 자격 증명을 제공 하는 데 사용 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. WCF는 CardSpace 토큰 공급자와 함께 제공 됩니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.  
   
 - 기본 제공 토큰 공급자가 작동하지 않는 자격 증명 저장소가 있는 경우  
@@ -110,6 +112,7 @@ ms.locfileid: "84600568"
  보안 토큰 서비스는 표준 wsHttpBinding을 사용하여 단일 엔드포인트를 노출합니다. 보안 토큰 서비스는 클라이언트의 토큰 요청에 응답하며, 클라이언트가 Windows 계정을 사용하여 인증하는 경우 클라이언트의 사용자 이름을 발급된 토큰의 클레임으로 포함하는 토큰을 발급합니다. 토큰을 만드는 동안 보안 토큰 서비스는 CN=STS 인증서에 연결된 프라이빗 키를 사용하여 토큰에 서명합니다. 또한 대칭 키를 만들고 CN=localhost 인증서와 연관된 공개 키를 사용하여 이를 암호화합니다. 보안 토큰 서비스는 토큰을 클라이언트에 반환하면서 대칭 키도 반환합니다. 클라이언트는 발급된 토큰을 계산기 서비스에 제공하고 대칭 키로 메시지에 서명하여 해당 키를 알고 있음을 증명합니다.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>사용자 지정 클라이언트 자격 증명 및 토큰 공급자  
+
  다음 단계에서는 발급 된 토큰을 캐시 하 고 WCF: security와 통합 하는 사용자 지정 토큰 공급자를 개발 하는 방법을 보여 줍니다.  
   
 ### <a name="to-develop-a-custom-token-provider"></a>사용자 지정 토큰 공급자를 개발하려면  
@@ -226,9 +229,11 @@ ms.locfileid: "84600568"
     ```  
   
 ## <a name="running-the-sample"></a>샘플 실행  
+
  샘플 실행을 위한 지침이 아래에 설명되어 있습니다. 샘플을 실행하면 보안 토큰에 대한 요청이 보안 토큰 서비스 콘솔 창에 표시되고, 작업 요청 및 응답이 클라이언트 및 서비스 콘솔 창에 표시됩니다. 애플리케이션을 종료하려면 아무 콘솔 창에서나 Enter 키를 누릅니다.  
   
 ## <a name="the-setupcmd-batch-file"></a>Setup.cmd 배치 파일  
+
  이 샘플에 포함된 Setup.cmd 배치 파일을 사용하면 서버와 보안 토큰 서비스를 관련 인증서와 함께 구성하여 자체 호스팅된 애플리케이션을 실행할 수 있습니다. 배치 파일은 CurrentUser/TrustedPeople 인증서 저장소 둘 다에서 두 개의 인증서를 만듭니다. 주체 이름이 CN=STS인 첫 번째 인증서는 보안 토큰 서비스가 클라이언트에 발급되는 보안 토큰에 서명하기 위해 사용합니다. 주체 이름이 CN=localhost인 두 번째 인증서는 보안 토큰 서비스가 서비스에서 해독할 수 있는 암호를 암호화하기 위해 사용합니다.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  

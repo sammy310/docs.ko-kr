@@ -2,17 +2,19 @@
 title: 추적을 사용하여 애플리케이션 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 78280a399c3490afb0dd2293c60b58d9d00fc228
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3b684bf2dc6b075906921f56c6aa07ee55ca7fd5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587640"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96291247"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>추적을 사용하여 애플리케이션 문제 해결
+
 이 단원에는 추적을 사용하여 애플리케이션 문제를 해결할 수 있는 방법에 대해 설명하는 항목이 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [추적 및 메시지 로깅에 권장되는 설정](recommended-settings-for-tracing-and-message-logging.md)  
  프로덕션 환경 및 디버깅 환경의 제안된 설정에 대해 설명합니다.  
   
