@@ -2,12 +2,12 @@
 title: Discovery Security 샘플
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: c6ec9b7e13234b7dae03541eb09ccba98f4cc93a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0957e8ddaee99e60b205c92319dc2c61e2ab007a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144905"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292638"
 ---
 # <a name="discovery-security-sample"></a>Discovery Security 샘플
 
@@ -15,12 +15,14 @@ ms.locfileid: "84144905"
   
  사용자 지정 채널은 검색 및 알림 엔드포인트의 기존 채널 스택 맨 위에서 적용됩니다. 이렇게 하면 서명 헤더가 보내는 모든 메시지에 적용됩니다. 서명은 받은 메시지에서 확인되며 서명이 일치하지 않거나 서명이 없는 메시지는 삭제됩니다. 메시지 서명 및 확인을 위해 이 샘플에서는 인증서를 사용합니다.  
   
-## <a name="discussion"></a>토론  
+## <a name="discussion"></a>토론(Discussion)  
+
  WCF는 확장 가능 하며 사용자가 원하는 대로 채널을 사용자 지정할 수 있습니다. 이 샘플에서는 보안 채널을 빌드하는 검색 보안 바인딩 요소를 구현합니다. 보안 채널에서는 메시지 서명을 적용 및 확인하며 현재 스택의 맨 위에서 적용됩니다.  
   
  보안 바인딩 요소는 보안 채널 팩터리 및 채널 수신기를 빌드합니다.  
   
 ## <a name="secure-channel-factory"></a>보안 채널 팩터리  
+
  보안 채널 팩터리는 메시지 헤더에 압축 서명을 추가하는 이중 채널 또는 출력을 만듭니다. 메시지를 가능한 한 작게 유지하기 위해 압축 서명 형식이 사용됩니다. 다음 예제에서는 압축 서명의 구조를 보여 줍니다.  
   
 ```xml  
@@ -43,9 +45,11 @@ ms.locfileid: "84144905"
  메시지는 클라이언트에서 지정한 인증서를 사용하여 서명됩니다. 바인딩 요소를 만들 때 저장소 위치, 이름 및 인증서 주체 이름을 지정 해야 합니다. 압축 서명의 `KeyId`는 서명 토큰의 키 식별자를 나타내며 서명 토큰의 SKI(주체 키 식별자)나 서명 토큰의 공개 키에 대한 SHA-1 해시(SKI가 없는 경우)입니다.  
   
 ## <a name="secure-channel-listener"></a>보안 채널 수신기  
+
  보안 채널 수신기에서는 받은 메시지의 압축 서명을 확인하는 이중 채널 또는 입력을 만듭니다. 서명을 확인하려면 메시지에 첨부된 압축 서명에 지정된 `KeyId`를 사용하여 지정된 저장소에서 인증서를 선택합니다. 서명이 없거나 서명 확인에 실패한 메시지는 삭제됩니다. 보안 바인딩을 사용하기 위해 이 샘플에서는 추가된 검색 보안 바인딩 요소를 사용하여 사용자 지정 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 및 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>를 만드는 팩터리를 정의합니다. 이 보안 엔드포인트는 검색 알림 수신기와 검색 가능한 서비스에서 사용할 수 있습니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
+
  이 샘플에는 한 개의 라이브러리와 네 개의 콘솔 애플리케이션이 포함되어 있습니다.
   
 - **Discoverysecuritychannels**: 보안 바인딩을 노출 하는 라이브러리입니다. 라이브러리에서는 들어오고 나가는 메시지의 압축 서명을 계산하고 확인합니다.  
@@ -61,9 +65,9 @@ ms.locfileid: "84144905"
   
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면  
   
-1. Visual Studio 용 개발자 명령 프롬프트에서 Setup.exe 스크립트를 실행 합니다. 이 샘플에서는 인증서를 사용하여 메시지를 서명하고 확인합니다. 이 스크립트에서는 Makecert.exe를 사용하여 인증서를 만든 다음 Certmgr.exe를 사용하여 인증서를 설치합니다. 이 스크립트는 관리자 권한으로 실행해야 합니다.  
+1. Visual Studio 용 개발자 명령 프롬프트에서 Setup.bat 스크립트를 실행 합니다. 이 샘플에서는 인증서를 사용하여 메시지를 서명하고 확인합니다. 이 스크립트에서는 Makecert.exe를 사용하여 인증서를 만든 다음 Certmgr.exe를 사용하여 인증서를 설치합니다. 이 스크립트는 관리자 권한으로 실행해야 합니다.  
   
-2. 샘플을 빌드하고 실행 하려면 Visual Studio에서 보안 .sln 파일을 열고 **모두 다시 빌드**를 선택 합니다. 솔루션 속성을 업데이트 하 여 여러 프로젝트 시작: DiscoverySecureChannels을 제외한 모든 프로젝트에 대해 **시작** 을 선택 합니다. 솔루션을 정상적으로 실행합니다.  
+2. 샘플을 빌드하고 실행 하려면 Visual Studio에서 보안 .sln 파일을 열고 **모두 다시 빌드** 를 선택 합니다. 솔루션 속성을 업데이트 하 여 여러 프로젝트 시작: DiscoverySecureChannels을 제외한 모든 프로젝트에 대해 **시작** 을 선택 합니다. 솔루션을 정상적으로 실행합니다.  
   
 3. 샘플을 사용하여 작업을 수행한 후 이 샘플에 대해 만들어진 인증서를 제거하는 Cleanup.bat 스크립트를 실행합니다.  
   

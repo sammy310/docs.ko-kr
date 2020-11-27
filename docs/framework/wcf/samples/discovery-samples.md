@@ -2,24 +2,26 @@
 title: 검색(샘플)
 ms.date: 03/30/2017
 ms.assetid: 522a00b4-a789-4e8c-b8d7-a4c3d863a182
-ms.openlocfilehash: bb5471db6f4feb61798926ae1466a3bebac7e959
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d5801452943a75e87d829e5d5004e3c259ce3afa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600583"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292612"
 ---
 # <a name="discovery-samples"></a>검색(샘플)
+
 이 단원에는 검색 기능과 관련된 샘플이 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [공지](announcements-sample.md)  
  검색 기능과 함께 알림을 사용하는 방법을 보여 줍니다.  
   
  [기본](basic-sample.md)  
  프로그래밍 방식으로 서비스를 검색 가능하게 만들고 <xref:System.ServiceModel.Discovery.DynamicEndpoint>를 사용하여 해당 서비스를 검색하는 방법을 보여 줍니다.  
   
- [구성](configuration-sample.md)  
+ [Configuration](configuration-sample.md)  
  구성 파일을 사용하여 서비스를 검색 가능하게 만드는 방법과 구성을 통해 <xref:System.ServiceModel.Discovery.DynamicEndpoint>를 사용하여 해당 서비스를 검색하는 방법을 보여 줍니다.  
   
  [범위를 사용한 검색](discovery-with-scopes-sample.md)  

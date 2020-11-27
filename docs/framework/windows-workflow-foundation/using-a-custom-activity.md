@@ -2,18 +2,19 @@
 title: 사용자 지정 활동 사용
 ms.date: 03/30/2017
 ms.assetid: 8f356419-681a-4175-ae93-878eee970249
-ms.openlocfilehash: 6ca67ef7a8c4330d0182e960fc3fdcce656976a4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 43addd4e69b7f7ac3ac5cd8e5bcd41397d8f0a67
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962216"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293327"
 ---
 # <a name="using-a-custom-activity"></a>사용자 지정 활동 사용
+
 <xref:System.Activities.Activity> 또는 해당 하위 클래스에서 파생되는 활동은 더 큰 워크플로로 구성하거나 코드로 직접 작성할 수 있습니다. 이 항목에서는 코드나 디자이너에서 만든 워크플로에서 사용자 지정 활동을 사용하는 방법에 대해 설명합니다.  
   
 > [!NOTE]
-> 사용자 지정 활동을 사용 하는 동일한 프로젝트에서 사용자 지정 활동을 사용할 수 있습니다 (즉, 참조 하는 활동이 로드 되는 경우 빌드 프로세스에서 생성 된 인스턴스화 유형에 의해 로드 됨). 동적으로 (예: ActivityXAMLServices 사용) 참조 된 어셈블리를 다른 프로젝트에 배치 해야 합니다. 그렇지 않으면 디자이너에서 생성 된 XAML을 직접 편집 하 여이를 사용 하도록 설정 해야 합니다.  
+> 사용자 지정 활동을 사용 하는 동일한 프로젝트에서 사용자 지정 활동을 사용할 수 있습니다 (예: ActivityXAMLServices를 사용 하 여 참조 하는 활동을 동적으로 로드 하는 경우 참조 하는 활동이 동적으로 로드 되는 경우). 참조 된 어셈블리를 다른 프로젝트에 배치 해야 합니다. 또는 디자이너에서 생성 한 XAML을 수동으로 편집 하 여이를 사용 하도록 설정 해야 합니다.  
   
 #### <a name="using-a-custom-activity-to-a-workflow-project"></a>워크플로 프로젝트에 사용자 지정 활동 사용  
   

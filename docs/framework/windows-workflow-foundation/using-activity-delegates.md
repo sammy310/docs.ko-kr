@@ -2,14 +2,15 @@
 title: 활동 대리자 사용
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: cbcc8f8e498be4f79f8fed5af7cd3557d7c55981
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 66a03187336475ed377fda032506cfa66d3daf58
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837573"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293301"
 ---
 # <a name="using-activity-delegates"></a>활동 대리자 사용
+
 작업 대리자를 사용하면 활동 작성자는 활동 사용자가 활동 기반 처리기를 제공할 수 있는 특정 시그니처가 있는 콜백을 노출할 수 있습니다. 두 가지 형식의 작업 대리자를 사용할 수 있습니다. <xref:System.Activities.ActivityAction%601>은 반환 값이 없는 작업 대리자를 정의하는 데 사용되고 <xref:System.Activities.ActivityFunc%601>은 반환 값이 있는 작업 대리자를 정의하는 데 사용됩니다.
 
 작업 대리자는 자식 작업이 특정 시그니처를 가지도록 제약되어야 하는 시나리오에서 유용합니다. 예를 들어 <xref:System.Activities.Statements.While> 활동은 제약 조건 없이 모든 형식의 자식 활동을 포함할 수 있지만 <xref:System.Activities.Statements.ForEach%601> 활동의 본문은 <xref:System.Activities.ActivityAction%601>이며 최종적으로 <xref:System.Activities.Statements.ForEach%601>에서 실행되는 자식 활동에는 <xref:System.Activities.InArgument%601>이 열거하는 컬렉션 멤버와 동일한 형식의 <xref:System.Activities.Statements.ForEach%601>이 있어야 합니다.
@@ -30,9 +31,9 @@ HelloWorld.
 
 [!code-csharp[CFX_ActivityExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]
 
-개체 이니셜라이저에 대 한 자세한 내용은 [방법: 생성자를 호출 하지 않고 개체 초기화 (C# 프로그래밍 가이드)](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) 및 [방법: 개체 이니셜라이저를 사용 하 여 개체 선언 (Visual Basic)](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)을 참조 하세요.
+개체 이니셜라이저에 대 한 자세한 내용은 [방법: 생성자를 호출 하지 않고 개체 초기화 (c # 프로그래밍 가이드)](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) 및 [방법: 개체 이니셜라이저를 사용 하 여 개체 선언 (Visual Basic)](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)을 참조 하세요.
 
-다음 예제에서는 <xref:System.Activities.Statements.TryCatch> 활동이 워크플로에 사용됩니다. <xref:System.ApplicationException>이 워크플로를 통해 throw되고 <xref:System.Activities.Statements.Catch%601> 활동을 통해 처리됩니다. <xref:System.Activities.Statements.Catch%601> 활동의 작업 동작에 대 한 처리기는 <xref:System.Activities.Statements.WriteLine> 작업 이며 예외 세부 정보는 `ex` <xref:System.Activities.DelegateInArgument%601>를 사용 하 여 전달 됩니다.
+다음 예제에서는 <xref:System.Activities.Statements.TryCatch> 활동이 워크플로에 사용됩니다. <xref:System.ApplicationException>이 워크플로를 통해 throw되고 <xref:System.Activities.Statements.Catch%601> 활동을 통해 처리됩니다. 활동의 작업 동작에 대 한 처리기는 <xref:System.Activities.Statements.Catch%601> <xref:System.Activities.Statements.WriteLine> 활동 이며 예외 세부 정보는를 사용 하 여 전달 됩니다 `ex` <xref:System.Activities.DelegateInArgument%601> .
 
 [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]
 

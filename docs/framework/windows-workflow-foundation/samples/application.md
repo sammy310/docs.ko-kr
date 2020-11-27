@@ -3,17 +3,19 @@ title: 애플리케이션
 description: 이 문서에서는 Windows Workflow Foundation의 워크플로 응용 프로그램에 대 한 자세한 절차를 참조 하세요.
 ms.date: 03/30/2017
 ms.assetid: 22d27e12-ab04-432b-9695-9f74e098cff3
-ms.openlocfilehash: 90c43c44781c3dca9fb91f68b44ccd40e9777242
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b9e3cc0744ef7a2f48356c4b109ff8c448d4d354
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421399"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293493"
 ---
 # <a name="application"></a>애플리케이션
+
 이 섹션에는 WF (Windows Workflow Foundation)의 워크플로 응용 프로그램과 관련 된 샘플이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [문서 승인 프로세스](document-approval-process.md)  
  LOB(Line-Of-Business) 애플리케이션에서 워크플로를 사용하는 방법을 보여 줍니다.  
   

@@ -2,27 +2,28 @@
 title: 활동 확장 사용
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: 551ce24db8c0adc8225ac94a1d05f998a26873a9
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 3a9cabda9fe92b2ea4e708da8f853f3029328775
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988627"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293288"
 ---
 # <a name="using-activity-extensions"></a>활동 확장 사용
+
 활동은 호스트에서 워크플로에 명시적으로 모델링되지 않은 추가 기능을 제공할 수 있도록 하는 워크플로 애플리케이션 확장과 상호 작용할 수 있습니다.  이 항목에서는 활동이 실행되는 횟수를 계산하기 위해 확장을 만들고 사용하는 방법을 설명합니다.
 
 ### <a name="to-use-an-activity-extension-to-count-executions"></a>활동 확장을 사용하여 실행 횟수를 계산하려면
 
-1. Visual Studio 2010을 엽니다. **새로 만들기**, **프로젝트**를 선택 합니다. **시각적 C#**  노드에서 **워크플로**를 선택 합니다.  템플릿 목록에서 **워크플로 콘솔 응용 프로그램** 을 선택 합니다. 프로젝트 이름을 `Extensions`로 지정합니다. **확인**을 클릭해 프로젝트를 만듭니다.
+1. Visual Studio 2010을 엽니다. **새로 만들기**, **프로젝트** 를 선택 합니다. **Visual c #** 노드 아래에서 **워크플로** 를 선택 합니다.  템플릿 목록에서 **워크플로 콘솔 응용 프로그램** 을 선택 합니다. 프로젝트 이름을 `Extensions`로 지정합니다. **확인** 을 클릭하여 프로젝트를 만듭니다.
 
-2. Program.cs 파일에서 **system.xml 네임 스페이스** 에 대 한 문을추가합니다.`using`
+2. `using`Program.cs 파일에서 system.xml 네임 스페이스에 대 한 문을 **추가 합니다** .
 
     ```csharp
     using System.Collections.Generic;
     ```
 
-3. Program.cs 파일에서 **Executioncountextension**이라는 새 클래스를 만듭니다. 다음 코드는 **Register** 메서드가 호출 될 때 인스턴스 id를 추적 하는 워크플로 확장을 만듭니다.
+3. Program.cs 파일에서 **Executioncountextension** 이라는 새 클래스를 만듭니다. 다음 코드는 **Register** 메서드가 호출 될 때 인스턴스 id를 추적 하는 워크플로 확장을 만듭니다.
 
     ```csharp
     // This extension collects a list of workflow Ids
@@ -56,7 +57,7 @@ ms.locfileid: "70988627"
     }
     ```
 
-4. **Executioncountextension**을 사용 하는 활동을 만듭니다. 다음 코드는 런타임에서 **Executioncountextension** 개체를 검색 하 고 작업이 실행 될 때 **Register** 메서드를 호출 하는 활동을 정의 합니다.
+4. **Executioncountextension** 을 사용 하는 활동을 만듭니다. 다음 코드는 런타임에서 **Executioncountextension** 개체를 검색 하 고 작업이 실행 될 때 **Register** 메서드를 호출 하는 활동을 정의 합니다.
 
     ```csharp
     // Activity that consumes an extension provided by the host. If the extension is available

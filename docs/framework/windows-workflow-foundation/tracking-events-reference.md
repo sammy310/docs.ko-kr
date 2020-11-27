@@ -2,14 +2,15 @@
 title: 추적 이벤트 참조
 ms.date: 03/30/2017
 ms.assetid: c1c1ee87-f80a-449b-acd0-50d81eef116e
-ms.openlocfilehash: af0c4441b89345b67c46c714d9ab3e5ceb9e3d6f
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 7a1bbabbbc122429908b0f9c038c145a5d4a1e7e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988974"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293353"
 ---
 # <a name="tracking-events-reference"></a>추적 이벤트 참조
+
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]의 워크플로는 다양한 수명 단계를 거치면서 실행되는 동안 추적 이벤트를 발생시킵니다. 호스트는 이 이벤트의 알림을 신청하여 수명 중에 워크플로 진행 상태를 계속 업데이트할 수 있습니다. 이 단원에서는 발생하는 추적 이벤트를 설명합니다.  
   
 ## <a name="event-reference"></a>이벤트 참조  
@@ -30,20 +31,20 @@ ms.locfileid: "70988974"
 |[112 - WorkflowInstanceSuspendedRecord](112-workflowinstancesuspendedrecord.md)|정보|TrackRecord = WorkflowInstanceSuspendedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7|EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
 |[113 - WorkflowInstanceTerminatedRecord](113-workflowinstanceterminatedrecord.md)|오류|TrackRecord = WorkflowInstanceTerminatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7|EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
 |[114 - WorkflowInstanceRecordWithId](114-workflowinstancerecordwithid.md)|정보|TrackRecord= WorkflowInstanceRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8|HealthMonitoring, WFTracking|  
-|[115 - WorkflowInstanceAbortedRecordWithId](115-workflowinstanceabortedrecordwithid.md)|경고|WorkflowInstanceAbortedRecord 레코드 =, InstanceID =% 1, 레코드 번호 =% 2, EventTime =% 3, ActivityDefinitionId =% 4, 이유 =% 5, 주석 =% 6, ProfileName =% 7, WorkflowDefinitionIdentity =% 8|HealthMonitoring, WFTracking|  
+|[115 - WorkflowInstanceAbortedRecordWithId](115-workflowinstanceabortedrecordwithid.md)|경고|TrackRecord = WorkflowInstanceAbortedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8|HealthMonitoring, WFTracking|  
 |[116 - WorkflowInstanceSuspendedRecordWithId](116-workflowinstancesuspendedrecordwithid.md)|정보|TrackRecord = WorkflowInstanceSuspendedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8|HealthMonitoring, WFTracking|  
-|[117 - WorkflowInstanceTerminatedRecordWithId](117-workflowinstanceterminatedrecordwithid.md)|오류|WorkflowInstanceTerminatedRecord 레코드 =, InstanceID =% 1, 레코드 번호 =% 2, EventTime =% 3, ActivityDefinitionId =% 4, 이유 =% 5, 주석 =% 6, ProfileName =% 7, WorkflowDefinitionIdentity =% 8|HealthMonitoring, WFTracking|  
-|[118 - WorkflowInstanceUnhandledExceptionRecordWithId](118-workflowinstanceunhandledexceptionrecordwithid.md)|오류|WorkflowInstanceUnhandledExceptionRecord 레코드 =, InstanceID =% 1, RecordNumber =% 2, EventTime =% 3, ActivityDefinitionId =% 4, SourceName =% 5, SourceId =% 6, SourceInstanceId =% 7, SourceTypeName =% 8, 예외 =% 9, 주석 =% 10, ProfileName = % 11, WorkflowDefinitionIdentity =% 12|HealthMonitoring, WFTrackingHealthMonitoring, WFTracking|  
+|[117 - WorkflowInstanceTerminatedRecordWithId](117-workflowinstanceterminatedrecordwithid.md)|오류|TrackRecord = WorkflowInstanceTerminatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5,  Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8|HealthMonitoring, WFTracking|  
+|[118 - WorkflowInstanceUnhandledExceptionRecordWithId](118-workflowinstanceunhandledexceptionrecordwithid.md)|오류|TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9, Annotations= %10, ProfileName = %11, WorkflowDefinitionIdentity = %12|HealthMonitoring, WFTrackingHealthMonitoring, WFTracking|  
 |[119 - WorkflowInstanceUpdatedRecord](119-workflowinstanceupdatedrecord.md)|정보|TrackRecord= WorkflowInstanceUpdatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, OriginalDefinitionIdentity = %6, UpdatedDefinitionIdentity = %7, Annotations = %8, ProfileName = %9|HealthMonitoring, WFTracking|  
 |[225 - TraceCorrelationKeys](225-tracecorrelationkeys.md)|정보|'%3' 부모 범위에서 '%2' 값을 사용하여 '%1' 상관 관계 키를 계산했습니다.|WFServices 문제 해결|  
-|[440 - StartSignpostEvent1](440-startsignpostevent.md)|정보|동작 경계입니다.|WFServices 문제 해결|  
-|[441- StopSignpostEvent1](441-stopsignpostevent.md)|정보|동작 경계입니다.|WFServices 문제 해결|  
+|[440 - StartSignpostEvent](440-startsignpostevent.md)|정보|동작 경계입니다.|WFServices 문제 해결|  
+|[441- StopSignPostEvent](441-stopsignpostevent.md)|정보|동작 경계입니다.|WFServices 문제 해결|  
 |[1001 - WorkflowApplicationCompleted](1001-workflowapplicationcompleted.md)|정보|WorkflowInstance Id: '%1'이(가) Closed 상태에서 완료되었습니다.|WFRuntime|  
 |[1002 - WorkflowApplicationTerminated](1002-workflowapplicationterminated.md)|정보|WorkflowApplication Id: '%1'이(가) 종료되었습니다. 예외가 발생하여 오류 상태로 완료되었습니다.|WFRuntime|  
 |[1003 - WorkflowInstanceCanceled](1003-workflowinstancecanceled.md)|정보|WorkflowInstance Id: '%1'이(가) Canceled 상태에서 완료되었습니다.|WFRuntime|  
 |[1004 - WorkflowInstanceAborted](1004-workflowinstanceaborted.md)|정보|WorkflowInstance Id: '%1'이(가) 예외와 함께 중단되었습니다.|WFRuntime|  
 |[1005 - WorkflowApplicationIdled](1005-workflowapplicationidled.md)|정보|WorkflowApplication Id: '%1'이(가) 유휴 상태가 되었습니다.|WFRuntime|  
-|[1006 - WorkflowApplicationUnhandledException](1006-workflowapplicationunhandledexception.md)|오류|WorkflowInstance Id: '% 1 '에서 처리 되지 않은 예외가 발생 했습니다.  작업 '% 2 ', DisplayName: '% 3 '에서 예외가 발생 했습니다.  다음 작업이 수행 됩니다.% 4.|WFRuntime|  
+|[1006 - WorkflowApplicationUnhandledException](1006-workflowapplicationunhandledexception.md)|오류|WorkflowInstance Id: ' %1 '에서 처리 되지 않은 예외가 발생 했습니다.  작업 ' %2 ', DisplayName: ' %3 '에서 예외가 발생 했습니다.  다음 작업이 수행 됩니다. %4.|WFRuntime|  
 |[1007 - WorkflowApplicationPersisted](1007-workflowapplicationpersisted.md)|정보|WorkflowApplication Id: '%1'이(가) 지속되었습니다.|WFRuntime|  
 |[1008 - WorkflowApplicationUnloaded](1008-workflowapplicationunloaded.md)|정보|WorkflowInstance Id: '%1'이(가) 언로드되었습니다.|WFRuntime|  
 |[1009 - ActivityScheduled](1009-activityscheduled.md)|정보|Parent Activity '%1', DisplayName: '%2', InstanceId: '%3' scheduled child Activity '%4', DisplayName: '%5', InstanceId: '%6'.|WFRuntime|  
@@ -51,34 +52,34 @@ ms.locfileid: "70988974"
 |[1011 - ScheduleExecuteActivityWorkItem](1011-scheduleexecuteactivityworkitem.md)|자세히|작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 ExecuteActivityWorkItem이 예약되었습니다.|WFRuntime|  
 |[1012 - StartExecuteActivityWorkItem](1012-startexecuteactivityworkitem.md)|자세히|작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 ExecuteActivityWorkItem 실행을 시작합니다.|WFRuntime|  
 |[1013 - CompleteExecuteActivityWorkItem](1013-completeexecuteactivityworkitem.md)|자세히|작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 ExecuteActivityWorkItem이 완료되었습니다.|WFRuntime|  
-|[1014 - ScheduleCompletionWorkItem](1014-schedulecompletionworkitem.md)|자세히|부모 작업 '% 1 ', DisplayName: '% 2 ', InstanceId: '% 3 '에 대해 작업 항목을 예약 했습니다.  작업 '%4', DisplayName: '%5', InstanceId: '%6'이(가) 완료되었습니다.|WFRuntime|  
+|[1014 - ScheduleCompletionWorkItem](1014-schedulecompletionworkitem.md)|자세히|부모 작업 ' %1 ', DisplayName: ' %2 ', InstanceId: ' %3 '에 대해 작업 항목을 예약 했습니다.  작업 '%4', DisplayName: '%5', InstanceId: '%6'이(가) 완료되었습니다.|WFRuntime|  
 |[1015 - StartCompletionWorkItem](1015-startcompletionworkitem.md)|자세히|부모 작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 CompletionWorkItem의 실행을 시작합니다. 작업 '%4', DisplayName: '%5', InstanceId: '%6'이(가) 완료되었습니다.|WFRuntime|  
 |[1016 - CompleteCompletionWorkItem](1016-completecompletionworkitem.md)|자세히|부모 작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 CompletionWorkItem이 완료되었습니다. 작업 '%4', DisplayName: '%5', InstanceId: '%6'이(가) 완료되었습니다.|WFRuntime|  
 |[1017 - ScheduleCancelActivityWorkItem](1017-schedulecancelactivityworkitem.md)|자세히|작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 CancelActivityWorkItem이 예약되었습니다.|WFRuntime|  
 |[1018 - StartCancelActivityWorkItem](1018-startcancelactivityworkitem.md)|자세히|작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 CancelActivityWorkItem의 실행을 시작합니다.|WFRuntime|  
 |[1019 - CompleteCancelActivityWorkItem](1019-completecancelactivityworkitem.md)|자세히|작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 CancelActivityWorkItem이 완료되었습니다.|WFRuntime|  
-|[1020 - CreateBookmark](1020-createbookmark.md)|자세히|작업 '% 1 ', DisplayName: '% 2 ', InstanceId: '% 3 '에 대 한 책갈피를 만들었습니다.  BookmarkName: %4, BookmarkScope: %5.|WFRuntime|  
-|[1021 - ScheduleBookmarkWorkItem](1021-schedulebookmarkworkitem.md)|자세히|작업 '% 1 ', DisplayName: '% 2 ', InstanceId: '% 3 '에 대 한 책갈피 작업 항목을 예약 했습니다.  BookmarkName: %4, BookmarkScope: %5.|WFRuntime|  
-|[1022 - StartBookmarkWorkItem](1022-startbookmarkworkitem.md)|자세히|작업 '% 1 ', DisplayName: '% 2 ', InstanceId: '% 3 '에 대 한 책갈피 작업 항목의 실행을 시작 하는 중입니다.  BookmarkName: %4, BookmarkScope: %5.|WFRuntime|  
+|[1020 - CreateBookmark](1020-createbookmark.md)|자세히|작업 ' %1 ', DisplayName: ' %2 ', InstanceId: ' %3 '에 대 한 책갈피를 만들었습니다.  BookmarkName: %4, BookmarkScope: %5.|WFRuntime|  
+|[1021 - ScheduleBookmarkWorkItem](1021-schedulebookmarkworkitem.md)|자세히|작업 ' %1 ', DisplayName: ' %2 ', InstanceId: ' %3 '에 대 한 책갈피 작업 항목을 예약 했습니다.  BookmarkName: %4, BookmarkScope: %5.|WFRuntime|  
+|[1022 - StartBookmarkWorkItem](1022-startbookmarkworkitem.md)|자세히|작업 ' %1 ', DisplayName: ' %2 ', InstanceId: ' %3 '에 대 한 책갈피 작업 항목의 실행을 시작 하는 중입니다.  BookmarkName: %4, BookmarkScope: %5.|WFRuntime|  
 |[1023 - CompleteBookmarkWorkItem](1023-completebookmarkworkitem.md)|자세히|작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 BookmarkWorkItem이 완료되었습니다. BookmarkName: %4, BookmarkScope: %5.|WFRuntime|  
 |[1024 - CreateBookmarkScope](1024-createbookmarkscope.md)|자세히|%1 BookmarkScope를 만들었습니다.|WFRuntime|  
 |[1025 - BookmarkScopeInitialized](1025-bookmarkscopeinitialized.md)|자세히|TemporaryId: '%1'인 BookmarkScope가 Id: '%2'(으)로 초기화되었습니다.|WFRuntime|  
 |[1026 - ScheduleTransactionContextWorkItem](1026-scheduletransactioncontextworkitem.md)|자세히|작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 TransactionContextWorkItem이 예약되었습니다.|WFRuntime|  
 |[1027 - StartTransactionContextWorkItem](1027-starttransactioncontextworkitem.md)|자세히|작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 TransactionContextWorkItem의 실행 시작입니다.|WFRuntime|  
 |[1028 - CompleteTransactionContextWorkItem](1028-completetransactioncontextworkitem.md)|자세히|작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 TransactionContextWorkItem이 완료되었습니다.|WFRuntime|  
-|[1029 - ScheduleFaultWorkItem](1029-schedulefaultworkitem.md)|자세히|작업 '% 1 ', DisplayName: '% 2 ', InstanceId: '% 3 '에 대해 FaultWorkItem이 예약 되었습니다.  작업 '%4', DisplayName: '%5', InstanceId: '%6'에서 예외가 전파되었습니다.|WFRuntime|  
-|[1030 - StartFaultWorkItem](1030-startfaultworkitem.md)|자세히|작업 '% 1 ', DisplayName: '% 2 ', InstanceId: '% 3 '에 대해 FaultWorkItem의 실행을 시작 하는 중입니다.  작업 '%4', DisplayName: '%5', InstanceId: '%6'에서 예외가 전파되었습니다.|WFRuntime|  
+|[1029 - ScheduleFaultWorkItem](1029-schedulefaultworkitem.md)|자세히|작업 ' %1 ', DisplayName: ' %2 ', InstanceId: ' %3 '에 대해 FaultWorkItem이 예약 되었습니다.  작업 '%4', DisplayName: '%5', InstanceId: '%6'에서 예외가 전파되었습니다.|WFRuntime|  
+|[1030 - StartFaultWorkItem](1030-startfaultworkitem.md)|자세히|작업 ' %1 ', DisplayName: ' %2 ', InstanceId: ' %3 '에 대해 FaultWorkItem의 실행을 시작 하는 중입니다.  작업 '%4', DisplayName: '%5', InstanceId: '%6'에서 예외가 전파되었습니다.|WFRuntime|  
 |[1031 - CompleteFaultWorkItem](1031-completefaultworkitem.md)|자세히|작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 FaultWorkItem이 완료되었습니다. 작업 '%4', DisplayName: '%5', InstanceId: '%6'에서 예외가 전파되었습니다.|WFRuntime|  
 |[1032 - ScheduleRuntimeWorkItem](1032-scheduleruntimeworkitem.md)|자세히|작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 런타임 작업 항목이 예약되었습니다.|WFRuntime|  
 |[1033 - StartRuntimeWorkItem](1033-startruntimeworkitem.md)|자세히|작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 런타임 작업 항목의 실행을 시작합니다.|WFRuntime|  
 |[1034 - CompleteRuntimeWorkItem](1034-completeruntimeworkitem.md)|자세히|작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 런타임 작업 항목이 완료되었습니다.|WFRuntime|  
-|[1035 - RuntimeTransactionSet](1035-runtimetransactionset.md)|자세히|작업 '% 1 ', DisplayName: '% 2 ', InstanceId: '% 3 '이 (가) 런타임 트랜잭션을 설정 했습니다.  작업 '% 4 ', DisplayName: '% 5 ', InstanceId: '% 6 ' (으)로의 실행이 격리 되었습니다.|WFRuntime|  
+|[1035 - RuntimeTransactionSet](1035-runtimetransactionset.md)|자세히|작업 ' %1 ', DisplayName: ' %2 ', InstanceId: ' %3 '이 (가) 런타임 트랜잭션을 설정 했습니다.  작업 ' %4 ', DisplayName: ' %5 ', InstanceId: ' %6 ' (으)로의 실행이 격리 되었습니다.|WFRuntime|  
 |[1036 - RuntimeTransactionCompletionRequested](1036-runtimetransactioncompletionrequested.md)|자세히|작업 '%1', DisplayName: '%2', InstanceId: '%3'이(가) 런타임 트랜잭션 완료를 예약했습니다.|WFRuntime|  
 |[1037 - RuntimeTransactionComplete](1037-runtimetransactioncomplete.md)|자세히|런타임 트랜잭션이 '%1' 상태로 완료되었습니다.|WFRuntime|  
 |[1038 - EnterNoPersistBlock](1038-enternopersistblock.md)|자세히|비지속성 블록으로 들어갑니다.|WFRuntime|  
 |[1039 - ExitNoPersistBlock](1039-exitnopersistblock.md)|자세히|비지속성 블록에서 나옵니다.|WFRuntime|  
 |[1040 - InArgumentBound](1040-inargumentbound.md)|자세히|작업 '%2', DisplayName: '%3', InstanceId: '%4'에 대한 In Argument '%1'이(가) 값: %5에 바인딩되었습니다.|WFActivities|  
-|[1041 - WorkflowApplicationPersistableIdle](1041-workflowapplicationpersistableidle.md)|정보|WorkflowApplication Id: '% 1 '이 (가) 유휴 상태 이며 지속 됩니다.  다음 작업이 수행 됩니다.% 2.|WFRuntime|  
+|[1041 - WorkflowApplicationPersistableIdle](1041-workflowapplicationpersistableidle.md)|정보|WorkflowApplication Id: ' %1 '이 (가) 유휴 상태 이며 지속 됩니다.  다음 작업이 수행 됩니다. %2.|WFRuntime|  
 |[1101 - WorkflowActivityStart](1101-workflowactivitystart.md)|정보|WorkflowInstance Id: '%1' E2E 작업|WFRuntime|  
 |[1102 - WorkflowActivityStop](1102-workflowactivitystop.md)|정보|WorkflowInstance Id: '%1' E2E 작업|WFRuntime|  
 |[1103 - WorkflowActivitySuspend](1103-workflowactivitysuspend.md)|정보|WorkflowInstance Id: '%1' E2E 작업|WFRuntime|  
@@ -117,7 +118,7 @@ ms.locfileid: "70988974"
 |[3508 - TrackingProfileNotFound](3508-trackingprofilenotfound.md)|자세히|ActivityDefinitionId '%2'에 대한 TrackingProfile '%1'을(를) 찾지 못했습니다. 구성 파일에 TrackingProfile이 없거나 ActivityDefinitionId가 일치하지 않습니다.|WFServices|  
 |[3550 - BufferOutOfOrderMessageNoInstance](3550-bufferoutofordermessagenoinstance.md)|정보|현재는 '%1' 작업을 수행할 수 없습니다. 서비스 인스턴스에서 이 특정 작업을 처리할 준비가 되면 다시 작업이 시도됩니다.|WFServices|  
 |[3551 - BufferOutOfOrderMessageNoBookmark](3551-bufferoutofordermessagenobookmark.md)|정보|현재는 서비스 인스턴스 '%1'에서 '%2' 작업을 수행할 수 없습니다. 서비스 인스턴스에서 이 특정 작업을 처리할 준비가 되면 다시 작업이 시도됩니다.|WFServices|  
-|[3552 - MaxPendingMessagesPerChannelExceeded](3552-maxpendingmessagesperchannelexceeded.md)|경고|'% 1 '의 스로틀 ' MaxPendingMessagesPerChannel ' 한도가 적중 되었습니다. 이 한도를 늘리려면 BufferedReceiveServiceBehavior에서 MaxPendingMessagesPerChannel 속성을 조정하세요.|할당량 WFServices|  
+|[3552 - MaxPendingMessagesPerChannelExceeded](3552-maxpendingmessagesperchannelexceeded.md)|경고|'%1'의 스로틀 'MaxPendingMessagesPerChannel' 한도에 도달했습니다. 이 한도를 늘리려면 BufferedReceiveServiceBehavior에서 MaxPendingMessagesPerChannel 속성을 조정하세요.|할당량 WFServices|  
 |[3557 - TransactedReceiveScopeEndCommitFailed](3557-transactedreceivescopeendcommitfailed.md)|정보|ID = '%1'인 CommittableTransaction에 대한 EndCommit 호출에서 다음 메시지와 함께 TransactionException이 발생했습니다. '%2'.|WFServices|  
 |[4201 - EndSqlCommandExecute](4201-endsqlcommandexecute.md)|자세히|SQL 명령 실행 종료: %1|WFInstanceStore|  
 |[4202 - StartSqlCommandExecute](4202-startsqlcommandexecute.md)|자세히|SQL 명령 실행 시작: %1|WFInstanceStore|  

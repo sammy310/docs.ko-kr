@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 404fd9ddc911327bbc09c65d74da22bd88d08e2e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0a70fb519f3b3e8d9ce109c3b7bef0313e22eb50
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602572"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292828"
 ---
 # <a name="default-message-contract"></a>기본 메시지 계약
+
 Default Message Contract 샘플에서는 사용자 지정 사용자 정의 메시지를 서비스 작업에 전달하고 전달받는 서비스를 보여 줍니다. 이 샘플은 형식화 된 서비스로 계산기 인터페이스를 구현 하는 [시작](getting-started-sample.md) 을 기반으로 합니다. [시작](getting-started-sample.md)부분에서 사용 되는 더하기, 빼기, 곱하기 및 나누기에 대 한 개별 서비스 작업 대신이 샘플에서는 피연산자와 연산자를 모두 포함 하는 사용자 지정 메시지를 전달 하 고 산술 계산 결과를 반환 합니다.  
   
  클라이언트는 콘솔 프로그램(.exe)이고 서비스 라이브러리(.dll)는 IIS(인터넷 정보 서비스)에서 호스팅됩니다. 콘솔 창에는 클라이언트 동작이 표시됩니다.  
@@ -131,7 +132,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- 클라이언트에 대해 생성 된 클라이언트 코드는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 도구를 사용 하 여 만들었습니다. 필요한 경우 이 도구는 생성된 클라이언트 코드에 자동으로 메시지 계약 형식을 만듭니다. `/messageContract` 명령 옵션을 지정하여 메시지 계약을 강제로 생성할 수 있습니다.  
+ 클라이언트에 대해 생성 된 클라이언트 코드는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 도구를 사용 하 여 만들어졌습니다. 필요한 경우 이 도구는 생성된 클라이언트 코드에 자동으로 메시지 계약 형식을 만듭니다. `/messageContract` 명령 옵션을 지정하여 메시지 계약을 강제로 생성할 수 있습니다.  
   
 ```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  

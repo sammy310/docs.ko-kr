@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: f69314948a0e0a69e49ec148f94572f17d0b8e3c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 41761313fae68a1a348a73f104e21dc19e07eb65
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595052"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293509"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>방법: 등록하지 않고 Windows Communication Foundation 서비스 모니커 사용
+
 Wcf (Windows Communication Foundation) 서비스에 연결 하 고 통신 하려면 WCF 클라이언트 응용 프로그램에 서비스 주소, 바인딩 구성 및 서비스 계약에 대 한 세부 정보가 있어야 합니다.  
   
  WCF 서비스 모니커는 일반적으로 필수 특성 형식의 이전 등록을 통해 필요한 계약을 가져오지만이 방법이 적합 하지 않은 경우도 있습니다. 등록 대신 모니커는 `wsdl` 매개 변수 사용, 메타데이터 교환 또는 `mexAddress` 매개 변수 사용을 통해 계약 정의를 WSDL(웹 서비스 기술 언어) 문서의 형태로 가져올 수 있습니다.  
@@ -22,6 +23,7 @@ Wcf (Windows Communication Foundation) 서비스에 연결 하 고 통신 하려
 > 요청 및 응답 훼손 또는 스푸핑을 방지하려면 상호 인증을 사용해야 합니다. 특히 클라이언트는 응답하는 메타 데이터 교환 엔드포인트가 신뢰할 수 있는 당사자가 맞는지 확인해야 합니다.  
   
 ## <a name="example"></a>예제  
+
  이 예제에서는 MEX 계약에서 서비스 모니커를 사용하는 방법을 보여 줍니다. 다음 계약에서 서비스는 wsHttpBinding을 통해 노출됩니다.  
   
 ```csharp

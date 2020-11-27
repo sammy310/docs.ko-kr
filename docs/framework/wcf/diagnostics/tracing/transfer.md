@@ -2,17 +2,19 @@
 title: 전송
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 52b0cf35a2f8bab17252d3711f3143738c2bc39c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: da31dcb24234e750c88383b9f1bea4f088f4ee3d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587770"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293405"
 ---
 # <a name="transfer"></a>전송
+
 이 항목에서는 WCF (Windows Communication Foundation) 동작 추적 모델의 전송에 대해 설명 합니다.  
   
 ## <a name="transfer-definition"></a>전송 정의  
+
  동작 간 전송은 엔드포인트 내의 관련 동작에 있는 이벤트 간의 인과 관계를 나타냅니다. 두 가지 동작은 컨트롤이 이러한 동작 간에 이동할 때(예: 동작 경계를 넘나드는 메서드 호출) 전송과 관련됩니다. WCF에서 바이트를 서비스에서 받는 경우 수신 대기 작업은 메시지 개체가 만들어진 수신 바이트 작업으로 전송 됩니다. 종단 간 추적 시나리오의 목록 및 해당 작업 및 추적 디자인은 [종단 간 추적 시나리오](end-to-end-tracing-scenarios.md)를 참조 하세요.  
   
  Transfer 추적을 내보내려면 다음 구성 코드와 같이 추적 소스에 `ActivityTracing` 설정을 사용합니다.  
@@ -22,6 +24,7 @@ ms.locfileid: "84587770"
 ```  
   
 ## <a name="using-transfer-to-correlate-activities-within-endpoints"></a>엔드포인트 내에서 동작을 상호 연결하기 위해 전송 사용  
+
  동작 및 전송은 사용자가 오류의 근본 원인을 찾도록 도와줍니다. 예를 들어 동작 M과 N 간에 각각 구성 요소 M과 N에서 전송을 주고 받을 때 M으로 전송을 되돌린 직후에 N에서 충돌이 발생하면 M으로 보내는 N의 전달 데이터로 인해 오류가 발생했다고 결론을 내릴 수 있습니다.  
   
  M과 N 간에 컨트롤의 흐름이 있을 때 Transfer 추적이 동작 M으로부터 동작 N으로 내보내집니다. 예를 들어 동작의 경계를 넘나드는 메서드 호출로 인해 N은 M에 대한 일부 작업을 수행합니다. N이 이미 존재하거나 만들어졌을 수 있습니다. N이 M에 대한 일부 작업을 수행하는 새 동작일 경우 N이 M에 의해 생성됩니다.  
@@ -33,6 +36,7 @@ ms.locfileid: "84587770"
  동작 M과 N 사이에 반드시 중첩된 관계가 존재하는 것은 아닙니다. 이는 두 가지 이유 때문일 수 있습니다. 첫 번째 이유는 동작 M이 N을 시작했더라도 M이 N에서 수행되는 실제 처리를 모니터링하지 않았기 때문이며, 두 번째 이유는 N이 이미 존재하기 때문입니다.  
   
 ## <a name="example-of-transfers"></a>전송 예제  
+
  다음은 두 가지 전송 예제입니다.  
   
 - 서비스 호스트를 만들 때 생성자가 호출 코드로부터 컨트롤을 얻거나 호출 코드가 생성자에게 전송됩니다. 생성자는 실행을 마치면 컨트롤을 호출 코드로 반환하거나 호출 코드로 다시 전송합니다. 이는 중첩된 관계의 경우입니다.  
@@ -40,6 +44,7 @@ ms.locfileid: "84587770"
 - 수신기가 전송 데이터 처리를 시작하면 새 스레드를 만들고, 처리를 위해 적절한 컨텍스트를 바이트 수신 동작(예: 컨트롤 및 데이터 전달)으로 전달합니다. 스레드가 요청 처리를 완료하면 바이트 수신 동작은 수신기로 아무 것도 전달하지 않습니다. 이 경우 새 스레드 동작 내에는 전송이 있지만 외부에는 전송이 없습니다. 두 개의 동작은 연관되지만 중첩되지는 않습니다.  
   
 ## <a name="activity-transfer-sequence"></a>동작 전송 시퀀스  
+
  올바른 형식의 동작 전송 시퀀스에는 다음 단계가 포함됩니다.  
   
 1. 새 gAId 선택으로 구성된 새 동작 시작  

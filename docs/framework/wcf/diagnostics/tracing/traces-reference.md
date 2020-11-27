@@ -2,17 +2,19 @@
 title: 추적 참조
 ms.date: 03/30/2017
 ms.assetid: bd960851-162d-4dcc-8c0c-0ec8f455d56d
-ms.openlocfilehash: c6f6d5a928500cce9f64dbb7338826d5a4ccd1ce
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ea3759d67d546eb916ec7f5413ce41fa3419d174
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587783"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293418"
 ---
 # <a name="traces-reference"></a>추적 참조
+
 이 섹션에서는 Windows Communication Foundation (WCF)에서 생성 된 모든 추적을 나열 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  `Administration`  
   
  [System.ServiceModel.Administration.WmiPut](system-servicemodel-administration-wmiput.md)  

@@ -2,14 +2,15 @@
 title: '방법: 서비스 엔드포인트로 메타데이터 가져오기'
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-ms.openlocfilehash: 1de316b8e91739d5e3e24ff960e2cdfb33cc7fab
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1efc38d4b72037274edd3b6180c102cf7416faa0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597061"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293379"
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>방법: 서비스 엔드포인트로 메타데이터 가져오기
+
 이 항목에서는 서비스 끝점 컬렉션에 메타 데이터를 가져오고 [시작](../samples/getting-started-sample.md)에 정의 된 서비스를 사용 하는 방법에 대해 설명 합니다. 이 항목에서는 서비스에서 메타데이터를 가져온 다음 서비스에 `Add` 메서드를 호출하는 클라이언트 애플리케이션을 만든 방법을 보여 줍니다.  
   
 ### <a name="to-import-metadata-into-service-endpoints"></a>서비스 엔드포인트로 메타데이터를 가져오려면  

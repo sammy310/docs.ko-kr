@@ -2,20 +2,21 @@
 title: '디자인 패턴: 목록 기반 게시-구독'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 02668962afff5f760fc02692a92e72e765089545
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e679980df8a720eb4aa22741bbdd067940c7723
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545581"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292677"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>디자인 패턴: 목록 기반 게시-구독
-이 샘플에서는 WCF (Windows Communication Foundation) 프로그램으로 구현 된 목록 기반 게시-구독 패턴을 보여 줍니다.  
+
+이 샘플에서는 WCF (Windows Communication Foundation) 프로그램으로 구현 된 목록 기반 Publish-Subscribe 패턴을 보여 줍니다.  
   
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- 목록 기반 게시-구독 디자인 패턴은 Microsoft 패턴 & 사례 게시, [통합 패턴](/previous-versions/msp-n-p/ff647309(v=pandp.10))에 설명 되어 있습니다. 게시-구독 패턴에서는 정보 항목을 구독한 받는 사람 컬렉션으로 정보를 전달합니다. 목록 기반 게시-구독에서는 구독자 목록을 유지 관리합니다. 공유할 정보가 있으면 목록에 있는 각 구독자에게 복사본이 전송됩니다. 이 샘플에서는 필요할 때마다 클라이언트에서 구독하거나 구독 취소할 수 있는 동적 목록 기반 게시-구독 패턴을 보여 줍니다.  
+ 목록 기반 Publish-Subscribe 디자인 패턴은 Microsoft 패턴 & 사례 게시, [통합 패턴](/previous-versions/msp-n-p/ff647309(v=pandp.10))에 설명 되어 있습니다. 게시-구독 패턴에서는 정보 항목을 구독한 받는 사람 컬렉션으로 정보를 전달합니다. 목록 기반 게시-구독에서는 구독자 목록을 유지 관리합니다. 공유할 정보가 있으면 목록에 있는 각 구독자에게 복사본이 전송됩니다. 이 샘플에서는 필요할 때마다 클라이언트에서 구독하거나 구독 취소할 수 있는 동적 목록 기반 게시-구독 패턴을 보여 줍니다.  
   
  List-based Publish-Subscribe 샘플은 클라이언트, 서비스 및 데이터 소스 프로그램으로 구성됩니다. 둘 이상의 클라이언트와 둘 이상의 데이터 소스 프로그램이 실행될 수 있습니다. 클라이언트에서는 서비스를 구독하고 알림을 수신하며 구독을 취소합니다. 데이터 소스 프로그램에서는 현재 모든 구독자와 공유할 정보를 서비스로 보냅니다.  
   
