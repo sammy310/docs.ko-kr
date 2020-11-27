@@ -3,17 +3,19 @@ title: WCF 및 ASP.NET Web API
 description: 각 기술의 주요 기능을 비교 하 여 WCF 또는 ASP.NET Web API이 요구 사항에 더 적합 한지 여부를 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: de8d1905866c860da96983c2f3d52599e3342403
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b3a905f890b4dfa9f60c906c3a242be60921e5c8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245968"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273596"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF 및 ASP.NET Web API
+
 WCF는 서비스 기반 애플리케이션을 빌드하기 위한 Microsoft의 통합 프로그래밍 모델이며, 이를 통해 개발자는 플랫폼 간에 통합되고 기존 투자와 상호 운용할 수 있는 안정적인 보안 트랜잭션된 솔루션을 빌드할 수 있습니다. [ASP.NET Web API](https://www.asp.net/web-api) 은 브라우저 및 모바일 장치를 비롯 한 광범위 한 클라이언트에 연결 되는 HTTP 서비스를 쉽게 빌드할 수 있게 해 주는 프레임 워크입니다. ASP.NET Web API는 .NET Framework에서 RESTful 애플리케이션을 빌드하는 데 이상적인 플랫폼입니다. 이 항목에서는 요구 사항에 가장 적합한 기술을 결정하는 데 도움이 되는 몇 가지 지침을 제공합니다.  
   
 ## <a name="choosing-which-technology-to-use"></a>사용할 기술 선택  
+
  다음 표에서는 각 기술의 주요 기능에 대해 설명합니다.  
   
 |WCF|ASP.NET Web API|  

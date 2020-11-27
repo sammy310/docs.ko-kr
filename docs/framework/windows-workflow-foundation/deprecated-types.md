@@ -2,17 +2,19 @@
 title: Windows Workflow Foundation에서 사용되지 않는 형식
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
-ms.openlocfilehash: 011f13a56695efdd9e964ef1e6c1099b0acc2710
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 628963650d32237dedbb6ab2a0a2d9a79866af18
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713342"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272874"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Windows Workflow Foundation에서 사용되지 않는 형식
+
 .NET 4에서 워크플로 팀은 <xref:System.Activities> 네임스페이스에 완전히 새로운 워크플로 엔진을 제공했습니다. .NET Framework 4.5 Beta 릴리스에서는 "WF 3", 및 네임 스페이스에 있는 대부분의 형식을 <xref:System.Workflow.Activities> <xref:System.Workflow.ComponentModel>  <xref:System.Workflow.Runtime> 사용 되지 않는 것으로 표시 합니다.
 
 ## <a name="obsolete-namespaces-and-tools"></a>사용되지 않는 네임스페이스 및 도구
+
  다음 어셈블리에는 더 이상 사용되지 않는 하나 이상의 공용 형식이 있습니다.
 
 - System.Workflow.Activities.dll

@@ -5,17 +5,19 @@ helpviewer_keywords:
 - clients [WCF], building
 - clients [WCF]
 ms.assetid: 28dfff47-d95b-4cc2-9d5c-b3b9ba71fd50
-ms.openlocfilehash: 16eaafe6b95b1e5142d055c2c95b52ba27cd2514
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 228981f7d8aef0f2d3be562d01bab8e40975cbcd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320748"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272342"
 ---
 # <a name="building-clients"></a>클라이언트 빌드
+
 이 단원의 항목에서는 WCF (Windows Communication Foundation) 클라이언트를 만들고 사용 하는 방법을 보여 줍니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
+
  [WCF 클라이언트 개요](wcf-client-overview.md)  
  WCF 클라이언트 및 작동 방식에 대 한 개요를 제공 합니다.  
   
@@ -26,6 +28,7 @@ ms.locfileid: "72320748"
  WCF 클라이언트에 대 한 보안을 구성 하는 방법을 설명 합니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.ServiceModel.ClientBase%601>  
   
  <xref:System.ServiceModel.DuplexClientBase%601>  
@@ -41,6 +44,7 @@ ms.locfileid: "72320748"
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [서비스 호스팅](hosting-services.md)  
   
  [서비스 디자인 및 구현](designing-and-implementing-services.md)

@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending channels [WCF]
 ms.assetid: 4238db74-2fb6-4dc8-a326-f58527230810
-ms.openlocfilehash: 76ca76d7973403c657b8f68bfde9619df36f220e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8d051ff84ea0562b3d7c810b2c884f4d8b787952
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797143"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273024"
 ---
 # <a name="extending-the-channel-layer"></a>채널 계층 확장
+
 채널 계층은 클라이언트 및 서비스 간의 메시지 교환을 담당합니다. 채널 확장은 보안과 같은 새 프로토콜 기능 또는 SOAP 메시지를 전달하기 위한 새 네트워크 전송 구현과 같은 전송 기능을 구현할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [채널 모델 개요](channel-model-overview.md)  
  채널의 정의, 제공하는 기능 및 서비스와 클라이언트 애플리케이션 모두에서 작동하는 방법에 대해 높은 수준의 개요를 제공합니다.  
   

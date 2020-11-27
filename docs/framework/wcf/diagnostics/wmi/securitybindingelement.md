@@ -2,14 +2,15 @@
 title: SecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: ef93b6e6-3524-48a8-94d3-c8837f1872f9
-ms.openlocfilehash: 1d367d0c5d14e6e75539dd2b20cdffcf2b34963d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61eae75de04f75b6ad6e78d16569595732b3d28f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962788"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273310"
 ---
 # <a name="securitybindingelement"></a>SecurityBindingElement
+
 SecurityBindingElement  
   
 ## <a name="syntax"></a>구문  
@@ -27,19 +28,23 @@ class SecurityBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>메서드  
+
  SecurityBindingElement 클래스는 메서드를 정의하지 않습니다.  
   
 ## <a name="properties"></a>속성  
+
  SecurityBindingElement 클래스에는 다음과 같은 속성이 있습니다.  
   
 ### <a name="defaultalgorithmsuite"></a>DefaultAlgorithmSuite  
- 데이터 형식: string  
+
+ 데이터 형식: 문자열  
   
  액세스 형식: 읽기 전용  
   
  바인딩과 함께 사용할 알고리즘을 지정합니다.  
   
 ### <a name="includetimestamp"></a>IncludeTimestamp  
+
  데이터 형식: boolean  
   
  액세스 형식: 읽기 전용  
@@ -47,13 +52,15 @@ class SecurityBindingElement : BindingElement
  각 메시지에 타임스탬프가 포함되는지 여부를 지정하는 부울 값입니다.  
   
 ### <a name="keyentropymode"></a>KeyEntropyMode  
- 데이터 형식: string  
+
+ 데이터 형식: 문자열  
   
  액세스 형식: 읽기 전용  
   
  키를 만드는 데 사용되는 엔트로피의 소스입니다.  
   
 ### <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings  
+
  데이터 형식: LocalServiceSecuritySettings  
   
  액세스 형식: 읽기 전용  
@@ -61,14 +68,16 @@ class SecurityBindingElement : BindingElement
  로컬 서비스에 대한 바인딩 특정 보안 속성입니다.  
   
 ### <a name="messagesecurityversion"></a>MessageSecurityVersion  
- 데이터 형식: string  
+
+ 데이터 형식: 문자열  
   
  액세스 형식: 읽기 전용  
   
  메시지 보안에 사용된 버전입니다.  
   
 ### <a name="securityheaderlayout"></a>SecurityHeaderLayout  
- 데이터 형식: string  
+
+ 데이터 형식: 문자열  
   
  액세스 형식: 읽기 전용  
   
@@ -80,6 +89,6 @@ class SecurityBindingElement : BindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>

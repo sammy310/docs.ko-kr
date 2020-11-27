@@ -9,14 +9,15 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: 328d47a583a4f047fd54589a82d339de2cb1a16f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 40950614892ddfd4eb24194f0389e057a5a13378
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320985"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272946"
 ---
 # <a name="how-to-examine-the-security-context"></a>방법: 보안 컨텍스트 검사
+
 WCF (Windows Communication Foundation) 서비스를 프로그래밍 하는 경우 서비스 보안 컨텍스트를 사용 하 여 서비스를 인증 하는 데 사용 되는 클라이언트 자격 증명과 클레임에 대 한 세부 정보를 확인할 수 있습니다. <xref:System.ServiceModel.ServiceSecurityContext> 클래스의 속성을 사용하여 이를 수행할 수 있습니다.  
   
  예를 들어 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 또는 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 속성을 사용하여 현재 클라이언트의 ID를 검색할 수 있습니다. 클라이언트가 익명인지 여부를 확인하기 위해 <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> 속성을 사용합니다.  
@@ -38,12 +39,14 @@ WCF (Windows Communication Foundation) 서비스를 프로그래밍 하는 경�
 2. <xref:System.IdentityModel.Claims.ClaimSet> 클래스의 <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> 속성에서 반환된 <xref:System.IdentityModel.Policy.AuthorizationContext> 개체의 컬렉션을 구문 분석합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 현재 보안 컨텍스트의 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 및 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 속성에 대한 값, <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> 속성, 클레임의 리소스 값 및 현재 보안 컨텍스트의 모든 클레임에 대한 <xref:System.IdentityModel.Claims.Claim.Right%2A> 속성을 인쇄합니다.  
   
  [!code-csharp[c_PrincipalPermissionAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#4)]
  [!code-vb[c_PrincipalPermissionAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#4)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
  코드는 다음 네임스페이스를 사용합니다.  
   
 - <xref:System>  
@@ -54,7 +57,7 @@ WCF (Windows Communication Foundation) 서비스를 프로그래밍 하는 경�
   
 - <xref:System.IdentityModel.Claims>  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [서비스에 보안 설정](securing-services.md)
 - [서비스 ID 및 인증](./feature-details/service-identity-and-authentication.md)

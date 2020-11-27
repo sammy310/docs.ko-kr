@@ -9,31 +9,38 @@ helpviewer_keywords:
 - InvalidGCHandleCookie MDA
 - invalid cookies
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
-ms.openlocfilehash: 1063b7be902d3063717b6639564d819ef3292c0e
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 36806498445da78c8d9dd5c51c1903b253a39da0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051300"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272607"
 ---
 # <a name="invalidgchandlecookie-mda"></a>invalidGCHandleCookie MDA
+
 `invalidGCHandleCookie` MDA(관리 디버깅 도우미)는 잘못된 <xref:System.IntPtr> 쿠키에서 <xref:System.Runtime.InteropServices.GCHandle>로 변환하려고 시도하면 활성화됩니다.  
   
 ## <a name="symptoms"></a>증상  
+
  <xref:System.IntPtr>에서 <xref:System.Runtime.InteropServices.GCHandle>을 사용하거나 검색하려고 시도할 때 액세스 위반 및 메모리 손상과 같은 정의되지 않은 동작이 나타납니다.  
   
 ## <a name="cause"></a>원인  
+
  쿠키가 원래 <xref:System.Runtime.InteropServices.GCHandle>에서 만들어지지 않았거나, 이미 해제된 <xref:System.Runtime.InteropServices.GCHandle>을 나타내거나, 다음 애플리케이션 도메인의 <xref:System.Runtime.InteropServices.GCHandle>에 대한 쿠키이거나, 네이티브 코드에 <xref:System.Runtime.InteropServices.GCHandle>로 마샬링되지만 캐스팅이 시도된 <xref:System.IntPtr>로 다시 CLR에 전달되었기 때문에 쿠키가 잘못될 수 있습니다.  
   
 ## <a name="resolution"></a>해결 방법  
+
  <xref:System.Runtime.InteropServices.GCHandle>에 대한 유효한 <xref:System.IntPtr> 쿠키를 지정합니다.  
   
 ## <a name="effect-on-the-runtime"></a>런타임에 대한 영향  
+
  이 MDA가 사용하도록 설정되면 다시 전달된 쿠키 값이 MDA가 사용되지 않을 경우 반환되는 쿠키 값과 다르기 때문에 디버거는 더 이상 원래 개체에 대한 루트를 추적할 수 없습니다.  
   
 ## <a name="output"></a>출력  
+
  잘못된 <xref:System.IntPtr> 쿠키 값이 보고됩니다.  
   
-## <a name="configuration"></a>Configuration  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -43,7 +50,7 @@ ms.locfileid: "86051300"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>
 - <xref:System.Runtime.InteropServices.GCHandle>

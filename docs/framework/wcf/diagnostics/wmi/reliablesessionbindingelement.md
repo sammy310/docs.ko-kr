@@ -2,14 +2,15 @@
 title: ReliableSessionBindingElement
 ms.date: 03/30/2017
 ms.assetid: effda125-b8d3-4de6-8c0e-f59f5ea8f6eb
-ms.openlocfilehash: b0a621da43402777cc620f1876bd968a72bb8c12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f91e38ab88cd9f93e9bec0e3a6ca65254bc49570
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962918"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273323"
 ---
 # <a name="reliablesessionbindingelement"></a>ReliableSessionBindingElement
+
 ReliableSessionBindingElement  
   
 ## <a name="syntax"></a>구문  
@@ -29,12 +30,15 @@ class ReliableSessionBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>메서드  
+
  ReliableSessionBindingElement 클래스는 메서드를 정의하지 않습니다.  
   
 ## <a name="properties"></a>속성  
+
  ReliableSessionBindingElement 클래스에는 다음과 같은 속성이 있습니다.  
   
 ### <a name="acknowledgementinterval"></a>AcknowledgementInterval  
+
  데이터 형식: datetime  
   
  액세스 형식: 읽기 전용  
@@ -42,6 +46,7 @@ class ReliableSessionBindingElement : BindingElement
  팩터리에서 만든 신뢰할 수 있는 채널의 메시지 소스에 승인을 보내기 전에 대상이 대기하는 시간입니다.  
   
 ### <a name="flowcontrolenabled"></a>FlowControlEnabled  
+
  데이터 형식: boolean  
   
  액세스 형식: 읽기 전용  
@@ -49,6 +54,7 @@ class ReliableSessionBindingElement : BindingElement
  흐름 제어 활성화 여부를 지정하는 부울 값입니다.  
   
 ### <a name="inactivitytimeout"></a>InactivityTimeout  
+
  데이터 형식: datetime  
   
  액세스 형식: 읽기 전용  
@@ -56,6 +62,7 @@ class ReliableSessionBindingElement : BindingElement
  통신 상대방이 메시지를 보내지 않아도 채널에서 오류로 간주하지 않도록 허용하는 최대 기간을 지정합니다.  
   
 ### <a name="maxpendingchannels"></a>MaxPendingChannels  
+
  데이터 형식: sint32  
   
  액세스 형식: 읽기 전용  
@@ -63,6 +70,7 @@ class ReliableSessionBindingElement : BindingElement
  수신기에서 수락하기까지 대기할 수 있는 최대 채널 수입니다.  
   
 ### <a name="maxretrycount"></a>MaxRetryCount  
+
  데이터 형식: sint32  
   
  액세스 형식: 읽기 전용  
@@ -70,13 +78,15 @@ class ReliableSessionBindingElement : BindingElement
  신뢰할 수 있는 채널이 기본 채널에서 `Send`를 호출하여 아직 승인을 받지 않은 메시지를 다시 전송하기 위해 시도할 수 있는 최대 횟수입니다.  
   
 ### <a name="maxtransferwindowsize"></a>MaxTransferWindowSize  
+
  데이터 형식: sint32  
   
  액세스 형식: 읽기 전용  
   
  신뢰할 수 있는 세션에 대한 최대 전송 창 크기입니다.  
   
-### <a name="ordered"></a>Ordered  
+### <a name="ordered"></a>주문됨  
+
  데이터 형식: boolean  
   
  액세스 형식: 읽기 전용  
@@ -84,6 +94,7 @@ class ReliableSessionBindingElement : BindingElement
  메시지가 전송된 순서대로 도착하도록 보장하는지 여부를 지정하는 부울 값입니다.  
   
 ### <a name="reliablemessagingversion"></a>ReliableMessagingVersion  
+
  데이터 형식: integer  
   
  액세스 형식: 읽기 전용  
@@ -96,6 +107,6 @@ class ReliableSessionBindingElement : BindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>

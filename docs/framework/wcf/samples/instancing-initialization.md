@@ -2,25 +2,28 @@
 title: 인스턴싱 초기화
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 06a8dfe571b652ded236df3097b37861c03a858d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9681c091fe2a69024b000c5b93d003ec4d127a7b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596658"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273362"
 ---
 # <a name="instancing-initialization"></a>인스턴싱 초기화
+
 이 샘플은 개체의 초기화를 활성화 및 비활성화 하 여 사용자 지정 하는 인터페이스를 정의 하 여 [풀링](pooling.md) 샘플을 확장 합니다 `IObjectControl` . 클라이언트에서는 개체를 풀로 반환하는 메서드와 개체를 풀로 반환하지 않는 메서드를 호출합니다.  
   
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
 ## <a name="extensibility-points"></a>확장 지점  
+
  WCF (Windows Communication Foundation) 확장을 만드는 첫 번째 단계는 사용할 확장성 지점을 결정 하는 것입니다. WCF에서 *EndpointDispatcher* 이라는 용어는 들어오는 메시지를 사용자 서비스의 메서드 호출로 변환 하 고 해당 메서드의 반환 값을 나가는 메시지로 변환 하는 런타임 구성 요소를 나타냅니다. WCF 서비스는 각 끝점에 대해 EndpointDispatcher를 만듭니다.  
   
  EndpointDispatcher는 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 클래스를 사용하여 서비스에서 보내거나 받는 모든 메시지에 대해 엔드포인트 범위 확장성을 제공합니다. 이 클래스를 사용하면 EndpointDispatcher의 동작을 제어하는 다양한 속성을 사용자 지정할 수 있습니다. 이 샘플에서는 서비스 클래스의 인스턴스를 제공하는 개체를 가리키는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 속성을 중점적으로 다룹니다.  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
+
  WCF에서 EndpointDispatcher는 인터페이스를 구현 하는 인스턴스 공급자를 사용 하 여 서비스 클래스의 인스턴스를 만듭니다 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> . 이 인터페이스에는 다음과 같은 두 개의 메서드만 있습니다.  
   
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: 메시지가 도착하면 디스패처가 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 메서드를 호출하여 메시지를 처리할 서비스 클래스의 인스턴스를 만듭니다. 이 메서드의 호출 빈도는 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 속성에 의해 결정됩니다. 예를 들어 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 속성이 <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>로 설정된 경우 도착하는 각 메시지를 처리하기 위해 서비스 클래스의 새 인스턴스가 만들어지므로, 메시지가 도착할 때마다 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>가 호출됩니다.  
@@ -28,6 +31,7 @@ ms.locfileid: "84596658"
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>: 서비스 인스턴스가 메시지 처리 작업을 마치면 EndpointDispatcher는 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> 메서드를 호출합니다. <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 메서드에서와 마찬가지로 이 메서드의 호출 빈도는 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 속성에 의해 결정됩니다.  
   
 ## <a name="the-object-pool"></a>개체 풀  
+
  `ObjectPoolInstanceProvider` 클래스에는 개체 풀이 구현되어 있습니다. 이 클래스는 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 인터페이스를 구현하여 서비스 모델 계층과 상호 작용합니다. EndpointDispatcher가 새 인스턴스를 만드는 대신 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 메서드를 호출하면 사용자 지정 구현에서 메모리 내의 풀에 있는 기존 개체를 찾습니다. 사용할 수 있는 개체가 있으면 반환되고, 그렇지 않으면 `ObjectPoolInstanceProvider`는 `ActiveObjectsCount` 속성(풀에서 반환된 개체의 개수)이 최대 풀 크기에 도달했는지 확인합니다. 이 크기에 도달하지 않았으면 새 인스턴스가 만들어지고 호출자에게 반환하며 이어서 `ActiveObjectsCount`가 증가합니다. 도달했으면 구성된 시간 동안 개체 만들기 요청이 큐에 대기합니다. `GetObjectFromThePool`의 구현은 다음 샘플 코드에 표시되어 있습니다.  
   
 ```csharp
@@ -201,6 +205,7 @@ public class PoolService : IPoolService
 ```  
   
 ## <a name="hooking-activation-and-deactivation"></a>활성화 및 비활성화 후크  
+
  개체 풀링의 주요 목적은 만들고 초기화하는 데 비교적 자원이 많이 사용되는 수명이 짧은 개체를 최적화하는 데 있습니다. 따라서 개체 풀링을 제대로 사용하면 애플리케이션의 성능을 현저히 향상시킬 수 있습니다. 풀에서 개체가 반환되기 때문에 생성자는 한 번만 호출됩니다. 반면 일부 애플리케이션의 경우는 단일 컨텍스트 동안 사용된 리소스를 초기화하고 정리할 수 있도록 일정 수준의 제어가 필요합니다. 예를 들어 일련의 계산에 사용되는 개체는 다음 계산을 처리하기 전에 private 필드를 재설정할 수 있습니다. 엔터프라이즈 서비스에서는 개체 개발자가 `Activate` 기본 클래스의 `Deactivate` 및 <xref:System.EnterpriseServices.ServicedComponent> 메서드를 재정의할 수 있도록 하여 이러한 종류의 컨텍스트별 초기화를 사용하도록 설정합니다.  
   
  개체 풀은 풀에서 개체를 반환하기 바로 전에 `Activate` 메서드를 호출합니다. 개체가 풀로 다시 돌아갈 때 `Deactivate`가 호출됩니다. <xref:System.EnterpriseServices.ServicedComponent> 기본 클래스에는 또한 개체를 계속 풀링할 수 있는지 여부를 풀에 알리는 데 사용되는 `boolean`라는 `CanBePooled` 속성이 있습니다.  
