@@ -2,14 +2,15 @@
 title: '방법: COM+ 통합 애플리케이션 배포'
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: b4ae7f730296d54debc1cf2971b61e5700503430
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5f2e64ed06b98db50259edf8ef307ce430b8be38
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595429"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289791"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>방법: COM+ 통합 애플리케이션 배포
+
 COM+ 통합 애플리케이션을 작성했다면 이를 다른 컴퓨터에 배포해야 하는 경우가 있습니다. 이 항목에서는 한 컴퓨터에서 다른 컴퓨터로 COM+ 통합 애플리케이션을 이동하는 방법에 대해 설명합니다.  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>COM+ 호스팅 통합 응용 프로그램 이동  
@@ -24,7 +25,7 @@ COM+ 통합 애플리케이션을 작성했다면 이를 다른 컴퓨터에 배
   
 5. 컴퓨터 A에 있는 애플리케이션 루트 디렉터리의 Application.config 및 Application.manifest 파일을 컴퓨터 B의 애플리케이션 루트 디렉터리로 복사합니다.  
   
-6. 해당 컴퓨터를 식별하기 위해 컴퓨터 B의 Application.config 파일에서 서비스 엔드포인트 주소를 편집합니다. 예를 들어 `http://machineA/MyService`를 `http://machineB/MyService`로 변경합니다.  
+6. 해당 컴퓨터를 식별하기 위해 컴퓨터 B의 Application.config 파일에서 서비스 엔드포인트 주소를 편집합니다. 예를 들어 `http://machineA/MyService`를 `http://machineB/MyService`로 변경할 수 있습니다.  
   
 ### <a name="moving-a-web-hosted-integration-application"></a>웹 호스팅 통합 애플리케이션 이동  
   

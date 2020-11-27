@@ -2,17 +2,19 @@
 title: 데이터 계약 확인자 사용
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: 20abd4d928fc51eb359949ecbb216615e9659b7f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a86ad21a5846feec37f8b4b48843eab2d6c161da
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595026"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289635"
 ---
 # <a name="using-a-data-contract-resolver"></a>데이터 계약 확인자 사용
+
 데이터 계약 확인자를 사용하면 알려진 형식을 동적으로 구성할 수 있습니다. 알려진 형식은 데이터 계약에 필요하지 않은 형식을 직렬화하거나 역직렬화할 때 필요합니다. 알려진된 형식에 대 한 자세한 내용은 참조 하세요. [데이터 계약 알려진 형식을](data-contract-known-types.md)합니다. 알려진 형식은 일반적으로 정적으로 지정됩니다. 즉, 작업을 구현하는 동안 작업이 받을 수 있는 가능한 형식을 모두 알고 있어야 합니다. 이에 해당하지 않고 알려진 형식을 동적으로 지정하는 기능이 중요한 시나리오도 있습니다.  
   
 ## <a name="creating-a-data-contract-resolver"></a>데이터 계약 확인자 만들기  
+
  데이터 계약 확인자를 만드는 작업에는 <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> 및 <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> 메서드를 구현하는 작업이 포함됩니다. 이러한 두 메서드는 serialization 및 deserialization 중에 사용되는 콜백을 각각 구현합니다. <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> 메서드는 serialization 중에 호출되며 데이터 계약 형식을 받아서 `xsi:type` 이름 및 네임스페이스에 매핑합니다. <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> 메서드는 deserialization 중에 호출되며 `xsi:type` 이름 및 네임스페이스를 받아서 데이터 계약 형식으로 확인합니다. 이러한 두 메서드에는 구현에서 기본 알려진 형식 확인자를 사용하기 위해 사용할 수 있는 `knownTypeResolver` 매개 변수가 있습니다.  
   
  다음 예제에서는 <xref:System.Runtime.Serialization.DataContractResolver>를 구현하여 `Customer` 데이터 계약 형식에서 파생된 `Person`라는 데이터 계약 형식에 매핑하거나 이 데이터 계약 형식에서 매핑하는 방법을 보여 줍니다.  

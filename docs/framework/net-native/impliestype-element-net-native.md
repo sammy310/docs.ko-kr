@@ -1,15 +1,16 @@
 ---
-title: <ImpliesType>요소 (.NET 네이티브)
+title: <ImpliesType> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 04c3a9498a5c9c24d67dedd02fb4c9d68d9efbdd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181012"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287958"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType>요소 (.NET 네이티브)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType> 요소 (.NET 네이티브)
+
 포함 형식 또는 메서드에 정책이 적용된 경우 해당 정책을 형식에 적용합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -29,6 +30,7 @@ ms.locfileid: "79181012"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -51,7 +53,7 @@ ms.locfileid: "79181012"
   
 |값|Description|  
 |-----------|-----------------|  
-|*type_name*|형식 이름입니다. 이 `<ImpliesType>` 요소가 나타내는 형식이 포함 `<Type>` 요소와 같은 네임스페이스에 있으면 *type_name*은 네임스페이스가 없는 형식 이름을 포함할 수 있습니다. 그러지 않으면 *type_name*은 정규화된 형식 이름을 포함해야 합니다.|  
+|*type_name*|형식 이름입니다. 이 `<ImpliesType>` 요소가 나타내는 형식이 포함 `<Type>` 요소와 같은 네임스페이스에 있으면 *type_name* 은 네임스페이스가 없는 형식 이름을 포함할 수 있습니다. 그러지 않으면 *type_name* 은 정규화된 형식 이름을 포함해야 합니다.|  
   
 ## <a name="all-other-attributes"></a>기타 모든 특성  
   
@@ -60,6 +62,7 @@ ms.locfileid: "79181012"
 |*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -71,6 +74,7 @@ ms.locfileid: "79181012"
 |[\<Method>](method-element-net-native.md)|메서드에 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `<ImpliesType>` 요소는 주로 라이브러리에서 사용되며 다음과 같은 시나리오를 해결합니다.  
   
 - 형식 하나에 대해 루틴을 리플렉션해야 하면 두 번째 형식에 대해서도 루틴을 리플렉션해야 하는 경우  

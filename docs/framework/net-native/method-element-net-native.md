@@ -1,15 +1,16 @@
 ---
-title: <Method>요소 (.NET 네이티브)
+title: <Method> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
-ms.openlocfilehash: 8db32c660846b4f4071fff2a40c760a3d1ef2489
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1d57457c90e44c70caa301eccc02c5831d283cea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79180983"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287906"
 ---
-# <a name="method-element-net-native"></a>\<Method>요소 (.NET 네이티브)
+# <a name="method-element-net-native"></a>\<Method> 요소 (.NET 네이티브)
+
 생성자 또는 메서드에 런타임 리플렉션 정책을 적용합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -22,6 +23,7 @@ ms.locfileid: "79180983"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -68,13 +70,15 @@ ms.locfileid: "79180983"
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  제네릭 메서드의 `<Method>` 요소는 자체 정책이 없는 모든 인스턴스화에 해당 정책을 적용합니다.  
   
  `Signature` 특성을 사용하여 특정 메서드 오버로드에 대한 정책을 지정할 수 있습니다. `Signature` 특성이 없는 경우 런타임 지시문은 메서드의 모든 오버로드에 적용됩니다.  
   
- `<Method>` 요소를 사용하여 생성자에 대해 런타임 리플렉션 정책을 정의할 수는 없습니다. 대신,, `Activate` 또는 요소의 특성을 [\<Assembly>](assembly-element-net-native.md) 사용 [\<Namespace>](namespace-element-net-native.md) [\<Type>](type-element-net-native.md) [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 합니다.  
+ `<Method>` 요소를 사용하여 생성자에 대해 런타임 리플렉션 정책을 정의할 수는 없습니다. 대신,, `Activate` 또는 요소의 특성을  [\<Assembly>](assembly-element-net-native.md) 사용 [\<Namespace>](namespace-element-net-native.md) [\<Type>](type-element-net-native.md) [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제의 `Stringify` 메서드는 리플렉션을 사용하여 개체를 문자열 표현으로 변환하는 범용 서식 지정 메서드입니다. 이 메서드는 개체의 기본 `ToString` 메서드를 호출할 수 있을 뿐 아니라 개체의 `ToString` 메서드에 서식 문자열이나 <xref:System.IFormatProvider> 구현 중 하나 또는 둘 다를 전달하여 서식이 지정된 결과 문자열을 생성할 수도 있습니다. 또한 숫자를 이진, 16진수 또는 8진수 표현으로 변환하는 <xref:System.Convert.ToString%2A?displayProperty=nameWithType> 오버로드 중 하나를 호출할 수도 있습니다.  
   
  [!code-csharp[ProjectN_Reflection#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/method1.cs#7)]  
@@ -148,4 +152,4 @@ ms.locfileid: "79180983"
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](runtime-directive-elements.md)
 - [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)
-- [\<MethodInstantiation>요소인](methodinstantiation-element-net-native.md)
+- [\<MethodInstantiation> 요소](methodinstantiation-element-net-native.md)

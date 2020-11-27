@@ -2,17 +2,19 @@
 title: 메타데이터 사용
 ms.date: 03/30/2017
 ms.assetid: 05cf53a1-b92d-4d8e-a87e-79f6e51c4a8d
-ms.openlocfilehash: ac28de954c3754fba3763e40270d6427fb31566e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e8b41cb161ee1320ec6233f6cadae842af5aec68
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600246"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289466"
 ---
 # <a name="using-metadata"></a>메타데이터 사용
+
 서비스 메타데이터에는 시스템에서 읽을 수 있는 서비스에 대한 설명이 포함되어 있습니다. 서비스 엔드포인트, 바인딩, 계약, 작업 및 메시지에 대한 설명이 서비스 메타데이터에 포함됩니다. 이러한 서비스 메타데이터는 서비스를 사용하도록 자동으로 클라이언트를 생성하거나, 서비스 설명을 구현하거나 클라이언트의 바인딩을 동적으로 업데이트하는 등의 다양한 목적에 사용할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [생성된 클라이언트 코드 이해](understanding-generated-client-code.md)  
  Svcutil.exe 도구를 통해 생성되는 여러 가지 클래스와 인터페이스에 대해 설명합니다.  
   

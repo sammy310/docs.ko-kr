@@ -2,14 +2,15 @@
 title: GetOperationCounterInstanceName
 ms.date: 03/30/2017
 ms.assetid: ac42e20f-63c1-4bdb-8660-736980936811
-ms.openlocfilehash: f82065947879098295995b6e54a493e23764f374
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b073cd5aea930dec0491f8fe87e578bd190027ab
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963659"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288855"
 ---
 # <a name="getoperationcounterinstancename"></a>GetOperationCounterInstanceName
+
 작업 성능 카운터 인스턴스 이름을 검색합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -22,7 +23,8 @@ string GetOperationCounterInstanceName(
   
 ## <a name="parameters"></a>매개 변수  
   
-### <a name="operation"></a>작업  
+### <a name="operation"></a>연산  
+
  [in] string  
   
 ## <a name="requirements"></a>요구 사항  

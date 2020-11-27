@@ -2,12 +2,12 @@
 title: 지원되지 않는 시나리오
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a3ee91e5232926b4ea7db80db35d9a309ca8105b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2d779b49a8201b3ad53507af7710f7aef5e9321c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557816"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289648"
 ---
 # <a name="unsupported-scenarios"></a>지원되지 않는 시나리오
 
@@ -16,6 +16,7 @@ ms.locfileid: "90557816"
 ## <a name="impersonation-scenarios"></a>가장 시나리오
 
 ### <a name="impersonated-identity-might-not-flow-when-clients-make-asynchronous-calls"></a>클라이언트에서 비동기 호출을 수행할 때 가장 id가 전달 되지 않을 수 있습니다.
+
  WCF 클라이언트가 가장을 사용하여 Windows 인증을 통해 WCF 서비스로 비동기 호출을 수행할 때 가장 ID 대신 클라이언트 프로세스 ID로 인증이 수행될 수 있습니다.
 
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP 및 보안 컨텍스트 토큰 쿠키 사용
@@ -122,7 +123,7 @@ WSDL 가져오기를 실행할 때는 WCF에서 `<wst:Claims>` 템플릿의 `RST
 
  문제를 해결하려면 가져오기를 실행한 후 클라이언트에서 직접 바인딩을 수정합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Security Considerations](security-considerations-in-wcf.md)
 - [정보 공개](information-disclosure.md)

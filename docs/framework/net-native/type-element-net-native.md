@@ -1,15 +1,15 @@
 ---
-title: <Type>요소 (.NET 네이티브)
+title: <Type> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-ms.openlocfilehash: 4e88b49b82513079ddcf6f0bafe02d44235a406a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e71df41c4a37206910d835ee85dc3d68b4cbad4a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73091849"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287711"
 ---
-# <a name="type-element-net-native"></a>\<Type>요소 (.NET 네이티브)
+# <a name="type-element-net-native"></a>\<Type> 요소 (.NET 네이티브)
 
 클래스 또는 구조체와 같은 특정 형식에 런타임 정책을 적용합니다.
 
@@ -53,7 +53,7 @@ ms.locfileid: "73091849"
 
 |값|Description|
 |-----------|-----------------|
-|*type_name*|형식 이름입니다. 이 `<Type>` 요소가 [\<Namespace>](namespace-element-net-native.md) 요소 또는 다른 요소의 자식인 경우 `<Type>` 네임 스페이스 없이 형식의 이름을 포함할 수 *type_name* . 그러지 않으면 *type_name*은 정규화된 형식 이름을 포함해야 합니다.|
+|*type_name*|형식 이름입니다. 이 `<Type>` 요소가 [\<Namespace>](namespace-element-net-native.md) 요소 또는 다른 요소의 자식인 경우 `<Type>` 네임 스페이스 없이 형식의 이름을 포함할 수 *type_name* . 그러지 않으면 *type_name* 은 정규화된 형식 이름을 포함해야 합니다.|
 
 ## <a name="all-other-attributes"></a>기타 모든 특성
 
@@ -118,6 +118,7 @@ ms.locfileid: "73091849"
 ```
 
 ## <a name="example"></a>예제
+
  다음 예제에서는 리플렉션을 사용하여 <xref:System.Reflection.PropertyInfo> 속성을 나타내는 <xref:System.String.Chars%2A?displayProperty=nameWithType> 개체를 검색합니다. 그런 다음 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드를 사용하여 문자열에서 7번째 문자의 값을 검색하고 문자열의 모든 문자를 표시합니다. 예제의 변수는 `b` <xref:Windows.UI.Xaml.Controls.TextBlock> 컨트롤입니다.
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]

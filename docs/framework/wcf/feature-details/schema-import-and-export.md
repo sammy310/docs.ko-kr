@@ -9,14 +9,15 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 942ade69d92d8a213f65a3a2e463b6924e2f986e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 52a9e1bf4c9442bd42beb55b133a185c4a42148d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590217"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288569"
 ---
 # <a name="schema-import-and-export"></a>스키마 가져오기 및 내보내기
+
 WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인가 포함 되어 있습니다 <xref:System.Runtime.Serialization.DataContractSerializer> . 는 `DataContractSerializer` .NET Framework 개체와 XML 사이를 변환 합니다 (양방향). WCF에는 serializer 자체 외에도 연결 된 스키마 가져오기 및 스키마 내보내기 메커니즘이 포함 되어 있습니다. *스키마* 는 serializer가 생성 하거나 역직렬 변환기가 액세스할 수 있는 XML의 모양에 대 한 공식적이 고 정확 하며 컴퓨터에서 읽을 수 있는 설명입니다. WCF에서는 W3C (World Wide Web 컨소시엄) XSD (XML 스키마 정의 언어)를 스키마 표현으로 사용 하며,이는 다양 한 타사 플랫폼과 크게 상호 운용할 수 있습니다.  
   
  스키마 가져오기 구성 요소인는 <xref:System.Runtime.Serialization.XsdDataContractImporter> XSD 스키마 문서를 사용 하 고 serialize 된 형식이 지정 된 스키마에 해당 하는 .NET Framework 클래스 (일반적으로 데이터 계약 클래스)를 생성 합니다.  
@@ -42,9 +43,11 @@ WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인�
  <xref:System.Runtime.Serialization.XsdDataContractExporter>를 사용하면 반대로 작업할 수 있습니다. 즉 `DataContractSerializer`로 serialize할 수 있는 형식을 사용하고 XSD 스키마 문서를 생성할 수 있습니다.  
   
 ## <a name="fidelity-is-not-guaranteed"></a>정확도는 보장되지 않음  
+
  스키마나 형식을 통해 완벽히 정확한 라운드트립을 만든다고 보장할 수 없습니다. *라운드트립* 이란 스키마를 가져와서 클래스 집합을 만들고 결과를 내보내 스키마를 다시 만드는 것을 의미 합니다. 동일한 스키마가 반환 되지 않을 수 있습니다. 이 프로세스를 반대로 해도 정확도는 보장되지 않습니다. (형식의 스키마를 생성하기 위해 형식을 내보낸 다음 그 형식을 다시 가져옵니다.) 이때도 동일한 형식은 반환되지 않을 것입니다.  
   
 ## <a name="supported-types"></a>지원 형식  
+
  데이터 계약 모델은 WC3 스키마의 제한된 하위 집합만 지원합니다. 이 하위 집합을 따르지 않는 스키마는 가져오기 프로세스 동안 예외를 발생시킵니다. 예를 들어 데이터 계약의 데이터 멤버가 XML 특성으로 serialize되도록 지정하는 방법이 없다고 가정합니다. 이 경우, XML 특성을 사용하도록 하는 스키마는 지원되지 않고, 올바른 XML 프로젝션으로 데이터 계약을 생성할 수 없으므로 가져오기 작업 동안 예외가 발생됩니다.  
   
  예를 들어 다음과 같은 스키마 단편은 가져오기 기본 설정을 사용하여 가져올 수 없습니다.  

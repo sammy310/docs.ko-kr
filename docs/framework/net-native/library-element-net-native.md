@@ -1,15 +1,16 @@
 ---
-title: <Library>요소 (.NET 네이티브)
+title: <Library> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
-ms.openlocfilehash: f94bfe047fa7a95b6f24264bae0b27112c589dfd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: aeaa6b1a9c3c4ceebdd0eab3f331a044971398bf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128361"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287919"
 ---
-# <a name="library-element-net-native"></a>\<Library>요소 (.NET 네이티브)
+# <a name="library-element-net-native"></a>\<Library> 요소 (.NET 네이티브)
+
 런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 형식 및 형식 멤버가 포함된 어셈블리를 정의합니다.  
   
  \<Directives> 요소  
@@ -22,6 +23,7 @@ ms.locfileid: "73128361"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -52,11 +54,12 @@ ms.locfileid: "73128361"
 |[\<Directives>](directives-element-net-native.md)|런타임 지시문 파일의 루트 요소입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  요소는 0 개 이상의 [\<Directives>](directives-element-net-native.md) 요소를 포함할 수 있습니다 `<Library>` .  
   
  `<Library>` 요소는 런타임에 해당 메타데이터가 필요한 프로그램 요소를 정의하는 컨테이너로 사용되며 정책을 표현하지는 않습니다. 컴파일 타임에 컴파일러 도구는 `<Library>` 요소로 지정된 라이브러리에서만 자식 요소가 식별한 프로그램 요소를 검색합니다. 반면, 컴파일러 도구는 요소의 자식 요소로 식별 되는 프로그램 요소에 대 한 모든 라이브러리 including.NET Framework core 라이브러리를 검색 [\<Application>](application-element-net-native.md) 합니다.  
   
- `<Library>` 지시문은 조건부로 사용할 수 있습니다. `<Library>`요소 이름이 별표 ()로 시작 하 고 끝나는 경우 \* `<Library>` 지시문은 별표 사이에 지정 된 어셈블리를 앱에서 참조 하는 경우에만 적용 됩니다. 예를 들어 다음 런타임 지시어는 응용 프로그램에서 유틸리티 .dll 어셈블리를 참조 하는 경우에만 적용 됩니다.  
+ `<Library>` 지시문은 조건부로 사용할 수 있습니다. `<Library>`요소 이름이 별표 ()로 시작 하 고 끝나는 경우 \* `<Library>` 지시문은 별표 사이에 지정 된 어셈블리를 앱에서 참조 하는 경우에만 적용 됩니다. 예를 들어 다음 런타임 지시어는 응용 프로그램에서 Utilities.dll 어셈블리를 참조 하는 경우에만 적용 됩니다.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -66,9 +69,9 @@ ms.locfileid: "73128361"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [\<Application>요소인](application-element-net-native.md)
-- [\<Directives>요소인](directives-element-net-native.md)
+- [\<Application> 요소](application-element-net-native.md)
+- [\<Directives> 요소](directives-element-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](runtime-directive-elements.md)

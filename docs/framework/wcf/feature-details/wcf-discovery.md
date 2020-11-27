@@ -6,19 +6,21 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], discovery
 - discovery [WCF]
 ms.assetid: 462c4913-f388-45a9-9042-28ae96a4e735
-ms.openlocfilehash: 63c6589cb2ecff9f0a5e7c8bb61b454f6516c98c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 176e9760d98f9640bd9d1c7b059287dc29c0d666
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600181"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289362"
 ---
 # <a name="wcf-discovery"></a>WCF 검색
-WCF (Windows Communication Foundation)는 WS 검색 프로토콜을 사용 하 여 상호 운용 가능한 방식으로 런타임에 서비스를 검색할 수 있도록 지 원하는 기능을 제공 합니다. WCF 서비스는 멀티 캐스트 메시지 또는 검색 프록시 서버를 사용 하 여 네트워크에 대 한 가용성을 알릴 수 있습니다. 클라이언트 애플리케이션은 네트워크나 검색 프록시 서버를 검색하여 일련의 조건을 만족하는 서비스를 찾습니다. 이 단원의 항목에서는 이 기능의 프로그램 모델에 대한 개요와 자세한 설명을 제공합니다.  
+
+WCF (Windows Communication Foundation)는 WS-Discovery 프로토콜을 사용 하 여 상호 운용 가능한 방식으로 런타임에 서비스를 검색할 수 있도록 지 원하는 기능을 제공 합니다. WCF 서비스는 멀티 캐스트 메시지 또는 검색 프록시 서버를 사용 하 여 네트워크에 대 한 가용성을 알릴 수 있습니다. 클라이언트 애플리케이션은 네트워크나 검색 프록시 서버를 검색하여 일련의 조건을 만족하는 서비스를 찾습니다. 이 단원의 항목에서는 이 기능의 프로그램 모델에 대한 개요와 자세한 설명을 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [WCF Discovery 개요](wcf-discovery-overview.md)  
- WCF에서 제공 하는 WS 검색 지원에 대 한 개요를 제공 합니다.  
+ WCF에서 제공 하는 WS-Discovery 지원에 대 한 개요를 제공 합니다.  
   
  [WCF Discovery 개체 모델](wcf-discovery-object-model.md)  
  개체 모델의 클래스와 WS-Discovery 지원의 확장성에 대해 설명합니다.  

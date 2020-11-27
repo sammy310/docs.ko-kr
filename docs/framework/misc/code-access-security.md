@@ -16,12 +16,12 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-ms.openlocfilehash: 528824e2d1b5d854f9eef816d3f7b20ba0f2b7db
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 1119965f971e00b1b795378d9af3977074a696f3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224349"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288322"
 ---
 # <a name="code-access-security"></a>코드 액세스 보안
 
@@ -44,7 +44,9 @@ ms.locfileid: "92224349"
  코드에서 단일 코드 액세스 보안 호출을 수행하지 않는 경우에도 공용 언어 런타임을 대상으로 하는 모든 관리 코드가 코드 액세스 보안의 혜택을 받습니다. 자세한 내용은 [Code Access Security Basics](code-access-security-basics.md)을 참조하세요.  
   
 <a name="key_functions"></a>
+
 ## <a name="key-functions-of-code-access-security"></a>코드 액세스 보안의 주요 기능  
+
  코드 액세스 보안은 보호된 리소스와 작업에 대한 코드의 액세스를 제한하는 데 도움이 됩니다. .NET Framework에서 코드 액세스 보안은 다음 기능을 수행합니다.  
   
 - 다양한 시스템 리소스에 액세스하는 데 필요한 권한을 나타내는 권한 및 권한 집합을 정의합니다.  
@@ -56,7 +58,9 @@ ms.locfileid: "92224349"
 - 호출 스택에 있는 모든 호출자에게 부여된 권한과 해당 호출자가 가져야 하는 권한을 비교하여 런타임에 코드를 제한합니다.  
   
 <a name="walking_the_call_stack"></a>
+
 ## <a name="walking-the-call-stack"></a>호출 스택 워크  
+
  리소스에 액세스하거나 작업을 수행할 수 있는 권한이 코드에 있는지 확인하기 위해서 런타임 보안 시스템은 호출 스택 워크를 수행하여 각 호출자에게 부여된 권한과 요청된 권한을 비교합니다. 호출 스택의 호출자에게 요청된 권한이 없는 경우 보안 예외가 발생하고 액세스가 거부됩니다. 스택 워크는 신뢰 수준이 낮은 코드가 신뢰 수준이 높은 코드를 호출하고 해당 코드를 통해 권한 없는 작업을 수행하는 유인 공격을 방지하기 위한 것입니다. 런타임에 모든 호출자의 권한을 요구할 경우 성능에 영향을 주지만 신뢰 수준이 낮은 코드에 의한 유인 공격으로부터 코드를 보호하는 데 필요합니다. 성능을 최적화 하기 위해 코드에서 스택 워크를 덜 수행할 수 있습니다. 그러나이 작업을 수행할 때마다 보안 약점을 노출 하지 않아야 합니다.  
   
  다음 그림에서는 Assembly A4의 메서드가 해당 호출자에게 P 권한이 있도록 요구할 때 발생하는 스택 워크를 보여 줍니다.  
@@ -64,6 +68,7 @@ ms.locfileid: "92224349"
  ![코드 액세스 보안 스택 워크](media/slide-10a.gif "slide_10a")
   
 <a name="related_topics"></a>
+
 ## <a name="related-articles"></a>관련 문서
   
 |제목|Description|  

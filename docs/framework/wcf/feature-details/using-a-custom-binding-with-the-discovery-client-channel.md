@@ -2,17 +2,19 @@
 title: Discovery 클라이언트 채널을 통해 사용자 지정 바인딩 사용
 ms.date: 03/30/2017
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-ms.openlocfilehash: 49983c3ab303d3839350af72b1aa4821c071fe99
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d84739a0021262826c541ab3ff9df663adabf44a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595039"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289661"
 ---
 # <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>Discovery 클라이언트 채널을 통해 사용자 지정 바인딩 사용
+
 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>와 함께 사용자 지정 바인딩을 사용하는 경우 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 인스턴스를 만드는 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>를 정의해야 합니다.  
   
 ## <a name="creating-a-discoveryendpointprovider"></a>DiscoveryEndpointProvider 만들기  
+
  는 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 요청 시 인스턴스를 만들 책임이 있습니다. 검색 엔드포인트 공급자를 정의하려면 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>에서 클래스를 파생시키고 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> 메서드를 재정의한 다음 새 검색 엔드포인트를 반환합니다. 다음 예제에서는 검색 엔드포인트 공급자를 만드는 방법을 보여 줍니다.  
   
 ```csharp

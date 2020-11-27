@@ -1,15 +1,16 @@
 ---
-title: <TypeParameter>요소 (.NET 네이티브)
+title: <TypeParameter> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
-ms.openlocfilehash: c69b535f3a01c287d30189138130066fc10a77e2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dc04115914b7571b677c6d069d2d4b820b895d59
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128918"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287672"
 ---
-# <a name="typeparameter-element-net-native"></a>\<TypeParameter>요소 (.NET 네이티브)
+# <a name="typeparameter-element-net-native"></a>\<TypeParameter> 요소 (.NET 네이티브)
+
 메서드로 전달된 Type 인수가 나타내는 형식에 정책을 적용합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -29,6 +30,7 @@ ms.locfileid: "73128918"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -60,6 +62,7 @@ ms.locfileid: "73128918"
 |*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -69,6 +72,7 @@ ms.locfileid: "73128918"
 |[\<Method>](method-element-net-native.md)|생성자 또는 메서드에 런타임 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `<TypeParameter>`요소는 [\<Parameter>](parameter-element-net-native.md) 형식의 매개 변수에만 적용할 수 있다는 점을 제외 하 고 요소와 유사 합니다 <xref:System.Type> . 이 요소는 `Name` 특성으로 지정된 형식 인수에 의해 런타임에 표시되는 형식에 정책을 적용합니다.  
   
  예를 들어 NewtonSoft JSON serializer는 정적 `JsonConvert.DeserializeObject(String value, Type type)` 메서드를 포함합니다. 다음 리플렉션 지시문은  
@@ -92,9 +96,9 @@ Object obj = JsonConvert.DeserializeObject(data, t);
   
  리플렉션 지시문은 런타임에 `StockQuote` 형식의 메타데이터를 NewtonSoft JSON serializer에 제공합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [\<Method>요소인](method-element-net-native.md)
+- [\<Method> 요소](method-element-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)
 - [런타임 지시문 요소](runtime-directive-elements.md)

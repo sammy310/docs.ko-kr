@@ -2,14 +2,15 @@
 title: 메시지 보안을 사용하여 메시지에 보안 설정
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: b5f7679d5e5ec82e63b588cebd90ce873c055088
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6aae16b766889f402f774451338ae2cd30162437
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558305"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288604"
 ---
 # <a name="securing-messages-using-message-security"></a>메시지 보안을 사용하여 메시지에 보안 설정
+
 이 섹션에서는를 사용할 때 WCF 메시지 보안에 대해 설명 <xref:System.ServiceModel.NetMsmqBinding> 합니다.  
   
 > [!NOTE]
@@ -28,6 +29,7 @@ ms.locfileid: "90558305"
  WCF 메시지 보안은 인증서 또는 Kerberos 프로토콜과 같은 기존 보안 인프라와 통합 되는 WCF 메시지에 보안 헤더를 추가 합니다.  
   
 ## <a name="message-credential-type"></a>메시지 자격 증명 형식  
+
  메시지 보안을 사용하면 서비스 및 클라이언트에서 서로 자격 증명을 제출하여 인증할 수 있습니다. <xref:System.ServiceModel.NetMsmqBinding.Security%2A> 모드를 `Message` 또는 `Both`(즉, 전송 보안과 메시지 보안 모두 사용)로 설정하면 메시지 보안을 선택할 수 있습니다.  
   
  서비스에서 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> 속성을 사용하여 클라이언트 인증에 사용되는 자격 증명을 검사할 수 있습니다. 이 방법을 사용하여 서비스에서 구현하는 추가 인증 검사를 수행할 수도 있습니다.  
@@ -35,6 +37,7 @@ ms.locfileid: "90558305"
  이 절에서는 서로 다른 자격 증명 형식과 큐에서 그러한 형식을 사용하는 방법에 대해 설명합니다.  
   
 ### <a name="certificate"></a>인증서  
+
  Certificate 자격 증명 형식에서는 X.509 인증서를 사용하여 서비스와 클라이언트를 식별합니다.  
   
  일반적인 시나리오에서 클라이언트와 서비스에는 신뢰할 수 있는 인증 기관의 유효한 인증서가 발급됩니다. 그런 다음 연결이 설정되고, 클라이언트에서 서비스의 인증서를 통해 서비스의 유효성을 인증하여 서비스 신뢰 여부를 결정합니다. 마찬가지로 서비스에서는 클라이언트의 인증서를 사용하여 클라이언트 신뢰를 확인합니다.  
@@ -44,6 +47,7 @@ ms.locfileid: "90558305"
  Windows를 실행하는 컴퓨터에서 인증서는 다양한 종류의 저장소에 저장됩니다. 여러 저장소에 대 한 자세한 내용은 [인증서 저장소](/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10))를 참조 하세요.  
   
 ### <a name="windows"></a>Windows  
+
  Windows 메시지 자격 증명 형식에는 Kerberos 프로토콜이 사용됩니다.  
   
  Kerberos 프로토콜은 도메인에서 사용자를 인증하고 인증된 사용자가 도메인에 있는 다른 엔터티와 보안 컨텍스트를 구성할 수 있게 해 주는 보안 메커니즘입니다.  
@@ -55,15 +59,18 @@ ms.locfileid: "90558305"
  메시지 자격 증명을 선택할 때, 기본적으로 Kerberos 프로토콜이 사용됩니다.
   
 ### <a name="username-password"></a>Username Password  
+
  이 속성을 이용하면 메시지의 보안 헤더에 사용자 이름 암호를 사용하여 클라이언트를 서버에 인증할 수 있습니다.  
   
 ### <a name="issuedtoken"></a>IssuedToken  
+
  클라이언트에서는 보안 토큰 서비스를 사용하여 서비스에서 클라이언트에 사용할 메시지에 첨부되는 토큰을 발급할 수 있습니다.  
   
 ## <a name="using-transport-and-message-security"></a>전송 및 메시지 보안 사용  
+
  전송 보안과 메시지 보안을 모두 사용하는 경우에는 전송과 SOAP 메시지 수준 모두에서 메시지 보호에 사용되는 인증서가 같아야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [전송 보안을 사용하여 메시지에 보안 설정](securing-messages-using-transport-security.md)
 - [메시지 큐에 대한 메시지 보안](../samples/message-security-over-message-queuing.md)

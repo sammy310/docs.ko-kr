@@ -1,19 +1,20 @@
 ---
-title: <Application>요소 (.NET 네이티브)
+title: <Application> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a7f2eca5a5bb5cfb7b9827f2463454a17fc128cb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128525"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288140"
 ---
-# <a name="application-element-net-native"></a>\<Application>요소 (.NET 네이티브)
+# <a name="application-element-net-native"></a>\<Application> 요소 (.NET 네이티브)
+
 런타임에 메타데이터를 리플렉션에 사용할 수 있는 애플리케이션 수준 형식 및 형식 멤버의 컨테이너로 사용되며, 앱의 모든 프로그램 요소에 대해 런타임 리플렉션 정책을 적용합니다.  
   
  \<Directives> 요소  
-\<Application>요소 (rd .xml)  
+\<Application> 요소 (rd.xml)  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,6 +32,7 @@ ms.locfileid: "73128525"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다. 자식 요소 표에서 정책은 런타임에 특정 프로그램 요소에 대해 제공되는 메타데이터의 종류를 참조합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -75,6 +77,7 @@ ms.locfileid: "73128525"
 |[\<Directives>](directives-element-net-native.md)|런타임 지시문 파일의 루트 요소입니다.|  
   
 ## <a name="remarks"></a>설명  
+
  [\<Directives>](directives-element-net-native.md)요소는 0 개 또는 한 개의 요소를 포함할 수 있습니다 `<Application>` . 단일 리플렉션 지시문 파일에 여러 `<Application>` 요소를 포함할 수는 없습니다.  
   
  `<Application>` 요소는 다음 두 가지 방법 중 하나로 사용할 수 있습니다.  
@@ -83,9 +86,9 @@ ms.locfileid: "73128525"
   
 - 리플렉션, serialization 및 interop에 대한 애플리케이션 수준 정책을 설정하는 요소로 사용. 요소의 특성은 `<Application>` 응용 프로그램 수준 정책을 정의 하며,이 정책은 또는 요소로 정의 된 자식 요소에 의해 재정의 될 수 있습니다 `<Application>` [\<Library>](library-element-net-native.md) .  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [\<Library>요소인](library-element-net-native.md)
-- [\<Directives>요소인](directives-element-net-native.md)
+- [\<Library> 요소](library-element-net-native.md)
+- [\<Directives> 요소](directives-element-net-native.md)
 - [런타임 지시문 요소](runtime-directive-elements.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)

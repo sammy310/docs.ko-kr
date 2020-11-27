@@ -2,18 +2,20 @@
 title: WCF와 함께 여러 인증 스키마 사용
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 1874963573a6ec12939bd12b79574f1e2c889bfd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3aae9bff4300af97f7b179d9d8115340a26e715a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600220"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289427"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>WCF와 함께 여러 인증 스키마 사용
+
 이제 WCF를 사용하여 단일 엔드포인트에 여러 인증 체계를 지정할 수 있습니다. 또한 웹 호스팅 서비스가 IIS에서 직접 인증 설정을 상속할 수 있습니다. 자체 호스팅 서비스는 사용할 수 있는 인증 체계를 지정할 수 있습니다. IIS에서 인증 설정을 설정 하는 방법에 대 한 자세한 내용은 [Iis 인증](https://go.microsoft.com/fwlink/?LinkId=232458) 을 참조 하세요.  
   
 ## <a name="iis-hosted-services"></a>IIS에서 호스트되는 서비스  
- IIS에서 호스트되는 서비스의 경우 IIS에서 사용할 인증 체계를 설정합니다. 그런 다음, 서비스의 web.config 파일에서 바인딩 구성의 다음 XML 코드 조각과 같이 clientCredential type을 "InheritedFromHost"로 지정 합니다.  
+
+ IIS에서 호스트되는 서비스의 경우 IIS에서 사용할 인증 체계를 설정합니다. 그런 다음 서비스의 web.config 파일에서 바인딩 구성의 다음 XML 코드 조각과 같이 clientCredential type을 "InheritedFromHost"로 지정 합니다.  
   
 ```xml  
 <bindings>  
@@ -63,6 +65,7 @@ else
  그러면 IIS에서 선택된 항목에 따라 여기에 나열된 인증 체계의 하위 집합만 서비스 엔드포인트에 적용되는 것으로 간주됩니다. 즉, 개발자는 serviceAuthenticationManager 목록에서 기본 인증을 생략하여 목록에서 기본 인증을 제외할 수 있으며, IIS에서 사용할 수 있는 인증의 경우에도 서비스 엔드포인트에 적용되지 않습니다.  
   
 ## <a name="self-hosted-services"></a>자체 호스팅 서비스  
+
  자체 호스팅 서비스는 설정을 상속할 IIS가 없으므로 약간 다르게 구성됩니다. 여기서는 \<serviceAuthenticationManager> element 또는 ServiceAuthenticationBehavior를 사용 하 여 상속 되는 인증 설정을 지정 합니다. 코드는 다음과 비슷합니다.  
   
 ```csharp  

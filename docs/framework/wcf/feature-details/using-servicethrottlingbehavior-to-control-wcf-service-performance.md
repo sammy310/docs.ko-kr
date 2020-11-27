@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - behavior [WCF], service performance
 ms.assetid: f9dc120c-dc24-49d5-930e-b22f5bc73423
-ms.openlocfilehash: 9cc5141805504bc46391105f475860b032f12d32
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 44cc924de0c3079bb2f8125a7ac63fa494d4aca1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600233"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289414"
 ---
 # <a name="using-servicethrottlingbehavior-to-control-wcf-service-performance"></a>ServiceThrottlingBehavior를 사용하여 WCF 서비스 성능 제어
+
 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> 클래스는 애플리케이션 수준에서 생성되는 인스턴스 또는 세션의 수를 제한하기 위해 사용할 수 있는 속성을 노출합니다. 이 동작을 사용 하 여 WCF (Windows Communication Foundation) 응용 프로그램의 성능을 세밀 하 게 조정할 수 있습니다.  
   
 ## <a name="controlling-service-instances-and-concurrent-calls"></a>서비스 인스턴스 및 동시 호출 제어  
+
  <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A> 클래스를 통해 처리 중인 최대 메시지 수를 지정하려면 <xref:System.ServiceModel.ServiceHost> 속성을 사용하고, 서비스의 최대 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> 개체 수를 지정하려면 <xref:System.ServiceModel.InstanceContext> 속성을 사용합니다.  
   
  일반적으로 이러한 속성에 대 한 설정을 결정 하는 작업은 로드에 대해 응용 프로그램을 실행 한 후에 발생 하므로 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> 일반적으로 응용 프로그램 구성 파일에서 요소를 사용 하 여 속성에 대 한 설정을 지정 합니다 [\<serviceThrottling>](../../configure-apps/file-schema/wcf/servicethrottling.md) .  

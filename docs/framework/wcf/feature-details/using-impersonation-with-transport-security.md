@@ -2,22 +2,24 @@
 title: 전송 보안을 통해 가장 사용
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 1d33bfbbb74266aefa538166b4e1aca7d7e315ef
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 14914bc65d5033c54640e06b79713ea1871daf18
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594974"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289505"
 ---
 # <a name="using-impersonation-with-transport-security"></a>전송 보안을 통해 가장 사용
+
 *가장* 은 서버 응용 프로그램이 클라이언트의 id를 가져올 수 있는 기능입니다. 리소스에 대한 액세스 확인 시 일반적으로 서비스는 가장을 사용합니다. 서버 애플리케이션은 서비스 계정을 사용하여 실행하지만 서버가 클라이언트 연결을 수락할 경우, 클라이언트의 자격 증명을 사용하여 액세스 검사를 수행하도록 클라이언트를 가장합니다. 전송 보안은 자격 증명을 전달하고 이러한 자격 증명을 사용하여 통신에 보안을 설정하기 위한 메커니즘입니다. 이 항목에서는 WCF (Windows Communication Foundation)에서 가장 기능을 사용 하 여 전송 보안을 사용 하는 방법을 설명 합니다. 메시지 보안을 사용 하는 가장에 대 한 자세한 내용은 [위임 및 가장](delegation-and-impersonation-with-wcf.md)을 참조 하세요.  
   
 ## <a name="five-impersonation-levels"></a>5개의 가장 수준  
+
  전송 보안은 다음 표에 설명된 대로 5개의 가장 수준을 사용합니다.  
   
 |가장 수준|Description|  
 |-------------------------|-----------------|  
-|None|서버 애플리케이션에서 클라이언트 가장을 시도하지 않습니다.|  
+|없음|서버 애플리케이션에서 클라이언트 가장을 시도하지 않습니다.|  
 |익명|서버 애플리케이션에서 클라이언트의 자격 증명에 대한 액세스 검사를 수행할 수 있지만 클라이언트 ID에 대한 정보는 수신하지 않습니다. 이 가장 수준은 명명된 파이프와 같이 시스템 상의 통신을 위해서만 사용됩니다. 원격 연결을 통해 `Anonymous`를 사용하는 경우 가장 수준이 Identify로 승격됩니다.|  
 |Identify|서버 애플리케이션이 클라이언트의 ID를 알고 있으며 클라이언트 자격 증명에 대한 액세스 확인을 수행할 수 있지만, 클라이언트를 가장할 수는 없습니다. Id는 토큰 공급자가 다른 가장 수준을 제공 하지 않는 한 WCF의 SSPI 자격 증명에 사용 되는 기본 가장 수준입니다.|  
 |Impersonate|서버 애플리케이션은 액세스 검사를 수행하는 것 이외에 클라이언트로 가장하여 서버 시스템의 리소스에 액세스할 수 있습니다. 서버 애플리케이션은 가장된 토큰에 네트워크 자격 증명이 없기 때문에 클라이언트의 ID를 사용하여 원격 시스템의 리소스에 액세스할 수 없습니다.|  
@@ -28,9 +30,11 @@ ms.locfileid: "84594974"
  `Impersonate` 또는 `Delegate` 수준에서 가장을 사용하려면 서버 애플리케이션에 `SeImpersonatePrivilege` 권한이 있어야 합니다. 애플리케이션이 Administrators 그룹의 계정 또는 Service SID(네트워크 서비스, 로컬 서비스 또는 로컬 시스템)의 계정에서 실행되는 경우 기본적으로 이 권한을 가집니다. 가장 기능을 사용하는 데 클라이언트 및 서버에 대한 상호 인증이 필요하지 않습니다. NTLM과 같이 가장을 지원하는 일부 인증 스키마는 상호 인증에 사용할 수 없습니다.  
   
 ## <a name="transport-specific-issues-with-impersonation"></a>가장을 사용하는 전송 관련 문제  
+
  WCF에서 전송 선택은 가장에 대 한 가능한 선택에 영향을 줍니다. 이 섹션에서는 WCF의 표준 HTTP 및 명명 된 파이프 전송에 영향을 주는 문제에 대해 설명 합니다. 사용자 지정 전송에는 가장 지원과 관련하여 제한이 있습니다.  
   
 ### <a name="named-pipe-transport"></a>명명된 파이프 전송  
+
  명명된 파이프 전송에서는 다음 항목이 사용됩니다.  
   
 - 명명된 파이프 전송은 로컬 시스템에서만 사용됩니다. WCF의 명명 된 파이프 전송은 명시적으로 컴퓨터 간 연결을 허용 하지 않습니다.  
@@ -40,6 +44,7 @@ ms.locfileid: "84594974"
  명명 된 파이프에 대 한 자세한 내용은 [전송 선택](choosing-a-transport.md)을 참조 하세요.  
   
 ### <a name="http-transport"></a>HTTP 전송  
+
  Http 전송 (및)을 사용 하는 바인딩은 <xref:System.ServiceModel.WSHttpBinding> <xref:System.ServiceModel.BasicHttpBinding> [http 인증 이해](understanding-http-authentication.md)에서 설명한 대로 여러 인증 스키마를 지원 합니다. 지원되는 가장 수준은 인증 스키마에 따라 다릅니다. HTTP 파이프 전송에서는 다음 항목이 사용됩니다.  
   
 - `Anonymous` 인증 스키마는 가장을 무시합니다.  

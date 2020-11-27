@@ -3,17 +3,19 @@ title: 명령 코드를 사용하여 워크플로, 활동 및 식 작성
 description: Workflow Foundation 워크플로 정의는 구성 된 활동 개체의 트리입니다. 코드를 사용 하 여 워크플로 정의, 활동 및 식을 만듭니다.
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
-ms.openlocfilehash: d169049c47c154858a2e653b5f286fa6b66ba44d
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 5355f2090317a0bce3fec0f46550b202bd0af095
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063798"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289128"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>명령 코드를 사용하여 워크플로, 활동 및 식 작성
+
 워크플로 정의는 구성된 활동 개체의 트리입니다. XAML을 수동으로 편집하거나 Workflow Designer를 사용하여 XAML을 생성하는 등 여러 가지 방법으로 이 활동 트리를 정의할 수 있습니다. 하지만 XAML 사용은 필수 사항이 아닙니다. 프로그래밍 방식으로 워크플로 정의를 만들 수도 있습니다. 이 항목에서는 코드를 사용하여 워크플로 정의, 활동 및 식을 만드는 방법을 간략히 설명합니다. 코드를 사용 하 여 XAML 워크플로를 사용 하는 예제는 [xaml로 워크플로 및 작업 serialize](serializing-workflows-and-activities-to-and-from-xaml.md)를 참조 하세요.  
   
 ## <a name="creating-workflow-definitions"></a>워크플로 정의 만들기  
+
  활동 형식의 인스턴스를 인스턴스화하고 활동 개체의 속성을 구성하여 워크플로 정의를 만들 수 있습니다. 자식 활동을 포함하지 않는 활동의 경우 코드 몇 행으로 이 작업을 완료할 수 있습니다.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#47](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#47)]  
@@ -26,6 +28,7 @@ ms.locfileid: "88063798"
  [!code-csharp[CFX_WorkflowApplicationExample#48](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#48)]  
   
 ### <a name="using-object-initializers"></a>개체 이니셜라이저 사용  
+
  이 항목의 예에서는 개체 초기화 구문을 사용합니다. 개체 초기화 구문은 워크플로에 있는 활동의 계층적 뷰를 제공하고 활동 간의 관계를 표시하기 때문에 코드에서 워크플로 정의를 만드는 유용한 방법일 수 있습니다. 프로그래밍 방식으로 워크플로를 만들 때 개체 초기화 구문을 사용하기 위한 요구 사항은 없습니다. 다음 예는 이전 예와 기능적으로 동일합니다.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#49](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#49)]  
@@ -33,6 +36,7 @@ ms.locfileid: "88063798"
  개체 이니셜라이저에 대 한 자세한 내용은 [방법: 생성자를 호출 하지 않고 개체 초기화 (c # 프로그래밍 가이드)](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) 및 [방법: 개체 이니셜라이저를 사용 하 여 개체 선언](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)을 참조 하세요.  
   
 ### <a name="working-with-variables-literal-values-and-expressions"></a>변수, 리터럴 값 및 식 작업  
+
  코드를 사용하여 워크플로 정의를 만들 때는 워크플로 정의 만들기 중 실행되는 코드와 해당 워크플로의 인스턴스 실행 중 실행되는 코드를 알아야 합니다. 예를 들어, 다음은 난수를 생성하여 콘솔에 쓰기 위한 워크플로입니다.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#50](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#50)]  
@@ -75,6 +79,7 @@ new Assign<int>
  런타임에 Visual Basic 식은 LINQ 식으로 컴파일됩니다. 이전의 두 예제는 XAML로 serialize할 수 있지만 serialize한 XAML을 Workflow Designer에서 보고 편집하려는 경우에는 식에 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>를 사용하세요. `ExpressionServices.Convert`를 사용하는 serialize된 워크플로는 디자이너에서 열 수 있지만 식의 값은 비게 됩니다. 워크플로를 XAML로 serialize 하는 방법에 대 한 자세한 내용은 [xaml로 워크플로 및 활동 직렬화](serializing-workflows-and-activities-to-and-from-xaml.md)를 참조 하세요.  
   
 #### <a name="literal-expressions-and-reference-types"></a>리터럴 식 및 참조 형식  
+
  리터럴 식은 워크플로에서 <xref:System.Activities.Expressions.Literal%601> 활동으로 표시됩니다. 다음 <xref:System.Activities.Statements.WriteLine> 활동은 기능이 동일합니다.  
   
 ```csharp  
@@ -111,6 +116,7 @@ new Assign
  식에 대 한 자세한 내용은 [식](expressions.md)을 참조 하세요.  
   
 #### <a name="invoking-methods-on-objects-using-expressions-and-the-invokemethod-activity"></a>식 및 InvokeMethod 활동을 사용하여 개체에 대한 메서드 호출  
+
  <xref:System.Activities.Expressions.InvokeMethod%601> 활동은 .NET Framework에서 클래스의 정적 및 인스턴스 메서드를 호출하는 데 사용할 수 있습니다. 이 항목의 이전 예제에서는 <xref:System.Random> 클래스를 사용하여 난수를 생성했습니다.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#51](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#51)]  
@@ -134,6 +140,7 @@ new InvokeMethod<int>
  <xref:System.Random.Next%2A>는 정적 메서드가 아니기 때문에 <xref:System.Random> 속성에 대해 <xref:System.Activities.Expressions.InvokeMethod%601.TargetObject%2A> 클래스의 인스턴스가 제공됩니다. 이 예제에서는 Visual Basic 식을 사용하여 새 인스턴스를 만들지만 새 인스턴스가 이미 만들어져 워크플로 변수에 저장되었을 수도 있습니다. 이 예제에서는 <xref:System.Activities.Statements.Assign%601> 활동 대신 <xref:System.Activities.Expressions.InvokeMethod%601> 활동을 사용하는 것이 더욱 간단합니다. <xref:System.Activities.Statements.Assign%601> 또는 <xref:System.Activities.Expressions.InvokeMethod%601> 활동에 의해 최종적으로 호출된 메서드 호출이 오래 실행되는 경우 <xref:System.Activities.Expressions.InvokeMethod%601>는 <xref:System.Activities.Expressions.InvokeMethod%601.RunAsynchronously%2A> 속성이 있기 때문에 보다 편리합니다. 이 속성이 `true`로 설정된 경우 호출된 메서드는 워크플로에 대해 비동기적으로 실행됩니다. 다른 활동이 병렬로 실행되더라도 메서드가 비동기적으로 실행되는 동안에는 이러한 활동이 차단되지 않습니다. 또한 호출되는 메서드에 반환 값이 없는 경우에는 <xref:System.Activities.Expressions.InvokeMethod%601>를 사용하여 메서드를 호출하는 것이 적절한 방법입니다.  
   
 ## <a name="arguments-and-dynamic-activities"></a>인수 및 동적 활동  
+
  워크플로 정의는 코드에서 활동을 활동 트리로 어셈블하고 속성과 인수를 구성하여 만들어집니다. 기존 인수를 바인딩할 수 있지만, 새 인수를 활동에 추가할 수는 없습니다. 여기에는 루트 활동에 전달된 워크플로 인수가 포함됩니다. 명령적 코드에서는 워크플로 인수가 새 CLR 형식에 대한 속성으로 지정되고 XAML에서는 `x:Class` 및 `x:Member`를 사용하여 선언됩니다. 메모리 내 개체 트리로 워크플로 정의를 만들 때 새 CLR 형식이 만들어지지 않았기 때문에 인수를 추가할 수 없습니다. 하지만 <xref:System.Activities.DynamicActivity>에 인수를 추가할 수 있습니다. 이 예제에서는 정수 인수 두 개를 취하여 이를 더한 다음 그 결과를 반환하는 <xref:System.Activities.DynamicActivity%601>을 만듭니다. 각 인수에 대해 <xref:System.Activities.DynamicActivityProperty>를 만들고, 작업 결과를 <xref:System.Activities.Activity%601.Result%2A>의 <xref:System.Activities.DynamicActivity%601> 인수에 할당합니다.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#55](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#55)]  
@@ -141,6 +148,7 @@ new InvokeMethod<int>
  동적 작업에 대 한 자세한 내용은 [런타임에 작업 만들기](creating-an-activity-at-runtime-with-dynamicactivity.md)를 참조 하세요.  
   
 ## <a name="compiled-activities"></a>컴파일된 활동  
+
  동적 활동은 코드를 사용하여 인수가 포함된 활동을 정의하는 한 방법이지만 활동을 코드에서 만들어 형식으로 컴파일할 수도 있습니다. <xref:System.Activities.CodeActivity>에서 파생되는 간단한 활동과 <xref:System.Activities.AsyncCodeActivity>에서 파생되는 비동기 활동을 만들 수 있습니다. 이러한 활동은 인수를 사용하고, 값을 반환하며, 명령적 코드를 사용하여 논리를 정의합니다. 이러한 형식의 활동을 만드는 예제는 [CodeActivity 기본 클래스](workflow-activity-authoring-using-the-codeactivity-class.md) 및 [비동기 활동 만들기](creating-asynchronous-activities-in-wf.md)를 참조 하세요.  
   
  <xref:System.Activities.NativeActivity>에서 파생되는 활동은 명령적 코드를 사용하여 논리를 정의할 수 있으며 논리를 정의하는 자식 활동을 포함할 수도 있습니다. 또한 책갈피 만들기 같은 런타임 기능에도 완벽하게 액세스할 수 있습니다. 기반 활동 만들기에 대 한 예제는 <xref:System.Activities.NativeActivity> [NativeActivity 기본 클래스](nativeactivity-base-class.md), [방법: 활동 만들기](how-to-create-an-activity.md)및 [Native Activity를 사용 하 여 사용자 지정 복합](./samples/custom-composite-using-native-activity.md) 샘플을 참조 하세요.  

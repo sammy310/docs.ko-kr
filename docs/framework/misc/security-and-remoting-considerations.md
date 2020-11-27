@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 3a272b2a8f164aad07413a069e68a2146d0df6a7
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 883c20483c4d315a45e1f4dab959d42cbb6e3c4b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855714"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288205"
 ---
 # <a name="security-and-remoting-considerations"></a>보안 및 원격 서비스 고려 사항
 
@@ -26,6 +26,7 @@ ms.locfileid: "87855714"
  일반적으로 선언적 [LinkDemand](link-demands.md) 및 보안 검사로 보호 되는 메서드, 속성 또는 이벤트를 노출 하면 안 됩니다 <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> . 원격 기능에서는 이러한 검사가 적용되지 않습니다. , Assert 등의 다른 보안 검사는 <xref:System.Security.Permissions.SecurityAction.Demand> 프로세스 내의 응용 프로그램 도메인 간에는 작동 하지만 크로스 프로세스 또는 크로스 시스템 시나리오에서는 작동 하지 않습니다. [Assert](using-the-assert-method.md)  
   
 ## <a name="protected-objects"></a>보호되는 개체  
+
  일부 개체는 그 자체에 보안 상태를 포함합니다. 고유한 권한 이상의 보안 권한이 부여되지 않도록 신뢰할 수 없는 코드에는 이러한 개체를 전달하면 안 됩니다.  
   
  한 가지 예로 <xref:System.IO.FileStream> 개체 만들기가 있습니다. 생성 시 <xref:System.Security.Permissions.FileIOPermission>이 요구되며, 성공하면 파일 개체가 반환됩니다. 그러나 이 개체 참조가 파일 권한이 없는 코드에 전달되면 개체가 이 특정 파일을 읽고 쓸 수 있습니다.  
@@ -33,6 +34,7 @@ ms.locfileid: "87855714"
  이러한 개체에 대 한 가장 간단한 방어는 공용 API 요소를 통해 개체 참조를 가져오도록 하는 코드와 동일한 **FileIOPermission** 을 요구 하는 것입니다.  
   
 ## <a name="application-domain-crossing-issues"></a>애플리케이션 도메인을 넘을 때의 문제  
+
  관리되는 호스팅 환경에서 코드를 격리하려면 다양한 어셈블리에 대한 권한 수준을 축소하는 명시적 정책을 사용하여 여러 자식 애플리케이션 도메인을 생성하는 것이 일반적입니다. 그러나 해당 어셈블리에 대한 정책은 기본 애플리케이션 도메인에 변경되지 않고 유지됩니다. 자식 애플리케이션 도메인 중 하나가 기본 애플리케이션 도메인에서 어셈블리를 로드하도록 강제할 수 있는 경우 코드 격리 효과가 손실되며 강제로 로드된 어셈블리의 형식이 상위 신뢰 수준으로 코드를 실행할 수 있습니다.  
   
  애플리케이션 도메인은 다른 애플리케이션 도메인에서 어셈블리를 로드하도록 강제하고 다른 애플리케이션 도메인에 호스트된 개체에 대한 프록시를 호출하여 포함된 코드를 실행할 수 있습니다. 애플리케이션 도메인 간 프록시를 가져오려면 개체를 호스트하는 애플리케이션 도메인이 메서드 호출 매개 변수나 반환 값을 통해 프록시를 배포해야 합니다. 또는 애플리케이션 도메인이 방금 만들어진 경우 기본적으로 작성자에게 <xref:System.AppDomain> 개체에 대한 프록시가 있습니다. 따라서 코드 격리 손상을 방지하려면 상위 신뢰 수준의 애플리케이션 도메인이 해당 도메인의 참조 방식 마샬링 개체에 대한 참조(<xref:System.MarshalByRefObject>에서 파생된 클래스 인스턴스)를 하위 신뢰 수준의 애플리케이션 도메인에 배포하면 안 됩니다.  

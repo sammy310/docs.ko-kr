@@ -1,15 +1,16 @@
 ---
-title: <Namespace>요소 (.NET 네이티브)
+title: <Namespace> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-ms.openlocfilehash: 06d88a7b0f95c7c1dbe98818b847c92e08a57a19
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 05de04685f8ba746f55bf040c74fd3831c5b63ca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79180962"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287893"
 ---
-# <a name="namespace-element-net-native"></a>\<Namespace>요소 (.NET 네이티브)
+# <a name="namespace-element-net-native"></a>\<Namespace> 요소 (.NET 네이티브)
+
 지정된 네임스페이스의 모든 형식에 런타임 리플렉션 정책을 적용합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -29,6 +30,7 @@ ms.locfileid: "79180962"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -77,9 +79,10 @@ ms.locfileid: "79180962"
 |`<Namespace>`|부모 네임스페이스의 모든 형식에 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `Activate`, `Browse`, `Dynamic` 및 `Serialize` 특성은 모두 선택적 항목입니다. 아무 특성도 없으면 `<Namespace>` 요소는 자식 요소의 컨테이너로만 사용됩니다. 특성이 있으면 `<Namespace>` 요소가 지정된 네임스페이스의 모든 형식에 대해 런타임 리플렉션 정책을 적용합니다.  
   
- 요소의 자식인 경우 요소 [\<Assembly>](assembly-element-net-native.md) 는 `<Namespace>` 요소에 정의 된 런타임 리플렉션 정책을 재정의 합니다 [\<Assembly>](assembly-element-net-native.md) .  
+ 요소의 자식인 경우 요소 [\<Assembly>](assembly-element-net-native.md) 는 `<Namespace>` 요소에 정의 된 런타임 리플렉션 정책을 재정의 합니다  [\<Assembly>](assembly-element-net-native.md) .  
   
 ## <a name="see-also"></a>참고 항목
 

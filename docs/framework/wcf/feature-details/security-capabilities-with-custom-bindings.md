@@ -2,17 +2,19 @@
 title: 사용자 지정 바인딩을 사용하는 보안 기능
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
-ms.openlocfilehash: 48d17543f2b133c74bcfa82cfe1a2a0de28b1d01
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1b12907481ccb3f3c5f4b8aaba6ede8ebfa6228a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595195"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288309"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>사용자 지정 바인딩을 사용하는 보안 기능
+
 시스템에서 제공되는 바인딩 중 하나를 사용하여 일반적으로 사용되는 보안 작업을 수행할 수 있습니다. 하지만 좀더 제어가 필요한 경우에는 이 항목의 설명에 따라 <xref:System.ServiceModel.Channels.SecurityBindingElement>를 사용하여 사용자 지정 바인딩을 만들 수도 있습니다. 사용자 지정 바인딩에 대 한 자세한 내용은 [사용자 지정 바인딩](../extending/custom-bindings.md)을 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [SecurityBindingElement 인증 모드](securitybindingelement-authentication-modes.md)  
  사용자 지정 바인딩에서 가능한 인증 모드에 대해 설명합니다.  
   
@@ -41,11 +43,13 @@ ms.locfileid: "84595195"
  디지털 서명의 암호화를 비활성화할 경우 얻을 수 있는 성능 상의 이점에 대해 설명합니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
  [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md)  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [보호 수준 이해](../understanding-protection-level.md)  
   
  [서비스 및 클라이언트에 보안 설정](securing-services-and-clients.md)  

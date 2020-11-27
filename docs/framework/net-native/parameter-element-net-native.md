@@ -1,15 +1,16 @@
 ---
-title: <Parameter>요소 (.NET 네이티브)
+title: <Parameter> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
-ms.openlocfilehash: c6dfc347d44a794ee8496c45ca879f9daab12b22
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7e812ab60eb0a89eb868346733a8ea74e2f76d3e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128193"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287867"
 ---
-# <a name="parameter-element-net-native"></a>\<Parameter>요소 (.NET 네이티브)
+# <a name="parameter-element-net-native"></a>\<Parameter> 요소 (.NET 네이티브)
+
 메서드에 전달된 인수의 형식에 리플렉션 정책을 적용합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -29,6 +30,7 @@ ms.locfileid: "73128193"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -60,6 +62,7 @@ ms.locfileid: "73128193"
 |*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -69,11 +72,12 @@ ms.locfileid: "73128193"
 |[\<Method>](method-element-net-native.md)|생성자 또는 메서드에 런타임 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `<Parameter>`요소는 [\<Method>](method-element-net-native.md) 요소의 자식 이며 특정 메서드 매개 변수에 정책을 적용 하는 데 사용 됩니다. 특정 메서드 매개 변수는 형식이 아닌 이름으로 지정됩니다. 정책 형식을 나타내는 `Activate` 또는 `Dynamic`과 같은 특성이 하나 이상 있어야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [\<Method>요소인](method-element-net-native.md)
+- [\<Method> 요소](method-element-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)
 - [런타임 지시문 요소](runtime-directive-elements.md)

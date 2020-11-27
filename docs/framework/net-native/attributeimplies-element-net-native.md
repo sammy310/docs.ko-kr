@@ -1,15 +1,16 @@
 ---
-title: <AttributeImplies>요소 (.NET 네이티브)
+title: <AttributeImplies> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
-ms.openlocfilehash: 2ab1fdc71bc43f61f69a0d9b7bea7acb35e14ea5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4171345bb5337436142128623abc7d183c4477ff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181060"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288114"
 ---
-# <a name="attributeimplies-element-net-native"></a>\<AttributeImplies>요소 (.NET 네이티브)
+# <a name="attributeimplies-element-net-native"></a>\<AttributeImplies> 요소 (.NET 네이티브)
+
 포함 특성이 적용되는 코드 요소에 대한 정책을 정의합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -28,6 +29,7 @@ ms.locfileid: "79181060"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -52,6 +54,7 @@ ms.locfileid: "79181060"
 |*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -61,13 +64,14 @@ ms.locfileid: "79181060"
 |[\<Type>](type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `<AttributeImplies>` 요소는 포함 형식이 특성(<xref:System.Attribute?displayProperty=nameWithType>에서 파생되는 클래스)인 경우에 사용됩니다. 특성이 특정 프로그램 요소에 적용되면 `<AttributeImplies>` 요소로 정의된 정책이 해당 프로그램 요소에 적용됩니다.  
   
  리플렉션, serialization 및 interop 특성은 모두 선택적 항목이지만 하나 이상 있어야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [\<Type>요소인](type-element-net-native.md)
+- [\<Type> 요소](type-element-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](runtime-directive-elements.md)
 - [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: f07397b4c10ffec4902dbde37b622978d00f5b63
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d3087021c717d6ee055a4a1f5332d9d259f06381
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594987"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289596"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>배달 못 한 편지 큐를 사용하여 메시지 전송 오류 처리
+
 대기 중인 메시지를 배달하지 못할 수 있습니다. 이러한 실패 메시지는 배달 못 한 편지 큐에 기록됩니다. 네트워크 오류, 삭제된 큐, 꽉 찬 큐, 인증 오류 또는 정시 배달 실패와 같은 이유로 인해 배달 실패가 발생할 수 있습니다.  
   
  대기 중인 메시지는 수신 애플리케이션이 적절한 시간 내에 큐에서 메시지를 읽지 못하는 경우 오랫동안 큐에 남을 수 있습니다. 이러한 동작은 시간이 중요한 메시지에 적합하지 않을 수 있습니다. 시간이 중요한 메시지에는 대기 중인 바인딩에 설정되어 있는 TTL(Time to Live) 속성이 있으며, 이 속성은 메시지가 만료되기 전에 큐에 있을 수 있는 시간을 나타냅니다. 만료된 메시지는 배달 못한 편지 큐라는 특수 큐로 보내집니다. 또한 큐 할당량 초과 또는 인증 오류 등 다른 이유로 메시지가 배달 못 한 편지 큐에 배치될 수도 있습니다.  
@@ -26,6 +27,7 @@ ms.locfileid: "84594987"
  Windows Server 2003 및 Windows XP Windows Communication Foundation (WCF)는 대기 중인 모든 클라이언트 응용 프로그램에 대해 시스템 차원의 배달 못 한 편지 큐를 제공 합니다. Windows Vista에서 WCF는 대기 중인 각 클라이언트 응용 프로그램에 대해 배달 못 한 편지 큐를 제공 합니다.  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>배달 못 한 편지 큐의 사용 지정  
+
  배달 못 한 편지 큐는 송신 애플리케이션의 큐 관리자에 있습니다. 이 관리자는 만료되었거나 전송 또는 배달하지 못한 메시지를 보관합니다.  
   
  바인딩에는 다음과 같은 배달 못 한 편지 큐 속성이 있습니다.  
@@ -35,6 +37,7 @@ ms.locfileid: "84594987"
 - <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>배달 못 한 편지 큐에서 메시지 읽기  
+
  배달 못 한 편지 큐에서 메시지를 읽는 응용 프로그램은 다음과 같은 사소한 차이점을 제외 하 고 응용 프로그램 큐에서 읽는 WCF 서비스와 비슷합니다.  
   
 - 시스템 트랜잭션 배달 못 한 편지 큐에서 메시지를 읽으려면 URI(Uniform Resource Identifier)가 net.msmq://localhost/system$;DeadXact 형식이어야 합니다.  
@@ -48,11 +51,13 @@ ms.locfileid: "84594987"
  수신기의 WCF 스택은 서비스가 수신 대기 하는 주소와 메시지의 주소를 일치 시킵니다. 주소가 일치하면 메시지가 디스패치되고, 그렇지 않으면 메시지가 디스패치되지 않습니다. 일반적으로 배달 못 한 편지 큐에 있는 메시지는 배달 못 한 편지 큐 서비스가 아닌 서비스에 주소가 지정되기 때문에 배달 못 한 편지 큐에서 메시지를 읽을 때 문제가 발생할 수 있습니다. 따라서 배달 못 한 편지 큐에서 메시지를 읽는 서비스는 수신자와 관계없이 큐의 모든 메시지를 일치시키도록 스택에 지시하는 주소 필터 `ServiceBehavior`를 설치해야 합니다. 특히 `ServiceBehavior`를 <xref:System.ServiceModel.AddressFilterMode.Any> 매개 변수와 함께 배달 못 한 편지 큐에서 메시지를 읽는 서비스에 추가해야 합니다.  
   
 ## <a name="poison-message-handling-from-the-dead-letter-queue"></a>배달 못 한 편지 큐에서 포이즌 메시지 처리  
+
  경우에 따라 배달 못 한 편지 큐에서 포이즌 메시지 처리가 가능합니다. 시스템 큐에서 하위 큐를 만들 수 없기 때문에 배달 못 한 시스템 큐에서 메시지를 읽는 경우 `ReceiveErrorHandling`을 `Move`로 설정할 수 없습니다. 사용자 지정 배달 못 한 편지 큐에서 메시지를 읽는 경우 하위 큐를 사용할 수 있으므로 `Move`는 포이즌 메시지의 유효한 처리 방식입니다.  
   
  `ReceiveErrorHandling`이 `Reject`로 설정된 경우 사용자 지정 배달 못 한 편지 큐에서 메시지를 읽으면 포이즌 메시지가 배달 못 한 시스템 큐에 저장됩니다. 배달 못 한 시스템 큐에서 메시지를 읽는 경우 메시지가 손실/삭제됩니다. MSMQ에서 배달 못 한 시스템 큐의 거부로 인해 메시지가 손실/삭제됩니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 배달 못 한 편지 큐를 만드는 방법 및 이를 사용하여 만료된 메시지를 처리하는 방법을 보여 줍니다. 예제는 [방법: 대기 중인 메시지를 WCF 끝점과 교환](how-to-exchange-queued-messages-with-wcf-endpoints.md)의 예제를 기반으로 합니다. 다음 예제에서는 각 애플리케이션의 배달 못 한 편지 큐를 사용하는 주문 처리 서비스에 클라이언트 코드를 작성하는 방법을 보여 줍니다. 또한 예제에서는 배달 못 한 편지 큐에서 메시지를 처리하는 방법을 보여 줍니다.  
   
  다음은 각 애플리케이션의 배달 못 한 편지 큐를 지정하는 클라이언트의 코드입니다.  

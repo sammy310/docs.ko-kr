@@ -2,14 +2,15 @@
 title: 보안 세션
 ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
-ms.openlocfilehash: cb02adc7514e27175088e7664b12e45bc8ca5cd9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fd8406af0c37981b2ddc7ab8ddb0c82c63cbc0b1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590087"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288554"
 ---
 # <a name="secure-sessions"></a>보안 세션
+
 WCF (Windows Communication Foundation) 기능은 메시지가 전송 된 순서 대로 수신 되도록 보장 하는 신뢰할 수 있는 세션입니다. 이 단원의 항목에서는 신뢰할 수 있는 세션을 만들 때 고려해야 할 보안 관련 문제에 대해 설명합니다. 신뢰할 수 있는 세션에 대 한 자세한 내용은 [세션 사용](../using-sessions.md)을 참조 하세요.  
   
 > [!NOTE]
@@ -25,11 +26,13 @@ WCF (Windows Communication Foundation) 기능은 메시지가 전송 된 순서 
 |[보안 세션에 대한 보안 고려 사항](security-considerations-for-secure-sessions.md)|보안 세션에 대해 고려할 사항에 대해 설명합니다.|  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [세션, 인스턴스 및 동시성](sessions-instancing-and-concurrency.md)  
   
  [서비스 디자인 및 구현](../designing-and-implementing-services.md)  

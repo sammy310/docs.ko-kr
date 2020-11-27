@@ -2,14 +2,15 @@
 title: 리플렉션 및 .NET 네이티브
 ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
-ms.openlocfilehash: 65921377be9b8bf1c2d147b384c85cbd037d15f2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c38070ec4afe0a7311133e0ef7b5b24eb2fe4fb5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128179"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287841"
 ---
 # <a name="reflection-and-net-native"></a>리플렉션 및 .NET 네이티브
+
 .NET Framework의 관리 개발에서는 리플렉션 API를 통한 메타 프로그래밍이 지원됩니다. 리플렉션을 통해 앱의 개체를 검사하고, 검사를 통해 검색된 개체에 대해 메서드를 호출하고, 런타임에 새 형식을 생성하고, 기타 여러 동적 코드 시나리오를 지원할 수 있습니다. 또한 serialization과 deserialization도 지원되므로 개체의 필드 값을 유지했다가 나중에 복원할 수 있습니다. 이러한 모든 시나리오에서는 .NET Framework JIT(Just-In-Time) 컴파일러가 사용 가능한 메타데이터를 기반으로 네이티브 코드를 생성해야 합니다.  
   
  .NET 네이티브 런타임은 JIT 컴파일러를 포함 하지 않습니다. 따라서 필요한 모든 네이티브 코드를 미리 생성해야 합니다. 추론 집합을 사용하여 생성해야 하는 코드를 결정할 수 있지만 이러한 추론이 가능한 모든 프로그래밍 시나리오에 적용되는 것은 아닙니다.  그러므로 [런타임 지시문](runtime-directives-rd-xml-configuration-file-reference.md)을 사용하여 이러한 메타 프로그래밍 시나리오에 대한 힌트를 제공해야 합니다. 필요한 메타데이터 또는 구현 코드를 런타임에 사용할 수 없는 경우 앱에서는 [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 또는 [MissingInteropDataException](missinginteropdataexception-class-net-native.md) 예외를 throw합니다. 이 예외를 제거하는 런타임 지시문 파일에 대한 적절한 항목을 생성하는 두 가지 문제 해결사를 이용할 수 있습니다.  

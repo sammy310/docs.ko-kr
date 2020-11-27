@@ -1,15 +1,16 @@
 ---
-title: <Subtypes>요소 (.NET 네이티브)
+title: <Subtypes> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-ms.openlocfilehash: bb719449f3769c5dbbde6d05efdb865c18bb4ab2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7484152c351f59ee84b601584bd84347186628a3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79180929"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287815"
 ---
-# <a name="subtypes-element-net-native"></a>\<Subtypes>요소 (.NET 네이티브)
+# <a name="subtypes-element-net-native"></a>\<Subtypes> 요소 (.NET 네이티브)
+
 포함 형식에서 상속된 모든 클래스에 런타임 정책을 적용합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -28,6 +29,7 @@ ms.locfileid: "79180929"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -52,6 +54,7 @@ ms.locfileid: "79180929"
 |*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -61,11 +64,13 @@ ms.locfileid: "79180929"
 |[\<Type>](type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  `<Subtypes>` 요소는 포함 형식의 모든 하위 형식에 정책을 적용합니다. 파생 형식 및 해당 기본 클래스에 각기 다른 정책을 적용하려는 경우 이 요소를 사용합니다.  
   
  리플렉션, serialization 및 interop 특성은 모두 선택적 항목이지만 하나 이상 있어야 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 `BaseClass` 클래스와 `Derived1` 하위 클래스를 정의합니다.  
   
  [!code-csharp[ProjectN_Reflection#4](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#4)]  
@@ -87,9 +92,9 @@ ms.locfileid: "79180929"
   
  [!code-csharp[ProjectN_Reflection#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#5)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [\<Type>요소인](type-element-net-native.md)
+- [\<Type> 요소](type-element-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](runtime-directive-elements.md)
 - [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)
