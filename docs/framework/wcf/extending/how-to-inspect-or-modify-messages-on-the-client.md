@@ -3,25 +3,27 @@ title: '방법: 클라이언트에서 메시지 검사 또는 수정'
 description: 적절 한 인터페이스를 구현 하 여 WCF 클라이언트 또는 서비스에서 들어오거나 나가는 메시지를 검사 하거나 수정 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 6f6a3d20d7f3a9fb79de5cd3e29096e270d0f188
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1f8b75001754739b48d10ee577ae26a175e72860
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247509"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249048"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>방법: 클라이언트에서 메시지 검사 또는 수정
+
 을 구현 하 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 고 클라이언트 런타임에 삽입 하 여 WCF 클라이언트에서 들어오거나 나가는 메시지를 검사 하거나 수정할 수 있습니다. 자세한 내용은 [클라이언트 확장](extending-clients.md)을 참조 하세요. 서비스의 해당 기능은 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>입니다. 전체 코드 예제는 [메시지 검사기](../samples/message-inspectors.md) 샘플을 참조 하세요.  
   
 ### <a name="to-inspect-or-modify-messages"></a>메시지를 검사하거나 수정하려면  
   
 1. <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 인터페이스를 구현합니다.  
   
-2. 클라이언트 메시지 검사자를 삽입하려는 범위에 따라 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>를 구현합니다. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>끝점 수준에서 동작을 변경할 수 있습니다. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>계약 수준에서 동작을 변경할 수 있습니다.  
+2. 클라이언트 메시지 검사자를 삽입하려는 범위에 따라 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>를 구현합니다. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 끝점 수준에서 동작을 변경할 수 있습니다. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> 계약 수준에서 동작을 변경할 수 있습니다.  
   
 3. <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>에서 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 메서드를 호출하여 동작을 삽입합니다. 자세한 내용은 [동작을 사용 하 여 런타임 구성 및 확장](configuring-and-extending-the-runtime-with-behaviors.md)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 코드 예제는 아래 순서대로 나열되어 있습니다.  
   
 - 클라이언트 검사자 구현.  

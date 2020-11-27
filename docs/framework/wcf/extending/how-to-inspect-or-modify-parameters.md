@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: b4a673f97f06e8d489d9acc85d84e1ecea4656e4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e8b2674d8efc0ef3ac2f1dd6ab0df559195c274c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795591"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249035"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>방법: 매개 변수 검사 또는 수정
-인터페이스를 <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> 구현 하 여 클라이언트 또는 서비스 런타임에 삽입 하 여 wcf (Windows Communication Foundation) 클라이언트 개체 또는 wcf 서비스에서 단일 작업에 대해 들어오거나 나가는 메시지를 검사 하거나 수정할 수 있습니다. 일반적으로 작업 동작을 사용하여 단일 작업에 매개 변수 검사자를 추가하지만, 다른 동작을 사용하여 더 넓은 범위의 런타임에 쉬운 액세스를 제공할 수도 있습니다. 자세한 내용은 [클라이언트 확장](extending-clients.md) 및 [디스패처 확장](extending-dispatchers.md)을 참조 하세요.  
+
+인터페이스를 구현 <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> 하 여 클라이언트 또는 서비스 런타임에 삽입 하 여 wcf (Windows Communication Foundation) 클라이언트 개체 또는 wcf 서비스에서 단일 작업에 대해 들어오거나 나가는 메시지를 검사 하거나 수정할 수 있습니다. 일반적으로 작업 동작을 사용하여 단일 작업에 매개 변수 검사자를 추가하지만, 다른 동작을 사용하여 더 넓은 범위의 런타임에 쉬운 액세스를 제공할 수도 있습니다. 자세한 내용은 [클라이언트 확장](extending-clients.md) 및 [디스패처 확장](extending-dispatchers.md)을 참조 하세요.  
   
 ### <a name="inspecting-or-modifying-parameters"></a>매개 변수 검사 또는 수정  
   
@@ -24,6 +25,7 @@ ms.locfileid: "70795591"
 3. <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>에서 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 메서드를 호출하기 전에 동작을 삽입합니다. 자세한 내용은 [동작을 사용 하 여 런타임 구성 및 확장](configuring-and-extending-the-runtime-with-behaviors.md)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 코드 예제는 아래 순서대로 나열되어 있습니다.  
   
 - 매개 변수 검사자 구현.  
@@ -40,6 +42,6 @@ ms.locfileid: "70795591"
   
  [!code-xml[Interceptors#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/client.exe.config#3)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [동작을 사용하여 런타임 구성 및 확장](configuring-and-extending-the-runtime-with-behaviors.md)

@@ -3,14 +3,15 @@ title: '방법: 워크플로 만들기'
 description: 이 단원의 세 가지 옵션 중 하나를 완료 하 여이 Workflow Foundation 자습서의 일부로 워크플로를 만듭니다.
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
-ms.openlocfilehash: 7e4575436405e74b7575e55bea37a1a99d879a3e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1b2b03d672f86a351bcf36343d6a17e351d40ed0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419566"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248788"
 ---
 # <a name="how-to-create-a-workflow"></a>방법: 워크플로 만들기
+
 기본 제공 활동뿐 아니라 사용자 지정 활동에서도 워크플로를 구성할 수 있습니다. 이 단원의 항목에서는 활동과 같은 기본 제공 활동과 <xref:System.Activities.Statements.Flowchart> 이전 [방법: 활동 만들기](how-to-create-an-activity.md) 항목의 사용자 지정 활동을 모두 사용 하는 워크플로를 만드는 과정을 단계별로 안내 합니다. 이 워크플로는 숫자 추측 게임을 모델링합니다. 자습서를 완료하려면 이 단원의 한 항목만 필요합니다. 원하는 스타일을 선택하고 해당 단계를 따릅니다. 하지만 원할 경우 모든 항목을 완료할 수도 있습니다.  
   
 > [!NOTE]
@@ -20,6 +21,7 @@ ms.locfileid: "83419566"
 > 자습서의 전체 버전을 다운로드하려면 [Windows Workflow Foundation(WF45) - 초보자를 위한 자습서](https://go.microsoft.com/fwlink/?LinkID=248976)를 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [방법: 순차 워크플로 만들기](how-to-create-a-sequential-workflow.md)  
  <xref:System.Activities.Statements.Sequence> 활동을 사용하여 순차 워크플로를 만드는 방법을 보여 줍니다.  
   

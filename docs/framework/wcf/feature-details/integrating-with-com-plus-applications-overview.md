@@ -5,14 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 57a1537e1bde1efcd3586d032efee063561efcca
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1b9b7e57760c2aba0a8e9eadd53ca8e72529b787
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586496"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248970"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ 애플리케이션과 통합 개요
+
 WCF (Windows Communication Foundation)는 분산 응용 프로그램을 만들기 위한 다양 한 환경을 제공 합니다. COM +에서 호스트 되는 구성 요소 기반 응용 프로그램 논리를 이미 사용 중인 경우 WCF를 사용 하 여 기존 논리를 다시 작성 하지 않고 확장할 수 있습니다. 일반 시나리오는 웹 서비스를 통해 기존 COM+ 또는 엔터프라이즈 서비스 비즈니스 논리를 노출하려는 경우입니다.  
   
  COM+ 구성 요소의 인터페이스가 웹 서비스로 노출되는 경우 이러한 서비스의 사양과 계약은 애플리케이션 초기화 시간에 수행되는 자동 매핑에 의해 결정됩니다. 다음 목록에서는 이 매핑의 개념적 모델을 보여 줍니다.  
@@ -40,11 +41,12 @@ WCF (Windows Communication Foundation)는 분산 응용 프로그램을 만들�
   
 2. 적절한 호스팅 모드를 선택합니다.  
   
-3. COM+ 서비스 모델 구성 도구(ComSvcConfig.exe)를 사용하여 인터페이스에 대한 웹 서비스를 추가합니다. Comsvcconfig.exe를 사용 하는 방법에 대 한 자세한 내용은 [방법: COM + 서비스 모델 구성 도구 사용](how-to-use-the-com-service-model-configuration-tool.md)을 참조 하세요.  
+3. COM+ 서비스 모델 구성 도구(ComSvcConfig.exe)를 사용하여 인터페이스에 대한 웹 서비스를 추가합니다. ComSvcConfig.exe를 사용 하는 방법에 대 한 자세한 내용은 [방법: COM + 서비스 모델 구성 도구 사용](how-to-use-the-com-service-model-configuration-tool.md)을 참조 하세요.  
   
 4. 애플리케이션 구성 파일에서 추가 서비스 설정을 구성합니다. 구성 요소를 구성 하는 방법에 대 한 자세한 내용은 [방법: COM + 서비스 설정 구성](how-to-configure-com-service-settings.md)을 참조 하세요.  
   
 ## <a name="supported-interfaces"></a>지원되는 인터페이스  
+
  웹 서비스로 노출될 수 있는 인터페이스 형식에는 몇 가지 제한이 있습니다. 다음 인터페이스 형식은 지원되지 않습니다.  
   
 - 개체 참조를 매개 변수로 전달하는 인터페이스 - 다음 제한된 개체 참조 방법에 대해서는 제한된 개체 참조 지원 단원에서 설명합니다.  
@@ -62,9 +64,10 @@ WCF (Windows Communication Foundation)는 분산 응용 프로그램을 만들�
 - 전역 어셈블리 캐시에 추가되지 않은 엔터프라이즈 서비스 구성 요소의 인터페이스  
   
 ### <a name="limited-object-reference-support"></a>제한된 개체 참조 지원  
+
  배포된 많은 COM+ 구성 요소에서 ADO 레코드 집합 개체의 반환 등 개체를 참조 매개 변수로 사용하므로 COM+ 통합에는 개체 참조 매개 변수에 대한 제한된 지원이 포함됩니다. 지원은 `IPersistStream` COM 인터페이스를 구현하는 개체로 제한됩니다. 여기에는 ADO 레코드 집합 개체가 포함되며 애플리케이션별 COM 개체에 대해 구현될 수 있습니다.  
   
- 이 지원을 사용 하기 위해 Comsvcconfig.exe 도구는 일반 메서드 서명 매개 변수를 비활성화 하 고 도구가 실행 되는지 확인 하 여 개체 참조 매개 변수가 사용 되지 않도록 하는 **allowreferences** 스위치를 제공 합니다. 또한 매개 변수로 전달 하는 개체 형식은 `persistableTypes` <> 요소의 자식인 <> 구성 요소 내에서 명명 되 고 식별 되어야 합니다 `comContract` .  
+ 이 지원을 사용 하기 위해 ComSvcConfig.exe 도구는 일반 메서드 서명 매개 변수를 비활성화 하 고 도구가 실행 되는지 확인 하 여 개체 참조 매개 변수가 사용 되지 않도록 하는 **allowreferences** 스위치를 제공 합니다. 또한 매개 변수로 전달 하는 개체 형식은 `persistableTypes` <> 요소의 자식인 <> 구성 요소 내에서 명명 되 고 식별 되어야 합니다 `comContract` .  
   
  이 기능을 사용하는 경우 COM+ 통합 서비스는 `IPersistStream` 인터페이스를 사용하여 개체 인스턴스를 직렬화 또는 역직렬화합니다. 개체 인스턴스가 `IPersistStream`을 지원하지 않으면 예외가 throw됩니다.  
   
@@ -74,6 +77,7 @@ WCF (Windows Communication Foundation)는 분산 응용 프로그램을 만들�
 > Serialization 방법의 사용자 지정 및 플랫폼별 특성으로 인해 WCF 클라이언트와 WCF 서비스를 사용 하는 데 가장 적합 합니다.  
   
 ## <a name="selecting-the-hosting-mode"></a>호스팅 모드 선택  
+
  COM+는 다음 호스팅 모드 중 하나로 웹 서비스를 노출합니다.  
   
 - COM+ 호스팅  
@@ -88,7 +92,8 @@ WCF (Windows Communication Foundation)는 분산 응용 프로그램을 만들�
   
      웹 서비스와 COM+ 애플리케이션 논리는 웹 서버 작업자 프로세스 내에 호스트됩니다. 이 경우 웹 서비스 요청에 대한 프로세스 홉이 발생하지 않고 웹 호스팅 모드가 자동으로 활성화됩니다. DCOM을 통해 서버 애플리케이션에 액세스할 수 없다는 단점이 있습니다.  
   
-### <a name="security-considerations"></a>보안 고려사항  
+### <a name="security-considerations"></a>보안 고려 사항  
+
  다른 WCF 서비스와 마찬가지로 노출 된 서비스에 대 한 보안 설정은 WCF 채널에 대 한 구성 설정을 통해 관리 됩니다. 시스템 수준의 DCOM 사용 권한 설정 같은 일반적인 DCOM 보안 설정은 적용되지 않습니다. COM+ 애플리케이션 역할을 적용하려면 해당 구성 요소에 대해 &quot;구성 요소 수준 액세스 검사&quot; 권한 부여를 사용해야 합니다.  
   
  보안되지 않은 바인딩을 사용하면 통신 중에 조작되거나 정보가 공개될 수 있습니다. 이를 방지하려면 보안 바인딩을 사용하는 것이 좋습니다.  
