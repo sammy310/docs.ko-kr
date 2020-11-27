@@ -3,14 +3,15 @@ title: 서비스 메타데이터에서 WCF 클라이언트 생성
 description: WSDL 또는 서비스의 정책 파일을 기반으로 하는 서비스 메타 데이터 문서에서 WFC 클라이언트를 생성 하는 데 사용 되는 Svcutil.exe의 다양 한 스위치를 검색 합니다.
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: f755a092fb3596349a6878c61fe414f4e0a9f9d1
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: e4363ac94a79dedf6d8a80adcaf738df179252b8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247275"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290077"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>서비스 메타데이터에서 WCF 클라이언트 생성
+
 이 항목에서는 Svcutil.exe의 여러 가지 스위치를 사용하여 메타데이터 문서에서 클라이언트를 생성하는 방법에 대해 설명합니다.  
   
  메타데이터 문서는 지속적인 스토리지에 있거나 온라인으로 검색할 수 있습니다. 온라인 검색은 WS-MetadataExchange 프로토콜이나 Microsoft Discovery(DISCO) 프로토콜을 따릅니다. Svcutil.exe는 다음 메타데이터 요청을 생성하고 동시에 메타데이터를 검색합니다.  
