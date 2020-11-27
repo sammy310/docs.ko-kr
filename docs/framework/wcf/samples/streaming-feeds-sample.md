@@ -2,14 +2,15 @@
 title: 스트리밍 피드 샘플
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 551a97f3cc54915a831fc28eca6ae0ff23101e0b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 735a72cba3c953ea4774d89751dad3216aa44400
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589788"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257186"
 ---
 # <a name="streaming-feeds-sample"></a>스트리밍 피드 샘플
+
 이 샘플에서는 많은 수의 항목이 포함된 배포 피드를 관리하는 방법을 보여 줍니다. 서버에서 이 샘플은 항목을 네트워크 스트림에 쓰기 바로 전까지 피드 내에 개별 <xref:System.ServiceModel.Syndication.SyndicationItem> 개체를 만드는 동작을 지연시키는 방법을 보여 줍니다.  
   
  클라이언트에서 이 샘플은 사용자 지정 배포 피드 포맷터를 사용하여 읽고 있는 피드가 메모리에 완전히 버퍼링되지 않도록 네트워크 스트림에서 개별 항목을 읽을 수 있는 방법을 보여 줍니다.  
@@ -19,6 +20,7 @@ ms.locfileid: "84589788"
  이 데모에서는 키워드 구문을 사용 하 여 Visual c # 반복기를 사용 `yield return` 합니다. 반복기에 대 한 자세한 내용은 MSDN의 "반복기 사용" 항목을 참조 하십시오.  
   
 ## <a name="service"></a>서비스  
+
  이 서비스는 다음 코드에서와 같이 하나의 작업으로 구성된 기본 <xref:System.ServiceModel.Web.WebGetAttribute> 계약을 구현합니다.  
   
 ```csharp  
@@ -68,6 +70,7 @@ public Atom10FeedFormatter StreamedFeed()
  결과적으로 항목 스트림은 메모리에 완전히 버퍼링되지 않습니다. 메서드 내의 문에 중단점을 설정 하 `yield return` `ItemGenerator.GenerateItems()` 고 서비스가 메서드의 결과를 반환한 후 처음으로이 중단점이 발생 하는 것을 확인 하 여이 동작을 관찰할 수 있습니다 `StreamedFeed()` .  
   
 ## <a name="client"></a>클라이언트  
+
  이 샘플의 클라이언트는 피드에 있는 개별 항목을 메모리에 버퍼링하는 대신 이 항목의 구체화를 지연시키는 사용자 지정 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 구현을 사용합니다. 사용자 지정 `StreamedAtom10FeedFormatter` 인스턴스는 다음과 같이 사용됩니다.  
   
 ```csharp  

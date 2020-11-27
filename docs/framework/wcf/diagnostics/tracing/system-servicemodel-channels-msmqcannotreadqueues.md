@@ -2,17 +2,19 @@
 title: System.ServiceModel.Channels.MsmqCannotReadQueues
 ms.date: 03/30/2017
 ms.assetid: f1cfee05-dce7-440b-b03e-96f81c00a222
-ms.openlocfilehash: 89892abd18e08b5ff7d8dcc7f54ef1af9419adff
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3ecec354bf3c5420dd14ca0fde98b14d534632ac
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594012"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257030"
 ---
 # <a name="systemservicemodelchannelsmsmqcannotreadqueues"></a>System.ServiceModel.Channels.MsmqCannotReadQueues
+
 System.ServiceModel.Channels.MsmqCannotReadQueues  
   
 ## <a name="description"></a>Description  
+
  MSMQ 활성화 서비스가 큐를 검색할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목
