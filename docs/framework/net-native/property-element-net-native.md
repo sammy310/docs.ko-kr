@@ -1,15 +1,16 @@
 ---
-title: <Property>요소 (.NET 네이티브)
+title: <Property> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a0bdf95a1d1cadf7423f8c6595add13eda4d0d9a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128207"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250855"
 ---
-# <a name="property-element-net-native"></a>\<Property>요소 (.NET 네이티브)
+# <a name="property-element-net-native"></a>\<Property> 요소 (.NET 네이티브)
+
 런타임 리플렉션 정책을 속성에 적용합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -22,6 +23,7 @@ ms.locfileid: "73128207"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -46,6 +48,7 @@ ms.locfileid: "73128207"
 |*policy_setting*|속성에 대해 이 정책 형식에 적용할 설정입니다. 가능한 값은 `Auto`, `Excluded`, `Included` 및 `Required`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -56,9 +59,11 @@ ms.locfileid: "73128207"
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  속성의 정책이 명시적으로 정의되어 있지 않으면 부모 요소의 런타임 정책을 상속합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 리플렉션을 사용하여 `Book` 개체를 인스턴스화하고 해당 속성 값을 표시합니다. 프로젝트의 원본 default.rd.xml 파일은 다음과 같이 표시됩니다.  
   
 ```xml  
@@ -81,7 +86,7 @@ ms.locfileid: "73128207"
   
 - `Dynamic`해당 요소의 형식에 대 한 정책을 정의 `Book` [\<Type>](type-element-net-native.md) 합니다.  
   
-- [\<Property>](property-element-net-native.md)다음과 같이 getter가 호출 하려는 각 속성에 대해 중첩 된 요소를 추가 합니다.  
+- [\<Property>](property-element-net-native.md)다음 default.rd.xml 파일과 같이 getter를 호출할 각 속성에 대해 중첩 된 요소를 추가 합니다.  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

@@ -2,14 +2,15 @@
 title: 주소 지정
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 3221a12a21aebe20e0f6822554937623dc3fbb8d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 77a1321f2babb93ab39eeac944de06fc8c2634c3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575968"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249698"
 ---
 # <a name="addressing"></a>주소 지정
+
 Addressing 샘플에서는 엔드포인트 주소의 다양한 측면과 기능을 보여 줍니다. 이 샘플은 [시작](getting-started-sample.md)을 기반으로 합니다. 이 샘플에서 서비스는 자체 호스트됩니다. 서비스와 클라이언트는 모두 콘솔 애플리케이션입니다. 서비스는 상대 및 절대 엔드포인트 주소를 조합하여 여러 엔드포인트를 정의합니다.  
   
 > [!NOTE]

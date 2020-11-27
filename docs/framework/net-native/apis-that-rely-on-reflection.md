@@ -2,17 +2,19 @@
 title: 리플렉션을 사용하는 API
 ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-ms.openlocfilehash: 1d8daceb6b744b984f86b011ad7952d0da583a79
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2c361962f4570200d63037a68ef39b0c982bd5f7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181089"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251141"
 ---
 # <a name="apis-that-rely-on-reflection"></a>리플렉션을 사용하는 API
+
 경우에 따라 코드에서 리플렉션을 사용 하는 것은 명확 하지 않으므로 .NET 네이티브 도구 체인은 런타임에 필요한 메타 데이터를 유지 하지 않습니다. 이 항목에서는 리플렉션 API의 일부로는 간주되지 않지만 리플렉션을 사용해야 정상적으로 실행되는 몇 가지 일반적인 API 또는 프로그래밍 패턴에 대해 설명합니다. 소스 코드에서 이러한 API를 사용하는 경우 해당 API 호출 시 런타임에 [MissingMetadataException](missingmetadataexception-class-net-native.md) 예외 또는 일부 기타 예외가 발생하지 않도록 API에 대한 정보를 런타임 지시문(.rd.xml) 파일에 추가할 수 있습니다.  
   
 ## <a name="typemakegenerictype-method"></a>Type.MakeGenericType 메서드  
+
  다음과 같은 코드를 사용해 `AppClass<T>` 메서드를 호출하여 제네릭 형식 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>를 동적으로 인스턴스화할 수 있습니다.  
   
  [!code-csharp[ProjectN#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/type_makegenerictype1.cs#1)]  
@@ -41,6 +43,7 @@ ms.locfileid: "79181089"
  `AppClass<T>`를 통한 각 인스턴스화에서는 별도의 지시문이 필요합니다(<xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 메서드를 사용하여 작성되며 정적으로 사용되지 않는 경우).  
   
 ## <a name="methodinfomakegenericmethod-method"></a>MethodInfo.MakeGenericMethod 메서드  
+
  `Class1` 클래스에 제네릭 메서드 `GetMethod<T>(T t)`가 포함되어 있는 경우 다음과 같은 코드를 사용하여 리플렉션을 통해 `GetMethod`를 호출할 수 있습니다.  
   
  [!code-csharp[ProjectN#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/makegenericmethod1.cs#2)]  
@@ -68,6 +71,7 @@ ms.locfileid: "79181089"
  동적으로 호출되는 메서드의 서로 다른 각 인스턴스화에는 `MethodInstantiation` 지시문이 필요하며, 각 인스턴스화 인수를 반영하기 위해 `Arguments` 요소가 업데이트됩니다.  
   
 ## <a name="arraycreateinstance-and-typemaketypearray-methods"></a>Array.CreateInstance 및 Type.MakeTypeArray 메서드  
+
  다음 예제에서는 <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 형식에 대해 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 및 `Class1` 메서드를 호출합니다.  
   
  [!code-csharp[ProjectN#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/array1.cs#3)]  

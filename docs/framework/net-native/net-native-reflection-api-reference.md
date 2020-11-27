@@ -2,14 +2,15 @@
 title: .NET 네이티브 리플렉션 API 참조
 ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
-ms.openlocfilehash: 01678ea6230a53416f213730ae6bb66e6bc057f8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4cded310397ffa4dea057899b6f008146d35a03b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128228"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250881"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET 네이티브 리플렉션 API 참조
+
 .NET 네이티브에는 [System.runtime.compilerservices MissingInteropDataException](missinginteropdataexception-class-net-native.md), [MissingMetadataException](missingmetadataexception-class-net-native.md)및 [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)의 세 가지 새 예외 형식이 포함 되어 있습니다. 세 가지 예외 형식 모두에 대해 다음 사항을 확인하세요.  
   
  이러한 형식은 내부용으로만 사용됩니다.  
@@ -26,9 +27,10 @@ ms.locfileid: "73128228"
 > 이 참조는 .NET 네이티브에 고유한 세 가지 예외 형식을 설명 합니다. .NET Framework core 리플렉션 API에 대 한 참조 설명서는 <xref:System.Reflection> <xref:System.Reflection.Context> 및 네임 스페이스를 참조 하세요 <xref:System.Reflection.Emit> . .NET Framework 핵심 interop API에 대한 참조 설명서는 <xref:System.Runtime.InteropServices>를 참조하세요.  
   
 ## <a name="systemreflection-namespace"></a>System.Reflection 네임스페이스  
+
  <xref:System.Reflection> 네임스페이스에는 .NET Framework의 리플렉션에 사용되는 핵심 형식이 포함되어 있습니다. .NET 네이티브의 경우 두 가지 새 예외 형식도 포함 합니다.  
   
-|클래스|Description|  
+|인스턴스|Description|  
 |-----------|-----------------|  
 |[MissingMetadataException](missingmetadataexception-class-net-native.md)|리플렉션을 사용하여 존재하지 않는 메타데이터를 검색하면 throw되는 예외입니다.|  
 |[MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)|형식 또는 형식 멤버의 메타데이터를 사용할 수는 있지만 해당 구현이 제거된 경우 throw되는 예외입니다.|  
@@ -36,9 +38,10 @@ ms.locfileid: "73128228"
  이 네임스페이스의 다른 형식에 대한 설명서는 .NET Framework 설명서 집합에서 <xref:System.Reflection> 를 참조하세요.  
   
 ## <a name="systemruntimecompilerservices-namespace"></a>System.Runtime.CompilerServices 네임스페이스  
+
  <xref:System.Runtime.CompilerServices> 네임스페이스는 언어 컴파일러에서 사용자용으로 디자인된 형식을 포함합니다. .NET 네이티브의 경우 새 예외 형식이 포함 되어 있습니다.  
   
-|클래스|Description|  
+|인스턴스|Description|  
 |-----------|-----------------|  
 |[MissingInteropDataException](missinginteropdataexception-class-net-native.md)|수동 마샬링 메서드를 호출했는데 정적 분석 또는 런타임 지시문 파일에서 형식의 메타데이터를 찾을 수 없을 때 throw되는 예외입니다.|  
   

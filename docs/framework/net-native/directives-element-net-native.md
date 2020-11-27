@@ -1,15 +1,16 @@
 ---
-title: <Directives>요소 (.NET 네이티브)
+title: <Directives> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
-ms.openlocfilehash: 0c6ebb8954e80f3f6dc6733f0e9d76094477689b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 524c30872e218f6428491507bbfb4ca54b6061b1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84202378"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251102"
 ---
-# <a name="directives-element-net-native"></a>\<Directives>요소 (.NET 네이티브)
+# <a name="directives-element-net-native"></a>\<Directives> 요소 (.NET 네이티브)
+
 .NET 네이티브에 대 한 모든 런타임 지시문 파일의 루트 요소입니다.  
   
  `<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">`
@@ -36,6 +37,7 @@ ms.locfileid: "84202378"
 |[\<Library>](library-element-net-native.md)|런타임에 자식 형식 및 형식 멤버에 메타데이터가 필요한 어셈블리를 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  각 런타임 지시문 파일은 `<Directives>` 요소를 하나만 포함할 수 있습니다.  
   
  `<Directives>`요소는 0 개 또는 한 개의 [\<Application>](application-element-net-native.md) 요소와 0 개 이상의 요소를 포함할 수 있습니다 [\<Library>](library-element-net-native.md) .  

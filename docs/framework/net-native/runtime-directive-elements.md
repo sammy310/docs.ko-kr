@@ -2,14 +2,15 @@
 title: 런타임 지시문 요소
 ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
-ms.openlocfilehash: c900516382c8e526a6b0021bb2b681486283f3ab
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 96bce89c02ad17d1b30eda66237f69a15123dcd3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128165"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250803"
 ---
 # <a name="runtime-directive-elements"></a>런타임 지시문 요소
+
 런타임 지시문(rd.xml) 파일 형식은 다음 지시문 런타임 요소를 지원합니다. 계층적 표현에 대해서는 [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)를 참조하세요.  
   
  [\<Application>](application-element-net-native.md)  

@@ -2,17 +2,19 @@
 title: AJAX
 ms.date: 03/30/2017
 ms.assetid: 9e0eb40a-69ef-4821-bdc3-45a9b71a58c3
-ms.openlocfilehash: 85b3451b2337d6fe2c9dcc16a1930663b5e6de19
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4e54daedf0906200c47a7ab0985b104739c6a7be
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575799"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249621"
 ---
 # <a name="ajax"></a>AJAX
+
 이 단원에는 AJAX(Asynchronous JavaScript And XML) 기능을 보여 주는 샘플이 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [JSONP](jsonp.md)  
  WCF REST 서비스에서 JSONP(JSON with Padding)를 지원하는 방법을 보여 줍니다.  
   

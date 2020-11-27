@@ -2,15 +2,16 @@
 title: WF의 컬렉션 활동
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 5935b569bc46a6f38a7158049336f1e57fd8b0e5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff6bfdff7c05d996be66af508307f2087d8bfc76
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143150"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250335"
 ---
 # <a name="collection-activities-in-wf"></a>WF의 컬렉션 활동
-컬렉션 활동은 워크플로에서 컬렉션 개체로 작업하는 데 사용됩니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 컬렉션에서 항목을 추가 및 제거하고, 컬렉션에 항목이 있는지 테스트하고, 컬렉션을 지우는 시스템 제공 활동이 있습니다. `ExistsInCollection`및 결과를 나타내는 <xref:System.Boolean>형식이 있습니다. `RemoveFromCollection` <xref:System.Activities.OutArgument%601>  
+
+컬렉션 활동은 워크플로에서 컬렉션 개체로 작업하는 데 사용됩니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 컬렉션에서 항목을 추가 및 제거하고, 컬렉션에 항목이 있는지 테스트하고, 컬렉션을 지우는 시스템 제공 활동이 있습니다. `ExistsInCollection` 및에 `RemoveFromCollection` 는 <xref:System.Activities.OutArgument%601> 결과를 나타내는 형식의가 있습니다 <xref:System.Boolean> .  
   
 > [!IMPORTANT]
 > 기본 컬렉션 개체를 설정하기 이전에 컬렉션 활동을 실행하면 <xref:System.InvalidOperationException>이 throw되고 활동 오류가 발생합니다.  
@@ -25,6 +26,7 @@ ms.locfileid: "79143150"
 |<xref:System.Activities.Statements.RemoveFromCollection%601>|지정된 컬렉션에서 항목을 제거한 후 항목이 성공적으로 제거되면 `true`를 반환합니다.|  
   
 ## <a name="using-collection-activities"></a>컬렉션 활동 사용  
+
  다음 코드 예제에서는 워크플로 변수로 선언된 컬렉션과 상호 작용하는 방법을 보여 줍니다. 사용된 컬렉션은 <xref:System.Collections.Generic.List%601>라는 <xref:System.String> 개체의 `fruitList`입니다.  
   
 ```csharp  
@@ -427,4 +429,4 @@ Activity wf = new Sequence
   
 ## <a name="see-also"></a>참고 항목
 
-- [명령형 코드를 사용하여 워크플로, 활동 및 식 작성](authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [명령 코드를 사용하여 워크플로, 활동 및 식 작성](authoring-workflows-activities-and-expressions-using-imperative-code.md)

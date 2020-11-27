@@ -1,15 +1,16 @@
 ---
-title: <Assembly>요소 (.NET 네이티브)
+title: <Assembly> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-ms.openlocfilehash: f3cf65b185b1db3289a0dbb785c2b91431951cc2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9d1556d8d414386d3f350a96396381bd7b66ffc5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181074"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251128"
 ---
-# <a name="assembly-element-net-native"></a>\<Assembly>요소 (.NET 네이티브)
+# <a name="assembly-element-net-native"></a>\<Assembly> 요소 (.NET 네이티브)
+
 지정된 어셈블리의 모든 형식에 런타임 리플렉션 정책을 적용합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -29,6 +30,7 @@ ms.locfileid: "79181074"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -75,6 +77,7 @@ ms.locfileid: "79181074"
 |[\<Library>](library-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 형식 및 형식 멤버가 포함된 어셈블리를 정의합니다. [\<Library>](library-element-net-native.md)요소는 0 개 또는 한 개의 요소를 포함할 수 있습니다 `<Assembly>` .|  
   
 ## <a name="remarks"></a>설명  
+
  `<Assembly>` 요소는 어셈블리의 모든 형식에 대한 런타임 정책을 정의합니다. 이 [\<Library>](library-element-net-native.md) 요소는 라이브러리를 지정 하지만 해당 자식 요소에 의존 하 여 런타임 리플렉션 정책을 정의 하는 요소와는 다릅니다. `<Assembly>` 요소는 자식 요소에 의해 재정의되지 않으면 어셈블리의 모든 형식에 적용됩니다.  
   
  다음 예제에서는 `Name` 특성에 “*Application\*” 값을 할당하여 앱 패키지 내 어셈블리의 모든 형식에 대해 런타임 정책을 적용하는 방법을 보여 줍니다. `<Assembly>`요소는 요소의 자식 이어야 합니다 [\<Application>](application-element-net-native.md) .  

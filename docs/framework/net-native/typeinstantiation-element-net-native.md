@@ -1,15 +1,16 @@
 ---
-title: <TypeInstantiation>요소 (.NET 네이티브)
+title: <TypeInstantiation> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-ms.openlocfilehash: 9069856b3d8739724d148b5eea5d4188c8b8b9e1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a1db497762b3dc8c135154086d72fb3ac92ff5a4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128676"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250751"
 ---
-# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation>요소 (.NET 네이티브)
+# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation> 요소 (.NET 네이티브)
+
 생성된 제네릭 형식에 런타임 리플렉션 정책을 적용합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -30,6 +31,7 @@ ms.locfileid: "73128676"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -53,7 +55,7 @@ ms.locfileid: "73128676"
   
 |값|Description|  
 |-----------|-----------------|  
-|*type_name*|형식 이름입니다. 이 `<TypeInstantiation>` 요소가 [\<Namespace>](namespace-element-net-native.md) 요소, [\<Type>](type-element-net-native.md) 요소 또는 다른 요소의 자식인 경우 `<TypeInstantiation>` 네임 스페이스 없이 형식의 이름을 지정할 수 *type_name* . 그러지 않으면 *type_name*은 정규화된 형식 이름을 포함해야 합니다. 형식 이름은 데코레이팅되지 않습니다. 예를 들어 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 개체의 `<TypeInstantiation>` 요소는 다음과 같이 표시될 수 있습니다.<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
+|*type_name*|형식 이름입니다. 이 `<TypeInstantiation>` 요소가 [\<Namespace>](namespace-element-net-native.md) 요소, [\<Type>](type-element-net-native.md) 요소 또는 다른 요소의 자식인 경우 `<TypeInstantiation>` 네임 스페이스 없이 형식의 이름을 지정할 수 *type_name* . 그러지 않으면 *type_name* 은 정규화된 형식 이름을 포함해야 합니다. 형식 이름은 데코레이팅되지 않습니다. 예를 들어 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 개체의 `<TypeInstantiation>` 요소는 다음과 같이 표시될 수 있습니다.<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>인수 특성  
   
@@ -92,11 +94,13 @@ ms.locfileid: "73128676"
 |`<TypeInstantiation>`|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  리플렉션, serialization 및 interop 특성은 모두 선택 사항입니다. 그러나 이러한 특성이 하나 이상 있어야 합니다.  
   
  `<TypeInstantiation>`요소가 [\<Assembly>](assembly-element-net-native.md) , [\<Namespace>](namespace-element-net-native.md) 또는 요소의 자식인 경우 [\<Type>](type-element-net-native.md) 부모 요소에 의해 정의 된 정책 설정을 재정의 합니다. [\<Type>](type-element-net-native.md)요소가 해당 제네릭 형식 정의를 정의 하는 경우 `<TypeInstantiation>` 요소는 지정 된 생성 된 제네릭 형식의 인스턴스화에 대해서만 런타임 리플렉션 정책을 재정의 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 리플렉션을 사용하여 생성된 <xref:System.Collections.Generic.Dictionary%602> 개체에서 제네릭 형식 정의를 검색합니다. 또한 리플렉션을 사용하여 생성된 제네릭 형식 및 제네릭 형식 정의를 나타내는 <xref:System.Type> 개체에 대한 정보를 표시합니다. 예제의 변수는 `b` <xref:Windows.UI.Xaml.Controls.TextBlock> 컨트롤입니다.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  

@@ -2,14 +2,15 @@
 title: '예: 데이터를 바인딩하는 경우 예외 처리'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
-ms.openlocfilehash: b774d1bce4f4d1c03258ed44b27d3871e7c5275f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 399bd1af9ef25eca9cdfe1e13fdc4c01021babcd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181029"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251076"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>예: 데이터를 바인딩하는 경우 예외 처리
+
 > [!NOTE]
 > 이 항목은 시험판 소프트웨어인 .NET Native Developer Preview를 참조합니다. 이 Preview 버전은 [Microsoft Connect 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=394611)에서 다운로드할 수 있습니다(등록 필요).  
   
@@ -36,7 +37,8 @@ Windows_UI_Xaml!DirectUI::PropertyAccessPathStep::GetValue+0x31
 Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113  
 ```  
   
-## <a name="what-was-the-app-doing"></a>앱이 수행 중이었던 작업  
+## <a name="what-was-the-app-doing"></a>앱이 어떤 작업을 수행 중이었나요?  
+
  스택의 기본에서 <xref:Windows.UI.Xaml?displayProperty=nameWithType> 네임 스페이스의 프레임은 XAML 렌더링 엔진이 실행 되 고 있음을 표시 합니다.   또한 <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> 메서드가 사용되었으므로 해당 메타데이터가 제거된 형식에 대해 속성 값의 리플렉션 기반 조회를 수행했음을 알 수 있습니다.  
   
  메타데이터 지시문을 제공하는 첫 단계에서는 모든 속성에 액세스할 수 있도록 형식에 대해 `serialize` 메타데이터를 추가합니다.  
@@ -46,6 +48,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="is-this-an-isolated-case"></a>사례의 격리 여부 확인  
+
  이 시나리오에서는 데이터 바인딩에서 `ViewModel` 하나의 메타데이터가 불완전하면 나머지 항목의 메타데이터도 불완전할 수 있습니다.  앱의 뷰 모델이 모두 `App.ViewModels` 네임스페이스에 포함되는 방식으로 코드를 작성한 경우에는 보다 일반적인 런타임 지시문을 사용할 수 있습니다.  
   
 ```xml  
@@ -53,6 +56,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>리플렉션을 사용하지 않도록 코드 다시 작성 가능 여부 확인  
+
  데이터 바인딩에서는 리플렉션을 많이 사용하므로 리플렉션을 사용하지 않도록 코드를 변경하기는 어렵습니다.  
   
  그러나 `ViewModel`을 XAML 페이지로 지정하여 도구 체인이 컴파일 타임에 속성 바인딩을 올바른 형식과 연결하고, 런타임 지시문을 사용하지 않고 메타데이터를 유지하도록 할 수는 있습니다.  예를 들어 속성에 특성을 적용할 수 있습니다 <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> . 이렇게 하면 XAML 컴파일러가 필요한 조회 정보를 생성하고 Default.rd.xml 파일에서 런타임 지시문이 필요하도록 설정하지 않습니다.  
