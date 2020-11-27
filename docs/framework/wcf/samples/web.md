@@ -2,14 +2,15 @@
 title: 웹
 ms.date: 03/30/2017
 ms.assetid: 88794df1-8e2d-431e-b377-2fd3dc7942ab
-ms.openlocfilehash: aad3b68dfad8e542bf0975ffcc653a4e791b2d53
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fc62b88e2924db9df43d4169327a7db66f27d651
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602312"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251336"
 ---
 # <a name="web"></a>웹
+
 이 단원에는 웹 호스팅 샘플이 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용

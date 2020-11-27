@@ -2,17 +2,19 @@
 title: System.ServiceModel의 트랜잭션 지원
 ms.date: 03/30/2017
 ms.assetid: e7e54ed3-d1e5-4aa7-a653-1300c6b304eb
-ms.openlocfilehash: 9e9a16df52901cced67f135538d3724700140073
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1a5c7e6fc8c5e116764c6dd9813d7cccf600af8c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586041"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251791"
 ---
 # <a name="transactional-support-in-systemservicemodel"></a>System.ServiceModel의 트랜잭션 지원
+
 이 단원의 항목에서는 WCF (Windows Communication Foundation)에서 제공 하는 트랜잭션 기능에 대해 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [ServiceModel 트랜잭션 특성](servicemodel-transaction-attributes.md)  
  <xref:System.ServiceModel>WCF 서비스에 대 한 트랜잭션의 동작을 구성할 수 있는 두 가지 표준 특성에 대해 설명 합니다.  
   

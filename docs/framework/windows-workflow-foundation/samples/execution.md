@@ -2,15 +2,16 @@
 title: 실행
 ms.date: 03/30/2017
 ms.assetid: a9dcedcc-9f4c-45c2-8222-6bcbf48f3534
-ms.openlocfilehash: fd6ba0bb3a463287cea28e95ad2b893dd8d0c8a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 116eec94cbd33c282ec2b899ff7689e31311e6b1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913785"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251554"
 ---
 # <a name="execution"></a>실행
-이 섹션에서 Windows WF (Workflow Foundation) 워크플로 실행을 보여 주는 샘플이 들어 있습니다.  
+
+이 섹션에는 WF (Windows Workflow Foundation)에서 워크플로를 실행 하는 방법을 보여 주는 샘플이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용
   

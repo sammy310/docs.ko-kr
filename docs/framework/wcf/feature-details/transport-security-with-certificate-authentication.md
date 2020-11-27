@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 38f7d310be41455dd12460fdfa93d7e624d10c2a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d3f2a10bb6b355e82f94b8cc793c93ce4634c7d2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545222"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251830"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>인증서 인증을 사용하는 전송 보안
 
@@ -28,11 +28,12 @@ ms.locfileid: "90545222"
 |상호 운용성|기존 웹 서비스 클라이언트 및 서비스에 사용됩니다.|  
 |인증(서버)<br /><br /> 인증(클라이언트)|예(SSL 인증서 사용)<br /><br /> 예(X.509 인증서 사용)|  
 |데이터 무결성|예|  
-|데이터 기밀성|예|  
+|데이터 기밀성|Yes|  
 |전송|HTTPS|  
 |바인딩|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>서비스 구성  
+
  이 시나리오에서는 서비스가 IIS에서 호스팅되므로 web.config 파일을 사용하여 구성됩니다. 다음 web.config에서는 전송 보안 및 X.509 클라이언트 자격 증명을 사용하도록 <xref:System.ServiceModel.WSHttpBinding>을 구성하는 방법을 보여 줍니다.  
   
 ```xml  
@@ -64,6 +65,7 @@ ms.locfileid: "90545222"
 ```  
   
 ## <a name="configure-the-client"></a>클라이언트 구성  
+
  클라이언트는 코드 또는 app.config 파일에 지정할 수 있습니다. 다음 예제에서는 클라이언트를 코드에 구성하는 방법을 보여 줍니다.  
   
 ```csharp
@@ -139,7 +141,7 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 개요](security-overview.md)
 - [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))
