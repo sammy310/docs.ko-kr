@@ -3,14 +3,15 @@ title: WCF 서비스를 위한 단순화된 구성
 description: WCF를 사용 하 여 일반적인 서비스 및 클라이언트를 구현 하 고 구성 하는 방법에 대해 알아봅니다. 서비스는 구성 파일에 지정 된 끝점을 사용 하 여 통신 합니다.
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: dd05754dcfe36cb2e9c28ce20a5927585f85478f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 087618d603ea1c7df75ab5383f6c95b781dca847
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554269"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290025"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 서비스를 위한 단순화된 구성
+
 이 샘플에서는 WCF (Windows Communication Foundation)를 사용 하 여 일반적인 서비스 및 클라이언트를 구현 하 고 구성 하는 방법을 보여 줍니다. 이 샘플은 다른 모든 기본 기술 샘플의 기준이 됩니다.  
   
  서비스와 통신 하기 위한 끝점을 노출 하는이 서비스는 .NET Framework 4에서 간소화 된 구성을 사용 합니다. .NET Framework 4 이전에는 다음 예제 구성 코드에 표시 된 것 처럼 끝점이 일반적으로 구성 파일 (Web.config)에서 정의 됩니다.  
@@ -64,11 +65,11 @@ ms.locfileid: "90554269"
   
 3. 다음 단계에 따라 샘플을 실행합니다.  
   
-    1. **서비스** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **시작 프로젝트로 설정**을 선택한 다음 **ctrl + F5**를 누릅니다.  
+    1. **서비스** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **시작 프로젝트로 설정** 을 선택한 다음 **ctrl + F5** 를 누릅니다.  
   
     2. 서비스가 실행 중이라는 콘솔 출력이 나타날 때까지 기다립니다.  
   
-    3. **클라이언트** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **시작 프로젝트로 설정**을 선택한 다음 **ctrl + F5**를 누릅니다.  
+    3. **클라이언트** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **시작 프로젝트로 설정** 을 선택한 다음 **ctrl + F5** 를 누릅니다.  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
@@ -79,7 +80,7 @@ ms.locfileid: "90554269"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 관리 샘플](/previous-versions/appfabric/ff383405(v=azure.10))
 - [단순화된 구성](../simplified-configuration.md)
