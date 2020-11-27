@@ -8,20 +8,23 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-ms.openlocfilehash: 1cfcca524e5dd2b0c1560eb7600795766e2db1d6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cfe1da7c66f5c64ac3f5346bc23e9b618db38d20
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598959"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286463"
 ---
 # <a name="how-to-create-a-security-token-service"></a>방법: 보안 토큰 서비스 만들기
+
 보안 토큰 서비스에서는 WS-Trust 사양에 정의된 프로토콜을 구현합니다. 이 프로토콜은 보안 토큰의 발행, 갱신, 취소 및 유효성 검사를 위한 메시지 형식 및 메시지 교환 패턴을 정의합니다. 지정된 보안 토큰 서비스에서는 하나 이상의 이러한 기능을 제공합니다. 이 항목에서는 가장 일반적인 시나리오인 토큰 발급 구현에 대해 살펴봅니다.  
   
 ## <a name="issuing-tokens"></a>토큰 발급  
- WS-Trust는 `RequestSecurityToken` XSD(XML 스키마 정의 언어) 스키마 요소에 따라 메시지 형식을 정의하고, 토큰 발행을 수행하기 위한 `RequestSecurityTokenResponse` XSD 스키마 요소를 정의합니다. 또한 연결된 동작 URI(Uniform Resource Identifier)도 정의합니다. 메시지와 연결 된 동작 URI는 `RequestSecurityToken` `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue` 입니다. 메시지와 연결 된 동작 URI는 `RequestSecurityTokenResponse` `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue` 입니다.  
+
+ WS-Trust는 `RequestSecurityToken` XSD(XML 스키마 정의 언어) 스키마 요소에 따라 메시지 형식을 정의하고, 토큰 발행을 수행하기 위한 `RequestSecurityTokenResponse` XSD 스키마 요소를 정의합니다. 또한 연결된 동작 URI(Uniform Resource Identifier)도 정의합니다. 메시지와 연결 된 동작 URI는 `RequestSecurityToken` `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue` 입니다. 메시지와 연결 된 동작 URI는 `RequestSecurityTokenResponse`   `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue` 입니다.  
   
 ### <a name="request-message-structure"></a>요청 메시지 구조  
+
  일반적으로 발행 요청 메시지 구조는 다음과 같은 항목으로 구성됩니다.  
   
 - 값이 인 요청 형식 URI입니다 `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue` .
@@ -41,6 +44,7 @@ ms.locfileid: "84598959"
  보안 토큰 서비스에서는 발행 응답 메시지를 만들 때 발행 요청 메시지의 정보를 사용합니다.  
   
 ## <a name="response-message-structure"></a>응답 메시지 구조  
+
  일반적으로 발행 응답 메시지 구조는 다음과 같은 항목으로 구성됩니다.  
   
 - 발행된 보안 토큰(예: SAML 1.1 어설션)  
@@ -58,6 +62,7 @@ ms.locfileid: "84598959"
 - 발행된 토큰에 대한 수명 정보  
   
 ## <a name="processing-request-messages"></a>요청 메시지 처리  
+
  보안 토큰 서비스에서는 여러 요청 메시지를 조사하고 이 메시지에서 요청을 만족하는 토큰을 발행할 수 있음을 확인하여 발행 요청을 처리합니다. 보안 토큰 서비스는 발행할 토큰을 만들기 전에 다음 사항을 결정해야 합니다.  
   
 - 요청이 발행할 토큰에 대한 요청이 맞는지 여부  
@@ -101,6 +106,7 @@ ms.locfileid: "84598959"
  자세한 내용은 [페더레이션 샘플](../samples/federation-sample.md)을 참조 하세요.  
   
 ## <a name="creating-response-messages"></a>응답 메시지 만들기  
+
  보안 토큰 서비스에서 발행 요청을 처리하고 증명 키와 함께 발행될 토큰을 만들면 적어도 요청된 토큰, 증명 토큰 및 발행된 토큰 참조를 포함하여 응답 메시지를 만들어야 합니다. 일반적으로 발행된 토큰은 다음 예제에서처럼 <xref:System.IdentityModel.Tokens.SamlSecurityToken>에서 만들어진 <xref:System.IdentityModel.Tokens.SamlAssertion>입니다.  
   
  [!code-csharp[c_CreateSTS#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#5)]
@@ -121,6 +127,7 @@ ms.locfileid: "84598959"
  이러한 여러 값은 클라이언트에 반환되는 응답 메시지로 serialize됩니다.  
   
 ## <a name="example"></a>예제  
+
  보안 토큰 서비스에 대 한 전체 코드는 [페더레이션 샘플](../samples/federation-sample.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목

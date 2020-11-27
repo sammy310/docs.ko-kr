@@ -10,14 +10,15 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 52b0caaaac976893dcf5ef5c228ccc4f53bdbe9e
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 124083d86c220451c55a9290c2edf996b50d8d28
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247483"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286684"
 ---
 # <a name="data-contract-known-types"></a>데이터 계약 알려진 형식
+
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 클래스를 사용하면 고려 사항에 포함해야 하는 형식을 deserialization을 수행하는 동안 미리 지정할 수 있습니다. 작업 예제는 [Known Types](../samples/known-types.md) 예제를 참조하십시오.  
   
  일반적으로 클라이언트와 서비스 간에 매개 변수와 반환 값을 전달할 때 두 엔드포인트는 전송할 데이터의 모든 데이터 계약을 공유합니다. 그러나 다음과 같은 경우는 그렇지 않습니다.  
@@ -31,20 +32,24 @@ ms.locfileid: "85247483"
 - .NET Framework 형식을 포함 하는 일부 형식에는 앞의 세 범주 중 하나에 있는 멤버가 있습니다. 예를 들어 <xref:System.Collections.Hashtable> 은 <xref:System.Object> 를 사용하여 해시 테이블에 실제 개체를 저장합니다. 이러한 형식을 serialize할 때 받는 쪽에서 이러한 멤버에 대한 데이터 계약을 미리 확인할 수 없습니다.  
   
 ## <a name="the-knowntypeattribute-class"></a>KnownTypeAttribute 클래스  
+
  데이터가 수신 끝점에 도착 하면 WCF 런타임에서는 CLR (공용 언어 런타임) 형식의 인스턴스로 데이터를 deserialize 하려고 합니다. deserialization을 위해 인스턴스화되는 형식은 메시지 내용이 따르는 데이터 계약을 확인하도록 들어오는 메시지를 먼저 검사하여 선택됩니다. 그런 다음 deserialization 엔진은 메시지 내용과 호환되는 데이터 계약을 구현하는 CLR 형식을 찾습니다. 이 프로세스 중에 역직렬화 엔진에서 허용하는 후보 형식 집합을 역직렬 변환기의 "알려진 형식" 집합이라고 합니다.  
   
  deserialization 엔진에 형식을 알리는 한 가지 방법은 <xref:System.Runtime.Serialization.KnownTypeAttribute>를 사용하는 것입니다. 특성은 개별 데이터 멤버에 적용될 수 없고 전체 데이터 계약 형식에만 적용될 수 있습니다. 특성은 클래스 또는 구조체일 수 있는 *외부 형식* 에 적용됩니다. 가장 기본적인 사용법에서 특성을 적용하면 형식이 "알려진 형식"으로 지정됩니다. 이렇게 하면 외부 형식의 개체 또는 해당 멤버를 통해 참조되는 개체가 역직렬화될 때마다 알려진 형식이 알려진 형식 집합의 일부가 됩니다. 두 개 이상의 <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성을 같은 형식에 적용할 수 있습니다.  
   
 ## <a name="known-types-and-primitives"></a>알려진 형식 및 기본 형식  
+
  기본 형식과 기본 형식으로 처리되는 특정 형식(예: <xref:System.DateTime> 및 <xref:System.Xml.XmlElement>)은 항상 "알려진" 형식이므로 이 메커니즘을 통해 추가되지 않아도 됩니다. 그러나 기본 형식 배열은 명시적으로 추가되어야 합니다. 대부분의 컬렉션은 배열과 동일한 것으로 간주됩니다. 제네릭이 아닌 컬렉션은 <xref:System.Object>의 배열과 동일한 것으로 간주됩니다. 기본 형식, 기본 배열 및 기본 컬렉션 사용 예제는 예제 4를 참조하십시오.  
   
 > [!NOTE]
 > 다른 기본 형식과 달리 <xref:System.DateTimeOffset> 구조체는 기본적으로 알려진 형식이 아니므로 이 형식을 알려진 형식 목록에 수동으로 추가해야 합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
+
  다음 예제에서는 사용 중인 <xref:System.Runtime.Serialization.KnownTypeAttribute> 클래스를 보여 줍니다.  
   
 #### <a name="example-1"></a>예 1  
+
  상속 관계가 있는 세 클래스가 있습니다.  
   
  [!code-csharp[C_KnownTypeAttribute#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#1)]
@@ -63,18 +68,21 @@ ms.locfileid: "85247483"
  외부 형식 `CompanyLogo2` 가 역직렬화될 때마다 역직렬화 엔진이 `CircleType` 및 `TriangleType` 에 대해 알고 있으므로, "Circle" 및 "Triangle" 데이터 계약에 일치하는 형식을 찾을 수 있습니다.  
   
 #### <a name="example-2"></a>예제 2  
+
  다음 예제에서 `CustomerTypeA` 및 `CustomerTypeB` 에 모두 `Customer` 데이터 계약이 있어도 `CustomerTypeB` 만 역직렬화 엔진에 알려지므로 `PurchaseOrder` 가 역직렬화될 때마다 `CustomerTypeB` 의 인스턴스가 만들어집니다.  
   
  [!code-csharp[C_KnownTypeAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#4)]
  [!code-vb[C_KnownTypeAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#4)]  
   
 #### <a name="example-3"></a>예제 3  
+
  다음 예제에서 <xref:System.Collections.Hashtable> 은 해당 콘텐츠를 내부적으로 <xref:System.Object>로 저장합니다. 해시 테이블을 성공적으로 역직렬화하려면 역직렬화 엔진이 해시 테이블에서 발생할 수 있는 가능한 형식 집합을 알고 있어야 합니다. 이 경우 `Book` 및 `Magazine` 개체만 `Catalog`에 저장되므로 이러한 개체가 <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성을 사용하여 추가된다는 것을 미리 알고 있습니다.  
   
  [!code-csharp[C_KnownTypeAttribute#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#5)]
  [!code-vb[C_KnownTypeAttribute#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#5)]  
   
 #### <a name="example-4"></a>예제 4  
+
  다음 예제에서 데이터 계약은 숫자와 숫자에 수행할 작업을 저장합니다. `Numbers` 데이터 멤버는 정수, 정수 배열 또는 정수를 포함하는 <xref:System.Collections.Generic.List%601> 일 수 있습니다.  
   
 > [!CAUTION]
@@ -89,6 +97,7 @@ ms.locfileid: "85247483"
  [!code-vb[C_KnownTypeAttribute#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#7)]  
   
 ## <a name="known-types-inheritance-and-interfaces"></a>알려진 형식, 상속 및 인터페이스  
+
  알려진 형식이 `KnownTypeAttribute` 특성을 사용하여 특정 형식과 연결되면 이 알려진 형식은 해당 형식의 모든 파생 형식과도 연결됩니다. 예를 들어 다음과 같은 코드를 참조하십시오.  
   
  [!code-csharp[C_KnownTypeAttribute#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#8)]
@@ -99,6 +108,7 @@ ms.locfileid: "85247483"
  알려진 형식은 인터페이스가 아닌 클래스와 구조체에만 연결할 수 있습니다.  
   
 ## <a name="known-types-using-open-generic-methods"></a>개방형 제네릭 메서드를 사용한 알려진 형식  
+
  제네릭 형식을 알려진 형식으로 추가해야 할 수 있습니다. 하지만 개방형 제네릭 형식은 `KnownTypeAttribute` 특성에 대한 매개 변수로 전달될 수 없습니다.  
   
  이 문제는 대체 메커니즘을 사용하여 해결할 수 있습니다. 알려진 형식 컬렉션에 추가할 형식 목록을 반환하는 메서드를 작성합니다. 그런 다음 몇 가지 제한 사항으로 인해 이 메서드 이름이 `KnownTypeAttribute` 특성에 대한 문자열 인수로 지정됩니다.  
@@ -132,6 +142,7 @@ ms.locfileid: "85247483"
  [!code-vb[C_KnownTypeAttribute#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#10)]  
   
 ## <a name="additional-ways-to-add-known-types"></a>알려진 형식을 추가하는 다른 방법  
+
  또한 구성 파일을 통해 알려진 형식을 추가할 수 있습니다. 이는 WCF (Windows Communication Foundation)에서 타사 형식 라이브러리를 사용 하는 경우와 같이 적절 한 deserialization에 알려진 형식이 필요한 형식을 제어 하지 않을 때 유용 합니다.  
   
  다음 구성 파일에서는 구성 파일에 알려진 형식을 지정하는 방법을 보여 줍니다.  

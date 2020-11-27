@@ -8,18 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-ms.openlocfilehash: 85c533d683558520d46f259db0bdb34dcb1214c9
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 3bb0aca2a1207a98b45fe8b6d43930e9b2acc5ec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247405"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286705"
 ---
 # <a name="data-contract-names"></a>데이터 계약 이름
 
 때때로 클라이언트와 서비스는 동일한 형식을 공유하지 않습니다. 그래도 양쪽의 데이터 계약이 동일하면 서로 데이터를 전달할 수 있습니다. 데이터 [계약의 동등성](data-contract-equivalence.md) 은 데이터 계약 및 데이터 멤버 이름을 기반으로 하므로 형식 및 멤버를 해당 이름에 매핑하는 메커니즘이 제공 됩니다. 이 항목에서는 이름을 만들 때 WCF (Windows Communication Foundation) 인프라의 기본 동작 뿐만 아니라 데이터 계약의 이름을 지정 하는 규칙에 대해 설명 합니다.
 
 ## <a name="basic-rules"></a>기본 규칙
+
 데이터 계약 이름 지정과 관련된 기본 규칙에는 다음이 포함됩니다.
 
 - 정규화된 데이터 계약 이름은 네임스페이스와 이름으로 구성됩니다.
@@ -29,9 +30,10 @@ ms.locfileid: "85247405"
 - 데이터 계약을 처리할 때 WCF 인프라는 네임 스페이스와 데이터 계약 및 데이터 멤버의 이름에 대 한 대/소문자를 구분 합니다.
 
 ## <a name="data-contract-namespaces"></a>데이터 계약 네임스페이스
+
 데이터 계약 네임스페이스는 URI(Uniform Resource Identifier)의 형식을 사용합니다. 절대 URI나 상대 URI일 수 있습니다. 기본적으로 특정 형식에 대한 데이터 계약은 해당 형식의 CLR(공용 언어 런타임) 네임스페이스로부터 가져오는 네임스페이스에 할당됩니다.
 
-기본적으로 *clr*네임 스페이스 형식의 지정 된 clr 네임 스페이스는 네임 스페이스에 매핑됩니다 `http://schemas.datacontract.org/2004/07/Clr.Namespace` . 이 기본값을 재정의하려면 전체 모듈 또는 어셈블리에 <xref:System.Runtime.Serialization.ContractNamespaceAttribute> 특성을 적용합니다. 또는 각 형식에 대해 데이터 계약 네임스페이스를 제어하려면 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>의 <xref:System.Runtime.Serialization.DataContractAttribute> 속성을 설정합니다.
+기본적으로 *clr* 네임 스페이스 형식의 지정 된 clr 네임 스페이스는 네임 스페이스에 매핑됩니다 `http://schemas.datacontract.org/2004/07/Clr.Namespace` . 이 기본값을 재정의하려면 전체 모듈 또는 어셈블리에 <xref:System.Runtime.Serialization.ContractNamespaceAttribute> 특성을 적용합니다. 또는 각 형식에 대해 데이터 계약 네임스페이스를 제어하려면 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>의 <xref:System.Runtime.Serialization.DataContractAttribute> 속성을 설정합니다.
 
 > [!NOTE]
 > `http://schemas.microsoft.com/2003/10/Serialization`네임 스페이스는 예약 되어 있으므로 데이터 계약 네임 스페이스로 사용할 수 없습니다.
@@ -40,18 +42,22 @@ ms.locfileid: "85247405"
 > `delegate` 선언을 포함하는 데이터 계약 형식에서 기본 네임스페이스를 재정의할 수 없습니다.
 
 ## <a name="data-contract-names"></a>데이터 계약 이름
+
 주어진 형식에 대한 데이터 계약의 기본 이름은 해당 형식의 이름입니다. 기본값을 재정의하려면 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>의 <xref:System.Runtime.Serialization.DataContractAttribute> 속성을 대체 이름으로 설정합니다. 제네릭 형식에 대한 특정 규칙은 이 항목의 뒷부분에 있는 "제네릭 형식에 대한 데이터 계약 이름"에서 설명합니다.
 
 ## <a name="data-member-names"></a>데이터 멤버 이름
+
 주어진 필드 또는 속성에 대한 데이터 멤버의 기본 이름은 해당 필드 또는 속성의 이름입니다. 기본값을 재정의하려면 <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>의 <xref:System.Runtime.Serialization.DataMemberAttribute> 속성을 대체 값으로 설정합니다.
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
+
 다음 예제에서는 데이터 계약 및 데이터 멤버의 기본 이름 지정 동작을 재정의할 수 있는 방법을 보여 줍니다.
 
 [!code-csharp[C_DataContractNames#1](~/samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#1)]
 [!code-vb[C_DataContractNames#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#1)]
 
 ## <a name="data-contract-names-for-generic-types"></a>제네릭 형식에 대한 데이터 계약 이름
+
 제네릭 형식에 대한 데이터 계약 이름을 결정하는 데 특별한 규칙이 있습니다. 이러한 규칙은 동일한 제네릭 형식의 폐쇄형 두 개의 제네릭 형식 간에 데이터 계약 이름이 충돌하는 것을 막도록 도와줍니다.
 
 기본적으로 제네릭 형식에 대 한 데이터 계약 이름은 형식 이름 뒤에 문자열 "Of", 제네릭 매개 변수의 데이터 계약 이름, 제네릭 매개 변수의 데이터 계약 네임 스페이스를 사용 하 여 계산 된 *해시가* 차례로 나옵니다. 해시는 데이터 조각을 고유하게 식별하는 "지문"의 역할을 하는 수학 함수의 결과입니다. 모든 제네릭 매개 변수가 기본 형식인 경우 해시는 생략됩니다.

@@ -8,17 +8,18 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 47e59452edfff74daf17d94a058ce8b12af7867c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a03d388f2773e312a149b5caf1747627d1c17864
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593544"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286628"
 ---
 # <a name="how-to-create-a-federated-client"></a>방법: 페더레이션 클라이언트 만들기
+
 WCF (Windows Communication Foundation)에서 *페더레이션된 서비스* 에 대 한 클라이언트 만들기는 세 가지 주요 단계로 구성 됩니다.  
   
-1. [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)또는 유사한 사용자 지정 바인딩을 구성 합니다. 적절 한 바인딩을 만드는 방법에 대 한 자세한 내용은 [방법: WSFederationHttpBinding 만들기](how-to-create-a-wsfederationhttpbinding.md)를 참조 하세요. 또는 페더레이션된 서비스의 메타 데이터 끝점에 대해 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 실행 하 여 페더레이션된 서비스 및 하나 이상의 보안 토큰 서비스와 통신 하기 위한 구성 파일을 생성 합니다.  
+1. [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)또는 유사한 사용자 지정 바인딩을 구성 합니다. 적절 한 바인딩을 만드는 방법에 대 한 자세한 내용은 [방법: WSFederationHttpBinding 만들기](how-to-create-a-wsfederationhttpbinding.md)를 참조 하세요. 또는 페더레이션된 서비스의 메타 데이터 끝점에 대해 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 실행 하 여 페더레이션된 서비스 및 하나 이상의 보안 토큰 서비스와 통신 하기 위한 구성 파일을 생성 합니다.  
   
 2. 보안 토큰 서비스와 클라이언트의 상호 작용에 대한 다양한 측면을 제어하는 <xref:System.ServiceModel.Security.IssuedTokenClientCredential>의 속성을 설정합니다.  
   
@@ -31,7 +32,7 @@ WCF (Windows Communication Foundation)에서 *페더레이션된 서비스* 에 
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>페더레이션 서비스에 대한 구성을 생성하고 검사하려면  
   
-1. 서비스의 메타 데이터 URL 주소를 명령줄 매개 변수로 사용 하 여 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 실행 합니다.  
+1. 서비스의 메타 데이터 URL 주소를 명령줄 매개 변수로 사용 하 여 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 실행 합니다.  
   
 2. 생성된 구성 파일을 적절한 편집기에서 엽니다.  
   
@@ -141,20 +142,24 @@ WCF (Windows Communication Foundation)에서 *페더레이션된 서비스* 에 
     ```  
   
 ## <a name="example"></a>예제  
+
  다음 코드 샘플에서는 코드에 <xref:System.ServiceModel.Security.IssuedTokenClientCredential> 클래스의 인스턴스를 구성합니다.  
   
  [!code-csharp[c_FederatedClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedclient/cs/source.cs#2)]
  [!code-vb[c_FederatedClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federatedclient/vb/source.vb#2)]  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
+
  가능한 정보 노출을 방지하려면 Svcutil.exe 도구를 실행하여 페더레이션 엔드포인트에서 메타데이터를 처리하는 클라이언트는 결과 보안 토큰 서비스 주소가 예상한 주소인지 확인해야 합니다. 이러한 확인은 보안 토큰 서비스가 여러 엔드포인트를 노출할 때 특히 중요합니다. 왜냐하면 Svcutil.exe 도구에서는 결과 구성 파일을 생성하여 이와 같은 첫 번째 엔드포인트를 사용하지만 이 엔드포인트가 클라이언트가 사용해야 하는 것이 아닐 수도 있기 때문입니다.  
   
 ## <a name="localissuer-required"></a>필수 LocalIssuer  
+
  클라이언트가 항상 로컬 발급자를 사용해야 하는 경우, 체인의 두 번째에서 마지막까지의 보안 토큰 서비스가 발급자 주소나 발급자 메타데이터 주소를 지정하면 Svcutil.exe의 기본 출력으로 인해 로컬 발급자가 사용되지 않는다는 사실을 알아야 합니다.  
   
  클래스의, 및 속성을 설정 하는 방법에 대 한 자세한 내용은 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential> [방법: 로컬 발급자 구성](how-to-configure-a-local-issuer.md)을 참조 하세요.  
   
 ## <a name="scoped-certificates"></a>범위가 지정된 인증서  
+
  보안 토큰 서비스와 통신할 서비스 인증서를 지정해야 하는 경우 일반적으로 인증서 협상이 사용되지 않으므로 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 클래스의 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> 속성을 사용하여 지정할 수 있습니다. <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> 메서드는 <xref:System.Uri> 및 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>를 매개 변수로 사용합니다. 지정한 인증서는 지정한 URI에서 엔드포인트와 통신할 때 사용됩니다. 또는 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> 메서드를 사용하여 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 속성에서 반환된 컬렉션에 인증서를 추가할 수 있습니다.  
   
 > [!NOTE]
