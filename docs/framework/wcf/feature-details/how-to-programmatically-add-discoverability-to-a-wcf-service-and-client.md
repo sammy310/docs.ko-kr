@@ -2,21 +2,22 @@
 title: '방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: c1b92568d90734a33a7b36af987fdb7cbbbe5149
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1226f02dd96b8ab1502869cb319c6efe1ad09d4f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557829"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295563"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가
+
 이 항목에서는 WCF (Windows Communication Foundation) 서비스를 검색할 수 있도록 하는 방법에 대해 설명 합니다. [자체 호스트](../samples/self-host.md) 샘플을 기반으로 합니다.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>기존 자체 호스팅 서비스 샘플을 검색용으로 구성하려면  
   
-1. Visual Studio 2012에서 자체 호스트 솔루션을 엽니다. 샘플은 TechnologySamples\Basic\Service\Hosting\SelfHost 디렉터리에 있습니다.  
+1. Visual Studio 2012에서 Self-Host 솔루션을 엽니다. 샘플은 TechnologySamples\Basic\Service\Hosting\SelfHost 디렉터리에 있습니다.  
   
-2. 서비스 프로젝트에 `System.ServiceModel.Discovery.dll`에 대한 참조를 추가합니다. "System" 이라는 오류 메시지가 표시 될 수 있습니다. ServiceModel.Discovery.dll 또는 해당 종속성 중 하나에는 프로젝트에 지정 된 것 보다 이후 버전의 .NET Framework 필요 합니다. " 이 메시지가 표시 되 면 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다. **프로젝트 속성** 창에서 **대상 프레임 워크가** 인지 확인 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 합니다.  
+2. 서비스 프로젝트에 `System.ServiceModel.Discovery.dll`에 대한 참조를 추가합니다. "System" 이라는 오류 메시지가 표시 될 수 있습니다. ServiceModel.Discovery.dll 또는 해당 종속성 중 하나에는 프로젝트에 지정 된 것 보다 이후 버전의 .NET Framework 필요 합니다. " 이 메시지가 표시 되 면 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다. **프로젝트 속성** 창에서 **대상 프레임 워크가** 인지 확인 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 합니다.  
   
 3. Service.cs 파일을 열고 다음 `using` 문을 추가합니다.  
   
@@ -60,7 +61,7 @@ ms.locfileid: "90557829"
   
 2. `System.ServiceModel.dll` 및 `System.ServiceModel.Discovery.dll`에 대한 참조를 추가합니다.  
   
-3. GeneratedClient.cs 및 App.config 파일을 기본 클라이언트 프로젝트에서 새 DiscoveryClientApp 프로젝트로 복사합니다. 이렇게 하려면 **솔루션 탐색기**파일을 마우스 오른쪽 단추로 클릭 하 고 **복사**를 선택한 다음 **discoveryclientapp.exe** 프로젝트를 선택 하 고 마우스 오른쪽 단추를 클릭 한 다음 **붙여넣기**를 선택 합니다.  
+3. GeneratedClient.cs 및 App.config 파일을 기본 클라이언트 프로젝트에서 새 DiscoveryClientApp 프로젝트로 복사합니다. 이렇게 하려면 **솔루션 탐색기** 파일을 마우스 오른쪽 단추로 클릭 하 고 **복사** 를 선택한 다음 **discoveryclientapp.exe** 프로젝트를 선택 하 고 마우스 오른쪽 단추를 클릭 한 다음 **붙여넣기** 를 선택 합니다.  
   
 4. Program.cs를 엽니다.  
   
@@ -220,7 +221,8 @@ ms.locfileid: "90557829"
     ```  
   
 ## <a name="example"></a>예제  
- 다음은 이 샘플의 코드 목록입니다. 이 코드는 [자체 호스트](../samples/self-host.md) 샘플을 기반으로 하기 때문에 변경 된 파일만 나열 됩니다. 자체 호스트 샘플에 대 한 자세한 내용은 [설치 지침](../samples/set-up-instructions.md)을 참조 하세요.  
+
+ 다음은 이 샘플의 코드 목록입니다. 이 코드는 [자체 호스트](../samples/self-host.md) 샘플을 기반으로 하기 때문에 변경 된 파일만 나열 됩니다. Self-Host 샘플에 대 한 자세한 내용은 [설치 지침](../samples/set-up-instructions.md)을 참조 하세요.  
   
 ```csharp  
 // Service.cs  
@@ -340,7 +342,7 @@ namespace DiscoveryClientApp
 }  
 ```  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WCF Discovery 개요](wcf-discovery-overview.md)
 - [WCF Discovery 개체 모델](wcf-discovery-object-model.md)

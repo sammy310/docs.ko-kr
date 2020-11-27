@@ -2,17 +2,19 @@
 title: System.ServiceModel.TxSourceTxScopeRequiredIsTransactedTransport
 ms.date: 03/30/2017
 ms.assetid: 6cf60298-dccf-4587-b92c-ae3edb75c331
-ms.openlocfilehash: b66f7810dfe13f8b74431755d6652ab05e0148fb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 374f77f85a50cb68ecf75a04ab0e6afa33b89d48
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595637"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295719"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredistransactedtransport"></a>System.ServiceModel.TxSourceTxScopeRequiredIsTransactedTransport
+
 MSMQ와 같은 트랜잭션 전송에서 지정된 작업에 대한 지정된 트랜잭션을 받았습니다.  
   
 ## <a name="description"></a>Description  
+
  사용자 코드에 대해 사용 가능한 트랜잭션이 전송에서 작성된 경우 추적됩니다.  
   
 ## <a name="see-also"></a>참고 항목

@@ -2,17 +2,19 @@
 title: 전송 확장성
 ms.date: 03/30/2017
 ms.assetid: 3c9108be-f60f-4035-9f57-1da58c325420
-ms.openlocfilehash: 57868f72658831039e936bd4325836b24531a6dc
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 582253f1f7b8a4f77d3b72160a9d88ea654ce0a6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596528"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295628"
 ---
 # <a name="transport-extensibility"></a>전송 확장성
+
 이 섹션에는 WCF (Windows Communication Foundation)의 사용자 지정 전송을 보여 주는 샘플이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [UDP 활성화](udp-activation.md)  
  WAS (Windows Process Activation Service)를 사용한 프로세스 활성화를 지원 하기 위해 [전송: UDP](transport-udp.md) 샘플을 확장 하는 방법을 보여 줍니다.  
   

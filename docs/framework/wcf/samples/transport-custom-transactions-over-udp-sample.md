@@ -2,17 +2,19 @@
 title: '전송: UDP 샘플에 의한 사용자 지정 트랜잭션'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: ce1e6f0aedff46aaf58e22d8c23c37b03f8789dd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1a5b6afd7dc078b0e6e270888973b34a91bfdb9f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596541"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295667"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>전송: UDP 샘플에 의한 사용자 지정 트랜잭션
+
 이 샘플은 Windows Communication Foundation (WCF)[전송 확장성](transport-extensibility.md)의 [전송: UDP](transport-udp.md) 샘플을 기반으로 합니다. 이 샘플은 사용자 지정 트랜잭션 흐름을 지원하도록 UDP 전송 샘플을 확장하고 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 속성의 사용 방법을 보여 줍니다.  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>UDP 전송 샘플의 코드 변경  
+
  트랜잭션 흐름을 보여 주기 위해 이 샘플에서는 `ICalculatorContract`의 트랜잭션 범위가 필요하도록 `CalculatorService.Add()`의 서비스 계약을 변경합니다. 또한 `System.Guid` 작업의 계약에 `Add` 매개 변수를 추가합니다. 이 매개 변수는 클라이언트 트랜잭션의 식별자를 서비스에 전달하는 데 사용됩니다.  
   
 ```csharp  
@@ -178,7 +180,7 @@ if (transaction != null)
   
 1. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](building-the-samples.md)의 지침을 따르세요.  
   
-2. 현재 샘플은 [전송: UDP](transport-udp.md) 샘플과 유사 하 게 실행 되어야 합니다. 이 샘플을 실행하려면 UdpTestService.exe를 실행하여 서비스를 시작합니다. Windows Vista를 실행 하는 경우에는 상승 된 권한으로 서비스를 시작 해야 합니다. 이렇게 하려면 파일 탐색기에서 UdpTestService .exe를 마우스 오른쪽 단추로 클릭 하 고 **관리자 권한으로 실행**을 클릭 합니다.  
+2. 현재 샘플은 [전송: UDP](transport-udp.md) 샘플과 유사 하 게 실행 되어야 합니다. 이 샘플을 실행하려면 UdpTestService.exe를 실행하여 서비스를 시작합니다. Windows Vista를 실행 하는 경우에는 상승 된 권한으로 서비스를 시작 해야 합니다. 이렇게 하려면 파일 탐색기에서 UdpTestService.exe을 마우스 오른쪽 단추로 클릭 하 고 **관리자 권한으로 실행** 을 클릭 합니다.  
   
 3. 다음과 같은 출력이 표시됩니다.  
   

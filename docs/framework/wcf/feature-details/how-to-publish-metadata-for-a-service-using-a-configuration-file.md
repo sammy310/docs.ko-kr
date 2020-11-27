@@ -3,14 +3,15 @@ title: '방법: 구성 파일을 사용하여 서비스에 대한 메타데이�
 description: 구성 파일을 사용 하 여 WCF 서비스에 대 한 메타 데이터를 게시 하는 방법에 대해 알아봅니다. 게시를 통해 클라이언트는 GET 또는 HTTP/GET 요청을 사용 하 여 해당 메타 데이터를 가져올 수 있습니다.
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: d5d425be7f02a204476c4f6e81441aca9ea39fcc
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: eb7aeb4275e367bfc4463a7289d4bc3ff77ff9f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246820"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295550"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>방법: 구성 파일을 사용하여 서비스에 대한 메타데이터 게시
+
 이 항목은 WCF (Windows Communication Foundation) 서비스용 게시 메타 데이터를 보여 주는 두 가지 방법 항목 중 하나입니다. 서비스에서 메타데이터를 게시하는 방법을 지정하는 두 가지 방법은 구성 파일을 사용하는 방법과 코드를 사용하는 방법입니다. 이 항목에서는 구성 파일을 사용하여 서비스에 대해 메타데이터를 게시하는 방법에 대해 설명합니다.  
   
 > [!CAUTION]
@@ -183,6 +184,7 @@ namespace Metadata.Samples
      서비스에 포함된 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>의 `httpGetEnabled`가 `true`로 설정되어 있으므로 서비스의 메타데이터 게시 기능은 사용하도록 설정되었으며, 엔드포인트를 명시적으로 추가하지 않았으므로 런타임이 기본 엔드포인트를 추가합니다. 기본 엔드포인트, 바인딩 및 동작에 대한 자세한 내용은 [단순화된 구성](../simplified-configuration.md) 및 [WCF 서비스를 위한 단순화된 구성](../samples/simplified-configuration-for-wcf-services.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 코드 예제에서는 서비스에 대 한 메타 데이터를 게시 하는 기본 WCF 서비스 및 구성 파일의 구현을 보여 줍니다.  
   
 ```csharp  

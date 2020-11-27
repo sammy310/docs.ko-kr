@@ -7,14 +7,15 @@ helpviewer_keywords:
 - WCF [WCF], request-reply services
 - request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
-ms.openlocfilehash: df42f3fa8f5a15572987b0d4859856c7f838e632
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 10b82e859369dae4f57e0e13782e2375a304ab02
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586236"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295524"
 ---
 # <a name="request-reply-services"></a>요청-회신 서비스
+
 요청-회신 서비스는 WCF (Windows Communication Foundation)의 기본 작업 계약 형식입니다. 클라이언트는 서비스 작업에 대한 호출을 만들고 서비스로부터 응답을 기다립니다. 사용자는 서비스 작업에 대한 호출을 동기적으로(클라이언트가 서비스 또는 호출 시간으로부터 응답을 받을 때까지 차단하는 경우) 또는 비동기적으로(클라이언트가 서비스 작업에 대한 호출을 만들고, 작업을 계속하고, 다른 스레드의 서비스로부터 응답을 받는 경우) 수행할 수 있습니다.  
   
  요청-회신 서비스 계약을 만들려면 다음 샘플 코드에서처럼 서비스 계약을 정의하고 <xref:System.ServiceModel.OperationContractAttribute> 클래스를 각 작업에 적용합니다.  

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-ms.openlocfilehash: 9239e8bd9b85986d41006c4b2a21b6f2304e8275
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1291cb040fdcad17135e2187ade1966f3032fb44
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601233"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295537"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>방법: 코드를 사용하여 서비스에 대한 메타데이터 게시
+
 이 항목은 WCF (Windows Communication Foundation) 서비스에 대 한 메타 데이터 게시를 설명 하는 두 가지 방법 항목 중 하나입니다. 서비스에서 메타데이터를 게시하는 방법을 지정하는 두 가지 방법은 구성 파일을 사용하는 방법과 코드를 사용하는 방법입니다. 이 항목에서는 코드를 사용하여 서비스에 대해 메타데이터를 게시하는 방법에 대해 설명합니다.  
   
 > [!CAUTION]
@@ -48,7 +49,7 @@ ms.locfileid: "84601233"
      [!code-csharp[htPublishMetadataCode#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#5)]
      [!code-vb[htPublishMetadataCode#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#5)]  
   
-5. <xref:System.ServiceModel.Description.ServiceMetadataBehavior>에 <xref:System.ServiceModel.Description.MetadataExporter> 속성이 포함됩니다. <xref:System.ServiceModel.Description.MetadataExporter>에 <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> 속성이 포함됩니다. <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> 속성 값을 <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A>로 설정합니다. <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> 속성을 <xref:System.ServiceModel.Description.PolicyVersion.Policy12%2A>로 설정할 수도 있습니다. <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A>메타 데이터 내보내기로 설정 하면 "ws-policy 1.5을 준수 하는 메타 데이터를 사용 하 여 정책 정보를 생성 합니다. <xref:System.ServiceModel.Description.PolicyVersion.Policy12%2A>로 설정된 경우, 메타데이터 내보내기는 WS-Policy 1.2를 준수하는 정책 정보를 생성합니다.  
+5. <xref:System.ServiceModel.Description.ServiceMetadataBehavior>에 <xref:System.ServiceModel.Description.MetadataExporter> 속성이 포함됩니다. <xref:System.ServiceModel.Description.MetadataExporter>에 <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> 속성이 포함됩니다. <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> 속성 값을 <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A>로 설정합니다. <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> 속성을 <xref:System.ServiceModel.Description.PolicyVersion.Policy12%2A>로 설정할 수도 있습니다. 로 설정 된 경우 메타 <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A> 데이터 내보내기는 "WS-Policy 1.5를 준수 하는 메타 데이터로 정책 정보를 생성 합니다. <xref:System.ServiceModel.Description.PolicyVersion.Policy12%2A>로 설정된 경우, 메타데이터 내보내기는 WS-Policy 1.2를 준수하는 정책 정보를 생성합니다.  
   
      [!code-csharp[htPublishMetadataCode#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#6)]
      [!code-vb[htPublishMetadataCode#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#6)]  
@@ -81,6 +82,7 @@ ms.locfileid: "84601233"
 11. Internet Explorer를 사용 하 여 서비스의 기본 주소 ( `http://localhost:8001/MetadataSample` 이 예제에서는)로 이동 하 여 메타 데이터 게시가 설정 되었는지 확인 합니다. 웹 페이지의 맨 위에 "간단한 서비스"라는 메시지가 표시되고 바로 아래에 "서비스를 만들었습니다."라는 메시지가 표시됩니다. 그렇지 않으면 "이 서비스에 대한 메타데이터 게시는 현재 사용할 수 없습니다."라는 메시지가 결과 페이지의 맨 위에 표시됩니다.  
   
 ## <a name="example"></a>예제  
+
  다음 코드 예제에서는 코드에서 서비스에 대 한 메타 데이터를 게시 하는 기본 WCF 서비스를 구현 하는 방법을 보여 줍니다.  
   
  [!code-csharp[htPublishMetadataCode#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#11)]

@@ -384,6 +384,8 @@ items:
             href: ../core/diagnostics/index.md
           - name: 관리형 디버거
             href: ../core/diagnostics/managed-debuggers.md
+          - name: 덤프
+            href: ../core/diagnostics/dumps.md
           - name: Linux 덤프 디버그
             href: ../core/diagnostics/debug-linux-dumps.md
           - name: EventCounters

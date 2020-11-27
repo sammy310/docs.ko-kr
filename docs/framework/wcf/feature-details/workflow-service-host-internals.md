@@ -2,14 +2,15 @@
 title: 워크플로 서비스 호스트 내부 기능
 ms.date: 03/30/2017
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-ms.openlocfilehash: 7b47293211ee8143b1ce713c64ff1d5b22161b45
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 23ee0533d5386164dc95cb7fe2c61a626ea3f96e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594883"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295745"
 ---
 # <a name="workflow-service-host-internals"></a>워크플로 서비스 호스트 내부 기능
+
 <xref:System.ServiceModel.WorkflowServiceHost>에서는 워크플로 서비스에 대한 호스트를 제공합니다. 들어오는 메시지를 수신 대기하여 적절한 워크플로 서비스 인스턴스로 라우팅하고 유휴 워크플로의 언로드 및 유지를 제어하는 등의 작업을 담당합니다. 이 항목에서는 WorkflowServiceHost가 들어오는 메시지를 처리하는 방법을 설명합니다.  
   
 ## <a name="workflowservicehost-overview"></a>WorkflowServiceHost 개요  
@@ -23,6 +24,7 @@ ms.locfileid: "84594883"
  <xref:System.ServiceModel.WorkflowServiceHost>는 들어오는 애플리케이션 메시지를 수신 대기하는 애플리케이션 엔드포인트도 노출합니다. 들어오는 메시지가 도착하면 적절한 워크플로 서비스 인스턴스로 전송됩니다(현재 로드되어 있는 경우). 필요한 경우 새 워크플로 인스턴스가 만들어지고, 기존 인스턴스가 유지된 경우에는 지속성 저장소에서 로드됩니다.  
   
 ## <a name="workflowservicehost-details"></a>WorkflowServiceHost 세부 정보  
+
  다음 다이어그램에서는 <xref:System.ServiceModel.WorkflowServiceHost> 에서 메시지를 좀 더 자세히 처리 하는 방법을 보여 줍니다.  
   
  ![워크플로 서비스 호스트 메시지 흐름을 보여 주는 다이어그램입니다.](./media/workflow-service-host-internals/workflow-service-host-message-flow.gif)  
