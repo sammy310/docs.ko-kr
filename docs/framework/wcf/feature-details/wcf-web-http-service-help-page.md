@@ -2,14 +2,15 @@
 title: WCF 웹 HTTP 서비스 도움말 페이지
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: ef42457dea8bfe12a3e5054c5eacdf5a2964fdc7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fe6b22c6ebd637d3aa2bcd3744cb6b73e71c9482
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600168"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266937"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF 웹 HTTP 서비스 도움말 페이지
+
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서는 WCF WEB HTTP 서비스에 대한 자동 도움말 페이지를 제공합니다. 이 도움말 페이지에는 각 작업에 대한 설명, 요청 및 응답 형식, 스키마 등이 표시됩니다. 이 기능은 기본적으로 사용하지 않도록 설정되어 있습니다. 사용자가 WCF 웹 HTTP 서비스를 탐색 하 고 URL의 끝에 "/Help"를 추가 하는 경우, 예를 들어 `http://localhost:8000/Customers/Help` 다음과 같은 도움말 페이지가 표시 됩니다.  
   
  ![WCF REST 도움말 페이지가 열려 있는 브라우저입니다.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
@@ -19,6 +20,7 @@ ms.locfileid: "84600168"
  ![GetCustomers 메서드에 대 한 WCF REST 도움말 페이지 세부 정보를 포함 하는 브라우저가 열립니다.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>WCF 웹 HTTP 도움말 페이지 사용  
+
  WCF 웹 HTTP 도움말 페이지에는 <xref:System.ComponentModel.DescriptionAttribute>를 사용하여 지정한 작업에 대한 간략한 설명이 표시됩니다. 이 특성은 해당 특성이 적용되는 작업에 대한 간략한 설명이 포함된 문자열을 제공합니다. 예를 들어 다음 코드에서는 <xref:System.ComponentModel.DescriptionAttribute>를 사용하여 간략한 설명을 제공하는 방법을 보여 줍니다.  
   
 ```csharp
@@ -59,6 +61,7 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
  도움말 페이지는 해당 페이지의 여러 부분을 식별하는 태그가 포함된 XHTML을 기반으로 하기 때문에 클라이언트에서 <xref:System.Xml.Linq.XElement> 또는 다른 XLinq API를 사용하여 프로그래밍 방식으로 액세스할 수 있습니다.  
   
 ## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a>WCF 웹 HTTP 서비스 도움말 페이지에 사용되는 스키마  
+
  다음은 WCF 웹 HTTP 서비스 도움말 페이지에 사용되는 스키마입니다.  
   
 ```xml  

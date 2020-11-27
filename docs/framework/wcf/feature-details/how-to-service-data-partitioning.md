@@ -2,14 +2,15 @@
 title: '방법: 서비스 데이터 분할'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 3b2f86ee6a4dea25fb5c972d4cecb1b9ed411b29
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bb5eb6bda8bb2be3dfaaa88eb4b5ad787f47aa7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601194"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268926"
 ---
 # <a name="how-to-service-data-partitioning"></a>방법: 서비스 데이터 분할
+
 이 항목에서는 동일한 대상 서비스의 여러 인스턴스에서 메시지를 분할하는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 일반적으로 서비스 데이터 분할은 더 좋은 품질의 서비스를 제공하기 위해 서비스의 크기를 조정해야 하는 경우나 다양한 고객의 요청을 특정 방식으로 처리해야 하는 경우에 사용됩니다. 예를 들어 높은 값 또는 "골드" 고객의 메시지는 표준 고객의 메시지 보다 높은 우선 순위로 처리 되어야 할 수 있습니다.  
   
  이 예제에서는 메시지가 regularCalc 서비스의 두 인스턴스 중 하나로 라우트됩니다. 이 서비스의 두 인스턴스는 동일합니다. 단, calculator1 엔드포인트로 표시된 서비스는 우수 고객으로부터 받은 메시지를 처리하고 calculator2 엔드포인트로 표시된 서비스는 기타 고객으로부터 받은 메시지를 처리합니다.  
@@ -99,6 +100,7 @@ ms.locfileid: "84601194"
     ```  
   
 ## <a name="example"></a>예제  
+
  다음은 구성 파일의 전체 목록입니다.  
   
 ```xml  

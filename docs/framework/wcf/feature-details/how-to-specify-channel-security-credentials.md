@@ -2,14 +2,15 @@
 title: '방법: 채널 보안 자격 증명 지정'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 45a13460ce94cbacae0465fede4b455a2833ce81
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9236985ef461044e480847003d9d249b7e232783
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596944"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266768"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>방법: 채널 보안 자격 증명 지정
+
 WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 응용 프로그램에서 WCF 서비스를 호출할 수 있습니다. 대부분의 WCF 서비스에서는 클라이언트에서 인증 및 권한 부여에 대 한 자격 증명을 지정 해야 합니다. WCF 클라이언트에서 WCF 서비스를 호출 하는 경우 관리 코드 또는 응용 프로그램 구성 파일에서 이러한 자격 증명을 지정할 수 있습니다. COM 응용 프로그램에서 WCF 서비스를 호출 하는 경우 인터페이스를 사용 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 하 여 자격 증명을 지정할 수 있습니다. 이 항목에서는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스를 사용하여 자격 증명을 지정하는 다양한 방식을 설명합니다.  
   
 > [!NOTE]
@@ -25,7 +26,7 @@ WCF (Windows Communication Foundation) 서비스 모니커를 사용 하면 COM 
   
 3. `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]`인터페이스 정의에를 추가 `ICalculator` 합니다.  
   
-4. `bindingNamespace="http://Microsoft.ServiceModel.Samples"`서비스에 대 한 app.config의 끝점 태그에를 추가 합니다.  
+4. `bindingNamespace="http://Microsoft.ServiceModel.Samples"`서비스에 대 한 App.config의 끝점 태그에를 추가 합니다.  
   
 5. 메시지 보안 샘플을 빌드하고 Service.exe를 실행합니다. Internet Explorer를 사용 하 여 서비스의 URI ()로 이동 `http://localhost:8000/ServiceModelSamples/Service` 하 여 서비스가 작동 하는지 확인 합니다.  
   

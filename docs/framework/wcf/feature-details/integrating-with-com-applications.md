@@ -9,17 +9,19 @@ helpviewer_keywords:
 - COM [WCF]
 - WCF, COM integration
 ms.assetid: c98bda3e-6779-419e-8e6d-9aa94053026d
-ms.openlocfilehash: dc3bbe0ee72ca5583b1e52a61c914ad866a22a05
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bc58e22b64284d66367302d55b5c9554c9ec0d72
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596812"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268237"
 ---
 # <a name="integrating-with-com-applications"></a>COM 애플리케이션과 통합
+
 Wcf 서비스 모니커를 사용 하 여 WCF (Windows Communication Foundation) 서비스를 기존 코드에 직접 통합할 수 있습니다. 서비스 모니커는 Office VBA, Visual Basic 6.0 또는 Visual C++ 6.0과 같은 다양한 범위의 COM 기반 개발 환경에서 사용할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [COM 애플리케이션과 통합 개요](integrating-with-com-applications-overview.md)  
  통합 프로세스의 주요 부분에 대한 개요를 제공합니다.  
   
@@ -39,6 +41,7 @@ Wcf 서비스 모니커를 사용 하 여 WCF (Windows Communication Foundation)
  WCF 서비스 모니커는 `IChannelCredentials` 채널 자격 증명을 지정 하는 다양 한 다른 방법을 허용 하는 인터페이스를 지원 합니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.ServiceModel>  
   
 ## <a name="see-also"></a>참조

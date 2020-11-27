@@ -11,14 +11,15 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: a95d663c2669186fcb3eb1fb2f0c426ade945f1c
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: e0d80fe2433d894ef1f9e110e9090701dc305d8e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247535"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266755"
 ---
 # <a name="how-to-create-a-custom-token"></a>방법: 사용자 지정 토큰 만들기
+
 이 항목에서는 <xref:System.IdentityModel.Tokens.SecurityToken> 클래스를 사용하여 사용자 지정 보안 토큰을 만들고 사용자 지정 보안 토큰 공급자 및 인증자를 사용하여 통합하는 방법에 대해 설명합니다. 전체 코드 예제는 [사용자 지정 토큰](../samples/custom-token.md) 샘플을 참조 하세요.  
   
  *보안 토큰* 은 기본적으로 WCF (Windows Communication Foundation) 보안 프레임 워크에서 SOAP 메시지 내부의 발신자에 대 한 클레임을 나타내는 데 사용 되는 XML 요소입니다. WCF 보안은 시스템 제공 인증 모드에 대 한 다양 한 토큰을 제공 합니다. 예를 들면 <xref:System.IdentityModel.Tokens.X509SecurityToken> 클래스에 의해 표시되는 X.509 인증서 보안 토큰과 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 클래스에 의해 표시되는 사용자 이름 보안 토큰이 있습니다.  
@@ -31,7 +32,8 @@ ms.locfileid: "85247535"
   
  보안 토큰을 나타내는 클래스에 대한 자세한 내용은 <xref:System.IdentityModel.Tokens> 네임스페이스를 참조하십시오.  
   
-## <a name="procedures"></a>절차  
+## <a name="procedures"></a>프로시저  
+
  클라이언트 애플리케이션에 보안 인프라에 대한 신용 카드 정보를 지정할 수 있는 방법이 제공되어야 합니다. 이 정보는 사용자 지정 클라이언트 자격 증명 클래스를 통해 애플리케이션에서 사용할 수 있습니다. 첫 번째 단계에서는 사용자 지정 클라이언트 자격 증명에 대한 신용 카드 정보를 나타내는 클래스를 만듭니다.  
   
 #### <a name="to-create-a-class-that-represents-credit-card-information-inside-client-credentials"></a>클라이언트 자격 증명에서 신용 카드 정보를 나타내는 클래스를 만들려면  

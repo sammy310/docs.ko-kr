@@ -11,20 +11,23 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-ms.openlocfilehash: 167a304b4571aa35f758a2054caf6ae1c60a3c60
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: b337a7283e961d0fae2b51d92a21fa77f7249250
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803640"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267132"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
+
 <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle>에서 파생된 클래스의 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드가 `false`를 반환하면 `releaseHandleFailed` MDA(관리 디버깅 도우미)가 활성화되고 개발자에게 알립니다.  
   
 ## <a name="symptoms"></a>증상  
+
  리소스 또는 메모리 누수가 발생합니다.  <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle>에서 파생된 클래스의 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드가 실패하는 경우 클래스에 캡슐화된 리소스가 해제 또는 정리되지 않았을 수 있습니다.  
   
 ## <a name="cause"></a>원인  
+
  사용자는 <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle>에서 파생된 클래스를 만드는 경우 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드의 구현을 제공해야 합니다. 따라서 이 상황은 개별 리소스와 관련이 있습니다. 그러나 요구 사항은 다음과 같습니다.  
   
 - <xref:System.Runtime.InteropServices.SafeHandle> 및 <xref:System.Runtime.InteropServices.CriticalHandle> 유형은 중요한 프로세스 리소스를 둘러싼 래퍼를 나타냅니다. 메모리 누수로 인해 시간이 지나면 프로세스를 사용할 수 없게 됩니다.  
@@ -34,6 +37,7 @@ ms.locfileid: "85803640"
 - <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>을 실행하는 동안 발생하여 리소스 해제를 방해하는 모든 오류는 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드 자체 구현의 버그입니다. 코드가 해당 기능을 수행하기 위해 다른 사용자가 작성한 코드를 호출하는 경우에도 계약이 이행되도록 하는 것은 프로그래머의 책임입니다.  
   
 ## <a name="resolution"></a>해결 방법  
+
  MDA 알림을 발생시킨 특정 <xref:System.Runtime.InteropServices.SafeHandle>(또는 <xref:System.Runtime.InteropServices.CriticalHandle>)을 사용하는 코드를 검토하여 원시 핸들 값이 <xref:System.Runtime.InteropServices.SafeHandle>에서 추출되어 다른 곳에 복사되는 위치를 찾아야 합니다. 원시 핸들 값의 사용이 런타임에서 더 이상 추적되지 않으므로 이는 <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle> 구현 내에서 일반적인 오류 원인입니다. 이후에 원시 핸들 복사를 닫을 경우 현재 유효하지 않은 핸들에 대해 닫기가 시도되기 때문에 이후 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 호출이 실패할 수 있습니다.  
   
  잘못된 핸들 복제가 발생할 수 있는 여러 가지 방식이 있습니다.  
@@ -49,9 +53,11 @@ ms.locfileid: "85803640"
 - `CloseHandle` 함수를 통해 해제할 수 있는 모든 Win32 핸들과 같은 일부 네이티브 핸들 형식은 동일한 핸들 네임스페이스를 공유합니다. 하나의 핸들 형식을 잘못 해제하면 다른 핸들에서 문제가 발생할 수 있습니다. 예를 들어 실수로 Win32 이벤트 핸들을 두 번 닫을 경우 관련이 없어 보이는 파일 핸들이 조기에 닫힐 수 있습니다. 이 문제는 핸들이 해제되고 다른 형식의 다른 리소스를 추적하는 데 핸들 값을 사용할 수 있게 될 때 발생합니다. 이 경우 잘못된 두 번째 해제가 이어서 발생하면 관련 없는 스레드의 핸들이 무효화될 수 있습니다.  
   
 ## <a name="effect-on-the-runtime"></a>런타임에 대한 영향  
+
  이 MDA는 CLR에 아무런 영향을 미치지 않습니다.  
   
 ## <a name="output"></a>출력  
+
  <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle>이 핸들을 제대로 해제하지 못했음을 나타내는 메시지입니다. 예를 들면 다음과 같습니다.  
   
 ```output
@@ -62,7 +68,7 @@ another means (such as extracting the handle using DangerousGetHandle
 and closing it directly or building another SafeHandle around it."  
 ```  
   
-## <a name="configuration"></a>Configuration  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -73,6 +79,7 @@ and closing it directly or building another SafeHandle around it."
 ```  
   
 ## <a name="example"></a>예제  
+
  다음은 `releaseHandleFailed` MDA를 활성화할 수 있는 코드 예제입니다.  
   
 ```csharp

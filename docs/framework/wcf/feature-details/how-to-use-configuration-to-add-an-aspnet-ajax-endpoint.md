@@ -2,13 +2,15 @@
 title: '방법: 구성을 사용하여 ASP.NET AJAX 엔드포인트 추가'
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: 97f8174161068f2c72b6bd2bc4e8a3044f5bccdd
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: b229173381eed3e821a9ad9e1a6639912521731c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051664"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268432"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>방법: 구성을 사용하여 ASP.NET AJAX 엔드포인트 추가
+
 WCF (Windows Communication Foundation)를 사용 하면 클라이언트 웹 사이트의 JavaScript에서 호출할 수 있는 ASP.NET AJAX 사용 끝점을 사용할 수 있도록 하는 서비스를 만들 수 있습니다. 이러한 끝점을 만들려면 다른 모든 WCF (Windows Communication Foundation) 끝점과 마찬가지로 구성 파일을 사용 하거나 구성 요소가 필요 하지 않은 메서드를 사용할 수 있습니다. 이 항목에서는 구성 방법을 보여 줍니다.  
   
  서비스 끝점이 ASP.NET 될 수 있도록 하는 프로시저의 부분은를 사용 하 <xref:System.ServiceModel.WebHttpBinding> 고 끝점 동작을 추가 하기 위해 끝점을 구성 하는 것으로 구성 됩니다 [\<enableWebScript>](../../configure-apps/file-schema/wcf/enablewebscript.md) . 끝점을 구성한 후 서비스를 구현 하 고 호스트 하는 단계는 모든 WCF 서비스에서 사용 하는 단계와 비슷합니다. 작업 예제는 [HTTP POST를 사용 하는 AJAX 서비스](../samples/ajax-service-using-http-post.md)를 참조 하세요.  
@@ -103,7 +105,7 @@ WCF (Windows Communication Foundation)를 사용 하면 클라이언트 웹 사�
   
 1. 끝점은 .svc 파일을 기준으로 하는 빈 주소에 구성 되어 있으므로 서비스를 사용할 수 있으며, 서비스에 대 한 요청을 전송 하 여 호출할 수 있습니다. \<operation> 예를 들어 작업에 대해 서비스 .svc/Add를 사용할 수 있습니다. `Add` 엔드포인트 URL을 ASP.NET AJAX Script Manager 컨트롤의 스크립트 컬렉션에 입력하여 사용할 수 있습니다. 예제는 [HTTP POST를 사용 하는 AJAX 서비스](../samples/ajax-service-using-http-post.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ASP.NET AJAX용 WCF 서비스 만들기](creating-wcf-services-for-aspnet-ajax.md)
 - [방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션](how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

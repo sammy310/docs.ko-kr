@@ -3,17 +3,19 @@ title: Windows Workflow 개요
 description: 이 문서에서는 실제 프로세스를 설명 하는 모델인 Workflow Foundation 워크플로를 설명 합니다.
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: c54e405c5fff013f994f98cbf84fcce4d17d9d4e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f966aa2b62a743358d4c1ad18f237f988924014d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558102"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268679"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow 개요
+
 워크플로는 실제 프로세스를 설명 하는 모델로 저장 되는 활동 이라고 하는 *활동* 단위 집합입니다. 워크플로를 통해 단기 실행 작업과 장기 실행 작업의 실행 순서와 종속 관계를 설명할 수 있습니다. 이 작업은 모델을 시작부터 끝까지 통과하며 활동은 사람이 실행하거나 시스템 함수로 실행될 수 있습니다.  
   
 ## <a name="workflow-run-time-engine"></a>워크플로 런타임 엔진  
+
  실행 중인 모든 워크플로 인스턴스는 다음 중 하나를 통해 호스트 프로세스와 상호 작용하는 in-process 런타임 엔진에서 만들고 유지합니다.  
   
 - 메서드와 같이 워크플로를 호출하는 <xref:System.Activities.WorkflowInvoker>  
@@ -30,6 +32,7 @@ ms.locfileid: "90558102"
 호스트 프로세스의 워크플로 구성 요소  
   
 ## <a name="interaction-between-workflow-components"></a>워크플로 구성 요소 간의 상호 작용  
+
  다음 다이어그램에서는 워크플로 구성 요소가 서로 상호 작용하는 방법을 보여 줍니다.  
   
  ![워크플로 구성 요소가 상호 작용 하는 방법을 보여 주는 다이어그램입니다.](./media/overview/workflow-component-interatction.gif)  
@@ -42,6 +45,6 @@ ms.locfileid: "90558102"
   
 - <xref:System.Activities.CodeActivity> 추상 클래스에서 파생되는 사용자 지정 활동입니다. <xref:System.Activities.CodeActivity>는 <xref:System.Activities.CodeActivityContext> 메서드의 매개 변수로 사용되는 <xref:System.Activities.CodeActivity.Execute%2A>를 사용하여 런타임 기능(예: 추적 및 속성)에 액세스할 수 있습니다. 이러한 런타임 기능에 대 한 자세한 내용은 [워크플로 추적 및 추적](workflow-tracking-and-tracing.md) 및 [워크플로 실행 속성](workflow-execution-properties.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [BizTalk Server 2006 또는 WF? 프로젝트에 적합 한 워크플로 도구 선택](/previous-versions/dotnet/articles/cc303238(v=msdn.10))

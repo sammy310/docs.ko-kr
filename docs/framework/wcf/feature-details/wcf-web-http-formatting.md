@@ -2,17 +2,19 @@
 title: WCF 웹 HTTP 형식 지정
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 011ff4f2e667268fac1aa2d82c0a2c4ffefc8dde
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e9346cd1bb3798ad0beac5e9e28a8536007d897b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585560"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266911"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF 웹 HTTP 형식 지정
+
 WCF 웹 HTTP 프로그래밍 모델을 사용하면 서비스 작업의 응답을 반환하는 데 사용할 수 있는 가장 적절한 형식을 동적으로 결정할 수 있습니다. 적절한 형식을 결정하는 데 지원되는 방법은 자동 형식 지정과 명시적 형식 지정, 두 가지가 있습니다.  
   
 ## <a name="automatic-formatting"></a>자동 서식 지정  
+
  자동 형식 지정을 사용하도록 설정하면 자동 형식 지정이 응답을 반환하는 가장 적절한 형식을 선택합니다. 자동 형식 지정은 다음을 순서대로 확인하여 가장 적절한 형식을 결정합니다.  
   
 1. 요청 메시지의 Accept 헤더에 있는 미디어 유형  
@@ -91,6 +93,7 @@ try
 ```  
   
 ## <a name="explicit-formatting"></a>명시적 서식 지정  
+
  이름에서 알 수 있듯이 명시적 형식 지정에서는 개발자가 작업 코드 내에서 사용할 가장 적절한 형식을 결정합니다. 가장 적절한 형식이 XML 또는 JSON이면 개발자는 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 을 <xref:System.ServiceModel.Web.WebMessageFormat.Xml> 또는 <xref:System.ServiceModel.Web.WebMessageFormat.Json>으로 설정합니다. <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> 속성이 명시적으로 설정되지 않으면 작업의 기본 형식이 사용됩니다.  
   
  다음 예제에서는 사용할 형식에 대한 형식 쿼리 문자열 매개 변수를 확인합니다. 이 매개 변수가 지정되어 있으면 <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>을 사용하여 작업의 형식이 설정됩니다.  
