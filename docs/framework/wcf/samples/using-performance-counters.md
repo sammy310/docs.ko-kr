@@ -2,14 +2,15 @@
 title: 성능 카운터 사용
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: f2b0f39303d000e2e9aab8fc5280f75ab9309c4d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d3e6b9805bd0b9c5eea991fce4dde2035f8f5c1b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553046"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294913"
 ---
 # <a name="using-performance-counters"></a>성능 카운터 사용
+
 이 샘플에서는 WCF (Windows Communication Foundation) 성능 카운터에 액세스 하는 방법과 사용자 정의 성능 카운터를 만드는 방법을 보여 줍니다. 이 샘플은 [시작](getting-started-sample.md)을 기반으로 합니다.  
   
 > [!NOTE]
@@ -41,14 +42,14 @@ ms.locfileid: "90553046"
   
 ### <a name="to-view-performance-data"></a>성능 데이터를 보려면  
   
-1. **시작**, **실행**을 차례로 클릭 하 `perfmon` 고 **확인을** 클릭 하거나 제어판에서 **관리 도구** 를 선택 하 고 **성능**을 두 번 클릭 하 여 성능 모니터 도구를 시작 합니다.  
+1. **시작**, **실행** 을 차례로 클릭 하 `perfmon` 고 **확인을** 클릭 하거나 제어판에서 **관리 도구** 를 선택 하 고 **성능** 을 두 번 클릭 하 여 성능 모니터 도구를 시작 합니다.  
   
     > [!NOTE]
     > 샘플 코드가 실행될 때까지는 카운터를 추가할 수 없습니다.  
   
 2. 나열된 성능 카운터를 선택한 다음 Delete 키를 누르면 성능 카운터를 제거할 수 있습니다.  
   
-3. 그래프 창을 마우스 오른쪽 단추로 클릭 하 고 **카운터 추가**를 선택 하 여 WCF 카운터를 추가 합니다. **카운터 추가** 대화 상자의 성능 개체 드롭다운 목록 상자에서 **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 또는 ServiceModelService 3.0.0.0** 를 선택 합니다. 목록에서 보려는 카운터를 선택합니다.  
+3. 그래프 창을 마우스 오른쪽 단추로 클릭 하 고 **카운터 추가** 를 선택 하 여 WCF 카운터를 추가 합니다. **카운터 추가** 대화 상자의 성능 개체 드롭다운 목록 상자에서 **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 또는 ServiceModelService 3.0.0.0** 를 선택 합니다. 목록에서 보려는 카운터를 선택합니다.  
   
     > [!NOTE]
     > 컴퓨터에서 실행 중인 WCF 서비스가 없는 경우에는 서비스에 대 한 WCF 성능 카운터가 없습니다.  
@@ -76,6 +77,6 @@ ms.locfileid: "90553046"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 모니터링 샘플](/previous-versions/appfabric/ff383407(v=azure.10))

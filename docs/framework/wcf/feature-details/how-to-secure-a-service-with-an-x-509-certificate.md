@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 10d6db63368ee55040f85f922b9483982e8ff264
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bf498ee373f2d637a7a93fbc36225a38ff7744c0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596970"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293899"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>방법: X.509 인증서를 사용하여 서비스 보안
+
 X.509 인증서를 사용 하 여 서비스를 보호 하는 것은 WCF (Windows Communication Foundation)에서 대부분의 바인딩에서 사용 하는 기본 기술입니다. 이 항목에서는 X.509 인증서와 함께 자체 호스팅된 서비스를 구성하는 단계에 대해 설명합니다.  
   
  필수 구성 요소는 서버를 인증하는 데 사용할 수 있는 유효한 인증서입니다. 인증서는 신뢰할 수 있는 인증 기관에 의해 서버에 발급되어야 합니다. 인증서가 유효하지 않은 경우, 서비스를 사용하려고 시도하는 클라이언트에서 해당 서비스를 신뢰할 수 없으며, 결과적으로 연결이 되지 않습니다. 인증서를 사용 하는 방법에 대 한 자세한 내용은 [인증서 작업](working-with-certificates.md)을 참조 하세요.  
@@ -62,12 +63,14 @@ X.509 인증서를 사용 하 여 서비스를 보호 하는 것은 WCF (Windows
      [!code-vb[C_SecureWithCertificate#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#8)]  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> 메서드를 사용하여 X.509 인증서와 함께 서비스를 구성합니다.  
   
  [!code-csharp[C_SecureWithCertificate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#9)]
  [!code-vb[C_SecureWithCertificate#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#9)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
  코드를 컴파일하려면 다음 네임스페이스가 필요합니다.  
   
 - <xref:System>  

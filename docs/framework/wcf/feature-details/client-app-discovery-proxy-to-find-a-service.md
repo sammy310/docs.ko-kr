@@ -2,14 +2,15 @@
 title: '방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 애플리케이션 구현'
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: a1e770531a196d73dfc7d93bf70ed432df343c88
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7316b080809f0298ae5f19eaf4160d9bca2b3ad0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587016"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295121"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 애플리케이션 구현
+
 이 항목은 검색 프록시를 구현하는 방법에 대해 설명하는 세 항목 중 세 번째 항목입니다. 이전 항목인 [방법: 검색 프록시에 등록 하는 검색 가능한 서비스 구현](discoverable-service-that-registers-with-the-discovery-proxy.md)에서는 검색 프록시를 사용 하 여 자신을 등록 하는 WCF 서비스를 구현 했습니다. 이 항목에서는 검색 프록시를 사용 하 여 WCF 서비스를 찾는 WCF 클라이언트를 만듭니다.  
   
 ### <a name="implement-the-client"></a>클라이언트 구현  
@@ -104,6 +105,7 @@ ms.locfileid: "84587016"
  클라이언트 애플리케이션의 구현을 완료했습니다. [방법: 검색 프록시 테스트](how-to-test-the-discovery-proxy.md)를 계속 진행 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음은 이 항목에서 사용되는 전체 코드 목록입니다.  
   
 ```csharp  

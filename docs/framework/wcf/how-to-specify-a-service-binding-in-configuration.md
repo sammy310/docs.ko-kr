@@ -6,13 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 3b9dd12f2a28ae2d420e82013459613cee8140f1
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 06b1cd009d28f854ec73286efa29d42f0f557314
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051950"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293691"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>방법: 구성에서 서비스 바인딩 지정
+
 이 예제에서 `ICalculator` 계약이 기본 계산기 서비스에 대해 정의되고, 서비스가 `CalculatorService` 클래스에 구현된 다음 해당 엔드포인트가 Web.config 파일에 구성됩니다. 여기서 서비스는 <xref:System.ServiceModel.BasicHttpBinding>을 사용하는 것으로 지정됩니다. 구성 대신 코드를 사용 하 여이 서비스를 구성 하는 방법에 대 한 자세한 내용은 [방법: 코드에서 서비스 바인딩 지정](how-to-specify-a-service-binding-in-code.md)을 참조 하세요.  
   
  일반적으로 바인딩 및 주소 정보를 코드에서 명령적으로 지정하지 않고 구성에서 선언적으로 지정하는 것이 좋습니다. 일반적으로 배포 된 서비스에 대 한 바인딩 및 주소가 서비스를 개발 하는 동안 사용 된 것과 다르기 때문에 일반적으로 코드에서 끝점을 정의 하는 것은 실용적이 지 않습니다. 일반적으로 바인딩 및 주소 지정 정보를 코드와 구분하면 애플리케이션을 다시 컴파일하거나 다시 배포할 필요 없이 해당 정보를 변경할 수 있습니다.  
@@ -93,7 +95,7 @@ ms.locfileid: "86051950"
     </wsHttpBinding>  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](using-bindings-to-configure-services-and-clients.md)
 - [엔드포인트 주소 지정](specifying-an-endpoint-address.md)

@@ -1,15 +1,16 @@
 ---
-title: 형식화 되지 않은 요청-회신
+title: 형식화 되지 않은 Request-Reply
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: 46047d1671fadb18052991451910b9056015edd2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bcd35bcac928397cad57384fdecb55d7e5ad13c3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591102"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294991"
 ---
 # <a name="untyped-requestreply"></a>형식없는 요청/회신
+
 이 샘플에서는 Message 클래스를 사용하는 작업 계약을 정의하는 방법을 보여 줍니다.  
   
 > [!NOTE]
@@ -43,7 +44,7 @@ public Message ComputeSum(Message request)
 }  
 ```  
   
- 클라이언트는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 에서 생성 된 코드를 사용 하 여 원격 서비스에 대 한 프록시를 만듭니다. 요청 메시지를 보내려면 클라이언트에 내부 채널에 따라 결정되는 메시지 버전이 필요합니다. 따라서 여기서는 만들어지는 프록시 채널의 범위에 맞게 <xref:System.ServiceModel.OperationContextScope> 속성에 올바른 메시지 버전이 채워진 <xref:System.ServiceModel.OperationContext>를 만드는 새 `OutgoingMessageHeaders.MessageVersion`를 만듭니다. 클라이언트에서는 요청 메시지에 본문으로 입력 배열을 전달한 다음 프록시에서 `ComputeSum`을 호출합니다. 그런 다음 클라이언트에서는 회신 메시지에 있는 `GetBody<T>` 메서드에 액세스하여 전달한 입력의 합계를 검색합니다. 다음 샘플 코드에서는 이를 보여 줍니다.  
+ 클라이언트는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 에서 생성 된 코드를 사용 하 여 원격 서비스에 대 한 프록시를 만듭니다. 요청 메시지를 보내려면 클라이언트에 내부 채널에 따라 결정되는 메시지 버전이 필요합니다. 따라서 여기서는 만들어지는 프록시 채널의 범위에 맞게 <xref:System.ServiceModel.OperationContextScope> 속성에 올바른 메시지 버전이 채워진 <xref:System.ServiceModel.OperationContext>를 만드는 새 `OutgoingMessageHeaders.MessageVersion`를 만듭니다. 클라이언트에서는 요청 메시지에 본문으로 입력 배열을 전달한 다음 프록시에서 `ComputeSum`을 호출합니다. 그런 다음 클라이언트에서는 회신 메시지에 있는 `GetBody<T>` 메서드에 액세스하여 전달한 입력의 합계를 검색합니다. 다음 샘플 코드에서는 이를 보여 줍니다.  
   
 ```csharp
 using (new OperationContextScope(client.InnerChannel))  

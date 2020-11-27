@@ -5,19 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 001f30d7a0dde952a7d18bfbc50f2c3622287406
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d136e094e4f1ea5258ff568527d10ac25a38f1a9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576553"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293964"
 ---
 # <a name="accessing-services-using-a-client"></a>클라이언트를 사용하여 서비스 액세스
+
 클라이언트 응용 프로그램은 WCF 클라이언트 또는 채널 개체를 만들고 구성 하 고 사용 하 여 서비스와 통신 해야 합니다. [WCF 클라이언트 개요](../wcf-client-overview.md) 항목에서는 기본 클라이언트 및 채널 개체를 만들고 사용 하는 것과 관련 된 개체 및 단계에 대해 간략하게 설명 합니다.  
   
  이 항목에서는 시나리오에 따라 유용할 수 있는 클라이언트 및 채널 개체와 클라이언트 애플리케이션과 관련된 몇 가지 문제에 대한 자세한 정보를 제공합니다.  
   
 ## <a name="overview"></a>개요  
+
  이 항목에서는 다음과 관련된 동작 및 문제에 대해 설명합니다.  
   
 - 채널 및 세션 수명  
@@ -29,6 +31,7 @@ ms.locfileid: "84576553"
 - 대화형으로 채널 초기화  
   
 ### <a name="channel-and-session-lifetimes"></a>채널 및 세션 수명  
+
  WCF (Windows Communication Foundation) 응용 프로그램에는 두 가지 범주의 채널, 데이터 그램 및 세션 포함 됩니다.  
   
  *데이터 그램* 채널은 모든 메시지를 상관 관계가 없는 하는 채널입니다. 데이터그램 채널을 사용할 경우 입력 또는 출력 작업이 실패해도 일반적으로 다음 작업이 영향을 받지 않으며 동일한 채널을 다시 사용할 수 있습니다. 이 때문에 데이터그램 채널은 실패하지 않습니다.  
@@ -43,11 +46,13 @@ ms.locfileid: "84576553"
  채널을 애플리케이션 계층에 노출하는 대부분의 시스템 제공 바인딩은 기본적으로 세션을 사용하지만 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>은 사용하지 않습니다. 자세한 내용은 [세션 사용](../using-sessions.md)을 참조 하세요.  
   
 ### <a name="the-proper-use-of-sessions"></a>적절한 세션 사용  
+
  세션은 전체 메시지 교환이 완료되었는지 여부 및 양쪽에서 성공했다고 간주하는지 여부를 확인하는 방법을 제공합니다. 호출 애플리케이션은 하나의 try 블록 내에서 채널을 열고 사용한 후 닫는 것이 좋습니다. 세션 채널이 열려 있고 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 메서드를 한 번 호출한 후 해당 호출이 성공적으로 반환되면 세션이 성공했습니다. 이 경우 성공은 바인딩에서 지정한 모든 배달 보증이 충족되었으며 다른 쪽이 <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType>를 호출하기 전에 채널에서 <xref:System.ServiceModel.ICommunicationObject.Close%2A>를 호출하지 않았음을 의미합니다.  
   
  다음 섹션에서는 이 클라이언트 접근 방법의 예를 제공합니다.  
   
 ### <a name="handling-exceptions"></a>예외 처리  
+
  클라이언트 애플리케이션의 예외 처리는 단순합니다. 하나의 try 블록 내에서 채널을 열고 사용한 후 닫으면 예외가 throw되지 않는 한 대화가 성공합니다. 일반적으로 예외가 throw되면 대화가 중단됩니다.  
   
 > [!NOTE]
@@ -66,15 +71,17 @@ ms.locfileid: "84576553"
  응용 프로그램 수준에서 오류 정보를 사용 하는 방법에 대 한 자세한 내용은 [계약 및 서비스에서 오류 지정 및 처리](../specifying-and-handling-faults-in-contracts-and-services.md)를 참조 하세요. 예상 되는 [예외](../samples/expected-exceptions.md) 는 예상 되는 예외를 설명 하 고이를 처리 하는 방법을 보여줍니다. 채널을 개발할 때 발생 하는 오류를 처리 하는 방법에 대 한 자세한 내용은 [예외 및 오류 처리](../extending/handling-exceptions-and-faults.md)를 참조 하세요.  
   
 ### <a name="client-blocking-and-performance"></a>클라이언트 차단 및 성능  
+
  애플리케이션에서 동기적으로 request-reply 작업을 호출하는 경우 클라이언트는 반환 값이 수신되거나 <xref:System.TimeoutException?displayProperty=nameWithType> 같은 예외가 throw될 때까지 차단됩니다. 이 동작은 로컬 동작과 유사합니다. 응용 프로그램에서 WCF 클라이언트 개체 또는 채널에 대 한 작업을 동기적으로 호출 하면 클라이언트는 채널 계층에서 네트워크에 데이터를 쓸 수 있을 때까지 또는 예외가 throw 될 때까지 반환 하지 않습니다. <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType>를 `true`로 설정하여 작업을 표시함으로써 지정된 단방향 메시지 교환 패턴은 일부 클라이언트의 응답을 향상시키지만 바인딩 및 이미 전송된 메시지에 따라 단방향 작업이 차단될 수도 있습니다. 단방향 작업은 메시지 교환에만 사용됩니다. 자세한 내용은 단방향 [서비스](one-way-services.md)를 참조 하세요.  
   
  큰 데이터 청크는 메시지 교환 패턴에 관계없이 클라이언트 처리 속도를 저하시킬 수 있습니다. 이러한 문제를 처리 하는 방법을 이해 하려면 [대량 데이터 및 스트리밍](large-data-and-streaming.md)을 참조 하세요.  
   
- 작업이 완료 되는 동안 응용 프로그램에서 더 많은 작업을 수행 해야 하는 경우 WCF 클라이언트가 구현 하는 서비스 계약 인터페이스에 비동기 메서드 쌍을 만들어야 합니다. 이 작업을 수행 하는 가장 쉬운 방법은 `/async` [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)에서 스위치를 사용 하는 것입니다. 예제는 [방법: 비동기적으로 서비스 작업 호출](how-to-call-wcf-service-operations-asynchronously.md)을 참조 하세요.  
+ 작업이 완료 되는 동안 응용 프로그램에서 더 많은 작업을 수행 해야 하는 경우 WCF 클라이언트가 구현 하는 서비스 계약 인터페이스에 비동기 메서드 쌍을 만들어야 합니다. 이 작업을 수행 하는 가장 쉬운 방법은 `/async` [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)에서 스위치를 사용 하는 것입니다. 예제는 [방법: 비동기적으로 서비스 작업 호출](how-to-call-wcf-service-operations-asynchronously.md)을 참조 하세요.  
   
  클라이언트 성능 향상에 대 한 자세한 내용은 [중간 계층 클라이언트 응용 프로그램](middle-tier-client-applications.md)을 참조 하세요.  
   
 ### <a name="enabling-the-user-to-select-credentials-dynamically"></a>사용자가 동적으로 자격 증명을 선택할 수 있도록 설정  
+
  <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> 인터페이스를 사용하면 애플리케이션이 시간 제한 타이머가 시작되기 전에 채널을 만드는 데 사용할 자격 증명을 사용자가 선택할 수 있도록 하는 사용자 인터페이스를 표시할 수 있습니다.  
   
  애플리케이션 개발자는 삽입된 <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer>를 두 가지 방법으로 사용할 수 있습니다. 클라이언트 응용 프로그램은 채널을 <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> 열기 전에 또는 (또는 비동기 버전)를 호출 하거나 ( *명시적* 방법) 첫 번째 작업 ( *암시적* 방법)을 호출할 수 있습니다.  

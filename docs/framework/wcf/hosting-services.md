@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 86ce392bb76b22e2b6a65fa1d005ed8e9589af15
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 41a7a3e651d234de4079455a667df670d6c7435d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246387"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294653"
 ---
 # <a name="hosting-services"></a>호스팅 서비스
 
@@ -22,7 +22,8 @@ WCF는 서비스 지향 응용 프로그램을 빌드하기 위한 통합 프로
 
 ## <a name="hosting-options"></a>호스팅 옵션
 
-### <a name="self-host-in-a-managed-application"></a>관리 되는 응용 프로그램의 자체 호스트
+### <a name="self-host-in-a-managed-application"></a>관리 되는 응용 프로그램의 Self-Host
+
  WCF 서비스는 모든 관리 되는 응용 프로그램에서 호스팅될 수 있습니다. 이 경우 배포하는 데 있어 최소한의 인프라를 필요하므로 가장 유연한 옵션입니다. 관리되는 애플리케이션 코드 내에 서비스 코드를 포함시킨 다음 서비스를 사용할 수 있도록 <xref:System.ServiceModel.ServiceHost> 의 인스턴스를 만들고 엽니다. 자세한 내용은 [방법: 관리 되는 응용 프로그램에서 WCF 서비스 호스팅](how-to-host-a-wcf-service-in-a-managed-application.md)을 참조 하세요.
 
  이 옵션을 사용 하면 콘솔 응용 프로그램 내에서 실행 되는 WCF 서비스와 Windows Presentation Foundation (WPF) 또는 Windows Forms (WinForms)를 기반으로 하는 클라이언트 응용 프로그램 등의 두 가지 일반적인 시나리오를 사용할 수 있습니다. 콘솔 응용 프로그램 내에서 WCF 서비스를 호스트 하는 작업은 일반적으로 응용 프로그램의 개발 단계에서 유용 합니다. 이 경우 쉽게 디버깅을 수행할 수 있으며, 애플리케이션 내에서 발생하는 상황을 확인하기 위한 추적 정보를 손쉽게 얻을 수 있으며, 새 위치에 서비스를 복사하여 이동하기 용이합니다. 이 호스팅 옵션을 사용 하면 WPF 및 WinForms 응용 프로그램과 같은 리치 클라이언트 응용 프로그램에서 외부 대상과 통신할 수 있습니다. 예를 들어, 사용자 인터페이스에 WPF를 사용 하 고 다른 클라이언트가이 서비스에 연결 하 여 정보를 공유할 수 있도록 하는 WCF 서비스를 호스트 하는 피어 투 피어 공동 작업 클라이언트가 있습니다.
@@ -44,6 +45,7 @@ WAS (windows Process Activation Service)는 windows Vista 에서도 제공 되�
  이 호스팅 옵션을 사용하려면 IIS를 적절히 구성해야 하지만 호스팅 코드를 애플리케이션의 일부로 작성하지 않아도 됩니다. WAS 호스팅을 구성 하는 방법에 대 한 자세한 내용은 [방법: was에서 WCF 서비스](./feature-details/how-to-host-a-wcf-service-in-was.md)호스팅을 참조 하세요.
 
 ## <a name="choose-a-hosting-environment"></a>호스팅 환경 선택
+
  다음 표에서는 각 호스팅 옵션과 관련된 몇 가지 주요 이점 및 시나리오를 요약하여 설명합니다.
 
 |호스팅 환경|일반적인 시나리오|주요 이점 및 제한|
@@ -58,11 +60,11 @@ WAS (windows Process Activation Service)는 windows Vista 에서도 제공 되�
 
 |호스팅 환경|사용 가능한 플랫폼|지원되는 전송|프로세스 및 AppDomain 재활용|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|관리되는 애플리케이션("자체 호스팅")|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|No|
-|Windows 서비스(이전의 NT 서비스)|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|No|
-|IIS 5.1|Windows XP|HTTP|Yes|
-|IIS 6.0|Windows Server 2003|HTTP|Yes|
-|WAS(Windows Process Activation Service)|Windows Vista, Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Yes|
+|관리되는 애플리케이션("자체 호스팅")|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|아니요|
+|Windows 서비스(이전의 NT 서비스)|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|아니요|
+|IIS 5.1|Windows XP|HTTP|예|
+|IIS 6.0|Windows Server 2003|HTTP|예|
+|WAS(Windows Process Activation Service)|Windows Vista, Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|예|
 
  신뢰할 수 없는 호스트에서 서비스나 확장을 실행하면 보안이 손상된다는 점에 주의해야 합니다. 또한 가장을 사용 하 여를 열 때 <xref:System.ServiceModel.ServiceHost> 응용 프로그램에서 사용자의를 캐싱하여 사용자가 로그 오프 되지 않았는지 확인 해야 합니다 <xref:System.Security.Principal.WindowsIdentity> .
 

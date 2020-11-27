@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: c609ec5e67ce3bb0605f543806085f893acba37c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2184a159423a611a8936e900591a480ce7ef6ec8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557530"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293808"
 ---
 # <a name="workflow-persistence"></a>워크플로 유지
+
 워크플로 지속성은 프로세스 또는 컴퓨터 정보에 독립적인 영구 워크플로 인스턴스 상태 캡처입니다. 이 작업은 시스템 오류가 발생한 경우에 워크플로 인스턴스에 대한 잘 알려진 복구 지점을 제공하거나, 현재 작업 중이 아닌 워크플로 인스턴스를 언로드하여 메모리를 보존하거나, 워크플로 인스턴스의 상태를 서버 팜의 한 노드에서 다른 노드로 이동하기 위해 수행합니다.  
   
  지속성은 프로세스의 신속성, 확장성, 오류 복구, 효율적인 메모리 관리를 가능하게 해줍니다. 지속성 프로세스는 유지 지점을 식별하고, 저장할 데이터를 수집하며, 마지막으로 지속성 공급자에게 실제 데이터 스토리지를 위임하는 과정으로 구성됩니다.  
@@ -26,13 +27,14 @@ ms.locfileid: "90557530"
  Windows Server AppFabric은 지속성의 구성 프로세스를 단순화합니다. 자세한 내용은 [Windows Server App Fabric의 지 속성 개념](/previous-versions/appfabric/ee677272(v=azure.10)) 을 참조 하세요.  
   
 ## <a name="implicit-persistence-points"></a>암시적 유지 지점  
+
  다음 목록에는 인스턴스 저장소가 워크플로에 연결되어 있을 때 워크플로가 유지되는 조건에 대한 예제가 포함되어 있습니다.  
   
 - **TransactionScope** 활동이 완료 되거나 **TransactedReceiveScope** 활동이 완료 될 때  
   
 - 워크플로 인스턴스가 유휴 상태가 되 고 워크플로 호스트에 **WorkflowIdleBehavior** 가 설정 된 경우 예를 들어 메시징 활동 또는 **지연** 활동을 사용 하는 경우이 오류가 발생 합니다.  
   
-- WorkflowApplication이 유휴 상태가 되 고 응용 프로그램의 **Persistableidle** 속성이 **PersistableIdleAction**로 설정 됩니다.  
+- WorkflowApplication이 유휴 상태가 되 고 응용 프로그램의 **Persistableidle** 속성이 **PersistableIdleAction** 로 설정 됩니다.  
   
 - 워크플로 인스턴스를 유지하거나 언로드하도록 호스트 애플리케이션에 지시할 경우  
   

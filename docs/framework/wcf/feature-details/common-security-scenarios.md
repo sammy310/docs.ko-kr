@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: cfd29f8cae8ac362a5fa1709864dce4ae11b5af6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 21c8279890d1d1cf746e98f875efb6b1ff869c73
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558890"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295082"
 ---
 # <a name="common-security-scenarios"></a>일반적인 보안 시나리오
+
 이 단원의 항목에서는 많은 수의 가능한 클라이언트 및 서비스 보안 구성을 카탈로그로 만듭니다. 구성은 요소 수에 따라 다릅니다. 예를 들어 서비스 또는 클라이언트가 인트라넷에 있는지, 보안이 Windows에서 제공되는지 아니면 HTTPS와 같은 전송에 의해 제공되는지에 따라 달라집니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [보안이 설정되지 않은 인터넷 클라이언트 및 서비스](internet-unsecured-client-and-service.md)  
  보안되지 않은 공용 클라이언트 및 서비스의 예입니다.  
   
@@ -58,9 +60,11 @@ ms.locfileid: "90558890"
  클라이언트는 네트워크에 분산되어 있는 하나 이상의 웹 서비스에 액세스합니다. 웹 서비스는 데이터베이스 또는 기타 웹 서비스와 같은 보안이 필요한 추가 리소스에 액세스합니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [권한 부여](authorization-in-wcf.md)  
   
  [보안 개요](security-overview.md)  
@@ -79,7 +83,7 @@ ms.locfileid: "90558890"
   
  [감사](auditing-security-events.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 지침 및 최선의 방법](security-guidance-and-best-practices.md)
 - [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))

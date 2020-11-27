@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 696e6a08f3f040fcc6f27d101cd6b7c8cc89a0d6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9c241c06f153e4f85c70459ff3c50889057103f5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556644"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295043"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>방법: ASP.NET 웹 서비스 클라이언트와 상호 운용하도록 WCF 서비스 구성
 
@@ -41,13 +41,14 @@ ASP.NET 웹 서비스 클라이언트와 상호 운용할 수 있도록 WCF (Win
 4. 서비스에 대해 HTTP/GET 메타데이터 엔드포인트를 사용합니다. 자세한 내용은 [방법: 구성 파일을 사용 하 여 서비스에 대 한 메타 데이터 게시](how-to-publish-metadata-for-a-service-using-a-configuration-file.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 예제 코드에서는 ASP.NET 웹 서비스 클라이언트와 호환 되는 WCF 끝점을 코드 또는 구성 파일에 추가 하는 방법을 보여 줍니다.  
   
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)]
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: 코드에서 서비스 엔드포인트 만들기](how-to-create-a-service-endpoint-in-code.md)
 - [방법: 코드를 사용하여 서비스에 대한 메타데이터 게시](how-to-publish-metadata-for-a-service-using-code.md)

@@ -2,14 +2,15 @@
 title: TcpConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 19acfba3-c057-4dbc-bac7-8674d7844d83
-ms.openlocfilehash: 6fa68eed241edaea40b66c31240a4201e05779f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de00cac851e4c6d0fd6df16f3a01b65bb5f43415
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956576"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294679"
 ---
 # <a name="tcpconnectionpoolsettings"></a>TcpConnectionPoolSettings
+
 TcpConnectionPoolSettings  
   
 ## <a name="syntax"></a>구문  
@@ -25,19 +26,23 @@ class TcpConnectionPoolSettings
 ```  
   
 ## <a name="methods"></a>메서드  
+
  TcpConnectionPoolSettings 클래스는 메서드를 정의하지 않습니다.  
   
 ## <a name="properties"></a>속성  
+
  TcpConnectionPoolSettings 클래스에는 다음과 같은 속성이 있습니다.  
   
 ### <a name="groupname"></a>GroupName  
- 데이터 형식: string  
+
+ 데이터 형식: 문자열  
   
  액세스 형식: 읽기 전용  
   
  바인딩 요소가 사용하는 연결 풀의 그룹 이름입니다.  
   
 ### <a name="idletimeout"></a>IdleTimeout  
+
  데이터 형식: datetime  
   
  액세스 형식: 읽기 전용  
@@ -45,6 +50,7 @@ class TcpConnectionPoolSettings
  연결이 끊어지기 전에 유휴 상태일 수 있는 최대 시간입니다.  
   
 ### <a name="leasetimeout"></a>LeaseTimeout  
+
  데이터 형식: datetime  
   
  액세스 형식: 읽기 전용  
@@ -52,6 +58,7 @@ class TcpConnectionPoolSettings
  제한 시간을 초과하기 전에 대여 작업을 완료하기 위한 최대 시간입니다.  
   
 ### <a name="maxoutboundconnectionsperendpoint"></a>MaxOutboundConnectionsPerEndpoint  
+
  데이터 형식: sint32  
   
  액세스 형식: 읽기 전용  
@@ -64,6 +71,6 @@ class TcpConnectionPoolSettings
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>

@@ -2,17 +2,19 @@
 title: 배포
 ms.date: 03/30/2017
 ms.assetid: 502c50b2-9982-46af-ac92-53ad9f61d486
-ms.openlocfilehash: 3387497a8392dd17576a3514a6459494e28eb874
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: df98ed9c722b46389690927818c62cadc5882b77
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575072"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293626"
 ---
 # <a name="syndication"></a>배포
+
 이 섹션에는 WCF (Windows Communication Foundation) 배포를 보여 주는 샘플이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [독립형 진단 피드](stand-alone-diagnostics-feed-sample.md)  
  WCF를 사용 하 여 배포 하기 위해 RSS/Atom 피드를 만드는 방법을 보여 줍니다.  
   

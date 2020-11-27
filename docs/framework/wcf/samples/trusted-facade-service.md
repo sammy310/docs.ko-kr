@@ -2,14 +2,15 @@
 title: 신뢰된 외관 서비스
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: e9459b4cc26ef85adcc59c308d92491fd2d3acba
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 80f139ace43d5f8d2136528681386711bea7a1e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544182"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295056"
 ---
 # <a name="trusted-facade-service"></a>신뢰된 외관 서비스
+
 이 시나리오 샘플에서는 WCF (Windows Communication Foundation) 보안 인프라를 사용 하 여 한 서비스에서 다른 서비스로 호출자의 id 정보를 전달 하는 방법을 보여 줍니다.  
   
  서비스에 의해 제공되는 기능을 외관 서비스를 사용하여 공용 네트워크에 노출하는 것은 일반적인 디자인 패턴입니다. 일반적으로 외관 서비스는 DMZ, 완충 지역 및 스크린된 서브넷이라고도 하는 경계 네트워크에 상주하며 비즈니스 논리를 구현하고 내부 데이터에 액세스할 수 있는 백 엔드 서비스와 통신합니다. 외관 서비스와 백 엔드 서비스 간의 통신 채널은 방화벽을 통과하며 일반적으로 단일 용도로만 제한됩니다.  
@@ -28,9 +29,11 @@ ms.locfileid: "90544182"
 > 백 엔드 서비스는 호출자를 인증하기 위해 외관 서비스를 신뢰합니다. 따라서 백 엔드 서비스는 호출자를 다시 인증하지 않으며 전달된 요청에서 외관 서비스에 의해 제공된 ID 정보를 사용합니다. 이 신뢰 관계 때문에 백 엔드 서비스는 전달된 메시지가 신뢰할 수 있는 소스(이 경우에는 외관 서비스)에서 제공되는지 확인하기 위해 외관 서비스를 인증해야 합니다.  
   
 ## <a name="implementation"></a>구현  
+
  이 샘플에는 두 개의 통신 경로가 있습니다. 첫 번째는 클라이언트와 외관 서비스 간의 경로이고 두 번째는 외관 서비스와 백 엔드 서비스 간의 경로입니다.  
   
 ### <a name="communication-path-between-client-and-faade-service"></a>클라이언트와 외관 서비스 간의 통신 경로  
+
  클라이언트에서 외관 서비스로의 통신 경로에는 `wsHttpBinding` 클라이언트 자격 증명 유형을 가진 `UserName` 이 사용됩니다. 이는 클라이언트가 외관 서비스에 대해 인증하기 위해 사용자 이름과 암호를 사용하고 외관 서비스가 클라이언트에 대해 인증하기 위해 X.509 인증서를 사용한다는 것을 의미합니다. 바인딩 구성은 다음 예제와 같습니다.  
   
 ```xml  
@@ -93,6 +96,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 ```  
   
 ### <a name="communication-path-between-faade-service-and-backend-service"></a>외관 서비스와 백 엔드 서비스 간의 통신 경로  
+
  외관 서비스에서 백 엔드 서비스로의 통신 경로는 여러 바인딩 요소로 구성된 `customBinding` 을 사용합니다. 이 바인딩은 두 가지 작업을 수행합니다. 이 바인딩은 통신이 보안되었는지, 그리고 신뢰할 수 있는 소스에서 제공되는지 확인하기 위해 외관 서비스와 백 엔드 서비스를 인증합니다. 또한 `Username` 보안 토큰 내에서 초기 호출자의 ID를 전송합니다. 이 경우 초기 호출자의 사용자 이름만 백 엔드 서비스에 전송되고 암호는 메시지에 포함되지 않습니다. 이는 백 엔드 서비스가 요청을 전달하기 전에 호출자를 인증하기 위해 외관 서비스를 신뢰하기 때문입니다. 외관 서비스가 백 엔드 서비스에 대해 자체 인증하므로 백 엔드 서비스는 전달된 요청에 포함된 정보를 신뢰할 수 있습니다.  
   
  이 통신 경로에 대한 바인딩 구성은 다음과 같습니다.  
@@ -212,6 +216,7 @@ public string GetCallerIdentity()
  외관 서비스 계정 정보는 `ServiceSecurityContext.Current.WindowsIdentity` 속성을 사용하여 추출됩니다. 초기 호출자에 대한 정보에 액세스하기 위해 백 엔드 서비스는 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 속성을 사용합니다. 이 속성은 `Identity` 형식을 가진 `Name`클레임을 찾습니다. 이 클레임은 보안 토큰에 포함 된 정보에서 WCF 보안 인프라에 의해 자동으로 생성 됩니다 `Username` .  
   
 ## <a name="running-the-sample"></a>샘플 실행  
+
  샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다. 클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다. 외관 및 백 엔드 서비스 콘솔 창에서 Enter 키를 눌러 서비스를 종료할 수 있습니다.  
   
 ```console  

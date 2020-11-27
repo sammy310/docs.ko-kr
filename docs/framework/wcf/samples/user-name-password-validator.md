@@ -2,14 +2,15 @@
 title: User Name Password Validator
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 4ad365061e6a0f3178650699febd6c18cdd14205
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bf20c9baaec44ebdfed351b35c54ab14448c7644
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553121"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294926"
 ---
 # <a name="user-name-password-validator"></a>User Name Password Validator
+
 이 샘플에서는 사용자 지정 UserNamePassword 유효성 검사기를 구현하는 방법을 보여 줍니다. 사용자 이름/암호 쌍이 데이터베이스 같은 외부 스토리지에 저장되어 있는 경우처럼 기본 제공되는 UserNamePassword 유효성 검사 모드가 애플리케이션 요구 사항에 맞지 않는 경우 유용합니다. 이 샘플에서는 두 개의 특정 사용자 이름/암호 쌍을 확인하는 사용자 지정 유효성 검사기가 있는 서비스를 보여 줍니다. 클라이언트에서는 이러한 사용자 이름/암호 쌍을 사용하여 서비스의 인증을 얻습니다.
 
 > [!IMPORTANT]
@@ -32,7 +33,7 @@ ms.locfileid: "90553121"
 
 - 서버의 X.509 인증서를 사용하여 서버를 인증하는 방법
 
- 서비스는 구성 파일 App.config를 사용 하 여 정의 된 서비스와 통신 하기 위한 단일 끝점을 노출 합니다. 끝점은 주소, 바인딩 및 계약으로 구성 됩니다. 바인딩은 `wsHttpBinding` 기본적으로 ws-security 및 사용자 이름 인증을 사용 하는 표준으로 구성 됩니다. 서비스 동작에서는 클라이언트 사용자 이름/암호 쌍의 유효성 검사를 위해 `Custom` 모드와 유효성 검사기 클래스 형식을 지정합니다. 동작에서는 `serviceCertificate` 요소를 사용하여 서버 인증서도 지정합니다. 서버 인증서에는의와 동일한 값이 포함 되어야 합니다 `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
+ 서비스는 구성 파일 App.config를 사용 하 여 정의 된 서비스와 통신 하기 위한 단일 끝점을 노출 합니다. 끝점은 주소, 바인딩 및 계약으로 구성 됩니다. 바인딩은 `wsHttpBinding` 기본적으로 WS-Security 및 사용자 이름 인증을 사용 하는 표준으로 구성 됩니다. 서비스 동작에서는 클라이언트 사용자 이름/암호 쌍의 유효성 검사를 위해 `Custom` 모드와 유효성 검사기 클래스 형식을 지정합니다. 동작에서는 `serviceCertificate` 요소를 사용하여 서버 인증서도 지정합니다. 서버 인증서에는의와 동일한 값이 포함 되어야 합니다 `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
 
 ```xml
 <system.serviceModel>
@@ -251,6 +252,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
  샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다. 클라이언트에서 모든 메서드를 성공적으로 호출할 수 있어야 합니다. 클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.
 
 ## <a name="setup-batch-file"></a>설치 배치 파일
+
  이 샘플에 포함된 Setup.bat 배치 파일을 사용하면 서버 인증서 기반 보안이 필요한 자체 호스팅 애플리케이션을 실행하도록 관련 인증서가 있는 서버를 구성할 수 있습니다. 다중 컴퓨터 구성이나 자체 호스팅되지 않은 환경에서 이 배치 파일을 사용하려면 배치 파일을 수정해야 합니다.
 
  아래에는 적절한 구성에서 실행할 수 있도록 배치 파일을 수정하는 데 도움이 되는 여러 관련 단원의 간략한 개요가 소개되어 있습니다.

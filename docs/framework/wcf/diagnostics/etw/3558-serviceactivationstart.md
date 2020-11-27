@@ -2,27 +2,30 @@
 title: 3558 - ServiceActivationStart
 ms.date: 03/30/2017
 ms.assetid: 9062c6f4-2252-460c-ad29-f8effa72fcd1
-ms.openlocfilehash: cc6a27eddff409eeddb21689525bc7a4cb3d0ebf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21f3b7b60cf7c86cb8ee859ee753f38d99feaa84
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696082"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294471"
 ---
 # <a name="3558---serviceactivationstart"></a>3558 - ServiceActivationStart
+
 ## <a name="properties"></a>속성  
   
 |||  
 |-|-|  
 |ID|3558|  
 |키워드|WebHost|  
-|수준|정보|  
+|Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
+
  이 이벤트는 서비스 활성화 시작 시에 내보내집니다.  
   
 ## <a name="message"></a>메시지  
+
  서비스 활성화 시작  
   
-## <a name="details"></a>설명
+## <a name="details"></a>세부 정보

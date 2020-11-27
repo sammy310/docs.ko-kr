@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 25446a89a0b5657d32d77e2d0d57f58f36bed71b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b6f5cd7217b447256f19891c2624fba857735107
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245546"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294874"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF 클라이언트를 사용하여 서비스 액세스
 
@@ -27,9 +27,10 @@ ms.locfileid: "85245546"
 
 3. WCF 클라이언트 프록시를 인스턴스화합니다.
 
-WCF 클라이언트 프록시는 서비스 모델 메타 데이터 유틸리티 도구 (SvcUtil.exe)를 사용 하 여 수동으로 생성할 수 있습니다. 자세한 내용은 [ServiceModel Metadata Utility tool (Svcutil.exe) (영문)](servicemodel-metadata-utility-tool-svcutil-exe.md)을 참조 하십시오. WCF 클라이언트 프록시는 **서비스 참조 추가** 기능을 사용 하 여 Visual Studio 내에서 생성할 수도 있습니다. 어떤 방법으로 WCF 클라이언트 프록시를 생성하더라도 서비스가 실행되고 있어야 합니다. 자체 호스팅 서비스의 경우 호스트를 실행해야 합니다. 서비스가 IIS/WAS에서 호스트되는 경우에는 별도의 작업이 필요하지 않습니다.
+WCF 클라이언트 프록시는 서비스 모델 메타 데이터 유틸리티 도구 (SvcUtil.exe)를 사용 하 여 수동으로 생성할 수 있습니다. 자세한 내용은 [ServiceModel Metadata Utility tool (Svcutil.exe) (영문)](servicemodel-metadata-utility-tool-svcutil-exe.md)을 참조 하십시오. WCF 클라이언트 프록시는 **서비스 참조 추가**  기능을 사용 하 여 Visual Studio 내에서 생성할 수도 있습니다. 어떤 방법으로 WCF 클라이언트 프록시를 생성하더라도 서비스가 실행되고 있어야 합니다. 자체 호스팅 서비스의 경우 호스트를 실행해야 합니다. 서비스가 IIS/WAS에서 호스트되는 경우에는 별도의 작업이 필요하지 않습니다.
 
 ## <a name="servicemodel-metadata-utility-tool"></a>ServiceModel Metadata 유틸리티 도구
+
  [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 는 메타 데이터에서 코드를 생성 하는 명령줄 도구입니다. 다음 사용은 기본 Svcutil.exe 명령 예제입니다.
 
 ```console
@@ -57,9 +58,10 @@ Svcutil.exe <file1 [,file2]>
 
 ## <a name="add-service-reference-in-visual-studio"></a>Visual Studio의 서비스 참조 추가
 
- 서비스를 실행 하는 동안 WCF 클라이언트 프록시를 포함할 프로젝트를 마우스 오른쪽 단추로 클릭 하 **Add**고  >  **서비스 참조**추가를 선택 합니다. **서비스 참조 추가 대화 상자**에서 호출 하려는 서비스에 대 한 URL을 입력 하 고 **이동** 단추를 클릭 합니다. 대화 상자에 지정한 주소에서 사용할 수 있는 서비스 목록이 표시됩니다. 서비스를 두 번 클릭 하 여 사용할 수 있는 계약 및 작업을 확인 하 고 생성 된 코드의 네임 스페이스를 지정한 다음 **확인** 단추를 클릭 합니다.
+ 서비스를 실행 하는 동안 WCF 클라이언트 프록시를 포함할 프로젝트를 마우스 오른쪽 단추로 클릭 하 **Add** 고  >  **서비스 참조** 추가를 선택 합니다. **서비스 참조 추가 대화 상자** 에서 호출 하려는 서비스에 대 한 URL을 입력 하 고 **이동** 단추를 클릭 합니다. 대화 상자에 지정한 주소에서 사용할 수 있는 서비스 목록이 표시됩니다. 서비스를 두 번 클릭 하 여 사용할 수 있는 계약 및 작업을 확인 하 고 생성 된 코드의 네임 스페이스를 지정한 다음 **확인** 단추를 클릭 합니다.
 
 ## <a name="example"></a>예제
+
  다음 코드 예제에서는 서비스에 대해 만들어진 서비스 계약을 보여 줍니다.
 
 ```csharp
@@ -151,6 +153,7 @@ End Class
 ```
 
 ## <a name="using-the-wcf-client"></a>WCF 클라이언트 사용
+
  WCF 클라이언트를 사용 하려면 다음 코드에 표시 된 것 처럼 WCF 클라이언트의 인스턴스를 만들고 해당 메서드를 호출 합니다.
 
 ```csharp

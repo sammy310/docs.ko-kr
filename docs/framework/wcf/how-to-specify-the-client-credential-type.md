@@ -8,14 +8,15 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: df18f89ee18bfa33ecc0aced617d168c805e3515
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: b45d7b58d8a1fe79f9d7a8cff6e328b46633985c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138571"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293678"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>방법: 클라이언트 자격 증명 형식 지정
+
 전송 또는 메시지 보안 모드를 설정한 후에는 클라이언트 자격 증명 형식을 설정할 수 있습니다. 이 속성은 인증을 위한 서비스에 제공해야 할 자격 증명 유형을 지정합니다. 보안 모드를 설정 하는 방법에 대 한 자세한 내용은 (클라이언트 자격 증명 형식을 설정 하는 데 필요한 단계) [방법: 보안 모드 설정](how-to-set-the-security-mode.md)을 참조 하세요.  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>클라이언트 자격 증명 형식을 코드로 설정하려면  
@@ -31,17 +32,17 @@ ms.locfileid: "74138571"
   
 ### <a name="to-set-the-client-credential-type-in-configuration"></a>클라이언트 자격 증명 형식을 구성에 설정하려면  
   
-1. [\<system.servicemodel >](../configure-apps/file-schema/wcf/system-servicemodel.md) 요소를 구성 파일에 추가 합니다.  
+1. [\<system.serviceModel>](../configure-apps/file-schema/wcf/system-servicemodel.md)구성 파일에 요소를 추가 합니다.  
   
-2. 자식 요소로 [\<바인딩 >](../configure-apps/file-schema/wcf/bindings.md) 요소를 추가 합니다.  
+2. 요소를 자식 요소로 추가 [\<bindings>](../configure-apps/file-schema/wcf/bindings.md) 합니다.  
   
-3. 적절한 바인딩을 추가합니다. 이 예제에서는 [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) 요소를 사용 합니다.  
+3. 적절한 바인딩을 추가합니다. 이 예제에서는 요소를 사용 [\<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md) 합니다.  
   
-4. [\<binding >](../configure-apps/file-schema/wcf/bindings.md) 요소를 추가 하 고 `name` 특성을 적절 한 값으로 설정 합니다. 이 예제에서는 "SecureBinding"을 이름으로 사용합니다.  
+4. 요소를 추가 [\<binding>](../configure-apps/file-schema/wcf/bindings.md) 하 고 `name` 특성을 적절 한 값으로 설정 합니다. 이 예제에서는 "SecureBinding"을 이름으로 사용합니다.  
   
 5. `<security>` 바인딩을 추가합니다. `mode` 특성을 적절한 값으로 설정합니다. 이 예제에서는 `"Message"`로 설정합니다.  
   
-6. 보안 모드의 결정에 따라 `<message>` 또는 `<transport>` 요소를 추가합니다. `clientCredentialType` 특성을 적절한 값으로 설정합니다. 이 예제에서는 `"Windows"`를 사용합니다.  
+6. 보안 모드의 결정에 따라 `<message>` 또는 `<transport>` 요소를 추가합니다. `clientCredentialType` 특성을 적절한 값으로 설정합니다. 이 예에서는 `"Windows"`를 사용합니다.  
   
     ```xml  
     <system.serviceModel>  
@@ -57,7 +58,7 @@ ms.locfileid: "74138571"
     </system.serviceModel>  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [서비스에 보안 설정](securing-services.md)
 - [방법: 보안 모드 설정](how-to-set-the-security-mode.md)

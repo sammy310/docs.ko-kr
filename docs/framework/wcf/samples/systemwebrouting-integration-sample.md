@@ -2,14 +2,15 @@
 title: SystemWebRouting Integration 샘플
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 58d720f164c4c35f3de4c282e9aa983d11e4040b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 04c3093097c5bf11e1d4dd5d3124c9fbae4b3665
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555226"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293912"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting Integration 샘플
+
 이 샘플에서는 호스팅 계층과 <xref:System.Web.Routing> 네임스페이스에 있는 클래스의 통합을 보여 줍니다. <xref:System.Web.Routing> 네임스페이스의 클래스를 사용하면 애플리케이션에서 실제 리소스에 직접적으로 해당하지 않는 URL을 사용할 수 있습니다. 개발자는 웹 라우팅을 사용 하 여 HTTP에 대 한 가상 주소를 만든 다음 실제 WCF 서비스에 다시 매핑할 수 있습니다. 이렇게 하면 실제 파일 또는 리소스 없이 WCF 서비스를 호스트해야 하거나 .html 또는 .aspx와 같은 파일 확장명이 포함되지 않은 URL을 사용하여 서비스에 액세스해야 하는 경우에 유용합니다. 이 샘플에서는 <xref:System.Web.Routing.RouteTable> 클래스를 사용하여 global.asax에 정의된 실행 중인 서비스에 매핑되는 가상 URI를 만드는 방법을 보여 줍니다.
 
 > [!NOTE]
@@ -48,7 +49,7 @@ ms.locfileid: "90555226"
   
 5. Alt+F4를 눌러 웹 브라우저를 닫습니다.  
   
-     개발 서버가 종료 되지 않은 경우 알림 영역 아이콘을 마우스 오른쪽 단추로 클릭 하 고 **중지**를 선택 합니다.  
+     개발 서버가 종료 되지 않은 경우 알림 영역 아이콘을 마우스 오른쪽 단추로 클릭 하 고 **중지** 를 선택 합니다.  
   
 #### <a name="to-use-this-sample-when-hosted-in-iis"></a>IIS에서 호스트될 때 이 샘플을 사용하려면  
   
@@ -58,15 +59,15 @@ ms.locfileid: "90555226"
   
 3. IIS(인터넷 정보 서비스) 관리자에서 웹 애플리케이션을 만듭니다.  
   
-    1. IIS 관리자에서 **기본 웹 사이트** 를 마우스 오른쪽 단추로 클릭 하 고 **응용 프로그램 추가**를 선택 합니다.  
+    1. IIS 관리자에서 **기본 웹 사이트** 를 마우스 오른쪽 단추로 클릭 하 고 **응용 프로그램 추가** 를 선택 합니다.  
   
-    2. **별칭**에 대해를 입력 `WebRoutingIntegration` 합니다.  
+    2. **별칭** 에 대해를 입력 `WebRoutingIntegration` 합니다.  
   
-    3. **실제 경로**의 경우 프로젝트 내에서 서비스 폴더를 선택 합니다.  
+    3. **실제 경로** 의 경우 프로젝트 내에서 서비스 폴더를 선택 합니다.  
   
-    4. **확인**을 누릅니다.  
+    4. **확인** 을 누릅니다.  
   
-4. 웹 응용 프로그램을 마우스 오른쪽 단추로 클릭 하 고 **응용 프로그램 관리** 를 선택한 다음 **찾아보기**를 선택 하 여 응용 프로그램을 시작 합니다.  
+4. 웹 응용 프로그램을 마우스 오른쪽 단추로 클릭 하 고 **응용 프로그램 관리** 를 선택한 다음 **찾아보기** 를 선택 하 여 응용 프로그램을 시작 합니다.  
   
 5. 주소 표시줄에서을 (를) `movies` 읽도록 URL에를 추가 하 `http://localhost:[port]/movies` 고 enter 키를 누릅니다.  
   
@@ -83,6 +84,6 @@ ms.locfileid: "90555226"
 > [!NOTE]
 > 버전 2로 설정 된 경우 기본 응용 프로그램 풀 버전을 .NET Framework 4로 업데이트 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 호스팅 및 지속성 샘플](/previous-versions/appfabric/ff383418(v=azure.10))

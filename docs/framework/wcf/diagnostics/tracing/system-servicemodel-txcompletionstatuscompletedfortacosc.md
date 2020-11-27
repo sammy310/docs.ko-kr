@@ -2,17 +2,19 @@
 title: System.ServiceModel.TxCompletionStatusCompletedForTACOSC
 ms.date: 03/30/2017
 ms.assetid: 089b982d-63a1-4ef2-8ef2-ad83758c9ec4
-ms.openlocfilehash: 55312a39768e4297e4f67b7075aeb176a47ef5b7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9a763e08ad582edea019f926a84db1a907192db1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601428"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295342"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedfortacosc"></a>System.ServiceModel.TxCompletionStatusCompletedForTACOSC
+
 세션이 닫혔을 때 특정 트랜잭션이 완료되었습니다.  
   
 ## <a name="description"></a>Description  
+
  현재 활성 세션이 닫히고 `TransactionAutoCompleteOnSessionClose`가 `true`로 설정된 경우에 추적됩니다.  
   
 ## <a name="see-also"></a>참고 항목

@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: b96a32f5e11ed4808f8f35d02802afd1f48c3072
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2a8c186c839be5008bbc5315c7c9fae638680714
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601324"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293925"
 ---
 # <a name="data-contract-equivalence"></a>데이터 계약 동등성
+
 클라이언트가 서비스에 특정 형식의 데이터를 성공적으로 보내거나, 서비스에서 클라이언트에 데이터를 성공적으로 보내기 위해, 보낸 형식이 받는 측에 반드시 있어야 하는 것은 아닙니다. 두 형식의 데이터 계약이 일치하기만 하면 됩니다. ( [데이터 계약 버전 관리](data-contract-versioning.md)에 설명 된 대로 엄격한 동등성이 필요 하지 않은 경우도 있습니다.)  
   
  데이터 계약이 서로 같으려면 네임스페이스와 이름이 같아야 합니다. 또한 한 쪽의 각 데이터 멤버에 해당하는 데이터 멤버가 다른 쪽에 있어야 합니다.  
@@ -34,6 +35,7 @@ ms.locfileid: "84601324"
  [!code-vb[C_DataContractNames#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#5)]  
   
 ## <a name="data-member-order-and-data-contract-equivalence"></a>데이터 멤버 주문 및 데이터 계약 동등성  
+
  <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 클래스의 <xref:System.Runtime.Serialization.DataMemberAttribute> 속성을 사용하여 데이터 계약 동등성에 영향을 줄 수 있습니다. 데이터 계약이 서로 동등하려면 멤버가 동일한 순서로 표시되어야 합니다. 기본 순서는 사전순입니다. 자세한 내용은 [데이터 멤버 순서](data-member-order.md)를 참조 하세요.  
   
  예를 들어, 다음 코드는 동등한 데이터 계약을 생성합니다.  
@@ -47,6 +49,7 @@ ms.locfileid: "84601324"
  [!code-vb[C_DataContractNames#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#7)]  
   
 ## <a name="inheritance-interfaces-and-data-contract-equivalence"></a>상속, 인터페이스 및 데이터 계약 동등성  
+
  동등성을 결정할 때 다른 데이터 계약으로부터 상속되는 데이터 계약은 기본 형식의 모든 데이터 멤버를 포함하는 데이터 계약처럼 처리됩니다. 데이터 멤버의 순서가 일치해야 하고, 기본 형식 멤버가 파생된 형식 멤버보다 앞에 와야 합니다. 또한 다음 코드 예제에서처럼 두 데이터 멤버의 순서 값이 동일한 경우 해당 데이터 멤버의 순서는 사전순으로 지정됩니다. 자세한 내용은 [데이터 멤버 순서](data-member-order.md)를 참조 하세요.  
   
  다음 예제에서 `Employee` 형식 데이터 계약은 `Worker` 형식 데이터 계약과 동등합니다.  

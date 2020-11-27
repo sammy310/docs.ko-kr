@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Workflow, compilation
 - Workflow, XOML files
 - Workflow, wcf
-ms.openlocfilehash: cf89962014584adf098118044b063b38b29160b7
-ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+ms.openlocfilehash: 01cbfeb72e19f727a3a470059047a2192228c394
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91844613"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293860"
 ---
 # <a name="wfcexe-workflow-command-line-compiler-tool"></a>wfc.exe (워크플로 명령줄 컴파일러 도구)
+
 > [!NOTE]
 > 이 자료에서는 더 이상 사용되지 않는 형식과 네임스페이스에 대해 설명합니다.
 
@@ -95,6 +96,7 @@ wfc.exe 워크플로 명령줄 컴파일러 도구는 파일 확장명이 *xoml*
 ```
 
 ## <a name="remarks"></a>설명
+
 > [!NOTE]
 > 이 자료에서는 더 이상 사용되지 않는 형식과 네임스페이스에 대해 설명합니다.
 

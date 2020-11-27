@@ -5,17 +5,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: c672827fff780fd263f5355520bb6ccf02bb902e
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: f958bd06f617a5648b31332ebe9e7662d45cd241
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245533"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294848"
 ---
 # <a name="basic-programming-lifecycle"></a>기본 프로그래밍 수명 주기
+
 WCF (Windows Communication Foundation)를 사용 하면 응용 프로그램이 동일한 컴퓨터, 인터넷 또는 다른 응용 프로그램 플랫폼에 있든 간에 통신할 수 있습니다. 이 항목에서는 WCF 응용 프로그램을 빌드하는 데 필요한 작업에 대해 간략하게 설명 합니다. 작동 하는 샘플 응용 프로그램은 [시작 자습서](getting-started-tutorial.md)를 참조 하세요.  
   
 ## <a name="the-basic-tasks"></a>기본 작업  
+
  수행할 기본 작업 순서는 다음과 같습니다.  
   
 1. 서비스 계약을 정의합니다. 서비스 계약은 서비스 서명, 서비스 교환 날짜 및 계약에 필요한 기타 데이터를 지정합니다. 자세한 내용은 [서비스 계약 디자인](designing-service-contracts.md)을 참조 하세요.  

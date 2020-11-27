@@ -2,14 +2,15 @@
 title: '방법: 검색 프록시 테스트'
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
-ms.openlocfilehash: 78921d0a26f1116c87c2931b1472a161d6fed145
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b08e8561ceff9f0a427a9ea9acb2309772579853
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592816"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294666"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>방법: 검색 프록시 테스트
+
 이 항목은 검색 프록시를 구현하는 방법에 대해 설명하는 네 항목 중 네 번째 항목입니다. 이전 항목인 [방법: 검색 프록시를 사용 하 여 서비스를 찾는 클라이언트 응용 프로그램 구현](client-app-discovery-proxy-to-find-a-service.md)에서는 검색 프록시를 사용 하 여 서비스를 찾은 다음 서비스를 호출 하는 WCF 클라이언트 응용 프로그램을 구현 했습니다. 이 항목에서는 검색 프록시, 서비스 및 클라이언트 애플리케이션이 올바로 작동하는지 확인하는 방법에 대해 설명합니다.  
   
 ### <a name="run-the-discovery-proxy"></a>검색 프록시 실행  
@@ -28,7 +29,7 @@ ms.locfileid: "84592816"
   
 2. 명령 프롬프트 내에서 검색 가능한 서비스인 Service.exe를 실행합니다.  
   
-3. DiscoveryProxy는 다음과 같은 텍스트를 표시 해야 합니다. `******* Adding the following service: ** [Service Contract Name] ** [Service Endpoint Addr] 3.******* Done *******`  
+3. DiscoveryProxy.exe에 다음 텍스트가 표시 됩니다 `******* Adding the following service: ** [Service Contract Name] ** [Service Endpoint Addr] 3.******* Done *******` ..  
   
 ### <a name="run-the-client-application"></a>클라이언트 애플리케이션 실행  
   

@@ -2,18 +2,19 @@
 title: 이식 가능한 하위 집합 프로젝트에 서비스 참조 추가
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: e9a0d3fbc75a8c64af892f74acedfc41dc115da3
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: f81a596c5573405bec9389347c45ff6cb6b30fc9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687711"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294861"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>이식 가능한 하위 집합 프로젝트에 서비스 참조 추가
 
 이식 가능한 하위 집합 프로젝트를 사용 하면 .NET 어셈블리 프로그래머는 여러 .NET 구현 (데스크톱, Silverlight, Windows Phone 및 Xbox)을 계속 지원 하면서 단일 소스 트리 및 빌드 시스템을 유지 관리할 수 있습니다. 이식 가능한 하위 집합 프로젝트는 .NET 구현에서 사용할 수 있는 .NET 어셈블리인 이식 가능한 라이브러리만 참조 합니다.
   
 ## <a name="add-service-reference-details"></a>서비스 참조 추가 정보  
+
  이식 가능한 하위 집합 프로젝트에 서비스 참조를 추가할 경우 다음 제한이 적용됩니다.  
   
 1. <xref:System.Xml.Serialization.XmlSerializer>의 경우 리터럴 인코딩만 허용됩니다. SOAP 인코딩은 가져오기 중 오류를 발생시킵니다.  

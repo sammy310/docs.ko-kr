@@ -2,14 +2,15 @@
 title: UriTemplate 샘플
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
-ms.openlocfilehash: fb956882ae653f584026fefb20e261c90010ca9b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55999167d99069a4b207f4deda42f48bf02e1bdd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591061"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294965"
 ---
 # <a name="uritemplate-sample"></a>UriTemplate 샘플
+
 <xref:System.UriTemplate> 클래스에서는 공통의 구조를 공유하는 URI 집합으로 작업하는 데 사용되는 메서드를 제공합니다. 이 샘플에서는 `UriTemplate`와 관련된 다음 핵심 개념을 보여 줍니다.  
   
 - 템플릿 만들기용 구문.  

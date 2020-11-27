@@ -2,14 +2,15 @@
 title: 래핑되지 않은 메시지
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: ea90a6355f63d5fffd0cc3c5d350f83e395c31c5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: edecbc953cd3ade6135b4c76725e65d317d83132
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591087"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294982"
 ---
 # <a name="unwrapped-messages"></a>래핑되지 않은 메시지
+
 이 샘플에서는 래핑되지 않은 메시지를 보여 줍니다. 기본적으로 메시지 본문은 서비스 작업 매개 변수가 래핑되도록 서식이 지정됩니다. 다음 샘플에서는 `Add` 서비스에 `ICalculator` 요청 메시지를 래핑된 모드로 표시합니다.  
   
 ```xml  
@@ -90,7 +91,7 @@ public class ResponseMessage
   
  메시지를 보내고 받는 상황을 볼 수 있도록 이 샘플에서는 추적을 사용합니다. 또한 <xref:System.ServiceModel.WSHttpBinding>은 기록하는 메시지의 수를 줄이기 위해 보안 없이 구성되었습니다.  
   
- [서비스 추적 뷰어 도구 (svctraceviewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)를 사용 하 여 결과 추적 로그 (c:\logs\Message.log)를 볼 수 있습니다. 메시지 내용을 보려면 서비스 추적 뷰어 도구의 왼쪽 창과 오른쪽 창 모두에서 **메시지** 를 선택 합니다. 이 샘플에서 추적 로그는 C:\LOGS 폴더에 생성되도록 구성됩니다. 샘플을 실행하기 전에 이 폴더를 만들고 사용자에게 이 디렉터리에 대한 네트워크 서비스 쓰기 권한을 부여해야 합니다.  
+ C:\logs\Message.log ( [서비스 추적 뷰어 SvcTraceViewer.exe 도구)](../service-trace-viewer-tool-svctraceviewer-exe.md)를 사용 하 여 결과 추적 로그 ()를 볼 수 있습니다. 메시지 내용을 보려면 서비스 추적 뷰어 도구의 왼쪽 창과 오른쪽 창 모두에서 **메시지** 를 선택 합니다. 이 샘플에서 추적 로그는 C:\LOGS 폴더에 생성되도록 구성됩니다. 샘플을 실행하기 전에 이 폴더를 만들고 사용자에게 이 디렉터리에 대한 네트워크 서비스 쓰기 권한을 부여해야 합니다.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
