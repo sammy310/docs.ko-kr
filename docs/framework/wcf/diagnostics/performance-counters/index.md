@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 7c8a134039526abf046136ac383fbaff3a5abbfe
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a5b00980cb8c2b06b224630e766e49bafe343c76
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541215"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266105"
 ---
 # <a name="wcf-performance-counters"></a>WCF 성능 카운터
+
 WCF (Windows Communication Foundation)는 응용 프로그램의 성능을 측정 하는 데 도움이 되는 다양 한 성능 카운터 집합을 포함 합니다.  
   
 ## <a name="enabling-performance-counters"></a>성능 카운터 사용  
+
  다음과 같이 WCF 서비스의 app.config 구성 파일을 통해 WCF 서비스에 대 한 성능 카운터를 사용 하도록 설정할 수 있습니다.  
   
 ```xml  
@@ -51,12 +53,14 @@ config.Save();
 ```  
   
 ## <a name="viewing-performance-data"></a>성능 데이터 보기  
- 성능 카운터에서 캡처한 데이터를 보려면 Windows와 함께 제공된 성능 모니터(Perfmon.exe)를 사용할 수 있습니다. **시작**으로 이동 하 고 **실행** 을 클릭 한 다음 대화 상자에를 입력 하 여이 도구를 시작할 수 있습니다 `perfmon.exe` .  
+
+ 성능 카운터에서 캡처한 데이터를 보려면 Windows와 함께 제공된 성능 모니터(Perfmon.exe)를 사용할 수 있습니다. **시작** 으로 이동 하 고 **실행** 을 클릭 한 다음 대화 상자에를 입력 하 여이 도구를 시작할 수 있습니다 `perfmon.exe` .  
   
 > [!NOTE]
 > 엔드포인트 디스패처가 마지막 메시지를 처리하기 이전에 성능 카운터 인스턴스가 해제될 수 있습니다. 그러면 일부 메시지에 대한 성능 데이터가 캡처되지 않습니다.  
   
 ## <a name="increasing-memory-size-for-performance-counters"></a>성능 카운터에 대한 메모리 크기 늘리기  
+
  WCF는 성능 카운터 범주에 대해 별도의 공유 메모리를 사용 합니다.  
   
  기본적으로 별도의 공유 메모리는 전역 성능 카운터 메모리 크기의 1/4로 설정됩니다. 기본 전역 성능 카운터 메모리는 524,288바이트입니다. 따라서 세 가지 WCF 성능 카운터 범주의 기본 크기는 각각 약 128KB입니다. 컴퓨터에 있는 WCF 응용 프로그램의 런타임 특성에 따라 성능 카운터 메모리가 고갈 될 수 있습니다. 이 경우 WCF는 응용 프로그램 이벤트 로그에 오류를 기록 합니다. 오류 내용에는 성능 카운터가 로드되지 않았다는 설명이 표시되며, "System.InvalidOperationException: 사용자 지정 카운터 파일 뷰 메모리가 부족합니다."라는 예외가 항목에 포함됩니다. 오류 수준에서 추적 기능을 사용하도록 설정하면 이 오류도 추적됩니다. 성능 카운터 메모리가 모두 사용 되 면 성능 카운터를 사용 하는 WCF 응용 프로그램을 계속 실행 하면 성능이 저하 될 수 있습니다. 컴퓨터 관리자는 언제든지 최대 성능 카운터 수를 지원하는 데 충분한 메모리를 할당하도록 컴퓨터를 구성해야 합니다.  
@@ -72,6 +76,7 @@ config.Save();
  많은 수의 개체(예: ServiceHost)를 삭제할 때 가비지가 수집되기를 대기 중인 경우 `PrivateBytes` 성능 카운터는 매우 높은 수를 등록합니다. 이 문제를 해결하려면 애플리케이션 관련 카운터를 추가하거나 `performanceCounters` 특성을 사용하여 서비스 수준 카운터만 활성화할 수 있습니다.  
   
 ## <a name="types-of-performance-counters"></a>성능 카운터 형식  
+
  성능 카운터의 범위는 서비스, 엔드포인트 및 작업의 세 가지 수준입니다.  
   
  WMI를 사용하여 성능 카운터 인스턴스의 이름을 검색할 수 있습니다. 예를 들면 다음과 같습니다.  
@@ -85,6 +90,7 @@ config.Save();
  WMI에 대 한 자세한 내용은 [진단에 WMI(Windows Management Instrumentation) 사용](../wmi/index.md)을 참조 하세요.  
   
 ### <a name="service-performance-counters"></a>서비스 성능 카운터  
+
  서비스 성능 카운터는 서비스 동작을 전반적으로 측정하며 전체 서비스 성능을 진단하는 데 사용할 수 있습니다. 이러한 카운터는 성능 모니터에서 볼 때 `ServiceModelService 4.0.0.0` 성능 개체 아래에 있습니다. 인스턴스 이름은 다음 패턴으로 지정됩니다.  
   
 `ServiceName@ServiceBaseAddress`
@@ -94,6 +100,7 @@ config.Save();
  새 InstanceContext가 만들어지면 서비스 인스턴스 만들기에 대한 성능 카운터가 증가합니다. 기존 서비스에서 활성화 상태가 아닌 메시지를 받거나, 한 세션에서 인스턴스에 연결하고 세션을 끝낸 다음 다른 세션에서 다시 연결하는 경우에도 새 InstanceContext가 만들어집니다.  
   
 ### <a name="endpoint-performance-counters"></a>엔드포인트 성능 카운터  
+
  엔드포인트 성능 카운터를 사용하면 엔드포인트가 메시지를 수신하는 방식을 나타내는 데이터를 조사할 수 있습니다. 이러한 카운터는 성능 모니터를 사용하여 볼 때 `ServiceModelEndpoint 4.0.0.0` 성능 개체 아래에 있습니다. 인스턴스 이름은 다음 패턴으로 지정됩니다.  
   
 `(ServiceName).(ContractName)@(endpoint listener address)`
@@ -106,6 +113,7 @@ config.Save();
 > 두 엔드포인트의 계약 이름과 주소가 동일한 경우 두 엔드포인트는 동일한 카운터 인스턴스에 매핑됩니다.  
   
 ### <a name="operation-performance-counters"></a>작업 성능 카운터  
+
  작업 성능 카운터는 성능 모니터에서 볼 때 `ServiceModelOperation 4.0.0.0` 성능 개체 아래에 있습니다. 각 작업에는 개별 인스턴스가 있습니다. 즉, 지정된 계약에 10개의 작업이 있는 경우 10개의 작업 카운터 인스턴스가 해당 계약에 연결되어 있습니다. 개체 인스턴스 이름은 다음 패턴으로 지정됩니다.  
   
 `(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)`
@@ -129,6 +137,6 @@ WCF 성능 카운터에 프로그래밍 방식으로 액세스할 수 있도록 
   
 프로그래밍 방식으로 카운터에 액세스 하는 방법에 대 한 자세한 내용은 [성능 카운터 프로그래밍 아키텍처](/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90))를 참조 하세요.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [관리 및 진단](../index.md)

@@ -2,12 +2,12 @@
 title: 엔터프라이즈 서비스 트랜잭션 구성 요소 통합
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 3fd8876de53be30f18e4fa9d7f4a1cc07ab5e220
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d235806ba94d68cadca91a17361bfd5bab1e1332
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554106"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265871"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>엔터프라이즈 서비스 트랜잭션 구성 요소 통합
 
@@ -16,6 +16,7 @@ WCF (Windows Communication Foundation)는 엔터프라이즈 서비스와 통합
  들어오는 흐름의 트랜잭션과 COM+ 컨텍스트 트랜잭션 간에 필요한 수준의 상호 운용성을 제공하려면 서비스 구현에서 <xref:System.Transactions.TransactionScope> 인스턴스를 만들고 적절한 <xref:System.Transactions.EnterpriseServicesInteropOption> 열거형 값을 사용해야 합니다.  
   
 ## <a name="integrating-enterprise-services-with-a-service-operation"></a>엔터프라이즈 서비스와 서비스 작업 통합  
+
  다음 코드에서는 <xref:System.Transactions.TransactionScope> 옵션으로 <xref:System.Transactions.EnterpriseServicesInteropOption.Full>을 만드는 트랜잭션 흐름이 Allowed인 작업을 보여 줍니다. 이 시나리오에는 다음 조건이 적용됩니다.  
   
 - 클라이언트에서 트랜잭션을 이동하면 엔터프라이즈 서비스 구성 요소 호출을 비롯한 작업이 해당 트랜잭션 범위 내에서 실행됩니다. <xref:System.Transactions.EnterpriseServicesInteropOption.Full>을 사용하면 트랜잭션이 <xref:System.EnterpriseServices> 컨텍스트와 동기화되어 <xref:System.Transactions>에 대한 앰비언트 트랜잭션과 <xref:System.EnterpriseServices>가 같게 됩니다.  
@@ -63,6 +64,7 @@ public class CustomerService : ICustomerServiceContract
  작업의 현재 트랜잭션과 트랜잭션 엔터프라이즈 서비스 구성 요소 호출 간에 동기화가 필요하지 않을 때에는 <xref:System.Transactions.EnterpriseServicesInteropOption.None> 인스턴스를 인스턴스화할 때 <xref:System.Transactions.TransactionScope> 옵션을 사용합니다.  
   
 ## <a name="integrating-enterprise-services-with-a-client"></a>엔터프라이즈 서비스와 클라이언트 통합  
+
  다음 코드에서는  설정 상태인 인스턴스를 사용하는 클라이언트 코드를 보여줍니다. 이 시나리오에서 트랜잭션 흐름을 지원하는 서비스 작업에 대한 호출은 엔터프라이즈 서비스 구성 요소 호출과 동일한 트랜잭션 범위 내에서 발생합니다.  
   
 ```csharp
@@ -93,7 +95,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [COM + 응용 프로그램과 통합](integrating-with-com-plus-applications.md)
 - [COM 애플리케이션과 통합](integrating-with-com-applications.md)
