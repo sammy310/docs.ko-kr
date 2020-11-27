@@ -2,20 +2,23 @@
 title: Workflow Discovery 샘플
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
-ms.openlocfilehash: 1c6210472b594aec02bdf47f472a1a8b1823230c
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 44d1fed74782051a926ced95c49f3e3cb14f2b9e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202067"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263804"
 ---
 # <a name="workflow-discovery-sample"></a>Workflow Discovery 샘플
+
 이 샘플에서는 워크플로 서비스를 검색 가능하게 만드는 방법과 특정 서비스를 검색하는 사용자 지정 코드 활동을 작성하는 방법을 보여 줍니다.  
   
 ## <a name="demonstrates"></a>데모  
+
  찾기 활동 및 워크플로 사용  
   
-## <a name="discussion"></a>토론  
+## <a name="discussion"></a>토론(Discussion)  
+
  샘플의 첫 번째 부분에서는 구성을 사용하여 워크플로 서비스를 검색 가능하게 만듭니다. 또한 구성을 사용하여 범위와 같은 사용자 지정 메타데이터로 서비스를 적절하게 적용할 수도 있습니다. 클라이언트에서 이 샘플은 검색을 사용하여 특정 계약과 일치하는 서비스를 검색하는 사용자 지정 코드 활동을 사용합니다. 코드 활동은 URI를 출력하며 이 URI는 나중에 보내기 활동에서 사용됩니다.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  

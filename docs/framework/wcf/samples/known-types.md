@@ -2,14 +2,15 @@
 title: 알려진 유형
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: dae271384905df890b2f42196d6e0aadad66be6f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e3f1365d69e218042e3a7c8f1c7f023d9ed7bafb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591841"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263817"
 ---
 # <a name="known-types"></a>알려진 유형
+
 이 샘플에서는 파생 형식에 대한 정보를 데이터 계약에서 지정하는 방법을 보여 줍니다. 데이터 계약을 사용하면 서비스와 구조적 데이터를 주고 받을 수 있습니다. 개체 지향 프로그래밍에서는 다른 형식에서 상속되는 형식을 원래 형식 대신에 사용할 수 있습니다. 서비스 지향 프로그래밍에서는 형식이 아닌 스키마가 전달되므로 형식 간의 관계가 유지되지 않습니다. <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성을 사용하면 파생 형식에 대한 정보를 데이터 계약에 포함할 수 있습니다. 이 메커니즘이 사용되지 않을 경우 기본 형식이 필요한 곳에서 파생 형식을 주고 받을 수 없습니다.  
   
 > [!NOTE]
@@ -114,7 +115,7 @@ public class DataContractCalculatorService : IDataContractCalculator
 }  
 ```  
   
- 클라이언트에서 서비스 계약과 데이터 계약은 모두 서비스 메타 데이터에서 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 에 의해 생성 되는 소스 파일 generatedClient.cs에 정의 됩니다. <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성이 서비스의 데이터 계약에 지정되므로 클라이언트는 서비스를 사용할 때 `ComplexNumber` 및 `ComplexNumberWithMagnitude` 클래스를 둘 다 받을 수 있습니다. 클라이언트는 `ComplexNumberWithMagnitude`를 가져왔는지 감지하고 적절한 출력을 생성합니다.  
+ 클라이언트에서 서비스 계약과 데이터 계약은 모두 서비스 메타 데이터에서 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 에 의해 생성 되는 소스 파일 generatedClient.cs에 정의 됩니다. <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성이 서비스의 데이터 계약에 지정되므로 클라이언트는 서비스를 사용할 때 `ComplexNumber` 및 `ComplexNumberWithMagnitude` 클래스를 둘 다 받을 수 있습니다. 클라이언트는 `ComplexNumberWithMagnitude`를 가져왔는지 감지하고 적절한 출력을 생성합니다.  
   
 ```csharp
 // Create a client  

@@ -2,14 +2,15 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: d64be95f71f840e08ede63e1c1f14ee08e52ce97
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b8496992c7b0694a07ac047ba8537c67fc363c02
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592478"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264233"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
+
 ConfigurationCodeGenerator는 구성 시스템에 사용자 지정 채널 구현을 노출하는 데 사용할 수 있는 도구입니다. 이를 통해 사용자 지정 채널의 사용자가 `NetTcpBinding`을 사용하여 `TcpTransportBindingElement` 등의 시스템 제공 바인딩이나 사용자 지정 바인딩을 구성하는 것과 같은 방법으로 .config 파일을 사용하여 채널을 구성할 수 있습니다.  
   
  사용자 지정 채널을 써서 새 `BindingElement` 또는 `Binding`을 통해 프로그래밍 모델에 노출할 때에는 일련의 클래스를 만들어 .config 파일을 통해 `BindingElement` 또는 `Binding`을 구성 가능하게 만들어야 합니다. ConfigurationCodeGenerator 도구를 사용하여 이런 클래스를 생성하고 고객의 경험을 향상시킬 수 있습니다.  

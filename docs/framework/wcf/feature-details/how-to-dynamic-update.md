@@ -2,14 +2,15 @@
 title: '방법: 동적 업데이트'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: aaeb4d9d42c289cf34a6aee9212fc2d74b8f8c01
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a12d480163bb579f34d006ae1837ed4392bf47ee
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184960"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265546"
 ---
 # <a name="how-to-dynamic-update"></a>방법: 동적 업데이트
+
 이 항목에서는 라우팅 구성을 만들고 동적으로 업데이트하는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서는 구성 파일에서 초기 라우팅 구성을 가져오고 이 구성을 사용하여 모든 메시지를 regularCalc 계산기 서비스에 라우트합니다. 그러나 이 구성은 대상 엔드포인트를 roundingCalc 서비스로 변경하기 위해 이후에 프로그래밍 방식으로 업데이트됩니다.  
   
 > [!NOTE]
@@ -64,7 +65,7 @@ ms.locfileid: "79184960"
     </filterTables>  
     ```  
   
-3. 필터 테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 엔드포인트와 연결해야 합니다. 다음 예제에서는 "filterTable1"을 서비스 끝점과 연결하는 것을 보여 줍니다.  
+3. 필터 테이블에 포함된 필터에 대해 들어오는 메시지를 평가하려면 라우팅 동작을 사용하여 필터 테이블을 서비스 엔드포인트와 연결해야 합니다. 다음 예제에서는 "filterTable1"을 서비스 끝점과 연결 하는 방법을 보여 줍니다.  
   
     ```xml  
     <behaviors>  
@@ -78,6 +79,7 @@ ms.locfileid: "79184960"
     ```  
   
 ## <a name="implement-dynamic-configuration"></a>동적 구성 구현  
+
  라우팅 서비스의 동적 구성은 새 <xref:System.ServiceModel.Routing.RoutingConfiguration>을 만들고 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>을 사용하여 현재 구성을 대체하는 방식으로 코드에서만 수행할 수 있습니다.  이 예제에서는 라우팅 서비스가 콘솔 애플리케이션 내에서 자체 호스팅됩니다. 애플리케이션이 시작되면 콘솔 창에 ‘regular’ 또는 ‘rounding’을 입력하여 메시지가 라우트되는 대상 엔드포인트를 구성하는 방식으로 라우팅 구성을 수정할 수 있습니다. ‘regular’를 입력하면 대상 엔드포인트가 regularCalc가 되고 ‘rounding’을 입력하면 대상 엔드포인트가 roundingCalc가 됩니다.  
   
 1. 라우팅 서비스를 지원하려면 다음 using 문을 추가해야 합니다.  
@@ -164,7 +166,7 @@ ms.locfileid: "79184960"
   
 ## <a name="example"></a>예제  
 
-다음은 이 예제에 사용된 콘솔 응용 프로그램의 전체 목록입니다.
+다음은이 예제에서 사용 되는 콘솔 응용 프로그램의 전체 목록입니다.
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -243,7 +245,7 @@ namespace Microsoft.Samples.AdvancedFilters
   
 ## <a name="example"></a>예제  
 
-다음은 이 예제에 사용된 구성 파일의 전체 목록입니다.
+다음은이 예제에 사용 되는 구성 파일의 전체 목록입니다.
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

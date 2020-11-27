@@ -2,14 +2,15 @@
 title: 구성 샘플
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 6d84085d06da117ebf13fa4bb714513aacc3abd6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 927aab30ab122d281b4f3577ec05a2035c08f2fc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594727"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264337"
 ---
 # <a name="configuration-sample"></a>구성 샘플
+
 이 샘플에서는 구성 파일을 사용하여 서비스를 검색 가능하게 만드는 방법을 보여 줍니다.  
   
 > [!NOTE]
@@ -25,6 +26,7 @@ ms.locfileid: "84594727"
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
 ## <a name="service-configuration"></a>서비스 구성  
+
  이 샘플의 구성 파일에서는 다음 두 가지 기능을 보여 줍니다.  
   
 - 표준 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>를 통해 서비스를 검색할 수 있게 만듭니다.  
@@ -155,6 +157,7 @@ ms.locfileid: "84594727"
 ```  
   
 ## <a name="client-configuration"></a>클라이언트 구성  
+
  클라이언트의 애플리케이션 구성 파일에서 `standardEndpoint` 형식의 `dynamicEndpoint`는 다음 구성 코드 조각과 같이 검색을 활용하는 데 사용됩니다.  
   
 ```xml  

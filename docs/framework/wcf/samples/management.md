@@ -2,17 +2,19 @@
 title: 관리
 ms.date: 03/30/2017
 ms.assetid: 52f4825b-91a2-4f23-94f4-cfd76a7980cf
-ms.openlocfilehash: 53c53252e5798ffb01d42b143971a66d1c067851
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0f3d5404787d46f5b00ec54fc155997e40ac7fac
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591789"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264740"
 ---
 # <a name="management"></a>관리
+
 이 섹션에는 WCF (Windows Communication Foundation) 관리를 보여 주는 샘플이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [Windows용 WCF 서비스 및 이벤트 추척](wcf-services-and-event-tracing-for-windows.md)  
  WCF의 분석 추적을 사용 하 여 ETW (ETW(Windows용 이벤트 추적))에서 이벤트를 내보내는 방법을 보여 줍니다.  
   

@@ -2,12 +2,12 @@
 title: 추적 확장
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: f2b9deb346077609193ec08c2c01b10a3ad9357b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5e3329238998f11467511960f32b177953036ab1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556514"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265338"
 ---
 # <a name="extend-tracing"></a>추적 확장
 
@@ -28,9 +28,11 @@ ms.locfileid: "90556514"
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
 ## <a name="tracing-and-activity-propagation"></a>추적 및 동작 전파  
+
  사용자 정의 동작 추적을 사용 하면 사용자가 추적 작업을 만들어 논리적 작업 단위로 추적을 그룹화 하 고, 전송 및 전파를 통해 동작을 상호 연결 하 고, WCF 추적의 성능 비용을 줄일 수 있습니다 (예: 로그 파일의 디스크 공간 비용).  
   
 ### <a name="add-custom-sources"></a>사용자 지정 원본 추가  
+
  사용자 정의 추적은 클라이언트와 서비스 코드 모두에 추가할 수 있습니다. 클라이언트 또는 서비스 구성 파일에 추적 소스를 추가 하면 이러한 사용자 지정 추적을 기록 하 여 [서비스 추적 뷰어 도구 (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)에 표시할 수 있습니다. 다음 코드에서는 `ServerCalculatorTraceSource`라는 사용자 정의 추적 소스를 구성 파일에 추가하는 방법을 보여 줍니다.  
   
 ```xml  
@@ -69,6 +71,7 @@ ms.locfileid: "90556514"
 ```  
   
 ### <a name="correlate-activities"></a>활동 상관 관계  
+
  엔드포인트 사이에서 직접 동작을 상호 연결하려면 `propagateActivity` 추적 소스에서 `true` 특성을 `System.ServiceModel`로 설정해야 합니다. 또한 WCF 작업을 거치지 않고 추적을 전파 하려면 ServiceModel 동작 추적을 해제 해야 합니다. 다음 코드 예제에서 이를 확인할 수 있습니다.  
   
 > [!NOTE]
@@ -87,6 +90,7 @@ ms.locfileid: "90556514"
 ```  
   
 ### <a name="lessen-performance-cost"></a>성능 비용 줄이기  
+
  `ActivityTracing` 추적 소스에서 `System.ServiceModel`을 off로 설정하면 ServiceModel 동작 추적이 포함되지 않고 사용자 정의 동작 추적만 포함된 추적 파일이 생성됩니다. ServiceModel 활동 추적을 제외 하면 훨씬 더 작은 로그 파일이 생성 됩니다. 그러나 WCF 처리 추적과의 상관 관계를 설정할 기회가 손실 됩니다.  
   
 ## <a name="set-up-build-and-run-the-sample"></a>샘플 설정, 빌드 및 실행  
@@ -97,6 +101,6 @@ ms.locfileid: "90556514"
   
 3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 모니터링 샘플](/previous-versions/appfabric/ff383407(v=azure.10))

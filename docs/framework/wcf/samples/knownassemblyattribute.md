@@ -2,17 +2,19 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 12f28f44b408dde1ea04d6b84e663206cb4437df
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2faeeaab98a4adeec38ed9c03dc9e01ec2a3aaea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555408"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264948"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
+
 이 샘플에서는 <xref:System.Runtime.Serialization.DataContractResolver> 클래스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정하는 방법을 보여 줍니다. 또한 serialization 및 deserialization 동안 알려진 형식을 동적으로 추가하는 방법을 보여 줍니다.  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
+
  이 샘플은 네 개의 프로젝트로 구성되어 있습니다. 이 중 하나는 IIS에서 호스트되며 다음 서비스 계약을 정의하는 서비스에 해당합니다.  
   
 ```csharp
@@ -346,13 +348,13 @@ Lists combined:
   
 #### <a name="to-set-up-run-and-build-the-sample"></a>샘플을 설치, 실행 및 빌드하려면  
   
-1. **Knownassemblyattribute** 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.  
+1. **Knownassemblyattribute** 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다.  
   
-2. **공용 속성**에서 **시작 프로젝트**를 선택한 다음 **여러 개의 시작 프로젝트**를 클릭 합니다.  
+2. **공용 속성** 에서 **시작 프로젝트** 를 선택한 다음 **여러 개의 시작 프로젝트** 를 클릭 합니다.  
   
 3. **서비스** 및 **클라이언트** 프로젝트에 **시작** 작업을 추가 합니다.  
   
-4. **확인**을 클릭 하 고 **f5** 키를 눌러 샘플을 실행 합니다.  
+4. **확인** 을 클릭 하 고 **f5** 키를 눌러 샘플을 실행 합니다.  
   
 5. 애플리케이션이 제대로 실행되지 않으면 다음 단계를 따라 사용 환경이 올바르게 설정되었는지 확인하세요.  
   
