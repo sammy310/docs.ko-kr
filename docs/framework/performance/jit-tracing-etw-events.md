@@ -6,22 +6,24 @@ helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-ms.openlocfilehash: 568fc942cd0e2188c530d2befb6260083757ec72
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: fd1fae8731ea927ab64d0c0df83b90d29289a0a0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474464"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277970"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 추적 ETW 이벤트
+
 이들 이벤트는 JIT(Just-In-Time) 인라인 처리 및 JIT 마무리 호출의 성공 또는 실패와 관련된 정보를 수집합니다.
 
 ## <a name="jit-inlining-events"></a>JIT 인라인 처리 이벤트
 
 ### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed 이벤트
+
  다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
   
@@ -49,9 +51,10 @@ ms.locfileid: "86474464"
 |ClrInstanceID|win:UnicodeString|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
 ### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded 이벤트  
+
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
   
@@ -79,9 +82,10 @@ ms.locfileid: "86474464"
 ## <a name="jit-tail-call-events"></a>JIT 마무리 호출 이벤트  
   
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed 이벤트  
+
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
   
@@ -109,9 +113,10 @@ ms.locfileid: "86474464"
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
 ### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded 이벤트  
+
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
   

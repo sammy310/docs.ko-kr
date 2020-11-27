@@ -6,14 +6,15 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: d0df24de4f8a877405dfecb6b0d245ff1caf0418
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: e7d32be1532be7d673d8df4fe3f76c3d83fea913
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163885"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278065"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 자동화 컨트롤 패턴 개요
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -25,7 +26,9 @@ ms.locfileid: "87163885"
 > 부모 컨트롤이 노출한 기능에 대한 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 를 제공하는 하위 컨트롤을 사용하여 빌드된 집계 컨트롤은 각 하위 컨트롤과 정상적으로 연결된 모든 컨트롤 패턴을 구현해야 합니다. 따라서 이러한 동일한 컨트롤 패턴을 하위 컨트롤이 구현할 필요가 없습니다.  
   
 <a name="uiautomation_control_pattern_includes"></a>
+
 ## <a name="ui-automation-control-pattern-components"></a>UI 자동화 컨트롤 패턴 구성 요소  
+
  컨트롤 패턴은 컨트롤에 있는 개별 기능 항목을 정의하는 데 필요한 메서드, 속성, 이벤트 및 관계를 지원합니다.  
   
 - UI 자동화 요소와 부모, 자식, 형제 간의 관계는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 내에서 해당 요소의 구조를 설명합니다.  
@@ -37,7 +40,9 @@ ms.locfileid: "87163885"
  [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]인터페이스는 COM (구성 요소 개체 모델) 개체와 관련이 있으므로 컨트롤 패턴은와 관련 됩니다. COM에서 개체를 쿼리하여 개체에서 지 원하는 인터페이스를 확인 한 다음 이러한 인터페이스를 사용 하 여 기능에 액세스할 수 있습니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, UI 자동화 클라이언트는 컨트롤이 지원하는 컨트롤 패턴을 확인하고 지원되는 컨트롤 패턴이 노출하는 속성, 메서드, 이벤트 및 구조를 통해 컨트롤과 상호 작용할 수 있습니다. 예를 들어, 여러 줄 편집 상자에 대해 UI 자동화는 <xref:System.Windows.Automation.Provider.IScrollProvider>를 구현합니다. 클라이언트가 <xref:System.Windows.Automation.AutomationElement> 서 <xref:System.Windows.Automation.ScrollPattern> 컨트롤 패턴을 지원한다는 사실을 알고 있으면 클라이언트는 해당 컨트롤 패턴이 노출하는 속성, 메서드 및 이벤트를 사용하여 컨트롤을 조작하거나 컨트롤에 대한 정보에 액세스할 수 있습니다.  
   
 <a name="uiautomation_control_pattern_client_provider"></a>
+
 ## <a name="ui-automation-providers-and-clients"></a>UI 자동화 공급자 및 클라이언트  
+
  UI 자동화 공급자는 컨트롤에서 지원하는 특정 기능에 대해 적절한 동작을 노출하는 컨트롤 패턴을 구현합니다.  
   
  UI 자동화 클라이언트는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴 클래스의 메서드 및 속성에 액세스하고 이를 사용하여 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]에 대한 정보를 가져오거나 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]를 조작합니다. 이러한 컨트롤 패턴 클래스는 <xref:System.Windows.Automation> 네임스페이스(예: <xref:System.Windows.Automation.InvokePattern> 및 <xref:System.Windows.Automation.SelectionPattern>)에서 볼 수 있습니다.  
@@ -45,11 +50,15 @@ ms.locfileid: "87163885"
  클라이언트는 <xref:System.Windows.Automation.AutomationElement> 메서드 (예: <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> 또는 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> ) 또는 CLR (공용 언어 런타임) 접근자를 사용 하 여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 패턴의 속성에 액세스 합니다. 각 컨트롤 패턴 클래스에 <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType> 는 컨트롤 패턴을 식별 하 고를에 대 한 매개 변수로 전달 <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> 하거나 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> 의 해당 패턴을 검색할 수 있는 <xref:System.Windows.Automation.AutomationElement> 필드 멤버 (예: 또는)가 있습니다.  
   
 <a name="uiautomation_control_patterns_dynamic"></a>
+
 ## <a name="dynamic-control-patterns"></a>동적 컨트롤 패턴  
+
  일부 컨트롤에서는 동일한 컨트롤 패턴의 집합이 항상 지원되지는 않습니다. 컨트롤 패턴은 UI 자동화 클라이언트에 사용할 수 있을 때 지원되는 것으로 간주됩니다. 예를 들어, 여러 줄 편집 상자를 사용하면 볼 수 있는 영역에 표시할 수 있는 것보다 많은 텍스트 줄이 포함되어 있는 경우에만 세로로 스크롤할 수 있습니다. 스크롤이 더 이상 필요하지 않을만큼 충분한 양의 텍스트가 제거되면 스크롤이 비활성화됩니다. 이 예제에서, ScrollPattern 컨트롤 패턴은 컨트롤의 현재 상태(편집 상자에 있는 텍스트의 양)에 따라 동적으로 지원됩니다.  
   
 <a name="Control_Pattern_Classes_and_Interfaces"></a>
+
 ## <a name="control-pattern-classes-and-interfaces"></a>컨트롤 패턴 클래스 및 인터페이스  
+
  다음 표에서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴에 대해 설명합니다. 또한 UI 자동화 클라이언트가 컨트롤 패턴에 액세스하는 데 사용하는 클래스와, UI 자동화 공급자가 이러한 컨트롤 패턴을 구현하는 데 사용하는 인터페이스를 나열하여 보여줍니다.  
   
 |컨트롤 패턴 클래스|공급자 인터페이스|Description|  

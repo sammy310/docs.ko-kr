@@ -7,17 +7,19 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 4d500c37efa4a90e24b06cd2e886147e1f159d4e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: d6a1eef949e30a1a6d9a1c5971d33c788cc548b9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320787"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277909"
 ---
 # <a name="best-practices-data-contract-versioning"></a>모범 사례: 데이터 계약 버전 관리
+
 이 항목에서는 시간 경과에 따라 쉽게 발전할 수 있는 데이터 계약을 만드는 최선의 방법을 보여 줍니다. 데이터 계약에 대 한 자세한 내용은 [데이터 계약 사용](./feature-details/using-data-contracts.md)항목을 참조 하세요.  
   
 ## <a name="note-on-schema-validation"></a>스키마 유효성 검사에 대한 참고  
+
  데이터 계약 버전 관리에 대해 설명 하면 기본적으로 요소가 선택적으로 표시 되는 것 외에도 WCF (Windows Communication Foundation)에서 내보낸 데이터 계약 스키마에 버전 관리가 지원 되지 않는다는 점에 주의 해야 합니다.  
   
  이는 새 데이터 멤버 추가 같은 가장 일반적인 버전 관리 시나리오도 지정된 스키마와 관련해서 매끄럽게 구현할 수 없음을 의미합니다. 예를 들어 새 데이터 멤버가 있는 최신 버전의 데이터 계약은 이전 스키마를 사용하여 유효성이 검사되지 않습니다.  
@@ -27,6 +29,7 @@ ms.locfileid: "72320787"
  따라서 데이터 계약 버전 관리 지침에는 엄격한 스키마 유효성이 중요한 시나리오에 대한 집합과 중요하지 않은 시나리오에 대한 집합의 두 가지 집합이 있습니다.  
   
 ## <a name="versioning-when-schema-validation-is-required"></a>스키마 유효성 검사가 필요한 경우의 버전 관리  
+
  엄격한 스키마 유효성이 모든 방향(새 버전에서 이전 버전으로 및 이전 버전에서 새 버전으로)에서 필요한 경우 데이터 계약을 변경 불가능한 것으로 간주해야 합니다. 버전 관리가 필요하면 다른 이름이나 네임스페이스로 새 데이터 계약을 만들어야 하며, 해당 데이터 형식을 사용한 서비스 계약의 버전을 적절하게 관리해야 합니다.  
   
  예를 들어 `PoProcessing` 데이터 계약을 준수하는 매개 변수를 사용하는 `PostPurchaseOrder` 작업으로 `PurchaseOrder`이라는 구매 주문 처리 서비스 계약을 가정해 보세요. `PurchaseOrder` 계약을 변경해야 하는 경우 변경 내용을 포함하는 새 데이터 계약 `PurchaseOrder2`를 만들어야 합니다. 그런 다음 서비스 계약 수준에서 버전 관리를 처리해야 합니다. 예를 들어 `PostPurchaseOrder2` 매개 변수를 사용하는 `PurchaseOrder2` 작업을 만들거나 `PoProcessing2` 작업이 `PostPurchaseOrder` 데이터 계약을 사용하는 `PurchaseOrder2` 서비스 계약을 만들어 작업을 수행합니다.  
@@ -37,7 +40,7 @@ ms.locfileid: "72320787"
   
  자세한 내용은 최선의 구현 방법: [서비스 버전 관리](service-versioning.md)를 참조 하세요.  
   
- 경우에 따라 애플리케이션이 보낸 메시지에서 엄격한 스키마 준수를 보장해야 하지만 들어오는 메시지가 엄격하게 스키마를 준수한다고 확신할 수 없습니다. 이 경우 들어오는 메시지에 잘못 사용된 데이터가 포함될 위험이 있습니다. 불필요 한 값은 WCF에 의해 저장 및 반환 되므로 스키마가 잘못 된 메시지를 전송 합니다. 이 문제를 방지하려면 왕복 기능을 해제해야 합니다. 이렇게 하는 데는 두 가지 방법이 있습니다.  
+ 경우에 따라 애플리케이션이 보낸 메시지에서 엄격한 스키마 준수를 보장해야 하지만 들어오는 메시지가 엄격하게 스키마를 준수한다고 확신할 수 없습니다. 이 경우 들어오는 메시지에 잘못 사용된 데이터가 포함될 위험이 있습니다. 불필요 한 값은 WCF에 의해 저장 및 반환 되므로 스키마가 잘못 된 메시지를 전송 합니다. 이 문제를 방지하려면 왕복 기능을 해제해야 합니다. 두 가지 방법으로 이 작업을 수행할 수 있습니다.  
   
 - 아무 형식에도 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하지 않습니다.  
   
@@ -46,6 +49,7 @@ ms.locfileid: "72320787"
  라운드트립에 대 한 자세한 내용은 [전방 호환 데이터 계약](./feature-details/forward-compatible-data-contracts.md)을 참조 하세요.  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>스키마 유효성 검사가 필요하지 않은 경우의 버전 관리  
+
  엄격한 스키마 준수는 거의 필요하지 않습니다. 많은 플랫폼에서 스키마가 설명하지 않는 추가 요소를 허용합니다. 이를 허용 하는 한 [데이터 계약 버전 관리](./feature-details/data-contract-versioning.md) 및 [전달 호환 데이터 계약](./feature-details/forward-compatible-data-contracts.md) 에 설명 된 전체 기능 집합을 사용할 수 있습니다. 다음 지침을 따르는 것이 좋습니다.  
   
  이전 버전이 필요한 경우에 새 버전의 형식을 보내거나 새 버전이 필요한 경우에 이전 버전의 형식을 보내려면 일부 지침을 정확하게 따라야 합니다. 다른 지침은 엄격하게 따르지 않아도 되지만 이후 스키마 버전 관리에서 영향을 받을 수 있으므로 여기에 나열되어 있습니다.  
@@ -70,7 +74,7 @@ ms.locfileid: "72320787"
   
     2. 멤버에 대해 기본값 `null` 또는 0을 허용할 수 없는 경우 <xref:System.Runtime.Serialization.OnDeserializingAttribute>로 콜백 메서드를 제공하여 들어오는 스트림에 멤버가 없는 경우 적절한 기본값을 제공해야 합니다. 콜백에 대 한 자세한 내용은 [버전 허용 Serialization 콜백](./feature-details/version-tolerant-serialization-callbacks.md)을 참조 하세요.  
   
-    3. @No__t_0 속성을 사용 하 여 새로 추가 된 모든 데이터 멤버가 기존 데이터 멤버 다음에 표시 되는지 확인 해야 합니다. 이렇게 하려면 데이터 계약의 첫 번째 버전에서 데이터 멤버의 `Order` 속성을 설정하지 않도록 해야 합니다. 데이터 계약의 버전 2에서 추가된 모든 데이터 멤버의 `Order` 속성을 2로 설정해야 하며 데이터 계약의 버전 3에서 추가된 모든 데이터 멤버의 `Order` 속성을 3으로 설정해야 합니다. 둘 이상의 데이터 멤버를 동일한 `Order` 번호로 설정해도 됩니다.  
+    3. 속성을 사용 하 여 <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> 새로 추가 된 모든 데이터 멤버가 기존 데이터 멤버 다음에 표시 되는지 확인 해야 합니다. 이렇게 하려면 데이터 계약의 첫 번째 버전에서 데이터 멤버의 `Order` 속성을 설정하지 않도록 해야 합니다. 데이터 계약의 버전 2에서 추가된 모든 데이터 멤버의 `Order` 속성을 2로 설정해야 하며 데이터 계약의 버전 3에서 추가된 모든 데이터 멤버의 `Order` 속성을 3으로 설정해야 합니다. 둘 이상의 데이터 멤버를 동일한 `Order` 번호로 설정해도 됩니다.  
   
 9. 이전 버전에서 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 속성이 기본값 `false`로 설정된 경우에도 이후 버전에서 데이터 멤버를 제거하지 마세요.  
   

@@ -6,17 +6,19 @@ helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-ms.openlocfilehash: e24d3bc07c7292625813828d598ed43952155e4f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f15cd9b38285e88dac727bcfe51c8dc542a735f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822362"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277987"
 ---
 # <a name="net-framework-performance"></a>.NET Framework 성능
+
 성능이 우수한 앱을 만들려면 앱의 다른 모든 기능을 디자인하는 것처럼 성능을 디자인하고 계획해야 합니다. 앱의 성능을 측정할 수 있도록 Microsoft에서 제공하는 도구를 사용하고 필요한 경우 메모리 사용, 코드 처리량 및 응답성을 향상시킬 수 있습니다. 이 항목에는 Microsoft에서 제공하는 성능 분석 도구가 나열되어 있으며, 앱 개발의 특정 영역에 대한 성능을 설명하는 다른 항목의 링크가 제공되어 있습니다.  
   
 ## <a name="designing-and-planning-for-performance"></a>성능 디자인 및 계획  
+
  성능이 우수한 앱을 만들려면 다른 모든 기능을 디자인하는 것처럼 앱에 성능을 디자인해야 합니다. 앱에서 성능이 중요한 시나리오를 확인하고 성능 목표를 설정하며 이러한 앱 시나리오에 대한 성능을 조기에 그리고 자주 측정해야 합니다. 각 앱이 다르고 각 앱의 성능이 중요한 실행 경로도 다르므로 이러한 경로를 조기에 확인하여 노력을 집중하면 생산성을 극대화할 수 있습니다.  
   
  고성능 앱을 만들기 위해 대상 플랫폼에 완벽하게 익숙해질 필요는 없습니다. 그러나 대상 플랫폼의 어느 부분이 성능 측면에서 비용이 많이 드는지에 대한 이해도를 높여야 합니다. 개발 프로세스에서 조기에 성능을 측정하여 이렇게 할 수 있습니다.  
@@ -24,12 +26,14 @@ ms.locfileid: "94822362"
  성능에 중요한 영역을 확인하고 성능 목표를 설정하려면 항상 사용자 경험을 고려합니다. 시작 시간과 응답성은 사용자의 앱에 대한 인식에 영향을 미치는 두 주요 영역입니다. 앱이 메모리를 많이 사용하는 경우 사용자에게 느리게 보이거나 시스템에서 실행되고 있는 다른 앱에 영향을 미칠 수 있습니다. 또는 일부 경우 Windows 스토어 또는 Windows Phone 스토어 전송 프로세스가 실패할 수 있습니다. 또한 코드의 어느 부분이 더 자주 실행되는지 확인하면 코드의 이러한 부분이 잘 최적화되었는지도 확인할 수 있습니다.  
   
 ## <a name="analyzing-performance"></a>성능 분석  
+
  전체 개발 계획의 일부로, 개발 중에 앱의 성능을 측정하고 결과를 이전에 설정한 목표와 비교하는 지점을 설정합니다. 사용자가 사용할 것으로 예상되는 환경 및 하드웨어에서 앱을 측정합니다. 조기에 그리고 자주 앱의 성능을 분석함으로써 개발 주기의 나중 단계에서 수정할 경우 비용이 많이 들게 될 아키텍처 관련 결정 사항을 변경할 수 있습니다. 다음 섹션에서는 앱을 분석하는 데 사용할 수 있는 성능 도구를 설명하고, 이러한 도구에서 사용되는 이벤트 추적을 설명합니다.  
   
 ### <a name="performance-tools"></a>성능 도구  
+
  다음은 .NET Framework 앱에 사용할 수 있는 몇 가지 성능 도구입니다.  
   
-|도구|설명|  
+|도구|Description|  
 |----------|-----------------|  
 |Visual Studio 성능 분석|Windows 운영 체제를 실행하는 컴퓨터에 배포할 .NET Framework 앱의 CPU 사용률을 분석하는 데 사용합니다.<br /><br /> 이 도구는 Visual Studio에서 프로젝트를 연 후 **디버그** 메뉴에서 사용할 수 있습니다. 자세한 내용은 [성능 탐색기](/visualstudio/profiling/performance-explorer)를 참조하세요. **참고:** Windows Phone을 대상으로 할 경우 Windows Phone 애플리케이션 분석(다음 행 참조)을 사용하세요.|  
 |Windows Phone 애플리케이션 분석|Windows Phone 앱의 CPU 및 메모리, 네트워크 데이터 전송 속도, 앱 응답성 및 배터리 소비를 분석하는 데 사용합니다.<br /><br /> 이 도구는 [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773)를 설치한 후 Visual Studio에서 Windows Phone 프로젝트의 **디버그** 메뉴에서 사용할 수 있습니다. 자세한 내용은 [Windows Phone 8의 앱 프로 파일링](/previous-versions/windows/apps/jj215908(v=vs.105))을 참조 하세요.|  
@@ -37,9 +41,11 @@ ms.locfileid: "94822362"
 |[Windows Performance Analyzer](https://www.microsoft.com/p/windows-performance-analyzer/9n0w1b2bxgnz?activetab=pivot:overviewtab)|동일한 컴퓨터에서 여러 앱이 실행되고 있는 경우 앱의 메모리 및 스토리지 사용과 같은 전체 시스템 성능을 확인하는 데 사용합니다. 이 도구는 Windows 8 용 Windows ADK (평가 및 배포 키트)의 일부로 다운로드 센터에서 사용할 수 있습니다. 자세한 내용은 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)를 참조하세요.|
   
 ### <a name="event-tracing-for-windows-etw"></a>ETW(Windows용 이벤트 추적)  
+
  ETW는 실행 중인 코드에 대한 진단 정보를 얻을 수 있는 기술로서, 앞에서 언급한 여러 성능 도구에 필수적입니다. ETW는 .NET Framework 앱 및 Windows에서 특정 이벤트가 발생하면 로그를 만듭니다. ETW를 사용하면 동적으로 로깅을 사용하거나 사용하지 않도록 설정할 수 있어 앱을 다시 시작하지 않고도 프로덕션 환경에서 자세한 추적을 수행할 수 있습니다. .NET Framework는 ETW 이벤트에 대한 지원을 제공하고, ETW는 성능 데이터를 생성하기 위해 여러 프로파일링 및 성능 도구에서 사용됩니다. 이러한 도구는 ETW 이벤트를 자주 사용하거나 사용하지 않도록 설정하므로 익숙해지는 것이 좋습니다. 특정 ETW 이벤트를 사용하여 앱의 특정 구성 요소에 대한 성능 정보를 수집할 수 있습니다. .NET Framework의 ETW 지원에 대한 자세한 내용은 [공용 언어 런타임의 ETW 이벤트](etw-events-in-the-common-language-runtime.md) 및 [작업 병렬 라이브러리 및 PLINQ의 ETW 이벤트](etw-events-in-task-parallel-library-and-plinq.md)를 참조하세요.  
   
 ## <a name="performance-by-app-type"></a>응용 프로그램 종류별 성능  
+
  .NET Framework 앱 형식마다 성능을 평가하기 위한 모범 사례, 고려 사항 및 도구가 다릅니다. 다음 테이블에는 특정 .NET Framework 앱 형식에 대한 성능 항목 링크가 표시되어 있습니다.  
   
 |앱 유형|참조 항목|  
@@ -51,7 +57,7 @@ ms.locfileid: "94822362"
   
 ## <a name="related-topics"></a>관련 항목  
   
-|제목|설명|  
+|제목|Description|  
 |-----------|-----------------|  
 |[.NET Framework 애플리케이션에서 캐시](caching-in-net-framework-applications.md)|데이터를 캐시하여 앱 성능을 향상시키는 방법을 설명합니다.|  
 |[초기화 지연](lazy-initialization.md)|필요한 대로 개체를 초기화하여 성능을 향상시키는 방법을 설명합니다(특히, 앱 시작 시).|  

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: c1b149e1033303e98bd150e62c6344b60eec1f93
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: be7e4afcbeb884f63d77fe9aa25342c7f9b49f52
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167980"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278091"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>DataItem 컨트롤 형식에 대한 UI 자동화 지원
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -25,6 +26,7 @@ ms.locfileid: "87167980"
  다음 섹션에서는 DataItem 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , Win32 또는 Windows Forms 모든 데이터 항목 컨트롤에 적용 됩니다.  
   
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
+
  다음 표는 데이터 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 트리에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 - 컨트롤 뷰|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 - 콘텐츠 뷰|  
@@ -34,6 +36,7 @@ ms.locfileid: "87167980"
  데이터 표의 데이터 항목 요소는 데이터 항목의 다른 레이어 또는 특정 표 요소(예: 텍스트, 이미지 또는 편집 컨트롤)를 비롯한 다양한 개체를 호스트할 수 있습니다. 데이터 항목 요소에 특정 개체 역할이 있으면, 이 요소는 특정 컨트롤 형식으로 노출되어야 합니다. 예를 들어, 표에 있는 선택 가능한 데이터 항목의 경우 ListItem 컨트롤 형식으로 노출되어야 합니다.  
   
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성  
+
  다음 표에서는 값 또는 정의가 데이터 항목 컨트롤과 특별히 관련된 속성을 나열하여 보여 줍니다. 속성에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.  
   
 |속성|값|참고|  
@@ -52,9 +55,10 @@ ms.locfileid: "87167980"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|메모를 참조하세요.|데이터 항목 컨트롤에는 사용자가 항목에 대해 가장 의미 있는 식별자로 연결할 사항과 관련된 기본 텍스트 요소가 항상 포함됩니다.|  
   
 ## <a name="required-ui-automation-control-patterns"></a>필요한 UI 자동화 컨트롤 패턴  
+
  다음 표에서는 모든 데이터 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)를 참조하세요.  
   
-|컨트롤 패턴|지원|참고|  
+|컨트롤 패턴|지원|메모|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|개체|데이터 항목을 확장하거나 축소하여 정보를 표시하고 숨길 수 있는 경우 Expand Collapse 패턴이 지원되어야 합니다.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|개체|항목 간 공간을 탐색할 수 있는 컨테이너 내에서 데이터 항목의 컬렉션을 사용할 수 있으면 데이터 항목이 Grid Item 패턴을 지원합니다.|  
@@ -65,14 +69,16 @@ ms.locfileid: "87167980"
 |<xref:System.Windows.Automation.Provider.IValueProvider>|개체|데이터 항목의 기본 텍스트를 편집할 수 있는 경우 Value 패턴이 지원되어야 합니다.|  
   
 ## <a name="working-with-data-items-in-large-lists"></a>긴 목록에서 데이터 항목 작업  
+
  대부분 긴 목록은 성능 향상에 도움을 주기 위해 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 프레임워크 내에서 가상화된 데이터입니다. 이런 이유로, UI 자동화 클라이언트는 컨테이너의 다른 항목에서와 같은 방법으로 전체 트리의 내용을 수집하기 위해 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 쿼리 기능을 사용할 수 없습니다. 클라이언트는 데이터 항목에서 전체 정보 집합에 액세스하기 전에 항목을 스크롤하여 볼 수 있도록 해야 합니다(또는 컨트롤을 확장하여 모든 중요 옵션 표시).  
   
  `SetFocus` [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 데이터 항목에 대 한 요소에서를 호출 하면 Microsoft Windows 탐색기 사례가 성공적으로 반환 되 고 포커스가 데이터 항목 하위 트리 내에서 편집으로 설정 됩니다.  
   
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  
+
  다음 표에서는 모든 데이터 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](ui-automation-events-overview.md)를 참조하세요.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|참고|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|메모|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|없음|  
@@ -89,6 +95,7 @@ ms.locfileid: "87167980"
 |<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트.|개체|없음|  
   
 ## <a name="dataitem-control-type-example"></a>DataItem 컨트롤 형식 예제  
+
  다음 이미지는 열에 대한 다양한 정보를 지원하는 목록 뷰 컨트롤의 DataItem 컨트롤 형식을 보여 줍니다.  
   
  ![두 개의 데이터 항목이 있는 목록 보기 컨트롤의 그래픽](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
