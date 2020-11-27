@@ -7,14 +7,15 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 898211ec4504225413769f2f0dbf2f2c70110c14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b63ce62cd39ef7961db1c0ac86c8cbd6ca871dbd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556065"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261893"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation 정의
+
 WCF (Windows Communication Foundation)는 서비스 지향 응용 프로그램을 빌드하기 위한 프레임 워크입니다. WCF를 사용 하면 한 서비스 끝점에서 다른 서비스 끝점으로 데이터를 비동기 메시지로 보낼 수 있습니다. 서비스 엔드포인트는 IIS에서 호스팅하는 계속 사용 가능한 서비스의 일부분일 수도 있고 애플리케이션에서 호스팅되는 서비스일 수도 있습니다. 또한 엔드포인트는 서비스 엔드포인트에서 데이터를 요청하는 서비스의 클라이언트일 수 있습니다. 메시지는 XML로 전송되는 한 문자나 단어처럼 간단할 수도 있고 이진 데이터 스트림처럼 복잡할 수도 있습니다. 다음은 몇 가지 샘플 시나리오입니다.
 
 - 비즈니스 트랜잭션을 처리하는 보안 서비스
@@ -65,7 +66,7 @@ WCF에는 다음과 같은 기능 집합이 포함 되어 있습니다. 자세�
 
 - **신뢰할 수 있는 메시지 및 대기 중인 메시지**
 
-     WCF는 신뢰할 수 있는 메시징 및 MSMQ 사용을 통해 구현 된 신뢰할 수 있는 세션을 사용 하 여 신뢰할 수 있는 메시지 교환을 지원 합니다 WCF의 신뢰할 수 있는 메시징 및 대기 중인 메시징 지원에 대 한 자세한 내용은 [큐 및 신뢰할](./feature-details/queues-and-reliable-sessions.md)수 있는 세션을 참조 하세요.
+     WCF는 WS-Reliable 메시징 및 MSMQ 사용을 통해 구현 되는 신뢰할 수 있는 세션을 사용 하 여 안정적인 메시지 교환을 지원 합니다 WCF의 신뢰할 수 있는 메시징 및 대기 중인 메시징 지원에 대 한 자세한 내용은 [큐 및 신뢰할](./feature-details/queues-and-reliable-sessions.md)수 있는 세션을 참조 하세요.
 
 - **지속적 메시지**
 
@@ -95,7 +96,7 @@ Microsoft Silverlight는 상호 운용 가능하며 다양한 기능을 제공�
 
 Windows Server AppFabric 응용 프로그램 서버의 호스팅 기능은 특별히 통신을 위해 WCF를 사용 하는 응용 프로그램을 배포 하 고 관리 하기 위해 특별히 설계 되었습니다. 호스팅 기능에는 WCF 지원 응용 프로그램을 위해 특별히 설계 된 다양 한 도구 및 구성 옵션이 포함 되어 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel>
 - [기본적인 Windows Communication Foundation 개념](fundamental-concepts.md)

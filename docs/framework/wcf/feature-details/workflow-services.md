@@ -2,17 +2,19 @@
 title: 워크플로 서비스
 ms.date: 03/30/2017
 ms.assetid: 7b05c766-f181-425d-9a3d-2a5e150c85f7
-ms.openlocfilehash: c7a5c6245702497fcd75341b3ff7ba08dc190fa5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ff73055d41531ef8188681d0b95748f62fde8011
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600129"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263245"
 ---
 # <a name="workflow-services"></a>워크플로 서비스
+
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서는 XAML을 사용하여 워크플로 기반 서비스를 선언적으로 자세히 설명할 수 있습니다. 즉, XAML을 사용하여 서비스를 구현하는 워크플로를 정의하고 서비스가 노출하는 엔드포인트를 설명할 수 있습니다. 이 단원의 항목에서는 선언적 방식의 서비스 작성을 지원하는 프로그래밍 모델에 대해 자세히 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [워크플로 서비스 개요](workflow-services-overview.md)  
  워크플로 서비스를 만들고 호스팅하는 데 사용되는 구성 요소에 대해 설명합니다.  
   
@@ -25,7 +27,7 @@ ms.locfileid: "84600129"
  [방법: 워크플로 애플리케이션에서 서비스 액세스](how-to-access-a-service-from-a-workflow-application.md)  
  워크플로 애플리케이션에서 서비스를 호출하는 방법에 대해 설명합니다.  
   
- [Correlation](correlation.md)  
+ [Correlation](correlation.md)(상관 관계)  
  상관 관계를 사용하여 메시지를 서로 매핑하거나 인스턴스에 매핑하는 방법에 대해 설명합니다.  
   
  [순서에 상관없이 메시지 처리](out-of-order-message-processing.md)  

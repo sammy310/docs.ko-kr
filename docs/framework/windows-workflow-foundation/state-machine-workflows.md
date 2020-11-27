@@ -3,17 +3,19 @@ title: 상태 시스템 워크플로
 description: 이 문서에서는 StateMachine 활동을 사용 하 여 상태 시스템 워크플로를 만드는 방법에 대 한 개요를 제공 합니다.
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 2b259f315e0186c13ca44c5eed50d861bce3668a
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5ecfc53795d50a4b633cc26c8911fec0a36f54ac
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421334"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262348"
 ---
 # <a name="state-machine-workflows"></a>상태 시스템 워크플로
+
 상태 시스템은 잘 알려진 프로그램 개발용 패러다임입니다. <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> 및 기타 작업과 함께 <xref:System.Activities.Statements.Transition> 활동은 상태 시스템 워크플로 프로그램을 빌드하는 데 사용할 수 있습니다. 이 항목에서는 상태 시스템 워크플로를 만드는 방법에 대해 간략하게 설명합니다.  
   
 ## <a name="state-machine-workflow-overview"></a>상태 시스템 워크플로 서비스 개요  
+
  상태 시스템 워크플로는 이벤트 구동 방식으로 워크플로를 모델링할 수 있는 모델링 스타일을 제공합니다. <xref:System.Activities.Statements.StateMachine> 활동에는 상태 시스템의 논리를 구성하는 상태 및 전환이 포함되어 있으므로 활동을 사용할 수 있는 모든 위치에서 사용할 수 있습니다. 상태 시스템 런타임에는 다음과 같은 클래스가 있습니다.  
   
 - <xref:System.Activities.Statements.StateMachine>  
@@ -22,28 +24,31 @@ ms.locfileid: "83421334"
   
 - <xref:System.Activities.Statements.Transition>  
   
- 상태 시스템 워크플로를 만들려면 상태를 활동에 추가 하 <xref:System.Activities.Statements.StateMachine> 고 상태 간 흐름을 제어 하기 위해 전환을 사용 합니다. [시작 자습서](getting-started-tutorial.md) 의 [방법: 상태 시스템 워크플로 만들기](how-to-create-a-state-machine-workflow.md)에서 다음 스크린샷에서 세 가지 상태와 세 가지 전환을 포함 하는 상태 시스템 워크플로를 보여 줍니다. **Initialize Target** 은 초기 상태 이며 워크플로의 첫 번째 상태를 나타냅니다. 이는 **시작** 노드에서 앞으로 이어지는 줄로 지정 됩니다. 워크플로의 최종 상태는 전체 **상태**라는 이름이 지정 되며 워크플로가 완료 된 지점을 나타냅니다.  
+ 상태 시스템 워크플로를 만들려면 상태를 활동에 추가 하 <xref:System.Activities.Statements.StateMachine> 고 상태 간 흐름을 제어 하기 위해 전환을 사용 합니다. [시작 자습서](getting-started-tutorial.md) 의 [방법: 상태 시스템 워크플로 만들기](how-to-create-a-state-machine-workflow.md)에서 다음 스크린샷에서 세 가지 상태와 세 가지 전환을 포함 하는 상태 시스템 워크플로를 보여 줍니다. **Initialize Target** 은 초기 상태 이며 워크플로의 첫 번째 상태를 나타냅니다. 이는 **시작** 노드에서 앞으로 이어지는 줄로 지정 됩니다. 워크플로의 최종 상태는 전체 **상태** 라는 이름이 지정 되며 워크플로가 완료 된 지점을 나타냅니다.  
   
  ![완료 된 상태 시스템 워크플로를 보여 주는 그림입니다.](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
  상태 시스템 워크플로에는 하나의 초기 상태만 있어야 하며 하나 이상의 최종 상태가 있어야 합니다. 최종 상태가 아닌 각 상태에는 적어도 하나 이상의 전환이 있어야 합니다. 다음 단원에는 상태 및 전환을 만들고 구성하는 방법에 대해 설명합니다.  
   
 ## <a name="creating-and-configuring-states"></a>상태 만들기 및 구성  
+
  <xref:System.Activities.Statements.State>는 상태 시스템이 가질 수 있는 상태를 나타냅니다. 워크플로에를 추가 하려면 <xref:System.Activities.Statements.State> **도구 상자** 의 **상태 시스템** 섹션에서 **state** 활동 디자이너를 끌어 <xref:System.Activities.Statements.StateMachine> Windows 워크플로 디자이너 화면의 활동에 놓습니다.  
   
  ![도구 상자의 상태 시스템 섹션 스크린샷](./media/state-machine-workflows/state-machine-section-toolbox.jpg)  
   
- 상태를 **초기 상태로**구성 하려면 상태를 마우스 오른쪽 단추로 클릭 하 고 **초기 상태로 설정**을 선택 합니다. 또한 현재 초기 상태가 없으면 워크플로 맨 위에 있는 **시작** 노드의 줄을 원하는 상태로 끌어서 초기 상태를 지정할 수 있습니다. 활동을 <xref:System.Activities.Statements.StateMachine> 워크플로 디자이너에 끌어 놓으면 **State1**이라는 초기 상태로 미리 구성 됩니다. 상태 시스템 워크플로에는 하나의 초기 상태만 있어야 합니다.  
+ 상태를 **초기 상태로** 구성 하려면 상태를 마우스 오른쪽 단추로 클릭 하 고 **초기 상태로 설정** 을 선택 합니다. 또한 현재 초기 상태가 없으면 워크플로 맨 위에 있는 **시작** 노드의 줄을 원하는 상태로 끌어서 초기 상태를 지정할 수 있습니다. 활동을 <xref:System.Activities.Statements.StateMachine> 워크플로 디자이너에 끌어 놓으면 **State1** 이라는 초기 상태로 미리 구성 됩니다. 상태 시스템 워크플로에는 하나의 초기 상태만 있어야 합니다.  
   
  상태 시스템에서 종료 상태를 나타내는 상태를 최종 상태라고 합니다. 최종 상태는 <xref:System.Activities.Statements.State.IsFinal%2A> 속성이 `true`로 설정되어 있고, <xref:System.Activities.Statements.State.Exit%2A> 활동이 없으며, 작업에서 발생되는 전환이 없는 상태입니다. 워크플로에 최종 상태를 추가 하려면 **도구 상자** 의 **상태 시스템** 섹션에서 대상 **상태** 활동 디자이너를 끌어 <xref:System.Activities.Statements.StateMachine> Windows 워크플로 디자이너 화면의 활동에 놓습니다. 상태 시스템 워크플로에는 하나 이상의 최종 상태가 있어야 합니다.  
   
 ### <a name="configuring-entry-and-exit-actions"></a>Entry 및 Exit 작업 구성  
+
  상태에는 <xref:System.Activities.Statements.State.Entry%2A> 및 <xref:System.Activities.Statements.State.Exit%2A> 작업을 사용할 수 있습니다. 최종 상태로 구성된 상태에는 진입 작업만 있어야 합니다. 워크플로 인스턴스가 특정 상태에 들어가면 진입 작업의 모든 활동이 실행됩니다. 진입 작업이 완료 되 면 상태 전환에 대 한 트리거가 예약 됩니다. 다른 상태로의 전환이 확정되면 상태가 동일한 상태로 다시 전환되어도 종료 작업의 활동이 실행됩니다. 종료 작업이 완료 되 면 전환 작업의 작업이 실행 된 다음 새 상태가로 전환 되 고 해당 항목 작업이 예약 됩니다.  
   
 > [!NOTE]
 > 상태 시스템 워크플로를 디버깅하면 중단점을 루트 상태 시스템 활동 및 상태 시스템 워크플로 내의 상태에 배치할 수 있습니다. 중단점은 전환에 직접 배치할 수는 없지만 상태 및 전환 내에 포함된 모든 활동에 배치할 수 있습니다.  
   
 ## <a name="creating-and-configuring-transitions"></a>전환 만들기 및 구성  
+
  모든 상태에는 전환이 없을 수 있는 최종 상태를 제외 하 고 하나 이상의 전환이 있어야 합니다. 상태를 상태 시스템 워크플로에 추가한 후에 전환이 추가되거나 상태를 놓을 때 전환이 만들어질 수 있습니다.  
   
  를 추가 하 <xref:System.Activities.Statements.State> 고 한 단계로 전환을 만들려면 **도구 상자** 의 **상태 시스템** 섹션에서 **state** 활동을 끌어 workflow designer의 다른 상태 위로 가져갑니다. 끌어 온 <xref:System.Activities.Statements.State>를 다른 <xref:System.Activities.Statements.State> 위로 가져가면 <xref:System.Activities.Statements.State> 주위에 삼각형 4개가 표시됩니다. <xref:System.Activities.Statements.State>를 삼각형 4개 중 하나에 놓으면 상태 시스템에 추가되고, 소스 <xref:System.Activities.Statements.State>에서 놓은 대상 <xref:System.Activities.Statements.State>로의 전환이 만들어집니다. 자세한 내용은 [전환 활동 디자이너](/visualstudio/workflow-designer/transition-activity-designer)를 참조 하세요.  
@@ -63,9 +68,10 @@ ms.locfileid: "83421334"
  상태 시스템 워크플로를 만드는 방법에 대 한 자세한 내용은 [방법: 상태 시스템 워크플로 만들기](how-to-create-a-state-machine-workflow.md), [StateMachine 활동 디자이너](/visualstudio/workflow-designer/statemachine-activity-designer), [상태 활동 디자이너](/visualstudio/workflow-designer/state-activity-designer), 상태 [활동 디자이너](/visualstudio/workflow-designer/finalstate-activity-designer)및 [전환 활동 디자이너](/visualstudio/workflow-designer/transition-activity-designer)를 참조 하세요.  
   
 ## <a name="state-machine-terminology"></a>상태 시스템 용어  
+
  이 단원에서는 이 항목의 전체에서 사용되는 상태 시스템 용어 모음을 정의합니다.  
   
- 주  
+ 시스템 상태  
  상태 시스템을 구성하는 기본 단위입니다. 상태 시스템은 특정 시간에 한 상태로 있을 수 있습니다.  
   
  진입 작업  

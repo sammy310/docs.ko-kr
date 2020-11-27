@@ -2,15 +2,16 @@
 title: 트랜잭션 프로토콜
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 17131c4cd10d9441ec65f9da4137147a703eb87c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 08ce12109d89e9087ced06be409435ac8c5b9d08
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600986"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261542"
 ---
 # <a name="transaction-protocols"></a>트랜잭션 프로토콜
-WCF (Windows Communication Foundation)는 WS 원자성 트랜잭션과 WS 조정 프로토콜을 구현 합니다.  
+
+WCF (Windows Communication Foundation)는 WS-Atomic 트랜잭션과 WS-Coordination 프로토콜을 구현 합니다.  
   
 |사양/문서|버전|링크|  
 |-----------------------------|-------------|----------|  
@@ -57,7 +58,7 @@ WCF (Windows Communication Foundation)는 WS 원자성 트랜잭션과 WS 조정
   
  다음 XML 네임스페이스 및 관련 접두사는 이 문서 전체에서 사용됩니다.  
   
-|접두사|버전|네임스페이스 URI|  
+|접두사|Version|네임스페이스 URI|  
 |------------|-------------|-------------------|  
 |s11||<https://schemas.xmlsoap.org/soap/envelope/>|  
 |wsa|1.0 이전<br /><br /> 1.0|`http://www.w3.org/2004/08/addressing`<br /><br /> <https://www.w3.org/2005/08/addressing/>|  
@@ -68,16 +69,19 @@ WCF (Windows Communication Foundation)는 WS 원자성 트랜잭션과 WS 조정
 |xsd||<https://www.w3.org/2001/XMLSchema>|  
   
 ## <a name="transaction-manager-bindings"></a>트랜잭션 관리자 바인딩  
- R1001: WS-AT 1.0 트랜잭션에 참여 하는 트랜잭션 관리자는 WS 원자성 트랜잭션과 ws-addressing 메시지 교환을 위해 SOAP 1.1 및 WS-ADDRESSING 2004/08를 사용 해야 합니다.  
+
+ R1001: WS-AT 1.0 트랜잭션에 참여 하는 트랜잭션 관리자는 WS-Atomic 트랜잭션 및 WS-Coordination 메시지 교환을 위해 SOAP 1.1 및 WS-Addressing 2004/08를 사용 해야 합니다.  
   
  R1002: WS-AT 1.1 트랜잭션에 참여 중인 트랜잭션 관리자는 WS-Atomic Transaction 및 WS-Coordination 메시지 교환을 위해 SOAP 1.1과 WS-Addressing 2005/08을 사용해야 합니다.  
   
  애플리케이션 메시지는 이러한 바인딩에 제한되지 않으며, 이에 대해서는 나중에 설명합니다.  
   
 ### <a name="transaction-manager-https-binding"></a>트랜잭션 관리자 HTTPS 바인딩  
+
  트랜잭션 관리자 HTTPS 바인딩은 전송 보안에만 전적으로 의존하여 보안을 수행하며, 트랜잭션 트리에 있는 각 발신자-수신자 쌍 간의 신뢰를 설정합니다.  
   
 #### <a name="https-transport-configuration"></a>HTTPS 전송 구성  
+
  X.509 인증서는 트랜잭션 관리자 ID를 설정하는 데 사용합니다. 클라이언트/서버 인증이 필요하며, 클라이언트/서버 권한 부여는 구현 정보로 유지됩니다.  
   
 - R1111: 연결을 통해 표시되는 X.509 인증서에는 원래 컴퓨터의 FQDN(정규화된 도메인 이름)과 일치하는 주체 이름이 있어야 합니다.  
@@ -85,20 +89,25 @@ WCF (Windows Communication Foundation)는 WS 원자성 트랜잭션과 WS 조정
 - B1112: DNS는 X.509 주체 이름을 확인한 시스템에서 각 발신자-수신자 쌍 간에 작동해야 합니다.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>바인딩 구성 활성화 및 등록  
+
  WCF에는 HTTPS를 통한 상관 관계가 있는 요청/응답 이중 바인딩이 필요 합니다. 요청/회신 메시지 교환 패턴의 상관 관계 및 설명에 대한 자세한 내용은 8단원 WS-Atomic Transaction을 참조하십시오.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 프로토콜 바인딩 구성  
+
  WCF는 HTTPS를 통해 단방향 (데이터 그램) 메시지를 지원 합니다. 메시지 간의 상관 관계는 구현 정보로 유지됩니다.  
   
- B1131: 구현은 `wsa:ReferenceParameters` WCF의 2pc 메시지의 상관 관계를 얻기 위해 ws-addressing에 설명 된 대로를 지원 해야 합니다.  
+ B1131: 구현은 `wsa:ReferenceParameters` WCF의 2pc 메시지의 상관 관계를 얻기 위해 WS-Addressing에 설명 된 대로를 지원 해야 합니다.  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>트랜잭션 관리자가 혼합된 보안 바인딩  
+
  이는 ID 설정을 목적으로 WS-Coordination 발급 토큰 모델과 혼합된 전송 보안을 사용하는 대체(혼합 모드) 바인딩입니다. 두 바인딩 간에 다른 요소는 활성화와 등록뿐입니다.  
   
 #### <a name="https-transport-configuration"></a>HTTPS 전송 구성  
+
  X.509 인증서는 트랜잭션 관리자 ID를 설정하는 데 사용합니다. 클라이언트/서버 인증이 필요하며, 클라이언트/서버 권한 부여는 구현 정보로 유지됩니다.  
   
 #### <a name="activation-message-binding-configuration"></a>활성화 메시지 바인딩 구성  
+
  활성화 메시지는 일반적으로 애플리케이션과 해당 로컬 트랜잭션 관리자 간에 발생하기 때문에 대개 상호 운용성에 관여하지 않습니다.  
   
  B1221: WCF는 활성화 메시지에 이중 HTTPS 바인딩 ( [메시징 프로토콜](messaging-protocols.md)에서 설명)을 사용 합니다. 요청 및 회신 메시지는 WS-AT 1.0용 WS-Addressing 2004/08 및 WS-AT 1.1용 WS-Addressing 2005/08을 사용하여 상호 관련됩니다.  
@@ -112,6 +121,7 @@ WCF (Windows Communication Foundation)는 WS 원자성 트랜잭션과 WS 조정
  `t:IssuedTokens`보내는 메시지에 연결 하기 위해 새 헤더를 생성 해야 합니다 `wscoor:CreateCoordinationContextResponse` .  
   
 #### <a name="registration-message-binding-configuration"></a>등록 메시지 바인딩 구성  
+
  B1231: WCF는 이중 HTTPS 바인딩 ( [메시징 프로토콜](messaging-protocols.md)에 설명)을 사용 합니다. 요청 및 회신 메시지는 WS-AT 1.0용 WS-Addressing 2004/08 및 WS-AT 1.1용 WS-Addressing 2005/08을 사용하여 상호 관련됩니다.  
   
  8단원 WS-AtomicTransaction에서는 메시지 교환 패턴의 상관 관계 및 설명에 대해 좀 더 자세히 설명합니다.  
@@ -121,11 +131,13 @@ WCF (Windows Communication Foundation)는 WS 원자성 트랜잭션과 WS 조정
  `wsse:Timestamp`요소가 발급 된를 사용 하 여 서명 되어야 합니다 `SecurityContextToken STx` . 이 서명은 특정 트랜잭션과 연관된 토큰을 소유했음을 나타내며, 트랜잭션에 등록된 참가자를 인증하는 데 사용합니다. RegistrationResponse 메시지는 HTTPS를 통해 다시 보내집니다.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 프로토콜 바인딩 구성  
+
  WCF는 HTTPS를 통해 단방향 (데이터 그램) 메시지를 지원 합니다. 메시지 간의 상관 관계는 구현 정보로 유지됩니다.  
   
- B1241: 구현은 `wsa:ReferenceParameters` WCF의 2pc 메시지의 상관 관계를 얻기 위해 ws-addressing에 설명 된 대로를 지원 해야 합니다.  
+ B1241: 구현은 `wsa:ReferenceParameters` WCF의 2pc 메시지의 상관 관계를 얻기 위해 WS-Addressing에 설명 된 대로를 지원 해야 합니다.  
   
 ## <a name="application-message-exchange"></a>애플리케이션 메시지 교환  
+
  바인딩이 다음 보안 요구 사항을 만족하는 경우, 애플리케이션에서는 애플리케이션 간 메시지에 대해 특정 바인딩을 자유롭게 사용할 수 있습니다.  
   
 - R2001: 애플리케이션 간 메시지는 메시지의 헤더에서 `t:IssuedTokens`와 함께 `CoordinationContext` 헤더를 이동시켜야 합니다.  
@@ -139,6 +151,7 @@ WCF (Windows Communication Foundation)는 WS 원자성 트랜잭션과 WS 조정
 ## <a name="message-examples"></a>메시지 예제  
   
 ### <a name="createcoordinationcontext-requestresponse-messages"></a>CreateCoordinationContext 요청/응답 메시지  
+
  다음 메시지는 요청/응답 패턴을 따릅니다.  
   
 #### <a name="createcoordinationcontext-with-wscoor-10"></a>WSCoor 1.0를 사용 하는 CreateCoordinationContext  
@@ -352,6 +365,7 @@ xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
 ```  
   
 ### <a name="registration-messages"></a>등록 메시지  
+
  다음 메시지는 등록 메시지입니다.  
   
 #### <a name="register-with-wscoor-10"></a>WSCoor 1.0에 등록  
@@ -542,6 +556,7 @@ xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-u
 ```  
   
 ### <a name="two-phase-commit-protocol-messages"></a>2단계 커밋 프로토콜 메시지  
+
  다음 메시지는 2PC(2단계 커밋) 프로토콜과 관련됩니다.  
   
 #### <a name="commit-with-wsat-10"></a>WSAT 1.0를 사용 하 여 커밋  
@@ -591,6 +606,7 @@ xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-u
 ```  
   
 ### <a name="application-messages"></a>애플리케이션 메시지  
+
  다음 메시지는 애플리케이션 메시지입니다.  
   
 #### <a name="application-message-request"></a>애플리케이션 메시지-요청  

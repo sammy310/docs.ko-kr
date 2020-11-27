@@ -1,15 +1,16 @@
 ---
-title: WMI 공급자
+title: WMI Provider
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 3fc982bcec563d5e4b90ba3b25989859d7d86281
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9d654527c6897e071f914d4015ba9a225974b0f1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552886"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263775"
 ---
-# <a name="wmi-provider"></a>WMI 공급자
+# <a name="wmi-provider"></a>WMI Provider
+
 이 샘플에서는 WCF에서 빌드된 WMI(Windows Management Instrumentation) (WMI) 공급자를 사용 하 여 런타임에 WCF (Windows Communication Foundation) 서비스에서 데이터를 수집 하는 방법을 보여 줍니다. 또한 사용자 정의 WMI 개체를 서비스에 추가하는 방법도 보여 줍니다. 이 샘플에서는 [시작](getting-started-sample.md) 에 대해 WMI 공급자를 활성화 하 고 런타임에 서비스에서 데이터를 수집 하는 방법을 보여 줍니다 `ICalculator` .  
   
  WMI는 Microsoft에서 구현한 WBEM(Web-Based Enterprise Management) 표준입니다. WMI SDK에 대 한 자세한 내용은 [WMI(Windows Management Instrumentation)](/windows/desktop/WmiSdk/wmi-start-page)를 참조 하세요. WBEM은 애플리케이션에서 외부 관리 도구에 관리 계측을 노출하는 방법을 지정하는 산업 표준입니다.  
@@ -29,6 +30,7 @@ ms.locfileid: "90552886"
  이 구성 항목은 WMI 인터페이스를 노출합니다. 관리 애플리케이션이 이 인터페이스를 통해 연결하여 애플리케이션의 관리 계측에 액세스할 수 있습니다.  
   
 ## <a name="custom-wmi-object"></a>사용자 지정 WMI 개체  
+
  서비스에 WMI 개체를 추가하면 기본 제공 WMI 공급자 정보와 함께 사용자 정의 정보를 표시할 수 있습니다. 그러려면 Installutil.exe 애플리케이션을 사용하여 WMI에 서비스의 스키마를 게시합니다. 이 작업을 수행하기 위한 지침과 자세한 설명은 항목 끝 부분에 있는 설치 지침을 참조하십시오.  
   
 ## <a name="accessing-wmi-information"></a>WMI 정보 액세스  
@@ -144,6 +146,6 @@ cscript EnumerateCustomObjects.js
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 모니터링 샘플](/previous-versions/appfabric/ff383407(v=azure.10))

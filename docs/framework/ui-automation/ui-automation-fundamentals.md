@@ -7,20 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - UI automation fundamentals
 ms.assetid: d270ab45-542b-45c0-a240-e80aa4a61b95
-ms.openlocfilehash: d62bf321e81fccc10c23b6563a58c1ea6af995f0
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 17d5c55f5f98764cca5988a677e34a5ceb4bbf82
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168428"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262855"
 ---
 # <a name="ui-automation-fundamentals"></a>UI 자동화 기본 사항
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 섹션에는 API에 대 한 개략적인 개요가 포함 되어 있습니다 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] .  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [UI 자동화 개요](ui-automation-overview.md)  
  [UI 자동화 및 Microsoft Active Accessibility](ui-automation-and-microsoft-active-accessibility.md)  
  [UI 자동화 트리 개요](ui-automation-tree-overview.md)  
@@ -31,6 +33,7 @@ ms.locfileid: "87168428"
  [자동화된 테스트를 위해 UI 자동화 사용](using-ui-automation-for-automated-testing.md)  
   
 ## <a name="reference"></a>참조  
+
  <xref:System.Windows.Automation>  
   
  <xref:System.Windows.Automation.Provider>  

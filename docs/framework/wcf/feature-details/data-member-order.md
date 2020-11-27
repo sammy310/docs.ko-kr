@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 5c192d3bda65a7364345df4310dccd96cbe04056
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1cb63569c1789b1577588caf63fb0a0259e530ff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247366"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262166"
 ---
 # <a name="data-member-order"></a>데이터 멤버 순서
+
 일부 애플리케이션에서는 serialize된 XML로 표시되는 데이터 순서와 같이 여러 데이터 멤버로부터 데이터가 전송 또는 수신되는 순서를 알고 있는 것이 좋습니다. 이 순서는 경우에 따라 변경해야 할 수 있습니다. 이 항목에서는 순서 지정 규칙에 대해 설명합니다.  
   
 ## <a name="basic-rules"></a>기본 규칙  
+
  데이터의 순서를 지정하는 기본 규칙은 다음과 같습니다.  
   
 - 데이터 계약 형식이 상속 계층 구조의 일부이면 기본 형식의 데이터 멤버가 항상 첫 번째 순서입니다.  
@@ -29,7 +31,8 @@ ms.locfileid: "85247366"
   
  사전순은 <xref:System.String.CompareOrdinal%2A> 메서드 호출로 설정됩니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
+
  다음과 같은 코드를 생각해 볼 수 있습니다.  
   
  [!code-csharp[C_DataContractNames#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#4)]

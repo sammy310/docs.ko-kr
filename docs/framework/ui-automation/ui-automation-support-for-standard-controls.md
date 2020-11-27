@@ -6,28 +6,33 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 17916a6978008439e91caae00d8b6f26045f9018
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 0a5a0b61a6492d9efb62799fa610859b247cf26e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166119"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261074"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>표준 컨트롤에 대한 UI 자동화 지원
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 항목에 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 는 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] , Win32 및 Windows Forms 프레임 워크 용으로 개발 된 응용 프로그램의 표준 컨트롤에 대 한 지원 정보가 포함 되어 있습니다.  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>
+
 ## <a name="windows-presentation-foundation-controls"></a>WPF(Windows Presentation Foundation) 컨트롤  
+
  사용자 상호 작용 지원 또는 정보를 제공하는 모든 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 요소에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 전체 기본 지원이 있습니다. 패널 등과 같은 기타 요소는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 표시되지 않습니다.  
   
 <a name="Win32_Controls"></a>
+
 ## <a name="win32-controls"></a>Win32 컨트롤  
+
  대부분의 Win32 컨트롤은 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] UIAutomationClientsideProviders.dll의 클라이언트 쪽 공급자를 통해에 노출 됩니다. 이 어셈블리는 UI 자동화 클라이언트 애플리케이션과 함께 사용할 수 있도록 자동으로 등록됩니다.  
   
- *ComCtrl32.dll*버전 6의 컨트롤에 대해서만 전체 지원이 제공 됩니다.  
+ *ComCtrl32.dll* 버전 6의 컨트롤에 대해서만 전체 지원이 제공 됩니다.  
   
  다음과 같은 컨트롤이 지원됩니다.  
   
@@ -35,7 +40,7 @@ ms.locfileid: "87166119"
 |----------------|------------------|  
 |단추|단추|  
 |단추|RadioButton|  
-|단추|그룹화|  
+|단추|그룹|  
 |단추|CheckBox|  
 |단추|Hyperlink|  
 |단추|SplitButton|  
@@ -72,9 +77,9 @@ ms.locfileid: "87166119"
 |ToolbarWindow32|CheckBox|  
 |ToolbarWindow32|RadioButton|  
 |ToolbarWindow32|구분 기호|  
-|tooltips_class32|도구 설명|  
-|#32774|도구 설명|  
-|ReBarWindow32|도구 모음|  
+|tooltips_class32|ToolTip|  
+|#32774|ToolTip|  
+|ReBarWindow32|Toolbar|  
 |SysTreeView32|트리|  
 |SysTreeView32|TreeItem|  
   
@@ -82,19 +87,21 @@ ms.locfileid: "87166119"
   
  다음 컨트롤은 지원되지 않습니다.  
   
-|클래스 이름|컨트롤 종류|  
+|클래스 이름|컨트롤 형식|  
 |----------------|------------------|  
 |SysAnimate32|이미지|  
 |SysPager|Spinner|  
 |SysDateTimePick32|사용자 지정|  
-|SysMonthCal32|일정|  
-|MS_WINNOTE|Tooltip|  
-|VBBubble|Tooltip|  
+|SysMonthCal32|달력|  
+|MS_WINNOTE|도구 설명|  
+|VBBubble|도구 설명|  
 |스크롤 막대(독립 실행형 컨트롤로 사용되는 경우)|슬라이더|  
 |SuperGrid|사용자 지정|  
   
 <a name="Windows_Forms_Controls"></a>
+
 ## <a name="windows-forms-controls"></a>Windows Forms 컨트롤  
+
  Windows Forms 컨트롤은 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] UIAutomationClientsideProviders.dll 클라이언트 쪽 공급자를 통해에 노출 됩니다. 이 어셈블리는 UI 자동화 클라이언트 애플리케이션과 함께 사용할 수 있도록 자동으로 등록됩니다.  
   
  일반적으로 Win32 공용 컨트롤에 대 한 관리 되는 래퍼 Windows Forms 컨트롤은에서 지원 됩니다 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . 다음과 같은 컨트롤이 지원됩니다.  
@@ -129,9 +136,9 @@ ms.locfileid: "87166119"
 |StatusBar|  
 |TabControl/TabPage|  
 |TextBox|  
-|Timer|  
-|도구 모음|  
-|도구 설명|  
+|타이머|  
+|Toolbar|  
+|ToolTip|  
 |TrackBar|  
 |TreeView|  
 |VscrollBar|  

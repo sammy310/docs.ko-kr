@@ -7,14 +7,15 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 13f265e414383e646f3e138feb890661fa01e2de
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 2efd8d5352da060baf019ff1b2b44df8d109503c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167989"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262816"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>DataGrid 컨트롤 형식에 대한 UI 자동화 지원
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -25,6 +26,7 @@ ms.locfileid: "87167989"
  다음 섹션에서는 DataGrid 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , Win32 또는 Windows Forms 모든 데이터 표 컨트롤에 적용 됩니다.  
   
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
+
  다음 표는 데이터 표 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 트리에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 - 컨트롤 뷰|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 - 콘텐츠 뷰|  
@@ -32,7 +34,9 @@ ms.locfileid: "87167989"
 |DataGrid<br /><br /> <ul><li>Header(0, 1 또는 1개)<br /><br /> <ul><li>HeaderItem(행 또는 열 개수)</li></ul></li><li>DataItem(0개 이상, 계층 구조로 구조화할 수 있음)</li></ul>|DataGrid<br /><br /> -DataItem (0 개 이상, 계층 구조에서 구조화할 수 있음)|  
   
 <a name="Required_UI_Automation_Properties"></a>
+
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성  
+
  다음 표에서는 값 또는 정의가 데이터 표 컨트롤과 특별히 관련된 속성을 나열하여 보여줍니다. 속성에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.  
   
 |속성|값|참고|  
@@ -49,6 +53,7 @@ ms.locfileid: "87167989"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|메모를 참조하세요.|데이터 표 컨트롤은 일반적으로 정적 텍스트 레이블에서 `Name` 속성의 값을 가져옵니다. 정적 텍스트 레이블이 없는 경우 애플리케이션 개발자가 `Name` 속성의 값을 할당해야 합니다. `Name` 속성 값은 편집 컨트롤의 텍스트 내용이 포함되지 않아야 합니다.|  
   
 ## <a name="required-ui-automation-control-patterns"></a>필요한 UI 자동화 컨트롤 패턴  
+
  다음 표에서는 모든 데이터 표 컨트롤에서 지원되는 데 필요한 컨트롤 패턴을 나열하여 보여줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)를 참조하세요.  
   
 |컨트롤 패턴|지원|참고|  
@@ -69,10 +74,12 @@ ms.locfileid: "87167989"
 - Table Item 컨트롤 패턴  
   
 <a name="Required_UI_Automation_Events"></a>
+
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  
+
  다음 표에서는 모든 데이터 표 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](ui-automation-events-overview.md)를 참조하세요.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|참고|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|메모|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|없음|  
@@ -90,6 +97,7 @@ ms.locfileid: "87167989"
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|필수|없음|  
   
 ## <a name="date-grid-control-type-example"></a>Date Grid 컨트롤 형식 예제  
+
  다음 그림은 DataGrid 컨트롤 형식을 구현하는 목록 뷰 컨트롤을 보여줍니다.  
   
  ![두 개의 데이터 항목이 있는 목록 보기 컨트롤의 그래픽](./media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
@@ -100,7 +108,7 @@ ms.locfileid: "87167989"
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |<ul><li>DataGrid(Table, Grid, Selection)</li><li>헤더<br /><br /> <ul><li>HeaderItem "Name" (Invoke)</li><li>HeaderItem "Date Modified" (Invoke)</li><li>HeaderItem "Size" (Invoke)</li></ul></li><li>그룹 "Contoso" (TableItem, GridItem, SelectionItem, Table *, Grid \* )<br /><br /> <ul><li>DataItem "Accounts Receivable.doc" (SelectionItem, Invoke, TableItem \* , GridItem \* )</li><li>DataItem "Accounts Payable.doc" (SelectionItem, Invoke, TableItem \* , GridItem \* )</li></ul></li></ul>|<ul><li>DataGrid(Table, Grid, Selection)</li><li>그룹 "Contoso" (TableItem, GridItem, SelectionItem, Table *, Grid \* )<br /><br /> <ul><li>DataItem "Accounts Receivable.doc" (SelectionItem, Invoke, TableItem \* , GridItem \* )</li><li>DataItem "Accounts Payable.doc" (SelectionItem, Invoke, TableItem \* , GridItem \* )</li></ul></li></ul>|  
   
- \*이전 예제에서는 여러 수준의 컨트롤이 포함 된 DataGrid를 보여 줍니다. Group ("Contoso") 컨트롤에는 두 개의 DataItem 컨트롤("Accounts Receivable.doc" 및 "Accounts Payable.doc")이 있습니다. DataGrid/GridItem 쌍은 다른 수준의 쌍과 관계가 없습니다. Group 아래의 DataItem 컨트롤은 ListItem 컨트롤 형식으로도 노출될 수 있으므로, 단순한 데이터 요소가 아닌 선택 가능한 개체로서 보다 명확하게 표시될 수 있습니다. 이 예제에서는 그룹화된 데이터 항목의 하위 요소는 포함되지 않습니다.  
+ \* 이전 예제에서는 여러 수준의 컨트롤이 포함 된 DataGrid를 보여 줍니다. Group ("Contoso") 컨트롤에는 두 개의 DataItem 컨트롤("Accounts Receivable.doc" 및 "Accounts Payable.doc")이 있습니다. DataGrid/GridItem 쌍은 다른 수준의 쌍과 관계가 없습니다. Group 아래의 DataItem 컨트롤은 ListItem 컨트롤 형식으로도 노출될 수 있으므로, 단순한 데이터 요소가 아닌 선택 가능한 개체로서 보다 명확하게 표시될 수 있습니다. 이 예제에서는 그룹화된 데이터 항목의 하위 요소는 포함되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목
 

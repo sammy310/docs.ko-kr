@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-ms.openlocfilehash: a1a068b7ba94d5e5be4fd90d6adb48b0d25a8b9e
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 4cb4967ea704064ae08d09311ff33720e3871e19
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309640"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263648"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>작업 병렬 라이브러리 및 PLINQ의 ETW 이벤트
 
@@ -40,6 +40,7 @@ EVENT_DESCRIPTOR.Id = 1
 |ExclusiveTo|<xref:System.Int64?displayProperty=nameWithType>|루프 카운터의 종료 값입니다.|
 
 ### <a name="parallel-loop-end"></a>병렬 루프 종료
+
  EVENT_DESCRIPTOR.Task = 2
 
  EVENT_DESCRIPTOR.Id = 2
@@ -54,6 +55,7 @@ EVENT_DESCRIPTOR.Id = 1
 |totalIterations|<xref:System.Int64?displayProperty=nameWithType>|총 반복 횟수입니다.|
 
 ### <a name="parallel-invoke-begin"></a>병렬 호출 시작
+
  EVENT_DESCRIPTOR.Task = 3
 
  EVENT_DESCRIPTOR.Id = 3
@@ -70,6 +72,7 @@ EVENT_DESCRIPTOR.Id = 1
 |ActionCount|<xref:System.Int32?displayProperty=nameWithType>|병렬 호출에서 실행될 작업 수입니다.|
 
 ### <a name="parallel-invoke-end"></a>병렬 호출 종료
+
  EVENT_DESCRIPTOR.Task = 4
 
  EVENT_DESCRIPTOR.Id = 4
@@ -83,11 +86,13 @@ EVENT_DESCRIPTOR.Id = 1
 |ForkJoinContextID|<xref:System.Int32?displayProperty=nameWithType>|분기/조인 의미 체계에 따라 이벤트에 대한 중첩 및 쌍을 나타내는 데 사용되는 고유 식별자입니다.|
 
 ## <a name="plinq-etw-events"></a>PLINQ ETW 이벤트
+
  PLINQ에 대한 EVENT_HEADER.ProviderId GUID는 다음과 같습니다.
 
 `0x159eeeec, 0x4a14, 0x4418, 0xa8, 0xfe, 0xfa, 0xab, 0xcd, 0x98, 0x78, 0x87`
 
 ### <a name="parallel-query-begin"></a>병렬 쿼리 시작
+
  EVENT_DESCRIPTOR.Task = 1
 
  EVENT_DESCRIPTOR.Id = 1
@@ -101,6 +106,7 @@ EVENT_DESCRIPTOR.Id = 1
 |QueryID|<xref:System.Int32?displayProperty=nameWithType>|고유 쿼리 식별자입니다.|
 
 ### <a name="parallel-query-end"></a>병렬 쿼리 종료
+
  EVENT_DESCRIPTOR.Task = 2
 
  EVENT_DESCRIPTOR.Id = 2

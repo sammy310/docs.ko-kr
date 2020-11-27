@@ -4,20 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: a444df2b05803ec54c5bd9030ce12209cfe9bd07
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccafce51cadba588dc6c4e8fc8b476f3cd8ee699
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183986"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262712"
 ---
 # <a name="load-balancing"></a>부하 분산
-WCF(Windows 통신 Foundation) 응용 프로그램의 용량을 늘리는 한 가지 방법은 부하 균형 이있는 서버 팜에 배포하여 응용 프로그램을 확장하는 것입니다. WCF 응용 프로그램은 Windows 네트워크 로드 밸런싱과 같은 소프트웨어 로드 밸런싱 및 하드웨어 기반 로드 밸런싱 어플라이언스를 비롯한 표준 로드 밸런싱 기술을 사용하여 로드 밸런싱을 조정할 수 있습니다.  
+
+WCF (Windows Communication Foundation) 응용 프로그램의 용량을 높이는 한 가지 방법은 부하 분산 된 서버 팜에 배포 하 여 확장 하는 것입니다. WCF 응용 프로그램은 Windows 네트워크 부하 분산과 같은 소프트웨어 부하 분산 장치 및 하드웨어 기반 부하 분산 어플라이언스를 비롯 한 표준 부하 분산 기술을 사용 하 여 부하를 분산할 수 있습니다.  
   
- 다음 섹션에서는 다양한 시스템 제공 바인딩을 사용하여 빌드된 WCF 응용 프로그램의 부하 분산에 대한 고려 사항에 대해 설명합니다.  
+ 다음 섹션에서는 다양 한 시스템 제공 바인딩을 사용 하 여 빌드된 WCF 응용 프로그램의 부하 분산에 대 한 고려 사항을 설명 합니다.  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>기본 HTTP 바인딩을 사용한 부하 분산  
- 로드 균형 조정의 관점에서 볼 때, 를 <xref:System.ServiceModel.BasicHttpBinding> 사용하여 통신하는 WCF 응용 프로그램은 다른 일반적인 HTTP 네트워크 트래픽 유형(정적 HTML 콘텐츠, ASP.NET 페이지 또는 ASMX 웹 서비스)과 다르지 않습니다. 이 바인딩을 사용하는 WCF 채널은 기본적으로 상태 비활성이며 채널이 닫히면 연결을 종료합니다. 따라서 <xref:System.ServiceModel.BasicHttpBinding>은 기존의 HTTP 부하 분산 기술과 호환됩니다.  
+
+ 부하 분산 측면에서,를 사용 하 여 통신 하는 WCF 응용 프로그램 <xref:System.ServiceModel.BasicHttpBinding> 은 다른 공용 형식의 HTTP 네트워크 트래픽 (정적 HTML 콘텐츠, ASP.NET 페이지 또는 ASMX 웹 서비스)과 다르지 않습니다. 이 바인딩을 사용 하는 WCF 채널은 기본적으로 상태 비저장 이며 채널이 닫힐 때 연결을 종료 합니다. 따라서 <xref:System.ServiceModel.BasicHttpBinding>은 기존의 HTTP 부하 분산 기술과 호환됩니다.  
   
  기본적으로 <xref:System.ServiceModel.BasicHttpBinding>은 `Keep-Alive` 값을 사용하여 메시지의 연결 HTTP 헤더를 보내는데, 이를 통해 클라이언트는 영구 연결을 지원하는 서비스에 대해 이러한 연결을 설정할 수 있습니다. 또한 이 구성에서는 이전에 설정된 연결을 다시 사용하여 이후 메시지를 동일한 서버에 보낼 수 있으므로 처리량을 향상시킬 수 있습니다. 하지만 연결을 다시 사용하면 클라이언트가 부하 분산 팜의 특정 서버에만 강력하게 연결되어 라운드 로빈 부하 분산의 효율성이 떨어집니다. 이를 방지하려면, `Keep-Alive` 또는 사용자 정의 <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A>에 <xref:System.ServiceModel.Channels.CustomBinding> 속성을 사용하여 서버에서 HTTP <xref:System.ServiceModel.Channels.Binding>를 비활성화할 수 있습니다. 다음 예제에서는 구성을 사용하여 이 작업을 수행하는 방법을 보여 줍니다.  
   
@@ -56,7 +58,7 @@ WCF(Windows 통신 Foundation) 응용 프로그램의 용량을 늘리는 한 �
 </configuration>  
 ```  
   
- .NET Framework 4에 도입된 단순화된 구성을 사용하여 다음과 같은 단순화된 구성을 사용하여 동일한 동작을 수행할 수 있습니다.  
+ .NET Framework 4에서 도입 된 단순화 된 구성을 사용 하 여 다음과 같은 간소화 된 구성을 사용 하 여 동일한 동작을 수행할 수 있습니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -80,14 +82,16 @@ WCF(Windows 통신 Foundation) 응용 프로그램의 용량을 늘리는 한 �
  기본 엔드포인트, 바인딩 및 동작에 대한 자세한 내용은 [단순화된 구성](simplified-configuration.md) 및 [WCF 서비스를 위한 단순화된 구성](./samples/simplified-configuration-for-wcf-services.md)을 참조하세요.  
   
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>WSHttp 바인딩 및 WSDualHttp 바인딩을 사용한 부하 분산  
+
  기본 바인딩 구성을 일부 수정한다면, HTTP 부하 분산 기술을 사용하여 <xref:System.ServiceModel.WSHttpBinding>과 <xref:System.ServiceModel.WSDualHttpBinding>을 모두 부하 분산할 수 있습니다.  
   
-- 보안 컨텍스트 설정 해제: 이 작업은 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>의 <xref:System.ServiceModel.WSHttpBinding> 속성을 `false`로 설정하여 수행할 수 있습니다. 또는 보안 세션이 필요한 경우 [보안 세션](./feature-details/secure-sessions.md) 항목에 설명된 대로 상태 충실 한 보안 세션을 사용할 수 있습니다. 상태 저장 보안 세션을 사용하면 보안 세션을 각 요청과 함께 보호 보안 토큰의 일부로 전송할 때 서비스의 상태를 비저장 상태로 유지할 수 있습니다. 상태 저장 보안 세션을 사용하려면, 필요한 구성 설정이 시스템에서 제공되는 <xref:System.ServiceModel.Channels.CustomBinding> 및 <xref:System.ServiceModel.Channels.Binding>에 노출되지 않으므로 <xref:System.ServiceModel.WSHttpBinding> 또는 사용자 정의 <xref:System.ServiceModel.WSDualHttpBinding>을 사용해야 합니다.  
+- 보안 컨텍스트 설정 해제: 이 작업은 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>의 <xref:System.ServiceModel.WSHttpBinding> 속성을 `false`로 설정하여 수행할 수 있습니다. 또는 보안 세션이 필요한 경우 보안 [세션](./feature-details/secure-sessions.md) 항목의 설명에 따라 상태 저장 보안 세션을 사용할 수 있습니다. 상태 저장 보안 세션을 사용하면 보안 세션을 각 요청과 함께 보호 보안 토큰의 일부로 전송할 때 서비스의 상태를 비저장 상태로 유지할 수 있습니다. 상태 저장 보안 세션을 사용하려면, 필요한 구성 설정이 시스템에서 제공되는 <xref:System.ServiceModel.Channels.CustomBinding> 및 <xref:System.ServiceModel.Channels.Binding>에 노출되지 않으므로 <xref:System.ServiceModel.WSHttpBinding> 또는 사용자 정의 <xref:System.ServiceModel.WSDualHttpBinding>을 사용해야 합니다.  
   
 - 신뢰할 수 있는 세션은 사용하지 마십시오. 이 기능은 기본적으로 해제되어 있습니다.  
   
 ## <a name="load-balancing-the-nettcp-binding"></a>Net.TCP 바인딩을 사용한 부하 분산  
- <xref:System.ServiceModel.NetTcpBinding>은 IP 계층 부하 분산 기술을 사용하여 부하 분산될 수 있습니다. 하지만 <xref:System.ServiceModel.NetTcpBinding>은 연결 대기 시간을 줄이기 위해 기본적으로 TCP 연결을 풀링합니다. 이러한 최적화 작업은 기본 부하 분산 메커니즘과 충돌하게 됩니다. <xref:System.ServiceModel.NetTcpBinding>을 최적화하기 위한 기본 구성 값은 연결 풀 설정의 일부인 대여 시간 제한입니다. 연결을 풀링하면 클라이언트 연결이 팜 내의 특정 서버와 이루어지게 됩니다. 이러한 연결 수명은 대여 시간 제한 설정으로 제어할 수 있지만 수명이 늘어나면 팜 내 여러 서버 간에 부하 분산 균형이 맞지 않게 됩니다. 결과적으로 평균 호출 시간이 늘어납니다. 따라서 <xref:System.ServiceModel.NetTcpBinding>을 부하 분산 시나리오에 사용할 때는 이 바인딩에서 사용하는 기본 대여 시간 제한을 줄이는 것이 좋습니다. 애플리케이션에 따라 최적 값이 다르겠지만 부하 분산 시나리오에 적절한 대여 시간 제한은 30초부터입니다. 채널 임대 시간 시간 시간 및 기타 전송 할당량에 대한 자세한 내용은 [전송 할당량을](./feature-details/transport-quotas.md)참조하십시오.  
+
+ <xref:System.ServiceModel.NetTcpBinding>은 IP 계층 부하 분산 기술을 사용하여 부하 분산될 수 있습니다. 하지만 <xref:System.ServiceModel.NetTcpBinding>은 연결 대기 시간을 줄이기 위해 기본적으로 TCP 연결을 풀링합니다. 이러한 최적화 작업은 기본 부하 분산 메커니즘과 충돌하게 됩니다. <xref:System.ServiceModel.NetTcpBinding>을 최적화하기 위한 기본 구성 값은 연결 풀 설정의 일부인 대여 시간 제한입니다. 연결을 풀링하면 클라이언트 연결이 팜 내의 특정 서버와 이루어지게 됩니다. 이러한 연결 수명은 대여 시간 제한 설정으로 제어할 수 있지만 수명이 늘어나면 팜 내 여러 서버 간에 부하 분산 균형이 맞지 않게 됩니다. 결과적으로 평균 호출 시간이 늘어납니다. 따라서 <xref:System.ServiceModel.NetTcpBinding>을 부하 분산 시나리오에 사용할 때는 이 바인딩에서 사용하는 기본 대여 시간 제한을 줄이는 것이 좋습니다. 애플리케이션에 따라 최적 값이 다르겠지만 부하 분산 시나리오에 적절한 대여 시간 제한은 30초부터입니다. 채널 임대 시간 제한 및 기타 전송 할당량에 대 한 자세한 내용은 [전송 할당량](./feature-details/transport-quotas.md)을 참조 하세요.  
   
  부하 분산 시나리오에서 성능을 최대화하려면 <xref:System.ServiceModel.NetTcpSecurity>(<xref:System.ServiceModel.SecurityMode.Transport> 또는 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>)를 사용하는 것이 좋습니다.  
   

@@ -2,15 +2,16 @@
 title: 개체 참조
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: ba4ee3fd0cc16130f66570891ecc295b2d2c50aa
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55cadc908a3479ee3d104354bcbfd3ea49b15d07
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599986"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262387"
 ---
 # <a name="object-references"></a>개체 참조
-이 샘플에서는 서버와 클라이언트 간에 개체를 참조로 전달하는 방법을 보여 줍니다. 이 샘플에서는 시뮬레이트된 *소셜 네트워크*를 사용 합니다. 인맥 네트워크는 친구 목록을 포함하는 `Person` 클래스로 구성되며, 이 목록의 친구는 `Person` 클래스의 인스턴스이며 자체적으로도 친구 목록을 가지고 있습니다. 이를 기반으로 개체 그래프가 생성됩니다. 서비스는 이러한 인맥 네트워크에 대한 작업을 노출합니다.  
+
+이 샘플에서는 서버와 클라이언트 간에 개체를 참조로 전달하는 방법을 보여 줍니다. 이 샘플에서는 시뮬레이트된 *소셜 네트워크* 를 사용 합니다. 인맥 네트워크는 친구 목록을 포함하는 `Person` 클래스로 구성되며, 이 목록의 친구는 `Person` 클래스의 인스턴스이며 자체적으로도 친구 목록을 가지고 있습니다. 이를 기반으로 개체 그래프가 생성됩니다. 서비스는 이러한 인맥 네트워크에 대한 작업을 노출합니다.  
   
  이 샘플에서 서비스는 IIS(인터넷 정보 서비스)를 통해 호스팅되고 클라이언트는 콘솔 애플리케이션(.exe)입니다.  
   
@@ -18,6 +19,7 @@ ms.locfileid: "84599986"
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
 ## <a name="service"></a>서비스  
+
  `Person` 클래스에는 <xref:System.Runtime.Serialization.DataContractAttribute> 특성이 적용되어 있으며, 클래스를 참조 형식으로 선언하도록 <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 필드가 `true`로 설정되어 있습니다. 모든 속성에는 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성이 적용되어 있습니다.  
   
 ```csharp
@@ -92,6 +94,7 @@ public List<Person> GetCommonFriends(List<Person> people)
 ```  
   
 ## <a name="client"></a>클라이언트  
+
  클라이언트 프록시는 Visual Studio의 **서비스 참조 추가** 기능을 사용 하 여 만듭니다.  
   
  5개의 `Person` 개체로 구성된 인맥 네트워크가 생성됩니다. 클라이언트는 서비스의 메서드 3개를 각각 호출합니다.  

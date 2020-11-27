@@ -1,15 +1,16 @@
 ---
-title: 서비스 설명
+title: 서비스 설명을
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: 467d8437ec6b3383974b1faf2a96aacb1524771a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c0fa389e9c894bcfec49ce7538b512c96f176c23
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596580"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262582"
 ---
-# <a name="service-description"></a>서비스 설명
+# <a name="service-description"></a>서비스 설명을
+
 Service Description 샘플에서는 런타임에 서비스에서 서비스 설명 정보를 검색하는 방법을 보여 줍니다. 이 샘플은 서비스에 대 한 설명 정보를 반환 하도록 정의 된 추가 서비스 작업을 사용 하 여 [시작](getting-started-sample.md)을 기반으로 합니다. 반환되는 정보는 서비스의 기본 주소 및 엔드포인트를 나열합니다. 서비스는 <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost> 및 <xref:System.ServiceModel.Description.ServiceDescription> 클래스를 사용하여 이 정보를 제공합니다.  
   
  이 샘플에서 클라이언트는 콘솔 애플리케이션(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.  

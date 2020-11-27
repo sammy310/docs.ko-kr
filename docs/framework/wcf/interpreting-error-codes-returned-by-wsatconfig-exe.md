@@ -2,22 +2,23 @@
 title: wsatConfig.exe에서 반환된 오류 코드 해석
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 0a65bea68f595e5e28c05a142ecdd9589f12bed5
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c5f423f5054a3a80bc0c730444ca9e90c203e288
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321044"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262751"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>wsatConfig.exe에서 반환된 오류 코드 해석
+
 이 항목에서는 WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)에서 생성한 모든 오류 코드 및 수행할 동작을 나열합니다.  
   
 ## <a name="list-of-error-codes"></a>오류 코드 목록  
   
-|오류 코드|설명|수행할 동작|  
+|오류 코드|Description|수행할 동작|  
 |----------------|-----------------|------------------------------------|  
-|0|작업이 완료되었습니다.|없음|  
-|1|예기치 않은 오류|Microsoft에 문의하십시오.|  
+|0|작업이 성공했습니다.|없음|  
+|1|예기치 않은 오류|Microsoft에 문의|  
 |2|보안 설정을 검색하기 위해 MSDTC에 연결하는 동안 예기치 않은 오류가 발생했습니다.|MSDTC 서비스가 비활성화되지 않았는지 확인하고 반환된 예외에 표시된 모든 문제를 해결합니다.|  
 |3|WsatConfig.exe가 실행된 계정에는 네트워크 보안 설정을 읽을 수 있는 충분한 권한이 없습니다.|Administrator 사용자 계정으로 WsatConfig.exe를 실행합니다.|  
 |4|WS-AT를 지원하기 전에 MSDTC에 "네트워크 DTC 액세스"를 사용합니다.|MSDTC에 "네트워크 DTC 액세스"를 사용하고 유틸리티를 다시 실행합니다.|  
@@ -44,7 +45,7 @@ ms.locfileid: "72321044"
 |28|`-network` 명령줄 옵션이 잘못되었습니다.|`-network` 명령줄 옵션을 수정하여 "사용" 또는 "사용 안 함"을 올바로 지정합니다.|  
 |29|`-maxTimeout` 명령줄 옵션이 잘못되었습니다.|표시된 대로 `-maxTimeout` 명령줄 옵션을 수정합니다.|  
 |30|`-timeout` 명령줄 옵션이 잘못되었습니다.|표시된 대로 `-timeout` 명령줄 옵션을 수정합니다.|  
-|31|`-traceLevel` 명령줄 옵션이 잘못되었습니다.|`-traceLevel` 명령줄 옵션을 수정하여 다음에서 유효한 값을 지정합니다.<br /><br /> -꺼짐<br />-오류<br />-   Critical<br />-경고<br />-정보<br />-자세한 정보<br />-모두|  
+|31|`-traceLevel` 명령줄 옵션이 잘못되었습니다.|`-traceLevel` 명령줄 옵션을 수정하여 다음에서 유효한 값을 지정합니다.<br /><br /> -꺼짐<br />-   오류<br />-   Critical<br />-   경고<br />-정보<br />-자세한 정보<br />-모두|  
 |32|`-traceActivity` 명령줄 옵션이 잘못되었습니다.|"사용" 또는 "사용 안 함"을 지정하여 `-traceActivity` 명령줄 옵션을 수정합니다.|  
 |33|`-traceProp` 명령줄 옵션이 잘못되었습니다.|"사용" 또는 "사용 안 함"을 지정하여 `-traceProp` 명령줄 옵션을 수정합니다.|  
 |34|`-tracePII` 명령줄 옵션이 잘못되었습니다.|"사용" 또는 "사용 안 함"을 지정하여 `-tracePII` 명령줄 옵션을 수정합니다.|  
@@ -52,7 +53,7 @@ ms.locfileid: "72321044"
 |38|프로세스 또는 사용자에게 방화벽 구성을 변경할 충분한 권한이 없습니다.|Administrator 사용자 계정으로 WsatConfig.exe를 실행합니다.|  
 |39|방화벽 구성을 업데이트하는 동안 WsatConfig.exe에서 오류가 발생했습니다.|실행 가능한 항목에 대한 오류 메시지를 확인합니다.|  
 |40|WsatConfig.exe에서 인증서의 프라이빗 키 파일에 MSDTC 읽기 액세스 권한을 부여할 수 없습니다.|Administrator 사용자 계정으로 WsatConfig.exe를 실행합니다.|  
-|41|WinFX 설치를 찾을 수 없거나 검색 된 버전이 도구에서 구성할 수 있는 것과 일치 하지 않습니다.|WinFX가 올바르게 설치 되었는지 확인 하 고 해당 버전의 WinFX와 함께 제공 되는 Wsatconfig.exe 도구를 사용 하 여 WS-AT를 구성 합니다.|  
+|41|WinFX 설치를 찾을 수 없거나 검색 된 버전이 도구에서 구성할 수 있는 것과 일치 하지 않습니다.|WinFX가 올바르게 설치 되었는지 확인 하 고 해당 버전의 WinFX와 함께 제공 되는 WsatConfig.exe 도구를 사용 하 여 WS-AT를 구성 합니다.|  
 |42|명령줄에 인수가 여러 번 지정되었습니다.|WsatConfig.exe를 실행할 때 각 인수를 한 번만 지정합니다.|  
 |43|WS-AT를 사용할 수 없는 경우 WsatConfig.exe에서는 WS-AT 설정을 업데이트할 수 없습니다.|`-network:enable`을 추가 명령줄 인수로 지정합니다.|  
 |44|필수 핫픽스가 없습니다. 먼저 핫픽스를 설치해야 WS-AT를 구성할 수 있습니다.|필요한 핫픽스 설치에 대 한 지침은 WinFX 릴리스 정보를 참조 하세요.|  
@@ -67,6 +68,6 @@ ms.locfileid: "72321044"
 |55|ETW 추적 세션을 시작하려는 동안 예기치 않은 오류가 발생했습니다.|Microsoft에 문의하십시오.|  
 |56|ETW 추적 세션을 시작하려는 동안 예기치 않은 오류가 발생했습니다.|Microsoft에 문의하십시오.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

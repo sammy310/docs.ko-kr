@@ -2,14 +2,15 @@
 title: 사용자 지정 WSDL 게시
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: b18ac2f72d58c768b3784e1c414a71cdaec50c01
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 83377e1c72ef5774c909729abd1312cce5364ab0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596697"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262868"
 ---
 # <a name="custom-wsdl-publication"></a>사용자 지정 WSDL 게시
+
 이 샘플에서는 다음 방법을 설명합니다.  
   
 - <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType>을 사용자 지정 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> 특성에 구현하여 특성 속성을 WSDL 주석으로 내보내기.  
@@ -24,6 +25,7 @@ ms.locfileid: "84596697"
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
 ## <a name="service"></a>서비스  
+
  이 샘플의 서비스에는 두 개의 사용자 지정 특성이 표시되어 있습니다. 첫 특성인 `WsdlDocumentationAttribute`에서는 생성자의 문자열을 받으며 적용하면 사용을 설명하는 문자열에 계약 인터페이스 또는 작업을 제공할 수 있습니다. 둘째 특성인 `WsdlParamOrReturnDocumentationAttribute`는 적용하면 작업의 값을 설명하는 값 또는 매개 변수를 반환할 수 있습니다. 다음 예에서는 이 특성을 사용하여 설명한 서비스 계약인 `ICalculator`가 표시됩니다.  
   
 ```csharp  
@@ -170,9 +172,11 @@ for (int i = 0; i < args.Length; i++)
 ```  
   
 ## <a name="svcutil-client"></a>Svcutil 클라이언트  
+
  이 샘플에서는 Svcutil.exe를 사용하지 않습니다. 계약은 샘플에서 사용자 지정 WSDL 가져오기 및 코드 생성을 보여 준 후에 서비스를 호출할 수 있도록 generatedClient.cs 파일에 제공됩니다. 이 예에 다음 사용자 지정 WSDL 가져오기를 사용할 수 있도록 Svcutil.exe를 실행하고 `/svcutilConfig` 옵션을 지정하여 `WsdlDocumentation.dll` 라이브러리를 참조하며 이 샘플에 사용된 클라이언트 구성 파일의 경로를 지정할 수 있습니다. 하지만 `WsdlDocumentationImporter`를 로드하려면 Svuctil.exe에서 `WsdlDocumentation.dll` 라이브러리를 찾아 로드할 수 있어야 합니다. 즉 전역 어셈블리 캐시 또는 경로에 등록되어 있거나 Svcutil.exe와 같은 디렉터리에 있어야 합니다. 이와 같은 기본 샘플의 경우 가장 쉽게 수행할 수 있는 일은 Svcutil.exe와 클라이언트 구성 파일을 `WsdlDocumentation.dll`과 같은 디렉터리에 복사한 다음 그 위치에서 실행하는 것입니다.  
   
 ## <a name="the-custom-wsdl-importer"></a>사용자 지정 WSDL 가져오기  
+
  사용자 지정 <xref:System.ServiceModel.Description.IWsdlImportExtension> 개체 `WsdlDocumentationImporter`에서는 가져온 ServiceEndpoints에 추가할 <xref:System.ServiceModel.Description.IContractBehavior> 및 <xref:System.ServiceModel.Description.IOperationBehavior>와 계약 또는 작업 코드를 만들 때 코드 생성을 수정하기 위해 호출할 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 및 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension>도 구현합니다.  
   
  먼저, <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 메서드에서 샘플은 WSDL 주석이 계약 수준과 작업 수준 중 어느 쪽에 있는지를 확인하고 가져온 주석 텍스트를 생성자에 전달하며 적절한 범위에서 동작을 추가합니다.  
@@ -219,6 +223,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 ```  
   
 ## <a name="the-client-application"></a>클라이언트 애플리케이션  
+
  클라이언트 애플리케이션에서는 애플리케이션 구성 파일에 사용자 지정 WSDL 가져오기를 지정하여 로드합니다.  
   
 ```xml  

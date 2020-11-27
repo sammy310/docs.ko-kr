@@ -6,14 +6,15 @@ helpviewer_keywords:
 - UI Automation, control types
 - control types, UI Automation
 ms.assetid: 75159ef8-bd43-4d13-acb7-1f1fe9253160
-ms.openlocfilehash: 204e950fca74c4f7bd2c13dc8a8891152954c071
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 851d509e719afb658971ea5f6fc2f8fdd6bd2cf7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166135"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261347"
 ---
 # <a name="ui-automation-control-types-overview"></a>UI 자동화 컨트롤 형식 개요
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -22,7 +23,9 @@ ms.locfileid: "87166135"
  알려진 식별자를 사용하면 보조 기술 디바이스가 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 에서 사용 가능한 컨트롤의 형식 및 이 컨트롤을 조작하는 방식을 더 쉽게 확인할 수 있습니다.  
   
 <a name="UI_Automation_Control_Type_Requisites"></a>
+
 ## <a name="ui-automation-control-type-requisites"></a>UI 자동화 컨트롤 형식 필수 요소  
+
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 컨트롤 형식은 공급자가 충족해야 하는 일련의 조건을 제공합니다. 이러한 조건이 충족되는 경우 컨트롤은 특정 컨트롤 형식 이름을 사용할 수 있습니다. 각 컨트롤 형식에는 다음에 대한 조건이 있습니다.  
   
 - [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴 - 지원해야 하는 컨트롤 패턴, 선택 사항인 컨트롤 패턴, 컨트롤에서 지원해서는 안 되는 컨트롤 패턴  
@@ -34,7 +37,9 @@ ms.locfileid: "87166135"
  컨트롤이 특정 컨트롤 형식에 대한 조건을 충족한다면 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> 속성 값이 해당 컨트롤 형식을 나타내는 것입니다.  
   
 <a name="Current_UI_Automation_Control_Types"></a>
+
 ## <a name="current-ui-automation-control-types"></a>현재 UI 자동화 컨트롤 형식  
+
  다음 목록에는 현재 제공되는 일련의 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 컨트롤 형식이 나옵니다.  
   
 - [Button 컨트롤 형식에 대한 UI 자동화 지원](ui-automation-support-for-the-button-control-type.md)  

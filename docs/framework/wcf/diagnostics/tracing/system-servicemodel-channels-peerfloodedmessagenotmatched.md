@@ -2,17 +2,19 @@
 title: System.ServiceModel.Channels.PeerFloodedMessageNotMatched
 ms.date: 03/30/2017
 ms.assetid: 43f4eab6-0176-4ac3-9a47-f35419dea539
-ms.openlocfilehash: 71b79087f62fae4d8ee24d3ab0baa628467d4bb8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c33ed2d8f75c63746e89b88de011a2ea0c088b5a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593986"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261522"
 ---
 # <a name="systemservicemodelchannelspeerfloodedmessagenotmatched"></a>System.ServiceModel.Channels.PeerFloodedMessageNotMatched
+
 PeerNode가 로컬 채널과 일치하지 않는 메시지를 받았습니다.  
   
 ## <a name="description"></a>Description  
+
  이 추적은 들어오는 서비스 장애 유발 메시지를 처리하는 동안 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목

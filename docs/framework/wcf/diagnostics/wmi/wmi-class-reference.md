@@ -2,20 +2,23 @@
 title: WMI 클래스 참조
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-ms.openlocfilehash: 226e4dedecd152f3a3d4143280529c7823339932
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9830fbf50e8df625e3d3077a66c66e0370204acb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795879"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262257"
 ---
 # <a name="wmi-class-reference"></a>WMI 클래스 참조
+
 이 섹션에는 WCF (Windows Communication Foundation) WMI 공급자에 의해 노출 되는 모든 WMI 클래스가 나열 되어 있습니다.  
   
 ## <a name="accessing-wmi-instances"></a>WMI 인스턴스에 액세스  
+
  WMI 개체 참조에 나열된 모든 클래스는 Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation 및 Endpoint를 제외하고 직접 인스턴스화할 수 없습니다. 다른 인스턴스에 액세스하려면 앞에서 설명한 최상위 클래스의 속성에 액세스합니다. 예를 들어 > 바인딩-> BindingElements 끝점 인스턴스에서 TransportBindingElement 인스턴스에 액세스할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [ActivityTransfer](activitytransfer.md)  
   
  [AppDomainInfo](appdomaininfo.md)  
@@ -28,7 +31,7 @@ ms.locfileid: "70795879"
   
  [BinaryMessageEncodingBindingElement](binarymessageencodingbindingelement.md)  
   
- [Binding](binding.md)  
+ [바인딩](binding.md)  
   
  [BindingElement](bindingelement.md)  
   
@@ -46,7 +49,7 @@ ms.locfileid: "70795879"
   
  [ConnectionOrientedTransportBindingElement](connectionorientedtransportbindingelement.md)  
   
- [Contract](contract.md)  
+ [내용의](contract.md)  
   
  [CustomBindingElement](custombindingelement.md)  
   
@@ -102,7 +105,7 @@ ms.locfileid: "70795879"
   
  [SecurityBindingElement](securitybindingelement.md)  
   
- [Service](service.md)  
+ [서비스](service.md)  
   
  [ServiceAppDomain](serviceappdomain.md)  
   

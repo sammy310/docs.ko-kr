@@ -2,14 +2,15 @@
 title: Service Auditing Behavior
 ms.date: 03/30/2017
 ms.assetid: 59bf0cda-e496-4418-a3a1-2f0f6e85f8ce
-ms.openlocfilehash: bfe13146a7f7cdec648a82a34c34077ec5466809
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ae7ed2059b491a71de9c806e78f1fb784da197fa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599934"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262569"
 ---
 # <a name="service-auditing-behavior"></a>Service Auditing Behavior
+
 이 샘플에서는 서비스 작업 중에 서비스 이벤트 감사를 활성화하기 위해 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>를 사용하는 방법을 보여 줍니다. 이 샘플은 [시작](getting-started-sample.md)을 기반으로 합니다. 서비스와 클라이언트는를 사용 하 여 구성 [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) 됩니다. `mode`의 특성이로 [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md) 설정 되 `Message` 고 `clientCredentialType` 가로 설정 `Windows` 된 경우 이 샘플에서 클라이언트는 콘솔 애플리케이션(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.  
   
 > [!NOTE]

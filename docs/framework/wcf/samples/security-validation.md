@@ -2,20 +2,22 @@
 title: 보안 유효성 검사
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: ec7b7f96c1f6489f677970164f74c176b301f55b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1260aaa756e7be33ce2aa1bcce5fc79be553c990
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557387"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262621"
 ---
 # <a name="security-validation"></a>보안 유효성 검사
+
 이 샘플에서는 사용자 지정 동작을 통해 컴퓨터에 있는 서비스의 유효성을 검사하여 특정 기준을 충족하는지 확인하는 방법을 보여 줍니다. 이 샘플에서는 서비스의 각 엔드포인트를 검사하여 보안 바인딩 요소가 포함되어 있는지 확인하는 방식으로 사용자 지정 동작을 통해 서비스의 유효성을 검사합니다. 이 샘플은 [시작](getting-started-sample.md)을 기반으로 합니다.  
   
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
 ## <a name="endpoint-validation-custom-behavior"></a>엔드포인트 유효성 검사 사용자 지정 동작  
+
  ph x="1" /&gt; 인터페이스에 포함된 <xref:System.ServiceModel.Description.IServiceBehavior> 메서드에 사용자 코드를 추가함으로써 서비스 또는 엔드포인트에 사용자 지정 동작을 제공하여 사용자 정의 작업을 수행할 수 있습니다. 다음 코드는 서비스에 포함된 각 엔드포인트를 루프하여 바인딩 컬렉션에서 보안 바인딩을 검색하는 데 사용됩니다.  
   
 ```csharp
@@ -84,9 +86,9 @@ public void Validate(ServiceDescription serviceDescription,
   
 1. **시작** 메뉴를 클릭 하 고 **실행**...을 선택 합니다.  
   
-2. `eventvwr` 를 입력한 다음 **확인**을 클릭합니다.  
+2. `eventvwr` 를 입력한 다음 **확인** 을 클릭합니다.  
   
-3. 이벤트 뷰어 창에서 **응용 프로그램**을 클릭 합니다.  
+3. 이벤트 뷰어 창에서 **응용 프로그램** 을 클릭 합니다.  
   
 4. **응용 프로그램** 창의 "WebHost" 범주 아래에서 최근에 추가 된 "system.servicemodel 4.0.0.0" 이벤트를 두 번 클릭 하 여 안전 하지 않은 끝점 메시지를 표시 합니다.  
   
@@ -107,6 +109,6 @@ public void Validate(ServiceDescription serviceDescription,
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 모니터링 샘플](/previous-versions/appfabric/ff383407(v=azure.10))

@@ -5,17 +5,19 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: b07937b0a94c24a934b17d6cf21b726ee0d4362e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 490c89f5cfbecd4b2cc0c0e639aa97849132a809
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593491"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261984"
 ---
 # <a name="data-transfer-and-serialization"></a>데이터 전송 및 Serialization
+
 연결된 시스템에서 서비스 및 클라이언트는 데이터 교환에 의존하여 작업을 수행합니다. 서비스 또는 클라이언트 개발자는 효율적이 고 쉽게 관리할 수 있는 응용 프로그램을 만들기 위해 WCF (Windows Communication Foundation)에서 데이터 및 데이터 serialization을 처리 하는 방법을 이해 해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [서비스 계약에서 데이터 전송 지정](specifying-data-transfer-in-service-contracts.md)  
  서비스에서 데이터 전송의 기본 개념에 대해 설명합니다.  
   
@@ -47,6 +49,7 @@ ms.locfileid: "84593491"
  WCF의 전체 데이터 전송 디자인에 대해 설명 합니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.ServiceModel>  
   
  <xref:System.Runtime.Serialization.DataContractSerializer>  
@@ -58,6 +61,7 @@ ms.locfileid: "84593491"
  <xref:System.Xml.Serialization>  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [인코더 및 Serializer 확장](../extending/extending-encoders-and-serializers.md)  
   
 ## <a name="see-also"></a>참고 항목

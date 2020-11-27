@@ -2,14 +2,15 @@
 title: Poison Message Handling in MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 54e69d60aabb3793ef4a8d800dd0e6238c28f231
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2ad7ad5b7e1865d5c9843720861b7a8e440f47f0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602442"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261360"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Poison Message Handling in MSMQ 4.0
+
 이 샘플에서는 서비스에서 포이즌 메시지 처리를 수행하는 방법을 보여 줍니다. 이 샘플은 [트랜잭션 된 MSMQ 바인딩](transacted-msmq-binding.md) 샘플을 기반으로 합니다. 이 샘플에서는 `netMsmqBinding`을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 애플리케이션으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.
 
  대기 중인 통신에서 클라이언트는 큐를 사용하여 서비스와 통신합니다. 좀더 정확하게 말하면 클라이언트는 큐에 메시지를 보내고, 서비스는 큐에서 보낸 메시지를 받습니다. 따라서 서비스와 클라이언트가 동시에 실행되고 있지 않더라도 큐를 사용하여 통신할 수 있습니다.
@@ -21,6 +22,7 @@ ms.locfileid: "84602442"
  이 샘플은 windows Server 2003 및 Windows XP 플랫폼에서 제공 되는 제한 된 포이즌 기능과 Windows Vista에서 제공 하는 완전 한 포이즌 기능을 보여 줍니다. 두 샘플에서 목표는 포이즌 메시지를 큐에서 다른 큐로 이동 하는 것입니다. 그러면 포이즌 메시지 서비스에서 해당 큐에 서비스를 제공할 수 있습니다.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 Poison Handling 샘플
+
  Windows Vista에서 MSMQ는 포이즌 메시지를 저장 하는 데 사용할 수 있는 포이즌 하위 큐 기능을 제공 합니다. 이 샘플에서는 Windows Vista를 사용 하는 포이즌 메시지를 처리 하는 최선의 방법을 보여 줍니다.
 
  Windows Vista의 포이즌 메시지 검색은 정교 합니다. 검색에 도움이 되는 속성은 세 가지입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>는 큐에서 지정된 메시지를 다시 읽고 애플리케이션으로 디스패치하여 처리할 수 있는 횟수입니다. 메시지를 애플리케이션으로 디스패치할 수 없어 큐에 다시 배치하거나 애플리케이션이 서비스 작업에서 트랜잭션을 롤백하는 경우에 큐의 메시지를 다시 읽을 수 있습니다. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>는 메시지를 재시도 큐로 이동하는 횟수입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>에 도달하면 메시지가 재시도 큐로 이동합니다. <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 속성은 메시지가 재시도 큐에서 다시 기본 큐로 이동한 후의 시간 지연입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>는 0으로 다시 설정되고, 메시지가 다시 시도됩니다. 메시지를 읽으려는 시도가 모두 실패하면 메시지가 포이즌으로 표시됩니다.
@@ -35,7 +37,7 @@ ms.locfileid: "84602442"
 
 - Reject: 메시지를 보낸 사람의 배달 못 한 편지 큐로 돌려보내는 방법으로 메시지를 거부합니다. 이 값은 Windows Vista 에서만 사용할 수 있습니다.
 
- 이 샘플에서는 포이즌 메시지에 `Move` 처리를 사용하는 방법을 보여 줍니다. `Move`메시지를 포이즌 하위 큐로 이동 시킵니다.
+ 이 샘플에서는 포이즌 메시지에 `Move` 처리를 사용하는 방법을 보여 줍니다. `Move` 메시지를 포이즌 하위 큐로 이동 시킵니다.
 
  서비스 계약은 `IOrderProcessor`이며, 이는 큐에 사용하기에 적합한 단방향 서비스를 정의합니다.
 
@@ -155,6 +157,7 @@ public class OrderProcessorService : IOrderProcessor
 ```
 
 ## <a name="processing-messages-from-the-poison-message-queue"></a>포이즌 메시지 큐의 메시지 처리
+
  포이즌 메시지 서비스에서는 최종 포이즌 메시지 큐로부터 메시지를 읽어 처리합니다.
 
  포이즌 메시지 큐의 메시지는 메시지를 처리 중인 서비스로 주소가 지정되는 메시지입니다. 이 서비스는 포이즌 메시지 서비스 엔드포인트와 다를 수 있습니다. 따라서 포이즌 메시지 서비스가 큐에서 메시지를 읽으면 WCF 채널 계층은 끝점에서 불일치를 찾아 메시지를 디스패치하지 않습니다. 이 경우 메시지의 주소는 주문 처리 서비스로 지정되지만 포이즌 메시지 서비스에서 메시지를 받게 됩니다. 메시지의 주소가 다른 엔드포인트로 지정되는 경우에도 메시지를 계속 받으려면 `ServiceBehavior`를 추가하여 메시지 주소가 지정된 서비스 엔드포인트와 일치하는 주소를 필터링해야 합니다. 포이즌 메시지 큐에서 읽은 메시지를 성공적으로 처리하려면 이러한 구성이 필요합니다.
@@ -281,7 +284,7 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
     2. **기능** 탭을 확장 합니다.
 
-    3. **개인 메시지 큐**를 마우스 오른쪽 단추로 클릭 하 고 **새로 만들기**, **개인 큐**를 선택 합니다.
+    3. **개인 메시지 큐** 를 마우스 오른쪽 단추로 클릭 하 고 **새로 만들기**, **개인 큐** 를 선택 합니다.
 
     4. **트랜잭션** 상자를 확인 합니다.
 
