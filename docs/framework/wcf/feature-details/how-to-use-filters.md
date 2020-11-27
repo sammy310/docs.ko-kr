@@ -2,14 +2,15 @@
 title: '방법: 필터 사용'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 434171138e75a0f4c336cd80cc2beb574b10001e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 149c0809820d6a4a9c8dabfb545258b9a3ffb40b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598894"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280847"
 ---
 # <a name="how-to-use-filters"></a>방법: 필터 사용
+
 이 항목에서는 여러 필터를 사용하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서 메시지는 regularCalc와 roundingCalc라는 두 계산기 서비스 구현으로 라우트됩니다. 두 구현 모두 같은 연산을 지원하지만 한 서비스에서 반환 전에 가장 가까운 정수 값으로 모든 계산을 반올림합니다. 클라이언트 애플리케이션은 서비스의 반올림 버전을 사용할 것인지 여부를 지정해야 합니다. 서비스 기본 설정이 지정되지 않으면 메시지는 두 서비스 사이에서 부하 분산됩니다. 두 서비스에 의해 노출되는 연산은 다음과 같습니다.  
   
 - 추가  
@@ -132,7 +133,7 @@ ms.locfileid: "84598894"
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     로 시작 하는 주소에서 메시지를 수신 하는 경우 `http://localhost/routingservice/router/rounding/` 이 필터는 **true**로 평가 됩니다. 이 구성에서 사용 하는 기본 주소는이 `http://localhost/routingservice/router` 고 roundingEndpoint에 지정 된 주소는 "반올림/계산기" 이므로이 끝점과 통신 하는 데 사용 되는 전체 주소는 `http://localhost/routingservice/router/rounding/calculator` 이 필터와 일치 합니다.  
+     로 시작 하는 주소에서 메시지를 수신 하는 경우 `http://localhost/routingservice/router/rounding/` 이 필터는 **true** 로 평가 됩니다. 이 구성에서 사용 하는 기본 주소는이 `http://localhost/routingservice/router` 고 roundingEndpoint에 지정 된 주소는 "반올림/계산기" 이므로이 끝점과 통신 하는 데 사용 되는 전체 주소는 `http://localhost/routingservice/router/rounding/calculator` 이 필터와 일치 합니다.  
   
     > [!NOTE]
     > PrefixEndpointAddress 필터는 일치를 수행할 때 호스트 이름을 평가하지 않습니다. 하나의 호스트가 다양한 호스트 이름을 사용하여 참조될 수 있고, 이러한 다양한 이름은 모두 클라이언트 애플리케이션에서 호스트를 참조하는 유효한 방법일 수 있기 때문입니다. 예를 들어 다음 항목은 모두 같은 호스트를 참조할 수 있습니다.  
@@ -226,6 +227,7 @@ ms.locfileid: "84598894"
     ```  
   
 ## <a name="example"></a>예제  
+
  다음은 구성 파일의 전체 목록입니다.  
   
 ```xml  

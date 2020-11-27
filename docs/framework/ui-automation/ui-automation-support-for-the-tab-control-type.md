@@ -7,14 +7,15 @@ helpviewer_keywords:
 - UI Automation, Tab control type
 - control types, Tab
 ms.assetid: f8be2732-836d-4e4d-85e2-73aa39479bf4
-ms.openlocfilehash: b236d1d9818ff4fce201761e14cb63d646363d52
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 4ba9e8d79d45058ccb4563d84549b4597b49891b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163757"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281406"
 ---
 # <a name="ui-automation-support-for-the-tab-control-type"></a>Tab 컨트롤 형식에 대한 UI 자동화 지원
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -25,7 +26,9 @@ ms.locfileid: "87163757"
  다음 섹션에서는 Tab 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , Win32 또는 Windows Forms 모든 탭 컨트롤에 적용 됩니다.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
+
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
+
  다음 표는 탭 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 트리에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [UI 자동화 트리 개요](ui-automation-tree-overview.md)를 참조 하세요.  
   
 |컨트롤 뷰|콘텐츠 뷰|  
@@ -39,7 +42,9 @@ ms.locfileid: "87163757"
 |탭<br /><br /> <ul><li>TabItem(1개 이상)</li><li>Group(0개 이상)<br /><br /> <ul><li>TabItem(0개 이상)</li></ul></li><li>ScrollBar(0개 이상)<br /><br /> <ul><li>Button(0 또는 2개)</li></ul></li></ul>|탭<br /><br /> <ul><li>TabItem(1개 이상)</li><li>Group(0개 이상)<br /><br /> <ul><li>TabItem(0개 이상)</li></ul></li></ul>|  
   
 <a name="Required_UI_Automation_Properties"></a>
+
 ## <a name="required-ui-automation-properties"></a>필요한 UI 자동화 속성  
+
  다음 표에서는 값 또는 정의가 Tab 컨트롤 형식과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다. 속성에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [클라이언트에 대 한 UI 자동화 속성](ui-automation-properties-for-clients.md)을 참조 하세요.  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|참고|  
@@ -48,7 +53,7 @@ ms.locfileid: "87163757"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|메모를 참조하세요.|전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|메모를 참조하세요.|컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|메모를 참조하세요.|탭 컨트롤에는 Name 속성이 거의 필요하지 않습니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|예|탭 컨트롤에 클릭 가능한 지점이 없습니다.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|아니요|탭 컨트롤에 클릭 가능한 지점이 없습니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|메모를 참조하세요.|탭 컨트롤에는 일반적으로 이 속성을 통해 노출되는 정적 텍스트 레이블이 있습니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|탭|이 값은 모든 UI 프레임워크에 대해 동일합니다.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"tab"|Tab 컨트롤 형식에 해당하는 지역화된 문자열입니다.|  
@@ -58,7 +63,9 @@ ms.locfileid: "87163757"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|메모를 참조하세요.|탭 컨트롤은 항상 가로 또는 세로로 배치되어 있는지 나타내야 합니다.|  
   
 <a name="Required_UI_Automation_Control_Patterns_and_Properties"></a>
+
 ## <a name="required-ui-automation-control-patterns-and-properties"></a>필요한 UI 자동화 컨트롤 패턴 및 속성  
+
  다음 표에서는 모든 탭 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)를 참조하세요.  
   
 |컨트롤 패턴/패턴 속성|지원/값|참고|  
@@ -69,10 +76,12 @@ ms.locfileid: "87163757"
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|개체|Scroll 패턴은 탭 항목 집합을 스크롤할 수 있는 위젯이 있는 탭 컨트롤에서 지원되어야 합니다.|  
   
 <a name="Required_UI_Automation_Events"></a>
+
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  
+
  다음 표에서는 모든 탭 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](ui-automation-events-overview.md)를 참조하세요.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|참고|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|메모|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|없음|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필수|없음|  

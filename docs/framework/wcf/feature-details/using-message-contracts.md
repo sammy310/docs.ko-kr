@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 0a75298b50df74ddf15904af43a0eb62c5ba8496
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 39838ac219f095b727ad953158d54da2682a09fa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244714"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282017"
 ---
 # <a name="using-message-contracts"></a>메시지 계약 사용
+
 일반적으로 WCF (Windows Communication Foundation) 응용 프로그램을 빌드할 때 개발자는 데이터 구조 및 serialization 문제에 특히 주의를 기울여야 하며 데이터가 전달 되는 메시지의 구조를 고려 하지 않아도 됩니다. 이러한 애플리케이션의 경우 매개 변수 또는 반환 값에 대한 데이터 계약을 만드는 과정은 간단합니다. 자세한 내용은 [서비스 계약에서 데이터 전송 지정](specifying-data-transfer-in-service-contracts.md)을 참조 하세요.  
   
  그러나 SOAP 메시지의 구조를 완벽하게 제어하는 것이 SOAP 메시지의 내용을 제어하는 것만큼이나 중요한 경우도 있습니다. 특히 상호 운용성이 중요한 경우 또는 메시지나 메시지 부분의 수준에서 보안 문제를 특별히 제어해야 하는 경우에는 더욱 그렇습니다. 이러한 경우 필요한 정확한 SOAP 메시지의 구조를 지정할 수 있도록 하는 *메시지 계약* 을 만들 수 있습니다.  
@@ -23,7 +24,8 @@ ms.locfileid: "85244714"
  이 항목에서는 다양한 메시지 계약 특성을 사용하여 작업에 대한 특정 메시지 계약을 만드는 방법에 대해 설명합니다.  
   
 ## <a name="using-message-contracts-in-operations"></a>작업에서 메시지 계약 사용  
- WCF는 *RPC (원격 프로시저 호출) 스타일* 또는 *메시징 스타일*에서 모델링 된 작업을 지원 합니다. RPC 스타일 작업에서는 serialize할 수 있는 형식을 모두 사용할 수 있으며, 여러 매개 변수, `ref` 및 `out` 매개 변수와 같은 로컬 호출에 사용 가능한 기능을 사용할 수 있습니다. 이 스타일에서는 선택한 serialization 형식이 기본 메시지의 데이터 구조를 제어 하 고 WCF 런타임에서는 작업을 지원 하기 위한 메시지를 만듭니다. 이를 통해 SOAP 및 SOAP 메시지에 익숙하지 않은 개발자도 서비스 애플리케이션을 빠르고 쉽게 만들고 사용할 수 있습니다.  
+
+ WCF는 *RPC (원격 프로시저 호출) 스타일* 또는 *메시징 스타일* 에서 모델링 된 작업을 지원 합니다. RPC 스타일 작업에서는 serialize할 수 있는 형식을 모두 사용할 수 있으며, 여러 매개 변수, `ref` 및 `out` 매개 변수와 같은 로컬 호출에 사용 가능한 기능을 사용할 수 있습니다. 이 스타일에서는 선택한 serialization 형식이 기본 메시지의 데이터 구조를 제어 하 고 WCF 런타임에서는 작업을 지원 하기 위한 메시지를 만듭니다. 이를 통해 SOAP 및 SOAP 메시지에 익숙하지 않은 개발자도 서비스 애플리케이션을 빠르고 쉽게 만들고 사용할 수 있습니다.  
   
  다음 코드 예제에서는 RPC 스타일로 모델링된 서비스 작업을 보여 줍니다.  
   
@@ -65,6 +67,7 @@ void Reconcile(BankingTransaction bt1, BankingTransaction bt2);
  한 형식이 메시지 계약과 데이터 계약을 둘 다 가진 경우에는 메시지 계약만 작업에서 해당 형식을 사용할 때 고려됩니다.  
   
 ## <a name="defining-message-contracts"></a>메시지 계약 정의  
+
  형식에 대한 메시지 계약을 정의하려면, 즉 형식과 SOAP 봉투 간의 매핑을 정의하려면 해당 형식에 <xref:System.ServiceModel.MessageContractAttribute>를 적용합니다. 그런 다음 <xref:System.ServiceModel.MessageHeaderAttribute>를 SOAP 헤더로 만들려는 형식의 멤버에 적용하고, <xref:System.ServiceModel.MessageBodyMemberAttribute>를 메시지의 SOAP 본문 부분으로 만들려는 멤버에 적용합니다.  
   
  다음 코드에서는 메시지 계약을 사용하는 예를 보여 줍니다.  
@@ -109,6 +112,7 @@ public class BankingTransaction
 > <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성은 메시지 계약에서 무시됩니다. <xref:System.Runtime.Serialization.KnownTypeAttribute>가 필요할 경우 해당 메시지 계약을 사용 중인 작업에 포함시킵니다.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>헤더와 본문 부분의 이름 및 네임스페이스 제어  
+
  메시지 계약의 SOAP 표현에서 각 헤더 및 본문 부분은 하나의 이름과 하나의 네임스페이스를 가진 XML 요소로 매핑됩니다.  
   
  기본적으로 네임스페이스는 메시지가 참여 중인 서비스 계약의 네임스페이스와 동일하며, 이름은 <xref:System.ServiceModel.MessageHeaderAttribute> 또는 <xref:System.ServiceModel.MessageBodyMemberAttribute> 특성이 적용되는 멤버 이름에 의해 결정됩니다.  
@@ -144,6 +148,7 @@ public class BankingTransaction
 ```  
   
 ## <a name="controlling-whether-the-soap-body-parts-are-wrapped"></a>SOAP 본문 부분의 래핑 여부 제어  
+
  기본적으로 SOAP 본문 부분은 래핑된 요소 내부에서 serialize됩니다. 예를 들어 다음 코드에서는 `HelloGreetingMessage` 메시지에 대한 메시지 계약에서 <xref:System.ServiceModel.MessageContractAttribute> 형식의 이름으로부터 생성된 `HelloGreetingMessage` 래퍼 요소를 보여 줍니다.  
   
 [!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
@@ -155,6 +160,7 @@ public class BankingTransaction
 > 래핑되지 않은 메시지에 메시지 본문 부분이 두 개 이상이면 WS-I Basic Profile 1.1과 호환되지 않으므로, 새 메시지 계약을 디자인할 때는 이러한 경우를 피해야 합니다. 그러나 특정 상호 운용성 시나리오에서는 래핑되지 않은 메시지 본문 부분이 두 개 이상이어야 할 경우도 있습니다. 메시지 본문에서 두 개 이상의 데이터를 전송하려는 경우 기본(래핑된) 모드를 사용하는 것이 좋습니다. 래핑되지 않은 메시지에 메시지 헤더가 두 개 이상 있는 것도 전적으로 허용됩니다.  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>메시지 계약에 사용자 지정 형식 사용  
+
  개별 메시지 헤더 및 메시지 본문 부분은 메시지를 사용하는 서비스 계약에 대해 선택한 serialization 엔진을 사용하여 serialize됩니다(XML로 변경됨). 기본 serialization 엔진인 `XmlFormatter`는 데이터 계약을 가지고 있는 모든 형식을 명시적으로(<xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>를 가짐으로써) 또는 암시적으로(<xref:System.SerializableAttribute?displayProperty=nameWithType> 등을 사용하는 기본 형식이 됨으로써) 처리할 수 있습니다. 자세한 내용은 [데이터 계약 사용](using-data-contracts.md)을 참조 하세요.  
   
  앞의 예제에서는 `Operation`이 기본 형식이고 따라서 암시적 데이터 계약을 가지므로 `BankingTransactionData` 및 `transactionDate` 형식은 데이터 계약을 가져야 하며 <xref:System.DateTime>는 serialize할 수 있어야 합니다.  
@@ -162,6 +168,7 @@ public class BankingTransaction
  그러나 `XmlSerializer`라는 다른 serialization 엔진으로 전환할 수 있습니다. 이와 같은 전환을 수행할 경우에는 메시지 헤더 및 본문 부분에 사용하는 모든 형식이 `XmlSerializer`를 사용하여 serialize할 수 있어야 합니다.  
   
 ## <a name="using-arrays-inside-message-contracts"></a>메시지 계약에 배열 사용  
+
  메시지 계약에 반복되는 요소의 배열을 두 가지 방식으로 사용할 수 있습니다.  
   
  첫 번째 방법은 <xref:System.ServiceModel.MessageHeaderAttribute> 또는 <xref:System.ServiceModel.MessageBodyMemberAttribute>를 배열에서 직접 사용하는 것입니다. 이 경우에는 모든 배열이 여러 자식 요소와 함께 하나의 요소, 즉 하나의 헤더 또는 하나의 본문 부분으로 serialize됩니다. 다음과 같은 클래스를 예로 들어 볼 수 있습니다.  
@@ -207,11 +214,13 @@ public class BankingDepositLog
  컬렉션이 아닌 배열에만 <xref:System.ServiceModel.MessageHeaderArrayAttribute>를 적용할 수 있습니다.  
   
 ## <a name="using-byte-arrays-in-message-contracts"></a>메시지 계약에 바이트 배열 사용  
+
  바이트 배열은 배열이 아닌 특성(<xref:System.ServiceModel.MessageBodyMemberAttribute> 및 <xref:System.ServiceModel.MessageHeaderAttribute>)과 함께 사용할 때 배열로 처리되는 것이 아니라 결과 XML에서 Base64로 인코딩된 데이터로 표시되는 특별한 기본 형식으로 처리됩니다.  
   
  바이트 배열을 배열 특성 <xref:System.ServiceModel.MessageHeaderArrayAttribute>와 함께 사용할 때 결과는 사용하는 serializer에 따라 달라집니다. 기본 serializer를 사용하면 배열이 각 바이트에 대해 개별 항목으로 표시됩니다. 그러나 `XmlSerializer`를 선택하면(서비스 계약에서 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 사용) 배열 특성을 사용하는지 또는 배열이 아닌 특성을 사용하는지에 관계없이 바이트 배열이 Base64 데이터로 처리됩니다.  
   
 ## <a name="signing-and-encrypting-parts-of-the-message"></a>메시지 부분의 서명 및 암호화  
+
  메시지 계약에서는 메시지 헤더 및/또는 메시지 본문을 디지털 서명 및 암호화해야 하는지 여부를 지정할 수 있습니다.  
   
  이렇게 하려면 <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> 및 <xref:System.ServiceModel.MessageHeaderAttribute> 특성에서 <xref:System.ServiceModel.MessageBodyMemberAttribute> 속성을 설정합니다. 속성은 <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> 형식의 열거형이며, <xref:System.Net.Security.ProtectionLevel.None>(암호화 또는 서명 없음), <xref:System.Net.Security.ProtectionLevel.Sign>(디지털 서명만 수행) 또는 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>(암호화 및 디지털 서명 모두 수행)으로 설정할 수 있습니다. 기본값은 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>입니다.  
@@ -240,9 +249,11 @@ public class PatientRecord
  이 예제에서는 `recordID` 헤더가 보호되지 않고, `patientName`이 `signed`이고, `SSN`이 암호화되고 서명됩니다. 주석 및 진단 본문 부분에서 보호 수준을 더 낮게 지정하더라도 `medicalHistory`을 적용하는 본문 부분인 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>가 적어도 하나는 있으므로 전체 메시지 본문에 대해 암호화 및 서명이 수행됩니다.  
   
 ## <a name="soap-action"></a>SOAP 동작  
+
  SOAP 및 관련 웹 서비스 표준은 보낸 모든 SOAP 메시지에 대해 표시할 수 있는 `Action`이라는 속성을 정의합니다. 작업의 <xref:System.ServiceModel.OperationContractAttribute.Action%2A?displayProperty=nameWithType> 및 <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A?displayProperty=nameWithType> 속성이 이 속성의 값을 제어합니다.  
   
 ## <a name="soap-header-attributes"></a>SOAP 헤더 특성  
+
  SOAP 표준은 헤더에 있을 수 있는 다음 특성을 정의합니다.  
   
 - `Actor/Role`(SOAP 1.1에서는 `Actor`, SOAP 1.2에서는 `Role`)  
@@ -304,6 +315,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  메시지를 받은 다음 다시 보내면 SOAP 특성 설정은 <xref:System.ServiceModel.MessageHeader%601> 형식의 헤더에 대해서 라운드트립만 수행합니다.  
   
 ## <a name="order-of-soap-body-parts"></a>SOAP 본문 부분의 순서  
+
  본문 부분의 순서를 제어해야 하는 경우가 있습니다. 기본적으로 본문 요소의 순서는 사전순이지만 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 속성을 사용하여 제어할 수 있습니다. 이 속성은 상속 시나리오에서의 동작을 제외하고는 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> 속성과 동일한 의미 체계를 가집니다. 메시지 계약에서는 파생 형식 본문 멤버 앞에 기본 형식 본문 멤버가 정렬되지 않습니다. 자세한 내용은 [데이터 멤버 순서](data-member-order.md)를 참조 하세요.  
   
  다음 예제에서 `amount`는 사전순으로 처음이기 때문에 일반적인 경우에는 처음에 나와야 합니다. 그러나 이 경우에는 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> 속성 때문에 세 번째 위치에 옵니다.  
@@ -320,6 +332,7 @@ public class BankingTransaction
 ```  
   
 ## <a name="message-contract-versioning"></a>메시지 계약 버전 관리  
+
  필요에 따라 메시지 계약을 변경해야 할 수 있습니다. 예를 들어 사용자 애플리케이션의 새 버전은 메시지에 헤더를 추가할 수 있습니다. 그런 다음 새 버전에서 이전 버전으로 보낼 때 시스템에서는 추가 헤더뿐 아니라 다른 방향으로 전송할 때 누락된 헤더도 처리해야 합니다.  
   
  헤더 버전 관리를 위해 다음 규칙을 적용합니다.  
@@ -331,6 +344,7 @@ public class BankingTransaction
  메시지 본문은 유사한 버전 관리 규칙을 가지며, 누락된 메시지 본문 부분과 추가 메시지 본문 부분은 모두 무시됩니다.  
   
 ## <a name="inheritance-considerations"></a>상속 고려 사항  
+
  메시지 계약 형식은 기본 형식에도 메시지 계약이 있는 한 다른 형식으로부터 상속될 수 있습니다.  
   
  다른 메시지 계약 형식으로부터 상속되는 메시지 계약 형식을 사용하여 메시지를 만들거나 액세스할 때는 다음 규칙을 적용하십시오.  
@@ -360,6 +374,7 @@ public class PatientRecord : PersonRecord
  `PatientRecord` 클래스는 `ID`라는 하나의 헤더로 메시지를 설명합니다. 기본-최상 멤버를 선택했으므로 헤더는 `personID` 멤버가 아닌 `patientID`에 해당합니다. 따라서 이 경우에는 `patientID` 필드가 필요하지 않습니다. 사전순이므로 메시지 본문에는 `diagnosis` 요소가 `patientName` 요소보다 먼저 포함됩니다. 예제에서는 사용해서는 안 되는 패턴을 보여 줍니다. 기본 메시지 계약 및 파생 메시지 계약에는 모두 메시지 본문 부분이 있습니다.  
   
 ## <a name="wsdl-considerations"></a>WSDL 고려 사항  
+
  메시지 계약을 사용하는 서비스로부터 WSDL(웹 서비스 기술 언어) 계약을 생성할 때는 메시지 계약 기능 중 일부가 결과 WSDL에서 반영되지 않을 수 있다는 점을 기억해야 합니다. 다음 사항을 고려합니다.  
   
 - WSDL은 헤더 배열의 개념을 표현할 수 없습니다. <xref:System.ServiceModel.MessageHeaderArrayAttribute>를 사용하여 헤더 배열과 함께 메시지를 만들 때 결과 WSDL은 배열 대신 하나의 헤더만 반영합니다.  
@@ -371,6 +386,7 @@ public class PatientRecord : PersonRecord
 - 여러 작업에서 동일한 메시지 계약을 사용할 때 여러 메시지 유형이 WSDL 문서에서 생성됩니다. 다음에 사용할 때에는 숫자 "2", "3" 등을 추가함으로써 고유한 이름을 만듭니다. WSDL을 다시 가져올 때 여러 메시지 계약 형식이 만들어지며 이름을 제외하고는 동일합니다.  
   
 ## <a name="soap-encoding-considerations"></a>SOAP 인코딩 고려 사항  
+
  WCF를 사용 하면 XML의 레거시 SOAP 인코딩 스타일을 사용할 수 있지만 사용 하지 않는 것이 좋습니다. 이 스타일을 사용할 때(서비스 계약에 적용된 `Use`에서 `Encoded` 속성을 <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>로 설정), 다음 추가 사항을 고려해야 합니다.  
   
 - 메시지 헤더는 지원되지 않습니다. 이는 특성 <xref:System.ServiceModel.MessageHeaderAttribute> 및 배열 특성 <xref:System.ServiceModel.MessageHeaderArrayAttribute>가 SOAP 인코딩과 호환되지 않음을 의미합니다.  
@@ -411,6 +427,7 @@ public class PatientRecord : PersonRecord
  SOAP 인코딩을 사용하여 메시지를 serialize한 후에 `changedFrom` 및 `changedTo`는 `p`의 자체 복사본을 포함하지 않으며, 대신 `changedBy` 요소 내의 복사본을 가리킵니다.  
   
 ## <a name="performance-considerations"></a>성능 고려 사항  
+
  모든 메시지 헤더 및 메시지 본문 부분이 나머지에 대해 각각 serialize됩니다. 그러므로 각 헤더 및 본문 부분에 대해 동일한 네임스페이스를 다시 선언할 수 있습니다. 성능을 향상시키기 위해 통신 중에 특히 메시지의 크기를 기준으로 여러 헤더와 본문 부분을 단일 헤더 또는 본문 부분으로 통합합니다. 예를 들면 다음 코드 대신  
   
 ```csharp  
@@ -444,6 +461,7 @@ public class OperationDetails
 ```  
   
 ### <a name="event-based-asynchronous-and-message-contracts"></a>이벤트 기반 비동기 및 메시지 계약  
+
  이벤트 기반 비동기 모델에 대한 디자인 지침에 따르면 둘 이상의 값이 반환될 경우 그 중 하나는 `Result` 속성으로 반환되고 나머지 값은 <xref:System.EventArgs> 개체의 속성으로 반환됩니다. 따라서 클라이언트가 이벤트 기반 비동기 명령 옵션을 사용하여 메타데이터를 가져오고 작업이 둘 이상의 값을 반환할 경우 기본 <xref:System.EventArgs> 개체는 그 중 하나를 `Result` 속성으로 반환하고, 나머지 값은 <xref:System.EventArgs> 개체의 속성이 됩니다.  
   
  메시지 개체를 `Result` 속성으로 수신하고 반환된 값을 해당 개체의 속성으로 포함하려면 `/messageContract` 명령 옵션을 사용합니다. 이렇게 하면 응답 메시지를 `Result` 개체의 <xref:System.EventArgs> 속성으로 반환하는 서명이 생성됩니다. 모든 내부 반환 값은 응답 메시지 개체의 속성이 됩니다.  

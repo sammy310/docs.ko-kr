@@ -5,17 +5,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], designing workflows
 ms.assetid: 41f727b5-b142-4c1b-b046-492b96135ae6
-ms.openlocfilehash: 07ccd1de6648438ad65f88bada3e055e1e2a4134
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 6c44f24518110266b4b2e41c7507093c3e1e3f79
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419930"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280301"
 ---
 # <a name="designing-workflows"></a>워크플로 디자인
+
 이 단원의 항목에서는 워크플로 개발에 사용되는 흐름 제어 패러다임에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [순서도 워크플로](flowchart-workflows.md)  
  익숙한 순서도 패러다임을 사용하여 워크플로를 만드는 방법을 보여 줍니다.  
   

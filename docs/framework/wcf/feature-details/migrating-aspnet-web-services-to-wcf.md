@@ -2,14 +2,15 @@
 title: ASP.NET 웹 서비스를 WCF로 마이그레이션
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: fa707a4246d5bc9940417072c098b2973140f878
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1471e9913f787a76b474e9d862a22b24d464be92
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598803"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281653"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>ASP.NET 웹 서비스를 WCF로 마이그레이션
+
 ASP.NET은 .NET Framework 클래스 라이브러리 및 웹 서비스 빌드를 위한 도구뿐 아니라 인터넷 정보 서비스(IIS) 내 호스팅 서비스에 대한 기능도 제공합니다. WCF (Windows Communication Foundation)는 웹 서비스에서 사용 하는 프로토콜을 포함 하 여 소프트웨어 엔터티가 프로토콜을 사용 하 여 통신할 수 있도록 하는 .NET Framework 클래스 라이브러리, 도구 및 호스팅 기능을 제공 합니다.  ASP.NET 웹 서비스를 WCF로 마이그레이션하면 응용 프로그램에서 WCF에 고유한 새로운 기능 및 향상 된 기능을 활용할 수 있습니다.  
   
  WCF에는 ASP.NET 웹 서비스에 비해 몇 가지 중요 한 이점이 있습니다. ASP.NET 웹 서비스 도구는 웹 서비스를 구축 하는 데만 사용 되지만 WCF는 소프트웨어 엔터티가 서로 통신 해야 하는 경우 사용할 수 있는 도구를 제공 합니다. 따라서 여러 소프트웨어 통신 시나리오를 적용하는 데 개발자가 알아야 하는 기술의 수가 적어지기 때문에 결과적으로는 소프트웨어 개발 프로젝트를 완료하는 데 필요한 시간뿐 아니라 소프트웨어 개발 리소스 비용을 줄일 수 있습니다.  

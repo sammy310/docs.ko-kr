@@ -2,14 +2,15 @@
 title: '방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드에서 메타데이터 내보내기'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 9acefdec63a6f518ead6cdbcb19ebc8c75609dd6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f60d0c9ad3f6fc4e9596d466b5eabdaab0f4822f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595364"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280613"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드에서 메타데이터 내보내기
+
 Svcutil.exe에서는 다음과 같이 컴파일된 어셈블리에 있는 서비스, 계약 및 데이터 형식에 대한 메타데이터를 내보낼 수 있습니다.  
   
 - Svcutil.exe를 사용하는 어셈블리 집합의 컴파일된 모든 서비스 계약에 대한 메타데이터를 내보내려면 어셈블리를 입력 매개 변수로 지정합니다. 이것은 기본적인 동작입니다.  
@@ -76,6 +77,7 @@ Svcutil.exe에서는 다음과 같이 컴파일된 어셈블리에 있는 서비
     ```  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 단순 서비스 구현 및 구성에 대한 메타데이터를 생성하는 방법을 보여 줍니다.  
   
  서비스 계약에 대한 메타데이터를 내보내려면  

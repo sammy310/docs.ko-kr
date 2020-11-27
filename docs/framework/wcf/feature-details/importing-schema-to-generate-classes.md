@@ -8,17 +8,19 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: 01f5162727a213fa5dcdf8a70e4e8e4c3627f086
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7f7c13cda2dcaeec16ad1ee49ff3dddf369906e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596905"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280526"
 ---
 # <a name="importing-schema-to-generate-classes"></a>스키마를 가져와 클래스 생성
+
 WCF (Windows Communication Foundation)에서 사용할 수 있는 스키마에서 클래스를 생성 하려면 클래스를 사용 <xref:System.Runtime.Serialization.XsdDataContractImporter> 합니다. 이 항목에서는 프로세스와 변형에 대해 설명합니다.  
   
 ## <a name="the-import-process"></a>가져오기 프로세스
+
  스키마 가져오기 프로세스는 <xref:System.Xml.Schema.XmlSchemaSet>로 시작되고 <xref:System.CodeDom.CodeCompileUnit>을 생성합니다.  
   
  는 `XmlSchemaSet` XSD (XML 스키마 정의 언어) 스키마 문서 집합을 나타내는 .NET FRAMEWORK SOM (스키마 개체 모델)의 일부입니다. XSD 문서 집합에서 `XmlSchemaSet` 개체를 만들려면 <xref:System.Xml.Schema.XmlSchema>를 사용하여 각 문서를 <xref:System.Xml.Serialization.XmlSerializer> 개체로 역직렬화하고 이러한 개체를 새 `XmlSchemaSet`에 추가합니다.  
@@ -45,10 +47,12 @@ WCF (Windows Communication Foundation)에서 사용할 수 있는 스키마에�
 5. `CodeCompileUnit` 속성을 통해 <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A> 에 액세스합니다.  
   
 ### <a name="import-options-customizing-the-generated-types"></a>가져오기 옵션: 생성된 형식 사용자 지정  
+
  <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A>의 <xref:System.Runtime.Serialization.XsdDataContractImporter> 속성을 <xref:System.Runtime.Serialization.ImportOptions> 클래스의 인스턴스로 설정하여 가져오기 프로세스의 다양한 측면을 제어할 수 있습니다. 여러 가지 옵션은 생성되는 형식에 직접 영향을 줍니다.  
   
 #### <a name="controlling-the-access-level-generateinternal-or-the-internal-switch"></a>액세스 수준 제어(GenerateInternal 또는 /internal 스위치)  
- 이는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)의 **/sinternal** 스위치에 해당 합니다.  
+
+ 이는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)의 **/sinternal** 스위치에 해당 합니다.  
   
  일반적으로 public 형식은 private 필드 및 일치하는 공용 데이터 멤버 속성을 사용하여 스키마에서 생성됩니다. 대신 내부 형식을 생성하려면 <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> 속성을 `true`로 설정합니다.  
   
@@ -58,6 +62,7 @@ WCF (Windows Communication Foundation)에서 사용할 수 있는 스키마에�
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
   
 #### <a name="controlling-namespaces-namespaces-or-the-namespace-switch"></a>네임스페이스 제어(Namespaces 또는 /namespace 스위치)  
+
  이는 도구의 **/namespace** 스위치에 해당 `Svcutil.exe` 합니다.  
   
  일반적으로 스키마에서 생성 된 형식은 [데이터 계약 스키마 참조](data-contract-schema-reference.md)에 설명 된 매핑에 따라 특정 .NET Framework 네임 스페이스에 해당 하는 각 XSD 네임 스페이스와 함께 .NET Framework 네임 스페이스로 생성 됩니다. <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A>에 대한 <xref:System.Collections.Generic.Dictionary%602> 속성으로 이 매핑을 사용자 지정할 수 있습니다. 사전에서 지정 된 XSD 네임 스페이스를 찾은 경우 일치 하는 .NET Framework 네임 스페이스도 사전에서 가져옵니다.  
@@ -72,6 +77,7 @@ WCF (Windows Communication Foundation)에서 사용할 수 있는 스키마에�
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
   
 #### <a name="adding-the-serializableattribute-generateserializable-or-the-serializable-switch"></a>SerializableAttribute 추가(GenerateSerializable 또는 /serializable 스위치)  
+
  이는 도구의 **도구의/serializable** 스위치에 해당 `Svcutil.exe` 합니다.  
   
  경우에 따라 스키마에서 생성 된 형식을 .NET Framework 런타임 serialization 엔진 (예: 및 클래스)과 함께 사용할 수 있도록 하는 것이 중요 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 합니다. .NET Framework 원격 기능에 형식을 사용 하는 경우에 유용 합니다. 이 기능을 사용하려면 일반적인 <xref:System.SerializableAttribute> 특성 외에도 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 생성된 형식에 적용해야 합니다. `GenerateSerializable` 가져오기 옵션이 `true`로 설정되어 있으면 이 특성이 자동으로 생성됩니다.  
@@ -82,6 +88,7 @@ WCF (Windows Communication Foundation)에서 사용할 수 있는 스키마에�
  [!code-vb[c_SchemaImportExport#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#4)]  
   
 #### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>데이터 바인딩 지원 추가(EnableDataBinding 또는 /enableDataBinding 스위치)  
+
  이는 Svcutil.exe 도구의 **/enableDataBinding** 스위치에 해당 합니다.  
   
  경우에 따라 스키마에서 생성된 형식을 그래픽 사용자 인터페이스 구성 요소에 바인딩하여 이러한 형식의 인스턴스를 업데이트할 경우 자동으로 UI가 업데이트되도록 할 수도 있습니다. `XsdDataContractImporter`는 속성을 변경할 경우 이벤트가 트리거되는 방식으로 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현하는 형식을 생성할 수 있습니다. Windows Presentation Foundation (WPF)와 같이이 인터페이스를 지 원하는 클라이언트 UI 프로그래밍 환경에서 사용할 형식을 생성 하는 경우 <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> 이 기능을 사용 하려면 속성을로 설정 합니다 `true` .  
@@ -92,6 +99,7 @@ WCF (Windows Communication Foundation)에서 사용할 수 있는 스키마에�
  [!code-vb[C_SchemaImportExport#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#5)]  
   
 ### <a name="import-options-choosing-collection-types"></a>가져오기 옵션: 컬렉션 형식 선택  
+
  XML의 두 가지 특수 패턴은 항목 컬렉션, 즉 항목 목록 및 한 항목과 다른 항목 간의 연결을 나타냅니다. 다음은 문자열 목록의 예입니다.  
   
  [!code-xml[C_SchemaImportExport#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#11)]  
@@ -127,9 +135,10 @@ WCF (Windows Communication Foundation)에서 사용할 수 있는 스키마에�
   
  참조된 컬렉션 형식 메커니즘은 기본 형식의 컬렉션뿐만 아니라 다른 컬렉션의 컬렉션을 비롯한 복합 형식의 컬렉션에서도 효과적으로 작동합니다.  
   
- `ReferencedCollectionTypes`속성은 svcutil.exe 도구의 **/collectiontype** 스위치에 해당 합니다. 여러 컬렉션 형식을 참조 하려면 **/Collectiontype** 스위치를 여러 번 지정 해야 합니다. 형식이 Mscorlib.dll에 없으면 **/reference** 스위치를 사용 하 여 해당 어셈블리도 참조 해야 합니다.  
+ `ReferencedCollectionTypes`속성은 SvcUtil.exe 도구의 **/collectiontype** 스위치에 해당 합니다. 여러 컬렉션 형식을 참조 하려면 **/Collectiontype** 스위치를 여러 번 지정 해야 합니다. 형식이 MsCorLib.dll에 없는 경우 **/reference** 스위치를 사용 하 여 해당 어셈블리도 참조 해야 합니다.  
   
 #### <a name="import-options-referencing-existing-types"></a>가져오기 옵션: 기존 형식 참조  
+
  경우에 따라 스키마의 형식은 기존 .NET Framework 형식에 해당 하며 이러한 형식을 처음부터 생성 하지 않아도 됩니다. 이 단원의 내용은 비컬렉션 형식에만 적용됩니다. 컬렉션 형식에 대해서는 이전 단원을 참조하세요.  
   
  예를 들어 개인을 나타낼 때 항상 사용할 회사 수준의 표준 "Person" 데이터 계약 형식이 있을 수 있습니다. 일부 서비스에서 이 형식을 사용하고 서비스 메타데이터에 해당 스키마가 나타날 때마다 각 서비스에 대해 새 형식을 생성하는 대신 이 스키마를 가져올 때 기존 `Person` 형식을 다시 사용할 수 있습니다.  
@@ -138,12 +147,13 @@ WCF (Windows Communication Foundation)에서 사용할 수 있는 스키마에�
   
  해당 이름과 네임스페이스를 가진 스키마 형식을 가져오지 않는 한 동일한 데이터 계약 이름과 네임스페이스를 가진 여러 형식을 참조된 형식 컬렉션에 추가할 수 있습니다. 이렇게 하면 실제로 스키마에서 발생하지 않는 형식의 중복에 대해 염려하지 않고 어셈블리의 모든 형식을 쉽게 컬렉션에 추가할 수 있습니다.  
   
- `ReferencedTypes`속성은 svcutil.exe 도구의 특정 작업 모드에서 **/reference** 스위치에 해당 합니다.  
+ `ReferencedTypes`속성은 Svcutil.exe 도구의 특정 작업 모드에서 **/reference** 스위치에 해당 합니다.  
   
 > [!NOTE]
-> Svcutil.exe 또는 (Visual Studio에서) **서비스 참조 추가** 도구를 사용 하는 경우 mscorlib.dll의 모든 형식이 자동으로 참조 됩니다.  
+> Svcutil.exe 또는 (Visual Studio) **서비스 참조 추가** 도구를 사용 하는 경우 MsCorLib.dll의 모든 형식이 자동으로 참조 됩니다.  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>가져오기 옵션: DataContract가 아닌 스키마를 IXmlSerializable 형식으로 가져오기  
+
  <xref:System.Runtime.Serialization.XsdDataContractImporter>는 스키마의 제한된 하위 집합을 지원합니다. 지원되지 않는 스키마 구문이 있으면(예: XML 특성) 예외와 함께 가져오기 시도가 실패합니다. 그러나 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> 속성을 `true`로 설정하면 지원되는 스키마 범위가 확장됩니다. `true`는 <xref:System.Runtime.Serialization.XsdDataContractImporter>로 설정된 경우 <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현하는 형식을 생성합니다. 이 경우 이러한 형식의 XML 표현에 직접 액세스할 수 있습니다.  
   
 ##### <a name="design-considerations"></a>디자인 고려 사항  
@@ -158,9 +168,10 @@ WCF (Windows Communication Foundation)에서 사용할 수 있는 스키마에�
   
  <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> 옵션을 앞에서 설명한 <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> 옵션과 결합할 수 있습니다. <xref:System.Xml.Serialization.IXmlSerializable> 구현으로 생성해야 하는 형식의 경우 <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> 기능을 사용할 때 구조적 검사를 건너뜁니다.  
   
- 이 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> 옵션은 svcutil.exe 도구의 **/Importxmltypes** 스위치에 해당 합니다.  
+ <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>옵션은 Svcutil.exe 도구의 **/Importxmltypes** 스위치에 해당 합니다.  
   
 ##### <a name="working-with-generated-ixmlserializable-types"></a>생성된 IXmlSerializable 형식 작업  
+
  생성된 `IXmlSerializable` 형식에는 <xref:System.Xml.XmlNode> 개체 배열을 반환하는 "nodesField"라는 private 필드가 있습니다. 이러한 형식의 인스턴스를 역직렬화하는 경우 XML 문서 개체 모델을 사용하여 이 필드를 통해 직접 XML 데이터에 액세스할 수 있습니다. 이 형식의 인스턴스를 serialize하는 경우 이 필드를 원하는 XML 데이터로 설정하면 serialize됩니다.  
   
  이 작업은 `IXmlSerializable` 구현을 통해 수행됩니다. 생성된 `IXmlSerializable` 형식에서 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 구현은 <xref:System.Runtime.Serialization.XmlSerializableServices.ReadNodes%2A> 클래스의 <xref:System.Runtime.Serialization.XmlSerializableServices> 메서드를 호출합니다. 메서드는 <xref:System.Xml.XmlReader>를 통해 제공된 XML을 <xref:System.Xml.XmlNode> 개체 배열로 변환하는 도우미 메서드입니다. <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 구현은 반대 작업을 수행하고 `XmlNode` 개체 배열을 <xref:System.Xml.XmlWriter> 호출 시퀀스로 변환합니다. 이 작업은 <xref:System.Runtime.Serialization.XmlSerializableServices.WriteNodes%2A> 메서드를 사용하여 수행됩니다.  
@@ -173,6 +184,7 @@ WCF (Windows Communication Foundation)에서 사용할 수 있는 스키마에�
 > <xref:System.Runtime.Serialization.XmlSerializableServices> 형식은 이 특정 기능을 지원하기 위한 용도로만 제공됩니다. 다른 용도로는 사용하지 않는 것이 좋습니다.  
   
 #### <a name="import-options-advanced-options"></a>가져오기 옵션: 고급 옵션  
+
  다음은 고급 가져오기 옵션입니다.  
   
 - <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 속성 생성된 클래스에 대한 코드를 생성하는 데 사용할 <xref:System.CodeDom.Compiler.CodeDomProvider>를 지정합니다. 가져오기 메커니즘은 <xref:System.CodeDom.Compiler.CodeDomProvider>에서 지원하지 않는 기능을 피하려고 합니다. <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>가 설정 되지 않은 경우 .NET Framework 기능의 전체 집합이 제한 없이 사용 됩니다.  

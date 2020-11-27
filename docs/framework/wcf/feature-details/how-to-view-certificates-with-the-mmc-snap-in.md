@@ -5,14 +5,15 @@ ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: e63034e48ae836f67f89b454829f7196c94610cd
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1f20384f16b3b5b898f926258d76a6a2773eaaa1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246677"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280626"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>방법: MMC 스냅인을 사용 하 여 인증서 보기
+
 보안 클라이언트 또는 서비스를 만들 때 [인증서](working-with-certificates.md) 를 자격 증명으로 사용할 수 있습니다. 예를 들어 일반적인 자격 증명 형식은 x.509 인증서 이며 메서드를 사용 하 여 만듭니다 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> .
 
 Windows 시스템에서 MMC (Microsoft Management Console)를 사용 하 여 검사할 수 있는 인증서 저장소에는 다음 세 가지 유형이 있습니다.
@@ -27,28 +28,28 @@ Windows 시스템에서 MMC (Microsoft Management Console)를 사용 하 여 검
 
 다음 절차에서는 로컬 장치에서 저장소를 검사 하 여 적절 한 인증서를 찾는 방법을 보여 줍니다.
   
-1. **시작** 메뉴에서 **실행** 을 선택한 다음 *mmc*를 입력 합니다.
+1. **시작** 메뉴에서 **실행** 을 선택한 다음 *mmc* 를 입력 합니다.
 
     MMC가 나타납니다.
   
-2. **파일** 메뉴에서 **스냅인 추가/제거**를 선택 합니다.
+2. **파일** 메뉴에서 **스냅인 추가/제거** 를 선택 합니다.
 
     **스냅인 추가/제거** 창이 나타납니다.
   
-3. **사용 가능한 스냅인** 목록에서 **인증서**를 선택 하 고 **추가**를 선택 합니다.  
+3. **사용 가능한 스냅인** 목록에서 **인증서** 를 선택 하 고 **추가** 를 선택 합니다.  
 
     ![인증서 스냅인 추가](./media/mmc-add-certificate-snap-in.png)
   
-4. **인증서 스냅인** 창에서 **컴퓨터 계정**을 선택 하 고 **다음**을 선택 합니다.
+4. **인증서 스냅인** 창에서 **컴퓨터 계정** 을 선택 하 고 **다음** 을 선택 합니다.
   
     필요에 따라 특정 서비스에 대 한 현재 사용자 또는 **서비스 계정** 에 대해 **내 사용자 계정** 을 선택할 수 있습니다.
 
     > [!NOTE]
     > 사용자가 장치에 대 한 관리자가 아닌 경우 사용자 계정에 대해서만 인증서를 관리할 수 있습니다.
   
-5. **컴퓨터 선택** 창에서 **로컬 컴퓨터** 를 선택 된 상태로 두고 **마침**을 선택 합니다.  
+5. **컴퓨터 선택** 창에서 **로컬 컴퓨터** 를 선택 된 상태로 두고 **마침** 을 선택 합니다.  
   
-6. **스냅인 추가/제거** 창에서 **확인**을 선택 합니다.  
+6. **스냅인 추가/제거** 창에서 **확인** 을 선택 합니다.  
   
     ![인증서 스냅인 추가](./media/mmc-certificate-snap-in-selected.png)
 
@@ -66,13 +67,13 @@ Windows 시스템에서 MMC (Microsoft Management Console)를 사용 하 여 검
 
 1. **시작** 메뉴에서 **실행** 을 선택 하 고 다음을 *입력 합니다.*
 
-    로컬 장치에 대 한 인증서 관리자 도구가 표시 됩니다.
+    로컬 디바이스용 인증서 관리자 도구가 표시됩니다.
   
 2. 인증서를 보려면 왼쪽 창의 **인증서-로컬 컴퓨터** 에서 보려는 인증서의 유형에 해당 하는 디렉터리를 확장 합니다.
 
 ### <a name="to-view-certificates-for-the-current-user"></a>현재 사용자에 대 한 인증서를 보려면
 
-1. **시작** 메뉴에서 **실행** 을 선택한 다음 *certmgr.exe*를 입력 합니다.
+1. **시작** 메뉴에서 **실행** 을 선택한 다음 *certmgr.exe* 를 입력 합니다.
 
     현재 사용자에 대 한 인증서 관리자 도구가 표시 됩니다.
   

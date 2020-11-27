@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d48f01b5-582b-4c8b-b547-8adddae7e371
-ms.openlocfilehash: 7c87026ca4cf7c739f4615da9bc7f0272a382392
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: dd767443fefb16ebc02300bffa4264357f12c3ae
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246664"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280587"
 ---
 # <a name="how-to-use-the-channelfactory"></a>방법: ChannelFactory 사용
+
 제네릭 <xref:System.ServiceModel.ChannelFactory%601> 클래스는 둘 이상의 채널을 만드는 데 사용할 수 있는 채널 팩터리를 만들어야 하는 고급 시나리오에서 사용됩니다.  
   
 ### <a name="to-create-and-use-the-channelfactory-class"></a>ChannelFactory 클래스를 만들고 사용하려면  
@@ -25,5 +26,6 @@ ms.locfileid: "85246664"
 3. 클라이언트 코드에서 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 여러 개의 엔드포인트 수신기를 만듭니다.  
   
 ## <a name="example"></a>예제  
+
  [!code-csharp[c_HowToUseChannelFactory#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtousechannelfactory/cs/source.cs#1)]
  [!code-vb[c_HowToUseChannelFactory#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtousechannelfactory/vb/source.vb#1)]

@@ -9,25 +9,28 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
-ms.openlocfilehash: 8d0328f22222d2eefad4f663736c2fb675792b3f
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 3a666388b2a62c9e5582eec50196d9bda75ac0f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924697"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281185"
 ---
 # <a name="ui-automation-text-pattern"></a>UI 자동화 텍스트 패턴
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
  이 항목에는의 텍스트 요소에 대 한 프로그래밍을 시작 하는 데 도움이 되는 개요 및 방법 항목이 포함 되어 있습니다 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] .  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [UI 자동화 TextPattern 개요](ui-automation-textpattern-overview.md)  
  [TextPattern 및 포함 개체 개요](textpattern-and-embedded-objects-overview.md)  
- [방법 항목](ui-automation-text-pattern-how-to-topics.md)  
+ [방법 도움말 항목](ui-automation-text-pattern-how-to-topics.md)  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.Windows.Automation.Text>  
   
 ## <a name="see-also"></a>참조

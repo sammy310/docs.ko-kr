@@ -6,17 +6,19 @@ helpviewer_keywords:
 - WF [WF]
 - Windows Workflow Foundation [WF]
 ms.assetid: 9a23ea6b-d600-483e-89cd-8889cfec5f66
-ms.openlocfilehash: 9fed65158f830fcdc5342800493029418a71d2f8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a7b123c14aa14b64a9ca3a78d127aa55210a08ec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724067"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280054"
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
+
 이 섹션에서는 WF (Windows Workflow Foundation)의 프로그래밍 모델, 샘플 및 도구에 대해 설명 합니다.
 
 ## <a name="in-this-section"></a>섹션 내용
+
  [Windows Workflow 설명서 가이드](guide-to-the-documentation.md) 사용자의 이해 (초보자를 위한 초보자) 및 요구 사항에 따라 읽을 제안 항목 집합입니다.
 
  [Windows Workflow Foundation의 새로운 기능](whats-new.md) 이전 버전에서 몇 가지 개발 패러다임의 변경 내용에 대해 설명 합니다.

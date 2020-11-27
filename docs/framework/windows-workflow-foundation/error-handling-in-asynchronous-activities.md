@@ -2,17 +2,19 @@
 title: 비동기 작업에서 오류 처리
 ms.date: 03/30/2017
 ms.assetid: e8f8ce2b-50c9-4e44-b187-030e0cf30a5d
-ms.openlocfilehash: c63ce231687b03bdba57edd38c32270eabeff834
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c214ce1d0f435cda79deb6976ca9196a5d7aee1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182946"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280262"
 ---
 # <a name="error-handling-in-asynchronous-activities"></a>비동기 작업에서 오류 처리
+
 <xref:System.Activities.AsyncCodeActivity>에서 오류 처리를 제공하면 활동의 콜백 시스템을 통해 오류를 라우팅합니다. 이 항목은 SendMail 활동 샘플을 사용하여 호스트에 비동기 작업에서 throw되는 오류가 발생하는 방법을 설명합니다.  
   
 ## <a name="returning-an-error-thrown-in-an-asynchronous-activity-back-to-the-host"></a>호스트에 비동기 활동에서 throw되는 오류 반환  
+
  SendMail 활동 샘플에서 호스트에 비동기 작업의 오류를 라우팅하는 것은 다음 단계를 포함합니다.  
   
 - `SendMailAsyncResult` 클래스에 예외 속성을 추가합니다.  

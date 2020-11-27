@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 86062dd5147e6e354833928fd98bd1f6b5de9114
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 7f76ed5ad1a76a155489339a9febf12eefd64ae8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421503"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279989"
 ---
 # <a name="how-to-run-a-workflow"></a>방법: 워크플로 실행
+
 이 항목에서는 Windows Workflow Foundation 초보자를 위한 자습서에 포함된 일련의 항목 중 하나로, 워크플로 호스트를 만들고 이전 [How to: Create a Workflow](how-to-create-a-workflow.md) 항목에서 정의한 워크플로를 실행하는 방법을 설명합니다.
 
 > [!NOTE]
@@ -26,28 +27,28 @@ ms.locfileid: "83421503"
   
 1. Visual Studio 2012을 사용 하 여 이전 [방법: 작업 만들기](how-to-create-an-activity.md) 항목에서 솔루션을 엽니다.  
   
-2. **솔루션 탐색기** 에서 **WF45GettingStartedTutorial** 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**, **새 프로젝트**를 차례로 선택합니다.  
+2. **솔루션 탐색기** 에서 **WF45GettingStartedTutorial** 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**, **새 프로젝트** 를 차례로 선택합니다.  
   
     > [!TIP]
-    > **솔루션 탐색기** 창이 표시되지 않으면 **보기** 메뉴에서 **솔루션 탐색기**를 선택합니다.
+    > **솔루션 탐색기** 창이 표시되지 않으면 **보기** 메뉴에서 **솔루션 탐색기** 를 선택합니다.
 
 3. **설치됨** 노드에서 **Visual C#**, **워크플로** (또는 **Visual Basic**, **워크플로**)를 차례로 선택합니다.
 
     > [!NOTE]
     > Visual Studio에서 기본 언어로 구성되어 있는 프로그래밍 언어에 따라 **Visual C#** 또는 **Visual Basic** 노드는 **설치됨** 노드의 **다른 언어** 노드에 있을 수 있습니다.
 
-     .NET Framework 버전 드롭다운 목록에서 **.NET Framework 4.5**가 선택되어 있는지 확인합니다. **워크플로** 목록에서 **워크플로 콘솔 애플리케이션** 을 선택합니다. `NumberGuessWorkflowHost` 이름 **상자에** 를 입력하고 **확인**을 클릭합니다. 이렇게 하면 기본 워크플로 호스팅 지원이 포함된 시작 워크플로 애플리케이션이 만들어집니다. 이 기본 호스팅 코드를 수정하고 이를 사용하여 워크플로 애플리케이션을 실행합니다.
+     .NET Framework 버전 드롭다운 목록에서 **.NET Framework 4.5** 가 선택되어 있는지 확인합니다. **워크플로** 목록에서 **워크플로 콘솔 애플리케이션** 을 선택합니다. `NumberGuessWorkflowHost` 이름 **상자에** 를 입력하고 **확인** 을 클릭합니다. 이렇게 하면 기본 워크플로 호스팅 지원이 포함된 시작 워크플로 애플리케이션이 만들어집니다. 이 기본 호스팅 코드를 수정하고 이를 사용하여 워크플로 애플리케이션을 실행합니다.
 
-4. **솔루션 탐색기** 에서 새로 추가한 **NumberGuessWorkflowHost** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다. **참조 추가** 목록에서 **솔루션** 을 선택하고 **NumberGuessWorkflowActivities**옆의 확인란을 선택한 다음 **확인**을 클릭합니다.
+4. **솔루션 탐색기** 에서 새로 추가한 **NumberGuessWorkflowHost** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **참조 추가** 를 선택합니다. **참조 추가** 목록에서 **솔루션** 을 선택하고 **NumberGuessWorkflowActivities** 옆의 확인란을 선택한 다음 **확인** 을 클릭합니다.
 
-5. **솔루션 탐색기** 에서 **Workflow1.xaml** 을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다. **확인**을 클릭하여 확인합니다.
+5. **솔루션 탐색기** 에서 **Workflow1.xaml** 을 마우스 오른쪽 단추로 클릭하고 **삭제** 를 선택합니다. **확인** 을 클릭하여 확인합니다.
 
 ### <a name="to-modify-the-workflow-hosting-code"></a>워크플로 호스팅 코드를 수정하려면
 
 1. **솔루션 탐색기** 에서 **Program.cs** 또는 **Module1.vb** 를 두 번 클릭하여 코드를 표시합니다.
 
     > [!TIP]
-    > **솔루션 탐색기** 창이 표시되지 않으면 **보기** 메뉴에서 **솔루션 탐색기**를 선택합니다.
+    > **솔루션 탐색기** 창이 표시되지 않으면 **보기** 메뉴에서 **솔루션 탐색기** 를 선택합니다.
 
      이 프로젝트는 **워크플로 콘솔 애플리케이션** 템플릿을 사용하여 만들었기 때문에 **Program.cs** 또는 **Module1.vb** 에 다음과 같은 기본 워크플로 호스팅 코드가 포함되어 있습니다.
 
@@ -138,9 +139,9 @@ ms.locfileid: "83421503"
      [!code-csharp[CFX_WF_GettingStarted#11](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#11)]
      [!code-vb[CFX_WF_GettingStarted#11](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#11)]
 
-## <a name="to-build-and-run-the-application"></a><a name="BKMK_ToRunTheApplication"></a>응용 프로그램을 빌드하고 실행 하려면
+## <a name="to-build-and-run-the-application"></a><a name="BKMK_ToRunTheApplication"></a> 응용 프로그램을 빌드하고 실행 하려면
 
-1. **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
+1. **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정** 을 선택합니다.
 
 2. Ctrl+F5를 눌러 애플리케이션을 빌드하고 실행합니다. 가능한 한 적은 횟수로 숫자를 추측해 봅니다.
 
@@ -152,6 +153,7 @@ ms.locfileid: "83421503"
      워크플로 애플리케이션에 지속성을 추가하는 방법은 다음 항목 [How to: Create and Run a Long Running Workflow](how-to-create-and-run-a-long-running-workflow.md)을 참조하세요.
 
 ## <a name="example"></a>예제
+
  다음 예는 `Main` 메서드에 대한 완전한 코드 목록입니다.
 
 > [!NOTE]

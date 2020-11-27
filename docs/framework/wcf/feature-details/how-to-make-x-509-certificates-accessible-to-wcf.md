@@ -10,14 +10,15 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 5cc1118640bcf1262d88cb8cdb39939ae315cae3
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 06a6167f0ad352955eb6b764ef8bfdb1394f4ed9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246872"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279742"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>방법: WCF에 액세스할 수 있는 X.509 인증서 만들기
+
 Windows Communication Foundation (WCF)에서 x.509 인증서에 액세스할 수 있도록 하려면 응용 프로그램 코드에서 인증서 저장소 이름 및 위치를 지정 해야 합니다. 상황에 따라, X.509 인증서와 연결된 프라이빗 키를 포함하는 파일에 대한 액세스가 프로세스 ID에 필요할 수 있습니다. 인증서 저장소에 있는 x.509 인증서와 연결 된 개인 키를 가져오려면 WCF에서이 작업을 수행할 수 있는 권한이 있어야 합니다. 기본적으로 소유자와 시스템 계정에서만 인증서의 프라이빗 키에 액세스할 수 있습니다.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>WCF에서 X.509 인증서에 액세스할 수 있도록 설정하려면  
@@ -30,10 +31,10 @@ Windows Communication Foundation (WCF)에서 x.509 인증서에 액세스할 수
   
         |X.509 인증서 사용|프라이빗 키|  
         |---------------------------|-----------------|  
-        |아웃바운드 SOAP 메시지 디지털 서명.|Yes|  
-        |인바운드 SOAP 메시지 서명 확인.|No|  
-        |아웃바운드 SOAP 메시지 암호화.|No|  
-        |인바운드 SOAP 메시지 암호 해독.|Yes|  
+        |아웃바운드 SOAP 메시지 디지털 서명.|예|  
+        |인바운드 SOAP 메시지 서명 확인.|아니요|  
+        |아웃바운드 SOAP 메시지 암호화.|아니요|  
+        |인바운드 SOAP 메시지 암호 해독.|예|  
   
     2. 인증서가 저장되는 인증서 저장소 위치와 이름을 확인합니다.  
   

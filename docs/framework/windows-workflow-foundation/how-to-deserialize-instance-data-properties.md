@@ -2,14 +2,15 @@
 title: '방법: 인스턴스 데이터 속성 역직렬화'
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-ms.openlocfilehash: 8142671fc1bc154337019e025d8443f0570106b3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f941e2d2b10e825adcdc13e2a9aed231125fe09
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143085"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280093"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>방법: 인스턴스 데이터 속성 역직렬화
+
 경우에 따라서는 유지되고 있는 워크플로 인스턴스의 상태를 사용자나 워크플로 관리자가 수동으로 조사하고 싶을 수 있습니다. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>에서는 다음과 같은 네 개의 열이 포함된 인스턴스 테이블에 대한 뷰를 제공합니다.  
   
 - ReadWritePrimitiveDataProperties  
@@ -20,11 +21,11 @@ ms.locfileid: "79143085"
   
 - WriteOnlyComplexDataProperties  
   
- 기본 데이터 속성은 .NET Framework 형식이 "공통"(예: Int32 및 String)으로 간주되는 속성을 참조하고 복잡한 데이터 속성은 다른 모든 형식을 참조합니다. 기본 형식의 정확한 열거형은 이 코드 샘플의 뒷부분에 나와 있습니다.  
+ 기본 데이터 속성은 .NET Framework 형식이 "common" (예: Int32 및 String)로 간주 되는 반면, 복합 데이터 속성은 다른 모든 형식을 참조 하는 속성을 나타냅니다. 기본 형식의 정확한 열거형은 이 코드 샘플의 뒷부분에 나와 있습니다.  
   
  읽기/쓰기 속성은 인스턴스를 로드했을 때 워크플로 런타임으로 다시 반환되는 속성을 가리킵니다. WriteOnly 속성은 데이터베이스에 쓴 다음 다시 읽지 않는 속성입니다.  
   
- 이 샘플에서는 기본 데이터 속성을 역직렬화하는 데 사용할 수 있는 코드를 제공합니다. ReadWritePrimitiveDataProperties 또는 WriteOnlyPrimitiveDataProperties 열에서 읽은 바이트 배열이 주어지면 이진 큰 개체(BLOB)를 XName <xref:System.Collections.Generic.Dictionary%602> 형식, \<각 키 값 쌍이 속성 이름과 해당 값을 나타내는 개체> 변환합니다.  
+ 이 샘플에서는 기본 데이터 속성을 역직렬화하는 데 사용할 수 있는 코드를 제공합니다. ReadWritePrimitiveDataProperties 또는 WriteOnlyPrimitiveDataProperties 열에서 읽은 바이트 배열을 지정 하는 경우이 코드는 BLOB (binary large object)를 형식의으로 변환 합니다 <xref:System.Collections.Generic.Dictionary%602> \<XName, object> . 여기서 각 키 값 쌍은 속성 이름 및 해당 값을 나타냅니다.  
   
  복합 데이터 속성을 역직렬화하는 방법은 이 샘플에서 보여 주지 않습니다. 이와 같은 작업은 아직 지원되지 않습니다.  
   

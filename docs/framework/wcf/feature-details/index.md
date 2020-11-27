@@ -7,17 +7,19 @@ helpviewer_keywords:
 - WCF, features
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
-ms.openlocfilehash: 308a32c73d33a4da2fd841ca7c330a42deb7d324
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 30b8acb3b89b8c28be0b8d0b4ce5a1d1d734b055
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246638"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280431"
 ---
 # <a name="wcf-feature-details"></a>WCF 기능 정보
+
 WCF (Windows Communication Foundation)를 사용 하면 응용 프로그램의 메시징 기능을 광범위 하 게 제어할 수 있습니다. 이 섹션의 항목에서는 사용 가능한 기능에 대해 자세히 설명합니다. 기본 프로그래밍에 대 한 자세한 내용은 [기본 WCF 프로그래밍](../basic-wcf-programming.md)을 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [워크플로 서비스](workflow-services.md)  
  워크플로 서비스를 만들고 구성하는 방법에 대해 설명합니다.  
   
@@ -73,6 +75,7 @@ WCF (Windows Communication Foundation)를 사용 하면 응용 프로그램의 �
  라우팅 서비스에 대해 설명합니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -82,4 +85,5 @@ WCF (Windows Communication Foundation)를 사용 하면 응용 프로그램의 �
  <xref:System.ServiceModel.Routing>  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [기본 WCF 프로그래밍](../basic-wcf-programming.md)
