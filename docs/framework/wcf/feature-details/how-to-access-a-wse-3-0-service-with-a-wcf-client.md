@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 847146c2025612689f0d69cc0c23d2be14018c0f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c955244c2e6821abda3a1fc5e25f00a73389ff1d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556839"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257771"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>방법: WCF 클라이언트를 사용하여 WSE 3.0 서비스에 액세스
-Wcf 클라이언트가 WS-ADDRESSING 사양의 8 2004 월 버전을 사용 하도록 구성 된 경우 WCF (Windows Communication Foundation) 클라이언트는 Microsoft .NET 서비스에 대해 WSE (Web Services 향상 된) 3.0의 유선 수준으로 호환 됩니다. 그러나 WSE 3.0 서비스는 MEX (metadata exchange) 프로토콜을 지원 하지 않으므로 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 wcf 클라이언트 클래스를 만들 때 생성 된 wcf 클라이언트에는 보안 설정이 적용 되지 않습니다. 따라서 WCF 클라이언트가 생성 된 후 WSE 3.0 서비스에서 요구 하는 보안 설정을 지정 해야 합니다.  
+
+Wcf 클라이언트가 WS-Addressing 사양의 8 월 2004 버전을 사용 하도록 구성 된 경우 WCF (Windows Communication Foundation) 클라이언트는 Microsoft .NET 서비스의 WSE (Web Services 개선) 3.0와 유선 수준으로 호환 됩니다. 그러나 WSE 3.0 서비스는 MEX (metadata exchange) 프로토콜을 지원 하지 않으므로 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 wcf 클라이언트 클래스를 만들 때 생성 된 wcf 클라이언트에는 보안 설정이 적용 되지 않습니다. 따라서 WCF 클라이언트가 생성 된 후 WSE 3.0 서비스에서 요구 하는 보안 설정을 지정 해야 합니다.  
   
  Wse 3.0 서비스와 WCF 클라이언트 간의 상호 운용 가능한 요구 사항 및 WSE 3.0 서비스의 요구 사항을 고려 하 여 사용자 지정 바인딩을 사용 하 여 이러한 보안 설정을 적용할 수 있습니다. 이러한 상호 운용성 요구 사항에는 앞에서 말한 August 2004 WS-Addressing 사양 및 WSE 3.0의 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> 기본 메시지 보호를 사용하는 것이 포함됩니다. WCF에 대 한 기본 메시지 보호는 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature> 입니다. 이 항목에서는 WSE 3.0 서비스와 상호 작용 하는 WCF 바인딩을 만드는 방법에 대해 자세히 설명 합니다. WCF는이 바인딩을 통합 하는 샘플도 제공 합니다. 이 샘플에 대 한 자세한 내용은 [ASMX 웹 서비스와 상호 운용](../samples/interoperating-with-asmx-web-services.md)을 참조 하세요.  
   
@@ -58,9 +59,10 @@ Wcf 클라이언트가 WS-ADDRESSING 사양의 8 2004 월 버전을 사용 하�
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
 ## <a name="example"></a>예제  
+
  다음 코드 예제에서는 WSE 3.0 턴키 보안 어설션의 속성에 해당하는 속성을 노출하는 사용자 지정 바인딩을 정의합니다. 그런 다음 이라는 사용자 지정 바인딩을 사용 하 여 `WseHttpBinding` WSSecurityAnonymous WSE 3.0 퀵 스타트 샘플과 통신 하는 WCF 클라이언트에 대 한 바인딩 속성을 지정 합니다.  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Channels.Binding>
 - [WSE와 상호 운용](/previous-versions/dotnet/netframework-3.5/ms752257(v=vs.90))

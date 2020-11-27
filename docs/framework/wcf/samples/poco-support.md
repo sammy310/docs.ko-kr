@@ -2,14 +2,15 @@
 title: POCO 지원
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: a9f8d185c58b22e68f7a8c11954e0e534c4bd48f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d416f37e0add99fbe3d60982fd2298748ff78556
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600466"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259969"
 ---
 # <a name="poco-support"></a>POCO 지원
+
 이 샘플에서는 표시되지 않은 형식, 즉 serialization 특성이 적용되지 않은 형식을 소개합니다. 이러한 형식을 POCO(Plain Old CLR Object) 형식이라고도 합니다. 는 <xref:System.Runtime.Serialization.DataContractSerializer> 매개 변수가 없는 생성자가 있는 모든 공개 되지 않은 형식에 대 한 데이터 계약을 유추 합니다. 데이터 계약을 사용하면 서비스와 구조적 데이터를 주고 받을 수 있습니다. 표시 되지 않은 형식에 대 한 자세한 내용은 [Serializable 형식](../feature-details/serializable-types.md)을 참조 하세요.  
   
  이 샘플은 [시작](getting-started-sample.md)을 기반으로 하지만 기본 숫자 형식 대신 복소수를 사용 합니다. <xref:System.Runtime.Serialization.DataContractAttribute> 및<xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 사용하지 않는 경우를 제외하고는 [기본 데이터 계약](basic-data-contract.md) 샘플과도 유사합니다.  

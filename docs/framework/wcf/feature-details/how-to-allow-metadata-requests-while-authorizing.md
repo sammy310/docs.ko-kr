@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: 6d172f9b659804179d23fb382376f83f4898edc5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9acc007ea7837f7b8e6c958fa81547fe4fa5b2c0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601311"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257615"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>방법: 권한을 부여하는 동안 메타데이터 요청 허용
+
 사용자 지정 인증을 수행하는 동안 메타데이터를 처리하도록 요청을 허용해야 할 수 있습니다. 다음 항목에서는 이러한 요청의 유효성을 검사하는 단계에 대해 설명합니다.  
   
  WCF (Windows Communication Foundation) 권한 부여에 대 한 자세한 내용은 [권한 부여](authorization-in-wcf.md)를 참조 하세요.  
@@ -30,6 +31,7 @@ ms.locfileid: "84601311"
 4. 확장성 지점을 사용하여 클래스를 채택합니다. 자세한 내용은 [방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](../extending/how-to-create-a-custom-authorization-manager-for-a-service.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 메서드의 재정의를 보여 줍니다.  
   
  [!code-csharp[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/cs/source.cs#1)]

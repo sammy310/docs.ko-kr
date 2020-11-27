@@ -2,17 +2,19 @@
 title: 기본2
 ms.date: 03/30/2017
 ms.assetid: 04e4d3bd-ab89-4b50-8f42-2a4430751a9c
-ms.openlocfilehash: c6c1dcfaebd74e7cc401b555e834bca2ac8da856
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 91c8cee890f19a66feba6dd9a89145fb96102358
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575682"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258779"
 ---
-# <a name="basic"></a>Basic
+# <a name="basic"></a>기본
+
 이 섹션에는 WCF (기본 Windows Communication Foundation) 기능을 보여 주는 샘플 섹션이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [시작](getting-started-sample.md)  
  WCF를 사용 하 여 일반 서비스와 일반 클라이언트를 구현 하는 방법을 보여 줍니다.  
   
@@ -25,7 +27,7 @@ ms.locfileid: "84575682"
  [클라이언트](client.md)  
  WCF 클라이언트 응용 프로그램을 보여 줍니다.  
   
- [계약](contract.md)  
+ [내용의](contract.md)  
  데이터 계약을 보여 줍니다.  
   
  [검색](discovery-samples.md)  
@@ -43,7 +45,7 @@ ms.locfileid: "84575682"
  [Services](services.md)  
  WCF 서비스를 보여 줍니다.  
   
- [배포](syndication.md)  
+ [신디케이션](syndication.md)  
  DemonstratesWCF 배포.  
   
  [Web](web.md)  

@@ -2,17 +2,19 @@
 title: Net MSMQ 바인딩
 ms.date: 03/30/2017
 ms.assetid: fe4bb696-f57c-4cb3-9b7e-9d95fe6b8323
-ms.openlocfilehash: 622341ef00f5d8950fa0c013e427f20e02187893
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 22b82e9335f3bf5861000a62374ab9e8dccce8cf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602429"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259982"
 ---
 # <a name="net-msmq-binding"></a>Net MSMQ 바인딩
+
 이 단원에는 엔드포인트 요소의 MSMQ 바인딩 특성을 사용하는 방법을 보여 주는 샘플이 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [트랜잭션된 MSMQ 바인딩](transacted-msmq-binding.md)  
  MSMQ(메시지 큐)를 사용하여 큐에 있는 트랜잭션된 통신을 수행하는 방법을 보여 줍니다.  
   

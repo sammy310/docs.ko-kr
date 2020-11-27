@@ -2,14 +2,15 @@
 title: '방법: 단방향 및 요청-회신 계약을 사용하여 WCF 서비스 액세스'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 9c8bd0d21be1d87d536eb6f943e782fc4da352a8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2d415b8f901e0a0e35690c015656620fe5ce13d0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597191"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257706"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>방법: 단방향 및 요청-회신 계약을 사용하여 WCF 서비스 액세스
+
 다음 절차에서는 단방향 계약과 요청-회신 계약을 정의 하 고 이중 통신 패턴을 사용 하지 않는 WCF (Windows Communication Foundation) 서비스에 액세스 하는 방법을 설명 합니다.  
   
 ### <a name="to-define-the-service"></a>서비스를 정의하려면  
@@ -109,7 +110,7 @@ ms.locfileid: "84597191"
   
 ### <a name="to-access-the-service"></a>서비스에 액세스하려면  
   
-1. 메타 데이터 교환 끝점 주소를 사용 하 여 [Servicemodel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 실행 하 여 다음 명령줄을 사용 하 여 서비스에 대 한 클라이언트 클래스를 만듭니다. `Svcutil http://localhost:8000/Service` [servicemodel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 는 다음 샘플 코드에 표시 된 것 처럼 인터페이스 및 클래스 집합을 생성 합니다.  
+1. 메타 데이터 교환 끝점 주소를 사용 하 여 [Servicemodel Metadata Utility tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 을 실행 하 여 다음 명령줄을 사용 하 여 서비스에 대 한 클라이언트 클래스를 만듭니다. `Svcutil http://localhost:8000/Service` [servicemodel metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 는 다음 샘플 코드에 표시 된 것 처럼 인터페이스와 클래스 집합을 생성 합니다.  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -247,6 +248,7 @@ ms.locfileid: "84597191"
     ```  
   
 ## <a name="example"></a>예제  
+
  다음은 이 항목에서 사용되는 전체 코드 목록입니다.  
   
 ```csharp  

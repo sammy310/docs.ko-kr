@@ -8,14 +8,15 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 05f35bbb7dbb34cd4067c407578038cbb4eff70f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 692ccc0c39ca7ed40601551ea6bbcdd840fa03af
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599147"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257589"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>방법: 페더레이션 서비스에서 자격 증명 구성
+
 WCF (Windows Communication Foundation)에서 페더레이션된 서비스 만들기는 다음과 같은 주요 절차로 구성 됩니다.  
   
 1. <xref:System.ServiceModel.WSFederationHttpBinding> 또는 유사한 사용자 지정 바인딩을 구성합니다. 적절 한 바인딩을 만드는 방법에 대 한 자세한 내용은 [방법: WSFederationHttpBinding 만들기](how-to-create-a-wsfederationhttpbinding.md)를 참조 하세요.  
@@ -56,6 +57,7 @@ WCF (Windows Communication Foundation)에서 페더레이션된 서비스 만들
 5. 필요한 경우 `samlSerializer` <`issuedTokenAuthentication`> 요소의 특성을 사용자 지정 클래스의 형식 이름으로 설정 합니다 <xref:System.IdentityModel.Tokens.SamlSerializer> .  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>의속성을 코드로 설정합니다.  
   
  [!code-csharp[C_FederatedService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedservice/cs/source.cs#2)]

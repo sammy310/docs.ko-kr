@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: 1ebc4e145528c3025b0299ea7e421c248c28cdc0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b5284db1329c572bdecf3ef607e697c63835d508
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556371"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257524"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>방법: WSE3.0 서비스와 상호 운용하도록 WCF 클라이언트 구성
-Wcf 클라이언트가 WS-ADDRESSING 사양의 8 2004 월 버전을 사용 하도록 구성 된 경우 WCF (Windows Communication Foundation) 클라이언트는 WSE (Web Services 3.0 향상 된 Microsoft .NET) 서비스와 유선 수준으로 호환 됩니다.  
+
+Wcf 클라이언트가 WS-Addressing 사양의 8 월 2004 버전을 사용 하도록 구성 된 경우 WCF (Windows Communication Foundation) 클라이언트는 WSE (Web Services 3.0 향상 된 Microsoft .NET) 서비스와 유선 수준으로 호환 됩니다.  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>WSE 3.0 웹 서비스와 상호 운용하도록 WCF 클라이언트를 구성하려면  
   
@@ -56,12 +57,13 @@ Wcf 클라이언트가 WS-ADDRESSING 사양의 8 2004 월 버전을 사용 하�
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
 ## <a name="example"></a>예제  
+
  다음 코드 예제에서는 WSE 3.0 턴키 보안 어설션의 속성에 해당하는 속성을 노출하는 사용자 지정 바인딩을 정의합니다. 그런 다음 이라는 사용자 지정 바인딩을 `WseHttpBinding` 사용 하 여 WCF 클라이언트에 대 한 바인딩 속성을 지정 합니다.  
 
 [!code-csharp[c_WCFClientToWSEService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#0)]
 [!code-vb[c_WCFClientToWSEService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#0)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Channels.Binding>
 - [WSE와 상호 운용](/previous-versions/dotnet/netframework-3.5/ms752257(v=vs.90))

@@ -2,14 +2,15 @@
 title: PII 보안 잠금
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 62e1495927cad669771c560603919e8f6b94d863
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b4ec820cd57e3dfaff035dc8e5ce1ef4b463df5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559378"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260002"
 ---
 # <a name="pii-security-lockdown"></a>PII 보안 잠금
+
 이 샘플에서는 다음을 수행 하 여 WCF (Windows Communication Foundation) 서비스의 몇 가지 보안 관련 기능을 제어 하는 방법을 보여 줍니다.  
   
 - 서비스의 구성 파일에서 중요한 정보 암호화  
@@ -28,6 +29,7 @@ ms.locfileid: "90559378"
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>토론(Discussion)  
+
  이러한 각 기능을 별개로 사용하거나 함께 사용하여 서비스 보안의 여러 측면을 제어할 수 있습니다. 이는 WCF 서비스를 보호 하기 위한 명확한 가이드가 아닙니다.  
   
  .NET Framework는 데이터베이스에 연결하기 위한 연결 문자열과 같은 중요한 정보를 포함할 수 있습니다. 공유된 웹 호스팅 시나리오에서는 서비스의 구성 파일에 포함된 데이터가 노출되지 않도록 구성 파일에서 이 정보를 암호화하는 것이 바람직할 수 있습니다. .NET Framework 2.0 이상에는 Windows DPAPI(데이터 보호 응용 프로그래밍 인터페이스) 또는 RSA 암호화 공급자를 사용하여 구성 파일의 일부를 암호화하는 기능이 있습니다. DPAPI 또는 RSA를 사용하는 aspnet_regiis.exe는 구성 파일의 특정 부분을 암호화할 수 있습니다.  
@@ -37,11 +39,12 @@ ms.locfileid: "90559378"
  이 샘플에서는 사용자 이름 및 암호와 같은 추적 및 메시지 로그의 알려진 PII(개인적으로 식별할 수 있는 정보)의 로깅을 제어하는 방법을 보여 줍니다. 기본적으로 알려진 PII의 로깅은 사용되지 않지만 특정 상황에서는 애플리케이션 디버깅을 위해 PII의 로깅이 중요할 수 있습니다. 이 샘플은 [시작](getting-started-sample.md)을 기반으로 합니다. 또한 이 샘플에서는 추적 및 메시지 로깅을 사용합니다. 자세한 내용은 [추적 및 메시지 로깅](tracing-and-message-logging.md) 샘플을 참조 하세요.  
   
 ## <a name="encrypting-configuration-file-elements"></a>구성 파일 요소 암호화  
+
  공유된 웹 호스팅 환경에서의 보안을 위해 중요한 정보가 포함된 데이터베이스 연결 문자열과 같은 특정 구성 요소를 암호화하는 것이 바람직할 수 있습니다. 구성 요소는 .NET Framework 폴더에 있는 aspnet_regiis.exe 도구 (예:%WINDIR%\Microsoft.NET\Framework\v4.0.20728.)를 사용 하 여 암호화할 수 있습니다.  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>샘플의 Web.config에서 appSettings 섹션의 값을 암호화하려면  
   
-1. 시작->실행 ...을 사용 하 여 명령 프롬프트를 엽니다. 을 입력 `cmd` 하 고 **확인**을 클릭 합니다.  
+1. 시작->실행 ...을 사용 하 여 명령 프롬프트를 엽니다. 을 입력 `cmd` 하 고 **확인** 을 클릭 합니다.  
   
 2. `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728` 명령을 실행하여 현재 .NET Framework 디렉터리로 이동합니다.  
   
@@ -50,6 +53,7 @@ ms.locfileid: "90559378"
  구성 파일의 섹션을 암호화 하는 방법에 대 한 자세한 내용은 ASP.NET 구성에서 DPAPI를 사용 하는 방법 ([보안 ASP.NET 응용 프로그램 빌드: 인증, 권한 부여 및 보안 통신](/previous-versions/msp-n-p/ff649248(v=pandp.10))) 및 ASP.NET 구성에서 rsa에 대 한 방법 ([방법: Rsa를 사용 하 여 ASP.NET 2.0의 구성 섹션 암호화](/previous-versions/msp-n-p/ff650304(v=pandp.10)))을 참조 하세요.  
   
 ## <a name="locking-configuration-file-elements"></a>구성 파일 요소 잠금  
+
  웹 호스팅 시나리오에서는 서비스의 하위 디렉터리에 서비스를 가질 수 있습니다. 이러한 상황에서는 Machine.config의 값을 검사한 다음 디렉터리 트리를 내려가면서 부모 디렉터리의 모든 Web.config 파일과 병합하고 마지막으로 서비스가 포함된 디렉터리의 Web.config 파일을 병합함으로써 하위 디렉터리의 서비스에 대한 구성 값을 계산합니다. 대부분의 구성 요소에서는 기본적으로 하위 디렉터리의 구성 파일이 부모 디렉터리의 값을 재정의하도록 허용됩니다. 그러나 특정 상황에서는 하위 디렉터리의 구성 파일이 부모 디렉터리 구성에 설정된 값을 재정의하지 못하도록 방지하는 것이 바람직할 수 있습니다.  
   
  .NET Framework에서는 잠겨진 구성 요소를 재정의하는 구성이 런타임 예외를 throw하도록 구성 파일 요소를 잠그는 방법이 제공됩니다.  
@@ -74,6 +78,7 @@ ms.locfileid: "90559378"
  구성 요소 잠금은 더 세부적일 수 있습니다. 요소 목록을 `lockElements`에 대한 값으로 지정하여 하위 요소 컬렉션 내에서 요소 집합을 잠글 수 있습니다. 또한 특성 목록을 `lockAttributes`에 대한 값으로 지정하여 요소 내에서 특성 집합을 잠글 수 있습니다. 노드에서 `lockAllElementsExcept` 또는 `lockAllAttributesExcept` 특성을 지정하면 지정된 목록을 제외하고 요소 또는 특성의 전체 컬렉션을 잠글 수 있습니다.  
   
 ## <a name="pii-logging-configuration"></a>PII 로깅 구성  
+
  PII 로깅은 두 개의 스위치로 제어됩니다. 하나는 컴퓨터 관리자가 PII 로깅을 허용하거나 거부할 수 있게 하는 Machine.config에 있는 컴퓨터 수준 설정이고 다른 하나는 애플리케이션 관리자가 Web.config 또는 App.config 파일의 각 소스에 대해 PII 로깅을 설정/해제할 수 있게 하는 애플리케이션 설정입니다.  
   
  컴퓨터 차원의 설정은 `enableLoggingKnownPii` `true` `false` Machine.config의 요소에서를 또는로 설정 하 여 제어 됩니다 `machineSettings` . 예를 들어 다음을 사용 하 여 응용 프로그램에서 PII 로깅을 켤 수 있습니다.  
@@ -142,6 +147,6 @@ ms.locfileid: "90559378"
   
 1. Machine.config를 편집하여 `enableLoggingKnownPii` 특성을 `false`로 설정합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 모니터링 샘플](/previous-versions/appfabric/ff383407(v=azure.10))

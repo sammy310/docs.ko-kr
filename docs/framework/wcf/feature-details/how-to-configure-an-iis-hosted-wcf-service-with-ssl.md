@@ -3,14 +3,15 @@ title: '방법: SSL을 사용하여 IIS에서 호스팅되는 WCF 서비스 구�
 description: Iis에 등록 된 인증서가 필요한 HTTP 전송 보안을 사용 하도록 IIS에서 호스팅되는 WCF 서비스를 설정 하는 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: 8dc4692863d93e407a122c0ba93ae38323b8b213
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 960005761d3bed917142141976e9f9094094b34c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245260"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257654"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>방법: SSL을 사용하여 IIS에서 호스팅되는 WCF 서비스 구성
+
 이 항목에서는 HTTP 전송 보안을 사용하도록 IIS에서 호스트되는 WCF 서비스를 설정하는 방법에 대해 설명합니다. HTTP 전송 보안에는 IIS에 등록할 SSL 인증서가 필요합니다. SSL 인증서가 없는 경우에는 IIS를 사용하여 테스트 인증서를 생성할 수 있습니다. 그런 다음 SSL 바인딩을 웹 사이트에 추가하고 웹 사이트의 인증 속성을 구성해야 합니다. 마지막으로, HTTPS를 사용하도록 WCF 서비스를 구성해야 합니다.  
   
 ### <a name="creating-a-self-signed-certificate"></a>자체 서명된 인증서 만들기  
@@ -19,11 +20,11 @@ ms.locfileid: "85245260"
   
      ![IIS Manager 홈 화면](media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
   
-2. 서버 인증서 창에서 **자체 서명 된 인증서 만들기** ...를 클릭 합니다. 링크를 클릭합니다.  
+2. 서버 인증서 창에서 **Self-Signed 인증서 만들기** ...를 클릭 합니다. 링크를 클릭합니다.  
   
      ![IIS를 사용 하 여 자체&#45;서명 된 인증서 만들기](media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
-3. 자체 서명 된 인증서의 이름을 입력 하 고 **확인**을 클릭 합니다.  
+3. 자체 서명 된 인증서의 이름을 입력 하 고 **확인** 을 클릭 합니다.  
   
      ![자체&#45;서명 된 인증서 만들기 대화 상자](media/mg-mycert.jpg "mg_MyCert")  
   
@@ -95,6 +96,7 @@ ms.locfileid: "85245260"
     ```  
   
 ## <a name="example"></a>예제  
+
  다음은 HTTP 전송 보안을 사용하는 WCF 서비스에 대한 web.config 파일의 전체 예제입니다.  
   
 ```xml  

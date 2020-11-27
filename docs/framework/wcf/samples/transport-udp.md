@@ -2,14 +2,15 @@
 title: '전송: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: dcf2d9896ab7c95101e224521174b54c88ca3fc2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 815a0a50e42e68040673e34e5ebccad17dfeecda
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559007"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258753"
 ---
 # <a name="transport-udp"></a>전송: UDP
+
 UDP 전송 샘플은 UDP 유니캐스트 및 멀티 캐스트를 WCF (사용자 지정 Windows Communication Foundation) 전송으로 구현 하는 방법을 보여 줍니다. 이 샘플에서는 채널 프레임 워크 및 WCF 모범 사례를 사용 하 여 WCF에서 사용자 지정 전송을 만드는 권장 절차에 대해 설명 합니다. 사용자 지정 전송을 만드는 단계는 다음과 같습니다.  
   
 1. ChannelFactory 및 ChannelListener에서 지원할 채널 [메시지 교환 패턴](#MessageExchangePatterns) (Ioutputchannel, IInputChannel, IDuplexChannel, IRequestChannel 또는 IReplyChannel)을 결정 합니다. 그런 다음 이러한 인터페이스의 세션 변형을 지원할지 여부를 결정합니다.  
@@ -29,7 +30,9 @@ UDP 전송 샘플은 UDP 유니캐스트 및 멀티 캐스트를 WCF (사용자 
 8. 바인딩이 구성 시스템에 노출되도록 바인딩 섹션 및 바인딩 구성 요소를 추가합니다. 자세한 내용은 [구성 지원 추가](#AddingConfigurationSupport)를 참조 하세요.  
   
 <a name="MessageExchangePatterns"></a>
+
 ## <a name="message-exchange-patterns"></a>메시지 교환 패턴  
+
  사용자 지정 전송을 작성하는 첫 번째 단계는 전송에 필요한 MEP(메시지 교환 패턴)를 결정하는 것입니다. 다음과 같은 세 개의 MEP가 있습니다.  
   
 - 데이터그램(IInputChannel/IOutputChannel)  
@@ -50,6 +53,7 @@ UDP 전송 샘플은 UDP 유니캐스트 및 멀티 캐스트를 WCF (사용자 
 > UDP 전송의 경우 UDP는 본래 "fire and forget" 프로토콜이므로 데이터그램 MEP만 지원됩니다.  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject 및 WCF 개체 수명 주기  
+
  WCF에는 <xref:System.ServiceModel.Channels.IChannel> <xref:System.ServiceModel.Channels.IChannelFactory> 통신에 사용 되는, 및와 같은 개체의 수명 주기를 관리 하는 데 사용 되는 공용 상태 시스템이 있습니다 <xref:System.ServiceModel.Channels.IChannelListener> . 이러한 통신 개체의 상태는 5가지로 나타낼 수 있습니다. 이러한 상태는 <xref:System.ServiceModel.CommunicationState> 열거형으로 나타내며 다음과 같습니다.  
   
 - Created: <xref:System.ServiceModel.ICommunicationObject>가 처음 인스턴스화되었을 때의 상태입니다. 이 상태에서는 I/O(입/출력)이 발생하지 않습니다.  
@@ -67,7 +71,9 @@ UDP 전송 샘플은 UDP 유니캐스트 및 멀티 캐스트를 WCF (사용자 
  각 상태 전환 시 실행되는 이벤트가 있습니다. <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 메서드는 언제든지 호출 가능하며, 개체가 현재 상태에서 Closed 상태로 즉시 전환되게 합니다. <xref:System.ServiceModel.ICommunicationObject.Abort%2A>를 호출하면 완료되지 않은 작업이 모두 종료됩니다.  
   
 <a name="ChannelAndChannelListener"></a>
+
 ## <a name="channel-factory-and-channel-listener"></a>채널 팩터리 및 채널 수신기  
+
  사용자 지정 전송을 작성하는 다음 단계는 클라이언트 채널을 위한 <xref:System.ServiceModel.Channels.IChannelFactory> 및 서비스 채널을 위한 <xref:System.ServiceModel.Channels.IChannelListener>의 구현을 만드는 것입니다. 채널 계층은 채널을 만들기 위해 팩토리 패턴을 사용합니다. WCF는이 프로세스에 대 한 기본 클래스 도우미를 제공 합니다.  
   
 - <xref:System.ServiceModel.Channels.CommunicationObject> 클래스는 <xref:System.ServiceModel.ICommunicationObject>를 구현하고 2단계에서 설명한 상태 시스템을 적용합니다.
@@ -81,9 +87,11 @@ UDP 전송 샘플은 UDP 유니캐스트 및 멀티 캐스트를 WCF (사용자 
  이 샘플에서 팩터리 구현은 UdpChannelFactory.cs에 포함되어 있고, 수신기 구현은 UdpChannelListener.cs에 포함되어 있습니다. <xref:System.ServiceModel.Channels.IChannel> 구현은 UdpOutputChannel.cs 및 UdpInputChannel.cs에 있습니다.  
   
 ### <a name="the-udp-channel-factory"></a>UDP 채널 팩터리  
+
  `UdpChannelFactory`는 <xref:System.ServiceModel.Channels.ChannelFactoryBase>에서 파생됩니다. 샘플에서는 메시지 인코더의 메시지 버전에 액세스할 수 있도록 <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A>를 재정의합니다. 또한 샘플에서는 상태 시스템이 전환될 때 <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A>의 인스턴스를 중지할 수 있도록 <xref:System.ServiceModel.Channels.BufferManager>를 재정의합니다.  
   
 #### <a name="the-udp-output-channel"></a>UDP 출력 채널  
+
  `UdpOutputChannel`은 <xref:System.ServiceModel.Channels.IOutputChannel>을 구현합니다. 생성자는 인수의 유효성을 검사하여 전달되는 <xref:System.Net.EndPoint>를 기반으로 대상 <xref:System.ServiceModel.EndpointAddress> 개체를 구성합니다.  
   
 ```csharp
@@ -109,6 +117,7 @@ this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Coun
 ```  
   
 ### <a name="the-udpchannellistener"></a>UdpChannelListener  
+
  `UdpChannelListener`샘플에서 구현 하는는 클래스에서 파생 <xref:System.ServiceModel.Channels.ChannelListenerBase> 됩니다. 단일 UDP 소켓을 사용하여 데이터그램을 받습니다. `OnOpen` 메서드는 비동기 루프에서 UDP 소켓을 사용하여 데이터를 받습니다. 그런 다음 데이터는 메시지 인코딩 프레임워크를 통해 메시지로 변환됩니다.  
   
 ```csharp
@@ -118,10 +127,13 @@ message = MessageEncoderFactory.Encoder.ReadMessage(new ArraySegment<byte>(buffe
  같은 데이터그램 채널은 여러 소스에서 도착한 메시지를 나타내므로 `UdpChannelListener`는 singleton 수신기입니다. 한 번에 최대 하나의 활성 <xref:System.ServiceModel.Channels.IChannel> 이이 수신기에 연결 되어 있습니다. 이 샘플에서는 `AcceptChannel` 메서드에서 반환되는 채널이 이후에 삭제되는 경우에만 새 채널을 생성합니다. 메시지를 받으면 이 singleton 채널의 큐에 삽입됩니다.  
   
 #### <a name="udpinputchannel"></a>UdpInputChannel  
+
  `UdpInputChannel` 클래스는 `IInputChannel`을 구현합니다. 이 클래스는 `UdpChannelListener`의 소켓으로 채워지는 들어오는 메시지의 큐로 구성됩니다. 이러한 메시지는 `IInputChannel.Receive` 메서드에 의해 큐에서 제거됩니다.  
   
 <a name="AddingABindingElement"></a>
+
 ## <a name="adding-a-binding-element"></a>바인딩 요소 추가  
+
  이제 팩터리와 채널이 빌드되었으므로 바인딩을 통해 ServiceModel 런타임에 팩터리와 채널을 노출해야 합니다. 바인딩은 서비스 주소와 연결된 통신 스택을 나타내는 바인딩 요소의 컬렉션입니다. 스택의 각 요소는 요소로 표시 됩니다 [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) .  
   
  이 샘플에서 바인딩 요소는 `UdpTransportBindingElement`에서 파생된 <xref:System.ServiceModel.Channels.TransportBindingElement>로, 바인딩에 연결되는 팩터리를 빌드하기 위해 다음 메서드를 재정의합니다.  
@@ -141,12 +153,15 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  이 바인딩 요소에는 `BindingElement`를 복제하고 soap.udp 체계를 반환하는 멤버도 포함됩니다.  
   
 ## <a name="adding-metadata-support-for-a-transport-binding-element"></a>전송 바인딩 요소에 대해 메타데이터 지원 추가  
+
  전송을 메타데이터 시스템에 통합하려면 정책 가져오기 및 내보내기를 모두 지원해야 합니다. 이를 통해 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)를 통해 바인딩의 클라이언트를 생성할 수 있습니다.  
   
 ### <a name="adding-wsdl-support"></a>WSDL 지원 추가  
+
  바인딩의 전송 바인딩 요소는 메타데이터에서 주소 지정 정보를 내보내고 가져옵니다. 또한 전송 바인딩 요소는 SOAP 바인딩을 사용할 때 메타데이터에서 올바른 전송 URI을 내보낼 수 있어야 합니다.  
   
 #### <a name="wsdl-export"></a>WSDL 내보내기  
+
  주소 지정 정보를 내보내기 위해 `UdpTransportBindingElement`는 `IWsdlExportExtension` 인터페이스를 구현합니다. `ExportEndpoint` 메서드는 WSDL 포트에 올바른 주소 지정 정보를 추가합니다.  
   
 ```csharp
@@ -167,6 +182,7 @@ if (soapBinding != null)
 ```  
   
 #### <a name="wsdl-import"></a>WSDL 가져오기  
+
  주소 가져오기를 처리하기 위해 WSDL 가져오기 시스템을 확장하려면 Svcutil.exe.config 파일에서처럼 Svcutil.exe의 구성 파일에 다음 구성을 추가해야 합니다.  
   
 ```xml
@@ -201,9 +217,11 @@ if (transportBindingElement is UdpTransportBindingElement)
 ```  
   
 ### <a name="adding-policy-support"></a>정책 지원 추가  
+
  사용자 지정 바인딩 요소는 서비스 엔드포인트가 해당 바인딩 요소의 기능을 표현하도록 WSDL 바인딩에서 정책 어설션을 내보낼 수 있습니다.  
   
 #### <a name="policy-export"></a>정책 내보내기  
+
  `UdpTransportBindingElement`형식은 `IPolicyExportExtension` 정책 내보내기에 대 한 지원을 추가 하기 위해을 구현 합니다. 그 결과, `System.ServiceModel.MetadataExporter`는 이를 포함하는 모든 바인딩에 대한 정책 생성에 `UdpTransportBindingElement`를 포함합니다.  
   
  `IPolicyExportExtension.ExportPolicy`에서는 멀티캐스트 모드인 경우 UDP용 어설션 및 다른 어설션을 추가합니다. 이는 멀티캐스트 모드가 통신 스택의 구성 방법에 영향을 주므로 양쪽 모두에서 조정되어야 하기 때문입니다.  
@@ -229,6 +247,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ```  
   
 #### <a name="policy-import"></a>정책 가져오기  
+
  정책 가져오기 시스템을 확장하려면 Svcutil.exe.config 파일에서처럼 Svcutil.exe의 구성 파일에 다음 구성을 추가해야 합니다.  
   
 ```xml
@@ -252,7 +271,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 2. Svcutil.exe와 동일한 디렉터리에 있는 Svcutil.exe.config에 구성 섹션을 추가합니다.  
   
 <a name="AddingAStandardBinding"></a>
+
 ## <a name="adding-a-standard-binding"></a>표준 바인딩 추가  
+
  바인딩 요소를 다음 두 가지 방법으로 사용할 수 있습니다.  
   
 - 사용자 지정 바인딩을 통해 사용: 사용자 지정 바인딩에서는 사용자가 임의의 바인딩 요소 집합을 기반으로 직접 바인딩을 만들 수 있습니다.  
@@ -277,6 +298,7 @@ public override BindingElementCollection CreateBindingElements()
 ```  
   
 ### <a name="adding-a-custom-standard-binding-importer"></a>사용자 지정 표준 바인딩 가져오기 추가  
+
  Svcutil.exe 및 `WsdlImporter` 형식은 기본적으로 시스템 정의 바인딩을 인식하고 가져옵니다. 그렇지 않을 경우, 해당 바인딩을 `CustomBinding` 인스턴스로 가져옵니다. Svcutil.exe 및 `WsdlImporter`를 사용하도록 설정하여 `SampleProfileUdpBinding`을 가져오기 위해 `UdpBindingElementImporter`가 사용자 지정 표준 바인딩 가져오기도 수행합니다.  
   
  사용자 지정 표준 바인딩 가져오기는 메타데이터로부터 가져온 `ImportEndpoint` 인스턴스를 검사하여 특정 표준 바인딩에 의해 생성되었는지 여부를 확인하기 위해 `IWsdlImportExtension` 인터페이스에 `CustomBinding` 메서드를 구현합니다.  
@@ -302,10 +324,13 @@ if (context.Endpoint.Binding is CustomBinding)
  일반적으로 사용자 지정 표준 바인딩 가져오기를 구현하면 가져온 바인딩 요소의 속성을 확인하여 표준 바인딩에 의해 설정될 수 있는 속성만 변경되고, 다른 모든 속성은 기본값인지를 확인하는 작업이 포함됩니다. 표준 바인딩 가져오기를 구현하기 위한 기본 전략은 표준 바인딩의 인스턴스를 만들고, 바인딩 요소의 속성을 표준 바인딩이 지원하는 표준 바인딩 인스턴스로 전파하고, 가져온 바인딩 요소를 표준 바인딩의 바인딩 요소와 비교하는 것입니다.  
   
 <a name="AddingConfigurationSupport"></a>
+
 ## <a name="adding-configuration-support"></a>구성 지원 추가  
+
  구성을 통해 전송을 노출하려면 두 가지 구성 섹션을 구현해야 합니다. 첫 번째는 `BindingElementExtensionElement`의 `UdpTransportBindingElement`입니다. 이는 `CustomBinding` 구현이 해당 바인딩 요소를 참조하기 위해 필요합니다. 두 번째는 `Configuration`의 `SampleProfileUdpBinding`입니다.  
   
 ### <a name="binding-element-extension-element"></a>바인딩 요소 확장명 요소  
+
  `UdpTransportElement` 섹션은 구성 시스템에 `BindingElementExtensionElement`을 노출하는 `UdpTransportBindingElement`입니다. 몇 가지 기본 재정의를 통해 구성 섹션 이름, 바인딩 요소의 형식 및 바인딩 요소를 만드는 방법을 정의합니다. 그러면 다음 코드와 같이 구성 파일에 확장명 섹션을 등록할 수 있습니다.  
   
 ```xml
@@ -337,6 +362,7 @@ if (context.Endpoint.Binding is CustomBinding)
 ```  
   
 ### <a name="binding-section"></a>바인딩 섹션  
+
  `SampleProfileUdpBindingCollectionElement` 섹션은 구성 시스템에 `StandardBindingCollectionElement`을 노출하는 `SampleProfileUdpBinding`입니다. 대량의 구현은 `SampleProfileUdpBindingConfigurationElement`로부터 파생되는 `StandardBindingElement`에 위임됩니다. 에는 `SampleProfileUdpBindingConfigurationElement` 의 속성과 `SampleProfileUdpBinding` 바인딩에서 매핑할 함수에 해당 하는 속성이 있습니다 `ConfigurationElement` . 마지막으로 다음 샘플 코드와 같이 `OnApplyConfiguration`에서 `SampleProfileUdpBinding` 메서드를 재정의합니다.  
   
 ```csharp
@@ -394,6 +420,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>UDP 테스트 서비스 및 클라이언트  
+
  이 샘플 전송을 사용하기 위한 테스트 코드는 UdpTestService 및 UdpTestClient 디렉터리에 있습니다. 서비스 코드는 두 가지 테스트로 구성됩니다. 하나는 코드에서 바인딩 및 엔드포인트를 설정하고, 다른 하나는 구성을 통해 바인딩 및 엔드포인트를 설정합니다. 두 테스트 모두 두 개의 엔드포인트를 사용합니다. 하나의 끝점은가 `SampleUdpProfileBinding` 로 설정 된를 사용 합니다 [\<reliableSession>](/previous-versions/ms731375(v=vs.90)) `true` . 다른 엔드포인트는 `UdpTransportBindingElement`가 포함된 사용자 지정 바인딩을 사용합니다. 이는 `SampleUdpProfileBinding` [\<reliableSession>](/previous-versions/ms731375(v=vs.90)) 를로 설정 하 여를 사용 하는 것과 같습니다 `false` . 두 테스트 모두 서비스를 만들고 각 바인딩에 엔드포인트를 추가하며 서비스를 연 다음 서비스를 닫기 전에 사용자가 Enter 키를 누를 때까지 기다립니다.  
   
  서비스 테스트 애플리케이션을 시작하면 다음과 같이 출력되어야 합니다.  

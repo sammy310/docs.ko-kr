@@ -3,14 +3,15 @@ title: ETW 추적
 description: 이 샘플에서는 ETW(Windows용 이벤트 추적) (ETW) 및 ETWTraceListener를 사용 하 여 E2E (종단 간) 추적을 구현 하는 방법을 보여 줍니다.
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 6e7526ef05d672b550599e3b12a4b083e9130b96
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6777b2d14786f7a79b3605bec93b4da62ff24616
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547143"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258480"
 ---
 # <a name="etw-tracing"></a>ETW 추적
+
 이 샘플에서는 ETW(Windows용 이벤트 추적) 및 이 샘플과 함께 제공된 `ETWTraceListener`를 사용하여 E2E(엔드투엔드) 추적을 구현하는 방법을 보여 줍니다. 이 샘플은 [시작](getting-started-sample.md) 을 기반으로 하며 ETW 추적을 포함 합니다.  
   
 > [!NOTE]
@@ -86,7 +87,7 @@ logman stop Wcf
 2. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](building-the-samples.md)의 지침을 따르세요.  
   
     > [!NOTE]
-    > RegisterProvider.bat, SetupETW.bat 및 CleanupETW.bat 명령을 사용하려면 로컬 관리자 계정으로 실행해야 합니다. Windows Vista 이상을 사용 하는 경우에는 상승 된 권한으로 명령 프롬프트도 실행 해야 합니다. 이렇게 하려면 명령 프롬프트 아이콘을 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다.  
+    > RegisterProvider.bat, SetupETW.bat 및 CleanupETW.bat 명령을 사용하려면 로컬 관리자 계정으로 실행해야 합니다. Windows Vista 이상을 사용 하는 경우에는 상승 된 권한으로 명령 프롬프트도 실행 해야 합니다. 이렇게 하려면 명령 프롬프트 아이콘을 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행** 을 클릭 합니다.  
   
 3. 샘플을 실행하기 전에 RegisterProvider.bat를 클라이언트와 서버에서 실행합니다. 이렇게 하면 Service Trace Viewer에서 읽을 수 있는 추적을 생성하도록 결과 ETWTracingSampleLog.etl 파일이 설정됩니다. 이 파일은 C:\logs 폴더에 있습니다. 이 폴더가 없을 경우 만들어야 하며 그렇지 않으면 추적이 생성되지 않습니다. 그런 다음 클라이언트 및 서버 컴퓨터에서 SetupETW.bat를 실행하여 ETW 추적 세션을 시작합니다. SetupETW.bat 파일은 CS\Client 폴더에 있습니다.  
   
@@ -107,6 +108,6 @@ logman stop Wcf
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 모니터링 샘플](/previous-versions/appfabric/ff383407(v=azure.10))
