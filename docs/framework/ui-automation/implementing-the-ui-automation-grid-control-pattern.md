@@ -7,14 +7,15 @@ helpviewer_keywords:
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: c7aae8e8070c989c4b36e0581aa5f48f51416f97
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 2290fd91c8eee0ab969eef2827d3c7440ef21e20
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165873"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274883"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>UI 자동화 Grid 컨트롤 패턴 구현
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87165873"
  <xref:System.Windows.Automation.GridPattern> 컨트롤 패턴은 자식 요소 컬렉션에 컨테이너 역할을 하는 컨트롤을 지원하는 데 사용됩니다. 이 요소의 자식 항목은 <xref:System.Windows.Automation.Provider.IGridItemProvider> 를 구현해야 하며 행과 열로 트래버스할 수 있는 2차원의 논리적 좌표계로 구성되어야 합니다. 이 컨트롤 패턴을 구현하는 컨트롤의 예제를 보려면 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)을 참조하세요.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
+
  Grid 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.  
   
 - Grid 좌표는 0부터 시작하며, 로캘에 따라 왼쪽 상단 또는 오른쪽 상단 셀의 좌표가 (0, 0)입니다.  
@@ -44,7 +47,9 @@ ms.locfileid: "87165873"
 - 표의 항목 또는 셀의 이동을 추적하려면 <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> 를 사용합니다.  
   
 <a name="Required_Members_for_IGridProvider"></a>
+
 ## <a name="required-members-for-igridprovider"></a>IGridProvider에 필요한 멤버  
+
  IGridProvider 인터페이스를 구현하려면 다음과 같은 속성 및 메서드가 필요합니다.  
   
 |필요한 멤버|Type|참고|  
@@ -56,7 +61,9 @@ ms.locfileid: "87165873"
  이 컨트롤 패턴에 연결된 이벤트가 없습니다.  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>예외  
+
  공급자는 다음과 같은 예외를 throw해야 합니다.  
   
 |예외 종류|조건|  

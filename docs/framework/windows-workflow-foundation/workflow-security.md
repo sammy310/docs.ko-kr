@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: d2d8556b1ed2ac0a2b030a88d6bfc0ad48ed6f5c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6253a0d76d8b1db938e789f19d2cdd5abba9b700
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557517"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273895"
 ---
 # <a name="workflow-security"></a>워크플로 보안
+
 WF (Windows Workflow Foundation)는 WCF (Microsoft SQL Server 및 Windows Communication Foundation)와 같은 다양 한 기술과 통합 됩니다. 이러한 기술과 잘못 상호 작용하면 워크플로에 보안 문제가 발생할 수 있습니다.
 
 ## <a name="persistence-security-concerns"></a>지속성 보안 고려 사항
@@ -45,6 +46,7 @@ WF (Windows Workflow Foundation)는 WCF (Microsoft SQL Server 및 Windows Commun
 - 들어오는 메시지에 대한 ServiceSecurityContext는 OperationContext에 액세스하여 워크플로 내에서도 사용할 수 있습니다.
 
 ## <a name="wf-security-pack-ctp"></a>WF Security Pack CTP
+
  Microsoft WF Security Pack community 기술 미리 보기 (CTP) 1은 [.NET Framework 4](/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (wf 4) 및 [WIF (Windows Identity Foundation](/previous-versions/dotnet/framework/security/index))의 [Windows Workflow Foundation](index.md) 을 기반으로 하는 일련의 작업 및 구현입니다. Microsoft WF Security Pack CTP 1에는 다음과 같은 워크플로를 사용하여 다양한 보안 관련 시나리오를 손쉽게 사용하는 방법을 보여 주는 활동과 디자이너가 모두 포함되어 있습니다.
 
 1. 워크플로에서 클라이언트 ID 가장

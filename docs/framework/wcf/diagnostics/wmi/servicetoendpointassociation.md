@@ -2,14 +2,15 @@
 title: ServiceToEndpointAssociation
 ms.date: 03/30/2017
 ms.assetid: 03c3cd15-e1b2-4dc2-bdc2-59fdccdae110
-ms.openlocfilehash: 3d23a3ee10c47e04ea7bdba202ea5063c0d84fac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e20556541b1aa48e7dfc6a8cde97e1bc477457e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048233"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273947"
 ---
 # <a name="servicetoendpointassociation"></a>ServiceToEndpointAssociation
+
 서비스를 엔드포인트에 매핑합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -23,13 +24,16 @@ class ServiceToEndpointAssociation
 ```  
   
 ## <a name="methods"></a>메서드  
+
  ServiceToEndpointAssociation 클래스는 메서드를 정의하지 않습니다.  
   
 ## <a name="properties"></a>속성  
+
  ServiceToEndpointAssociation 클래스에는 다음과 같은 속성이 있습니다.  
   
 ### <a name="ref"></a>ref  
- 데이터 형식: 서비스  
+
+ 데이터 형식: Service  
   
  액세스 형식: 읽기 전용  
 한정자: Key  
@@ -37,7 +41,8 @@ class ServiceToEndpointAssociation
  엔드포인트와 연결된 서비스입니다.  
   
 ### <a name="ref"></a>ref  
- 데이터 형식: 엔드포인트  
+
+ 데이터 형식: Endpoint  
   
  액세스 형식: 읽기 전용  
 한정자: Key  
