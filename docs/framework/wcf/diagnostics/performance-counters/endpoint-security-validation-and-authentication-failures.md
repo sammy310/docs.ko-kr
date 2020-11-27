@@ -1,18 +1,20 @@
 ---
-title: '끝점: Security Validation and Authentication Failures'
+title: '엔드포인트: Security Validation and Authentication Failures'
 ms.date: 03/30/2017
 ms.assetid: 5bad60aa-6084-4c7b-aefd-9b581f04382e
-ms.openlocfilehash: 9e0192ea600bb52abd555f2f83cfe8e96d3fe203
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a9a4758b26c744c55af200aee22a7e90c5a5cf57
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619335"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256471"
 ---
-# <a name="endpoint-security-validation-and-authentication-failures"></a>끝점: Security Validation and Authentication Failures
+# <a name="endpoint-security-validation-and-authentication-failures"></a>엔드포인트: Security Validation and Authentication Failures
+
 카운터 이름: Security Validation and Authentication Failures  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
+
  이 카운터는 "Security Calls Not Authorized" 카운터로 처리되지 않는 보안 문제 때문에 메시지가 거부될 때마다 증가합니다. 이러한 문제는 다음과 같습니다.  
   
 - 클라이언트 토큰을 메시지에서 읽을 수 없습니다.  

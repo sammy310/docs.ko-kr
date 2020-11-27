@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: 872fe325a6705e79d026cd7f6e1f7cfef5145307
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d322dd40fd024685d6f3236caed41ae5eec1f375
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599024"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256809"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>방법: 기본 RSS 피드 만들기
+
 WCF (Windows Communication Foundation)를 사용 하 여 배포 피드를 노출 하는 서비스를 만들 수 있습니다. 이 항목에서는 RSS 배포 피드를 노출하는 배포 서비스를 만드는 방법에 대해 설명합니다.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>기본 배포 서비스를 만들려면  
@@ -86,12 +87,14 @@ WCF (Windows Communication Foundation)를 사용 하 여 배포 피드를 노출
      [!code-vb[htRssBasic#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/snippets.vb#11)]  
   
 ## <a name="example"></a>예제  
+
  다음은 이 예제에 해당되는 전체 코드 목록입니다.  
   
  [!code-csharp[htRssBasic#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#12)]
  [!code-vb[htRssBasic#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#12)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
  앞의 코드를 컴파일할 때 System.ServiceModel.dll 및 System.ServiceModel.Web.dll을 참조합니다.  
   
 ## <a name="see-also"></a>참고 항목

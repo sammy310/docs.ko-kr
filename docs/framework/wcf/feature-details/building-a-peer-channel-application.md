@@ -2,17 +2,19 @@
 title: 피어 채널 애플리케이션 빌드
 ms.date: 03/30/2017
 ms.assetid: a69a1b8f-8e15-45c5-87b8-bdb71e1c7ab8
-ms.openlocfilehash: 6e10ddd71f4f2fe480829b1b5dd73befba6dabf6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4213f8049c5bd6a82ef814c3f152d52491fe2a8a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597607"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256874"
 ---
 # <a name="building-a-peer-channel-application"></a>피어 채널 애플리케이션 빌드
+
 다음 단원에서는 피어 채널 애플리케이션 개발에 대한 안내 자료를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [NetTcpBinding 애플리케이션을 피어 채널 애플리케이션으로 변환](converting-a-nettcpbinding-application-to-a-peer-channel-application.md)  
  NetTcpBinding 애플리케이션을 피어 채널 애플리케이션으로 변환하는 방법에 대해 설명합니다.  
   
