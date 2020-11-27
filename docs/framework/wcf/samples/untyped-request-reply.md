@@ -1,28 +1,29 @@
 ---
-title: 형식화 되지 않은 요청-회신
+title: 형식화 되지 않은 Request-Reply
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: 46047d1671fadb18052991451910b9056015edd2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bcd35bcac928397cad57384fdecb55d7e5ad13c3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591102"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294991"
 ---
-# <a name="untyped-requestreply"></a><span data-ttu-id="09868-102">형식없는 요청/회신</span><span class="sxs-lookup"><span data-stu-id="09868-102">Untyped Request/Reply</span></span>
-<span data-ttu-id="09868-103">이 샘플에서는 Message 클래스를 사용하는 작업 계약을 정의하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="09868-103">This sample demonstrates how to define operation contracts that use the Message class.</span></span>  
+# <a name="untyped-requestreply"></a><span data-ttu-id="ea7c1-102">형식없는 요청/회신</span><span class="sxs-lookup"><span data-stu-id="ea7c1-102">Untyped Request/Reply</span></span>
+
+<span data-ttu-id="ea7c1-103">이 샘플에서는 Message 클래스를 사용하는 작업 계약을 정의하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-103">This sample demonstrates how to define operation contracts that use the Message class.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="09868-104">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="09868-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="ea7c1-104">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="09868-105">이 샘플은 [시작](getting-started-sample.md)을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="09868-105">This sample is based on the [Getting Started](getting-started-sample.md).</span></span> <span data-ttu-id="09868-106">서비스 계약에서는 메시지 형식을 인수로 받는 작업을 하나 정의하고 메시지를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="09868-106">The service contract defines one operation that takes in a message type as an argument and returns a message.</span></span> <span data-ttu-id="09868-107">작업에서는 필요한 데이터를 모두 수집하여 메시지 본문으로부터 합계를 계산한 다음 컴퓨팅된 합계를 반환 메시지의 본문으로 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="09868-107">The operation collects all required data to compute the sum from the message body and then sends the sum as body in the return message.</span></span>  
+ <span data-ttu-id="ea7c1-105">이 샘플은 [시작](getting-started-sample.md)을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-105">This sample is based on the [Getting Started](getting-started-sample.md).</span></span> <span data-ttu-id="ea7c1-106">서비스 계약에서는 메시지 형식을 인수로 받는 작업을 하나 정의하고 메시지를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-106">The service contract defines one operation that takes in a message type as an argument and returns a message.</span></span> <span data-ttu-id="ea7c1-107">작업에서는 필요한 데이터를 모두 수집하여 메시지 본문으로부터 합계를 계산한 다음 컴퓨팅된 합계를 반환 메시지의 본문으로 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-107">The operation collects all required data to compute the sum from the message body and then sends the sum as body in the return message.</span></span>  
   
 ```csharp
 [OperationContract(Action = CalculatorService.RequestAction, ReplyAction = CalculatorService.ReplyAction)]  
 Message ComputeSum(Message request);  
 ```  
   
- <span data-ttu-id="09868-108">서비스에서 작업은 입력 메시지로 전달된 정수의 배열을 검색한 다음 합계를 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="09868-108">On the service, the operation retrieves the array of integers passed in the input message and then computes the sum.</span></span> <span data-ttu-id="09868-109">샘플에서는 응답 메시지를 보내기 위해 적절한 메시지 버전 및 동작으로 새 메시지를 만들고 계산된 합계를 본문으로 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="09868-109">To send a response message, the sample creates a new message with the appropriate message version and Action and adds the computed sum as its body.</span></span> <span data-ttu-id="09868-110">다음 샘플 코드에서는 이를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="09868-110">The following sample code demonstrates this.</span></span>  
+ <span data-ttu-id="ea7c1-108">서비스에서 작업은 입력 메시지로 전달된 정수의 배열을 검색한 다음 합계를 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-108">On the service, the operation retrieves the array of integers passed in the input message and then computes the sum.</span></span> <span data-ttu-id="ea7c1-109">샘플에서는 응답 메시지를 보내기 위해 적절한 메시지 버전 및 동작으로 새 메시지를 만들고 계산된 합계를 본문으로 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-109">To send a response message, the sample creates a new message with the appropriate message version and Action and adds the computed sum as its body.</span></span> <span data-ttu-id="ea7c1-110">다음 샘플 코드에서는 이를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-110">The following sample code demonstrates this.</span></span>  
   
 ```csharp
 public Message ComputeSum(Message request)  
@@ -43,7 +44,7 @@ public Message ComputeSum(Message request)
 }  
 ```  
   
- <span data-ttu-id="09868-111">클라이언트는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 에서 생성 된 코드를 사용 하 여 원격 서비스에 대 한 프록시를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="09868-111">The client uses code that is generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) to create a proxy to the remote service.</span></span> <span data-ttu-id="09868-112">요청 메시지를 보내려면 클라이언트에 내부 채널에 따라 결정되는 메시지 버전이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="09868-112">To send a request message, the client must have the message version, which depends on the underlying channel.</span></span> <span data-ttu-id="09868-113">따라서 여기서는 만들어지는 프록시 채널의 범위에 맞게 <xref:System.ServiceModel.OperationContextScope> 속성에 올바른 메시지 버전이 채워진 <xref:System.ServiceModel.OperationContext>를 만드는 새 `OutgoingMessageHeaders.MessageVersion`를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="09868-113">Thus, it creates a new <xref:System.ServiceModel.OperationContextScope> scoped to the proxy channel it created, which creates an <xref:System.ServiceModel.OperationContext> with the correct message version populated in its `OutgoingMessageHeaders.MessageVersion` property.</span></span> <span data-ttu-id="09868-114">클라이언트에서는 요청 메시지에 본문으로 입력 배열을 전달한 다음 프록시에서 `ComputeSum`을 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="09868-114">The client passes an input array as the body to the request message and then invokes the `ComputeSum` on the proxy.</span></span> <span data-ttu-id="09868-115">그런 다음 클라이언트에서는 회신 메시지에 있는 `GetBody<T>` 메서드에 액세스하여 전달한 입력의 합계를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="09868-115">The client then retrieves the sum of the inputs it passed by accessing the `GetBody<T>` method on the reply message.</span></span> <span data-ttu-id="09868-116">다음 샘플 코드에서는 이를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="09868-116">The following sample code demonstrates this.</span></span>  
+ <span data-ttu-id="ea7c1-111">클라이언트는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 에서 생성 된 코드를 사용 하 여 원격 서비스에 대 한 프록시를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-111">The client uses code that is generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) to create a proxy to the remote service.</span></span> <span data-ttu-id="ea7c1-112">요청 메시지를 보내려면 클라이언트에 내부 채널에 따라 결정되는 메시지 버전이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-112">To send a request message, the client must have the message version, which depends on the underlying channel.</span></span> <span data-ttu-id="ea7c1-113">따라서 여기서는 만들어지는 프록시 채널의 범위에 맞게 <xref:System.ServiceModel.OperationContextScope> 속성에 올바른 메시지 버전이 채워진 <xref:System.ServiceModel.OperationContext>를 만드는 새 `OutgoingMessageHeaders.MessageVersion`를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-113">Thus, it creates a new <xref:System.ServiceModel.OperationContextScope> scoped to the proxy channel it created, which creates an <xref:System.ServiceModel.OperationContext> with the correct message version populated in its `OutgoingMessageHeaders.MessageVersion` property.</span></span> <span data-ttu-id="ea7c1-114">클라이언트에서는 요청 메시지에 본문으로 입력 배열을 전달한 다음 프록시에서 `ComputeSum`을 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-114">The client passes an input array as the body to the request message and then invokes the `ComputeSum` on the proxy.</span></span> <span data-ttu-id="ea7c1-115">그런 다음 클라이언트에서는 회신 메시지에 있는 `GetBody<T>` 메서드에 액세스하여 전달한 입력의 합계를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-115">The client then retrieves the sum of the inputs it passed by accessing the `GetBody<T>` method on the reply message.</span></span> <span data-ttu-id="ea7c1-116">다음 샘플 코드에서는 이를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-116">The following sample code demonstrates this.</span></span>  
   
 ```csharp
 using (new OperationContextScope(client.InnerChannel))  
@@ -61,7 +62,7 @@ using (new OperationContextScope(client.InnerChannel))
 }  
 ```  
   
- <span data-ttu-id="09868-117">이 샘플은 웹 호스팅 샘플이기 때문에 클라이언트 실행 파일만 실행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="09868-117">This sample is a Web-hosted sample and so only the client executable must be run.</span></span> <span data-ttu-id="09868-118">다음은 클라이언트의 샘플 출력입니다.</span><span class="sxs-lookup"><span data-stu-id="09868-118">The following is the sample output on the client.</span></span>  
+ <span data-ttu-id="ea7c1-117">이 샘플은 웹 호스팅 샘플이기 때문에 클라이언트 실행 파일만 실행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-117">This sample is a Web-hosted sample and so only the client executable must be run.</span></span> <span data-ttu-id="ea7c1-118">다음은 클라이언트의 샘플 출력입니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-118">The following is the sample output on the client.</span></span>  
   
 ```console  
 Prompt>Client.exe  
@@ -70,21 +71,21 @@ Sum of numbers passed (1,2,3,4,5) = 15
 Press <ENTER> to terminate client.  
 ```  
   
- <span data-ttu-id="09868-119">이 샘플은 웹 호스팅 샘플이기 때문에 샘플의 빌드 및 실행 방법을 보려면 3단계에 있는 링크를 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="09868-119">This sample is a Web-hosted sample and so check the link provided in step 3 to see how to build and run the sample.</span></span>  
+ <span data-ttu-id="ea7c1-119">이 샘플은 웹 호스팅 샘플이기 때문에 샘플의 빌드 및 실행 방법을 보려면 3단계에 있는 링크를 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-119">This sample is a Web-hosted sample and so check the link provided in step 3 to see how to build and run the sample.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="09868-120">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="09868-120">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="ea7c1-120">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="ea7c1-120">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="09868-121">[Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="09868-121">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="ea7c1-121">[Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-121">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="09868-122">C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="09868-122">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](building-the-samples.md).</span></span>  
+2. <span data-ttu-id="ea7c1-122">C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-122">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](building-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="09868-123">단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="09868-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](running-the-samples.md).</span></span>  
+3. <span data-ttu-id="ea7c1-123">단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="09868-124">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="09868-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="09868-125">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="09868-125">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="ea7c1-124">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ea7c1-125">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-125">Check for the following (default) directory before continuing.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> <span data-ttu-id="09868-126">이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다.</span><span class="sxs-lookup"><span data-stu-id="09868-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="09868-127">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="09868-127">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="ea7c1-126">이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ea7c1-127">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ea7c1-127">This sample is located in the following directory.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  
