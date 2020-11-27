@@ -8,14 +8,15 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 0a06fb72b280fc61faeb12f6f2c3a05d957ec7b9
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 9d348b130ef26dfd27b27ecd93755919615afb68
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163566"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96252467"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern 및 포함 개체 개요
+
 > [!NOTE]
 > 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](/windows/win32/winauto/entry-uiauto-win32)를 참조하세요.  
   
@@ -24,7 +25,9 @@ ms.locfileid: "87163566"
  에서 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 포함 된 개체는 이미지, 하이퍼링크, 테이블 또는 Microsoft Excel 스프레드시트나 Microsoft Windows Media 파일 등의 문서 형식과 같이 텍스트가 아닌 경계를 포함 하는 요소입니다. 이는 요소가 한 애플리케이션에서 만들어져 다른 애플리케이션 내에서 포함 또는 연결되는 표준 정의와 다릅니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서는 개체를 원래 애플리케이션 내에서 편집할 수 있는지 여부가 중요하지 않습니다.  
   
 <a name="Embedded_Objects_and_the_UI_Automation_Tree"></a>
+
 ## <a name="embedded-objects-and-the-ui-automation-tree"></a>포함된 개체 및 UI 자동화 트리  
+
  포함된 개체는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰에서 개별 요소로 처리됩니다. 텍스트 컨테이너의 자식으로 노출되어, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]의 다른 컨트롤과 동일한 모델을 통해 이들 개체에 액세스할 수 있습니다.  
   
  ![텍스트 컨테이너에서 이미지가 있는 포함된 표](./media/uia-textpattern-embedded-objects-overview-example1.png "UIA_TextPattern_Embedded_Objects_Overview_Example1")  
@@ -34,7 +37,9 @@ ms.locfileid: "87163566"
 이전 텍스트 컨테이너의 일부를 보여 주는 콘텐츠 뷰의 예  
   
 <a name="Expose_Embedded_Objects_Using_TextPattern_and"></a>
+
 ## <a name="expose-embedded-objects-using-textpattern-and-textpatternrange"></a>TextPattern 및 TextPatternRange를 사용하여 포함된 개체 노출  
+
  <xref:System.Windows.Automation.TextPattern> 컨트롤 패턴 클래스와 <xref:System.Windows.Automation.Text.TextPatternRange> 클래스를 함께 사용하면 포함된 개체의 탐색과 쿼리를 돕는 메서드와 속성이 노출됩니다.  
   
  텍스트 컨테이너 및 포함된 개체(예: 하이퍼링크 또는 테이블 셀)의 텍스트 내용(또는 내부 텍스트)은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰와 콘텐츠 뷰에서 지속적인 단일 텍스트 스트림으로 노출됩니다. 개체 경계는 무시됩니다. UI 자동화 클라이언트가 낭독, 해석 또는 분석의 목적으로 텍스트를 특정 방식으로 검색하는 경우 텍스트 내용이나 기타 포함된 개체가 있는 테이블과 같이 특수한 경우가 텍스트 범위에 있는지 확인해야 합니다. 이렇게 하려면 <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> 을 호출하여 각 포함된 개체에 대한 <xref:System.Windows.Automation.AutomationElement> 를 가져온 다음 <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> 를 호출하여 각 요소의 텍스트 범위를 가져오면 됩니다. 이 과정은 모든 텍스트 내용이 검색될 때까지 반복적으로 수행됩니다.  
@@ -56,7 +61,9 @@ ms.locfileid: "87163566"
 Move() 및 ExpandToEnclosingUnit()에 따라 텍스트 범위가 조정되는 방법의 예  
   
 <a name="Common_Scenarios"></a>
+
 ## <a name="common-scenarios"></a>일반적인 시나리오  
+
  다음 섹션에서는 포함된 개체와 관련된 가장 일반적인 시나리오의 예를 소개합니다.  
   
  예제의 범례:  
@@ -99,7 +106,9 @@ Move() 및 ExpandToEnclosingUnit()에 따라 텍스트 범위가 조정되는 �
 |<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> 매개 변수는 (TextUnit.Word, 1)|하이퍼링크의 텍스트가 개별 단어로 이루어져 있으므로 텍스트 범위를 "http"로 이동합니다. 이 경우 하이퍼링크는 단일 개체로 처리되지 않습니다.<br /><br /> URL {[http]}가 텍스트에 포함 되어 있습니다.|  
   
 <a name="Image"></a>
+
 ### <a name="image"></a>이미지  
+
  **예제 1 - 포함된 이미지가 들어 있는 텍스트 범위**  
   
  {이미지 ![포함 이미지 예](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") 는 텍스트에 포함 되어 있습니다.}  
@@ -122,6 +131,7 @@ Move() 및 ExpandToEnclosingUnit()에 따라 텍스트 범위가 조정되는 �
 |<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> 매개 변수는 (TextUnit.Word, 1)|텍스트 범위를 "is "로 이동합니다. 텍스트 기반의 포함된 개체만 텍스트 스트림의 일부로 간주되므로, 이 예제의 이미지는 이동 또는 해당 반환 값(이 경우 1)에 영향을 주지 않습니다.|  
   
 <a name="Table"></a>
+
 ### <a name="table"></a>테이블  
   
 ### <a name="table-used-for-examples"></a>예제에서 사용되는 테이블  

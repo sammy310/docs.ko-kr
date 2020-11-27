@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 1fbde53289c147d8ea273b9c86e65cbb8e262b30
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7fd4968bbe4e1a3dafbfc35cc0617cef7083d291
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596412"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96252402"
 ---
 # <a name="ws-transaction-flow"></a>WS Transaction Flow
+
 이 샘플에서는 클라이언트에서 조정하는 트랜잭션의 사용법과 WS-Atomic Transaction 또는 OleTransactions 프로토콜을 사용하는 트랜잭션 흐름의 클라이언트 및 서버 옵션을 보여 줍니다. 이 샘플은 계산기 서비스를 구현 하는 [시작](getting-started-sample.md) 을 기반으로 하지만 작업에는 `TransactionFlowAttribute` **TransactionFlowOption** 열거형과 함께를 사용 하 여 트랜잭션 흐름을 사용할 수 있는 정도를 결정 하는 방법을 보여 줍니다. 흐름이 지정된 트랜잭션의 범위 내에서는 요청한 작업에 대한 로그가 데이터베이스에 기록되고 클라이언트에서 조정하는 트랜잭션이 완료될 때까지 유지됩니다. 클라이언트 트랜잭션이 완료되지 않으면 웹 서비스 트랜잭션에서 데이터베이스에 적합한 업데이트가 커밋되지 않도록 합니다.  
   
 > [!NOTE]
@@ -230,53 +231,53 @@ Press <ENTER> to terminate the service.
 3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.  
   
     > [!NOTE]
-    > 다중 컴퓨터 구성의 경우 아래의 지침을 사용하여 DTC(Distributed Transaction Coordinator)를 사용하도록 설정하고 Windows SDK에서 WsatConfig.exe 도구를 사용하여 WCF 트랜잭션 네트워크 지원을 사용하도록 설정합니다. Wsatconfig.exe를 설정 하는 방법에 대 한 자세한 내용은 [WS 원자성 트랜잭션 지원 구성](../feature-details/configuring-ws-atomic-transaction-support.md)을 참조 하세요.  
+    > 다중 컴퓨터 구성의 경우 아래의 지침을 사용하여 DTC(Distributed Transaction Coordinator)를 사용하도록 설정하고 Windows SDK에서 WsatConfig.exe 도구를 사용하여 WCF 트랜잭션 네트워크 지원을 사용하도록 설정합니다. WsatConfig.exe 설정에 대 한 자세한 내용은 [WS-Atomic 트랜잭션 지원 구성](../feature-details/configuring-ws-atomic-transaction-support.md)을 참조 하세요.  
   
- 샘플을 동일한 컴퓨터나 다른 컴퓨터에서 실행 하는 경우에는 네트워크 트랜잭션 흐름을 사용 하도록 MSDTC (Microsoft DTC(Distributed Transaction Coordinator))를 구성 하 고 Wsatconfig.exe 도구를 사용 하 여 WCF 트랜잭션 네트워크 지원을 사용 하도록 설정 해야 합니다.  
+ 샘플을 동일한 컴퓨터에서 실행 하 든 다른 컴퓨터에서 실행 하 든, 네트워크 트랜잭션 흐름을 사용 하도록 MSDTC (Microsoft DTC(Distributed Transaction Coordinator))를 구성 하 고 WsatConfig.exe 도구를 사용 하 여 WCF 트랜잭션 네트워크 지원을 사용 하도록 설정 해야 합니다.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>샘플을 실행할 수 있도록 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하려면  
   
 1. Windows Server 2003 또는 Windows XP를 실행하는 서비스 컴퓨터에서 다음 지침에 따라 들어오는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
   
-    1. **시작** 메뉴에서 **제어판**, **관리 도구**, **구성 요소 서비스**로 차례로 이동 합니다.  
+    1. **시작** 메뉴에서 **제어판**, **관리 도구**, **구성 요소 서비스** 로 차례로 이동 합니다.  
   
-    2. **구성 요소 서비스**를 확장 합니다. **컴퓨터** 폴더를 엽니다.  
+    2. **구성 요소 서비스** 를 확장 합니다. **컴퓨터** 폴더를 엽니다.  
   
-    3. **내 컴퓨터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.  
+    3. **내 컴퓨터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다.  
   
-    4. **MSDTC** 탭에서 **보안 구성**을 클릭 합니다.  
+    4. **MSDTC** 탭에서 **보안 구성** 을 클릭 합니다.  
   
-    5. **네트워크 DTC 액세스** 를 확인 하 고 **인바운드를 허용**합니다.  
+    5. **네트워크 DTC 액세스** 를 확인 하 고 **인바운드를 허용** 합니다.  
   
-    6. **확인**을 클릭 한 다음 **예** 를 클릭 하 여 MSDTC 서비스를 다시 시작 합니다.  
+    6. **확인** 을 클릭 한 다음 **예** 를 클릭 하 여 MSDTC 서비스를 다시 시작 합니다.  
   
     7. **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
 2. Windows Server 2008 또는 Windows Vista를 실행하는 서비스 컴퓨터에서 다음 지침에 따라 들어오는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
   
-    1. **시작** 메뉴에서 **제어판**, **관리 도구**, **구성 요소 서비스**로 차례로 이동 합니다.  
+    1. **시작** 메뉴에서 **제어판**, **관리 도구**, **구성 요소 서비스** 로 차례로 이동 합니다.  
   
-    2. **구성 요소 서비스**를 확장 합니다. **컴퓨터** 폴더를 엽니다. **DTC(Distributed Transaction Coordinator)** 를 선택 합니다.  
+    2. **구성 요소 서비스** 를 확장 합니다. **컴퓨터** 폴더를 엽니다. **DTC(Distributed Transaction Coordinator)** 를 선택 합니다.  
   
-    3. **DTC 코디네이터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.  
+    3. **DTC 코디네이터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다.  
   
-    4. **보안** 탭에서 **네트워크 DTC 액세스** 및 **인바운드 허용**을 선택 합니다.  
+    4. **보안** 탭에서 **네트워크 DTC 액세스** 및 **인바운드 허용** 을 선택 합니다.  
   
-    5. **확인**을 클릭 한 다음 **예** 를 클릭 하 여 MSDTC 서비스를 다시 시작 합니다.  
+    5. **확인** 을 클릭 한 다음 **예** 를 클릭 하 여 MSDTC 서비스를 다시 시작 합니다.  
   
     6. **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
 3. 클라이언트 컴퓨터에서 나가는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
   
-    1. **시작** 메뉴에서로 이동한 `Control Panel` 다음 **관리 도구**, **구성 요소 서비스**를 차례로 클릭 합니다.  
+    1. **시작** 메뉴에서로 이동한 `Control Panel` 다음 **관리 도구**, **구성 요소 서비스** 를 차례로 클릭 합니다.  
   
-    2. **내 컴퓨터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.  
+    2. **내 컴퓨터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다.  
   
-    3. **MSDTC** 탭에서 **보안 구성**을 클릭 합니다.  
+    3. **MSDTC** 탭에서 **보안 구성** 을 클릭 합니다.  
   
-    4. **네트워크 DTC 액세스** 를 확인 하 고 **아웃 바운드를 허용**합니다.  
+    4. **네트워크 DTC 액세스** 를 확인 하 고 **아웃 바운드를 허용** 합니다.  
   
-    5. **확인**을 클릭 한 다음 **예** 를 클릭 하 여 MSDTC 서비스를 다시 시작 합니다.  
+    5. **확인** 을 클릭 한 다음 **예** 를 클릭 하 여 MSDTC 서비스를 다시 시작 합니다.  
   
     6. **확인** 을 클릭하여 대화 상자를 닫습니다.  
   

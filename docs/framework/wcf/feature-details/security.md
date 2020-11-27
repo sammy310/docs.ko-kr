@@ -6,19 +6,21 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 9498358dd480487afcd3b746d14266e486c62d71
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b92f1ad8bb00e9df8daf55da4d7a808420d909cf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546317"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254001"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation 보안
+
 이 섹션의 항목에서는 WCF (Windows Communication Foundation) 보안 기능 및 이러한 기능을 사용 하 여 메시지를 보호 하는 방법을 설명 합니다.  
   
  Windows Server AppFabric 및 보안에 대 한 자세한 내용은 [Windows Server Appfabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10)) 을 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [보안 개요](security-overview.md)  
  WCF의 보안 기능에 대해 설명 합니다.  
   
@@ -56,11 +58,13 @@ ms.locfileid: "90546317"
  보안 WCF 응용 프로그램을 만드는 방법에 대 한 지침입니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [WCF 기능 정보](index.md)  
   
  [기본 WCF 프로그래밍](../basic-wcf-programming.md)  
@@ -69,6 +73,6 @@ ms.locfileid: "90546317"
   
  [개념적 개요](../conceptual-overview.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [애플리케이션 구성](../diagnostics/configuring-your-application.md)

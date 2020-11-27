@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-ms.openlocfilehash: d09dd6bcb8564f770df6b87751aee4cdb04cd12c
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 1455aeeeb759f8eb2cc09c8649a5cbd6843d950a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144619"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254014"
 ---
 # <a name="security-protocols"></a>보안 프로토콜
+
 Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징 보안 요구 사항을 포함하는 Web Services Security 메커니즘을 제공합니다. 이 섹션에서는 <xref:System.ServiceModel.Channels.SecurityBindingElement> 다음 웹 서비스 보안 프로토콜에 대 한 WCF (Windows Communication Foundation) 정보 (에서 구현 됨)에 대해 설명 합니다.  
   
 |사양/문서|링크|  
@@ -40,7 +41,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
   
 - 메시지 교환 패턴  
   
-|인증 모드|클라이언트 인증|서버 인증|모드|  
+|인증 모드|클라이언트 인증|서버 인증|Mode|  
 |-------------------------|---------------------------|---------------------------|----------|  
 |UserNameOverTransport|사용자 이름/암호|X509|전송|  
 |CertificateOverTransport|X509|X509|전송|  
@@ -62,7 +63,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
   
  이러한 인증 모드를 사용하는 엔드포인트에서는 WS-SP(WS-SecurityPolicy)를 사용하여 보안 요구 사항을 나타낼 수 있습니다. 이 문서에서는 각 인증 모드의 보안 헤더 및 인프라 메시지 구조에 대해 설명하고 정책 및 메시지에 대한 예제를 제공합니다.  
   
- WCF는 WS-Ws-secureconversation를 활용 하 여 응용 프로그램 간의 다중 메시지 교환을 보호 하기 위해 보안 세션을 지원 합니다.  구현에 대한 자세한 내용은 아래의 "보안 세션"을 참조하세요.  
+ WCF는 WS-SecureConversation를 활용 하 여 응용 프로그램 간의 다중 메시지 교환을 보호 하기 위해 보안 세션을 지원 합니다.  구현에 대한 자세한 내용은 아래의 "보안 세션"을 참조하세요.  
   
  인증 모드 외에도 WCF는 대부분의 메시지 보안 기반 인증 모드에 적용 되는 일반적인 보호 메커니즘을 제어 하는 설정을 제공 합니다. 예를 들어 서명 순서와 암호화 작업, 알고리즘 모음, 키 파생 및 서명 확인이 있습니다.  
   
@@ -70,7 +71,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
   
 |접두사|네임스페이스|  
 |------------|---------------|  
-|s|`http://www.w3.org/2003/05/soap-envelope`|  
+|초|`http://www.w3.org/2003/05/soap-envelope`|  
 |sp|`http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702`|  
 |a|`http://www.w3.org/2005/08/addressing`|  
 |wsse|TBD – OASIS WSS 1.0 URI|  
@@ -84,9 +85,11 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 |mssp|`http://schemas.microsoft.com/ws/2005/07/securitypolicy`|  
   
 ## <a name="1-token-profiles"></a>1. 토큰 프로필  
+
  Web Services Security 사양에서는 자격 증명을 보안 토큰으로서 나타냅니다. WCF는 다음과 같은 토큰 형식을 지원 합니다.  
   
 ### <a name="11-usernametoken"></a>1.1 UsernameToken  
+
  WCF는 다음 제약 조건을 사용 하 여 UsernameToken10 및 UsernameToken11 프로필을 따릅니다.  
   
  UsernameToken\Password 요소의 R1101 PasswordType 특성은 생략되거나 그 값이 #PasswordText(기본값)여야 합니다.  
@@ -104,6 +107,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
  설명: 암호는 일반적으로 암호화 작업에 사용하기에 너무 약합니다.  
   
 ### <a name="12-x509-token"></a>1.2 X509 토큰  
+
  WCF는 자격 증명 형식으로 X509v3 인증서를 지원 하 고, X509TokenProfile 1.0 및 X509TokenProfile 1.1과 다음 제약 조건을 따릅니다.  
   
  R1201 BinarySecurityToken 요소의 ValueType 특성은 X509v3 인증서를 포함할 경우 #X509v3 값이 있어야 합니다.  
@@ -121,6 +125,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
  WCF는 X509IssuerSerial을 지원 합니다. 그러나 X509IssuerSerial에는 상호 운용성 문제가 있습니다. WCF는 문자열을 사용 하 여 X509IssuerSerial 두 값을 비교 합니다. 따라서 주체 이름의 구성 요소를 다시 정렬 하 고 WCF 서비스에 인증서에 대 한 참조를 보내는 경우에는 찾을 수 없습니다.  
   
 ### <a name="13-kerberos-token"></a>1.3 Kerberos 토큰  
+
  WCF는 다음 제약 조건을 사용 하 여 Windows 인증을 위해 KerberosTokenProfile 1.1을 지원 합니다.  
   
  R1301 Kerberos Token은 GSS_API 및 Kerberos 사양에 정의된 GSS 래핑된 Kerberos v4 AP_REQ 값을 사용하고, 값이 #GSS_Kerberosv5_AP_REQ인 ValueType 특성이 있어야 합니다.  
@@ -128,32 +133,41 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
  WCF는 완전 한 AP 요구를 사용 하는 것이 아니라 GSS 래핑된 Kerberos AP 요청을 사용 합니다. 이는 최선의 보안 방법입니다.  
   
 ### <a name="14-saml-v11-token"></a>1.4 SAML v1.1 토큰  
+
  WCF는 SAML v 1.1 토큰에 대해 WSS SAML 토큰 프로필 1.0 및 1.1을 지원 합니다. 또한 다른 버전의 SAML 토큰 형식을 구현할 수 있습니다.  
   
 ### <a name="15-security-context-token"></a>1.5 보안 컨텍스트 토큰  
+
  WCF는 WS-Ws-secureconversation에 도입 된 SCT (보안 컨텍스트 토큰)를 지원 합니다. SCT는 아래에 설명하는 이진 협상 프로토콜 TLS 및 SSPI를 비롯하여 SecureConversation에 설정된 보안 컨텍스트를 나타내는 데 사용됩니다.  
   
 ## <a name="2-common-message-security-parameters"></a>2. 일반적인 메시지 보안 매개 변수  
   
 ### <a name="21-timestamp"></a>2.1 타임스탬프  
+
  타임스탬프 표시 여부는 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 클래스의 <xref:System.ServiceModel.Channels.SecurityBindingElement> 속성을 사용하여 제어합니다. WCF는 wsse: Created 및 wsse: Expires 필드를 사용 하 여 항상 wsse: TimeStamp를 직렬화 합니다. wsse:TimeStamp는 서명이 사용될 경우 항상 서명됩니다.  
   
 ### <a name="22-protection-order"></a>2.2 보호 순서  
+
  WCF는 "암호화 전 서명" 및 "서명 전 암호화" (보안 정책 1.2) 메시지 보호 순서를 지원 합니다. WS-Security 1.1 서명 확인 메커니즘을 사용하지 않을 경우 서명 전 암호화로 보호된 메시지는 서명 대체 공격에 취약하고, 암호화된 내용에 대한 서명으로 인해 감사를 수행하기 더 어려워지므로 "암호화 전 서명"을 사용하는 것이 좋습니다.  
   
 ### <a name="23-signature-protection"></a>2.3 서명 보호  
+
  서명 전 암호화를 사용할 경우, 특히 사용자 지정 토큰을 weak 키 자료와 함께 사용하는 경우에는 암호화된 내용이나 서명 키를 추측하기 위한 무차별 키 대입 공격을 방지해 서명을 보호하는 것이 좋습니다.  
   
 ### <a name="24-algorithm-suite"></a>2.4 알고리즘 모음  
+
  WCF는 보안 정책 1.2에 나열 된 모든 알고리즘 모음을 지원 합니다.  
   
 ### <a name="25-key-derivation"></a>2.5 키 파생  
+
  WCF에서는 Ws-secureconversation에 설명 된 대로 "대칭 키에 대 한 키 파생"을 사용 합니다.  
   
 ### <a name="26-signature-confirmation"></a>2.6 서명 확인  
+
  서명 확인을 사용하여 중개자의 공격으로부터 서명 집합을 보호할 수 있습니다.  
   
 ### <a name="27-security-header-layout"></a>2.7 보안 헤더 레이아웃  
+
  각 인증 모드에서는 보안 헤더에 대한 특정 레이아웃에 대해 설명합니다. 보안 헤더 내의 요소는 일부 순서가 지정되어 있습니다. 보안 헤더 자식 요소의 순서를 지정하기 위해 WS-Security 정책에서는 다음과 같은 보안 헤더 레이아웃 모드를 정의합니다.  
   
 |||  
@@ -166,9 +180,11 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
  WCF는 보안 헤더 레이아웃에 대해 네 가지 모드를 모두 지원 합니다. 아래에 설명된 인증 모드에 대한 보안 헤더 구조 및 메시지 예제에서는 "Strict" 모드를 따릅니다.  
   
 ## <a name="3-common-message-security-parameters"></a>3. 일반적인 메시지 보안 매개 변수  
+
  이 단원에서는 클라이언트와 서비스 간에 교환되는 메시지의 보안 헤더 구조를 보여 주는 예제와 함께 각 인증 모드에 대한 예제 정책을 제공합니다.  
   
 ### <a name="31-transport-protection"></a>3.1 전송 보호  
+
  WCF는 보안 전송을 사용 하 여 메시지를 보호 하는 5 가지 인증 모드를 제공 합니다. UserNameOverTransport, Certificate과잉 전송, KerberosOverTransport, IssuedTokenOverTransport 및 SspiNegotiatedOverTransport입니다.  
   
  이러한 인증 모드는 SecurityPolicy에 설명된 전송 바인딩을 사용하여 구성됩니다. UserNameOverTransport 인증 모드의 경우 UsernameToken이 서명된 지원 토큰입니다. 다른 인증 모드의 경우 토큰이 서명된 보증 토큰으로 표시됩니다. 보안 헤더 레이아웃에 대해서는 SecurityPolicy의 부록 C.1.2 및 C.1.3에서 자세히 설명합니다. 다음 예제 보안 헤더에서는 지정된 인증 모드에 대한 Strict 레이아웃을 보여 줍니다.  
@@ -184,6 +200,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
  알고리즘 모음: Basic256  
   
 #### <a name="311-usernameovertransport"></a>3.1.1 UsernameOverTransport  
+
  이 인증 모드에서 클라이언트는 항상 개시자로부터 수신자로 전송되는 서명된 지원 토큰으로 SOAP 계층에 표시되는 사용자 이름 토큰을 사용하여 인증합니다. 서비스는 전송 계층에서 X.509 인증서를 사용하여 인증됩니다. 사용되는 바인딩은 전송 바인딩입니다.  
   
  정책  
@@ -207,6 +224,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 #### <a name="312-certificateovertransport"></a>3.1.2 CertificateOverTransport  
+
  이 인증 모드에서 클라이언트는 항상 개시자로부터 수신자로 전송되는 보증 지원 토큰으로 SOAP 계층에 표시되는 X.509 인증서를 사용하여 인증합니다. 서비스는 전송 계층에서 X.509 인증서를 사용하여 인증됩니다. 사용되는 바인딩은 전송 바인딩입니다. CertificateOverTransport는 SOAP 헤더에만 서명하고 SOAP 본문에는 서명하지 않습니다. 이는 TransportWithMessageCredentials 보안 모드에서 사용되는 인증 모드입니다. 인증이 메시지 자격 증명을 사용하여 수행되므로 SOAP 헤더에만 서명됩니다.  
   
  정책  
@@ -230,6 +248,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 #### <a name="313-issuedtokenovertransport"></a>3.1.3 IssuedTokenOverTransport  
+
  이 인증 모드에서 클라이언트는 서비스를 인증하지 않고 대신 STS(보안 토큰 서비스)에서 발급한 토큰을 제공하고 공유 키에 대해 알고 있음을 증명합니다. 발급된 토큰은 항상 개시자로부터 수신자로 전송되는 보증 지원 토큰으로 SOAP 계층에 표시됩니다. 서비스는 전송 계층에서 X.509 인증서를 사용하여 인증됩니다. 바인딩은 전송 바인딩입니다.  
   
  정책  
@@ -322,6 +341,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 #### <a name="314-kerberosovertransport"></a>3.1.4 KerberosOverTransport  
+
  이 인증 모드에서 클라이언트는 Kerberos 티켓을 사용하여 서비스를 인증합니다. Kerberos 토큰은 SOAP 계층에 보증 지원 토큰으로 표시됩니다. 서비스는 전송 계층에서 X.509 인증서를 사용하여 인증됩니다. 바인딩은 전송 바인딩입니다.  
   
  정책  
@@ -345,6 +365,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 #### <a name="315-sspinegotiatedovertransport"></a>3.1.5 SspiNegotiatedOverTransport  
+
  이 모드에서는 협상 프로토콜을 사용하여 클라이언트 및 서버 인증을 수행합니다. 가능하면 Kerberos를 사용하고, 그렇지 않으면 NTLM을 사용합니다. 결과 SCT는 항상 개시자로부터 수신자로 전송되는 보증 지원 토큰으로 SOAP 계층에 표시됩니다. 서비스는 전송 계층에서 X.509 인증서를 사용하여 추가 인증됩니다. 사용되는 바인딩은 전송 바인딩입니다. "SPNEGO" (협상)에서는 WCF가 WS-TRUST와 함께 SSPI 이진 협상 프로토콜을 사용 하는 방법을 설명 합니다. 이 단원의 보안 헤더 예제는 SPNEGO 핸드셰이크를 통해 SCT를 설정한 경우의 보안 헤더입니다.  
   
  정책  
@@ -354,6 +375,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples"></a>보안 헤더 예제  
+
  WS-Trust 이진 협상을 사용하여 SPNEGO 핸드셰이크를 통해 보안 컨텍스트 토큰을 설정한 경우, 애플리케이션 메시지에 다음과 같은 구조의 보안 헤더가 있습니다.  
   
  요청  
@@ -369,9 +391,11 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 서비스 인증에 x.509 인증서 사용  
+
  이 단원에서는 MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate 및 IssuedTokenForCertificate 인증 모드에 대해 설명합니다.  
   
 #### <a name="321-mutualcertificate-wss10"></a>3.2.1 MutualCertificate WSS1.0  
+
  이 인증 모드에서 클라이언트는 SOAP 계층에 개시자 토큰으로 표시되는 X.509 인증서를 사용하여 인증합니다. 서비스도 X.509 인증서를 사용하여 인증됩니다. SOAP 헤더와 SOAP 본문이 둘 다 서명됩니다. 대칭 키가 만들어지고 받는 사람에 대한 전송 인증서를 사용하여 암호화됩니다.  
   
  사용되는 바인딩은 다음과 같은 속성 값을 가진 비대칭 바인딩입니다.  
@@ -395,6 +419,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>보안 헤더 예: SignBeforeEncrypt, EncryptSignature  
+
  요청  
   
 ```xml  
@@ -414,6 +439,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>보안 헤더 예: EncryptBeforeSign  
+
  요청  
   
 ```xml  
@@ -427,6 +453,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 #### <a name="322-mutualcertificateduplex"></a>3.2.2 MutualCertificateDuplex  
+
  이 인증 모드에서 클라이언트는 SOAP 계층에 개시자 토큰으로 표시되는 X.509 인증서를 사용하여 인증합니다. 서비스도 X.509 인증서를 사용하여 인증됩니다.  
   
  사용되는 바인딩은 다음과 같은 속성 값을 가진 비대칭 바인딩입니다.  
@@ -450,6 +477,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>보안 헤더 예: SignBeforeEncrypt, EncryptSignature  
+
  요청 및 응답  
   
 ```xml  
@@ -463,6 +491,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>보안 헤더 예: EncryptBeforeSign  
+
  요청 및 응답  
   
 ```xml  
@@ -470,6 +499,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 #### <a name="323-using-symmetricbinding-with-x509-service-authentication"></a>3.2.3 X.509 서비스 인증에서 SymmetricBinding 사용  
+
  "WSS10"에서는 X509 토큰 사용 시나리오를 제한적으로 지원했습니다. 예를 들어, 서비스 X509 토큰만 사용하여 메시지에 대한 서명 및 암호화 보호를 제공할 수는 없습니다. "WSS11"에서는 EncryptedKey를 대칭 토큰으로 도입했습니다. 이제 요청 메시지 보호와 응답 메시지 보호에 서비스의 X.509 인증서에 대해 암호화된 임시 키를 사용할 수 있습니다. 아래 3.4 단원에 설명 된 인증 모드에서는이 패턴을 사용 합니다.  
   
  WS-SecurityPolicy에서는 Service X509 토큰을 보호 토큰으로 사용하여 SymmetricBinding을 통해 이 패턴을 설명합니다.  
@@ -488,6 +518,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
  위의 인증 모드는 사용하는 지원 토큰만 다릅니다. AnonymousForCertificate의 경우 토큰이 없으며, MutualCertificate WSS 1.1의 경우 클라이언트의 X509 인증서를 보증 지원 토큰으로 사용하고, UserNameForCertificate의 경우 사용자 이름 토큰을 서명된 지원 토큰으로 사용하고, IssuedTokenForCertificate의 경우 발급된 토큰을 보증 지원 토큰으로 사용합니다.  
   
 #### <a name="324-anonymousforcertificate"></a>3.2.4 AnonymousForCertificate  
+
  이 인증 모드에서 클라이언트는 비대칭이고, 서비스는 X.509 인증서를 사용하여 인증됩니다. 사용되는 바인딩은 3.4.2에 설명된 것처럼 대칭 바인딩 인스턴스입니다.  
   
  정책  
@@ -497,6 +528,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>보안 헤더 예: SignBeforeEncrypt, EncryptSignature  
+
  요청  
   
 ```xml  
@@ -516,6 +548,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>보안 헤더 예: EncryptBeforeSign  
+
  요청  
   
 ```xml  
@@ -529,6 +562,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 #### <a name="325-usernameforcertificate"></a>3.2.5 UserNameForCertificate  
+
  이 인증 모드에서 클라이언트는 SOAP 계층에 서명된 지원 토큰으로 표시되는 사용자 이름 토큰을 사용하여 서비스를 인증합니다. 서비스는 X.509 인증서를 사용하여 클라이언트를 인증합니다. 사용되는 바인딩은 서비스의 공개 키로 암호화되고 클라이언트에서 생성한 키를 보호 토큰으로 사용하는 대칭 바인딩입니다.  
   
  정책  
@@ -538,6 +572,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>보안 헤더 예: SignBeforeEncrypt, EncryptSignature  
+
  요청  
   
 ```xml  
@@ -557,6 +592,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>보안 헤더 예: EncryptBeforeSign  
+
  요청  
   
 ```xml  
@@ -570,6 +606,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 #### <a name="326-mutualcertificate-wss-11"></a>3.2.6 MutualCertificate(WSS 1.1)  
+
  이 인증 모드에서 클라이언트는 SOAP 계층에 서명된 지원 토큰으로 표시되는 X.509 인증서를 사용하여 인증합니다. 서비스도 X.509 인증서를 사용하여 인증됩니다. 사용되는 바인딩은 서비스의 공개 키로 암호화되고 클라이언트에서 생성한 키를 보호 토큰으로 사용하는 대칭 바인딩입니다.  
   
  정책  
@@ -579,6 +616,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>보안 헤더 예: SignBeforeEncrypt, EncryptSignature  
+
  요청  
   
 ```xml  
@@ -598,6 +636,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>보안 헤더 예: EncryptBeforeSign  
+
  요청  
   
 ```xml  
@@ -611,6 +650,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 #### <a name="327-issuedtokenforcertificate"></a>3.2.7 IssuedTokenForCertificate  
+
  이 인증 모드에서 클라이언트는 서비스를 인증하지 않고 대신 STS에서 발급한 토큰을 제공하고 공유 키에 대해 알고 있음을 증명합니다. 발급된 토큰은 SOAP 계층에 보증 지원 토큰으로 표시됩니다. 서비스는 X.509 인증서를 사용하여 클라이언트를 인증합니다. 사용되는 바인딩은 서비스의 공개 키로 암호화되고 클라이언트에서 생성한 키를 보호 토큰으로 사용하는 대칭 바인딩입니다.  
   
  정책  
@@ -620,6 +660,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>보안 헤더 예: SignBeforeEncrypt, EncryptSignature  
+
  요청  
   
 ```xml  
@@ -633,6 +674,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>보안 헤더 예: EncryptBeforeSign  
+
  정책  
   
 ```xml  
@@ -652,6 +694,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ## <a name="33-kerberos"></a>3.3 Kerberos  
+
  이 인증 모드에서 클라이언트는 Kerberos 티켓을 사용하여 서비스를 인증합니다. 동일한 티켓에서 서버 인증을 제공합니다. 사용되는 바인딩은 다음과 같은 속성을 가진 대칭 바인딩입니다.  
   
  보호 토큰: 포함 모드가 .../IncludeToken/Once로 설정된 Kerberos 티켓  
@@ -670,6 +713,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>보안 헤더 예: SignBeforeEncrypt, EncryptSignature  
+
  요청  
   
 ```xml  
@@ -689,6 +733,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>보안 헤더 예: EncryptBeforeSign  
+
  요청  
   
 ```xml  
@@ -702,6 +747,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 #### <a name="34-issuedtoken"></a>3.4 IssuedToken  
+
  이 인증 모드에서 클라이언트는 서비스를 인증하지 않고 대신 STS에서 발급한 토큰을 제공하고 공유 키에 대해 알고 있음을 증명합니다. 서비스가 클라이언트에 인증되지 않습니다. 대신 STS에서 공유 키를 발급된 토큰의 일부로 암호화하여 서비스에서만 키를 해독할 수 있게 합니다. 사용되는 바인딩은 다음과 같은 속성을 가진 대칭 바인딩입니다.  
   
  보호 토큰: 포함 모드가 .../IncludeToken/AlwaysToRecipient로 설정된 발급된 토큰  
@@ -720,6 +766,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>보안 헤더 예: SignBeforeEncrypt, EncryptSignature  
+
  요청  
   
 ```xml  
@@ -739,6 +786,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>보안 헤더 예: EncryptBeforeSign  
+
  요청  
   
 ```xml  
@@ -752,6 +800,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="35-using-sslnegotiated-for-service-authentication"></a>3.5 서비스 인증을 위해 협상 된 SslNegotiated  
+
  이 단원에서는 보호 토큰이 WS-T(WS-Trust) RST/RSTR 메시지를 통해 TLS 프로토콜을 실행하여 그 키 값이 협상되는 WS-SC(WS-SecureConversation)별 보안 컨텍스트 토큰인 대칭 바인딩을 사용하는 인증 모드 그룹에 대해 설명합니다. WS-Trust를 사용하는 TLS 핸드셰이크 구현에 대한 자세한 내용은 TLSNEGO를 참조하세요. 여기의 메시지 예제에서는 연결된 보안 컨텍스트가 있는 SCT가 핸드셰이크를 통해 이미 설정되어 있다고 가정합니다.  
   
  사용되는 바인딩은 다음과 같은 속성을 가진 대칭 바인딩입니다.  
@@ -766,9 +815,11 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
  서명 암호화: True  
   
 #### <a name="351-policy-for-sslnegotiated-service-authentication"></a>3.5.1 SslNegotiated 서비스 인증 정책  
+
  이 단원의 모든 인증 모드에 대한 정책은 비슷하며 사용되는 특정 서명된 지원 토큰과 보증 토큰만 다릅니다.  
   
 #### <a name="352-anonymousforsslnegotiated"></a>3.5.2 AnonymousForSslNegotiated  
+
  이 인증 모드에서 클라이언트는 비대칭이고, 서비스는 X.509 인증서를 사용하여 인증됩니다. 사용되는 바인딩은 위 3.5.1에 설명된 것처럼 대칭 바인딩 인스턴스입니다.  
   
  정책  
@@ -778,6 +829,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>보안 헤더 예: SignBeforeEncrypt, EncryptSignature  
+
  요청  
   
 ```xml  
@@ -797,6 +849,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>보안 헤더 예: EncryptBeforeSign  
+
  요청  
   
 ```xml  
@@ -810,6 +863,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 #### <a name="353-usernameforsslnegotiated"></a>3.5.3 UserNameForSslNegotiated  
+
  이 인증 모드에서 클라이언트는 SOAP 계층에 서명된 지원 토큰으로 표시되는 사용자 이름 토큰을 사용하여 인증합니다. 서비스는 X.509 인증서를 사용하여 인증됩니다. 사용되는 바인딩은 3.5.1에 설명된 것처럼 대칭 바인딩 인스턴스입니다.  
   
  정책  
@@ -819,6 +873,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>보안 헤더 예: SignBeforeEncrypt, EncryptSignature  
+
  요청  
   
 ```xml  
@@ -838,6 +893,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>보안 헤더 예: EncryptBeforeSign  
+
  요청  
   
 ```xml  
@@ -851,6 +907,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 #### <a name="354-issuedtokenforsslnegotiated"></a>3.5.4 IssuedTokenForSslNegotiated  
+
  이 인증 모드에서 클라이언트는 서비스를 인증하지 않고 대신 STS에서 발급한 토큰을 제공하고 공유 키에 대해 알고 있음을 증명합니다. 발급된 토큰은 SOAP 계층에 보증 지원 토큰으로 표시됩니다. 서비스는 X.509 인증서를 사용하여 인증됩니다. 사용되는 바인딩은 위 3.5.1에 설명된 것처럼 대칭 바인딩 인스턴스입니다.  
   
  정책  
@@ -860,6 +917,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>보안 헤더 예: SignBeforeEncrypt, EncryptSignature  
+
  요청  
   
 ```xml  
@@ -879,6 +937,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>보안 헤더 예: EncryptBeforeSign  
+
  요청  
   
 ```xml  
@@ -892,6 +951,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 #### <a name="355-mutualsslnegotiated"></a>3.5.5 MutualSslNegotiated  
+
  이 인증 모드에서 클라이언트 및 서비스는 X.509 인증서를 사용하여 인증합니다. 사용되는 바인딩은 위 3.5.1에 설명된 것처럼 대칭 바인딩 인스턴스입니다.  
   
  정책  
@@ -901,6 +961,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>보안 헤더 예: SignBeforeEncrypt, EncryptSignature  
+
  요청  
   
 ```xml  
@@ -920,6 +981,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>보안 헤더 예: EncryptBeforeSign  
+
  요청  
   
 ```xml  
@@ -933,6 +995,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="36-sspinegotiated"></a>3.6 SspiNegotiated  
+
  이 인증 모드에서는 협상 프로토콜을 사용하여 클라이언트 및 서버 인증을 수행합니다. 가능하면 Kerberos를 사용하고, 그렇지 않으면 NTLM을 사용합니다. 사용되는 바인딩은 다음과 같은 속성을 가진 대칭 바인딩입니다.  
   
  보호 토큰: 포함 모드가 .../IncludeToken/AlwaysToRecipient로 설정된 SpnegoContextToken  
@@ -951,6 +1014,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>보안 헤더 예: SignBeforeEncrypt, EncryptSignature  
+
  요청  
   
 ```xml  
@@ -970,6 +1034,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>보안 헤더 예: EncryptBeforeSign  
+
  요청  
   
 ```xml  
@@ -983,6 +1048,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="37-secureconversation"></a>3.7 Ws-secureconversation  
+
  사용되는 바인딩은 보호 토큰이 WS-SC(WS-SecureConversation)별 SCT인 대칭 바인딩입니다. SCT는 그 자체가 협상 프로토콜을 사용하는 대칭 바인딩인 중첩 바인딩에 따라 WS-Trust(WS-Trust) 또는 WS-SC(WS-SecureConversation)를 사용하여 협상됩니다. 협상 프로토콜은 가능하면 Kerberos를 사용하여 클라이언트 및 서버 인증을 수행합니다. Kerberos를 사용할 수 없는 경우 NTLM으로 대체됩니다.  
   
  정책  
@@ -992,6 +1058,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>보안 헤더 예: SignBeforeEncrypt, EncryptSignature  
+
  요청  
   
 ```xml  
@@ -1011,6 +1078,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>보안 헤더 예: EncryptBeforeSign  
+
  요청  
   
 ```xml  

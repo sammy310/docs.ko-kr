@@ -2,31 +2,34 @@
 title: IIS(인터넷 정보 서비스) 서버 인증서 설치 지침
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 301a10c615a13a42e1a6e1b89d2724476ca4fbae
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 597af9873b4a5c042aec817ac0d26a86bac9ea82
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594662"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253793"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>IIS(인터넷 정보 서비스) 서버 인증서 설치 지침
+
 IIS(인터넷 정보 서비스)와 안전하게 통신하는 샘플을 실행하려면 서버 인증서를 만들어 설치해야 합니다.  
   
 ## <a name="step-1-creating-certificates"></a>1단계. 인증서 만들기  
- 컴퓨터에 대 한 인증서를 만들려면 관리자 권한으로 Visual Studio에 대 한 개발자 명령 프롬프트를 열고 IIS와의 보안 통신을 사용 하는 각 샘플에 포함 된 Setup.exe를 실행 합니다. 이 일괄 처리 파일을 실행하기 전에 경로에 Makecert.exe가 포함된 폴더가 있는지 확인합니다. Setup.bat에서 인증서를 만드는 데 사용되는 명령은 다음과 같습니다.  
+
+ 컴퓨터에 대 한 인증서를 만들려면 관리자 권한으로 Visual Studio에 대 한 개발자 명령 프롬프트를 열고 IIS와의 보안 통신을 사용 하는 각 샘플에 포함 된 Setup.bat를 실행 합니다. 이 일괄 처리 파일을 실행하기 전에 경로에 Makecert.exe가 포함된 폴더가 있는지 확인합니다. Setup.bat에서 인증서를 만드는 데 사용되는 명령은 다음과 같습니다.  
   
 ```console  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  
 ```  
   
 ## <a name="step-2-installing-certificates"></a>2단계. 인증서 설치  
+
  만든 인증서를 설치하는 데 필요한 단계는 사용 중인 IIS의 버전에 따라 다릅니다.  
   
 #### <a name="to-install-iis-on-iis-51-windows-xp-and-iis-60-windows-server-2003"></a>IIS 5.1(Windows XP) 및 IIS 6.0(Windows Server 2003)에 IIS를 설치하려면  
   
 1. 인터넷 정보 서비스 관리자 MMC 스냅인을 엽니다.  
   
-2. 기본 웹 사이트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.  
+2. 기본 웹 사이트를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다.  
   
 3. **디렉터리 보안** 탭을 선택 합니다.  
   
@@ -55,7 +58,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 #### <a name="to-install-iis-on-iis-70-windows-vista-and-windows-server-2008"></a>IIS 7.0(Windows Vista 및 Windows Server 2008)에서 IIS를 설치하려면  
   
-1. **시작** 메뉴에서 **실행**을 클릭 한 다음 **inetmgr** 을 입력 하 여 인터넷 정보 서비스 (IIS) MMC 스냅인을 엽니다.  
+1. **시작** 메뉴에서 **실행** 을 클릭 한 다음 **inetmgr** 을 입력 하 여 인터넷 정보 서비스 (IIS) MMC 스냅인을 엽니다.  
   
 2. **기본 웹 사이트** 를 마우스 오른쪽 단추로 클릭 하 고 **바인딩 편집** ...을 선택 합니다.  
   
@@ -63,7 +66,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 4. **유형** 드롭다운 목록에서 **HTTPS** 를 선택 합니다.  
   
-5. **SSL 인증서** 드롭다운 목록에서 **ServiceModelSamples** 를 선택 하 고 **확인**을 클릭 합니다.  
+5. **SSL 인증서** 드롭다운 목록에서 **ServiceModelSamples** 를 선택 하 고 **확인** 을 클릭 합니다.  
   
 6. HTTPS 주소를 사용 하 여 브라우저에서 서비스에 대 한 액세스를 테스트 `https://localhost/servicemodelsamples/service.svc` 합니다.  
   

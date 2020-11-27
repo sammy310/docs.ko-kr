@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 0317e7b42f589b31f5c77b89d26cb46815f13054
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 76362684d289ca6aaac852158a05087a0a28f837
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599050"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254053"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>방법: 기본 Atom 피드 만들기
+
 WCF (Windows Communication Foundation)를 사용 하 여 배포 피드를 노출 하는 서비스를 만들 수 있습니다. 이 항목에서는 Atom 배포 피드를 노출하는 배포 서비스를 만드는 방법에 대해 설명합니다.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>기본 배포 서비스를 만들려면  
@@ -64,7 +65,7 @@ WCF (Windows Communication Foundation)를 사용 하 여 배포 피드를 노출
   
 ### <a name="to-call-getblog-with-an-http-get"></a>HTTP GET을 사용하여 GetBlog()를 호출하려면  
   
-1. Internet Explorer를 열고 다음 URL을 입력 하 고 enter 키를 누릅니다.`http://localhost:8000/BlogService/GetBlog`  
+1. Internet Explorer를 열고 다음 URL을 입력 하 고 enter 키를 누릅니다. `http://localhost:8000/BlogService/GetBlog`  
   
      URL에는 서비스의 기준 주소 ( `http://localhost:8000/BlogService` ), 끝점의 상대 주소 및 호출할 서비스 작업이 포함 됩니다.  
   
@@ -88,12 +89,14 @@ WCF (Windows Communication Foundation)를 사용 하 여 배포 피드를 노출
      [!code-vb[htAtomBasic#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/snippets.vb#11)]  
   
 ## <a name="example"></a>예제  
+
  다음은 이 예제에 해당되는 전체 코드 목록입니다.  
   
  [!code-csharp[htAtomBasic#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/program.cs#12)]
  [!code-vb[htAtomBasic#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#12)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
  앞의 코드를 컴파일할 때 System.ServiceModel.dll 및 System.ServiceModel.Web.dll을 참조합니다.  
   
 ## <a name="see-also"></a>참고 항목

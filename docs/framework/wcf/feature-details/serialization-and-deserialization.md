@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: a861ee38963f77bffe23bbca19a6f895289e372d
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 94328fc2b2d008202221bfb4c05132e1286666e3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656816"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253949"
 ---
 # <a name="serialization-and-deserialization"></a>Serialization 및 Deserialization
+
 WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인가 포함 되어 있습니다 <xref:System.Runtime.Serialization.DataContractSerializer> . 는 <xref:System.Runtime.Serialization.DataContractSerializer> .NET Framework 개체와 XML을 양방향으로 변환 합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  
   
  .NET Framework 개체를 serialize 할 때 serializer는 새 *데이터 계약* 모델을 포함 하 여 다양 한 serialization 프로그래밍 모델을 인식 합니다. 지원되는 형식의 전체 목록은 [Types Supported by the Data Contract Serializer](types-supported-by-the-data-contract-serializer.md)을 참조하십시오. 데이터 계약에 대한 소개는 [Using Data Contracts](using-data-contracts.md)을 참조하십시오.  
@@ -22,8 +23,8 @@ WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인�
   
  WCF에는 도우미 serializer 인도 포함 되어 있습니다 <xref:System.Runtime.Serialization.NetDataContractSerializer> . <xref:System.Runtime.Serialization.NetDataContractSerializer>:
 
-* 안전 ***하지*** 않습니다. 자세한 내용은 [Binaryformatter 보안 가이드](../../../standard/serialization/binaryformatter-security-guide.md)를 참조 하세요.
-* 는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serialize 된 데이터의 일부로 .NET Framework 형식 이름도 내보내기 때문에 및 serializer와 유사 합니다.
+* 는 * _ 안전 **하지 않습니다**. 자세한 내용은 [Binaryformatter 보안 가이드](../../../standard/serialization/binaryformatter-security-guide.md)를 참조 하세요.
+_는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serialize 된 데이터의 일부로 .NET Framework 형식 이름도 내보내기 때문에 및 serializer와 유사 합니다.
 * Serialize 및 deserialize 종료 시 동일한 형식이 공유 될 때 사용 됩니다.
 
  <xref:System.Runtime.Serialization.DataContractSerializer>와 <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 모두 공통 기본 클래스인에서 파생 <xref:System.Runtime.Serialization.XmlObjectSerializer> 됩니다.  
@@ -32,9 +33,11 @@ WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인�
 > <xref:System.Runtime.Serialization.DataContractSerializer> 는 20 미만의 16진수 값이 있는 제어 문자를 포함하는 문자열을 XML 엔터티로 serialize합니다. 이렇게 하면 wcf 서비스에 이러한 데이터를 보낼 때 WCF가 아닌 클라이언트에서 문제가 발생할 수 있습니다.  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>DataContractSerializer 인스턴스 만들기  
+
  <xref:System.Runtime.Serialization.DataContractSerializer> 의 인스턴스를 구성하는 작업은 중요한 단계입니다. 구성한 후에는 어떤 설정도 변경할 수 없습니다.  
   
 ### <a name="specifying-the-root-type"></a>루트 형식 지정  
+
  *루트 형식* 은 직렬화 또는 역직렬화되는 인스턴스의 형식입니다. <xref:System.Runtime.Serialization.DataContractSerializer> 에는 여러 개의 생성자 오버로드가 있지만, 최소한 `type` 매개 변수를 사용하여 루트 형식을 지정해야 합니다.  
   
  특정 루트 형식에 대해 만들어진 serializer는 해당 형식이 루트 형식에서 파생된 경우가 아니라면 다른 형식을 직렬화하거나 역직렬화하는 데 사용할 수 없습니다. 다음 예제에서는 두 개의 클래스가 나옵니다.  
@@ -48,6 +51,7 @@ WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인�
  [!code-vb[c_StandaloneDataContractSerializer#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#2)]  
   
 ### <a name="specifying-known-types"></a>알려진 형식 지정  
+
  Serialize되는 형식 중 <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성이나 일부 다른 메커니즘을 사용하여 아직 처리되지 않은 형식에 다형성이 포함되는 경우, 알려진 가능한 형식 목록을 `knownTypes` 매개 변수를 사용하여 serializer의 생성자에게 전달해야 합니다. 알려진된 형식에 대 한 자세한 내용은 참조 하세요. [데이터 계약 알려진 형식을](data-contract-known-types.md)합니다.  
   
  다음 예제에서는 특정 형식의 컬렉션인 `LibraryPatron`이 포함된 클래스 `LibraryItem`을 보여 줍니다. 두 번째 클래스는 `LibraryItem` 형식을 정의합니다. 세 번째와 네 번째 클래스인`Book` 및 `Newspaper`는 `LibraryItem` 클래스에서 상속됩니다.  
@@ -61,6 +65,7 @@ WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인�
  [!code-vb[c_StandaloneDataContractSerializer#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#4)]  
   
 ### <a name="specifying-the-default-root-name-and-namespace"></a>기본 루트 이름 및 네임스페이스 지정  
+
  일반적으로 개체가 serialize되면 데이터 계약 이름과 네임스페이스에 따라 가장 바깥쪽 XML 요소의 기본 이름과 네임스페이스가 결정됩니다. 모든 내부 요소의 이름은 데이터 멤버 이름을 따르며 해당 네임스페이스는 데이터 계약의 네임스페이스와 동일합니다. 다음 예제에서는 `Name` 및 `Namespace` 클래스의 생성자에 <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 값을 설정합니다.  
   
  [!code-csharp[c_StandaloneDataContractSerializer#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_standalonedatacontractserializer/cs/source.cs#5)]
@@ -81,20 +86,25 @@ WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인�
  이러한 값은 <xref:System.Xml.XmlDictionaryString> 클래스의 인스턴스나 문자열로 전달하여, 이진 XML 형식을 통해 최적화할 수 있습니다.  
   
 ### <a name="setting-the-maximum-objects-quota"></a>최대 개체 할당량 설정  
+
  일부 `DataContractSerializer` 생성자 오버로드에는 `maxItemsInObjectGraph` 매개 변수가 있습니다. 이 매개 변수는 직렬 변환기가 단일 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 메서드 호출에서 직렬화하거나 역직렬화하는 최대 개체 수를 결정합니다. 이 메서드는 항상 하나의 루트 개체를 읽지만 이 개체의 데이터 멤버에 다른 개체가 있을 수 있으며, 이러한 개체에는 다른 개체가 있을 수 있습니다. 기본값은 65536입니다. 배열을 직렬화하거나 역직렬화할 때 모든 배열 항목은 개별 개체로 계산됩니다. 또한 일부 개체에는 큰 메모리 표현이 있을 수 있으므로 서비스 거부 공격을 방지하기에 이 할당량만으로 충분하지 않을 수 있습니다. 자세한 내용은 [데이터의 보안 고려 사항](security-considerations-for-data.md)을 참조 하세요. 이 할당량을 기본값보다 크게 늘려야 할 경우 데이터를 읽고 쓸 때 보내는 측(직렬화)과 받는 측(역직렬화)에 모두 적용되므로 양측에서 값을 늘려야 합니다.  
   
 ### <a name="round-trips"></a>라운드트립  
+
  *라운드트립* 은 개체가 한 번에 역직렬화 및 다시 직렬화될 때 발생합니다. 예를 들면 XML에서 개체 인스턴스로 이동하고 다시 XML 스트림으로 이동합니다.  
   
  일부 `DataContractSerializer` 생성자 오버로드에는 기본적으로 `ignoreExtensionDataObject` 로 설정된 `false` 매개 변수가 있습니다. 이 기본 모드에서는 데이터 계약에서 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하는 한, 라운드트립 시 이전 버전을 통해 최신 버전의 데이터 계약에서 다시 이 최신 버전으로 데이터 손실 없이 데이터를 보낼 수 있습니다. 예를 들어 `Person` 데이터 계약의 버전 1에 `Name` 및 `PhoneNumber` 데이터 멤버가 들어 있고 버전 2에서 `Nickname` 멤버를 추가한다고 가정합니다. `IExtensibleDataObject` 가 구현되면 버전 2에서 버전 1로 정보를 보낼 때 `Nickname` 데이터가 저장된 다음 다시 serialize될 때 다시 내보내집니다. 따라서 라운드트립 시 데이터가 손실되지 않습니다. 자세한 내용은 이전 [버전과 호환 되는 데이터 계약](forward-compatible-data-contracts.md) 및 [데이터 계약 버전 관리](data-contract-versioning.md)를 참조 하세요.  
   
 #### <a name="security-and-schema-validity-concerns-with-round-trips"></a>라운드트립과 관련된 보안 및 스키마 유효성 검사 문제  
+
  라운드트립 시 보안 관련 문제가 있을 수 있습니다. 예를 들어 잘못 사용된 엄청난 양의 데이터를 역직렬화하고 저장하면 보안상 위험이 따를 수 있습니다. 특히 디지털 서명이 포함된 경우 확인할 방법이 없는 이러한 데이터를 다시 내보낼 경우 보안 문제가 있을 수 있습니다. 예를 들면 이전 시나리오의 경우 버전 1 엔드포인트에서 악의적인 데이터가 포함된 `Nickname` 값을 서명할 수 있습니다. 마지막으로 스키마 유효성 검사 문제가 있을 수 있는데, 엔드포인트에서 명시된 계약을 엄격히 준수하는 데이터를 항상 내보내고 다른 값은 내보내지 않을 수 있습니다. 이전 예제의 경우 버전 1 엔드포인트 계약에는 `Name` 및 `PhoneNumber`만 내보낸다고 명시되어 있는데, 스키마 유효성 검사를 사용 중일 때 추가 `Nickname` 값을 내보내면 유효성 검사에 실패하게 됩니다.  
   
 #### <a name="enabling-and-disabling-round-trips"></a>라운드트립 사용 및 사용 안 함  
+
  라운드트립을 해제하려면 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하지 않도록 합니다. 형식에 대한 제어 권한이 없을 경우 `ignoreExtensionDataObject` 매개 변수를 `true` 로 설정하여 동일한 결과를 얻을 수 있습니다.  
   
 ### <a name="object-graph-preservation"></a>개체 그래프 유지  
+
  다음 코드에서처럼 serializer는 일반적으로 개체 ID를 고려하지 않습니다.  
   
  [!code-csharp[c_StandaloneDataContractSerializer#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_standalonedatacontractserializer/cs/source.cs#6)]
@@ -148,12 +158,15 @@ WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인�
 > `preserveObjectReferences` 모드를 사용하는 경우, `maxItemsInObjectGraph` 값을 올바른 할당량으로 설정하는 것이 특히 중요합니다. 이 모드에서 배열이 처리되는 방식 때문에, 공격자가 `maxItemsInObjectGraph` 할당량에 의해서만 제한되는 과다한 메모리 소비를 일으키는 작은 악의적인 메시지를 쉽게 작성할 수 있습니다.  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>데이터 계약 서로게이트 지정  
- 일부 `DataContractSerializer` 생성자 오버로드에는 `dataContractSurrogate` 로 설정될 수 있는 `null`매개 변수가 있습니다. 그렇지 않으면 이 오버로드를 사용하여 *인터페이스를 구현하는 형식인*데이터 계약 서로게이트 <xref:System.Runtime.Serialization.IDataContractSurrogate> 를 지정할 수 있습니다. 그러면 인터페이스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정할 수 있습니다. 자세한 내용은 [데이터 계약 서로게이트](../extending/data-contract-surrogates.md)를 참조 하세요.  
+
+ 일부 `DataContractSerializer` 생성자 오버로드에는 `dataContractSurrogate` 로 설정될 수 있는 `null`매개 변수가 있습니다. 그렇지 않으면 이 오버로드를 사용하여 *인터페이스를 구현하는 형식인* 데이터 계약 서로게이트 <xref:System.Runtime.Serialization.IDataContractSurrogate> 를 지정할 수 있습니다. 그러면 인터페이스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정할 수 있습니다. 자세한 내용은 [데이터 계약 서로게이트](../extending/data-contract-surrogates.md)를 참조 하세요.  
   
 ## <a name="serialization"></a>Serialization  
+
  다음과 같은 정보는 <xref:System.Runtime.Serialization.XmlObjectSerializer>및 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 포함하여, <xref:System.Runtime.Serialization.NetDataContractSerializer> 에서 상속되는 모든 클래스에 적용됩니다.  
   
 ### <a name="simple-serialization"></a>간단한 Serialization  
+
  개체를 serialize하는 가장 기본적인 방법은 개체를 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> 메서드에 전달하는 것입니다. 그리고 세 개의 오버로드가 있는데, 각각 <xref:System.IO.Stream>, <xref:System.Xml.XmlWriter>또는 <xref:System.Xml.XmlDictionaryWriter>에 쓰기 위한 오버로드입니다. <xref:System.IO.Stream> 오버로드를 사용하면 UTF-8 인코딩 형식의 XML로 출력됩니다. <xref:System.Xml.XmlDictionaryWriter> 오버로드를 사용하면 serializer는 이진 XML에 대한 출력을 최적화합니다.  
   
  메서드를 사용 하는 경우 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> serializer는 래퍼 요소의 기본 이름과 네임 스페이스를 사용 하 여 내용과 함께 씁니다 (이전 "기본 루트 이름 및 네임 스페이스 지정" 섹션 참조).  
@@ -173,6 +186,7 @@ WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인�
 ```  
   
 ### <a name="step-by-step-serialization"></a>단계별 Serialization  
+
  각각 끝 요소를 작성하고 개체 내용을 작성하며 래퍼 요소를 닫으려면, <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A>, <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A>및 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> 메서드를 사용합니다.  
   
 > [!NOTE]
@@ -210,6 +224,7 @@ WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인�
 > 단계별 serialization을 사용하면 스키마에 유효하지 않은 XML이 생성될 수 있습니다.  
   
 ## <a name="deserialization"></a>Deserialization  
+
  다음과 같은 정보는 <xref:System.Runtime.Serialization.XmlObjectSerializer>및 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 포함하여, <xref:System.Runtime.Serialization.NetDataContractSerializer> 에서 상속되는 모든 클래스에 적용됩니다.  
   
  개체를 역직렬화하는 가장 기본적인 방법은 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 메서드 오버로드 중 하나를 호출하는 것입니다. 그리고 세 개의 오버로드가 있는데, 이 각 오버로드는 <xref:System.Xml.XmlDictionaryReader>, `XmlReader`또는 `Stream`을 사용하여 읽기 위한 오버로드입니다. `Stream` 오버로드는 할당량으로 보호되지 않고 신뢰할 수 있는 데이터를 읽는 데만 사용해야 하는 텍스트 <xref:System.Xml.XmlDictionaryReader> 를 만듭니다.  
@@ -233,6 +248,7 @@ WCF (Windows Communication Foundation)에는 새로운 serialization 엔진인�
  이 래퍼 요소 이름을 확인하지 않도록 설정하는 방법이 있습니다. `ReadObject` 메서드의 일부 오버로드는 기본적으로 `verifyObjectName`로 설정된 부울 매개 변수 `true` 을 가져옵니다. `false`로 설정하면 래퍼 요소의 이름과 네임스페이스를 무시합니다. 이는 이전에 설명한 단계별 serialization 메커니즘을 사용하여 작성된 XML을 읽을 때 유용합니다.  
   
 ## <a name="using-the-netdatacontractserializer"></a>NetDataContractSerializer 사용  
+
  와의 주요 차이점은 `DataContractSerializer` <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 `DataContractSerializer` 데이터 계약 이름을 사용 하는 반면,는 serialize 된 `NetDataContractSerializer` XML에서 전체 .NET Framework 어셈블리와 형식 이름을 출력 합니다. 즉, 정확히 동일한 형식은 serialization 엔드포인트와 deserialization 엔드포인트 간에 공유되어야 합니다. 다시 말하면 역직렬화할 정확한 형식을 이미 알고 있으므로 알려진 형식 메커니즘은 `NetDataContractSerializer` 에 필요하지 않습니다.  
   
  그러나 여러 가지 문제가 발생할 수 있습니다.  

@@ -2,19 +2,21 @@
 title: 직렬화 가능 형식
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: e65fcb93c5c36bb289b825cef58b3adc6f5155f5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ba5fb80b3a7f4149eb49aa838826f2792147dd1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586106"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253962"
 ---
 # <a name="serializable-types"></a>직렬화 가능 형식
+
 기본적으로는 <xref:System.Runtime.Serialization.DataContractSerializer> 공개적으로 표시 되는 모든 형식을 serialize 합니다. 이 경우 형식의 모든 공개 읽기/쓰기 속성과 필드가 serialize됩니다.  
   
  <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 형식 및 멤버에 적용하여 기본 동작을 변경할 수 있습니다. 이 기능은 제어할 수 없거나 특성을 추가하도록 수정할 수 없는 형식이 있는 경우 유용할 수 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer>는 이러한 "표시되지 않은" 형식을 인식합니다.  
   
 ## <a name="serialization-defaults"></a>Serialization 기본값  
+
  <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용하여 형식 및 멤버의 serialization을 명시적으로 제어하거나 사용자 지정할 수 있습니다. 또한 이러한 특성을 전용 필드에 적용할 수 있습니다. 그러나 이러한 특성으로 표시되지 않은 형식도 직렬화 및 역직렬화할 수 있습니다. 다음과 같은 규칙 및 예외가 적용됩니다.  
   
 - <xref:System.Runtime.Serialization.DataContractSerializer>는 새로 만든 형식의 기본 속성을 사용하여 특성 없이 형식에서 데이터 계약을 유추합니다.  
@@ -36,6 +38,7 @@ ms.locfileid: "84586106"
 - 공용 멤버, 속성 또는 필드에 대한 serialization 프로세스를 "취소"하려면 <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 특성을 해당 멤버에 적용합니다.  
   
 ## <a name="inheritance"></a>상속  
+
  표시되지 않은 형식(<xref:System.Runtime.Serialization.DataContractAttribute> 특성이 없는 형식)은 이러한 특성을 포함하는 형식에서 상속할 수 있지만 반대의 경우, 즉 특성을 포함하는 형식이 표시되지 않은 형식에서 상속할 수는 없습니다. 이 규칙은 주로 이전 버전의 .NET Framework에서 작성 된 코드와의 호환성을 보장 하기 위해 적용 됩니다.  
   
 ## <a name="see-also"></a>참고 항목

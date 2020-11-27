@@ -10,14 +10,15 @@ helpviewer_keywords:
 - DataContractAttribute class
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-ms.openlocfilehash: a45fde58795947c3e46fa45750ae1a3faddd8849
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 5634eb3d3ec18d95fd7d6b3c89b572ab4f5b8eca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247171"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254040"
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>방법: 클래스 또는 구조체에 대한 기본 데이터 계약 만들기
+
 이 항목에서는 클래스 또는 구조를 사용하여 데이터 계약을 만드는 기본 단계를 보여 줍니다. 데이터 계약 및 사용 방법에 대 한 자세한 내용은 [데이터 계약 사용](using-data-contracts.md)을 참조 하세요.  
   
  WCF (기본 Windows Communication Foundation) 서비스 및 클라이언트를 만드는 단계를 안내 하는 자습서는 초보자를 위한 [자습서](../getting-started-tutorial.md)를 참조 하세요. 기본 서비스 및 클라이언트로 구성 된 작업 예제 응용 프로그램은 [기본 데이터 계약](../samples/basic-data-contract.md)을 참조 하세요.  
@@ -32,6 +33,7 @@ ms.locfileid: "85247171"
     > <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 private 필드에 적용하여 데이터가 다른 사용자에게 노출되게 할 수 있습니다. 멤버에 중요한 데이터가 포함되지 않도록 해야 합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 클래스 및 해당 멤버에 `Person` 및 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 적용하여 <xref:System.Runtime.Serialization.DataMemberAttribute> 형식의 데이터 계약을 만드는 방법을 보여 줍니다.  
   
  [!code-csharp[DataContractAttribute#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/datacontractattribute/cs/overview.cs#2)]

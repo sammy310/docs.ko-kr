@@ -2,14 +2,15 @@
 title: '방법: WCF 웹 HTTP 프로그래밍 모델을 사용하여 임의의 데이터를 반환하는 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 9753fbc9b333cb7e89ddc8dff030cb1f62ede23b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ed3e5269be5b636b348ff0efe44c49dae5335e2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600363"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253897"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>방법: WCF 웹 HTTP 프로그래밍 모델을 사용하여 임의의 데이터를 반환하는 서비스 만들기
+
 서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다. 서비스 작업이 WCF에서 지원 하지 않는 형식으로 데이터를 반환 해야 하는 경우에 해당 합니다. 이 항목에서는 WCF 웹 HTTP 프로그래밍 모델을 사용 하 여 이러한 서비스를 만드는 방법을 설명 합니다. 이 서비스에는 스트림을 반환하는 하나의 작업이 있습니다.  
   
 ### <a name="to-implement-the-service-contract"></a>서비스 계약을 구현하려면  
@@ -108,6 +109,7 @@ ms.locfileid: "84600363"
 2. Internet Explorer를 열고 `http://localhost:8000/Service/GetImage?width=50&height=40`을 입력하면 파란 대각선이 중앙을 통과하는 노란 사각형이 표시됩니다.  
   
 ## <a name="example"></a>예제  
+
  다음은 이 항목에 해당되는 전체 코드 목록입니다.  
   
 ```csharp  
