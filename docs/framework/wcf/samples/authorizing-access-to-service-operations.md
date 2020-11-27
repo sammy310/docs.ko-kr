@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Authorizing Access To Service Operations Sample [Windows Communication Foundation]
 - authorization, Windows Communication Foundation sample
 ms.assetid: ddcfdaa5-8b2e-4e13-bd85-887209dc6328
-ms.openlocfilehash: 3097c86f50a75dec8a649ca4e1edd2511a046ca8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 68e6d53b656cb6327487598f65fa4f04c2495292
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585534"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255457"
 ---
 # <a name="authorizing-access-to-service-operations"></a>Authorizing Access to Service Operations
+
 이 샘플에서는를 사용 하 여 [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) 특성을 사용 하 여 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 서비스 작업에 대 한 액세스 권한을 부여 하는 방법을 보여 줍니다. 이 샘플은 [시작](getting-started-sample.md) 샘플을 기반으로 합니다. 서비스와 클라이언트는를 사용 하 여 구성 됩니다 [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) . `mode`의 특성이로 [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md) 설정 되 `Message` 고 `clientCredentialType` 가로 설정 `Windows` 된 경우 <xref:System.Security.Permissions.PrincipalPermissionAttribute>는 각 서비스 메서드에 적용되고 각 작업에 대한 액세스를 제한하는 데 사용됩니다. 호출자는 각 작업에 액세스하기 위해 Windows 관리자여야 합니다.  
   
  이 샘플에서 클라이언트는 콘솔 애플리케이션(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.  

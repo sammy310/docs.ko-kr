@@ -2,18 +2,19 @@
 title: 설치 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: fb687e9975ab9ac763030f10d54c7744dc02c9e0
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 596aae345061796535895a091c59d50a5bffe0d8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720454"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255119"
 ---
 # <a name="troubleshoot-setup-issues"></a>설치 문제 해결
 
 이 문서에서는 WCF (Windows Communication Foundation) 설치 문제를 해결 하는 방법을 설명 합니다.  
   
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>일부 Windows Communication Foundation 레지스트리 키를 .NET Framework 3.0에서 MSI 복구 작업을 수행하여 복구할 수 없음  
+
  다음과 같은 레지스트리 키를 삭제한 경우 이 문제가 발생합니다.  
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelService 3.0.0.0  
@@ -42,11 +43,11 @@ ms.locfileid: "90720454"
   
      ServiceModelReg [11:09:59:046]: System.ApplicationException: "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"을(를) 통해 E:\WINDOWS\system32\wbem\mofcomp.exe을(를) 실행하는 동안 예기치 않은 3 결과가 나타났습니다.  
   
-     또는:  
+     또는  
   
      ServiceModelReg [07:19:33:843]: System.TypeInitializationException: 'System.Management.ManagementPath'의 형식 이니셜라이저에서 예외를 throw했습니다. ---> COMException (0x80040154): 80040154 오류가 발생 하 여 CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA}의 구성 요소에 대 한 COM 클래스 팩터리를 검색 하지 못했습니다.  
   
-     또는:  
+     또는  
   
      ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: 파일이나 어셈블리 'C:\WINDOWS\system32\wbem\mofcomp.exe' 또는 여기에 종속되어 있는 파일이나 어셈블리 중 하나를 로드할 수 없습니다. 시스템은 지정된 파일을 찾을 수 없습니다.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "90720454"
   
 1. WMI Diagnosis Utility를 실행 하 여 WMI 서비스를 복구 합니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 [WMI Diagnosis Utility](/previous-versions/tn-archive/ff404265(v%3dmsdn.10))를 참조 하세요.  
   
- **제어판**에 있는 **프로그램 추가/제거** 애플릿을 사용 하 여 .NET Framework 3.0 설치를 복구 하거나 .NET Framework 3.0를 제거/다시 설치 합니다.  
+ **제어판** 에 있는 **프로그램 추가/제거** 애플릿을 사용 하 여 .NET Framework 3.0 설치를 복구 하거나 .NET Framework 3.0를 제거/다시 설치 합니다.  
   
 ## <a name="repair-net-framework-30-after-net-framework-35-installation"></a>.NET Framework 3.5 설치 후 .NET Framework 3.0 복구
 
@@ -65,6 +66,7 @@ ms.locfileid: "90720454"
  \Framework\v3.5\ 또는%windir%\Microsoft.NET\framework64\v3.5\에서 [워크플로 서비스 등록 도구 (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) 를 찾을 수 있습니다.  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>.NET Framework 3.5 설치 후 WCF/WF Webhost에 대해 IIS를 올바로 구성  
+
  .NET Framework 3.5 설치에서 추가 WCF 관련 IIS 구성 설정을 구성 하지 못하면 설치 로그에 오류를 기록 하 고 계속 합니다. 필요한 구성 설정이 없기 때문에 WorkflowServices 애플리케이션을 실행할 수 없습니다. 예를 들어 xoml 또는 규칙 서비스를 로드하지 못할 수 있습니다.  
   
  이 문제를 해결 하려면 해당 스위치와 함께 [워크플로 서비스 등록 도구 (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) 를 사용 `/c` 하 여 컴퓨터에서 IIS 스크립트 맵을 제대로 구성 합니다. \Framework\v3.5\ 또는%windir%\Microsoft.NET\framework64\v3.5\에서 [워크플로 서비스 등록 도구 (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) 를 찾을 수 있습니다.  
@@ -79,6 +81,6 @@ ms.locfileid: "90720454"
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [설치 지침](./samples/set-up-instructions.md)

@@ -2,14 +2,15 @@
 title: 메타데이터 검색
 ms.date: 03/30/2017
 ms.assetid: e8a6ef8c-a195-495a-a15e-7d92bdf0b28c
-ms.openlocfilehash: 4763686485dfe97844fad78cf0bb279113c0ce08
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a7a30fee36b14d0414f2f5bed513c21a694f3484
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594610"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255405"
 ---
 # <a name="retrieve-metadata"></a>메타데이터 검색
+
 이 샘플에서는 통신할 엔드포인트를 선택하기 위해 서비스에서 메타데이터를 동적으로 검색하는 클라이언트를 구현하는 방법을 보여 줍니다. 이 샘플은 [시작](getting-started-sample.md)을 기반으로 합니다. 서비스는 두 개의 끝점, 즉 바인딩을 사용 하는 기본 주소에 있는 끝점과 `basicHttpBinding` 바인딩을 사용 하는 {*baseaddress*}/secure의 보안 끝점을 노출 하도록 수정 되었습니다 `wsHttpBinding` . 엔드포인트 주소와 바인딩을 사용하여 클라이언트를 구성하는 대신에 클라이언트는 <xref:System.ServiceModel.Description.MetadataExchangeClient> 클래스를 사용하여 서비스에 대한 메타데이터를 동적으로 검색한 다음 <xref:System.ServiceModel.Description.ServiceEndpointCollection> 클래스를 사용하여 메타데이터를 <xref:System.ServiceModel.Description.WsdlImporter>으로 가져옵니다.  
   
 > [!NOTE]

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: 86e7869efdba50d72cc61a1aebb767cf43927546
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 84982aca06bacb5718855602872fe4dab2376a9d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795640"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256068"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>방법: 사용자 지정 클라이언트 ID 검증 도구 만들기
+
 WCF (Windows Communication Foundation)의 *id* 기능을 사용 하면 클라이언트에서 필요한 서비스 id를 미리 지정할 수 있습니다. 서버가 클라이언트에 자신을 인증할 때마다 이 ID와 비교하여 ID가 검사됩니다. (Id 및 작동 방식에 대 한 설명은 [서비스 id 및 인증](../feature-details/service-identity-and-authentication.md)을 참조 하세요.)  
   
  필요한 경우 사용자 지정 ID 검증 도구를 사용하여 확인을 사용자 지정할 수 있습니다. 예를 들어, 서비스 ID 확인 검사를 추가로 수행할 수 있습니다. 이 예에서 사용자 지정 ID 검증 도구는 서버에서 반환되는 X.509 인증서에서 추가 클레임을 검사합니다. 샘플 응용 프로그램은 [서비스 Id 샘플](../samples/service-identity-sample.md)을 참조 하세요.  
@@ -44,7 +45,7 @@ WCF (Windows Communication Foundation)의 *id* 기능을 사용 하면 클라이
   
 ### <a name="to-implement-the-trygetidentity-method"></a>TryGetIdentity 메서드를 구현하려면  
   
-1. 클라이언트가 <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> 클래스의 인스턴스를 반환할 수 있는지 여부를 확인하는 <xref:System.ServiceModel.EndpointIdentity> 메서드를 구현합니다. WCF 인프라는 먼저 `TryGetIdentity` 메서드의 구현을 호출 하 여 메시지에서 서비스의 id를 검색 합니다. 그런 다음 반환된 `CheckAccess` 및 `EndpointIdentity`와 함께 <xref:System.IdentityModel.Policy.AuthorizationContext> 구현을 호출합니다.  
+1. 클라이언트가 <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> 클래스의 인스턴스를 반환할 수 있는지 여부를 확인하는 <xref:System.ServiceModel.EndpointIdentity> 메서드를 구현합니다. WCF 인프라는 `TryGetIdentity` 먼저 메서드의 구현을 호출 하 여 메시지에서 서비스의 id를 검색 합니다. 그런 다음 반환된 `CheckAccess` 및 `EndpointIdentity`와 함께 <xref:System.IdentityModel.Policy.AuthorizationContext> 구현을 호출합니다.  
   
 2. `TryGetIdentity` 메서드에서 다음 코드를 입력합니다.  
   
@@ -70,18 +71,20 @@ WCF (Windows Communication Foundation)의 *id* 기능을 사용 하면 클라이
      [!code-vb[c_HowToSetCustomClientIdentity#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#4)]  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 <xref:System.ServiceModel.Security.IdentityVerifier> 클래스의 전체 구현을 보여 줍니다.  
   
  [!code-csharp[c_HowToSetCustomClientIdentity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#5)]
  [!code-vb[c_HowToSetCustomClientIdentity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#5)]  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 <xref:System.ServiceModel.EndpointIdentity> 클래스의 전체 구현을 보여 줍니다.  
   
  [!code-csharp[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#6)]
  [!code-vb[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#6)]  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - <xref:System.ServiceModel.EndpointIdentity>

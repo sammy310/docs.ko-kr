@@ -2,14 +2,15 @@
 title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: 82b81637deb0715d19109794348d2a2bcda7f0d9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6b266dafa945fa44d6c857810df42eb5439f157d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594623"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255444"
 ---
 # <a name="pooling"></a>Pooling
+
 이 샘플에서는 개체 풀링을 지원 하도록 WCF (Windows Communication Foundation)를 확장 하는 방법을 보여 줍니다. 엔터프라이즈 서비스의 `ObjectPoolingAttribute` 특성과 구문 및 의미 체계가 비슷한 특성을 만드는 방법을 소개합니다. 개체 풀링을 통해 애플리케이션의 성능을 크게 높일 수 있습니다. 그러나 제대로 사용하지 않으면 역효과가 일어나기도 합니다. 개체 풀링은 광범위한 초기화가 필요하며 자주 사용되는 개체를 다시 만드는 오버헤드를 줄이는 데 도움이 됩니다. 그러나 풀링된 개체에서 메서드 호출이 완료되기까지 상당한 시간이 걸리는 경우 최대 풀 크기에 도달하는 즉시 개체 풀링은 추가 요청을 큐에 보냅니다. 따라서 일부 개체 만들기 요청을 처리하지 않고 시간 초과 예외를 throw할 수 있습니다.  
   
 > [!NOTE]
@@ -22,6 +23,7 @@ ms.locfileid: "84594623"
  채널 및 엔드포인트 디스패처는 디스패처의 동작을 제어하는 다양한 속성을 노출시켜 채널 및 계약 수준의 확장성을 제공합니다. 또한 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> 속성을 사용하면 디스패치 프로세스를 검사, 수정하거나 사용자 지정할 수 있습니다. 이 샘플에서는 서비스 클래스의 인스턴스를 제공하는 개체를 가리키는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 속성을 중점적으로 다룹니다.  
   
 ## <a name="the-iinstanceprovider"></a>IInstanceProvider  
+
  WCF에서 디스패처는 인터페이스를 구현 하는를 사용 하 여 서비스 클래스의 인스턴스 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 를 만듭니다 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> . 이 인터페이스에는 세 개의 메서드가 있습니다.  
   
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: 메시지가 도착하면 디스패처는 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> 메서드를 호출하여 메시지를 처리할 서비스 클래스의 인스턴스를 만듭니다. 이 메서드의 호출 빈도는 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 속성에 의해 결정됩니다. 예를 들어 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 속성이 <xref:System.ServiceModel.InstanceContextMode.PerCall>로 설정되면 도착하는 각 메시지를 처리하기 위해 서비스 클래스의 새 인스턴스가 만들어지며, 따라서 메시지가 도착할 때마다 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>가 호출됩니다.  
@@ -31,6 +33,7 @@ ms.locfileid: "84594623"
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>: 서비스 인스턴스의 수명이 끝나면 디스패처는 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29> 메서드를 호출합니다. <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> 메서드와 마찬가지로 이 메서드의 호출 빈도는 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 속성에 의해 결정됩니다.  
   
 ## <a name="the-object-pool"></a>개체 풀  
+
  사용자 지정 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 구현에서 서비스에 필요한 개체 풀링 의미 체계를 제공합니다. 따라서 이 샘플에는 풀링을 위한 사용자 지정 `ObjectPoolingInstanceProvider` 구현을 제공하는 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 형식이 있습니다. `Dispatcher`가 새 인스턴스를 만들지 않고 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> 메서드를 호출할 때 사용자 지정 구현은 메모리에 있는 풀에서 기존 개체를 찾습니다. 사용할 수 있는 개체가 있으면 반환되고, 그렇지 않으면 새 개체가 만들어집니다. `GetInstance`의 구현은 다음 샘플 코드에 표시되어 있습니다.  
   
 ```csharp  
@@ -83,6 +86,7 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
  `ReleaseInstance`메서드는 "초기화 정리" 기능을 제공 합니다. 일반적으로 풀은 풀의 수명 동안 최소한의 개체 수를 유지합니다. 하지만 사용량이 지나치게 많은 경우에는 구성에 지정된 최대 한도를 사용하기 위해 풀에 추가 개체를 만들어야 할 수도 있습니다. 결국 풀의 사용이 줄어들면 그런 여분의 개체가 추가 오버헤드가 될 수 있습니다. 따라서 `activeObjectsCount`가 0에 도달하면 유휴 타이머가 시작되고 정리 주기를 트리거 및 수행합니다.  
   
 ## <a name="adding-the-behavior"></a>동작 추가  
+
  디스패처 계층 확장은 다음 동작을 사용하여 후크합니다.  
   
 - 서비스 동작. 전체 서비스 런타임을 사용자 지정할 수 있습니다.  
@@ -186,6 +190,7 @@ public class PoolService : IPoolService
 ```  
   
 ## <a name="running-the-sample"></a>샘플 실행  
+
  이 샘플에서는 특정 시나리오에서 개체 풀링을 사용할 경우 얻을 수 있는 성능상의 이점을 보여 줍니다.  
   
  서비스 애플리케이션은 `WorkService` 및 `ObjectPooledWorkService`의 두 가지 서비스를 구현합니다. 두 서비스 모두 동일한 구현을 공유합니다. 둘 다 고비용의 초기화가 필요하며 그 다음에는 상대적으로 경제적인 `DoWork()` 메서드를 노출합니다. 유일한 차이점은 `ObjectPooledWorkService`에 개체 풀링이 구성된다는 것입니다.  

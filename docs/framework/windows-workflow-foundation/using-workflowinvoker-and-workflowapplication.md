@@ -3,17 +3,19 @@ title: WorkflowInvoker 및 WorkflowApplication 사용
 description: 이 문서에서는 Windows Workflow Foundation에서 WorkflowInvoker 및 WorkflowApplication을 사용 하는 워크플로를 호스트 하는 방법을 설명 합니다.
 ms.date: 03/30/2017
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
-ms.openlocfilehash: 50ad291bc73818092e7a08d489d6860636f9c379
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1cc84afe002615c317309054179abd1af5800e9c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421321"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254612"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>WorkflowInvoker 및 WorkflowApplication 사용
+
 WF (Windows Workflow Foundation)에서는 워크플로를 호스트 하는 여러 가지 방법을 제공 합니다. <xref:System.Activities.WorkflowInvoker> 는 메서드 호출과 같은 방식으로 워크플로를 호출하기 위한 간단한 방법을 제공하며, 지속성을 사용하지 않는 워크플로에만 사용될 수 있습니다. <xref:System.Activities.WorkflowApplication>은 수명 주기 이벤트 알림, 실행 제어, 책갈피 다시 시작 및 지속성을 비롯한 다양한 워크플로 실행 모델을 제공합니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 메시징 활동에 대한 지원을 제공하며 주로 워크플로 서비스에 사용됩니다. 이 항목에서는 <xref:System.Activities.WorkflowInvoker> 및 <xref:System.Activities.WorkflowApplication>을 사용하는 워크플로 호스팅을 소개합니다. 에서 워크플로를 호스트 하는 방법에 대 한 자세한 내용은 워크플로 <xref:System.ServiceModel.Activities.WorkflowServiceHost> [서비스](../wcf/feature-details/workflow-services.md) 및 [호스팅 워크플로 서비스 개요](../wcf/feature-details/hosting-workflow-services-overview.md)를 참조 하세요.  
   
 ## <a name="using-workflowinvoker"></a>WorkflowInvoker 사용  
+
  <xref:System.Activities.WorkflowInvoker>는 워크플로를 메서드 호출처럼 실행하는 방법을 제공합니다. <xref:System.Activities.WorkflowInvoker>를 사용하여 워크플로를 호출하려면 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 메서드를 호출하고 호출할 워크플로의 워크플로 정의를 전달합니다. 이 예제에서는 <xref:System.Activities.Statements.WriteLine>를 사용하여 <xref:System.Activities.WorkflowInvoker> 활동을 호출합니다.  
   
  [!code-csharp[CFX_WorkflowInvokerExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#1)]  
@@ -28,11 +30,13 @@ WF (Windows Workflow Foundation)에서는 워크플로를 호스트 하는 여�
  <xref:System.Activities.WorkflowInvoker>는 호출 메서드의 비동기 버전도 제공합니다. 자세한 내용은 <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> 및 <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>를 참조하세요.  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>워크플로의 입력 인수 설정  
+
  워크플로의 입력 인수에 매핑되는 인수 이름으로 키가 지정된 입력 매개 변수 사전을 사용하여 워크플로에 데이터를 전달할 수 있습니다. 이 예제에서는 <xref:System.Activities.Statements.WriteLine>을 호출하고 입력 매개 변수 사전을 사용하여 해당 <xref:System.Activities.Statements.WriteLine.Text%2A> 인수의 값을 지정합니다.  
   
  [!code-csharp[CFX_WorkflowInvokerExample#3](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#3)]  
   
 ### <a name="retrieving-output-arguments-of-a-workflow"></a>워크플로의 출력 인수 검색  
+
  <xref:System.Activities.WorkflowInvoker.Invoke%2A> 호출에서 반환되는 출력 사전을 사용하여 워크플로의 출력 매개 변수를 가져올 수 있습니다 다음 예제에서는 두 개의 입력 인수와 두 개의 출력 인수를 포함하는 단일 `Divide` 활동으로 구성된 워크플로를 호출합니다. 워크플로가 호출되면 각 입력 인수의 값이 인수 이름으로 키가 지정되어 포함된 `arguments` 사전이 전달됩니다. `Invoke`에 대한 호출이 반환되면 각 출력 인수가 `outputs` 사전에 반환됩니다. 이렇게 반환되는 인수에는 인수 이름이 키로 지정됩니다.  
   
  [!code-csharp[CFX_WorkflowInvokerExample#120](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#120)]  
@@ -46,21 +50,25 @@ WF (Windows Workflow Foundation)에서는 워크플로를 호스트 하는 여�
  [!code-csharp[CFX_WorkflowInvokerExample#21](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#21)]  
   
 ## <a name="using-workflowapplication"></a>WorkflowApplication 사용  
+
  <xref:System.Activities.WorkflowApplication>은 워크플로 인스턴스 관리를 위한 다양한 기능 집합을 제공합니다. <xref:System.Activities.WorkflowApplication>은 런타임을 캡슐화하는 실제 <xref:System.Activities.Hosting.WorkflowInstance>에 대해 스레드로부터 안전한 프록시로 작용하며 워크플로 인스턴스 만들기 및 로드, 일시 중지 및 다시 시작, 종료 및 수명 주기 이벤트 알림을 위한 메서드를 제공합니다. <xref:System.Activities.WorkflowApplication>을 사용하여 워크플로를 실행하려면 <xref:System.Activities.WorkflowApplication>을 만들고 원하는 수명 주기 이벤트에 알림을 신청한 다음 워크플로를 시작하고 워크플로가 완료될 때까지 기다립니다. 이 예제에서는 <xref:System.Activities.Statements.WriteLine> 활동으로 구성된 워크플로 정의를 만들고 지정된 워크플로 정의를 사용하여 <xref:System.Activities.WorkflowApplication>을 만듭니다. 워크플로가 완료되면 호스트가 알림을 받도록 <xref:System.Activities.WorkflowApplication.Completed%2A>가 처리되고, <xref:System.Activities.WorkflowApplication.Run%2A>을 호출하면 워크플로가 시작되며, 호스트는 워크플로가 완료되기를 기다립니다. 다음 예와 같이, 워크플로가 완료되면 <xref:System.Threading.AutoResetEvent>가 설정되고 호스트 애플리케이션이 실행을 다시 시작할 수 있습니다.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#31](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#31)]  
   
 ### <a name="workflowapplication-lifecycle-events"></a>WorkflowApplication 수명 주기 이벤트  
+
  <xref:System.Activities.WorkflowApplication.Completed%2A> 외에도 워크플로가 언로드되거나(<xref:System.Activities.WorkflowApplication.Unloaded%2A>), 중단되거나(<xref:System.Activities.WorkflowApplication.Aborted%2A>), 유휴 상태가 되거나(<xref:System.Activities.WorkflowApplication.Idle%2A> 및 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>), 처리되지 않은 예외가 발생하면(<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>) 호스트 작성자에게 알릴 수 있습니다. 다음 예와 같이 워크플로 애플리케이션 개발자는 이 알림을 처리하고 적절한 작업을 수행할 수 있습니다.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#32](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#32)]  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>워크플로의 입력 인수 설정  
+
  <xref:System.Activities.WorkflowInvoker>를 사용할 때 데이터가 전달되는 것과 비슷한 방법으로 매개 변수 사전을 사용하여 워크플로가 시작될 때 워크플로에 데이터를 전달할 수 있습니다. 사전의 각 항목은 지정된 워크플로의 입력 인수에 매핑됩니다. 이 예제에서는 <xref:System.Activities.Statements.WriteLine> 활동으로 구성된 워크플로를 호출하고 입력 매개 변수 사전을 사용하여 <xref:System.Activities.Statements.WriteLine.Text%2A> 인수를 지정합니다.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#30](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#30)]  
   
 ### <a name="retrieving-output-arguments-of-a-workflow"></a>워크플로의 출력 인수 검색  
+
  워크플로가 완료되면 <xref:System.Activities.WorkflowApplication.Completed%2A> 사전에 액세스하여 <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType> 처리기에서 출력 매개 변수를 검색할 수 있습니다. 다음 예제에서는를 사용 하 여 워크플로를 호스팅합니다 <xref:System.Activities.WorkflowApplication> . <xref:System.Activities.WorkflowApplication>인스턴스는 단일 활동으로 구성 된 워크플로 정의를 사용 하 여 생성 됩니다 `DiceRoll` . `DiceRoll` 활동에는 주사위 굴리기 작업의 결과를 나타내는 두 개의 출력 인수가 있습니다. 워크플로가 완료되면 <xref:System.Activities.WorkflowApplication.Completed%2A> 처리기에서 출력이 검색됩니다.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#130](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#130)]  
@@ -71,6 +79,7 @@ WF (Windows Workflow Foundation)에서는 워크플로를 호스트 하는 여�
 > <xref:System.Activities.WorkflowApplication> 및 <xref:System.Activities.WorkflowInvoker>는 입력 인수의 사전을 취하여 `out` 인수 사전을 반환합니다. 이 사전 매개 변수, 속성 및 반환 값은 `IDictionary<string, object>` 형식입니다. 전달되는 사전 클래스의 실제 인스턴스는 `IDictionary<string, object>`를 구현하는 클래스일 수 있습니다. 이 예제에서는 `Dictionary<string, object>`를 사용합니다. 사전에 대 한 자세한 내용은 및을 참조 하십시오 <xref:System.Collections.Generic.IDictionary%602> <xref:System.Collections.Generic.Dictionary%602> .  
   
 ### <a name="passing-data-into-a-running-workflow-using-bookmarks"></a>책갈피를 사용하여 실행 중인 워크플로에 데이터 전달  
+
  책갈피는 활동이 다시 시작되기를 수동적으로 대기하는 메커니즘이자 실행 중인 워크플로 인스턴스에 데이터를 전달하기 위한 메커니즘입니다. 다음 예와 같이 활동이 데이터를 대기 중인 경우 <xref:System.Activities.Bookmark>를 만들고 <xref:System.Activities.Bookmark>를 다시 시작할 때 호출할 콜백 메서드를 등록할 수 있습니다.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#15](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#15)]  
@@ -99,4 +108,5 @@ WF (Windows Workflow Foundation)에서는 워크플로를 호스트 하는 여�
  [!code-csharp[CFX_WorkflowApplicationExample#2](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#2)]  
   
 ## <a name="summary"></a>요약  
+
  <xref:System.Activities.WorkflowInvoker>는 워크플로를 호출하는 간단한 방법과 워크플로를 시작할 때 데이터를 전달하고 완료된 워크플로에서 데이터를 추출하는 메서드를 제공하지만, <xref:System.Activities.WorkflowApplication>을 사용할 수 있는 복잡한 시나리오는 제공하지 않습니다.

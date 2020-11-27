@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: 5fc29432bdd55daff2d60d641a4cea4925278032
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b5d262c3e0443503ccbf49a1a468c82843799a61
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543019"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255054"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>WS-I Basic Profile 1.1 상호 운용할 수 있는 서비스 만들기
+
 ASP.NET 웹 서비스 클라이언트와 상호 운용할 수 있도록 WCF 서비스 끝점을 구성 하려면:  
   
 - ph x="1" /&gt; 형식을 서비스 엔드포인트의 바인딩 형식으로 사용합니다.  
@@ -34,9 +35,11 @@ WCF 서비스에 대 한 메타 데이터를 ASP.NET에서 사용할 수 있도�
 ## <a name="example"></a>예제  
   
 ### <a name="description"></a>Description  
+
  다음 예제 코드에서는 ASP.NET 웹 서비스 클라이언트와 호환 되는 WCF 끝점을 코드에서, 또는 구성 파일에 추가 하는 방법을 보여 줍니다.  
   
 ### <a name="code"></a>코드  
+
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)]  
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]  

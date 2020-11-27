@@ -6,17 +6,19 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: dffba51c1bf1aaffbed8725aafc96fd747cb31c6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0ab3d6bad717e71901b4d94c99f1c48f99d8675e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559254"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255522"
 ---
 # <a name="federation-and-issued-tokens"></a>페더레이션 및 발급된 토큰
-WCF (Windows Communication Foundation)를 사용 하면 WS-FEDERATION 및 WS-TRUST 사양을 구현 하는 서비스와 안전 하 게 통신 하는 클라이언트를 만들 수 있습니다. 사양은 XML, SOAP 및 WSDL(웹 서비스 기술 언어)을 사용하여 여러 신뢰 영역 간에 인증 및 권한을 사용할 수 있는 메커니즘을 제공합니다.  
+
+WCF (Windows Communication Foundation)를 사용 하면 WS-Federation 및 WS-Trust 사양을 구현 하는 서비스와 안전 하 게 통신 하는 클라이언트를 만들 수 있습니다. 사양은 XML, SOAP 및 WSDL(웹 서비스 기술 언어)을 사용하여 여러 신뢰 영역 간에 인증 및 권한을 사용할 수 있는 메커니즘을 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [페더레이션](federation.md)  
  페더레이션을 간략하게 설명합니다.  
   
@@ -45,6 +47,7 @@ WCF (Windows Communication Foundation)를 사용 하면 WS-FEDERATION 및 WS-TRU
  `WSFederationHttpBinding`에서 보안 세션을 비활성화하는 방법에 대해 설명합니다. 각 클라이언트에 대해 세션이 필요한 웹 팜을 만드는 경우 보안 세션을 비활성화해야 합니다.  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.IdentityModel.Claims>  
   
  <xref:System.ServiceModel.ServiceAuthorizationManager>  

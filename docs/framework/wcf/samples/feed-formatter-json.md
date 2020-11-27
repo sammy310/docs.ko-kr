@@ -2,20 +2,23 @@
 title: 피드 포맷터(JSON)
 ms.date: 03/30/2017
 ms.assetid: f9c0b295-55e7-48ea-b308-ba51c7d31143
-ms.openlocfilehash: 7b535a5090d3c7df59b7faada35fc324a77b5651
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f0b79adcc37037c3ba497946e8a6fb1a74f2e1e0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594675"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255535"
 ---
 # <a name="feed-formatter-json"></a>피드 포맷터(JSON)
+
 이 샘플에서는 사용자 지정 <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>를 사용하여 JSON(JavaScript Object Notation) 형식으로 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 클래스의 인스턴스를 serialize하는 방법을 보여 줍니다.  
   
 ## <a name="architecture-of-the-sample"></a>샘플 아키텍처  
+
  이 샘플에서는 `JsonFeedFormatter`에서 상속되는 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>라는 클래스를 구현합니다. `JsonFeedFormatter` 클래스는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 사용하여 JSON 형식으로 데이터를 읽고 씁니다. 내부적으로 포맷터는 `JsonSyndicationFeed`와 `JsonSyndicationItem`이라는 데이터 계약 형식의 사용자 지정 집합을 사용하여 serializer에 의해 생성되는 JSON 데이터의 형식을 제어합니다. 이러한 구현 정보는 최종 사용자에게 표시되지 않으므로 표준 <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem> 클래스를 호출할 수 있습니다.  
   
 ## <a name="writing-json-feeds"></a>JSON 피드 쓰기  
+
  다음 샘플 코드와 같이 이 샘플에 구현된 `JsonFeedFormatter`를 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>와 함께 사용하여 JSON 피드를 쓸 수 있습니다.  
   
 ```csharp  
@@ -34,6 +37,7 @@ writeSerializer.WriteObject(stream, new JsonFeedFormatter(feed));
 ```  
   
 ## <a name="reading-a-json-feed"></a>JSON 필드 읽기  
+
  다음 코드와 같이<xref:System.ServiceModel.Syndication.SyndicationFeed>를 사용하여 JSON 형식의 데이터 스트림에서 `JsonFeedFormatter`를 가져올 수 있습니다.  
   
  `//Read in the feed using the DataContractJsonSerializer`  

@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: 89f2b1359b48b71720db6ff38f27883745cfe612
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: ea3bc7384ca10538ca5ab1d3bb05da6a2757fb67
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247548"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256016"
 ---
 # <a name="how-to-create-a-custom-claim"></a>방법: 사용자 지정 클레임 만들기
+
 WCF (Windows Communication Foundation)의 Id 모델 인프라에서는 <xref:System.IdentityModel.Claims.Claim> 이러한 형식 및 권한으로 인스턴스를 만들기 위한 도우미 함수를 사용 하 여 기본 제공 클레임 형식 및 권한 집합을 제공 합니다. 이러한 기본 제공 클레임은 WCF에서 기본적으로 지 원하는 클라이언트 자격 증명 형식에 있는 정보를 모델링 하도록 디자인 되었습니다. 일반적으로 기본 제공 클레임으로 충분하지만 일부 애플리케이션에는 사용자 지정 클레임이 필요할 수 있습니다. 클레임은 클레임 형식, 클레임이 적용되는 리소스 및 해당 리소스에 대해 어설션되는 권한으로 구성됩니다. 이 항목에서는 사용자 지정 클레임을 만드는 방법에 대해 설명합니다.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>기본 데이터 형식을 기반으로 사용자 지정 클레임을 만들려면  
@@ -70,12 +71,13 @@ WCF (Windows Communication Foundation)의 Id 모델 인프라에서는 <xref:Sys
          [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]
   
 ## <a name="example"></a>예제  
+
  다음 코드 예제에서는 기본 리소스 형식의 사용자 지정 클레임과 기본이 아닌 리소스 형식의 사용자 지정 클레임을 만드는 방법을 보여 줍니다.  
   
  [!code-csharp[c_CustomClaim#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#0)]
  [!code-vb[c_CustomClaim#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#0)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>

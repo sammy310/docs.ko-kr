@@ -2,21 +2,23 @@
 title: WCF 확장에 대한 사용자 지정 메타데이터 가져오기
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: f6f858cbe86bd2965decf42be5daa7b3f7d3c8c2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b231ff676ffc81666713987a24605b8ae98bb6d6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796936"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254625"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>WCF 확장에 대한 사용자 지정 메타데이터 가져오기
-WCF (Windows Communication Foundation)에서 메타 데이터 가져오기는 서비스 또는 해당 구성 요소 파트의 메타 데이터에서 추상 표현을 생성 하는 프로세스입니다. 예를 들어 WCF는 서비스 <xref:System.ServiceModel.Description.ServiceEndpoint> 에 대 <xref:System.ServiceModel.Channels.Binding> 한 WSDL <xref:System.ServiceModel.Description.ContractDescription> 문서에서 인스턴스, 인스턴스 또는 인스턴스를 가져올 수 있습니다. WCF에서 서비스 메타 데이터를 가져오려면 <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> 추상 클래스의 구현을 사용 합니다. <xref:System.ServiceModel.Description.MetadataImporter> 클래스에서 파생 되는 형식은 WCF의 ws-policy 가져오기 논리를 활용 하는 메타 데이터 형식 가져오기에 대 한 지원을 구현 합니다.  
+
+WCF (Windows Communication Foundation)에서 메타 데이터 가져오기는 서비스 또는 해당 구성 요소 파트의 메타 데이터에서 추상 표현을 생성 하는 프로세스입니다. 예를 들어 WCF는 <xref:System.ServiceModel.Description.ServiceEndpoint> <xref:System.ServiceModel.Channels.Binding> <xref:System.ServiceModel.Description.ContractDescription> 서비스에 대 한 WSDL 문서에서 인스턴스, 인스턴스 또는 인스턴스를 가져올 수 있습니다. WCF에서 서비스 메타 데이터를 가져오려면 추상 클래스의 구현을 사용 <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> 합니다. 클래스에서 파생 되는 형식은 <xref:System.ServiceModel.Description.MetadataImporter> WCF에서 WS-Policy 가져오기 논리를 활용 하는 메타 데이터 형식 가져오기에 대 한 지원을 구현 합니다.  
   
  사용자 지정 메타데이터는 시스템에서 제공한 메타데이터 가져오기에서 가져올 수 없는 XML 요소로 구성됩니다. 일반적으로 여기에 사용자 지정 WSDL 확장명 및 사용자 지정 정책 어설션이 포함됩니다.  
   
  이 단원에서는 사용자 지정 WSDL 확장명 및 정책 어설션을 가져오는 방법에 대해 설명합니다. 가져오기 프로세스 자체에 대해 중점적으로 설명하지는 않습니다. 메타 데이터가 사용자 지정 또는 시스템에서 지원 되는지 여부에 관계 없이 메타 데이터를 내보내고 가져오는 형식을 사용 하는 방법에 대 한 자세한 내용은 [메타 데이터 내보내기 및 가져오기](../feature-details/exporting-and-importing-metadata.md)를 참조 하세요.  
   
 ## <a name="overview"></a>개요  
+
  합니다 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 형식은 구현의 <xref:System.ServiceModel.Description.MetadataImporter> 추상 WCF에 포함 된 클래스입니다. <xref:System.ServiceModel.Description.WsdlImporter> 형식은 <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> 개체에 번들로 제공되는 연결된 정책과 함께 WSDL 메타데이터를 가져옵니다. 기본 가져오기가 인식하지 않는 정책 어설션 및 WSDL 확장은 가져올 등록된 사용자 지정 정책 및 WSDL 가져오기로 전달됩니다. 일반적으로 가져오기는 사용자 정의 바인딩 요소를 지원하거나 가져온 계약을 수정하도록 구현됩니다.  
   
  이 단원의 내용은 다음과 같습니다.  
@@ -28,14 +30,16 @@ WCF (Windows Communication Foundation)에서 메타 데이터 가져오기는 �
  사용자 지정 WSDL 및 정책 어설션을 내보내는 방법에 대 한 자세한 내용은 [WCF 확장에 대 한 사용자 지정 메타 데이터 내보내기](exporting-custom-metadata-for-a-wcf-extension.md)를 참조 하세요.  
   
 ## <a name="importing-custom-wsdl-extensions"></a>사용자 지정 WSDL 확장명 가져오기  
+
  WSDL 확장명 가져오기에 대한 지원을 추가하려면 <xref:System.ServiceModel.Description.IWsdlImportExtension> 인터페이스를 구현한 다음 구현 사항을 <xref:System.ServiceModel.Description.WsdlImporter.WsdlImportExtensions%2A> 속성에 추가합니다. <xref:System.ServiceModel.Description.WsdlImporter>에서 애플리케이션 구성 파일에 등록된 <xref:System.ServiceModel.Description.IWsdlImportExtension> 인터페이스의 구현을 로드할 수도 있습니다. 기본적으로 여러 개의 WSDL 가져오기가 등록되며 등록된 WSDL 가져오기 순서가 중요합니다.  
   
  사용자 지정 WSDL 가져오기가 로드되고 <xref:System.ServiceModel.Description.WsdlImporter>에서 사용되는 경우 가져오기 프로세스 이전에 메타데이터 수정이 가능하도록 <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%2A> 메서드가 먼저 호출됩니다. 그런 다음 메타데이터에서 가져온 계약 수정 사항을 사용할 수 있도록 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%2A> 메서드가 호출된 후에 계약을 가져옵니다. 마지막으로, 가져온 엔드포인트의 수정 사항을 사용할 수 있도록 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%2A> 메서드가 호출됩니다.  
   
- 자세한 내용은 [방법: 사용자 지정 WSDL](how-to-import-custom-wsdl.md)을 가져옵니다.  
+ 자세한 내용은 [방법: 사용자 지정 WSDL 가져오기](how-to-import-custom-wsdl.md)를 참조 하세요.  
   
 ### <a name="importing-custom-policy-assertions"></a>사용자 지정 정책 어설션 가져오기  
- 유형 <xref:System.ServiceModel.Description.WsdlImporter> 및 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 는 WSDL 문서에 연결 된 정책 식에서 다양 한 정책 어설션 유형을 처리 하는 작업을 자동으로 처리 합니다. 이러한 도구는 WSDL 바인딩 및 WSDL 포트에 연결된 정책 식을 수집, 정규화 및 병합합니다.  
+
+ <xref:System.ServiceModel.Description.WsdlImporter>유형 및 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 는 WSDL 문서에 연결 된 정책 식에서 다양 한 정책 어설션 유형을 처리 하는 작업을 자동으로 처리 합니다. 이러한 도구는 WSDL 바인딩 및 WSDL 포트에 연결된 정책 식을 수집, 정규화 및 병합합니다.  
   
  사용자 지정 정책 어설션 가져오기에 대한 지원을 추가하려면 <xref:System.ServiceModel.Description.IPolicyImportExtension> 인터페이스를 구현한 다음 구현 사항을 <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A> 속성에 추가합니다. <xref:System.ServiceModel.Description.MetadataImporter>에서 애플리케이션 구성 파일에 등록된 <xref:System.ServiceModel.Description.IPolicyImportExtension> 인터페이스의 구현을 로드할 수도 있습니다. 기본적으로 여러 개의 정책 가져오기가 등록되며 등록된 정책 가져오기 순서가 중요합니다.  
   
@@ -48,8 +52,8 @@ WCF (Windows Communication Foundation)에서 메타 데이터 가져오기는 �
 > [!IMPORTANT]
 > 잘못되었거나 부적절한 메타데이터를 가져오기로 전달할 수 없습니다. 사용자 지정 가져오기가 모든 형태의 XML을 보호할 수 있을 정도로 강력해야 합니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [방법: 사용자 지정 WSDL 가져오기](how-to-import-custom-wsdl.md)
 - [방법: 사용자 지정 정책 어설션 가져오기](how-to-import-custom-policy-assertions.md)
-- [방법: ServiceContractGenerator에 대 한 확장 작성](how-to-write-an-extension-for-the-servicecontractgenerator.md)
+- [방법: ServiceContractGenerator에 대한 확장 쓰기](how-to-write-an-extension-for-the-servicecontractgenerator.md)

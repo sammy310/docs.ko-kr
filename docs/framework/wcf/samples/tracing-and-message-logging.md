@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 9c3d83f0055a1700c675017216a7419fdba674fd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ec29ac03e8930bd30ccd7e90dce3993ca9e7443a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547462"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255418"
 ---
 # <a name="tracing-and-message-logging"></a>추적 및 메시지 로깅
+
 이 샘플에서는 추적 및 메시지 로깅을 사용하도록 설정하는 방법을 보여 줍니다. 결과 추적 및 메시지 로그는 [서비스 추적 뷰어 도구 (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)를 사용 하 여 볼 수 있습니다. 이 샘플은 [시작](getting-started-sample.md)을 기반으로 합니다.  
   
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
 ## <a name="tracing"></a>추적  
+
  WCF (Windows Communication Foundation)는 네임 스페이스에 정의 된 추적 메커니즘을 사용 합니다 <xref:System.Diagnostics> . 이 추적 모델에서 추적 데이터는 애플리케이션이 구현하는 추적 소스에 의해 생성됩니다. 각 소스는 이름으로 식별됩니다. 추적 소비자는 정보를 검색하려는 추적 소스에 대한 추적 수신기를 만듭니다. 추적 데이터를 수신하려면 추적 소스에 대한 수신기를 만들어야 합니다. WCF에서는 서비스 모델 추적 소스를 설정 하 여 서비스 또는 클라이언트의 구성 파일에 다음 코드를 추가 하 여이 작업을 수행할 수 있습니다 `switchValue` .  
   
 ```xml  
@@ -47,6 +49,7 @@ ms.locfileid: "90547462"
  추적 소스에 대 한 자세한 내용은 추적 [구성](../diagnostics/tracing/configuring-tracing.md) 항목에서 추적 원본 섹션을 참조 하세요.  
   
 ## <a name="activity-tracing-and-propagation"></a>동작 추적 및 전파  
+
  `ActivityTracing` `propagateActivity` 클라이언트와 서비스 모두에 대해 추적 소스에서를 사용 하도록 설정 하 고를로 설정 하면 `true` `system.ServiceModel` 논리 처리 단위 (작업) 내에서, 끝점 내의 작업 (작업 전송 통해) 및 여러 끝점에 걸친 작업 (작업 ID 전파를 통해) 간에 추적의 상관 관계를 제공 합니다.  
   
  이러한 세 가지 메커니즘(동작, 전송 및 전파)은 Service Trace Viewer 도구를 사용하여 오류의 근본 원인을 더 신속하게 찾을 수 있도록 도와줍니다. 자세한 내용은 [서비스 추적 뷰어를 사용 하 여 상호 관련 된 추적 보기 및 문제 해결](../diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)을 참조 하세요.  
@@ -62,6 +65,7 @@ ms.locfileid: "90547462"
  사용자 정의 작업 추적에 대 한 자세한 내용은 [추적 확장](extending-tracing.md) 샘플을 참조 하세요.  
   
 ## <a name="message-logging"></a>메시지 로깅  
+
  메시지 로깅은 WCF 응용 프로그램의 클라이언트 및 서비스 모두에서 사용 하도록 설정할 수 있습니다. 메시지 로깅을 사용하도록 설정하려면 클라이언트나 서비스에 다음 코드를 추가해야 합니다.  
   
 ```xml  
@@ -133,7 +137,7 @@ ms.locfileid: "90547462"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [추적](../diagnostics/tracing/index.md)
 - [AppFabric 모니터링 샘플](/previous-versions/appfabric/ff383407(v=azure.10))

@@ -2,17 +2,19 @@
 title: 확장성
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 757783536ac25dd30e96748b9d9791e06c08b091
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bb939814fe30bd8e28d42cac4e4945a83b1b3158
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600492"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255438"
 ---
 # <a name="extensibility"></a>확장성
+
 이 섹션에는 사용자 지정 확장성 및 WCF (Windows Communication Foundation의 기타 기능)를 처리 하는 샘플이 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [채널 확장성](channels-extensibility.md)  
  사용자 지정 채널을 보여 줍니다.  
   

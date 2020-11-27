@@ -2,14 +2,15 @@
 title: 서비스 프레임워크 메타데이터
 ms.date: 03/30/2017
 ms.assetid: 76afc73a-0770-4084-93f3-6701a757911e
-ms.openlocfilehash: f3e73df54b3389b2c9f27001953be147b27eb6f8
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 4133e758cde79294432ca501a10ed7ff20821954
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991209"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255769"
 ---
 # <a name="service-framework-metadata"></a>서비스 프레임워크 메타데이터
+
 이 항목에서는 서비스 프레임워크 메타데이터에 의해 생성된 모든 예외를 보여 줍니다.  
   
 ## <a name="exception-list"></a>예외 목록  

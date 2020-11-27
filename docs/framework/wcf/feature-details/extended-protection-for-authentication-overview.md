@@ -2,14 +2,15 @@
 title: 인증에 대한 확장된 보호 개요
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: fdc42228077bbc703e2e7557c8d7fdb3ff57a150
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0537e6147a7b43dabcb4c3612fc58da11dfd4d6d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559267"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255548"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>인증에 대한 확장된 보호 개요
+
 인증에 대한 보호를 강화하면 공격자가 클라이언트의 자격 증명을 가로채서 서버로 전달하는 MITM(Man-In-The-Middle) 공격을 방지할 수 있습니다.  
   
  클라이언트, 서버, 공격자의 세 참가자가 있는 시나리오를 가정해 보겠습니다. 서버의 URL은 `https://server`이고 공격자의 URL은 `https://attacker`입니다. 공격자는 자신의 URL을 서버인 것처럼 가장하여 클라이언트가 액세스하도록 한 다음 서버로 요청을 보냅니다. 공격자가 보안 리소스에 액세스하려고 하면 서버에서는 WWW-Authenticate 헤더를 사용해 공격자에게 회신을 보냅니다. 공격자에게는 인증 정보가 없으므로 서버는 WWW-Authenticate 헤더를 클라이언트에게 보냅니다. 그러면 클라이언트가 Authorization 헤더를 공격자에게 보내고, 공격자는 이 헤더를 서버로 보내 클라이언트의 자격 증명으로 보안 리소스에 액세스하게 됩니다.  
@@ -32,6 +33,6 @@ ms.locfileid: "90559267"
   
  자세한 내용은 Win7 CBT/Extended Protection 샘플을 참조하십시오.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Server AppFabric 보안 모델](/previous-versions/appfabric/ee677202(v=azure.10))
