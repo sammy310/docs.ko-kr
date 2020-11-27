@@ -2,15 +2,16 @@
 title: '핵심 통신: 내부 이중 전송 채널'
 ms.date: 03/30/2017
 ms.assetid: e1004536-afe0-4e06-b3ed-b4ee08bb0189
-ms.openlocfilehash: 948d5afc47a305e8d63cafe6baac5462888ebc5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a7b41d7f43f9b3f24b66ac67c4a5b6146e75235
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998792"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277428"
 ---
 # <a name="core-communications-internal-duplex-transport-channels"></a>핵심 통신: 내부 이중 전송 채널
-이 항목에서는 Windows Communication Foundation (WCF) 내부 이중 전송 채널에서 생성 된 모든 예외를 나열 합니다.  
+
+이 항목에서는 WCF (Windows Communication Foundation) 내부 이중 전송 채널에 의해 생성 된 모든 예외를 보여 줍니다.  
   
 ## <a name="exception-list"></a>예외 목록  
   

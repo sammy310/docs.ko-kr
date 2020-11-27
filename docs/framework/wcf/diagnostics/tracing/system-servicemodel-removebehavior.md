@@ -2,17 +2,19 @@
 title: System.ServiceModel.RemoveBehavior
 ms.date: 03/30/2017
 ms.assetid: bb64042c-0b07-47b9-a8b7-bd0c06c057e3
-ms.openlocfilehash: 572b110ceb66c7037fe9a97b5580f6d302552f49
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0d592088caf1e2935a7f5705a52c0d475d9e6659
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595923"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277389"
 ---
 # <a name="systemservicemodelremovebehavior"></a>System.ServiceModel.RemoveBehavior
+
 System.ServiceModel.RemoveBehavior  
   
 ## <a name="description"></a>Description  
+
  이 동작 형식이 이미 컬렉션에 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
