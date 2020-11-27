@@ -2,14 +2,15 @@
 title: 본문 요소에 의한 디스패치
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 19913cdaa47d766f62a313e216a653ac69633a99
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ddff361179c2ef071ca4df076e78b238de9041a1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594701"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292599"
 ---
 # <a name="dispatch-by-body-element"></a>본문 요소에 의한 디스패치
+
 이 샘플에서는 들어오는 메시지를 작업에 할당하는 대체 알고리즘을 구현하는 방법을 보여 줍니다.  
   
  기본적으로 서비스 모델 디스패처는 메시지의 WS-Addressing "Action" 헤더나 HTTP SOAP 요청의 동일한 정보에 따라 들어오는 메시지에 적합한 처리 방법을 선택합니다.  
@@ -70,6 +71,7 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>서비스에 작업 선택기 추가  
+
  서비스 디스패치 작업 선택기는 WCF (Windows Communication Foundation) 디스패처에 대 한 확장입니다. 이중 계약의 콜백 채널에서 메서드를 선택하기 위한 클라이언트 작업 선택기도 있습니다. 이 작업 선택기는 여기에서 설명하는 디스패치 작업 선택기와 매우 유사하게 작동하지만 이 샘플에서 명시적으로 설명하지는 않습니다.  
   
  대부분의 서비스 모델 확장처럼 디스패치 작업 선택기도 동작을 사용하여 디스패처에 추가됩니다. *동작은* 디스패치 런타임이나 클라이언트 런타임에 하나 이상의 확장을 추가 하거나 다른 방식으로 설정을 변경 하는 구성 개체입니다.  
@@ -118,6 +120,7 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 ```  
   
 ## <a name="implementing-the-service"></a>서비스 구현  
+
  이 샘플에 구현된 동작은 네트워크의 메시지가 해석되고 디스패치되는 방식에 직접적인 영향을 주며, 이는 서비스 계약의 기능입니다. 따라서 이 동작을 사용하도록 선택하는 서비스 구현에서는 서비스 계약 수준으로 동작을 선언해야 합니다.  
   
  샘플 프로젝트 서비스는 `DispatchByBodyElementBehaviorAttribute` 계약 동작을 `IDispatchedByBody` 서비스 계약에 적용 하 고 각 두 작업 `OperationForBodyA()` 및 `OperationForBodyB()` `DispatchBodyElementAttribute` 작업 동작에 레이블을 적용 합니다. 이 계약을 구현하는 서비스에 대한 서비스 호스트를 열면 앞에서 설명한 대로 디스패처 작성기에서 이 메타데이터를 선택합니다.  
@@ -143,6 +146,7 @@ public interface IDispatchedByBody
  샘플 서비스 구현은 간단합니다. 모든 메서드는 수신된 메시지를 회신 메시지로 래핑하고 클라이언트에 다시 표시합니다.  
   
 ## <a name="running-and-building-the-sample"></a>샘플 실행 및 빌드  
+
  샘플을 실행하면 작업 응답의 본문 내용이 형식이 지정된 다음 출력과 유사하게 클라이언트 콘솔 창에 표시됩니다.  
   
  클라이언트는 본문 내용 요소의 이름이 각각 `bodyA`, `bodyB` 및 `bodyX`인 세 개의 메시지를 서비스로 보냅니다. 이전 설명과 표시된 서비스 계약에서 알 수 있듯이, `bodyA` 요소가 있는 들어오는 메시지는 `OperationForBodyA()` 메서드로 디스패치됩니다. `bodyX` 본문 요소가 있는 메시지의 경우에는 명시적인 디스패치 대상이 없으므로 메시지가 `DefaultOperation()`으로 디스패치됩니다. 각 서비스 작업은 수신된 메시지 본문을 메서드 관련 요소로 래핑하여 반환하며, 이 작업은 이 샘플의 입력 및 출력 메시지를 명확하게 상호 연결하기 위해 수행됩니다.  

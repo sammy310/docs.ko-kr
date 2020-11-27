@@ -2,14 +2,15 @@
 title: '전송: WSE 3.0 TCP 상호 운용성'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: f61d5037af0be6579d5110152ca070bec586fe87
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c268043a9d5c3f6a48b7b66dc807e4e30f029f61
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558968"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292508"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>전송: WSE 3.0 TCP 상호 운용성
+
 WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (사용자 지정 Windows Communication Foundation) 전송으로 구현 하는 방법을 보여 줍니다. 또한 채널 계층의 확장성을 사용하여 연결을 통해 기존에 배포된 시스템과 상호 작용할 수 있는 방법도 보여 줍니다. 다음 단계에서는이 사용자 지정 WCF 전송을 빌드하는 방법을 보여 줍니다.  
   
 1. TCP 소켓에서 시작하여 DIME 프레이밍을 사용하여 메시지 경계를 나타내는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>의 클라이언트 및 서버 구현을 만듭니다.  
@@ -23,6 +24,7 @@ WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (�
 5. 사용자 지정 전송을 채널 스택에 추가하는 바인딩 요소를 추가합니다. 자세한 내용은 [바인딩 요소 추가]를 참조 하세요.  
   
 ## <a name="creating-iduplexsessionchannel"></a>IDuplexSessionChannel 만들기  
+
  WSE 3.0 TCP 상호 운용성 전송을 작성하는 첫 번째 단계는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 위에 <xref:System.Net.Sockets.Socket>의 구현을 만드는 것입니다. `WseTcpDuplexSessionChannel`은 <xref:System.ServiceModel.Channels.ChannelBase>로부터 파생됩니다. 메시지를 보내는 논리는 (1) 메시지를 바이트로 인코딩한 다음 (2) 이러한 바이트를 프레이밍하여 연결을 통해 보내는 두 가지 주요 작업으로 구성됩니다.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
@@ -50,6 +52,7 @@ WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (�
 - 세션별. CloseOutputSession--아웃 바운드 데이터 스트림 (절반 닫기)을 종료 합니다.  
   
 ## <a name="channel-factory"></a>채널 팩터리  
+
  TCP 전송을 작성하는 다음 단계는 클라이언트 채널을 위한 <xref:System.ServiceModel.Channels.IChannelFactory>의 구현을 만드는 것입니다.  
   
 - `WseTcpChannelFactory`에서 파생 <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel> 됩니다. 이는 `OnCreateChannel`을 재정의하여 클라이언트 채널을 생성하는 팩터리입니다.  
@@ -77,6 +80,7 @@ WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (�
 - 채널 계약의 일부로 도메인 관련 예외를 래핑합니다(예: `SocketException`의 <xref:System.ServiceModel.CommunicationException>).  
   
 ## <a name="channel-listener"></a>채널 수신기  
+
  TCP 전송을 작성하는 다음 단계는 서버 채널을 수락하기 위한 <xref:System.ServiceModel.Channels.IChannelListener>의 구현을 만드는 것입니다.  
   
 - `WseTcpChannelListener`에서 파생 되 <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel> 고 [Begin] Open 및 On [Begin] Close에서를 재정의 하 여 수신 소켓의 수명을 제어 합니다. OnOpen에서는 IP_ANY를 수신 대기하는 소켓이 만들어집니다. 더 고급 구현에서는 IPv6을 수신 대기하는 두 번째 소켓도 만들 수 있습니다. 또한 호스트 이름에 IP 주소를 지정할 수도 있습니다.  
@@ -92,6 +96,7 @@ WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (�
  새 소켓을 수락하면 이 소켓으로 서버 채널이 초기화됩니다. 모든 입력 및 출력은 기본 클래스에서 이미 구현되었으므로 이 채널은 소켓의 초기화를 담당합니다.  
   
 ## <a name="adding-a-binding-element"></a>바인딩 요소 추가  
+
  팩터리와 채널이 빌드되었으므로 이제 바인딩을 통해 ServiceModel 런타임에 노출해야 합니다. 바인딩은 서비스 주소와 연결된 통신 스택을 나타내는 바인딩 요소의 컬렉션입니다. 스택의 각 요소는 바인딩 요소로 표현됩니다.  
   
  이 샘플에서 바인딩 요소는 `WseTcpTransportBindingElement`에서 파생된 <xref:System.ServiceModel.Channels.TransportBindingElement>로, <xref:System.ServiceModel.Channels.IDuplexSessionChannel>을 지원하고 다음 메서드를 재정의하여 바인딩과 연결된 팩터리를 빌드합니다.  
@@ -115,6 +120,7 @@ WSE 3.0 TCP 상호 운용성 전송 샘플에서는 TCP 이중 세션을 WCF (�
  또한 `BindingElement`를 복제하고 체계(wse.tcp)를 반환하기 위한 멤버를 포함합니다.  
   
 ## <a name="the-wse-tcp-test-console"></a>WSE TCP 테스트 콘솔  
+
  이 샘플 전송을 사용하기 위한 테스트 코드는 TestCode.cs에서 제공합니다. 다음 지침은 WSE `TcpSyncStockService` 샘플을 설치하는 방법을 보여 줍니다.  
   
  이 테스트 코드는 인코딩으로 MTOM을 사용하고 전송으로 `WseTcpTransport`를 사용하는 사용자 지정 바인딩을 만듭니다. 또한 다음 코드에 나온 것처럼 WSE 3.0을 준수하도록 AddressingVersion을 설정합니다.  
