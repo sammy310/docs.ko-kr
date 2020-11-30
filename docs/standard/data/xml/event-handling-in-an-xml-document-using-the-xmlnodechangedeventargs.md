@@ -5,29 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-ms.openlocfilehash: 582220f14b5b3800c6e04e2e01795686caace83c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 78984c74b6e7eedf4214506dec36509ece7ae48d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829559"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676688"
 ---
-# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a><span data-ttu-id="c1971-102">XmlNodeChangedEventArgs를 사용한 XML 문서의 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="c1971-102">Event Handling in an XML Document Using the XmlNodeChangedEventArgs</span></span>
-<span data-ttu-id="c1971-103">**XmlNodeChangedEventArgs** 는 이벤트 처리를 위해 **XmlDocument** 개체에 등록된 이벤트 처리기에 전달되는 인수를 캡슐화합니다.</span><span class="sxs-lookup"><span data-stu-id="c1971-103">The **XmlNodeChangedEventArgs** encapsulates the arguments passed to the event handlers registered on the **XmlDocument** object for handling events.</span></span> <span data-ttu-id="c1971-104">다음 표에서는 이벤트와 해당 이벤트가 발생하는 시기에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c1971-104">The events and a description of when they are fired is given in the following table.</span></span>  
+# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a><span data-ttu-id="7bbc1-102">XmlNodeChangedEventArgs를 사용한 XML 문서의 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="7bbc1-102">Event Handling in an XML Document Using the XmlNodeChangedEventArgs</span></span>
+
+<span data-ttu-id="7bbc1-103">**XmlNodeChangedEventArgs** 는 이벤트 처리를 위해 **XmlDocument** 개체에 등록된 이벤트 처리기에 전달되는 인수를 캡슐화합니다.</span><span class="sxs-lookup"><span data-stu-id="7bbc1-103">The **XmlNodeChangedEventArgs** encapsulates the arguments passed to the event handlers registered on the **XmlDocument** object for handling events.</span></span> <span data-ttu-id="7bbc1-104">다음 표에서는 이벤트와 해당 이벤트가 발생하는 시기에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="7bbc1-104">The events and a description of when they are fired is given in the following table.</span></span>  
   
-|<span data-ttu-id="c1971-105">이벤트</span><span class="sxs-lookup"><span data-stu-id="c1971-105">Event</span></span>|<span data-ttu-id="c1971-106">발생 시기</span><span class="sxs-lookup"><span data-stu-id="c1971-106">Fired</span></span>|  
+|<span data-ttu-id="7bbc1-105">이벤트</span><span class="sxs-lookup"><span data-stu-id="7bbc1-105">Event</span></span>|<span data-ttu-id="7bbc1-106">발생 시기</span><span class="sxs-lookup"><span data-stu-id="7bbc1-106">Fired</span></span>|  
 |-----------|-----------|  
-|<xref:System.Xml.XmlDocument.NodeInserting>|<span data-ttu-id="c1971-107">현재 문서에 속한 노드가 다른 노드에 삽입되기 직전</span><span class="sxs-lookup"><span data-stu-id="c1971-107">When a node belonging to the current document is about to be inserted into another node.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeInserted>|<span data-ttu-id="c1971-108">현재 문서에 속한 노드가 다른 노드에 삽입된 후</span><span class="sxs-lookup"><span data-stu-id="c1971-108">When a node belonging to the current document has been inserted into another node.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeRemoving>|<span data-ttu-id="c1971-109">이 문서에 속한 노드가 문서에서 제거되기 직전</span><span class="sxs-lookup"><span data-stu-id="c1971-109">When a node belonging to this document is about to be removed from the document.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeRemoved>|<span data-ttu-id="c1971-110">이 문서에 속한 노드가 부모로부터 제거된 직후</span><span class="sxs-lookup"><span data-stu-id="c1971-110">When a node belonging to this document has been removed from its parent.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeChanging>|<span data-ttu-id="c1971-111">노드 값이 변경되기 직전</span><span class="sxs-lookup"><span data-stu-id="c1971-111">When the value of a node is about to be changed.</span></span>|  
-|<xref:System.Xml.XmlDocument.NodeChanged>|<span data-ttu-id="c1971-112">노드 값이 변경된 직후</span><span class="sxs-lookup"><span data-stu-id="c1971-112">When the value of a node has been changed.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeInserting>|<span data-ttu-id="7bbc1-107">현재 문서에 속한 노드가 다른 노드에 삽입되기 직전</span><span class="sxs-lookup"><span data-stu-id="7bbc1-107">When a node belonging to the current document is about to be inserted into another node.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeInserted>|<span data-ttu-id="7bbc1-108">현재 문서에 속한 노드가 다른 노드에 삽입된 후</span><span class="sxs-lookup"><span data-stu-id="7bbc1-108">When a node belonging to the current document has been inserted into another node.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeRemoving>|<span data-ttu-id="7bbc1-109">이 문서에 속한 노드가 문서에서 제거되기 직전</span><span class="sxs-lookup"><span data-stu-id="7bbc1-109">When a node belonging to this document is about to be removed from the document.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeRemoved>|<span data-ttu-id="7bbc1-110">이 문서에 속한 노드가 부모로부터 제거된 직후</span><span class="sxs-lookup"><span data-stu-id="7bbc1-110">When a node belonging to this document has been removed from its parent.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeChanging>|<span data-ttu-id="7bbc1-111">노드 값이 변경되기 직전</span><span class="sxs-lookup"><span data-stu-id="7bbc1-111">When the value of a node is about to be changed.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeChanged>|<span data-ttu-id="7bbc1-112">노드 값이 변경된 직후</span><span class="sxs-lookup"><span data-stu-id="7bbc1-112">When the value of a node has been changed.</span></span>|  
   
 > [!NOTE]
-> <span data-ttu-id="c1971-113">**XmlDataDocument** 메모리 사용이 **DataSet** 스토리지를 사용하도록 완전히 최적화된 경우 기본 **DataSet** 이 변경될 때 **XmlDataDocument** 에서 위에 나열된 어떠한 이벤트도 발생시키지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1971-113">If the **XmlDataDocument** memory usage is fully optimized to use **DataSet** storage, the **XmlDataDocument** might not raise any of the events listed above when changes are made to the underlying **DataSet**.</span></span> <span data-ttu-id="c1971-114">이러한 이벤트가 필요한 경우 전체 **XmlDocument** 를 한 번 트래버스하여 메모리 사용이 완전히 최적화되지 않은 상태로 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1971-114">If you need these events, you must traverse the whole **XmlDocument** once to make the memory usage non-fully optimized.</span></span>  
+> <span data-ttu-id="7bbc1-113">**XmlDataDocument** 메모리 사용이 **DataSet** 스토리지를 사용하도록 완전히 최적화된 경우 기본 **DataSet** 이 변경될 때 **XmlDataDocument** 에서 위에 나열된 어떠한 이벤트도 발생시키지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7bbc1-113">If the **XmlDataDocument** memory usage is fully optimized to use **DataSet** storage, the **XmlDataDocument** might not raise any of the events listed above when changes are made to the underlying **DataSet**.</span></span> <span data-ttu-id="7bbc1-114">이러한 이벤트가 필요한 경우 전체 **XmlDocument** 를 한 번 트래버스하여 메모리 사용이 완전히 최적화되지 않은 상태로 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7bbc1-114">If you need these events, you must traverse the whole **XmlDocument** once to make the memory usage non-fully optimized.</span></span>  
   
- <span data-ttu-id="c1971-115">다음 코드 예제에서는 이벤트 처리기를 정의하는 방법과 이벤트에 이벤트 처리기를 추가하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c1971-115">The following code example shows how to define an event handler and how to add the event handler to an event.</span></span>  
+ <span data-ttu-id="7bbc1-115">다음 코드 예제에서는 이벤트 처리기를 정의하는 방법과 이벤트에 이벤트 처리기를 추가하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7bbc1-115">The following code example shows how to define an event handler and how to add the event handler to an event.</span></span>  
   
 ```vb  
 ' Attach the event handler, NodeInsertedHandler, to the NodeInserted  
@@ -70,9 +71,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- <span data-ttu-id="c1971-116">일부 XML DOM(문서 개체 모델) 작업은 여러 이벤트가 발생될 수 있는 복합 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="c1971-116">Some XML Document Object Model (DOM) operations are compound operations that can result in multiple events being fired.</span></span> <span data-ttu-id="c1971-117">예를 들어 **AppendChild** 는 추가되는 노드를 이전 부모에서 제거해야 할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1971-117">For example, **AppendChild** may also have to remove the node being appended from its previous parent.</span></span> <span data-ttu-id="c1971-118">이 경우 먼저 **NodeRemoved** 이벤트가 발생한 다음, **NodeInserted** 이벤트가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="c1971-118">In this case, you see a **NodeRemoved** event fired first, followed by a **NodeInserted** event.</span></span> <span data-ttu-id="c1971-119">**InnerXml** 을 설정하는 것과 같은 작업으로 여러 이벤트가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1971-119">Operations like setting **InnerXml** could result in multiple events.</span></span>  
+ <span data-ttu-id="7bbc1-116">일부 XML DOM(문서 개체 모델) 작업은 여러 이벤트가 발생될 수 있는 복합 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="7bbc1-116">Some XML Document Object Model (DOM) operations are compound operations that can result in multiple events being fired.</span></span> <span data-ttu-id="7bbc1-117">예를 들어 **AppendChild** 는 추가되는 노드를 이전 부모에서 제거해야 할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7bbc1-117">For example, **AppendChild** may also have to remove the node being appended from its previous parent.</span></span> <span data-ttu-id="7bbc1-118">이 경우 먼저 **NodeRemoved** 이벤트가 발생한 다음, **NodeInserted** 이벤트가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="7bbc1-118">In this case, you see a **NodeRemoved** event fired first, followed by a **NodeInserted** event.</span></span> <span data-ttu-id="7bbc1-119">**InnerXml** 을 설정하는 것과 같은 작업으로 여러 이벤트가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7bbc1-119">Operations like setting **InnerXml** could result in multiple events.</span></span>  
   
- <span data-ttu-id="c1971-120">다음 코드 예제에서는 이벤트 처리기를 만드는 방법과 **NodeInserted** 이벤트를 처리하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="c1971-120">The following code example shows the creation of the event handler and the handling of the **NodeInserted** event.</span></span>  
+ <span data-ttu-id="7bbc1-120">다음 코드 예제에서는 이벤트 처리기를 만드는 방법과 **NodeInserted** 이벤트를 처리하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="7bbc1-120">The following code example shows the creation of the event handler and the handling of the **NodeInserted** event.</span></span>  
   
 ```vb  
 Imports System  
@@ -203,8 +204,8 @@ public class Sample
 } // End class
 ```  
   
- <span data-ttu-id="c1971-121">자세한 내용은 <xref:System.Xml.XmlNodeChangedEventArgs> 및 <xref:System.Xml.XmlNodeChangedEventHandler>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c1971-121">For more information, see <xref:System.Xml.XmlNodeChangedEventArgs> and <xref:System.Xml.XmlNodeChangedEventHandler>.</span></span>  
+ <span data-ttu-id="7bbc1-121">자세한 내용은 <xref:System.Xml.XmlNodeChangedEventArgs> 및 <xref:System.Xml.XmlNodeChangedEventHandler>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7bbc1-121">For more information, see <xref:System.Xml.XmlNodeChangedEventArgs> and <xref:System.Xml.XmlNodeChangedEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c1971-122">참조</span><span class="sxs-lookup"><span data-stu-id="c1971-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7bbc1-122">참조</span><span class="sxs-lookup"><span data-stu-id="7bbc1-122">See also</span></span>
 
-- [<span data-ttu-id="c1971-123">XML DOM(문서 개체 모델)</span><span class="sxs-lookup"><span data-stu-id="c1971-123">XML Document Object Model (DOM)</span></span>](xml-document-object-model-dom.md)
+- [<span data-ttu-id="7bbc1-123">XML DOM(문서 개체 모델)</span><span class="sxs-lookup"><span data-stu-id="7bbc1-123">XML Document Object Model (DOM)</span></span>](xml-document-object-model-dom.md)
