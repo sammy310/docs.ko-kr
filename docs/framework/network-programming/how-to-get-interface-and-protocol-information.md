@@ -4,17 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-ms.openlocfilehash: b2b2f4f0bfa8b026bbd5dce8e25919a4a7fc7036
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e94914ec6312fad9a22cdbb4d145ed131d233da
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180816"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250530"
 ---
-# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="42369-102">방법: 인터페이스 및 프로토콜 정보 가져오기</span><span class="sxs-lookup"><span data-stu-id="42369-102">How to: Get Interface and Protocol Information</span></span>
-<span data-ttu-id="42369-103">이 샘플은 네트워크 인터페이스의 TCP 통계를 읽는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="42369-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
+# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="e08af-102">방법: 인터페이스 및 프로토콜 정보 가져오기</span><span class="sxs-lookup"><span data-stu-id="e08af-102">How to: Get Interface and Protocol Information</span></span>
+
+<span data-ttu-id="e08af-103">이 샘플은 네트워크 인터페이스의 TCP 통계를 읽는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e08af-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="42369-104">예제</span><span class="sxs-lookup"><span data-stu-id="42369-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e08af-104">예제</span><span class="sxs-lookup"><span data-stu-id="e08af-104">Example</span></span>  
   
 ```csharp
 public static void ShowTcpStatistics(NetworkInterfaceComponent version)  
@@ -69,7 +70,8 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="42369-105">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="42369-105">Compiling the Code</span></span>  
- <span data-ttu-id="42369-106">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="42369-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="e08af-105">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="e08af-105">Compiling the Code</span></span>  
+
+ <span data-ttu-id="e08af-106">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="e08af-106">This example requires:</span></span>  
   
-- <span data-ttu-id="42369-107">**System.Net** 네임스페이스에 대한 참조.</span><span class="sxs-lookup"><span data-stu-id="42369-107">References to the **System.Net** namespace.</span></span>
+- <span data-ttu-id="e08af-107">**System.Net** 네임스페이스에 대한 참조.</span><span class="sxs-lookup"><span data-stu-id="e08af-107">References to the **System.Net** namespace.</span></span>
