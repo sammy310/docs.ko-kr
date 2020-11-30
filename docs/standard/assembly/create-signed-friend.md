@@ -6,14 +6,15 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: b6176afed44e32911a37a0d753cea2bae7d8554e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4c441501ae0f939f69ac863a990d6e392bd35fc4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378536"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734272"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>방법: 서명된 friend 어셈블리 만들기
+
 이 예제에서는 강력한 이름을 가진 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다. 두 어셈블리에 모두 강력한 이름을 지정해야 합니다. 이 예제의 두 어셈블리는 모두 동일한 키를 사용하지만 두 어셈블리에 서로 다른 키를 사용할 수 있습니다.  
   
 ## <a name="create-a-signed-assembly-and-a-friend-assembly"></a>서명된 어셈블리 및 friend 어셈블리 만들기  
@@ -26,7 +27,7 @@ ms.locfileid: "83378536"
   
          `sn -k FriendAssemblies.snk`  
   
-    2. *FriendAssemblies.snk*에서 공개 키를 추출하고 *FriendAssemblies.publickey*에 넣습니다.  
+    2. *FriendAssemblies.snk* 에서 공개 키를 추출하고 *FriendAssemblies.publickey* 에 넣습니다.  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
@@ -34,7 +35,7 @@ ms.locfileid: "83378536"
   
          `sn -tp FriendAssemblies.publickey`  
   
-3. 다음 코드를 포함하는 *friend_signed_A*라는 C# 또는 Visual Basic 파일을 만듭니다. 이 코드는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하여 *friend_signed_B*를 friend 어셈블리로 선언합니다.  
+3. 다음 코드를 포함하는 *friend_signed_A* 라는 C# 또는 Visual Basic 파일을 만듭니다. 이 코드는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하여 *friend_signed_B* 를 friend 어셈블리로 선언합니다.  
 
    강력한 이름 도구는 실행할 때마다 새 공개 키를 생성합니다. 따라서 다음 예제와 같이 다음 코드의 공개 키를 방금 생성한 공개 키로 대체해야 합니다.  
 
@@ -70,7 +71,7 @@ ms.locfileid: "83378536"
    End Class  
    ```  
 
-4. 다음 명령을 사용하여 *friend_signed_A*를 컴파일하고 서명합니다.  
+4. 다음 명령을 사용하여 *friend_signed_A* 를 컴파일하고 서명합니다.  
 
    ```csharp
    csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
@@ -80,7 +81,7 @@ ms.locfileid: "83378536"
    Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
    ```  
 
-5. 다음 코드를 포함하는 *friend_signed_B*라는 C# 또는 Visual Basic 파일을 만듭니다. *friend_signed_A*는 *friend_signed_B*를 friend 어셈블리로 지정하기 때문에 *friend_signed_B*의 코드는 *friend_signed_A*의 `internal`(C#) 또는 `Friend`(Visual Basic) 형식과 멤버에 액세스할 수 있습니다. 파일에는 다음 코드가 포함되어 있습니다.  
+5. 다음 코드를 포함하는 *friend_signed_B* 라는 C# 또는 Visual Basic 파일을 만듭니다. *friend_signed_A* 는 *friend_signed_B* 를 friend 어셈블리로 지정하기 때문에 *friend_signed_B* 의 코드는 *friend_signed_A* 의 `internal`(C#) 또는 `Friend`(Visual Basic) 형식과 멤버에 액세스할 수 있습니다. 파일에는 다음 코드가 포함되어 있습니다.  
 
    ```csharp  
    // friend_signed_B.cs  
@@ -108,7 +109,7 @@ ms.locfileid: "83378536"
    End Module  
    ```  
 
-6. 다음 명령을 사용하여 *friend_signed_B*를 컴파일하고 서명합니다.  
+6. 다음 명령을 사용하여 *friend_signed_B* 를 컴파일하고 서명합니다.  
 
    ```csharp
    csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
@@ -125,6 +126,7 @@ ms.locfileid: "83378536"
    프로그램이 **Class1.Test** 문자열을 출력합니다.  
   
 ## <a name="net-security"></a>.NET 보안  
+
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성과 <xref:System.Security.Permissions.StrongNameIdentityPermission> 클래스 간에는 유사점이 있습니다. 주요 차이점은 <xref:System.Security.Permissions.StrongNameIdentityPermission>은 코드의 특정 섹션을 실행하는 보안 권한을 요구할 수 있는 반면, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성은 `internal`(C#) 또는 `Friend`(Visual Basic) 형식 및 멤버의 표시 유형을 제어한다는 것입니다.  
   
 ## <a name="see-also"></a>참조

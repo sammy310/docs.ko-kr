@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: e29769a0dc40e88a53b0a3f063f79c8c89edbce6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 75097485c78e9ded67f41d9632f5399c081b3a16
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825704"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734467"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>방법: 병렬 클래스를 사용하여 파일 디렉터리 열거
+
 대부분의 경우 파일 반복은 쉽게 병렬 처리할 수 있는 작업입니다. [방법: PLINQ를 사용하여 파일 디렉터리 반복](how-to-iterate-file-directories-with-plinq.md) 항목은 많은 시나리오에서 이 작업을 수행하는 가장 쉬운 방법을 보여줍니다. 그러나 코드가 파일 시스템에 액세스할 때 발생할 수 있는 많은 예외 형식을 처리해야 할 경우 복잡해질 수 있습니다. 다음 예제는 문제에 대한 하나의 접근 방법을 보여줍니다. 이 방법은 스택 기반 반복을 사용하여 지정된 디렉터리에서 모든 파일과 폴더를 트래버스하고 코드에서 다양한 예외를 catch하여 처리할 수 있습니다. 물론 예외를 처리하는 방법은 사용자가 결정합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 디렉터리를 순차적으로 반복하지만 파일을 병렬로 처리합니다. 이 방법은 파일 대 디렉터리 비율이 큰 경우 가장 적합합니다. 또한 디렉터리 반복을 병렬 처리하고 각 파일에 순차적으로 액세스할 수 있습니다. 많은 프로세서를 사용하는 컴퓨터를 특별히 대상으로 지정하지 않는 한 두 루프를 모두 병렬 처리하는 것은 효율적이지 않을 수 있습니다. 그러나 모든 경우처럼 애플리케이션을 철저히 테스트하여 가장 적합한 방법을 확인해야 합니다.  
   
  [!code-csharp[TPL_Parallel#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallel_file.cs#08)]

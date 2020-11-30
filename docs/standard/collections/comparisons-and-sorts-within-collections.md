@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 343f633b3807391b8deea28f56a5166ac3d8c8c5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e4d40568710498df811954c86bb36382d93057a3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823864"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733544"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>컬렉션 내에서 비교 및 정렬
 
@@ -26,6 +26,7 @@ ms.locfileid: "94823864"
 컬렉션은 일반적으로 같음 비교자 및/또는 순서 비교자를 사용합니다. 비교에는 두 가지 구문이 사용됩니다.
 
 <a name="BKMK_Checkingforequality"></a>
+
 ## <a name="check-for-equality"></a>같음 테스트
 
 `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>, `Remove` 등의 메서드는 컬렉션 요소에 대해 같음 비교자를 사용합니다. 제네릭 컬렉션의 경우 다음 지침에 따라 항목이 같은지 비교합니다.
@@ -37,6 +38,7 @@ ms.locfileid: "94823864"
 또한 사전 컬렉션의 일부 생성자 오버로드는 키가 같은지를 비교하는 데 사용되는 <xref:System.Collections.Generic.IEqualityComparer%601> 구현을 허용합니다. 예제를 보려면 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A> 생성자를 참조하세요.
 
 <a name="BKMK_Determiningsortorder"></a>
+
 ## <a name="determine-sort-order"></a>정렬 순서 결정
 
 `BinarySearch` 및 `Sort` 와 같은 메서드는 컬렉션 요소에 대해 순서 비교자를 사용합니다. 컬렉션의 요소를 비교할 수도 있고 특정 요소와 지정된 값을 비교할 수도 있습니다. 개체를 비교하는 경우에는 `default comparer` 및 `explicit comparer`의 개념이 적용됩니다.
@@ -54,6 +56,7 @@ ms.locfileid: "94823864"
 시스템의 현재 문화권 설정은 컬렉션 내의 비교와 정렬에 영향을 줄 수 있습니다. 기본적으로 **Collections** 클래스의 비교 및 정렬은 문화권을 구분합니다. 문화권 설정을 무시하고 동일한 비교 및 정렬 결과가 반환되도록 하려면 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> 를 허용하는 멤버 오버로드를 포함하여 <xref:System.Globalization.CultureInfo>를 사용합니다. 자세한 내용은 [컬렉션에서 Culture를 구분하지 않는 문자열 작업 수행](../globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) 및 [배열에서 문화권을 구분하지 않는 문자열 작업 수행](../globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)를 참조하세요.
 
 <a name="BKMK_Equalityandsortexample"></a>
+
 ## <a name="equality-and-sort-example"></a>같음 및 정렬 예제
 
 다음 코드에서는 간단한 비즈니스 개체에 대한 <xref:System.IEquatable%601> 및 <xref:System.IComparable%601> 의 구현을 보여 줍니다. 또한 개체를 목록에 저장하고 정렬할 때 <xref:System.Collections.Generic.List%601.Sort> 메서드를 호출하면 `Part` 형식에 대해 기본 비교자가 사용되며, 무명 메서드를 사용하여 <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> 메서드가 구현됩니다.

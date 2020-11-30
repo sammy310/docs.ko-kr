@@ -3,12 +3,12 @@ title: .NET 이식성 분석기 - .NET
 description: .NET 이식성 분석기 도구를 사용하여 .NET Core, .NET Standard, UWP 및 Xamarin을 비롯한 다양한 .NET 구현에서 코드가 얼마나 이식성이 있는지 평가하는 방법을 알아봅니다.
 ms.date: 09/13/2019
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 03b5f88a17baf8713b06bdd0eac192d9e093b969
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 048ff916d309f4159fe78177e093a58d731c2e11
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819710"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734285"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
 
@@ -47,6 +47,7 @@ Visual Studio에서 열면 다음과 같은 결과가 나타납니다.
 ![DGML 분석의 스크린샷](./media/portability-analyzer/dgml-example.png)
 
 ### <a name="analyze-portability"></a>이식성 분석
+
 Visual Studio에서 전체 프로젝트를 분석하려면 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **어셈블리 이식성 분석** 을 선택합니다. 전체 프로젝트를 분석하지 않으려면 **분석** 메뉴로 이동한 다음 **어셈블리 이식성 분석** 을 선택합니다. 여기서 프로젝트의 실행 파일 또는 DLL을 선택합니다.
 
 ![솔루션 탐색기에서 이식성 분석기의 스크린샷](./media/portability-analyzer/portability-solution-explorer.png)

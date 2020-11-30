@@ -2,20 +2,20 @@
 title: .NET 5+에서 문자열 비교 시 동작 변경
 description: Windows에서 .NET 5 이상 버전의 문자열 비교 동작 변경에 대해 알아봅니다.
 ms.date: 11/04/2020
-ms.openlocfilehash: 49be2169bb165b8fe0205800415542bea7bf9787
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: fa1a1d12f45e5b41877a674d7b8747bb2b2f9658
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403489"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734233"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>.NET 5+에서 문자열 비교 시 동작 변경
 
-.NET 5.0에, 세계화 API가 [이제 기본적으로 ICU를 사용](../../core/compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows)하는 런타임 동작 변경이 도입되었습니다. 이것은 Windows에서 실행할 때 운영 체제의 NLS(국가별 언어 지원) 기능을 활용하는 이전 .NET Core 및 .NET Framework과 달라진 점입니다. 이와 같이 동작 변경을 되돌릴 수 있는 호환성 스위치를 비롯한 변경에 대한 자세한 내용은 [.NET 세계화 및 ICU](../globalization-localization/globalization-icu.md)를 참조하세요.
+.NET 5.0에, 세계화 API가 [이제 기본적으로 ICU를 사용](../../core/compatibility/globalization/5.0/icu-globalization-api.md)하는 런타임 동작 변경이 도입되었습니다. 이것은 Windows에서 실행할 때 운영 체제의 NLS(국가별 언어 지원) 기능을 활용하는 이전 .NET Core 및 .NET Framework과 달라진 점입니다. 이와 같이 동작 변경을 되돌릴 수 있는 호환성 스위치를 비롯한 변경에 대한 자세한 내용은 [.NET 세계화 및 ICU](../globalization-localization/globalization-icu.md)를 참조하세요.
 
 ## <a name="reason-for-change"></a>변경 이유
 
-이 변경은 지원되는 모든 운영 체제에서 .NET의 세계화 동작을 통일하기 위해 도입되었습니다. 또한 애플리케이션이 OS의 기본 제공 라이브러리에 의존하지 않고 자체 세계화 라이브러리를 묶을 수 있는 기능도 제공합니다. 자세한 내용은 [호환성이 손상되는 변경 알림](../../core/compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows)을 참조하세요.
+이 변경은 지원되는 모든 운영 체제에서 .NET의 세계화 동작을 통일하기 위해 도입되었습니다. 또한 애플리케이션이 OS의 기본 제공 라이브러리에 의존하지 않고 자체 세계화 라이브러리를 묶을 수 있는 기능도 제공합니다. 자세한 내용은 [호환성이 손상되는 변경 알림](../../core/compatibility/globalization/5.0/icu-globalization-api.md)을 참조하세요.
 
 ## <a name="behavioral-differences"></a>동작의 차이
 

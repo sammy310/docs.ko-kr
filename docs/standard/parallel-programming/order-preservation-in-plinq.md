@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 59d32f8801a1429718f39ab912f55cfcc5788a0e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 997bb80b6e30d4769613c4a1df647e6cd475a8ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820776"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730606"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ에서 순서 유지
+
 PLINQ에서 목표는 정확성을 유지하면서 성능을 최대화하는 것입니다. 쿼리는 가능한 한 빠르게 실행되지만 올바른 결과를 생성해야 합니다. 경우에 따라 정확성을 위해 소스 시퀀스의 순서를 유지해야 하지만 순서 지정의 계산 비용이 높을 수 있습니다. 따라서 기본적으로 PLINQ는 소스 시퀀스의 순서를 유지하지 않습니다. 이와 관련하여 PLINQ는 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]과 비슷하지만 순서를 유지하는 LINQ to Objects와는 다릅니다.  
   
  기본 동작을 재정의하려면 소스 시퀀스에서 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 연산자를 사용하여 순서 유지 기능을 켤 수 있습니다. 그런 다음, <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 메서드를 사용하여 쿼리에서 나중에 순서 유지 기능을 끌 수 있습니다. 두 메서드를 모두 사용하면 쿼리를 병렬로 실행할지 또는 순차적으로 실행할지 여부를 결정하는 추론을 기반으로 쿼리가 처리됩니다. 자세한 내용은 [PLINQ의 속도 향상 이해](understanding-speedup-in-plinq.md)를 참조하세요.  
@@ -39,6 +40,7 @@ PLINQ에서 목표는 정확성을 유지하면서 성능을 최대화하는 것
  PLINQ는 나머지 쿼리에 대해 순서 포함 연산자에 의해 생성된 시퀀스의 순서를 유지합니다. 즉, <xref:System.Linq.ParallelEnumerable.OrderBy%2A> 및 <xref:System.Linq.ParallelEnumerable.ThenBy%2A> 같은 연산자는 뒤에 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>에 대한 호출이 실행되는 것처럼 처리됩니다.  
   
 ## <a name="query-operators-and-ordering"></a>쿼리 연산자 및 순서 지정  
+
  다음 쿼리 연산자는 순서 유지를 쿼리의 모든 후속 작업에 포함하거나 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>가 호출될 때까지 포함합니다.  
   
 - <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  

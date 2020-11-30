@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
-ms.openlocfilehash: 1e47bee50f7fa51df82bb37ed3049765f8f360d2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5e0f5de6fd956bcaaf30b592e04c432a5f824c52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830079"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734103"
 ---
 # <a name="object-comparison-using-xmlnametable"></a>XmlNameTable을 사용한 개체 비교
+
 **XmlDocuments** 가 생성되면 해당 문서와 관련된 이름 테이블도 생성됩니다. XML이 문서에 로드되거나 새 요소 또는 특성이 생성되면 해당 특성 및 요소 이름이 **XmlNameTable** 에 포함됩니다. 또한 다른 문서의 기존 **NameTable** 을 사용하여 **XmlDocument** 를 만들 수도 있습니다. **XmlNameTable** 매개 변수를 사용하는 생성자로 **XmlDocuments** 를 만들면 문서에서 **XmlNameTable** 에 저장된 노드 이름, 네임스페이스 및 접두사에 액세스할 수 있습니다. 이름 테이블에 이름이 로드되는 방법에 관계없이 테이블에 이름을 저장한 후에는 문자열 비교 대신 개체 비교를 통해 이름을 신속하게 비교할 수 있습니다. 또한 <xref:System.Xml.NameTable.Add%2A>를 사용하여 이름 테이블에 문자열을 추가할 수도 있습니다. 다음 코드 샘플에서는 이름 테이블을 만들고 테이블에 **MyString** 문자열을 추가하는 방법을 보여줍니다. 그런 다음, 해당 테이블을 사용하여 **XmlDocument** 를 만들고, 기존 이름 테이블에 **Myfile.xml** 의 요소 및 특성 이름을 추가합니다.  
   
 ```vb  

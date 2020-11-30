@@ -17,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: ab64b2ef0a87cbad3b3c036d74f4690ff7fdb1f4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 251f90e85d037d8cf4f3fd58bc27659c98d04b5e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831314"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734246"
 ---
 # <a name="standard-timespan-format-strings"></a>표준 TimeSpan 서식 문자열
 
@@ -47,6 +47,7 @@ ms.locfileid: "94831314"
 |"G"|일반 긴 형식|이 지정자는 항상 일 수와 7자리 소수 자릿수를 출력하고 문화권을 구분하며 형식은 `[-]d':'hh':'mm':'ss.fffffff`입니다.<br /><br /> 추가 정보: [일반 긴("G") 형식 지정자](#the-general-long-g-format-specifier).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000(en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000(fr-FR)|  
 
 ## <a name="the-constant-c-format-specifier"></a>상수("c") 형식 지정자  
+
  "c" 형식 지정자는 <xref:System.TimeSpan> 값의 문자열 표현을 다음 형식으로 반환합니다.  
   
  [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
@@ -73,6 +74,7 @@ ms.locfileid: "94831314"
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
 
 ## <a name="the-general-short-g-format-specifier"></a>일반 약식("g") 형식 지정자  
+
  "g" <xref:System.TimeSpan> 형식 지정자는 필요한 요소만 포함하여 <xref:System.TimeSpan> 값의 문자열 표현을 압축 형식으로 반환합니다. 이 형식 지정자의 형식은 다음과 같습니다.  
   
  [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
@@ -97,6 +99,7 @@ ms.locfileid: "94831314"
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
 
 ## <a name="the-general-long-g-format-specifier"></a>일반 긴("G") 형식 지정자  
+
  "G" <xref:System.TimeSpan> 형식 지정자는 항상 일 수와 초의 소수 부분을 모두 포함하는 긴 형식으로 <xref:System.TimeSpan> 값의 문자열 표현을 반환합니다. "G" 표준 형식 지정자에서 생성 되는 문자열의 형식은 다음과 같습니다.  
   
  [-]*d*:*hh*:*mm*:*ss*.*fffffff*  

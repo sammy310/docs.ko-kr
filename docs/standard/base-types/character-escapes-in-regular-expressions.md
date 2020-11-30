@@ -14,14 +14,15 @@ helpviewer_keywords:
 - .NET regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 5a9890f9ada6a4e749c8cf5ee96d9e8668525040
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 820e6cd7fa4a60fa6adfcaf0f0ff4d25fdda0f21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823266"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734389"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>정규식의 문자 이스케이프
+
 정규식의 백슬래시(\\)는 다음 중 하나를 나타냅니다.  
   
 - 다음 섹션의 표에 나와 있는 대로 뒤에 나오는 문자는 특수 문자입니다. 예를 들어 `\b`는 단어 경계에서 정규식 일치가 시작되어야 함을 나타내는 앵커이고, `\t`는 탭을 나타내고, `\x020`은 공백을 나타냅니다.  
@@ -32,6 +33,7 @@ ms.locfileid: "94823266"
 > 문자 이스케이프는 정규식 패턴에서는 인식되지만 대체 패턴에서 인식되지 않습니다.  
   
 ## <a name="character-escapes-in-net"></a>.NET의 문자 이스케이프  
+
  다음 표에서는 .NET의 정규식에서 지원하는 문자 이스케이프를 보여 줍니다.  
   
 |문자 또는 시퀀스|설명|  
@@ -52,6 +54,7 @@ ms.locfileid: "94823266"
 |`\`|이스케이프된 문자로 인식되지 않는 문자가 뒤에 나올 경우 이 문자를 찾습니다. 예를 들어 `\*`는 별표(*)와 일치하고 `\x2A`와 같습니다.|  
   
 ## <a name="an-example"></a>예제  
+
  다음 예제에서는 정규식에서 문자 이스케이프를 사용하는 방법을 보여 줍니다. 세계 최대 도시의 이름과 2009년 인구가 포함된 문자열을 구문 분석합니다. 각 도시 이름과 해당 인구는 탭(`\t`) 또는 세로 막대(&#124; 또는 `\u007c`)로 구분됩니다. 개별 도시 및 해당 인구는 캐리지 리턴 및 줄 바꿈으로 서로 구분됩니다.  
   
  [!code-csharp[RegularExpressions.Language.Escapes#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.escapes/cs/escape1.cs#1)]

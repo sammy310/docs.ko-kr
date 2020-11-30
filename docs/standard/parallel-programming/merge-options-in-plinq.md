@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: e6690a600b7b00272471362bc087633d52a98f25
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e6212abbc0d9f64765b03c3dd2e9132e9ca96ab7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824846"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730619"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ의 병합 옵션
+
 쿼리가 병렬로 실행되는 경우 여러 스레드가 동시에 여러 파트에서(보통 개별 스레드에서) 작동할 수 있도록 PLINQ가 소스 시퀀스를 분할합니다. 결과를 `foreach`(Visual Basic의 `For Each`) 루프와 같은 한 스레드에서 사용할 경우 모든 스레드의 결과를 하나의 시퀀스로 다시 병합해야 합니다. PLINQ가 수행하는 병합의 종류는 쿼리에 있는 연산자에 따라 다릅니다. 예를 들어, 결과에 새 순서를 부과하는 연산자는 모든 스레드의 모든 요소를 버퍼링해야 합니다. 소비 스레드의 관점에서(또한 애플리케이션 사용자의 관점에서) 완전히 버퍼링된 쿼리는 첫 번째 결과를 생성하기 전에 한동안 실행될 수 있습니다. 다른 연산자는 기본적으로, 부분적으로 버퍼링되므로 일괄 처리로 결과가 생성됩니다. <xref:System.Linq.ParallelEnumerable.ForAll%2A> 연산자는 기본적으로 버퍼링되지 않습니다. 이 연산자는 모든 스레드에서 모든 요소를 즉시 생성합니다.  
   
  다음 예와 같이 <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> 메서드를 사용하여 수행할 병합 종류를 나타내는 힌트를 PLINQ에 제공할 수 있습니다.  
@@ -27,6 +28,7 @@ ms.locfileid: "94824846"
  특정 쿼리가 요청된 옵션을 지원할 수 없는 경우에는 옵션이 무시됩니다. 대부분의 경우 PLINQ 쿼리의 병합 옵션을 지정할 필요가 없습니다. 그러나 어떤 경우에는 쿼리가 기본이 아닌 모드에서 가장 잘 실행한다는 것을 테스트 및 측정을 통해 확인할 수 있습니다. 이 옵션의 일반적인 용도는 응답성이 높은 사용자 인터페이스를 제공하기 위해 청크 병합 연산자가 결과를 스트리밍하도록 강제하는 것입니다.  
   
 ## <a name="parallelmergeoptions"></a>ParallelMergeOptions  
+
  <xref:System.Linq.ParallelMergeOptions> 열거에는 지원되는 쿼리 형태에 대해 결과가 한 스레드에서 사용될 때 쿼리의 최종 출력이 어떻게 생성되는지를 지정하는 다음 옵션이 포함됩니다.  
   
 - `Not Buffered`  
@@ -42,6 +44,7 @@ ms.locfileid: "94824846"
      <xref:System.Linq.ParallelMergeOptions.FullyBuffered> 옵션을 사용하면 요소가 생성되기 전에 전체 쿼리 출력이 버퍼링됩니다. 이 옵션을 사용하면 첫 번째 요소가 소비 스레드에서 사용 가능하게 되기 전까지 오래 걸릴 수 있지만 전체 결과는 다른 옵션을 사용하여 더 빨리 생성될 수 있습니다.  
   
 ## <a name="query-operators-that-support-merge-options"></a>병합 옵션을 지원하는 쿼리 연산자  
+
  다음 표에서는 지정된 제한 사항에 따라 모든 병합 옵션 모드를 지원하는 연산자를 나열합니다.  
   
 |연산자|제한|  

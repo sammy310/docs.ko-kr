@@ -12,19 +12,21 @@ helpviewer_keywords:
 - regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-ms.openlocfilehash: e6cf86d08ed971876f76413e0145c62b73d0d4a5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ba512fbe4ebc7ec35ca590541fe5bf94d07c465d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825093"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734519"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>방법: URL에서 프로토콜 및 포트 번호 추출
+
 다음 예제에서는 URL에서 프로토콜 및 포트 번호를 추출합니다.  
 
 [!INCLUDE [regex](../../../includes/regex.md)]
 
 ## <a name="example"></a>예제  
+
  이 예제에서는 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 메서드를 사용하여 프로토콜, 콜론, 포트 번호 순서로 구성된 값을 반환합니다.  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/Example.cs#1)]

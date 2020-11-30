@@ -10,12 +10,12 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-ms.openlocfilehash: 868f36a1025f0b121a8765edf50bb42679736240
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a418432dfaba9ab070ddb6dc862dcbd798c16343
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829767"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732218"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>문화권의 영향을 받지 않는 문자열 작업 수행
 
@@ -24,6 +24,7 @@ ms.locfileid: "94829767"
  이 섹션에서는 기본적으로 문화권을 구분하는 .NET 메서드를 사용하여 문화권을 구분하지 않는 문자열 작업을 수행하는 방법을 보여 주기 위해 다음 문서를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [문화권을 구분하지 않는 문자열 비교 수행](performing-culture-insensitive-string-comparisons.md)  
  <xref:System.String.Compare%2A?displayProperty=nameWithType> 및 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드를 사용하여 문화권을 구분하지 않는 문자열 비교를 수행하는 방법에 대해 설명합니다.  
   
@@ -37,6 +38,7 @@ ms.locfileid: "94829767"
  <xref:System.Array.Sort%2A?displayProperty=nameWithType> 및 <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> 메서드를 사용하여 배열에서 문화권을 구분하지 않는 작업을 수행하는 방법에 대해 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [문화권을 구분하지 않는 문자열 작업](culture-insensitive-string-operations.md)  
  문자열에 대해 작업을 수행할 때 문화권을 알아야 하는 이유를 설명하고 문화권 구분 작업을 수행해야 하는 경우 및 문화권을 구분하지 않는 작업을 수행해야 하는 경우에 대한 지침을 제공합니다.
 

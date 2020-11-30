@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 0f2fbe7e8b9c13d811a2fe50db0709405dfa1da7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f1cab01e7a6ee48bd01f65d4cc8a8a540fbabc61
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818819"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734207"
 ---
 # <a name="substitutions-in-regular-expressions"></a>정규식의 대체
 
@@ -38,6 +38,7 @@ ms.locfileid: "94818819"
 |$\_|대체 문자열에 전체 입력 문자열을 포함합니다. 자세한 내용은 [전체 입력 문자열 대체](#substituting-the-entire-input-string)를 참조하십시오.|  
   
 ## <a name="substitution-elements-and-replacement-patterns"></a>요소 및 바꾸기 패턴 대체  
+
  대체는 바꾸기 패턴에서 인식되는 유일한 특수 구문입니다. 임의의 문자를 찾는 마침표(`.`) 및 문자 이스케이프 등 다른 정규식 언어 요소는 지원되지 않습니다. 마찬가지로, 대체 언어 요소는 바꾸기 패턴에서만 인식되고 정규식 패턴에는 사용할 수 없습니다.  
   
  컨텍스트마다 다른 의미를 가지지만 정규식 패턴이나 대체에 나타나는 유일한 문자는 `$` 문자입니다. 정규식 패턴에서 `$` 는 문자열의 끝 부분을 찾는 앵커입니다. 바꾸기 패턴에서 `$` 는 대체 시작을 나타냅니다.  
@@ -46,6 +47,7 @@ ms.locfileid: "94818819"
 > 정규식의 바꾸기 패턴과 유사한 기능으로, 역참조를 사용합니다. 역참조에 대한 자세한 내용은 [역참조 구문](backreference-constructs-in-regular-expressions.md)을 참조하십시오.  
 
 ## <a name="substituting-a-numbered-group"></a>번호 매겨진 그룹 대체  
+
  `$`*number* 언어 요소는 바꾸기 문자열에서 *number* 캡처 그룹과 일치하는 마지막 부분 문자열을 포함합니다. 여기서 *number* 는 캡처 그룹의 인덱스입니다. 예를 들어 바꾸기 패턴 `$1` 은 일치하는 부분 문자열이 처음 캡처한 그룹으로 대체됨을 나타냅니다. 번호가 매겨진 캡처링 그룹에 대한 자세한 내용은 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)을 참조하세요.  
   
  `$` 다음에 나오는 모든 숫자는 *number* 그룹에 속한 것으로 해석됩니다. 이런 것을 의도한 것이 아니라면, 그 대신 명명된 그룹을 대체할 수 있습니다. 예를 들어, `${1}1` 대신 `$11` 대체 문자열을 사용하여 대체 문자열을 숫자 "1"과 함께 처음으로 캡처된 그룹의 값으로 정의할 수 있습니다. 자세한 내용은 [명명된 그룹 대체](#substituting-a-named-group)를 참조하십시오.  
@@ -71,6 +73,7 @@ ms.locfileid: "94818819"
 |`(\s?\d+[.,]?\d*)`|공백, 하나 이상의 10진수 숫자, 0-1개의 마침표나 쉼표, 0-1개의 10진수 숫자가 차례로 표시된 문자열을 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다. 바꾸기 패턴이 `$1`이기 때문에 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 메서드를 호출하면 일치하는 전체 부분 문자열이 이 캡처된 그룹으로 바뀝니다.|  
 
 ## <a name="substituting-a-named-group"></a>명명된 그룹 대체  
+
  `${`*name*`}` 언어 요소는 *name* 캡처 그룹과 일치하는 마지막 부분 문자열을 대체합니다. 여기서 *name* 은 `(?<`*name*`>)` 언어 요소가 정의한 캡처 그룹의 이름입니다. 명명된 캡처링 그룹에 대한 자세한 내용은 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)을 참조하세요.  
   
  *name* 이 정규식 패턴에 정의된 명명된 유효한 캡처 그룹을 지정하지 않지만 숫자로 구성된 경우, `${`*name*`}` 은 번호가 매겨진 그룹으로 해석됩니다.  
@@ -94,6 +97,7 @@ ms.locfileid: "94818819"
 |`(?<amount>\s?\d[.,]?\d*)`|공백, 하나 이상의 10진수 숫자, 0-1개의 마침표나 쉼표, 0-1개의 10진수 숫자가 차례로 표시된 문자열을 찾습니다. 이는 `amount`로 명명된 캡처링 그룹입니다. 바꾸기 패턴이 `${amount}`이기 때문에 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 메서드를 호출하면 일치하는 전체 부분 문자열이 이 캡처된 그룹으로 바뀝니다.|  
 
 ## <a name="substituting-a--character"></a>"$" 문자 대체  
+
  `$$` 대체는 바꾼 문자열에 리터럴 "$" 문자를 삽입합니다.  
   
  다음 예제에서는 <xref:System.Globalization.NumberFormatInfo> 개체를 사용하여 통화 문자열에서 현재 문화권의 통화 기호 및 배치를 확인합니다. 그런 다음 정규식 패턴과 바꾸기 패턴을 동적으로 작성합니다. 현재 문화권이 en-US인 컴퓨터에서 예제가 실행될 경우, 정규식 패턴 `\b(\d+)(\.(\d+))?` 및 바꾸기 패턴 `$$ $1$2`를 생성합니다. 바꾸기 패턴은 일치하는 텍스트를 통화 기호와 공백, 첫 번째 및 두 번째 캡처된 그룹이 차례로 표시된 문자열로 바꿉니다.  
@@ -112,6 +116,7 @@ ms.locfileid: "94818819"
 |`(\.(\d+))?`|한 개 이상의 숫자가 뒤에 오는 마침표를 0개 또는 1개 찾습니다. 이 그룹은 두 번째 캡처링 그룹입니다.|  
 
 ## <a name="substituting-the-entire-match"></a>일치하는 전체 문자열 대체  
+
  `$&` 대체는 바꾸기 문자열에 일치하는 전체 문자열을 포함합니다. 일치하는 문자열의 시작 부분이나 끝 부분에 부분 문자열을 추가하는 데 자주 사용됩니다. 예를 들어 `($&)` 바꾸기 패턴은 각 일치 항목의 시작과 끝에 괄호를 추가합니다. 일치하는 부분이 없으면 `$&` 대체가 아무 효과가 없습니다.  
   
  다음 예제에서는 `$&` 대체를 사용하여 문자열 배열에 저장된 책 제목의 시작 부분과 끝 부분에 따옴표를 추가합니다.  
@@ -130,6 +135,7 @@ ms.locfileid: "94818819"
  `"$&"` 바꾸기 패턴은 일치하는 문자열의 시작 부분과 끝 부분에 리터럴 따옴표를 추가합니다.  
 
 ## <a name="substituting-the-text-before-the-match"></a>일치하는 문자열 앞에 있는 텍스트 대체  
+
  ``$` `` 대체는 일치하는 문자열을 일치하는 문자열 앞의 전체 입력 문자열로 바꿉니다. 즉, 일치하는 텍스트를 제거하는 동안 일치하는 문자열까지의 입력 문자열을 복제합니다. 일치하는 텍스트 뒤에 나오는 텍스트는 결과 문자열에서 변경되지 않습니다. 입력 문자열에 일치하는 문자열이 여러 개이면 이전 일치 문자열로 텍스트가 바뀐 문자열이 아닌 원본 입력 문자열에서 바꾸기 텍스트가 파생됩니다. \(예제에서 그림을 제공합니다.\) 일치하는 부분이 없으면 ``$` `` 대체가 아무 효과가 없습니다.  
   
  다음 예제에서는 `\d+` 정규식 패턴을 사용하여 입력 문자열에서 하나 이상의 숫자가 연속적으로 표시된 부분을 찾습니다. 바꾸기 문자열 ``$` ``는 이 숫자를 일치하는 문자열 앞의 텍스트로 바꿉니다.  
@@ -148,6 +154,7 @@ ms.locfileid: "94818819"
 |5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee **aa1bb2cc3dd4ee**|
 
 ## <a name="substituting-the-text-after-the-match"></a>일치하는 문자열 뒤에 있는 텍스트 대체  
+
  `$'` 대체는 일치하는 문자열을 일치하는 문자열 뒤의 전체 입력 문자열로 바꿉니다. 즉, 일치하는 텍스트를 제거하는 동안 일치하는 문자열 뒤의 입력 문자열을 복제합니다. 일치하는 텍스트 앞에 나오는 텍스트는 결과 문자열에서 변경되지 않습니다. 일치하는 부분이 없으면  `$'` 대체가 아무 효과가 없습니다.  
   
  다음 예제에서는 `\d+` 정규식 패턴을 사용하여 입력 문자열에서 하나 이상의 숫자가 연속적으로 표시된 부분을 찾습니다. 바꾸기 문자열 `$'` 는 이 숫자를 일치하는 문자열 뒤의 텍스트로 바꿉니다.  
@@ -166,6 +173,7 @@ ms.locfileid: "94818819"
 |5|14|<xref:System.String.Empty?displayProperty=nameWithType>|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee|  
 
 ## <a name="substituting-the-last-captured-group"></a>캡처된 마지막 그룹 대체  
+
  `$+` 대체는 일치하는 문자열을 캡처된 마지막 그룹으로 바꿉니다. 캡처된 그룹이 없거나 캡처된 마지막 그룹 값이 <xref:System.String.Empty?displayProperty=nameWithType>이면 `$+` 대체가 적용되지 않습니다.  
   
  다음 예제에서는 문자열에서 중복 단어를 확인한 다음 `$+` 대체를 사용하여 해당 단어가 한 번만 나타나도록 바꿉니다. <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 옵션은 대소문자만 다르고 나머지는 동일한 단어를 중복으로 인식하도록 하는 데 사용됩니다.  
@@ -184,6 +192,7 @@ ms.locfileid: "94818819"
 |`\b`|단어 경계에서 일치 항목 찾기를 끝냅니다.|  
 
 ## <a name="substituting-the-entire-input-string"></a>전체 입력 문자열 대체  
+
  `$_` 대체는 일치하는 문자열을 전체 입력 문자열로 바꿉니다. 즉, 일치하는 텍스트를 제거한 다음 일치하는 텍스트를 포함한 전체 문자열로 바꿉니다.  
   
  다음 예제에서는 입력 문자열에서 하나 이상의 10진수 숫자를 찾습니다. `$_` 대체를 사용하여 전체 입력 문자열로 바꿉니다.  

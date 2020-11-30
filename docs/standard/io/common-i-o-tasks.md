@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-ms.openlocfilehash: baabfc477ff8df30c9cac4db1b6d47e0e12f2f37
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5f9bc3034ec2ae77578db985240e586dd22bd69f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823396"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732205"
 ---
 # <a name="common-io-tasks"></a>공통적인 I/O 작업
+
 <xref:System.IO> 네임스페이스에는 파일, 디렉터리 및 스트림에 대해 읽기, 쓰기 등의 다양한 작업을 수행할 수 있게 해 주는 여러 클래스가 있습니다. 자세한 내용은 [파일 및 스트림 I/O](index.md)를 참조하세요.  
   
 ## <a name="common-file-tasks"></a>공통적인 파일 작업  

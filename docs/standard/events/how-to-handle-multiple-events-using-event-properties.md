@@ -12,14 +12,15 @@ helpviewer_keywords:
 - event handling [.NET], with multiple events
 - events [.NET], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-ms.openlocfilehash: c62073e26ff0831bb582c9e64c16b7ec7c05b26e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7484ad06e80e6ce131f48431fbdd1e812ce0bfa0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828377"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734324"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>방법: 이벤트 속성을 사용하여 여러 이벤트 처리
+
 이벤트 속성을 사용하려면 이벤트를 발생시키는 클래스에서 이벤트 속성을 정의한 다음 이벤트를 처리하는 클래스에서 이벤트 속성의 대리자를 설정합니다. 클래스에서 여러 이벤트 속성을 구현하려면 클래스가 각 이벤트에 대해 정의된 대리자를 내부적으로 저장 및 유지 관리해야 합니다. 일반적인 방법은 이벤트 키로 인덱싱된 대리자 컬렉션을 구현하는 것입니다.  
   
  각 이벤트에 대한 대리자를 저장하려면 <xref:System.ComponentModel.EventHandlerList> 클래스를 사용하거나 고유한 컬렉션을 구현하면 됩니다. 컬렉션 클래스는 이벤트 키에 따라 이벤트 처리기 대리자를 설정, 액세스 및 검색하는 메서드를 제공해야 합니다. 예를 들어 <xref:System.Collections.Hashtable> 클래스를 사용하거나 <xref:System.Collections.DictionaryBase> 클래스에서 사용자 지정 클래스를 파생시킬 수 있습니다. 대리자 컬렉션의 구현 세부 정보는 클래스 외부에 노출할 필요가 없습니다.  
@@ -39,6 +40,7 @@ ms.locfileid: "94828377"
 5. public 이벤트 속성을 사용하여 이벤트를 처리하는 클래스에서 이벤트 처리기 대리자를 추가 및 제거합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 C# 예제에서는 <xref:System.ComponentModel.EventHandlerList>를 사용하여 각 이벤트의 대리자를 저장하는 이벤트 속성 `MouseDown` 및 `MouseUp`을 구현합니다. 이벤트 속성 구문의 키워드는 굵은 글꼴로 표시됩니다.  
   
  [!code-cpp[Conceptual.Events.Other#31](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.events.other/cpp/example3.cpp#31)]

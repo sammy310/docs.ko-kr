@@ -35,14 +35,15 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: ecaa0016c37abf33c793fb8a362a697672f3275a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 996a8cca8222e3de6517ee6fa7cef3c4f44fc5a9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831288"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734188"
 ---
 # <a name="the-regular-expression-object-model"></a>Regular Expression 개체 모델
+
 <a name="introduction"></a> 이 항목에서는 .NET 정규식 작업을 수행하는 데 사용되는 개체 모델을 설명합니다. 여기에는 다음 단원이 포함되어 있습니다.  
   
 - [정규식 엔진](#Engine)  
@@ -58,7 +59,9 @@ ms.locfileid: "94831288"
 - [개별 캡처](#the_individual_capture)  
   
 <a name="Engine"></a>
+
 ## <a name="the-regular-expression-engine"></a>정규식 엔진  
+
  .NET의 정규식 엔진은 <xref:System.Text.RegularExpressions.Regex> 클래스로 표현됩니다. 정규식 엔진은 정규식을 구문 분석 및 컴파일하고, 정규식 패턴을 입력 문자열과 일치시키는 작업 수행을 담당합니다. 이 엔진은 .NET 정규식 개체 모델의 중심 구성 요소입니다.  
   
  정규식 엔진은 다음과 같은 두 가지 방법 중 하나로 사용할 수 있습니다.  
@@ -82,6 +85,7 @@ ms.locfileid: "94831288"
  이러한 작업은 다음 섹션에 설명되어 있습니다.  
   
 ### <a name="matching-a-regular-expression-pattern"></a>정규식 패턴 일치  
+
  <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드는 문자열이 패턴과 일치할 경우 `true`를 반환하고, 그렇지 않을 경우 `false`를 반환합니다. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> 메서드는 일반적으로 문자열 입력의 유효성을 검사하는 데 사용됩니다. 예를 들어, 다음 코드는 문자열이 미국의 유효한 사회 보장 번호와 일치하도록 합니다.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/validate1.cs#1)]
@@ -100,6 +104,7 @@ ms.locfileid: "94831288"
 |`$`|입력 문자열의 끝 부분을 찾습니다.|  
   
 ### <a name="extracting-a-single-match-or-the-first-match"></a>단일 일치 항목 또는 첫 번째 일치 항목 추출  
+
  <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 메서드는 정규식 패턴과 일치하는 첫 번째 부분 문자열에 대한 정보가 포함된 <xref:System.Text.RegularExpressions.Match> 개체를 반환합니다. `Match.Success` 속성이 일치 항목을 찾았음을 나타내는 `true`를 반환하는 경우 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 메서드를 호출하여 후속 일치 항목에 대한 정보를 검색할 수 있습니다. 이러한 메서드 호출은 `Match.Success` 속성이 `false`를 반환할 때까지 계속될 수 있습니다. 예를 들어, 다음 코드에서는 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType> 메서드를 사용하여 문자열에서 첫 번째 중복된 단어를 찾습니다. 그런 다음 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 메서드를 호출하여 추가 중복된 단어를 찾습니다. 이 예제에서는 현재 찾기가 성공했는지와 `Match.Success` 메서드에 대한 호출이 뒤따라야 하는지를 확인하기 위해 메서드를 호출한 후마다 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 속성을 검토합니다.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/match1.cs#2)]
@@ -116,12 +121,14 @@ ms.locfileid: "94831288"
 |`\b`|단어 경계에서 일치 항목 찾기를 끝냅니다.|  
   
 ### <a name="extracting-all-matches"></a>모든 일치 항목 추출  
+
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드는 정규식 엔진이 입력 문자열에서 찾은 모든 일치 항목에 대한 정보가 포함된 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 반환합니다. 예를 들어, 이전 예제를 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 및 <xref:System.Text.RegularExpressions.Regex.Match%2A> 메서드 대신 <xref:System.Text.RegularExpressions.Match.NextMatch%2A> 메서드를 호출하도록 다시 작성할 수 있습니다.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/matches1.cs#3)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/matches1.vb#3)]  
   
 ### <a name="replacing-a-matched-substring"></a>일치하는 부분 문자열 바꾸기  
+
  <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 메서드는 정규식 패턴과 일치하는 각 부분 문자열을 지정된 문자열 또는 정규식 패턴으로 바꾸고, 바뀐 내용이 포함된 전체 입력 문자열을 반환합니다. 예를 들어, 다음 코드는 문자열에서 10진수 앞에 미국 통화 기호를 추가합니다.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/replace1.cs#4)]
@@ -145,6 +152,7 @@ ms.locfileid: "94831288"
 |`$&`|일치하는 전제 부분 문자열|  
   
 ### <a name="splitting-a-single-string-into-an-array-of-strings"></a>단일 문자열을 문자열 배열로 분할  
+
  <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> 메서드는 정규식 일치에 의해 정의된 위치에서 입력 문자열을 분할합니다. 예를 들어, 다음 코드는 번호 매기기 목록의 항목을 문자열 배열에 배치합니다.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/split1.cs#5)]
@@ -160,11 +168,15 @@ ms.locfileid: "94831288"
 |`\s`|공백 문자를 찾습니다.|  
   
 <a name="Match_and_MCollection"></a>
+
 ## <a name="the-matchcollection-and-match-objects"></a>MatchCollection 및 Match 개체  
+
  정규식 메서드가 정규식 개체 모델의 일부인 두 개체 <xref:System.Text.RegularExpressions.MatchCollection> 개체 및 <xref:System.Text.RegularExpressions.Match> 개체를 반환합니다.  
   
 <a name="the_match_collection"></a>
+
 ### <a name="the-match-collection"></a>일치 컬렉션  
+
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드는 정규식 엔진이 입력 문자열에서 찾은 모든 일치 항목(입력 문자열에서 나타나는 순서대로)을 나타내는 <xref:System.Text.RegularExpressions.MatchCollection> 개체가 포함된 <xref:System.Text.RegularExpressions.Match> 개체를 반환합니다. 일치 항목이 없는 경우 이 메서드는 멤버 없이 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 반환합니다. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 속성을 사용하여 인덱스(0에서 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 속성 값보다 1 작은 값까지)별로 컬렉션의 개별 멤버에 액세스할 수 있습니다. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A>은 컬렉션의 인덱서(C#의 경우) 및 기본 속성(Visual Basic의 경우)입니다.  
   
  기본적으로 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드에 대한 호출에서는 지연 평가를 사용하여 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 채웁니다. 완전히 채워진 컬렉션이 필요한 속성(예: <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 및 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 속성)에 액세스할 경우 성능이 저하될 수 있습니다. 따라서 <xref:System.Collections.IEnumerator> 메서드에서 반환하는 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 개체를 사용하여 컬렉션에 액세스하는 것이 좋습니다. 개별 언어는 컬렉션의 <xref:System.Collections.IEnumerator> 인터페이스를 래핑하는 생성자(예: Visual Basic의 경우 `For Each` 및 C#의 경우 `foreach`)를 제공합니다.  
@@ -175,7 +187,9 @@ ms.locfileid: "94831288"
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/matchcollection1.vb#6)]  
   
 <a name="the_match"></a>
+
 ### <a name="the-match"></a>일치  
+
  <xref:System.Text.RegularExpressions.Match> 클래스는 단일 정규식 일치의 결과를 나타냅니다. 다음과 같은 두 가지 방법으로 <xref:System.Text.RegularExpressions.Match> 개체에 액세스할 수 있습니다.  
   
 - <xref:System.Text.RegularExpressions.MatchCollection> 메서드에서 반환하는 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 개체에서 해당 개체를 검색합니다. 개별 <xref:System.Text.RegularExpressions.Match> 개체를 검색하려면 `foreach`(C#의 경우) 또는 `For Each`...`Next`(Visual Basic의 경우) 생성자를 사용하여 컬렉션을 반복하거나, <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 속성을 사용하여 인덱스 또는 이름으로 특정 <xref:System.Text.RegularExpressions.Match> 개체를 검색합니다. 또한 인덱스(0에서 컬렉션의 개체 수보다 1 작은 값까지)로 컬렉션을 반복하여 컬렉션에서 개별 <xref:System.Text.RegularExpressions.Match> 개체를 검색할 수 있습니다. 그러나 이 메서드는 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 속성에 액세스하므로 지연 평가를 사용하지 않습니다.  
@@ -229,7 +243,9 @@ ms.locfileid: "94831288"
  [맨 위로 이동](#introduction)  
   
 <a name="GroupCollection"></a>
+
 ## <a name="the-group-collection"></a>그룹 컬렉션  
+
  <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 속성은 단일 일치 항목에서 캡처된 그룹을 나타내는 <xref:System.Text.RegularExpressions.GroupCollection> 개체가 포함된 <xref:System.Text.RegularExpressions.Group> 개체를 반환합니다. 컬렉션의 첫 번째 <xref:System.Text.RegularExpressions.Group> 개체(인덱스 0에 있음)는 전체 일치를 나타냅니다. 뒤에 나오는 각 개체는 단일 캡처링 그룹의 결과를 나타냅니다.  
   
  <xref:System.Text.RegularExpressions.Group> 속성을 사용하여 컬렉션에서 개별 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A?displayProperty=nameWithType> 개체를 검색할 수 있습니다. 명명되지 않은 그룹은 컬렉션에서 위치로 검색하고, 명명된 그룹은 이름 또는 위치로 검색할 수 있습니다. 명명되지 않은 캡처는 컬렉션에서 맨 앞에 나타나고, 정규식 패턴에서 나타나는 순서대로 왼쪽에서 오른쪽으로 인덱싱됩니다. 명명된 캡처는 명명되지 않은 캡처 다음에, 정규식 패턴에서 나타나는 순서대로 왼쪽에서 오른쪽으로 인덱싱됩니다. 특정 정규식 일치 메서드에 대해 반환된 컬렉션에서 사용 가능한 번호가 매겨진 그룹을 확인하려면 인스턴스 <xref:System.Text.RegularExpressions.Regex.GetGroupNumbers%2A?displayProperty=nameWithType> 메서드를 호출하면 됩니다. 컬렉션에서 사용 가능한 명명된 그룹을 확인하려면 인스턴스 <xref:System.Text.RegularExpressions.Regex.GetGroupNames%2A?displayProperty=nameWithType> 메서드를 호출하면 됩니다. 두 메서드는 모두 정규식으로 찾은 일치 항목을 분석하는 범용 루틴에서 특히 유용합니다.  
@@ -260,7 +276,9 @@ ms.locfileid: "94831288"
  [맨 위로 이동](#introduction)  
   
 <a name="the_captured_group"></a>
+
 ## <a name="the-captured-group"></a>캡처된 그룹  
+
  <xref:System.Text.RegularExpressions.Group> 클래스는 단일 캡처링 그룹의 결과를 나타냅니다. 정규식에 정의된 캡처링 그룹을 나타내는 그룹 개체는 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 속성에서 반환하는 <xref:System.Text.RegularExpressions.GroupCollection> 개체의 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 속성에서 반환합니다. <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 속성은 <xref:System.Text.RegularExpressions.Group> 클래스의 인덱스(C#의 경우) 및 기본 속성(Visual Basic의 경우)입니다. 또한 `foreach` 또는 `For Each` 구문을 사용하여 컬렉션을 반복함으로써 개별 멤버를 검색할 수 있습니다. 예제는 이전 섹션을 참조하세요.  
   
  다음 예제에서는 중첩된 그룹화 구문을 사용하여 부분 문자열을 그룹으로 캡처합니다. 정규식 패턴 `(a(b))c`는 문자열 "abc"와 일치합니다. 이 패턴은 부분 문자열 "ab"를 첫 번째 캡처링 그룹에 할당하고 부분 문자열 "b"를 두 번째 캡처링 그룹에 할당합니다.  
@@ -307,7 +325,9 @@ ms.locfileid: "94831288"
  [맨 위로 이동](#introduction)  
   
 <a name="CaptureCollection"></a>
+
 ## <a name="the-capture-collection"></a>캡처 컬렉션  
+
  <xref:System.Text.RegularExpressions.Group> 개체는 마지막 캡처에 대한 정보만 포함합니다. 그러나 캡처링 그룹에 의해 만들어진 캡처의 전체 집합은 <xref:System.Text.RegularExpressions.CaptureCollection> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 개체에서 계속 제공합니다. 컬렉션의 각 멤버는 해당 캡처링 그룹에 의해 만들어진 캡처를 캡처된 순서(및 따라서 캡처된 문자열이 입력 문자열에서 왼쪽에서 오른쪽으로 검색된 순서)대로 나타내는 <xref:System.Text.RegularExpressions.Capture> 개체입니다. 다음과 같은 두 가지 방법 중 하나로 컬력션에서 개별 <xref:System.Text.RegularExpressions.Capture> 개체를 검색할 수 있습니다.  
   
 - `foreach`(C#의 경우) 또는 `For Each`(Visual Basic의 경우)와 같은 생성자를 사용하여 컬렉션을 반복합니다.  
@@ -329,7 +349,9 @@ ms.locfileid: "94831288"
  [맨 위로 이동](#introduction)  
   
 <a name="the_individual_capture"></a>
+
 ## <a name="the-individual-capture"></a>개별 캡처  
+
  <xref:System.Text.RegularExpressions.Capture> 클래스는 단일 하위 식 캡처의 결과를 포함합니다. <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType> 속성은 일치하는 텍스트를 포함하고, <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> 속성은 입력 문자열에서 일치하는 하위 문장열이 시작하는 위치(0부터 시작함)를 나타냅니다.  
   
  다음 예제에서는 선택된 도시의 온도에 대한 입력 문자열을 구문 분석합니다. 도시와 해당 온도를 구분하는 데 쉼표(",")가 사용되었으며, 각 도시의 데이터를 구분하는 데 세미콜론(";")이 사용되었습니다. 전체 입력 문자열은 단일 일치 항목을 나타냅니다. 문자열을 구문 분석하는 데 사용되는 정규식 패턴 `((\w+(\s\w+)*),(\d+);)+`에서 도시 이름은 두 번째 캡처링 그룹에 할당되었고, 온도는 네 번째 캡처링 그룹에 할당되었습니다.  

@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 2ab86a6cbf0b92ecdaf0a97041d493f9494e3225
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1b992837bcb32537f24643ef4781b6d170a058d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831249"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733557"
 ---
 # <a name="commonly-used-collection-types"></a>일반적으로 사용되는 컬렉션 형식
+
 컬렉션 형식은 해시 테이블, 큐, 스택, 모음, 사전 및 목록과 같은 데이터 컬렉션의 일반적인 변형입니다.  
   
  컬렉션은 <xref:System.Collections.ICollection> 인터페이스, <xref:System.Collections.IList> 인터페이스, <xref:System.Collections.IDictionary> 인터페이스 또는 그에 해당하는 해당 제네릭을 기반으로 합니다. <xref:System.Collections.IList> 인터페이스와 <xref:System.Collections.IDictionary> 인터페이스는 모두 <xref:System.Collections.ICollection> 인터페이스에서 파생되므로 모든 컬렉션은 직접 또는 간접적으로 <xref:System.Collections.ICollection> 인터페이스를 기반으로 합니다. <xref:System.Collections.IList> 인터페이스를 기반으로 하는 컬렉션(예: <xref:System.Array>, <xref:System.Collections.ArrayList> 또는 <xref:System.Collections.Generic.List%601>)이나 직접 <xref:System.Collections.ICollection> 인터페이스를 기반으로 하는 컬렉션(예: <xref:System.Collections.Queue>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Stack>, <xref:System.Collections.Concurrent.ConcurrentStack%601> 또는 <xref:System.Collections.Generic.LinkedList%601>)에서는 모든 요소가 값만 포함합니다. <xref:System.Collections.IDictionary> 인터페이스를 기반으로 하는 컬렉션(예: <xref:System.Collections.Hashtable> 및 <xref:System.Collections.SortedList> 클래스, <xref:System.Collections.Generic.Dictionary%602> 및 <xref:System.Collections.Generic.SortedList%602> 제네릭 클래스)이나 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 클래스에서는 모든 요소가 키와 값을 모두 포함합니다.  <xref:System.Collections.ObjectModel.KeyedCollection%602> 클래스는 값과 해당 값 내에 포함된 키의 목록이므로 목록 및 사전처럼 동작하기 때문에 고유합니다.  
@@ -40,6 +41,7 @@ ms.locfileid: "94831249"
 |[제네릭](../generics/index.md)|.NET에서 제공하는 제네릭 컬렉션, 대리자, 인터페이스를 비롯한 제네릭 기능에 대해 설명합니다. C#, Visual Basic 및 Visual C++의 기능 설명서 링크와 지원 기술(예: 리플렉션) 링크를 제공합니다.|  
   
 ## <a name="reference"></a>참고  
+
  <xref:System.Collections?displayProperty=nameWithType>  
   
  <xref:System.Collections.Generic?displayProperty=nameWithType>  

@@ -6,12 +6,12 @@ ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: fb1bcfa50ec380f10ab67cc47331f91dc3e4b32d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: b78acaad31996f8fc2b965f51f541e99aeceb111
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380141"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731503"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly"></a>방법: 파일이 어셈블리인지 확인
 
@@ -23,7 +23,7 @@ ms.locfileid: "83380141"
   
 2. 테스트하려는 파일을 로드합니다.  
   
-3. **ILDASM**에서 파일이 PE(이식 가능) 파일이 아니라고 보고하는 경우에는 어셈블리가 아닙니다. 자세한 내용은 항목 [방법: 어셈블리 콘텐츠 보기](view-contents.md)를 참조하세요.  
+3. **ILDASM** 에서 파일이 PE(이식 가능) 파일이 아니라고 보고하는 경우에는 어셈블리가 아닙니다. 자세한 내용은 항목 [방법: 어셈블리 콘텐츠 보기](view-contents.md)를 참조하세요.  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>파일이 어셈블리인지 프로그래밍 방식으로 확인하는 방법  
   
@@ -32,6 +32,7 @@ ms.locfileid: "83380141"
 2. <xref:System.BadImageFormatException> 예외가 throw되는 경우 파일이 어셈블리가 아닙니다.  
   
 ## <a name="example"></a>예제  
+
 이 예제에서는 DLL을 테스트하여 어셈블리인지 확인합니다.  
 
 ```csharp

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - names [.NET], assemblies
 - assemblies [.NET], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-ms.openlocfilehash: 136c3b7a06ce72be02e00bcc4d2354160178468c
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 9aa94b4ee54c0a663c9f38392d37369af9f27e48
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687576"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731451"
 ---
 # <a name="assembly-names"></a>어셈블리 이름
 
@@ -48,6 +48,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 > 런타임은 어셈블리에 바인딩할 때 어셈블리 이름의 대/소문자를 구분하지 않고 처리하지만 어셈블리에서 사용된 대/소문자를 보존합니다. Windows SDK의 여러 도구는 어셈블리 이름의 대/소문자를 구분해서 처리합니다. 최상의 결과를 위해서 대/소문자를 구분한 것처럼 어셈블리 이름을 관리하세요.
 
 ## <a name="name-application-components"></a>애플리케이션 구성 요소 이름 지정
+
  런타임은 어셈블리 ID를 확인할 때 파일 이름을 고려하지 않습니다. 어셈블리 이름, 버전, 문화권 및 강력한 이름으로 구성된 어셈블리 ID는 런타임에 대해 분명해야 합니다.
 
  예를 들어 *myAssembly.dll* 이라는 어셈블리를 참조하는 *myAssembly.exe* 라는 어셈블리가 있는 경우 *myAssembly.exe* 를 실행하면 바인딩이 올바르게 수행됩니다. 하지만 또 다른 애플리케이션이 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> 메서드를 사용하여 *myAssembly.exe* 를 실행하면 런타임은 *myAssembly.exe* 가 `myAssembly`에 대한 바인딩을 요청할 때 `myAssembly`가 이미 로드되었다고 판단합니다. 이 경우 *myAssembly.dll* 은 로드되지 않습니다. *myAssembly.exe* 에 요청된 형식이 포함되어 있지 않으므로 <xref:System.TypeLoadException>이 발생합니다.

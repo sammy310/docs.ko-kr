@@ -10,24 +10,26 @@ helpviewer_keywords:
 - streams, writing characters to strings
 - I/O [.NET], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
-ms.openlocfilehash: d4a6bbc77a9feb16293fc88e1598d124d8d2d75d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 21661a858cff9fc8bc84d497b4af8bedb1393f0a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829728"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734532"
 ---
 # <a name="how-to-write-characters-to-a-string"></a>방법: 문자열에 문자 쓰기
 
 다음 코드 예제는 동기식 또는 비동기식으로 문자 배열에서 문자열로 문자를 씁니다.  
   
 ## <a name="example-write-characters-synchronously-in-a-console-app"></a>예: 콘솔 앱에서 동기식으로 문자 쓰기  
+
  다음 예제에서는 <xref:System.IO.StringWriter>를 사용하여 동기식으로 <xref:System.Text.StringBuilder> 개체에 문자 5개를 씁니다.
   
  [!code-csharp[Conceptual.StringBuilder#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/example2.cs#9)]
  [!code-vb[Conceptual.StringBuilder#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/example2.vb#9)]  
   
 ## <a name="example-write-characters-asynchronously-in-a-wpf-app"></a>예: WPF 앱에서 문자를 비동기식으로 쓰기
+
  다음 예제는 WPF 앱의 코드입니다. 창 로드 시, 이 예제는 <xref:System.Windows.Controls.TextBox> 컨트롤에서 모든 문자를 비동기식으로 읽고 배열에 저장합니다. 그런 다음, 각 문자 또는 공백 문자를 <xref:System.Windows.Controls.TextBlock> 컨트롤의 별도 라인에 비동기식으로 씁니다.  
   
  [!code-csharp[StreamReaderWriter](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]

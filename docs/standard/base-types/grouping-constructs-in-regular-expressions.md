@@ -13,14 +13,15 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 52f7efdf5591901602811cba8f2b6c1a4f42f96c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 62de6dc3b6276aab4667c719033ee3b66928ea2c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823006"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734376"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>정규식의 그룹화 구문
+
 그룹화 구문은 정규식의 하위 식을 나타내며 입력 문자열의 부분 문자열을 캡처합니다. 그룹화 구문은 다음과 같은 경우에 사용할 수 있습니다.  
   
 - 입력 문자열에서 반복되는 하위 식을 일치시킵니다.  
@@ -49,7 +50,9 @@ ms.locfileid: "94823006"
  그룹 및 정규식 개체 모델에 대한 자세한 내용은 [그룹화 구문 및 정규식 개체](#Objects)를 참조하세요.  
   
 <a name="matched_subexpression"></a>
+
 ## <a name="matched-subexpressions"></a>일치하는 하위 식  
+
  다음 그룹화 구문은 일치하는 하위 식을 캡처합니다.  
   
  `(` *subexpression* `)`  
@@ -88,7 +91,9 @@ ms.locfileid: "94823006"
 |`\W`|공백 및 문장 부호를 포함하여 비단어 문자를 찾습니다. 그러면 정규식 패턴이 캡처된 첫 번째 그룹의 단어로 시작하는 단어를 찾지 못합니다.|  
   
 <a name="named_matched_subexpression"></a>
+
 ## <a name="named-matched-subexpressions"></a>명명된 일치하는 하위 식  
+
  다음 그룹화 구문은 일치하는 하위 식을 캡처하고 사용자가 이름 또는 번호로 해당 하위 식에 액세스할 수 있게 해줍니다.  
   
 `(?<name>subexpression)`  
@@ -162,7 +167,9 @@ ms.locfileid: "94823006"
 |`(?<digit>\d+)?`|하나 이상 10진수 문자의 0개 또는 1개 발생을 찾습니다. 명명된 그룹 `digit` 에 일치를 할당합니다.|  
   
 <a name="balancing_group_definition"></a>
+
 ## <a name="balancing-group-definitions"></a>균형 조정 그룹 정의  
+
  균형 조정 그룹 정의는 이전에 정의된 그룹의 정의를 삭제하고 현재 그룹에 이전에 정의된 그룹과 현재 그룹 간의 간격을 저장합니다. 이 그룹화 구문의 형식은 다음과 같습니다.  
   
 `(?<name1-name2>subexpression)`  
@@ -235,7 +242,9 @@ ms.locfileid: "94823006"
 |24|`$`|입력 문자열의 끝 부분을 찾습니다.|  
   
 <a name="noncapturing_group"></a>
+
 ## <a name="noncapturing-groups"></a>비 캡처링 그룹  
+
  다음 그룹화 구문은 하위 식과 일치하는 부분 문자열을 캡처하지 않습니다.  
   
 `(?:subexpression)`
@@ -261,7 +270,9 @@ ms.locfileid: "94823006"
 |`\.`|마침표를 찾습니다.|  
   
 <a name="group_options"></a>
+
 ## <a name="group-options"></a>그룹 옵션  
+
  다음 그룹화 구문은 하위 식 내에서 지정된 옵션을 적용하거나 사용하지 않도록 설정합니다.  
   
  `(?imnsx-imnsx:` *subexpression* `)`  
@@ -285,7 +296,9 @@ ms.locfileid: "94823006"
  [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]  
   
 <a name="zerowidth_positive_lookahead_assertion"></a>
+
 ## <a name="zero-width-positive-lookahead-assertions"></a>너비가 0인 긍정 lookahead 어설션  
+
  다음 그룹화 구문은 너비가 0인 긍정 lookahead 어설션을 정의합니다.  
   
  `(?=` *subexpression* `)`  
@@ -308,7 +321,9 @@ ms.locfileid: "94823006"
 |`(?=\sis\b)`|단어 문자 뒤에 공백 문자와 문자열 "is"(단어 경계에서 끝남)가 오는지 여부를 확인합니다. 그럴 경우 찾기가 성공합니다.|  
   
 <a name="zerowidth_negative_lookahead_assertion"></a>
+
 ## <a name="zero-width-negative-lookahead-assertions"></a>너비가 0인 부정 lookahead 어설션  
+
  다음 그룹화 구문은 너비가 0인 부정 lookahead 어설션을 정의합니다.  
   
  `(?!` *subexpression* `)`  
@@ -346,7 +361,9 @@ ms.locfileid: "94823006"
 |`\p{P})`|다음 문자가 문장 부호 기호(예: 마침표 또는 쉼표)가 아닌 경우 찾기가 성공합니다.|  
   
 <a name="zerowidth_positive_lookbehind_assertion"></a>
+
 ## <a name="zero-width-positive-lookbehind-assertions"></a>너비가 0인 긍정 lookbehind 어설션  
+
  다음 그룹화 구문은 너비가 0인 긍정 lookbehind 어설션을 정의합니다.  
   
  `(?<=` *subexpression* `)`  
@@ -371,7 +388,9 @@ ms.locfileid: "94823006"
  너비가 0인 긍정 lookbehind 어설션은 캡처된 그룹의 마지막 문자(하나 또는 여러 개)가 해당 그룹의 정규식 패턴과 일치하는 문자의 하위 집합이어야 하는 경우 역추적을 제한하는 데도 사용됩니다. 예를 들어, 그룹이 모든 연속 단어 문자를 캡처하는 경우 너비가 0인 긍정 lookbehind 어설션을 사용하여 마지막 문자가 사전순이 되도록 할 수 있습니다.  
   
 <a name="zerowidth_negative_lookbehind_assertion"></a>
+
 ## <a name="zero-width-negative-lookbehind-assertions"></a>너비가 0인 부정 lookbehind 어설션  
+
  다음 그룹화 구문은 너비가 0인 부정 lookbehind 어설션을 정의합니다.  
   
  `(?<!` *subexpression* `)`  
@@ -396,7 +415,9 @@ ms.locfileid: "94823006"
 |<code>(?<!(Saturday&#124;Sunday) )</code>|일치 항목 앞에 문자열 "Saturday" 또는 "Sunday"가 아닌 문자열이 있고 해당 문자열 뒤에 공백이 하나 있으면 찾기가 성공한 것입니다.|  
   
 <a name="atomic_groups"></a>
+
 ## <a name="atomic-groups"></a>원자성 그룹  
+
  다음 그룹화 구문은 원자성 그룹(다른 정규식 엔진에서 역추적하지 않는 하위 식, 원자성 하위 식 또는 한 번만 하위 식이라고 함)을 나타냅니다.
   
  `(?>` *subexpression* `)`  
@@ -425,7 +446,9 @@ ms.locfileid: "94823006"
 |`(?>(\w)\1+)`|하나 이상의 중복된 단어 문자를 찾지만 단어 경계에서 마지막 문자를 일치시키기 위해 역추적하지 않습니다.|  
   
 <a name="Objects"></a>
+
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>그룹화 구문 및 정규식 개체  
+
  정규식 캡처링 그룹과 일치하는 부분 문자열은 <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> 개체로 표현됩니다. 이 개체는 <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> 속성에서 반환하는 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 개체에서 검색할 수 있습니다. <xref:System.Text.RegularExpressions.GroupCollection> 개체는 다음과 같이 채워집니다.  
   
 - 컬렉션의 첫 번째 <xref:System.Text.RegularExpressions.Group> 개체(인덱스 0에 있는 개체)는 전체 일치를 나타냅니다.  

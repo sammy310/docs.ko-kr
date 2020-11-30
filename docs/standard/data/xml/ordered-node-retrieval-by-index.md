@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-ms.openlocfilehash: 73c31c5249262fe9b6624201bc5b9bd6b1374d1e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 37d350231e03e8a435977328a288abff2f336a4b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823747"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731165"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>인덱스별로 정렬된 노드 검색
+
 W3C(World Wide Web 컨소시엄) XML DOM(문서 개체 모델)에서는 **XmlNamedNodeMap** 으로 처리되는 정렬되지 않은 집합과 반대되는 정렬된 노드 목록을 처리할 수 있는 NodeList에 대해서도 설명합니다. Microsoft .NET Framework에서는 NodeList를 **XmlNodeList** 라고 합니다. **XmlNodeList** 를 반환하는 메서드와 속성은 다음과 같습니다.  
   
 - XmlNode.ChildNodes  
