@@ -17,19 +17,20 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: ae6d2f9ced2235aa1b9b8fada8064d7e4be970a0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b5b8b5cb3ce38fcff9115b2f9acf23fc5a970adf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502095"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239448"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
+
 애플리케이션은 <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> 및 <xref:System.Net.Sockets.UdpClient> 클래스와 함께 TCP(Transmission Control Protocol) 및 UDP(User Datagram Protocol) 서비스를 사용할 수 있습니다. 이러한 프로토콜 클래스는 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 클래스를 기반으로 빌드되며 데이터 전송의 세부 사항을 처리합니다.  
   
  프로토콜 클래스는 **Socket** 클래스의 동기 메서드를 사용하여 상태 정보를 유지 관리하거나 프로토콜 관련 소켓 설정의 세부 정보를 알아야 하는 오버헤드 없이 네트워크 서비스에 대한 쉽고 간단한 액세스를 제공합니다. 비동기 **Socket** 메서드를 사용하려면 <xref:System.Net.Sockets.NetworkStream> 클래스에서 제공하는 비동기 메서드를 사용할 수 있습니다. 프로토콜 클래스에 의해 노출되지 않는 **Socket** 클래스의 기능에 액세스하려면 **Socket** 클래스를 사용해야 합니다.  
   
- **TcpClient** 및 **TcpListener**는 **NetworkStream** 클래스를 사용하여 네트워크를 나타냅니다. <xref:System.Net.Sockets.TcpClient.GetStream%2A> 메서드를 사용하여 네트워크 스트림을 반환한 다음 스트림의 <xref:System.Net.Sockets.NetworkStream.Read%2A> 및 <xref:System.Net.Sockets.NetworkStream.Write%2A> 메서드를 호출합니다. **NetworkStream**은 프로토콜 클래스의 기본 소켓을 소유하지 않으므로 닫아도 소켓에 영향을 주지 않습니다.  
+ **TcpClient** 및 **TcpListener** 는 **NetworkStream** 클래스를 사용하여 네트워크를 나타냅니다. <xref:System.Net.Sockets.TcpClient.GetStream%2A> 메서드를 사용하여 네트워크 스트림을 반환한 다음 스트림의 <xref:System.Net.Sockets.NetworkStream.Read%2A> 및 <xref:System.Net.Sockets.NetworkStream.Write%2A> 메서드를 호출합니다. **NetworkStream** 은 프로토콜 클래스의 기본 소켓을 소유하지 않으므로 닫아도 소켓에 영향을 주지 않습니다.  
   
  **UdpClient** 클래스는 바이트 배열을 사용하여 UDP 데이터그램을 보유합니다. <xref:System.Net.Sockets.UdpClient.Send%2A> 메서드를 사용하여 네트워크에 데이터를 보내고 <xref:System.Net.Sockets.UdpClient.Receive%2A> 메서드를 사용하여 들어오는 데이터그램을 받습니다.  
   

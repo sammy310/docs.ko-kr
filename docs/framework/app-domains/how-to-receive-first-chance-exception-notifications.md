@@ -9,14 +9,15 @@ helpviewer_keywords:
 - first-chance exception notifications
 - exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
-ms.openlocfilehash: e8b5ae5fb69c7befd329316aee11523f79d73fcd
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 0b3150a52a68e078d1052a9894bb652ad35027d0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104747"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242567"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>방법: 첫째 예외 알림 받기
+
 <xref:System.AppDomain> 클래스의 <xref:System.AppDomain.FirstChanceException> 이벤트를 사용하면 공용 언어 런타임이 예외 처리기 검색을 시작하기 전에 예외가 throw되었다는 알림을 받을 수 있습니다.
 
  이 이벤트는 애플리케이션 도메인 수준에서 발생합니다. 하나의 실행 스레드가 여러 애플리케이션 도메인을 통과할 수 있으므로 한 애플리케이션 도메인에서 처리되지 않은 예외가 다른 애플리케이션 도메인에서 처리될 수 있습니다. 애플리케이션 도메인이 예외를 처리할 때까지 이벤트 처리기를 추가한 각 애플리케이션 도메인에서 알림이 발생합니다.
@@ -26,6 +27,7 @@ ms.locfileid: "85104747"
  여러 애플리케이션 도메인에 걸쳐 있는 좀 더 복잡한 예제의 경우 <xref:System.AppDomain.FirstChanceException> 이벤트에 대한 예제를 참조하세요.
 
 ## <a name="receiving-first-chance-exception-notifications-in-the-default-application-domain"></a>기본 애플리케이션 도메인에서 첫째 예외 알림 받기
+
  다음 절차에서는 애플리케이션에 대한 진입점인 `Main()` 메서드는 기본 애플리케이션 도메인에서 실행됩니다.
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain"></a>기본 애플리케이션 도메인에서 첫째 예외 알림을 보여 주려면
@@ -51,6 +53,7 @@ ms.locfileid: "85104747"
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#5)]
 
 ## <a name="receiving-first-chance-exception-notifications-in-another-application-domain"></a>다른 애플리케이션 도메인에서 첫째 예외 알림 받기
+
  프로그램이 둘 이상의 애플리케이션 도메인을 포함하는 경우 알림을 받는 애플리케이션 도메인을 선택할 수 있습니다.
 
 #### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>직접 만든 애플리케이션 도메인에서 첫째 예외 알림을 받으려면
@@ -85,6 +88,7 @@ ms.locfileid: "85104747"
      [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]
 
 ## <a name="example"></a>예제
+
  다음 예제에서는 `AD1`이라는 애플리케이션 도메인을 만들고 애플리케이션 도메인의 <xref:System.AppDomain.FirstChanceException> 이벤트에 이벤트 처리기를 추가합니다. 예제에서는 애플리케이션 도메인에서 `Worker` 클래스 인스턴스를 만들고 <xref:System.ArgumentException>을 throw하는 `Thrower` 메서드를 호출합니다. 인수 값에 따라 메서드가 예외를 catch하거나 예외를 처리하지 못합니다.
 
  `Thrower` 메서드가 `AD1`에서 예외를 throw할 때마다 `AD1`에서 <xref:System.AppDomain.FirstChanceException> 이벤트가 발생하고 이벤트 처리기가 메시지를 표시합니다. 그러면 런타임이 예외 처리기를 찾습니다. 첫 번째 경우에는 예외 처리기가 `AD1`에 있습니다. 두 번째 경우에는 예외가 `AD1`에서 처리되지 않고 기본 애플리케이션 도메인에서 catch됩니다.

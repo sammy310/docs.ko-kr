@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-ms.openlocfilehash: b8a67d1fd508d0674d9230d4b934071a15669599
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b6b68d9351431acc6d9ef20276f51ac4d667d325
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829247"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734688"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>XPath 탐색을 사용하여 노드 선택
+
 XML DOM(문서 개체 모델)에는 XPath(XML Path Language) 탐색을 사용하여 DOM의 정보를 쿼리할 수 있는 메서드가 있습니다. XPath를 사용하여 단일 노드를 찾거나 특정 기준과 일치하는 모든 노드를 찾을 수 있습니다.  
   
 ## <a name="xpath-select-methods"></a>XPath Select 메서드  
+
  DOM 클래스는 XPath 선택을 위해 <xref:System.Xml.XmlNode.SelectSingleNode%2A> 메서드와 <xref:System.Xml.XmlNode.SelectNodes%2A> 메서드를 제공합니다. <xref:System.Xml.XmlNode.SelectSingleNode%2A> 메서드는 선택 기준과 일치하는 첫 번째 노드를 반환합니다. <xref:System.Xml.XmlNode.SelectNodes%2A> 메서드는 일치하는 노드가 포함된 <xref:System.Xml.XmlNodeList>를 반환합니다.  
   
  다음 예제에서는 <xref:System.Xml.XmlNode.SelectSingleNode%2A> 메서드를 사용하여 저자의 성이 지정된 기준을 충족하는 첫 번째 `book` 노드를 선택합니다. 이 항목의 끝에서 제공되는 bookstore.xml 파일이 입력 파일로 사용됩니다.  
@@ -122,12 +124,14 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 > 기본 문서를 수정한 경우 select 문을 다시 실행하는 것이 좋습니다. 수정된 노드가 이전에 없던 노드를 노드 목록에 추가하거나 제거할 수 있는 노드라면 노드 목록이 정확하지 않을 수도 있습니다.  
   
 ## <a name="namespaces-in-xpath-expressions"></a>XPath 식의 네임스페이스  
+
  XPath 식에 네임스페이스를 포함할 수 있습니다. 네임스페이스는 <xref:System.Xml.XmlNamespaceManager>를 사용하여 확인할 수 있습니다. XPath 식에 접두사가 포함된 경우 접두사와 네임스페이스 URI 쌍을 <xref:System.Xml.XmlNamespaceManager>에 추가해야 하며 <xref:System.Xml.XmlNamespaceManager>는 <xref:System.Xml.XmlNode.SelectNodes%28System.String%2CSystem.Xml.XmlNamespaceManager%29> 또는 <xref:System.Xml.XmlNode.SelectSingleNode%28System.String%2CSystem.Xml.XmlNamespaceManager%29> 메서드에 전달됩니다. 위의 코드 예제에서는 <xref:System.Xml.XmlNamespaceManager>를 사용하여 bookstore.xml 문서의 네임스페이스를 확인합니다.  
   
 > [!NOTE]
 > XPath 식에 접두사가 포함되지 않은 경우 네임스페이스 URI(Uniform Resource Identifier)를 빈 네임스페이스로 가정합니다. XML에 기본 네임스페이스가 포함된 경우에도 접두사 및 네임스페이스 URI를 <xref:System.Xml.XmlNamespaceManager>에 추가해야 합니다. 이렇게 하지 않으면 노드를 선택할 수 없습니다.  
   
 #### <a name="input-file"></a>입력 파일  
+
  다음은 이 항목의 예제에서 입력 파일로 사용되는 bookstore.xml 파일입니다.  
   
 ```xml  

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 298cb441bf9fe7daddb30c85f9d7366dc972628c
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721371"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032143"
 ---
 ### <a name="replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines"></a>잘못된 형식의 UTF-8바이트 시퀀스 교체는 유니코드 지침을 따름
 
@@ -24,7 +24,7 @@ ms.locfileid: "83721371"
 |-------------------------|--------------------------------------|-------------------------------------------|
 | `[ ED A0 90 ]`          | `[ FFFD FFFD ]`(2자 출력) | `[ FFFD FFFD FFFD ]`(3자 출력) |
 
-3자 출력은 위에 링크된 유니코드 표준 PDF의 _표 3-9_에 따라 선호되는 출력입니다.
+3자 출력은 위에 링크된 유니코드 표준 PDF의 _표 3-9_ 에 따라 선호되는 출력입니다.
 
 #### <a name="version-introduced"></a>도입된 버전
 

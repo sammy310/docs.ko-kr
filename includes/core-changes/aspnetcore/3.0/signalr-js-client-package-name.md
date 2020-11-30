@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: f202b39f1a45f740625827be25e72df0e403d605
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901968"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032886"
 ---
 ### <a name="signalr-javascript-client-package-name-changed"></a>SignalR: JavaScript 클라이언트 패키지 이름이 변경됨
 

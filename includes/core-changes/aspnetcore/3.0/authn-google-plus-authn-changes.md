@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: c634c43e72d345721f2d8f2e9f45760e927a86ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72393956"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032452"
 ---
 ### <a name="authentication-google-deprecated-and-replaced"></a>인증: Google+가 더 이상 사용되지 않고 대체됨
 

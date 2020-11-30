@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: ec6724ab378dd614c55a024ede18d997d27be3a3
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79549588"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032907"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>대상 프레임워크: .NET Framework 지원 삭제
 

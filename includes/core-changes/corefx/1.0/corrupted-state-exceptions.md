@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 394f2daebad7b6af94bee4d7876796e87fe8ab19
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135630"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032068"
 ---
 ### <a name="handling-corrupted-state-exceptions-is-not-supported"></a>손상된 상태 예외 처리는 지원되지 않음
 

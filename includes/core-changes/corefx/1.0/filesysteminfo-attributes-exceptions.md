@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 2ea9abca7578c2ddf92712a1c597f8f1ff4a5c0c
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021786"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032082"
 ---
 ### <a name="unauthorizedaccessexception-thrown-by-filesysteminfoattributes"></a>FileSystemInfo.Attributes가 throw하는 UnauthorizedAccessException
 

@@ -6,16 +6,19 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
-ms.openlocfilehash: 9e9fef2af56ca278b0e326c15546ca9f849a3253
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: b42646b60fab91fe761a8fdef59d67be6ffa884b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622772"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242047"
 ---
 # <a name="deploying-the-net-framework"></a>.NET Framework 배포
+
 .NET Framework 설명서의 이 섹션은 애플리케이션과 함께 .NET Framework를 설치하려는 개발자 및 네트워크에서 .NET Framework를 배포하려는 관리자를 위한 정보를 제공합니다. 또한 배포에 관련된 활성화 및 다시 시작 문제와 .NET Framework 설치의 진행 상황을 모니터링하는 방법을 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [개발자를 위한 배포 가이드](deployment-guide-for-developers.md)  
  개발자가 애플리케이션과 함께 .NET Framework를 사용자 컴퓨터에 설치할 수 있는 방법을 설명합니다.  
   

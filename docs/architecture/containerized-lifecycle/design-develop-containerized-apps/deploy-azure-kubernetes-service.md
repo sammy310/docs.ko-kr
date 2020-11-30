@@ -3,11 +3,11 @@ title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다�
 description: Azure Kubernetes Service를 사용하여 앱을 배포하는 방법을 알아봅니다.
 ms.date: 08/06/2020
 ms.openlocfilehash: ba9887c0a4837c16a60ebeb006416c0fa8c105e0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163598"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032205"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>AKS(Azure Kubernetes Service)에 배포
 

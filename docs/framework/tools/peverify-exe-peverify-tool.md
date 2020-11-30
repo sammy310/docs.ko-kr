@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-ms.openlocfilehash: 478c04a45c7f9d3ad568a6bc4a12a89fe786583a
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: c859aa4e2e3ae95c5c72aed930a9bc4a05add296
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325628"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238589"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe(PEVerify 도구)
 
@@ -44,8 +44,8 @@ peverify filename [options]
 |**/hresult**|16진수 형식의 오류 코드를 표시합니다.|  
 |**/ignore=** *hex.code* [, *hex.code*]|지정된 오류 코드를 무시합니다.|  
 |**/ignore=@** *responseFile*|지정된 지시 파일에 나열된 오류 코드를 무시합니다.|  
-|**/il**|*filename*으로 지정된 어셈블리에 구현된 메서드에 대해 MSIL 형식 안전성 확인 검사를 수행합니다. **/quiet** 옵션을 지정하지 않으면 발견된 각 문제점에 대해 자세한 설명이 반환됩니다.|  
-|**/md**|*filename*으로 지정된 어셈블리에 대해 메타데이터 유효성 검사를 수행합니다. 이 옵션은 파일 내의 전체 메타데이터 구조에 대해 수행되며, 발생한 모든 유효성 검사 문제를 보고합니다.|  
+|**/il**|*filename* 으로 지정된 어셈블리에 구현된 메서드에 대해 MSIL 형식 안전성 확인 검사를 수행합니다. **/quiet** 옵션을 지정하지 않으면 발견된 각 문제점에 대해 자세한 설명이 반환됩니다.|  
+|**/md**|*filename* 으로 지정된 어셈블리에 대해 메타데이터 유효성 검사를 수행합니다. 이 옵션은 파일 내의 전체 메타데이터 구조에 대해 수행되며, 발생한 모든 유효성 검사 문제를 보고합니다.|  
 |**/nologo**|제품 버전과 저작권 정보를 표시하지 않습니다.|  
 |**/nosymbols**|.NET Framework 버전 2.0에서 이전 버전과의 호환성에 대한 줄 번호를 표시하지 않습니다.|  
 |**/quiet**|자동 모드를 지정합니다. 즉, 확인 문제 보고서를 출력하지 않습니다. Peverify.exe를 통해 파일의 형식 안전성 여부는 보고되지만, 형식 안전성 확인을 방해하는 문제점에 대한 정보는 보고되지 않습니다.|  
@@ -55,15 +55,17 @@ peverify filename [options]
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  공용 언어 런타임에서는 애플리케이션 코드의 형식 안전 실행을 통해 보안 및 격리 메커니즘을 적용합니다. 일반적으로 [확인할 수 있도록 형식이 안전](../../standard/security/key-security-concepts.md#type-safety-and-security)  
   
- **/md** 및 **/il** 옵션이 모두 지정되지 않은 경우 Peverify.exe를 사용하면 두 종류의 검사를 모두 수행할 수 있습니다. 먼저 **/md** 검사가 수행되고, 오류가 없으면 **/il** 검사가 수행됩니다. **/md** 및 **/il**을 모두 지정하면 메타데이터에 오류가 있는 경우에도 **/il** 검사가 수행됩니다. 따라서 메타데이터 오류가 없는 경우 **peverify** *filename*은 **peverify** *filename* **/md** **/il**과 같습니다.  
+ **/md** 및 **/il** 옵션이 모두 지정되지 않은 경우 Peverify.exe를 사용하면 두 종류의 검사를 모두 수행할 수 있습니다. 먼저 **/md** 검사가 수행되고, 오류가 없으면 **/il** 검사가 수행됩니다. **/md** 및 **/il** 을 모두 지정하면 메타데이터에 오류가 있는 경우에도 **/il** 검사가 수행됩니다. 따라서 메타데이터 오류가 없는 경우 **peverify** *filename* 은 **peverify** *filename* **/md** **/il** 과 같습니다.  
   
  Peverify.exe를 사용하여 데이터 흐름 분석과 올바른 메타데이터에 대한 수백 개의 규칙 목록에 따라 포괄적인 MSIL 확인 검사를 수행할 수 있습니다. Peverify.exe를 사용하여 수행하는 검사에 대한 자세한 내용은 Windows SDK의 Tools Developers Guide 폴더에 있는 "메타데이터 유효성 검사 사양" 및 "MSIL 명령 집합 사양"을 참조하세요.  
   
 .NET Framework 버전 2.0 이상은 `dup`, `ldsflda`, `ldflda`, `ldelema`, `call`, `unbox` 등의 MSIL 지침을 사용하여 지정된 확인할 수 있는 `byref` 반환을 지원합니다.  
   
 ## <a name="examples"></a>예  
+
  다음 명령을 사용하여 어셈블리 `myAssembly.exe`에 구현된 메서드에 대해 메타데이터 유효성 검사 및 MSIL 형식 안전성 확인 검사를 수행합니다.  
   
 ```console  

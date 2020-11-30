@@ -6,14 +6,15 @@ helpviewer_keywords:
 - assemblies [.NET Framework], how-tos
 - application domains, how-tos
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
-ms.openlocfilehash: 9489f23e6730e36fb43e367b34954d220f633c96
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 4f0bf91c9f8f52959ed387be90f9bd59eff494cd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104971"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237484"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>애플리케이션 도메인 및 어셈블리 방법 항목
+
 다음 섹션에는 애플리케이션 도메인 및 어셈블리를 사용한 프로그래밍에 대한 개념 설명서에 나오는 모든 방법 항목에 대한 링크가 있습니다.  
   
  **애플리케이션 도메인**  

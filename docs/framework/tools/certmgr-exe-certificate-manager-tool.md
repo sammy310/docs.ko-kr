@@ -14,14 +14,15 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-ms.openlocfilehash: 43ab281e6ec28ff23ea584b03fd4278c6682e33e
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 30a35ded6fc86af6dc6dd4bf19cdf60f66570e0c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167266"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247254"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe(인증서 관리자 도구)
+
 인증서 관리자 도구(Certmgr.exe)를 사용하면 인증서, CTL(인증서 신뢰 목록) 및 CRL(인증서 해지 목록)을 관리할 수 있습니다.  
   
  인증서 관리자는 Visual Studio와 함께 자동으로 설치됩니다. 도구를 시작하려면 [명령 프롬프트](developer-command-prompt-for-vs.md)를 사용합니다.  
@@ -53,18 +54,18 @@ ms.locfileid: "87167266"
 |옵션|설명|  
 |------------|-----------------|  
 |**/add**|인증서, CTL 및 CRL을 인증서 저장소에 추가합니다.|  
-|**/all**|**/add** 옵션과 함께 사용하면 모든 항목을 추가합니다. **/del** 옵션과 함께 사용하면 모든 항목을 삭제합니다. **/add** 또는 **/del** 옵션 없이 사용하면 모든 항목을 표시합니다. **/all** 옵션은 **/put**과 함께 사용할 수 없습니다.|  
+|**/all**|**/add** 옵션과 함께 사용하면 모든 항목을 추가합니다. **/del** 옵션과 함께 사용하면 모든 항목을 삭제합니다. **/add** 또는 **/del** 옵션 없이 사용하면 모든 항목을 표시합니다. **/all** 옵션은 **/put** 과 함께 사용할 수 없습니다.|  
 |**/c**|**/add** 옵션과 함께 사용하면 인증서를 추가합니다. **/del** 옵션과 함께 사용하면 인증서를 삭제합니다. **/put** 옵션과 함께 사용하면 인증서를 저장합니다. **/add**, **/del** 또는 **/put** 옵션 없이 사용하면 인증서를 표시합니다.|  
-|**/CRL**|**/add**와 함께 사용하면 CRL을 추가합니다. **/del**과 함께 사용하면 CRL을 삭제합니다. **/put**과 함께 사용하면 CRL을 저장합니다. **/add**, **/del** 또는 **/put** 옵션 없이 사용하면 CRL을 표시합니다.|  
-|**/CTL**|**/add**와 함께 사용하면 CTL을 추가합니다. **/del**과 함께 사용하면 CTL을 삭제합니다. **/put**과 함께 사용하면 CTL을 저장합니다. **/add**, **/del** 또는 **/put** 옵션 없이 사용하면 CTL을 표시합니다.|  
+|**/CRL**|**/add** 와 함께 사용하면 CRL을 추가합니다. **/del** 과 함께 사용하면 CRL을 삭제합니다. **/put** 과 함께 사용하면 CRL을 저장합니다. **/add**, **/del** 또는 **/put** 옵션 없이 사용하면 CRL을 표시합니다.|  
+|**/CTL**|**/add** 와 함께 사용하면 CTL을 추가합니다. **/del** 과 함께 사용하면 CTL을 삭제합니다. **/put** 과 함께 사용하면 CTL을 저장합니다. **/add**, **/del** 또는 **/put** 옵션 없이 사용하면 CTL을 표시합니다.|  
 |**/del**|인증서, CTL 및 CRL을 인증서 저장소에서 삭제합니다.|  
 |**/e** *encodingType*|인증서 인코딩 형식을 지정합니다. 기본값은 `X509_ASN_ENCODING`입니다.|  
-|**/f** *dwFlags*|저장소 열기 플래그를 지정합니다. 저장소 열기 플래그는 **CertOpenStore**에 전달되는 *dwFlags* 매개 변수입니다. 기본값은 CERT_SYSTEM_STORE_CURRENT_USER이고, 이 옵션은 **/y** 옵션이 사용된 경우에만 고려됩니다.|  
+|**/f** *dwFlags*|저장소 열기 플래그를 지정합니다. 저장소 열기 플래그는 **CertOpenStore** 에 전달되는 *dwFlags* 매개 변수입니다. 기본값은 CERT_SYSTEM_STORE_CURRENT_USER이고, 이 옵션은 **/y** 옵션이 사용된 경우에만 고려됩니다.|  
 |**/h**[**elp**]|이 도구의 명령 구문 및 옵션을 표시합니다.|  
 |**/n** *nam*|추가, 삭제 또는 저장할 인증서의 일반 이름을 지정합니다. 이 옵션은 인증서에 대해서만 사용할 수 있으며, CTL 또는 CRL에 대해서는 사용할 수 없습니다.|  
-|**/put**|인증서 저장소의 X.509 인증서, CTL 또는 CRL을 파일에 저장합니다. 이 파일은 X.509 형식으로 저장됩니다. **/7** 옵션을 **/put** 옵션과 함께 사용하여 파일을 PKCS #7 형식으로 저장할 수 있습니다. **/put** 옵션 다음에는 **/c**, **/CTL** 또는 **/CRL** 중 하나를 사용해야 하며, **/all** 옵션은 **/put**과 함께 사용할 수 없습니다.|  
-|**/r** *location*|시스템 저장소의 레지스트리 위치를 식별합니다. 이 옵션은 **/s** 옵션을 지정하는 경우에만 고려됩니다. *위치*는 다음 중 하나여야 합니다.<br /><br /> -   `currentUser`는 인증서 저장소가 HKEY_CURRENT_USER 키 아래에 있음을 나타냅니다. 기본값입니다.<br />-   `localMachine`은 인증서 저장소가 HKEY_LOCAL_MACHINE 키 아래에 있음을 나타냅니다.|  
-|**/s**|인증서 저장소가 시스템 저장소임을 나타냅니다. 이 옵션을 지정하지 않으면 저장소가 **StoreFile**로 간주됩니다.|  
+|**/put**|인증서 저장소의 X.509 인증서, CTL 또는 CRL을 파일에 저장합니다. 이 파일은 X.509 형식으로 저장됩니다. **/7** 옵션을 **/put** 옵션과 함께 사용하여 파일을 PKCS #7 형식으로 저장할 수 있습니다. **/put** 옵션 다음에는 **/c**, **/CTL** 또는 **/CRL** 중 하나를 사용해야 하며, **/all** 옵션은 **/put** 과 함께 사용할 수 없습니다.|  
+|**/r** *location*|시스템 저장소의 레지스트리 위치를 식별합니다. 이 옵션은 **/s** 옵션을 지정하는 경우에만 고려됩니다. *위치* 는 다음 중 하나여야 합니다.<br /><br /> -   `currentUser`는 인증서 저장소가 HKEY_CURRENT_USER 키 아래에 있음을 나타냅니다. 기본값입니다.<br />-   `localMachine`은 인증서 저장소가 HKEY_LOCAL_MACHINE 키 아래에 있음을 나타냅니다.|  
+|**/s**|인증서 저장소가 시스템 저장소임을 나타냅니다. 이 옵션을 지정하지 않으면 저장소가 **StoreFile** 로 간주됩니다.|  
 |**/sha1** *sha1Hash*|추가, 삭제 또는 저장할 인증서, CTL 또는 CRL의 SHA1 해시를 지정합니다.|  
 |**/v**|세부 정보 표시 모드를 지정합니다. 즉, 인증서, CTL 및 CRL에 대한 자세한 정보를 표시합니다. 이 옵션은 **/add**, **/del** 또는 **/put** 옵션과 함께 사용할 수 없습니다.|  
 |**/y** *provider*|저장소 공급자의 이름을 지정합니다.|  
@@ -72,6 +73,7 @@ ms.locfileid: "87167266"
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  Certmgr.exe를 사용하여 다음과 같은 기본 기능을 수행할 수 있습니다.  
   
 - 인증서, CTL 및 CRL을 콘솔에 표시합니다.  
@@ -94,6 +96,7 @@ ms.locfileid: "87167266"
  자세한 내용은 [인증서 작업](../wcf/feature-details/working-with-certificates.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
+
  다음 명령을 사용하여 `my`라는 기본 시스템 저장소를 자세한 정보와 함께 표시합니다.  
   
 ```console  

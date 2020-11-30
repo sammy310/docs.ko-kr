@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: ff330691483b56740ee72e280c1471af4282c638
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 46a7453ff7de0329d9cd7f671dcaa0a3e3e0e54c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282241"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238472"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe(서명 도구)
+
 서명 도구는 파일에 디지털 서명을 하고, 파일의 서명을 확인하고, 파일에 타임스탬프를 기록하는 명령줄 도구입니다.  
   
  이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
@@ -55,18 +56,22 @@ signtool [command] [options] [file_name | ...]
 |**/debug**|디버깅 정보를 표시합니다.|  
   
 <a name="catdb"></a>
+
 ## <a name="catdb-command-options"></a>catdb 명령 옵션  
+
  다음 표에는 `catdb` 명령에 사용할 수 있는 옵션이 나열되어 있습니다.  
   
 |Catdb 옵션|설명|  
 |------------------|-----------------|  
 |`/d`|기본 카탈로그 데이터베이스가 업데이트되도록 지정합니다. `/d`와 `/g` 옵션을 모두 사용하지 않을 경우 서명 도구에서 시스템 구성 요소와 드라이버 데이터베이스를 업데이트합니다.|  
-|`/g` *GUID*|*GUID* (Globally Unique Identifier)로 식별된 카탈로그 데이터베이스가 업데이트되도록 지정합니다.|  
+|`/g` *GUID*|*GUID*(Globally Unique Identifier)로 식별된 카탈로그 데이터베이스가 업데이트되도록 지정합니다.|  
 |`/r`|지정된 카탈로그를 카탈로그 데이터베이스에서 제거합니다. 이 옵션을 지정하지 않으면 서명 도구는 지정된 카탈로그를 카탈로그 데이터베이스에 추가합니다.|  
 |`/u`|추가된 카탈로그 파일에 대해 고유한 이름이 자동으로 생성되도록 지정합니다. 필요한 경우 기존 카탈로그 파일과의 이름 충돌을 방지하기 위해 카탈로그 파일의 이름을 바꿉니다. 이 옵션을 지정하지 않으면 서명 도구는 추가하려는 카탈로그와 같은 이름의 기존 카탈로그를 덮어씁니다.|  
   
 <a name="sign"></a>
+
 ## <a name="sign-command-options"></a>sign 명령 옵션  
+
  다음 표에는 `sign` 명령에 사용할 수 있는 옵션이 나열되어 있습니다.  
   
 |Sign 명령 옵션|설명|  
@@ -103,7 +108,9 @@ signtool [command] [options] [file_name | ...]
  사용 예제는 [SignTool을 사용하여 파일에 서명](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file)을 참조하세요.  
   
 <a name="TimeStamp"></a>
+
 ## <a name="timestamp-command-options"></a>TimeStamp 명령줄 옵션  
+
  다음 표에는 `TimeStamp` 명령에 사용할 수 있는 옵션이 나열되어 있습니다.  
   
 |TimeStamp 옵션|설명|  
@@ -117,6 +124,7 @@ signtool [command] [options] [file_name | ...]
  사용 예제는 [이전에 서명한 파일에 타임스탬프 추가](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files)를 참조하세요.  
   
 <a name="Verify"></a>
+
 ## <a name="verify-command-options"></a>명령 옵션 확인  
   
 |옵션 확인|설명|  
@@ -132,7 +140,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|카탈로그에서 파일을 검색할 때 사용할 선택적 해시 알고리즘을 지정합니다.|  
 |`/kp`|커널 모드 드라이버 서명 정책을 이용하여 검증을 수행하도록 지정합니다.|  
 |`/ms`|여러 확인 의미 체계를 사용합니다. 이는 Windows 8 이상에 대한 [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 호출의 기본 동작입니다.|  
-|`/o` *Version*|운영 체제 버전별로 파일을 확인합니다. *Version* 의 형식은 다음과 같습니다. *PlatformID* : *VerMajor*. *VerMinor*. *BuildNumber*. *PlatformID* 는 <xref:System.PlatformID> 열거형 멤버의 내부 값을 나타냅니다. **중요:**  `/o` 스위치를 사용하는 것이 좋습니다. `/o`가 지정되지 않으면 SignTool.exe가 예기치 않은 결과를 반환할 수 있습니다. 예를 들어 `/o` 스위치가 포함되지 않는 경우 이전 운영 체계에서 유효성이 제대로 입증된 시스템 카탈로그가 새로운 운영 체계에서는 유효성이 제대로 입증되지 않을지 모릅니다.|  
+|`/o` *Version*|운영 체제 버전별로 파일을 확인합니다. *Version* 의 형식은 다음과 같습니다. *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* 는 <xref:System.PlatformID> 열거형 멤버의 내부 값을 나타냅니다. **중요:**  `/o` 스위치를 사용하는 것이 좋습니다. `/o`가 지정되지 않으면 SignTool.exe가 예기치 않은 결과를 반환할 수 있습니다. 예를 들어 `/o` 스위치가 포함되지 않는 경우 이전 운영 체계에서 유효성이 제대로 입증된 시스템 카탈로그가 새로운 운영 체계에서는 유효성이 제대로 입증되지 않을지 모릅니다.|  
 |`/p7`|PKCS #7 파일을 확인합니다. PKCS #7 유효성 검사에 기존 정책이 사용되지 않습니다. 서명이 확인되고 서명 인증서에 대한 체인이 빌드됩니다.|  
 |`/pa`|기본 Authenticode 확인 정책이 사용되도록 지정합니다. `/pa` 옵션을 지정하지 않으면 서명 도구는 Windows 드라이버 확인 정책을 사용합니다. 이 옵션은 `catdb` 옵션과 함께 사용할 수 없습니다.|  
 |`/pg` *PolicyGUID*|GUID를 기준으로 확인 정책을 지정합니다. *PolicyGUID* 는 확인 정책의 ActionID에 해당합니다. 이 옵션은 `catdb` 옵션과 함께 사용할 수 없습니다.|  
@@ -143,6 +151,7 @@ signtool [command] [options] [file_name | ...]
  사용 예제는 [SignTool을 사용하여 파일 시그니처 확인](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature)을 참조하세요.  
   
 ## <a name="return-value"></a>반환 값  
+
  서명 도구는 종료할 때 다음 종료 코드 중 하나를 반환합니다.  
   
 |종료 코드|설명|  
@@ -152,6 +161,7 @@ signtool [command] [options] [file_name | ...]
 |2|실행이 경고와 함께 완료되었습니다.|  
 
 ## <a name="examples"></a>예  
+
  다음 명령은 카탈로그 파일 MyCatalogFileName.cat를 시스템 구성 요소와 드라이버 데이터베이스에 추가합니다. `/u` 옵션은 `MyCatalogFileName.cat`라는 기존 카탈로그 파일이 바뀌지 않도록 해야 하는 경우 고유 이름을 생성합니다.  
   
 ```console  

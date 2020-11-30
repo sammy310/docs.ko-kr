@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-ms.openlocfilehash: 519ca099b65710b6eb4251e1a9419e965ee69f93
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: c6b1ef6c7dd8be3dbc98b2298ab0e649ff74008e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166165"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254508"
 ---
 # <a name="work-with-resx-files-programmatically"></a>프로그래밍 방식으로 .resx 파일 작업
 
@@ -51,6 +51,7 @@ XML 리소스 파일(.resx)이 이름/값 쌍의 데이터가 뒤에 오는 특�
 .resx 파일은 런타임 실행 파일에 포함하거나 위성 어셈블리로 컴파일할 수 없습니다. [리소스 파일 생성기 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)를 사용하여 .resx 파일을 이진 리소스 파일(.resources)로 변환해야 합니다. 생성되는 .resources 파일은 애플리케이션 어셈블리나 위성 어셈블리에 포함될 수 있습니다. 자세한 내용은 [Creating Resource Files](creating-resource-files-for-desktop-apps.md)을 참조하세요.
 
 ## <a name="enumerate-resources"></a>리소스 열거
+
  경우에 따라 .resx 파일에서 특정 리소스 대신 모든 리소스를 검색할 수 있습니다. 이렇게 하려면 .resx 파일의 모든 리소스에 대한 열거자를 제공하는 <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> 클래스를 사용하면 됩니다. <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> 클래스는 루프의 각 반복에 대한 특정 리소스를 나타내는 <xref:System.Collections.IDictionaryEnumerator>개체를 반환하는 <xref:System.Collections.DictionaryEntry> 를 구현합니다. <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> 속성은 리소스의 키를 반환하고, <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> 속성은 리소스의 값을 반환합니다.
 
  다음 예제에서는 이전 예제에서 만들어진 CarResources.resx 파일에 대한 <xref:System.Resources.ResXResourceReader> 개체를 만들고 리소스 파일을 반복합니다. 이 예제에서는 리소스 파일에 정의된 두 `Automobile` 개체를 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 개체에 추가하고 문자열 6개 중 5개를 <xref:System.Collections.SortedList> 개체에 추가합니다. <xref:System.Collections.SortedList> 개체의 값은 열 머리글을 콘솔에 표시하는 데 사용되는 매개 변수 배열로 변환됩니다. `Automobile` 속성 값도 콘솔에 표시됩니다.
@@ -59,6 +60,7 @@ XML 리소스 파일(.resx)이 이름/값 쌍의 데이터가 뒤에 오는 특�
  [!code-vb[Conceptual.Resources.ResX#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/enumerate1.vb#2)]
 
 ## <a name="retrieve-a-specific-resource"></a>특정 리소스 가져오기
+
  .resx 파일의 항목을 열거할 수 있을 뿐만 아니라 <xref:System.Resources.ResXResourceSet?displayProperty=nameWithType> 클래스를 사용하여 이름별로 특정 리소스를 검색할 수 있습니다. <xref:System.Resources.ResourceSet.GetString%28System.String%29?displayProperty=nameWithType> 메서드는 명명된 문자열 리소스의 값을 검색합니다. <xref:System.Resources.ResourceSet.GetObject%28System.String%29?displayProperty=nameWithType> 메서드는 명명된 개체 또는 이진 데이터의 값을 검색합니다. 이 메서드는 올바른 형식의 개체로 캐스팅(C#의 경우)되거나 변환(Visual Basic의 경우)되어야 하는 개체를 반환합니다.
 
  다음 예제에서는 리소스 이름별로 폼의 캡션 문자열과 아이콘을 검색합니다. 또한 이전 예제에서 사용된 애플리케이션 정의 `Automobile` 개체를 검색하고 <xref:System.Windows.Forms.DataGridView> 컨트롤에 표시합니다.
@@ -67,6 +69,7 @@ XML 리소스 파일(.resx)이 이름/값 쌍의 데이터가 뒤에 오는 특�
  [!code-vb[Conceptual.Resources.ResX#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/retrieve1.vb#3)]
 
 ## <a name="convert-resx-files-to-binary-resources-files"></a>.resx 파일을 이진 .resources 파일로 변환
+
  .resx 파일을 포함된 이진 리소스 파일(.resources)로 변환하면 상당한 이점이 있습니다. .resx 파일은 애플리케이션 개발 중에 쉽게 읽고 유지 관리할 수 있지만 완성된 애플리케이션에 포함되는 경우는 드뭅니다. .resx 파일이 애플리케이션과 함께 배포되는 경우 애플리케이션 실행 파일 및 함께 제공된 라이브러리와는 별도의 파일로 존재합니다. 반면에 .resources 파일은 애플리케이션 실행 파일이나 함께 제공된 어셈블리에 포함됩니다. 또한 지역화된 애플리케이션의 경우 런타임에 .resx 파일을 사용하려면 개발자가 리소스 대체를 처리해야 합니다. 반면에 포함된 .resources 파일을 포함하는 위성 어셈블리의 집합이 만들어진 경우 공용 언어 런타임에서 리소스 대체 프로세스를 처리합니다.
 
  .resx 파일을 .resources 파일로 변환하려면 다음 기본 구문을 사용하는 [리소스 파일 생성기 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)를 사용합니다.

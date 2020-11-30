@@ -3,14 +3,15 @@ title: '방법: 다른 애플리케이션과 어셈블리 공유'
 description: .NET에서 다른 애플리케이션과 어셈블리를 공유하는 방법을 참조하세요. 어셈블리는 프라이빗(기본값) 또는 공유일 수 있습니다. 어셈블리를 공유하려면 GAC에 어셈블리를 배치합니다.
 ms.date: 08/19/2019
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
-ms.openlocfilehash: 9cef25059968875f17ce5dc77b04c44a2f3945f6
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 1056f8b555713d5d67488537e6c06cc457c4d312
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104654"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242541"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications"></a>방법: 다른 애플리케이션과 어셈블리 공유
+
 어셈블리는 전용이거나 공유될 수 있습니다. 기본적으로 대부분의 간단한 프로그램은 다른 애플리케이션에서 사용되지 않으므로 프라이빗 어셈블리로 구성됩니다.  
 
 다른 애플리케이션과 어셈블리를 공유하려면 [전역 어셈블리 캐시(GAC)](gac.md)에 배치해야 합니다.  

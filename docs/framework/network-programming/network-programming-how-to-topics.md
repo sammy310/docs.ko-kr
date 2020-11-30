@@ -8,14 +8,15 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: f091f0f675fcf22cb7c6be83a5766fcc8d279be7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 96511c44507706b616c1542a534a52b02070efc9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502277"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250231"
 ---
 # <a name="network-programming-how-to-topics"></a>네트워크 프로그래밍 방법 항목
+
 다음 목록에는 네트워크 프로그래밍 개념 문서에 나와 있는 방법 항목에 대한 링크가 들어 있습니다.  
   
  **데이터 요청:**  

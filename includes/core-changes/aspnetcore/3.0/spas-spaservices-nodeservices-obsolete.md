@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: ac5a3c4f3aefbb59418ad92b2d795f36916f877f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394098"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032897"
 ---
 ### <a name="spas-spaservices-and-nodeservices-marked-obsolete"></a>SPA: 사용되지 않는 것으로 표시된 SpaServices 및 NodeServices
 

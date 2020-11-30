@@ -4,11 +4,11 @@ description: Visual Studio 2017 버전 15.7 이상에서 사용할 수 있는 Do
 ms.date: 08/06/2020
 ms.custom: vs-dotnet
 ms.openlocfilehash: ae20ebf7c3c27d7f2ebe51c33719b82048f86241
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678929"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032192"
 ---
 # <a name="use-docker-tools-in-visual-studio-on-windows"></a>Windows에서 Visual Studio의 Docker 도구 사용
 
@@ -25,7 +25,7 @@ Visual Studio 2017 버전 15.7 이상에 포함된 Docker 도구를 사용하는
 
 두 가지 수준의 Docker 지원을 프로젝트에 추가할 수 있습니다. ASP.NET Core 프로젝트에서는 Docker 지원을 설정하여 `Dockerfile` 파일을 프로젝트에 추가할 수 있습니다. 그 다음 수준은 솔루션 수준에서 `Dockerfile`을 프로젝트에 추가하고(없는 경우) `docker-compose.yml` 파일을 추가하는 컨테이너 오케스트레이션 지원입니다. Docker Compose를 통한 컨테이너 오케스트레이션 지원은 Visual Studio 2017 버전 15.0~15.7에서 기본적으로 추가됩니다. 컨테이너 오케스트레이션 지원은 Visual Studio 2017 버전 15.8 이상에서 제공하는 옵트인 기능입니다. Visual Studio 2019 이상에서는 **Kubernetes/Helm** 배포도 지원합니다.
 
-**추가 > Docker 지원** 및 **추가 > 컨테이너 오케스트레이터 지원** 명령은 그림 4-31처럼 **솔루션 탐색기**에서 ASP.NET Core 프로젝트의 프로젝트 노드를 오른쪽 단추로 클릭하면 나타나는 메뉴(또는 팝업 메뉴)에 있습니다.
+**추가 > Docker 지원** 및 **추가 > 컨테이너 오케스트레이터 지원** 명령은 그림 4-31처럼 **솔루션 탐색기** 에서 ASP.NET Core 프로젝트의 프로젝트 노드를 오른쪽 단추로 클릭하면 나타나는 메뉴(또는 팝업 메뉴)에 있습니다.
 
 ![Visual Studio에서 Docker 지원 메뉴 옵션 추가](media/add-docker-support-menu.png)
 
@@ -33,7 +33,7 @@ Visual Studio 2017 버전 15.7 이상에 포함된 Docker 도구를 사용하는
 
 ### <a name="add-docker-support"></a>Docker 지원 추가
 
-이전 섹션에 나와 있는 것처럼 기존 애플리케이션에 Docker 지원을 추가하는 옵션 외에, 프로젝트를 만드는 동안 **새 프로젝트**에서 **확인**을 클릭하면 열리는 **새 ASP.NET Core 웹 애플리케이션** 대화 상자에서 **Docker 지원 사용**을 선택하여 Docker를 지원할 수 있습니다(그림 4-32).
+이전 섹션에 나와 있는 것처럼 기존 애플리케이션에 Docker 지원을 추가하는 옵션 외에, 프로젝트를 만드는 동안 **새 프로젝트** 에서 **확인** 을 클릭하면 열리는 **새 ASP.NET Core 웹 애플리케이션** 대화 상자에서 **Docker 지원 사용** 을 선택하여 Docker를 지원할 수 있습니다(그림 4-32).
 
 ![Visual Studio에서 새 ASP.NET Core 웹앱에 Docker 지원 사용](media/enable-docker-support-visual-studio.png)
 
@@ -45,19 +45,19 @@ Docker 지원을 추가하거나 사용하도록 설정하면 Visual Studio는 �
 
 다중 컨테이너 솔루션을 작성하려면 프로젝트에 컨테이너 오케스트레이션 지원을 추가합니다. 이렇게 하면 동일한 _docker-compose.yml_ 파일에 정의된 컨테이너 그룹(전체 솔루션)을 동시에 실행하고 디버그할 수 있습니다.
 
-컨테이너 오케스트레이션 지원을 추가하려면 **솔루션 탐색기**에서 솔루션 또는 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **추가 > 컨테이너 오케스트레이션 지원**을 선택합니다. 그런 다음, **Kubernetes/Helm** 또는 **Docker Compose**를 선택하여 컨테이너를 관리합니다.
+컨테이너 오케스트레이션 지원을 추가하려면 **솔루션 탐색기** 에서 솔루션 또는 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **추가 > 컨테이너 오케스트레이션 지원** 을 선택합니다. 그런 다음, **Kubernetes/Helm** 또는 **Docker Compose** 를 선택하여 컨테이너를 관리합니다.
 
-프로젝트에 컨테이너 오케스트레이션 지원을 추가한 후에는 그림 4-33처럼 **솔루션 탐색기**에서 Dockerfile이 프로젝트에 추가되고 **docker-compose** 폴더가 솔루션에 추가된 것을 볼 수 있습니다.
+프로젝트에 컨테이너 오케스트레이션 지원을 추가한 후에는 그림 4-33처럼 **솔루션 탐색기** 에서 Dockerfile이 프로젝트에 추가되고 **docker-compose** 폴더가 솔루션에 추가된 것을 볼 수 있습니다.
 
 ![Visual Studio의 솔루션 탐색기 내의 Docker 파일](media/docker-support-solution-explorer.png)
 
 **그림 4-33**. Visual Studio 2019 솔루션 탐색기의 Docker 파일
 
-_docker-compose.yml_이 이미 있는 경우에는 Visual Studio에서 이 파일에 필수 구성 코드 줄을 추가합니다.
+_docker-compose.yml_ 이 이미 있는 경우에는 Visual Studio에서 이 파일에 필수 구성 코드 줄을 추가합니다.
 
 ## <a name="configure-docker-tools"></a>Docker 도구 구성
 
-주 메뉴에서 **도구 > 옵션**을 선택하고, **컨테이너 도구 > 설정**을 확장합니다. 그러면 컨테이너 도구 설정이 표시됩니다.
+주 메뉴에서 **도구 > 옵션** 을 선택하고, **컨테이너 도구 > 설정** 을 확장합니다. 그러면 컨테이너 도구 설정이 표시됩니다.
 
 ![일반, 단일 프로젝트 및 Docker Compose 페이지와 문서 텍스트의 세부 정보를 보여 주는 Visual Studio Docker 도구 옵션](media/visual-studio-docker-tools-options.png)
 
@@ -79,7 +79,7 @@ _docker-compose.yml_이 이미 있는 경우에는 Visual Studio에서 이 파�
 | **Docker Compose**                          |                    | Docker Compose 페이지는 단일 프로젝트 페이지와 동일한 설정을 포함하지만 다중 컨테이너 솔루션에 적용됩니다.                                                                                                                                                                                                                                                                                           |
 
 > [!WARNING]
-> localhost SSL 인증서를 신뢰할 수 없고 옵션을 **안 함**으로 설정하면 런타임에 앱 또는 서비스에서 HTTPS 웹 요청이 실패할 수 있습니다. 이 경우에는 값을 **메시지 표시**로 다시 설정하거나 `dotnet dev-certs https --trust` 명령을 사용하여 개발 머신에서 인증서를 다시 신뢰합니다.
+> localhost SSL 인증서를 신뢰할 수 없고 옵션을 **안 함** 으로 설정하면 런타임에 앱 또는 서비스에서 HTTPS 웹 요청이 실패할 수 있습니다. 이 경우에는 값을 **메시지 표시** 로 다시 설정하거나 `dotnet dev-certs https --trust` 명령을 사용하여 개발 머신에서 인증서를 다시 신뢰합니다.
 
 > [!TIP]
 > 서비스 구현 및 Visual Studio Tools for Docker 사용에 대한 자세한 내용은 다음 문서를 참조하세요.

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 58b1190e3e6a3168d35700eed655f6756e076a29
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901893"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032609"
 ---
 ### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC: 컨트롤러 작업 이름에서 잘린 비동기 접미사
 

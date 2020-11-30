@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: a4e20e0468d861138ad801c9dbfa15340b3f388c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394286"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032459"
 ---
 ### <a name="authentication-oauthhandler-exchangecodeasync-signature-changed"></a>인증: OAuthHandler ExchangeCodeAsync 서명이 변경됨
 

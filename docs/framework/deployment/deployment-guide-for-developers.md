@@ -6,14 +6,15 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 5b9d22062d273404c7451beb44e56d3fa5c4aa1d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 950ff048a918a52e6c64d8cc15e1ef0f80233b88
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558747"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238654"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
+
 이 항목에서는 앱과 함께 .NET Framework 4.5에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 사이의 .NET Framework 버전을 설치하려는 개발자를 위한 정보를 제공합니다.
 
 다운로드 페이지에서 .NET Framework 재배포 가능 패키지 및 언어 팩을 다운로드할 수 있습니다.
@@ -110,7 +111,7 @@ Visual Studio에서 ClickOnce 배포를 선택하고 .NET Framework에 대한 �
 
 1. 게시하려는 응용 프로그램 프로젝트를 엽니다.
 
-2. 솔루션 탐색기에서 프로젝트의 바로 가기 메뉴를 열고 **속성**을 선택합니다.
+2. 솔루션 탐색기에서 프로젝트의 바로 가기 메뉴를 열고 **속성** 을 선택합니다.
 
 3. **게시** 창을 선택합니다.
 
@@ -120,11 +121,11 @@ Visual Studio에서 ClickOnce 배포를 선택하고 .NET Framework에 대한 �
 
 6. 필수 구성 요소 목록에서 프로젝트를 빌드하는 데 사용한 .NET Framework 버전을 찾아서 선택합니다.
 
-7. 필수 구성 요소의 소스 위치를 지정하는 옵션을 선택한 다음 **확인**을 선택합니다.
+7. 필수 구성 요소의 소스 위치를 지정하는 옵션을 선택한 다음 **확인** 을 선택합니다.
 
      .NET Framework 다운로드 위치의 URL을 제공하는 경우 .NET Framework 다운로드 페이지 또는 자체 사이트를 지정할 수 있습니다. 재배포 가능 패키지를 자체 서버에 배치하려면 패키지가 웹 설치 관리자가 아닌 오프라인 설치 관리자여야 합니다. .NET Framework 다운로드 페이지에서 웹 설치 관리자만 연결할 수 있습니다. URL은 사용자 응용 프로그램을 배포할 CD를 지정할 수도 있습니다.
 
-8. **속성 페이지** 대화 상자에서 **확인**을 선택합니다.
+8. **속성 페이지** 대화 상자에서 **확인** 을 선택합니다.
 
 <a name="installaware"></a>
 
@@ -254,7 +255,7 @@ WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설�
 
 ### <a name="detecting-the-language-packs"></a>언어 팩 검색
 
-이름이 `Release`인 DWORD 값의 레지스트리에서 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\*LCID* 폴더를 확인하여 특정 언어 팩이 설치되어 있는지 여부를 테스트할 수 있습니다. ("NET Framework Setup"은 마침표로 시작되지 않습니다.) *LCID*는 로캘 식별자를 지정합니다. 로캘 식별자 목록은 [지원되는 언어](#supported-languages)를 참조하세요.
+이름이 `Release`인 DWORD 값의 레지스트리에서 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\*LCID* 폴더를 확인하여 특정 언어 팩이 설치되어 있는지 여부를 테스트할 수 있습니다. ("NET Framework Setup"은 마침표로 시작되지 않습니다.) *LCID* 는 로캘 식별자를 지정합니다. 로캘 식별자 목록은 [지원되는 언어](#supported-languages)를 참조하세요.
 
 예를 들어 전체 일본어 언어 팩(LCID=1041)이 설치되어 있는지 검색하려면 레지스트리에서 다음 명명된 값을 검색합니다.
 
@@ -331,7 +332,7 @@ WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설�
 
 ## <a name="uninstalling-the-net-framework"></a>.NET Framework 제거
 
-Windows 8부터 제어판의 **Windows 기능 사용/사용 안 함**을 통해 .NET Framework 4.5 이상 버전을 제거할 수 있습니다. 이전 버전의 Windows에서는 제어판의 **프로그램 추가/제거**를 통해 .NET Framework 4.5 이상 버전을 제거할 수 있습니다.
+Windows 8부터 제어판의 **Windows 기능 사용/사용 안 함** 을 통해 .NET Framework 4.5 이상 버전을 제거할 수 있습니다. 이전 버전의 Windows에서는 제어판의 **프로그램 추가/제거** 를 통해 .NET Framework 4.5 이상 버전을 제거할 수 있습니다.
 
 > [!IMPORTANT]
 > Windows 7 및 이전 버전의 운영 체제에서 .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 또는 4.8을 제거하면 .NET Framework 4.5 파일이 복원되지 않고, .NET Framework 4.5를 제거하면 .NET Framework 4 파일이 복원되지 않습니다. 이전 버전으로 돌아가려면 해당 프로그램과 업데이트를 다시 설치해야 합니다.

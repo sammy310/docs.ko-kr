@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 35dd8db243b03e1dfd6311195ec97673cf114877
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957690"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032630"
 ---
 ### <a name="razor-razortemplateengine-api-removed"></a>Razor: RazorTemplateEngine API가 제거됨
 

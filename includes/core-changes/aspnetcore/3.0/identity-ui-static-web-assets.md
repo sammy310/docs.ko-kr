@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: c5e4b5619394f99a419fe48aee190ad741ea8c0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73041661"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032570"
 ---
 ### <a name="identity-ui-uses-static-web-assets-feature"></a>ID: UI는 정적 웹 자산 기능을 사용합니다.
 
@@ -23,11 +23,11 @@ ID UI가 정적 웹 자산 기능을 채택한 결과는 다음과 같습니다.
 
 #### <a name="old-behavior"></a>이전 동작
 
-ID UI의 기본 UI 프레임워크는 **부트스트랩 3**입니다. `Startup.ConfigureServices`에서 `AddDefaultUI` 메서드 호출에 대한 매개 변수를 사용하여 UI 프레임워크를 구성할 수 있습니다.
+ID UI의 기본 UI 프레임워크는 **부트스트랩 3** 입니다. `Startup.ConfigureServices`에서 `AddDefaultUI` 메서드 호출에 대한 매개 변수를 사용하여 UI 프레임워크를 구성할 수 있습니다.
 
 #### <a name="new-behavior"></a>새 동작
 
-ID UI의 기본 UI 프레임워크는 **부트스트랩 4**입니다. UI 프레임워크는 `AddDefaultUI` 메서드 호출 대신 프로젝트 파일에 구성되어야 합니다.
+ID UI의 기본 UI 프레임워크는 **부트스트랩 4** 입니다. UI 프레임워크는 `AddDefaultUI` 메서드 호출 대신 프로젝트 파일에 구성되어야 합니다.
 
 #### <a name="reason-for-change"></a>변경 이유
 

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 02c9305a36f47dfaf0b1fa8d19b07cd2d34badae
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721459"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032117"
 ---
 ### <a name="fieldinfosetvalue-throws-exception-for-static-init-only-fields"></a>FieldInfo.SetValue가 초기화 전용 정적 필드에 대해 예외를 throw
 

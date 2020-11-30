@@ -16,12 +16,12 @@ helpviewer_keywords:
 - locating directories in isolated storage file
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
-ms.openlocfilehash: ebd2ae6684e7b3390b29aeebeb2552b4616a69f3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 43685a6ecb92510ad8d80c472a1c774d46cbb5f7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830729"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734636"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>방법: 격리된 스토리지의 기존 파일 및 디렉터리 찾기
 
@@ -32,6 +32,7 @@ ms.locfileid: "94830729"
  이러한 메서드는 둘 다 재귀적입니다. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 클래스는 저장소의 모든 디렉터리 또는 파일을 열거하는 메서드를 제공하지 않습니다. 그러나 다음 코드 예제에서 재귀 메서드를 보여 줍니다.  
   
 ## <a name="example"></a>예제  
+
  다음 코드 예제는 분리된 저장소에서 파일 및 디렉터리를 만드는 방법을 보여줍니다. 먼저 사용자, 도메인 및 어셈블리별로 격리된 저장소를 검색하여 `isoStore` 변수에 대입합니다. <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A> 메서드는 몇 개의 디렉터리를 설정하는 데 사용되고 <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29> 생성자는 이러한 디렉터리에 몇 개의 파일을 만듭니다. 그런 다음 코드는 `GetAllDirectories` 메서드의 결과를 반복합니다. 이 메서드는 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A>를 사용하여 현재 디렉터리에서 모든 디렉터리 이름을 찾습니다. 이러한 이름이 배열로 저장된 다음 `GetAllDirectories`는 찾은 각 디렉터리를 전달하기 위해 자신을 호출합니다. 결과적으로, 모든 디렉터리 이름은 배열에 반환됩니다. 다음으로 코드는 `GetAllFiles` 메서드를 호출합니다. 이 메서드는 `GetAllDirectories`를 호출하여 모든 디렉터리의 이름을 확인한 다음 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> 메서드를 사용하여 각 디렉터리를 검사하여 파일을 확인합니다. 결과는 표시를 위해 배열로 반환됩니다.  
   
  [!code-cpp[Conceptual.IsolatedStorage#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source8.cpp#9)]

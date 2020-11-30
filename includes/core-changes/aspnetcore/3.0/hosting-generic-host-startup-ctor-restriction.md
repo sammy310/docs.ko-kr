@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: d1ddba72ce25c5e01025d916d52f785b5a1a9e71
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901661"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032509"
 ---
 ### <a name="hosting-generic-host-restricts-startup-constructor-injection"></a>호스팅: 제네릭 호스트는 시작 생성자 주입을 제한합니다.
 

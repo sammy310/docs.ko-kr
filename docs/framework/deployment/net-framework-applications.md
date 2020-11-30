@@ -6,16 +6,19 @@ helpviewer_keywords:
 - deploying applications [.NET Framework]
 - .NET Framework, deploying apps
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
-ms.openlocfilehash: 894248b0a32984c8563dc5357451ea25c4926bea
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3ede6f8aba00bd4ea3e7326eade7b51a9c9a867f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621550"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240383"
 ---
 # <a name="deploying-net-framework-applications"></a>.NET Framework 애플리케이션 배포
+
 .NET Framework 설명서의 이 섹션에서는 어셈블리를 로드하고, 어셈블리 참조를 확인하고, 네이티브 이미지 생성을 통해 애플리케이션의 성능을 향상시키는 지침을 포함하여 .NET Framework 애플리케이션 배포에 대한 중요한 정보를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [런타임에서 어셈블리를 찾는 방법](how-the-runtime-locates-assemblies.md)  
  공용 언어 런타임이 애플리케이션을 구성하는 어셈블리를 찾아서 바인딩하는 방법을 설명합니다.  
   

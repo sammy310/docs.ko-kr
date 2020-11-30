@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-ms.openlocfilehash: c91712b9d25221f1ffd9e9e980c420be32e2379a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 70343851ba73af9041014e8654f5df82d8389c39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831184"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734779"
 ---
 # <a name="garbage-collection-notifications"></a>가비지 컬렉션 알림
+
 공용 언어 런타임에서 전체 가비지 컬렉션(즉, 2세대 컬렉션)을 실행하면 성능이 저하될 수 있는 경우가 있습니다. 이는 대량의 요청을 처리하는 서버에서 특히 문제가 될 수 있습니다. 이 경우 장기적인 가비지 수집으로 인해 요청 시간이 초과될 수 있습니다. 중요 기간에 전체 수집이 발생하지 않도록 하기 위해 전체 가비지 수집에 근접하고 있다는 알림을 받을 수 있습니다. 그러면 워크로드를 다른 서버 인스턴스로 리디렉션하는 조치를 취할 수 있습니다. 또한 현재 서버 인스턴스가 요청을 처리하지 않아도 되는 경우 직접 수집을 유도할 수도 있습니다.  
   
  <xref:System.GC.RegisterForFullGCNotification%2A> 메서드는 런타임에서 전체 가비지 수집에 근접하고 있음을 감지할 때 발생되는 알림에 등록합니다. 이 알림에는 두 부분이 있습니다. 즉, 알림은 전체 가비지 수집에 근접하고 있을 때와 전체 가비지 수집이 완료되었을 때 발생할 수 있습니다.  
@@ -32,6 +33,7 @@ ms.locfileid: "94831184"
  <xref:System.GC.WaitForFullGCApproach%2A> 및 <xref:System.GC.WaitForFullGCComplete%2A> 메서드는 함께 작동하도록 설계되었습니다. 두 메서드를 함께 사용하지 않고 하나만 사용하면 불확실한 결과를 얻을 수 있습니다.  
   
 ## <a name="full-garbage-collection"></a>전체 가비지 수집  
+
  다음 시나리오 중 하나에 해당하는 경우 런타임은 전체 가비지 수집을 발생시킵니다.  
   
 - 그다음 세대 2 컬렉션을 일으키기에 충분한 메모리가 세대 2로 승격된 경우.  
@@ -49,6 +51,7 @@ ms.locfileid: "94831184"
  또한 세 번째 시나리오는 알림을 받을 수 있는 시기를 불확실하게 하는 원인이 됩니다. 따라서 보장할 수는 없지만, 이 시간 동안 요청을 리디렉션하거나 더 잘 수용할 수 있을 때 직접 수집을 유도함으로써 부적절한 시기의 전체 가비지 수집으로 인한 영향을 완화하는 것이 유용한 방법임은 명백합니다.  
   
 ## <a name="notification-threshold-parameters"></a>알림 임계값 매개 변수  
+
  <xref:System.GC.RegisterForFullGCNotification%2A> 메서드에는 세대 2 개체 및 대형 개체 힙의 임계값을 지정하는 두 개의 매개 변수가 있습니다. 이러한 값이 충족되면 가비지 수집 알림이 발생되어야 합니다. 다음 표에서는 이러한 매개 변수에 대해 설명합니다.  
   
 |매개 변수|설명|  
@@ -63,6 +66,7 @@ ms.locfileid: "94831184"
 ## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
+
  다음 예제에서 서버 그룹이 들어오는 웹 요청을 처리합니다. 요청 처리의 워크로드를 시뮬레이트하기 위해 바이트 배열을 <xref:System.Collections.Generic.List%601> 컬렉션에 추가합니다. 각 서버는 가비지 수집 알림에 등록한 후 `WaitForFullGCProc` 사용자 메서드의 스레드를 시작하여 <xref:System.GC.WaitForFullGCApproach%2A> 및 <xref:System.GC.WaitForFullGCComplete%2A> 메서드에서 반환하는 <xref:System.GCNotificationStatus> 열거형을 지속적으로 모니터링합니다.  
   
  <xref:System.GC.WaitForFullGCApproach%2A> 및 <xref:System.GC.WaitForFullGCComplete%2A> 메서드는 알림이 발생할 때 다음과 같은 각각의 이벤트 처리 사용자 메서드를 호출합니다.  

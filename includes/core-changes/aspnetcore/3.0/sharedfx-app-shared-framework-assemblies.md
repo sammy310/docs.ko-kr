@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: d598d8d3203e804e5e935c3564b0053f9fc2e9a6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84145005"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032867"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>공유 프레임워크: Microsoft.AspNetCore.App에서 제거되는 어셈블리
 

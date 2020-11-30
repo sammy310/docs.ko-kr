@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 75945e7ff26c1c6db891d12cef4c16ed210da6af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394402"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032629"
 ---
 ### <a name="mvc-web-api-compatibility-shim-removed"></a>MVC: 웹 API 호환성 shim이 제거됨
 

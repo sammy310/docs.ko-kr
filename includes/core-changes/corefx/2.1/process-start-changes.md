@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 9544b65f31772d0f4cee918528a73171fec4de99
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021817"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032054"
 ---
 ### <a name="change-in-default-value-of-useshellexecute"></a>UseShellExecute의 기본값 변경
 
@@ -12,7 +12,7 @@ ms.locfileid: "82021817"
 
 #### <a name="change-description"></a>변경 내용 설명
 
-<xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> 사용을 통해 애플리케이션을 직접 실행할 수 있습니다. 예를 들어 `Process.Start("mspaint.exe")`와 같은 코드를 사용하면 그림판이 실행됩니다. <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType>이 `true`로 설정된 경우 연결된 애플리케이션을 간접적으로 시작할 수도 있습니다. .NET Framework에서 <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType>의 기본값은 `true`입니다. 따라서 해당 편집기를 사용하여 *.txt*과 연결한 경우 `Process.Start("mytextfile.txt")`와 같은 코드로 메모장이 시작됩니다. .NET Framework에서 간접적으로 앱을 시작하는 것을 방지하려면 명시적으로 <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType>을 `false`로 설정해야 합니다. .NET Core에서 <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType>의 기본값은 `false`입니다. 따라서 기본적으로 `Process.Start`를 호출할 때 연결된 애플리케이션이 시작되지 않습니다.
+<xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> 사용을 통해 애플리케이션을 직접 실행할 수 있습니다. 예를 들어 `Process.Start("mspaint.exe")`와 같은 코드를 사용하면 그림판이 실행됩니다. <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType>이 `true`로 설정된 경우 연결된 애플리케이션을 간접적으로 시작할 수도 있습니다. .NET Framework에서 <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType>의 기본값은 `true`입니다. 따라서 해당 편집기를 사용하여 *.txt* 과 연결한 경우 `Process.Start("mytextfile.txt")`와 같은 코드로 메모장이 시작됩니다. .NET Framework에서 간접적으로 앱을 시작하는 것을 방지하려면 명시적으로 <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType>을 `false`로 설정해야 합니다. .NET Core에서 <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType>의 기본값은 `false`입니다. 따라서 기본적으로 `Process.Start`를 호출할 때 연결된 애플리케이션이 시작되지 않습니다.
 
 이 변경 사항은 성능 사유로 인해 .NET Core에 도입되었습니다. 일반적으로 <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>은 애플리케이션을 직접 시작하는 데 사용됩니다. 앱을 직접 시작하는 경우 Windows 셸을 포함하지 않아도 되며 관련된 성능 비용도 발생하지 않습니다. 이 기본 사례를 더욱 빠르게 하도록 .NET Core는 <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType>의 기본값을 `false`로 변경합니다. 필요한 경우 느린 경로로 옵트인할 수 있습니다.
 

@@ -15,20 +15,21 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: dbd5d7fa671ae5ec3b7dc00205f0c9d8381bb3ce
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8d1b904a8acc6d3960a076c54c2d5f5de54820c0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502701"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250634"
 ---
 # <a name="automatic-proxy-detection"></a>자동 프록시 검색
+
 자동 프록시 검색은 웹 프록시 서버가 시스템에 의해 식별되고 클라이언트 대신 요청을 보내는 데 사용되는 프로세스입니다. 이 기능을 WPAD(웹 프록시 자동 검색)라고도 합니다. 자동 프록시 검색을 사용하면 시스템이 요청에 사용할 수 있는 프록시 집합을 반환하는 프록시 구성 스크립트를 찾으려고 시도합니다. 프록시 구성 스크립트가 발견되면 <xref:System.Net.WebProxy> 인스턴스를 사용하는 요청에 대한 프록시 정보, 요청 스트림 또는 응답이 확보될 때 로컬 컴퓨터에서 스크립트가 다운로드, 컴파일 및 실행됩니다.  
   
  자동 프록시 검색은 <xref:System.Net.WebProxy> 클래스에 의해 수행되며 요청 수준 설정, 구성 파일의 설정 및 Internet Explorer **LAN(Local Area Network)** 대화 상자를 사용하여 지정된 설정을 이용할 수 있습니다.  
   
 > [!NOTE]
-> Internet Explorer 주 메뉴에서 **도구**를 선택한 다음 **인터넷 옵션**을 선택하면 Internet Explorer **LAN(Local Area Network) 설정** 대화 상자를 표시할 수 있습니다. 다음으로, **연결** 탭을 선택하고 **LAN 설정**을 클릭합니다.  
+> Internet Explorer 주 메뉴에서 **도구** 를 선택한 다음 **인터넷 옵션** 을 선택하면 Internet Explorer **LAN(Local Area Network) 설정** 대화 상자를 표시할 수 있습니다. 다음으로, **연결** 탭을 선택하고 **LAN 설정** 을 클릭합니다.  
   
  자동 프록시 검색을 사용하면 <xref:System.Net.WebProxy> 클래스가 다음과 같이 프록시 구성 스크립트를 찾으려고 시도합니다.  
   

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 6be98e7ced6608ba0793c635adfe61c8b1a7e9d9
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81275232"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032876"
 ---
 ### <a name="signalr-hubconnectioncontext-constructors-changed"></a>SignalR: HubConnectionContext 생성자가 변경됨
 

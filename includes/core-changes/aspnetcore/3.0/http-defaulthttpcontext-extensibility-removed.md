@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 9d138f79fcede4acac837f8d7793aa343ced737c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78290739"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032539"
 ---
 ### <a name="http-defaulthttpcontext-extensibility-removed"></a>HTTP: DefaultHttpContext 확장성이 제거됨
 

@@ -18,14 +18,15 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-ms.openlocfilehash: ef682af33c10cf06ffc398c22e4a7dc1adf8290e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f198f283f2acfdcfbafed25baecb02a64e9d1e26
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502069"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236314"
 ---
 # <a name="using-a-synchronous-client-socket"></a>동기 클라이언트 소켓 사용
+
 동기 클라이언트 소켓은 네트워크 작업이 완료되는 동안 애플리케이션을 일시 중단합니다. 동기 소켓은 네트워크를 작업에 많이 사용하는 애플리케이션에 적합하지 않지만 다른 애플리케이션의 네트워크 서비스에 대한 간단한 액세스를 가능하게 합니다.  
   
  데이터를 보내려면 바이트 배열을 <xref:System.Net.Sockets.Socket> 클래스의 데이터 전송 메서드(<xref:System.Net.Sockets.Socket.Send%2A> 및 <xref:System.Net.Sockets.Socket.SendTo%2A>) 중 하나에 전달합니다. 다음 예제에서는 <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> 속성을 사용하여 문자열을 바이트 배열 버퍼로 인코드한 다음 **Send** 메서드를 사용하여 버퍼를 네트워크 디바이스에 전송합니다. **Send** 메서드는 네트워크 디바이스에 전송된 바이트 수를 반환합니다.  
@@ -59,7 +60,7 @@ Console.WriteLine("Echoed text = {0}",
     System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRec));  
 ```  
   
- 소켓이 더 이상 필요하지 않은 경우 <xref:System.Net.Sockets.Socket.Shutdown%2A> 메서드를 호출한 다음 **Close** 메서드를 호출하여 소켓을 해제해야 합니다. 다음 예제에서는 **Socket**을 해제합니다. <xref:System.Net.Sockets.SocketShutdown> 열거형은 전송, 수신 또는 둘 다를 위해 소켓을 닫아야 하는지 여부를 나타내는 상수를 정의합니다.  
+ 소켓이 더 이상 필요하지 않은 경우 <xref:System.Net.Sockets.Socket.Shutdown%2A> 메서드를 호출한 다음 **Close** 메서드를 호출하여 소켓을 해제해야 합니다. 다음 예제에서는 **Socket** 을 해제합니다. <xref:System.Net.Sockets.SocketShutdown> 열거형은 전송, 수신 또는 둘 다를 위해 소켓을 닫아야 하는지 여부를 나타내는 상수를 정의합니다.  
   
 ```vb  
 s.Shutdown(SocketShutdown.Both)  

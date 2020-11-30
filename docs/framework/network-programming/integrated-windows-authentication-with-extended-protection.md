@@ -2,14 +2,15 @@
 title: 확장된 보호를 사용하는 Windows 통합 인증
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: d69471f4be0f102381dee4fc5037e8f8b0c625c3
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 74f421131da0e5b11fd676ff23229f5ff6ec7eca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144853"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241626"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>확장된 보호를 사용하는 Windows 통합 인증
+
 <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, 그리고 <xref:System.Net> 및 관련 네임스페이스의 관련 클래스에 의해 Windows 통합 인증이 처리되는 방식에 영향을 미치는 기능이 향상되었습니다. 보안을 강화하기 위한 확장된 보호에 대한 지원이 추가되었습니다.  
   
  이러한 변경 내용은 이러한 클래스를 사용하여 Windows 통합 인증이 사용되는 경우 웹 요청을 만들고 응답을 수신하는 애플리케이션에 영향을 미칠 수 있습니다. 이 변경 내용은 Windows 통합 인증을 사용하도록 구성된 웹 서버 및 클라이언트 애플리케이션에 영향을 미칠 수도 있습니다.  
@@ -19,6 +20,7 @@ ms.locfileid: "84144853"
  확장된 보호를 지원하기 위한 변경 내용은 Windows 7 및 Windows Server 2008 R2의 애플리케이션에만 사용할 수 있습니다. 확장된 보호 기능은 이전 버전의 Windows에서 사용할 수 없습니다.  
   
 ## <a name="overview"></a>개요  
+
  Windows 통합 인증의 디자인을 사용하면 일부 자격 증명 시도 응답이 유니버설이 될 수 있으므로 다시 사용되거나 전달될 수 있습니다. 시도 응답은 대상 관련 정보를 사용하거나 오히려 일부 채널 관련 정보를 사용하여 최소한으로 생성되어야 합니다. 그런 다음 서비스가 확장된 보호를 제공하여 자격 증명 시도 응답에 SPN(서비스 사용자 이름) 같은 서비스 관련 정보가 포함되어 있는지 확인할 수 있습니다. 자격 증명 교환에 이 정보가 포함되면 서비스는 부적절하게 사용되었을 수 있는 자격 증명 시도 응답의 악의적인 사용을 더 효과적으로 방지할 수 있습니다.  
   
  확장된 보호 디자인은 인증 릴레이 공격을 완화하도록 디자인된 인증 프로토콜의 향상된 기능입니다. 이 디자인은 채널 및 서비스 바인딩 정보의 개념을 기반으로 합니다.  
@@ -64,6 +66,7 @@ ms.locfileid: "84144853"
  확장된 보호는 현재 Windows 7에서 지원됩니다. 애플리케이션이 운영 체제에서 확장된 보호를 지원하는지 확인할 수 있는 메커니즘이 제공됩니다.  
   
 ## <a name="changes-to-support-extended-protection"></a>확장된 보호를 지원하기 위한 변경 내용  
+
  Windows 통합 인증과 함께 사용되는 인증 프로세스는 일반적으로 사용되는 인증 프로토콜에 따라 대상 컴퓨터에서 실행되고 다시 클라이언트 컴퓨터로 전송되는 시도를 포함합니다. 확장된 보호는 이 인증 프로세스에 새로운 기능을 추가합니다.  
   
  <xref:System.Security.Authentication.ExtendedProtection> 네임스페이스는 애플리케이션에 대해 확장된 보호를 사용하는 인증을 지원합니다. 이 네임스페이스의 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> 클래스는 채널 바인딩을 나타냅니다. 이 네임스페이스의 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 클래스는 들어오는 클라이언트 연결을 확인하기 위해 서버에서 사용되는 확장된 보호 정책을 나타냅니다. 기타 클래스 멤버는 확장된 보호와 함께 사용됩니다.  
@@ -107,6 +110,7 @@ ms.locfileid: "84144853"
  <xref:System.Net.Security> 네임스페이스에서 SMTP 클라이언트에 대한 확장된 보호 구성을 지원하기 위해 <xref:System.Net.Configuration.SmtpNetworkElement> 속성이 추가되었습니다.  
   
 ## <a name="extended-protection-for-client-applications"></a>클라이언트 애플리케이션에 대한 확장된 보호  
+
  대부분의 클라이언트 애플리케이션에 대한 확장된 보호는 자동으로 지원됩니다. Windows의 기본 버전이 확장된 보호를 지원하면 <xref:System.Net.HttpWebRequest> 및 <xref:System.Net.Mail.SmtpClient> 클래스는 항상 확장된 보호를 지원합니다. <xref:System.Net.HttpWebRequest> 인스턴스는 <xref:System.Uri>에서 생성된 SPN을 보냅니다. 기본적으로 <xref:System.Net.Mail.SmtpClient> 인스턴스는 SMTP 메일 서버의 호스트 이름에서 생성된 SPN을 보냅니다.  
   
  사용자 지정 인증의 경우 클라이언트 애플리케이션은 <xref:System.Net.TransportContext.GetChannelBinding%2A> 메서드를 통해 <xref:System.Net.TransportContext> 및 CBT를 검색할 수 있는 <xref:System.Net.HttpWebRequest> 클래스의 <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=nameWithType> 또는 <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=nameWithType> 메서드를 사용할 수 있습니다.  
@@ -116,6 +120,7 @@ ms.locfileid: "84144853"
  <xref:System.Net.Mail.SmtpClient.TargetName%2A> 속성을 통해 SMTP 연결에 대한 Windows 통합 인증에 사용할 사용자 지정 SPN을 설정할 수 있습니다.  
   
 ## <a name="extended-protection-for-server-applications"></a>서버 애플리케이션에 대한 확장된 보호  
+
  <xref:System.Net.HttpListener>는 HTTP 인증을 수행할 때 서비스 바인딩의 유효성을 검사하기 위한 메커니즘을 자동으로 제공합니다.  
   
  가장 안전한 시나리오는 `HTTPS://` 접두사에 확장된 보호를 사용하도록 설정하는 것입니다. 이 경우 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement>를 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 또는 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>로 설정하고 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario>를 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>로 설정하여 <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType>를 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>로 설정합니다. <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 값은 <xref:System.Net.HttpListener>를 부분 강화 모드로 전환하지만 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>는 완전 강화 모드에 해당합니다.  

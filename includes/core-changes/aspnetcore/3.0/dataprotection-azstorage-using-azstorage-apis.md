@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: f6e4c3d5c5fd020562e48515554136e0f8b6785c
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440426"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032499"
 ---
 ### <a name="data-protection-dataprotectionblobs-uses-new-azure-storage-apis"></a>데이터 보호: DataProtection.Blobs에서 새로운 Azure Storage API 사용
 

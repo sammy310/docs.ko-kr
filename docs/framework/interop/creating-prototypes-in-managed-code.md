@@ -18,14 +18,15 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-ms.openlocfilehash: e83979e5843c52fc3a446a5b669ae8822b32ddad
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4260bc8b3f9a2550faa28dd4d35842327b4e5935
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555590"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244108"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>관리 코드에서 프로토타입 만들기
+
 이 항목에서는 관리되지 않는 함수에 액세스하는 방법을 설명하고 관리 코드에서 메서드 정의에 주석을 다는 여러 특성 필드를 소개합니다. 플랫폼 호출에서 사용되는 .NET 기반 선언을 생성하는 방법을 보여 주는 예제는 [플랫폼 호출을 사용하여 데이터 마샬링](marshaling-data-with-platform-invoke.md)을 참조하세요.  
   
  관리 코드에서 관리되지 않는 DLL 함수에 액세스하기 전에 함수 이름과 함수를 내보내는 DLL 이름을 알아야 합니다. 이 정보를 사용하여 DLL에서 구현되는 관리되지 않는 함수에 대한 관리되는 정의를 쓰기 시작할 수 있습니다. 또한 플랫폼 호출이 함수를 만들고 데이터를 함수로 또는 반대로 마샬링하는 방법을 조정할 수 있습니다.  
@@ -34,6 +35,7 @@ ms.locfileid: "90555590"
 > 문자열을 할당하는 Windows API 함수를 통해 `LocalFree`와 같은 메서드를 사용하여 문자열을 해제할 수 있습니다. 플랫폼 호출은 매개 변수를 다르게 처리합니다. 플랫폼 호출의 경우 매개 변수를 `String` 형식 대신 `IntPtr` 형식으로 설정합니다. <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> 클래스에서 제공된 메서드를 사용하여 형식을 문자열로 수동으로 변환하고 해제합니다.  
   
 ## <a name="declaration-basics"></a>선언 기본 사항  
+
  관리되지 않는 함수에 대한 관리되는 정의는 다음 예제와 같이 언어 종속적입니다. 전체 코드 예제를 보려면 [플랫폼 호출 예제](platform-invoke-examples.md)를 참조하세요.  
   
 ```vb
@@ -84,6 +86,7 @@ extern "C" int MessageBox(
 ```
   
 ## <a name="adjusting-the-definition"></a>정의 조정  
+
  명시적으로 설정하는지와 관계없이 특성 필드는 관리 코드 동작을 정의합니다. 플랫폼 호출은 어셈블리에서 메타데이터로 있는 다양한 필드에 설정된 기본값에 따라 작동합니다. 필드 하나 이상의 값을 조정하여 이 기본 동작을 변경할 수 있습니다. 대부분 <xref:System.Runtime.InteropServices.DllImportAttribute>를 사용하여 값을 설정합니다.  
   
  다음 표에는 플랫폼 호출과 관련된 전체 특성 필드 집합이 나와 있습니다. 표에는 각 필드에 대한 기본값과 이들 필드를 사용하여 관리되지 않는 DLL 함수를 정의하는 방법에 대한 정보 링크가 포함됩니다.  
@@ -102,9 +105,11 @@ extern "C" int MessageBox(
  자세한 참조 정보는 <xref:System.Runtime.InteropServices.DllImportAttribute>를 참조하세요.  
   
 ## <a name="platform-invoke-security-considerations"></a>플랫폼 호출 보안 고려 사항  
- <xref:System.Security.Permissions.SecurityAction> 열거형의 `Assert`, `Deny` 및 `PermitOnly` 멤버를 *스택 워크 한정자*라고 합니다. 이들 멤버는 플랫폼 호출 선언 및 COM IDL(Interface Definition Language) 문에서 선언 특성으로 사용될 경우 무시됩니다.  
+
+ <xref:System.Security.Permissions.SecurityAction> 열거형의 `Assert`, `Deny` 및 `PermitOnly` 멤버를 *스택 워크 한정자* 라고 합니다. 이들 멤버는 플랫폼 호출 선언 및 COM IDL(Interface Definition Language) 문에서 선언 특성으로 사용될 경우 무시됩니다.  
   
 ### <a name="platform-invoke-examples"></a>플랫폼 호출 예제  
+
  이 섹션의 플랫폼 호출 샘플에서는 스택 워크 한정자와 함께 `RegistryPermission` 특성을 사용하는 방법을 보여 줍니다.  
   
  다음 예제에서는 <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny` 및 `PermitOnly` 한정자가 무시됩니다.  
@@ -184,6 +189,7 @@ class PInvokeScenario
 ```  
   
 #### <a name="com-interop-examples"></a>COM Interop 예제  
+
  이 섹션의 COM Interop 샘플에서는 스택 워크 한정자와 함께 `RegistryPermission` 특성을 사용하는 방법을 보여 줍니다.  
   
  이전 섹션의 플랫폼 호출 예제와 비슷하게 다음 COM interop 인터페이스 선언은 `Assert`, `Deny` 및 `PermitOnly` 한정자를 무시합니다.  

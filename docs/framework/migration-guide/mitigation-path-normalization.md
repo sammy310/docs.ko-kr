@@ -3,17 +3,19 @@ title: '완화: 경로 정규화'
 description: .NET Framework 4.6.2를 대상으로 하는 앱부터 .NET Framework의 경로 정규화가 변경되는 방식에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-ms.openlocfilehash: 89dcc46d9f266ffd3635dc0cc02b634720356eda
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 6f7e07690ab06fc7ef03344556c045405a63c374
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475218"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253598"
 ---
 # <a name="mitigation-path-normalization"></a>완화: 경로 정규화
+
 .NET Framework 4.6.2를 대상으로 하는 앱부터 .NET Framework의 경로 정규화가 변경되었습니다.  
   
 ## <a name="what-is-path-normalization"></a>경로 정규화란?  
+
  경로 정규화 중에는 대상 운영 체제의 올바른 경로에 맞게 경로 또는 파일을 식별하는 문자열이 수정됩니다. 정규화에는 일반적으로 다음이 수행됩니다.  
   
 - 구성 요소 및 디렉터리 구분 기호 정규화  
@@ -25,6 +27,7 @@ ms.locfileid: "86475218"
 - 지정된 문자 자르기  
   
 ## <a name="the-changes"></a>변경 내용  
+
  .NET Framework 4.6.2를 대상으로 하는 앱부터, 경로 정규화가 다음과 같이 변경되었습니다.  
   
 - 런타임은 운영 체제의 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 함수를 지연시켜 경로를 정규화합니다.  
@@ -44,6 +47,7 @@ ms.locfileid: "86475218"
 .NET Framework 4.6.1 이하 버전을 대상으로 하지만 .NET Framework 4.6.2 이상에서 실행되는 앱은 이러한 변경에 의해 영향을 받지 않습니다.  
   
 ## <a name="mitigation"></a>완화  
+
  .NET Framework 4.6.2 이상을 대상으로 하는 앱은 애플리케이션 구성 파일의 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음을 추가하여 이 변경을 옵트아웃하고 레거시 정규화를 사용할 수 있습니다.  
   
 ```xml  

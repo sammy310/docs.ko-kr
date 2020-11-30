@@ -10,14 +10,15 @@ helpviewer_keywords:
 - profile [.NET Framework Client Profile]
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
-ms.openlocfilehash: e199dccd30b8648177b3da5cc173ea3a7f9a60d8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 92ade654b20c5971482464ce1cb9619c434679b6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555291"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236392"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
+
 .NET Client Profile은 .NET Framework 4 및 이전 버전에서 제공되었고 클라이언트 애플리케이션을 위해 최적화된 .NET Framework의 하위 집합입니다. .NET Framework는 Windows, Windows Phone 및 Microsoft Azure용 개발 플랫폼으로서, 관리되는 앱 실행 환경과 .NET Framework 클래스 라이브러리를 제공합니다. .NET Framework 4 및 이전 버전에서는 전체 .NET Framework와 Client Profile의 두 가지 배포 옵션을 제공했습니다. Client Profile로 전체 .NET Framework보다 더 빠르게 배포하고 더 작은 응용 프로그램 설치 패키지를 사용할 수 있게 되었습니다.  
   
  .NET Framework 4.5부터 시작하여 Client Profile은 중단되었고 완전히 재배포 가능 패키지만 사용할 수 있습니다. 작은 다운로드 크기 및 빠른 배포와 같이, .NET Framework 4.5에서 제공하는 최적화 덕분에 별도의 배포 패키지가 불필요하게 되었습니다. 재배포 가능한 단일 패키지에서 설치 프로세스를 간소화하고 응용 프로그램의 배포 옵션을 간소화합니다.  

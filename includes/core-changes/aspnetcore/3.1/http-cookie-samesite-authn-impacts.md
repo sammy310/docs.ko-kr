@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 8b6d334677991382d235fd53cd3c98e3a77d650d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539605"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032444"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: 브라우저 SameSite 변경 내용이 인증에 영향
 
@@ -78,7 +78,7 @@ Electron 버전에는 이전 버전의 Chromium이 포함되어 있습니다. �
 
 2016 `SameSite` 표준에 따라 알 수 없는 값을 `SameSite=Strict` 값으로 처리합니다. 따라서 원래 표준을 지원하는 모든 이전 브라우저는 값이 `None`인 `SameSite` 속성이 표시될 때 중단될 수 있습니다. 이러한 이전 브라우저를 지원하려는 경우 웹앱은 브라우저 검색을 구현해야 합니다. `User-Agent` 요청 헤더 값이 매우 불안정하고 매주 변경되기 때문에 ASP.NET Core에서 브라우저 검색을 구현하지 않습니다. 대신, 쿠키 정책의 확장 지점을 사용하여 `User-Agent`별 논리를 추가할 수 있습니다.
 
-*Startup.cs*에서 다음 코드를 추가합니다.
+*Startup.cs* 에서 다음 코드를 추가합니다.
 
 ```csharp
 private void CheckSameSite(HttpContext httpContext, CookieOptions options)

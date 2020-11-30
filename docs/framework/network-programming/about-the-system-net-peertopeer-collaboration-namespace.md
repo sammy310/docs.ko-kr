@@ -2,17 +2,19 @@
 title: System.Net.PeerToPeer.Collaboration 네임스페이스 정보
 ms.date: 03/30/2017
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
-ms.openlocfilehash: f0c9ecaacc1d875aac8eed61a85ca7579f5cb8a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54eaf1a99aab8b1db61f4b46237d57104c9d1a44
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "64649521"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250712"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>System.Net.PeerToPeer.Collaboration 네임스페이스 정보
+
 <xref:System.Net.PeerToPeer.Collaboration> 네임스페이스는 피어 투 피어 협업 인프라를 사용하여 피어 협업 활동을 구현하는 데 사용되는 클래스 및 API를 제공합니다.  
   
 ## <a name="classes"></a>클래스  
+
  피어 투 피어 협업 구현에 사용되는 기본 클래스는 다음과 같습니다.  
   
 - <xref:System.Net.PeerToPeer.Collaboration.ContactManager> - 피어 연락처를 저장하는 데 사용할 수 있습니다.  

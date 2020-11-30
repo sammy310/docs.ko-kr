@@ -3,17 +3,19 @@ title: WebRequest 문제 및 예외 이해
 description: WebRequest 및 파생 클래스는 예외를 throw하여 비정상 상태를 알립니다. .NET Framework에서 이러한 조건을 확인하는 솔루션을 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: aa9ab989bad7940e82cc4fd8fd22ca3915f7b800
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 27fde2a3cf3e6a3469a47bdd9efe70d31620777d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502082"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236327"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>WebRequest 문제 및 예외 이해
+
 <xref:System.Net.WebRequest> 및 파생 클래스(<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> 및 <xref:System.Net.FileWebRequest>)는 예외를 throw하여 비정상 상태를 알립니다. 이러한 문제의 해결이 분명하지 않은 경우도 있습니다.  
   
 ## <a name="solutions"></a>솔루션  
+
  <xref:System.Net.WebException>의 <xref:System.Net.WebException.Status%2A> 속성을 검사하여 문제를 확인합니다. 다음 표에서는 여러 상태 값과 몇 가지 가능한 해결 방법을 보여 줍니다.  
   
 |Status|설명|솔루션|  
