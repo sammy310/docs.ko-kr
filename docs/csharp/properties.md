@@ -4,10 +4,10 @@ description: 유효성 검사, 계산된 값, 지연 평가, 속성 변경 알�
 ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
 ms.openlocfilehash: 28050a77e1f7b0ac148bba6112aa79ef4d46b710
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89358910"
 ---
 # <a name="properties"></a>속성
@@ -39,7 +39,7 @@ ms.locfileid: "89358910"
 
 [!code-csharp[Person class with properties and backing field](../../samples/snippets/csharp/properties/Person.cs#4)]
 
-속성 구현이 단일 식인 경우 getter 또는 setter에 대해 *식 본문 멤버*를 사용할 수 있습니다.
+속성 구현이 단일 식인 경우 getter 또는 setter에 대해 *식 본문 멤버* 를 사용할 수 있습니다.
 
 [!code-csharp[Person class with properties and expression bodied getters and setters](../../samples/snippets/csharp/properties/Person.cs#5)]
 
@@ -107,15 +107,15 @@ public class Measurements
 
 위 예에서는 [문자열 보간](./language-reference/tokens/interpolated.md) 기능을 사용하여 전체 이름에 대한 서식이 지정된 문자열을 만듭니다.
 
-계산된 `FullName` 속성을 만드는 보다 간결한 방법을 제공하는 *식 본문 멤버*를 사용할 수도 있습니다.
+계산된 `FullName` 속성을 만드는 보다 간결한 방법을 제공하는 *식 본문 멤버* 를 사용할 수도 있습니다.
 
 [!code-csharp[A computed property using an expression bodied member](../../samples/snippets/csharp/properties/Person.cs#11)]
 
-*식 본문 멤버*는 *람다 식* 구문을 사용하여 단일 식이 포함된 메서드를 정의합니다. 여기서 해당 식은 person 개체의 전체 이름을 반환합니다.
+*식 본문 멤버* 는 *람다 식* 구문을 사용하여 단일 식이 포함된 메서드를 정의합니다. 여기서 해당 식은 person 개체의 전체 이름을 반환합니다.
 
 ### <a name="cached-evaluated-properties"></a>캐시된 평가 속성
 
-계산된 속성의 개념과 스토리지를 혼합하고 *캐시된 평가 속성*을 만들 수 있습니다.  예를 들어 처음 액세스할 때만 문자열 형식이 지정되도록 `FullName` 속성을 업데이트할 수 있습니다.
+계산된 속성의 개념과 스토리지를 혼합하고 *캐시된 평가 속성* 을 만들 수 있습니다.  예를 들어 처음 액세스할 때만 문자열 형식이 지정되도록 `FullName` 속성을 업데이트할 수 있습니다.
 
 [!code-csharp[Caching the value of a computed property](../../samples/snippets/csharp/properties/Person.cs#12)]
 
@@ -141,7 +141,7 @@ C# 7.3부터 필드 특성은 자동 구현된 속성의 컴파일러에서 생�
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-`?.` 연산자를 *null 조건부 연산자*라고 합니다. 연산자의 오른쪽을 평가하기 전에 null 참조를 확인합니다. 최종 결과로, `PropertyChanged` 이벤트에 대한 구독자가 없는 경우 이벤트를 발생시키는 코드가 실행되지 않습니다. 해당 경우 이 확인을 수행하지 않으면 `NullReferenceException`이 throw됩니다. 자세한 내용은 [`events`](events-overview.md)를 참조하세요. 또한 이 예제에서는 새 `nameof` 연산자를 사용하여 속성 이름 기호에서 해당 텍스트 표현으로 변환합니다.
+`?.` 연산자를 *null 조건부 연산자* 라고 합니다. 연산자의 오른쪽을 평가하기 전에 null 참조를 확인합니다. 최종 결과로, `PropertyChanged` 이벤트에 대한 구독자가 없는 경우 이벤트를 발생시키는 코드가 실행되지 않습니다. 해당 경우 이 확인을 수행하지 않으면 `NullReferenceException`이 throw됩니다. 자세한 내용은 [`events`](events-overview.md)를 참조하세요. 또한 이 예제에서는 새 `nameof` 연산자를 사용하여 속성 이름 기호에서 해당 텍스트 표현으로 변환합니다.
 `nameof`를 사용하면 속성 이름을 잘못 입력하는 오류를 줄일 수 있습니다.
 
 <xref:System.ComponentModel.INotifyPropertyChanged>를 구현하는 작업은 필요한 시나리오를 지원하기 위해 접근자의 코드를 작성할 수 있는 경우의 예제입니다.

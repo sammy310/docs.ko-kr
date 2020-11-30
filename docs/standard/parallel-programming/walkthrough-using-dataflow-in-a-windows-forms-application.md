@@ -6,24 +6,27 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-ms.openlocfilehash: c09259afdc5ede32791ba895ca012cdc2a0a1c18
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: da42358007b887f6bab05c35e0f7542f1069abd4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829949"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689812"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>연습: Windows Forms 애플리케이션에서 데이터 흐름 사용
+
 이 문서에서는 Windows Forms 애플리케이션에서 이미지 처리를 수행하는 데이터 흐름 블록의 네트워크를 만드는 방법을 보여 줍니다.  
   
  이 예제는 지정된 폴더에서 이미지 파일을 로드하고 합성 이미지를 만들어 결과를 표시합니다. 이 예제에서는 네트워크를 통해 이미지를 라우팅하는 데 데이터 흐름 모델을 사용합니다. 데이터 흐름 모델에서는, 프로그램의 개별 구성 요소가 메시지를 전달하여 서로 통신합니다. 구성 요소가 메시지를 받으면 어떤 작업을 수행한 후 결과를 다른 구성 요소에 전달합니다. 이를 애플리케이션에서 제어 구조(예 : 조건 문, 루프 등)를 사용하는 제어 흐름 모델과 비교하여 프로그램에서 작업 순서를 제어합니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
+
  이 연습을 시작하기 전에 [데이터 흐름](dataflow-task-parallel-library.md)을 읽어 보세요.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="sections"></a>섹션  
+
  이 연습에는 다음과 같은 섹션이 있습니다.  
   
 - [Windows Forms 애플리케이션 만들기](#winforms)  
@@ -35,7 +38,9 @@ ms.locfileid: "94829949"
 - [전체 예제](#complete)  
   
 <a name="winforms"></a>
+
 ## <a name="creating-the-windows-forms-application"></a>Windows Forms 애플리케이션 만들기  
+
  이 섹션에서는 기본 Windows Forms 애플리케이션을 만들고 기본 폼에 컨트롤을 추가하는 방법을 설명합니다.  
   
 ### <a name="to-create-the-windows-forms-application"></a>Windows Forms 애플리케이션을 만들려면  
@@ -51,7 +56,9 @@ ms.locfileid: "94829949"
 5. 기본 폼에 <xref:System.Windows.Forms.PictureBox> 개체를 추가합니다. <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>으로 설정합니다.  
   
 <a name="network"></a>
+
 ## <a name="creating-the-dataflow-network"></a>데이터 흐름 네트워크 만들기  
+
  이 섹션에서는 이미지 처리를 수행하는 데이터 흐름 네트워크를 만드는 방법을 설명합니다.  
   
 ### <a name="to-create-the-dataflow-network"></a>데이터 흐름 네트워크를 만들려면  
@@ -101,7 +108,9 @@ ms.locfileid: "94829949"
  이 예제에서는 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 속성이 데이터 흐름 블록 실행을 영구적으로 취소하므로 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 속성을 설정하는 대신, 공유된 취소 토큰을 사용합니다. 이 예제에서는 취소 토큰을 통해 사용자가 하나 이상의 작업을 취소한 경우에도, 동일한 데이터 흐름 네트워크를 여러 번 재사용할 수 있습니다. <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>를 사용하여 데이터 흐름 블록 실행을 영구적으로 취소하는 예제를 보려면 [방법: 데이터 흐름 블록 취소](how-to-cancel-a-dataflow-block.md)를 참조하세요.  
   
 <a name="ui"></a>
+
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>사용자 인터페이스에 데이터 흐름 네트워크 연결  
+
  이 섹션에서는 사용자 인터페이스에 데이터 흐름 네트워크를 연결하는 방법에 대해 설명합니다. 복합 이미지 생성 및 작업 취소는 **폴더 선택** 및 **취소** 단추에서 시작됩니다. 사용자가 이러한 단추 중 하나를 선택하면 해당 작업이 비동기식으로 시작됩니다.  
   
 ### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>사용자 인터페이스에 데이터 흐름 네트워크를 연결하려면  
@@ -119,7 +128,9 @@ ms.locfileid: "94829949"
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   
 <a name="complete"></a>
+
 ## <a name="the-complete-example"></a>전체 예제  
+
  다음 예제에서는 이 연습의 전체 코드를 보여 줍니다.  
   
  [!code-csharp[TPLDataflow_CompositeImages#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#100)]  

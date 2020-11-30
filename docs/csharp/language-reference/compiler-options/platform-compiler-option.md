@@ -10,10 +10,10 @@ helpviewer_keywords:
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 ms.openlocfilehash: 3fdb030dfc141b011f5faa827a4e4bb45ae38d19
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89466016"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform(C# 컴파일러 옵션)
@@ -35,27 +35,27 @@ anycpu(기본값), anycpu32bitpreferred, ARM, x64, x86 또는 Itanium입니다.
 
 - **anycpu**(기본값)는 어셈블리를 모든 플랫폼에서 실행되도록 컴파일합니다. 애플리케이션은 가능할 때마다 64비트로 실행되고 해당 모드를 사용할 수 있을 때만 32비트로 전환됩니다.
 
-- **anycpu32bitpreferred**는 어셈블리를 모든 플랫폼에서 실행되도록 컴파일합니다. 애플리케이션은 64비트와 32비트 애플리케이션을 모두 지원하는 시스템에서 32비트로 실행됩니다. .NET Framework 4.5 이상을 대상으로 하는 프로젝트에 대해서만 이 옵션을 지정할 수 있습니다.
+- **anycpu32bitpreferred** 는 어셈블리를 모든 플랫폼에서 실행되도록 컴파일합니다. 애플리케이션은 64비트와 32비트 애플리케이션을 모두 지원하는 시스템에서 32비트로 실행됩니다. .NET Framework 4.5 이상을 대상으로 하는 프로젝트에 대해서만 이 옵션을 지정할 수 있습니다.
 
-- **ARM**은 ARM(고급 RISC 컴퓨터) 프로세서가 있는 컴퓨터에서 실행할 어셈블리를 컴파일합니다.
+- **ARM** 은 ARM(고급 RISC 컴퓨터) 프로세서가 있는 컴퓨터에서 실행할 어셈블리를 컴파일합니다.
 
-- **ARM64**는 A64 명령 집합을 지원하는 ARM(고급 RISC 머신) 프로세서가 있는 컴퓨터에서 64비트 CLR에 의해 실행되도록 어셈블리를 컴파일합니다.
+- **ARM64** 는 A64 명령 집합을 지원하는 ARM(고급 RISC 머신) 프로세서가 있는 컴퓨터에서 64비트 CLR에 의해 실행되도록 어셈블리를 컴파일합니다.
 
-- **x64**는 AMD64 또는 EM64T 명령 집합을 지원하는 컴퓨터에서 64비트 CLR에 의해 실행되도록 어셈블리를 컴파일합니다.
+- **x64** 는 AMD64 또는 EM64T 명령 집합을 지원하는 컴퓨터에서 64비트 CLR에 의해 실행되도록 어셈블리를 컴파일합니다.
 
-- **x86**은 32비트, x86 호환 CLR에 의해 실행되도록 어셈블리를 컴파일합니다.
+- **x86** 은 32비트, x86 호환 CLR에 의해 실행되도록 어셈블리를 컴파일합니다.
 
-- **Itanium**은 Itanium 프로세서 탑재 컴퓨터에서 64비트 CLR에 의해 실행되도록 어셈블리를 컴파일합니다.
+- **Itanium** 은 Itanium 프로세서 탑재 컴퓨터에서 64비트 CLR에 의해 실행되도록 어셈블리를 컴파일합니다.
 
 64비트 Windows 운영 체제:
 
-- **-platform:x86**으로 컴파일된 어셈블리는 WOW64에서 실행되는 32비트 CLR에서 실행됩니다.
+- **-platform:x86** 으로 컴파일된 어셈블리는 WOW64에서 실행되는 32비트 CLR에서 실행됩니다.
 
-- **-platform:anycpu**로 컴파일된 DLL은 이 DLL이 로드된 프로세스와 동일한 CLR에서 실행됩니다.
+- **-platform:anycpu** 로 컴파일된 DLL은 이 DLL이 로드된 프로세스와 동일한 CLR에서 실행됩니다.
 
-- **-platform:anycpu**로 컴파일된 실행 파일은 64비트 CLR에서 실행됩니다.
+- **-platform:anycpu** 로 컴파일된 실행 파일은 64비트 CLR에서 실행됩니다.
 
-- **-platform:anycpu32bitpreferred**로 컴파일된 실행 파일은 32비트 CLR에서 실행됩니다.
+- **-platform:anycpu32bitpreferred** 로 컴파일된 실행 파일은 32비트 CLR에서 실행됩니다.
 
 **anycpu32bitpreferred** 설정은 실행 파일(.EXE)에 대해서만 유효하고 .NET Framework 4.5 이상이 필요합니다.
 

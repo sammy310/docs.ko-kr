@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: 74a7a5b941596ba9fffc62ef87a01763937d88c0
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "91608779"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Azure Functions에 모델 배포
@@ -28,48 +28,48 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
 ## <a name="azure-functions-sample-overview"></a>Azure Functions 샘플 개요
 
-이 샘플은 미리 학습된 이진 분류 모델을 사용하여 텍스트의 감정을 긍정 또는 부정으로 분류하는 **C# HTTP 트리거 Azure Functions 애플리케이션**입니다. Azure Functions는 클라우드의 관리되는 서버리스 환경에서 작은 코드를 대규모로 실행하는 간편한 방법을 제공합니다. 이 샘플의 코드는 GitHub의 [dotnet/machinelearning-samples repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction)에서 찾을 수 있습니다.
+이 샘플은 미리 학습된 이진 분류 모델을 사용하여 텍스트의 감정을 긍정 또는 부정으로 분류하는 **C# HTTP 트리거 Azure Functions 애플리케이션** 입니다. Azure Functions는 클라우드의 관리되는 서버리스 환경에서 작은 코드를 대규모로 실행하는 간편한 방법을 제공합니다. 이 샘플의 코드는 GitHub의 [dotnet/machinelearning-samples repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction)에서 찾을 수 있습니다.
 
 ## <a name="create-azure-functions-project"></a>Azure Functions 프로젝트 만들기
 
-1. Visual Studio 2017을 엽니다. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다. **새 프로젝트** 대화 상자에서 **Visual C#** 노드와 **Cloud** 노드를 차례로 선택합니다. 그런 다음, **Azure Functions** 프로젝트 템플릿을 선택합니다. **이름** 텍스트 상자에 “SentimentAnalysisFunctionsApp”을 입력한 다음, **확인** 단추를 선택합니다.
+1. Visual Studio 2017을 엽니다. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트** 를 선택합니다. **새 프로젝트** 대화 상자에서 **Visual C#** 노드와 **Cloud** 노드를 차례로 선택합니다. 그런 다음, **Azure Functions** 프로젝트 템플릿을 선택합니다. **이름** 텍스트 상자에 “SentimentAnalysisFunctionsApp”을 입력한 다음, **확인** 단추를 선택합니다.
 1. **새 프로젝트** 대화 상자에서 프로젝트 옵션 위의 드롭다운을 열고 **Azure Functions v2(.NET Core)** 를 선택합니다. 그런 다음, **HTTP 트리거** 프로젝트를 선택한 후 **확인** 단추를 선택합니다.
 1. 프로젝트에서 *MLModels* 디렉터리를 만들어 모델을 저장합니다.
 
-    **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 폴더**를 선택합니다. “MLModels”를 입력하고 Enter 키를 누릅니다.
+    **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 폴더** 를 선택합니다. “MLModels”를 입력하고 Enter 키를 누릅니다.
 
-1. **Microsoft.ML NuGet 패키지** 버전 **1.3.1**을 설치합니다.
+1. **Microsoft.ML NuGet 패키지** 버전 **1.3.1** 을 설치합니다.
 
-    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 소스로 선택하고, [찾아보기] 탭을 선택하고, **Microsoft.ML**을 검색하고, 목록에서 해당 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
+    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리** 를 선택합니다. “nuget.org”를 패키지 소스로 선택하고, [찾아보기] 탭을 선택하고, **Microsoft.ML** 을 검색하고, 목록에서 해당 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
 
-1. **Microsoft.Azure.Functions.Extensions NuGet 패키지**를 설치합니다.
+1. **Microsoft.Azure.Functions.Extensions NuGet 패키지** 를 설치합니다.
 
-    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 소스로 선택하고 찾아보기 탭을 선택합니다. **Microsoft.Azure.Functions.Extensions**를 검색하고 목록에서 해당 패키지를 선택한 다음, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
+    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리** 를 선택합니다. “nuget.org”를 패키지 소스로 선택하고 찾아보기 탭을 선택합니다. **Microsoft.Azure.Functions.Extensions** 를 검색하고 목록에서 해당 패키지를 선택한 다음, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
 
-1. **Microsoft.Extensions.ML NuGet 패키지** 버전 **0.15.1**을 설치합니다.
+1. **Microsoft.Extensions.ML NuGet 패키지** 버전 **0.15.1** 을 설치합니다.
 
-    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 원본으로 선택하고, 찾아보기 탭을 선택하고, **Microsoft.Extensions.ML**을 검색하고, 목록에서 해당 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
+    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리** 를 선택합니다. “nuget.org”를 패키지 원본으로 선택하고, 찾아보기 탭을 선택하고, **Microsoft.Extensions.ML** 을 검색하고, 목록에서 해당 패키지를 선택하고, **설치** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
 
-1. **Microsoft.NET.Sdk.Functions NuGet 패키지** 버전 **1.0.31**을 설치합니다.
+1. **Microsoft.NET.Sdk.Functions NuGet 패키지** 버전 **1.0.31** 을 설치합니다.
 
-    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. “nuget.org”를 패키지 소스로 선택하고 설치됨 탭을 선택합니다. **Microsoft.NET.Sdk.Functions**를 검색하고 목록에서 해당 패키지를 선택한 후 버전 드롭다운에서 **1.0.31**을 선택하고 **업데이트** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
+    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리** 를 선택합니다. “nuget.org”를 패키지 소스로 선택하고 설치됨 탭을 선택합니다. **Microsoft.NET.Sdk.Functions** 를 검색하고 목록에서 해당 패키지를 선택한 후 버전 드롭다운에서 **1.0.31** 을 선택하고 **업데이트** 단추를 선택합니다. **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
 
 ## <a name="add-pre-trained-model-to-project"></a>프로젝트에 미리 학습된 모델 추가
 
 1. 미리 빌드된 모델을 *MLModels* 폴더에 복사합니다.
-1. 솔루션 탐색기에서 미리 빌드된 모델 파일을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **고급** 아래에서 **출력 디렉터리에 복사** 값을 **변경된 내용만 복사**로 변경합니다.
+1. 솔루션 탐색기에서 미리 빌드된 모델 파일을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다. **고급** 아래에서 **출력 디렉터리에 복사** 값을 **변경된 내용만 복사** 로 변경합니다.
 
 ## <a name="create-azure-function-to-analyze-sentiment"></a>감정을 분석하는 Azure Function 만들기
 
 감정을 예측하는 클래스를 만듭니다. 새 클래스를 프로젝트에 추가합니다.
 
-1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 항목**을 선택합니다.
+1. **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 항목** 을 선택합니다.
 
-1. **새 항목 추가** 대화 상자에서 **Azure 함수**를 선택하고 **이름** 필드를 *AnalyzeSentiment.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
+1. **새 항목 추가** 대화 상자에서 **Azure 함수** 를 선택하고 **이름** 필드를 *AnalyzeSentiment.cs* 로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
 
-1. **새 Azure 함수** 대화 상자에서 **HTTP 트리거**를 선택합니다. 그런 다음, **확인** 단추를 선택합니다.
+1. **새 Azure 함수** 대화 상자에서 **HTTP 트리거** 를 선택합니다. 그런 다음, **확인** 단추를 선택합니다.
 
-    *AnalyzeSentiment.cs* 파일이 코드 편집기에서 열립니다. 다음 `using` 문을 *AnalyzeSentiment.cs*의 맨 위에 추가합니다.
+    *AnalyzeSentiment.cs* 파일이 코드 편집기에서 열립니다. 다음 `using` 문을 *AnalyzeSentiment.cs* 의 맨 위에 추가합니다.
 
     [!code-csharp [AnalyzeUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/AnalyzeSentiment.cs#L1-L11)]
 
@@ -86,11 +86,11 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
 입력 데이터 및 예측에 대한 일부 클래스를 만들어야 합니다. 새 클래스를 프로젝트에 추가합니다.
 
-1. 프로젝트에서 *DataModels* 디렉터리를 만들어 데이터 모델을 저장합니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 폴더**를 선택합니다. “DataModels”를 입력하고 Enter 키를 누릅니다.
-2. 솔루션 탐색기에서 *DataModels* 디렉터리를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목**을 선택합니다.
-3. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *SentimentData.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
+1. 프로젝트에서 *DataModels* 디렉터리를 만들어 데이터 모델을 저장합니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 폴더** 를 선택합니다. “DataModels”를 입력하고 Enter 키를 누릅니다.
+2. 솔루션 탐색기에서 *DataModels* 디렉터리를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목** 을 선택합니다.
+3. **새 항목 추가** 대화 상자에서 **클래스** 를 선택하고 **이름** 필드를 *SentimentData.cs* 로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
 
-    *SentimentData.cs* 파일이 코드 편집기에서 열립니다. 다음 using 문을 *SentimentData.cs*의 맨 위에 추가합니다.
+    *SentimentData.cs* 파일이 코드 편집기에서 열립니다. 다음 using 문을 *SentimentData.cs* 의 맨 위에 추가합니다.
 
     [!code-csharp [SentimentDataUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentData.cs#L1)]
 
@@ -98,8 +98,8 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
     [!code-csharp [SentimentData](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentData.cs#L5-L13)]
 
-4. 솔루션 탐색기에서 *DataModels* 디렉터리를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목**을 선택합니다.
-5. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *SentimentPrediction.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다. *SentimentPrediction.cs* 파일이 코드 편집기에서 열립니다. 다음 using 문을 *SentimentPrediction.cs*의 맨 위에 추가합니다.
+4. 솔루션 탐색기에서 *DataModels* 디렉터리를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목** 을 선택합니다.
+5. **새 항목 추가** 대화 상자에서 **클래스** 를 선택하고 **이름** 필드를 *SentimentPrediction.cs* 로 변경합니다. 그런 다음, **추가** 단추를 선택합니다. *SentimentPrediction.cs* 파일이 코드 편집기에서 열립니다. 다음 using 문을 *SentimentPrediction.cs* 의 맨 위에 추가합니다.
 
     [!code-csharp [SentimentPredictionUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/DataModels/SentimentPrediction.cs#L1)]
 
@@ -115,9 +115,9 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
 [종속성 주입](https://en.wikipedia.org/wiki/Dependency_injection)에 대한 자세한 내용은 다음 링크를 참조하세요.
 
-1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 항목**을 선택합니다.
-1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *Startup.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
-1. 다음 using 문을 *Startup.cs*의 맨 위에 추가합니다.
+1. **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 항목** 을 선택합니다.
+1. **새 항목 추가** 대화 상자에서 **클래스** 를 선택하고 **이름** 필드를 *Startup.cs* 로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
+1. 다음 using 문을 *Startup.cs* 의 맨 위에 추가합니다.
 
     [!code-csharp [StartupUsings](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L1-L6)]
 
@@ -138,7 +138,7 @@ Azure Functions 서버리스 환경을 통해 HTTP에서의 예측을 위해 미
 
     [!code-csharp [DefineStartupVars](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L13-L14)]
 
-1. 그런 다음 `_environment` 및 `_modelPath` 변수 값을 설정하는 생성자를 만듭니다. 애플리케이션을 로컬로 실행하는 경우 기본 환경은 *개발*입니다.
+1. 그런 다음 `_environment` 및 `_modelPath` 변수 값을 설정하는 생성자를 만듭니다. 애플리케이션을 로컬로 실행하는 경우 기본 환경은 *개발* 입니다.
 
     [!code-csharp [StartupCtor](~/machinelearning-samples/samples/csharp/end-to-end-apps/ScalableMLModelOnAzureFunction/SentimentAnalysisFunctionsApp/Startup.cs#L16-L29)]
 

@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-ms.openlocfilehash: 247ebb868a9256deaf59c1369e6143e15af4d6b0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 64eb346ba57e9af9f5be0cc1b42398c4f539d4d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829975"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689903"
 ---
 # <a name="understanding-speedup-in-plinq"></a>PLINQ의 속도 향상 이해
+
 PLINQ의 기본 목적은 다중 코어 컴퓨터에서 쿼리 대리자를 병렬로 실행하여 LINQ to Objects 쿼리의 실행 속도를 높이는 것입니다. PLINQ는 소스 컬렉션의 각 요소 처리가 개별 대리자 간에 공유 상태가 관련되지 않고 독립적인 경우 최고의 성능을 발휘합니다. 이러한 작업은 LINQ to Objects 및 PLINQ에서 공통적이고 여러 스레드가 쉽게 예약에 참여하므로 “즐거운 병렬”이라고 합니다. 그러나 모든 쿼리가 완전히 즐거운 병렬 작업으로 구성되는 것은 아니고, 대부분의 경우 쿼리에는 병렬 처리할 수 없거나 병렬 실행을 느리게 하는 일부 연산자가 포함됩니다. 또한 완전히 즐거운 병렬인 쿼리를 사용해도 PLINQ는 스레드에서 데이터 분할하고 작업을 예약해야 하며 일반적으로 쿼리가 완료될 때 결과를 병합해야 합니다. 이러한 모든 작업은 병렬 처리 계산 비용에 추가됩니다. 이러한 병렬 처리 추가 비용을 ‘오버헤드’라고 합니다. PLINQ 쿼리의 성능을 최적화하기 위해 목표는 즐거운 병렬인 파트를 최대화하고 오버헤드가 필요한 파트를 최소화하는 것입니다. 이 문서에서는 올바른 결과를 생성하면서 가능한 한 효율적인 PLINQ 쿼리를 작성하는 데 도움이 되는 정보를 제공합니다.  
   
 ## <a name="factors-that-impact-plinq-query-performance"></a>PLINQ 쿼리 성능에 영향을 주는 요소  
+
  다음 섹션에는 병렬 쿼리 성능에 영향을 주는 가장 중요한 요소 중 일부를 보여줍니다. 이들은 모든 경우에 독립적으로 쿼리 성능을 예측할 만큼 충분하지 않은 일반 문입니다. 항상 다양한 대표 구성 및 로드를 사용하여 컴퓨터에서 특정 쿼리의 실제 성능을 측정하는 것이 중요합니다.  
   
 1. 전체 작업의 계산 비용.  
@@ -65,6 +67,7 @@ PLINQ의 기본 목적은 다중 코어 컴퓨터에서 쿼리 대리자를 병�
      경우에 따라 인덱싱할 수 있는 소스 컬렉션에 대한 PLINQ 쿼리로 인해 작업이 불균형해질 수 있습니다. 이 경우 사용자 지정 파티셔너를 만들어 쿼리 성능을 높일 수 있습니다. 자세한 내용은 [PLINQ 및 TPL에 대한 사용자 지정 파티셔너](custom-partitioners-for-plinq-and-tpl.md)를 참조하세요.  
   
 ## <a name="when-plinq-chooses-sequential-mode"></a>PLINQ가 순차 모드를 선택할 경우  
+
  PLINQ는 항상 최소한 쿼리가 순차적으로 실행되는 것만큼 쿼리를 빠르게 실행하려고 합니다. PLINQ는 사용자 대리자의 계산 비용이 얼마나 비싼지 또는 입력 소스가 얼마나 큰지 확인하지 않지만 특정 쿼리 “모양”를 검색합니다. 특히, 일반적으로 병렬 모드에서 쿼리를 더 느리게 실행하는 쿼리 연산자 또는 연산자 조합을 검색합니다. 이러한 모양을 찾으면 PLINQ는 기본적으로 순차 모드로 돌아갑니다.  
   
  그러나 특정 쿼리 성능을 측정한 후 실제로 병렬 모드에서 더 빠르게 실행되는 것을 확인할 수 있습니다. 이 경우에는 <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> 메서드를 통해 <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> 플래그를 사용하여 쿼리를 병렬 처리하도록 PLINQ에 지시할 수 있습니다. 자세한 내용은 [방법: PLINQ에 실행 모드 지정](how-to-specify-the-execution-mode-in-plinq.md)을 참조하세요.  

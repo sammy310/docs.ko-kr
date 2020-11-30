@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: 811ee0d2d1068fc1fe8e44aa17f01e2dc243fb98
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: aa5a13b5b1cfcd7305df39c1ff5005deb45eb4ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826237"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672177"
 ---
 # <a name="mutexes"></a>뮤텍스
 
@@ -21,6 +21,7 @@ ms.locfileid: "94826237"
  코드 예제는 <xref:System.Threading.Mutex.%23ctor%2A> 생성자에 대한 참조 설명서를 참조하세요.  
   
 ## <a name="using-mutexes"></a>뮤텍스 사용  
+
  스레드는 소유권을 요청하는 뮤텍스의 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드를 호출합니다. 호출은 뮤텍스를 사용할 수 있거나 선택적 시간 제한 간격이 경과할 때까지 차단합니다. 뮤텍스의 상태는 스레드가 소유하지 않는 경우 신호를 받습니다.  
   
  스레드는 해당 <xref:System.Threading.Mutex.ReleaseMutex%2A> 메서드를 호출하여 뮤텍스를 해제합니다. 뮤텍스에는 스레드 선호도가 있습니다. 즉, 뮤텍스를 소유하는 스레드에 의해서만 해제될 수 있습니다. 스레드가 소유하지 않는 뮤텍스를 해제하는 경우 스레드에서 <xref:System.ApplicationException>이 throw됩니다.  
@@ -30,11 +31,13 @@ ms.locfileid: "94826237"
  스레드가 <xref:System.Threading.Mutex>를 소유하는 경우 해당 스레드는 해당 실행을 차단하지 않고 반복되는 대기 요청 호출에서 동일한 <xref:System.Threading.Mutex>를 지정할 수 있지만 소유권을 해제하는 횟수만큼 <xref:System.Threading.Mutex>를 해제해야 합니다.  
   
 ## <a name="abandoned-mutexes"></a>중단된 뮤텍스  
+
  스레드가 <xref:System.Threading.Mutex>를 해제하지 않고 종료하는 경우 뮤텍스는 중단되도록 명령됩니다. 뮤텍스가 보호하는 리소스가 일관성 없는 상태로 남을 수도 있으므로 이는 종종 심각한 프로그래밍 오류를 나타냅니다. <xref:System.Threading.AbandonedMutexException>은 뮤텍스를 획득하는 다음 스레드에서 throw됩니다.
   
  시스템 차원 뮤텍스의 경우 중단된 뮤텍스는 애플리케이션이 갑자기 종료되었음을 나타낼 수 있습니다(예: Windows 작업 관리자를 사용하여).  
   
 ## <a name="local-and-system-mutexes"></a>로컬 및 시스템 뮤텍스  
+
  뮤텍스는 로컬 뮤텍스 및 명명된 시스템 뮤텍스로 두 가지 유형입니다. 이름을 허용하는 생성자를 사용하여 <xref:System.Threading.Mutex> 개체를 만드는 경우 해당 이름의 운영 체제 개체에 연결됩니다. 명명된 시스템 뮤텍스는 운영 체제 전체에서 볼 수 있으며 프로세스 작업을 동기화하는 데 사용될 수 있습니다. 동일한 명명된 시스템 뮤텍스를 나타내는 여러 <xref:System.Threading.Mutex> 개체를 만들 수 있으며 <xref:System.Threading.Mutex.OpenExisting%2A> 메서드를 사용하여 기존 명명된 시스템 뮤텍스를 열 수 있습니다.  
   
  로컬 뮤텍스는 프로세스 내에만 존재합니다. 로컬 <xref:System.Threading.Mutex> 개체에 대한 참조가 있는 프로세스의 모든 스레드에서 사용할 수 있습니다. 각 <xref:System.Threading.Mutex> 개체는 별도 로컬 뮤텍스입니다.  

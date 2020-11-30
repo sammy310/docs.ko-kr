@@ -3,12 +3,12 @@ title: XML Schema Definition Tool (Xsd.exe)
 description: XML Serializer Generator는 지정된 어셈블리의 형식에 대한 XML serialization 어셈블리를 만들어 XmlSerializer의 시작 성능을 향상시킵니다.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: c8ae3e05f2d775cbc4c44ce27e7474d1fcfc06a3
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: a66ebfee3a461bb800e61e4f1d789f497da2f9d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281747"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676610"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
@@ -50,6 +50,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |**/p\[arameters\]:** _file.xml_|지정한 .xml 파일의 여러 가지 작동 모드에 대한 읽기 옵션입니다. 약식 표현은 `/p:`입니다. 자세한 내용은 [설명](#remarks) 섹션을 참조하세요.|
 
 ## <a name="xsd-file-options"></a>XSD 파일 옵션
+
  .xsd 파일에는 다음 옵션 중 하나만 지정해야 합니다.
 
 |옵션|설명|
@@ -205,6 +206,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 |도움말|이 도구의 명령 구문 및 옵션을 표시합니다. `true` 또는 `false`로 설정합니다.|
 
 ## <a name="examples"></a>예
+
  다음 명령을 사용하여 `myFile.xdr` 에서 XML 스키마를 생성한 다음 현재 디렉터리에 저장합니다.
 
 ```console

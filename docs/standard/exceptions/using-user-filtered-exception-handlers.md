@@ -5,12 +5,12 @@ helpviewer_keywords:
 - user-filtered exceptions
 - exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
-ms.openlocfilehash: d98412ed651886afc54e15b346a63dc0c549abd0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4b85c2be0ed61af38eac1b65fb70f0ef1ea4405e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827986"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669044"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>사용자 필터 예외 처리기 사용
 
@@ -31,6 +31,7 @@ End Try
  사용자 필터 절의 식에는 어떤 제한도 적용되지 않습니다. 사용자 필터 식을 실행하는 중에 예외가 발생하면 예외는 무시되고 필터 식이 false로 계산된 것으로 간주됩니다. 이 경우 공용 언어 런타임은 현재 예외에 대한 처리기를 계속 검색합니다.  
   
 ## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>특정 예외 및 사용자 필터 절 조합  
+
  Catch 문은 특정 예외와 사용자 필터 절을 모두 포함할 수 있습니다. 런타임은 특정 예외를 먼저 테스트합니다. 특정 예외가 성공하면 런타임은 사용자 필터를 실행합니다. 일반 필터에는 클래스 필터에 선언된 변수에 대한 참조가 포함될 수 있습니다. 두 필터 절의 순서는 바꿀 수 없습니다.  
   
  다음 Visual Basic 예제에서는 **When** 키워드를 사용하는 사용자 필터 절 뿐만 아니라 **Catch** 문의 특정 예외 `ClassLoadException`을 보여 줍니다.  

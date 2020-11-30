@@ -2,17 +2,19 @@
 title: 외부 리소스 확인
 ms.date: 03/30/2017
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-ms.openlocfilehash: 460fee3464c7de9a6ad0ca97bf5341fe5078fb47
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dffaef1b27d5814591c935c0ca795ba4ea3eba84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820373"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686607"
 ---
 # <a name="resolving-external-resources"></a>외부 리소스 확인
+
 **XmlDocument** 클래스는 **XmlDocument** 의 **XmlResolver** 속성을 사용하여 외부 DTD(문서 종류 정의), 엔터티 및 스키마와 같이 XML 데이터에 인라인으로 들어 있지 않은 리소스를 찾습니다. 이러한 항목은 네트워크나 로컬 드라이브에 있을 수 있으며 URI(Uniform Resource Identifier)로 식별할 수 있습니다. 따라서 **XmlDocument** 로 문서에 있는 **EntityReference** 노드를 확인하고 외부 DTD나 스키마에 따라 문서의 유효성을 검사할 수 있습니다.  
   
 ## <a name="fully-trusted-xmldocument"></a>완전 신뢰 XmlDocument  
+
  **XmlResolver** 속성은 **XmlDocument.Load** 메서드의 기능에 영향을 줍니다. 다음 표에서는 **XmlDocument** 개체가 완전히 신뢰될 때 **XmlDocument.XmlResolver** 속성이 작동하는 방식을 보여줍니다. 다음 표에서는 Load의 입력이 **TextReader**, **String**, **Stream** 또는 **URI** 일 경우의 **XmlDocument.Load** 메서드를 보여줍니다. **XmlDocument** 를 **XmlReader** 에서 로드할 경우 이 표의 내용이 **Load** 메서드에 적용되지 않습니다.  
   
 |XmlResolver 속성|기능|참고|  
@@ -28,6 +30,7 @@ ms.locfileid: "94820373"
 |**XmlDocument** 에서 사용하는 **XmlResolver** 클래스는 **XmlReader** 에서 사용하는 것과 동일한 클래스입니다.|**XmlDocument** 는 **XmlReader** 에 할당된 **XmlResolver** 를 사용합니다.<br /><br /> **XmlDocument.Resolver** 속성은 **XmlReader** 에서 **XmlResolver** 를 가져오므로 **XmlDocument** 신뢰 수준에 상관없이 설정할 수 없습니다. **XmlDocument** 의 **XmlResolver** 속성을 설정하여 **XmlReader** 의 **XmlResolver** 설정을 재정의할 수 없습니다.|**XmlReader** 는 **XmlTextReader**, **XmlValidatingReader** 또는 사용자가 작성한 판독기일 수 있습니다. 사용되는 판독기가 엔터티 확인을 지원하면 외부 엔터티가 확인됩니다. 전달된 판독기가 엔터티 참조를 지원하지 않으면 엔터티 참조는 확인되지 않습니다.|  
   
 ## <a name="semi-trusted-xmldocument"></a>일부 신뢰된 XmlDocument  
+
  다음 표에서는 개체가 일부 신뢰될 때 **XmlDocument.XmlResolver** 속성이 작동하는 방식을 보여줍니다. 이 표는 Load의 입력이 **TextReader**, **String**, **Stream** 또는 **URI** 일 경우의 **XmlDocument.Load** 메서드에 해당합니다. **XmlDocument** 를 **XmlReader** 에서 로드할 경우 이 표의 내용이 **Load** 메서드에 적용되지 않습니다.  
   
 |XmlResolver 속성|기능|참고|  

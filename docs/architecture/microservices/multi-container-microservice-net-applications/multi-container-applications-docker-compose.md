@@ -2,12 +2,12 @@
 title: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 description: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션에서 마이크로 서비스 컴퍼지션을 지정하는 방법입니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 47f2bf9bcdbf021ec4232ff9e25f6b2b228aaeaa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c375d328ab9064315682fab91cb5e49e9a384b56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539309"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682668"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 
@@ -115,11 +115,11 @@ services:
 
 이 컨테이너화된 서비스에는 다음과 같은 기본 구성이 있습니다.
 
-- 사용자 지정 **eshop/catalog-api** 이미지를 기반으로 합니다. 편의상 파일에 키 설정이라는 빌드가 없습니다. 즉, 이미지는 모든 Docker 레지스트리에서 이전에 docker 빌드로 빌드되었거나 docker pull 명령으로 다운로드되었어야 합니다.
+- 사용자 지정 **eshop/catalog-api** 이미지를 기반으로 합니다. 편의상 파일에 키 설정이라는 빌드가 없습니다. 즉, 이미지는 모든 Docker 레지스트리에서 이전에 빌드되었거나(docker 빌드로) 다운로드되었어야 합니다(docker pull 명령으로).
 
 - 카탈로그 데이터 모델을 포함하는 SQL Server 인스턴스에 액세스하기 위해 Entity Framework에서 사용되는 연결 문자열로 ConnectionString이라는 환경 변수를 정의합니다. 이 경우 동일한 SQL Server 컨테이너는 여러 데이터베이스를 보유하고 있습니다. 따라서 Docker에 대한 개발 컴퓨터에 적은 메모리가 필요합니다. 그러나 각 마이크로 서비스 데이터베이스에 대해 하나의 SQL Server 컨테이너를 배포할 수도 있습니다.
 
-- SQL Server 이름은 **sqldata**입니다. 이는 Linux용 SQL Server 인스턴스를 실행하는 컨테이너에 사용되는 동일한 이름입니다. 이 방법은 편리합니다. 이 이름 확인(Docker 호스트에 대한 내부)을 사용할 수 있는 것은 네트워크 주소를 해결하므로 다른 컨테이너에서 액세스하는 컨테이너에 대한 내부 IP를 알지 않아도 됩니다.
+- SQL Server 이름은 **sqldata** 입니다. 이는 Linux용 SQL Server 인스턴스를 실행하는 컨테이너에 사용되는 동일한 이름입니다. 이 방법은 편리합니다. 이 이름 확인(Docker 호스트에 대한 내부)을 사용할 수 있는 것은 네트워크 주소를 해결하므로 다른 컨테이너에서 액세스하는 컨테이너에 대한 내부 IP를 알지 않아도 됩니다.
 
 연결 문자열은 환경 변수에 의해 정의되므로 다른 메커니즘을 통해 다른 시간에 해당 변수를 설정할 수 있습니다. 예를 들어 최종 호스트에서 프로덕션에 배포할 때 또는 Azure DevOps Services 또는 기본 DevOps 시스템의 CI/CD 파이프라인에서 수행하여 다른 연결 문자열을 설정할 수 있습니다.
 
@@ -143,7 +143,7 @@ services:
 
 애플리케이션을 개발하는 경우 격리된 개발 환경에서 애플리케이션을 실행할 수 있어야 하는 것은 중요합니다. docker-compose CLI 명령을 사용하여 해당 환경을 만들거나 내부에서 docker-compose를 사용하는 Visual Studio를 사용할 수 있습니다.
 
-docker-compose.yml 파일을 사용하면 모든 애플리케이션의 서비스 종속성(다른 서비스, 캐시, 데이터베이스, 큐 등)을 구성하고 문서화할 수 있습니다. docker-compose CLI 명령을 사용하여 단일 명령(docker-compose up)으로 각 종속성에 대해 하나 이상의 컨테이너를 만들고 시작할 수 있습니다.
+docker-compose.yml 파일을 사용하면 모든 애플리케이션의 서비스 종속성(다른 서비스, 캐시, 데이터베이스, 큐 등)을 구성하고 문서화할 수 있습니다. docker-compose CLI 명령을 사용하여 단일 명령(docker-compose up)으로 각 종속성에 대해 하나 이상의 컨테이너를 만들고 시작할 수 있습니다.
 
 docker-compose.yml 파일은 Docker 엔진으로 해석되는 구성 파일이지만 다중 컨테이너 애플리케이션의 구성에 대한 편리한 문서 파일의 역할도 합니다.
 
@@ -388,7 +388,7 @@ services:
 
 이 예제에서 개발 재정의 구성은 일부 포트를 호스트에 노출하고, 리디렉션 URL로 환경 변수를 정의하고, 개발 환경에 대한 연결 문자열을 지정합니다. 이러한 설정은 모두 개발 환경을 위한 것입니다.
 
-`docker-compose up`을 실행하는 경우(또는 Visual Studio에서 시작) 명령은 두 파일을 병합하는 것처럼 재정의를 자동으로 읽습니다.
+`docker-compose up`을 실행하는 경우(또는 Visual Studio에서 시작) 명령은 두 파일을 병합하는 것처럼 재정의를 자동으로 읽습니다.
 
 프로덕션 환경에 대해 다른 구성 값, 포트 또는 연결 문자열이 있는 다른 Compose 파일을 원한다고 가정합니다. 다른 설정 및 환경 변수가 있는 `docker-compose.prod.yml`이라는 파일과 같은 다른 재정의 파일을 만들 수 있습니다. 해당 파일은 다른 Git 리포지토리에 저장되거나 다른 팀에 의해 관리 및 보호될 수 있습니다.
 
@@ -437,7 +437,7 @@ docker-compose는 .env 파일의 각 줄이 \<variable\>=\<value\> 형식이 된
 인터넷에서 원본의 Docker 및 .NET Core를 탐색하는 경우 원본을 컨테이너에 복사하여 Docker 이미지를 빌드하는 것의 용이함을 보여 주는 Dockerfile을 찾을 수 있습니다. 이러한 예제는 간단한 구성을 사용하는 것을 제안합니다. 애플리케이션과 함께 제공되는 환경으로 Docker 이미지를 가질 수 있습니다. 다음 예제에서는 이 맥락에서 간단한 Dockerfile을 보여 줍니다.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:3.1
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -450,7 +450,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 컨테이너 및 마이크로 서비스 모델에서 컨테이너를 지속적으로 시작하고 있습니다. 컨테이너를 사용하는 일반적인 방법은 컨테이너가 삭제 가능하므로 중지 중인 컨테이너를 다시 시작하지 않습니다. 오케스트레이터(예: Kubernetes 및 Azure Service Fabric)는 단순히 이미지의 새 인스턴스를 만듭니다. 즉, 인스턴스화 프로세스의 속도가 더 빨라지도록 빌드될 때 애플리케이션을 미리 컴파일하여 최적화해야 합니다. 컨테이너가 시작될 때 실행할 준비가 되어야 합니다. .NET Core 및 Docker에 대한 블로그 게시물에서 볼 수 있는 것처럼 `dotnet restore` 및 `dotnet build` CLI 명령을 사용하여 런타임에 복원 및 컴파일하지 마세요.
 
-.NET 팀은 .NET Core 및 ASP.NET Core를 컨테이너 최적화된 프레임워크로 만들도록 중요한 작업을 수행하고 있습니다. .NET Core는 작은 메모리 공간을 가진 경량 프레임워크일 뿐만 아니라, 팀은 세 가지 주요 시나리오에 최적화된 Docker 이미지를 중점적으로 사용해 *dotnet/core*에서 버전 2.1부터 Docker 허브 레지스트리에 게시했습니다.
+.NET 팀은 .NET Core 및 ASP.NET Core를 컨테이너 최적화된 프레임워크로 만들도록 중요한 작업을 수행하고 있습니다. .NET Core는 작은 메모리 공간을 가진 경량 프레임워크일 뿐만 아니라, 팀은 세 가지 주요 시나리오에 최적화된 Docker 이미지를 중점적으로 사용해 *dotnet/core* 에서 버전 2.1부터 Docker 허브 레지스트리에 게시했습니다.
 
 1. **개발**: 우선 순위는 변경 내용을 신속하게 반복하고 디버그할 수 있는 기능이며, 크기는 부차적 문제입니다.
 
@@ -458,7 +458,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 3. **프로덕션**: 컨테이너의 빠른 배포 및 시작이 포커스인 경우, 이 이미지는 이진 파일 및 애플리케이션을 실행할 콘텐츠로 제한합니다.
 
-.NET 팀은 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)(Docker Hub)에서 네 가지 기본 변형을 제공합니다.
+.NET 팀은 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet/)(Docker Hub)에서 네 가지 기본 변형을 제공합니다.
 
 1. **sdk**: 개발 및 빌드 시나리오용
 1. **aspnet**: ASP.NET 프로덕션 시나리오용

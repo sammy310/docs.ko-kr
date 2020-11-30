@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: dd9cdf3cdda0605d9454fe096be01655e67a0d0a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 86d2e931e6462fb9f6ff5e3cd31b8d3fd188dd5a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169299"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682044"
 ---
 # <a name="common-web-application-architectures"></a>일반 웹 애플리케이션 아키텍처
 
@@ -36,7 +36,7 @@ ms.locfileid: "91169299"
 
 단일 프로젝트 모놀리식 솔루션은 간단하지만 몇 가지 단점이 있습니다. 프로젝트의 크기와 복잡성이 증가하면 파일 및 폴더의 수도 계속해서 함께 증가합니다. 사전순으로 그룹화되지 않은 여러 폴더에 UI(사용자 인터페이스) 문제(모델, 보기, 컨트롤러)가 있습니다. 이 문제는 Filters 또는 ModelBinders 같은 UI 수준의 구성이 자체 폴더에 추가될 때에만 악화됩니다. 비즈니스 논리는 Models 폴더와 Services 폴더 사이에 흩어져 있으며, 어떤 폴더의 어떤 클래스가 무엇에 의존해야 하는지 명확한 표시가 없습니다. 이와 같이 프로젝트 수준에서 깔끔하게 정리되지 않기 때문에 [스파게티 코드](https://deviq.com/spaghetti-code/)로 이어지는 경우가 자주 있습니다.
 
-이 문제를 해결하기 위해 종종 애플리케이션은 각 프로젝트가 애플리케이션의 특정 _레이어_에 상주하는 것으로 간주되는 다중 프로젝트 솔루션으로 발전합니다.
+이 문제를 해결하기 위해 종종 애플리케이션은 각 프로젝트가 애플리케이션의 특정 _레이어_ 에 상주하는 것으로 간주되는 다중 프로젝트 솔루션으로 발전합니다.
 
 ## <a name="what-are-layers"></a>레이어란 무엇입니까?
 
@@ -53,7 +53,7 @@ ms.locfileid: "91169299"
 논리적 레이어링은 엔터프라이즈 소프트웨어 애플리케이션에서 코드 구성을 향상하는 일반적인 방법이며, 코드를 레이어로 구성할 수 있는 여러 가지 방법이 있습니다.
 
 > [!NOTE]
- > _레이어_는 애플리케이션 내부의 논리적 분리를 나타냅니다. 애플리케이션 논리가 별도의 서버 또는 프로세스에 물리적으로 분산된 경우 이러한 별도의 실제 배포 대상을 _계층_이라고 부릅니다. N 레이어 애플리케이션을 단일 계층에 배포할 수 있으며, 이는 매우 일반적입니다.
+ > _레이어_ 는 애플리케이션 내부의 논리적 분리를 나타냅니다. 애플리케이션 논리가 별도의 서버 또는 프로세스에 물리적으로 분산된 경우 이러한 별도의 실제 배포 대상을 _계층_ 이라고 부릅니다. N 레이어 애플리케이션을 단일 계층에 배포할 수 있으며, 이는 매우 일반적입니다.
 
 ## <a name="traditional-n-layer-architecture-applications"></a>기존의 "N 레이어" 아키텍처 애플리케이션
 
@@ -241,7 +241,7 @@ Docker 이미지로 업데이트를 배포하는 것이 훨씬 더 빠르고 네
 
 `eShopOnWeb` 프로젝트는 .NET Core에서 실행됩니다. 따라서 Linux 기반 또는 Windows 기반 컨테이너에서 실행할 수 있습니다. Docker 배포에서는 SQL Server에 대해서 동일한 호스트 유형을 사용할 수 있습니다. 사람들은 Linux 기반 컨테이너를 선호하며 여기에서는 더 작은 공간을 사용할 수 있습니다.
 
-**솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **Docker 지원**을 선택하면 Visual Studio 2017 이상을 사용하여 기존 애플리케이션에 Docker 지원을 추가할 수 있습니다. 이를 통해 필요한 파일을 추가하고 해당 파일을 사용하도록 프로젝트를 수정합니다. 현재 `eShopOnWeb` 샘플에는 이러한 파일이 이미 준비되어 있습니다.
+**솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **Docker 지원** 을 선택하면 Visual Studio 2017 이상을 사용하여 기존 애플리케이션에 Docker 지원을 추가할 수 있습니다. 이를 통해 필요한 파일을 추가하고 해당 파일을 사용하도록 프로젝트를 수정합니다. 현재 `eShopOnWeb` 샘플에는 이러한 파일이 이미 준비되어 있습니다.
 
 솔루션 수준의 `docker-compose.yml` 파일에는 빌드할 이미지 및 시작할 컨테이너에 대한 정보가 포함됩니다. 이 파일을 통해 `docker-compose` 명령을 사용하여 동시에 여러 애플리케이션을 시작할 수 있습니다. 이 경우에는 웹 프로젝트를 시작하기만 합니다. 별도 데이터베이스 컨테이너와 같은 종속성을 구성하는 데 이를 사용할 수 있습니다.
 
@@ -268,7 +268,7 @@ networks:
 `docker-compose.yml` 파일은 `Web` 프로젝트에서 `Dockerfile`을 참조합니다. `Dockerfile`은 사용할 기본 컨테이너 및 애플리케이션의 구성 방식을 지정하는 데 사용됩니다. `Web`' `Dockerfile`:
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /app
 
 COPY *.sln .
@@ -278,7 +278,7 @@ RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
 

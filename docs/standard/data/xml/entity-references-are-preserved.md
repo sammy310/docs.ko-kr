@@ -2,14 +2,15 @@
 title: 엔터티 참조 유지
 ms.date: 03/30/2017
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
-ms.openlocfilehash: 2cc2fcf3fdc2a89e4f72ae65e6e7385cb83f168c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 484eb5c874c6de05acae7dcd87a477c186b81482
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823838"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687270"
 ---
 # <a name="entity-references-are-preserved"></a>엔터티 참조 유지
+
 엔터티 참조가 확장되지 않고 유지되면 XML DOM(문서 개체 모델)에서는 엔터티 참조가 발생하는 경우 **XmlEntityReference** 노드를 빌드합니다.  
   
  다음 XML을 사용한다고 가정합니다.  

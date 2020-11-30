@@ -10,15 +10,15 @@ helpviewer_keywords:
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
 ms.openlocfilehash: 214918b32f1f1276eb936e66daba3d372a1e9228
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89125100"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib(C# 컴파일러 옵션)
 
-**-nostdlib**를 사용하면 전체 시스템 네임스페이스를 정의하는 mscorlib.dll을 가져올 수 없습니다.
+**-nostdlib** 를 사용하면 전체 시스템 네임스페이스를 정의하는 mscorlib.dll을 가져올 수 없습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -30,7 +30,7 @@ ms.locfileid: "89125100"
 
 고유한 시스템 네임스페이스와 개체를 정의하거나 만들려면 이 옵션을 사용합니다.
 
-**-nostdlib**를 지정하지 않으면 mscorlib.dll을 프로그램으로 가져옵니다(**-nostdlib-** 지정과 동일함). **-nostdlib**를 지정하는 것은 **-nostdlib+** 를 지정하는 것과 같습니다.
+**-nostdlib** 를 지정하지 않으면 mscorlib.dll을 프로그램으로 가져옵니다(**-nostdlib-** 지정과 동일함). **-nostdlib** 를 지정하는 것은 **-nostdlib+** 를 지정하는 것과 같습니다.
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Visual Studio에서 이 컴파일러 옵션을 설정하려면
 

@@ -18,10 +18,10 @@ helpviewer_keywords:
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
 ms.openlocfilehash: 4b61217a3d6812ea3ab036f82d49bba05c20629e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91173245"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign(C# 컴파일러 옵션)
@@ -41,7 +41,7 @@ ms.locfileid: "91173245"
   
 ## <a name="remarks"></a>설명  
 
- 각 섹션은 **-filealign** 값의 배수인 경계에 맞춰집니다. 고정된 기본값이 없습니다. **-filealign**을 지정하지 않으면 공용언어 런타임에서 컴파일 시간에 기본값을 선택합니다.  
+ 각 섹션은 **-filealign** 값의 배수인 경계에 맞춰집니다. 고정된 기본값이 없습니다. **-filealign** 을 지정하지 않으면 공용언어 런타임에서 컴파일 시간에 기본값을 선택합니다.  
   
  섹션 크기를 지정하면 출력 파일의 크기에 영향을 줍니다. 섹션 크기를 수정하면 더 작은 디바이스에서 실행되는 프로그램에 유용할 수 있습니다.  
   

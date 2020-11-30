@@ -2,14 +2,15 @@
 title: 외부 XSLT 스타일시트 및 문서 확인
 ms.date: 03/30/2017
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-ms.openlocfilehash: 370d1df296666e5b5c162db34bd7fb35ae8a2e0e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f1fbf950f7d67d46937652987516e5faf9857b85
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823591"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686568"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>외부 XSLT 스타일시트 및 문서 확인
+
 다음과 같이 변환 중에 외부 리소스를 확인해야 하는 몇 가지 경우가 있습니다.  
   
 > [!NOTE]
@@ -24,6 +25,7 @@ ms.locfileid: "94823591"
 - <xref:System.Xml.Xsl.XslTransform.Transform%2A> 중에 `document()` 함수를 확인하는 경우  
   
 ## <a name="using-the-xmlresolver-class"></a>XmlResolver 클래스 사용  
+
  네트워크 리소스에 액세스하기 위해 인증이 필요한 경우 <xref:System.Xml.Xsl.XslTransform.Load%2A> 매개 변수를 사용하여 필요한 자격 증명 속성 집합을 갖는 <xref:System.Xml.XmlResolver> 개체를 전달할 수 있는 <xref:System.Xml.XmlResolver> 메서드를 사용합니다.  
   
  다음 표에서는 사용하려는 사용자 지정 <xref:System.Xml.XmlResolver>가 있거나 다른 자격 증명을 지정해야 하는 경우 외부 리소스 확인이 필요한 시기에 따라 필요한 작업의 목록을 보여 줍니다.  

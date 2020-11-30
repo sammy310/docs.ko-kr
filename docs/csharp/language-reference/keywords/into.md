@@ -9,15 +9,15 @@ helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
 ms.openlocfilehash: 4712a6906195c5d8bc09c7b734dba0df4d2b08c8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89134525"
 ---
 # <a name="into-c-reference"></a>into(C# 참조)
 
-`into` 상황별 키워드를 사용하여 [group](group-clause.md), [join](join-clause.md), [select](select-clause.md) 절의 결과를 새 식별자에 저장하기 위한 임시 식별자를 만들 수 있습니다. 이 식별자 자체는 추가 쿼리 명령의 생성기일 수 있습니다. `group` 또는 `select` 절에 사용할 경우 새 식별자의 사용을 *연속*이라고도 합니다.
+`into` 상황별 키워드를 사용하여 [group](group-clause.md), [join](join-clause.md), [select](select-clause.md) 절의 결과를 새 식별자에 저장하기 위한 임시 식별자를 만들 수 있습니다. 이 식별자 자체는 추가 쿼리 명령의 생성기일 수 있습니다. `group` 또는 `select` 절에 사용할 경우 새 식별자의 사용을 *연속* 이라고도 합니다.
 
 ## <a name="example"></a>예제
 

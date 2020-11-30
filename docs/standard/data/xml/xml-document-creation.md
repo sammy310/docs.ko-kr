@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
-ms.openlocfilehash: fb92a1fe984014aef9973b821227fbd1c1176a6c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 18c391e33e0c43f2407ccbc87c12b6c25a12509d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819268"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686529"
 ---
 # <a name="xml-document-creation"></a>XML 문서 만들기
+
 XML 문서를 만드는 방법에는 두 가지가 있습니다. 하나는 매개 변수 없이 **XmlDocument** 를 만드는 방법이고 다른 방법은 **XmlDocument** 를 만들어 XmlNameTable를 매개 변수로 전달하는 것입니다. 다음 예제에서는 매개 변수를 사용하지 않고 비어 있는 새 **XmlDocument** 를 만드는 방법을 보여줍니다.  
   
 ```vb  

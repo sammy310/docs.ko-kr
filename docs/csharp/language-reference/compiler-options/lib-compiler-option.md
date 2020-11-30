@@ -10,10 +10,10 @@ helpviewer_keywords:
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 ms.openlocfilehash: 9478501ea98ec1b9d3ec2761bc4ebf3f6bef656c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91152444"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib(C# 컴파일러 옵션)
@@ -42,15 +42,15 @@ ms.locfileid: "91152444"
   
 2. 공용 언어 런타임 시스템 디렉터리입니다.  
   
-3. **-lib**로 지정된 디렉터리입니다.  
+3. **-lib** 로 지정된 디렉터리입니다.  
   
 4. LIB 환경 변수로 지정된 디렉터리입니다.  
   
- 어셈블리 참조를 지정하려면 **-reference**를 사용합니다.  
+ 어셈블리 참조를 지정하려면 **-reference** 를 사용합니다.  
   
- **-lib**는 가감되므로 두 번 이상 지정하면 이전 값에 추가됩니다.  
+ **-lib** 는 가감되므로 두 번 이상 지정하면 이전 값에 추가됩니다.  
   
- **-lib**를 사용하는 대신 필요한 모든 어셈블리를 작업 디렉터리에 복사할 수도 있습니다. 이렇게 하면 단순히 어셈블리 이름을 **-reference**에 전달할 수 있습니다. 그런 다음 작업 디렉터리에서 어셈블리를 삭제할 수 있습니다. 종속 어셈블리의 경로는 어셈블리 매니페스트에 지정되지 않으므로 애플리케이션이 대상 컴퓨터에서 시작될 수 있으며, 전역 어셈블리 캐시에서 어셈블리를 찾아 사용합니다.  
+ **-lib** 를 사용하는 대신 필요한 모든 어셈블리를 작업 디렉터리에 복사할 수도 있습니다. 이렇게 하면 단순히 어셈블리 이름을 **-reference** 에 전달할 수 있습니다. 그런 다음 작업 디렉터리에서 어셈블리를 삭제할 수 있습니다. 종속 어셈블리의 경로는 어셈블리 매니페스트에 지정되지 않으므로 애플리케이션이 대상 컴퓨터에서 시작될 수 있으며, 전역 어셈블리 캐시에서 어셈블리를 찾아 사용합니다.  
   
  컴파일러가 어셈블리를 참조할 수 있다고 해서 공용 언어 런타임이 런타임에 어셈블리를 찾아 로드할 수 있다는 의미는 아닙니다. 런타임에서 참조된 어셈블리를 검색하는 방법에 대한 자세한 내용은 [런타임에서 어셈블리를 찾는 방법](../../../framework/deployment/how-the-runtime-locates-assemblies.md)을 참조하세요.  
   

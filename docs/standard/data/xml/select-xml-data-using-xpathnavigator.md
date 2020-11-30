@@ -5,20 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
-ms.openlocfilehash: 791c1d16db6a2079ccccebf4dc33d5a0eb12d3c5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9b12e60fcfac8c8fc4c2f2c80aac7400dfc8d6f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824976"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673464"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 선택
+
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XPath 식을 사용하여 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체의 노드 집합을 선택하는 데 사용되는 메서드 집합을 제공합니다. 선택한 후에는 선택한 노드 집합을 반복할 수 있습니다.  
   
 ## <a name="xpathnavigator-selection-methods"></a>XPathNavigator 선택 메서드  
+
  <xref:System.Xml.XPath.XPathNavigator> 클래스는 XPath 식을 사용하여 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체의 노드 집합을 선택하는 데 사용되는 메서드 집합을 제공합니다. 또한 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XPath 식을 사용하는 것보다 더 빠르게 상위, 자식 및 하위 노드를 선택할 수 있는 최적화된 메서드 집합을 제공합니다. 선택한 노드 집합이 <xref:System.Xml.XPath.XPathNodeIterator> 개체 또는 <xref:System.Xml.XPath.XPathNavigator> 개체(선택한 노드가 하나일 경우)에 반환됩니다.  
   
 ### <a name="selecting-nodes-using-xpath-expressions"></a>XPath 식을 사용하여 노드 선택  
+
  XPath 식을 사용하여 노드 집합을 선택하려면 다음 선택 메서드 중 하나를 사용합니다.  
   
 - <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
@@ -57,6 +60,7 @@ while(nodes.MoveNext())
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ### <a name="optimized-selection-methods"></a>최적화된 선택 메서드  
+
  <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> 및 <xref:System.Xml.XPath.XPathNavigator> 메서드는 일반적으로 자식, 하위 및 상위 노드를 검색하는 데 사용하는 XPath 식을 나타냅니다. 이러한 메서드는 성능을 위해 최적화되었으며 해당 XPath 식보다 빠릅니다. <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A> 및 <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> 메서드는 선택할 노드의 <xref:System.Xml.XPath.XPathNodeType> 값 또는 로컬 이름과 네임스페이스 URI를 기반으로 상위, 자식 및 하위 노드를 선택합니다. 선택된 상위, 자식 및 하위 노드는 <xref:System.Xml.XPath.XPathNodeIterator> 개체에 반환됩니다.  
   
 ## <a name="see-also"></a>참조

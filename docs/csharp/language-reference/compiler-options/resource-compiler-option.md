@@ -13,10 +13,10 @@ helpviewer_keywords:
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 ms.openlocfilehash: 6f90ce6c1590784cefbd5f15ca8a36941aad77ed
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193779"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource(C# 컴파일러 옵션)
@@ -48,7 +48,7 @@ ms.locfileid: "91193779"
   
  예를 들어 `filename`이 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) 또는 개발 환경에서 만들어진 .NET 리소스 파일인 경우에는 <xref:System.Resources> 네임스페이스의 멤버를 사용하여 해당 파일에 액세스할 수 있습니다. 자세한 내용은 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>를 참조하세요. 다른 모든 리소스의 경우에는 런타임에 `GetManifestResource` 클래스의 <xref:System.Reflection.Assembly> 메서드를 사용하여 리소스에 액세스합니다.  
   
- **-res**는 **-resource**의 약식입니다.  
+ **-res** 는 **-resource** 의 약식입니다.  
   
  출력 파일에 있는 리소스의 순서는 명령줄에 지정된 순서에 따라 결정됩니다.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "91193779"
   
 1. 프로젝트에 리소스 파일을 추가합니다.  
   
-2. **솔루션 탐색기**에서 포함할 파일을 선택합니다.  
+2. **솔루션 탐색기** 에서 포함할 파일을 선택합니다.  
   
-3. **속성** 창에서 파일에 대한 **빌드 작업**을 선택합니다.  
+3. **속성** 창에서 파일에 대한 **빌드 작업** 을 선택합니다.  
   
-4. **빌드 작업**을 **포함 리소스**로 설정합니다.  
+4. **빌드 작업** 을 **포함 리소스** 로 설정합니다.  
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.FileProperties2.BuildAction%2A>을 참조하십시오.  
   

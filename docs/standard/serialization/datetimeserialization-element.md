@@ -7,14 +7,15 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: 90ae911c8942fef7a9e8238921990b0a52a47ca0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 1623517e66955c14b7e738c860ec16086fe30429
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281763"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678976"
 ---
 # <a name="datetimeserialization-element"></a>\<dateTimeSerialization> 요소
+
 <xref:System.DateTime> 개체의 serialization 모드를 결정합니다.  
   
  \<configuration>  
@@ -29,6 +30,7 @@ ms.locfileid: "93281763"
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
+
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
@@ -38,6 +40,7 @@ ms.locfileid: "93281763"
 |`mode`|선택 사항입니다. serialization 모드를 지정합니다. <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> 값 중 하나로 설정합니다. 기본값은 **RoundTrip** 입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
+
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  

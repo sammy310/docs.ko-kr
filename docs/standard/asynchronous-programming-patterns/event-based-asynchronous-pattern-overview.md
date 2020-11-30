@@ -16,14 +16,15 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 88bdb1cb88a5d6ca5c948d5f3110ddb13bdda6ae
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eb7680607c1def7cdc0dd5670b594e2ee1a6bfff
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830391"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678118"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>이벤트 기반 비동기 패턴 개요
+
 많은 작업을 동시에 수행하면서 사용자 상호 작용에 대해 응답성을 유지하는 애플리케이션에는 일반적으로 여러 스레드를 사용하는 디자인이 필요합니다. <xref:System.Threading> 네임스페이스는 고성능 다중 스레드 애플리케이션을 만드는 데 필요한 모든 도구를 제공하지만 이러한 도구를 효과적으로 사용하려면 다중 스레드 소프트웨어 엔지니어링에 대한 풍부한 경험이 필요합니다. 비교적 단순한 다중 스레드 애플리케이션의 경우 <xref:System.ComponentModel.BackgroundWorker> 구성 요소가 간단한 솔루션을 제공합니다. 보다 정교한 비동기 애플리케이션의 경우 이벤트 기반 비동기 패턴을 준수하는 클래스 구현을 고려하세요.  
   
  이벤트 기반 비동기 패턴은 다중 스레드 디자인에 본질적으로 존재하는 복잡한 여러 가지 문제를 숨기면서 다중 스레드 애플리케이션의 장점을 이용할 수 있게 해줍니다. 이 패턴을 지원하는 클래스를 사용하면 다음이 가능합니다.  
@@ -48,11 +49,13 @@ ms.locfileid: "94830391"
 > 다운로드가 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 요청이 수행된 것처럼 완료될 수 있으므로 <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A>가 취소 요청을 반영하지 않을 수 있습니다. 이를 ‘경합 상태’라고 하며, 이는 다중 스레드 프로그래밍에서 일반적인 문제입니다. 다중 스레드 프로그래밍 문제에 대한 자세한 내용은 [관리되는 스레딩을 구현하는 최선의 방법](../threading/managed-threading-best-practices.md)을 참조하세요.  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴의 특징  
+
  이벤트 기반 비동기 패턴은 특정 클래스에서 지원하는 작업의 복잡성에 따라 여러 가지 형식을 취할 수 있습니다. 가장 단순한 클래스는 단일 _MethodName_**Async** 메서드 및 해당 _MethodName_**Completed** 이벤트를 포함할 수 있습니다. 더 복잡한 클래스는 여러 _MethodName_**Async** 메서드, 각 해당 _MethodName_**Completed** 이벤트 및 이러한 메서드의 동기 버전을 포함할 수 있습니다. 클래스는 선택적으로 각 비동기 메서드에 대해 취소, 진행률 보고 및 증분 결과를 지원할 수 있습니다.  
   
  또한 비동기 메서드는 보류 중인 여러 호출(여러 동시 호출)을 지원하여 비동기 메서드가 보류 중인 다른 작업을 완료하기 전에 코드에서 비동기 메서드를 원하는 만큼 호출할 수 있습니다. 이 상황을 올바르게 처리하기 위해서는 애플리케이션이 각 작업의 완료를 추적해야 할 수 있습니다.  
   
 ### <a name="examples-of-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴의 예  
+
  <xref:System.Media.SoundPlayer> 및 <xref:System.Windows.Forms.PictureBox> 구성 요소는 이벤트 기반 비동기 패턴의 간단한 구현을 나타냅니다. <xref:System.Net.WebClient> 및 <xref:System.ComponentModel.BackgroundWorker> 구성 요소는 이벤트 기반 비동기 패턴의 보다 복잡한 구현을 나타냅니다.  
   
  다음은 이러한 패턴을 준수하는 클래스 선언의 예입니다.  
@@ -107,17 +110,20 @@ public class AsyncExample
  가상의 `AsyncExample` 클래스에는 두 개의 메서드가 있는데, 이러한 두 메서드는 둘 다 동기 및 비동기 호출을 지원합니다. 동기 오버로드는 임의의 메서드 호출처럼 동작하고 호출 스레드에 대한 작업을 실행합니다. 작업에 시간이 많이 걸리는 경우 호출이 반환되기 전에 현저한 지연이 있을 수 있습니다. 비동기 오버로드는 다른 스레드에 대한 작업을 시작한 다음 즉시 반환되어 작업이 "백그라운드에서" 실행되는 동안 호출 스레드가 계속될 수 있도록 합니다.  
   
 ### <a name="asynchronous-method-overloads"></a>비동기 메서드 오버로드  
+
  비동기 작업에 대해서는 잠재적으로 두 오버로드 즉, 단일 호출과 다중 호출이 있습니다. 이러한 두 가지 형식은 해당 메서드 시그니처로 구별할 수 있습니다. 다중 호출 형식에는 `userState`라는 추가 매개 변수가 있습니다. 이 형식을 사용하면 코드에서 보류 중인 비동기 작업이 완료될 때까지 기다리지 않고 `Method1Async(string param, object userState)`를 여러 번 호출할 수 있습니다. 반면에 이전 호출이 완료되기 전에 `Method1Async(string param)`을 호출하려고 하면 메서드에 <xref:System.InvalidOperationException>이 발생합니다.  
   
  다중 호출 오버로드의 `userState` 매개 변수를 사용하면 비동기 작업 간에 구별할 수 있습니다. `Method1Async(string param, object userState)`에 대한 각 호출에 고유한 값(예: GUID 또는 해시 코드)을 제공하고, 각 작업이 완료되면 이벤트 처리기가 완료 이벤트가 발생한 작업 인스턴스를 확인할 수 있습니다.  
   
 ### <a name="tracking-pending-operations"></a>보류 중인 작업 추적  
+
  다중 호출 오버로드를 사용하는 경우 코드에서 보류 중인 작업의 `userState` 개체(작업 ID)를 추적해야 합니다. `Method1Async(string param, object userState)`에 대한 각 호출에 대해 일반적으로 새 고유 `userState` 개체를 생성하여 컬렉션에 추가합니다. 이 `userState` 개체에 해당하는 작업에서 완료 이벤트가 발생하면 완료 메서드 구현에서 <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType>를 검토하고 컬렉션에서 제거합니다. 이 방법을 사용할 경우 `userState` 매개 변수는 작업 ID 역할을 합니다.  
   
 > [!NOTE]
 > 호출에서 `userState`의 고유한 값을 다중 호출 오버로드에 제공할 때는 주의해야 합니다. 고유하지 않은 작업 ID를 사용할 경우 비동기 클래스에서 <xref:System.ArgumentException>이 throw됩니다.  
   
 ### <a name="canceling-pending-operations"></a>보류 중인 작업 취소  
+
  비동기 작업이 완료되기 전에 언제든지 해당 작업을 취소할 수 있어야 합니다. 이벤트 기반 비동기 패턴을 구현하는 클래스는 `CancelAsync` 메서드(비동기 메서드가 하나뿐인 경우) 또는 _MethodName_**AsyncCancel** 메서드(여러 비동기 메서드가 있는 경우)를 포함합니다.  
   
  여러 호출을 허용하는 메서드는 각 작업의 수명을 추적하는 데 사용될 수 있는 `userState` 매개 변수를 사용합니다. `CancelAsync`는 보류 중인 특정 작업을 취소할 수 있게 해주는 `userState` 매개 변수를 사용합니다.  
@@ -125,6 +131,7 @@ public class AsyncExample
  보류 중인 작업을 한 번에 하나만 지원하는 메서드(예: `Method1Async(string param)`)는 취소할 수 없습니다.  
   
 ### <a name="receiving-progress-updates-and-incremental-results"></a>진행률 업데이트 및 증분 결과 받기  
+
  이벤트 기반 비동기 패턴을 준수하는 클래스는 진행률 및 증분 결과를 추적하기 위한 이벤트를 선택적으로 제공할 수 있습니다. 일반적으로 이 이벤트는 `ProgressChanged` 또는 _MethodName_**ProgressChanged** 로 명명되며, 해당 이벤트 처리기가 <xref:System.ComponentModel.ProgressChangedEventArgs> 매개 변수를 사용합니다.  
   
  `ProgressChanged`이벤트의 이벤트 처리기는 <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> 속성을 검토하여 완료된 비동기 작업의 백분율을 확인할 수 있습니다. 이 속성은 범위가 0~100이며, <xref:System.Windows.Forms.ProgressBar.Value%2A>의 <xref:System.Windows.Forms.ProgressBar> 속성을 업데이트하는 데 사용될 수 있습니다. 보류 중인 비동기 작업이 여러 개인 경우 <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> 속성을 사용하여 진행률을 보고 중인 작업을 구별할 수 있습니다.  

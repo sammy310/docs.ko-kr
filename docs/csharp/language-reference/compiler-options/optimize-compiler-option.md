@@ -14,10 +14,10 @@ helpviewer_keywords:
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
 ms.openlocfilehash: 1862794e4d823e38ce19780300a0b04f4e57dc44
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193987"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize(C# 컴파일러 옵션)
@@ -32,13 +32,13 @@ ms.locfileid: "91193987"
   
 ## <a name="remarks"></a>설명  
 
- 또한 **-optimize**는 런타임에 코드를 최적화하도록 공용 언어 런타임에 알립니다.  
+ 또한 **-optimize** 는 런타임에 코드를 최적화하도록 공용 언어 런타임에 알립니다.  
   
  최적화는 기본적으로 사용되지 않습니다. 최적화를 사용하려면 **-optimize+** 를 지정합니다.  
   
  어셈블리에서 사용할 모듈을 빌드하는 경우 어셈블리의 설정과 동일한 **-optimize** 설정을 사용합니다.  
   
- **-o**는 **-optimize**의 약식 형태입니다.  
+ **-o** 는 **-optimize** 의 약식 형태입니다.  
   
  **-optimize** 및 [-debug](./debug-compiler-option.md) 옵션을 함께 사용할 수 있습니다.  
   

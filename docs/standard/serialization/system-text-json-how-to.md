@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: aba45a99562b67df17e1ff33ecc3c8bbad63ec30
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1e8c46e11d3a82ca0bce29f9cb7bbc749c219198
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440818"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676727"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET에서 JSON을 직렬화 및 역직렬화(마샬링 및 역 마샬링)하는 방법
 
@@ -116,6 +116,7 @@ UTF-8로 직렬화하려면 다음과 같이 <xref:System.Text.Json.JsonSerializ
 UTF-8로 직렬화하면 문자열 기반 메서드를 사용할 때보다 약 5-10% 더 빠릅니다. 속도에서 차이가 나는 이유는 바이트(UTF-8)를 문자열(UTF-16)로 변환할 필요가 없기 때문입니다.
 
 ## <a name="serialization-behavior"></a>Serialization 동작
+
 ::: zone pivot="dotnet-5-0"
 
 * 기본적으로 모든 public 속성은 직렬화됩니다. [무시할 속성을 지정](#ignore-properties)할 수 있습니다.

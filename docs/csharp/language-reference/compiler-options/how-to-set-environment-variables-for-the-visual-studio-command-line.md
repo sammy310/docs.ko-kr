@@ -17,10 +17,10 @@ helpviewer_keywords:
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
 ms.openlocfilehash: b985c85e2fddce459ed68b3d07ba7d54a8b2d0a7
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89125607"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Visual Studio 명령줄에 필요한 환경 변수를 설정하는 방법
@@ -34,11 +34,11 @@ Visual Studio의 이전 버전이 설치된 컴퓨터에 Visual Studio의 최신
 
 ### <a name="to-run-vsdevcmdbat"></a>VsDevCmd.BAT를 실행하려면
 
-1. **시작** 메뉴에서 **VS 2019용 개발자 명령 프롬프트**를 엽니다.  **Visual Studio 2019** 폴더에 있습니다.
+1. **시작** 메뉴에서 **VS 2019용 개발자 명령 프롬프트** 를 엽니다.  **Visual Studio 2019** 폴더에 있습니다.
 
-2. 설치 경로를 \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools or \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools 하위 디렉터리로 변경합니다.  (*Version*은 현재 버전용인 *2019*입니다. *Offering*은 *Enterprise*, *Professional* 또는 *Community* 중 하나입니다.)
+2. 설치 경로를 \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools or \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools 하위 디렉터리로 변경합니다.  (*Version* 은 현재 버전용인 *2019* 입니다. *Offering* 은 *Enterprise*, *Professional* 또는 *Community* 중 하나입니다.)
 
-3. **VsDevCmd**를 입력하여 VsDevCmd.bat을 실행합니다.
+3. **VsDevCmd** 를 입력하여 VsDevCmd.bat을 실행합니다.
 
     > [!CAUTION]
     > VsDevCmd.bat는 컴퓨터마다 다를 수 있습니다. 누락되거나 손상된 VsDevCmd.bat 파일을 다른 컴퓨터의 VsDevCmd.bat 파일로 바꾸지 마세요. 대신 설치 프로그램을 다시 실행하여 누락된 파일을 교체하십시오.

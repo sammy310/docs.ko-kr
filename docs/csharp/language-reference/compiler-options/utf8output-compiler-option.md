@@ -10,10 +10,10 @@ helpviewer_keywords:
 - -utf8output compiler option [C#]
 ms.assetid: 27ff7381-c281-45d7-b2eb-1ad644b1354e
 ms.openlocfilehash: 675782ffef9768e57397e765538924b78a2abcaa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91171366"
 ---
 # <a name="-utf8output-c-compiler-options"></a>-utf8output(C# 컴파일러 옵션)
@@ -28,7 +28,7 @@ ms.locfileid: "91171366"
   
 ## <a name="remarks"></a>설명  
 
- 일부 국제 구성에서는 컴파일러 출력이 콘솔에 올바르게 표시되지 않을 수 있습니다. 이러한 구성에서는 **-utf8output**을 사용하고 컴파일러 출력을 파일로 리디렉션합니다.  
+ 일부 국제 구성에서는 컴파일러 출력이 콘솔에 올바르게 표시되지 않을 수 있습니다. 이러한 구성에서는 **-utf8output** 을 사용하고 컴파일러 출력을 파일로 리디렉션합니다.  
   
  이 컴파일러 옵션은 Visual Studio에서 사용할 수 없으며 프로그래밍 방식으로 변경할 수 없습니다.  
   

@@ -2,14 +2,15 @@
 title: DOM 모델을 사용하여 XML 데이터 처리
 ms.date: 03/30/2017
 ms.assetid: 56b6e9c7-ed82-4a65-a647-7be32c83bcc8
-ms.openlocfilehash: 2608008f33eb8bc0dd0a9b5fe96e619df6138b51
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b0e24527e0edafee16511ea03a229e049b31126c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830911"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686971"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>DOM 모델을 사용하여 XML 데이터 처리
+
 XML DOM(문서 개체 모델)은 XML 데이터를 표준 개체 집합으로 간주하며 메모리에서 XML 데이터를 처리하는 데 사용됩니다. `System.Xml` 네임스페이스는 XML 문서, 조각, 노드 또는 노드 집합의 프로그래밍 방식 표현을 제공합니다. 또한 W3C(World Wide Web 컨소시엄) DOM Level 1 Core 및 DOM Level 2 Core 권장 사항을 기반으로 합니다.  
   
  <xref:System.Xml.XmlDocument> 클래스는 XML 문서를 나타냅니다. 여기에는 다른 모든 XML 개체를 검색하고 만들기 위한 멤버가 포함됩니다. <xref:System.Xml.XmlDocument> 및 관련 클래스를 사용하면 XML 문서를 생성하고, 데이터를 로드, 액세스 및 수정하고 변경 내용을 저장할 수 있습니다.  
@@ -55,5 +56,6 @@ XML DOM(문서 개체 모델)은 XML 데이터를 표준 개체 집합으로 간
 - [DOM 확장](extending-the-dom.md)  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [XPath 데이터 모델을 사용하여 XML 데이터 처리](process-xml-data-using-the-xpath-data-model.md)  
  <xref:System.Xml.XPath.XPathNavigator> 클래스를 사용하여 XML 데이터를 처리하는 방법을 설명합니다.

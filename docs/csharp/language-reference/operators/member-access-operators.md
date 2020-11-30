@@ -1,7 +1,7 @@
 ---
 title: 멤버 액세스 연산자 및 식 - C# 참조
 description: 형식 멤버에 액세스하는 데 사용하는 C# 연산자에 대해 알아봅니다.
-ms.date: 04/17/2020
+ms.date: 11/13/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 688a1fcff84a6e8f2fa31533a2bc459bf8c8717a
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 28d3d9c3261f1a852d16f2637309b21412611c10
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916786"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691242"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>멤버 액세스 연산자 및 식(C# 참조)
 
@@ -137,9 +137,6 @@ A?.B?[C];
 앞의 예제에서 `??` 연산자를 사용하지 않는 경우 `numbers?.Length < 2`는 `numbers`가 `null`일 때 `false`로 평가됩니다.
 
 Null 조건부 멤버 액세스 연산자 `?.`를 Elvis 연산자라고도 합니다.
-
-> [!NOTE]
-> C# 8에서 [null 허용 연산자](null-forgiving.md)는 이전 null 조건부 연산 목록을 종료합니다. 예를 들어 `x?.y!.z` 식은 `(x?.y)!.z`로 구문 분석됩니다. 이 해석으로 인해 `z`는 `x`가 `null`인 경우에도 평가되므로 <xref:System.NullReferenceException>이 발생할 수 있습니다.
 
 ### <a name="thread-safe-delegate-invocation"></a>스레드로부터 안전한 대리자 호출
 

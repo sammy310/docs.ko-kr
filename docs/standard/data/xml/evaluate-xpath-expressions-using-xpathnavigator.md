@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2913ccf3-f932-4363-8028-9e2d22ce6093
-ms.openlocfilehash: 7ee487012453c7edfef4f071e0cfc843efff0c4f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 19e3287a990bbfd793bce892b14f08f31c53faa2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818624"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687205"
 ---
 # <a name="evaluate-xpath-expressions-using-xpathnavigator"></a>XPathNavigator를 사용하여 XPath 식 계산
+
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XPath 식을 계산하는 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 메서드를 제공합니다. <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 메서드는 XPath 식을 가져와서 계산하고 XPath 식 결과를 기준으로 부울, 숫자, 문자열, 노드 집합 등의 W3C XPath 형식을 반환합니다.  
   
 ## <a name="the-evaluate-method"></a>Evaluate 메서드  
+
  <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 메서드는 XPath 식을 가져와서 계산하고 부울(<xref:System.Boolean>), 숫자(<xref:System.Double>), 문자열(<xref:System.String>), 노드 집합(<xref:System.Xml.XPath.XPathNodeIterator>) 등의 형식화된 결과를 반환합니다. 예를 들어, 수학적 메서드에서 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 메서드를 사용할 수 있습니다. 다음 예제 코드에서는 `books.xml` 파일에 있는 모든 책의 총 가격을 계산합니다.  
   
 ```vb  
@@ -41,6 +43,7 @@ Console.WriteLine(total);
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ### <a name="position-and-last-functions"></a>position 및 last 함수  
+
  <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 메서드가 오버로드됩니다. <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 메서드 중 하나가 <xref:System.Xml.XPath.XPathNodeIterator> 개체를 매개 변수로 사용합니다. 이 특정 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 메서드는 매개 변수로 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 개체만을 사용하는 <xref:System.Xml.XPath.XPathExpression> 메서드와 일치합니다. 단, 노드 집합 인수에서 계산을 실행할 현재 컨텍스트를 지정할 수 있다는 점이 다릅니다. 이 컨텍스트는 XPath `position()` 및 `last()` 함수가 현재 컨텍스트 노드에 상대적인 경우 이러한 함수에 필요합니다. `position()` 및 `last()` 함수가 위치 단계에서 조건자로 사용되지 않을 경우 이를 계산하기 위해서는 노드 집합에 대한 참조가 필요합니다. 그렇지 않으면 `position` 및 `last` 함수는 `0`을 반환합니다.  
   
 ## <a name="see-also"></a>참조

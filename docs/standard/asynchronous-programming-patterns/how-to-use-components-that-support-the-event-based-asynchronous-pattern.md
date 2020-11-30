@@ -17,14 +17,15 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: 94bd79bab1e7982ea39b5aa5872a6674033f9ccf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 36fe8015187833e03c4cc3fc1609ec647daf7278
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830365"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678001"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 사용
+
 많은 구성 요소가 비동기적으로 작업을 수행하는 옵션을 제공합니다. 예를 들어 <xref:System.Media.SoundPlayer> 및 <xref:System.Windows.Forms.PictureBox> 구성 요소를 사용하면 기본 스레드가 중단 없이 계속 실행되는 동안 사운드 및 이미지를 “배경”으로 로드할 수 있습니다.  
   
  [이벤트 기반 비동기 패턴 개요](event-based-asynchronous-pattern-overview.md)를 지원하는 클래스에 비동기 메서드를 사용하는 작업은 다른 이벤트의 경우와 같이 구성 요소의 _MethodName_**Completed** 이벤트에 이벤트 처리기를 연결하는 것처럼 간단할 수 있습니다. _MethodName_**Async** 메서드를 호출하면 애플리케이션은 _MethodName_**Completed** 이벤트가 발생할 때까지 중단 없이 계속 실행됩니다. 이벤트 처리기에서 <xref:System.ComponentModel.AsyncCompletedEventArgs> 매개 변수를 검사하여 비동기 작업이 성공적으로 완료되었는지 또는 취소되었는지 확인할 수 있습니다.  

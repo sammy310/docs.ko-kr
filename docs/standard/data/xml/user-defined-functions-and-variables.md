@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4772f20e-1e7f-496e-93c2-1484473be555
-ms.openlocfilehash: d4936ec32d54a465803d493048cba2b70ed50db6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c1f519dd539a266d61945ad221bccceaa1361779
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818507"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675622"
 ---
 # <a name="user-defined-functions-and-variables"></a>사용자 정의 함수 및 변수
+
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 <xref:System.Xml.XPath.XPathDocument> 데이터와 상호 작용하는 데 사용되는 메서드 집합을 제공합니다. XPath 쿼리 식에서 사용되는 확장명 함수 및 변수를 구현하여 표준 XPath 함수를 보완할 수 있습니다. <xref:System.Xml.XPath.XPathExpression.SetContext%2A> 메서드는 <xref:System.Xml.Xsl.XsltContext>에서 파생되는 사용자 정의 컨텍스트를 적용할 수 있습니다. 사용자 정의 함수는 사용자 지정 컨텍스트로 확인됩니다.  
   
  확장명 함수 및 변수는 XML 삽입 공격을 방지하는 데 유용할 수 있습니다. 이러한 시나리오에서 사용자 입력은 처리 명령과 연결된 원시 입력이 아닌 사용자 지정 변수로 할당되고 확장명 함수로 처리됩니다. 확장 함수 및 변수에는 사용자 입력이 포함되어 있어서 디자이너에서 의도한 대로 XML 데이터에 대해서만 작업을 수행합니다.  

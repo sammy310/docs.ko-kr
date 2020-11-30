@@ -10,10 +10,10 @@ helpviewer_keywords:
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
 ms.openlocfilehash: 25eb5e6642d8b608bedcb4e9adadde4d84c2bae9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89138971"
 ---
 # <a name="extern-c-reference"></a>extern(C# 참조)
@@ -31,7 +31,7 @@ private static extern void AVIFileInit();
 
 extern 키워드는 C++보다 C#에서 사용이 제한적입니다. C# 키워드를 C++ 키워드와 비교하려면 extern을 사용하여 C++ 언어 참조에 링크 지정을 참조하십시오.
 
-## <a name="example-1"></a>예제 1
+## <a name="example-1"></a>예 1
 
 이 예제에서는 프로그램이 사용자로부터 문자열을 수신하여 메시지 상자에 표시합니다. 이 프로그램은 User32.dll 라이브러리에서 가져온 `MessageBox` 메서드를 사용합니다.
 
@@ -52,7 +52,7 @@ extern 키워드는 C++보다 C#에서 사용이 제한적입니다. C# 키워�
     }
     ```
 
-2. Visual Studio 설치 디렉터리에서 Visual Studio x64(또는 x32) 네이티브 도구 명령 프롬프트 창을 열고 명령 프롬프트에서 **cl -LD cmdll.c**를 입력하여 `cmdll.c` 파일을 컴파일합니다.
+2. Visual Studio 설치 디렉터리에서 Visual Studio x64(또는 x32) 네이티브 도구 명령 프롬프트 창을 열고 명령 프롬프트에서 **cl -LD cmdll.c** 를 입력하여 `cmdll.c` 파일을 컴파일합니다.
 
 3. 같은 디렉터리에서 다음 C# 파일을 만들고 이름을 `cm.cs`로 지정합니다.
 
@@ -78,7 +78,7 @@ extern 키워드는 C++보다 C#에서 사용이 제한적입니다. C# 키워�
 
     이렇게 하면 실행 파일 `cm.exe`가 만들어집니다.
 
-5. `cm.exe`를 실행합니다. `SampleMethod` 메서드가 값 5를 DLL 파일에 전달하면 10을 곱한 값이 반환됩니다.  프로그램에서는 다음이 출력됩니다.
+5. `cm.exe`을 실행합니다. `SampleMethod` 메서드가 값 5를 DLL 파일에 전달하면 10을 곱한 값이 반환됩니다.  프로그램에서는 다음이 출력됩니다.
 
     ```output
     SampleMethod() returns 50.

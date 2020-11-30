@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 6f0be433abcebed7f9da70225563a04170426314
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fe227a2d3efc5c36b818b7f4431896e6f62b1f26
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818208"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685047"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>스타일시트 매개 변수 및 확장 개체의 XsltArgumentList
+
 <xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT(Extensible Stylesheet Language for Transformations) 매개 변수와 XSLT 확장 개체가 포함되어 있습니다. 이러한 매개 변수와 확장명 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.  
   
 > [!NOTE]
@@ -31,6 +32,7 @@ ms.locfileid: "94818208"
 - <xref:System.Xml.XPath.XPathNodeIterator>를 사용하여 스타일시트에 결과 트리 조각을 전달할 수 있습니다.  
   
 ## <a name="xslt-style-sheet-parameters"></a>XSLT 스타일시트 매개 변수  
+
  <xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>에 XSLT 매개 변수를 추가합니다. 그러면 정규화된 이름과 네임스페이스 URI(Uniform Resource Identifier)가 매개 변수 개체와 연결됩니다.  
   
  매개 변수 개체는 W3C(World Wide Web 컨소시엄) 형식과 일치해야 합니다. 다음 표에서는 해당하는 W3C 형식과 해당 .NET Framework 클래스(형식), 그리고 W3C 형식이 XPath(XML Path Language) 형식인지, 또는 XSLT 형식인지를 보여 줍니다.  
@@ -54,6 +56,7 @@ ms.locfileid: "94818208"
 3. <xref:System.Xml.Xsl.XsltArgumentList>를 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달합니다.  
   
 ### <a name="example"></a>예제  
+
  다음 예제에서는 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 메서드를 사용하여 계산된 할인 기간을 유지하는 매개 변수를 만듭니다. 할인 기간은 주문 날짜로부터 20일 동안으로 계산됩니다.  
   
 ```vb  
@@ -137,6 +140,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>입력  
+
  order.xml  
   
 ```xml  
@@ -178,6 +182,7 @@ public class Sample
 ```  
   
 ## <a name="xslt-extension-objects"></a>XSLT 확장명 개체  
+
  <xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>에 XSLT 확장명 개체를 추가합니다. 이 때 정규화된 이름과 네임스페이스 URI가 확장 개체와 연결됩니다.  
   
  개체가 추가될 때 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>의 호출자는 보안 정책에서 완전히 신뢰되어야 합니다. 호출자가 일부 신뢰되는 경우에는 추가 작업이 실패합니다.  
@@ -195,6 +200,7 @@ public class Sample
 3. <xref:System.Xml.Xsl.XsltArgumentList>를 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달합니다.  
   
 ### <a name="example"></a>예제  
+
  다음 예제에서는 반지름이 주어진 원의 원주를 계산합니다.  
   
 ```vb  
@@ -305,6 +311,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>입력  
+
  number.xml  
   
 ```xml  
@@ -341,6 +348,7 @@ public class Sample
 ```  
   
 ### <a name="output"></a>출력  
+
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

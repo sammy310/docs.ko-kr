@@ -15,10 +15,10 @@ helpviewer_keywords:
 ms.custom: updateeachrelease
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 ms.openlocfilehash: d59274423e6f9844d3ab22f3ac513ba1a05d7f07
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91171353"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn(C# 컴파일러 옵션)
@@ -52,7 +52,7 @@ ms.locfileid: "91171353"
   
  모든 경고를 오류로 처리하려면 [-warnaserror](./warnaserror-compiler-option.md)를 사용합니다. 특정 경고를 사용하지 않으려면 [-nowarn](./nowarn-compiler-option.md)을 사용합니다.  
   
- **-w**는 **-warn**의 약식 형태입니다.  
+ **-w** 는 **-warn** 의 약식 형태입니다.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   

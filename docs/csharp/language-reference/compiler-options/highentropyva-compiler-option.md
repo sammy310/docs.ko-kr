@@ -10,10 +10,10 @@ helpviewer_keywords:
 - highentropyva compiler option [C#]
 ms.assetid: eaf409b3-384e-49dd-9417-62453658f421
 ms.openlocfilehash: f3cdeb5e63d632fecbbd94501558cc53c28a918a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91173206"
 ---
 # <a name="-highentropyva-c-compiler-options"></a>-highentropyva(C# 컴파일러 옵션)
@@ -29,7 +29,7 @@ ms.locfileid: "91173206"
 ## <a name="arguments"></a>인수  
 
  `+` &#124; `-`  
- 이 옵션은 [-platform:anycpu](./platform-compiler-option.md) 컴파일러 옵션으로 표시된 실행 파일이나 64비트 실행 파일이 높은 엔트로피 가상 주소 공간을 지원하도록 지정합니다. 이 옵션은 기본적으로 비활성화되어 있습니다. **-highentropyva+** 또는 **-highentropyva**를 사용하여 설정합니다.  
+ 이 옵션은 [-platform:anycpu](./platform-compiler-option.md) 컴파일러 옵션으로 표시된 실행 파일이나 64비트 실행 파일이 높은 엔트로피 가상 주소 공간을 지원하도록 지정합니다. 이 옵션은 기본적으로 비활성화되어 있습니다. **-highentropyva+** 또는 **-highentropyva** 를 사용하여 설정합니다.  
   
 ## <a name="remarks"></a>설명  
 

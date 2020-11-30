@@ -4,10 +4,10 @@ title: -target:winmdobj(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
 ms.openlocfilehash: a13e2da02698209a514e716d65c1df3508cf1508
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91171405"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj(C# 컴파일러 옵션)
@@ -32,11 +32,11 @@ ms.locfileid: "91171405"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>Windows 스토어 응용 프로그램용 Visual Studio IDE에서 이 컴파일러 옵션을 설정하려면  
   
-1. **솔루션 탐색기**에서 프로젝트의 바로 가기 메뉴를 열고 **속성**을 선택합니다.  
+1. **솔루션 탐색기** 에서 프로젝트의 바로 가기 메뉴를 열고 **속성** 을 선택합니다.  
   
 2. **애플리케이션** 탭을 선택합니다.  
   
-3. **출력 형식** 목록에서 **WinMD 파일**을 선택합니다.  
+3. **출력 형식** 목록에서 **WinMD 파일** 을 선택합니다.  
   
      **WinMD 파일** 옵션은 Windows 8.x 스토어 앱 템플릿에만 사용할 수 있습니다.  
   

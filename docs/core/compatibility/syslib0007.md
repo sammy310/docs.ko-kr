@@ -3,12 +3,12 @@ title: SYSLIB0007 경고
 description: 컴파일 시간 경고 SYSLIB0007을 생성하는 사용되지 않음에 대해 알아봅니다.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 4c0feac1d673e3462a4f2db470825b15cf1b1706
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: db7150fa3e3c566adf110034734e068fac079c6d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439944"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685021"
 ---
 # <a name="syslib0007-default-implementations-of-cryptography-algorithms-not-supported"></a>SYSLIB0007: 암호화 알고리즘의 기본 구현이 지원되지 않음
 
@@ -38,4 +38,4 @@ ms.locfileid: "94439944"
 
 ## <a name="see-also"></a>추가 정보
 
-- [암호화 관련 호환성이 손상되는 변경](cryptography.md#instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported)
+- [암호화 추상화의 기본 구현 인스턴스화는 지원되지 않습니다.](cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md)

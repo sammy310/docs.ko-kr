@@ -4,10 +4,10 @@ title: -target:appcontainerexe(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
 ms.openlocfilehash: e4aa60ebc9dcc1a63b63863385b0ee9f13d6d78d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91193740"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe(C# 컴파일러 옵션)
@@ -30,9 +30,9 @@ ms.locfileid: "91193740"
   
 ### <a name="to-set-this-compiler-option-in-the-ide"></a>IDE에서 이 컴파일러 옵션을 설정하려면  
   
-1. **솔루션 탐색기**에서 프로젝트의 바로 가기 메뉴를 열고 **속성**을 선택합니다.  
+1. **솔루션 탐색기** 에서 프로젝트의 바로 가기 메뉴를 열고 **속성** 을 선택합니다.  
   
-2. **애플리케이션** 탭의 **출력 형식** 목록에서 **Windows 스토어 앱**을 선택합니다.  
+2. **애플리케이션** 탭의 **출력 형식** 목록에서 **Windows 스토어 앱** 을 선택합니다.  
   
      이 옵션은 Windows 8.x 스토어 앱 템플릿에만 사용할 수 있습니다.  
   

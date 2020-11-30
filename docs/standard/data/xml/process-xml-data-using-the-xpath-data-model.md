@@ -2,14 +2,15 @@
 title: XPath 데이터 모델을 사용하여 XML 데이터 처리
 ms.date: 03/30/2017
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-ms.openlocfilehash: cc35b570c592557658cd3dda0c844847c8b23763
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 840fb40cc650d8f65af533d4102f18132bce3f53
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829286"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686958"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>XPath 데이터 모델을 사용하여 XML 데이터 처리
+
 <xref:System.Xml?displayProperty=nameWithType> 네임스페이스는 <xref:System.Xml.XmlDocument> 또는 <xref:System.Xml.XPath.XPathDocument> 클래스를 사용하여 XML 문서, 조각, 노드 또는 메모리 내 노드 집합의 프로그래밍 방식 표현을 제공합니다.  
   
  <xref:System.Xml.XPath.XPathDocument> 클래스는 XPath 데이터 모델을 사용하여 빠른 속도의 읽기 전용 메모리 내 XML 문서 표현을 제공합니다. <xref:System.Xml.XmlDocument> 클래스는 W3C DOM(문서 개체 모델) Level 1 Core 및 DOM Level 2 Core를 구현하는 XML 문서의 편집 가능한 메모리 내 표현을 제공합니다. 두 클래스는 <xref:System.Xml.XPath.IXPathNavigable> 인터페이스를 구현하며 기본 XML 데이터를 선택, 평가 및 탐색하고 경우에 따라 편집하는 데 사용되는 <xref:System.Xml.XPath.XPathNavigator> 개체를 반환합니다.  
@@ -17,6 +18,7 @@ ms.locfileid: "94829286"
  다음 단원에서는 <xref:System.Xml.XPath.XPathNavigator> 클래스를 반환하는 클래스를 기반으로 이 클래스의 기능에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [XPathDocument 및 XmlDocument를 사용하여 XML 데이터 읽기](reading-xml-data-using-xpathdocument-and-xmldocument.md)  
  읽기 전용 <xref:System.Xml.XPath.XPathDocument> 클래스 개체를 만들어 XML 문서를 읽는 방법 및 편집 가능한 <xref:System.Xml.XmlDocument> 클래스 개체를 만들어 XML 문서를 읽고 편집하는 방법을 설명합니다. 또한 이 항목에서는 각 클래스에서 <xref:System.Xml.XPath.XPathNavigator> 개체를 반환하여 XML 문서를 탐색하고 편집하는 방법을 설명합니다.  
   

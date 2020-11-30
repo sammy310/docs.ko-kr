@@ -8,10 +8,10 @@ helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
 ms.openlocfilehash: 24f95e828522f467c519c0c8a7ba9410aa97af4e
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89134590"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface":::(C# 참조)
@@ -33,7 +33,7 @@ ms.locfileid: "89134590"
 - [인덱서](../../programming-guide/indexers/using-indexers.md)
 - [이벤트](event.md)
 
-이러한 앞의 구성원 선언에는 일반적으로 본문이 포함되지 않습니다. C# 8.0부터는 인터페이스 구성원이 본문을 선언할 수 있습니다. 이를 *기본 구현*이라고 합니다. 본문이 있는 구성원은 인터페이스가 재정의 구현을 제공하지 않는 클래스 및 구조체에 대해 "기본" 구현을 제공하도록 허용할 수 있습니다. 또한 C# 8.0부터 인터페이스에는 다음이 포함될 수 있습니다.
+이러한 앞의 구성원 선언에는 일반적으로 본문이 포함되지 않습니다. C# 8.0부터는 인터페이스 구성원이 본문을 선언할 수 있습니다. 이를 *기본 구현* 이라고 합니다. 본문이 있는 구성원은 인터페이스가 재정의 구현을 제공하지 않는 클래스 및 구조체에 대해 "기본" 구현을 제공하도록 허용할 수 있습니다. 또한 C# 8.0부터 인터페이스에는 다음이 포함될 수 있습니다.
 
 - [상수](const.md)
 - [연산자](../operators/operator-overloading.md)

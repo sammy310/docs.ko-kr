@@ -8,18 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: af0c7ab5ebb6980bb0381e46fd38e9470f3a2152
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d8d9a75bb5e07816adaa8d09c96cee8a240130fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536758"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688915"
 ---
 # <a name="protected-c-reference"></a>protected(C# 참조)
 
 `protected` 키워드는 멤버 액세스 한정자입니다.
 
- > 이 페이지에서는 `protected` 액세스를 설명합니다. `protected` 키워드는 [`protected internal`](protected-internal.md) 및 [`private protected`](private-protected.md) 액세스 한정자의 일부이기도 합니다.
+> [!NOTE]
+> 이 페이지에서는 `protected` 액세스를 설명합니다. `protected` 키워드는 [`protected internal`](protected-internal.md) 및 [`private protected`](private-protected.md) 액세스 한정자의 일부이기도 합니다.
 
 protected 멤버는 해당 클래스 내에서 파생 클래스 인스턴스가 액세스할 수 있습니다.
 

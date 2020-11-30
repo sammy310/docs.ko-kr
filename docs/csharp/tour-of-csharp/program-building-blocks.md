@@ -3,15 +3,15 @@ title: C# 프로그램의 구성 요소
 description: C# 멤버, 식 및 문에 대해 알아봅니다. 형식에는 사용자가 작성하는 멤버가 포함됩니다. 이러한 멤버는 문과 식에서 빌드됩니다.
 ms.date: 08/06/2020
 ms.openlocfilehash: e4350f2c2b6005fb59dd868f0f7f628bd07b0053
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93342698"
 ---
 # <a name="program-building-blocks"></a>프로그램 구성 요소
 
-이전 문서에 설명된 형식은 [***멤버** _](../programming-guide/classes-and-structs/members.md), [_*_식_*_ , _*_문_*_](../programming-guide/statements-expressions-operators/index.md)이라는 구성 요소를 사용하여 빌드됩니다.
+이전 문서에 설명된 형식은 [***멤버** _](../programming-guide/classes-and-structs/members.md), [_*_식_*_, _*_문_*_](../programming-guide/statements-expressions-operators/index.md)이라는 구성 요소를 사용하여 빌드됩니다.
 
 ## <a name="members"></a>멤버
 
@@ -20,15 +20,15 @@ ms.locfileid: "93342698"
 다음은 클래스가 포함할 수는 멤버의 종류입니다.
 
 - 상수: 클래스와 연결된 상수 값
-- **필드** :  클래스와 연결된 변수
-- **메서드** :  클래스가 수행할 수 있는 작업
-- **Properties** : 클래스의 명명된 속성에 대한 읽기 및 쓰기와 관련된 작업
-- **인덱서** : 클래스 인스턴스를 배열처럼 인덱싱하는 것과 관련된 작업
-- **이벤트** : 클래스에 의해 생성될 수 있는 알림
-- **연산자** : 클래스가 지원하는 변환 및 식 연산자
-- **생성자** : 클래스의 인스턴스 또는 클래스 자체를 초기화하는 데 필요한 작업
-- **종료자** : 클래스의 인스턴스가 영구적으로 삭제되기 전에 수행한 작업
-- **형식** : 클래스에 의해 선언된 중첩 형식
+- **필드**:  클래스와 연결된 변수
+- **메서드**:  클래스가 수행할 수 있는 작업
+- **Properties**: 클래스의 명명된 속성에 대한 읽기 및 쓰기와 관련된 작업
+- **인덱서**: 클래스 인스턴스를 배열처럼 인덱싱하는 것과 관련된 작업
+- **이벤트**: 클래스에 의해 생성될 수 있는 알림
+- **연산자**: 클래스가 지원하는 변환 및 식 연산자
+- **생성자**: 클래스의 인스턴스 또는 클래스 자체를 초기화하는 데 필요한 작업
+- **종료자**: 클래스의 인스턴스가 영구적으로 삭제되기 전에 수행한 작업
+- **형식**: 클래스에 의해 선언된 중첩 형식
 
 ## <a name="accessibility"></a>접근성
 

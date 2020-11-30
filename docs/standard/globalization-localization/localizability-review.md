@@ -15,12 +15,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: 30cde57a5c837d9dc324e9cd263d2a1011641af4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ecfba7b6b5908a16bb23860704a35035f58e3ed4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829845"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686022"
 ---
 # <a name="localizability-review"></a>지역화 가능성 검토
 
@@ -35,11 +35,13 @@ ms.locfileid: "94829845"
 - [국가별 데이터를 사용하여 애플리케이션을 테스트했습니까?](#test)
 
 <a name="global"></a>
+
 ## <a name="implement-globalization-recommendations"></a>세계화 권장 사항 구현
 
 지역화를 염두에 두고 애플리케이션을 설계 및 개발했고 [세계화](globalization.md) 문서에 설명된 권장 사항을 따른 경우 지역화 가능성 검토는 대개 품질 보증 단계에서 통과하게 됩니다. 그러지 않으면 이 단계에서 [세계화](globalization.md)를 위한 권장 사항을 검토 및 구현하고 지역화를 방해하는 소스 코드의 오류를 수정해야 합니다.
 
 <a name="culture"></a>
+
 ## <a name="handle-culture-sensitive-features"></a>문화권 구분 기능 처리
 
 .NET에서는 다양한 영역에서 문화권마다 다른 프로그래밍 방식 지원을 제공하지 않습니다. 대부분의 경우 사용자 지정 코드를 작성하여 다음과 같은 기능 영역을 처리해야 합니다.
@@ -58,6 +60,7 @@ ms.locfileid: "94829845"
    [!code-vb[Conceptual.Localizability#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.localizability/vb/ismetric1.vb#1)]
 
 <a name="test"></a>
+
 ## <a name="test-your-application"></a>애플리케이션 테스트
 
 애플리케이션을 지역화하기 전에 운영 체제의 국가별 버전에서 국가별 데이터를 사용하여 테스트해야 합니다. 대부분의 사용자 인터페이스는 이 시점에서 지역화되지 않지만, 다음과 같은 문제를 발견할 수 있습니다.

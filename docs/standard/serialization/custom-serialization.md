@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 8e8d8d38ab8170a9bf9fae098e267be1a38f27d0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 4ca78c71f464a914c07583825d4a7027ebb11bf6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281791"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679041"
 ---
 # <a name="custom-serialization"></a>사용자 지정 serialization
 
@@ -51,6 +51,7 @@ ms.locfileid: "93281791"
  또한 새 필드를 기존 serialize 가능한 형식에 추가할 때 <xref:System.Runtime.Serialization.OptionalFieldAttribute> 특성을 필드에 적용합니다. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 및 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>는 새 필드가 없는 스트림이 처리될 때 필드가 없어도 이를 무시합니다.  
   
 ## <a name="implementing-the-iserializable-interface"></a>ISerializable 인터페이스 구현  
+
  serialization을 제어하는 다른 방법은 개체에 <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하는 것입니다. 하지만 이전 단원의 메서드가 이 메서드를 대체하여 serialization을 제어합니다.  
   
  또한 [Serializable](xref:System.SerializableAttribute) 특성으로 표시되어 있으며 클래스 수준 또는 생성자에 선언적 또는 명령적 보안이 있는 클래스에는 기본 serialization을 사용하지 않아야 합니다. 대신 이러한 클래스는 항상 <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현해야 합니다.  

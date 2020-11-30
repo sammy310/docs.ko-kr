@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: 578db725458ad5c4a90256a06744a58a6d1918da
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e73be220f3f04ec6bd05b1193d4188825f1b8e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819957"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676506"
 ---
 # <a name="cancellation-in-managed-threads"></a>관리되는 스레드의 취소
 
@@ -51,6 +51,7 @@ ms.locfileid: "94819957"
 - 수신기는 대기 핸들에 대한 폴링, 콜백 등록 또는 대기를 통해 취소 요청에 대한 알림을 받을 수 있습니다.  
   
 ## <a name="cancellation-types"></a>취소 형식  
+
  취소 프레임워크는 다음 표에 나열된 관련 형식 집합으로 구현됩니다.  
   
 |형식 이름|설명|  
@@ -62,6 +63,7 @@ ms.locfileid: "94819957"
  취소 모델은 여러 가지 형식으로 .NET에 통합되었습니다. 가장 중요한 형식은 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 및 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>입니다. 모든 새 라이브러리 및 애플리케이션 코드에 대해 이 협조적 취소 모델을 사용하는 것이 좋습니다.  
   
 ## <a name="code-example"></a>코드 예제  
+
  다음 예제에서는 요청 개체가 <xref:System.Threading.CancellationTokenSource> 개체를 만들고 <xref:System.Threading.CancellationTokenSource.Token%2A> 속성을 취소 가능한 작업에 전달합니다. 요청을 수신하는 작업에서는 폴링을 통해 토큰의 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성 값을 모니터링합니다. 값이 `true`가 되면 수신기가 적절한 방식이더라도 종료될 수 있습니다. 이 예제에서는 대부분 경우에 모두 필요한 메서드가 종료됩니다.  
   
 > [!NOTE]
@@ -71,6 +73,7 @@ ms.locfileid: "94819957"
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  
   
 ## <a name="operation-cancellation-versus-object-cancellation"></a>작업 취소 대 개체 취소  
+
  협조적 취소 프레임워크에서 취소는 개체가 아니라 작업을 나타냅니다. 취소 요청은 필요한 정리가 수행되고 나서 가능하면 즉시 작업이 중지되어야 함을 의미합니다. 취소 토큰 하나가 “취소할 수 있는 작업" 하나를 나타내야 하지만 해당 작업은 프로그램에서 구현될 수 있습니다. 토큰의 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성이 `true`로 설정되고 나면 `false`로 재설정될 수 없습니다. 따라서 취소 토큰이 취소된 후에는 해당 토큰을 다시 사용할 수 없습니다.  
   
  개체 취소 메커니즘이 필요하면 다음 예제와 같이 <xref:System.Threading.CancellationToken.Register%2A?displayProperty=nameWithType> 메서드를 호출하여 작업 취소 메커니즘을 기반으로 개체 취소 메커니즘을 적용할 수 있습니다.  
@@ -81,6 +84,7 @@ ms.locfileid: "94819957"
  개체가 동시 취소 가능 작업을 두 개 이상 지원하면 개별 토큰을 개별 취소 가능한 작업에 입력으로 전달합니다. 이런 방식으로 다른 작업에 영향을 미치지 않고 작업을 취소할 수 있습니다.  
   
 ## <a name="listening-and-responding-to-cancellation-requests"></a>취소 요청 수신 대기 및 응답  
+
  사용자 대리자에서 취소 가능한 작업의 구현자는 취소 요청에 대한 응답으로 작업을 종료하는 방법을 결정합니다. 대부분 경우에 사용자 대리자는 필요한 정리를 수행하고 즉시 반환될 수 있습니다.  
   
  그러나 더 복잡한 경우에 사용자 대리자가 취소가 발생했다는 정보를 라이브러리 코드에 알려야 할 수 있습니다. 이 경우 작업을 종료하는 올바른 방법은 <xref:System.OperationCanceledException>을 throw하는 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 메서드를 대리자가 호출하는 것입니다. 라이브러리 코드는 사용자 대리자 스레드에서 이 예외를 catch하고 예외의 토큰을 검사하여 예외가 협조적 취소를 나타내는지, 아니면 다른 예외적인 상황인지를 결정합니다.  
@@ -88,6 +92,7 @@ ms.locfileid: "94819957"
  <xref:System.Threading.Tasks.Task> 클래스는 이 방식으로 <xref:System.OperationCanceledException>을 처리합니다. 자세한 내용은 [작업 취소](../parallel-programming/task-cancellation.md)를 참조하세요.  
   
 ### <a name="listening-by-polling"></a>폴링으로 수신 대기  
+
  루핑되거나 재귀적으로 사용되는 장기 실행 계산의 경우 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType> 속성 값을 주기적으로 폴링하여 취소 요청을 수신 대기할 수 있습니다. 값이 `true`이면 메서드가 가능한 한 빠르게 정리 및 종료되어야 합니다. 최적 폴링 빈도는 애플리케이션 형식에 따라 다릅니다. 특정 프로그램에 대한 최적 폴링 빈도는 개발자가 결정할 수 있습니다. 폴링 자체는 성능에 큰 영향을 미치지 않습니다. 다음 예제에서는 한 가지 가능한 폴링 방법을 보여 줍니다.  
   
  [!code-csharp[Cancellation#3](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#3)]
@@ -96,6 +101,7 @@ ms.locfileid: "94819957"
  자세한 예제는 [방법: 폴링을 통해 취소 요청 수신 대기](how-to-listen-for-cancellation-requests-by-polling.md)를 참조하세요.  
   
 ### <a name="listening-by-registering-a-callback"></a>콜백을 등록하여 수신 대기  
+
  일부 작업은 적절한 시기에 취소 토큰의 값을 확인할 수 없는 방식으로 차단될 수 있습니다. 이러한 경우에는 취소 요청이 수신될 때 메서드를 차단 해제하는 콜백 메서드를 등록할 수 있습니다.  
   
  <xref:System.Threading.CancellationToken.Register%2A> 메서드는 특히 이 목적으로 사용되는 <xref:System.Threading.CancellationTokenRegistration> 개체를 반환합니다. 다음 예제에서는 <xref:System.Threading.CancellationToken.Register%2A> 메서드를 사용하여 비동기 웹 요청을 취소하는 방법을 보여 줍니다.  
@@ -116,6 +122,7 @@ ms.locfileid: "94819957"
  자세한 예제는 [방법: 취소 요청에 대한 콜백 등록](how-to-register-callbacks-for-cancellation-requests.md)을 참조하세요.  
   
 ### <a name="listening-by-using-a-wait-handle"></a>대기 핸들을 사용하여 수신 대기  
+
  취소할 수 있는 작업이 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 또는 <xref:System.Threading.Semaphore?displayProperty=nameWithType>와 같은 동기화 기본 형식에서 대기하는 동안 차단되면 <xref:System.Threading.CancellationToken.WaitHandle%2A?displayProperty=nameWithType> 속성을 사용하여 작업이 이벤트 및 취소 요청에서 대기하도록 할 수 있습니다. 취소 토큰의 대기 핸들은 취소 요청에 대한 응답으로 신호가 전송되고 메서드는 <xref:System.Threading.WaitHandle.WaitAny%2A> 메서드의 반환 값을 사용하여 신호를 전송한 취소 토큰이었는지를 판별할 수 있습니다. 그리고 나서 작업은 적절하게 종료되거나 <xref:System.OperationCanceledException>을 throw합니다.  
   
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
@@ -129,6 +136,7 @@ ms.locfileid: "94819957"
  자세한 예제는 [방법: 대기 핸들이 있는 취소 요청 수신 대기](how-to-listen-for-cancellation-requests-that-have-wait-handles.md)를 참조하세요.  
   
 ### <a name="listening-to-multiple-tokens-simultaneously"></a>동시에 여러 토큰 수신 대기  
+
  경우에 따라 수신기는 여러 취소 토큰을 동시에 수신 대기해야 할 수 있습니다. 예를 들어 취소 가능한 작업은 외부에서 메서드 매개 변수에 인수로 전달되는 토큰 이외에 내부 취소 토큰을 모니터링해야 할 수 있습니다. 이 작업을 하려면 다음 예제와 같이 토큰 두 개 이상을 토큰 하나로 결합할 수 있는 연결된 토큰 소스를 만듭니다.  
   
  [!code-csharp[Cancellation#7](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex13.cs#7)]
@@ -137,6 +145,7 @@ ms.locfileid: "94819957"
  작업을 완료했을 때 연결된 토큰 소스에서 `Dispose`를 호출해야 합니다. 자세한 예제는 [방법: 여러 개의 취소 요청 수신 대기](how-to-listen-for-multiple-cancellation-requests.md)를 참조하세요.  
   
 ## <a name="cooperation-between-library-code-and-user-code"></a>라이브러리 코드와 사용자 코드 간 협력  
+
  통합 취소 프레임워크를 사용하면 라이브러리 코드에서 사용자 코드를 취소하고 사용자 코드에서 협조적 방식으로 라이브러리 코드를 취소할 수 있습니다. 원활한 협력은 다음 지침에 따라 양측에 의존합니다.  
   
 - 취소 가능한 작업을 제공하는 라이브러리 코드는 사용자 코드가 취소를 요청할 수 있도록 외부 취소 토큰을 허용하는 공용 메서드도 제공해야 합니다.  

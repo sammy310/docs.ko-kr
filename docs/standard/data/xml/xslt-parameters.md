@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-ms.openlocfilehash: c203e17e327cf64690c2748c7f3a4e74b5306501
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 64a62840594773270a658738120812c59b4896cb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818299"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685216"
 ---
 # <a name="xslt-parameters"></a>XSLT 매개 변수
+
 <xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>에 XSLT 매개 변수를 추가합니다. 이 때 정규화된 이름 및 네임스페이스 URI가 매개 변수 개체와 연결됩니다.  
   
 ### <a name="to-use-an-xslt-parameter"></a>XSLT 매개 변수를 사용하려면  
@@ -24,6 +25,7 @@ ms.locfileid: "94818299"
 3. <xref:System.Xml.Xsl.XsltArgumentList> 개체를 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 메서드에 전달합니다.  
   
 ## <a name="parameter-types"></a>매개 변수 형식  
+
  매개 변수 개체는 W3C 형식과 일치해야 합니다. 다음 표에서는 해당 W3C 형식, 해당 Microsoft .NET 클래스(형식) 및 W3C 형식이 XPath 형식인지 또는 XSLT 형식인지를 보여 줍니다.  
   
 |W3C 형식|해당 .NET 클래스(형식)|XPath 또는 XSLT 형식|  
@@ -42,6 +44,7 @@ ms.locfileid: "94818299"
  다른 모든 형식은 오류를 throw합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 메서드를 사용하여 계산된 할인 기간을 유지하는 매개 변수를 만듭니다. 할인 기간은 주문 날짜로부터 20일 동안으로 계산됩니다.  
   
  [!code-csharp[XSLT_Param#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Param/CS/xsltparam.cs#1)]
@@ -50,9 +53,11 @@ ms.locfileid: "94818299"
 ### <a name="input"></a>입력  
   
 ##### <a name="orderxml"></a>order.xml  
+
  [!code-xml[XSLT_Param#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/order.xml#2)]  
   
 ##### <a name="discountxsl"></a>discount.xsl  
+
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
 ### <a name="output"></a>출력  

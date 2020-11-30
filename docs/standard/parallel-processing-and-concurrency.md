@@ -7,17 +7,19 @@ helpviewer_keywords:
 - concurrency [.NET]
 - asynchronous programming [.NET]
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
-ms.openlocfilehash: 7ac888ed877adf3652f5de243a046f3c5117dc61
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3cdb5c2ecd23635d8faf0eb4bc93d201869039b0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817499"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682681"
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>.NET의 병렬 처리, 동시성 및 비동기 프로그래밍
+
 .NET은 애플리케이션이 사용자에게 더 빠르게 대응하도록 설정하는 비동기 코드를 작성하고 여러 개의 실행 스레드를 사용하여 사용자 컴퓨터의 성능을 최대화하는 병렬 코드를 작성할 수 있는 다양한 방법을 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [비동기 프로그래밍](async.md)  
  .NET에서 제공하는 비동기 프로그래밍에 대한 메커니즘을 설명합니다.  
   

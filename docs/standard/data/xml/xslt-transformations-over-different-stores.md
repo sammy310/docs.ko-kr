@@ -2,14 +2,15 @@
 title: 여러 저장소에서의 XSLT 변환
 ms.date: 03/30/2017
 ms.assetid: 369850e9-004a-45d2-b5c3-5060d9135adb
-ms.openlocfilehash: 7ed5c938b3c6995fb1315931a8d1fa21b57c1d9d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 15fcf7f3dcf3165b7b88ad01d63aa27873bf5d8d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818247"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685099"
 ---
 # <a name="xslt-transformations-over-different-stores"></a>여러 저장소에서의 XSLT 변환
+
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslTransform> 클래스는 .NET Framework 2.0에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](migrating-from-the-xsltransform-class.md)을 참조하세요.  
   

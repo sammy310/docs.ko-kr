@@ -12,12 +12,12 @@ helpviewer_keywords:
 - I/O [.NET Framework], access control list entries
 - access control lists [.NET Framework]
 ms.assetid: 53758b39-bd9b-4640-bb04-cad5ed8d0abf
-ms.openlocfilehash: 49cbb27c1b9d7ae0b05077c7f4fe01a2dfe87ccb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 53daa88b761f46dab26b1c12c73741e880512d8d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820802"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682694"
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries-net-framework-only"></a>방법: 액세스 제어 목록 항목 추가 또는 제거(.NET Framework에만 해당)
 
@@ -40,6 +40,7 @@ ms.locfileid: "94820802"
 3. 변경 내용을 적용하려면 <xref:System.Security.AccessControl.DirectorySecurity> 개체를 <xref:System.IO.Directory.SetAccessControl%2A?displayProperty=nameWithType> 메서드에 전달합니다.  
   
 ## <a name="example"></a>예제  
+
  이 예제를 실행하려면 유효한 사용자 또는 그룹 계정을 사용해야 합니다. 예제에서는 <xref:System.IO.File> 개체를 사용합니다. <xref:System.IO.FileInfo>, <xref:System.IO.Directory> 및 <xref:System.IO.DirectoryInfo> 클래스에 동일한 프로시저를 사용합니다.
 
  [!code-csharp[IO.File.GetAccessControl-SetAccessControl#1](../../../samples/snippets/csharp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/CS/sample.cs#1)]

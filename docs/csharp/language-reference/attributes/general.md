@@ -3,10 +3,10 @@ title: 'C# 예약된 특성: Conditional, Obsolete, AttributeUsage'
 ms.date: 04/09/2020
 description: 컴파일러에서 생성된 코드에 영향을 주기 위해 컴파일러가 이 특성을 해석합니다.
 ms.openlocfilehash: c6d697dd08233ffc88900949998047137ee170a9
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "82021771"
 ---
 # <a name="reserved-attributes-conditionalattribute-obsoleteattribute-attributeusageattribute"></a>예약된 특성: ConditionalAttribute, ObsoleteAttribute, AttributeUsageAttribute

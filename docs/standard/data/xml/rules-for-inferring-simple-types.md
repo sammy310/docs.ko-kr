@@ -2,19 +2,21 @@
 title: 단순 형식 유추 규칙
 ms.date: 03/30/2017
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 817a35c607f810da0a3e2dc681d27ea997c5fcc7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8fa3037d9ad5af057f477733ffdea74681f5549
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823552"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686542"
 ---
 # <a name="rules-for-inferring-simple-types"></a>단순 형식 유추 규칙
+
 <xref:System.Xml.Schema.XmlSchemaInference> 클래스가 특성 및 요소에 대한 데이터 형식을 유추하는 방법을 설명합니다.  
   
  <xref:System.Xml.Schema.XmlSchemaInference> 클래스는 특성 및 요소에 대한 데이터 형식을 단순 형식으로 유추합니다. 이 단원에서는 유추 가능한 형식, 여러 다른 값이 단일 형식으로 통일되는 방식 및 스키마 정의 `xsi` 특성을 처리하는 방법을 설명합니다.  
   
 ## <a name="inferred-types"></a>유추된 형식  
+
  <xref:System.Xml.Schema.XmlSchemaInference> 클래스는 요소 및 특성 값을 단순 형식으로 유추하고 결과 스키마에 형식 특성을 포함시킵니다. 유추된 모든 형식은 단순 형식입니다. 기본 형식 또는 패싯은 결과로 생성된 스키마에 포함되지 않습니다.  
   
  값은 XML 문서에서 발견될 때마다 개별적으로 검사합니다. 값을 검사할 때 값의 형식을 유추합니다. 특성 또는 요소에 대해 형식이 유추되고 현재 유추된 형식과 일치하지 않는 특성 또는 요소 값이 발견되면 <xref:System.Xml.Schema.XmlSchemaInference> 클래스는 각 규칙 집합에 대해 형식을 승격합니다. 이 규칙은 이 항목 뒷부분의 형식 승격 단원에서 자세히 다룹니다.  
@@ -44,6 +46,7 @@ ms.locfileid: "94823552"
 |string|한 자 이상의 유니코드 문자입니다.|  
   
 ## <a name="type-promotion"></a>형식 승격  
+
  <xref:System.Xml.Schema.XmlSchemaInference> 클래스는 특성 및 요소 값을 한 번에 하나씩 검사합니다. 값이 나타나면 가장 제한되고 부호 없는 형식이 유추됩니다. 특성 또는 요소에 대해 형식이 유추되었고 현재 유추된 값과 일치하지 않는 새로운 값을 발견하는 경우, 유추된 형식은 현재 유추된 형식 및 새 값에 모두 적용되는 새로운 형식으로 승격됩니다. <xref:System.Xml.Schema.XmlSchemaInference> 클래스는 유추된 형식을 승격할 때 이전 값을 고려합니다.  
   
  예를 들어, 다음 두 XML 문서의 XML 조각을 고려하세요.  

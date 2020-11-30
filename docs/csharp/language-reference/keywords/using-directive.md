@@ -6,10 +6,10 @@ helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
 ms.openlocfilehash: f22a67348b19b8c97513ca685b2b10b34b1fd6fd
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89141948"
 ---
 # <a name="using-directive-c-reference"></a>using 지시문(C# 참조)
@@ -30,13 +30,13 @@ ms.locfileid: "89141948"
 
     자세한 내용은 [using 정적 지시문](using-static.md)을 참조하세요.
 
-- 네임스페이스 또는 형식에 대한 별칭을 만듭니다. 이를 *using 별칭 지시문*이라고 합니다.
+- 네임스페이스 또는 형식에 대한 별칭을 만듭니다. 이를 *using 별칭 지시문* 이라고 합니다.
 
     ```csharp
     using Project = PC.MyCompany.Project;
     ```
 
-`using` 키워드는 파일 및 글꼴과 같은 <xref:System.IDisposable> 개체가 제대로 처리될 수 있게 도와주는 *using 문*을 만드는 데도 사용됩니다. 자세한 내용은 [using 문](using-statement.md)을 참조하세요.
+`using` 키워드는 파일 및 글꼴과 같은 <xref:System.IDisposable> 개체가 제대로 처리될 수 있게 도와주는 *using 문* 을 만드는 데도 사용됩니다. 자세한 내용은 [using 문](using-statement.md)을 참조하세요.
 
 ## <a name="using-static-type"></a>정적 형식 사용
 
@@ -76,7 +76,7 @@ using s.RegularExpressions; // Generates a compiler error.
 
 네임스페이스는 두 가지 범주인 사용자 정의 및 시스템 정의로 구분됩니다. 사용자 정의 네임스페이스는 코드에서 정의된 네임스페이스입니다. 시스템 정의 네임스페이스 목록은 [.NET API 브라우저](../../../../api/index.md)를 참조하세요.
 
-## <a name="example-1"></a>예제 1
+## <a name="example-1"></a>예 1
 
 다음 예제에서는 `using` 네임스페이스에 대한 별칭을 정의 및 사용하는 방법을 보여 줍니다.
 

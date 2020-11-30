@@ -2,12 +2,12 @@
 title: Docker 앱을 위한 내부 루프 개발 워크플로
 description: Docker 애플리케이션에 대한 “내부 루프” 개발 워크플로에 대해 알아봅니다.
 ms.date: 08/06/2020
-ms.openlocfilehash: 071e16afede91f4cfd6cbe8662fa68814ffdcdd7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d66274a64591f79f242c1e8a63951b51d94a9ecd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539764"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676532"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 앱을 위한 내부 루프 개발 워크플로
 
@@ -79,7 +79,7 @@ VS Code용 Docker 확장은 다음 기능을 제공합니다.
 
 - Azure App Service에 DockerHub 및 Azure 컨테이너 레지스트리의 이미지 배포
 
-Docker 확장을 설치하려면 Ctrl+Shift+P를 누르고 `ext install`을 입력한 후 Install Extension 명령을 실행하여 Marketplace 확장 목록을 표시합니다. 그런 다음, **docker**를 입력하여 결과를 필터링한 후 그림 4-23과 같이 Docker Support 확장을 선택합니다.
+Docker 확장을 설치하려면 Ctrl+Shift+P를 누르고 `ext install`을 입력한 후 Install Extension 명령을 실행하여 Marketplace 확장 목록을 표시합니다. 그런 다음, **docker** 를 입력하여 결과를 필터링한 후 그림 4-23과 같이 Docker Support 확장을 선택합니다.
 
 ![VS Code용 Docker 확장 보기](media/docker-apps-inner-loop-workflow/install-docker-extension-vs-code.png)
 
@@ -107,7 +107,7 @@ Docker 확장을 설치하려면 Ctrl+Shift+P를 누르고 `ext install`을 입�
 
 **그림 4-24** **작업 영역에 Docker 파일 추가** 명령을 사용하여 추가한 Docker 파일
 
-DockerFile을 추가하는 경우 사용하는 기본 Docker 이미지가 무엇인지 지정합니다(예: `FROM mcr.microsoft.com/dotnet/core/aspnet`을 사용). 일반적으로 [Docker Hub 레지스트리](https://hub.docker.com/)의 공식 리포지토리에서 가져오는 기본 이미지(예: [.NET Core용 이미지](https://hub.docker.com/_/microsoft-dotnet-core/) 또는 [Node.js](https://hub.docker.com/_/node/)용 이미지) 위에 사용자 지정 이미지를 빌드합니다.
+DockerFile을 추가하는 경우 사용하는 기본 Docker 이미지가 무엇인지 지정합니다(예: `FROM mcr.microsoft.com/dotnet/aspnet`을 사용). 일반적으로 [Docker Hub 레지스트리](https://hub.docker.com/)의 공식 리포지토리에서 가져오는 기본 이미지(예: [.NET Core용 이미지](https://hub.docker.com/_/microsoft-dotnet/) 또는 [Node.js](https://hub.docker.com/_/node/)용 이미지) 위에 사용자 지정 이미지를 빌드합니다.
 
 > [!TIP]
 > 애플리케이션의 모든 프로젝트에 대해 이 절차를 반복해야 합니다. 그러나 확장은 처음 이후에는 생성된 docker-compose 파일을 덮어쓸지 묻는 메시지를 표시합니다. 덮어쓰지 않도록 응답해야 합니다. 그러면 확장은 별도의 docker-compose 파일을 만들어 docker-compose 실행 전에 사용자가 직접 병합할 수 있도록 합니다.
@@ -119,12 +119,12 @@ DockerFile을 추가하는 경우 사용하는 기본 Docker 이미지가 무엇
 다음은 .NET Core 컨테이너에 대한 샘플 DockerFile입니다.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["src/WebApi/WebApi.csproj", "src/WebApi/"]
 RUN dotnet restore "src/WebApi/WebApi.csproj"
@@ -141,7 +141,7 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebApi.dll"]
 ```
 
-이 경우 이미지는 줄 `FROM mcr.microsoft.com/dotnet/core/aspnet:3.1`에 따라 버전 3.1의 공식 ASP.NET Core Docker 이미지(Linux용 및 Windows용 다중 아키텍처)를 기반으로 합니다. (이 주제에 대한 자세한 내용은 [ASP.NET Core Docker 이미지](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) 페이지 및 [.NET Core Docker 이미지](https://hub.docker.com/_/microsoft-dotnet-core/) 페이지를 참조하세요.)
+이 경우 이미지는 줄 `FROM mcr.microsoft.com/dotnet/aspnet:3.1`에 따라 버전 3.1의 공식 ASP.NET Core Docker 이미지(Linux용 및 Windows용 다중 아키텍처)를 기반으로 합니다. (이 주제에 대한 자세한 내용은 [ASP.NET Core Docker 이미지](https://hub.docker.com/_/microsoft-dotnet-aspnet/) 페이지 및 [.NET Core Docker 이미지](https://hub.docker.com/_/microsoft-dotnet/) 페이지를 참조하세요.)
 
 DockerFile에서 Docker에 대해 런타임에 사용할 TCP 포트(예: 포트 80 또는 443)를 수신 대기하도록 지시할 수도 있습니다.
 
@@ -154,9 +154,9 @@ DockerFile에서 Docker에 대해 런타임에 사용할 TCP 포트(예: 포트 
 
 **다중 아키텍처 이미지 리포지토리 사용**
 
-리포지토리의 단일 이미지 이름은 Linux 이미지 및 Windows 이미지와 같은 플랫폼 변형을 포함할 수 있습니다. 이 기능을 통해 Microsoft와 같은 공급업체(기본 이미지 작성자)는 여러 플랫폼(즉, Linux 및 Windows)을 처리하는 단일 리포지토리를 만들 수 있습니다. 예를 들어 Docker Hub 레지스트리에서 제공되는 [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) 리포지토리는 동일한 이미지 이름을 사용하여 Linux 및 Windows Nano Server에 대한 지원을 제공합니다.
+리포지토리의 단일 이미지 이름은 Linux 이미지 및 Windows 이미지와 같은 플랫폼 변형을 포함할 수 있습니다. 이 기능을 통해 Microsoft와 같은 공급업체(기본 이미지 작성자)는 여러 플랫폼(즉, Linux 및 Windows)을 처리하는 단일 리포지토리를 만들 수 있습니다. 예를 들어 Docker Hub 레지스트리에서 제공되는 [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) 리포지토리는 동일한 이미지 이름을 사용하여 Linux 및 Windows Nano Server에 대한 지원을 제공합니다.
 
-Windows 호스트에서 [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) 이미지를 풀하면 Windows 변형을 풀하고, Linux 호스트에서 동일한 이미지 이름을 풀하면 Linux 변형을 풀합니다.
+Windows 호스트에서 [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) 이미지를 풀하면 Windows 변형을 풀하고, Linux 호스트에서 동일한 이미지 이름을 풀하면 Linux 변형을 풀합니다.
 
 **_기본 이미지를 처음부터 새로 만들기_**
 
@@ -242,7 +242,7 @@ services:
 
 ### <a name="step-5-build-and-run-your-docker-app"></a>5단계: Docker 앱을 빌드하고 실행
 
-앱에 단일 컨테이너만 있는 경우 해당 앱을 Docker 호스트(VM 또는 실제 서버)에 배포하여 실행하기만 하면 됩니다. 그러나 앱이 여러 서비스로 구성된 경우 _앱 구성_도 수행해야 합니다. 다양한 옵션을 살펴보겠습니다.
+앱에 단일 컨테이너만 있는 경우 해당 앱을 Docker 호스트(VM 또는 실제 서버)에 배포하여 실행하기만 하면 됩니다. 그러나 앱이 여러 서비스로 구성된 경우 _앱 구성_ 도 수행해야 합니다. 다양한 옵션을 살펴보겠습니다.
 
 **_옵션 A: 단일 컨테이너 또는 서비스를 실행_**
 

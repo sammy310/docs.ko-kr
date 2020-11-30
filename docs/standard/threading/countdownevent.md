@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - synchronization primitives, CountdownEvent
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
-ms.openlocfilehash: 82fe4844728702e91190b55a833848c1c9ece40c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 15ff3ee8f4ea18b243f5c3070f1c59df4646a1a4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826575"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676480"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 
@@ -32,12 +32,14 @@ ms.locfileid: "94826575"
 - 인스턴스는 <xref:System.Threading.WaitHandle.WaitAll%2A>와 같은 다른 .NET 동기화 API와 통합을 위해 <xref:System.Threading.WaitHandle>을 표시합니다.  
   
 ## <a name="basic-usage"></a>기본 사용  
+
  다음 예제는 <xref:System.Threading.ThreadPool> 작업 항목에 <xref:System.Threading.CountdownEvent>를 사용하는 방법을 보여줍니다.  
   
  [!code-csharp[CDS_CountdownEvent#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#01)]
  [!code-vb[CDS_CountdownEvent#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/module1.vb#01)]  
   
 ## <a name="countdownevent-with-cancellation"></a>취소를 사용하는 CountdownEvent  
+
  다음 예제는 취소 토큰을 사용하여 <xref:System.Threading.CountdownEvent>에서 대기 작업을 취소하는 방법을 보여줍니다. 기본 패턴은 .NET Framework 4에 도입된 통합 취소를 위한 모델을 따릅니다. 자세한 내용은 [관리되는 스레드의 취소](cancellation-in-managed-threads.md)를 참조하세요.  
   
  [!code-csharp[CDS_CountdownEvent#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#02)]

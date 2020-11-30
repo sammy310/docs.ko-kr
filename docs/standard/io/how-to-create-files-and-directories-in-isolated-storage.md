@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-ms.openlocfilehash: 75afb19a551174b9386259ebff871d4a54b68f01
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1f6e8e1a048fcf7f8fd278eaac4988fa0e35791d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830807"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684995"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>방법: 격리된 스토리지의 파일 및 디렉터리 만들기
 
@@ -33,6 +33,7 @@ ms.locfileid: "94830807"
  격리된 스토리지 파일을 만들 때 존재하지 않는 디렉터리가 경로에 포함된 경우 <xref:System.IO.IsolatedStorage.IsolatedStorageException>을 throw합니다.
   
 ## <a name="example"></a>예제  
+
  다음 코드 예제는 분리된 저장소에서 파일 및 디렉터리를 만드는 방법을 보여줍니다.  
   
  [!code-csharp[Conceptual.IsolatedStorage#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source.cs#1)]

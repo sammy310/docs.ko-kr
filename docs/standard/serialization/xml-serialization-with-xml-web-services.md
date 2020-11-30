@@ -18,21 +18,23 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-ms.openlocfilehash: 5c986162de19c2cb27edf19ff8e9e80798f36117
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 64b5911ca110ae4ef08f9003898bb817d8b8dd79
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282359"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676545"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>XML Web Services의 XML Serialization
 
 XML serialization은 XML Web services 아키텍처에 사용되며 <xref:System.Xml.Serialization.XmlSerializer> 클래스에 의해 수행되는 내부 전송 메커니즘입니다. XML Web services로 생성된 XML을 제어하려면 [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md) 및 [인코드된 SOAP serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)에 나열된 특성을 XML Web services(.asmx)를 만드는 데 사용된 파일의 클래스, 반환 값, 매개 변수 및 필드에 적용할 수 있습니다. XML Web services를 만드는 방법에 대한 자세한 내용은 [ASP.NET을 사용하는 XML Web Services](/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100))를 참조하세요.  
   
 ## <a name="literal-and-encoded-styles"></a>리터럴 및 인코딩된 스타일  
+
  XML Web services에 의해 생성된 XML은 [SOAP 메시지 형식 사용자 지정](/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))에서 설명하는 것처럼 리터럴 또는 인코딩의 두 방법 중 하나로 형식이 지정될 수 있습니다. 따라서 XML serialization을 제어하는 두 개의 특성 집합이 있습니다. [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)에 나열된 특성은 리터럴 스타일 XML을 제어하도록 설계되었습니다. [인코드된 SOAP serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)에 나열된 특성은 인코드된 스타일을 제어합니다. 이러한 특성을 선택적으로 적용하여 애플리케이션이 두 스타일 중 하나 또는 둘 모두를 반환하도록 조정할 수 있습니다. 또한 이러한 특성을 필요에 따라 반환 값 및 매개 변수에 적용할 수 있습니다.  
   
 ### <a name="example-of-using-both-styles"></a>두 스타일 사용 예제  
+
  XML Web service를 만들 때는 메서드에 두 특성 집합 모두를 사용할 수 있습니다. 다음 코드 예제에서는 `MyService`라는 클래스에 두 개의 XML Web services 메서드인 `MyLiteralMethod` 및 `MyEncodedMethod`가 포함됩니다. 두 메서드 모두 `Order` 클래스의 인스턴스를 반환하는 동일한 기능을 수행합니다. `Order` 클래스에서 <xref:System.Xml.Serialization.XmlTypeAttribute> 및 <xref:System.Xml.Serialization.SoapTypeAttribute> 특성이 둘 다 `OrderID` 필드에 적용되며 두 특성의 `ElementName` 속성은 서로 다르게 설정됩니다.  
   
  예제를 실행하려면 코드를 .asmx 확장명의 파일로 붙여넣은 다음 파일을 IIS(인터넷 정보 서비스)에서 관리하는 가상 디렉터리에 넣습니다. Internet Explorer와 같은 HTML 브라우저에서 컴퓨터, 가상 디렉터리 및 파일의 이름을 입력합니다.  
@@ -124,6 +126,7 @@ public class MyService {
 ```  
   
 ### <a name="applying-attributes-to-return-values"></a>특성을 반환 값에 적용  
+
  또한 특성을 반환 값에 적용하여 네임스페이스, 요소 이름 등을 제어할 수도 있습니다. 다음 코드 예제에서는 `XmlElementAttribute` 특성을 `MyLiteralMethod` 메서드의 반환 값에 적용합니다. 이렇게 하면 네임스페이스와 요소 이름을 제어할 수 있습니다.  
   
 ```vb  
@@ -163,6 +166,7 @@ public Order MyLiteralMethod(){
 ```  
   
 ### <a name="attributes-applied-to-parameters"></a>매개 변수에 적용되는 특성  
+
  또한 특성을 매개 변수에 적용하여 네임스페이스, 요소 이름 등을 지정할 수도 있습니다. 다음 코드 예제에서는 매개 변수를 `MyLiteralMethodResponse` 메서드에 추가하고 `XmlAttributeAttribute` 특성을 매개 변수에 적용합니다. 요소 이름과 네임스페이스는 모두 매개 변수에 대해 설정됩니다.  
   
 ```vb  
@@ -204,6 +208,7 @@ Namespace="http://www.microsoft.com")] string ID){
 ```  
   
 ### <a name="applying-attributes-to-classes"></a>특성을 클래스에 적용  
+
  클래스에 관련된 요소의 네임스페이스를 제어하려면 필요에 따라 `XmlTypeAttribute`, `XmlRootAttribute` 및 `SoapTypeAttribute`를 적용할 수 있습니다. 다음 코드 예제에서는 세 가지 모두를 `Order` 클래스에 적용합니다.  
   
 ```vb  

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
 ms.openlocfilehash: 74c9a23cd1b3a691063c2976a593c9b3a63ca618
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91173271"
 ---
 # <a name="-define-c-compiler-options"></a>-define(C# 컴파일러 옵션)
@@ -40,9 +40,9 @@ ms.locfileid: "91173271"
   
  이 옵션으로 만든 기호를 [#if](../preprocessor-directives/preprocessor-if.md), [#else](../preprocessor-directives/preprocessor-else.md), [#elif](../preprocessor-directives/preprocessor-elif.md), [#endif](../preprocessor-directives/preprocessor-endif.md)와 함께 사용하면 소스 파일을 조건부 컴파일할 수 있습니다.  
   
- **-d**는 **-define**의 약식 형태입니다.  
+ **-d** 는 **-define** 의 약식 형태입니다.  
   
- 세미콜론 또는 쉼표를 사용해서 기호 이름을 구분하여 **-define**으로 여러 기호를 정의할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 세미콜론 또는 쉼표를 사용해서 기호 이름을 구분하여 **-define** 으로 여러 기호를 정의할 수 있습니다. 예:  
   
 ```console  
 -define:DEBUG;TUESDAY  

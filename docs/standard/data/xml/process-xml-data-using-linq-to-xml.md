@@ -2,14 +2,15 @@
 title: LINQ to XML을 사용하여 XML 데이터 처리
 ms.date: 03/30/2017
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
-ms.openlocfilehash: b3aa4e160ed04fd713f46349f11970fdd7ea8bb9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 782a14303a9ec35750530d2506a046dd53d37fc0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824716"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686997"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>LINQ to XML을 사용하여 XML 데이터 처리
+
 LINQ to XML은 XML 데이터를 처리하기 위한 .NET Framework 버전 3.5의 새 모델입니다. LINQ to XML을 사용하여 XML 문서 쿼리, 수정, 작성, 저장, serialize 등 XML 데이터에 대한 모든 작업을 수행할 수 있습니다. 이 가운데 가장 실질적인 장점은 쿼리 및 작성 기능입니다.  
   
  LINQ to XML의 쿼리는 XPath 또는 XQuery보다는 SQL에 유사한 구문을 사용하여 간결하고 표현이 다양합니다. 쿼리 결과가 요소 또는 특성의 컬렉션으로 반환되어 XElement 개체의 매개 변수로 사용될 수 있으므로 XML 트리는 한 모형에서 다른 모형으로 쉽게 변환할 수 있습니다.  

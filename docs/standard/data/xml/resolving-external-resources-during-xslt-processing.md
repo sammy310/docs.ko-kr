@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
-ms.openlocfilehash: 67c25015f1127a62c480a8fc09c5945682097124
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5d50711eda266cecdb817c778f04aa845fa4c342
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823682"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686646"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>XSLT 처리 중 외부 리소스 확인
+
 다음과 같이 XSLT 변형 중에 외부 리소스를 확인해야 하는 몇 가지 경우가 있습니다.  
   
 ## <a name="using-the-xmlresolver-class"></a>XmlResolver 클래스 사용  
+
  <xref:System.Xml.XmlResolver> 클래스를 사용하여 외부 리소스를 확인할 수 있습니다. 다음 표에서는 XSLT 처리 중 <xref:System.Xml.XmlResolver>가 관련되는 경우를 설명합니다.  
   
 |XSLT 작업|XmlResolver를 사용하여 수행하는 작업|  
@@ -36,6 +38,7 @@ ms.locfileid: "94823682"
 - 외부 리소스에 액세스하지 않도록 하려면 `null` 인수에 대해 <xref:System.Xml.XmlResolver>을 지정할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 네트워크 리소스에 저장된 스타일시트를 컴파일합니다. <xref:System.Xml.XmlUrlResolver> 개체는 스타일시트에 액세스하는 데 필요한 자격 증명을 지정합니다.  
   
  [!code-csharp[XslCompiledTransform.Load#11](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#11)]

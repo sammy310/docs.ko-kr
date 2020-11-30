@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 588efff637359586630554decf57072597365d32
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a0252d013ee6cf7cba7f953fc8a1e2c66c510ca7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823097"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683955"
 ---
 # <a name="composite-formatting"></a>복합 형식 지정
 
@@ -43,6 +43,7 @@ ms.locfileid: "94823097"
 - 추적 수신기에 정보 메서드를 쓰는 <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드.  
   
 ## <a name="composite-format-string"></a>합성 서식 문자열  
+
  합성 서식 문자열과 개체 목록은 합성 서식 지정 기능을 지원하는 메서드의 인수로 사용됩니다. 합성 서식 문자열은 0개 이상의 고정 텍스트가 하나 이상의 서식 항목과 결합된 형태로 구성됩니다. 고정 텍스트는 사용자가 선택하는 임의의 문자열이고, 각 서식 항목은 목록의 개체나 boxed 구조체에 해당합니다. 합성 서식 지정 기능은 각 서식 항목을 목록에 있는 해당 개체의 문자열 표현으로 바꿔 새로운 결과 문자열을 반환합니다.  
   
  다음은 이 기능을 보여 주는 <xref:System.String.Format%2A> 코드 조각입니다.  
@@ -53,6 +54,7 @@ ms.locfileid: "94823097"
  고정 텍스트는 “`Name =`” 및 “`, hours =`”입니다. 형식 항목은 인덱스가 0이고 `name` 개체에 해당하는 “`{0}`”과(와) 인덱스가 1이고 `DateTime.Now` 개체에 해당하는 “`{1:hh}`”입니다.  
   
 ## <a name="format-item-syntax"></a>서식 항목 구문  
+
  각 서식 항목의 형태와 구성 요소는 다음과 같습니다.  
   
  `{` *index*[`,`*alignment*][`:`*formatString*]`}`  
@@ -60,6 +62,7 @@ ms.locfileid: "94823097"
  여기서 중괄호("{"와 "}")의 짝이 반드시 맞아야 합니다.  
   
 ### <a name="index-component"></a>Index 구성 요소  
+
  매개 변수 지정자라고도 하는 필수 *index* 구성 요소는 0부터 시작하는 숫자로, 개체 목록에서 해당하는 항목을 식별합니다. 즉, 매개 변수 지정자가 0인 서식 항목은 목록에 있는 첫째 개체의 서식을 지정하고 매개 변수 지정자가 1인 서식 항목은 목록에 있는 둘째 개체의 서식을 지정하는 식으로 적용됩니다. 다음 예제에는 10보다 작은 소수를 나타내고 0부터 3까지 번호가 매겨진 4개의 매개 변수 지정자가 포함되어 있습니다.  
   
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
@@ -73,6 +76,7 @@ ms.locfileid: "94823097"
  각 서식 항목은 목록의 어떤 개체나 참조할 수 있습니다. 예를 들어, 세 개의 개체가 있을 경우 “{1} {0} {2}”와 같이 복합 형식 문자열을 지정하여 둘째, 첫째, 셋째 개체의 서식을 지정할 수 있습니다. 서식 항목에서 참조하지 않는 개체는 무시됩니다. 매개 변수 지정자가 개체 목록 범위를 벗어나는 항목을 지정하면 런타임에 <xref:System.FormatException>이 발생합니다.  
   
 ### <a name="alignment-component"></a>Alignment 구성 요소  
+
  선택적인 *alignment* 구성 요소는 기본 형식의 필드 너비를 나타내는 부호 있는 정수입니다. *alignment* 값이 형식이 지정된 문자열보다 작으면 *alignment* 는 무시되고 형식이 지정된 문자열의 길이가 필드 너비로 사용됩니다. *alignment* 가 양수이면 필드에서 형식이 지정된 데이터가 오른쪽 맞춤되고 *alignment* 가 음수이면 왼쪽 맞춤됩니다. 채우기가 필요하면 공백이 사용됩니다. *alignment* 를 지정하는 경우 쉼표가 필요합니다.  
   
  다음 예제에서는 두 배열, 즉 직원의 이름을 포함하는 배열과 2주 동안의 작업 시간을 포함하는 배열을 정의합니다. 복합 형식 문자열은 20자 필드에 이름을 왼쪽 맞춤하고 5자 필드에 해당 시간을 오른쪽 맞춤합니다. 소수 1자리로 시간 형식을 지정하기 위해 "N1" 표준 형식 문자열도 사용됩니다.  
@@ -81,6 +85,7 @@ ms.locfileid: "94823097"
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Format String 구성 요소  
+
  선택적 *formatString* 구성 요소는 서식을 지정할 개체 형식에 적절한 형식 문자열입니다. 해당 개체가 숫자 값이면 표준 또는 사용자 지정 숫자 형식 문자열을, <xref:System.DateTime> 개체이면 표준 또는 사용자 지정 날짜 및 시간 형식 문자열을, 열거형 값이면 [열거형 서식 문자열](enumeration-format-strings.md)을 지정합니다. *formatString* 을 지정하지 않으면 숫자, 날짜 및 시간, 또는 열거형 형식에 대해 일반("G") 형식 지정자가 사용됩니다. *formatString* 을 지정하는 경우 콜론이 필요합니다.  
   
  다음 표에는 미리 정의된 서식 문자열 집합을 지원하는 .NET 클래스 라이브러리의 형식 또는 형식 범주와 지원되는 서식 문자열을 나열하는 항목에 대한 링크가 나와 있습니다. 문자열 서식 지정은 애플리케이션 정의 형식에서 지원하는 형식 문자열 집합을 정의하는, 모든 기존 형식을 위한 새 형식 문자열을 정의하는 확장 가능한 메커니즘입니다. 자세한 내용은 <xref:System.IFormattable> 및 <xref:System.ICustomFormatter> 인터페이스 항목을 참조하세요.  
@@ -94,6 +99,7 @@ ms.locfileid: "94823097"
 |<xref:System.TimeSpan>|[표준 TimeSpan 서식 문자열](standard-timespan-format-strings.md)<br /><br /> [사용자 지정 TimeSpan 서식 문자열](custom-timespan-format-strings.md)|  
   
 ### <a name="escaping-braces"></a>이스케이프 중괄호  
+
  여는 중괄호와 닫는 중괄호는 서식 항목의 시작과 끝으로 해석됩니다. 따라서 리터럴 여는 중괄호나 닫는 중괄호를 표시하려면 이스케이프 시퀀스를 사용해야 합니다. 고정 텍스트에서 여는 중괄호 2개("{{")를 사용하면 여는 중괄호 1개("{")가, 닫는 중괄호 2개("}}")를 사용하면 닫는 중괄호 1개("}")가 표시됩니다. 서식 항목에서 중괄호는 나타나는 순서대로 해석됩니다. 중첩 중괄호 해석은 지원되지 않습니다.  
   
  이스케이프된 중괄호가 해석되는 방식에 따라 예기치 않은 결과가 나올 수도 있습니다. 예를 들어 여는 중괄호, 10진수로 서식 지정된 숫자 값 및 닫는 중괄호를 표시하기 위해 서식 항목 “{{{0:D}}}”를 사용했다고 가정해 봅시다. 그러나 이 서식 항목은 다음과 같이 해석됩니다.  
@@ -114,6 +120,7 @@ ms.locfileid: "94823097"
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>처리 순서  
+
  합성 서식 지정 메서드에 대한 호출에 값이 <xref:System.IFormatProvider>이 아닌 `null` 인수가 포함되는 경우, 런타임은 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 메서드를 호출하여 <xref:System.ICustomFormatter> 구현을 요청합니다. 메서드가 <xref:System.ICustomFormatter> 구현을 반환할 수 있는 경우 복합 서식 지정 메서드의 호출 기간 동안 캐시됩니다.
   
  다음과 같이 서식 항목에 상응하는 매개 변수 목록의 각 값이 문자열로 변환됩니다.  
@@ -135,6 +142,7 @@ ms.locfileid: "94823097"
  앞의 단계가 수행된 후에 맞춤이 적용됩니다.  
   
 ## <a name="code-examples"></a>코드 예제  
+
  다음 예제에서는 합성 서식 지정을 사용하여 만든 문자열과 개체의 `ToString` 메서드를 사용하여 만든 문자열을 보여 줍니다. 두 형식의 서식을 지정한 결과는 같습니다.  
   
  [!code-csharp[Formatting.Composite#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#3)]
