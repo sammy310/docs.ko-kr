@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - tasks, preventing attachments
 ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
-ms.openlocfilehash: afc8c99fe478337c8dc353d46a4e2ff5be531ae8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5874f07d48f99573af78c07a6ab6a0f386e6bc9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826894"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705906"
 ---
 # <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>방법: 자식 작업이 부모 작업에 연결되지 않도록 방지
+
 이 문서에서는 자식 작업이 부모 작업에 연결하는 것을 방지하는 방법을 보여 줍니다. 자식 작업이 부모에 연결하는 것을 방지하는 방법은 타사가 작성하고 마찬가지로 작업을 사용하는 구성 요소를 호출하는 경우 유용합니다. 예를 들어 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 옵션을 사용하여 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체를 만드는 타사 구성 요소는 오래 실행되는 경우 코드에서 문제를 유발하거나 처리되지 않은 예외를 throw할 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 기본 옵션의 효과와 자식 작업이 부모에 연결하는 것을 방지하는 효과를 비교합니다. 이 예제에서는 마찬가지로 <xref:System.Threading.Tasks.Task> 개체를 사용하는 타사 라이브러리를 호출하는 <xref:System.Threading.Tasks.Task> 개체를 만듭니다. 타사 라이브러리는 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 옵션을 사용하여 <xref:System.Threading.Tasks.Task> 개체를 만듭니다. 애플리케이션은 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 옵션을 사용하여 부모 작업을 만듭니다. 이 옵션은 자식 작업에서 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 지정을 제거하도록 런타임에 지시합니다.  
   
  [!code-csharp[TPL_DenyChildAttach#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_denychildattach/cs/denychildattach.cs#1)]

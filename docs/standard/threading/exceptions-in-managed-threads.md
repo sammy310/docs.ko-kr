@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: e5acda4137d020d35d3144e9cc61e174024e165a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 740cd1b78b96c2fcaecf39a725973d738037f403
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826471"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723755"
 ---
 # <a name="exceptions-in-managed-threads"></a>관리형 스레드의 예외
 
@@ -35,6 +35,7 @@ ms.locfileid: "94826471"
 > 관리 코드가 예외 처리기를 설치하기 전에 런타임은 처리되지 않은 예외를 throw할 수 있습니다. 관리 코드가 이러한 예외를 처리하지 못하더라도 예외는 정상적으로 진행될 수 있습니다.  
   
 ## <a name="exposing-threading-problems-during-development"></a>개발하는 동안 스레딩 문제 노출  
+
  애플리케이션이 종료되지 않고 스레드에 오류가 발생할 수 있는 경우 심각한 프로그래밍 문제를 발견하지 못할 수 있습니다. 이것은 확장된 기간 동안 실행되는 서비스와 기타 애플리케이션에 특정된 문제입니다. 스레드에 오류가 발생하면 프로그램 상태가 서서히 손상됩니다. 애플리케이션 성능이 저하되거나 애플리케이션이 응답하지 않을 수 있습니다.  
   
  운영 체제가 응용 프로그램을 종료시킬 때까지 스레드의 처리되지 않은 예외가 정상적으로 진행되도록 허용하면 개발이나 테스트하는 동안 이러한 문제에 노출됩니다. 프로그램 종료에 대한 오류 보고서는 디버깅을 지원합니다.  

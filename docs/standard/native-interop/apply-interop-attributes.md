@@ -14,19 +14,21 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: 7b9e557e36d2ff6aa978eb28d3c82764ffb1980a
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 38632c5a1f462c3a7b537978fde81424916746da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188681"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706296"
 ---
 # <a name="applying-interop-attributes"></a>Interop 특성 적용
+
 <xref:System.Runtime.InteropServices> 네임스페이스는 디자인 타임에 사용자가 적용한 특성, 변환 과정에서 COM interop 도구 및 API가 적용한 특성, 사용자 또는 COM interop가 적용한 특성 등 세 가지 범주의 interop 관련 특성을 제공합니다.  
   
  관리 코드에 특성을 적용하는 작업을 잘 모르겠으면 [특성을 사용하여 메타데이터 확장](../attributes/index.md)을 참조하세요. 다른 사용자 지정 특성과 마찬가지로, 형식, 메서드, 속성, 매개 변수, 필드 및 다른 멤버에 interop 관련 특성을 적용할 수 있습니다.  
   
 ## <a name="design-time-attributes"></a>디자인 타임 특성  
+
  디자인 타임 특성을 사용하여 COM interop 도구와 API가 수행하는 변환 프로세스의 결과를 조정할 수 있습니다. 다음 표에서는 관리되는 소스 코드에 적용할 수 있는 특성을 설명합니다. 경우에 따라 COM interop 도구가 이 표에 설명된 특성을 적용할 수도 있습니다.  
   
 |특성|설명|  
@@ -55,6 +57,7 @@ ms.locfileid: "93188681"
 |<xref:System.Runtime.InteropServices.StructLayoutAttribute>|클래스 필드의 실제 레이아웃을 제어합니다.<br /><br /> COM interop 도구는 이 특성을 적용할 수 있습니다.|  
   
 ## <a name="conversion-tool-attributes"></a>변환 도구 특성  
+
  다음 표에서는 변환 프로세스 중 COM interop 도구가 적용하는 특성을 설명합니다. 디자인 타임에는 이러한 특성을 적용하지 않습니다.  
   
 |특성|설명|  

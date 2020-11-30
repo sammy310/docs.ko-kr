@@ -2,17 +2,19 @@
 title: XPathNavigator를 사용하여 특성 및 네임스페이스 노드 탐색
 ms.date: 03/30/2017
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-ms.openlocfilehash: cf29c15463030774b488beed776c9cfe623072d1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d561afdc477119a6d9d04eacfcd6a6bdb9d0e2d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819411"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725393"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>XPathNavigator를 사용하여 특성 및 네임스페이스 노드 탐색
+
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 두 개의 탐색 메서드 집합을 제공합니다. [XPathNavigator를 사용하여 노드 집합 탐색](node-set-navigation-using-xpathnavigator.md) 항목에서 찾을 수 있는 첫 번째 집합은 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체의 ‘노드 집합’을 탐색하는 데 사용합니다.  이 항목에서 설명하는 두 번째 집합은 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체의 ‘특성 및 네임스페이스 노드’를 탐색하는 데 사용합니다.   
   
 ## <a name="attribute-node-navigation"></a>특성 노드 탐색  
+
  특성은 요소의 자식이 아니라 요소의 속성입니다. 이러한 구분은 형제, 부모 및 자식 노드를 탐색하는 데 사용되는 <xref:System.Xml.XPath.XPathNavigator> 클래스의 메서드로 인해 중요하게 작용합니다.  
   
  예를 들어, <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 메서드는 요소와 특성 사이 또는 특성 간을 탐색하는 데 사용되지 않습니다. 대신 특성에는 구분되는 탐색 메서드가 있습니다.  
@@ -31,6 +33,7 @@ ms.locfileid: "94819411"
 > <xref:System.Xml.XPath.XPathNavigator> 개체가 특성 또는 네임스페이스 노드에 위치하면 <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 메서드는 항상 `false`를 반환하고 <xref:System.Xml.XPath.XPathNavigator>의 위치에는 영향을 주지 않습니다. 예외에는 <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>메서드가 있습니다.  
   
 ## <a name="namespace-node-navigation"></a>네임스페이스 노드 탐색  
+
  각 요소에는 네임스페이스 노드 집합이 연결되어 있으며 하나는 요소의 범위에 있는 네임스페이스 URI(모든 XML 문서에서 암시적으로 선언된 `http://www.w3.org/XML/1998/namespace` 네임스페이스에 바인딩된 XML 접두사 포함)에 바인딩된 각 네임스페이스 접두사에 대한 노드 집합이고 하나는 요소의 범위 내에 있을 경우 기본 네임스페이스에 대한 노드 집합입니다. 요소는 이러한 네임스페이스 노드 각각의 부모이지만 네임스페이스 노드는 해당 부모 요소의 자식이 아닙니다.  
   
  특성과 마찬가지로 <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 메서드는 요소와 네임스페이스 노드 또는 네임스페이스 노드 간을 탐색하는 데 사용되지 않습니다. 대신 네임스페이스 노드에는 구분되는 탐색 메서드가 있습니다.  
@@ -49,6 +52,7 @@ ms.locfileid: "94819411"
 > <xref:System.Xml.XPath.XPathNavigator> 개체가 특성 또는 네임스페이스 노드에 위치하면 <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> 메서드는 항상 `false`를 반환하고 <xref:System.Xml.XPath.XPathNavigator>의 위치에는 영향을 주지 않습니다. 예외에는 <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>메서드가 있습니다.  
   
 ### <a name="the-xpathnamespacescope-enumeration"></a>XPathNamespaceScope 열거형  
+
  네임스페이스 노드를 탐색할 때 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 매개 변수를 사용하여 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 및 <xref:System.Xml.XPath.XPathNamespaceScope> 메서드를 호출할 수 있습니다. 이러한 메서드는 매개 변수 없이 호출되는 메서드와 다르게 동작합니다. <xref:System.Xml.XPath.XPathNamespaceScope> 열거형에는 <xref:System.Xml.XPath.XPathNamespaceScope.All>, <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml> 또는 <xref:System.Xml.XPath.XPathNamespaceScope.Local> 값이 있습니다.  
   
  다음 예제에서는 XML 문서의 다양한 범위에서 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 및 <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> 메서드가 반환하는 네임스페이스를 보여 줍니다.  

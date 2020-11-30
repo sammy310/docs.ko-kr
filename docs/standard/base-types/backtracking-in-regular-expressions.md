@@ -16,20 +16,22 @@ helpviewer_keywords:
 - strings [.NET], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: a15ef27f71eac9ed12889054283f8ac41d85922f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5c6d9d2e048c2dd89cf18ff7148050ddb6813f40
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825249"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699705"
 ---
 # <a name="backtracking-in-regular-expressions"></a>정규식의 역행 검사
+
 역추적은 정규식 패턴에 선택적인 [수량자](quantifiers-in-regular-expressions.md) 또는 [교체 구문](alternation-constructs-in-regular-expressions.md)이 포함되어 있고 정규식 엔진이 일치 항목을 계속 검색하기 위해 이전에 저장한 상태로 되돌아갈 때 발생합니다. 역추적은 정규식 성능의 핵심입니다. 역추적을 사용하면 식의 성능과 유연성을 높일 수 있으며 매우 복잡한 패턴도 검색할 수 있습니다. 하지만 이러한 장점에는 단점이 수반됩니다. 역추적은 종종 정규식 엔진의 성능에 영향을 주는 가장 중요한 단일 요소입니다. 다행히도 개발자는 정규식 엔진의 동작과 역추적 사용 방식을 제어할 수 있습니다. 이 항목에서는 역추적의 작동 방식 및 역추적을 제어할 수 있는 방법에 대해 설명합니다.  
   
 > [!NOTE]
 > 일반적으로 .NET 정규식 엔진과 같은 NFA(Nondeterministic Finite Automaton) 엔진에서는 개발자가 효율적이고 속도가 빠른 정규식을 작성하도록 노력해야 합니다.  
 
 ## <a name="linear-comparison-without-backtracking"></a>역추적을 사용하지 않는 선형 비교  
+
  정규식 패턴에 선택적인 수량자 또는 교체 구문이 없으면 정규식 엔진이 선형 시간으로 실행됩니다. 즉, 정규식 엔진은 패턴에서 입력 문자열의 텍스트와 일치하는 첫 번째 언어 요소를 검색한 후 다시 패턴에서 입력 문자열의 다음 문자 또는 문자 그룹과 일치하는 다음 언어 요소를 찾습니다. 이 작업은 검색이 성공할 때까지 계속되고, 그렇지 않으면 검색이 실패합니다. 어느 경우에든 정규식 엔진은 입력 문자열에서 한 번에 한 글자씩 검색을 진행합니다.  
   
  다음 예제에서 이에 대해 설명합니다. 정규식 `e{2}\w\b` 는 모든 단어 문자에서 단어 경계까지 "e"가 두 번 나오는 단어를 검색합니다.  
@@ -64,6 +66,7 @@ ms.locfileid: "94825249"
  정규식 엔진에 선택적인 수량자가 없거나 교체 구문이 없는 경우 입력 문자열에서 정규식 패턴과 일치하는 항목을 찾기 위해 필요한 최대 비교 수는 입력 문자열에 있는 문자 수와 거의 동일합니다. 이 경우 정규식 엔진은 이 13자 길이의 문자열에서 가능한 일치 항목을 식별하기 위해 19가지를 비교합니다.  즉, 선택적인 수량자 또는 대체 생성 구문이 없는 경우 정규식 엔진이 선형에 가까운 시간으로 실행됩니다.
 
 ## <a name="backtracking-with-optional-quantifiers-or-alternation-constructs"></a>선택적인 수량자 또는 교체 구문을 사용한 역추적  
+
  정규식에 선택적인 수량자 또는 교체 구문이 포함된 경우 입력 문자열에 대한 평가는 더 이상 선형으로 수행되지 않습니다. NFA 엔진에서 패턴 일치는 입력 문자열에 있는 검색할 문자가 아니라 정규식의 언어 요소에 의해 영향을 받습니다. 따라서 정규식 엔진은 선택적인 하위 식 또는 교체 하위 식에 대해 전체 검색을 수행합니다. 하위 식의 다음 언어 요소로 진행할 때 검색이 실패하면 정규식 엔진이 성공한 일치 부분을 버리고 입력 문자열 전체에 대한 정규식 검색을 수행하기 위해 이전에 저장된 상태로 돌아갈 수 있습니다. 일치하는 항목을 찾기 위해 이전에 저장된 상태로 돌아가는 프로세스를 역추적이라고 부릅니다.  
   
  예를 들어 임의의 문자로 시작해서 "es"가 포함된 항목을 검색하는 `.*(es)`라는 정규식 패턴이 있다고 가정해보십시오. 다음 예제에서와 같이 입력 문자열이 "Essential services are provided by regular expressions."인 경우 이 패턴은 "expressions"의 "es"를 포함하여 전체 문자열을 끝까지 검색합니다.  
@@ -86,6 +89,7 @@ ms.locfileid: "94825249"
  역추적을 사용할 경우 길이가 55자인 입력 문자열에서 정규식 패턴과 일치하는 항목을 검색하려면 67번의 비교 작업이 필요합니다. 일반적으로 정규식 엔진에 단일 교체 구문이 포함되었거나 선택적인 단일 수량자가 포함된 경우 패턴을 검색하는 데 필요한 비교 작업 수는 입력 문자열에 있는 문자 수의 두 배 이상입니다.
 
 ## <a name="backtracking-with-nested-optional-quantifiers"></a>선택적인 중첩된 수량자를 사용한 역추적  
+
  패턴에 교체 구문이 많이 포함되었거나 중첩된 교체 구문이 포함되었거나, 선택적인 중첩된 수량자가 포함된 경우(가장 일반적인 경우) 정규식 패턴과 일치하는 항목을 찾기 위해 필요한 비교 작업 수가 기하급수적으로 증가할 수 있습니다. 예를 들어 정규식 패턴 `^(a+)+$` 는 하나 이상의 "a" 문자가 포함된 전체 문자열을 검색하도록 디자인되었습니다. 예제에는 동일한 길이의 두 입력 문자열이 제공되지만 첫 번째 문자열만 패턴과 일치합니다. <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> 클래스는 일치 항목을 검색하는 작업이 수행되는 시간을 확인하는 데 사용됩니다.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking3.cs#3)]
@@ -102,9 +106,11 @@ ms.locfileid: "94825249"
  입력 문자열을 정규식 엔진에서 비교하는 작업은 정규식이 검색 작업의 모든 가능한 조합을 시도하고 일치 항목이 없다는 결론을 내릴 때까지 이러한 방식으로 계속해서 수행됩니다. 중첩된 수량자로 인해 이러한 비교는 O(2 <sup>n</sup>) 또는 지수 연산으로 수행되며, 여기서 *n* 은 입력 문자열에 있는 문자 수입니다. 즉, 문자 수가 30개인 입력 문자열에서는 최악의 경우 약 1,073,741,824번의 비교 작업이 필요하고, 입력 문자열의 문자 수가 40개이면 약 1,099,511,627,776번의 비교 작업이 필요합니다. 이정도 또는 심지어 더 긴 문자열을 사용하면 정규식 메서드가 정규식 패턴과 일치하지 않는 입력을 처리할 때 완료 시간이 극단적으로 길어질 수 있습니다.
 
 ## <a name="controlling-backtracking"></a>역추적 제어  
+
  역추적을 사용하면 강력하고 유연한 정규식을 만들 수 있습니다. 하지만 이전 단원에 설명한 것처럼 이러한 장점 외에도 성능이 매우 크게 저하될 수 있음에 유의해야 합니다. 과도한 역추적을 방지하려면 <xref:System.Text.RegularExpressions.Regex> 개체를 인스턴스화하거나 정적 정규식 일치 메서드를 호출할 때 시간 제한 간격을 정의해야 합니다. 이에 대해서는 다음 섹션에서 설명합니다. 그 밖에도, .NET에서는 역추적을 제한하거나 억제하고, 성능상의 제약이 거의 없거나 전혀 없이 복잡한 정규식을 지원하는 세 가지 정규식 언어 요소인 [원자성 그룹](#atomic-groups), [lookbehind 어설션](#lookbehind-assertions) 및 [lookahead 어설션](#lookahead-assertions)을 지원합니다. 각 언어 요소에 대한 자세한 내용은 [정규식의 그룹화 구문](grouping-constructs-in-regular-expressions.md)을 참조하세요.  
 
 ### <a name="defining-a-time-out-interval"></a>시간 제한 간격 정의  
+
  .NET Framework 4.5부터는 정규식 엔진이 시도를 포기하고 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 예외를 throw하기 전에 단일 일치 항목을 검색할 가장 긴 간격을 나타내는 시간 제한 값을 설정할 수 있습니다. <xref:System.TimeSpan> 값을 인스턴스 정규식을 위한 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> 생성자에 제공하여 시간 제한 간격을 지정합니다. 또한, 각각의 정적 패턴 일치 메서드에 시간 제한 값을 지정할 수 있게 해주는 <xref:System.TimeSpan> 매개 변수의 오버로드가 있습니다. 기본적으로, 시간 제한 간격은 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> 으로 설정되고, 정규식 엔진의 시간이 초과되지 않습니다.  
   
 > [!IMPORTANT]
@@ -118,6 +124,7 @@ ms.locfileid: "94825249"
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
 
 ### <a name="atomic-groups"></a>원자성 그룹
+
  `(?>` *subexpression*`)` 언어 요소는 하위 식으로의 역추적을 억제합니다. 일치를 찾으면 일치 항목의 일부를 후속 역추적으로 넘기지 않습니다. 예를 들어 `(?>\w*\d*)1` 패턴에서 `1`이 일치하지 않는 경우 `\d*`는 `1`을 성공적으로 일치시킬 수 있더라도 일치의 일부를 포기하지 않습니다. 원자성 그룹은 실패한 검색과 연관된 성능 문제를 방지하는 데 유용합니다.
   
  다음 예제에서는 역추적을 억제하여 중첩된 수량자를 사용할 때 성능을 향상시키는 방법을 보여 줍니다. 이 예에서는 정규식 엔진이 입력 문자열이 두 개의 정규식과 일치하지 않는지 확인하기 위해 필요한 시간을 측정합니다. 첫 번째 정규식에서는 역추적을 사용하여 하나 이상의 16진수 숫자와 일치하는 하나 이상의 항목이 포함되고 콜론과 하나 이상의 16진수 숫자 그리고 두 개의 콜론이 이어지는 문자열을 검색하려고 시도합니다. 두 번째 정규식은 첫 번째와 동일하지만 역추적이 사용되지 않습니다. 예의 결과에서 보여 지듯이 역추적을 사용하지 않음으로써 얻게 되는 성능 향상 효과가 매우 큽니다.  
@@ -126,6 +133,7 @@ ms.locfileid: "94825249"
  [!code-vb[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking4.vb#4)]  
 
 ### <a name="lookbehind-assertions"></a>lookbehind 어설션  
+
  .NET에는 입력 문자열에서 이전 문자와 일치하는 두 가지 언어 요소인 `(?<=`*subexpression*`)` 및 `(?<!`*subexpression*`)`이 포함되어 있습니다. 두 언어 요소 모두 너비가 0인 어설션입니다. 즉, 진행 또는 역추적 없이 현재 문자 바로 앞에 있는 문자를 *subexpression* 과 일치시킬 수 있는지 여부를 확인합니다.  
   
  `(?<=` *subexpression* `)`은 긍정 lookbehind 어설션입니다. 즉, 현재 위치 바로 전의 문자가 *subexpression* 과 일치해야 합니다. `(?<!`*subexpression*`)` 은 부정 lookbehind 어설션입니다. 즉, 현재 위치 바로 전의 문자가 *subexpression* 과 일치하면 안 됩니다. 긍정 및 부정 lookbehind 어설션 모두 *subexpression* 이 이전 하위 식의 하위 집합일 때 가장 유용합니다.  
@@ -157,6 +165,7 @@ ms.locfileid: "94825249"
 |`@`|"\@" 기호를 찾습니다.|  
 
 ### <a name="lookahead-assertions"></a>lookahead 어설션  
+
  .NET에는 입력 문자열에서 다음 문자와 일치하는 두 가지 언어 요소인 `(?=`*subexpression*`)` 및 `(?!`*subexpression*`)`이 포함되어 있습니다. 두 언어 요소 모두 너비가 0인 어설션입니다. 즉, 진행 또는 역추적 없이 현재 문자 바로 뒤에 있는 문자를 *subexpression* 과 일치시킬 수 있는지 여부를 확인합니다.  
   
  `(?=` *subexpression* `)`은 긍정 lookahead 어설션입니다. 즉, 현재 위치 바로 뒤의 문자가 *subexpression* 과 일치해야 합니다. `(?!`*subexpression*`)` 은 부정 lookahead 어설션입니다. 즉, 현재 위치 바로 뒤의 문자가 *subexpression* 과 일치하면 안 됩니다. 긍정 및 부정 lookahead 어설션 모두 *subexpression* 이 다음 하위 식의 하위 집합인 경우 가장 유용합니다.  

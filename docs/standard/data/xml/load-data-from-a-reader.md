@@ -2,14 +2,15 @@
 title: 판독기에서 데이터 로드
 ms.date: 03/30/2017
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-ms.openlocfilehash: ea125e57dd6251a4fbd401bac8f37826083965b8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 345b6e35c84fe531e131d27bd09fbd8a87b4521a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822674"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720141"
 ---
 # <a name="load-data-from-a-reader"></a>판독기에서 데이터 로드
+
 <xref:System.Xml.XmlDocument.Load%2A> 메서드와 <xref:System.Xml.XmlReader>의 매개 변수를 사용하여 XML 문서를 로드할 경우 발생하는 동작은 다른 형식의 데이터를 로드할 때의 동작과 차이가 있습니다. 판독기가 초기 상태에 있을 경우 <xref:System.Xml.XmlDocument.Load%2A>는 판독기의 전체 내용을 사용하며 판독기의 모든 데이터를 사용하여 XML DOM(문서 개체 모델)을 만듭니다.  
   
  판독기가 이미 문서의 노드에 있으며 <xref:System.Xml.XmlDocument.Load%2A> 메서드에 전달된 경우 <xref:System.Xml.XmlDocument.Load%2A>는 메모리로 현재 노드 및 현재 수준을 닫는 끝 태그에 이를 때까지의 모든 형제를 읽으려고 시도합니다. <xref:System.Xml.XmlDocument.Load%2A>는 판독기의 XML이 제대로 구성되었는지 확인하므로 시도한 <xref:System.Xml.XmlDocument.Load%2A>는 로드를 시도할 때 판독기가 위치한 노드에 따라 성공 여부가 결정됩니다. XML이 제대로 구성되지 않은 경우 <xref:System.Xml.XmlDocument.Load%2A>는 예외를 throw합니다. 예를 들어, 다음 노드 집합에는 루트 수준 요소 두 개가 포함되어 있으며 XML이 제대로 구성되지 않았으므로 <xref:System.Xml.XmlDocument.Load%2A>는 예외를 throw합니다.  

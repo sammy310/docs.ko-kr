@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97115892-410a-4657-ab47-1e14dfba73f8
-ms.openlocfilehash: 0afee2d706b95117971c02b57a5570427e0fbd3d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1c7aa1a9d5c02aaac5a78603bd2397f012d4640d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827557"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721935"
 ---
 # <a name="xmldocument-input-to-xsltransform"></a>XslTransform에 대한 XmlDocument 입력
+
 <xref:System.Xml.XmlDocument> 클래스는 XML 문서에 편집 기능을 제공합니다. <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드로 보내기 전에 XML을 편집 또는 수정해야 하는 경우 XML을 <xref:System.Xml.XmlDocument>에 로드하고 편집한 다음 <xref:System.Xml.Xsl.XslTransform>으로 보냅니다.  
   
 > [!NOTE]
@@ -23,6 +24,7 @@ ms.locfileid: "94827557"
  <xref:System.Xml.XmlDocument>의 편집 기능 때문에 <xref:System.Xml.XmlDocument> 클래스를 변환의 입력으로 사용하면 XSLT(Extensible Stylesheet Language for Transformations) 변환에 <xref:System.Xml.XPath.XPathDocument>를 사용하는 것보다 성능이 떨어집니다. 이것은 <xref:System.Xml.XPath.XPathDocument>가 내부 스토리지로 인해 XPath(XML Path Language) 쿼리에 최적화되었기 때문입니다.  
   
 ## <a name="example"></a>예제  
+
  다음 코드 예제에서는 <xref:System.Xml.XmlDocument>를 <xref:System.Xml.Xsl.XslTransform>에 보내고 출력을 <xref:System.Xml.XmlReader>로 보내는 방법을 보여 줍니다.  
   
 ```vb  

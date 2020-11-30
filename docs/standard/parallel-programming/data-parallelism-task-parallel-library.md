@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 9d0fe1afef126a9c4f73a74d969d36df27182be9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ce034260fd3e6746bb7d516483b5e6872dfdc172
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829377"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699029"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>데이터 병렬 처리(작업 병렬 라이브러리)
+
 *데이터 병렬 처리* 는 소스 컬렉션 또는 배열의 요소에서 동일한 작업이 동시에(즉, 병렬로) 수행되는 시나리오를 가리킵니다. 데이터 병렬 작업에서 소스 컬렉션은 여러 스레드가 서로 다른 세그먼트에서 동시에 작동할 수 있도록 분할됩니다.  
   
  TPL(작업 병렬 라이브러리)은 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 클래스를 통해 데이터 병렬 처리를 지원합니다. 이 클래스는 [for](../../csharp/language-reference/keywords/for.md) 및 [foreach](../../csharp/language-reference/keywords/foreach-in.md) 루프(Visual Basic에서는 `For` 및 `For Each`)의 메서드 기반 병렬 구현을 제공합니다. 순차 루프를 작성하는 것과 마찬가지로 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 루프에 대한 루프 논리를 작성합니다. 스레드나 큐 작업 항목을 만들 필요가 없습니다. 기본 루프에서는 잠금을 수행할 필요가 없습니다. TPL에서 모든 하위 수준 작업을 자동으로 처리합니다. <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>의 용도에 대한 심층 내용은 [병렬 프로그래밍의 패턴: .NET Framework 4의 병렬 패턴 이해 및 적용](https://www.microsoft.com/download/details.aspx?id=19222) 문서를 다운로드하세요. 다음 코드 예제에서는 간단한 `foreach` 루프 및 해당 병렬 루프를 보여 줍니다.  

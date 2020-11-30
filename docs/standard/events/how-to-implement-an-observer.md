@@ -9,14 +9,15 @@ helpviewer_keywords:
 - observers [.NET], observer design pattern
 - observer design pattern [.NET], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: bfd595cec8e499b760f75f614bd0a61b031eb207
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 73f6d2c25c727717394c79268b71b44ea9ff7800
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828337"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697482"
 ---
 # <a name="how-to-implement-an-observer"></a>방법: 관찰자 구현
+
 관찰자 디자인 패턴은 알림에 등록하는 관찰자와 데이터를 모니터링하고 하나 이상의 관찰자에게 알림을 보내는 공급자 간에 구분이 필요합니다. 이 항목에서는 관찰자를 만드는 방법을 설명합니다. 관련 항목인 [방법: 공급자 구현](how-to-implement-a-provider.md)에서는 공급자를 만드는 방법을 설명합니다.  
   
 ### <a name="to-create-an-observer"></a>관찰자를 만들려면  
@@ -42,6 +43,7 @@ ms.locfileid: "94828337"
      [!code-vb[Conceptual.ObserverDesign.HowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#11)]  
   
 ## <a name="example"></a>예제  
+
  다음 예제에는 온도 모니터링 애플리케이션에 대한 <xref:System.IObserver%601> 구현을 제공하는 `TemperatureReporter` 클래스의 전체 소스 코드가 포함되어 있습니다.  
   
  [!code-csharp[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#12)]

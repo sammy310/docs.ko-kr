@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
-ms.openlocfilehash: 5c69a35497feced92a05e124307d3be584ab86b7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f5eb8e7826dd132fd46f6f476335416e7dd03269
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829442"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722689"
 ---
 # <a name="how-to-transform-a-node-fragment"></a>방법: 노드 조각 변환
+
 <xref:System.Xml.XmlDocument> 또는 <xref:System.Xml.XPath.XPathDocument> 개체에 포함된 데이터를 변형하는 경우 XSLT 변형이 문서 전체에 적용됩니다. 즉, 문서 루트 노드 이외의 노드에 전달해도 변환 프로세스에서 로드된 문서의 모든 노드에 액세스할 수 있습니다. 노드 조각을 변형하려면 노드 조각만 포함된 별도의 개체를 만들고 이 개체를 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 메서드에 전달해야 합니다.  
   
 ## <a name="procedures"></a>절차  
@@ -28,6 +29,7 @@ ms.locfileid: "94829442"
 4. 노드 조각을 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 메서드에 전달합니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 노드 조각을 변환하고 결과를 콘솔에 출력합니다.  
   
  [!code-csharp[XSLT_NodeFrag#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_NodeFrag/CS/xslt_frag.cs#1)]
@@ -36,12 +38,15 @@ ms.locfileid: "94829442"
 ### <a name="input"></a>입력  
   
 ##### <a name="booksxml"></a>books.xml  
+
  [!code-xml[XML_Core_Files#1](../../../../samples/snippets/xml/VS_Snippets_Data/XML_Core_Files/XML/books.xml#1)]  
   
 ##### <a name="singlexsl"></a>single.xsl  
+
  [!code-xml[XSLT_NodeFrag#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_NodeFrag/XML/single.xsl#2)]  
   
 ### <a name="output"></a>출력  
+
  책 제목은 The Confidence Man입니다.  
   
 ## <a name="see-also"></a>참조

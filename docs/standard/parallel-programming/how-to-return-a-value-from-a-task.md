@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to return a value
 ms.assetid: c4bc0f44-eba2-4e96-9e03-1cc787461e61
-ms.openlocfilehash: c7a4a683545c9ef0448d9cdce769aae79215aecf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 60ab4a92fed4838934a2d544bea844a5810d4f5c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825613"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701187"
 ---
 # <a name="how-to-return-a-value-from-a-task"></a>방법: 작업에서 값 반환
+
 다음 예제에서는 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 형식을 사용하여 <xref:System.Threading.Tasks.Task%601.Result%2A> 속성의 값을 반환하는 방법을 보여 줍니다. 이 예제를 실행하려면 C:\Users\Public\Pictures\Sample Pictures\ 디렉터리가 있고 파일을 포함해야 합니다.  
   
 ## <a name="example"></a>예제  
+
  [!code-csharp[TPL#10](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl/cs/returnavalue10.cs#10)]
  [!code-vb[TPL#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl/vb/10_returnavalue.vb#10)]  
   

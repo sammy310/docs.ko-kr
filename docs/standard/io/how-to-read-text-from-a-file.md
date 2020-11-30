@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: 7c772ec1de41d0ba2b4ef0d924a252326ee6909e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 48b862ff77bf4ace48a5481fe9bedcf354b5654b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823370"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725341"
 ---
 # <a name="how-to-read-text-from-a-file"></a>방법: 파일에서 텍스트 읽기
 
@@ -27,6 +27,7 @@ ms.locfileid: "94823370"
 > Windows 런타임에서는 파일을 읽고 파일에 쓰는 다양한 스트림 형식을 제공하기 때문에 관련 코드 예제는 UWP(유니버설 Windows 플랫폼) 앱에는 적용되지 않습니다. UWP 앱에서 파일의 텍스트를 읽는 방법을 보여주는 예제는 [빠른 시작: 파일 읽기 및 쓰기](/previous-versions/windows/apps/hh758325(v=win.10))를 참조하세요. .NET Framework 스트림과 Windows 런타임 스트림 간의 변환 방법을 보여주는 예제는 [방법: .NET Framework 스트림과 Windows 런타임 스트림 간 변환](how-to-convert-between-dotnet-streams-and-winrt-streams.md)을 참조하세요.  
   
 ## <a name="example-synchronous-read-in-a-console-app"></a>예: 콘솔 앱 내에서 동기식 읽기  
+
 다음 예제에서는 콘솔 앱 내에서 동기식 읽기 작업을 보여줍니다. 이 예제에서는 스트림 판독기를 사용하여 텍스트 파일을 열고 콘텐츠를 문자열로 복사한 다음, 콘솔에 문자열을 출력합니다.  
   
 > [!IMPORTANT]
@@ -36,6 +37,7 @@ ms.locfileid: "94823370"
 :::code language="vb" source="snippets/how-to-read-text-from-a-file/vb/sync-console/Program.vb":::
   
 ## <a name="example-asynchronous-read-in-a-wpf-app"></a>예: WPF 앱에서 비동기식 읽기
+
  다음 예제에서는 WPF(Windows Presentation Foundation) 앱에서 비동기식 읽기 작업을 보여줍니다.  
   
 > [!IMPORTANT]

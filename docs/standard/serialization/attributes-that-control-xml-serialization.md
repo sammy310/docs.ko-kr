@@ -10,14 +10,15 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: 032843728c74799d7ee78257b21243b31cb4f99c
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 55c36ea6313bfd3000b1d8502d4eda7c552e08cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281983"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717931"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>XML Serialization을 제어하는 특성
+
 다음 표의 특성을 클래스 및 클래스 멤버에 적용하여 <xref:System.Xml.Serialization.XmlSerializer>가 클래스 인스턴스를 직렬화 또는 역직렬화하는 방법을 제어할 수 있습니다. 이러한 특성이 XML serialization을 제어하는 방법을 이해하려면 [특성을 사용하여 XML Serialization 제어](controlling-xml-serialization-using-attributes.md)를 참조하세요.  
   
  이러한 특성을 사용하면 XML Web services를 통해 생성된 리터럴 스타일 SOAP 메시지를 제어할 수도 있습니다. 이러한 특성을 XML Web services 메서드에 적용하는 방법에 대한 자세한 내용은 [XML Web Services의 XML serialization](xml-serialization-with-xml-web-services.md)을 참조하세요.  

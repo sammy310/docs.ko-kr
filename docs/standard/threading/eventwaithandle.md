@@ -7,12 +7,12 @@ helpviewer_keywords:
 - event wait handles [.NET]
 - threading [.NET], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
-ms.openlocfilehash: 5e448397e4aabe0acb4144abe1469af6a631aeaa
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 078bda2354a6f0aec2215b0c5da2a021f53ff922
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819918"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723786"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 
@@ -24,6 +24,7 @@ ms.locfileid: "94819918"
  로컬 및 명명된 이벤트 대기 핸들은 모두 <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 래퍼로 보호되는 시스템 동기화 개체를 사용하여 리소스가 해제되도록 합니다. <xref:System.Threading.WaitHandle.Dispose%2A> 메서드를 사용하여 개체 사용을 완료했을 때 즉시 리소스를 해제할 수 있습니다.  
   
 ## <a name="event-wait-handles-that-reset-automatically"></a>자동으로 다시 설정되는 이벤트 대기 핸들  
+
  <xref:System.Threading.EventWaitHandle> 개체를 만들 때 <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType>을 지정하여 자동 재설정 이벤트를 만듭니다. 이름에서 알 수 있듯이 단일 대기 스레드를 해제한 후에 신호를 받으면 이 동기화 이벤트가 자동으로 다시 설정됩니다. <xref:System.Threading.EventWaitHandle.Set%2A> 메서드를 호출하여 이벤트에 신호를 보냅니다.  
   
  자동 재설정 이벤트는 일반적으로 한 번에 하나의 스레드에만 리소스에 대한 액세스를 제공하는 데 사용됩니다. 스레드는 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드를 호출하여 리소스를 요청합니다. 다른 스레드가 대기 핸들을 보유하고 있지 않으면 메서드는 `true`를 반환하고 호출 스레드가 리소스를 제어합니다.  
@@ -34,6 +35,7 @@ ms.locfileid: "94819918"
  대기 중인 스레드가 없을 때 신호를 받은 자동 재설정 이벤트는 스레드가 이 이벤트에서 대기를 시도할 때까지 신호를 받은 것으로 유지됩니다. 이벤트는 스레드를 해제하고 즉시 다시 설정되어 후속 스레드를 차단합니다.  
   
 ## <a name="event-wait-handles-that-reset-manually"></a>수동으로 다시 설정되는 이벤트 대기 핸들  
+
  <xref:System.Threading.EventWaitHandle> 개체를 만들 때 <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType>을 지정하여 수동 재설정 이벤트를 만듭니다. 이름에서 알 수 있듯이 신호를 받은 후 이 동기화 이벤트를 수동으로 다시 설정해야 합니다. 이벤트가 다시 설정될 때까지는 <xref:System.Threading.EventWaitHandle.Reset%2A> 메서드를 호출하면 이벤트 핸들에서 대기하는 스레드가 차단 없이 즉시 진행됩니다.  
   
  수동 재설정 이벤트는 울타리 문처럼 작동합니다. 이벤트가 신호를 받지 않으면 울타리 안의 말처럼 이벤트에서 대기하는 스레드가 차단됩니다. 이벤트가 신호를 받은 경우 <xref:System.Threading.EventWaitHandle.Set%2A> 메서드를 호출하면 모든 대기 스레드가 해제되어 진행됩니다. 이 이벤트는 <xref:System.Threading.EventWaitHandle.Reset%2A> 메서드가 호출될 때까지 신호를 받은 것으로 유지됩니다. 이 덕분에 수동 재설정 이벤트는 한 스레드가 작업을 완료할 때까지 대기해야 하는 스레드를 지연시키는 적합한 방법입니다.  
@@ -41,11 +43,13 @@ ms.locfileid: "94819918"
  울타리를 떠나는 말들처럼 해제된 스레드가 운영 체제에 의해 예약되고 실행을 재개하는 데는 시간이 걸립니다. 모든 스레드가 실행을 재개하기 전에 <xref:System.Threading.EventWaitHandle.Reset%2A> 메서드가 호출되면 나머지 스레드가 다시 한번 차단됩니다. 재개되는 스레드와 차단되는 스레드는 시스템에 대한 로드, 스케줄러를 기다리는 스레드 수 등의 임의 요소에 따라 달라집니다. 이는 이벤트에 신호를 보내는 스레드가 신호를 보낸 후 종료될 경우의 문제가 아니라, 가장 일반적인 사용 패턴입니다. 이벤트에 신호를 보낸 스레드가 모든 대기 스레드가 재기된 후 새 작업을 시작하도록 하려면 해당 스레드를 모든 대기 스레드가 재개될 때까지 차단해야 합니다. 그렇지 않으면 경합 상태가 있어서 코드의 동작을 예측할 수 없습니다.  
   
 ## <a name="features-common-to-automatic-and-manual-events"></a>자동 및 수동 이벤트에 공통적인 기능  
+
  일반적으로 차단이 해제된 스레드가 대기 스레드 중 하나(자동 재설정 이벤트의 경우) 또는 모든 대기 스레드(수동 재설정 이벤트의 경우)를 해제하는 <xref:System.Threading.EventWaitHandle.Set%2A> 메서드를 호출할 때까지 하나 이상의 스레드가 <xref:System.Threading.EventWaitHandle>에서 차단됩니다. 스레드는 <xref:System.Threading.EventWaitHandle>에 신호를 보낸 다음, 정적 <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType> 메서드를 호출하여 이 개체에서 원자성 작업으로 차단될 수 있습니다.  
   
  <xref:System.Threading.EventWaitHandle> 개체는 정적 <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> 및 <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> 메서드와 함께 사용할 수 있습니다. <xref:System.Threading.EventWaitHandle> 및 <xref:System.Threading.Mutex> 클래스는 모두 <xref:System.Threading.WaitHandle>에서 파생되므로 두 클래스를 모두 이러한 방법으로 사용할 수 있습니다.  
   
 ### <a name="named-events"></a>명명된 이벤트  
+
  Windows 운영 체제에서는 이벤트 대기 핸들에 이름을 지정할 수 있습니다. 명명된 이벤트는 시스템 전체에서 사용됩니다. 즉, 명명된 이벤트가 만들어지면 모든 프로세스의 모든 스레드에 표시됩니다. 따라서 명명된 이벤트는 스레드뿐 아니라 프로세스의 활동을 동기화하는 데도 사용할 수 있습니다.  
   
  이벤트 이름을 지정하는 생성자 중 하나를 사용하여 명명된 시스템 이벤트를 나타내는 <xref:System.Threading.EventWaitHandle> 개체를 만들 수 있습니다.  

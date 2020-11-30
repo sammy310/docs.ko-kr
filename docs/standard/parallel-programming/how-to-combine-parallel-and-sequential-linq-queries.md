@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel queries, combine parallel and sequential
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
-ms.openlocfilehash: e851c6d72a5fd932c065368b893b907d7820c918
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dc7536aad46e2edcc5c20400ed872ee4e0ad836d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827102"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713159"
 ---
 # <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>방법: 병렬 및 순차적 LINQ 쿼리 결합
 
@@ -22,12 +22,14 @@ ms.locfileid: "94827102"
 > 이 예제는 사용법을 보여 주기 위한 것이며, 동일한 순차 LINQ to Objects 쿼리보다 빠르게 실행되지 않을 수도 있습니다. 속도 향상에 대한 자세한 내용은 [PLINQ의 속도 향상 이해](understanding-speedup-in-plinq.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 쿼리의 이전 절에서 설정된 순서를 유지하기 위해 <xref:System.Linq.ParallelEnumerable.AsSequential%2A>이 필요한 하나의 시나리오를 보여줍니다.  
   
  [!code-csharp[PLINQ#24](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#24)]
  [!code-vb[PLINQ#24](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#24)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
  이 코드를 컴파일하고 실행하려면 [PLINQ 데이터 샘플](plinq-data-sample.md) 프로젝트에 붙여넣고, `Main`에서 메서드를 호출하는 줄을 추가하고 **F5** 키를 누르세요.  
   
 ## <a name="see-also"></a>참조

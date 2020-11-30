@@ -6,17 +6,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-ms.openlocfilehash: f382165ca8e2b972c47a080244a3d0054b5eb604
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b2feb14e304c8ba7ecc19b2e79b943204044da05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822739"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722676"
 ---
 # <a name="including-or-importing-xml-schemas"></a>XML 스키마 포함하기 또는 가져오기
+
 XML 스키마에 `<xs:import />`, `<xs:include />` 및 `<xs:redefine />` 요소를 포함시킬 수 있습니다. 이 스키마 요소는 이를 포함하거나 가져오는 스키마의 구조를 보완하는 데 사용할 수 있는 다른 XML 스키마를 참조할 수 있습니다. SOM(스키마 개체 모델) API에서 <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> 및 <xref:System.Xml.Schema.XmlSchemaRedefine> 클래스는 이러한 요소에 매핑됩니다.  
   
 ## <a name="including-or-importing-an-xml-schema"></a>XML 스키마 포함하기 또는 가져오기  
+
  다음 코드 예제는 주소 스키마를 사용하여 [XML 스키마 빌드](building-xml-schemas.md) 항목에서 만든 고객 스키마를 보완합니다. 주소 스키마로 고객 스키마를 보완하면 고객 스키마에서 주소 형식을 사용할 수 있습니다.  
   
  `<xs:include />` 또는 `<xs:import />` 요소를 사용하여 주소 스키마의 구성 요소를 그대로 사용하거나 `<xs:redefine />` 요소를 사용하여 고객 스키마의 필요에 맞게 구성 요소를 수정함으로써 주소 스키마를 통합할 수 있습니다. 주소 스키마에는 고객 스키마에 포함된 것과는 다른 `targetNamespace`가 있기 때문에 `<xs:import />` 요소 및 가져오기 의미 체계가 사용됩니다.  

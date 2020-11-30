@@ -20,12 +20,12 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: 668ac7552289a9d1015b62ed9e68f53415dd6211
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 8d12ab2904b336f38e56387c8aaf2a851a46007e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830443"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722728"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>동기 메서드를 비동기 방식으로 호출
 
@@ -55,6 +55,7 @@ ms.locfileid: "94830443"
 > 사용하는 방법에 관계없이 항상 `EndInvoke` 를 호출하여 비동기 호출을 완료해야 합니다.
 
 ## <a name="defining-the-test-method-and-asynchronous-delegate"></a>테스트 메서드 및 비동기 대리자 정의
+
  다음 코드 예제에서는 동일한 장기 실행 메서드인 `TestMethod`를 비동기 방식으로 호출하는 다양한 방법을 보여 줍니다. `TestMethod` 메서드는 처리를 시작했음을 나타내는 콘솔 메시지를 표시하고 몇 초간 대기한 후 종료됩니다. `TestMethod` 에는 `out` 및 `BeginInvoke` 의 시그니처에 해당 매개 변수가 추가되는 방식을 보여 주는 `EndInvoke`매개 변수가 있습니다. `ref` 매개 변수도 마찬가지로 처리할 수 있습니다.
 
  다음 코드 예제에서는 `TestMethod` 의 정의와 `AsyncMethodCaller` 를 비동기식으로 호출하는 데 사용할 수 있는 `TestMethod` 라는 대리자를 보여 줍니다. 코드 예제를 컴파일하려면 `TestMethod` 및 `AsyncMethodCaller` 대리자의 정의를 포함해야 합니다.
@@ -64,6 +65,7 @@ ms.locfileid: "94830443"
  [!code-vb[AsyncDelegateExamples#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/TestMethod.vb#1)]
 
 ## <a name="waiting-for-an-asynchronous-call-with-endinvoke"></a>EndInvoke로 비동기 호출 대기
+
  메서드를 비동기 방식으로 실행하는 가장 간단한 방법은 대리자의 `BeginInvoke` 메서드를 호출하여 메서드 실행을 시작하고 주 스레드에서 작업을 수행한 다음 대리자의 `EndInvoke` 메서드를 호출하는 것입니다. `EndInvoke` 는 비동기 호출이 완료될 때까지 반환되지 않으므로 호출하는 스레드를 차단할 수도 있습니다. 이 방법은 파일 또는 네트워크 작업에 적합합니다.
 
 > [!IMPORTANT]
@@ -74,6 +76,7 @@ ms.locfileid: "94830443"
  [!code-vb[AsyncDelegateExamples#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/EndInvoke.vb#2)]
 
 ## <a name="waiting-for-an-asynchronous-call-with-waithandle"></a>WaitHandle로 비동기 호출 대기
+
  <xref:System.Threading.WaitHandle> 에서 반환하는 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 의 <xref:System.IAsyncResult> 속성을 사용하여 `BeginInvoke`을 가져올 수 있습니다. 비동기 호출이 완료되면 <xref:System.Threading.WaitHandle> 은 신호를 받으며 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드를 호출하여 대기할 수 있습니다.
 
  <xref:System.Threading.WaitHandle>을 사용하는 경우 비동기 호출이 완료되기 전이나 후에 추가 작업을 처리한 다음 `EndInvoke` 를 호출하여 결과를 검색할 수 있습니다.
@@ -86,6 +89,7 @@ ms.locfileid: "94830443"
  [!code-vb[AsyncDelegateExamples#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/WaitHandle.vb#3)]
 
 ## <a name="polling-for-asynchronous-call-completion"></a>비동기 호출 완료에 대한 폴링
+
  <xref:System.IAsyncResult.IsCompleted%2A> 에서 반환하는 <xref:System.IAsyncResult> 의 `BeginInvoke` 속성을 사용하여 비동기 호출이 완료되는 시점을 확인할 수 있습니다. 사용자 인터페이스를 제공하는 스레드에서 비동기 호출을 수행하는 경우 이 동작을 수행할 수 있습니다. 완료에 대해 폴링하면 비동기 호출이 <xref:System.Threading.ThreadPool> 스레드에서 실행되는 동안 호출 스레드가 계속 실행될 수 있습니다.
 
  [!code-cpp[AsyncDelegateExamples#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/polling.cpp#4)]
@@ -93,6 +97,7 @@ ms.locfileid: "94830443"
  [!code-vb[AsyncDelegateExamples#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/polling.vb#4)]
 
 ## <a name="executing-a-callback-method-when-an-asynchronous-call-completes"></a>비동기 호출이 완료될 때 콜백 메서드 실행
+
  비동기 호출을 시작하는 스레드와 결과를 처리하는 스레드가 서로 다를 수 있는 경우에는 호출이 완료될 때 콜백 메서드를 실행할 수 있습니다. 콜백 메서드는 <xref:System.Threading.ThreadPool> 스레드에서 실행됩니다.
 
  콜백 메서드를 사용하려면 `BeginInvoke` 에 콜백 메서드를 나타내는 <xref:System.AsyncCallback> 대리자를 전달해야 합니다. 콜백 메서드에서 사용할 정보가 들어 있는 개체를 전달할 수도 있습니다. 콜백 메서드에서는 콜백 메서드의 유일한 매개 변수인 <xref:System.IAsyncResult>를 <xref:System.Runtime.Remoting.Messaging.AsyncResult> 개체로 캐스팅할 수 있습니다. 그런 다음 <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType> 속성을 사용하여 호출을 시작하는 데 사용된 대리자를 가져오면 `EndInvoke`를 호출할 수 있습니다.

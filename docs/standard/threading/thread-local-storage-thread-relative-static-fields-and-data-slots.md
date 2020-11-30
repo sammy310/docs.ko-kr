@@ -7,12 +7,12 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: c9ea2939dcff321a1d4e24e7a97c056c016e5fdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b45c83887d278589cc1704ec1398ec99e27550ad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819632"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727525"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>스레드 로컬 스토리지: 스레드 상대 정적 필드 및 데이터 슬롯
 
@@ -27,6 +27,7 @@ ms.locfileid: "94819632"
 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 클래스를 사용하여 개체가 처음 사용될 때 초기화가 지연되는 스레드 로컬 개체를 만들 수 있습니다. 자세한 내용은 [초기화 지연](../../framework/performance/lazy-initialization.md)을 참조하세요.  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>관리되는 TLS의 데이터 고유성  
+
  스레드 관련 정적 필드 또는 데이터 슬롯을 사용할지 여부에 관계없이 관리되는 TLS의 데이터는 스레드 및 애플리케이션 도메인의 조합에 고유합니다.  
   
 - 애플리케이션 도메인 내에서는 두 스레드가 동일한 필드 또는 슬롯을 사용하는 경우에도 한 스레드가 다른 스레드의 데이터를 수정할 수 없습니다.  
@@ -38,6 +39,7 @@ ms.locfileid: "94819632"
  마찬가지로 스레드가 두 개의 다른 애플리케이션 도메인에서 동일한 이름의 데이터 슬롯을 가져오는 경우 첫 번째 애플리케이션 도메인의 데이터는 두 번째 애플리케이션 도메인의 데이터와 독립적으로 유지됩니다.  
   
 ## <a name="thread-relative-static-fields"></a>스레드 관련 정적 필드  
+
  데이터 조각이 항상 스레드 및 애플리케이션 도메인 조합에 고유하다는 것을 알고 있다면 <xref:System.ThreadStaticAttribute> 특성을 정적 필드에 적용하세요. 다른 정적 필드를 사용하는 것처럼 필드를 사용하세요. 필드의 데이터는 이를 사용하는 각 스레드에 고유합니다.  
   
  스레드 관련 정적 필드는 데이터 슬롯보다 향상된 성능을 제공하며 컴파일 시간 형식 검사의 이점을 제공합니다.  

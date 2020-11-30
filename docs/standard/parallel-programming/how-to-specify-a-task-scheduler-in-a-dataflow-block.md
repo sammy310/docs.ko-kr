@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-ms.openlocfilehash: 716892940bf8387cbe3d39fd36258c5ede02ee8b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8c27c1ca61356b36183bb74b8360e41f5324d25
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826907"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722442"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>방법: 데이터 흐름 블록의 작업 Scheduler 지정
+
 이 문서에서는 애플리케이션에서 데이터 흐름을 사용하는 경우 특정 작업 스케줄러를 연결하는 방법을 보여 줍니다. 예제에서는 Windows Forms 애플리케이션에서 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> 클래스를 사용하여 판독기 작업이 활성화된 경우와 작성기 작업이 활성화된 경우를 표시합니다. 또한 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 메서드를 사용하여 데이터 흐름 블록이 사용자 인터페이스 스레드에서 실행될 수 있도록 합니다.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -30,6 +31,7 @@ ms.locfileid: "94826907"
 3. 폼에 <xref:System.Windows.Forms.Timer> 컨트롤을 추가합니다. <xref:System.Windows.Forms.Timer.Interval%2A> 속성을 `2500`으로 설정합니다.  
   
 ## <a name="adding-dataflow-functionality"></a>데이터 흐름 기능 추가  
+
  이 단원에서는 애플리케이션에 참여하는 데이터 흐름 블록을 만드는 방법과 각 데이터 흐름 블록을 작업 스케줄러와 연결하는 방법을 설명합니다.  
   
 ### <a name="to-add-dataflow-functionality-to-the-application"></a>애플리케이션에 데이터 흐름 기능을 추가하려면  
@@ -73,6 +75,7 @@ ms.locfileid: "94826907"
  또한 이 예제에서는 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 클래스를 사용하여 일부 데이터 흐름 블록이 동시에 동작할 수 있도록 하고 다른 데이터 흐름 블록이 동일한 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 개체에서 실행되는 다른 모든 데이터 흐름 블록과 독립적으로 동작할 수 있도록 합니다. 이 방법은 여러 데이터 흐름 블록이 리소스를 공유할 때 해당 리소스에 대한 액세스를 수동으로 동기화할 필요를 없애기 위해 일부 데이터 흐름 블록에 해당 리소스에 대한 배타적 액세스 권한이 필요한 경우에 유용합니다. 수동 동기화를 제거하면 코드의 효율성이 향상될 수 있습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 Form1.cs(Visual Basic에서는 Form1.vb)의 전체 코드를 보여 줍니다.  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]

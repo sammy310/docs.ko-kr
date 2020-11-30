@@ -11,12 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 1ad8f72f80e88971e2bbf672bd92d9c607134783
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9d5d5b27fb77500aa5f6deff3fcb1c739ba8b094
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827414"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722663"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>제네릭의 공변성(Covariance) 및 반공변성(Contravariance)
 
@@ -71,6 +71,7 @@ ms.locfileid: "94827414"
 - C# 9부터 공변 반환 형식이 지원됩니다. 재정의 메서드는 재정의하는 메서드의 더 파생된 반환 형식으로 선언할 수 있으며, 재정의 읽기 전용 속성은 더 파생된 형식을 선언할 수 있습니다.
 
 <a name="InterfaceCovariantTypeParameters"></a>
+
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>공변 형식 매개 변수가 있는 제네릭 인터페이스
 
 여러 제네릭 인터페이스에 공변 형식 매개 변수가 있습니다(예: <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601>, <xref:System.Linq.IGrouping%602>). 이러한 인터페이스의 모든 형식 매개 변수는 공변성이므로, 형식 매개 변수는 멤버의 반환 형식에만 사용됩니다.  

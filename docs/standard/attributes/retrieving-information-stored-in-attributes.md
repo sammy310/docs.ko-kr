@@ -11,14 +11,15 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: 8f58648f5cc73b911f0393f2a631b8976ac097b4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6ba01fcd23e626354e5f9a2baa914815b61c8332
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829026"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701564"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>특성에 저장된 정보 검색
+
 사용자 지정 특성 검색은 간단한 프로세스입니다. 먼저, 검색하려는 특성의 인스턴스를 선언합니다. 그런 다음, <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 메서드를 사용하여 검색하려는 특성 값으로 새 특성을 초기화합니다. 새 특성이 초기화되면 해당 속성을 사용하여 값을 가져오기만 하면 됩니다.  
   
 > [!IMPORTANT]
@@ -33,7 +34,9 @@ ms.locfileid: "94829026"
 - [다양한 범위에 적용된 특성의 다중 인스턴스 검색](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>
+
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>특성의 단일 인스턴스 검색  
+
  다음 예제에서 `DeveloperAttribute`(이전 섹션에 설명되어 있음)는 클래스 수준의 `MainApp` 클래스에 적용됩니다. `GetAttribute` 메서드는 클래스 수준의 `DeveloperAttribute`에 저장된 값을 콘솔에 표시하기 전에 먼저 **GetCustomAttribute** 를 사용하여 검색합니다.  
   
  [!code-cpp[Conceptual.Attributes.Usage#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source3.cpp#18)]
@@ -57,7 +60,9 @@ The attribute was not found.
  이 예제에서는 특성 정의가 현재 네임스페이스에 있다고 가정합니다. 현재 네임스페이스에 없는 경우 특성 정의가 있는 네임스페이스를 가져와야 합니다.  
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>
+
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>동일한 범위에 적용된 특성의 다중 인스턴스 검색  
+
  이전 예제에서는 검사할 클래스 및 찾을 특정 특성이 <xref:System.Attribute.GetCustomAttribute%2A>에 전달됩니다. 특성의 인스턴스 하나만 클래스 수준에서 적용되는 경우 해당 코드가 제대로 작동됩니다. 그러나 특성의 여러 인스턴스가 동일한 클래스 수준에서 적용되는 경우 **GetCustomAttribute** 메서드가 모든 정보를 검색하지 못합니다. 동일한 특성의 여러 인스턴스가 동일한 범위에 적용되는 경우 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>를 사용하여 특성의 모든 인스턴스를 배열에 배치할 수 있습니다. 예를 들어 `DeveloperAttribute`의 두 인스턴스가 동일한 클래스의 클래스 수준에서 적용되는 경우 `GetAttribute` 메서드를 수정하여 두 특성 모두에서 찾은 정보를 표시할 수 있습니다. 동일한 수준의 여러 특성을 적용하려면 <xref:System.AttributeUsageAttribute>에서 **AllowMultiple** 속성을 **true** 로 설정하여 특성을 정의해야 합니다.  
   
  다음 코드 예제에서는 **GetCustomAttributes** 메서드를 사용하여 지정된 특정 클래스에서 `DeveloperAttribute`의 모든 인스턴스를 참조하는 배열을 만드는 방법을 보여줍니다. 이렇게 하면 모든 특성 값이 콘솔에 표시됩니다.  
@@ -69,7 +74,9 @@ The attribute was not found.
  특성을 찾을 수 없는 경우 이 코드는 사용자에게 경고를 표시합니다. 특성을 찾은 경우 `DeveloperAttribute`의 두 인스턴스 모두에 포함된 정보가 표시됩니다.  
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>
+
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>다양한 범위에 적용된 특성의 다중 인스턴스 검색  
+
  <xref:System.Attribute.GetCustomAttributes%2A> 및 <xref:System.Attribute.GetCustomAttribute%2A> 메서드는 클래스 전체를 검색하지 않고 해당 클래스 특성의 모든 인스턴스를 반환합니다. 대신, 한 번에 하나의 지정된 메서드 또는 멤버만 검색합니다. 모든 멤버에 동일한 특성이 적용된 클래스가 있는데 해당 멤버에 적용된 모든 특성의 값을 검색하려는 경우 모든 메서드 또는 멤버를 **GetCustomAttributes** 및 **GetCustomAttribute** 에 개별적으로 제공해야 합니다.  
   
  다음 코드 예제에서는 클래스를 매개 변수로 사용하여 클래스 수준에서 그리고 해당 클래스의 모든 개별 메서드에서 `DeveloperAttribute`(이전에 정의됨)를 검색합니다.  

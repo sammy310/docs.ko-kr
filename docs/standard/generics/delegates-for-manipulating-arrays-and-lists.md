@@ -9,17 +9,19 @@ helpviewer_keywords:
 - lists [.NET], generic delegates
 - generics [.NET], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-ms.openlocfilehash: b3b18a2efc4dba432ee241d764c1a81101796baf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5356671b4f1c48c125e49c35a2f8ddc5ea1ca26b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827284"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728513"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>배열과 목록을 조작하기 위한 제네릭 대리자
+
 이 항목에서는 배열 또는 컬렉션의 요소에 대해 수행할 작업, 검색 조건자 및 변환을 위한 제네릭 대리자에 대해 간략하게 설명합니다.  
   
 ## <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>배열과 목록을 조작하기 위한 제네릭 대리자  
+
  <xref:System.Action%601> 제네릭 대리자는 지정된 형식의 요소에 대해 작업을 수행하는 메서드를 나타냅니다. 요소에 대해 원하는 작업을 수행하는 메서드를 만들고, 해당 메서드를 나타내는 <xref:System.Action%601> 대리자의 인스턴스를 만든 다음 배열과 대리자를 <xref:System.Array.ForEach%2A?displayProperty=nameWithType> 정적 제네릭 메서드에 전달할 수 있습니다. 메서드는 배열의 각 요소에 대해 호출됩니다.  
   
  <xref:System.Collections.Generic.List%601> 제네릭 클래스는 <xref:System.Action%601> 대리자를 사용하는 <xref:System.Collections.Generic.List%601.ForEach%2A> 메서드도 제공합니다. 이 메서드는 제네릭이 아닙니다.  
@@ -36,6 +38,7 @@ ms.locfileid: "94827284"
  <xref:System.Converter%602> 제네릭 대리자를 통해 두 형식 간의 변환을 정의하고 한 형식의 배열을 다른 형식의 배열로 변환하거나 한 형식의 목록을 다른 형식의 목록으로 변환할 수 있습니다. 기존 목록의 요소를 새 형식으로 변환하는 메서드를 만들거나, 메서드를 나타내는 대리자 인스턴스를 만들거나, <xref:System.Array.ConvertAll%2A?displayProperty=nameWithType> 제네릭 정적 메서드를 사용하여 원래 배열에서 새 형식의 배열을 생성하거나, <xref:System.Collections.Generic.List%601.ConvertAll%60%601%28System.Converter%7B%600%2C%60%600%7D%29?displayProperty=nameWithType> 제네릭 인스턴스 메서드를 사용하여 원래 목록에서 새 형식의 목록을 생성합니다.  
   
 ### <a name="chaining-delegates"></a>대리자 연결  
+
  이러한 대리자를 사용하는 많은 메서드는 다른 메서드로 전달될 수 있는 배열 또는 목록을 반환합니다. 예를 들어 배열의 특정 요소를 선택하고 이러한 요소는 새 형식으로 변환한 다음 새 배열에 저장하려는 경우 <xref:System.Array.FindAll%2A> 제네릭 메서드에서 반환된 배열을 <xref:System.Array.ConvertAll%2A> 제네릭 메서드에 전달할 수 있습니다. 새 요소 형식에 자연 정렬 순서가 없는 경우 <xref:System.Array.ConvertAll%2A> 제네릭 메서드에서 반환된 배열을 <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> 제네릭 메서드에 전달할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목

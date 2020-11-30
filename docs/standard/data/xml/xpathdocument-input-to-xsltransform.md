@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d1bbe8b-ed43-4e62-a5ba-d602d244f4ae
-ms.openlocfilehash: d9291ff4010e04bf94a216f099ea80f8a3e2de12
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 29bb345c2654baec8fbd2adce3788a4b4f2d582d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821725"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720869"
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a>XslTransform에 대한 XPathDocument 입력
+
 <xref:System.Xml.XPath.XPathDocument>는 <xref:System.Xml.Xsl.XslTransform>을 사용하여 문서를 처리하기 위한 읽기 전용 캐시입니다. 이 캐시는 XML DOM(문서 개체 모델)과 구조상 유사하지만 <xref:System.Xml.XPath.XPathNavigator>의 XPath 최적화 함수를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 처리와 XPath(XML Path Language) 데이터 모델에 대해 최적화되었습니다.  
   
 > [!NOTE]

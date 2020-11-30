@@ -2,14 +2,15 @@
 title: XSLT 컴파일러(xsltc.exe)
 ms.date: 03/30/2017
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-ms.openlocfilehash: cfeebc3ac0c0259c975439dc93c3c5f003b60c40
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 89e2291cb4eafe9ca9e5001061b960f348fe4719
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818325"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720830"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 컴파일러(xsltc.exe)
+
 XSLT 컴파일러(xsltc.exe)에서는 XSLT 스타일시트를 컴파일하여 어셈블리를 생성합니다. 컴파일된 스타일시트는 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 메서드로 직접 전달될 수 있습니다. 서명된 어셈블리는 xsltc.exe를 사용하여 생성할 수 없습니다.  
   
  xsltc.exe 도구는 Visual Studio에 포함됩니다. 자세한 내용은 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)를 참조하세요.  
@@ -41,6 +42,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`?`|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  XSLT 솔루션은 여러 스타일시트 모듈로 구성됩니다. xsltc.exe 도구는 스타일시트에서 어셈블리를 생성합니다. 그런 다음 어셈블리가 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 메서드에 전달될 수 있습니다. 따라서 일부 XSLT 배포 시나리오에서 성능을 유지하는 데 드는 비용을 감소하는 데 도움이 될 수 있습니다.  
   
 > [!NOTE]
@@ -49,6 +51,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
  xsltc.exe 도구에서는 클래스(`/class:`*이름*) 또는 어셈블리(`/out:`*assemblyName*) 이름의 유효성을 검사하지 않습니다. 이름의 유효성을 확인할 수 없으면 공용 언어 런타임에서 오류가 throw됩니다.  
   
 ## <a name="examples"></a>예  
+
  다음 명령에서는 스타일시트를 컴파일하여 이름이 booksort.dll인 어셈블리를 만듭니다.  
   
 ```console  

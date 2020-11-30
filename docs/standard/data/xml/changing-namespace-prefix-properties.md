@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-ms.openlocfilehash: 14a59a9fdc602e63822a62c102cbffa32d6ba850
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a4ba378620d0c5ec01aaa5d87020c33fdbffcf01
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830274"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725354"
 ---
 # <a name="changing-namespace-prefix-properties"></a>네임스페이스 접두사 속성 변경
+
 **XmlNode** 클래스를 사용하면 지정된 노드와 연결된 네임스페이스 접두사를 변경할 수 있습니다. 예를 들어, 다음 코드에서는 변경될 요소의 접두사를 보여 줍니다.  
   
 ```vb  

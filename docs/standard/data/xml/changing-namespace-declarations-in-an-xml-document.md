@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
-ms.openlocfilehash: f4f081e1db2ccacf4714ad3009eefdfc290b2ed4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 95f9c6301f656ad4da5edcfb66521589b9195114
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821829"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725367"
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>XML 문서에서 네임스페이스 선언 변경
+
 **XmlDocument** 는 네임스페이스 선언 및 **xmlns** 특성을 문서 개체 모델의 일부로 표시합니다. 이러한 특성은 **XmlDocument** 에 저장되므로 문서를 저장할 때 해당 특성의 위치를 유지할 수 있습니다. 이러한 특성을 변경해도 트리에 있는 다른 노드의 **Name**, **NamespaceURI** 및 **Prefix** 속성에는 영향을 주지 않습니다. 예를 들어, 다음 문서를 로드하면 `test` 요소에 **NamespaceURI** `123.`가 있습니다.  
   
 ```xml  

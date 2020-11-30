@@ -9,17 +9,19 @@ helpviewer_keywords:
 - parallel foreach loop, how to cancel
 - parallel for loops, how to cancel
 ms.assetid: 9d19b591-ea95-4418-8ea7-b6266af9905b
-ms.openlocfilehash: d5deeeab6c332d29f3fa667d6211e8fb4b0eae50
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 842873afcba1bba3a00ccaa8c95310bd1efd3a92
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817317"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713316"
 ---
 # <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>방법: Parallel.For 또는 ForEach 루프 취소
+
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 메서드는 취소 토큰을 사용하는 방법으로 취소 기능을 지원합니다. 일반적으로 취소에 대한 자세한 내용은 [취소](../threading/cancellation-in-managed-threads.md)를 참조하세요. 병렬 루프에서는 <xref:System.Threading.CancellationToken>을 <xref:System.Threading.Tasks.ParallelOptions> 매개 변수의 메서드에 제공하고 try-catch 블록으로 병렬 호출을 묶습니다.  
   
 ## <a name="example"></a>예제  
+
  다음 예제는 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>에 대한 호출을 취소하는 방법을 보여줍니다. <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 호출에 동일한 접근 방식을 적용할 수 있습니다.  
   
  [!code-csharp[TPL_Parallel#29](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallel_cancel.cs#29)]

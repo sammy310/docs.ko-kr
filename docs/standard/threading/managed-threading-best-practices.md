@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: b2a3f2efc12392316f6d90242ef0a9224e7d13a4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 88cbf266d15a10ff7c56e07a30161e0a800989d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826315"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708051"
 ---
 # <a name="managed-threading-best-practices"></a>관리 스레딩을 구현하는 최선의 방법
 
@@ -25,9 +25,11 @@ ms.locfileid: "94826315"
 > .NET Framework 4부터 작업 병렬 라이브러리 및 PLINQ는 다중 스레드 프로그래밍의 일부 복잡성 및 위험을 줄여주는 API를 제공합니다. 자세한 내용은 [.NET의 병렬 프로그래밍](../parallel-programming/index.md)을 참조하세요.  
   
 ## <a name="deadlocks-and-race-conditions"></a>교착 상태 및 경합 상태  
+
  다중 스레딩은 처리량 및 응답성을 사용하여 문제를 해결하지만 이 과정에서 교착 상태 및 경합 상태의 새로운 문제를 유발합니다.  
   
 ### <a name="deadlocks"></a>교착 상태  
+
  교착 상태는 두 개의 각 스레드가 다른 스레드가 이미 잠근 리소스를 잠그려고 할 때 발생합니다. 두 스레드는 더 이상 진행할 수 없습니다.  
   
  관리되는 스레딩 클래스의 많은 메서드는 교착 상태를 감지하는 데 도움이 되는 시간 제한을 제공합니다. 예를 들어 다음 코드는 `lockObject`라는 개체에 대한 잠금을 획득하려고 합니다. 잠금이 300밀리초 내에 획득되지 않으면 <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>는 `false`를 반환합니다.  
@@ -59,6 +61,7 @@ else {
 ```  
   
 ### <a name="race-conditions"></a>경합 조건  
+
  경합 상태는 두 개 이상의 스레드에 의존하는 프로그램의 결과가 특정 코드 블록에 먼저 도달하는 경우에 발생하는 버그입니다. 프로그램을 여러 번 실행하면 서로 다른 결과를 생성하며 지정된 실행의 결과는 예측할 수 없습니다.  
   
  경합 상태의 간단한 예는 필드를 증가시키는 경우입니다. 클래스에 `objCt++;`(C#) 또는 `objCt += 1`(Visual Basic)과 같은 코드를 사용하는, 클래스의 인스턴스가 생성될 때마다 증가되는 개인 **정적** 필드(Visual Basic에서 **Shared**)가 있다고 가정합니다. 이 작업은 `objCt`에서 레지스터로 값을 로드하고, 값을 증가시키고 `objCt`에 저장해야 합니다.  
@@ -70,6 +73,7 @@ else {
  경합 상태는 다중 스레드의 작업을 동기화할 때에도 발생할 수 있습니다. 코드 줄을 작성할 때마다 줄을 실행하기 전에(또는 줄을 구성하는 개별 컴퓨터 명령 전에) 스레드가 선점되었고 다른 스레드가 먼저 사용한 경우 발생할 수 있는 상황을 고려해야 합니다.  
   
 ## <a name="static-members-and-static-constructors"></a>정적 멤버 및 정적 생성자  
+
  클래스는 해당 클래스 생성자(C#에서 `static` 생성자, Visual Basic에서 `Shared Sub New`)가 실행을 완료할 때까지 초기화되지 않습니다. 초기화되지 않는 형식에서 코드의 실행을 방지하려면 공용 언어 런타임은 클래스 생성자가 실행을 완료할 때까지 다른 스레드에서 클래스의 `static` 멤버(Visual Basic에서 `Shared` 멤버)로 모든 호출을 차단합니다.  
   
  예를 들어 클래스 생성자가 새 스레드를 시작하고 스레드 프로시저가 클래스의 `static` 멤버를 호출하는 경우 새 스레드는 클래스 생성자가 완료할 때까지 차단됩니다.  
@@ -83,6 +87,7 @@ else {
 런타임 시 사용 가능한 프로세서 수를 확인하려면 <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> 속성을 사용합니다.
   
 ## <a name="general-recommendations"></a>일반 권장 사항  
+
  다중 스레드를 사용하는 경우 다음 지침을 고려합니다.  
   
 - 다른 스레드를 종료하는 데 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>를 사용하지 마세요. 다른 스레드에서 **Abort** 를 호출하는 것은 해당 처리에서 해당 스레드가 어떤 지점에 도달했는지 알지 못하면서 해당 스레드에서 예외를 throw하는 것과 유사합니다.  
@@ -163,6 +168,7 @@ else {
     > <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> 메서드 오버로드는 참조 형식에 대해 형식이 안전한 대안을 제공합니다.
   
 ## <a name="recommendations-for-class-libraries"></a>클래스 라이브러리에 대한 권장 사항  
+
  다중 스레딩에 대한 클래스 라이브러리를 설계할 때 다음 지침을 고려합니다.  
   
 - 가능한 경우 동기화의 필요성을 피합니다. 많이 사용되는 코드의 경우 특히 그렇습니다. 예를 들어 경합 상태를 제거하는 대신 허용하도록 알고리즘을 조정할 수 있습니다. 불필요한 동기화는 성능을 저하시키고 교착 상태 및 경합 상태의 가능성을 만듭니다.  

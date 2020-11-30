@@ -14,12 +14,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 4fb9960ad3c92494cd3aa47516f6ba82ab606ee5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0a1b46443d5cd9f8a19f4cfb9f9b07a5e33e719e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825301"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714694"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>정규식의 교체 구문
 
@@ -30,6 +30,7 @@ ms.locfileid: "94825301"
 - [유효한 캡처 그룹을 기준으로 조건부 일치](#Conditional_Group)
 
 <a name="Either_Or"></a>
+
 ## <a name="pattern-matching-with-124"></a>&#124;를 사용한 패턴 일치
 
 세로 막대(`|`) 문자를 사용하여 일련의 패턴 중 하나를 찾을 수 있습니다. 여기서 `|` 문자는 각 패턴을 구분합니다.
@@ -62,6 +63,7 @@ ms.locfileid: "94825301"
 |`\b`|단어 경계에서 일치 항목 찾기를 끝냅니다.|  
   
 <a name="Conditional_Expr"></a>
+
 ## <a name="conditional-matching-with-an-expression"></a>식을 사용한 조건부 일치
 
 이 언어 요소는 초기 패턴을 찾을지 여부에 따라 두 패턴의 하나를 찾으려고 합니다. 사용되는 구문은 다음과 같습니다.  
@@ -93,6 +95,7 @@ ms.locfileid: "94825301"
 |`\b`|단어 경계를 찾습니다.|  
 
 <a name="Conditional_Group"></a>
+
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>유효한 캡처 그룹을 기준으로 조건부 일치
 
 이 언어 요소는 지정된 캡처링 그룹에 일치시켰는지 여부에 따라 두 패턴 중 하나에 일치시키려고 시도합니다. 사용되는 구문은 다음과 같습니다.

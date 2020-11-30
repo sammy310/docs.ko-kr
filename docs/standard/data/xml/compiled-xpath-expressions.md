@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-ms.openlocfilehash: 310d5eb01fff02d82ec3762d55ff14e5a6bcd621
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 99f06db3c6f1e634e9c4a677c01d1b0849afe43f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831015"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701512"
 ---
 # <a name="compiled-xpath-expressions"></a>컴파일된 XPath 식
+
 <xref:System.Xml.XPath.XPathExpression> 개체는 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 클래스의 정적 <xref:System.Xml.XPath.XPathExpression> 메서드 또는 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator> 메서드 중 하나에서 반환된 컴파일된 XPath 쿼리를 나타냅니다.  
   
 ## <a name="the-xpathexpression-class"></a>XPathExpression 클래스  
+
  같은 XPath 쿼리를 두 번 이상 사용하는 경우 <xref:System.Xml.XPath.XPathExpression> 개체가 나타내는 컴파일된 XPath 쿼리는 매우 유용합니다.  
   
  예를 들어, 매번 XPath 쿼리를 나타내는 문자열을 사용하는 대신 <xref:System.Xml.XPath.XPathNavigator.Select%2A> 메서드를 여러 번 호출할 경우 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 클래스의 <xref:System.Xml.XPath.XPathExpression> 메서드 또는 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator> 메서드를 사용하여 <xref:System.Xml.XPath.XPathExpression> 개체에서 XPath 쿼리를 컴파일하고 캐시하면 다시 사용이 가능하며 성능도 향상시킬 수 있습니다.  
@@ -45,6 +47,7 @@ ms.locfileid: "94831015"
 > <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 메서드에는 XPath 식을 매개 변수로 사용할 수 있습니다. <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 메서드는 W3C XPath 반환 형식이 아닌 <xref:System.Xml.XPath.XPathNavigator> 개체를 반환합니다.  
   
 ### <a name="the-returntype-property"></a>ReturnType 속성  
+
  XPath 쿼리를 <xref:System.Xml.XPath.XPathExpression> 개체로 컴파일한 후 <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 개체의 <xref:System.Xml.XPath.XPathExpression> 속성을 사용하여 XPath 쿼리가 반환하는 대상을 결정합니다.  
   
  <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 속성은 W3C XPath 반환 형식을 나타내는 다음 <xref:System.Xml.XPath.XPathResultType> 열거형 값 중 하나를 반환합니다.  
@@ -110,6 +113,7 @@ Console.WriteLine(nodes.Current.Value);
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ### <a name="higher-performance-xpath-expressions"></a>XPath 식의 성능 향상  
+
  성능을 향상시키려면 쿼리에 가능한 가장 구체적인 XPath 식을 사용합니다. 예를 들어, `book` 노드가 `bookstore` 노드의 자식 노드이고 `bookstore` 노드가 XML 문서에서 최상위 요소인 경우 XPath 식 `/bookstore/book`을 사용하면 `//book`을 사용하는 것보다 빠릅니다. `//book` XPath 식은 XML 트리에서 모든 노드를 검색하여 일치하는 노드를 식별합니다.  
   
  또한 선택 기준이 단순한 경우 <xref:System.Xml.XPath.XPathNavigator> 클래스에서 제공하는 노드 집합 탐색 메서드를 사용하면 <xref:System.Xml.XPath.XPathNavigator> 클래스에서 제공하는 선택 메서드를 사용하는 것보다 성능이 향상됩니다. 예를 들어, 현재 노드의 첫 번째 자식을 선택해야 할 경우 <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> 메서드를 사용하는 것이 `child::*[1]` XPath 식 및 <xref:System.Xml.XPath.XPathNavigator.Select%2A> 메서드를 사용하는 것보다 빠릅니다.  

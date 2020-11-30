@@ -15,14 +15,15 @@ helpviewer_keywords:
 - .NET regular expressions, anchors
 - .NET regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.openlocfilehash: 5f40270baa70c2b72d768cf0f5c4f8305f8bae7a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 37b6426581dc705264cd1403c979e95b1f4cfa5d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825275"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714486"
 ---
 # <a name="anchors-in-regular-expressions"></a>정규식의 앵커
+
 앵커 또는 원자성 너비가 0인 어설션은 문자열에서 일치 항목이 나타나야 하는 위치를 지정합니다. 검색 식에서 앵커를 사용하면 정규식 엔진은 문자열을 통과하거나 문자를 사용하지 않고, 지정된 위치에서만 일치 항목을 검색합니다. 예를 들어 `^` 기호는 줄이나 문자열의 시작 부분에서 일치 항목 찾기를 시작하도록 지정합니다. 따라서 정규식 `^http:` 은 줄의 시작 부분에 나타날 때만 "http:"을 찾습니다. 다음 표에서는 .NET의 정규식에서 지원하는 앵커를 보여 줍니다.  
   
 |앵커|설명|  
@@ -37,6 +38,7 @@ ms.locfileid: "94825275"
 |`\B`|일치 항목이 단어 경계에 있으면 안 됩니다. 자세한 내용은 [비단어 경계](#non-word-boundary-b)를 참조하세요.|  
 
 ## <a name="start-of-string-or-line-"></a>문자열 또는 줄의 시작: ^  
+
  기본적으로 `^` 앵커는 다음 패턴이 문자열의 첫 번째 문자 위치에서 시작하도록 지정합니다. `^` 기호를 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 옵션과 함께 사용하는 경우([정규식 옵션](regular-expression-options.md) 참조) 일치 항목이 각 줄의 시작 부분에 있어야 합니다.  
   
  다음 예제에서는 일부 전문 야구팀이 있던 기간(년)에 대한 정보를 추출하는 정규식에서 `^` 앵커를 사용합니다. 이 예제에서는 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드의 오버로드 두 개를 호출합니다.  
@@ -63,6 +65,7 @@ ms.locfileid: "94825275"
 |<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|공백, 10진수 4개, 하이픈과 10진수 4개 또는 문자열 "present", 쉼표 0개 또는 하나 순으로 나타나는 일치 항목 하나 이상을 찾습니다. 이 그룹은 5번째 캡처 그룹입니다.|
 
 ## <a name="end-of-string-or-line-"></a>문자열 또는 줄의 끝: $  
+
  `$` 앵커는 선행 패턴이 입력 문자열의 끝이나 입력 문자열 끝에 있는 `\n` 앞에 나타나도록 지정합니다.  
   
  `$` 를 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 옵션과 함께 사용하면 일치 항목이 줄의 끝 부분에 나타날 수도 있습니다. `$` 는 `\n` 과 일치하지만 `\r\n` (캐리지 리턴 및 줄 바꿈 문자 조합 또는 CR/LF)과는 일치하지 않습니다. CR/LF 문자 조합을 찾으려면 정규식 패턴에 `\r?$` 를 포함합니다.  
@@ -73,6 +76,7 @@ ms.locfileid: "94825275"
  [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]
 
 ## <a name="start-of-string-only-a"></a>문자열의 시작만: \A  
+
  `\A` 앵커는 일치 항목 찾기가 입력 문자열의 시작 부분에서 수행되도록 지정합니다. `^` 는 `\A` 옵션을 무시한다는 점을 제외하고 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 앵커와 동일합니다. 따라서 여러 줄 입력 문자열에서 첫 번째 줄의 시작 부분만 찾을 수 있습니다.  
   
  다음 예제는 `^` 및 `$` 앵커에 대한 예제와 비슷합니다. 일부 전문 야구팀이 있던 기간(년)에 대한 정보를 추출하는 정규식에서 `\A` 앵커를 사용합니다. 입력 문자열은 5줄을 포함합니다. <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 메서드에 대한 호출은 입력 문자열에서 정규식 패턴과 일치하는 첫 번째 하위 문자열만 찾습니다. 예제에서 볼 수 있듯이 <xref:System.Text.RegularExpressions.RegexOptions.Multiline> 옵션은 아무 영향도 주지 않습니다.  
@@ -81,6 +85,7 @@ ms.locfileid: "94825275"
  [!code-vb[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring2.vb#3)]
 
 ## <a name="end-of-string-or-before-ending-newline-z"></a>문자열의 끝 또는 줄 바꿈 종료 전: \Z  
+
  `\Z` 앵커는 일치 항목 찾기가 입력 문자열의 끝이나 입력 문자열의 끝에 있는 `\n` 앞에서 수행되도록 지정합니다. `$` 는 `\Z` 옵션을 무시한다는 점을 제외하고 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 앵커와 동일합니다. 따라서 여러 줄 문자열에서는 마지막 줄의 끝이나 `\n`앞의 마지막 줄만 찾을 수 있습니다.  
   
  `\Z` 는 `\n` 과 일치하지만 `\r\n` (CR/LF 문자 조합)과는 일치하지 않습니다. CR/LF를 찾으려면 정규식 패턴에 `\r?\Z` 를 포함합니다.  
@@ -91,6 +96,7 @@ ms.locfileid: "94825275"
  [!code-vb[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring2.vb#4)]
 
 ## <a name="end-of-string-only-z"></a>문자열의 끝만: \z  
+
  `\z` 앵커는 일치 항목 찾기가 입력 문자열의 끝 부분에서 수행되도록 지정합니다. `$` 언어 요소와 같이 `\z` 는 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 옵션을 무시합니다. `\Z` 언어 요소와 달리 `\z` 는 문자열 끝에서 `\n` 문자를 찾지 않습니다. 따라서 입력 문자열의 마지막 줄만 찾을 수 있습니다.  
   
  다음 예제에서는 일부 전문 야구팀이 있던 기간(년)에 대한 정보를 추출하는 이전 섹션의 예제와 동일한 정규식에서 `\z` 앵커를 사용합니다. 예제에서는 정규식 패턴 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`를 사용하여 문자열 배열에서 요소 5개를 각각 찾으려고 합니다. 문자열 중 두 개는 캐리지 리턴 및 줄 바꿈 문자로 끝나고, 하나는 줄 바꿈 문자로 끝나고, 두 개는 캐리지 리턴과 줄 바꿈 문자가 둘 다 없이 끝납니다. 출력과 같이 캐리지 리턴이나 줄 바꿈 문자가 없는 문자열만 패턴과 일치합니다.  
@@ -99,6 +105,7 @@ ms.locfileid: "94825275"
  [!code-vb[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring3.vb#5)]
 
 ## <a name="contiguous-matches-g"></a>연속 일치: \G  
+
  `\G` 앵커는 일치 항목 찾기가 이전 일치 항목 찾기가 끝난 지점에서 수행되도록 지정합니다. 이 앵커를 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 메서드와 함께 사용하면 모든 일치 항목이 연속으로 나타납니다.  
   
  다음 예제에서는 정규식을 사용하여 쉼표로 구분된 문자열에서 설치류의 이름을 추출합니다.  
@@ -118,6 +125,7 @@ ms.locfileid: "94825275"
 |`,?`|리터럴 쉼표 문자 0개 또는 하나를 찾습니다.|
 
 ## <a name="word-boundary-b"></a>단어 경계: \b  
+
  `\b` 앵커는 일치 항목 찾기가 단어 문자( `\w` 언어 요소)와 비단어 문자( `\W` 언어 요소) 사이 경계에서 수행되도록 지정합니다. 단어 문자는 영숫자 문자 및 밑줄로 구성되고, 비단어 문자는 영숫자나 밑줄이 아닌 문자입니다. 자세한 내용은 [문자 클래스](character-classes-in-regular-expressions.md)를 참조하세요. 일치 항목은 문자열의 시작 또는 끝의 단어 경계에 있을 수도 있습니다.  
   
  `\b` 앵커는 하위 식이 단어의 시작이나 끝이 아닌 전체 단어와 일치하는지 확인하는 데 자주 사용됩니다. 다음 예제의 정규식 `\bare\w*\b` 는 이 사용법을 보여 줍니다. 하위 문자열 "are"로 시작하는 단어를 찾습니다. 예제 출력에서는 `\b` 가 입력 문자열의 시작 및 끝과 둘 다 일치함을 보여 줍니다.  
@@ -135,6 +143,7 @@ ms.locfileid: "94825275"
 |`\b`|단어 경계에서 일치 항목 찾기를 끝냅니다.|  
 
 ## <a name="non-word-boundary-b"></a>비단어 경계: \B  
+
  `\B` 앵커는 일치 항목 찾기가 단어 경계에서 수행되지 않도록 지정합니다. `\b` 앵커와 반대 작업을 수행합니다.  
   
  다음 예제에서는 `\B` 앵커를 사용하여 단어에서 하위 문자열 "qu"를 찾습니다. 정규식 패턴 `\Bqu\w+` 는 단어를 시작하지 않고 단어의 끝으로 계속되는 "qu"로 시작하는 하위 문자열을 찾습니다.  

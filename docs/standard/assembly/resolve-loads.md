@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 16f2f61a2a36e4189e98c85b3d3ce706a52e2938
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: edd101e57793668d71d44db08f191ae412c6d998
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687273"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720908"
 ---
 # <a name="resolve-assembly-loads"></a>어셈블리 로드 해결
 
@@ -28,6 +28,7 @@ ms.locfileid: "92687273"
 > 리플렉션 전용 컨텍스트에서 어셈블리 로드를 확인하려면 <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> 이벤트를 대신 사용합니다.  
   
 ## <a name="how-the-assemblyresolve-event-works"></a>AssemblyResolve 이벤트 작동 방식  
+
  <xref:System.AppDomain.AssemblyResolve> 이벤트 처리기를 등록하면 런타임에 이름으로 어셈블리에 바인딩하지 못할 때마다 처리기가 호출됩니다. 예를 들어 사용자 코드에서 다음 메서드를 호출하면 <xref:System.AppDomain.AssemblyResolve> 이벤트가 발생할 수 있습니다.  
   
 - 첫 번째 인수가 로드할 어셈블리의 표시 이름을 나타내는 문자열(즉, <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> 속성에서 반환되는 문자열)인 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 메서드 오버로드 또는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드 오버로드  
@@ -39,6 +40,7 @@ ms.locfileid: "92687273"
 - 다른 애플리케이션 도메인의 개체를 인스턴스화하는 <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> 또는 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> 메서드 오버로드  
   
 ### <a name="what-the-event-handler-does"></a>이벤트 처리기가 수행하는 작업  
+
  <xref:System.AppDomain.AssemblyResolve> 이벤트 처리기는 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 속성을 통해 로드할 어셈블리의 표시 이름을 받습니다. 처리기가 어셈블리 이름을 인식하지 못하는 경우 `null`(C#), `Nothing`(Visual Basic) 또는 `nullptr`(Visual C++)이 반환됩니다.  
   
  처리기가 어셈블리 이름을 인식하면 요청을 충족하는 어셈블리를 로드하고 반환할 수 있습니다. 다음 목록에서는 몇 가지 샘플 시나리오를 설명합니다.  
@@ -69,6 +71,7 @@ ms.locfileid: "92687273"
  동일한 어셈블리의 여러 버전을 동일한 애플리케이션 도메인에 로드할 수 있습니다. 이 방법은 형식 할당 문제를 일으킬 수 있으므로 권장되지 않습니다. [최선의 어셈블리 로드 방법](../../framework/deployment/best-practices-for-assembly-loading.md)을 참조하세요.  
   
 ### <a name="what-the-event-handler-should-not-do"></a>이벤트 처리기에서 수행하지 않아야 하는 작업  
+
 <xref:System.AppDomain.AssemblyResolve> 이벤트 처리의 기본 규칙은 알 수 없는 어셈블리를 반환하지 않아야 한다는 것입니다. 처리기를 작성할 때 이벤트를 발생시킬 수 있는 어셈블리를 알아야 합니다. 처리기는 다른 어셈블리에 대해 null을 반환해야 합니다.  
 
 > [!IMPORTANT]

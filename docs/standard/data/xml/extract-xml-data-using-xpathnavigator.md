@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
-ms.openlocfilehash: 5cf132c302650a0069c6cc497248d1d0b50c779d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0d327738f818c40d8baa9e0fb8bd0092b94c6e07
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828909"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721506"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 추출
+
 Microsoft .NET Framework에서는 여러 가지 방법으로 XML 문서를 나타낼 수 있습니다. 예를 들어, <xref:System.String>을 사용하거나 <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> 또는 <xref:System.Xml.XPath.XPathDocument> 클래스를 사용하여 XML 문서를 나타낼 수 있습니다. 여러 가지 XML 문서 표현 간을 이동할 수 있도록 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XML을 <xref:System.String>, <xref:System.Xml.XmlReader> 개체 또는 <xref:System.Xml.XmlWriter> 개체로 추출하는 많은 메서드와 속성을 제공합니다.  
   
 ## <a name="convert-an-xpathnavigator-to-a-string"></a>XPathNavigator를 문자열로 변환  
+
  <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator> 속성을 사용하여 전체 XML 문서의 태그를 가져오거나 단일 노드 및 해당 자식 노드의 태그만 가져올 수 있습니다.  
   
 > [!NOTE]
@@ -48,6 +50,7 @@ string root = navigator.OuterXml;
 ```  
   
 ## <a name="convert-an-xpathnavigator-to-an-xmlreader"></a>XPathNavigator를 XmlReader로 변환  
+
  <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> 메서드를 사용하면 XML 문서의 전체 내용이나 단일 노드 및 해당 자식 노드만 <xref:System.Xml.XmlReader> 개체로 스트림할 수 있습니다.  
   
  현재 노드 및 자식 노드를 사용하여 <xref:System.Xml.XmlReader> 개체를 만든 경우 <xref:System.Xml.XmlReader> 개체의 <xref:System.Xml.XmlReader.ReadState%2A> 속성은 <xref:System.Xml.ReadState.Initial>로 설정됩니다. <xref:System.Xml.XmlReader> 개체의 <xref:System.Xml.XmlReader.Read%2A> 메서드를 처음으로 호출하면 <xref:System.Xml.XmlReader>가 <xref:System.Xml.XPath.XPathNavigator>의 현재 노드로 이동합니다. 새 <xref:System.Xml.XmlReader> 개체는 XML 트리 끝에 도달할 때까지 계속 읽습니다. 이때 <xref:System.Xml.XmlReader.Read%2A> 메서드는 `false`를 반환하고 <xref:System.Xml.XmlReader> 개체의 <xref:System.Xml.XmlReader.ReadState%2A> 속성은 <xref:System.Xml.ReadState.EndOfFile>로 설정됩니다.  
@@ -115,6 +118,7 @@ book.Close();
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ## <a name="converting-an-xpathnavigator-to-an-xmlwriter"></a>XPathNavigator를 XmlWriter로 변환  
+
  <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A> 메서드를 사용하면 XML 문서의 전체 내용이나 단일 노드 및 해당 자식 노드만 <xref:System.Xml.XmlWriter> 개체로 스트림할 수 있습니다.  
   
  <xref:System.Xml.XPath.XPathNavigator> 개체를 만들어도 <xref:System.Xml.XmlWriter> 개체의 위치는 변경되지 않습니다.  

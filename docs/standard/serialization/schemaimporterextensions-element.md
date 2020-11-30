@@ -7,12 +7,12 @@ helpviewer_keywords:
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: 35626618a8dd7c63a7008d10bc3568484836a488
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 6b644ed1112b748be4dd301d6fa6f2a6416dc67e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282274"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722143"
 ---
 # <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions> 요소
 
@@ -39,6 +39,7 @@ ms.locfileid: "93282274"
 |[\<system.xml.serialization> 요소](system-xml-serialization-element.md)|XML serialization을 제어하기 위한 최상위 요소입니다.|  
   
 ## <a name="example"></a>예제  
+
  다음 코드 예제는 XSD 형식을 .NET 형식에 매핑할 때 <xref:System.Xml.Serialization.XmlSchemaImporter>에서 사용하는 형식을 추가하는 방법을 보여 줍니다.  
   
 ```xml  

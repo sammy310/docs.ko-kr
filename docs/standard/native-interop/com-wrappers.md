@@ -10,14 +10,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
-ms.openlocfilehash: cde574be6d4fadb78805548cff1b42ee354bf36f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 17a303cde5fa51cd940b0375d2c6657fcd354dc5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558955"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706333"
 ---
 # <a name="com-wrappers"></a>COM 래퍼
+
 COM은 다음과 같은 여러 중요한 방식에서 .NET 런타임 개체 모델과 다릅니다.  
   
 - COM 개체의 클라이언트는 이러한 개체의 수명을 관리해야 합니다. 공용 언어 런타임은 해당 환경에서 개체의 수명을 관리합니다.  

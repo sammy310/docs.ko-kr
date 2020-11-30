@@ -4,12 +4,12 @@ description: 자체 포함 앱의 트리밍을 제어하는 방법을 알아봅�
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 89bd195a97c2f1bbbba9199fea51c917c4e4836b
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: e36aca3aadb6968f73a439ca985dc410d1bc88d8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515834"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704658"
 ---
 # <a name="trimming-options"></a>트리밍 옵션
 
@@ -140,11 +140,11 @@ SDK를 사용하여 `DebuggerSupport` 속성을 통해 디버거 지원을 사�
 
 - `<EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>`
 
-    BinaryFormatter serialization 지원을 제거합니다. 자세한 내용은 [BinaryFormatter serialization 메서드가 사용되지 않음](../compatibility/corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)을 참조하세요.
+    BinaryFormatter serialization 지원을 제거합니다. 자세한 내용은 [BinaryFormatter serialization 메서드가 사용되지 않음](../compatibility/core-libraries/5.0/binaryformatter-serialization-obsolete.md)을 참조하세요.
 
 - `<EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>`
 
-    안전하지 않은 UTF-7 인코딩 코드를 제거합니다. 자세한 내용은 [UTF-7 코드 경로가 사용되지 않음](../compatibility/corefx.md#utf-7-code-paths-are-obsolete)을 참조하세요.
+    안전하지 않은 UTF-7 인코딩 코드를 제거합니다. 자세한 내용은 [UTF-7 코드 경로가 사용되지 않음](../compatibility/core-libraries/5.0/utf-7-code-paths-obsolete.md)을 참조하세요.
 
 - `<EventSourceSupport>false</EventSourceSupport>`
 

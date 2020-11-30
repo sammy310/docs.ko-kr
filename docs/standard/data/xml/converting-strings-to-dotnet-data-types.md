@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: 2eee3ff905473d8fd520929c0fe5abfb5d5c42da
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0cee7481f9c002f860bff7f12b8be0bb763dadb1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830963"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701473"
 ---
 # <a name="convert-strings-to-net-data-types"></a>문자열을 .NET 데이터 형식으로 변환
 
@@ -72,6 +72,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
  하지만 문자열을 **Boolean**, **Single** 또는 **Double** 로 변환하는 경우 반환되는 .NET 형식은 **System.Convert** 클래스를 사용하는 경우의 반환 형식과는 다릅니다.  
   
 ## <a name="string-to-boolean"></a>문자열을 Boolean 형식으로 변환  
+
  다음 표에서는 **ToBoolean** 메서드를 사용하여 문자열을 **Boolean** 으로 변환하는 경우 지정된 입력 문자열에 대해 생성되는 형식을 보여줍니다.  
   
 |유효한 문자열 입력 매개 변수|.NET 출력 형식|  
@@ -104,6 +105,7 @@ Console.WriteLine(bvalue);
 ```  
   
 ## <a name="string-to-single"></a>문자열을 Single 형식으로 변환  
+
  다음 표에서는 **ToSingle** 메서드를 사용하여 문자열을 **Single** 로 변환하는 경우 지정된 입력 문자열에 대해 생성되는 형식을 보여줍니다.  
   
 |유효한 문자열 입력 매개 변수|.NET 출력 형식|  
@@ -112,6 +114,7 @@ Console.WriteLine(bvalue);
 |"-INF"|Single.NegativeInfinity|  
   
 ## <a name="string-to-double"></a>문자열을 Double 형식으로 변환  
+
  다음 표에서는 **ToDouble** 메서드를 사용하여 문자열을 **Single** 로 변환하는 경우 지정된 입력 문자열에 대해 생성되는 형식을 보여줍니다.  
   
 |유효한 문자열 입력 매개 변수|.NET 출력 형식|  

@@ -3,18 +3,21 @@ title: XML 문서의 네임스페이스 관리
 description: XML 문서에서 네임스페이스를 관리하는 방법을 알아봅니다. XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 지정 및 미리 정의된 URI와 연결합니다.
 ms.date: 03/30/2017
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: ab9dceed66e65ea74d0996071ab3a17057e43fc3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 120493de430c2372f3f71d1d1498ba880feda3d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822622"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720154"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML 문서의 네임스페이스 관리
+
 XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 지정 및 미리 정의된 URI와 연결합니다. 이러한 연결을 만들려면 네임스페이스 URI의 접두사를 정의하고 해당 접두사를 사용하여 XML 데이터의 요소 및 특성 이름을 한정합니다. 네임스페이스는 요소 및 특성 이름이 충돌하는 것을 막고 동일한 이름의 요소 및 특성이 처리 및 확인되도록 하는 역할을 합니다.  
   
 <a name="declare"></a>
+
 ## <a name="declaring-namespaces"></a>네임스페이스 선언  
+
  요소의 네임스페이스를 선언하려면 `xmlns:` 특성을 사용합니다.  
   
  `xmlns:<name>=<"uri">`  
@@ -32,7 +35,9 @@ XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 �
  요소가 특정 네임스페이스의 일부임을 나타내기 위해 네임스페이스 접두사를 추가합니다. 예를 들어 `Author` 요소가 `mybook` 네임스페이스에 속하는 경우에는 `<mybook:Author>`로 선언됩니다.  
   
 <a name="scope"></a>
+
 ## <a name="declaration-scope"></a>선언 범위  
+
  네임스페이스는 선언 지점부터 선언된 요소의 끝까지 유효합니다. 이 예에서 `BOOK` 요소에서 정의된 네임스페이스는 `BOOK` 요소와 같은 `Publisher` 요소 외부의 요소에는 적용되지 않습니다.  
   
 ```xml  
@@ -59,6 +64,7 @@ XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 �
 ```  
   
 ## <a name="managing-namespaces"></a>네임스페이스 관리  
+
  <xref:System.Xml.XmlNamespaceManager> 클래스는 네임스페이스 URI 및 해당 접두사의 컬렉션을 저장하고 이 컬렉션에서 네임스페이스를 조회, 추가 및 제거할 수 있도록 합니다. 특정 컨텍스트에서 향상된 XML 처리 성능을 위해 이 클래스가 필요합니다. 예를 들어, XPath 지원을 위해 <xref:System.Xml.Xsl.XsltContext> 클래스에서 <xref:System.Xml.XmlNamespaceManager>를 사용합니다.  
   
  네임스페이스 관리자는 네임스페이스에 대한 유효성 검사를 수행하지 않지만 접두사 및 네임스페이스가 이미 확인되었고 [W3C 네임스페이스](https://www.w3.org/TR/REC-xml-names/) 사양을 따르는 것으로 간주합니다.  

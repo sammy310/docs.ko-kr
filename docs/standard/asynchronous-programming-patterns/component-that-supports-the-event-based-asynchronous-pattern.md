@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 1779bb51267af3c2f50ec03112f3c45199390333
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ef7363cd1c5161217fa4cf74dbfae9dee86fa76f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830430"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697742"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현
 
@@ -51,6 +51,7 @@ ms.locfileid: "94830430"
  이 항목의 코드를 단일 목록으로 복사하려면 [How to: Implement a Client of the Event-based Asynchronous Pattern](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)(방법: 이벤트 기반 비동기 패턴의 클라이언트 구현)을 참조하세요.  
   
 ## <a name="creating-the-component"></a>구성 요소 만들기  
+
  첫 번째 단계는 이벤트 기반 비동기 패턴을 구현하는 구성 요소를 만드는 것입니다.  
   
 ### <a name="to-create-the-component"></a>구성 요소를 만들려면  
@@ -58,6 +59,7 @@ ms.locfileid: "94830430"
 - <xref:System.ComponentModel.Component>에서 상속되는 `PrimeNumberCalculator`라는 클래스를 만듭니다.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>공용 비동기 이벤트 및 대리자 정의  
+
  구성 요소는 이벤트를 사용하는 클라이언트와 통신합니다. _MethodName_**Completed** 이벤트는 클라이언트에 비동기 작업의 완료를 알리고 _MethodName_**ProgressChanged** 이벤트는 클라이언트에 비동기 작업의 진행률을 알립니다.  
   
 ### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>구성 요소의 클라이언트에 대한 비동기 이벤트를 정의하려면:  
@@ -83,6 +85,7 @@ ms.locfileid: "94830430"
      [!code-vb[System.ComponentModel.AsyncOperationManager#6](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#6)]  
   
 ## <a name="checkpoint"></a>검사점  
+
  이때 구성 요소를 빌드할 수 있습니다.  
   
 ### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
@@ -99,6 +102,7 @@ ms.locfileid: "94830430"
      이러한 경고는 다음 섹션에서 지워집니다.  
   
 ## <a name="defining-private-delegates"></a>전용 대리자 정의  
+
  `PrimeNumberCalculator` 구성 요소의 비동기 측면은 <xref:System.Threading.SendOrPostCallback>으로 알려진 특수 대리자를 사용하여 내부적으로 구현됩니다. <xref:System.Threading.SendOrPostCallback>은 <xref:System.Threading.ThreadPool> 스레드에서 실행되는 콜백 메서드를 나타냅니다. 콜백 메서드에는 <xref:System.Object> 형식의 단일 매개 변수를 사용하는 시그니처가 있어야 합니다. 즉, 래퍼 클래스의 대리자 간에 상태를 전달해야 합니다. 자세한 내용은 <xref:System.Threading.SendOrPostCallback>을 참조하세요.  
   
 ### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>구성 요소의 내부 비동기 동작을 구현하려면:  
@@ -130,6 +134,7 @@ ms.locfileid: "94830430"
      [!code-vb[System.ComponentModel.AsyncOperationManager#23](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#23)]  
   
 ## <a name="implementing-public-events"></a>공용 이벤트 구현  
+
  이벤트 기반 비동기 패턴을 구현하는 구성 요소는 이벤트를 사용하는 클라이언트와 통신합니다. 이러한 이벤트는 <xref:System.ComponentModel.AsyncOperation> 클래스를 통해 적절한 스레드에서 호출됩니다.  
   
 ### <a name="to-raise-events-to-your-components-clients"></a>구성 요소의 클라이언트에 이벤트를 발생시키려면:  
@@ -140,6 +145,7 @@ ms.locfileid: "94830430"
      [!code-vb[System.ComponentModel.AsyncOperationManager#24](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#24)]  
   
 ## <a name="implementing-the-completion-method"></a>완료 메서드 구현  
+
  완료 대리자는 비동기 작업이 성공적인 완료, 오류 또는 취소로 종료될 경우 기본적인 자유 스레드 비동기 동작이 호출되는 메서드입니다. 이 호출은 임의 스레드에서 발생합니다.  
   
  이 메서드는 클라이언트의 작업 ID가 고유한 클라이언트 토큰의 내부 컬렉션에서 제거되는 위치입니다. 또한 이 메서드는 해당 <xref:System.ComponentModel.AsyncOperation>에서 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 메서드를 호출하여 특정 비동기 작업의 수명을 종료합니다. 이 호출은 애플리케이션 모델에 적절한 스레드에서 완료 이벤트를 발생시킵니다. <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 메서드를 호출한 후에는 <xref:System.ComponentModel.AsyncOperation>의 이 인스턴스를 더 이상 사용할 수 없고 이후에 이를 사용하려고 시도하면 예외가 throw됩니다.  
@@ -154,6 +160,7 @@ ms.locfileid: "94830430"
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#26)]  
   
 ## <a name="checkpoint"></a>검사점  
+
  이때 구성 요소를 빌드할 수 있습니다.  
   
 ### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
@@ -169,6 +176,7 @@ ms.locfileid: "94830430"
      이 경고는 다음 섹션에서 해결됩니다.  
   
 ## <a name="implementing-the-worker-methods"></a>작업자 메서드 구현  
+
  지금까지 `PrimeNumberCalculator` 구성 요소에 대해 지원되는 비동기 코드를 구현했습니다. 이제 실제 작업을 수행하는 코드를 구현할 수 있습니다. 세 가지 메서드 `CalculateWorker` , `BuildPrimeNumberList` 및 `IsPrime`을 구현합니다. `BuildPrimeNumberList` 및 `IsPrime`은 함께 테스트 숫자의 제곱근까지 모든 소수를 찾아서 숫자가 소수인지 확인하는 에라토스테네스의 체라는 잘 알려진 알고리즘을 구성합니다. 해당 지점에서 제수를 찾을 수 없으면 테스트 숫자는 소수입니다.  
   
  효율성 최대화를 위해 이 구성 요소를 작성한 경우 이 구성 요소는 여러 테스트 숫자에 대한 다양한 호출을 통해 검색된 모든 소수를 기억합니다. 2, 3, 5와 같은 사소한 제수도 확인합니다. 그러나 이 예제의 목적은 시간이 오래 걸리는 작업을 비동기적으로 실행하는 방법을 보여주는 것이므로 이러한 최적화는 연습용으로 유지됩니다.  
@@ -208,6 +216,7 @@ ms.locfileid: "94830430"
      [!code-vb[System.ComponentModel.AsyncOperationManager#29](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#29)]  
   
 ## <a name="checkpoint"></a>검사점  
+
  이때 구성 요소를 빌드할 수 있습니다.  
   
 ### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
@@ -217,6 +226,7 @@ ms.locfileid: "94830430"
      계속해서 비동기 작업을 시작 및 취소하는 `CalculatePrimeAsync` 및 `CancelAsync` 메서드를 작성합니다.  
   
 ## <a name="implementing-the-start-and-cancel-methods"></a>시작 및 취소 메서드 구현  
+
  메서드를 래핑하는 대리자에서 `BeginInvoke`를 호출하여 자체 스레드에서 작업자 메서드를 시작합니다. 특정 비동기 작업의 수명을 관리하려면 <xref:System.ComponentModel.AsyncOperationManager> 도우미 클래스에서 <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> 메서드를 호출합니다. 이렇게 하면 클라이언트의 이벤트 처리기에 대한 호출을 올바른 스레드 또는 컨텍스트로 마샬링하는 <xref:System.ComponentModel.AsyncOperation>이 반환됩니다.  
   
  해당 <xref:System.ComponentModel.AsyncOperation>에서 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>를 호출하여 특정 보류 작업을 취소합니다. 이렇게 하면 해당 작업이 종료되고 이후에 <xref:System.ComponentModel.AsyncOperation>을 호출하면 예외가 throw됩니다.  
@@ -234,6 +244,7 @@ ms.locfileid: "94830430"
      [!code-vb[System.ComponentModel.AsyncOperationManager#4](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#4)]  
   
 ## <a name="checkpoint"></a>검사점  
+
  이때 구성 요소를 빌드할 수 있습니다.  
   
 ### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
@@ -245,6 +256,7 @@ ms.locfileid: "94830430"
  `PrimeNumberCalculator` 구성 요소를 사용하는 예제 클라이언트는 [방법: 이벤트 기반 비동기 패턴의 클라이언트 구현](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)을 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계  
+
  `CalculatePrimeAsync` 메서드의 동기 메서드인 `CalculatePrime`을 작성하여 이 예제를 채울 수 있습니다. 이렇게 하면 `PrimeNumberCalculator` 구성 요소가 이벤트 기반 비동기 패턴을 완전히 준수하게 됩니다.  
   
  여러 테스트 숫자에 대한 다양한 호출을 통해 검색된 모든 소수 목록을 유지하면 이 예제를 향상할 수 있습니다. 이 방법을 사용하면 각 작업이 이전 작업에서 수행된 작업을 활용합니다. 이 목록을 `lock` 영역으로 보호하면 여러 스레드에 의한 목록 액세스가 직렬화되므로 주의해야 합니다.  

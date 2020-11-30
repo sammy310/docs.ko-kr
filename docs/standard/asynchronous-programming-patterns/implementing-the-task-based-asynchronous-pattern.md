@@ -11,28 +11,32 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 8bac9d265211d2f266db634d4bcebb87c2debd9a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 7613d93e1ca2ac9594759434966745a238ba166e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888778"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726732"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>작업 기반 비동기 패턴 구현
+
 TAP(작업 기반 비동기 패턴)는 세 가지 방식으로 구현할 수 있습니다. 즉 Visual Studio에서 C# 또는 Visual Basic 컴파일러를 사용하여 구현하거나, 수동으로 구현하거나, 컴파일러와 수동 방식을 함께 사용하여 구현할 수 있습니다. 다음 섹션에서는 각 방법에 대해 자세히 설명합니다. TAP 패턴을 사용하면 컴퓨팅 바운드 및 I/O 바운드 비동기 작업을 모두 구현할 수 있습니다. 각 작업 유형에 대해서는 [워크로드](#workloads) 섹션에서 설명합니다.
 
 ## <a name="generating-tap-methods"></a>TAP 메서드 생성
 
 ### <a name="using-the-compilers"></a>컴파일러 사용
+
 .NET Framework 4.5부터는 `async` 키워드(Visual Basic의 경우 `Async`)로 특성이 지정된 메서드가 비동기 메서드로 간주되며, C# 및 Visual Basic 컴파일러는 TAP를 사용해 비동기로 메서드를 구현하는 데 필요한 변환을 수행합니다. 비동기 메서드는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 개체를 반환해야 합니다. 두 번째 개체의 경우 함수 본문은 `TResult`를 반환해야 하며 컴파일러는 결과 작업 개체를 통해 이 결과가 제공되는지를 확인합니다. 마찬가지로 메서드 본문 내에서 처리되지 않는 모든 예외는 출력 작업으로 마샬링되므로 결과 작업이 <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 상태로 종료됩니다. 이 규칙의 예외로, <xref:System.OperationCanceledException> 또는 파생 형식이 처리되지 않는 경우에는 결과 작업이 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 상태로 종료됩니다.
 
 ### <a name="generating-tap-methods-manually"></a>수동으로 TAP 메서드 생성
+
 구현을 보다 효율적으로 제어하기 위해 TAP 패턴을 수동으로 구현할 수 있습니다. 컴파일러는 <xref:System.Threading.Tasks?displayProperty=nameWithType> 네임스페이스의 지원 형식 및 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 네임스페이스에서 노출되는 공개 노출 영역을 사용합니다. TAP를 직접 구현하려면 <xref:System.Threading.Tasks.TaskCompletionSource%601> 개체를 만들고 비동기 작업을 수행한 다음 작업이 완료되면 <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> 또는 <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> 메서드나 이러한 메서드 중 하나의 `Try` 버전을 호출합니다. TAP 메서드를 수동으로 구현할 때는 표시된 비동기 작업이 완료되면 결과 작업을 완료해야 합니다. 예를 들어:
 
 [!code-csharp[Conceptual.TAP_Patterns#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#1)]
 [!code-vb[Conceptual.TAP_Patterns#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#1)]
 
 ### <a name="hybrid-approach"></a>혼합 방식
+
  TAP 패턴은 수동으로 구현하되 구현의 핵심 논리를 컴파일러에 위임하면 유용할 수 있습니다. 예를 들어 예외가 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 개체를 통해 공개되는 대신 메서드의 직접 호출자로 이스케이프될 수 있도록 컴파일러 생성 비동기 메서드 외부에서 인수를 확인하려는 경우 혼합 방식을 사용하는 것이 좋습니다.
 
  [!code-csharp[Conceptual.TAP_Patterns#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#2)]
@@ -41,9 +45,11 @@ TAP(작업 기반 비동기 패턴)는 세 가지 방식으로 구현할 수 있
  또한 빠른 경로 최적화를 구현하며 캐시된 작업을 반환하려는 경우에도 이러한 위임이 유용합니다.
 
 ## <a name="workloads"></a>작업
+
 컴퓨팅 바운드 및 I/O 바운드 비동기 작업을 모두 TAP 메서드로 구현할 수 있습니다. 그러나 TAP 메서드를 라이브러리에서 공개적으로 노출할 때는 I/O 바운드 연산이 포함된 작업에만 해당 메서드를 제공해야 합니다. 이러한 작업은 계산도 포함할 수 있지만 순수한 계산 작업이어서는 안 됩니다. 순수한 컴퓨팅 바운드 메서드의 경우에는 동기 구현으로만 표시되어야 합니다. 그러면 해당 메서드를 사용하는 코드는 작업을 다른 스레드로 오프로드하거나 병렬 처리 기능을 제공하기 위해 해당 동기 메서드의 호출을 작업으로 래핑할지 여부를 선택할 수 있습니다. 그리고 메서드가 I/O 바운드인 경우에는 비동기 구현으로만 표시되어야 합니다.
 
 ### <a name="compute-bound-tasks"></a>계산 바운드 작업
+
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 클래스는 계산을 많이 수행하는 작업에 가장 적합합니다. 이 클래스는 기본적으로 <xref:System.Threading.ThreadPool> 클래스 내의 특수 지원을 활용하여 효율적 실행을 제공하며 비동기 계산 실행 시기, 위치 및 방법에 대한 상당한 제어 기능도 제공합니다.
 
 다음과 같은 방법으로 컴퓨팅 바인딩 작업을 생성할 수 있습니다.
@@ -74,6 +80,7 @@ TAP(작업 기반 비동기 패턴)는 세 가지 방식으로 구현할 수 있
 다른 예외가 작업의 본문 내에서 처리되지 않는 경우 작업은 <xref:System.Threading.Tasks.TaskStatus.Faulted> 상태로 종료되며 작업에서 대기하거나 결과에 액세스하려고 하면 예외가 throw됩니다.
 
 ### <a name="io-bound-tasks"></a>I/O 바운드 작업
+
 스레드를 통해 전체 실행을 직접 지원해서는 안 되는 작업을 만들려면 <xref:System.Threading.Tasks.TaskCompletionSource%601> 형식을 사용합니다. 이 형식은 연결된 <xref:System.Threading.Tasks.TaskCompletionSource%601.Task%2A> 인스턴스를 반환하는 <xref:System.Threading.Tasks.Task%601> 속성을 노출합니다. 이 작업의 수명 주기는 <xref:System.Threading.Tasks.TaskCompletionSource%601>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> 등의 <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> 메서드와 해당 `TrySet` 변형을 통해 제어됩니다.
 
 지정된 시간이 지나면 완료되는 작업을 만든다고 가정해 보겠습니다. 예를 들어 사용자 인터페이스에서 작업을 지연시킬 수 있습니다. <xref:System.Threading.Timer?displayProperty=nameWithType> 클래스는 지정된 시간이 지나면 대리자를 비동기식으로 호출하는 기능을 이미 제공합니다. <xref:System.Threading.Tasks.TaskCompletionSource%601>를 사용하면 다음과 같이 타이머 앞에 <xref:System.Threading.Tasks.Task%601>를 배치할 수 있습니다.
@@ -92,6 +99,7 @@ TAP(작업 기반 비동기 패턴)는 세 가지 방식으로 구현할 수 있
 [!code-vb[Conceptual.TAP_Patterns#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#6)]
 
 ### <a name="mixed-compute-bound-and-io-bound-tasks"></a>컴퓨팅 바운드 및 I/O 바운드 혼합 작업
+
 비동기 메서드에서는 컴퓨팅 바운드 또는 I/O 바운드 작업 중 하나만 사용할 수 있는 것이 아니라 두 작업을 혼합하여 사용할 수도 있습니다. 실제로 여러 비동기 작업이 큰 혼합 작업으로 결합되는 경우가 많습니다. 예를 들어, 일부 입력 `RenderAsync`를 기반으로 이미지를 렌더링하기 위해 계산을 많이 하는 작업을 수행한 이전의 예에 있는 `imageData` 메서드를 고려합니다. 이 `imageData`는 비동기 방식으로 액세스하는 웹 서비스에서 제공된 것일 수 있습니다.
 
 [!code-csharp[Conceptual.TAP_Patterns#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#7)]

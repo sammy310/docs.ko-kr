@@ -2,14 +2,15 @@
 title: XML 문서에서 노드, 내용 및 값 수정
 ms.date: 03/30/2017
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-ms.openlocfilehash: 13fb18208831356e34301bc22715b68fda1f671f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c3f3f4a279f3bcb967e018abafbd2e1f7a0af473
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830183"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714473"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>XML 문서에서 노드, 내용 및 값 수정
+
 여러 가지 방법으로 문서에서 노드와 내용을 수정할 수 있습니다. 다음과 같은 작업을 수행할 수 있습니다.  
   
 - <xref:System.Xml.XmlNode.Value%2A> 속성을 사용하여 노드 값을 변경할 수 있습니다.  

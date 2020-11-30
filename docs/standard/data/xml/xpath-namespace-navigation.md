@@ -2,19 +2,21 @@
 title: XPath 네임스페이스 탐색
 ms.date: 03/30/2017
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: 4d2ef71a41d19fd5bb573afab66dc8a15e19c393
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d5350f0c8f73c5efb0f7d9e4c492a841b4978c36
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831210"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720895"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath 네임스페이스 탐색
+
 XML 문서가 있는 XPath 쿼리를 사용하려면 네임스페이스에 포함된 XML 네임스페이스 및 요소를 올바르게 지정해야 합니다. 네임스페이스를 사용하면 이름이 둘 이상의 컨텍스트에 사용되는 경우 발생할 수 있는 모호성을 방지할 수 있습니다. 예를 들어 이름 `ID`는 XML 문서의 여러 다른 요소와 연결된 둘 이상의 ID를 참조할 수 있습니다. 네임스페이스 구문은 URI, 이름 및 XML 문서의 요소를 구분하는 접두사를 지정합니다.  
   
  이 항목의 예제는 <xref:System.Xml.XPath.XPathNavigator>로 XML 문서를 탐색하는 데 접두사를 사용하는 경우를 설명합니다. 네임스페이스 및 구문에 대한 자세한 내용은 [XML 파일: XML 네임스페이스 이해](/previous-versions/dotnet/articles/bb986013(v=msdn.10))를 참조하세요.  
   
 ## <a name="namespace-declarations"></a>네임스페이스 선언  
+
  네임스페이스 선언은 <xref:System.Xml.XPath.XPathNavigator> 인스턴스를 사용하는 경우 XML 문서의 요소를 구분하고 지정할 수 있게 해 줍니다. 네임스페이스 접두사는 네임스페이스 지정에 사용되는 간단한 구문을 제공합니다.  
   
  접두사는 다음 양식으로 정의됩니다. `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` 이 구문에서 "`e`" 접두사는 네임스페이스의 정식 URI에 대한 약어입니다. `Body` 구문을 사용하여 `Envelope` 요소를 `e:Body` 네임스페이스의 멤버로 식별할 수 있습니다.  
@@ -35,6 +37,7 @@ XML 문서가 있는 XPath 쿼리를 사용하려면 네임스페이스에 포�
 ```  
   
 ## <a name="navigation-by-namespace-prefix"></a>네임스페이스 접두사로 탐색  
+
  이 단원의 코드는 <xref:System.Xml.XPath.XPathNavigator> 및 <xref:System.Xml.XmlNamespaceManager> 개체를 사용하여 이전 단원의 XML 문서에서 `Search` 요소를 선택합니다. `xpath` 쿼리에는 경로의 각 요소에 대한 네임스페이스 접두사가 포함됩니다. 각 요소를 포함하는 네임스페이스의 ID를 정확히 지정하면 `Search` 메서드가 <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 요소에 대한 탐색을 올바르게 수행할 수 있습니다.  
   
 ```csharp  

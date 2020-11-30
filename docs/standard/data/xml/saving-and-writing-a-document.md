@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-ms.openlocfilehash: 0cb83935b4175060a04f4be48e6b4eee2f44ed7d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 14497bb5b027209c4707eab9bcf1b60f85740dfd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823500"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697560"
 ---
 # <a name="saving-and-writing-a-document"></a>문서 작성 및 저장
+
 <xref:System.Xml.XmlDocument>를 로드하고 저장할 경우 저장된 문서는 다음과 같이 원래 문서와 다를 수 있습니다.  
   
 - <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> 메서드를 호출하기 전에 `true` 속성을 <xref:System.Xml.XmlDocument.Save%2A>로 설정한 경우 문서 내의 공백이 출력에서 유지되며 `false`로 설정한 경우 <xref:System.Xml.XmlDocument>는 출력을 자동으로 들여씁니다.  
@@ -30,6 +31,7 @@ ms.locfileid: "94823500"
 - 파일이나 스트림에 <xref:System.Xml.XmlDocument>를 쓸 경우 출력된 내용은 문서의 내용과 같습니다. 즉, <xref:System.Xml.XmlDeclaration>은 문서에 포함되어 있고 문서를 쓸 때 사용되는 인코딩이 선언 노드에 지정된 인코딩과 같은 경우에만 쓰여집니다.  
   
 ## <a name="writing-an-xmldeclaration"></a>XmlDeclaration 쓰기  
+
  <xref:System.Xml.XmlDocument> 및 <xref:System.Xml.XmlDeclaration>의 <xref:System.Xml.XmlNode.OuterXml%2A> 메서드 외에도 <xref:System.Xml.XmlNode.InnerXml%2A>, <xref:System.Xml.XmlNode.WriteTo%2A> 및 <xref:System.Xml.XmlDocument>의 <xref:System.Xml.XmlDocument.Save%2A> 및 <xref:System.Xml.XmlDocument.WriteContentTo%2A> 멤버는 XML 선언을 만듭니다.  
   
  <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDocument.InnerXml%2A>, <xref:System.Xml.XmlDocument.Save%2A> 및 <xref:System.Xml.XmlDocument.WriteTo%2A> 메서드의 <xref:System.Xml.XmlDocument.WriteContentTo%2A> 속성의 경우 XML 선언에 쓰여질 인코딩을 <xref:System.Xml.XmlDeclaration> 노드에서 가져옵니다. <xref:System.Xml.XmlDeclaration> 노드가 없으면 <xref:System.Xml.XmlDeclaration>이 쓰여지지 않습니다. <xref:System.Xml.XmlDeclaration> 노드에 인코딩이 없으면 XML 선언에 인코딩이 쓰여지지 않습니다.  
@@ -55,6 +57,7 @@ doc.Save(tw);
  <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDeclaration.WriteTo%2A> 및 <xref:System.Xml.XmlNode.InnerXml%2A>의 <xref:System.Xml.XmlDeclaration> 멤버의 경우 <xref:System.Xml.XmlDeclaration.Encoding%2A> 속성을 설정하지 않으면 인코딩이 쓰여지지 않습니다. 그렇지 않은 경우 XML 선언에 쓰여지는 인코딩은 <xref:System.Xml.XmlDeclaration.Encoding%2A> 속성에서 찾은 인코딩과 같습니다.  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>OuterXml 속성을 사용하여 문서 내용 작성  
+
  <xref:System.Xml.XmlNode.OuterXml%2A> 속성은 Microsoft에서 W3C(World Wide Web 컨소시엄) XML DOM(문서 개체 모델) 표준을 확장한 결과입니다. <xref:System.Xml.XmlNode.OuterXml%2A> 속성을 사용하여 전체 XML 문서의 태그를 가져오거나 단일 노드 및 해당 자식 노드의 태그만 가져올 수 있습니다. <xref:System.Xml.XmlNode.OuterXml%2A>은 지정된 노드 및 모든 자식 노드를 나타내는 태그를 반환합니다.  
   
  다음 코드 예제에서는 문서 전체를 문자열로 저장하는 방법을 보여 줍니다.  

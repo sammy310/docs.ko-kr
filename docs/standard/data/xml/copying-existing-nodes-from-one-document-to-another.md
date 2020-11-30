@@ -2,14 +2,15 @@
 title: 한 문서에서 다른 문서로 기존 노드 복사
 ms.date: 03/30/2017
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-ms.openlocfilehash: f4d58fa5aafdd48feff1a768ab0463ac09315476
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2e66d6eb83692e8e6541ce869062e2ce67c3c1df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829611"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722208"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>한 문서에서 다른 문서로 기존 노드 복사
+
 **ImportNode** 메서드는 **XmlDocument** 간에 하나의 노드나 전체 노드 하위 트리를 복사하는 메커니즘입니다. 호출에서 반환되는 노드는 특성 값, 노드 이름, 노드 형식과 접두사, 로컬 이름, 네임스페이스 URI(Uniform Resource Identifier)와 같은 모든 네임스페이스 관련 특성이 포함된 소스 문서의 노드 복사본입니다. 소스 문서는 변경되지 않습니다. 노드를 가져온 후에 계속해서 노드 삽입에 사용되는 메서드 중 하나를 사용하여 트리에 해당 노드를 추가해야 합니다.  
   
  노드가 새 문서에 추가되면 새 문서가 해당 노드를 소유하게 됩니다. 이것은 노드가 별도의 문서 조각에서 만들어진 경우에도 만들어진 각 노드를 소유하는 문서가 있어야 하기 때문입니다. 이는 XML DOM(문서 개체 모델)의 요구 사항이며 **XmlDocument** 클래스에 대한 팩터리 생성 디자인에 의해 적용됩니다. 예를 들어 **CreateElement** 는 새 노드를 만드는 유일한 방법입니다.  

@@ -2,17 +2,19 @@
 title: XPathNavigator를 사용하여 노드 집합 탐색
 ms.date: 03/30/2017
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
-ms.openlocfilehash: cf0058f553488e453d0227291110d9edc96638f6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 592acfb5e4065d707f4dda09f349e8b783656148
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830131"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714304"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>XPathNavigator를 사용하여 노드 집합 탐색
+
 <xref:System.Xml.XPath.XPathDocument> 클래스의 노드 집합 탐색 메서드를 사용하여 <xref:System.Xml.XmlDocument> 또는 <xref:System.Xml.XPath.XPathNavigator> 개체에서 노드를 탐색할 수 있습니다. 모든 노드를 탐색하거나 <xref:System.Xml.XPath.XPathNavigator> 클래스의 선택 메서드에서 하나가 반환한 노드 중 선택한 노드 집합을 탐색할 수 있습니다.  
   
 ## <a name="element-node-set-navigation"></a>요소 노드 집합 탐색  
+
  <xref:System.Xml.XPath.XPathNavigator> 클래스는 요소 노드를 탐색하는 여러 메서드를 제공합니다. 다음 표에서는 사용 가능한 탐색 메서드 및 이러한 메서드의 이동 방법에 대한 설명을 보여 줍니다. 여기에는 특성 및 네임스페이스 노드를 탐색하는 메서드가 포함되지 않습니다.  
   
  <xref:System.Xml.XPath.XPathNavigator> 개체에서 노드를 선택하는 방법에 대한 자세한 내용은 [XPathNavigator를 사용하여 XML 데이터 선택, 평가 및 일치시키기](selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)를 참조하세요. 특성 및 네임스페이스 노드 탐색에 대한 자세한 내용은 [XPathNavigator를 사용하여 특성 및 네임스페이스 노드 탐색](attribute-and-namespace-node-navigation-using-xpathnavigator.md)을 참조하세요.  
@@ -31,6 +33,7 @@ ms.locfileid: "94830131"
 |<xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>|XML 문서의 루트 노드로 <xref:System.Xml.XPath.XPathNavigator>를 이동합니다.|  
   
 ## <a name="comments-and-processing-instruction-node-navigation"></a>주석 및 처리 명령 노드 탐색  
+
  다음 <xref:System.Xml.XPath.XPathNavigator> 클래스 메서드를 XML 문서의 다른 노드에서 주석 또는 처리 명령으로 이동할 수 있습니다.  
   
 - <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>  

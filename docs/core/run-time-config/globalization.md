@@ -3,12 +3,12 @@ title: 세계화 구성 설정
 description: '.NET Core 앱의 세계화 측면(예: 일본 날짜를 구문 분석하는 방식)을 구성하는 런타임 설정에 대해 알아봅니다.'
 ms.date: 05/18/2020
 ms.topic: reference
-ms.openlocfilehash: 56228e9a6cb6dbab6a22bdc00d11212e1019776b
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: fc98e965093c28b75b9b66e4f1c9f147abd4680e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761969"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721917"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>세계화를 위한 런타임 구성 옵션
 
@@ -87,7 +87,7 @@ ms.locfileid: "83761969"
 
 - .NET에서 Windows 앱에 NLS(국가별 언어 지원) 또는 ICU(International Components for Unicode) 세계화 API를 사용하는지 여부를 결정합니다. .NET 5.0 이상 버전에서는 기본적으로 Windows 10 2019년 5월 업데이트 이상 버전에 ICU 세계화 API를 사용합니다.
 - 이 설정을 생략하면 .NET는 기본적으로 ICU 세계화 API를 사용합니다. 이는 값을 `false`로 설정하는 것과 같습니다.
-- 자세한 내용은 [Windows에서 세계화 API가 ICU 라이브러리를 사용](../compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows)을 참조하세요.
+- 자세한 내용은 [Windows에서 세계화 API가 ICU 라이브러리를 사용](../compatibility/globalization/5.0/icu-globalization-api.md)을 참조하세요.
 
 | | 설정 이름 | 값 | 도입 |
 | - | - | - | - |

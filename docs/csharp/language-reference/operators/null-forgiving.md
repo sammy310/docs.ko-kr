@@ -1,27 +1,24 @@
 ---
 description: '! (null-forgiving) 연산자- C# 참조'
 title: '! (null-forgiving) 연산자- C# 참조'
-ms.date: 10/11/2019
+ms.date: 11/13/2020
 f1_keywords:
 - nullForgiving_CSharpKeyword
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: f2eb57bba462d471a041c17024fa7031c2c7f87d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5489c77fa7290bdd1c03e04d8cc777ab772fdce7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830586"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699632"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null-forgiving) 연산자(C# 참조)
 
 C# 8.0 이상에서 사용할 수 있는 단항 후위 `!` 연산자는 null-forgiving 연산자입니다. [null 허용 주석 컨텍스트](../../nullable-references.md#nullable-annotation-context)가 활성화된 경우에는 참조 형식의 `x` 식이 `null`: `x!`가 아님을 선언하는 데 null-forgiving 연산자를 사용할 수 있습니다. 단항 접두사 `!` 연산자는 [논리 부정 연산자](boolean-logical-operators.md#logical-negation-operator-)입니다.
 
 null-forgiving 연산자는 런타임에 영향을 주지 않습니다. 식의 null 상태를 변경하여 컴파일러의 정적 흐름 분석에만 영향을 줍니다. 런타임에서 `x!` 식은 기본 식 `x`의 결과로 계산됩니다.
-
-> [!NOTE]
-> C# 8에서 null 허용 연산자는 이전 [null 조건부](member-access-operators.md#null-conditional-operators--and-) 연산 목록을 종료합니다. 예를 들어 `x?.y!.z` 식은 `(x?.y)!.z`로 구문 분석됩니다. 이 해석으로 인해 `z`는 `x`가 `null`인 경우에도 평가되므로 <xref:System.NullReferenceException>이 발생할 수 있습니다.
 
 nullable 참조 형식 기능에 대한 자세한 내용은 [nullable 참조 형식](../builtin-types/nullable-reference-types.md)을 참조하세요.
 

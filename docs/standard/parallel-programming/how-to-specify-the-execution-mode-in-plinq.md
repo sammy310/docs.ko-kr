@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to use execution mode
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
-ms.openlocfilehash: d45aaa04e08c0ada77a01d4f67379c9b1b8773e2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 725f232337952449cd8569b12f65da75569996df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825548"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722405"
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a>방법: PLINQ에 실행 모드 지정
 
@@ -22,12 +22,14 @@ ms.locfileid: "94825548"
 > 이 예제는 사용법을 보여 주기 위한 것이며, 동일한 순차 LINQ to Objects 쿼리보다 빠르게 실행되지 않을 수도 있습니다. 속도 향상에 대한 자세한 내용은 [PLINQ의 속도 향상 이해](understanding-speedup-in-plinq.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
+
  [!code-csharp[PLINQ#22](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#22)]
  [!code-vb[PLINQ#22](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#22)]  
   
  PLINQ는 병렬 처리 기회를 활용하도록 설계됩니다. 그러나 일부 쿼리는 병렬 실행을 활용하지 않습니다. 예를 들어 작업이 거의 없는 단일 사용자 대리자가 쿼리에 포함될 경우 해당 쿼리는 대개 더 빠르게 순차적으로 실행됩니다. 병렬 실행을 구현하는 것과 관련된 오버헤드는 확보된 속도 향상보다 비용이 더 크기 때문에 순차적 실행이 더 빠릅니다. 따라서 PLINQ가 모든 쿼리를 자동으로 병렬 처리하는 것은 아닙니다. 먼저 쿼리 모양을 확인하고 쿼리를 구성하는 다양한 연산자를 확인합니다. 이 분석에 따라 기본 실행 모드의 PLINQ는 쿼리의 일부 또는 전체를 순차적으로 실행하도록 결정할 수 있습니다. 그러나 일부 경우에는 PLINQ가 분석에서 확인할 수 있는 것보다 더 많은 쿼리 정보를 사용자가 알고 있을 수 있습니다. 예를 들어 대리자의 비용이 많이 들고 쿼리가 분명히 병렬 처리를 활용할 것이라는 점을 알고 있을 수 있습니다. 이러한 경우에는 <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> 메서드를 사용하고 <xref:System.Linq.ParallelExecutionMode.ForceParallelism>을 지정하여 PLINQ가 항상 쿼리를 병렬로 실행하도록 지시할 수 있습니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
  이 코드를 잘라내어 [PLINQ 데이터 샘플](plinq-data-sample.md)에 붙여넣고 `Main`에서 메서드를 호출합니다.  
   
 ## <a name="see-also"></a>참조

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 32d71aba5d8a650293a4d8653fb2a2e383b8a800
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 110efce0bd7fae1a4f39f5d879496bf541ffe667
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282379"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722156"
 ---
 # <a name="serialization-guidelines"></a>Serialization 지침
 
@@ -39,6 +39,7 @@ ms.locfileid: "93282379"
   프로그램에서 형식의 인스턴스를 유지하거나 전송해야 할 수 있으므로 serialization은 형식에 대해 중요한 디자인 고려 사항입니다.
 
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>지원할 올바른 Serialization 기술 선택
+
  지정된 형식은 하나 이상의 serialization 기술을 지원하거나 serialization 기술을 전혀 지원하지 않을 수 있습니다.
 
 - 형식의 인스턴스가 웹 서비스에서 유지되거나 사용되어야 하는 경우 *데이터 계약 serialization* 을 지원하는 것이 좋습니다.
@@ -52,6 +53,7 @@ ms.locfileid: "93282379"
 - 일반적인 지속성 이유만으로는 런타임 serialization 또는 XML serialization을 지원하지 마십시오. 대신 데이터 계약 serialization을 사용하십시오.
 
 #### <a name="data-contract-serialization"></a>데이터 계약 직렬화
+
  형식은 형식에 <xref:System.Runtime.Serialization.DataContractAttribute>를 적용하고 형식의 멤버(필드 및 속성)에 <xref:System.Runtime.Serialization.DataMemberAttribute>를 적용하여 데이터 계약 serialization을 지원할 수 있습니다.
 
  [!code-csharp[SerializationGuidelines#1](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#1)]
@@ -96,6 +98,7 @@ ms.locfileid: "93282379"
      자세한 내용은 [호환 가능한 데이터 계약](../../framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조하세요.
 
 #### <a name="xml-serialization"></a>XML serialization
+
  데이터 계약 직렬화는 .NET Framework의 기본 직렬화 기술이지만, 데이터 계약 직렬화에서 지원하지 않는 직렬화 시나리오가 있습니다. 예를 들어 serializer에서 생성하거나 사용하는 XML의 모양을 완전히 제어할 수 있는 권한이 없습니다. 이러한 충분한 제어 권한이 필요한 경우 *XML serialization* 을 사용해야 하며 이 serialization 기술을 지원하기 위한 형식을 디자인해야 합니다.
 
 1. 생성된 XML의 모양을 제어해야 하는 확실한 이유가 있지 않으면 XML Serialization에 맞게 형식을 디자인하지 마십시오. 이 serialization 기술은 앞의 섹션에서 설명한 데이터 계약 Serialization으로 대체되었습니다.
@@ -108,6 +111,7 @@ ms.locfileid: "93282379"
 2. XML Serialization 특성을 적용하는 방법보다 직렬화된 XML의 모양을 더 구체적으로 제어하려면 <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현하는 것이 좋습니다. 인터페이스의 두 메서드인 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 및 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>을 사용하면 직렬화된 XML 스트림을 완전히 제어할 수 있습니다. <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 특성을 적용하여 형식에 대해 생성되는 XML 스키마를 제어할 수도 있습니다.
 
 #### <a name="runtime-serialization"></a>런타임 직렬화
+
  *Runtime serialization* 은 .NET Remoting에 사용되는 기술입니다. .NET Remoting을 사용하여 형식이 전송될 것으로 판단되면 해당 형식이 런타임 직렬화를 지원하는지 확인해야 합니다.
 
  <xref:System.SerializableAttribute> 특성을 적용하여 *런타임 serialization* 에 대한 기본 지원을 제공할 수 있으며 고급 시나리오에는 단순한 *런타임 직렬화 가능 패턴* 의 구현이 포함됩니다. <xref:System.Runtime.Serialization.ISerializable>을 구현하고 serialization 생성자를 제공해야 합니다.

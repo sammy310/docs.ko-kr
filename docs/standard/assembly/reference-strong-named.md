@@ -12,14 +12,15 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 478f786995cfc4b57f0b18b2159775db104e9cfb
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 919e4f4cf467e8fc28c3d007963393dad134ab57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687688"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724054"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>방법: 강력한 이름의 어셈블리 참조
+
 강력한 이름의 어셈블리에서 형식이나 리소스를 참조하는 프로세스는 일반적으로 투명합니다. 컴파일 시간(초기 바인딩) 또는 런타임에 참조를 만들 수 있습니다.  
   
 컴파일 시간 참조는 컴파일할 어셈블리가 다른 어셈블리를 명시적으로 참조한다고 컴파일러에 표시할 때 발생합니다. 컴파일 시간 참조를 사용하는 경우 컴파일러가 대상으로 지정된 강력한 이름의 어셈블리의 공개 키를 자동으로 가져오고 컴파일되는 어셈블리의 어셈블리 참조에 배치합니다.

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 804a72f865fc491d6fc991e78c53ceb62d20cd1c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 70e68de3ce736bc4935dea80e37cc805068b0bc5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824456"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722468"
 ---
 # <a name="custom-date-and-time-format-strings"></a>사용자 지정 날짜 및 시간 서식 문자열
 
@@ -630,6 +630,7 @@ ms.locfileid: "94824456"
 ## <a name="date-and-time-separator-specifiers"></a>날짜 및 시간 구분 기호 지정자
 
 ### <a name="the--custom-format-specifier"></a><a name="timeSeparator"></a> “:” 사용자 지정 형식 지정자
+
 ":" 사용자 지정 형식 지정자는 시, 분, 초를 구분하는 데 사용되는 시간 구분 기호를 나타냅니다. 적절한 지역화된 시간 구분 기호는 현재 또는 지정된 문화권의 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 속성에서 검색됩니다.
 
 > [!NOTE]

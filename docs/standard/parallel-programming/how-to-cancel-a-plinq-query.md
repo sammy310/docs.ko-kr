@@ -8,14 +8,15 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-ms.openlocfilehash: ea30cafc998b8691321bf5e2b9b4bcc897878200
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f8ca723ca3b9b9428c95651ebe2fa7d92e48ebbb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817278"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713290"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>방법: PLINQ 쿼리 취소
+
 다음 예제는 PLINQ 쿼리를 취소하는 두 가지 방법을 보여줍니다. 첫 번째 예제에서는 주로 데이터 트래버스로 구성되는 쿼리를 취소하는 방법을 보여줍니다. 두 번째 예제에서는 계산을 많이 해야 하는 사용자 함수를 포함하는 쿼리를 취소하는 방법을 보여줍니다.
 
 > [!NOTE]

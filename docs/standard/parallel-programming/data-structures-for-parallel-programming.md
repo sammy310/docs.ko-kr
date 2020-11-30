@@ -4,18 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: c7f974c5626cf1efc6bf62c423043089d5c32e7c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e0214afe4dba7f838f420907374f1472d6d3911
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829533"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699016"
 ---
 # <a name="data-structures-for-parallel-programming"></a>병렬 프로그래밍을 위한 데이터 구조
 
 .NET에서는 동시 컬렉션 클래스, 간단한 동기화 기본 요소 및 초기화 지연 관련 형식을 포함하여 병렬 프로그래밍에서 유용한 여러 가지 형식을 소개합니다. 이러한 형식을 작업 병렬 라이브러리 및 PLINQ를 포함한 다중 스레드 애플리케이션 코드와 함께 사용할 수 있습니다.  
   
 ## <a name="concurrent-collection-classes"></a>동시 컬렉션 클래스  
+
  <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스의 컬렉션 클래스는 가능한 경우 항상 잠금을 방지하고 잠금이 필요한 경우 세분화된 잠금을 사용하는 스레드로부터 안전한 추가 및 제거 작업을 제공합니다. 동시 컬렉션 클래스는 항목에 액세스할 때 사용자 코드가 잠금을 수행하도록 요구하지 않습니다. 동시 컬렉션 클래스는 여러 스레드가 컬렉션에서 항목을 추가하고 제거하는 시나리오에서 <xref:System.Collections.ArrayList?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>(사용자가 구현한 잠금 사용)와 같은 형식보다 성능을 크게 개선할 수 있습니다.  
   
  다음 표에는 동시 컬렉션 클래스가 나와 있습니다.  
@@ -31,6 +32,7 @@ ms.locfileid: "94829533"
  자세한 내용은 [스레드로부터 안전한 컬렉션](../collections/thread-safe/index.md)을 참조하세요.  
   
 ## <a name="synchronization-primitives"></a>동기화 기본 형식  
+
  <xref:System.Threading?displayProperty=nameWithType> 네임스페이스의 동기화 기본 형식은 레거시 다중 스레딩 코드에 있는 비용이 많이 드는 잠금 메커니즘을 방지하여 세분화된 동시성과 더 빠른 성능을 제공할 수 있습니다.
   
  다음 표에는 동기화 형식이 나와 있습니다.  
@@ -51,6 +53,7 @@ ms.locfileid: "94829533"
 - [방법: 동시 작업을 배리어와 동기화](../threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>초기화 지연 클래스  
+
  초기화 지연을 사용하면 필요할 때까지 개체용 메모리가 할당되지 않습니다. 초기화 지연을 통해 개체 할당을 프로그램 수명에 균등하게 분산하여 성능을 향상시킬 수 있습니다. <xref:System.Lazy%601> 형식을 래핑하여 모든 사용자 지정 형식에 대한 초기화 지연을 사용하도록 설정할 수 있습니다.  
   
  다음 표에는 초기화 지연 형식이 나와 있습니다.  
@@ -64,6 +67,7 @@ ms.locfileid: "94829533"
  자세한 내용은 [초기화 지연](../../framework/performance/lazy-initialization.md)을 참조하세요.  
   
 ## <a name="aggregate-exceptions"></a>집계 예외  
+
  <xref:System.AggregateException?displayProperty=nameWithType> 형식은 개별 스레드에서 동시에 throw되는 여러 예외를 캡처하고 조인 스레드에 단일 예외로 반환하는 데 사용할 수 있습니다. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 형식과 PLINQ는 이 용도로 <xref:System.AggregateException>을 광범위하게 사용합니다. 자세한 내용은 [예외 처리](exception-handling-task-parallel-library.md) 및 [방법: PLINQ 쿼리의 예외 처리](how-to-handle-exceptions-in-a-plinq-query.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참조

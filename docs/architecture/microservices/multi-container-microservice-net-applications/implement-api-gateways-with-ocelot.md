@@ -2,12 +2,12 @@
 title: Ocelot을 사용하여 API 게이트웨이 구현
 description: Ocelot을 사용하여 API 게이트웨이를 구현하는 방법과 컨테이너 기반 환경에서 Ocelot을 사용하는 방법을 알아봅니다.
 ms.date: 03/02/2020
-ms.openlocfilehash: 5cee56e6b68bc08f9e1de41605951989a55dc0df
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 6d9229228e228b664a602ce9a682d435505a8107
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679229"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718100"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot을 사용하여 API 게이트웨이 구현
 
@@ -88,7 +88,7 @@ HTTP 요청은 마이크로 서비스 데이터베이스에 액세스하는 종�
 마이크로 서비스 URL과 관련하여 컨테이너가 로컬 개발 PC(로컬 Docker 호스트)에 배포되면 각 마이크로 서비스의 컨테이너에는 항상 다음 Dockerfile과 같이 Dockerfile에 지정된 내부 포트(일반적으로 포트 80)가 포함됩니다.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 ```
@@ -521,7 +521,7 @@ services.AddAuthentication(options =>
 
 ## <a name="using-kubernetes-ingress-plus-ocelot-api-gateways"></a>Kubernetes 수신 및 Ocelot API 게이트웨이 사용
 
-Azure Kubernetes Service 클러스터에서처럼 Kubernetes를 사용하는 경우 일반적으로 *Nginx*를 기반으로 하는 [Kubernetes 수신 계층](https://kubernetes.io/docs/concepts/services-networking/ingress/)을 통해 모든 HTTP 요청을 통합합니다.
+Azure Kubernetes Service 클러스터에서처럼 Kubernetes를 사용하는 경우 일반적으로 *Nginx* 를 기반으로 하는 [Kubernetes 수신 계층](https://kubernetes.io/docs/concepts/services-networking/ingress/)을 통해 모든 HTTP 요청을 통합합니다.
 
 Kubernetes에서 수신 방식을 사용하지 않으면 서비스와 Pod에 클러스터 네트워크에서만 라우팅할 수 있는 IP가 있습니다.
 
@@ -543,7 +543,7 @@ API 게이트웨이는 일반적으로 서비스 범위를 벗어나는 웹 애�
 
 **그림 6-41** Kubernetes에 배포 시 eShopOnContainers의 수신 계층
 
-Kubernetes 수신은 일반적으로 API 게이트웨이 범위를 벗어난 웹 애플리케이션을 비롯한 앱의 모든 트래픽에 대해 역방향 프록시로 작동합니다. eShopOnContainers를 Kubernetes에 배포하면 _수신_을 통해 몇 가지 서비스 또는 엔드포인트만 노출되며, URL에 대한 접미사 목록은 기본적으로 다음과 같습니다.
+Kubernetes 수신은 일반적으로 API 게이트웨이 범위를 벗어난 웹 애플리케이션을 비롯한 앱의 모든 트래픽에 대해 역방향 프록시로 작동합니다. eShopOnContainers를 Kubernetes에 배포하면 _수신_ 을 통해 몇 가지 서비스 또는 엔드포인트만 노출되며, URL에 대한 접미사 목록은 기본적으로 다음과 같습니다.
 
 - `/`: 클라이언트 SPA 웹 애플리케이션의 경우
 - `/webmvc`: 클라이언트 MVC 웹 애플리케이션의 경우
@@ -553,7 +553,7 @@ Kubernetes 수신은 일반적으로 API 게이트웨이 범위를 벗어난 웹
 - `/mobileshoppingapigw`: 모바일 BFF 및 쇼핑 비즈니스 프로세스의 경우
 - `/mobilemarketingapigw`: 모바일 BFF 및 마케팅 비즈니스 프로세스의 경우
 
-Kubernetes에 배포하는 경우 각 Ocelot API 게이트웨이는 API 게이트웨이를 실행하는 각 _Pod_에 대해 서로 다른 "configuration.json" 파일을 사용합니다. 이러한 "configuration.json" 파일은 'ocelot'이라는 Kubernetes _구성 맵_에 따라 만들어진 볼륨을 탑재하여(원래는 deploy.ps1 스크립트 사용) 제공됩니다. 각 컨테이너는 `/app/configuration`이라는 컨테이너 폴더에 관련 구성 파일을 탑재합니다.
+Kubernetes에 배포하는 경우 각 Ocelot API 게이트웨이는 API 게이트웨이를 실행하는 각 _Pod_ 에 대해 서로 다른 "configuration.json" 파일을 사용합니다. 이러한 "configuration.json" 파일은 'ocelot'이라는 Kubernetes _구성 맵_ 에 따라 만들어진 볼륨을 탑재하여(원래는 deploy.ps1 스크립트 사용) 제공됩니다. 각 컨테이너는 `/app/configuration`이라는 컨테이너 폴더에 관련 구성 파일을 탑재합니다.
 
 eShopOnContainers의 소스 코드 파일에서 원래 "configuration.json" 파일은 `k8s/ocelot/` 폴더 내에서 찾을 수 있습니다. 각 BFF/API 게이트웨이마다 하나의 구성 파일이 있습니다.
 

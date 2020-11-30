@@ -2,14 +2,15 @@
 title: XslTransform에 대한 XmlDataDocument 입력
 ms.date: 03/30/2017
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
-ms.openlocfilehash: 46abc88f413ae5e0c5f78deba25e939b957a5beb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 96ce5176b83a6dfcb9af29b55f4e5052915dba93
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827570"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721948"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>XslTransform에 대한 XmlDataDocument 입력
+
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslTransform> 클래스는 .NET Framework 2.0에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](migrating-from-the-xsltransform-class.md)을 참조하세요.  
   

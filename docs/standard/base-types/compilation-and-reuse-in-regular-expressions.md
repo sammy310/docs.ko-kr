@@ -11,17 +11,19 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, compilation
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-ms.openlocfilehash: f0da4a226feb6bafc7e17c7333cbc507701311af
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b0d3ac619e8d9548fffcb41b23d2ebd6663915e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823110"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723209"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>정규식의 컴파일 및 다시 사용
+
 정규식 엔진이 식을 컴파일하는 방법과 정규식이 캐시되는 방식을 이해하면 정규식을 광범위하게 사용하는 애플리케이션의 성능을 최적화할 수 있습니다. 이 항목에서는 컴파일과 캐시 둘 다에 대해 설명합니다.  
   
 ## <a name="compiled-regular-expressions"></a>컴파일된 정규식  
+
  기본적으로 정규식 엔진은 정규식을 내부 명령 시퀀스(Microsoft 중간 언어, 즉 MSIL과 다른 고급 코드)로 컴파일합니다. 엔진은 정규식을 실행할 때 내부 코드를 해석합니다.  
   
  <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 옵션으로 <xref:System.Text.RegularExpressions.Regex> 개체를 생성하는 경우 정규식이 고급 정규식 내부 명령 대신 명시적 MSIL 코드로 컴파일됩니다. 이렇게 하면 .NET의 JIT(Just-In-Time) 컴파일러가 성능 향상을 위해 식을 네이티브 기계어 코드로 변환할 수 있습니다.  <xref:System.Text.RegularExpressions.Regex> 개체를 구성하는 비용이 더 높을 수 있지만, 이를 사용하여 일치를 수행하는 비용이 훨씬 더 적을 수 있습니다.
@@ -29,6 +31,7 @@ ms.locfileid: "94823110"
  한 가지 대안은 미리 컴파일된 정규식을 사용하는 것입니다. <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> 메서드를 사용하여 모든 식을 재사용 가능한 DLL로 컴파일할 수 있습니다. 이렇게 하면 컴파일된 정규식의 속도에 따른 이점은 계속 활용하면서 런타임 시 컴파일할 필요가 없습니다.  
   
 ## <a name="the-regular-expressions-cache"></a>정규식 캐시  
+
  성능 향상을 위해 정규식 엔진은 애플리케이션 수준의 컴파일된 정규식 캐시를 유지 관리합니다. 캐시는 정적 메서드 호출에만 사용되는 정규식 패턴을 저장합니다. 인스턴스 메서드에 제공된 정규식 패턴은 캐시되지 않습니다. 따라서 사용할 때마다 식을 고급 바이트 코드로 다시 구문 분석할 필요가 없습니다.  
   
  캐시된 정규식의 최대 개수는 `static`(Visual Basic의 경우 `Shared`) <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType> 속성 값에 의해 결정됩니다. 기본적으로 정규식 엔진은 최대 15개의 컴파일된 정규식을 캐시합니다. 컴파일된 정규식 개수가 캐시 크기를 초과하면 가장 오래 전에 사용한 정규식이 삭제되고 새 정규식이 캐시됩니다.  

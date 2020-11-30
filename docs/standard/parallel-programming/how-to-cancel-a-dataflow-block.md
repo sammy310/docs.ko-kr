@@ -9,14 +9,15 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: 3dbe0675b73f902a7da0fb4f7881c1ee15022b36
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c0f184720849a0c21fdeda1de4543a2443d60674
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825860"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713355"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>방법: 데이터 흐름 블록 취소
+
 이 문서에서는 애플리케이션에서 취소를 사용하도록 설정하는 방법을 보여 줍니다. 이 예제에서는 Windows Forms를 사용하여 데이터 흐름 파이프라인에서 작업 항목이 활성 상태인 위치뿐만 아니라 취소의 효과도 보여 줍니다.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -34,6 +35,7 @@ ms.locfileid: "94825860"
 5. 4개의 <xref:System.Windows.Forms.ToolStripProgressBar> 개체를 <xref:System.Windows.Forms.ToolStrip> 컨트롤에 추가합니다.  
   
 ## <a name="creating-the-dataflow-pipeline"></a>데이터 흐름 파이프라인 만들기  
+
  이 섹션에서는 작업 항목을 처리하고 진행률 표시줄을 업데이트하는 데이터 흐름 파이프라인을 만드는 방법을 설명합니다.  
   
 ### <a name="to-create-the-dataflow-pipeline"></a>데이터 흐름 파이프라인을 만들려면  
@@ -65,6 +67,7 @@ ms.locfileid: "94825860"
  이 예제에서는 파이프라인의 멤버를 생성할 때 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 속성을 설정합니다. <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 속성은 데이터 흐름 블록 실행을 영구적으로 취소하므로 사용자가 작업을 취소한 다음, 파이프라인에 더 많은 작업 항목을 추가하기를 원하면 전체 파이프라인을 다시 만들어야 합니다. 작업이 취소된 후 다른 작업을 수행할 수 있도록 데이터 흐름 블록을 취소하는 대체 방법을 보여 주는 예제는 [연습: Windows Forms 애플리케이션에서 데이터 흐름 사용](walkthrough-using-dataflow-in-a-windows-forms-application.md)을 참조하세요.  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>사용자 인터페이스에 데이터 흐름 파이프라인 연결  
+
  이 섹션에서는 사용자 인터페이스에 데이터 흐름 파이프라인을 연결하는 방법에 대해 설명합니다. 파이프라인을 만들고 파이프라인에 작업 항목을 추가하는 작업은 모두 **작업 항목 추가** 단추의 이벤트 처리기에서 제어됩니다. 취소는 **취소** 단추를 클릭하면 시작됩니다. 사용자가 이러한 단추 중 하나를 클릭하면 적절한 작업이 비동기식으로 시작됩니다.  
   
 ### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>사용자 인터페이스에 데이터 흐름 파이프라인을 연결하려면  
@@ -84,6 +87,7 @@ ms.locfileid: "94825860"
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 Form1.cs(Visual Basic에서는 Form1.vb)의 전체 코드를 보여 줍니다.  
   
  [!code-csharp[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#100)]

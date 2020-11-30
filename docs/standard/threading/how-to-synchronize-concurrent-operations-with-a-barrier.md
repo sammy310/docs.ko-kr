@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - Barrier, how to use
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
-ms.openlocfilehash: 97a95250ff73b43d4404fb891078aed1b04f105e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dc0955ba6194dd936da19c634ada797d6cbd3720
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819736"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716475"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>방법: 동시 실행 작업을 배리어와 동기화
+
 다음 예제는 <xref:System.Threading.Barrier>와 동시 작업을 동기화하는 방법을 보여줍니다.  
   
 ## <a name="example"></a>예제  
+
  다음 프로그램의 목적은 무작위 알고리즘을 사용하여 단어를 다시 섞어서 동일한 단계에서 두 스레드가 솔루션의 절반을 서로 찾는 데 필요한 반복(또는 단계) 수를 계산하는 것입니다. 각 스레드가 해당 단어를 섞은 후 장벽 사후 단계 작업은 두 결과를 비교하여 전체 문장이 올바른 단어 순서로 렌더링되었는지 확인합니다.  
   
  [!code-csharp[CDS_Barrier#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_barrier/cs/barrier.cs#01)]

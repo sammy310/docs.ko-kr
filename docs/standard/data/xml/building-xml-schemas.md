@@ -6,20 +6,23 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-ms.openlocfilehash: bb011a8b81d9808c7517ebc2517529af7c4b975a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 177c52ea7217821735250b297974ac0ebaa1eb2e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819373"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725380"
 ---
 # <a name="building-xml-schemas"></a>XML 스키마 빌드
+
 <xref:System.Xml.Schema?displayProperty=nameWithType> 네임스페이스의 클래스는 W3C(World Wide Web 컨소시엄) XML 스키마 권장 사항에 정의된 구조에 매핑되며 이 클래스를 사용하여 메모리 내 XML 스키마를 빌드할 수 있습니다.  
   
 ## <a name="building-an-xml-schema"></a>XML 스키마 빌드  
+
  다음 코드 예제에서는 SOM API를 사용하여 메모리 내 고객 XML 스키마를 빌드합니다.  
   
 ### <a name="creating-element-and-attributes"></a>요소 및 특성 만들기  
+
  이 코드 예제에서는 자식 요소, 특성 및 해당 형식을 먼저 만든 후 최상위 요소를 만들어 상향식으로 고객 스키마를 빌드합니다.  
   
  다음 코드 예제에서는 SOM의 `FirstName` 및 `LastName` 클래스를 사용하여 고객 스키마의 `CustomerId` 특성 외에도 <xref:System.Xml.Schema.XmlSchemaElement> 및 <xref:System.Xml.Schema.XmlSchemaAttribute> 요소를 만듭니다. XML 스키마에서 <xref:System.Xml.Schema.XmlSchemaElement.Name%2A> 및 <xref:System.Xml.Schema.XmlSchemaElement> 요소의 "name" 특성에 해당하는 <xref:System.Xml.Schema.XmlSchemaAttribute> 및 `<xs:element />` 클래스의 `<xs:attribute />` 속성과는 별도로 `defaultValue`, `fixedValue`, `form` 등의 스키마가 허용하는 다른 모든 특성은 <xref:System.Xml.Schema.XmlSchemaElement> 및 <xref:System.Xml.Schema.XmlSchemaAttribute> 클래스에 해당 속성이 있습니다.  
@@ -29,6 +32,7 @@ ms.locfileid: "94819373"
  [!code-vb[XmlSchemaCreateExample#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCreateExample/VB/XmlSchemaCreateExample.vb#2)]  
   
 ### <a name="creating-schema-types"></a>스키마 형식 만들기  
+
  요소 및 특성 내용은 해당 형식에 의해 정의됩니다. 기본 제공 스키마 형식 중 하나가 있는 요소 및 특성을 만들려면 <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> 클래스를 사용하는 기본 제공 형식의 정규화된 해당 이름으로 <xref:System.Xml.Schema.XmlSchemaElement> 또는 <xref:System.Xml.Schema.XmlSchemaAttribute> 클래스의 <xref:System.Xml.XmlQualifiedName> 속성을 설정합니다. 요소 및 특성에 대한 사용자 정의 형식을 만들려면 <xref:System.Xml.Schema.XmlSchemaSimpleType> 또는 <xref:System.Xml.Schema.XmlSchemaComplexType> 클래스를 사용하여 새 단순 형식 또는 복합 형식을 만듭니다.  
   
 > [!NOTE]
@@ -46,6 +50,7 @@ ms.locfileid: "94819373"
  [!code-vb[XmlSchemaCreateExample#3](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCreateExample/VB/XmlSchemaCreateExample.vb#3)]  
   
 ### <a name="creating-and-compiling-schemas"></a>스키마 만들기 및 컴파일  
+
  이때 SOM API를 사용하여 자식 요소와 특성, 해당 형식 및 최상위 `Customer` 요소가 메모리 내에 생성됩니다. 다음 코드 예제에서는 <xref:System.Xml.Schema.XmlSchema> 클래스를 사용하여 스키마 요소를 만들고 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 속성을 사용하여 최상위 요소 및 형식을 이 스키마 요소에 추가한 다음 <xref:System.Xml.Schema.XmlSchemaSet> 클래스를 사용하여 전체 스키마를 컴파일하고 콘솔에 작성합니다.  
   
  [!code-cpp[XmlSchemaCreateExample#4](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#4)]

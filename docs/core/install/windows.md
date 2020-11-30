@@ -4,12 +4,12 @@ description: .NET을 설치할 수 있는 Windows 버전에 대해 알아봅니�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: fe18cda64e0c9986884486298adf4a83b604f323
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 4d3abde965d9a2ab0f86477feeb7c10f274a4b9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594542"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715123"
 ---
 # <a name="install-net-on-windows"></a>Windows에 .NET 설치
 
@@ -204,7 +204,7 @@ SDK는 .NET 앱과 라이브러리를 빌드하고 게시하는 데 사용됩니
 
 [dotnet-install 스크립트](../tools/dotnet-install-script.md)는 CI 자동화 및 런타임의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다. 스크립트는 [dotnet-install 스크립트 참조 페이지](../tools/dotnet-install-script.md)에서 다운로드할 수 있습니다.
 
-스크립트는 기본적으로 최신 [LTS(장기 지원)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 버전(.NET 3.1)을 설치합니다. `Channel` 스위치를 지정하여 특정 릴리스를 선택할 수 있습니다. 런타임을 설치하려면 `Runtime` 스위치를 포함합니다. 포함하지 않을 경우 스크립트가 SDK를 설치합니다.
+스크립트는 기본적으로 최신 [LTS(장기 지원)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 버전(.NET Core 3.1)을 설치합니다. `Channel` 스위치를 지정하여 특정 릴리스를 선택할 수 있습니다. 런타임을 설치하려면 `Runtime` 스위치를 포함합니다. 포함하지 않을 경우 스크립트가 SDK를 설치합니다.
 
 ```powershell
 dotnet-install.ps1 -Channel 5.0 -Runtime aspnetcore

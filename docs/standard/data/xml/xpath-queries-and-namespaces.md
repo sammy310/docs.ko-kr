@@ -6,19 +6,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
-ms.openlocfilehash: a97ff5afef23c361b1f675d2f07f43b3bc5df299
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 74dbe6b84c8d9400790f763f811da5542c732892
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818390"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720882"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath 쿼리 및 네임스페이스
+
 XPath 쿼리는 XML 문서에서 네임스페이스를 인식하며 네임스페이스 접두사를 사용하여 요소 및 특성 이름을 정규화할 수 있습니다. 네임스페이스 접두사로 요소 및 특성 이름을 정규화하면 XPath 쿼리에 의해 반환되는 노드가 특정 네임스페이스에 속한 노드로만 제한됩니다.  
   
  예를 들어, 접두사 `books`를 네임스페이스 `http://www.contoso.com/books`에 매핑하면 다음 XPath 쿼리 `/books:books/books:book`은 네임스페이스 `book`에 있는 `http://www.contoso.com/books` 요소만 선택합니다.  
   
 ## <a name="the-xmlnamespacemanager"></a>XmlNamespaceManager  
+
  XPath 쿼리에서 네임스페이스를 사용할 수 있도록 <xref:System.Xml.IXmlNamespaceResolver> 클래스와 같은 <xref:System.Xml.XmlNamespaceManager> 인터페이스에서 파생된 개체가 XPath 쿼리에 포함할 네임스페이스 URI 및 접두사로 구성됩니다.  
   
  다음과 같은 방법으로 쿼리에서 <xref:System.Xml.XmlNamespaceManager> 개체를 사용할 수 있습니다.  
@@ -36,6 +38,7 @@ XPath 쿼리는 XML 문서에서 네임스페이스를 인식하며 네임스페
 - <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>기본 네임스페이스  
+
  다음 XML 문서에서는 빈 접두사가 있는 기본 네임스페이스를 사용하여 `http://www.contoso.com/books` 네임스페이스를 선언합니다.  
   
 ```xml  

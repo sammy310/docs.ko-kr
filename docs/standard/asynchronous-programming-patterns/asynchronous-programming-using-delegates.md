@@ -11,12 +11,12 @@ helpviewer_keywords:
 - delegates [.NET], asynchronous
 - synchronous calling in asynchronous manner
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
-ms.openlocfilehash: da468d3b16ee504317c7de2e216a9be2073d1cf3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 01cdf5acf8f64472c218f35a0b8095aebf8f4571
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830508"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716267"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>대리자를 사용한 비동기 프로그래밍
 
@@ -26,10 +26,12 @@ ms.locfileid: "94830508"
 > 컴파일러는 사용자가 지정한 대리자 시그니처를 사용하여 `Invoke`, `BeginInvoke` 및 `EndInvoke` 메서드를 통해 대리자 클래스를 내보내야 합니다. `BeginInvoke` 및 `EndInvoke` 메서드는 네이티브로 데코레이팅해야 합니다. 이러한 메서드는 네이티브로 표시되므로 CLR은 클래스 로드 타임에 구현을 자동으로 제공합니다. 로더는 이러한 메서드가 재정의되지 않도록 보장합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [동기 메서드를 비동기 방식으로 호출](calling-synchronous-methods-asynchronously.md)  
  대리자를 사용하여 일반적인 메서드에 대해 비동기 호출을 수행하는 방법을 살펴보고 비동기 호출이 반환될 때까지 기다리는 4가지 방법을 보여 주는 간단한 코드 예제를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [이벤트 기반 비동기 패턴(EAP)](event-based-asynchronous-pattern-eap.md)  
  .NET의 비동기 프로그래밍을 설명합니다.  
   

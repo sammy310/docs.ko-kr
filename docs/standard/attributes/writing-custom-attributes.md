@@ -16,14 +16,15 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: 4c7051fa45dfc23a09b037b78030ff90af182a7d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e3c97f28a05f2e5396872fe808cae0d48d5a4824
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829013"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727005"
 ---
 # <a name="writing-custom-attributes"></a>사용자 지정 특성 작성
+
 사용자 지정 특성을 직접 디자인하는 데 새로운 개념을 모두 알 필요는 없습니다. 개체 지향 프로그래밍에 익숙하고 클래스 디자인 방법을 알고 있는 것으로 충분합니다. 사용자 지정 특성은 본래 <xref:System.Attribute?displayProperty=nameWithType>에서 직접 또는 간접적으로 파생된 일반적인 클래스입니다. 일반적인 클래스와 마찬가지로 사용자 지정 특성에도 데이터를 저장하고 검색하는 메서드가 포함되어 있습니다.  
   
  사용자 지정 특성 클래스를 올바르게 디자인하는 기본 단계는 다음과 같습니다.  
@@ -39,6 +40,7 @@ ms.locfileid: "94829013"
  이 섹션에서는 각 단계에 대해 설명한 다음 마지막으로 [사용자 지정 특성 예제](#custom-attribute-example)를 보여 줍니다.  
   
 ## <a name="applying-the-attributeusageattribute"></a>AttributeUsageAttribute 적용  
+
  사용자 지정 특성을 선언하는 과정은 <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>를 사용하여 특성 클래스의 주요 특징 일부를 정의하는 것으로 시작됩니다. 예를 들어 다른 클래스에서 특성을 상속할 수 있는지 여부를 지정하거나 해당 특성이 적용될 수 있는 요소를 지정할 수 있습니다. 다음 코드 조각은 <xref:System.AttributeUsageAttribute> 사용 방법을 보여 줍니다.  
   
  [!code-cpp[Conceptual.Attributes.Usage#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#5)]
@@ -48,6 +50,7 @@ ms.locfileid: "94829013"
  <xref:System.AttributeUsageAttribute>에는 사용자 지정 특성을 만드는 데 중요한 세 가지 멤버가 있습니다. [AttributeTargets](#attributetargets-member), [상속](#inherited-property) 및 [AllowMultiple](#allowmultiple-property).  
   
 ### <a name="attributetargets-member"></a>AttributeTargets 멤버  
+
  앞의 예제에는 특성을 모든 프로그램 요소에 적용할 수 있는 <xref:System.AttributeTargets.All?displayProperty=nameWithType>이 지정되어 있습니다. 또는 특성이 클래스에만 적용되도록 <xref:System.AttributeTargets.Class?displayProperty=nameWithType>를 지정하거나 특성이 메서드에만 적용되도록 <xref:System.AttributeTargets.Method?displayProperty=nameWithType>를 지정할 수 있습니다. 이러한 방법으로 사용자 지정 특성을 사용하여 모든 프로그램 요소의 설명을 표시할 수 있습니다.  
   
  여러 <xref:System.AttributeTargets> 값을 전달할 수도 있습니다. 다음 코드 조각에서는 사용자 지정 특성이 모든 클래스 또는 메서드에 적용되도록 지정합니다.  
@@ -57,6 +60,7 @@ ms.locfileid: "94829013"
  [!code-vb[Conceptual.Attributes.Usage#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#6)]  
   
 ### <a name="inherited-property"></a>Inherited 속성  
+
  <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> 속성은 특성이 적용된 클래스에서 파생된 클래스가 해당 특성을 상속할 수 있는지 여부를 나타냅니다. 이 속성에는 `true`(기본값) 또는 `false` 플래그가 지정됩니다. 다음 예제에서 `MyAttribute`의 <xref:System.AttributeUsageAttribute.Inherited%2A> 값은 기본값인 `true`인 반면 `YourAttribute`의 <xref:System.AttributeUsageAttribute.Inherited%2A> 값은 `false`입니다.  
   
  [!code-cpp[Conceptual.Attributes.Usage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#7)]
@@ -76,6 +80,7 @@ ms.locfileid: "94829013"
  [!code-vb[Conceptual.Attributes.Usage#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#10)]  
   
 ### <a name="allowmultiple-property"></a>AllowMultiple 속성  
+
  <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> 속성은 하나의 요소에 대해 특성의 인스턴스가 여러 개 있을 수 있는지 여부를 나타냅니다. `true`로 설정되어 있으면 여러 개의 인스턴스가 있을 수 있으며, `false`(기본값)로 설정되어 있으면 하나의 인스턴스만 있을 수 있습니다.  
   
  다음 예제에서 `MyAttribute`의 <xref:System.AttributeUsageAttribute.AllowMultiple%2A> 값은 기본값인 `false`인 반면 `YourAttribute`의 값은 `true`입니다.  
@@ -93,6 +98,7 @@ ms.locfileid: "94829013"
  <xref:System.AttributeUsageAttribute.AllowMultiple%2A> 속성과 <xref:System.AttributeUsageAttribute.Inherited%2A> 속성이 모두 `true`로 설정된 경우에는 다른 클래스에서 상속된 클래스가 특성을 상속할 수 있으며 동일한 자식 클래스에 적용된 동일한 특성의 다른 인스턴스를 가질 수 있습니다. <xref:System.AttributeUsageAttribute.AllowMultiple%2A>이 `false`로 설정된 경우에는 자식 클래스에 있는 동일한 특성의 새 인스턴스가 부모 클래스에 있는 모든 특성 값을 덮어씁니다.  
   
 ## <a name="declaring-the-attribute-class"></a>특성 클래스 선언  
+
  <xref:System.AttributeUsageAttribute>를 적용한 다음 특성을 상세히 정의할 수 있습니다. 특성 클래스를 선언하는 과정은 다음 코드에서처럼 일반적인 클래스를 선언하는 과정과 비슷합니다.  
   
  [!code-cpp[Conceptual.Attributes.Usage#14](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#14)]
@@ -110,6 +116,7 @@ ms.locfileid: "94829013"
 - Microsoft Visual Basic에서는 모든 사용자 지정 특성 클래스에 <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> 특성이 있습니다.  
   
 ## <a name="declaring-constructors"></a>생성자 선언  
+
  특성은 일반적인 클래스와 동일한 방법으로 생성자를 사용하여 초기화됩니다. 다음 코드 조각에서는 일반적인 특성 생성자를 보여 줍니다. 이 공용 생성자는 매개 변수를 적용하여 멤버 변수를 매개 변수의 값과 같게 설정합니다.  
   
  [!code-cpp[Conceptual.Attributes.Usage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#15)]
@@ -125,6 +132,7 @@ ms.locfileid: "94829013"
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 ## <a name="declaring-properties"></a>속성 선언  
+
  명명된 매개변수를 정의하거나 특성에 의해 저장된 값을 쉽게 반환하려면 [속성](/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))을 선언합니다. 특성 속성은 반환될 데이터 형식에 대한 설명이 포함된 공용 엔터티로 선언되어야 합니다. 속성 값을 포함할 변수를 정의한 다음 이를 **get** 및 **set** 메서드와 연결합니다. 다음 코드 예제에서는 특성에 간단한 속성을 구현하는 방법을 보여 줍니다.  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
@@ -132,6 +140,7 @@ ms.locfileid: "94829013"
  [!code-vb[Conceptual.Attributes.Usage#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#16)]  
   
 ## <a name="custom-attribute-example"></a>사용자 지정 특성 예제  
+
  이 섹션에서는 앞에서 설명한 내용을 종합하고, 간단한 특성을 디자인하여 코드 섹션의 작성자에 대한 정보를 나타내는 방법에 대해 설명합니다. 이 예제에서 사용된 특성에는 프로그래머의 이름 및 수준과 코드 검토 여부가 저장됩니다. 이 특성은 저장할 실제 값이 포함된 세 개의 private 변수를 사용합니다. 각 변수는 값을 가져오고 설정하는 public 속성으로 표시됩니다. 마지막으로 두 개의 필수 매개 변수를 사용하여 생성자가 정의됩니다.  
   
  [!code-cpp[Conceptual.Attributes.Usage#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#4)]
