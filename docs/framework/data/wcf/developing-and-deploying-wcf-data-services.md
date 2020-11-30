@@ -8,10 +8,10 @@ helpviewer_keywords:
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
 ms.openlocfilehash: 484505406701b52a2b80b95b718a23a2156aa22c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "90556091"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF Data Services 개발 및 배포
@@ -98,7 +98,7 @@ WCF Data Services에서는 데이터 서비스를 호스트하는 프로세스�
 
     - [방법: Visual Studio에서 웹 배포 패키지 만들기](/previous-versions/aspnet/dd465323(v=vs.110))
 
-    - [방법: Visual Studio에서 한 번 클릭으로 게시를 사용 하 여 웹 프로젝트 배포](/previous-versions/aspnet/dd465337(v=vs.110))
+    - [방법: Visual Studio에서 One-Click 게시를 사용 하 여 웹 프로젝트 배포](/previous-versions/aspnet/dd465337(v=vs.110))
 
   - **ASP.NET 웹 사이트를 위한 배포 기술**
 
@@ -125,7 +125,7 @@ WCF Data Services에서는 데이터 서비스를 호스트하는 프로세스�
 
 - WCF Data Services에는 기본 WCF 구현이 포함 되어 있기 때문에 windows Server AppFabric을 사용 하 여 Windows Server에서 실행 되는 IIS에 배포 된 데이터 서비스를 모니터링할 수 있습니다. Windows Server AppFabric을 사용 하 여 데이터 서비스를 모니터링 하는 방법에 대 한 자세한 내용은 [Windows Server appfabric을 사용 하 여 WCF Data Services 추적](/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)게시물을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [데이터 서비스 호스팅](hosting-the-data-service-wcf-data-services.md)
 - [WCF Data Services에 보안 설정](securing-wcf-data-services.md)

@@ -4,10 +4,10 @@ description: IIS에서 호스트 되는 WCF 서비스를 개발 하 고 배포 �
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
 ms.openlocfilehash: 5d9a0b80cc75baec2325b778cee7daa68531f2d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "90557569"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
@@ -28,7 +28,7 @@ IIS에서 호스팅되는 WCF 서비스를 만드는 방법에 대 한 자세한
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>IIS, ASP.NET 및 WCF가 제대로 설치되고 등록되었는지 확인
 
-IIS에서 호스팅되는 WCF 서비스가 올바르게 작동 하려면 WCF, IIS 및 ASP.NET가 설치 되어 있어야 합니다. WCF (.NET Framework의 일부로), ASP.NET 및 IIS를 설치 하는 절차는 운영 체제에 따라 달라 집니다. WCF 및 .NET Framework를 설치 하는 방법에 대 한 자세한 내용은 [개발자 용 .NET Framework 설치](../../install/guide-for-developers.md)를 참조 하세요. Windows 10에서 IIS를 설치 하려면 **제어판** 에서 **프로그램 및 기능** 을 연 다음 **windows 기능 사용/사용 안 함**을 선택 합니다. **Windows 기능**에서 **인터넷 정보 서비스** 선택 하 고 **확인**을 선택 합니다.
+IIS에서 호스팅되는 WCF 서비스가 올바르게 작동 하려면 WCF, IIS 및 ASP.NET가 설치 되어 있어야 합니다. WCF (.NET Framework의 일부로), ASP.NET 및 IIS를 설치 하는 절차는 운영 체제에 따라 달라 집니다. WCF 및 .NET Framework를 설치 하는 방법에 대 한 자세한 내용은 [개발자 용 .NET Framework 설치](../../install/guide-for-developers.md)를 참조 하세요. Windows 10에서 IIS를 설치 하려면 **제어판** 에서 **프로그램 및 기능** 을 연 다음 **windows 기능 사용/사용 안 함** 을 선택 합니다. **Windows 기능** 에서 **인터넷 정보 서비스** 선택 하 고 **확인** 을 선택 합니다.
 
 ![IIS가 강조 표시 된 Windows 기능](./media/windows-features-iis.png)
 
@@ -110,7 +110,7 @@ IIS에서 호스트 하는 WCF 서비스는 서비스를 포함 하는 IIS 가�
 
 예를 들어 HTTP 다이제스트 인증을 사용 하도록 구성 된 WCF 끝점은 HTTP digest 인증을 허용 하도록 구성 된 IIS 가상 디렉터리에 있어야 합니다. IIS 설정과 WCF 끝점 설정의 조합이 일치 하지 않으면 서비스 활성화 중에 오류가 발생 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [인터넷 정보 서비스에서의 호스팅](hosting-in-internet-information-services.md)
 - [인터넷 정보 서비스 호스팅을 위한 최선의 방법](internet-information-services-hosting-best-practices.md)
