@@ -10,14 +10,15 @@ helpviewer_keywords:
 - application domains, loading assemblies
 - loading assemblies
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
-ms.openlocfilehash: c91c70625b79002e9297755dfdfac8aa6e283208
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: cc37b5b5c64a65655d06418d08a66231577a5bad
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104753"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271488"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>방법: 애플리케이션 도메인에 어셈블리 로드
+
 애플리케이션 도메인에 어셈블리를 로드하는 방법에는 여러 가지가 있습니다. <xref:System.Reflection.Assembly?displayProperty=nameWithType> 클래스의 `static`(Visual Basic에서는 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 메서드를 사용하는 것이 좋습니다. 어셈블리를 로드할 수 있는 다른 방법은 다음과 같습니다.  
   
 - <xref:System.Reflection.Assembly> 클래스의 <xref:System.Reflection.Assembly.LoadFrom%2A> 메서드는 파일 위치가 지정된 경우 어셈블리를 로드합니다. 이 메서드로 어셈블리를 로드하는 경우 다른 로드 컨텍스트가 사용됩니다.  
@@ -39,6 +40,7 @@ ms.locfileid: "85104753"
  로드된 어셈블리의 JIT(Just-In-Time) 컴파일된 코드가 애플리케이션 도메인 간에 공유되는 방식을 지정할 수 있습니다. 자세한 내용은 [애플리케이션 도메인 및 어셈블리](application-domains.md#application-domains-and-assemblies)를 참조하세요.  
   
 ## <a name="example"></a>예제  
+
  다음 코드는 "example.exe" 또는 "example.dll"이라는 어셈블리를 로드 현재 애플리케이션 도메인에 로드하고, 어셈블리에서 `Example` 형식을 가져온 다음 해당 형식에 대한 매개 변수가 없는 `MethodA` 메서드를 가져와서 실행합니다. 로드된 어셈블리에서 정보를 가져오는 방법에 대한 자세한 내용은 [형식 동적 로드 및 사용](../reflection-and-codedom/dynamically-loading-and-using-types.md)을 참조하세요.  
   
  [!code-cpp[System.AppDomain.Load#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.appdomain.load/cpp/source2.cpp#2)]

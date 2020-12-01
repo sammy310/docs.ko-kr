@@ -14,13 +14,15 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-ms.openlocfilehash: 880cbd4701ae4aee35038f6402b3beb70e60290c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ea4008db59e580fc9d68135618f292496e96fce9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622187"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282940"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>관리되지 않는 DLL 함수 사용
+
 플랫폼 호출은 Windows API의 함수와 같이 DLL(동적 연결 라이브러리)에서 구현된 관리되지 않는 함수를 관리 코드가 호출할 수 있도록 하는 서비스입니다. 이 서비스는 내보낸 함수를 찾아서 호출하고 필요에 따라 상호 운용 경계를 가로질러 인수(정수, 문자열, 배열, 구조체 등)를 마샬링합니다.  
   
  이 섹션에서는 관리되지 않는 DLL 함수 사용과 관련된 작업을 소개하고 플랫폼 호출에 대해 자세히 설명합니다. 다음 작업 이외에 일반적인 고려 사항과 추가 정보 및 예제를 제공하는 링크가 있습니다.  
@@ -37,11 +39,11 @@ ms.locfileid: "85622187"
   
 3. [관리 코드에서 프로토타입을 만듭니다](creating-prototypes-in-managed-code.md).  
   
-     [Visual Basic] **Declare** 문을 **Function** 및 **Lib** 키워드와 함께 사용합니다. 드물지만 **DllImportAttribute**를 **Shared Function** 키워드와 함께 사용할 수 있습니다. 이러한 경우에 대해서는 이 섹션의 뒷부분에서 설명합니다.  
+     [Visual Basic] **Declare** 문을 **Function** 및 **Lib** 키워드와 함께 사용합니다. 드물지만 **DllImportAttribute** 를 **Shared Function** 키워드와 함께 사용할 수 있습니다. 이러한 경우에 대해서는 이 섹션의 뒷부분에서 설명합니다.  
   
-     [C#] **DllImportAttribute**를 사용하여 DLL 및 함수를 식별합니다. **static** 및 **extern** 한정자를 사용하여 메서드를 표시합니다.  
+     [C#] **DllImportAttribute** 를 사용하여 DLL 및 함수를 식별합니다. **static** 및 **extern** 한정자를 사용하여 메서드를 표시합니다.  
   
-     [C++] **DllImportAttribute**를 사용하여 DLL 및 함수를 식별합니다. **extern “C”** 를 사용하여 래퍼 메서드 또는 함수를 표시합니다.  
+     [C++] **DllImportAttribute** 를 사용하여 DLL 및 함수를 식별합니다. **extern “C”** 를 사용하여 래퍼 메서드 또는 함수를 표시합니다.  
   
 4. [DLL 함수를 호출합니다](calling-a-dll-function.md).  
   
@@ -50,6 +52,7 @@ ms.locfileid: "85622187"
  플랫폼 호출에서 사용되는 .NET 기반 선언을 생성하는 방법을 보여 주는 예제는 [플랫폼 호출을 사용하여 데이터 마샬링](marshaling-data-with-platform-invoke.md)을 참조하세요.  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>플랫폼 호출 자세히 보기  
+
  플랫폼 호출은 메타데이터에 의존하여 내보낸 함수를 찾고 런타임에 해당 인수를 마샬링합니다. 다음 그림에서 이 프로세스를 나타냅니다.  
   
  ![플랫폼 호출을 보여주는 다이어그램.](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  

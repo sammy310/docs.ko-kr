@@ -19,14 +19,15 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-ms.openlocfilehash: 172f8ce4a50fe9294ee34cf65c0a39eb2f29badc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c3c710d99c9597120b0c4d9674439a27c3bedfcc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502251"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261685"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>.NET Framework의 네트워크 추적
+
 .NET Framework의 네트워크 추적은 메서드 호출에 대한 정보와 관리되는 애플리케이션에서 생성된 네트워크 트래픽 정보에 대한 액세스를 제공합니다. 이 기능은 개발 도중 애플리케이션을 디버깅하고 배포된 애플리케이션을 분석할 때 유용합니다. 네트워크 추적에서 제공된 출력은 개발 단계 및 프로덕션 환경에서 여러 가지 사용 시나리오를 지원하도록 사용자 지정할 수 있습니다.  
   
  .NET Framework에서 네트워크 추적을 사용하려면 추적 출력의 대상을 선택하고 애플리케이션 또는 컴퓨터 구성 파일에 네트워크 추적 구성 설정을 추가해야 합니다. 구성 파일과 구성 파일의 사용 방법에 대한 설명은 [구성 파일](../configure-apps/index.md)을 참조하세요. 네트워크 추적을 사용하는 방법에 대한 자세한 내용은 [네트워크 추적 사용](enabling-network-tracing.md)을 참조하세요. 구성 파일에 추가해야 하는 설정에 대한 자세한 내용은 [방법: 네트워크 추적 구성](how-to-configure-network-tracing.md)을 참조하세요.  

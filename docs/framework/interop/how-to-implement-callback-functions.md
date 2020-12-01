@@ -9,18 +9,20 @@ dev_langs:
 helpviewer_keywords:
 - callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-ms.openlocfilehash: 31c657372e760c8d57f9714b20178967ad85fcd3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 9fa1d3b3ece334e109584f38ba69b796dfe24491
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619119"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267054"
 ---
 # <a name="how-to-implement-callback-functions"></a>방법: 콜백 함수 구현
+
 다음 절차 및 예제에서는 관리되는 애플리케이션이 플랫폼 호출을 사용하여 로컬 컴퓨터에서 각 창에 대한 핸들 값을 인쇄하는 방법을 보여 줍니다. 특히 프로시저 및 예제에서는 **EnumWindows** 함수를 사용하여 창 목록을 단계별로 실행하고 관리되는 콜백 함수(CallBack)를 사용하여 창 핸들 값을 인쇄합니다.  
   
 ### <a name="to-implement-a-callback-function"></a>콜백 함수를 구현하려면  
   
-1. 구현을 계속 진행하기 전에 **EnumWindows** 함수에 대한 시그니처를 확인합니다. **EnumWindows**에는 다음 시그니처가 있습니다.  
+1. 구현을 계속 진행하기 전에 **EnumWindows** 함수에 대한 시그니처를 확인합니다. **EnumWindows** 에는 다음 시그니처가 있습니다.  
   
     ```cpp
     BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)
@@ -30,7 +32,7 @@ ms.locfileid: "85619119"
   
 2. 관리되는 콜백 함수를 만듭니다. 예제에서는 두 인수(**hwnd** 및 **lparam**)를 사용하는 `CallBack`이라는 대리자 형식을 선언합니다. 첫 번째 인수는 창에 대한 핸들이고 두 번째 인수는 애플리케이션에서 정의됩니다. 이 릴리스에서 두 인수는 모두 정수여야 합니다.  
   
-     일반적으로 콜백 함수는 성공을 나타내는 0이 아닌 값 및 실패를 나타내는 0을 반환합니다. 이 예제에서는 반환 값을 **true**로 명시적으로 설정하여 열거를 계속합니다.  
+     일반적으로 콜백 함수는 성공을 나타내는 0이 아닌 값 및 실패를 나타내는 0을 반환합니다. 이 예제에서는 반환 값을 **true** 로 명시적으로 설정하여 열거를 계속합니다.  
   
 3. 대리자를 만들고 **EnumWindows** 함수에 인수로 전달합니다. 플랫폼 호출은 대리자를 친숙한 콜백 형식으로 자동으로 변환합니다.  
   

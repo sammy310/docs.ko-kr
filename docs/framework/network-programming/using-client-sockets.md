@@ -17,19 +17,20 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: 1dc02d0b3651d5766d1d30752566217d8417af0c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6982d09c20cd0d7e9d27fc63880b39e0982c86ef
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502004"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265195"
 ---
 # <a name="using-client-sockets"></a>클라이언트 소켓 사용
+
 <xref:System.Net.Sockets.Socket>을 통해 대화를 시작하려면 먼저 애플리케이션과 원격 디바이스 간에 데이터 파이프를 만들어야 합니다. 다른 네트워크 주소 패밀리 및 프로토콜이 있어도 이 예제에서는 원격 서비스에 대한 TCP/IP 연결을 만드는 방법을 보여 줍니다.  
   
- TCP/IP는 네트워크 주소와 서비스 포트 번호를 사용하여 서비스를 고유하게 식별합니다. 네트워크 주소는 네트워크에서 특정 디바이스를 식별하고, 포트 번호는 연결할 해당 디바이스의 특정 서비스를 식별합니다. 네트워크 주소와 서비스 포트의 조합을 엔드포인트가라고 하며, .NET Framework에서는 <xref:System.Net.EndPoint> 클래스로 표현됩니다. **EndPoint**의 하위 항목이 지원되는 각 주소 패밀리에 대해 정의되고, IP 주소 패밀리에 대한 클래스는 <xref:System.Net.IPEndPoint>입니다.  
+ TCP/IP는 네트워크 주소와 서비스 포트 번호를 사용하여 서비스를 고유하게 식별합니다. 네트워크 주소는 네트워크에서 특정 디바이스를 식별하고, 포트 번호는 연결할 해당 디바이스의 특정 서비스를 식별합니다. 네트워크 주소와 서비스 포트의 조합을 엔드포인트가라고 하며, .NET Framework에서는 <xref:System.Net.EndPoint> 클래스로 표현됩니다. **EndPoint** 의 하위 항목이 지원되는 각 주소 패밀리에 대해 정의되고, IP 주소 패밀리에 대한 클래스는 <xref:System.Net.IPEndPoint>입니다.  
   
- <xref:System.Net.Dns> 클래스는 TCP/IP 인터넷 서비스를 사용하는 애플리케이션에 도메인 이름 서비스를 제공합니다. <xref:System.Net.Dns.Resolve%2A> 메서드는 DNS 서버를 쿼리하여 친숙한 도메인 이름(예: “host.contoso.com”)을 숫자 인터넷 주소(예: 192.168.1.1)에 매핑합니다. **Resolve**는 요청된 이름에 대한 주소 및 별칭 목록이 들어 있는 <xref:System.Net.IPHostEntry>를 반환합니다. 대부분의 경우 <xref:System.Net.IPHostEntry.AddressList%2A> 배열에 반환된 첫 번째 주소를 사용할 수 있습니다. 다음 코드에서는 host.contoso.com 서버의 IP 주소가 포함된 <xref:System.Net.IPAddress>를 가져옵니다.  
+ <xref:System.Net.Dns> 클래스는 TCP/IP 인터넷 서비스를 사용하는 애플리케이션에 도메인 이름 서비스를 제공합니다. <xref:System.Net.Dns.Resolve%2A> 메서드는 DNS 서버를 쿼리하여 친숙한 도메인 이름(예: “host.contoso.com”)을 숫자 인터넷 주소(예: 192.168.1.1)에 매핑합니다. **Resolve** 는 요청된 이름에 대한 주소 및 별칭 목록이 들어 있는 <xref:System.Net.IPHostEntry>를 반환합니다. 대부분의 경우 <xref:System.Net.IPHostEntry.AddressList%2A> 배열에 반환된 첫 번째 주소를 사용할 수 있습니다. 다음 코드에서는 host.contoso.com 서버의 IP 주소가 포함된 <xref:System.Net.IPAddress>를 가져옵니다.  
   
 ```vb  
 Dim ipHostInfo As IPHostEntry = Dns.Resolve("host.contoso.com")  
@@ -51,7 +52,7 @@ Dim ipe As New IPEndPoint(ipAddress, 11000)
 IPEndPoint ipe = new IPEndPoint(ipAddress,11000);  
 ```  
   
- 원격 디바이스의 주소를 결정하고 연결에 사용할 포트를 선택하면 애플리케이션이 원격 디바이스에 대한 연결을 시도할 수 있습니다. 다음 예제에서는 기존 **IPEndPoint**를 사용하여 원격 디바이스에 연결하고 throw되는 예외를 catch합니다.  
+ 원격 디바이스의 주소를 결정하고 연결에 사용할 포트를 선택하면 애플리케이션이 원격 디바이스에 대한 연결을 시도할 수 있습니다. 다음 예제에서는 기존 **IPEndPoint** 를 사용하여 원격 디바이스에 연결하고 throw되는 예외를 catch합니다.  
   
 ```vb  
 Try  

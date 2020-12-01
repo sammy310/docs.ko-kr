@@ -10,11 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-ms.openlocfilehash: 4cf1e5787fe2e430d20208d8e79b610e9126c67c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 1b2ee58ccbd4bdfceb6300c20d5255718982f2e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622629"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272529"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법
 
@@ -134,11 +135,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 게시자 정책 파일은 공유 구성 요소가 업데이트되고 해당 구성 요소를 사용하는 모든 애플리케이션이 새 버전의 공유 구성 요소를 선택할 때 사용됩니다. 애플리케이션 구성 파일이 안전 모드를 적용하지 않는 한 게시자 정책 파일의 설정이 애플리케이션 구성 파일의 설정을 재정의합니다.
 
 #### <a name="safe-mode"></a>안전 모드
+
 게시자 정책 파일은 일반적으로 서비스 팩이나 프로그램 업데이트의 일부로 명시적으로 설치됩니다. 업그레이드된 공유 구성 요소에 문제가 있는 경우 안전 모드를 사용하여 게시자 정책 파일의 재정의를 무시할 수 있습니다. 안전 모드는 애플리케이션 구성 파일에만 있는 **\<publisherPolicy apply="yes**&#124;**no"/>** 요소에 의해 결정됩니다. 바인딩 프로세스에서 게시자 정책 구성 정보를 제거할지 여부를 지정합니다.
 
 전체 애플리케이션이나 선택한 어셈블리에 대해 안전 모드를 설정할 수 있습니다. 즉, 애플리케이션을 구성하는 모든 어셈블리에 대해 정책을 해제하거나 다른 어셈블리는 제외하고 일부 어셈블리에 대해서만 설정할 수 있습니다. 애플리케이션을 구성하는 어셈블리에 게시자 정책을 선택적으로 적용하려면 **\<publisherPolicy apply\=no/>** 를 설정하고 \<**dependentAssembly**> 요소를 사용하여 이 설정을 적용할 어셈블리를 지정합니다. 애플리케이션을 구성하는 모든 어셈블리에 게시자 정책을 적용하려면 종속 어셈블리 요소 없이 **\<publisherPolicy apply\=no/>** 를 설정합니다. 구성에 대한 자세한 내용은 [구성 파일을 사용하여 앱 구성](../configure-apps/index.md)을 참조하세요.
 
 ### <a name="machine-configuration-file"></a>컴퓨터 구성 파일
+
 셋째, 런타임은 컴퓨터 구성 파일을 검사합니다. Machine.config라는 이 파일은 로컬 컴퓨터에서 런타임이 설치된 루트 디렉터리의 Config 하위 디렉터리에 상주합니다. 관리자는 이 파일을 사용하여 해당 컴퓨터에 로컬로 적용되는 어셈블리 바인딩 제한 사항을 지정할 수 있습니다. 컴퓨터 구성 파일의 설정은 다른 모든 구성 설정보다 우선합니다. 그러나 모든 구성 설정을 이 파일에 넣어야 한다는 의미는 아닙니다. 관리자 정책 파일에서 결정된 버전이 최종 버전이며 재정의할 수 없습니다. Machine.config 파일에서 지정된 재정의는 모든 애플리케이션에 영향을 줍니다. 구성 파일에 대한 자세한 내용은 [구성 파일을 사용하여 앱 구성](../configure-apps/index.md)을 참조하세요.
 
 <a name="step2"></a>

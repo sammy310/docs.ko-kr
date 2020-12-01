@@ -15,17 +15,19 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
-ms.openlocfilehash: 0a0911a779ed3d4938ad7ff57f048c176cf677fb
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a1e6ae5cc6e192c3f041ce763e1a2f51a97988be
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502160"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263154"
 ---
 # <a name="socket-code-examples"></a>소켓 코드 예제
+
 다음 코드 예제에서는 <xref:System.Net.Sockets.Socket> 클래스를 원격 네트워크 서비스에 연결할 클라이언트 및 원격 클라이언트의 연결을 수신 대기할 서버로 사용하는 방법을 보여 줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [동기 클라이언트 소켓 예제](synchronous-client-socket-example.md)  
  서버에 연결하고 서버에서 반환된 데이터를 표시하는 동기 <xref:System.Net.Sockets.Socket> 클라이언트를 구현하는 방법을 보여 줍니다.  
   
@@ -39,6 +41,7 @@ ms.locfileid: "84502160"
  클라이언트의 연결을 수락하고 클라이언트에서 받은 데이터를 다시 에코하는 비동기 <xref:System.Net.Sockets.Socket> 서버를 구현하는 방법을 보여 줍니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+
  [소켓](sockets.md)  
  <xref:System.Net.Sockets> 네임스페이스 및 <xref:System.Net.Sockets.Socket> 클래스에 대한 기본 정보를 제공합니다.  
   

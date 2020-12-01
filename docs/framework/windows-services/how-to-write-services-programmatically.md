@@ -9,14 +9,15 @@ helpviewer_keywords:
 - services, creating
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
-ms.openlocfilehash: cd749d325bec6636243dec1905f79abb5e42f04e
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: ab153b89272323a1a7a71181559f4f4eee082640
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608402"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270513"
 ---
 # <a name="how-to-write-services-programmatically"></a>방법: 프로그래밍 방식으로 서비스 작성
+
 Windows 서비스 프로젝트 템플릿을 사용하지 않으려는 경우 상속 및 기타 인프라 요소를 직접 설정하여 고유한 서비스를 작성할 수 있습니다. 서비스를 프로그래밍 방식으로 만드는 경우 템플릿을 사용할 경우 자동으로 처리되는 다음과 같은 여러 단계를 직접 수행해야 합니다.  
   
 - <xref:System.ServiceProcess.ServiceBase> 클래스에서 상속하도록 서비스 클래스를 설정해야 합니다.  
@@ -29,13 +30,13 @@ Windows 서비스 프로젝트 템플릿을 사용하지 않으려는 경우 상
   
 1. 빈 프로젝트를 만들고 다음 단계에 따라 필요한 네임스페이스에 대한 참조를 만듭니다.  
   
-    1. **솔루션 탐색기**에서 **참조** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다.  
+    1. **솔루션 탐색기** 에서 **참조** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가** 를 클릭합니다.  
   
-    2. **.NET Framework** 탭에서 **System.dll**로 스크롤하고 **선택**을 클릭합니다.  
+    2. **.NET Framework** 탭에서 **System.dll** 로 스크롤하고 **선택** 을 클릭합니다.  
   
-    3. **System.ServiceProcess.dll**로 스크롤하고 **선택**을 클릭합니다.  
+    3. **System.ServiceProcess.dll** 로 스크롤하고 **선택** 을 클릭합니다.  
   
-    4. **확인**을 클릭합니다.  
+    4. **확인** 을 클릭합니다.  
   
 2. 클래스를 추가하고 <xref:System.ServiceProcess.ServiceBase>에서 상속하도록 클래스를 구성합니다.  
   
@@ -61,7 +62,7 @@ Windows 서비스 프로젝트 템플릿을 사용하지 않으려는 경우 상
   
 7. 서비스 애플리케이션에 필요한 설치 관리자를 추가합니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](how-to-add-installers-to-your-service-application.md)를 참조하세요.  
   
-8. **빌드** 메뉴에서 **솔루션 빌드**를 선택하여 프로젝트를 빌드합니다.  
+8. **빌드** 메뉴에서 **솔루션 빌드** 를 선택하여 프로젝트를 빌드합니다.  
   
     > [!NOTE]
     > F5 키를 눌러 프로젝트를 실행하지 마세요. 서비스 프로젝트는 이러한 방식으로 실행할 수 없습니다.  

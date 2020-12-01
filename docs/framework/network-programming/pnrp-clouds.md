@@ -2,14 +2,15 @@
 title: PNRP 클라우드
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: dd27e61fe1f648dcaf4ee4dd5f5119d33913c63a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60b6fb44116fe2d8af50fb0b310615b3b962977b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047366"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263206"
 ---
 # <a name="pnrp-clouds"></a>PNRP 클라우드
+
 PNRP “클라우드”는 네트워크를 통해 서로 통신할 수 있는 노드 집합을 나타냅니다. “클라우드”라는 용어는 “피어 메시” 및 “피어 투 피어 그래프”와 동의어입니다.  
   
  노드 간 통신은 한 클라우드에서 다른 클라우드로 전달되지 않습니다. <xref:System.Net.PeerToPeer.Cloud> 인스턴스는 대소문자를 구분하는 이름으로 고유하게 식별됩니다. 단일 피어 또는 노드는 두 개 이상의 클라우드에 연결될 수 있습니다.  
@@ -25,6 +26,7 @@ PNRP “클라우드”는 네트워크를 통해 서로 통신할 수 있는 �
  세 번째로 사이트별 클라우드가 있는데 이는 사이트 IPv6 주소 범위 및 사이트 로컬 주소에 해당합니다. 이 클라우드는 더 이상 사용되지 않지만 PNRP에서는 아직 지원됩니다.  
   
 ## <a name="clouds"></a>클라우드  
+
  PNRP 클라우드는 <xref:System.Net.PeerToPeer.Cloud> 클래스의 인스턴스로 표시됩니다. 피어를 사용하는 클라우드 그룹은 열거형 <xref:System.Net.PeerToPeer.CloudCollection> 클래스의 인스턴스로 표시됩니다. 현재 피어에 알려진 PNRP 클라우드 컬렉션은 정적 <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A> 메서드를 호출하여 얻을 수 있습니다.  
   
  개별 클라우드에는 고유한 이름이 있으며 256자 유니코드 문자열로 표시됩니다. 이러한 이름을 위에 언급된 범위와 함께 사용하여 클라우드 클래스의 고유한 인스턴스를 구성합니다. 이러한 인스턴스는 직렬화할 수 있으며 영구적으로 사용하기 위해 재구성할 수 있습니다.  

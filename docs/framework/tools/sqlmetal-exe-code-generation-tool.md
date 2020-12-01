@@ -10,14 +10,15 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 84cad85a7a9fc4b420b57543b7f258607be4ab52
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 4edf11315892ed8267bee17d69a70033348eca5c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517050"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272568"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe(코드 생성 도구)
+
 SqlMetal 명령줄 도구는 .NET Framework의 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 구성 요소에 사용할 코드 및 매핑을 생성합니다. 이 항목의 뒷부분에 나오는 옵션을 적용하면 SqlMetal을 통해 다음을 포함하는 다양한 작업을 수행할 수 있습니다.  
   
 - 데이터베이스에서 소스 코드 및 매핑 특성이나 매핑 파일 생성  
@@ -40,6 +41,7 @@ sqlmetal [options] [<input file>]
 ```  
   
 ## <a name="options"></a>옵션  
+
  최신 옵션 목록을 보려면 설치한 위치의 명령 프롬프트에서 `sqlmetal /?` 를 입력합니다.  
   
  **연결 옵션**  
@@ -50,7 +52,7 @@ sqlmetal [options] [<input file>]
 |**/database:** *\<name>*|서버의 데이터베이스 카탈로그를 지정합니다.|  
 |**/user:** *\<name>*|로그온 사용자 ID를 지정합니다. 기본값: Windows 인증 사용.|  
 |**/password:** *\<password>*|로그온 암호를 지정합니다. 기본값: Windows 인증 사용.|  
-|**/conn:** *\<connection string>*|데이터베이스 연결 문자열을 지정합니다. **/server**, **/database**, **/user**또는 **/password** 옵션과 함께 사용할 수 없습니다.<br /><br /> 연결 문자열에 파일 이름을 포함하지 마세요. 대신 파일 이름을 명령줄에 입력 파일로 추가합니다. 예를 들어 **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** 에서는 "c:\northwnd.mdf"를 입력 파일로 지정합니다.|  
+|**/conn:** *\<connection string>*|데이터베이스 연결 문자열을 지정합니다. **/server**, **/database**, **/user** 또는 **/password** 옵션과 함께 사용할 수 없습니다.<br /><br /> 연결 문자열에 파일 이름을 포함하지 마세요. 대신 파일 이름을 명령줄에 입력 파일로 추가합니다. 예를 들어 **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** 에서는 "c:\northwnd.mdf"를 입력 파일로 지정합니다.|  
 |**/timeout:** *\<seconds>*|SqlMetal이 데이터베이스에 액세스할 때의 시간 제한 값을 지정합니다. 기본값: 0(시간 제한 없음).|  
   
  **추출 옵션**  
@@ -87,6 +89,7 @@ sqlmetal [options] [<input file>]
 |**\<input file>**|SQL Server Express .mdf 파일, SQL Server Compact 3.5 .sdf 파일 또는 .dbml 중간 파일을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
+
  실제로 SqlMetal 기능에는 다음과 같은 두 단계가 포함됩니다.  
   
 - 데이터베이스의 메타데이터를 .dbml 파일에 추출  
@@ -110,6 +113,7 @@ sqlmetal [options] [<input file>]
  입력 파일 이름을 지정하려면 이름을 명령줄에 입력 파일로 추가합니다. **/conn** 옵션을 사용하여 연결 문자열에 파일 이름을 포함할 수는 없습니다.  
   
 ## <a name="examples"></a>예  
+
  추출된 SQL 메타데이터를 포함하는 .dbml 파일을 생성합니다.  
   
  **sqlmetal /server:myserver /database:northwind /dbml:mymeta.dbml**  

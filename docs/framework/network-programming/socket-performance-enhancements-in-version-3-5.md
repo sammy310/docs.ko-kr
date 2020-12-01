@@ -3,17 +3,19 @@ title: 버전 3.5의 소켓 성능 향상
 description: .NET Framework 버전 3.5의 System.Net.Sockets.Socket 클래스의 성능 향상에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 5a640c58e47bf1630a3a551aed72b9bc9d4fd6fe
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5bd7c97d6a6edd5f914d6fe3118b6d81b64544e0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502147"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263141"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>버전 3.5의 소켓 성능 향상
+
 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 클래스는 비동기 네트워크 I/O를 통해 성능을 최적화하는 애플리케이션에서 사용하기 위해 버전 3.5에서 개선되었습니다. 특수화된 고성능 소켓 애플리케이션에서 사용할 수 있는 대체 비동기 패턴을 제공하는 <xref:System.Net.Sockets.Socket> 클래스에 대한 향상된 기능 집합의 일부로 일련의 새로운 클래스가 추가되었습니다. 이러한 개선 사항은 특히 높은 성능이 필요한 네트워크 서버 애플리케이션용으로 설계되었습니다. 애플리케이션은 향상된 비동기 패턴을 단독으로 사용하거나, 애플리케이션의 대상 핫 영역에서만 사용할 수 있습니다(예: 많은 양의 데이터를 수신하는 경우).  
   
 ## <a name="class-enhancements"></a>클래스 개선 사항  
+
  이러한 개선 사항의 주요 기능은 대량 비동기 소켓 I/O 중 개체의 반복 할당 및 동기화를 방지할 수 있습니다. 현재 비동기 소켓 I/O에 대해 <xref:System.Net.Sockets.Socket> 클래스에서 구현되는 Begin/End 디자인 패턴에서는 각 비동기 소켓 작업에 대해 <xref:System.IAsyncResult?displayProperty=nameWithType> 개체가 할당되어야 합니다.  
   
  새 <xref:System.Net.Sockets.Socket> 클래스 개선 사항에서 비동기 소켓 작업은 애플리케이션에서 할당하고 유지 관리하는 다시 사용할 수 있는 <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType> 클래스 개체를 통해 설명됩니다. 고성능 소켓 애플리케이션은 유지해야 하는 겹쳐진 소켓 작업량을 가장 잘 알고 있습니다. 애플리케이션은 <xref:System.Net.Sockets.SocketAsyncEventArgs> 개체를 필요한 개수만큼 만들 수 있습니다. 예를 들어 서버 애플리케이션이 들어오는 클라이언트 연결 속도를 지원하기 위해 항상 15개의 소켓 허용 작업을 처리 중이어야 하는 경우 해당 용도로 다시 사용할 수 있는 <xref:System.Net.Sockets.SocketAsyncEventArgs> 개체 15개를 미리 할당할 수 있습니다.  

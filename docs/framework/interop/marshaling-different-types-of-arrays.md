@@ -9,13 +9,15 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-ms.openlocfilehash: f1473c7917189f0b36c96b2adcf20005c5fd6b48
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: b7777e99daf9d294bf26033f470a6e562b7b727f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621498"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269095"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>여러 형식의 배열 마샬링
+
 배열은 동일한 형식의 요소를 하나 이상 포함하는 관리 코드의 참조 형식입니다. 배열은 참조 형식이지만 관리되지 않는 함수에 In 매개 변수로 전달됩니다. 이 동작은 관리되는 배열이 관리되는 개체에 전달되는 방식(In/Out 매개 변수로)과 일치하지 않습니다. 자세한 내용은 [복사 및 고정](copying-and-pinning.md)을 참조하세요.  
   
  다음 표에서는 배열에 대한 마샬링 옵션을 나열하고 사용법을 설명합니다.  
@@ -30,6 +32,7 @@ ms.locfileid: "85621498"
 |문자열을 포함하는 구조체.|문자열만 포함하는 구조체 배열을 In/Out 매개 변수로 전달합니다. 배열의 멤버를 변경할 수 있습니다.|  
   
 ## <a name="example"></a>예제  
+
  이 샘플에서는 다음 형식의 배열을 전달하는 방법을 보여 줍니다.  
   
 - 값 형식 정수 배열  
@@ -48,43 +51,43 @@ ms.locfileid: "85621498"
   
  Arrays 샘플에서는 원래 함수 선언과 함께 표시되는 다음과 같은 관리되지 않는 함수를 사용합니다.  
   
-- PinvokeLib.dll에서 내보낸**TestArrayOfInts**  
+- PinvokeLib.dll에서 내보낸 **TestArrayOfInts**  
   
     ```cpp
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
-- PinvokeLib.dll에서 내보낸**TestRefArrayOfInts**  
+- PinvokeLib.dll에서 내보낸 **TestRefArrayOfInts**  
   
     ```cpp
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
-- PinvokeLib.dll에서 내보낸**TestMatrixOfInts**  
+- PinvokeLib.dll에서 내보낸 **TestMatrixOfInts**  
   
     ```cpp
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
-- PinvokeLib.dll에서 내보낸**TestArrayOfStrings**  
+- PinvokeLib.dll에서 내보낸 **TestArrayOfStrings**  
   
     ```cpp
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
-- PinvokeLib.dll에서 내보낸**TestArrayOfStructs**  
+- PinvokeLib.dll에서 내보낸 **TestArrayOfStructs**  
   
     ```cpp
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
-- PinvokeLib.dll에서 내보낸**TestArrayOfStructs2**  
+- PinvokeLib.dll에서 내보낸 **TestArrayOfStructs2**  
   
     ```cpp
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 은 앞에 나열된 함수 및 2개의 구조체 변수 **MYPOINT** 및 **MYPERSON**에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. 구조체에는 다음과 같은 요소가 포함됩니다.  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 은 앞에 나열된 함수 및 2개의 구조체 변수 **MYPOINT** 및 **MYPERSON** 에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. 구조체에는 다음과 같은 요소가 포함됩니다.  
   
 ```cpp
 typedef struct _MYPOINT  
@@ -105,10 +108,12 @@ typedef struct _MYPERSON
  `NativeMethods` 클래스에는 `App` 클래스가 호출하는 메서드 집합이 포함됩니다. 배열을 전달하는 방법에 대한 자세한 내용은 다음 샘플의 설명을 참조하세요. 참조 형식인 배열은 기본적으로 In 매개 변수로 전달됩니다. 호출자가 결과를 받으려면 배열을 포함하는 인수에 **InAttribute** 및 **OutAttribute** 를 명시적으로 적용해야 합니다.  
   
 ### <a name="declaring-prototypes"></a>프로토타입 선언  
+
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
  [!code-vb[Conceptual.Interop.Marshaling#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#31)]  
   
 ### <a name="calling-functions"></a>함수 호출  
+
  [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   

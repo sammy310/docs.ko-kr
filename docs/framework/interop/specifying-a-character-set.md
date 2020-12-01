@@ -11,12 +11,12 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: 789753742d8714e481f038e323407cbab0499f6c
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 8cc4198d6c13d4705ffc5ce5229cce7a205aec8a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309796"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278182"
 ---
 # <a name="specify-a-character-set"></a>문자 집합 지정
 
@@ -33,6 +33,7 @@ ms.locfileid: "86309796"
      진입점 이름에 “W”를 추가하여 구분되는 2바이트 문자 유니코드 형식을 제공합니다. **MessageBoxW** 호출은 항상 문자열을 유니코드 형식으로 마샬링합니다.  
   
 ## <a name="string-marshaling-and-name-matching"></a>문자열 마샬링 및 이름 일치  
+
  `CharSet` 필드는 다음 값을 허용합니다.  
   
  <xref:System.Runtime.InteropServices.CharSet.Ansi>(기본값)  
@@ -43,7 +44,7 @@ ms.locfileid: "86309796"
   
 - 이름 일치  
   
-     <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> 필드가 Visual Basic의 기본값인 `true`이면 플랫폼 호출이 지정한 이름만 검색합니다. 예를 들어 **MessageBox**를 지정하는 경우 플랫폼 호출은 **MessageBox**를 검색하고, 정확한 철자를 찾을 수 없으면 실패합니다.  
+     <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> 필드가 Visual Basic의 기본값인 `true`이면 플랫폼 호출이 지정한 이름만 검색합니다. 예를 들어 **MessageBox** 를 지정하는 경우 플랫폼 호출은 **MessageBox** 를 검색하고, 정확한 철자를 찾을 수 없으면 실패합니다.  
   
      `ExactSpelling` 필드가 C++ 및 C#의 기본값인 `false`이면 플랫폼 호출은 올바른 별칭(**MessageBox**)을 먼저 검색한 다음, 올바른 별칭을 찾을 수 없는 경우 잘못된 이름(**MessageBoxA**)을 검색합니다. ANSI 이름 일치 동작은 유니코드 이름 일치 동작과 다릅니다.  
   
@@ -55,7 +56,7 @@ ms.locfileid: "86309796"
   
 - 이름 일치  
   
-     `ExactSpelling` 필드가 Visual Basic의 기본값인 `true`이면 플랫폼 호출이 지정한 이름만 검색합니다. 예를 들어 **MessageBox**를 지정하는 경우 플랫폼 호출은 **MessageBox**를 검색하고, 정확한 철자를 찾을 수 없으면 실패합니다.  
+     `ExactSpelling` 필드가 Visual Basic의 기본값인 `true`이면 플랫폼 호출이 지정한 이름만 검색합니다. 예를 들어 **MessageBox** 를 지정하는 경우 플랫폼 호출은 **MessageBox** 를 검색하고, 정확한 철자를 찾을 수 없으면 실패합니다.  
   
      `ExactSpelling` 필드가 C++ 및 C#의 기본값인 `false`이면 플랫폼 호출은 잘못된 이름(**MessageBoxW**)을 먼저 검색한 다음, 잘못된 이름을 찾을 수 없는 경우 올바른 별칭(**MessageBox**)을 검색합니다. 유니코드 이름 일치 동작은 ANSI 이름 일치 동작과 다릅니다.  
   

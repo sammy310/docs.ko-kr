@@ -10,14 +10,15 @@ dev_langs:
 - cpp
 - csharp
 - vb
-ms.openlocfilehash: fa7af39c0addb328944a03236c26982301caf722
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 771917bb2ae5cae56c775ae23119d5eda9701df1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865322"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266326"
 ---
 # <a name="how-to-get-type-and-member-information-by-using-reflection"></a>방법: 리플렉션을 사용하여 형식 및 멤버 정보 가져오기
+
 <xref:System.Reflection> 네임스페이스에는 형식 및 멤버에 관한 정보를 가져오는 여러 메서드가 포함되어 있습니다. 이 문서에서는 이러한 메서드 중 하나인 <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>을 보여 줍니다. 자세한 내용은 [리플렉션 개요](reflection.md)를 참조하세요.
   
 ## <a name="example"></a>예제

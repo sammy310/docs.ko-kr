@@ -16,14 +16,15 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: 510f616295abc13d93e0e0af5a37aca097d343e3
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a3f8106b238c28de77362e73aa26667209f6b517
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502199"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263180"
 ---
 # <a name="programming-pluggable-protocols"></a>플러그형 프로토콜 프로그래밍
+
 추상 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스에서 플러그형 프로토콜의 기초를 제공합니다. <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse>에서 프로토콜별 클래스를 파생시키면, 애플리케이션에서 사용할 프로토콜을 지정하지 않아도 인터넷 리소스에서 데이터를 요청하고 응답을 읽을 수 있습니다.  
   
  Create 메서드를 등록해야 프로토콜별 <xref:System.Net.WebRequest>를 만들 수 있습니다. 특정 인터넷 구성표, 구성표와 서버 또는 구성표, 서버 및 경로에 대한 요청 집합을 처리하려면 <xref:System.Net.WebRequest>의 정적 <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> 메서드를 사용하여 <xref:System.Net.WebRequest> 하위 항목을 등록합니다.  

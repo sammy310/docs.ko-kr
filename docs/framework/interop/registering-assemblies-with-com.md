@@ -8,14 +8,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-ms.openlocfilehash: 0adae4db393c4c01620ea896c4451c3279272fca
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 525e3724aec82a74f5b0339296808b41f30d0ddc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559280"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266378"
 ---
 # <a name="registering-assemblies-with-com"></a>COM에 어셈블리 등록
+
 [어셈블리 등록 도구(Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md)라는 명령줄 도구를 실행하여 COM과 사용할 어셈블리를 등록하거나 등록 취소할 수 있습니다. COM 클라이언트에서 .NET Framework 클래스를 투명하게 사용할 수 있도록 Regasm.exe에서는 클래스에 대한 정보를 시스템 레지스트리에 추가합니다. <xref:System.Runtime.InteropServices.RegistrationServices> 클래스는 이와 동등한 기능을 제공합니다.  
   
  관리되는 구성 요소를 Windows 레지스트리에 등록해야 COM 클라이언트에서 활성화할 수 있습니다. 다음 표에서는 Regasm.exe를 통해 일반적으로 Windows 레지스트리에 추가하는 키를 보여 줍니다. (000000은 실제 GUID 값을 표시합니다.)  
@@ -38,7 +39,8 @@ ms.locfileid: "90559280"
  Regasm.exe는 HKCR\CLSID\\{0000…0000} 키 아래에 InProcServer32 키도 만듭니다. 키의 기본값은 공용 언어 런타임(Mscoree.dll)을 초기화하는 DLL의 이름으로 설정됩니다.  
   
 ## <a name="examining-registry-entries"></a>레지스트리 항목 검사  
- COM interop에서는 모든 .NET Framework 클래스의 인스턴스를 만드는 표준 클래스 팩터리 구현을 제공합니다. 클라이언트는 관리되는 DLL에서 **DllGetClassObject**를 호출하여 다른 COM 구성 요소에서와 마찬가지로 클래스 팩터리를 가져오고 개체를 만들 수 있습니다.  
+
+ COM interop에서는 모든 .NET Framework 클래스의 인스턴스를 만드는 표준 클래스 팩터리 구현을 제공합니다. 클라이언트는 관리되는 DLL에서 **DllGetClassObject** 를 호출하여 다른 COM 구성 요소에서와 마찬가지로 클래스 팩터리를 가져오고 개체를 만들 수 있습니다.  
   
  `InprocServer32` 하위 키의 경우, 기존 COM 형식 라이브러리의 위치에 Mscoree.dll의 참조가 표시되어 공용 언어 런타임을 통해 관리 개체가 생성되었음을 나타냅니다.  
   

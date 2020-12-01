@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Windows Service applications, debugging
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
-ms.openlocfilehash: 2657d83f39b60be84846fb784a06e71f6dd46179
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 4d8ac0316e47925d253e7220597ab9953252521e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609735"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270630"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>방법: Windows 서비스 애플리케이션 디버그
+
 서비스는 Visual Studio 내에서가 아니라 서비스 제어 관리자의 컨텍스트 내에서 실행해야 합니다. 따라서 서비스를 디버그하는 것은 다른 Visual Studio 애플리케이션 형식을 디버그하는 것처럼 단순하지 않습니다. 서비스를 디버그하려면 서비스를 시작한 다음 서비스가 실행되는 프로세스에 디버거를 연결해야 합니다. 그리고 나면 Visual Studio의 모든 표준 디버깅 기능을 사용하여 애플리케이션을 디버그할 수 있습니다.  
   
 > [!CAUTION]
@@ -44,15 +45,15 @@ ms.locfileid: "91609735"
   
 4. 시스템 프로세스에 연결할 수 있도록 관리 자격 증명을 사용하여 Visual Studio를 시작합니다.  
   
-5. (선택 사항) Visual Studio 메뉴 모음에서 **도구**, **옵션**을 선택합니다. **옵션** 대화 상자에서 **디버깅**, **기호**를 차례로 선택하고 **Microsoft 기호 서버** 확인란을 선택한 다음, **확인** 단추를 선택합니다.  
+5. (선택 사항) Visual Studio 메뉴 모음에서 **도구**, **옵션** 을 선택합니다. **옵션** 대화 상자에서 **디버깅**, **기호** 를 차례로 선택하고 **Microsoft 기호 서버** 확인란을 선택한 다음, **확인** 단추를 선택합니다.  
   
-6. 메뉴 모음의 **디버그** 또는 **도구** 메뉴에서 **프로세스에 연결**을 (키보드: Ctrl+Alt+P)  
+6. 메뉴 모음의 **디버그** 또는 **도구** 메뉴에서 **프로세스에 연결** 을 (키보드: Ctrl+Alt+P)  
   
      **프로세스** 대화 상자가 표시됩니다.  
   
 7. **모든 사용자의 프로세스 표시** 확인란을 선택합니다.  
   
-8. **사용 가능한 프로세스** 섹션에서 서비스의 프로세스를 선택한 다음, **연결**을 선택합니다.  
+8. **사용 가능한 프로세스** 섹션에서 서비스의 프로세스를 선택한 다음, **연결** 을 선택합니다.  
   
     > [!TIP]
     > 프로세스의 이름은 서비스의 실행 파일 이름과 같습니다.  
@@ -69,6 +70,7 @@ ms.locfileid: "91609735"
 11. 서비스 제어 관리자에 액세스하고 서비스를 조작하여 중단점을 적중하는 중지, 일시 중지 및 계속 명령을 보냅니다. 서비스 제어 관리자 실행에 대한 자세한 내용은 [방법: 서비스 시작](how-to-start-services.md)을 참조하세요. 또한 [문제 해결: Windows 서비스 디버깅](troubleshooting-debugging-windows-services.md)을 참조하세요.  
   
 ## <a name="debugging-tips-for-windows-services"></a>Windows 서비스 디버깅 팁  
+
  서비스의 프로세스에 연결하면 해당 서비스의 코드를 대부분 디버그할 수 있지만 모든 코드를 디버그할 수 있는 것은 아닙니다. 예를 들어 서비스가 이미 시작되었기 때문에 이러한 방식으로 서비스를 로드하는 데 사용되는 서비스의 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드 내 코드나 `Main` 메서드 내의 코드는 디버그할 수 없습니다. 이 제한을 해결하는 한 가지 방법은 디버그에만 사용되는 두 번째 임시 서비스를 서비스 애플리케이션에 만드는 것입니다. 두 서비스를 모두 설치하고서 이 더미 서비스를 시작하여 서비스 프로세스를 로드할 수는 없습니다. 임시 서비스에서 프로세스를 시작하고 나면 Visual Studio에서 **디버그** 메뉴를 사용하여 서비스 프로세스에 연결할 수 있습니다.  
   
  프로세스에 연결할 수 있을 때까지 <xref:System.Threading.Thread.Sleep%2A> 메서드에 대한 호출을 추가하여 작업을 지연시켜 봅니다.  
@@ -105,7 +107,7 @@ ms.locfileid: "91609735"
     }
     ```  
   
-3. 프로젝트 속성의 **애플리케이션** 탭에서 **출력 형식**을 **콘솔 애플리케이션**으로 설정합니다.  
+3. 프로젝트 속성의 **애플리케이션** 탭에서 **출력 형식** 을 **콘솔 애플리케이션** 으로 설정합니다.  
   
 4. **디버깅 시작**(F5)을 선택합니다.  
   

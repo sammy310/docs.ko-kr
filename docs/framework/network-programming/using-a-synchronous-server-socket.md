@@ -18,19 +18,20 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: 9e7d32595f554b32ecc72bbb1f1a469ad5935467
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 305feaa71304bef749f999a078b0b5f4fa7be3cc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502056"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278156"
 ---
 # <a name="using-a-synchronous-server-socket"></a>동기 서버 소켓 사용
+
 동기 서버 소켓은 소켓에 연결 요청이 수신될 때까지 애플리케이션 실행을 일시 중단합니다. 동기 서버 소켓은 네트워크를 작업에 많이 사용하는 애플리케이션에 적합하지 않지만 간단한 네트워크 애플리케이션에는 적합할 수 있습니다.  
   
  <xref:System.Net.Sockets.Socket>이 <xref:System.Net.Sockets.Socket.Bind%2A> 및 <xref:System.Net.Sockets.Socket.Listen%2A> 메서드를 사용하여 엔드포인트에서 수신 대기하도록 설정되면 <xref:System.Net.Sockets.Socket.Accept%2A> 메서드를 사용하여 들어오는 연결 요청을 허용할 수 있습니다. **Accept** 메서드를 호출하면 연결 요청이 수신될 때까지 애플리케이션이 일시 중단됩니다.  
   
- 연결 요청이 수신되면 **Accept**는 연결 중인 클라이언트와 연결된 새 **Socket** 인스턴스를 반환합니다. 다음 예제에서는 클라이언트에서 데이터를 읽고 콘솔에 표시한 다음 데이터를 클라이언트에 다시 에코합니다. **Socket**은 메시징 프로토콜을 지정하지 않으므로 “\<EOF>” 문자열은 메시지 데이터의 끝을 표시합니다. `listener`라는 **Socket**이 초기화되었으며 엔드포인트에 바인딩되었다고 가정합니다.  
+ 연결 요청이 수신되면 **Accept** 는 연결 중인 클라이언트와 연결된 새 **Socket** 인스턴스를 반환합니다. 다음 예제에서는 클라이언트에서 데이터를 읽고 콘솔에 표시한 다음 데이터를 클라이언트에 다시 에코합니다. **Socket** 은 메시징 프로토콜을 지정하지 않으므로 “\<EOF>” 문자열은 메시지 데이터의 끝을 표시합니다. `listener`라는 **Socket** 이 초기화되었으며 엔드포인트에 바인딩되었다고 가정합니다.  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  

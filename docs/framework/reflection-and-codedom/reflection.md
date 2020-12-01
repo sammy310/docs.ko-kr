@@ -22,12 +22,12 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 46c67595126af2c62b28d29983775943586a0b90
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 371f56c3a57b8e320c9b329c539075a40cd7a19f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865283"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258415"
 ---
 # <a name="reflection-in-net"></a>.NET에서의 리플렉션
 
@@ -62,6 +62,7 @@ ms.locfileid: "86865283"
 리플렉션의 다른 용도는 다음과 같습니다. JScript와 같은 언어용 컴파일러에서는 리플렉션을 사용하여 기호 테이블을 생성합니다. <xref:System.Runtime.Serialization> 네임스페이스의 클래스에서는 리플렉션을 사용하여 데이터에 액세스하고 보관할 필드를 결정합니다. <xref:System.Runtime.Remoting> 네임스페이스의 클래스에서는 직렬화를 통해 간접적으로 리플렉션을 사용합니다.  
   
 ## <a name="runtime-types-in-reflection"></a>리플렉션의 런타임 형식  
+
 리플렉션은 형식, 멤버, 매개 변수, 기타 코드 엔터티를 나타내는 <xref:System.Type> 및 <xref:System.Reflection.MethodInfo>와 같은 클래스를 제공합니다. 하지만 리플렉션을 사용할 때 이들 클래스를 직접 사용하지 않습니다. 이들 클래스는 대부분 추상 클래스입니다(Visual Basic의 `MustInherit`). 대신에 CLR(공용 언어 런타임)에서 제공된 형식을 사용합니다.  
   
 예를 들어 C# `typeof` 연산자(Visual Basic의 `GetType`)를 사용하여 <xref:System.Type> 개체를 가져오면 개체가 실제로 `RuntimeType`입니다. `RuntimeType`은 <xref:System.Type>에서 파생되고 모든 추상 메서드의 구현을 제공합니다.  

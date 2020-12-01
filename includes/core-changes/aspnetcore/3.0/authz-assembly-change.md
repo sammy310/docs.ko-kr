@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b91cdc7a0d2e4258662155a840500ce21ab35760
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2819fb3857fa6d40a2b2e42eeaec2d9c6e50eef0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74101235"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96299355"
 ---
 ### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>권한 부여: AddAuthorization 오버로드가 다른 어셈블리로 이동됨
 
@@ -15,6 +15,7 @@ ms.locfileid: "74101235"
 3.0
 
 #### <a name="old-behavior"></a>이전 동작
+
 `AddAuthorization` 메서드가 `Microsoft.AspNetCore.Authorization`에 있었습니다.
 
 #### <a name="new-behavior"></a>새 동작

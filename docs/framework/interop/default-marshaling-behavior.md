@@ -10,14 +10,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: f2a508b87d2f4a9ad92bc0f27fc44d74d8e916d3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3e18bb5c4caa43a8e951eed3fc6992ec1b2d2afb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555278"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256657"
 ---
 # <a name="default-marshaling-behavior"></a>기본 마샬링 동작
+
 Interop 마샬링은 메서드 매개 변수와 연결된 데이터가 관리되는 메모리와 관리되지 않는 메모리 간에 전달될 때 동작하는 방식을 제어하는 규칙에 따라 작동합니다. 이러한 기본 제공 규칙은 데이터 형식 변형, 호출 수신자가 전달된 데이터를 변경하고 해당 변경 내용을 호출자에게 반환할 수 있는지 여부 및 마샬러가 성능 최적화를 제공하는 상황과 같은 마샬링 작업을 제어합니다.  
   
  이 섹션에서는 interop 마샬링 서비스의 기본 동작 특성을 식별합니다. 배열, 부울 형식, char 형식, 대리자, 클래스, 개체, 문자열 및 구조체 마샬링에 대한 자세한 정보를 표시됩니다.  
@@ -26,6 +27,7 @@ Interop 마샬링은 메서드 매개 변수와 연결된 데이터가 관리되
 > 제네릭 형식의 마샬링은 지원되지 않습니다. 자세한 내용은 [제네릭 형식을 통한 상호 운용](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))을 참조하세요.  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Interop 마샬러를 사용한 메모리 관리  
+
  Interop 마샬러는 항상 비관리 코드에 의해 할당된 메모리를 해제하려고 합니다. 이 동작은 COM 메모리 관리 규칙을 준수하지만 네이티브 C++를 제어하는 규칙과는 다릅니다.  
   
  포인터에 대한 메모리를 자동으로 해제하는 플랫폼 호출을 사용하는 경우 네이티브 C++ 동작(메모리 해제 안 함)을 예상하면 혼란이 발생할 수 있습니다. 예를 들어 C++ DLL에서 다음 관리되지 않는 메서드를 호출하는 경우 메모리가 자동으로 해제되지 않습니다.  
@@ -40,15 +42,18 @@ BSTR MethodOne (BSTR b) {
   
  그러나 메서드를 플랫폼 호출 프로토타입으로 정의하고, 각 **BSTR** 형식을 <xref:System.String> 형식으로 바꾼 다음 `MethodOne`을 호출하는 경우 공용 언어 런타임에서 `b`를 해제하려고 두 번 시도합니다. **String** 형식보다 <xref:System.IntPtr> 형식을 사용하여 마샬링 동작을 변경할 수 있습니다.  
   
- 런타임은 항상 **CoTaskMemFree** 메서드를 사용하여 메모리를 해제합니다. 사용하는 메모리가 **CoTaskMemAlloc** 메서드를 통해 할당되지 않은 경우 **IntPtr**을 사용하고 적절한 메서드를 통해 수동으로 메모리를 해제해야 합니다. 마찬가지로, 커널 메모리에 대한 포인터를 반환하는 Kernel32.dll의 **GetCommandLine** 함수를 사용하는 경우와 같이 메모리가 해제되지 않아야 하는 상황에서는 자동 메모리 해제를 방지할 수 있습니다. 수동으로 메모리를 해제하는 방법에 대한 자세한 내용은 [Buffers 샘플](/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))을 참조하세요.  
+ 런타임은 항상 **CoTaskMemFree** 메서드를 사용하여 메모리를 해제합니다. 사용하는 메모리가 **CoTaskMemAlloc** 메서드를 통해 할당되지 않은 경우 **IntPtr** 을 사용하고 적절한 메서드를 통해 수동으로 메모리를 해제해야 합니다. 마찬가지로, 커널 메모리에 대한 포인터를 반환하는 Kernel32.dll의 **GetCommandLine** 함수를 사용하는 경우와 같이 메모리가 해제되지 않아야 하는 상황에서는 자동 메모리 해제를 방지할 수 있습니다. 수동으로 메모리를 해제하는 방법에 대한 자세한 내용은 [Buffers 샘플](/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))을 참조하세요.  
   
 ## <a name="default-marshaling-for-classes"></a>클래스에 대한 기본 마샬링  
+
  클래스는 COM interop에 의해서만 마샬링될 수 있으며 항상 인터페이스로 마샬링됩니다. 클래스를 마샬링하는 데 사용되는 인터페이스를 클래스 인터페이스라고 하는 경우도 있습니다. 선택한 인터페이스로 클래스 인터페이스를 재정의하는 방법에 대한 자세한 내용은 [클래스 인터페이스 소개](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)를 참조하세요.  
   
 ### <a name="passing-classes-to-com"></a>COM에 클래스 전달  
- 관리되는 클래스를 COM에 전달하면 interop 마샬러가 자동으로 클래스를 COM 프록시로 래핑하고 프록시에 의해 생성된 클래스 인터페이스를 COM 메서드 호출에 전달합니다. 그런 다음 프록시는 클래스 인터페이스에 대한 모든 호출을 관리되는 개체에 다시 위임합니다. 또한 프록시는 클래스에 의해 명시적으로 구현되지 않은 다른 인터페이스를 노출합니다. 프록시는 클래스를 대신하여 **IUnknown** 및 **IDispatch**와 같은 인터페이스를 자동으로 구현합니다.  
+
+ 관리되는 클래스를 COM에 전달하면 interop 마샬러가 자동으로 클래스를 COM 프록시로 래핑하고 프록시에 의해 생성된 클래스 인터페이스를 COM 메서드 호출에 전달합니다. 그런 다음 프록시는 클래스 인터페이스에 대한 모든 호출을 관리되는 개체에 다시 위임합니다. 또한 프록시는 클래스에 의해 명시적으로 구현되지 않은 다른 인터페이스를 노출합니다. 프록시는 클래스를 대신하여 **IUnknown** 및 **IDispatch** 와 같은 인터페이스를 자동으로 구현합니다.  
   
 ### <a name="passing-classes-to-net-code"></a>.NET 코드에 클래스 전달  
+
  Coclass는 대개 COM에서 메서드 인수로 사용되지 않습니다. 대신, 일반적으로 기본 인터페이스가 coclass 대신 전달됩니다.  
   
  인터페이스가 관리 코드에 전달되는 경우 interop 마샬러가 인터페이스를 적절한 래퍼로 래핑하고 관리되는 메서드에 래퍼를 전달해야 합니다. 사용할 래퍼를 결정하기 어려울 수 있습니다. COM 개체의 모든 인스턴스에는 개체가 구현하는 인터페이스 수에 관계없이 하나의 고유한 래퍼가 있습니다. 예를 들어 서로 다른 인터페이스 5개를 구현하는 단일 COM 개체에는 하나의 래퍼만 있습니다. 동일한 래퍼가 5개 인터페이스를 모두 노출합니다. COM 개체 인스턴스를 2개 만들면 래퍼 인스턴스도 2개 만들어집니다.  
@@ -63,13 +68,14 @@ BSTR MethodOne (BSTR b) {
   
  알려진 개체의 인터페이스가 아닌 경우 마샬러는 다음을 수행합니다.  
   
-1. 마샬러가 **IProvideClassInfo2** 인터페이스에 대해 개체를 쿼리합니다. 제공되면 마샬러가 **IProvideClassInfo2.GetGUID**에서 반환된 CLSID를 사용하여 인터페이스를 제공하는 coclass를 식별합니다. CLSID를 통해 마샬러는 어셈블리가 이전에 등록된 경우 레지스트리에서 래퍼를 찾을 수 있습니다.  
+1. 마샬러가 **IProvideClassInfo2** 인터페이스에 대해 개체를 쿼리합니다. 제공되면 마샬러가 **IProvideClassInfo2.GetGUID** 에서 반환된 CLSID를 사용하여 인터페이스를 제공하는 coclass를 식별합니다. CLSID를 통해 마샬러는 어셈블리가 이전에 등록된 경우 레지스트리에서 래퍼를 찾을 수 있습니다.  
   
-2. 마샬러가 **IProvideClassInfo** 인터페이스에 대해 인터페이스를 쿼리합니다. 제공되면 마샬러가 **IProvideClassInfo.GetClassinfo**에서 반환된 **ITypeInfo**를 사용하여 인터페이스를 노출하는 클래스의 CLSID를 확인합니다. 마샬러는 CLSID를 사용하여 래퍼에 대한 메타데이터를 찾을 수 있습니다.  
+2. 마샬러가 **IProvideClassInfo** 인터페이스에 대해 인터페이스를 쿼리합니다. 제공되면 마샬러가 **IProvideClassInfo.GetClassinfo** 에서 반환된 **ITypeInfo** 를 사용하여 인터페이스를 노출하는 클래스의 CLSID를 확인합니다. 마샬러는 CLSID를 사용하여 래퍼에 대한 메타데이터를 찾을 수 있습니다.  
   
-3. 마샬러가 여전히 클래스를 식별할 수 없는 경우 **System.__ComObject**라는 제네릭 래퍼 클래스로 인터페이스를 래핑합니다.  
+3. 마샬러가 여전히 클래스를 식별할 수 없는 경우 **System.__ComObject** 라는 제네릭 래퍼 클래스로 인터페이스를 래핑합니다.  
   
 ## <a name="default-marshaling-for-delegates"></a>대리자에 대한 기본 마샬링  
+
  관리되는 대리자는 호출 메커니즘에 따라 COM 인터페이스 또는 함수 포인터로 마샬링됩니다.  
   
 - 플랫폼 호출의 경우 대리자는 기본적으로 관리되지 않는 함수 포인터로 마샬링됩니다.  
@@ -161,6 +167,7 @@ internal class DelegateTest {
 ```  
   
 ## <a name="default-marshaling-for-value-types"></a>값 형식에 대한 기본 마샬링  
+
  정수 및 부동 소수점 숫자와 같은 대부분의 값 형식은 [blittable](blittable-and-non-blittable-types.md)이며 마샬링할 필요가 없습니다. 다른 [비 blittable](blittable-and-non-blittable-types.md) 형식은 관리되는 메모리와 관리되지 않는 메모리에서 서로 다르게 표현되므로 마샬링해야 합니다. 다른 형식은 상호 운용 경계 간에 명시적 형식 지정도 필요합니다.  
   
  이 섹션에서는 다음과 같은 서식이 지정된 값 형식에 대한 정보를 제공합니다.  
@@ -186,7 +193,8 @@ internal class DelegateTest {
      각 필드에 제공된 <xref:System.Runtime.InteropServices.FieldOffsetAttribute>에 따라 멤버가 배치됨을 나타냅니다.  
   
 ### <a name="value-types-used-in-platform-invoke"></a>플랫폼 호출에서 사용되는 값 형식  
- 다음 예제에서 `Point` 및 `Rect` 형식은 **StructLayoutAttribute**를 사용하여 멤버 레이아웃 정보를 제공합니다.  
+
+ 다음 예제에서 `Point` 및 `Rect` 형식은 **StructLayoutAttribute** 를 사용하여 멤버 레이아웃 정보를 제공합니다.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -287,7 +295,7 @@ End Class
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
- **GetSystemTime**에 해당하는 플랫폼 호출 정의는 다음과 같습니다.  
+ **GetSystemTime** 에 해당하는 플랫폼 호출 정의는 다음과 같습니다.  
   
 ```vb
 Friend Class NativeMethods
@@ -330,6 +338,7 @@ public class Point {
 ```  
   
 ### <a name="value-types-used-in-com-interop"></a>COM Interop에서 사용되는 값 형식  
+
  형식이 지정된 형식을 COM interop 메서드 호출에 전달할 수도 있습니다. 실제로 형식 라이브러리로 내보내는 경우 값 형식이 자동으로 구조체로 변환됩니다. 다음 예제에서 볼 수 있듯이, `Point` 값 형식은 이름이 `Point`인 형식 정의(typedef)가 됩니다. 형식 라이브러리의 다른 위치에 있는 `Point` 값 형식에 대한 모든 참조가 `Point` typedef로 대체됩니다.  
   
  **형식 라이브러리 표현**  
@@ -350,10 +359,11 @@ interface _Graphics {
  값과 참조를 플랫폼 호출로 마샬링하는 데 사용되는 것과 동일한 규칙이 COM 인터페이스를 통해 마샬링할 때도 사용됩니다. 예를 들어 `Point` 값 형식의 인스턴스가 .NET Framework에서 COM으로 전달되는 경우 `Point`가 값으로 전달됩니다. `Point` 값 형식이 참조로 전달되는 경우에는 `Point`에 대한 포인터가 스택에서 전달됩니다. interop 마샬러는 두 방향에서 모두 더 높은 수준의 간접 참조(**Point** \*\*)를 지원하지 않습니다.  
   
 > [!NOTE]
-> 내보낸 형식 라이브러리에서 명시적 레이아웃을 표현할 수 없기 때문에 <xref:System.Runtime.InteropServices.LayoutKind> 열거형 값이 **Explicit**로 설정된 구조체는 COM interop에서 사용할 수 없습니다.  
+> 내보낸 형식 라이브러리에서 명시적 레이아웃을 표현할 수 없기 때문에 <xref:System.Runtime.InteropServices.LayoutKind> 열거형 값이 **Explicit** 로 설정된 구조체는 COM interop에서 사용할 수 없습니다.  
   
 ### <a name="system-value-types"></a>시스템 값 형식  
- <xref:System> 네임스페이스에는 런타임 기본 형식의 boxed 형식을 나타내는 여러 개의 값 형식이 있습니다. 예를 들어 값 형식 <xref:System.Int32?displayProperty=nameWithType> 구조체는 **ELEMENT_TYPE_I4**의 boxed 형식을 나타냅니다. 다른 형식이 지정된 형식처럼 이러한 형식을 구조체로 마샬링하는 대신 boxing하는 기본 형식과 동일한 방식으로 마샬링합니다. 따라서 **System.Int32**는 **long** 형식의 단일 멤버를 포함하는 구조체가 아니라 **ELEMENT_TYPE_I4**로 마샬링됩니다. 다음 표에는 기본 형식의 boxed 표현인 **System** 네임스페이스의 값 형식 목록이 포함되어 있습니다.  
+
+ <xref:System> 네임스페이스에는 런타임 기본 형식의 boxed 형식을 나타내는 여러 개의 값 형식이 있습니다. 예를 들어 값 형식 <xref:System.Int32?displayProperty=nameWithType> 구조체는 **ELEMENT_TYPE_I4** 의 boxed 형식을 나타냅니다. 다른 형식이 지정된 형식처럼 이러한 형식을 구조체로 마샬링하는 대신 boxing하는 기본 형식과 동일한 방식으로 마샬링합니다. 따라서 **System.Int32** 는 **long** 형식의 단일 멤버를 포함하는 구조체가 아니라 **ELEMENT_TYPE_I4** 로 마샬링됩니다. 다음 표에는 기본 형식의 boxed 표현인 **System** 네임스페이스의 값 형식 목록이 포함되어 있습니다.  
   
 |시스템 값 형식|요소 형식|  
 |-----------------------|------------------|  
@@ -382,7 +392,7 @@ interface _Graphics {
 |<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
- 다음 코드에서는 Stdole2 형식 라이브러리에 있는 관리되지 않는 형식 **DATE**, **GUID**, **DECIMAL** 및 **OLE_COLOR**의 정의를 보여 줍니다.  
+ 다음 코드에서는 Stdole2 형식 라이브러리에 있는 관리되지 않는 형식 **DATE**, **GUID**, **DECIMAL** 및 **OLE_COLOR** 의 정의를 보여 줍니다.  
   
 #### <a name="type-library-representation"></a>형식 라이브러리 표현  
   

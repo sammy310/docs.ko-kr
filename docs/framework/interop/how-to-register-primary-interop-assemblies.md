@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-ms.openlocfilehash: 09b283712a66805669154c720dff5c2c5f910bf4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4961b4bc57d25f9fa83cf40f82b153aa93592b55
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547182"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267015"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>방법: 주 Interop 어셈블리 등록
 
@@ -39,9 +39,10 @@ ms.locfileid: "90547182"
 
      **regasm** *assemblyname*
 
-     이 명령에서 *assemblyname*은 등록된 어셈블리의 파일 이름입니다. Regasm.exe는 원래 형식 라이브러리와 동일한 레지스트리 키 아래에 주 interop 어셈블리에 대한 항목을 추가합니다.
+     이 명령에서 *assemblyname* 은 등록된 어셈블리의 파일 이름입니다. Regasm.exe는 원래 형식 라이브러리와 동일한 레지스트리 키 아래에 주 interop 어셈블리에 대한 항목을 추가합니다.
 
 ## <a name="example"></a>예제
+
  다음 예제에서는 `CompanyA.UtilLib.dll` 주 interop 어셈블리를 등록합니다.
 
 ```console

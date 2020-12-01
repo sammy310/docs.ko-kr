@@ -14,16 +14,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-ms.openlocfilehash: 482a973631e899b8d4bfc4640eef1ea26173605e
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: bdffa9417a7d52e9c825ca6455997b9bfa7408e4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104925"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271527"
 ---
 # <a name="how-to-build-a-net-framework-single-file-assembly"></a>방법: .NET Framework 단일 파일 어셈블리 빌드
 
-가장 단순한 형식의 어셈블리인 단일 파일 어셈블리에는 형식 정보 및 구현과 [어셈블리 매니페스트](../../standard/assembly/manifest.md)가 포함되어 있습니다. 명령줄 컴파일러 또는 Visual Studio를 사용하여 .NET Framework를 대상으로 하는 단일 파일 어셈블리를 만들 수 있습니다. 기본적으로 컴파일러는 확장명이 *.exe*인 어셈블리 파일을 만듭니다.
+가장 단순한 형식의 어셈블리인 단일 파일 어셈블리에는 형식 정보 및 구현과 [어셈블리 매니페스트](../../standard/assembly/manifest.md)가 포함되어 있습니다. 명령줄 컴파일러 또는 Visual Studio를 사용하여 .NET Framework를 대상으로 하는 단일 파일 어셈블리를 만들 수 있습니다. 기본적으로 컴파일러는 확장명이 *.exe* 인 어셈블리 파일을 만듭니다.
 
 > [!NOTE]
 > C# 및 Visual Basic용 Visual Studio는 단일 파일 어셈블리를 만드는 경우에만 사용할 수 있습니다. 다중 파일 어셈블리를 만들려면 명령줄 컴파일러나 Visual C++를 사용해야 합니다.
@@ -36,9 +36,9 @@ ms.locfileid: "85104925"
 
 \<*compiler command*> \<*module name*>
 
-이 명령에서 *compiler command*는 코드 모듈에서 사용되는 언어에 대한 컴파일러 명령이고, *module name*은 어셈블리로 컴파일할 코드 모듈의 이름입니다.
+이 명령에서 *compiler command* 는 코드 모듈에서 사용되는 언어에 대한 컴파일러 명령이고, *module name* 은 어셈블리로 컴파일할 코드 모듈의 이름입니다.
 
-다음 예제는 `myCode`라는 코드 모듈에서 *myCode.exe*라는 어셈블리를 만듭니다.
+다음 예제는 `myCode`라는 코드 모듈에서 *myCode.exe* 라는 어셈블리를 만듭니다.
 
 ```csharp
 csc myCode.cs
@@ -54,9 +54,9 @@ vbc myCode.vb
 
 \<*compiler command*> **/out:** \<*file name*> \<*module name*>
 
-이 명령에서 *compiler command*는 코드 모듈에서 사용되는 언어에 대한 컴파일러 명령이고, *file name*은 출력 파일 이름이고, *module name*은 어셈블리로 컴파일할 코드 모듈의 이름입니다.
+이 명령에서 *compiler command* 는 코드 모듈에서 사용되는 언어에 대한 컴파일러 명령이고, *file name* 은 출력 파일 이름이고, *module name* 은 어셈블리로 컴파일할 코드 모듈의 이름입니다.
 
-다음 예제는 `myCode`라는 코드 모듈에서 *myAssembly.exe*라는 어셈블리를 만듭니다.
+다음 예제는 `myCode`라는 코드 모듈에서 *myAssembly.exe* 라는 어셈블리를 만듭니다.
 
 ```csharp
 csc -out:myAssembly.exe myCode.cs
@@ -67,15 +67,16 @@ vbc -out:myAssembly.exe myCode.vb
 ```
 
 ## <a name="create-library-assemblies"></a>라이브러리 어셈블리 만들기
+
  라이브러리 어셈블리는 클래스 라이브러리와 비슷합니다. 다른 어셈블리에서 참조되는 형식을 포함하지만 실행을 시작할 진입점이 없습니다.
 
 라이브러리 어셈블리를 만들려면 명령 프롬프트에서 다음 명령을 입력합니다.
 
 \<*compiler command*> **-t:library** \<*module name*>
 
-이 명령에서 *compiler command*는 코드 모듈에서 사용되는 언어에 대한 컴파일러 명령이고, *module name*은 어셈블리로 컴파일할 코드 모듈의 이름입니다. **-out:** 옵션 등의 다른 컴파일러 옵션을 사용할 수도 있습니다.
+이 명령에서 *compiler command* 는 코드 모듈에서 사용되는 언어에 대한 컴파일러 명령이고, *module name* 은 어셈블리로 컴파일할 코드 모듈의 이름입니다. **-out:** 옵션 등의 다른 컴파일러 옵션을 사용할 수도 있습니다.
 
-다음 예제는 `myCode`라는 코드 모듈에서 *myCodeAssembly.dll*이라는 라이브러리 어셈블리를 만듭니다.
+다음 예제는 `myCode`라는 코드 모듈에서 *myCodeAssembly.dll* 이라는 라이브러리 어셈블리를 만듭니다.
 
 ```csharp
 csc -out:myCodeLibrary.dll -t:library myCode.cs

@@ -8,13 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
-ms.openlocfilehash: eae28d6746cd89d98b659b9eb957f158e1319190
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ece5db8fdf803ce2f450ebeaaad66a379cfbf992
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620822"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268913"
 ---
 # <a name="passing-structures"></a>구조체 전달
+
 관리되지 않는 여러 함수에서는 함수, 구조체 멤버(Visual Basic의 사용자 정의 형식) 또는 관리 코드에 정의된 클래스 멤버에 매개 변수로 전달해야 합니다. 플랫폼 호출을 사용하여 구조체 또는 클래스를 비관리 코드에 전달할 때 원래 레이아웃과 맞춤을 유지하기 위해 추가 정보를 제공해야 합니다. 이 항목에서는 형식이 지정된 유형을 정의하는 데 사용하는 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 소개합니다. 관리되는 구조체와 클래스의 경우 **LayoutKind** 열거형에서 제공하는 예측 가능한 여러 레이아웃 동작 중에서 선택할 수 있습니다.  
   
  이 항목에 제시된 개념의 핵심은 구조체와 클래스 형식 사이에 중요한 차이점이 있다는 것입니다. 구조체는 값 형식이고 클래스는 참조 형식입니다. 클래스는 항상 한 수준 이상의 메모리 간접 참조(값에 대한 포인터)를 제공합니다. 다음 표의 첫 번째 열에 있는 시그니처를 통해 표시된 대로 관리되지 않는 함수는 간접 참조를 요구하는 경우가 많으므로 이 차이점은 중요합니다. 나머지 열에 있는 클래스 선언과 관리된 구조체는 선언에서 간접 참조의 수준을 조정할 수 있는 정도를 보여 줍니다. 선언은 Visual Basic과 Visual C# 모두용으로 제공됩니다.  
@@ -34,7 +36,8 @@ ms.locfileid: "85620822"
 - 관리되지 않는 함수에서 두 수준의 간접 참조를 요구하는 경우 참조 형식으로 전달된 클래스를 사용합니다.  
   
 ## <a name="declaring-and-passing-structures"></a>구조체 선언 및 전달  
- 다음 예제에서는 관리 코드에서 `Point` 및 `Rect` 구조체를 정의하고, User32.dll 파일의 **PtInRect** 함수에 매개 변수로 형식을 전달하는 방법을 보여 줍니다. **PtInRect**에는 다음과 같은 관리되지 않은 시그니처가 있습니다.  
+
+ 다음 예제에서는 관리 코드에서 `Point` 및 `Rect` 구조체를 정의하고, User32.dll 파일의 **PtInRect** 함수에 매개 변수로 형식을 전달하는 방법을 보여 줍니다. **PtInRect** 에는 다음과 같은 관리되지 않은 시그니처가 있습니다.  
   
 ```cpp
 BOOL PtInRect(const RECT *lprc, POINT pt);  
@@ -88,7 +91,8 @@ internal static class NativeMethods
 ```  
   
 ## <a name="declaring-and-passing-classes"></a>클래스 선언 및 전달  
- 클래스에 고정 멤버 레이아웃이 있는 한 관리되지 않은 DLL 함수에 클래스 멤버를 전달할 수 있습니다. 다음 예제에서는 `MySystemTime` 클래스의 멤버를 전달하는 방법을 설명합니다. 이 멤버는 User32.dll 파일의 **GetSystemTime**에 순차적으로 정의됩니다. **GetSystemTime**에는 관리되지 않는 다음과 같은 시그니처가 있습니다.  
+
+ 클래스에 고정 멤버 레이아웃이 있는 한 관리되지 않은 DLL 함수에 클래스 멤버를 전달할 수 있습니다. 다음 예제에서는 `MySystemTime` 클래스의 멤버를 전달하는 방법을 설명합니다. 이 멤버는 User32.dll 파일의 **GetSystemTime** 에 순차적으로 정의됩니다. **GetSystemTime** 에는 관리되지 않는 다음과 같은 시그니처가 있습니다.  
   
 ```cpp
 void GetSystemTime(SYSTEMTIME* SystemTime);  

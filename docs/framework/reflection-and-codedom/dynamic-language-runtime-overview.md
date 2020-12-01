@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-ms.openlocfilehash: 2272bc60af35e3cdec3e1a71bbc6516565b4ec6e
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: a36d6704b36b5006f19e21932797f21af849e55a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475153"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266833"
 ---
 # <a name="dynamic-language-runtime-overview"></a>동적 언어 런타임 개요
 
@@ -55,24 +55,31 @@ DLR을 사용하여 개발된 언어의 예는 다음과 같습니다.
 - IronRuby. [IronRuby](http://ironruby.net/) 웹 사이트에서 오픈 소스 소프트웨어로 제공됩니다.
 
 ## <a name="primary-dlr-advantages"></a>기본 DLR 장점
+
  DLR은 다음과 같은 장점을 제공합니다.
 
 ### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>.NET Framework에 대한 동적 언어 포팅 간소화
- DLR을 사용하면 언어 구현자가 어휘 분석기, 구문 분석기, 의미 체계 분석기, 코드 생성기 및 기존에는 직접 만들어야 했던 기타 도구를 만들 필요가 없습니다. DLR을 사용하려면 언어가 트리 모양 구조의 언어 수준 코드, 런타임 도우미 루틴 및 <xref:System.Dynamic.IDynamicMetaObjectProvider> 인터페이스를 구현하는 선택적 동적 개체를 나타내는 *식 트리*를 생성해야 합니다. DLR 및 .NET Framework는 많은 코드 분석 및 코드 생성 작업을 자동화합니다. 이를 통해 언어 구현자는 고유한 언어 기능에 집중할 수 있습니다.
+
+ DLR을 사용하면 언어 구현자가 어휘 분석기, 구문 분석기, 의미 체계 분석기, 코드 생성기 및 기존에는 직접 만들어야 했던 기타 도구를 만들 필요가 없습니다. DLR을 사용하려면 언어가 트리 모양 구조의 언어 수준 코드, 런타임 도우미 루틴 및 <xref:System.Dynamic.IDynamicMetaObjectProvider> 인터페이스를 구현하는 선택적 동적 개체를 나타내는 *식 트리* 를 생성해야 합니다. DLR 및 .NET Framework는 많은 코드 분석 및 코드 생성 작업을 자동화합니다. 이를 통해 언어 구현자는 고유한 언어 기능에 집중할 수 있습니다.
 
 ### <a name="enables-dynamic-features-in-statically-typed-languages"></a>정적 형식의 언어에서 동적 기능 사용
+
  C# 및 Visual Basic과 같은 기존 .NET Framework 언어는 동적 개체를 만들고 정적 형식의 개체와 함께 사용할 수 있습니다. 예를 들어 C# 및 Visual Basic은 HTML, DOM(문서 개체 모델) 및 .NET 리플렉션에 대해 동적 개체를 사용할 수 있습니다.
 
 ### <a name="provides-future-benefits-of-the-dlr-and-net-framework"></a>미래 DLR 및 .NET Framework의 장점 제공
+
  DLR을 사용하여 구현된 언어는 미래 DLR 및 .NET Framework의 향상된 기능을 활용할 수 있습니다. 예를 들어 .NET Framework가 향상된 가비지 수집기나 더 빠른 어셈블리 로드 시간을 제공하는 새로운 버전을 릴리스할 경우 DLR을 사용하여 구현된 언어도 이러한 장점을 활용할 수 있습니다. DLR이 향상된 컴파일과 같은 최적화를 추가하는 경우 DLR을 사용하여 구현된 모든 언어의 성능도 향상됩니다.
 
 ### <a name="enables-sharing-of-libraries-and-objects"></a>라이브러리 및 개체의 공유 구현
+
  하나의 언어로 구현된 개체 및 라이브러리가 다른 언어에서 사용될 수 있습니다. DLR을 통해 정적 형식의 언어와 동적 언어 간에 상호 운용이 가능해집니다. 예를 들어 C#은 동적 언어로 작성된 라이브러리를 사용하는 동적 개체를 선언할 수 있습니다. 동시에 동적 언어는 .NET Framework의 라이브러리를 사용할 수 있습니다.
 
 ### <a name="provides-fast-dynamic-dispatch-and-invocation"></a>빠른 동적 디스패치 및 호출 제공
+
  DLR은 고급 다형적 캐싱을 지원함으로써 동적 작업의 빠른 실행을 제공합니다. DLR은 개체를 사용하는 작업을 필요한 런타임 구현에 바인딩하는 규칙을 만들고 나서 이러한 규칙을 캐시하여 같은 개체 형식에서 같은 코드를 연속 실행하는 동안 리소스가 많이 사용하는 바인딩 계산을 피합니다.
 
 ## <a name="dlr-architecture"></a>DLR 아키텍처
+
  다음 그림은 동적 언어 런타임의 아키텍처를 보여 줍니다.
 
  ![동적 언어 런타임 아키텍처 개요](./media/dlr-archoverview.png "DLR_ArchOverview") DLR 아키텍처
@@ -81,13 +88,14 @@ DLR을 사용하여 개발된 언어의 예는 다음과 같습니다.
 
 - 식 트리. DLR은 식 트리를 사용하여 언어 의미 체계를 나타냅니다. 이 목적으로 DLR은 제어 흐름, 할당 및 기타 언어 모델링 노드를 포함하도록 LINQ 식 트리를 확장했습니다. 자세한 내용은 [식 트리(C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) 또는 [식 트리(Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)를 참조하세요.
 
-- 호출 사이트 캐싱. *동적 호출 사이트*는 코드에서 동적 개체에 대해 `a + b` 또는 `a.b()` 같은 작업을 수행하는 위치입니다. DLR은 `a` 및 `b`의 특징(대개 이러한 개체의 형식)과 작업 정보를 캐시합니다. 해당 작업이 이전에 수행된 적이 있으면 DLR은 빠른 디스패치를 위해 캐시에서 모든 필요한 정보를 검색합니다.
+- 호출 사이트 캐싱. *동적 호출 사이트* 는 코드에서 동적 개체에 대해 `a + b` 또는 `a.b()` 같은 작업을 수행하는 위치입니다. DLR은 `a` 및 `b`의 특징(대개 이러한 개체의 형식)과 작업 정보를 캐시합니다. 해당 작업이 이전에 수행된 적이 있으면 DLR은 빠른 디스패치를 위해 캐시에서 모든 필요한 정보를 검색합니다.
 
 - 동적 개체 상호 운용성. DLR은 동적 개체와 개체를 나타내고 언어 구현자 및 동적 라이브러리 작성자가 사용할 수 있는 클래스 및 인터페이스 집합을 제공합니다. 이러한 클래스 및 인터페이스에는 <xref:System.Dynamic.IDynamicMetaObjectProvider>, <xref:System.Dynamic.DynamicMetaObject>, <xref:System.Dynamic.DynamicObject> 및 <xref:System.Dynamic.ExpandoObject>가 포함됩니다.
 
 DLR은 호출 사이트에서 바인더를 사용하여 .NET Framework뿐 아니라 Silverlight 및 COM이 포함된 다른 인프라 및 서비스와 통신합니다. 바인더는 언어의 의미 체계를 캡슐화하고 호출 사이트에서 식 트리를 사용하여 작업을 수행하는 방법을 지정합니다. 이를 통해 동적 언어와 정적 형식의 언어가 DLR을 사용하여 라이브러리를 공유하고 DLR이 지원하는 모든 기술에 액세스할 수 있습니다.
 
 ## <a name="dlr-documentation"></a>DLR 설명서
+
  오픈 소스 버전의 DLR을 사용하여 언어에 동적 동작을 추가하는 방법이나 .NET Framework에 동적 언어를 사용할 수 있도록 하는 방법에 대한 자세한 내용은 GitHub의 [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) 리포지토리에 있는 설명서를 참조하세요.
 
 ## <a name="see-also"></a>참조

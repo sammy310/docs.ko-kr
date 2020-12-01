@@ -15,14 +15,15 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-ms.openlocfilehash: 386311228abb08600acc249e80702c724c137900
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: c2344dd0a7d35781aea52b24694f2cfee70a6d41
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609267"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270460"
 ---
 # <a name="service-application-programming-architecture"></a>서비스 애플리케이션 프로그래밍 아키텍처
+
 Windows 서비스 애플리케이션은 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 클래스에서 상속되는 클래스를 기반으로 합니다. 이 클래스의 메서드를 재정의하고 이 메서드에서 서비스 동작 방식을 결정하는 기능을 정의합니다.  
   
  서비스 만들기와 관련된 기본 클래스는 다음과 같습니다.  
@@ -34,6 +35,7 @@ Windows 서비스 애플리케이션은 <xref:System.ServiceProcess.ServiceBase?
  또한 <xref:System.ServiceProcess.ServiceController>라는 클래스를 사용하여 서비스 자체를 조작할 수 있습니다. 이 클래스는 서비스 만들기와는 관련이 없지만 서비스를 시작 및 중지하고 서비스에 명령을 전달하고 일련의 열거형을 반환하는 데 사용할 수 있습니다.  
   
 ## <a name="defining-your-services-behavior"></a>서비스 동작 정의  
+
  서비스 클래스에서 기본 클래스 함수를 재정의하여 서비스 제어 관리자에서 서비스 상태를 변경하는 경우 어떤 작업을 수행할지 결정합니다. <xref:System.ServiceProcess.ServiceBase> 클래스는 다음과 같은 메서드를 노출하며, 이들 메서드를 재정의하여 사용자 지정 동작을 추가할 수 있습니다.  
   
 |메서드|재정의 목적|  

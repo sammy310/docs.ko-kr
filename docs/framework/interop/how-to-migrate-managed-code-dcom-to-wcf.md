@@ -3,13 +3,15 @@ title: '방법: 관리 코드 DCOM을 WCF로 마이그레이션'
 description: 서버와 클라이언트 간 DCOM(Distributed Component Object Model) 관리 코드 호출을 WCF(Windows Communication Foundation)로 마이그레이션합니다.
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-ms.openlocfilehash: cc6ac1dd01e17bb184d1f1faca372134d6130d33
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: eb84b8071d8dec5d3e70a2f1903f84ee64c31b08
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619093"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274844"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>방법: 관리 코드 DCOM을 WCF로 마이그레이션
+
 WCF(Windows Communication Foundation)는 분산 환경에서 서버와 클라이언트 간에 관리 코드 호출에 대해 DCOM(Distributed Component Object Model)보다 권장되는 안전한 선택 항목입니다. 이 문서에서는 다음과 같은 시나리오에 대해 코드를 DCOM에서 WCF로 마이그레이션하는 방법을 보여 줍니다.  
   
 - 원격 서비스에서 값 방식으로 클라이언트에 개체를 반환합니다.  
@@ -23,6 +25,7 @@ WCF(Windows Communication Foundation)는 분산 환경에서 서버와 클라이
  WCF 서비스와 해당 서비스에 대한 클라이언트를 만드는 방법에 대한 자세한 내용은 [기본 WCF 프로그래밍](../wcf/basic-wcf-programming.md), [서비스 디자인 및 구현](../wcf/designing-and-implementing-services.md) 및 [클라이언트 빌드](../wcf/building-clients.md)를 참조하세요.  
   
 ## <a name="dcom-example-code"></a>DCOM 예제 코드  
+
  이러한 시나리오에서 WCF를 사용하여 설명한 DCOM 인터페이스의 구조는 다음과 같습니다.  
   
 ```csharp  
@@ -47,6 +50,7 @@ public class Customer
 ```  
   
 ## <a name="the-service-returns-an-object-by-value"></a>서비스에서 값 방식으로 개체 반환  
+
  이 시나리오에서는 서비스를 호출하고 해당 메서드가 개체를 반환한 다음 서버에서 값 방식으로 클라이언트에 전달됩니다. 이 시나리오는 다음과 같은 COM 호출을 나타냅니다.  
   
 ```csharp  
@@ -59,6 +63,7 @@ public interface IRemoteService
  이 시나리오에서 클라이언트는 원격 서비스에서 개체의 역직렬화된 복사본을 받습니다. 클라이언트는 서비스를 콜백하지 않고 이 로컬 복사본과 상호 작용할 수 있습니다.  즉, 로컬 복사본에 대해 메서드를 호출할 때 서비스가 어떤 방식으로도 관련되지 않음을 클라이언트가 확신할 수 있습니다. WCF는 항상 값 방식으로 서비스에서 개체를 반환하므로, 다음 단계에서는 일반 WCF 서비스를 만드는 방법을 설명합니다.  
   
 ### <a name="step-1-define-the-wcf-service-interface"></a>1단계: WCF 서비스 인터페이스 정의  
+
  WCF 서비스에 대한 공용 인터페이스를 정의하고 [<xref:System.ServiceModel.ServiceContractAttribute>] 특성으로 표시합니다.  클라이언트에 노출하려는 메서드를 [<xref:System.ServiceModel.OperationContractAttribute>] 특성으로 표시합니다. 다음 예제에서는 이러한 특성을 사용하여 클라이언트가 호출할 수 있는 서버 쪽 인터페이스 및 인터페이스 메서드를 식별하는 방법을 보여 줍니다. 이 시나리오에 사용되는 메서드는 굵게 표시됩니다.  
   
 ```csharp  
@@ -78,6 +83,7 @@ public interface ICustomerManager
 ```  
   
 ### <a name="step-2-define-the-data-contract"></a>2단계: 데이터 계약 정의  
+
  다음에는 서비스와 해당 클라이언트 간에 데이터를 교환하는 방법을 설명하는 서비스에 대한 데이터 계약을 만들어야 합니다.  데이터 계약에 설명된 클래스는 [<xref:System.Runtime.Serialization.DataContractAttribute>] 특성으로 표시해야 합니다. 클라이언트와 서버 둘 다에 표시할 개별 속성 또는 필드는 [<xref:System.Runtime.Serialization.DataMemberAttribute>] 특성으로 표시되어야 합니다. 데이터 계약의 클래스에서 파생된 형식을 허용하려면 [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 특성을 사용하여 식별해야 합니다. WCF는 서비스 인터페이스의 형식 및 알려진 형식으로 식별된 형식만 직렬화하거나 역직렬화합니다. 알려진 형식이 아닌 형식을 사용하려고 하면 예외가 발생합니다.  
   
  데이터 계약에 대한 자세한 내용은 [데이터 계약](../wcf/samples/data-contracts.md)을 참조하세요.  
@@ -120,6 +126,7 @@ public class Address
 ```  
   
 ### <a name="step-3-implement-the-wcf-service"></a>3단계: WCF 서비스 구현  
+
  다음에는 이전 단계에서 정의한 인터페이스를 구현하는 WCF 서비스 클래스를 구현해야 합니다.  
   
 ```csharp  
@@ -137,6 +144,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-4-configure-the-service-and-the-client"></a>4단계: 서비스 및 클라이언트 구성  
+
  WCF 서비스를 실행하려면 특정 WCF 바인딩을 사용하여 특정 URL에 해당 서비스 인터페이스를 노출하는 엔드포인트를 선언해야 합니다. 바인딩은 클라이언트와 서버가 통신하는 데 필요한 전송, 인코딩 및 프로토콜 세부 정보를 지정합니다. 일반적으로 서비스 프로젝트의 구성 파일(web.config)에 바인딩을 추가합니다. 다음은 예제 서비스에 대한 바인딩 항목을 보여 줍니다.  
   
 ```xml  
@@ -169,6 +177,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-5-run-the-service"></a>5단계: 서비스 실행  
+
  끝으로, 서비스 앱에 다음 줄을 추가하고 앱을 시작하여 콘솔 애플리케이션에서 자체 호스트할 수 있습니다. WCF 서비스 애플리케이션을 호스트하는 다른 방법에 대한 자세한 내용은 [호스팅 서비스](../wcf/hosting-services.md)를 참조하세요.  
   
 ```csharp  
@@ -177,6 +186,7 @@ customerServiceHost.Open();
 ```  
   
 ### <a name="step-6-call-the-service-from-the-client"></a>6단계: 클라이언트에서 서비스 호출  
+
  클라이언트에서 서비스를 호출하려면 서비스에 대한 채널 팩터리를 만들고 채널을 요청해야 합니다. 그러면 클라이언트에서 직접 `GetCustomer` 메서드를 호출할 수 있습니다. 채널은 서비스의 인터페이스를 구현하고 내부 요청/응답 논리를 자동으로 처리합니다.  해당 메서드 호출의 반환 값은 역직렬화된 서비스 응답 복사본입니다.  
   
 ```csharp  
@@ -187,6 +197,7 @@ Customer customer = service.GetCustomer("Mary", "Smith");
 ```  
   
 ## <a name="the-client-sends-a-by-value-object-to-the-server"></a>클라이언트에서 값 방식으로 서버에 개체 전송  
+
  이 시나리오에서는 클라이언트가 값 방식으로 서버에 개체를 전송합니다. 즉, 서버가 개체의 역직렬화된 복사본을 받게 됩니다.  서버는 해당 복사본에 대해 메서드를 호출할 수 있으며 클라이언트 코드에 대한 콜백이 없음을 확신할 수 있습니다. 앞에서 설명한 것처럼 데이터의 일반 WCF 교환은 값 방식입니다.  이 경우 이러한 개체 중 하나에 대해 메서드를 호출하면 로컬에서만 실행되며 클라이언트에서 코드를 호출하지 않습니다.  
   
  이 시나리오는 다음과 같은 COM 메서드 호출을 나타냅니다.  
@@ -212,6 +223,7 @@ public interface ICustomerManager
 ```  
   
 ### <a name="add-code-to-the-client-that-sends-a-by-value-object"></a>클라이언트에 값 방식으로 개체를 전송하는 코드 추가  
+
  다음 코드에서는 클라이언트가 새로운 값 방식 customer 개체를 만들고, `ICustomerManager` 서비스와 통신하는 채널을 만든 다음 customer 개체를 전송하는 방법을 보여 줍니다.  
   
  customer 개체가 직렬화되어 서비스로 전송되며, 서비스에서 해당 개체의 새 복사본으로 역직렬화됩니다.  이 개체에 대한 서비스를 호출하는 모든 메서드는 서버에서 로컬로만 실행됩니다. 이 코드는 파생된 형식(`PremiumCustomer`)을 보내는 것을 보여줍니다.  서비스 계약에는 `Customer` 개체가 필요하지만 서비스 데이터 계약에서 [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 특성을 사용하여 `PremiumCustomer`도 허용됨을 나타냅니다.  WCF에서 이 서비스 인터페이스를 통해 다른 형식을 직렬화하거나 역직렬화하려고 하면 실패합니다.  
@@ -232,6 +244,7 @@ customerManager.StoreCustomer(customer);
 ```  
   
 ## <a name="the-service-returns-an-object-by-reference"></a>서비스에서 참조 방식으로 개체 반환  
+
  이 시나리오에서는 클라이언트 앱이 원격 서비스를 호출하고 해당 메서드가 개체를 반환한 다음 서비스에서 참조 방식으로 클라이언트에 전달됩니다.  
   
  앞에서 설명한 것처럼 WCF 서비스는 항상 값 방식으로 개체를 반환합니다.  그러나 <xref:System.ServiceModel.EndpointAddress10> 클래스를 사용하여 비슷한 결과를 얻을 수 있습니다.  <xref:System.ServiceModel.EndpointAddress10>은 서버에서 세션 참조 방식 개체를 가져오기 위해 클라이언트가 사용할 수 있는 직렬화 가능 값 방식 개체입니다.  
@@ -250,6 +263,7 @@ public interface IRemoteService
 ```  
   
 ### <a name="step-1-define-the-sessionful-wcf-service-interface-and-implementation"></a>1단계: 세션 WCF 서비스 인터페이스와 구현 정의  
+
  먼저 세션 개체를 포함하는 WCF 서비스 인터페이스를 정의합니다.  
   
  이 코드에서 세션 개체는 `ServiceContract` 특성으로 표시됩니다.이 경우 개체는 일반 WCF 서비스 인터페이스로 식별됩니다.  또한 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> 속성이 세션 서비스를 나타내도록 설정됩니다.  
@@ -290,6 +304,7 @@ public interface ISessionBoundObject
 ```  
   
 ### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a>2단계: 세션 개체에 대한 WCF 팩터리 서비스 정의  
+
  세션 개체를 만드는 서비스를 정의 및 구현해야 합니다. 다음 코드에서는 이 작업을 수행하는 방법을 보여 줍니다. 이 코드에서는 <xref:System.ServiceModel.EndpointAddress10> 개체를 반환하는 다른 WCF 서비스를 만듭니다.  이는 세션 개체를 만드는 데 사용할 수 있는 직렬화 가능한 형식의 엔드포인트입니다.  
   
 ```csharp  
@@ -322,6 +337,7 @@ public class SessionBoundFactory : ISessionBoundFactory
 ```  
   
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>3단계: WCF 서비스 구성 및 시작  
+
  이러한 서비스를 호스트하려면 서버의 구성 파일(web.config)에 다음 내용을 추가해야 합니다.  
   
 1. 세션 개체의 엔드포인트를 설명하는 `<client>` 섹션을 추가합니다.  이 시나리오에서는 서버가 클라이언트 역할도 하며 이 기능을 사용할 수 있도록 구성해야 합니다.  
@@ -368,6 +384,7 @@ sessionBoundServiceHost.Open();
 ```  
   
 ### <a name="step-4-configure-the-client-and-call-the-service"></a>4단계: 클라이언트 구성 및 서비스 호출  
+
  프로젝트의 애플리케이션 구성 파일(app.config)에 다음 항목을 만들어 WCF 서비스와 통신하도록 클라이언트를 구성합니다.  
   
 ```xml  

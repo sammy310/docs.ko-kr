@@ -2,17 +2,19 @@
 title: IPv6 라우팅
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: 93300107710164d755d578633b7fa6651f984987
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 646eef4ec178472a99f60de4785fd53381296c3a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047781"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258337"
 ---
 # <a name="ipv6-routing"></a>IPv6 라우팅
+
 유연한 라우팅 메커니즘은 IPv6의 장점입니다. IPv4 네트워크 ID가 할당된 방식으로 인해 인터넷 백본에 있는 라우터에서 대규모 라우팅 테이블을 유지해야 합니다. 이러한 라우터는 인터넷의 모든 노드로 방향이 지정되는 패킷을 전달하기 위해 모든 경로를 알고 있어야 합니다. 주소를 집계하는 기능을 통해 IPv6에서는 유연하게 주소를 지정할 수 있고 라우팅 테이블의 크기가 대폭 감소됩니다. 이 새로운 주소 지정 아키텍처에서는 적절하게 메시지를 전달하기 위해 중간 라우터를 통해 네트워크의 로컬 부분만 계속 추적해야 합니다.  
   
 ## <a name="neighbor-discovery"></a>네트워크 환경 검색  
+
  네트워크 환경 검색에서 제공하는 일부 기능은 다음과 같습니다.  
   
 - 라우터 검색. 이 기능을 통해 로컬 라우터를 식별할 수 있습니다.  

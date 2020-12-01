@@ -6,15 +6,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
-ms.openlocfilehash: 91f64775e2f401be9b740fe9e4c41e1087eb9617
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8931cdc471b957447277c333ba482a0cec0e6aa5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502511"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265741"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>방법: 글로벌 프록시 선택 재정의
-이 예제에서는 글로벌 프록시 선택을 포트 80의 `alternateproxy`라는 프록시 서버로 재정의하는 **WebRequest**를 `www.contoso.com`에 보냅니다.  
+
+이 예제에서는 글로벌 프록시 선택을 포트 80의 `alternateproxy`라는 프록시 서버로 재정의하는 **WebRequest** 를 `www.contoso.com`에 보냅니다.  
   
 ## <a name="example"></a>예제  
   
@@ -29,6 +30,7 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
 ```  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
  이 예제에는 다음 사항이 필요합니다.  
   
 - **System.Net** 네임스페이스에 대한 [`using` 지시문](../../csharp/language-reference/keywords/using-directive.md)  
