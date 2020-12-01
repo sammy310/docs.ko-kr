@@ -4,12 +4,12 @@ description: Apache Spark 작업자 및 사용자 정의 함수 이진 파일용
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 19ecd4736baaf789a409229d35a6946c6021db45
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: c777fdb26045c62317b49259fdde974f43ba5c0d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688191"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293769"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Apache Spark 작업자 및 사용자 정의 함수 이진 파일용 .NET 배포
 
@@ -30,6 +30,7 @@ ms.locfileid: "94688191"
 | DOTNET_WORKER_DEBUG          | <a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">UDF를 디버그</a>하려면 <code>spark-submit</code>를 실행하기 전에 이 환경 변수를 <code>1</code>로 설정합니다.
 
 ### <a name="parameter-options"></a>매개 변수 옵션
+
 Spark 애플리케이션이 [번들로 제공](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies)되면 `spark-submit`을 사용하여 시작할 수 있습니다. 다음 표에서는 일반적으로 사용되는 일부 옵션을 보여 줍니다.
 
 | 매개 변수 이름        | 설명
@@ -47,17 +48,21 @@ Spark 애플리케이션이 [번들로 제공](https://spark.apache.org/docs/lat
 > `spark-submit`를 사용하여 애플리케이션을 시작하는 경우 `application-jar` 전에 모든 `--options`을 지정합니다. 지정하지 않으면 무시됩니다. 자세한 내용은 [`spark-submit` 옵션](https://spark.apache.org/docs/latest/submitting-applications.html) 및 [YARN에서 Spark 실행 세부 정보](https://spark.apache.org/docs/latest/running-on-yarn.html)을 참조하세요.
 
 ## <a name="frequently-asked-questions"></a>질문과 대답
+
 ### <a name="when-i-run-a-spark-app-with-udfs-i-get-a-filenotfoundexception-error-what-should-i-do"></a>UDF를 사용하여 Spark 앱을 실행하면 `FileNotFoundException' 오류가 발생합니다. 어떻게 해야 합니까?
+
 > **오류:** [오류] [작업 실행자] [0] ProcessStream()이 다음 예외를 나타내며 실패함: System.IO.FileNotFoundException: 어셈블리 'mySparkApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' 파일을 찾을 수 없음: 'mySparkApp.dll'
 
 **대답:** `DOTNET_ASSEMBLY_SEARCH_PATHS` 환경 변수가 올바르게 설정되었는지 확인하세요. `mySparkApp.dll`이 포함된 경로여야 합니다.
 
 ### <a name="after-i-upgraded-my-net-for-apache-spark-version-and-reset-the-dotnet_worker_dir-environment-variable-why-do-i-still-get-the-following-ioexception-error"></a>Apache Spark 버전의 .NET을 업그레이드하고 `DOTNET_WORKER_DIR` 환경 변수를 다시 설정한 후에도 다음 `IOException` 오류가 계속 발생하는 이유는 무엇인가요?
+
 > **오류:** 11.0 단계에서 작업 0.0 손실(TID 24, localhost, 실행기 드라이버): java.io.IOException: "Microsoft.Spark.Worker.exe" 프로그램을 실행할 수 없음: CreateProcess error=2, 지정한 파일을 시스템에서 찾을 수 없습니다.
 
 **대답:** 최신 환경 변수 값을 사용할 수 있도록 PowerShell 창(또는 기타 명령 창)을 먼저 다시 시작하세요. 그런 다음, 프로그램을 시작합니다.
 
 ### <a name="after-submitting-my-spark-application-i-get-the-error-systemtypeloadexception-could-not-load-type-systemruntimeremotingcontextscontext"></a>Spark 애플리케이션을 제출한 후에 `System.TypeLoadException: Could not load type 'System.Runtime.Remoting.Contexts.Context'` 오류가 발생합니다.
+
 > **오류:** [오류] [작업 실행자] [0] ProcessStream()이 다음 예외를 나타내며 실패함: System.TypeLoadException: 'mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=...' 어셈블리에서 'System.Runtime.Remoting.Contexts.Context' 형식을 로드할 수 없습니다.
 
 **대답:** 사용 중인 `Microsoft.Spark.Worker` 버전을 확인하세요. **.NET Framework 4.6.1** 및 **.NET Core 3.1.x** 의 두 가지 버전이 있습니다. 이 경우 `System.Runtime.Remoting.Contexts.Context`는 .NET Framework 전용이기 때문에 `Microsoft.Spark.Worker.net461.win-x64-<version>`([다운로드](https://github.com/dotnet/spark/releases)할 수 있음)을 사용해야 합니다.

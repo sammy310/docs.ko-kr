@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: e675b0addc9051a0b3c877e9b029e113c17ba5f0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1a9e984e1b81adda572076cb118a25f5f3a045ea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543389"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283759"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe(형식 라이브러리 내보내기)
+
 형식 라이브러리 내보내기를 사용하면 공용 언어 런타임 어셈블리에 정의된 형식을 설명하는 형식 라이브러리를 생성할 수 있습니다.  
   
  이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
@@ -43,8 +44,8 @@ tlbexp assemblyName [options]
 |**/nologo**|Microsoft 시작 배너를 표시하지 않습니다.|  
 |**/oldnames**|형식 이름이 충돌할 경우 Tlbexp.exe에서 데코레이팅된 형식 이름을 내보내도록 합니다. .NET Framework 2.0 이전 버전에서는 이 옵션이 기본 동작이었습니다.|  
 |**/out:** *file*|생성할 형식 라이브러리 파일의 이름을 지정합니다. 이 옵션을 지정하지 않으면 해당 어셈블리와 동일한 이름(실제 어셈블리 이름으로서 해당 어셈블리가 들어 있는 파일 이름과 동일하지 않을 수도 있음) 및 .tlb 확장명을 가지는 형식 라이브러리가 생성됩니다.|  
-|**/silence:** `warningnumber`|지정한 경고를 표시하지 않습니다. 이 옵션은 **/silent**와 함께 사용할 수 없습니다.|  
-|**/silent**|성공 메시지를 표시하지 않습니다. 이 옵션은 **/silence**와 함께 사용할 수 없습니다.|  
+|**/silence:** `warningnumber`|지정한 경고를 표시하지 않습니다. 이 옵션은 **/silent** 와 함께 사용할 수 없습니다.|  
+|**/silent**|성공 메시지를 표시하지 않습니다. 이 옵션은 **/silence** 와 함께 사용할 수 없습니다.|  
 |**/tlbreference:** *typelibraryname*|Tlbexp.exe에서 레지스트리를 조회하지 않고 형식 라이브러리 참조를 명시적으로 확인하도록 합니다. 예를 들어, 어셈블리 B가 어셈블리 A를 참조하는 경우, 레지스트리에 지정된 형식 라이브러리에 의존하지 않고 이 옵션을 사용하여 명시적 형식 라이브러리 참조를 제공할 수 있습니다. Tlbexp.exe에서는 버전을 검사하여 형식 라이브러리 버전이 어셈블리 버전과 일치하는지 확인합니다. 일치하지 않으면 오류가 발생합니다.<br /><br /> **tlbreference** 옵션은 다른 형식으로 구현되는 인터페이스에 <xref:System.Runtime.InteropServices.ComImportAttribute> 특성이 적용되는 경우에도 레지스트리를 참조합니다.|  
 |**/tlbrefpath:** *path*|참조되는 형식 라이브러리에 대한 정규화된 경로입니다.|  
 |**/win32**|이 옵션은 64비트 컴퓨터에서 컴파일할 때 Tlbexp.exe가 32비트 형식 라이브러리를 생성하도록 지정합니다.|  
@@ -53,9 +54,10 @@ tlbexp assemblyName [options]
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|  
   
 > [!NOTE]
-> Tlbexp.exe의 명령줄 옵션은 대/소문자를 구분하지 않으며 순서에 관계없이 지정할 수 있습니다. 또한, 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 예를 들어 **/n**은 **/nologo**와 같고, **/o:** *outfile.tlb*는 **/out:** *outfile.tlb*와 같습니다.  
+> Tlbexp.exe의 명령줄 옵션은 대/소문자를 구분하지 않으며 순서에 관계없이 지정할 수 있습니다. 또한, 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 예를 들어 **/n** 은 **/nologo** 와 같고, **/o:** *outfile.tlb* 는 **/out:** *outfile.tlb* 와 같습니다.  
   
 ## <a name="remarks"></a>설명  
+
  Tlbexp.exe를 사용하여 어셈블리에 정의된 형식에 대한 정의가 들어 있는 형식 라이브러리를 생성할 수 있으며, Visual Basic 6.0과 같은 애플리케이션에서는 이렇게 생성된 형식 라이브러리를 사용하여 어셈블리에 정의된 .NET 형식에 바인딩할 수 있습니다.  
   
 > [!IMPORTANT]
@@ -96,6 +98,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
  형식 라이브러리 내보내기는 Microsoft Windows 2000 이상에서 지원됩니다.  
   
 ## <a name="examples"></a>예  
+
  다음 명령을 사용하여 `myTest.dll`에 있는 어셈블리와 동일한 이름의 형식 라이브러리를 생성합니다.  
   
 ```console  

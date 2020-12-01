@@ -10,14 +10,15 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
-ms.openlocfilehash: 2ec958cc035ac62086cdd3e2844811accc181d47
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d4182268341f4a4334a627fc8c9e24fa235f003f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048810"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287555"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>캐시 정책 상호 작용 - 최대 보존 기간 및 최소 새로 고침
+
 최신 콘텐츠가 클라이언트 애플리케이션에 반환되도록 돕기 위해 클라이언트 캐시 정책 및 서버 유효성 재검사 요구 사항의 상호 작용 결과로 항상 가장 보수적인 캐시 정책이 생성됩니다. 이 항목의 모든 예제에서는 1월 1일에 캐시되었으며 1월 4일에 만료되는 리소스에 대한 캐시 정책을 보여 줍니다.  
   
  다음 예제에서는 최대 사용 기간(`maxAge`) 및 최소 새로 고침(`minFresh`) 값의 상호 작용 결과로 생성되는 캐시 정책을 설명합니다.  

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: e30b9694a07d1551163f5d80e7874fe5c7d29050
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 2afcd0cbfc26146c09326057037347cc9f3d7ce7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359054"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287633"
 ---
 # <a name="asynchronous-server-socket-example"></a>비동기 서버 소켓 예제
+
 다음 예제 프로그램은 클라이언트의 연결 요청을 수신하는 서버를 만듭니다. 이 서버는 비동기 소켓으로 빌드되므로 클라이언트의 연결을 대기하는 동안 서버 애플리케이션의 실행이 일시 중단되지 않습니다. 애플리케이션은 클라이언트에서 문자열을 받아 콘솔에 문자열을 표시한 다음 문자열을 클라이언트에 다시 에코합니다. 클라이언트의 문자열에는 메시지의 끝을 알리는 “\<EOF>” 문자열이 포함되어야 합니다.  
   
 ```vb  

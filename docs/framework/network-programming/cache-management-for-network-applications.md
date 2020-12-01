@@ -6,14 +6,15 @@ helpviewer_keywords:
 - network resources, caching
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
-ms.openlocfilehash: 7e131963999db3e3d5e0e6f3fa110da36e6452a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 81f0eaa33b185c6bfbc8758e73a68a6bfc248872
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048882"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287568"
 ---
 # <a name="cache-management-for-network-applications"></a>네트워크 애플리케이션에 대한 캐시 관리
+
 이 항목 및 관련 하위 항목에서는 <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> 및 <xref:System.Net.FtpWebRequest> 클래스를 사용하여 얻은 리소스에 대한 캐싱을 설명합니다.  
   
  캐시는 애플리케이션에서 요청된 리소스의 임시 스토리지를 제공합니다. 애플리케이션이 동일한 리소스를 두 번 이상 요청하는 경우 캐시에서 리소스를 반환하여 서버에서 다시 요청하는 오버헤드를 방지할 수 있습니다. 캐싱은 요청된 리소스를 가져오는 데 필요한 시간을 줄여 애플리케이션 성능을 향상시킬 수 있습니다. 또한 캐싱은 서버로의 트립 수를 줄여 네트워크 트래픽을 줄일 수 있습니다. 캐싱은 성능을 개선하지만 애플리케이션에 반환되는 리소스가 부실할 위험, 즉 캐싱을 사용하지 않을 경우 서버에서 전송될 리소스와 동일하지 않을 위험이 증가합니다.  
@@ -23,6 +24,7 @@ ms.locfileid: "71048882"
  보안 문제로 인해 중간 계층 시나리오에는 캐싱이 권장되지 **않습니다**.  
   
 ## <a name="in-this-section"></a>섹션 내용  
+
  [캐시 정책](cache-policy.md)  
  캐시 정책이란 무엇이고 어떻게 정의하는지를 설명합니다.  
   
@@ -36,5 +38,6 @@ ms.locfileid: "71048882"
  프로그래밍 방식으로 캐시 정책 및 캐싱을 사용하는 요청을 만드는 방법을 설명합니다.  
   
 ## <a name="reference"></a>참조  
+
  <xref:System.Net.Cache>  
  <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> 및 <xref:System.Net.FtpWebRequest> 클래스를 사용하여 얻은 리소스에 대한 캐시 정책을 정의하는 데 사용되는 형식과 열거형을 정의합니다.

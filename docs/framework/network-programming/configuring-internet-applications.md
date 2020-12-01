@@ -22,14 +22,15 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: 760a4ac7cec9abeabfc372c3be5bd3860a6fb03a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 796752ebf6e3cc5c3dac2a20213934f35d31b392
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502641"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287464"
 ---
 # <a name="configuring-internet-applications"></a>인터넷 애플리케이션 구성
+
 [\<system.Net> 요소(네트워크 설정)](../configure-apps/file-schema/network/system-net-element-network-settings.md) 구성 요소에는 애플리케이션에 대한 네트워크 구성 정보가 있습니다. [\<system.Net> 요소(네트워크 설정)](../configure-apps/file-schema/network/system-net-element-network-settings.md) 요소를 사용하여 프록시 서버를 설정하고, 연결 관리 매개 변수를 설정하고, 애플리케이션에 사용자 지정 인증 및 요청 모듈을 포함할 수 있습니다.  
   
  [\<defaultProxy> 요소(네트워크 설정)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) 요소는 `GlobalProxySelection` 클래스에서 반환된 프록시 서버를 정의합니다. 자체적인 <xref:System.Net.HttpWebRequest.Proxy%2A> 속성이 특정 값으로 설정되지 않은 <xref:System.Net.HttpWebRequest>는 기본 프록시를 사용합니다. 프록시 주소를 설정하는 것 이외에 프록시를 사용하지 않을 서버 주소 목록을 만들고 로컬 주소에 프록시를 사용하지 않도록 지정할 수 있습니다.  

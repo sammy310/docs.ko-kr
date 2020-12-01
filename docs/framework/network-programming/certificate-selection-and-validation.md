@@ -3,20 +3,23 @@ title: 인증서 선택 및 유효성 검사
 description: SSL/TLS 연결용 인증서를 선택하고 인증서의 유효성을 검사하도록 System.Net 클래스가 제공하는 몇 가지 방법에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 2dc63413f5c3a5fadd0d62ad61f0b887697c6a45
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a85b6947c20f7dbced1fb6ad6e79f3134ce1f57b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502654"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287516"
 ---
 # <a name="certificate-selection-and-validation"></a>인증서 선택 및 유효성 검사
+
 <xref:System.Net> 클래스는 SSL(Secure Sockets Layer) 연결에 대한 <xref:System.Security.Cryptography.X509Certificates>를 선택하고 유효성을 검사하는 여러 가지 방법을 지원합니다. 클라이언트는 서버에 인증하기 위해 하나 이상의 인증서를 선택할 수 있습니다. 서버는 인증을 위해 클라이언트 인증서에 하나 이상의 특정 특성이 있도록 요구할 수 있습니다.  
   
 ## <a name="definition"></a>정의  
+
  인증서는 인증 기관의 디지털 시그니처, 공개 키, 특성(예: 버전 번호, 일련 번호, 만료 날짜)을 포함하는 ASCII 바이트 스트림입니다. 인증서는 암호화된 연결을 설정하거나 서버에 클라이언트를 인증하는 데 사용됩니다.  
   
 ## <a name="client-certificate-selection-and-validation"></a>클라이언트 인증서 선택 및 유효성 검사  
+
  클라이언트는 특정 SSL 연결에 대해 하나 이상의 인증서를 선택할 수 있습니다. SSL 연결을 사용하여 클라이언트 인증서를 웹 서버 또는 SMTP 메일 서버에 연결할 수 있습니다. 클라이언트는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 또는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스 개체 컬렉션에 인증서를 추가합니다. 전자 메일을 예로 사용할 경우, 인증서 컬렉션은 <xref:System.Net.Mail.SmtpClient> 클래스의 <xref:System.Net.Mail.SmtpClient.ClientCertificates%2A> 속성과 연결된 <xref:System.Security.Cryptography.X509Certificates.X509CertificateCollection> 인스턴스입니다. <xref:System.Net.HttpWebRequest> 클래스에는 비슷한 <xref:System.Net.HttpWebRequest.ClientCertificates%2A> 속성이 있습니다.  
   
  <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 및 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스 간의 주요 차이점은 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 클래스의 경우 프라이빗 키가 인증서 저장소에 상주해야 한다는 것입니다.  
@@ -28,6 +31,7 @@ ms.locfileid: "84502654"
  원격 서버는 클라이언트 인증서가 유효하고, 최신 상태이며, 적절한 인증 기관에서 서명되었는지 확인할 수 있습니다. <xref:System.Net.ServicePointManager.ServerCertificateValidationCallback%2A>에 대리자를 추가하여 인증서 유효성 검사를 적용할 수 있습니다.  
   
 ## <a name="client-certificate-selection"></a>클라이언트 인증서 선택  
+
  .NET Framework는 다음과 같은 방식으로 서버에 제공할 클라이언트 인증서를 선택합니다.  
   
 1. 이전에 클라이언트 인증서가 서버에 제공된 경우 처음 제공될 때 인증서가 캐시되고 후속 클라이언트 인증서 요청에 다시 사용됩니다.  
@@ -37,6 +41,7 @@ ms.locfileid: "84502654"
 3. 클라이언트 인증서에 대한 첫 번째 인증인 경우 프레임워크는 연결과 관련된 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 또는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스 개체의 인증서를 열거하고, 서버에서 제공하는 인증서 발급자 목록과 클라이언트 인증서 발급자 이름 간에 일치 항목을 찾습니다. 일치하는 첫 번째 인증서가 서버에 전송됩니다. 일치하는 인증서가 없거나 인증서 컬렉션이 비어 있으면 익명 자격 증명이 서버에 전송되지 않습니다.  
   
 ## <a name="tools-for-certificate-configuration"></a>인증서 구성 도구  
+
  클라이언트 및 서버 인증서 구성을 위해 다양한 도구를 사용할 수 있습니다.  
   
  *Winhttpcertcfg.exe* 도구는 클라이언트 인증서를 구성하는 데 사용할 수 있습니다. *Winhttpcertcfg.exe* 도구는 Windows Server 2003 Resource Kit의 도구 중 하나로 제공됩니다. [www.microsoft.com](https://www.microsoft.com)에서 Windows Server 2003 Resource Kit 도구의 일부로 다운로드할 수도 있습니다.  

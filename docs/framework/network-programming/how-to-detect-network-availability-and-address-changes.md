@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
-ms.openlocfilehash: 9e265a97d339da59bb9d0af6ab6757e16af00e06
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f5eef7b6ba41f1ac4050fbc9168fafea31b103f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70894967"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287316"
 ---
 # <a name="how-to-detect-network-availability-and-address-changes"></a>방법: 네트워크 가용성 및 주소 변경 검색
+
 이 샘플은 인터페이스에서 네트워크 주소의 변경 내용을 검색하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -46,6 +47,7 @@ namespace Examples.Net.AddressChanges
 ```  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
+
  이 예제에는 다음 사항이 필요합니다.  
   
 - **System.Net** 네임스페이스에 대한 참조.

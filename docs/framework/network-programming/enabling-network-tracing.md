@@ -12,14 +12,15 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 4ad0b23fc93ddcdc11cebcc556d12148df5e8ae2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 246a975ead3cb9c1acb4fe0512dfa91d1b8a00c0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502602"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287425"
 ---
 # <a name="enabling-network-tracing"></a>네트워크 추적 사용
+
 네트워크 추적은 메서드 호출에 대한 정보와 관리되는 애플리케이션에서 생성된 네트워크 트래픽 정보에 대한 액세스를 제공합니다. 애플리케이션에서 네트워크 추적을 사용하도록 설정하려면 다음 작업을 완료해야 합니다.  
   
 - 추적을 사용하도록 설정하고 코드를 컴파일합니다. [방법: 추적을 사용하도록 설정하는 데 필요한 컴파일러 스위치에 대한 자세한 내용은 추적 및 디버그를 사용한 조건부 컴파일](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)을 참조하세요.  
