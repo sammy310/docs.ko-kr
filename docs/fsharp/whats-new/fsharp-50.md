@@ -2,12 +2,12 @@
 title: 'F # 5.0의 새로운 기능-F # 가이드'
 description: 'F # 5.0에서 사용할 수 있는 새로운 기능에 대 한 개요를 확인 하세요.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: dd954fac31b008beab37cd6c1f06b1d41c5d5004
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098699"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438008"
 ---
 # <a name="whats-new-in-f-50"></a>F# 5.0의 새로운 기능
 
@@ -15,7 +15,7 @@ F # 5.0은 F # 언어 및 F# 대화형에 몇 가지 향상 된 기능을 추가
 
 [.NET 다운로드 페이지](https://dotnet.microsoft.com/download)에서 최신 .NET SDK를 다운로드할 수 있습니다.
 
-## <a name="get-started"></a>시작하기
+## <a name="get-started"></a>시작
 
 F # 5.0은 모든 .NET Core 배포 및 Visual Studio 도구에서 사용할 수 있습니다. 자세한 내용은 [F # 시작](../get-started/index.md) 을 참조 하세요.
 
@@ -56,7 +56,7 @@ let test p str =
 test pfloat "1.234"
 ```
 
-이 기능은 [F # 도구 RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)을 구현 합니다. 패키지 참조에 대 한 자세한 내용은 [F# 대화형](../tutorials/fsharp-interactive/index.md) 자습서를 참조 하십시오.
+이 기능은 [F # 도구 RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md)을 구현 합니다. 패키지 참조에 대 한 자세한 내용은 [F# 대화형](../tools/fsharp-interactive/index.md) 자습서를 참조 하십시오.
 
 ## <a name="string-interpolation"></a>문자열 보간
 
