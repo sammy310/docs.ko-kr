@@ -10,15 +10,16 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: e30b9694a07d1551163f5d80e7874fe5c7d29050
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 2afcd0cbfc26146c09326057037347cc9f3d7ce7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359054"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287633"
 ---
-# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="1a9c3-104">비동기 서버 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="1a9c3-104">Asynchronous Server Socket Example</span></span>
-<span data-ttu-id="1a9c3-105">다음 예제 프로그램은 클라이언트의 연결 요청을 수신하는 서버를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1a9c3-105">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="1a9c3-106">이 서버는 비동기 소켓으로 빌드되므로 클라이언트의 연결을 대기하는 동안 서버 애플리케이션의 실행이 일시 중단되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1a9c3-106">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="1a9c3-107">애플리케이션은 클라이언트에서 문자열을 받아 콘솔에 문자열을 표시한 다음 문자열을 클라이언트에 다시 에코합니다.</span><span class="sxs-lookup"><span data-stu-id="1a9c3-107">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="1a9c3-108">클라이언트의 문자열에는 메시지의 끝을 알리는 “\<EOF>” 문자열이 포함되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1a9c3-108">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
+# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="b5e76-104">비동기 서버 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="b5e76-104">Asynchronous Server Socket Example</span></span>
+
+<span data-ttu-id="b5e76-105">다음 예제 프로그램은 클라이언트의 연결 요청을 수신하는 서버를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b5e76-105">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="b5e76-106">이 서버는 비동기 소켓으로 빌드되므로 클라이언트의 연결을 대기하는 동안 서버 애플리케이션의 실행이 일시 중단되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b5e76-106">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="b5e76-107">애플리케이션은 클라이언트에서 문자열을 받아 콘솔에 문자열을 표시한 다음 문자열을 클라이언트에 다시 에코합니다.</span><span class="sxs-lookup"><span data-stu-id="b5e76-107">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="b5e76-108">클라이언트의 문자열에는 메시지의 끝을 알리는 “\<EOF>” 문자열이 포함되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b5e76-108">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -305,8 +306,8 @@ public class AsynchronousSocketListener
 }
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1a9c3-109">참조</span><span class="sxs-lookup"><span data-stu-id="1a9c3-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b5e76-109">참조</span><span class="sxs-lookup"><span data-stu-id="b5e76-109">See also</span></span>
 
-- [<span data-ttu-id="1a9c3-110">비동기 클라이언트 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="1a9c3-110">Asynchronous Client Socket Example</span></span>](asynchronous-client-socket-example.md)
-- [<span data-ttu-id="1a9c3-111">비동기 서버 소켓 사용</span><span class="sxs-lookup"><span data-stu-id="1a9c3-111">Using an Asynchronous Server Socket</span></span>](using-an-asynchronous-server-socket.md)
-- [<span data-ttu-id="1a9c3-112">소켓 코드 예제</span><span class="sxs-lookup"><span data-stu-id="1a9c3-112">Socket Code Examples</span></span>](socket-code-examples.md)
+- [<span data-ttu-id="b5e76-110">비동기 클라이언트 소켓 예제</span><span class="sxs-lookup"><span data-stu-id="b5e76-110">Asynchronous Client Socket Example</span></span>](asynchronous-client-socket-example.md)
+- [<span data-ttu-id="b5e76-111">비동기 서버 소켓 사용</span><span class="sxs-lookup"><span data-stu-id="b5e76-111">Using an Asynchronous Server Socket</span></span>](using-an-asynchronous-server-socket.md)
+- [<span data-ttu-id="b5e76-112">소켓 코드 예제</span><span class="sxs-lookup"><span data-stu-id="b5e76-112">Socket Code Examples</span></span>](socket-code-examples.md)
