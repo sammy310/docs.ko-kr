@@ -5,17 +5,17 @@ author: csharpfritz
 ms.author: jefritz
 no-loc:
 - Blazor
-ms.date: 04/01/2020
-ms.openlocfilehash: 6154b4f8c7a5bff42e603b12d5ef85468b80224e
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: 360d9077bc981a2e9875bb1f86b49c0029424d6e
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267505"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509795"
 ---
 # <a name="app-configuration"></a>앱 구성
 
-Web Forms에서 앱 구성을 로드 하는 기본적인 방법은 *web.config* 파일의 항목을 &mdash; 서버 또는 *web.config*에서 참조 하는 관련 구성 파일에 포함 하는 것입니다. 정적 개체를 사용 하 여 앱 `ConfigurationManager` 설정, 데이터 저장소 연결 문자열 및 앱에 추가 되는 기타 확장 된 구성 공급자와 상호 작용할 수 있습니다. 다음 코드에 표시 된 것 처럼 앱 구성과의 상호 작용을 확인 하는 것이 일반적입니다.
+Web Forms에서 앱 구성을 로드 하는 기본적인 방법은 *web.config* 파일의 항목을 &mdash; 서버 또는 *web.config* 에서 참조 하는 관련 구성 파일에 포함 하는 것입니다. 정적 개체를 사용 하 여 앱 `ConfigurationManager` 설정, 데이터 저장소 연결 문자열 및 앱에 추가 되는 기타 확장 된 구성 공급자와 상호 작용할 수 있습니다. 다음 코드에 표시 된 것 처럼 앱 구성과의 상호 작용을 확인 하는 것이 일반적입니다.
 
 ```csharp
 var configurationValue = ConfigurationManager.AppSettings["ConfigurationSettingName"];
@@ -28,7 +28,7 @@ ASP.NET Core 및 서버 쪽에서 Blazor 앱이 WINDOWS IIS 서버에서 호스�
 
 ASP.NET Core는 앱에 사용할 수 있는 많은 구성 원본을 인식 합니다. 프레임 워크는 기본적으로 이러한 기능을 가장 잘 제공 하려고 시도 합니다. ASP.NET Core 하 여 이러한 다양 한 원본에서 구성을 읽고 집계 합니다. 나중에 동일한 구성 키에 대해 로드 된 값이 이전 값 보다 우선적으로 적용 됩니다.
 
-ASP.NET Core는 클라우드를 인식 하 고 연산자와 개발자에 게 더 쉽게 앱을 구성할 수 있도록 설계 되었습니다. ASP.NET Core는 환경에서 인식 되며 또는 환경에서 실행 중인지 확인 `Production` `Development` 합니다. 환경 표시기는 `ASPNETCORE_ENVIRONMENT` 시스템 환경 변수에 설정 됩니다. 구성 된 값이 없는 경우 앱은 기본적으로 환경에서 실행 중으로 설정 됩니다 `Production` .
+ASP.NET Core는 클라우드를 인식 하 고 연산자와 개발자 모두를 위해 앱을 쉽게 구성할 수 있도록 설계 되었습니다. ASP.NET Core는 환경에서 인식 되며 또는 환경에서 실행 중인지 확인 `Production` `Development` 합니다. 환경 표시기는 `ASPNETCORE_ENVIRONMENT` 시스템 환경 변수에 설정 됩니다. 구성 된 값이 없는 경우 앱은 기본적으로 환경에서 실행 중으로 설정 됩니다 `Production` .
 
 앱은 환경 이름을 기반으로 여러 소스에서 구성을 트리거하고 추가할 수 있습니다. 기본적으로 구성은 다음 리소스에서 나열 된 순서 대로 로드 됩니다.
 
@@ -40,7 +40,7 @@ ASP.NET Core는 클라우드를 인식 하 고 연산자와 개발자에 게 더
 
 ## <a name="appsettingsjson-format-and-access"></a>appsettings.js형식 및 액세스
 
-파일 * 의appsettings.js* 는 다음 JSON 처럼 구조화 된 값이 있는 계층적 일 수 있습니다.
+파일 *의appsettings.js* 는 다음 JSON 처럼 구조화 된 값이 있는 계층적 일 수 있습니다.
 
 ```json
 {
@@ -57,14 +57,14 @@ ASP.NET Core는 클라우드를 인식 하 고 연산자와 개발자에 게 더
 
 위의 JSON을 사용 하 여 표시 되 면 구성 시스템은 자식 값을 평면화 하 고 정규화 된 계층적 경로를 참조 합니다. 콜론 ( `:` ) 문자는 계층의 각 속성을 구분 합니다. 예를 들어 구성 키는 `section1:key0` `section1` 개체 리터럴의 값에 액세스 합니다 `key0` .
 
-## <a name="user-secrets"></a>사용자 암호
+## <a name="user-secrets"></a>사용자 비밀
 
 사용자 암호는 다음과 같습니다.
 
 * 앱 개발 폴더 외부의 개발자 워크스테이션에서 JSON 파일에 저장 되는 구성 값입니다.
 * 환경에서 실행 될 때만 로드 `Development` 됩니다.
 * 특정 앱과 연결 됩니다.
-* .NET Core CLI의 명령을 사용 하 여 관리 `user-secrets` 됩니다.
+* .NET CLI의 명령을 사용 하 여 관리 `user-secrets` 됩니다.
 
 다음 명령을 실행 하 여 암호 저장소에 대 한 앱을 구성 합니다 `user-secrets` .
 
@@ -72,7 +72,7 @@ ASP.NET Core는 클라우드를 인식 하 고 연산자와 개발자에 게 더
 dotnet user-secrets init
 ```
 
-이전 명령은 `UserSecretsId` 프로젝트 파일에 요소를 추가 합니다. 요소는 암호를 앱에 연결 하는 데 사용 되는 GUID를 포함 합니다. 그런 다음 명령을 사용 하 여 비밀을 정의할 수 있습니다 `set` . 예를 들어 다음과 같은 가치를 제공해야 합니다.
+이전 명령은 `UserSecretsId` 프로젝트 파일에 요소를 추가 합니다. 요소는 암호를 앱에 연결 하는 데 사용 되는 GUID를 포함 합니다. 그런 다음 명령을 사용 하 여 비밀을 정의할 수 있습니다 `set` . 예를 들어:
 
 ```dotnetcli
 dotnet user-secrets set "Parent:ApiKey" "12345"
@@ -159,7 +159,7 @@ ASP.NET Core에서 구성 값을 받을 클래스 계층 구조를 지정할 수
 * 부모 클래스에서 상속할 필요가 없습니다.
 * `public`캡처할 구성 구조에 대 한 속성 및 형식 참조와 일치 하는 속성을 포함 해야 합니다.
 
-이전appsettings.js샘플 * 에서* 다음 클래스를 정의 하 여 값을 캡처할 수 있습니다.
+이전appsettings.js샘플 *에서* 다음 클래스를 정의 하 여 값을 캡처할 수 있습니다.
 
 ```csharp
 public class MyConfig

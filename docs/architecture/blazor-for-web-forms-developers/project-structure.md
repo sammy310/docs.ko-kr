@@ -6,13 +6,13 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/11/2019
-ms.openlocfilehash: 225ebbdd5e23516ae7d5465371e95c73c440c82b
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: d91430eb654ee16934408bf064803b34ca700640
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267778"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509808"
 ---
 # <a name="project-structure-for-no-locblazor-apps"></a>앱에 대 한 프로젝트 구조 Blazor
 
@@ -22,13 +22,13 @@ ms.locfileid: "88267778"
 
 ## <a name="project-file"></a>프로젝트 파일
 
-Blazor 서버 앱은 .NET Core 프로젝트입니다. 서버 앱에 대 한 프로젝트 파일은 다음과 같이 간단 하 게 Blazor 가져올 수 있습니다.
+Blazor 서버 앱은 .NET 프로젝트입니다. 서버 앱에 대 한 프로젝트 파일은 다음과 같이 간단 하 게 Blazor 가져올 수 있습니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -37,32 +37,26 @@ Blazor 서버 앱은 .NET Core 프로젝트입니다. 서버 앱에 대 한 프�
 앱에 대 한 프로젝트 파일은 Blazor WebAssembly 약간 더 복잡 합니다. 정확한 버전 번호는 다를 수 있습니다.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <RazorLangVersion>3.0</RazorLangVersion>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Blazor" Version="3.1.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.Build" Version="3.1.0" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.HttpClient" Version="3.1.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.DevServer" Version="3.1.0" PrivateAssets="all" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Shared\BlazorWebAssemblyApp1.Shared.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.0" PrivateAssets="all" />
+    <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
 ```
 
-BlazorWebAssembly프로젝트는 기반 .net 런타임의 브라우저에서 실행 되므로 .Net Core 대신 .NET Standard를 대상 WebAssembly 으로 합니다. 서버 또는 개발자 컴퓨터에서 사용할 수 있는 것과 같은 방법으로 웹 브라우저에 .NET을 설치할 수 없습니다. 따라서 프로젝트는 Blazor 개별 패키지 참조를 사용 하 여 프레임 워크를 참조 합니다.
+BlazorWebAssembly프로젝트가 `Microsoft.NET.Sdk.BlazorWebAssembly` `Microsoft.NET.Sdk.Web` 기반 .net 런타임의 브라우저에서 실행 되기 때문에 sdk 대신 프로젝트 대상이 WebAssembly 됩니다. 서버 또는 개발자 컴퓨터에서 사용할 수 있는 것과 같은 방법으로 웹 브라우저에 .NET을 설치할 수 없습니다. 따라서 프로젝트는 Blazor 개별 패키지 참조를 사용 하 여 프레임 워크를 참조 합니다.
 
-비교 하 여 기본 ASP.NET Web Forms 프로젝트에는 *.csproj* 파일에 거의 300 줄의 XML이 포함 되어 있으며, 대부분의 XML은 프로젝트의 다양 한 코드 및 콘텐츠 파일을 명시적으로 나열 합니다. .NET Core 및 .NET Standard 기반 프로젝트의 많은 단순화는 sdk를 참조 하 여 가져온 기본 대상 및 속성에서 제공 됩니다 `Microsoft.NET.Sdk.Web` . 일반적으로 웹 sdk 라고 합니다. 웹 SDK에는 프로젝트에 코드 및 콘텐츠 파일의 포함을 간소화 하는 와일드 카드 및 기타 편리 하며 포함 되어 있습니다. 파일을 명시적으로 나열할 필요가 없습니다. .NET Core를 대상으로 하는 경우 웹 SDK는 .NET Core 및 ASP.NET Core 공유 프레임 워크에 대 한 프레임 워크 참조도 추가 합니다. 프레임 워크는 솔루션 탐색기 창의 **종속성**  >  **프레임 워크** 노드에서 볼 수 **Solution Explorer** 있습니다. 공유 프레임 워크는 .NET Core를 설치할 때 컴퓨터에 설치 된 어셈블리의 컬렉션입니다.
+비교 하 여 기본 ASP.NET Web Forms 프로젝트에는 *.csproj* 파일에 거의 300 줄의 XML이 포함 되어 있으며, 대부분의 XML은 프로젝트의 다양 한 코드 및 콘텐츠 파일을 명시적으로 나열 합니다. `.NET 5`및 앱 모두 릴리스를 `Blazor Server` 사용 `Blazor WebAssembly` 하면 하나의 통합 런타임을 쉽게 공유할 수 있습니다.
 
-지원 되기는 하지만 개별 어셈블리 참조는 .NET Core 프로젝트에서 더 일반적이 지 않습니다. 대부분의 프로젝트 종속성은 NuGet 패키지 참조로 처리 됩니다. .NET Core 프로젝트에서 최상위 패키지 종속성을 참조 하기만 하면 됩니다. 전이적 종속성이 자동으로 포함 됩니다. ASP.NET Web Forms 프로젝트에서 일반적으로 발견 되는 *packages.config* 파일을 사용 하는 대신 패키지 참조는 요소를 사용 하 여 프로젝트 파일에 추가 됩니다 `<PackageReference>` .
+지원 되지만 .NET 프로젝트에서는 개별 어셈블리 참조가 더 일반적이 지 않습니다. 대부분의 프로젝트 종속성은 NuGet 패키지 참조로 처리 됩니다. .NET 프로젝트에서 최상위 패키지 종속성을 참조 하기만 하면 됩니다. 전이적 종속성이 자동으로 포함 됩니다. ASP.NET Web Forms 프로젝트에서 일반적으로 발견 되는 *packages.config* 파일을 사용 하는 대신 패키지 참조는 요소를 사용 하 여 프로젝트 파일에 추가 됩니다 `<PackageReference>` .
 
 ```xml
 <ItemGroup>
@@ -91,7 +85,7 @@ public class Program
 }
 ```
 
-BlazorWebAssembly또한 앱은 *Program.cs*에서 진입점을 정의 합니다. 코드는 약간 다르게 보입니다. 코드는 앱 호스트를 설정 하 여 앱에 동일한 호스트 수준 서비스를 제공 한다는 점에서 유사 합니다. WebAssembly그러나 응용 프로그램 호스트는 브라우저에서 직접 실행 되므로 HTTP 서버를 설정 하지 않습니다.
+BlazorWebAssembly또한 앱은 *Program.cs* 에서 진입점을 정의 합니다. 코드는 약간 다르게 보입니다. 코드는 앱 호스트를 설정 하 여 앱에 동일한 호스트 수준 서비스를 제공 한다는 점에서 유사 합니다. WebAssembly그러나 응용 프로그램 호스트는 브라우저에서 직접 실행 되므로 HTTP 서버를 설정 하지 않습니다.
 
 Blazor 앱에는 `Startup` 응용 프로그램에 대 한 시작 논리를 정의 하 *는 global.asax* 파일 대신 클래스가 있습니다. `Startup`클래스는 앱 및 앱 별 서비스를 구성 하는 데 사용 됩니다. Blazor서버 앱에서 `Startup` 클래스는 Blazor 클라이언트 브라우저와 서버 간에에서 사용 되는 실시간 연결에 대 한 끝점을 설정 하는 데 사용 됩니다. 앱에서 Blazor WebAssembly `Startup` 클래스는 앱의 루트 구성 요소를 정의 하 고 렌더링 해야 하는 위치를 정의 합니다. `Startup` [앱 시작](./app-startup.md) 섹션의 클래스를 자세히 살펴보겠습니다.
 
@@ -101,7 +95,7 @@ ASP.NET Web Forms 프로젝트와 달리 프로젝트의 모든 파일을 Blazor
 
 ## <a name="configuration"></a>구성
 
-ASP.NET Web Forms apps의 구성은 일반적으로 하나 이상의 *web.config* 파일을 사용 하 여 처리 됩니다. Blazor 앱은 일반적으로 *web.config* 파일을 포함 하지 않습니다. 이 경우 IIS에서 호스팅되는 경우에만 파일이 IIS 관련 설정을 구성 하는 데 사용 됩니다. 대신, Blazor 서버 앱은 ASP.NET Core 구성 추상화를 사용 합니다 Blazor WebAssembly . 현재 앱은 동일한 구성 추상화를 지원 하지만 이후에 추가 된 기능 일 수 있습니다. 예를 들어 기본 Blazor 서버 앱은 *appsettings.js*에 일부 설정을 저장 합니다.
+ASP.NET Web Forms apps의 구성은 일반적으로 하나 이상의 *web.config* 파일을 사용 하 여 처리 됩니다. Blazor 앱은 일반적으로 *web.config* 파일을 포함 하지 않습니다. 이 경우 IIS에서 호스팅되는 경우에만 파일이 IIS 관련 설정을 구성 하는 데 사용 됩니다. 대신, Blazor 서버 앱은 ASP.NET Core 구성 추상화를 사용 합니다 Blazor WebAssembly . 현재 앱은 동일한 구성 추상화를 지원 하지만 이후에 추가 된 기능 일 수 있습니다. 예를 들어 기본 Blazor 서버 앱은 *appsettings.js* 에 일부 설정을 저장 합니다.
 
 ```json
 {
@@ -152,9 +146,9 @@ ASP.NET Web Forms apps의 구성은 일반적으로 하나 이상의 *web.config
 
 Blazor [페이지, 라우팅 및 레이아웃](./pages-routing-layouts.md) 섹션에서 라우팅하는 방법에 대해 더 자세히 살펴보겠습니다.
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>레이아웃
 
-ASP.NET Web Forms apps에서 일반 페이지 레이아웃은 마스터*페이지 (site.master*)를 사용 하 여 처리 됩니다. Blazor앱에서 페이지 레이아웃은 레이아웃 구성 요소 (*Shared/mainlayout. razor*)를 사용 하 여 처리 됩니다. 레이아웃 구성 요소는 [페이지, 라우팅 및 레이아웃](./pages-routing-layouts.md) 섹션에 자세히 설명 되어 있습니다.
+ASP.NET Web Forms apps에서 일반 페이지 레이아웃은 마스터 *페이지 (site.master*)를 사용 하 여 처리 됩니다. Blazor앱에서 페이지 레이아웃은 레이아웃 구성 요소 (*공유/mainlayout. razor*)를 사용 하 여 처리 됩니다. 레이아웃 구성 요소는 [페이지, 라우팅 및 레이아웃](./pages-routing-layouts.md) 섹션에 자세히 설명 되어 있습니다.
 
 ## <a name="bootstrap-no-locblazor"></a>부트스트랩 Blazor
 
@@ -198,39 +192,49 @@ Blazor서버 앱에서 루트 구성 요소의 호스트 페이지는 *_Host. cs
 </html>
 ```
 
-앱에서 Blazor WebAssembly 호스트 페이지는 *wwwroot/index.html*아래의 간단한 정적 HTML 파일입니다. `<app>`요소는 루트 구성 요소가 렌더링 되어야 하는 위치를 나타내는 데 사용 됩니다.
+앱에서 Blazor WebAssembly 호스트 페이지는 *wwwroot/index.html* 아래의 간단한 정적 HTML 파일입니다. `<div>`Id가 인 요소는 `app` 루트 구성 요소가 렌더링 되어야 하는 위치를 나타내는 데 사용 됩니다.
 
 ```html
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>BlazorApp2</title>
     <base href="/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="blazor-web.styles.css" rel="stylesheet" />
 </head>
-<body>
-    <app>Loading...</app>
 
+<body>
+    <div id="app">Loading...</div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
     <script src="_framework/blazor.webassembly.js"></script>
 </body>
+
 </html>
+
 ```
 
-렌더링할 특정 구성 요소는 `Startup.Configure` 구성 요소가 렌더링 되어야 하는 위치를 나타내는 해당 CSS 선택기를 사용 하 여 앱의 메서드에서 구성 됩니다.
+렌더링할 루트 구성 요소는 `Program.Main` 종속성 주입을 통해 다양 한 서비스를 등록 하는 유연성을 사용 하 여 앱의 메서드에서 구성 됩니다. [ Blazor 에서 WebAssembly ](https://docs.microsoft.com/aspnet/core/blazor/fundamentals/dependency-injection?view=aspnetcore-5.0#blazor-webassembly) 앱에 서비스 추가를 참조할 수 있습니다.
 
 ```csharp
-public class Startup
+public class Program
 {
-    public void ConfigureServices(IServiceCollection services)
+    public static async Task Main(string[] args)
     {
-    }
+        var builder = WebAssemblyHostBuilder.CreateDefault(args);
+        builder.RootComponents.Add<App>("#app");
 
-    public void Configure(IComponentsApplicationBuilder app)
-    {
-        app.AddComponent<App>("app");
+        ....
+        ....
     }
 }
 ```
@@ -248,7 +252,7 @@ public class Startup
 - 개발 서버를 사용 하 여 직접 클라이언트 프로젝트를 실행 합니다.
 - ASP.NET Core를 사용 하 여 앱을 호스팅할 때 서버 프로젝트를 실행 합니다.
 
-BlazorWebAssembly앱은 Visual Studio를 사용 하 여 디버깅을 지원 하지 않습니다. 앱을 실행 하려면 대신을 사용 `Ctrl+F5` `F5` 합니다. 대신 Blazor WebAssembly 브라우저에서 직접 앱을 디버그할 수 있습니다. 자세한 내용은 [디버그 Blazor ASP.NET Core](/aspnet/core/blazor/debug) 를 참조 하세요.
+BlazorWebAssembly브라우저와 Visual Studio 모두에서 앱을 디버그할 수 있습니다. 자세한 내용은 [디버그 Blazor WebAssembly ASP.NET Core](/aspnet/core/blazor/debug) 를 참조 하세요.
 
 >[!div class="step-by-step"]
 >[이전](hosting-models.md)

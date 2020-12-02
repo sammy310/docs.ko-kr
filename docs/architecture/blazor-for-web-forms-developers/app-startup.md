@@ -3,13 +3,13 @@ title: 앱 시작
 description: 앱에 대 한 시작 논리를 정의 하는 방법을 알아봅니다.
 author: csharpfritz
 ms.author: jefritz
-ms.date: 02/25/2020
-ms.openlocfilehash: 883f9a3fbe2d52cb7d0fbc5dfc94ce829a5d2bf3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: d812079f84f67409334d07c4c10c5577446503be
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158190"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509704"
 ---
 # <a name="app-startup"></a>앱 시작
 
@@ -22,13 +22,13 @@ ASP.NET 용으로 작성 된 응용 프로그램에는 일반적으로 `global.a
 - `RouteConfig` -응용 프로그램 URL 라우팅
 - `BundleConfig` -CSS 및 JavaScript 묶음 및 축소
 
-이러한 개별 파일은 모두 폴더에 상주 `App_Start` 하며 응용 프로그램 시작 시 한 번만 실행 됩니다.  `RouteConfig` 기본 프로젝트 템플릿에서는 `FriendlyUrlSettings` 응용 프로그램 url이 파일 확장명을 생략할 수 있도록 web forms 용를 추가 합니다 `.ASPX` .  기본 템플릿에는 페이지에 대 한 영구 HTTP 리디렉션 상태 코드 (HTTP 301)를 `.ASPX` 확장명이 없는 파일 이름으로 친숙 한 URL에 제공 하는 지시문도 포함 됩니다.
+이러한 개별 파일은 모두 폴더에 상주 `App_Start` 하며 응용 프로그램을 시작할 때 한 번만 실행 됩니다.  `RouteConfig` 기본 프로젝트 템플릿에서는 `FriendlyUrlSettings` 응용 프로그램 url이 파일 확장명을 생략할 수 있도록 web forms 용를 추가 합니다 `.ASPX` .  기본 템플릿에는 페이지에 대 한 영구 HTTP 리디렉션 상태 코드 (HTTP 301)를 `.ASPX` 확장명이 없는 파일 이름으로 친숙 한 URL에 제공 하는 지시문도 포함 됩니다.
 
 ASP.NET Core 및 Blazor를 사용 하면 이러한 메서드를 간소화 하 고 클래스로 통합 `Startup` 하거나 일반적인 웹 기술에 대해 제거 합니다.
 
 ## <a name="blazor-server-startup-structure"></a>Blazor 서버 시작 구조
 
-Blazor 서버 응용 프로그램은 ASP.NET Core 3.0 이상 응용 프로그램 위에 위치 합니다.  ASP.NET Core 웹 응용 프로그램은 `Startup.cs` 응용 프로그램의 루트 폴더에 있는 클래스의 메서드 쌍을 통해 구성 됩니다.  시작 클래스의 기본 콘텐츠는 아래에 나열 되어 있습니다.
+Blazor 서버 응용 프로그램은 ASP.NET Core 3.0 이상 버전 위에 위치 합니다.  ASP.NET Core 웹 응용 프로그램은 `Startup.cs` 응용 프로그램의 루트 폴더에 있는 클래스의 메서드 쌍을 통해 구성 됩니다.  시작 클래스의 기본 콘텐츠는 아래에 나열 되어 있습니다.
 
 ```csharp
 public class Startup
@@ -89,7 +89,7 @@ ASP.NET Core의 나머지와 마찬가지로 Startup 클래스는 종속성 주�
 
 다음 줄은 web forms에서 구성 옵션 중 하나를 복제 하는 첫 번째입니다 `UseRouting` .  이 메서드는 파이프라인에 ASP.NET Core 라우터를 추가 하 고 여기에서 구성 하거나 라우팅을 고려할 수 있는 개별 파일에서 구성할 수 있습니다.  라우팅 구성에 대 한 자세한 내용은 [라우팅 섹션](pages-routing-layouts.md)에서 찾을 수 있습니다.
 
-이 메서드의 마지막 문은 ASP.NET Core 수신 대기 하는 끝점을 정의 합니다.  이러한 위치는 웹 서버에서 액세스할 수 있고 .NET에서 처리 되 고 사용자에 게 반환 되는 일부 콘텐츠를 받을 수 있는 웹 액세스 가능한 위치입니다.  첫 번째 항목은 `MapBlazorHub` Blazor 구성 요소의 상태 및 렌더링이 처리 되는 서버에 실시간 및 영구 연결을 제공 하는 데 사용할 SignalR hub를 구성 합니다.  `MapFallbackToPage`메서드 호출은 Blazor 응용 프로그램을 시작 하는 페이지의 웹 액세스 가능 위치를 나타내며, 클라이언트 쪽에서의 딥 링크 요청을 처리 하도록 응용 프로그램을 구성 합니다.  브라우저를 열고 기본 프로젝트 템플릿 등의 응용 프로그램에서 Blazor 처리 된 경로를 직접 탐색 하는 경우이 기능이 작동 하는 것을 볼 수 있습니다 `/counter` . 요청은 *_Host* 에 의해 처리 되 고,이 페이지에서 Blazor 라우터를 실행 하 고 카운터 페이지를 렌더링 합니다.
+이 메서드의 마지막 문은 ASP.NET Core 수신 대기 하는 끝점을 정의 합니다.  이러한 경로는 웹 서버에서 액세스할 수 있고 .NET에서 처리 되 고 사용자에 게 반환 되는 일부 콘텐츠를 받을 수 있는 웹 액세스 가능한 위치입니다.  첫 번째 항목은 `MapBlazorHub` Blazor 구성 요소의 상태 및 렌더링이 처리 되는 서버에 실시간 및 영구 연결을 제공 하는 데 사용할 SignalR hub를 구성 합니다.  `MapFallbackToPage`메서드 호출은 Blazor 응용 프로그램을 시작 하는 페이지의 웹 액세스 가능 위치를 나타내며, 클라이언트 쪽에서의 딥 링크 요청을 처리 하도록 응용 프로그램을 구성 합니다.  브라우저를 열고 기본 프로젝트 템플릿 등의 응용 프로그램에서 Blazor 처리 된 경로를 직접 탐색 하는 경우이 기능이 작동 하는 것을 볼 수 있습니다 `/counter` . 요청은 *_Host* 에 의해 처리 되 고,이 페이지에서 Blazor 라우터를 실행 하 고 카운터 페이지를 렌더링 합니다.
 
 ## <a name="upgrading-the-bundleconfig-process"></a>BundleConfig 프로세스 업그레이드
 

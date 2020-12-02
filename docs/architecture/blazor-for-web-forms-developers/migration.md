@@ -6,13 +6,13 @@ ms.author: tasou
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/19/2019
-ms.openlocfilehash: 853358fbf534ee7501412259c61efe054b4757a7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: 893b6f851681ec540629fe160749b2622b6d5440
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161206"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509834"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>ASP.NET Web Forms에서로 마이그레이션 Blazor
 
@@ -33,7 +33,7 @@ ASP.NET Web Forms에서로 코드 베이스를 마이그레이션하는 Blazor �
 
 [호스팅 모델](hosting-models.md) 챕터에서 설명한 대로 Blazor 앱은 서버 쪽 및 클라이언트 쪽의 두 가지 방법으로 호스팅할 수 있습니다. 서버 쪽 모델에서는 ASP.NET Core SignalR 연결을 사용 하 여 서버에서 실제 코드를 실행 하는 동안 DOM 업데이트를 관리 합니다. 클라이언트 쪽 모델은 WebAssembly 브라우저에서로 실행 되며 서버 연결이 필요 하지 않습니다. 특정 앱에 가장 적합 한 여러 가지 차이점이 있습니다.
 
-- 로 실행 WebAssembly 되는는 아직 개발 중 이며 현재 시간에 모든 기능 (예: 스레딩)을 지원 하지 않을 수 있습니다.
+- As를 실행 WebAssembly 하는 것은 현재 시간에 모든 기능 (예: 스레딩)을 지원 하지 않습니다.
 - 클라이언트와 서버 간의 통신을 번잡 하면 서버 쪽 모드에서 대기 시간이 발생할 수 있습니다.
 - 데이터베이스 및 내부 또는 보호 된 서비스에 대 한 액세스에는 클라이언트 쪽 호스팅을 사용 하는 별도의 서비스가 필요 합니다.
 
@@ -41,11 +41,11 @@ ASP.NET Web Forms에서로 코드 베이스를 마이그레이션하는 Blazor �
 
 ## <a name="create-a-new-project"></a>새 프로젝트 만들기
 
-이 초기 마이그레이션 단계는 새 프로젝트를 만드는 것입니다. 이 프로젝트 형식은 .NET Core의 SDK 스타일 프로젝트를 기반으로 하며 이전 프로젝트 형식에서 사용 된 대부분의 상용구를 간소화 합니다. 자세한 내용은 [프로젝트 구조](project-structure.md)의 챕터를 참조 하세요.
+이 초기 마이그레이션 단계는 새 프로젝트를 만드는 것입니다. 이 프로젝트 형식은 .NET의 SDK 스타일 프로젝트를 기반으로 하며 이전 프로젝트 형식에서 사용 된 대부분의 상용구를 간소화 합니다. 자세한 내용은 [프로젝트 구조](project-structure.md)의 챕터를 참조 하세요.
 
 프로젝트를 만든 후에는 이전 프로젝트에서 사용 된 라이브러리를 설치 합니다. 이전 Web Forms 프로젝트에서는 *packages.config* 파일을 사용 하 여 필요한 NuGet 패키지를 나열 했을 수 있습니다. 새 SDK 스타일 프로젝트에서 *packages.config* `<PackageReference>` 프로젝트 파일의 요소로 대체 되었습니다. 이 방법의 혜택은 모든 종속성이 전이적으로 설치 된다는 것입니다. 관심 있는 최상위 종속성만 나열 합니다.
 
-사용 중인 많은 종속성은 Entity Framework 6 및 log4net를 포함 하 여 .NET Core에 사용할 수 있습니다. 사용할 수 있는 .NET Core 또는 .NET Standard 버전이 없는 경우에는 .NET Framework 버전이 자주 사용 될 수 있습니다. 진행 정도는 달라질 수 있습니다. .NET Core에서 사용할 수 없는 API를 사용 하면 런타임 오류가 발생 합니다. Visual Studio에서 이러한 패키지를 알려 줍니다. **솔루션 탐색기**의 프로젝트 **참조** 노드에 노란색 아이콘이 표시 됩니다.
+사용 중인 많은 종속성은 Entity Framework 6 및 log4net을 포함 하 여 .NET에 사용할 수 있습니다. 사용할 수 있는 .NET 또는 .NET Standard 버전이 없는 경우에는 .NET Framework 버전이 자주 사용 될 수 있습니다. 진행 정도는 달라질 수 있습니다. .NET에서 사용할 수 없는 API를 사용 하면 런타임 오류가 발생 합니다. Visual Studio에서 이러한 패키지를 알려 줍니다. **솔루션 탐색기** 의 프로젝트 **참조** 노드에 노란색 아이콘이 표시 됩니다.
 
 Blazor기반 eShop 프로젝트에서 설치 된 패키지를 볼 수 있습니다. 이전에는 *packages.config* 파일에서 프로젝트에 사용 되는 모든 패키지를 나열 하 여 파일이 거의 50 줄의 길이를 산출 했습니다. *packages.config* 코드 조각은 다음과 같습니다.
 
@@ -80,12 +80,13 @@ Blazor기반 eShop 프로젝트에서 설치 된 패키지를 볼 수 있습니�
 ```xml
 <ItemGroup>
     <PackageReference Include="Autofac" Version="4.9.3" />
-    <PackageReference Include="EntityFramework" Version="6.3.0-preview9-19423-04" />
-    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="log4net" Version="2.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="2.2.12" />
 </ItemGroup>
 ```
 
-Web Forms 개발자의 수명을 간소화 하는 NuGet 패키지 하나는 [Windows 호환 기능 팩](../../core/porting/windows-compat-pack.md)입니다. .NET Core는 플랫폼 간 이지만 일부 기능은 Windows 에서만 사용할 수 있습니다. Windows 관련 기능은 호환 기능 팩을 설치 하 여 사용할 수 있습니다. 이러한 기능의 예로는 레지스트리, WMI 및 디렉터리 서비스가 있습니다. 이 패키지는 약 2만 Api를 추가 하 고 이미 친숙 한 많은 서비스를 활성화 합니다. EShop 프로젝트에는 호환성 팩이 필요 하지 않습니다. 그러나 프로젝트에서 Windows 관련 기능을 사용 하는 경우 패키지는 마이그레이션 작업을 용이 하 게 합니다.
+Web Forms 개발자의 수명을 간소화 하는 NuGet 패키지 하나는 [Windows 호환 기능 팩](../../core/porting/windows-compat-pack.md)입니다. .NET은 플랫폼 간 이지만 일부 기능은 Windows 에서만 사용할 수 있습니다. Windows 관련 기능은 호환 기능 팩을 설치 하 여 사용할 수 있습니다. 이러한 기능의 예로는 레지스트리, WMI 및 디렉터리 서비스가 있습니다. 이 패키지는 약 2만 Api를 추가 하 고 이미 친숙 한 많은 서비스를 활성화 합니다. EShop 프로젝트에는 호환성 팩이 필요 하지 않습니다. 그러나 프로젝트에서 Windows 관련 기능을 사용 하는 경우 패키지는 마이그레이션 작업을 용이 하 게 합니다.
 
 ## <a name="enable-startup-process"></a>시작 프로세스 사용
 
@@ -247,13 +248,13 @@ public class Startup
 
 Web Forms에서 볼 수 있는 중요 한 변경 내용 중 하나는 DI의 우월성입니다. DI는 ASP.NET Core 설계에서 안내 하는 원칙입니다. ASP.NET Core framework의 거의 모든 측면에 대 한 사용자 지정을 지원 합니다. 여러 시나리오에 사용할 수 있는 기본 제공 서비스 공급자도 있습니다. 더 많은 사용자 지정이 필요한 경우 많은 커뮤니티 프로젝트에서 지원할 수 있습니다. 예를 들어 타사 DI 라이브러리 투자를 전달할 수 있습니다.
 
-원래 eShop 앱에는 세션 관리에 대 한 몇 가지 구성이 있습니다. 서버 쪽 Blazor 은 통신에 ASP.NET Core SignalR를 사용 하므로, 연결이 HTTP 컨텍스트와 독립적으로 발생할 수 있으므로 세션 상태는 지원 되지 않습니다. 세션 상태를 사용 하는 앱은 앱으로 실행 하기 전에 다시 설계 해야 Blazor 합니다.
+원래 eShop 앱에는 세션 관리에 대 한 몇 가지 구성이 있습니다. 서버 쪽에서 Blazor 통신에 ASP.NET Core SignalR를 사용 하기 때문에 세션 상태는 HTTP 컨텍스트와는 독립적으로 발생할 수 있으므로 지원 되지 않습니다. 세션 상태를 사용 하는 앱은 앱으로 실행 하기 전에 다시 설계 해야 Blazor 합니다.
 
 앱 시작에 대 한 자세한 내용은 [앱 시작](app-startup.md)을 참조 하세요.
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>HTTP 모듈 및 처리기를 미들웨어로 마이그레이션
 
-Http 모듈 및 처리기는 HTTP 요청 파이프라인을 제어 하기 위한 Web Forms 일반적인 패턴입니다. 을 구현 `IHttpModule` 하거나 `IHttpHandler` 등록 하 고 들어오는 요청을 처리할 수 있는 클래스입니다. Web Forms *web.config* 파일에서 모듈 및 처리기를 구성 합니다. 또한 Web Forms는 앱 수명 주기 이벤트 처리에 따라 크게 달라 집니다. ASP.NET Core는 미들웨어를 대신 사용 합니다. 미들웨어는 `Configure` 클래스의 메서드에 등록 됩니다 `Startup` . 미들웨어 실행 순서는 등록 순서에 따라 결정 됩니다.
+Http 모듈 및 처리기는 HTTP 요청 파이프라인을 제어 하기 위한 Web Forms 일반적인 패턴입니다. 을 구현 `IHttpModule` 하거나 `IHttpHandler` 등록 하 고 들어오는 요청을 처리할 수 있는 클래스입니다. *web.config* 파일에서 모듈 및 처리기를 구성 Web Forms 합니다. 또한 Web Forms는 앱 수명 주기 이벤트 처리에 따라 크게 달라 집니다. ASP.NET Core는 미들웨어를 대신 사용 합니다. 미들웨어는 `Configure` 클래스의 메서드에 등록 됩니다 `Startup` . 미들웨어 실행 순서는 등록 순서에 따라 결정 됩니다.
 
 [시작 프로세스 사용](#enable-startup-process) 섹션에서 메서드를 Web Forms 하 여 수명 주기 이벤트를 발생 시킵니다 `Application_BeginRequest` . 이 이벤트는 ASP.NET Core에서 사용할 수 없습니다. 이 동작을 수행 하는 한 가지 방법은 *Startup.cs* 파일 예제에서 볼 수 있듯이 미들웨어를 구현 하는 것입니다. 이 미들웨어는 동일한 논리를 수행한 다음 미들웨어 파이프라인의 다음 처리기로 제어를 전달 합니다.
 
@@ -261,7 +262,7 @@ Http 모듈 및 처리기는 HTTP 요청 파이프라인을 제어 하기 위한
 
 ## <a name="migrate-static-files"></a>정적 파일 마이그레이션
 
-HTML, CSS, 이미지 및 JavaScript와 같은 정적 파일을 제공 하려면 파일을 미들웨어에서 노출 해야 합니다. 메서드를 호출 하면 `UseStaticFiles` 웹 루트 경로에서 정적 파일을 제공할 수 있습니다. 기본 웹 루트 디렉터리는 *wwwroot*이지만 사용자 지정할 수 있습니다. `Configure`EShop의 클래스 메서드에 포함 된 것과 같습니다 `Startup` .
+HTML, CSS, 이미지 및 JavaScript와 같은 정적 파일을 제공 하려면 파일을 미들웨어에서 노출 해야 합니다. 메서드를 호출 하면 `UseStaticFiles` 웹 루트 경로에서 정적 파일을 제공할 수 있습니다. 기본 웹 루트 디렉터리는 *wwwroot* 이지만 사용자 지정할 수 있습니다. `Configure`EShop의 클래스 메서드에 포함 된 것과 같습니다 `Startup` .
 
 ```csharp
 public void Configure(IApplicationBuilder app)
@@ -286,7 +287,7 @@ EShop 프로젝트를 사용 하면 기본 정적 파일에 액세스할 수 있
 
 Web Forms 앱의 페이지는 확장명이 *.aspx* 인 파일입니다. Web Forms 페이지를의 구성 요소에 매핑할 수 있는 경우가 많습니다 Blazor . Blazor구성 요소는 확장명이 *razor* 인 파일에 작성 됩니다. EShop 프로젝트의 경우 5 개의 페이지가 Razor 페이지로 변환 됩니다.
 
-예를 들어 세부 정보 보기는 Web Forms 프로젝트의 세 가지 파일 ( *Details.aspx.cs*, Details.aspx.designer.cs *, 및* *Details.aspx.designer.cs*)로 구성 됩니다. 로 변환할 때 Blazor 코드 숨김과 태그가 *자세히. razor*로 결합 됩니다. Razor 컴파일 ( *designer.cs* 파일에 해당)은 *obj* 디렉터리에 저장 되며 기본적으로 **솔루션 탐색기**에서 볼 수 없습니다. Web Forms 페이지는 다음 태그로 구성 됩니다.
+예를 들어 세부 정보 보기는 Web Forms 프로젝트의 세 가지 파일 ( *Details.aspx.cs*, Details.aspx.designer.cs *, 및* *Details.aspx.designer.cs*)로 구성 됩니다. 로 변환할 때 Blazor 코드 숨김과 태그가 *자세히. razor* 로 결합 됩니다. Razor 컴파일 ( *designer.cs* 파일에 해당)은 *obj* 디렉터리에 저장 되며 기본적으로 **솔루션 탐색기** 에서 볼 수 없습니다. Web Forms 페이지는 다음 태그로 구성 됩니다.
 
 ```aspx-csharp
 <%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="eShopLegacyWebForms.Catalog.Details" %>
@@ -562,7 +563,7 @@ Web Forms 코드에 유효성 검사가 포함 된 경우 거의 변경 하지 �
 
 ## <a name="migrate-configuration"></a>구성 마이그레이션
 
-Web Forms 프로젝트에서 구성 데이터는 가장 일반적으로 *web.config* 파일에 저장 됩니다. 구성 데이터는를 사용 하 여 액세스 됩니다 `ConfigurationManager` . 개체를 구문 분석 하려면 서비스가 자주 필요 했습니다. .NET Framework 4.7.2를 사용 하 여 composability를를 통해 구성에 추가 했습니다 `ConfigurationBuilders` . 이러한 빌더를 통해 개발자는 런타임에 구성 된 구성에 대해 다양 한 소스를 추가 하 여 필요한 값을 검색할 수 있습니다.
+Web Forms 프로젝트에서 구성 데이터는 가장 일반적으로 *web.config* 파일에 저장 됩니다. 구성 데이터는를 사용 하 여 액세스 됩니다 `ConfigurationManager` . 개체를 구문 분석 하려면 서비스가 자주 필요 했습니다. .NET Framework 4.7.2를 사용 하 여 composability를를 통해 구성에 추가 했습니다 `ConfigurationBuilders` . 이러한 빌더를 통해 개발자는 필요한 값을 검색 하기 위해 런타임에 구성 된 구성에 대해 다양 한 소스를 추가할 수 있습니다.
 
 ASP.NET Core에는 앱 및 배포에 사용 되는 구성 소스 또는 소스를 정의할 수 있는 유연한 구성 시스템이 도입 되었습니다. `ConfigurationBuilder`Web Forms 앱에서 사용할 수 있는 인프라는 ASP.NET Core 구성 시스템에서 사용 되는 개념에 따라 모델링 되었습니다.
 
@@ -583,7 +584,7 @@ ASP.NET Core에는 앱 및 배포에 사용 되는 구성 소스 또는 소스�
 </configuration>
 ```
 
-데이터베이스 연결 문자열과 같은 비밀은 *web.config*내에 저장 하는 것이 일반적입니다. 비밀은 원본 제어와 같은 안전 하지 않은 위치에 유지 됩니다. ASP.NET Core를 사용 하는 Blazor 경우 앞의 XML 기반 구성이 다음 JSON으로 바뀝니다.
+데이터베이스 연결 문자열과 같은 비밀은 *web.config* 내에 저장 하는 것이 일반적입니다. 비밀은 원본 제어와 같은 안전 하지 않은 위치에 유지 됩니다. ASP.NET Core를 사용 하는 Blazor 경우 앞의 XML 기반 구성이 다음 JSON으로 바뀝니다.
 
 ```json
 {
@@ -616,7 +617,7 @@ public class Startup
 
 ## <a name="migrate-data-access"></a>데이터 액세스 마이그레이션
 
-데이터 액세스는 모든 앱의 중요 한 측면입니다. EShop 프로젝트는 카탈로그 정보를 데이터베이스에 저장 하 고 Entity Framework (EF) 6을 사용 하 여 데이터를 검색 합니다. EF 6은 .NET Core 3.0에서 지원 되기 때문에 프로젝트에서 계속 사용할 수 있습니다.
+데이터 액세스는 모든 앱의 중요 한 측면입니다. EShop 프로젝트는 카탈로그 정보를 데이터베이스에 저장 하 고 Entity Framework (EF) 6을 사용 하 여 데이터를 검색 합니다. EF 6은 .NET 5.0에서 지원 되기 때문에 프로젝트에서 계속 사용할 수 있습니다.
 
 EShop에는 다음과 같은 EF 관련 변경이 필요 했습니다.
 
