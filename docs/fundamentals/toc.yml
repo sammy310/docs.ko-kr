@@ -138,7 +138,7 @@ items:
           - name: 새로운 기능
             href: ../core/dotnet-five.md
           - name: 호환성이 손상되는 변경
-            href: ../core/compatibility/5.0.md
+            href: ../core/compatibility/5.0.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
       - name: .NET Core 3.1
         items:
           - name: 새로운 기능
@@ -367,6 +367,8 @@ items:
             href: ../core/additional-tools/index.md
           - name: .NET 제거 도구
             href: ../core/additional-tools/uninstall-tool.md
+          - name: 자체 서명된 인증서 생성
+            href: ../core/additional-tools/self-signed-certificates-guide.md
           - name: WCF 웹 서비스 참조 공급자
             href: ../core/additional-tools/wcf-web-service-reference-guide.md
           - name: WCF 서비스 유틸리티
@@ -385,9 +387,12 @@ items:
           - name: 관리형 디버거
             href: ../core/diagnostics/managed-debuggers.md
           - name: 덤프
-            href: ../core/diagnostics/dumps.md
-          - name: Linux 덤프 디버그
-            href: ../core/diagnostics/debug-linux-dumps.md
+            items:
+              - name: 개요
+                displayName: dumps
+                href: ../core/diagnostics/dumps.md
+              - name: Linux 덤프
+                href: ../core/diagnostics/debug-linux-dumps.md
           - name: EventCounters
             href: ../core/diagnostics/event-counters.md
           - name: EventPipe
@@ -1603,10 +1608,36 @@ items:
                 displayName: json serialization
               - name: JSON 직렬화 및 역직렬화 방법
                 href: ../standard/serialization/system-text-json-how-to.md
-              - name: 사용자 지정 변환기를 작성하는 방법
-                href: ../standard/serialization/system-text-json-converters-how-to.md
+              - name: 컨트롤 serialization 동작
+                items:
+                  - name: JsonSerializerOptions 인스턴스화
+                    href: ../standard/serialization/system-text-json-configure-options.md
+                  - name: 대/소문자를 구분하지 않는 일치를 사용하도록 설정
+                    href: ../standard/serialization/system-text-json-character-casing.md
+                  - name: 속성 이름 및 값 사용자 지정
+                    href: ../standard/serialization/system-text-json-customize-properties.md
+                  - name: 속성 무시
+                    href: ../standard/serialization/system-text-json-ignore-properties.md
+                  - name: 잘못된 JSON 허용
+                    href: ../standard/serialization/system-text-json-invalid-json.md
+                  - name: 오버플로 JSON 처리
+                    href: ../standard/serialization/system-text-json-handle-overflow.md
+                  - name: 참조 유지
+                    href: ../standard/serialization/system-text-json-preserve-references.md
+                  - name: 변경할 수 없는 형식 및 public이 아닌 접근자
+                    href: ../standard/serialization/system-text-json-immutability.md
+                  - name: 다형 직렬화
+                    href: ../standard/serialization/system-text-json-polymorphism.md
               - name: Newtonsoft.Json에서 마이그레이션하는 방법
                 href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+              - name: 고급
+                items:
+                  - name: 문자 인코딩 사용자 지정
+                    href: ../standard/serialization/system-text-json-character-encoding.md
+                  - name: 사용자 지정 직렬 변환기 및 역직렬 변환기
+                    href: ../standard/serialization/write-custom-serializer-deserializer.md
+                  - name: 사용자 지정 변환기
+                    href: ../standard/serialization/system-text-json-converters-how-to.md
           - name: 이진 Serialization
             items:
               - name: 개요
@@ -2249,7 +2280,7 @@ items:
           - name: Windows 호환 기능 팩 사용
             href: ../core/porting/windows-compat-pack.md
           - name: Windows Forms 프로젝트 포팅
-            href: ../core/porting/winforms.md
+            href: /dotnet/desktop/winforms/migration/?view=netdesktop-5.0
           - name: WPF 프로젝트 포팅
             href: /dotnet/desktop/wpf/migration/convert-project-from-net-framework
           - name: 포트 C++/CLI 프로젝트

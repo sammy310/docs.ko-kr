@@ -1,20 +1,20 @@
 ---
 title: Visual Basic 관련 호환성이 손상되는 변경
-description: .NET Core에서 사용되는 Visual Basic 관련 호환성이 손상되는 변경 목록입니다.
+description: .NET Core 3.0에서 사용되는 Visual Basic의 호환성이 손상되는 변경을 나열합니다.
 ms.date: 09/20/2019
-ms.openlocfilehash: f6dd25586b9da173a4809cd4721bf2a39c9e0401
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: b814edbf3a3a58d37b0a2b66a0e1c4f680f14b57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555913"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713147"
 ---
-# <a name="visual-basic-breaking-changes"></a><span data-ttu-id="8dbd6-103">Visual Basic 관련 호환성이 손상되는 변경</span><span class="sxs-lookup"><span data-stu-id="8dbd6-103">Visual Basic breaking changes</span></span>
+# <a name="visual-basic-breaking-changes-in-net-core-30"></a><span data-ttu-id="c3461-103">.NET Core 3.0의 Visual Basic 관련 호환성이 손상되는 변경</span><span class="sxs-lookup"><span data-stu-id="c3461-103">Visual Basic breaking changes in .NET Core 3.0</span></span>
 
-<span data-ttu-id="8dbd6-104">다음은 Visual Basic의 호환성이 손상되는 변경 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="8dbd6-104">The following is a list of breaking changes in Visual Basic:</span></span>
+<span data-ttu-id="c3461-104">다음은 Visual Basic의 호환성이 손상되는 변경 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="c3461-104">The following is a list of breaking changes in Visual Basic:</span></span>
 
-- [<span data-ttu-id="8dbd6-105">Microsoft.VisualBasic.Constants.vbNewLine은 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8dbd6-105">Microsoft.VisualBasic.Constants.vbNewLine is obsolete</span></span>](#microsoftvisualbasicconstantsvbnewline-is-obsolete)
+- [<span data-ttu-id="c3461-105">Microsoft.VisualBasic.Constants.vbNewLine은 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c3461-105">Microsoft.VisualBasic.Constants.vbNewLine is obsolete</span></span>](#microsoftvisualbasicconstantsvbnewline-is-obsolete)
 
-## <a name="net-core-30"></a><span data-ttu-id="8dbd6-106">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="8dbd6-106">.NET Core 3.0</span></span>
+## <a name="net-core-30"></a><span data-ttu-id="c3461-106">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="c3461-106">.NET Core 3.0</span></span>
 
 [!INCLUDE[vbNewLine is obsolete](~/includes/core-changes/visualbasic/3.0/vbnewline-is-obsolete.md)]
