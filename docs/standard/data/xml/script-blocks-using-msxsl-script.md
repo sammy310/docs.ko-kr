@@ -5,23 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-ms.openlocfilehash: 3cb65142243d1f910ffd0fb85750ba62786d79f0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1a2d1f0972bc610cb4943dacc74c1bae8c54012b
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824702"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032218"
 ---
 # <a name="script-blocks-using-msxslscript"></a>msxsl:script를 사용하는 스크립트 블록
+
+> [!NOTE]
+> 스크립트 블록은 .NET Framework에서만 지원됩니다. .NET Core 또는 .NET 5.0 이상에서는 지원되지 ‘않습니다’.
+
 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 `msxsl:script` 요소를 사용하여 포함 스크립트를 지원합니다. 스타일시트가 로드될 때 정의된 모든 함수는 CodeDOM(코드 문서 개체 모델)에 의해 MSIL(Microsoft Intermediate Language)로 컴파일되며 런타임 동안 실행됩니다. 포함된 스크립트 블록에서 생성된 어셈블리는 스타일시트에 대해 생성된 어셈블리와는 다릅니다.  
   
 ## <a name="enable-xslt-script"></a>XSLT 스크립트 사용  
+
  포함된 스크립트 지원은 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스에서 선택적 XSLT 설정입니다. 스크립트 지원은 기본적으로 사용되지 않습니다. 스크립트 지원을 사용하려면 <xref:System.Xml.Xsl.XsltSettings> 속성을 <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A>로 설정하여 `true` 개체를 만들고 이 개체를 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 메서드에 전달합니다.  
   
 > [!NOTE]
 > XSLT 스크립트는 스크립트 지원이 필요하거나 완전히 신뢰할 수 있는 환경에서 작업하는 경우에만 활성화해야 합니다.  
   
 ## <a name="msxslscript-element-definition"></a>msxsl:script 요소 정의  
+
  `msxsl:script` 요소는 XSLT 1.0 권장 사항에 대한 Microsoft 확장으로, 다음 정의를 가집니다.  
   
 ```xml  
@@ -46,6 +52,7 @@ ms.locfileid: "94824702"
 ```  
   
 ## <a name="script-functions"></a>스크립트 함수  
+
  함수는 `msxsl:script` 요소 내에서 선언할 수 있습니다. 함수를 선언하면 해당 함수는 스크립트 블록 내에 포함됩니다. 스타일시트에는 여러 스크립트 블록이 포함될 수 있으며 각 블록은 서로 독립적으로 작동합니다. 즉, 스크립트 블록 내부에서 실행할 경우 같은 네임스페이스와 같은 스크립트 언어를 사용하도록 선언된 경우에만 다른 스크립트 블록에 정의된 함수를 호출할 수 있습니다. 각 스크립트 블록에서는 서로 다른 언어를 사용할 수 있고, 블록은 해당 언어 파서의 문법 규칙에 따라 구문 분석되기 때문에 사용하는 언어의 올바른 구문을 사용해야 합니다. 예를 들어, Microsoft C# 스크립트 블록에서는 C# 주석 구문을 사용합니다.  
   
  함수에 제공된 인수 및 반환 값에는 어떤 형식도 사용할 수 있습니다. W3C XPath 형식은 CLR(공용 언어 런타임) 형식의 하위 집합이므로 XPath 형식으로 간주되지 않는 형식에서 형식 변환이 발생합니다. 다음 표에서는 해당 W3C 형식 및 CLR 형식을 보여 줍니다.  
@@ -63,9 +70,11 @@ ms.locfileid: "94824702"
  다른 모든 형식은 오류를 throw합니다.  
   
 ### <a name="importing-namespaces-and-assemblies"></a>네임스페이스 및 어셈블리 가져오기  
+
  <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 `msxsl:script` 요소에서 기본적으로 지원하는 어셈블리 및 네임스페이스 집합을 미리 정의합니다. 그러나 `msxsl:script` 블록에 어셈블리 및 네임스페이스를 가져오면 미리 정의된 목록에 없는 네임스페이스에 속한 클래스 및 멤버를 사용할 수 있습니다.  
   
 #### <a name="assemblies"></a>어셈블리  
+
  기본적으로 다음 두 어셈블리가 참조됩니다.  
   
 - System.dll  
@@ -89,6 +98,7 @@ ms.locfileid: "94824702"
  `name` 특성에는 어셈블리 이름이 포함되며 `href` 특성에는 어셈블리 경로가 포함됩니다. 어셈블리 이름은 "System.Data, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" 등의 전체 이름이거나 "System.Web"과 같은 약식 이름일 수 있습니다.  
   
 #### <a name="namespaces"></a>네임스페이스  
+
  기본적으로 다음 네임스페이스가 포함됩니다.  
   
 - 시스템  
@@ -119,15 +129,18 @@ ms.locfileid: "94824702"
 ```  
   
 ## <a name="example"></a>예제  
+
  다음 예제에서는 포함 스크립트를 사용하여 주어진 반지름으로 원의 원주를 계산합니다.  
   
  [!code-csharp[XSLT_Script#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Script/CS/xslt_script.cs#1)]
  [!code-vb[XSLT_Script#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Script/VB/xslt_script.vb#1)]  
   
 #### <a name="numberxml"></a>number.xml  
+
  [!code-xml[XSLT_Script#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/number.xml#2)]  
   
 #### <a name="calcxsl"></a>calc.xsl  
+
  [!code-xml[XSLT_Script#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/calc.xsl#3)]  
   
 ### <a name="output"></a>출력  

@@ -4,12 +4,12 @@ description: Ubuntu에 .NET SDK 및 .NET 런타임을 설치하는 다양한 방
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 419bcf3ccd011cadba8f8c64e195d7dbdbf7e241
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 22ce3379e028f065528e1f507a2d8c1ae598f0e8
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507030"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031850"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-ubuntu"></a>Ubuntu에 .NET SDK 또는 .NET 런타임 설치
 
@@ -46,15 +46,27 @@ ms.locfileid: "94507030"
 - 2.2
 - 2.0
 
+## <a name="remove-preview-versions"></a>미리 보기 버전 제거
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
+
 ## <a name="how-to-install-other-versions"></a>다른 버전을 설치하는 방법
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
 ## <a name="2010-"></a>20.10 ✔️
 
-Ubuntu 20.10용 .NET 5 및 .NET Core 3.1 패키지 피드에는 현재 문제가 있습니다. 문제에 대한 자세한 내용은 [GitHub issue dotnet/core#5549](https://github.com/dotnet/core/issues/5549)(GitHub 문제 dotnet/core#5549)를 참조하세요. 이 문서는 문제가 해결될 때 업데이트됩니다.
+> [!IMPORTANT]
+> .NET Core 2.1은 패키지 피드에서 아직 사용할 수 없습니다.
 
-Ubuntu 20.10에 .NET 5 또는 .NET Core 3.1을 설치하려면 [20.04](#2004-)에 대한 지침을 따르세요.
+[!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
+
+```bash
+wget https://packages.microsoft.com/config/ubuntu/20.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+```
+
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="2004-"></a>20.04 ✔️
 

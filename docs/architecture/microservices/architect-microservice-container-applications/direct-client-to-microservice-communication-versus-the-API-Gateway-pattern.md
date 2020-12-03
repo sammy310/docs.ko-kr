@@ -2,12 +2,12 @@
 title: API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신
 description: API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신의 차이점 및 사용법을 이해합니다.
 ms.date: 01/07/2019
-ms.openlocfilehash: 90761605dde197e44658e3ba0b0a3a2c06b5942c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 88cea3b7c2fdd09bec605431308df8783c343332
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152704"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240604"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신
 
@@ -113,7 +113,7 @@ API 게이트웨이는 여러 기능을 제공할 수 있습니다. 제품에 �
 - 부하 분산
 - 로깅, 추적, 상관 관계
 - 헤더, 쿼리 문자열 및 청구 변환
-- IP 허용 목록
+- IP 허용 목록에 추가
 
 자세한 내용은 [게이트웨이 오프로딩 패턴](/azure/architecture/patterns/gateway-offloading)을 참조하세요.
 

@@ -3,18 +3,18 @@ title: 무시 항목 - C# 가이드
 description: 할당되지 않은 무시 가능한 변수인 무시 항목에 대한 C#의 지원과 무시 항목을 사용할 수 있는 방법에 관해 설명합니다.
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
-ms.openlocfilehash: 4de48aebaeb896b198b2e9f2431c6a38ba11469e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: baa7c559095460cf747cb5c8f7ad581270893bd7
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869324"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "95698808"
 ---
 # <a name="discards---c-guide"></a>무시 항목 - C# 가이드
 
-C# 7.0부터 C#에서는 애플리케이션 코드에서 의도적으로 사용되지 않는 임시 더미 변수인 무시 항목을 지원합니다. 무시 항목은 할당되지 않은 변수에 해당하므로 값을 가지지 않습니다. 무시 항목 변수는 하나만 있고 할당된 스토리지가 아닐 수도 있으므로 무시 항목은 메모리 할당을 줄일 수 있습니다. 코드의 의도를 명확하게 만들므로 코드의 가독성과 유지 관리 편의성을 향상합니다.
+C# 7.0부터 C#에서는 애플리케이션 코드에서 의도적으로 사용되지 않는 자리 표시자 변수인 무시 항목을 지원합니다. 무시 항목은 할당되지 않은 변수에 해당하므로 값을 가지지 않습니다. 무시 항목 변수는 하나만 있고 할당된 스토리지가 아닐 수도 있으므로 무시 항목은 메모리 할당을 줄일 수 있습니다. 코드의 의도를 명확하게 만들므로 코드의 가독성과 유지 관리 편의성을 향상합니다.
 
-변수가 무시 항목임을 지정하려면 변수에 밑줄(`_`)을 이름으로 할당합니다. 예를 들어 다음 메서드 호출은 첫 번째 및 두 번째 값이 무시 항목이고 *영역*이 *GetCityInformation*에서 반환한 해당 세 번째 구성 요소로 설정된 이전에 선언된 변수인 3-튜플을 반환합니다.
+변수가 무시 항목임을 지정하려면 변수에 밑줄(`_`)을 이름으로 할당합니다. 예를 들어 다음 메서드 호출은 첫 번째 및 두 번째 값이 무시 항목이고 *영역* 이 *GetCityInformation* 에서 반환한 해당 세 번째 구성 요소로 설정된 이전에 선언된 변수인 3-튜플을 반환합니다.
 
 ```csharp
 (_, _, area) = city.GetCityInformation(cityName);
@@ -47,7 +47,7 @@ C# 9.0부터 무시 항목을 사용하여 람다 식의 사용하지 않는 입
 
 ## <a name="pattern-matching-with-switch-and-is"></a>`switch` 및 `is`를 사용한 패턴 일치
 
-*무시 패턴*은 [is](language-reference/keywords/is.md) 및 [switch](language-reference/keywords/switch.md) 키워드를 사용한 패턴 일치에서 사용할 수 있습니다. 모든 식은 무시 패턴과 항상 일치됩니다.
+*무시 패턴* 은 [is](language-reference/keywords/is.md) 및 [switch](language-reference/keywords/switch.md) 키워드를 사용한 패턴 일치에서 사용할 수 있습니다. 모든 식은 무시 패턴과 항상 일치됩니다.
 
 다음 예제에서는 [is](language-reference/keywords/is.md) 문을 사용하여 개체가 <xref:System.IFormatProvider> 구현을 제공하고 개체가 `null`인지 테스트하는지를 결정하는 `ProvidesFormatInfo` 메서드를 정의합니다. 또한 무시 패턴을 사용하여 다른 형식의 null이 아닌 개체도 처리합니다.
 

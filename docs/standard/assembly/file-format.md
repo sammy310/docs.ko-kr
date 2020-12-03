@@ -4,12 +4,12 @@ description: .NET 앱 및 라이브러리를 설명하고 포함하는 데 사�
 author: richlander
 ms.date: 08/20/2019
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 1e98f0beb6756c9a02b2839eb88d6a5b13375786
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b1de3f46f04f24dd4bbb2f695de8741feb29f226
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822193"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731542"
 ---
 # <a name="net-assembly-file-format"></a>.NET 어셈블리 파일 형식
 
@@ -17,7 +17,7 @@ ms.locfileid: "94822193"
 
 > 각 CLI 구성 요소는 해당 구성 요소와 관련된 선언, 구현 및 참조에 대한 메타데이터를 전달합니다. 따라서 구성 요소 관련 메타데이터는 구성 요소별 메타데이터라고 하며 결과 구성 요소는 자기 설명적입니다(ECMA 335 I.9.1, Components and assemblies).
 
-형식은 완벽하게 지정되며 [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm)로 표준화됩니다. 모든 .NET 컴파일러와 런타임에서 이 형식을 사용합니다. 문서화되고 자주 업데이트되지 않는 이진 형식이 있을 경우 상호 운용성에 특히 도움이 됩니다(요구 사항인 경우도 있음). 형식은 2005(.NET 2.0)에서 대체 방법을 사용하여 제네릭 및 프로세서 아키텍처에 맞게 마지막으로 업데이트되었습니다.
+형식은 완벽하게 지정되며 [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm)로 표준화됩니다. 모든 .NET 컴파일러와 런타임에서 이 형식을 사용합니다. 문서화되고 자주 업데이트되지 않는 이진 형식이 있을 경우 상호 운용성에 특히 도움이 됩니다(요구 사항인 경우도 있음). 형식은 2005(.NET Framework 2.0)에서 제네릭 및 프로세서 아키텍처에 맞게 실질적인 방법으로 마지막으로 업데이트되었습니다.
 
 형식은 CPU 및 OS와 관련이 없습니다. 많은 칩과 CPU를 대상으로 하는 .NET 구현의 일부로 사용되었습니다. 형식 자체에 Windows 유산이 있을 경우 모든 운영 체제에서 구현할 수 있습니다. 논란의 여지는 있지만 OS 상호 운용성에 가장 중요한 선택 사항은 대부분의 값을 little-endian 형식으로 저장하는 것입니다. 컴퓨터 포인터 크기(예: 32비트, 64비트)에 대한 특정 선호도는 없습니다.
 

@@ -1,18 +1,18 @@
 ---
 title: 오래된 멤버 - .NET Framework
-description: .NET 4.5 이상 버전에서 사용되지 않는 형식 멤버의 목록을 확인합니다. 형식 멤버는 어셈블리로 그룹화됩니다. 사용되지 않는 형식의 멤버는 여기에서 제외됩니다.
+description: .NET Framework 4.5 이상 버전에서 사용되지 않는 형식 멤버의 목록을 확인합니다. 형식 멤버는 어셈블리로 그룹화됩니다. 사용되지 않는 형식의 멤버는 여기에서 제외됩니다.
 ms.date: 10/17/2017
 helpviewer_keywords:
 - .NET Framework, obsolete members
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: d5981a2ec1e8152e891a4480ea548200be45ecd1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 35dc67e80a47ba3e61db3d27f44f6c6ee45464ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558526"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726459"
 ---
 # <a name="obsolete-members-in-net-framework"></a>.NET Framework에서 사용되지 않는 멤버
 
@@ -134,7 +134,7 @@ ms.locfileid: "90558526"
 > |<xref:System.Security.HostSecurityManagerOptions?displayProperty=nameWithType>|<xref:System.Security.HostSecurityManagerOptions.HostPolicyLevel>|AppDomain 정책 수준은 사용되지 않으며 .NET Framework의 이후 릴리스에서 제거됩니다.|
 > |<xref:System.Security.PermissionSet?displayProperty=nameWithType>|<xref:System.Security.PermissionSet.ConvertPermissionSet%2A>|이 메서드는 사용되지 않으며 더 이상 사용해서는 안 됩니다.|
 > |<xref:System.Security.PermissionSet?displayProperty=nameWithType>|<xref:System.Security.PermissionSet.Deny%2A>|<xref:System.Security.PermissionSet.Deny%2A>는 사용되지 않으며 .NET Framework의 이후 릴리스에서 제거됩니다.|
-> |<xref:System.Security.SecurityCriticalAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalAttribute.Scope%2A>|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>는 .NET 2.0 투명도 호환성을 위한 용도로만 사용됩니다.|
+> |<xref:System.Security.SecurityCriticalAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalAttribute.Scope%2A>|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>는 .NET Framework 2.0 투명도 호환성을 위한 용도로만 사용됩니다.|
 > |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.CheckExecutionRights%2A>|이제 실행 권한 검사를 끌 수 없으므로 <xref:System.Security.SecurityManager.CheckExecutionRights%2A> 속성은 더 이상 영향을 주지 않습니다.|
 > |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.IsGranted%2A>|<xref:System.Security.SecurityManager.IsGranted%2A>는 사용되지 않으며 .NET Framework의 이후 릴리스에서 제거됩니다. 대신 <xref:System.AppDomain.PermissionSet%2A?displayProperty=nameWithType> 속성 또는 <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType> 속성 중 하나를 사용하세요.|
 > |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.LoadPolicyLevelFromFile%2A>|이 메서드는 사용되지 않으며 .NET Framework의 이후 릴리스에서 제거됩니다.|

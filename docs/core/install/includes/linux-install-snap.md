@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4ab2fc0645f76870dead99b5f45eef763643fb27
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 83808f2f3a05333ed5d9e3809cbc2fd6e230d02c
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506903"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031783"
 ---
 
 [.NET Core는 Snap 스토어에서 제공됩니다.](https://snapcraft.io/dotnet-sdk)
@@ -15,7 +15,7 @@ Snap은 다양한 Linux 배포판에서 수정하지 않고도 작동하는 앱�
 
 ### <a name="install-the-sdk"></a>SDK 설치
 
-.NET SDK용 스냅 패키지는 모두 동일한 식별자 `dotnet-sdk`로 게시됩니다. 특정 버전의 SDK는 채널을 지정하여 설치할 수 있습니다. SDK에는 해당 런타임이 포함됩니다. 다음 표에는 채널이 나와 있습니다.
+.NET SDK용 스냅 패키지는 모두 동일한 식별자 `dotnet-sdk`로 게시됩니다. 특정 버전의 SDK는 채널을 지정하여 설치할 수 있습니다. SDK에는 해당 런타임이 포함됩니다. 다음 표에서는 채널 목록을 보여 줍니다.
 
 | .NET 버전 | 맞춤 패키지             |
 |--------------|--------------------------|

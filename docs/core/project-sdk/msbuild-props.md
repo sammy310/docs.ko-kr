@@ -4,12 +4,12 @@ description: .NET SDK에서 이해하는 MSBuild 속성 및 항목에 대한 참
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: ecd1cf405f661d0025553974f92fa1401b13220d
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 14603ba98f00d46d0f167652500979f94de0ec9a
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687473"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031691"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 프로젝트용 MSBuild 참조
 
@@ -81,10 +81,24 @@ ms.locfileid: "94687473"
 
 ## <a name="publish-properties-and-items"></a>속성 및 항목 게시
 
+- [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
+
+### <a name="copylocallockfileassemblies"></a>CopyLocalLockFileAssemblies
+
+`CopyLocalLockFileAssemblies` 속성은 다른 라이브러리에 대한 종속성이 있는 플러그 인 프로젝트에 유용합니다. 이 속성을 `true`로 설정하면 NuGet 패키지 종속성이 출력 디렉터리에 복사됩니다. 즉, `dotnet build`의 출력을 사용하여 모든 머신에서 플러그 인을 실행할 수 있습니다.
+
+```xml
+<PropertyGroup>
+  <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+</PropertyGroup>
+```
+
+> [!TIP]
+> 또는 `dotnet publish`를 사용하여 클래스 라이브러리를 게시할 수 있습니다. 자세한 내용은 [dotnet publish](../tools/dotnet-publish.md)를 참조하세요.
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
 

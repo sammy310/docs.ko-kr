@@ -6,12 +6,12 @@ ms.topic: error-reference
 ms.date: 10/09/2020
 f1_keywords:
 - NETSDK1071
-ms.openlocfilehash: 852232cba04bb93a17872280e10848c2896991ae
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1381fc63941ec04efb31035d13913620a195c236
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94445710"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713082"
 ---
 # <a name="netsdk1071-explicitly-versioned-packagereference-to-a-metapackage-that-would-be-included-with-the-framework"></a>NETSDK1071: 프레임워크에 포함되는 메타패키지에 대한 PackageReference 버전을 명시적으로 관리했습니다.
 

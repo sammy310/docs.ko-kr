@@ -2,12 +2,12 @@
 title: dotnet pack 명령
 description: dotnet pack 명령은 .NET 프로젝트에 대한 NuGet 패키지를 만듭니다.
 ms.date: 04/28/2020
-ms.openlocfilehash: 4312ea64a75fa89eae58cdb41a6dc3463cdd215c
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3ca7947b4ed9902b163f09a7b57696f304610cce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634235"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674803"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -118,7 +118,7 @@ dotnet pack -h|--help
 
 - **`-s|--serviceable`**
 
-  패키지에 서비스 가능 플래그를 설정합니다. 자세한 내용은 [.NET 블로그: .NET 4.5.1에서 .NET NuGet 라이브러리에 대한 Microsoft 보안 업데이트를 지원함](https://aka.ms/nupkgservicing)을 참조하세요.
+  패키지에 서비스 가능 플래그를 설정합니다. 자세한 내용은 [.NET Blog: .NET Framework 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing)(NET 블로그: .NET 4.5.1에서 .NET NuGet 라이브러리에 대한 Microsoft 보안 업데이트를 지원함)를 참조하세요.
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
@@ -185,7 +185,7 @@ dotnet pack -h|--help
   ```
 
   `NuspecFile`, `NuspecBasePath` 및 `NuspecProperties`를 사용하는 방법에 관한 자세한 내용은 다음 리소스를 참조하세요.
-  
+
   - [.nuspec을 사용하여 압축](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [사용자 지정 패키지를 만들기 위한 고급 확장점](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
   - [전역 속성](/visualstudio/msbuild/msbuild-properties#global-properties)

@@ -2,12 +2,12 @@
 title: .NET 컨테이너에서 대상으로 지정할 OS
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | .NET 컨테이너에서 대상으로 지정할 OS
 ms.date: 01/30/2020
-ms.openlocfilehash: a09e3981ece478a9795c0f27acc98d604864cdd5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1f52dcb4da6509be7e771af353daea9cfc97306c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501856"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688460"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>.NET 컨테이너에서 대상으로 지정할 OS
 
@@ -34,10 +34,10 @@ Dockerfile 파일에 이미지 이름을 추가할 때는 다음 예제에서처
 
 | 이미지 | 주석 |
 |-------|----------|
-| mcr.microsoft.com/dotnet/core/runtime:3.1 | .NET Core 3.1 다중 아키텍처: Docker 호스트에 따라 Linux 및 Windows Nano Server를 지원합니다. |
-| mcr.microsoft.com/dotnet/core/aspnet:3.1 | ASP.NET Core 3.1 다중 아키텍처: Docker 호스트에 따라 Linux 및 Windows Nano Server를 지원합니다. <br/> aspnetcore 이미지에는 ASP.NET Core에 대한 몇 가지 최적화가 있습니다. |
-| mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim | Linux Debian 배포판의 .NET Core 3.1 런타임 전용 |
-| mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1809 | Windows Nano Server(Windows Server 버전 1809)의 .NET Core 3.1 런타임 전용 |
+| mcr.microsoft.com/dotnet/runtime:3.1 | .NET Core 3.1 다중 아키텍처: Docker 호스트에 따라 Linux 및 Windows Nano Server를 지원합니다. |
+| mcr.microsoft.com/dotnet/aspnet:3.1 | ASP.NET Core 3.1 다중 아키텍처: Docker 호스트에 따라 Linux 및 Windows Nano Server를 지원합니다. <br/> aspnetcore 이미지에는 ASP.NET Core에 대한 몇 가지 최적화가 있습니다. |
+| mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim | Linux Debian 배포판의 .NET Core 3.1 런타임 전용 |
+| mcr.microsoft.com/dotnet/aspnet:3.1-nanoserver-1809 | Windows Nano Server(Windows Server 버전 1809)의 .NET Core 3.1 런타임 전용 |
 
 ## <a name="additional-resources"></a>추가 자료
 

@@ -7,16 +7,16 @@ ms.date: 10/09/2020
 f1_keywords:
 - NETSDK1005
 - NETSDK1047
-ms.openlocfilehash: 6c22fd8c79c2ac6e024b46b4f67e08011d42efc6
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 207c8b0274c13e7af594e05cfac2a95907f85b81
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957103"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717905"
 ---
 # <a name="netsdk1005-and-netsdk1047-asset-file-is-missing-target"></a>NETSDK1005 및 NETSDK1047: 자산 파일에 대상이 없음
 
-**이 문서의 적용 대상:** ✔️ .NET 2.1.100 SDK 이상 버전
+**이 문서의 적용 대상:** ✔️ .NET Core 2.1.100 SDK 이상 버전
 
 .NET SDK가 NETSDK1005 또는 NETSDK1047 오류를 실행하는 경우 프로젝트의 자산 파일에 대상 프레임워크 중 하나의 정보가 누락된 것입니다. 일반적으로 복원을 실행하고 누락된 대상 값을 프로젝트의 `TargetFrameworks` 속성에 포함하면 이 문제를 해결할 수 있습니다.
 

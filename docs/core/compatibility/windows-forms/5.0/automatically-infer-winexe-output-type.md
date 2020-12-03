@@ -1,0 +1,65 @@
+---
+title: '호환성이 손상되는 변경: WPF 및 WinForms 앱에 대해 OutputType이 WinExe로 설정됨'
+description: Windows Forms 앱에 대해 OutputType이 WinExe로 자동으로 설정되는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+ms.date: 09/18/2020
+ms.openlocfilehash: 072c5b11c8304eb540e176ce9747930789f28505
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95760020"
+---
+# <a name="outputtype-set-to-winexe-for-wpf-and-winforms-apps"></a>WPF 및 WinForms 앱에 대해 OutputType이 WinExe로 설정됨
+
+WPF(Windows Presentation Foundation) 및 Windows Forms 앱에 대해 `OutputType`은 자동으로 `WinExe`로 설정됩니다. `OutputType`이 `WinExe`로 설정되면 앱 실행 시 콘솔 창이 열리지 않습니다.
+
+## <a name="change-description"></a>변경 내용 설명
+
+이전 버전의 .NET에서는 프로젝트 파일에 `OutputType`에 대해 지정된 값이 사용됩니다. 예를 들면 다음과 같습니다.
+
+```xml
+<PropertyGroup>
+  <OutputType>Exe</OutputType>
+</PropertyGroup>
+```
+
+.NET 5.0부터 `OutputType`은 WPF 및 Windows Forms 앱에 대해 자동으로 `WinExe`로 설정됩니다. 예를 들면 다음과 같습니다.
+
+```xml
+<PropertyGroup>
+  <OutputType>WinExe</OutputType>
+</PropertyGroup>
+```
+
+## <a name="reason-for-change"></a>변경 이유
+
+대부분 사용자가 WPF 또는 Windows Forms 앱 실행 시 콘솔 창이 열리기를 원하지 않는 것으로 가정합니다. 또한 [이제 이러한 애플리케이션 유형에 .NET SDK를 사용](sdk-and-target-framework-change.md)(Windows 데스크톱 SDK 아님)하므로 올바른 기본값이 설정됩니다. 또한 iOS 및 Android 대상 지정을 위한 지원이 추가되면 동일한 출력 형식이 사용되는 경우 여러 플랫폼 사이에 멀티 타기팅하기가 더 쉬워집니다.
+
+## <a name="version-introduced"></a>도입된 버전
+
+.NET 5.0
+
+## <a name="recommended-action"></a>권장 조치
+
+아무 작업도 수행할 필요가 없습니다. 하지만 이전 동작으로 되돌리려면 프로젝트 파일에서 `DisableWinExeOutputInference` 속성을 `true`로 설정합니다.
+
+```xml
+<DisableWinExeOutputInference>true</DisableWinExeOutputInference>
+```
+
+## <a name="affected-apis"></a>영향을 받는 API
+
+API 분석을 통해 검색할 수 없습니다.
+
+<!--
+
+### Affected APIs
+
+Not detectable via API analysis.
+
+### Category
+
+- Windows Forms
+- Windows Presentation Framework (WPF)
+
+-->

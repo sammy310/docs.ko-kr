@@ -1,18 +1,18 @@
 ---
 title: .NET Framework에서 사용되지 않는 형식
-description: 어셈블리별로 구성된 .NET Framework 4.5 및 .NET 4.6에서 사용되지 않는 형식 목록을 참조하세요. 권장 대안도 나열되어 있습니다.
+description: 어셈블리별로 구성된 .NET Framework 4.5 및 .NET Framework 4.6에서 사용되지 않는 형식 목록을 확인합니다. 권장 대안도 나열되어 있습니다.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-ms.openlocfilehash: 795735b66c7568dada0196a6426a0a9aaf52398a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ccf39283152ecdc6b7827f2185de215c17ecc845
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558539"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707917"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework에서 사용되지 않는 형식
 
@@ -134,8 +134,8 @@ ms.locfileid: "90558539"
 |<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>를 사용하세요.|
 |<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>를 사용하세요.|
 |<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|대신 <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType>를 사용하세요.|
-|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope>는 .NET 2.0 투명도 호환성을 위한 용도로만 사용됩니다.|
-|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute>는 .NET 2.0 투명도 호환성을 위한 용도로만 사용됩니다. 대신 <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>를 사용하십시오.|
+|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope>는 .NET Framework 2.0 투명도 호환성을 위한 용도로만 사용됩니다.|
+|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute>는 .NET Framework 2.0 투명도 호환성을 위한 용도로만 사용됩니다. 대신 <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>를 사용하십시오.|
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|이 형식은 사용되지 않으며 .NET Framework의 이후 릴리스에서 제거됩니다.|
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=nameWithType>|어셈블리 수준의 선언적 보안은 사용되지 않으며 더 이상 기본적으로 CLR에서 적용되지 않습니다.|
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=nameWithType>|이 형식은 사용되지 않으며 .NET Framework의 이후 릴리스에서 제거됩니다.|

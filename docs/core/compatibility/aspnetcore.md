@@ -1,31 +1,29 @@
 ---
 title: ASP.NET Core 호환성이 손상되는 변경
 titleSuffix: ''
-description: ASP.NET Core의 호환성이 손상되는 변경을 나열합니다.
+description: ASP.NET Core 3.0 및 3.1의 호환성이 손상되는 변경을 나열합니다.
 ms.date: 11/03/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 6e8e35d01ea7ff91c45bf1febd822e8497b608f0
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 40dfda77dd51ed46366ec6cd8f6598070e8ce846
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440491"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96032443"
 ---
-# <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 호환성이 손상되는 변경
+# <a name="aspnet-core-breaking-changes-for-versions-30-and-31"></a>ASP.NET Core 버전 3.0 및 3.1의 호환성이 손상되는 변경
 
 ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합니다.
 
 특정 버전의 호환성이 손상되는 변경에 해당하는 다음 링크 중 하나를 선택합니다.
 
-* [ASP.NET Core 5.0](#aspnet-core-50)
 * [ASP.NET Core 3.1](#aspnet-core-31)
 * [ASP.NET Core 3.0](#aspnet-core-30)
 
-이 페이지에는 ASP.NET Core 3.0, 3.1 및 5.0의 다음과 같은 호환성이 손상되는 변경이 설명되어 있습니다.
+이 페이지에는 ASP.NET Core 3.0 및 3.1의 다음과 같은 호환성이 손상되는 변경이 설명되어 있습니다.
 
 - [사용되지 않는 위조 방지, CORS, 진단, MVC 및 라우팅 API가 제거됨](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
-- [인증: AzureAD.UI 및 AzureADB2C.UI API와 패키지는 사용되지 않는 것으로 표시됨](#authentication-azureadui-and-azureadb2cui-apis-and-packages-marked-obsolete)
 - [인증: Google + 사용 중단](#authentication-google-deprecated-and-replaced)
 - [인증: HttpContext.Authentication 인증 속성이 제거됨](#authentication-httpcontextauthentication-property-removed)
 - [인증: Newtonsoft.json 형식이 대체됨](#authentication-newtonsoftjson-types-replaced)
@@ -33,66 +31,38 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 - [권한 부여: AddAuthorization 오버로드가 다른 어셈블리로 이동됨](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [권한 부여: AuthorizationFilterContext.Filters에서 IAllowAnonymous 제거됨](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [권한 부여: IAuthorizationPolicyProvider 구현에는 새 메서드가 필요합니다.](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
-- [권한 부여: 엔드포인트 라우팅의 리소스가 HttpContext임](#authorization-resource-in-endpoint-routing-is-httpcontext)
-- [Azure: Microsoft 접두사가 있는 Azure 통합 패키지가 제거됨](#azure-microsoft-prefixed-azure-integration-packages-removed)
-- [ASP.NET 앱에서 BinaryFormatter serialization 메서드가 사용되지 않고 금지됨](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
-- [Blazor: 컴파일 시간에 구성 요소에서 중요하지 않은 공백을 자름](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
-- [Blazor: JSObjectReference 및 JSInProcessObjectReference 형식을 internal로 변경함](#blazor-jsobjectreference-and-jsinprocessobjectreference-types-changed-to-internal)
-- [Blazor: ProtectedBrowserStorage 기능을 공유 프레임워크로 이동함](#blazor-protectedbrowserstorage-feature-moved-to-shared-framework)
-- [Blazor: RenderTreeFrame 읽기 전용 퍼블릭 필드가 속성이 됨](#blazor-rendertreeframe-readonly-public-fields-have-become-properties)
-- [Blazor: NuGet 패키지의 대상 프레임워크가 변경됨](#blazor-target-framework-of-nuget-packages-changed)
-- [Blazor: 업데이트된 브라우저 지원](#blazor-updated-browser-support)
-- [Blazor: 정적 웹 자산에 대한 유효성 검사 논리를 업데이트함](#blazor-updated-validation-logic-for-static-web-assets)
 - [캐싱: CompactOnMemoryPressure 속성이 제거됨](#caching-compactonmemorypressure-property-removed)
 - [캐싱: Microsoft.Extensions.Caching.SqlServer는 새 SqlClient 패키지를 사용합니다.](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
-- [캐싱: ResponseCaching “pubternal” 유형이 내부로 변경됨](#caching-responsecaching-pubternal-types-changed-to-internal)
 - [데이터 보호: DataProtection.Blobs에서 새로운 Azure Storage API 사용](#data-protection-dataprotectionblobs-uses-new-azure-storage-apis)
-- [확장: 일부 NuGet 패키지에 영향을 주는 패키지 참조 변경 내용](#extensions-package-reference-changes-affecting-some-nuget-packages)
 - [호스팅: Windows Hosting Bundle에서 AspNetCoreModule V1이 제거됨](#hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle)
 - [호스팅: 제네릭 호스트는 시작 생성자 주입을 제한합니다.](#hosting-generic-host-restricts-startup-constructor-injection)
 - [호스팅: IIS Out of Process 앱에 대해 HTTPS 리디렉션 사용](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
 - [호스팅: IHostingEnvironment 및 IApplicationLifetime 형식이 바뀜](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
 - [호스팅: WebHostBuilder 종속성에서 제거되는 ObjectPoolProvider](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
-- [HTTP: Kestrel 및 IIS BadHttpRequestException 형식이 사용되지 않는 것으로 표시되고 대체됨](#http-kestrel-and-iis-badhttprequestexception-types-marked-obsolete-and-replaced)
 - [HTTP: 브라우저 SameSite 변경 내용이 인증에 영향](#http-browser-samesite-changes-impact-authentication)
 - [HTTP: DefaultHttpContext 확장성이 제거됨](#http-defaulthttpcontext-extensibility-removed)
 - [HTTP: HeaderNames 필드가 정적 읽기 전용으로 변경됨](#http-headernames-constants-changed-to-static-readonly)
-- [HTTP: IHttpClientFactory 로그 정수 상태 코드에서 생성된 HttpClient 인스턴스](#http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes)
 - [HTTP: 응답 본문 인프라 변경](#http-response-body-infrastructure-changes)
 - [HTTP: 일부 쿠키 SameSite 기본값이 변경됨](#http-some-cookie-samesite-defaults-changed-to-none)
 - [HTTP: 기본적으로 사용하지 않도록 설정된 동기 IO](#http-synchronous-io-disabled-in-all-servers)
-- [HttpSys: 클라이언트 인증서 재협상을 기본적으로 사용 안 함](#httpsys-client-certificate-renegotiation-disabled-by-default)
 - [ID: AddDefaultUI 메서드 오버로드가 제거됨](#identity-adddefaultui-method-overload-removed)
 - [ID: UI 부트스트랩 버전 변경](#identity-default-bootstrap-version-of-ui-changed)
 - [ID: SignInAsync는 인증되지 않은 ID에 대해 예외를 throw합니다.](#identity-signinasync-throws-exception-for-unauthenticated-identity)
 - [ID: SignInManager 생성자는 새 매개 변수를 허용합니다.](#identity-signinmanager-constructor-accepts-new-parameter)
 - [ID: UI는 정적 웹 자산 기능을 사용합니다.](#identity-ui-uses-static-web-assets-feature)
-- [IIS: UrlRewrite 미들웨어 쿼리 문자열이 유지됨](#iis-urlrewrite-middleware-query-strings-are-preserved)
-- [Kestrel: 런타임의 구성 변경 사항이 기본적으로 검색됨](#kestrel-configuration-changes-at-run-time-detected-by-default)
 - [Kestrel: 연결 어댑터가 제거됨](#kestrel-connection-adapters-removed)
-- [Kestrel: 지원되는 기본 TLS 프로토콜 버전 변경됨](#kestrel-default-supported-tls-protocol-versions-changed)
 - [Kestrel: 빈 HTTPS 어셈블리가 제거됨](#kestrel-empty-https-assembly-removed)
-- [Kestrel: 호환되지 않는 Windows 버전에서 TLS를 통한 HTTP/2 사용 안 함](#kestrel-http2-disabled-over-tls-on-incompatible-windows-versions)
-- [Kestrel: 사용되지 않는 것으로 표시된 Libuv 전송](#kestrel-libuv-transport-marked-as-obsolete)
 - [Kestrel: 요청 후행부 헤더가 새 컬렉션으로 이동됨](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel: 전송 추상화 계층 변경](#kestrel-transport-abstractions-removed-and-made-public)
 - [지역화: 사용되지 않음으로 표시된 API](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
-- [지역화: “Pubternal” API가 제거됨](#localization-pubternal-apis-removed)
-- [지역화: 요청 지역화 미들웨어에서 사용되지 않는 생성자가 제거됨](#localization-obsolete-constructor-removed-in-request-localization-middleware)
-- [지역화: ResourceManagerWithCultureStringLocalizer 클래스 및 WithCulture 인터페이스 멤버가 제거됨](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [로깅: DebugLogger 클래스를 내부적으로 만들었습니다.](#logging-debuglogger-class-made-internal)
-- [미들웨어: 사용되지 않는 것으로 표시된 데이터베이스 오류 페이지](#middleware-database-error-page-marked-as-obsolete)
-- [미들웨어: 처리기를 찾을 수 없는 경우 예외 처리기 미들웨어가 원래 예외를 throw함](#middleware-exception-handler-middleware-throws-original-exception-if-handler-not-found)
 - [MVC: 컨트롤러 작업 비동기 접미사가 제거됨](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC: JsonResult를 Microsoft.AspNetCore.Mvc.Core로 이동](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
-- [MVC: ObjectModelValidator가 ValidationVisitor.Validate의 새 오버로드 호출](#mvc-objectmodelvalidator-calls-a-new-overload-of-validationvisitorvalidate)
 - [MVC: 미리 컴파일 도구가 사용되지 않음](#mvc-precompilation-tool-deprecated)
 - [MVC: 형식이 내부로 변경됨](#mvc-pubternal-types-changed-to-internal)
 - [MVC: 웹 API 호환성 shim이 제거됨](#mvc-web-api-compatibility-shim-removed)
 - [Razor: RazorTemplateEngine API가 제거됨](#razor-razortemplateengine-api-removed)
 - [Razor: 런타임 컴파일이 패키지로 이동됨](#razor-runtime-compilation-moved-to-a-package)
-- [보안: 쿠키 이름 인코딩이 제거됨](#security-cookie-name-encoding-removed)
-- [보안: IdentityModel NuGet 패키지 버전이 업데이트됨](#security-identitymodel-nuget-package-versions-updated)
 - [세션 상태: 사용되지 않는 API가 제거됨](#session-state-obsolete-apis-removed)
 - [공유 프레임워크: Microsoft.AspNetCore.App에서 어셈블리 제거](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
 - [공유 프레임워크: 제거된 Microsoft.AspNetCore.All이 제거됨](#shared-framework-removed-microsoftaspnetcoreall)
@@ -100,160 +70,22 @@ ASP.NET Core는 .NET Core에서 사용되는 웹앱 개발 기능을 제공합�
 - [SignalR: HubConnection 메서드가 제거됨](#signalr-hubconnection-resetsendping-and-resettimeout-methods-removed)
 - [SignalR: HubConnectionContext 생성자가 변경됨](#signalr-hubconnectioncontext-constructors-changed)
 - [SignalR: JavaScript 클라이언트 패키지 이름 변경](#signalr-javascript-client-package-name-changed)
-- [SignalR: MessagePack 허브 프로토콜이 MessagePack 2.x 패키지로 이동됨](#signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package)
-- [SignalR: MessagePack 허브 프로토콜 옵션 형식이 변경됨](#signalr-messagepack-hub-protocol-options-type-changed)
 - [SignalR: 사용되지 않는 API](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
-- [SignalR: UseSignalR 및 UseConnections 메서드가 제거됨](#signalr-usesignalr-and-useconnections-methods-removed)
 - [SPA: SpaServices 및 NodeServices 콘솔 로거 대체 기본 변경](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
 - [SPA: 사용되지 않는 것으로 표시된 SpaServices 및 NodeServices](#spas-spaservices-and-nodeservices-marked-obsolete)
-- [정적 파일: CSV 콘텐츠 형식이 표준 규격으로 변경됨](#static-files-csv-content-type-changed-to-standards-compliant)
-- [Blazor WebAssembly에서 지원되지 않는 System.Security.Cryptography API](#systemsecuritycryptography-apis-not-supported-on-blazor-webassembly)
 - [대상 프레임워크: 지원되지 않는 .NET Framework](#target-framework-net-framework-support-dropped)
-
-## <a name="aspnet-core-50"></a>ASP.NET Core 5.0
-
-[!INCLUDE[Authentication: AzureAD.UI and AzureADB2C.UI APIs and packages marked obsolete](~/includes/core-changes/aspnetcore/5.0/authentication-aad-packages-obsolete.md)]
-
-***
-
-[!INCLUDE[Authorization: Resource in endpoint routing is HttpContext](~/includes/core-changes/aspnetcore/5.0/authorization-resource-in-endpoint-routing.md)]
-
-**_
-
-[!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
-
-_*_
-
-[!INCLUDE[Serialization: BinaryFormatter serialization obsolete](~/includes/core-changes/corefx/5.0/binaryformatter-serialization-obsolete.md)]
-
-_*_
-
-[!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
-
-_*_
-
-[!INCLUDE[Blazor: JSObjectReference and JSInProcessObjectReference types changed to internal](~/includes/core-changes/aspnetcore/5.0/blazor-jsobjectreference-to-internal.md)]
-
-_*_
-
-[!INCLUDE[Blazor: ProtectedBrowserStorage feature moved to shared framework](~/includes/core-changes/aspnetcore/5.0/blazor-protectedbrowserstorage-moved.md)]
-
-_*_
-
-[!INCLUDE[Blazor: RenderTreeFrame readonly public fields have become properties](~/includes/core-changes/aspnetcore/5.0/blazor-rendertreeframe-fields-become-properties.md)]
-
-_*_
-
-[!INCLUDE[Blazor: Target framework of NuGet packages changed](~/includes/core-changes/aspnetcore/5.0/blazor-packages-target-framework-changed.md)]
-
-_*_
-
-[!INCLUDE[Blazor: Updated browser support](~/includes/core-changes/aspnetcore/5.0/blazor-browser-support-updated.md)]
-
-_*_
-
-[!INCLUDE[Blazor: Static web assets validation logic updated](~/includes/core-changes/aspnetcore/5.0/blazor-static-web-assets-validation-logic-updated.md)]
-
-_*_
-
-[!INCLUDE[Extensions: Package reference changes](~/includes/core-changes/aspnetcore/5.0/extensions-package-reference-changes.md)]
-
-_*_
-
-[!INCLUDE[HTTP: HttpClient instances created by IHttpClientFactory log integer status codes](~/includes/core-changes/aspnetcore/5.0/http-httpclient-instances-log-integer-status-codes.md)]
-
-_*_
-
-[!INCLUDE[HTTP: Kestrel and IIS BadHttpRequestException types marked obsolete and replaced](~/includes/core-changes/aspnetcore/5.0/http-badhttprequestexception-obsolete.md)]
-
-_*_
-
-[!INCLUDE[HttpSys: Client certificate renegotiation disabled by default](~/includes/core-changes/aspnetcore/5.0/httpsys-client-certificate-renegotiation-disabled-by-default.md)]
-
-_*_
-
-[!INCLUDE[IIS: UrlRewrite middleware query strings are preserved](~/includes/core-changes/aspnetcore/5.0/iis-urlrewrite-middleware-query-strings-are-preserved.md)]
-
-_*_
-
-[!INCLUDE[Kestrel: Configuration changes at run time detected by default](~/includes/core-changes/aspnetcore/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md)]
-
-_*_
-[!INCLUDE[Kestrel: Default supported TLS protocol versions changed](~/includes/core-changes/aspnetcore/5.0/kestrel-default-supported-tls-protocol-versions-changed.md)]
-
-_*_
-
-[!INCLUDE[Kestrel: HTTP/2 disabled over TLS on incompatible Windows versions](~/includes/core-changes/aspnetcore/5.0/kestrel-disables-http2-over-tls.md)]
-
-_*_
-
-[!INCLUDE[Kestrel: Libuv transport marked as obsolete](~/includes/core-changes/aspnetcore/5.0/kestrel-libuv-transport-obsolete.md)]
-
-_*_
-
-[!INCLUDE[Localization: "Pubternal" APIs removed](~/includes/core-changes/aspnetcore/5.0/localization-pubternal-apis-removed.md)]
-
-_*_
-
-[!INCLUDE[Localization: Obsolete constructor removed in request localization middleware](~/includes/core-changes/aspnetcore/5.0/localization-requestlocalizationmiddleware-constructor-removed.md)]
-
-_*_
-
-[!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
-
-_*_
-
-[!INCLUDE[Middleware: Database error page marked as obsolete](~/includes/core-changes/aspnetcore/5.0/middleware-database-error-page-obsolete.md)]
-
-_*_
-
-[!INCLUDE[Middleware: Exception Handler Middleware throws original exception if handler not found](~/includes/core-changes/aspnetcore/5.0/middleware-exception-handler-throws-original-exception.md)]
-
-_*_
-
-[!INCLUDE[MVC: ObjectModelValidator calls a new overload of ValidationVisitor.Validate](~/includes/core-changes/aspnetcore/5.0/mvc-objectmodelvalidator-calls-new-overload.md)]
-
-_*_
-
-[!INCLUDE[Security: Cookie name encoding removed](~/includes/core-changes/aspnetcore/5.0/security-cookie-name-encoding-removed.md)]
-
-_*_
-
-[!INCLUDE[Security: IdentityModel NuGet package versions updated](~/includes/core-changes/aspnetcore/5.0/security-identitymodel-nuget-package-versions-updated.md)]
-
-_*_
-
-[!INCLUDE[SignalR: MessagePack Hub Protocol moved to MessagePack 2.x package](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-package.md)]
-
-_*_
-
-[!INCLUDE[SignalR: MessagePack Hub Protocol options type changed](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-hub-protocol-options-changed.md)]
-
-_*_
-
-[!INCLUDE[SignalR: UseSignalR and UseConnections methods removed](~/includes/core-changes/aspnetcore/5.0/signalr-usesignalr-useconnections-removed.md)]
-
-_*_
-
-[!INCLUDE[Cryptography APIs not supported on Blazor WebAssembly](~/includes/core-changes/cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md)]
-
-_*_
-
-[!INCLUDE[Static files: CSV content type changed to standards-compliant](~/includes/core-changes/aspnetcore/5.0/static-files-csv-content-type-changed.md)]
-
-_*_
 
 ## <a name="aspnet-core-31"></a>ASP.NET Core 3.1
 
 [!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]
 
-_*_
+***
 
 ## <a name="aspnet-core-30"></a>ASP.NET Core 3.0
 
 [!INCLUDE[Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 
-_*_
+**_
 
 [!INCLUDE[Authentication: Google+ deprecation](~/includes/core-changes/aspnetcore/3.0/authn-google-plus-authn-changes.md)]
 

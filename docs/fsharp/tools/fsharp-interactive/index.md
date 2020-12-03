@@ -1,15 +1,15 @@
 ---
 title: F# 대화형(dotnet) 참조
 description: F# 대화형(dotnet fsi)이 어떻게 콘솔에서 F# 코드를 대화형으로 실행하거나 F# 스크립트를 실행하는 데 사용되는지 알아보세요.
-ms.date: 10/31/2020
+ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: b535cb03d76909043ca192ed5a9d2078f9343795
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 92177c41dc6b31d9186bae8176f85787e2fb89e0
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099436"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438040"
 ---
 # <a name="interactive-programming-with-f"></a>F\#을 사용한 대화형 프로그래밍
 
@@ -117,6 +117,17 @@ let f (x: Tensor) = sin (sqrt x)
 
 printfn "%A" (f (dsharp.tensor 1.2))
 ```
+
+### <a name="specifying-a-package-source"></a>패키지 소스 지정
+
+`#i` 명령을 사용하여 패키지 소스를 지정할 수도 있습니다. 다음 예제에서는 원격 및 로컬 소스를 지정합니다.
+
+```fsharp
+#i "nuget:https://my-remote-package-source/index.json
+#i @"path-to-my-local-source"
+```
+
+이렇게 하면 스크립트에 추가된 원격 및/또는 로컬 소스를 고려하도록 내부 확인 엔진에 지시할 수 있습니다.
 
 스크립트에서 패키지 참조를 원하는 만큼 지정할 수 있습니다.
 

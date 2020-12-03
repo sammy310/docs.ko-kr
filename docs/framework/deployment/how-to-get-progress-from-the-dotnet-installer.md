@@ -1,6 +1,6 @@
 ---
 title: '방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기'
-description: .NET 4.5 설치 관리자에서 진행률을 가져오는 방법을 알아봅니다. 이 .NET 버전용 앱을 개발하는 경우 앱의 설치에 .NET 4.5 설치를 포함(연결)할 수 있습니다.
+description: .NET Framework 4.5 설치 관리자에서 진행률을 가져오는 방법을 알아봅니다. 이 .NET 버전용 앱을 개발하는 경우 앱 설치에 .NET Framework 4.5 설치를 포함(연결)할 수 있습니다.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-ms.openlocfilehash: 501fcaa7636d586ddfff8606768d4639fdc010d7
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 7e21a376c5a7551ecadeaa70c0a70968dc5752fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904262"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729124"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기
 
@@ -25,7 +25,7 @@ ms.locfileid: "84904262"
 
         `dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name`
 
-        여기서 *section name*은 앱을 식별하는 데 사용할 임의의 이름입니다. .NET Framework 설치 프로그램은 MMIO 섹션을 읽고 비동기적으로 쓰므로 이 시간 동안 이벤트 및 메시지를 사용하는 것이 편리할 수도 있습니다. 예제에서는 MMIO 섹션(`TheSectionName`)을 할당하고 이벤트(`TheEventName`)를 정의하는 생성자가 .NET Framework 설치 프로세스를 만듭니다.
+        여기서 *section name* 은 앱을 식별하는 데 사용할 임의의 이름입니다. .NET Framework 설치 프로그램은 MMIO 섹션을 읽고 비동기적으로 쓰므로 이 시간 동안 이벤트 및 메시지를 사용하는 것이 편리할 수도 있습니다. 예제에서는 MMIO 섹션(`TheSectionName`)을 할당하고 이벤트(`TheEventName`)를 정의하는 생성자가 .NET Framework 설치 프로세스를 만듭니다.
 
         ```cpp
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")
