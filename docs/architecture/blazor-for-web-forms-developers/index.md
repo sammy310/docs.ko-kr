@@ -6,19 +6,23 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/11/2019
-ms.openlocfilehash: 3ac9a02a2f5c93cbfd9377a9f6fff4b6c5f45e93
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/01/2020
+ms.openlocfilehash: 47f684e1b48ca95b8d999e6f1429840eb5f541de
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158177"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509769"
 ---
 # <a name="no-locblazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms용 Blazor 개발자
 
 ![서버리스 앱 eBook 표지를 보여주는 스크린샷.](./media/index/blazor-for-aspnet-web-forms-developers.png)
 
 > 다운로드 위치: <https://aka.ms/blazor-ebook>
+
+**버전 v1.0**
+
+책 업데이트 및 커뮤니티 기여에 대한 자세한 내용은 [changelog](https://aka.ms/blazor-ebook-changelog)를 참조하세요.
 
 게시자:
 
@@ -60,7 +64,7 @@ Mac 및 macOS는 Apple Inc.의 상표입니다.
 
 .NET은 모든 종류의 웹앱을 빌드할 수 있는 포괄적인 프레임워크 및 도구 집합인 ASP.NET을 통해 수많은 웹앱의 개발을 지원해 왔습니다. ASP.NET에는 클래식 ASP(Active Server Page)를 사용하여 완전히 다시 시작하는 웹 프레임워크 및 기술의 고유한 계보가 있습니다. ASP.NET Web Forms, ASP.NET MVC, ASP.NET 웹 페이지, 최신 ASP.NET Core 등과 같은 프레임워크는 *서버에서 렌더링된* 웹앱을 빌드하는 생산적이고 강력한 방법을 제공합니다. 여기서 UI 콘텐츠는 HTTP 요청에 응답하여 서버에서 동적으로 생성됩니다. ASP.NET 프레임워크마다 사용 대상과 앱 빌드 철학이 다릅니다. ASP.NET Web Forms는 .NET Framework의 원본 릴리스와 함께 제공되며, 간단한 이벤트 처리를 지원하는 재사용 가능한 UI 컨트롤과 같이 데스크톱 개발자에게 익숙한 많은 패턴을 사용하여 웹 개발을 지원합니다. 하지만 ASP.NET 제품에서는 사용자의 브라우저에서 실행되는 코드를 실행할 수 없습니다. 이렇게 하려면 JavaScript를 작성하고 jQuery, Knockout, Angular, React 등과 같은 다양한 JavaScript 프레임워크 및 도구를 사용해야 합니다.
 
-[Blazor](https://blazor.net)는 .NET을 사용하여 웹앱을 빌드할 때 가능한 항목을 변경하는 새로운 웹 프레임워크입니다. Blazor는 JavaScript 대신 C#을 기반으로 하는 클라이언트 쪽 웹 UI 프레임워크입니다. Blazor를 사용하면 C#으로 클라이언트 쪽 논리 및 UI 구성 요소를 작성하여 일반 .NET 어셈블리로 컴파일한 다음, WebAssembly라는 새로운 개방형 웹 표준을 사용하여 브라우저에서 직접 실행할 수 있습니다. 또는 Blazor가 서버에서 .NET UI 구성 요소를 실행하고 브라우저를 사용하여 실시간 연결을 통해 모든 UI 상호 작용을 유동적으로 처리할 수 있습니다. 서버에서 실행되는 .NET과 연결된 경우 Blazor는 .NET을 통해 전체 스택 웹 개발을 지원할 수 있습니다. Blazor는 ASP.NET Web Forms와 많은 공통점을 공유하고(예: 재사용 가능한 구성 요소 모델 사용, 사용자 이벤트를 처리하는 간단한 방법), .NET Core를 기반으로 빌드되어 최신의 고성능 웹 개발 환경을 제공합니다.
+[Blazor](https://blazor.net)는 .NET을 사용하여 웹앱을 빌드할 때 가능한 항목을 변경하는 새로운 웹 프레임워크입니다. Blazor는 JavaScript 대신 C#을 기반으로 하는 클라이언트 쪽 웹 UI 프레임워크입니다. Blazor를 사용하면 C#으로 클라이언트 쪽 논리 및 UI 구성 요소를 작성하여 일반 .NET 어셈블리로 컴파일한 다음, WebAssembly라는 새로운 개방형 웹 표준을 사용하여 브라우저에서 직접 실행할 수 있습니다. 또는 Blazor가 서버에서 .NET UI 구성 요소를 실행하고 브라우저를 사용하여 실시간 연결을 통해 모든 UI 상호 작용을 유동적으로 처리할 수 있습니다. 서버에서 실행되는 .NET과 연결된 경우 Blazor는 .NET을 통해 전체 스택 웹 개발을 지원할 수 있습니다. Blazor는 ASP.NET Web Forms와 많은 공통점을 공유하고(예: 재사용 가능한 구성 요소 모델 사용, 사용자 이벤트를 처리하는 간단한 방법), .NET을 기반으로 빌드되어 최신의 고성능 웹 개발 환경을 제공합니다.
 
 이 책에서는 ASP.NET Web Forms 개발자에게 친숙하고 편리한 방식으로 Blazor를 소개합니다. Blazor 개념을 ASP.NET Web Forms의 유사 개념과 함께 소개하는 한편, 친숙하지 않은 새로운 개념도 설명합니다. 구성 요소 제작, 라우팅, 레이아웃, 구성, 보안 등 광범위한 항목과 문제를 다룹니다. 이 책의 내용은 주로 새로운 개발을 지원하기 위한 것이지만, 기존 앱을 현대화하려는 경우에 사용할 수 있도록 기존 ASP.NET Web Forms를 Blazor로 마이그레이션하기 위한 지침과 전략에 대해서도 설명합니다.
 
