@@ -2,18 +2,18 @@
 title: '명령줄 도구를 사용 하 여 F # 시작'
 description: '운영 체제 (Windows, macOS 또는 Linux)에서 .NET Core CLI 사용 하 여 F #에서 간단한 다중 프로젝트 솔루션을 빌드하는 방법에 대해 알아봅니다.'
 ms.date: 08/15/2020
-ms.openlocfilehash: e652b66337a3122de8e6bd4d62d86fb6082b759d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f890e31fe8c665874dc3034aebfae32e38b9031a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811992"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739917"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>.NET Core CLI를 사용 하 여 F # 시작
 
 이 문서에서는 .NET Core CLI를 사용 하 여 모든 운영 체제 (Windows, macOS 또는 Linux)에서 F #을 시작 하는 방법을 설명 합니다. 콘솔 응용 프로그램에서 호출 하는 클래스 라이브러리를 사용 하 여 다중 프로젝트 솔루션을 빌드하는 과정을 거칩니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 시작 하려면 최신 [.NET Core SDK](https://dotnet.microsoft.com/download)를 설치 해야 합니다.
 
@@ -36,7 +36,7 @@ FSNetCore
 
 ### <a name="write-a-class-library"></a>클래스 라이브러리 작성
 
-디렉터리를 *Fsnetcore*로 변경 합니다.
+디렉터리를 *Fsnetcore* 로 변경 합니다.
 
 명령을 사용 하 여 `dotnet new` 이름이 library 인 **src** 폴더에 클래스 라이브러리 프로젝트를 만듭니다.
 
@@ -64,7 +64,7 @@ open Newtonsoft.Json
 
 let getJsonNetJson value =
     let json = JsonConvert.SerializeObject(value)
-    sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value json
+    $"I used to be {value} but now I'm {json} thanks to JSON.NET!"
 ```
 
 NuGet 패키지에 대 한 Newtonsoft.Js를 라이브러리 프로젝트에 추가 합니다.
@@ -115,7 +115,7 @@ let main argv =
 
     for arg in argv do
         let value = getJsonNetJson arg
-        printfn "%s" value
+        printfn $"{value}"
 
     0 // return an integer exit code
 ```

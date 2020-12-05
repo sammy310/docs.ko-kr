@@ -2,18 +2,18 @@
 title: '자습서: 형식 공급자 만들기'
 description: '기본 개념을 설명 하는 몇 가지 간단한 형식 공급자를 검사 하 여 F # 3.0에서 고유한 F # 형식 공급자를 만드는 방법에 대해 알아봅니다.'
 ms.date: 11/04/2019
-ms.openlocfilehash: 71225614ed983a76d35c214faa87bbad0fbb7d24
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 65cb9616f66b5850135dbfcdd9b9a9dad30421de
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810874"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739700"
 ---
 # <a name="tutorial-create-a-type-provider"></a>자습서: 형식 공급자 만들기
 
 F #의 형식 공급자 메커니즘은 정보 기능이 풍부한 프로그래밍에 대 한 지원의 중요 한 부분입니다. 이 자습서에서는 기본 개념을 설명 하기 위해 몇 가지 간단한 형식 공급자를 개발 하는 과정을 통해 사용자 고유의 형식 공급자를 만드는 방법을 설명 합니다. F #의 형식 공급자 메커니즘에 대 한 자세한 내용은 [형식 공급자](index.md)를 참조 하세요.
 
-F # 에코 시스템에는 일반적으로 사용 되는 인터넷 및 엔터프라이즈 데이터 서비스에 대 한 형식 공급자 범위가 포함 되어 있습니다. 예를 들어:
+F # 에코 시스템에는 일반적으로 사용 되는 인터넷 및 엔터프라이즈 데이터 서비스에 대 한 형식 공급자 범위가 포함 되어 있습니다. 예를 들면 다음과 같습니다.
 
 - [Fsharp.core](https://fsharp.github.io/FSharp.Data/) 에는 JSON, XML, CSV 및 HTML 문서 형식에 대 한 형식 공급자가 포함 되어 있습니다.
 
@@ -243,7 +243,7 @@ let t = ProvidedTypeDefinition(thisAssembly, namespaceName,
 그런 다음 형식에 XML 문서를 추가 합니다. 이 설명서는 지연 됩니다. 즉, 호스트 컴파일러에 필요한 경우에는 요청 시에 계산 됩니다.
 
 ```fsharp
-t.AddXmlDocDelayed (fun () -> sprintf "This provided type %s" ("Type" + string n))
+t.AddXmlDocDelayed (fun () -> $"""This provided type {"Type" + string n}""")
 ```
 
 다음에는 제공 된 정적 속성을 형식에 추가 합니다.
@@ -352,9 +352,9 @@ t.AddMembersDelayed(fun () ->
                   getterCode= (fun args -> <@@ valueOfTheProperty @@>))
 
               p.AddXmlDocDelayed(fun () ->
-                  sprintf "This is StaticProperty%d on NestedType" i)
+                  $"This is StaticProperty{i} on NestedType")
 
-              p
+              p
       ]
 
     staticPropsInNestedType)
@@ -364,7 +364,7 @@ t.AddMembersDelayed(fun () ->
 
 ### <a name="details-about-erased-provided-types"></a>지워진 제공 유형에 대 한 세부 정보
 
-이 섹션의 예제에서는 다음과 같은 경우에 특히 유용한 *지워진 제공 형식만*제공 합니다.
+이 섹션의 예제에서는 다음과 같은 경우에 특히 유용한 *지워진 제공 형식만* 제공 합니다.
 
 - 데이터 및 메서드만 포함 하는 정보 공간에 대 한 공급자를 작성 하는 경우
 
@@ -581,7 +581,7 @@ for group in r.GetGroupNames() do
         propertyName = group,
         propertyType = typeof<Group>,
         getterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
-        prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
+        prop.AddXmlDoc($"""Gets the ""{group}"" group from this match""")
     matchTy.AddMember prop
 ```
 
@@ -764,7 +764,7 @@ do ()
 let info = new MiniCsv<"info.csv">()
 for row in info.Data do
 let time = row.Time
-printfn "%f" (float time)
+printfn $"{float time}"
 ```
 
 이 경우 컴파일러는 이러한 호출을 다음 예제와 같은 항목으로 변환 해야 합니다.
@@ -773,7 +773,7 @@ printfn "%f" (float time)
 let info = new CsvFile("info.csv")
 for row in info.Data do
 let (time:float) = row.[1]
-printfn "%f" (float time)
+printfn $"%f{float time}"
 ```
 
 최적의 변환에서는 형식 공급자가 형식 `CsvFile` 공급자의 어셈블리에서 실제 형식을 정의 해야 합니다. 형식 공급자는 종종 몇 가지 도우미 형식 및 메서드를 사용 하 여 중요 한 논리를 래핑합니다. 측정값은 런타임에 지워집니다 `float[]` .를 행의 지워진 형식으로 사용할 수 있습니다. 컴파일러는 서로 다른 측정값 형식이 있는 것으로 다른 열을 처리 합니다. 예를 들어이 예제의 첫 번째 열에는 형식이 `float<meter>` 있고, 두 번째 열에는가 `float<second>` 있습니다. 그러나 지워진 표현은 매우 간단 하 게 유지할 수 있습니다.
@@ -946,7 +946,7 @@ IL_0017:  ret
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
 
-**일반적인 코딩을 위한 유틸리티 공급자**입니다.  정규식의 경우와 같은 유틸리티 유형 공급자의 경우 다음 예제와 같이 형식 공급자가 기본 라이브러리의 일부일 수 있습니다.
+**일반적인 코딩을 위한 유틸리티 공급자** 입니다.  정규식의 경우와 같은 유틸리티 유형 공급자의 경우 다음 예제와 같이 형식 공급자가 기본 라이브러리의 일부일 수 있습니다.
 
 ```fsharp
 #r "Fabrikam.Core.Text.Utilities.dll"
@@ -960,7 +960,7 @@ IL_0017:  ret
   let regex = new RegexTyped<"a+b+a+b+">()
 ```
 
-**Singleton 데이터 원본**입니다. 일부 형식 공급자는 단일 전용 데이터 원본에 연결 하 고 데이터만 제공 합니다. 이 경우 접미사를 삭제 `TypeProvider` 하 고 .net 명명에 대 한 일반 규칙을 사용 해야 합니다.
+**Singleton 데이터 원본** 입니다. 일부 형식 공급자는 단일 전용 데이터 원본에 연결 하 고 데이터만 제공 합니다. 이 경우 접미사를 삭제 `TypeProvider` 하 고 .net 명명에 대 한 일반 규칙을 사용 해야 합니다.
 
 ```fsharp
 #r "Fabrikam.Data.Freebase.dll"
@@ -1048,7 +1048,7 @@ let data = connection.Astronomy.Asteroids
   let nullableDecimal_kgpm2 = typedefof<System.Nullable<_>>.MakeGenericType [|dkgpm2 |]
 ```
 
-### <a name="accessing-project-local-or-script-local-resources"></a>프로젝트 로컬 또는 스크립트 로컬 리소스 액세스
+### <a name="accessing-project-local-or-script-local-resources"></a>Project-Local 또는 Script-Local 리소스에 액세스
 
 형식 공급자의 각 인스턴스에는 생성 중에 값을 지정할 수 있습니다 `TypeProviderConfig` . 이 값에는 공급자에 대 한 "해결 폴더" (즉, 컴파일에 대 한 프로젝트 폴더 또는 스크립트가 포함 된 디렉터리), 참조 된 어셈블리 목록 및 기타 정보가 포함 됩니다.
 
@@ -1136,7 +1136,7 @@ devenv /debugexe fsc.exe script.fsx
 
   인쇄 stdout 로깅을 사용할 수 있습니다.
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [형식 공급자](index.md)
 - [형식 공급자 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

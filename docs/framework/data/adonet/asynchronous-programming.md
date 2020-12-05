@@ -3,12 +3,12 @@ title: 비동기 프로그래밍
 description: .NET Framework 4.5에 도입 된 향상 된 기능을 포함 하 여 SQL Server에 대 한 .NET Framework Data Provider의 비동기 프로그래밍에 대해 알아봅니다.
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 9065aea02dc3f021ed485a4eb6e56cfcece44fac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fe3551d8c7bea9c9218656bd6ae5047a7920f384
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677949"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739930"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 
@@ -431,7 +431,7 @@ namespace SqlBulkCopyAsyncCodeSample {
       // static string connectionString = @"Server=(localdb)\V11.0;Database=Demo";
       static string connectionString = @"Server=(local);Database=Demo;Integrated Security=true";
 
-      // static string odbcConnectionString = @"Driver={SQL Server};Server=(localdb)\V11.0;UID=oledb;Pwd=1Password!;Database=Demo";
+      // static string odbcConnectionString = @"Driver={SQL Server};Server=(localdb)\V11.0;UID=oledb;Pwd=[PLACEHOLDER];Database=Demo";
       static string odbcConnectionString = @"Driver={SQL Server};Server=(local);Database=Demo;Integrated Security=true";
 
       // static string marsConnectionString = @"Server=(localdb)\V11.0;Database=Demo;MultipleActiveResultSets=true;";
@@ -827,6 +827,6 @@ class Program {
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)

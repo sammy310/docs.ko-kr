@@ -2,12 +2,12 @@
 title: 비동기 프로그래밍
 description: 'F #에서 핵심 함수형 프로그래밍 개념에서 파생 된 언어 수준 프로그래밍 모델을 기반으로 비동기에 대 한 명확한 지원을 제공 하는 방법에 대해 알아봅니다.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 2e5d4fb744b4443eb9caf90cc1bf01473b809127
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 04b397ddbfb468aa3bc4ee245175d3ec9bdedb50
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811771"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739329"
 ---
 # <a name="async-programming-in-f"></a>F #의 비동기 프로그래밍\#
 
@@ -33,7 +33,7 @@ ms.locfileid: "88811771"
 - "not"을 의미 하는 "a"입니다.
 - "동기", 즉 "동시" 의미를 의미 합니다.
 
-이러한 두 용어를 함께 배치 하는 경우 "비동기"는 "동시에" 없음을 의미 합니다. 이것으로 끝입니다. 이 정의에서는 동시성 또는 병렬 처리의 영향을 주지 않습니다. 이는 실제로도 마찬가지입니다.
+이러한 두 용어를 함께 배치 하는 경우 "비동기"는 "동시에" 없음을 의미 합니다. 간단하죠. 이 정의에서는 동시성 또는 병렬 처리의 영향을 주지 않습니다. 이는 실제로도 마찬가지입니다.
 
 실제로 F #의 비동기 계산은 주 프로그램 흐름과 독립적으로 실행 되도록 예약 됩니다. 이러한 독립적인 실행은 동시성이 나 병렬 처리를 의미 하지 않으며 계산이 항상 백그라운드에서 발생 한다는 것을 의미 하지는 않습니다. 실제로 비동기 계산은 계산의 특성과 계산을 실행 하는 환경에 따라 동기적으로 실행 될 수도 있습니다.
 
@@ -57,7 +57,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -73,7 +73,7 @@ let main argv =
 
 또 다른 중요 한 줄은에 대 한 호출입니다 `Async.RunSynchronously` . 이는 실제로 F # 비동기 계산을 실행 하려는 경우 호출 해야 하는 비동기 모듈 시작 함수 중 하나입니다.
 
-이는 c #/Visual Basic의 프로그래밍 스타일과 기본적인 차이점입니다 `async` . F #에서 비동기 계산은 **콜드 작업**으로 간주할 수 있습니다. 실제로를 실행 하려면 명시적으로 시작 해야 합니다. 이는 c # 또는 Visual Basic 보다 훨씬 쉽게 비동기 작업을 결합 하 고 시퀀스를 수행할 수 있기 때문에 몇 가지 이점이 있습니다.
+이는 c #/Visual Basic의 프로그래밍 스타일과 기본적인 차이점입니다 `async` . F #에서 비동기 계산은 **콜드 작업** 으로 간주할 수 있습니다. 실제로를 실행 하려면 명시적으로 시작 해야 합니다. 이는 c # 또는 Visual Basic 보다 훨씬 쉽게 비동기 작업을 결합 하 고 시퀀스를 수행할 수 있기 때문에 몇 가지 이점이 있습니다.
 
 ## <a name="combine-asynchronous-computations"></a>비동기 계산 결합
 
@@ -87,7 +87,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -119,7 +119,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -150,7 +150,7 @@ F # 비동기 계산은 이미 실행 중인 작업의 표현이 아니라 작�
 computation: Async<'T> * timeout: ?int -> Async<Async<'T>>
 ```
 
-사용 시기:
+사용해야 하는 경우:
 
 - 한 번에 여러 비동기 계산을 동시에 실행 하는 것이 아니라 동시에 병렬로 예약 하지 않으려는 경우
 - 자식 계산의 수명을 부모 계산의 수명에 연결 하려는 경우
@@ -170,7 +170,7 @@ computation: Async<'T> * timeout: ?int -> Async<Async<'T>>
 computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 ```
 
-사용 시기:
+사용해야 하는 경우:
 
 - 비동기 계산의 중간에 있는 호출 스레드에서 무언가를 업데이트 해야 하는 경우입니다.
 
@@ -188,7 +188,7 @@ computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellationToken: ?CancellationToken -> Task<'T>
 ```
 
-사용 시기:
+사용해야 하는 경우:
 
 - 가 <xref:System.Threading.Tasks.Task%601> 비동기 계산의 결과를 나타내는 것으로 예상 하는 .NET API를 호출 해야 하는 경우
 
@@ -245,7 +245,7 @@ computations: seq<Async<'T>> -> Async<'T[]>
 task: Task<'T> -> Async<'T>
 ```
 
-사용 시기:
+사용해야 하는 경우:
 
 - <xref:System.Threading.Tasks.Task%601>F # 비동기 계산 내에서을 반환 하는 .NET API를 사용 하는 경우.
 
@@ -263,7 +263,7 @@ task: Task<'T> -> Async<'T>
 computation: Async<'T> -> Async<Choice<'T, exn>>
 ```
 
-사용 시기:
+사용해야 하는 경우:
 
 - 예외가 발생 하 여 실패할 수 있는 비동기 작업을 수행할 때 호출자에서 해당 예외를 처리 하려는 경우
 
@@ -281,7 +281,7 @@ computation: Async<'T> -> Async<Choice<'T, exn>>
 computation: Async<'T> -> Async<unit>
 ```
 
-사용 시기:
+사용해야 하는 경우:
 
 - 비동기 계산을 수행 하는 경우에는 해당 결과가 필요 하지 않습니다. 이는 `ignore` 비동기 코드가 아닌 코드에 대 한 코드와 유사 합니다.
 
@@ -382,7 +382,7 @@ module Async =
 
 F #은 현재 스레드에서 비동기 계산을 시작 하는 몇 가지 기능을 제공 하지만 (또는 현재 스레드에서 명시적으로는 그렇지 않음) 비동기 일반적으로 특정 스레딩 전략과 연결 되지 않습니다.
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [F # 비동기 프로그래밍 모델](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
 - [Jet의 F # Async 가이드](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)

@@ -2,12 +2,12 @@
 title: 구별된 공용 구조체
 description: 'F # 구분 된 공용 구조체를 사용 하는 방법을 알아봅니다.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 3f8ac656bd00b1022b2b13ee1be7ca5c98f68db5
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f90ac2c2ea21182cf5fd3657d2ada00a763139fe
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812135"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740239"
 ---
 # <a name="discriminated-unions"></a>구별된 공용 구조체
 
@@ -26,7 +26,7 @@ type [accessibility-modifier] type-name =
 
 ## <a name="remarks"></a>설명
 
-구별 된 공용 구조체는 다른 언어의 공용 구조체 형식과 비슷하지만 차이가 있습니다. C + +의 공용 구조체 형식 또는 Visual Basic의 variant 형식과 마찬가지로 값에 저장 된 데이터는 수정 되지 않습니다. 여러 가지 다른 옵션 중 하나를 사용할 수 있습니다. 그러나 이러한 다른 언어의 공용 구조체와는 달리 각각의 가능한 옵션에는 *case 식별자*가 제공 됩니다. Case 식별자는 이러한 형식의 개체가 가질 수 있는 다양 한 형식의 값에 대 한 이름입니다. 값은 선택 사항입니다. 값이 없는 경우 대/소문자는 열거 사례와 동일 합니다. 값이 있는 경우 각 값은 지정 된 형식의 단일 값 이거나 동일 하거나 다른 형식의 여러 필드를 집계 하는 튜플입니다 수 있습니다. 개별 필드에 이름을 지정할 수 있지만 동일한 사례의 다른 필드가 명명 된 경우에도 이름은 선택 사항입니다.
+구별 된 공용 구조체는 다른 언어의 공용 구조체 형식과 비슷하지만 차이가 있습니다. C + +의 공용 구조체 형식 또는 Visual Basic의 variant 형식과 마찬가지로 값에 저장 된 데이터는 수정 되지 않습니다. 여러 가지 다른 옵션 중 하나를 사용할 수 있습니다. 그러나 이러한 다른 언어의 공용 구조체와는 달리 각각의 가능한 옵션에는 *case 식별자* 가 제공 됩니다. Case 식별자는 이러한 형식의 개체가 가질 수 있는 다양 한 형식의 값에 대 한 이름입니다. 값은 선택 사항입니다. 값이 없는 경우 대/소문자는 열거 사례와 동일 합니다. 값이 있는 경우 각 값은 지정 된 형식의 단일 값 이거나 동일 하거나 다른 형식의 여러 필드를 집계 하는 튜플입니다 수 있습니다. 개별 필드에 이름을 지정할 수 있지만 동일한 사례의 다른 필드가 명명 된 경우에도 이름은 선택 사항입니다.
 
 구분 된 공용 구조체에 대 한 접근성은 기본적으로로 설정 `public` 됩니다.
 
@@ -190,10 +190,10 @@ type Shape =
     interface IPrintable with
         member this.Print () =
             match this with
-            | Circle r -> printfn "Circle with radius %f" r
-            | EquilateralTriangle s -> printfn "Equilateral Triangle of side %f" s
-            | Square s -> printfn "Square with side %f" s
-            | Rectangle(l, w) -> printfn "Rectangle with length %f and width %f" l w
+            | Circle r -> printfn $"Circle with radius %f{r}"
+            | EquilateralTriangle s -> printfn $"Equilateral Triangle of side %f{s}"
+            | Square s -> printfn $"Square with side %f{s}"
+            | Rectangle(l, w) -> printfn $"Rectangle with length %f{l} and width %f{w}"
 ```
 
 ## <a name="common-attributes"></a>공통 특성

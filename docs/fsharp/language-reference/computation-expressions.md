@@ -4,12 +4,12 @@ description: '제어 흐름 구문 및 바인딩을 사용 하 여 시퀀싱 하
 ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: bc3842b6f1075d68d1997e78c8bd8485731fca52
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a0a71533ea1bc87b75f028ad0d416326f627672a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705308"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739308"
 ---
 # <a name="computation-expressions"></a>계산 식
 
@@ -17,7 +17,7 @@ F #의 계산 식은 제어 흐름 구문 및 바인딩을 사용 하 여 시퀀
 
 ## <a name="overview"></a>개요
 
-계산은 많은 형태를 사용할 수 있습니다. 가장 일반적인 계산 형태는 단일 스레드 실행 이며 이해 하 고 수정 하기 쉽습니다. 그러나 일부 계산 형태는 단일 스레드 실행 만큼 간단 하지 않습니다. 예를 들면 다음과 같습니다.
+계산은 많은 형태를 사용할 수 있습니다. 가장 일반적인 계산 형태는 단일 스레드 실행 이며 이해 하 고 수정 하기 쉽습니다. 그러나 일부 계산 형태는 단일 스레드 실행 만큼 간단 하지 않습니다. 일부 사례:
 
 - 비결 정적 계산
 - 비동기 계산
@@ -111,7 +111,7 @@ let squares =
     }
 
 for sq in squares do
-    printfn "%d" sq
+    printfn $"%d{sq}"
 ```
 
 대부분의 경우 호출자는이를 생략할 수 있습니다. 생략 하는 가장 일반적인 방법은 `yield` 연산자를 사용 하는 것입니다 `->` .
@@ -123,7 +123,7 @@ let squares =
     }
 
 for sq in squares do
-    printfn "%d" sq
+    printfn $"%d{sq}"
 ```
 
 매우 다양 한 값을 생성할 수 있는 보다 복잡 한 식 및 조건부로 말하면 키워드를 생략 하면 됩니다.
@@ -167,7 +167,7 @@ let squaresAndCubes =
         yield! cubes
     }
 
-printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
+printfn $"{squaresAndCubes}"  // Prints - 1; 4; 9; 1; 8; 27
 ```
 
 평가 되는 경우에 의해 호출 되는 계산 식에서 `yield!` 해당 항목이 하나씩 다시 생성 되어 결과를 평면화 합니다.
@@ -234,7 +234,7 @@ F # 핵심 라이브러리는 세 가지 기본 제공 계산 식인 [시퀀스 
 
 다음 표에서는 workflow builder 클래스에서 사용할 수 있는 메서드에 대해 설명 합니다.
 
-|**메서드**|**일반적인 서명**|**설명**|
+|**방법**|**일반적인 서명**|**설명**|
 |----|----|----|
 |`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|`let!`계산 식에서 및에 대해 호출 `do!` 됩니다.|
 |`Delay`|`(unit -> M<'T>) -> M<'T>`|계산 식을 함수로 래핑합니다.|
@@ -390,7 +390,7 @@ let eventually = new EventuallyBuilder()
 
 let comp = eventually {
     for x in 1..2 do
-        printfn " x = %d" x
+        printfn $" x = %d{x}"
     return 3 + 4 }
 
 // Try the remaining lines in F# interactive to see how this

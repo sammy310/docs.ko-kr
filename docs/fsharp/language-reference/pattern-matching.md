@@ -2,12 +2,12 @@
 title: 패턴 일치
 description: 'F #에서 패턴을 사용 하 여 데이터를 논리적 구조와 비교 하거나 데이터를 구성 부분으로 분해 하거나 데이터에서 정보를 추출 하는 방법을 알아봅니다.'
 ms.date: 11/12/2020
-ms.openlocfilehash: e167712b082b7f587e41a78edcaf0a0db9c7294b
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 932f50b7947f6df728149437dd3ceb19c42e5c6a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687807"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740278"
 ---
 # <a name="pattern-matching"></a>패턴 일치
 
@@ -29,7 +29,7 @@ match expression with
 
 다음 표에서는 지원 되는 패턴을 보여 줍니다. 런타임에 입력은 테이블에 나열 된 순서 대로 다음 각 패턴에 대해 테스트 되 고 패턴은 코드에 표시 되는 첫 번째부터 마지막으로, 각 줄의 패턴에 대해 왼쪽에서 오른쪽으로 적용 됩니다.
 
-|Name|설명|예제|
+|이름|설명|예제|
 |----|-----------|-------|
 |상수 패턴|모든 숫자, 문자 또는 문자열 리터럴, 열거형 상수 또는 정의 된 리터럴 식별자|`1.0`, `"test"`, `30`, `Color.Red`|
 |식별자 패턴|구분 된 공용 구조체, 예외 레이블 또는 활성 패턴 사례의 case 값|`Some(x)`<br /><br />`Failure(msg)`|
@@ -88,8 +88,8 @@ type Shape =
 ```fsharp
 let matchShape shape =
     match shape with
-    | Rectangle(height = h) -> printfn "Rectangle with length %f" h
-    | Circle(r) -> printfn "Circle with radius %f" r
+    | Rectangle(height = h) -> printfn $"Rectangle with length %f{h}"
+    | Circle(r) -> printfn $"Circle with radius %f{r}"
 ```
 
 명명 된 필드의 사용은 선택 사항 이므로 앞의 예제에서 및는 모두 `Circle(r)` `Circle(radius = r)` 동일한 효과를 가집니다.
@@ -98,7 +98,7 @@ let matchShape shape =
 
 ```fsharp
 match shape with
-| Rectangle(height = h; width = w) -> printfn "Rectangle with height %f and width %f" h w
+| Rectangle(height = h; width = w) -> printfn $"Rectangle with height %f{h} and width %f{w}"
 | _ -> ()
 ```
 
@@ -232,7 +232,7 @@ f "asdf" // does not match
 
 이름을 사용할 [`nameof`](nameof.md) 수 있는 항목에 대 한 자세한 내용은 연산자를 참조 하십시오.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [일치 식](match-expressions.md)
 - [활성 패턴](active-patterns.md)

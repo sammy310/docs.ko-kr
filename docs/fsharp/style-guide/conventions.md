@@ -2,12 +2,12 @@
 title: F# 코딩 규칙
 description: 'F # 코드를 작성할 때 일반적인 지침과 관용구에 대해 알아봅니다.'
 ms.date: 01/15/2020
-ms.openlocfilehash: 8c7fedf429ecba6e01b26f37972ffa4eeba6d8af
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 87955c379f0abba929b0ced75d62d2601f37dc5a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554028"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739904"
 ---
 # <a name="f-coding-conventions"></a>F# 코딩 규칙
 
@@ -174,7 +174,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>도메인의 내장 형식에서 오류 사례 및 잘못 된 상태를 나타냅니다.
 
-[구별 된 공용 구조체](../language-reference/discriminated-unions.md)를 사용 하면 F #은 형식 시스템에서 잘못 된 프로그램 상태를 나타내는 기능을 제공 합니다. 예를 들어:
+[구별 된 공용 구조체](../language-reference/discriminated-unions.md)를 사용 하면 F #은 형식 시스템에서 잘못 된 프로그램 상태를 나타내는 기능을 제공 합니다. 예를 들면 다음과 같습니다.
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -190,13 +190,13 @@ type MoneyWithdrawalResult =
 let handleWithdrawal amount =
     let w = withdrawMoney amount
     match w with
-    | Success am -> printfn "Successfully withdrew %f" am
-    | InsufficientFunds balance -> printfn "Failed: balance is %f" balance
-    | CardExpired expiredDate -> printfn "Failed: card expired on %O" expiredDate
+    | Success am -> printfn "Successfully withdrew %f{am}"
+    | InsufficientFunds balance -> printfn "Failed: balance is %f{balance}"
+    | CardExpired expiredDate -> printfn "Failed: card expired on %O{expiredDate}"
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
-일반적으로 도메인에서 어떤 작업을 **수행할 수 있는지에 대** 한 다양 한 방법을 모델링할 수 있는 경우 오류 처리 코드는 일반 프로그램 흐름 외에도 처리 해야 하는 것으로 처리 되지 않습니다. 단순히 일반적인 프로그램 흐름의 일부 이며 **예외적인**것으로 간주 되지 않습니다. 이에는 다음과 같은 두 가지 주요 이점이 있습니다.
+일반적으로 도메인에서 어떤 작업을 **수행할 수 있는지에 대** 한 다양 한 방법을 모델링할 수 있는 경우 오류 처리 코드는 일반 프로그램 흐름 외에도 처리 해야 하는 것으로 처리 되지 않습니다. 단순히 일반적인 프로그램 흐름의 일부 이며 **예외적인** 것으로 간주 되지 않습니다. 이에는 다음과 같은 두 가지 주요 이점이 있습니다.
 
 1. 시간이 지남에 따라 도메인을 변경 하면 더 쉽게 유지 관리할 수 있습니다.
 2. 오류 사례는 단위 테스트를 용이 하 게 합니다.
@@ -209,7 +209,7 @@ let handleWithdrawal amount =
 
 예외를 발생 시키기 위해 F #에서 사용할 수 있는 기본 구문은 다음과 같은 기본 설정 순서로 고려 되어야 합니다.
 
-| 기능 | 구문 | 용도 |
+| 함수 | 구문 | 목적 |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | 지정 된 `System.ArgumentNullException` 인수 이름을 사용 하 여을 발생 시킵니다. |
 | `invalidArg` | `invalidArg "argumentName" "message"` | 지정 된 `System.ArgumentException` 인수 이름 및 메시지를 사용 하 여을 발생 시킵니다. |
@@ -309,7 +309,7 @@ F #에서는 부분 응용 프로그램을 지원 하므로, 다양 한 방법�
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>공용 Api에서 부분 응용 프로그램 및 currying 사용 안 함
 
-거의 예외를 제외 하 고 공용 Api에서 부분 응용 프로그램을 사용 하는 것은 소비자에 게 혼란 스 러 울 수 있습니다. 일반적으로 `let` F # 코드의 바인딩된 값은 **함수 값**이 아닌 **값**입니다. 값과 함수 값을 함께 사용 하면 특히를 사용 하 여 함수를 작성 하는 등의 연산자를 사용 하는 경우 수많은 인식 오버 헤드를 위해 exchange에 적은 수의 코드 줄이 저장 될 수 있습니다 `>>` .
+거의 예외를 제외 하 고 공용 Api에서 부분 응용 프로그램을 사용 하는 것은 소비자에 게 혼란 스 러 울 수 있습니다. 일반적으로 `let` F # 코드의 바인딩된 값은 **함수 값** 이 아닌 **값** 입니다. 값과 함수 값을 함께 사용 하면 특히를 사용 하 여 함수를 작성 하는 등의 연산자를 사용 하는 경우 수많은 인식 오버 헤드를 위해 exchange에 적은 수의 코드 줄이 저장 될 수 있습니다 `>>` .
 
 ### <a name="consider-the-tooling-implications-for-point-free-programming"></a>지점 없는 프로그래밍에 대 한 도구 의미 고려
 
@@ -317,7 +317,7 @@ F #에서는 부분 응용 프로그램을 지원 하므로, 다양 한 방법�
 
 ```fsharp
 let func name age =
-    printfn "My name is %s and I am %d years old!" name age
+    printfn "My name is {name} and I am %d{age} years old!"
 
 let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
@@ -508,7 +508,7 @@ let rec processStructPoint (p: SPoint) offset times =
 
 #### <a name="consider-struct-discriminated-unions-when-the-data-type-is-small-with-high-allocation-rates"></a>할당 속도가 높은 데이터 형식이 작은 경우 구별 된 공용 구조체를 참조 하세요.
 
-구조체 튜플 및 레코드와의 성능에 대 한 이전 관찰은 [F # 구분 된 공용 구조체](../language-reference/discriminated-unions.md)에도 포함 됩니다. 다음 코드를 살펴보세요.
+구조체 튜플 및 레코드와의 성능에 대 한 이전 관찰은 [F # 구분 된 공용 구조체](../language-reference/discriminated-unions.md)에도 포함 됩니다. 다음 코드를 생각해 봅시다.
 
 ```fsharp
     type Name = Name of string

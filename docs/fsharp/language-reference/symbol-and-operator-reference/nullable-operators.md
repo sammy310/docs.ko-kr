@@ -2,12 +2,12 @@
 title: null 허용 연산자
 description: 'F # 프로그래밍 언어에서 사용할 수 있는 nullable 연산자에 대해 알아봅니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 951692ba22781f7f9e759c55bc708fc24f7a5014
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 9ac6afc2c3f4277ee6e93b1ccb3d21f892926b4b
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559143"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740369"
 ---
 # <a name="nullable-operators"></a>null 허용 연산자
 
@@ -48,10 +48,10 @@ let nullableInt = new System.Nullable<int>(10)
 let nullableFloat = Nullable.float nullableInt
 
 // Use the regular non-nullable float operator to convert to a non-nullable float.
-printfn "%f" (float nullableFloat)
+printfn $"%f{float nullableFloat}"
 ```
 
-출력은 `10.000000`입니다.
+`10.000000`가 출력됩니다.
 
 등의 nullable 데이터 필드에 대 한 쿼리 연산자는 `sumByNullable` 쿼리 식에 사용할 수 있습니다. Nullable이 아닌 형식에 대 한 쿼리 연산자는 nullable 형식과 형식이 호환 되지 않으므로 nullable 데이터 값으로 작업할 때 적절 한 쿼리 연산자의 nullable 버전을 사용 해야 합니다. 자세한 내용은 [쿼리 식](../query-expressions.md)을 참조 하세요.
 
@@ -73,14 +73,14 @@ query {
     for row in db.Table2 do
     where (row.TestData1.HasValue && row.TestData1.Value > 2)
     select row
-} |> Seq.iter (fun row -> printfn "%d %s" row.TestData1.Value row.Name)
+} |> Seq.iter (fun row -> printfn $"%d{row.TestData1.Value} %s{row.Name}")
 
 query {
     for row in db.Table2 do
     // Use a nullable operator ?>
     where (row.TestData1 ?> 2)
     select row
-} |> Seq.iter (fun row -> printfn "%d %s" (row.TestData1.GetValueOrDefault()) row.Name)
+} |> Seq.iter (fun row -> printfn "%d{row.TestData1.GetValueOrDefault()} %s{row.Name}")
 ```
 
 ## <a name="see-also"></a>참고 항목

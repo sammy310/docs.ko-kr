@@ -2,12 +2,12 @@
 title: 조각
 description: '기존 F # 데이터 형식에 대 한 조각을 사용 하는 방법 및 다른 데이터 형식에 대 한 사용자 고유의 조각을 정의 하는 방법을 알아봅니다.'
 ms.date: 11/20/2020
-ms.openlocfilehash: 9c072648ed46ae29871f2be5cc64b493f6a9b857
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: b776058df5a174dfe48dbf513bf17281036dd83e
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098959"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740382"
 ---
 # <a name="slices"></a>조각
 
@@ -27,15 +27,15 @@ let fullList = [ 1 .. 100 ]
 
 // Create a slice from indices 1-5 (inclusive)
 let smallSlice = fullList.[1..5]
-printfn "Small slice: %A" smallSlice
+printfn $"Small slice: {smallSlice}"
 
 // Create a slice from the beginning to index 5 (inclusive)
 let unboundedBeginning = fullList.[..5]
-printfn "Unbounded beginning slice: %A" unboundedBeginning
+printfn $"Unbounded beginning slice: {unboundedBeginning}"
 
 // Create a slice from an index to the end of the list
 let unboundedEnd = fullList.[94..]
-printfn "Unbounded end slice: %A" unboundedEnd
+printfn $"Unbounded end slice: {unboundedEnd}"
 ```
 
 조각화 된 배열을 조각화 목록 처럼 분리 하는 것입니다.
@@ -46,15 +46,15 @@ let fullArray = [| 1 .. 100 |]
 
 // Create a slice from indices 1-5 (inclusive)
 let smallSlice = fullArray.[1..5]
-printfn "Small slice: %A" smallSlice
+printfn $"Small slice: {smallSlice}"
 
 // Create a slice from the beginning to index 5 (inclusive)
 let unboundedBeginning = fullArray.[..5]
-printfn "Unbounded beginning slice: %A" unboundedBeginning
+printfn $"Unbounded beginning slice: {unboundedBeginning}"
 
 // Create a slice from an index to the end of the list
 let unboundedEnd = fullArray.[94..]
-printfn "Unbounded end slice: %A" unboundedEnd
+printfn $"Unbounded end slice: {unboundedEnd}"
 ```
 
 ## <a name="slicing-multidimensional-arrays"></a>다차원 배열 조각화
@@ -66,27 +66,27 @@ F #은 F # 핵심 라이브러리의 다차원 배열을 지원 합니다. 1 차
 ```fsharp
 // Generate a 3x3 2D matrix
 let A = array2D [[1;2;3];[4;5;6];[7;8;9]]
-printfn "Full matrix:\n %A" A
+printfn $"Full matrix:\n {A}"
 
 // Take the first row
 let row0 = A.[0,*]
-printfn "Row 0: %A" row0
+printfn $"{row0}"
 
 // Take the first column
 let col0 = A.[*,0]
-printfn "Column 0: %A" col0
+printfn $"{col0}"
 
 // Take all rows but only two columns
 let subA = A.[*,0..1]
-printfn "%A" subA
+printfn $"{subA}"
 
 // Take two rows and all columns
 let subA' = A.[0..1,*]
-printfn "%A" subA'
+printfn $"{subA}"
 
 // Slice a 2x2 matrix out of the full 3x3 matrix
 let twoByTwo = A.[0..1,0..1]
-printfn "%A" twoByTwo
+printfn $"{twoByTwo}"
 ```
 
 ## <a name="defining-slices-for-other-data-structures"></a>다른 데이터 구조에 대 한 조각 정의
@@ -127,7 +127,7 @@ type Span<'T> with
 
 let printSpan (sp: Span<int>) =
     let arr = sp.ToArray()
-    printfn "%A" arr
+    printfn $"{arr}"
 
 let sp = [| 1; 2; 3; 4; 5 |].AsSpan()
 printSpan sp.[0..] // [|1; 2; 3; 4; 5|]
@@ -144,7 +144,7 @@ F #의 모든 내장 조각이 끝에 포함 됩니다. 즉, 상한이 조각에
 // Define a new list
 let xs = [1 .. 10]
 
-printfn "%A" xs.[2..5] // Includes the 5th index
+printfn $"{xs.[2..5]}" // Includes the 5th index
 ```
 
 ## <a name="built-in-f-empty-slices"></a>기본 제공 F # 빈 조각
@@ -206,6 +206,6 @@ m.[*, 0, 1]
 
 마지막 줄은 `y` 3d 배열의 및 인덱스를 수정 하 `z` 고 `x` 행렬에 해당 하는 값의 나머지를 가져옵니다.
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [인덱싱된 속성](./members/indexed-properties.md)

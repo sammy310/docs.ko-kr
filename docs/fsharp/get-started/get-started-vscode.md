@@ -2,12 +2,12 @@
 title: Visual Studio Code에서 F# 시작
 description: 'Visual Studio Code와 함께 F #을 사용 하는 방법 및 충돌 하는 Ide 플러그 인 제품군에 대해 알아봅니다.'
 ms.date: 12/23/2018
-ms.openlocfilehash: 3317d0037d3c14a6b55079385d7b27e499c0c392
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 11fb0d443fb7c2b3f270d45bfeaa91102ba28efd
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050548"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739804"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code에서 F# 시작
 
@@ -36,15 +36,15 @@ Visual Studio Code에서 프로젝트가 로드 되 면 창의 왼쪽에 F # 솔
 
 먼저 .NET Core 스크립팅이 기본 스크립팅 환경 인지 확인 합니다.
 
-1. Visual Studio Code 설정 (**코드**  >  **기본**설정  >  **설정**)을 엽니다.
-1. **F # 스크립트**라는 용어를 검색 합니다.
-1. **Fsharp.core: USE SDK scripts**확인란을 클릭 합니다.
+1. Visual Studio Code 설정 (**코드**  >  **기본** 설정  >  **설정**)을 엽니다.
+1. **F # 스크립트** 라는 용어를 검색 합니다.
+1. **Fsharp.core: USE SDK scripts** 확인란을 클릭 합니다.
 
 이는 현재 .NET Core 스크립팅을 사용 하지 않는 .NET Framework 기반 스크립팅에 사용 되는 일부 레거시 동작으로 인해 필요 하며, 현재는 이전 버전과의 호환성을 위해 현재 웹사이트를 사용 하 고 있습니다. 나중에 .NET Core 스크립팅이 기본값이 됩니다.
 
 ### <a name="write-your-first-script"></a>첫 번째 스크립트 작성
 
-.NET Core 스크립팅을 사용 하도록 Visual Studio Code 구성 했으면 Visual Studio Code에서 탐색기 보기로 이동 하 여 새 파일을 만듭니다. 이름을 *Myfirstscript*로 합니다.
+.NET Core 스크립팅을 사용 하도록 Visual Studio Code 구성 했으면 Visual Studio Code에서 탐색기 보기로 이동 하 여 새 파일을 만듭니다. 이름을 *Myfirstscript* 로 합니다.
 
 이제 다음 코드를 추가 합니다.
 
@@ -52,7 +52,7 @@ Visual Studio Code에서 프로젝트가 로드 되 면 창의 왼쪽에 F # 솔
 
 이 함수는 단어를 [Pig 라틴어](https://en.wikipedia.org/wiki/Pig_Latin)형식으로 변환 합니다. 다음 단계는 F# 대화형 (FSI.EXE)를 사용 하 여 평가 하는 것입니다.
 
-전체 함수를 강조 표시 합니다 (길이가 11 줄 이어야 함). 강조 표시 되 면 **Alt** 키를 누르고 **enter**키를 누릅니다. 화면 아래쪽에 터미널 창이 표시 되 고 다음과 같이 표시 됩니다.
+전체 함수를 강조 표시 합니다 (길이가 11 줄 이어야 함). 강조 표시 되 면 **Alt** 키를 누르고 **enter** 키를 누릅니다. 화면 아래쪽에 터미널 창이 표시 되 고 다음과 같이 표시 됩니다.
 
 ![충돌 Ide를 사용 하는 F# 대화형 출력의 예](./media/getting-started-vscode/vscode-fsi.png)
 
@@ -144,7 +144,7 @@ REPL 기반 개발의 다음 단계는 작업 코드를 F # 구현 파일로 이
 let main argv =
     for name in argv do
         let newName = PigLatin.toPigLatin name
-        printfn "%s in Pig Latin is: %s" name newName
+        printfn %"{name} in Pig Latin is: {newName}"
 
     0
 ```

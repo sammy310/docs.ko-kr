@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: tutorial
 ms.prod: dotnet
-ms.openlocfilehash: eda6d8980d256c8063f2bfe1e051b0cb90b587ad
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 7cf25f181997ed66639842727be57e7824ef5466
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96594142"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739989"
 ---
 <!--markdownlint-disable DOCSMD011 -->
 # <a name="read-values-from-an-analog-to-digital-converter"></a>아날로그에서 디지털로의 변환기에서 값 읽기
@@ -20,7 +20,7 @@ ms.locfileid: "96594142"
 
 이 항목에서는 potentiometer로 입력 전압을 조절 .NET을 사용 하 여 ADC에서 값을 읽습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 - [!INCLUDE [prereq-rpi](../includes/prereq-rpi.md)]
 - [MCP3008](https://www.microchip.com/wwwproducts/MCP3008) <span class="docon docon-navigate-external x-hidden-focus"></span> 아날로그에서 디지털 컨버터
@@ -76,7 +76,7 @@ Potentiometer의 외부 핀에 3.3 V 및 접지를 제공 합니다. 순서는 �
 
     :::code language="csharp" source="~/iot-samples/tutorials/AdcTutorial/Program.cs" :::
 
-    앞의 코드에서 다음을 확인할 수 있습니다.
+    위의 코드에서
 
     - `hardwareSpiSettings` 는의 새 인스턴스로 설정 됩니다 `SpiConnectionSettings` . 생성자는 `busId` 매개 변수를 0으로 설정 하 고 매개 변수를 0으로 설정 합니다 `chipSelectLine` .
     - [Using 선언은](../../csharp/whats-new/csharp-8.md#using-declarations) 를 `SpiDevice` 호출 `SpiDevice.Create` 하 고를 전달 하 여의 인스턴스를 만듭니다 `hardwareSpiSettings` . 이 `SpiDevice` 는 SPI 버스를 나타냅니다. `using`선언은 개체가 삭제 되 고 하드웨어 리소스가 제대로 해제 되도록 합니다.
@@ -104,7 +104,7 @@ Potentiometer의 외부 핀에 3.3 V 및 접지를 제공 합니다. 순서는 �
 
 ## <a name="get-the-source-code"></a>소스 코드 가져오기
 
-이 자습서의 소스는 [GitHub에서 사용할 수 있습니다](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/AdcTutorial). <span class="docon docon-navigate-external x-hidden-focus"></span>
+이 자습서의 소스는 [GitHub에서 사용할 수 있습니다](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/AdcTutorial) <span class="docon docon-navigate-external x-hidden-focus"></span> .
 
 ## <a name="next-steps"></a>다음 단계
 

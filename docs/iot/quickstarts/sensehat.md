@@ -6,16 +6,16 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: quickstart
 ms.prod: dotnet
-ms.openlocfilehash: 09e0c46a08e08a2021a9dffe214d3d62d6fb8ec5
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 2919db55304590f5557aa0cbda50cc4bd6640443
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "96594027"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739532"
 ---
 # <a name="quickstart---use-net-to-drive-a-raspberry-pi-sense-hat"></a>빠른 시작-.NET을 사용 하 여 Raspberry Pi Sense HAT 구동
 
-Raspberry Pi [SENSE HAT](https://www.raspberrypi.org/products/sense-hat/) 는 <span class="docon docon-navigate-external x-hidden-focus"></span> Raspberry Pi에 대 한 추가 기능 보드입니다. Sense HAT에는 8 × 8의 RGB LED 매트릭스와 5 단추 조이스틱이 장착 되어 있으며 다음과 같은 센서가 포함 되어 있습니다.
+Raspberry pi [Sense HAT](https://www.raspberrypi.org/products/sense-hat/) <span class="docon docon-navigate-external x-hidden-focus"></span> ( **T** op의 **H** 하려면 **A** ttached)는 Raspberry Pi의 추가 기능 보드입니다. Sense HAT에는 8 × 8의 RGB LED 매트릭스와 5 단추 조이스틱이 장착 되어 있으며 다음과 같은 센서가 포함 되어 있습니다.
 
 - 자이로스코프
 - 가속도계
@@ -26,7 +26,7 @@ Raspberry Pi [SENSE HAT](https://www.raspberrypi.org/products/sense-hat/) 는 <s
 
 이 빠른 시작에서는 .NET을 사용 하 여 Sense HAT에서 센서 값을 검색 하 고, 조이스틱 입력에 응답 하 고, LED 매트릭스를 구동 합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 - [!INCLUDE [prereq-rpi](../includes/prereq-rpi.md)]
 - Sense HAT
@@ -52,7 +52,7 @@ Raspberry Pi에 Sense HAT를 연결 합니다. Raspberry Pi (로컬 또는 원�
 
 ## <a name="get-the-source-code"></a>소스 코드 가져오기
 
-이 빠른 시작의 소스는 [GitHub에서 사용할 수 있습니다](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart). <span class="docon docon-navigate-external x-hidden-focus"></span>
+이 빠른 시작의 소스는 [GitHub에서 사용할 수 있습니다](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart) <span class="docon docon-navigate-external x-hidden-focus"></span> .
 
 ## <a name="next-steps"></a>다음 단계
 

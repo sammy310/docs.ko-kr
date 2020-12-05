@@ -2,12 +2,12 @@
 title: 배열
 description: 'F # 프로그래밍 언어에서 배열을 만들고 사용 하는 방법에 대해 알아봅니다.'
 ms.date: 08/13/2020
-ms.openlocfilehash: 37f781ccd2c7bc2ca2c7b93bda53bbb3ea93b504
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 96b0d7eaf10d5afcd9a647681d5c2ef2d2fba335
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608504"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739753"
 ---
 # <a name="arrays"></a>배열
 
@@ -109,7 +109,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 [`Array.append`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#append) 두 개의 기존 배열을 결합 하 여 새 배열을 만듭니다.
 
-다음 코드에서는 **배열. append**를 보여 줍니다.
+다음 코드에서는 **배열. append** 를 보여 줍니다.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet13.fs)]
 
@@ -287,12 +287,12 @@ module test =
 
     let test1 = generateTestMatrix 2.3 1.1
     let submatrix = test1.[0..1, 0..1]
-    printfn "%A" submatrix
+    printfn $"{submatrix}"
 
     let firstRow = test1.[0,*]
     let secondRow = test1.[1,*]
     let firstCol = test1.[*,0]
-    printfn "%A" firstCol
+    printfn $"{firstCol}"
 ```
 
 ### <a name="boolean-functions-on-arrays"></a>배열의 부울 함수
@@ -405,7 +405,7 @@ Did not find an element that is both a perfect square and a perfect cube.
 
 ### <a name="sort-arrays"></a>배열 정렬
 
-[`Array.sort`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sort)제네릭 비교 함수를 사용 하 여 배열을 정렬 하는 데 사용 합니다. 키 [`Array.sortBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortBy) 에 대 한 제네릭 비교 함수를 사용 하 여 정렬 하려면 *키*라고 하는 값을 생성 하는 함수를 지정 하는 데 사용 합니다. [`Array.sortWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortWith)사용자 지정 비교 함수를 제공 하려는 경우를 사용 합니다. `Array.sort`, `Array.sortBy` 및는 `Array.sortWith` 모두 정렬 된 배열을 새 배열로 반환 합니다. [`Array.sortInPlace`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlace), 및 변형은 [`Array.sortInPlaceBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceBy) [`Array.sortInPlaceWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceWith) 새 배열을 반환 하는 대신 기존 배열을 수정 합니다.
+[`Array.sort`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sort)제네릭 비교 함수를 사용 하 여 배열을 정렬 하는 데 사용 합니다. 키 [`Array.sortBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortBy) 에 대 한 제네릭 비교 함수를 사용 하 여 정렬 하려면 *키* 라고 하는 값을 생성 하는 함수를 지정 하는 데 사용 합니다. [`Array.sortWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortWith)사용자 지정 비교 함수를 제공 하려는 경우를 사용 합니다. `Array.sort`, `Array.sortBy` 및는 `Array.sortWith` 모두 정렬 된 배열을 새 배열로 반환 합니다. [`Array.sortInPlace`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlace), 및 변형은 [`Array.sortInPlaceBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceBy) [`Array.sortInPlaceWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceWith) 새 배열을 반환 하는 대신 기존 배열을 수정 합니다.
 
 ### <a name="arrays-and-tuples"></a>배열 및 튜플
 

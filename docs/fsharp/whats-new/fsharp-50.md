@@ -2,12 +2,12 @@
 title: 'F # 5.0의 새로운 기능-F # 가이드'
 description: 'F # 5.0에서 사용할 수 있는 새로운 기능에 대 한 개요를 확인 하세요.'
 ms.date: 11/06/2020
-ms.openlocfilehash: dd954fac31b008beab37cd6c1f06b1d41c5d5004
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 2384f1a75f5e708dc6f170d82fa15c5e0f54c85d
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438008"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740187"
 ---
 # <a name="whats-new-in-f-50"></a>F# 5.0의 새로운 기능
 
@@ -30,7 +30,7 @@ open Newtonsoft.Json
 
 let o = {| X = 2; Y = "Hello" |}
 
-printfn "%s" (JsonConvert.SerializeObject o)
+printfn $"{JsonConvert.SerializeObject o}"
 ```
 
 패키지 이름 뒤에 다음과 같은 명시적 버전을 제공할 수도 있습니다.
@@ -50,8 +50,8 @@ open FParsec
 
 let test p str =
     match run p str with
-    | Success(result, _, _)   -> printfn "Success: %A" result
-    | Failure(errorMsg, _, _) -> printfn "Failure: %s" errorMsg
+    | Success(result, _, _)   -> printfn $"Success: {result}"
+    | Failure(errorMsg, _, _) -> printfn $"Failure: {errorMsg}"
 
 test pfloat "1.234"
 ```
@@ -123,9 +123,9 @@ let lookupMonth month =
 
     months.[month-1]
 
-printfn "%s" (lookupMonth 12)
-printfn "%s" (lookupMonth 1)
-printfn "%s" (lookupMonth 13)
+printfn $"{lookupMonth 12}"
+printfn $"{lookupMonth 1}"
+printfn $"{lookupMonth 13}"
 ```
 
 마지막 줄에서는 예외를 throw 하 고 오류 메시지에 "month"가 표시 됩니다.
@@ -136,9 +136,9 @@ printfn "%s" (lookupMonth 13)
 module M =
     let f x = nameof x
 
-printfn "%s" (M.f 12)
-printfn "%s" (nameof M)
-printfn "%s" (nameof M.f)
+printfn $"{M.f 12}"
+printfn $"{nameof M}"
+printfn $"{nameof M.f}"
 ```
 
 연산자가 작동 하는 방식에 대 한 세 가지 최종 추가 사항이 변경 되었습니다. `nameof<'type-parameter>` 제네릭 형식 매개 변수에는 폼이 추가 되 고 `nameof` 패턴 일치 식에서는 패턴으로를 사용할 수 있습니다.
@@ -199,7 +199,7 @@ module M =
 // Open only the type inside the module
 open type M.DU
 
-printfn "%A" A
+printfn $"{A}"
 ```
 
 C #과 달리 `open type` 동일한 이름의 멤버를 노출 하는 두 가지 형식을 사용 하는 경우 마지막 형식의 멤버가 `open` 다른 이름을 숨깁니다. 이미 존재 하는 숨김과 관련 된 F # 의미 체계와 일치 합니다.
@@ -285,7 +285,7 @@ let inline negate x = -x
 <@ negate 1.0 @>  |> eval
 ```
 
-함수에서 생성 된 제약 조건은 `inline` 코드 따옴표로 유지 됩니다. `negate`함수의 따옴표 붙은 형식을 이제 평가할 수 있습니다.
+함수에서 생성 된 제약 조건은 `inline` 코드 따옴표로 유지 됩니다. `negate`이제 함수의 quotated 폼을 평가할 수 있습니다.
 
 이 기능은 [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md)을 구현 합니다.
 
@@ -324,8 +324,8 @@ let run r1 r2 r3 =
         }
 
     match res1 with
-    | Ok x -> printfn "%s is: %d" (nameof res1) x
-    | Error e -> printfn "%s is: %s" (nameof res1) e
+    | Ok x -> printfn $"{nameof res1} is: %d{x}"
+    | Error e -> printfn $"{nameof res1} is: {e}"
 
 let printApplicatives () =
     let r1 = Ok 2
@@ -394,11 +394,11 @@ type MyType() =
     interface MyDim
 
 let md = MyType() :> MyDim
-printfn "DIM from C#: %d" md.Z
+printfn $"DIM from C#: %d{md.Z}"
 
 // You can also implement it via an object expression
 let md' = { new MyDim }
-printfn "DIM from C# but via Object Expression: %d" md'.Z
+printfn $"DIM from C# but via Object Expression: %d{md'.Z}"
 ```
 
 이를 통해 사용자가 기본 구현을 사용할 수 있도록 하는 최신 c #으로 작성 된 c # 코드 및 .NET 구성 요소를 안전 하 게 활용할 수 있습니다.
@@ -466,7 +466,7 @@ type Span<'T> with
 
 let printSpan (sp: Span<int>) =
     let arr = sp.ToArray()
-    printfn "%A" arr
+    printfn $"{arr}"
 
 let run () =
     let sp = [| 1; 2; 3; 4; 5 |].AsSpan()

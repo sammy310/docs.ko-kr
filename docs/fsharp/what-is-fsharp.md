@@ -2,12 +2,12 @@
 title: F#이란?
 description: 'F # 프로그래밍 언어 및 F # 프로그래밍에 대해 알아봅니다. 다양 한 데이터 형식, 함수 및이를 함께 활용 하는 방법에 대해 알아봅니다.'
 ms.date: 08/03/2018
-ms.openlocfilehash: 37dc2f472d65a046e4bf67e672e2a96f4d4afded
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: a6bad3e1db63c3fe948b5916925d5eb24a18a41c
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439656"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739479"
 ---
 # <a name="what-is-f"></a>F 란?\#
 
@@ -29,7 +29,7 @@ let main args =
     // Prints a greeting for each name!
     names
     |> List.map getGreeting
-    |> List.iter (fun greeting -> printfn "%s" greeting)
+    |> List.iter (fun greeting -> printfn $"{greeting}")
 
     0
 ```
@@ -52,16 +52,14 @@ F #에는 다음을 비롯 한 다양 한 기능이 있습니다.
 
 ```fsharp
 // Group data with Records
-type SuccessfulWithdrawal = {
-    Amount: decimal
-    Balance: decimal
-}
+type SuccessfulWithdrawal =
+    { Amount: decimal
+      Balance: decimal }
 
-type FailedWithdrawal = {
-    Amount: decimal
-    Balance: decimal
-    IsOverdraft: bool
-}
+type FailedWithdrawal =
+    { Amount: decimal
+      Balance: decimal
+      IsOverdraft: bool }
 
 // Use discriminated unions to represent data of 1 or more forms
 type WithdrawalResult =
@@ -86,9 +84,9 @@ let handleWithdrawal amount =
 
     // The F# compiler enforces accounting for each case!
     match w with
-    | Success s -> printfn "Successfully withdrew %f" s.Amount
-    | InsufficientFunds f -> printfn "Failed: balance is %f" f.Balance
-    | CardExpired d -> printfn "Failed: card expired on %O" d
+    | Success s -> printfn "Successfully withdrew %f{s.Amount}"
+    | InsufficientFunds f -> printfn "Failed: balance is %f{f.Balance}"
+    | CardExpired d -> printfn "Failed: card expired on {d}"
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 

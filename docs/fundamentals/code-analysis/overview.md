@@ -8,16 +8,19 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: ca3a9cb914befbc8e0982070b818b27ee3143793
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 8efac4d5e3fddcb9fdc6e08bcc933f2776420ced
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "96593841"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739976"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET 소스 코드 분석 개요
 
-.NET 컴파일러 플랫폼(Roslyn) 분석기는 C# 또는 Visual Basic 코드를 검사하여 코드 품질 및 코드 스타일 문제를 확인합니다. .NET 5.0부터 이러한 분석기는 .NET SDK에 포함되어 있습니다. (이전에는 코드 품질 분석기를 [NuGet 패키지로](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)설치 했 고 코드 스타일 분석기는 Visual Studio와 함께 설치 했습니다.)
+.NET 컴파일러 플랫폼(Roslyn) 분석기는 C# 또는 Visual Basic 코드를 검사하여 코드 품질 및 코드 스타일 문제를 확인합니다. .NET 5.0부터 이러한 분석기는 .NET SDK에 포함되어 있습니다. .NET 5 + SDK로 이동 하지 않으려는 경우 또는 NuGet 패키지 기반 모델을 선호 하는 경우 `Microsoft.CodeAnalysis.NetAnalyzers` [nuget 패키지](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)에서도 분석기를 사용할 수 있습니다. 주문형 버전 업데이트에 대 한 패키지 기반 모델을 사용 하는 것이 좋습니다.
+
+> [!NOTE]
+> .NET 분석기는 대상 플랫폼에 관계 없이 사용할 수 있습니다. 즉, 프로젝트가 특정 .NET 플랫폼을 대상으로 하지 않아도 됩니다. 분석기는,, 등의 이전 .NET 버전 뿐만 아니라를 대상으로 하는 프로젝트에 대해 작동 `net5.0` `netcoreapp` `netstandard` `net472` 합니다.
 
 - [코드 품질 분석 ("CAxxxx" 규칙)](#code-quality-analysis)
 - [코드 스타일 분석 ("IDExxxx" 규칙)](#code-style-analysis)
@@ -48,8 +51,8 @@ _코드 품질 분석 ("CA") 규칙_ 은 c # 또는 Visual Basic 코드에서 �
 | [CA2013](/visualstudio/code-quality/ca2013) | 안정성 | 경고 | 값 형식과 함께 사용 하지 마십시오. `ReferenceEquals` |
 | [CA2014](/visualstudio/code-quality/ca2014) | 안정성 | 경고 | 루프에 사용 하지 마십시오. `stackalloc` |
 | [CA2015](/visualstudio/code-quality/ca2015) | 안정성 | 경고 | 에서 파생 된 형식에 대해 종료자를 정의 하지 마십시오. <xref:System.Buffers.MemoryManager%601> |
-| [CA2200](/visualstudio/code-quality/ca2200) | 사용 | 경고 | 스택 정보를 유지하도록 다시 throw하십시오.
-| [CA2247](/visualstudio/code-quality/ca2247) | 사용 | 경고 | TaskCompletionSource 생성자에 전달 된 인수는 <xref:System.Threading.Tasks.TaskCreationOptions> 대신 열거형 이어야 합니다. <xref:System.Threading.Tasks.TaskContinuationOptions> |
+| [CA2200](/visualstudio/code-quality/ca2200) | 사용량 | 경고 | 스택 정보를 유지하도록 다시 throw하십시오.
+| [CA2247](/visualstudio/code-quality/ca2247) | 사용량 | 경고 | TaskCompletionSource 생성자에 전달 된 인수는 <xref:System.Threading.Tasks.TaskCreationOptions> 대신 열거형 이어야 합니다. <xref:System.Threading.Tasks.TaskContinuationOptions> |
 
 이러한 규칙의 심각도를 변경 하 여 사용 하지 않도록 설정 하거나 오류를 상승 시킬 수 있습니다.
 
@@ -117,7 +120,7 @@ _코드 품질 분석 ("CA") 규칙_ 은 c # 또는 Visual Basic 코드에서 �
 
 1. MSBuild 속성 [EnforceCodeStyleInBuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) 을로 설정 `true` 합니다.
 
-1. *Editorconfig* 파일에서 빌드에서 실행 하려는 각 "IDE" 코드 스타일 규칙을 경고나 오류로 [구성](configuration-options.md) 합니다. 다음은 그 예입니다. 
+1. *Editorconfig* 파일에서 빌드에서 실행 하려는 각 "IDE" 코드 스타일 규칙을 경고나 오류로 [구성](configuration-options.md) 합니다. 예를 들면 다음과 같습니다.
 
    ```ini
    [*.{cs,vb}]
@@ -125,7 +128,7 @@ _코드 품질 분석 ("CA") 규칙_ 은 c # 또는 Visual Basic 코드에서 �
    dotnet_diagnostic.IDE0040.severity = warning
    ```
 
-   또는 기본적으로 전체 "스타일" 범주를 경고 또는 오류로 구성 하 고 빌드 시 실행 하지 않을 규칙을 선택적으로 해제할 수 있습니다. 다음은 그 예입니다. 
+   또는 기본적으로 전체 "스타일" 범주를 경고 또는 오류로 구성 하 고 빌드 시 실행 하지 않을 규칙을 선택적으로 해제할 수 있습니다. 예를 들면 다음과 같습니다.
 
    ```ini
    [*.{cs,vb}]
@@ -139,7 +142,7 @@ _코드 품질 분석 ("CA") 규칙_ 은 c # 또는 Visual Basic 코드에서 �
 
 ## <a name="suppress-a-warning"></a>경고 표시 안 함
 
-규칙 위반을 억제 하려면 EditorConfig 파일에서 해당 규칙 ID의 심각도 옵션을로 설정 `none` 합니다. 다음은 그 예입니다. 
+규칙 위반을 억제 하려면 EditorConfig 파일에서 해당 규칙 ID의 심각도 옵션을로 설정 `none` 합니다. 예를 들면 다음과 같습니다.
 
 ```ini
 dotnet_diagnostic.CA1822.severity = none

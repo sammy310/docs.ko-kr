@@ -2,12 +2,12 @@
 title: 매개 변수 및 인수
 description: '매개 변수를 정의 하 고 함수, 메서드 및 속성에 인수를 전달 하기 위한 F # 언어 지원에 대해 알아봅니다.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 6564fd31105427683af8fc6280672e638737e9b5
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3c391ca37a1cf3bd150316943e5b06efa532b317
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811524"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740291"
 ---
 # <a name="parameters-and-arguments"></a>매개 변수 및 인수
 
@@ -137,7 +137,7 @@ open System
 open System.Runtime.InteropServices
 type C =
     static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
-        printfn "%s" message
+        printfn $"{message}"
 ```
 
 새 개체를 기본 매개 변수 값으로 지정할 수도 있습니다. 예를 들어, `Foo` 멤버는 다음과 같이 선택적인 항목을 입력할 수 있습니다 `CancellationToken` .
@@ -147,7 +147,7 @@ open System.Threading
 open System.Runtime.InteropServices
 type C =
     static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
-        printfn "%A" ct
+        printfn $"{ct}"
 ```
 
 에 대 한 인수로 지정 된 값은 `DefaultParameterValue` 매개 변수의 형식과 일치 해야 합니다. 예를 들어 다음은 허용 되지 않습니다.
@@ -168,12 +168,12 @@ type C =
 - `byref<'T>`포인터에 대 한 읽기 및 쓰기를 모두 수행 해야 하는 경우에는를 사용 합니다.
 
 ```fsharp
-let example1 (x: inref<int>) = printfn "It's %d" x
+let example1 (x: inref<int>) = printfn $"It's %d{x}"
 
 let example2 (x: outref<int>) = x <- x + 1
 
 let example3 (x: byref<int>) =
-    printfn "It'd %d" x
+    printfn $"It's %d{x}"
     x <- x + 1
 
 let test () =
@@ -217,6 +217,6 @@ a 1 10 Hello world 1 True
 true
 ```
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [멤버](./members/index.md)
