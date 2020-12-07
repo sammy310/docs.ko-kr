@@ -4,12 +4,12 @@ description: F# 대화형(dotnet fsi)이 어떻게 콘솔에서 F# 코드를 대
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 71ec5d1b050b02ecbdb98adce814fce011cdbca0
-ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
+ms.openlocfilehash: fe8ee2ebb97f4a47e80f39d5be8d95ba5b72ddc7
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96549399"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739315"
 ---
 # <a name="interactive-programming-with-f"></a>F\#을 사용한 대화형 프로그래밍
 
@@ -118,7 +118,7 @@ let t2 = dsharp.tensor [ [ 0; 1 ]; [ 2; 2 ] ]
 // Define a scalar-to-scalar function
 let f (x: Tensor) = sin (sqrt x)
 
-printfn "%A" (f (dsharp.tensor 1.2))
+printfn $"{f (dsharp.tensor 1.2)}"
 ```
 
 ### <a name="specifying-a-package-source"></a>패키지 소스 지정
@@ -137,7 +137,7 @@ printfn "%A" (f (dsharp.tensor 1.2))
 > [!NOTE]
 > 현재 프레임워크 참조를 사용하는 스크립트에 대한 제한(예: `Microsoft.NET.Sdk.Web` 또는 `Microsoft.NET.Sdk.WindowsDesktop`)이 있습니다. Saturn, Giraffe, WinForms와 같은 패키지는 사용할 수 없습니다. 이는 [#9417](https://github.com/dotnet/fsharp/issues/9417) 이슈에서 추적되고 있습니다.
 
-[패키지 관리 확장성 및 기타 확장](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)에 대해 자세히 알아보세요.
+자세한 내용은 [패키지 관리 확장성 및 기타 확장](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)을 참조하세요.
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>F# 대화형으로 디스크에서 어셈블리 참조
 
@@ -154,7 +154,7 @@ let myFunction x y = x + 2 * y
 ```fsharp
 #r "path/to/MyAssembly.dll"
 
-printfn "%A" (MyAssembly.myFunction 10 40)
+printfn $"{MyAssembly.myFunction 10 40}"
 ```
 
 출력은 다음과 같습니다.
@@ -182,7 +182,7 @@ let square x = x * x
 #load "Script1.fsx"
 open Script1
 
-printfn "%d" (square 12)
+printfn $"%d{square 12}"
 ```
 
 `open Script1` 선언은 필수입니다. F# 스크립트의 구문이 해당 스크립트 파일의 이름인 최상위 모듈로 컴파일되기 때문입니다.
@@ -206,7 +206,7 @@ F# 스크립트는 F# 대화형 세션을 나타내는 사용자 지정 `fsi` �
 let args = fsi.CommandLineArgs
 
 for arg in args do
-    printfn "%s" arg
+    printfn $"{arg}"
 ```
 
 평가될 때 모든 인수를 출력합니다. 첫 번째 인수는 항상 평가되는 스크립트의 이름입니다.
