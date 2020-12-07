@@ -4,12 +4,12 @@ description: F# 대화형(dotnet fsi)이 어떻게 콘솔에서 F# 코드를 대
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 92177c41dc6b31d9186bae8176f85787e2fb89e0
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 71ec5d1b050b02ecbdb98adce814fce011cdbca0
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438040"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549399"
 ---
 # <a name="interactive-programming-with-f"></a>F\#을 사용한 대화형 프로그래밍
 
@@ -90,6 +90,9 @@ F# 스크립팅은 기본적으로 [Visual Studio](../../get-started/get-started
 
 ## <a name="referencing-packages-in-f-interactive"></a>F# 대화형에서 패키지 참조
 
+> [!NOTE]
+> 패키지 관리 시스템을 확장할 수 있습니다. [기타 확장에 대해](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager) 자세히 알아보세요.
+
 F# 대화형에서는 `#r "nuget:"` 구문 및 특정 버전으로 NuGet 패키지를 참조할 수 있습니다.
 
 ```fsharp
@@ -133,6 +136,8 @@ printfn "%A" (f (dsharp.tensor 1.2))
 
 > [!NOTE]
 > 현재 프레임워크 참조를 사용하는 스크립트에 대한 제한(예: `Microsoft.NET.Sdk.Web` 또는 `Microsoft.NET.Sdk.WindowsDesktop`)이 있습니다. Saturn, Giraffe, WinForms와 같은 패키지는 사용할 수 없습니다. 이는 [#9417](https://github.com/dotnet/fsharp/issues/9417) 이슈에서 추적되고 있습니다.
+
+[패키지 관리 확장성 및 기타 확장](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)에 대해 자세히 알아보세요.
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>F# 대화형으로 디스크에서 어셈블리 참조
 
