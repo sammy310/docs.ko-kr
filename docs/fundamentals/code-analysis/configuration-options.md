@@ -5,18 +5,20 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: af2ebb74786f0ae884ffee4636765cae43fcb23f
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 4f7b392a2b066023fec75c5295bd94651654d645
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "96593143"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851792"
 ---
 # <a name="configuration-options-for-code-analysis"></a>코드 분석에 대 한 구성 옵션
 
 코드 분석 규칙에는 다양 한 구성 옵션이 있습니다. 이러한 옵션은 구문을 사용 하 여 [분석기 구성 파일](configuration-files.md) 에서 키-값 쌍으로 지정 됩니다 `<option key> = <option value>` .
 
-가장 일반적으로 구성할 옵션은 규칙의 심각도입니다. [코드 품질 규칙](quality-rules/index.md) 및 [코드 스타일 규칙](style-rules/index.md)을 포함 하 여 모든 분석기 규칙에 대 한 심각도 수준을 구성할 수 있습니다.
+가장 일반적으로 구성할 옵션은 [규칙의 심각도](#severity-level)입니다. [코드 품질 규칙](quality-rules/index.md) 및 [코드 스타일 규칙](style-rules/index.md)을 포함 하 여 모든 분석기 규칙에 대 한 심각도 수준을 구성할 수 있습니다. 예를 들어 규칙을 경고로 사용 하기 위해 다음 키-값 쌍을 파일에 추가할 수 있습니다 EditorConfig .
+
+`dotnet_diagnostic.<rule ID>.severity = warning`
 
 규칙 동작을 사용자 지정 하는 추가 옵션을 구성할 수도 있습니다.
 
@@ -70,7 +72,7 @@ generated_code = true
 > [!TIP]
 > Visual Studio의 규칙 심각도 화면에 대 한 자세한 내용은 [심각도 수준](/visualstudio/ide/editorconfig-language-conventions#severity-levels)을 참조 하세요.
 
-#### <a name="scope"></a>범위
+#### <a name="scope"></a>Scope
 
 단일 규칙에 대 한 규칙 심각도를 설정 하려면 다음 구문을 사용 합니다.
 

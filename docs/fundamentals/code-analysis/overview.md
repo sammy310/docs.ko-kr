@@ -2,76 +2,71 @@
 title: .NET의 코드 분석
 titleSuffix: ''
 description: .NET SDK의 소스 코드 분석에 대해 알아봅니다.
-ms.date: 08/22/2020
+ms.date: 12/04/2020
 ms.topic: overview
 ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 8efac4d5e3fddcb9fdc6e08bcc933f2776420ced
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 657975742c3efc2985264fe16cb316357b959e73
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739976"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851818"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET 소스 코드 분석 개요
 
-.NET 컴파일러 플랫폼(Roslyn) 분석기는 C# 또는 Visual Basic 코드를 검사하여 코드 품질 및 코드 스타일 문제를 확인합니다. .NET 5.0부터 이러한 분석기는 .NET SDK에 포함되어 있습니다. .NET 5 + SDK로 이동 하지 않으려는 경우 또는 NuGet 패키지 기반 모델을 선호 하는 경우 `Microsoft.CodeAnalysis.NetAnalyzers` [nuget 패키지](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)에서도 분석기를 사용할 수 있습니다. 주문형 버전 업데이트에 대 한 패키지 기반 모델을 사용 하는 것이 좋습니다.
+.NET 컴파일러 플랫폼(Roslyn) 분석기는 C# 또는 Visual Basic 코드를 검사하여 코드 품질 및 코드 스타일 문제를 확인합니다. .NET 5.0부터 이러한 분석기는 .NET SDK에 포함 되어 있으므로 별도로 설치할 필요가 없습니다. 프로젝트가 .NET 5 이상을 대상으로 하는 경우 기본적으로 코드 분석이 사용 됩니다. 프로젝트가 .NET Core, .NET Standard 또는 .NET Framework 같은 다른 .NET 구현을 대상으로 하는 경우 [EnableNETAnalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) 속성을로 설정 하 여 코드 분석을 수동으로 사용 하도록 설정 해야 합니다 `true` .
+
+.NET 5 + SDK로 이동 하지 않거나 NuGet 패키지 기반 모델을 선호 하는 경우에는 [Microsoft CodeAnalysis. Netanalyzers NuGet 패키지](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)에서도 분석기를 사용할 수 있습니다. 주문형 버전 업데이트에 대 한 패키지 기반 모델을 사용 하는 것이 좋습니다.
 
 > [!NOTE]
-> .NET 분석기는 대상 플랫폼에 관계 없이 사용할 수 있습니다. 즉, 프로젝트가 특정 .NET 플랫폼을 대상으로 하지 않아도 됩니다. 분석기는,, 등의 이전 .NET 버전 뿐만 아니라를 대상으로 하는 프로젝트에 대해 작동 `net5.0` `netcoreapp` `netstandard` `net472` 합니다.
-
-- [코드 품질 분석 ("CAxxxx" 규칙)](#code-quality-analysis)
-- [코드 스타일 분석 ("IDExxxx" 규칙)](#code-style-analysis)
+> .NET 분석기는 대상 프레임 워크에 독립적입니다. 즉, 프로젝트에서 특정 .NET 구현을 대상으로 하지 않아도 됩니다. 분석기는 및와 같은 이전 버전의 .NET을 대상으로 하는 프로젝트에 대해서도 작동 합니다 `net5.0` `netcoreapp3.1` `net472` .
 
 분석기에서 규칙 위반을 발견 하는 경우 각 규칙의 [구성](configuration-options.md)방법에 따라 제안, 경고 또는 오류로 보고 됩니다. 코드 분석 위반은 컴파일러 오류와 구별 하기 위해 접두사 "CA" 또는 "IDE"와 함께 표시 됩니다.
 
-> [!TIP]
->
-> - StyleCop, [rosl](https://www.nuget.org/packages/Roslynator.Analyzers/), [Xunit 분석기](https://www.nuget.org/packages/xunit.analyzers/)및 [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/) [sonar.projectname) Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)와 같은 타사 분석기를 설치할 수도 있습니다.
-> - Visual Studio를 사용 하는 경우 많은 분석기 규칙에 연결 된 *코드 수정* 이 있으므로 문제를 해결 하는 데 적용할 수 있습니다. 코드 수정이 전구 아이콘 메뉴에 표시 됩니다.
-
 ## <a name="code-quality-analysis"></a>코드 품질 분석
 
-_코드 품질 분석 ("CA") 규칙_ 은 c # 또는 Visual Basic 코드에서 보안, 성능, 디자인 및 기타 문제를 검사 합니다. 분석은 기본적으로 .NET 5.0 이상을 대상으로 하는 프로젝트에 대해 사용 하도록 설정 됩니다. [EnableNETAnalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) 속성을로 설정 하 여 이전 .net 버전을 대상으로 하는 프로젝트에 대해 코드 분석을 사용 하도록 설정할 수 있습니다 `true` . 을로 설정 하 여 프로젝트에 대 한 코드 분석을 사용 하지 않도록 설정할 수도 있습니다 `EnableNETAnalyzers` `false` .
+*코드 품질 분석* ("caxxxx") 규칙은 c # 또는 Visual Basic 코드에서 보안, 성능, 디자인 및 기타 문제를 검사 합니다. 분석은 기본적으로 .NET 5.0 이상을 대상으로 하는 프로젝트에 대해 사용 하도록 설정 됩니다. [EnableNETAnalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) 속성을로 설정 하 여 이전 .net 버전을 대상으로 하는 프로젝트에 대해 코드 분석을 사용 하도록 설정할 수 있습니다 `true` . 을로 설정 하 여 프로젝트에 대 한 코드 분석을 사용 하지 않도록 설정할 수도 있습니다 `EnableNETAnalyzers` `false` .
 
 > [!TIP]
-> Visual Studio에서는 프로젝트 속성 창를 사용 하 여 코드 분석을 사용 하거나 사용 하지 않도록 설정할 수 있습니다. 프로젝트 속성 창에 액세스 하려면 솔루션 탐색기 내에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다. 그런 다음 **코드 분석** 탭을 선택 하 고 확인란을 선택 하거나 선택 취소 하 여 **.Net 분석기를 사용 하도록 설정** 합니다.
+> Visual Studio를 사용하는 경우:
+>
+> - 많은 분석기 규칙에는 문제를 해결 하기 위해 적용할 수 있는 *코드 수정* 이 연결 되어 있습니다. 코드 수정이 전구 아이콘 메뉴에 표시 됩니다.
+> - 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**  >  **코드 분석** 탭 > **.net 분석기 사용** 을 선택 하 여 코드 분석을 사용 하거나 사용 하지 않도록 설정할 수 있습니다.
 
 ### <a name="enabled-rules"></a>활성화 된 규칙
 
-다음 규칙은 기본적으로 .NET 5.0 Preview 8에서 사용 하도록 설정 됩니다.
+다음 규칙은 기본적으로 .NET 5.0에서 사용 하도록 설정 됩니다.
 
 | 진단 ID | 범주 | 심각도 | 설명 |
 | - | - | - | - |
-| [CA1416](/visualstudio/code-quality/ca1416) | 상호 운용성 | 경고 | 플랫폼 호환성 분석기 |
-| [CA1417](/visualstudio/code-quality/ca1417) | 상호 운용성 | 경고 | `OutAttribute`P/invoke에 문자열 매개 변수를 사용 하지 마십시오. |
-| [CA1831](/visualstudio/code-quality/ca1831) | 성능 | 경고 | `AsSpan`적절 한 경우 문자열에 범위 기반 인덱서 대신을 사용 합니다. |
-| [CA2013](/visualstudio/code-quality/ca2013) | 안정성 | 경고 | 값 형식과 함께 사용 하지 마십시오. `ReferenceEquals` |
-| [CA2014](/visualstudio/code-quality/ca2014) | 안정성 | 경고 | 루프에 사용 하지 마십시오. `stackalloc` |
-| [CA2015](/visualstudio/code-quality/ca2015) | 안정성 | 경고 | 에서 파생 된 형식에 대해 종료자를 정의 하지 마십시오. <xref:System.Buffers.MemoryManager%601> |
-| [CA2200](/visualstudio/code-quality/ca2200) | 사용량 | 경고 | 스택 정보를 유지하도록 다시 throw하십시오.
-| [CA2247](/visualstudio/code-quality/ca2247) | 사용량 | 경고 | TaskCompletionSource 생성자에 전달 된 인수는 <xref:System.Threading.Tasks.TaskCreationOptions> 대신 열거형 이어야 합니다. <xref:System.Threading.Tasks.TaskContinuationOptions> |
+| [CA1416](/visualstudio/code-quality/ca1416) | 상호 운용성 | Warning | 플랫폼 호환성 분석기 |
+| [CA1417](/visualstudio/code-quality/ca1417) | 상호 운용성 | Warning | `OutAttribute`P/invoke에 문자열 매개 변수를 사용 하지 마십시오. |
+| [CA1831](/visualstudio/code-quality/ca1831) | 성능 | Warning | `AsSpan`적절 한 경우 문자열에 범위 기반 인덱서 대신을 사용 합니다. |
+| [CA2013](/visualstudio/code-quality/ca2013) | 안정성 | Warning | 값 형식과 함께 사용 하지 마십시오. `ReferenceEquals` |
+| [CA2014](/visualstudio/code-quality/ca2014) | 안정성 | Warning | 루프에 사용 하지 마십시오. `stackalloc` |
+| [CA2015](/visualstudio/code-quality/ca2015) | 안정성 | Warning | 에서 파생 된 형식에 대해 종료자를 정의 하지 마십시오. <xref:System.Buffers.MemoryManager%601> |
+| [CA2200](/visualstudio/code-quality/ca2200) | 사용 | Warning | 스택 정보를 유지하도록 다시 throw하십시오.
+| [CA2247](/visualstudio/code-quality/ca2247) | 사용 | Warning | TaskCompletionSource 생성자에 전달 된 인수는 <xref:System.Threading.Tasks.TaskCreationOptions> 대신 열거형 이어야 합니다. <xref:System.Threading.Tasks.TaskContinuationOptions> |
 
-이러한 규칙의 심각도를 변경 하 여 사용 하지 않도록 설정 하거나 오류를 상승 시킬 수 있습니다.
+이러한 규칙의 심각도를 변경 하 여 사용 하지 않도록 설정 하거나 오류를 상승 시킬 수 있습니다. [추가 규칙을 사용 하도록 설정할](#enable-additional-rules)수도 있습니다.
 
-사용 가능한 코드 품질 규칙의 전체 목록은 [코드 품질 규칙](quality-rules/index.md)을 참조 하세요.
+- 각 .NET SDK 버전에 포함 된 규칙 목록은 [Analyzer 릴리스](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)를 참조 하세요.
+- 모든 코드 품질 규칙의 목록은 [코드 품질 규칙](quality-rules/index.md)을 참조 하세요.
 
 ### <a name="enable-additional-rules"></a>추가 규칙 사용
 
-.NET 5.0 RC2부터 .NET SDK에는 모든 [“CA” 모드 품질 규칙](/visualstudio/code-quality/code-analysis-for-managed-code-warnings)이 함께 제공됩니다. 각 .NET SDK 버전에 포함 된 규칙의 전체 목록은 [analyzer 릴리스](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)를 참조 하세요.
+*분석 모드* 는 none, some 또는 all 규칙이 설정 된 미리 정의 된 코드 분석 구성을 나타냅니다. 기본 분석 모드에서는 적은 수의 규칙만 [빌드 경고로 설정](#enabled-rules)됩니다. 프로젝트 파일에서 [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) 속성을 설정 하 여 프로젝트에 대 한 분석 모드를 변경할 수 있습니다. 허용 되는 값은 다음과 같습니다.
 
-#### <a name="default-analysis-mode"></a>기본 분석 모드
+| 값 | 설명 |
+| - | - |
+| `AllDisabledByDefault` | 이는 가장 보수적인 모드입니다. 모든 규칙은 기본적으로 사용 하지 않도록 설정 됩니다. 개별 규칙을 선택적으로 [옵트인](configuration-options.md)하여 사용하도록 설정할 수 있습니다.<br /><br />`<AnalysisMode>AllDisabledByDefault</AnalysisMode>` |
+| `AllEnabledByDefault` | 이는 가장 적극적인 모드입니다. 모든 규칙은 빌드 경고로 설정 됩니다. 개별적으로 사용 하지 않도록 설정 하는 규칙을 선택적으로 [옵트아웃 (opt out](configuration-options.md) ) 할 수 있습니다.<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
+| `Default` | 기본 모드에서는 몇 가지 규칙을 경고로 사용 하 고, 다른 규칙은 해당 코드 수정이 있는 Visual Studio IDE 제안 으로만 활성화 되며, 나머지는 완전히 사용 하지 않도록 설정 됩니다. 개별 규칙을 선택적 [으로 옵트인 또는 옵트아웃](configuration-options.md) 하 여 사용 하지 않도록 설정할 수 있습니다.<br /><br />`<AnalysisMode>Default</AnalysisMode>` |
 
-기본 분석 모드에서 일부 규칙은 [기본적으로](#enabled-rules) 빌드 경고로 설정 됩니다. 일부 다른 규칙은 기본적으로 해당 코드 수정이 있는 Visual Studio IDE 제안 으로만 활성화 됩니다. 나머지 규칙은 기본적으로 사용 하지 않도록 설정 됩니다. 규칙 [의 전체 목록](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md) 에는 규칙의 기본 심각도와 기본 분석 모드에서 규칙을 기본적으로 사용할 수 있는지 여부가 포함 됩니다.
-
-#### <a name="custom-analysis-mode"></a>사용자 지정 분석 모드
-
-개별 규칙 또는 규칙 범주를 사용 하거나 사용 하지 않도록 [코드 분석 규칙을 구성할](configuration-options.md) 수 있습니다. 또한 [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) 속성을 사용 하 여 다음 사용자 지정 분석 모드 중 하나로 전환할 수 있습니다.
-
-- _적극적인_ 또는 _옵트아웃_ 모드: 모든 규칙은 기본적으로 빌드 경고로 사용 됩니다. 개별 규칙을 선택적으로 [옵트아웃](configuration-options.md)하여 사용하지 않도록 설정할 수 있습니다.
-- _보수적인_ 또는 _옵트인_ 모드: 모든 규칙은 기본적으로 사용 하지 않도록 설정 됩니다. 개별 규칙을 선택적으로 [옵트인](configuration-options.md)하여 사용하도록 설정할 수 있습니다.
+사용할 수 있는 각 규칙의 기본 심각도와 규칙을 기본 분석 모드에서 사용할 수 있는지 여부를 확인 하려면 [규칙의 전체 목록을](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)참조 하세요.
 
 ### <a name="treat-warnings-as-errors"></a>경고를 오류로 처리
 
@@ -106,12 +101,14 @@ _코드 품질 분석 ("CA") 규칙_ 은 c # 또는 Visual Basic 코드에서 �
 
 ## <a name="code-style-analysis"></a>코드 스타일 분석
 
-[코드 스타일 분석](/visualstudio/ide/editorconfig-code-style-settings-reference) ("IDExxxx" 규칙)을 사용 하 여 코드 베이스에서 일관 된 코드 스타일을 정의 하 고 유지할 수 있습니다. 기본 설정은 다음과 같습니다.
+*코드 스타일 분석* ("IDExxxx") 규칙을 사용 하 여 코드 베이스에서 일관 된 코드 스타일을 정의 하 고 유지할 수 있습니다. 기본 설정 설정은 다음과 같습니다.
 
 - 명령줄 빌드: 명령줄 빌드의 모든 .NET 프로젝트에 대해 코드 스타일 분석이 기본적으로 사용 하지 않도록 설정 되어 있습니다.
 - Visual Studio: 코드 스타일 분석은 기본적으로 Visual Studio 내의 모든 .NET 프로젝트에 대해 [코드 리팩터링 빠른 작업](/visualstudio/ide/code-generation-in-visual-studio)으로 사용 됩니다.
 
-.NET 5.0 RC2를 시작 하면 명령줄 및 Visual Studio 내에서 빌드에 대 한 코드 스타일 분석을 사용 하도록 설정할 수 있습니다. 코드 스타일 위반은 "IDE" 접두사를 사용 하 여 경고나 오류로 표시 됩니다. 이렇게 하면 빌드 시 일관 된 코드 스타일을 적용할 수 있습니다.
+.NET 5.0를 시작 하면 명령줄 및 Visual Studio 내에서 빌드에 대 한 코드 스타일 분석을 사용 하도록 설정할 수 있습니다. 코드 스타일 위반은 "IDE" 접두사를 사용 하 여 경고나 오류로 표시 됩니다. 이렇게 하면 빌드 시 일관 된 코드 스타일을 적용할 수 있습니다.
+
+코드 스타일 분석 규칙의 전체 목록은 [코드 스타일 규칙](style-rules/index.md)을 참조 하세요.
 
 > [!NOTE]
 > 코드 스타일 분석 기능은 실험적 이며 .NET 5와 .NET 6 릴리스 사이에서 변경 될 수 있습니다.
@@ -120,7 +117,7 @@ _코드 품질 분석 ("CA") 규칙_ 은 c # 또는 Visual Basic 코드에서 �
 
 1. MSBuild 속성 [EnforceCodeStyleInBuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) 을로 설정 `true` 합니다.
 
-1. *Editorconfig* 파일에서 빌드에서 실행 하려는 각 "IDE" 코드 스타일 규칙을 경고나 오류로 [구성](configuration-options.md) 합니다. 예를 들면 다음과 같습니다.
+1. *Editorconfig* 파일에서 빌드에서 실행 하려는 각 "IDE" 코드 스타일 규칙을 경고나 오류로 [구성](configuration-options.md) 합니다. 예를 들어:
 
    ```ini
    [*.{cs,vb}]
@@ -128,7 +125,7 @@ _코드 품질 분석 ("CA") 규칙_ 은 c # 또는 Visual Basic 코드에서 �
    dotnet_diagnostic.IDE0040.severity = warning
    ```
 
-   또는 기본적으로 전체 "스타일" 범주를 경고 또는 오류로 구성 하 고 빌드 시 실행 하지 않을 규칙을 선택적으로 해제할 수 있습니다. 예를 들면 다음과 같습니다.
+   또는 기본적으로 전체 "스타일" 범주를 경고 또는 오류로 구성 하 고 빌드 시 실행 하지 않을 규칙을 선택적으로 해제할 수 있습니다. 예를 들어:
 
    ```ini
    [*.{cs,vb}]
@@ -142,7 +139,7 @@ _코드 품질 분석 ("CA") 규칙_ 은 c # 또는 Visual Basic 코드에서 �
 
 ## <a name="suppress-a-warning"></a>경고 표시 안 함
 
-규칙 위반을 억제 하려면 EditorConfig 파일에서 해당 규칙 ID의 심각도 옵션을로 설정 `none` 합니다. 예를 들면 다음과 같습니다.
+규칙 위반을 억제 하려면 EditorConfig 파일에서 해당 규칙 ID의 심각도 옵션을로 설정 `none` 합니다. 예를 들어:
 
 ```ini
 dotnet_diagnostic.CA1822.severity = none
@@ -151,6 +148,10 @@ dotnet_diagnostic.CA1822.severity = none
 Visual Studio에서는 코드 분석 규칙에서 경고를 표시 하지 않도록 하는 추가 방법을 제공 합니다. 자세한 내용은 [위반 표시 안 함](/visualstudio/code-quality/use-roslyn-analyzers#suppress-violations)을 참조 하세요.
 
 규칙 심각도에 대 한 자세한 내용은 [규칙 심각도 구성](configuration-options.md#severity-level)을 참조 하세요.
+
+## <a name="third-party-analyzers"></a>타사 분석기
+
+공식 .NET 분석기 외에도 [StyleCop,](https://www.nuget.org/packages/StyleCop.Analyzers/) [rosl](https://www.nuget.org/packages/Roslynator.Analyzers/), [Xunit 분석기](https://www.nuget.org/packages/xunit.analyzers/)및 [sonar.projectname) Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)와 같은 타사 분석기를 설치할 수도 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
