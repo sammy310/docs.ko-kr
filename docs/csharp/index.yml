@@ -6,12 +6,12 @@ metadata:
   description: 프로그래밍 C# 알아보기 - 초보 개발자, C#을 처음 사용하는 개발자, 숙련된 C# / .NET 개발자용
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: f31d24add06b958f6c5bc00baf4c09601616604e
-  ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+  ms.openlocfilehash: bc75503b565020fb9966fd756d87890263f63533
+  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/12/2020
-  ms.locfileid: "94556819"
+  ms.lasthandoff: 12/04/2020
+  ms.locfileid: "96599449"
 landingContent:
 - title: C#의 프로그램에 대해 알아보기
   linkLists:
@@ -25,6 +25,8 @@ landingContent:
       url: tutorials/intro-to-csharp/index.md
     - text: Visual Studio로 C# 앱 만들기
       url: /visualstudio/get-started/csharp/tutorial-console
+    - text: C# 질문 및 답변
+      url: /answers/topics/dotnet-csharp.html
   - linkListType: video
     links:
     - text: C#이란?

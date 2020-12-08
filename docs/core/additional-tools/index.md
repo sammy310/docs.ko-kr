@@ -4,12 +4,12 @@ description: .NET Core 기능을 지원하고 확장하는, 설치 가능한 추
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: f563dff312442cbf068d52d08992621e3d6f1460
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6aa8b62f02c4325664ffeccc0c0d4a0635a96f2d
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699003"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599221"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 추가 도구 개요
 
@@ -28,6 +28,10 @@ ms.locfileid: "95699003"
 [dotnet-gcdump](../diagnostics/dotnet-gcdump.md)로 라이브 .NET 프로세스의 GC(가비지 수집기) 덤프를 수집할 수 있습니다.
 
 [dotnet-trace](../diagnostics/dotnet-trace.md)는 앱이 느리게 실행되는 이유를 확인해야 하는 시나리오에서 도움이 될 수 있는 프로파일링 데이터를 앱에서 수집합니다.
+
+## <a name="net-install-tool-for-extension-authors"></a>확장 프로그램 작성자를 위한 .NET 설치 도구
+
+[확장 프로그램 작성자를 위한 .NET 설치 도구](https://github.com/dotnet/vscode-dotnet-runtime)는 VS Code 확장 작성자를 위해 특별히 .NET Core 런타임 획득을 허용하는 Visual Studio Code 확장입니다. 이 도구는 .NET에서 작성된 확장에 활용되며 확장(예: 언어 서버)을 부팅하기 위해 .NET가 필요합니다. 확장은 사용자가 개발용 .NET을 설치하는 데 직접 사용하기 위한 것이 아닙니다.
 
 ## <a name="wcf-web-service-reference-tool"></a>WCF Web Service Reference 도구
 
