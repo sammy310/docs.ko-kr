@@ -3,12 +3,12 @@ title: 높은 CPU 사용량 디버그 - .NET 코어
 description: .NET Core의 높은 CPU 사용량을 디버깅하는 과정을 안내하는 자습서입니다.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 71e0b98f7ad38836c6a20c3e0e75a878fb6525c7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 91f31f77b54398d2f9816890338955bc9b0852e4
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538711"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437834"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>.NET 코어에서 높은 CPU 사용량 디버그
 
@@ -90,7 +90,7 @@ Press p to pause, r to resume, q to quit.
 이제 [dotnet-counters](dotnet-counters.md) 명령을 다시 실행합니다. `cpu-usage`만 모니터링하려면 `System.Runtime[cpu-usage]`을 명령의 일부로 지정합니다.
 
 ```dotnetcli
-dotnet-counters monitor System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
+dotnet-counters monitor --counters System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
 ```
 
 아래와 같이 CPU 사용량이 증가하는 것을 볼 수 있습니다.
@@ -139,7 +139,7 @@ sudo perf record -p 2266 -g
 sudo perf report -f
 ```
 
-다음 명령을 사용하여 _flame-graph_를 생성할 수도 있습니다.
+다음 명령을 사용하여 _flame-graph_ 를 생성할 수도 있습니다.
 
 ```bash
 git clone --depth=1 https://github.com/BrendanGregg/FlameGraph

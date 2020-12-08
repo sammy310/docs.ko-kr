@@ -14,12 +14,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: e7c4d6ca4c72390c3e0803502aa9c1a675e02345
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 26612c5b0591efa61fcd476733aee2b219d67c62
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282411"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438165"
 ---
 # <a name="version-tolerant-serialization"></a>버전 독립적 Serialization
 
@@ -28,7 +28,7 @@ ms.locfileid: "93282411"
 - 이전 형식의 새 버전을 역직렬화하도록 요청하면 애플리케이션의 이전 버전이 예외를 throw합니다.
 - 데이터가 누락된 형식의 이전 버전을 역직렬화할 때 애플리케이션의 새 버전이 예외를 throw합니다.
 
-VTS(버전 독립적 직렬화)는 직렬화 가능한 형식을 시간이 지남에 따라 더 쉽게 수정할 수 있게 해 주는 기능 집합입니다. 특히 VTS 기능은 제네릭 형식을 비롯하여 <xref:System.SerializableAttribute> 특성이 적용된 클래스에 사용할 수 있습니다. VTS를 사용하면 형식의 다른 버전과의 호환성을 휴지하면서 해당 클래스에 새 필드를 추가할 수 있습니다. 작동하는 애플리케이션 예제는 [버전 독립적 serialization 기술 샘플](basic-serialization-technology-sample.md)을 참조하세요.
+VTS(버전 독립적 직렬화)는 직렬화 가능한 형식을 시간이 지남에 따라 더 쉽게 수정할 수 있게 해 주는 기능 집합입니다. 특히 VTS 기능은 제네릭 형식을 비롯하여 <xref:System.SerializableAttribute> 특성이 적용된 클래스에 사용할 수 있습니다. VTS를 사용하면 형식의 다른 버전과의 호환성을 휴지하면서 해당 클래스에 새 필드를 추가할 수 있습니다.
 
 VTS 기능은 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>를 사용할 때 활성화됩니다. 또한 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>를 사용할 때 잘못 사용된 데이터 허용 범위를 제외한 모든 기능도 활성화됩니다. serialization에 이러한 클래스를 사용하는 방법에 대한 자세한 내용은 [이진 serialization](binary-serialization.md)을 참조하세요.
 

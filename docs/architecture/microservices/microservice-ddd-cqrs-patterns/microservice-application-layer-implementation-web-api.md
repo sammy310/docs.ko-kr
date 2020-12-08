@@ -2,12 +2,12 @@
 title: Web API를 사용하여 마이크로 서비스 애플리케이션 계층 구현
 description: Web API 애플리케이션 계층에서 종속성 주입 및 중재자 패턴과 해당 구현 세부 정보를 이해합니다.
 ms.date: 08/17/2020
-ms.openlocfilehash: 56d4eecb2831a57460b01ff4da8150d6dcce5bc5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 45121026e06c55258a16f41aa801c06808a6919f
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173421"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437791"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API를 사용하여 마이크로 서비스 에플리케이션 계층 구현
 
@@ -23,7 +23,7 @@ Application 폴더의 하위 폴더를 보여 주는 Ordering.API 마이크로 �
 
 **그림 7-23**. Ordering.API ASP.NET Core Web API 프로젝트의 애플리케이션 계층
 
-ASP.NET Core에는 생성자 주입을 기본으로 지원하는 간단한 [내장 IoC 컨테이너](/aspnet/core/fundamentals/dependency-injection)(IServiceProvider 인터페이스로 표시됨)가 포함되며, ASP.NET은 DI를 통해 특정 서비스를 사용할 수 있도록 합니다. ASP.NET Core는 DI를 통해 주입될 사용자가 등록하는 모든 형식에 *서비스*라는 용어를 사용합니다. 내장 컨테이너의 서비스는 애플리케이션의 Startup 클래스에 있는 ConfigureServices 메서드에 구성합니다. 종속성은 형식에 필요하며 IoC 컨테이너에 등록하는 서비스에 구현됩니다.
+ASP.NET Core에는 생성자 주입을 기본으로 지원하는 간단한 [내장 IoC 컨테이너](/aspnet/core/fundamentals/dependency-injection)(IServiceProvider 인터페이스로 표시됨)가 포함되며, ASP.NET은 DI를 통해 특정 서비스를 사용할 수 있도록 합니다. ASP.NET Core는 DI를 통해 주입될 사용자가 등록하는 모든 형식에 *서비스* 라는 용어를 사용합니다. 내장 컨테이너의 서비스는 애플리케이션의 Startup 클래스에 있는 ConfigureServices 메서드에 구성합니다. 종속성은 형식에 필요하며 IoC 컨테이너에 등록하는 서비스에 구현됩니다.
 
 일반적으로 인프라 개체를 구현하는 종속성을 주입하려고 합니다. 일반적으로 주입하는 종속성은 리포지토리입니다. 하지만 다른 인프라 종속성을 주입할 수도 있습니다. 간단한 구현을 위해 작업 단위 패턴 개체(EF DbContext 개체)를 직접 주입할 수 있는데, DBContext 역시 인프라 지속성 개체의 구현이기 때문입니다.
 
@@ -540,7 +540,7 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 
 ### <a name="implement-idempotent-commands"></a>idempotent 명령 구현
 
-**eShopOnContainers**에서는 위의 경우보다 고급 예제가 Ordering(주문) 마이크로 서비스에서 CreateOrderCommand 개체를 제출합니다. 하지만 Ordering 비즈니스 프로세스가 좀 더 복잡하고, 이 경우, 실제로는 Basket 마이크로 서비스에서 시작되기 때문에 CreateOrderCommand 개체를 제출하는 동작은 이전의 간단한 예제에서처럼 클라이언트 앱에서 호출되는 간단한 WebAPI 컨트롤러 대신 [UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs)라는 통합 이벤트 처리기에서 수행됩니다.
+**eShopOnContainers** 에서는 위의 경우보다 고급 예제가 Ordering(주문) 마이크로 서비스에서 CreateOrderCommand 개체를 제출합니다. 하지만 Ordering 비즈니스 프로세스가 좀 더 복잡하고, 이 경우, 실제로는 Basket 마이크로 서비스에서 시작되기 때문에 CreateOrderCommand 개체를 제출하는 동작은 이전의 간단한 예제에서처럼 클라이언트 앱에서 호출되는 간단한 WebAPI 컨트롤러 대신 [UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs)라는 통합 이벤트 처리기에서 수행됩니다.
 
 그럼에도 불구하고 MediatR에 명령을 제출하는 동작은 다음 코드와 매우 유사합니다.
 
@@ -663,7 +663,7 @@ public class IdentifiedCommandHandler<T, R> : IRequestHandler<IdentifiedCommand<
                     commandId,
                     command);
 
-                // Send the embeded business command to mediator so it runs its related CommandHandler
+                // Send the embedded business command to mediator so it runs its related CommandHandler
                 var result = await _mediator.Send(command, cancellationToken);
 
                 _logger.LogInformation(

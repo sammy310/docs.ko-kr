@@ -2,12 +2,12 @@
 title: 단순 데이터 기반 CRUD 마이크로 서비스 만들기
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스 애플리케이션의 컨텍스트 내에서 단순 CRUD(데이터 기반) 마이크로 서비스의 생성을 이해합니다.
 ms.date: 08/14/2020
-ms.openlocfilehash: 056ba37965cf831e0fb176eb585042c440530c6b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 27c9b331573ff08ea16c756552818df285156282
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172367"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739871"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>단순 데이터 기반 CRUD 마이크로 서비스 만들기
 
@@ -233,7 +233,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ```json
 {
-    "ConnectionString": "Server=tcp:127.0.0.1,5433;Initial Catalog=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word",
+    "ConnectionString": "Server=tcp:127.0.0.1,5433;Initial Catalog=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=[PLACEHOLDER]",
     "ExternalCatalogBaseUrl": "http://localhost:5101",
     "Logging": {
         "IncludeScopes": false,
@@ -256,7 +256,7 @@ settings.json 파일에는 ConnectionString 속성 또는 다른 속성에 대�
 #
 catalog-api:
   environment:
-    - ConnectionString=Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
+    - ConnectionString=Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=[PLACEHOLDER]
     # Additional environment variables for this service
   ports:
     - "5101:80"
@@ -268,13 +268,13 @@ Azure DevOps Services Docker 배포 작업처럼 배포 도구에서 설정한 �
 
 그러나 프로덕션 환경의 경우 연결 문자열처럼 비밀을 저장하는 다른 방법을 모색하고자 할 수 있습니다. 애플리케이션 비밀을 관리하는 가장 좋은 방법은 [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)를 사용하는 것입니다.
 
-Azure Key Vault를 통해 클라우드 애플리케이션 및 서비스에서 사용되는 암호화 키와 비밀을 저장하고 보호할 수 있습니다. 비밀은 API 키, 연결 문자열, 암호 등의 엄격한 제어를 유지하려는 모든 항목이며, 엄격한 제어는 사용 현황 로깅, 만료 설정, 액세스 관리, *기타*를 포함합니다.
+Azure Key Vault를 통해 클라우드 애플리케이션 및 서비스에서 사용되는 암호화 키와 비밀을 저장하고 보호할 수 있습니다. 비밀은 API 키, 연결 문자열, 암호 등의 엄격한 제어를 유지하려는 모든 항목이며, 엄격한 제어는 사용 현황 로깅, 만료 설정, 액세스 관리, *기타* 를 포함합니다.
 
 Azure Key Vault를 사용하면 누군가에게 알리지 않고 애플리케이션 비밀 사용 현황을 매우 세부적으로 제어할 수 있습니다. 비밀은 개발 또는 작업을 방해하지 않고 보안을 강화하기 위해 회전될 수도 있습니다.
 
 애플리케이션은 Key Vault를 사용할 수 있도록 조직의 Active Directory에 등록되야 합니다.
 
-자세한 내용은 *Key Vault 개념 설명서*를 확인하면 됩니다.
+자세한 내용은 *Key Vault 개념 설명서* 를 확인하면 됩니다.
 
 ### <a name="implementing-versioning-in-aspnet-web-apis"></a>ASP.NET Web API의 버전 관리 구현
 
@@ -342,7 +342,7 @@ API에 대해 Swagger 메타데이터를 생성하는 주된 이유는 다음과
 
 Swagger의 메타데이터는 Microsoft Flow, PowerApps 및 Azure Logic Apps에서 API 사용 방법을 이해하고 API를 연결하는 데 사용합니다.
 
-*swagger-ui*에 따라 기능 API 도움말 페이지의 양식으로 ASP.NET Core REST API 애플리케이션에 대한 Swagger 메타데이터 생성을 자동화하는 방법은 여러 가지가 있습니다.
+*swagger-ui* 에 따라 기능 API 도움말 페이지의 양식으로 ASP.NET Core REST API 애플리케이션에 대한 Swagger 메타데이터 생성을 자동화하는 방법은 여러 가지가 있습니다.
 
 가장 잘 알려진 방법은 현재 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)에서 사용되는 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)일 것입니다. 이 가이드에서 좀 더 자세히 살펴보겠지만 [NSwag](https://github.com/RSuter/NSwag)를 사용하는 옵션도 있습니다. NSwag는 Swagger 또는 OpenAPI 사양에서 또는 [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio)를 통해 컨트롤러가 포함된 .dll을 검사하여 Typescript와 C\# API 클라이언트 및 C\# 컨트롤러를 생성할 수 있습니다.
 

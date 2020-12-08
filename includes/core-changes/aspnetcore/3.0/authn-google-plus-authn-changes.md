@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c634c43e72d345721f2d8f2e9f45760e927a86ab
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 14d80f25c34465caa6dec10e5704fe0a3cbccc71
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96032452"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96477945"
 ---
 ### <a name="authentication-google-deprecated-and-replaced"></a>인증: Google+가 더 이상 사용되지 않고 대체됨
 
@@ -63,7 +63,7 @@ ASP.NET Core 2.x에 제공된 완화는 ASP.NET Core 3.0에도 사용할 수 있
     o.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
     o.Authority = "https://accounts.google.com";
     o.ResponseType = OpenIdConnectResponseType.Code;
-    o.CallbackPath = "/signin-google"; // Or register the default "/sigin-oidc"
+    o.CallbackPath = "/signin-google"; // Or register the default "/signin-oidc"
     o.Scope.Add("email");
 });
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();

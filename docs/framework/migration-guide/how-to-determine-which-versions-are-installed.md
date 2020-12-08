@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: f4cb85e346e0043a3f28c48845f574afa89548db
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b4c5b6911a4be4f9ac156b600646c649549f88f8
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673360"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438138"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
 
@@ -98,7 +98,7 @@ PowerShell 명령을 사용하여 **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET
 다음 예제에서는 **Release** 항목 값을 검사하여 .NET Framework 4.6.2 이상이 설치되어 있는지 확인합니다. 설치된 경우 `True` 코드 반환, 설치되지 않은 경우 `False` 코드 반환.
 
 ```powershell
-(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
+(Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
 ```
 
 ### <a name="query-the-registry-using-code"></a>코드를 사용하여 레지스트리를 쿼리

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3709b9e694011666cebcb0ae09fbc838f65967af
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 28b882384760c8ac56c6d194bef6018c451fd03f
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614865"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96478000"
 ---
 ### <a name="wpf-grid-allocation-of-space-to-star-columns"></a>별 열에 공간의 WPF 그리드 할당
 

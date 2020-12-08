@@ -3,12 +3,12 @@ title: .NET Core에서 EventCounters를 사용하여 성능 측정
 description: 이 자습서에서는 EventCounters를 사용하여 성능을 측정하는 방법을 알아봅니다.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: db9a0889d46cc4db02baac60cbed6f6e0ba6856b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75f6f1469c87eb1fe8a3064a815ec72943771f88
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538568"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437454"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>자습서: .NET Core에서 EventCounters를 사용하여 성능 측정
 
@@ -41,7 +41,7 @@ ms.locfileid: "90538568"
 
 많은 이벤트를 처리할 때 이벤트별 측정값을 파악하는 것은 유용하지 않습니다. 대부분의 경우에는 일부 통계만 있으면 됩니다. 따라서 프로세스 자체 내에서 통계를 가져온 다음, 경우에 따라 통계를 보고하는 이벤트를 작성할 수 있습니다. 이것이 <xref:System.Diagnostics.Tracing.EventCounter>가 수행하는 작업입니다.
 
-다음은 <xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName>를 구현하는 방법의 예입니다. *MinimalEventCounterSource.cs*라는 새 파일을 만들고 코드 조각을 소스로 사용합니다.
+다음은 <xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName>를 구현하는 방법의 예입니다. *MinimalEventCounterSource.cs* 라는 새 파일을 만들고 코드 조각을 소스로 사용합니다.
 
 :::code language="csharp" source="snippets/EventCounters/MinimalEventCounterSource.cs":::
 
@@ -49,7 +49,7 @@ ms.locfileid: "90538568"
 
 ## <a name="add-an-action-filter"></a>작업 필터 추가
 
-샘플 소스 코드는 ASP.NET Core 프로젝트입니다. 전체 요청 시간을 기록하는 [작업 필터](/aspnet/core/mvc/controllers/filters#action-filters)를 전역적으로 추가할 수 있습니다. *LogRequestTimeFilterAttribute.cs*라는 새 파일을 만들고 다음 코드를 사용합니다.
+샘플 소스 코드는 ASP.NET Core 프로젝트입니다. 전체 요청 시간을 기록하는 [작업 필터](/aspnet/core/mvc/controllers/filters#action-filters)를 전역적으로 추가할 수 있습니다. *LogRequestTimeFilterAttribute.cs* 라는 새 파일을 만들고 다음 코드를 사용합니다.
 
 ```csharp
 using System.Diagnostics;
@@ -97,7 +97,7 @@ dotnet-counters ps
 `dotnet-counters ps` 명령 출력의 프로세스 식별자를 사용하면 다음 `dotnet-counters monitor` 명령을 사용하여 이벤트 카운터 모니터링을 시작할 수 있습니다.
 
 ```console
-dotnet-counters monitor --process-id 2196 Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters monitor --process-id 2196 --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
 `dotnet-counters monitor` 명령이 실행되는 동안 브라우저에서 <kbd>F5</kbd> 키를 눌러 `https://localhost:5001/api/values` 엔드포인트에 대한 연속 요청 실행을 시작합니다. 몇 초 후에 <kbd>q</kbd>를 눌러 중지합니다.
@@ -115,10 +115,10 @@ Press p to pause, r to resume, q to quit.
     Request Processing Time (ms)                      34.5
 ```
 
-`dotnet-counters monitor` 명령은 활성 모니터링에 적합합니다. 그러나 사후 처리 및 분석을 위해 이러한 진단 메트릭을 수집하는 것이 좋습니다. 이 경우 `dotnet-counters collect` 명령을 사용합니다. `collect` 스위치 명령은 `monitor` 명령과 비슷하지만 몇 가지 추가 매개 변수를 허용합니다. 원하는 출력 파일 이름과 형식을 지정할 수 있습니다. *diagnostics.json*이라는 JSON 파일의 경우 다음 명령을 사용합니다.
+`dotnet-counters monitor` 명령은 활성 모니터링에 적합합니다. 그러나 사후 처리 및 분석을 위해 이러한 진단 메트릭을 수집하는 것이 좋습니다. 이 경우 `dotnet-counters collect` 명령을 사용합니다. `collect` 스위치 명령은 `monitor` 명령과 비슷하지만 몇 가지 추가 매개 변수를 허용합니다. 원하는 출력 파일 이름과 형식을 지정할 수 있습니다. *diagnostics.json* 이라는 JSON 파일의 경우 다음 명령을 사용합니다.
 
 ```console
-dotnet-counters collect --process-id 2196 --format json -o diagnostics.json Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters collect --process-id 2196 --format json -o diagnostics.json --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
 이 명령이 실행되는 동안 브라우저에서 <kbd>F5</kbd> 키를 다시 눌러 `https://localhost:5001/api/values` 엔드포인트에 대한 연속 요청 실행을 시작합니다. 몇 초 후에 <kbd>q</kbd>를 눌러 중지합니다. *diagnostics.json* 파일이 기록됩니다. 그러나 기록된 JSON 파일은 들여쓰여지지 않습니다. 그렇지만 여기서는 가독성을 위해 들여쓴 상태로 표시됩니다.

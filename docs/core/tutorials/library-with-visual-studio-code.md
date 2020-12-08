@@ -2,12 +2,12 @@
 title: Visual Studio Code를 사용하여 .NET 클래스 라이브러리 만들기
 description: Visual Studio Code를 사용하여 .NET 클래스 라이브러리를 만드는 방법을 알아봅니다.
 ms.date: 11/18/2020
-ms.openlocfilehash: 4daa077fc54da3de2f808d831e06ee5f9bb3bde7
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 4473163b76060623b364d7dabf7366c3575e3dcd
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916093"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599501"
 ---
 # <a name="tutorial-create-a-net-class-library-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET 클래스 라이브러리 만들기
 
@@ -211,6 +211,7 @@ ms.locfileid: "94916093"
 ## <a name="additional-resources"></a>추가 자료
 
 * [.NET CLI를 사용하여 라이브러리 개발](libraries.md)
+* [지원되는 .NET Standard 버전 및 플랫폼](../../standard/net-standard.md)
 
 ## <a name="next-steps"></a>다음 단계
 

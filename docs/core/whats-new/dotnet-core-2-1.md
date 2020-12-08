@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: f125a6a8d9287cb515478a10c2679c07817ae9a6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5c15b663cf69de334771e83c1a14db8d66d30458
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087364"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437918"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1의 새로운 기능
 
@@ -89,7 +89,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="roll-forward"></a>롤포워드
 
-.NET Core 2.0부터 모든 .NET Core 애플리케이션은 시스템에 설치된 최신 *부 버전*으로 자동으로 롤포워드됩니다.
+.NET Core 2.0부터 모든 .NET Core 애플리케이션은 시스템에 설치된 최신 *부 버전* 으로 자동으로 롤포워드됩니다.
 
 .NET Core 2.0부터 애플리케이션 빌드에 사용된 .NET Core 버전이 런타임에 없는 경우에는 애플리케이션이 .NET Core의 설치된 최신 ‘부 버전’에 대해 자동으로 실행됩니다. 즉, 애플리케이션이 .NET Core 2.0을 사용하여 빌드되고 .NET Core 2.0이 호스트 시스템에 없지만 .NET Core 2.1이 있는 경우 애플리케이션은 .NET Core 2.1을 사용하여 실행됩니다.
 
@@ -248,7 +248,7 @@ Linux 및 macOS에서는 프로세스별로 <xref:System.Net.Http.HttpClient>만
 
 ### <a name="breaking-changes"></a>호환성이 손상되는 변경
 
-호환성이 손상되는 변경에 대한 자세한 내용은 [버전 2.0에서 2.1로 마이그레이션 시 호환성이 손상되는 변경](../compatibility/2.0-2.1.md)을 참조하세요.
+호환성이 손상되는 변경에 대한 자세한 내용은 [버전 2.0에서 2.1로 마이그레이션 시 호환성이 손상되는 변경](../compatibility/2.1.md)을 참조하세요.
 
 ## <a name="see-also"></a>참조
 

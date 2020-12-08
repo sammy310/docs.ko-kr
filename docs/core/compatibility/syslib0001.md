@@ -3,12 +3,12 @@ title: SYSLIB0001 경고
 description: 컴파일 시간 경고 SYSLIB0001을 생성하는 사용되지 않음에 대해 알아봅니다.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: d38d915e902d3c37cc461452f805e8349f11deeb
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: d275717e22b260d9ceff4fe94993e9a0e6996cf0
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439991"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437841"
 ---
 # <a name="syslib0001-the-utf-7-encoding-is-insecure"></a>SYSLIB0001: UTF-7 인코딩이 안전하지 않음
 
@@ -51,4 +51,4 @@ UTF-7 인코딩은 더 이상 애플리케이션에서 광범위하게 사용되
 
 ## <a name="see-also"></a>추가 정보
 
-- [UTF-7 코드 경로가 사용되지 않음](3.1-5.0.md#utf-7-code-paths-are-obsolete)
+- [UTF-7 코드 경로가 사용되지 않음](core-libraries/5.0/utf-7-code-paths-obsolete.md)

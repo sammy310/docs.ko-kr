@@ -2,12 +2,12 @@
 title: .NET 용어
 description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
 ms.date: 11/16/2020
-ms.openlocfilehash: 143657b4ec360640c0a43099ca5c1c0d9c863453
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 77ed506fb1c5bd4018b5fe0c14cc0bf37cb08113
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687781"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438189"
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -63,7 +63,7 @@ System.\*(및 제한된 범위의 Microsoft.\*) 네임스페이스를 구성하�
 
 다음 용어는 종종 BCL에서 참조하는 것과 동일한 API 컬렉션을 참조합니다.
 
-- [핵심 .NET 라이브러리](../core/compatibility/3.1-5.0.md#core-net-libraries)
+- [핵심 .NET 라이브러리](../core/compatibility/corefx.md)
 - [프레임워크 라이브러리](#framework-libraries)
 - [런타임 라이브러리](#runtime)
 - [공유 프레임워크](#shared-framework)

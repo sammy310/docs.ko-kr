@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: daf09748e69e70ad982bcee14461b66579f3bb87
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ab9431780422dfece5dcf8007d13e6d584f5118f
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614862"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96476427"
 ---
 ### <a name="avoiding-endless-recursion-for-iworkflowinstancemanagementtransactedcancel-and-iworkflowinstancemanagementtransactedterminate"></a>IWorkflowInstanceManagement.TransactedCancel 및 IWorkflowInstanceManagement.TransactedTerminate의 무한 재귀를 방지
 

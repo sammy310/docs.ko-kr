@@ -2,12 +2,12 @@
 title: '호환성이 손상되는 변경: CA1831: 문자열에 대해 범위 기반 인덱서 대신 AsSpan 사용'
 description: 코드 분석 규칙 CA1831 사용으로 발생하는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
 ms.date: 08/21/2020
-ms.openlocfilehash: 74f34af04a56b73478ffb3305d69ed49f3a30072
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 850916b804ae29dba8d2bd05c6e4fb06fe667296
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759583"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437887"
 ---
 # <a name="warning-ca1831-use-asspan-instead-of-range-based-indexers-for-string"></a>경고 CA1831: 문자열에 대해 범위 기반 인덱서 대신 AsSpan 사용
 
@@ -41,7 +41,7 @@ ReadOnlySpan<char> slice = str.AsSpan()[1..3];
   ReadOnlySpan<char> slice = str.AsSpan()[1..3];
   ```
 
-- 코드를 변경하지 않으려는 경우 심각도를 `suggestion` 또는 `none`으로 설정하여 규칙을 사용하지 않을 수 있습니다. 자세한 내용은 [코드 분석 규칙 구성](../../../../fundamentals/productivity/configure-code-analysis-rules.md)을 참조하세요.
+- 코드를 변경하지 않으려는 경우 심각도를 `suggestion` 또는 `none`으로 설정하여 규칙을 사용하지 않을 수 있습니다. 자세한 내용은 [코드 분석 규칙 구성](../../../../fundamentals/code-analysis/configuration-options.md)을 참조하세요.
 
 - 코드 분석을 완전히 사용하지 않으려면 프로젝트 파일에서 `EnableNETAnalyzers`를 `false`로 설정합니다. 자세한 내용은 [EnableNETAnalyzers](../../../project-sdk/msbuild-props.md#enablenetanalyzers)를 참조하세요.
 
