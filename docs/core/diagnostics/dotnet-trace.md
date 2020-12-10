@@ -2,12 +2,12 @@
 title: dotnet-trace 진단 도구 - .NET CLI
 description: .NET EventPipe를 사용하여 네이티브 프로파일러 없이 실행 중인 프로세스의 .NET 추적을 수집하기 위해 dotnet-trace CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
 ms.date: 11/17/2020
-ms.openlocfilehash: d0798e4f703c18c48db47193ac24ec0d13b66ae5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6bc5ad449f62ed0080ff6b1f401f1871d90cf5ec
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829312"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549334"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace 성능 분석 유틸리티
 
@@ -115,7 +115,13 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`--profile <profile-name>`**
 
-  일반적인 추적 시나리오를 간략하게 지정할 수 있는 미리 정의되어 명명된 공급자 구성 세트입니다.
+  일반적인 추적 시나리오를 간략하게 지정할 수 있는 미리 정의되어 명명된 공급자 구성 세트입니다. 다음 프로필을 사용할 수 있습니다.
+
+ | 프로필 | 설명 |
+ |---------|-------------|
+ |`cpu-sampling`|CPU 사용량 및 일반 .NET 런타임 정보를 추적하는 데 유용합니다. 이 옵션은 프로필 또는 공급자가 지정되지 않은 경우 기본 옵션입니다.|
+ |`gc-verbose`|GC 컬렉션을 추적하고 개체 할당을 샘플링합니다.|
+ |`gc-collect`|매우 낮은 오버헤드로 GC 컬렉션을 추적합니다.|
 
 - **`--providers <list-of-comma-separated-providers>`**
 

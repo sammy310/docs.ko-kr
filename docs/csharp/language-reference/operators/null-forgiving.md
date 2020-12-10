@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 5489c77fa7290bdd1c03e04d8cc777ab772fdce7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b8c634404cf2f214cc4bee5d754443e9302a723
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699632"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739518"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null-forgiving) 연산자(C# 참조)
 
-C# 8.0 이상에서 사용할 수 있는 단항 후위 `!` 연산자는 null-forgiving 연산자입니다. [null 허용 주석 컨텍스트](../../nullable-references.md#nullable-annotation-context)가 활성화된 경우에는 참조 형식의 `x` 식이 `null`: `x!`가 아님을 선언하는 데 null-forgiving 연산자를 사용할 수 있습니다. 단항 접두사 `!` 연산자는 [논리 부정 연산자](boolean-logical-operators.md#logical-negation-operator-)입니다.
+C# 8.0 이상에서 사용할 수 있는 단항 후위 `!` 연산자는 null-forgiving 또는 null-suppression 연산자입니다. [null 허용 주석 컨텍스트](../../nullable-references.md#nullable-annotation-context)가 활성화된 경우에는 참조 형식의 `x` 식이 `null`: `x!`가 아님을 선언하는 데 null-forgiving 연산자를 사용할 수 있습니다. 단항 접두사 `!` 연산자는 [논리 부정 연산자](boolean-logical-operators.md#logical-negation-operator-)입니다.
 
 null-forgiving 연산자는 런타임에 영향을 주지 않습니다. 식의 null 상태를 변경하여 컴파일러의 정적 흐름 분석에만 영향을 줍니다. 런타임에서 `x!` 식은 기본 식 `x`의 결과로 계산됩니다.
 

@@ -3,12 +3,12 @@ title: C# 언어 버전 관리 - C# 가이드
 description: C# 언어 버전은 프로젝트에 따라 결정된다는 사실과 그 이유를 알아봅니다. 기본값을 수동으로 재정의하는 방법을 알아봅니다.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: a06aa8812dad6f4b9a9254eef9f7c678c22af860
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: b022b726861bd6ea45b188df44549dc279d34a74
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634513"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96598923"
 ---
 # <a name="c-language-versioning"></a>C# 언어 버전 관리
 
@@ -41,8 +41,8 @@ C# 9.0은 .NET 5 이상 버전에서만 지원됩니다.
 
 프로젝트가 해당 미리 보기 언어 버전이 있는 미리 보기 프레임워크를 대상으로 하는 경우 사용되는 언어 버전은 미리 보기 언어 버전입니다. 따라서 릴리스된 .NET Core 버전을 대상으로 하는 프로젝트에 영향을 주지 않으면서 모든 환경에서 해당 미리 보기의 최신 기능을 사용할 수 있습니다.
 
-> [!TIP]
-> 현재 사용 중인 언어 버전을 확인하려면 코드에 `#error version`(대/소문자 구분)을 입력합니다. 이렇게 하면 컴파일러가 사용 중인 컴파일러 버전 및 현재 선택된 언어 버전을 포함하는 메시지가 있는 진단 CS8304를 생성합니다.
+> [!IMPORTANT]
+> Visual Studio 2017은 만든 모든 프로젝트 파일에 `<LangVersion>latest</LangVersion>` 항목을 추가했습니다. 즉, *C# 7.0* 이 추가됐습니다. 하지만 Visual Studio 2019로 업그레이드하면 대상 프레임워크에 관계없이 릴리스된 최신 버전이 추가됩니다. 이러한 프로젝트는 이제 [기본 동작을 재정의](#override-a-default)합니다. 프로젝트 파일을 편집하여 해당 노드를 제거해야 합니다. 그러면 프로젝트에서 대상 프레임워크에 권장되는 컴파일러 버전이 사용됩니다.
 
 ## <a name="override-a-default"></a>기본값 재정의
 
@@ -51,6 +51,9 @@ C# 버전을 명시적으로 지정해야 하는 경우 다음과 같은 여러 
 - [프로젝트 파일](#edit-the-project-file)을 수동으로 편집합니다.
 - [하위 디렉터리에 있는 여러 프로젝트의](#configure-multiple-projects) 언어 버전을 설정합니다.
 - [`-langversion` 컴파일러 옵션](compiler-options/langversion-compiler-option.md)을 구성합니다.
+
+> [!TIP]
+> 현재 사용 중인 언어 버전을 확인하려면 코드에 `#error version`(대/소문자 구분)을 입력합니다. 이렇게 하면 컴파일러가 사용 중인 컴파일러 버전 및 현재 선택된 언어 버전을 포함하는 메시지가 있는 진단 CS8304를 생성합니다.
 
 ### <a name="edit-the-project-file"></a>프로젝트 파일 편집
 

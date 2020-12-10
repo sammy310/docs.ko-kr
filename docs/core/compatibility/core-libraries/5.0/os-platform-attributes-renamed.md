@@ -2,12 +2,12 @@
 title: '호환성이 손상되는 변경: OSPlatform 특성이 제거되었거나 특성 이름이 바뀜'
 description: 미리 보기 버전에 도입된 OS 플랫폼 특성이 제거되었거나 이름이 바뀐 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 7e709b84005a7b807e390e12d9f36d8b4f73a9df
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: be2ddd4909bef70f531ca48246f091923d6435ec
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759720"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739492"
 ---
 # <a name="osplatform-attributes-renamed-or-removed"></a>OSPlatform 특성이 제거되었거나 특성 이름이 바뀜
 
@@ -34,7 +34,7 @@ ms.locfileid: "95759720"
 
 ## <a name="reason-for-change"></a>변경 이유
 
-.NET 5.0 미리 보기 8에는 API에 지원되는 플랫폼을 지정하는 특성이 <xref:System.Runtime.Versioning>에 도입되었습니다. 이 특성은 이러한 API를 지원하지 않는 플랫폼에서 플랫폼별 API가 사용되는 경우 [플랫폼 호환성 분석기](../../../../core/compatibility/code-analysis.md#ca1416-platform-compatibility)에서 빌드 경고를 생성하는 데 사용됩니다.
+.NET 5.0 미리 보기 8에는 API에 지원되는 플랫폼을 지정하는 특성이 <xref:System.Runtime.Versioning>에 도입되었습니다. 이 특성은 이러한 API를 지원하지 않는 플랫폼에서 플랫폼별 API가 사용되는 경우 [플랫폼 호환성 분석기](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md)에서 빌드 경고를 생성하는 데 사용됩니다.
 
 .NET 5.0 RC1의 경우 플랫폼을 제외하는 기능이 플랫폼 호환성 분석기에 더 추가되었습니다. 이 기능을 통해 API가 OS 플랫폼에서 완전히 지원되지 않는 것으로 표시될 수 있습니다. 이 기능으로 인해 더 적절한 이름을 사용하는 등 특성을 변경하게 되었습니다. `ObsoletedInOSPlatformAttribute`는 더 이상 필요하지 않아 제거되었습니다.
 

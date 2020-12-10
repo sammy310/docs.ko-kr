@@ -1,17 +1,17 @@
 ---
-title: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기
-description: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션을 만드는 방법을 알아봅니다.
-ms.date: 06/02/2020
-ms.openlocfilehash: 0248e48865541a7c73b9e219a06a57996c5cf601
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+title: Mac용 Visual Studio를 사용하여 .NET 콘솔 애플리케이션 만들기
+description: Mac용 Visual Studio를 사용하여 .NET 콘솔 애플리케이션을 만드는 방법을 알아봅니다.
+ms.date: 11/30/2020
+ms.openlocfilehash: 1351b06eec32cd8d3d9d44926655405fe2246f58
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400528"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599488"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>자습서: Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 만들기
+# <a name="tutorial-create-a-net-console-application-using-visual-studio-for-mac"></a>자습서: Mac용 Visual Studio를 사용하여 .NET 콘솔 애플리케이션 만들기
 
-이 자습서에서는 Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션을 만들고 실행하는 방법을 보여 줍니다.
+이 자습서에서는 Mac용 Visual Studio를 사용하여 .NET 콘솔 애플리케이션을 만들고 실행하는 방법을 보여 줍니다.
 
 > [!NOTE]
 > 사용자 의견은 매우 중요합니다. Mac용 Visual Studio의 개발 팀에 다음 두 가지 방법으로 의견을 제공할 수 있습니다.
@@ -21,15 +21,13 @@ ms.locfileid: "93400528"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-* [Mac용 Visual Studio 버전 8.6 이상](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). .NET Core 설치 옵션을 선택합니다. Xamarin의 설치는 .NET Core 개발에서 선택 사항입니다. 자세한 내용은 다음 자료를 참조하세요.
+* [Mac용 Visual Studio 버전 8.8 이상](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). .NET Core 설치 옵션을 선택합니다. Xamarin 설치는 .NET 개발에서 선택 사항입니다. 자세한 내용은 다음 자료를 참조하세요.
 
   * [자습서: Mac용 Visual Studio](/visualstudio/mac/installation)를 설치합니다.
   * [지원되는 macOS 버전](../install/windows.md).
-  * [Mac용 Visual Studio에서 지원되는 .NET Core 버전](/visualstudio/mac/net-core-support).
+  * [Mac용 Visual Studio에서 지원되는 .NET 버전](/visualstudio/mac/net-core-support).
 
 ## <a name="create-the-app"></a>앱 만들기
-
-"HelloWorld"라는 .NET Core 콘솔 앱 프로젝트를 만듭니다.
 
 1. Mac용 Visual Studio를 시작합니다.
 
@@ -41,9 +39,7 @@ ms.locfileid: "93400528"
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-dialog.png" alt-text="새 프로젝트 템플릿 목록":::
 
-1. **새 콘솔 애플리케이션 구성** 대화 상자의 **대상 프레임워크** 드롭다운에서 **.NET Core 3.1** 을 선택하고 **다음** 을 선택합니다.
-
-   :::image type="content" source="media/with-visual-studio-mac/target-framework.png" alt-text="대상 프레임워크 선택":::
+1. **새 콘솔 애플리케이션 구성** 대화 상자의 **대상 프레임워크** 드롭다운에서 **.NET 5.0** 을 선택하고 **다음** 을 선택합니다.
 
 1. **프로젝트 이름** 으로 "HelloWorld"를 입력하고 **만들기** 를 선택합니다.
 
@@ -102,7 +98,7 @@ namespace HelloWorld
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서는 .NET Core 콘솔 애플리케이션을 만들었습니다. 다음 자습서에서는 앱을 디버그합니다.
+이 자습서에서는 .NET 콘솔 애플리케이션을 만들었습니다. 다음 자습서에서는 앱을 디버그합니다.
 
 > [!div class="nextstepaction"]
-> [Mac용 Visual Studio를 사용하여 .NET Core 콘솔 애플리케이션 디버그](debugging-with-visual-studio-mac.md)
+> [Mac용 Visual Studio를 사용하여 .NET 콘솔 애플리케이션 디버그](debugging-with-visual-studio-mac.md)

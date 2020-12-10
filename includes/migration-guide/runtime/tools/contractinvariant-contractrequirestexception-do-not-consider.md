@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 17fde81f9734966692c9f41d2213f8682dedea46
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 639cd13978cc33bd7c4524a17e92d566404bbaea
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89497317"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96477061"
 ---
 ### <a name="contractinvariant-or-contractrequirestexception-do-not-consider-stringisnullorempty-to-be-pure"></a>Contract.Invariant 또는 Contract.Requires\<TException>는 String.IsNullOrEmpty를 순수형으로 간주하지 않습니다
 
 #### <a name="details"></a>설명
 
-.NET Framework 4.6.1을 대상으로 하는 앱의 경우 <xref:System.Diagnostics.Contracts.Contract.Invariant%2A?displayProperty=nameWithType>의 고정 계약 또는 <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType)>의 사전 조건 계약이 <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> 메서드를 호출하는 경우 재작성기에서 CC1036 컴파일러 경고: &quot;메서드에서 [순수형] 없이 'System.String.IsNullOrWhteSpace(System.String)' 메서드에 대한 호출이 감지되었습니다.&quot;를 내보냅니다. 이는 컴파일러 오류가 아닌 컴파일러 경고입니다.
+.NET Framework 4.6.1을 대상으로 하는 앱의 경우 <xref:System.Diagnostics.Contracts.Contract.Invariant%2A?displayProperty=nameWithType>의 고정 계약 또는 <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType)>의 사전 조건 계약이 <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> 메서드를 호출하는 경우 재작성기에서 CC1036 컴파일러 경고: &quot;메서드에 [Pure]가 없는 'System.String.IsNullOrWhiteSpace(System.String)' 메서드에 대한 호출이 검색되었습니다.&quot; 이는 컴파일러 오류가 아닌 컴파일러 경고입니다.
 
 #### <a name="suggestion"></a>제안 해결 방법
 

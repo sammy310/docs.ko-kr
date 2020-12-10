@@ -4,12 +4,12 @@ description: .NET을 설치할 수 있는 Windows 버전에 대해 알아봅니�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 4d3abde965d9a2ab0f86477feeb7c10f274a4b9a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 786814549724948fa69b18a05cee966e0940aaf4
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715123"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549347"
 ---
 # <a name="install-net-on-windows"></a>Windows에 .NET 설치
 
@@ -32,22 +32,26 @@ ms.locfileid: "95715123"
 
 Windows 10 버전의 서비스 종료 날짜는 버전별로 분할됩니다. **Home**, **Pro**, **Pro Education** 및 **Pro for Workstations** 버전만 다음 표에서 다룹니다. 특정 세부 정보는 [Windows 수명 주기 팩트 시트](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)를 확인하세요.
 
-- ✔️는 버전의 Windows 또는 .NET Core 버전이 계속 지원됨을 나타냅니다.
-- ❌는 Windows 또는 .NET Core 버전이 해당 Windows 릴리스에서 지원되지 않음을 나타냅니다.
-- Windows 버전과 .NET Core 버전 모두에 ✔가 있으면 해당 OS와 .NET 조합은 지원됩니다.
+> [!TIP]
+> `+` 기호는 최소 버전을 나타냅니다.
 
-| 운영 체제                      | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
-|-----------------------------|---------------|---------------|----------------|
-| ✔️ Windows 10, 버전 2004 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ✔️ Windows 10, 버전 1909 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ✔️ Windows 10, 버전 1903 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ✔️ Windows 10, 버전 1809 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ❌ Windows 10, 버전 1803 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ❌ Windows 10, 버전 1709 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ❌ Windows 10, 버전 1703 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
-| ❌ Windows 10, 버전 1607 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ❌ Windows 10, 버전 1511 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
-| ❌ Windows 10, 버전 1507 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| 운영 체제            | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
+|-----------------------------|---------------|---------------|--------|
+| Windows 10, 버전 2004    | ✔️           | ✔️            | ✔️    |
+| Windows 10, 버전 1909    | ✔️           | ✔️            | ✔️    |
+| Windows 10, 버전 1903    | ✔️           | ✔️            | ✔️    |
+| Windows 10, 버전 1809    | ✔️           | ✔️            | ✔️    |
+|  Windows 10, 버전 1803    | ✔️           | ✔️            | ✔️    |
+|  Windows 10, 버전 1709    | ✔️           | ✔️            | ✔️    |
+|  Windows 10, 버전 1607    | ✔️           | ✔️            | ✔️    |
+| Windows 8.1                 | ✔️           | ✔️            | ✔️    |
+| Windows 7 SP1 [ESU][esu]    | ✔️           | ✔️            | ✔️    |
+|  Windows 10, 버전 1607    | ✔️           | ✔️            | ✔️    |
+|  Windows 10, 버전 1607    | ✔️           | ✔️            | ✔️    |
+| Windows Server 2012 R2      | ✔️           | ✔️            | ✔️    |
+| Windows Server Core 2012 R2 | ✔️           | ✔️            | ✔️    |
+| Nano Server, 버전 1809+  | ✔️           | ✔️            | ✔️    |
+| Nano Server, 버전 1803   | ✔️           | ✔️            | ❌    |
 
 ## <a name="unsupported-releases"></a>지원되지 않는 릴리스
 
@@ -111,7 +115,7 @@ SDK는 .NET 앱과 라이브러리를 빌드하고 게시하는 데 사용됩니
 | OS                            | 버전                        | 아키텍처   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows 클라이언트                | 7 SP1+, 8.1                    | x64, x86        |
-| Windows 10 클라이언트             | 버전 1609+                  | x64, x86        |
+| Windows 10 클라이언트             | 버전 1607+                  | x64, x86        |
 | Windows Server                | 2012 R2+                       | x64, x86        |
 | Nano 서버                   | 버전 1803+                  | x64, ARM32      |
 
@@ -119,7 +123,7 @@ SDK는 .NET 앱과 라이브러리를 빌드하고 게시하는 데 사용됩니
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
-*.NET Core 3.0은 현재 지원되지 않습니다. 자세한 내용은 [.NET Core 지원 정책](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)을 참조하세요.*
+*.NET Core 3.0은 현재 ❌ 지원되지 않습니다. 자세한 내용은 [.NET Core 지원 정책](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)을 참조하세요.*
 
 .NET Core 3.0이 지원되는 Windows 버전은 다음과 같습니다.
 
@@ -137,7 +141,7 @@ SDK는 .NET 앱과 라이브러리를 빌드하고 게시하는 데 사용됩니
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
-*.NET Core 2.2는 현재 지원되지 않습니다. 자세한 내용은 [.NET Core 지원 정책](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)을 참조하세요.*
+*.NET Core 2.2는 현재 ❌ 지원되지 않습니다. 자세한 내용은 [.NET Core 지원 정책](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)을 참조하세요.*
 
 .NET Core 2.2가 지원되는 Windows 버전은 다음과 같습니다.
 
@@ -177,11 +181,11 @@ SDK는 .NET 앱과 라이브러리를 빌드하고 게시하는 데 사용됩니
 
 다음과 같은 Windows 버전에 .NET SDK 또는 런타임을 설치할 경우 추가 종속성이 필요합니다.
 
-- ❌ Windows 7 SP1
-- ❌ Windows Vista SP 2
-- ✔️ Windows 8.1
-- ✔️ Windows Server 2008 R2
-- ✔️ Windows Server 2012 R2
+- Windows 7 SP1 [ESU][esu]
+- Windows Vista SP 2
+- Windows 8.1
+- Windows Server 2008 R2
+- Windows Server 2012 R2
 
 다음을 설치합니다.
 
@@ -260,15 +264,25 @@ Visual Studio Code에 Visual Studio처럼 자동화된 .NET Core 설치 프로�
 01. [.NET Core SDK를 다운로드하여 설치합니다](https://dotnet.microsoft.com/download/dotnet-core).
 01. [Visual Studio Code Marketplace에서 C# 확장을 설치합니다](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
+## <a name="windows-installer"></a>Windows Installer
+
+Windows Installer 실행 파일은 .NET [다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-core)에서 제공합니다.
+
+MSI 파일을 사용하여 .NET을 설치하는 경우 `DOTNETHOME_X64` 및 `DOTNETHOME_X86` 매개 변수를 설정하여 설치 경로를 사용자 지정할 수 있습니다.
+
+```console
+dotnet-sdk-3.1.301-win-x64.exe DOTNETHOME_X64="F:\dotnet\x64" DOTNETHOME_X86="F:\dotnet\x86"
+```
+
 ## <a name="download-and-manually-install"></a>다운로드 및 수동으로 설치
 
 .NET용 Windows 설치 관리자 대신 SDK나 런타임을 다운로드하여 수동으로 설치할 수 있습니다. 수동 설치는 일반적으로 연속 통합 테스트의 일부로 수행됩니다. 개발자 또는 사용자의 경우 일반적으로 [설치 관리자](https://dotnet.microsoft.com/download/dotnet-core)를 사용하는 것이 좋습니다.
 
 .NET SDK와 .NET 런타임 모두 다운로드한 후 수동으로 설치할 수 있습니다. .NET SDK를 설치하면 해당 런타임을 설치할 필요가 없습니다. 먼저, 다음 사이트 중 한 곳에서 SDK 또는 런타임의 이진 릴리스를 다운로드합니다.
 
-- ✔️ [.NET 5.0 다운로드](https://dotnet.microsoft.com/download/dotnet/5.0)
-- ✔️ [.NET Core 3.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- ✔️ [.NET Core 2.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+- [.NET 5.0 다운로드](https://dotnet.microsoft.com/download/dotnet/5.0)
+- [.NET Core 3.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 2.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 - [모든 .NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
 
 .NET을 추출해서 넣을 디렉터리(예: `%USERPROFILE%\dotnet`)를 만듭니다. 그런 다음, 다운로드한 zip 파일을 이 디렉터리로 추출합니다.
@@ -301,3 +315,5 @@ Docker 컨테이너에서 .NET 사용에 대한 자세한 내용은 [.NET 및 Do
 - [자습서: Hello World 자습서](../tutorials/with-visual-studio.md)
 - [자습서: Visual Studio Code를 사용하여 새 앱 만들기](../tutorials/with-visual-studio-code.md)
 - [자습서: .NET Core 앱 컨테이너화](../docker/build-container.md)
+
+[esu]: /troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq

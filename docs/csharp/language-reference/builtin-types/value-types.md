@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6fb33ad2eb3f6a5e8f6506527f3807f31bf33fdc
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 64c9e9eba2495531cfef8a603d53fb21c95c87a4
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92471653"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599397"
 ---
 # <a name="value-types-c-reference"></a>값 형식(C# 참조)
 
@@ -31,7 +31,7 @@ ms.locfileid: "92471653"
 > [!NOTE]
 > 코드를 오류가 덜 발생하고 더 강력하게 만들려면 변경할 수 없는 값 형식을 정의 및 사용합니다. 이 문서에서는 데모용으로만 변경 가능한 값 형식을 사용합니다.
 
-## <a name="kinds-of-value-types"></a>값 형식의 종류
+## <a name="kinds-of-value-types-and-type-constraints"></a>값 형식 및 형식 제약 조건의 종류
 
 값 형식은 다음 두 가지 중 하나일 수 있습니다.
 
@@ -39,6 +39,8 @@ ms.locfileid: "92471653"
 - 명명된 상수 집합으로 정의되고 선택 사항 또는 선택 사항의 조합을 나타내는 [열거 형식](enum.md)
 
 기본 값 형식 `T`의 모든 값과 추가 [Null](../keywords/null.md) 값을 나타내는 [ 값 형식](nullable-value-types.md) `T?` Null 허용 값 형식인 경우를 제외하고는 값 형식의 변수에 `null`을 할당할 수 없습니다.
+
+[`struct` 제약 조건](../../programming-guide/generics/constraints-on-type-parameters.md)을 사용하여 형식 매개 변수가 null을 허용하지 않는 값 형식이라고 지정할 수 있습니다. 구조체 형식과 열거형 형식 모두 `struct` 제약 조건을 충족합니다. C# 7.3부터 기본 클래스 제약 조건([열거형 제약 조건](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)이라고 함)에서 `System.Enum`을 사용하여 형식 매개 변수가 열거형 형식이라고 지정할 수 있습니다.
 
 ## <a name="built-in-value-types"></a>기본 제공 값 형식
 

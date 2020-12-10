@@ -2,12 +2,12 @@
 title: .NET Core의 EventCounters
 description: 이 문서에서는 EventCounters의 정의, 구현 방법 및 사용 방법에 대해 알아봅니다.
 ms.date: 08/07/2020
-ms.openlocfilehash: 212cd6b495785dcd091187f97a1b5e44e5597a4a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 68c831713eed8c49d24ebf93da301ef68d213bf9
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687644"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437819"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core의 EventCounters
 
@@ -61,10 +61,10 @@ dotnet-counters ps
    1400180 sample-counters C:\sample-counters\bin\Debug\netcoreapp3.1\sample-counters.exe
 ```
 
-`counter_list` 스위치에 <xref:System.Diagnostics.Tracing.EventSource> 이름을 제공하여 카운터 모니터링을 시작합니다.
+<xref:System.Diagnostics.Tracing.EventSource> 이름을 `--counters` 옵션에 전달하여 카운터 모니터링을 시작합니다.
 
 ```console
-dotnet-counters monitor --process-id 1400180 Sample.EventCounter.Minimal
+dotnet-counters monitor --process-id 1400180 --counters Sample.EventCounter.Minimal
 ```
 
 다음 예제에서는 모니터 출력을 보여 줍니다.

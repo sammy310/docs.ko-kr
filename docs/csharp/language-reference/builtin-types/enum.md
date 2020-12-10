@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 930efdbdc6a20ea301331c1ce6fc664da43bfc5f
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: a21bdf63247dc5fec95922de017e1d3502e08565
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471852"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599436"
 ---
 # <a name="enumeration-types-c-reference"></a>열거형(C# 참조)
 
-*열거형* (또는 *열거형 형식* )은 기본 [정수 숫자](integral-numeric-types.md) 형식의 명명된 상수 집합에 의해 정의되는 [값 형식](value-types.md)입니다. 열거형을 정의하려면 `enum` 키워드를 정의하고 *열거형 멤버* 의 이름을 지정합니다.
+*열거형*(또는 *열거형 형식*)은 기본 [정수 숫자](integral-numeric-types.md) 형식의 명명된 상수 집합에 의해 정의되는 [값 형식](value-types.md)입니다. 열거형을 정의하려면 `enum` 키워드를 정의하고 *열거형 멤버* 의 이름을 지정합니다.
 
 ```csharp
 enum Season
@@ -62,7 +62,7 @@ enum ErrorCode : ushort
 
 <xref:System.Enum?displayProperty=nameWithType> 형식은 모든 열거형 형식의 추상적 기본 클래스입니다. 이 형식은 열거형 형식 및 그 값에 대한 정보를 가져오는 여러 메서드를 제공합니다. 자세한 내용과 예제는 <xref:System.Enum?displayProperty=nameWithType> API 참조 페이지를 참조하세요.
 
-C# 7.3부터 기본 클래스 제약 조건([열거형 제약 조건](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)이라고 함)에서 `System.Enum`을 사용하여 형식 매개 변수가 열거형 형식이라고 지정할 수 있습니다.
+C# 7.3부터 기본 클래스 제약 조건([열거형 제약 조건](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)이라고 함)에서 `System.Enum`을 사용하여 형식 매개 변수가 열거형 형식이라고 지정할 수 있습니다. 또한 열거형 형식은 형식 매개 변수가 null을 허용하지 않는 값 형식이라고 지정하는 데 사용되는 `struct` 제약 조건을 충족합니다.
 
 ## <a name="conversions"></a>변환
 

@@ -4,18 +4,18 @@ description: Azure HDInsight의 Jupyter Notebook에 .NET for Apache Spark를 설
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: e2319fec833147ce50c7b94dd8ccc84f552f20d2
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: ff6b3a64c01fb9148d3abe3d04579233d11a4f73
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688282"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599657"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Azure HDInsight Spark 클러스터의 Jupyter Notebook에 .NET for Apache Spark 설치
 
 이 문서에서는 Azure HDInsight Spark 클러스터의 Jupyter Notebook에 .NET for Apache Spark를 설치하는 방법을 설명합니다. 명령줄과 Azure Portal을 조합하여 Azure HDInsight 클러스터에 .NET for Apache Spark를 배포할 수 있습니다(자세한 내용은 [Azure HDInsight에 .NET for Apache Spark 애플리케이션을 배포하는 방법](../tutorials/hdinsight-deployment.md) 참조). 하지만 Notebook은 보다 대화형이고 반복적인 환경을 제공합니다.
 
-Azure HDInsight 클러스터에는Jupyter Notebook이 이미 제공되어 있으므로 Jupyter Notebook이 .NET for Apache Spark를 실행하도록 구성하기만 하면 됩니다. Jupyter Notebook에서 .NET for Apache Spark를 사용하려면 C# 코드를 한 줄씩 실행하고 필요한 경우 실행 상태를 유지하기 위해 C# REPL이 필요합니다. [Try .NET](https://github.com/dotnet/try)이 공식 .NET REPL으로 통합되었습니다.
+Azure HDInsight 클러스터에는 Jupyter Notebook이 이미 제공되어 있으므로 Jupyter Notebook이 .NET for Apache Spark를 실행하도록 구성하기만 하면 됩니다. Jupyter Notebook에서 .NET for Apache Spark를 사용하려면 C# 코드를 한 줄씩 실행하고 필요한 경우 실행 상태를 유지하기 위해 C# REPL이 필요합니다. [Try .NET](https://github.com/dotnet/try)이 공식 .NET REPL으로 통합되었습니다.
 
 Jupyter Notebook 환경을 통해 .NET for Apache Spark를 사용하도록 설정하려면 [Ambari](/azure/hdinsight/hdinsight-hadoop-manage-ambari)를 통해 몇 가지 수동 단계를 수행하고 HDInsight Spark 클러스터에 [스크립트 동작](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)을 제출해야 합니다.
 

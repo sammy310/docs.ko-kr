@@ -2,12 +2,12 @@
 title: Visual Studio Code를 사용하여 .NET 콘솔 애플리케이션 디버그
 description: Visual Studio Code를 사용하여 .NET 콘솔 앱을 디버그하는 방법을 알아봅니다.
 ms.date: 05/26/2020
-ms.openlocfilehash: 85095a9e70ee3ff846716ef91239b240d8c42410
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 7215ed4a93b31ebac313c04708734667148c4e02
+ms.sourcegitcommit: 30fef5b0ed76e334377d28fa8e80159b29353e10
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916231"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96556111"
 ---
 # <a name="tutorial-debug-a-net-console-application-using-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 .NET 콘솔 애플리케이션 디버그
 
@@ -47,15 +47,7 @@ ms.locfileid: "94916231"
 
 1. *.vscode/launch.json* 을 엽니다.
 
-1. `console` 설정을 `integratedTerminal`로 변경합니다.
-
-   원본:
-
-   ```json
-   "console": "internalConsole",
-   ```
-
-   대상:
+1. `console` 설정을 `internalConsole`에서 `integratedTerminal`로 변경합니다.
 
    ```json
    "console": "integratedTerminal",

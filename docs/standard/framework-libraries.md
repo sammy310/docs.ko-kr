@@ -4,12 +4,12 @@ description: 라이브러리가 많은 일반 및 앱별 형식, 알고리즘 �
 author: richlander
 ms.date: 06/20/2016
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: e59f53f2a16dc84709e0b815d3e2b710c903ff60
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e71f81b0dd72f4569d8b6b319b9e97491533d28
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827934"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438203"
 ---
 # <a name="framework-libraries"></a>프레임워크 라이브러리
 
@@ -39,7 +39,7 @@ BCL은 가장 기본적인 형식과 유틸리티 기능을 제공하며 다른 
 
 .NET에는 거의 모든 .NET 앱의 원동력인 데이터 구조 집합이 포함되어 있습니다. 대부분 컬렉션이지만 다른 형식도 있습니다.
 
-* <xref:System.Array> - 인덱스로 액세스할 수 있는 강력한 형식의 개체 배열을 나타냅니다. 구성별로 고정 크기가 있습니다.
+* <xref:System.Array> - 인덱스에서 액세스할 수 있는 강력한 형식의 개체 배열을 나타냅니다. 구성별로 고정 크기가 있습니다.
 * <xref:System.Collections.Generic.List%601> - 인덱스로 액세스할 수 있는 강력한 형식의 개체 목록을 나타냅니다. 필요에 따라 크기가 자동으로 조정됩니다.
 * <xref:System.Collections.Generic.Dictionary%602> - 키로 인덱싱된 값의 컬렉션을 나타냅니다. 키를 통해 값에 액세스할 수 있습니다. 필요에 따라 크기가 자동으로 조정됩니다.
 * <xref:System.Uri> - URI(Uniform Resource Identifier)의 개체 표현을 제공하며 URI 부분에 쉽게 액세스할 수 있도록 합니다.

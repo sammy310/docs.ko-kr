@@ -9,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: daf332dae483d75ef27e78dad5ee912734ccdb5f
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.openlocfilehash: 96a39609e9ae8b11e9872b049134136fe1ff3e2a
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526598"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599104"
 ---
 # <a name="structure-types-c-reference"></a>구조체 형식(C# 참조)
 
@@ -129,6 +129,10 @@ C# 7.2부터 구조체 형식 선언에 `ref` 한정자를 사용할 수 있습�
 [!code-csharp[readonly ref struct](snippets/shared/StructType.cs#ReadonlyRef)]
 
 .NET에서 `ref` 구조체의 예는 <xref:System.Span%601?displayProperty=nameWithType> 및 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>입니다.
+
+## <a name="struct-constraint"></a>구조체 제약 조건
+
+[`struct` 제약 조건](../../programming-guide/generics/constraints-on-type-parameters.md)의 `struct` 키워드를 사용하여 형식 매개 변수가 null을 허용하지 않는 값 형식이라고 지정할 수도 있습니다. 구조체 형식과 [열거형](enum.md) 형식 모두 `struct` 제약 조건을 충족합니다.
 
 ## <a name="conversions"></a>변환
 

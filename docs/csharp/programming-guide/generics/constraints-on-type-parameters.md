@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 71c853b38e56c56d0077d7eb20e36cd83d3cd23c
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8230dfed11bb4ba21e922827cc1a525ce45ba3e5
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224308"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599117"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>형식 매개 변수에 대한 제약 조건(C# 프로그래밍 가이드)
 
@@ -20,7 +20,7 @@ ms.locfileid: "92224308"
 
 |제약 조건|설명|
 |----------------|-----------------|
-|`where T : struct`|형식 인수는 null을 허용하지 않는 값 형식이어야 합니다. Null 허용 값 형식에 대한 자세한 내용은 [Null 허용 값 형식](../../language-reference/builtin-types/nullable-value-types.md)을 참조하세요. 모든 값 형식에 액세스할 수 있는 매개 변수가 없는 생성자가 있으므로, `struct` 제약 조건은 `new()` 제약 조건을 나타내고 `new()` 제약 조건과 결합할 수 없습니다. `struct` 제약 조건을 `unmanaged` 제약 조건과 결합할 수 없습니다.|
+|`where T : struct`|형식 인수는 null을 허용하지 않는 [값 형식](../../language-reference/builtin-types/value-types.md)이어야 합니다. Null 허용 값 형식에 대한 자세한 내용은 [Null 허용 값 형식](../../language-reference/builtin-types/nullable-value-types.md)을 참조하세요. 모든 값 형식에 액세스할 수 있는 매개 변수가 없는 생성자가 있으므로, `struct` 제약 조건은 `new()` 제약 조건을 나타내고 `new()` 제약 조건과 결합할 수 없습니다. `struct` 제약 조건을 `unmanaged` 제약 조건과 결합할 수 없습니다.|
 |`where T : class`|형식 인수는 참조 형식이어야 합니다. 이 제약 조건은 모든 클래스, 인터페이스, 대리자 또는 배열 형식에도 적용됩니다. C# 8.0 이상의 null 허용 컨텍스트에서 `T`는 null을 허용하지 않는 참조 형식이어야 합니다. |
 |`where T : class?`|형식 인수는 null을 허용하거나 null을 허용하지 않는 참조 형식이어야 합니다. 이 제약 조건은 모든 클래스, 인터페이스, 대리자 또는 배열 형식에도 적용됩니다.|
 |`where T : notnull`|형식 인수는 nullable이 아닌 형식이어야 합니다. 인수는 C# 8.0 이상의 null을 허용하지 않는 참조 형식이거나 null을 허용하지 않는 값 형식일 수 있습니다. |
