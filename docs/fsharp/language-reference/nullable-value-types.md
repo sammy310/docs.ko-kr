@@ -2,12 +2,12 @@
 title: Nullable 값 형식
 description: 'F #에서 null 일 수 있는 값 형식을 나타내는 방법인 nullable 값 형식을 사용 하는 방법에 대해 알아봅니다.'
 ms.date: 11/19/2020
-ms.openlocfilehash: da0cd85bd651db81ba98c02a9db31d92dc52a8c6
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: e28cbfc57c5631573f46ac36462517cf011e96d2
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740433"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009640"
 ---
 # <a name="nullable-value-types"></a>Nullable 값 형식
 
@@ -62,7 +62,7 @@ a <- Nullable()
 
 ## <a name="pass-and-assign-to-members"></a>전달 및 멤버에 할당
 
-멤버 작업과 F # 값을 사용 하는 경우의 주요 차이점은 멤버를 사용할 때 nullable 값 형식이 암시적으로 유추 될 수 있다는 것입니다. Nullable 값 형식을 입력으로 사용 하는 folling 메서드를 살펴보겠습니다.
+멤버 작업과 F # 값을 사용 하는 경우의 주요 차이점은 멤버를 사용할 때 nullable 값 형식이 암시적으로 유추 될 수 있다는 것입니다. Nullable 값 형식을 입력으로 사용 하는 다음 메서드를 살펴보겠습니다.
 
 ```fsharp
 type C() =
@@ -74,7 +74,7 @@ c.M(12)
 c.NVT <- 12
 ```
 
-이전 예제에서는 메서드에를 전달할 수 있습니다 `12` `M` . Auto 속성에도 할당할 수 있습니다 `12` `NVT` . Nullabel 값 형식으로 입력을 생성할 수 있는 경우 F # 컴파일러는 대상 형식이 입력과 일치 하는 경우와 마찬가지로 호출 또는 할당을 암시적으로 변환 합니다.
+이전 예제에서는 메서드에를 전달할 수 있습니다 `12` `M` . Auto 속성에도 할당할 수 있습니다 `12` `NVT` . 입력이 nullable 값 형식으로 생성 될 수 있고 대상 형식과 일치 하면 F # 컴파일러는 이러한 호출 또는 할당을 암시적으로 변환 합니다.
 
 ## <a name="examine-a-nullable-value-type-instance"></a>Nullable 값 형식 인스턴스를 검사 합니다.
 

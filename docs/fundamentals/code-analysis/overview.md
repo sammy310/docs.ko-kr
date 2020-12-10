@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 657975742c3efc2985264fe16cb316357b959e73
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 2f59b97de6f92e5a9bf927e1318286e400017dad
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851818"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009848"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET 소스 코드 분석 개요
 
@@ -42,14 +42,14 @@ ms.locfileid: "96851818"
 
 | 진단 ID | 범주 | 심각도 | 설명 |
 | - | - | - | - |
-| [CA1416](/visualstudio/code-quality/ca1416) | 상호 운용성 | Warning | 플랫폼 호환성 분석기 |
-| [CA1417](/visualstudio/code-quality/ca1417) | 상호 운용성 | Warning | `OutAttribute`P/invoke에 문자열 매개 변수를 사용 하지 마십시오. |
-| [CA1831](/visualstudio/code-quality/ca1831) | 성능 | Warning | `AsSpan`적절 한 경우 문자열에 범위 기반 인덱서 대신을 사용 합니다. |
-| [CA2013](/visualstudio/code-quality/ca2013) | 안정성 | Warning | 값 형식과 함께 사용 하지 마십시오. `ReferenceEquals` |
-| [CA2014](/visualstudio/code-quality/ca2014) | 안정성 | Warning | 루프에 사용 하지 마십시오. `stackalloc` |
-| [CA2015](/visualstudio/code-quality/ca2015) | 안정성 | Warning | 에서 파생 된 형식에 대해 종료자를 정의 하지 마십시오. <xref:System.Buffers.MemoryManager%601> |
-| [CA2200](/visualstudio/code-quality/ca2200) | 사용 | Warning | 스택 정보를 유지하도록 다시 throw하십시오.
-| [CA2247](/visualstudio/code-quality/ca2247) | 사용 | Warning | TaskCompletionSource 생성자에 전달 된 인수는 <xref:System.Threading.Tasks.TaskCreationOptions> 대신 열거형 이어야 합니다. <xref:System.Threading.Tasks.TaskContinuationOptions> |
+| [CA1416](/visualstudio/code-quality/ca1416) | 상호 운용성 | 경고 | 플랫폼 호환성 분석기 |
+| [CA1417](/visualstudio/code-quality/ca1417) | 상호 운용성 | 경고 | `OutAttribute`P/invoke에 문자열 매개 변수를 사용 하지 마십시오. |
+| [CA1831](/visualstudio/code-quality/ca1831) | 성능 | 경고 | `AsSpan`적절 한 경우 문자열에 범위 기반 인덱서 대신을 사용 합니다. |
+| [CA2013](/visualstudio/code-quality/ca2013) | 안정성 | 경고 | 값 형식과 함께 사용 하지 마십시오. `ReferenceEquals` |
+| [CA2014](/visualstudio/code-quality/ca2014) | 안정성 | 경고 | 루프에 사용 하지 마십시오. `stackalloc` |
+| [CA2015](/visualstudio/code-quality/ca2015) | 안정성 | 경고 | 에서 파생 된 형식에 대해 종료자를 정의 하지 마십시오. <xref:System.Buffers.MemoryManager%601> |
+| [CA2200](/visualstudio/code-quality/ca2200) | 사용 | 경고 | 스택 정보를 유지하도록 다시 throw하십시오.
+| [CA2247](/visualstudio/code-quality/ca2247) | 사용 | 경고 | TaskCompletionSource 생성자에 전달 된 인수는 <xref:System.Threading.Tasks.TaskCreationOptions> 대신 열거형 이어야 합니다. <xref:System.Threading.Tasks.TaskContinuationOptions> |
 
 이러한 규칙의 심각도를 변경 하 여 사용 하지 않도록 설정 하거나 오류를 상승 시킬 수 있습니다. [추가 규칙을 사용 하도록 설정할](#enable-additional-rules)수도 있습니다.
 
@@ -60,7 +60,7 @@ ms.locfileid: "96851818"
 
 *분석 모드* 는 none, some 또는 all 규칙이 설정 된 미리 정의 된 코드 분석 구성을 나타냅니다. 기본 분석 모드에서는 적은 수의 규칙만 [빌드 경고로 설정](#enabled-rules)됩니다. 프로젝트 파일에서 [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) 속성을 설정 하 여 프로젝트에 대 한 분석 모드를 변경할 수 있습니다. 허용 되는 값은 다음과 같습니다.
 
-| 값 | 설명 |
+| 값 | Description |
 | - | - |
 | `AllDisabledByDefault` | 이는 가장 보수적인 모드입니다. 모든 규칙은 기본적으로 사용 하지 않도록 설정 됩니다. 개별 규칙을 선택적으로 [옵트인](configuration-options.md)하여 사용하도록 설정할 수 있습니다.<br /><br />`<AnalysisMode>AllDisabledByDefault</AnalysisMode>` |
 | `AllEnabledByDefault` | 이는 가장 적극적인 모드입니다. 모든 규칙은 빌드 경고로 설정 됩니다. 개별적으로 사용 하지 않도록 설정 하는 규칙을 선택적으로 [옵트아웃 (opt out](configuration-options.md) ) 할 수 있습니다.<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
@@ -103,17 +103,16 @@ ms.locfileid: "96851818"
 
 *코드 스타일 분석* ("IDExxxx") 규칙을 사용 하 여 코드 베이스에서 일관 된 코드 스타일을 정의 하 고 유지할 수 있습니다. 기본 설정 설정은 다음과 같습니다.
 
-- 명령줄 빌드: 명령줄 빌드의 모든 .NET 프로젝트에 대해 코드 스타일 분석이 기본적으로 사용 하지 않도록 설정 되어 있습니다.
+- 명령줄 빌드: 코드 스타일 분석은 기본적으로 명령줄 빌드의 모든 .NET 프로젝트에 대해 사용 하지 않도록 설정 됩니다.
 - Visual Studio: 코드 스타일 분석은 기본적으로 Visual Studio 내의 모든 .NET 프로젝트에 대해 [코드 리팩터링 빠른 작업](/visualstudio/ide/code-generation-in-visual-studio)으로 사용 됩니다.
 
-.NET 5.0를 시작 하면 명령줄 및 Visual Studio 내에서 빌드에 대 한 코드 스타일 분석을 사용 하도록 설정할 수 있습니다. 코드 스타일 위반은 "IDE" 접두사를 사용 하 여 경고나 오류로 표시 됩니다. 이렇게 하면 빌드 시 일관 된 코드 스타일을 적용할 수 있습니다.
+.NET 5.0부터 명령줄 및 Visual Studio 내에서 빌드에 대 한 코드 스타일 분석을 사용 하도록 설정할 수 있습니다. 코드 스타일 위반은 "IDE" 접두사를 사용 하 여 경고나 오류로 표시 됩니다. 이렇게 하면 빌드 시 일관 된 코드 스타일을 적용할 수 있습니다.
 
 코드 스타일 분석 규칙의 전체 목록은 [코드 스타일 규칙](style-rules/index.md)을 참조 하세요.
 
-> [!NOTE]
-> 코드 스타일 분석 기능은 실험적 이며 .NET 5와 .NET 6 릴리스 사이에서 변경 될 수 있습니다.
+### <a name="enable-on-build"></a>빌드 시 사용
 
-빌드에서 코드 스타일 분석을 사용 하도록 설정 하는 단계:
+빌드에서 코드 스타일 분석을 사용 하도록 설정 하려면 다음 단계를 따르세요.
 
 1. MSBuild 속성 [EnforceCodeStyleInBuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) 을로 설정 `true` 합니다.
 
@@ -136,6 +135,9 @@ ms.locfileid: "96851818"
    # IDE0040: Accessibility modifiers required (disabled on build)
    dotnet_diagnostic.IDE0040.severity = silent
    ```
+
+> [!NOTE]
+> 코드 스타일 분석 기능은 실험적 이며 .NET 5와 .NET 6 릴리스 사이에서 변경 될 수 있습니다.
 
 ## <a name="suppress-a-warning"></a>경고 표시 안 함
 
