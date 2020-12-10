@@ -3,19 +3,21 @@ title: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 �
 description: ASP.NET Core 및 Azure를 사용하여 모놀리식 웹 애플리케이션을 빌드하는 방법에 대한 포괄적인 지침을 제공하는 가이드입니다.
 author: ardalis
 ms.author: wiwagn
-ms.date: 5/25/2020
-ms.openlocfilehash: 7be03ea8edb763096b0684a62e71826f1cfcd42f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 12/07/2020
+ms.openlocfilehash: 90d092b2269315e5b6734430e82cc7211324479b
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284457"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851297"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계
 
 ![최신 웹 애플리케이션 설계자 가이드의 표지 이미지](./media/index/web-application-guide-cover-image.png)
 
-**EDITION v3.1** - ASP.NET Core 3.1로 업데이트되었습니다
+**EDITION v5.0** - ASP.NET Core 5.0으로 업데이트됨
+
+책 업데이트 및 커뮤니티 기여에 대한 자세한 내용은 [changelog](https://aka.ms/aspnet-ebook-changelog)를 참조하세요.
 
 게시자:
 
@@ -59,7 +61,7 @@ Docker 고래 로고는 Docker, Inc.의 등록 상표로, 허가하에 사용됩
 
 ## <a name="introduction"></a>소개
 
-.NET core와 ASP.NET Core는 기존의.NET 개발 방식에 비해 여러 가지 이점을 제공합니다. 다음 중 일부 또는 전부가 애플리케이션의 성공에 중요한 경우 서버 애플리케이션에 .NET Core를 사용해야 합니다.
+.NET 5와 ASP.NET Core는 기존의.NET 개발 방식에 비해 여러 가지 이점을 제공합니다. 다음 중 일부 또는 전부가 애플리케이션의 성공에 중요한 경우 서버 애플리케이션에 .NET 5를 사용해야 합니다.
 
 - 크로스 플랫폼 지원
 
@@ -71,7 +73,7 @@ Docker 고래 로고는 Docker, Inc.의 등록 상표로, 허가하에 사용됩
 
 - 동일한 서버의 애플리케이션에서 .NET 버전 병렬 관리
 
-기존 .NET 애플리케이션은 이러한 많은 요구 사항을 지원할 수 있지만 ASP.NET Core와 .NET Core는 위의 시나리오에 대한 개선된 지원 사항을 제공하도록 최적화되었습니다.
+기존 .NET 애플리케이션은 이러한 많은 요구 사항을 지원할 수 있지만 ASP.NET Core와 .NET 5는 위의 시나리오에 대한 개선된 지원 사항을 제공하도록 최적화되었습니다.
 
 점점 더 많은 조직에서 Microsoft Azure 같은 서비스를 사용하여 클라우드에 웹 애플리케이션을 호스팅하고 있습니다. 애플리케이션이나 조직에서 다음 요구사항이 중요한 경우 클라우드에서 애플리케이션을 호스팅하는 것이 좋습니다.
 
@@ -89,7 +91,7 @@ Azure에서 호스팅되는 ASP.NET Core를 사용하여 웹 애플리케이션�
 
 ## <a name="version"></a>버전
 
-이 가이드는 .NET Core 3.1 릴리스와 동시에 **.NET Core 3.1** 버전을 다루도록 수정되었으며, 동일한 기술 “웨이브”(즉 Azure 및 추가 타사 기술)와 관련된 여러 추가 업데이트를 포함합니다. 이런 이유로 책 버전도 버전 **3.1**로 업데이트되었습니다.
+이 가이드는 .NET 5.0 릴리스와 동시에 **.NET 5.0** 버전을 다루도록 수정되었으며, 동일한 기술 “웨이브”(즉 Azure 및 추가 타사 기술)와 관련된 여러 추가 업데이트를 포함합니다. 이런 이유로 책 버전도 버전 **5.0** 으로 업데이트되었습니다.
 
 ## <a name="purpose"></a>용도
 
@@ -118,7 +120,7 @@ Azure에서 호스팅되는 ASP.NET Core를 사용하여 웹 애플리케이션�
 
 ## <a name="references"></a>참조 항목
 
-- **서버 앱에 대해 .NET Core와 .NET Framework 중에 선택**  
+- **서버 앱에 대해 .NET 5와 .NET Framework 중에서 선택**  
   [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../../standard/choosing-core-framework-server.md)
 
 >[!div class="step-by-step"]
