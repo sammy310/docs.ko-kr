@@ -17,12 +17,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: d0a928fffb84e925ae167885e6d2456dc45b6892
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bf11edc3669916ba4d30a3648692ca9b084d4340
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825080"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009821"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>.NET에서의 문자열 비교 모범 사례
 
@@ -166,9 +166,6 @@ ms.locfileid: "94825080"
 [!code-vb[Conceptual.Strings.BestPractices#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison2.vb#5)]
 
 이들 비교는 매우 빠릅니다.
-
-> [!NOTE]
-> 파일 시스템, 레지스트리 키 및 값, 환경 변수의 문자열 동작은 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>로 가장 잘 표현됩니다.
 
 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 및 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 는 둘 다 직접 이진 값을 사용하고 일치 항목 찾기에 가장 적합합니다. 사용 중인 비교 설정을 확신할 수 없으면 다음 두 값의 하나를 사용하세요. 그러나 이들 값은 바이트 단위 비교를 수행하므로 영어 사전처럼 언어 정렬 순서별로 정렬하는 것이 아니라 이진 정렬 순서별로 정렬합니다. 사용자에게 표시되는 결과가 대부분 컨텍스트에서 이상하게 표시될 수 있습니다.
 
