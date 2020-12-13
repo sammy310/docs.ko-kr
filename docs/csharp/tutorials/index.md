@@ -2,12 +2,12 @@
 title: C# 자습서
 description: C# 자습서를 탐색하여 C# 프로그램을 빌드하는 방법과 C# 언어 기능에 관해 학습합니다.
 ms.date: 10/25/2018
-ms.openlocfilehash: 9542f4919c9b1f0363fb8bc27136eb9a7e074913
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: d6eeed2ed5fbf68120c789b7d8203e811fb8608d
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414822"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110171"
 ---
 # <a name="c-tutorials"></a>C# 자습서
 
@@ -47,7 +47,6 @@ Hello World 단원 다음에 나오는 모든 소개 자습서는 자체 로컬 
 
 ## <a name="explore-new-features-in-c"></a>C\#의 새 기능 살펴보기
 
-* [C# 6의 새로운 기능을 대화형으로 사용해 보기](exploration/csharp-6.yml): 브라우저에서 [C# 6](../whats-new/csharp-6.md)에 추가된 기능을 대화형으로 살펴보세요.
 * [문자열 보간](string-interpolation.md): C#에서 형식이 지정된 문자열을 만들기 위해 문자열 보간을 사용하는 방법을 설명합니다.
 * [Nullable 참조 형식](nullable-reference-types.md): nullable 참조 형식을 사용하여 null 참조에 대한 의도를 나타내는 방법을 설명합니다.
 * [Nullable 참조 형식을 사용하도록 프로젝트 업데이트](upgrade-to-nullable-references.md): Nullable 참조 형식을 사용하도록 기존 프로젝트를 업그레이드하는 기술을 보여 줍니다.

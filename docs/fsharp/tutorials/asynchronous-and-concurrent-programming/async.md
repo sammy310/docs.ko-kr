@@ -2,12 +2,12 @@
 title: 비동기 프로그래밍
 description: 'F #에서 핵심 함수형 프로그래밍 개념에서 파생 된 언어 수준 프로그래밍 모델을 기반으로 비동기에 대 한 명확한 지원을 제공 하는 방법에 대해 알아봅니다.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 04b397ddbfb468aa3bc4ee245175d3ec9bdedb50
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 8bf8d6987187377cc1f44e77141b5d70d873f849
+ms.sourcegitcommit: fcbe432482464b1639decad78cc4dc8387c6269e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739329"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97366817"
 ---
 # <a name="async-programming-in-f"></a>F #의 비동기 프로그래밍\#
 
@@ -93,7 +93,7 @@ let printTotalFileBytes path =
 [<EntryPoint>]
 let main argv =
     argv
-    |> Array.map printTotalFileBytes
+    |> Seq.map printTotalFileBytes
     |> Async.Parallel
     |> Async.Ignore
     |> Async.RunSynchronously
@@ -101,14 +101,14 @@ let main argv =
     0
 ```
 
-여기에서 볼 수 있듯이 `main` 함수는 많은 호출을 수행 합니다. 개념적으로 다음을 수행 합니다.
+여기에서 볼 수 있듯이 함수에는 `main` 몇 가지 추가 요소가 있습니다. 개념적으로 다음을 수행 합니다.
 
-1. `Async<unit>`를 사용 하 여 명령줄 인수를 계산으로 변환 `Array.map` 합니다.
+1. 를 사용 하 여 명령줄 인수를 계산 시퀀스로 변환 `Async<unit>` `Seq.map` 합니다.
 2. 계산을 `Async<'T[]>` 실행 하는 동시에 실행을 예약 하 고 실행 하는를 만듭니다 `printTotalFileBytes` .
-3. `Async<unit>`병렬 계산을 실행 하 고 결과를 무시 하는를 만듭니다.
-4. 를 사용 하 여 마지막 계산을 명시적으로 실행 `Async.RunSynchronously` 하 고 완료 될 때까지 차단 합니다.
+3. `Async<unit>`병렬 계산을 실행 하 고 해당 결과를 무시 하는을 만듭니다 ( `unit[]` ).
+4. 를 사용 하 여 전체 구성 된 계산을 명시적으로 실행 `Async.RunSynchronously` 하면이 작업이 완료 될 때까지 차단 됩니다.
 
-이 프로그램이 실행 될 때는 `printTotalFileBytes` 각 명령줄 인수에 대해 병렬로 실행 됩니다. 비동기 계산은 프로그램 흐름과 별개로 실행 되므로 정보를 인쇄 하 고 실행을 완료 하는 순서는 없습니다. 계산은 병렬로 예약 되지만 실행 순서는 보장 되지 않습니다.
+이 프로그램이 실행 될 때는 `printTotalFileBytes` 각 명령줄 인수에 대해 병렬로 실행 됩니다. 비동기 계산은 프로그램 흐름과 별개로 실행 되므로 정보를 인쇄 하 고 실행을 완료 하는 순서가 정의 되어 있지 않습니다. 계산은 병렬로 예약 되지만 실행 순서는 보장 되지 않습니다.
 
 ## <a name="sequence-asynchronous-computations"></a>시퀀스 비동기 계산
 
@@ -125,18 +125,18 @@ let printTotalFileBytes path =
 [<EntryPoint>]
 let main argv =
     argv
-    |> Array.map printTotalFileBytes
+    |> Seq.map printTotalFileBytes
     |> Async.Sequential
     |> Async.Ignore
     |> Async.RunSynchronously
     |> ignore
 ```
 
-이렇게 하면 병렬로 일정을 `printTotalFileBytes` 예약 하는 대신의 요소 순서에 따라 실행 되도록 예약 됩니다 `argv` . 다음 항목은 마지막 계산 실행이 완료 될 때까지 예약 되지 않기 때문에 계산이 계산 되어 실행에 겹치지 않습니다.
+이렇게 하면 병렬로 일정을 `printTotalFileBytes` 예약 하는 대신의 요소 순서에 따라 실행 되도록 예약 됩니다 `argv` . 선행 계산의 실행이 완료 될 때까지 각 연속 작업이 예약 되지 않기 때문에 계산이 실행에 겹치지 않도록 시퀀싱 됩니다.
 
 ## <a name="important-async-module-functions"></a>중요 한 비동기 모듈 함수
 
-F #에서 비동기 코드를 작성 하는 경우 일반적으로 계산 예약을 처리 하는 프레임 워크와 상호 작용 합니다. 그러나이는 항상 그렇지는 않기 때문에 비동기 작업을 예약 하는 다양 한 시작 함수를 배우는 것이 좋습니다.
+F #에서 비동기 코드를 작성 하는 경우 일반적으로 계산 예약을 처리 하는 프레임 워크와 상호 작용 합니다. 그러나이 경우에는 항상 그렇지는 않지만 비동기 작업을 예약 하는 데 사용할 수 있는 다양 한 함수를 이해 하는 것이 좋습니다.
 
 F # 비동기 계산은 이미 실행 중인 작업의 표현이 아니라 작업의 _사양_ 이므로 시작 함수를 사용 하 여 명시적으로 시작 해야 합니다. 여러 컨텍스트에서 유용 하 게 사용할 수 있는 여러 [비동기 시작 메서드가](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#section0) 있습니다. 다음 섹션에서는 몇 가지 일반적인 시작 함수에 대해 설명 합니다.
 
@@ -190,7 +190,7 @@ computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellatio
 
 사용해야 하는 경우:
 
-- 가 <xref:System.Threading.Tasks.Task%601> 비동기 계산의 결과를 나타내는 것으로 예상 하는 .NET API를 호출 해야 하는 경우
+- <xref:System.Threading.Tasks.Task%601>비동기 계산 결과를 나타내기 위해를 생성 하는 .NET API를 호출 해야 하는 경우
 
 조사할 내용:
 
@@ -198,12 +198,12 @@ computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellatio
 
 ### <a name="asyncparallel"></a>Async. Parallel
 
-병렬로 실행 되는 비동기 계산의 시퀀스를 예약 합니다. 매개 변수를 지정 하 여 병렬 처리 수준을 선택적으로 조정/제한 할 수 있습니다 `maxDegreesOfParallelism` .
+병렬로 실행 되는 비동기 계산의 시퀀스를 예약 하 여 결과 배열을 제공 된 순서 대로 생성 합니다. 매개 변수를 지정 하 여 병렬 처리 수준을 선택적으로 조정/제한 할 수 있습니다 `maxDegreeOfParallelism` .
 
 서명:
 
 ```fsharp
-computations: seq<Async<'T>> * ?maxDegreesOfParallelism: int -> Async<'T[]>
+computations: seq<Async<'T>> * ?maxDegreeOfParallelism: int -> Async<'T[]>
 ```
 
 사용하는 시기:
@@ -251,7 +251,7 @@ task: Task<'T> -> Async<'T>
 
 조사할 내용:
 
-- 예외는 <xref:System.AggregateException> 작업 병렬 라이브러리의 규칙에 따라 래핑됩니다 .이 동작은 F # async에서 일반적으로 발생 하는 예외를 표시 하는 방법과 다릅니다.
+- 예외는 <xref:System.AggregateException> 작업 병렬 라이브러리의 규칙에 따라 래핑됩니다 .이 동작은 F # async가 일반적으로 발생 하는 예외와는 다릅니다.
 
 ### <a name="asynccatch"></a>Async. Catch
 
@@ -273,7 +273,7 @@ computation: Async<'T> -> Async<Choice<'T, exn>>
 
 ### <a name="asyncignore"></a>Async. 무시
 
-지정 된 계산을 실행 하 고 해당 결과를 무시 하는 비동기 계산을 만듭니다.
+지정 된 계산을 실행 하지만 해당 결과를 삭제 하는 비동기 계산을 만듭니다.
 
 서명:
 
@@ -283,7 +283,7 @@ computation: Async<'T> -> Async<unit>
 
 사용해야 하는 경우:
 
-- 비동기 계산을 수행 하는 경우에는 해당 결과가 필요 하지 않습니다. 이는 `ignore` 비동기 코드가 아닌 코드에 대 한 코드와 유사 합니다.
+- 비동기 계산을 수행 하는 경우에는 해당 결과가 필요 하지 않습니다. 이는 `ignore` 비동기 코드가 아닌 코드에 대 한 함수와 유사 합니다.
 
 조사할 내용:
 
@@ -291,7 +291,7 @@ computation: Async<'T> -> Async<unit>
 
 ### <a name="asyncrunsynchronously"></a>RunSynchronously
 
-비동기 계산을 실행 하 고 호출 스레드에서 해당 결과를 기다립니다 합니다. 이 호출이 차단 되 고 있습니다.
+비동기 계산을 실행 하 고 호출 스레드에서 해당 결과를 기다립니다 합니다. 계산에서 예외를 양보 하는 경우 예외를 전파 합니다. 이 호출이 차단 되 고 있습니다.
 
 서명:
 
@@ -310,7 +310,7 @@ computation: Async<'T> * timeout: ?int * cancellationToken: ?CancellationToken -
 
 ### <a name="asyncstart"></a>Async. 시작
 
-을 반환 하는 스레드 풀에서 비동기 계산을 시작 `unit` 합니다. 는 결과를 기다리지 않습니다. 로 시작 된 중첩 계산은 해당 계산을 `Async.Start` 호출한 부모 계산과 독립적으로 시작 됩니다. 수명은 부모 계산과 연결 되지 않습니다. 부모 계산이 취소 되 면 자식 계산이 취소 되지 않습니다.
+스레드 풀에서을 반환 하는 비동기 계산을 시작 `unit` 합니다. 는 완료 될 때까지 기다리거나 예외 결과를 관찰 하지 않습니다. 로 시작 하는 중첩 된 계산은 해당 계산을 `Async.Start` 호출한 부모 계산과 독립적으로 시작 되며, 해당 수명은 부모 계산과 연결 되지 않습니다. 부모 계산이 취소 되 면 자식 계산이 취소 되지 않습니다.
 
 서명:
 
@@ -323,7 +323,7 @@ computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 - 결과를 생성 하지 않거나 하나를 처리 해야 하는 비동기 계산이 있습니다.
 - 비동기 계산의 완료 시기를 알 필요가 없습니다.
 - 비동기 계산이 실행 되는 스레드를 걱정 하지 않습니다.
-- 작업으로 인해 발생 하는 예외를 인식 하거나 보고할 필요가 없습니다.
+- 실행으로 인해 발생 하는 예외를 인식 하거나 보고할 필요가 없습니다.
 
 조사할 내용:
 
