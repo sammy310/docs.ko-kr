@@ -3,19 +3,19 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: 349f2cfbe0fc93060eb6927ee8c3528c16b99aca
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 7258dc8b8fcfbd6354b5ceee4183429bfee14038
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805091"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110730"
 ---
 # <a name="the-history-of-c"></a>C\#의 역사
 
 이 문서에서는 C# 언어의 각 주요 릴리스에 대한 기록을 제공합니다. C# 팀은 계속해서 새로운 기능을 혁신하고 추가하고 있습니다. 예정된 릴리스에서 고려되는 기능을 비롯한 자세한 언어 기능 상태는 GitHub의 [dotnet/roslyn 리포지토리에서](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) 확인할 수 있습니다.
 
 > [!IMPORTANT]
-> C # 언어는 C# 사양이 일부 기능에 대해 *표준 라이브러리*로 정의하는 형식 및 메서드를 사용합니다. .NET 플랫폼은 다양한 패키지에서 이러한 유형과 메서드를 제공합니다. 한 가지 예는 예외 처리입니다. 모든 `throw` 문 또는 식은 throw된 개체가 <xref:System.Exception>에서 파생되는지 확인합니다. 마찬가지로 모든 `catch`는 발견되는 형식이 <xref:System.Exception>에서 파생되는지 확인합니다. 각 버전은 새 요구 사항을 추가할 수 있습니다. 이전 환경에서 최신 언어 기능을 사용하려면 특정 라이브러리를 설치해야 합니다. 이러한 종속성은 각 특정 버전에 대한 페이지에서 설명합니다. 이 종속성의 배경은 [언어 및 라이브러리 간 관계](relationships-between-language-and-library.md)에서 자세히 알아볼 수 있습니다.
+> C # 언어는 C# 사양이 일부 기능에 대해 *표준 라이브러리* 로 정의하는 형식 및 메서드를 사용합니다. .NET 플랫폼은 다양한 패키지에서 이러한 유형과 메서드를 제공합니다. 한 가지 예는 예외 처리입니다. 모든 `throw` 문 또는 식은 throw된 개체가 <xref:System.Exception>에서 파생되는지 확인합니다. 마찬가지로 모든 `catch`는 발견되는 형식이 <xref:System.Exception>에서 파생되는지 확인합니다. 각 버전은 새 요구 사항을 추가할 수 있습니다. 이전 환경에서 최신 언어 기능을 사용하려면 특정 라이브러리를 설치해야 합니다. 이러한 종속성은 각 특정 버전에 대한 페이지에서 설명합니다. 이 종속성의 배경은 [언어 및 라이브러리 간 관계](relationships-between-language-and-library.md)에서 자세히 알아볼 수 있습니다.
 
 C# 빌드 도구는 최신 주요 언어 릴리스가 기본 언어 버전으로 고려합니다. 주요 릴리스 사이에는 이 섹션의 다른 문서에서 상세히 설명한 포인트 릴리스가 있을 수 있습니다. 포인트 릴리스에서 최신 기능을 사용하려면 [컴파일러 언어 버전을 구성](../language-reference/configure-language-version.md)하고 해당 버전을 선택해야 합니다. C# 7.0 이후 세 가지 포인트 릴리스가 있습니다.
 
@@ -134,17 +134,17 @@ Visual Studio 2012과 함께 릴리스된 C# 버전 5.0은 언어에 중점을 �
 
 버전 3.0과 5.0에서 C#은 개체 지향 언어의 주요 새 기능을 추가했습니다. Visual Studio 2015와 함께 릴리스된 버전 6.0은 주요 핵심 기능 대신 C# 프로그래밍을 보다 생산적으로 만드는 많은 작은 기능을 릴리스했습니다. 다음은 몇 가지 예입니다.
 
-- [정적 가져오기](./csharp-6.md#using-static)
-- [예외 필터](./csharp-6.md#exception-filters)
-- [Auto 속성 이니셜라이저](./csharp-6.md#auto-property-initializers)
-- [식 본문 멤버](./csharp-6.md#expression-bodied-function-members)
-- [Null 전파자](./csharp-6.md#null-conditional-operators)
-- [문자열 보간](./csharp-6.md#string-interpolation)
-- [nameof 연산자](./csharp-6.md#the-nameof-expression)
-- [인덱스 이니셜라이저](csharp-6.md#extension-add-methods-in-collection-initializers)
+- [정적 가져오기](../language-reference/keywords/using-static.md)
+- [예외 필터](../language-reference/keywords/when.md)
+- [Auto 속성 이니셜라이저](../properties.md)
+- [식 본문 멤버](../language-reference/operators/lambda-operator.md#expression-body-definition)
+- [Null 전파자](../language-reference/operators/member-access-operators.md#null-conditional-operators--and-)
+- [문자열 보간](../language-reference/tokens/interpolated.md)
+- [nameof 연산자](../language-reference/operators/nameof.md)
 
 기타 새로운 기능은 다음과 같습니다.
 
+- 인덱스 이니셜라이저
 - Catch/Finally 블록의 Await
 - Getter 전용 속성의 기본값
 

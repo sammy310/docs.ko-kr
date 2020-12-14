@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: d30ebfa2dc47265185a96514efbddc3e4937438c
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: c38649a9e3b3f75ec35fb8711324302a682b504e
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982396"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851336"
 ---
 # <a name="is-c-reference"></a>is(C# 참조)
 
@@ -32,7 +32,7 @@ C# 7.0부터는 `is` 및 [switch](switch.md) 문에서 패턴 일치를 지원�
 형식 패턴을 사용하여 패턴 일치를 수행하는 경우 `is`는 식을 지정된 형식으로 변환할 수 있는지 여부를 테스트하고, 변환할 수 있으면 해당 형식의 변수로 캐스트합니다. 간결한 형식 평가 및 변환을 사용하는 `is` 문의 간단한 확장입니다. `is` 형식 패턴의 일반적인 형식은 다음과 같습니다.
 
 ```csharp
-   expr is type varname
+expr is type varname
 ```
 
 여기서 *expr* 은 일부 형식의 인스턴스로 평가되는 식이고 *type* 은 *expr* 의 결과가 변환될 형식의 이름이며 *varname* 은 `is` 테스트가 `true`인 경우 *expr* 의 결과변환가 되는 개체입니다.
