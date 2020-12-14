@@ -3,18 +3,18 @@ title: DisposeAsync 메서드 구현
 description: DisposeAsync 및 DisposeAsyncCore 메서드를 구현하여 비동기 리소스 정리를 수행하는 방법을 알아봅니다.
 author: IEvangelist
 ms.author: dapine
-ms.date: 10/26/2020
+ms.date: 12/09/2020
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 551dbc30f6f5c99c7bfa468d7d708789c06acb7b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f04ac6695864b96cdcb7efeb6eb8e1d9551e1d14
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827804"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009692"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync 메서드 구현
 
@@ -131,6 +131,8 @@ public async ValueTask DisposeAsync()
 > 예기치 않은 동작이 발생할 수 있으므로 이 패턴을 사용하지 마세요.
 
 ## <a name="see-also"></a>참조
+
+`IDisposable` 및 `IAsyncDisposable`의 이중 구현 예제는 [GitHub에서](https://github.com/dotnet/runtime/blob/035b729d829368c2790d825bd02db14f0c0fd2ea/src/libraries/System.Text.Json/src/System/Text/Json/Writer/Utf8JsonWriter.cs#L297-L345) <xref:System.Text.Json.Utf8JsonWriter> 소스 코드를 참조하세요.
 
 - <xref:System.IAsyncDisposable>
 - <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType>

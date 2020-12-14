@@ -13,12 +13,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: bc256c5129cd4a7306e632685474b159a43ce76c
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 418637639790199755803bf374ef99af949ae9b3
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438058"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009900"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Newtonsoft.Json에서 System.Text.Json로 마이그레이션하는 방법
 
@@ -535,7 +535,7 @@ JSON에 `Date` 속성이 없으면 역직렬화가 실패하도록 구성하려�
 * `DateTimeZoneHandling` 설정을 사용하여 모든 `DateTime` 값을 UTC 날짜로 직렬화할 수 있습니다.
 * `DateFormatString` 설정 및 `DateTime` 변환기를 사용하여 날짜 문자열의 형식을 사용자 지정할 수 있습니다.
 
-<xref:System.Text.Json>에서 기본적으로 지원되는 유일한 형식은 널리 사용되고 모호하지 않고 라운드트립을 정확하게 수행하는 ISO 8601-1:2019입니다. 다른 형식을 사용하려면 사용자 지정 변환기를 만듭니다. 자세한 내용은 [System.Text.Json의 DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)을 참조하세요.
+<xref:System.Text.Json>은 RFC 3339 프로필을 포함하여 ISO 8601-1:2019를 지원합니다. 이 형식은 널리 채택되었으며, 명확하고, 정확하게 왕복합니다. 다른 형식을 사용하려면 사용자 지정 변환기를 만듭니다. 자세한 내용은 [System.Text.Json의 DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)을 참조하세요.
 
 ### <a name="callbacks"></a>콜백
 
@@ -806,10 +806,20 @@ doc.WriteTo(writer);
 
 ## <a name="additional-resources"></a>추가 자료
 
-<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)[Restore this when the roadmap is updated.]-->
 * [System.Text.Json 개요](system-text-json-overview.md)
-* [System.Text.Json 사용 방법](system-text-json-how-to.md)
-* [사용자 지정 변환기를 작성하는 방법](system-text-json-converters-how-to.md)
-* [System.Text.Json의 DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
+* [JSON 직렬화 및 역직렬화 방법](system-text-json-how-to.md)
+* [JsonSerializerOptions 인스턴스 인스턴스화](system-text-json-configure-options.md)
+* [대/소문자를 구분하지 않는 일치를 사용하도록 설정](system-text-json-character-casing.md)
+* [속성 이름 및 값 사용자 지정](system-text-json-customize-properties.md)
+* [속성 무시](system-text-json-ignore-properties.md)
+* [잘못된 JSON 허용](system-text-json-invalid-json.md)
+* [오버플로 JSON 처리](system-text-json-handle-overflow.md)
+* [참조 유지](system-text-json-preserve-references.md)
+* [변경할 수 없는 형식 및 public이 아닌 접근자](system-text-json-immutability.md)
+* [다형 직렬화](system-text-json-polymorphism.md)
+* [문자 인코딩 사용자 지정](system-text-json-character-encoding.md)
+* [사용자 지정 직렬 변환기 및 역직렬 변환기 작성](write-custom-serializer-deserializer.md)
+* [JSON serialization용 사용자 지정 변환기 작성](system-text-json-converters-how-to.md)
+* [DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
 * [System.Text.Json API 참조](xref:System.Text.Json)
 * [System.Text.Json.Serialization API 참조](xref:System.Text.Json.Serialization)

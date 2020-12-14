@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: d3e61d44ce22b7f50838b6d3ba9cf64004bd3725
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: ff8ecec0d70c877b7cbbd0297b85f0d9578ab828
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439830"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008827"
 ---
 # <a name="how-to-use-immutable-types-and-non-public-accessors-with-no-locsystemtextjson"></a>System.Text.Json에서 변경 불가능한 형식 및 public이 아닌 접근자를 사용하는 방법
 
@@ -55,12 +55,19 @@ public이 아닌 속성 접근자는 .NET Core 3.1에서 지원되지 않습니�
 ## <a name="see-also"></a>참고 항목
 
 * [System.Text.Json 개요](system-text-json-overview.md)
-* [JsonSerializerOptions 인스턴스화](system-text-json-configure-options.md)
+* [JSON 직렬화 및 역직렬화 방법](system-text-json-how-to.md)
+* [JsonSerializerOptions 인스턴스 인스턴스화](system-text-json-configure-options.md)
 * [대/소문자를 구분하지 않는 일치를 사용하도록 설정](system-text-json-character-casing.md)
 * [속성 이름 및 값 사용자 지정](system-text-json-customize-properties.md)
 * [속성 무시](system-text-json-ignore-properties.md)
 * [잘못된 JSON 허용](system-text-json-invalid-json.md)
 * [오버플로 JSON 처리](system-text-json-handle-overflow.md)
-* [순환 참조 보존](system-text-json-preserve-references.md)
+* [참조 유지](system-text-json-preserve-references.md)
 * [다형 직렬화](system-text-json-polymorphism.md)
+* [Newtonsoft.Json에서 System.Text.Json으로 마이그레이션](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [문자 인코딩 사용자 지정](system-text-json-character-encoding.md)
+* [사용자 지정 직렬 변환기 및 역직렬 변환기 작성](write-custom-serializer-deserializer.md)
+* [JSON serialization용 사용자 지정 변환기 작성](system-text-json-converters-how-to.md)
+* [DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
 * [System.Text.Json API 참조](xref:System.Text.Json)
+* [System.Text.Json.Serialization API 참조](xref:System.Text.Json.Serialization)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: c754d41071e886bc1efcc3a30e249bf9e554ab5b
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 4b88509313e719ea993e00d889bc6145f4976a2d
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599592"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008905"
 ---
 # <a name="how-to-customize-property-names-and-values-with-no-locsystemtextjson"></a>System.Text.Json으로 속성 이름 및 값을 사용자 지정하는 방법
 
@@ -167,12 +167,19 @@ Summary가 `Hot`이면 기본적으로 직렬화된 JSON은 다음과 같이 숫
 ## <a name="see-also"></a>참고 항목
 
 * [System.Text.Json 개요](system-text-json-overview.md)
-* [JsonSerializerOptions 인스턴스화](system-text-json-configure-options.md)
+* [JSON 직렬화 및 역직렬화 방법](system-text-json-how-to.md)
+* [JsonSerializerOptions 인스턴스 인스턴스화](system-text-json-configure-options.md)
 * [대/소문자를 구분하지 않는 일치를 사용하도록 설정](system-text-json-character-casing.md)
 * [속성 무시](system-text-json-ignore-properties.md)
 * [잘못된 JSON 허용](system-text-json-invalid-json.md)
 * [오버플로 JSON 처리](system-text-json-handle-overflow.md)
-* [순환 참조 보존](system-text-json-preserve-references.md)
+* [참조 유지](system-text-json-preserve-references.md)
 * [변경할 수 없는 형식 및 public이 아닌 접근자](system-text-json-immutability.md)
 * [다형 직렬화](system-text-json-polymorphism.md)
+* [Newtonsoft.Json에서 System.Text.Json으로 마이그레이션](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [문자 인코딩 사용자 지정](system-text-json-character-encoding.md)
+* [사용자 지정 직렬 변환기 및 역직렬 변환기 작성](write-custom-serializer-deserializer.md)
+* [JSON serialization용 사용자 지정 변환기 작성](system-text-json-converters-how-to.md)
+* [DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
 * [System.Text.Json API 참조](xref:System.Text.Json)
+* [System.Text.Json.Serialization API 참조](xref:System.Text.Json.Serialization)

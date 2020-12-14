@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: d8bd5bcf78db534bd722972db01253cbd13a7a06
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: cb5c15c2a5c336e2d5b4a3754fa7a02a370602f3
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282404"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009887"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>.NET의 JSON 직렬화 및 역직렬화(마샬링 및 역 마샬링) - 개요
 
@@ -37,9 +37,19 @@ ms.locfileid: "93282404"
 ## <a name="additional-resources"></a>추가 자료
 
 * [라이브러리를 사용하는 방법](system-text-json-how-to.md)
-* [Newtonsoft.Json에서 마이그레이션하는 방법](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [변환기를 작성하는 방법](system-text-json-converters-how-to.md)
-* [System.Text.Json 소스 코드](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
+* [JsonSerializerOptions 인스턴스 인스턴스화](system-text-json-configure-options.md)
+* [대/소문자를 구분하지 않는 일치를 사용하도록 설정](system-text-json-character-casing.md)
+* [속성 이름 및 값 사용자 지정](system-text-json-customize-properties.md)
+* [속성 무시](system-text-json-ignore-properties.md)
+* [잘못된 JSON 허용](system-text-json-invalid-json.md)
+* [오버플로 JSON 처리](system-text-json-handle-overflow.md)
+* [참조 유지](system-text-json-preserve-references.md)
+* [변경할 수 없는 형식 및 public이 아닌 접근자](system-text-json-immutability.md)
+* [다형 직렬화](system-text-json-polymorphism.md)
+* [Newtonsoft.Json에서 System.Text.Json으로 마이그레이션](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [문자 인코딩 사용자 지정](system-text-json-character-encoding.md)
+* [사용자 지정 직렬 변환기 및 역직렬 변환기 작성](write-custom-serializer-deserializer.md)
+* [JSON serialization용 사용자 지정 변환기 작성](system-text-json-converters-how-to.md)
+* [DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
 * [System.Text.Json API 참조](xref:System.Text.Json)
 * [System.Text.Json.Serialization API 참조](xref:System.Text.Json.Serialization)
-<!-- * [Roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

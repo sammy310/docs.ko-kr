@@ -1,7 +1,7 @@
 ---
 title: System.Text.Json을 사용하여 참조를 보존하는 방법
 description: .NET에서 JSON으로 직렬화하고 JSON에서 역직렬화할 때 참조를 보존하고 순환 참조를 처리하는 방법을 알아봅니다.
-ms.date: 11/30/2020
+ms.date: 12/09/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -11,18 +11,14 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 9254ca261c7d748c04c311fa56359014f752ff31
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: d358c953c0979ca097c080fcd750d5ef95b07de0
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439836"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008736"
 ---
-# <a name="how-to-handle-circular-references-with-no-locsystemtextjson"></a>System.Text.Json을 사용하여 순환 참조를 처리하는 방법
-
-이 문서에서는 `System.Text.Json` 네임스페이스를 사용하여 순환 참조를 처리하는 방법을 알아봅니다.
-
-## <a name="preserve-references-and-handle-circular-references"></a>참조를 보존하고 순환 참조를 처리
+# <a name="how-to-preserve-references-and-handle-circular-references-with-no-locsystemtextjson"></a>System.Text.Json을 사용하여 참조를 보존하고 순환 참조를 처리하는 방법
 
 ::: zone pivot="dotnet-5-0"
 
@@ -59,7 +55,8 @@ ms.locfileid: "96439836"
 ## <a name="see-also"></a>참고 항목
 
 * [System.Text.Json 개요](system-text-json-overview.md)
-* [JsonSerializerOptions 인스턴스화](system-text-json-configure-options.md)
+* [JSON 직렬화 및 역직렬화 방법](system-text-json-how-to.md)
+* [JsonSerializerOptions 인스턴스 인스턴스화](system-text-json-configure-options.md)
 * [대/소문자를 구분하지 않는 일치를 사용하도록 설정](system-text-json-character-casing.md)
 * [속성 이름 및 값 사용자 지정](system-text-json-customize-properties.md)
 * [속성 무시](system-text-json-ignore-properties.md)
@@ -67,4 +64,10 @@ ms.locfileid: "96439836"
 * [오버플로 JSON 처리](system-text-json-handle-overflow.md)
 * [변경할 수 없는 형식 및 public이 아닌 접근자](system-text-json-immutability.md)
 * [다형 직렬화](system-text-json-polymorphism.md)
+* [Newtonsoft.Json에서 System.Text.Json으로 마이그레이션](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [문자 인코딩 사용자 지정](system-text-json-character-encoding.md)
+* [사용자 지정 직렬 변환기 및 역직렬 변환기 작성](write-custom-serializer-deserializer.md)
+* [JSON serialization용 사용자 지정 변환기 작성](system-text-json-converters-how-to.md)
+* [DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
 * [System.Text.Json API 참조](xref:System.Text.Json)
+* [System.Text.Json.Serialization API 참조](xref:System.Text.Json.Serialization)

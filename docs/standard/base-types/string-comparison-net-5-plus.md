@@ -1,13 +1,13 @@
 ---
 title: .NET 5+에서 문자열 비교 시 동작 변경
 description: Windows에서 .NET 5 이상 버전의 문자열 비교 동작 변경에 대해 알아봅니다.
-ms.date: 11/04/2020
-ms.openlocfilehash: fa1a1d12f45e5b41877a674d7b8747bb2b2f9658
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/07/2020
+ms.openlocfilehash: a53c36b31785fb43c0aa5f5040042abb6d40031a
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734233"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851753"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>.NET 5+에서 문자열 비교 시 동작 변경
 
@@ -43,16 +43,29 @@ Console.WriteLine(idx);
 
 ### <a name="enable-code-analyzers"></a>코드 분석기 사용
 
-[코드 분석기](../../fundamentals/code-analysis/overview.md)는 버그가 있을 수 있는 호출 사이트를 검색할 수 있습니다. 예기치 않은 동작을 방지하기 위해 프로젝트에 [__Microsoft.CodeAnalysis.FxCopAnalyzers__ NuGet 패키지](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/)를 설치하는 것이 좋습니다. 이 패키지에 포함된 코드 분석 규칙 [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md) 및 [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md)은 서수 비교자를 사용하려 할 때 뜻하지 않게 언어 비교자를 사용할 수 있는 코드에 플래그를 지정하는 데 도움이 됩니다.
+[코드 분석기](../../fundamentals/code-analysis/overview.md)는 버그가 있을 수 있는 호출 사이트를 검색할 수 있습니다. 의외의 동작을 방지하려면 프로젝트에서 .NET 컴파일러 플랫폼(Roslyn) 분석기를 사용하는 것이 좋습니다. 분석기는 서수 비교자를 사용하려 할 때 뜻하지 않게 언어 비교자를 사용할 수 있는 코드에 플래그를 지정하는 데 도움이 됩니다. 다음 규칙은 이러한 문제에 플래그를 지정하는 데 도움이 됩니다.
 
-예를 들어:
+- [CA1307: 명확성을 위해 StringComparison 지정](../../fundamentals/code-analysis/quality-rules/ca1307.md)
+- [CA1309: 서수 StringComparison을 사용하세요.](../../fundamentals/code-analysis/quality-rules/ca1309.md)
+- [CA1310: 정확성을 위해 StringComparison 지정](../../fundamentals/code-analysis/quality-rules/ca1310.md)
+
+이러한 특정 규칙은 기본적으로 사용되지 않습니다. 해당 규칙을 사용하도록 설정하고 위반을 빌드 오류로 표시하려면 프로젝트 파일에 다음 속성을 설정합니다.
+
+```xml
+<PropertyGroup>
+  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+  <WarningsAsErrors>$(WarningsAsErrors);CA1307;CA1309;CA1310</WarningsAsErrors>
+</PropertyGroup>
+```
+
+다음 코드 조각은 관련 코드 분석기 경고 또는 오류를 생성하는 코드 예제를 보여 줍니다.
 
 ```cs
 //
 // Potentially incorrect code - answer might vary based on locale.
 //
 string s = GetString();
-// Produces analyzer warning CA1307.
+// Produces analyzer warning CA1310 for string; CA1307 matches on char ','
 int idx = s.IndexOf(",");
 Console.WriteLine(idx);
 
@@ -89,17 +102,12 @@ List<string> list = GetListOfStrings();
 list.Sort(StringComparer.Ordinal);
 ```
 
-이러한 코드 분석기 규칙을 자체 코드 기반에 표시하지 않는 것이 적합한 경우를 포함하는 규칙에 대한 자세한 내용은 다음 문서를 참조하세요.
-
-* [CA1307: 명확성을 위해 StringComparison 지정](../../fundamentals/code-analysis/quality-rules/ca1307.md)
-* [CA1309: 서수 StringComparison을 사용하세요.](../../fundamentals/code-analysis/quality-rules/ca1309.md)
-
 ### <a name="revert-back-to-nls-behaviors"></a>NLS 동작으로 되돌리기
 
 Windows에서 실행할 때 .NET 5 애플리케이션을 이전 NLS 동작으로 되돌리려면 [.NET 세계화 및 ICU](../globalization-localization/globalization-icu.md)의 단계를 수행합니다. 이 애플리케이션 전체 호환성 스위치는 애플리케이션 수준에서 설정해야 합니다. 개별 라이브러리는 이 동작을 옵트인하거나 옵트아웃할 수 없습니다.
 
 > [!TIP]
-> 코드 상태를 개선하고 숨어 있는 기존 버그를 발견하려면 [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md) 및 [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md) 코드 분석 규칙을 사용하는 것이 좋습니다. 자세한 내용은 [코드 분석기 사용](#enable-code-analyzers)을 참조하세요.
+> 코드 상태를 개선하고 숨어 있는 기존 버그를 발견하려면 [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md), [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md) 및 [CA1310](../../fundamentals/code-analysis/quality-rules/ca1310.md) 코드 분석 규칙을 사용하는 것이 좋습니다. 자세한 내용은 [코드 분석기 사용](#enable-code-analyzers)을 참조하세요.
 
 ## <a name="affected-apis"></a>영향을 받는 API
 
@@ -196,7 +204,7 @@ Console.WriteLine("re\u0301sume\u0301".IndexOf("E", StringComparison.OrdinalIgno
 
 데이터 정렬 요소는 판독기가 단일 문자 또는 문자 클러스터로 인식하는 항목과 대체로 일치합니다. 개념적으로는 [문자소 클러스터](character-encoding-introduction.md#grapheme-clusters)와 유사하지만 포함하는 범위가 약간 더 큽니다.
 
-언어 비교자에서는 정확한 일치가 필요하지 않습니다. 대신 데이터 정렬 요소가 해당 의미상 의미에 따라 비교됩니다. 예를 들어 언어 비교자는 `"\u00E9"` 부분 문자열과 `"e\u0301"` 부분 문자열을 같음으로 처리하는데, 둘 다 의미상 "양음 부호 악센트 한정자가 있는 소문자 e"를 뜻하기 때문입니다. 이를 통해 `IndexOf` 메서드는 다음 코드 샘플에 나온 것처럼 의미상 동등한 부분 문자열 `"\u00E9"`가 포함된 더 큰 문자열 내에서 `"e\u0301"` 부분 문자열을 일치시킬 수 있습니다.
+언어 비교자에서는 정확한 일치가 필요하지 않습니다. 대신 데이터 정렬 요소가 해당 의미상 의미에 따라 비교됩니다. 예를 들어 언어 비교자는 `"\u00E9"` 부분 문자열과 `"e\u0301"` 부분 문자열을 같음으로 처리하는데, 둘 다 의미상 “양음 부호 악센트 한정자가 있는 소문자 e”를 뜻하기 때문입니다. 이를 통해 `IndexOf` 메서드는 다음 코드 샘플에 나온 것처럼 의미상 동등한 부분 문자열 `"\u00E9"`가 포함된 더 큰 문자열 내에서 `"e\u0301"` 부분 문자열을 일치시킬 수 있습니다.
 
 ```cs
 Console.WriteLine("r\u00E9sum\u00E9".IndexOf("e")); // prints '-1' (not found)

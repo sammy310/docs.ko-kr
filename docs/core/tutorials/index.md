@@ -1,19 +1,19 @@
 ---
-title: .NET Core 자습서
-description: .NET Core 학습을 위한 자습서에 따라 Mac, Linux 및 Windows에서 앱과 라이브러리를 빌드하세요.
-author: richlander
-ms.date: 09/09/2020
+title: .NET 자습서
+description: .NET 학습을 위한 자습서에 따라 Mac, Linux, Windows에서 앱과 라이브러리를 빌드하세요.
+author: tdykstra
+ms.date: 12/07/2020
 titleSuffix: ''
-ms.openlocfilehash: 84c8daa735df0255b0e383244f1abd8db4fe21fe
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: cf466f7ea004199052c1f02f5860668f2bb2ff28
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656160"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009321"
 ---
-# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>자습서에서 .NET Core 및 .NET Core SDK 도구 알아보기
+# <a name="learn-net-and-the-net-sdk-tools-by-exploring-these-tutorials"></a>자습서에서 .NET 및 .NET SDK 도구 알아보기
 
-다음 자습서를 사용하여 .NET Core에 대해 알아볼 수 있습니다.
+다음 자습서에서는 .NET Core, .NET 5, 최신 버전용 콘솔 앱 및 라이브러리를 개발하는 방법을 보여 줍니다. 다른 유형의 애플리케이션의 경우 [.NET 시작 자습서](../../standard/get-started.md)를 참조하세요.
 
 ## <a name="use-visual-studio"></a>Visual Studio 사용
 
@@ -58,7 +58,3 @@ Visual Studio Code 또는 다른 코드 편집기를 사용하려면 해당 자�
 - [CLI용 템플릿 만들기](cli-templates-create-item-template.md)
 - [CLI용 도구 만들기 및 사용](../tools/global-tools-how-to-create.md)
 - [플러그 인을 사용한 앱 만들기](creating-app-with-plugin-support.md)
-
-## <a name="create-web-apps"></a>웹앱 만들기
-
-ASP.NET Core 웹 애플리케이션 개발에 대한 자습서는 [ASP.NET Core 설명서](/aspnet/core/)를 참조하세요.

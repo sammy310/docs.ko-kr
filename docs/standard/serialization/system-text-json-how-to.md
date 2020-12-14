@@ -1,7 +1,7 @@
 ---
 title: C#을 사용하여 JSON을 직렬화 및 역직렬화하는 방법 - .NET
 description: System.Text.Json 네임스페이스를 사용하여 .NET에서 JSON으로 직렬화 및 역직렬화하는 방법을 알아봅니다. 샘플 코드가 포함되어 있습니다.
-ms.date: 11/30/2020
+ms.date: 12/02/2020
 ms.custom: contperfq2
 no-loc:
 - System.Text.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 9ea9e2fef5ef66f2a5ff816168abfbd7b2e75276
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 1ea4ff71b9e21bd7c5b12598581b33e1e96ebb19
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437680"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008840"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET에서 JSON을 직렬화 및 역직렬화(마샬링 및 역 마샬링)하는 방법
 
@@ -249,6 +249,8 @@ JSON 출력을 보기 좋게 출력하려면 <xref:System.Text.Json.JsonSerializ
 }
 ```
 
+동일한 옵션으로 `JsonSerializerOptions`를 반복적으로 사용하는 경우 사용할 때마다 새 `JsonSerializerOptions` 인스턴스를 만들지 마세요. 모든 호출에 대해 동일한 인스턴스를 다시 사용하세요. 자세한 내용은 [JsonSerializerOptions 인스턴스 다시 사용](system-text-json-configure-options.md#reuse-jsonserializeroptions-instances)을 참조하세요.
+
 ## <a name="include-fields"></a>필드 포함
 
 ::: zone pivot="dotnet-5-0"
@@ -283,8 +285,19 @@ JSON 출력을 보기 좋게 출력하려면 <xref:System.Text.Json.JsonSerializ
 ## <a name="see-also"></a>참고 항목
 
 * [System.Text.Json 개요](system-text-json-overview.md)
-* [사용자 지정 변환기를 작성하는 방법](system-text-json-converters-how-to.md)
-* [Newtonsoft.Json에서 마이그레이션하는 방법](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [System.Text.Json의 DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
+* [JsonSerializerOptions 인스턴스 인스턴스화](system-text-json-configure-options.md)
+* [대/소문자를 구분하지 않는 일치를 사용하도록 설정](system-text-json-character-casing.md)
+* [속성 이름 및 값 사용자 지정](system-text-json-customize-properties.md)
+* [속성 무시](system-text-json-ignore-properties.md)
+* [잘못된 JSON 허용](system-text-json-invalid-json.md)
+* [오버플로 JSON 처리](system-text-json-handle-overflow.md)
+* [참조 유지](system-text-json-preserve-references.md)
+* [변경할 수 없는 형식 및 public이 아닌 접근자](system-text-json-immutability.md)
+* [다형 직렬화](system-text-json-polymorphism.md)
+* [Newtonsoft.Json에서 System.Text.Json으로 마이그레이션](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [문자 인코딩 사용자 지정](system-text-json-character-encoding.md)
+* [사용자 지정 직렬 변환기 및 역직렬 변환기 작성](write-custom-serializer-deserializer.md)
+* [JSON serialization용 사용자 지정 변환기 작성](system-text-json-converters-how-to.md)
+* [DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
 * [System.Text.Json API 참조](xref:System.Text.Json)
-<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
+* [System.Text.Json.Serialization API 참조](xref:System.Text.Json.Serialization)

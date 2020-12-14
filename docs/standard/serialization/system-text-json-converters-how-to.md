@@ -1,7 +1,7 @@
 ---
 title: JSON serialization용 사용자 지정 변환기를 작성하는 방법 - .NET
 description: System.Text.Json 네임스페이스에 제공된 JSON 직렬화 클래스의 사용자 지정 변환기를 만드는 방법을 알아봅니다.
-ms.date: 11/30/2020
+ms.date: 12/09/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 17671b86dc6d1d7b45a01cb0bf7c5c42f624d99f
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 33334ccd8bad4ac5a9f5dccde79ff3ae09ca8f89
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438129"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008866"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET에서 JSON serialization(마샬링)용 사용자 지정 변환기를 작성하는 방법
 
@@ -25,7 +25,7 @@ ms.locfileid: "96438129"
 
 *변환기* 는 개체 또는 값을 JSON으로 변환하는 클래스입니다. `System.Text.Json` 네임스페이스에는 JavaScript 기본 형식에 매핑되는 기본 형식 대부분에 대한 기본 제공 변환기가 있습니다. 다음과 같은 용도로 사용자 지정 변환기를 작성할 수 있습니다.
 
-* 기본 제공 변환기의 기본 동작을 재정의합니다. 예를 들어 `DateTime` 값을 기본 ISO 8601-1:2019 형식 대신 mm/dd/yyyy 형식으로 표시하도록 할 수 있습니다.
+* 기본 제공 변환기의 기본 동작을 재정의합니다. 예를 들어 `DateTime` 값을 mm/dd/yyyy 형식으로 표시하도록 할 수 있습니다. 기본적으로 RFC 3339 프로필을 포함하여 ISO 8601-1:2019가 지원됩니다. 자세한 내용은 [System.Text.Json의 DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)을 참조하세요.
 * 사용자 지정 값 형식을 지원합니다. 예를 들어 `PhoneNumber` 구조체입니다.
 
 현재 릴리스에 포함되지 않은 기능을 사용하여 `System.Text.Json`를 사용자 지정하거나 확장하는 사용자 지정 변환기를 작성할 수도 있습니다. 이 문서의 뒷부분에서 다음과 같은 시나리오에 대해 설명합니다.
@@ -44,6 +44,8 @@ ms.locfileid: "96438129"
 * [다형 deserialization 지원](#support-polymorphic-deserialization)
 * [Stack\<T>에 대한 왕복 지원](#support-round-trip-for-stackt)
 ::: zone-end
+
+사용자 지정 변환기에 대해 작성하는 코드에서는 새 <xref:System.Text.Json.JsonSerializerOptions> 인스턴스를 사용하는 경우 성능 저하에 대해 알고 있어야 합니다. 자세한 내용은 [JsonSerializerOptions 인스턴스 다시 사용](system-text-json-configure-options.md#reuse-jsonserializeroptions-instances)을 참조하세요.
 
 ## <a name="custom-converter-patterns"></a>사용자 지정 변환기 패턴
 
@@ -103,7 +105,11 @@ ms.locfileid: "96438129"
 
 ## <a name="error-handling"></a>오류 처리
 
-오류 처리 코드에서 예외를 throw해야 하는 경우에는 메시지 없이 <xref:System.Text.Json.JsonException>을 throw하는 것이 좋습니다. 이 예외 형식은 JSON에서 오류를 발생시킨 부분의 경로를 포함하는 메시지를 자동으로 만듭니다. 예를 들어 `throw new JsonException();` 문은 다음 예제와 같은 오류 메시지를 생성합니다.
+직렬 변환기는 <xref:System.Text.Json.JsonException> 및 <xref:System.NotSupportedException> 예외 형식을 특별히 처리합니다.
+
+### <a name="jsonexception"></a>JsonException
+
+메시지 없이 `JsonException`을 throw하는 경우 직렬 변환기는 JSON에서 오류를 발생시킨 부분의 경로를 포함하는 메시지를 만듭니다. 예를 들어 `throw new JsonException()` 문은 다음 예제와 같은 오류 메시지를 생성합니다.
 
 ```output
 Unhandled exception. System.Text.Json.JsonException:
@@ -111,7 +117,25 @@ The JSON value could not be converted to System.Object.
 Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ```
 
-메시지(예: `throw new JsonException("Error occurred")`)를 제공하는 경우에도 예외는 <xref:System.Text.Json.JsonException.Path> 속성에서 경로를 제공합니다.
+메시지를 제공하는 경우(예: `throw new JsonException("Error occurred")`) 직렬 변환기는 <xref:System.Text.Json.JsonException.Path>, <xref:System.Text.Json.JsonException.LineNumber>, 및 <xref:System.Text.Json.JsonException.BytePositionInLine> 속성을 계속 설정합니다.
+
+### <a name="notsupportedexception"></a>NotSupportedException
+
+`NotSupportedException`을 throw하는 경우 메시지에 항상 경로 정보를 받습니다. 메시지를 제공하는 경우 경로 정보가 추가됩니다. 예를 들어 `throw new NotSupportedException("Error occurred.")` 문은 다음 예제와 같은 오류 메시지를 생성합니다.
+
+```output
+Error occurred. The unsupported member type is located on type
+'System.Collections.Generic.Dictionary`2[Samples.SummaryWords,System.Int32]'.
+Path: $.TemperatureRanges | LineNumber: 4 | BytePositionInLine: 24
+```
+
+### <a name="when-to-throw-which-exception-type"></a>예외 형식을 throw하는 경우
+
+JSON 페이로드에 역직렬화되는 형식에 유효하지 않은 토큰이 포함된 경우 `JsonException`을 throw합니다.
+
+특정 형식을 허용하지 않으려면 `NotSupportedException`을 throw합니다. 이 예외는 직렬 변환기가 지원되지 않는 형식에 대해 자동으로 throw하는 예외입니다. 예를 들어 `System.Type`은 보안상의 이유로 지원되지 않으므로, 역직렬화하려고 하면 `NotSupportedException`이 발생합니다.
+
+필요에 따라 다른 예외를 throw할 수 있지만, JSON 경로 정보는 자동으로 포함되지 않습니다.
 
 ## <a name="register-a-custom-converter"></a>사용자 지정 변환기 등록
 
@@ -373,8 +397,20 @@ JSON 문자열을 <xref:System.Collections.Generic.Stack%601> 개체로 역직�
 ## <a name="additional-resources"></a>추가 자료
 
 * [기본 제공 변환기 소스 코드](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
-* [System.Text.Json의 DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
-* [문자 인코딩을 사용자 지정하는 방법](system-text-json-character-encoding.md)
-* [사용자 지정 직렬 변환기 및 역직렬 변환기를 작성하는 방법](write-custom-serializer-deserializer.md)
+* [System.Text.Json 개요](system-text-json-overview.md)
+* [JSON 직렬화 및 역직렬화 방법](system-text-json-how-to.md)
+* [JsonSerializerOptions 인스턴스 인스턴스화](system-text-json-configure-options.md)
+* [대/소문자를 구분하지 않는 일치를 사용하도록 설정](system-text-json-character-casing.md)
+* [속성 이름 및 값 사용자 지정](system-text-json-customize-properties.md)
+* [속성 무시](system-text-json-ignore-properties.md)
+* [잘못된 JSON 허용](system-text-json-invalid-json.md)
+* [오버플로 JSON 처리](system-text-json-handle-overflow.md)
+* [참조 유지](system-text-json-preserve-references.md)
+* [변경할 수 없는 형식 및 public이 아닌 접근자](system-text-json-immutability.md)
+* [다형 직렬화](system-text-json-polymorphism.md)
+* [Newtonsoft.Json에서 System.Text.Json으로 마이그레이션](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [문자 인코딩 사용자 지정](system-text-json-character-encoding.md)
+* [사용자 지정 직렬 변환기 및 역직렬 변환기 작성](write-custom-serializer-deserializer.md)
+* [DateTime 및 DateTimeOffset 지원](../datetime/system-text-json-support.md)
 * [System.Text.Json API 참조](xref:System.Text.Json)
 * [System.Text.Json.Serialization API 참조](xref:System.Text.Json.Serialization)
