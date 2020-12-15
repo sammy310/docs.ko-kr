@@ -2,12 +2,12 @@
 title: F# 코드 서식 지정 지침
 description: 'F # 코드의 서식을 지정 하기 위한 지침을 알아봅니다.'
 ms.date: 08/31/2020
-ms.openlocfilehash: f9b62a18a5c525924f3ae6da3fbc650394340047
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 7e20c76f4cfafa50a15b6501a498b228b526057e
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739891"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513070"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 코드 서식 지정 지침
 
@@ -100,16 +100,91 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
+### <a name="avoid-name-sensitive-alignments"></a>이름 구분 맞춤 안 함
+
+일반적으로 이름을 지정 하는 데 중요 한 들여쓰기 및 맞춤을 방지 합니다.
+
+```fsharp
+// OK
+let myLongValueName =
+    someExpression
+    |> anotherExpression
+
+
+// Bad
+let myLongValueName = someExpression
+                      |> anotherExpression
+```
+
+이를 "베 니 티 alignment" 또는 "베 니 티 들여쓰기" 라고도 합니다. 이를 방지 하는 주요 이유는 다음과 같습니다.
+
+* 중요 한 코드는 오른쪽으로 이동 합니다.
+* 실제 코드에 대해 남아 있는 너비가 낮습니다.
+* 이름을 바꾸면 맞춤이 중단 될 수 있습니다.
+
+에서 `do` / `do!` 들여쓰기를 일관 되 게 유지 하기 위해 `let` / 에 대해 동일한 작업을 수행 합니다 `let!` . 클래스에서를 사용 하는 예제는 `do` 다음과 같습니다.
+
+```fsharp
+// OK
+type Foo () =
+    let foo =
+        fooBarBaz
+        |> loremIpsumDolorSitAmet
+        |> theQuickBrownFoxJumpedOverTheLazyDog
+    do
+        fooBarBaz
+        |> loremIpsumDolorSitAmet
+        |> theQuickBrownFoxJumpedOverTheLazyDog
+
+// Bad - notice the "do" expression is indented one space less than the `let` expression
+type Foo () =
+    let foo =
+        fooBarBaz
+        |> loremIpsumDolorSitAmet
+        |> theQuickBrownFoxJumpedOverTheLazyDog
+    do fooBarBaz
+       |> loremIpsumDolorSitAmet
+       |> theQuickBrownFoxJumpedOverTheLazyDog
+```
+
+다음은 두 개의 공백을 사용 하는 예제입니다 .이 경우에는 `do!` `do!` 우연히 4 개의 공백을 사용 하는 경우 방법 간에 차이가 없습니다.
+
+```fsharp
+// OK
+async {
+  let! foo =
+    fooBarBaz
+    |> loremIpsumDolorSitAmet
+    |> theQuickBrownFoxJumpedOverTheLazyDog
+  do!
+    fooBarBaz
+    |> loremIpsumDolorSitAmet
+    |> theQuickBrownFoxJumpedOverTheLazyDog
+}
+
+// Bad - notice the "do!" expression is indented two spaces more than the `let!` expression
+async {
+  let! foo =
+    fooBarBaz
+    |> loremIpsumDolorSitAmet
+    |> theQuickBrownFoxJumpedOverTheLazyDog
+  do! fooBarBaz
+      |> loremIpsumDolorSitAmet
+      |> theQuickBrownFoxJumpedOverTheLazyDog
+}
+```
+
 ### <a name="place-parameters-on-a-new-line-for-long-definitions"></a>긴 정의를 위해 새 줄에 매개 변수를 추가 합니다.
 
 Long 함수 정의가 있는 경우 새 줄에 매개 변수를 추가 하 고 다음 매개 변수의 들여쓰기 수준에 맞게 들여씁니다.
 
 ```fsharp
 module M =
-    let LongFunctionWithLotsOfParameters(aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
-                                        (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
-                                        (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
-                                        =
+    let LongFunctionWithLotsOfParameters
+        (aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        =
         // ... the body of the method follows
 ```
 
@@ -117,14 +192,20 @@ module M =
 
 ```fsharp
 type TM() =
-    member _.LongMethodWithLotsOfParameters(aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
-                                            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
-                                            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse) =
+    member _.LongMethodWithLotsOfParameters
+        (
+            aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse
+        ) =
         // ... the body of the method
 
-type TC(aVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse,
+type TC
+    (
+        aVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse,
         aSecondVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse,
-        aThirdVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse) =
+        aThirdVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse
+    ) =
     // ... the body of the class follows
 ```
 
@@ -132,15 +213,18 @@ type TC(aVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse,
 
 ```fsharp
 type C() =
-    member _.LongMethodWithLotsOfParameters(aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
-                                            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
-                                            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
-                                            : AReturnType =
+    member _.LongMethodWithLotsOfParameters
+        (
+            aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse
+        ) : AReturnType =
         // ... the body of the method
-    member _.LongMethodWithLotsOfCurrifiedParams(aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
-                                                (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
-                                                (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
-                                                =
+    member _.LongMethodWithLotsOfCurrifiedParams
+        (aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        =
         // ... the body of the method
 ```
 
@@ -535,13 +619,14 @@ let rainbow2 =
 
 ```fsharp
 type S = { F1: int; F2: string }
-type State = { F:  S option }
+type State = { Foo: S option }
 
-let state = { F = Some { F1 = 1; F2 = "Hello" } }
+let state = { Foo = Some { F1 = 1; F2 = "Hello" } }
 let newState =
     {
         state with
-            F = Some {
+            Foo =
+                Some {
                     F1 = 0
                     F2 = ""
                 }
@@ -809,7 +894,7 @@ let function1 arg1 arg2 arg3 arg4 =
     arg3 + arg4
 ```
 
-### <a name="formatting-pipeline-operators"></a>파이프라인 연산자 서식 지정
+### <a name="formatting-pipeline-operators-or-mutable-assignments"></a>파이프라인 연산자 또는 변경 가능한 할당 서식 지정
 
 파이프라인 `|>` 연산자는 작동 하는 식 아래로 이동 해야 합니다.
 
@@ -832,6 +917,32 @@ let methods2 = System.AppDomain.CurrentDomain.GetAssemblies()
             |> List.ofArray
             |> List.map (fun t -> t.GetMethods())
             |> Array.concat
+
+// Not OK either
+let methods2 = System.AppDomain.CurrentDomain.GetAssemblies()
+               |> List.ofArray
+               |> List.map (fun assm -> assm.GetTypes())
+               |> Array.concat
+               |> List.ofArray
+               |> List.map (fun t -> t.GetMethods())
+               |> Array.concat
+```
+
+이는 변경 가능한 setter에도 적용 됩니다.
+
+```fsharp
+// Preferred approach
+ctx.Response.Headers.[HeaderNames.ContentType] <-
+    Constants.jsonApiMediaType |> StringValues
+ctx.Response.Headers.[HeaderNames.ContentLength] <-
+    bytes.Length |> string |> StringValues
+
+// Not OK
+ctx.Response.Headers.[HeaderNames.ContentType] <- Constants.jsonApiMediaType
+                                                  |> StringValues
+ctx.Response.Headers.[HeaderNames.ContentLength] <- bytes.Length
+                                                    |> string
+                                                    |> StringValues
 ```
 
 ### <a name="formatting-modules"></a>서식 모듈

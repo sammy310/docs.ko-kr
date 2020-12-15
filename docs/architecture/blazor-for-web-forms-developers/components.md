@@ -6,18 +6,18 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/18/2019
-ms.openlocfilehash: 4fdf062fb719e62b53e47f79db1e93d0bf079350
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: fd560c84c095dffc3718a7709af904d9ba722a18
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267687"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512771"
 ---
 # <a name="build-reusable-ui-components-with-no-locblazor"></a>에서 재사용 가능한 UI 구성 요소 빌드 Blazor
 
 ASP.NET Web Forms에 대 한 멋진 사항 중 하나는 다시 사용할 수 있는 ui (사용자 인터페이스) 코드를 다시 사용할 수 있는 UI 컨트롤에 캡슐화 하는 방법입니다. *.Ascx* 파일을 사용 하 여 태그에서 사용자 지정 사용자 정의 컨트롤을 정의할 수 있습니다. 전체 디자이너 지원으로 코드에서 정교한 서버 컨트롤을 빌드할 수도 있습니다.
 
-Blazor 는 *구성 요소*를 통한 UI 캡슐화도 지원 합니다. 구성 요소:
+Blazor 는 *구성 요소* 를 통한 UI 캡슐화도 지원 합니다. 구성 요소:
 
 - 는 자체 포함 UI의 청크입니다.
 - 자체 상태 및 렌더링 논리를 유지 관리 합니다.
@@ -79,13 +79,13 @@ Razor 지시문은 문자로 시작 `@` 하 고 일반적으로 파일의 시작
 
 |지시문    |설명|예제|Web Forms 동일|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |구성 요소에 클래스 수준 특성을 추가 합니다.|`@attribute [Authorize]`|None|
+|`@attribute` |구성 요소에 클래스 수준 특성을 추가 합니다.|`@attribute [Authorize]`|없음|
 |`@code`      |구성 요소에 클래스 멤버를 추가 합니다.|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|지정 된 인터페이스를 구현 합니다.|`@implements IDisposable`|코드 숨김 사용|
 |`@inherits`  |지정 된 기본 클래스에서 상속 됩니다.|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |구성 요소에 서비스를 삽입 합니다.|`@inject IJSRuntime JS`|None|
+|`@inject`    |구성 요소에 서비스를 삽입 합니다.|`@inject IJSRuntime JS`|없음|
 |`@layout`    |구성 요소에 대 한 레이아웃 구성 요소를 지정 합니다.|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |구성 요소에 대 한 네임 스페이스를 설정 합니다.|`@namespace MyNamespace`|None|
+|`@namespace` |구성 요소에 대 한 네임 스페이스를 설정 합니다.|`@namespace MyNamespace`|없음|
 |`@page`      |구성 요소의 경로를 지정 합니다.|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |구성 요소에 대 한 제네릭 형식 매개 변수를 지정 합니다.|`@typeparam TItem`|코드 숨김 사용|
 |`@using`     |범위에 가져올 네임 스페이스를 지정 합니다.|`@using MyComponentNamespace`|*web.config* 에서 네임 스페이스 추가|
@@ -98,7 +98,7 @@ Razor 지시문은 문자로 시작 `@` 하 고 일반적으로 파일의 시작
 
 다음 표에서는에서 사용 되는 Razor 지시문에 대 한 다양 한 특성을 요약 하 여 보여 줍니다 Blazor .
 
-|attribute    |Description|예제|
+|attribute    |설명|예제|
 |-------------|-----------|-------|
 |`@attributes`|특성 사전을 렌더링 합니다.|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |양방향 데이터 바인딩을 만듭니다.    |`<input @bind="username" @bind:event="oninput" />`|
@@ -110,12 +110,12 @@ Razor 지시문은 문자로 시작 `@` 하 고 일반적으로 파일의 시작
 
 *.Aspx* 및 *.ascx* 파일에 사용 되는 대부분의 구문에는 Razor의 병렬 구문이 있습니다. 다음은 ASP.NET Web Forms 및 Razor의 구문에 대 한 간단한 비교입니다.
 
-|기능                      |Web Forms           |구문               |Razor         |구문 |
+|기능                      |Web Forms           |Syntax               |Razor         |Syntax |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |지시문                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |코드 블록                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
-|표현식<br>(HTML 인코딩)|`<%: %>`            |`<%:DateTime.Now %>` |명시적 `@`<br>뚜렷한 `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
-|주석                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
+|식<br>(HTML 인코딩)|`<%: %>`            |`<%:DateTime.Now %>` |명시적 `@`<br>뚜렷한 `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
+|의견                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |데이터 바인딩                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
 Razor 구성 요소 클래스에 멤버를 추가 하려면 지시문을 사용 `@code` 합니다. 이 기법은 `<script runat="server">...</script>` ASP.NET Web Forms 사용자 정의 컨트롤 또는 페이지에서 블록을 사용 하는 것과 비슷합니다.
@@ -146,7 +146,7 @@ Razor는 c #을 기반으로 하기 때문에 c # 프로젝트 (*.csproj*) 내�
 ASP.NET Web Forms와 달리의 구성 요소는 Blazor 다음과 같습니다.
 
 - 요소 접두사를 사용 하지 않습니다 (예: `asp:` ).
-- 페이지 또는 *web.config*에서 등록 하지 않아도 됩니다.
+- 페이지 또는 *web.config* 에서 등록 하지 않아도 됩니다.
 
 .NET 형식 처럼 Razor 구성 요소는 정확히 일치 해야 합니다. 구성 요소가 포함 된 어셈블리를 참조 하는 경우에는 구성 요소를 사용할 수 있습니다. 구성 요소의 네임 스페이스를 범위로 가져오려면 지시문을 적용 합니다 `@using` .
 
@@ -446,7 +446,7 @@ protected override async Task OnInitializedAsync() { await ... }
 
 ### <a name="onparametersset"></a>OnParametersSet
 
-`OnParametersSet`및 `OnParametersSetAsync` 메서드는 구성 요소가 부모 로부터 매개 변수를 수신 하 고 값이 속성에 할당 될 때 호출 됩니다. 이러한 메서드는 구성 요소 초기화 후와 *구성 요소가 렌더링 될*때마다 실행 됩니다.
+`OnParametersSet`및 `OnParametersSetAsync` 메서드는 구성 요소가 부모 로부터 매개 변수를 수신 하 고 값이 속성에 할당 될 때 호출 됩니다. 이러한 메서드는 구성 요소 초기화 후와 *구성 요소가 렌더링 될* 때마다 실행 됩니다.
 
 ```csharp
 protected override void OnParametersSet() { ... }
@@ -525,7 +525,7 @@ Blazor 구성 요소는 요소에 대 한 참조를 캡처할 수 있습니다. 
 
 ## <a name="templated-components"></a>템플릿 기반 구성 요소
 
-ASP.NET Web Forms에서 *템플릿 기반 컨트롤*을 만들 수 있습니다. 개발자는 템플릿 기반 컨트롤을 사용 하 여 컨테이너 컨트롤을 렌더링 하는 데 사용 되는 HTML 부분을 지정할 수 있습니다. 템플릿 기반 서버 컨트롤을 작성 하는 메커니즘은 복잡 하지만 사용자 지정 가능한 방식으로 데이터를 렌더링 하는 강력한 시나리오를 가능 하 게 합니다. 템플릿 기반 컨트롤의 예로는 `Repeater` 및가 `DataList` 있습니다.
+ASP.NET Web Forms에서 *템플릿 기반 컨트롤* 을 만들 수 있습니다. 개발자는 템플릿 기반 컨트롤을 사용 하 여 컨테이너 컨트롤을 렌더링 하는 데 사용 되는 HTML 부분을 지정할 수 있습니다. 템플릿 기반 서버 컨트롤을 작성 하는 메커니즘은 복잡 하지만 사용자 지정 가능한 방식으로 데이터를 렌더링 하는 강력한 시나리오를 가능 하 게 합니다. 템플릿 기반 컨트롤의 예로는 `Repeater` 및가 `DataList` 있습니다.
 
 Blazor 또는 형식의 구성 요소 매개 변수를 정의 하 여 구성 요소를 템플릿을 만들 수도 있습니다 `RenderFragment` `RenderFragment<T>` . 는 `RenderFragment` 구성 요소에서 렌더링할 수 있는 Razor 태그의 청크를 나타냅니다. 는 `RenderFragment<T>` 렌더링 조각이 렌더링 될 때 지정할 수 있는 매개 변수를 사용 하는 Razor 태그의 청크입니다.
 
@@ -550,7 +550,9 @@ Blazor 구성 요소는 자식 콘텐츠를로 캡처하고 `RenderFragment` 구
 
 ```razor
 <ChildContentComponent>
-    <p>The time is @DateTime.Now</p>
+    <ChildContent>
+        <p>The time is @DateTime.Now</p>
+    </ChildContent>
 </ChildContentComponent>
 ```
 
