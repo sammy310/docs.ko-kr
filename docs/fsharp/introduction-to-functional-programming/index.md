@@ -2,12 +2,12 @@
 title: F#의 함수형 프로그래밍 소개
 description: F#의 함수형 프로그래밍 기본 사항을 알아봅니다.
 ms.date: 10/29/2018
-ms.openlocfilehash: fc2aebe80de16b92942c3557c0e03c198883dde1
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 44242a4319a331312a003a555d1483f2a3f1a90d
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740330"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110587"
 ---
 # <a name="introduction-to-functional-programming-in-f"></a>F\#의 함수형 프로그래밍 소개
 
@@ -54,7 +54,7 @@ val addOne: x:int -> int
 
 ### <a name="expressions"></a>식
 
-식은 값으로 계산되는 구문입니다. 작업을 수행하는 문과 달리 식은 값을 반환하는 작업이라고 생각하면 됩니다. 함수형 프로그래밍에서 거의 언제나 식을 문 대신 사용합니다.
+식은 값으로 계산되는 구문입니다. 작업을 수행하는 문과 달리 식은 값을 반환하는 작업이라고 생각하면 됩니다. 함수형 프로그래밍에서 거의 항상 문 대신 식이 사용됩니다.
 
 이전 함수인 `addOne`을 생각해 보세요. `addOne`의 본문은 식입니다.
 
