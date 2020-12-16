@@ -1,26 +1,26 @@
 ---
 title: 자세한 구문
-description: F# 프로그래밍 언어에서 자세한 구문과 간단한 구문의 차이점을 알아봅니다.
+description: 'F # 프로그래밍 언어에서 verbose와 간단한 구문 간의 차이점을 알아봅니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 722807695c56beb0d681b95a78ed8cb8c1df3ddf
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 4e1725b58c8cb67c074ba12fd4ca25ce0c000a1e
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463913"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97595179"
 ---
 # <a name="verbose-syntax"></a>자세한 구문
 
-F# 언어의 많은 구문에사용할 수 있는 구문은 두 가지 형태가 있습니다: *자세한 구문과* *간단한 구문.* 자세한 구문은 일반적으로 사용되지 않지만 들여쓰기에 덜 민감하다는 장점이 있습니다. 간단한 구문은 짧으며 들여쓰기를 사용하여 구문 및 구문의 시작과 끝을 `begin`알리는 `end` `in`대신 " 및 와 같은 추가 키워드를 표시합니다. 기본 구문은 간단한 구문입니다. 이 항목에서는 경량 구문을 사용할 수 없는 경우 F# 구문에 대한 구문을 설명합니다. 자세한 구문은 항상 활성화되므로 간단한 구문을 사용하도록 설정하더라도 일부 구문에 대한 자세한 구문을 계속 사용할 수 있습니다. 지시문을 사용하여 간단한 구문을 `#light "off"` 비활성화할 수 있습니다.
+F # 언어의 많은 구문에 사용할 수 있는 구문에는 *자세한 구문* 및 *간단한* 구문 이라는 두 가지 형식이 있습니다. 자세한 구문은 일반적으로 사용 되지 않지만 들여쓰기에 대 한 덜 중요 한 이점이 있습니다. 간단한 구문은 더 짧고 들여쓰기를 사용 하 여,, 등의 추가 키워드가 아닌 구문의 시작과 끝을 알립니다 `begin` `end` `in` . 기본 구문은 간단한 구문입니다. 이 항목에서는 간단한 구문을 사용 하지 않는 경우 F # 구문에 대 한 구문에 대해 설명 합니다. Verbose 구문은 항상 사용 하도록 설정 되어 있으므로 간단한 구문을 사용 하는 경우에도 일부 구문에 대해 자세한 구문을 사용할 수 있습니다. 지시문을 사용 하 여 간단한 구문을 사용 하지 않도록 설정할 수 있습니다 `#light "off"` .
 
-## <a name="table-of-constructs"></a>구문 표
+## <a name="table-of-constructs"></a>구문 테이블
 
-다음 표에서는 두 양식 간에 차이가 있는 컨텍스트에서 F# 언어 구문에 대한 가볍고 자세한 구문을 보여 준다. 이 표에서 각도 대괄호 ()&lt;&gt;사용자가 제공한 구문 요소를 둘러싸고 있습니다. 이러한 구문 내에서 사용되는 구문에 대한 자세한 내용은 각 언어 구문에 대한 설명서를 참조하십시오.
+다음 표에서는 두 형식 간에 차이가 있는 상황에서 F # 언어 구문의 간단한 구문 및 자세한 구문을 보여 줍니다. 이 표에서 꺾쇠 괄호 ()는 &lt; &gt; 사용자가 제공 하는 구문 요소를 둘러쌉니다. 이러한 구문 내에서 사용 되는 구문에 대 한 자세한 내용은 각 언어 구문에 대 한 설명서를 참조 하세요.
 
 <table>
 <tr>
 <th>언어 구문</th>
-<th>경량 구문</th>
+<th>간단한 구문</th>
 <th>자세한 구문</th>
 </tr>
 <tr>
@@ -29,9 +29,9 @@ F# 언어의 많은 구문에사용할 수 있는 구문은 두 가지 형태가
 </td>
 <td>
 
-```xml
-<expression1 />
-<expression2 />
+```fsharp
+<expression1>
+<expression2>
 ```
 
 </td><td>
@@ -227,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td>차별된 노조</td><td>
+<tr><td>구별 된 공용 구조체</td><td>
 
 ```fsharp
 type <union-name> =
@@ -269,7 +269,7 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td>개체 표현식</td><td>
+<tr><td>개체 식</td><td>
 
 ```fsharp
 { new <type-name>
@@ -311,7 +311,7 @@ interface <interface-name>
 
 </td>
 </tr>
-<tr><td>유형 확장</td><td>
+<tr><td>형식 확장</td><td>
 
 ```fsharp
 type <type-name>
@@ -330,7 +330,7 @@ type <type-name>
 
 </td>
 </tr>
-<tr><td>module</td><td>
+<tr><td>모듈(module)</td><td>
 
 ```fsharp
 module <module-name> =
@@ -350,8 +350,8 @@ module <module-name> =
 </tr>
 </table>
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [F # 언어 참조](index.md)
+- [F# 언어 참조](index.md)
 - [컴파일러 지시문](compiler-directives.md)
 - [코드 서식 지정 지침](../style-guide/formatting.md)
