@@ -34,6 +34,8 @@
                   href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
                 - name: Microsoft 접두사가 있는 Azure 통합 패키지가 제거됨
                   href: aspnet-core/5.0/azure-integration-packages-removed.md
+                - name: 'Blazor: Blazor 앱에서 경로 우선 순위 논리가 변경됨'
+                  href: aspnet-core/5.0/blazor-routing-logic-changed.md
                 - name: 'Blazor: 업데이트된 브라우저 지원'
                   href: aspnet-core/5.0/blazor-browser-support-updated.md
                 - name: 'Blazor: 컴파일러에 의해 잘린 무효 공백'
@@ -292,6 +294,8 @@
                   href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
                 - name: Microsoft 접두사가 있는 Azure 통합 패키지가 제거됨
                   href: aspnet-core/5.0/azure-integration-packages-removed.md
+                - name: 'Blazor: Blazor 앱에서 경로 우선 순위 논리가 변경됨'
+                  href: aspnet-core/5.0/blazor-routing-logic-changed.md
                 - name: 'Blazor: 업데이트된 브라우저 지원'
                   href: aspnet-core/5.0/blazor-browser-support-updated.md
                 - name: 'Blazor: 컴파일러에 의해 잘린 무효 공백'
