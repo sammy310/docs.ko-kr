@@ -6,12 +6,12 @@ metadata:
   description: 프로그래밍 C# 알아보기 - 초보 개발자, C#을 처음 사용하는 개발자, 숙련된 C# / .NET 개발자용
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: bc75503b565020fb9966fd756d87890263f63533
-  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+  ms.openlocfilehash: 584db55455af54bcf7e91771e3598a7349091bee
+  ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 12/04/2020
-  ms.locfileid: "96599449"
+  ms.lasthandoff: 12/15/2020
+  ms.locfileid: "97512153"
 landingContent:
 - title: C#의 프로그램에 대해 알아보기
   linkLists:
@@ -71,38 +71,20 @@ landingContent:
     links:
     - text: C# 9.0의 새로운 기능
       url: whats-new/csharp-9.md
-- title: C# 8.0의 새 기능
+- title: C# 9.0의 새 기능
   linkLists:
   - linkListType: whats-new
     links:
-    - text: C# 8.0의 새로운 기능
-      url: whats-new/csharp-8.md
-  - linkListType: overview
-    links:
-    - text: 패턴 일치
-      url: pattern-matching.md
-    - text: nullable 참조 형식
-      url: nullable-references.md
-  - linkListType: concept
-    links:
-    - text: nullable 마이그레이션 전략 선택
-      url: nullable-migration-strategies.md
+    - text: C# 9.0의 새로운 기능
+      url: whats-new/csharp-9.md
   - linkListType: tutorial
     links:
-    - text: 비동기 스트림 사용 및 생성
-      url: tutorials/generate-consume-asynchronous-stream.md
-    - text: nullable 참조 형식을 사용하여 개발
-      url: tutorials/nullable-reference-types.md
-    - text: nullable 참조 형식을 사용하기 위한 기존 코드 업그레이드
-      url: tutorials/upgrade-to-nullable-references.md
-    - text: 더 많은 표현 알고리즘에 패턴 일치 사용
-      url: tutorials/pattern-matching.md
-    - text: 기본 인터페이스 멤버로 안전한 버전 인터페이스
-      url: tutorials/default-interface-methods-versions.md
-    - text: 기본 인터페이스 멤버와 기능 결합
-      url: tutorials/mixins-with-default-interface-methods.md
-    - text: 범위 및 인덱스를 사용하여 하위 집합 작업
-      url: tutorials/ranges-indexes.md
+    - text: 레코드 종류 탐색
+      url: tutorials/exploration/records.md
+    - text: 최상위 문 탐색
+      url: tutorials/exploration/top-level-statements.md
+    - text: 새 패턴 탐색
+      url: tutorials/exploration/patterns-objects.md
   - linkListType: reference
     links:
     - text: C# 컴파일러의 호환성이 손상되는 변경
