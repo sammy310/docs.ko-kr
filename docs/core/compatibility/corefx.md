@@ -2,12 +2,12 @@
 title: .NET 라이브러리 호환성이 손상되는 변경
 description: .NET Core 버전 1.0~3.0의 핵심 .NET 라이브러리 호환성이 손상되는 변경을 나열합니다.
 ms.date: 07/27/2020
-ms.openlocfilehash: 0f42429e44776fc70bb99ed3bdf346f0d5dbc9eb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 092ff36a5e07c9e226fe2a67d5e7cfd391e9d16b
+ms.sourcegitcommit: fcbe432482464b1639decad78cc4dc8387c6269e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "96032045"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97366872"
 ---
 # <a name="core-net-libraries-breaking-changes-in-net-core-10-30"></a>.NET Core 1.0~3.0의 핵심 .NET 라이브러리 호환성이 손상되는 변경
 
@@ -17,6 +17,7 @@ ms.locfileid: "96032045"
 
 | 주요 변경 내용 | 도입된 버전 |
 | - | :-: |
+| [IEnumerable\<T>를 사용하는 확장 메서드에 GroupCollection을 전달하려면 명확성 필요](#passing-groupcollection-to-extension-methods-taking-ienumerablet-requires-disambiguation) | 3.0 |
 | [버전을 보고하는 API가 이제 파일 버전이 아닌 제품 버전을 보고함](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
 | [사용자 지정 EncoderFallbackBuffer 인스턴스는 재귀적으로 대체될 수 없음](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
 | [부동 소수점 서식 및 구문 분석 동작 변경](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
@@ -36,13 +37,17 @@ ms.locfileid: "96032045"
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
-[!INCLUDE[APIs that report version now report product and not file version](~/includes/core-changes/corefx/3.0/version-information-changes.md)]
+[!INCLUDE [disambiguate-generic-type-for-groupcollection](../../../includes/core-changes/corefx/3.0/disambiguate-generic-type-for-groupcollection.md)]
 
 ***
 
-[!INCLUDE[Custom EncoderFallbackBuffer instances cannot fall back recursively](~/includes/core-changes/corefx/3.0/custom-encoderfallbackbuffer-cannot-be-recursive.md)]
+[!INCLUDE[APIs that report version now report product and not file version](~/includes/core-changes/corefx/3.0/version-information-changes.md)]
 
 **_
+
+[!INCLUDE[Custom EncoderFallbackBuffer instances cannot fall back recursively](~/includes/core-changes/corefx/3.0/custom-encoderfallbackbuffer-cannot-be-recursive.md)]
+
+_*_
 
 [!INCLUDE[Floating point formatting and parsing behavior changes](~/includes/core-changes/corefx/3.0/floating-point-changes.md)]
 

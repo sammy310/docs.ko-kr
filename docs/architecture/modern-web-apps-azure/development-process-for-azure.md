@@ -3,13 +3,13 @@ title: Azure 개발 프로세스
 description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이션 설계 | Azure 개발 프로세스
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 8907c63f8dcd57ec22c3c196cbb1db52d91a3b5f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.date: 12/01/2020
+ms.openlocfilehash: 2706a4091565e6f3cb795acf031a238ae55a1068
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "91169039"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851629"
 ---
 # <a name="development-process-for-azure"></a>Azure 개발 프로세스
 
@@ -26,13 +26,13 @@ ms.locfileid: "91169039"
 
 개발자가 완전하고 강력한 IDE를 선호하든 아니면 가볍고 민첩한 편집기를 선호하든, Microsoft에서는 ASP.NET Core 애플리케이션 개발에 필요한 모든 것을 제공해 드립니다.
 
-**Visual Studio 2019.** Visual Studio 2019는 ASP.NET Core용 애플리케이션을 개발하기 위한 동급 최고의 IDE입니다. 개발자의 생산성을 향상시키는 다양한 기능을 제공합니다. 이를 사용하여 애플리케이션을 개발하고 성능 및 기타 특성을 분석할 수 있습니다. 통합 디버거를 사용하면 코드 실행을 일시 중지하고 코드를 실행하면서 즉석에서 전후 단계로 이동할 수 있습니다. 기본 제공 테스트 실행기를 사용하면 테스트와 해당 결과를 구성할 수 있고 코딩하는 동안 라이브 유닛 테스트를 수행할 수도 있습니다. Live Share를 사용하면 다른 개발자와 실시간으로 공동 작업하여 네트워크를 통해 코드 세션을 원활하게 공유할 수 있습니다. 준비가 되면 Visual Studio에는 애플리케이션을 Azure 또는 원하는 호스트에 게시하는 데 필요한 모든 항목이 포함되어 있습니다.
+**Visual Studio 2019.** Visual Studio 2019는 ASP.NET Core용 애플리케이션을 개발하기 위한 동급 최고의 IDE입니다. 개발자의 생산성을 향상시키는 다양한 기능을 제공합니다. 이를 사용하여 애플리케이션을 개발하고 성능 및 기타 특성을 분석할 수 있습니다. 통합 디버거를 사용하면 코드 실행을 일시 중지하고 코드를 실행하면서 즉석에서 전후 단계로 이동할 수 있습니다. 기본 제공 테스트 실행기를 사용하면 테스트와 해당 결과를 구성할 수 있고 코딩하는 동안 라이브 유닛 테스트를 수행할 수도 있습니다. Live Share를 사용하면 다른 개발자와 실시간으로 협업하여 네트워크를 통해 코드 세션을 원활하게 공유할 수 있습니다. 준비가 되면 Visual Studio에는 애플리케이션을 Azure 또는 원하는 호스트에 게시하는 데 필요한 모든 항목이 포함되어 있습니다.
 
 [Visual Studio 2019 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **Visual Studio Code 및 dotnet CLI**(Mac, Linux 및 Windows용 플랫폼 간 도구). 모든 개발 언어를 지원하는 가벼운 플랫폼 간 편집기를 선호하는 경우 Microsoft Visual Studio Code 및 docker CLI를 사용하면 됩니다. 이러한 제품은 간단하지만 강력한 환경을 제공하여 개발자 워크플로를 간소화합니다. 또한 Visual Studio Code는 C\# 확장 및 웹 개발을 지원하며, 편집기 내에서 인텔리전스 및 바로 가기 작업을 제공합니다.
 
-[.NET Core SDK 다운로드](https://dotnet.microsoft.com/download)
+[.NET SDK 다운로드](https://dotnet.microsoft.com/download)
 
 [Visual Studio Code 다운로드](https://code.visualstudio.com/download)
 
@@ -56,13 +56,13 @@ CI/CD를 사용하여 ASP.NET Core 애플리케이션 개발을 시작하려면 
 
 **그림 10-1.** Azure Portal에서 새 Azure App Service 웹앱을 만듭니다.
 
-CI 빌드 프로세스는 프로젝트의 소스 제어 리포지토리에 새 코드가 커밋될 때마다 자동화된 빌드를 수행합니다. 이렇게 하면 코드에서 빌드하고(그리고 이상적으로 자동화된 테스트를 전달하고) 잠재적으로 배포할 수 있습니다. 이 CI 빌드는 웹 배포 패키지 아티팩트를 생성하고 CD 프로세스에서 사용할 수 있도록 게시합니다.
+CI 빌드 프로세스는 프로젝트의 소스 제어 리포지토리에 새 코드가 커밋될 때마다 자동화된 빌드를 수행합니다. 이 프로세스를 통해 코드가 빌드되고(이상적으로는 자동 테스트를 통과하고) 잠재적으로 배포될 수 있는 피드백을 즉시 얻을 수 있습니다. 이 CI 빌드는 웹 배포 패키지 아티팩트를 생성하고 CD 프로세스에서 사용할 수 있도록 게시합니다.
 
 [CI 빌드 프로세스 정의](/azure/devops/pipelines/ecosystems/dotnet-core)
 
 팀원 중 누군가가 새 코드를 커밋할 때마다 시스템이 빌드를 대기열에 추가하도록 연속 통합을 사용해야 합니다. 빌드가 아티팩트 중 하나로 웹 배포 패키지를 생성하는지 빌드를 테스트 및 확인합니다.
 
-빌드에 성공하면 CD 프로세스에서 CI 빌드 결과를 Azure 웹앱에 배포합니다. 이렇게 구성하려면 Azure App Service에 배포하는 *릴리스* 를 만들고 구성합니다.
+빌드에 성공하면 CD 프로세스에서 CI 빌드 결과를 Azure 웹앱에 배포합니다. 이 단계를 구성하려면 Azure App Service에 배포하는 ‘릴리스’를 만들고 구성합니다.
 
 [Azure 웹앱 배포](/azure/devops/pipelines/targets/webapp)
 
@@ -78,7 +78,7 @@ Azure 계정 및 CI/CD 프로세스 구성이 완료되면 Azure에서 호스트
 
 #### <a name="step-1-local-dev-environment-inner-loop"></a>1단계: 로컬 개발 환경 내부 루프
 
-Azure에 배포할 ASP.NET Core 애플리케이션 개발은 일반적인 애플리케이션 개발과 다르지 않습니다. Visual Studio 2017, dotnet CLI, Visual Studio Code 또는 원하는 편집기 중 자신에게 편한 로컬 개발 환경을 사용하시면 됩니다. 코드를 작성하고, 변경 내용을 실행 및 디버그하고, 자동화된 테스트를 실행하고, 변경 내용을 공유 소스 제어 리포지토리에 푸시할 준비가 완료될 때까지 소스 제어에 로컬로 커밋할 수 있습니다.
+Azure에 배포할 ASP.NET Core 애플리케이션 개발은 일반적인 애플리케이션 개발과 다르지 않습니다. Visual Studio 2019, dotnet CLI, Visual Studio Code 또는 원하는 편집기 중 자신에게 편한 로컬 개발 환경을 사용하면 됩니다. 코드를 작성하고, 변경 내용을 실행 및 디버그하고, 자동화된 테스트를 실행하고, 변경 내용을 공유 소스 제어 리포지토리에 푸시할 준비가 완료될 때까지 소스 제어에 로컬로 커밋할 수 있습니다.
 
 #### <a name="step-2-application-code-repository"></a>2단계. 애플리케이션 코드 리포지토리
 
@@ -90,7 +90,7 @@ Azure에 배포할 ASP.NET Core 애플리케이션 개발은 일반적인 애플
 
 #### <a name="step-4-build-server-continuous-delivery"></a>4단계. 빌드 서버: 지속적인 업데이트
 
-빌드가 성공하면 CD 프로세스에서는 생성된 빌드 아티팩트를 선택합니다. 여기에는 웹 배포 패키지가 포함됩니다. 빌드 서버는 이 패키지를 Azure App Service에 배포하여 기존 서비스를 새로 만든 서비스로 바꿉니다. 일반적으로 이 단계는 스테이징 환경을 대상으로 하지만, 일부 애플리케이션은 CD 프로세스를 통해 프로덕션 환경에 직접 배포합니다.
+빌드가 성공하면 CD 프로세스에서는 생성된 빌드 아티팩트를 선택합니다. 이 프로세스에는 웹 배포 패키지가 포함됩니다. 빌드 서버는 이 패키지를 Azure App Service에 배포하여 기존 서비스를 새로 만든 서비스로 바꿉니다. 일반적으로 이 단계는 스테이징 환경을 대상으로 하지만, 일부 애플리케이션은 CD 프로세스를 통해 프로덕션 환경에 직접 배포합니다.
 
 #### <a name="step-5-azure-app-service-web-app"></a>5단계. Azure App Service 웹앱
 

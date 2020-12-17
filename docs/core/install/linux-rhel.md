@@ -4,12 +4,12 @@ description: RHEL에 .NET SDK 및 .NET 런타임을 설치하는 다양한 방�
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 931cad51ff8e35ff16b67ff9b795feb36010a66b
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 0b6138185bfd3e2f50c1b31e82779165715a5b6e
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031793"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851642"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-rhel"></a>RHEL에 .NET SDK 또는 .NET 런타임 설치
 
@@ -50,28 +50,51 @@ RHEL의 Red Hat에서 .NET을 설치하려면 먼저 Red Hat 구독 관리자를
 
 ## <a name="rhel-8-"></a>RHEL 8 ✔️
 
-> [!TIP]
-> .NET 5.0은 AppStream 리포지토리에서 아직 사용할 수 없지만 .NET Core 3.1은 사용할 수 있습니다. .NET Core 3.1을 설치하려면 `aspnetcore-runtime-3.1` 또는 `dotnet-sdk-3.1`과 같은 적절한 패키지에서 `dnf install` 명령을 사용합니다. 다음은 .NET 5.0에 대한 지침입니다.
-
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
-```
+.NET은 RHEL 8의 AppStream 리포지토리에 포함되어 있습니다.
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
 ## <a name="rhel-7--net-50"></a>RHEL 7 ✔️ .NET 5.0
 
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+다음 명령은 `scl-utils` 패키지를 설치합니다.
 
 ```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
+sudo yum install scl-utils
 ```
 
-[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-yum.md)]
+### <a name="install-the-sdk"></a>SDK 설치
+
+.NET SDK를 사용하면 .NET으로 앱을 개발할 수 있습니다. .NET SDK를 설치하면 해당 런타임을 설치할 필요가 없습니다. .NET SDK를 설치하려면 다음 명령을 실행합니다.
+
+```bash
+subscription-manager repos --enable=rhel-7-server-dotnet-rpms
+yum install rh-dotnet50 -y
+scl enable rh-dotnet50 bash
+```
+
+다른 프로그램에 영향을 줄 수 있으므로 Red Hat은 `rh-dotnet50`을 영구적으로 사용 설정하는 것을 권장하지 않습니다. `rh-dotnet`을 영구적으로 사용 설정하려면 다음 줄을 _~/.bashrc_ 파일에 추가합니다.
+
+```bash
+source scl_source enable rh-dotnet50
+```
+
+### <a name="install-the-runtime"></a>런타임 설치
+
+.NET 런타임을 사용하면 런타임을 포함하지 않았던 .NET으로 만든 앱을 실행할 수 있습니다. 아래 명령은 ASP.NET Core 런타임을 설치하며 이는 .NET Core에 대해 가장 호환성이 높은 런타임입니다. 터미널에서 다음 명령을 실행합니다.
+
+```bash
+subscription-manager repos --enable=rhel-7-server-dotnet-rpms
+yum install rh-dotnet50-aspnetcore-runtime-5.0 -y
+scl enable rh-dotnet50 bash
+```
+
+다른 프로그램에 영향을 줄 수 있으므로 Red Hat은 `rh-dotnet50`을 영구적으로 사용 설정하는 것을 권장하지 않습니다. `rh-dotnet50`을 영구적으로 사용 설정하려면 다음 줄을 _~/.bashrc_ 파일에 추가합니다.
+
+```bash
+source scl_source enable rh-dotnet50
+```
+
+ASP.NET Core 런타임의 대안으로, ASP.NET Core 지원이 포함되지 않은 .NET 런타임을 설치할 수 있습니다. 위 명령에서 `rh-dotnet50-aspnetcore-runtime-5.0`을 `rh-dotnet50-dotnet-runtime-5.0`으로 바꿉니다.
 
 ## <a name="rhel-7--net-core-31"></a>RHEL 7 ✔️ .NET Core 3.1
 
@@ -106,13 +129,13 @@ source scl_source enable rh-dotnet31
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
 yum install rh-dotnet31-aspnetcore-runtime-3.1 -y
-scl enable rh-dotnet31-aspnetcore-runtime-3.1 bash
+scl enable rh-dotnet31 bash
 ```
 
-다른 프로그램에 영향을 줄 수 있으므로 Red Hat은 `rh-dotnet31-aspnetcore-runtime-3.1`을 영구적으로 사용 설정하는 것을 권장하지 않습니다. 예를 들어 `rh-dotnet31-aspnetcore-runtime-3.1`에는 기본 RHEL 버전과 다른 `libcurl` 버전이 포함됩니다. 이로 인해 다른 버전의 `libcurl`을 예상하지 않은 프로그램에 문제가 발생할 수 있습니다. `rh-dotnet31-aspnetcore-runtime-3.1`을 영구적으로 사용 설정하려면 다음 줄을 _~/.bashrc_ 파일에 추가합니다.
+다른 프로그램에 영향을 줄 수 있으므로 Red Hat은 `rh-dotnet31`을 영구적으로 사용 설정하는 것을 권장하지 않습니다. 예를 들어 `rh-dotnet31`에는 기본 RHEL 버전과 다른 `libcurl` 버전이 포함됩니다. 이로 인해 다른 버전의 `libcurl`을 예상하지 않은 프로그램에 문제가 발생할 수 있습니다. `rh-dotnet31`을 영구적으로 사용 설정하려면 다음 줄을 _~/.bashrc_ 파일에 추가합니다.
 
 ```bash
-source scl_source enable rh-dotnet31-aspnetcore-runtime-3.1
+source scl_source enable rh-dotnet31
 ```
 
 ASP.NET Core 런타임의 대안으로, ASP.NET Core 지원이 포함되지 않은 .NET Core 런타임을 설치할 수 있습니다. 위 명령에서 `rh-dotnet31-aspnetcore-runtime-3.1`을 `rh-dotnet31-dotnet-runtime-3.1`로 바꿉니다.

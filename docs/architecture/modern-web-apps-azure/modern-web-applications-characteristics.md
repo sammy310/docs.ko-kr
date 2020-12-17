@@ -6,13 +6,13 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 12/04/2019
-ms.openlocfilehash: 6241a9a3a51bd4d5228841caeaf3a7b652fc6eaa
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.date: 12/01/2020
+ms.openlocfilehash: 2a9e55250018352c8019d30a4d615ec39e619e31
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608363"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851232"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>최신 웹 애플리케이션의 특징
 
@@ -25,7 +25,7 @@ ASP.NET Core는 최신 웹 애플리케이션 및 클라우드 기반 호스팅 
 
 ## <a name="reference-application-eshoponweb"></a>참조 애플리케이션: eShopOnWeb
 
-이 지침에는 몇 가지 원칙과 권장 사항을 설명하는 참조 애플리케이션인 _eShopOnWeb_이 포함되어 있습니다. 이 애플리케이션은 셔츠, 커피 머그잔 및 기타 마케팅 항목의 카탈로그 검색을 지원하는 간단한 온라인 상점입니다. 이 참조 애플리케이션은 이해를 돕기 위한 의도로 간단하게 제작되었습니다.
+이 지침에는 몇 가지 원칙과 권장 사항을 설명하는 참조 애플리케이션인 _eShopOnWeb_ 이 포함되어 있습니다. 이 애플리케이션은 셔츠, 커피 머그잔 및 기타 마케팅 항목의 카탈로그 검색을 지원하는 간단한 온라인 상점입니다. 이 참조 애플리케이션은 이해를 돕기 위한 의도로 간단하게 제작되었습니다.
 
 ![eShopOnWeb](./media/image2-1.png)
 
@@ -42,7 +42,7 @@ ASP.NET Core는 메모리가 적고 처리량이 높기 때문에 클라우드(�
 
 ## <a name="cross-platform"></a>플랫폼 간
 
-ASP.NET Core는 플랫폼 간 구현이며 Linux, macOS 및 Windows에서 실행할 수 있습니다. 이는 ASP.NET Core로 빌드된 앱의 개발 및 배포를 위한 많은 새 옵션을 제공합니다. Docker 컨테이너(Linux 및 Windows 모두)는 ASP.NET Core 애플리케이션을 호스팅하여 [컨테이너 및 마이크로 서비스](../microservices/index.md)의 이점을 활용할 수 있습니다.
+ASP.NET Core는 플랫폼 간 구현이며 Linux, macOS 및 Windows에서 실행할 수 있습니다. 이 기능은 ASP.NET Core로 빌드된 앱의 개발과 배포를 위한 많은 새 옵션을 제공합니다. Docker 컨테이너(Linux 및 Windows 모두)는 ASP.NET Core 애플리케이션을 호스팅하여 [컨테이너 및 마이크로 서비스](../microservices/index.md)의 이점을 활용할 수 있습니다.
 
 ## <a name="modular-and-loosely-coupled"></a>모듈형 및 느슨하게 결합
 

@@ -1,13 +1,13 @@
 ---
 title: dotnet sln 명령
 description: dotnet-sln 명령은 솔루션 파일의 프로젝트를 추가, 제거 및 나열하는 간편한 옵션을 제공합니다.
-ms.date: 02/14/2020
-ms.openlocfilehash: 898c53772a28b8cc3b65532dfc3d9bd6e73d467c
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/07/2020
+ms.openlocfilehash: 480634550f6fa1983bb46f51b439dc8a686ead3c
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634372"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851702"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -194,3 +194,19 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   ```dotnetcli
   dotnet sln todo.sln remove (ls -r **/*.csproj)
   ```
+
+- 솔루션, 콘솔 앱 및 두 개의 클래스 라이브러리를 만듭니다. 솔루션에 프로젝트를 추가하고 `dotnet sln`의 `--solution-folder` 옵션을 사용하여 클래스 라이브러리를 솔루션 폴더로 구성합니다.
+
+  ```dotnetcli
+  dotnet new sln -n mysolution
+  dotnet new console -o myapp
+  dotnet new classlib -o mylib1
+  dotnet new classlib -o mylib2
+  dotnet sln mysolution.sln add myapp\myapp.csproj
+  dotnet sln mysolution.sln add mylib1\mylib1.csproj --solution-folder mylibs
+  dotnet sln mysolution.sln add mylib2\mylib2.csproj --solution-folder mylibs
+  ```
+
+  다음 스크린샷은 Visual Studio 2019 **솔루션 탐색기** 에서 결과를 보여 줍니다.
+
+  :::image type="content" source="media/dotnet-sln/dotnet-sln-solution-folder.png" alt-text="솔루션 폴더로 그룹화된 클래스 라이브러리 프로젝트를 보여 주는 솔루션 탐색기":::

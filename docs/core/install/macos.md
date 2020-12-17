@@ -4,12 +4,12 @@ description: .NET을 설치할 수 있는 macOS 버전에 대해 알아봅니다
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: f926479227f11def5c8bb8c6bf29ad30a04e6ed2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b1434938a8e8e81da81e495a6b99e6c99467aae1
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715136"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009360"
 ---
 # <a name="install-net-on-macos"></a>macOS에 .NET 설치
 
@@ -35,6 +35,7 @@ ms.locfileid: "95715136"
 
 | 운영 체제          | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |---------------------------|---------------|---------------|----------------|
+| macOS 11.0 “Big Sur”        | ✔️ 2.1([릴리스 정보][release-notes-21]) | ✔️ 3.1([릴리스 정보][release-notes-31]) | ✔️ 5.0([릴리스 정보][release-notes-50]) |
 | macOS 10.15 “Catalina”    | ✔️ 2.1([릴리스 정보][release-notes-21]) | ✔️ 3.1([릴리스 정보][release-notes-31]) | ✔️ 5.0([릴리스 정보][release-notes-50]) |
 | macOS 10.14 “Mojave”      | ✔️ 2.1([릴리스 정보][release-notes-21]) | ✔️ 3.1([릴리스 정보][release-notes-31]) | ✔️ 5.0([릴리스 정보][release-notes-50]) |
 | macOS 10.13 “High Sierra” | ✔️ 2.1([릴리스 정보][release-notes-21]) | ✔️ 3.1([릴리스 정보][release-notes-31]) | ✔️ 5.0([릴리스 정보][release-notes-50]) |
@@ -79,8 +80,8 @@ SDK는 .NET 앱과 라이브러리를 빌드하고 게시하는 데 사용됩니
 | 5.0               | High Sierra(10.13+)  | X64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md) |
 | 3.1               | High Sierra(10.13+)  | X64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
 | 3.0               | High Sierra(10.13+)  | X64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
-| 2.2               | Sierra(10.12+)       | X64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
-| 2.1               | Sierra(10.12+)       | X64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+| 2.2               | Sierra(10.12+)       | X64 | [추가 정보](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
+| 2.1               | Sierra(10.12+)       | X64 | [추가 정보](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
 
 macOS Catalina(버전10.15)부터, 2019년 6월 1일 이후에 빌드되어 개발자 ID로 배포되는 모든 소프트웨어는 공증을 받아야 합니다. 이 요구 사항은 .NET 런타임, .NET SDK, .NET으로 만든 소프트웨어에 적용됩니다.
 

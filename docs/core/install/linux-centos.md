@@ -4,12 +4,12 @@ description: CentOS에 .NET SDK 및 .NET 런타임을 설치하는 다양한 방
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: b30aa206057107aa17fcd62e0f042f9fe3ad56dc
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 2c3453c79a1dc31f01577bc0c1b9e320eb307c0a
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031932"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851681"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-centos"></a>CentOS에 .NET SDK 또는 .NET 런타임 설치
 
@@ -50,14 +50,7 @@ ms.locfileid: "96031932"
 
 ## <a name="centos-8-"></a>CentOS 8 ✔️
 
-> [!TIP]
-> .NET 5.0은 기본 패키지 리포지토리에서 아직 사용할 수 없지만 .NET Core 3.1은 사용할 수 있습니다. .NET Core 3.1을 설치하려면 `aspnetcore-runtime-3.1` 또는 `dotnet-sdk-3.1`과 같은 적절한 패키지에서 `dnf install` 명령을 사용합니다. 다음은 .NET 5.0에 대한 지침입니다.
-
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-```bash
-sudo rpm -Uvh https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm
-```
+.NET 5.0은 CentOS 8의 기본 패키지 리포지토리에서 사용할 수 있습니다.
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 

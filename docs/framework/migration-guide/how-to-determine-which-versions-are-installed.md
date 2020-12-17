@@ -1,24 +1,27 @@
 ---
 title: 설치된 .NET Framework 버전 확인
 description: 코드, regedit.exe 또는 PowerShell을 사용하여 Windows 레지스트리를 쿼리하는 방법으로 컴퓨터에 설치된 .NET Framework 버전을 검색합니다.
-ms.date: 02/03/2020
+ms.date: 12/04/2020
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - versions, determining for .NET Framework
-- .NET Framework, determining version
+- .NET Framework, determining installed versions
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: b4c5b6911a4be4f9ac156b600646c649549f88f8
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: a219514fafdcb17db259e089afa8318dbab24811
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438138"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851831"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
 
 사용자는 컴퓨터에 여러 버전의 .NET Framework를 [설치](../install/index.md)하여 실행할 수 있습니다. 따라서 앱을 개발하거나 배포할 때 사용자 컴퓨터에 설치된 .NET Framework 버전을 알아야 할 수도 있습니다. 레지스트리에는 컴퓨터에 설치된 .NET Framework 버전 목록이 포함되어 있습니다.
+
+> [!NOTE]
+> 이 문서는 .NET Framework와 관련이 있습니다. 설치된 .NET Core, .NET 5 이상 SDK, 런타임을 확인하려면 [.NET이 설치되어 있는지 확인하는 방법](../../core/install/how-to-detect-installed-versions.md)을 참조하세요.
 
 .NET Framework는 버전이 별도로 관리되는 다음 두 가지 주요 구성 요소로 이루어져 있습니다.
 
@@ -37,6 +40,21 @@ ms.locfileid: "96438138"
   PowerShell 2.0 모듈
 
 .NET Framework 버전별로 설치된 업데이트를 검색하는 방법에 대한 자세한 내용은 [방법: 설치된 .NET Framework 업데이트 확인](how-to-determine-which-net-framework-updates-are-installed.md).
+
+## <a name="determine-which-net-implementation-and-version-an-app-is-running-on"></a>앱이 실행되고 있는 .NET 구현과 버전 확인
+
+<xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType> 속성을 사용하여 앱이 실행되는 .NET 구현과 버전을 쿼리할 수 있습니다. 앱이 .NET Framework에서 실행되는 경우 출력은 다음과 같습니다.
+
+```output
+.NET Framework 4.8.4250.0
+```
+
+한편 앱이 .NET Core나 .NET 5 이상에서 실행되는 경우 출력은 다음과 같습니다.
+
+```output
+.NET Core 3.1.9
+.NET 5.0.0
+```
 
 ## <a name="detect-net-framework-45-and-later-versions"></a>.NET Framework 4.5 이상 버전 검색
 
@@ -81,13 +99,13 @@ ms.locfileid: "96438138"
 
 ### <a name="use-registry-editor"></a>레지스트리 편집기 사용
 
-01. **시작** 메뉴에서 **실행** 을 선택하고 *regedit* 을 입력한 다음, **OK** 를 선택합니다.
+1. **시작** 메뉴에서 **실행** 을 선택하고 *regedit* 을 입력한 다음, **OK** 를 선택합니다.
 
    (regedit를 실행하려면 관리자 자격 증명이 있어야 합니다.)
 
-01. 레지스트리 편집기에서 다음 하위 키를 엽니다. **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full**. **Full** 하위 키가 없으면 .NET Framework 4.5 이상이 설치되지 않은 것입니다.
+1. 레지스트리 편집기에서 다음 하위 키를 엽니다. **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full**. **Full** 하위 키가 없으면 .NET Framework 4.5 이상이 설치되지 않은 것입니다.
 
-01. **Release** 라는 REG_DWORD 항목을 확인합니다. 릴리스 DWORD가 있으면 컴퓨터에 .NET Framework 4.5 이상이 설치된 것입니다. 항목 값은 특정 .NET Framework 버전에 해당합니다. 예를 들어 다음 그림에서 **Release** 항목의 값은 528040으로, 이것은 .NET Framework 4.8의 릴리스 키입니다.
+1. **Release** 라는 REG_DWORD 항목을 확인합니다. 릴리스 DWORD가 있으면 컴퓨터에 .NET Framework 4.5 이상이 설치된 것입니다. 항목 값은 특정 .NET Framework 버전에 해당합니다. 예를 들어 다음 그림에서 **Release** 항목의 값은 528040으로, 이것은 .NET Framework 4.8의 릴리스 키입니다.
 
    ![.NET Framework 4.5의 레지스트리 항목](./media/clr-installdir.png )
 

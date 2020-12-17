@@ -6,16 +6,16 @@ ms.author: adegeo
 ms.date: 11/10/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 39020a32cdea9b82dc9d30e62e663ebc4ee39ebb
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 2fc12c8c398b1a74d623e53884df666f4d4b85f1
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687444"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851616"
 ---
 # <a name="how-to-check-that-net-is-already-installed"></a>.NET이 설치되어 있는지 확인하는 방법
 
-이 문서에서는 컴퓨터에 설치된 .NET 런타임 및 SDK의 버전을 확인하는 방법을 알아봅니다. Visual Studio 또는 Mac용 Visual Studio와 같은 통합 개발 환경이 설치된 경우 .NET이 이미 설치되어 있을 수 있습니다.
+이 문서에서는 컴퓨터에 설치된 .NET 런타임 및 SDK의 버전을 확인하는 방법을 알아봅니다. Visual Studio 또는 Mac용 Visual Studio와 같은 통합 개발 환경을 사용하는 경우 .NET이 이미 설치되어 있을 수 있습니다.
 
 SDK를 설치하면 그에 해당하는 런타임도 설치됩니다.
 
@@ -139,7 +139,7 @@ Microsoft.NETCore.App 5.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="check-for-install-folders"></a>설치 폴더 확인
 
-.NET이 설치되어 있지만 운영 체제 또는 사용자 프로필의 `PATH` 변수에 추가되지 않았을 수 있습니다. 이전 섹션에서 명령을 실행하면 작동하지 않을 수 있습니다. 또는 .NET 설치 폴더가 있는지 확인할 수 있습니다.
+.NET이 설치되어 있지만 운영 체제 또는 사용자 프로필의 `PATH` 변수에 추가되지 않았을 수 있습니다. 이 경우 이전 섹션의 명령이 작동하지 않을 수 있습니다. 또는 .NET 설치 폴더가 있는지 확인할 수 있습니다.
 
 설치 관리자 또는 스크립트에서 .NET을 설치하면 표준 폴더에 설치됩니다. 대부분의 경우 .NET을 설치하는 데 사용하는 설치 관리자나 스크립트는 다른 폴더에 설치할 수 있는 옵션을 제공합니다. 다른 폴더에 설치하도록 선택한 경우 폴더 경로의 시작을 조정합니다.
 
@@ -191,3 +191,7 @@ _/usr/local/share/dotnet/shared/{runtime-type}/{version}/_
 - [Windows용 .NET 런타임 및 SDK 설치](windows.md).
 - [macOS용 .NET 런타임 및 SDK 설치](macos.md).
 - [Linux용 .NET 런타임 SDK 설치](linux.md).
+
+## <a name="see-also"></a>참조
+
+- [설치된 .NET Framework 버전 확인](../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)

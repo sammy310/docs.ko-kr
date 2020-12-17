@@ -5,17 +5,17 @@ author: ardalis
 ms.author: wiwagn
 no-loc:
 - Blazor
-ms.date: 12/04/2019
-ms.openlocfilehash: e8ea035c491fad39d2932572255a19c7c1493418
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.date: 12/01/2020
+ms.openlocfilehash: a4549e48152b21af05c67f601c1db65029e346fa
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174356"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851668"
 ---
 # <a name="common-client-side-web-technologies"></a>일반 클라이언트측 웹 기술
 
-> “웹 사이트는 안팎으로 보기에 좋아야 합니다.”  
+> “웹 사이트는 안팎으로 보기에 좋아야 합니다.”
 > _- Paul Cookson_
 
 ASP.NET Core 애플리케이션은 웹 애플리케이션이며 일반적으로 HTML, CSS 및 JavaScript와 같은 클라이언트측 웹 기술에 의존합니다. 레이아웃과 스타일(CSS), 동작(JavaScript를 통해)에서 페이지(HTML)의 콘텐츠를 분리하면 복잡한 웹앱에서 관심사 분리 원칙을 활용할 수 있습니다. 이러한 관심사가 긴밀히 연결되어 있지 않으면 향후에 애플리케이션의 구조, 디자인 또는 동작을 더 쉽게 변경할 수 있습니다.
@@ -23,7 +23,7 @@ ASP.NET Core 애플리케이션은 웹 애플리케이션이며 일반적으로 
 HTML 및 CSS는 상대적으로 안정적인 반면, JavaScript는 웹 기반 애플리케이션 빌드를 위해 애플리케이션 프레임워크와 유틸리티 개발자가 함께 일하는 덕분에 빠른 속도로 발전하고 있습니다. 이 장에서는 웹 개발자가 JavaScript를 사용하는 몇 가지 방법을 살펴보고 Angular 및 React 클라이언트 쪽 라이브러리의 간단한 개요를 제공합니다.
 
 > [!NOTE]
-> Blazor는 풍부한 대화형 클라이언트 사용자 인터페이스를 빌드하기 위해 JavaScript 프레임워크에 대한 대안을 제공합니다. 클라이언트 쪽 Blazor 지원은 아직 미리 보기 상태이므로 지금은 이 장에서 다루지 않습니다.
+> Blazor는 풍부한 대화형 클라이언트 사용자 인터페이스를 빌드하기 위해 JavaScript 프레임워크에 대한 대안을 제공합니다.
 
 ## <a name="html"></a>HTML
 
@@ -65,7 +65,7 @@ JavaScript는 ECMAScript 언어 사양에 표준화된 동적이고 해석된 �
 
 JavaScript 프레임워크 표준에서 유래되었음에도 jQuery는 여전히 HTML/CSS로 작업하고 웹 API에 대한 AJAX 호출을 수행하는 애플리케이션을 빌드하기 위해 일반적으로 사용되는 라이브러리입니다. 그러나 jQuery는 브라우저 DOM(문서 개체 모델)의 수준에서 작동하며, 기본적으로 선언적이 아닌 명령적 모델을 제공합니다.
 
-예를 들어 텍스트 상자의 값이 10을 초과하는 경우 페이지에 요소가 표시되어야 합니다. jQuery에서는 일반적으로 텍스트 상자의 값을 검사하고 해당 값에 따라 대상 요소의 표시 여부를 설정하는 코드를 사용하여 이벤트 처리기를 작성하면 이를 구현할 수 있습니다. 이는 명령형 코드 기반 방법입니다. 대신 다른 프레임워크가 데이터 바인딩을 사용하여 텍스트 상자의 값에 따라 요소의 표시 여부를 선언적으로 바인딩할 수 있습니다. 코드를 작성할 필요는 없으나, 대신 데이터 바인딩 특성이 포함된 요소를 데코레이팅해야 합니다. 클라이언트측 동작이 더 복잡해짐에 따라 데이터 바인딩 방식은 코드 및 조건부 복잡성이 덜한 더 간단한 솔루션이 됩니다.
+예를 들어 텍스트 상자의 값이 10을 초과하는 경우 페이지에 요소가 표시되어야 합니다. jQuery에서는 일반적으로 텍스트 상자의 값을 검사하고 해당 값에 따라 대상 요소의 표시 여부를 설정하는 코드를 사용하여 이벤트 처리기를 작성하면 이 기능을 구현할 수 있습니다. 이 프로세스는 명령형 코드 기반 방법입니다. 대신 다른 프레임워크가 데이터 바인딩을 사용하여 텍스트 상자의 값에 따라 요소의 표시 여부를 선언적으로 바인딩할 수 있습니다. 이 방법에서는 코드를 작성할 필요는 없으나, 대신 데이터 바인딩 특성이 포함된 요소를 데코레이팅해야 합니다. 클라이언트측 동작이 더 복잡해짐에 따라 데이터 바인딩 방식은 코드 및 조건부 복잡성이 덜한 더 간단한 솔루션이 됩니다.
 
 ### <a name="jquery-vs-a-spa-framework"></a>jQuery 대 SPA 프레임워크
 
@@ -80,11 +80,11 @@ JavaScript 프레임워크 표준에서 유래되었음에도 jQuery는 여전�
 
 대부분의 jQuery 기능 부족은 본질적으로 다른 라이브러리를 추가하여 채울 수 있습니다. 그러나 Angular와 같은 SPA 프레임워크는 이러한 기능을 더 통합된 방식으로 제공합니다. 처음부터 이러한 사항 모두를 고려하여 설계되었기 때문입니다. 또한 jQuery는 명령적 라이브러리입니다. 즉, jQuery를 사용한 작업을 수행하려면 jQuery 함수를 호출해야 합니다. SPA 프레임워크가 제공하는 많은 작업과 기능은 실제 코드를 작성할 필요 없이 선언적으로 수행될 수 있습니다.
 
-데이터 바인딩은 이에 대한 좋은 예입니다. jQuery에서는 일반적으로 단 한 줄의 코드로 DOM 요소의 값을 가져오거나 요소의 값을 설정합니다. 단, 이 코드는 요소의 값을 변경해야 때마다 작성해야 하며, 경우에 따라 이는 페이지의 여러 기능에서 발생합니다. 또 다른 일반적인 예제는 요소 표시 유형입니다. jQuery에서는 여러 다른 위치에서 특정 요소를 표시할지 여부를 제어하는 코드를 작성해야 할 수 있습니다. 이러한 각각의 경우에서 데이터 바인딩을 사용할 때 코드를 작성할 필요가 없습니다. 문제의 값 또는 요소의 표시 여부를 페이지의 ‘viewmodel’에 바인딩하기만 하면 해당 viewmodel에 대한 변경 사항이 자동으로 바인딩된 요소에 반영됩니다.
+데이터 바인딩은 이 기능의 좋은 예입니다. jQuery에서는 일반적으로 단 한 줄의 코드로 DOM 요소의 값을 가져오거나 요소의 값을 설정합니다. 단, 이 코드는 요소의 값을 변경해야 때마다 작성해야 하며, 경우에 따라 이는 페이지의 여러 기능에서 발생합니다. 또 다른 일반적인 예제는 요소 표시 유형입니다. jQuery에서는 여러 다른 위치에서 특정 요소를 표시할지 여부를 제어하는 코드를 작성해야 할 수 있습니다. 이러한 각각의 경우에서 데이터 바인딩을 사용할 때 코드를 작성할 필요가 없습니다. 문제의 값 또는 요소의 표시 여부를 페이지의 ‘viewmodel’에 바인딩하기만 하면 해당 viewmodel에 대한 변경 사항이 자동으로 바인딩된 요소에 반영됩니다.
 
 ### <a name="angular-spas"></a>Angular SPA
 
-Angular는 세계에서 가장 인기 있는 JavaScript 프레임워크 중 하나로 남아 있습니다. Angular 2부터 팀이 처음부터 프레임워크를 다시 빌드하고([TypeScript](https://www.typescriptlang.org/) 사용) 원래 AngularJS 이름에서 간단히 Angular로 브랜드를 변경할 수 있습니다. 이제 몇 년이 지나 다시 디자인된 Angular는 여전히 단일 페이지 애플리케이션을 빌드하기 위한 강력한 프레임워크입니다.
+Angular는 세계에서 가장 인기 있는 JavaScript 프레임워크 중 하나로 남아 있습니다. Angular 2부터 팀이 처음부터 프레임워크를 다시 빌드하고([TypeScript](https://www.typescriptlang.org/) 사용) 원래 AngularJS 이름에서 Angular로 브랜드를 변경할 수 있습니다. 이제 몇 년이 지나 다시 디자인된 Angular는 여전히 단일 페이지 애플리케이션을 빌드하기 위한 강력한 프레임워크입니다.
 
 Angular 애플리케이션은 구성 요소에서 빌드됩니다. 구성 요소는 특정 개체와 HTML 템플릿을 결합하고 페이지의 일부를 제어합니다. Angular 문서의 간단한 구성 요소는 다음과 같습니다.
 
@@ -105,7 +105,7 @@ DOM 요소 대신 구성 요소 및 템플릿을 사용하면 Angular 앱은 추
 
 CLI를 사용하여 Angular 앱을 개발할 수 있습니다. 로컬에서 Angular 개발을 시작하면(이미 git 및 npm이 설치되어 있다고 가정) 바로 GitHub에서 리포지토리 복제가 구성되고 `npm install` 및 `npm start`가 실행됩니다. 이 외에 Angular는 프로젝트를 만들고, 파일을 추가하고, 테스트, 묶음 및 배포 작업을 지원할 수 있는 자체 CLI를 함께 제공합니다. 이러한 CLI 친화성 덕분에 Angular는 CLI 지원 역시 뛰어난 ASP.NET Core와 호환됩니다.
 
-Microsoft는 Angular SPA 구현을 포함하는 [eShopOnContainers](https://aka.ms/MicroservicesArchitecture)라는 참조 애플리케이션을 개발했습니다. 이 앱에는 온라인 상점의 장바구니를 관리하고, 해당 카탈로그의 항목을 로드 및 표시하며, 주문 생성을 처리하는 Angular 모듈이 포함됩니다. [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA)에서 샘플 애플리케이션을 보고 다운로드할 수 있습니다.
+Microsoft는 Angular SPA 구현을 포함하는 eShopOnContainers라는 참조 애플리케이션을 개발했습니다. 이 앱에는 온라인 상점의 장바구니를 관리하고, 해당 카탈로그의 항목을 로드 및 표시하며, 주문 생성을 처리하는 Angular 모듈이 포함됩니다. [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA)에서 샘플 애플리케이션을 보고 다운로드할 수 있습니다.
 
 ### <a name="react"></a>React
 
@@ -161,9 +161,19 @@ var app = new Vue({
 
 물론, 이는 Vue에서 사용할 수 있는 기능의 일부에 불과합니다. 지난 몇 년간 많은 인기를 얻으며 대규모 커뮤니티가 형성되었습니다. Vue와 함께 사용하여 그 기능을 확장할 수 있는 [지원 구성 요소 및 라이브러리](https://github.com/vuejs/awesome-vue#redux)는 방대하며 계속 확장되고 있습니다. 웹 애플리케이션에 클라이언트 쪽 동작을 추가하거나 전체 SPA를 빌드하려는 경우 Vue는 고려할 가치가 있습니다.
 
+### <a name="no-locblazor-webassembly"></a>Blazor WebAssembly
+
+다른 JavaScript 프레임워크와 달리 `Blazor WebAssembly`는 .NET을 사용하여 대화형 클라이언트 쪽 웹앱을 빌드하기 위한 SPA(단일 페이지 앱) 프레임워크입니다. Blazor WebAssembly는 플러그 인을 사용하거나 다른 언어로 코드를 다시 컴파일하지 않고 개방형 웹 표준을 사용합니다. Blazor WebAssembly는 모바일 브라우저를 비롯한 모든 최신 웹 브라우저에서 작동합니다.
+
+웹 브라우저 내에서 .NET 코드를 실행하는 것은 WebAssembly(약식 `wasm`)를 통해 가능합니다. WebAssembly는 빠른 다운로드와 최대 실행 속도를 위해 최적화된 압축 바이트 코드 형식입니다. WebAssembly는 공개 웹 표준이며 플러그 인 없이 웹 브라우저에서 지원됩니다.
+
+WebAssembly 코드는 JavaScript 상호 운용성(종종 JavaScript interop 또는 JS interop로 단축됨)이라고 하는 JavaScript를 통해 브라우저의 전체 기능에 액세스할 수 있습니다. 브라우저에서 WebAssembly를 통해 실행된 .NET 코드는 브라우저의 JavaScript 샌드박스에서 클라이언트 컴퓨터의 악의적 활동에 대해 제공하는 보호를 사용하여 실행됩니다.
+
+자세한 내용은 [ASP.NET Core Blazor 소개](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-5.0)를 참조하세요.
+
 ### <a name="choosing-a-spa-framework"></a>SPA 프레임워크 선택
 
-SPA를 지원하기에 어떤 JavaScript 프레임워크가 최선인지를 고려할 때는 다음 고려 사항을 염두에 두어야 합니다.
+SPA를 지원하기에 어떤 옵션이 최선인지를 고려할 때는 다음 고려 사항을 염두에 두어야 합니다.
 
 - 팀이 프레임워크 및 해당 종속성에 대해 잘 알고 있는가(일부 경우에 TypeScript 포함)?
 
@@ -177,7 +187,7 @@ SPA를 지원하기에 어떤 JavaScript 프레임워크가 최선인지를 고�
 
 - 해당 코어 팀은 얼마나 활발한가? 문제가 해결되고 있는가? 또 새 버전이 정기적으로 제공되는가?
 
-JavaScript 프레임워크는 지속적으로 매우 빠르게 발전하고 있습니다. 나중에 종속된 것을 후회하게 될 프레임워크의 선택 위험을 완화하는 데 도움을 받으려면 위에 나열된 고려 사항을 사용하세요. 특히 안전 주의자인 경우 상용 지원을 제공하고 또는 대기업에서 개발되는 프레임워크를 고려하세요.
+프레임워크는 지속해서 매우 빠르게 발전하고 있습니다. 나중에 종속된 것을 후회하게 될 프레임워크의 선택 위험을 완화하는 데 도움을 받으려면 위에 나열된 고려 사항을 사용하세요. 특히 안전 주의자인 경우 상용 지원을 제공하고 또는 대기업에서 개발되는 프레임워크를 고려하세요.
 
 > ### <a name="references--client-web-technologies"></a>참조 - 클라이언트 웹 기술
 >

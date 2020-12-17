@@ -3,20 +3,20 @@ title: ASP.NET Core MVC 앱 개발
 description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이션 설계 | ASP.NET Core MVC 앱 개발
 author: ardalis
 ms.author: wiwagn
-ms.date: 08/12/2020
+ms.date: 12/01/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: e746362657a25487e98ddac09fa4337b00dfe805
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c0fc92b2dbc25a1a48e0264b64c79fc8631fa8f0
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169130"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009666"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 개발
 
-> "처음에는 제대로 하는 것이 중요하지 않습니다. 그러나 마지막에 제대로 하는 것은 매우 중요합니다."  
+> "처음에는 제대로 하는 것이 중요하지 않습니다. 그러나 마지막에 제대로 하는 것은 매우 중요합니다."
 > _- Andrew Hunt 및 David Thomas_
 
 ASP.NET Core는 최신 클라우드에 최적화된 웹 애플리케이션을 빌드하기 위한 플랫폼 간 오픈 소스 프레임워크입니다. ASP.NET Core 앱은 간단하고 모듈화되어 있으며, 종속성 주입에 대한 기본 제공 지원을 통해 더 큰 테스트와 유지 관리가 가능합니다. 뷰 기반 앱 외에도 최신 웹 API를 작성할 수 있도록 지원하는 MVC와 함께 ASP.NET Core는 엔터프라이즈 웹 애플리케이션을 빌드할 수 있는 강력한 프레임워크입니다.
@@ -25,11 +25,11 @@ ASP.NET Core는 최신 클라우드에 최적화된 웹 애플리케이션을 �
 
 ASP.NET Core MVC는 웹 기반 API 및 앱을 빌드하기 위해 유용한 많은 기능을 제공합니다. MVC라는 용어는 사용자 요청에 응답할 책임을 여러 부분으로 분리하는 UI 패턴인 "Model-View-Controller"를 나타냅니다. 이 패턴을 수행하는 것 외에도 ASP.NET Core 앱의 기능을 Razor Pages로 구현할 수도 있습니다. Razor Pages는 ASP.NET Core MVC에 빌드되어 라우팅, 모델 바인딩, 필터, 권한 부여 등에 대해 동일한 기능을 사용합니다. 그러나 컨트롤러, 모델, 보기 등에 대한 별도 폴더 및 파일을 포함하고 특성 기반 라우팅을 사용하는 대신 Razor Pages는 단일 폴더에 배치되고(“/Pages”), 이 폴더의 상대 위치에 따라 라우팅되며, 컨트롤러 작업이 아닌 처리기를 사용하여 요청을 처리합니다. 따라서 Razor Pages를 사용하는 경우 필요한 모든 파일 및 클래스는 일반적으로 웹 프로젝트 전체에 분산되지 않고 공동 배치됩니다.
 
-새 ASP.NET Core 앱을 만들려면 빌드하려는 앱의 종류에 유의하여 계획해야 합니다. Visual Studio에서는 여러 템플릿 중에서 선택할 수 있습니다. 세 가지 가장 일반적인 프로젝트 템플릿은 Web API, 웹 애플리케이션 및 웹 애플리케이션(Model-View-Controller)입니다. 프로젝트를 처음 만들 때 이 결정을 내리지만 결정을 번복할 수 있습니다. Web API 프로젝트에서는 표준 Model-View-Controller 컨트롤러를 사용합니다. 기본적으로 Views가 없습니다. 마찬가지로, 기본 웹 애플리케이션 템플릿도 Razor Pages를 사용하므로 Views 폴더가 없습니다. 나중에 이러한 프로젝트에 Views 폴더를 추가하여 보기 기반 동작을 지원할 수 있습니다. Web API 및 Model-View-Controller 프로젝트에는 기본적으로 Pages 폴더가 포함되지 않지만 나중에 추가하여 Razor Pages 기반 동작을 지원할 수 있습니다. 이러한 세 가지 템플릿이 세 가지 종류의 기본 사용자 상호 작용(데이터(웹 API), 페이지 기반 및 보기 기반)을 지원한다고 여길 수 있습니다. 그러나 원하는 경우 단일 프로젝트 내에서 이 중 일부 또는 전체를 혼합하고 일치시킬 수 있습니다.
+새 ASP.NET Core 앱을 만들려면 빌드하려는 앱의 종류에 유의하여 계획해야 합니다. Visual Studio에서는 여러 템플릿 중에서 선택할 수 있습니다. 세 가지 가장 일반적인 프로젝트 템플릿은 Web API, 웹 애플리케이션 및 웹 애플리케이션(Model-View-Controller)입니다. 프로젝트를 처음 만들 때 이 결정을 내리지만 결정을 번복할 수 있습니다. Web API 프로젝트에서는 표준 Model-View-Controller 컨트롤러를 사용합니다. 기본적으로 Views가 없습니다. 마찬가지로, 기본 웹 애플리케이션 템플릿도 Razor Pages를 사용하므로 Views 폴더가 없습니다. 나중에 이러한 프로젝트에 Views 폴더를 추가하여 보기 기반 동작을 지원할 수 있습니다. Web API 및 Model-View-Controller 프로젝트에는 기본적으로 Pages 폴더가 포함되지 않지만 나중에 추가하여 Razor Pages 기반 동작을 지원할 수 있습니다. 이러한 세 가지 템플릿이 세 가지 종류의 기본 사용자 상호 작용(데이터(웹 API), 페이지 기반 및 보기 기반)을 지원한다고 여길 수 있습니다. 그러나 원하는 경우 단일 프로젝트 내에서 해당 템플릿 중 일부 또는 전체를 혼합하고 일치시킬 수 있습니다.
 
 ### <a name="why-razor-pages"></a>Razor Pages를 사용하는 이유는 무엇인가요?
 
-Razor Pages는 Visual Studio의 새로운 웹 애플리케이션에 대한 기본 옵션입니다. Razor Pages는 SPA가 아닌 양식과 같은 페이지 기반 애플리케이션 기능을 빌드하는 간단한 방법을 제공합니다. 컨트롤러 및 보기를 사용하면 여러 가지 다른 종속성 및 보기 모델과 함께 작동하고 여러 가지 다른 보기를 반환하는 매우 큰 컨트롤러가 애플리케이션에 일반적으로 포함됩니다. 그러면 복잡성이 증가하고 단일 책임 원칙 또는 개방/폐쇄 원칙을 효과적으로 따르지 못하는 컨트롤러가 자주 발생합니다. Razor Pages는 Razor 태그를 사용하여 웹 애플리케이션에서 지정된 논리 "페이지"의 서버 쪽 논리를 캡슐화하여 이 문제를 해결합니다. 서버 쪽 논리가 없는 Razor Page는 간단히 Razor 파일로 이루어질 수 있습니다(예: "Index.cshtml"). 그러나 대부분의 특수 Razor Pages에는 연결된 페이지 모델 클래스가 포함됩니다. 해당 항목은 규칙에 따라 ".cs" 확장명인 Razor 파일과 동일하게 명명됩니다(예: "Index.cshtml.cs").
+Razor Pages는 Visual Studio의 새로운 웹 애플리케이션에 대한 기본 옵션입니다. Razor Pages는 SPA가 아닌 양식과 같은 페이지 기반 애플리케이션 기능을 빌드하는 간단한 방법을 제공합니다. 컨트롤러 및 보기를 사용하면 여러 가지 다른 종속성 및 보기 모델과 함께 작동하고 여러 가지 다른 보기를 반환하는 매우 큰 컨트롤러가 애플리케이션에 일반적으로 포함됩니다. 그러면 복잡성이 증가하고 단일 책임 원칙 또는 개방/폐쇄 원칙을 효과적으로 따르지 못하는 컨트롤러가 자주 발생합니다. Razor Pages는 Razor 태그를 사용하여 웹 애플리케이션에서 지정된 논리 "페이지"의 서버 쪽 논리를 캡슐화하여 이 문제를 해결합니다. 서버 쪽 논리가 없는 Razor Page는 Razor 파일로만 이루어질 수 있습니다(예: “Index.cshtml”). 그러나 대부분의 특수 Razor Pages에는 연결된 페이지 모델 클래스가 포함됩니다. 해당 항목은 규칙에 따라 ".cs" 확장명인 Razor 파일과 동일하게 명명됩니다(예: "Index.cshtml.cs").
 
 Razor Page의 페이지 모델은 MVC 컨트롤러 및 보기 모델의 책임을 결합합니다. 컨트롤러 작업 메서드를 사용하여 요청을 처리하는 대신 "OnGet()"과 같은 페이지 모델 처리기를 실행하여 기본적으로 연결된 해당 페이지를 렌더링합니다. Razor Pages는 ASP.NET Core 앱에서 개별 페이지를 빌드하는 프로세스를 간소화하는 동시에 ASP.NET Core MVC의 모든 아키텍처 기능을 제공합니다. 새 페이지 기반 기능에서 기본적으로 선택하는 것이 좋습니다.
 
@@ -41,7 +41,7 @@ Razor Pages를 사용하여 웹앱을 빌드하는지 아니면 MVC 보기를 �
 
 ## <a name="mapping-requests-to-responses"></a>요청을 응답에 매핑
 
-ASP.NET Core 앱은 본질적으로 들어오는 요청을 나가는 응답에 매핑합니다. 이 매핑은 낮은 수준에서 미들웨어로 수행되며, 간단한 ASP.NET Core 앱과 마이크로 서비스는 사용자 지정 미들웨어로만 구성될 수 있습니다. ASP.NET Core MVC를 사용하는 경우 _경로_ , _컨트롤러_ 및 _작업_ 과 관련하여 다소 높은 수준에서 작업할 수 있습니다. 들어오는 각 요청은 애플리케이션의 라우팅 테이블과 비교되며, 일치하는 경로가 있으면 연결된 작업 메서드(컨트롤러에 속함)가 호출되어 요청을 처리합니다. 일치하는 경로가 없으면 오류 처리기(이 경우 NotFound 결과를 반환)가 호출됩니다.
+ASP.NET Core 앱은 본질적으로 들어오는 요청을 나가는 응답에 매핑합니다. 이 매핑은 낮은 수준에서 미들웨어로 수행되며, 간단한 ASP.NET Core 앱과 마이크로 서비스는 사용자 지정 미들웨어로만 구성될 수 있습니다. ASP.NET Core MVC를 사용하는 경우 _경로_, _컨트롤러_ 및 _작업_ 과 관련하여 다소 높은 수준에서 작업할 수 있습니다. 들어오는 각 요청은 애플리케이션의 라우팅 테이블과 비교되며, 일치하는 경로가 있으면 연결된 작업 메서드(컨트롤러에 속함)가 호출되어 요청을 처리합니다. 일치하는 경로가 없으면 오류 처리기(이 경우 NotFound 결과를 반환)가 호출됩니다.
 
 ASP.NET Core MVC 앱은 기본 경로, 특성 경로 또는 둘 다를 사용할 수 있습니다. 기본 경로는 코드에 정의되며, 아래 예제와 같은 구문을 사용하여 라우팅 _규칙_ 을 지정합니다.
 
@@ -52,7 +52,7 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-이 예제에서는 "default"라는 경로가 라우팅 테이블에 추가되었습니다. _controller_ , _action_ 및 _id_ 에 대한 자리 표시자를 사용하여 경로 템플릿을 정의합니다. controller와 action 자리 표시자에는 기본값(각각 "Home"과 "Index")이 지정되어 있고, id 자리 표시자("?"가 적용됨)는 선택 사항입니다. 여기에 정의된 규칙에 따르면 요청의 첫 번째 부분과 두 번째 부분이 각각 컨트롤러의 이름 및 작업과 일치해야 하고, 필요한 경우 세 번째 부분은 id 매개 변수를 나타냅니다. 기본 경로는 일반적으로 Startup 클래스의 Configure 메서드와 같이 애플리케이션의 한 위치에 정의됩니다.
+이 예제에서는 "default"라는 경로가 라우팅 테이블에 추가되었습니다. `controller`, `action` 및 `id`에 대한 자리 표시자를 사용하여 경로 템플릿을 정의합니다. `controller`와 `action` 자리 표시자에는 기본값이 지정되어 있고(각각 `Home`과 `Index`), `id` 자리 표시자는 선택 사항입니다(“?”가 적용되었기 때문). 여기에 정의된 규칙에 따르면 요청의 첫 번째 부분과 두 번째 부분이 각각 컨트롤러의 이름 및 작업과 일치해야 하고, 필요한 경우 세 번째 부분은 ID 매개 변수를 나타냅니다. 기본 경로는 일반적으로 `Startup` 클래스의 `Configure` 메서드와 같이 애플리케이션의 한 위치에 정의됩니다.
 
 특성 경로는 전역적으로 지정되지 않고 컨트롤러와 작업에 직접 적용됩니다. 이렇게 하면 특정 메서드를 볼 때 훨씬 더 쉽게 검색할 수 있다는 이점이 있지만, 라우팅 정보가 애플리케이션의 한 위치에서 유지되지 않습니다. 특성 경로를 사용하면 지정된 작업에 대해 여러 경로를 쉽게 지정할 수 있을 뿐만 아니라 컨트롤러와 작업 간의 경로를 결합할 수도 있습니다. 예를 들어:
 
@@ -91,11 +91,11 @@ Razor Pages는 특성 라우팅을 사용하지 않습니다. Razor Pages의 추
 "/Products/123"
 ```
 
-지정된 요청이 경로와 일치하지만 작업 메서드가 호출되기 전에 ASP.NET Core MVC는 요청에 대한 [모델 바인딩](/aspnet/core/mvc/models/model-binding) 및 [모델 유효성 검사](/aspnet/core/mvc/models/validation)를 수행합니다. 모델 바인딩은 들어오는 HTTP 데이터를 호출할 작업 메서드의 매개 변수로 지정된 .NET 형식으로 변환합니다. 예를 들어 작업 메서드에서 `int id` 매개 변수가 필요한 경우 모델 바인딩은 요청의 일부로 제공된 값에서 이 매개 변수를 제공하려고 합니다. 이렇게 하기 위해 모델 바인딩은 게시된 양식의 값, 경로 자체의 값 및 쿼리 문자열 값을 찾습니다. ID 값을 찾은 것으로 가정하고 이 값이 정수로 변환되어 작업 메서드에 전달됩니다.
+지정된 요청이 경로와 일치하지만 작업 메서드가 호출되기 전에 ASP.NET Core MVC는 요청에 대한 [모델 바인딩](/aspnet/core/mvc/models/model-binding) 및 [모델 유효성 검사](/aspnet/core/mvc/models/validation)를 수행합니다. 모델 바인딩은 들어오는 HTTP 데이터를 호출할 작업 메서드의 매개 변수로 지정된 .NET 형식으로 변환합니다. 예를 들어 작업 메서드에서 `int id` 매개 변수가 필요한 경우 모델 바인딩은 요청의 일부로 제공된 값에서 이 매개 변수를 제공하려고 합니다. 이렇게 하기 위해 모델 바인딩은 게시된 양식의 값, 경로 자체의 값 및 쿼리 문자열 값을 찾습니다. `id` 값을 찾은 것으로 가정하고 이 값이 정수로 변환되어 작업 메서드에 전달됩니다.
 
 모델을 바인딩한 후 작업 메서드를 호출하기 전에 모델 유효성 검사가 수행됩니다. 모델 유효성 검사에서는 모델 유형에 대한 선택적 특성을 사용하며, 제공된 모델 개체가 특정 데이터 요구 사항을 준수하는지 확인하는 데 도움이 될 수 있습니다. 특정 값은 필요에 따라 지정하거나 특정 길이 또는 숫자 범위로 제한할 수 있습니다. 유효성 검사 특성이 지정되었지만 모델이 요구 사항을 준수하지 않는 경우 ModelState.IsValid 속성이 false가 되며 실패한 유효성 검사 규칙 집합을 요청하는 클라이언트에 보낼 수 있습니다.
 
-모델 유효성 검사를 사용하는 경우 항상 상태 변경 명령을 수행하기 전에 모델이 유효한지 확인하여 유효하지 않은 데이터로 인해 앱이 손상되지 않도록 해야 합니다. [필터](/aspnet/core/mvc/controllers/filters)를 사용하면 모든 작업에서 이에 대한 코드를 추가할 필요가 없습니다. ASP.NET Core MVC 필터는 요청 그룹을 가로채는 방법을 제공하므로 일반적인 정책과 교차 편집 문제를 대상 기준으로 적용할 수 있습니다. 필터는 개별 작업, 전체 컨트롤러 또는 전체 애플리케이션에 적용할 수 있습니다.
+모델 유효성 검사를 사용하는 경우 항상 상태 변경 명령을 수행하기 전에 모델이 유효한지 확인하여 유효하지 않은 데이터로 인해 앱이 손상되지 않도록 해야 합니다. [필터](/aspnet/core/mvc/controllers/filters)를 사용하면 모든 작업에서 이 유효성 검사를 위한 코드를 추가할 필요가 없습니다. ASP.NET Core MVC 필터는 요청 그룹을 가로채는 방법을 제공하므로 일반적인 정책과 교차 편집 문제를 대상 기준으로 적용할 수 있습니다. 필터는 개별 작업, 전체 컨트롤러 또는 전체 애플리케이션에 적용할 수 있습니다.
 
 웹 API의 경우 ASP.NET Core MVC는 [_콘텐츠 협상_](/aspnet/core/mvc/models/formatting)을 지원하므로 응답의 형식을 지정하는 방법을 요청할 수 있습니다. 요청에 제공된 헤더에 따라 데이터를 반환하는 작업은 응답을 XML, JSON 또는 지원되는 다른 형식으로 지정합니다. 이 기능을 사용하면 데이터 형식 요구 사항이 서로 다른 여러 클라이언트에서 동일한 API를 사용할 수 있습니다.
 
@@ -105,7 +105,7 @@ Web API 프로젝트는 `[ApiController]` 특성을 사용하는 것이 좋습�
 
 페이지 기반 애플리케이션의 경우 Razor Pages는 컨트롤러가 너무 커지지 않게 유지하는 유용한 작업을 수행합니다. 각 개별 페이지에는 해당 처리기에 전용인 자체 파일 및 클래스가 제공됩니다. Razor Pages 도입 전에 많은 보기 중심 애플리케이션에는 다양한 작업 및 보기를 담당하는 많은 컨트롤러 클래스가 있습니다. 해당 클래스는 많은 책임과 종속성을 포함하도록 자연스럽게 증가하므로 유지 관리가 더 어려워집니다. 보기 기반 컨트롤러가 너무 많이 증가하는 경우 Razor Pages를 사용하도록 리팩터링하거나 중재자 같은 패턴을 도입해 보세요.
 
-중재자 디자인 패턴은 클래스 간 통신을 허용하면서 클래스 간 결합을 줄이는 데 사용됩니다. ASP.NET Core MVC 애플리케이션에서 해당 패턴은 작업 메서드의 작업을 수행하는 데 ‘처리기’를 사용하여 컨트롤러를 더 작은 조각으로 분할하기 위해 자주 사용됩니다. 인기 있는 [MediatR NuGet 패키지](https://www.nuget.org/packages/MediatR/)는 종종 해당 작업을 수행하는 데 사용됩니다. 일반적으로 컨트롤러에는 각각 특정 종속성이 필요할 수 있는 다양한 작업 메서드가 포함됩니다. 작업에 필요한 모든 종속성 세트를 컨트롤러 생성자에 전달해야 합니다. 중재자를 사용하는 경우 컨트롤러의 유일한 종속성은 중재자 인스턴스에 있습니다. 이후 각 작업은 중재자 인스턴스를 사용하여 처리기에서 처리되는 메시지를 보냅니다. 처리기는 단일 작업에 특정하므로 해당 작업에 필요한 종속성만 필요합니다. MediatR을 사용하는 컨트롤러의 예는 다음과 같습니다.
+중재자 디자인 패턴은 클래스 간 통신을 허용하면서 클래스 간 결합을 줄이는 데 사용됩니다. ASP.NET Core MVC 애플리케이션에서 해당 패턴은 작업 메서드의 작업을 수행하는 데 ‘처리기’를 사용하여 컨트롤러를 더 작은 조각으로 분할하기 위해 자주 사용됩니다. 인기 있는 [MediatR NuGet 패키지](https://www.nuget.org/packages/MediatR/)는 종종 해당 작업을 수행하는 데 사용됩니다. 일반적으로 컨트롤러에는 각각 특정 종속성이 필요할 수 있는 다양한 작업 메서드가 포함됩니다. 작업에 필요한 모든 종속성 세트를 컨트롤러 생성자에 전달해야 합니다. MediatR을 사용하는 경우 컨트롤러의 유일한 종속성은 중재자 인스턴스에 있습니다. 이후 각 작업은 중재자 인스턴스를 사용하여 처리기에서 처리되는 메시지를 보냅니다. 처리기는 단일 작업에 특정하므로 해당 작업에 필요한 종속성만 필요합니다. MediatR을 사용하는 컨트롤러의 예는 다음과 같습니다.
 
 ```csharp
 public class OrderController : Controller
@@ -169,15 +169,15 @@ public class GetMyOrdersHandler : IRequestHandler<GetMyOrders, IEnumerable<Order
 
 > ### <a name="references--mapping-requests-to-responses"></a>참고 자료 - 요청을 응답에 매핑
 >
-> - **컨트롤러 작업에 라우팅**
+> - **컨트롤러 작업에 라우팅**\
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **모델 바인딩**
+> - **모델 바인딩**\
  > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
-> - **모델 유효성 검사**
+> - **모델 유효성 검사**\
  > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **필터**
+> - **필터**\
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **ApiController 특성**
+> - **ApiController 특성**\
  > <https://docs.microsoft.com/aspnet/core/web-api/>
 
 ## <a name="working-with-dependencies"></a>종속성 사용
@@ -305,7 +305,7 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 ### <a name="apis-and-no-locblazor-applications"></a>API 및 Blazor 애플리케이션
 
-애플리케이션에 보안을 설정해야 하는 웹 API 세트가 포함된 경우 해당 API는 보기 또는 Razor Pages 애플리케이션과 별도의 프로젝트로 구성하는 것이 좋습니다. 서버 쪽 웹 애플리케이션에서 API, 특히 퍼블릭 API를 분리하면 여러 이점이 있습니다. 해당 애플리케이션은 종종 고유한 배포 및 로드 특성을 가집니다. 쿠키 기반 인증을 이용하는 표준 양식 기반 애플리케이션 및 토큰 기반 인증을 사용할 수 있는 API에서 보안을 위해 다양한 메커니즘을 사용할 수도 있습니다.
+보안을 설정해야 하는 웹 API 세트가 애플리케이션에 포함된 경우 해당 API는 보기 또는 Razor Pages 애플리케이션과 별도의 프로젝트로 구성하는 것이 좋습니다. 서버 쪽 웹 애플리케이션에서 API, 특히 퍼블릭 API를 분리하면 여러 이점이 있습니다. 해당 애플리케이션은 종종 고유한 배포 및 로드 특성을 가집니다. 쿠키 기반 인증을 이용하는 표준 양식 기반 애플리케이션 및 토큰 기반 인증을 사용할 수 있는 API에서 보안을 위해 다양한 메커니즘을 사용할 수도 있습니다.
 
 또한 Blazor 서버 또는 Blazor WebAssembly 사용 여부와 관계없이 Blazor 애플리케이션은 별도 프로젝트로 빌드해야 합니다. 애플리케이션은 보안 모델 및 다양한 런타임 특성을 포함합니다. 서버 쪽 웹 애플리케이션(또는 API 프로젝트)과 공통 형식을 공유할 수 있으며 해당 형식은 공통 공유 프로젝트에서 정의해야 합니다.
 
@@ -391,13 +391,13 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 
 > ### <a name="references--structuring-applications"></a>참조 - 애플리케이션 구성
 >
-> - **Areas**  
+> - **영역**\
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN Magazine – ASP.NET Core MVC용 기능 분할**  
+> - **MSDN Magazine – ASP.NET Core MVC용 기능 조각**\
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
-> - **필터**  
+> - **필터**\
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **MSDN Magazine – 실제 ASP.NET Core MVC 필터**  
+> - **MSDN Magazine – 실제 ASP.NET Core MVC 필터**\
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>보안
@@ -501,18 +501,18 @@ Blazor 서버 애플리케이션은 다른 ASP.NET Core 애플리케이션과 �
 
 > ### <a name="references--authentication"></a>참조 - 인증
 >
-> - **인증 작업 및 기본값**  
+> - **인증 작업 및 기본값**\
 >   <https://stackoverflow.com/a/52493428>
-> - **SPA의 인증 및 권한 부여**
+> - **SPA의 인증 및 권한 부여**\
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity-api-authorization>
-> - **ASP.NET Core Blazor 인증 및 권한 부여**
+> - **ASP.NET Core Blazor 인증 및 권한 부여**\
 >   <https://docs.microsoft.com/aspnet/core/blazor/security/>
-> - **보안: ASP.NET Web Forms 및 Blazor의 인증 및 권한 부여**
+> - **보안: ASP.NET Web Forms 및 Blazor의 인증 및 권한 부여**\
 >   <https://docs.microsoft.com/dotnet/architecture/blazor-for-web-forms-developers/security-authentication-authorization>
 
 ### <a name="authorization"></a>권한 부여
 
-가장 간단한 형태의 권한 부여는 익명 사용자에 대한 액세스를 제한하는 것입니다. 이 작업은 특정 컨트롤러 또는 작업에 \[Authorize\] 특성을 적용하기만 하면 수행됩니다. 역할을 사용하는 경우 다음과 같이 특정 역할에 속한 사용자에 대한 액세스를 제한하도록 특성을 추가로 확장할 수 있습니다.
+가장 간단한 형태의 권한 부여는 익명 사용자에 대한 액세스를 제한하는 것입니다. 이 기능은 특정 컨트롤러 또는 작업에 \[Authorize\] 특성을 적용하여 얻을 수 있습니다. 역할을 사용하는 경우 다음과 같이 특정 역할에 속한 사용자에 대한 액세스를 제한하도록 특성을 추가로 확장할 수 있습니다.
 
 ```csharp
 [Authorize(Roles = "HRManager,Finance")]
@@ -522,7 +522,7 @@ public class SalaryController : Controller
 }
 ```
 
-이 경우 HRManager 또는 Finance 역할(또는 둘 다)에 속한 사용자는 SalaryController에 액세스할 수 있습니다. 사용자가 여러 역할에 속하도록 하려면(여러 역할 중 하나에만 속하는 것이 아님), 특성을 여러 번 적용하고 매번 필요한 역할을 지정합니다.
+이 경우 `HRManager` 또는 `Finance` 역할(또는 둘 다)에 속한 사용자는 SalaryController에 액세스할 수 있습니다. 사용자가 여러 역할에 속하도록 하려면(여러 역할 중 하나에만 속하는 것이 아님), 특성을 여러 번 적용하고 매번 필요한 역할을 지정합니다.
 
 여러 다른 컨트롤러와 작업에서 특정 역할 집합을 문자열로 지정하면 바람직하지 않은 반복이 발생할 수 있습니다. 최소한 해당 문자열 리터럴의 상수를 정의하고 문자열을 지정해야 하는 모든 위치에서 상수를 사용합니다. 또한 권한 부여 규칙을 캡슐화하는 권한 부여 정책을 구성한 다음, \[Authorize\] 특성을 적용할 때 개별 역할 대신 정책을 지정할 수 있습니다.
 
@@ -584,17 +584,17 @@ private async Task SetAuthorizationHeader()
 
 > ### <a name="references--security"></a>참고 자료 - 보안
 >
-> - **보안 개요 문서**  
+> - **보안 개요 문서**\
 >   <https://docs.microsoft.com/aspnet/core/security/>
-> - **ASP.NET Core 앱에 SSL 적용**  
+> - **ASP.NET Core 앱에 SSL 적용**\
 >   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
-> - **ID 소개**  
+> - **ID 소개**\
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
-> - **권한 부여 소개**  
+> - **권한 부여 소개**\
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
-> - **Azure App Service에서 API Apps에 대한 인증 및 권한 부여**  
+> - **Azure App Service에서 API Apps에 대한 인증 및 권한 부여**\
 >   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
-> - **ID 서버**  
+> - **ID 서버**\
 >   <https://github.com/IdentityServer>
 
 ## <a name="client-communication"></a>클라이언트 통신
@@ -653,9 +653,9 @@ public class Program
 
 > ### <a name="references--client-communication"></a>참고 자료 - 클라이언트 통신
 >
-> - **ASP.NET Core SignalR**  
+> - **ASP.NET Core SignalR**\
 >   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
-> - **WebSocket 관리자**  
+> - **WebSocket 관리자**\
 >   <https://github.com/radu-matei/websocket-manager>
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>도메인 기반 디자인 - 적용해야 할까요?
@@ -702,12 +702,12 @@ DDD는 모델링, 아키텍처 및 통신에 대한 투자를 수반하며, 더 
 
 > ### <a name="references--domain-driven-design"></a>참고 자료 - 도메인 기반 디자인
 >
-> - **일반 영어 버전의 DDD(StackOverflow 응답)**  
+> - **일반 영어 버전의 DDD(StackOverflow 답변)** \
 >   <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>배포
 
-호스팅되는 위치에 관계없이 ASP.NET Core 애플리케이션을 배포하는 프로세스에는 몇 가지 단계가 포함됩니다. 첫 번째 단계는 `dotnet publish` CLI 명령을 사용하여 수행할 수 있는 애플리케이션을 게시하는 것입니다. 이렇게 하면 애플리케이션이 컴파일되고 애플리케이션을 실행하는 데 필요한 모든 파일이 지정된 폴더에 배치됩니다. Visual Studio에서 배포하는 경우 이 단계가 자동으로 수행됩니다. 게시 폴더에는 애플리케이션 및 해당 종속성에 대한 .exe 및 .dll 파일이 포함됩니다. 자체 포함된 애플리케이션에는 .NET 런타임 버전도 포함됩니다. ASP.NET Core 애플리케이션에는 구성 파일, 정적 클라이언트 자산 및 MVC 뷰도 포함됩니다.
+호스팅되는 위치에 관계없이 ASP.NET Core 애플리케이션을 배포하는 프로세스에는 몇 가지 단계가 포함됩니다. 첫 번째 단계는 `dotnet publish` CLI 명령을 사용하여 수행할 수 있는 애플리케이션을 게시하는 것입니다. 이 단계에서는 애플리케이션을 컴파일하고 애플리케이션을 실행하는 데 필요한 모든 파일을 지정된 폴더에 배치합니다. Visual Studio에서 배포하는 경우 이 단계가 자동으로 수행됩니다. 게시 폴더에는 애플리케이션 및 해당 종속성에 대한 .exe 및 .dll 파일이 포함됩니다. 자체 포함된 애플리케이션에는 .NET 런타임 버전도 포함됩니다. ASP.NET Core 애플리케이션에는 구성 파일, 정적 클라이언트 자산 및 MVC 뷰도 포함됩니다.
 
 ASP.NET Core 애플리케이션은 애플리케이션(또는 서버)이 충돌하는 경우 서버를 부팅하고 다시 시작할 때 시작해야 하는 콘솔 애플리케이션입니다. 프로세스 관리자는 이 프로세스를 자동화하는 데 사용할 수 있습니다. ASP.NET Core에 대한 가장 일반적인 프로세스 관리자는 Linux의 Nginx 및 Apache와 Windows의 IIS 또는 Windows 서비스입니다.
 
@@ -745,13 +745,13 @@ _Azure 배포 옵션에 대한 자세한 내용은 [10장](development-process-f
 
 > ### <a name="references--deployment"></a>참고 자료 - 배포
 >
-> - **호스팅 및 배포 개요**  
+> - **호스팅 및 배포 개요**\
 >   <https://docs.microsoft.com/aspnet/core/publishing/>
-> - **Kestrel을 역방향 프록시와 함께 사용하는 경우**  
+> - **Kestrel을 역방향 프록시와 함께 사용하는 경우**\
 >   <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
-> - **Docker에서 ASP.NET Core 앱 호스팅**  
+> - **Docker에서 ASP.NET Core 앱 호스트**\
 >   <https://docs.microsoft.com/aspnet/core/publishing/docker>
-> - **Azure Application Gateway 소개**  
+> - **Azure Application Gateway 소개**\
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]

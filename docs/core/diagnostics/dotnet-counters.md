@@ -2,12 +2,12 @@
 title: dotnet-counters 진단 도구 - .NET CLI
 description: 임시 상태 모니터링 및 1단계 수준 성능을 위해 dotnet-counter CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
 ms.date: 11/17/2020
-ms.openlocfilehash: 7dd4c06f3abe423552ba1d3eb82f6d0c35a84d0b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 48e3b038ddb5c9421367612a592c5ba6b9459791
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822219"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009549"
 ---
 # <a name="investigate-performance-counters-dotnet-counters"></a>성능 카운터 조사(dotnet-counters)
 
@@ -71,7 +71,7 @@ dotnet-counters [-h|--help] [--version] <command>
 ### <a name="synopsis"></a>개요
 
 ```console
-dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
+dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-port] [--refresh-interval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
 ```
 
 ### <a name="options"></a>옵션
@@ -83,6 +83,10 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 - **`-n|--name <name>`**
 
   카운터 데이터를 수집할 프로세스의 이름입니다.
+
+- **`--diagnostic-port`**
+
+  만들 진단 포트의 이름입니다. 이 옵션을 사용하여 앱 시작부터 카운터 모니터링을 시작하는 방법은 [진단 포트 사용](#using-diagnostic-port)을 참조하세요.
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -106,6 +110,9 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 
   > [!NOTE]
   > 이 옵션을 사용하면 도구에 다시 전달되는 첫 번째 .NET 5.0 프로세스가 모니터링됩니다. 즉, 명령에서 여러 .NET 애플리케이션을 시작하는 경우 첫 번째 앱만 수집합니다. 따라서 자체 포함 애플리케이션에서 이 옵션을 사용하거나 `dotnet exec <app.dll>` 옵션을 사용하는 것이 좋습니다.
+
+  > [!NOTE]
+  > dotnet-counters를 통해 .NET 실행 파일을 시작하면 해당 입출력이 리디렉션되어 stdin/stdout과 상호 작용할 수 없습니다. Ctrl+C 또는 SIGTERM을 통해 도구를 종료하면 도구와 자식 프로세스가 모두 안전하게 종료됩니다. 자식 프로세스가 도구보다 먼저 종료되면 도구도 종료되고 추적을 안전하게 볼 수 있습니다. Stdin/stdout을 사용해야 하는 경우 `--diagnostic-port` 옵션을 사용할 수 있습니다. 자세한 내용은 [진단 포트 사용](#using-diagnostic-port)을 참조하세요.
 
 ### <a name="examples"></a>예
 
@@ -180,7 +187,7 @@ Microsoft.AspNetCore.Hosting
 ### <a name="synopsis"></a>개요
 
 ```console
-dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters] [-- <command>]
+dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-port] [--refresh-interval] [--counters] [-- <command>]
 ```
 
 ### <a name="options"></a>옵션
@@ -192,6 +199,10 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 - **`-n|--name <name>`**
 
   모니터링할 프로세스의 이름입니다.
+
+- **`--diagnostic-port`**
+
+  만들 진단 포트의 이름입니다. 이 옵션을 사용하여 앱 시작부터 카운터 모니터링을 시작하는 방법은 [진단 포트 사용](#using-diagnostic-port)을 참조하세요.
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -207,6 +218,9 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 
   > [!NOTE]
   > 이 옵션을 사용하면 도구에 다시 전달되는 첫 번째 .NET 5.0 프로세스가 모니터링됩니다. 즉, 명령에서 여러 .NET 애플리케이션을 시작하는 경우 첫 번째 앱만 수집합니다. 따라서 자체 포함 애플리케이션에서 이 옵션을 사용하거나 `dotnet exec <app.dll>` 옵션을 사용하는 것이 좋습니다.
+
+  > [!NOTE]
+  > dotnet-counters를 통해 .NET 실행 파일을 시작하면 해당 입출력이 리디렉션되어 stdin/stdout과 상호 작용할 수 없습니다. Ctrl+C 또는 SIGTERM을 통해 도구를 종료하면 도구와 자식 프로세스가 모두 안전하게 종료됩니다. 자식 프로세스가 도구보다 먼저 종료되면 도구도 종료되고 추적을 안전하게 볼 수 있습니다. Stdin/stdout을 사용해야 하는 경우 `--diagnostic-port` 옵션을 사용할 수 있습니다. 자세한 내용은 [진단 포트 사용](#using-diagnostic-port)을 참조하세요.
 
 ### <a name="examples"></a>예
 
@@ -313,6 +327,48 @@ dotnet-counters ps [-h|--help]
 ```console
 > dotnet-counters ps
   
-  15683 WebApi     /home/suwhang/repos/WebApi/WebApi
+  15683 WebApi     /home/user/repos/WebApi/WebApi
   16324 dotnet     /usr/local/share/dotnet/dotnet
 ```
+
+## <a name="using-diagnostic-port"></a>진단 포트 사용
+
+  > [!IMPORTANT]
+  > .NET 5.0 이상을 실행하는 앱에만 적용됩니다.
+
+진단 포트는 .NET 5에서 추가된 새로운 런타임 기능으로, 앱 시작부터 카운터 모니터링과 수집을 시작하는 데 사용할 수 있습니다. `dotnet-counters`를 사용하여 이렇게 하려면 위의 예제에 설명된 대로 `dotnet-counters <collect|monitor> -- <command>`를 사용하거나 `--diagnostic-port` 옵션을 사용할 수 있습니다.
+
+`dotnet-counters <collect|monitor> -- <command>`를 사용하여 애플리케이션을 자식 프로세스로 실행하는 것이 시작부터 빠르게 모니터링하는 가장 간단한 방법입니다.
+
+하지만 모니터링되는 앱의 수명을 더 세부적으로 제어하거나(예: 처음 10분간만 앱을 모니터링하고 실행 계속) CLI를 사용하여 앱을 조작해야 하는 경우에는 `--diagnostic-port` 옵션을 사용하여 모니터링되는 대상 앱과 `dotnet-counters`를 모두 제어할 수 있습니다.
+
+1. 아래 명령은 dotnet-counters에서 `myport.sock`라는 진단 소켓을 만들고 연결을 대기하게 합니다.
+
+    > ```dotnet-cli
+    > dotnet-counters collect --diagnostic-port myport.sock
+    > ```
+
+    출력:
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ```
+
+2. 별도의 콘솔에서 `DOTNET_DiagnosticPorts` 환경 변수를 `dotnet-counters` 출력의 값으로 설정하고 대상 애플리케이션을 시작합니다.
+
+    > ```bash
+    > export DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ./my-dotnet-app arg1 arg2
+    > ```
+
+    그러면 `dotnet-counters`가 `my-dotnet-app`에서 카운터 수집을 시작할 수 있습니다.
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=myport.sock
+    > Starting a counter session. Press Q to quit.
+    > ```
+
+    > [!IMPORTANT]
+    > `dotnet run`을 사용하여 앱을 시작하면 문제가 될 수 있는데, dotnet CLI가 앱이 아닌 여러 자식 프로세스를 생성할 수 있고 해당 프로세스가 앱보다 먼저 `dotnet-counters`에 연결하여 앱이 런타임에 일시 중단될 수 있기 때문입니다. 앱의 자체 포함 버전을 직접 사용하거나 `dotnet exec`를 사용하여 애플리케이션을 시작하는 것이 좋습니다.
