@@ -6,16 +6,16 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 10/11/2019
-ms.openlocfilehash: 639755dd78892df1b70ea5245a9584e575fbf691
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: dbb0a94b0401d58139c024fd8ca3e00353a19efa
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267882"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678039"
 ---
 # <a name="modules-handlers-and-middleware"></a>모듈, 처리기 및 미들웨어
 
-ASP.NET Core 앱은 일련의 *미들웨어*를 기반으로 빌드됩니다. 미들웨어는 요청 및 응답을 처리 하기 위해 파이프라인으로 정렬 되는 처리기입니다. Web Forms 앱에서 HTTP 처리기와 모듈은 유사한 문제를 해결 합니다. ASP.NET Core 모듈, 처리기, *Global.asax.cs*및 앱 수명 주기가 미들웨어로 바뀝니다. 이 장에서는 앱의 컨텍스트에서 미들웨어에 대해 알아봅니다 Blazor .
+ASP.NET Core 앱은 일련의 *미들웨어* 를 기반으로 빌드됩니다. 미들웨어는 요청 및 응답을 처리 하기 위해 파이프라인으로 정렬 되는 처리기입니다. Web Forms 앱에서 HTTP 처리기와 모듈은 유사한 문제를 해결 합니다. ASP.NET Core 모듈, 처리기, *Global.asax.cs* 및 앱 수명 주기가 미들웨어로 바뀝니다. 이 장에서는 앱의 컨텍스트에서 미들웨어에 대해 알아봅니다 Blazor .
 
 ## <a name="overview"></a>개요
 
@@ -23,7 +23,7 @@ ASP.NET Core 요청 파이프라인은 하나씩 차례로 호출되는 요청 �
 
 ![pipeline](media/middleware/request-delegate-pipeline.png)
 
-이전 다이어그램에는 수명 주기 이벤트 개념이 없습니다. 이 개념은 ASP.NET Web Forms 요청이 처리 되는 방식에 기초 합니다. 이 시스템을 사용 하면 발생 하는 프로세스를 보다 쉽게 파악할 수 있으며 미들웨어를 언제 든 지 삽입할 수 있습니다. 미들웨어는 요청 파이프라인에 추가 된 순서 대로 실행 됩니다. 일반적으로 *Startup.cs*에서 구성 파일 대신 코드에 추가 됩니다.
+이전 다이어그램에는 수명 주기 이벤트 개념이 없습니다. 이 개념은 ASP.NET Web Forms 요청이 처리 되는 방식에 기초 합니다. 이 시스템을 사용 하면 발생 하는 프로세스를 보다 쉽게 파악할 수 있으며 미들웨어를 언제 든 지 삽입할 수 있습니다. 미들웨어는 요청 파이프라인에 추가 된 순서 대로 실행 됩니다. 일반적으로 *Startup.cs* 에서 구성 파일 대신 코드에 추가 됩니다.
 
 ## <a name="katana"></a>Katana
 
