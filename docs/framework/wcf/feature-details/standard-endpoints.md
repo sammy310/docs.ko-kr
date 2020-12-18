@@ -179,13 +179,13 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
  메타데이터 교환을 위한 표준 엔드포인트입니다.  
   
  <xref:System.ServiceModel.Description.WebHttpEndpoint>  
- ph x="1" /&gt; 동작을 자동으로 추가하는 <xref:System.ServiceModel.Description.WebHttpBehavior> 바인딩이 있는 표준 엔드포인트입니다.  
+ <xref:System.ServiceModel.WebHttpBinding> 동작을 자동으로 추가하는 <xref:System.ServiceModel.Description.WebHttpBehavior> 바인딩이 있는 표준 엔드포인트입니다.  
   
  <xref:System.ServiceModel.Description.WebScriptEndpoint>  
- ph x="1" /&gt; 동작을 자동으로 추가하는 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 바인딩이 있는 표준 엔드포인트입니다.  
+ <xref:System.ServiceModel.WebHttpBinding> 동작을 자동으로 추가하는 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 바인딩이 있는 표준 엔드포인트입니다.  
   
  <xref:System.ServiceModel.Description.WebServiceEndpoint>  
- ph x="1" /&gt; 바인딩이 있는 표준 엔드포인트입니다.  
+ <xref:System.ServiceModel.WebHttpBinding> 바인딩이 있는 표준 엔드포인트입니다.  
   
  <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>  
  워크플로 인스턴스에서 제어 작업을 호출하는 데 사용할 수 있는 표준 엔드포인트입니다.  

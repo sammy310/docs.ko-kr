@@ -18,7 +18,7 @@ ms.locfileid: "96255054"
 
 ASP.NET 웹 서비스 클라이언트와 상호 운용할 수 있도록 WCF 서비스 끝점을 구성 하려면:  
   
-- ph x="1" /&gt; 형식을 서비스 엔드포인트의 바인딩 형식으로 사용합니다.  
+- <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> 형식을 서비스 엔드포인트의 바인딩 형식으로 사용합니다.  
   
 - 서비스 엔드포인트에서 콜백 및 세션 계약 기능이나 트랜잭션 동작을 사용하면 안 됩니다.  
   
