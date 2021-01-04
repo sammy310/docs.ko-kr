@@ -2,12 +2,12 @@
 title: .NET 런타임 및 SDK의 버전 관리 방법
 description: 이 문서에서는 .NET SDK 및 런타임의 버전 관리 방법을 설명합니다(유의적 버전과 유사함).
 ms.date: 12/07/2020
-ms.openlocfilehash: 2fe0b162b52f1e4500ec87f7d5d92054cd569552
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 2fbc2775f31b4eab1c9883282c58accd9bb2b9f5
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009308"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633626"
 ---
 # <a name="overview-of-how-net-is-versioned"></a>.NET의 버전 관리 방법 개요
 
@@ -19,9 +19,9 @@ ms.locfileid: "97009308"
 
 .NET SDK는 유의적 버전을 따르지 않습니다. .NET SDK는 더 빠르게 릴리스되며 해당 버전 번호는 정렬된 런타임과 SDK의 자체 부 릴리스 및 패치 릴리스를 모두 전달해야 합니다.
 
-.NET SDK 버전 번호의 처음 두 위치는 릴리스된 .NET 런타임에 고정되어 있습니다. SDK의 각 버전은 이 런타임 또는 다른 하위 버전에 대한 애플리케이션을 만들 수 있습니다.
+.NET SDK 버전 번호의 처음 두 위치는 릴리스된 .NET 런타임 버전에 고정되어 있습니다. SDK의 각 버전은 이 런타임 또는 다른 하위 버전에 대한 애플리케이션을 만들 수 있습니다.
 
-SDK 버전 번호의 세 번째 위치는 보조 및 패치 번호를 모두 전달합니다. 부 버전에는 100이 곱해집니다. 부 버전 1, 패치 버전 2는 102로 표시됩니다. 마지막 두 자리는 패치 번호를 나타냅니다. 예를 들어 다음과 같은 런타임 및 SDK 버전 번호 시퀀스를 사용할 수 있습니다.
+SDK 버전 번호의 세 번째 위치는 보조 및 패치 번호를 모두 전달합니다. 부 버전에는 100이 곱해집니다. 마지막 두 자리는 패치 번호를 나타냅니다. 부 버전 1, 패치 버전 2는 102로 표시됩니다. 예를 들어 다음과 같은 런타임 및 SDK 버전 번호 시퀀스를 사용할 수 있습니다.
 
 | 변경                | .NET 런타임      | .NET SDK(\*)     |
 |-----------------------|-------------------|-------------------|

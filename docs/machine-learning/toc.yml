@@ -45,6 +45,8 @@
           href: tutorials/image-classification.md
         - name: 자전거 임대 수요 예측(시계열)
           href: tutorials/time-series-demand-forecasting.md
+        - name: 통화량 급증(변칙 검색)
+          href: tutorials/phone-calls-anomaly-detection.md
         - name: 제품 판매 분석(변칙 검색)
           href: tutorials/sales-anomaly-detection.md
         - name: 이미지에서 개체 검색(개체 검색)
