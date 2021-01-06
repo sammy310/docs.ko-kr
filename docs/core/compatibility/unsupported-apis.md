@@ -3,12 +3,12 @@ title: .NET Core 및 .NET 5+에서 지원되지 않는 API
 titleSuffix: ''
 description: .NET Core 및 .NET 5.0 이상 버전에서 항상 예외를 throw하는 .NET API를 알아봅니다.
 ms.date: 10/13/2020
-ms.openlocfilehash: 51d73557a48910d9cb1c4d3cdced34dfe4d849d8
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: 1bd41192d0d6752d2b659da9fb6387dac321b2c3
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329783"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593268"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core-and-net-5"></a>.NET Core 및 .NET 5+에서 항상 예외를 throw하는 API
 
@@ -90,7 +90,8 @@ ms.locfileid: "94329783"
 | <xref:System.Diagnostics.Process.MinWorkingSet?displayProperty=nameWithType>(설정만) | Linux |
 | <xref:System.Diagnostics.Process.ProcessorAffinity?displayProperty=nameWithType> | macOS |
 | <xref:System.Diagnostics.Process.MainWindowHandle?displayProperty=nameWithType> | Linux 및 macOS |
-| <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> | Linux 및 macOS |
+| <xref:System.Diagnostics.Process.Start(System.String,System.String,System.String,System.Security.SecureString,System.String)?displayProperty=nameWithType> | Linux 및 macOS |
+| <xref:System.Diagnostics.Process.Start(System.String,System.String,System.Security.SecureString,System.String)?displayProperty=nameWithType> | Linux 및 macOS |
 | <xref:System.Diagnostics.ProcessStartInfo.UserName?displayProperty=nameWithType> | Linux 및 macOS |
 | <xref:System.Diagnostics.ProcessStartInfo.PasswordInClearText?displayProperty=nameWithType> | Linux 및 macOS |
 | <xref:System.Diagnostics.ProcessStartInfo.Domain?displayProperty=nameWithType> | Linux 및 macOS |

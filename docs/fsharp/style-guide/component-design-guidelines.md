@@ -2,12 +2,12 @@
 title: F# 구성 요소 디자인 지침
 description: '다른 호출자가 사용 하기 위한 F # 구성 요소를 작성 하기 위한 지침에 대해 알아봅니다.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 590bda0660d54ea73c590d31e694f3d499e0fd9f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 24be2a422c97b9334f749e3d9dfcccd0feec219b
+ms.sourcegitcommit: e395fabeeea5c705d243d246fa64446839ac85b6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209138"
+ms.lasthandoff: 01/03/2021
+ms.locfileid: "97856109"
 ---
 # <a name="f-component-design-guidelines"></a>F# 구성 요소 디자인 지침
 
@@ -70,11 +70,11 @@ F # 라이브러리의 명시적 서명 파일을 사용 하면 공용 API에 �
 
 다음 표에서는 .NET 명명 및 대문자화 규칙을 따릅니다. F # 구문을 포함 하는 데에는 약간의 추가 항목이 있습니다.
 
-| 구문 | 사례 | 부분 | 예 | 참고 |
+| 구문 | 사례 | 파트 | 예 | 메모 |
 |-----------|------|------|----------|-------|
 | 구체적 형식 | PascalCase | 명사/형용사 | 목록, Double, 복합 | 구체적 형식은 구조체, 클래스, 열거형, 대리자, 레코드 및 공용 구조체입니다. 형식 이름은 일반적으로 OCaml에서 소문자 이지만 F #은 형식에 대 한 .NET 명명 스키마를 채택 했습니다.
-| DLL           | PascalCase |                 | Fabrikam. Core .dll |  |
-| 공용 구조체 태그     | PascalCase | 명사 | 일부, 추가, 성공 | 공용 Api에는 접두사를 사용 하지 마십시오. 필요에 따라 internal 인 경우 접두사를 사용 합니다 (예:).`type Teams = TAlpha | TBeta | TDelta.` |
+| DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
+| 공용 구조체 태그     | PascalCase | 명사 | 일부, 추가, 성공 | 공용 Api에는 접두사를 사용 하지 마십시오. 필요에 따라 internal 인 경우 접두사를 사용 합니다 (예:). `type Teams = TAlpha | TBeta | TDelta.` |
 | 이벤트          | PascalCase | 동사 | ValueChanged/ValueChanging |  |
 | 예외     | PascalCase |      | WebException | 이름은 "Exception"으로 끝나야 합니다. |
 | 필드          | PascalCase | 명사 | CurrentName  | |
@@ -191,8 +191,8 @@ type Counter() =
 
 ```fsharp
 type Serializer =
-    abstract Serialize<'T>: preserveRefEq: bool -> value: 'T -> string
-    abstract Deserialize<'T>: preserveRefEq: bool -> pickle: string -> 'T
+    abstract Serialize<'T> : preserveRefEq: bool -> value: 'T -> string
+    abstract Deserialize<'T> : preserveRefEq: bool -> pickle: string -> 'T
 ```
 
 기본 설정:
@@ -222,7 +222,7 @@ module CollectionType =
 
 #### <a name="use-a-module-to-group-functions-for-common-canonical-functions-especially-in-math-and-dsl-libraries"></a>모듈을 사용 하 여 일반적인 정식 함수에 대 한 함수를 그룹화 합니다. 특히 수학 및 DSL 라이브러리에서 사용할 수 있습니다.
 
-예를 들어 `Microsoft.FSharp.Core.Operators` 는 `abs` fsharp.core에서 제공 하는 자동으로 열린 최상위 함수 (예: 및)의 컬렉션입니다 `sin` .
+예를 들어 `Microsoft.FSharp.Core.Operators` 는 `abs` FSharp.Core.dll에서 제공 하는 자동으로 열린 최상위 함수 (예: 및)의 컬렉션입니다 `sin` .
 
 마찬가지로, 통계 라이브러리에는 함수 및가 포함 된 모듈이 포함 될 수 있습니다 `erf` `erfc` . 여기서이 모듈은 명시적 또는 자동으로 열립니다.
 
@@ -653,7 +653,7 @@ member this.ParamOverload(x: int) = x
 member this.ParamOverload(x: int, y: int) = x + y
 ```
 
-#### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>.NET 컬렉션 인터페이스 형식 IEnumerable \< T \> 및 IDictionary \< 키, \> 매개 변수 및 반환 값에 대 한 값을 사용 합니다.
+#### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>.NET 컬렉션 인터페이스 형식 IEnumerable \<T\> 및 IDictionary \<Key,Value\> 에 매개 변수 및 반환 값 사용
 
 .NET 배열 `T[]` , F # 형식 `list<T>` , 및와 같은 `Map<Key,Value>` `Set<T>` .net 구체적 컬렉션 형식과 `Dictionary<Key,Value>` 같은 구체적인 컬렉션 형식을 사용 하지 마십시오. .NET 라이브러리 디자인 지침에는와 같은 다양 한 컬렉션 형식을 사용 해야 하는 경우에 대 한 적절 한 조언이 있습니다 `IEnumerable<T>` . 일부 경우에는 성능 grounds 일부 배열 ()을 사용할 `T[]` 수 있습니다. 특히 `seq<T>` ,에 대 한 F # 별칭입니다 `IEnumerable<T>` . 따라서 seq는 종종 바닐라 .net API에 적합 한 형식입니다.
 
@@ -770,7 +770,7 @@ public class Point1
 }
 ```
 
-여기에서 F #이 생성 하는 방법에 대 한 몇 가지 중요 한 사항이 있습니다. 다음은 그 예입니다.
+여기에서 F #이 생성 하는 방법에 대 한 몇 가지 중요 한 사항이 있습니다. 예를 들면 다음과 같습니다.
 
 * 인수 이름과 같은 메타 데이터는 유지 되었습니다.
 

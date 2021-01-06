@@ -1,19 +1,19 @@
 ---
 title: Wcf 개발자를 위한 gRPC gRPC로 WCF 솔루션 마이그레이션
 description: 다양 한 형식의 WCF 서비스를 gRPC의 해당 항목으로 마이그레이션하는 방법입니다.
-ms.date: 09/02/2019
-ms.openlocfilehash: 12e724ab46a33547d352da7a604a5a994e617bc2
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.date: 12/15/2020
+ms.openlocfilehash: 3bd35cb6119368ff3db3be9ab5fabf89f2652b29
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628516"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97937963"
 ---
 # <a name="migrate-a-wcf-solution-to-grpc"></a>GRPC로 WCF 솔루션 마이그레이션
 
-이 장에서는 ASP.NET Core 3.0 gRPC 프로젝트를 사용 하는 방법을 설명 하 고 다양 한 유형의 WCF (Windows Communication Foundation) 서비스를 동일한 gRPC로 마이그레이션하는 방법을 설명 합니다.
+이 장에서는 ASP.NET Core 5.0 gRPC 프로젝트를 사용 하는 방법을 설명 하 고 다양 한 유형의 WCF (Windows Communication Foundation) 서비스를 동일한 gRPC로 마이그레이션하는 방법을 설명 합니다.
 
-- ASP.NET Core 3.0 gRPC 프로젝트를 만듭니다.
+- ASP.NET Core 5.0 gRPC 프로젝트를 만듭니다.
 - 단순 요청-gRPC 단항 RPC에 대 한 응답 작업입니다.
 - 단일 방식으로 Pc 클라이언트 스트리밍 RPC를 수행 합니다.
 - 전체 이중 서비스-gRPC 양방향 스트리밍 RPC.

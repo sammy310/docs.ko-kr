@@ -2,12 +2,12 @@
 title: ASP.NET Core 서비스 및 웹앱 테스트
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 컨테이너에서 ASP.NET Core 서비스 및 웹앱을 테스트하기 위한 아키텍처를 탐색합니다.
 ms.date: 08/07/2020
-ms.openlocfilehash: af1187fb1e2afbb9fa953db5a280c9cc317ab6a8
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 67872668781d8ae5d79bf360aee73f744cf4404b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804772"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633951"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core 서비스 및 웹앱 테스트
 
@@ -31,7 +31,7 @@ ms.locfileid: "91804772"
 
 단위 테스트는 xUnit.net, MSTest, Moq, NUnit 같은 프레임 워크 테스트를 기반으로 구현됩니다. eShopOnContainers 샘플 애플리케이션의 경우 xUnit을 사용하고 있습니다.
 
-Web API 컨트롤러에 대한 단위 테스트를 작성하는 경우 C\#에서 새 키워드를 직접 사용해 컨트롤러 클래스를 인스턴스화함으로써 가능한 한 빨리 테스트를 실행합니다. 다음 예제에서는 테스트 프레임워크처럼 [xUnit](https://xunit.github.io/)을 사용하는 경우 이 작업을 수행하는 방법을 보여 줍니다.
+Web API 컨트롤러에 대한 단위 테스트를 작성하는 경우 C\#에서 새 키워드를 직접 사용해 컨트롤러 클래스를 인스턴스화함으로써 가능한 한 빨리 테스트를 실행합니다. 다음 예제에서는 테스트 프레임워크처럼 [xUnit](https://xunit.net/)을 사용하는 경우 이 작업을 수행하는 방법을 보여 줍니다.
 
 ```csharp
 [Fact]
@@ -111,7 +111,7 @@ public class PrimeWebDefaultRequestShould
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. 공식 사이트입니다. \
-    <https://xunit.github.io/>
+    <https://xunit.net/>
 
 - **단위 테스트 기본 사항.** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
@@ -134,11 +134,11 @@ public class PrimeWebDefaultRequestShould
 
 참조 애플리케이션(eShopOnContainers) 테스트는 최근에 재구성되었으며, 현재 네 가지 범주가 있습니다.
 
-1. **단위** 테스트는 **{MicroserviceName}.UnitTests**에 포함된 이전 일반 규칙 단위 테스트일 뿐입니다.
+1. **단위** 테스트는 **{MicroserviceName}.UnitTests** 에 포함된 이전 일반 규칙 단위 테스트일 뿐입니다.
 
-2. **마이크로 서비스 기능/통합 테스트**는 각 마이크로 서비스에 대한 인프라를 포함하는 테스트 사례가 있지만 서로 격리되고 **{MicroserviceName}.FunctionalTests** 프로젝트에 포함되어 있습니다.
+2. **마이크로 서비스 기능/통합 테스트** 는 각 마이크로 서비스에 대한 인프라를 포함하는 테스트 사례가 있지만 서로 격리되고 **{MicroserviceName}.FunctionalTests** 프로젝트에 포함되어 있습니다.
 
-3. **애플리케이션 기능/통합 테스트**: 여러 마이크로 서비스를 실행하는 테스트 사례를 사용하여 마이크로 서비스 통합에 집중합니다. 이러한 테스트는 프로젝트 **Application.FunctionalTests**에 있습니다.
+3. **애플리케이션 기능/통합 테스트**: 여러 마이크로 서비스를 실행하는 테스트 사례를 사용하여 마이크로 서비스 통합에 집중합니다. 이러한 테스트는 프로젝트 **Application.FunctionalTests** 에 있습니다.
 
 단위 및 통합 테스트는 마이크로 서비스 프로젝트 내의 테스트 폴더에 구성되지만, 그림 6-25에 표시된 것처럼 애플리케이션 및 부하 테스트는 루트 폴더 아래에 별도로 관리됩니다.
 

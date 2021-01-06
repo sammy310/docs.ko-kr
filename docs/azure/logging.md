@@ -2,15 +2,15 @@
 title: .NET용 Azure SDK를 사용하여 로깅
 description: .NET 용 Azure SDK 클라이언트 라이브러리를 사용하여 로깅을 사용하도록 설정하는 방법 알아보기
 ms.date: 03/20/2020
-ms.custom: azure-sdk-dotnet
+ms.custom: devx-track-dotnet
 ms.author: casoper
 author: camsoper
-ms.openlocfilehash: 0b255713bc9c13e0cbdaeb25a3d0fe46e91e815d
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 6adc485867e9bad401a15da19e6cb4424d2ddb13
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416027"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700712"
 ---
 # <a name="logging-with-the-azure-sdk-for-net"></a>.NET용 Azure SDK를 사용하여 로깅
 

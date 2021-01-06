@@ -2,12 +2,12 @@
 title: 레코드
 description: 'F # 레코드가 선택적으로 멤버와 함께 명명 된 값의 단순 집계를 나타내는 방법에 대해 알아봅니다.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 03de96b9c53bc21e7a7723a15d2a8451d100ba76
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2da31da0ec830d458a370e64ca105048181f5d74
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682031"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899641"
 ---
 # <a name="records"></a>레코드
 
@@ -163,7 +163,7 @@ let weirdString = p.WeirdToString()
 
 ## <a name="differences-between-records-and-classes"></a>레코드와 클래스의 차이점
 
-레코드 필드는 자동으로 속성으로 노출 되 고 레코드를 만들고 복사 하는 데 사용 된다는 점에서 클래스와 다릅니다. 또한 레코드 생성은 클래스 생성과 다릅니다. 레코드 형식에서 생성자를 정의할 수 없습니다. 대신이 항목에서 설명 하는 생성 구문이 적용 됩니다. 클래스는 생성자 매개 변수, 필드 및 속성 간에 직접적인 관계가 없습니다.
+레코드 필드는 자동으로 속성으로 노출 되 고 레코드를 만들고 복사 하는 데 사용 된다는 점에서 클래스 필드와 다릅니다. 또한 레코드 생성은 클래스 생성과 다릅니다. 레코드 형식에서 생성자를 정의할 수 없습니다. 대신이 항목에서 설명 하는 생성 구문이 적용 됩니다. 클래스는 생성자 매개 변수, 필드 및 속성 간에 직접적인 관계가 없습니다.
 
 Union 및 구조체 형식과 마찬가지로 레코드는 구조적 같음 의미 체계를 포함 합니다. 클래스에는 참조 같음 의미 체계가 있습니다. 다음 코드 예제에서는 이 작업을 보여줍니다.
 

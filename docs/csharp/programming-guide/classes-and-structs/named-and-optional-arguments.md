@@ -2,7 +2,7 @@
 title: 명명된 인수와 선택적 인수 - C# 프로그래밍 가이드
 description: C#의 명명된 인수는 위치가 아닌 이름으로 인수를 지정합니다. 선택적 인수는 생략할 수 있습니다.
 ms.date: 09/25/2020
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 f1_keywords:
 - namedParameter_CSharpKeyword
 - cs_namedParameter
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: a0606d6acccb47347c663a9fe3ffb8ab65b0ecec
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: bb79d956124a610bac0de6825c1f42655789e98d
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91438006"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513109"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>명명된 인수와 선택적 인수(C# 프로그래밍 가이드)
 
-C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. 명명된 인수를 사용하면 인수를 매개 변수 목록 내의 해당 위치가 아닌 해당 이름과 일치시켜 매개 변수에 대한 인수를 지정할 수 있습니다. *선택적 인수*를 사용하면 일부 매개 변수에 대한 인수를 생략할 수 있습니다. 두 기법 모두 메서드, 인덱서, 생성자 및 대리자에 사용할 수 있습니다.
+C# 4에서는 명명된 인수와 선택적 인수가 도입되었습니다. 명명된 인수를 사용하면 인수를 매개 변수 목록 내의 해당 위치가 아닌 해당 이름과 일치시켜 매개 변수에 대한 인수를 지정할 수 있습니다. *선택적 인수* 를 사용하면 일부 매개 변수에 대한 인수를 생략할 수 있습니다. 두 기법 모두 메서드, 인덱서, 생성자 및 대리자에 사용할 수 있습니다.
 
 명명된 인수와 선택적 인수를 사용하는 경우 매개 변수 목록이 아니라 인수 목록에 표시되는 순서대로 인수가 평가됩니다.
 

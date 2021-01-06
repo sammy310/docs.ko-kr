@@ -3,12 +3,12 @@ title: NUnit 및 .NET Core를 사용한 C# 유닛 테스트
 description: dotnet test 및 NUnit을 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 C# 및 .NET Core의 단위 테스트 개념을 알아봅니다.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 90fd917fd980db6689195026a7524e0cacfc92bc
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 9c9982b047f7b3c5a03ecdd2fabfa2a0edce4558
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656373"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633938"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>NUnit 및 .NET Core를 사용한 C# 유닛 테스트
 
@@ -23,7 +23,7 @@ ms.locfileid: "88656373"
 
 ## <a name="creating-the-source-project"></a>소스 프로젝트 만들기
 
-셸 창을 엽니다. 솔루션을 저장하기 위한 *unit-testing-using-nunit*라는 디렉터리를 만듭니다. 이 새 디렉터리 내에서 다음 명령을 실행하여 클래스 라이브러리 및 테스트 프로젝트에 대한 새 솔루션 파일을 만듭니다.
+셸 창을 엽니다. 솔루션을 저장하기 위한 *unit-testing-using-nunit* 라는 디렉터리를 만듭니다. 이 새 디렉터리 내에서 다음 명령을 실행하여 클래스 라이브러리 및 테스트 프로젝트에 대한 새 솔루션 파일을 만듭니다.
 
 ```dotnetcli
 dotnet new sln
@@ -37,13 +37,13 @@ dotnet new sln
     /PrimeService
 ```
 
-*PrimeService*를 현재 디렉터리로 만들고 다음 명령을 실행하여 소스 프로젝트를 만듭니다.
+*PrimeService* 를 현재 디렉터리로 만들고 다음 명령을 실행하여 소스 프로젝트를 만듭니다.
 
 ```dotnetcli
 dotnet new classlib
 ```
 
-*Class1.cs*의 이름을 *PrimeService.cs*로 바꿉니다. 다음과 같이 `PrimeService` 클래스의 실패 구현을 만듭니다.
+*Class1.cs* 의 이름을 *PrimeService.cs* 로 바꿉니다. 다음과 같이 `PrimeService` 클래스의 실패 구현을 만듭니다.
 
 ```csharp
 using System;
@@ -118,9 +118,35 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 ## <a name="creating-the-first-test"></a>첫 번째 테스트 만들기
 
-하나의 실패 테스트를 작성하고, 테스트가 성공하도록 만듭니다. 이 작업을 반복합니다. *PrimeService.Tests* 디렉터리에서 *UnitTest1.cs* 파일의 이름을 *PrimeService_IsPrimeShould.cs*로 변경하고 전체 내용을 다음 코드로 바꿉니다.
+하나의 실패 테스트를 작성하고, 테스트가 성공하도록 만듭니다. 이 작업을 반복합니다. *PrimeService.Tests* 디렉터리에서 *UnitTest1.cs* 파일의 이름을 *PrimeService_IsPrimeShould.cs* 로 변경하고 전체 내용을 다음 코드로 바꿉니다.
 
-[!code-csharp[Sample_FirstTest](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_FirstTest)]
+```csharp
+using NUnit.Framework;
+using Prime.Services;
+
+namespace Prime.UnitTests.Services
+{
+    [TestFixture]
+    public class PrimeService_IsPrimeShould
+    {
+        private PrimeService _primeService;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _primeService = new PrimeService();
+        }
+
+        [Test]
+        public void IsPrime_InputIs1_ReturnFalse()
+        {
+            var result = _primeService.IsPrime(1);
+
+            Assert.IsFalse(result, "1 should not be prime");
+        }
+    }
+}
+```
 
 `[TestFixture]` 특성은 단위 테스트가 포함된 클래스를 나타냅니다. `[Test]` 특성은 메서드가 테스트 메서드임을 나타냅니다.
 

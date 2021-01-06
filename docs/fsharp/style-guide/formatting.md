@@ -2,12 +2,12 @@
 title: F# 코드 서식 지정 지침
 description: 'F # 코드의 서식을 지정 하기 위한 지침을 알아봅니다.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 7e20c76f4cfafa50a15b6501a498b228b526057e
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 01a5f9ce0c9b5a67bb0c70bce0829ac300032883
+ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513070"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97737192"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 코드 서식 지정 지침
 
@@ -180,11 +180,34 @@ Long 함수 정의가 있는 경우 새 줄에 매개 변수를 추가 하 고 �
 
 ```fsharp
 module M =
-    let LongFunctionWithLotsOfParameters
+    let longFunctionWithLotsOfParameters
         (aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
         (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
         (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
         =
+        // ... the body of the method follows
+
+    let longFunctionWithLotsOfParametersAndReturnType
+        (aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        : ReturnType =
+        // ... the body of the method follows
+
+    let longFunctionWithLongTupleParameter
+        (
+            aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse
+        ) =
+        // ... the body of the method follows
+
+    let longFunctionWithLongTupleParameterAndReturnType
+        (
+            aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse
+        ) : ReturnType =
         // ... the body of the method follows
 ```
 
@@ -588,10 +611,11 @@ type MyRecord =
 
 let foo a =
     a
-    |> Option.map (fun x ->
-        {
-            MyField = x
-        })
+    |> Option.map
+        (fun x ->
+            {
+                MyField = x
+            })
 ```
 
 목록 및 배열 요소에도 동일한 규칙이 적용 됩니다.
@@ -802,10 +826,11 @@ match lam with
 
 ```fsharp
 lambdaList
-|> List.map (function
-    | Abs(x, body) -> 1 + sizeLambda 0 body
-    | App(lam1, lam2) -> sizeLambda (sizeLambda 0 lam1) lam2
-    | Var v -> 1)
+|> List.map
+    (function
+        | Abs(x, body) -> 1 + sizeLambda 0 body
+        | App(lam1, lam2) -> sizeLambda (sizeLambda 0 lam1) lam2
+        | Var v -> 1)
 ```
 
 키워드를 사용 하는 경우에도 또는에서 정의한 함수의 패턴 일치는 `let` `let rec` 를 시작한 후 4 개의 공백으로 들여쓰기 되어야 합니다 `let` `function` .
@@ -838,11 +863,27 @@ with
 
 ## <a name="formatting-function-parameter-application"></a>형식 지정 함수 매개 변수 응용 프로그램
 
-일반적으로 대부분의 함수 매개 변수 응용 프로그램은 같은 줄에서 수행 됩니다.
-
-새 줄에 함수에 대 한 매개 변수를 적용 하려는 경우 한 범위 만큼 들여씁니다.
+일반적으로 대부분의 인수는 동일한 줄에 제공 됩니다.
 
 ```fsharp
+let x = sprintf "\t%s - %i\n\r" x.IngredientName x.Quantity
+
+let printListWithOffset a list1 =
+    List.iter (fun elem -> printfn $"%d{a + elem}") list1
+```
+
+파이프라인이 염려 하는 경우에도 동일 하 게 다음과 같이 커리 된 함수가 동일한 줄에서 인수로 적용 되는 경우에도 마찬가지입니다.
+
+```
+let printListWithOffsetPiped a list1 =
+    list1
+    |> List.iter (fun elem -> printfn $"%d{a + elem}")
+```
+
+그러나 가독성을 높이기 위해 또는 인수 목록이 너무 길어서 새 줄에 함수에 대 한 인수를 전달할 수 있습니다. 이 경우 한 범위를 사용 하 여 들여쓰기 합니다.
+
+```fsharp
+
 // OK
 sprintf "\t%s - %i\n\r"
      x.IngredientName x.Quantity
@@ -860,23 +901,23 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-람다 식에 대 한 동일한 지침이 함수 인수로 적용 됩니다. 람다 식의 본문 인 경우 본문은 한 범위로 들여쓰기 된 다른 줄을 포함할 수 있습니다.
+람다 식의 경우 람다 식의 본문을 한 범위에 따라 들여쓰기 된 새 줄에 배치 하는 것을 고려할 수도 있습니다.
 
 ```fsharp
-let printListWithOffset a list1 =
-    List.iter
-        (fun elem -> printfn $"%d{a + elem}")
-        list1
-
-// OK if lambda body is long enough
 let printListWithOffset a list1 =
     List.iter
         (fun elem ->
             printfn $"%d{a + elem}")
         list1
+
+let printListWithOffsetPiped a list1 =
+    list1
+    |> List.iter
+        (fun elem ->
+            printfn $"%d{a + elem}")
 ```
 
-그러나 람다 식의 본문이 두 줄 이상인 경우에는 함수에 단일 인수로 적용 되는 여러 줄 구문을 포함 하지 않고 별도의 함수로 팩터링 하는 것이 좋습니다.
+람다 식의 본문이 여러 줄 길면 로컬 범위 함수로 리팩터링 하는 것을 고려해 야 합니다.
 
 ### <a name="formatting-infix-operators"></a>중 위 연산자 서식 지정
 

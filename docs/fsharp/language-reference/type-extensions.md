@@ -2,16 +2,16 @@
 title: 형식 확장
 description: 'F # 형식 확장을 사용 하 여 이전에 정의한 개체 형식에 새 멤버를 추가 하는 방법을 알아봅니다.'
 ms.date: 02/05/2020
-ms.openlocfilehash: 8fdb2d5e527643b23d24a6118e8cef6b11f1a546
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: c9adddb3133a4af57a12be0b09c22954a8bff6a7
+ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559130"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97737270"
 ---
 # <a name="type-extensions"></a>형식 확장
 
-형식 확장명 ( _확대_이 라고도 함)은 이전에 정의 된 개체 형식에 새 멤버를 추가할 수 있는 기능 패밀리입니다. 세 가지 기능은 다음과 같습니다.
+형식 확장명 ( _확대_ 이 라고도 함)은 이전에 정의 된 개체 형식에 새 멤버를 추가할 수 있는 기능 패밀리입니다. 세 가지 기능은 다음과 같습니다.
 
 - 내장 형식 확장
 - 선택적 형식 확장
@@ -34,7 +34,7 @@ open System.Runtime.CompilerServices
 [<Extension>]
 type Extensions() =
     [<Extension>]
-    static member self-identifier.extension-name (ty: typename, [args]) =
+    static member extension-name (ty: typename, [args]) =
         body
     ...
 ```

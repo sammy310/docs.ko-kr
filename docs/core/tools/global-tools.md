@@ -4,12 +4,12 @@ description: .NET 도구를 설치, 사용, 업데이트 및 제거하는 방법
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 3669ed17d58542aab0435ccea22700c82ba8ea26
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 8839fd4fba72c9f973d906eabb72919306a847dd
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556903"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633886"
 ---
 # <a name="how-to-manage-net-tools"></a>.NET 도구를 관리하는 방법
 
@@ -40,8 +40,6 @@ ms.locfileid: "94556903"
 
 * [dotnet tool search](dotnet-tool-search.md) 명령을 사용하여 NuGet.org에 게시되는 도구를 찾습니다.
 * ".NET 도구" 패키지 유형 필터를 사용하여 [NuGet](https://www.nuget.org) 웹 사이트를 검색합니다. 자세한 내용은 [패키지 찾기 및 선택](/nuget/consume-packages/finding-and-choosing-packages)을 참조하세요.
-* [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub 리포지토리에서 도구 목록을 확인합니다.
-* [ToolGet](https://www.toolget.net/)을 사용하여 .NET 도구를 검색합니다.
 * [dotnet/aspnetcore GitHub 리포지토리의 Tools 디렉터리](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)에서 ASP.NET Core 팀이 만든 도구의 소스 코드를 참조합니다.
 * [.NET 진단 도구](../diagnostics/index.md#net-core-diagnostic-global-tools)에서 진단 도구에 대해 알아보세요.
 
