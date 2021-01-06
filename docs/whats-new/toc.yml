@@ -1,18 +1,19 @@
-name: 새로운 기능
-href: index.yml
-expanded: true
 items:
-  - name: 2020
+  - name: 새로운 기능
+    href: index.yml
+    expanded: true
     items:
-      - name: 11월
-        href: 2020-11.md
-      - name: 10월
-        href: 2020-10.md
-      - name: 9월
-        href: 2020-09.md
-      - name: 8월
-        href: 2020-08.md
-      - name: 7월
-        href: 2020-07.md
-      - name: 6월
-        href: 2020-06.md
+      - name: '2020'
+        items:
+          - name: 12월
+            href: 2020-12.md
+          - name: 11월
+            href: 2020-11.md
+          - name: 10월
+            href: 2020-10.md
+          - name: 9월
+            href: 2020-09.md
+          - name: 8월
+            href: 2020-08.md
+          - name: 7월
+            href: 2020-07.md

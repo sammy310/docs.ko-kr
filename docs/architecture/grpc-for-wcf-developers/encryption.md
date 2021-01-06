@@ -1,33 +1,33 @@
 ---
 title: 암호화 및 네트워크 보안-WCF 개발자를 위한 gRPC
 description: GRPC의 네트워크 보안 및 암호화에 대 한 몇 가지 참고 사항
-ms.date: 09/02/2019
-ms.openlocfilehash: f8a7aeaf2a65e4ff56ac33d728e40f09a436f7a6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.date: 12/15/2020
+ms.openlocfilehash: 0735158ed69ce425c4f00eed6c42689b888a1885
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542772"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938626"
 ---
-# <a name="encryption-and-network-security"></a><span data-ttu-id="e9f6e-103">암호화 및 네트워크 보안</span><span class="sxs-lookup"><span data-stu-id="e9f6e-103">Encryption and network security</span></span>
+# <a name="encryption-and-network-security"></a><span data-ttu-id="eac99-103">암호화 및 네트워크 보안</span><span class="sxs-lookup"><span data-stu-id="eac99-103">Encryption and network security</span></span>
 
-<span data-ttu-id="e9f6e-104">WCF (Windows Communication Foundation)의 네트워크 보안 모델은 광범위 하 고 복잡 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9f6e-104">The network security model for Windows Communication Foundation (WCF) is extensive and complex.</span></span> <span data-ttu-id="e9f6e-105">HTTPS 또는 TLS over TCP를 사용 하는 전송 수준 보안 및 WS-SECURITY 사양을 사용 하 여 개별 메시지를 암호화 하는 메시지 수준 보안을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9f6e-105">It includes transport-level security by using HTTPS or TLS-over-TCP, and message-level security by using the WS-Security specification to encrypt individual messages.</span></span>
+<span data-ttu-id="eac99-104">WCF (Windows Communication Foundation)의 네트워크 보안 모델은 광범위 하 고 복잡 합니다.</span><span class="sxs-lookup"><span data-stu-id="eac99-104">The network security model for Windows Communication Foundation (WCF) is extensive and complex.</span></span> <span data-ttu-id="eac99-105">HTTPS 또는 TLS over TCP를 사용 하는 전송 수준 보안 및 WS-Security 사양을 사용 하 여 개별 메시지를 암호화 하는 메시지 수준 보안을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="eac99-105">It includes transport-level security by using HTTPS or TLS-over-TCP, and message-level security by using the WS-Security specification to encrypt individual messages.</span></span>
 
-<span data-ttu-id="e9f6e-106">gRPC는 기본 HTTP/2 프로토콜에 대 한 보안 네트워킹을 유지 합니다 .이 프로토콜은 TLS 인증서를 사용 하 여 보호할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e9f6e-106">gRPC leaves secure networking to the underlying HTTP/2 protocol, which you can secure by using TLS certificates.</span></span>
+<span data-ttu-id="eac99-106">gRPC는 기본 HTTP/2 프로토콜에 대 한 보안 네트워킹을 유지 합니다 .이 프로토콜은 TLS 인증서를 사용 하 여 보호할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eac99-106">gRPC leaves secure networking to the underlying HTTP/2 protocol, which you can secure by using TLS certificates.</span></span>
 
-<span data-ttu-id="e9f6e-107">웹 브라우저는 HTTP/2에 대 한 TLS 연결을 사용 하지만 대부분의 프로그래밍 클라이언트는를 포함 합니다. NET의 `HttpClient`는 암호화 되지 않은 연결에 대해 HTTP/2를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e9f6e-107">Web browsers insist on using TLS connections for HTTP/2, but most programmatic clients, including .NET's `HttpClient`, can use HTTP/2 over unencrypted connections.</span></span> <span data-ttu-id="e9f6e-108">`HttpClient`는 기본적으로 암호화가 필요 하지만 <xref:System.AppContext> 스위치를 사용 하 여이를 재정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e9f6e-108">`HttpClient` does require encryption by default, but you can override this by using an <xref:System.AppContext> switch.</span></span>
+<span data-ttu-id="eac99-107">웹 브라우저는 HTTP/2에 대 한 TLS 연결을 사용 하지만 대부분의 프로그래밍 클라이언트는를 포함 합니다. NET의 `HttpClient` 는 암호화 되지 않은 연결에 대해 HTTP/2를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eac99-107">Web browsers insist on using TLS connections for HTTP/2, but most programmatic clients, including .NET's `HttpClient`, can use HTTP/2 over unencrypted connections.</span></span> <span data-ttu-id="eac99-108">`HttpClient` 에서는 기본적으로 암호화가 필요 하지만 스위치를 사용 하 여이 동작을 재정의할 수 있습니다 <xref:System.AppContext> .</span><span class="sxs-lookup"><span data-stu-id="eac99-108">`HttpClient` does require encryption by default, but you can override this behavior by using an <xref:System.AppContext> switch.</span></span>
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 ```
 
-<span data-ttu-id="e9f6e-109">공용 Api의 경우 항상 TLS 연결을 사용 하 고 적절 한 SSL 기관에서 서비스에 대 한 유효한 인증서를 제공 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9f6e-109">For public APIs, you should always use TLS connections, and provide valid certificates for your services from a proper SSL authority.</span></span> <span data-ttu-id="e9f6e-110">전체 기능 [을 제공 하는 통합](https://letsencrypt.org) SSL 인증서를 제공 하 고 대부분의 호스팅 인프라는 일반적인 플러그 인 또는 확장을 사용 하 여 사전에 암호화 표준을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9f6e-110">[LetsEncrypt](https://letsencrypt.org) provides free, automated SSL certificates, and most hosting infrastructure today supports the LetsEncrypt standard with common plug-ins or extensions.</span></span>
+<span data-ttu-id="eac99-109">공용 Api의 경우 항상 TLS 연결을 사용 하 고 적절 한 SSL 기관에서 서비스에 대 한 유효한 인증서를 제공 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="eac99-109">For public APIs, you should always use TLS connections, and provide valid certificates for your services from a proper SSL authority.</span></span> <span data-ttu-id="eac99-110">전체 기능 [을 제공 하는 통합](https://letsencrypt.org) SSL 인증서를 제공 하 고 대부분의 호스팅 인프라는 일반적인 플러그 인 또는 확장을 사용 하 여 사전에 암호화 표준을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="eac99-110">[LetsEncrypt](https://letsencrypt.org) provides free, automated SSL certificates, and most hosting infrastructure today supports the LetsEncrypt standard with common plug-ins or extensions.</span></span>
 
-<span data-ttu-id="e9f6e-111">회사 네트워크에 있는 내부 서비스의 경우에도 TLS를 사용 하 여 gRPC 서비스로 들어오고 나가는 네트워크 트래픽을 보호 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="e9f6e-111">For internal services across a corporate network, you should still consider using TLS to secure network traffic to and from your gRPC services.</span></span>
+<span data-ttu-id="eac99-111">회사 네트워크에 있는 내부 서비스의 경우에도 TLS를 사용 하 여 gRPC 서비스로 들어오고 나가는 네트워크 트래픽을 보호 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="eac99-111">For internal services across a corporate network, you should still consider using TLS to secure network traffic to and from your gRPC services.</span></span>
 
-<span data-ttu-id="e9f6e-112">Kubernetes에서 실행 되는 서비스 간에 명시적 TLS를 사용 해야 하는 경우 클러스터 내 인증 기관 및 인증서 관리자 컨트롤러 (예: 인증서 관리자 [)](https://docs.cert-manager.io/en/latest/)를 사용 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="e9f6e-112">If you need to use explicit TLS between services running in Kubernetes, consider using an in-cluster certificate authority and a certificate manager controller like [cert-manager](https://docs.cert-manager.io/en/latest/).</span></span> <span data-ttu-id="e9f6e-113">그런 다음 배포 시 서비스에 인증서를 자동으로 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e9f6e-113">You can then automatically assign certificates to services at deployment time.</span></span>
+<span data-ttu-id="eac99-112">Kubernetes에서 실행 되는 서비스 간에 명시적 TLS를 사용 해야 하는 경우 클러스터 내 인증 기관 및 인증서 관리자 컨트롤러 (예: 인증서 관리자 [)](https://docs.cert-manager.io/en/latest/)를 사용 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="eac99-112">If you need to use explicit TLS between services running in Kubernetes, consider using an in-cluster certificate authority and a certificate manager controller like [cert-manager](https://docs.cert-manager.io/en/latest/).</span></span> <span data-ttu-id="eac99-113">그런 다음 배포 시 서비스에 인증서를 자동으로 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eac99-113">You can then automatically assign certificates to services at deployment time.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="e9f6e-114">[이전](channel-credentials.md)
->[다음](grpc-in-production.md)</span><span class="sxs-lookup"><span data-stu-id="e9f6e-114">[Previous](channel-credentials.md)
+><span data-ttu-id="eac99-114">[이전](channel-credentials.md)
+>[다음](grpc-in-production.md)</span><span class="sxs-lookup"><span data-stu-id="eac99-114">[Previous](channel-credentials.md)
 [Next](grpc-in-production.md)</span></span>
