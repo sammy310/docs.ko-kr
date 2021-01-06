@@ -1,13 +1,13 @@
 ---
 title: Wcf 개발자를 위한 gRPC gRPC로 WCF 요청-회신 서비스 마이그레이션
 description: WCF에서 gRPC로 간단한 요청-응답 서비스를 마이그레이션하는 방법에 대해 알아봅니다.
-ms.date: 09/02/2019
-ms.openlocfilehash: 29a7bc77bc3a4becd767fc7a50adff5b746f54bc
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.date: 12/15/2020
+ms.openlocfilehash: 38c6e33e7588dd7c1b263d813d06c088ab484948
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512699"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938574"
 ---
 # <a name="migrate-a-wcf-request-reply-service-to-a-grpc-unary-rpc"></a>WCF 요청-회신 서비스를 gRPC 단항 RPC로 마이그레이션
 
@@ -196,7 +196,7 @@ ASP.NET Core의 모든 gRPC 단항 서비스 메서드에 대 한 서명이 일�
 
 메서드의 반환 형식은입니다 `Task<T>` `T` . 여기서는 응답 메시지 유형입니다. 모든 gRPC 서비스 메서드는 비동기입니다.
 
-## <a name="migrate-the-portfoliodata-library-to-net-core"></a>PortfolioData 라이브러리를 .NET Core로 마이그레이션
+## <a name="migrate-the-portfoliodata-library-to-net"></a>PortfolioData 라이브러리를 .NET으로 마이그레이션
 
 이 시점에서 프로젝트에는 `TraderSys.PortfolioData` WCF 솔루션의 클래스 라이브러리에 포함 된 포트폴리오 리포지토리 및 모델이 필요 합니다. 이러한 항목을 가져오는 가장 쉬운 방법은 Visual Studio **새 프로젝트** 대화 상자를 사용 하 여 클래스 라이브러리 (.NET Standard) 템플릿을 사용 하거나 명령줄에서 .NET Core CLI를 사용 하 여 파일을 포함 하는 디렉터리에서 다음 명령을 실행 하 여 새 클래스 라이브러리를 만드는 것입니다 `TraderSys.sln` .
 
@@ -395,7 +395,7 @@ WCF 요청-회신 서비스를 gRPC로 성공적으로 마이그레이션한 경
 동일한 솔루션에서 클라이언트를 포함 하는 .NET Standard 클래스 라이브러리를 만듭니다. 이는 주로 클라이언트 코드를 만드는 예제 이지만 NuGet을 사용 하 여 이러한 라이브러리를 패키지 하 고 다른 .NET 팀이 사용할 수 있도록 내부 리포지토리에 배포할 수 있습니다. 계속 진행 하 여 라는 새 .NET Standard 클래스 라이브러리를 `TraderSys.Portfolios.Client` 솔루션에 추가 하 고 파일을 삭제 `Class1.cs` 합니다.
 
 > [!CAUTION]
-> [Grpc .Net 클라이언트](https://www.nuget.org/packages/Grpc.Net.Client) NuGet 패키지에는 .net Core 3.0 (또는 다른 .NET Standard 2.1 규격 런타임)가 필요 합니다. 이전 버전의 .NET Framework 및 .NET Core는 [Grpc. 핵심](https://www.nuget.org/packages/Grpc.Core) NuGet 패키지에서 지원 됩니다.
+> [Grpc .Net 클라이언트](https://www.nuget.org/packages/Grpc.Net.Client) NuGet 패키지에는 .net Core 3.0 이상 또는 다른 .NET Standard 2.1 규격 런타임이 필요 합니다. 이전 버전의 .NET Framework 및 .NET Core는 [Grpc. 핵심](https://www.nuget.org/packages/Grpc.Core) NuGet 패키지에서 지원 됩니다.
 
 Visual Studio 2019에서는 이전 버전의 Visual Studio에서 WCF 프로젝트에 서비스 참조를 추가 하는 방법과 유사한 방식으로 gRPC 서비스에 대 한 참조를 추가할 수 있습니다. 이제 서비스 참조 및 연결 된 서비스가 모두 동일한 UI에서 관리 됩니다. 솔루션 탐색기에서 프로젝트의 **종속성** 노드를 마우스 오른쪽 단추로 클릭 하 `TraderSys.Portfolios.Client` 고 **연결 된 서비스 추가** 를 선택 하 여 UI에 액세스할 수 있습니다. 표시 되는 도구 창에서 **서비스 참조** 섹션을 선택 하 고 **새 Grpc 서비스 참조 추가** 를 선택 합니다.
 

@@ -1,21 +1,21 @@
 ---
 title: 암호화 및 네트워크 보안-WCF 개발자를 위한 gRPC
 description: GRPC의 네트워크 보안 및 암호화에 대 한 몇 가지 참고 사항
-ms.date: 09/02/2019
-ms.openlocfilehash: f8a7aeaf2a65e4ff56ac33d728e40f09a436f7a6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.date: 12/15/2020
+ms.openlocfilehash: 0735158ed69ce425c4f00eed6c42689b888a1885
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542772"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938626"
 ---
 # <a name="encryption-and-network-security"></a>암호화 및 네트워크 보안
 
-WCF (Windows Communication Foundation)의 네트워크 보안 모델은 광범위 하 고 복잡 합니다. HTTPS 또는 TLS over TCP를 사용 하는 전송 수준 보안 및 WS-SECURITY 사양을 사용 하 여 개별 메시지를 암호화 하는 메시지 수준 보안을 포함 합니다.
+WCF (Windows Communication Foundation)의 네트워크 보안 모델은 광범위 하 고 복잡 합니다. HTTPS 또는 TLS over TCP를 사용 하는 전송 수준 보안 및 WS-Security 사양을 사용 하 여 개별 메시지를 암호화 하는 메시지 수준 보안을 포함 합니다.
 
 gRPC는 기본 HTTP/2 프로토콜에 대 한 보안 네트워킹을 유지 합니다 .이 프로토콜은 TLS 인증서를 사용 하 여 보호할 수 있습니다.
 
-웹 브라우저는 HTTP/2에 대 한 TLS 연결을 사용 하지만 대부분의 프로그래밍 클라이언트는를 포함 합니다. NET의 `HttpClient`는 암호화 되지 않은 연결에 대해 HTTP/2를 사용할 수 있습니다. `HttpClient`는 기본적으로 암호화가 필요 하지만 <xref:System.AppContext> 스위치를 사용 하 여이를 재정의할 수 있습니다.
+웹 브라우저는 HTTP/2에 대 한 TLS 연결을 사용 하지만 대부분의 프로그래밍 클라이언트는를 포함 합니다. NET의 `HttpClient` 는 암호화 되지 않은 연결에 대해 HTTP/2를 사용할 수 있습니다. `HttpClient` 에서는 기본적으로 암호화가 필요 하지만 스위치를 사용 하 여이 동작을 재정의할 수 있습니다 <xref:System.AppContext> .
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);

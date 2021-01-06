@@ -1,17 +1,17 @@
 ---
 title: 사전에 대 한 Protobuf 지도-WCF 개발자를 위한 gRPC
 description: Protobuf maps를 사용 하 여 .NET에서 사전 형식을 나타내는 방법을 알아봅니다.
-ms.date: 09/09/2019
-ms.openlocfilehash: 2c2ae76d47b2309227d22235b5acbe2afa794158
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.date: 12/15/2020
+ms.openlocfilehash: d38270d4bc320cf1f758080c18843ed1d716b350
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867467"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938548"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>사전용 Protobuf 맵
 
-메시지에 있는 명명 된 값의 컬렉션을 나타낼 수 있는 것이 중요 합니다. .NET에서이는 일반적으로 사전 형식을 통해 처리 됩니다. <xref:System.Collections.Generic.IDictionary%602>프로토콜 버퍼의 .net 형식 (Protobuf)에 해당 하는 값은 `map<key_type, value_type>` 형식입니다. 이 섹션에서는 Protobuf에서 형식을 선언 하는 방법과 생성 된 코드를 사용 하는 방법을 보여 줍니다 `map` .
+메시지에 있는 명명 된 값의 컬렉션을 나타낼 수 있는 것이 중요 합니다. .NET에서이 활동은 일반적으로 사전 유형을 통해 처리 됩니다. <xref:System.Collections.Generic.IDictionary%602>프로토콜 버퍼의 .net 형식 (Protobuf)에 해당 하는 값은 `map<key_type, value_type>` 형식입니다. 이 섹션에서는 Protobuf에서 형식을 선언 하는 방법과 생성 된 코드를 사용 하는 방법을 보여 줍니다 `map` .
 
 ```protobuf
 message StockPrices {

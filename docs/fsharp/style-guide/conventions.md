@@ -1,13 +1,13 @@
 ---
 title: F# 코딩 규칙
 description: 'F # 코드를 작성할 때 일반적인 지침과 관용구에 대해 알아봅니다.'
-ms.date: 01/15/2020
-ms.openlocfilehash: 87955c379f0abba929b0ced75d62d2601f37dc5a
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 01/5/2021
+ms.openlocfilehash: e69ceb2f3c37404ca8d8ed972f985340e62ecb59
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739904"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938691"
 ---
 # <a name="f-coding-conventions"></a>F# 코딩 규칙
 
@@ -135,7 +135,7 @@ open Internal.Utilities.Collections
 ```fsharp
 // This is bad!
 module MyApi =
-    let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
+    let dep1 = File.ReadAllText "/Users/<name>/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
 
     let private r = Random()
@@ -190,9 +190,9 @@ type MoneyWithdrawalResult =
 let handleWithdrawal amount =
     let w = withdrawMoney amount
     match w with
-    | Success am -> printfn "Successfully withdrew %f{am}"
-    | InsufficientFunds balance -> printfn "Failed: balance is %f{balance}"
-    | CardExpired expiredDate -> printfn "Failed: card expired on %O{expiredDate}"
+    | Success am -> printfn $"Successfully withdrew %f{am}"
+    | InsufficientFunds balance -> printfn $"Failed: balance is %f{balance}"
+    | CardExpired expiredDate -> printfn $"Failed: card expired on {expiredDate}"
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
@@ -209,7 +209,7 @@ let handleWithdrawal amount =
 
 예외를 발생 시키기 위해 F #에서 사용할 수 있는 기본 구문은 다음과 같은 기본 설정 순서로 고려 되어야 합니다.
 
-| 함수 | 구문 | 목적 |
+| 기능 | 구문 | 목적 |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | 지정 된 `System.ArgumentNullException` 인수 이름을 사용 하 여을 발생 시킵니다. |
 | `invalidArg` | `invalidArg "argumentName" "message"` | 지정 된 `System.ArgumentException` 인수 이름 및 메시지를 사용 하 여을 발생 시킵니다. |
@@ -238,7 +238,7 @@ with
 
 ### <a name="do-not-use-monadic-error-handling-to-replace-exceptions"></a>Monadic 오류 처리를 사용 하 여 예외 바꾸기
 
-예외는 함수형 프로그래밍에서 약간의 금기시 표시 됩니다. 실제로 예외는 순도를 위반 하므로 매우 작동 하지 않는 것을 고려 하는 것이 안전 합니다. 그러나이 경우 코드를 실행 해야 하는 현실을 무시 하 고 런타임 오류가 발생할 수 있습니다. 일반적으로 불쾌 예상치를 최소화 하기 위해 대부분의 항목이 순수 또는 합계는 아닌 것으로 가정 하 여 코드를 작성 합니다.
+예외는 함수형 프로그래밍에서 주로 금기시로 표시 됩니다. 실제로 예외는 순도를 위반 하므로 매우 작동 하지 않는 것을 고려 하는 것이 안전 합니다. 그러나이 경우 코드를 실행 해야 하는 현실을 무시 하 고 런타임 오류가 발생할 수 있습니다. 일반적으로 불쾌 예상치를 최소화 하기 위해 대부분의 항목이 순수 또는 합계는 아닌 것으로 가정 하 여 코드를 작성 합니다.
 
 .NET 런타임 및 언어 간 에코 시스템의 관련성 및 적합성과 관련 하 여 다음과 같은 핵심 장점/측면을 고려해 야 합니다.
 
@@ -301,7 +301,7 @@ let tryReadAllTextIfPresent (path : string) =
 
 이 함수는 모두 catch로 작동 하는 대신, 파일을 찾을 수 없는 경우를 적절 하 게 처리 하 고 해당 의미를 반환에 할당 합니다. 이 반환 값은 컨텍스트 정보를 삭제 하거나 호출자가 코드의 해당 지점에서 관련이 없을 수 있는 사례를 처리 하도록 강제 하는 동시에 해당 오류 사례에 매핑될 수 있습니다.
 
-와 같은 형식은 `Result<'Success, 'Error>` 중첩 되지 않은 기본 작업에 적합 하 고, F # 선택적 형식은 *무언가를* 반환할 수 있는 경우를 나타내는 데 적합 합니다. *nothing* 그러나 예외를 대체 하지는 않지만 예외를 대체 하려는 시도에서 사용 하면 안 됩니다. 대신, 예외 및 오류 관리 정책의 특정 측면을 대상 방식으로 처리 하기 위해 신중 하 게 적용 해야 합니다.
+와 같은 형식은 `Result<'Success, 'Error>` 중첩 되지 않은 기본 작업에 적합 하 고, F # 선택적 형식은 *무언가를* 반환할 수 있는 경우를 나타내는 데 적합 합니다.  그러나 예외를 대체 하지는 않지만 예외를 대체 하려는 시도에서 사용 하면 안 됩니다. 대신, 예외 및 오류 관리 정책의 특정 측면을 대상 방식으로 처리 하기 위해 신중 하 게 적용 해야 합니다.
 
 ## <a name="partial-application-and-point-free-programming"></a>부분 응용 프로그램 및 지점 없는 프로그래밍
 
@@ -317,7 +317,7 @@ F #에서는 부분 응용 프로그램을 지원 하므로, 다양 한 방법�
 
 ```fsharp
 let func name age =
-    printfn "My name is {name} and I am %d{age} years old!"
+    printfn $"My name is {name} and I am %d{age} years old!"
 
 let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
@@ -331,7 +331,7 @@ val func : name:string -> age:int -> unit
 val funcWithApplication : (string -> int -> unit)
 ```
 
-호출 사이트에서 Visual Studio와 같은 도구 설명에서는 `string` 및 `int` 입력 형식이 실제로 나타내는 것과 같은 의미 있는 정보를 제공 하지 않습니다.
+호출 사이트에서 Visual Studio와 같은 도구 설명을 통해 형식 시그니처를 제공 하지만 이름이 정의 되어 있지 않으므로 이름이 표시 되지 않습니다. 이름은 호출자가 API의 의미를 보다 잘 이해할 수 있도록 하기 때문에 좋은 API 디자인에 매우 중요 합니다. 공용 API에서 점 없는 코드를 사용 하면 호출자가 이해 하기가 더 어려워집니다.
 
 공개적으로 사용할 수 있는 것과 같은 지점 없는 코드가 발생 하는 경우 `funcWithApplication` 도구에서 인수에 대해 의미 있는 이름을 선택할 수 있도록 전체 η 확장을 수행 하는 것이 좋습니다.
 
