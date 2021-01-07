@@ -1,13 +1,13 @@
 ---
 title: WCF 개발자를 위한 Docker gRPC
 description: ASP.NET Core gRPC 응용 프로그램에 대 한 Docker 이미지 만들기
-ms.date: 12/15/2020
-ms.openlocfilehash: f662dbd67f00b828f3e1dfa47359a450dd1c5900
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: f59518a28b0a1dee75c792ba03bd4af826638502
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938418"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970091"
 ---
 # <a name="create-docker-images"></a>Docker 이미지 만들기
 
@@ -15,7 +15,7 @@ ms.locfileid: "97938418"
 
 ## <a name="microsoft-base-images-for-aspnet-core-applications"></a>ASP.NET Core 응용 프로그램용 Microsoft 기본 이미지
 
-Microsoft는 .NET Core 응용 프로그램 빌드 및 실행을 위한 다양 한 기본 이미지를 제공 합니다. ASP.NET Core 3.0 이미지를 만들려면 다음 두 가지 기본 이미지를 사용 합니다.
+Microsoft는 .NET 응용 프로그램 빌드 및 실행을 위한 다양 한 기본 이미지를 제공 합니다. ASP.NET Core 5.0 이미지를 만들려면 다음 두 가지 기본 이미지를 사용 합니다.
 
 - 응용 프로그램을 빌드 및 게시 하기 위한 SDK 이미지입니다.
 - 배포용 런타임 이미지입니다.
@@ -30,9 +30,8 @@ Microsoft는 .NET Core 응용 프로그램 빌드 및 실행을 위한 다양 �
 | 이미지 태그 | Linux | 메모 |
 | --------- | ----- | ----- |
 | 5.0-buster, 5.0 | Debian 10 | OS 변형이 지정 되지 않은 경우 기본 이미지입니다. |
-| 5.0-알파인 | 알파인 3.9 | 알파인 기본 이미지는 Debian 또는 Ubuntu 1 보다 훨씬 작습니다. |
-| 5.0-disco | Ubuntu 19.04 | |
-| 5.0-bionic | Ubuntu 18.04 | |
+| 5.0-알파인 | 알파인 3.12 | 알파인 기본 이미지는 Debian 또는 Ubuntu 1 보다 훨씬 작습니다. |
+| 5.0-초점면| Ubuntu 20.04 | |
 
 알파인 기본 이미지는 Debian 및 Ubuntu 이미지의 200 MB와 비교 하 여 약 100입니다. 일부 소프트웨어 패키지 또는 라이브러리는 알파인의 패키지 관리에서 사용 하지 못할 수 있습니다. 사용할 이미지를 잘 모르는 경우 기본 Debian를 선택 해야 합니다.
 
@@ -116,7 +115,7 @@ obj/
 `StockKube.sln`서로 다른 두 응용 프로그램 및를 포함 하는 솔루션의 경우 `StockData` `StockWeb` 기본 디렉터리에 각각 dockerfile을 배치 하는 것이 가장 간단 합니다. 이 경우 이미지를 빌드하려면 `docker build` 파일이 있는 디렉터리에서 다음 명령을 사용 `.sln` 합니다.
 
 ```console
-docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
+docker build -t stockdata:1.0.0 -f ./src/StockData/Dockerfile .
 ```
 
 혼동 명명 된 `--tag` 플래그 (로 줄일 수 있음 `-t` )는 지정 된 경우 실제 태그를 포함 하 여 이미지의 전체 이름을 지정 합니다. 끝에 있는는 `.` 빌드가 실행 되는 컨텍스트를 지정 합니다. Dockerfile의 명령에 대 한 현재 작업 디렉터리입니다 `COPY` .
@@ -124,7 +123,7 @@ docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
 단일 솔루션 내에 여러 응용 프로그램이 있는 경우 각 응용 프로그램에 대 한 Dockerfile을 파일 옆에 있는 자체 폴더에 유지할 수 있습니다 `.csproj` . 그래도 `docker build` 기본 디렉터리에서 명령을 실행 하 여 솔루션과 모든 프로젝트가 이미지에 복사 되었는지 확인 해야 합니다. `--file`(또는) 플래그를 사용 하 여 현재 디렉터리 아래에 Dockerfile을 지정할 수 있습니다 `-f` .
 
 ```console
-docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
+docker build -t stockdata:1.0.0 -f ./src/StockData/Dockerfile .
 ```
 
 ## <a name="run-the-image-in-a-container-on-your-machine"></a>컴퓨터의 컨테이너에서 이미지를 실행 합니다.

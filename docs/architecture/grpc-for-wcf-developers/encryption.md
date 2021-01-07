@@ -1,13 +1,13 @@
 ---
 title: 암호화 및 네트워크 보안-WCF 개발자를 위한 gRPC
 description: GRPC의 네트워크 보안 및 암호화에 대 한 몇 가지 참고 사항
-ms.date: 12/15/2020
-ms.openlocfilehash: 0735158ed69ce425c4f00eed6c42689b888a1885
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: cf4d30ff862e64aadfeacf45ed3768fc14737800
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938626"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970143"
 ---
 # <a name="encryption-and-network-security"></a>암호화 및 네트워크 보안
 
@@ -15,11 +15,7 @@ WCF (Windows Communication Foundation)의 네트워크 보안 모델은 광범�
 
 gRPC는 기본 HTTP/2 프로토콜에 대 한 보안 네트워킹을 유지 합니다 .이 프로토콜은 TLS 인증서를 사용 하 여 보호할 수 있습니다.
 
-웹 브라우저는 HTTP/2에 대 한 TLS 연결을 사용 하지만 대부분의 프로그래밍 클라이언트는를 포함 합니다. NET의 `HttpClient` 는 암호화 되지 않은 연결에 대해 HTTP/2를 사용할 수 있습니다. `HttpClient` 에서는 기본적으로 암호화가 필요 하지만 스위치를 사용 하 여이 동작을 재정의할 수 있습니다 <xref:System.AppContext> .
-
-```csharp
-AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-```
+웹 브라우저는 HTTP/2에 대 한 TLS 연결을 사용 하지만 대부분의 프로그래밍 클라이언트는를 포함 합니다. NET의 `HttpClient` 는 암호화 되지 않은 연결에 대해 HTTP/2를 사용할 수 있습니다.
 
 공용 Api의 경우 항상 TLS 연결을 사용 하 고 적절 한 SSL 기관에서 서비스에 대 한 유효한 인증서를 제공 해야 합니다. 전체 기능 [을 제공 하는 통합](https://letsencrypt.org) SSL 인증서를 제공 하 고 대부분의 호스팅 인프라는 일반적인 플러그 인 또는 확장을 사용 하 여 사전에 암호화 표준을 지원 합니다.
 

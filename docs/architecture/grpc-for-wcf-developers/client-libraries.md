@@ -1,13 +1,13 @@
 ---
 title: GRPC 클라이언트 라이브러리 만들기-WCF 개발자를 위한 gRPC
 description: GRPC 서비스용 공유 클라이언트 라이브러리/패키지에 대 한 설명입니다.
-ms.date: 12/15/2020
-ms.openlocfilehash: b1233bb40a5fa2119a325be2657b500a4c626c18
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: c55b6d1da2377af0b687e32e7776f12b96b0a2ba
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938431"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970130"
 ---
 # <a name="create-grpc-client-libraries"></a>GRPC 클라이언트 라이브러리 만들기
 
@@ -147,7 +147,7 @@ namespace Grpc.Core
 
 ## <a name="summary"></a>요약
 
-<xref:System.IAsyncDisposable>및 <xref:System.IObservable%601> 모델은 .net의 비동기 데이터 스트림을 처리 하는 잘 지원 되 고 잘 문서화 된 방법입니다. gRPC 스트림은 .NET과의 긴밀 한 통합을 제공 하 고 사후 및 비동기 프로그래밍 스타일을 제공 하 여 두 패러다임 모두에 잘 매핑됩니다.
+<xref:System.Collections.Generic.IAsyncEnumerable%601>및 <xref:System.IObservable%601> 모델은 .net의 비동기 데이터 스트림을 처리 하는 잘 지원 되 고 잘 문서화 된 방법입니다. gRPC 스트림은 .NET과의 긴밀 한 통합을 제공 하 고 사후 및 비동기 프로그래밍 스타일을 제공 하 여 두 패러다임 모두에 잘 매핑됩니다.
 
 >[!div class="step-by-step"]
 >[이전](streaming-versus-repeated.md)

@@ -1,13 +1,13 @@
 ---
 title: WCF 개발자를 위한 새 ASP.NET Core gRPC 프로젝트 gRPC 만들기
 description: Visual Studio 또는 명령줄을 사용 하 여 gRPC 프로젝트를 만드는 방법에 대해 알아봅니다.
-ms.date: 12/15/2020
-ms.openlocfilehash: 960725a9507797f43b2c15283e384b0ad827c2b1
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: c9d66a773f0633c2ae93c42ce3ce53084032cd17
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938660"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970260"
 ---
 # <a name="create-a-new-aspnet-core-grpc-project"></a>새 ASP.NET Core gRPC 프로젝트 만들기
 
@@ -16,7 +16,7 @@ ms.locfileid: "97938660"
 ## <a name="create-the-project-by-using-visual-studio"></a>Visual Studio를 사용 하 여 프로젝트 만들기
 
 > [!IMPORTANT]
-> ASP.NET Core 5.0 앱을 개발 하려면 **ASP.NET 및 웹 개발** 워크 로드가 설치 된 Visual Studio 2019 버전 16.3 이상이 필요 합니다.
+> ASP.NET Core 5.0 앱을 개발 하려면 **ASP.NET 및 웹 개발** 워크 로드가 설치 된 Visual Studio 2019 버전 16.8 이상이 필요 합니다.
 
 *빈 솔루션* 템플릿에서 **TraderSys** 라는 빈 솔루션을 만듭니다. 이라는 솔루션 폴더를 추가 `src` 합니다. 그런 다음 폴더를 마우스 오른쪽 단추로 클릭 하 고 **추가**  >  **새 프로젝트** 를 선택 합니다. `grpc`템플릿 검색 상자에를 입력 하면 라는 프로젝트 템플릿이 표시 됩니다 `gRPC Service` .
 
