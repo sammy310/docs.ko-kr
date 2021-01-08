@@ -2,18 +2,18 @@
 title: project.json에서 .NET Core 마이그레이션
 description: project.json을 사용하여 이전 .NET Core 프로젝트를 마이그레이션하는 방법 알아보기
 ms.date: 07/19/2017
-ms.openlocfilehash: 0d4190a02389089a888d8b52dd8e7c412636b575
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 73fbfed6943e3eb535e6eead3b3496edd3426c26
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538252"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970722"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>project.json에서 .NET Core 프로젝트 마이그레이션
 
 이 문서에서는 .NET Core 프로젝트에 대한 다음 세 가지 마이그레이션 시나리오를 다룹니다.
 
-1. [*project.json*의 유효한 스키마에서 *csproj*로 마이그레이션](#migration-from-projectjson-to-csproj)
+1. [*project.json* 의 유효한 스키마에서 *csproj* 로 마이그레이션](#migration-from-projectjson-to-csproj)
 2. [DNX에서 csproj로 마이그레이션](#migration-from-dnx-to-csproj)
 3. [RC3 및 이전 .NET Core csproj 프로젝트에서 최종 형식으로 마이그레이션](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
 
@@ -21,22 +21,22 @@ ms.locfileid: "90538252"
 
 ## <a name="migration-from-projectjson-to-csproj"></a>project.json에서 csproj로 마이그레이션
 
-*project.json*에서 *.csproj*로 마이그레이션하려면 다음 방법 중 하나를 사용할 수 있습니다.
+*project.json* 에서 *.csproj* 로 마이그레이션하려면 다음 방법 중 하나를 사용할 수 있습니다.
 
 - [Visual Studio](#visual-studio)
 - [dotnet 마이그레이션 명령줄 도구](#dotnet-migrate)
 
-두 방법 모두 동일한 기본 엔진을 사용하여 프로젝트를 마이그레이션하므로 결과가 동일합니다. 대부분의 경우 이 두 가지 방법 중 하나를 사용하여 *project.json*을 *csproj*로 마이그레이션하기만 하면 되며 프로젝트 파일을 추가로 수동 편집할 필요가 없습니다. 결과로 얻는 *.csproj* 파일의 이름은 포함되는 디렉터리 이름과 동일하게 지정됩니다.
+두 방법 모두 동일한 기본 엔진을 사용하여 프로젝트를 마이그레이션하므로 결과가 동일합니다. 대부분의 경우 이 두 가지 방법 중 하나를 사용하여 *project.json* 을 *csproj* 로 마이그레이션하기만 하면 되며 프로젝트 파일을 추가로 수동 편집할 필요가 없습니다. 결과로 얻는 *.csproj* 파일의 이름은 포함되는 디렉터리 이름과 동일하게 지정됩니다.
 
 ### <a name="visual-studio"></a>Visual Studio
 
-Visual Studio 2017 또는 Visual Studio 2019 버전 16.2 이전 버전에서 *.xproj* 파일을 참조하는 *.xproj* 파일 또는 솔루션 파일을 열면 **단방향 업그레이드** 대화 상자가 나타납니다. 이 대화 상자에 마이그레이션할 프로젝트가 표시됩니다. 솔루션 파일을 여는 경우에는 솔루션 파일에 지정된 모든 프로젝트가 나열됩니다. 마이그레이션할 프로젝트 목록을 검토하고 **확인**을 선택합니다.
+Visual Studio 2017 또는 Visual Studio 2019 버전 16.2 이전 버전에서 *.xproj* 파일을 참조하는 *.xproj* 파일 또는 솔루션 파일을 열면 **단방향 업그레이드** 대화 상자가 나타납니다. 이 대화 상자에 마이그레이션할 프로젝트가 표시됩니다. 솔루션 파일을 여는 경우에는 솔루션 파일에 지정된 모든 프로젝트가 나열됩니다. 마이그레이션할 프로젝트 목록을 검토하고 **확인** 을 선택합니다.
 
 ![마이그레이션할 프로젝트 목록을 표시하는 단방향 업그레이드 대화 상자](media/one-way-upgrade.jpg)
 
-Visual Studio에서 선택한 프로젝트가 자동으로 마이그레이션됩니다. 솔루션을 마이그레이션할 때 모든 프로젝트를 선택하지 않는 경우에는 동일한 대화 상자에 해당 솔루션의 나머지 솔루션을 업그레이드할지 묻는 메시지가 표시됩니다. 프로젝트를 마이그레이션한 후 **솔루션 탐색기** 창의 프로젝트를 마우스 오른쪽 단추로 클릭하고 **\<project name>.csproj 편집**을 선택하여 콘텐츠를 보고 수정할 수 있습니다.
+Visual Studio에서 선택한 프로젝트가 자동으로 마이그레이션됩니다. 솔루션을 마이그레이션할 때 모든 프로젝트를 선택하지 않는 경우에는 동일한 대화 상자에 해당 솔루션의 나머지 솔루션을 업그레이드할지 묻는 메시지가 표시됩니다. 프로젝트를 마이그레이션한 후 **솔루션 탐색기** 창의 프로젝트를 마우스 오른쪽 단추로 클릭하고 **\<project name>.csproj 편집** 을 선택하여 콘텐츠를 보고 수정할 수 있습니다.
 
-마이그레이션된 파일(*project.json*, *global.json*, *.xproj* 및 솔루션 파일)은 *Backup* 폴더로 이동합니다. 마이그레이션된 솔루션 파일은 Visual Studio 2017 또는 Visual Studio 2019로 업그레이드되며, Visual Studio 2015 이전 버전에서는 해당 솔루션 파일을 열 수 없습니다. 마이그레이션 보고서를 포함하는 *UpgradeLog.htm*이라는 파일도 저장되고 자동으로 열립니다.
+마이그레이션된 파일(*project.json*, *global.json*, *.xproj* 및 솔루션 파일)은 *Backup* 폴더로 이동합니다. 마이그레이션된 솔루션 파일은 Visual Studio 2017 또는 Visual Studio 2019로 업그레이드되며, Visual Studio 2015 이전 버전에서는 해당 솔루션 파일을 열 수 없습니다. 마이그레이션 보고서를 포함하는 *UpgradeLog.htm* 이라는 파일도 저장되고 자동으로 열립니다.
 
 > [!IMPORTANT]
 > Visual Studio 2019 버전 16.3 이상에서는 *.xproj* 파일을 로드하거나 마이그레이션할 수 없습니다. 또한 Visual Studio 2015는 *.xproj* 파일을 마이그레이션하는 기능을 제공하지 않습니다. 이 Visual Studio 버전 중 하나를 사용 중인 경우 적절한 버전의 Visual Studio를 설치하거나 다음에 설명된 명령줄 마이그레이션 도구를 사용하세요.
@@ -65,7 +65,7 @@ Visual Studio에서 선택한 프로젝트가 자동으로 마이그레이션됩
 .NET Core 개발에 DNX를 여전히 사용 중인 경우 다음 두 단계로 마이그레이션 프로세스를 수행해야 합니다.
 
 1. [기존 DNX 마이그레이션 지침](from-dnx.md)에 따라 DNX에서 project-json 사용 CLI로 마이그레이션합니다.
-2. 이전 섹션의 단계에 따라 *project.json*에서 *.csproj*로 마이그레이션합니다.
+2. 이전 섹션의 단계에 따라 *project.json* 에서 *.csproj* 로 마이그레이션합니다.
 
 > [!NOTE]
 > DNX는 .NET Core CLI의 Preview 1 릴리스부터 공식적으로 더 이상 사용되지 않습니다.
@@ -80,7 +80,7 @@ Visual Studio에서 선택한 프로젝트가 자동으로 마이그레이션됩
 - 프로젝트의 맨 위와 맨 아래에서 `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` 및 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` 문을 제거합니다. 이러한 import 문은 SDK에 포함되므로, 프로젝트에 있을 필요가 없습니다.
 - 프로젝트에 `Microsoft.NETCore.App` 또는 `NETStandard.Library` `<PackageReference>` 항목이 있으면 제거해야 합니다. 이러한 패키지 참조는 [SDK에 포함](../tools/csproj.md)되어 있습니다.
 - `Microsoft.NET.Sdk` `<PackageReference>` 요소가 있는 경우 제거합니다. SDK 참조는 `<Project>` 요소의 `Sdk` 특성을 통해 가져옵니다.
-- [SDK에 포함](../project-sdk/overview.md#default-compilation-includes)된 [glob](https://en.wikipedia.org/wiki/Glob_(programming))을 제거합니다. 프로젝트에 이러한 GLOB를 남겨 두면 컴파일 항목이 중복되므로 빌드 시 오류가 발생합니다.
+- [SDK에 포함](../project-sdk/overview.md#default-includes-and-excludes)된 [glob](https://en.wikipedia.org/wiki/Glob_(programming))을 제거합니다. 프로젝트에 이러한 GLOB를 남겨 두면 컴파일 항목이 중복되므로 빌드 시 오류가 발생합니다.
 
 이러한 단계를 수행하면 프로젝트가 RTM .NET Core csproj 형식과 완벽히 호환됩니다.
 
