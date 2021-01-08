@@ -3,12 +3,12 @@ title: 진단 도구 개요 - .NET Core
 description: .NET Core 애플리케이션을 진단하는 데 사용할 수 있는 도구 및 기술에 대한 개요입니다.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: c43e661ad8c9f665151e0240bf6b54e61b9acfef
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: d468ec5b9cc050cc54f6c53f8a4ea4531f8b58f5
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031919"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753616"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core에서 사용할 수 있는 진단 도구는 무엇인가요?
 
@@ -24,6 +24,10 @@ ms.locfileid: "96031919"
 
 [로깅 및 추적](logging-tracing.md)은 관련된 기술입니다. 계측 코드를 참조하여 로그 파일을 만듭니다. 파일에는 프로그램에서 수행하는 작업에 대한 세부 정보가 기록됩니다. 해당 세부 정보를 사용하여 가장 복잡한 문제를 진단할 수 있습니다. 타임스탬프와 결합할 경우 이러한 기술은 성능 조사에도 유용합니다.
 
+## <a name="metrics"></a>메트릭
+
+[EventCounters](event-counters.md)를 사용하면 메트릭을 작성하여 성능 문제를 식별하고 모니터링할 수 있습니다. 메트릭은 추적에 비해 성능 오버헤드가 낮으므로 상시 성능 모니터링에 보다 적합합니다. .NET 런타임 및 라이브러리는 사용자가 모니터링할 수 있는 [잘 알려진 EventCounters](available-counters.md)를 여러 개 게시합니다.
+
 ## <a name="unit-testing"></a>단위 테스트
 
 [유닛 테스트](../testing/index.md)는 고품질 소프트웨어의 연속 통합 및 배포를 위한 핵심 구성 요소입니다. 단위 테스트는 항목을 중단할 때 조기 경고를 제공하도록 설계되었습니다.
@@ -32,13 +36,13 @@ ms.locfileid: "96031919"
 
 [덤프](./dumps.md)는 생성 시점의 프로세스에 대한 스냅샷을 포함하는 파일입니다. 덤프는 디버깅을 위해 애플리케이션의 상태를 검사하는 데 유용할 수 있습니다.
 
+## <a name="symbols"></a>기호
+
+기호는 디버깅 및 기타 진단 도구에 대한 기본 요구 사항입니다. 기호 파일의 콘텐츠는 언어, 컴파일러, 플랫폼마다 다릅니다. 아주 높은 수준에서 기호는 컴파일러에 의해 생성된 소스 코드와 이진 간의 매핑입니다. 이러한 매핑은 [Visual Studio](/visualstudio/debugger/what-is-debugging) 및 [Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) 같은 진단 도구에서 지역 변수의 줄 번호 정보 및 이름과 같은 항목을 제공하는 데 사용됩니다.  다음 링크에는 Windows용 [기호](/windows/win32/dxtecharts/debugging-with-symbols)에 대한 자세한 설명이 포함되어 있으며, 많은 개념이 다른 플랫폼에도 적용됩니다. [.NET 이식 가능 기호](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)에는 Windows PDB와 유사한 “PDB” 파일 확장명이 있지만, Windows PDB 형식과 호환되지는 않습니다.
+
 ## <a name="collect-diagnostics-in-containers"></a>컨테이너에서 진단 정보 수집
 
 컨테이너화되지 않은 Linux 환경에서 사용되는 것과 동일한 진단 도구를 사용하여 [컨테이너에서 진단 정보를 수집](diagnostics-in-containers.md)할 수도 있습니다. 도구가 Docker 컨테이너에서 작동하는지 확인하는 데 필요한 몇 가지 사용 변경 내용만 있습니다.
-
-## <a name="debug-linux-dumps"></a>Linux 덤프 디버그
-
-[Linux 덤프 디버그](debug-linux-dumps.md)는 Linux에서 덤프를 수집 및 분석하는 방법을 설명합니다.
 
 ## <a name="net-core-diagnostic-global-tools"></a>.NET Core 진단 전역 도구
 
@@ -64,7 +68,7 @@ ms.locfileid: "96031919"
 
 ### <a name="dotnet-sos"></a>dotnet-sos
 
-[dotnet-sos](dotnet-sos.md)는 Linux 또는 MacOS(또는 이전 디버깅 도구를 사용할 경우 Windows)에 [SOS 디버깅 확장](../../framework/tools/sos-dll-sos-debugging-extension.md)을 설치하는 데 사용됩니다.
+[dotnet-sos](dotnet-sos.md)는 Linux 및 macOS(그리고 [Windbg/cdb](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools)를 사용하는 경우 Windows에)에 [SOS 디버깅 확장](sos-debugging-extension.md)을 설치합니다.
 
 ### <a name="perfcollect"></a>PerfCollect
 
@@ -83,6 +87,14 @@ ms.locfileid: "96031919"
 ### <a name="debug-deadlock"></a>교착 상태 디버그
 
 [자습서: 교착 상태 디버그](debug-deadlock.md)는 [dotnet-dump](dotnet-dump.md) 도구를 사용하여 스레드와 잠금을 조사하는 방법을 안내합니다.
+
+### <a name="debug-a-stackoverflow"></a>StackOverflow 디버그
+
+[자습서: StackOverflow 디버그](debug-stackoverflow.md)는 Linux에서 <xref:System.StackOverflowException>을 디버그하는 방법을 보여 줍니다.
+
+### <a name="debug-linux-dumps"></a>Linux 덤프 디버그
+
+[Linux 덤프 디버그](debug-linux-dumps.md)는 Linux에서 덤프를 수집 및 분석하는 방법을 설명합니다.
 
 ### <a name="measure-performance-using-eventcounters"></a>EventCounters를 사용하여 성능 측정
 

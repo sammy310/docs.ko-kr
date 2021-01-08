@@ -5,16 +5,18 @@
   items:
     - name: Azure 및 .NET 소개
       href: intro.md
-    - name: 개발자 도구
-      href: tools.md
-    - name: 인증
-      href: authentication.md
-    - name: 로깅
-      href: logging.md
-    - name: 패키지
-      href: packages.md
-    - name: SDK 예제
-      href: /samples/dotnet/samples/azure-identity-resource-management-storage/
+    - name: .NET 개발자를 위한 주요 Azure 서비스
+      href: key-azure-services.md
+    - name: 개발 환경 구성
+      items:
+        - name: Azure 계정 만들기
+          href: create-azure-account.md
+        - name: Azure 개발을 위한 Visual Studio 구성(Windows)
+          href: configure-visual-studio.md
+        - name: Azure 개발을 위한 VS Code 구성(플랫폼 간)
+          href: configure-vs-code.md
+        - name: Azure CLI 설치
+          href: install-azure-cli.md
 - name: Azure로 마이그레이션
   items:
     - name: 올바른 Azure 호스팅 옵션 선택
@@ -25,6 +27,20 @@
       href: ./migration/vm.md
     - name: Azure로 SQL Server 데이터베이스 마이그레이션
       href: ./migration/sql.md
+- name: Azure SDK for .NET
+  items:
+    - name: Azure SDK for .NET 정의
+      href: ./sdk/azure-sdk-for-dotnet.md
+    - name: 인증
+      href: authentication.md
+    - name: 로깅
+      href: logging.md
+    - name: 프록시 서버 구성
+      href: ./sdk/azure-sdk-configure-proxy.md
+    - name: 패키지 목록
+      href: packages.md
+    - name: SDK 예제
+      href: /samples/dotnet/samples/azure-identity-resource-management-storage/
 - name: 샘플 코드
   items:
     - name: 웹앱 및 서버리스

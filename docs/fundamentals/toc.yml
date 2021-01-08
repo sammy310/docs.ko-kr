@@ -393,14 +393,28 @@ items:
               - name: 개요
                 displayName: dumps
                 href: ../core/diagnostics/dumps.md
+              - name: StackOverflow 디버그
+                href: ../core/diagnostics/debug-stackoverflow.md
               - name: Linux 덤프
                 href: ../core/diagnostics/debug-linux-dumps.md
+              - name: SOS 디버거 확장
+                href: ../core/diagnostics/sos-debugging-extension.md
           - name: EventCounters
-            href: ../core/diagnostics/event-counters.md
+            items:
+              - name: 개요
+                displayName: EventCounters
+                href: ../core/diagnostics/event-counters.md
+              - name: .NET의 잘 알려진 카운터
+                href: ../core/diagnostics/available-counters.md
           - name: EventPipe
             href: ../core/diagnostics/eventpipe.md
           - name: 로깅 및 추적
-            href: ../core/diagnostics/logging-tracing.md
+            items:
+              - name: 개요
+                displayName: logging and tracing
+                href: ../core/diagnostics/logging-tracing.md
+              - name: 잘 알려진 이벤트 공급자
+                href: ../core/diagnostics/well-known-event-providers.md
           - name: 런타임 이벤트
             items:
               - name: 개요
@@ -411,7 +425,7 @@ items:
                 href: ../fundamentals/diagnostics/runtime-exception-events.md
               - name: 가비지 수집 이벤트
                 href: ../fundamentals/diagnostics/runtime-garbage-collection-events.md
-              - name: Interop 이벤트
+              - name: interop 이벤트
                 href: ../fundamentals/diagnostics/runtime-interop-events.md
               - name: 로더 및 바인더 이벤트
                 href: ../fundamentals/diagnostics/runtime-loader-binder-events.md
@@ -579,8 +593,6 @@ items:
                         href: code-analysis/quality-rules/ca1069.md
                       - name: CA1070
                         href: code-analysis/quality-rules/ca1070.md
-                      - name: CA1071
-                        href: code-analysis/quality-rules/ca1071.md
                   - name: 설명서 규칙
                     items:
                       - name: 개요
