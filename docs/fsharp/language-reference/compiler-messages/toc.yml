@@ -15,5 +15,7 @@
       href: ./fs0009.md
     - name: FS0025 - 불완전한 패턴 일치
       href: ./fs0025.md
+    - name: FS0037 - 중복 정의
+      href: ./fs0037.md
     - name: FS0052 - 방어형 복사본
       href: ./fs0052.md
