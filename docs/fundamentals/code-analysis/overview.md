@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 2f59b97de6f92e5a9bf927e1318286e400017dad
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 80815b5913ad72756de503209b52e8848dd708bf
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009848"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025083"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET 소스 코드 분석 개요
 
@@ -104,19 +104,22 @@ ms.locfileid: "97009848"
 *코드 스타일 분석* ("IDExxxx") 규칙을 사용 하 여 코드 베이스에서 일관 된 코드 스타일을 정의 하 고 유지할 수 있습니다. 기본 설정 설정은 다음과 같습니다.
 
 - 명령줄 빌드: 코드 스타일 분석은 기본적으로 명령줄 빌드의 모든 .NET 프로젝트에 대해 사용 하지 않도록 설정 됩니다.
-- Visual Studio: 코드 스타일 분석은 기본적으로 Visual Studio 내의 모든 .NET 프로젝트에 대해 [코드 리팩터링 빠른 작업](/visualstudio/ide/code-generation-in-visual-studio)으로 사용 됩니다.
 
-.NET 5.0부터 명령줄 및 Visual Studio 내에서 빌드에 대 한 코드 스타일 분석을 사용 하도록 설정할 수 있습니다. 코드 스타일 위반은 "IDE" 접두사를 사용 하 여 경고나 오류로 표시 됩니다. 이렇게 하면 빌드 시 일관 된 코드 스타일을 적용할 수 있습니다.
+  .NET 5.0부터 명령줄 및 Visual Studio 내에서 [빌드에 대 한 코드 스타일 분석을 사용 하도록 설정할](#enable-on-build)수 있습니다. 코드 스타일 위반은 "IDE" 접두사를 사용 하 여 경고나 오류로 표시 됩니다. 이렇게 하면 빌드 시 일관 된 코드 스타일을 적용할 수 있습니다.
+
+- Visual Studio: 코드 스타일 분석은 기본적으로 Visual Studio 내의 모든 .NET 프로젝트에 대해 [코드 리팩터링 빠른 작업](/visualstudio/ide/code-generation-in-visual-studio)으로 사용 됩니다.
 
 코드 스타일 분석 규칙의 전체 목록은 [코드 스타일 규칙](style-rules/index.md)을 참조 하세요.
 
 ### <a name="enable-on-build"></a>빌드 시 사용
 
+.NET 5.0 SDK 이상 버전을 사용 하 여 명령줄 및 Visual Studio에서 빌드할 때 코드 스타일 분석을 사용 하도록 설정할 수 있습니다. 그러나 성능상의 이유로 [몇 가지 코드 스타일 규칙](https://github.com/dotnet/roslyn/blob/9f87b444da9c48a4d492b19f8337339056bf2b95/src/Analyzers/Core/Analyzers/EnforceOnBuildValues.cs#L95) 은 VISUAL Studio IDE에만 적용 됩니다.
+
 빌드에서 코드 스타일 분석을 사용 하도록 설정 하려면 다음 단계를 따르세요.
 
 1. MSBuild 속성 [EnforceCodeStyleInBuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) 을로 설정 `true` 합니다.
 
-1. *Editorconfig* 파일에서 빌드에서 실행 하려는 각 "IDE" 코드 스타일 규칙을 경고나 오류로 [구성](configuration-options.md) 합니다. 예를 들어:
+1. *Editorconfig* 파일에서 빌드에서 실행 하려는 각 "IDE" 코드 스타일 규칙을 경고나 오류로 [구성](configuration-options.md) 합니다. 예를 들면 다음과 같습니다.
 
    ```ini
    [*.{cs,vb}]
@@ -124,7 +127,7 @@ ms.locfileid: "97009848"
    dotnet_diagnostic.IDE0040.severity = warning
    ```
 
-   또는 기본적으로 전체 "스타일" 범주를 경고 또는 오류로 구성 하 고 빌드 시 실행 하지 않을 규칙을 선택적으로 해제할 수 있습니다. 예를 들어:
+   또는 기본적으로 전체 "스타일" 범주를 경고 또는 오류로 구성 하 고 빌드 시 실행 하지 않을 규칙을 선택적으로 해제할 수 있습니다. 예를 들면 다음과 같습니다.
 
    ```ini
    [*.{cs,vb}]
@@ -141,7 +144,7 @@ ms.locfileid: "97009848"
 
 ## <a name="suppress-a-warning"></a>경고 표시 안 함
 
-규칙 위반을 억제 하려면 EditorConfig 파일에서 해당 규칙 ID의 심각도 옵션을로 설정 `none` 합니다. 예를 들어:
+규칙 위반을 억제 하려면 EditorConfig 파일에서 해당 규칙 ID의 심각도 옵션을로 설정 `none` 합니다. 예를 들면 다음과 같습니다.
 
 ```ini
 dotnet_diagnostic.CA1822.severity = none

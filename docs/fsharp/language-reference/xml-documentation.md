@@ -2,12 +2,12 @@
 title: XML 문서
 description: '주석에서 문서를 생성 하기 위한 F #의 지원에 대해 알아봅니다.'
 ms.date: 09/15/2020
-ms.openlocfilehash: 24d9dbfb5e28d39e224ef9428f025298464fc7f4
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 2f8788e79ea964143eecfaddbeb039474dd61f8e
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099011"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025018"
 ---
 # <a name="document-your-code-with-xml-comments"></a>XML 주석을 사용하여 코드 문서화
 
@@ -101,7 +101,7 @@ type SomeType
 
 ## <a name="limitations"></a>제한 사항
 
-C #에서 XML 문서의 일부 기능 및 기타 .NET 언어는 c #에서 지원 되지 않습니다.
+C # 및 기타 .NET 언어에서 XML 문서의 일부 기능은 F #에서 지원 되지 않습니다.
 
 - F #에서 상호 참조는 해당 기호의 전체 XML 시그니처를 사용 해야 합니다 (예:) `cref="T:System.Console"` .
   와 같은 간단한 c # 스타일 상호 참조 `cref="Console"` 는 전체 XML 서명에 대해 구체화 되지 않으며 이러한 요소는 F # 컴파일러에서 확인 되지 않습니다. 일부 설명서 도구는 후속 처리를 통해 이러한 상호 참조를 사용할 수 있지만 전체 서명을 사용 해야 합니다.
@@ -128,7 +128,7 @@ C #에서 XML 문서의 일부 기능 및 기타 .NET 언어는 c #에서 지원
 
 - 문서 텍스트는 마침표로 끝나는 전체 문장을 사용하여 기록되어야 합니다.
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - C [# XML 문서 주석 &#40;c&#35; 프로그래밍 가이드&#41;](../../csharp/programming-guide/xmldoc/index.md).
 - [F# 언어 참조](index.md)
