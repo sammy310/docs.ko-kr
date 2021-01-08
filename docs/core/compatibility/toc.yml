@@ -12,7 +12,7 @@
         - name: 호환성이 손상되는 변경
           href: fx-core.md
         - name: 사용할 수 없는 기술
-          href: ../porting/net-framework-tech-unavailable.md?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
+          href: ../porting/net-framework-tech-unavailable.md
         - name: 항상 throw하는 API
           href: unsupported-apis.md
     - name: 버전별 호환성이 손상되는 변경 사항
