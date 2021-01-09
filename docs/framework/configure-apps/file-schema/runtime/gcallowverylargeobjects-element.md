@@ -1,16 +1,16 @@
 ---
-title: <gcAllowVeryLargeObjects> 요소
+title: gcAllowVeryLargeObjects 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - gcAllowVeryLargeObjects element
 - <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
-ms.openlocfilehash: 78a42596aae6c3ea0d94ac759d11ed52d0ace539
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1e54b0780ffb5bbe81ab1be2b376ff7a038ee05c
+ms.sourcegitcommit: 0273f8845eb1ea8de64086bef2271b4f22182c91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178231"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98058131"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> 요소
 
@@ -23,32 +23,27 @@ ms.locfileid: "91178231"
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<gcAllowVeryLargeObjects
-   enabled="true|false" />  
+<gcAllowVeryLargeObjects enabled="true|false" />  
 ```  
   
-## <a name="attributes-and-elements"></a>특성 및 요소  
-
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
-  
-### <a name="attributes"></a>특성  
+## <a name="attributes"></a>특성
   
 |attribute|설명|  
 |---------------|-----------------|  
 |`enabled`|필수 특성입니다.<br /><br /> 총 크기에서 2gb 보다 큰 배열을 64 비트 플랫폼에서 사용할 수 있는지 여부를 지정 합니다.|  
   
-## <a name="enabled-attribute"></a>enabled 특성  
+### <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |`false`|전체 크기의 2gb 보다 큰 배열은 사용할 수 없습니다. 이것이 기본값입니다.|  
 |`true`|총 크기가 2gb 보다 큰 배열은 64 비트 플랫폼에서 사용 하도록 설정 됩니다.|  
   
-### <a name="child-elements"></a>자식 요소  
+## <a name="child-elements"></a>자식 요소  
 
- 없음  
+없음  
   
-### <a name="parent-elements"></a>부모 요소  
+## <a name="parent-elements"></a>부모 요소
   
 |요소|설명|  
 |-------------|-----------------|  
@@ -61,12 +56,12 @@ ms.locfileid: "91178231"
   
 - 배열의 최대 요소 수는 <xref:System.UInt32.MaxValue?displayProperty=nameWithType> 입니다.  
   
-- 단일 차원의 최대 인덱스는 바이트 배열 및 단일 바이트 구조의 배열에 대해 2147483591 (0x7FFFFFC7)이 고 다른 형식의 경우 2146435071 (0X7FEFFFFF)입니다.  
+- 단일 차원의 최대 크기는 바이트 배열 및 단일 바이트 구조의 배열에 대해 2147483591 (0x7FFFFFC7)이 고 다른 형식을 포함 하는 배열의 경우 2146435071 (0X7FEFFFFF)입니다.  
   
 - 문자열 및 기타 배열 이외의 개체에 대 한 최대 크기는 변경 되지 않습니다.  
   
 > [!CAUTION]
-> 이 기능을 사용 하도록 설정 하기 전에 모든 배열이 2gb 보다 작은 것으로 가정 하는 안전 하지 않은 코드가 응용 프로그램에 포함 되지 않도록 합니다. 예를 들어 배열을 버퍼로 사용 하는 안전 하지 않은 코드는 배열이 2gb를 초과 하지 않는다는 가정 하에 작성 되는 경우 버퍼 오버런에 취약할 수 있습니다.  
+> 이 기능을 사용 하도록 설정 하기 전에 모든 배열이 2gb 보다 작은 것으로 가정 하는 안전 하지 않은 코드가 응용 프로그램에 포함 되지 않도록 합니다. 예를 들어 배열을 버퍼로 사용 하는 안전 하지 않은 코드는 배열이 2gb를 초과 하지 않는다는 가정 하에 작성 되는 버퍼 오버런에 취약할 수 있습니다.  
   
 ## <a name="example"></a>예제  
 
