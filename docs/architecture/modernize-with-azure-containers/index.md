@@ -1,21 +1,25 @@
 ---
-title: Modernize Existing .NET Applications With Azure Cloud and Windows Containers(2판)
+title: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화
 description: 이 eBook에서는 기존 애플리케이션을 Azure 클라우드 및 컨테이너로 리프트 앤 시프트하고 현대화하는 방법을 알아봅니다.
-ms.date: 04/28/2018
-ms.openlocfilehash: f4ae4e2d24d343b55811955fb43e929c0db6f01b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/07/2021
+ms.openlocfilehash: bf6e6dff75c939508947aabeda14955b880f5a89
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705334"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025476"
 ---
-# <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernize existing .NET applications with Azure cloud and Windows Containers(2판)
+# <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers"></a>Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화
 
 ![.NET 애플리케이션 현대화 가이드의 표지 이미지입니다.](./media/index/web-application-guide-cover-image.png)
 
+**버전 5.0**
+
+책 업데이트 및 커뮤니티 기여에 대한 자세한 내용은 [changelog](https://aka.ms/modernize-ebook-changelog)를 참조하세요.
+
 게시자: Microsoft Press 및 Microsoft DevDiv 부서(Microsoft Corporation One Microsoft Way Redmond, Washington 98052-6399)
 
-Copyright © 2020 by Microsoft Corporation
+Copyright © 2021 by Microsoft Corporation
 
 All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 서면 허가 없이는 어떠한 형식이나 방법으로도 복제할 수 없습니다.
 
@@ -47,7 +51,7 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 ## <a name="about-this-guide"></a>이 가이드의 내용
 
-이 가이드에서는 기존 Microsoft .NET Framework 웹 또는 서비스 지향 애플리케이션의 최초 현대화를 주로 다룹니다. 즉 애플리케이션의 코드와 기본 아키텍처를 크게 변경하지 않고 워크로드를 좀 더 현대화된 환경으로 이동하는 작업을 의미합니다.
+이 가이드에서는 기존 Microsoft .NET Framework 웹 또는 서비스 지향 애플리케이션의 최초 현대화를 주로 다룹니다. 즉, 애플리케이션의 코드와 기본 아키텍처를 크게 변경하지 않고 워크로드를 좀 더 현대화된 환경으로 이동하는 작업을 의미합니다.
 
 이 가이드에서는 또한 Windows 컨테이너 및 Azure에서 지원하는 Windows 컨테이너의 관련 컴퓨팅 플랫폼 같은 여러 특정 신기술과 방법을 사용하여 클라우드로 앱을 이동하고 앱을 부분적으로 현대화할 경우의 이점을 중점적으로 설명합니다.
 
@@ -72,7 +76,7 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 **수준 1: 클라우드 인프라 지원** 애플리케이션: 이 마이그레이션 방법에서는 현재 온-프레미스 애플리케이션을 [IaaS](https://azure.microsoft.com/overview/what-is-iaas/)(Infrastructure as a Service) 플랫폼으로 다시 호스트하거나 마이그레이션합니다. 앱의 구성은 전과 거의 동일하지만 이제 클라우드의 VM에 앱을 배포합니다.
 업계에서는 이와 같은 간단한 유형의 마이그레이션을 일반적으로 “리프트 앤 시프트”라고 합니다.
 
-**수준 2: 클라우드 최적화** 애플리케이션: 이 수준에서는 여전히 중요한 코드를 재설계하거나 변경할 필요 없이, 컨테이너 및 추가 클라우드 관리형 서비스 같은 현대화된 기술을 사용하여 클라우드에서 앱을 실행함으로써 추가 이점을 얻을 수 있습니다. 기업 개발 운영(DevOps) 프로세스를 세분화하여 애플리케이션의 민첩성을 개선함으로써 더 빨리 배송할 수 있습니다. 이는 Docker Engine을 기반으로 한 Windows 컨테이너 같은 기술을 사용하여 구현할 수 있습니다. 여러 단계로 배포하는 경우 애플리케이션 종속성으로 인한 마찰을 컨테이너가 제거합니다. 이 완성 모델에서는 데이터베이스, 서비스로서의 캐시, 모니터링, CI/CD(연속 통합/지속적인 배포) 파이프라인과 관련된 추가 클라우드 관리형 서비스를 사용하면서 IaaS 또는 PaaS에 컨테이너를 배포할 수 있습니다.
+**수준 2: 클라우드 최적화** 애플리케이션: 이 수준에서는 여전히 중요한 코드를 재설계하거나 변경할 필요 없이, 컨테이너 및 추가 클라우드 관리형 서비스 같은 현대화된 기술을 사용하여 클라우드에서 앱을 실행함으로써 추가 이점을 얻을 수 있습니다. 기업 개발 운영(DevOps) 프로세스를 세분화하여 애플리케이션의 민첩성을 개선함으로써 더 빨리 배송할 수 있습니다. 이 기능은 Docker Engine을 기반으로 한 Windows 컨테이너 같은 기술을 사용하여 구현할 수 있습니다. 여러 단계로 배포하는 경우 애플리케이션 종속성으로 인한 마찰을 컨테이너가 제거합니다. 이 완성 모델에서는 데이터베이스, 서비스로서의 캐시, 모니터링, CI/CD(연속 통합/지속적인 배포) 파이프라인과 관련된 추가 클라우드 관리형 서비스를 사용하면서 IaaS 또는 PaaS에 컨테이너를 배포할 수 있습니다.
 
 세 번째 완성도는 클라우드의 궁극적 목표이지만 여러 앱에는 선택적이며 이 가이드의 주요 초점은 아닙니다.
 
@@ -80,7 +84,7 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 표 1-1에서는 각 마이그레이션 또는 현대화 방법을 선택하는 이유와 주요 이점을 설명합니다.
 
-| **클라우드 인프라 지원** <br /> *리프트 앤 시프트* | **클라우드 최적화** <br /> *현대화* | **클라우드 네이티브** <br /> *현대화, 재설계 및 재작성* |
+| **클라우드 인프라 지원** <br /> *리프트 앤 시프트* | **클라우드 최적화** <br /> *현대화* | **클라우드 네이티브** <br /> ‘현대화, 재설계, 재작성’ |
 |---|---|---|
 | **애플리케이션의 컴퓨팅 대상** |
 | Azure의 VM에 배포된 애플리케이션 | Azure App Service, ACI(Azure Container Instance), 컨테이너가 포함된 VM 또는 AKS(Azure Kubernetes Service)로 배포된 모놀리식 또는 N 계층 앱 | AKS(Azure Kubernetes Service)의 컨테이너화된 마이크로 서비스 및/또는 Azure Functions를 기반으로 하는 서버리스 마이크로 서비스 |
@@ -145,7 +149,7 @@ IaaS 방식을 선호하는 경우 프로덕션으로 전환하면, Windows 컨�
 
 **그림 1-6.** Windows 컨테이너 및 관리형 서비스를 사용하는 클라우드 최적화 앱 시나리오 예
 
-더 나아가서 특정 시나리오의 경우 몇 가지 마이크로 서비스를 추가하여 기존의 클라우드 최적화 애플리케이션을 확장할 수 있습니다. 그러면 부분적으로 클라우드 네이티브 모델 수준으로 넘어갈 수 있습니다. 현재 지침에서는 이 내용을 다루지 않습니다.
+더 나아가서 특정 시나리오의 경우 몇 가지 마이크로 서비스를 추가하여 기존의 클라우드 최적화 애플리케이션을 확장할 수 있습니다. 이 방법을 통해 부분적으로 클라우드 네이티브 모델 수준으로 이동할 수 있습니다. 현재 지침에서는 이 내용을 다루지 않습니다.
 
 ## <a name="what-this-guide-does-not-cover"></a>이 가이드에서 다루지 않는 내용
 
@@ -184,7 +188,7 @@ IaaS 방식을 선호하는 경우 프로덕션으로 전환하면, Windows 컨�
 
 ## <a name="sample-apps-for-modernizing-legacy-apps-eshopmodernizing"></a>레거시 앱 현대화에 대한 샘플 앱: eShopModernizing
 
-GitHub의 [eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing) 리포지토리는 레거시 모놀리식 웹 애플리케이션을 시뮬레이션하는 두 가지 샘플 애플리케이션을 제공합니다. 한 웹앱은 ASP.NET MVC를 사용하여 개발되고, 두 번째 웹앱은 ASP.NET Web Forms를 사용하여 개발되고, 세 번째 앱은 WCF 서비스 백 엔드를 소비하는 WinForms 클라이언트 데스크톱 앱을 사용하는 N 계층 앱입니다. 이러한 모든 앱은 기존의.NET Framework를 기반으로 합니다. 이러한 샘플은 현대화해야 하는 기존/레거시 .NET Framework 애플리케이션이어야 하기 때문에 .NET Core 또는 ASP.NET Core를 사용하지 않습니다.
+GitHub의 [eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing) 리포지토리는 레거시 모놀리식 웹 애플리케이션을 시뮬레이션하는 두 가지 샘플 애플리케이션을 제공합니다. 한 웹앱은 ASP.NET MVC를 사용하여 개발되고, 두 번째 웹앱은 ASP.NET Web Forms를 사용하여 개발되고, 세 번째 앱은 WCF 서비스 백 엔드를 소비하는 WinForms 클라이언트 데스크톱 앱을 사용하는 N 계층 앱입니다. 이러한 모든 앱은 기존의.NET Framework를 기반으로 합니다. 이러한 샘플은 현대화해야 하는 기존/레거시 .NET Framework 애플리케이션이어야 하기 때문에 .NET Core, .NET 5.0 또는 ASP.NET Core를 사용하지 않습니다.
 
 이러한 샘플 앱은 모두 현대화된 코드를 사용하는 두 번째 버전이 있으며, 매우 간단합니다. 앱 버전 간의 가장 중요한 차이점은 두 번째 버전에서 배포 옵션으로 Windows 컨테이너를 사용한다는 것입니다. 또한 두 번째 버전에는 이미지 관리를 위한 Azure Storage Blob, 보안 관리를 위한 Azure Active Directory, 애플리케이션 모니터링 및 감사를 위한 Azure Application Insights 같은 몇 가지 기능이 추가되었습니다.
 
