@@ -17,6 +17,10 @@
           href: configure-vs-code.md
         - name: Azure CLI 설치
           href: install-azure-cli.md
+        - name: 추가 도구 설치
+          href: azure-tools.md
+        - name: 개발 설정 검사 목록
+          href: dotnet-dev-env-checklist.md
 - name: Azure로 마이그레이션
   items:
     - name: 올바른 Azure 호스팅 옵션 선택
