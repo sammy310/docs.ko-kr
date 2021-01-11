@@ -1,13 +1,13 @@
 ---
 title: Microsoft 도구를 사용하는 Docker 애플리케이션 DevOps 워크플로
 description: Microsoft 플랫폼 및 도구가 포함된 컨테이너화된 Docker 애플리케이션 수명 주기 및 Microsoft 도구를 사용하는 DevOps 워크플로
-ms.date: 08/06/2020
-ms.openlocfilehash: 30c5066fa90d8792d8eef8f760dc63c00ce32130
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/06/2021
+ms.openlocfilehash: 7f2d380dec046804772ea7d13e764ab6f3224c12
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915211"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970156"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft 도구를 사용하는 Docker 애플리케이션 DevOps 워크플로
 
@@ -15,7 +15,7 @@ ms.locfileid: "87915211"
 
 개발 팀은 온-프레미스의 Azure DevOps Server와 클라우드의 Visual Studio 및 Visual Studio Team Services를 함께 사용하여 Windows 또는 Linux를 대상으로 하는 컨테이너화된 애플리케이션을 생산적으로 빌드, 테스트 및 릴리스할 수 있습니다.
 
-Microsoft 도구는 Azure DevOps Services 또는 Team Foundation Server를 사용한 글로벌 빌드 및 CI(연속 통합), 테스트부터 CD(연속 배포), Docker 환경(배포, 준비, 프로덕션), Azure Monitor를 통해 개발 팀에게 서비스에 대한 분석 정보 전송까지, Docker, .NET Core 또는 다른 플랫폼 조합 등 컨테이너화된 애플리케이션의 특정 구현에 대한 파이프라인을 자동화할 수 있습니다. 모든 코드 커밋은 빌드(CI)를 시작하고 특정 컨테이너화된 환경(CD)에 자동으로 서비스를 배포할 수 있습니다.
+Microsoft 도구는 Azure DevOps Services 또는 Team Foundation Server를 사용한 글로벌 빌드 및 CI(연속 통합), 테스트부터 CD(지속적인 배포), Docker 환경(배포, 준비, 프로덕션), Azure Monitor를 통해 개발 팀에게 서비스에 대한 분석 정보 전송까지, Docker, .NET, 또는 다른 플랫폼 조합 등 컨테이너화된 애플리케이션의 특정 구현에 대한 파이프라인을 자동화할 수 있습니다. 모든 코드 커밋은 빌드(CI)를 시작하고 특정 컨테이너화된 환경(CD)에 자동으로 서비스를 배포할 수 있습니다.
 
 개발자와 테스터는 Microsoft Azure의 템플릿을 사용하여 프로덕션 환경과 유사한 Docker 기반의 개발 및 배포 환경을 쉽고 빠르게 프로비전할 수 있습니다.
 
