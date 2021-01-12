@@ -2,12 +2,12 @@
 title: dotnet-gcdump 진단 도구 - .NET CLI
 description: .NET EventPipe를 사용하여 라이브 .NET 프로세스의 GC(가비지 수집기) 덤프를 수집하기 위해 dotnet-gcdump CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
 ms.date: 11/17/2020
-ms.openlocfilehash: 59de1845ada9e5bdd0b24bf4312517283324ce94
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 02e1a7c5d86b582289672a027464aefd67a6f490
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826042"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593372"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>힙 분석 도구(dotnet-gcdump)
 
@@ -68,6 +68,9 @@ Windows의 `.gcdump` 파일은 분석을 위해 [PerfView](https://github.com/mi
 ## `dotnet-gcdump collect`
 
 현재 실행 중인 프로세스에서 GC 덤프를 수집합니다.
+
+> [!WARNING]
+> GC 힙을 탐색하기 위해 이 명령은 2세대(전체) 가비지 수집을 트리거하고 이로 인해 특히 GC 힙이 클 경우 오랜 시간 런타임이 일시 중단될 수 있습니다. GC 힙이 클 경우 성능이 중요한 환경에서는 이 명령을 사용하지 마세요.
 
 ### <a name="synopsis"></a>개요
 

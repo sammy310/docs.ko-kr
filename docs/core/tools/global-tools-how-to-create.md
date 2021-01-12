@@ -2,13 +2,13 @@
 title: '자습서: .NET 도구 만들기'
 description: .NET 도구를 만드는 방법을 알아봅니다. 도구는 .NET CLI를 사용하여 설치되는 콘솔 애플리케이션입니다.
 ms.topic: tutorial
-ms.date: 02/12/2020
-ms.openlocfilehash: 93d0567f3d73707f828f84fad6128804debf6579
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/14/2020
+ms.openlocfilehash: dc5cf014336848ff1a3035647a386419653a083b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633780"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633899"
 ---
 # <a name="tutorial-create-a-net-tool-using-the-net-cli"></a>자습서: .NET CLI를 사용하여 .NET 도구 만들기
 
@@ -18,14 +18,14 @@ ms.locfileid: "94633780"
 
 만들 도구는 메시지를 입력으로 사용하고 로봇 이미지를 만드는 텍스트 줄과 함께 메시지를 표시하는 콘솔 애플리케이션입니다.
 
-이는 세 가지 자습서 시리즈 중 첫 번째입니다. 이 자습서에서는 도구를 만들고 패키지합니다. 다음 두 자습서에서는 [도구를 전역 도구로 사용](global-tools-how-to-use.md)하고 [도구를 로컬 도구로 사용](local-tools-how-to-use.md)합니다.
+이는 세 가지 자습서 시리즈 중 첫 번째입니다. 이 자습서에서는 도구를 만들고 패키지합니다. 다음 두 자습서에서는 [도구를 전역 도구로 사용](global-tools-how-to-use.md)하고 [도구를 로컬 도구로 사용](local-tools-how-to-use.md)합니다. 도구를 만드는 절차는 전역 도구 또는 로컬 도구로 사용하는지 여부와 관계없이 동일합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- [.NET Core SDK 3.1](https://dotnet.microsoft.com/download) 이상 버전
+- [.NET SDK 5.0.100](https://dotnet.microsoft.com/download) 이상 버전
 
-  이 자습서와 이어지는 [전역 도구 자습서](global-tools-how-to-use.md)는 .NET Core SDK 2.1 이상 버전에 적용됩니다. 전역 도구를 해당 버전부터 사용할 수 있기 때문입니다. 그러나 이 자습서에서는 계속해서 [로컬 도구 자습서](local-tools-how-to-use.md)를 진행할 수 있도록 3.1 이상 버전을 설치했다고 가정합니다. 로컬 도구는 .NET Core SDK 3.0부터 사용할 수 있습니다. 도구를 만드는 절차는 전역 도구 또는 로컬 도구로 사용하는지 여부와 관계없이 동일합니다.
-  
+  이 자습서에서는 .NET SDK 5.0을 사용하지만 .NET Core SDK 2.1부터 전역 도구를 사용할 수 있습니다. 로컬 도구는 .NET Core SDK 3.0부터 사용할 수 있습니다.
+
 - 선택하는 텍스트 편집기 또는 코드 편집기입니다.
 
 ## <a name="create-a-project"></a>프로젝트 만들기
@@ -35,10 +35,22 @@ ms.locfileid: "94633780"
 1. *repository* 폴더로 이동하여 다음 명령을 입력합니다.
 
    ```dotnetcli
-   dotnet new console -n microsoft.botsay
+   dotnet new console -n microsoft.botsay -f net5.0
    ```
 
    이 명령은 *repository* 폴더 아래에 *microsoft.botsay* 라는 새 폴더를 만듭니다.
+
+   > [!NOTE]
+   > 이 자습서에서는 .NET 5.0을 대상으로 하는 도구를 만듭니다. 다른 프레임워크를 대상으로 하려면 `-f|--framework` 옵션을 변경합니다. 여러 프레임워크를 대상으로 하려면 다음 예제와 같이 프로젝트 파일에서 `TargetFramework` 요소를 `TargetFrameworks` 요소로 변경합니다.
+   >
+   > ```xml
+   > <Project Sdk="Microsoft.NET.Sdk">
+   >   <PropertyGroup>
+   >     <OutputType>Exe</OutputType>
+   >     <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+   >   </PropertyGroup>
+   > </Project>
+   > ```
 
 1. *microsoft.botsay* 폴더로 이동합니다.
 
@@ -158,22 +170,22 @@ dotnet run -- Hello from the bot
 
    `<ToolCommandName>`은 설치 후 도구를 호출할 명령을 지정하는 선택적 요소입니다. 이 요소를 제공하지 않으면 도구의 명령 이름은 *.csproj* 확장명이 없는 프로젝트 파일 이름입니다.
 
-   `<PackageOutputPath>`는 NuGet 패키지가 생성될 위치를 결정하는 선택적 요소입니다. NuGet 패키지는 .NET Core CLI가 도구를 설치하는 데 사용됩니다.
+   `<PackageOutputPath>`는 NuGet 패키지가 생성될 위치를 결정하는 선택적 요소입니다. NuGet 패키지는 .NET CLI가 도구를 설치하는 데 사용됩니다.
 
    이제 프로젝트 파일은 다음 예제와 같습니다.
 
    ```xml
    <Project Sdk="Microsoft.NET.Sdk">
-  
+
      <PropertyGroup>
 
        <OutputType>Exe</OutputType>
-       <TargetFramework>netcoreapp3.1</TargetFramework>
-  
+       <TargetFramework>net5.0</TargetFramework>
+
        <PackAsTool>true</PackAsTool>
        <ToolCommandName>botsay</ToolCommandName>
        <PackageOutputPath>./nupkg</PackageOutputPath>
-  
+
      </PropertyGroup>
 
    </Project>
@@ -186,7 +198,7 @@ dotnet run -- Hello from the bot
    ```
 
    *microsoft.botsay.1.0.0.nupkg* 파일은 *microsoft.botsay.csproj* 파일의 `<PackageOutputPath>` 값으로 식별되는 폴더(이 예제에서는 *./nupkg* 폴더)에 만들어집니다.
-  
+
    공개적으로 도구를 릴리스하려면 `https://www.nuget.org`에 업로드할 수 있습니다. NuGet에서 도구를 사용할 수 있게 되면 개발자는 [dotnet tool install](dotnet-tool-install.md) 명령을 사용하여 도구를 설치할 수 있습니다. 이 자습서에서는 로컬 *nupkg* 폴더에서 패키지를 직접 설치하므로 NuGet에 패키지를 업로드할 필요가 없습니다.
 
 ## <a name="troubleshoot"></a>문제 해결

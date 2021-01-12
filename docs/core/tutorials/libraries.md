@@ -1,23 +1,23 @@
 ---
-title: .NET Core CLI를 사용하여 라이브러리 개발
-description: .NET Core CLI를 사용하여 .NET Core 라이브러리를 만드는 방법을 알아봅니다. 여러 프레임워크를 지원하는 라이브러리를 만듭니다.
+title: .NET CLI를 사용하여 라이브러리 개발
+description: .NET CLI를 사용하여 .NET 라이브러리를 만드는 방법을 알아봅니다. 여러 프레임워크를 지원하는 라이브러리를 만듭니다.
 author: cartermp
 ms.topic: how-to
-ms.date: 05/01/2017
-ms.openlocfilehash: 8a0b1c5645f41a256bfb9d0e5dac74f8706d84e6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/14/2020
+ms.openlocfilehash: 6f4c1feac7630a6a0250e4b0b39ef01152f5a400
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725081"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633678"
 ---
-# <a name="develop-libraries-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 라이브러리 개발
+# <a name="develop-libraries-with-the-net-cli"></a>.NET CLI를 사용하여 라이브러리 개발
 
-이 문서에서는 .NET Core CLI를 사용하여 .NET용 라이브러리를 작성하는 방법에 대해 설명합니다. CLI는 지원되는 운영 체제에서 작동하는 효율적인 하위 수준 환경을 제공합니다. Visual Studio로 라이브러리를 빌드할 수 있습니다. 그러한 환경을 선호하는 경우 [Visual Studio 설명서를 참조하세요](library-with-visual-studio.md).
+이 문서에서는 .NET CLI를 사용하여 .NET용 라이브러리를 작성하는 방법에 대해 설명합니다. CLI는 지원되는 운영 체제에서 작동하는 효율적인 하위 수준 환경을 제공합니다. Visual Studio로 라이브러리를 빌드할 수 있습니다. 그러한 환경을 선호하는 경우 [Visual Studio 설명서를 참조하세요](library-with-visual-studio.md).
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-컴퓨터에 [.NET Core SDK 및 CLI](https://dotnet.microsoft.com/download)를 설치해야 합니다.
+머신에 [.NET SDK 및 CLI](https://dotnet.microsoft.com/download)를 설치해야 합니다.
 
 .NET Framework 버전을 다루는 이 문서의 섹션에서는 [.NET Framework](https://dotnet.microsoft.com)가 설치된 Windows 컴퓨터가 필요합니다.
 
@@ -33,35 +33,27 @@ ms.locfileid: "95725081"
 | 4.0                    | Windows 7 및 .NET Framework 4용 Windows SDK         |
 | 2.0, 3.0 및 3.5      | .NET Framework 3.5 SP1 런타임(또는 Windows 8 이상 버전) |
 
-## <a name="how-to-target-net-standard"></a>.NET Standard를 대상으로 지정하는 방법
+## <a name="how-to-target-net-50-or-net-standard"></a>.NET 5.0 또는 .NET Standard를 대상으로 지정하는 방법
 
-.NET Standard에 익숙하지 않은 경우 자세한 내용은 [.NET Standard](../../standard/net-standard.md)를 참조하세요.
+프로젝트의 대상 프레임워크를 제어하려면 프로젝트 파일에 해당 값( *.csproj* 또는 *fsproj*)을 추가합니다. .NET 5.0 또는 .NET Standard 중 대상을 선택하는 방법에 대한 지침은 [.NET 5 및 .NET Standard](../../standard/net-standard.md#net-5-and-net-standard)를 참조하세요.
 
-이 문서에는 .NET Standard를 다양한 구현에 매핑하는 표가 있습니다.
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+</Project>
+```
 
-[!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+</Project>
+```
 
-라이브러리 만들기 작업에서 이 표의 의미는 다음과 같습니다.
-
-선택한 .NET Standard 버전에 따라 최신 API에 대한 액세스와 .NET 구현 및 .NET Standard 버전을 대상으로 지정할 수 있는 기능 간에 균형을 유지하게 됩니다. `netstandardX.X`(여기서 `X.X`는 버전 번호임) 버전을 선택하고 프로젝트 파일(`.csproj` 또는 `.fsproj`)에 추가하여 대상 지정이 가능한 플랫폼과 버전의 범위를 제어합니다.
-
-.NET Standard를 대상으로 할 때 요구에 따라 세 가지 기본 옵션이 있습니다.
-
-1. 템플릿에서 제공하는 기본 버전의 .NET Standard(`netstandard1.4`)를 사용할 수 있습니다. 이 버전을 통해 UWP, .NET Framework 4.6.1 및 .NET Standard 2.0과 호환성을 유지하면서 .NET Standard에 있는 대부분의 API에 액세스할 수 있습니다.
-
-    ```xml
-    <Project Sdk="Microsoft.NET.Sdk">
-      <PropertyGroup>
-        <TargetFramework>netstandard1.4</TargetFramework>
-      </PropertyGroup>
-    </Project>
-    ```
-
-2. 프로젝트 파일의 `TargetFramework` 노드에 있는 값을 수정하여 하위 또는 상위 버전의 .NET Standard를 사용할 수 있습니다.
-
-    .NET 표준 버전은 이전 버전과 호환됩니다. 즉, `netstandard1.0` 라이브러리는 `netstandard1.1` 플랫폼 이상에서 실행됩니다. 그러나 이후 버전과는 호환되지 않습니다. 이전 버전의 .NET Standard 플랫폼은 이후 버전의 플랫폼을 참조할 수 없습니다. 즉, `netstandard1.0` 라이브러리는 `netstandard1.1` 이상을 대상으로 하는 라이브러리를 참조할 수 없습니다. 요구에 맞게 API와 플랫폼 지원이 올바르게 혼합된 표준 버전을 선택하세요. 지금은 `netstandard1.4`를 사용하는 것이 좋습니다.
-
-3. .NET Framework 버전 4.0 이하를 대상으로 하거나 .NET Framework에서는 사용 가능하지만 .NET Standard에서는 사용할 수 없는 API를 사용하려는 경우(예: `System.Drawing`) 다음 섹션을 읽어보고 멀티 타기팅 방법을 알아보세요.
+.NET Framework 버전 4.0 이하를 대상으로 하거나 .NET Framework에서는 사용 가능하지만 .NET Standard에서는 사용할 수 없는 API를 사용하려는 경우(예: `System.Drawing`) 다음 섹션을 읽어보고 멀티 타기팅 방법을 알아보세요.
 
 ## <a name="how-to-target-net-framework"></a>.NET Framework를 대상으로 지정하는 방법
 
@@ -104,7 +96,7 @@ ms.locfileid: "95725081"
 > [!NOTE]
 > 다음 지침에서는 컴퓨터에 .NET Framework가 설치된 것으로 가정합니다. 설치해야 할 종속성 및 다운로드할 위치에 대해 알아보려면 [필수 조건](#prerequisites) 섹션을 참조하세요.
 
-프로젝트가 .NET Framework 및 .NET Core를 모두 지원하는 경우 이전 버전의 .NET Framework를 대상으로 해야 할 수 있습니다. 이 시나리오에서, 최신 대상에 최신 API 및 언어 구조를 사용하려는 경우 코드에 `#if` 지시문을 사용하세요. 각각의 경우에 필요한 API를 포함하기 위해 대상으로 지정하는 각 플랫폼마다 서로 다른 패키지와 종속성을 추가해야 할 수도 있습니다.
+프로젝트가 .NET Framework 및 .NET을 모두 지원하는 경우 이전 버전의 .NET Framework를 대상으로 해야 할 수 있습니다. 이 시나리오에서, 최신 대상에 최신 API 및 언어 구조를 사용하려는 경우 코드에 `#if` 지시문을 사용하세요. 각각의 경우에 필요한 API를 포함하기 위해 대상으로 지정하는 각 플랫폼마다 서로 다른 패키지와 종속성을 추가해야 할 수도 있습니다.
 
 예를 들어 HTTP를 통해 네트워킹 작업을 수행하는 라이브러리가 있다고 가정해 보겠습니다. .NET 표준 및 .NET Framework 버전 4.5 이상 경우 `System.Net.Http` 네임스페이스의 `HttpClient` 클래스를 사용할 수 있습니다. 그러나 이전 버전의 .NET Framework에는 `HttpClient` 클래스가 없으므로, 이에 대해 `System.Net` 네임스페이스의 `WebClient` 클래스를 사용할 수 있습니다.
 
@@ -113,7 +105,7 @@ ms.locfileid: "95725081"
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.4;net40;net45</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net40;net45</TargetFrameworks>
   </PropertyGroup>
 
   <!-- Need to conditionally bring in references for the .NET Framework 4.0 target -->
@@ -207,17 +199,17 @@ namespace MultitargetLib
 ```
 net40/
 net45/
-netstandard1.4/
+netstandard2.0/
 ```
 
-각 디렉터리에는 각 대상에 대한 `.dll` 파일이 들어 있습니다.
+각 디렉터리에는 각 대상의 `.dll` 파일이 들어 있습니다.
 
-## <a name="how-to-test-libraries-on-net-core"></a>.NET Core에서 라이브러리를 테스트하는 방법
+## <a name="how-to-test-libraries-on-net"></a>.NET에서 라이브러리를 테스트하는 방법
 
-플랫폼 간에 테스트할 수 있는 기능이 중요합니다. 기본적으로 [xUnit](https://xunit.github.io/) 또는 MSTest를 사용할 수 있습니다. 둘 다 .NET Core에서 라이브러리를 단위 테스트하는 데 적합합니다. 테스트 프로젝트로 솔루션을 설정하는 방법은 [솔루션 구조](#structuring-a-solution)에 따라 달라집니다. 다음 예제에서는 테스트 및 원본 디렉터리가 동일한 최상위 디렉터리에 있다고 가정합니다.
+플랫폼 간에 테스트할 수 있는 기능이 중요합니다. 기본적으로 [xUnit](https://xunit.net/) 또는 MSTest를 사용할 수 있습니다. 둘 다 .NET에서 라이브러리를 유닛 테스트하는 데 적합합니다. 테스트 프로젝트로 솔루션을 설정하는 방법은 [솔루션 구조](#structuring-a-solution)에 따라 달라집니다. 다음 예제에서는 테스트 및 원본 디렉터리가 동일한 최상위 디렉터리에 있다고 가정합니다.
 
 > [!NOTE]
-> 일부 [.NET Core CLI](../tools/index.md) 명령이 사용됩니다. 자세한 내용은 [dotnet new](../tools/dotnet-new.md) 및 [dotnet sln](../tools/dotnet-sln.md)을 참조하세요.
+> 일부 [.NET CLI](../tools/index.md) 명령이 사용됩니다. 자세한 내용은 [dotnet new](../tools/dotnet-new.md) 및 [dotnet sln](../tools/dotnet-sln.md)을 참조하세요.
 
 1. 솔루션을 설정합니다. 다음 명령을 사용하여 설정할 수 있습니다.
 
@@ -253,8 +245,6 @@ netstandard1.4/
    dotnet restore
    dotnet build
    ```
-
-   [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. `dotnet test` 명령을 실행하여 xUnit가 실행되는지 확인합니다. MSTest를 사용하도록 선택한 경우 MSTest 콘솔 실행기가 대신 실행되어야 합니다.
 
@@ -319,7 +309,7 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 
 ### <a name="project-to-project-referencing"></a>프로젝트 간 참조
 
-프로젝트를 참조하는 가장 좋은 방법은 .NET Core CLI를 사용하여 프로젝트 참조를 추가하는 것입니다. **AwesomeLibrary.CSharp** 및 **AwesomeLibrary.FSharp** 프로젝트 디렉터리에서 다음 명령을 실행할 수 있습니다.
+프로젝트를 참조하는 가장 좋은 방법은 .NET CLI를 사용하여 프로젝트 참조를 추가하는 것입니다. **AwesomeLibrary.CSharp** 및 **AwesomeLibrary.FSharp** 프로젝트 디렉터리에서 다음 명령을 실행할 수 있습니다.
 
 ```dotnetcli
 dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
@@ -333,7 +323,7 @@ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 </ItemGroup>
 ```
 
-.NET Core CLI를 사용하지 않으려는 경우 이 섹션을 각 프로젝트 파일에 수동으로 추가할 수 있습니다.
+.NET CLI를 사용하지 않으려는 경우 이 섹션을 각 프로젝트 파일에 수동으로 추가할 수 있습니다.
 
 ### <a name="structuring-a-solution"></a>솔루션 구성
 

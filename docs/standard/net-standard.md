@@ -6,12 +6,12 @@ ms.prod: dotnet
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: e0adb69d02fe427dd187c788cba34c0673e97ee6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 93fb10538441d939e95bb48dcdd0e61d9267dde0
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822311"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765035"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -57,7 +57,7 @@ ms.locfileid: "94822311"
 
 ## <a name="specification"></a>규격
 
-.NET Standard 규격은 표준화된 API의 집합입니다. 이 규격은 .NET을 구현한 사람, 특히 Microsoft(.NET Framework, .NET Core, Mono 포함)와 Unity에서 유지 관리합니다.
+.NET Standard 규격은 표준화된 API의 집합입니다. 이 규격은 .NET 구현자, 특히 Microsoft(.NET Framework, .NET Core, Mono 포함)와 Unity에서 유지 관리합니다.
 
 ### <a name="official-artifacts"></a>공식 아티팩트
 

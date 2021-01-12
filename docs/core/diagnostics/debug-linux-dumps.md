@@ -2,12 +2,12 @@
 title: Linux 덤프 디버그
 description: 이 문서에서는 Linux 환경에서 덤프를 수집 및 분석하는 방법을 알아봅니다.
 ms.date: 08/27/2020
-ms.openlocfilehash: 94f923f2ec7b5fa20c2ebc9b83540094348dff03
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: e6f2eea3af718853ad7365a5209b397a66035dde
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099148"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753603"
 ---
 # <a name="debug-linux-dumps"></a>Linux 덤프 디버그
 
@@ -15,7 +15,10 @@ ms.locfileid: "95099148"
 
 ## <a name="collect-dumps-on-linux"></a>Linux에서 덤프 수집
 
-Linux에서 덤프를 수집하는 두 가지 권장 방법은 [`dotnet-dump`](dotnet-dump.md) 또는 [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) 도구입니다.
+Linux에서 덤프를 수집하는 두 가지 권장 방법은 다음과 같습니다.
+
+* [`dotnet-dump`](dotnet-dump.md) CLI 도구
+* 크래시 덤프를 수집하는 [환경 변수](dumps.md#collecting-dumps-on-crash)
 
 ### <a name="managed-dumps-with-dotnet-dump"></a>`dotnet-dump`를 사용한 관리형 덤프
 

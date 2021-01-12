@@ -2,12 +2,12 @@
 title: dotnet-dump 진단 도구 - .NET CLI
 description: 네이티브 디버거 없이 Windows 및 Linux 덤프를 수집하고 분석하기 위해 dotnet-dump CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
 ms.date: 11/17/2020
-ms.openlocfilehash: ea9a70c4dc47b5006339e9a197712092eb66b241
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eaffbb1f2959dba5c25a603b6f785c7480e4a8c0
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822206"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765048"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>덤프 수집 및 분석 유틸리티(dotnet-dump)
 
@@ -146,34 +146,37 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `clrstack <arguments>`              | 관리 코드의 스택 추적만 제공합니다.                                                  |
 | `clrthreads <arguments>`            | 실행 중인 관리형 스레드를 나열합니다.                                                            |
 | `dumpasync <arguments>`             | 가비지가 수집된 힙의 비동기 상태 머신에 대한 정보를 표시합니다.                |
-| `dumpassembly <arguments>`          | 어셈블리에 대한 세부 정보를 표시합니다.                                                           |
-| `dumpclass <arguments>`             | 지정된 주소의 EE 클래스 구조체에 대한 정보를 표시합니다.                     |
-| `dumpdelegate <arguments>`          | 대리자에 대한 정보를 표시합니다.                                                        |
-| `dumpdomain <arguments>`            | 모든 AppDomains 및 도메인 내의 모든 어셈블리에 대한 정보를 표시합니다.                |
+| `dumpassembly <arguments>`          | 지정된 주소의 어셈블리에 대한 세부 정보를 표시합니다.                                 |
+| `dumpclass <arguments>`             | 지정된 주소의 `EEClass` 구조체에 대한 정보를 표시합니다.                  |
+| `dumpdelegate <arguments>`          | 지정된 주소의 대리자에 대한 정보를 표시합니다.                             |
+| `dumpdomain <arguments>`            | 모든 AppDomains 및 지정된 도메인 내의 모든 어셈블리에 대한 정보를 표시합니다.       |
 | `dumpheap <arguments>`              | 가비지가 수집된 힙에 대한 정보와 개체에 대한 수집 통계를 표시합니다.       |
 | `dumpil <arguments>`                | 관리되는 메서드와 연관된 MSIL(Microsoft intermediate language)을 표시합니다. |
 | `dumplog <arguments>`               | 메모리 내 스트레스 로그의 내용을 지정된 파일에 씁니다.                         |
-| `dumpmd <arguments>`                | 지정된 주소의 MethodDesc 구조체에 대한 정보를 표시합니다.                   |
-| `dumpmodule <arguments>`            | 지정된 주소의 EE 모듈 구조체에 대한 정보를 표시합니다.                    |
-| `dumpmt <arguments>`                | 지정된 주소의 메서드 테이블에 대한 정보를 표시합니다.                           |
-| `dumpobj <arguments>`               | 지정된 주소의 개체에 대한 정보를 표시합니다.                                       |
+| `dumpmd <arguments>`                | 지정된 주소의 `MethodDesc` 구조체에 대한 정보를 표시합니다.               |
+| `dumpmodule <arguments>`            | 지정된 주소의 모듈에 대한 정보를 표시합니다.                               |
+| `dumpmt <arguments>`                | 지정된 주소의 `MethodTable`에 대한 정보를 표시합니다.                        |
+| `dumpobj <arguments>`               | 지정된 주소의 개체에 대한 정보를 표시합니다.                                      |
 | `dso|dumpstackobjects <arguments>`  | 현재 스택의 범위 내에 있는 관리되는 모든 개체를 표시합니다.                    |
 | `eeheap <arguments>`                | 내부 런타임 데이터 구조에서 사용하는 프로세스 메모리에 대한 정보를 표시합니다.              |
 | `finalizequeue <arguments>`         | 종료하도록 등록된 모든 개체를 표시합니다.                                             |
-| `gcroot <arguments>`                | 지정된 주소의 개체에 대한 참조(또는 루트)에 대한 정보를 표시합니다.              |
+| `gcroot <arguments>`                | 지정된 주소의 개체에 대한 참조(또는 루트)에 대한 정보를 표시합니다.             |
 | `gcwhere <arguments>`               | 전달된 인수의 GC 힙에 있는 위치를 표시합니다.                               |
-| `ip2md <arguments>`                 | JIT 코드의 지정된 주소에 있는 MethodDesc 구조체를 표시합니다.                       |
+| `ip2md <arguments>`                 | JIT 코드의 지정된 주소에 있는 `MethodDesc` 구조체를 표시합니다.                     |
 | `histclear <arguments>`             | `hist*` 명령의 패밀리에서 사용하는 모든 리소스를 해제합니다.                                |
 | `histinit <arguments>`              | 디버기에 저장된 스트레스 로그에서 SOS 구조를 초기화합니다.                     |
 | `histobj <arguments>`               | `<arguments>`와 관련된 가비지 수집 스트레스 로그 재배치를 표시합니다.              |
-| `histobjfind <arguments>`           | 지정된 주소의 개체를 참조하는 모든 로그 항목을 표시합니다.               |
+| `histobjfind <arguments>`           | 지정된 주소의 개체를 참조하는 모든 로그 항목을 표시합니다.              |
 | `histroot <arguments>`              | 지정된 루트의 승격 및 재배치와 관련된 정보를 표시합니다.        |
 | `lm|modules`                        | 프로세스의 네이티브 모듈을 표시합니다.                                                   |
-| `name2ee <arguments>`               | `<argument>`에 대한 MethodTable 구조체와 EEClass 구조체를 표시합니다.                |
-| `pe|printexception <arguments>`     | `<argument>` 주소의 Exception 클래스에서 파생된 개체를 표시합니다.             |
+| `name2ee <arguments>`               | `<argument>`의 `MethodTable` 및 `EEClass` 구조체를 표시합니다.                     |
+| `pe|printexception <arguments>`     | `<argument>`의 <xref:System.Exception> 클래스에서 파생된 개체를 표시합니다.      |
 | `setsymbolserver <arguments>`       | 기호 서버 지원을 사용하도록 설정합니다.                                                             |
 | `syncblk <arguments>`               | SyncBlock 표시자 정보를 표시합니다.                                                           |
 | `threads|setthread <threadid>`      | SOS 명령의 현재 스레드 ID를 설정하거나 표시합니다.                                  |
+
+> [!NOTE]
+> 추가 정보는 [.NET용 SOS 디버깅 확장](sos-debugging-extension.md)에서 얻을 수 있습니다.
 
 ## <a name="using-dotnet-dump"></a>`dotnet-dump` 사용
 

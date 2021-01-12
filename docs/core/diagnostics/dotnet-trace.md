@@ -2,12 +2,12 @@
 title: dotnet-trace 진단 도구 - .NET CLI
 description: .NET EventPipe를 사용하여 네이티브 프로파일러 없이 실행 중인 프로세스의 .NET 추적을 수집하기 위해 dotnet-trace CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
 ms.date: 11/17/2020
-ms.openlocfilehash: 868ce7828eee6bd7f2101d5d6a65c7f7bf87fe24
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: a3b5748cb2a6c2060971fbad0d81ade00dc83087
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009536"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753668"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace 성능 분석 유틸리티
 
@@ -144,6 +144,9 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
   > [!NOTE]
   > 이 옵션을 사용하면 도구에 다시 전달되는 첫 번째 .NET 5.0 프로세스가 모니터링됩니다. 즉, 명령에서 여러 .NET 애플리케이션을 시작하는 경우 첫 번째 앱만 수집합니다. 따라서 자체 포함 애플리케이션에서 이 옵션을 사용하거나 `dotnet exec <app.dll>` 옵션을 사용하는 것이 좋습니다.
 
+> [!NOTE]
+> 대규모 애플리케이션에서는 추적을 중지하는 데 오래 걸릴 수 있습니다(최대 몇 분). 런타임에서는 추적에 캡처된 모든 관리 코드의 형식 캐시를 전송해야 합니다.
+
 ## <a name="dotnet-trace-convert"></a>dotnet-trace convert
 
 `nettrace` 추적을 대체 추적 분석 도구와 함께 사용할 대체 형식으로 변환합니다.
@@ -169,6 +172,9 @@ dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>
 - **`-o|--output <output-filename>`**
 
   출력 파일 이름입니다. 대상 형식의 확장명이 추가됩니다.
+
+> [!NOTE]
+> `nettrace` 파일을 `chromium` 또는 `speedscope` 파일로 변환하면 되돌릴 수 없습니다. `speedscope` 및 `chromium` 파일에는 `nettrace` 파일을 다시 생성하는 데 필요한 정보가 일부 포함되어 있지 않습니다. 그러나 `convert` 명령은 원래 `nettrace` 파일을 유지하므로 나중에 파일을 열 계획인 경우 삭제하지 마세요.
 
 ## <a name="dotnet-trace-ps"></a>dotnet-trace ps
 
@@ -329,12 +335,31 @@ dotnet-trace collect --process-id <PID> --providers System.Runtime:0:1:EventCoun
 
 앞의 명령은 런타임 이벤트와 관리되는 스택 프로파일러를 사용하지 않도록 설정합니다.
 
-## <a name="net-providers"></a>.NET 공급자
+## <a name="use-rsp-file-to-avoid-typing-long-commands"></a>긴 명령을 입력하지 않기 위해 .rsp 파일 사용
 
-.NET Core 런타임은 다음과 같은 .NET 공급자를 지원합니다. .NET Core에서 동일한 키워드를 사용하여 `Event Tracing for Windows (ETW)` 및 `EventPipe` 추적을 모두 사용하도록 설정합니다.
+전달할 인수를 포함하는 `.rsp` 파일을 사용하여 `dotnet-trace`를 시작할 수 있습니다. 이렇게 하면 긴 인수가 필요한 공급자를 사용하도록 설정하거나 문자를 없애는 셸 환경을 사용할 때 유용할 수 있습니다.
 
-| 공급자 이름                            | 정보 |
-|------------------------------------------|-------------|
-| `Microsoft-Windows-DotNETRuntime`        | [런타임 공급자](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[CLR 런타임 키워드](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
-| `Microsoft-Windows-DotNETRuntimeRundown` | [런다운 공급자](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[CLR 런다운 키워드](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |
-| `Microsoft-DotNETCore-SampleProfiler`    | 샘플 프로파일러를 사용하도록 설정합니다. |
+예를 들어 다음 공급자는 추적할 때마다 입력하는 일이 번거로울 수 있습니다.
+
+```cmd
+dotnet-trace collect --providers Microsoft-Diagnostics-DiagnosticSource:0x3:5:FilterAndPayloadSpecs="SqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandBefore@Activity1Start:-Command;Command.CommandText;ConnectionId;Operation;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nSqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandAfter@Activity1Stop:\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuting@Activity2Start:-Command;Command.CommandText;ConnectionId;IsAsync;Command.Connection.ClientConnectionId;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted@Activity2Stop:",OtherProvider,AnotherProvider
+```
+
+또한 이전 예제에서는 `"`가 인수의 일부로 포함되어 있습니다. 따옴표는 각 셸에서 동일하게 처리되지 않으므로 여러 셸을 사용할 때 다양한 문제가 발생할 수 있습니다. 예를 들어 `zsh`에서 입력하는 명령과 `cmd`의 명령이 다릅니다.
+
+해당 명령을 매번 입력하는 대신 다음 텍스트를 `myprofile.rsp`라는 파일에 저장할 수 있습니다.
+
+```txt
+--providers
+Microsoft-Diagnostics-DiagnosticSource:0x3:5:FilterAndPayloadSpecs="SqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandBefore@Activity1Start:-Command;Command.CommandText;ConnectionId;Operation;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nSqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandAfter@Activity1Stop:\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuting@Activity2Start:-Command;Command.CommandText;ConnectionId;IsAsync;Command.Connection.ClientConnectionId;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted@Activity2Stop:",OtherProvider,AnotherProvider
+```
+
+`myprofile.rsp`를 저장했으면 다음 명령을 통해 이 구성을 사용하여 `dotnet-trace`를 시작할 수 있습니다.
+
+```bash
+dotnet-trace @myprofile.rsp
+```
+
+## <a name="see-also"></a>참조
+
+- [.NET의 잘 알려진 이벤트 공급자](well-known-event-providers.md)

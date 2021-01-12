@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/20/2020
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 35ba90f978b1993f80451a28a4cd08129afddd85
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 58f650e7932d4f5862d545429376b3e417bb433c
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864503"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512244"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 
@@ -71,7 +71,7 @@ calculateButton.Clicked += async (o, e) =>
 };
 ```
 
-이 코드는 단추 클릭 이벤트의 의도를 표현하고, 백그라운드 스레드를 수동으로 관리할 필요가 없고, 비차단 방식으로 작업을 수행합니다.
+이 코드는 단추 클릭 이벤트의 의도를 표현하고 백그라운드 스레드를 수동으로 관리할 필요가 없고 비차단 방식으로 작업을 수행합니다.
 
 ### <a name="what-happens-under-the-covers"></a>백그라운드에서 수행되는 작업
 
@@ -103,7 +103,7 @@ C#에서는 컴파일러가 해당 코드를, `await`에 도달할 때 실행을
 
    대답이 "예"이면 **CPU 바인딩된** 작업입니다.
 
-**I/O 바인딩된** 작업이 있을 경우 `Task.Run` *없이* `async` 및 `await`를 사용합니다. 작업 병렬 라이브러리를 사용*하면 안 됩니다*. 그 이유는 [세부 비동기](../standard/async-in-depth.md)에 설명되어 있습니다.
+**I/O 바인딩된** 작업이 있을 경우 `Task.Run` *없이* `async` 및 `await`를 사용합니다. 작업 병렬 라이브러리를 사용 *하면 안 됩니다*. 그 이유는 [세부 비동기](../standard/async-in-depth.md)에 설명되어 있습니다.
 
 **CPU 바인딩된** 작업이 있고 빠른 응답이 필요할 경우 `async` 및 `await`를 사용하지만 `Task.Run`을 사용하여 또 다른 스레드에서 작업을 생성합니다. 작업이 동시성 및 병렬 처리에 해당할 경우 [작업 병렬 라이브러리](../standard/parallel-programming/task-parallel-library-tpl.md)를 사용할 것을 고려할 수도 있습니다.
 

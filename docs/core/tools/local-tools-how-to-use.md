@@ -2,13 +2,13 @@
 title: '자습서: .NET 로컬 도구 설치 및 사용'
 description: .NET 도구를 로컬 도구로 설치하고 사용하는 방법을 알아봅니다.
 ms.topic: tutorial
-ms.date: 02/12/2020
-ms.openlocfilehash: 2cb25443706293b66325d43136afcd3fd886294d
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/11/2020
+ms.openlocfilehash: f32a5c4091ff63c7c50cf339dddd89b78e543c4c
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633883"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512465"
 ---
 # <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a>자습서: .NET CLI를 사용하여 .NET 로컬 도구 설치 및 사용
 
@@ -172,7 +172,7 @@ dotnet tool run botsay hello from the bot
 
 ## <a name="update-a-local-tool"></a>로컬 도구 업데이트
 
-로컬 도구 `dotnetsay`의 설치된 버전은 2.1.3입니다.  최신 버전은 2.1.4입니다. [dotnet tool update](dotnet-tool-update.md) 명령을 사용하여 도구를 최신 버전으로 업데이트합니다.
+로컬 도구 `dotnetsay`의 설치된 버전은 2.1.3입니다.  [dotnet tool update](dotnet-tool-update.md) 명령을 사용하여 도구를 최신 버전으로 업데이트합니다.
 
 ```dotnetcli
 dotnet tool update dotnetsay
@@ -181,7 +181,7 @@ dotnet tool update dotnetsay
 출력은 새 버전 번호를 나타냅니다.
 
 ```console
-Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.4'
+Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.7'
 (manifest file /home/name/repository/.config/dotnet-tools.json).
 ```
 
@@ -205,4 +205,4 @@ dotnet tool uninstall dotnetsay
 
 ## <a name="see-also"></a>참조
 
-자세한 내용은 [.NET Core 도구](global-tools.md)를 참조하세요.
+자세한 내용은 [.NET 도구](global-tools.md)를 참조하세요.

@@ -5,12 +5,12 @@ ms.date: 11/06/2020
 ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 1a0d6ef9d31b85fd6c083604dd11b9ca9ff09c79
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7a3dcd61c330607bacf0d05dbd775c62cfa15b37
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827921"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765061"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK 스타일 프로젝트의 대상 프레임워크
 
@@ -22,7 +22,7 @@ ms.locfileid: "94827921"
 
 일부 대상 프레임워크(예: .NET Framework)에서 API는 프레임워크에서 시스템에 설치하는 어셈블리에 의해 정의되고 애플리케이션 프레임워크 API(예: ASP.NET)를 포함할 수 있습니다.
 
-패키지 기반 대상 프레임워크(예: .NET 5, .NET Core, .NET Standard)에서 API는 앱이나 라이브러리에 포함된 패키지에 의해 정의됩니다. *메타패키지* 는 고유한 내용은 없고 종속성(다른 패키지) 목록만 있는 NuGet 패키지입니다. NuGet 패키지 기반 대상 프레임워크는 프레임워크를 구성하는 모든 패키지를 참조하는 메타패키지를 암시적으로 지정합니다.
+패키지 기반 대상 프레임워크(예: .NET 5, .NET Core, .NET Standard)에서 API는 앱이나 라이브러리에 포함된 NuGet 패키지에 의해 정의됩니다.
 
 ## <a name="latest-versions"></a>최신 버전
 

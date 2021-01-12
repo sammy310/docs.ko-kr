@@ -3,12 +3,12 @@ title: C# 7.0의 새로운 기능 - C# 가이드
 description: C# 언어 버전 7.0의 새로운 기능을 살펴봅니다.
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 84f5961d573b99438320a75d7f89bc7fd94f6266
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c238439b0f435e579d932b3b1eb13e9b0061fa5f
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955215"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678228"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>C# 7.0~C# 7.3의 새로운 기능
 
@@ -61,7 +61,7 @@ C# 7.0~7.3에서는 C# 언어에 다음 기능과 테마를 추가합니다.
 
 ## <a name="tuples-and-discards"></a>튜플 및 무시 항목
 
-C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구조체에 대한 다양한 구문을 제공합니다. 하지만 다양한 구문에는 이점이 거의 없는데 추가 작업이 필요한 경우가 있습니다. 일반적으로 두 개 이상의 데이터 요소가 포함된 간단한 구조체가 필요한 메서드를 작성할 수 있습니다. 이러한 시나리오를 지원하기 위해 *튜플*이 C#에 추가되었습니다. 튜플은 데이터 멤버를 나타내는 여러 필드가 포함된 간단한 데이터 구조입니다. 필드의 유효성이 검사되지 않고 고유한 메서드를 정의할 수 없습니다. C# 튜플 형식은 `==` 및 `!=`를 지원합니다. 자세한 내용은
+C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구조체에 대한 다양한 구문을 제공합니다. 하지만 다양한 구문에는 이점이 거의 없는데 추가 작업이 필요한 경우가 있습니다. 일반적으로 두 개 이상의 데이터 요소가 포함된 간단한 구조체가 필요한 메서드를 작성할 수 있습니다. 이러한 시나리오를 지원하기 위해 *튜플* 이 C#에 추가되었습니다. 튜플은 데이터 멤버를 나타내는 여러 필드가 포함된 간단한 데이터 구조입니다. 필드의 유효성이 검사되지 않고 고유한 메서드를 정의할 수 없습니다. C# 튜플 형식은 `==` 및 `!=`를 지원합니다. 자세한 내용은
 
 > [!NOTE]
 > 튜플은 C# 7.0 이전부터 사용할 수 있었지만 비효율적이었고 언어 지원이 없었습니다. 즉, 튜플 요소는 `Item1`, `Item2` 등으로만 참조될 수 있었습니다. C# 7.0은 새롭고 보다 효율적인 튜플 유형을 사용하여 튜플의 필드에 대해 의미론적 이름을 사용할 수 있는 튜플에 대한 언어 지원을 소개합니다.
@@ -76,7 +76,7 @@ C#에서는 디자인 의도를 설명하는 데 사용되는 클래스 및 구�
 
 [!code-csharp[ImplicitNamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#ImplicitNamedTuple "Implicitly named tuple")]
 
-메서드에서 반환된 튜플의 멤버를 패키지 해제하려는 경우가 있을 수 있습니다.  이 작업을 수행하려면 튜플에서 각 값에 대한 개별 변수를 선언합니다. 이 패키지 해제 작업을 튜플 *분해*라고 합니다.
+메서드에서 반환된 튜플의 멤버를 패키지 해제하려는 경우가 있을 수 있습니다.  이 작업을 수행하려면 튜플에서 각 값에 대한 개별 변수를 선언합니다. 이 패키지 해제 작업을 튜플 *분해* 라고 합니다.
 
 [!code-csharp[CallingWithDeconstructor](~/samples/snippets/csharp/new-in-7/program.cs#CallingWithDeconstructor "Deconstructing a tuple")]
 
@@ -98,7 +98,7 @@ var pair = (count, label); // element names are "count" and "label"
 
 [튜플 형식](../language-reference/builtin-types/value-tuples.md) 문서에서 해당 기능을 자세히 알아볼 수 있습니다.
 
-종종 튜플을 분해하거나 `out` 매개 변수로 메서드를 호출할 때 값을 신경 쓰지 않고 사용하지 않을 변수를 정의해야 합니다. C#은 *버림*에 대한 지원을 추가하여 이 시나리오를 처리합니다. 무시는 이름이 `_`(밑줄 문자)인 쓰기 전용 변수입니다. 단일 변수에 버리려는 모든 값을 할당할 수 있습니다. 버림은 할당 문과 별도로 분리되는 할당되지 않은 변수와 같습니다. 코드에서 버림을 사용할 수 없습니다.
+종종 튜플을 분해하거나 `out` 매개 변수로 메서드를 호출할 때 값을 신경 쓰지 않고 사용하지 않을 변수를 정의해야 합니다. C#은 *버림* 에 대한 지원을 추가하여 이 시나리오를 처리합니다. 무시는 이름이 `_`(밑줄 문자)인 쓰기 전용 변수입니다. 단일 변수에 버리려는 모든 값을 할당할 수 있습니다. 버림은 할당 문과 별도로 분리되는 할당되지 않은 변수와 같습니다. 코드에서 버림을 사용할 수 없습니다.
 
 다음 시나리오에서는 버림이 지원되지 않습니다.
 
@@ -211,7 +211,7 @@ static async Task Main()
 
 ## <a name="local-functions"></a>로컬 함수
 
-클래스에 대한 대부분의 디자인에는 한 위치에서만 호출되는 메서드가 포함됩니다. 이러한 추가 private 메서드는 각 메서드를 작고 집중되게 유지합니다. *로컬 함수*를 사용하면 다른 메서드의 컨텍스트 내부에서 메서드를 선언할 수 있습니다. 로컬 함수를 통해 클래스 readers는 로컬 메서드가 선언된 컨텍스트에서만 호출된다는 것을 더 쉽게 알 수 있습니다.
+클래스에 대한 대부분의 디자인에는 한 위치에서만 호출되는 메서드가 포함됩니다. 이러한 추가 private 메서드는 각 메서드를 작고 집중되게 유지합니다. *로컬 함수* 를 사용하면 다른 메서드의 컨텍스트 내부에서 메서드를 선언할 수 있습니다. 로컬 함수를 통해 클래스 readers는 로컬 메서드가 선언된 컨텍스트에서만 호출된다는 것을 더 쉽게 알 수 있습니다.
 
 로컬 함수는 일반적으로 공용 반복기 메서드 및 공용 비동기 메서드에 사용됩니다. 두 메서드 형식 모두 프로그래머가 예상한 것보다 늦게 오류를 보고하는 코드를 생성합니다. 반복기 메서드에서 모든 예외는 반환된 시퀀스를 열거하는 코드를 호출할 경우에만 관찰됩니다. 비동기 메서드에서 모든 예외는 반환된 `Task`가 대기 상태일 경우에만 관찰됩니다. 다음 예제에서는 로컬 함수를 사용하여 반복기 구현으로부터 매개 변수 유효성 검사를 분리하는 방법을 보여줍니다.
 
@@ -231,11 +231,11 @@ public int SomeProperty { get; set; }
 `SomeThingAboutFieldAttribute` 특성은 `SomeProperty`에 대한 컴파일러 생성 지원 필드에 적용됩니다. 자세한 내용은 C# 프로그래밍 가이드의 [특성](../programming-guide/concepts/attributes/index.md)을 참조하세요.
 
 > [!NOTE]
-> 로컬 함수가 지원하는 일부 디자인은 *람다 식*을 사용하여 수행할 수도 있습니다. 자세한 내용은 [로컬 함수와 람다 식 비교](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)를 참조하세요.
+> 로컬 함수가 지원하는 일부 디자인은 *람다 식* 을 사용하여 수행할 수도 있습니다. 자세한 내용은 [로컬 함수와 람다 식 비교](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)를 참조하세요.
 
 ## <a name="more-expression-bodied-members"></a>추가 식 본문 멤버
 
-C# 6에서는 멤버 함수의 [식 본문 멤버](csharp-6.md#expression-bodied-function-members) 및 읽기 전용 속성을 추가했습니다. C# 7.0에서는 식으로 구현될 수 있는 허용 멤버를 확장합니다. C# 7.0에서는 *속성* 및 *인덱서*에 대한 *생성자*, *종료자* 및 `get`/`set` 접근자를 구현할 수 있습니다. 다음 코드는 각각에 대한 예제를 보여 줍니다.
+C# 6에서는 멤버 함수의 식 본문 멤버 및 읽기 전용 속성을 추가했습니다. C# 7.0에서는 식으로 구현될 수 있는 허용 멤버를 확장합니다. C# 7.0에서는 *속성* 및 *인덱서* 에 대한 *생성자*, *종료자* 및 `get`/`set` 접근자를 구현할 수 있습니다. 다음 코드는 각각에 대한 예제를 보여 줍니다.
 
 [!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 
@@ -270,7 +270,7 @@ Func<string, bool> whereClause = default;
 
 ## <a name="numeric-literal-syntax-improvements"></a>숫자 리터럴 구문 개선 사항
 
-숫자 상수를 잘못 읽으면 코드를 처음 읽을 때 이해하기가 더 어려울 수 있습니다. 비트 마스크 또는 다른 기호 값은 잘못 이해하기 쉽습니다. C# 7.0에는 의도한 용도에 맞게 가장 읽기 쉬운 방식으로 숫자를 작성할 수 있는 *이진 리터럴* 및 *숫자 구분 기호*라는 두 가지 새로운 기능이 포함됩니다.
+숫자 상수를 잘못 읽으면 코드를 처음 읽을 때 이해하기가 더 어려울 수 있습니다. 비트 마스크 또는 다른 기호 값은 잘못 이해하기 쉽습니다. C# 7.0에는 의도한 용도에 맞게 가장 읽기 쉬운 방식으로 숫자를 작성할 수 있는 *이진 리터럴* 및 *숫자 구분 기호* 라는 두 가지 새로운 기능이 포함됩니다.
 
 비트 마스크를 만들 때 또는 숫자의 이진 표현이 가장 읽기 쉬운 코드를 만들 때마다 해당 숫자를 이진으로 작성하세요.
 
@@ -361,7 +361,7 @@ public class D : B
 
 ### <a name="ref-locals-and-returns"></a>Ref local 및 return
 
-이 기능을 통해 다른 곳에 정의된 변수에 대한 참조를 사용 및 반환하는 알고리즘이 가능해집니다. 한 가지 예는 큰 매트릭스를 사용하고 특정 특징을 가진 하나의 위치를 찾는 것입니다. 다음 메서드는 **참조**를 행렬의 해당 스토리지에 반환합니다.
+이 기능을 통해 다른 곳에 정의된 변수에 대한 참조를 사용 및 반환하는 알고리즘이 가능해집니다. 한 가지 예는 큰 매트릭스를 사용하고 특정 특징을 가진 하나의 위치를 찾는 것입니다. 다음 메서드는 **참조** 를 행렬의 해당 스토리지에 반환합니다.
 
 [!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
@@ -522,7 +522,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 ### <a name="reference-assembly-generation"></a>참조 어셈블리 생성
 
-*참조 전용 어셈블리*인 [-refout](../language-reference/compiler-options/refout-compiler-option.md) 및 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)를 생성하는 두 개의 새로운 컴파일러 옵션이 있습니다.
+*참조 전용 어셈블리* 인 [-refout](../language-reference/compiler-options/refout-compiler-option.md) 및 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)를 생성하는 두 개의 새로운 컴파일러 옵션이 있습니다.
 연결된 문서에서는 이러한 옵션과 참조 어셈블리를 보다 자세히 설명합니다.
 
 ### <a name="public-or-open-source-signing"></a>공개 또는 오픈 소스 서명

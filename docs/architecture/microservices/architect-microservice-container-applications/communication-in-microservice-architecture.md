@@ -2,12 +2,12 @@
 title: 마이크로 서비스 아키텍처의 통신
 description: 동기 및 비동기 방식의 의미를 이해하고 마이크로 서비스 간의 다양한 통신 방법을 탐색합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: f1a240609b898fe8f365c39ba0c95f486377c445
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a918ea7573d7402a82d2df2c63301e4838fa66dc
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169260"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899602"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>마이크로 서비스 아키텍처의 통신
 
@@ -103,7 +103,7 @@ ms.locfileid: "91169260"
 
 ![SignalR 기반의 푸시 및 실시간 통신을 보여주는 다이어그램입니다.](./media/communication-in-microservice-architecture/one-to-many-communication.png)
 
-**그림 4-17**. 일대일 실시간 비동기 메시지 통신
+**그림 4-17**. 일대다 실시간 비동기 메시지 통신
 
 SignalR은 백 엔드 서버에서 클라이언트로 콘텐츠를 푸시하기 위한 실시간 통신을 달성하는 좋은 방법입니다. 통신이 실시간이므로 클라이언트 앱은 변경 내용을 거의 즉시 표시합니다. 이는 일반적으로 많은 Websocket 연결을 사용하여(클라이언트당 하나) Websocket과 같은 프로토콜에서 처리됩니다. 일반적인 예는 서비스가 스포츠 경기 점수의 변경 내용을 여러 클라이언트 웹앱에 동시에 전달하는 경우입니다.
 

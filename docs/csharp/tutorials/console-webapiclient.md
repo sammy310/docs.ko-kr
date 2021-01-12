@@ -3,12 +3,12 @@ title: .NET Core를 사용하여 REST 클라이언트 만들기
 description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 8db87440bb6e0995b1cc2c97b0d28995170ada8c
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: b537108bd77b3ed2248ca9e459044e09fa854ba9
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656946"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899654"
 ---
 # <a name="rest-client"></a>REST 클라이언트
 
@@ -42,7 +42,7 @@ dotnet new console --name WebAPIClient
 
 이렇게 하면 기본 "Hello World" 애플리케이션에 대한 시작 파일이 만들어집니다. 프로젝트 이름은 "WebAPIClient"입니다. 새 프로젝트이므로 어떤 종속성도 없습니다. 첫 번째 실행에서는 .NET Core 프레임워크를 다운로드하고, 개발 인증서를 설치하며, NuGet 패키지 관리자를 실행하여 누락된 종속성을 복원합니다.
 
-수정하기 전에 명령 프롬프트에 `dotnet run`([참고 참조](#dotnet-restore-note))을 입력하여 애플리케이션을 실행합니다. 환경에 누락된 종속성이 있으면 `dotnet run`이 자동으로 `dotnet restore`를 수행합니다. 애플리케이션을 다시 빌드해야 하면 `dotnet build`도 수행합니다.
+수정하기 전에 “WebAPIClient” 디렉터리에 `cd`하고 명령 프롬프트에서 `dotnet run`([참고 참조](#dotnet-restore-note))를 입력하여 애플리케이션을 실행합니다. 환경에 누락된 종속성이 있으면 `dotnet run`이 자동으로 `dotnet restore`를 수행합니다. 애플리케이션을 다시 빌드해야 하면 `dotnet build`도 수행합니다.
 최초 설치 후에는 프로젝트에 해당할 때만 `dotnet restore` 또는 `dotnet build`를 실행하면 됩니다.
 
 ## <a name="adding-new-dependencies"></a>새 종속성 추가
@@ -175,7 +175,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 ```
 
-현재 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> 대신 <xref:System.Net.Http.HttpClient.GetStreamAsync(System.String)>를 사용하고 있습니다. serializer는 해당 소스로 문자열 대신 스트림을 사용합니다. 앞의 코드 조각 두 번째 줄에서 사용되는 C# 언어의 몇 가지 기능에 대해 설명해 보겠습니다. <xref:System.Text.Json.JsonSerializer.DeserializeAsync%60%601(System.IO.Stream,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)?displayProperty=nameWithType>에 대한 첫 번째 인수는 `await` 식입니다. (다른 두 매개 변수는 선택 사항이며 코드 조각에서 생략됩니다.) 지금까지는 대입문의 일부로만 볼 수 있었지만 Await 식은 코드의 거의 모든 위치에 나올 수 있습니다. `Deserialize` 메서드는 *제네릭*입니다. 즉, JSON 텍스트에서 만들어야 하는 개체 종류에 대한 형식 인수를 제공해야 합니다. 이 예제에서는 다른 제네릭 개체 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>인 `List<Repository>`로 역직렬화합니다. `List<>` 클래스는 개체의 컬렉션을 저장합니다. 형식 인수는 `List<>`에 저장된 개체의 형식을 선언합니다. JSON 텍스트는 리포지토리 개체의 컬렉션을 나타내므로 형식 인수는 `Repository`입니다.
+현재 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> 대신 <xref:System.Net.Http.HttpClient.GetStreamAsync(System.String)>를 사용하고 있습니다. serializer는 해당 소스로 문자열 대신 스트림을 사용합니다. 앞의 코드 조각 두 번째 줄에서 사용되는 C# 언어의 몇 가지 기능에 대해 설명해 보겠습니다. <xref:System.Text.Json.JsonSerializer.DeserializeAsync%60%601(System.IO.Stream,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)?displayProperty=nameWithType>에 대한 첫 번째 인수는 `await` 식입니다. (다른 두 매개 변수는 선택 사항이며 코드 조각에서 생략됩니다.) 지금까지는 대입문의 일부로만 볼 수 있었지만 Await 식은 코드의 거의 모든 위치에 나올 수 있습니다. `Deserialize` 메서드는 *제네릭* 입니다. 즉, JSON 텍스트에서 만들어야 하는 개체 종류에 대한 형식 인수를 제공해야 합니다. 이 예제에서는 다른 제네릭 개체 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>인 `List<Repository>`로 역직렬화합니다. `List<>` 클래스는 개체의 컬렉션을 저장합니다. 형식 인수는 `List<>`에 저장된 개체의 형식을 선언합니다. JSON 텍스트는 리포지토리 개체의 컬렉션을 나타내므로 형식 인수는 `Repository`입니다.
 
 이 섹션이 거의 완료되었습니다. JSON을 C# 개체로 변환했으므로 각 리포지토리의 이름을 표시해 보겠습니다. 다음 줄을
 
@@ -296,7 +296,7 @@ public DateTime LastPushUtc { get; set; }
 public DateTime LastPush => LastPushUtc.ToLocalTime();
 ```
 
-방금 정의한 새 구문을 살펴보겠습니다. `LastPush` 속성은 `get` 접근자에 대한 *식 본문 멤버*를 사용하여 정의됩니다. `set` 접근자가 없습니다. `set` 접근자를 생략하는 것이 바로 C#에서 *읽기 전용* 속성을 정의하는 방식입니다. (C#에서 *쓰기 전용* 속성을 만들 수 있지만 해당 값은 제한됩니다.)
+방금 정의한 새 구문을 살펴보겠습니다. `LastPush` 속성은 `get` 접근자에 대한 *식 본문 멤버* 를 사용하여 정의됩니다. `set` 접근자가 없습니다. `set` 접근자를 생략하는 것이 바로 C#에서 *읽기 전용* 속성을 정의하는 방식입니다. (C#에서 *쓰기 전용* 속성을 만들 수 있지만 해당 값은 제한됩니다.)
 
 마지막으로 콘솔에 output 문을 하나 더 추가하면 이 앱을 빌드하고 다시 실행할 준비가 됩니다.
 

@@ -2,19 +2,19 @@
 title: dotnet new에 대한 템플릿 팩 만들기
 description: dotnet new 명령에 대한 템플릿 팩을 빌드하는 csproj 파일을 만드는 방법을 알아봅니다.
 author: adegeo
-ms.date: 12/10/2019
+ms.date: 12/11/2020
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 25264fff42c47f5bb660f68f85dbb123b5b2608c
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 2aea143f1e41d580de41a9cc9e924d70b55695db
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324332"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633600"
 ---
 # <a name="tutorial-create-a-template-pack"></a>자습서: 템플릿 팩 만들기
 
-.NET Core를 사용하여 프로젝트, 파일, 리소스를 생성하는 템플릿을 만들고 배포할 수 있습니다. 이 자습서는 `dotnet new` 명령에 사용할 템플릿을 만들고, 설치하고, 제거하는 방법을 알려주는 시리즈의 3부입니다.
+.NET을 사용하여 프로젝트, 파일, 리소스를 생성하는 템플릿을 만들고 배포할 수 있습니다. 이 자습서는 `dotnet new` 명령에 사용할 템플릿을 만들고, 설치하고, 제거하는 방법을 알려주는 시리즈의 3부입니다.
 
 시리즈의 3부에서는 다음 방법에 대해 알아봅니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "85324332"
 
 템플릿 팩은 NuGet 패키지( _.nupkg_) 파일로 표시됩니다. NuGet 패키지와 마찬가지로 템플릿 팩을 NuGet 피드에 업로드할 수 있습니다. `dotnet new -i` 명령은 NuGet 패키지 피드에서 템플릿 팩 설치를 지원합니다. _.nupkg_ 파일에서 직접 템플릿 팩을 설치할 수도 있습니다.
 
-일반적으로 C# 프로젝트 파일을 사용하여 코드를 컴파일하고 이진을 생성합니다. 프로젝트를 사용하여 템플릿 팩을 생성할 수도 있습니다. _.csproj_의 설정을 변경하여 코드를 컴파일하지 않도록 차단하고 템플릿의 모든 자산을 리소스로 포함할 수 있습니다. 이 프로젝트를 빌드하면 템플릿 팩 NuGet 패키지가 생성됩니다.
+일반적으로 C# 프로젝트 파일을 사용하여 코드를 컴파일하고 이진을 생성합니다. 프로젝트를 사용하여 템플릿 팩을 생성할 수도 있습니다. _.csproj_ 의 설정을 변경하여 코드를 컴파일하지 않도록 차단하고 템플릿의 모든 자산을 리소스로 포함할 수 있습니다. 이 프로젝트를 빌드하면 템플릿 팩 NuGet 패키지가 생성됩니다.
 
 만든 팩에는 이전에 만든 [항목 템플릿](cli-templates-create-item-template.md) 및 [패키지 템플릿](cli-templates-create-project-template.md)이 포함됩니다. 두 템플릿을 _working\templates\\_ 폴더로 그룹화했으므로 _.csproj_ 파일에 대해 _working_ 폴더를 사용할 수 있습니다.
 
@@ -49,11 +49,7 @@ ms.locfileid: "85324332"
 dotnet new console -n templatepack -o .
 ```
 
-`-n` 매개 변수는 _.csproj_ 파일 이름을 _templatepack.csproj_로 설정합니다. `-o` 매개 변수는 현재 디렉터리에 파일을 만듭니다. 다음 출력과 유사한 결과가 표시되어야 합니다.
-
-```dotnetcli
-dotnet new console -n templatepack -o .
-```
+`-n` 매개 변수는 _.csproj_ 파일 이름을 _templatepack.csproj_ 로 설정합니다. `-o` 매개 변수는 현재 디렉터리에 파일을 만듭니다. 다음 출력과 유사한 결과가 표시되어야 합니다.
 
 ```console
 The template "Console Application" was created successfully.
@@ -84,6 +80,7 @@ Restore succeeded.
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -94,11 +91,13 @@ Restore succeeded.
 </Project>
 ```
 
-위 XML의 `<PropertyGroup>` 설정은 세 개의 그룹으로 나뉩니다. 첫 번째 그룹은 NuGet 패키지에 필요한 속성을 처리합니다. 세 `<Package` 설정은 NuGet 피드에서 패키지를 식별하는 NuGet 패키지 속성과 관련이 있습니다. 특히, `<PackageId>` 값은 디렉터리 경로 대신 단일 이름으로 템플릿 팩을 제거하는 데 사용됩니다. 이 값을 사용하여 NuGet 피드에서 템플릿 팩을 설치할 수도 있습니다. `<Title>` 및 `<PackageTags>`와 같은 나머지 설정은 NuGet 피드에 표시되는 메타데이터와 관련이 있습니다. NuGet 설정에 대한 자세한 내용은 [NuGet 및 MSBuild 속성](/nuget/reference/msbuild-targets)을 참조하세요.
+위 XML의 `<PropertyGroup>` 설정은 세 개의 그룹으로 나뉩니다. 첫 번째 그룹은 NuGet 패키지에 필요한 속성을 처리합니다. 세 `<Package*>` 설정은 NuGet 피드에서 패키지를 식별하는 NuGet 패키지 속성과 관련이 있습니다. 특히, `<PackageId>` 값은 디렉터리 경로 대신 단일 이름으로 템플릿 팩을 제거하는 데 사용됩니다. 이 값을 사용하여 NuGet 피드에서 템플릿 팩을 설치할 수도 있습니다. `<Title>` 및 `<PackageTags>`와 같은 나머지 설정은 NuGet 피드에 표시되는 메타데이터와 관련이 있습니다. NuGet 설정에 대한 자세한 내용은 [NuGet 및 MSBuild 속성](/nuget/reference/msbuild-targets)을 참조하세요.
 
 pack 명령을 실행하여 프로젝트를 컴파일하고 압축할 때 MSBuild가 제대로 실행되도록 `<TargetFramework>` 설정을 지정해야 합니다.
 
-마지막 세 설정은 템플릿을 만들 때 NuGet 팩의 적절한 폴더에 포함되도록 프로젝트를 올바르게 구성하는 것과 관련이 있습니다.
+다음 세 설정은 템플릿을 만들 때 NuGet 팩의 적절한 폴더에 포함되도록 프로젝트를 올바르게 구성하는 것과 관련이 있습니다.
+
+마지막 설정은 템플릿 팩 프로젝트에 적용되지 않는 경고 메시지가 표시되지 않게 합니다.
 
 `<ItemGroup>`은 두 설정을 포함합니다. 첫째, `<Content>` 설정은 _templates_ 폴더의 모든 항목을 콘텐츠로 포함합니다. 또한 _bin_ 폴더 또는 _obj_ 폴더를 제외하여 컴파일된 코드(템플릿을 테스트하여 컴파일한 경우)를 포함하지 않도록 설정됩니다. 둘째, `<Compile>` 설정은 위치에 상관없이 모든 코드 파일을 컴파일에서 제외합니다. 이 설정은 템플릿 팩을 만드는 데 사용 중인 프로젝트가 _templates_ 폴더 계층에서 코드를 컴파일하려고 시도하지 못하도록 차단합니다.
 
@@ -117,7 +116,7 @@ dotnet pack
 ```
 
 ```console
-Microsoft (R) Build Engine version 16.2.0-preview-19278-01+d635043bd for .NET Core
+Microsoft (R) Build Engine version 16.8.0+126527ff1 for .NET
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Restore completed in 123.86 ms for C:\working\templatepack.csproj.
@@ -138,12 +137,12 @@ Options:
 
 ... cut to save space ...
 
-Templates                                         Short Name            Language          Tags
--------------------------------------------------------------------------------------------------------------------------------
-Example templates: string extensions              stringext             [C#]              Common/Code
-Console Application                               console               [C#], F#, VB      Common/Console
-Example templates: async project                  consoleasync          [C#]              Common/Console/C#8
-Class library                                     classlib              [C#], F#, VB      Common/Library
+Templates                                         Short Name               Language          Tags
+--------------------------------------------      -------------------      ------------      ----------------------
+Example templates: string extensions              stringext                [C#]              Common/Code
+Console Application                               console                  [C#], F#, VB      Common/Console
+Example templates: async project                  consoleasync             [C#]              Common/Console/C#9
+Class library                                     classlib                 [C#], F#, VB      Common/Library
 ```
 
 NuGet 패키지를 NuGet 피드에 업로드한 경우 `dotnet new -i PACKAGEID` 명령을 사용할 수 있습니다. 여기서 `PACKAGEID`는 _.csproj_ 파일의 `<PackageId>` 설정과 동일합니다. 이 패키지 ID는 NuGet 패키지 식별자와 동일합니다.
@@ -160,34 +159,38 @@ dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
-  Microsoft.DotNet.Common.ItemTemplates
+  Microsoft.DotNet.Common.ProjectTemplates.2.2
+    Details:
+      NuGetPackageId: Microsoft.DotNet.Common.ProjectTemplates.2.2
+      Version: 1.0.2-beta4
+      Author: Microsoft
     Templates:
-      dotnet gitignore file (gitignore)
-      global.json file (globaljson)
-      NuGet Config (nugetconfig)
-      Solution File (sln)
-      Dotnet local tool manifest file (tool-manifest)
-      Web Config (webconfig)
+      Class library (classlib) C#
+      Class library (classlib) F#
+      Class library (classlib) VB
+      Console Application (console) C#
+      Console Application (console) F#
+      Console Application (console) VB
+    Uninstall Command:
+      dotnet new -u Microsoft.DotNet.Common.ProjectTemplates.2.2
 
 ... cut to save space ...
 
-  NUnit3.DotNetNew.Template
-    Templates:
-      NUnit 3 Test Project (nunit) C#
-      NUnit 3 Test Item (nunit-test) C#
-      NUnit 3 Test Project (nunit) F#
-      NUnit 3 Test Item (nunit-test) F#
-      NUnit 3 Test Project (nunit) VB
-      NUnit 3 Test Item (nunit-test) VB
   AdatumCorporation.Utility.Templates
+    Details:
+      NuGetPackageId: AdatumCorporation.Utility.Templates
+      Version: 1.0.0
+      Author: Me
     Templates:
       Example templates: async project (consoleasync) C#
       Example templates: string extensions (stringext) C#
+    Uninstall Command:
+      dotnet new -u AdatumCorporation.Utility.Templates
 ```
 
 `dotnet new -u AdatumCorporation.Utility.Templates`을 실행하여 템플릿을 제거합니다. `dotnet new` 명령은 이전에 설치한 템플릿을 생략해야 한다는 도움말 정보를 출력합니다.
 
-지금까지 템플릿 팩을 설치했다가 제거했습니다.
+축하합니다! 템플릿 팩을 설치했다가 제거했습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

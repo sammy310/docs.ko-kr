@@ -2,12 +2,12 @@
 title: 로깅 및 추적 - .NET Core
 description: .NET Core 로깅 및 추적에 대해 간략히 설명합니다.
 ms.date: 10/12/2020
-ms.openlocfilehash: 86444f2451079e54050f6698f3e45ddff0700acf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fac8eeed63e8737ad42699d81b421747b207c69a
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820581"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753629"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 로깅 및 추적
 
@@ -36,11 +36,11 @@ ms.locfileid: "94820581"
   - 고객이 릴리스에서 확인해야 하는 정보에 유용합니다.
   - 가장 간단한 방법이므로 임시 디버깅에 자주 사용됩니다. 이 디버그 코드는 소스 제어에 체크인되지 않는 경우가 많습니다.
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
-  - `TRACE`가 정의된 경우에만 사용하도록 설정됩니다.
+  - 소스에 `#define TRACE`를 추가하거나 컴파일할 때 `/d:TRACE` 옵션을 지정하여 `TRACE`를 정의한 경우에만 사용할 수 있습니다.
   - 연결된 <xref:System.Diagnostics.Trace.Listeners>(기본적으로 <xref:System.Diagnostics.DefaultTraceListener>)에 씁니다.
   - 대부분의 빌드에서 사용하도록 설정될 로그를 만드는 경우 이 API를 사용합니다.
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
-  - `DEBUG`가 정의된 경우에만 사용하도록 설정됩니다.
+  - 소스에 `#define DEBUG`를 추가하거나 컴파일할 때 `/d:DEBUG` 옵션을 지정하여 `DEBUG`를 정의한 경우에만 사용할 수 있습니다.
   - 연결된 디버거에 씁니다.
   - `COMPlus_DebugWriteToStdErr`가 설정된 경우 `*nix`에서 stderr에 씁니다.
   - 디버그 빌드에서만 사용하도록 설정될 로그를 만드는 경우 이 API를 사용합니다.
@@ -95,6 +95,8 @@ ms.locfileid: "94820581"
 - [C# 문자열 보간](../../csharp/language-reference/tokens/interpolated.md)은 로깅 코드 작성을 간소화할 수 있습니다.
 
 - [런타임 공급자 이벤트 목록](../../fundamentals/diagnostics/runtime-events.md)
+
+- [.NET의 잘 알려진 이벤트 공급자](well-known-event-providers.md)
 
 - <xref:System.Exception.Message?displayProperty=nameWithType> 속성은 예외를 기록하는 데 유용합니다.
 

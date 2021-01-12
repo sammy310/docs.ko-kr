@@ -1,31 +1,33 @@
 ---
-title: '호환성이 손상되는 변경: Deserialize에 단일 문자열이 필요함'
-description: JsonSerializer.Deserialize에 단일 문자열이 필요한 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
-ms.date: 10/18/2020
-ms.openlocfilehash: 780f2928d776ecb6db9a7fc05a720e889eb363e7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+title: '호환성이 손상되는 변경: Char 역직렬화에 단일 문자열이 필요함'
+description: Char 대상으로 역직렬화할 때 System.Text.Json에서 JSON에 단일 문자 문자열이 필요한 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+ms.date: 12/15/2020
+ms.openlocfilehash: 39a2d25b00bf8855cfbf46a4d78b8545052703e5
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759971"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633873"
 ---
-# <a name="jsonserializerdeserialize-requires-single-character-string"></a>JsonSerializer.Deserialize에는 단일 문자열이 필요함
+# <a name="systemtextjson-requires-single-char-string-to-deserialize-a-char"></a>Char를 역직렬화하기 위해 System.Text.Json에 단일 문자 문자열 필요
 
-형식 매개 변수가 <xref:System.Char>인 경우 deserialization에 성공하려면 <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>의 문자열 인수에 단일 문자가 포함되어야 합니다.
+<xref:System.Text.Json>을 사용하여 <xref:System.Char>를 역직렬화하려면 JSON 문자열에 단일 문자가 포함되어 있어야 합니다.
 
 ## <a name="change-description"></a>변경 내용 설명
 
-이전 .NET 버전에서 형식 매개 변수가 <xref:System.Char>인 경우 <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>에 다중 문자열을 전달하면 deserialization은 성공하지만 첫 번째 문자만 역직렬화됩니다.
-
-.NET 5.0 이상에서 형식 매개 변수가 <xref:System.Char>인 경우 단일 문자열 이외의 값을 전달하면 <xref:System.Text.Json.JsonException>이 throw됩니다.
+이전 .NET 버전에서는 JSON의 다중 `char` 문자열이 `char` 속성 또는 필드로 역직렬화되었습니다. 다음 예제와 같이 문자열의 첫 번째 `char`만 사용됩니다.
 
 ```csharp
-// .NET Core 3.0 and 3.1: Returns the first character 'a'.
-// .NET 5.0 and later: Throws JsonException because payload has more than one character.
-JsonSerializer.Deserialize<char>("\"abc\"");
+// .NET Core 3.0 and 3.1: Returns the first char 'a'.
+// .NET 5.0 and later: Throws JsonException because payload has more than one char.
+char deserializedChar = JsonSerializer.Deserialize<char>("\"abc\"");
+```
 
+.NET 5.0 이상에서는 역직렬화 대상이 `char`인 경우 단일 `char` 문자열 이외의 모든 항목은 <xref:System.Text.Json.JsonException>을 throw합니다. 다음 예제 문자열은 모든 .NET 버전에서 역직렬화됩니다.
+
+```csharp
 // Correct usage.
-JsonSerializer.Deserialize<char>("\"a\"");
+char deserializedChar = JsonSerializer.Deserialize<char>("\"a\"");
 ```
 
 ## <a name="version-introduced"></a>도입된 버전
@@ -34,21 +36,21 @@ JsonSerializer.Deserialize<char>("\"a\"");
 
 ## <a name="reason-for-change"></a>변경 이유
 
-<xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>는 단일 JSON 값을 나타내는 텍스트를 제네릭 형식 매개 변수에 지정된 형식의 인스턴스로 구문 분석합니다. 제공한 페이로드가 지정된 제네릭 형식 매개 변수에 유효한 경우에만 구문 분석이 성공합니다. <xref:System.Char> 값 형식에 유효한 페이로드는 단일 문자열입니다.
+역직렬화의 구문 분석은 제공된 페이로드가 대상 유형에 유효한 경우에만 성공합니다. `char` 형식의 경우 유효한 페이로드는 단일 `char` 문자열뿐입니다.
 
 ## <a name="recommended-action"></a>권장 조치
 
-<xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>을 사용하여 문자열을 <xref:System.Char> 형식으로 구문 분석하는 경우 문자열이 단일 문자로 구성되어 있는지 확인합니다.
+JSON을 `char` 대상으로 역직렬화할 때 문자열이 단일 `char`으로 구성되어 있는지 확인하세요.
 
 ## <a name="affected-apis"></a>영향을 받는 API
 
-- <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=fullName>
+- <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=fullName>
 
 <!--
 
 ### Affected APIs
 
-- `M:System.Text.Json.JsonSerializer.Deserialize``1(System.String,System.Text.Json.JsonSerializerOptions)`
+- `Overload:System.Text.Json.JsonSerializer.Deserialize`
 
 ### Category
 

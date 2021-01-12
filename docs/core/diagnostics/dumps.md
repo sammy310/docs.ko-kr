@@ -2,12 +2,12 @@
 title: 덤프 - .NET
 description: .NET의 덤프에 대한 소개입니다.
 ms.date: 10/12/2020
-ms.openlocfilehash: 56cf4085d10658c828bac39be93eed3f774e00d5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7a4c7bf54b3e9ea43e685eafbd00b4a373326520
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242775"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764944"
 ---
 # <a name="dumps"></a>덤프
 
@@ -53,7 +53,13 @@ ms.locfileid: "96242775"
 
 ## <a name="analyze-dumps"></a>덤프 분석
 
-덤프는 [`dotnet-dump`](dotnet-dump.md)를 사용하여 분석할 수 있습니다.
+[`dotnet-dump`](dotnet-dump.md) CLI 도구를 사용하거나 [Visual Studio](https://docs.microsoft.com/visualstudio/debugger/using-dump-files)에서 덤프를 분석할 수 있습니다.
+
+> [!NOTE]
+> Visual Studio 버전 16.8 이상에서는 .NET Core 3.1.7 이상에서 생성된 [Linux 덤프를 열](https://devblogs.microsoft.com/visualstudio/linux-managed-memory-dump-debugging/) 수 있습니다.  
+
+> [!NOTE]
+> 네이티브 디버깅이 필요한 경우 [SOS 디버거 확장](sos-debugging-extension.md)을 [Linux 및 macOS의 LLDB](debug-linux-dumps.md#analyze-dumps-on-linux)와 함께 사용할 수 있습니다. SOS는 Windows의 [Windbg/cdb](/windows-hardware/drivers/debugger/debugger-download-tools)와 함께 사용할 수도 있지만 Visual Studio와 함께 사용하는 것이 좋습니다.
 
 ## <a name="see-also"></a>참조
 

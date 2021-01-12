@@ -1,13 +1,13 @@
 ---
 title: .NET Core RID(런타임 식별자) 카탈로그
 description: RID(런타임 식별자)에 대한 정보와 .NET Core에서 RID 사용 방법에 대해 알아봅니다.
-ms.date: 02/22/2019
-ms.openlocfilehash: 096ce8e33a82df3b9de682ed16e10fbe9f07fd03
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 12/15/2020
+ms.openlocfilehash: f818ab2d503be7960d9eb8450a7dd749766637a6
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "90538226"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633613"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 카탈로그
 
@@ -114,15 +114,15 @@ RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. �
 
 자주 사용되는 값만 나열되어 있습니다. 완전한 최신 버전을 보려면 `dotnet/runtime` 리포지토리에서 [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 확인하세요. 아래에 나열되지 않은 배포를 실행하는 디바이스의 경우, 이식 가능 RID 중 하나와 작동할 수 있습니다. 예를 들어, 여기에 나열되지 않은 Linux 배포를 실행하는 Raspberry Pi 디바이스는 `linux-arm`을 사용하여 대상으로 지정할 수 있습니다.
 
-- 이식 가능(.NET Core 2.0 이상 버전)
+- 이식 가능
   - `linux-x64`(CentOS, Debian, Fedora, Ubuntu 및 파생 버전을 비롯한 대부분의 데스크톱 배포)
   - `linux-musl-x64` (Alpine Linux와 같이 [musl](https://wiki.musl-libc.org/projects-using-musl.html)을 사용하는 간단한 배포)
   - `linux-arm`(Raspberry Pi 모델 2+의 Raspbian과 같이 ARM에서 실행되는 Linux 배포)
   - `linux-arm64`(Raspberry Pi 모델 3+의 Ubuntu Server 64비트와 같이 64비트 ARM에서 실행되는 Linux 배포)
 - Red Hat Enterprise Linux
   - `rhel-x64` (버전 6보다 상위 RHEL의 경우 `linux-x64`로 대체됨)
-  - `rhel.6-x64`(.NET Core 2.0 이상 버전)
-- Tizen(.NET Core 2.0 이상 버전)
+  - `rhel.6-x64`
+- Tizen
   - `tizen`
   - `tizen.4.0.0`
   - `tizen.5.0.0`
@@ -133,18 +133,23 @@ RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. �
 
 macOS RID는 이전 "OSX" 브랜딩을 사용합니다. 자주 사용되는 값만 나열되어 있습니다. 완전한 최신 버전을 보려면 `dotnet/runtime` 리포지토리에서 [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 확인하세요.
 
-- 이식 가능(.NET Core 2.0 이상 버전)
+- 이식 가능
   - `osx-x64` (최소 OS 버전: macOS 10.12 Sierra)
 - macOS 10.10 Yosemite
   - `osx.10.10-x64`
 - macOS 10.11 El Capitan
   - `osx.10.11-x64`
-- macOS 10.12 Sierra(.NET Core 1.1 이상 버전)
+- macOS 10.12 Sierra
   - `osx.10.12-x64`
-- macOS 10.13 High Sierra(.NET Core 1.1 이상 버전)
+- macOS 10.13 High Sierra
   - `osx.10.13-x64`
-- macOS 10.14 Mojave(.NET Core 1.1 이상 버전)
+- macOS 10.14 Mojave
   - `osx.10.14-x64`
+- macOS 10.15 Catalina
+  - `osx.10.15-x64`
+- macOS 11.01 Big Sur
+  - `osx.11.0-x64`
+  - `osx.11.0-arm64`
 
 자세한 내용은 [.NET Core 종속성 및 요구 사항](./install/macos.md#dependencies)을 참조하세요.
 

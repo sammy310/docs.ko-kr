@@ -3,13 +3,13 @@ title: 단일 파일 애플리케이션
 description: 단일 파일 애플리케이션이란 무엇이고, 이 애플리케이션 배포 모델 사용을 왜 고려해야 하는지를 알아봅니다.
 author: lakshanf
 ms.author: lakshanf
-ms.date: 08/28/2020
-ms.openlocfilehash: 16e9586cfc29072fa2ca70dc482272a5a0e7306a
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.date: 12/17/2020
+ms.openlocfilehash: e2d2c9ed4c28d11a77e4f840602982a36cf1c80c
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050418"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678154"
 ---
 # <a name="single-file-deployment-and-executable"></a>단일 파일 배포 및 실행 파일
 
@@ -51,7 +51,7 @@ Windows와 Mac에서는 Visual Studio 및 VS Code를 사용하여 크래시 덤�
 
 이 파일이 없으면 Visual Studio에서 “프로세스에 연결할 수 없습니다. 디버그 구성 요소가 설치되지 않았습니다.” 오류가 발생할 수 있고, VS Code에서는 “프로세스에 연결하지 못했습니다: 알 수 없는 오류: 0x80131c3c” 오류가 발생할 수 있습니다.
 
-이러한 오류를 해결하려면 실행 파일 옆에 _mscordbi_를 복사해야 합니다. _mscordbi_는 기본적으로 애플리케이션의 런타임 ID를 사용하여 하위 디렉터리에 `publish`됩니다. 따라서 예를 들어 `-r win-x64` 매개 변수를 사용하여 Windows용 `dotnet` CLI로 자체 포함 단일 파일 실행 파일을 게시하는 경우 실행 파일은 _bin/Debug/net5.0/win-x64/publish_에 배치됩니다. _mscordbi.dll_ 복사본은 _bin/Debug/net5.0/win-x64_에 있습니다.
+이러한 오류를 해결하려면 실행 파일 옆에 _mscordbi_ 를 복사해야 합니다. _mscordbi_ 는 기본적으로 애플리케이션의 런타임 ID를 사용하여 하위 디렉터리에 `publish`됩니다. 따라서 예를 들어 `-r win-x64` 매개 변수를 사용하여 Windows용 `dotnet` CLI로 자체 포함 단일 파일 실행 파일을 게시하는 경우 실행 파일은 _bin/Debug/net5.0/win-x64/publish_ 에 배치됩니다. _mscordbi.dll_ 복사본은 _bin/Debug/net5.0/win-x64_ 에 있습니다.
 
 ## <a name="other-considerations"></a>기타 고려 사항
 
@@ -96,6 +96,39 @@ Windows와 Mac에서는 Visual Studio 및 VS Code를 사용하여 크래시 덤�
 </PropertyGroup>
 ```
 
+## <a name="publish-a-single-file-app---sample-project-file"></a>단일 파일 앱 게시 - 샘플 프로젝트 파일
+
+다음은 단일 파일 게시를 지정하는 샘플 프로젝트 파일입니다.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishReadyToRun>true</PublishReadyToRun>
+  </PropertyGroup>
+
+</Project>
+```
+
+위 속성에는 다음과 같은 함수가 있습니다.
+
+* `PublishSingleFile` - 단일 파일 게시를 사용하도록 설정합니다.
+* `SelfContained` - 앱이 자체 포함인지, 프레임워크 종속인지를 결정합니다.
+* `RuntimeIdentifier` - 대상으로 할 [OS 및 CPU 종류](../rid-catalog.md)를 지정합니다.
+* `PublishTrimmed` - 자체 포함 앱에만 지원되는 [어셈블리 트리밍](trim-self-contained.md)을 사용하도록 설정합니다.
+* `PublishReadyToRun` - [AOT(Ahead-Of-Time) 컴파일](ready-to-run.md)을 사용하도록 설정합니다.
+
+**참고:**
+
+* 앱은 OS 및 아키텍처별로 다릅니다. Linux x64, Linux ARM64, Windows x64 등과 같은 각 구성에 대해 게시해야 합니다.
+* *\*.runtimeconfig.json* 과 같은 구성 파일은 단일 파일에 포함됩니다. 추가 구성 파일이 필요한 경우 단일 파일 옆에 배치할 수 있습니다.
+
 ## <a name="publish-a-single-file-app---cli"></a>단일 파일 앱 게시 - CLI
 
 [dotnet publish](../tools/dotnet-publish.md) 명령을 사용하여 단일 파일 애플리케이션을 게시합니다. 앱을 게시할 때 다음 속성을 설정합니다.
@@ -121,27 +154,27 @@ dotnet publish -r linux-x64 -p:PublishSingleFile=true --self-contained false
 
 Visual Studio는 애플리케이션의 게시 방식을 제어하는 재사용 가능한 게시 프로필을 만듭니다.
 
-01. **솔루션 탐색기** 창에서 게시할 프로젝트를 마우스 오른쪽 단추로 클릭합니다. **게시**를 선택합니다.
+01. **솔루션 탐색기** 창에서 게시할 프로젝트를 마우스 오른쪽 단추로 클릭합니다. **게시** 를 선택합니다.
 
     :::image type="content" source="media/single-file/visual-studio-solution-explorer.png" alt-text="오른쪽 클릭 메뉴에서 게시 옵션이 강조 표시된 솔루션 탐색기.":::
 
     기존 게시 프로필이 없는 경우 지침에 따라 게시 프로필을 만들고 **폴더** 대상 유형을 선택합니다.
 
-01. **편집**을 선택합니다.
+01. **편집** 을 선택합니다.
 
-    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="오른쪽 클릭 메뉴에서 게시 옵션이 강조 표시된 솔루션 탐색기.":::
+    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="편집 단추가 있는 Visual Studio 게시 프로필.":::
 
 01. **프로필 설정** 대화 상자에서 다음 옵션을 설정합니다.
 
-    - **배포 모드**를 **자체 포함**으로 설정합니다.
-    - **대상 런타임**을 게시할 플랫폼으로 설정합니다.
-    - **단일 파일 생성**을 선택합니다.
+    - **배포 모드** 를 **자체 포함** 으로 설정합니다.
+    - **대상 런타임** 을 게시할 플랫폼으로 설정합니다.
+    - **단일 파일 생성** 을 선택합니다.
 
-    **저장**을 선택하여 설정을 저장하고 **게시** 대화 상자로 돌아갑니다.
+    **저장** 을 선택하여 설정을 저장하고 **게시** 대화 상자로 돌아갑니다.
 
-    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="오른쪽 클릭 메뉴에서 게시 옵션이 강조 표시된 솔루션 탐색기.":::
+    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="배포 모드, 대상 런타임, 단일 파일 옵션이 강조 표시된 프로필 설정 대화 상자":::
 
-01. **게시**를 선택하여 앱을 단일 파일로 게시합니다.
+01. **게시** 를 선택하여 앱을 단일 파일로 게시합니다.
 
 자세한 내용은 [Visual Studio를 사용하여 .NET Core 앱 게시](deploy-with-vs.md)를 참조하세요.
 

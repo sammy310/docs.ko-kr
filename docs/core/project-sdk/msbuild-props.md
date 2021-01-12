@@ -4,12 +4,12 @@ description: .NET SDK에서 이해하는 MSBuild 속성 및 항목에 대한 참
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 3b58fd080439c73ee30d5c8dc59c50c0410db164
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 27944a6726f8d74a3b00c7c774faa8037c0f2f0e
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851577"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899628"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 프로젝트용 MSBuild 참조
 
@@ -365,6 +365,7 @@ ms.locfileid: "96851577"
 ## <a name="reference-properties-and-items"></a>참조 속성 및 항목
 
 - [AssetTargetFallback](#assettargetfallback)
+- [DisableImplicitFrameworkReferences](#disableimplicitframeworkreferences)
 - [PackageReference](#packagereference)
 - [ProjectReference](#projectreference)
 - [참조](#reference)
@@ -379,6 +380,18 @@ ms.locfileid: "96851577"
 ```xml
 <PropertyGroup>
   <AssetTargetFallback>net461</AssetTargetFallback>
+</PropertyGroup>
+```
+
+### <a name="disableimplicitframeworkreferences"></a>DisableImplicitFrameworkReferences
+
+`DisableImplicitFrameworkReferences` 속성은 .NET Core 3.0 이상 버전을 대상으로 하는 경우 암시적 `FrameworkReference` 항목을 제어합니다. .NET Core 2.1 또는 .NET Standard 2.0 이전 버전을 대상으로 하는 경우에는 메타패키지의 패키지에 대한 암시적 [PackageReference](#packagereference) 항목을 제어합니다. (메타패키지는 다른 패키지에 대한 종속성으로만 구성된 프레임워크 기반 패키지입니다.) 또한 이 속성은 .NET Framework를 대상으로 하는 경우 `System`, `System.Core` 등과 같은 암시적 참조도 제어 합니다.
+
+암시적 `FrameworkReference` 또는 [PackageReference](#packagereference) 항목을 사용하지 않도록 설정하려면 이 속성을 `true`로 설정합니다. 이 속성을 `true`로 설정하면 필요한 프레임워크나 패키지에만 명시적 참조를 추가할 수 있습니다.
+
+```xml
+<PropertyGroup>
+  <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
 </PropertyGroup>
 ```
 
@@ -433,6 +446,36 @@ ms.locfileid: "96851577"
 ```xml
 <PropertyGroup>
   <RestoreIgnoreFailedSource>true</RestoreIgnoreFailedSource>
+</PropertyGroup>
+```
+
+## <a name="run-properties"></a>실행 속성
+
+다음 속성은 [`dotnet run`](../tools/dotnet-run.md) 명령을 사용하여 앱을 시작하는 데 사용됩니다.
+
+- [RunArguments](#runarguments)
+- [RunWorkingDirectory](#runworkingdirectory)
+
+### <a name="runarguments"></a>RunArguments
+
+`RunArguments` 속성은 앱이 실행될 때 앱에 전달되는 인수를 정의합니다.
+
+```xml
+<PropertyGroup>
+  <RunArguments>-mode dryrun</RunArguments>
+</PropertyGroup>
+```
+
+> [!TIP]
+> [`dotnet run`의 `--` 옵션](../tools/dotnet-run.md#options)을 사용하면 앱에 전달할 추가 인수를 지정할 수 있습니다.
+
+### <a name="runworkingdirectory"></a>RunWorkingDirectory
+
+`RunWorkingDirectory` 속성은 애플리케이션 프로세스를 시작할 작업 디렉터리를 정의합니다. 디렉터리를 지정하지 않으면 `OutDir`이 작업 디렉터리로 사용됩니다.
+
+```xml
+<PropertyGroup>
+  <RunWorkingDirectory>c:\temp</RunWorkingDirectory>
 </PropertyGroup>
 ```
 

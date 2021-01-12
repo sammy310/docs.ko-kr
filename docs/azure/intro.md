@@ -2,91 +2,39 @@
 title: Azure 및 .NET 시작
 description: Azure 및.NET에 대해 알아야 할 기본 사항을 알아봅니다.
 ms.date: 06/20/2020
-ms.openlocfilehash: e4a071e302247332cdc98c1aabf595cb4f8e2eff
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.topic: conceptual
+ms.custom: devx-track-dotnet
+ms.author: daberry
+author: daberry
+ms.openlocfilehash: 5d14bd0d9930d41a8c60b58b9f5b0522f0c0e398
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171574"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700779"
 ---
 # <a name="introduction-to-azure-and-net"></a>Azure 및 .NET 소개
 
-이 문서에서는 .NET 개발자가 Azure 서비스를 사용하여 앱을 개발하기 위해 숙지해야 할 핵심 개념과 서비스에 대한 개요를 제공합니다.
+## <a name="what-is-azure"></a>Azure란?
 
-## <a name="key-concepts"></a>주요 개념
+Azure는 최신 애플리케이션을 빌드하는 프로세스를 간소화하도록 설계된 클라우드 플랫폼입니다.  애플리케이션을 Azure에서 완전히 호스트하든, Azure 서비스를 통해 온-프레미스 애플리케이션을 확장하든 Azure를 사용하면 스케일링 가능하고 안정적이며 유지 관리 가능한 애플리케이션을 만들 수 있습니다.  Visual Studio, Visual Studio Code와 같이 이미 사용하는 도구와 포괄적인 SDK 라이브러리를 광범위하게 지원하는 Azure는 .NET 개발자가 처음부터 생산성을 발휘하도록 지원하기 위해 설계되었습니다.
 
-**Azure 계정**: Azure 계정은 [Azure Portal](https://portal.azure.com) 또는 [Cloud Shell](https://shell.azure.com)과 같은 Azure 서비스에 로그인하는 데 사용하는 자격 증명입니다. Azure 계정이 없으면 [무료 계정을 만들](https://azure.microsoft.com/free/dotnet/) 수 있습니다.
+## <a name="application-development-scenarios-on-azure"></a>Azure의 애플리케이션 개발 시나리오
 
-**Azure 구독**: 구독은 Azure 리소스가 생성되는 청구 플랜입니다. 구독은 개별 구독 또는 회사에서 관리하는 엔터프라이즈 구독일 수 있습니다. Azure 계정에 여러 구독을 연결할 수 있습니다. 이 경우 리소스를 만들 때 올바른 구독을 선택하고 있는지 확인합니다. 자세한 내용은 [계정, 구독 및 청구 이해](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)를 참조합니다.
+요구에 따라 다양한 방법으로 Azure를 애플리케이션에 통합할 수 있습니다.
 
-> [!TIP]
-> Visual Studio 구독이 있다면 [활성화를 대기하고 있는 월간 Azure 크레딧](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/)이 있습니다.
+- **Azure에서 호스트하는 애플리케이션 -** Azure에서 웹 애플리케이션에서 API, 데이터베이스, 스토리지 서비스에 이르는 전체 애플리케이션 스택을 호스트할 수 있습니다. Azure는 완전 관리형 서비스, 컨테이너, 가상 머신 등 다양한 호스팅 모델을 지원합니다. 완전 관리형 Azure 서비스를 사용하는 경우 애플리케이션에서 Azure에 기본 제공되는 스케일링 성능, 고가용성, 보안을 활용할 수 있습니다.
 
-**리소스 그룹**: 리소스 그룹은 Azure 리소스를 관리용 그룹으로 조직하는 방법입니다. Azure에서 생성된 리소스는 컴퓨터의 폴더에 파일을 저장하는 것과 마찬가지로 리소스 그룹에 저장됩니다.
+- **애플리케이션에서 클라우드 서비스 사용 -** 기존 앱에서 Azure 서비스를 통합하여 기능을 확장할 수 있습니다.  [Azure Cognitive Search](/azure/search/search-what-is-azure-search)를 사용한 전체 텍스트 검색 기능 추가, [Azure Key Vault](/azure/key-vault/)에 애플리케이션 비밀을 안전하게 저장, [Azure Cognitive Services](/azure/cognitive-services/)를 사용하여 비전, 음성, 언어 이해 기능 추가 등을 예로 들 수 있습니다.  이러한 서비스는 Azure에서 완전히 관리되며 현재 애플리케이션 아키텍처나 배포 모델을 변경하지 않고 애플리케이션에 쉽게 추가할 수 있습니다.
 
-**호스팅**: Azure에서 코드를 실행하려면 사용자 제공 코드 실행을 지원하는 서비스에서 호스팅되어야 합니다.
+- **최신 서버리스 아키텍처 -** Azure Functions는 HTTP 요청에 응답, Blob 스토리지에서 파일 업로드 처리, 큐의 이벤트 처리 등의 이벤트 기반 워크플로를 처리하는 솔루션의 빌드를 간소화합니다.  서버 또는 프레임워크 코드는 신경 쓰지 않고 이벤트 처리에 필요한 코드만 작성하면 됩니다.  또한 기타 Azure 및 타사 서비스에 대한 250개 넘는 커넥터를 활용하여 가장 까다로운 통합 문제를 해결할 수 있습니다.
 
-**관리되는 서비스**: Azure는 Azure에 데이터 또는 정보를 제공하는 일부 서비스를 제공하며 Azure의 구현은 적절한 동작을 취합니다. 한 가지 예는 Azure Blob Storage로서, 파일을 제공하고 Azure가 파일의 읽기, 쓰기 및 지속을 처리합니다.
+## <a name="access-azure-services-from-net-applications"></a>.NET 애플리케이션에서 Azure 서비스 액세스
 
-**.NET용 Azure SDK**는 Azure 서비스를 통해 다양한 상호 작용과 기능을 제공하는 프로젝트에 설치하는 [NuGet 패키지](packages.md)를 통칭합니다. 해당 패키지에는 리소스를 프로비저닝 및 관리하는 데 사용하는 관리 라이브러리도 포함됩니다.
+앱이 Azure나 온-프레미스 어디에 호스트되어 있든 관계없이 **.NET용 Azure SDK** 를 통해 대부분의 Azure 서비스 액세스에 액세스할 수 있습니다.  .NET용 Azure SDK는 일련의 NuGet 패키지로 제공되며 .NET Core(2.1 이상)와 .NET Framework(4.6.1 이상) 애플리케이션 모두에서 사용할 수 있습니다. .NET용 Azure SDK를 사용하면 적합한 NuGet 패키지를 설치하고 클라이언트 개체를 인스턴스화하고 적절한 메서드를 호출하는 것만큼 쉽게 Azure 서비스를 애플리케이션에 통합할 수 있습니다. .NET용 Azure SDK에 대한 자세한 내용은 [.NET용 Azure SDK 개요](./sdk/azure-sdk-for-dotnet.md)에서 찾을 수 있습니다.
 
-## <a name="choosing-a-hosting-option"></a>호스팅 옵션 선택
-
-Azure 내 호스팅은 세 가지 범주로 나눌 수 있습니다.
-
-* **IaaS(서비스 제공 인프라)** : IaaS를 사용하여 연결된 네트워크 및 스토리지 구성 요소와 함께 필요한 가상 머신을 프로비저닝합니다. 그런 다음, 해당 VM에 배치하려는 모든 소프트웨어 및 애플리케이션을 배포합니다. 이 모델은 Microsoft에서 인프라를 관리한다는 점을 제외하고는 기존 온-프레미스 환경과 가장 가깝습니다. 운영 체제, 사용자 지정 소프트웨어 및 보안 업데이트를 포함하여 개별 VM을 여전히 관리합니다.
-
-* **PaaS(Platform as a Service)** : PaaS는 VM 또는 네트워킹 리소스를 관리할 필요 없이 애플리케이션을 배포할 수 있는 관리되는 호스팅 환경을 제공합니다. 예를 들어, 개별 VM을 만드는 대신, 인스턴스 수를 지정하기만 하면 서비스가 필요한 리소스를 프로비저닝, 구성 및 관리합니다. Azure App Service는 PaaS 서비스의 예제입니다.
-  
-* **FaaS(Functions as a Service)** : 일반적으로 서버리스 컴퓨팅이라고 불리는 FaaS는 PaaS보다 호스팅 환경에 대한 관심을 추상화합니다. 컴퓨팅 인스턴스를 만들고 해당 인스턴스에 코드를 배포하는 대신, 사용자가 코드를 배포하면 서비스가 코드를 자동으로 실행합니다. 컴퓨팅 리소스를 관리할 필요가 없습니다. 플랫폼은 트래픽을 처리하는 데 필요한 수준까지 코드를 원활하게 확장하거나 축소할 수 있으며 코드가 실행 중일 때만 비용을 지불합니다. Azure Function은 FaaS 서비스입니다.
-
-일반적으로 애플리케이션이 FaaS 및 PaaS 모델을 선호할수록 클라우드에서 실행하면 더 많은 이점을 얻을 수 있습니다. 다음은 Azure 내에서 선택하는 일반적인 세 가지 호스팅 옵션의 요약 및 선택 기준입니다.
-
-* [Azure App Service](/azure/app-service/app-service-value-prop-what-is): 웹 애플리케이션 또는 서비스를 호스트하려는 경우 우선 App Service를 고려합니다. App Service 및 ASP.NET, WCF 및 ASP.NET Core 앱을 시작하려면 [Azure 에서 ASP.NET Core 웹 앱 만들기](/azure/app-service/app-service-web-get-started-dotnet)를 참조합니다.
-
-* [Azure Functions](/azure/azure-functions/functions-overview): Azure Functions는 이벤트 구동 워크플로에 적합합니다. 웹 후크에 대한 응답, 큐 또는 Blob Storage의 항목 처리, 타이머 등의 예가 있습니다. Azure Functions를 사용하려면 [Visual Studio를 사용하여 첫 번째 함수 만들기](/azure/azure-functions/functions-create-your-first-function-visual-studio)를 참조합니다.
-
-* [Azure Virtual Machines](/azure/virtual-machines/): App Service가 특정 종속성으로 인해 기존 애플리케이션을 호스팅해야 하는 필요성을 충족시키지 못하는 경우, 가상 머신이 가장 쉽게 시작할 수 있는 곳입니다. 가상 머신과 ASP.NET 또는 WCF를 시작하려면 [Azure 가상 머신에 ASP.NET 앱 배포](https://tutorials.visualstudio.com/aspnet-vm/intro)를 참조하십시오.
-
-> [!TIP]
-> 서비스 선택에 대한 자세한 내용은 [애플리케이션에 대한 Azure 컴퓨팅 서비스 선택](/azure/architecture/guide/technology-choices/compute-decision-tree)을 참조하세요.
-
-## <a name="choose-a-data-storage-service"></a>데이터 스토리지 서비스 선택
-
-Azure는 필요에 따라 데이터를 저장하기 위한 몇 가지 서비스를 제공합니다. .NET 개발자를 위한 가장 일반적인 데이터 서비스는 다음과 같습니다.
-
-* [Azure SQL Database](/azure/sql-database/): 이미 SQL Server를 사용하는 애플리케이션을 클라우드로 마이그레이션하려는 경우 Azure SQL Database를 자연스럽게 시작할 수 있습니다. 시작하려면 [자습서: SQL Database가 포함된 Azure에서 ASP.NET 앱 빌드](/azure/app-service/app-service-web-tutorial-dotnet-sqldatabase)를 참조하세요.
-
-* [Azure Cosmos DB](/azure/cosmos-db/): Azure Cosmos DB는 클라우드를 위해 설계된 최신 데이터베이스입니다. 아직 특정 데이터베이스 종속성이 없는 새 애플리케이션을 시작할 때는 Azure Cosmos DB를 고려해 보세요. Cosmos DB는 자동 크기 조정, 예측 가능한 성능, 빠른 응답 시간, 스키마 제약 없는 데이터에 대한 쿼리 기능 등이 중요한 경우 새로운 웹, 모바일, 게임 및 IoT 애플리케이션에 적합한 솔루션입니다. 시작하려면 [빠른 시작: SQL API 및 Azure Portal을 사용하여 Azure Cosmos DB가 포함된 .NET 웹앱 빌드](/azure/cosmos-db/create-sql-api-dotnet).
-
-* [Azure Blob Storage](/azure/storage/): Azure Blob Storage는 이미지, 파일 및 스트림 같은 큰 이진 개체를 저장하고 검색하는 데 최적화되었습니다. 개체 저장소를 사용하면 매우 많은 양의 구조화되지 않은 데이터를 관리할 수 있습니다. 시작하려면 [빠른 시작: .NET을 사용하여 개체 저장소에서 BLOB 만들기](/azure/storage/blobs/storage-quickstart-blobs-dotnet)를 참조하세요.
-
-> [!TIP]
-> 자세한 내용은 [올바른 데이터 저장소 선택](/azure/architecture/guide/technology-choices/data-store-overview)을 참조하세요.
-
-## <a name="connect-to-azure-services"></a>Azure 서비스에 연결
-
-Visual Studio를 사용한다면 프로젝트에 특정 Azure 서비스에 대한 지원을 추가할 수 있습니다. Visual Studio의 **연결된 서비스** 대화에서 프로젝트에 필요한 참조, 연결 코드 및 구성 설정을 쉽게 추가하는 방법을 제공합니다. 다음과 같은 일부 자주 사용되는 Azure 서비스는 기본적으로 지원됩니다. [Storage](/azure/vs-azure-tools-connected-services-storage), [Azure Active Directory](/azure/active-directory/develop/vs-active-directory-add-connected-service) 인증, [Azure Key Vault](/azure/key-vault/vs-key-vault-add-connected-service) 및 [Computer Vision](/azure/cognitive-services/computer-vision/vs-computer-vision-connected-service)과 같은 [Cognitive Services](/azure/cognitive-services/) 타사 서비스를 비롯한 더 많은 서비스는 [Visual Studio Marketplace](https://marketplace.visualstudio.com/search?term=connected%20service&target=VS&category=Tools&vsVersion=&subCategory=All&sortBy=Relevance)에서 확장으로 이용할 수 있습니다.
-
-## <a name="using-the-azure-sdk-for-net"></a>.NET용 Azure SDK 사용
-
-.NET용 Azure SDK를 사용하여 Azure 리소스에 액세스하거나 해당 리소스를 관리하는 경우 다음에 유의하세요.
-
-* **인증**: SDK의 많은 라이브러리는 일반적인 인증 인프라를 사용하지만, 일부 라이브러리는 사용 중인 서비스에 관련된 인증 메커니즘을 사용합니다. 자세한 내용은 [.NET용 Azure SDK를 사용하여 인증](authentication.md)을 참조하세요.
-* **로깅**: 지원되는 경우 클라이언트 라이브러리에는 클라이언트 라이브러리 작업을 기록하는 기능이 포함됩니다. 자세한 내용은 [.NET용 Azure SDK를 사용하여 로깅](logging.md)을 참조하세요.
-* **REST API**: .NET용 Azure SDK는 [Azure REST API](/rest/api/azure/)에서 빌드된 추상화입니다. 원하는 경우 Azure REST API를 .NET용 Azure SDK와 함께 사용하거나 이 대신 사용할 수 있습니다.
-
-## <a name="diagnosing-problems-in-the-cloud"></a>클라우드에서 문제 진단
-
-애플리케이션을 Azure에 배포하면, 개발 중에 작동하지만 Azure에서는 실행되지 않는 경우가 있을 수 있습니다. 다음과 같은 문제 진단 시작에 적절한 두 지점이 있습니다.
-
-* **Visual Studio에서의 원격 디버그**: 대부분의 Azure 컴퓨팅 서비스(이 문서에서 설명하는 서비스 포함)는 Visual Studio로 원격 디버깅 및 로그 수집을 지원합니다. 애플리케이션에서 Visual Studio의 기능을 탐색하려면 Visual Studio의 빠른 실행 도구 모음(오른쪽 위 모서리에 있음)에 '클라우드 탐색기'를 입력하여 클라우드 탐색기 도구 창을 연 다음 트리에서 애플리케이션을 찾습니다. 자세한 내용은 [Visual Studio를 사용하여 Azure App Service에서 웹앱 문제 해결](/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio#remotedebug)을 참조합니다.
-
-* **Application Insights**: [Application Insights](/azure/application-insights/)는 애플리케이션의 진단 데이터, 원격 분석 및 성능 데이터를 자동으로 캡처하는 완벽한 APM(애플리케이션 성능 모니터링) 솔루션입니다. 앱에 대한 진단 데이터 수집을 시작 하려면 [ASP.NET 웹 애플리케이션 모니터링 시작](/azure/application-insights/quick-monitor-portal)을 참조합니다.
+![.NET 애플리케이션에서 Azure SDK를 사용하여 Azure 서비스에 액세스하는 방법을 보여 주는 다이어그램](./media/azure-sdk-for-dotnet-overview.png)
 
 ## <a name="next-steps"></a>다음 단계
 
-* [Azure에 ASP.NET Core 첫 웹앱 배포](/azure/app-service/app-service-web-get-started-dotnet)
-* [.NET용 Azure SDK의 인증에 대한 자세한 정보](authentication.md)
-* [클라우드 앱에서 오류를 진단합니다.](https://devblogs.microsoft.com/aspnet/diagnosing-errors-on-your-cloud-apps/)
-* [.NET 개발자용 Azure 빠른 시작 가이드](https://www.microsoft.com/net/download/thank-you/azure-quick-start-ebook) 무료 eBook 다운로드
+다음으로 .NET 개발을 위해 [일반적으로 사용되는 Azure 서비스](./key-azure-services.md)에 대해 알아봅니다.

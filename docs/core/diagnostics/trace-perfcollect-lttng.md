@@ -3,12 +3,12 @@ title: PerfCollect를 사용하여 .NET 애플리케이션 추적
 description: .NET에서 perfcollect를 사용하여 추적을 수집하는 과정을 안내하는 자습서입니다.
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 376c957833924a9991e574557671ea3c8503d7c2
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 53e4584953d2af4e766daadfa757cca752ae7329
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507243"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593222"
 ---
 # <a name="trace-net-applications-with-perfcollect"></a>PerfCollect를 사용하여 .NET 애플리케이션 추적
 
@@ -250,3 +250,31 @@ export COMPlus_ZapDisable=1
 ## <a name="collect-in-a-docker-container"></a>Docker 컨테이너에서 수집
 
 컨테이너 환경에서 `perfcollect`를 사용하는 방법에 대한 자세한 내용은 [컨테이너에서 진단 수집](./diagnostics-in-containers.md)을 참조하세요.
+
+## <a name="learn-more-about-collection-options"></a>수집 옵션에 대한 자세한 정보
+
+진단 요구 사항에 맞게 `perfcollect`를 사용하여 다음의 선택적 플래그를 지정할 수 있습니다.
+
+### <a name="collect-for-a-specific-duration"></a>특정 기간에 수집
+
+특정 기간에 추적을 수집하려면 `-collectsec` 옵션 다음에 추적을 수집할 총 시간(초)을 지정할 수 있습니다.
+
+### <a name="collect-threadtime-traces"></a>threadtime 추적 수집
+
+`-threadtime`을 `perfcollect`와 함께 지정하면 스레드별 CPU 사용량 현황 데이터를 수집할 수 있습니다. 이렇게 하면 모든 스레드에서 CPU 시간을 소비한 위치를 분석할 수 있습니다.
+
+### <a name="collect-traces-for-managed-memory-and-garbage-collector-performance"></a>관리되는 메모리 및 가비지 수집기 성능에 대한 추적 수집
+
+다음 옵션을 사용하면 런타임에서 GC 이벤트를 지정하여 수집할 수 있습니다.
+
+* `perfcollect collect -gccollectonly`
+
+최소한의 GC 수집 이벤트 세트만 수집합니다. 가장 낮은 표시 수준의 GC 이벤트 수집 프로필이므로 대상 앱의 성능에 미치는 영향이 가장 적습니다. 이 명령은 PerfView의 `PerfView.exe /GCCollectOnly collect` 명령과 유사합니다.
+
+* `perfcollect collect -gconly`
+
+JIT, 로더, 예외 이벤트를 사용하여 더 높은 표시 수준의 GC 수집 이벤트를 수집합니다. 표시 수준이 더 높은 이벤트(예: 할당 정보 및 GC 조인 정보)가 필요하므로 `-gccollectonly` 옵션보다 대상 앱의 성능에 미치는 영향이 큽니다. 이 명령은 PerfView의 `PerfView.exe /GCOnly collect` 명령과 유사합니다.
+
+* `perfcollect collect -gcwithheap`
+
+힙 유지 및 이동도 추적하는 가장 높은 표시 수준의 GC 수집 이벤트를 수집합니다. 따라서 GC 동작을 심층 분석할 수 있지만 각 GC가 2배 이상 오래 걸릴 수 있기 때문에 성능 비용이 높아집니다. 프로덕션 환경에서 추적할 경우에는 이 추적 옵션 사용에 따른 성능 영향을 이해하는 것이 좋습니다.

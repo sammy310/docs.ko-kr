@@ -4,12 +4,12 @@ description: 다양한 종류의 앱을 빌드하기 위한 무료 오픈 소스
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1fd452ac9b7740c428e92cc6a510bab5f4d2d7d0
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 0adc348c1fc340fe481d9987cdbe28c6cf8b065d
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687519"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938678"
 ---
 # <a name="introduction-to-net"></a>.NET 소개
 
@@ -144,6 +144,13 @@ SDK 다운로드에는 다음 구성 요소가 포함되어 있습니다.
 * [런타임 라이브러리](#runtime-libraries). 기본 데이터 형식과 기본 유틸리티를 제공합니다.
 * ASP.NET Core 런타임. 웹앱, IoT 앱, 모바일 백 엔드 등의 인터넷 연결 앱에 대한 기본 서비스를 제공합니다.
 * 데스크톱 런타임. Windows Forms, WPF 등의 Windows 데스크톱 앱에 대한 기본 서비스를 제공합니다.
+
+런타임 다운로드에는 다음 구성 요소가 포함되어 있습니다.
+
+* 필요한 경우 데스크톱 또는 ASP.NET Core 런타임
+* [.NET 런타임](#clr). 형식 시스템, 어셈블리 로드, 가비지 수집기, 네이티브 interop, 기타 기본 서비스를 제공합니다.
+* [런타임 라이브러리](#runtime-libraries). 기본 데이터 형식과 기본 유틸리티를 제공합니다.
+* `dotnet` [드라이버](tools/index.md#driver). 프레임워크 종속 앱을 실행하는 CLI 명령입니다.
 
 자세한 내용은 다음 자료를 참조하세요.
 
