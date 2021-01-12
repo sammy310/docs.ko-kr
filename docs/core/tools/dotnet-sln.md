@@ -2,12 +2,12 @@
 title: dotnet sln 명령
 description: dotnet-sln 명령은 솔루션 파일의 프로젝트를 추가, 제거 및 나열하는 간편한 옵션을 제공합니다.
 ms.date: 12/07/2020
-ms.openlocfilehash: 480634550f6fa1983bb46f51b439dc8a686ead3c
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: af502efe842e9c9610137738d86c05e00a3b37df
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851702"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633652"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -104,7 +104,7 @@ dotnet sln add [-h|--help]
 
 - **`-s|--solution-folder <PATH>`**
 
-  프로젝트를 추가하려는 대상 솔루션 폴더 경로입니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
+  프로젝트를 추가하려는 대상 [솔루션 폴더](/visualstudio/ide/solutions-and-projects-in-visual-studio#solution-folder) 경로입니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
 ### `remove`
 
