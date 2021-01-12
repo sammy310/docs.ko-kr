@@ -3,19 +3,19 @@ title: MSBuild에서 매니페스트 파일 이름을 생성하는 방법
 description: 컴파일 시간에 MSBuild에서 생성되는 리소스 매니페스트 파일 이름에 영향을 주는 요소를 설명합니다.
 ms.date: 05/08/2020
 ms.topic: conceptual
-ms.openlocfilehash: 383bf6a077b0631e70ddaa4721b20e992127a73c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2e0461e34bbd7f8da35bea1db1913a32915c7117
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "97866386"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970683"
 ---
 # <a name="how-resource-manifest-files-are-named"></a>리소스 매니페스트 파일의 이름을 지정하는 방법
 
 MSBuild에서 .NET Core 프로젝트를 컴파일할 때 파일 확장명이 *.resx* 인 XML 리소스 파일이 이진 *.resources* 파일로 변환됩니다. 해당 이진 파일은 컴파일러의 출력에 포함되며 <xref:System.Resources.ResourceManager>에서 읽을 수 있습니다. 이 문서에서는 MSBuild에서 각 *.resources* 파일의 이름을 선택하는 방법을 설명합니다.
 
 > [!TIP]
-> 프로젝트 파일에 리소스 항목을 명시적으로 추가하고 해당 항목이 [.NET Core용 기본 포함 GLOB에도 포함](../project-sdk/overview.md#default-compilation-includes)되는 경우 빌드 오류가 발생합니다. 수동으로 리소스 파일을 `EmbeddedResource` 항목으로 포함하려면 `EnableDefaultEmbeddedResourceItems` 속성을 false로 설정합니다.
+> 프로젝트 파일에 리소스 항목을 명시적으로 추가하고 해당 항목이 [.NET Core용 기본 포함 GLOB에도 포함](../project-sdk/overview.md#default-includes-and-excludes)되는 경우 빌드 오류가 발생합니다. 수동으로 리소스 파일을 `EmbeddedResource` 항목으로 포함하려면 `EnableDefaultEmbeddedResourceItems` 속성을 false로 설정합니다.
 
 ## <a name="default-name"></a>기본 이름
 
