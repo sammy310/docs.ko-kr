@@ -3,12 +3,12 @@ title: project.json 및 csproj 비교
 description: project.json 및 csproj e요소 간 매핑을 참조하세요.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c8638bc30ba09d8e8d464159aded60dcde4b8dc0
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: 7de9f623a57a6a094debd3e018edc1560d837fc2
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87427023"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970878"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 및 csproj 속성 간 매핑
 
@@ -16,7 +16,7 @@ ms.locfileid: "87427023"
 
 .NET Core 도구 개발 중 중요한 디자인 변경으로 인해 *project.json* 파일이 더 이상 지원되지 않으며 대신 .NET Core 프로젝트를 MSBuild/csproj 형식으로 전환합니다.
 
-이 문서에서는 프로젝트를 최신 버전의 도구로 업그레이드할 때, 새 형식을 사용하는 방법을 배우고 마이그레이션 도구에서 수행한 변경 내용을 이해할 수 있도록 *project.json*의 설정이 MSBuild/csproj 형식으로 표시되는 방법을 보여 줍니다.
+이 문서에서는 프로젝트를 최신 버전의 도구로 업그레이드할 때, 새 형식을 사용하는 방법을 배우고 마이그레이션 도구에서 수행한 변경 내용을 이해할 수 있도록 *project.json* 의 설정이 MSBuild/csproj 형식으로 표시되는 방법을 보여 줍니다.
 
 ## <a name="the-csproj-format"></a>csproj 형식
 
@@ -144,7 +144,7 @@ And it's really great!</Description>
 ## <a name="dependencies"></a>종속성
 
 > [!IMPORTANT]
-> 종속성이 **프로젝트**이고 패키지가 아닌 경우 형식이 다릅니다.
+> 종속성이 **프로젝트** 이고 패키지가 아닌 경우 형식이 다릅니다.
 > 자세한 내용은 [종속성 유형](#dependency-type) 섹션을 참조하세요.
 
 ### <a name="netstandardlibrary-metapackage"></a>NETStandard.Library metapackage
@@ -333,7 +333,7 @@ csproj에는 동일한 항목이 없습니다.
 ### <a name="standalone-apps-self-contained-deployment"></a>독립 실행형 앱(자체 포함 배포)
 
 project.json에서 `runtimes` 섹션 정의는 앱이 빌드 및 게시 중 독립 실행형이었음을 의미합니다.
-MSBuild에서 모든 프로젝트는 빌드 중 *이식 가능*하지만 독립 실행형으로 게시할 수 있습니다.
+MSBuild에서 모든 프로젝트는 빌드 중 *이식 가능* 하지만 독립 실행형으로 게시할 수 있습니다.
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
@@ -527,7 +527,7 @@ MSBuild에서 해당하는 요소는 [targets](/visualstudio/msbuild/msbuild-tar
 }
 ```
 
-`System.GC.Server` 속성을 제외하고, 이 그룹의 모든 설정은 마이그레이션 프로세스 중 루트 개체에 적용된 옵션과 함께 프로젝트 폴더에서 *runtimeconfig.template.json*이라는 파일에 적용됩니다.
+`System.GC.Server` 속성을 제외하고, 이 그룹의 모든 설정은 마이그레이션 프로세스 중 루트 개체에 적용된 옵션과 함께 프로젝트 폴더에서 *runtimeconfig.template.json* 이라는 파일에 적용됩니다.
 
 ```json
 {
@@ -573,7 +573,7 @@ csproj에서 지원되지 않습니다. 대신 *.nuspec* 파일에 콘텐츠 파
 
 ## <a name="files"></a>파일
 
-*project.json*에서 빌드 및 팩을 확장하여 컴파일하고 다른 폴더에서 포함할 수 있습니다.
+*project.json* 에서 빌드 및 팩을 확장하여 컴파일하고 다른 폴더에서 포함할 수 있습니다.
 MSBuild에서는 [항목](/visualstudio/msbuild/common-msbuild-project-items)을 사용하여 수행합니다. 다음 예제는 일반적인 변환입니다.
 
 ```json
@@ -620,7 +620,7 @@ MSBuild에서는 [항목](/visualstudio/msbuild/common-msbuild-project-items)을
 ```
 
 > [!NOTE]
-> 많은 기본 [와일드카드 사용 패턴](https://en.wikipedia.org/wiki/Glob_(programming))이 .NET Core SDK에 의해 자동으로 추가됩니다. 자세한 내용은 [기본 컴파일 포함](../project-sdk/overview.md#default-compilation-includes)을 참조하세요.
+> 많은 기본 [와일드카드 사용 패턴](https://en.wikipedia.org/wiki/Glob_(programming))이 .NET Core SDK에 의해 자동으로 추가됩니다. 자세한 내용은 [기본 컴파일 포함](../project-sdk/overview.md#default-includes-and-excludes)을 참조하세요.
 
 모든 MSBuild `ItemGroup` 요소는 `Include`, `Exclude` 및 `Remove`를 지원합니다.
 
