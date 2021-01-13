@@ -1,18 +1,18 @@
 ---
 title: .NET Core를 사용하여 REST 클라이언트 만들기
-description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다.
+description: 이 자습서에서는 .NET Core 및 C# 언어의 몇 가지 기능을 설명합니다.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: b537108bd77b3ed2248ca9e459044e09fa854ba9
-ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
+ms.openlocfilehash: a8490efbc954ca585a2a0fa9d571191095a4b24c
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97899654"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98024979"
 ---
 # <a name="rest-client"></a>REST 클라이언트
 
-이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다. 다음을 배울 수 있습니다.
+이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다. 다음에 대해 알아봅니다.
 
 * .NET Core CLI의 기본 사항
 * C# 언어 기능의 개요
@@ -25,11 +25,11 @@ GitHub에서 REST 서비스에 HTTP 요청을 실행하는 애플리케이션을
 
 이 자습서에는 많은 기능이 있습니다. 하나씩 빌드해 보겠습니다.
 
-이 항목에 대한 [최종 샘플](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)을 따르려는 경우 해당 샘플을 다운로드할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#view-and-download-samples)를 참조하세요.
+이 문서의 [최종 샘플](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)을 따르려는 경우 해당 샘플을 다운로드할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#view-and-download-samples)를 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-.NET Core를 실행하려면 컴퓨터에 설정해야 합니다. [.NET Core 다운로드](https://dotnet.microsoft.com/download) 페이지에서 설치 지침을 찾을 수 있습니다. Windows, Linux, macOS 또는 Docker 컨테이너에서 이 애플리케이션을 실행할 수 있습니다.
+.NET Core를 실행하려면 머신을 설정해야 합니다. [.NET Core 다운로드](https://dotnet.microsoft.com/download) 페이지에서 설치 지침을 찾을 수 있습니다. Windows, Linux, macOS에서나 Docker 컨테이너에서 이 애플리케이션을 실행할 수 있습니다.
 선호하는 코드 편집기를 설치해야 합니다. 아래 설명에서는 오픈 소스 플랫폼 간 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용합니다. 그러나 익숙한 어떤 도구도 사용 가능합니다.
 
 ## <a name="create-the-application"></a>애플리케이션 만들기
@@ -129,7 +129,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-이 첫 번째 버전은 dotnet foundation 조직의 모든 리포지토리 목록을 읽으라는 웹 요청을 수행합니다. (.NET Foundation의 gitHub ID는 'dotnet'임) 첫 몇 줄은 이 요청에 대해 <xref:System.Net.Http.HttpClient>를 설정합니다. 먼저 GitHub JSON 응답을 수락하도록 구성됩니다.
+이 첫 번째 버전은 dotnet foundation 조직의 모든 리포지토리 목록을 읽으라는 웹 요청을 수행합니다. (.NET Foundation의 GitHub ID는 `dotnet`임) 첫 몇 줄은 이 요청에 대해 <xref:System.Net.Http.HttpClient>를 설정합니다. 먼저 GitHub JSON 응답을 수락하도록 구성됩니다.
 이 형식은 단순히 JSON입니다. 다음 줄은 이 개체의 모든 요청에 사용자 에이전트 헤더를 추가합니다. 이러한 두 가지 헤더는 GitHub 서버 코드에서 확인되며 GitHub에서 정보를 검색하는 데 필요합니다.
 
 <xref:System.Net.Http.HttpClient> 를 구성한 후에는 웹 요청을 수행하고 응답을 검색합니다. 이 첫 번째 버전에서는 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> 편의 메서드를 사용합니다. 이 편의 메서드는 웹 요청을 수행하는 작업을 시작한 다음, 요청이 반환될 때 응답 스트림을 읽고 해당 스트림에서 콘텐츠를 추출합니다. 응답의 본문은 <xref:System.String> 으로 반환됩니다. 작업이 완료되면 이 문자열을 사용할 수 있습니다.

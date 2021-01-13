@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.custom: devx-track-dotnet
 ms.author: daberry
 author: daberry
-ms.openlocfilehash: 43737aaf5dfd02b8c4ffa6c213d7221cfe38162f
-ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
+ms.openlocfilehash: aa2739cc6c11145887e64921398c72affeaec729
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97700973"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025031"
 ---
 # <a name="install-the-azure-cli"></a>Azure CLI 설치
 
@@ -35,3 +35,7 @@ Azure CLI는 Windows, macOS, Linux에서 사용할 수 있습니다.
 [https://shell.azure.com](https://shell.azure.com)의 Azure Cloud Shell에서 Azure CLI를 사용할 수도 있습니다.  Azure Cloud Shell은 Azure 리소스를 관리하기 위한 모든 기능을 갖춘 브라우저 기반 셸입니다.  Azure Cloud Shell은 명령줄 환경이 필요하지만 Azure CLI를 설치할 수 없는 디바이스를 사용 중인 경우에 유용합니다.
 
 ![브라우저에서 실행하는 Azure Cloud Shell의 스크린샷](media/azure-cloud-shell.png)
+
+### <a name="next-steps"></a>다음 단계
+
+다음으로, Azure로 생산성을 높이기 위해 Azure Storage Explorer, Azure Data Studio와 같은 [추가 Azure 도구를 설치](./azure-tools.md)합니다.
