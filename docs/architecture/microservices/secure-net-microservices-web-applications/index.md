@@ -2,13 +2,13 @@
 title: .NET 마이크로 서비스 및 웹 애플리케이션 보안
 description: .NET 마이크로 서비스 및 웹 애플리케이션 보안 - ASP.NET Core 웹 애플리케이션의 인증 옵션을 살펴봅니다.
 author: mjrousos
-ms.date: 08/07/2020
-ms.openlocfilehash: 01797189ce946c39bc7b8cafdff1e69ff9760e4e
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.date: 01/13/2021
+ms.openlocfilehash: 1bb03e8abdf6daa0b6c4570eb35643898f797cc0
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160674"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188052"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>.NET 마이크로 서비스 및 웹 애플리케이션 보안
 

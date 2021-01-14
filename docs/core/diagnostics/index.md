@@ -3,12 +3,12 @@ title: 진단 도구 개요 - .NET Core
 description: .NET Core 애플리케이션을 진단하는 데 사용할 수 있는 도구 및 기술에 대한 개요입니다.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: d468ec5b9cc050cc54f6c53f8a4ea4531f8b58f5
-ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
+ms.openlocfilehash: ee79057e45700e17fdd37cc36288b790d64d7a09
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753616"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188480"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core에서 사용할 수 있는 진단 도구는 무엇인가요?
 
@@ -68,7 +68,7 @@ ms.locfileid: "97753616"
 
 ### <a name="dotnet-sos"></a>dotnet-sos
 
-[dotnet-sos](dotnet-sos.md)는 Linux 및 macOS(그리고 [Windbg/cdb](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools)를 사용하는 경우 Windows에)에 [SOS 디버깅 확장](sos-debugging-extension.md)을 설치합니다.
+[dotnet-sos](dotnet-sos.md)는 Linux 및 macOS(그리고 [Windbg/cdb](/windows-hardware/drivers/debugger/debugger-download-tools)를 사용하는 경우 Windows에)에 [SOS 디버깅 확장](sos-debugging-extension.md)을 설치합니다.
 
 ### <a name="perfcollect"></a>PerfCollect
 

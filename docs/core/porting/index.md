@@ -3,12 +3,12 @@ title: .NET Framework에서 .NET Core로 이식
 description: 이식 프로세스를 이해하고 .NET Framework 프로젝트를 .NET Core로 이식할 때 유용한 도구에 관해 알아보세요.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 764c615d250474573f873b1745b9f1469e637d29
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 247e709ac6898a6a89318626e3aa9a2a8e239a9a
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687414"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189937"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework에서 .NET Core로의 이식 개요
 
@@ -53,7 +53,7 @@ ms.locfileid: "94687414"
 
 1. 프로젝트 파일을 새로운 SDK 스타일 파일 구조체로 변환합니다. .NET Core를 위한 새 프로젝트를 만들고 소스 파일을 복사하거나 도구를 사용하여 기존 프로젝트 파일의 변환을 시도할 수 있습니다.
 
-   .NET Core는 .NET Framework와 다른 단순화된 [프로젝트 파일 형식](../tools/csproj.md)을 사용합니다. 계속하려면 프로젝트 파일을 이 형식으로 변환해야 합니다. 이 프로젝트 스타일에서는 이 시점에서 아직 대상으로 삼아야 하는 .NET Framework를 대상으로 지정할 수 있도록 지원합니다.
+   .NET Core는 .NET Framework와 다른 단순화된 [프로젝트 파일 형식](../project-sdk/overview.md)을 사용합니다. 계속하려면 프로젝트 파일을 이 형식으로 변환해야 합니다. 이 프로젝트 스타일에서는 이 시점에서 아직 대상으로 삼아야 하는 .NET Framework를 대상으로 지정할 수 있도록 지원합니다.
 
    [dotnet try-convert](https://github.com/dotnet/try-convert) 도구를 사용하여 한 번에 보다 작은 솔루션 또는 개별 프로젝트를 .NET Core 프로젝트 파일 형식으로 이식해 볼 수 있습니다. `dotnet try-convert`가 모든 프로젝트에서 작동한다는 보장은 없으며, 종속성의 대상이 되는 동작이 미묘하게 변경될 수도 있습니다. 이 도구는 자동화가 가능한 기본 항목들을 자동화하기 위한 _‘시작점’_ 으로 사용됩니다. 기존 스타일의 프로젝트 파일에 비해 SDK 스타일 프로젝트에서 사용하는 대상에는 여러 가지 차이점이 있으므로 이것은 프로젝트 마이그레이션을 위해 보장되는 솔루션은 아닙니다.
 

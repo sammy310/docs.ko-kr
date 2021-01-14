@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: c347dbc6af46d4c334445d606d7cedfdf17e43f6
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 6a1a5b230e427a4991162a702245f1a87352784d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098712"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190249"
 ---
 # <a name="types-c-programming-guide"></a>형식(C# 프로그래밍 가이드)
 
@@ -74,8 +74,6 @@ C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수
 - CTS의 각 형식은 *값 형식* 또는 *참조 형식* 으로 정의됩니다. 이러한 형식에는 .NET 클래스 라이브러리의 모든 사용자 지정 형식과 자체 사용자 정의 형식도 포함됩니다. [struct](../../language-reference/builtin-types/struct.md)를 사용하여 정의한 형식은 값 형식이고, 모든 기본 제공 숫자 형식은 `structs`입니다. [class](../../language-reference/keywords/class.md) 키워드를 사용하여 정의한 형식은 참조 형식입니다. 참조 형식과 값 형식의 컴파일 타임 규칙 및 런타임 동작은 서로 다릅니다.
 
 다음 그림에서는 CTS에서 값 형식과 참조 형식 간의 관계를 보여 줍니다.
-
-다음 이미지에서는 CTS의 값 형식과 참조 형식을 보여줍니다.
 
 ![CTS 값 형식 및 참조 형식을 보여주는 스크린샷](./media/index/value-reference-types-common-type-system.png)
 
