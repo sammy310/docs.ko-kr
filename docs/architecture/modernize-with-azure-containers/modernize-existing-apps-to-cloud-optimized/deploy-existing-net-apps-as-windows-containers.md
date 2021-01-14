@@ -1,13 +1,13 @@
 ---
 title: 기존 .NET 앱을 Windows 컨테이너로 배포
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 기존 .NET 앱을 Windows 컨테이너로 배포
-ms.date: 04/29/2018
-ms.openlocfilehash: 15e99e2ec0edd072a3d47d5c212ebbbf6705ecef
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.date: 12/21/2020
+ms.openlocfilehash: f3f164ca0578d5358f2c5365fd5a1d2e8e22d8c5
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738420"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025353"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>기존 .NET 앱을 Windows 컨테이너로 배포
 
@@ -29,7 +29,7 @@ Windows 컨테이너를 기반으로 하는 배포는 클라우드 최적화 애
 
 컨테이너(가벼운 빌딩 블록으로 정의할 수도 있음)를 사용하여 애플리케이션을 빌드하면 모든 인프라에서 애플리케이션을 빌드, 전달 및 실행하는 민첩성을 크게 향상시킵니다.
 
-컨테이너를 사용하면 Microsoft 개발자 도구, 운영 체제 및 클라우드 전반의 Docker 통합 덕분에 코드를 거의 또는 전혀 변경하지 않고 앱을 개발 환경에서 프로덕션 환경으로 보낼 수 있습니다.
+컨테이너를 사용하면 Microsoft 개발자 도구, 운영 체제, 클라우드 전반의 Docker 통합 덕분에 코드를 거의 또는 전혀 변경하지 않고 앱을 개발 환경에서 프로덕션 환경으로 보낼 수 있습니다.
 
 일반 VM에 배포하는 경우 ASP.NET 앱을 VM에 배포하는 방법은 이미 마련되어 있을 것입니다. 그러나 이러한 방법은 아마도 Puppet과 같은 배포 도구 또는 유사한 도구를 사용하여 여러 수동 단계 또는 복잡한 자동화된 프로세스를 거쳐야 합니다. 구성 항목 수정, 서버 간 애플리케이션 콘텐츠 복사, .msi 설정에 따른 대화형 설치 프로그램 실행, 후속 테스트와 같은 작업을 수행해야 할 것입니다. 이러한 모든 단계는 배포에 시간 및 위험을 추가합니다. 대상 환경에 종속성이 없을 때마다 오류가 발생합니다.
 
@@ -65,11 +65,11 @@ Docker 컨테이너(간단히 *컨테이너*)는 Linux 및 Windows에서 기본�
 
 Windows 컨테이너를 사용하는 이점은 일반적으로 컨테이너에서 얻을 수 있는 그것과 기본적으로 동일합니다. Windows 컨테이너를 사용한다는 것은 민첩성, 이식성 및 제어를 크게 개선하는 것입니다.
 
-기존 .NET 애플리케이션은 .NET Framework를 사용하여 만든 애플리케이션을 참조합니다. 예를 들어 기존 ASP.NET 웹 애플리케이션일 수 있습니다. 즉, Linux, Windows 및 MacOS에서 플랫폼 간에 실행되는 최신 버전인 .NET Core를 사용하지 않습니다.
+기존 .NET 애플리케이션은 .NET Framework를 사용하여 만든 애플리케이션을 참조합니다. 예를 들어 기존 ASP.NET 웹 애플리케이션일 수 있습니다. 즉, Linux, Windows, MacOS에서 플랫폼 간에 실행되는 최신 버전인 .NET Core 또는 .NET 5.0을 사용하지 않습니다.
 
 .NET Framework의 주요 종속성은 Windows입니다. 또한 IIS, 그리고 기존 ASP.NET의 System.Web과 같은 보조 종속성도 있습니다.
 
-.NET Framework 애플리케이션은 Windows에서 실행되어야 합니다. 그뿐입니다. 기존 .NET Framework 애플리케이션을 컨테이너화기 원하지만 .NET Core로 마이그레이션하는 데 투자할 여력 또는 의사가 없는 경우("제대로 작동한다면 마이그레이션하지 마세요"), 컨테이너에 대한 유일한 선택은 Windows 컨테이너를 사용하는 것입니다.
+.NET Framework 애플리케이션은 Windows에서 실행되어야 합니다. 그뿐입니다. 기존 .NET Framework 애플리케이션을 컨테이너화하고자 하지만 .NET Core 이상으로 마이그레이션하는 데 투자할 여력 또는 의사가 없는 경우(“제대로 작동한다면 마이그레이션하지 마세요”), 컨테이너에 대한 유일한 선택은 Windows 컨테이너를 사용하는 것입니다.
 
 따라서 Windows 컨테이너의 주요 이점 중 하나는 컨테이너화를 통해 Windows에서 실행되는 기존 .NET Framework 애플리케이션을 현대화하는 방법을 제공한다는 것입니다. 궁극적으로 Windows 컨테이너는 컨테이너를 사용함으로써 추구하는 이점, 즉 민첩성, 이식성 및 향상된 제어를 선사합니다.
 
@@ -77,7 +77,7 @@ Windows 컨테이너를 사용하는 이점은 일반적으로 컨테이너에�
 
 Docker에서 지원하는 운영 체제의 다양함과 .NET Framework 및 .NET Core 간 차이를 고려해 보면 사용하는 프레임워크를 기반으로 특정 OS와 특정 버전을 목표로 해야 합니다.
 
-Windows의 경우 Windows Server Core 또는 Windows Nano Server를 사용할 수 있습니다. 이러한 Windows 버전은 .NET Framework 또는 .NET Core 애플리케이션에 필요할 수 있는 다양한 특성(예: IIS 또는 Kestrel과 같은 자체 호스팅 웹 서버)을 제공합니다.
+Windows의 경우 Windows Server Core 또는 Windows Nano Server를 사용할 수 있습니다. 이러한 Windows 버전은 .NET Framework 또는 .NET 애플리케이션에 필요할 수 있는 다양한 특성(예: IIS 또는 Kestrel과 같은 자체 호스팅 웹 서버)을 제공합니다.
 
 Linux의 경우 공식 .NET Docker 이미지(예: Debian)에서 여러 배포판을 제공합니다.
 
@@ -93,19 +93,19 @@ Linux의 경우 공식 .NET Docker 이미지(예: Debian)에서 여러 배포판
 
 > | **Tag** | **시스템 및 버전** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | Windows Server Core의 .NET Framework 4.x |
-> | **microsoft/aspnet:4.x-windowsservercore** | Windows Server Core의 .NET Framework 4.x(추가 ASP.NET 사용자 지정 포함) |
+> | **mcr.microsoft.com/dotnet/framework/runtime:4.x-windowsservercore-20H2** | Windows Server Core의 .NET Framework 4.x |
+> | **mcr.microsoft.com/dotnet/framework/aspnet:4.x-windowsservercore-20H2** | Windows Server Core의 .NET Framework 4.x(추가 ASP.NET 사용자 지정 포함) |
 
-.NET Core(Linux 및 Windows 플랫폼 간)의 경우 태그는 다음과 같습니다.
+.NET(Linux 및 Windows 플랫폼 간)의 경우 태그는 다음과 같습니다.
 
 > | **Tag** | **시스템 및 버전**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | Linux의 .NET Core 2.0 런타임 전용 |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | Windows Nano Server의 .NET Core 2.0 런타임 전용 |
+> | **mcr.microsoft.com/dotnet/runtime:5.0** | Linux의 .NET 런타임 전용 |
+> | **mcr.microsoft.com/dotnet/runtime:5.0-nanoserver-20H2** | Windows Nano Server의 .NET 런타임 전용 |
 
 ### <a name="multi-arch-images"></a>다중 아키텍처 이미지
 
-2017년 중반부터 [다중 아키텍처](https://github.com/moby/moby/issues/15866) 이미지라는 Docker의 새 기능도 사용할 수 있습니다. .NET Core Docker 이미지는 다중 아키텍처 태그를 사용할 수 있습니다. Dockerfile 파일은 더 이상 대상 운영 체제를 정의할 필요가 없습니다. 다중 아키텍처 기능을 사용하면 여러 컴퓨터 구성에서 단일 태그를 사용할 수 있습니다. 예를 들어 다중 아키텍처 기능을 사용하는 경우 하나의 공통 태그를 사용할 수 있습니다. **microsoft/dotnet:2.0.0-runtime**. Linux 컨테이너 환경에서 이 태그를 가져올 경우 Debian 기반 이미지를 얻습니다. Windows 컨테이너 환경에서 이 태그를 가져올 경우 Nano Server 기반 이미지를 얻습니다.
+2017년 중반부터 [다중 아키텍처](https://github.com/moby/moby/issues/15866) 이미지라는 Docker의 새 기능도 사용할 수 있습니다. .NET Docker 이미지는 다중 아키텍처 태그를 사용할 수 있습니다. Dockerfile 파일은 더 이상 대상 운영 체제를 정의할 필요가 없습니다. 다중 아키텍처 기능을 사용하면 여러 컴퓨터 구성에서 단일 태그를 사용할 수 있습니다. 예를 들어 다중 아키텍처 기능을 사용하는 경우 하나의 공통 태그를 사용할 수 있습니다(**mcr.microsoft.com/dotnet/runtime:5.0**). Linux 컨테이너 환경에서 이 태그를 가져올 경우 Debian 기반 이미지를 얻습니다. Windows 컨테이너 환경에서 이 태그를 가져올 경우 Nano Server 기반 이미지를 얻습니다.
 
 .NET Framework 이미지의 경우 기존 .NET Framework는 Windows만 지원하기 때문에 다중 아키텍처 기능을 사용할 수 없습니다.
 

@@ -3,17 +3,17 @@ title: Ubuntu에 .NET 설치 - .NET
 description: Ubuntu에 .NET SDK 및 .NET 런타임을 설치하는 다양한 방법을 보여 줍니다.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 22ce3379e028f065528e1f507a2d8c1ae598f0e8
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 01/06/2021
+ms.openlocfilehash: 14e5e9548d4aa09a586e2038f3e35a489ee65cd2
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031850"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970770"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-ubuntu"></a>Ubuntu에 .NET SDK 또는 .NET 런타임 설치
 
-.NET은 Ubuntu에서 지원됩니다. 이 문서에서는 Ubuntu에 .NET을 설치하는 방법을 설명합니다. Ubuntu 버전의 지원이 종료되면 해당 버전에서는 .NET도 더 이상 지원되지 않습니다. 그러나 이러한 지침은 지원되지 않더라도 해당 버전에서 .NET을 실행하는 데 도움이 될 수 있습니다.
+.NET은 Ubuntu에서 지원됩니다. 이 문서에서는 Ubuntu에 .NET을 설치하는 방법을 설명합니다. Ubuntu 버전의 지원이 종료되면 해당 버전에서는 .NET도 더 이상 지원되지 않습니다.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -50,14 +50,7 @@ ms.locfileid: "96031850"
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
-## <a name="how-to-install-other-versions"></a>다른 버전을 설치하는 방법
-
-[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
-
 ## <a name="2010-"></a>20.10 ✔️
-
-> [!IMPORTANT]
-> .NET Core 2.1은 패키지 피드에서 아직 사용할 수 없습니다.
 
 [!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
 
@@ -179,7 +172,11 @@ sudo dpkg -i packages-microsoft-prod.deb
 
 [!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
-## <a name="apt-update-sdk-or-runtime"></a>APT 업데이트 SDK 또는 런타임
+## <a name="how-to-install-other-versions"></a>다른 버전을 설치하는 방법
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="use-apt-to-update-net"></a>APT를 사용하여 .NET 업데이트
 
 .NET에 대한 새로운 패치 릴리스가 출시되면 다음 명령을 사용하여 APT를 통해 간단하게 업그레이드할 수 있습니다.
 
@@ -218,10 +215,6 @@ sudo apt-get update; \
 
 [!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]
 
-## <a name="snap"></a>Snap
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
-
 ## <a name="dependencies"></a>종속성
 
 패키지 관리자를 설치할 때 이러한 라이브러리가 설치됩니다. 그러나 .NET을 수동으로 설치하거나 자체 포함 앱을 게시할 경우 이러한 라이브러리가 설치되어 있는지 확인해야 합니다.
@@ -245,14 +238,7 @@ sudo apt-get update; \
   > [!WARNING]
   > 시스템에 Mono 리포지토리를 추가하여 최신 버전의 *libgdiplus* 를 설치할 수 있습니다. 자세한 내용은 <https://www.mono-project.com/download/stable/>를 참조하세요.
 
-## <a name="scripted-install"></a>스크립팅된 설치
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>수동 설치
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>다음 단계
 
+- [.NET CLI에 대해 탭 완성 기능을 사용하도록 설정하는 방법](../tools/enable-tab-autocomplete.md)
 - [자습서: Visual Studio Code를 사용하여 .NET SDK에서 콘솔 애플리케이션 만들기](../tutorials/with-visual-studio-code.md)

@@ -1,13 +1,13 @@
 ---
 title: 모놀리식 애플리케이션
 description: 모놀리식 애플리케이션 컨테이너화의 핵심 개념을 알아봅니다.
-ms.date: 08/06/2020
-ms.openlocfilehash: c9a5baf209a47f62f421a236c0b04fe5dae37e3a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/06/2021
+ms.openlocfilehash: a66c76c473c116b303975040d893348182b96713
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163546"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970540"
 ---
 # <a name="monolithic-applications"></a>모놀리식 애플리케이션
 
@@ -35,7 +35,7 @@ ms.locfileid: "91163546"
 
 **그림 4-2.** 여러 앱/컨테이너를 실행하는 호스트
 
-마지막으로, 가용성 관점에서 모놀리식 애플리케이션은 한 덩어리로 배포해야 합니다. 즉, *멈췄다가 시작*해야 하는 경우 모든 기능과 모든 사용자가 배포 기간 동안 영향을 받습니다. 특정 상황에서는 Azure 및 컨테이너를 사용하면 이러한 문제를 최소화할 수 있으며, 그림 4-3처럼 애플리케이션의 가동 중지 가능성을 줄일 수 있습니다.
+마지막으로, 가용성 관점에서 모놀리식 애플리케이션은 한 덩어리로 배포해야 합니다. 즉, *멈췄다가 시작* 해야 하는 경우 모든 기능과 모든 사용자가 배포 기간 동안 영향을 받습니다. 특정 상황에서는 Azure 및 컨테이너를 사용하면 이러한 문제를 최소화할 수 있으며, 그림 4-3처럼 애플리케이션의 가동 중지 가능성을 줄일 수 있습니다.
 
 각 인스턴스의 전용 VM을 사용하여 Azure에서 모놀리식 애플리케이션을 배포할 수 있습니다. [Azure VM Scale Sets](/azure/virtual-machine-scale-sets/)를 사용하면 VM 크기를 쉽게 조정할 수 있습니다.
 
@@ -69,7 +69,7 @@ Azure에 배포된 컨테이너의 유효성 검사를 신속하게 수행하기
 
 Azure App Service는 사용 방법이 직관적이어서 신속하게 작동할 수 있습니다. Git와 통합되므로 코드를 가져와서 Microsoft Visual Studio에서 빌드하고 Azure에 직접 배포할 수 있습니다. 하지만 기존에는(Docker 없이) App Services에서 지원되지 않는 다른 기능, 프레임워크 또는 종속성이 필요한 경우 Azure 팀이 App Service에서 해당 종속성을 업데이트할 때까지 기다리거나 Service Fabric, Cloud Services 또는 일반 VM처럼 완전히 제어할 수 있고 애플리케이션에 필요한 구성 요소 또는 프레임워크를 설치할 수 있는 다른 서비스로 전환해야 했습니다.
 
-이제 그림 4-4처럼 Visual Studio 2017을 사용할 때 Azure App Service에서 컨테이너를 지원하므로 앱 환경에 필요한 모든 것을 포함시킬 수 있습니다. 앱을 컨테이너에서 실행 중이어서 앱에 종속성을 추가한 경우 이러한 종속성을 Dockerfile 또는 Docker 이미지에 포함시킬 수 있습니다.
+이제 그림 4-4처럼 Visual Studio 2019를 사용할 때 Azure App Service에서 컨테이너를 지원하므로 앱 환경에 필요한 모든 것을 포함할 수 있습니다. 앱을 컨테이너에서 실행 중이어서 앱에 종속성을 추가한 경우 이러한 종속성을 Dockerfile 또는 Docker 이미지에 포함시킬 수 있습니다.
 
 ![Container Registry를 표시하는 App Service 만들기 대화 상자 스크린샷](./media/monolithic-applications/publish-azure-app-service-container.png)
 

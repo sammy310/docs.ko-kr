@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 11/20/2020
-ms.openlocfilehash: d91430eb654ee16934408bf064803b34ca700640
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.openlocfilehash: ba7113c88db728f30812821deaf7c06a80663d1f
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96509808"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189091"
 ---
 # <a name="project-structure-for-no-locblazor-apps"></a>앱에 대 한 프로젝트 구조 Blazor
 
@@ -93,7 +93,7 @@ Blazor 앱에는 `Startup` 응용 프로그램에 대 한 시작 논리를 정�
 
 ASP.NET Web Forms 프로젝트와 달리 프로젝트의 모든 파일을 Blazor 정적 파일로 요청할 수 있는 것은 아닙니다. *Wwwroot* 폴더의 파일만 웹 주소 지정할 수 있습니다. 이 폴더는 앱의 "웹 루트" 라고 합니다. 앱의 웹 루트 외부에 있는 모든 항목은 웹 주소 지정이 가능 *하지 않습니다* . 이 설치 프로그램은 웹을 통해 프로젝트 파일이 실수로 노출 되는 것을 방지 하는 추가 보안 수준을 제공 합니다.
 
-## <a name="configuration"></a>구성
+## <a name="configuration"></a>Configuration
 
 ASP.NET Web Forms apps의 구성은 일반적으로 하나 이상의 *web.config* 파일을 사용 하 여 처리 됩니다. Blazor 앱은 일반적으로 *web.config* 파일을 포함 하지 않습니다. 이 경우 IIS에서 호스팅되는 경우에만 파일이 IIS 관련 설정을 구성 하는 데 사용 됩니다. 대신, Blazor 서버 앱은 ASP.NET Core 구성 추상화를 사용 합니다 Blazor WebAssembly . 현재 앱은 동일한 구성 추상화를 지원 하지만 이후에 추가 된 기능 일 수 있습니다. 예를 들어 기본 Blazor 서버 앱은 *appsettings.js* 에 일부 설정을 저장 합니다.
 
@@ -132,7 +132,7 @@ ASP.NET Web Forms apps의 구성은 일반적으로 하나 이상의 *web.config
 @using BlazorApp1.Shared
 ```
 
-## <a name="pages"></a>페이지
+## <a name="pages"></a>Pages
 
 앱의 페이지는 어디에 Blazor 있나요? Blazor ASP.NET Web Forms apps의 *.aspx* 파일과 같이 주소 지정 가능한 페이지에 대 한 별도의 파일 확장명을 정의 하지 않습니다. 대신, 페이지는 구성 요소에 경로를 할당 하 여 정의 됩니다. 경로는 일반적으로 Razor 지시어를 사용 하 여 할당 됩니다 `@page` . 예를 들어 `Counter` *Pages/Counter. razor* 파일에서 작성 된 구성 요소는 다음 경로를 정의 합니다.
 
@@ -146,7 +146,7 @@ ASP.NET Web Forms apps의 구성은 일반적으로 하나 이상의 *web.config
 
 Blazor [페이지, 라우팅 및 레이아웃](./pages-routing-layouts.md) 섹션에서 라우팅하는 방법에 대해 더 자세히 살펴보겠습니다.
 
-## <a name="layout"></a>레이아웃
+## <a name="layout"></a>Layout
 
 ASP.NET Web Forms apps에서 일반 페이지 레이아웃은 마스터 *페이지 (site.master*)를 사용 하 여 처리 됩니다. Blazor앱에서 페이지 레이아웃은 레이아웃 구성 요소 (*공유/mainlayout. razor*)를 사용 하 여 처리 됩니다. 레이아웃 구성 요소는 [페이지, 라우팅 및 레이아웃](./pages-routing-layouts.md) 섹션에 자세히 설명 되어 있습니다.
 
@@ -223,7 +223,7 @@ Blazor서버 앱에서 루트 구성 요소의 호스트 페이지는 *_Host. cs
 
 ```
 
-렌더링할 루트 구성 요소는 `Program.Main` 종속성 주입을 통해 다양 한 서비스를 등록 하는 유연성을 사용 하 여 앱의 메서드에서 구성 됩니다. [ Blazor 에서 WebAssembly ](https://docs.microsoft.com/aspnet/core/blazor/fundamentals/dependency-injection?view=aspnetcore-5.0#blazor-webassembly) 앱에 서비스 추가를 참조할 수 있습니다.
+렌더링할 루트 구성 요소는 `Program.Main` 종속성 주입을 통해 서비스를 등록 하는 유연성과 함께 앱의 메서드에서 지정 됩니다. 자세한 내용은 [ASP.NET Core Blazor 종속성 주입](/aspnet/core/blazor/fundamentals/dependency-injection?pivots=webassembly)을 참조 하세요.
 
 ```csharp
 public class Program

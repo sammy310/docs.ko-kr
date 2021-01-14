@@ -1,13 +1,13 @@
 ---
 title: 관계형 데이터베이스를 Azure로 마이그레이션
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 관계형 데이터베이스를 Azure로 마이그레이션
-ms.date: 04/28/2018
-ms.openlocfilehash: efd1548c3f74fc27450f4949d71a1c4d61907ba5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 12/21/2020
+ms.openlocfilehash: c8dc92e1c5c5fb36a68bcad000c10e47c946ca0c
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73093622"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025383"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>관계형 데이터베이스를 Azure로 마이그레이션
 

@@ -1,13 +1,13 @@
 ---
 title: Docker 앱을 위한 개발 환경
 description: Docker 개발 수명 주기를 지원하는 가장 중요한 개발 도구 옵션을 알아봅니다.
-ms.date: 08/06/2020
-ms.openlocfilehash: 07b42b2bd05ab16ba0fbf61863b050ee2c9e242b
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/06/2021
+ms.openlocfilehash: c6c4a1fda41131c00ba87808ed408f1d3250cabf
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916027"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970527"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 앱을 위한 개발 환경
 
@@ -36,7 +36,7 @@ Docker 기반 애플리케이션을 개발할 때 [Mac용 Visual Studio](https:/
 
 Microsoft 도구를 사용하여 가장 최신 언어로 Docker 애플리케이션을 개발할 수 있습니다. 다음은 초기 목록이지만, 이 목록으로 제한되지는 않습니다.
 
-- .NET Core 및 ASP.NET Core
+- .NET 및 ASP.NET Core
 - Node.js
 - 이동
 - Java

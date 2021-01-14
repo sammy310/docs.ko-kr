@@ -1,13 +1,13 @@
 ---
 title: 클라우드를 위한 복원력 있는 서비스 빌드 클라우드의 일시적 오류 포용
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 클라우드를 위한 복원력 있는 서비스 빌드 클라우드의 일시적 오류 포용
-ms.date: 04/30/2018
-ms.openlocfilehash: 8e9f1eda71e4b98a56cbfc1c7a4ff34e67bee3f4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2020
+ms.openlocfilehash: 4d592a5761cdf696f3e57516d747cbd770512053
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172159"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025331"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>클라우드를 위한 탄력적인 서비스 빌드: 클라우드의 일시적 오류 포용
 
@@ -35,11 +35,11 @@ HTTP 리소스와 데이터베이스 리소스 모두에서 이러한 기술을 
 
 데이터베이스에 액세스하는 복원력 있는 통신을 구현하는 경우 이는 사용 중인 .NET 버전에 따라 간단할 수 있습니다. (예를 들어 [Entity Framework 6 이상](/ef/ef6/fundamentals/connection-resiliency/retry-logic)에서는 데이터베이스 연결을 구성하는 문제일 뿐입니다.) 또는 [일시적 실패 처리 애플리케이션 블록](/previous-versions/msp-n-p/hh680934(v=pandp.50))과 같은 추가 라이브러를 사용하거나(이전 버전의 .NET) 심지어 사용자 고유 라이브러리를 구현해야 할 수도 있습니다.
 
-HTTP 다시 시도 및 회로 차단기를 구현할 때 .NET 관련 권장 사항은 .NET Core 지원을 포함하는 .NET Framework 4.0, .NET Framework 4.5 및 .NET Standard 1.1을 대상으로 하는 [Polly](https://github.com/App-vNext/Polly) 라이브러리를 사용하는 것입니다.
+HTTP 재시도 및 회로 차단기를 구현할 때 .NET에 대한 권장 사항은 .NET Standard 1.1(범위: .NET Core 1.0, Mono, Xamarin, UWP, WP8.1 이상) 및 .NET Standard 2.0 이상(범위: .NET Core 2.0 이상, .NET Core 3.0, 이후 Mono, Xamarin 및 UWP 대상)을 대상으로 하는 [Polly](https://github.com/App-vNext/Polly) 라이브러리를 사용하는 것입니다. NuGet 패키지에는 .NET Framework 4.6.1 및 4.7.2에 대한 직접 대상도 포함됩니다.
 
 클라우드에서 부분 실패를 처리하기 위한 전략을 구현하는 방법을 알아보려면 다음 참조를 참조하세요.
 
-### <a name="additional-resources"></a>추가 자료
+### <a name="additional-resources"></a>추가 리소스
 
 - **부분 실패를 처리하기 위한 복원력 있는 통신 구현**
 

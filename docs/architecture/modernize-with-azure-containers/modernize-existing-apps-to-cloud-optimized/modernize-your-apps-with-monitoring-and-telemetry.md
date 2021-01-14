@@ -1,13 +1,13 @@
 ---
 title: 모니터링 및 원격 분석을 사용하여 앱 현대화
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 모니터링 및 원격 분석을 사용하여 앱 현대화
-ms.date: 04/30/2018
-ms.openlocfilehash: a6094435eece661d99904876ac49b3ca85ec45a7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2020
+ms.openlocfilehash: c79a16400ce9dadca50fabb6c7df2859e4519a41
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172003"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025240"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>모니터링 및 원격 분석을 사용하여 앱 현대화
 
@@ -15,7 +15,7 @@ ms.locfileid: "91172003"
 
 ## <a name="monitor-your-application-with-application-insights"></a>Application Insights를 사용하여 애플리케이션 모니터링
 
-Application Insights는 여러 플랫폼에서 작업하는 웹 개발자를 위한 확장 가능한 APM(애플리케이션 성능 관리) 서비스입니다. 이를 사용하여 라이브 웹 애플리케이션을 모니터링합니다. Application Insights는 자동으로 성능 이상을 검색합니다. 문제를 진단하고 사용자들이 앱을 사용하여 실제로 수행할 작업을 이해할 수 있도록 돕는 강력한 분석 도구를 포함합니다. Application Insights는 성능 및 유용성을 지속적으로 향상시킬 수 있도록 설계되었습니다. 온-프레미스 또는 클라우드에서 호스팅되는지 여부에 관계없이 .NET, Node.js 및 J2EE를 포함하여 다양한 플랫폼의 응용 프로그램에서 작동합니다. Application Insights는 DevOps 프로세스와 통합되며, 다양한 개발 도구와의 연결 지점을 갖고 있습니다.
+Application Insights는 여러 플랫폼에서 작업하는 웹 개발자를 위한 확장 가능한 APM(애플리케이션 성능 관리) 서비스입니다. 이를 사용하여 라이브 웹 애플리케이션을 모니터링합니다. Application Insights는 자동으로 성능 이상을 검색합니다. 문제를 진단하고 사용자들이 앱을 사용하여 실제로 수행할 작업을 이해할 수 있도록 돕는 강력한 분석 도구를 포함합니다. Application Insights는 성능 및 유용성을 지속적으로 향상시킬 수 있도록 설계되었습니다. 온-프레미스 또는 클라우드에서 호스팅되는지 여부에 관계없이 .NET, Node.js 및 J2EE를 포함하여 다양한 플랫폼의 응용 프로그램에서 작동합니다. Application Insights는 DevOps 프로세스와 통합되며, 다양한 개발 도구와의 연결점을 갖고 있습니다.
 
 그림 4-10에서는 Application Insights가 애플리케이션을 모니터링하는 방법과 해당 인사이트를 대시보드에 표시하는 방법을 보여줍니다.
 

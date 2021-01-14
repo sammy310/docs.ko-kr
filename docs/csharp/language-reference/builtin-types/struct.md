@@ -9,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 96a39609e9ae8b11e9872b049134136fe1ff3e2a
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 2ceac94c04dd8deb169e836f09928dfd9a38ac35
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599104"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025435"
 ---
 # <a name="structure-types-c-reference"></a>구조체 형식(C# 참조)
 
@@ -30,11 +30,7 @@ ms.locfileid: "96599104"
 
 ## <a name="readonly-struct"></a>`readonly` 구조체
 
-C# 7.2부터 `readonly` 한정자를 사용하여 구조체 형식을 변경할 수 없도록 선언합니다.
-
-[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
-
-`readonly` 구조체의 모든 데이터 멤버는 다음과 같이 읽기 전용이어야 합니다.
+C# 7.2부터 `readonly` 한정자를 사용하여 구조체 형식을 변경할 수 없도록 선언합니다. `readonly` 구조체의 모든 데이터 멤버는 다음과 같이 읽기 전용이어야 합니다.
 
 - 모든 필드 선언에는 [`readonly` 한정자](../keywords/readonly.md)가 있어야 합니다.
 - 자동 구현된 속성을 포함하여 모든 속성은 읽기 전용이어야 합니다. C# 9.0 이상에서는 속성에 [`init` 접근자](../../whats-new/csharp-9.md#init-only-setters)가 있을 수 있습니다.
@@ -43,6 +39,10 @@ C# 7.2부터 `readonly` 한정자를 사용하여 구조체 형식을 변경할 
 
 > [!NOTE]
 > `readonly` 구조체에서 변경 가능한 참조 형식의 데이터 멤버는 여전히 자체 상태를 변경할 수 있습니다. 예를 들어 <xref:System.Collections.Generic.List%601> 인스턴스를 바꿀 수는 없지만 새 요소를 추가할 수는 있습니다.
+
+다음 코드는 C# 9.0 이상에서 사용할 수 있는 init 전용 속성 setter를 사용하여 `readonly` 구조체를 정의합니다.
+
+[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
 
 ## <a name="readonly-instance-members"></a>`readonly` 인스턴스 멤버
 

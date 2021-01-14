@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4fd5ed2c-b03a-4054-a3ed-3ddb380d7d9d
-ms.openlocfilehash: 8bfcd8ae5d81c0d04ca7a43e6d5b25a492266605
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9573b1bf9dad77567fee8801a5e612c7efd53b1e
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189346"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187810"
 ---
 # <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a>메서드 기반 쿼리 구문 예제: 조인(LINQ to DataSet)
 
@@ -51,5 +51,3 @@ ms.locfileid: "91189346"
 - [LINQ to DataSet 예제](linq-to-dataset-examples.md)
 - [표준 쿼리 연산자 개요(C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [표준 쿼리 연산자 개요(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [조인 샘플](https://go.microsoft.com/fwlink/?LinkId=187357)
-- [데이터 집합 샘플](https://go.microsoft.com/fwlink/?LinkId=187358)

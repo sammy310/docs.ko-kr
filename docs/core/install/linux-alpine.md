@@ -3,13 +3,13 @@ title: Alpine에 .NET 설치 - .NET
 description: Alpine에 .NET SDK 및 .NET 런타임을 설치하는 다양한 방법을 보여 줍니다.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 29901cc24ddd4bbe8200a36765ddd29f501394c0
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.date: 01/06/2021
+ms.openlocfilehash: 6adaa905c400b45526ebbc3d8e2606522863eec3
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506837"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970852"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-alpine"></a>Alpine에 .NET SDK 또는 .NET 런타임 설치
 
@@ -17,7 +17,13 @@ ms.locfileid: "94506837"
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
-Alpine용 설치 관리자는 없습니다. [설치 스크립트](#scripted-install)를 사용하거나 [수동 설치](#manual-install) 지침을 따라야 합니다.
+## <a name="install"></a>설치
+
+설치 프로그램은 Alpine Linux에서 사용할 수 없습니다. 다음 방법 중 하나를 사용하여 .NET을 설치해야 합니다.
+
+- [Snap 패키지](linux-snap.md)
+- [_install-dotnet.sh_ 스크립트를 통한 설치](linux-scripted-manual.md#scripted-install)
+- [수동 이진 추출](linux-scripted-manual.md#manual-install)
 
 ## <a name="supported-distributions"></a>지원되는 배포
 
@@ -54,14 +60,7 @@ Alpine Linux에서 .NET을 사용하려면 다음 종속성이 설치되어 있�
 - libstdc++
 - zlib
 
-## <a name="scripted-install"></a>스크립팅된 설치
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>수동 설치
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>다음 단계
 
+- [.NET CLI에 대해 탭 완성 기능을 사용하도록 설정하는 방법](../tools/enable-tab-autocomplete.md)
 - [자습서: Visual Studio Code를 사용하여 .NET SDK에서 콘솔 애플리케이션 만들기](../tutorials/with-visual-studio-code.md)

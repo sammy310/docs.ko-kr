@@ -3,12 +3,12 @@ title: dotnet nuget push 명령
 description: dotnet nuget push 명령은 서버에 패키지를 푸시하고 게시합니다.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 50a4a542c2d192bfbd927845489d04fd1b6c6cf3
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 99e735f7bb18b7af1c12c3ef77fc150a19083542
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555125"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970657"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -32,7 +32,7 @@ dotnet nuget push -h|--help
 
 ## <a name="description"></a>설명
 
-`dotnet nuget push` 명령은 서버에 패키지를 푸시하고 게시합니다. push 명령은 시스템의 NuGet 구성 파일에 있는 서버 및 자격 증명 정보 또는 구성 파일 체인을 사용합니다. 구성 파일에 대한 자세한 내용은 [NuGet 동작 구성](/nuget/consume-packages/configuring-nuget-behavior)을 참조하세요. NuGet의 기본 구성은 *%AppData%\NuGet\NuGet.config*(Windows) 또는 *$HOME/.local/share*(Linux/macOS)를 로드한 다음 드라이브의 루트에서 시작되고 현재 디렉터리에서 끝나는 *nuget.config* 또는 *.nuget\nuget.config*를 로드하여 가져올 수 있습니다.
+`dotnet nuget push` 명령은 서버에 패키지를 푸시하고 게시합니다. push 명령은 시스템의 NuGet 구성 파일에 있는 서버 및 자격 증명 정보 또는 구성 파일 체인을 사용합니다. 구성 파일에 대한 자세한 내용은 [NuGet 동작 구성](/nuget/consume-packages/configuring-nuget-behavior)을 참조하세요. NuGet의 기본 구성은 *%AppData%\NuGet\NuGet.config*(Windows) 또는 *$HOME/.local/share*(Linux/macOS)를 로드한 다음 드라이브의 루트에서 시작되고 현재 디렉터리에서 끝나는 *nuget.config* 또는 *.nuget\nuget.config* 를 로드하여 가져올 수 있습니다.
 
 이 명령은 기존 패키지를 푸시합니다. 패키지를 만들지 않습니다. 패키지를 만들려면 [`dotnet pack`](dotnet-pack.md)을 사용합니다.
 
@@ -74,7 +74,9 @@ dotnet nuget push -h|--help
 
 - **`-s|--source <SOURCE>`**
 
-  서버 URL을 지정합니다. 이 옵션은 NuGet 구성 파일에 `DefaultPushSource` 구성 값이 설정되어 있지 않을 때 필요합니다.
+  서버 URL을 지정합니다. NuGet은 UNC 또는 로컬 폴더 소스를 식별하며, HTTP를 사용하여 파일을 푸시하는 대신 단순히 파일을 복사합니다.
+  > [!IMPORTANT]
+  > NuGet 3.4.2부터는 NuGet 구성 파일이 `DefaultPushSource` 값을 지정하지 않는 한 이것이 필수 매개 변수입니다. 자세한 내용은 참조 [NuGet 동작 구성](/nuget/consume-packages/configuring-nuget-behavior)을 참조하세요.
 
 - **`--skip-duplicate`**
 
@@ -94,43 +96,43 @@ dotnet nuget push -h|--help
 
 ## <a name="examples"></a>예
 
-- 기본 푸시 소스에 *foo.nupkg*를 푸시하여 API 키를 지정합니다.
+- API 키를 사용하여 NuGet 구성 파일에 지정된 기본 푸시 소스에 *foo.nupkg* 를 푸시합니다.
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-- 공식 NuGet 서버에 *foo.nupkg*를 푸시하여 API 키를 지정합니다.
+- 공식 NuGet 서버에 *foo.nupkg* 를 푸시하여 API 키를 지정합니다.
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
   ```
   
-  * 사용자 지정 푸시 소스 `https://customsource`에 *foo.nupkg*를 푸시하여 API 키를 지정합니다.
+  * 사용자 지정 푸시 소스 `https://customsource`에 *foo.nupkg* 를 푸시하여 API 키를 지정합니다.
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-- 기본 푸시 소스에 *foo.nupkg*를 푸시합니다.
+- NuGet 구성 파일에 지정된 기본 푸시 소스에 *foo.nupkg* 를 푸시합니다.
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
-- 기본 기호 소스에 *foo.symbols.nupkg*를 푸시합니다.
+- 기본 기호 소스에 *foo.symbols.nupkg* 를 푸시합니다.
 
   ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
-- 기본 푸시 소스에 *foo.nupkg*를 푸시하여 360초 시간 제한을 지정합니다.
+- 360초 시간 제한을 사용하여 NuGet 구성 파일에 지정된 기본 푸시 소스에 *foo.nupkg* 를 푸시합니다.
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-- 기본 푸시 소스에 현재 디렉터리에 있는 모든 *.nupkg* 파일을 푸시합니다.
+- NuGet 구성 파일에 지정된 기본 푸시 소스에 현재 디렉터리에 있는 모든 *.nupkg* 파일을 푸시합니다.
 
   ```dotnetcli
   dotnet nuget push "*.nupkg"
@@ -143,7 +145,7 @@ dotnet nuget push -h|--help
   > [!NOTE]
   > 파일 와일드카드 사용을 수행하는 bash와 같은 셸에는 묶는 따옴표를 사용해야 합니다. 자세한 내용은 [NuGet/Home#4393](https://github.com/NuGet/Home/issues/4393#issuecomment-667618120)을 참조하세요.
 
-- HTTP(S) 서버가 409 충돌 응답을 반환하더라도 모든 *.nupkg* 파일을 푸시합니다.
+- HTTP(S) 서버에서 409 충돌 응답이 반환되는 경우에도 NuGet 구성 파일에 지정된 기본 푸시 소스에 모든 *.nupkg* 파일을 푸시합니다.
 
   ```dotnetcli
   dotnet nuget push "*.nupkg" --skip-duplicate

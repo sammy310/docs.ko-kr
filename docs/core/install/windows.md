@@ -3,13 +3,13 @@ title: Windows에 .NET 설치
 description: .NET을 설치할 수 있는 Windows 버전에 대해 알아봅니다.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: b5c0949bbd591906536094a33d8583a265d8a4c8
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.date: 01/06/2021
+ms.openlocfilehash: d8ca3eed3786a728002d8ffe80b774a0018eee82
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97110236"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025455"
 ---
 # <a name="install-net-on-windows"></a>Windows에 .NET 설치
 
@@ -180,30 +180,21 @@ SDK는 .NET 앱과 라이브러리를 빌드하고 게시하는 데 사용됩니
 
 ### <a name="windows-7--vista--81--server-2008-r2--server-2012-r2"></a><a name="additional-deps"></a> Windows 7 / Vista / 8.1 / Server 2008 R2 / Server 2012 R2
 
-다음과 같은 Windows 버전에 .NET SDK 또는 런타임을 설치할 경우 추가 종속성이 필요합니다.
+다음과 같은 Windows 버전에 .NET SDK 또는 런타임을 설치할 경우 종속성이 더 필요합니다.
 
-- Windows 7 SP1 [ESU][esu]
-- Windows Vista SP 2
-- Windows 8.1
-- Windows Server 2008 R2
-- Windows Server 2012 R2
+| 운영 체제         | 사전 요구 사항                                                                    |
+|--------------------------|----------------------------------------------------------------------------------|
+| Windows 7 SP1 [ESU][esu] | - Microsoft Visual C++ 2015-2019 재배포 가능 [64비트][vcc64] / [32비트][vcc32] <br> - KB3063858 [64비트][kb64] / [32비트][kb32] <br> - [MicrosoftRootCertificateAuthority2011.cer](https://go.microsoft.com/fwlink/?linkid=747875&clcid=0x409)(.NET Core 2.1에만 해당) |
+| Windows Vista SP 2       | Microsoft Visual C++ 2015-2019 재배포 가능 [64비트][vcc64] / [32비트][vcc32] |
+| Windows 8.1              | Microsoft Visual C++ 2015-2019 재배포 가능 [64비트][vcc64] / [32비트][vcc32] |
+| Windows Server 2008 R2   | Microsoft Visual C++ 2015-2019 재배포 가능 [64비트][vcc64] / [32비트][vcc32] |
+| Windows Server 2012 R2   | Microsoft Visual C++ 2015-2019 재배포 가능 [64비트][vcc64] / [32비트][vcc32] |
 
-다음을 설치합니다.
+다음 dll 중 하나와 관련된 오류를 수신하는 경우에도 이전 요구 사항이 필요합니다.
 
-- [Microsoft Visual C++ 2015 재배포 가능 업데이트 3](https://www.microsoft.com/download/details.aspx?id=52685).
-- [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)
-
-다음과 같은 오류가 발생할 경우에도 이전 요구 사항이 필요합니다.
-
-> 컴퓨터에 *api-ms-win-crt-runtime-l1-1-0.dll* 이(가) 없어 프로그램을 시작할 수 없습니다. 프로그램을 다시 설치하여 이 문제를 해결하세요.
->
-> \- 또는 -
->
-> 컴퓨터에 *api-ms-win-cor-timezone-l1-1-0.dll* 이 없어 프로그램을 시작할 수 없습니다. 프로그램을 다시 설치하여 이 문제를 해결하세요.
->
-> \- 또는 -
->
-> 라이브러리 *hostfxr.dll* 을 찾았으나, *C:\\\<path_to_app>\\hostfxr.dll* 에서 로드하지 못했습니다.
+- *api-ms-win-crt-runtime-l1-1-0.dll*
+- *api-ms-win-cor-timezone-l1-1-0.dll*
+- *hostfxr.dll*
 
 ## <a name="install-with-powershell-automation"></a>PowerShell 자동화를 사용하여 설치
 
@@ -318,3 +309,7 @@ Docker 컨테이너에서 .NET 사용에 대한 자세한 내용은 [.NET 및 Do
 - [자습서: .NET Core 앱 컨테이너화](../docker/build-container.md)
 
 [esu]: /troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq
+[vcc64]: https://aka.ms/vs/16/release/vc_redist.x64.exe
+[vcc32]: https://aka.ms/vs/16/release/vc_redist.x86.exe
+[kb64]: https://www.microsoft.com/en-us/download/details.aspx?id=47442
+[kb32]: https://www.microsoft.com/en-us/download/details.aspx?id=47409

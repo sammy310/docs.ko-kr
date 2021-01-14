@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 7f76ed5ad1a76a155489339a9febf12eefd64ae8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b92385fa169e03254abdf940f2964c1966cbc2ce
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279989"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190093"
 ---
 # <a name="how-to-run-a-workflow"></a>방법: 워크플로 실행
 
@@ -19,9 +19,6 @@ ms.locfileid: "96279989"
 
 > [!NOTE]
 > 초보자를 위한 자습서의 각 항목은 이전 항목을 바탕으로 합니다. 이 항목을 진행하려면 먼저 [How to: Create an Activity](how-to-create-an-activity.md) 및 [How to: Create a Workflow](how-to-create-a-workflow.md)를 완료해야 합니다.
-
-> [!NOTE]
-> 자습서의 전체 버전을 다운로드하려면 [Windows Workflow Foundation(WF45) - 초보자를 위한 자습서](https://go.microsoft.com/fwlink/?LinkID=248976)를 참조하세요.  
   
 ### <a name="to-create-the-workflow-host-project"></a>워크플로 호스트 프로젝트를 만들려면  
   

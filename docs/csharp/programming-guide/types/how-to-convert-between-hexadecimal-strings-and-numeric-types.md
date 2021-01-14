@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.topic: how-to
 ms.custom: contperf-fy21q2
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 18021156af879f324993beca04531c8a822725db
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 35cf1af661071c70b8d68de2e47ce555be7b9fef
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513239"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025409"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>16진수 문자열과 숫자 형식 간 변환 방법(C# 프로그래밍 가이드)
 
@@ -60,6 +60,12 @@ ms.locfileid: "97513239"
  다음 예제에서는 <xref:System.BitConverter?displayProperty=nameWithType> 클래스를 사용하여 [byte](../../language-reference/builtin-types/integral-numeric-types.md) 배열을 16진수 문자열로 변환하는 방법을 보여 줍니다.  
   
  [!code-csharp[csProgGuideTypes#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#38)]  
+  
+## <a name="example"></a>예제  
+
+ 다음 예제에서는 .NET 5.0에 도입된 <xref:System.Convert.ToHexString%2A?displayProperty=nameWithType> 메서드를 호출하여 [byte](../../language-reference/builtin-types/integral-numeric-types.md) 배열을 16진수 문자열로 변환하는 방법을 보여 줍니다.
+  
+ [!code-csharp[csProgGuideTypes#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#47)]  
   
 ## <a name="see-also"></a>참조
 

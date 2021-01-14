@@ -4,12 +4,12 @@ titleSuffix: ''
 description: .NET 프로젝트 SDK에 대해 알아봅니다.
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 6b6651f674f09d5d0d18ddb873096037ad3b2ba5
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 270735c9eef9f1930680687917317ac8bdf39e6d
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247577"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970696"
 ---
 # <a name="net-project-sdks"></a>.NET 프로젝트 SDK
 
@@ -83,9 +83,9 @@ SDK를 지정하는 또 다른 방법은 최상위 [Sdk](/visualstudio/msbuild/s
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
-### <a name="default-compilation-includes"></a>기본 컴파일 포함
+### <a name="default-includes-and-excludes"></a>기본 포함 및 제외
 
-컴파일 항목, 포함된 리소스 및 `None` 항목의 기본 포함 및 제외는 SDK에서 정의됩니다. SDK가 아닌 .NET Framework 프로젝트와 달리 기본값은 대부분의 일반적인 사용 사례를 처리하므로 프로젝트 파일에서 해당 항목을 지정할 필요가 없습니다. 그러면 프로젝트 파일이 크기가 줄어들고 더 쉽게 이해하고 필요에 따라 수동으로 편집할 수 있습니다.
+[`Compile` 항목](/visualstudio/msbuild/common-msbuild-project-items#compile), [포함된 리소스](/visualstudio/msbuild/common-msbuild-project-items#embeddedresource), [`None` 항목](/visualstudio/msbuild/common-msbuild-project-items#none)의 기본 포함 및 제외는 SDK에서 정의됩니다. SDK가 아닌 .NET Framework 프로젝트와 달리 기본값은 대부분의 일반적인 사용 사례를 처리하므로 프로젝트 파일에서 해당 항목을 지정할 필요가 없습니다. 따라서 프로젝트 파일이 크기가 줄어들고 이해하기가 더 쉬워지며 필요에 따라 수동으로 편집할 수 있습니다.
 
 다음 표에는 .NET SDK에 포함되거나 제외되는 요소 및 [GLOB](https://en.wikipedia.org/wiki/Glob_(programming))가 나와 있습니다.
 
@@ -96,7 +96,7 @@ SDK를 지정하는 또 다른 방법은 최상위 [Sdk](/visualstudio/msbuild/s
 | 없음              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx |
 
 > [!NOTE]
-> `$(BaseOutputPath)` 및 `$(BaseIntermediateOutputPath)` MSBuild 속성으로 나타내는 `./bin` 및 `./obj` 폴더는 기본적으로 GLOB에서 제외됩니다. 제외는 `$(DefaultItemExcludes)` 속성으로 나타냅니다.
+> `$(BaseOutputPath)` 및 `$(BaseIntermediateOutputPath)` MSBuild 속성으로 나타내는 `./bin` 및 `./obj` 폴더는 기본적으로 GLOB에서 제외됩니다. 제외는 [DefaultItemExcludes 속성](msbuild-props.md#defaultitemexcludes)으로 표시됩니다.
 
 #### <a name="build-errors"></a>빌드 오류
 
@@ -110,7 +110,7 @@ SDK를 지정하는 또 다른 방법은 최상위 [Sdk](/visualstudio/msbuild/s
 
 - 앞의 표에 나열된 암시적 `Compile`, `EmbeddedResource` 또는 `None` 항목과 일치하는 항목을 제거합니다.
 
-- 모든 암시적 파일 포함을 사용하지 않으려면 `EnableDefaultItems` 속성을 `false`로 설정합니다.
+- 모든 암시적 파일 포함을 사용하지 않으려면 [EnableDefaultItems 속성](msbuild-props.md#enabledefaultitems)을 `false`로 설정합니다.
 
   ```xml
   <PropertyGroup>
@@ -120,7 +120,7 @@ SDK를 지정하는 또 다른 방법은 최상위 [Sdk](/visualstudio/msbuild/s
 
   앱과 함께 게시할 파일을 지정하려는 경우 해당 항목(예: `Content` 요소)에 알려진 MSBuild 메커니즘을 계속 사용할 수 있습니다.
 
-- `EnableDefaultCompileItems`, `EnableDefaultEmbeddedResourceItems` 또는 `EnableDefaultNoneItems` 속성을 `false`로 설정하여 `Compile`, `EmbeddedResource` 또는 `None` GLOB만 사용하지 않도록 설정합니다.
+- [EnableDefaultCompileItems](msbuild-props.md#enabledefaultcompileitems), [EnableDefaultEmbeddedResourceItems](msbuild-props.md#enabledefaultembeddedresourceitems) 또는 [EnableDefaultNoneItems](msbuild-props.md#enabledefaultnoneitems) 속성을 `false`로 설정하여 `Compile`, `EmbeddedResource` 또는 `None` GLOB를 선택적으로 사용하지 않도록 설정합니다.
 
   ```xml
   <PropertyGroup>

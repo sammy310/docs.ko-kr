@@ -1,13 +1,13 @@
 ---
 title: 연습 및 기술 시작 개요
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 연습 및 기술 시작 개요
-ms.date: 04/28/2018
-ms.openlocfilehash: 98d33b13d2b28bfe1c35894df45e525cff0520c1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2020
+ms.openlocfilehash: 6bfa25e3eeeecf5a936f378df3ae548d6fa37a30
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172146"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025279"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>연습 및 기술 시작 개요
 
@@ -117,7 +117,7 @@ Windows 컨테이너를 사용하여 MVC, Web Forms 또는 WCF를 기반으로 �
 
 이밖에 개발자는 Windows 컨테이너에서 제공하는 일관된 환경에서 애플리케이션을 실행할 수 있다는 이점이 있습니다. 특정 버전에서만 나타나는 문제가 준비 또는 프로덕션 환경에서 표출되는 대신 즉시 발견될 수 있습니다. 애플리케이션이 컨테이너에서 실행되는 경우 개발 팀의 멤버가 사용하는 개발 환경 간 차이의 문제가 완화됩니다.
 
-컨테이너화된 애플리케이션은 보다 평탄한 수평 확장 곡선을 갖습니다. 컨테이너화된 앱을 사용하면 일반적인 컴퓨터별 애플리케이션 배포와 비교할 때 VM 또는 물리적 컴퓨터에서 (컨테이너를 기반으로) 더 많은 애플리케이션 및 서비스 인스턴스를 사용할 수 있습니다. 그러면, 특히 Kubernetes와 같은 오케스트레이터를 사용할 경우, 밀도가 더욱 높아지고 필요한 리소스 수가 줄어듭니다.
+컨테이너화된 애플리케이션은 보다 평탄한 수평 확장 곡선을 갖습니다. 컨테이너화된 앱을 사용하면 일반적인 컴퓨터별 애플리케이션 배포와 비교할 때 VM 또는 물리적 컴퓨터에서 (컨테이너를 기반으로) 더 많은 애플리케이션 및 서비스 인스턴스를 사용할 수 있습니다. 이 접근법을 사용하면 특히 Kubernetes와 같은 오케스트레이터를 사용할 경우, 밀도가 더욱 높아지고 필요한 리소스 수가 줄어듭니다.
 
 이상적인 상황에서는 컨테이너화로 인해 애플리케이션 코드(C\#)를 변경할 필요가 없습니다. 대부분의 시나리오에서는 Docker 배포 메타데이터 파일(Dockerfile 및 Docker Compose 파일)만 필요합니다.
 
@@ -168,7 +168,7 @@ Azure에서 Windows Server 2016 VM(가상 머신)의 Docker 호스트에 배포�
 
 Windows 컨테이너용 Azure VM은 Windows Server 2016, Windows 10 이상 버전(모두 Docker 엔진 설정 포함)을 기반으로 하는 VM입니다. 대부분의 경우 Windows Server 2016이 Azure VN에 사용됩니다.
 
-현재 Azure는 **컨테이너가 포함된 Windows Server 2016**이라는 VM을 제공합니다. 이 VM을 사용하여 Windows Server Core 또는 Windows Nano Server를 통해 새로운 Windows Server 컨테이너 기능을 사용해 볼 수 있습니다. 컨테이너 OS 이미지를 설치하면 VM을 Docker에 사용할 준비가 된 것입니다.
+현재 Azure는 **컨테이너가 포함된 Windows Server 2016** 이라는 VM을 제공합니다. 이 VM을 사용하여 Windows Server Core 또는 Windows Nano Server를 통해 새로운 Windows Server 컨테이너 기능을 사용해 볼 수 있습니다. 컨테이너 OS 이미지를 설치하면 VM을 Docker에 사용할 준비가 된 것입니다.
 
 ### <a name="benefits"></a>이점
 
@@ -228,11 +228,11 @@ Azure Container Instances를 사용하면 가상 머신을 프로비전하거나
 
 ### <a name="overview"></a>개요
 
-Windows 컨테이너를 기반으로 하는 애플리케이션은 신속하게 플랫폼을 활용하여 IaaS VM에서 한층 더 개선되어야 합니다. 이는 뛰어난 확장성과 향상된 자동 확장성을 손쉽게 구현하는 데 필요하고, 자동화된 배포 및 버전 관리를 대폭 개선하는 데 필요합니다. 이러한 목표는 [Azure Container Services](https://azure.microsoft.com/services/container-service/)에서 제공하는 오케스트레이터 [Kubernetes](https://kubernetes.io/)를 사용하여 달성할 수 있습니다.
+Windows 컨테이너를 기반으로 하는 애플리케이션은 신속하게 플랫폼을 활용하여 IaaS VM에서 한층 더 개선되어야 합니다. 이 접근법은 뛰어난 스케일링 성능과 향상된 자동 스케일링 성능을 손쉽게 구현하는 데 필요하고 자동화된 배포 및 버전 관리를 대폭 개선하는 데 필요합니다. 이러한 목표는 [Azure Container Services](https://azure.microsoft.com/services/container-service/)에서 제공하는 오케스트레이터 [Kubernetes](https://kubernetes.io/)를 사용하여 달성할 수 있습니다.
 
 ### <a name="goals"></a>목표
 
-이 연습의 목표는 Windows 컨테이너 기반 애플리케이션을 Azure Container Service에서 Kubernetes(*K8s*라고도 함)에 배포하는 방법을 배우는 것입니다. Kubernetes를 처음부터 배포하는 과정은 다음 두 단계로 진행됩니다.
+이 연습의 목표는 Windows 컨테이너 기반 애플리케이션을 Azure Container Service에서 Kubernetes(*K8s* 라고도 함)에 배포하는 방법을 배우는 것입니다. Kubernetes를 처음부터 배포하는 과정은 다음 두 단계로 진행됩니다.
 
 1. Kubernetes 클러스터를 Azure Container Service에 배포합니다.
 
@@ -288,7 +288,7 @@ Kubernetes를 통해 개발자는 물리적 컴퓨터와 가상 머신에 대한
 
 ### <a name="overview"></a>개요
 
-Windows 컨테이너를 사용하는 간단한 컨테이너화된 애플리케이션을 컨테이너용 Azure App Service에 쉽게 배포할 수 있습니다. 이는 대부분의 Windows 컨테이너 기반 애플리케이션에 권장되는 방법입니다.
+Windows 컨테이너를 사용하는 간단한 컨테이너화된 애플리케이션을 컨테이너용 Azure App Service에 쉽게 배포할 수 있습니다. 이 접근법은 대부분의 Windows 컨테이너 기반 애플리케이션에 권장되는 방법입니다.
 
 ### <a name="goals"></a>목표
 

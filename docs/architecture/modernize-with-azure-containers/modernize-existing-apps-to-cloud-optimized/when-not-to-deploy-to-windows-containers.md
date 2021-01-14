@@ -1,13 +1,13 @@
 ---
 title: Windows 컨테이너에 배포하면 안 되는 경우
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | Windows 컨테이너에 배포하면 안 되는 경우
-ms.date: 04/28/2018
-ms.openlocfilehash: 65e793b846b495e9a1be6db9ddfa38bbf0d49445
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 12/21/2020
+ms.openlocfilehash: 4eea24ab8deb3719c778b45b3ddc1309277a3f50
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69577956"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025175"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a>Windows 컨테이너에 배포하면 안 되는 경우
 
@@ -33,7 +33,7 @@ ms.locfileid: "69577956"
 
 - Windows 인프라 역할(DNS, DHCP, DC, NTP, PRINT, File server, IAM 등)은 지원되는 시나리오가 아닙니다.
 
-커뮤니티에서 지원되지 않는 추가 시나리오 및 요청은 Windows 컨테이너에 대한 UserVoice 포럼을 참조하세요. <https://windowsserver.uservoice.com/forums/304624-containers>.
+커뮤니티에서 지원되지 않는 기타 시나리오 및 요청은 Windows 컨테이너에 대한 UserVoice 포럼을 참조하세요(<https://windowsserver.uservoice.com/forums/304624-containers>).
 
 ### <a name="additional-resources"></a>추가 자료
 

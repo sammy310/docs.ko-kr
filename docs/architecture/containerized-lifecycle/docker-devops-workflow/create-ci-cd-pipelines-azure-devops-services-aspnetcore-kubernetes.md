@@ -1,15 +1,15 @@
 ---
-title: Docker 애플리케이션에 대한 외부 루프 DevOps 워크플로의 단계
+title: Azure DevOps Services에서 컨테이너의 .NET 애플리케이션에 대한 CI/CD 파이프라인 만들기 및 Kubernetes 클러스터에 배포
 description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
-ms.date: 08/06/2020
-ms.openlocfilehash: 1a973407d59484899f99fb6e326b8d7c8e97079b
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/06/2021
+ms.openlocfilehash: ef994f132716547ee402237016ee71013528d779
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915219"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970488"
 ---
-# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Azure DevOps Services에서 컨테이너의 .NET Core 애플리케이션에 대한 CI/CD 파이프라인 만들기 및 Kubernetes 클러스터에 배포
+# <a name="create-cicd-pipelines-in-azure-devops-services-for-a-net-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Azure DevOps Services에서 컨테이너의 .NET 애플리케이션에 대한 CI/CD 파이프라인 만들기 및 Kubernetes 클러스터에 배포
 
 그림 5-12에서는 코드 관리, 코드 컴파일, Docker 이미지 빌드, Docker 레지스트리로 Docker 이미지 푸시, 마지막으로 Azure의 Kubernetes 클러스터에 배포하는 과정을 다루는 엔드투엔드 DevOps 시나리오를 볼 수 있습니다.
 

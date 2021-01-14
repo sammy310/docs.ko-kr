@@ -1,13 +1,13 @@
 ---
 title: Docker 애플리케이션에 대한 외부 루프 DevOps 워크플로의 단계
 description: DevOps 워크플로의 "외부 루프"에 대한 단계 알아보기
-ms.date: 08/06/2020
-ms.openlocfilehash: 82a45c8669812580623811e18cc55f55f45cb6d3
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.date: 01/06/2021
+ms.openlocfilehash: bfac2d2c7866bfd11cd18201a93cb17a72cae588
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271909"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970299"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 애플리케이션에 대한 외부 루프 DevOps 워크플로의 단계
 
@@ -37,7 +37,7 @@ Azure DevOps Services 및 Team Foundation Server는 Git 및 Team Foundation 버�
 
 CI는 최신 소프트웨어 테스트 및 제공을 위한 표준으로 부상 했습니다. Docker 솔루션은 개발 팀과 운영 팀 간에 관심사를 명확하게 분리합니다. Docker 이미지의 불변성 덕분에 CI를 통해 개발하고 테스트하는 내용과 프로덕션에서 실행하는 내용 간의 반복 가능한 배포가 보장됩니다. 개발자 랩톱 및 테스트 인프라 간에 배포되는 Docker 엔진을 통해 환경 간에 컨테이너를 이식할 수 있게 됩니다.
 
-이 시점에서 올바른 코드가 제출된 버전 관리 시스템을 보유한 후 코드를 선택하고 글로벌 빌드 및 테스트를 실행하기 위해 *빌드 서비스*가 필요합니다.
+이 시점에서 올바른 코드가 제출된 버전 관리 시스템을 보유한 후 코드를 선택하고 글로벌 빌드 및 테스트를 실행하기 위해 *빌드 서비스* 가 필요합니다.
 
 이 단계(CI, 빌드, 테스트)에 대한 내부 워크플로는 코드 리포지토리(Git 등), 빌드 서버(Azure DevOps 서비스), Docker 엔진 및 Docker 레지스트리 코드 리포지토리로 구성된 CI 파이프라인을 구축하는 과정입니다.
 
@@ -77,7 +77,7 @@ Visual Studio Azure DevOps Services는 CI/CD 파이프라인에 사용하여 Doc
 
 이러한 Visual Studio Team Services 작업을 통해 Azure 및 선호하는 Docker 레지스트리(Azure Container Registry, Docker Hub, 프라이빗 Docker DTR 또는 다른 Docker 레지스트리)에서 프로비저닝되는 Linux-Docker Host/VM을 빌드하면 Docker CI 파이프라인을 아주 일관된 방법으로 조립할 수 있습니다.
 
-***요구 사항:***
+**_요구 사항:_* _
 
 - Azure DevOps Services 또는 온-프레미스 설치의 경우 Team Foundation Server 2015 업데이트 3 이상
 
@@ -90,7 +90,7 @@ Visual Studio Azure DevOps Services는 CI/CD 파이프라인에 사용하여 Doc
 > - Visual Studio Team Services(현재 Azure DevOps Services) 에이전트를 Docker 컨테이너로 실행: \
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
-> - Azure DevOps Services를 사용하여 .NET Core Linux Docker 이미지 빌드: \
+> - Azure DevOps Services를 사용하여 .NET Linux Docker 이미지 빌드: \
 >   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - Docker 지원을 사용하여 Linux 기반 Visual Studio Team Service 빌드 머신 구축: \
@@ -126,7 +126,7 @@ SCC 레지스트리(예: Git)에 저장된 애플리케이션 코드가 "신뢰�
 
 ![컨테이너 레지스트리에 대한 사용자 지정 이미지 푸시를 보여 주는 다이어그램](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
 
-**그림 5-4**. Docker 레지스트리에 사용자 지정 이미지 게시
+_*그림 5-4**. Docker 레지스트리에 사용자 지정 이미지 게시
 
 3단계에서 통합 및 테스트(CI)를 빌드하는 경우 결과로 얻은 Docker 이미지를 프라이빗 또는 공용 레지스트리에 게시할 수 있습니다. Azure Container Registry, Amazon Web Services Container Registry, Google Container Registry, Quay Registry 등 클라우드 공급업체의 Docker 레지스트리 제품이 많이 있습니다.
 
