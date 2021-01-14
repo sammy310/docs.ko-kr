@@ -16,12 +16,12 @@ helpviewer_keywords:
 - naming code style rules [EditorConfig]
 - naming rules
 - EditorConfig naming conventions
-ms.openlocfilehash: 8ce209e64ee7f9f9028c221daedef8fc6a993ef7
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 0eea5e89ac5055a45d9ead14363cc2f2fc574401
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96594160"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98191081"
 ---
 # <a name="naming-rules"></a>이름 지정 규칙
 
@@ -79,7 +79,7 @@ dotnet_naming_symbols.types.applicable_accessibilities = public, internal, priva
 | -- | -- |
 | `symbols` | 이 규칙을 적용 해야 하는 기호를 정의 하는 기호 그룹의 제목입니다. |
 | `style` | 이 규칙과 연결 되어야 하는 명명 스타일의 제목입니다. |
-| `severity` |  명명 규칙을 적용 하는 데 사용 되는 심각도를 설정 합니다. 연결 된 값을 사용 가능한 [심각도 수준](https://docs.microsoft.com/dotnet/fundamentals/code-analysis/configuration-options#severity-level)중 하나로 설정 합니다. <sup>1</sup> |
+| `severity` |  명명 규칙을 적용 하는 데 사용 되는 심각도를 설정 합니다. 연결 된 값을 사용 가능한 [심각도 수준](../configuration-options.md#severity-level)중 하나로 설정 합니다. <sup>1</sup> |
 
 **참고:**
 
@@ -111,7 +111,7 @@ EditorConfig 파일에 명명 규칙을 정의 하는 순서는 중요 하지 �
 
 ## <a name="naming-style-properties"></a>이름 지정 스타일 속성
 
-명명 스타일은 규칙을 사용 하 여 적용 하려는 규칙을 정의 합니다. 다음은 그 예입니다. 
+명명 스타일은 규칙을 사용 하 여 적용 하려는 규칙을 정의 합니다. 예를 들면 다음과 같습니다.
 
 * 다음으로 대문자화 `PascalCase`
 * 시작 문자 `m_`

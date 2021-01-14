@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: f8e0703591629a72e0a8f6eeb05dd9d19c8c4c91
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: eb30a3a21ffc4cffe64d2f5d0bc741728f1ea87d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275829"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190483"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>방법: 순서도 워크플로 만들기
 
@@ -19,9 +19,6 @@ ms.locfileid: "96275829"
   
 > [!NOTE]
 > 초보자를 위한 자습서의 각 항목은 이전 항목을 바탕으로 합니다. 이 항목을 완료 하려면 먼저 [방법: 작업 만들기](how-to-create-an-activity.md)를 완료 해야 합니다.  
-  
-> [!NOTE]
-> 자습서의 전체 버전을 다운로드하려면 [Windows Workflow Foundation(WF45) - 초보자를 위한 자습서](https://go.microsoft.com/fwlink/?LinkID=248976)를 참조하세요.  
   
 ### <a name="to-create-the-workflow"></a>워크플로를 만들려면  
   

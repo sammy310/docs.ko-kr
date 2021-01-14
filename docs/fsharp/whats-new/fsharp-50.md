@@ -2,12 +2,12 @@
 title: 'F # 5.0의 새로운 기능-F # 가이드'
 description: 'F # 5.0에서 사용할 수 있는 새로운 기능에 대 한 개요를 확인 하세요.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 2384f1a75f5e708dc6f170d82fa15c5e0f54c85d
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 9b138e4801a3e599db650990acd53c0f956b78b8
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740187"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190730"
 ---
 # <a name="whats-new-in-f-50"></a>F# 5.0의 새로운 기능
 
@@ -15,7 +15,7 @@ F # 5.0은 F # 언어 및 F# 대화형에 몇 가지 향상 된 기능을 추가
 
 [.NET 다운로드 페이지](https://dotnet.microsoft.com/download)에서 최신 .NET SDK를 다운로드할 수 있습니다.
 
-## <a name="get-started"></a>시작
+## <a name="get-started"></a>시작하기
 
 F # 5.0은 모든 .NET Core 배포 및 Visual Studio 도구에서 사용할 수 있습니다. 자세한 내용은 [F # 시작](../get-started/index.md) 을 참조 하세요.
 
@@ -407,7 +407,7 @@ printfn $"DIM from C# but via Object Expression: %d{md'.Z}"
 
 ## <a name="simplified-interop-with-nullable-value-types"></a>Nullable 값 형식을 사용한 간소화 된 interop
 
-[Nullable](https://docs.microsoft.com/dotnet/api/system.nullable-1) 형식 (현재는 nullable 형식 이라고 함)은 F #에서 오래 된 것 이지만 일반적으로 이러한 형식으로 상호 작용 하는 것은 `Nullable` `Nullable<SomeType>` 값을 전달할 때마다 또는 래퍼를 생성 해야 하기 때문에 일반적으로 약간의 어려움입니다. 이제 컴파일러는 `Nullable<ThatValueType>` 대상 형식이와 일치 하는 경우 값 형식을로 암시적으로 변환 합니다. 이제 다음 코드를 사용할 수 있습니다.
+[Nullable](/dotnet/api/system.nullable-1) 형식 (현재는 nullable 형식 이라고 함)은 F #에서 오래 된 것 이지만 일반적으로 이러한 형식으로 상호 작용 하는 것은 `Nullable` `Nullable<SomeType>` 값을 전달할 때마다 또는 래퍼를 생성 해야 하기 때문에 일반적으로 약간의 어려움입니다. 이제 컴파일러는 `Nullable<ThatValueType>` 대상 형식이와 일치 하는 경우 값 형식을로 암시적으로 변환 합니다. 이제 다음 코드를 사용할 수 있습니다.
 
 ```fsharp
 #r "nuget: Microsoft.Data.Analysis"

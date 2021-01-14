@@ -5,19 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 820ed324c8095e2f9f2823513a37965099f42c48
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: e47440110215d8e60744c26c6351211a2ac08f3a
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989640"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98191159"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>방법: 여러 버전의 워크플로를 함께 호스팅
 
 `WorkflowIdentity`는 워크플로 애플리케이션 개발자에게 이름 및 버전을 워크플로 정의에 연결하는 방법을 제공하며, 이러한 정보는 지속형 워크플로 인스턴스와 연결됩니다. 이 ID 정보는 워크플로 애플리케이션 개발자가 여러 버전의 워크플로 정의를 side-by-side로 실행하는 경우와 같은 시나리오를 가능하도록 하는 데 사용될 수 있으며 동적 업데이트와 같은 다른 기능의 토대를 제공합니다. 자습서의 이 단계에서는 `WorkflowIdentity`를 사용하여 여러 버전의 워크플로를 동시에 호스트하는 방법을 보여 줍니다.
-
-> [!NOTE]
-> 자습서의 전체 버전을 다운로드 하거나 비디오 연습을 보려면 [Windows Workflow Foundation (WF45)-초보자](https://go.microsoft.com/fwlink/?LinkID=248976)를 위한 자습서를 참조 하세요.
 
 ## <a name="in-this-topic"></a>항목 내용
 
@@ -25,25 +22,22 @@ ms.locfileid: "70989640"
 
 - [NumberGuessWorkflowActivities 프로젝트의 복사본을 만들려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)
 
-- [워크플로를 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)
+- [워크플로를 업데이트하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)
 
-  - [StateMachine 워크플로를 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
+  - [StateMachine 워크플로를 업데이트하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)
 
-  - [순서도 워크플로를 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
+  - [Flowchart 워크플로를 업데이트하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)
 
-  - [순차 워크플로를 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
+  - [Sequential 워크플로를 업데이트하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)
 
-- [이전 워크플로 버전을 포함 하도록 WorkflowVersionMap을 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)
+- [이전 워크플로 버전을 포함하도록 WorkflowVersionMap을 업데이트하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)
 
-- [응용 프로그램을 빌드하고 실행 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)
-
-> [!NOTE]
-> 이 항목의 단계를 수행하기 전에 애플리케이션을 실행하고 각 유형의 여러 워크플로를 시작한 후 각 워크플로마다 한두 개의 숫자를 추측하세요. 이러한 지속형 워크플로는이 단계와 다음 단계 [에서 사용 됩니다. 실행 중인 워크플로 인스턴스의](how-to-update-the-definition-of-a-running-workflow-instance.md)정의를 업데이트 합니다.
+- [애플리케이션을 빌드하고 실행하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)
 
 > [!NOTE]
-> 초보자를 위한 자습서의 각 단계는 이전 단계를 바탕으로 합니다. 이전 단계를 완료 하지 않은 경우 [Windows Workflow Foundation (WF45)-초보자](https://go.microsoft.com/fwlink/?LinkID=248976)를 위한 자습서에서 자습서의 전체 버전을 다운로드할 수 있습니다.
+> 이 항목의 단계를 수행하기 전에 애플리케이션을 실행하고 각 유형의 여러 워크플로를 시작한 후 각 워크플로마다 한두 개의 숫자를 추측하세요. 이러한 지속형 워크플로는이 단계에서 사용 되며, [방법: 실행 중인 워크플로 인스턴스의 정의 업데이트](how-to-update-the-definition-of-a-running-workflow-instance.md)를 수행 합니다.
 
-### <a name="BKMK_BackupCopy"></a>NumberGuessWorkflowActivities 프로젝트의 복사본을 만들려면
+### <a name="to-make-a-copy-of-the-numberguessworkflowactivities-project"></a><a name="BKMK_BackupCopy"></a> NumberGuessWorkflowActivities 프로젝트의 복사본을 만들려면
 
 1. Visual Studio 2012에서 **WF45GettingStartedTutorial** 솔루션을 엽니다 (열려 있지 않은 경우).
 
@@ -53,26 +47,26 @@ ms.locfileid: "70989640"
 
 4. Windows 탐색기를 열고 및 자습서 솔루션 파일과 프로젝트 폴더가 있는 폴더로 이동합니다.
 
-5. **NumberGuessWorkflowHost** 및 **NumberGuessWorkflowActivities**와 동일한 폴더에 **PreviousVersions** 라는 새 폴더를 만듭니다. 이 폴더는 이후 자습서 단계에서 사용되는 다른 버전의 워크플로가 포함된 어셈블리를 포함하는 데 사용됩니다.
+5. **NumberGuessWorkflowHost** 및 **NumberGuessWorkflowActivities** 와 동일한 폴더에 **PreviousVersions** 라는 새 폴더를 만듭니다. 이 폴더는 이후 자습서 단계에서 사용되는 다른 버전의 워크플로가 포함된 어셈블리를 포함하는 데 사용됩니다.
 
-6. **NumberGuessWorkflowActivities\bin\debug** 폴더 (또는 프로젝트 설정에 따라 **bin\release** )로 이동 합니다. **NumberGuessWorkflowActivities** 을 복사 하 여 **PreviousVersions** 폴더에 붙여넣습니다.
+6. **NumberGuessWorkflowActivities\bin\debug** 폴더 (또는 프로젝트 설정에 따라 **bin\release** )로 이동 합니다. **NumberGuessWorkflowActivities.dll** 을 복사 하 여 **PreviousVersions** 폴더에 붙여넣습니다.
 
-7. **PreviousVersions** 폴더의 **NumberGuessWorkflowActivities** 를 **NumberGuessWorkflowActivities_v1**로 바꿉니다.
+7. **PreviousVersions** 폴더의 **NumberGuessWorkflowActivities.dll** 이름을 **NumberGuessWorkflowActivities_v1.dll** 으로 바꿉니다.
 
     > [!NOTE]
     > 이 항목의 단계에서는 여러 버전의 워크플로를 포함하는 데 사용되는 어셈블리를 관리하는 한 가지 방법을 보여 줍니다. 어셈블리에 강력한 이름을 지정하거나 어셈블리를 전역 어셈블리 캐시에 등록하는 등의 다른 방법을 사용할 수도 있습니다.
 
-8. **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**및 새로 추가 된 **PreviousVersions** 폴더와 동일한 폴더에 **NumberGuessWorkflowActivities_du** 라는 새 폴더를 만들고 모든 파일을 복사 합니다. **NumberGuessWorkflowActivities** 폴더의 하위 폴더를 새 **NumberGuessWorkflowActivities_du** 폴더로 복사 합니다. 활동의 초기 버전에 대 한 프로젝트의이 백업 복사본은 다음 [방법으로 사용 됩니다. 실행 중인 워크플로 인스턴스의](how-to-update-the-definition-of-a-running-workflow-instance.md)정의를 업데이트 합니다.
+8. **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities** 및 새로 추가 된 **PreviousVersions** 폴더와 동일한 폴더에 **NumberGuessWorkflowActivities_du** 라는 새 폴더를 만들고 **NumberGuessWorkflowActivities** 폴더의 모든 파일 및 하위 폴더를 새 **NumberGuessWorkflowActivities_du** 폴더로 복사 합니다. 활동의 초기 버전에 대 한 프로젝트의이 백업 복사본은 [방법: 실행 중인 워크플로 인스턴스의 정의 업데이트](how-to-update-the-definition-of-a-running-workflow-instance.md)에 사용 됩니다.
 
 9. Visual Studio 2012에서 **WF45GettingStartedTutorial** 솔루션을 다시 엽니다.
 
-### <a name="BKMK_UpdateWorkflows"></a>워크플로를 업데이트 하려면
+### <a name="to-update-the-workflows"></a><a name="BKMK_UpdateWorkflows"></a> 워크플로를 업데이트 하려면
 
 이 단원에서는 워크플로 정의를 업데이트합니다. 즉, 사용자의 추측에 대한 피드백을 제공하는 두 개의 `WriteLine` 활동을 업데이트하고, 숫자가 추측된 후 게임에 대한 추가 정보를 제공하는 새로운 `WriteLine` 활동을 추가합니다.
 
-#### <a name="BKMK_UpdateStateMachine"></a>StateMachine 워크플로를 업데이트 하려면
+#### <a name="to-update-the-statemachine-workflow"></a><a name="BKMK_UpdateStateMachine"></a> StateMachine 워크플로를 업데이트 하려면
 
-1. **솔루션 탐색기**의 **NumberGuessWorkflowActivities** 프로젝트에서 **statemachinenumberguessworkflow.xaml**를 두 번 클릭 합니다.
+1. **솔루션 탐색기** 의 **NumberGuessWorkflowActivities** 프로젝트에서 **statemachinenumberguessworkflow.xaml** 를 두 번 클릭 합니다.
 
 2. 상태 시스템의 **추측 잘못** 된 전환을 두 번 클릭 합니다.
 
@@ -112,9 +106,9 @@ ms.locfileid: "70989640"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-#### <a name="BKMK_UpdateFlowchart"></a>순서도 워크플로를 업데이트 하려면
+#### <a name="to-update-the-flowchart-workflow"></a><a name="BKMK_UpdateFlowchart"></a> 순서도 워크플로를 업데이트 하려면
 
-1. **솔루션 탐색기**의 **NumberGuessWorkflowActivities** 프로젝트에서 **flowchartnumberguessworkflow.xaml**를 두 번 클릭 합니다.
+1. **솔루션 탐색기** 의 **NumberGuessWorkflowActivities** 프로젝트에서 **flowchartnumberguessworkflow.xaml** 를 두 번 클릭 합니다.
 
 2. 맨 왼쪽 `Text` 활동의 `WriteLine`를 업데이트합니다.
 
@@ -136,7 +130,7 @@ ms.locfileid: "70989640"
     Guess + " is too high."
     ```
 
-4. **도구 상자** `True` 의 **기본 형식** 섹션에서 **WriteLine** 활동을 끌어 맨 위에 `FlowDecision`있는 동작의 드롭 지점에 놓습니다. `WriteLine` 활동이 순서도에 추가되고 `True`의 `FlowDecision` 동작에 연결됩니다.
+4. **도구 상자** 의 **기본 형식** 섹션에서 **WriteLine** 활동을 끌어 `True` 맨 위에 있는 동작의 드롭 지점에 놓습니다 `FlowDecision` . `WriteLine` 활동이 순서도에 추가되고 `True`의 `FlowDecision` 동작에 연결됩니다.
 
 5. `Text` 속성 상자에 다음 식을 입력합니다.
 
@@ -148,9 +142,9 @@ ms.locfileid: "70989640"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-#### <a name="BKMK_UpdateSequential"></a>순차 워크플로를 업데이트 하려면
+#### <a name="to-update-the-sequential-workflow"></a><a name="BKMK_UpdateSequential"></a> 순차 워크플로를 업데이트 하려면
 
-1. **솔루션 탐색기**의 **NumberGuessWorkflowActivities** 프로젝트에서 **sequentialnumberguessworkflow.xaml**를 두 번 클릭 합니다.
+1. **솔루션 탐색기** 의 **NumberGuessWorkflowActivities** 프로젝트에서 **sequentialnumberguessworkflow.xaml** 를 두 번 클릭 합니다.
 
 2. `Text` 활동에서 맨 왼쪽 `WriteLine`의 `If`를 업데이트합니다.
 
@@ -172,7 +166,7 @@ ms.locfileid: "70989640"
     Guess + " is too high."
     ```
 
-4. **도구 상자** 의 **기본 형식** 섹션에서 **writeline** 활동을 끌어 **DoWhile** 활동 뒤에 놓습니다. 그러면 **writeline** 이 루트 `Sequence` 활동의 최종 활동이 됩니다.
+4. **도구 상자** 의 **기본 형식** 섹션에서 **writeline** 활동을 끌어 **DoWhile** 활동 뒤에 놓습니다. 그러면 **writeline** 이 루트 활동의 최종 활동이 됩니다 `Sequence` .
 
 5. `Text` 속성 상자에 다음 식을 입력합니다.
 
@@ -184,7 +178,7 @@ ms.locfileid: "70989640"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-### <a name="BKMK_UpdateWorkflowVersionMap"></a>이전 워크플로 버전을 포함 하도록 WorkflowVersionMap을 업데이트 하려면
+### <a name="to-update-workflowversionmap-to-include-the-previous-workflow-versions"></a><a name="BKMK_UpdateWorkflowVersionMap"></a> 이전 워크플로 버전을 포함 하도록 WorkflowVersionMap을 업데이트 하려면
 
 1. **NumberGuessWorkflowHost** 프로젝트에서 **WorkflowVersionMap.cs** (또는 **workflowversionmap .vb**)를 두 번 클릭 하 여 엽니다.
 
@@ -552,11 +546,11 @@ ms.locfileid: "70989640"
     }
     ```
 
-### <a name="BKMK_BuildAndRun"></a> 응용 프로그램을 빌드하고 실행하려면
+### <a name="to-build-and-run-the-application"></a><a name="BKMK_BuildAndRun"></a> 응용 프로그램을 빌드하고 실행 하려면
 
 1. Ctrl+Shift+B를 눌러 애플리케이션을 빌드하고 Ctrl+F5를 눌러 시작합니다.
 
-2. **새 게임**을 클릭 하 여 새 워크플로를 시작 합니다. 워크플로의 버전이 상태 창에 표시되고 연결된 `WorkflowIdentity`에서 업데이트된 버전이 반영됩니다. 완료 시 워크플로 추적 파일을 볼 수 있도록 `InstanceId`를 적어 두고 게임이 완료될 때까지 추측 값을 입력합니다. 상태 창에 표시된 정보에 사용자의 추측 값이 나타나는 방식은 `WriteLine` 활동에 대한 업데이트에 따라 달라집니다.
+2. **새 게임** 을 클릭 하 여 새 워크플로를 시작 합니다. 워크플로의 버전이 상태 창에 표시되고 연결된 `WorkflowIdentity`에서 업데이트된 버전이 반영됩니다. 완료 시 워크플로 추적 파일을 볼 수 있도록 `InstanceId`를 적어 두고 게임이 완료될 때까지 추측 값을 입력합니다. 상태 창에 표시된 정보에 사용자의 추측 값이 나타나는 방식은 `WriteLine` 활동에 대한 업데이트에 따라 달라집니다.
 
     ```console
     Please enter a number between 1 and 10
@@ -572,7 +566,7 @@ ms.locfileid: "70989640"
     > [!NOTE]
     > `WriteLine` 활동에서 업데이트된 텍스트는 표시되지만 이 항목에서 추가된 최종 `WriteLine` 활동의 출력은 표시되지 않습니다. 상태 창은 `PersistableIdle` 처리기에 의해 업데이트되기 때문입니다. 워크플로는 완료 및 최종 활동 후에도 유휴 상태가 되지 않으므로 `PersistableIdle` 처리기가 호출되지 않습니다. 그러나 `Completed` 처리기에 의해 유사한 메시지가 상태 창에 표시됩니다. 필요한 경우 `Completed`에서 텍스트를 추출하여 상태 창에 표시하도록 `StringWriter` 처리기에 코드를 추가할 수 있습니다.
 
-3. Windows 탐색기를 열고 **NumberGuessWorkflowHost\bin\debug** 폴더 (또는 프로젝트 설정에 따라 **bin\release** )로 이동 하 여 완료 된 워크플로에 해당 하는 메모장을 사용 하 여 추적 파일을 엽니다. 을 적어 `InstanceId`둔 경우 Windows 탐색기에서 **수정한 날짜** 정보를 사용 하 여 올바른 추적 파일을 식별할 수 있습니다.
+3. Windows 탐색기를 열고 **NumberGuessWorkflowHost\bin\debug** 폴더 (또는 프로젝트 설정에 따라 **bin\release** )로 이동 하 여 완료 된 워크플로에 해당 하는 메모장을 사용 하 여 추적 파일을 엽니다. 을 적어 둔 경우 `InstanceId` Windows 탐색기에서 **수정한 날짜** 정보를 사용 하 여 올바른 추적 파일을 식별할 수 있습니다.
 
     ```console
     Please enter a number between 1 and 10
@@ -589,4 +583,4 @@ ms.locfileid: "70989640"
 
 4. 다시 숫자 추측 애플리케이션으로 전환하고 업데이트를 수행하기 전에 시작된 워크플로 중 하나를 선택합니다. 상태 창 아래에 표시된 버전 정보를 확인하여 현재 선택된 워크플로의 버전을 식별할 수 있습니다. 몇 개의 추측 값을 입력한 후, 상태 업데이트가 이전 버전의 `WriteLine` 활동 출력과 일치하며 사용자의 추측 값을 포함하지 않음을 확인할 수 있습니다. 이는 이러한 워크플로가 `WriteLine` 업데이트가 없는 이전 워크플로 정의를 사용하기 때문입니다.
 
-    다음 단계 [에서 방법: 실행 중인 워크플로 인스턴스의](how-to-update-the-definition-of-a-running-workflow-instance.md)정의를 업데이트 합니다. 실행 중인 `v1` 워크플로 인스턴스는 새 기능 `v2` 을 인스턴스로 포함 하도록 업데이트 됩니다.
+    다음 단계에서 [방법: 실행 중인 워크플로 인스턴스의 정의 업데이트](how-to-update-the-definition-of-a-running-workflow-instance.md)를 실행 하는 워크플로 인스턴스는 `v1` 새 기능을 인스턴스로 포함 하도록 업데이트 됩니다 `v2` .

@@ -5,19 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 878e610bd1fe0b7e2496f251333a3ad21909788a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1505582e5ac7303a2df20539fdcf67435746b9d3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96245096"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190496"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost에서 Side-by-side 버전 관리
 
 <xref:System.ServiceModel.Activities.WorkflowServiceHost>.NET Framework 4.5에 도입 된 side-by-side 버전 관리에서는 단일 끝점에서 여러 버전의 워크플로 서비스를 호스팅하는 기능을 제공 합니다. 제공된 side-by-side 기능을 사용하여 워크플로 서비스를 구성할 수 있습니다. 그러면 기존 정의를 사용하여 실행 중인 인스턴스를 완료하는 동시에, 새 워크플로 정의를 사용하여 워크플로 서비스의 새 인스턴스를 만들 수 있습니다. 이 항목에서는 <xref:System.ServiceModel.Activities.WorkflowServiceHost>를 사용하는 워크플로 서비스 side-by-side 실행에 대해 대략적으로 설명합니다.  
-  
-> [!NOTE]
-> 샘플을 다운로드 하 고 워크플로 서비스 병렬 버전 관리에 대 한 비디오 연습을 시청 하려면 [Web-Hosted .Xamlx 워크플로 서비스를 사용 하 여 Side-by-side 버전 관리](https://go.microsoft.com/fwlink/?LinkId=393746)를 참조 하세요.  
   
 ## <a name="hosting-multiple-versions-in-a-workflow-service"></a>워크플로 서비스에서 여러 버전 호스팅  
 
