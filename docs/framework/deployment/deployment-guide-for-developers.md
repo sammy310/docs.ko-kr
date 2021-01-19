@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 950ff048a918a52e6c64d8cc15e1ef0f80233b88
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dddd10846c5c57c88d23fef6d6851e288bd2d4b1
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238654"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98191094"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
 
@@ -316,19 +316,19 @@ WiX(Windows Installer XML) 도구 집합은 XML 소스 코드에서 Windows 설�
 
 다음 콘텐츠를 참조하세요.
 
-- [BITS(Background Intelligent Transfer Service) 오류 코드](https://go.microsoft.com/fwlink/?LinkId=180946)
+- [BITS(Background Intelligent Transfer Service) 오류 코드](/windows/win32/bits/bits-return-values)
 
-- [URL 모니커 오류 코드](https://go.microsoft.com/fwlink/?LinkId=180947)
+- [URL 모니커 오류 코드](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145(v=vs.85))
 
-- [WinHttp 오류 코드](https://go.microsoft.com/fwlink/?LinkId=180948)
+- [WinHttp 오류 코드](/windows/win32/winhttp/error-messages)
 
 #### <a name="other-error-codes"></a>기타 오류 코드
 
 다음 콘텐츠를 참조하세요.
 
-- [Windows Installer 오류 코드](https://go.microsoft.com/fwlink/?LinkId=180949)
+- [Windows Installer 오류 코드](/previous-versions/aa368542(v=vs.85))
 
-- [Windows 업데이트 에이전트 결과 코드](https://go.microsoft.com/fwlink/?LinkId=180951)
+- [Windows 업데이트 에이전트 결과 코드](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
 ## <a name="uninstalling-the-net-framework"></a>.NET Framework 제거
 

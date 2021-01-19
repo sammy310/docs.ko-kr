@@ -3,12 +3,12 @@ title: ASP.NET 웹앱을 Azure VM으로 마이그레이션
 description: ASP.NET 웹 애플리케이션을 온-프레미스에서 Azure Virtual Machine으로 마이그레이션하는 방법에 대해 알아봅니다.
 ms.topic: how-to
 ms.date: 06/20/2020
-ms.openlocfilehash: 940243310c5e6ed13d2a42c8d9d87244200479f5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0bf591ce0bd02537414527c8f3ba22bd41cf51d6
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171561"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189215"
 ---
 # <a name="migrate-an-aspnet-web-application-to-an-azure-virtual-machine"></a>Azure Virtual Machine으로 ASP.NET 웹 애플리케이션 마이그레이션
 
@@ -26,7 +26,7 @@ ms.locfileid: "91171561"
   - [ASP.NET 애플리케이션용 새 가상 머신 만들기](https://go.microsoft.com/fwlink/?linkid=863237)
   - [기존 온-프레미스 VMWare 가상 머신 마이그레이션](/azure/migrate/tutorial-migrate-vmware)
   - [기존 온-프레미스 Hyper-V 가상 머신 마이그레이션](/azure/migrate/tutorial-migrate-hyper-v)
-- [Visual Studio를 사용하여 앱 게시](https://go.microsoft.com/fwlink/?linkid=863240)
+- [Visual Studio를 사용하여 앱 게시](/azure/virtual-machines/windows/publish-web-app-from-visual-studio)
 - [VM용 보안 가상 네트워크 만들기](/azure/virtual-network/virtual-network-get-started-vnet-subnet)
 - [애플리케이션용 CI/CD 파이프라인 만들기](/vsts/build-release/apps/cd/deploy-webdeploy-iis-deploygroups)
 - [고가용성 및 확장성을 위해 VM 확장 집합으로 이동](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)

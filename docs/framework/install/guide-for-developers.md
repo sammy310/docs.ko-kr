@@ -8,19 +8,19 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 4ea1954841696ef28cceca2968e750d9771be038
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 45ae10a92b66bc1b487e3ed4e1e29b6905b895f5
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543713"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190782"
 ---
 # <a name="install-the-net-framework-for-developers"></a>개발자용 .NET Framework 설치
 
 .NET은 Windows에서 실행되는 대부분의 앱에서 필수적인 요소이며, 해당 앱이 실행되는 데 필요한 공통적인 기능을 제공합니다. 개발자를 위해 .NET Framework에서는 시각적으로 멋진 사용자 환경 및 원활하고 안전한 통신이 가능한 앱을 구축하기 위한 포괄적이고 일관적인 프로그래밍 모델을 제공합니다.
 
 > [!NOTE]
-> 이 토픽은 시스템에 .NET Framework를 설치하거나 애플리케이션과 함께 .NET Framework를 설치하려는 **개발자**를 대상으로 합니다. .NET Framework 설치에 관심이 있는 **사용자**는 [Windows 10 및 Windows Server 2016에 .NET Framework 설치](on-windows-10.md)와 같은 특정 운영 체제에 .NET Framework를 설치하는 방법을 설명하는 개별 토픽을 참조하세요.
+> 이 토픽은 시스템에 .NET Framework를 설치하거나 애플리케이션과 함께 .NET Framework를 설치하려는 **개발자** 를 대상으로 합니다. .NET Framework 설치에 관심이 있는 **사용자** 는 [Windows 10 및 Windows Server 2016에 .NET Framework 설치](on-windows-10.md)와 같은 특정 운영 체제에 .NET Framework를 설치하는 방법을 설명하는 개별 토픽을 참조하세요.
 
 이 문서에서는 컴퓨터에 .NET Framework 4.5부터 .NET Framework 4.8까지 모든 .NET Framework 버전을 설치할 수 있는 링크를 제공합니다. 개발자는 이러한 링크를 앱과 함께 .NET Framework를 다운로드하고 재배포하기 위해 사용할 수 있습니다. 앱과 함께 .NET Framework 버전을 배포하는 방법에 대한 자세한 내용은 [개발자를 위한 .NET Framework 배포 가이드](../deployment/deployment-guide-for-developers.md)를 참조하세요.
 
@@ -46,9 +46,9 @@ ms.locfileid: "90543713"
 |**4.5.1** | [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451) | **포함된 운영 체제:**<br/><br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **설치 가능한 운영 체제:**<br /><br/> Windows 8 및 이전 버전<br /> Windows Server 2012 및 이전 버전<br />(전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
 |**4.5**   | [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)    | **포함된 운영 체제:** <br/><br/>Windows 8<br /> Windows Server 2012<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **설치 가능한 운영 체제:**<br/><br /> Windows 7 및 이전 버전<br /> Windows Server 2008 SP2 및 이전 버전<br />(전체 목록은 [시스템 요구 사항](../get-started/system-requirements.md) 참조)|
 
-지원되는 모든 플랫폼에서 .NET Framework의 특정 버전에 대한 **개발자 팩**을 설치할 수 있습니다.
+지원되는 모든 플랫폼에서 .NET Framework의 특정 버전에 대한 **개발자 팩** 을 설치할 수 있습니다.
 
-다음에서 **웹 또는 오프라인 설치 관리자**를 설치할 수 있습니다.
+다음에서 **웹 또는 오프라인 설치 관리자** 를 설치할 수 있습니다.
 
 - Windows 8.1 및 이전 버전
 
@@ -64,7 +64,7 @@ Visual Studio 또는 다른 개발 환경에서 최신 버전의 .NET Framework�
 
 ### <a name="to-install-the-net-framework-developer-pack-or-targeting-pack"></a>.NET Framework 개발자 팩 또는 대상 팩을 설치하려면
 
-*대상 팩*을 사용하면 Visual Studio 및 기타 개발 환경에서 개발할 때 앱이 특정 버전의 .NET Framework를 대상으로 할 수 있습니다. *개발자 팩*에는 특정 버전의 .NET Framework 및 해당 대상 팩과 함께 제공된 해당 SDK가 포함되어 있습니다.
+*대상 팩* 을 사용하면 Visual Studio 및 기타 개발 환경에서 개발할 때 앱이 특정 버전의 .NET Framework를 대상으로 할 수 있습니다. *개발자 팩* 에는 특정 버전의 .NET Framework 및 해당 대상 팩과 함께 제공된 해당 SDK가 포함되어 있습니다.
 
 .NET Framework 4.5.1 또는 4.5.2용 개발자 팩, .NET Framework 4.6용 대상 팩 및 .NET Framework 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 또는 4.8용 개발자 팩에서는 Visual Studio와 같은 통합 개발 환경에서 사용할 수 있는 특정 .NET Framework 버전의 참조 어셈블리, 언어 팩 및 IntelliSense 파일을 제공합니다.  Visual Studio를 사용하는 경우 개발자 팩 또는 타기팅 팩은 설치된 .NET Framework 버전을 새 프로젝트를 만들 때 선택한 대상에도 추가합니다.  다음 중 하나를 선택합니다.
 
@@ -78,7 +78,7 @@ Visual Studio 또는 다른 개발 환경에서 최신 버전의 .NET Framework�
 - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)(버전 4.5.2를 Windows 8.1 또는 이전 버전, Visual Studio 2013, Visual Studio 2012 또는 기타 IDE에 설치하려는 경우)
 - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)(버전 4.5.1을 Visual Studio 2012 또는 기타 IDE에 설치하려는 경우)
 
-개발자 팩 다운로드 페이지에서 **다운로드**를 선택합니다. 그리고 **실행** 또는 **저장**을 선택하고 표시된 메시지의 지침을 따릅니다. 다음 그림과 같이 Visual Studio 설치 관리자에서 **.NET 데스크톱 개발** 워크로드의 옵션 구성 요소 중에서 선택하여 특정 버전의.NET Framework용 개발자 팩 또는 대상 팩을 설치할 수도 있습니다.
+개발자 팩 다운로드 페이지에서 **다운로드** 를 선택합니다. 그리고 **실행** 또는 **저장** 을 선택하고 표시된 메시지의 지침을 따릅니다. 다음 그림과 같이 Visual Studio 설치 관리자에서 **.NET 데스크톱 개발** 워크로드의 옵션 구성 요소 중에서 선택하여 특정 버전의.NET Framework용 개발자 팩 또는 대상 팩을 설치할 수도 있습니다.
 
    ![.NET 데스크톱 개발 워크로드와 Visual Studio 설치 관리자](./media/visual-studio-installer.jpg)
 
@@ -115,15 +115,15 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
 1. 다운로드 페이지의 언어를 선택합니다. 이 옵션을 선택해도 .NET Framework의 지역화된 리소스를 다운로드하지는 않습니다. 이는 다운로드 페이지에 표시되는 텍스트에만 영향을 줍니다.
 
-1. **다운로드**를 선택합니다.
+1. **다운로드** 를 선택합니다.
 
-1. 메시지가 표시되면 시스템 아키텍처와 일치하는 다운로드를 선택한 후 **다음**을 선택합니다.
+1. 메시지가 표시되면 시스템 아키텍처와 일치하는 다운로드를 선택한 후 **다음** 을 선택합니다.
 
-1. 다운로드 메시지가 표시되면 다음 중 **하나**를 수행합니다.
+1. 다운로드 메시지가 표시되면 다음 중 **하나** 를 수행합니다.
 
-   - .NET Framework를 컴퓨터에 설치할 경우 **실행**을 선택한 후 화면에 표시되는 메시지를 따릅니다.
+   - .NET Framework를 컴퓨터에 설치할 경우 **실행** 을 선택한 후 화면에 표시되는 메시지를 따릅니다.
 
-   - 재배포를 위해 .NET Framework를 다운로드할 경우 **저장**을 선택한 후 화면에 표시되는 메시지를 따릅니다.
+   - 재배포를 위해 .NET Framework를 다운로드할 경우 **저장** 을 선택한 후 화면에 표시되는 메시지를 따릅니다.
 
 1. 추가 언어 리소스를 다운로드할 경우 다음 섹션의 지침에 따라 하나 이상의 언어 팩을 설치합니다.
 
@@ -134,7 +134,7 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
 - .NET Framework 4.5 이상 버전은 .NET Framework 4.0을 대체합니다. .NET Framework 4가 설치되어 있는 시스템에 이 버전을 설치하면 어셈블리가 교체됩니다.
 
-- .NET Framework 4.5 이상 버전을 제거하면 기존 .NET Framework 4 파일도 제거됩니다. .NET Framework 4로 돌아가려면 해당 프로그램과 모든 업데이트를 다시 설치해야 합니다. [.NET Framework 4 설치](https://go.microsoft.com/fwlink/p/?LinkId=230665)를 참조하세요.
+- .NET Framework 4.5 이상 버전을 제거하면 기존 .NET Framework 4 파일도 제거됩니다. .NET Framework 4로 돌아가려면 해당 프로그램과 모든 업데이트를 다시 설치해야 합니다. [.NET Framework 4 설치](/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))를 참조하세요.
 
 - .NET Framework 4.5 이상 버전을 설치하려면 관리자 자격 증명이 있어야 합니다.
 
@@ -162,7 +162,7 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
 2. 언어 목록에서 다운로드하려는 언어를 선택하고 페이지가 해당 언어로 다시 로드될 때까지 몇 초 동안 기다립니다.
 
-3. **다운로드**를 선택합니다.
+3. **다운로드** 를 선택합니다.
 
 다음 표에서는 지원되는 언어 목록을 보여 줍니다.
 

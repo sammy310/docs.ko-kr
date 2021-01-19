@@ -5,12 +5,12 @@ ms.date: 11/30/2020
 ms.custom: devx-track-dotnet
 ms.author: daberry
 author: daberry
-ms.openlocfilehash: 3ec1ee9e8da3a6e03581ce2a29a655ec0d68fe54
-ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
+ms.openlocfilehash: b547e105b13d380ffae049ab55e76aa25abe8cc3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97700950"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189202"
 ---
 # <a name="azure-sdk-for-net-overview"></a>.NET용 Azure SDK 개요
 
@@ -32,4 +32,4 @@ ms.locfileid: "97700950"
 
 3. **애플리케이션에서 SDK를 사용하여 코드 작성 -** Azure 서비스를 사용할 때 코드에서는 먼저 서비스에 사용할 클라이언트 개체를 만든 다음 해당 클라이언트 개체에 대해 메서드를 호출하여 서비스와 상호 작용합니다.  동기 메서드와 비동기 메서드가 모두 제공됩니다.  개별 SDK 패키지를 사용하는 예는 Azure 설명서 전반에 제공되어 있습니다.
 
-4. **SDK에 대한 로깅 구성(선택 사항) -** 애플리케이션과 Azure 간의 문제를 진단해야 하는 경우 [.NET용 Azure SDK에서 로깅을 사용하도록 설정](./logging.md)할 수 있습니다.
+4. **SDK에 대한 로깅 구성(선택 사항) -** 애플리케이션과 Azure 간의 문제를 진단해야 하는 경우 [.NET용 Azure SDK에서 로깅을 사용하도록 설정](../logging.md)할 수 있습니다.

@@ -2,12 +2,12 @@
 title: '호환성이 손상되는 변경: ASP.NET 앱에서 BinaryFormatter serialization 메서드가 사용되지 않고 금지됨'
 description: BinaryFormatter, Formatter, IFormatter에서 serialize 및 deserialize 메서드가 사용되지 않는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 5807a7d4e6beab26b9848b803922396dd893075b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1dca30d33f2aa0a6fe8f05fe728557092f836b2d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759785"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189846"
 ---
 # <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>ASP.NET 앱에서 BinaryFormatter serialization 메서드가 사용되지 않고 금지됨
 
@@ -75,7 +75,7 @@ ms.locfileid: "95759785"
   </PropertyGroup>
   ```
 
-권장 작업에 대한 자세한 내용은 [BinaryFormatter 사용 중지 및 비활성화 오류 해결](https://aka.ms/binaryformatter)을 참조하세요.
+권장 작업에 대한 자세한 내용은 [BinaryFormatter 사용 중지 및 비활성화 오류 해결](../../../../standard/serialization/binaryformatter-security-guide.md)을 참조하세요.
 
 ## <a name="affected-apis"></a>영향을 받는 API
 

@@ -3,12 +3,12 @@ title: .NET 웹 앱 또는 서비스를 Azure App Service로 마이그레이션
 description: .NET 웹앱 또는 서비스를 온-프레미스에서 Azure App Service로 마이그레이션하는 방법에 대해 알아봅니다.
 ms.topic: conceptual
 ms.date: 07/08/2020
-ms.openlocfilehash: a5e193b2dbaedb86ff0e24bc8b70043896bbeea3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0e2aaa23aedabef007878901ec7297711f140533
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539088"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189254"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>.NET 웹 앱 또는 서비스를 Azure App Service로 마이그레이션
 
@@ -24,7 +24,7 @@ ms.locfileid: "90539088"
 
 * [Azure Virtual Network](/azure/app-service/web-sites-integrate-with-vnet)를 사용하여 App Service를 온-프레미스 리소스에 연결할 VPN을 만듭니다.
 * [Azure Relay](/azure/service-bus-relay/relay-what-is-it)를 사용하여 방화벽을 변경하지 않고 온-프레미스 서비스를 클라우드에 안전하게 노출합니다.
-* [SQL database](https://go.microsoft.com/fwlink/?linkid=863217)의 Azure에 대한 종속성과 같은 종속성을 마이그레이션합니다.
+* [SQL database](./sql.md)의 Azure에 대한 종속성과 같은 종속성을 마이그레이션합니다.
 * 클라우드의 Platform-as-a-Service 기능을 사용하여 종속성을 줄입니다. 예를 들어, 온-프레미스 메일 서버에 연결하는 것보다 [SendGrid](/azure/sendgrid-dotnet-how-to-send-email) 사용을 고려해 봅니다.
 
 ### <a name="port-bindings"></a>포트 바인딩

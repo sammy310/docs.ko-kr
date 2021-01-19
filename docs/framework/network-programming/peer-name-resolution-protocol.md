@@ -3,12 +3,12 @@ title: 피어 이름 확인 프로토콜
 description: 보안성과 확장성이 있으며 동적인 이름 등록 및 이름 확인 프로토콜인 PNRP(피어 이름 확인 프로토콜)에 대해 알아봅니다.
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: d50514569d066d04391ce65522df789ed421dbed
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9ab46566b3c0d6ceff694eca266bdb6e10441374
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239395"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98191237"
 ---
 # <a name="peer-name-resolution-protocol"></a>피어 이름 확인 프로토콜
 
@@ -53,7 +53,3 @@ ms.locfileid: "96239395"
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>
 - [네트워크 프로그래밍 샘플](network-programming-samples.md)
-
-<!-- to-do: review sample links
-- [PeerToPeer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179571)
--->

@@ -2,12 +2,12 @@
 title: dotnet clean 명령
 description: dotnet clean 명령은 현재 디렉터리를 정리합니다.
 ms.date: 02/14/2020
-ms.openlocfilehash: a59922feba75e940a5cee2dfeb500f4f86372870
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1023f13c7662abb7dad613128631c7644ca15bb9
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463696"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189605"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -36,7 +36,7 @@ dotnet clean -h|--help
 
 `PROJECT | SOLUTION`
 
-정리할 MSBuild 프로젝트 또는 솔루션 프로젝트 또는 솔루션 파일을 지정하지 않으면 MSBuild는 현재 작업 디렉터리에서 *proj* 또는 *sln*으로 끝나는 파일 확장명이 있는 파일을 검색하고 해당 파일을 사용합니다.
+정리할 MSBuild 프로젝트 또는 솔루션 프로젝트 또는 솔루션 파일을 지정하지 않으면 MSBuild는 현재 작업 디렉터리에서 *proj* 또는 *sln* 으로 끝나는 파일 확장명이 있는 파일을 검색하고 해당 파일을 사용합니다.
 
 ## <a name="options"></a>옵션
 
@@ -46,7 +46,7 @@ dotnet clean -h|--help
 
 * **`-f|--framework <FRAMEWORK>`**
 
-  빌드 시 지정한 [프레임워크](../../standard/frameworks.md)입니다. 프레임워크는 [프로젝트 파일](csproj.md)에 정의해야 합니다. 빌드 시에 프레임워크를 지정한 경우 정리할 때도 프레임워크를 지정해야 합니다.
+  빌드 시 지정한 [프레임워크](../../standard/frameworks.md)입니다. 프레임워크는 [프로젝트 파일](../project-sdk/overview.md)에 정의해야 합니다. 빌드 시에 프레임워크를 지정한 경우 정리할 때도 프레임워크를 지정해야 합니다.
 
 * **`-h|--help`**
 

@@ -2,12 +2,12 @@
 title: 덤프 - .NET
 description: .NET의 덤프에 대한 소개입니다.
 ms.date: 10/12/2020
-ms.openlocfilehash: 7a4c7bf54b3e9ea43e685eafbd00b4a373326520
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.openlocfilehash: f68d9bd804350366625df014df4d9ca0641d5d4d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764944"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188558"
 ---
 # <a name="dumps"></a>덤프
 
@@ -19,7 +19,6 @@ ms.locfileid: "97764944"
 
 > [!NOTE]
 > 컨테이너 내에서 덤프를 수집하려면 PTRACE 기능이 필요하며, 이 기능은 `--cap-add=SYS_PTRACE` 또는 `--privileged`를 통해 추가할 수 있습니다.
-
 > [!NOTE]
 > 덤프는 실행 중인 프로세스의 전체 메모리를 포함할 수 있기 때문에 중요한 정보를 포함할 수 있습니다. 덤프를 처리할 때는 모든 보안 제한 사항과 지침을 고려해야 합니다.
 
@@ -53,11 +52,10 @@ ms.locfileid: "97764944"
 
 ## <a name="analyze-dumps"></a>덤프 분석
 
-[`dotnet-dump`](dotnet-dump.md) CLI 도구를 사용하거나 [Visual Studio](https://docs.microsoft.com/visualstudio/debugger/using-dump-files)에서 덤프를 분석할 수 있습니다.
+[`dotnet-dump`](dotnet-dump.md) CLI 도구를 사용하거나 [Visual Studio](/visualstudio/debugger/using-dump-files)에서 덤프를 분석할 수 있습니다.
 
 > [!NOTE]
 > Visual Studio 버전 16.8 이상에서는 .NET Core 3.1.7 이상에서 생성된 [Linux 덤프를 열](https://devblogs.microsoft.com/visualstudio/linux-managed-memory-dump-debugging/) 수 있습니다.  
-
 > [!NOTE]
 > 네이티브 디버깅이 필요한 경우 [SOS 디버거 확장](sos-debugging-extension.md)을 [Linux 및 macOS의 LLDB](debug-linux-dumps.md#analyze-dumps-on-linux)와 함께 사용할 수 있습니다. SOS는 Windows의 [Windbg/cdb](/windows-hardware/drivers/debugger/debugger-download-tools)와 함께 사용할 수도 있지만 Visual Studio와 함께 사용하는 것이 좋습니다.
 

@@ -3,12 +3,12 @@ title: 자체 서명된 인증서 생성 개요
 description: .NET Core 및 ASP.NET Core 프로젝트에 대한 기능과 자체 서명된 인증서 사용을 위한 기타 옵션을 추가하는 Microsoft dotnet dev-certs 도구에 대한 개요입니다.
 author: angee
 ms.date: 11/19/2020
-ms.openlocfilehash: b5bf4b719495c2d6ec248e8592367ac452be91c1
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: d1675abb7d584b72d981f9db739e02269abe662c
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96032179"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189143"
 ---
 # <a name="generate-self-signed-certificates-with-the-net-cli"></a>.NET CLI를 사용하여 자체 서명된 인증서 생성
 
@@ -210,7 +210,7 @@ dotnet dev-certs https --clean
 
 ### <a name="with-powershell"></a>PowerShell 사용
 
-PowerShell을 사용하여 자체 서명된 인증서를 생성할 수 있습니다. [PKI 클라이언트](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps&preserver-view=true)를 사용하여 자체 서명된 인증서를 생성할 수 있습니다.
+PowerShell을 사용하여 자체 서명된 인증서를 생성할 수 있습니다. [PKI 클라이언트](/powershell/module/pkiclient/new-selfsignedcertificate?preserve-view=true&view=win10-ps)를 사용하여 자체 서명된 인증서를 생성할 수 있습니다.
 
 ```powershell
 $cert = New-SelfSignedCertificate -DnsName @("contoso.com", "www.contoso.com") -CertStoreLocation "cert:\LocalMachine\My"
