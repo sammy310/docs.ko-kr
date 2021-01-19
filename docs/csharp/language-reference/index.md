@@ -1,7 +1,8 @@
 ---
 description: C# 참고자료
 title: C# 참고자료
-ms.date: 02/14/2017
+ms.date: 01/13/2021
+ms.custom: updateeachrelease
 f1_keywords:
 - _CSharpKeyword
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 317f375c46eee3bb9c719afb68993cd4720e54fe
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 663d08921b1fb6c5013ce8dddb044ba12ead8409
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89127193"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235237"
 ---
 # <a name="c-reference"></a>C# 참고자료
 
@@ -61,7 +62,10 @@ ms.locfileid: "89127193"
   
  [C# 8.0 사양 제안](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
  C# 8.0은 .NET Core 3.0에서 사용할 수 있습니다. 이 기능에는 nullable 참조 형식, 재귀 패턴 일치, 기본 인터페이스 메서드, 비동기 스트림, 범위 및 인덱스, 선언을 사용한 패턴, null 병합 할당 및 읽기 전용 인스턴스 멤버가 포함됩니다.
-  
+
+ [C# 9.0 사양 제안](../../../_csharplang/proposals/csharp-9.0/records.md)  
+ C# 9.0은 .NET 5.0에서 사용할 수 있습니다. 해당 기능으로는 레코드, 최상위 문, 패턴 일치 향상, init 전용 setter, 대상으로 형식화된 새로운 식, 모듈 이니셜라이저, 부분 메서드 확장, 정적 익명 함수, 대상으로 형식화된 조건식, 공변 반환 형식, foreach 루프의 확장 GetEnumerator, 람다 무시 항목 매개 변수, 로컬 함수의 특성, 원시 크기 정수, 함수 포인터, localsinit 플래그 내보내기 표시 안 함, 무제한 형식 매개 변수 주석 등이 있습니다.
+
 ## <a name="related-sections"></a>관련 단원  
 
  [C#용 Visual Studio 개발 환경 사용](/visualstudio/get-started/csharp)  

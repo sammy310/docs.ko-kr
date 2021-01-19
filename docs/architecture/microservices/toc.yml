@@ -10,12 +10,12 @@
           href: container-docker-introduction/docker-terminology.md
         - name: 'Docker 컨테이너, 이미지 및 레지스트리'
           href: container-docker-introduction/docker-containers-images-registries.md
-    - name: Docker 컨테이너에 대해 .NET Core와 .NET Framework 중에 선택
+    - name: Docker 컨테이너에 대해 .NET 5와 .NET Framework 중에 선택
       href: net-core-net-framework-containers/index.md
       items:
         - name: 일반 지침
           href: net-core-net-framework-containers/general-guidance.md
-        - name: Docker 컨테이너에 대해 .NET Core를 선택할 경우
+        - name: Docker 컨테이너에 대해 .NET을 선택하는 경우
           href: net-core-net-framework-containers/net-core-container-scenarios.md
         - name: Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
           href: net-core-net-framework-containers/net-framework-container-scenarios.md
@@ -101,7 +101,7 @@
           href: microservice-ddd-cqrs-patterns/ddd-oriented-microservice.md
         - name: 마이크로 서비스 도메인 모델 디자인
           href: microservice-ddd-cqrs-patterns/microservice-domain-model.md
-        - name: .NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
+        - name: .NET을 사용하여 마이크로 서비스 도메인 모델 구현
           href: microservice-ddd-cqrs-patterns/net-core-microservice-domain-model.md
         - name: Seedwork(도메인 모델에 대해 재사용이 가능한 기본 클래스 및 인터페이스)
           href: microservice-ddd-cqrs-patterns/seedwork-domain-model-base-classes-interfaces.md
