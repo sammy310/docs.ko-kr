@@ -2,12 +2,12 @@
 title: 비동기 작업을 여러 개 시작하고 완료될 때마다 처리
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: 52e4d786667a70730f311ca20a30acd7108107e3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4eb4d15739da82cbfcc8dc5e03af4c1ae761d553
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090371"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615908"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>비동기 작업을 여러 개 시작하고 완료될 때마다 처리(Visual Basic)
 
@@ -24,11 +24,11 @@ ms.locfileid: "91090371"
   
 1. 다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
-2. 메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.  
+2. 메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션** 을 선택합니다.  
   
 3. **프로젝트 열기** 대화 상자에서 압축을 해제한 샘플 코드가 포함된 폴더를 열고 AsyncFineTuningVB에 대한 솔루션(.sln) 파일을 엽니다.  
   
-4. **솔루션 탐색기**에서 **ProcessTasksAsTheyFinish** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.  
+4. **솔루션 탐색기** 에서 **ProcessTasksAsTheyFinish** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정** 을 선택합니다.  
   
 5. F5 키를 선택하여 프로젝트를 실행합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "91090371"
 
  이 예제에서는 [작업 하나가 완료 된 후 남은 비동기 작업 취소 (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md) 에서 개발 된 코드에를 추가 하 고 동일한 UI를 사용 합니다.  
   
- 직접 예제를 빌드하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르되, **CancelAfterOneTask**를 **시작 프로젝트**로 선택합니다. 이 항목의 변경 내용을 해당 프로젝트의 `AccessTheWebAsync` 메서드에 추가합니다. 변경 내용은 별표로 표시됩니다.  
+ 직접 예제를 빌드하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르되, **CancelAfterOneTask** 를 **시작 프로젝트** 로 선택합니다. 이 항목의 변경 내용을 해당 프로젝트의 `AccessTheWebAsync` 메서드에 추가합니다. 변경 내용은 별표로 표시됩니다.  
   
  **CancelAfterOneTask** 프로젝트에는 실행 시 작업 컬렉션을 만드는 쿼리가 이미 포함되어 있습니다. 다음 코드에서는 `ProcessURLAsync`를 호출할 때마다 <xref:System.Threading.Tasks.Task%601>가 반환됩니다. 여기서 `TResult`는 정수입니다.  
   
@@ -64,19 +64,19 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
     1. 컬렉션의 첫 번째 작업을 식별하여 다운로드를 완료하기 위해 `WhenAny` 호출을 대기합니다.  
   
         ```vb  
-        Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
+        Dim finishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
         ```  
   
     2. 컬렉션에서 해당 작업을 제거합니다.  
   
         ```vb  
-        downloadTasks.Remove(firstFinishedTask)  
+        downloadTasks.Remove(finishedTask)  
         ```  
   
-    3. `ProcessURLAsync` 호출에서 반환된 `firstFinishedTask`를 대기합니다. `firstFinishedTask` 변수는 <xref:System.Threading.Tasks.Task%601>입니다. 여기서 `TReturn`은 정수입니다. 작업은 이미 완료되었지만, 다음 예제와 같이 다운로드한 웹 사이트의 길이를 검색하도록 기다립니다.  
+    3. `ProcessURLAsync` 호출에서 반환된 `finishedTask`를 대기합니다. `finishedTask` 변수는 <xref:System.Threading.Tasks.Task%601>입니다. 여기서 `TReturn`은 정수입니다. 작업은 이미 완료되었지만, 다음 예제와 같이 다운로드한 웹 사이트의 길이를 검색하도록 기다립니다.  
   
         ```vb  
-        Dim length = Await firstFinishedTask  
+        Dim length = Await finishedTask  
         resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)  
         ```  
   
@@ -144,24 +144,24 @@ Class MainWindow
         ' Call SetUpURLList to make a list of web addresses.  
         Dim urlList As List(Of String) = SetUpURLList()  
   
-        ' ***Create a query that, when executed, returns a collection of tasks.  
+        ' **_Create a query that, when executed, returns a collection of tasks.  
         Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =  
             From url In urlList Select ProcessURLAsync(url, client, ct)  
   
-        ' ***Use ToList to execute the query and start the download tasks.
+        ' _*_Use ToList to execute the query and start the download tasks.
         Dim downloadTasks As List(Of Task(Of Integer)) = downloadTasksQuery.ToList()  
   
-        ' ***Add a loop to process the tasks one at a time until none remain.  
+        ' _*_Add a loop to process the tasks one at a time until none remain.  
         While downloadTasks.Count > 0  
-            ' ***Identify the first task that completes.  
-            Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
+            ' _*_Identify the first task that completes.  
+            Dim finishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
   
-            ' ***Remove the selected task from the list so that you don't  
+            ' _*_Remove the selected task from the list so that you don't  
             ' process it more than once.  
-            downloadTasks.Remove(firstFinishedTask)  
+            downloadTasks.Remove(finishedTask)  
   
-            ' ***Await the first completed task and display the results.  
-            Dim length = Await firstFinishedTask  
+            ' _**Await the first completed task and display the results.  
+            Dim length = Await finishedTask  
             resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)  
         End While  
   

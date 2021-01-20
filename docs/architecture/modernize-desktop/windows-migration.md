@@ -1,27 +1,27 @@
 ---
 title: Windows 10 마이그레이션
 description: 패키징 및 XAML 아일랜드와 같은 Windows 10 기능에 대해 자세히 알아봅니다.
-ms.date: 09/16/2019
-ms.openlocfilehash: cd17088b086a32fd3bb37e617d3a1047acedde0e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.date: 12/29/2020
+ms.openlocfilehash: 139a8f2354803dafeb0178b4dbfb57a95c4ddb34
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "97866547"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615947"
 ---
 # <a name="windows-10-migration"></a>Windows 10 마이그레이션
 
 Windows 7 일 내에 개발 된 데스크톱 응용 프로그램을 사용 하는 경우를 고려해 보세요. 해당 시점에 사용할 수 있는 WPF 기술을 사용 하 고 정상적으로 작동 하지만, Windows 10에서 실행 하는 경우 오래 된 UI 및 동작을 사용 합니다. 행렬과 같은 futuristic 동영상을 시청 하는 경우와 Nokia 8110 장치를 사용 하는 Neo가 표시 되는 것을 볼 수 있습니다. 필름이 20 년 후에는 잘 작동 하지만 장치 현대화 혜택을 받을 수 있습니다.
 
-Microsoft는 Windows 10 릴리스부터 태블릿 및 터치 장치와 같은 시나리오를 지원 하 고 Microsoft 운영 체제의 사용자에 게 최상의 환경을 제공 하기 위해 많은 혁신을 도입 했습니다. 예를 들어, 다음을 수행할 수 있습니다.
+Microsoft는 Windows 10 릴리스부터 태블릿 및 터치 장치와 같은 시나리오를 지원 하 고 Microsoft 운영 체제의 사용자에 게 최상의 환경을 제공 하기 위해 많은 혁신을 도입 했습니다. 예를 들어 다음을 수행할 수 있습니다.
 
 - Windows Hello를 사용 하 여 얼굴에 로그인 합니다.
 - 펜을 사용 하 여 자동으로 인식 되 고 digitalized 텍스트를 그리거나 필기할 수 있습니다.
 - WinML을 사용 하 여 클라우드에서 작성 된 로컬로 사용자 지정 된 AI 모델을 실행 합니다.
 
-이러한 모든 기능은 Windows 개발자가 WinRT (Windows 런타임) 라이브러리를 통해 사용할 수 있습니다. 라이브러리가 .NET Framework 및 .NET Core에 모두 노출 되므로 기존 데스크톱 앱에서 이러한 기능을 활용할 수 있습니다. XAML 아일랜드를 사용 하 여 UI를 현대화 시간에 따라 앱의 시각적 개체 및 동작을 향상 시킬 수도 있습니다.
+이러한 모든 기능은 Windows 개발자가 WinRT (Windows 런타임) 라이브러리를 통해 사용할 수 있습니다. 라이브러리는 .NET Framework 및 .NET 모두에도 노출 되므로 기존 데스크톱 앱에서 이러한 기능을 활용할 수 있습니다. XAML 아일랜드를 사용 하 여 UI를 현대화 시간에 따라 앱의 시각적 개체 및 동작을 향상 시킬 수도 있습니다.
 
-중요 한 한 가지 중요 한 점은이 현대화 경로를 따르기 위해 .NET Framework 기술을 중단 하지 않아도 된다는 것입니다. 안전 하 게 유지 하 고 .NET Core로 마이그레이션하지 않고도 Windows 10의 모든 이점을 누릴 수 있습니다. 따라서 현대화 경로를 선택할 수 있는 기능과 유연성이 모두 있습니다.
+중요 한 한 가지 중요 한 점은이 현대화 경로를 따르기 위해 .NET Framework 기술을 중단 하지 않아도 된다는 것입니다. 안전 하 게 유지 하 고 .NET으로 마이그레이션하지 않고도 Windows 10의 모든 이점을 누릴 수 있습니다. 따라서 현대화 경로를 선택할 수 있는 기능과 유연성이 모두 있습니다.
 
 ## <a name="winrt-apis"></a>WinRT Api
 
@@ -40,19 +40,19 @@ UWP 앱에는 OS에서 응용 프로그램의 설치 및 제거를 관리 하는
 
 일부 WinRT Api는이 패키지 id가 예상 대로 작동 해야 합니다. 그러나 기본 c + + 또는 .NET 앱과 같은 클래식 데스크톱 앱은 패키지 id가 필요 없는 다른 배포 시스템을 사용 합니다. 데스크톱 응용 프로그램에서 이러한 WinRT Api를 사용 하려면 패키지 id를 제공 해야 합니다.
 
-진행 하는 한 가지 방법은 추가 패키징 프로젝트를 빌드하는 것입니다. 패키징 프로젝트 내에서 원래 소스 코드 프로젝트를 가리키고 제공 하려는 Id 정보를 지정 합니다.패키지를 설치 하 고 설치 된 앱을 실행 하는 경우 코드에서 Id를 필요로 하는 모든 WinRT Api를 호출할 수 있도록 자동으로 식별을 가져옵니다.
+진행 하는 한 가지 방법은 추가 패키징 프로젝트를 빌드하는 것입니다. 패키징 프로젝트 내에서 원래 소스 코드 프로젝트를 가리키고 제공 하려는 Id 정보를 지정 합니다. 패키지를 설치 하 고 설치 된 앱을 실행 하는 경우 코드에서 Id를 필요로 하는 모든 WinRT Api를 호출할 수 있도록 자동으로 식별을 가져옵니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10">
-    <Identity Name="YOUR-APP-GUID "
-              Publisher="CN=YOUR COMPANY"
-              Version="1.x.x.x" />
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10">
+    <Identity Name="YOUR-APP-GUID "
+              Publisher="CN=YOUR COMPANY"
+              Version="1.x.x.x" />
 </Package>
 ```
 
-API를 포함 하는 형식이 [DualApiPartition](xref:Windows.Foundation.Metadata.DualApiPartitionAttribute) 특성으로 표시 되어 있는지 검사 하 여 패키지 된 응용 프로그램 id가 필요한 api를 확인할 수 있습니다.인 경우 패키지 되지 않은 기존 데스크톱 앱에서를 호출할 수 있습니다. 그렇지 않으면 패키징 프로젝트의 도움을 사용 하 여 클래식 데스크톱 앱을 UWP로 변환 해야 합니다.
+API를 포함 하는 형식이 [DualApiPartition](xref:Windows.Foundation.Metadata.DualApiPartitionAttribute) 특성으로 표시 되어 있는지 검사 하 여 패키지 된 응용 프로그램 id가 필요한 api를 확인할 수 있습니다. 인 경우 패키지 되지 않은 기존 데스크톱 앱에서를 호출할 수 있습니다. 그렇지 않으면 패키징 프로젝트의 도움을 사용 하 여 클래식 데스크톱 앱을 UWP로 변환 해야 합니다.
 
 <https://docs.microsoft.com/windows/desktop/apiindex/uwp-apis-callable-from-a-classic-desktop-app>
 
@@ -78,7 +78,7 @@ API를 포함 하는 형식이 [DualApiPartition](xref:Windows.Foundation.Metada
 
 ##### <a name="installation"></a>설치
 
-앱 패키지는 ' 실행 파일 ' 이라는 이름의 *% ProgramFiles% \\ windowsapps \\ package_name* 아래에 설치 됩니다  `app_name.exe` . 각 패키지 폴더에는 `AppxManifest.xml` 패키지 된 앱에 대 한 특수 XML 네임 스페이스를 포함 하는 매니페스트 ()가 포함 되어 있습니다. 해당 매니페스트 파일 내에는  `<EntryPoint>`   완전 신뢰 앱을 참조 하는 요소가 있습니다. 응용 프로그램이 시작 되 면 앱 컨테이너 내에서 실행 되지 않고, 대신 일반적으로 사용자로 실행 됩니다.
+앱 패키지는 ' 실행 파일 ' 이라는 이름의 *% ProgramFiles% \\ windowsapps \\ package_name* 아래에 설치 됩니다 `app_name.exe` . 각 패키지 폴더에는 `AppxManifest.xml` 패키지 된 앱에 대 한 특수 XML 네임 스페이스를 포함 하는 매니페스트 ()가 포함 되어 있습니다. 해당 매니페스트 파일 내에는 `<EntryPoint>` 완전 신뢰 앱을 참조 하는 요소가 있습니다. 응용 프로그램이 시작 되 면 앱 컨테이너 내에서 실행 되지 않고, 대신 일반적으로 사용자로 실행 됩니다.
 
 배포 후 패키지 파일은 운영 체제에 의해 읽기 전용으로 표시 되 고 매우 잠깁니다. 이러한 파일이 변조 되 면 Windows에서 앱을 시작할 수 없습니다.
 
@@ -90,13 +90,13 @@ OS는 폴더 위치에 따라 패키지 된 데스크톱 응용 프로그램에 
 
 ##### <a name="registry"></a>레지스트리
 
-앱 패키지에는  `HKLM\Software` 실제 레지스트리에서와 동등한 논리적으로 사용 되는 레지스트리 .dat 파일이 포함 되어 있습니다.   런타임에이 가상 레지스트리는이 hive의 내용을 네이티브 시스템 hive에 병합 하 여 두 항목의 단일 뷰를 제공 합니다.
+앱 패키지에는 실제 레지스트리에서와 동등한 논리적으로 사용 되는 레지스트리 .dat 파일이 포함 되어 있습니다. `HKLM\Software` 런타임에이 가상 레지스트리는이 hive의 내용을 네이티브 시스템 hive에 병합 하 여 두 항목의 단일 뷰를 제공 합니다.
 
 모든 쓰기는 패키지를 업그레이드 하는 동안 유지 되며 응용 프로그램을 제거 하는 경우에만 삭제 됩니다.
 
 ##### <a name="uninstallation"></a>제거
 
-사용자가 패키지를 제거 하면 아래에 있는 모든 파일 및 폴더가  `C:\Program Files\WindowsApps\package_name` 제거 되 고 AppData 또는 해당 프로세스 중에 캡처된 레지스트리에 리디렉션된 모든 파일이 제거 됩니다.
+사용자가 패키지를 제거 하면 아래에 있는 모든 파일 및 폴더가 `C:\Program Files\WindowsApps\package_name` 제거 되 고 AppData 또는 해당 프로세스 중에 캡처된 레지스트리에 리디렉션된 모든 파일이 제거 됩니다.
 
 패키지 응용 프로그램에서 설치, 파일 액세스, 레지스트리 및 제거를 처리 하는 방법에 대 한 자세한 내용은을 참조 하십시오 <https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-behind-the-scenes> .
 
@@ -118,7 +118,7 @@ OS는 폴더 위치에 따라 패키지 된 데스크톱 응용 프로그램에 
 
 ![Microsoft 설명서의 알림 클래스](./media/windows-migration/notification-class-documentation.png)
 
-WinRT API에 액세스 하려면 NuGet 패키지에 대 한 참조를 추가 합니다 `Microsoft.Windows.SDK.Contracts`   .이 패키지는 백그라운드에서 자동으로 수행 됩니다 (자세한 내용은 참조 <https://blogs.windows.com/windowsdeveloper/2019/04/30/calling-windows-10-apis-from-a-desktop-application-just-got-easier/> ).
+WinRT API에 액세스 하려면 NuGet 패키지에 대 한 참조를 추가 합니다 `Microsoft.Windows.SDK.Contracts` .이 패키지는 백그라운드에서 자동으로 수행 됩니다 (자세한 내용은 참조 <https://blogs.windows.com/windowsdeveloper/2019/04/30/calling-windows-10-apis-from-a-desktop-application-just-got-easier/> ).
 
 이제 일부 코드를 추가 하기 시작할 준비가 되었습니다.
 
@@ -193,11 +193,11 @@ Microsoft에서 Win32 앱 (Windows Forms, WPF 및 네이티브 Win32 앱)을 현
 
 ### <a name="how-it-works"></a>작동 방식
 
-Windows 10 1903 업데이트에는 몇 가지 XAML 호스팅 Api가 도입 되었습니다. 그 중 두 가지는 `WindowsXamlManager`   및  `DesktopWindowXamlSource` 입니다.
+Windows 10 1903 업데이트에는 몇 가지 XAML 호스팅 Api가 도입 되었습니다. 그 중 두 가지는 `WindowsXamlManager` 및 `DesktopWindowXamlSource` 입니다.
 
- `WindowsXamlManager`   클래스는 UWP XAML 프레임 워크를 처리 합니다. 해당 `InitializeForCurrentThread` 메서드는 Win32 응용 프로그램의 현재 스레드 내에서 UWP XAML 프레임 워크를 로드 합니다.
+`WindowsXamlManager`클래스는 UWP XAML 프레임 워크를 처리 합니다. 해당 `InitializeForCurrentThread` 메서드는 Win32 응용 프로그램의 현재 스레드 내에서 UWP XAML 프레임 워크를 로드 합니다.
 
-는  `DesktopWindowXamlSource`   XAML 아일랜드 콘텐츠의 인스턴스입니다. 이 클래스에는 `Content` 인스턴스화하고 설정 해야 하는 속성이 있습니다. 는를 `DesktopWindowXamlSource`   렌더링 하 고 HWND에서 해당 입력을 가져옵니다. XAML 아일랜드를 연결할 다른 HWND를 알고 있어야 하며, 부모의 HWND 크기를 조정 하 고 위치를 지정 해야 합니다.
+는 `DesktopWindowXamlSource` XAML 아일랜드 콘텐츠의 인스턴스입니다. 이 클래스에는 `Content` 인스턴스화하고 설정 해야 하는 속성이 있습니다. 는를 `DesktopWindowXamlSource` 렌더링 하 고 HWND에서 해당 입력을 가져옵니다. XAML 아일랜드를 연결할 다른 HWND를 알고 있어야 하며, 부모의 HWND 크기를 조정 하 고 위치를 지정 해야 합니다.
 
 WPF 또는 Windows Forms 개발자는 일반적으로 코드 내에서 HWND를 처리 하지 않으므로 HWND 포인터를 이해 하 고 처리 하 고 Win32 및 UWP 환경을 전달 하는 기본 연결을 처리 하기 어려울 수 있습니다.
 
@@ -223,12 +223,12 @@ Windows 커뮤니티 도구 키트는 래핑된 컨트롤과 호스트 컨트롤
         ...
         xmlns:uwpControls="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls">
 <Grid>
-    <Grid.RowDefinitions>
-        <RowDefinition Height="Auto"/>
-        <RowDefinition Height="\*"/>
-    </Grid.RowDefinitions>
-    <uwpControls:InkToolbar TargetInkCanvas="{x:Reference Name=inkCanvas}"/>
-    <uwpControls:InkCanvas Grid.Row="1" x:Name="inkCanvas" />
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="\*"/>
+    </Grid.RowDefinitions>
+    <uwpControls:InkToolbar TargetInkCanvas="{x:Reference Name=inkCanvas}"/>
+    <uwpControls:InkCanvas Grid.Row="1" x:Name="inkCanvas" />
 </Grid>
 ```
 
@@ -263,7 +263,7 @@ XAML 아일랜드를 사용 하는 방법에 대 한 연습은 다음을 참조 
 
 XAML 사용자 지정 컨트롤은 사용자 또는 제 3 자가 만든 컨트롤 (또는 사용자 정의 컨트롤)입니다 (WinUI 2.x 컨트롤 포함). Windows Forms 또는 WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트 하려면 다음이 필요 합니다.
 
-- `WindowsXamlHost`.Net Core 2.x 앱에서 UWP 컨트롤을 사용 하려면
+- `WindowsXamlHost`.Net 앱에서 UWP 컨트롤을 사용 하려면
 - 개체를 정의 하는 UWP 앱 프로젝트를 만듭니다 `XamlApplication` .
 
 WPF 또는 Windows Forms 프로젝트에 `Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication` 는 Windows 커뮤니티 도구 키트에서 제공 하는 클래스의 인스턴스에 대 한 액세스 권한이 있어야 합니다. 이 개체는 응용 프로그램의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 형식에 대 한 메타 데이터를 로드 하기 위한 루트 메타 데이터 공급자로 작동 합니다. 이렇게 하려면 빈 앱 (유니버설 Windows) 프로젝트를 WPF 또는 Windows Forms 프로젝트와 동일한 솔루션에 추가 하 고이 프로젝트의 기본 App 클래스를 수정 합니다.
@@ -284,9 +284,9 @@ WinUI 2는 오픈 소스 이며에서 정보를 찾을 수 있습니다 <https:/
 
 ### <a name="do-you-need-xaml-islands"></a>XAML 아일랜드가 필요 합니다.
 
-XAML 아일랜드는 응용 프로그램을 완전히 다시 작성 하지 않고도 새 UWP 컨트롤 및 동작을 활용 하 여 사용자 환경을 개선 하고자 하는 기존 Win32 앱을 위한 것입니다.  [Windows 10 api](/windows/uwp/porting/desktop-to-uwp-enhance)를 이미 활용할 수 있지만 XAML 아일랜드 까지는 UI가 아닌 api를 사용할 수 있습니다.
+XAML 아일랜드는 응용 프로그램을 완전히 다시 작성 하지 않고도 새 UWP 컨트롤 및 동작을 활용 하 여 사용자 환경을 개선 하고자 하는 기존 Win32 앱을 위한 것입니다. [Windows 10 api](/windows/uwp/porting/desktop-to-uwp-enhance)를 이미 활용할 수 있지만 XAML 아일랜드 까지는 UI가 아닌 api를 사용할 수 있습니다.
 
-새 Windows 앱을 개발 하는 경우 [UWP 앱](/windows/uwp/get-started/universal-application-platform-guide)   이 올바른 방법일 수 있습니다.
+새 Windows 앱을 개발 하는 경우 [UWP 앱](/windows/uwp/get-started/universal-application-platform-guide) 이 올바른 방법일 수 있습니다.
 
 ### <a name="the-road-ahead-xaml-islands-winui-30"></a>XAML 아일랜드 앞으로 이동: WinUI 3.0
 
@@ -300,7 +300,7 @@ WinUI 3은 활성 개발 중 이며, 전체 UI 플랫폼을 포함 하도록 Win
 
 ![WinUI 3.0의 구조](./media/windows-migration/winui3.png)
 
-이제 GitHub에서 XAML 프레임 워크가 개발 되 고 [NuGet](/nuget/what-is-nuget)패키지로 대역 외에서 제공 됩니다   .
+이제 GitHub에서 XAML 프레임 워크가 개발 되 고 [NuGet](/nuget/what-is-nuget) 패키지로 대역 외에서 제공 됩니다.
 
 OS의 일부로 제공되는 기존 UWP XAML API는 더 이상 새로운 기능 업데이트를 받지 않습니다. Windows 10 지원 주기에 따라 보안 업데이트 및 중요 한 수정이 계속 수신 됩니다.
 
@@ -315,7 +315,7 @@ WinUI 3은 **데스크톱 앱에서 WinUI를** 추가 하는이 중요 한 피�
 이 집계 내에서 WinUI 3을 통해 개발자는 다음의 오른쪽 조합을 쉽게 조합 하 고 일치 시킬 수 있습니다.
 
 * 앱 모델: UWP, Win32
-* 플랫폼: .NET Core 또는 네이티브
+* 플랫폼: .NET 또는 네이티브
 * 언어: .NET (C \# , Visual Basic), 표준 c + +
 * 패키징: MSIX, Microsoft Store에 대 한 AppX, 패키지 되지 않은
 * Interop: WinUI 3을 사용 하 여 WinUI XAML 아일랜드를 사용 하는 기존 WPF, WinForms 및 MFC 앱을 확장 합니다.
@@ -324,4 +324,4 @@ WinUI 3은 **데스크톱 앱에서 WinUI를** 추가 하는이 중요 한 피�
 
 >[!div class="step-by-step"]
 >[이전](migrate-modern-applications.md)
->[다음](example-migration-core.md)
+>[다음](example-migration.md)

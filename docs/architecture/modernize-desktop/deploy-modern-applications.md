@@ -2,12 +2,12 @@
 title: 최신 데스크톱 애플리케이션 배포
 description: 최신 데스크톱 응용 프로그램을 배포 하는 방법에 대해 알아야 할 모든 사항입니다.
 ms.date: 05/12/2020
-ms.openlocfilehash: 4a4d93caf1c2f8f58d48ee3199bbe6983fa939f4
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ba47f09b27adf270734bbfff285fe44dd4175d29
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "97866559"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615856"
 ---
 # <a name="deploying-modern-desktop-applications"></a>최신 데스크톱 애플리케이션 배포
 
@@ -115,7 +115,7 @@ OS는 응용 프로그램을 설치, 업데이트 및 제거 하는 모든 프�
 
 #### <a name="windows-application-packaging-project"></a>Windows 애플리케이션 패키징 프로젝트
 
-Visual Studio에서 **Windows 응용 프로그램 패키징 프로젝트**   프로젝트를 사용 하 여 데스크톱 앱에 대 한 패키지를 생성할 수 있습니다. 그런 다음 해당 패키지를 Microsoft Store에 게시 하거나 하나 이상의 Pc로 테스트용으로 로드 수 있습니다.
+Visual Studio에서 **Windows 애플리케이션 패키징 프로젝트** 프로젝트를 사용하여 데스크톱 앱에 대한 패키지를 생성할 수 있습니다. 그런 다음 해당 패키지를 Microsoft Store에 게시 하거나 하나 이상의 Pc로 테스트용으로 로드 수 있습니다.
 
 #### <a name="msix-packaging-tool"></a>MSIX Packaging Tool
 
@@ -226,4 +226,4 @@ MSIX은 설치를 위한 사용자 인터페이스를 만들어 패키지의 일
 새 MSIX 패키지를 생성 하 고 배포 서버로 옮긴 후에는 *appinstaller* 파일을 편집 하 여 이러한 변경 내용을 반영 해야 합니다 .이는 주로 새 msix 파일의 버전과 경로입니다. 다음에 사용자가 응용 프로그램을 시작할 때 시스템은 변경 내용을 검색 하 고 새 버전에 대 한 파일을 백그라운드에서 다운로드 합니다. 이 작업이 완료 되 면 새 응용 프로그램이 사용자에 대해 투명 하 게 실행 될 때 설치가 실행 됩니다.
 
 >[!div class="step-by-step"]
->[이전](example-migration-core.md)
+>[이전](example-migration.md)
