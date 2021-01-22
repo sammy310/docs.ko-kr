@@ -3,24 +3,24 @@ title: project.json 및 csproj 비교
 description: project.json 및 csproj e요소 간 매핑을 참조하세요.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: 7de9f623a57a6a094debd3e018edc1560d837fc2
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 3c9b2f266c2fcc3acdfbe40e19509edde20eec93
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970878"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190184"
 ---
-# <a name="a-mapping-between-projectjson-and-csproj-properties"></a><span data-ttu-id="15ea6-103">project.json 및 csproj 속성 간 매핑</span><span class="sxs-lookup"><span data-stu-id="15ea6-103">A mapping between project.json and csproj properties</span></span>
+# <a name="a-mapping-between-projectjson-and-csproj-properties"></a><span data-ttu-id="cf73a-103">project.json 및 csproj 속성 간 매핑</span><span class="sxs-lookup"><span data-stu-id="cf73a-103">A mapping between project.json and csproj properties</span></span>
 
-<span data-ttu-id="15ea6-104">[Nate McMaster](https://github.com/natemcmaster)</span><span class="sxs-lookup"><span data-stu-id="15ea6-104">By [Nate McMaster](https://github.com/natemcmaster)</span></span>
+<span data-ttu-id="cf73a-104">[Nate McMaster](https://github.com/natemcmaster)</span><span class="sxs-lookup"><span data-stu-id="cf73a-104">By [Nate McMaster](https://github.com/natemcmaster)</span></span>
 
-<span data-ttu-id="15ea6-105">.NET Core 도구 개발 중 중요한 디자인 변경으로 인해 *project.json* 파일이 더 이상 지원되지 않으며 대신 .NET Core 프로젝트를 MSBuild/csproj 형식으로 전환합니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-105">During the development of the .NET Core tooling, an important design change was made to no longer support *project.json* files and instead move the .NET Core projects to the MSBuild/csproj format.</span></span>
+<span data-ttu-id="cf73a-105">.NET Core 도구 개발 중 중요한 디자인 변경으로 인해 *project.json* 파일이 더 이상 지원되지 않으며 대신 .NET Core 프로젝트를 MSBuild/csproj 형식으로 전환합니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-105">During the development of the .NET Core tooling, an important design change was made to no longer support *project.json* files and instead move the .NET Core projects to the MSBuild/csproj format.</span></span>
 
-<span data-ttu-id="15ea6-106">이 문서에서는 프로젝트를 최신 버전의 도구로 업그레이드할 때, 새 형식을 사용하는 방법을 배우고 마이그레이션 도구에서 수행한 변경 내용을 이해할 수 있도록 *project.json* 의 설정이 MSBuild/csproj 형식으로 표시되는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-106">This article shows how the settings in *project.json* are represented in the MSBuild/csproj format so you can learn how to use the new format and understand the changes made by the migration tools when you're upgrading your project to the latest version of the tooling.</span></span>
+<span data-ttu-id="cf73a-106">이 문서에서는 프로젝트를 최신 버전의 도구로 업그레이드할 때, 새 형식을 사용하는 방법을 배우고 마이그레이션 도구에서 수행한 변경 내용을 이해할 수 있도록 *project.json* 의 설정이 MSBuild/csproj 형식으로 표시되는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-106">This article shows how the settings in *project.json* are represented in the MSBuild/csproj format so you can learn how to use the new format and understand the changes made by the migration tools when you're upgrading your project to the latest version of the tooling.</span></span>
 
-## <a name="the-csproj-format"></a><span data-ttu-id="15ea6-107">csproj 형식</span><span class="sxs-lookup"><span data-stu-id="15ea6-107">The csproj format</span></span>
+## <a name="the-csproj-format"></a><span data-ttu-id="cf73a-107">csproj 형식</span><span class="sxs-lookup"><span data-stu-id="cf73a-107">The csproj format</span></span>
 
-<span data-ttu-id="15ea6-108">새 형식인 \*.csproj는 XML 기반 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-108">The new format, \*.csproj, is an XML-based format.</span></span> <span data-ttu-id="15ea6-109">다음 예제에서는 `Microsoft.NET.Sdk`를 사용하는 .NET Core 프로젝트의 루트 노드를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-109">The following example shows the root node of a .NET Core project using the `Microsoft.NET.Sdk`.</span></span> <span data-ttu-id="15ea6-110">웹 프로젝트의 경우 사용되는 SDK는 `Microsoft.NET.Sdk.Web`입니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-110">For web projects, the SDK used is `Microsoft.NET.Sdk.Web`.</span></span>
+<span data-ttu-id="cf73a-108">새 형식인 \*.csproj는 XML 기반 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-108">The new format, \*.csproj, is an XML-based format.</span></span> <span data-ttu-id="cf73a-109">다음 예제에서는 `Microsoft.NET.Sdk`를 사용하는 .NET Core 프로젝트의 루트 노드를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-109">The following example shows the root node of a .NET Core project using the `Microsoft.NET.Sdk`.</span></span> <span data-ttu-id="cf73a-110">웹 프로젝트의 경우 사용되는 SDK는 `Microsoft.NET.Sdk.Web`입니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-110">For web projects, the SDK used is `Microsoft.NET.Sdk.Web`.</span></span>
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -28,9 +28,9 @@ ms.locfileid: "97970878"
 </Project>
 ```
 
-## <a name="common-top-level-properties"></a><span data-ttu-id="15ea6-111">일반적인 최상위 속성</span><span class="sxs-lookup"><span data-stu-id="15ea6-111">Common top-level properties</span></span>
+## <a name="common-top-level-properties"></a><span data-ttu-id="cf73a-111">일반적인 최상위 속성</span><span class="sxs-lookup"><span data-stu-id="cf73a-111">Common top-level properties</span></span>
 
-### <a name="name"></a><span data-ttu-id="15ea6-112">name</span><span class="sxs-lookup"><span data-stu-id="15ea6-112">name</span></span>
+### <a name="name"></a><span data-ttu-id="cf73a-112">name</span><span class="sxs-lookup"><span data-stu-id="cf73a-112">name</span></span>
 
 ```json
 {
@@ -38,9 +38,9 @@ ms.locfileid: "97970878"
 }
 ```
 
-<span data-ttu-id="15ea6-113">더 이상 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-113">No longer supported.</span></span> <span data-ttu-id="15ea6-114">csproj에서는 보통 디렉터리 이름과 일치하는 프로젝트 파일 이름으로 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-114">In csproj, this is determined by the project filename, which usually matches the directory name.</span></span> <span data-ttu-id="15ea6-115">예: `MyProjectName.csproj`.</span><span class="sxs-lookup"><span data-stu-id="15ea6-115">For example, `MyProjectName.csproj`.</span></span>
+<span data-ttu-id="cf73a-113">더 이상 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-113">No longer supported.</span></span> <span data-ttu-id="cf73a-114">csproj에서는 보통 디렉터리 이름과 일치하는 프로젝트 파일 이름으로 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-114">In csproj, this is determined by the project filename, which usually matches the directory name.</span></span> <span data-ttu-id="cf73a-115">예: `MyProjectName.csproj`.</span><span class="sxs-lookup"><span data-stu-id="cf73a-115">For example, `MyProjectName.csproj`.</span></span>
 
-<span data-ttu-id="15ea6-116">기본적으로 프로젝트 파일 이름은 `<AssemblyName>` 및 `<PackageId>` 속성의 값도 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-116">By default, the project filename also specifies the value of the `<AssemblyName>` and `<PackageId>` properties.</span></span>
+<span data-ttu-id="cf73a-116">기본적으로 프로젝트 파일 이름은 `<AssemblyName>` 및 `<PackageId>` 속성의 값도 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-116">By default, the project filename also specifies the value of the `<AssemblyName>` and `<PackageId>` properties.</span></span>
 
 ```xml
 <PropertyGroup>
@@ -49,10 +49,10 @@ ms.locfileid: "97970878"
 </PropertyGroup>
 ```
 
-<span data-ttu-id="15ea6-117">`buildOptions\outputName` 속성이 project.json에서 정의된 경우 `<AssemblyName>`에는 `<PackageId>`와 다른 값이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-117">The `<AssemblyName>` will have a different value than `<PackageId>` if `buildOptions\outputName` property was defined in project.json.</span></span>
-<span data-ttu-id="15ea6-118">자세한 내용은 [기타 일반적인 빌드 옵션](#other-common-build-options)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="15ea6-118">For more information, see [Other common build options](#other-common-build-options).</span></span>
+<span data-ttu-id="cf73a-117">`buildOptions\outputName` 속성이 project.json에서 정의된 경우 `<AssemblyName>`에는 `<PackageId>`와 다른 값이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-117">The `<AssemblyName>` will have a different value than `<PackageId>` if `buildOptions\outputName` property was defined in project.json.</span></span>
+<span data-ttu-id="cf73a-118">자세한 내용은 [기타 일반적인 빌드 옵션](#other-common-build-options)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cf73a-118">For more information, see [Other common build options](#other-common-build-options).</span></span>
 
-### <a name="version"></a><span data-ttu-id="15ea6-119">버전</span><span class="sxs-lookup"><span data-stu-id="15ea6-119">version</span></span>
+### <a name="version"></a><span data-ttu-id="cf73a-119">버전</span><span class="sxs-lookup"><span data-stu-id="cf73a-119">version</span></span>
 
 ```json
 {
@@ -60,7 +60,7 @@ ms.locfileid: "97970878"
 }
 ```
 
-<span data-ttu-id="15ea6-120">`VersionPrefix` 및 `VersionSuffix` 속성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-120">Use the `VersionPrefix` and `VersionSuffix` properties:</span></span>
+<span data-ttu-id="cf73a-120">`VersionPrefix` 및 `VersionSuffix` 속성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-120">Use the `VersionPrefix` and `VersionSuffix` properties:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -69,7 +69,7 @@ ms.locfileid: "97970878"
 </PropertyGroup>
 ```
 
-<span data-ttu-id="15ea6-121">`Version` 속성을 사용할 수도 있지만, 패키징 중 버전 설정이 재정의될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-121">You can also use the `Version` property, but this may override version settings during packaging:</span></span>
+<span data-ttu-id="cf73a-121">`Version` 속성을 사용할 수도 있지만, 패키징 중 버전 설정이 재정의될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-121">You can also use the `Version` property, but this may override version settings during packaging:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -77,7 +77,7 @@ ms.locfileid: "97970878"
 </PropertyGroup>
 ```
 
-### <a name="other-common-root-level-options"></a><span data-ttu-id="15ea6-122">기타 일반적인 루트 수준 옵션</span><span class="sxs-lookup"><span data-stu-id="15ea6-122">Other common root-level options</span></span>
+### <a name="other-common-root-level-options"></a><span data-ttu-id="cf73a-122">기타 일반적인 루트 수준 옵션</span><span class="sxs-lookup"><span data-stu-id="cf73a-122">Other common root-level options</span></span>
 
 ```json
 {
@@ -104,9 +104,9 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="frameworks"></a><span data-ttu-id="15ea6-123">frameworks</span><span class="sxs-lookup"><span data-stu-id="15ea6-123">frameworks</span></span>
+## <a name="frameworks"></a><span data-ttu-id="cf73a-123">frameworks</span><span class="sxs-lookup"><span data-stu-id="cf73a-123">frameworks</span></span>
 
-### <a name="one-target-framework"></a><span data-ttu-id="15ea6-124">단일 대상 프레임워크</span><span class="sxs-lookup"><span data-stu-id="15ea6-124">One target framework</span></span>
+### <a name="one-target-framework"></a><span data-ttu-id="cf73a-124">단일 대상 프레임워크</span><span class="sxs-lookup"><span data-stu-id="cf73a-124">One target framework</span></span>
 
 ```json
 {
@@ -122,7 +122,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="multiple-target-frameworks"></a><span data-ttu-id="15ea6-125">여러 대상 프레임워크</span><span class="sxs-lookup"><span data-stu-id="15ea6-125">Multiple target frameworks</span></span>
+### <a name="multiple-target-frameworks"></a><span data-ttu-id="cf73a-125">여러 대상 프레임워크</span><span class="sxs-lookup"><span data-stu-id="cf73a-125">Multiple target frameworks</span></span>
 
 ```json
 {
@@ -133,7 +133,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="15ea6-126">`TargetFrameworks` 속성을 사용하여 대상 프레임워크의 목록을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-126">Use the `TargetFrameworks` property to define your list of target frameworks.</span></span> <span data-ttu-id="15ea6-127">세미콜론을 사용하여 여러 프레임워크 값을 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-127">Use semi-colon to separate multiple framework values.</span></span>
+<span data-ttu-id="cf73a-126">`TargetFrameworks` 속성을 사용하여 대상 프레임워크의 목록을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-126">Use the `TargetFrameworks` property to define your list of target frameworks.</span></span> <span data-ttu-id="cf73a-127">세미콜론을 사용하여 여러 프레임워크 값을 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-127">Use semi-colon to separate multiple framework values.</span></span>
 
 ```xml
 <PropertyGroup>
@@ -141,13 +141,13 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="dependencies"></a><span data-ttu-id="15ea6-128">종속성</span><span class="sxs-lookup"><span data-stu-id="15ea6-128">dependencies</span></span>
+## <a name="dependencies"></a><span data-ttu-id="cf73a-128">종속성</span><span class="sxs-lookup"><span data-stu-id="cf73a-128">dependencies</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="15ea6-129">종속성이 **프로젝트** 이고 패키지가 아닌 경우 형식이 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-129">If the dependency is a **project** and not a package, the format is different.</span></span>
-> <span data-ttu-id="15ea6-130">자세한 내용은 [종속성 유형](#dependency-type) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="15ea6-130">For more information, see the [dependency type](#dependency-type) section.</span></span>
+> <span data-ttu-id="cf73a-129">종속성이 **프로젝트** 이고 패키지가 아닌 경우 형식이 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-129">If the dependency is a **project** and not a package, the format is different.</span></span>
+> <span data-ttu-id="cf73a-130">자세한 내용은 [종속성 유형](#dependency-type) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cf73a-130">For more information, see the [dependency type](#dependency-type) section.</span></span>
 
-### <a name="netstandardlibrary-metapackage"></a><span data-ttu-id="15ea6-131">NETStandard.Library metapackage</span><span class="sxs-lookup"><span data-stu-id="15ea6-131">NETStandard.Library metapackage</span></span>
+### <a name="netstandardlibrary-metapackage"></a><span data-ttu-id="cf73a-131">NETStandard.Library metapackage</span><span class="sxs-lookup"><span data-stu-id="cf73a-131">NETStandard.Library metapackage</span></span>
 
 ```json
 {
@@ -163,7 +163,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="microsoftnetcoreapp-metapackage"></a><span data-ttu-id="15ea6-132">Microsoft.NETCore.App metapackage</span><span class="sxs-lookup"><span data-stu-id="15ea6-132">Microsoft.NETCore.App metapackage</span></span>
+### <a name="microsoftnetcoreapp-metapackage"></a><span data-ttu-id="cf73a-132">Microsoft.NETCore.App metapackage</span><span class="sxs-lookup"><span data-stu-id="cf73a-132">Microsoft.NETCore.App metapackage</span></span>
 
 ```json
 {
@@ -179,9 +179,9 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="15ea6-133">마이그레이션된 프로젝트의 `<RuntimeFrameworkVersion>` 값은 설치된 SDK 버전에 따라 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-133">The `<RuntimeFrameworkVersion>` value in the migrated project is determined by the version of SDK that's installed.</span></span>
+<span data-ttu-id="cf73a-133">마이그레이션된 프로젝트의 `<RuntimeFrameworkVersion>` 값은 설치된 SDK 버전에 따라 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-133">The `<RuntimeFrameworkVersion>` value in the migrated project is determined by the version of SDK that's installed.</span></span>
 
-### <a name="top-level-dependencies"></a><span data-ttu-id="15ea6-134">최상위 종속성</span><span class="sxs-lookup"><span data-stu-id="15ea6-134">Top-level dependencies</span></span>
+### <a name="top-level-dependencies"></a><span data-ttu-id="cf73a-134">최상위 종속성</span><span class="sxs-lookup"><span data-stu-id="cf73a-134">Top-level dependencies</span></span>
 
 ```json
 {
@@ -197,7 +197,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="per-framework-dependencies"></a><span data-ttu-id="15ea6-135">프레임워크별 종속성</span><span class="sxs-lookup"><span data-stu-id="15ea6-135">Per-framework dependencies</span></span>
+### <a name="per-framework-dependencies"></a><span data-ttu-id="cf73a-135">프레임워크별 종속성</span><span class="sxs-lookup"><span data-stu-id="cf73a-135">Per-framework dependencies</span></span>
 
 ```json
 {
@@ -226,7 +226,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="imports"></a><span data-ttu-id="15ea6-136">가져오기</span><span class="sxs-lookup"><span data-stu-id="15ea6-136">imports</span></span>
+### <a name="imports"></a><span data-ttu-id="cf73a-136">가져오기</span><span class="sxs-lookup"><span data-stu-id="cf73a-136">imports</span></span>
 
 ```json
 {
@@ -253,9 +253,12 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="dependency-type"></a><span data-ttu-id="15ea6-137">종속성 유형</span><span class="sxs-lookup"><span data-stu-id="15ea6-137">dependency type</span></span>
+> [!NOTE]
+> <span data-ttu-id="cf73a-137">`PackageTargetFallback` 속성은 더 이상 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-137">The `PackageTargetFallback` property is deprecated.</span></span> <span data-ttu-id="cf73a-138">대신 [AssetTargetFallback](../project-sdk/msbuild-props.md#assettargetfallback)을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-138">Use [AssetTargetFallback](../project-sdk/msbuild-props.md#assettargetfallback) instead.</span></span>
 
-#### <a name="type-project"></a><span data-ttu-id="15ea6-138">type: project</span><span class="sxs-lookup"><span data-stu-id="15ea6-138">type: project</span></span>
+### <a name="dependency-type"></a><span data-ttu-id="cf73a-139">종속성 유형</span><span class="sxs-lookup"><span data-stu-id="cf73a-139">dependency type</span></span>
+
+#### <a name="type-project"></a><span data-ttu-id="cf73a-140">type: project</span><span class="sxs-lookup"><span data-stu-id="cf73a-140">type: project</span></span>
 
 ```json
 {
@@ -276,9 +279,9 @@ And it's really great!</Description>
 ```
 
 > [!NOTE]
-> <span data-ttu-id="15ea6-139">`dotnet pack --version-suffix $suffix`가 프로젝트 참조의 종속성 버전을 결정하는 방법이 중단됩니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-139">This will break the way that `dotnet pack --version-suffix $suffix` determines the dependency version of a project reference.</span></span>
+> <span data-ttu-id="cf73a-141">`dotnet pack --version-suffix $suffix`가 프로젝트 참조의 종속성 버전을 결정하는 방법이 중단됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-141">This will break the way that `dotnet pack --version-suffix $suffix` determines the dependency version of a project reference.</span></span>
 
-#### <a name="type-build"></a><span data-ttu-id="15ea6-140">type: build</span><span class="sxs-lookup"><span data-stu-id="15ea6-140">type: build</span></span>
+#### <a name="type-build"></a><span data-ttu-id="cf73a-142">type: build</span><span class="sxs-lookup"><span data-stu-id="cf73a-142">type: build</span></span>
 
 ```json
 {
@@ -297,7 +300,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-#### <a name="type-platform"></a><span data-ttu-id="15ea6-141">type: platform</span><span class="sxs-lookup"><span data-stu-id="15ea6-141">type: platform</span></span>
+#### <a name="type-platform"></a><span data-ttu-id="cf73a-143">type: platform</span><span class="sxs-lookup"><span data-stu-id="cf73a-143">type: platform</span></span>
 
 ```json
 {
@@ -310,9 +313,9 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="15ea6-142">csproj에는 동일한 항목이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-142">There is no equivalent in csproj.</span></span>
+<span data-ttu-id="cf73a-144">csproj에는 동일한 항목이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-144">There is no equivalent in csproj.</span></span>
 
-## <a name="runtimes"></a><span data-ttu-id="15ea6-143">runtimes</span><span class="sxs-lookup"><span data-stu-id="15ea6-143">runtimes</span></span>
+## <a name="runtimes"></a><span data-ttu-id="cf73a-145">runtimes</span><span class="sxs-lookup"><span data-stu-id="cf73a-145">runtimes</span></span>
 
 ```json
 {
@@ -330,16 +333,16 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="standalone-apps-self-contained-deployment"></a><span data-ttu-id="15ea6-144">독립 실행형 앱(자체 포함 배포)</span><span class="sxs-lookup"><span data-stu-id="15ea6-144">Standalone apps (self-contained deployment)</span></span>
+### <a name="standalone-apps-self-contained-deployment"></a><span data-ttu-id="cf73a-146">독립 실행형 앱(자체 포함 배포)</span><span class="sxs-lookup"><span data-stu-id="cf73a-146">Standalone apps (self-contained deployment)</span></span>
 
-<span data-ttu-id="15ea6-145">project.json에서 `runtimes` 섹션 정의는 앱이 빌드 및 게시 중 독립 실행형이었음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-145">In project.json, defining a `runtimes` section means the app was standalone during build and publish.</span></span>
-<span data-ttu-id="15ea6-146">MSBuild에서 모든 프로젝트는 빌드 중 *이식 가능* 하지만 독립 실행형으로 게시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-146">In MSBuild, all projects are *portable* during build, but can be published as standalone.</span></span>
+<span data-ttu-id="cf73a-147">project.json에서 `runtimes` 섹션 정의는 앱이 빌드 및 게시 중 독립 실행형이었음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-147">In project.json, defining a `runtimes` section means the app was standalone during build and publish.</span></span>
+<span data-ttu-id="cf73a-148">MSBuild에서 모든 프로젝트는 빌드 중 *이식 가능* 하지만 독립 실행형으로 게시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-148">In MSBuild, all projects are *portable* during build, but can be published as standalone.</span></span>
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-<span data-ttu-id="15ea6-147">자세한 내용은 [SCD(자체 포함 배포)](../deploying/index.md#publish-self-contained)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="15ea6-147">For more information, see [Self-contained deployments (SCD)](../deploying/index.md#publish-self-contained).</span></span>
+<span data-ttu-id="cf73a-149">자세한 내용은 [SCD(자체 포함 배포)](../deploying/index.md#publish-self-contained)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cf73a-149">For more information, see [Self-contained deployments (SCD)](../deploying/index.md#publish-self-contained).</span></span>
 
-## <a name="tools"></a><span data-ttu-id="15ea6-148">도구</span><span class="sxs-lookup"><span data-stu-id="15ea6-148">tools</span></span>
+## <a name="tools"></a><span data-ttu-id="cf73a-150">도구</span><span class="sxs-lookup"><span data-stu-id="cf73a-150">tools</span></span>
 
 ```json
 {
@@ -356,13 +359,15 @@ And it's really great!</Description>
 ```
 
 > [!NOTE]
-> <span data-ttu-id="15ea6-149">도구의 `imports`는 csproj에서 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-149">`imports` on tools are not supported in csproj.</span></span> <span data-ttu-id="15ea6-150">imports가 필요한 도구는 새 `Microsoft.NET.Sdk`와 작동하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-150">Tools that need imports will not work with the new `Microsoft.NET.Sdk`.</span></span>
+>
+> - <span data-ttu-id="cf73a-151">도구의 `imports`는 csproj에서 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-151">`imports` on tools are not supported in csproj.</span></span> <span data-ttu-id="cf73a-152">imports가 필요한 도구는 `Microsoft.NET.Sdk`에서 작동하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-152">Tools that need imports will not work with `Microsoft.NET.Sdk`.</span></span>
+> - <span data-ttu-id="cf73a-153">`DotNetCliToolReference`는 사용되지 않으며 대신 [로컬 도구](global-tools.md#install-a-local-tool)가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-153">`DotNetCliToolReference` is deprecated in favor of [local tools](global-tools.md#install-a-local-tool).</span></span>
 
-## <a name="buildoptions"></a><span data-ttu-id="15ea6-151">buildOptions</span><span class="sxs-lookup"><span data-stu-id="15ea6-151">buildOptions</span></span>
+## <a name="buildoptions"></a><span data-ttu-id="cf73a-154">buildOptions</span><span class="sxs-lookup"><span data-stu-id="cf73a-154">buildOptions</span></span>
 
-<span data-ttu-id="15ea6-152">[파일](#files)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="15ea6-152">See also [Files](#files).</span></span>
+<span data-ttu-id="cf73a-155">[파일](#files)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cf73a-155">See also [Files](#files).</span></span>
 
-### <a name="emitentrypoint"></a><span data-ttu-id="15ea6-153">emitEntryPoint</span><span class="sxs-lookup"><span data-stu-id="15ea6-153">emitEntryPoint</span></span>
+### <a name="emitentrypoint"></a><span data-ttu-id="cf73a-156">emitEntryPoint</span><span class="sxs-lookup"><span data-stu-id="cf73a-156">emitEntryPoint</span></span>
 
 ```json
 {
@@ -378,7 +383,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="15ea6-154">`emitEntryPoint`가 `false`인 경우 `OutputType` 값은 기본값인 `Library`로 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-154">If `emitEntryPoint` was `false`, the value of `OutputType` is converted to `Library`, which is the default value:</span></span>
+<span data-ttu-id="cf73a-157">`emitEntryPoint`가 `false`인 경우 `OutputType` 값은 기본값인 `Library`로 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-157">If `emitEntryPoint` was `false`, the value of `OutputType` is converted to `Library`, which is the default value:</span></span>
 
 ```json
 {
@@ -395,7 +400,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="keyfile"></a><span data-ttu-id="15ea6-155">keyFile</span><span class="sxs-lookup"><span data-stu-id="15ea6-155">keyFile</span></span>
+### <a name="keyfile"></a><span data-ttu-id="cf73a-158">keyFile</span><span class="sxs-lookup"><span data-stu-id="cf73a-158">keyFile</span></span>
 
 ```json
 {
@@ -405,7 +410,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="15ea6-156">`keyFile` 요소는 MSBuild의 세 가지 속성으로 확장됩니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-156">The `keyFile` element expands to three properties in MSBuild:</span></span>
+<span data-ttu-id="cf73a-159">`keyFile` 요소는 MSBuild의 세 가지 속성으로 확장됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-159">The `keyFile` element expands to three properties in MSBuild:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -415,7 +420,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="other-common-build-options"></a><span data-ttu-id="15ea6-157">기타 일반적인 빌드 옵션</span><span class="sxs-lookup"><span data-stu-id="15ea6-157">Other common build options</span></span>
+### <a name="other-common-build-options"></a><span data-ttu-id="cf73a-160">기타 일반적인 빌드 옵션</span><span class="sxs-lookup"><span data-stu-id="cf73a-160">Other common build options</span></span>
 
 ```json
 {
@@ -445,11 +450,11 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="packoptions"></a><span data-ttu-id="15ea6-158">packOptions</span><span class="sxs-lookup"><span data-stu-id="15ea6-158">packOptions</span></span>
+## <a name="packoptions"></a><span data-ttu-id="cf73a-161">packOptions</span><span class="sxs-lookup"><span data-stu-id="cf73a-161">packOptions</span></span>
 
-<span data-ttu-id="15ea6-159">[파일](#files)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="15ea6-159">See also [Files](#files).</span></span>
+<span data-ttu-id="cf73a-162">[파일](#files)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cf73a-162">See also [Files](#files).</span></span>
 
-### <a name="common-pack-options"></a><span data-ttu-id="15ea6-160">일반적인 팩 옵션</span><span class="sxs-lookup"><span data-stu-id="15ea6-160">Common pack options</span></span>
+### <a name="common-pack-options"></a><span data-ttu-id="cf73a-163">일반적인 팩 옵션</span><span class="sxs-lookup"><span data-stu-id="cf73a-163">Common pack options</span></span>
 
 ```json
 {
@@ -485,9 +490,9 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="15ea6-161">MSBuild에는 `owners` 요소에 대해 동일한 요소가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-161">There is no equivalent for the `owners` element in MSBuild.</span></span> <span data-ttu-id="15ea6-162">`summary`의 경우 MSBuild `<Description>` 속성을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-162">For `summary`, you can use the MSBuild `<Description>` property.</span></span> <span data-ttu-id="15ea6-163">`summary`의 값은 이 속성에 자동으로 마이그레이션되지 않습니다. 이 속성이 [`description`](#other-common-root-level-options) 요소에 매핑되기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-163">The value of `summary` is not migrated automatically to that property, since that property is mapped to the [`description`](#other-common-root-level-options) element.</span></span>  <span data-ttu-id="15ea6-164">[PackageIconUrl은 더 이상 사용되지 않고](/nuget/reference/msbuild-targets#packageiconurl) 대신 PackageIcon이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-164">[PackageIconUrl is deprecated](/nuget/reference/msbuild-targets#packageiconurl) in favor of PackageIcon.</span></span>
+<span data-ttu-id="cf73a-164">MSBuild에는 `owners` 요소에 대해 동일한 요소가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-164">There is no equivalent for the `owners` element in MSBuild.</span></span> <span data-ttu-id="cf73a-165">`summary`의 경우 MSBuild `<Description>` 속성을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-165">For `summary`, you can use the MSBuild `<Description>` property.</span></span> <span data-ttu-id="cf73a-166">`summary`의 값은 이 속성에 자동으로 마이그레이션되지 않습니다. 이 속성이 [`description`](#other-common-root-level-options) 요소에 매핑되기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-166">The value of `summary` is not migrated automatically to that property, since that property is mapped to the [`description`](#other-common-root-level-options) element.</span></span>  <span data-ttu-id="cf73a-167">[PackageIconUrl은 더 이상 사용되지 않고](/nuget/reference/msbuild-targets#packageiconurl) 대신 PackageIcon이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-167">[PackageIconUrl is deprecated](/nuget/reference/msbuild-targets#packageiconurl) in favor of PackageIcon.</span></span>
 
-## <a name="scripts"></a><span data-ttu-id="15ea6-165">스크립트</span><span class="sxs-lookup"><span data-stu-id="15ea6-165">scripts</span></span>
+## <a name="scripts"></a><span data-ttu-id="cf73a-168">스크립트</span><span class="sxs-lookup"><span data-stu-id="cf73a-168">scripts</span></span>
 
 ```json
 {
@@ -498,7 +503,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="15ea6-166">MSBuild에서 해당하는 요소는 [targets](/visualstudio/msbuild/msbuild-targets)입니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-166">Their equivalents in MSBuild are [targets](/visualstudio/msbuild/msbuild-targets):</span></span>
+<span data-ttu-id="cf73a-169">MSBuild에서 해당하는 요소는 [targets](/visualstudio/msbuild/msbuild-targets)입니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-169">Their equivalents in MSBuild are [targets](/visualstudio/msbuild/msbuild-targets):</span></span>
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -511,7 +516,7 @@ And it's really great!</Description>
 </Target>
 ```
 
-## <a name="runtimeoptions"></a><span data-ttu-id="15ea6-167">runtimeOptions</span><span class="sxs-lookup"><span data-stu-id="15ea6-167">runtimeOptions</span></span>
+## <a name="runtimeoptions"></a><span data-ttu-id="cf73a-170">runtimeOptions</span><span class="sxs-lookup"><span data-stu-id="cf73a-170">runtimeOptions</span></span>
 
 ```json
 {
@@ -527,7 +532,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="15ea6-168">`System.GC.Server` 속성을 제외하고, 이 그룹의 모든 설정은 마이그레이션 프로세스 중 루트 개체에 적용된 옵션과 함께 프로젝트 폴더에서 *runtimeconfig.template.json* 이라는 파일에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-168">All settings in this group, except for the `System.GC.Server` property, are placed into a file called *runtimeconfig.template.json* in the project folder, with options lifted to the root object during the migration process:</span></span>
+<span data-ttu-id="cf73a-171">`System.GC.Server` 속성을 제외하고, 이 그룹의 모든 설정은 마이그레이션 프로세스 중 루트 개체에 적용된 옵션과 함께 프로젝트 폴더에서 *runtimeconfig.template.json* 이라는 파일에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-171">All settings in this group, except for the `System.GC.Server` property, are placed into a file called *runtimeconfig.template.json* in the project folder, with options lifted to the root object during the migration process:</span></span>
 
 ```json
 {
@@ -540,7 +545,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="15ea6-169">`System.GC.Server` 속성은 csproj 파일로 마이그레이션됩니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-169">The `System.GC.Server` property is migrated into the csproj file:</span></span>
+<span data-ttu-id="cf73a-172">`System.GC.Server` 속성은 csproj 파일로 마이그레이션됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-172">The `System.GC.Server` property is migrated into the csproj file:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -548,7 +553,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="15ea6-170">그러나 MSBuild 속성뿐만 아니라 csproj에서 모든 해당 값을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-170">However, you can set all those values in the csproj as well as MSBuild properties:</span></span>
+<span data-ttu-id="cf73a-173">그러나 MSBuild 속성뿐만 아니라 csproj에서 모든 해당 값을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-173">However, you can set all those values in the csproj as well as MSBuild properties:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -560,7 +565,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="shared"></a><span data-ttu-id="15ea6-171">공유</span><span class="sxs-lookup"><span data-stu-id="15ea6-171">shared</span></span>
+## <a name="shared"></a><span data-ttu-id="cf73a-174">공유</span><span class="sxs-lookup"><span data-stu-id="cf73a-174">shared</span></span>
 
 ```json
 {
@@ -568,13 +573,13 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="15ea6-172">csproj에서 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-172">Not supported in csproj.</span></span> <span data-ttu-id="15ea6-173">대신 *.nuspec* 파일에 콘텐츠 파일을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-173">Instead, create include content files in your *.nuspec* file.</span></span>
-<span data-ttu-id="15ea6-174">자세한 내용은 [콘텐츠 파일 포함](/nuget/schema/nuspec#including-content-files)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="15ea6-174">For more information, see [Including content files](/nuget/schema/nuspec#including-content-files).</span></span>
+<span data-ttu-id="cf73a-175">csproj에서 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-175">Not supported in csproj.</span></span> <span data-ttu-id="cf73a-176">대신 *.nuspec* 파일에 콘텐츠 파일을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-176">Instead, create include content files in your *.nuspec* file.</span></span>
+<span data-ttu-id="cf73a-177">자세한 내용은 [콘텐츠 파일 포함](/nuget/schema/nuspec#including-content-files)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cf73a-177">For more information, see [Including content files](/nuget/schema/nuspec#including-content-files).</span></span>
 
-## <a name="files"></a><span data-ttu-id="15ea6-175">파일</span><span class="sxs-lookup"><span data-stu-id="15ea6-175">files</span></span>
+## <a name="files"></a><span data-ttu-id="cf73a-178">파일</span><span class="sxs-lookup"><span data-stu-id="cf73a-178">files</span></span>
 
-<span data-ttu-id="15ea6-176">*project.json* 에서 빌드 및 팩을 확장하여 컴파일하고 다른 폴더에서 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-176">In *project.json*, build and pack could be extended to compile and embed from different folders.</span></span>
-<span data-ttu-id="15ea6-177">MSBuild에서는 [항목](/visualstudio/msbuild/common-msbuild-project-items)을 사용하여 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-177">In MSBuild, this is done using [items](/visualstudio/msbuild/common-msbuild-project-items).</span></span> <span data-ttu-id="15ea6-178">다음 예제는 일반적인 변환입니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-178">The following example is a common conversion:</span></span>
+<span data-ttu-id="cf73a-179">*project.json* 에서 빌드 및 팩을 확장하여 컴파일하고 다른 폴더에서 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-179">In *project.json*, build and pack could be extended to compile and embed from different folders.</span></span>
+<span data-ttu-id="cf73a-180">MSBuild에서는 [항목](/visualstudio/msbuild/common-msbuild-project-items)을 사용하여 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-180">In MSBuild, this is done using [items](/visualstudio/msbuild/common-msbuild-project-items).</span></span> <span data-ttu-id="cf73a-181">다음 예제는 일반적인 변환입니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-181">The following example is a common conversion:</span></span>
 
 ```json
 {
@@ -609,7 +614,7 @@ And it's really great!</Description>
   <EmbeddedResource Include="..\Shared\*.resx" />
   <Content Include="Views\**\*" PackagePath="%(Identity)" />
   <None Include="some/path/in/project.txt" Pack="true" PackagePath="in/package.txt" />
-  
+
   <None Include="notes.txt" CopyToOutputDirectory="Always" />
   <!-- CopyToOutputDirectory = { Always, PreserveNewest, Never } -->
 
@@ -620,20 +625,20 @@ And it's really great!</Description>
 ```
 
 > [!NOTE]
-> <span data-ttu-id="15ea6-179">많은 기본 [와일드카드 사용 패턴](https://en.wikipedia.org/wiki/Glob_(programming))이 .NET Core SDK에 의해 자동으로 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-179">Many of the default [globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are added automatically by the .NET Core SDK.</span></span> <span data-ttu-id="15ea6-180">자세한 내용은 [기본 컴파일 포함](../project-sdk/overview.md#default-includes-and-excludes)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="15ea6-180">For more information, see [Default compilation includes](../project-sdk/overview.md#default-includes-and-excludes).</span></span>
+> <span data-ttu-id="cf73a-182">많은 기본 [와일드카드 사용 패턴](https://en.wikipedia.org/wiki/Glob_(programming))이 .NET Core SDK에 의해 자동으로 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-182">Many of the default [globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are added automatically by the .NET Core SDK.</span></span> <span data-ttu-id="cf73a-183">자세한 내용은 [기본 컴파일 포함](../project-sdk/overview.md#default-includes-and-excludes)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cf73a-183">For more information, see [Default compilation includes](../project-sdk/overview.md#default-includes-and-excludes).</span></span>
 
-<span data-ttu-id="15ea6-181">모든 MSBuild `ItemGroup` 요소는 `Include`, `Exclude` 및 `Remove`를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-181">All MSBuild `ItemGroup` elements support `Include`, `Exclude`, and `Remove`.</span></span>
+<span data-ttu-id="cf73a-184">모든 MSBuild `ItemGroup` 요소는 `Include`, `Exclude` 및 `Remove`를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-184">All MSBuild `ItemGroup` elements support `Include`, `Exclude`, and `Remove`.</span></span>
 
-<span data-ttu-id="15ea6-182">.nupkg 내의 패키지 레이아웃은 `PackagePath="path"`를 사용하여 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-182">Package layout inside the .nupkg can be modified with `PackagePath="path"`.</span></span>
+<span data-ttu-id="cf73a-185">.nupkg 내의 패키지 레이아웃은 `PackagePath="path"`를 사용하여 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-185">Package layout inside the .nupkg can be modified with `PackagePath="path"`.</span></span>
 
-<span data-ttu-id="15ea6-183">`Content`를 제외하고, 대부분의 항목 그룹은 패키지에 포함되도록 `Pack="true"`를 명시적으로 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-183">Except for `Content`, most item groups require explicitly adding `Pack="true"` to be included in the package.</span></span> <span data-ttu-id="15ea6-184">MSBuild `<IncludeContentInPack>` 속성이 기본적으로 `true`로 설정되어 있기 때문에 `Content`는 패키지의 *content* 폴더에 놓입니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-184">`Content` will be put in the *content* folder in a package since the MSBuild `<IncludeContentInPack>` property is set to `true` by default.</span></span>
-<span data-ttu-id="15ea6-185">자세한 내용은 [패키지에 콘텐츠 포함](/nuget/schema/msbuild-targets#including-content-in-a-package)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="15ea6-185">For more information, see [Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package).</span></span>
+<span data-ttu-id="cf73a-186">`Content`를 제외하고, 대부분의 항목 그룹은 패키지에 포함되도록 `Pack="true"`를 명시적으로 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-186">Except for `Content`, most item groups require explicitly adding `Pack="true"` to be included in the package.</span></span> <span data-ttu-id="cf73a-187">MSBuild `<IncludeContentInPack>` 속성이 기본적으로 `true`로 설정되어 있기 때문에 `Content`는 패키지의 *content* 폴더에 놓입니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-187">`Content` will be put in the *content* folder in a package since the MSBuild `<IncludeContentInPack>` property is set to `true` by default.</span></span>
+<span data-ttu-id="cf73a-188">자세한 내용은 [패키지에 콘텐츠 포함](/nuget/schema/msbuild-targets#including-content-in-a-package)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cf73a-188">For more information, see [Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package).</span></span>
 
-<span data-ttu-id="15ea6-186">`PackagePath="%(Identity)"`는 패키지 경로를 프로젝트 상대 파일 경로에 설정하는 간단한 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="15ea6-186">`PackagePath="%(Identity)"` is a short way of setting package path to the project-relative file path.</span></span>
+<span data-ttu-id="cf73a-189">`PackagePath="%(Identity)"`는 패키지 경로를 프로젝트 상대 파일 경로에 설정하는 간단한 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="cf73a-189">`PackagePath="%(Identity)"` is a short way of setting package path to the project-relative file path.</span></span>
 
-## <a name="testrunner"></a><span data-ttu-id="15ea6-187">testRunner</span><span class="sxs-lookup"><span data-stu-id="15ea6-187">testRunner</span></span>
+## <a name="testrunner"></a><span data-ttu-id="cf73a-190">testRunner</span><span class="sxs-lookup"><span data-stu-id="cf73a-190">testRunner</span></span>
 
-### <a name="xunit"></a><span data-ttu-id="15ea6-188">xUnit</span><span class="sxs-lookup"><span data-stu-id="15ea6-188">xUnit</span></span>
+### <a name="xunit"></a><span data-ttu-id="cf73a-191">xUnit</span><span class="sxs-lookup"><span data-stu-id="cf73a-191">xUnit</span></span>
 
 ```json
 {
@@ -652,7 +657,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="mstest"></a><span data-ttu-id="15ea6-189">MSTest</span><span class="sxs-lookup"><span data-stu-id="15ea6-189">MSTest</span></span>
+### <a name="mstest"></a><span data-ttu-id="cf73a-192">MSTest</span><span class="sxs-lookup"><span data-stu-id="cf73a-192">MSTest</span></span>
 
 ```json
 {
@@ -671,6 +676,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="15ea6-190">참조</span><span class="sxs-lookup"><span data-stu-id="15ea6-190">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf73a-193">참조</span><span class="sxs-lookup"><span data-stu-id="cf73a-193">See also</span></span>
 
-- [<span data-ttu-id="15ea6-191">CLI의 변경 내용에 대한 대략적인 개요</span><span class="sxs-lookup"><span data-stu-id="15ea6-191">High-level overview of changes in CLI</span></span>](cli-msbuild-architecture.md)
+- [<span data-ttu-id="cf73a-194">CLI의 변경 내용에 대한 대략적인 개요</span><span class="sxs-lookup"><span data-stu-id="cf73a-194">High-level overview of changes in CLI</span></span>](cli-msbuild-architecture.md)
+- [<span data-ttu-id="cf73a-195">.NET SDK 프로젝트용 MSBuild 참조</span><span class="sxs-lookup"><span data-stu-id="cf73a-195">MSBuild reference for .NET SDK projects</span></span>](../project-sdk/msbuild-props.md)

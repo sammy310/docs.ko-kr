@@ -24,6 +24,8 @@
               href: 6.0.md
             - name: Windows Forms
               items:
+                - name: NotifyIcon.Text 최대 텍스트 길이가 늘어남
+                  href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: TableLayoutSettings 속성이 InvalidEnumArgumentException을 throw함
                   href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
         - name: .NET 5.0
@@ -508,7 +510,6 @@
                   href: msbuild/5.0/publishdepsfilepath-behavior-change.md
                 - name: netcoreapp에서 net으로 TargetFramework 변경
                   href: msbuild/5.0/targetframework-name-change.md
-            - name: (이 파일은 궁극적으로 사라짐)
             - name: .NET 3.0
               href: msbuild.md
         - name: 네트워킹
@@ -561,6 +562,8 @@
           items:
             - name: .NET 6.0
               items:
+                - name: NotifyIcon.Text 최대 텍스트 길이가 늘어남
+                  href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: TableLayoutSettings 속성이 InvalidEnumArgumentException을 throw함
                   href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
             - name: .NET 5.0
