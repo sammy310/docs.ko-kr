@@ -1,13 +1,13 @@
 ---
 title: 마이크로 서비스 기반 복합 UI 만들기
 description: 마이크로 서비스 아키텍처 백 엔드에 대해서만은 아닙니다. 프런트 엔드에서 사용하는 Peek 뷰를 가져옵니다.
-ms.date: 09/20/2018
-ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/13/2021
+ms.openlocfilehash: 3d866172cf7d15486dd2cc0d5dbb286c77693cea
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72275732"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189415"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>마이크로 서비스 기반 복합 UI 만들기
 
@@ -23,7 +23,7 @@ ms.locfileid: "72275732"
 
 클라이언트 애플리케이션 시작 시 클라이언트 UI 구성 요소(예: TypeScript 클래스)는 각각 지정된 시나리오에 ViewModels를 제공하는 인프라 마이크로 서비스를 사용하여 등록됩니다. 마이크로 서비스가 모양을 변경하면 UI도 변경됩니다.
 
-그림 4-21은 복합 UI 방법의 버전을 보여줍니다. 다양한 기법을 기반으로 세분화된 부분을 집계하는 다른 마이크로 서비스가 있기 때문에 이러한 작업이 간소화됩니다. 기존 웹 접근 방식(ASP.NET MVC) 또는 SPA(단일 페이지 애플리케이션)를 빌드하는 여부에 따라 다릅니다.
+그림 4-21은 복합 UI 방법의 버전을 보여줍니다. 다양한 기법을 기반으로 세분화된 부분을 집계하는 다른 마이크로 서비스가 있기 때문에 해당 접근 방식이 간소화됩니다. 기존 웹 접근 방식(ASP.NET MVC) 또는 SPA(단일 페이지 애플리케이션)를 빌드하는 여부에 따라 다릅니다.
 
 ![많은 뷰 모델로 구성된 복합 UI의 다이어그램입니다.](./media/microservice-based-composite-ui-shape-layout/microservice-generate-composite-ui.png)
 

@@ -2,12 +2,12 @@
 title: dotnet pack 명령
 description: dotnet pack 명령은 .NET 프로젝트에 대한 NuGet 패키지를 만듭니다.
 ms.date: 04/28/2020
-ms.openlocfilehash: 3ca7947b4ed9902b163f09a7b57696f304610cce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a9a634c358f5de4f28c3de06edc9a2b4d2eb8d57
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674803"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190080"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -46,7 +46,7 @@ dotnet pack -h|--help
 > [!NOTE]
 > 경우에 따라 암시적 빌드를 수행할 수 없습니다. 이는 빌드 대상과 압축 대상 간에 순환 종속성을 방지하기 위해 `GeneratePackageOnBuild`가 설정된 경우에 발생할 수 있습니다. 잠긴 파일 또는 기타 문제가 있는 경우에도 빌드가 실패할 수 있습니다.
 
-압축 프로세스에 대한 `dotnet pack` 명령에 MSBuild 속성을 제공할 수 있습니다. 자세한 내용은 [NuGet 메타데이터 속성](csproj.md#nuget-metadata-properties) 및 [MSBuild 명령줄 참조](/visualstudio/msbuild/msbuild-command-line-reference)를 참조하세요. [예제](#examples) 섹션에서는 몇 가지 시나리오에 MSBuild -p 스위치를 사용하는 방법을 보여 줍니다.
+압축 프로세스에 대한 `dotnet pack` 명령에 MSBuild 속성을 제공할 수 있습니다. 자세한 내용은 [NuGet 팩 대상 속성](/nuget/reference/msbuild-targets#pack-target) 및 [MSBuild 명령줄 참조](/visualstudio/msbuild/msbuild-command-line-reference)를 참조하세요. [예제](#examples) 섹션에서는 몇 가지 시나리오에 MSBuild `-p` 스위치를 사용하는 방법을 보여 줍니다.
 
 웹 프로젝트는 기본적으로 패키지할 수 없습니다. 기본 동작을 재정의하려면 다음 속성을 *.csproj* 파일에 추가합니다.
 
@@ -64,7 +64,7 @@ dotnet pack -h|--help
 
 `PROJECT | SOLUTION`
 
-  압축할 프로젝트 또는 솔루션입니다. [csproj 파일](csproj.md), vbproj 파일, fsproj 파일, 솔루션 파일 또는 디렉터리에 대한 경로입니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 프로젝트 또는 솔루션 파일을 검색합니다.
+  압축할 프로젝트 또는 솔루션입니다. csproj, vbproj 또는 fsproj 파일, 솔루션 파일 또는 디렉터리의 경로입니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 프로젝트 또는 솔루션 파일을 검색합니다.
 
 ## <a name="options"></a>옵션
 

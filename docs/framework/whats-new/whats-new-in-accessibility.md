@@ -1,36 +1,38 @@
 ---
 title: .NET Framework에서 내게 필요한 옵션의 새로운 기능
+titleSuffix: ''
 description: .NET Framework 4.7.1부터 적용되는 .NET 접근성의 새로운 기능을 확인하세요. 내게 필요한 옵션 기능을 통해 앱은 보조 기술 사용자에게 적절한 환경을 제공할 수 있습니다.
-ms.date: 04/18/2019
+ms.date: 01/05/2021
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: d204bea7f5ec1ed0c25b7b2dedd04d61c7f3e93d
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: c2ebaed8bf347eb8d8764f4bdf76dcc33db86bad
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679549"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536166"
 ---
-# <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework에서 내게 필요한 옵션의 새로운 기능
+# <a name="whats-new-in-accessibility-in-net-framework"></a>.NET Framework에서 내게 필요한 옵션의 새로운 기능
 
 .NET Framework는 애플리케이션을 사용자에게 더욱 액세스 가능하도록 만드는 것을 목표로 합니다. 내게 필요한 옵션 기능을 통해 애플리케이션은 사용자에게 보조 기술에 대한 적절한 환경을 제공할 수 있습니다. .NET Framework 4.7.1부터 .NET Framework에 개발자가 액세스 가능한 애플리케이션을 만들도록 허용하는 다수의 내게 필요한 옵션 개선 사항이 포함되어 있습니다.
 
 ## <a name="accessibility-switches"></a>내게 필요한 옵션 스위치
 
-.NET Framework 4.7 이전 버전을 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 경우 내게 필요한 옵션 기능으로 옵트인하도록 앱을 구성할 수 있습니다. .NET Framework 4.7.1 이상을 대상으로 하는 경우 레거시 기능(및 내게 필요한 옵션 기능을 활용하지 못하도록)을 사용하도록 앱을 구성할 수도 있습니다. 내게 필요한 옵션 기능을 포함하는 .NET Framework의 각 버전에는 애플리케이션의 구성 파일의 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 추가하는 버전별 내게 필요한 옵션 스위치가 있습니다. 다음은 지원되는 스위치입니다.
+.NET Framework 4.7 이전 버전을 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 경우 내게 필요한 옵션 기능으로 옵트인하도록 앱을 구성할 수 있습니다. .NET Framework 4.7.1 이상을 대상으로 하는 경우 레거시 기능(및 내게 필요한 옵션 기능을 활용하지 못하도록)을 사용하도록 앱을 구성할 수도 있습니다. 내게 필요한 옵션 기능을 포함하는 각 .NET Framework 버전에는 애플리케이션 구성 파일의 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 추가하는 버전별 내게 필요한 옵션 스위치가 있습니다. 다음은 지원되는 스위치입니다.
 
 |버전|스위치|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
 |.NET Framework 4.8|"Switch.UseLegacyAccessibilityFeatures.3"|
+|.NET Framework 4.8의 2020년 8월 11일-KB4569746 누적 업데이트|"Switch.UseLegacyAccessibilityFeatures.4"|
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>내게 필요한 옵션 개선 사항 활용
 
-새로운 내게 필요한 옵션 기능은 .NET Framework 4.7.1 이상을 대상으로 하는 애플리케이션에 대해 기본적으로 활성화되어 있습니다. 또한 이전 버전의 .NET Framework를 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 애플리케이션은 애플리케이션의 구성 파일의 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 스위치를 추가하고 해당 값을 `false`로 설정하여 레거시 내게 필요한 옵션 동작을 옵트아웃할 수 있습니다(따라서 내게 필요한 옵션 개선 사항 활용). 다음은 .NET Framework 4.7.1에 도입된 내게 필요한 옵션 개선 사항으로 옵트인하는 방법을 보여줍니다.
+새로운 내게 필요한 옵션 기능은 .NET Framework 4.7.1 이상을 대상으로 하는 애플리케이션에 대해 기본적으로 활성화되어 있습니다. 또한 이전 버전의 .NET Framework를 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 애플리케이션은 애플리케이션의 구성 파일의 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 스위치를 추가하고 해당 값을 `false`로 설정하여 레거시 내게 필요한 옵션 동작을 옵트아웃할 수 있습니다(따라서 내게 필요한 옵션 개선 사항 활용). 다음 코드 조각에서는 .NET Framework 4.7.1에 도입된 내게 필요한 옵션 개선 사항을 옵트인하는 방법을 보여 줍니다.
 
 ```xml
 <runtime>
@@ -39,7 +41,7 @@ ms.locfileid: "90679549"
 </runtime>
 ```
 
-.NET Framework의 이후 버전에서 내게 필요한 옵션 기능으로 옵트인하도록 선택한 경우 .NET Framework의 이전 버전에서도 기능으로 명시적으로 옵트인해야 합니다. .NET Framework 4.7.1 및 4.7.2 모두에서 내게 필요한 옵션 개선 사항을 활용하도록 앱을 구성하려면 다음 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소가 필요합니다.
+이후 .NET Framework 버전에서 내게 필요한 옵션 기능을 옵트인하도록 선택한 경우 이전 버전에서도 기능을 명시적으로 옵트인해야 합니다. .NET Framework 4.7.1 및 4.7.2에서 둘 다 내게 필요한 옵션 개선 사항을 활용하도록 앱을 구성하려면 다음 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소를 추가합니다.
 
 ```xml
 <runtime>
@@ -48,18 +50,18 @@ ms.locfileid: "90679549"
 </runtime>
 ```
 
-.NET Framework 4.7.1 및 4.7.2 및 4.8에서 내게 필요한 옵션 개선 사항을 활용하도록 앱을 구성하려면 다음 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소가 필요합니다.
+.NET Framework 4.7.1, 4.7.2, 4.8 및 .NET Framework 4.8 2020년 8월 누적 업데이트의 내게 필요한 옵션 개선 사항을 활용하도록 앱을 구성하려면 다음 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소를 추가합니다.
 
 ```xml
 <runtime>
     <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
-    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false" />
+    <AppContextSwitchOverrides value=Switch.UseLegacyAccessibilityFeatures=false|Switch.UseLegacyAccessibilityFeatures.2=false|Switch.UseLegacyAccessibilityFeatures.3=false|Switch.UseLegacyAccessibilityFeatures.4=false"/>
 </runtime>
 ```
 
 ### <a name="restoring-legacy-behavior"></a>레거시 동작 복원
 
-4\.7.1부터 시작하는 .NET Framework의 버전을 대상으로 하는 애플리케이션은 애플리케이션의 구성 파일의 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 스위치를 추가하고 `true`로 해당 값을 설정하여 내게 필요한 옵션 기능을 비활성화할 수 있습니다. 예를 들어 다음 구성은 .NET Framework 4.7.2에 도입된 내게 필요한 옵션 기능을 옵트아웃합니다.
+4\.7.1부터 시작하는 .NET Framework의 버전을 대상으로 하는 애플리케이션은 애플리케이션 구성 파일의 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 스위치를 추가하고 `true`로 해당 값을 설정하여 내게 필요한 옵션 기능을 사용하지 않도록 설정할 수 있습니다. 예를 들어 다음 구성은 .NET Framework 4.7.2에 도입된 내게 필요한 옵션 기능을 옵트아웃합니다.
 
 ```xml
 <runtime>
@@ -67,6 +69,20 @@ ms.locfileid: "90679549"
     <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures.2=true" />
 </runtime>
 ```
+
+## <a name="whats-new-in-accessibility-in-the-august-11-2020-cumulative-update-for-net-framework-48"></a>.NET Framework 4.8의 2020년 8월 11일 누적 업데이트에서 제공되는 내게 필요한 옵션의 새로운 기능
+
+.NET Framework 4.8의 2020년 8월 11일-KB4569746 누적 업데이트에는 Windows Forms의 새로운 내게 필요한 옵션 기능이 포함되어 있습니다.
+
+- 화면 읽기 프로그램에서 `PropertyGrid` 컨트롤 항목 및 범주의 확장/축소 상태를 알리는 작업과 관련된 문제를 해결합니다.
+
+- `PropertyGrid` 컨트롤 및 해당 내부 요소의 액세스 가능한 패턴을 업데이트합니다.
+
+- 화면 읽기 프로그램에서 올바르게 알리도록 `PropertyGrid` 컨트롤 내부 요소의 액세스 가능한 이름을 업데이트합니다.
+
+- `PropertyGridView` 컨트롤의 경계 사각형 액세스 가능한 속성을 해결합니다.
+
+- 화면 읽기 프로그램이 `DataGridView` 콤보 상자 셀의 확장/축소 상태를 올바르게 알리도록 합니다.
 
 ## <a name="whats-new-in-accessibility-in-net-framework-48"></a>.NET Framework 4.8에서 내게 필요한 옵션의 새로운 기능
 
@@ -149,7 +165,7 @@ if (raiseMethod != null) {
 
 **키보드 액세스에 대한 도구 설명**
 
-.NET Framework 4.7.2 및 이전 버전을 대상으로 하는 애플리케이션에서는 마우스 포인터를 컨트롤로 이동하여 컨트롤 [도구 설명](xref:System.Windows.Forms.ToolTip)이 팝업되도록 트리거할 수 있습니다. .NET Framework 4.8부터 키보드 사용자는 한정자 키의 유무와 상관없이 Tab 키 또는 화살표 키를 사용하여 컨트롤을 중심으로 도구 설명을 트리거할 수 있습니다. 이 특정 액세스 가능성 개선을 위해서는 [AppContext 스위치](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)가 필요합니다.
+.NET Framework 4.7.2 및 이전 버전을 대상으로 하는 애플리케이션에서는 마우스 포인터를 컨트롤로 이동하여 컨트롤 [도구 설명](xref:System.Windows.Forms.ToolTip)이 팝업되도록 트리거할 수 있습니다. .NET Framework 4.8부터 키보드 사용자는 한정자 키의 유무와 상관없이 Tab 키 또는 화살표 키를 사용하여 컨트롤을 중심으로 컨트롤의 도구 설명을 트리거할 수 있습니다. 이 특정 액세스 가능성 개선을 위해서는 [AppContext 스위치](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)가 필요합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -181,7 +197,7 @@ if (raiseMethod != null) {
 
 **비표시기(Adorner) 기반 텍스트 선택 영역과 함께 사용할 SelectionTextBrush 속성**
 
-.NET Framework 4.7.2에서 WPF는 표시기 계층을 사용하지 않고 <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.PasswordBox> 텍스트 선택 영역을 그리는 기능을 추가했습니다. 이 시나리오에서 선택한 텍스트의 전경색은 <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType>에 의해 지정되었습니다.
+.NET Framework 4.7.2에서 WPF는 표시기(Adorner) 계층을 사용하지 않고 <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.PasswordBox> 텍스트 선택 영역을 그리는 기능을 추가했습니다. 이 시나리오에서 선택한 텍스트의 전경색은 <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType>에 의해 지정되었습니다.
 
 .NET Framework 4.8은 개발자가 비표시기 기반 텍스트 선택 영역을 사용할 때 선택한 텍스트에 대한 특정 브러시를 선택할 수 있도록 하는 새 속성(`SelectionTextBrush`)을 추가합니다. 이 속성은 <xref:System.Windows.Controls.Primitives.TextBoxBase>에서 파생된 컨트롤과 비표시기 기반 텍스트 선택이 활성화된 WPF 애플리케이션의 <xref:System.Windows.Controls.PasswordBox> 컨트롤에서만 작동합니다. <xref:System.Windows.Controls.RichTextBox> 콘트롤에서는 작동하지 않습니다. 비표시기 기반 텍스트 선택 영역이 활성화되지 않은 경우 이 속성은 무시됩니다.
 
@@ -562,7 +578,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **고대비 모드에서 향상된 표시**
 
-.NET Framework 4.7.1부터 다양한 WinForms 컨트롤은 운영 체제에서 사용할 수 있는 고대비 모드의 향상된 렌더링을 제공합니다. Windows 10은 일부 고대비 시스템 색에 대한 값을 변경했으며 Windows Forms는 Windows 10 Win32 프레임워크를 기반으로 합니다. 최상의 환경을 위해 최신 버전의 Windows를 실행하고 테스트 애플리케이션에 app.manifest 파일을 추가하여 최신 OS로 옵트인하고 다음과 같이 보이도록 Windows 10 지원 OS 줄에 대한 주석을 제거합니다.
+.NET Framework 4.7.1부터 다양한 WinForms 컨트롤은 운영 체제에서 사용할 수 있는 고대비 모드의 향상된 렌더링을 제공합니다. Windows 10은 일부 고대비 시스템 색에 대한 값을 변경했으며 Windows Forms는 Windows 10 Win32 프레임워크를 기반으로 합니다. 최상의 환경을 위해 최신 버전의 Windows를 실행하고 테스트 애플리케이션에 app.manifest 파일을 추가하여 최신 OS로 옵트인하고 다음과 같이 보이도록 Windows 10 지원되는 OS 줄에 대한 주석을 제거합니다.
 
 ```xml
 <!-- Windows 10 -->
@@ -630,7 +646,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - **자세히 보기** 마법사의 **필드 추가** 대화 상자 또는 **ListView** 마법사의 **ListView 구성** 대화 상자와 같이 컨트롤에서 누락된 UI 액세스 가능성 패턴을 구현하도록 변경됨.
 
-- **데이터 호출기 필드 편집기**와 같이 고대비 모드에서 디스플레이를 개선하도록 변경됨.
+- **데이터 호출기 필드 편집기** 와 같이 고대비 모드에서 디스플레이를 개선하도록 변경됨.
 
 - DataPager 컨트롤의 **호출기 필드 편집** 마법사의 **필드** 대화 상자, **ObjectContext 구성** 대화 상자 또는 **데이터 원본 구성** 마법사의 **데이터 선택 구성** 대화 상자와 같은 컨트롤의 키보드 탐색 환경을 개선하도록 변경됨.
 

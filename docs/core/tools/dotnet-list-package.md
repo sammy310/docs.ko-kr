@@ -2,12 +2,12 @@
 title: dotnet list package 명령
 description: ‘dotnet list package’ 명령은 프로젝트 또는 솔루션에 대한 패키지 참조를 나열하는 편리한 옵션을 제공합니다.
 ms.date: 11/11/2020
-ms.openlocfilehash: ecb83e5485c9fb49a454a35091e1a7b753b1f291
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 684b73dec553a424252e1368c265847622fb7850
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556890"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189898"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -43,7 +43,7 @@ Project 'SentimentAnalysis' has the following package references
 (A) : Auto-referenced package.
 ```
 
-**요청됨** 열은 프로젝트 파일에 지정된 패키지 버전을 나타내고 이 버전은 범위일 수 있습니다. **해결됨** 열에는 프로젝트가 현재 사용 중이고 항상 단일 값인 버전이 나열됩니다. 이름 오른쪽에 `(A)`를 표시하는 패키지는 프로젝트 설정(`Sdk` 형식, `<TargetFramework>` 또는 `<TargetFrameworks>` 속성 등)에서 유추된 [암시적 패키지 참조](csproj.md#implicit-package-references)를 나타냅니다.
+**요청됨** 열은 프로젝트 파일에 지정된 패키지 버전을 나타내고 이 버전은 범위일 수 있습니다. **해결됨** 열에는 프로젝트가 현재 사용 중이고 항상 단일 값인 버전이 나열됩니다. 이름 오른쪽에 `(A)`를 표시하는 패키지는 프로젝트 설정(`Sdk` 형식, `<TargetFramework>` 또는 `<TargetFrameworks>` 속성)에서 유추된 암시적 패키지 참조를 나타냅니다.
 
 `--outdated` 옵션을 사용하여 프로젝트에서 사용 중인 패키지에 사용 가능한 최신 버전이 있는지 확인합니다. 기본적으로 해결된 버전이 사전 릴리스 버전이 아닌 경우 `--outdated`는 안정적인 최신 패키지를 나열합니다. 최신 버전을 나열할 때 사전 릴리스 버전을 포함하려면 `--include-prerelease` 옵션도 지정합니다. 다음 예제에서는 이전 예제와 동일한 프로젝트에 대한 `dotnet list package --outdated --include-prerelease` 명령의 출력을 보여 줍니다.
 

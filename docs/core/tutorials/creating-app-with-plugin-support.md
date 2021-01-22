@@ -4,12 +4,12 @@ description: 플러그 인을 지원하는 .NET Core 애플리케이션을 만�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: ce7ac826feaf4542307abefde6d40a319d78e423
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: d3b532ae72a80eef9603fc6f3ada8c11cae966dd
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247594"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187901"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>플러그 인을 사용하여 .NET Core 애플리케이션 만들기
 
@@ -22,7 +22,10 @@ ms.locfileid: "91247594"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 또는 최신 버전을 설치합니다.
+- [.NET 5 SDK](https://dotnet.microsoft.com/download) 이상 버전을 설치합니다.
+
+> [!NOTE]
+> 샘플 코드는 .NET 5를 대상으로 하지만, 사용하는 모든 기능은 .NET Core 3.0에 도입되었으며 그 이후 모든 .NET 릴리스에서 사용할 수 있습니다.
 
 ## <a name="create-the-application"></a>애플리케이션 만들기
 
@@ -185,7 +188,7 @@ static IEnumerable<ICommand> CreateCommands(Assembly assembly)
 
 ## <a name="load-plugins"></a>플러그 인 로드
 
-이제 애플리케이션은 로드된 플러그 인 어셈블리에서 명령을 올바르게 로드하고 인스턴스화할 수 있지만 플러그 인 어셈블리를 로드할 수는 없습니다. 다음 콘텐츠를 사용하여 *AppWithPlugin* 폴더에 *PluginLoadContext.cs*라는 파일을 만듭니다.
+이제 애플리케이션은 로드된 플러그 인 어셈블리에서 명령을 올바르게 로드하고 인스턴스화할 수 있지만 플러그 인 어셈블리를 로드할 수는 없습니다. 다음 콘텐츠를 사용하여 *AppWithPlugin* 폴더에 *PluginLoadContext.cs* 라는 파일을 만듭니다.
 
 [!code-csharp[loading-plugins](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/AppWithPlugin/PluginLoadContext.cs)]
 
@@ -229,7 +232,7 @@ static Assembly LoadPlugin(string relativePath)
     dotnet sln add HelloPlugin/HelloPlugin.csproj
     ```
 
-3. *HelloPlugin/Class1.cs* 파일을 다음 콘텐츠를 포함하는 *HelloCommand.cs*라는 파일로 바꿉니다.
+3. *HelloPlugin/Class1.cs* 파일을 다음 콘텐츠를 포함하는 *HelloCommand.cs* 라는 파일로 바꿉니다.
 
 [!code-csharp[the-hello-plugin](~/samples/snippets/core/tutorials/creating-app-with-plugin-support/csharp/HelloPlugin/HelloCommand.cs)]
 
@@ -239,7 +242,7 @@ static Assembly LoadPlugin(string relativePath)
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net5</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -257,7 +260,7 @@ static Assembly LoadPlugin(string relativePath)
 </ItemGroup>
 ```
 
-`<Private>false</Private>` 요소는 중요합니다. 그러면 MSBuild에서 *PluginBase.dll*을 HelloPlugin의 출력 디렉터리에 복사하지 않도록 지시합니다. *PluginBase.dll* 어셈블리가 출력 디렉터리에 표시되는 경우 `PluginLoadContext`는 *HelloPlugin.dll* 어셈블리를 로드할 때 거기서 해당 어셈블리를 찾아 함께 로드합니다. 이 시점에서 `HelloPlugin.HelloCommand` 형식은 기본 로드 컨텍스트에 로드된 `ICommand` 인터페이스가 아닌 `HelloPlugin` 프로젝트의 출력 디렉터리에서 *PluginBase.dll*의 `ICommand` 인터페이스를 구현합니다. 런타임에서 이러한 두 가지 형식을 다른 어셈블리와 다른 형식으로 인식하므로 `AppWithPlugin.Program.CreateCommands` 메서드는 해당 명령을 찾지 못합니다. 결과적으로, 플러그 인 인터페이스를 포함하는 어셈블리에 대한 참조에 `<Private>false</Private>` 메타데이터가 필요합니다.
+`<Private>false</Private>` 요소는 중요합니다. 그러면 MSBuild에서 *PluginBase.dll* 을 HelloPlugin의 출력 디렉터리에 복사하지 않도록 지시합니다. *PluginBase.dll* 어셈블리가 출력 디렉터리에 표시되는 경우 `PluginLoadContext`는 *HelloPlugin.dll* 어셈블리를 로드할 때 거기서 해당 어셈블리를 찾아 함께 로드합니다. 이 시점에서 `HelloPlugin.HelloCommand` 형식은 기본 로드 컨텍스트에 로드된 `ICommand` 인터페이스가 아닌 `HelloPlugin` 프로젝트의 출력 디렉터리에서 *PluginBase.dll* 의 `ICommand` 인터페이스를 구현합니다. 런타임에서 이러한 두 가지 형식을 다른 어셈블리와 다른 형식으로 인식하므로 `AppWithPlugin.Program.CreateCommands` 메서드는 해당 명령을 찾지 못합니다. 결과적으로, 플러그 인 인터페이스를 포함하는 어셈블리에 대한 참조에 `<Private>false</Private>` 메타데이터가 필요합니다.
 
 마찬가지로 `PluginBase`가 다른 패키지를 참조하는 경우 `<ExcludeAssets>runtime</ExcludeAssets>` 요소도 중요합니다. 이 설정은 `<Private>false</Private>`와 효과가 동일하지만 `PluginBase` 프로젝트 또는 해당 종속성 중 하나에 포함될 수 있는 패키지 참조에서 작동합니다.
 
@@ -287,7 +290,7 @@ static Assembly LoadPlugin(string relativePath)
 
 ## <a name="plugin-target-framework-recommendations"></a>플러그 인 대상 프레임워크 권장 사항
 
-로드 중인 플러그 인 종속성이 *.deps.json* 파일을 사용하기 때문에 플러그 인의 대상 프레임워크와 관련된 알려진 과제가 발생합니다. 특히, 사용자의 플러그 인은 .NET Standard 버전이 아닌 .NET Core 3.0과 같은 런타임을 대상으로 해야 합니다. *.deps.json* 파일은 해당 프로젝트가 대상으로 하는 프레임워크를 기반으로 생성됩니다. 다수의 .NET Standard 호환 패키지가 .NET Standard에 빌드하는 참조 어셈블리 및 특정 런타임에 대한 구현 어셈블리를 제공하므로 *.deps.json*은 구현 어셈블리를 잘못 확인하거나 원하는 .NET Core 버전이 아닌 어셈블리의 .NET Standard 버전을 대상으로 할 수도 있습니다.
+로드 중인 플러그 인 종속성이 *.deps.json* 파일을 사용하기 때문에 플러그 인의 대상 프레임워크와 관련된 알려진 과제가 발생합니다. 특히, 플러그 인은 .NET Standard 버전이 아닌 .NET 5와 같은 런타임을 대상으로 해야 합니다. *.deps.json* 파일은 해당 프로젝트가 대상으로 하는 프레임워크를 기반으로 생성됩니다. 다수의 .NET Standard 호환 패키지가 .NET Standard에 빌드하는 참조 어셈블리 및 특정 런타임에 대한 구현 어셈블리를 제공하므로 *.deps.json* 은 구현 어셈블리를 잘못 확인하거나 원하는 .NET Core 버전이 아닌 어셈블리의 .NET Standard 버전을 대상으로 할 수도 있습니다.
 
 ## <a name="plugin-framework-references"></a>플러그 인 프레임워크 참조
 

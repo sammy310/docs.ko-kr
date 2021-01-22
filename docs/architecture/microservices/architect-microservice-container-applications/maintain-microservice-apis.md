@@ -1,13 +1,13 @@
 ---
 title: 마이크로 서비스 API 및 계약 만들기, 개선 및 버전 관리
 description: 요구 사항의 변화에 따라 발전과 버전을 고려하여 마이크로 서비스 API 및 계약을 작성하세요.
-ms.date: 09/20/2018
-ms.openlocfilehash: 9164bfd12df18a88ac187c8962f0afc80b702881
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.date: 01/13/2021
+ms.openlocfilehash: 84eeaa9776947abda6171949c730f8473e97b241
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557674"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189462"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>마이크로 서비스 API 및 계약 만들기, 개선 및 버전 관리
 
@@ -19,7 +19,7 @@ API 정의의 특성은 사용 중인 프로토콜에 따라 다릅니다. 예�
 
 API에 특성이나 매개 변수를 추가하는 경우처럼 API 변경이 작은 경우 이전 API를 사용하는 클라이언트가 새 서비스 버전으로 전환하여 작업할 수 있어야 합니다. 누락된 특성에 대해 필요한 기본값을 제공할 수 있고 클라이언트는 추가 응답 특성을 무시할 수 있습니다.
 
-그러나 때로는 서비스 API에 대한 대규모의 호환되지 않는 변경이 필요합니다. 클라이언트 애플리케이션이나 서비스가 즉시 새 버전으로 업그레이드하도록 강제할 수 없으므로 서비스는 당분간 기존 API 버전을 지원해야 합니다. REST와 같은 HTTP 기반 메커니즘을 사용한다면 URL이나 HTTP 헤더에 API 버전 번호를 포함하는 것이 한 방법이 됩니다. 그런 다음, 동일한 서비스 인스턴스 안에서 동시에 두 버전을 모두 구현할지 또는 한 API 버전을 각각 처리하는 다른 인스턴스를 배포할지 결정할 수 있습니다. 이를 위한 좋은 방법은 [중재자 패턴](https://en.wikipedia.org/wiki/Mediator_pattern)(예를 들어 [MediatR 라이브러리](https://github.com/jbogard/MediatR))를 통해 서로 다른 구현 버전을 독립 처리기로 분할하는 것입니다.
+그러나 때로는 서비스 API에 대한 대규모의 호환되지 않는 변경이 필요합니다. 클라이언트 애플리케이션이나 서비스가 즉시 새 버전으로 업그레이드하도록 강제할 수 없으므로 서비스는 당분간 기존 API 버전을 지원해야 합니다. REST와 같은 HTTP 기반 메커니즘을 사용한다면 URL이나 HTTP 헤더에 API 버전 번호를 포함하는 것이 한 방법이 됩니다. 그런 다음, 동일한 서비스 인스턴스 안에서 동시에 두 버전을 모두 구현할지 또는 한 API 버전을 각각 처리하는 다른 인스턴스를 배포할지 결정할 수 있습니다. 해당 기능을 위한 좋은 접근 방식은 [중재자 패턴](https://en.wikipedia.org/wiki/Mediator_pattern)(예: [MediatR 라이브러리](https://github.com/jbogard/MediatR))을 통해 서로 다른 구현 버전을 독립 처리기로 분할하는 것입니다.
 
 마지막으로 REST 아키텍처를 사용할 경우 서비스 버전 관리와 확대 가능한 API를 위해서 [하이퍼미디어](https://www.infoq.com/articles/mark-baker-hypermedia)가 가장 좋은 방법입니다.
 

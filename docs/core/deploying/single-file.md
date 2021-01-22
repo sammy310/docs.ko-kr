@@ -4,12 +4,12 @@ description: 단일 파일 애플리케이션이란 무엇이고, 이 애플리�
 author: lakshanf
 ms.author: lakshanf
 ms.date: 12/17/2020
-ms.openlocfilehash: e2d2c9ed4c28d11a77e4f840602982a36cf1c80c
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 10ffc947f6a3adcf2889a03edd2616007ce236f3
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678154"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536140"
 ---
 # <a name="single-file-deployment-and-executable"></a>단일 파일 배포 및 실행 파일
 
@@ -56,6 +56,8 @@ Windows와 Mac에서는 Visual Studio 및 VS Code를 사용하여 크래시 덤�
 ## <a name="other-considerations"></a>기타 고려 사항
 
 단일 파일은 기본적으로 네이티브 라이브러리를 묶지 않습니다. Linux에서는 런타임을 번들로 사전 링크하며, 애플리케이션 네이티브 라이브러리만 단일 파일 앱과 동일한 디렉터리에 배포됩니다. Windows에서는 호스팅 코드만 사전 링크하며, 런타임 및 애플리케이션 네이티브 라이브러리가 모두 단일 파일 앱과 동일한 디렉터리에 배포됩니다. 그러면 네이티브 파일을 단일 파일에서 제외해야 하는 좋은 디버깅 환경이 보장됩니다. `IncludeNativeLibrariesForSelfExtract` 플래그를 설정하면 네이티브 라이브러리가 단일 파일 번들에 포함되지만 단일 파일 애플리케이션을 실행할 때 클라이언트 머신의 임시 디렉터리에 파일이 추출됩니다.
+
+`IncludeAllContentForSelfExtract`를 지정하면 실행 파일을 실행하기 전에 모든 파일이 추출됩니다. 이렇게 하면 원래 .NET Core 단일 파일 배포 동작이 유지됩니다.
 
 단일 파일 애플리케이션에는 관련된 모든 PDB 파일이 함께 포함되며, 기본적으로 함께 제공되지 않습니다. 빌드하는 프로젝트의 어셈블리 내부에 PDB를 포함하려면 [아래](#include-pdb-files-inside-the-bundle) 설명된 대로 `DebugType`을 `embedded`로 설정합니다.
 

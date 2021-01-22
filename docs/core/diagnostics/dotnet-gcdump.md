@@ -2,12 +2,12 @@
 title: dotnet-gcdump 진단 도구 - .NET CLI
 description: .NET EventPipe를 사용하여 라이브 .NET 프로세스의 GC(가비지 수집기) 덤프를 수집하기 위해 dotnet-gcdump CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
 ms.date: 11/17/2020
-ms.openlocfilehash: 02e1a7c5d86b582289672a027464aefd67a6f490
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: fe7772eed642daadbd1754627751f58d0ab57b8e
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593372"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188571"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>힙 분석 도구(dotnet-gcdump)
 
@@ -34,6 +34,9 @@ ms.locfileid: "97593372"
   | Windows | [x86](https://aka.ms/dotnet-gcdump/win-x86) \| [x64](https://aka.ms/dotnet-gcdump/win-x64) \| [arm](https://aka.ms/dotnet-gcdump/win-arm) \| [arm-x64](https://aka.ms/dotnet-gcdump/win-arm64) |
   | macOS   | [x64](https://aka.ms/dotnet-gcdump/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-gcdump/linux-x64) \| [arm](https://aka.ms/dotnet-gcdump/linux-arm) \| [arm64](https://aka.ms/dotnet-gcdump/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-gcdump/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-gcdump/linux-musl-arm64) |
+
+> [!NOTE]
+> x86 앱에서 `dotnet-gcdump`를 사용하려면 해당하는 x86 버전의 도구가 필요합니다.
 
 ## <a name="synopsis"></a>개요
 
@@ -103,6 +106,12 @@ dotnet-gcdump collect [-h|--help] [-p|--process-id <pid>] [-o|--output <gcdump-f
 - **`-n|--name <name>`**
 
   GC 덤프를 수집할 프로세스의 이름입니다.
+
+> [!NOTE]
+> Linux 및 macOS에서 해당 명령은 대상 애플리케이션 및 `dotnet-gcdump`가 동일한 `TMPDIR` 환경 변수를 공유할 것으로 예상합니다. 그러지 않으면 명령 시간이 초과됩니다.
+
+> [!NOTE]
+> `dotnet-gcdump`를 사용하여 GC 덤프를 수집하려면 대상 프로세스를 실행하는 사용자와 동일한 사용자 또는 루트로 실행해야 합니다. 그러지 않으면 도구는 대상 프로세스와 연결을 설정하지 못합니다.
 
 ## `dotnet-gcdump ps`
 

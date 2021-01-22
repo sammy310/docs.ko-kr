@@ -1,21 +1,21 @@
 ---
 title: 마이크로 서비스에서 간소화된 CQRS 및 DDD 패턴 적용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | CQRS 및 DDD 간의 전반적인 관계를 이해합니다.
-ms.date: 10/08/2018
-ms.openlocfilehash: e4e36bafff39f5f30d6371ed7c113322a85c3362
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 01/13/2021
+ms.openlocfilehash: c1a990689a446e2efba48beafe4b55d614b54427
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805586"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188961"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>마이크로 서비스에서 간소화된 CQRS 및 DDD 패턴 적용
 
-CQRS는 데이터를 읽고 쓰기 위해 모델을 구분하는 아키텍처 패턴입니다. 관련 용어 [CQS(명령 쿼리 분리)](https://martinfowler.com/bliki/CommandQuerySeparation.html)는 원래 Bertrand Meyer가 작성한 책 *개체 지향 소프트웨어 생성*에서 정의되었습니다. 기본 개념은 시스템의 작업을 완벽히 분리된 두 가지 범주로 나눌 수 있다는 것입니다.
+CQRS는 데이터를 읽고 쓰기 위해 모델을 구분하는 아키텍처 패턴입니다. 관련 용어 [CQS(명령 쿼리 분리)](https://martinfowler.com/bliki/CommandQuerySeparation.html)는 원래 Bertrand Meyer가 작성한 책 ‘개체 지향 소프트웨어 생성’에서 정의되었습니다. 기본 개념은 시스템의 작업을 완벽히 분리된 두 가지 범주로 나눌 수 있다는 것입니다.
 
-- 쿼리 결과를 반환하고 시스템의 상태를 변경하지 않으며 부작용이 없습니다.
+- 쿼리 해당 쿼리는 결과를 반환하고 시스템의 상태를 변경하지 않으며 부작용이 없습니다.
 
-- 명령 시스템의 상태를 변경합니다.
+- 명령 해당 명령은 시스템의 상태를 변경합니다.
 
 CQS는 간단한 개념으로 쿼리 또는 명령인 동일한 개체 내의 메서드에 대한 내용입니다. 각 메서드는 상태를 반환하거나 상태를 변경하는 작업 중 하나를 수행합니다. 단일 리포지토리 패턴 개체도 CQS를 따를 수 있습니다. CQS는 CQRS에 대한 기본 원칙으로 간주할 수 있습니다.
 

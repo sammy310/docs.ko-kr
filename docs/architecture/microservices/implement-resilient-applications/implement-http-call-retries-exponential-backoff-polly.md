@@ -1,19 +1,19 @@
 ---
 title: Polly를 통해 지수 백오프를 사용하여 HTTP 호출 다시 시도 구현
 description: Polly와 IHttpClientFactory를 사용하여 HTTP 오류를 처리하는 방법을 알아봅니다.
-ms.date: 03/03/2020
-ms.openlocfilehash: 49396dd545a05699278254474c77acf1483e0e0c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/13/2021
+ms.openlocfilehash: 8cffc644d73eaec5019e00c6a83de8635b569cde
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846798"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189052"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-ihttpclientfactory-and-polly-policies"></a>IHttpClientFactory 및 Polly 정책을 통해 지수 백오프를 사용하여 HTTP 호출 다시 시도 구현
 
 지수 백오프를 사용하는 다시 시도는 오픈 소스 [Polly 라이브러리](https://github.com/App-vNext/Polly)와 같은 고급 .NET 라이브러리를 활용하는 것이 좋습니다.
 
-Polly는 복원력 및 일시적인 오류 처리 기능을 제공하는 .NET 라이브러리입니다. 다시 시도, 회로 차단기, 격벽(Bulkhead) 격리, 시간 제한 및 대체와 같은 Polly 정책을 적용하여 이러한 기능을 구현할 수 있습니다. Polly는 .NET Framework 4.x 및 .NET Standard 1.0, 1.1 및 2.0(.NET Core 지원)을 대상으로 합니다.
+Polly는 복원력 및 일시적인 오류 처리 기능을 제공하는 .NET 라이브러리입니다. 다시 시도, 회로 차단기, 격벽(Bulkhead) 격리, 시간 제한 및 대체와 같은 Polly 정책을 적용하여 이러한 기능을 구현할 수 있습니다. Polly는 .NET Framework 4.x 및 .NET Standard 1.0, 1.1 및 2.0(.NET Core 이상 지원)을 대상으로 합니다.
 
 다음 단계에서는 이전 섹션에서 설명한 `IHttpClientFactory`에 통합된 Polly를 통해 Http 다시 시도를 사용하는 방법을 보여 줍니다.
 

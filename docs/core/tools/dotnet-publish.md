@@ -2,12 +2,12 @@
 title: dotnet publish 명령
 description: dotnet publish 명령은 .NET 프로젝트 또는 솔루션을 디렉터리에 게시합니다.
 ms.date: 11/11/2020
-ms.openlocfilehash: 9b5d00816e2f4f9557280175e4b016fe79af0673
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3918c0708e207157ac33dd1a8fdefb993a1d6741
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634431"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190067"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -72,8 +72,8 @@ dotnet publish -p:PublishProfile=FolderProfile
 - **`PROJECT|SOLUTION`**
 
   게시할 프로젝트 또는 솔루션입니다.
-  
-  * `PROJECT`는 [C#](csproj.md), F# 또는 Visual Basic 프로젝트 파일의 경로 및 파일 이름이거나 C#, F# 또는 Visual Basic 프로젝트 파일을 포함하는 디렉터리의 경로입니다. 디렉터리를 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
+
+  * `PROJECT`는 C#, F# 또는 Visual Basic 프로젝트 파일의 경로 및 파일 이름이거나 C#, F# 또는 Visual Basic 프로젝트 파일을 포함하는 디렉터리의 경로입니다. 디렉터리를 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
 
   * `SOLUTION`은 솔루션 파일 ( *.sln* 확장명)의 경로 및 파일 이름이거나 솔루션 파일을 포함하는 디렉터리의 경로입니다. 디렉터리를 지정하지 않으면 현재 디렉터리로 기본 설정됩니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
@@ -132,16 +132,16 @@ dotnet publish -p:PublishProfile=FolderProfile
   ```
 
   - .NET Core 3.x SDK 이상
-  
+
     프로젝트를 게시할 때 상대 경로를 지정하는 경우 생성되는 출력 디렉터리는 프로젝트 파일 위치가 아니라 현재 작업 디렉터리에 대해 상대적입니다.
 
-    솔루션을 게시할 때 상대 경로가 지정된 경우 모든 프로젝트에 대한 모든 출력은 현재 작업 디렉터리에 대해 상대적인 지정 폴더로 이동합니다. 게시 출력을 각 프로젝트의 별도 폴더로 이동하려면 `--output` 옵션 대신 msbuild `PublishDir` 속성을 사용하여 상대 경로를 지정합니다. 예를 들어 `dotnet publish -p:PublishDir=.\publish`는 각 프로젝트의 게시 출력을 프로젝트 파일이 포함된 폴더 아래에 있는 `publish` 폴더로 보냅니다.
+    솔루션을 게시할 때 상대 경로를 지정하는 경우 모든 프로젝트의 모든 출력은 현재 작업 디렉터리를 기준으로 지정된 폴더로 이동합니다. 게시 출력을 각 프로젝트의 별도 폴더로 이동하려면 `--output` 옵션 대신 msbuild `PublishDir` 속성을 사용하여 상대 경로를 지정합니다. 예를 들어 `dotnet publish -p:PublishDir=.\publish`는 각 프로젝트의 게시 출력을 프로젝트 파일이 포함된 폴더 아래에 있는 `publish` 폴더로 보냅니다.
 
   - .NET Core 2.x SDK
-  
+
     프로젝트를 게시할 때 상대 경로를 지정하는 경우 생성되는 출력 디렉터리는 현재 작업 디렉터리가 아니라 프로젝트 파일 위치에 대해 상대적입니다.
 
-    솔루션을 게시할 때 상대 경로를 지정하는 경우 각 프로젝트의 출력은 프로젝트 파일 위치에 대해 상대적인 별도의 폴더로 이동합니다. 솔루션을 게시할 때 절대 경로를 지정하는 경우 모든 프로젝트에 대한 모든 게시 출력은 지정된 폴더로 이동합니다.
+    솔루션을 게시할 때 상대 경로를 지정하는 경우 각 프로젝트의 출력은 프로젝트 파일 위치에 대해 상대적인 별도의 폴더로 이동합니다. 솔루션을 게시할 때 절대 경로를 지정하는 경우 모든 프로젝트의 모든 게시 출력은 지정된 폴더로 이동합니다.
 
 - **`-p:PublishReadyToRun=true`**
 

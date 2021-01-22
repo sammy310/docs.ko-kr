@@ -1,17 +1,21 @@
 ---
-title: .NET Core 3.1을 사용하여 Windows 10의 데스크톱 앱 현대화
-description: .NET Core 3.1을 사용하여 기존 데스크톱 앱을 현대화하는 방법 알아보기
-ms.date: 05/12/2020
-ms.openlocfilehash: 5861f806a9158ef761c47bc23e51327d4e2d0480
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+title: .NET 5를 사용하여 Windows 10의 데스크톱 앱 현대화
+description: .NET 5를 사용하여 기존 데스크톱 앱을 현대화하는 방법 알아보기
+ms.date: 01/06/2021
+ms.openlocfilehash: de8a451b0598b5eabd99028d377c161dace61623
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83422664"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615708"
 ---
-# <a name="modernizing-desktop-apps-on-windows-10-with-net-core-31"></a>.NET Core 3.1을 사용하여 Windows 10의 데스크톱 앱 현대화
+# <a name="modernizing-desktop-apps-on-windows-10-with-net-5"></a>.NET 5를 사용하여 Windows 10의 데스크톱 앱 현대화
 
 ![데스크톱 앱 현대화 eBook 표지를 보여 주는 스크린샷.](./media/modernizing-existing-desktop-apps-ebook-cover.png)
+
+**EDITION v1.0.1** - .NET 5로 업데이트됨
+
+책 업데이트 및 커뮤니티 기여에 대한 자세한 내용은 [changelog](https://aka.ms/desktop-ebook-changelog)를 참조하세요.
 
 게시자:
 
@@ -23,7 +27,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2020 by Microsoft Corporation
+Copyright © 2021 by Microsoft Corporation
 
 All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 서면 허가 없이는 어떠한 형식이나 방법으로도 복제하거나 전송할 수 없습니다.
 
@@ -75,13 +79,13 @@ Mac 및 macOS는 Apple Inc.의 상표입니다.
 
 ## <a name="who-should-use-the-book"></a>이 책의 대상 사용자
 
-이 책은 기존 Windows Forms 및 WPF 데스크톱 애플리케이션을 현대화하여 .NET Core 및 Windows 10의 이점을 활용하려는 개발자 및 솔루션 설계자를 위해 작성되었습니다.
+이 책은 기존 Windows Forms 및 WPF 데스크톱 애플리케이션을 현대화하여 .NET 및 Windows 10의 이점을 활용하려는 개발자 및 솔루션 설계자를 위해 작성되었습니다.
 
 또한 기존 데스크톱 애플리케이션 업데이트의 이점을 개괄적으로 알고자 하는 엔터프라이즈 설계자 또는 개발 리더나 디렉터와 같은 기술 의사 결정자인 경우 이 책을 유용하게 활용할 수 있습니다.
 
 ## <a name="how-to-use-the-book"></a>책 사용 방법
 
-이 책에서는 기존 애플리케이션을 현대화하는 “이유”를 설명하고, .NET Core 3.1 및 MSIX를 사용하여 데스크톱 앱을 현대화하는 경우에 얻게 되는 구체적인 이점을 소개합니다. 이 책의 내용은 개요를 알고 싶지만 구현과 기술적인 단계별 세부 정보에 대해 중점을 둘 필요가 없는 설계자와 기술 의사 결정자를 위해 고안되었습니다.
+이 책에서는 기존 애플리케이션을 현대화하는 “이유”를 설명하고, .NET 및 MSIX를 사용하여 데스크톱 앱을 현대화하는 경우에 얻게 되는 구체적인 이점을 소개합니다. 이 책의 내용은 개요를 알고 싶지만 구현과 기술적인 단계별 세부 정보에 대해 중점을 둘 필요가 없는 설계자와 기술 의사 결정자를 위해 고안되었습니다.
 
 애플리케이션 예제에 대한 완벽한 마이그레이션 프로세스를 소개하는 5장을 포함하여 챕터마다 샘플 구현 코드 조각과 스크린샷을 제공합니다.
 
@@ -89,11 +93,11 @@ Mac 및 macOS는 Apple Inc.의 상표입니다.
 
 이 책에서는 리프트 앤 시프트 시나리오에 중점을 둔 시나리오의 특정 하위 집합에 대해 설명하고, 코드를 다시 작성할 필요 없이 현대화의 이점을 얻는 방법을 간략하게 설명합니다.
 
-이 책은 .NET Core를 사용하여 최신 애플리케이션을 처음부터 개발하는 방법 또는 Windows Forms 및 WPF를 시작하는 방법에 관한 것은 아닙니다. 이 책은 데스크톱 개발을 위해 최신 기술로 기존 데스크톱 애플리케이션을 업데이트하는 방법에 중점을 둡니다.
+이 책은 .NET을 사용하여 최신 애플리케이션을 처음부터 개발하는 방법 또는 Windows Forms 및 WPF를 시작하는 방법에 관한 것은 아닙니다. 이 책은 데스크톱 개발을 위해 최신 기술로 기존 데스크톱 애플리케이션을 업데이트하는 방법에 중점을 둡니다.
 
 ## <a name="samples-used-in-this-book"></a>이 책에서 사용하는 샘플
 
-현대화를 수행하는 데 필요한 단계를 강조하기 위해 `eShopModernizing`이라는 애플리케이션 예제를 사용합니다. 이 애플리케이션에는 Windows Forms와 WPF가 포함되어 있으며, 이 두 가지 모두에서 .NET Core로의 현대화를 수행하는 방법에 대한 단계별 프로세스가 보여 줍니다.
+현대화를 수행하는 데 필요한 단계를 강조하기 위해 `eShopModernizing`이라는 애플리케이션 예제를 사용합니다. 이 애플리케이션에는 Windows Forms와 WPF가 포함되어 있으며, 이 두 가지 모두에서 .NET으로의 현대화를 수행하는 방법에 대한 단계별 프로세스를 보여 줍니다.
 
 또한 이 책의 GitHub 리포지토리에는 단계별 자습서를 수행하기로 결정한 경우에 참조할 수 있는 프로세스 결과가 있습니다.
 

@@ -4,12 +4,12 @@ description: 시계열 데이터에 대한 변칙 검색 애플리케이션을 �
 ms.date: 12/04/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3451a44f8fa7ae85625687b7d52f120c411df1b6
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: f001cb912bb695a7edb0917f3306ca9bfbe311ac
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97634055"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187784"
 ---
 # <a name="tutorial-detect-anomalies-in-time-series-with-mlnet"></a>자습서: ML.NET을 사용하여 시계열의 변칙 검색
 
@@ -28,7 +28,7 @@ ms.locfileid: "97634055"
 
 * “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2019 버전 16.7.8 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
-* [phone-calls.csv 데이터 세트](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrCnnDetection/Data/phone-calls.csv)
+* [phone-calls.csv 데이터 세트](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv)
 
 ## <a name="create-a-console-application"></a>콘솔 애플리케이션 만들기
 
@@ -50,7 +50,7 @@ ms.locfileid: "97634055"
 
 1. 데이터 세트를 다운로드하여 이전에 만든 *Data* 폴더에 저장합니다.
 
-    [phone-calls.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrCnnDetection/Data/phone-calls.csv)를 마우스 오른쪽 단추로 클릭하고 “링크(또는 대상)를 다른 이름으로 저장...”을 선택합니다.
+    [phone-calls.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv)를 마우스 오른쪽 단추로 클릭하고 “링크(또는 대상)를 다른 이름으로 저장...”을 선택합니다.
 
      \*.csv 파일을 *Data* 폴더에 저장하거나 다른 곳에 저장한 후 \*.csv 파일을 *Data* 폴더로 이동합니다.
 

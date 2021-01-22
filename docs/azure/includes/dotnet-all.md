@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 492576bd83053d9d4e44c56eda73fed3a4d56d0f
-ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
+ms.openlocfilehash: 6ec731725ad6f0a6093a9b0eeb7d55a5636868d5
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97911590"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98195371"
 ---
 | Name | 패키지 | Docs | 원본 |
 | ---- | ------- | ---- | ------ |
@@ -13,12 +13,14 @@ ms.locfileid: "97911590"
 | ASP.NET 확장 - 구성 비밀 | NuGet [1.0.2](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.Configuration.Secrets/1.0.2) | [docs](/dotnet/api/overview/azure/Extensions.AspNetCore.Configuration.Secrets-readme/) | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.Configuration.Secrets_1.0.2/sdk/extensions/Azure.Extensions.AspNetCore.Configuration.Secrets/) |
 | ASP.NET 확장 - DataProtection Blob | NuGet [1.2.0](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Blobs/1.2.0) | [docs](/dotnet/api/overview/azure/Extensions.AspNetCore.DataProtection.Blobs-readme/) | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.DataProtection.Blobs_1.2.0/sdk/extensions/Azure.Extensions.AspNetCore.DataProtection.Blobs/) |
 | ASP.NET 확장 - DataProtection 키 | NuGet [1.0.2](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Keys/1.0.2) | [docs](/dotnet/api/overview/azure/Extensions.AspNetCore.DataProtection.Keys-readme/) | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.DataProtection.Keys_1.0.2/sdk/extensions/Azure.Extensions.AspNetCore.DataProtection.Keys/) |
+| 증명 | NuGet [0.10.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Attestation/0.10.0-preview) |  | GitHub [0.10.0-preview](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Attestation_0.10.0-preview/sdk/attestation/Microsoft.Azure.Attestation/) |
+| Azure Security Attestation | NuGet [1.0.0-alpha.1](https://www.nuget.org/packages/Azure.Security.Attestation/1.0.0-alpha.1) |  | GitHub [1.0.0-alpha.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Security.Attestation_1.0.0-alpha.1/sdk/attestation/Azure.Security.Attestation/) |
 | Cognitive Search | NuGet [11.1.1](https://www.nuget.org/packages/Azure.Search.Documents/11.1.1)<br>NuGet [11.2.0-beta.2](https://www.nuget.org/packages/Azure.Search.Documents/11.2.0-beta.2) | [docs](/dotnet/api/overview/azure/Search.Documents-readme/) | GitHub [11.1.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Search.Documents_11.1.1/sdk/search/Azure.Search.Documents/)<br>GitHub [11.2.0-beta.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Search.Documents_11.2.0-beta.2/sdk/search/Azure.Search.Documents/) |
 | 통신 관리 | NuGet [1.0.0-beta.3](https://www.nuget.org/packages/Azure.Communication.Administration/1.0.0-beta.3) | [docs](/dotnet/api/overview/azure/Communication.Administration-readme-pre/) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Administration_1.0.0-beta.3/sdk/communication/Azure.Communication.Administration/) |
 | 통신 채팅 | NuGet [1.0.0-beta.3](https://www.nuget.org/packages/Azure.Communication.Chat/1.0.0-beta.3) | [docs](/dotnet/api/overview/azure/Communication.Chat-readme-pre/) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Chat_1.0.0-beta.3/sdk/communication/Azure.Communication.Chat/) |
 | 통신 공통 | NuGet [1.0.0-beta.3](https://www.nuget.org/packages/Azure.Communication.Common/1.0.0-beta.3) | [docs](/dotnet/api/overview/azure/Communication.Common-readme-pre/) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Common_1.0.0-beta.3/sdk/communication/Azure.Communication.Common/) |
 | Communication SMS | NuGet [1.0.0-beta.3](https://www.nuget.org/packages/Azure.Communication.Sms/1.0.0-beta.3) | [docs](/dotnet/api/overview/azure/Communication.Sms-readme-pre/) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Sms_1.0.0-beta.3/sdk/communication/Azure.Communication.Sms/) |
-| 코어 | NuGet [1.7.0](https://www.nuget.org/packages/Azure.Core/1.7.0) | [docs](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.7.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.7.0/sdk/core/Azure.Core/) |
+| 코어 | NuGet [1.8.1](https://www.nuget.org/packages/Azure.Core/1.8.1) | [docs](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.8.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.8.1/sdk/core/Azure.Core/) |
 | 코어 - AMQP | NuGet [1.0.0](https://www.nuget.org/packages/Azure.Core.Amqp/1.0.0) | [docs](/dotnet/api/overview/azure/Core.Amqp-readme/) | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core.Amqp_1.0.0/sdk/core/Azure.Core.Amqp/) |
 | Cosmos DB | NuGet [4.0.0-preview3](https://www.nuget.org/packages/Azure.Cosmos/4.0.0-preview3) | [docs](/dotnet/api/azure.cosmos) | GitHub [4.0.0-preview3](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/4.0.0-preview3) |
 | Digital Twins - 코어 | NuGet [1.2.0](https://www.nuget.org/packages/Azure.DigitalTwins.Core/1.2.0) | [docs](/dotnet/api/overview/azure/DigitalTwins.Core-readme/) | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.DigitalTwins.Core_1.2.0/sdk/digitaltwins/Azure.DigitalTwins.Core/) |
@@ -58,30 +60,8 @@ ms.locfileid: "97911590"
 | 리소스 관리 - 네트워크 | NuGet [1.0.0-preview.2](https://www.nuget.org/packages/Azure.ResourceManager.Network/1.0.0-preview.2) | [docs](/dotnet/api/overview/azure/ResourceManager.Network-readme-pre/) | GitHub [1.0.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Network_1.0.0-preview.2/sdk/network/Azure.ResourceManager.Network/) |
 | 관리 리소스 - 리소스 | NuGet [1.0.0-preview.2](https://www.nuget.org/packages/Azure.ResourceManager.Resources/1.0.0-preview.2) | [docs](/dotnet/api/overview/azure/ResourceManager.Resources-readme-pre/) | GitHub [1.0.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Resources_1.0.0-preview.2/sdk/resources/Azure.ResourceManager.Resources/) |
 | 리소스 관리 - 스토리지 | NuGet [1.0.0-preview.2](https://www.nuget.org/packages/Azure.ResourceManager.Storage/1.0.0-preview.2) | [docs](/dotnet/api/overview/azure/ResourceManager.Storage-readme-pre/) | GitHub [1.0.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Storage_1.0.0-preview.2/sdk/storage/Azure.ResourceManager.Storage/) |
-| Azure.Security.Attestation | NuGet [1.0.0-alpha.1](https://www.nuget.org/packages/Azure.Security.Attestation/1.0.0-alpha.1) |  |  |
-| Microsoft.Azure.Amqp | NuGet [2.4.9](https://www.nuget.org/packages/Microsoft.Azure.Amqp/2.4.9) |  |  |
-| Microsoft.Azure.Devices | NuGet [1.28.1](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.1) |  |  |
-| Microsoft.Azure.Devices.Client | NuGet [1.33.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.Client/1.33.1) |  |  |
-| Microsoft.Azure.Devices.Client.PCL | NuGet [1.0.16](https://www.nuget.org/packages/Microsoft.Azure.Devices.Client.PCL/1.0.16) |  |  |
-| Microsoft.Azure.Devices.DigitalTwin.Client | NuGet [1.0.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.DigitalTwin.Client/1.0.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.DigitalTwin.Service | NuGet [1.0.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.DigitalTwin.Service/1.0.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.ProtocolGateway.Core | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.Core/2.0.1) |  |  |
-| Microsoft.Azure.Devices.ProtocolGateway.IotHubClient | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.IotHubClient/2.0.1) |  |  |
-| Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage/2.0.1) |  |  |
-| Microsoft.Azure.Devices.Provisioning.Client | NuGet [1.17.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Client/1.17.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.Provisioning.Security.Tpm | NuGet [1.13.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Security.Tpm/1.13.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.Provisioning.Service | NuGet [1.17.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Service/1.17.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.Provisioning.Transport.Amqp | NuGet [1.14.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Amqp/1.14.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.Provisioning.Transport.Http | NuGet [1.13.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Http/1.13.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.Provisioning.Transport.Mqtt | NuGet [1.14.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Mqtt/1.14.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.Shared | NuGet [1.26.0](https://www.nuget.org/packages/Microsoft.Azure.Devices.Shared/1.26.0) |  |  |
-| Microsoft.Azure.Functions.Worker | NuGet [1.0.0-preview1](https://www.nuget.org/packages/Microsoft.Azure.Functions.Worker/1.0.0-preview1) |  |  |
-| Microsoft.Azure.Functions.Worker.Sdk | NuGet [1.0.0-preview1](https://www.nuget.org/packages/Microsoft.Azure.Functions.Worker.Sdk/1.0.0-preview1) |  |  |
-| Microsoft.Azure.Management.RedisEnterprise | NuGet [1.0.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.RedisEnterprise/1.0.0-preview) |  |  |
-| Microsoft.Azure.uamqp | NuGet [1.2.11](https://www.nuget.org/packages/Microsoft.Azure.uamqp/1.2.11) |  |  |
-| Microsoft.Azure.umqtt | NuGet [1.1.11](https://www.nuget.org/packages/Microsoft.Azure.umqtt/1.1.11) |  |  |
 | Anomaly Detector | NuGet [3.0.0-preview.2](https://www.nuget.org/packages/Azure.AI.AnomalyDetector/3.0.0-preview.2) | [docs](/dotnet/api/overview/azure/AI.AnomalyDetector-readme-pre/) | GitHub [3.0.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.AnomalyDetector_3.0.0-preview.2/sdk/anomalydetector/Azure.AI.AnomalyDetector/) |
-| Anomaly Detector  | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0)<br>NuGet [1.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0-preview.1) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.AnomalyDetector_1.0.0-preview.1/sdk/cognitiveservices/AnomalyDetector) |
+| Anomaly Detector | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0)<br>NuGet [1.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0-preview.1) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.AnomalyDetector_1.0.0-preview.1/sdk/cognitiveservices/AnomalyDetector) |
 | 앱 구성 | NuGet [1.0.2](https://www.nuget.org/packages/Azure.Data.AppConfiguration/1.0.2) | [docs](/dotnet/api/overview/azure/Data.AppConfiguration-readme/) | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Data.AppConfiguration_1.0.2/sdk/appconfiguration/Azure.Data.AppConfiguration/) |
 | App Service | NuGet [0.2.2-alpha](https://www.nuget.org/packages/Microsoft.Azure.AppService/0.2.2-alpha) |  |  |
 | App Service - API Apps 공통 | NuGet [0.9.36](https://www.nuget.org/packages/Microsoft.Azure.AppService.ApiApps.Common/0.9.36) |  |  |
@@ -96,6 +76,7 @@ ms.locfileid: "97911590"
 | 자동 제안 | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.AutoSuggest/2.0.0) |  |  |
 | Azure Active Directory - 앱 인증 | NuGet [1.6.0](https://www.nuget.org/packages/Microsoft.Azure.Services.AppAuthentication/1.6.0) |  |  |
 | Azure Monitor Exporter for OpenTelemetry | NuGet [1.0.0-beta.1](https://www.nuget.org/packages/Microsoft.OpenTelemetry.Exporter.AzureMonitor/1.0.0-beta.1) | [docs](/dotnet/api/overview/azure/Microsoft.OpenTelemetry.Exporter.AzureMonitor-readme-pre/) |  |
+| Azure Security Attestation | NuGet [1.0.0-alpha.1](https://www.nuget.org/packages/Azure.Security.Attestation/1.0.0-alpha.1) |  | GitHub [1.0.0-alpha.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Security.Attestation_1.0.0-alpha.1/sdk/attestation/Azure.Security.Attestation/) |
 | Azure Stack - Azure 일치 스토리지 | NuGet [0.10.8-preview](https://www.nuget.org/packages/Microsoft.AzureStack.AzureConsistentStorage/0.10.8-preview) |  |  |
 | Batch | NuGet [14.0.0](https://www.nuget.org/packages/Microsoft.Azure.Batch/14.0.0) | [docs](/dotnet/api/overview/azure/Microsoft.Batch-readme/) | GitHub [14.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Batch_14.0.0/sdk/batch/Microsoft.Azure.Batch/) |
 | Batch - Apps Cryptography | NuGet [1.1.1.4](https://www.nuget.org/packages/Microsoft.Azure.Batch.Apps.Cryptography/1.1.1.4) |  |  |
@@ -128,312 +109,19 @@ ms.locfileid: "97911590"
 | Communication SMS | NuGet [1.0.0-beta.3](https://www.nuget.org/packages/Azure.Communication.Sms/1.0.0-beta.3) | [docs](/dotnet/api/overview/azure/Communication.Sms-readme-pre/) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Sms_1.0.0-beta.3/sdk/communication/Azure.Communication.Sms/) |
 | Computer Vision | NuGet [6.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.ComputerVision/6.0.0)<br>NuGet [6.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.ComputerVision/6.0.0-preview.1) |  | GitHub [6.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.ComputerVision_6.0.0-preview.1/sdk/cognitiveservices/Vision.ComputerVision) |
 | 구성 관리자 | NuGet [4.0.0](https://www.nuget.org/packages/Microsoft.Azure.ConfigurationManager/4.0.0) |  |  |
-| 커넥터 - Act | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Act/0.0.1-alpha) |  |  |
-| 커넥터 - Acumatica | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Acumatica/0.0.1-alpha) |  |  |
-| 커넥터 - Adobe Creative Cloud | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AdobeCreativeCloud/0.0.1-alpha) |  |  |
-| 커넥터 - Agilite | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Agilite/0.0.1-alpha) |  |  |
-| 커넥터 - Ahead | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Ahead/0.0.1-alpha) |  |  |
-| Connectors - AirSlate | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AirSlate/0.0.1-alpha) |  |  |
-| 커넥터 - All | NuGet [0.0.2-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.All/0.0.2-alpha) |  |  |
-| 커넥터 - Ally | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Ally/0.0.1-alpha) |  |  |
-| 커넥터 - Amazon RedShift | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AmazonRedShift/0.0.1-alpha) |  |  |
-| 커넥터 - Amazon SQS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AmazonSQS/0.0.1-alpha) |  |  |
-| 커넥터 - Apache Impala | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ApacheImpala/0.0.1-alpha) |  |  |
-| 커넥터 - Appfigures | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Appfigures/0.0.1-alpha) |  |  |
-| 커넥터 - 약속 일정 계획 10To8 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AppointmentScheduling10To8/0.0.1-alpha) |  |  |
-| 커넥터 - AppsForOps Timeline | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AppsForOpsTimeline/0.0.1-alpha) |  |  |
-| 커넥터 - Apptigent PowerTools LITE | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ApptigentPowerToolsLITE/0.0.1-alpha) |  |  |
-| Connectors - AS2 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AS2/0.0.1-alpha) |  |  |
-| 커넥터 - AtBot Admin | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AtBotAdmin/0.0.1-alpha) |  |  |
-| 커넥터 - AtBot Logic | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AtBotLogic/0.0.1-alpha) |  |  |
-| Connectors - AuthentiseLineItem | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AuthentiseLineItem/0.0.1-alpha) |  |  |
-| Connectors - AuthentiseOrder | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AuthentiseOrder/0.0.1-alpha) |  |  |
-| 커넥터 - AWeber | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AWeber/0.0.1-alpha) |  |  |
-| 커넥터 - Axtension Content Gate | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AxtensionContentGate/0.0.1-alpha) |  |  |
-| 커넥터 - Azure AD ID 보호 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureADIdentityProtection/0.0.1-alpha) |  |  |
-| 커넥터 - Azure App Service | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureAppService/0.0.1-alpha) |  |  |
-| 커넥터 - Azure Application Insights | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureApplicationInsights/0.0.1-alpha) |  |  |
-| 커넥터 - Azure Automation | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureAutomation/0.0.1-alpha) |  |  |
-| 커넥터 - Azure Blob Storage | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureBlobStorage/0.0.1-alpha) |  |  |
-| 커넥터 - Azure Container Instance | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureContainerInstance/0.0.1-alpha) |  |  |
-| 커넥터 - Azure Cosmos DB | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureCosmosDB/0.0.1-alpha) |  |  |
-| 커넥터 - Azure Data Factory | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureDataFactory/0.0.1-alpha) |  |  |
-| 커넥터 - Azure Data Lake | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureDataLake/0.0.1-alpha) |  |  |
-| 커넥터 - Azure DevOps | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureDevOps/0.0.1-alpha) |  |  |
-| 커넥터 - Azure Event Grid Publish | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureEventGridPublish/0.0.1-alpha) |  |  |
-| 커넥터 - Azure File Storage | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureFileStorage/0.0.1-alpha) |  |  |
-| 커넥터 - Azure IoT Central | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureIoTCentral/0.0.1-alpha) |  |  |
-| 커넥터 - Azure Key Vault | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureKeyVault/0.0.1-alpha) |  |  |
-| 커넥터 - Azure Log Analytics | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureLogAnalytics/0.0.1-alpha) |  |  |
-| 커넥터 - Azure Log Analytics 데이터 수집기 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureLogAnalyticsDataCollector/0.0.1-alpha) |  |  |
-| 커넥터 - Azure Monitor 로그 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureMonitorLogs/0.0.1-alpha) |  |  |
-| 커넥터 - Azure Table Storage | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureTableStorage/0.0.1-alpha) |  |  |
-| 커넥터 - Azure VM | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureVM/0.0.1-alpha) |  |  |
-| 커넥터 - Basecamp | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Basecamp/0.0.1-alpha) |  |  |
-| 커넥터 - Basecamp 2 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Basecamp2/0.0.1-alpha) |  |  |
-| 커넥터 - BillsPLS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BillsPLS/0.0.1-alpha) |  |  |
-| 커넥터 - Bing Maps | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BingMaps/0.0.1-alpha) |  |  |
-| 커넥터 - Bing Search | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BingSearch/0.0.1-alpha) |  |  |
-| 커넥터 - Bitbucket | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Bitbucket/0.0.1-alpha) |  |  |
-| 커넥터 - Bitly | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Bitly/0.0.1-alpha) |  |  |
-| Connectors - BizTalkServer | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BizTalkServer/0.0.1-alpha) |  |  |
-| 커넥터 - Blackbaud Raisers Edge NXT | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BlackbaudRaisersEdgeNXT/0.0.1-alpha) |  |  |
-| 커넥터 - 블로거 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Blogger/0.0.1-alpha) |  |  |
-| 커넥터 - 상자 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Box/0.0.1-alpha) |  |  |
-| 커넥터 - bttn | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Bttn/0.0.1-alpha) |  |  |
-| 커넥터 - Business Central | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BusinessCentral/0.0.1-alpha) |  |  |
-| 커넥터 - Campfire | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Campfire/0.0.1-alpha) |  |  |
-| 커넥터 - Capsule CRM | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CapsuleCRM/0.0.1-alpha) |  |  |
-| Connectors - Casper365 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Casper365/0.0.1-alpha) |  |  |
-| 커넥터 - Chatter | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Chatter/0.0.1-alpha) |  |  |
-| 커넥터 - Cisco Webex Meetings | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CiscoWebexMeetings/0.0.1-alpha) |  |  |
-| 커넥터 - 클라우드 PKI 관리 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CloudPKIManagement/0.0.1-alpha) |  |  |
-| 커넥터 - Cloudmersive 데이터 유효성 검사 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CloudmersiveDataValidation/0.0.1-alpha) |  |  |
-| 커넥터 - Cloudmersive NLP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CloudmersiveNLP/0.0.1-alpha) |  |  |
-| 커넥터 - Cognito Forms | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CognitoForms/0.0.1-alpha) |  |  |
-| 커넥터 - Commercient | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Commercient/0.0.1-alpha) |  |  |
-| 커넥터 - Common Data Service | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CommonDataService/0.0.1-alpha) |  |  |
-| 커넥터 - Computer Vision API | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ComputerVisionAPI/0.0.1-alpha) |  |  |
-| 커넥터 - Content Conversion | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ContentConversion/0.0.1-alpha) |  |  |
-| 커넥터 - Content Moderator | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ContentModerator/0.0.1-alpha) |  |  |
-| 커넥터 - Corda Blockchain | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CordaBlockchain/0.0.1-alpha) |  |  |
-| 커넥터 - CPQSync | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CPQSync/0.0.1-alpha) |  |  |
-| 커넥터 - Custom Vision | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CustomVision/0.0.1-alpha) |  |  |
-| 커넥터 - D7SMS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.D7SMS/0.0.1-alpha) |  |  |
-| 커넥터 - Data8 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Data8/0.0.1-alpha) |  |  |
-| 커넥터 - DB2 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DB2/0.0.1-alpha) |  |  |
-| 커넥터 - Derdack SIGNL4 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DerdackSIGNL4/0.0.1-alpha) |  |  |
-| 커넥터 - DnB Optimizer | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DnBOptimizer/0.0.1-alpha) |  |  |
-| 커넥터 - DocFusion365 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DocFusion365/0.0.1-alpha) |  |  |
-| 커넥터 - DocuSign | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DocuSign/0.0.1-alpha) |  |  |
-| Connectors - Dropbox | NuGet [0.0.2-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dropbox/0.0.2-alpha) |  |  |
-| 커넥터 - Dynamic Signal | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DynamicSignal/0.0.1-alpha) |  |  |
-| 커넥터 - Dynamics 365 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dynamics365/0.0.1-alpha) |  |  |
-| 커넥터 - Dynamics 365 Customer Insights | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dynamics365CustomerInsights/0.0.1-alpha) |  |  |
-| 커넥터 - Dynamics 365 Customer Voice | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dynamics365CustomerVoice/0.0.1-alpha) |  |  |
-| 커넥터 - Dynamics 365 for Fin & Ops | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dynamics365forFinOps/0.0.1-alpha) |  |  |
-| 커넥터 - Dynamics 365 Sales Insights | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dynamics365SalesInsights/0.0.1-alpha) |  |  |
-| 커넥터 - Dynamics NAV | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DynamicsNAV/0.0.1-alpha) |  |  |
-| 커넥터 - Easy Redmine | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EasyRedmine/0.0.1-alpha) |  |  |
-| 커넥터 - Easyvista Self Help | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EasyvistaSelfHelp/0.0.1-alpha) |  |  |
-| 커넥터 - Edifact | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Edifact/0.0.1-alpha) |  |  |
-| 커넥터 - Eduframe | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Eduframe/0.0.1-alpha) |  |  |
-| 커넥터 - Elastic Forms | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ElasticForms/0.0.1-alpha) |  |  |
-| 커넥터 - ElasticOCR | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ElasticOCR/0.0.1-alpha) |  |  |
-| 커넥터 - emfluence Marketing Platform | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EmfluenceMarketingPlatform/0.0.1-alpha) |  |  |
-| 커넥터 - Encodian | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Encodian/0.0.1-alpha) |  |  |
-| Connectors - EntegrationsInvoicing | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EntegrationsInvoicing/0.0.1-alpha) |  |  |
-| 커넥터 - Envoy | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Envoy/0.0.1-alpha) |  |  |
-| 커넥터 - Ethereum Blockchain | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EthereumBlockchain/0.0.1-alpha) |  |  |
-| 커넥터 - Event Hubs | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EventHubs/0.0.1-alpha) |  |  |
-| 커넥터 - Eventbrite | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Eventbrite/0.0.1-alpha) |  |  |
-| 커넥터 - Excel Online | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ExcelOnline/0.0.1-alpha) |  |  |
-| 커넥터 - Excel Online One Drive | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ExcelOnlineOneDrive/0.0.1-alpha) |  |  |
-| Connectors - ExghtsGenDocumentnMore | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ExghtsGenDocumentnMore/0.0.1-alpha) |  |  |
-| 커넥터 - Face API | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FaceAPI/0.0.1-alpha) |  |  |
-| 커넥터 - Facebook | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Facebook/0.0.1-alpha) |  |  |
-| 커넥터 - 파일 시스템 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FileSystem/0.0.1-alpha) |  |  |
-| 커넥터 - FireText | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FireText/0.0.1-alpha) |  |  |
-| 커넥터 - FlowForma | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FlowForma/0.0.1-alpha) |  |  |
-| 커넥터 - FORCAM FORCE Bridge | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ForcamForceBridge/0.0.1-alpha) |  |  |
-| 커넥터 - Form Recognizer | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FormRecognizer/0.0.1-alpha) |  |  |
-| 커넥터 - FreshBooks | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FreshBooks/0.0.1-alpha) |  |  |
-| 커넥터 - Freshdesk | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Freshdesk/0.0.1-alpha) |  |  |
-| 커넥터 - Freshservice | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Freshservice/0.0.1-alpha) |  |  |
-| 커넥터 - FTP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FTP/0.0.1-alpha) |  |  |
-| 커넥터 - Fulcrum | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Fulcrum/0.0.1-alpha) |  |  |
-| 커넥터 - GetMyInvoices | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GetMyInvoices/0.0.1-alpha) |  |  |
-| Connectors - GitHub | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GitHub/0.0.1-alpha) |  |  |
-| 커넥터 - Gmail | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Gmail/0.0.1-alpha) |  |  |
-| 커넥터 - GoFileRoom | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoFileRoom/0.0.1-alpha) |  |  |
-| 커넥터 - Google Calendar | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoogleCalendar/0.0.1-alpha) |  |  |
-| 커넥터 - Google Contacts | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoogleContacts/0.0.1-alpha) |  |  |
-| 커넥터 - Google Drive | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoogleDrive/0.0.1-alpha) |  |  |
-| 커넥터 - Google Sheets | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoogleSheets/0.0.1-alpha) |  |  |
-| 커넥터 - GoToMeeting | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoToMeeting/0.0.1-alpha) |  |  |
-| 커넥터 - GoToTraining | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoToTraining/0.0.1-alpha) |  |  |
-| 커넥터 - GoToWebinar | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoToWebinar/0.0.1-alpha) |  |  |
-| 커넥터 - Harvest | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Harvest/0.0.1-alpha) |  |  |
-| 커넥터 - HelloSign | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.HelloSign/0.0.1-alpha) |  |  |
-| 커넥터 - HipChat | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.HipChat/0.0.1-alpha) |  |  |
-| 커넥터 - HotProfile | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.HotProfile/0.0.1-alpha) |  |  |
-| 커넥터 - HouseRater QA | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.HouseRaterQA/0.0.1-alpha) |  |  |
-| 커넥터 - HTTP with Azure AD | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.HTTPwithAzureAD/0.0.1-alpha) |  |  |
-| 커넥터 - IBM 3270 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.IBM3270/0.0.1-alpha) |  |  |
-| 커넥터 - Imprezian 360 CRM | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Imprezian360CRM/0.0.1-alpha) |  |  |
-| 커넥터 - IN-D KYC India | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.INDKYCIndia/0.0.1-alpha) |  |  |
-| 커넥터 - IN-D Payables | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.INDPayables/0.0.1-alpha) |  |  |
-| 커넥터 - 산업용 App Store | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.IndustrialAppStore/0.0.1-alpha) |  |  |
-| 커넥터 - Infobip | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Infobip/0.0.1-alpha) |  |  |
-| 커넥터 - Informix | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Informix/0.0.1-alpha) |  |  |
-| 커넥터 - Infusionsoft | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Infusionsoft/0.0.1-alpha) |  |  |
-| 커넥터 - Inoreader | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Inoreader/0.0.1-alpha) |  |  |
-| 커넥터 - Instagram | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Instagram/0.0.1-alpha) |  |  |
-| 커넥터 - Instapaper | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Instapaper/0.0.1-alpha) |  |  |
-| 커넥터 - Integrable PDF | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.IntegrablePDF/0.0.1-alpha) |  |  |
-| 커넥터 - Intercom | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Intercom/0.0.1-alpha) |  |  |
-| 커넥터 - JIRA | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.JIRA/0.0.1-alpha) |  |  |
-| 커넥터 - JungleMail 365 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.JungleMail365/0.0.1-alpha) |  |  |
-| 커넥터 - kintone | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Kintone/0.0.1-alpha) |  |  |
-| 커넥터 - KnowledgeLake | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.KnowledgeLake/0.0.1-alpha) |  |  |
-| 커넥터 - Kusto | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Kusto/0.0.1-alpha) |  |  |
-| 커넥터 - LatinShare 문서 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LatinShareDocuments/0.0.1-alpha) |  |  |
-| 커넥터 - LatinShare SHP 관리 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LatinShareSHPManagement/0.0.1-alpha) |  |  |
-| 커넥터 - LatinShare SHP 권한 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LatinShareSHPPermissions/0.0.1-alpha) |  |  |
-| 커넥터 - LeadDesk | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LeadDesk/0.0.1-alpha) |  |  |
-| 커넥터 - LeanKit | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LeanKit/0.0.1-alpha) |  |  |
-| 커넥터 - LINK Mobility | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LINKMobility/0.0.1-alpha) |  |  |
-| 커넥터 - LinkedIn | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LinkedInV2/0.0.1-alpha) |  |  |
-| 커넥터 - LiveChat | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LiveChat/0.0.1-alpha) |  |  |
-| 커넥터 - LiveTiles 봇 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LiveTilesBots/0.0.1-alpha) |  |  |
-| 커넥터 - LUIS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LUIS/0.0.1-alpha) |  |  |
-| 커넥터 - MailChimp | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MailChimp/0.0.1-alpha) |  |  |
-| 커넥터 - MailParser | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MailParser/0.0.1-alpha) |  |  |
-| 커넥터 - Mandrill | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Mandrill/0.0.1-alpha) |  |  |
-| 커넥터 - 마케팅 콘텐츠 허브 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MarketingContentHub/0.0.1-alpha) |  |  |
-| 커넥터 - Marketo | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Marketo/0.0.1-alpha) |  |  |
-| 커넥터 - Medium | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Medium/0.0.1-alpha) |  |  |
-| 커넥터 - MeetingRoomMap | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MeetingRoomMap/0.0.1-alpha) |  |  |
-| 커넥터 - Microblink | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Microblink/0.0.1-alpha) |  |  |
-| 커넥터 - Microsoft Defender ATP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftDefenderATP/0.0.1-alpha) |  |  |
-| 커넥터 - Microsoft Forms | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftForms/0.0.1-alpha) |  |  |
-| 커넥터 - Microsoft School Data Sync | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftSchoolDataSync/0.0.1-alpha) |  |  |
-| 커넥터 - Microsoft StaffHub | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftStaffHub/0.0.1-alpha) |  |  |
-| 커넥터 - Microsoft Teams | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftTeams/0.0.1-alpha) |  |  |
-| 커넥터 - Microsoft To Do | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftToDo/0.0.1-alpha) |  |  |
-| 커넥터 - Microsoft Translator | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftTranslatorV2/0.0.1-alpha) |  |  |
-| 커넥터 - Mitto | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Mitto/0.0.1-alpha) |  |  |
-| 커넥터 - MobilyWS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MobilyWS/0.0.1-alpha) |  |  |
-| 커넥터 - MotaWord Translations | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MotaWordTranslations/0.0.1-alpha) |  |  |
-| 커넥터 - MQ | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MQ/0.0.1-alpha) |  |  |
-| Connectors - MSG91ForSMSTextnVoice | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MSG91ForSMSTextnVoice/0.0.1-alpha) |  |  |
-| 커넥터 - MSN 날씨 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MSNWeather/0.0.1-alpha) |  |  |
-| 커넥터 - Mtarget SMS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MtargetSMS/0.0.1-alpha) |  |  |
-| 커넥터 - Muhimbi PDF | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MuhimbiPDF/0.0.1-alpha) |  |  |
-| 커넥터 - MySQL | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MySQL/0.0.1-alpha) |  |  |
-| 커넥터 - Nexmo | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Nexmo/0.0.1-alpha) |  |  |
-| 커넥터 - Nitro | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Nitro/0.0.1-alpha) |  |  |
-| 커넥터 - Notiivy 브라우저 알림 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.NotiivyBrowserNotifications/0.0.1-alpha) |  |  |
-| 커넥터 - Office 365 그룹 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Office365Groups/0.0.1-alpha) |  |  |
-| 커넥터 - Office 365 그룹 메일 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Office365GroupsMail/0.0.1-alpha) |  |  |
-| 커넥터 - Office 365 Outlook | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Office365Outlook/0.0.1-alpha) |  |  |
-| 커넥터 - Office 365 사용자 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Office365Users/0.0.1-alpha) |  |  |
-| 커넥터 - Office 365 비디오 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Office365Video/0.0.1-alpha) |  |  |
-| 커넥터 - OneDrive | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OneDrive/0.0.1-alpha) |  |  |
-| 커넥터 - 비즈니스용 OneDrive | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OneDriveForBusiness/0.0.1-alpha) |  |  |
-| 커넥터 - OneNote | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OneNote/0.0.1-alpha) |  |  |
-| 커넥터 - OpenText CS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OpenTextCS/0.0.1-alpha) |  |  |
-| 커넥터 - OpenText eDOCS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OpenTextEDOCS/0.0.1-alpha) |  |  |
-| 커넥터 - Oracle Database | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OracleDatabase/0.0.1-alpha) |  |  |
-| 커넥터 - Outlook | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Outlook/0.0.1-alpha) |  |  |
-| 커넥터 - Outlook Customer Manager | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OutlookCustomerManager/0.0.1-alpha) |  |  |
-| 커넥터 - PagerDuty | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PagerDuty/0.0.1-alpha) |  |  |
-| 커넥터 - Parserr | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Parserr/0.0.1-alpha) |  |  |
-| 커넥터 - Parsuer | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Parsuer/0.0.1-alpha) |  |  |
-| 파트너 센터 이벤트 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PartnerCenterEvents/0.0.1-alpha) |  |  |
-| 파트너 센터 조회 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PartnerCenterReferrals/0.0.1-alpha) |  |  |
-| 커넥터 - PDF4me | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PDF4me/0.0.1-alpha) |  |  |
-| 커넥터 - Pinterest | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Pinterest/0.0.1-alpha) |  |  |
-| 커넥터 - Pipedrive | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Pipedrive/0.0.1-alpha) |  |  |
-| Pitney Bowes 데이터 유효성 검사 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PitneyBowesDataValidation/0.0.1-alpha) |  |  |
-| 커넥터 - Pivotal Tracker | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PivotalTracker/0.0.1-alpha) |  |  |
-| 커넥터 - Planner | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Planner/0.0.1-alpha) |  |  |
-| 커넥터 - Plivo | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Plivo/0.0.1-alpha) |  |  |
-| 커넥터 - Plumsail Documents | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PlumsailDocuments/0.0.1-alpha) |  |  |
-| 커넥터 - Plumsail HelpDesk | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PlumsailHelpDesk/0.0.1-alpha) |  |  |
-| 커넥터 - Plumsail SP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PlumsailSP/0.0.1-alpha) |  |  |
-| 커넥터 - PoliteMail | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PoliteMail/0.0.1-alpha) |  |  |
-| 커넥터 - PostgreSQL | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PostgreSQL/0.0.1-alpha) |  |  |
-| 커넥터 - Power BI | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PowerBI/0.0.1-alpha) |  |  |
-| 커넥터 - 우선 순위 행렬 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PriorityMatrix/0.0.1-alpha) |  |  |
-| 커넥터 - Projectum Present It | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ProjectumPresentIt/0.0.1-alpha) |  |  |
-| 커넥터 - Pure Leads | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PureLeads/0.0.1-alpha) |  |  |
-| 커넥터 - Pushcut | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Pushcut/0.0.1-alpha) |  |  |
-| 커넥터 - QnA Maker | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.QnAMaker/0.0.1-alpha) |  |  |
-| 커넥터 - Recorded Future | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.RecordedFuture/0.0.1-alpha) |  |  |
-| 커넥터 - Redmine | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Redmine/0.0.1-alpha) |  |  |
-| 커넥터 - RegoLink for Clarity PPM | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.RegoLinkForClarityPPM/0.0.1-alpha) |  |  |
-| 커넥터 - Rencore Code | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.RencoreCode/0.0.1-alpha) |  |  |
-| 커넥터 - RiskIQ | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.RiskIQ/0.0.1-alpha) |  |  |
-| 커넥터 - RSS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.RSS/0.0.1-alpha) |  |  |
-| 커넥터 - Sage 100cloudCompta | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Sage100cloudCompta/0.0.1-alpha) |  |  |
-| 커넥터 - Sage 100cloudVente | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Sage100cloudVente/0.0.1-alpha) |  |  |
-| 커넥터 - Salesforce | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Salesforce/0.0.1-alpha) |  |  |
-| 커넥터 - SAP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SAP/0.0.1-alpha) |  |  |
-| 커넥터 - Scrive eSign | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ScriveESign/0.0.1-alpha) |  |  |
-| 커넥터 - SeekTable | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SeekTable/0.0.1-alpha) |  |  |
-| 커넥터 - Sendmode | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Sendmode/0.0.1-alpha) |  |  |
-| 커넥터 - Serverless360 BAM 및 추적 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Serverless360BAMTracking/0.0.1-alpha) |  |  |
-| 커넥터 - Service Bus | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ServiceBus/0.0.1-alpha) |  |  |
-| 커넥터 - ServiceNow | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ServiceNow/0.0.1-alpha) |  |  |
-| 커넥터 - SerwerSMS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SerwerSMS/0.0.1-alpha) |  |  |
-| Connectors - SFTP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SFTP/0.0.1-alpha) |  |  |
-| 커넥터 - SFTP SSH | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SFTPSSH/0.0.1-alpha) |  |  |
-| 커넥터 - ShareEffect | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ShareEffect/0.0.1-alpha) |  |  |
-| 커넥터 - SharePoint | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SharePoint/0.0.1-alpha) |  |  |
-| 커넥터 - Shifts for Microsoft Teams | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ShiftsForMicrosoftTeams/0.0.1-alpha) |  |  |
-| 커넥터 - 짧은 URL | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ShortURL/0.0.1-alpha) |  |  |
-| 커넥터 - SigningHub | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SigningHub/0.0.1-alpha) |  |  |
-| 커넥터 - SignRequest | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SignRequest/0.0.1-alpha) |  |  |
-| 커넥터 - 비즈니스용 Skype Online | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SkypeForBusinessOnline/0.0.1-alpha) |  |  |
-| 커넥터 - Slack | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Slack/0.0.1-alpha) |  |  |
-| 커넥터 - Slascone | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Slascone/0.0.1-alpha) |  |  |
-| 커넥터 - Smarp | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Smarp/0.0.1-alpha) |  |  |
-| 커넥터 - Smartsheet | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Smartsheet/0.0.1-alpha) |  |  |
-| 커넥터 - SMSLink | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SMSLink/0.0.1-alpha) |  |  |
-| 커넥터 - SMTP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SMTP/0.0.1-alpha) |  |  |
-| 커넥터 - Soft1 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Soft1/0.0.1-alpha) |  |  |
-| 커넥터 - SOLYP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SOLYP/0.0.1-alpha) |  |  |
-| 커넥터 - SparkPost | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SparkPost/0.0.1-alpha) |  |  |
-| 커넥터 - SproketPowerActions | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SproketPowerActions/0.0.1-alpha) |  |  |
-| 커넥터 - SQL Server | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SQLServer/0.0.1-alpha) |  |  |
-| 커넥터 - Stormboard | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Stormboard/0.0.1-alpha) |  |  |
-| 커넥터 - Stripe | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Stripe/0.0.1-alpha) |  |  |
-| 커넥터 - Survey123 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Survey123/0.0.1-alpha) |  |  |
-| 커넥터 - SurveyMonkey | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SurveyMonkey/0.0.1-alpha) |  |  |
-| 커넥터 - Tallyfy | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Tallyfy/0.0.1-alpha) |  |  |
-| 커넥터 - Teamwork Projects | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TeamworkProjects/0.0.1-alpha) |  |  |
-| 커넥터 - TeleSign SMS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TeleSignSMS/0.0.1-alpha) |  |  |
-| 커넥터 - Teradata | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Teradata/0.0.1-alpha) |  |  |
-| 커넥터 - Text Analytics | NuGet [0.0.2-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TextAnalytics/0.0.2-alpha) |  |  |
-| 커넥터 - 발권 이벤트 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TicketingEvents/0.0.1-alpha) |  |  |
-| 커넥터 - Tilkee | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Tilkee/0.0.1-alpha) |  |  |
-| 커넥터 - Todoist | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Todoist/0.0.1-alpha) |  |  |
-| 커넥터 - Traction Guest | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TractionGuest/0.0.1-alpha) |  |  |
-| 커넥터 - Trello | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Trello/0.0.1-alpha) |  |  |
-| 커넥터 - TRIGGERcmd | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TRIGGERcmd/0.0.1-alpha) |  |  |
-| 커넥터 - Trustual | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Trustual/0.0.1-alpha) |  |  |
-| 커넥터 - Twilio | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Twilio/0.0.1-alpha) |  |  |
-| 커넥터 - Twitter | NuGet [0.0.2-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Twitter/0.0.2-alpha) |  |  |
-| 커넥터 - TxtSync | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TxtSync/0.0.1-alpha) |  |  |
-| 커넥터 - UserVoice | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.UserVoice/0.0.1-alpha) |  |  |
-| 커넥터 - Vantage 365 Imaging | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Vantage365Imaging/0.0.1-alpha) |  |  |
-| 커넥터 - Ventipix Asset and Inventory | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.VentipixAssetAndInventory/0.0.1-alpha) |  |  |
-| 커넥터 - Webex Teams | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.WebexTeams/0.0.1-alpha) |  |  |
-| 커넥터 - WebMerge | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.WebMerge/0.0.1-alpha) |  |  |
-| 커넥터 - Witivio | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Witivio/0.0.1-alpha) |  |  |
-| 커넥터 - Word Online Business | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.WordOnlineBusiness/0.0.1-alpha) |  |  |
-| 커넥터 - WordPress | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.WordPress/0.0.1-alpha) |  |  |
-| 커넥터 - WorkPoint | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.WorkPoint/0.0.1-alpha) |  |  |
-| 커넥터 - X12 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.X12/0.0.1-alpha) |  |  |
-| 커넥터 - Xooa Blockchain Database | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.XooaBlockchainDatabase/0.0.1-alpha) |  |  |
-| 커넥터 - Xooa Blockchain Smart Contract | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.XooaBlockchainSmartContract/0.0.1-alpha) |  |  |
-| 커넥터 - Xpertdoc | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Xpertdoc/0.0.1-alpha) |  |  |
-| 커넥터 - Zendesk | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Zendesk/0.0.1-alpha) |  |  |
-| 커넥터 - Zenkraft | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Zenkraft/0.0.1-alpha) |  |  |
 | Container Registry | NuGet [1.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.ContainerRegistry/1.0.0-preview.1) |  | GitHub [1.0.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.ContainerRegistry_1.0.0-preview.1/sdk/containerregistry/Microsoft.Azure.ContainerRegistry/) |
 | Content Moderator | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.ContentModerator/2.0.0) |  |  |
-| 핵심 | NuGet [1.7.0](https://www.nuget.org/packages/Azure.Core/1.7.0) | [docs](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.7.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.7.0/sdk/core/Azure.Core/) |
+| 핵심 | NuGet [1.8.1](https://www.nuget.org/packages/Azure.Core/1.8.1) | [docs](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.8.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.8.1/sdk/core/Azure.Core/) |
 | 코어 - AMQP | NuGet [1.0.0](https://www.nuget.org/packages/Azure.Core.Amqp/1.0.0) | [docs](/dotnet/api/overview/azure/Core.Amqp-readme/) | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core.Amqp_1.0.0/sdk/core/Azure.Core.Amqp/) |
 | Core Experimental | NuGet [0.1.0-preview.7](https://www.nuget.org/packages/Azure.Core.Experimental/0.1.0-preview.7) | [docs](/dotnet/api/overview/azure/Core.Experimental-readme-pre/) | GitHub [0.1.0-preview.7](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core.Experimental_0.1.0-preview.7/sdk/core/Azure.Core.Experimental/) |
-| Core Newtonsoft Json | NuGet [1.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.Core.NewtonsoftJson/1.0.0-preview.1) | [docs](/dotnet/api/overview/azure/Microsoft.Core.NewtonsoftJson-readme-pre/) |  |
-| Core Spatial | NuGet [1.0.0-beta.1](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial/1.0.0-beta.1) | [docs](/dotnet/api/overview/azure/Microsoft.Core.Spatial-readme-pre/) |  |
-| Core Spatial Newtonsoft Json | NuGet [1.0.0-beta.1](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial.NewtonsoftJson/1.0.0-beta.1) | [docs](/dotnet/api/overview/azure/Microsoft.Core.Spatial.NewtonsoftJson-readme-pre/) |  |
+| Core Newtonsoft Json | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.Core.NewtonsoftJson/1.0.0)<br>NuGet [1.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.Core.NewtonsoftJson/1.0.0-preview.1) |  |  |
+| Core Spatial | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial/1.0.0)<br>NuGet [1.0.0-beta.1](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial/1.0.0-beta.1) |  |  |
+| Core Spatial Newtonsoft Json | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial.NewtonsoftJson/1.0.0)<br>NuGet [1.0.0-beta.1](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial.NewtonsoftJson/1.0.0-beta.1) |  |  |
 | Cosmos DB | NuGet [4.0.0-preview3](https://www.nuget.org/packages/Azure.Cosmos/4.0.0-preview3) | [docs](/dotnet/api/azure.cosmos) | GitHub [4.0.0-preview3](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/4.0.0-preview3) |
 | Cosmos DB | NuGet [3.14.0](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.14.0)<br>NuGet [3.15.2-preview](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.15.2-preview) | [docs](/dotnet/api/overview/azure/cosmosdb) | GitHub [3.14.0](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/3.12.0/Microsoft.Azure.Cosmos) |
 | Cosmos DB - BulkExecutor | NuGet [2.5.1-preview](https://www.nuget.org/packages/Microsoft.Azure.CosmosDB.BulkExecutor/2.5.1-preview) |  | GitHub [2.5.1-preview](https://github.com/Azure/azure-cosmosdb-bulkexecutor-dotnet-getting-started) |
 | Cosmos DB - Direct | NuGet [3.15.4](https://www.nuget.org/packages/Microsoft.Azure.Cosmos.Direct/3.15.4) |  | GitHub [3.15.4](https://github.com/Azure/azure-cosmos-dotnet-v3) |
-| Cosmos DB - Encryption | NuGet [1.0.0-preview7](https://www.nuget.org/packages/Microsoft.Azure.Cosmos.Encryption/1.0.0-preview7) |  | GitHub [1.0.0-preview7](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/encryption/1.0.0-preview4/Microsoft.Azure.Cosmos.Encryption) |
+| Cosmos DB - Encryption | NuGet [1.0.0-preview9](https://www.nuget.org/packages/Microsoft.Azure.Cosmos.Encryption/1.0.0-preview9) |  | GitHub [1.0.0-preview9](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/encryption/1.0.0-preview4/Microsoft.Azure.Cosmos.Encryption) |
 | Custom Image Search | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.CustomImageSearch/2.0.0) |  |  |
 | 사용자 지정 검색 | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.CustomSearch/2.0.0) |  |  |
 | Custom Vision 예측 | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction/2.0.0) |  | GitHub [2.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction_2.0.0/sdk/cognitiveservices/Vision.CustomVision.Prediction) |
@@ -456,6 +144,7 @@ ms.locfileid: "97911590"
 | Event Hubs - 스키마 레지스트리 Apache Avro | NuGet [1.0.0-beta.1](https://www.nuget.org/packages/Microsoft.Azure.Data.SchemaRegistry.ApacheAvro/1.0.0-beta.1) | [docs](/dotnet/api/overview/azure/Microsoft.Data.SchemaRegistry.ApacheAvro-readme-pre/) |  |
 | Event Hubs - Service Fabric Processor | NuGet [0.5.4](https://www.nuget.org/packages/Microsoft.Azure.EventHubs.ServiceFabricProcessor/0.5.4) |  | GitHub [0.5.4](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.EventHubs.ServiceFabricProcessor_0.5.4/sdk/eventhub/Microsoft.Azure.EventHubs.ServiceFabricProcessor/) |
 | Extensions - Caching Cosmos | NuGet [1.0.0-preview5](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Cosmos/1.0.0-preview5) |  | GitHub [1.0.0-preview5](https://github.com/Azure/Microsoft.Extensions.Caching.Cosmos/tree/v1.0.0-preview4) |
+| Face | NuGet [2.6.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.Face/2.6.0-preview.1) |  | GitHub [2.6.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.Face_2.6.0-preview.1/sdk/cognitiveservices/Vision.Face) |
 | Form Recognizer | NuGet [3.0.0](https://www.nuget.org/packages/Azure.AI.FormRecognizer/3.0.0)<br>NuGet [3.1.0-beta.1](https://www.nuget.org/packages/Azure.AI.FormRecognizer/3.1.0-beta.1) | [docs](/dotnet/api/overview/azure/AI.FormRecognizer-readme/) | GitHub [3.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.FormRecognizer_3.0.0/sdk/formrecognizer/Azure.AI.FormRecognizer/)<br>GitHub [3.1.0-beta.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.FormRecognizer_3.1.0-beta.1/sdk/formrecognizer/Azure.AI.FormRecognizer/) |
 | Form Recognizer | NuGet [0.8.0-preview](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.FormRecognizer/0.8.0-preview) |  | GitHub [0.8.0-preview](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/FormRecognizer) |
 | Functions - Extensions | NuGet [1.1.0](https://www.nuget.org/packages/Microsoft.Azure.Functions.Extensions/1.1.0)<br>NuGet [1.1.0-preview1](https://www.nuget.org/packages/Microsoft.Azure.Functions.Extensions/1.1.0-preview1) |  | GitHub [1.1.0](https://github.com/Azure/azure-functions-dotnet-extensions) |
@@ -486,6 +175,26 @@ ms.locfileid: "97911590"
 | LUIS - Runtime | NuGet [3.1.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime/3.1.0-preview.1) |  | GitHub [3.1.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime_3.1.0-preview.1/sdk/cognitiveservices/Language.LUIS.Runtime) |
 | Media Live Video Analytics Edge | NuGet [1.0.4-preview.1](https://www.nuget.org/packages/Microsoft.Azure.Media.LiveVideoAnalytics.Edge/1.0.4-preview.1) |  | GitHub [1.0.4-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/mediaservices/Microsoft.Azure.Media.LiveVideoAnalytics.Edge) |
 | Metrics Advisor | NuGet [1.0.0-beta.2](https://www.nuget.org/packages/Azure.AI.MetricsAdvisor/1.0.0-beta.2) | [docs](/dotnet/api/overview/azure/AI.MetricsAdvisor-readme-pre/) | GitHub [1.0.0-beta.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.MetricsAdvisor_1.0.0-beta.2/sdk/metricsadvisor/Azure.AI.MetricsAdvisor/) |
+| Microsoft.Azure.Amqp | NuGet [2.4.9](https://www.nuget.org/packages/Microsoft.Azure.Amqp/2.4.9) |  |  |
+| Microsoft.Azure.Devices | NuGet [1.28.1](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.1) |  |  |
+| Microsoft.Azure.Devices.Client | NuGet [1.33.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.Client/1.33.1) |  |  |
+| Microsoft.Azure.Devices.Client.PCL | NuGet [1.0.16](https://www.nuget.org/packages/Microsoft.Azure.Devices.Client.PCL/1.0.16) |  |  |
+| Microsoft.Azure.Devices.DigitalTwin.Client | NuGet [1.0.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.DigitalTwin.Client/1.0.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.DigitalTwin.Service | NuGet [1.0.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.DigitalTwin.Service/1.0.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.ProtocolGateway.Core | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.Core/2.0.1) |  |  |
+| Microsoft.Azure.Devices.ProtocolGateway.IotHubClient | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.IotHubClient/2.0.1) |  |  |
+| Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage/2.0.1) |  |  |
+| Microsoft.Azure.Devices.Provisioning.Client | NuGet [1.17.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Client/1.17.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.Provisioning.Security.Tpm | NuGet [1.13.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Security.Tpm/1.13.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.Provisioning.Service | NuGet [1.17.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Service/1.17.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.Provisioning.Transport.Amqp | NuGet [1.14.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Amqp/1.14.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.Provisioning.Transport.Http | NuGet [1.13.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Http/1.13.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.Provisioning.Transport.Mqtt | NuGet [1.14.0-preview-001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Mqtt/1.14.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.Shared | NuGet [1.26.0](https://www.nuget.org/packages/Microsoft.Azure.Devices.Shared/1.26.0) |  |  |
+| Microsoft.Azure.Functions.Worker | NuGet [1.0.0-preview2](https://www.nuget.org/packages/Microsoft.Azure.Functions.Worker/1.0.0-preview2) |  |  |
+| Microsoft.Azure.Functions.Worker.Sdk | NuGet [1.0.0-preview2](https://www.nuget.org/packages/Microsoft.Azure.Functions.Worker.Sdk/1.0.0-preview2) |  |  |
+| Microsoft.Azure.uamqp | NuGet [1.2.11](https://www.nuget.org/packages/Microsoft.Azure.uamqp/1.2.11) |  |  |
+| Microsoft.Azure.umqtt | NuGet [1.1.11](https://www.nuget.org/packages/Microsoft.Azure.umqtt/1.1.11) |  |  |
 | Mobile Server - Cross Domain | NuGet [2.0.3](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Server.CrossDomain/2.0.3) |  |  |
 | Mobile Service - Resource Broker | NuGet [1.0.2.1](https://www.nuget.org/packages/Microsoft.WindowsAzure.Mobile.Service.ResourceBroker/1.0.2.1) |  |  |
 | News Search | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.NewsSearch/2.0.0) |  |  |
@@ -540,7 +249,6 @@ ms.locfileid: "97911590"
 | Text Analytics | NuGet [4.1.0-preview.2](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Language.TextAnalytics/4.1.0-preview.2) |  | GitHub [4.1.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Language.TextAnalytics_4.1.0-preview.2/sdk/cognitiveservices/Language.TextAnalytics) |
 | Video Search | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.VideoSearch/2.0.0) |  |  |
 | Vision Content Moderator | NuGet [2.1.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.ContentModerator/2.1.0-preview.1) |  | GitHub [2.1.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.ContentModerator_2.1.0-preview.1/sdk/cognitiveservices/Vision.ContentModerator) |
-| Vision Face | NuGet [2.6.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.Face/2.6.0-preview.1) |  | GitHub [2.6.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.Face_2.6.0-preview.1/sdk/cognitiveservices/Vision.Face) |
 | Visual Search | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.VisualSearch/2.0.0) |  |  |
 | Wastorage | NuGet [4.0.0](https://www.nuget.org/packages/wastorage/4.0.0) |  |  |
 | Wastorage - Redist | NuGet [2.0.0](https://www.nuget.org/packages/wastorage.redist/2.0.0) |  |  |
@@ -669,7 +377,7 @@ ms.locfileid: "97911590"
 | Management - Container Service Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.ContainerService.Fluent/1.36.1) |  |  |
 | 관리 - Content Delivery Network | NuGet [5.0.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.Cdn/5.0.0-preview) |  | GitHub [5.0.0-preview](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Cdn_5.0.0-preview/sdk/cdn/Microsoft.Azure.Management.Cdn/) |
 | 관리 - Content Delivery Network Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Cdn.Fluent/1.36.1) | [docs](/dotnet/api/overview/azure/cdn) |  |
-| Management - Cosmos DB | NuGet [1.2.0](https://www.nuget.org/packages/Microsoft.Azure.Management.CosmosDB/1.2.0)<br>NuGet [1.3.2-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.CosmosDB/1.3.2-preview) |  | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.CosmosDB_1.2.0/sdk/cosmosdb/Microsoft.Azure.Management.CosmosDB/)<br>GitHub [1.3.2-preview](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.CosmosDB_1.3.2-preview/sdk/cosmosdb/Microsoft.Azure.Management.CosmosDB/) |
+| Management - Cosmos DB | NuGet [1.2.0](https://www.nuget.org/packages/Microsoft.Azure.Management.CosmosDB/1.2.0)<br>NuGet [1.4.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.CosmosDB/1.4.0-preview) |  | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.CosmosDB_1.2.0/sdk/cosmosdb/Microsoft.Azure.Management.CosmosDB/)<br>GitHub [1.4.0-preview](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.CosmosDB_1.4.0-preview/sdk/cosmosdb/Microsoft.Azure.Management.CosmosDB/) |
 | Management - Cosmos DB Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.CosmosDB.Fluent/1.36.1) |  |  |
 | Management - Customer Insights | NuGet [0.9.1-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.CustomerInsights/0.9.1-preview) |  | GitHub [0.9.1-preview](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/customer-insights/Microsoft.Azure.Management.CustomerInsights) |
 | Management - Customer Insights  Fluent | NuGet [1.9.1-beta](https://www.nuget.org/packages/Microsoft.Azure.Management.CustomerInsights.Fluent/1.9.1-beta) |  |  |
@@ -728,14 +436,14 @@ ms.locfileid: "97911590"
 | Management - Maps | NuGet [1.0.2](https://www.nuget.org/packages/Microsoft.Azure.Management.Maps/1.0.2) |  | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/maps/Microsoft.Azure.Management.Maps) |
 | Management - Marketplace | NuGet [1.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Marketplace/1.1.0)<br>NuGet [2.0.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.Marketplace/2.0.0-preview) |  | GitHub [1.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Marketplace_1.1.0/sdk/marketplace/Microsoft.Azure.Management.Marketplace/)<br>GitHub [2.0.0-preview](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Marketplace_2.0.0-preview/sdk/marketplace/Microsoft.Azure.Management.Marketplace/) |
 | Management - Marketplace Ordering | NuGet [1.0.1](https://www.nuget.org/packages/Microsoft.Azure.Management.MarketplaceOrdering/1.0.1) |  | GitHub [1.0.1](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/marketplaceordering/Microsoft.Azure.Management.MarketplaceOrdering) |
-| Management - Media | NuGet [3.0.2](https://www.nuget.org/packages/Microsoft.Azure.Management.Media/3.0.2) |  | GitHub [3.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Media_3.0.2/sdk/mediaservices/Microsoft.Azure.Management.Media/) |
+| Management - Media | NuGet [3.0.3](https://www.nuget.org/packages/Microsoft.Azure.Management.Media/3.0.3) |  | GitHub [3.0.3](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Media_3.0.3/sdk/mediaservices/Microsoft.Azure.Management.Media/) |
 | Management - Migrate Resource Mover | NuGet [1.0.1-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.Migrate.ResourceMover/1.0.1-preview) |  |  |
 | Management - Mixed Reality | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.Management.MixedReality/1.0.0) | [docs](/dotnet/api/overview/azure/mixed-reality) | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.MixedReality_1.0.0/sdk/mixedreality/Microsoft.Azure.Management.MixedReality/) |
 | Management - Monitor | NuGet [0.25.3-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.Monitor/0.25.3-preview) |  | GitHub [0.25.3-preview](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Monitor_0.25.3-preview/sdk/monitor/Microsoft.Azure.Management.Monitor/) |
 | Management - Monitor Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Monitor.Fluent/1.36.1) | [docs](/dotnet/api/overview/azure/monitor) |  |
 | Management - MySQL | NuGet [0.1.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.MySQL/0.1.0-preview) |  |  |
 | Management - NetApp | NuGet [1.8.0](https://www.nuget.org/packages/Microsoft.Azure.Management.NetApp/1.8.0) |  | GitHub [1.8.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.NetApp_1.8.0/sdk/netapp/Microsoft.Azure.Management.NetApp/) |
-| Management - Network | NuGet [20.2.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Network/20.2.1) |  | GitHub [20.2.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Network_20.2.1/sdk/network/Microsoft.Azure.Management.Network/) |
+| Management - Network | NuGet [20.3.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Network/20.3.0) |  | GitHub [20.3.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Network_20.3.0/sdk/network/Microsoft.Azure.Management.Network/) |
 | Management - Network Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Network.Fluent/1.36.1) | [docs](/dotnet/api/overview/azure/virtual-network) |  |
 | Management - Notification Hubs | NuGet [2.3.3-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.NotificationHubs/2.3.3-preview) | [docs](/dotnet/api/overview/azure/notification-hubs) | GitHub [2.3.3-preview](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.NotificationHubs_2.3.3-preview/sdk/notificationhubs/Microsoft.Azure.Management.NotificationHubs/) |
 | Management - Notification Hubs Fluent | NuGet [1.9.1-beta](https://www.nuget.org/packages/Microsoft.Azure.Management.NotificationHubs.Fluent/1.9.1-beta) |  |  |
@@ -767,7 +475,6 @@ ms.locfileid: "97911590"
 | Management - Search | NuGet [4.0.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Search/4.0.0) |  | GitHub [4.0.0](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/search/Microsoft.Azure.Management.Search) |
 | Management - Search Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Search.Fluent/1.36.1) |  |  |
 | Management - Security Center | NuGet [2.2.0](https://www.nuget.org/packages/Microsoft.Azure.Management.SecurityCenter/2.2.0) |  | GitHub [2.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.SecurityCenter_2.2.0/sdk/securitycenter/Microsoft.Azure.Management.SecurityCenter/) |
-| 관리 - 보안 인사이트 | NuGet [1.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.Management.SecurityInsights/1.0.0-preview.1) |  |  |
 | Management - Server Management | NuGet [1.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.ServerManagement/1.1.0) |  | GitHub [1.1.0](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/servermanagement/Microsoft.Azure.Management.ServerManagement) |
 | Management - Service Bus | NuGet [2.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.ServiceBus/2.1.0) |  | GitHub [2.1.0](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/servicebus/Microsoft.Azure.Management.ServiceBus) |
 | Management - Service Bus Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.ServiceBus.Fluent/1.36.1) | [docs](/dotnet/api/overview/azure/service-bus) |  |
@@ -787,11 +494,12 @@ ms.locfileid: "97911590"
 | Management - Stream Analytics | NuGet [2.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.StreamAnalytics/2.1.0)<br>NuGet [3.0.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.StreamAnalytics/3.0.0-preview) | [docs](/dotnet/api/overview/azure/stream-analytics) | GitHub [2.1.0](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/streamanalytics/Microsoft.Azure.Management.StreamAnalytics) |
 | Management - Subscription | NuGet [1.1.5](https://www.nuget.org/packages/Microsoft.Azure.Management.Subscription/1.1.5) |  | GitHub [1.1.5](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Subscription_1.1.5/sdk/subscription/Microsoft.Azure.Management.Subscription/) |
 | Management - Support | NuGet [1.0.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Support/1.0.1) |  | GitHub [1.0.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Support_1.0.1/sdk/support/Microsoft.Azure.Management.Support/) |
-| Management - Synapse | NuGet [1.0.0-preview.4](https://www.nuget.org/packages/Microsoft.Azure.Management.Synapse/1.0.0-preview.4) |  | GitHub [1.0.0-preview.4](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Synapse_1.0.0-preview.4/sdk/synapse/Microsoft.Azure.Management.Synapse/) |
+| Management - Synapse | NuGet [1.0.0-preview.5](https://www.nuget.org/packages/Microsoft.Azure.Management.Synapse/1.0.0-preview.5) |  | GitHub [1.0.0-preview.5](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Synapse_1.0.0-preview.5/sdk/synapse/Microsoft.Azure.Management.Synapse/) |
 | Management - Traffic Manager | NuGet [2.5.3](https://www.nuget.org/packages/Microsoft.Azure.Management.TrafficManager/2.5.3) |  | GitHub [2.5.3](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/trafficmanager/Microsoft.Azure.Management.TrafficManager) |
 | Management - Traffic Manager Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.TrafficManager.Fluent/1.36.1) | [docs](/dotnet/api/overview/azure/traffic-manager) |  |
 | Management - WebSites | NuGet [3.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.WebSites/3.1.0) |  | GitHub [3.1.0](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/websites/Microsoft.Azure.Management.WebSites) |
 | Management - Workload Monitor | NuGet [1.0.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.WorkloadMonitor/1.0.0-preview) |  |  |
+| Microsoft.Azure.Management.RedisEnterprise | NuGet [1.0.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.RedisEnterprise/1.0.0-preview) |  |  |
 | Profiles hybrid_2018_03_01 Management - Authorization | NuGet [0.9.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.Profiles.hybrid_2018_03_01.Authorization/0.9.0-preview) |  |  |
 | Profiles hybrid_2018_03_01 Management - Compute | NuGet [0.9.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.Profiles.hybrid_2018_03_01.Compute/0.9.0-preview) |  |  |
 | Profiles hybrid_2018_03_01 Management - DNS | NuGet [0.9.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.Profiles.hybrid_2018_03_01.Dns/0.9.0-preview) |  |  |
@@ -822,6 +530,7 @@ ms.locfileid: "97911590"
 | 리소스 관리 - 네트워크 | NuGet [1.0.0-preview.2](https://www.nuget.org/packages/Azure.ResourceManager.Network/1.0.0-preview.2) | [docs](/dotnet/api/overview/azure/ResourceManager.Network-readme-pre/) | GitHub [1.0.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Network_1.0.0-preview.2/sdk/network/Azure.ResourceManager.Network/) |
 | 관리 리소스 - 리소스 | NuGet [1.0.0-preview.2](https://www.nuget.org/packages/Azure.ResourceManager.Resources/1.0.0-preview.2) | [docs](/dotnet/api/overview/azure/ResourceManager.Resources-readme-pre/) | GitHub [1.0.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Resources_1.0.0-preview.2/sdk/resources/Azure.ResourceManager.Resources/) |
 | 리소스 관리 - 스토리지 | NuGet [1.0.0-preview.2](https://www.nuget.org/packages/Azure.ResourceManager.Storage/1.0.0-preview.2) | [docs](/dotnet/api/overview/azure/ResourceManager.Storage-readme-pre/) | GitHub [1.0.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Storage_1.0.0-preview.2/sdk/storage/Azure.ResourceManager.Storage/) |
+| 보안 인사이트 | NuGet [1.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.Management.SecurityInsights/1.0.0-preview.1) |  | GitHub [1.0.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.SecurityInsights_1.0.0-preview.1/sdk/securityinsights/Microsoft.Azure.Management.SecurityInsights/) |
 | SignalR 관리 | NuGet [1.6.1](https://www.nuget.org/packages/Microsoft.Azure.SignalR.Management/1.6.1) |  | GitHub [1.6.1](https://github.com/Azure/azure-signalr/tree/v1.5.0/src/Microsoft.Azure.SignalR.Management) |
 | SQL Server 관리 - Key Vault 공급자 | NuGet [2.4.0](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider/2.4.0) |  |  |
 | WindowsAzure Management | NuGet [4.1.3](https://www.nuget.org/packages/Microsoft.WindowsAzure.Management/4.1.3) |  |  |

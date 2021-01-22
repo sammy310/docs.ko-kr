@@ -3,12 +3,12 @@ title: project.json 및 csproj 비교
 description: project.json 및 csproj e요소 간 매핑을 참조하세요.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: 7de9f623a57a6a094debd3e018edc1560d837fc2
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 3c9b2f266c2fcc3acdfbe40e19509edde20eec93
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970878"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190184"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 및 csproj 속성 간 매핑
 
@@ -253,6 +253,9 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
+> [!NOTE]
+> `PackageTargetFallback` 속성은 더 이상 사용되지 않습니다. 대신 [AssetTargetFallback](../project-sdk/msbuild-props.md#assettargetfallback)을 사용합니다.
+
 ### <a name="dependency-type"></a>종속성 유형
 
 #### <a name="type-project"></a>type: project
@@ -356,7 +359,9 @@ MSBuild에서 모든 프로젝트는 빌드 중 *이식 가능* 하지만 독립
 ```
 
 > [!NOTE]
-> 도구의 `imports`는 csproj에서 지원되지 않습니다. imports가 필요한 도구는 새 `Microsoft.NET.Sdk`와 작동하지 않습니다.
+>
+> - 도구의 `imports`는 csproj에서 지원되지 않습니다. imports가 필요한 도구는 `Microsoft.NET.Sdk`에서 작동하지 않습니다.
+> - `DotNetCliToolReference`는 사용되지 않으며 대신 [로컬 도구](global-tools.md#install-a-local-tool)가 사용됩니다.
 
 ## <a name="buildoptions"></a>buildOptions
 
@@ -609,7 +614,7 @@ MSBuild에서는 [항목](/visualstudio/msbuild/common-msbuild-project-items)을
   <EmbeddedResource Include="..\Shared\*.resx" />
   <Content Include="Views\**\*" PackagePath="%(Identity)" />
   <None Include="some/path/in/project.txt" Pack="true" PackagePath="in/package.txt" />
-  
+
   <None Include="notes.txt" CopyToOutputDirectory="Always" />
   <!-- CopyToOutputDirectory = { Always, PreserveNewest, Never } -->
 
@@ -674,3 +679,4 @@ MSBuild에서는 [항목](/visualstudio/msbuild/common-msbuild-project-items)을
 ## <a name="see-also"></a>참조
 
 - [CLI의 변경 내용에 대한 대략적인 개요](cli-msbuild-architecture.md)
+- [.NET SDK 프로젝트용 MSBuild 참조](../project-sdk/msbuild-props.md)

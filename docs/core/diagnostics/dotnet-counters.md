@@ -2,12 +2,12 @@
 title: dotnet-counters 진단 도구 - .NET CLI
 description: 임시 상태 모니터링 및 1단계 수준 성능을 위해 dotnet-counter CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
 ms.date: 11/17/2020
-ms.openlocfilehash: 44d74cfaca7483b1506fe7ad762818e9b9ed7d63
-ms.sourcegitcommit: 0273f8845eb1ea8de64086bef2271b4f22182c91
+ms.openlocfilehash: 1842b1fb9cde0e0b7a570456766cbfdeb64c5896
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2021
-ms.locfileid: "98058092"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188584"
 ---
 # <a name="investigate-performance-counters-dotnet-counters"></a>성능 카운터 조사(dotnet-counters)
 
@@ -34,6 +34,9 @@ ms.locfileid: "98058092"
   | Windows | [x86](https://aka.ms/dotnet-counters/win-x86) \| [x64](https://aka.ms/dotnet-counters/win-x64) \| [arm](https://aka.ms/dotnet-counters/win-arm) \| [arm-x64](https://aka.ms/dotnet-counters/win-arm64) |
   | macOS   | [x64](https://aka.ms/dotnet-counters/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-counters/linux-x64) \| [arm](https://aka.ms/dotnet-counters/linux-arm) \| [arm64](https://aka.ms/dotnet-counters/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-counters/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-counters/linux-musl-arm64) |
+
+> [!NOTE]
+> x86 앱에서 `dotnet-counters`를 사용하려면 해당하는 x86 버전의 도구가 필요합니다.
 
 ## <a name="synopsis"></a>개요
 
@@ -113,6 +116,12 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-
 
   > [!NOTE]
   > dotnet-counters를 통해 .NET 실행 파일을 시작하면 해당 입출력이 리디렉션되어 stdin/stdout과 상호 작용할 수 없습니다. Ctrl+C 또는 SIGTERM을 통해 도구를 종료하면 도구와 자식 프로세스가 모두 안전하게 종료됩니다. 자식 프로세스가 도구보다 먼저 종료되면 도구도 종료되고 추적을 안전하게 볼 수 있습니다. Stdin/stdout을 사용해야 하는 경우 `--diagnostic-port` 옵션을 사용할 수 있습니다. 자세한 내용은 [진단 포트 사용](#using-diagnostic-port)을 참조하세요.
+
+> [!NOTE]
+> Linux 및 macOS에서 해당 명령은 대상 애플리케이션 및 `dotnet-counters`가 동일한 `TMPDIR` 환경 변수를 공유할 것으로 예상합니다. 그러지 않으면 명령 시간이 초과됩니다.
+
+> [!NOTE]
+> `dotnet-counters`를 사용하여 메트릭을 수집하려면 대상 프로세스를 실행하는 사용자와 동일한 사용자 또는 루트로 실행해야 합니다. 그러지 않으면 도구는 대상 프로세스와 연결을 설정하지 못합니다.
 
 ### <a name="examples"></a>예
 
@@ -222,6 +231,12 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-
   > [!NOTE]
   > dotnet-counters를 통해 .NET 실행 파일을 시작하면 해당 입출력이 리디렉션되어 stdin/stdout과 상호 작용할 수 없습니다. Ctrl+C 또는 SIGTERM을 통해 도구를 종료하면 도구와 자식 프로세스가 모두 안전하게 종료됩니다. 자식 프로세스가 도구보다 먼저 종료되면 도구도 종료됩니다. Stdin/stdout을 사용해야 하는 경우 `--diagnostic-port` 옵션을 사용할 수 있습니다. 자세한 내용은 [진단 포트 사용](#using-diagnostic-port)을 참조하세요.
 
+> [!NOTE]
+> Linux 및 macOS에서 해당 명령은 대상 애플리케이션 및 `dotnet-counters`가 동일한 `TMPDIR` 환경 변수를 공유할 것으로 예상합니다.
+
+> [!NOTE]
+> `dotnet-counters`를 사용하여 메트릭을 모니터링하려면 대상 프로세스를 실행하는 사용자와 동일한 사용자 또는 루트로 실행해야 합니다.
+
 ### <a name="examples"></a>예
 
 - 3초의 새로 고침 간격으로 `System.Runtime`의 모든 카운터를 모니터링합니다.
@@ -285,7 +300,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-
   > dotnet-counters list
 
   Showing well-known counters for .NET (Core) version 3.1 only. Specific processes may support additional counters.
-  System.Runtime              
+  System.Runtime
       cpu-usage                          The percent of process' CPU usage relative to all of the system CPU resources [0-100]
       working-set                        Amount of working set used by the process (MB)
       gc-heap-size                       Total heap size reported by the GC (MB)
@@ -319,7 +334,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-
   > dotnet-counters list --runtime-version 5.0
 
   Showing well-known counters for .NET (Core) version 5.0 only. Specific processes may support additional counters.
-  System.Runtime                     
+  System.Runtime
       cpu-usage                          The percent of process' CPU usage relative to all of the system CPU resources [0-100]
       working-set                        Amount of working set used by the process (MB)
       gc-heap-size                       Total heap size reported by the GC (MB)
@@ -344,7 +359,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-
       il-bytes-jitted                    Total IL bytes jitted
       methods-jitted-count               Number of methods jitted
 
-  Microsoft.AspNetCore.Hosting       
+  Microsoft.AspNetCore.Hosting
       requests-per-second   Number of requests between update intervals
       total-requests        Total number of requests
       current-requests      Current number of requests
@@ -361,7 +376,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-
       connection-queue-length     Length of Kestrel Connection Queue
       request-queue-length        Length total HTTP request queue
 
-  System.Net.Http                    
+  System.Net.Http
       requests-started        Total Requests Started
       requests-started-rate   Number of Requests Started between update intervals
       requests-aborted        Total Requests Aborted

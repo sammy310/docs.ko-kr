@@ -1,13 +1,13 @@
 ---
 title: NoSQL 데이터베이스를 지속성 인프라로 사용
 description: 지속성을 구현하기 위한 옵션으로 일반적인 경우 NoSql 데이터베이스, 특정한 경우 Azure Cosmos DB의 사용을 이해합니다.
-ms.date: 01/30/2020
-ms.openlocfilehash: 2877c7eaf08dccfdf6126939b195a6a9a7195dfa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 32f32a3fd247f49ac54deaf33605bcc2ac7b55dc
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173381"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188831"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>NoSQL 데이터베이스를 지속성 인프라로 사용
 
@@ -62,7 +62,7 @@ C\# 모델을 사용하여 Azure Cosmos DB API에서 사용될 집계를 구현�
 
 ```csharp
 // C# EXAMPLE OF AN ORDER AGGREGATE BEING PERSISTED WITH AZURE COSMOS DB API
-// *** Domain Model Code ***
+// **_ Domain Model Code _*_
 // Aggregate: Create an Order object with its child entities and/or value objects.
 // Then, use AggregateRoot's methods to add the nested objects so invariants and
 // logic is consistent across the nested properties (value objects and entities).
@@ -98,9 +98,9 @@ OrderItem orderItem1 = new OrderItem
 
 //Using methods with domain logic within the entity. No anemic-domain model
 orderAggregate.AddOrderItem(orderItem1);
-// *** End of Domain Model Code ***
+// _*_ End of Domain Model Code _*_
 
-// *** Infrastructure Code using Cosmos DB Client API ***
+// _*_ Infrastructure Code using Cosmos DB Client API _*_
 Uri collectionUri = UriFactory.CreateDocumentCollectionUri(databaseName,
     collectionName);
 
@@ -134,7 +134,7 @@ Cosmos DB 데이터베이스는 .NET용 MongoDB API뿐만 아니라 네이티브
 
 ![Cosmos DB에서 .NET 및 MongoDB 유선 프로토콜을 지원함을 보여 주는 다이어그램](./media/nosql-database-persistence-infrastructure/mongodb-api-wire-protocol.png)
 
-**그림 7-20**. MongoDB API 및 프로토콜을 사용하여 Azure Cosmos DB에 액세스
+_*그림 7-20**. MongoDB API 및 프로토콜을 사용하여 Azure Cosmos DB에 액세스
 
 [MongoDB Docker 이미지](https://hub.docker.com/r/_/mongo/)는 Docker Linux 컨테이너 및 Docker Windows 컨테이너를 지원하는 다중 아치 이미지이므로 Linux 컨테이너를 사용하는 Docker 환경에서 개념의 증명에 매우 편리한 방법입니다.
 
@@ -146,7 +146,7 @@ Cosmos DB 데이터베이스는 .NET용 MongoDB API뿐만 아니라 네이티브
 
 프로덕션 Azure Cosmos DB는 PaaS 및 확장 가능한 서비스로 Azure의 클라우드에서 실행됩니다.
 
-사용자 지정 .NET Core 컨테이너는 로컬 개발 Docker 호스트(Windows 10 컴퓨터에서 Windows용 Docker 사용)에서 실행되거나 Azure AKS 또는 Azure Service Fabric에서 Kubernetes와 같은 프로덕션 환경에 배포될 수 있습니다. 이 두 번째 환경에서는 프로덕션에서 데이터를 처리하기 위해 클라우드에서 Azure Cosmos DB를 사용하므로 MongoDB 컨테이너가 아닌 .NET Core 사용자 지정 컨테이너만 배포합니다.
+사용자 지정 .NET 컨테이너는 로컬 개발 Docker 호스트(Windows 10 머신에서 Windows용 Docker 사용)에서 실행되거나 Azure AKS 또는 Azure Service Fabric에서 Kubernetes와 같은 프로덕션 환경에 배포될 수 있습니다. 두 번째 환경에서는 프로덕션에서 데이터를 처리하기 위해 클라우드에서 Azure Cosmos DB를 사용하므로 MongoDB 컨테이너가 아닌 .NET 사용자 지정 컨테이너만 배포합니다.
 
 MongoDB API를 사용하는 명백한 이점은 솔루션이 두 데이터베이스 엔진, MongoDB 또는 Azure Cosmos DB에서 실행될 수 있으므로 다른 환경으로의 마이그레이션이 용이해야 한다는 것입니다. 그러나 경우에 따라 특정 데이터베이스 엔진의 기능을 완전히 활용하기 위해 네이티브 API(즉 네이티브 Cosmos DB API)를 사용하는 것이 유용합니다.
 
@@ -162,13 +162,13 @@ eShopOnContainers에서 우선 순위는 근본적으로 Azure Cosmos DB를 함�
 
 기본적으로 Linux 컨테이너에 대한 편리한 선택이므로 eShopOnContainers에서 수행한 것처럼 Azure Cosmos DB에 대해 항상 MongoDB API를 사용해서는 안 된다는 고지 사항입니다. 결정은 프로덕션 애플리케이션에 대해 수행해야 하는 특정 요구 사항 및 테스트를 기준으로 해야 합니다.
 
-### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>코드: .NET Core 애플리케이션에서 MongoDB API 사용
+### <a name="the-code-use-mongodb-api-in-net-applications"></a>코드: .NET 애플리케이션에서 MongoDB API 사용
 
 .NET용 MongoDB API는 다음 그림과 같은 Locations.API 프로젝트에서처럼 프로젝트에 추가해야 하는 NuGet 패키지를 기반으로 합니다.
 
 ![MongoDB NuGet 패키지 내 종속성의 스크린샷](./media/nosql-database-persistence-infrastructure/mongodb-api-nuget-packages.png)
 
-**그림 7-22**. .NET Core 프로젝트에서 MongoDB API NuGet 패키지 참조
+**그림 7-22**. .NET 프로젝트에서 MongoDB API NuGet 패키지 참조
 
 다음 섹션에서 코드를 검토하겠습니다.
 

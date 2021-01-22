@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-ms.openlocfilehash: 9d0bcc2957e5a666c21cdc2ce61e74fc90fe3530
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d64f4d4b0d4e9b5ed2cc1ee40662dc669fc6660d
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125828"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235328"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -27,7 +27,7 @@ ms.locfileid: "89125828"
 
 ## <a name="remarks"></a>설명
 
-기본적으로 컴파일러에서 타임스탬프 및 난수에서 생성된 GUID를 추가하기 때문에 지정된 입력 집합의 컴파일러 출력은 고유합니다. `-deterministic` 옵션을 사용하여 *결정적 어셈블리*를 생성하고, 입력이 동일하게 유지되는 한 해당 이진 콘텐츠가 컴파일 간에 동일합니다.
+기본적으로 컴파일러에서 타임스탬프 및 난수에서 생성된 MVID를 추가하기 때문에 지정된 입력 세트의 컴파일러 출력은 고유합니다. `-deterministic` 옵션을 사용하여 *결정적 어셈블리* 를 생성하고, 입력이 동일하게 유지되는 한 해당 이진 콘텐츠가 컴파일 간에 동일합니다. 해당 빌드에서 타임스탬프 및 MVID 필드는 모든 컴파일 입력의 해시에서 파생된 값으로 대체됩니다.
 
 결정성의 목적을 위해 컴파일러에서 고려하는 입력은 다음과 같습니다.
 

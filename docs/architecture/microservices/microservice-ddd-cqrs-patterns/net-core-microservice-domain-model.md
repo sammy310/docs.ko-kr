@@ -1,17 +1,17 @@
 ---
-title: .NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
+title: .NET을 사용하여 마이크로 서비스 도메인 모델 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 도메인 모델의 구현 세부 정보를 가져옵니다.
-ms.date: 10/08/2018
-ms.openlocfilehash: e24f4e643d258450a2b33ed4dc4aded718bebd82
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 9689058b77701eee35ef018ed2e3f18bd648b0f4
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152548"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188272"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
 
-이전 섹션에서는 도메인 모델 설계을 위한 기본 설계 원칙과 패턴을 설명했습니다. 이제.NET Core 및 EF Core(일반 C\# 코드)를 사용하여 도메인 모델을 구현할 수 있는 방법을 탐색할 차례입니다. 도메인 모델은 코드를 통해 간단하게 구성됩니다. EF Core 모델 요구 사항은 있지만 실제로 EF에 대한 종속성은 아닙니다. EF Core나 도메인 모델의 다른 ORM에 대한 강도 높은 종속성이나 참조는 없어야 합니다.
+이전 섹션에서는 도메인 모델 설계을 위한 기본 설계 원칙과 패턴을 설명했습니다. 이제 .NET(일반 C\# 코드) 및 EF Core를 사용하여 도메인 모델을 구현할 수 있는 방법을 살펴보겠습니다. 도메인 모델은 코드를 통해 간단하게 구성됩니다. EF Core 모델 요구 사항은 있지만 실제로 EF에 대한 종속성은 아닙니다. EF Core나 도메인 모델의 다른 ORM에 대한 강도 높은 종속성이나 참조는 없어야 합니다.
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>사용자 지정 .NET Standard 라이브러리의 도메인 모델 구조
 
@@ -46,7 +46,7 @@ OrderAggregate 폴더에 대한 자세히 보기: Address.cs는 값 개체이고
 도메인 엔터티를 구현하는 POCO 클래스를 만들어 .NET에서 도메인 모델을 구현합니다. 다음 예제에서는 Order 클래스가 엔터티 및 집계 루트로 정의됩니다. Order 클래스는 엔터티 기본 클래스에서 파생되므로 엔터티와 관련한 공통 코드를 재사용할 수 있습니다. 이러한 기본 클래스 및 인터페이스는 사용자가 도메인 모델 프로젝트에서 정의하므로 EF 같은 ORM의 인프라 코드가 아니라 사용자 본인의 코드입니다.
 
 ```csharp
-// COMPATIBLE WITH ENTITY FRAMEWORK CORE 2.0
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE 5.0
 // Entity is a custom base class with the ID
 public class Order : Entity, IAggregateRoot
 {
@@ -97,7 +97,7 @@ public class Order : Entity, IAggregateRoot
 
 이것은 POCO 클래스로 구현되는 도메인 엔터티라는 점에 유의합니다. Entity Framework Core나 기타 인프라 프레임워크에 대한 직접적인 종속성은 없습니다. 이 구현은 도메인 모델을 구현하는 C# 코드처럼 DDD여야 합니다.
 
-또한 클래스에는 이름이 IAggregateRoot인 인터페이스가 있어야 합니다. 이 인터페이스는 빈 인터페이스로, *마커 인터페이스*라고도 불립니다. 즉 해당 엔터티 클래스도 집계 루트임을 표시하는 데만 사용됩니다.
+또한 클래스에는 이름이 IAggregateRoot인 인터페이스가 있어야 합니다. 이 인터페이스는 빈 인터페이스로, *마커 인터페이스* 라고도 불립니다. 즉 해당 엔터티 클래스도 집계 루트임을 표시하는 데만 사용됩니다.
 
 마커 인터페이스는 가끔 안티 패턴으로도 간주되나 특이 인터페이스가 확장될 가능성이 있을 때 클래스를 표시하는 분명한 방법이기도 합니다. 특성은 마커의 대안이 될 수 있지만 클래스 위에 Aggregate 특성 마커를 놓는 것보다는 IAggregate 인터페이스 옆에 기준 클래스(Entity)를 놓는 것이 더 빨리 확인할 수 있습니다. 어떤 경우든 기본 설정의 문제입니다.
 

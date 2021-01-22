@@ -1,13 +1,13 @@
 ---
 title: Docker 용어
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | Docker 용어
-ms.date: 01/30/2020
-ms.openlocfilehash: b30ea26ee174caf3484931945c832c72a1acf93d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/13/2021
+ms.openlocfilehash: 567635060502ec3b2293f5eee6dd8dfe4d934ff7
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707767"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189345"
 ---
 # <a name="docker-terminology"></a>Docker 용어
 
@@ -35,7 +35,7 @@ docker build
 
 **레지스트리**: 리포지토리에 대한 액세스를 제공하는 서비스입니다. 대부분의 공용 이미지에 대한 기본 레지스트리는 [Docker 허브](https://hub.docker.com/)(조직인 Docker에서 소유함)입니다. 레지스트리는 일반적으로 여러 팀의 리포지토리를 포함합니다. 회사에는 대체로 만든 이미지를 저장하고 관리하기 위한 개인 레지스트리가 있습니다. Azure Container Registry는 또 다른 예입니다.
 
-**다중 아키텍처 이미지**: 다중 아키텍처에서 Docker가 실행되는 플랫폼에 따라 적절한 이미지 선택을 간소화하는 기능입니다. 예를 들어 Dockerfile이 레지스트리에서 기본 이미지 **FROM mcr.microsoft.com/dotnet/sdk:3.1** 을 요청하는 경우 Docker가 실행되는 운영 체제 및 버전에 따라 **3.1-sdk-nanoserver-1909**, **3.1-sdk-nanoserver-1809** 또는 **3.1-sdk-buster-slim** 을 가져옵니다.
+**다중 아키텍처 이미지**: 다중 아키텍처에서 Docker가 실행되는 플랫폼에 따라 적절한 이미지 선택을 간소화하는 기능입니다. 예를 들어, Dockerfile이 레지스트리에서 기본 이미지 **mcr.microsoft.com/dotnet/sdk:5.0** 을 요청하는 경우 Docker가 실행되는 운영 체제 및 버전에 따라 **5.0-nanoserver-1909**, **5.0-nanoserver-1809** 또는 **5.0-buster-slim** 을 실제로 가져옵니다.
 
 **Docker 허브**: 이미지를 업로드하고 여기에서 작업하는 공개 레지스트리입니다. Docker 허브는 Docker 이미지 호스팅, 공개 또는 개인 레지스트리, 빌드 트리거 및 웹후크, GitHub 및 Bitbucket과 통합을 제공합니다.
 
@@ -43,7 +43,7 @@ docker build
 
 **DTR(Docker Trusted Registry)** : 조직의 데이터 센터 및 네트워크 내에서 유지되도록 온-프레미스에 설치될 수 있는 Docker의 Docker 레지스트리 서비스입니다. 엔터프라이즈 내에서 관리되어야 하는 프라이빗 이미지에 유용합니다. Docker Trusted Registry는 Docker 데이터 센터 제품의 일부로 포함됩니다. 자세한 내용은 [DTR(Docker Trusted Registry)](https://docs.docker.com/docker-trusted-registry/overview/)를 참조하세요.
 
-**Docker CE(Community Edition)** : 로컬로 컨테이너를 빌드하고, 실행하고, 테스트하는 Windows 및 macOS용 개발 도구입니다. Windows용 Docker CE는 Linux 및 Windows 컨테이너에 개발 환경을 제공합니다. Windows의 Linux Docker 호스트는 [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 가상 머신을 기반으로 합니다. Windows 컨테이너에 대한 호스트는 Windows를 직접 기반으로 합니다. Mac용 Docker CE는 Apple 하이퍼바이저 및 [xhyve 하이퍼바이저](https://github.com/mist64/xhyve) 프레임워크를 기반으로 합니다. 여기서는 Mac OS X에서 Linux Docker 가상 머신을 제공합니다. Windows 및 Mac용 Docker CE는 Oracle VirtualBox를 기반으로 하는 Docker 도구 상자를 대체합니다.
+**Docker CE(Community Edition)** : 로컬로 컨테이너를 빌드하고, 실행하고, 테스트하는 Windows 및 macOS용 개발 도구입니다. Windows용 Docker CE는 Linux 및 Windows 컨테이너에 개발 환경을 제공합니다. Windows의 Linux Docker 호스트는 [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 가상 머신을 기반으로 합니다. Windows 컨테이너에 대한 호스트는 Windows를 직접 기반으로 합니다. Mac용 Docker CE는 Apple 하이퍼바이저 프레임워크 및 [xhyve 하이퍼바이저](https://github.com/mist64/xhyve)를 기반으로 하며 macOS X에서 Linux Docker 호스트 가상 머신을 제공합니다. Windows 및 Mac용 Docker CE는 Oracle VirtualBox를 기반으로 하던 Docker 도구 상자를 대체합니다.
 
 **Docker EE(Enterprise Edition)** : Linux 및 Windows 개발을 위한 엔터프라이즈급 버전의 Docker 도구입니다.
 

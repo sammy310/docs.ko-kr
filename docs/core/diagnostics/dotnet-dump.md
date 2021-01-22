@@ -2,12 +2,12 @@
 title: dotnet-dump 진단 도구 - .NET CLI
 description: 네이티브 디버거 없이 Windows 및 Linux 덤프를 수집하고 분석하기 위해 dotnet-dump CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
 ms.date: 11/17/2020
-ms.openlocfilehash: eaffbb1f2959dba5c25a603b6f785c7480e4a8c0
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.openlocfilehash: 84b3796f4ee92880e6d432df606a6addfd2471b0
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97765048"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189806"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>덤프 수집 및 분석 유틸리티(dotnet-dump)
 
@@ -37,6 +37,9 @@ ms.locfileid: "97765048"
   | Windows | [x86](https://aka.ms/dotnet-dump/win-x86) \| [x64](https://aka.ms/dotnet-dump/win-x64) \| [arm](https://aka.ms/dotnet-dump/win-arm) \| [arm-x64](https://aka.ms/dotnet-dump/win-arm64) |
   | macOS   | [x64](https://aka.ms/dotnet-dump/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-dump/linux-x64) \| [arm](https://aka.ms/dotnet-dump/linux-arm) \| [arm64](https://aka.ms/dotnet-dump/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-dump/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-dump/linux-musl-arm64) |
+
+> [!NOTE]
+> x86 앱에서 `dotnet-dump`를 사용하려면 해당하는 x86 버전의 도구가 필요합니다.
 
 ## <a name="synopsis"></a>개요
 
@@ -113,6 +116,12 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [-n|--name] [--type] [-o|--out
 - **`--diag`**
 
   덤프 수집 진단 로깅을 사용하도록 설정합니다.
+
+> [!NOTE]
+> Linux 및 macOS에서 해당 명령은 대상 애플리케이션 및 `dotnet-dump`가 동일한 `TMPDIR` 환경 변수를 공유할 것으로 예상합니다. 그러지 않으면 명령 시간이 초과됩니다.
+
+> [!NOTE]
+> `dotnet-dump`를 사용하여 덤프를 수집하려면 대상 프로세스를 실행하는 사용자와 동일한 사용자 또는 루트로 실행해야 합니다. 그러지 않으면 도구는 대상 프로세스와 연결을 설정하지 못합니다.
 
 ## <a name="dotnet-dump-analyze"></a>dotnet-dump analyze
 

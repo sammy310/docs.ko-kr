@@ -4,12 +4,12 @@ description: .NET SDK에서 이해하는 MSBuild 속성 및 항목에 대한 참
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: e7deb8c32fd01452524122e41f758ab037020ee4
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: e35ccc3540756a4cb7905d5864caf65cded4362b
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970709"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189984"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 프로젝트용 MSBuild 참조
 
@@ -79,15 +79,43 @@ ms.locfileid: "97970709"
 </PropertyGroup>
 ```
 
-## <a name="publish-properties-and-items"></a>속성 및 항목 게시
+## <a name="publish-properties-items-and-metadata"></a>속성, 항목 및 메타데이터 게시
 
 - [AppendRuntimeIdentifierToOutputPath](#appendruntimeidentifiertooutputpath)
 - [AppendTargetFrameworkToOutputPath](#appendtargetframeworktooutputpath)
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
+- [CopyToPublishDirectory](#copytopublishdirectory)
+- [LinkBase](#linkbase)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
+
+### <a name="copytopublishdirectory"></a>CopyToPublishDirectory
+
+MSBuild 항목의 `CopyToPublishDirectory` 메타데이터는 항목이 게시 디렉터리에 복사되는 시기를 제어합니다. 허용되는 값은 항목이 변경된 경우에만 항목을 복사하는 `PreserveNewest`, 항목을 항상 복사하는 `Always`, 항목을 복사하지 않는 `Never`입니다. 성능 관점에서 증분 빌드를 사용하기 때문에 `PreserveNewest`를 사용하는 것이 좋습니다.
+
+```xml
+<ItemGroup>
+  <None Update="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+</ItemGroup>
+```
+
+### <a name="linkbase"></a>LinkBase
+
+프로젝트 디렉터리와 해당 하위 디렉터리의 외부에 있는 항목의 경우 게시 대상은 항목의 [Link 메타데이터](/visualstudio/msbuild/common-msbuild-item-metadata)를 사용하여 항목을 복사할 위치를 결정합니다. `Link`는 프로젝트 트리 외부의 항목이 Visual Studio의 솔루션 탐색기 창에 표시되는 방식도 결정합니다.
+
+프로젝트 범위 밖에 있는 항목에 대해 `Link`를 지정하지 않으면 기본적으로 `%(LinkBase)\%(RecursiveDir)%(Filename)%(Extension)`으로 설정됩니다. `LinkBase`를 사용하여 프로젝트 범위 밖에 있는 항목의 적절한 기본 폴더를 지정할 수 있습니다. 기본 폴더 아래의 폴더 계층 구조는 `RecursiveDir`을 통해 유지됩니다. `LinkBase`를 지정하지 않으면 `Link` 경로에서 생략됩니다.
+
+```xml
+<ItemGroup>
+  <Content Include="..\Extras\**\*.cs" LinkBase="Shared"/>
+</ItemGroup>
+```
+
+다음 이미지는 이전 항목 `Include` GLOB를 통해 포함되는 파일이 솔루션 탐색기에 표시되는 방식을 보여 줍니다.
+
+:::image type="content" source="media/solution-explorer-linkbase.png" alt-text="LinkBase 메타데이터가 있는 항목을 보여 주는 솔루션 탐색기":::
 
 ### <a name="appendtargetframeworktooutputpath"></a>AppendTargetFrameworkToOutputPath
 
@@ -478,7 +506,7 @@ ms.locfileid: "97970709"
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
-`AssetTargetFallback` 속성을 사용하여 프로젝트 참조 및 NuGet 패키지에 대해 호환되는 추가 프레임워크 버전을 지정할 수 있습니다. 예를 들어 `PackageReference`를 사용하여 패키지 종속성을 지정하지만 해당 패키지에 프로젝트의 `TargetFramework`와 호환되는 자산이 포함되지 않은 경우 `AssetTargetFallback` 속성이 작동합니다. 참조된 패키지의 호환성은 `AssetTargetFallback`에 지정된 각 대상 프레임워크를 사용하여 다시 확인됩니다.
+`AssetTargetFallback` 속성을 사용하여 프로젝트 참조 및 NuGet 패키지에 대해 호환되는 추가 프레임워크 버전을 지정할 수 있습니다. 예를 들어 `PackageReference`를 사용하여 패키지 종속성을 지정하지만 해당 패키지에 프로젝트의 `TargetFramework`와 호환되는 자산이 포함되지 않은 경우 `AssetTargetFallback` 속성이 작동합니다. 참조된 패키지의 호환성은 `AssetTargetFallback`에 지정된 각 대상 프레임워크를 사용하여 다시 확인됩니다. 해당 속성은 사용되지 않는 속성 `PackageTargetFallback`을 대체합니다.
 
 `AssetTargetFallback` 속성을 하나 이상의 [대상 프레임워크 버전](../../standard/frameworks.md#supported-target-frameworks)으로 설정할 수 있습니다.
 
@@ -504,7 +532,7 @@ ms.locfileid: "97970709"
 
 `PackageReference` 항목은 NuGet 패키지에 대한 참조를 정의합니다.
 
-`Include` 특성은 패키지 ID를 지정합니다. `Version` 특성은 버전 또는 버전 범위를 지정합니다. 최소 버전, 최대 버전, 범위 또는 정확한 일치를 지정하는 방법에 대한 자세한 내용은 [버전 범위](/nuget/concepts/package-versioning#version-ranges)를 참조하세요. 또한 메타데이터 `IncludeAssets`, `ExcludeAssets`, `PrivateAssets`를 프로젝트 참조에 추가할 수도 있습니다.
+`Include` 특성은 패키지 ID를 지정합니다. `Version` 특성은 버전 또는 버전 범위를 지정합니다. 최소 버전, 최대 버전, 범위 또는 정확한 일치를 지정하는 방법에 대한 자세한 내용은 [버전 범위](/nuget/concepts/package-versioning#version-ranges)를 참조하세요. [자산 특성](#asset-attributes)을 패키지 참조에 추가할 수도 있습니다.
 
 다음 예제의 프로젝트 파일 코드 조각은 [System.Runtime](https://www.nuget.org/packages/System.Runtime/) 패키지를 참조합니다.
 
@@ -515,6 +543,30 @@ ms.locfileid: "97970709"
 ```
 
 자세한 내용은 [프로젝트 파일의 패키지 참조](/nuget/consume-packages/package-references-in-project-files)를 참조하세요.
+
+#### <a name="asset-attributes"></a>자산 특성
+
+`IncludeAssets`, `ExcludeAssets` 및 `PrivateAssets` 메타데이터를 패키지 참조에 추가할 수 있습니다.
+
+| attribute | 설명 |
+| - | - |
+| `IncludeAssets` | `<PackageReference>`에서 지정한 패키지에 속하여 사용해야 하는 자산을 지정합니다. 기본적으로 모든 패키지 자산이 포함됩니다. |
+| `ExcludeAssets`| `<PackageReference>`에서 지정한 패키지에 속하여 사용하면 안 되는 자산을 지정합니다. |
+| `PrivateAssets` | `<PackageReference>`에서 지정한 패키지에 속하여 사용하지만 다음 프로젝트로 전달하지 않아야 하는 자산을 지정합니다. 해당 특성이 없으면 `Analyzers`, `Build` 및 `ContentFiles` 자산이 기본적으로 프라이빗이 됩니다. |
+
+해당 특성은 다음 항목 중 하나 이상을 포함할 수 있습니다. 둘 이상이 나열되는 경우 세미콜론 `;`으로 구분합니다.
+
+- `Compile` - *lib* 폴더의 콘텐츠를 컴파일에 사용할 수 있습니다.
+- `Runtime` - *런타임* 폴더의 콘텐츠가 분산됩니다.
+- `ContentFiles` - *contentfiles* 폴더의 콘텐츠가 사용됩니다.
+- `Build` - *빌드* 폴더의 속성/대상이 사용됩니다.
+- `Native` - 런타임에 네이티브 자산의 콘텐츠가 *출력* 폴더에 복사됩니다.
+- `Analyzers` – 분석기가 사용됩니다.
+
+또는 다음 특성이 포함될 수 있습니다.
+
+- `None` – 자산이 사용되지 않습니다.
+- `All` – 모든 자산이 사용됩니다.
 
 ### <a name="projectreference"></a>ProjectReference
 

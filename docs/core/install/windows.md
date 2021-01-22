@@ -4,12 +4,12 @@ description: .NET을 설치할 수 있는 Windows 버전에 대해 알아봅니�
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: d8ca3eed3786a728002d8ffe80b774a0018eee82
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 57cebc562949627be70aabe24e75ad4567d072fd
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025455"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536127"
 ---
 # <a name="install-net-on-windows"></a>Windows에 .NET 설치
 
@@ -260,11 +260,31 @@ Visual Studio Code에 Visual Studio처럼 자동화된 .NET Core 설치 프로�
 
 Windows Installer 실행 파일은 .NET [다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-core)에서 제공합니다.
 
-MSI 파일을 사용하여 .NET을 설치하는 경우 `DOTNETHOME_X64` 및 `DOTNETHOME_X86` 매개 변수를 설정하여 설치 경로를 사용자 지정할 수 있습니다.
+Windows Installer를 사용하여 .NET을 설치하는 경우 `DOTNETHOME_X64` 및 `DOTNETHOME_X86` 매개 변수를 설정하여 설치 경로를 사용자 지정할 수 있습니다.
 
 ```console
 dotnet-sdk-3.1.301-win-x64.exe DOTNETHOME_X64="F:\dotnet\x64" DOTNETHOME_X86="F:\dotnet\x86"
 ```
+
+프로덕션 환경에서처럼 .NET을 자동으로 설치하거나 연속 통합을 지원하려면 다음 스위치를 사용합니다.
+
+- `/install`\
+.NET을 설치합니다.
+
+- `/quiet`\
+UI와 프롬프트가 표시되지 않도록 합니다.
+
+- `norestart`\
+다시 시작하지 않습니다.
+
+```console
+dotnet-sdk-3.1.301-win-x64.exe /install /quiet /norestart
+```
+
+자세한 내용은 [표준 설치 관리자 명령줄 옵션](/windows/win32/msi/standard-installer-command-line-options)을 참조하세요.
+
+> [!TIP]
+> 설치 관리자는 성공 시 종료 코드 0을 반환하고 다시 시작이 필요함을 나타내기 위해 종료 코드 3010을 반환합니다. 다른 모든 값은 일반적으로 오류 코드입니다.
 
 ## <a name="download-and-manually-install"></a>다운로드 및 수동으로 설치
 

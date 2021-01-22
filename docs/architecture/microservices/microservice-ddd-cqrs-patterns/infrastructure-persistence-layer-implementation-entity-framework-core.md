@@ -1,19 +1,19 @@
 ---
 title: Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Entity Framework Core를 사용하여 인프라 지속성 계층에 대한 구현 세부 정보를 탐색합니다.
-ms.date: 01/30/2020
-ms.openlocfilehash: 878d4d64e92ca92fd2393d60d496f1c5671e7029
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 2c7b6dbe2f59a26d33a4842e74aed2b7588bd14d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172354"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188896"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 
 SQL Server, Oracle 또는 PostgreSQL 같은 관계형 데이터베이스를 사용하는 경우 EF(Entity Framework) 기반의 지속성 레이어를 구현하는 것이 좋습니다. EF는 LINQ 지원하며 데이터베이스에 간소화된 지속성을 제공할 뿐 아니라 모델에 대한 강력한 형식의 개체를 제공합니다.
 
-Entity Framework는 .NET Framework의 일부로 오랜 역사를 갖고 있습니다. .NET Core를 사용하는 경우 .NET Core와 마찬가지로 Windows 또는 Linux에서 실행되는 Entity Framework Core도 사용 해야 합니다. EF Core는 Entity Framework를 완전히 새로 작성한 것으로, 훨씬 적은 공간을 차지하며 성능이 대폭 향상되었습니다.
+Entity Framework는 .NET Framework의 일부로 오랜 역사를 갖고 있습니다. .NET을 사용하는 경우 .NET과 마찬가지로 Windows 또는 Linux에서 실행되는 Entity Framework Core도 사용해야 합니다. EF Core는 Entity Framework를 완전히 새로 작성한 것으로, 훨씬 적은 공간을 차지하며 성능이 대폭 향상되었습니다.
 
 ## <a name="introduction-to-entity-framework-core"></a>Entity Framework Core 소개
 
@@ -37,7 +37,7 @@ EF Core를 소개하는 내용은 이미 Microsoft 설명서에 있으므로 여
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>DDD 관점에서 본 Entity Framework Core의 인프라
 
-DDD 관점에서 본 EF의 중요한 기능은 POCO 도메인 엔터티를 사용하는 기능으로, EF 용어로는 POCO *코드 중심 엔터티*라고 합니다. POCO 도메인 엔터티를 사용하는 경우 도메인 모델 클래스는 [지속성 무시](https://deviq.com/persistence-ignorance/) 및 [인프라 무시](https://ayende.com/blog/3137/infrastructure-ignorance) 원칙에 따라 지속성을 무시합니다.
+DDD 관점에서 본 EF의 중요한 기능은 POCO 도메인 엔터티를 사용하는 기능으로, EF 용어로는 POCO *코드 중심 엔터티* 라고 합니다. POCO 도메인 엔터티를 사용하는 경우 도메인 모델 클래스는 [지속성 무시](https://deviq.com/persistence-ignorance/) 및 [인프라 무시](https://ayende.com/blog/3137/infrastructure-ignorance) 원칙에 따라 지속성을 무시합니다.
 
 DDD 패턴마다 엔터티 클래스 자체 내의 도메인 동작과 규칙을 캡슐화해야만 컬렉션에 액세스할 때 고정, 유효성 검사 및 규칙을 제어할 수 있습니다. 따라서 DDD에서 자식 엔터티 또는 값 개체 컬렉션에 대한 공용 액세스를 허용하는 것은 좋지 않습니다. 그 대신, 속성 컬렉션을 업데이트할 수 있는 방법 및 시기 그리고 속성 컬렉션 업데이트가 발생할 때 수행할 동작 및 작업을 제어하는 메서드를 노출하는 것이 좋습니다.
 

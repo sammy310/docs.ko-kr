@@ -4,12 +4,12 @@ description: .NET 단위 테스트에 코드 검사 기능을 사용하는 방�
 author: IEvangelist
 ms.author: dapine
 ms.date: 07/01/2020
-ms.openlocfilehash: 4d2c8f3db26eaabcb973378a349ef57912e92bfa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 98652de8e8b5c3765dfee8e1b511399bc5a0be25
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538149"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189657"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>유닛 테스트에 코드 검사 사용
 
@@ -33,7 +33,7 @@ ms.locfileid: "90538149"
 dotnet new classlib -n Numbers
 ```
 
-아래 코드 조각은 숫자가 소수인지 확인하는 기능을 제공하는 단순한 `PrimeService` 클래스를 정의합니다. 아래 코드 조각을 복사하고 *Numbers* 디렉터리에 자동으로 생성된 *Class1.cs* 파일의 내용을 이 코드로 바꿉니다. *Class1.cs* 파일의 이름을 *PrimeService.cs*로 바꿉니다.
+아래 코드 조각은 숫자가 소수인지 확인하는 기능을 제공하는 단순한 `PrimeService` 클래스를 정의합니다. 아래 코드 조각을 복사하고 *Numbers* 디렉터리에 자동으로 생성된 *Class1.cs* 파일의 내용을 이 코드로 바꿉니다. *Class1.cs* 파일의 이름을 *PrimeService.cs* 로 바꿉니다.
 
 ```csharp
 namespace System.Numbers
@@ -75,7 +75,7 @@ dotnet new xunit -n XUnit.Coverlet.Collector
 dotnet new xunit -n XUnit.Coverlet.MSBuild
 ```
 
-새로 만든 xUnit 테스트 프로젝트 둘 다에 *Numbers* 클래스 라이브러리의 프로젝트 참조를 추가해야 합니다. 이렇게 해야만 테스트 프로젝트에서 테스트를 위해 *PrimeService*에 액세스할 수 있습니다. 명령 프롬프트에서 [`dotnet add`](../tools/dotnet-add-reference.md) 명령을 사용합니다.
+새로 만든 xUnit 테스트 프로젝트 둘 다에 *Numbers* 클래스 라이브러리의 프로젝트 참조를 추가해야 합니다. 이렇게 해야만 테스트 프로젝트에서 테스트를 위해 *PrimeService* 에 액세스할 수 있습니다. 명령 프롬프트에서 [`dotnet add`](../tools/dotnet-add-reference.md) 명령을 사용합니다.
 
 ```dotnetcli
 dotnet add XUnit.Coverlet.Collector\XUnit.Coverlet.Collector.csproj reference Numbers\Numbers.csproj
@@ -93,7 +93,7 @@ cd XUnit.Coverlet.MSBuild && dotnet add package coverlet.msbuild && cd ..
 
 이전 명령은 디렉터리를 변경하여 결과적으로 범위를 *MSBuild* 테스트 프로젝트로 지정한 다음 NuGet 패키지를 추가했습니다. 그런 다음 디렉터리를 한 수준 위로 변경했습니다.
 
-*UnitTest1.cs* 파일을 모두 열고 내용을 다음 코드 조각으로 바꿉니다. *UnitTest1.cs* 파일의 이름을 *PrimeServiceTests.cs*로 바꿉니다.
+*UnitTest1.cs* 파일을 모두 열고 내용을 다음 코드 조각으로 바꿉니다. *UnitTest1.cs* 파일의 이름을 *PrimeServiceTests.cs* 로 바꿉니다.
 
 ```csharp
 using System.Numbers;
@@ -297,7 +297,7 @@ reportgenerator
 
 ## <a name="see-also"></a>참조
 
-- [Visual Studio 단위 테스트 검사 범위](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
+- [Visual Studio 단위 테스트 코드 검사](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
 - [GitHub - Coverlet repository](https://github.com/coverlet-coverage/coverlet)(GitHub - Coverlet 리포지토리)
 - [GitHub - ReportGenerator repository](https://github.com/danielpalme/ReportGenerator)(GitHub - ReportGenerator 리포지토리)
 - [ReportGenerator 프로젝트 사이트](https://danielpalme.github.io/ReportGenerator)

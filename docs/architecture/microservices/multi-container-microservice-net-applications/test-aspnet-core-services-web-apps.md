@@ -1,13 +1,13 @@
 ---
 title: ASP.NET Core 서비스 및 웹앱 테스트
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | 컨테이너에서 ASP.NET Core 서비스 및 웹앱을 테스트하기 위한 아키텍처를 탐색합니다.
-ms.date: 08/07/2020
-ms.openlocfilehash: 67872668781d8ae5d79bf360aee73f744cf4404b
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.date: 01/13/2021
+ms.openlocfilehash: dfd0a320491f92154bc9e2804d56c00120224e62
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633951"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188005"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core 서비스 및 웹앱 테스트
 
@@ -15,13 +15,13 @@ ms.locfileid: "97633951"
 
 컨트롤러가 유효한 입력 또는 무효한 입력을 기반으로 어떻게 동작하는지를 테스트하고 컨트롤러가 수행하는 비즈니스 결과를 바탕으로 컨트롤러 응답을 테스트 해야 합니다. 그러나 마이크로 서비스에 대한 다음과 같은 유형의 테스트가 있어야 합니다.
 
-- 단위 테스트. 단위 테스트는 해댱 애플리케이션의 개별 구성 요소가 예상 대로 작동하는지 확인합니다. 어설션은 구성 요소 API를 테스트합니다.
+- 단위 테스트. 해당 테스트는 애플리케이션의 개별 구성 요소가 예상대로 작동하는지 확인합니다. 어설션은 구성 요소 API를 테스트합니다.
 
-- 통합 테스트. 통합 테스트는 구성 요소 간 상호 작용이 데이터베이스와 같은 외부 아티팩트에 대해 예상 대로 작동하는지 확인 합니다. 어설션은 구성 요소 API, UI 또는 데이터베이스 I/O, 로깅 등의 작업 부작용을 테스트할 수 있습니다.
+- 통합 테스트. 해당 테스트는 구성 요소 간 상호 작용이 데이터베이스와 같은 외부 아티팩트에 대해 예상대로 작동하는지 확인합니다. 어설션은 구성 요소 API, UI 또는 데이터베이스 I/O, 로깅 등의 작업 부작용을 테스트할 수 있습니다.
 
-- 각 마이크로 서비스에 대한 기능 테스트. 이 테스트는 해당 애플리케이션이 사용자의 관점에서 예상대로 작동하는지 확인합니다.
+- 각 마이크로 서비스에 대한 기능 테스트. 해당 테스트는 애플리케이션이 사용자의 관점에서 예상대로 작동하는지 확인합니다.
 
-- 서비스 테스트. 이 테스트는 다중 서비스 동시 테스트를 포함하여 엔드투엔드 서비스 사용 사례를 테스트했는지 확인합니다. 이러한 종류의 테스트를 위해서는 먼저 환경을 준비 해야 합니다. 이 경우 준비는 곧 서비스 시작을 의미합니다(예를 들어, docker-compose를 사용하여).
+- 서비스 테스트. 해당 테스트는 다중 서비스 동시 테스트를 포함하여 엔드투엔드 서비스 사용 사례를 테스트했는지 확인합니다. 이러한 종류의 테스트를 위해서는 먼저 환경을 준비 해야 합니다. 이 경우 준비는 곧 서비스 시작을 의미합니다(예를 들어, docker-compose를 사용하여).
 
 ### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>ASP.NET Core Web API에 대한 단위 테스트 구현
 
@@ -70,7 +70,7 @@ public async Task Get_order_detail_success()
 
 ASP.NET Core는 네트워크 오버헤드 없이 HTTP 요청을 처리하는 데 사용할 수 있는 기본 테스트 웹 호스트를 포함합니다. 이는 실제 웹 호스트를 사용하는 경우보다 더 빠르게 이런 테스트를 실행할 수 있다는 의미입니다. 테스트 웹 호스트(TestServer)는 Microsoft.AspNetCore.TestHost로서 NuGet 구성 요소에서 사용할 수 있습니다. 또한 통합 테스트 프로젝트에 추가할 수 있고 ASP.NET Core 애플리케이션을 호스트하는 데 사용할 수 있습니다.
 
-다음 코드에서 확인할 수 있듯이 ASP.NET Core 컨트롤러에 대한 통합 테스트를 만드는 경우 테스트 호스트를 통해 컨트롤러를 인스턴스화합니다. 이는 HTTP 요청에 비견될 수 있지만 보다 빠르게 실행 됩니다.
+다음 코드에서 확인할 수 있듯이 ASP.NET Core 컨트롤러에 대한 통합 테스트를 만드는 경우 테스트 호스트를 통해 컨트롤러를 인스턴스화합니다. 해당 기능은 HTTP 요청에 비견될 수 있지만 더 빠르게 실행됩니다.
 
 ```csharp
 public class PrimeWebDefaultRequestShould
@@ -107,7 +107,7 @@ public class PrimeWebDefaultRequestShould
 - **Steve Smith. 통합 테스트**(ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
-- **dotnet 테스트를 사용한 .NET Core의 단위 테스트** \
+- **dotnet test를 사용한 .NET의 단위 테스트** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. 공식 사이트입니다. \
@@ -146,7 +146,7 @@ public class PrimeWebDefaultRequestShould
 
 **그림 6-25**. eShopOnContainers의 폴더 구조 테스트
 
-마이크로 서비스 및 애플리케이션 기능/통합 테스트는 일반 테스트 러너를 사용하여 Visual Studio에서 실행하지만, 먼저 솔루션 테스트 폴더에 포함된 docker-compose 파일 집합을 사용하여 필요한 인프라 서비스를 시작해야 합니다.
+마이크로 서비스 및 애플리케이션 기능/통합 테스트는 일반 테스트 실행기를 사용하여 Visual Studio에서 실행하지만, 먼저 솔루션 테스트 폴더에 포함된 docker-compose 파일 세트를 사용하여 필요한 인프라 서비스를 시작해야 합니다.
 
 **docker-compose-test.yml**
 
@@ -194,7 +194,7 @@ services:
 docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ```
 
-보시다시피, 이러한 docker-compose 파일은 Redis, RabbitMQ, SQL Server 및 MongoDB 마이크로 서비스만 시작합니다.
+보시다시피, 해당 docker-compose 파일은 Redis, RabbitMQ, SQL Server 및 MongoDB 마이크로 서비스만 시작합니다.
 
 ### <a name="additional-resources"></a>추가 자료
 

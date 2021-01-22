@@ -1,13 +1,13 @@
 ---
 title: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 description: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션에서 마이크로 서비스 컴퍼지션을 지정하는 방법입니다.
-ms.date: 01/30/2020
-ms.openlocfilehash: 81303be621da54b7336228585e86d1120a6b7598
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 01/13/2021
+ms.openlocfilehash: 224b06c6a10834b42218746964f05b055d947235
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739791"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188792"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 
@@ -17,7 +17,7 @@ ms.locfileid: "96739791"
 
 기본적으로 배포하려는 각 컨테이너와 각 컨테이너 배포에 대한 특정 특성을 정의합니다. 다중 컨테이너 배포 설명 파일을 가지면 [docker-compose up](https://docs.docker.com/compose/overview/) CLI 명령으로 오케스트레이션된 단일 작업에서 전체 솔루션을 배포하거나 Visual Studio에서 투명하게 배포할 수 있습니다. 그렇지 않은 경우 명령 줄에서 `docker run` 명령을 사용하여 여러 단계에서 컨테이너별로 배포하는 Docker CLI를 사용해야 합니다. 따라서 docker-compose.yml에 정의된 각 서비스는 정확하게 하나의 이미지 또는 빌드를 지정해야 합니다. 다른 키는 선택 사항이며 `docker run` 명령줄 함수와 유사합니다.
 
-다음 YAML 코드는 가능한 전역의 정의이며 eShopOnContainers 샘플에 대한 단일 docker-compose.yml 파일이 아닙니다. eShopOnContainers에서 실제 docker-compose 파일이 아닙니다. 대신 단일 파일에서 단순화되고 통합된 버전입니다. 나중에 설명되는 것처럼 docker-compose 파일을 사용하는 가장 좋은 방법이 아닙니다.
+다음 YAML 코드는 가능한 전역의 정의이며 eShopOnContainers 샘플에 대한 단일 docker-compose.yml 파일이 아닙니다. 해당 코드는 eShopOnContainers의 실제 docker-compose 파일이 아닙니다. 대신 단일 파일에서 단순화되고 통합된 버전입니다. 나중에 설명되는 것처럼 docker-compose 파일을 사용하는 가장 좋은 방법이 아닙니다.
 
 ```yml
 version: '3.4'
@@ -127,7 +127,7 @@ services:
 
 - 컨테이너의 노출된 포트 80을 Docker 호스트 컴퓨터(Linux VM)의 포트 5101에 전달합니다.
 
-- 웹 서비스를 **sqldata** 서비스(컨테이너에서 실행되는 Linux 데이터베이스에 대한 SQL Server 인스턴스)에 연결합니다. 이 종속성을 지정하면 catalog-api 컨테이너는 sqldata 컨테이너가 시작하기 전까지 시작하지 않습니다. catalog-api는 실행 중인 SQL Server 데이터베이스가 먼저 있어야 하기 때문에 중요합니다. 그러나 이러한 종류의 컨테이너 종속성은 Docker가 컨테이너 수준에서만 확인하기 때문에 많은 경우에서 충분하지 않습니다. 경우에 따라 서비스(이 경우 SQL Server)는 여전히 준비되지 않을 수 있으므로 클라이언트 마이크로 서비스에서 지수 백오프로 재시도 논리를 구현하는 것이 좋습니다. 이런 방식으로 종속성 컨테이너가 짧은 시간 동안 준비되지 않는 경우 애플리케이션은 계속해서 복원됩니다.
+- 웹 서비스를 **sqldata** 서비스(컨테이너에서 실행되는 Linux 데이터베이스에 대한 SQL Server 인스턴스)에 연결합니다. 해당 종속성을 지정하면 catalog-api 컨테이너는 sqldata 컨테이너가 시작하기 전까지 시작하지 않습니다. catalog-api는 실행 중인 SQL Server 데이터베이스가 먼저 있어야 하기 때문에 해당 측면이 중요합니다. 그러나 이러한 종류의 컨테이너 종속성은 Docker가 컨테이너 수준에서만 확인하기 때문에 많은 경우에서 충분하지 않습니다. 경우에 따라 서비스(이 경우 SQL Server)는 여전히 준비되지 않을 수 있으므로 클라이언트 마이크로 서비스에서 지수 백오프로 재시도 논리를 구현하는 것이 좋습니다. 이런 방식으로 종속성 컨테이너가 짧은 시간 동안 준비되지 않는 경우 애플리케이션은 계속해서 복원됩니다.
 
 - 외부 서버에 대한 액세스를 허용하도록 구성됩니다. 추가\_호스트 설정을 통해 개발 PC의 로컬 SQL Server 인스턴스와 같은 외부 서버 또는 Docker 호스트 외부의 컴퓨터에 액세스할 수 있습니다(즉, 개발 Docker 호스트인 기본 Linux VM의 외부).
 
@@ -169,7 +169,7 @@ Compose를 사용하여 원격 Docker 엔진에 배포할 수도 있습니다. �
 
 ### <a name="using-multiple-docker-compose-files-to-handle-several-environments"></a>여러 환경을 처리하는 데 다중 docker-compose 파일 사용
 
-다양한 환경을 대상으로 하는 경우 다중 compose 파일을 사용해야 합니다. 이를 통해 환경에 따라 여러 구성 변형을 만들 수 있습니다.
+다양한 환경을 대상으로 하는 경우 다중 compose 파일을 사용해야 합니다. 해당 접근 방식을 통해 환경에 따라 여러 구성 변형을 만들 수 있습니다.
 
 #### <a name="overriding-the-base-docker-compose-file"></a>기본 docker-compose 파일 재정의
 
@@ -434,10 +434,10 @@ docker-compose는 .env 파일의 각 줄이 \<variable\>=\<value\> 형식이 된
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>최적화된 ASP.NET Core Docker 이미지 빌드
 
-인터넷에서 원본의 Docker 및 .NET Core를 탐색하는 경우 원본을 컨테이너에 복사하여 Docker 이미지를 빌드하는 것의 용이함을 보여 주는 Dockerfile을 찾을 수 있습니다. 이러한 예제는 간단한 구성을 사용하는 것을 제안합니다. 애플리케이션과 함께 제공되는 환경으로 Docker 이미지를 가질 수 있습니다. 다음 예제에서는 이 맥락에서 간단한 Dockerfile을 보여 줍니다.
+인터넷에서 소스의 Docker 및 .NET을 살펴보는 경우 소스를 컨테이너에 복사하여 Docker 이미지를 빌드하는 것의 용이함을 보여 주는 Dockerfile을 찾을 수 있습니다. 이러한 예제는 간단한 구성을 사용하는 것을 제안합니다. 애플리케이션과 함께 제공되는 환경으로 Docker 이미지를 가질 수 있습니다. 다음 예제에서는 이 맥락에서 간단한 Dockerfile을 보여 줍니다.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:5.0
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -448,9 +448,9 @@ ENTRYPOINT ["dotnet", "run"]
 
 이와 같은 Dockerfile은 작동합니다. 그러나 실질적으로 이미지, 특히 프로덕션 이미지를 최적화할 수 있습니다.
 
-컨테이너 및 마이크로 서비스 모델에서 컨테이너를 지속적으로 시작하고 있습니다. 컨테이너를 사용하는 일반적인 방법은 컨테이너가 삭제 가능하므로 중지 중인 컨테이너를 다시 시작하지 않습니다. 오케스트레이터(예: Kubernetes 및 Azure Service Fabric)는 단순히 이미지의 새 인스턴스를 만듭니다. 즉, 인스턴스화 프로세스의 속도가 더 빨라지도록 빌드될 때 애플리케이션을 미리 컴파일하여 최적화해야 합니다. 컨테이너가 시작될 때 실행할 준비가 되어야 합니다. .NET Core 및 Docker에 대한 블로그 게시물에서 볼 수 있는 것처럼 `dotnet restore` 및 `dotnet build` CLI 명령을 사용하여 런타임에 복원 및 컴파일하지 마세요.
+컨테이너 및 마이크로 서비스 모델에서 컨테이너를 지속적으로 시작하고 있습니다. 컨테이너를 사용하는 일반적인 방법은 컨테이너가 삭제 가능하므로 중지 중인 컨테이너를 다시 시작하지 않습니다. 오케스트레이터(예: Kubernetes 및 Azure Service Fabric)는 이미지의 새 인스턴스를 만듭니다. 즉, 인스턴스화 프로세스의 속도가 더 빨라지도록 빌드될 때 애플리케이션을 미리 컴파일하여 최적화해야 합니다. 컨테이너가 시작될 때 실행할 준비가 되어야 합니다. .NET 및 Docker에 관한 블로그 게시물에서 볼 수 있는 것처럼 `dotnet restore` 및 `dotnet build` CLI 명령을 사용하여 런타임에 복원 및 컴파일하지 마세요.
 
-.NET 팀은 .NET Core 및 ASP.NET Core를 컨테이너 최적화된 프레임워크로 만들도록 중요한 작업을 수행하고 있습니다. .NET Core는 작은 메모리 공간을 가진 경량 프레임워크일 뿐만 아니라, 팀은 세 가지 주요 시나리오에 최적화된 Docker 이미지를 중점적으로 사용해 *dotnet/core* 에서 버전 2.1부터 Docker 허브 레지스트리에 게시했습니다.
+.NET 팀은 .NET 및 ASP.NET Core를 컨테이너 최적화된 프레임워크로 만들도록 중요한 작업을 수행하고 있습니다. .NET은 작은 메모리 공간을 가진 간단한 프레임워크일 뿐만 아니라, 팀은 세 가지 주요 시나리오에 최적화된 Docker 이미지를 중점적으로 사용해 버전 2.1부터 Docker Hub 레지스트리의 *dotnet/* 에 게시했습니다.
 
 1. **개발**: 우선 순위는 변경 내용을 신속하게 반복하고 디버그할 수 있는 기능이며, 크기는 부차적 문제입니다.
 
@@ -458,7 +458,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 3. **프로덕션**: 컨테이너의 빠른 배포 및 시작이 포커스인 경우, 이 이미지는 이진 파일 및 애플리케이션을 실행할 콘텐츠로 제한합니다.
 
-.NET 팀은 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet/)(Docker Hub)에서 네 가지 기본 변형을 제공합니다.
+.NET 팀은 [dotnet/](https://hub.docker.com/_/microsoft-dotnet/)(Docker Hub)에서 네 가지 기본 변형을 제공합니다.
 
 1. **sdk**: 개발 및 빌드 시나리오용
 1. **aspnet**: ASP.NET 프로덕션 시나리오용
@@ -472,7 +472,7 @@ ENTRYPOINT ["dotnet", "run"]
 - **ASP.NET Core를 사용하여 최적화된 Docker 이미지 빌드**
   <https://docs.microsoft.com/archive/blogs/stevelasker/building-optimized-docker-images-with-asp-net-core>
 
-- **.NET Core 애플리케이션에 대한 Docker 이미지 작성**
+- **.NET 애플리케이션에 대한 Docker 이미지 작성**
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 > [!div class="step-by-step"]

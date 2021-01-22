@@ -1,13 +1,13 @@
 ---
 title: 컨테이너로 실행되는 데이터베이스 서버 사용
 description: 컨테이너로 실행되는 데이터베이스 서버를 개발용으로만 사용하는 중요성을 이해합니다. 절대 프로덕션용이 아닙니다.
-ms.date: 01/30/2020
-ms.openlocfilehash: 38f77e195b184d57dcad5904674a0025ef6c2bd8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 01/13/2021
+ms.openlocfilehash: 1292bf37e3baaeb6284f6fba15b4bc7c9c17b4a7
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539401"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188740"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>컨테이너로 실행되는 데이터베이스 서버 사용
 
@@ -270,7 +270,7 @@ eShopOnContainers에서 `basket-api` 마이크로 서비스는 컨테이너로 �
       - "6379"
 ```
 
-docker-compose.yml의 이 코드는 Redis 이미지를 기반으로 `basketdata`라는 컨테이너를 정의하고 포트 6379를 내부적으로 게시합니다. 즉, Docker 호스트 내에서 실행 중인 다른 컨테이너에서만 이 컨테이너에 액세스할 수 있습니다.
+docker-compose.yml의 이 코드는 Redis 이미지를 기반으로 `basketdata`라는 컨테이너를 정의하고 포트 6379를 내부적으로 게시합니다. 해당 구성은 Docker 호스트 내에서 실행 중인 다른 컨테이너에서만 이 컨테이너에 액세스할 수 있음을 의미합니다.
 
 마지막으로 *docker-compose.override.yml* 파일에서 eShopOnContainers 샘플의 `basket-api` 마이크로 서비스는 해당 Redis 컨테이너에 사용할 연결 문자열을 정의합니다.
 

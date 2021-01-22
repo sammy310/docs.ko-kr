@@ -1,17 +1,17 @@
 ---
 title: CQRS 마이크로 서비스에서 읽기/쿼리 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Dapper를 사용하여 eShopOnContainers의 주문 마이크로 서비스에서 CQRS 쿼리 측면의 구현을 이해합니다.
-ms.date: 10/08/2018
-ms.openlocfilehash: e6ea7b4b7b37df9ee972319f597ab045bf3bd215
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.date: 01/13/2021
+ms.openlocfilehash: 047fc3893dcaf72a17d29f5560c928879757d024
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678805"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188922"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS 마이크로 서비스에서 읽기/쿼리 구현
 
-읽기/쿼리의 경우 eShopOnContainers 참조 애플리케이션의 주문 마이크로 서비스에서 DDD 모델 및 트랜잭션 영역과 별도로 쿼리를 구현합니다. 이 작업은 주로 쿼리와 트랜잭션에 대한 요구가 매우 다르기 때문에 수행되었습니다. 쓰기는 도메인 논리와 호환되어야 하는 트랜잭션을 실행합니다. 반면에 쿼리는 idempotent(멱등원)이며 도메인 규칙과 분리될 수 있습니다.
+읽기/쿼리의 경우 eShopOnContainers 참조 애플리케이션의 주문 마이크로 서비스에서 DDD 모델 및 트랜잭션 영역과 별도로 쿼리를 구현합니다. 해당 구현은 주로 쿼리와 트랜잭션에 대한 요구가 매우 다르기 때문에 수행되었습니다. 쓰기는 도메인 논리와 호환되어야 하는 트랜잭션을 실행합니다. 반면에 쿼리는 idempotent(멱등원)이며 도메인 규칙과 분리될 수 있습니다.
 
 이 접근 방식은 그림 7-3과 같이 간단합니다. API 인터페이스는 마이크로 ORM(Object Relational Mapper)(예: Dapper)과 같은 인프라를 사용하는 웹 API 컨트롤러에서 구현되며, UI 애플리케이션의 필요에 따라 동적 ViewModel을 반환합니다.
 
@@ -21,7 +21,7 @@ ms.locfileid: "90678805"
 
 간소화된 CQRS 접근 방식에서 쿼리 측면에 대한 가장 간단한 방법은 데이터베이스를 Dapper 같은 Micro-ORM으로 쿼리하고 동적 ViewModels를 반환함으로써 구현될 수 있습니다. 쿼리 정의는 데이터베이스를 쿼리하고 각 쿼리에 대해 즉시 작성된 동적 ViewModel을 반환합니다. 쿼리는 idempotent이므로 쿼리 실행 횟수와 관계없이 데이터를 변경하지 않습니다. 따라서 집계 및 다른 패턴과 같은 트랜잭션 측면에서 사용되는 DDD 패턴으로 제한할 필요가 없으므로 쿼리가 트랜잭션 영역과 분리됩니다. 데이터베이스에 대해 UI에 필요한 데이터를 쿼리하면, SQL 문 자체를 제외하고 어디서든 정적으로 정의할 필요가 없는 동적 ViewModel(ViewModel에 대한 클래스 없음)을 반환합니다.
 
-이 방법은 간단하므로 쿼리 측면(예: [Dapper](https://github.com/StackExchange/Dapper)와 같은 마이크로 ORM을 사용하는 코드)에 필요한 코드는 [동일한 웹 API 프로젝트 내에서](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs) 구현할 수 있습니다. 그림 7-4에서 이를 보여줍니다. 쿼리는 eShopOnContainers 솔루션 내의 **Ordering.API** 마이크로 서비스 프로젝트에서 정의됩니다.
+이 방법은 간단하므로 쿼리 측면(예: [Dapper](https://github.com/StackExchange/Dapper)와 같은 마이크로 ORM을 사용하는 코드)에 필요한 코드는 [동일한 웹 API 프로젝트 내에서](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs) 구현할 수 있습니다. 그림 7-4에서는 해당 접근 방식을 보여 줍니다. 쿼리는 eShopOnContainers 솔루션 내의 **Ordering.API** 마이크로 서비스 프로젝트에서 정의됩니다.
 
 ![Ordering.API 프로젝트의 Queries 폴더를 보여 주는 스크린샷](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
@@ -33,7 +33,7 @@ ms.locfileid: "90678805"
 
 반환된 데이터(ViewModel)는 데이터베이스의 여러 엔터티 또는 테이블의 데이터, 심지어 트랜잭션 영역에 대한 도메인 모델에 정의된 여러 집계 간의 데이터를 조인한 결과일 수 있습니다. 이 경우 도메인 모델과 별도로 쿼리를 만들기 때문에 집계 경계와 제약 조건은 무시되며 필요한 테이블과 열을 자유롭게 쿼리할 수 있습니다. 이 방법은 쿼리를 만들거나 업데이트하는 데 있어 뛰어난 유연성과 생산성을 개발자에게 제공합니다.
 
-ViewModels는 주문 마이크로 서비스에서 구현된 것처럼 클래스에 정의된 정적 형식일 수 있습니다. 또는 수행한 쿼리에 따라 동적으로 생성되어 개발자에게 매우 민첩할 수 있습니다.
+ViewModels는 주문 마이크로 서비스에서 구현된 것처럼 클래스에 정의된 정적 형식일 수 있습니다. 또는 수행한 쿼리에 따라 동적으로 생성되어 개발자에게 민첩할 수 있습니다.
 
 ## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Dapper를 마이크로 ORM으로 사용하여 쿼리를 수행합니다.
 

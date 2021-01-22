@@ -3,12 +3,12 @@ title: 제거 도구
 description: .NET Core SDK 및 런타임의 제어된 정리를 사용 설정하는 단계별 도구인 .NET Core 제거 도구에 대한 개요입니다.
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: dcfa12a3ec5fe0e8a29c5897ee4c71bfc7352eda
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ed43b4ec8437ae0ccaf5f1234758dda9f16bd51e
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590801"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235354"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core 제거 도구
 
@@ -23,14 +23,14 @@ Windows에서 도구는 다음 설치 관리자 중 하나를 사용하여 설�
 
 macOS에서 도구는 */usr/local/share/dotnet* 폴더에 있는 SDK 및 런타임만 제거할 수 있습니다.
 
-이러한 제한 사항으로 인해 도구는 컴퓨터에서 모든 .NET Core SDK 및 런타임을 제거하지 못할 수 있습니다. `dotnet --info` 명령을 사용하여 이 도구에서 제거할 수 없는 SDK 및 런타임을 포함하여 설치된 모든 .NET Core SDK 및 런타임을 찾을 수 있습니다. `dotnet-core-uninstall list` 명령을 사용하면 도구를 사용하여 제거할 수 있는 SDK가 표시됩니다.
+이러한 제한 사항으로 인해 도구는 컴퓨터에서 모든 .NET Core SDK 및 런타임을 제거하지 못할 수 있습니다. `dotnet --info` 명령을 사용하여 이 도구에서 제거할 수 없는 SDK 및 런타임을 포함하여 설치된 모든 .NET Core SDK 및 런타임을 찾을 수 있습니다. `dotnet-core-uninstall list` 명령을 사용하면 도구를 사용하여 제거할 수 있는 SDK가 표시됩니다. 버전 1.2 이상은 버전 5.0 이하의 SDK 및 런타임을 제거할 수 있으며 이전 버전의 도구는 3.1 이하를 제거할 수 있습니다.
 
 ## <a name="install-the-tool"></a>도구 설치
 
 .NET Core 제거 도구를 [도구의 릴리스 페이지](https://aka.ms/dotnet-core-uninstall-tool)에서 다운로드할 수 있으며 [dotnet/cli-lab](https://github.com/dotnet/cli-lab) GitHub 리포지토리에서 소스 코드를 찾을 수 있습니다.
 
 > [!NOTE]
-> 이 도구에는 .NET Core SDK 및 런타임 제거를 위한 권한 상승이 필요합니다. 따라서 Windows의 경우 *C:\Program Files*, 또는 macOS의 경우 */usr/local/bin*과 같이 쓰기 보호된 디렉터리에 설치해야 합니다. [dotnet 명령에 대한 상승된 액세스 권한](../tools/elevated-access.md)을 참조하세요. 자세한 내용은 [자세한 설치 지침](https://aka.ms/dotnet-core-uninstall-tool)을 참조하세요.
+> 이 도구에는 .NET Core SDK 및 런타임 제거를 위한 권한 상승이 필요합니다. 따라서 Windows의 경우 *C:\Program Files*, 또는 macOS의 경우 */usr/local/bin* 과 같이 쓰기 보호된 디렉터리에 설치해야 합니다. [dotnet 명령에 대한 상승된 액세스 권한](../tools/elevated-access.md)을 참조하세요. 자세한 내용은 [자세한 설치 지침](https://aka.ms/dotnet-core-uninstall-tool)을 참조하세요.
 
 ## <a name="run-the-tool"></a>도구 실행
 
@@ -295,7 +295,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 ### <a name="step-3---uninstall-net-core-sdks-and-runtimes"></a>3단계 - .NET Core SDK 및 런타임 제거
 
-`dotnet-core-uninstall remove`는 옵션 컬렉션에서 지정한 .NET Core SDK 및 런타임을 제거합니다. 이 도구는 버전 5.0 이상의 SDK 및 런타임 제거에 사용할 수 없습니다.
+`dotnet-core-uninstall remove`는 옵션 컬렉션에서 지정한 .NET Core SDK 및 런타임을 제거합니다. 버전 1.2 이상은 버전 5.0 이하의 SDK 및 런타임을 제거할 수 있으며 이전 버전의 도구는 3.1 이하를 제거할 수 있습니다.
 
 이 도구는 파괴적인 동작을 포함하므로 제거 명령을 실행하기 전에 시험 실행을 실시하는 것을 **적극** 권장합니다. 시험 실행에서 `remove` 명령을 사용하면 어떤 .NET Core SDK 및 런타임이 제거되는지 표시됩니다. 어떤 SDK 및 런타임을 안전하게 제거할 수 있는지 알아보려면 [버전을 제거해야 하나요?](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version)를 참조하세요.
 
@@ -501,7 +501,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
   dotnet-core-uninstall remove --sdk @versions.rsp
   ```
 
-  *versions.rsp*의 내용은 다음과 같습니다.
+  *versions.rsp* 의 내용은 다음과 같습니다.
   
   ```text
   2.2.300
@@ -516,9 +516,9 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 ## <a name="windows"></a>[Windows](#tab/windows)
 
-1. **프로그램 추가/제거**를 엽니다.
+1. **프로그램 추가/제거** 를 엽니다.
 2. `Microsoft .NET Core SDK Uninstall Tool`을 검색합니다.
-3. **제거**를 선택합니다.
+3. **제거** 를 선택합니다.
 
 ## <a name="macos"></a>[macOS](#tab/macos)
 

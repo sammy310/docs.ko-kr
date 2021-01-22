@@ -15,7 +15,7 @@
       href: containerized-lifecycle/
     - name: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화
       href: modernize-with-azure-containers/
-    - name: .NET Core 3.1을 사용하여 Windows 10의 데스크톱 앱 현대화
+    - name: .NET 5를 사용하여 Windows 10의 데스크톱 앱 현대화
       href: modernize-desktop/
     - name: '.NET 마이크로 서비스: 컨테이너화된 .NET 애플리케이션의 아키텍처'
       href: microservices/

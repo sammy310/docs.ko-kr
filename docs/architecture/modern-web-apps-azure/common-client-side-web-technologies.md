@@ -6,12 +6,12 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 ms.date: 12/01/2020
-ms.openlocfilehash: a4549e48152b21af05c67f601c1db65029e346fa
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 75c696d881ad0586b11cdbd264f3ff90ec3bce8d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851668"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187966"
 ---
 # <a name="common-client-side-web-technologies"></a>일반 클라이언트측 웹 기술
 
@@ -169,7 +169,7 @@ var app = new Vue({
 
 WebAssembly 코드는 JavaScript 상호 운용성(종종 JavaScript interop 또는 JS interop로 단축됨)이라고 하는 JavaScript를 통해 브라우저의 전체 기능에 액세스할 수 있습니다. 브라우저에서 WebAssembly를 통해 실행된 .NET 코드는 브라우저의 JavaScript 샌드박스에서 클라이언트 컴퓨터의 악의적 활동에 대해 제공하는 보호를 사용하여 실행됩니다.
 
-자세한 내용은 [ASP.NET Core Blazor 소개](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-5.0)를 참조하세요.
+자세한 내용은 [ASP.NET Core 소개Blazor](/aspnet/core/blazor/)를 참조하세요.
 
 ### <a name="choosing-a-spa-framework"></a>SPA 프레임워크 선택
 

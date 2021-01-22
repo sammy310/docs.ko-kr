@@ -1,13 +1,13 @@
 ---
 title: Web API를 사용하여 마이크로 서비스 애플리케이션 계층 구현
 description: Web API 애플리케이션 계층에서 종속성 주입 및 중재자 패턴과 해당 구현 세부 정보를 이해합니다.
-ms.date: 08/17/2020
-ms.openlocfilehash: 45121026e06c55258a16f41aa801c06808a6919f
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.date: 01/13/2021
+ms.openlocfilehash: bf37b0bfc7d9438752673d1c617657822b2a48ad
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437791"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188974"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API를 사용하여 마이크로 서비스 에플리케이션 계층 구현
 
@@ -27,7 +27,7 @@ ASP.NET Core에는 생성자 주입을 기본으로 지원하는 간단한 [내�
 
 일반적으로 인프라 개체를 구현하는 종속성을 주입하려고 합니다. 일반적으로 주입하는 종속성은 리포지토리입니다. 하지만 다른 인프라 종속성을 주입할 수도 있습니다. 간단한 구현을 위해 작업 단위 패턴 개체(EF DbContext 개체)를 직접 주입할 수 있는데, DBContext 역시 인프라 지속성 개체의 구현이기 때문입니다.
 
-다음 예제에서는 .NET Core가 생성자를 통해 필요한 리포지토리 개체를 어떻게 주입하는지 볼 수 있습니다. 클래스는 명령 처리기이며, 다음 섹션에서 설명합니다.
+다음 예제에서는 .NET이 생성자를 통해 필요한 리포지토리 개체를 어떻게 주입하는지 볼 수 있습니다. 클래스는 명령 처리기이며, 다음 섹션에서 설명합니다.
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -111,7 +111,7 @@ IoC 컨테이너에 형식을 등록할 때 가장 일반적인 패턴은 한 �
 
 #### <a name="use-the-scrutor-library-for-automatic-types-registration"></a>자동 형식 등록을 위해 Scrutor 라이브러리 사용
 
-.NET Core에서 DI를 사용하는 경우 어셈블리를 스캔하고 규칙에 따라 해당 형식을 자동으로 등록할 수 있도록 하는 것이 좋습니다. 이 기능은 현재 ASP.NET Core에서 사용할 수 없습니다. 하지만 [Scrutor](https://github.com/khellang/Scrutor) 라이브러리를 대신 사용할 수 있습니다. 이 방법은 IoC 컨테이너에 등록해야 하는 형식이 수십 개인 경우에 유용합니다.
+.NET에서 DI를 사용하는 경우 어셈블리를 검사하고 규칙에 따라 해당 형식을 자동으로 등록하고자 할 수 있습니다. 이 기능은 현재 ASP.NET Core에서 사용할 수 없습니다. 하지만 [Scrutor](https://github.com/khellang/Scrutor) 라이브러리를 대신 사용할 수 있습니다. 이 방법은 IoC 컨테이너에 등록해야 하는 형식이 수십 개인 경우에 유용합니다.
 
 #### <a name="additional-resources"></a>추가 자료
 
@@ -503,7 +503,7 @@ eShopOnContainers 초기 버전에서는 HTTP 요청으로 시작되고 중재�
 
 샘플 구현인 이 가이드에서는 중재자(Mediator) 패턴을 기반으로 in-process 파이프라인을 사용하여 명령 수집을 유도하고 명령을 메모리 내에서 올바른 명령 처리기로 라우팅할 것을 제안합니다. 또한 이 가이드에서는 교차 편집 문제를 분리하기 위해 [동작](https://github.com/jbogard/MediatR/wiki/Behaviors) 적용을 제안합니다.
 
-.NET Core의 구현에는 중재자(Mediator) 패턴을 구현하는 데 사용할 수 있는 여러 개의 오픈 소스 라이브러리가 있습니다. 이 가이드에 사용된 라이브러리는 [MediatR](https://github.com/jbogard/MediatR) 오픈 소스 라이브러리(작성자: Jimmy Bogard)이지만 다른 방식을 사용할 수도 있습니다. MediatR은 작고 간단한 라이브러리이며 명령과 같은 메모리 내 메시지를 처리하면서 데코레이터(decorator)나 동작을 적용할 수 있습니다.
+.NET의 구현에는 중재자 패턴을 구현하는 데 사용할 수 있는 여러 개의 오픈 소스 라이브러리가 있습니다. 이 가이드에 사용된 라이브러리는 [MediatR](https://github.com/jbogard/MediatR) 오픈 소스 라이브러리(작성자: Jimmy Bogard)이지만 다른 방식을 사용할 수도 있습니다. MediatR은 작고 간단한 라이브러리이며 명령과 같은 메모리 내 메시지를 처리하면서 데코레이터(decorator)나 동작을 적용할 수 있습니다.
 
 Mediator 패턴을 사용하면 작업을 수행하는 처리기(이 경우 명령 처리기)에 자동으로 연결하면서 결합을 줄이고 요청된 작업의 문제를 격리시키는 데 도움이 됩니다.
 

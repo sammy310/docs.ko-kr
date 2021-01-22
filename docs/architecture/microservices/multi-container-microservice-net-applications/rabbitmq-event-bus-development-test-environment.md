@@ -1,13 +1,13 @@
 ---
 title: RabbitMQ를 사용하여 개발 또는 테스트 환경에 대한 이벤트 서비스 구현
 description: 컨테이너화된 .NET 애플리케이션의 .NET 마이크로 서비스 아키텍처 | RabbitMQ를 사용하여 개발 또는 테스트 환경의 통합 이벤트에 대해 이벤트 버스 메시징 구현
-ms.date: 10/02/2018
-ms.openlocfilehash: 1af72d18825eb610d6900178205450e2c2e34c25
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.date: 01/13/2021
+ms.openlocfilehash: a1e7d11e376080a03269f202fa6ae24ffeb0f4d2
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306892"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188083"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>RabbitMQ를 사용하여 개발 또는 테스트 환경에 대한 이벤트 서비스 구현
 
@@ -21,7 +21,7 @@ RabbitMQ를 사용하는 이벤트 버스 구현을 통해 그림 6-21에 표시
 
 **그림 6-21** 이벤트 버스의 RabbitMQ 구현
 
-RabbitMQ는 메시지 게시자와 구독자 간에 배포를 처리하는 중개자의 역할을 합니다. 코드에서 EventBusRabbitMQ 클래스는 제네릭 IEventBus 인터페이스를 구현합니다. 이 개발/테스트 버전에서 프로덕션 버전으로 교체할 수 있도록 종속성 주입에 기반합니다.
+RabbitMQ는 메시지 게시자와 구독자 간에 배포를 처리하는 중개자의 역할을 합니다. 코드에서 EventBusRabbitMQ 클래스는 제네릭 IEventBus 인터페이스를 구현합니다. 해당 구현은 이 개발/테스트 버전에서 프로덕션 버전으로 교체할 수 있도록 종속성 주입을 기반으로 합니다.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -35,7 +35,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>RabbitMQ를 사용하여 단순 게시 메서드 구현
 
-다음 코드는 전체 시나리오를 보여주기 위해 RabbitMQ에서 이벤트 버스를 구현하는 ***간소화된*** 버전입니다. 실제로는 이러한 방식으로 연결을 처리하지 않습니다. 전체 구현을 확인하려면 [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) 리포지토리에서 실제 코드를 참조하세요.
+다음 코드는 전체 시나리오를 보여 주기 위해 RabbitMQ에서 이벤트 버스를 구현하는 *_간소화된_* 버전입니다. 실제로는 이러한 방식으로 연결을 처리하지 않습니다. 전체 구현을 확인하려면 [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) 리포지토리에서 실제 코드를 참조하세요.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -63,7 +63,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-eShopOnContainers 애플리케이션에서 게시 메서드의 [실제 코드](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs)는 [Polly](https://github.com/App-vNext/Polly) 재시도 정책을 사용하여 향상됩니다. 그러면 RabbitMQ 컨테이너가 준비되지 않은 경우 특정 횟수로 작업을 다시 시도합니다. docker-compose가; 컨테이너를 시작할 때 발생할 수 있습니다. 예를 들어 RabbitMQ 컨테이너가 다른 컨테이너보다 느리게 시작할 수도 있습니다.
+eShopOnContainers 애플리케이션에서 Publish 메서드의 [실제 코드](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs)는 [Polly](https://github.com/App-vNext/Polly) 재시도 정책을 사용하여 향상됩니다. 그러면 RabbitMQ 컨테이너가 준비되지 않은 경우 작업을 몇 번 다시 시도합니다. 이 시나리오는 docker-compose가 컨테이너를 시작할 때 발생할 수 있습니다. 예를 들어 RabbitMQ 컨테이너가 다른 컨테이너보다 느리게 시작될 수도 있습니다.
 
 앞서 언급했듯이 이 코드가 개발/테스트 환경에서만 사용되도록 RabbitMQ에 여러 가지 구성을 사용할 수 있습니다.
 
@@ -116,7 +116,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 RabbitMQ에 대한 지원을 제공하는 프로덕션 준비가 완료된 솔루션입니다.
 
-- **EasyNetQ** - RabbitMQ용 오픈 소스 .NET API 클라이언트\
+- _ *EasyNetQ** - RabbitMQ용 오픈 소스 .NET API 클라이언트
   <https://easynetq.com/>
 
 - **MassTransit** \

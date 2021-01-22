@@ -1,13 +1,13 @@
 ---
 title: eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | eShopOnContainers의 주문 마이크로 서비스에서 CQRS가 구현되는 방식을 이해합니다.
-ms.date: 03/03/2020
-ms.openlocfilehash: 2916df596a6d0f887411f3ef0074aed395ef58ba
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.date: 01/13/2021
+ms.openlocfilehash: 0c07ecad0fb2dfdaea85d47b519b858e0519f6bd
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306944"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188259"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
 
@@ -27,7 +27,7 @@ EShopOnContainers 참조 애플리케이션의 주문 마이크로 서비스 설
 
 “쿼리 측” 구현을 위해 EF Core, AutoMapper 프로젝션 같은 종합 ORM, 저장 프로시저, 뷰, 구체화된 뷰나 마이크로 ORM 등, 여러 방식 중에서 선택할 수 있습니다.
 
-이 가이드와 eShopOnContainers(특히 주문 마이크로 서비스)에서는 [Dapper](https://github.com/StackExchange/dapper-dot-net) 같은 마이크로 ORM을 사용하여 간편한 쿼리를 구현했습니다. 이렇게 하면 오버헤드가 적은 간단한 프레임워크 덕분에 SQL 문 기반의 모든 쿼리를 구현하여 최고의 성능을 낼 수 있습니다.
+이 가이드와 eShopOnContainers(특히 주문 마이크로 서비스)에서는 [Dapper](https://github.com/StackExchange/dapper-dot-net) 같은 마이크로 ORM을 사용하여 간편한 쿼리를 구현했습니다. 해당 가이드를 사용하면 오버헤드가 적은 간단한 프레임워크 덕분에 SQL 문 기반의 모든 쿼리를 구현하여 최고의 성능을 낼 수 있습니다.
 
 이 방법을 사용할 때는 엔터티가 SQL 데이터베이스에 지속되는 방식에 영향을 미치는 모든 모델 업데이트에서 Dapper나 다른 개별(비 EF) 쿼리 방식에서 사용되는 SQL 쿼리에 대한 개별 업데이트도 필요합니다.
 
@@ -37,7 +37,7 @@ CQRS와 대부분의 DDD 패턴(예: DDD 계층 또는 집계가 있는 도메�
 
 서로 다른 DC(경계가 있는 컨텍스트)에는 서로 다른 패턴이 따릅니다. 책임도 다르고 솔루션도 달라지게 됩니다. 동일한 패턴을 모든 곳에 강제할 경우 실패로 이어집니다. CQRS 및 DDD 패턴을 모든 곳에 사용해서는 안 됩니다. 많은 하위 시스템, BC 또는 마이크로 서비스는 더 간단하며 간단한 CRUD 서비스 또는 다른 방식을 통해 더 간편하게 구현될 수 있습니다.
 
-애플리케이션 아키텍처는 하나뿐입니다. 즉 사용자가 설계하는 시스템 아키텍처 또는 엔드투엔드 애플리케이션입니다(예: 마이크로 서비스 아키텍처). 그러나 이 애플리케이션 내에서 경계가 지정된 각각의 컨텍스트나 마이크로 서비스의 설계에서는 아키텍처 패턴 수준에서 자체 절충 및 내부 설계 결정을 반영합니다. CQRS 또는 DDD처럼 동일한 아키텍처 패턴을 모든 곳에 적용해서는 안 됩니다.
+애플리케이션 아키텍처는 하나뿐입니다. 즉 사용자가 설계하는 시스템 아키텍처 또는 엔드투엔드 애플리케이션입니다(예: 마이크로 서비스 아키텍처). 그러나 이 애플리케이션 내에서 경계가 지정된 각각의 컨텍스트나 마이크로 서비스의 설계에서는 아키텍처 패턴 수준에서 자체 절충 및 내부 설계 결정을 반영합니다. CQRS 또는 DDD와 동일한 아키텍처 패턴을 모든 곳에 적용해서는 안 됩니다.
 
 ### <a name="additional-resources"></a>추가 자료
 
