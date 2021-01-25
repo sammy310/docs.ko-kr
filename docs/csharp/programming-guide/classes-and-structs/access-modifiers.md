@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 557f5d9f302b08d32896b462e86ce1d96710ff36
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: d800116137e088a54edb221fb4f81ecd47b0278f
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474529"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757865"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>액세스 한정자(C# 프로그래밍 가이드)
 
@@ -32,7 +32,7 @@ ms.locfileid: "86474529"
 
 ## <a name="class-and-struct-accessibility"></a>클래스 및 구조체 액세스 수준  
 
-네임스페이스 내에서 직접 선언된(즉, 다른 클래스 또는 구조체 내에 중첩되지 않은) 클래스와 구조체는 `public`과 `internal` 중 하나일 수 있습니다. 액세스 한정자가 지정되지 않은 경우 기본값은 `Internal`입니다.  
+네임스페이스 내에서 직접 선언된(즉, 다른 클래스 또는 구조체 내에 중첩되지 않은) 클래스와 구조체는 `public`과 `internal` 중 하나일 수 있습니다. 액세스 한정자가 지정되지 않은 경우 기본값은 `internal`입니다.
 
 구조체 멤버(중첩 클래스 및 구조체 포함)는 `public`, `internal` 또는 `private`으로 선언할 수 있습니다. 클래스 멤버(중첩 클래스 포함)는 `public`, `protected internal`, `protected`, `internal`, `private protected` 또는 `private`으로 선언할 수 있습니다. 클래스 멤버와 구조체 멤버(중첩 클래스 및 구조체 포함)의 액세스 수준은 기본적으로 `private`입니다. private 중첩 형식은 해당 형식을 포함하는 형식 외부에서 액세스할 수 없습니다.
 

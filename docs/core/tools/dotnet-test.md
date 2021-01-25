@@ -2,12 +2,12 @@
 title: dotnet test 명령
 description: dotnet test 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다.
 ms.date: 04/29/2020
-ms.openlocfilehash: 4834da766bd052f44127a72635b65866eb7e3352
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 2671cbe6f610cfa8aa98e63e67f3240a1650cd6b
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189156"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757878"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -250,7 +250,7 @@ dotnet test -h|--help
 | 테스트 프레임워크 | 지원되는 속성                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
 | MSTest         | <ul><li>FullyQualifiedName</li><li>이름</li><li>ClassName</li><li>우선 순위</li><li>TestCategory</li></ul> |
-| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>특성</li></ul>                                   |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>범주</li></ul>                                 |
 | NUnit          | <ul><li>FullyQualifiedName</li><li>이름</li><li>TestCategory</li><li>우선 순위</li></ul>                                   |
 
 `<operator>`은(는) 속성과 값 사이의 관계를 설명합니다.
