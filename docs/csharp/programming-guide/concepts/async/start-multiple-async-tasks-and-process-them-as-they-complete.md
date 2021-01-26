@@ -3,12 +3,12 @@ title: 완료되면 비동기 작업 처리
 description: 이 예제에서는 C#에서 Task.WhenAny를 사용하여 여러 작업을 시작하고 해당 결과를 시작한 순서가 아닌 완료될 때 처리하는 방법을 보여줍니다.
 ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 860e94a9c3973ce56e7321741a1136f752aa3d18
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 4cdd35af900863895911ea5c2c9772af362951ec
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805241"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615973"
 ---
 # <a name="process-asynchronous-tasks-as-they-complete-c"></a>완료되면 비동기 작업 처리(C#)
 
@@ -128,13 +128,13 @@ List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
 1. 다운로드를 완료한 컬렉션에서 첫 번째 작업을 식별하기 위해 `WhenAny` 호출을 기다립니다.
 
     ```csharp
-    Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);
+    Task<int> finishedTask = await Task.WhenAny(downloadTasks);
     ```
 
 1. 컬렉션에서 해당 작업을 제거합니다.
 
     ```csharp
-    downloadTasks.Remove(firstFinishedTask);
+    downloadTasks.Remove(finishedTask);
     ```
 
 1. `ProcessUrlAsync` 호출에서 반환된 `finishedTask`를 대기합니다. `finishedTask` 변수는 <xref:System.Threading.Tasks.Task%601>입니다. 여기서 `TResult`은 정수입니다. 작업은 이미 완료되었지만, 다음 예제와 같이 다운로드한 웹 사이트의 길이를 검색하도록 기다립니다. 작업에 오류가 발생하는 경우 `await`는 `AggregateException`을 throw하는 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 속성을 읽는 것과 달리 `AggregateException`에 저장된 첫 번째 자식 예외를 throw합니다.
