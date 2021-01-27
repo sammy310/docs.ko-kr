@@ -3,12 +3,12 @@ title: .NET SDK 원격 분석
 description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않도록 설정하는 방법에 대한 분석을 위해 사용량 정보를 수집하는 .NET SDK 원격 분석 기능을 살펴봅니다.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 4f137822c61e1a04eccd28ebd0cd56c04f4a85e2
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 137b703dc9369f09fb535af40edf057e4e02117a
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633871"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757839"
 ---
 # <a name="net-sdk-telemetry"></a>.NET SDK 원격 분석
 
@@ -33,6 +33,9 @@ ms.locfileid: "94633871"
 .NET SDK 원격 분석 기능은 기본적으로 사용하도록 설정되어 있습니다. 원격 분석 기능을 옵트아웃하려면 `DOTNET_CLI_TELEMETRY_OPTOUT` 환경 변수를 `1` 또는 `true`로 설정합니다.
 
 설치에 성공하면 .NET SDK 설치 관리자에서 단일 원격 분석 항목도 보냅니다. 옵트아웃하려면 .NET SDK를 설치하기 전에 `DOTNET_CLI_TELEMETRY_OPTOUT` 환경 변수를 설정합니다.
+
+> [!IMPORTANT]
+> 설치 관리자를 시작한 후 옵트아웃하려면: 설치 관리자를 닫고 환경 변수를 설정한 후 해당 값을 설정한 상태로 설치 관리자를 다시 실행합니다.
 
 ## <a name="disclosure"></a>공개
 
@@ -98,7 +101,7 @@ Read more about .NET CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 | `--language`            | `dotnet new`                                                                                   |
 | `--configuration`       | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`                  |
 | `--framework`           | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest` |
-| `--runtime`             | `dotnet build`, `dotnet publish`                                                              |
+| `--runtime`             | `dotnet build`,  `dotnet publish`                                                              |
 | `--platform`            | `dotnet vstest`                                                                                |
 | `--logger`              | `dotnet vstest`                                                                                |
 | `--sdk-package-version` | `dotnet migrate`                                                                               |

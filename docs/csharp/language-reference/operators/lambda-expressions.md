@@ -9,16 +9,16 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 51bf44af5ec3478f2b2557b047df270c0c22990d
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 2ae63396c0b1bb0bf1fe5c33b1103f69f6dcf664
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556844"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615869"
 ---
 # <a name="lambda-expressions-c-reference"></a>람다 식(C# 참조)
 
-*람다 식* 은 다음 두 형식의 식입니다.
+‘람다 식’을 사용하여 익명 함수를 만듭니다. [람다 선언 연산자`=>`](lambda-operator.md)를 사용하여 본문에서 람다의 매개 변수 목록을 구분합니다. 람다 식은 다음과 같은 두 가지 형식 중 하나일 수 있습니다.
 
 - 식이 본문으로 포함된 [식 람다](#expression-lambdas):
 
@@ -32,7 +32,7 @@ ms.locfileid: "94556844"
   (input-parameters) => { <sequence-of-statements> }
   ```
 
-[람다 선언 연산자`=>`](lambda-operator.md)를 사용하여 본문에서 람다의 매개 변수 목록을 구분합니다. 람다 식을 만들려면 람다 연산자 왼쪽에 입력 매개 변수를 지정하고(있는 경우) 다른 쪽에 식이나 문 블록을 지정합니다.
+람다 식을 만들려면 람다 연산자 왼쪽에 입력 매개 변수를 지정하고(있는 경우) 다른 쪽에 식이나 문 블록을 지정합니다.
 
 람다 식은 [대리자](../builtin-types/reference-types.md#the-delegate-type) 형식으로 변환할 수 있습니다. 람다 식을 변환할 수 있는 대리자 형식은 해당 매개 변수 및 반환 값의 형식에 따라 정의됩니다. 람다 식에서 값을 반환하지 않는 경우 `Action` 대리자 형식 중 하나로 변환할 수 있습니다. 값을 반환하는 경우 `Func` 대리자 형식으로 변환할 수 있습니다. 예를 들어 매개 변수는 두 개지만 값을 반환하지 않는 람다 식은 <xref:System.Action%602> 대리자로 변환할 수 있습니다. 매개 변수가 하나이고 값을 반환하는 람다 식은 <xref:System.Func%602> 대리자로 변환할 수 있습니다. 다음 예제에서는 `x`라고 이름이 지정되고 `x` 제곱 값을 반환하는 매개 변수를 지정하는 람다 식 `x => x * x`는 대리자 형식의 변수에 할당됩니다.
 

@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: WinForms 메서드는 이제 ArgumentException을 throw함'
-description: Windows Forms 메서드가 잘못된 인수에 대해 ArgumentException을 throw하는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 일부 Windows Forms 메서드가 잘못된 인수에 대해 ArgumentException을 throw하는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
 ms.date: 07/18/2020
-ms.openlocfilehash: 46fe3f3b1208a5cd676e1b7546507bed36a850f2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 892f4d16b80f3e42187480a7fcfb24e81868d07c
+ms.sourcegitcommit: f8cd3ef517ee177c99feed944824c27d208cc0d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760068"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98570218"
 ---
 # <a name="winforms-methods-now-throw-argumentexception"></a>WinForms 메서드는 이제 ArgumentException을 throw함
 

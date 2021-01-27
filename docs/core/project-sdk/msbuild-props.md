@@ -4,12 +4,12 @@ description: .NET SDK에서 이해하는 MSBuild 속성 및 항목에 대한 참
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: e35ccc3540756a4cb7905d5864caf65cded4362b
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 21bbe46cf60540c01344cc8fcb82c62ff0fbbee5
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189984"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692711"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 프로젝트용 MSBuild 참조
 
@@ -86,6 +86,8 @@ ms.locfileid: "98189984"
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
 - [CopyToPublishDirectory](#copytopublishdirectory)
 - [LinkBase](#linkbase)
+- [PreserveCompilationContext](#preservecompilationcontext)
+- [PreserveCompilationReferences](#preservecompilationreferences)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
@@ -153,6 +155,30 @@ MSBuild 항목의 `CopyToPublishDirectory` 메타데이터는 항목이 게시 �
 
 > [!TIP]
 > 또는 `dotnet publish`를 사용하여 클래스 라이브러리를 게시할 수 있습니다. 자세한 내용은 [dotnet publish](../tools/dotnet-publish.md)를 참조하세요.
+
+### <a name="preservecompilationcontext"></a>PreserveCompilationContext
+
+`PreserveCompilationContext` 속성을 사용하면 빌드되거나 게시된 애플리케이션이 빌드 타임에 사용된 것과 같은 설정을 사용하여 런타임에 더 많은 코드를 컴파일할 수 있습니다. 빌드 타임에 참조된 어셈블리는 출력 디렉터리의 *ref* 하위 디렉터리에 복사됩니다. 참조 어셈블리의 이름은 컴파일러에 전달된 옵션과 함께 애플리케이션의 *.deps.json* 파일에 저장됩니다. <xref:Microsoft.Extensions.DependencyModel.DependencyContext.CompileLibraries?displayProperty=nameWithType> 및 <xref:Microsoft.Extensions.DependencyModel.DependencyContext.CompilationOptions?displayProperty=nameWithType> 속성을 사용하여 이 정보를 검색할 수 있습니다.
+
+이 기능은 주로 Razor 파일의 런타임 컴파일을 지원하기 위해 ASP.NET Core MVC 및 Razor Pages에서 내부적으로 사용됩니다.
+
+```xml
+<PropertyGroup>
+  <PreserveCompilationContext>true</PreserveCompilationContext>
+</PropertyGroup>
+```
+
+### <a name="preservecompilationreferences"></a>PreserveCompilationReferences
+
+`PreserveCompilationReferences` 속성은 [PreserveCompilationContext](#preservecompilationcontext) 속성과 유사합니다. 단, 참조된 어셈블리를 게시 디렉터리에만 복사하고 *.deps.json* 파일에는 복사하지 않습니다.
+
+```xml
+<PropertyGroup>
+  <PreserveCompilationReferences>true</PreserveCompilationReferences>
+</PropertyGroup>
+```
+
+자세한 내용은 [Razor SDK 속성](/aspnet/core/razor-pages/sdk#properties)을 참조하세요.
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
 

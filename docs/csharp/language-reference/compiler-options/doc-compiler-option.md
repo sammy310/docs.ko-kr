@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: b1d7fbbe98aaad16454fdd71c161f2a17a2f4f2e
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: e55b86e5b028fb871f309d80217477cfd164c106
+ms.sourcegitcommit: f0eb7eeedf3ceec726499fa678786d03083214ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91173258"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98629256"
 ---
 # <a name="-doc-c-compiler-options"></a>/doc(C# 컴파일러 옵션)
 
@@ -54,15 +54,19 @@ ms.locfileid: "91173258"
   
  코드의 주석에서 문서를 생성하는 방법은 [문서 주석에 대한 권장 태그](../../programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)를 참조하세요.  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
-  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-2019-development-environment"></a>Visual Studio 2019 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+
 1. 프로젝트 **속성** 페이지를 엽니다.  
+2. **빌드** 탭을 클릭합니다.
+3. **XML 문서 파일** 속성을 수정합니다.
   
-2. **빌드** 탭을 클릭합니다.  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-for-mac-development-environment"></a>Mac용 Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-3. **XML 문서 파일** 속성을 수정합니다.  
-  
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>를 참조하세요.  
+1. 프로젝트의 **옵션** 페이지를 엽니다.
+2. **컴파일러** 탭을 선택합니다.
+3. **XML 문서 생성** 을 선택하고 텍스트 상자에 파일 이름을 입력합니다.
+
+이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

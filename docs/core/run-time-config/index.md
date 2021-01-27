@@ -2,12 +2,12 @@
 title: 런타임 구성 옵션
 description: 런타임 구성 설정을 사용하여 .NET Core 애플리케이션을 구성하는 방법을 알아봅니다.
 ms.date: 01/21/2020
-ms.openlocfilehash: 21673a221d0f21202febf4730b955da66132d5f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5e9f292476cf953c3e63bb8e89268f7cc06b3bfc
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538200"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757852"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core 런타임 구성 설정
 
@@ -37,7 +37,7 @@ ms.locfileid: "90538200"
 
 ## <a name="runtimeconfigjson"></a>runtimeconfig.json
 
-프로젝트가 [빌드](../tools/dotnet-build.md)되면 *[앱 이름].runtimeconfig.json* 파일이 출력 디렉터리에 생성됩니다. *runtimeconfig.template.json* 파일이 프로젝트 파일과 동일한 폴더에 있으면 포함된 구성 옵션이 *[앱 이름].runtimeconfig.json* 파일로 병합됩니다. 앱을 직접 빌드하는 경우 *runtimeconfig.template.json* 파일에 구성 옵션을 배치합니다. 앱을 실행만 하는 경우에는 *[앱 이름].runtimeconfig.json* 파일에 직접 삽입합니다.
+프로젝트가 [빌드](../tools/dotnet-build.md)되면 *[앱 이름].runtimeconfig.json* 파일이 출력 디렉터리에 생성됩니다. *runtimeconfig.template.json* 파일이 프로젝트 파일과 같은 폴더에 있으면 포함된 모든 구성 옵션이 *[앱 이름].runtimeconfig.json* 파일에 삽입됩니다. 앱을 직접 빌드하는 경우 *runtimeconfig.template.json* 파일에 구성 옵션을 배치합니다. 앱을 실행만 하는 경우에는 *[앱 이름].runtimeconfig.json* 파일에 직접 삽입합니다.
 
 > [!NOTE]
 > 그러면 *[앱 이름].runtimeconfig.json* 파일이 다음 번 빌드에서 덮어쓰입니다.
@@ -88,7 +88,7 @@ ms.locfileid: "90538200"
 
 ## <a name="msbuild-properties"></a>MSBuild 속성
 
-일부 런타임 구성 옵션은 *.csproj*의 MSBuild 속성 또는 SDK 스타일 .NET Core 프로젝트의 *.vbproj* 파일을 사용하여 설정할 수 있습니다. MSBuild 속성은 *runtimeconfig.template.json* 파일에 설정된 옵션보다 우선적으로 적용됩니다. 이 속성도 빌드 시 *[앱 이름].runtimeconfig.json* 파일에서 설정한 옵션을 덮어씁니다.
+일부 런타임 구성 옵션은 *.csproj* 의 MSBuild 속성 또는 SDK 스타일 .NET Core 프로젝트의 *.vbproj* 파일을 사용하여 설정할 수 있습니다. MSBuild 속성은 *runtimeconfig.template.json* 파일에 설정된 옵션보다 우선적으로 적용됩니다.
 
 런타임 동작을 구성하기 위한 MSBuild 속성이 포함된 SDK 스타일 프로젝트 파일의 예는 다음과 같습니다.
 
