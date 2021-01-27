@@ -6,14 +6,18 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: c36967236c40efbf432d554c3f551aea22cfb148
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2d3da2ca9cd958fc70d3b91362dde71d68dc9d8a
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549681"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898760"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+## <a name="overview"></a>개요
 
 WCF Data Services (이전의 "ADO.NET Data Services")는 [Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)의 의미 체계를 사용 하 여 웹 또는 인트라넷을 통해 데이터를 노출 하 고 사용 하기 위해 Open Data Protocol (OData)를 사용 하는 서비스를 만들 수 있는 .NET Framework의 구성 요소입니다. OData는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. 데이터는 표준 HTTP 동사인 GET, PUT, POST 및 DELETE를 사용하여 액세스되고 변경됩니다. OData는 [엔터티 데이터 모델](../adonet/entity-data-model.md) 의 엔터티-관계 규칙을 사용 하 여 리소스를 연결로 관련 된 엔터티 집합으로 노출 합니다.
 
@@ -102,6 +106,6 @@ OData 피드를 노출 하는 데이터 서비스를 만들고 구성 하는 방
 
 클라이언트 라이브러리를 사용 하 여 .NET Framework 클라이언트 응용 프로그램에서 OData 피드를 사용 하는 방법을 설명 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [REST(Representational State Transfer)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
