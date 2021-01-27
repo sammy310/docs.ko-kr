@@ -1,1472 +1,1471 @@
-- name: C# 설명서
-  href: index.yml
-- name: 시작
-  items:
-    - name: C# 언어 및 .NET 소개
-      displayName: get started
-      href: getting-started/index.md
-    - name: C# 둘러보기
-      items:
-        - name: 소개
-          href: tour-of-csharp/index.md
-        - name: 유형
-          href: tour-of-csharp/types.md
-        - name: 프로그램 구성 요소
-          href: tour-of-csharp/program-building-blocks.md
-        - name: 주 언어 영역
-          href: tour-of-csharp/features.md
-- name: 자습서
-  items:
-    - name: 개요
-      displayName: tutorials
-      href: tutorials/index.md
-    - name: C#을 사용한 프로그래밍 소개
-      items:
-        - name: 첫 번째 단원 선택
-          href: tutorials/intro-to-csharp/index.md
-        - name: Hello World
-          href: tutorials/intro-to-csharp/hello-world.yml
-        - name: C#의 숫자
-          href: tutorials/intro-to-csharp/numbers-in-csharp.yml
-        - name: 분기 및 루프
-          href: tutorials/intro-to-csharp/branches-and-loops.yml
-        - name: 목록 컬렉션
-          href: tutorials/intro-to-csharp/list-collection.yml
-        - name: 로컬 환경에서 작업
-          items:
-            - name: 환경 설정
-              href: tutorials/intro-to-csharp/local-environment.md
-            - name: C#의 숫자
-              href: tutorials/intro-to-csharp/numbers-in-csharp-local.md
-            - name: 분기 및 루프
-              href: tutorials/intro-to-csharp/branches-and-loops-local.md
-            - name: 목록 컬렉션
-              href: tutorials/intro-to-csharp/arrays-and-collections.md
-            - name: 클래스 소개
-              href: tutorials/intro-to-csharp/introduction-to-classes.md
-            - name: 개체 지향 프로그래밍
-              href: tutorials/intro-to-csharp/object-oriented-programming.md
-    - name: 레코드 종류 탐색
-      href: tutorials/exploration/records.md
-    - name: 최상위 문 탐색
-      href: tutorials/exploration/top-level-statements.md
-    - name: 개체 패턴 탐색
-      href: tutorials/exploration/patterns-objects.md
-    - name: 문자열 보간 탐색 - 대화형 자습서
-      href: tutorials/exploration/interpolated-strings.yml
-    - name: 사용자 환경에서 문자열 보간 탐색
-      href: tutorials/exploration/interpolated-strings-local.md
-    - name: 문자열 보간용 고급 시나리오
-      href: tutorials/string-interpolation.md
-    - name: 기본 인터페이스 메서드로 인터페이스를 안전하게 업데이트
-      href: tutorials/default-interface-methods-versions.md
-    - name: 기본 인터페이스 메서드로 믹스인 기능 만들기
-      href: tutorials/mixins-with-default-interface-methods.md
-    - name: 인덱스 및 범위 탐색
-      href: tutorials/ranges-indexes.md
-    - name: nullable 참조 형식 작업
-      href: tutorials/nullable-reference-types.md
-    - name: 앱을 nullable 참조 형식으로 업그레이드
-      href: tutorials/upgrade-to-nullable-references.md
-    - name: 비동기 스트림 생성 및 사용
-      href: tutorials/generate-consume-asynchronous-stream.md
-    - name: 패턴 일치를 통한 데이터 기반 알고리즘 빌드
-      href: tutorials/pattern-matching.md
-    - name: 콘솔 애플리케이션
-      href: tutorials/console-teleprompter.md
-    - name: REST 클라이언트
-      href: tutorials/console-webapiclient.md
-    - name: C# 및 .NET의 상속
-      href: tutorials/inheritance.md
-    - name: LINQ 작업
-      href: tutorials/working-with-linq.md
-    - name: 특성 사용
-      href: tutorials/attributes.md
-- name: C#의 새로운 기능
-  items:
-    - name: C# 9.0
-      displayName: what's new
-      href: whats-new/csharp-9.md
-    - name: C# 8.0
-      href: whats-new/csharp-8.md
-    - name: C# 7.0~7.3
-      href: whats-new/csharp-7.md
-    - name: 컴파일러의 호환성이 손상되는 변경
-      href: whats-new/breaking-changes.md
-    - name: C# 버전 기록
-      href: whats-new/csharp-version-history.md
-    - name: 언어와 프레임워크 간 관계
-      href: whats-new/relationships-between-language-and-library.md
-    - name: 버전 및 업데이트 고려 사항
-      href: whats-new/version-update-considerations.md
-- name: C# 개념
-  items:
-    - name: C# 형식 시스템
-      href: programming-guide/types/index.md
-    - name: nullable 참조 형식
-      href: nullable-references.md
-    - name: nullable 참조 형식을 사용하기 위한 전략 선택
-      href: nullable-migration-strategies.md
-    - name: 네임스페이스
-      href: programming-guide/namespaces/index.md
-    - name: 기본 형식
-      href: basic-types.md
-    - name: 클래스
-      href: programming-guide/classes-and-structs/classes.md
-    - name: 튜플 및 기타 형식 분해
-      href: deconstruct.md
-    - name: 인터페이스
-      href: programming-guide/interfaces/index.md
-    - name: 메서드
-      href: methods.md
-    - name: 속성
-      href: properties.md
-    - name: 인덱서
-      href: indexers.md
-    - name: 버림
-      href: discards.md
-    - name: 제네릭
-      href: programming-guide/generics/index.md
-    - name: 반복기
-      href: iterators.md
-    - name: 대리자 및 이벤트
-      items:
-        - name: 대리자 소개
-          href: delegates-overview.md
-        - name: System.Delegate 및 대리자 키워드
-          href: delegate-class.md
-        - name: 강력한 형식의 대리자
-          href: delegates-strongly-typed.md
-        - name: 대리자에 대한 일반적인 패턴
-          href: delegates-patterns.md
-        - name: 이벤트 소개
-          href: events-overview.md
-        - name: 표준 .NET 이벤트 패턴
-          href: event-pattern.md
-        - name: 업데이트된 .NET 이벤트 패턴
-          href: modern-events.md
-        - name: 대리자 및 이벤트를 구별
-          href: distinguish-delegates-events.md
-    - name: LINQ(Language-Integrated Query)
-      items:
-        - name: LINQ 개요
-          href: linq/index.md
-        - name: 쿼리 식 기본 사항
-          href: linq/query-expression-basics.md
-        - name: C#의 LINQ
-          href: linq/linq-in-csharp.md
-        - name: C#에서 LINQ 쿼리 작성하기
-          href: linq/write-linq-queries.md
-        - name: 개체의 컬렉션 쿼리
-          href: linq/query-a-collection-of-objects.md
-        - name: 메서드에서 쿼리 반환
-          href: linq/return-a-query-from-a-method.md
-        - name: 쿼리 결과를 메모리에 저장
-          href: linq/store-the-results-of-a-query-in-memory.md
-        - name: 쿼리 결과 그룹화
-          href: linq/group-query-results.md
-        - name: 중첩 그룹 만들기
-          href: linq/create-a-nested-group.md
-        - name: 그룹화 작업에서 하위 쿼리 수행
-          href: linq/perform-a-subquery-on-a-grouping-operation.md
-        - name: 연속 키를 기준으로 결과 그룹화
-          href: linq/group-results-by-contiguous-keys.md
-        - name: 런타임에 동적으로 조건자 필터 지정
-          href: linq/dynamically-specify-predicate-filters-at-runtime.md
-        - name: 내부 조인 수행
-          href: linq/perform-inner-joins.md
-        - name: 그룹화 조인 수행
-          href: linq/perform-grouped-joins.md
-        - name: 왼쪽 우선 외부 조인 수행
-          href: linq/perform-left-outer-joins.md
-        - name: join 절 결과를 순서대로 정렬
-          href: linq/order-the-results-of-a-join-clause.md
-        - name: 복합 키를 사용하여 조인
-          href: linq/join-by-using-composite-keys.md
-        - name: 사용자 지정 조인 작업 수행
-          href: linq/perform-custom-join-operations.md
-        - name: 쿼리 식의 Null 값 처리
-          href: linq/handle-null-values-in-query-expressions.md
-        - name: 쿼리 식의 예외 처리
-          href: linq/handle-exceptions-in-query-expressions.md
-    - name: 비동기 프로그래밍
-      href: async.md
-    - name: 패턴 일치
-      href: pattern-matching.md
-    - name: 안전하고 효율적인 코드 작성
-      href: write-safe-efficient-code.md
-    - name: 식 트리
-      items:
-        - name: 식 트리 소개
-          href: expression-trees.md
-        - name: 식 트리 설명
-          href: expression-trees-explained.md
-        - name: 식 트리를 지원하는 프레임워크 형식
-          href: expression-classes.md
-        - name: 식 실행
-          href: expression-trees-execution.md
-        - name: 식 해석
-          href: expression-trees-interpreting.md
-        - name: 식 빌드
-          href: expression-trees-building.md
-        - name: 식 변환
-          href: expression-trees-translating.md
-        - name: 요약
-          href: expression-trees-summary.md
-    - name: 기본 상호 운용성
-      href: programming-guide/interop/index.md
-    - name: 코드 문서화
-      href: codedoc.md
-    - name: 버전 관리
-      href: versioning.md
-- name: C# 방법 문서
-  items:
-    - name: 문서 인덱스
-      displayName: how to's
-      href: how-to/index.md
-    - name: 문자열을 부분 문자열로 분할
-      href: how-to/parse-strings-using-split.md
-    - name: 문자열 연결
-      href: how-to/concatenate-multiple-strings.md
-    - name: 검색 문자열
-      href: how-to/search-strings.md
-    - name: 문자열 내용 수정
-      href: how-to/modify-string-contents.md
-    - name: 문자열 비교
-      href: how-to/compare-strings.md
-    - name: 패턴 일치 및 is/as 연산자를 사용하여 안전하게 캐스팅
-      href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
-- name: .NET Compiler Platform SDK(Roslyn API)
-  items:
-    - name: .NET Compiler Platform SDK(Roslyn API) 개요
-      href: roslyn-sdk/index.md
-    - name: 컴파일러 API 모델 이해
-      href: roslyn-sdk/compiler-api-model.md
-    - name: 구문 작업
-      href: roslyn-sdk/work-with-syntax.md
-    - name: 의미 체계 작업
-      href: roslyn-sdk/work-with-semantics.md
-    - name: 작업 영역 작업
-      href: roslyn-sdk/work-with-workspace.md
-    - name: 구문 시각화 도우미를 사용하여 코드 살펴보기
-      href: roslyn-sdk/syntax-visualizer.md
-    - name: 빠른 시작
-      items:
-        - name: 구문 분석
-          href: roslyn-sdk/get-started/syntax-analysis.md
-        - name: 의미 체계 분석
-          href: roslyn-sdk/get-started/semantic-analysis.md
-        - name: 구문 변환
-          href: roslyn-sdk/get-started/syntax-transformation.md
-    - name: 자습서
-      items:
-        - name: 첫 번째 분석기 및 코드 수정 빌드
-          href: roslyn-sdk/tutorials/how-to-write-csharp-analyzer-code-fix.md
-- name: C# 프로그래밍 가이드
-  items:
-    - name: 개요
-      displayName: programming guide
-      href: programming-guide/index.md
-    - name: C# 프로그램 내부
-      items:
-        - name: C# 프로그램 내용
-          href: programming-guide/inside-a-program/index.md
-        - name: Hello World -- 프로그램 처음 만들기
-          href: programming-guide/inside-a-program/hello-world-your-first-program.md
-        - name: C# 프로그램의 일반적인 구조체
-          href: programming-guide/inside-a-program/general-structure-of-a-csharp-program.md
-        - name: 식별자 이름
-          href: programming-guide/inside-a-program/identifier-names.md
-        - name: C# 코딩 규칙
-          href: programming-guide/inside-a-program/coding-conventions.md
-    - name: Main()과 명령줄 인수
-      items:
-        - name: 개요
-          displayName: main method
-          href: programming-guide/main-and-command-args/index.md
-        - name: 명령줄 인수
-          href: programming-guide/main-and-command-args/command-line-arguments.md
-        - name: 명령줄 인수를 표시하는 방법
-          href: programming-guide/main-and-command-args/how-to-display-command-line-arguments.md
-        - name: Main() 반환 값
-          href: programming-guide/main-and-command-args/main-return-values.md
-    - name: 프로그래밍 개념
-      items:
-        - name: 개요
-          displayName: programming concepts
-          href: programming-guide/concepts/index.md
-        - name: 비동기 프로그래밍
-          displayName: 'async, await, asynchronous programming, task, cancellation'
-          items:
-            - name: 개요
-              displayName: asynchronous programming
-              href: programming-guide/concepts/async/index.md
-            - name: 작업 비동기 프로그래밍 모델
-              href: programming-guide/concepts/async/task-asynchronous-programming-model.md
-            - name: 비동기 반환 형식
-              href: programming-guide/concepts/async/async-return-types.md
-            - name: 작업 취소
-              items:
-                - name: 작업 목록 취소
-                  href: programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md
-                - name: 일정 기간 이후 작업 취소
-                  href: programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md
-            - name: 완료되면 비동기 작업 처리
-              href: programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md
-            - name: 비동기 파일 액세스
-              href: programming-guide/concepts/async/using-async-for-file-access.md
-        - name: 특성
-          items:
-            - name: 개요
-              displayName: attributes
-              href: programming-guide/concepts/attributes/index.md
-            - name: 사용자 지정 특성 만들기
-              href: programming-guide/concepts/attributes/creating-custom-attributes.md
-            - name: 리플렉션을 사용하여 특성 액세스
-              href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
-            - name: 특성을 사용하여 C/C++ 공용 구조체를 만드는 방법
-              href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
-        - name: 컬렉션
-          href: programming-guide/concepts/collections.md
-        - name: 공변성(Covariance) 및 반공변성(Contravariance)
-          items:
-            - name: 개요
-              displayName: covariance and contravariance
-              href: programming-guide/concepts/covariance-contravariance/index.md
-            - name: 제네릭 인터페이스의 가변성
-              href: programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md
-              items:
-                - name: 가변 제네릭 인터페이스 만들기
-                  href: programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md
-                - name: 제네릭 컬렉션에 인터페이스의 가변성 사용
-                  href: programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md
-            - name: 대리자의 가변성
-              href: programming-guide/concepts/covariance-contravariance/variance-in-delegates.md
-              items:
-                - name: 대리자의 가변성 사용
-                  href: programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md
-                - name: Func 및 Action 제네릭 대리자에 가변성 사용
-                  href: programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md
-        - name: 식 트리
-          items:
-            - name: 개요
-              displayName: expression trees
-              href: programming-guide/concepts/expression-trees/index.md
-            - name: 식 트리 실행 방법
-              href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
-            - name: 식 트리 수정 방법
-              href: programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md
-            - name: 식 트리를 사용하여 동적 쿼리 빌드 방법
-              href: programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md
-            - name: Visual Studio에서 식 트리 디버그
-              href: programming-guide/concepts/expression-trees/debugging-expression-trees-in-visual-studio.md
-            - name: DebugView 구문
-              href: programming-guide/concepts/expression-trees/debugview-syntax.md
-        - name: 반복기
-          href: programming-guide/concepts/iterators.md
-        - name: LINQ(Language-Integrated Query)
-          items:
-            - name: 개요
-              displayName: LINQ overview
-              href: programming-guide/concepts/linq/index.md
-            - name: C#에서 LINQ 시작
-              items:
-                - name: LINQ 쿼리 소개
-                  href: programming-guide/concepts/linq/introduction-to-linq-queries.md
-                - name: LINQ 및 제네릭 형식
-                  href: programming-guide/concepts/linq/linq-and-generic-types.md
-                - name: 기본 LINQ 쿼리 작업
-                  href: programming-guide/concepts/linq/basic-linq-query-operations.md
-                - name: LINQ를 통한 데이터 변환
-                  href: programming-guide/concepts/linq/data-transformations-with-linq.md
-                - name: LINQ 쿼리 작업의 형식 관계
-                  href: programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md
-                - name: LINQ의 쿼리 구문 및 메서드 구문
-                  href: programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md
-                - name: LINQ를 지원하는 C# 기능
-                  href: programming-guide/concepts/linq/features-that-support-linq.md
-                - name: '연습: C#에서 쿼리 작성(LINQ)'
-                  href: programming-guide/concepts/linq/walkthrough-writing-queries-linq.md
-            - name: 표준 쿼리 연산자 개요
-              items:
-                - name: 개요
-                  href: programming-guide/concepts/linq/standard-query-operators-overview.md
-                - name: 표준 쿼리 연산자의 쿼리 식 구문
-                  href: programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md
-                - name: 실행 방식에 따른 표준 쿼리 연산자 분류
-                  href: programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md
-                - name: 데이터 정렬
-                  href: programming-guide/concepts/linq/sorting-data.md
-                - name: 집합 작업
-                  href: programming-guide/concepts/linq/set-operations.md
-                - name: 데이터 필터링
-                  href: programming-guide/concepts/linq/filtering-data.md
-                - name: 수량자 작업
-                  href: programming-guide/concepts/linq/quantifier-operations.md
-                - name: 프로젝션 작업
-                  href: programming-guide/concepts/linq/projection-operations.md
-                - name: 데이터 분할
-                  href: programming-guide/concepts/linq/partitioning-data.md
-                - name: 조인 작업
-                  href: programming-guide/concepts/linq/join-operations.md
-                - name: 데이터 그룹화
-                  href: programming-guide/concepts/linq/grouping-data.md
-                - name: 생성 작업
-                  href: programming-guide/concepts/linq/generation-operations.md
-                - name: 같음 연산
-                  href: programming-guide/concepts/linq/equality-operations.md
-                - name: 요소 작업
-                  href: programming-guide/concepts/linq/element-operations.md
-                - name: 데이터 형식 변환
-                  href: programming-guide/concepts/linq/converting-data-types.md
-                - name: 연결 작업
-                  href: programming-guide/concepts/linq/concatenation-operations.md
-                - name: 집계 작업
-                  href: programming-guide/concepts/linq/aggregation-operations.md
-            - name: LINQ to Objects
-              items:
-                - name: 개요
-                  href: programming-guide/concepts/linq/linq-to-objects.md
-                - name: LINQ 및 문자열
-                  href: programming-guide/concepts/linq/linq-and-strings.md
-                - name: 방법 문서
-                  items:
-                    - name: 문자열에서 단어가 나오는 횟수를 세는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md
-                    - name: 지정된 단어 집합이 포함된 문장을 쿼리하는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
-                    - name: 문자열의 문자를 쿼리하는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md
-                    - name: LINQ 쿼리와 정규식을 결합하는 방법
-                      href: programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md
-                    - name: 두 목록 간의 차집합을 구하는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md
-                    - name: 단어 또는 필드를 기준으로 텍스트 데이터를 정렬하거나 필터링하는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
-                    - name: 구분된 파일의 필드를 다시 정렬하는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-reorder-the-fields-of-a-delimited-file-linq.md
-                    - name: 문자열 컬렉션을 결합하고 비교하는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md
-                    - name: 여러 소스로 개체 컬렉션을 채우는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md
-                    - name: 그룹을 사용하여 파일을 여러 파일로 분할하는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md
-                    - name: 서로 다른 파일의 콘텐츠를 조인하는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md
-                    - name: CSV 텍스트 파일의 열 값을 계산하는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
-                - name: LINQ 및 리플렉션
-                  href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
-                - name: 리플렉션을 사용하여 어셈블리의 메타데이터를 쿼리하는 방법(LINQ)
-                  href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
-                - name: LINQ 및 파일 디렉터리
-                  items:
-                    - name: 개요
-                      href: programming-guide/concepts/linq/linq-and-file-directories.md
-                    - name: 지정된 특성 또는 이름을 사용하여 파일을 쿼리하는 방법
-                      href: programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md
-                    - name: 확장명을 기준으로 파일을 그룹화하는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md
-                    - name: 폴더 집합의 총 바이트 수를 쿼리하는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md
-                    - name: 두 폴더의 내용을 비교하는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md
-                    - name: 디렉터리 트리에서 가장 큰 파일을 쿼리하는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
-                    - name: 디렉터리 트리에서 중복 파일을 쿼리하는 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
-                    - name: 폴더의 파일 내용 쿼리 방법(LINQ)
-                      href: programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md
-                - name: LINQ를 사용하여 ArrayList를 쿼리하는 방법
-                  href: programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md
-                - name: LINQ 쿼리용 사용자 지정 메서드를 추가하는 방법
-                  href: programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md
-            - name: LINQ to ADO.NET(포털 페이지)
-              href: programming-guide/concepts/linq/linq-to-adonet-portal-page.md
-            - name: LINQ 쿼리에 대한 데이터 소스 활성화
-              href: programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying1.md
-            - name: LINQ를 위한 Visual Studio IDE 및 도구 지원
-              href: programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md
-        - name: 반사
-          href: programming-guide/concepts/reflection.md
-        - name: Serialization(C#)
-          items:
-            - name: 개요
-              displayName: serialization
-              href: programming-guide/concepts/serialization/index.md
-            - name: XML 파일에 개체 데이터를 쓰는 방법
-              href: programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md
-            - name: XML 파일에서 개체 데이터를 읽는 방법
-              href: programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md
-            - name: '연습: Visual Studio에서 개체 유지'
-              href: programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md
-    - name: '문, 식, 연산자'
-      items:
-        - name: 개요
-          displayName: 'statements, expressions, operators'
-          href: programming-guide/statements-expressions-operators/index.md
-        - name: 문
-          href: programming-guide/statements-expressions-operators/statements.md
-        - name: 식 본문 멤버
-          href: programming-guide/statements-expressions-operators/expression-bodied-members.md
-        - name: 익명 함수
-          items:
-            - name: 개요
-              href: programming-guide/statements-expressions-operators/anonymous-functions.md
-            - name: 쿼리에 람다 식을 사용하는 방법
-              href: programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md
-        - name: 같음 및 같음 비교
-          items:
-            - name: 같음 비교
-              href: programming-guide/statements-expressions-operators/equality-comparisons.md
-            - name: 형식의 값 일치를 정의하는 방법
-              href: programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md
-            - name: 참조 일치(ID)를 테스트하는 방법
-              href: programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md
-    - name: 유형
-      items:
-        - name: 형식 사용 및 정의
-          href: programming-guide/types/index.md
-        - name: 캐스팅 및 형식 변환(C#)
-          href: programming-guide/types/casting-and-type-conversions.md
-        - name: boxing 및 unboxing
-          href: programming-guide/types/boxing-and-unboxing.md
-        - name: 바이트 배열을 정수로 변환하는 방법
-          href: programming-guide/types/how-to-convert-a-byte-array-to-an-int.md
-        - name: 문자열을 숫자로 변환하는 방법
-          href: programming-guide/types/how-to-convert-a-string-to-a-number.md
-        - name: 16진수 문자열과 숫자 형식 간에 변환하는 방법
-          href: programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md
-        - name: 유형 동적 사용
-          href: programming-guide/types/using-type-dynamic.md
-        - name: '연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)'
-          href: programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md
-    - name: 클래스 및 구조체
-      items:
-        - name: 개요
-          displayName: classes
-          href: programming-guide/classes-and-structs/index.md
-        - name: 클래스
-          href: programming-guide/classes-and-structs/classes.md
-        - name: 개체
-          href: programming-guide/classes-and-structs/objects.md
-        - name: 상속
-          href: programming-guide/classes-and-structs/inheritance.md
-        - name: 다형성
-          items:
-            - name: 개요
-              displayName: polymorphism
-              href: programming-guide/classes-and-structs/polymorphism.md
-            - name: Override 및 New 키워드를 사용하여 버전 관리
-              href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
-            - name: Override 및 New 키워드를 사용해야 하는 경우
-              href: programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md
-            - name: ToString 메서드 재정의 방법
-              href: programming-guide/classes-and-structs/how-to-override-the-tostring-method.md
-        - name: 멤버
-          items:
-            - name: 멤버 개요
-              href: programming-guide/classes-and-structs/members.md
-            - name: 추상 및 봉인 클래스와 클래스 멤버
-              href: programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md
-            - name: 정적 클래스 및 정적 클래스 멤버
-              href: programming-guide/classes-and-structs/static-classes-and-static-class-members.md
-            - name: 액세스 한정자
-              href: programming-guide/classes-and-structs/access-modifiers.md
-            - name: 필드
-              href: programming-guide/classes-and-structs/fields.md
-            - name: 상수
-              href: programming-guide/classes-and-structs/constants.md
-            - name: 추상 속성 정의 방법
-              href: programming-guide/classes-and-structs/how-to-define-abstract-properties.md
-            - name: C#에서 상수 정의 방법
-              href: programming-guide/classes-and-structs/how-to-define-constants.md
-        - name: 속성
-          items:
-            - name: 속성 개요
-              href: programming-guide/classes-and-structs/properties.md
-            - name: 속성 사용
-              href: programming-guide/classes-and-structs/using-properties.md
-            - name: 인터페이스 속성
-              href: programming-guide/classes-and-structs/interface-properties.md
-            - name: '접근자 액세스 가능성 제한[C#]'
-              href: programming-guide/classes-and-structs/restricting-accessor-accessibility.md
-            - name: 읽기/쓰기 속성 선언 및 사용 방법
-              href: programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md
-            - name: 자동으로 구현된 속성
-              href: programming-guide/classes-and-structs/auto-implemented-properties.md
-            - name: 자동으로 구현된 속성을 사용하여 간단한 클래스를 구현하는 방법
-              href: programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
-        - name: 메서드
-          items:
-            - name: 메서드 개요
-              href: programming-guide/classes-and-structs/methods.md
-            - name: 로컬 함수
-              href: programming-guide/classes-and-structs/local-functions.md
-            - name: 참조 반환 및 참조 로컬
-              href: programming-guide/classes-and-structs/ref-returns.md
-            - name: 매개 변수
-              items:
-                - name: 매개 변수 전달
-                  href: programming-guide/classes-and-structs/passing-parameters.md
-                - name: 값 형식 매개 변수 전달
-                  href: programming-guide/classes-and-structs/passing-value-type-parameters.md
-                - name: 참조 형식 매개 변수 전달
-                  href: programming-guide/classes-and-structs/passing-reference-type-parameters.md
-                - name: 메서드에 대한 구조체 전달과 클래스 참조 전달 간의 차이점을 이해하는 방법
-                  href: programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
-            - name: 암시적으로 형식화한 지역 변수
-              href: programming-guide/classes-and-structs/implicitly-typed-local-variables.md
-            - name: 쿼리 식에서 암시적으로 형식화된 지역 변수 및 배열 사용 방법
-              href: programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
-            - name: 확장명 메서드
-              href: programming-guide/classes-and-structs/extension-methods.md
-            - name: 사용자 지정 확장 메서드 구현 및 호출 방법
-              href: programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md
-            - name: 새 열거형 메서드 만드는 방법
-              href: programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md
-            - name: 명명된 인수 및 선택적 인수
-              href: programming-guide/classes-and-structs/named-and-optional-arguments.md
-            - name: Office 프로그래밍에 명명된 인수와 선택적 인수 사용 방법
-              href: programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md
-        - name: 생성자
-          items:
-            - name: 생성자 개요
-              href: programming-guide/classes-and-structs/constructors.md
-            - name: 생성자 사용
-              href: programming-guide/classes-and-structs/using-constructors.md
-            - name: 인스턴스 생성자
-              href: programming-guide/classes-and-structs/instance-constructors.md
-            - name: 전용 생성자
-              href: programming-guide/classes-and-structs/private-constructors.md
-            - name: 정적 생성자
-              href: programming-guide/classes-and-structs/static-constructors.md
-            - name: 복사 생성자 작성 방법
-              href: programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md
-        - name: 종료자
-          href: programming-guide/classes-and-structs/destructors.md
-        - name: 개체 및 컬렉션 이니셜라이저
-          href: programming-guide/classes-and-structs/object-and-collection-initializers.md
-        - name: 개체 이니셜라이저를 사용하여 개체를 초기화하는 방법
-          href: programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md
-        - name: 컬렉션 이니셜라이저를 사용하여 사전을 초기화하는 방법
-          href: programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md
-        - name: 중첩 형식
-          href: programming-guide/classes-and-structs/nested-types.md
-        - name: Partial 클래스 및 메서드
-          href: programming-guide/classes-and-structs/partial-classes-and-methods.md
-        - name: 익명 형식
-          href: programming-guide/classes-and-structs/anonymous-types.md
-        - name: 쿼리에서 요소 속성의 하위 집합을 반환하는 방법
-          href: programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md
-    - name: 인터페이스
-      items:
-        - name: 개요
-          displayName: interfaces
-          href: programming-guide/interfaces/index.md
-        - name: 명시적 인터페이스 구현
-          href: programming-guide/interfaces/explicit-interface-implementation.md
-        - name: 인터페이스 멤버를 명시적으로 구현하는 방법
-          href: programming-guide/interfaces/how-to-explicitly-implement-interface-members.md
-        - name: 두 인터페이스의 멤버를 명시적으로 구현하는 방법
-          href: programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md
-    - name: 대리자
-      items:
-        - name: 개요
-          displayName: delegates
-          href: programming-guide/delegates/index.md
-        - name: 대리자 사용
-          href: programming-guide/delegates/using-delegates.md
-        - name: '대리자 비교: 명명된 메서드 및 무명 메서드'
-          href: programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md
-        - name: 대리자를 결합하는 방법(멀티캐스트 대리자)(C# 프로그래밍 가이드)
-          href: programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md
-        - name: '대리자를 선언, 인스턴스화, 사용하는 방법'
-          href: programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md
-    - name: 배열
-      items:
-        - name: 개요
-          displayName: arrays
-          href: programming-guide/arrays/index.md
-        - name: 개체 형식 배열
-          href: programming-guide/arrays/arrays-as-objects.md
-        - name: 1차원 배열
-          href: programming-guide/arrays/single-dimensional-arrays.md
-        - name: 다차원 배열
-          href: programming-guide/arrays/multidimensional-arrays.md
-        - name: 가변 배열
-          href: programming-guide/arrays/jagged-arrays.md
-        - name: 배열에 foreach 사용
-          href: programming-guide/arrays/using-foreach-with-arrays.md
-        - name: 인수로 배열 전달
-          href: programming-guide/arrays/passing-arrays-as-arguments.md
-        - name: 암시적으로 형식화된 배열
-          href: programming-guide/arrays/implicitly-typed-arrays.md
-    - name: 문자열
-      items:
-        - name: 문자열을 사용한 프로그래밍
-          href: programming-guide/strings/index.md
-        - name: 문자열이 숫자 값을 나타내는지 확인하는 방법
-          href: programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md
-    - name: 인덱서
-      items:
-        - name: 개요
-          displayName: indexers
-          href: programming-guide/indexers/index.md
-        - name: 인덱서 사용
-          href: programming-guide/indexers/using-indexers.md
-        - name: 인터페이스의 인덱서
-          href: programming-guide/indexers/indexers-in-interfaces.md
-        - name: 속성 및 인덱서 비교
-          href: programming-guide/indexers/comparison-between-properties-and-indexers.md
-    - name: 이벤트
-      items:
-        - name: 개요
-          displayName: events
-          href: programming-guide/events/index.md
-        - name: 이벤트를 구독 및 구독 취소하는 방법
-          href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
-        - name: .NET 지침을 따르는 이벤트를 게시하는 방법
-          href: programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md
-        - name: 파생 클래스에서 기본 클래스 이벤트를 발생하는 방법
-          href: programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md
-        - name: 인터페이스 이벤트를 구현하는 방법
-          href: programming-guide/events/how-to-implement-interface-events.md
-        - name: 사용자 지정 이벤트 접근자를 구현하는 방법
-          href: programming-guide/events/how-to-implement-custom-event-accessors.md
-    - name: 제네릭
-      items:
-        - name: 개요
-          displayName: generics
-          href: programming-guide/generics/index.md
-        - name: 제네릭 형식 매개 변수
-          href: programming-guide/generics/generic-type-parameters.md
-        - name: 형식 매개 변수에 대한 제약 조건
-          href: programming-guide/generics/constraints-on-type-parameters.md
-        - name: 제네릭 클래스
-          href: programming-guide/generics/generic-classes.md
-        - name: 제네릭 인터페이스
-          href: programming-guide/generics/generic-interfaces.md
-        - name: 제네릭 메서드
-          href: programming-guide/generics/generic-methods.md
-        - name: 제네릭 및 배열
-          href: programming-guide/generics/generics-and-arrays.md
-        - name: 제네릭 대리자
-          href: programming-guide/generics/generic-delegates.md
-        - name: C++ 템플릿과 C# 제네릭의 차이점
-          href: programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md
-        - name: 런타임의 제네릭
-          href: programming-guide/generics/generics-in-the-run-time.md
-        - name: 제네릭 및 리플렉션
-          href: programming-guide/generics/generics-and-reflection.md
-        - name: 제네릭 및 특성
-          href: programming-guide/generics/generics-and-attributes.md
-    - name: 네임스페이스
-      items:
-        - name: 개요
-          displayName: namespaces
-          href: programming-guide/namespaces/index.md
-        - name: Using namespaces
-          href: programming-guide/namespaces/using-namespaces.md
-        - name: My 네임스페이스를 사용하는 방법
-          href: programming-guide/namespaces/how-to-use-the-my-namespace.md
-    - name: 안전하지 않은 코드 및 포인터
-      items:
-        - name: 개요 및 제한 사항
-          displayName: unsafe code pointers
-          href: programming-guide/unsafe-code-pointers/index.md
-        - name: 고정 크기 버퍼
-          href: programming-guide/unsafe-code-pointers/fixed-size-buffers.md
-        - name: 포인터 형식
-          items:
-            - name: 개요
-              displayName: pointer types
-              href: programming-guide/unsafe-code-pointers/pointer-types.md
-            - name: 포인터 변환
-              href: programming-guide/unsafe-code-pointers/pointer-conversions.md
-            - name: 포인터를 사용하여 바이트 배열을 복사하는 방법
-              href: programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md
-    - name: XML 문서 주석
-      items:
-        - name: 개요
-          displayName: xml documentation comments
-          href: programming-guide/xmldoc/index.md
-        - name: 문서 주석에 대한 권장 태그
-          href: programming-guide/xmldoc/recommended-tags-for-documentation-comments.md
-        - name: XML 파일 처리
-          href: programming-guide/xmldoc/processing-the-xml-file.md
-        - name: 문서 태그에 대한 구분 기호
-          href: programming-guide/xmldoc/delimiters-for-documentation-tags.md
-        - name: XML 문서 기능을 사용하는 방법
-          href: programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md
-        - name: 설명서 태그 참조
-          items:
-            - name: <c>
-              href: programming-guide/xmldoc/code-inline.md
-            - name: <code>
-              href: programming-guide/xmldoc/code.md
-            - name: cref 특성
-              href: programming-guide/xmldoc/cref-attribute.md
-            - name: <example>
-              href: programming-guide/xmldoc/example.md
-            - name: <exception>
-              href: programming-guide/xmldoc/exception.md
-            - name: <include>
-              href: programming-guide/xmldoc/include.md
-            - name: <inheritdoc>
-              href: programming-guide/xmldoc/inheritdoc.md
-            - name: <list>
-              href: programming-guide/xmldoc/list.md
-            - name: <para>
-              href: programming-guide/xmldoc/para.md
-            - name: <param>
-              href: programming-guide/xmldoc/param.md
-            - name: <paramref>
-              href: programming-guide/xmldoc/paramref.md
-            - name: <permission>
-              href: programming-guide/xmldoc/permission.md
-            - name: <remarks>
-              href: programming-guide/xmldoc/remarks.md
-            - name: <returns>
-              href: programming-guide/xmldoc/returns.md
-            - name: <see>
-              href: programming-guide/xmldoc/see.md
-            - name: <seealso>
-              href: programming-guide/xmldoc/seealso.md
-            - name: <summary>
-              href: programming-guide/xmldoc/summary.md
-            - name: <typeparam>
-              href: programming-guide/xmldoc/typeparam.md
-            - name: <typeparamref>
-              href: programming-guide/xmldoc/typeparamref.md
-            - name: <value>
-              href: programming-guide/xmldoc/value.md
-    - name: 예외 및 예외 처리
-      items:
-        - name: 개요
-          displayName: exceptions
-          href: programming-guide/exceptions/index.md
-        - name: 예외 사용
-          href: programming-guide/exceptions/using-exceptions.md
-        - name: 예외 처리
-          href: programming-guide/exceptions/exception-handling.md
-        - name: 예외 만들기 및 Throw
-          href: programming-guide/exceptions/creating-and-throwing-exceptions.md
-        - name: 컴파일러 생성 예외
-          href: programming-guide/exceptions/compiler-generated-exceptions.md
-        - name: try-catch를 사용하여 예외를 처리하는 방법
-          href: programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md
-        - name: finally를 사용하여 정리 코드를 실행하는 방법
-          href: programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md
-        - name: CLS 규격이 아닌 예외를 catch하는 방법
-          href: programming-guide/exceptions/how-to-catch-a-non-cls-exception.md
-    - name: 파일 시스템 및 레지스트리
-      items:
-        - name: 개요
-          displayName: file system registry
-          href: programming-guide/file-system/index.md
-        - name: 디렉터리 트리를 반복하는 방법
-          href: programming-guide/file-system/how-to-iterate-through-a-directory-tree.md
-        - name: '파일, 폴더 및 드라이브에 대한 정보를 가져오는 방법'
-          href: programming-guide/file-system/how-to-get-information-about-files-folders-and-drives.md
-        - name: 파일 또는 폴더를 만드는 방법
-          href: programming-guide/file-system/how-to-create-a-file-or-folder.md
-        - name: '파일 및 폴더를 복사, 삭제, 이동하는 방법'
-          href: programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md
-        - name: 파일 작업에 진행률 대화 상자를 제공하는 방법
-          href: programming-guide/file-system/how-to-provide-a-progress-dialog-box-for-file-operations.md
-        - name: 텍스트 파일에 쓰는 방법
-          href: programming-guide/file-system/how-to-write-to-a-text-file.md
-        - name: 텍스트 파일에서 읽는 방법
-          href: programming-guide/file-system/how-to-read-from-a-text-file.md
-        - name: 텍스트 파일을 한 번에 한 줄씩 읽는 방법
-          href: programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md
-        - name: 레지스트리에 키를 만드는 방법
-          href: programming-guide/file-system/how-to-create-a-key-in-the-registry.md
-    - name: 상호 운용성
-      items:
-        - name: .NET 상호 운용성
-          href: programming-guide/interop/index.md
-        - name: 상호 운용성 개요
-          href: programming-guide/interop/interoperability-overview.md
-        - name: C# 기능을 사용하여 Office interop 개체에 액세스하는 방법
-          href: programming-guide/interop/how-to-access-office-onterop-objects.md
-        - name: COM interop 프로그래밍에서 인덱싱된 속성을 사용하는 방법
-          href: programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md
-        - name: 플랫폼 호출을 사용하여 WAV 파일을 재생하는 방법
-          href: programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md
-        - name: '연습: Office 프로그래밍(C# 및 Visual Basic)'
-          href: programming-guide/interop/walkthrough-office-programming.md
-        - name: COM 클래스 예제
-          href: programming-guide/interop/example-com-class.md
-- name: 언어 참조
-  items:
-    - name: 개요
-      displayName: language reference
-      href: language-reference/index.md
-    - name: 언어 버전 구성
-      href: language-reference/configure-language-version.md
-    - name: 유형
-      items:
-        - name: 값 형식
-          items:
-            - name: 개요
-              href: language-reference/builtin-types/value-types.md
-              displayName: 'value types, simple types'
-            - name: 정수 숫자 형식
-              href: language-reference/builtin-types/integral-numeric-types.md
-              displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
-            - name: 부동 소수점 숫자 형식
-              href: language-reference/builtin-types/floating-point-numeric-types.md
-              displayName: 'float, decimal, double, rational, real, literal'
-            - name: 기본 제공 숫자 변환
-              href: language-reference/builtin-types/numeric-conversions.md
-            - name: bool
-              href: language-reference/builtin-types/bool.md
-              displayName: 'Boolean, true, false'
-            - name: char
-              href: language-reference/builtin-types/char.md
-              displayName: 'Unicode, character, UTF-16'
-            - name: 열거형 형식
-              href: language-reference/builtin-types/enum.md
-              displayName: 'enum, bit flags, bit field'
-            - name: 구조체 형식
-              href: language-reference/builtin-types/struct.md
-              displayName: 'struct type, readonly struct, ref struct, readonly ref struct'
-            - name: 튜플 형식
-              href: language-reference/builtin-types/value-tuples.md
-              displayName: 'value tuples, ValueTuple'
-            - name: Nullable 값 형식
-              href: language-reference/builtin-types/nullable-value-types.md
-              displayName: '? token, ? symbol'
-        - name: 참조 형식
-          items:
-            - name: 참조 형식의 기능
-              href: language-reference/keywords/reference-types.md
-            - name: 기본 제공 참조 형식
-              displayName: 'object, delegate, dynamic, string'
-              href: language-reference/builtin-types/reference-types.md
-            - name: class
-              href: language-reference/keywords/class.md
-            - name: interface(인터페이스)
-              href: language-reference/keywords/interface.md
-            - name: nullable 참조 형식
-              href: language-reference/builtin-types/nullable-reference-types.md
-              displayName: '? token, ? symbol'
-        - name: void
-          href: language-reference/builtin-types/void.md
-        - name: var
-          href: language-reference/keywords/var.md
-        - name: 기본 제공 형식
-          href: language-reference/builtin-types/built-in-types.md
-        - name: 관리되지 않는 형식
-          href: language-reference/builtin-types/unmanaged-types.md
-        - name: 기본값
-          href: language-reference/builtin-types/default-values.md
-    - name: 키워드
-      items:
-        - name: 개요
-          displayName: keywords
-          href: language-reference/keywords/index.md
-        - name: 한정자
-          items:
-            - name: 액세스 한정자
-              items:
-                - name: 빠른 참조
-                  href: language-reference/keywords/access-modifiers.md
-                - name: 액세스 가능성 수준
-                  href: language-reference/keywords/accessibility-levels.md
-                - name: 내게 필요한 옵션 도메인
-                  href: language-reference/keywords/accessibility-domain.md
-                - name: 내게 필요한 옵션 수준 사용에 대한 제한
-                  href: language-reference/keywords/restrictions-on-using-accessibility-levels.md
-                - name: internal
-                  href: language-reference/keywords/internal.md
-                - name: private
-                  href: language-reference/keywords/private.md
-                - name: protected
-                  href: language-reference/keywords/protected.md
-                - name: public
-                  href: language-reference/keywords/public.md
-                - name: protected internal
-                  href: language-reference/keywords/protected-internal.md
-                - name: private protected
-                  href: language-reference/keywords/private-protected.md
-            - name: abstract
-              href: language-reference/keywords/abstract.md
-            - name: async
-              href: language-reference/keywords/async.md
-              displayName: await
-            - name: const
-              href: language-reference/keywords/const.md
-            - name: event
-              href: language-reference/keywords/event.md
-            - name: extern
-              href: language-reference/keywords/extern.md
-            - name: in(제네릭 한정자)
-              href: language-reference/keywords/in-generic-modifier.md
-            - name: new(멤버 한정자)
-              href: language-reference/keywords/new-modifier.md
-            - name: out(제네릭 한정자)
-              href: language-reference/keywords/out-generic-modifier.md
-            - name: override
-              href: language-reference/keywords/override.md
-            - name: readonly
-              href: language-reference/keywords/readonly.md
-            - name: sealed
-              href: language-reference/keywords/sealed.md
-            - name: static
-              href: language-reference/keywords/static.md
-            - name: unsafe
-              href: language-reference/keywords/unsafe.md
-            - name: virtual
-              href: language-reference/keywords/virtual.md
-            - name: volatile
-              href: language-reference/keywords/volatile.md
-        - name: 문 키워드
-          items:
-            - name: 명령문 범주
-              href: language-reference/keywords/statement-keywords.md
-            - name: 선택문
-              items:
-                - name: if-else
-                  href: language-reference/keywords/if-else.md
-                - name: switch
-                  href: language-reference/keywords/switch.md
-            - name: 반복 문
-              items:
-                - name: do
-                  href: language-reference/keywords/do.md
-                - name: for
-                  href: language-reference/keywords/for.md
-                - name: 'foreach, in'
-                  href: language-reference/keywords/foreach-in.md
-                - name: while
-                  href: language-reference/keywords/while.md
-            - name: 점프 문
-              items:
-                - name: break
-                  href: language-reference/keywords/break.md
-                - name: continue
-                  href: language-reference/keywords/continue.md
-                - name: goto
-                  href: language-reference/keywords/goto.md
-                - name: return
-                  href: language-reference/keywords/return.md
-            - name: 예외 처리 문
-              items:
-                - name: throw
-                  href: language-reference/keywords/throw.md
-                - name: try-catch
-                  href: language-reference/keywords/try-catch.md
-                - name: try-finally
-                  href: language-reference/keywords/try-finally.md
-                - name: try-catch-finally
-                  href: language-reference/keywords/try-catch-finally.md
-            - name: Checked 및 Unchecked
-              items:
-                - name: 개요
-                  displayName: checked unchecked
-                  href: language-reference/keywords/checked-and-unchecked.md
-                - name: checked
-                  href: language-reference/keywords/checked.md
-                - name: unchecked
-                  href: language-reference/keywords/unchecked.md
-            - name: fixed 문
-              href: language-reference/keywords/fixed-statement.md
-            - name: lock 문
-              href: language-reference/keywords/lock-statement.md
-        - name: 메서드 매개 변수
-          items:
-            - name: 매개 변수 전달
-              href: language-reference/keywords/method-parameters.md
-            - name: params
-              href: language-reference/keywords/params.md
-            - name: in(매개 변수 한정자)
-              href: language-reference/keywords/in-parameter-modifier.md
-            - name: ref
-              href: language-reference/keywords/ref.md
-            - name: out(매개 변수 한정자)
-              href: language-reference/keywords/out-parameter-modifier.md
-        - name: 네임스페이스 키워드
-          items:
-            - name: namespace
-              href: language-reference/keywords/namespace.md
-            - name: using
-              items:
-                - name: using 컨텍스트
-                  href: language-reference/keywords/using.md
-                - name: using 지시문
-                  href: language-reference/keywords/using-directive.md
-                - name: using 정적 지시문
-                  href: language-reference/keywords/using-static.md
-                - name: using 문
-                  href: language-reference/keywords/using-statement.md
-            - name: extern alias
-              href: language-reference/keywords/extern-alias.md
-        - name: 형식 테스트 키워드
-          items:
-            - name: is
-              href: language-reference/keywords/is.md
-        - name: 제네릭 형식 제약 조건 키워드
-          items:
-            - name: new 제약 조건
-              href: language-reference/keywords/new-constraint.md
-            - name: where
-              href: language-reference/keywords/where-generic-type-constraint.md
-        - name: 액세스 키워드
-          items:
-            - name: base
-              href: language-reference/keywords/base.md
-            - name: this
-              href: language-reference/keywords/this.md
-        - name: 리터럴 키워드
-          items:
-            - name: 'null'
-              href: language-reference/keywords/null.md
-            - name: true 및 false
-              href: language-reference/builtin-types/bool.md
-            - name: default
-              href: language-reference/keywords/default.md
-        - name: 상황별 키워드
-          items:
-            - name: 빠른 참조
-              displayName: contextual keywords
-              href: language-reference/keywords/contextual-keywords.md
-            - name: add
-              href: language-reference/keywords/add.md
-            - name: Get
-              href: language-reference/keywords/get.md
-            - name: partial(형식)
-              href: language-reference/keywords/partial-type.md
-            - name: partial(메서드)
-              href: language-reference/keywords/partial-method.md
-            - name: remove
-              href: language-reference/keywords/remove.md
-            - name: set
-              href: language-reference/keywords/set.md
-            - name: when(필터 조건)
-              href: language-reference/keywords/when.md
-            - name: value
-              href: language-reference/keywords/value.md
-            - name: yield
-              href: language-reference/keywords/yield.md
-        - name: 쿼리 키워드
-          items:
-            - name: 빠른 참조
-              displayName: query keywords
-              href: language-reference/keywords/query-keywords.md
-            - name: from 절
-              href: language-reference/keywords/from-clause.md
-            - name: where 절
-              href: language-reference/keywords/where-clause.md
-            - name: select 절
-              href: language-reference/keywords/select-clause.md
-            - name: group 절
-              href: language-reference/keywords/group-clause.md
-            - name: into
-              href: language-reference/keywords/into.md
-            - name: orderby 절
-              href: language-reference/keywords/orderby-clause.md
-            - name: join 절
-              href: language-reference/keywords/join-clause.md
-            - name: let 절
-              href: language-reference/keywords/let-clause.md
-            - name: ascending
-              href: language-reference/keywords/ascending.md
-            - name: descending
-              href: language-reference/keywords/descending.md
-            - name: 'On'
-              href: language-reference/keywords/on.md
-            - name: equals
-              href: language-reference/keywords/equals.md
-            - name: by
-              href: language-reference/keywords/by.md
-            - name: in
-              href: language-reference/keywords/in.md
-    - name: 연산자 및 식
-      items:
-        - name: 개요
-          href: language-reference/operators/index.md
-          displayName: 'operator precedence, operator associativity, expressions'
-        - name: 산술 연산자
-          href: language-reference/operators/arithmetic-operators.md
-          displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
-        - name: 부울 논리 연산자
-          href: language-reference/operators/boolean-logical-operators.md
-          displayName: '!, &&, ||, &, |, ^, &=, |=, ^=, AND, XOR, OR'
-        - name: 비트 및 시프트 연산자
-          href: language-reference/operators/bitwise-and-shift-operators.md
-          displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>=, AND, XOR, OR'
-        - name: 같음 연산자
-          href: language-reference/operators/equality-operators.md
-          displayName: '==, !='
-        - name: 비교 연산자
-          href: language-reference/operators/comparison-operators.md
-          displayName: '>, <, >=, <=, greater, less'
-        - name: 멤버 액세스 연산자 및 식
-          href: language-reference/operators/member-access-operators.md
-          displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
-        - name: 형식 테스트 연산자 및 캐스트 식
-          href: language-reference/operators/type-testing-and-cast.md
-          displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), explicit, conversion'
-        - name: 사용자 정의 전환 연산자
-          href: language-reference/operators/user-defined-conversion-operators.md
-          displayName: 'implicit, explicit'
-        - name: 포인터 관련 연산자
-          href: language-reference/operators/pointer-related-operators.md
-          displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
-        - name: 대입 연산자
-          href: language-reference/operators/assignment-operator.md
-          displayName: '=, ref, compound'
-        - name: 람다 식
-          href: language-reference/operators/lambda-expressions.md
-          displayName: anonymous functions
-        - name: + 및 += 연산자
-          href: language-reference/operators/addition-operator.md
-          displayName: 'string concatenation, delegate combination, event subscription'
-        - name: '- 및 -= 연산자'
-          href: language-reference/operators/subtraction-operator.md
-          displayName: 'delegate removal, event unsubscription'
-        - name: '?: 연산자'
-          href: language-reference/operators/conditional-operator.md
-          displayName: 'conditional, ternary, ref'
-        - name: '! (null-forgiving) 연산자'
-          href: language-reference/operators/null-forgiving.md
-          displayName: 'nullable reference, null-forgiveness, null suppression'
-        - name: '?? 및 ??= 연산자'
-          href: language-reference/operators/null-coalescing-operator.md
-          displayName: 'null-coalescing, assignment'
-        - name: '=> 연산자'
-          href: language-reference/operators/lambda-operator.md
-          displayName: 'lambda, expression body definition'
-        - name: ':: 연산자'
-          href: language-reference/operators/namespace-alias-qualifier.md
-          displayName: 'namespace alias qualifier, global namespace'
-        - name: await 연산자
-          href: language-reference/operators/await.md
-          displayName: async
-        - name: 기본값 식
-          href: language-reference/operators/default.md
-          displayName: 'default value, default operator, default literal, type default'
-        - name: delegate 연산자
-          href: language-reference/operators/delegate-operator.md
-          displayName: anonymous
-        - name: nameof 식
-          href: language-reference/operators/nameof.md
-          displayName: nameof operator
-        - name: new 연산자
-          href: language-reference/operators/new-operator.md
-          displayName: constructor
-        - name: sizeof 연산자
-          href: language-reference/operators/sizeof.md
-        - name: stackalloc 식
-          href: language-reference/operators/stackalloc.md
-          displayName: 'stack allocation, span, stackalloc operator'
-        - name: switch 식
-          href: language-reference/operators/switch-expression.md
-          displayName: 'switch, pattern matching, patterns'
-        - name: true 및 false 연산자
-          href: language-reference/operators/true-false-operators.md
-        - name: with 식
-          href: language-reference/operators/with-expression.md
-          displayName: 'records, copy'
-        - name: 연산자 오버로드
-          href: language-reference/operators/operator-overloading.md
-    - name: 특수 문자
-      items:
-        - name: 개요
-          displayName: special characters
-          href: language-reference/tokens/index.md
-        - name: $ -- 문자열 보간
-          href: language-reference/tokens/interpolated.md
-        - name: '@ -- 약어 식별자'
-          href: language-reference/tokens/verbatim.md
-    - name: 컴파일러에서 읽은 특성
-      items:
-        - name: 전역 특성
-          displayName: 'AssemblyName, AssemblyVersion, AssemblyCulture, AssemblyFlags, AssemblyProduct, AssemblyTrademark, AssemblyInformationalVersion, AssemblyCompany, AssemblyCopyright, AssemblyFileVersion, CLSCompliant, AssemblyTitle, AssemblyDescription, AssemblyConfiguration, AssemblyDefaultAlias'
-          href: language-reference/attributes/global.md
-        - name: 일반
-          displayName: 'Conditional, Obsolete, AttributeUsage'
-          href: language-reference/attributes/general.md
-        - name: 호출자 정보
-          displayName: 'CallerFilePath, CallerLineNumber, CallerMemberName'
-          href: language-reference/attributes/caller-information.md
-        - name: null 허용 정적 분석
-          displayName: 'AllowNull, DisallowNull, MaybeNull, NotNull, MaybeNullWhen, NotNullWhen, NotNullIfNotNull, DoesNotReturn, DoesNotReturnIf'
-          href: language-reference/attributes/nullable-analysis.md
-    - name: 전처리기 지시문
-      items:
-        - name: 개요
-          displayName: preprocessor directives
-          href: language-reference/preprocessor-directives/index.md
-        - name: '#if'
-          href: language-reference/preprocessor-directives/preprocessor-if.md
-        - name: '#else'
-          href: language-reference/preprocessor-directives/preprocessor-else.md
-        - name: '#elif'
-          href: language-reference/preprocessor-directives/preprocessor-elif.md
-        - name: '#endif'
-          href: language-reference/preprocessor-directives/preprocessor-endif.md
-        - name: '#define'
-          href: language-reference/preprocessor-directives/preprocessor-define.md
-        - name: '#undef'
-          href: language-reference/preprocessor-directives/preprocessor-undef.md
-        - name: '#warning'
-          href: language-reference/preprocessor-directives/preprocessor-warning.md
-        - name: '#error'
-          href: language-reference/preprocessor-directives/preprocessor-error.md
-        - name: '#line'
-          href: language-reference/preprocessor-directives/preprocessor-line.md
-        - name: '#nullable'
-          href: language-reference/preprocessor-directives/preprocessor-nullable.md
-        - name: '#region'
-          href: language-reference/preprocessor-directives/preprocessor-region.md
-        - name: '#endregion'
-          href: language-reference/preprocessor-directives/preprocessor-endregion.md
-        - name: '#pragma'
-          href: language-reference/preprocessor-directives/preprocessor-pragma.md
-        - name: '#pragma warning'
-          href: language-reference/preprocessor-directives/preprocessor-pragma-warning.md
-        - name: '#pragma checksum'
-          href: language-reference/preprocessor-directives/preprocessor-pragma-checksum.md
-    - name: 컴파일러 옵션
-      items:
-        - name: 개요
-          displayName: compiler options
-          href: language-reference/compiler-options/index.md
-        - name: csc.exe를 사용한 명령줄 빌드
-          href: language-reference/compiler-options/command-line-building-with-csc-exe.md
-        - name: Visual Studio 명령줄에 필요한 환경 변수를 설정하는 방법
-          href: language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md
-        - name: C# 컴파일러 옵션 범주별 목록
-          href: language-reference/compiler-options/listed-by-category.md
-        - name: C# 컴파일러 옵션 사전순 목록
-          href: language-reference/compiler-options/listed-alphabetically.md
-          items:
-            - name: '@'
-              href: language-reference/compiler-options/response-file-compiler-option.md
-            - name: '-addmodule'
-              href: language-reference/compiler-options/addmodule-compiler-option.md
-            - name: '-appconfig'
-              href: language-reference/compiler-options/appconfig-compiler-option.md
-            - name: '-baseaddress'
-              href: language-reference/compiler-options/baseaddress-compiler-option.md
-            - name: '-bugreport'
-              href: language-reference/compiler-options/bugreport-compiler-option.md
-            - name: '-checked'
-              href: language-reference/compiler-options/checked-compiler-option.md
-            - name: '-codepage'
-              href: language-reference/compiler-options/codepage-compiler-option.md
-            - name: '-debug'
-              href: language-reference/compiler-options/debug-compiler-option.md
-            - name: '-define'
-              href: language-reference/compiler-options/define-compiler-option.md
-            - name: '-delaysign'
-              href: language-reference/compiler-options/delaysign-compiler-option.md
-            - name: '-deterministic'
-              href: language-reference/compiler-options/deterministic-compiler-option.md
-            - name: '-doc'
-              href: language-reference/compiler-options/doc-compiler-option.md
-            - name: '-errorreport'
-              href: language-reference/compiler-options/errorreport-compiler-option.md
-            - name: '-filealign'
-              href: language-reference/compiler-options/filealign-compiler-option.md
-            - name: '-fullpaths'
-              href: language-reference/compiler-options/fullpaths-compiler-option.md
-            - name: '-help, -?'
-              href: language-reference/compiler-options/help-compiler-option.md
-            - name: '-highentropyva'
-              href: language-reference/compiler-options/highentropyva-compiler-option.md
-            - name: '-keycontainer'
-              href: language-reference/compiler-options/keycontainer-compiler-option.md
-            - name: '-keyfile'
-              href: language-reference/compiler-options/keyfile-compiler-option.md
-            - name: '-langversion'
-              href: language-reference/compiler-options/langversion-compiler-option.md
-            - name: '-lib'
-              href: language-reference/compiler-options/lib-compiler-option.md
-            - name: '-link'
-              href: language-reference/compiler-options/link-compiler-option.md
-            - name: '-linkresource'
-              href: language-reference/compiler-options/linkresource-compiler-option.md
-            - name: '-main'
-              href: language-reference/compiler-options/main-compiler-option.md
-            - name: '-moduleassemblyname'
-              href: language-reference/compiler-options/moduleassemblyname-compiler-option.md
-            - name: '-noconfig'
-              href: language-reference/compiler-options/noconfig-compiler-option.md
-            - name: '-nologo'
-              href: language-reference/compiler-options/nologo-compiler-option.md
-            - name: '-nostdlib'
-              href: language-reference/compiler-options/nostdlib-compiler-option.md
-            - name: '-nowarn'
-              href: language-reference/compiler-options/nowarn-compiler-option.md
-            - name: '-nowin32manifest'
-              href: language-reference/compiler-options/nowin32manifest-compiler-option.md
-            - name: '-nullable'
-              href: language-reference/compiler-options/nullable-compiler-option.md
-            - name: '-optimize'
-              href: language-reference/compiler-options/optimize-compiler-option.md
-            - name: '-out'
-              href: language-reference/compiler-options/out-compiler-option.md
-            - name: '-pathmap'
-              href: language-reference/compiler-options/pathmap-compiler-option.md
-            - name: '-pdb'
-              href: language-reference/compiler-options/pdb-compiler-option.md
-            - name: '-platform'
-              href: language-reference/compiler-options/platform-compiler-option.md
-            - name: '-preferreduilang'
-              href: language-reference/compiler-options/preferreduilang-compiler-option.md
-            - name: '-publicsign'
-              href: language-reference/compiler-options/publicsign-compiler-option.md
-            - name: '-recurse'
-              href: language-reference/compiler-options/recurse-compiler-option.md
-            - name: '-reference'
-              href: language-reference/compiler-options/reference-compiler-option.md
-            - name: '-refout'
-              href: language-reference/compiler-options/refout-compiler-option.md
-            - name: '-refonly'
-              href: language-reference/compiler-options/refonly-compiler-option.md
-            - name: '-resource'
-              href: language-reference/compiler-options/resource-compiler-option.md
-            - name: '-subsystemversion'
-              href: language-reference/compiler-options/subsystemversion-compiler-option.md
-            - name: '-target'
-              href: language-reference/compiler-options/target-compiler-option.md
-              items:
-                - name: '-target:appcontainerexe'
-                  href: language-reference/compiler-options/target-appcontainerexe-compiler-option.md
-                - name: '-target:exe'
-                  href: language-reference/compiler-options/target-exe-compiler-option.md
-                - name: '-target:library'
-                  href: language-reference/compiler-options/target-library-compiler-option.md
-                - name: '-target:module'
-                  href: language-reference/compiler-options/target-module-compiler-option.md
-                - name: '-target:winexe'
-                  href: language-reference/compiler-options/target-winexe-compiler-option.md
-                - name: '-target:winmdobj'
-                  href: language-reference/compiler-options/target-winmdobj-compiler-option.md
-            - name: '-unsafe'
-              href: language-reference/compiler-options/unsafe-compiler-option.md
-            - name: '-utf8output'
-              href: language-reference/compiler-options/utf8output-compiler-option.md
-            - name: '-warn'
-              href: language-reference/compiler-options/warn-compiler-option.md
-            - name: '-warnaserror'
-              href: language-reference/compiler-options/warnaserror-compiler-option.md
-            - name: '-win32icon'
-              href: language-reference/compiler-options/win32icon-compiler-option.md
-            - name: '-win32manifest'
-              href: language-reference/compiler-options/win32manifest-compiler-option.md
-            - name: '-win32res'
-              href: language-reference/compiler-options/win32res-compiler-option.md
-    - name: 컴파일러 오류
-      href: language-reference/compiler-messages/index.md
-    - name: C# 6.0 초안 사양
-      href: language-reference/specification/
-    - name: C# 7.0 - 9.0 제안
-      href: language-reference/proposals/
-- name: 연습
-  href: walkthroughs.md
+items:
+  - name: C# 설명서
+    href: index.yml
+  - name: 시작
+    items:
+      - name: C# 언어 및 .NET 소개
+        displayName: get started
+        href: getting-started/index.md
+      - name: C# 둘러보기
+        items:
+          - name: 소개
+            href: tour-of-csharp/index.md
+          - name: 유형
+            href: tour-of-csharp/types.md
+          - name: 프로그램 구성 요소
+            href: tour-of-csharp/program-building-blocks.md
+          - name: 주 언어 영역
+            href: tour-of-csharp/features.md
+  - name: 자습서
+    items:
+      - name: 개요
+        displayName: tutorials
+        href: tutorials/index.md
+      - name: C#을 사용한 프로그래밍 소개
+        items:
+          - name: 첫 번째 단원 선택
+            href: tutorials/intro-to-csharp/index.md
+          - name: Hello World
+            href: tutorials/intro-to-csharp/hello-world.yml
+          - name: C#의 숫자
+            href: tutorials/intro-to-csharp/numbers-in-csharp.yml
+          - name: 분기 및 루프
+            href: tutorials/intro-to-csharp/branches-and-loops.yml
+          - name: 목록 컬렉션
+            href: tutorials/intro-to-csharp/list-collection.yml
+          - name: 로컬 환경에서 작업
+            items:
+              - name: 환경 설정
+                href: tutorials/intro-to-csharp/local-environment.md
+              - name: C#의 숫자
+                href: tutorials/intro-to-csharp/numbers-in-csharp-local.md
+              - name: 분기 및 루프
+                href: tutorials/intro-to-csharp/branches-and-loops-local.md
+              - name: 목록 컬렉션
+                href: tutorials/intro-to-csharp/arrays-and-collections.md
+              - name: 클래스 소개
+                href: tutorials/intro-to-csharp/introduction-to-classes.md
+              - name: 개체 지향 프로그래밍
+                href: tutorials/intro-to-csharp/object-oriented-programming.md
+      - name: 레코드 종류 탐색
+        href: tutorials/exploration/records.md
+      - name: 최상위 문 탐색
+        href: tutorials/exploration/top-level-statements.md
+      - name: 개체 패턴 탐색
+        href: tutorials/exploration/patterns-objects.md
+      - name: 문자열 보간 탐색 - 대화형 자습서
+        href: tutorials/exploration/interpolated-strings.yml
+      - name: 사용자 환경에서 문자열 보간 탐색
+        href: tutorials/exploration/interpolated-strings-local.md
+      - name: 문자열 보간용 고급 시나리오
+        href: tutorials/string-interpolation.md
+      - name: 기본 인터페이스 메서드로 인터페이스를 안전하게 업데이트
+        href: tutorials/default-interface-methods-versions.md
+      - name: 기본 인터페이스 메서드로 믹스인 기능 만들기
+        href: tutorials/mixins-with-default-interface-methods.md
+      - name: 인덱스 및 범위 탐색
+        href: tutorials/ranges-indexes.md
+      - name: nullable 참조 형식 작업
+        href: tutorials/nullable-reference-types.md
+      - name: 앱을 nullable 참조 형식으로 업그레이드
+        href: tutorials/upgrade-to-nullable-references.md
+      - name: 비동기 스트림 생성 및 사용
+        href: tutorials/generate-consume-asynchronous-stream.md
+      - name: 패턴 일치를 통한 데이터 기반 알고리즘 빌드
+        href: tutorials/pattern-matching.md
+      - name: 콘솔 애플리케이션
+        href: tutorials/console-teleprompter.md
+      - name: REST 클라이언트
+        href: tutorials/console-webapiclient.md
+      - name: C# 및 .NET의 상속
+        href: tutorials/inheritance.md
+      - name: LINQ 작업
+        href: tutorials/working-with-linq.md
+      - name: 특성 사용
+        href: tutorials/attributes.md
+  - name: C#의 새로운 기능
+    items:
+      - name: C# 9.0
+        displayName: what's new
+        href: whats-new/csharp-9.md
+      - name: C# 8.0
+        href: whats-new/csharp-8.md
+      - name: C# 7.0~7.3
+        href: whats-new/csharp-7.md
+      - name: 컴파일러의 호환성이 손상되는 변경
+        href: whats-new/breaking-changes.md
+      - name: C# 버전 기록
+        href: whats-new/csharp-version-history.md
+      - name: 언어와 프레임워크 간 관계
+        href: whats-new/relationships-between-language-and-library.md
+      - name: 버전 및 업데이트 고려 사항
+        href: whats-new/version-update-considerations.md
+  - name: C# 개념
+    items:
+      - name: C# 형식 시스템
+        href: programming-guide/types/index.md
+      - name: nullable 참조 형식
+        href: nullable-references.md
+      - name: nullable 참조 형식을 사용하기 위한 전략 선택
+        href: nullable-migration-strategies.md
+      - name: 네임스페이스
+        href: programming-guide/namespaces/index.md
+      - name: 기본 형식
+        href: basic-types.md
+      - name: 클래스
+        href: programming-guide/classes-and-structs/classes.md
+      - name: 튜플 및 기타 형식 분해
+        href: deconstruct.md
+      - name: 인터페이스
+        href: programming-guide/interfaces/index.md
+      - name: 메서드
+        href: methods.md
+      - name: 속성
+        href: properties.md
+      - name: 인덱서
+        href: indexers.md
+      - name: 버림
+        href: discards.md
+      - name: 제네릭
+        href: programming-guide/generics/index.md
+      - name: 반복기
+        href: iterators.md
+      - name: 대리자 및 이벤트
+        items:
+          - name: 대리자 소개
+            href: delegates-overview.md
+          - name: System.Delegate 및 대리자 키워드
+            href: delegate-class.md
+          - name: 강력한 형식의 대리자
+            href: delegates-strongly-typed.md
+          - name: 대리자에 대한 일반적인 패턴
+            href: delegates-patterns.md
+          - name: 이벤트 소개
+            href: events-overview.md
+          - name: 표준 .NET 이벤트 패턴
+            href: event-pattern.md
+          - name: 업데이트된 .NET 이벤트 패턴
+            href: modern-events.md
+          - name: 대리자 및 이벤트를 구별
+            href: distinguish-delegates-events.md
+      - name: LINQ(Language-Integrated Query)
+        items:
+          - name: LINQ 개요
+            href: linq/index.md
+          - name: 쿼리 식 기본 사항
+            href: linq/query-expression-basics.md
+          - name: C#의 LINQ
+            href: linq/linq-in-csharp.md
+          - name: C#에서 LINQ 쿼리 작성하기
+            href: linq/write-linq-queries.md
+          - name: 개체의 컬렉션 쿼리
+            href: linq/query-a-collection-of-objects.md
+          - name: 메서드에서 쿼리 반환
+            href: linq/return-a-query-from-a-method.md
+          - name: 쿼리 결과를 메모리에 저장
+            href: linq/store-the-results-of-a-query-in-memory.md
+          - name: 쿼리 결과 그룹화
+            href: linq/group-query-results.md
+          - name: 중첩 그룹 만들기
+            href: linq/create-a-nested-group.md
+          - name: 그룹화 작업에서 하위 쿼리 수행
+            href: linq/perform-a-subquery-on-a-grouping-operation.md
+          - name: 연속 키를 기준으로 결과 그룹화
+            href: linq/group-results-by-contiguous-keys.md
+          - name: 런타임에 동적으로 조건자 필터 지정
+            href: linq/dynamically-specify-predicate-filters-at-runtime.md
+          - name: 내부 조인 수행
+            href: linq/perform-inner-joins.md
+          - name: 그룹화 조인 수행
+            href: linq/perform-grouped-joins.md
+          - name: 왼쪽 우선 외부 조인 수행
+            href: linq/perform-left-outer-joins.md
+          - name: join 절 결과를 순서대로 정렬
+            href: linq/order-the-results-of-a-join-clause.md
+          - name: 복합 키를 사용하여 조인
+            href: linq/join-by-using-composite-keys.md
+          - name: 사용자 지정 조인 작업 수행
+            href: linq/perform-custom-join-operations.md
+          - name: 쿼리 식의 Null 값 처리
+            href: linq/handle-null-values-in-query-expressions.md
+          - name: 쿼리 식의 예외 처리
+            href: linq/handle-exceptions-in-query-expressions.md
+      - name: 비동기 프로그래밍
+        href: async.md
+      - name: 패턴 일치
+        href: pattern-matching.md
+      - name: 안전하고 효율적인 코드 작성
+        href: write-safe-efficient-code.md
+      - name: 식 트리
+        items:
+          - name: 식 트리 소개
+            href: expression-trees.md
+          - name: 식 트리 설명
+            href: expression-trees-explained.md
+          - name: 식 트리를 지원하는 프레임워크 형식
+            href: expression-classes.md
+          - name: 식 실행
+            href: expression-trees-execution.md
+          - name: 식 해석
+            href: expression-trees-interpreting.md
+          - name: 식 빌드
+            href: expression-trees-building.md
+          - name: 식 변환
+            href: expression-trees-translating.md
+          - name: 요약
+            href: expression-trees-summary.md
+      - name: 기본 상호 운용성
+        href: programming-guide/interop/index.md
+      - name: 코드 문서화
+        href: codedoc.md
+      - name: 버전 관리
+        href: versioning.md
+  - name: C# 방법 문서
+    items:
+      - name: 문서 인덱스
+        displayName: how to's
+        href: how-to/index.md
+      - name: 문자열을 부분 문자열로 분할
+        href: how-to/parse-strings-using-split.md
+      - name: 문자열 연결
+        href: how-to/concatenate-multiple-strings.md
+      - name: 검색 문자열
+        href: how-to/search-strings.md
+      - name: 문자열 내용 수정
+        href: how-to/modify-string-contents.md
+      - name: 문자열 비교
+        href: how-to/compare-strings.md
+      - name: 패턴 일치 및 is/as 연산자를 사용하여 안전하게 캐스팅
+        href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
+  - name: .NET Compiler Platform SDK(Roslyn API)
+    items:
+      - name: .NET Compiler Platform SDK(Roslyn API) 개요
+        href: roslyn-sdk/index.md
+      - name: 컴파일러 API 모델 이해
+        href: roslyn-sdk/compiler-api-model.md
+      - name: 구문 작업
+        href: roslyn-sdk/work-with-syntax.md
+      - name: 의미 체계 작업
+        href: roslyn-sdk/work-with-semantics.md
+      - name: 작업 영역 작업
+        href: roslyn-sdk/work-with-workspace.md
+      - name: 구문 시각화 도우미를 사용하여 코드 살펴보기
+        href: roslyn-sdk/syntax-visualizer.md
+      - name: 빠른 시작
+        items:
+          - name: 구문 분석
+            href: roslyn-sdk/get-started/syntax-analysis.md
+          - name: 의미 체계 분석
+            href: roslyn-sdk/get-started/semantic-analysis.md
+          - name: 구문 변환
+            href: roslyn-sdk/get-started/syntax-transformation.md
+      - name: 자습서
+        items:
+          - name: 첫 번째 분석기 및 코드 수정 빌드
+            href: roslyn-sdk/tutorials/how-to-write-csharp-analyzer-code-fix.md
+  - name: C# 프로그래밍 가이드
+    items:
+      - name: 개요
+        displayName: programming guide
+        href: programming-guide/index.md
+      - name: C# 프로그램 내부
+        items:
+          - name: C# 프로그램 내용
+            href: programming-guide/inside-a-program/index.md
+          - name: Hello World -- 프로그램 처음 만들기
+            href: programming-guide/inside-a-program/hello-world-your-first-program.md
+          - name: C# 프로그램의 일반적인 구조체
+            href: programming-guide/inside-a-program/general-structure-of-a-csharp-program.md
+          - name: 식별자 이름
+            href: programming-guide/inside-a-program/identifier-names.md
+          - name: C# 코딩 규칙
+            href: programming-guide/inside-a-program/coding-conventions.md
+      - name: Main()과 명령줄 인수
+        items:
+          - name: 개요
+            displayName: main method
+            href: programming-guide/main-and-command-args/index.md
+          - name: 명령줄 인수
+            href: programming-guide/main-and-command-args/command-line-arguments.md
+          - name: 명령줄 인수를 표시하는 방법
+            href: programming-guide/main-and-command-args/how-to-display-command-line-arguments.md
+          - name: Main() 반환 값
+            href: programming-guide/main-and-command-args/main-return-values.md
+      - name: 프로그래밍 개념
+        items:
+          - name: 개요
+            displayName: programming concepts
+            href: programming-guide/concepts/index.md
+          - name: 비동기 프로그래밍
+            displayName: 'async, await, asynchronous programming, task, cancellation'
+            items:
+              - name: 개요
+                displayName: asynchronous programming
+                href: programming-guide/concepts/async/index.md
+              - name: 작업 비동기 프로그래밍 모델
+                href: programming-guide/concepts/async/task-asynchronous-programming-model.md
+              - name: 비동기 반환 형식
+                href: programming-guide/concepts/async/async-return-types.md
+              - name: 작업 취소
+                items:
+                  - name: 작업 목록 취소
+                    href: programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md
+                  - name: 일정 기간 이후 작업 취소
+                    href: programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md
+              - name: 완료되면 비동기 작업 처리
+                href: programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md
+              - name: 비동기 파일 액세스
+                href: programming-guide/concepts/async/using-async-for-file-access.md
+          - name: 특성
+            items:
+              - name: 개요
+                displayName: attributes
+                href: programming-guide/concepts/attributes/index.md
+              - name: 사용자 지정 특성 만들기
+                href: programming-guide/concepts/attributes/creating-custom-attributes.md
+              - name: 리플렉션을 사용하여 특성 액세스
+                href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
+              - name: 특성을 사용하여 C/C++ 공용 구조체를 만드는 방법
+                href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
+          - name: 컬렉션
+            href: programming-guide/concepts/collections.md
+          - name: 공변성(Covariance) 및 반공변성(Contravariance)
+            items:
+              - name: 개요
+                displayName: covariance and contravariance
+                href: programming-guide/concepts/covariance-contravariance/index.md
+              - name: 제네릭 인터페이스의 가변성
+                href: programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md
+                items:
+                  - name: 가변 제네릭 인터페이스 만들기
+                    href: programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md
+                  - name: 제네릭 컬렉션에 인터페이스의 가변성 사용
+                    href: programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md
+              - name: 대리자의 가변성
+                href: programming-guide/concepts/covariance-contravariance/variance-in-delegates.md
+                items:
+                  - name: 대리자의 가변성 사용
+                    href: programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md
+                  - name: Func 및 Action 제네릭 대리자에 가변성 사용
+                    href: programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md
+          - name: 식 트리
+            items:
+              - name: 개요
+                displayName: expression trees
+                href: programming-guide/concepts/expression-trees/index.md
+              - name: 식 트리 실행 방법
+                href: programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md
+              - name: 식 트리 수정 방법
+                href: programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md
+              - name: 식 트리를 사용하여 동적 쿼리 빌드 방법
+                href: programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md
+              - name: Visual Studio에서 식 트리 디버그
+                href: programming-guide/concepts/expression-trees/debugging-expression-trees-in-visual-studio.md
+              - name: DebugView 구문
+                href: programming-guide/concepts/expression-trees/debugview-syntax.md
+          - name: 반복기
+            href: programming-guide/concepts/iterators.md
+          - name: LINQ(Language-Integrated Query)
+            items:
+              - name: 개요
+                displayName: LINQ overview
+                href: programming-guide/concepts/linq/index.md
+              - name: C#에서 LINQ 시작
+                items:
+                  - name: LINQ 쿼리 소개
+                    href: programming-guide/concepts/linq/introduction-to-linq-queries.md
+                  - name: LINQ 및 제네릭 형식
+                    href: programming-guide/concepts/linq/linq-and-generic-types.md
+                  - name: 기본 LINQ 쿼리 작업
+                    href: programming-guide/concepts/linq/basic-linq-query-operations.md
+                  - name: LINQ를 통한 데이터 변환
+                    href: programming-guide/concepts/linq/data-transformations-with-linq.md
+                  - name: LINQ 쿼리 작업의 형식 관계
+                    href: programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md
+                  - name: LINQ의 쿼리 구문 및 메서드 구문
+                    href: programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md
+                  - name: LINQ를 지원하는 C# 기능
+                    href: programming-guide/concepts/linq/features-that-support-linq.md
+                  - name: '연습: C#에서 쿼리 작성(LINQ)'
+                    href: programming-guide/concepts/linq/walkthrough-writing-queries-linq.md
+              - name: 표준 쿼리 연산자 개요
+                items:
+                  - name: 개요
+                    href: programming-guide/concepts/linq/standard-query-operators-overview.md
+                  - name: 표준 쿼리 연산자의 쿼리 식 구문
+                    href: programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md
+                  - name: 실행 방식에 따른 표준 쿼리 연산자 분류
+                    href: programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md
+                  - name: 데이터 정렬
+                    href: programming-guide/concepts/linq/sorting-data.md
+                  - name: 집합 작업
+                    href: programming-guide/concepts/linq/set-operations.md
+                  - name: 데이터 필터링
+                    href: programming-guide/concepts/linq/filtering-data.md
+                  - name: 수량자 작업
+                    href: programming-guide/concepts/linq/quantifier-operations.md
+                  - name: 프로젝션 작업
+                    href: programming-guide/concepts/linq/projection-operations.md
+                  - name: 데이터 분할
+                    href: programming-guide/concepts/linq/partitioning-data.md
+                  - name: 조인 작업
+                    href: programming-guide/concepts/linq/join-operations.md
+                  - name: 데이터 그룹화
+                    href: programming-guide/concepts/linq/grouping-data.md
+                  - name: 생성 작업
+                    href: programming-guide/concepts/linq/generation-operations.md
+                  - name: 같음 연산
+                    href: programming-guide/concepts/linq/equality-operations.md
+                  - name: 요소 작업
+                    href: programming-guide/concepts/linq/element-operations.md
+                  - name: 데이터 형식 변환
+                    href: programming-guide/concepts/linq/converting-data-types.md
+                  - name: 연결 작업
+                    href: programming-guide/concepts/linq/concatenation-operations.md
+                  - name: 집계 작업
+                    href: programming-guide/concepts/linq/aggregation-operations.md
+              - name: LINQ to Objects
+                items:
+                  - name: 개요
+                    href: programming-guide/concepts/linq/linq-to-objects.md
+                  - name: LINQ 및 문자열
+                    href: programming-guide/concepts/linq/linq-and-strings.md
+                  - name: 방법 문서
+                    items:
+                      - name: 문자열에서 단어가 나오는 횟수를 세는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md
+                      - name: 지정된 단어 집합이 포함된 문장을 쿼리하는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
+                      - name: 문자열의 문자를 쿼리하는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md
+                      - name: LINQ 쿼리와 정규식을 결합하는 방법
+                        href: programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md
+                      - name: 두 목록 간의 차집합을 구하는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md
+                      - name: 단어 또는 필드를 기준으로 텍스트 데이터를 정렬하거나 필터링하는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
+                      - name: 구분된 파일의 필드를 다시 정렬하는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-reorder-the-fields-of-a-delimited-file-linq.md
+                      - name: 문자열 컬렉션을 결합하고 비교하는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md
+                      - name: 여러 소스로 개체 컬렉션을 채우는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md
+                      - name: 그룹을 사용하여 파일을 여러 파일로 분할하는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md
+                      - name: 서로 다른 파일의 콘텐츠를 조인하는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md
+                      - name: CSV 텍스트 파일의 열 값을 계산하는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
+                  - name: LINQ 및 리플렉션
+                    href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
+                  - name: 리플렉션을 사용하여 어셈블리의 메타데이터를 쿼리하는 방법(LINQ)
+                    href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
+                  - name: LINQ 및 파일 디렉터리
+                    items:
+                      - name: 개요
+                        href: programming-guide/concepts/linq/linq-and-file-directories.md
+                      - name: 지정된 특성 또는 이름을 사용하여 파일을 쿼리하는 방법
+                        href: programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md
+                      - name: 확장명을 기준으로 파일을 그룹화하는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md
+                      - name: 폴더 집합의 총 바이트 수를 쿼리하는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md
+                      - name: 두 폴더의 내용을 비교하는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md
+                      - name: 디렉터리 트리에서 가장 큰 파일을 쿼리하는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
+                      - name: 디렉터리 트리에서 중복 파일을 쿼리하는 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
+                      - name: 폴더의 파일 내용 쿼리 방법(LINQ)
+                        href: programming-guide/concepts/linq/how-to-query-the-contents-of-files-in-a-folder-lin.md
+                  - name: LINQ를 사용하여 ArrayList를 쿼리하는 방법
+                    href: programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md
+                  - name: LINQ 쿼리용 사용자 지정 메서드를 추가하는 방법
+                    href: programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md
+              - name: LINQ to ADO.NET(포털 페이지)
+                href: programming-guide/concepts/linq/linq-to-adonet-portal-page.md
+              - name: LINQ 쿼리에 대한 데이터 소스 활성화
+                href: programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying1.md
+              - name: LINQ를 위한 Visual Studio IDE 및 도구 지원
+                href: programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md
+          - name: 반사
+            href: programming-guide/concepts/reflection.md
+          - name: Serialization(C#)
+            items:
+              - name: 개요
+                displayName: serialization
+                href: programming-guide/concepts/serialization/index.md
+              - name: XML 파일에 개체 데이터를 쓰는 방법
+                href: programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md
+              - name: XML 파일에서 개체 데이터를 읽는 방법
+                href: programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md
+              - name: '연습: Visual Studio에서 개체 유지'
+                href: programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md
+      - name: '문, 식, 연산자'
+        items:
+          - name: 개요
+            displayName: 'statements, expressions, operators'
+            href: programming-guide/statements-expressions-operators/index.md
+          - name: 문
+            href: programming-guide/statements-expressions-operators/statements.md
+          - name: 식 본문 멤버
+            href: programming-guide/statements-expressions-operators/expression-bodied-members.md
+          - name: 익명 함수
+            items:
+              - name: 개요
+                href: programming-guide/statements-expressions-operators/anonymous-functions.md
+              - name: 쿼리에 람다 식을 사용하는 방법
+                href: programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md
+          - name: 같음 및 같음 비교
+            items:
+              - name: 같음 비교
+                href: programming-guide/statements-expressions-operators/equality-comparisons.md
+              - name: 형식의 값 일치를 정의하는 방법
+                href: programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md
+              - name: 참조 일치(ID)를 테스트하는 방법
+                href: programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md
+      - name: 유형
+        items:
+          - name: 형식 사용 및 정의
+            href: programming-guide/types/index.md
+          - name: 캐스팅 및 형식 변환(C#)
+            href: programming-guide/types/casting-and-type-conversions.md
+          - name: boxing 및 unboxing
+            href: programming-guide/types/boxing-and-unboxing.md
+          - name: 바이트 배열을 정수로 변환하는 방법
+            href: programming-guide/types/how-to-convert-a-byte-array-to-an-int.md
+          - name: 문자열을 숫자로 변환하는 방법
+            href: programming-guide/types/how-to-convert-a-string-to-a-number.md
+          - name: 16진수 문자열과 숫자 형식 간에 변환하는 방법
+            href: programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md
+          - name: 유형 동적 사용
+            href: programming-guide/types/using-type-dynamic.md
+          - name: '연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)'
+            href: programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md
+      - name: 클래스 및 구조체
+        items:
+          - name: 개요
+            displayName: classes
+            href: programming-guide/classes-and-structs/index.md
+          - name: 클래스
+            href: programming-guide/classes-and-structs/classes.md
+          - name: 개체
+            href: programming-guide/classes-and-structs/objects.md
+          - name: 상속
+            href: programming-guide/classes-and-structs/inheritance.md
+          - name: 다형성
+            items:
+              - name: 개요
+                displayName: polymorphism
+                href: programming-guide/classes-and-structs/polymorphism.md
+              - name: Override 및 New 키워드를 사용하여 버전 관리
+                href: programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md
+              - name: Override 및 New 키워드를 사용해야 하는 경우
+                href: programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md
+              - name: ToString 메서드 재정의 방법
+                href: programming-guide/classes-and-structs/how-to-override-the-tostring-method.md
+          - name: 멤버
+            items:
+              - name: 멤버 개요
+                href: programming-guide/classes-and-structs/members.md
+              - name: 추상 및 봉인 클래스와 클래스 멤버
+                href: programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md
+              - name: 정적 클래스 및 정적 클래스 멤버
+                href: programming-guide/classes-and-structs/static-classes-and-static-class-members.md
+              - name: 액세스 한정자
+                href: programming-guide/classes-and-structs/access-modifiers.md
+              - name: 필드
+                href: programming-guide/classes-and-structs/fields.md
+              - name: 상수
+                href: programming-guide/classes-and-structs/constants.md
+              - name: 추상 속성 정의 방법
+                href: programming-guide/classes-and-structs/how-to-define-abstract-properties.md
+              - name: C#에서 상수 정의 방법
+                href: programming-guide/classes-and-structs/how-to-define-constants.md
+          - name: 속성
+            items:
+              - name: 속성 개요
+                href: programming-guide/classes-and-structs/properties.md
+              - name: 속성 사용
+                href: programming-guide/classes-and-structs/using-properties.md
+              - name: 인터페이스 속성
+                href: programming-guide/classes-and-structs/interface-properties.md
+              - name: '접근자 액세스 가능성 제한[C#]'
+                href: programming-guide/classes-and-structs/restricting-accessor-accessibility.md
+              - name: 읽기/쓰기 속성 선언 및 사용 방법
+                href: programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md
+              - name: 자동으로 구현된 속성
+                href: programming-guide/classes-and-structs/auto-implemented-properties.md
+              - name: 자동으로 구현된 속성을 사용하여 간단한 클래스를 구현하는 방법
+                href: programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
+          - name: 메서드
+            items:
+              - name: 메서드 개요
+                href: programming-guide/classes-and-structs/methods.md
+              - name: 로컬 함수
+                href: programming-guide/classes-and-structs/local-functions.md
+              - name: 참조 반환 및 참조 로컬
+                href: programming-guide/classes-and-structs/ref-returns.md
+              - name: 매개 변수
+                items:
+                  - name: 매개 변수 전달
+                    href: programming-guide/classes-and-structs/passing-parameters.md
+                  - name: 값 형식 매개 변수 전달
+                    href: programming-guide/classes-and-structs/passing-value-type-parameters.md
+                  - name: 참조 형식 매개 변수 전달
+                    href: programming-guide/classes-and-structs/passing-reference-type-parameters.md
+                  - name: 메서드에 대한 구조체 전달과 클래스 참조 전달 간의 차이점을 이해하는 방법
+                    href: programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
+              - name: 암시적으로 형식화한 지역 변수
+                href: programming-guide/classes-and-structs/implicitly-typed-local-variables.md
+              - name: 쿼리 식에서 암시적으로 형식화된 지역 변수 및 배열 사용 방법
+                href: programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
+              - name: 확장명 메서드
+                href: programming-guide/classes-and-structs/extension-methods.md
+              - name: 사용자 지정 확장 메서드 구현 및 호출 방법
+                href: programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md
+              - name: 새 열거형 메서드 만드는 방법
+                href: programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md
+              - name: 명명된 인수 및 선택적 인수
+                href: programming-guide/classes-and-structs/named-and-optional-arguments.md
+              - name: Office 프로그래밍에 명명된 인수와 선택적 인수 사용 방법
+                href: programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md
+          - name: 생성자
+            items:
+              - name: 생성자 개요
+                href: programming-guide/classes-and-structs/constructors.md
+              - name: 생성자 사용
+                href: programming-guide/classes-and-structs/using-constructors.md
+              - name: 인스턴스 생성자
+                href: programming-guide/classes-and-structs/instance-constructors.md
+              - name: 전용 생성자
+                href: programming-guide/classes-and-structs/private-constructors.md
+              - name: 정적 생성자
+                href: programming-guide/classes-and-structs/static-constructors.md
+              - name: 복사 생성자 작성 방법
+                href: programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md
+          - name: 종료자
+            href: programming-guide/classes-and-structs/destructors.md
+          - name: 개체 및 컬렉션 이니셜라이저
+            href: programming-guide/classes-and-structs/object-and-collection-initializers.md
+          - name: 개체 이니셜라이저를 사용하여 개체를 초기화하는 방법
+            href: programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md
+          - name: 컬렉션 이니셜라이저를 사용하여 사전을 초기화하는 방법
+            href: programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md
+          - name: 중첩 형식
+            href: programming-guide/classes-and-structs/nested-types.md
+          - name: Partial 클래스 및 메서드
+            href: programming-guide/classes-and-structs/partial-classes-and-methods.md
+          - name: 익명 형식
+            href: programming-guide/classes-and-structs/anonymous-types.md
+          - name: 쿼리에서 요소 속성의 하위 집합을 반환하는 방법
+            href: programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md
+      - name: 인터페이스
+        items:
+          - name: 개요
+            displayName: interfaces
+            href: programming-guide/interfaces/index.md
+          - name: 명시적 인터페이스 구현
+            href: programming-guide/interfaces/explicit-interface-implementation.md
+          - name: 인터페이스 멤버를 명시적으로 구현하는 방법
+            href: programming-guide/interfaces/how-to-explicitly-implement-interface-members.md
+          - name: 두 인터페이스의 멤버를 명시적으로 구현하는 방법
+            href: programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md
+      - name: 대리자
+        items:
+          - name: 개요
+            displayName: delegates
+            href: programming-guide/delegates/index.md
+          - name: 대리자 사용
+            href: programming-guide/delegates/using-delegates.md
+          - name: '대리자 비교: 명명된 메서드 및 무명 메서드'
+            href: programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md
+          - name: 대리자를 결합하는 방법(멀티캐스트 대리자)(C# 프로그래밍 가이드)
+            href: programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md
+          - name: '대리자를 선언, 인스턴스화, 사용하는 방법'
+            href: programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md
+      - name: 배열
+        items:
+          - name: 개요
+            displayName: arrays
+            href: programming-guide/arrays/index.md
+          - name: 1차원 배열
+            href: programming-guide/arrays/single-dimensional-arrays.md
+          - name: 다차원 배열
+            href: programming-guide/arrays/multidimensional-arrays.md
+          - name: 가변 배열
+            href: programming-guide/arrays/jagged-arrays.md
+          - name: 배열에 foreach 사용
+            href: programming-guide/arrays/using-foreach-with-arrays.md
+          - name: 인수로 배열 전달
+            href: programming-guide/arrays/passing-arrays-as-arguments.md
+          - name: 암시적으로 형식화된 배열
+            href: programming-guide/arrays/implicitly-typed-arrays.md
+      - name: 문자열
+        items:
+          - name: 문자열을 사용한 프로그래밍
+            href: programming-guide/strings/index.md
+          - name: 문자열이 숫자 값을 나타내는지 확인하는 방법
+            href: programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md
+      - name: 인덱서
+        items:
+          - name: 개요
+            displayName: indexers
+            href: programming-guide/indexers/index.md
+          - name: 인덱서 사용
+            href: programming-guide/indexers/using-indexers.md
+          - name: 인터페이스의 인덱서
+            href: programming-guide/indexers/indexers-in-interfaces.md
+          - name: 속성 및 인덱서 비교
+            href: programming-guide/indexers/comparison-between-properties-and-indexers.md
+      - name: 이벤트
+        items:
+          - name: 개요
+            displayName: events
+            href: programming-guide/events/index.md
+          - name: 이벤트를 구독 및 구독 취소하는 방법
+            href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
+          - name: .NET 지침을 따르는 이벤트를 게시하는 방법
+            href: programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md
+          - name: 파생 클래스에서 기본 클래스 이벤트를 발생하는 방법
+            href: programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md
+          - name: 인터페이스 이벤트를 구현하는 방법
+            href: programming-guide/events/how-to-implement-interface-events.md
+          - name: 사용자 지정 이벤트 접근자를 구현하는 방법
+            href: programming-guide/events/how-to-implement-custom-event-accessors.md
+      - name: 제네릭
+        items:
+          - name: 개요
+            displayName: generics
+            href: programming-guide/generics/index.md
+          - name: 제네릭 형식 매개 변수
+            href: programming-guide/generics/generic-type-parameters.md
+          - name: 형식 매개 변수에 대한 제약 조건
+            href: programming-guide/generics/constraints-on-type-parameters.md
+          - name: 제네릭 클래스
+            href: programming-guide/generics/generic-classes.md
+          - name: 제네릭 인터페이스
+            href: programming-guide/generics/generic-interfaces.md
+          - name: 제네릭 메서드
+            href: programming-guide/generics/generic-methods.md
+          - name: 제네릭 및 배열
+            href: programming-guide/generics/generics-and-arrays.md
+          - name: 제네릭 대리자
+            href: programming-guide/generics/generic-delegates.md
+          - name: C++ 템플릿과 C# 제네릭의 차이점
+            href: programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md
+          - name: 런타임의 제네릭
+            href: programming-guide/generics/generics-in-the-run-time.md
+          - name: 제네릭 및 리플렉션
+            href: programming-guide/generics/generics-and-reflection.md
+          - name: 제네릭 및 특성
+            href: programming-guide/generics/generics-and-attributes.md
+      - name: 네임스페이스
+        items:
+          - name: 개요
+            displayName: namespaces
+            href: programming-guide/namespaces/index.md
+          - name: Using namespaces
+            href: programming-guide/namespaces/using-namespaces.md
+          - name: My 네임스페이스를 사용하는 방법
+            href: programming-guide/namespaces/how-to-use-the-my-namespace.md
+      - name: 안전하지 않은 코드 및 포인터
+        items:
+          - name: 개요 및 제한 사항
+            displayName: unsafe code pointers
+            href: programming-guide/unsafe-code-pointers/index.md
+          - name: 고정 크기 버퍼
+            href: programming-guide/unsafe-code-pointers/fixed-size-buffers.md
+          - name: 포인터 형식
+            items:
+              - name: 개요
+                displayName: pointer types
+                href: programming-guide/unsafe-code-pointers/pointer-types.md
+              - name: 포인터 변환
+                href: programming-guide/unsafe-code-pointers/pointer-conversions.md
+              - name: 포인터를 사용하여 바이트 배열을 복사하는 방법
+                href: programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md
+      - name: XML 문서 주석
+        items:
+          - name: 개요
+            displayName: xml documentation comments
+            href: programming-guide/xmldoc/index.md
+          - name: 문서 주석에 대한 권장 태그
+            href: programming-guide/xmldoc/recommended-tags-for-documentation-comments.md
+          - name: XML 파일 처리
+            href: programming-guide/xmldoc/processing-the-xml-file.md
+          - name: 문서 태그에 대한 구분 기호
+            href: programming-guide/xmldoc/delimiters-for-documentation-tags.md
+          - name: XML 문서 기능을 사용하는 방법
+            href: programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md
+          - name: 설명서 태그 참조
+            items:
+              - name: <c>
+                href: programming-guide/xmldoc/code-inline.md
+              - name: <code>
+                href: programming-guide/xmldoc/code.md
+              - name: cref 특성
+                href: programming-guide/xmldoc/cref-attribute.md
+              - name: <example>
+                href: programming-guide/xmldoc/example.md
+              - name: <exception>
+                href: programming-guide/xmldoc/exception.md
+              - name: <include>
+                href: programming-guide/xmldoc/include.md
+              - name: <inheritdoc>
+                href: programming-guide/xmldoc/inheritdoc.md
+              - name: <list>
+                href: programming-guide/xmldoc/list.md
+              - name: <para>
+                href: programming-guide/xmldoc/para.md
+              - name: <param>
+                href: programming-guide/xmldoc/param.md
+              - name: <paramref>
+                href: programming-guide/xmldoc/paramref.md
+              - name: <permission>
+                href: programming-guide/xmldoc/permission.md
+              - name: <remarks>
+                href: programming-guide/xmldoc/remarks.md
+              - name: <returns>
+                href: programming-guide/xmldoc/returns.md
+              - name: <see>
+                href: programming-guide/xmldoc/see.md
+              - name: <seealso>
+                href: programming-guide/xmldoc/seealso.md
+              - name: <summary>
+                href: programming-guide/xmldoc/summary.md
+              - name: <typeparam>
+                href: programming-guide/xmldoc/typeparam.md
+              - name: <typeparamref>
+                href: programming-guide/xmldoc/typeparamref.md
+              - name: <value>
+                href: programming-guide/xmldoc/value.md
+      - name: 예외 및 예외 처리
+        items:
+          - name: 개요
+            displayName: exceptions
+            href: programming-guide/exceptions/index.md
+          - name: 예외 사용
+            href: programming-guide/exceptions/using-exceptions.md
+          - name: 예외 처리
+            href: programming-guide/exceptions/exception-handling.md
+          - name: 예외 만들기 및 Throw
+            href: programming-guide/exceptions/creating-and-throwing-exceptions.md
+          - name: 컴파일러 생성 예외
+            href: programming-guide/exceptions/compiler-generated-exceptions.md
+          - name: try-catch를 사용하여 예외를 처리하는 방법
+            href: programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md
+          - name: finally를 사용하여 정리 코드를 실행하는 방법
+            href: programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md
+          - name: CLS 규격이 아닌 예외를 catch하는 방법
+            href: programming-guide/exceptions/how-to-catch-a-non-cls-exception.md
+      - name: 파일 시스템 및 레지스트리
+        items:
+          - name: 개요
+            displayName: file system registry
+            href: programming-guide/file-system/index.md
+          - name: 디렉터리 트리를 반복하는 방법
+            href: programming-guide/file-system/how-to-iterate-through-a-directory-tree.md
+          - name: '파일, 폴더 및 드라이브에 대한 정보를 가져오는 방법'
+            href: programming-guide/file-system/how-to-get-information-about-files-folders-and-drives.md
+          - name: 파일 또는 폴더를 만드는 방법
+            href: programming-guide/file-system/how-to-create-a-file-or-folder.md
+          - name: '파일 및 폴더를 복사, 삭제, 이동하는 방법'
+            href: programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md
+          - name: 파일 작업에 진행률 대화 상자를 제공하는 방법
+            href: programming-guide/file-system/how-to-provide-a-progress-dialog-box-for-file-operations.md
+          - name: 텍스트 파일에 쓰는 방법
+            href: programming-guide/file-system/how-to-write-to-a-text-file.md
+          - name: 텍스트 파일에서 읽는 방법
+            href: programming-guide/file-system/how-to-read-from-a-text-file.md
+          - name: 텍스트 파일을 한 번에 한 줄씩 읽는 방법
+            href: programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md
+          - name: 레지스트리에 키를 만드는 방법
+            href: programming-guide/file-system/how-to-create-a-key-in-the-registry.md
+      - name: 상호 운용성
+        items:
+          - name: .NET 상호 운용성
+            href: programming-guide/interop/index.md
+          - name: 상호 운용성 개요
+            href: programming-guide/interop/interoperability-overview.md
+          - name: C# 기능을 사용하여 Office interop 개체에 액세스하는 방법
+            href: programming-guide/interop/how-to-access-office-onterop-objects.md
+          - name: COM interop 프로그래밍에서 인덱싱된 속성을 사용하는 방법
+            href: programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md
+          - name: 플랫폼 호출을 사용하여 WAV 파일을 재생하는 방법
+            href: programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md
+          - name: '연습: Office 프로그래밍(C# 및 Visual Basic)'
+            href: programming-guide/interop/walkthrough-office-programming.md
+          - name: COM 클래스 예제
+            href: programming-guide/interop/example-com-class.md
+  - name: 언어 참조
+    items:
+      - name: 개요
+        displayName: language reference
+        href: language-reference/index.md
+      - name: 언어 버전 구성
+        href: language-reference/configure-language-version.md
+      - name: 유형
+        items:
+          - name: 값 형식
+            items:
+              - name: 개요
+                href: language-reference/builtin-types/value-types.md
+                displayName: 'value types, simple types'
+              - name: 정수 숫자 형식
+                href: language-reference/builtin-types/integral-numeric-types.md
+                displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
+              - name: 부동 소수점 숫자 형식
+                href: language-reference/builtin-types/floating-point-numeric-types.md
+                displayName: 'float, decimal, double, rational, real, literal'
+              - name: 기본 제공 숫자 변환
+                href: language-reference/builtin-types/numeric-conversions.md
+              - name: bool
+                href: language-reference/builtin-types/bool.md
+                displayName: 'Boolean, true, false'
+              - name: char
+                href: language-reference/builtin-types/char.md
+                displayName: 'Unicode, character, UTF-16'
+              - name: 열거형 형식
+                href: language-reference/builtin-types/enum.md
+                displayName: 'enum, bit flags, bit field'
+              - name: 구조체 형식
+                href: language-reference/builtin-types/struct.md
+                displayName: 'struct type, readonly struct, ref struct, readonly ref struct'
+              - name: 튜플 형식
+                href: language-reference/builtin-types/value-tuples.md
+                displayName: 'value tuples, ValueTuple'
+              - name: Nullable 값 형식
+                href: language-reference/builtin-types/nullable-value-types.md
+                displayName: '? token, ? symbol'
+          - name: 참조 형식
+            items:
+              - name: 참조 형식의 기능
+                href: language-reference/keywords/reference-types.md
+              - name: 기본 제공 참조 형식
+                displayName: 'object, delegate, dynamic, string'
+                href: language-reference/builtin-types/reference-types.md
+              - name: class
+                href: language-reference/keywords/class.md
+              - name: interface(인터페이스)
+                href: language-reference/keywords/interface.md
+              - name: nullable 참조 형식
+                href: language-reference/builtin-types/nullable-reference-types.md
+                displayName: '? token, ? symbol'
+          - name: void
+            href: language-reference/builtin-types/void.md
+          - name: var
+            href: language-reference/keywords/var.md
+          - name: 기본 제공 형식
+            href: language-reference/builtin-types/built-in-types.md
+          - name: 관리되지 않는 형식
+            href: language-reference/builtin-types/unmanaged-types.md
+          - name: 기본값
+            href: language-reference/builtin-types/default-values.md
+      - name: 키워드
+        items:
+          - name: 개요
+            displayName: keywords
+            href: language-reference/keywords/index.md
+          - name: 한정자
+            items:
+              - name: 액세스 한정자
+                items:
+                  - name: 빠른 참조
+                    href: language-reference/keywords/access-modifiers.md
+                  - name: 액세스 가능성 수준
+                    href: language-reference/keywords/accessibility-levels.md
+                  - name: 내게 필요한 옵션 도메인
+                    href: language-reference/keywords/accessibility-domain.md
+                  - name: 내게 필요한 옵션 수준 사용에 대한 제한
+                    href: language-reference/keywords/restrictions-on-using-accessibility-levels.md
+                  - name: internal
+                    href: language-reference/keywords/internal.md
+                  - name: private
+                    href: language-reference/keywords/private.md
+                  - name: protected
+                    href: language-reference/keywords/protected.md
+                  - name: public
+                    href: language-reference/keywords/public.md
+                  - name: protected internal
+                    href: language-reference/keywords/protected-internal.md
+                  - name: private protected
+                    href: language-reference/keywords/private-protected.md
+              - name: abstract
+                href: language-reference/keywords/abstract.md
+              - name: async
+                href: language-reference/keywords/async.md
+                displayName: await
+              - name: const
+                href: language-reference/keywords/const.md
+              - name: event
+                href: language-reference/keywords/event.md
+              - name: extern
+                href: language-reference/keywords/extern.md
+              - name: in(제네릭 한정자)
+                href: language-reference/keywords/in-generic-modifier.md
+              - name: new(멤버 한정자)
+                href: language-reference/keywords/new-modifier.md
+              - name: out(제네릭 한정자)
+                href: language-reference/keywords/out-generic-modifier.md
+              - name: override
+                href: language-reference/keywords/override.md
+              - name: readonly
+                href: language-reference/keywords/readonly.md
+              - name: sealed
+                href: language-reference/keywords/sealed.md
+              - name: static
+                href: language-reference/keywords/static.md
+              - name: unsafe
+                href: language-reference/keywords/unsafe.md
+              - name: virtual
+                href: language-reference/keywords/virtual.md
+              - name: volatile
+                href: language-reference/keywords/volatile.md
+          - name: 문 키워드
+            items:
+              - name: 명령문 범주
+                href: language-reference/keywords/statement-keywords.md
+              - name: 선택문
+                items:
+                  - name: if-else
+                    href: language-reference/keywords/if-else.md
+                  - name: switch
+                    href: language-reference/keywords/switch.md
+              - name: 반복 문
+                items:
+                  - name: do
+                    href: language-reference/keywords/do.md
+                  - name: for
+                    href: language-reference/keywords/for.md
+                  - name: 'foreach, in'
+                    href: language-reference/keywords/foreach-in.md
+                  - name: while
+                    href: language-reference/keywords/while.md
+              - name: 점프 문
+                items:
+                  - name: break
+                    href: language-reference/keywords/break.md
+                  - name: continue
+                    href: language-reference/keywords/continue.md
+                  - name: goto
+                    href: language-reference/keywords/goto.md
+                  - name: return
+                    href: language-reference/keywords/return.md
+              - name: 예외 처리 문
+                items:
+                  - name: throw
+                    href: language-reference/keywords/throw.md
+                  - name: try-catch
+                    href: language-reference/keywords/try-catch.md
+                  - name: try-finally
+                    href: language-reference/keywords/try-finally.md
+                  - name: try-catch-finally
+                    href: language-reference/keywords/try-catch-finally.md
+              - name: Checked 및 Unchecked
+                items:
+                  - name: 개요
+                    displayName: checked unchecked
+                    href: language-reference/keywords/checked-and-unchecked.md
+                  - name: checked
+                    href: language-reference/keywords/checked.md
+                  - name: unchecked
+                    href: language-reference/keywords/unchecked.md
+              - name: fixed 문
+                href: language-reference/keywords/fixed-statement.md
+              - name: lock 문
+                href: language-reference/keywords/lock-statement.md
+          - name: 메서드 매개 변수
+            items:
+              - name: 매개 변수 전달
+                href: language-reference/keywords/method-parameters.md
+              - name: params
+                href: language-reference/keywords/params.md
+              - name: in(매개 변수 한정자)
+                href: language-reference/keywords/in-parameter-modifier.md
+              - name: ref
+                href: language-reference/keywords/ref.md
+              - name: out(매개 변수 한정자)
+                href: language-reference/keywords/out-parameter-modifier.md
+          - name: 네임스페이스 키워드
+            items:
+              - name: namespace
+                href: language-reference/keywords/namespace.md
+              - name: using
+                items:
+                  - name: using 컨텍스트
+                    href: language-reference/keywords/using.md
+                  - name: using 지시문
+                    href: language-reference/keywords/using-directive.md
+                  - name: using 정적 지시문
+                    href: language-reference/keywords/using-static.md
+                  - name: using 문
+                    href: language-reference/keywords/using-statement.md
+              - name: extern alias
+                href: language-reference/keywords/extern-alias.md
+          - name: 형식 테스트 키워드
+            items:
+              - name: is
+                href: language-reference/keywords/is.md
+          - name: 제네릭 형식 제약 조건 키워드
+            items:
+              - name: new 제약 조건
+                href: language-reference/keywords/new-constraint.md
+              - name: where
+                href: language-reference/keywords/where-generic-type-constraint.md
+          - name: 액세스 키워드
+            items:
+              - name: base
+                href: language-reference/keywords/base.md
+              - name: this
+                href: language-reference/keywords/this.md
+          - name: 리터럴 키워드
+            items:
+              - name: 'null'
+                href: language-reference/keywords/null.md
+              - name: true 및 false
+                href: language-reference/builtin-types/bool.md
+              - name: default
+                href: language-reference/keywords/default.md
+          - name: 상황별 키워드
+            items:
+              - name: 빠른 참조
+                displayName: contextual keywords
+                href: language-reference/keywords/contextual-keywords.md
+              - name: add
+                href: language-reference/keywords/add.md
+              - name: Get
+                href: language-reference/keywords/get.md
+              - name: partial(형식)
+                href: language-reference/keywords/partial-type.md
+              - name: partial(메서드)
+                href: language-reference/keywords/partial-method.md
+              - name: remove
+                href: language-reference/keywords/remove.md
+              - name: set
+                href: language-reference/keywords/set.md
+              - name: when(필터 조건)
+                href: language-reference/keywords/when.md
+              - name: value
+                href: language-reference/keywords/value.md
+              - name: yield
+                href: language-reference/keywords/yield.md
+          - name: 쿼리 키워드
+            items:
+              - name: 빠른 참조
+                displayName: query keywords
+                href: language-reference/keywords/query-keywords.md
+              - name: from 절
+                href: language-reference/keywords/from-clause.md
+              - name: where 절
+                href: language-reference/keywords/where-clause.md
+              - name: select 절
+                href: language-reference/keywords/select-clause.md
+              - name: group 절
+                href: language-reference/keywords/group-clause.md
+              - name: into
+                href: language-reference/keywords/into.md
+              - name: orderby 절
+                href: language-reference/keywords/orderby-clause.md
+              - name: join 절
+                href: language-reference/keywords/join-clause.md
+              - name: let 절
+                href: language-reference/keywords/let-clause.md
+              - name: ascending
+                href: language-reference/keywords/ascending.md
+              - name: descending
+                href: language-reference/keywords/descending.md
+              - name: 'On'
+                href: language-reference/keywords/on.md
+              - name: equals
+                href: language-reference/keywords/equals.md
+              - name: by
+                href: language-reference/keywords/by.md
+              - name: in
+                href: language-reference/keywords/in.md
+      - name: 연산자 및 식
+        items:
+          - name: 개요
+            href: language-reference/operators/index.md
+            displayName: 'operator precedence, operator associativity, expressions'
+          - name: 산술 연산자
+            href: language-reference/operators/arithmetic-operators.md
+            displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
+          - name: 부울 논리 연산자
+            href: language-reference/operators/boolean-logical-operators.md
+            displayName: '!, &&, ||, &, |, ^, &=, |=, ^=, AND, XOR, OR'
+          - name: 비트 및 시프트 연산자
+            href: language-reference/operators/bitwise-and-shift-operators.md
+            displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>=, AND, XOR, OR'
+          - name: 같음 연산자
+            href: language-reference/operators/equality-operators.md
+            displayName: '==, !='
+          - name: 비교 연산자
+            href: language-reference/operators/comparison-operators.md
+            displayName: '>, <, >=, <=, greater, less'
+          - name: 멤버 액세스 연산자 및 식
+            href: language-reference/operators/member-access-operators.md
+            displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
+          - name: 형식 테스트 연산자 및 캐스트 식
+            href: language-reference/operators/type-testing-and-cast.md
+            displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), explicit, conversion'
+          - name: 사용자 정의 전환 연산자
+            href: language-reference/operators/user-defined-conversion-operators.md
+            displayName: 'implicit, explicit'
+          - name: 포인터 관련 연산자
+            href: language-reference/operators/pointer-related-operators.md
+            displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
+          - name: 대입 연산자
+            href: language-reference/operators/assignment-operator.md
+            displayName: '=, ref, compound'
+          - name: 람다 식
+            href: language-reference/operators/lambda-expressions.md
+            displayName: anonymous functions
+          - name: + 및 += 연산자
+            href: language-reference/operators/addition-operator.md
+            displayName: 'string concatenation, delegate combination, event subscription'
+          - name: '- 및 -= 연산자'
+            href: language-reference/operators/subtraction-operator.md
+            displayName: 'delegate removal, event unsubscription'
+          - name: '?: 연산자'
+            href: language-reference/operators/conditional-operator.md
+            displayName: 'conditional, ternary, ref'
+          - name: '! (null-forgiving) 연산자'
+            href: language-reference/operators/null-forgiving.md
+            displayName: 'nullable reference, null-forgiveness, null suppression'
+          - name: '?? 및 ??= 연산자'
+            href: language-reference/operators/null-coalescing-operator.md
+            displayName: 'null-coalescing, assignment'
+          - name: '=> 연산자'
+            href: language-reference/operators/lambda-operator.md
+            displayName: 'lambda, expression body definition'
+          - name: ':: 연산자'
+            href: language-reference/operators/namespace-alias-qualifier.md
+            displayName: 'namespace alias qualifier, global namespace'
+          - name: await 연산자
+            href: language-reference/operators/await.md
+            displayName: async
+          - name: 기본값 식
+            href: language-reference/operators/default.md
+            displayName: 'default value, default operator, default literal, type default'
+          - name: delegate 연산자
+            href: language-reference/operators/delegate-operator.md
+            displayName: anonymous
+          - name: nameof 식
+            href: language-reference/operators/nameof.md
+            displayName: nameof operator
+          - name: new 연산자
+            href: language-reference/operators/new-operator.md
+            displayName: constructor
+          - name: sizeof 연산자
+            href: language-reference/operators/sizeof.md
+          - name: stackalloc 식
+            href: language-reference/operators/stackalloc.md
+            displayName: 'stack allocation, span, stackalloc operator'
+          - name: switch 식
+            href: language-reference/operators/switch-expression.md
+            displayName: 'switch, pattern matching, patterns'
+          - name: true 및 false 연산자
+            href: language-reference/operators/true-false-operators.md
+          - name: with 식
+            href: language-reference/operators/with-expression.md
+            displayName: 'records, copy'
+          - name: 연산자 오버로드
+            href: language-reference/operators/operator-overloading.md
+      - name: 특수 문자
+        items:
+          - name: 개요
+            displayName: special characters
+            href: language-reference/tokens/index.md
+          - name: $ -- 문자열 보간
+            href: language-reference/tokens/interpolated.md
+          - name: '@ -- 약어 식별자'
+            href: language-reference/tokens/verbatim.md
+      - name: 컴파일러에서 읽은 특성
+        items:
+          - name: 전역 특성
+            displayName: 'AssemblyName, AssemblyVersion, AssemblyCulture, AssemblyFlags, AssemblyProduct, AssemblyTrademark, AssemblyInformationalVersion, AssemblyCompany, AssemblyCopyright, AssemblyFileVersion, CLSCompliant, AssemblyTitle, AssemblyDescription, AssemblyConfiguration, AssemblyDefaultAlias'
+            href: language-reference/attributes/global.md
+          - name: 일반
+            displayName: 'Conditional, Obsolete, AttributeUsage'
+            href: language-reference/attributes/general.md
+          - name: 호출자 정보
+            displayName: 'CallerFilePath, CallerLineNumber, CallerMemberName'
+            href: language-reference/attributes/caller-information.md
+          - name: null 허용 정적 분석
+            displayName: 'AllowNull, DisallowNull, MaybeNull, NotNull, MaybeNullWhen, NotNullWhen, NotNullIfNotNull, DoesNotReturn, DoesNotReturnIf'
+            href: language-reference/attributes/nullable-analysis.md
+      - name: 전처리기 지시문
+        items:
+          - name: 개요
+            displayName: preprocessor directives
+            href: language-reference/preprocessor-directives/index.md
+          - name: '#if'
+            href: language-reference/preprocessor-directives/preprocessor-if.md
+          - name: '#else'
+            href: language-reference/preprocessor-directives/preprocessor-else.md
+          - name: '#elif'
+            href: language-reference/preprocessor-directives/preprocessor-elif.md
+          - name: '#endif'
+            href: language-reference/preprocessor-directives/preprocessor-endif.md
+          - name: '#define'
+            href: language-reference/preprocessor-directives/preprocessor-define.md
+          - name: '#undef'
+            href: language-reference/preprocessor-directives/preprocessor-undef.md
+          - name: '#warning'
+            href: language-reference/preprocessor-directives/preprocessor-warning.md
+          - name: '#error'
+            href: language-reference/preprocessor-directives/preprocessor-error.md
+          - name: '#line'
+            href: language-reference/preprocessor-directives/preprocessor-line.md
+          - name: '#nullable'
+            href: language-reference/preprocessor-directives/preprocessor-nullable.md
+          - name: '#region'
+            href: language-reference/preprocessor-directives/preprocessor-region.md
+          - name: '#endregion'
+            href: language-reference/preprocessor-directives/preprocessor-endregion.md
+          - name: '#pragma'
+            href: language-reference/preprocessor-directives/preprocessor-pragma.md
+          - name: '#pragma warning'
+            href: language-reference/preprocessor-directives/preprocessor-pragma-warning.md
+          - name: '#pragma checksum'
+            href: language-reference/preprocessor-directives/preprocessor-pragma-checksum.md
+      - name: 컴파일러 옵션
+        items:
+          - name: 개요
+            displayName: compiler options
+            href: language-reference/compiler-options/index.md
+          - name: csc.exe를 사용한 명령줄 빌드
+            href: language-reference/compiler-options/command-line-building-with-csc-exe.md
+          - name: Visual Studio 명령줄에 필요한 환경 변수를 설정하는 방법
+            href: language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md
+          - name: C# 컴파일러 옵션 범주별 목록
+            href: language-reference/compiler-options/listed-by-category.md
+          - name: C# 컴파일러 옵션 사전순 목록
+            href: language-reference/compiler-options/listed-alphabetically.md
+            items:
+              - name: '@'
+                href: language-reference/compiler-options/response-file-compiler-option.md
+              - name: '-addmodule'
+                href: language-reference/compiler-options/addmodule-compiler-option.md
+              - name: '-appconfig'
+                href: language-reference/compiler-options/appconfig-compiler-option.md
+              - name: '-baseaddress'
+                href: language-reference/compiler-options/baseaddress-compiler-option.md
+              - name: '-bugreport'
+                href: language-reference/compiler-options/bugreport-compiler-option.md
+              - name: '-checked'
+                href: language-reference/compiler-options/checked-compiler-option.md
+              - name: '-codepage'
+                href: language-reference/compiler-options/codepage-compiler-option.md
+              - name: '-debug'
+                href: language-reference/compiler-options/debug-compiler-option.md
+              - name: '-define'
+                href: language-reference/compiler-options/define-compiler-option.md
+              - name: '-delaysign'
+                href: language-reference/compiler-options/delaysign-compiler-option.md
+              - name: '-deterministic'
+                href: language-reference/compiler-options/deterministic-compiler-option.md
+              - name: '-doc'
+                href: language-reference/compiler-options/doc-compiler-option.md
+              - name: '-errorreport'
+                href: language-reference/compiler-options/errorreport-compiler-option.md
+              - name: '-filealign'
+                href: language-reference/compiler-options/filealign-compiler-option.md
+              - name: '-fullpaths'
+                href: language-reference/compiler-options/fullpaths-compiler-option.md
+              - name: '-help, -?'
+                href: language-reference/compiler-options/help-compiler-option.md
+              - name: '-highentropyva'
+                href: language-reference/compiler-options/highentropyva-compiler-option.md
+              - name: '-keycontainer'
+                href: language-reference/compiler-options/keycontainer-compiler-option.md
+              - name: '-keyfile'
+                href: language-reference/compiler-options/keyfile-compiler-option.md
+              - name: '-langversion'
+                href: language-reference/compiler-options/langversion-compiler-option.md
+              - name: '-lib'
+                href: language-reference/compiler-options/lib-compiler-option.md
+              - name: '-link'
+                href: language-reference/compiler-options/link-compiler-option.md
+              - name: '-linkresource'
+                href: language-reference/compiler-options/linkresource-compiler-option.md
+              - name: '-main'
+                href: language-reference/compiler-options/main-compiler-option.md
+              - name: '-moduleassemblyname'
+                href: language-reference/compiler-options/moduleassemblyname-compiler-option.md
+              - name: '-noconfig'
+                href: language-reference/compiler-options/noconfig-compiler-option.md
+              - name: '-nologo'
+                href: language-reference/compiler-options/nologo-compiler-option.md
+              - name: '-nostdlib'
+                href: language-reference/compiler-options/nostdlib-compiler-option.md
+              - name: '-nowarn'
+                href: language-reference/compiler-options/nowarn-compiler-option.md
+              - name: '-nowin32manifest'
+                href: language-reference/compiler-options/nowin32manifest-compiler-option.md
+              - name: '-nullable'
+                href: language-reference/compiler-options/nullable-compiler-option.md
+              - name: '-optimize'
+                href: language-reference/compiler-options/optimize-compiler-option.md
+              - name: '-out'
+                href: language-reference/compiler-options/out-compiler-option.md
+              - name: '-pathmap'
+                href: language-reference/compiler-options/pathmap-compiler-option.md
+              - name: '-pdb'
+                href: language-reference/compiler-options/pdb-compiler-option.md
+              - name: '-platform'
+                href: language-reference/compiler-options/platform-compiler-option.md
+              - name: '-preferreduilang'
+                href: language-reference/compiler-options/preferreduilang-compiler-option.md
+              - name: '-publicsign'
+                href: language-reference/compiler-options/publicsign-compiler-option.md
+              - name: '-recurse'
+                href: language-reference/compiler-options/recurse-compiler-option.md
+              - name: '-reference'
+                href: language-reference/compiler-options/reference-compiler-option.md
+              - name: '-refout'
+                href: language-reference/compiler-options/refout-compiler-option.md
+              - name: '-refonly'
+                href: language-reference/compiler-options/refonly-compiler-option.md
+              - name: '-resource'
+                href: language-reference/compiler-options/resource-compiler-option.md
+              - name: '-subsystemversion'
+                href: language-reference/compiler-options/subsystemversion-compiler-option.md
+              - name: '-target'
+                href: language-reference/compiler-options/target-compiler-option.md
+                items:
+                  - name: '-target:appcontainerexe'
+                    href: language-reference/compiler-options/target-appcontainerexe-compiler-option.md
+                  - name: '-target:exe'
+                    href: language-reference/compiler-options/target-exe-compiler-option.md
+                  - name: '-target:library'
+                    href: language-reference/compiler-options/target-library-compiler-option.md
+                  - name: '-target:module'
+                    href: language-reference/compiler-options/target-module-compiler-option.md
+                  - name: '-target:winexe'
+                    href: language-reference/compiler-options/target-winexe-compiler-option.md
+                  - name: '-target:winmdobj'
+                    href: language-reference/compiler-options/target-winmdobj-compiler-option.md
+              - name: '-unsafe'
+                href: language-reference/compiler-options/unsafe-compiler-option.md
+              - name: '-utf8output'
+                href: language-reference/compiler-options/utf8output-compiler-option.md
+              - name: '-warn'
+                href: language-reference/compiler-options/warn-compiler-option.md
+              - name: '-warnaserror'
+                href: language-reference/compiler-options/warnaserror-compiler-option.md
+              - name: '-win32icon'
+                href: language-reference/compiler-options/win32icon-compiler-option.md
+              - name: '-win32manifest'
+                href: language-reference/compiler-options/win32manifest-compiler-option.md
+              - name: '-win32res'
+                href: language-reference/compiler-options/win32res-compiler-option.md
+      - name: 컴파일러 오류
+        href: language-reference/compiler-messages/index.md
+      - name: C# 6.0 초안 사양
+        href: language-reference/specification/
+      - name: C# 7.0 - 9.0 제안
+        href: language-reference/proposals/
+  - name: 연습
+    href: walkthroughs.md
