@@ -1,23 +1,23 @@
 ---
-title: F#을 사용하여 Azure Queue 스토리지 시작
+title: 'F #을 사용 하 여 Azure Queue Storage 시작 #'
 description: Azure 큐는 애플리케이션 구성 요소 간에 안정적인 비동기 메시징을 제공합니다. 클라우드 메시징을 사용하면 애플리케이션 구성 요소를 독립적으로 조정할 수 있습니다.
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: daa5372b7903f10c0d966c5c92e35c8bf9d362d8
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 0ab131647e37985d45073966ffc01b9a7f379e2f
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756223"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899297"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>F #을 사용 하 여 Azure Queue storage 시작\#
+# <a name="get-started-with-azure-queue-storage-using-f"></a>F #을 사용 하 여 Azure Queue Storage 시작\#
 
-Azure Queue Storage는 애플리케이션 구성 요소 간에 클라우드 메시징을 제공합니다. 규모를 고려하여 애플리케이션을 디자인할 때는 애플리케이션 구성 요소를 개별적으로 확장할 수 있도록 각 구성 요소를 분리하는 경우가 많습니다. Queue Storage는 클라우드, 데스크톱, 온-프레미스 서버 또는 모바일 디바이스에서 실행 중인지와 관계 없이 애플리케이션 구성 요소 간에 통신을 위한 비동기 메시징을 제공합니다. Queue Storage는 또한 비동기 작업 관리와 프로세스 워크플로 작성을 지원합니다.
+Azure Queue Storage는 응용 프로그램 구성 요소 간에 클라우드 메시징을 제공 합니다. 규모를 고려하여 애플리케이션을 디자인할 때는 애플리케이션 구성 요소를 개별적으로 확장할 수 있도록 각 구성 요소를 분리하는 경우가 많습니다. Queue Storage는 클라우드, 데스크톱, 온-프레미스 서버 또는 모바일 디바이스에서 실행 중인지와 관계 없이 애플리케이션 구성 요소 간에 통신을 위한 비동기 메시징을 제공합니다. Queue Storage는 또한 비동기 작업 관리와 프로세스 워크플로 작성을 지원합니다.
 
 ### <a name="about-this-tutorial"></a>이 자습서 정보
 
-이 자습서에서는 Azure Queue storage를 사용 하 여 몇 가지 일반적인 작업을 위해 F # 코드를 작성 하는 방법을 보여 줍니다. 큐 만들기 및 삭제, 큐 메시지 추가, 읽기 및 삭제 등의 작업을 다룹니다.
+이 자습서에서는 Azure Queue Storage를 사용 하 여 몇 가지 일반적인 작업을 위해 F # 코드를 작성 하는 방법을 보여 줍니다. 큐 만들기 및 삭제, 큐 메시지 추가, 읽기 및 삭제 등의 작업을 다룹니다.
 
 큐 저장소에 대 한 개념적 개요는 [queue storage에 대 한 .net 가이드](/azure/storage/storage-dotnet-how-to-use-queues)를 참조 하세요.
 

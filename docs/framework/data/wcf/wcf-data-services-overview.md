@@ -5,14 +5,18 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: a1844ab3449b6bce526276eba693a1f2da0ebf6b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6f085f87286aa5af4a3c2aaf2b74c9bf19023356
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202177"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899440"
 ---
 # <a name="wcf-data-services-overview"></a>WCF Data Services 개요
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+## <a name="overview"></a>개요
 
 WCF Data Services를 사용 하면 OData (Open Data Protocol)를 사용 하 여 웹 또는 인트라넷에 대 한 데이터 서비스를 만들고 사용할 수 있습니다. OData를 사용 하면 Uri로 주소를 지정할 수 있는 리소스로 데이터를 노출할 수 있습니다. 이렇게 하면 REST(Representational State Transfer)의 의미 체계, 특히 GET, PUT, POST, DELETE 등의 표준 HTTP 동사를 사용하여 데이터에 액세스하고 변경할 수 있습니다. 이 항목에서는 OData에서 정의한 패턴과 방법 및 .NET Framework 기반 응용 프로그램에서 OData를 활용 하기 위해 WCF Data Services에서 제공 하는 기능에 대 한 개요를 제공 합니다.  
   
@@ -62,7 +66,7 @@ OData는 AtomPub (Atom Publishing Protocol)에 대 한 확장 집합을 정의 �
   
  ![WCF Data Services 아키텍처 다이어그램을 보여 주는 스크린샷](./media/wcf-data-services-overview/windows-communication-foundation-data-services-architecture.gif)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [WCF Data Services 4.5](index.md)
 - [시작](getting-started-with-wcf-data-services.md)

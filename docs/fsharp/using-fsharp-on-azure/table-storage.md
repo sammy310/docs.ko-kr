@@ -1,23 +1,23 @@
 ---
-title: F#을 사용하여 Azure Table 스토리지 시작
-description: Azure Table Storage 또는 Azure Cosmos DB를 사용하여 클라우드에 구조화된 데이터를 저장합니다.
+title: 'F #을 사용 하 여 Azure Table Storage 시작 #'
+description: Azure Table Storage 또는 Azure Cosmos DB를 사용 하 여 클라우드에 구조화 된 데이터를 저장 합니다.
 author: sylvanc
 ms.date: 03/26/2018
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: bf4f2e63c847e18d253fe5b6cf5dd7773c320fb7
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: bc8e111636013930f7c7d4f59d1ef0720298cb9f
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756210"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899284"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F를 사용 하 여 Azure Table storage 및 Azure Cosmos DB Table API 시작\#
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F를 사용 하 여 Azure Table Storage 및 Azure Cosmos DB Table API 시작\#
 
-Azure Table Storage는 클라우드에 구조화된 NoSQL 데이터를 저장하는 서비스입니다. Table Storage는 스키마 없이 디자인된 키/특성 스토리지입니다. Table Storage는 스키마가 없기 때문에 애플리케이션의 요구 사항이 변화함에 따라 데이터를 쉽게 적응시킬 수 있습니다. 모든 종류의 애플리케이션에서 빠르고 비용 효율적으로 데이터에 액세스할 수 있습니다. 비슷한 양의 데이터일 때 Table Storage는 일반적으로 전통적인 SQL에 비해 비용이 매우 낮습니다.
+Azure Table Storage는 구조화 된 NoSQL 데이터를 클라우드에 저장 하는 서비스입니다. Table Storage는 스키마 없이 디자인된 키/특성 스토리지입니다. Table Storage는 스키마가 없기 때문에 애플리케이션의 요구 사항이 변화함에 따라 데이터를 쉽게 적응시킬 수 있습니다. 모든 종류의 애플리케이션에서 빠르고 비용 효율적으로 데이터에 액세스할 수 있습니다. 비슷한 양의 데이터일 때 Table Storage는 일반적으로 전통적인 SQL에 비해 비용이 매우 낮습니다.
 
 Table Storage를 사용하여 웹 애플리케이션의 사용자 데이터, 주소록, 디바이스 정보 및 서비스에 필요한 다른 유형의 메타데이터와 같은 유연한 데이터 세트을 저장할 수 있습니다. 테이블에 저장할 수 있는 엔터티 수에는 제한이 없으며, 스토리지 계정에 포함할 수 있는 테이블의 수에는 스토리지 계정의 최대 용량 한도까지 제한이 없습니다.
 
-Azure Cosmos DB는 Azure Table storage 용으로 작성 되었으며 다음과 같은 프리미엄 기능이 필요한 응용 프로그램에 대 한 Table API를 제공 합니다.
+Azure Cosmos DB는 Azure Table Storage 용으로 작성 되었으며 다음과 같은 프리미엄 기능이 필요한 응용 프로그램에 대 한 Table API를 제공 합니다.
 
 - 턴키 전역 배포
 - 전 세계적인 전용 처리량
@@ -25,13 +25,13 @@ Azure Cosmos DB는 Azure Table storage 용으로 작성 되었으며 다음과 �
 - 보장된 고가용성
 - 자동 보조 인덱싱.
 
-Azure Table Storage에 대해 작성된 애플리케이션은 코드를 변경하지 않고 테이블 API를 사용하여 Azure Cosmos DB로 마이그레이션할 수 있으며 프리미엄 기능을 활용할 수 있습니다. 테이블 API에는 .NET, Java, Python 및 Node.js에 사용할 수 있는 클라이언트 SDK가 있습니다.
+Azure Table Storage 용으로 작성 된 응용 프로그램은 코드를 변경 하지 않고 Table API를 사용 하 여 Azure Cosmos DB으로 마이그레이션하고 프리미엄 기능을 활용할 수 있습니다. 테이블 API에는 .NET, Java, Python 및 Node.js에 사용할 수 있는 클라이언트 SDK가 있습니다.
 
 자세한 내용은 [Azure Cosmos DB Table API 소개](/azure/cosmos-db/table-introduction)를 참조 하세요.
 
 ## <a name="about-this-tutorial"></a>이 자습서 정보
 
-이 자습서에서는 테이블 만들기 및 삭제, 테이블 데이터 삽입, 업데이트, 삭제 및 쿼리를 비롯 하 여 Azure Table storage 또는 Azure Cosmos DB Table API를 사용 하 여 몇 가지 일반적인 작업을 수행 하는 F # 코드를 작성 하는 방법을 보여 줍니다.
+이 자습서에서는 테이블 만들기 및 삭제, 테이블 데이터 삽입, 업데이트, 삭제 및 쿼리를 비롯 하 여 Azure Table Storage 또는 Azure Cosmos DB Table API를 사용 하 여 몇 가지 일반적인 작업을 수행 하는 F # 코드를 작성 하는 방법을 보여 줍니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -55,7 +55,7 @@ Azure Storage Table service에 연결 하는 경우이 자습서에 대 한 연�
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Azure Cosmos DB 연결 문자열 가져오기
 
-Azure Cosmos DB에 연결 하는 경우이 자습서에 대 한 연결 문자열이 필요 합니다. Azure Portal에서 연결 문자열을 복사할 수 있습니다. Azure Portal의 Cosmos DB 계정에서 **설정**  >  **연결 문자열**로 이동 하 고 **복사** 단추를 선택 하 여 기본 연결 문자열을 복사 합니다.
+Azure Cosmos DB에 연결 하는 경우이 자습서에 대 한 연결 문자열이 필요 합니다. Azure Portal에서 연결 문자열을 복사할 수 있습니다. Azure Portal의 Cosmos DB 계정에서 **설정**  >  **연결 문자열** 로 이동 하 고 **복사** 단추를 선택 하 여 기본 연결 문자열을 복사 합니다.
 
 자습서의 경우 다음 예제와 같이 스크립트에 연결 문자열을 입력 합니다.
 

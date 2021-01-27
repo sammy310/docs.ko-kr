@@ -1,23 +1,23 @@
 ---
-title: F#을 사용하여 Azure File 스토리지 시작
-description: Azure File Storage를 사용하여 클라우드에 파일 데이터를 저장하고 Azure 가상 머신(VM) 또는 Windows를 실행하는 온-프레미스 애플리케이션에서 클라우드 파일 공유를 탑재합니다.
+title: 'F #을 사용 하 여 Azure File Storage 시작 #'
+description: Azure File Storage를 사용 하 여 클라우드에 파일 데이터를 저장 하 고 Azure VM (가상 머신) 또는 Windows를 실행 하는 온-프레미스 응용 프로그램에서 클라우드 파일 공유를 탑재 합니다.
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: dd19b156e73774f4eca63afd3f4c10a4a7b8d46c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bcea58b4bf756fc9d696cd5a1010b0feffb127a7
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100128"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899427"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>F #을 사용 하 여 Azure File storage 시작\#
+# <a name="get-started-with-azure-file-storage-using-f"></a>F #을 사용 하 여 Azure File Storage 시작\#
 
-Azure File storage는 표준 [SMB (서버 메시지 블록) 프로토콜](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview)을 사용 하 여 클라우드에서 파일 공유를 제공 하는 서비스입니다. SMB 2.1과 SMB 3.0 모두를 지원합니다. Azure File Storage를 사용하여 파일 공유에 의존하는 레거시 애플리케이션을 비경제적인 다시 쓰기 작업 없이 빠르게 Azure로 마이그레이션할 수 있습니다. Azure 가상 머신 또는 클라우드 서비스 또는 온-프레미스 클라이언트에서 실행되는 애플리케이션은 데스크톱 애플리케이션이 일반적인 SMB 공유를 탑재하는 것처럼 클라우드에 파일 공유를 탑재할 수 있습니다. File Storage 공유를 동시에 탑재하고 액세스할 수 있는 애플리케이션 구성 요소 수에는 제한이 없습니다.
+Azure File Storage는 표준 [SMB (서버 메시지 블록) 프로토콜](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview)을 사용 하 여 클라우드에서 파일 공유를 제공 하는 서비스입니다. SMB 2.1과 SMB 3.0 모두를 지원합니다. Azure File Storage을 사용 하 여 파일 공유에 의존 하는 레거시 응용 프로그램을 비용이 많이 드는 다시 쓰기 없이 빠르게 Azure로 마이그레이션할 수 있습니다. Azure 가상 머신 또는 클라우드 서비스 또는 온-프레미스 클라이언트에서 실행되는 애플리케이션은 데스크톱 애플리케이션이 일반적인 SMB 공유를 탑재하는 것처럼 클라우드에 파일 공유를 탑재할 수 있습니다. File Storage 공유를 동시에 탑재하고 액세스할 수 있는 애플리케이션 구성 요소 수에는 제한이 없습니다.
 
 파일 저장소에 대 한 개념적 개요는 [파일 저장소에 대 한 .net 가이드](/azure/storage/storage-dotnet-how-to-use-files)를 참조 하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 가이드를 사용 하려면 먼저 [Azure storage 계정을 만들어야](/azure/storage/storage-create-storage-account)합니다.
 이 계정에 대 한 저장소 액세스 키도 필요 합니다.
@@ -92,7 +92,7 @@ Azure 구성 관리자 사용은 선택 사항입니다. .NET Framework의 형�
 
 ### <a name="set-the-maximum-size-for-a-file-share"></a>파일 공유에 대한 최대 크기 설정
 
-아래 예제에서는 공유에 대한 현재 사용량을 확인하고 공유에 대해 할당량을 설정하는 방법을 보여 줍니다. `FetchAttributes` 공유의 `Properties` 를 채우고 `SetProperties` 로컬 변경 내용을 Azure File storage에 전파 하려면를 호출 해야 합니다.
+아래 예제에서는 공유에 대한 현재 사용량을 확인하고 공유에 대해 할당량을 설정하는 방법을 보여 줍니다. `FetchAttributes` 공유의 `Properties` 를 채우고 `SetProperties` 로컬 변경 내용을 Azure File Storage에 전파 하려면를 호출 해야 합니다.
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
@@ -134,7 +134,7 @@ Azure 스토리지 분석는 파일 저장소에 대 한 메트릭을 지원 합
 
 ## <a name="next-steps"></a>다음 단계
 
-Azure 파일 저장소에 대 한 자세한 내용은 다음 링크를 참조 하세요.
+Azure File Storage에 대 한 자세한 내용은 다음 링크를 참조 하세요.
 
 ### <a name="conceptual-articles-and-videos"></a>개념 문서 및 비디오
 
@@ -154,7 +154,7 @@ Azure 파일 저장소에 대 한 자세한 내용은 다음 링크를 참조 �
 
 ### <a name="blog-posts"></a>블로그 게시물
 
-- [Azure File Storage 일반적으로 사용 가능(영문)](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
+- [Azure File Storage는 이제 일반 공급 됩니다.](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
 - [Azure File Storage 내](https://azure.microsoft.com/blog/inside-azure-file-storage/)
 - [Microsoft Azure 파일 서비스 소개](/archive/blogs/windowsazurestorage/introducing-microsoft-azure-file-service)
 - [Microsoft Azure 파일에 대한 연결 유지](/archive/blogs/windowsazurestorage/persisting-connections-to-microsoft-azure-files)
