@@ -282,13 +282,13 @@
 - name: Azure에서 F# 사용
   href: using-fsharp-on-azure/index.md
   items:
-    - name: F#을 사용하여 Azure Blob 스토리지 시작
+    - name: F#을 사용하여 Azure Blob Storage 시작
       href: using-fsharp-on-azure/blob-storage.md
-    - name: F#을 사용하여 Azure File 스토리지 시작
+    - name: F#을 사용하여 Azure File Storage 시작
       href: using-fsharp-on-azure/file-storage.md
-    - name: F#을 사용하여 Azure Queue 스토리지 시작
+    - name: F#을 사용하여 Azure Queue Storage 시작
       href: using-fsharp-on-azure/queue-storage.md
-    - name: F#을 사용하여 Azure Table 스토리지 시작
+    - name: F#을 사용하여 Azure Table Storage 시작
       href: using-fsharp-on-azure/table-storage.md
     - name: F# Azure 종속성에 대한 패키지 관리
       href: using-fsharp-on-azure/package-management.md
