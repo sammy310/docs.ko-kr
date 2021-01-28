@@ -12,12 +12,12 @@ helpviewer_keywords:
 - language code style rules [EditorConfig]
 - language rules
 - EditorConfig language conventions
-ms.openlocfilehash: b77d9aa2a528a6cf540babd5e5acc148e48c489c
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 2aa2261534363f1da6a2109f092e08d210ebd915
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96594165"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957977"
 ---
 # <a name="language-rules"></a>언어 규칙
 
@@ -31,10 +31,21 @@ ms.locfileid: "96594165"
 
 언어 규칙에 대 한 옵션은 다음과 같은 형식의 EditorConfig 파일에 지정할 수 있습니다.
 
+`option_name = value` (Visual Studio 2019 버전 16.9 Preview 2 이상)
+
+또는
+
 `option_name = value:severity`
 
-- **값**: 각 언어 규칙에 대해 스타일을 선호 하는지 여부를 정의 하는 값을 지정 합니다. 대부분의 규칙은 `true`(이 스타일 선호) 또는 `false`(이 스타일 선호 안 함) 값을 허용합니다. 다른 규칙은 `when_on_single_line`, `never` 등의 값을 허용합니다.
-- **심각도**: 규칙의 두 번째 부분은 규칙의 [심각도 수준을](../configuration-options.md#severity-level) 지정 합니다. 심각도 사양은 위 옵션 구문의 일부로 Visual Studio와 같은 개발 Ide 내 에서만 적용 됩니다. 이 설정은 c # 또는 VB 컴파일러에서 인식 되지 않으므로 빌드하는 동안에는 적용 되지 않습니다. 대신 코드 스타일 규칙을 빌드에 적용 하려면 분석기에 대 한 규칙 ID 기반 심각도 구성 구문을 사용 하 여 심각도를 설정 해야 합니다. 구문은 `dotnet_diagnostic.<rule ID>.severity = <severity>` 형식을 사용합니다(예: `dotnet_diagnostic.IDE0040.severity = silent`). 자세한 내용은 이 [GitHub 문제](https://github.com/dotnet/roslyn/issues/44201)를 참조하세요.
+- **값**
+
+  각 언어 규칙에 대해 스타일을 선호 하는지 여부를 정의 하는 값을 지정 합니다. 대부분의 규칙은 `true`(이 스타일 선호) 또는 `false`(이 스타일 선호 안 함) 값을 허용합니다. 다른 규칙은 `when_on_single_line`, `never` 등의 값을 허용합니다.
+
+- **심각도** (Visual Studio 2019 버전 16.9 Preview 2 이상 버전의 경우 선택 사항)
+
+  규칙의 두 번째 부분은 규칙의 [심각도 수준을](../configuration-options.md#severity-level) 지정 합니다. 이러한 방식으로 지정 된 경우 심각도 설정은 Visual Studio와 같은 개발 Ide 내 에서만 적용 됩니다. 빌드 중에는 적용 *되지* 않습니다.
+
+  빌드 시 코드 스타일 규칙을 적용 하려면 분석기에 대 한 규칙 ID 기반 심각도 구성 구문을 대신 사용 하 여 심각도를 설정 합니다. 구문은 `dotnet_diagnostic.<rule ID>.severity = <severity>` 형식을 사용합니다(예: `dotnet_diagnostic.IDE0040.severity = silent`). 자세한 내용은 [심각도 수준](../configuration-options.md#severity-level)을 참조 하세요.
 
 > [!TIP]
 >
