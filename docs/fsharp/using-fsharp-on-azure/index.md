@@ -4,12 +4,12 @@ description: F#과 함께 Azure 서비스 사용에 대한 가이드
 author: sylvanc
 ms.date: 07/29/2020
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: c3235db9274065f81e5476d8d0e06b99d7c987a0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 16599aa48776acee05edf8201cdd148a87507cdb
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100141"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899413"
 ---
 # <a name="using-f-on-azure"></a>Azure에서 F# 사용
 
@@ -42,9 +42,9 @@ Azure Functions 및 F# 사용에 대한 기타 리소스:
 
 Azure Storage는 내구성, 가용성, 확장성을 활용하여 고객의 요구 사항을 충족하는 최신 애플리케이션을 위한 저장소 서비스의 기본 레이어입니다. F# 프로그램은 다음 문서에 설명된 기술을 사용하여 Azure Storage 서비스를 직접 조작할 수 있습니다.
 
-* [F#을 사용하여 Azure Blob 스토리지 시작](blob-storage.md)
-* [F#을 사용하여 Azure File 스토리지 시작](file-storage.md)
-* [F#을 사용하여 Azure Queue 스토리지 시작](queue-storage.md)
+* [F#을 사용하여 Azure Blob Storage 시작](blob-storage.md)
+* [F#을 사용하여 Azure File Storage 시작](file-storage.md)
+* [F#을 사용하여 Azure Queue Storage 시작](queue-storage.md)
 * [F#을 사용하여 Azure Table Storage 시작](table-storage.md)
 
 명시적 API 호출이 아닌 선언적 구성을 통해 Azure Functions와 함께 Azure Storage를 사용할 수도 있습니다. F# 예제를 포함하는 [Azure Storage를 위한 Azure Functions 트리거 및 바인딩](/azure/azure-functions/functions-bindings-storage)을 참조하세요.

@@ -179,6 +179,8 @@ items:
             href: ../core/sdk.md
           - name: 오류 메시지
             items:
+              - name: NETSDK1004
+                href: ../core/tools/sdk-errors/netsdk1004.md
               - name: NETSDK1005 및 NETSDK1047
                 href: ../core/tools/sdk-errors/netsdk1005.md
               - name: NETSDK1013
