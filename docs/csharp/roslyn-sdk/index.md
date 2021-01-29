@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK(Roslyn API)
 description: .NET Compiler Platform SDK(Roslyn API라고도 함)를 사용하여 .NET 코드를 이해하고 오류를 찾고 이러한 오류를 수정하는 방법을 알아봅니다.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 872bfd388f6974a6d99f769c43e5d341454518cc
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: cd81551234a1bc955323e392f473cd01180f6dc5
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226675"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899245"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK
 
@@ -19,17 +19,18 @@ ms.locfileid: "86226675"
 
 .NET Compiler Platform SDK는 코드 중심 도구 및 애플리케이션을 만들기 위한 진입에 대한 장벽을 크게 낮춰줍니다. 메타 프로그래밍, 코드 생성 및 변환, C# 및 Visual Basic 언어의 대화형 사용, 도메인 특정 언어에 C# 및 Visual Basic 포함과 같은 영역에서 다양한 혁신 기회를 창출합니다.
 
-.NET Compiler Platform SDK를 사용하면 코딩 실수를 찾아 수정하는 ***분석기*** 및 ***코드 수정 사항***을 빌드할 수 있습니다. ***분석기***는 코드의 구문 및 구조를 이해하고 수정되어야 하는 습관을 검색합니다. ***코드 수정 사항***은 분석기가 발견한 코딩 실수를 해결하기 위한 한 가지 이상의 제안된 수정 사항을 제공합니다. 일반적으로 분석기 및 연관된 코드 수정 사항은 단일 프로젝트에서 함께 패키지됩니다.
+.NET Compiler Platform SDK를 사용하면 코딩 실수를 찾아 수정하는 **분석기** 및 코드 수정 사항을 빌드할 수 있습니다. 분석기는 구문(코드의 구조) 및 의미 체계를 이해하고 수정되어야 하는 습관을 검색합니다. 코드 수정 사항은 분석기 또는 컴파일러 진단에서 발견한 코딩 실수를 해결하기 위한 한 가지 이상의 제안된 수정 사항을 제공합니다. 일반적으로 분석기 및 연관된 코드 수정 사항은 단일 프로젝트에서 함께 패키지됩니다.
 
 분석기 및 코드 수정 사항은 정적 분석을 사용하여 코드를 이해하며, 코드를 실행하거나 다른 테스트 이점을 제공하지 않습니다. 하지만 종종 버그, 유지 관리할 수 없는 코드, 표준 지침 위반으로 이어질 수 있는 사례를 짚어줄 수 있습니다.
 
-.NET Compiler Platform SDK는 C# 또는 Visual Basic 코드베이스를 검사하고 이해할 수 있게 해주는 단일 API 집합을 제공합니다. 이 단일 코드베이스를 사용할 수 있으므로 .NET Compiler Platform SDK에서 제공하는 구문 및 의미 체계 분석 API를 활용하여 분석기 및 코드 수정 사항을 더 쉽게 작성할 수 있습니다. 컴파일러가 수행한 분석을 복제하는 대규모 작업에서 벗어난 사용자는 프로젝트 또는 라이브러리에 대한 일반적인 코딩 오류를 찾아 수정하는 더 중심이 되는 작업에 집중할 수 있습니다.
+분석기 및 코드 수정 사항 외에도 .NET Compiler Platform SDK를 사용하여 코드 리팩터링을 빌드할 수도 있습니다.
+또한 C# 또는 Visual Basic 코드베이스를 검사하고 이해할 수 있게 해주는 단일 API 집합도 제공합니다. 이 단일 코드베이스를 사용할 수 있으므로 .NET Compiler Platform SDK에서 제공하는 구문 및 의미 체계 분석 API를 활용하여 분석기 및 코드 수정 사항을 더 쉽게 작성할 수 있습니다. 컴파일러가 수행한 분석을 복제하는 대규모 작업에서 벗어난 사용자는 프로젝트 또는 라이브러리에 대한 일반적인 코딩 오류를 찾아 수정하는 더 중심이 되는 작업에 집중할 수 있습니다.
 
 작은 이점 한 가지는 사용자가 직접 프로젝트의 코드를 이해하기 위해 자체 코드베이스를 작성하는 경우보다 Visual Studio에 로드되었을 때 분석기 및 코드 수정 사항이 메모리를 훨씬 더 적게 사용하고 규모가 작다는 것입니다. 컴파일러 및 Visual Studio에서 사용되는 것과 같은 클래스를 활용하여 자체 정적 분석 도구를 만들 수 있습니다. 즉, 팀은 IDE 성능에 대한 눈에 띄는 영향 없이 분석기 및 코드 수정 사항을 사용할 수 있습니다.
 
 분석기 및 코드 수정 사항을 작성하는 세 가지 주요 시나리오가 있습니다.
 
-1. [*팀 코딩 표준 적용*](#enforce-team-coding-standards)
+1. [팀 코딩 표준 적용](#enforce-team-coding-standards)
 1. [*라이브러리 패키지로 지침 제공*](#provide-guidance-with-library-packages)
 1. [일반 지침 제공](#provide-general-guidance)
 
@@ -40,6 +41,9 @@ ms.locfileid: "86226675"
 개발자가 코드를 작성할 때 분석기가 실행됩니다. 개발자는 즉시 지침을 따르도록 권장하는 즉각적인 피드백을 받습니다. 개발자는 프로토타입 생성을 시작하는 즉시 규격 코드를 작성하는 습관이 붙게 됩니다. 기능이 사람에 의한 검토를 받을 준비가 되면 모든 표준 지침이 적용된 상태가 되어 있습니다.
 
 팀은 팀 코딩 습관을 위반하는 가장 일반적인 습관을 찾는 분석기 및 코드 수정 사항을 빌드할 수 있습니다. 이러한 분석기 및 코드 수정 사항을 각 개발자의 컴퓨터에 설치하여 표준을 적용할 수 있습니다.
+
+> [!TIP]
+> 사용자 고유의 분석기를 빌드하기 전에 기본 제공되는 분석기를 확인합니다. 자세한 내용은 [코드 스타일 규칙](../../fundamentals/code-analysis/overview.md#code-style-analysis)을 참조하세요.
 
 ## <a name="provide-guidance-with-library-packages"></a>라이브러리 패키지로 지침 제공
 
@@ -52,7 +56,7 @@ NuGet의 라이브러리를 사용하여 분석기 및 코드 수정 사항을 �
 
 ## <a name="provide-general-guidance"></a>일반 지침 제공
 
-.NET 개발자 커뮤니티는 잘 작동하는 경험 패턴과 가장 피해야 할 패턴을 간파해왔습니다. 여러 커뮤니티 회원은 이러한 권장 패턴을 적용하는 분석기를 만들었습니다. 자세히 알아보다 보면 항상 새로운 아이디어를 위한 여지가 있음을 알게 됩니다.
+.NET 개발자 커뮤니티는 경험을 통해 잘 작동하는 패턴과 가장 피해야 할 패턴을 간파해왔습니다. 여러 커뮤니티 회원은 이러한 권장 패턴을 적용하는 분석기를 만들었습니다. 자세히 알아보다 보면 항상 새로운 아이디어를 위한 여지가 있음을 알게 됩니다.
 
 이러한 분석기를 [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs)에 업로드하고 Visual Studio를 사용하는 개발자가 다운로드할 수 있습니다. 언어 및 플랫폼을 처음 사용하는 초보자는 일반적으로 인정된 습관을 신속하게 배우고 .NET 여정에서 조기에 생산성을 높일 수 있습니다. 이러한 습관이 더 널리 사용됨에 따라 커뮤니티에서는 이러한 습관을 채택합니다.
 
@@ -68,7 +72,7 @@ NuGet의 라이브러리를 사용하여 분석기 및 코드 수정 사항을 �
 - [의미 체계 작업](work-with-semantics.md)
 - [작업 영역 작업](work-with-workspace.md)
 
-시작하려면 **.NET Compiler Platform SDK**를 설치해야 합니다.
+시작하려면 **.NET Compiler Platform SDK** 를 설치해야 합니다.
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
