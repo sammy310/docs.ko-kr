@@ -5,19 +5,19 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 0d64df42ffb1763afed3e883c4f043755e158489
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: b98fdd48f2373bd23fcd3273834860a60c682969
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633990"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216384"
 ---
 # <a name="configuration-files-for-code-analysis-rules"></a>코드 분석 규칙에 대 한 구성 파일
 
 코드 분석 규칙에는 다양 한 [구성 옵션이](configuration-options.md)있습니다. 이러한 옵션은 다음 분석기 구성 파일 중 하나에서 키-값 쌍으로 지정 합니다.
 
 - [EditorConfig](#editorconfig) file: 파일 기반 또는 폴더 기반 구성 옵션입니다.
-- [Global AnalyzerConfig](#global-analyzerconfig) File: 프로젝트 수준 구성 옵션입니다.
+- [Global AnalyzerConfig](#global-analyzerconfig) File: 프로젝트 수준 구성 옵션입니다. 일부 프로젝트 파일이 프로젝트 폴더 외부에 상주 하는 경우에 유용 합니다.
 
 ## EditorConfig
 
@@ -58,7 +58,7 @@ tab_width = 4
 #### .NET Coding Conventions ####
 
 # this. and Me. preferences
-dotnet_style_qualification_for_method = true:warning
+dotnet_style_qualification_for_method = true
 
 #### Diagnostic configuration ####
 
@@ -68,7 +68,7 @@ dotnet_diagnostic.CA1000.severity = warning
 
 ## <a name="global-analyzerconfig"></a>글로벌 AnalyzerConfig
 
-Visual Studio 2019 버전 16.8 이상 버전에서 지원 되는 .NET 5 SDK부터 전역 _AnalyzerConfig_ 파일을 사용 하 여 분석기 옵션을 구성할 수도 있습니다. 이러한 파일은 해당 파일 이름이 나 파일 경로에 관계 없이 **프로젝트의 모든 소스 파일에 적용 되는 옵션** 을 제공 하는 데 사용 됩니다.
+.NET 5 SDK (Visual Studio 2019 버전 16.8 이상에서 지원 됨)부터 전역 _AnalyzerConfig_ 파일을 사용 하 여 분석기 옵션을 구성할 수도 있습니다. 이러한 파일은 해당 파일 이름이 나 파일 경로에 관계 없이 **프로젝트의 모든 소스 파일에 적용 되는 옵션** 을 제공 하는 데 사용 됩니다.
 
 [EditorConfig](#editorconfig)파일과 달리 전역 구성 파일은 들여쓰기 크기 또는 후행 공백을 잘라낼 지 여부와 같은 ide의 편집기 스타일 설정을 구성 하는 데 사용할 수 없습니다. 대신 프로젝트 수준 분석기 구성 옵션을 지정 하기 위한 용도로만 디자인 되었습니다.
 
@@ -141,6 +141,6 @@ EditorConfig파일 및 전역 AnalyzerConfig 파일은 모두 각 옵션에 대 
 
 - 서로 다른 키를 사용 하는 관련 심각도 옵션의 우선 순위 규칙에 대 한 자세한 내용은 (예: 단일 규칙에 대해 서로 다른 심각도가 지정 된 경우 및 해당 규칙이 적용 되는 범주) [코드 분석 구성 옵션](configuration-options.md#precedence)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [EditorConfig vs global AnalyzerConfig 디자인 문제](https://github.com/dotnet/roslyn/issues/47707)

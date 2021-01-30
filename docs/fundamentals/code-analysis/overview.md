@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 80815b5913ad72756de503209b52e8848dd708bf
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: efc440adb59da1ef9838ec5445d9c55544c14380
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025083"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216475"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET 소스 코드 분석 개요
 
@@ -40,7 +40,7 @@ ms.locfileid: "98025083"
 
 다음 규칙은 기본적으로 .NET 5.0에서 사용 하도록 설정 됩니다.
 
-| 진단 ID | 범주 | 심각도 | 설명 |
+| 진단 ID | Category | 심각도 | 설명 |
 | - | - | - | - |
 | [CA1416](/visualstudio/code-quality/ca1416) | 상호 운용성 | 경고 | 플랫폼 호환성 분석기 |
 | [CA1417](/visualstudio/code-quality/ca1417) | 상호 운용성 | 경고 | `OutAttribute`P/invoke에 문자열 매개 변수를 사용 하지 마십시오. |
@@ -48,8 +48,8 @@ ms.locfileid: "98025083"
 | [CA2013](/visualstudio/code-quality/ca2013) | 안정성 | 경고 | 값 형식과 함께 사용 하지 마십시오. `ReferenceEquals` |
 | [CA2014](/visualstudio/code-quality/ca2014) | 안정성 | 경고 | 루프에 사용 하지 마십시오. `stackalloc` |
 | [CA2015](/visualstudio/code-quality/ca2015) | 안정성 | 경고 | 에서 파생 된 형식에 대해 종료자를 정의 하지 마십시오. <xref:System.Buffers.MemoryManager%601> |
-| [CA2200](/visualstudio/code-quality/ca2200) | 사용 | 경고 | 스택 정보를 유지하도록 다시 throw하십시오.
-| [CA2247](/visualstudio/code-quality/ca2247) | 사용 | 경고 | TaskCompletionSource 생성자에 전달 된 인수는 <xref:System.Threading.Tasks.TaskCreationOptions> 대신 열거형 이어야 합니다. <xref:System.Threading.Tasks.TaskContinuationOptions> |
+| [CA2200](/visualstudio/code-quality/ca2200) | 사용량 | 경고 | 스택 정보를 유지하도록 다시 throw하십시오.
+| [CA2247](/visualstudio/code-quality/ca2247) | 사용량 | 경고 | TaskCompletionSource 생성자에 전달 된 인수는 <xref:System.Threading.Tasks.TaskCreationOptions> 대신 열거형 이어야 합니다. <xref:System.Threading.Tasks.TaskContinuationOptions> |
 
 이러한 규칙의 심각도를 변경 하 여 사용 하지 않도록 설정 하거나 오류를 상승 시킬 수 있습니다. [추가 규칙을 사용 하도록 설정할](#enable-additional-rules)수도 있습니다.
 
@@ -127,7 +127,7 @@ ms.locfileid: "98025083"
    dotnet_diagnostic.IDE0040.severity = warning
    ```
 
-   또는 기본적으로 전체 "스타일" 범주를 경고 또는 오류로 구성 하 고 빌드 시 실행 하지 않을 규칙을 선택적으로 해제할 수 있습니다. 예를 들면 다음과 같습니다.
+   또는 전체 범주를 경고나 오류로 구성 하 고, 기본적으로이 범주에서 규칙을 선택적으로 해제 한 후에 빌드 시 실행 하지 않을 수 있습니다. 예를 들면 다음과 같습니다.
 
    ```ini
    [*.{cs,vb}]

@@ -1,13 +1,13 @@
 ---
-title: .NET 5로 마이그레이션하는 방법의 예
+title: .NET 5로의 마이그레이션 예제
 description: .NET Framework를 대상으로 하는 샘플 응용 프로그램을 .NET 5로 마이그레이션하는 방법을 보여 줍니다.
 ms.date: 01/19/2021
-ms.openlocfilehash: f924f90046fdcd7dfe5e23740fc921a09383a81a
-ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
+ms.openlocfilehash: 39ecdfa639f4d68a4a8821da839f014c8de42ab0
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98618035"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216267"
 ---
 # <a name="example-of-migrating-to-net"></a>.NET으로 마이그레이션하는 방법의 예
 
@@ -89,7 +89,7 @@ try-convert -w "<path to your solution>"
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>    
+  <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 </Project>
@@ -224,7 +224,7 @@ Windows Forms 응용 프로그램의 전체 마이그레이션 프로세스를 �
 string image_name = Environment.CurrentDirectory + "\\..\\..\\Assets\\Images\\Catalog\\" + catalogItems.Picturefilename;
 ```
 
-다음으로 변경:
+을
 
 ```csharp
 string image_name = Environment.CurrentDirectory + "\\..\\..\\..\\Assets\\Images\\Catalog\\" + catalogItems.Picturefilename;

@@ -1,5 +1,6 @@
 ---
 title: 죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.
+description: 아직 문서화 되지 않은 컴파일러 오류 및 경고에 대 한 가능한 리소스 목록입니다.
 ms.date: 08/04/2020
 f1_keywords:
 - CS0181
@@ -736,12 +737,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 16420ee5889779e3aefdbc15f1050aeeeea8f624
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: c16698fbbf42e0967978a3502243793835f541c5
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804614"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216904"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.
 
@@ -753,11 +754,9 @@ ms.locfileid: "91804614"
  [스택 오버플로](https://stackoverflow.com/questions/tagged/c%23)  
 Visual c # 관련 질문과 문제에 대 한 질문과 대답 웹 사이트를 제공 합니다.  
 
- 또한 다음을 참조하세요.  
- [Visual C# 프로그래머를 위한 추가 리소스](../getting-started/index.md)  
-  
 ## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../programming-guide/index.md)
 - [C# 참조](../language-reference/index.md)
 - [의견 보내기](/visualstudio/ide/feedback-options)
+- [Visual C# 프로그래머를 위한 추가 리소스](../tour-of-csharp/index.md)
