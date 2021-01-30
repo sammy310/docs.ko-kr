@@ -16,42 +16,40 @@ helpviewer_keywords:
 - naming code style rules [EditorConfig]
 - naming rules
 - EditorConfig naming conventions
-ms.openlocfilehash: 0eea5e89ac5055a45d9ead14363cc2f2fc574401
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 1fce275204b729b4d23729ca432e06a5a249620d
+ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98191081"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99065137"
 ---
 # <a name="naming-rules"></a>이름 지정 규칙
 
-명명 규칙은 클래스, 속성, 메서드 등의 .NET 프로그래밍 언어 코드 요소 이름을 지정 하는 것과 관련이 있습니다. 예를 들어 public 멤버를 대문자로 표시해야 하거나 전용 필드를 `_`로 시작해야 하도록 지정할 수 있습니다.
+파일에서 `.editorconfig` .net 프로그래밍 언어 코드 요소  ( &mdash; 예: 클래스, 속성 및 메서드)의 이름을 지정 하는 방법에 대 한 명명 규칙을 정의할 수 있습니다 &mdash; . 예를 들어 public 멤버가 대문자로 표시 되거나 전용 필드가로 시작 되어야 하도록 지정할 수 있습니다 `_` .
 
-명명 규칙은 다음 세 부분으로 구성 됩니다.
+명명 규칙에는 다음과 같은 세 가지 구성 요소가 있습니다.
 
-* 적용 되는 기호 그룹입니다.
-* 규칙과 연결할 명명 스타일입니다.
+*  &mdash; 규칙이 적용 되는 기호 그룹의 기호 그룹입니다.
+* 규칙과 연결할 **명명 스타일** 입니다.
 * 규칙 적용의 심각도입니다.
-
-EditorConfig 파일에 명명 규칙을 정의 합니다.
 
 ## <a name="general-syntax"></a>일반 구문
 
 명명 규칙, 기호 그룹 또는 명명 스타일을 정의 하려면 다음 구문을 사용 하 여 하나 이상의 속성을 설정 합니다.
 
 ```ini
-<prefix>.<title>.<propertyName> = <propertyValue>
+<kind>.<title>.<propertyName> = <propertyValue>
 ```
 
 각 속성은 한 번만 설정 해야 하지만 일부 설정에서는 쉼표로 구분 된 여러 값을 사용할 수 있습니다.
 
 속성의 순서는 중요하지 않습니다.
 
-### \<prefix>
+### \<kind>
 
-**\<prefix>** 정의 되는 &mdash; 명명 규칙, 기호 그룹 또는 명명 스타일의 요소 종류를 지정 &mdash; 하 고 다음 중 하나 여야 합니다.
+**\<kind>** 정의 되는 &mdash; 명명 규칙, 기호 그룹 또는 명명 스타일의 요소 종류를 지정 &mdash; 하 고 다음 중 하나 여야 합니다.
 
-| 속성을 설정 하려면 | 접두사 사용 | 예제 |
+| 속성을 설정 하려면 | 값 사용 \<kind> | 예제 |
 | --- | --- | -- |
 | 명명 규칙 | `dotnet_naming_rule` | `dotnet_naming_rule.types_should_be_pascal_case.severity = suggestion` |
 | 기호 그룹 | `dotnet_naming_symbols` | `dotnet_naming_symbols.interface.applicable_kinds = interface` |
@@ -77,25 +75,17 @@ dotnet_naming_symbols.types.applicable_accessibilities = public, internal, priva
 
 | 속성 | Description |
 | -- | -- |
-| `symbols` | 이 규칙을 적용 해야 하는 기호를 정의 하는 기호 그룹의 제목입니다. |
+| `symbols` | 기호 그룹의 제목입니다. 명명 규칙은이 그룹의 기호에 적용 됩니다. |
 | `style` | 이 규칙과 연결 되어야 하는 명명 스타일의 제목입니다. |
 | `severity` |  명명 규칙을 적용 하는 데 사용 되는 심각도를 설정 합니다. 연결 된 값을 사용 가능한 [심각도 수준](../configuration-options.md#severity-level)중 하나로 설정 합니다. <sup>1</sup> |
 
 **참고:**
 
-1. 명명 규칙 내의 심각도 사양은 Visual Studio와 같은 개발 Ide 내 에서만 적용 됩니다. 이 설정은 c # 또는 VB 컴파일러에서 인식 되지 않으므로 빌드하는 동안에는 적용 되지 않습니다. 대신, 빌드에 명명 스타일 규칙을 적용 하려면 [이 섹션](#rule-id-ide1006-naming-rule-violation)에 설명 된 대로 규칙 ID 기반 심각도 구성을 사용 하 여 심각도를 설정 해야 합니다. 자세한 내용은 이 [GitHub 문제](https://github.com/dotnet/roslyn/issues/44201)를 참조하세요.
-
-## <a name="rule-order"></a>규칙 순서
-
-EditorConfig 파일에 명명 규칙을 정의 하는 순서는 중요 하지 않습니다. 명명 규칙은 규칙 자체의 정의에 따라 자동으로 정렬 됩니다. [EditorConfig 언어 서비스 확장](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig)은 EditorConfig 파일을 분석하고, 파일의 규칙 순서가 런타임에 컴파일러에서 사용할 순서와 다른 경우를 보고할 수 있습니다.
-
-> [!NOTE]
->
-> Visual Studio 2019 버전 16.2 보다 이전 버전의 Visual Studio를 사용 하는 경우 명명 규칙은 EditorConfig 파일에서 가장 특정에서 최소 전용으로 정렬 되어야 합니다. 적용할 수 있는 첫 번째 규칙은 적용되는 유일한 규칙이 됩니다. 그러나 동일한 이름의 규칙 ‘속성’이 여러 개 있는 경우 가장 최근에 발견된 해당 이름의 속성이 우선 적용됩니다.  자세한 내용은 [파일 계층 구조 및 우선 순위](/visualstudio/ide/create-portable-custom-editor-options#file-hierarchy-and-precedence)를 참조하세요.
+1. 명명 규칙 내의 심각도 사양은 Visual Studio와 같은 개발 Ide 내 에서만 적용 됩니다. 이 설정은 c # 또는 VB 컴파일러에서 인식 되지 않으므로 빌드하는 동안에는 적용 되지 않습니다. 빌드에 명명 스타일 규칙을 적용 하려면 [코드 규칙 심각도 구성을](#rule-id-ide1006-naming-rule-violation)사용 하 여 심각도를 설정 해야 합니다. 자세한 내용은 이 [GitHub 문제](https://github.com/dotnet/roslyn/issues/44201)를 참조하세요.
 
 ## <a name="symbol-group-properties"></a>기호 그룹 속성
 
-기호 그룹에 대해 다음 속성을 설정 하 여 그룹에 포함 되는 기호를 제한할 수 있습니다. 단일 속성 설정에서 여러 값을 지정 하려면 쉼표로 구분 합니다.
+기호 그룹에 대해 다음 속성을 설정 하 여 그룹에 포함 되는 기호를 제한할 수 있습니다. 단일 속성에 대해 여러 값을 지정 하려면 값을 쉼표로 구분 합니다.
 
 | 속성 | Description | 허용되는 값 | 필수 |
 | -- | -- | -- | -- |
@@ -131,6 +121,14 @@ EditorConfig 파일에 명명 규칙을 정의 하는 순서는 중요 하지 �
 
 1. 명명 스타일의 일부로 대/소문자 스타일을 지정해야 하고, 그렇지 않으면 명명 스타일이 무시될 수 있습니다.
 
+## <a name="rule-order"></a>규칙 순서
+
+EditorConfig 파일에 명명 규칙을 정의 하는 순서는 중요 하지 않습니다. 명명 규칙은 규칙 자체의 정의에 따라 자동으로 정렬 됩니다. [EditorConfig 언어 서비스 확장](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig)은 EditorConfig 파일을 분석하고, 파일의 규칙 순서가 런타임에 컴파일러에서 사용할 순서와 다른 경우를 보고할 수 있습니다.
+
+> [!NOTE]
+>
+> Visual Studio 2019 버전 16.2 보다 이전 버전의 Visual Studio를 사용 하는 경우 명명 규칙은 EditorConfig 파일에서 가장 특정에서 최소 전용으로 정렬 되어야 합니다. 적용할 수 있는 첫 번째 규칙은 적용되는 유일한 규칙이 됩니다. 그러나 동일한 이름의 규칙 ‘속성’이 여러 개 있는 경우 가장 최근에 발견된 해당 이름의 속성이 우선 적용됩니다.  자세한 내용은 [파일 계층 구조 및 우선 순위](/visualstudio/ide/create-portable-custom-editor-options#file-hierarchy-and-precedence)를 참조하세요.
+
 ## <a name="default-naming-styles"></a>기본 명명 스타일
 
 사용자 지정 명명 규칙을 지정 하지 않으면 다음 기본 스타일이 사용 됩니다.
@@ -138,6 +136,16 @@ EditorConfig 파일에 명명 규칙을 정의 하는 순서는 중요 하지 �
 - `public`, `private`, `internal`, `protected` 또는 `protected_internal` 접근성이 있는 클래스, 구조체, 열거형, 속성, 이벤트의 기본 명명 스타일은 파스칼식 대/소문자입니다.
 
 - `public`, `private`, `internal`, `protected` 또는 `protected_internal` 접근성이 있는 인터페이스의 기본 명명 스타일은 필수 접두사 **I** 를 사용하는 파스칼식 대/소문자입니다.
+
+## <a name="code-rule-id-ide1006-naming-rule-violation"></a><a name="rule-id-ide1006-naming-rule-violation"></a>코드 규칙 ID: `IDE1006 (Naming rule violation)`
+
+모든 이름 지정 옵션에는 규칙 ID `IDE1006` 와 제목이 있습니다 `Naming rule violation` . 다음 구문을 사용 하 여 EditorConfig 파일에서 전역적으로 명명 위반의 심각도를 구성할 수 있습니다.
+
+```ini
+dotnet_diagnostic.IDE1006.severity = <severity value>
+```
+
+심각도 값은 `warning` `error` [빌드 시 적용](../overview.md#code-style-analysis)해야 합니다. 가능한 모든 심각도 값은 [심각도 수준](../configuration-options.md#severity-level)을 참조 하세요.
 
 ## <a name="example"></a>예제
 
@@ -161,16 +169,6 @@ dotnet_naming_rule.public_members_must_be_capitalized.style    = first_word_uppe
 # and setting the severity.
 dotnet_naming_rule.public_members_must_be_capitalized.severity = suggestion
 ```
-
-## <a name="rule-id-ide1006-naming-rule-violation"></a><a name="rule-id-ide1006-naming-rule-violation"></a>규칙 ID: "IDE1006" (명명 규칙 위반)
-
-모든 이름 지정 옵션에는 규칙 ID `IDE1006` 와 제목이 있습니다 `Naming rule violation` . 다음 구문을 사용 하 여 EditorConfig 파일에서 전역적으로 명명 위반의 심각도를 구성할 수 있습니다.
-
-```ini
-dotnet_diagnostic.IDE1006.severity = <severity value>
-```
-
-심각도 값은 `warning` `error` [빌드 시 적용](../overview.md#code-style-analysis)해야 합니다. 가능한 모든 심각도 값은 [심각도 수준](../configuration-options.md#severity-level)을 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 
