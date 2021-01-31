@@ -1,21 +1,16 @@
 items:
   - name: C# 설명서
     href: index.yml
-  - name: 시작
+  - name: C# 둘러보기
     items:
-      - name: C# 언어 및 .NET 소개
-        displayName: get started
-        href: getting-started/index.md
-      - name: C# 둘러보기
-        items:
-          - name: 소개
-            href: tour-of-csharp/index.md
-          - name: 유형
-            href: tour-of-csharp/types.md
-          - name: 프로그램 구성 요소
-            href: tour-of-csharp/program-building-blocks.md
-          - name: 주 언어 영역
-            href: tour-of-csharp/features.md
+      - name: 소개
+        href: tour-of-csharp/index.md
+      - name: 유형
+        href: tour-of-csharp/types.md
+      - name: 프로그램 구성 요소
+        href: tour-of-csharp/program-building-blocks.md
+      - name: 주 언어 영역
+        href: tour-of-csharp/features.md
   - name: 자습서
     items:
       - name: 개요
