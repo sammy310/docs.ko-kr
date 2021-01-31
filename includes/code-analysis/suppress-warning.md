@@ -1,20 +1,11 @@
 ---
-ms.openlocfilehash: b26e346f7076a57aef8ae7587ab1222b4100a323
-ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
+ms.openlocfilehash: 8ce8b233169ec2854f6f92b166ff9a367f562553
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98957938"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99217599"
 ---
-## <a name="suppress-a-warning"></a><span data-ttu-id="2eb51-101">경고 표시 안 함</span><span class="sxs-lookup"><span data-stu-id="2eb51-101">Suppress a warning</span></span>
+## <a name="suppress-a-warning"></a><span data-ttu-id="79674-101">경고 표시 안 함</span><span class="sxs-lookup"><span data-stu-id="79674-101">Suppress a warning</span></span>
 
-<span data-ttu-id="2eb51-102">규칙 위반을 억제 하려면 EditorConfig 파일에서 특정 규칙 ID의 심각도 옵션을로 설정 합니다 `none` .</span><span class="sxs-lookup"><span data-stu-id="2eb51-102">To suppress a rule violation, set the severity option for the specific rule ID to `none` in an EditorConfig file.</span></span> <span data-ttu-id="2eb51-103">다음은 그 예입니다. </span><span class="sxs-lookup"><span data-stu-id="2eb51-103">For example:</span></span>
-
-```ini
-[*.{cs,vb}]
-dotnet_diagnostic.CA1822.severity = none
-```
-
-<span data-ttu-id="2eb51-104">Visual Studio에서는 코드 분석 규칙에서 경고를 표시 하지 않도록 하는 추가 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="2eb51-104">Visual Studio provides additional ways to suppress warnings from code analysis rules.</span></span> <span data-ttu-id="2eb51-105">자세한 내용은 [위반 표시 안 함](/visualstudio/code-quality/use-roslyn-analyzers#suppress-violations)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="2eb51-105">For more information, see [Suppress violations](/visualstudio/code-quality/use-roslyn-analyzers#suppress-violations).</span></span>
-
-<span data-ttu-id="2eb51-106">규칙 심각도에 대 한 자세한 내용은 [규칙 심각도 구성](~/docs/fundamentals/code-analysis/configuration-options.md#severity-level)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="2eb51-106">For more information about rule severities, see [Configure rule severity](~/docs/fundamentals/code-analysis/configuration-options.md#severity-level).</span></span>
+<span data-ttu-id="79674-102">프로젝트에 대 한 규칙을 비활성화 하거나, 전처리기 지시문을 사용 하 여 특정 코드 줄에 대해 사용 하지 않도록 설정 하거나, 특성을 적용 하는 등의 다양 한 방법으로 코드 분석 경고를 표시 하지 않을 수 있습니다 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> .</span><span class="sxs-lookup"><span data-stu-id="79674-102">There are various ways to suppress a code analysis warning, including disabling the rule for the project, using a preprocessor directive to disable it for a specific line of code, or by applying the <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> attribute.</span></span> <span data-ttu-id="79674-103">자세한 내용은 [코드 분석 경고를 표시 하지 않는 방법](../../docs/fundamentals/code-analysis/suppress-warnings.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="79674-103">For more information, see [How to suppress code analysis warnings](../../docs/fundamentals/code-analysis/suppress-warnings.md).</span></span>
