@@ -3,12 +3,12 @@ title: LINQ 쿼리에 대한 데이터 소스 활성화
 description: 클라이언트가 데이터 원본을 쉽게 쿼리할 수 있도록 C#에서 LINQ를 확장하여 모든 데이터 원본을 LINQ 패턴에서 쿼리할 수 있도록 하는 방법에 대해 알아봅니다.
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: d7d751c0584072e740b4e5292071e400a5020f82
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 84769e27e3f8b8d7ee30b79c219b180333337af9
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202619"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794837"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>LINQ 쿼리에 대한 데이터 소스 활성화
 
@@ -32,7 +32,7 @@ ms.locfileid: "91202619"
   
 ### <a name="remote-data"></a>원격 데이터  
 
- 원격 데이터 소스의 LINQ 쿼리를 사용 설정하는 가장 좋은 방법은 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 것입니다. 하지만 이 방식은 데이터 소스에서 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 같은 공급자를 확장하는 방식과 다릅니다. [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]과 같은 기존 LINQ 기술을 Visual Studio 2008에서 사용할 수 있는 다른 데이터 소스 형식으로 확장하는 공급자 모델은 없습니다.
+ 원격 데이터 소스의 LINQ 쿼리를 사용 설정하는 가장 좋은 방법은 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 것입니다. 하지만 이 방식은 데이터 소스에서 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 같은 공급자를 확장하는 방식과 다릅니다.
   
 ## <a name="iqueryable-linq-providers"></a>IQueryable LINQ 공급자  
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.topic: how-to
 ms.custom: contperf-fy21q2
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 824ce8a8cd8f0ef94495a85726331cd6cd024891
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 75f3b4d6fa8595734cf1310c08281c26c829fd84
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513013"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899024"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>읽기/쓰기 속성 선언 및 사용 방법(C# 프로그래밍 가이드)
 
@@ -26,27 +26,27 @@ ms.locfileid: "97513013"
   
 ## <a name="example"></a>예제  
 
- [!code-csharp[csProgGuideObjects#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#33)]  
+ [!code-csharp[properties#1](snippets/how-to-declare-and-use-read-write-properties/Program.cs#1)]
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
 
  이전 예제에서 `Name` 및 `Age` 속성은 [public](../../language-reference/keywords/public.md)이며, `get` 및 `set` 접근자를 모두 포함합니다. 이 경우 모든 개체가 이러한 속성을 읽고 쓸 수 있습니다. 그러나 때로는 접근자 중 하나를 제외하는 것이 좋습니다. 예를 들어 `set` 접근자를 생략하면 속성은 읽기 전용이 됩니다.  
   
- [!code-csharp[csProgGuideObjects#87](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#87)]  
+ [!code-csharp[properties#2](snippets/how-to-declare-and-use-read-write-properties/Program.cs#2)]
   
  또는 하나의 접근자를 공개적으로 노출하고 다른 접근자를 private 또는 protected로 설정할 수 있습니다. 자세한 내용은 [비대칭 접근자 접근성](./restricting-accessor-accessibility.md)을 참조하세요.  
   
  속성이 선언되면 클래스의 필드처럼 사용할 수 있습니다. 이 경우 다음 문과 같이 속성의 값을 가져오고 설정할 때 자연스러운 구문을 사용할 수 있습니다.  
   
- [!code-csharp[csProgGuideObjects#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#35)]  
+ [!code-csharp[properties#3](snippets/how-to-declare-and-use-read-write-properties/Program.cs#3)]
   
  속성 `set` 메서드에 특수 `value` 변수를 사용할 수 있습니다. 이 변수에는 사용자가 지정한 값이 포함됩니다. 예를 들면 다음과 같습니다.  
   
- [!code-csharp[csProgGuideObjects#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#36)]  
+ [!code-csharp[properties#4](snippets/how-to-declare-and-use-read-write-properties/Program.cs#4)]
   
  `Person` 개체의 `Age` 속성을 증가하기 위한 정리된 구문은 다음과 같습니다.  
   
- [!code-csharp[csProgGuideObjects#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#37)]  
+ [!code-csharp[properties#5](snippets/how-to-declare-and-use-read-write-properties/Program.cs#5)]
   
  개별 `set` 및 `get` 메서드를 사용하여 속성을 모델링한 경우 동등한 코드가 다음과 같이 표시될 수 있습니다.  
   
@@ -56,7 +56,7 @@ person.SetAge(person.GetAge() + 1);
   
  다음 예제에서는 `ToString` 메서드가 재정의되었습니다.  
   
- [!code-csharp[csProgGuideObjects#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#38)]  
+ [!code-csharp[properties#6](snippets/how-to-declare-and-use-read-write-properties/Program.cs#6)]
   
  `ToString`이 프로그램에서 명시적으로 사용되지 않고 기본적으로 `WriteLine` 호출에 의해 호출됩니다.  
   

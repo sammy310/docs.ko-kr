@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.topic: how-to
 ms.custom: contperf-fy21q2
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-ms.openlocfilehash: dfc702bfe183b3712b20c64f9e82d2d3c3edd6d5
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: db26b26ebcc51b57fdbe58ddaf92e5019cb69659
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512374"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899388"
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>복사 생성자를 작성하는 방법(C# 프로그래밍 가이드)
 
@@ -23,7 +23,7 @@ C#에서는 개체에 대한 복사 생성자를 제공하지 않지만 직접 �
 
  다음 예제에서 `Person`[클래스](../../language-reference/keywords/class.md)는 `Person` 인스턴스를 해당 인수로 사용하는 복사 생성자를 정의합니다. 인수의 속성 값이 `Person`의 새 인스턴스 속성에 할당됩니다. 코드에는 복사하려는 인스턴스의 `Name` 및 `Age` 속성을 클래스의 인스턴스 생성자에 보내는 대체 복사 생성자가 포함되어 있습니다.  
   
- [!code-csharp[csProgGuideObjects#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#16)]  
+ [!code-csharp[CopyConstructor](snippets/how-to-write-a-copy-constructor/Program.cs)]
   
 ## <a name="see-also"></a>참고 항목
 

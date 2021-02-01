@@ -6,18 +6,18 @@ helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: c6048424128b462bfc56d9c7c3cf8f75cca9298d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 980a638fbe6250b3d47a3effc7cbad5ec57fbcad
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91159347"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899404"
 ---
 # <a name="private-constructors-c-programming-guide"></a>전용 생성자(C# 프로그래밍 가이드)
 
 전용 생성자는 특수 인스턴스 생성자입니다. 일반적으로 정적 멤버만 포함하는 클래스에서 사용됩니다. 클래스에 하나 이상의 private 생성자가 있고 public 생성자가 없는 경우 중첩 클래스를 제외한 다른 클래스는 이 클래스의 인스턴스를 만들 수 없습니다. 예를 들어:  
   
- [!code-csharp[csProgGuideObjects#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#11)]  
+ [!code-csharp[ClassWithPrivateConstructorExample#1](snippets/private-constructors/Program.cs#1)]
   
  빈 생성자를 선언하면 매개 변수 없는 생성자가 자동으로 생성되지 않습니다. 액세스 한정자를 생성자와 함께 사용하지 않는 경우 기본적으로 여전히 private입니다. 그러나 일반적으로 [private](../../language-reference/keywords/private.md) 한정자는 명시적으로 사용되어 클래스를 인스턴스화할 수 없음을 명확하게 합니다.  
   
@@ -27,11 +27,11 @@ ms.locfileid: "91159347"
 
  다음은 private 생성자를 사용하는 클래스의 예입니다.  
   
- [!code-csharp[csProgGuideObjects#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#12)]  
+ [!code-csharp[CounterClassWithPrivateConstructor#2](snippets/private-constructors/Program.cs#2)]
   
  예제에서 다음 문의 주석 처리를 제거하는 경우 보호 수준 때문에 생성자에 액세스할 수 없어 오류가 생성됩니다.  
   
- [!code-csharp[csProgGuideObjects#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#13)]  
+ [!code-csharp[ErrorInstantiatingUsingPrivateConstructor#13](snippets/private-constructors/Program.cs#3)]
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
