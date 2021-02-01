@@ -1,27 +1,27 @@
 ---
 title: 호환성이 손상되는 변경의 형식
-description: .Net Core가 .NET 버전에서 개발자에 대한 호환성을 유지하는 방법 및 호환성이 손상되는 변경으로 간주되는 변경 사항 유형을 알아보세요.
-ms.date: 06/10/2019
-ms.openlocfilehash: bc93316141ae99d8cfedc5e6d88a9e91216f9c6e
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+description: .NET이 .NET 버전에서 개발자에 대한 호환성을 유지하는 방법 및 호환성이 손상되는 변경으로 간주되는 변경 사항 유형을 알아봅니다.
+ms.date: 01/28/2021
+ms.openlocfilehash: d539a82b21abc4df8d726673ef728020f36551bf
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415747"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216040"
 ---
 # <a name="changes-that-affect-compatibility"></a>호환성에 영향을 미치는 변경 사항
 
-지금까지 .NET은 버전 간은 물론 .NET 버전 전체에서 높은 수준의 호환성을 유지해 왔습니다. 이러한 노력은 .NET Core에서도 그대로 이어졌습니다. .NET Core는 .NET Framework와 독립적인 새로운 기술로 간주될 수 있지만, 다음 두 가지 주요 요인으로 인해 .NET Framework에서 .NET Core를 완전히 분리하기는 어렵습니다.
+지금까지 .NET은 버전 간은 물론 .NET 구현 전체에서 높은 수준의 호환성을 유지해 왔습니다. .NET 5(및 .NET Core) 이상 버전은 .NET Framework에 비해 새로운 기술로 간주될 수 있지만 다음 두 가지 주요 요인으로 인해 .NET Framework에서 이러한 .NET 구현을 완전히 분리하기는 어렵습니다.
 
 - 많은 개발자가 원래 .NET Framework 애플리케이션을 개발했거나 계속 개발하고 있습니다. 이러한 개발자는 .NET 구현 전체에서 일관된 동작을 기대합니다.
 
-- .NET Standard 라이브러리 프로젝트를 사용하면 개발자가 .NET Core와 .NET Framework에서 공유하는 공통 API를 대상으로 하는 라이브러리를 만들 수 있습니다. 개발자는 .NET Core 애플리케이션에서 사용되는 라이브러리가 .NET Framework 애플리케이션에서 사용되는 동일한 라이브러리와 똑같이 동작할 것으로 기대합니다.
+- .NET Standard 라이브러리 프로젝트를 사용하면 개발자가 .NET Framework와 .NET 5(및 .NET Core) 이상 버전에서 공유하는 공통 API를 대상으로 하는 라이브러리를 만들 수 있습니다. 개발자는 .NET 5 애플리케이션에서 사용되는 라이브러리가 .NET Framework 애플리케이션에서 사용되는 동일한 라이브러리와 똑같이 동작할 것으로 기대합니다.
 
-.NET 구현 전체의 호환성과 더불어, 개발자는 .NET Core 버전 전체에서 높은 수준의 호환성을 기대합니다. 특히, 이전 버전의 .NET Core용으로 작성된 코드가 최신 .NET Core 버전에서 원활하게 실행되어야 합니다. 사실 대부분의 개발자는 새로 릴리스된 .NET Core 버전의 새 API가 해당 API를 도입한 시험판 버전과도 호환되어야 한다고 기대합니다.
+개발자는 .NET 구현 전체의 호환성과 함께 .NET의 특정 구현 버전 전체에서 높은 수준의 호환성을 기대합니다. 특히 이전 버전의 .NET Core용으로 작성된 코드가 .NET 5 또는 이상 버전에서 원활하게 실행되어야 합니다. 실제로 대부분의 개발자는 새로 릴리스된 .NET 버전의 새 API가 해당 API를 도입한 시험판 버전과도 호환되어야 한다고 기대합니다.
 
 이 문서에서는 호환성에 영향을 주는 변경 내용과 .NET 팀이 각 변경 유형을 평가하는 방식에 대해 간략하게 설명합니다. .NET 팀이 호환성이 손상되는 가능한 변경에 접근하는 방법을 이해하는 것은 [기존 .NET API](https://github.com/dotnet/runtime)의 동작을 수정하는 끌어오기 요청을 여는 개발자에게 특히 유용합니다.
 
-다음 섹션에서는 .NET Core API의 변경 범주 및 애플리케이션 호환성에 미치는 영향을 설명합니다. 변경 내용은 허용 ✔️ 또는 허용되지 않음 ❌으로 적용되고, 이전 동작이 얼마나 예측 가능하고 명백하며 일관성이 있었는지 ❓에 대한 판단과 평가가 필요합니다.
+다음 섹션에서는 .NET API의 변경 범주 및 애플리케이션 호환성에 미치는 영향을 설명합니다. 변경 내용은 허용 ✔️ 또는 허용되지 않음 ❌으로 적용되고, 이전 동작이 얼마나 예측 가능하고 명백하며 일관성이 있었는지 ❓에 대한 판단과 평가가 필요합니다.
 
 > [!NOTE]
 >
@@ -52,7 +52,7 @@ ms.locfileid: "85415747"
 
   `readonly struct` 형식을 `struct` 형식으로 변경할 수는 없습니다.
 
-- ✔️ **허용: *액세스할 수 있는*(공용 또는 보호된) 생성자**가 없는 경우 형식에 [봉인된](../../csharp/language-reference/keywords/sealed.md) 또는 [추상](../../csharp/language-reference/keywords/abstract.md) 키워드 추가
+- ✔️ **허용: *액세스할 수 있는*(공용 또는 보호된) 생성자** 가 없는 경우 형식에 [봉인된](../../csharp/language-reference/keywords/sealed.md) 또는 [추상](../../csharp/language-reference/keywords/abstract.md) 키워드 추가
 
 - ✔️ **허용: 형식의 표시 유형 확장**
 
@@ -76,7 +76,7 @@ ms.locfileid: "85415747"
 
   인터페이스 제거 규칙의 한 가지 예외로, 제거한 인터페이스에서 파생되는 인터페이스 구현을 추가할 수 있습니다. 예를 들어 이제 <xref:System.IDisposable>을 구현하는 <xref:System.ComponentModel.IComponent>를 형식 또는 인터페이스가 구현하는 경우 <xref:System.IDisposable>을 제거할 수 있습니다.
 
-- ❌ **허용 안 함: `readonly struct` 형식을 [구조체 ](../../csharp/language-reference/builtin-types/struct.md) 형식으로 변경**
+- ❌ **허용 안 함: `readonly struct` 형식을 [구조체](../../csharp/language-reference/builtin-types/struct.md) 형식으로 변경**
 
   `struct` 형식은 `readonly struct` 형식으로 변경할 수 있습니다.
 
