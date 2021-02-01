@@ -197,7 +197,7 @@ items:
                 href: ../core/tools/sdk-errors/netsdk1079.md
               - name: NETSDK1145
                 href: ../core/tools/sdk-errors/netsdk1145.md
-      - name: .NET Core CLI
+      - name: .NET CLI
         items:
           - name: 개요
             displayName: '.net cli,command-line interface,cli,tool'
@@ -439,7 +439,7 @@ items:
                 href: ../fundamentals/diagnostics/runtime-type-events.md
           - name: 컨테이너에서 진단 정보 수집
             href: ../core/diagnostics/diagnostics-in-containers.md
-          - name: .NET Core CLI 전역 도구
+          - name: .NET CLI 전역 도구
             items:
               - name: dotnet-counters
                 href: ../core/diagnostics/dotnet-counters.md
@@ -453,7 +453,7 @@ items:
                 href: ../core/diagnostics/dotnet-symbol.md
               - name: dotnet-sos
                 href: ../core/diagnostics/dotnet-sos.md
-          - name: .NET Core 진단 자습서
+          - name: .NET 진단 자습서
             items:
               - name: PerfCollect를 사용하여 Linux에서 성능 추적 수집
                 href: ../core/diagnostics/trace-perfcollect-lttng.md
@@ -478,6 +478,8 @@ items:
                 href: code-analysis/configuration-options.md
               - name: 구성 파일
                 href: code-analysis/configuration-files.md
+              - name: 경고를 표시하지 않는 방법
+                href: code-analysis/suppress-warnings.md
               - name: 코드 품질 규칙
                 items:
                   - name: 규칙 옵션
@@ -1296,15 +1298,15 @@ items:
                 href: ../core/dependency-loading/loading-unmanaged.md
           - name: 자습서
             items:
-              - name: 플러그 인을 사용하여 .NET Core 애플리케이션 만들기
+              - name: 플러그 인을 사용하여 .NET 애플리케이션 만들기
                 href: ../core/tutorials/creating-app-with-plugin-support.md
-              - name: .NET Core에서 어셈블리 언로드 기능을 사용하고 디버그하는 방법
+              - name: .NET에서 어셈블리 언로드 기능을 사용하고 디버그하는 방법
                 href: ../core/../standard/assembly/unloadability.md
       - name: 버전 관리
         items:
           - name: 개요
             href: ../core/versions/index.md
-          - name: .NET Core 버전 선택
+          - name: .NET 버전 선택
             href: ../core/versions/selection.md
       - name: 런타임 구성
         items:
@@ -1354,7 +1356,7 @@ items:
         items:
           - name: .NET 및 Docker 소개
             href: ../core/docker/introduction.md
-          - name: .NET Core 앱 컨테이너화
+          - name: .NET 앱 컨테이너화
             href: ../core/docker/build-container.md
           - name: Visual Studio의 컨테이너 도구
             href: /visualstudio/containers/overview
@@ -1836,6 +1838,8 @@ items:
             displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
           - name: 옵션 패턴
             href: ../core/extensions/options.md
+          - name: 라이브러리 작성자를 위한 옵션 패턴 지침
+            href: ../core/extensions/options-library-authors.md
       - name: 로깅
         items:
           - name: 개요
@@ -2054,7 +2058,7 @@ items:
         href: ../core/testing/unit-testing-code-coverage.md
       - name: 게시된 출력 단위 테스트
         href: ../core/testing/unit-testing-published-output.md
-      - name: Visual Studio를 사용하여 .NET Core 프로젝트 라이브 단위 테스트
+      - name: Visual Studio를 사용하여 .NET 프로젝트 라이브 단위 테스트
         href: /visualstudio/test/live-unit-testing-start
   - name: 보안
     href: ../standard/security/
@@ -2133,9 +2137,9 @@ items:
             href: ../standard/native-interop/best-practices.md
           - name: 문자 집합 및 마샬링
             href: ../standard/native-interop/charset.md
-          - name: COM에 .NET Core 구성 요소 공개
+          - name: COM에 .NET 구성 요소 공개
             href: ../core/native-interop/expose-components-to-com.md
-          - name: 네이티브 코드에서 .NET Core 호스팅
+          - name: 네이티브 코드에서 .NET 호스트
             href: ../core/tutorials/netcore-hosting.md
           - name: COM interop
             items:
@@ -2157,7 +2161,7 @@ items:
             href: ../standard/native-interop/apply-interop-attributes.md
           - name: 예외
             href: ../standard/native-interop/exceptions-interoperability.md
-      - name: .NET Core 배포 패키징
+      - name: .NET 배포 패키징
         href: ../core/distribution-packaging.md
       - name: 전역화 및 지역화
         href: ../standard/globalization-localization/
@@ -2295,7 +2299,7 @@ items:
             href: ../core/porting/third-party-deps.md
           - name: 포트 라이브러리
             href: ../core/porting/libraries.md
-          - name: .NET Core 프로젝트 구성
+          - name: .NET에 대한 프로젝트 구성
             href: ../core/porting/project-structure.md
           - name: 사용할 수 없는 기술
             href: ../core/porting/net-framework-tech-unavailable.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
