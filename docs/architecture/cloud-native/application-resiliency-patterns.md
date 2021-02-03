@@ -2,23 +2,23 @@
 title: 애플리케이션 복원력 패턴
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 응용 프로그램 복원 력 패턴
 author: robvet
-ms.date: 05/13/2020
-ms.openlocfilehash: e81d6e1d6b95cf0053de3ba557068ff458a59dc9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 9a59a7d93b61b0dea11680f6caf0bd3b68a0f853
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161154"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505923"
 ---
 # <a name="application-resiliency-patterns"></a>애플리케이션 복원력 패턴
 
 첫 번째 방어 줄은 응용 프로그램 복원 력입니다.
 
-사용자 고유의 복원 력 프레임 워크를 작성 하는 데 상당한 시간을 투자할 수 있지만 이러한 제품은 이미 존재 합니다. [이는 개발자가 흐름](http://www.thepollyproject.org/) 및 스레드로부터 안전한 방식으로 복원 력을 표현할 수 있도록 하는 포괄적인 .net 복원 력 및 일시적인 오류 처리 라이브러리입니다. 응용 프로그램은 .NET Framework 또는 .NET Core를 사용 하 여 빌드된 응용 프로그램을 대상으로 합니다. 다음 표에서는 기능을 제공 하는 `policies` 라이브러리에서 사용할 수 있는 복원 력 기능에 대해 설명 합니다. 개별적으로 적용 하거나 그룹화 할 수 있습니다.
+사용자 고유의 복원 력 프레임 워크를 작성 하는 데 상당한 시간을 투자할 수 있지만 이러한 제품은 이미 존재 합니다. [이는 개발자가 흐름](http://www.thepollyproject.org/) 및 스레드로부터 안전한 방식으로 복원 력을 표현할 수 있도록 하는 포괄적인 .net 복원 력 및 일시적인 오류 처리 라이브러리입니다. 응용 프로그램은 .NET Framework 또는 .NET 5로 빌드된 응용 프로그램을 대상으로 합니다. 다음 표에서는 기능을 제공 하는 `policies` 라이브러리에서 사용할 수 있는 복원 력 기능에 대해 설명 합니다. 개별적으로 적용 하거나 그룹화 할 수 있습니다.
 
 | 정책 | 환경 |
 | :-------- | :-------- |
-| 재시도 | 지정 된 작업에 대 한 재시도 작업을 구성 합니다. |
+| 다시 시도 | 지정 된 작업에 대 한 재시도 작업을 구성 합니다. |
 | 회로 차단기 | 오류가 구성 된 임계값을 초과 하는 경우 미리 정의 된 기간 동안 요청 된 작업을 차단 합니다. |
 | 제한 시간 | 호출자가 응답을 기다릴 수 있는 기간에 제한을 배치 합니다. |
 | 격벽 | 리소스를 swamping 하는 실패 한 호출을 방지 하기 위해 작업을 고정 크기 리소스 풀로 제한 합니다. |
@@ -38,7 +38,7 @@ ms.locfileid: "91161154"
 
 질문: 403-금지 된 HTTP 상태 코드를 다시 시도 하나요? 아니요. 여기에서 시스템이 제대로 작동 하지만 요청 된 작업을 수행할 수 있는 권한이 호출자에 게 알려 줍니다. 오류로 인해 발생 하는 작업만 다시 시도해 야 합니다.
 
-1 장에서 권장 한 대로 클라우드 네이티브 응용 프로그램을 구성 하는 Microsoft 개발자는 .NET Core 플랫폼을 대상으로 해야 합니다. 버전 2.1에는 URL 기반 리소스와 상호 작용 하기 위한 HTTP 클라이언트 인스턴스를 만들기 위한 [Httpclientfactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore) 라이브러리가 도입 되었습니다. 원래 HTTPClient 클래스를 대체 하는 팩터리 클래스는 향상 된 많은 기능을 지원 하며, 그 중 하나는이 기능을 사용 하는 것 [이 좋습니다.](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md) 이를 통해 응용 프로그램 시작 클래스에서 복원 력 정책을 쉽게 정의 하 여 부분 오류 및 연결 문제를 처리할 수 있습니다.
+1 장에서 권장 한 대로 클라우드 네이티브 응용 프로그램을 구성 하는 Microsoft 개발자는 .NET 플랫폼을 대상으로 해야 합니다. 버전 2.1에는 URL 기반 리소스와 상호 작용 하기 위한 HTTP 클라이언트 인스턴스를 만들기 위한 [Httpclientfactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore) 라이브러리가 도입 되었습니다. 원래 HTTPClient 클래스를 대체 하는 팩터리 클래스는 향상 된 많은 기능을 지원 하며, 그 중 하나는이 기능을 사용 하는 것 [이 좋습니다.](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md) 이를 통해 응용 프로그램 시작 클래스에서 복원 력 정책을 쉽게 정의 하 여 부분 오류 및 연결 문제를 처리할 수 있습니다.
 
 다음으로 다시 시도 및 회로 차단기 패턴을 살펴보겠습니다.
 
@@ -82,7 +82,7 @@ ms.locfileid: "91161154"
 
 ## <a name="testing-for-resiliency"></a>복원력 테스트
 
-단위 테스트, 통합 테스트 등을 실행 하 여 응용 프로그램 기능을 테스트 하는 것과 동일한 방식으로 복원 력 테스트를 수행할 수 없습니다. 그 대신, 간헐적으로 발생하는 오류 조건 하에서 엔드투엔드 워크로드가 수행되는 방식을 테스트해야 합니다. 예: 충돌 하는 프로세스, 만료 된 인증서로 오류 삽입, 종속 서비스를 사용할 수 없도록 설정 등 혼란 스러운 [원숭이](https://github.com/Netflix/chaosmonkey) 와 같은 프레임 워크는 이러한 비정상 테스트에 사용할 수 있습니다.
+단위 테스트, 통합 테스트 등을 실행 하 여 응용 프로그램 기능을 테스트 하는 것과 동일한 방식으로 복원 력 테스트를 수행할 수 없습니다. 대신, 간헐적으로 발생 하는 오류 조건에서 종단 간 작업을 수행 하는 방식을 테스트 해야 합니다. 예: 충돌 하는 프로세스, 만료 된 인증서로 오류 삽입, 종속 서비스를 사용할 수 없도록 설정 등 혼란 스러운 [원숭이](https://github.com/Netflix/chaosmonkey) 와 같은 프레임 워크는 이러한 비정상 테스트에 사용할 수 있습니다.
 
 응용 프로그램 복원 력을 통해 문제가 있는 요청 된 작업을 처리 해야 합니다. 그러나이는 스토리의 절반에 불과합니다. 다음으로, Azure 클라우드에서 사용할 수 있는 복원 력 기능을 다룹니다.
 

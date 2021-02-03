@@ -1,13 +1,13 @@
 ---
 title: Azure에 eShopOnContainers 배포
 description: Azure Kubernetes Service, 투구 및 DevSpaces를 사용 하 여 eShopOnContainers 응용 프로그램을 배포 합니다.
-ms.date: 05/13/2020
-ms.openlocfilehash: b3871dae2b414709bfe24b6f7bdbf06de1689d12
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 8fc1343eac7f03c984c3a279d5a8c7908e37f0d1
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160725"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505793"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>Azure에 eShopOnContainers 배포
 
@@ -15,9 +15,9 @@ EShopOnContainers 응용 프로그램은 다양 한 Azure 플랫폼에 배포할
 
 ## <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
-AKS에서 eShop를 호스트 하기 위해 첫 번째 단계는 AKS 클러스터를 만드는 것입니다. 이렇게 하려면 Azure Portal를 사용할 수 있습니다. 그러면 필요한 단계를 안내 합니다. Azure CLI에서 클러스터를 만들어 RBAC (역할 기반 Access Control) 및 응용 프로그램 라우팅을 사용 하도록 설정할 수도 있습니다. EShopOnContainers ' 설명서에서는 고유한 AKS 클러스터를 만드는 단계에 대해 자세히 설명 합니다. 만든 후에는 Kubernetes 대시보드에서 클러스터에 액세스 하 고 관리할 수 있습니다.
+AKS에서 eShop를 호스트 하기 위해 첫 번째 단계는 AKS 클러스터를 만드는 것입니다. 이렇게 하려면 Azure Portal를 사용할 수 있습니다. 그러면 필요한 단계를 안내 합니다. Azure CLI에서 클러스터를 만들어 RBAC (Role-Based Access Control) 및 응용 프로그램 라우팅을 사용 하도록 설정할 수도 있습니다. EShopOnContainers ' 설명서에서는 고유한 AKS 클러스터를 만드는 단계에 대해 자세히 설명 합니다. 만든 후에는 Kubernetes 대시보드에서 클러스터에 액세스 하 고 관리할 수 있습니다.
 
-이제 투구와 Tiller를 활용 하 여 클러스터에 eShop 응용 프로그램을 배포할 수 있습니다.
+이제 투구를 사용 하 여 클러스터에 eShop 응용 프로그램을 배포할 수 있습니다.
 
 ## <a name="deploying-to-azure-kubernetes-service-using-helm"></a>투구를 사용 하 여 Azure Kubernetes Service에 배포
 
@@ -62,7 +62,7 @@ spec:
 
 > 투구 버전 3은 공식적으로 Tiller 서버 구성 요소에 대 한 필요성을 제거 합니다. 이 개선 사항에 대 한 자세한 내용은 [여기](https://medium.com/better-programming/why-is-tiller-missing-in-helm-3-2347c446714)를 참조 하세요.
 
-## <a name="azure-dev-spaces"></a>Azure Dev Spaces
+## <a name="azure-dev-spaces"></a>Azure Dev 공간
 
 클라우드 네이티브 응용 프로그램을 신속 하 게 확장 하 여 큰 계산 리소스를 실행 해야 할 수 있습니다. 이러한 시나리오에서는 전체 응용 프로그램을 개발 컴퓨터 (특히 랩톱)에서 호스팅할 수 없습니다. Azure Dev Spaces AKS를 사용 하 여이 문제를 해결 하도록 설계 되었습니다. 개발자는이를 통해 AKS development 클러스터에 응용 프로그램의 나머지 부분을 호스트 하는 동안 로컬 버전의 서비스를 사용할 수 있습니다.
 

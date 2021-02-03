@@ -1,13 +1,13 @@
 ---
 title: Azure Monitor
 description: Azure Monitor를 사용 하 여 시스템에 대 한 가시성을 확보 합니다.
-ms.date: 07/05/2020
-ms.openlocfilehash: 65e17740dba49c3ac3f6e13462897b5342da6710
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: a93b71db642e05a830b20b80d8387c24d35ea8c1
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160972"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506177"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
@@ -52,7 +52,7 @@ StormEvents
 Azure Monitor에서 정보를 노출 하는 데 사용할 수 있는 여러 가지 대시보드 기술이 있습니다. 아마도 Application Insights에서 쿼리를 실행 하 고 [데이터를 차트에 그리는](/azure/azure-monitor/learn/tutorial-app-dashboards)것이 가장 간단 합니다.
 
 ![기본 Azure 대시보드 ](./media/azure_dashboard.png)
- **그림 7-14**에 포함 된 Application Insights 차트의 예입니다. 기본 Azure 대시보드에 포함 된 Application Insights 차트의 예입니다.
+ **그림 7-14** 에 포함 된 Application Insights 차트의 예입니다. 기본 Azure 대시보드에 포함 된 Application Insights 차트의 예입니다.
 
 그런 다음 이러한 차트를 대시보드 기능을 사용 하 여 적절 하 게 Azure Portal에 포함할 수 있습니다. 여러 계층으로 드릴 다운할 수 있는 것과 같이 이루기 요구 사항이 더 많은 사용자의 경우 [Power BI](https://powerbi.microsoft.com/)Azure Monitor 데이터를 사용할 수 있습니다. Power BI은 다양 한 데이터 원본의 데이터를 집계할 수 있는 업계 최고의 엔터프라이즈 클래스, 비즈니스 인텔리전스 도구입니다.
 
@@ -74,7 +74,7 @@ Azure Monitor에서 정보를 노출 하는 데 사용할 수 있는 여러 가�
 
 경고가 일반적인 원인으로 식별 되므로 경고를 해결 하기 위해 수행 해야 하는 단계의 일반적인 원인에 대 한 세부 정보를 사용 하 여 경고를 향상 시킬 수 있습니다. 고성능 클라우드 네이티브 응용 프로그램 배포는 크기 집합에서 실패 한 노드 제거 또는 자동 크기 조정 작업 트리거 등의 작업을 수행 하는 자동 복구 작업을 시작 하도록 선택할 수 있습니다. 결국 오전 2 시에 호출 직원의 절전 모드를 해제 하 여 라이브 사이트 문제를 해결 하는 데 더 이상 필요 하지 않을 수 있습니다. 시스템은 다음 날에 도착할 때까지 보완 하거나 최소 limp 수 있습니다.
 
-Azure Monitor는 자동으로 기계 학습을 활용 하 여 배포 된 응용 프로그램의 일반 운영 매개 변수를 이해 합니다. 이렇게 하면 일반적인 매개 변수 외부에서 작동 하는 서비스를 검색할 수 있습니다. 예를 들어 사이트의 일반적인 평일 트래픽은 분당 1만 요청 일 수 있습니다. 그런 다음 지정 된 주에 갑자기 요청 수가 분당 매우 이례적인 2만 요청에 도달 합니다. [스마트 감지](/azure/azure-monitor/app/proactive-diagnostics) 는 일반에서이 편차를 확인 하 고 경고를 트리거합니다. 동시에 추세 분석은 트래픽 부하가 예상 될 때 가양성 발생을 방지할 수 있을 만큼 지능적입니다.
+Azure Monitor는 자동으로 기계 학습을 활용 하 여 배포 된 응용 프로그램의 일반 운영 매개 변수를 이해 합니다. 이 접근 방식을 사용 하면 일반적인 매개 변수 외부에서 작동 하는 서비스를 검색할 수 있습니다. 예를 들어 사이트의 일반적인 평일 트래픽은 분당 1만 요청 일 수 있습니다. 그런 다음 지정 된 주에 갑자기 요청 수가 분당 매우 이례적인 2만 요청에 도달 합니다. [스마트 감지](/azure/azure-monitor/app/proactive-diagnostics) 는 일반에서이 편차를 확인 하 고 경고를 트리거합니다. 동시에 추세 분석은 트래픽 부하가 예상 될 때 가양성 발생을 방지할 수 있을 만큼 지능적입니다.
 
 ## <a name="references"></a>참조
 

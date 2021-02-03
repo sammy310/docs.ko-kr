@@ -1,13 +1,13 @@
 ---
 title: 클라우드 전용 앱에 대 한 Azure 보안
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 클라우드 네이티브 앱에 대 한 Azure 보안
-ms.date: 12/01/2020
-ms.openlocfilehash: 5e541606c762ea192ab8767e78e9b7346b3ec9c1
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.date: 01/19/2021
+ms.openlocfilehash: 1e2dce97a43479d49aecf220893efcc19bb00a8c
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96509821"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505884"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>클라우드 전용 앱에 대 한 Azure 보안
 
@@ -72,7 +72,7 @@ Azure 자체는 [Microsoft 내 해커 팀](https://azure.microsoft.com/resources
 
 ## <a name="built-in-security"></a>기본 제공 보안
 
-Azure는 대다수 사용자에 대 한 유용성 및 보안을 균형 있게 설계 되었습니다. 여러 사용자가 서로 다른 보안 요구 사항을 가지 므로 클라우드 보안에 대 한 접근 방식을 세밀 하 게 조정 해야 합니다. Microsoft는 보안 [센터](https://azure.microsoft.com/support/trust-center/)에 상당한 보안 정보를 게시 합니다. 이 리소스는 기본 제공 공격 완화 기술의 작동 방식을 이해 하는 데 관심이 있는 전문가를 위한 첫 번째 중지 여야 합니다.
+Azure는 대부분의 사용자에 대 한 유용성 및 보안을 균형 있게 설계 되었습니다. 여러 사용자가 서로 다른 보안 요구 사항을 가지 므로 클라우드 보안에 대 한 접근 방식을 세밀 하 게 조정 해야 합니다. Microsoft는 보안 [센터](https://azure.microsoft.com/support/trust-center/)에 상당한 보안 정보를 게시 합니다. 이 리소스는 기본 제공 공격 완화 기술의 작동 방식을 이해 하는 데 관심이 있는 전문가를 위한 첫 번째 중지 여야 합니다.
 
 Azure Portal 내에서 [Azure Advisor](https://azure.microsoft.com/services/advisor/) 은 계속 해 서 환경을 검색 하 고 권장 사항을 적용 하는 시스템입니다. 이러한 권장 사항 중 일부는 사용자의 비용을 절감할 수 있도록 설계 되었지만 다른 사용자는 저장소 컨테이너를 전 세계에 공개 하 고 Virtual Network으로 보호 하지 않는 등 안전 하지 않은 구성을 식별 하도록 설계 되었습니다.
 
@@ -117,7 +117,7 @@ RBAC의 첫 번째 구성 요소는 보안 주체입니다. 보안 주체는 사
 - 서비스 사용자-서비스 또는 응용 프로그램을 실행 하는 보안 id입니다.
 - 관리 id-Azure에서 관리 하는 Azure Active Directory id입니다. 관리 id는 Azure 서비스 인증을 위해 자격 증명을 관리 하는 클라우드 응용 프로그램을 개발할 때 일반적으로 사용 됩니다.
 
-보안 주체를 대부분의 리소스에 적용할 수 있습니다. 즉, Azure Kubernetes 내에서 실행 되는 컨테이너에 보안 주체를 할당 하 여 Key Vault에 저장 된 비밀에 액세스할 수 있습니다. Azure 함수는 호출 하는 사용자에 대 한 JWT의 유효성을 검사 하기 위해 Active Directory 인스턴스와 통신할 수 있는 권한을 사용할 수 있습니다. 서비스 주체를 사용 하 여 서비스를 사용 하도록 설정한 후에는 역할 및 범위를 사용 하 여 세부적으로 권한을 관리할 수 있습니다.
+보안 주체를 대부분의 리소스에 적용할 수 있습니다. 이 측면에서는 Azure Kubernetes 내에서 실행 되는 컨테이너에 보안 주체를 할당 하 여 Key Vault에 저장 된 비밀에 액세스할 수 있음을 의미 합니다. Azure 함수는 호출 하는 사용자에 대 한 JWT의 유효성을 검사 하기 위해 Active Directory 인스턴스와 통신할 수 있는 권한을 사용할 수 있습니다. 서비스 주체를 사용 하 여 서비스를 사용 하도록 설정한 후에는 역할 및 범위를 사용 하 여 세부적으로 권한을 관리할 수 있습니다.
 
 ## <a name="roles"></a>역할
 

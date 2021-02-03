@@ -5,13 +5,13 @@ author: robvet
 no-loc:
 - Blazor
 - Blazor WebAssembly
-ms.date: 05/13/2020
-ms.openlocfilehash: 9ed6906bd388a1ddef7f97bbaac001b4274853f9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 8667f2d3a7a19aa6dffdd8ce8bef103eab5cc54f
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158086"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505702"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -61,7 +61,7 @@ gRPC는 .NET Core 3.0 SDK 이상에 통합 되어 있습니다. 지원 되는 �
 - Visual Studio Code
 - dotnet CLI
 
-SDK에는 끝점 라우팅, 기본 제공 IoC 및 로깅에 대 한 도구가 포함 되어 있습니다. 오픈 소스 Kestrel 웹 서버는 HTTP/2 연결을 지원 합니다. 그림 4-20에는 gRPC 서비스에 대 한 기본 프로젝트를 스 캐 폴드 Visual Studio 2019 템플릿이 나와 있습니다. .NET Core는 Windows, Linux 및 macOS를 완벽 하 게 지 원하는 방법에 유의 하세요.
+SDK에는 끝점 라우팅, 기본 제공 IoC 및 로깅에 대 한 도구가 포함 되어 있습니다. 오픈 소스 Kestrel 웹 서버는 HTTP/2 연결을 지원 합니다. 그림 4-20에는 gRPC 서비스에 대 한 기본 프로젝트를 스 캐 폴드 Visual Studio 2019 템플릿이 나와 있습니다. .NET이 Windows, Linux 및 macOS를 완전히 지 원하는 것을 확인 합니다.
 
 ![Visual Studio 2019의 gRPC 지원](./media/visual-studio-2019-grpc-template.png)
 
@@ -93,19 +93,19 @@ SDK에는 끝점 라우팅, 기본 제공 IoC 및 로깅에 대 한 도구가 �
 
 ## <a name="grpc-implementation"></a>gRPC 구현
 
-Microsoft의 마이크로 서비스 참조 아키텍처 인 [컨테이너의 eShop](https://github.com/dotnet-architecture/eShopOnContainers)는 .net Core 응용 프로그램에서 grpc 서비스를 구현 하는 방법을 보여 줍니다. 그림 4-22에서는 백 엔드 아키텍처를 제공 합니다.
+Microsoft의 마이크로 서비스 참조 아키텍처 인 [컨테이너의 eShop](https://github.com/dotnet-architecture/eShopOnContainers)는 .net 응용 프로그램에서 grpc 서비스를 구현 하는 방법을 보여 줍니다. 그림 4-22에서는 백 엔드 아키텍처를 제공 합니다.
 
 ![컨테이너의 eShop 백 엔드 아키텍처](./media/eshop-with-aggregators.png)
 
 **그림 4-22**. 컨테이너의 eShop 백 엔드 아키텍처
 
-위의 그림에서 eShop 여러 API 게이트웨이를 노출 하 여 bff ( [프런트 엔드 패턴](/azure/architecture/patterns/backends-for-frontends) )를 수용 하는 방법을 확인 합니다. 이 챕터의 앞부분에서 BFF 패턴에 대해 설명 했습니다. 웹 쇼핑 API 게이트웨이와 백 엔드 쇼핑 마이크로 서비스 사이에 있는 집계 마이크로 서비스 (회색)에 주의 하세요. 집계는 클라이언트에서 단일 요청을 수신 하 고, 다양 한 마이크로 서비스에 디스패치 하 고, 결과를 집계 하 고, 요청 클라이언트로 다시 보냅니다. 이러한 작업에는 일반적으로 즉각적인 응답을 생성 하기 위해 동기식 통신이 필요 합니다. EShop에서 집계의 백 엔드 호출은 그림 4-23에 표시 된 것 처럼 gRPC를 사용 하 여 수행 됩니다.
+위의 그림에서 eShop 여러 API 게이트웨이를 노출 하 여 bff ( [프런트 엔드 패턴](/azure/architecture/patterns/backends-for-frontends) )를 수용 하는 방법을 확인 합니다. 이 챕터의 앞부분에서 BFF 패턴에 대해 설명 했습니다. Web-Shopping API 게이트웨이와 백엔드 마이크로 서비스 사이에 있는 집계 마이크로 서비스 (회색)에 주의 하세요. 집계는 클라이언트에서 단일 요청을 수신 하 고, 다양 한 마이크로 서비스에 디스패치 하 고, 결과를 집계 하 고, 요청 클라이언트로 다시 보냅니다. 이러한 작업에는 일반적으로 즉각적인 응답을 생성 하기 위해 동기식 통신이 필요 합니다. EShop에서 집계의 백 엔드 호출은 그림 4-23에 표시 된 것 처럼 gRPC를 사용 하 여 수행 됩니다.
 
 ![컨테이너의 eShop의 gRPC](./media/grpc-implementation.png)
 
 **그림 4-23** 컨테이너의 eShop의 gRPC
 
-gRPC 통신에는 클라이언트 및 서버 구성 요소가 모두 필요 합니다. 위의 그림에서 쇼핑 집계가 gRPC 클라이언트를 구현 하는 방법을 확인 합니다. 클라이언트는 각에 gRPC 서버를 구현 하는 동기 gRPC 호출 (빨간색)을 백 엔드 마이크로 서비스에 만듭니다. 클라이언트와 서버 모두 .NET Core SDK에서 배관 된 기본 제공 gRPC를 활용 합니다. 클라이언트 쪽 *스텁은* 원격 grpc 호출을 호출 하는 통로를 제공 합니다. 서버 쪽 구성 요소는 사용자 지정 서비스 클래스가 상속 및 소비할 수 있는 gRPC 배관을 제공 합니다.
+gRPC 통신에는 클라이언트 및 서버 구성 요소가 모두 필요 합니다. 위의 그림에서 쇼핑 집계가 gRPC 클라이언트를 구현 하는 방법을 확인 합니다. 클라이언트는 각에 gRPC 서버를 구현 하는 동기 gRPC 호출 (빨간색)을 백 엔드 마이크로 서비스에 만듭니다. 클라이언트와 서버는 모두 .NET SDK에서 제공 되는 기본 제공 gRPC를 활용 합니다. 클라이언트 쪽 *스텁은* 원격 grpc 호출을 호출 하는 통로를 제공 합니다. 서버 쪽 구성 요소는 사용자 지정 서비스 클래스가 상속 및 소비할 수 있는 gRPC 배관을 제공 합니다.
 
 RESTful API 및 gRPC 통신을 모두 노출 하는 마이크로 서비스에는 트래픽을 관리 하는 여러 끝점이 필요 합니다. RESTful 호출 및 gRPC 호출에 대 한 HTTP 트래픽을 수신 대기 하는 끝점을 엽니다. Grpc 통신에 필요한 HTTP/2 프로토콜에 대해 gRPC 끝점을 구성 해야 합니다.
 

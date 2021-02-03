@@ -2,13 +2,13 @@
 title: 프런트 엔드 클라이언트 통신
 description: 프런트 엔드 클라이언트가 클라우드 네이티브 시스템과 통신 하는 방법 알아보기
 author: robvet
-ms.date: 05/13/2020
-ms.openlocfilehash: 147adb3d0375f8bf5dadf14e1237aa93e9e42908
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 089f55f8f6b9320fe552602eb40bb83be28f119b
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158112"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506242"
 ---
 # <a name="front-end-client-communication"></a>프런트 엔드 클라이언트 통신
 
@@ -37,7 +37,7 @@ ms.locfileid: "91158112"
 
 **그림 4-3.** API 게이트웨이 패턴
 
-위의 그림에서 API Gateway 서비스가 백 엔드 핵심 마이크로 서비스를 추상화 하는 방법을 확인 합니다. 웹 API로 구현 되는 *역방향 프록시*역할을 하 여 들어오는 트래픽을 내부 마이크로 서비스로 라우팅합니다.
+위의 그림에서 API Gateway 서비스가 백 엔드 핵심 마이크로 서비스를 추상화 하는 방법을 확인 합니다. 웹 API로 구현 되는 *역방향 프록시* 역할을 하 여 들어오는 트래픽을 내부 마이크로 서비스로 라우팅합니다.
 
 게이트웨이는 내부 서비스 분할 및 리팩터링의 클라이언트를 분리 합니다. 백 엔드 서비스를 변경 하는 경우 클라이언트를 중단 하지 않고 게이트웨이에서 해당 서비스를 수용 합니다. 또한 id, 캐싱, 복원 력, 계량, 제한과 같은 교차 절삭 문제에 대 한 첫 번째 방어선입니다. 이러한 교차 잘라내기 문제는 대부분 백 엔드 핵심 서비스에서 게이트웨이로 오프 로드 되어 백 엔드 서비스를 간소화할 수 있습니다.
 
@@ -55,7 +55,7 @@ API 게이트웨이를 간단 하 고 신속 하 게 유지 하기 위해 주의
 
 간단한 .NET 클라우드 네이티브 응용 프로그램의 경우 [Ocelot 게이트웨이](https://github.com/ThreeMammals/Ocelot)를 고려할 수 있습니다. Ocelot는 시스템에 대 한 진입점을 통합 해야 하는 .NET 마이크로 서비스에 대해 생성 된 오픈 소스 API 게이트웨이입니다. 간단 하 고 빠르게 확장 가능 합니다.
 
-모든 API 게이트웨이와 마찬가지로 기본 기능은 들어오는 HTTP 요청을 다운스트림 서비스에 전달 하는 것입니다. 또한 .NET Core 미들웨어 파이프라인에서 구성할 수 있는 다양 한 기능을 지원 합니다. 해당 기능 집합은 다음 표에 나와 있습니다.
+모든 API 게이트웨이와 마찬가지로 기본 기능은 들어오는 HTTP 요청을 다운스트림 서비스에 전달 하는 것입니다. 또한 .NET 미들웨어 파이프라인에서 구성할 수 있는 다양 한 기능을 지원 합니다. 해당 기능 집합은 다음 표에 나와 있습니다.
 
 |Ocelot 기능  | |
 | :-------- | :-------- |
@@ -64,7 +64,7 @@ API 게이트웨이를 간단 하 고 신속 하 게 유지 하기 위해 주의
 | 서비스 검색 (Consul 및 Eureka 포함) | 제한 |
 | 부하 분산 | 로깅, 추적 |
 | 캐싱 | 헤더/쿼리 문자열 변환 |
-| 상관 관계 통과 | 사용자 지정 미들웨어 |
+| 상관 관계 Pass-Through | 사용자 지정 미들웨어 |
 | 서비스 품질 | 다시 시도 정책 |
 
 각 Ocelot 게이트웨이는 JSON 구성 파일에서 업스트림 및 다운스트림 주소와 구성 가능한 기능을 지정 합니다. 클라이언트는 HTTP 요청을 Ocelot 게이트웨이로 보냅니다. 수신 되 면 Ocelot은 파이프라인을 통해 HttpRequest 개체를 전달 하 여 해당 구성에 지정 된 상태로 해당 개체를 조작 합니다. 파이프라인의 끝에서 Ocelot는 새 HTTPResponseObject를 만들고 다운스트림 서비스에 전달 합니다. 응답의 경우 Ocelot는 파이프라인을 반대로 되돌리고 응답을 클라이언트에 다시 보냅니다.
@@ -122,7 +122,7 @@ Azure API Management는 다음과 같은 [네 가지 계층](https://azure.micro
 
 개발자 계층은 비프로덕션 워크 로드 및 평가를 위한 것입니다. 다른 계층은 점차적으로 더 많은 기능을 제공 하 고 Sla (서비스 수준 계약)를 더 많이 제공 합니다. 프리미엄 계층은 [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview) 및 [다중 지역 지원을](/azure/api-management/api-management-howto-deploy-multi-region)제공 합니다. 모든 계층에는 시간당 고정 가격이 있습니다.
 
-Azure 클라우드는 Azure API Management에 대 한 [서버 리스 계층](https://azure.microsoft.com/blog/announcing-azure-api-management-for-serverless-architectures/) 도 제공 합니다. *소비 가격 책정 계층*이라고 하는 서비스는 서버 리스 컴퓨팅 모델을 중심으로 디자인 된 API Management의 변형입니다. 이전에 표시 된 "미리 할당 된" 가격 책정 계층과 달리 소비 계층은 즉각적인 프로 비전 및 작업별 요금 책정을 제공 합니다.
+Azure 클라우드는 Azure API Management에 대 한 [서버 리스 계층](https://azure.microsoft.com/blog/announcing-azure-api-management-for-serverless-architectures/) 도 제공 합니다. *소비 가격 책정 계층* 이라고 하는 서비스는 서버 리스 컴퓨팅 모델을 중심으로 디자인 된 API Management의 변형입니다. 이전에 표시 된 "미리 할당 된" 가격 책정 계층과 달리 소비 계층은 즉각적인 프로 비전 및 작업별 요금 책정을 제공 합니다.
 
 다음 사용 사례에 대해 API 게이트웨이 기능을 사용 하도록 설정 합니다.
 
@@ -148,7 +148,7 @@ Azure 클라우드는 Azure API Management에 대 한 [서버 리스 계층](htt
 
 [Azure SignalR service](https://azure.microsoft.com/services/signalr-service/) 는 클라우드 네이티브 응용 프로그램에 대 한 실시간 통신을 간소화 하는 완전히 관리 되는 azure 서비스입니다. 용량 프로 비전, 크기 조정 및 영구 연결과 같은 기술 구현 정보를 추상화 합니다. 99.9% 서비스 수준 계약을 사용 하 여 처리 됩니다. 인프라가 아닌 응용 프로그램 기능에 집중 합니다.
 
-사용 하도록 설정 되 면 클라우드 기반 HTTP 서비스는 브라우저, 모바일 및 데스크톱 응용 프로그램을 포함 하 여 콘텐츠 업데이트를 연결 된 클라이언트에 직접 푸시할 수 있습니다. 클라이언트는 서버를 폴링할 필요 없이 업데이트 됩니다. Azure SignalR는 Websocket, 서버측 이벤트 및 긴 폴링을 포함 하 여 실시간 연결을 만드는 전송 기술을 추상화 합니다. 개발자는 연결 된 클라이언트의 모든 또는 특정 하위 집합에 메시지를 보내는 데 중점을 둡니다.
+사용 하도록 설정 되 면 클라우드 기반 HTTP 서비스는 브라우저, 모바일 및 데스크톱 응용 프로그램을 포함 하 여 콘텐츠 업데이트를 연결 된 클라이언트에 직접 푸시할 수 있습니다. 클라이언트는 서버를 폴링할 필요 없이 업데이트 됩니다. Azure SignalR는 Websocket, Server-Side 이벤트 및 긴 폴링을 포함 하 여 실시간 연결을 만드는 전송 기술을 추상화 합니다. 개발자는 연결 된 클라이언트의 모든 또는 특정 하위 집합에 메시지를 보내는 데 중점을 둡니다.
 
 그림 4-7에서는 Azure SignalR를 사용 하는 클라우드 네이티브 응용 프로그램에 연결 하는 HTTP 클라이언트 집합을 보여 줍니다.
 

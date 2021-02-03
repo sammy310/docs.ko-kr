@@ -2,13 +2,13 @@
 title: 클라우드 네이티브 용 후보 앱
 description: 클라우드 기본 방법의 이점을 활용 하는 응용 프로그램의 유형 알아보기
 author: robvet
-ms.date: 05/14/2020
-ms.openlocfilehash: 8f00633a575dad12b0bc1d5adb83acac03db0659
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 443a7c1a1aaef078b33f352f597b33b768d989a3
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160946"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506190"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>클라우드 네이티브 용 후보 앱
 
@@ -78,7 +78,7 @@ Cloud native의 후보가 될 수 있는 응용 프로그램의 유형은 무엇
 
 - [Cornelia Davis의 클라우드 기본 패턴](https://www.manning.com/books/cloud-native-patterns)
 
-- [12 단계 응용 프로그램 이상](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)
+- [Twelve-Factor 응용 프로그램 외](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)
 
 - [코드로 서의 인프라 란?](/azure/devops/learn/what-is-infrastructure-as-code)
 

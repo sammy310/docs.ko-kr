@@ -1,13 +1,13 @@
 ---
 title: 컨테이너 및 오케스트레이터 활용
 description: Azure에서 Docker 컨테이너 및 Kubernetes Orchestrator 활용
-ms.date: 05/31/2020
-ms.openlocfilehash: 0ca69b71aa7d414a7bc55253b123020d49468dee
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/19/2021
+ms.openlocfilehash: 63ac91b05a88dc13b7c62e6e04eecb0550cd4652
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672515"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505756"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>컨테이너 및 오케스트레이터 활용
 
@@ -27,7 +27,7 @@ ms.locfileid: "95672515"
 
 또한 응용 프로그램을 다시 시작 해야 합니다 .이 경우 배포 하는 동안 가동 중지 시간이 0 인 기술이 적용 되지 않으면 가용성에 일시적으로 영향을 줄 수 있습니다.
 
-### <a name="scaling"></a>확장
+### <a name="scaling"></a>크기 조정
 
 모놀리식 응용 프로그램은 전적으로 많은 기능을 필요로 하는 단일 컴퓨터 인스턴스에서 호스팅됩니다. 모놀리식의 어느 부분에서 확장이 필요한 경우에는 다른 컴퓨터에 전체 응용 프로그램의 다른 복사본을 배포 해야 합니다. Monolith를 사용 하면 응용 프로그램 구성 요소를 개별적으로 규모를 조정할 수 없습니다. 크기를 조정 하지 않아도 되는 구성 요소는 비효율적 이며 비용이 많이 드는 리소스 사용량을 초래 합니다.
 
@@ -184,12 +184,12 @@ Visual Studio는 웹 기반 응용 프로그램에 대 한 Docker 개발을 지�
 이 옵션을 선택 하면 프로젝트는 해당 루트에를 사용 하 여 생성 됩니다 .이 프로젝트는 `Dockerfile` Docker 컨테이너에서 앱을 빌드하고 호스트 하는 데 사용할 수 있습니다. 예제 Dockerfile은 그림 3 -6에 나와 있습니다.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:3.1-buster AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
 COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
 RUN dotnet restore "eShopWeb/eShopWeb.csproj"
@@ -216,7 +216,7 @@ ENTRYPOINT ["dotnet", "eShopWeb.dll"]
 
 로컬 개발 외에도 [Azure Dev Spaces](/azure/dev-spaces/) 는 여러 개발자가 Azure 내에서 고유한 Kubernetes 구성으로 작업할 수 있는 편리한 방법을 제공 합니다. 그림 3-7에서 볼 수 있듯이, Azure Dev Spaces에서 응용 프로그램을 실행할 수도 있습니다.
 
-또한 언제 든 지 기존 ASP.NET Core 응용 프로그램에 Docker 지원을 추가할 수 있습니다. 그림 3-8에 표시 된 것 처럼 Visual Studio 솔루션 탐색기에서 프로젝트를 마우스 **Add** 오른쪽 단추로 클릭 하 고  >  **Docker 지원** 추가를 선택 합니다.
+또한 언제 든 지 기존 ASP.NET Core 응용 프로그램에 Docker 지원을 추가할 수 있습니다. 그림 3-8에 표시 된 것 처럼 Visual Studio 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고  >  **Docker 지원** 추가를 선택 합니다.
 
 ![Visual Studio Docker 지원 추가](./media/visual-studio-add-docker-support.png)
 

@@ -1,13 +1,13 @@
 ---
 title: Azure Kubernetes Service의 모니터링
 description: Azure Kubernetes Service의 모니터링
-ms.date: 05/13/2020
-ms.openlocfilehash: 3900f169b9be4f807e72392da38a1224d6ce28e3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: d044337150edddac9e24218ccaeaace1f413e654
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163702"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506034"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>Azure Kubernetes Service의 모니터링
 
@@ -26,7 +26,7 @@ Kubernetes의 기본 제공 로깅은 기본 형식입니다. 그러나 로그�
 
 로그 수집기 설치는 [Windows](/azure/azure-monitor/insights/containers#configure-a-log-analytics-windows-agent-for-kubernetes) 및 [Linux](/azure/azure-monitor/insights/containers#configure-a-log-analytics-linux-agent-for-kubernetes) 클러스터에 따라 다릅니다. 그러나 두 경우 모두 로그 수집은 Kubernetes [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)로 구현 됩니다. 즉, 로그 수집기는 각 노드에서 컨테이너로 실행 됩니다.
 
-Orchestrator 또는 운영 체제에서 Azure Monitor 디먼을 실행 하는 것과 관계 없이 로그 정보는 사용자가 익숙한 동일한 Azure Monitor 도구에 전달 됩니다. 이를 통해 하이브리드 Kubernetes/Azure Functions 환경과 같은 여러 로그 원본을 혼합 하는 환경에서 병렬 환경이 보장 됩니다.
+Orchestrator 또는 운영 체제에서 Azure Monitor 디먼을 실행 하는 것과 관계 없이 로그 정보는 사용자가 익숙한 동일한 Azure Monitor 도구에 전달 됩니다. 이 접근 방식은 하이브리드 Kubernetes/Azure Functions 환경과 같은 여러 로그 원본을 혼합 하는 환경에서 병렬 환경을 보장 합니다.
 
 ![실행 중인 많은 컨테이너 ](./media/containers-dashboard.png)
  의 로깅 및 메트릭 정보를 보여 주는 샘플 대시보드 **그림 7-11**. 실행 중인 많은 컨테이너의 로깅 및 메트릭 정보를 보여 주는 샘플 대시보드

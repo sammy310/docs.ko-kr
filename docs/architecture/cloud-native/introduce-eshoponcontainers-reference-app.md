@@ -1,17 +1,17 @@
 ---
 title: EShopOnContainers 참조 앱 소개
 description: ASP.NET Core 및 Azure에 대 한 eShopOnContainers Cloud 기본 마이크로 서비스 참조 앱 소개
-ms.date: 05/13/2020
-ms.openlocfilehash: a6f3defabec809eaf1cb143e2b521904248b74f2
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.date: 01/19/2021
+ms.openlocfilehash: 35aa92794d8488c3de60f42af52654c4c26aad82
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613969"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505676"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers 참조 앱 소개
 
-Microsoft는 업계 최고의 커뮤니티 전문가와 협력 하 여 완전 한 기능을 갖춘 클라우드 기본 마이크로 서비스 참조 응용 프로그램 eShopOnContainers를 만들었습니다. 이 응용 프로그램은 .NET Core 및 Docker를 사용 하 고 필요에 따라 Azure, Kubernetes 및 Visual Studio를 사용 하 여 온라인 storefront를 빌드하기 위한 것입니다.
+Microsoft는 업계 최고의 커뮤니티 전문가와 협력 하 여 완전 한 기능을 갖춘 클라우드 기본 마이크로 서비스 참조 응용 프로그램 eShopOnContainers를 만들었습니다. 이 응용 프로그램은 .NET 및 Docker를 사용 하 고 필요에 따라 Azure, Kubernetes 및 Visual Studio를 사용 하 여 온라인 storefront를 빌드하기 위해 작성 되었습니다.
 
 ![eShopOnContainers 샘플 앱 스크린샷.](./media/eshoponcontainers-sample-app-screenshot.png)
 
@@ -48,9 +48,9 @@ Microsoft는 업계 최고의 커뮤니티 전문가와 협력 하 여 완전 �
 
 EShopOnContainers 응용 프로그램은 ASP.NET Core MVC 서버 응용 프로그램 또는 적절 한 API 게이트웨이를 대상으로 하는 HTTPS를 통해 응용 프로그램에 액세스 하는 웹 또는 모바일 클라이언트에서 액세스할 수 있습니다. API 게이트웨이는 개별 프런트 엔드 클라이언트에서 백 엔드 서비스를 분리 하 고 더 나은 보안을 제공 하는 것과 같은 여러 가지 이점을 제공 합니다. 또한 응용 프로그램은 각 프런트 엔드 클라이언트에 대해 별도의 API 게이트웨이를 만드는 것을 권장 하는 백 엔드-프런트 엔드 (BFF) 라는 관련 패턴을 사용 합니다. 참조 아키텍처는 요청이 웹 또는 모바일 클라이언트에서 발생 하는지 여부에 따라 API 게이트웨이를 분리 하는 방법을 보여 줍니다.
 
-응용 프로그램의 기능은 다양 한 마이크로 서비스로 분할 됩니다. 인증 및 id를 담당 하 고, 제품 카탈로그에서 항목을 나열 하 고, 사용자의 쇼핑 바구니를 관리 하 고, 주문을 배치 하는 서비스가 있습니다. 이러한 각 개별 서비스에는 자체 영구 저장소가 있습니다. 모든 서비스가 상호 작용 하는 단일 마스터 데이터 저장소는 없습니다. 대신, 필요에 따라 서비스 간의 조정 및 통신이 수행 되며 메시지 버스를 사용 합니다.
+응용 프로그램의 기능은 다양 한 마이크로 서비스로 나뉩니다. 인증 및 id를 담당 하 고, 제품 카탈로그에서 항목을 나열 하 고, 사용자의 쇼핑 바구니를 관리 하 고, 주문을 배치 하는 서비스가 있습니다. 이러한 각 개별 서비스에는 자체 영구 저장소가 있습니다. 모든 서비스가 상호 작용하는 단일 마스터 데이터 저장소는 없습니다. 대신, 필요에 따라 서비스와 메시지 버스를 사용 하 여 서비스 간의 조정 및 통신이 수행 됩니다.
 
-각 마이크로 서비스는 개별 요구 사항에 따라 다르게 디자인 됩니다. 즉, 모두 .NET Core를 사용 하 여 구축 되 고 클라우드에 대해 설계 되었지만 기술 스택이 다를 수 있습니다. 간단한 서비스는 기본 데이터 저장소에 대 한 기본 CRUD (만들기-읽기-업데이트-삭제) 액세스를 제공 하는 반면, 고급 서비스는 도메인 기반 디자인 방법과 패턴을 사용 하 여 비즈니스 복잡성을 관리 합니다.
+각 마이크로 서비스는 개별 요구 사항에 따라 다르게 디자인 됩니다. 이러한 측면은 .NET을 사용 하 여 빌드하고 클라우드 용으로 설계 되었지만 기술 스택이 다를 수 있음을 의미 합니다. 간단한 서비스는 기본 데이터 저장소에 대 한 기본 CRUD (만들기-읽기-업데이트-삭제) 액세스를 제공 하는 반면, 고급 서비스는 비즈니스 복잡성을 관리 하는 Domain-Driven 디자인 방법과 패턴을 사용 합니다.
 
 ![다양 한 종류의 마이크로 서비스](./media/different-kinds-of-microservices.png)
 
@@ -58,7 +58,7 @@ EShopOnContainers 응용 프로그램은 ASP.NET Core MVC 서버 응용 프로�
 
 ## <a name="overview-of-the-code"></a>코드 개요
 
-마이크로 서비스를 활용 하기 때문에 eShopOnContainers 앱은 GitHub 리포지토리에서 매우 많은 개별 프로젝트와 솔루션을 포함 합니다. 별도의 솔루션 및 실행 파일 외에도 다양 한 서비스는 로컬 개발 및 프로덕션 환경에서 자체 컨테이너 내에서 실행 되도록 설계 되었습니다. 그림 2-4에는 다양 한 프로젝트를 구성 하는 전체 Visual Studio 솔루션이 나와 있습니다.
+마이크로 서비스를 사용 하기 때문에 eShopOnContainers 앱은 GitHub 리포지토리에서 매우 많은 개별 프로젝트와 솔루션을 포함 합니다. 별도의 솔루션 및 실행 파일 외에도 다양 한 서비스는 로컬 개발 및 프로덕션 환경에서 자체 컨테이너 내에서 실행 되도록 설계 되었습니다. 그림 2-4에는 다양 한 프로젝트를 구성 하는 전체 Visual Studio 솔루션이 나와 있습니다.
 
 ![Visual Studio 솔루션의 프로젝트](./media/projects-in-visual-studio-solution.png)
 

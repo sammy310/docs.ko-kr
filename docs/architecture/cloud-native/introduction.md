@@ -2,13 +2,13 @@
 title: 클라우드 네이티브 애플리케이션 소개
 description: 클라우드 기본 컴퓨팅에 대해 알아보기
 author: robvet
-ms.date: 05/13/2020
-ms.openlocfilehash: 6ec02a1388d6e0f26cdaa1f728f23a22ba52d735
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.date: 01/19/2021
+ms.openlocfilehash: 852eed27d4cfcaefdfa89a73c54414a6306ed28d
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613943"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506099"
 ---
 # <a name="introduction-to-cloud-native-applications"></a>클라우드 네이티브 애플리케이션 소개
 
@@ -36,13 +36,13 @@ ms.locfileid: "83613943"
 
 모두 잘못 된 것은 아닙니다. 거은 몇 가지 이점을 제공 합니다. 예를 들어, 다음은 간단 합니다.
 
-- build
+- 빌드
 - test
 - 배포
 - 문제점
 - 소수 자릿수
 
-오늘 존재 하는 많은 성공한 앱이 거로 생성 되었습니다. 앱이 적중 되며 계속 해 서 진화 하 고 반복 후 반복 해 서 더 많은 기능을 추가 합니다.
+오늘 존재 하는 많은 성공한 앱이 거로 생성 되었습니다. 앱이 적중 되며 반복 후 반복 해 서 더 많은 기능을 추가 합니다.
 
 그러나 어느 시점에서 불편을 느낄 것입니다. 응용 프로그램에 대 한 제어 권한을 잃게 됩니다. 시간이 지남에 따라 느낌이 점점 더 유용 하 게 표시 되 고 궁극적으로 라는 상태를 입력 합니다 `Fear Cycle` .
 
@@ -58,7 +58,7 @@ ms.locfileid: "83613943"
 
 대부분의 조직에서는 시스템을 구축 하는 클라우드 기본 방법을 채택 하 여 모놀리식 우려 주기를 해결 했습니다. 그림 1-2은 클라우드 기본 기술 및 사례를 적용 하는 동일한 시스템을 보여 줍니다.
 
-![클라우드 네이티브 디자인](./media/cloud-native-design.png)
+![Cloud-Native 디자인](./media/cloud-native-design.png)
 
 **그림 1-2**. 클라우드 네이티브 디자인
 
@@ -66,13 +66,13 @@ ms.locfileid: "83613943"
 
 ### <a name="cloud-native-computing"></a>클라우드 네이티브 컴퓨팅
 
-흠 ... _Cloud Native_라는 용어를 사용 했습니다. 처음에는 "무엇을 의미 하나요?" 라고 생각할 수 있습니다. 소프트웨어 공급 업체의 다른 업계 throw concocted
+흠 ... _Cloud Native_ 라는 용어를 사용 했습니다. 처음에는 "무엇을 의미 하나요?" 라고 생각할 수 있습니다. 소프트웨어 공급 업체의 다른 업계 throw concocted
 
 다행히이 책은 매우 다르며,이 책은 사용자의 권유를 도와줍니다.
 
 짧은 시간 내에 클라우드 기본은 소프트웨어 업계에서 주행 추세를 얻게 됩니다. 최신 소프트웨어 개발 사례, 기술 및 클라우드 인프라를 최대한 활용 하는 방법인 크고 복잡 한 시스템을 구축 하는 것에 대해 생각 하는 새로운 방법입니다. 이 방법은 시스템을 디자인, 구현, 배포 및 운영 하는 방식을 변경 합니다.
 
-업계를 구동 하는 지속적인 믿으세요와 달리 클라우드 네이티브는 _-real_입니다. 300이 넘는 주요 회사의 컨소시엄 인 cncf ( [Cloud Native 컴퓨팅 Foundation](https://www.cncf.io/) )를 사용 하 여 기술 및 클라우드 스택에서 클라우드 기본 컴퓨팅을 수행할 수 있도록 하는 기본 사항입니다. 가장 영향력 있는 오픈 소스 그룹 중 하나인 GitHub에서 가장 빠르게 성장 하는 오픈 소스 프로젝트를 많이 호스팅합니다. [Kubernetes](https://kubernetes.io/), [프로메테우스](https://prometheus.io/), [투구](https://helm.sh/), [엔보이](https://www.envoyproxy.io/)및 [grpc](https://grpc.io/)와 같은 프로젝트를 포함 합니다.
+업계를 구동 하는 지속적인 믿으세요와 달리 클라우드 네이티브는 _-real_ 입니다. 300이 넘는 주요 회사의 컨소시엄 인 cncf ( [Cloud Native 컴퓨팅 Foundation](https://www.cncf.io/) )를 사용 하 여 기술 및 클라우드 스택에서 클라우드 기본 컴퓨팅을 수행할 수 있도록 하는 기본 사항입니다. 가장 영향력 있는 오픈 소스 그룹 중 하나인 GitHub에서 가장 빠르게 성장 하는 오픈 소스 프로젝트를 많이 호스팅합니다. [Kubernetes](https://kubernetes.io/), [프로메테우스](https://prometheus.io/), [투구](https://helm.sh/), [엔보이](https://www.envoyproxy.io/)및 [grpc](https://grpc.io/)와 같은 프로젝트를 포함 합니다.
 
 CNCF 발전시키는 오픈 소스 및 공급 업체 중립성의 에코 시스템을 제공 합니다. 그 후에이 책에서는 기술에 독립적인 클라우드 기본 원칙, 패턴 및 모범 사례를 제공 합니다. 동시에 클라우드 네이티브 시스템을 구성 하기 위해 Microsoft Azure 클라우드에서 제공 되는 서비스 및 인프라에 대해 설명 합니다.
 
