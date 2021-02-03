@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK 의미 체계 모델 사용
 description: 이 개요에서는 코드의 의미 체계 모델을 이해하고 조작하는 데 사용하는 형식에 대한 이해를 제공합니다.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 8575988cd98a4c0ba3f24107788f065f7472f55d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0d254045a168f82888c5cc77a34f194a68aed0e
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156937"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899128"
 ---
 # <a name="work-with-semantics"></a>의미 체계 작업
 
@@ -23,7 +23,7 @@ ms.locfileid: "79156937"
 
 소스 코드에서 표현되는 프로그램 요소가 있으며 프로그램은 어셈블리 파일에서 패키지된 이전에 컴파일된 라이브러리를 참조할 수도 있습니다. 어셈블리에서 사용할 수 있는 소스 코드, 구문 노드 또는 트리가 없음에도 불구하고 프로그램은 여전히 내부의 요소를 참조할 수 있습니다.
 
-이러한 작업의 경우 **의미 체계 모델**이 필요합니다.
+이러한 작업의 경우 **의미 체계 모델** 이 필요합니다.
 
 소스 코드의 구문 모델 외에도 의미 체계 모델은 식별자를 참조되는 올바른 프로그램 요소와 올바르게 일치시키는 쉬운 방법을 제공하여 언어 규칙을 캡슐화합니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "79156937"
 
 <xref:Microsoft.CodeAnalysis.Compilation> 형식의 다양한 메서드 및 속성은 기호를 찾는 데 도움이 됩니다. 예를 들어 일반적인 메타데이터 이름별로 선언된 형식에 대한 기호를 찾을 수 있습니다. 전역 네임스페이스로 루트된 기호의 트리로 전체 기호 테이블에 액세스할 수도 있습니다.
 
-기호는 또한 컴파일이 다른 참조된 기호와 같은 원본 또는 메타데이터에서 결정하는 추가 정보를 포함합니다. 각 종류의 기호는 컴파일러에서 수집한 정보를 자세히 설명하는 고유한 메서드 및 속성이 있는 각 <xref:Microsoft.CodeAnalysis.ISymbol>에서 파생된 별도 인터페이스로 표시됩니다. 이러한 속성의 상당수는 다른 기호를 직접 참조합니다. 예를 들어 <xref:Microsoft.CodeAnalysis.IMethodSymbol.ReturnType?displayProperty=nameWithType> 속성은 메서드 선언에서 참조하는 실제 형식 기호를 나타냅니다.
+기호는 또한 컴파일이 다른 참조된 기호와 같은 원본 또는 메타데이터에서 결정하는 추가 정보를 포함합니다. 각 종류의 기호는 컴파일러에서 수집한 정보를 자세히 설명하는 고유한 메서드 및 속성이 있는 각 <xref:Microsoft.CodeAnalysis.ISymbol>에서 파생된 별도 인터페이스로 표시됩니다. 이러한 속성의 상당수는 다른 기호를 직접 참조합니다. 예를 들어 <xref:Microsoft.CodeAnalysis.IMethodSymbol.ReturnType?displayProperty=nameWithType> 속성은 메서드가 반환하는 실제 형식 기호를 알려 줍니다.
 
 기호는 소스 코드와 메타데이터 간의 네임스페이스, 형식 및 멤버의 일반적인 표현을 제공합니다. 예를 들어 소스 코드에 선언된 메서드 및 메타데이터에서 가져온 메서드는 모두 동일한 속성이 있는 <xref:Microsoft.CodeAnalysis.IMethodSymbol>로 표시됩니다.
 

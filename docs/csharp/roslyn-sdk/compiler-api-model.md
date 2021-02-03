@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK 개념 및 개체 모델
 description: 이 개요는 .NET 컴파일러 SDK와 함께 효과적으로 작동해야 하는 배경 정보를 제공합니다. API 계층, 관련된 주요 형식 및 전체 개체 모델을 학습합니다.
 ms.date: 07/13/2020
 ms.custom: mvc
-ms.openlocfilehash: a65d282dd3c58279bbfd635c0386d50ce3f30055
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: f4b2163c3bf8824b6ad93f0b144a6b02d870f50a
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374470"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899167"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>.NET Compiler Platform SDK 모델 이해
 
@@ -30,7 +30,7 @@ ms.locfileid: "86374470"
 
 각 컴파일러는 단일 엔드투엔드 전체로 이러한 구성 요소를 하나로 결합합니다.
 
-이러한 API는 Visual Studio에서 사용하는 API와 동일합니다. 예를 들어 코드 개요 및 서식 지정 기능은 구문 트리를 사용하고, **개체 브라우저** 및 탐색 기능은 기호 테이블을 사용하며, 리팩터링 및 **정의로 이동**은 의미 체계 모델을 사용하고, **편집하며 계속하기**는 내보내기 API를 포함하여 이러한 모든 것을 사용합니다.
+이러한 API는 Visual Studio에서 사용하는 API와 동일합니다. 예를 들어 코드 개요 및 서식 지정 기능은 구문 트리를 사용하고, **개체 브라우저** 및 탐색 기능은 기호 테이블을 사용하며, 리팩터링 및 **정의로 이동** 은 의미 체계 모델을 사용하고, **편집하며 계속하기** 는 내보내기 API를 포함하여 이러한 모든 것을 사용합니다.
 
 ## <a name="api-layers"></a>API 계층
 
@@ -42,7 +42,7 @@ ms.locfileid: "86374470"
 
 ### <a name="diagnostic-apis"></a>진단 API
 
-해당 분석의 일환으로 컴파일러는 구문, 의미 체계 및 확실한 할당 오류에서부터 다양한 경고 및 정보 진단까지 모든 것을 다루는 진단 집합을 생성할 수 있습니다. 컴파일러 API 계층은 사용자 정의 분석기를 컴파일 프로세스에 연결할 수 있도록 하는 확장 가능한 API를 통해 진단을 노출합니다. StyleCop 또는 FxCop과 같은 도구에서 만든 것과 같은 사용자 정의 진단을 컴파일러 정의 진단과 함께 생성되도록 합니다. 이러한 방식으로 진단을 생성하면 정책을 기반으로 한 빌드 중지 및 편집기에서 라이브 물결선 표시 및 코드 수정 사항 제안과 같은 환경 진단을 사용하는 MSBuild 및 Visual Studio와 같은 도구와 자연스럽게 통합되는 이점이 있습니다.
+해당 분석의 일환으로 컴파일러는 구문, 의미 체계, 한정된 할당 오류에서 다양한 경고 및 정보 진단에 이르는 모든 항목을 포함하는 진단 정보 세트를 생성할 수 있습니다. 컴파일러 API 계층은 사용자 정의 분석기를 컴파일 프로세스에 연결할 수 있도록 하는 확장 가능한 API를 통해 진단을 노출합니다. StyleCop 같은 도구에서 생성된 진단 등의 사용자 정의 진단을 컴파일러 정의 진단과 함께 생성할 수 있습니다. 이러한 방식으로 진단을 생성하면 정책을 기반으로 한 빌드 중지 및 편집기에서 라이브 물결선 표시 및 코드 수정 사항 제안과 같은 환경 진단을 사용하는 MSBuild 및 Visual Studio와 같은 도구와 자연스럽게 통합되는 이점이 있습니다.
 
 ### <a name="scripting-apis"></a>스크립팅 API
 

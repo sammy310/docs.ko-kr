@@ -2,12 +2,12 @@
 title: Windows 7 SP1에 .NET Framework 설치
 description: Windows 7 SP1에서.NET Framework를 설치하는 방법을 알아봅니다.
 ms.date: 04/18/2019
-ms.openlocfilehash: 3f94562f2a14c108a021343b89a8279e95215f30
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 900b38110626a93f37829045a8676ea87101d7e9
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558857"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899089"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Windows 7 SP1 및 Windows Server 2008 R2에 .NET Framework 설치
 
@@ -23,6 +23,16 @@ Windows에서 많은 애플리케이션을 실행하는 데 .NET Framework가 �
 > [.NET Framework 4.8 다운로드](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48)는 .NET Framework 4.0 이상용으로 빌드된 애플리케이션을 실행하는 데 사용될 수 있습니다.
+
+### <a name="offline-installer"></a>오프라인 설치 관리자
+
+Windows 7에서 .NET Framework의 오프라인 설치를 수행하려면 먼저 최신 [Microsoft Root Certificate Authority 2011](https://www.microsoft.com/pkiops/Docs/Repository.htm)이 대상 머신에 설치되어 있는지 확인해야 합니다.
+
+_certmgr.exe_ 도구는 인증서 설치를 자동화할 수 있으며 Visual Studio 또는 Windows SDK에서 가져옵니다. 다음 명령은 .NET Framework 설치 관리자를 실행하기 전에 인증서를 설치하는 데 사용됩니다.
+
+```console
+certmgr.exe /add MicRooCerAut2011_2011_03_22.crt /s /r localMachine root
+```
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 

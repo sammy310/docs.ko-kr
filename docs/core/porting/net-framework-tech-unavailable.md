@@ -3,20 +3,19 @@ title: .NET Core 및 .NET 5+에서 사용할 수 없는 .NET Framework 기술
 titleSuffix: ''
 description: .NET Core 및 .NET 5.0 이상 버전에서 사용할 수 없는 .NET Framework 기술에 대해 알아보기
 author: cartermp
-ms.date: 10/13/2020
-ms.openlocfilehash: 492aace9db3dc3acef18e995f10b7b5fbe251558
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.date: 01/26/2021
+ms.openlocfilehash: d5926d2c0cfe6d2073ac6ad74046ca48b9cb18f1
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161038"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898777"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core-and-net-5"></a>.NET Core 및 .NET 5+에서 사용할 수 없는 .NET Framework 기술
 
-.NET Framework 라이브러리에서 사용할 수 있는 AppDomain, 원격, CAS(코드 액세스 보안), 보안 투명도, <xref:System.EnterpriseServices?displayProperty=fullName> 등과 같은 몇몇 기술은 .NET Core 및 .NET 5.0 이상 버전에서 사용할 수 없습니다. 라이브러리가 이러한 기술 중 하나 이상에 의존하는 경우 여기에 설명된 대체 방법을 고려하세요. API 호환성에 대한 자세한 내용은 [.NET에서 호환성이 손상되는 변경 사항](../compatibility/breaking-changes.md)을 참조하세요.
+앱 도메인, 원격, CAS(코드 액세스 보안) 등 .NET Framework 라이브러리에서 사용할 수 있는 몇몇 기술은 .NET Core 및 .NET 5.0 이상 버전에서 사용할 수 없습니다. 라이브러리가 이 페이지에 나열된 기술 중 하나 이상을 사용하는 경우 설명된 대체 방법을 고려하세요.
 
-> [!TIP]
-> API 또는 기술이 현재 구현되지 않았기 때문에 이들을 고의로 지원하지 않는 것은 아닙니다. 특정 문제가 의도적으로 발생하는 것인지 확인하려면 .NET GitHub 리포지토리를 검색합니다. 이를 찾지 못한 경우 [dotnet/runtime 리포지토리](https://github.com/dotnet/runtime/issues)에 이슈를 보고하고 특정 API 및 기술을 요청하세요.
+API 호환성에 대한 자세한 내용은 [.NET에서 호환성이 손상되는 변경 사항](../compatibility/breaking-changes.md)을 참조하세요.
 
 ## <a name="application-domains"></a>애플리케이션 도메인
 
@@ -47,6 +46,10 @@ CAS와 마찬가지로 보안 투명도는 샌드박스 코드를 보안상 중�
 ## <a name="systementerpriseservices"></a>System.EnterpriseServices
 
 <xref:System.EnterpriseServices?displayProperty=fullName>(COM+)은 .NET Core 및 .NET 5+에서 지원되지 않습니다.
+
+## <a name="workflow-foundation-and-wcf"></a>Workflow Foundation 및 WCF
+
+Windows WF(Workflow Foundation) 및 WCF(Windows Communication Foundation)는 .NET Core를 포함한 .NET 5 이상에서 지원되지 않습니다. 대체 방법은 [CoreWF](https://github.com/UiPath/corewf) 및 [CoreWCF](https://github.com/CoreWCF/CoreWCF)를 참조하세요.
 
 ## <a name="see-also"></a>참조
 

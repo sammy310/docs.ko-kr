@@ -3,16 +3,16 @@ title: .NET Compiler Platform SDK 구문 모델 사용
 description: 이 개요에서는 구문 노드를 이해하고 조작하는 데 사용하는 형식에 대한 이해를 제공합니다.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: fdb13095c2b91e54d58988a51a51b05652e57ea6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3666b0ec875b465954780c3c313ca87c9a4e6676
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208397"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899141"
 ---
 # <a name="work-with-syntax"></a>구문 작업
 
-*구문 트리*는 컴파일러 API에서 노출하는 기본 데이터 구조입니다. 이러한 트리는 소스 코드의 어휘 및 구문 구조를 나타냅니다. 두 가지 중요한 용도를 제공합니다.
+‘구문 트리’는 컴파일러 API에서 노출되는 변경이 불가능한 기본 데이터 구조입니다. 이러한 트리는 소스 코드의 어휘 및 구문 구조를 나타냅니다. 두 가지 중요한 용도를 제공합니다.
 
 - 사용자의 프로젝트에서 소스 코드의 구문 구조를 보고 처리하도록 IDE, 추가 기능, 코드 분석 도구 및 리팩터링과 같은 도구 허용
 - 직접 텍스트 편집을 사용하지 않고 자연스러운 방식으로 소스 코드를 만들고, 수정하고, 다시 정렬하도록 리팩터링 및 IDE와 같은 도구 활성화 트리를 만들고 조작하여 도구는 쉽게 소스 코드를 만들고 다시 정렬할 수 있습니다.
@@ -21,11 +21,11 @@ ms.locfileid: "83208397"
 
 구문 트리는 컴파일, 코드 분석, 바인딩, 리팩터링, IDE 기능 및 코드 생성에 사용되는 기본 구조입니다. 소스 코드의 어떠한 부분도 먼저 식별되고 잘 알려진 많은 구조적 언어 요소 중 하나로 분류되지 않고 인식되지 않습니다.
 
-구문 트리에는 세 가지 주요 특성이 있습니다. 첫 번째 특성은 구문 트리가 최고의 충실도로 모든 원본 정보를 저장하는 것입니다. 최고 충실도란 구문 트리에 공백, 설명 및 전처리기 지시문을 포함하여 소스 텍스트에서 발견되는 모든 정보, 모든 문법 구문, 모든 어휘 토큰 및 사이의 모든 항목이 포함되는 것을 의미합니다. 예를 들어 원본에서 언급된 각 리터럴은 입력된 대로 정확하게 표시됩니다. 또한 구문 트리는 프로그램이 불완전하거나 형식이 잘못된 경우 건너뛰거나 누락된 토큰을 표시하여 소스 코드의 오류를 캡처합니다.
+구문 트리에는 세 가지 주요 특성이 있습니다.
 
-구문 트리의 두 번째 특성은 구문 분석되기 전의 정확한 텍스트를 생성할 수 있다는 것입니다. 구문 노드에서 해당 노드를 기반으로 하는 하위 트리의 텍스트 표현을 가져올 수 있습니다. 이 기능은 구문 트리가 원본 텍스트를 생성하고 편집하는 방법으로 사용될 수 있다는 것을 의미합니다. 암시적으로 해당 텍스트를 만든 트리를 만들고, 변경 내용에서 새 트리를 기존 트리로 만들어 구문 트리를 편집하여 텍스트를 효과적으로 편집했습니다.
-
-구문 트리의 세 번째 특성은 변경할 수 없으며 스레드로부터 안전하다는 것입니다. 트리를 얻으면 이는 코드의 현재 상태의 스냅샷이며 변경되지 않습니다. 따라서 여러 사용자는 잠금 또는 중복 없이 서로 다른 스레드에서 동시에 동일한 구문 트리와 상호 작용할 수 있습니다. 트리를 변경할 수 없으며 트리에 직접 수정을 만들 수 없으므로 팩터리 메서드는 트리의 추가 스냅샷을 만들어 구문 트리를 만들고 수정하도록 돕습니다. 트리는 기본 노드를 다시 사용하는 방법에서 효율적이므로 빠르게 작은 추가 메모리로 새 버전을 다시 빌드할 수 있습니다.
+- 모든 소스 정보를 최고의 충실도로 유지합니다. 최고 충실도란 구문 트리에 공백, 설명 및 전처리기 지시문을 포함하여 소스 텍스트에서 발견되는 모든 정보, 모든 문법 구문, 모든 어휘 토큰 및 사이의 모든 항목이 포함되는 것을 의미합니다. 예를 들어 원본에서 언급된 각 리터럴은 입력된 대로 정확하게 표시됩니다. 또한 구문 트리는 프로그램이 불완전하거나 형식이 잘못된 경우 건너뛰거나 누락된 토큰을 표시하여 소스 코드의 오류를 캡처합니다.
+- 구문 분석된 정확한 텍스트를 생성할 수 있습니다. 구문 노드에서 해당 노드를 기반으로 하는 하위 트리의 텍스트 표현을 가져올 수 있습니다. 이 기능은 구문 트리가 원본 텍스트를 생성하고 편집하는 방법으로 사용될 수 있다는 것을 의미합니다. 암시적으로 해당 텍스트를 만든 트리를 만들고 변경 내용에서 새 트리를 기존 트리로 만들어 텍스트를 효과적으로 편집했습니다.
+- 변경할 수 없으며 스레드로부터 안전합니다. 트리를 얻으면 이는 코드의 현재 상태의 스냅샷이며 변경되지 않습니다. 따라서 여러 사용자는 잠금 또는 중복 없이 서로 다른 스레드에서 동시에 동일한 구문 트리와 상호 작용할 수 있습니다. 트리를 변경할 수 없으며 트리에 직접 수정을 만들 수 없으므로 팩터리 메서드는 트리의 추가 스냅샷을 만들어 구문 트리를 만들고 수정하도록 돕습니다. 트리는 기본 노드를 다시 사용하는 방법에서 효율적이므로 빠르게 작은 추가 메모리로 새 버전을 다시 빌드할 수 있습니다.
 
 구문 트리는 비터미널 구조 요소가 다른 요소를 부모로 삼는 문자 그대로 트리 데이터 구조입니다. 각 구문 트리는 노드, 토큰 및 기타 정보로 구성되어 있습니다.
 
@@ -90,6 +90,9 @@ ms.locfileid: "83208397"
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 속성은 동일한 노드 클래스를 공유하는 구문 노드 형식의 쉬운 명확성을 허용합니다. 토큰 및 기타 정보의 경우 이 속성은 요소의 한 형식을 다른 형식에서 구분하는 유일한 방법입니다.
 
 예를 들어 단일 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 클래스에는 자식으로 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 및 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>가 있습니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A> 속성은 구문 노드의 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> 또는 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> 종류인지를 구분합니다.
+
+> [!TIP]
+> <xref:Microsoft.CodeAnalysis.CSharpExtensions.IsKind%2A>(C#) 또는 <xref:Microsoft.CodeAnalysis.VisualBasicExtensions.IsKind%2A>(VB) 확장 메서드를 사용하여 종류를 확인하는 것이 좋습니다.
 
 ## <a name="errors"></a>오류
 

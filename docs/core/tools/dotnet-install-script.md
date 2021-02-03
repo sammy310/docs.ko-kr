@@ -2,12 +2,12 @@
 title: dotnet 설치 스크립트
 description: .NET SDK 및 공유 런타임을 설치하는 dotnet-install 스크립트에 대해 알아봅니다.
 ms.date: 09/22/2020
-ms.openlocfilehash: a1598a84aa31aeac970f0493d1481651164d733e
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 1904d0322774de25aeba7e7a53ab36ce135d685d
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634444"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957881"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
@@ -157,9 +157,15 @@ dotnet-install.sh --help
   - `aspnetcore` - `Microsoft.AspNetCore.App` 공유 런타임입니다.
   - `windowsdesktop` - `Microsoft.WindowsDesktop.App` 공유 런타임입니다.
 
-- **`--runtime-id <RID>`**
+- **`--runtime-id <RID>` [사용되지 않음]**
 
-  도구가 설치되는 [런타임 식별자](../rid-catalog.md)를 지정합니다. 휴대용 Linux에 `linux-x64`를 사용합니다. (Linux/macOS에만 유효함)
+  도구가 설치되는 [런타임 식별자](../rid-catalog.md)를 지정합니다. 휴대용 Linux에 `linux-x64`를 사용합니다. Linux/macOS 및 .NET Core 2.1 이전 버전에서만 유효합니다.
+
+  **`--os <OPERATING_SYSTEM>`**
+
+  도구를 설치할 운영 체제를 지정합니다. 가능한 값은 `osx`, `linux`, `linux-musl`, `freebsd`, `rhel.6`입니다. .NET Core 2.1 이상에서 유효합니다.
+
+  매개 변수는 선택 사항이며 스크립트로 검색된 운영 체제를 재정의해야 하는 경우에만 사용해야 합니다.
 
 - **`-SharedRuntime|--shared-runtime`**
 

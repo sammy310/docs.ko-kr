@@ -2,12 +2,12 @@
 title: '호환성이 손상되는 변경: 역직렬화에 사용되지 않는 비공용 매개 변수가 없는 생성자'
 description: public이 아닌, 매개 변수가 없는 생성자가 JsonSerializer를 사용한 deserialization에 더 이상 사용되지 않는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
 ms.date: 10/18/2020
-ms.openlocfilehash: 6bdcc92c61008aa4ee27370bbac4dbf4ee3ef7c8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a2ea54b6a76692dae7d6e01b06b11218d66b1cd7
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759966"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794701"
 ---
 # <a name="non-public-parameterless-constructors-not-used-for-deserialization"></a>역직렬화에 사용되지 않는 비공용 매개 변수가 없는 생성자
 
@@ -37,7 +37,7 @@ ms.locfileid: "95759966"
 ## <a name="recommended-action"></a>권장 조치
 
 - 유형을 소유하고 있으며 적합한 경우 매개 변수가 없는 생성자를 공용으로 설정합니다.
-- 그렇지 않으면 형식에 대해 `JsonConverter<T>`를 구현하고 역직렬화 동작을 제어합니다.
+- 그렇지 않으면 형식에 대해 <xref:System.Text.Json.Serialization.JsonConverter%601>를 구현하고 역직렬화 동작을 제어합니다. 해당 시나리오에 대한 C# 접근성 규칙에서 허용하는 경우 <xref:System.Text.Json.Serialization.JsonConverter%601> 구현에서 public이 아닌 생성자를 호출할 수 있습니다.
 
 ## <a name="affected-apis"></a>영향을 받는 API
 

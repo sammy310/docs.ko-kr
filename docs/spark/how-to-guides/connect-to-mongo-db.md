@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 945e494e8a027d438bf4659d989da6033a13f6f0
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 3889088ce32046f72a9a3392e28a5a36cda4745e
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687605"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957847"
 ---
 # <a name="connect-net-for-apache-spark-to-mongodb"></a>MongoDB에 .NET for Apache Spark 연결
 
@@ -19,7 +19,7 @@ ms.locfileid: "94687605"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-1. [데이터베이스 및 일부 컬렉션](https://docs.mongodb.com/manual/core/databases-and-collections/)을 추가하여 MongoDB 서버를 시작하고 실행합니다(로컬 서버를 위해 [관련 커뮤니티 서버](https://www.mongodb.com/try/download/community)를 다운로드하거나, 클라우드 MongoDB 서비스를 위해 [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)를 사용해 볼 수 있음).
+- [데이터베이스 및 일부 컬렉션](https://docs.mongodb.com/manual/core/databases-and-collections/)을 추가하여 MongoDB 서버를 시작하고 실행합니다(로컬 서버를 위해 [관련 커뮤니티 서버](https://www.mongodb.com/try/download/community)를 다운로드하거나, 클라우드 MongoDB 서비스를 위해 [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)를 사용해 볼 수 있음).
 
 ## <a name="set-up-your-mongodb-instance"></a>MongoDB 인스턴스 설정
 
@@ -38,7 +38,7 @@ ms.locfileid: "94687605"
     )
     ```
 
-2. MongoDB 서버가 연결할 수 있도록 .NET for Apache Spark 애플리케이션을 실행하는 머신의 IP 주소가 허용 목록에 추가되었는지 확인합니다. 작업 방법에 대한 자세한 내용은 [관련 가이드](https://docs.atlas.mongodb.com/security/add-ip-address-to-list/)를 참조할 수 있습니다.
+2. MongoDB 서버가 연결할 수 있도록 .NET for Apache Spark 애플리케이션이 실행되는 머신의 IP 주소가 허용 목록에 추가되었는지 확인합니다. 작업 방법에 대한 자세한 내용은 [관련 가이드](https://docs.atlas.mongodb.com/security/add-ip-address-to-list/)를 참조할 수 있습니다.
 
 ## <a name="configure-your-net-for-apache-spark-application"></a>.NET for Apache Spark 애플리케이션 구성
 
@@ -79,7 +79,7 @@ ms.locfileid: "94687605"
 
 ## <a name="run-your-application"></a>애플리케이션 실행
 
-.NET for Apache Spark 애플리케이션을 실행하려면 sbt 프로젝트의 `build.sbt`에 있는 `libraryDependency`를 사용하여 Spark 프로젝트 빌드 정의의 일부로 `mongo-spark-connector` 모듈을 정의해야 합니다. `spark-submit`(또는 `spark-shell`)와 같은 Spark 환경에서는 `--packages` 명령줄 옵션을 다음과 같이 사용해야 합니다.
+.NET for Apache Spark 애플리케이션을 실행하려면 sbt 프로젝트의 `build.sbt`에 있는 `libraryDependency`를 사용하여 Spark 프로젝트 빌드 정의의 일부로 `mongo-spark-connector` 모듈을 정의해야 합니다. `spark-submit`(또는 `spark-shell`)와 같은 Spark 환경에서는 `--packages` 명령줄 옵션을 다음과 같이 사용합니다.
 
 ```bash
 spark-submit --master local --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.0 --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar yourApp.exe

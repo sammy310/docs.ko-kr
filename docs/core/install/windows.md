@@ -4,12 +4,12 @@ description: .NET을 설치할 수 있는 Windows 버전에 대해 알아봅니�
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 57cebc562949627be70aabe24e75ad4567d072fd
-ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
+ms.openlocfilehash: 33492cc6fa6c64ec3a1d745a4fa0c6cc418f87bd
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98536127"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898790"
 ---
 # <a name="install-net-on-windows"></a>Windows에 .NET 설치
 
@@ -174,6 +174,18 @@ SDK는 .NET 앱과 라이브러리를 빌드하고 게시하는 데 사용됩니
 
 .NET Core 2.1이 지원되는 운영 체제, 배포 및 수명 주기 정책에 대한 자세한 내용은 [.NET Core 2.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)(.NET Core 2.1이 지원되는 OS 버전)를 참조하세요.
 
+### <a name="offline-install-for-windows-7"></a>Windows 7에 대한 오프라인 설치
+
+Windows 7에서 .NET Core 2.1의 오프라인 설치를 수행하려면 먼저 최신 [Microsoft Root Certificate Authority 2011](https://www.microsoft.com/pkiops/Docs/Repository.htm)이 대상 머신에 설치되어 있는지 확인해야 합니다.
+
+_certmgr.exe_ 도구는 인증서 설치를 자동화할 수 있으며 Visual Studio 또는 Windows SDK에서 가져옵니다. 다음 명령은 .NET Core 2.1 설치 관리자를 실행하기 전에 인증서를 설치하는 데 사용됩니다.
+
+```console
+certmgr.exe /add MicRooCerAut2011_2011_03_22.crt /s /r localMachine root
+```
+
+[아래 Windows 7](#additional-deps)에 필요한 종속성을 검토해야 합니다.
+
 ---
 
 <!-- markdownlint-disable MD001 -->
@@ -184,7 +196,7 @@ SDK는 .NET 앱과 라이브러리를 빌드하고 게시하는 데 사용됩니
 
 | 운영 체제         | 사전 요구 사항                                                                    |
 |--------------------------|----------------------------------------------------------------------------------|
-| Windows 7 SP1 [ESU][esu] | - Microsoft Visual C++ 2015-2019 재배포 가능 [64비트][vcc64] / [32비트][vcc32] <br> - KB3063858 [64비트][kb64] / [32비트][kb32] <br> - [MicrosoftRootCertificateAuthority2011.cer](https://go.microsoft.com/fwlink/?linkid=747875&clcid=0x409)(.NET Core 2.1에만 해당) |
+| Windows 7 SP1 [ESU][esu] | - Microsoft Visual C++ 2015-2019 재배포 가능 [64비트][vcc64] / [32비트][vcc32] <br> - KB3063858 [64비트][kb64] / [32비트][kb32] <br> - [Microsoft Root Certificate Authority 2011](https://www.microsoft.com/pkiops/Docs/Repository.htm)(.NET Core 2.1 오프라인 설치 관리자만 해당) |
 | Windows Vista SP 2       | Microsoft Visual C++ 2015-2019 재배포 가능 [64비트][vcc64] / [32비트][vcc32] |
 | Windows 8.1              | Microsoft Visual C++ 2015-2019 재배포 가능 [64비트][vcc64] / [32비트][vcc32] |
 | Windows Server 2008 R2   | Microsoft Visual C++ 2015-2019 재배포 가능 [64비트][vcc64] / [32비트][vcc32] |
@@ -331,5 +343,5 @@ Docker 컨테이너에서 .NET 사용에 대한 자세한 내용은 [.NET 및 Do
 [esu]: /troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq
 [vcc64]: https://aka.ms/vs/16/release/vc_redist.x64.exe
 [vcc32]: https://aka.ms/vs/16/release/vc_redist.x86.exe
-[kb64]: https://www.microsoft.com/en-us/download/details.aspx?id=47442
-[kb32]: https://www.microsoft.com/en-us/download/details.aspx?id=47409
+[kb64]: https://www.microsoft.com/download/details.aspx?id=47442
+[kb32]: https://www.microsoft.com/download/details.aspx?id=47409

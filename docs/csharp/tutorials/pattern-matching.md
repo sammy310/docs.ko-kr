@@ -4,12 +4,12 @@ description: 이 고급 자습서에서는 패턴 일치 기술을 사용하여 
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperf-fy21q1
-ms.openlocfilehash: 730098bf599dfc855676c86ab7a6e7f3ef7658f1
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: be1c330973859df62cd4706e5f6f9ca4326fb221
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513226"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794819"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>자습서: 패턴 일치를 사용하여 형식 기반 및 데이터 기반 알고리즘 빌드
 
@@ -152,7 +152,7 @@ namespace toll_calculator
 - 최대 탑승자 수의 50% 미만이 탑승한 버스는 2.00 USD의 추가 요금이 부과됩니다.
 - 탑승자 수가 90%를 초과하는 버스는 1.00 USD의 할인을 받습니다.
 
-이 규칙은 동일한 switch 식에서 **속성 패턴** 을 사용하여 구현할 수 있습니다. 속성 패턴은 형식이 결정된 후 개체의 속성을 검사합니다. `Car` 사례 1개는 다른 사례 4개로 확장됩니다.
+이 규칙은 동일한 switch 식에서 **속성 패턴** 을 사용하여 구현할 수 있습니다. 속성 패턴은 속성 값을 상수 값과 비교하는 `when` 절입니다. 속성 패턴은 형식이 결정된 후 개체의 속성을 검사합니다. `Car` 사례 1개는 다른 사례 4개로 확장됩니다.
 
 ```csharp
 vehicle switch

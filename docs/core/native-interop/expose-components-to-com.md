@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 346776ebae3a6077fd39f26d5bd19d599d163db2
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 13c91e5cb6728c5669642d1b5f7bb461efdd44f8
+ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608341"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99065053"
 ---
 # <a name="exposing-net-core-components-to-com"></a>COM에 .NET Core 구성 요소 공개
 
@@ -92,6 +92,9 @@ GitHub의 dotnet/samples 리포지토리에는 완벽하게 작동하는 [COM �
 ## <a name="additional-notes"></a>추가 참고 사항
 
 .NET Framework와 달리 .NET Core에서는 .NET Core 어셈블리에서 COM 형식 라이브러리(TLB)를 생성하는 기능을 지원하지 않습니다. 이 지침에서는 COM 인터페이스의 기본 선언을 위한 IDL 파일 또는 C/C++ 헤더를 수동으로 작성해야 합니다.
+
+> [!IMPORTANT]
+> .NET Framework에서 “모든 CPU” 어셈블리는 32비트 및 64비트 클라이언트 모두에서 사용될 수 있습니다. 기본적으로 .NET Core, .NET 5 및 이상 버전에서 “모든 CPU” 어셈블리는 64비트 *\*.comhost.dll* 과 함께 제공됩니다. 따라서 64비트 클라이언트에서만 사용될 수 있습니다. 또한 SDK에서 나타내기 때문에 기본값이 됩니다. 이 동작은 “자체 포함” 기능을 게시하는 방법과 동일하며 기본적으로 SDK에서 제공하는 기능을 사용합니다. `NETCoreSdkRuntimeIdentifier` MSBuild 속성은 *\*.comhost.dll* 의 비트 수를 결정합니다. 관리형 파트는 예상대로 비트 수와 관련이 없지만 함께 제공되는 네이티브 자산은 기본적으로 대상 SDK로 설정됩니다.
 
 COM 구성 요소의 [자체 포함 배포](../deploying/index.md#publish-self-contained)는 지원되지 않습니다. COM 구성 요소의 [프레임워크 종속 배포](../deploying/index.md#publish-framework-dependent)만 지원됩니다.
 

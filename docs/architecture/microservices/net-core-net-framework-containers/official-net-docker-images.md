@@ -2,12 +2,12 @@
 title: 공식 .NET Docker 이미지
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | 공식 .NET Docker 이미지
 ms.date: 01/13/2021
-ms.openlocfilehash: 3f4b58b2775c4e80b69cbd707396ebe98ccfe29c
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 072e565260bf81c123ee837ccca46fbdf7c67361
+ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188623"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99065124"
 ---
 # <a name="official-net-docker-images"></a>공식 .NET Docker 이미지
 
@@ -48,7 +48,7 @@ Docker 허브에서 .NET 이미지 리포지토리를 탐색하는 경우 태그
 | 이미지 | 설명 |
 |-------|----------|
 | mcr.microsoft.com/dotnet/aspnet:**5.0** | Linux 및 Windows에서 런타임 전용 및 ASP.NET Core 최적화가 포함된 ASP.NET Core(다중 아키텍처) |
-| mcr.microsoft.com/dotnet/sdk:**5.01** | Linux 및 Windows에서 SDK가 포함된 .NET 5(다중 아키텍처) |
+| mcr.microsoft.com/dotnet/sdk:**5.0** | Linux 및 Windows에서 SDK가 포함된 .NET 5(다중 아키텍처) |
 
 > [!div class="step-by-step"]
 > [이전](net-container-os-targets.md)

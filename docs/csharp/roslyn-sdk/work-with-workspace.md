@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK 작업 영역 모델 사용
 description: 이 개요에서는 코드에 대한 작업 영역 및 프로젝트를 쿼리하고 조작하는 데 사용하는 형식에 대한 이해를 제공합니다.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: d21873b132d5f0788033693a319e556feeac59a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b613c85c01cc054dea9dd4bb9cf0062ffedb08bf
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156885"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899115"
 ---
 # <a name="work-with-a-workspace"></a>작업 영역 작업
 
@@ -24,7 +24,7 @@ IDE와 같은 호스트 환경은 개방형 솔루션에 해당하는 작업 영
 
 또한 호스트 환경에서 연결이 해제되거나 호스트 환경이 없는 애플리케이션에서 사용되는 독립 실행형 작업 영역을 만들 수도 있습니다.
 
-## <a name="solutions-projects-documents"></a>솔루션, 프로젝트, 문서
+## <a name="solutions-projects-and-documents"></a>솔루션, 프로젝트, 문서
 
 작업 영역은 키를 누를 때마다 변경될 수 있지만 격리 상태에서 솔루션의 모델을 사용하여 작업할 수 있습니다.
 

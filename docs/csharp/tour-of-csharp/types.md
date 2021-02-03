@@ -2,14 +2,16 @@
 title: 형식과 그 멤버 정의하기 - C# 둘러보기
 description: 형식은 프로그램의 기본적인 구성 요소입니다. C#에서 클래스, 구조체, 인터페이스 등을 만드는 방법을 알아봅니다.
 ms.date: 08/06/2020
-ms.openlocfilehash: efd353fe8c1e6a57952bcb2586a05ad38ecd52b9
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: b1ce24611fec6fdf01d5ecb8d6ae974e147c78c5
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88559117"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216605"
 ---
 # <a name="types-and-members"></a>형식 및 멤버
+
+개체 지향 언어인 C#은 캡슐화, 상속 및 다형성의 개념을 지원합니다. 클래스는 단일 부모 클래스에서 직접 상속될 수 있으며 원하는 수의 인터페이스를 구현할 수 있습니다. 부모 클래스에서 가상 메서드를 재정의하는 메서드에는 우발적인 재정의를 방지하는 방법으로 `override` 키워드가 필요합니다. C#에서 구조체는 간단한 클래스와 같습니다. 즉, 인터페이스를 구현할 수 있지만 상속을 지원하지 않는 스택 할당 형식입니다. C#은 또한 주로 데이터 값을 저장하는 용도로 사용할 수 있는 클래스 형식인 레코드를 제공합니다.
 
 ## <a name="classes-and-objects"></a>클래스 및 개체
 
@@ -36,7 +38,7 @@ ms.locfileid: "88559117"
 
 ### <a name="type-parameters"></a>형식 매개 변수
 
-제네릭 클래스는 [ **‘형식 매개 변수’** ](../programming-guide/generics/index.md)를 정의합니다.* 형식 매개 변수는 대괄호로 묶인 형식 매개 변수 이름 목록입니다. 형식 매개 변수는 클래스 이름을 따릅니다. 그런 후 형식 매개 변수를 클래스 선언 본문에 사용하여 클래스의 멤버를 정의할 수 있습니다. 다음 예제에서 `Pair`의 형식 매개 변수는 `TFirst` 및 `TSecond`입니다.
+제네릭 클래스는 [ **‘형식 매개 변수’**](../programming-guide/generics/index.md)를 정의합니다.* 형식 매개 변수는 대괄호로 묶인 형식 매개 변수 이름 목록입니다. 형식 매개 변수는 클래스 이름을 따릅니다. 그런 후 형식 매개 변수를 클래스 선언 본문에 사용하여 클래스의 멤버를 정의할 수 있습니다. 다음 예제에서 `Pair`의 형식 매개 변수는 `TFirst` 및 `TSecond`입니다.
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="DefinePairClass":::
 
@@ -61,7 +63,7 @@ ms.locfileid: "88559117"
 
 ## <a name="structs"></a>구조체
 
-클래스는 상속과 다형성을 지원하는 형식을 정의합니다. 이를 통해 파생 클래스의 계층 구조를 기반으로 정교한 동작을 만들 수 있습니다. 이와 대조적으로 [ **‘구조체’** ](../language-reference/builtin-types/struct.md) 형식은 보다 단순한 형식으로, 기본 용도는 데이터 값을 저장하는 것입니다.* 구조체는 기본 형식을 선언할 수 없으며, <xref:System.ValueType?displayProperty=nameWithType>에서 암시적으로 파생됩니다. `struct` 형식에서 다른 `struct` 형식을 파생할 수 없으며 암시적으로 봉인됩니다.
+클래스는 상속과 다형성을 지원하는 형식을 정의합니다. 이를 통해 파생 클래스의 계층 구조를 기반으로 정교한 동작을 만들 수 있습니다. 이와 대조적으로 [ **‘구조체’**](../language-reference/builtin-types/struct.md) 형식은 보다 단순한 형식으로, 기본 용도는 데이터 값을 저장하는 것입니다.* 구조체는 기본 형식을 선언할 수 없으며, <xref:System.ValueType?displayProperty=nameWithType>에서 암시적으로 파생됩니다. `struct` 형식에서 다른 `struct` 형식을 파생할 수 없으며 암시적으로 봉인됩니다.
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="PointStruct":::
 

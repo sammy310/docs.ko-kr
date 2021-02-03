@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-ms.openlocfilehash: d3f3a282cfa9274a1939d312987dd58b24eab2af
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a7c76bfe169a23322a5a0cdfe0d2e2e5d82f0346
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255795"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957882"
 ---
 # <a name="composition-analysis-tool-mefx"></a>컴퍼지션 분석 도구(Mefx)
 
@@ -130,7 +130,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
   
 <a name="white_lists"></a>
 
-## <a name="white-lists"></a>허용 목록  
+## <a name="allow-lists"></a>허용 목록
 
  `/whitelist` 옵션을 사용하여 거부될 것으로 예상되는 파트를 나열하는 텍스트 파일을 지정할 수 있습니다. 이에 따라 예기치 않은 거부에 플래그가 지정됩니다. 불완전한 라이브러리 또는 일부 종속성이 누락된 하위 라이브러리를 분석할 때 이 방법이 유용할 수 있습니다. `/whitelist` 옵션을 `/rejected` 또는 `/causes` 작업에 적용할 수 있습니다.  
   

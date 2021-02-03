@@ -2,12 +2,12 @@
 title: .NET Core의 EventCounters
 description: 이 문서에서는 EventCounters의 정의, 구현 방법 및 사용 방법에 대해 알아봅니다.
 ms.date: 08/07/2020
-ms.openlocfilehash: 08180b5580d2e7fe782fbd531a26872715825cdf
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 843f1ec645bf7f52fd4f85e30d183e6e21fee5c6
+ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678197"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99065066"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core의 EventCounters
 
@@ -195,11 +195,11 @@ EventCounters는 Azure Monitor에서, 특히 Azure Application Insights에서 �
 
 먼저 카운터 값을 생성하는 <xref:System.Diagnostics.Tracing.EventSource>를 사용하도록 설정해야 합니다. <xref:System.Diagnostics.Tracing.EventSource>가 생성될 때 알림을 받을 수 있도록 <xref:System.Diagnostics.Tracing.EventListener.OnEventSourceCreated%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이것이 EventCounters에서 올바른 <xref:System.Diagnostics.Tracing.EventSource>인 경우 <xref:System.Diagnostics.Tracing.EventListener.EnableEvents%2A?displayProperty=nameWithType>을 호출할 수 있습니다. 다음은 재정의 예입니다.
 
-:::code language="csharp" source="snippets/EventCounters/SimpleEventListener.cs" range="16-27":::
+:::code language="csharp" source="snippets/EventCounters/SimpleEventListener.cs" range="11-22":::
 
 #### <a name="sample-code"></a>예제 코드
 
-다음은 일정한 간격으로 내부 카운터(`System.Runtime`)를 게시하기 위해 .NET 런타임의 <xref:System.Diagnostics.Tracing.EventSource>에서 모든 카운터 이름 및 값을 출력하는 샘플 <xref:System.Diagnostics.Tracing.EventListener> 클래스입니다.
+다음은 매초마다 내부 카운터(`System.Runtime`)를 게시하기 위해 .NET 런타임의 <xref:System.Diagnostics.Tracing.EventSource>에서 모든 카운터 이름 및 값을 출력하는 샘플 <xref:System.Diagnostics.Tracing.EventListener> 클래스입니다.
 
 :::code language="csharp" source="snippets/EventCounters/SimpleEventListener.cs":::
 

@@ -1,21 +1,21 @@
 ---
-title: .NET Core RID(런타임 식별자) 카탈로그
-description: RID(런타임 식별자)에 대한 정보와 .NET Core에서 RID 사용 방법에 대해 알아봅니다.
-ms.date: 12/15/2020
-ms.openlocfilehash: 6b45c42d626de41c7d67c66aac7dc31c51c36a22
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+title: .NET RID(런타임 식별자) 카탈로그
+description: RID(런타임 식별자)에 대해 알아보고 .NET에서 RID를 사용하는 방법에 대해 알아봅니다.
+ms.date: 01/28/2021
+ms.openlocfilehash: e5e1c4712965211b25a02b14a7cf2c91d74d8306
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970670"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216007"
 ---
-# <a name="net-core-rid-catalog"></a>.NET Core RID 카탈로그
+# <a name="net-rid-catalog"></a>.NET RID 카탈로그
 
 RID는 *Runtime Identifier(런타임 식별자)* 의 약어입니다. RID 값은 애플리케이션을 실행하는 대상 플랫폼을 식별하는 데 사용됩니다.
 NuGet 패키지에서 .NET 패키지의 플랫폼 관련 자산을 나타내는 데 사용됩니다. RID 값의 예로 `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, `osx.10.12-x64` 등을 들 수 있습니다.
 기본 종속성이 있는 패키지의 경우 RID는 패키지를 복원할 수 있는 플랫폼을 지정합니다.
 
-단일 RID는 프로젝트 파일의 `<RuntimeIdentifier>` 요소에 설정할 수 있습니다. 여러 RID는 프로젝트 파일의 `<RuntimeIdentifiers>` 요소에서 세미콜론으로 구분된 목록으로 정의할 수 있습니다. 다음과 같은 [.NET Core CLI 명령](./tools/index.md)을 사용하여 `--runtime` 옵션을 통해서도 사용됩니다.
+단일 RID는 프로젝트 파일의 `<RuntimeIdentifier>` 요소에 설정할 수 있습니다. 여러 RID는 프로젝트 파일의 `<RuntimeIdentifiers>` 요소에서 세미콜론으로 구분된 목록으로 정의할 수 있습니다. `--runtime` 옵션을 통해 다음과 같은 [.NET CLI 명령](./tools/index.md)에서도 사용됩니다.
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)
@@ -82,7 +82,7 @@ RID를 사용할 때는 RID에 대한 다음과 같은 몇 가지 고려 사항�
 RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. 새 값이 플랫폼에 정기적으로 추가됩니다.
 완전한 최신 버전을 보려면 `dotnet/runtime` 리포지토리에서 [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) 파일을 확인하세요.
 
-.NET Core 2.0 SDK에서는 이식 가능 RID라는 개념을 도입합니다. 이식 가능 RID란 RID 그래프에 새로 추가된 값으로서, 아직 특정 버전 또는 OS 배포에 연결되지 않았으며 .NET Core 2.0 이상을 사용할 때 권장됩니다. 대부분의 배포 RID는 이식 가능 RID에 매핑되므로 이 값은 여러 Linux 배포판을 다룰 때 매우 유용합니다.
+이식 가능 RID란 RID 그래프에 추가된 값으로 특정 버전이나 OS 배포에 연결되지 않은 값입니다. 대부분의 배포 RID가 이식 가능 RID에 매핑되므로 이러한 값은 특히 여러 Linux 배포판을 처리할 때 선택하는 것이 좋습니다.
 
 다음 목록에서는 각 OS에 사용되는 일반적인 RID의 몇 가지 예를 보여줍니다.
 
@@ -90,7 +90,7 @@ RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. �
 
 자주 사용되는 값만 나열되어 있습니다. 완전한 최신 버전을 보려면 `dotnet/runtime` 리포지토리에서 [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) 파일을 확인하세요.
 
-- 이식 가능(.NET Core 2.0 이상 버전)
+- 이식 가능
   - `win-x64`
   - `win-x86`
   - `win-arm`
@@ -108,7 +108,7 @@ RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. �
   - `win10-arm`
   - `win10-arm64`
 
-자세한 내용은 [.NET Core 종속성 및 요구 사항](./install/windows.md#dependencies)을 참조하세요.
+자세한 내용은 [.NET 종속성 및 요구 사항](./install/windows.md#dependencies)을 참조하세요.
 
 ## <a name="linux-rids"></a>Linux RID
 
@@ -127,7 +127,7 @@ RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. �
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-자세한 내용은 [.NET Core 종속성 및 요구 사항](./install/linux.md)을 참조하세요.
+자세한 내용은 [.NET 종속성 및 요구 사항](./install/linux.md)을 참조하세요.
 
 ## <a name="macos-rids"></a>macOS RID
 
@@ -151,7 +151,7 @@ macOS RID는 이전 "OSX" 브랜딩을 사용합니다. 자주 사용되는 값�
   - `osx.11.0-x64`
   - `osx.11.0-arm64`
 
-자세한 내용은 [.NET Core 종속성 및 요구 사항](./install/macos.md#dependencies)을 참조하세요.
+자세한 내용은 [.NET 종속성 및 요구 사항](./install/macos.md#dependencies)을 참조하세요.
 
 ## <a name="see-also"></a>참조
 

@@ -1,20 +1,20 @@
 ---
-title: .NET Core에서 종속성 관리
-description: .NET Core 애플리케이션의 프로젝트 종속성을 관리하는 방법을 설명합니다.
+title: .NET에서 종속성 관리
+description: .NET 애플리케이션의 프로젝트 종속성을 관리하는 방법을 설명합니다.
 no-loc:
 - dotnet add package
 - dotnet remove package
 - dotnet list package
 ms.topic: how-to
-ms.date: 02/25/2020
-ms.openlocfilehash: 2aeedb56f774b51076764c2772eb02b2fa095d92
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.date: 01/28/2021
+ms.openlocfilehash: 9f5f814d0b4dc7aa3ff1a938c172475169a55bf2
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062862"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216130"
 ---
-# <a name="manage-dependencies-in-net-core-applications"></a>.NET Core 애플리케이션에서 종속성 관리
+# <a name="manage-dependencies-in-net-applications"></a>.NET 애플리케이션에서 종속성 관리
 
 이 문서에서는 프로젝트 파일을 편집하거나 CLI를 사용하여 종속성을 추가하고 제거하는 방법을 설명합니다.
 
@@ -37,7 +37,7 @@ ms.locfileid: "88062862"
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-앞에 나온 예제의 종속성은 해당 대상에 대해 빌드가 발생한 경우에만 유효합니다. 조건에서 `$(TargetFramework)`는 프로젝트에 설정되는 MSBuild 속성입니다. 대부분의 일반적인 .NET Core 애플리케이션에서는 이 작업을 수행하지 않아도 됩니다.
+앞에 나온 예제의 종속성은 해당 대상에 대해 빌드가 발생한 경우에만 유효합니다. 조건에서 `$(TargetFramework)`는 프로젝트에 설정되는 MSBuild 속성입니다. 대부분의 일반적인 .NET 애플리케이션에서는 이 작업을 수행하지 않아도 됩니다.
 
 ## <a name="add-a-dependency-by-editing-the-project-file"></a>프로젝트 파일을 편집하여 종속성 추가
 
