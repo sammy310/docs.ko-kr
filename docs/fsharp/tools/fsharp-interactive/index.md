@@ -4,12 +4,12 @@ description: F# 대화형(dotnet fsi)이 어떻게 콘솔에서 F# 코드를 대
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: fe8ee2ebb97f4a47e80f39d5be8d95ba5b72ddc7
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: fe48d4d7de92eea800a489b12342e3ae181e8cb1
+ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739315"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99426980"
 ---
 # <a name="interactive-programming-with-f"></a>F\#을 사용한 대화형 프로그래밍
 
@@ -91,7 +91,7 @@ F# 스크립팅은 기본적으로 [Visual Studio](../../get-started/get-started
 ## <a name="referencing-packages-in-f-interactive"></a>F# 대화형에서 패키지 참조
 
 > [!NOTE]
-> 패키지 관리 시스템을 확장할 수 있습니다. [기타 확장에 대해](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager) 자세히 알아보세요.
+> 패키지 관리 시스템을 확장할 수 있습니다. [기타 확장에 대해](https://fsharp.github.io/FSharp.Compiler.Service/reference/Microsoft.DotNet.DependencyManager.html) 자세히 알아보세요.
 
 F# 대화형에서는 `#r "nuget:"` 구문 및 특정 버전으로 NuGet 패키지를 참조할 수 있습니다.
 
@@ -126,7 +126,7 @@ printfn $"{f (dsharp.tensor 1.2)}"
 `#i` 명령을 사용하여 패키지 소스를 지정할 수도 있습니다. 다음 예제에서는 원격 및 로컬 소스를 지정합니다.
 
 ```fsharp
-#i "nuget:https://my-remote-package-source/index.json
+#i "nuget:https://my-remote-package-source/index.json"
 #i @"path-to-my-local-source"
 ```
 
@@ -168,7 +168,7 @@ dotnet fsi Script.fsx
 
 ## <a name="loading-other-scripts"></a>다른 스크립트 로드
 
-스크립팅할 때 작업마다 다른 스크립트를 사용하는 것이 유용할 수 있습니다. 경우에 따라 다른 스크립트에서 코드를 다시 사용하는 것이 좋습니다. 콘텐츠를 복사하여 파일에 붙여 넣는 대신 `#load`를 사용하여 쉽게 로드하고 평가할 수 있습니다.
+스크립팅할 때 작업마다 다른 스크립트를 사용하는 것이 유용할 수 있습니다. 경우에 따라 다른 스크립트에서 코드를 다시 사용하는 것이 좋습니다. 콘텐츠를 복사하여 파일에 붙여넣는 대신 `#load`를 사용하여 쉽게 로드하고 평가할 수 있습니다.
 
 다음 `Script1.fsx`를 고려합니다.
 
