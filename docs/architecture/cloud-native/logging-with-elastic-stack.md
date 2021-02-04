@@ -2,12 +2,12 @@
 title: 탄력적 스택으로 로깅
 description: 탄력적 스택, Logstash 태 시 및 Kibana를 사용 하 여 로깅
 ms.date: 01/19/2021
-ms.openlocfilehash: ebe7eef16d3b1a73d0fd3a010a509bbaf7be3fd5
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: f8dbcd68bf809715a10d0ea1ab36cf5ceb6a96a9
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505819"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548086"
 ---
 # <a name="logging-with-elastic-stack"></a>탄력적 스택으로 로깅
 
@@ -17,7 +17,7 @@ ms.locfileid: "99505819"
 
 ## <a name="elastic-stack"></a>탄력적 스택
 
-탄력적 스택은 Kubernetes 클러스터에서 정보를 수집 하는 강력한 옵션입니다. Kubernetes는 Elasticsearch 끝점에 로그를 보내는 작업을 지원 하며, [대부분](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/)의 경우 그림 7-5에 표시 된 것 처럼 환경 변수를 설정 하기만 하면 됩니다.
+탄력적 스택은 Kubernetes 클러스터에서 정보를 수집 하는 강력한 옵션입니다. Kubernetes는 Elasticsearch 끝점에 로그를 보내는 작업을 지원 하며, [대부분](https://v1-19.docs.kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/)의 경우 그림 7-5에 표시 된 것 처럼 환경 변수를 설정 하기만 하면 됩니다.
 
 ```kubernetes
 KUBE_LOGGING_DESTINATION=elasticsearch

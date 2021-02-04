@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: ccafce51cadba588dc6c4e8fc8b476f3cd8ee699
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ccb915c33be217d2a8d00a54c5bd57384286140f
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262712"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548099"
 ---
 # <a name="load-balancing"></a>부하 분산
 
@@ -85,7 +85,9 @@ WCF (Windows Communication Foundation) 응용 프로그램의 용량을 높이�
 
  기본 바인딩 구성을 일부 수정한다면, HTTP 부하 분산 기술을 사용하여 <xref:System.ServiceModel.WSHttpBinding>과 <xref:System.ServiceModel.WSDualHttpBinding>을 모두 부하 분산할 수 있습니다.  
   
-- 보안 컨텍스트 설정 해제: 이 작업은 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>의 <xref:System.ServiceModel.WSHttpBinding> 속성을 `false`로 설정하여 수행할 수 있습니다. 또는 보안 세션이 필요한 경우 보안 [세션](./feature-details/secure-sessions.md) 항목의 설명에 따라 상태 저장 보안 세션을 사용할 수 있습니다. 상태 저장 보안 세션을 사용하면 보안 세션을 각 요청과 함께 보호 보안 토큰의 일부로 전송할 때 서비스의 상태를 비저장 상태로 유지할 수 있습니다. 상태 저장 보안 세션을 사용하려면, 필요한 구성 설정이 시스템에서 제공되는 <xref:System.ServiceModel.Channels.CustomBinding> 및 <xref:System.ServiceModel.Channels.Binding>에 노출되지 않으므로 <xref:System.ServiceModel.WSHttpBinding> 또는 사용자 정의 <xref:System.ServiceModel.WSDualHttpBinding>을 사용해야 합니다.  
+- 보안 컨텍스트 설정을 끄거나 상태 저장 보안 세션을 사용 합니다. 의 속성을로 설정 하 여 보안 컨텍스트 설정을 해제할 수 있습니다 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> <xref:System.ServiceModel.WSHttpBinding> `false` . 또는 보안 세션을 사용 하는 경우 보안 <xref:System.ServiceModel.WSDualHttpBinding> [세션](./feature-details/secure-sessions.md)의 설명에 따라 상태 저장 보안 세션을 사용할 수 있습니다. 상태 저장 보안 세션을 사용 하면 보안 세션의 모든 상태가 보호 보안 토큰의 일부로 각 요청과 함께 전송 되기 때문에 서비스를 상태 비저장 상태로 유지할 수 있습니다. 상태 저장 보안 세션을 사용 하도록 설정 하려면 <xref:System.ServiceModel.Channels.CustomBinding> 또는 사용자 정의를 사용 해야 합니다 <xref:System.ServiceModel.Channels.Binding> . 필요한 구성 설정은 시스템에서 제공 하는 및에 노출 되지 않기 때문 <xref:System.ServiceModel.WSHttpBinding> <xref:System.ServiceModel.WSDualHttpBinding> 입니다.
+
+- 보안 컨텍스트 설정을 해제 하는 경우 서비스 자격 증명 협상도 해제 해야 합니다. 이 기능을 해제 하려면의 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential> 속성을로 설정 <xref:System.ServiceModel.WSHttpBinding> 합니다 `false` . 서비스 자격 증명 협상을 사용 하지 않도록 설정 하려면 클라이언트에서 끝점 id를 명시적으로 지정 해야 할 수 있습니다.
   
 - 신뢰할 수 있는 세션은 사용하지 마십시오. 이 기능은 기본적으로 해제되어 있습니다.  
   
@@ -95,6 +97,6 @@ WCF (Windows Communication Foundation) 응용 프로그램의 용량을 높이�
   
  부하 분산 시나리오에서 성능을 최대화하려면 <xref:System.ServiceModel.NetTcpSecurity>(<xref:System.ServiceModel.SecurityMode.Transport> 또는 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>)를 사용하는 것이 좋습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [인터넷 정보 서비스 호스팅을 위한 최선의 방법](./feature-details/internet-information-services-hosting-best-practices.md)
