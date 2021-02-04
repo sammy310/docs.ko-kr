@@ -3,12 +3,12 @@ title: 복원력 있는 통신
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 복원 력 있는 통신
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 18b26223634efc5c05f680d0cbb7c8cbc2490a59
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 52f08c066767175c699f5a058267cb42d2b1d4aa
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166042"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99547696"
 ---
 # <a name="resilient-communications"></a>복원 력 있는 통신
 
@@ -30,7 +30,7 @@ ms.locfileid: "91166042"
 
 ## <a name="service-mesh"></a>서비스 메시
 
-더 나은 방법은 *서비스 메시*의 진화 하는 기술입니다. [서비스 메시](https://www.nginx.com/blog/what-is-a-service-mesh/) 는 서비스 통신 및 위에서 언급 한 기타 과제를 처리 하는 기본 제공 기능이 포함 된 구성 가능한 인프라 계층입니다. 이러한 문제를 서비스 프록시로 이동 하 여 이러한 문제를 분리 합니다. 프록시는 비즈니스 코드에서 격리를 제공 하기 위해 별도의 프로세스 ( [사이드카](/azure/architecture/patterns/sidecar)라고 함)에 배포 됩니다. 그러나 사이드카는 서비스에 연결 되며,이를 사용 하 여 생성 되 고 수명 주기를 공유 합니다. 그림 6-7에서는이 시나리오를 보여 줍니다.
+더 나은 방법은 *서비스 메시* 의 진화 하는 기술입니다. [서비스 메시](https://www.nginx.com/blog/what-is-a-service-mesh/) 는 서비스 통신 및 위에서 언급 한 기타 과제를 처리 하는 기본 제공 기능이 포함 된 구성 가능한 인프라 계층입니다. 이러한 문제를 서비스 프록시로 이동 하 여 이러한 문제를 분리 합니다. 프록시는 비즈니스 코드에서 격리를 제공 하기 위해 별도의 프로세스 ( [사이드카](/azure/architecture/patterns/sidecar)라고 함)에 배포 됩니다. 그러나 사이드카는 서비스에 연결 되며,이를 사용 하 여 생성 되 고 수명 주기를 공유 합니다. 그림 6-7에서는이 시나리오를 보여 줍니다.
 
 ![측 자동차를 사용 하는 서비스 메시](./media/service-mesh-with-side-car.png)
 
@@ -79,9 +79,9 @@ Azure cloud는 Istio를 수용 하 고 Azure Kubernetes 서비스 내에서이�
 
 ### <a name="references"></a>참조
 
-- [Polly](http://www.thepollyproject.org/)
+- [Polly](https://dotnetfoundation.org/projects/polly)
 
-- [다시 시도 패턴](/azure/architecture/patterns/retry)
+- [패턴 다시 시도](/azure/architecture/patterns/retry)
 
 - [회로 차단기 패턴](/azure/architecture/patterns/circuit-breaker)
 

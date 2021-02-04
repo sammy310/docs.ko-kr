@@ -3,18 +3,18 @@ title: 애플리케이션 복원력 패턴
 description: Azure 용 클라우드 네이티브 .NET 앱 설계 | 응용 프로그램 복원 력 패턴
 author: robvet
 ms.date: 01/19/2021
-ms.openlocfilehash: 9a59a7d93b61b0dea11680f6caf0bd3b68a0f853
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 655df16ef58f1deb2d2f4d0487c47658499f2108
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505923"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99547722"
 ---
 # <a name="application-resiliency-patterns"></a>애플리케이션 복원력 패턴
 
 첫 번째 방어 줄은 응용 프로그램 복원 력입니다.
 
-사용자 고유의 복원 력 프레임 워크를 작성 하는 데 상당한 시간을 투자할 수 있지만 이러한 제품은 이미 존재 합니다. [이는 개발자가 흐름](http://www.thepollyproject.org/) 및 스레드로부터 안전한 방식으로 복원 력을 표현할 수 있도록 하는 포괄적인 .net 복원 력 및 일시적인 오류 처리 라이브러리입니다. 응용 프로그램은 .NET Framework 또는 .NET 5로 빌드된 응용 프로그램을 대상으로 합니다. 다음 표에서는 기능을 제공 하는 `policies` 라이브러리에서 사용할 수 있는 복원 력 기능에 대해 설명 합니다. 개별적으로 적용 하거나 그룹화 할 수 있습니다.
+사용자 고유의 복원 력 프레임 워크를 작성 하는 데 상당한 시간을 투자할 수 있지만 이러한 제품은 이미 존재 합니다. [이는 개발자가 흐름](https://dotnetfoundation.org/projects/polly) 및 스레드로부터 안전한 방식으로 복원 력을 표현할 수 있도록 하는 포괄적인 .net 복원 력 및 일시적인 오류 처리 라이브러리입니다. 응용 프로그램은 .NET Framework 또는 .NET 5로 빌드된 응용 프로그램을 대상으로 합니다. 다음 표에서는 기능을 제공 하는 `policies` 라이브러리에서 사용할 수 있는 복원 력 기능에 대해 설명 합니다. 개별적으로 적용 하거나 그룹화 할 수 있습니다.
 
 | 정책 | 환경 |
 | :-------- | :-------- |
