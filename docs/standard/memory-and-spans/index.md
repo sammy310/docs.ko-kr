@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Span<T>
 - buffers"
 - pipeline processing
-ms.openlocfilehash: 4b0464cc81cf0908a907f8305ea4e35b716c18fb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b81531d77bae1dce9d6cf58fe1b5439bf79f9e9c
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830664"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506372"
 ---
 # <a name="memory--and-span-related-types"></a>메모리 및 범위 관련 형식
 
@@ -21,7 +21,7 @@ ms.locfileid: "94830664"
 
 - <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> - 변경할 수 없는 <xref:System.Span%601> 구조체 버전입니다.
 
-- <xref:System.Memory%601?displayProperty=nameWithType> - 스택이 아닌 관리되는 힙에 할당된 메모리의 인접한 영역입니다. <xref:System.Memory%601> 인스턴스는 `T` 형식 배열 또는 <xref:System.String>을 통해 지원할 수 있습니다. 관리되는 힙에 저장될 수 있으므로 <xref:System.Memory%601>에는 <xref:System.Span%601>의 제한 사항이 없습니다.
+- <xref:System.Memory%601?displayProperty=nameWithType> - 메모리의 연속 영역에 관한 래퍼입니다. <xref:System.Memory%601> 인스턴스는 `T` 또는 <xref:System.String> 형식의 배열이나 메모리 관리자로 지원할 수 있습니다. 관리되는 힙에 저장할 수 있어 <xref:System.Memory%601>에는 <xref:System.Span%601>의 제한 사항이 없습니다.
 
 - <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType> - 변경할 수 없는 <xref:System.Memory%601> 구조체 버전입니다.
 
@@ -34,6 +34,8 @@ ms.locfileid: "94830664"
 - <xref:System.ArraySegment%601> - 특정 인덱스에서 시작하는 특정 개수의 배열 요소에 대한 래퍼입니다.
 
 - <xref:System.MemoryExtensions?displayProperty=nameWithType> - 문자열, 배열 및 배열 세그먼트를 <xref:System.Memory%601> 블록으로 변환하기 위한 확장 메서드 컬렉션입니다.
+
+<xref:System.Span%601?displayProperty=nameWithType>, <xref:System.Memory%601?displayProperty=nameWithType> 및 그 읽기 전용 상대는 메모리를 복사하거나 관리되는 힙에 필요 이상으로 할당되는 것을 방지하는 알고리즘을 생성할 수 있도록 설계되었습니다. 이러한 항목을 만들 때(`Slice` 또는 해당 생성자를 통해) 기본 버퍼를 복제하는 작업과 관련되지 않아 래핑된 메모리의 "뷰"를 나타내는 관련 참조 및 오프셋만 업데이트됩니다.
 
 > [!NOTE]
 > 이전 프레임워크의 경우 [System.Memory NuGet 패키지](https://www.nuget.org/packages/System.Memory/)에서 <xref:System.Span%601> 및 <xref:System.Memory%601>를 사용할 수 있습니다.
