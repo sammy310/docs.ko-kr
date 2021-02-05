@@ -1296,6 +1296,8 @@ items:
                 href: ../core/dependency-loading/loading-resources.md
               - name: 관리되지 않는 라이브러리 로드
                 href: ../core/dependency-loading/loading-unmanaged.md
+              - name: 자세한 어셈블리 로딩 정보 수집
+                href: ../core/dependency-loading/collect-details.md
           - name: 자습서
             items:
               - name: 플러그 인을 사용하여 .NET 애플리케이션 만들기
@@ -2133,6 +2135,8 @@ items:
             href: ../standard/native-interop/customize-struct-marshaling.md
           - name: 매개 변수 마샬링 사용자 지정
             href: ../standard/native-interop/customize-parameter-marshaling.md
+          - name: 크로스 플랫폼 P/Invoke
+            href: ../standard/native-interop/cross-platform.md
           - name: Interop 지침
             href: ../standard/native-interop/best-practices.md
           - name: 문자 집합 및 마샬링

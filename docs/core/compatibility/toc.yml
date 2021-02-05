@@ -28,6 +28,8 @@
                   href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: TableLayoutSettings 속성이 InvalidEnumArgumentException을 throw함
                   href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
+                - name: 노드가 다른 곳에 할당될 경우 TreeNodeCollection.Item이 예외를 throw함
+                  href: windows-forms/6.0/treenodecollection-item-throws-argumentexception.md
         - name: .NET 5.0
           items:
             - name: 개요
@@ -260,6 +262,8 @@
                   href: serialization/5.0/options-honored-when-serializing-key-value-pairs.md
             - name: Windows Forms
               items:
+                - name: 네이티브 코드는 Windows Forms 개체에 액세스하지 못함
+                  href: windows-forms/5.0/winforms-objects-not-accessible-from-native-code.md
                 - name: OutputType이 WinExe로 설정됨
                   href: windows-forms/5.0/automatically-infer-winexe-output-type.md
                 - name: DataGridView가 사용자 지정 글꼴을 다시 설정하지 않음
@@ -566,8 +570,12 @@
                   href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: TableLayoutSettings 속성이 InvalidEnumArgumentException을 throw함
                   href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
+                - name: 노드가 다른 곳에 할당될 경우 TreeNodeCollection.Item이 예외를 throw함
+                  href: windows-forms/6.0/treenodecollection-item-throws-argumentexception.md
             - name: .NET 5.0
               items:
+                - name: 네이티브 코드는 Windows Forms 개체에 액세스하지 못함
+                  href: windows-forms/5.0/winforms-objects-not-accessible-from-native-code.md
                 - name: OutputType이 WinExe로 설정됨
                   href: windows-forms/5.0/automatically-infer-winexe-output-type.md
                 - name: DataGridView가 사용자 지정 글꼴을 다시 설정하지 않음
