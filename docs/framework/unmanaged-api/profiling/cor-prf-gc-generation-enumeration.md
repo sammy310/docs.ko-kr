@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: 열거형 COR_PRF_GC_GENERATION'
 title: COR_PRF_GC_GENERATION 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: d6ece160-26ad-4d39-abd7-05acd6f78c48
 topic_type:
 - apiref
-ms.openlocfilehash: 1d7489e997868a9486f77d176580cee18213a99d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 108bb4b2b4cba57235d354efe3b815a0e0df17ca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718564"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648937"
 ---
-# <a name="cor_prf_gc_generation-enumeration"></a><span data-ttu-id="2bd9b-102">COR_PRF_GC_GENERATION 열거형</span><span class="sxs-lookup"><span data-stu-id="2bd9b-102">COR_PRF_GC_GENERATION Enumeration</span></span>
+# <a name="cor_prf_gc_generation-enumeration"></a><span data-ttu-id="6820f-103">COR_PRF_GC_GENERATION 열거형</span><span class="sxs-lookup"><span data-stu-id="6820f-103">COR_PRF_GC_GENERATION Enumeration</span></span>
 
-<span data-ttu-id="2bd9b-103">가비지 컬렉션 생성을 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-103">Identifies a garbage-collection generation.</span></span>  
+<span data-ttu-id="6820f-104">가비지 컬렉션 생성을 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="6820f-104">Identifies a garbage-collection generation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2bd9b-104">구문</span><span class="sxs-lookup"><span data-stu-id="2bd9b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6820f-105">구문</span><span class="sxs-lookup"><span data-stu-id="6820f-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -37,36 +38,36 @@ typedef enum {
 } COR_PRF_GC_GENERATION;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="2bd9b-105">멤버</span><span class="sxs-lookup"><span data-stu-id="2bd9b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="6820f-106">구성원</span><span class="sxs-lookup"><span data-stu-id="6820f-106">Members</span></span>  
   
-|<span data-ttu-id="2bd9b-106">멤버</span><span class="sxs-lookup"><span data-stu-id="2bd9b-106">Member</span></span>|<span data-ttu-id="2bd9b-107">설명</span><span class="sxs-lookup"><span data-stu-id="2bd9b-107">Description</span></span>|  
+|<span data-ttu-id="6820f-107">멤버</span><span class="sxs-lookup"><span data-stu-id="6820f-107">Member</span></span>|<span data-ttu-id="6820f-108">설명</span><span class="sxs-lookup"><span data-stu-id="6820f-108">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_GEN_0`|<span data-ttu-id="2bd9b-108">개체는 0 세대로 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-108">The object is stored as generation 0.</span></span>|  
-|`COR_PRF_GC_GEN_1`|<span data-ttu-id="2bd9b-109">개체는 1 세대로 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-109">The object is stored as generation 1.</span></span>|  
-|`COR_PRF_GC_GEN_2`|<span data-ttu-id="2bd9b-110">개체는 2 세대로 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-110">The object is stored as generation 2.</span></span>|  
-|`COR_PRF_GC_LARGE_OBJECT_HEAP`|<span data-ttu-id="2bd9b-111">개체가 대량 개체 힙에 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-111">The object is stored in the large-object heap.</span></span>|  
-|`COR_PRF_GC_PINNED_OBJECT_HEAP`|<span data-ttu-id="2bd9b-112">개체는 고정 개체 힙에 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-112">The object is stored in the pinned-object heap.</span></span>|  
+|`COR_PRF_GC_GEN_0`|<span data-ttu-id="6820f-109">개체는 0 세대로 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6820f-109">The object is stored as generation 0.</span></span>|  
+|`COR_PRF_GC_GEN_1`|<span data-ttu-id="6820f-110">개체는 1 세대로 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6820f-110">The object is stored as generation 1.</span></span>|  
+|`COR_PRF_GC_GEN_2`|<span data-ttu-id="6820f-111">개체는 2 세대로 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6820f-111">The object is stored as generation 2.</span></span>|  
+|`COR_PRF_GC_LARGE_OBJECT_HEAP`|<span data-ttu-id="6820f-112">개체가 대량 개체 힙에 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6820f-112">The object is stored in the large-object heap.</span></span>|  
+|`COR_PRF_GC_PINNED_OBJECT_HEAP`|<span data-ttu-id="6820f-113">개체는 고정 개체 힙에 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6820f-113">The object is stored in the pinned-object heap.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2bd9b-113">설명</span><span class="sxs-lookup"><span data-stu-id="2bd9b-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6820f-114">설명</span><span class="sxs-lookup"><span data-stu-id="6820f-114">Remarks</span></span>  
 
- <span data-ttu-id="2bd9b-114">가비지 수집기는 개체를 age를 기반으로 하는 세대로 분할 하 여 메모리 관리 성능을 향상 시킵니다.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-114">The garbage collector improves memory management performance by dividing objects into generations based on age.</span></span> <span data-ttu-id="2bd9b-115">가비지 수집기는 현재 세 세대 (0, 1, 2) 및 두 개의 특수 힙 세그먼트를 사용 합니다. 하나는 큰 개체이 고 다른 하나는 고정 된 개체에 대 한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-115">The garbage collector currently uses three generations, numbered 0, 1, and 2, and two special heap segments, one for large objects and one for pinned objects.</span></span>
+ <span data-ttu-id="6820f-115">가비지 수집기는 개체를 age를 기반으로 하는 세대로 분할 하 여 메모리 관리 성능을 향상 시킵니다.</span><span class="sxs-lookup"><span data-stu-id="6820f-115">The garbage collector improves memory management performance by dividing objects into generations based on age.</span></span> <span data-ttu-id="6820f-116">가비지 수집기는 현재 세 세대 (0, 1, 2) 및 두 개의 특수 힙 세그먼트를 사용 합니다. 하나는 큰 개체이 고 다른 하나는 고정 된 개체에 대 한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="6820f-116">The garbage collector currently uses three generations, numbered 0, 1, and 2, and two special heap segments, one for large objects and one for pinned objects.</span></span>
   
- <span data-ttu-id="2bd9b-116">크기가 임계값 보다 큰 개체는 큰 개체 힙에 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-116">Objects whose size is larger than a threshold value are stored in the large-object heap.</span></span> <span data-ttu-id="2bd9b-117">고정 된 개체는 고정 개체 힙에 할당 되어 일반 힙에 할당 되는 성능 비용을 피할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-117">Pinned objects can be allocated to the pinned-object heap to avoid the performance cost of allocating them on the normal heaps.</span></span> <span data-ttu-id="2bd9b-118">할당 된 다른 개체는 0 세대에 속하는 것으로 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-118">Other allocated objects start out belonging to generation 0.</span></span> <span data-ttu-id="2bd9b-119">0 세대에서 가비지 수집 후에 존재 하는 모든 개체는 1 세대로 승격 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-119">All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1.</span></span> <span data-ttu-id="2bd9b-120">1 세대에서 가비지 수집이 수행 된 후 존재 하는 개체는 2 세대로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-120">Objects that exist after garbage collection occurs in generation 1 move into generation 2.</span></span>  
+ <span data-ttu-id="6820f-117">크기가 임계값 보다 큰 개체는 큰 개체 힙에 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6820f-117">Objects whose size is larger than a threshold value are stored in the large-object heap.</span></span> <span data-ttu-id="6820f-118">고정 된 개체는 고정 개체 힙에 할당 되어 일반 힙에 할당 되는 성능 비용을 피할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6820f-118">Pinned objects can be allocated to the pinned-object heap to avoid the performance cost of allocating them on the normal heaps.</span></span> <span data-ttu-id="6820f-119">할당 된 다른 개체는 0 세대에 속하는 것으로 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="6820f-119">Other allocated objects start out belonging to generation 0.</span></span> <span data-ttu-id="6820f-120">0 세대에서 가비지 수집 후에 존재 하는 모든 개체는 1 세대로 승격 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6820f-120">All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1.</span></span> <span data-ttu-id="6820f-121">1 세대에서 가비지 수집이 수행 된 후 존재 하는 개체는 2 세대로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="6820f-121">Objects that exist after garbage collection occurs in generation 1 move into generation 2.</span></span>  
   
- <span data-ttu-id="2bd9b-121">세대를 사용 하면 가비지 수집기에서 한 번에 할당 된 개체의 하위 집합만 작업 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-121">The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.</span></span>  
+ <span data-ttu-id="6820f-122">세대를 사용 하면 가비지 수집기에서 한 번에 할당 된 개체의 하위 집합만 작업 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6820f-122">The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.</span></span>  
   
- <span data-ttu-id="2bd9b-122">`COR_PRF_GC_GENERATION`열거형은 [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) 구조에서 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-122">The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) structure.</span></span>  
+ <span data-ttu-id="6820f-123">`COR_PRF_GC_GENERATION`열거형은 [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) 구조에서 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6820f-123">The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) structure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2bd9b-123">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2bd9b-123">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6820f-124">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6820f-124">Requirements</span></span>  
 
- <span data-ttu-id="2bd9b-124">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2bd9b-124">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="6820f-125">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6820f-125">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2bd9b-125">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2bd9b-125">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="6820f-126">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6820f-126">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="2bd9b-126">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2bd9b-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6820f-127">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6820f-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2bd9b-127">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2bd9b-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6820f-128">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6820f-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2bd9b-128">참조</span><span class="sxs-lookup"><span data-stu-id="2bd9b-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6820f-129">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6820f-129">See also</span></span>
 
-- [<span data-ttu-id="2bd9b-129">프로파일링 열거형</span><span class="sxs-lookup"><span data-stu-id="2bd9b-129">Profiling Enumerations</span></span>](profiling-enumerations.md)
+- [<span data-ttu-id="6820f-130">프로파일링 열거형</span><span class="sxs-lookup"><span data-stu-id="6820f-130">Profiling Enumerations</span></span>](profiling-enumerations.md)
