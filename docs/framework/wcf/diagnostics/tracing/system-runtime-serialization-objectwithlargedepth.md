@@ -1,19 +1,20 @@
 ---
+description: ObjectWithLargeDepth에 대해 자세히 알아보세요.
 title: System.Runtime.Serialization.ObjectWithLargeDepth
 ms.date: 03/30/2017
 ms.assetid: 5837891d-104b-4e9b-bfba-5434a9524b33
-ms.openlocfilehash: 0d914c502f3f1f55c33d085119c339c576e2b77a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6d609e4b6ae26e3315d1eb31c746c7fc423a1ae4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96237940"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99654813"
 ---
 # <a name="systemruntimeserializationobjectwithlargedepth"></a>System.Runtime.Serialization.ObjectWithLargeDepth
 
 System.Runtime.Serialization.ObjectWithLargeDepth  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  재귀 구조를 가진 개체는 깊이가 큰 경우에 쓰기가 제한됩니다. 개체의 깊이를 줄여 보십시오.  
   

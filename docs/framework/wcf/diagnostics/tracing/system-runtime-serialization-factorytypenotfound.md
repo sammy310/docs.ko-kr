@@ -1,19 +1,20 @@
 ---
+description: FactoryTypeNotFound에 대해 자세히 알아보세요.
 title: System.Runtime.Serialization.FactoryTypeNotFound
 ms.date: 03/30/2017
 ms.assetid: e0ab341a-4000-4076-87cc-ffe332266658
-ms.openlocfilehash: 0d356c1df8653cadccfff121a079552d08ab6117
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7e038a2cfd641937f512f6f555508f13a3caab90
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281107"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99654826"
 ---
 # <a name="systemruntimeserializationfactorytypenotfound"></a>System.Runtime.Serialization.FactoryTypeNotFound
 
 System.Runtime.Serialization.FactoryTypeNotFound  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  역직렬 변환기가 deserialization 도중에 사용할 형식을 알지 못합니다. XML에서 팩터리 형식으로 지정된 형식을 알려진 형식 목록에 추가해 보세요. 예를 들어 KnownTypeAttribute 특성을 사용합니다.  
   

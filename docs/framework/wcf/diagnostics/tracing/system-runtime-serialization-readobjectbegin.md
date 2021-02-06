@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 다음에 대해 자세히 알아보세요.
 title: System.Runtime.Serialization.ReadObjectBegin
 ms.date: 03/30/2017
 ms.assetid: 1b08ba6d-f201-4ace-9dce-aaf539e323b3
-ms.openlocfilehash: e115b049b85c20affe58fe4758bfa5ff36511d35
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cf7096fe70c9e42081082e4ee707c6ae832a86e4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281081"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99654800"
 ---
 # <a name="systemruntimeserializationreadobjectbegin"></a>System.Runtime.Serialization.ReadObjectBegin
 
 System.Runtime.Serialization.ReadObjectBegin  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  ReadObject를 시작 중입니다.  
   
