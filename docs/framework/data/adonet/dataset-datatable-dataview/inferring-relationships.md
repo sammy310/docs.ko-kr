@@ -1,17 +1,18 @@
 ---
+description: '자세히 알아보기: 관계 유추'
 title: 관계 유추
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: ee691eee95c34afdb6374cdd7448d4b44ece3055
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a117581d512c1427c638ea862169ab3c7623d783
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177568"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652148"
 ---
 # <a name="inferring-relationships"></a>관계 유추
 
-테이블로 유추되는 요소에 역시 테이블로 유추되는 자식 요소가 있으면 두 테이블 사이에 <xref:System.Data.DataRelation>이 만들어집니다. **ParentTableName_Id** 이름이 인 새 열이 부모 요소에 대해 만들어진 테이블과 자식 요소에 대해 만들어진 테이블 모두에 추가 됩니다. 이 id 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다. 열은 부모 테이블의 자동 증분 기본 키가 되며 두 테이블 간의 **DataRelation** 에 사용 됩니다. 추가 된 id 열의 데이터 형식은 System.string 이며 다른 모든 유추 된 열의 데이터 형식 ( **system.string**)과는 **다릅니다.** <xref:System.Data.ForeignKeyConstraint> **DeleteRule**  =  부모 테이블과 자식 테이블 모두에서 새 열을 사용 하 여 DeleteRule**Cascade** 가 만들어집니다.  
+테이블로 유추되는 요소에 역시 테이블로 유추되는 자식 요소가 있으면 두 테이블 사이에 <xref:System.Data.DataRelation>이 만들어집니다. **ParentTableName_Id** 이름이 인 새 열이 부모 요소에 대해 만들어진 테이블과 자식 요소에 대해 만들어진 테이블 모두에 추가 됩니다. 이 id 열의 **ColumnMapping** 속성은 **mappingtype.attribute** 로 설정 됩니다. 열은 부모 테이블의 자동 증분 기본 키가 되며 두 테이블 간의 **DataRelation** 에 사용 됩니다. 추가 된 id 열의 데이터 형식은 System.string 이며 다른 모든 유추 된 열의 데이터 형식 ( **system.string**)과는 **다릅니다.** <xref:System.Data.ForeignKeyConstraint>   =  부모 테이블과 자식 테이블 모두에서 새 열을 사용 하 여 DeleteRule **Cascade** 가 만들어집니다.  
   
  예를 들어, 다음과 같은 XML을 가정해 봅시다.  
   
@@ -24,11 +25,11 @@ ms.locfileid: "91177568"
 </DocumentElement>  
 ```  
   
- 유추 프로세스에서는 **Element1** 및 **ChildElement1**라는 두 개의 테이블을 생성 합니다.  
+ 유추 프로세스에서는 **Element1** 및 **ChildElement1** 라는 두 개의 테이블을 생성 합니다.  
   
- **Element1** 테이블에는 두 개의 열 **Element1_Id** 와 **childelement2 라는**가 있습니다. **Element1_Id** 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다. **Childelement2 라는** 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다. **Element1_Id** 열은 **Element1** 테이블의 기본 키로 설정 됩니다.  
+ **Element1** 테이블에는 두 개의 열 **Element1_Id** 와 **childelement2 라는** 가 있습니다. **Element1_Id** 열의 **ColumnMapping** 속성은 **mappingtype.attribute** 로 설정 됩니다. **Childelement2 라는** 열의 **ColumnMapping** 속성은 **mappingtype.attribute** 로 설정 됩니다. **Element1_Id** 열은 **Element1** 테이블의 기본 키로 설정 됩니다.  
   
- **ChildElement1** 테이블에는 **attr1**, **attr2** 및 **Element1_Id**라는 세 개의 열이 있습니다. **Attr1** 및 **attr2** 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다. **Element1_Id** 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다.  
+ **ChildElement1** 테이블에는 **attr1**, **attr2** 및 **Element1_Id** 라는 세 개의 열이 있습니다. **Attr1** 및 **attr2** 열의 **ColumnMapping** 속성은 **mappingtype.attribute** 로 설정 됩니다. **Element1_Id** 열의 **ColumnMapping** 속성은 **mappingtype.attribute** 로 설정 됩니다.  
   
  **DataRelation** 및 **ForeignKeyConstraint** 는 두 테이블의 **Element1_Id** 열을 사용 하 여 생성 됩니다.  
   

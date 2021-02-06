@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 중첩 된 스키마 요소 간의 암시적 관계 매핑'
 title: 중첩된 스키마 요소 사이에 암시적 관계 매핑
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 32f8bf67242143098717b47c3b7aa175317ba274
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 418dd1210674b2c592cf96c6d369bc43f8dcab9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201319"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652018"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>중첩된 스키마 요소 사이에 암시적 관계 매핑
 
@@ -15,15 +16,15 @@ XSD(XML 스키마 정의 언어) 스키마에는 다른 형식 내부에 중첩�
   
 - 각 복합 형식(부모 및 자식)에 대해 하나의 테이블을 만듭니다.  
   
-- 부모에 unique 제약 조건이 없는 경우 *tablename*이라는 테이블 정의 당 추가 기본 키 열이 하나 있습니다. 여기서 *tablename* 은 부모 테이블의 이름 _Id 합니다.  
+- 부모에 unique 제약 조건이 없는 경우 *tablename* 이라는 테이블 정의 당 추가 기본 키 열이 하나 있습니다. 여기서 *tablename* 은 부모 테이블의 이름 _Id 합니다.  
   
-- **IsPrimaryKey** 속성을 **True**로 설정 하 여 추가 열을 기본 키로 식별 하는 부모 테이블의 primary key 제약 조건입니다. 제약 조건은 Constraint\#으로 명명되며, 여기서 \#은 1, 2, 3 등을 나타냅니다. 예를 들어, 첫 번째 제약 조건의 기본 이름은 Constraint1입니다.  
+- **IsPrimaryKey** 속성을 **True** 로 설정 하 여 추가 열을 기본 키로 식별 하는 부모 테이블의 primary key 제약 조건입니다. 제약 조건은 Constraint\#으로 명명되며, 여기서 \#은 1, 2, 3 등을 나타냅니다. 예를 들어, 첫 번째 제약 조건의 기본 이름은 Constraint1입니다.  
   
 - 추가 열을 부모 테이블의 기본 키를 참조하는 외래 키로 식별하는 외래 키 제약 조건을 자식 테이블에 만듭니다. 제약 조건의 이름은 *ParentTable_ChildTable* 여기서 *parenttable* 은 부모 테이블의 이름이 고 *childtable* 은 자식 테이블의 이름입니다.  
   
 - 부모와 자식 테이블 간의 데이터 관계를 만듭니다.  
   
- 다음 예제에서는 **Orderdetail** 이 **Order**의 자식 요소인 스키마를 보여 줍니다.  
+ 다음 예제에서는 **Orderdetail** 이 **Order** 의 자식 요소인 스키마를 보여 줍니다.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""
@@ -55,7 +56,7 @@ XSD(XML 스키마 정의 언어) 스키마에는 다른 형식 내부에 중첩�
 </xs:schema>  
 ```  
   
- XML 스키마 매핑 프로세스는 **데이터 집합**에 다음을 만듭니다.  
+ XML 스키마 매핑 프로세스는 **데이터 집합** 에 다음을 만듭니다.  
   
 - **Order** 및 **orderdetail** 테이블  
   
@@ -64,7 +65,7 @@ XSD(XML 스키마 정의 언어) 스키마에는 다른 형식 내부에 중첩�
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
-- **Order** 테이블에 대 한 unique 제약 조건입니다. **IsPrimaryKey** 속성은 **True**로 설정 됩니다.  
+- **Order** 테이블에 대 한 unique 제약 조건입니다. **IsPrimaryKey** 속성은 **True** 로 설정 됩니다.  
   
     ```text  
     ConstraintName: Constraint1  

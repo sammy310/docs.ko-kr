@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 데이터 집합 제약 조건에 키 XSD (XML 스키마) 제약 조건 매핑'
 title: 데이터 세트 제약 조건에 키 XSD(XML 스키마) 제약 조건 매핑
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: b55b232faa01bf36788276caaf8bc2e97dddf697
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0c07b53e06dc6b80395764b2bdd76045ee80bffd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172790"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651992"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>데이터 세트 제약 조건에 키 XSD(XML 스키마) 제약 조건 매핑
 
@@ -20,9 +21,9 @@ ms.locfileid: "91172790"
 |특성 이름|설명|  
 |--------------------|-----------------|  
 |**msdata:ConstraintName**|이 특성을 지정하면 해당 값이 제약 조건 이름으로 사용됩니다. 그렇지 않으면 **name** 특성은 제약 조건 이름의 값을 제공 합니다.|  
-|**msdata:PrimaryKey**|`PrimaryKey="true"`이 있으면 **IsPrimaryKey** 제약 조건 속성이 **true**로 설정 되어 기본 키로 설정 됩니다. 기본 키에는 null 값을 사용할 수 없으므로 **Allowdbnull** 열 속성은 **false**로 설정 됩니다.|  
+|**msdata:PrimaryKey**|`PrimaryKey="true"`이 있으면 **IsPrimaryKey** 제약 조건 속성이 **true** 로 설정 되어 기본 키로 설정 됩니다. 기본 키에는 null 값을 사용할 수 없으므로 **Allowdbnull** 열 속성은 **false** 로 설정 됩니다.|  
   
- 키 제약 조건이 지정 된 스키마를 변환 하는 동안 매핑 프로세스에서는 제약 조건의 각 열에 대해 **Allowdbnull** column 속성이 **false** 로 설정 된 unique 제약 조건을 테이블에 만듭니다. Key 요소에을 지정 하지 않은 경우 unique 제약 조건의 **IsPrimaryKey** 속성도 **false** 로 설정 됩니다 `msdata:PrimaryKey="true"` . **key** 이것은 `PrimaryKey="true"`인 스키마의 UNIQUE 제약 조건에도 마찬가지로 적용됩니다.  
+ 키 제약 조건이 지정 된 스키마를 변환 하는 동안 매핑 프로세스에서는 제약 조건의 각 열에 대해 **Allowdbnull** column 속성이 **false** 로 설정 된 unique 제약 조건을 테이블에 만듭니다. Key 요소에을 지정 하지 않은 경우 unique 제약 조건의 **IsPrimaryKey** 속성도 **false** 로 설정 됩니다 `msdata:PrimaryKey="true"` .  이것은 `PrimaryKey="true"`인 스키마의 UNIQUE 제약 조건에도 마찬가지로 적용됩니다.  
   
  다음 스키마 예제에서 **key** 요소는 **CustomerID** 요소에 대 한 키 제약 조건을 지정 합니다.  
   
@@ -75,7 +76,7 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- 생성 된 **데이터 집합** 에서 스키마가 키 요소에를 지정 하기 때문에 **UniqueConstraint** 의 **IsPrimaryKey** 속성은 **true** 로 설정 됩니다 `msdata:PrimaryKey="true"` **key** .  
+ 생성 된 **데이터 집합** 에서 스키마가 키 요소에를 지정 하기 때문에 **UniqueConstraint** 의 **IsPrimaryKey** 속성은 **true** 로 설정 됩니다 `msdata:PrimaryKey="true"`  .  
   
  **데이터 집합** 에 있는 **UniqueConstraint** 의 **ConstraintName** 속성 값은 스키마의 **키** 요소에 지정 된 **msdata: ConstraintName** 특성의 값입니다.  
   

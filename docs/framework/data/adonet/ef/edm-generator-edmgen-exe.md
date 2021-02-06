@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: EDM 생성기 (EdmGen.exe)'
 title: EDM 생성기(EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: da5b87fa76cbc8e44f6ed60b047e5a185c2aa603
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 853e579ff3859a543819d9785766535d9bb865af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542557"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650926"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 생성기(EdmGen.exe)
 
@@ -17,13 +18,13 @@ EdmGen.exe은 Entity Framework 모델 및 매핑 파일을 사용 하는 데 사
 
 - 기존 모델의 유효성을 검사합니다. 자세한 내용은 [방법: EdmGen.exe를 사용 하 여 모델 및 매핑 파일 유효성 검사](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)를 참조 하세요.
 
-- 개념적 모델(.csdl) 파일에서 생성된 개체 클래스가 포함되는 C# 또는 Visual Basic 코드 파일을 생성합니다. 자세한 내용은 [방법: EdmGen.exe를 사용 하 여 개체 계층 코드 생성](how-to-use-edmgen-exe-to-generate-object-layer-code.md)을 참조 하세요.
+- 개념적 모델(.csdl) 파일에서 생성된 개체 클래스가 포함되는 C# 또는 Visual Basic 코드 파일을 생성합니다. 자세한 내용은 [방법: EdmGen.exe를 사용 하 여 Object-Layer 코드 생성](how-to-use-edmgen-exe-to-generate-object-layer-code.md)을 참조 하세요.
 
 - 기존 모델에 대해 미리 생성된 뷰가 들어 있는 C# 또는 Visual Basic 코드 파일을 생성합니다. 자세한 내용은 [방법: 뷰를 미리 생성 하 여 쿼리 성능 향상](/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))을 위한 방법을 설명 합니다.
 
-EdmGen.exe 도구는 .NET Framework 디렉터리에 설치 됩니다. 대체로 이 도구는 C:\windows\Microsoft.NET\Framework\v4.0에 있으며 64비트 시스템의 경우 C:\windows\Microsoft.NET\Framework64\v4.0에 있습니다. Visual Studio 명령 프롬프트에서 EdmGen.exe 도구에 액세스할 수도 있습니다. **시작**을 클릭 하 고 **모든 프로그램**, **Microsoft Visual Studio 2010**, **Visual Studio Tools**를 차례로 가리킨 다음 **Visual Studio 2010 명령 프롬프트**를 클릭 합니다.
+EdmGen.exe 도구는 .NET Framework 디렉터리에 설치 됩니다. 대체로 이 도구는 C:\windows\Microsoft.NET\Framework\v4.0에 있으며 64비트 시스템의 경우 C:\windows\Microsoft.NET\Framework64\v4.0에 있습니다. Visual Studio 명령 프롬프트에서 EdmGen.exe 도구에 액세스할 수도 있습니다. **시작** 을 클릭 하 고 **모든 프로그램**, **Microsoft Visual Studio 2010**, **Visual Studio Tools** 를 차례로 가리킨 다음 **Visual Studio 2010 명령 프롬프트** 를 클릭 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```console
 EdmGen /mode:choice [options]
@@ -43,7 +44,7 @@ EdmGen.exe 도구를 사용하는 경우 다음 모드 중 하나를 지정해�
 
 ## <a name="options"></a>옵션
 
-|옵션|Description|
+|옵션|설명|
 |------------|-----------------|
 |`/p[roject]:`\<string>|사용할 프로젝트 이름을 지정합니다. 프로젝트 이름은 네임스페이스 설정, 모델 및 매핑 파일 이름, 개체 소스 파일 이름, 뷰 생성 소스 파일 이름의 기본값으로 사용됩니다. 엔터티 컨테이너 이름이 Context로 설정 됩니다 \<project> .|
 |`/prov[ider]:`\<string>|스토리지 모델(.ssdl) 파일을 생성하는 데 사용할 .NET Framework 데이터 공급자의 이름입니다. 기본 공급자는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient?displayProperty=nameWithType>)입니다.|
@@ -74,7 +75,7 @@ EdmGen.exe 도구를 사용하는 경우 다음 모드 중 하나를 지정해�
 
 [방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 유효성 검사](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET 엔터티 데이터 모델 도구](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [엔터티 데이터 모델](../entity-data-model.md)

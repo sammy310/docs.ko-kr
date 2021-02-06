@@ -1,19 +1,20 @@
 ---
+description: '자세히 알아보기: 중첩 된 요소에 지정 된 관계 매핑'
 title: 중첩된 요소에 지정된 관계 매핑
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: f758e1ef2c3786a102dc6bb5f6dd217b20dc5b55
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a625ad5bfd590794d0362a991dc22f756f043f2a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198550"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651940"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>중첩된 요소에 지정된 관계 매핑
 
 스키마는 **msdata: Relationship** 주석을 포함 하 여 스키마의 두 요소 간 매핑을 명시적으로 지정할 수 있습니다. **Msdata: Relationship** 에 지정 된 두 요소는 스키마에 중첩 될 수 있지만 반드시 지정할 필요는 없습니다. 매핑 프로세스에서는 스키마의 **msdata: relationship** 을 사용 하 여 두 열 간의 기본 키/외래 키 관계를 생성 합니다.  
   
- 다음 예에서는 **Orderdetail** 요소가 **Order**의 자식 요소인 XML 스키마를 보여 줍니다. **Msdata: Relationship** 은이 부모-자식 관계를 식별 하 고 결과 **Order** 테이블의 **Ordernumber** 열이 결과 **ordernumber** 테이블의 **ordernumber** 열과 관련 되도록 지정 합니다.  
+ 다음 예에서는 **Orderdetail** 요소가 **Order** 의 자식 요소인 XML 스키마를 보여 줍니다. **Msdata: Relationship** 은이 부모-자식 관계를 식별 하 고 결과 **Order** 테이블의 **Ordernumber** 열이 결과 **ordernumber** 테이블의 **ordernumber** 열과 관련 되도록 지정 합니다.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""

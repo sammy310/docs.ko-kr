@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: XML 스키마에서 데이터 집합 관계형 구조 파생 (XSD)'
 title: XML 스키마에서 데이터 세트 관계형 구조 파생(XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 878e39af575328fb0abba096c327d36203a52231
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c2d2dc8ab9c8a1cf77c79fbde38a06de6f120c82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164807"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652525"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML 스키마에서 데이터 세트 관계형 구조 파생(XSD)
 
@@ -51,7 +52,7 @@ Customers (CustomerID, CompanyName, Phone)
  테이블의 각 열에 대한 데이터 형식은 지정된 해당 요소 또는 특성의 XML 스키마 형식에서 파생됩니다.  
   
 > [!NOTE]
-> 요소가 `customers` **정수와**같은 간단한 XML 스키마 데이터 형식인 경우 테이블이 생성 되지 않습니다. 테이블은 복합 형식인 최상위 요소에 대해서만 만들어집니다.  
+> 요소가 `customers` **정수와** 같은 간단한 XML 스키마 데이터 형식인 경우 테이블이 생성 되지 않습니다. 테이블은 복합 형식인 최상위 요소에 대해서만 만들어집니다.  
   
  다음 XML 스키마에서 **schema** 요소에는 및 라는 두 개의 요소가 있습니다 `InStateCustomers` `OutOfStateCustomers` .  
   

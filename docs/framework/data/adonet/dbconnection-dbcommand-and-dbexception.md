@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: DbConnection, DbCommand 및 Dbcommand'
 title: DbConnection, DbCommand 및 DbException
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 58aab611-7e6f-4749-b983-28ab7ae87dbe
-ms.openlocfilehash: 3075999c15fccc3a41c191297a146c362b3638e8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b5cb748a8dd5fb06f2f5dc5ab0479a679b2cc07d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183327"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651277"
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a>DbConnection, DbCommand 및 DbException
 
@@ -67,7 +68,7 @@ finally
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [DbProviderFactories](dbproviderfactories.md)
 - [DbProviderFactory 가져오기](obtaining-a-dbproviderfactory.md)

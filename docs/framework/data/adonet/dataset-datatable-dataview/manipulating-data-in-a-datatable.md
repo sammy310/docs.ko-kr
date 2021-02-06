@@ -1,17 +1,18 @@
 ---
+description: '자세한 정보: DataTable에서 데이터 조작'
 title: DataTable에서 데이터 조작
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 3f98832b4aa9361346d06830f2f004fa374222ee
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 41f70bd15a023f8d92733bdce142666a08245d9d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201332"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652070"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>DataTable에서 데이터 조작
 
-<xref:System.Data.DataTable>에서 <xref:System.Data.DataSet>을 만든 후에는 데이터베이스에서 테이블을 사용할 때와 동일하게 작업을 수행할 수 있습니다. 테이블에서 데이터를 추가, 확인, 편집 및 삭제하고, 오류 및 이벤트를 모니터링하며, 테이블에서 데이터를 쿼리할 수 있습니다. **DataTable**에서 데이터를 수정 하는 경우 변경 내용이 정확한 지 여부를 확인 하 고 프로그래밍 방식으로 변경 내용을 수락할지 거부할지를 결정할 수도 있습니다.  
+<xref:System.Data.DataTable>에서 <xref:System.Data.DataSet>을 만든 후에는 데이터베이스에서 테이블을 사용할 때와 동일하게 작업을 수행할 수 있습니다. 테이블에서 데이터를 추가, 확인, 편집 및 삭제하고, 오류 및 이벤트를 모니터링하며, 테이블에서 데이터를 쿼리할 수 있습니다. **DataTable** 에서 데이터를 수정 하는 경우 변경 내용이 정확한 지 여부를 확인 하 고 프로그래밍 방식으로 변경 내용을 수락할지 거부할지를 결정할 수도 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 

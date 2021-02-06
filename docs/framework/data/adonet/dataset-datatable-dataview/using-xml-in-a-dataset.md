@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 데이터 집합에서 XML 사용'
 title: 데이터 세트에서 XML 사용
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-ms.openlocfilehash: e133da727887271af3bc5330a5779df4af58a37e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5c4216fce9c1512c95da8e27a622ba228411b641
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201189"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651420"
 ---
 # <a name="using-xml-in-a-dataset"></a>데이터 세트에서 XML 사용
 

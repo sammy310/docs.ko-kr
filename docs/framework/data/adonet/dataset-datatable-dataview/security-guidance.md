@@ -1,18 +1,19 @@
 ---
+description: '자세한 정보: DataSet 및 DataTable 보안 지침'
 title: DataSet 및 DataTable 보안 지침
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 8798c4542acc578c8f7f00c9b26cd01a0db20c42
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ec0130d5b5ad106cc3a0a26b45ebff34f73e31d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726069"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651641"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet 및 DataTable 보안 지침
 
-이 문서는 다음에 적용 됩니다.
+이 글의 적용 대상:
 
 * .NET Framework(모든 버전)
 * .NET Core 이상
@@ -68,7 +69,7 @@ table.ReadXml(xmlReader); // this call will succeed
 
 ### <a name="extend-the-list-of-allowed-types"></a>허용 되는 형식 목록 확장
 
-앱은 위에 나열 된 기본 제공 유형 외에도 사용자 지정 유형을 포함 하도록 허용 된 유형 목록을 확장할 수 있습니다. 허용 되는 유형 목록을 확장 하면 변경 내용이 _all_ `DataSet` 앱 내의 모든 및 인스턴스에 영향을 줍니다 `DataTable` . 형식은 기본 제공 허용 형식 목록에서 제거할 수 없습니다.
+앱은 위에 나열 된 기본 제공 유형 외에도 사용자 지정 유형을 포함 하도록 허용 된 유형 목록을 확장할 수 있습니다. 허용 되는 유형 목록을 확장 하면 변경 내용이  `DataSet` 앱 내의 모든 및 인스턴스에 영향을 줍니다 `DataTable` . 형식은 기본 제공 허용 형식 목록에서 제거할 수 없습니다.
 
 #### <a name="extend-through-configuration-net-framework-40---48"></a>구성을 통해 확장 (.NET Framework 4.0-4.8)
 
@@ -174,7 +175,7 @@ _App.config_ 를 통해 감사 모드를 사용 하도록 설정할 수 있습�
 </configuration>
 ```
 
-감사 모드를 사용 하는 경우 _App.config_ 를 사용 하 여 기본 제공 `TraceListener` `DataSet` `TraceSource.` 추적 소스의 _System.Data.DataSet_ 이름을 system.string으로 기본 제공 합니다. 다음 샘플에서는 콘솔 _및_ 디스크의 로그 파일에 추적 이벤트를 쓰는 방법을 보여 줍니다.
+감사 모드를 사용 하는 경우 _App.config_ 를 사용 하 여 기본 제공 `TraceListener` `DataSet` `TraceSource.` 추적 소스의 이름을 system.string으로 기본 제공 합니다. 다음 샘플에서는 콘솔 _및_ 디스크의 로그 파일에 추적 이벤트를 쓰는 방법을 보여 줍니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -214,7 +215,7 @@ _App.config_ 를 통해 감사 모드를 사용 하도록 설정할 수 있습�
 * 사용할 수 있는 옵션은 앱이 대상으로 하는 프레임 워크에 따라 다릅니다.
 
 > [!WARNING]
-> 모든 형식 제한을 제거 하면 앱 내에 보안 허점이 발생할 수 있습니다. 이 메커니즘을 사용 하는 경우 앱에서 **not** `DataSet` 또는를 사용 `DataTable` 하 여 신뢰할 수 없는 입력을 읽지 않도록 합니다. 자세한 내용은 [CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) 및 [신뢰할 수 없는 입력과 관련 하 여](#swr)다음 섹션의 안전성을 참조 하십시오.
+> 모든 형식 제한을 제거 하면 앱 내에 보안 허점이 발생할 수 있습니다. 이 메커니즘을 사용 하는 경우 앱에서  `DataSet` 또는를 사용 `DataTable` 하 여 신뢰할 수 없는 입력을 읽지 않도록 합니다. 자세한 내용은 [CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) 및 [신뢰할 수 없는 입력과 관련 하 여](#swr)다음 섹션의 안전성을 참조 하십시오.
 
 #### <a name="through-appcontext-configuration-net-framework-46---48-net-core-21-and-later-net-50-and-later"></a>AppContext 구성 (.NET Framework 4.6-4.8, .NET Core 2.1 이상, .NET 5.0 이상)을 통해
 
@@ -475,9 +476,9 @@ public class MyClass
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>BinaryFormatter를 통해 데이터 집합 또는 DataTable Deserialize
 
-개발자 `BinaryFormatter` `NetDataContractSerializer` 는,, `SoapFormatter` 또는 관련 ***unsafe** _ 포맷터를 사용 하 여 `DataSet` `DataTable` 신뢰할 수 없는 페이로드에서 또는 인스턴스를 deserialize 해서는 안 됩니다.
+개발자 `BinaryFormatter` `NetDataContractSerializer` 는,, `SoapFormatter` 또는 관련 된 ***unsafe*** 포맷터를 사용 하 여 `DataSet` `DataTable` 신뢰할 수 없는 페이로드에서 또는 인스턴스를 deserialize 해서는 안 됩니다.
 
-_이는 전체 원격 코드 실행 공격에 취약 합니다.
+* 이는 전체 원격 코드 실행 공격에 취약 합니다.
 * `SerializationBinder`이러한 공격을 방지 하기 위해 사용자 지정을 사용 하는 것 만으로는 충분 하지 않습니다.
 
 ## <a name="safe-replacements"></a>안전한 대체

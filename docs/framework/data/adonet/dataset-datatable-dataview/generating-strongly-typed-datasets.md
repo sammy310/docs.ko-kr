@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 강력한 형식의 데이터 집합 생성'
 title: 강력한 형식의 DataSets 생성
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 1c65389c8c5664f86f3f0c04829a2422908d72d1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c69aecc5a0a541c868dac3037c9dd0dbc3fe8383
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202294"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652434"
 ---
 # <a name="generating-strongly-typed-datasets"></a>강력한 형식의 DataSets 생성
 
@@ -24,7 +25,7 @@ XSD (XML 스키마 정의 언어) 표준을 준수 하는 XML 스키마를 제�
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- 이 구문에서 지시문은 `/d` 도구에 **데이터 집합**을 생성 하도록 지시 하 고,는 `/l:` 사용할 언어 (예: c # 또는 Visual Basic .net)를 도구에 알려 줍니다. 선택적 `/eld` 지시문은 LINQ to DataSet를 사용 하 여 생성 된 **데이터 집합** 에 대해 쿼리할 수 있도록 지정 합니다. 이 옵션은 `/d` 옵션도 함께 지정한 경우에 사용합니다. 자세한 내용은 [형식화 된 데이터 집합 쿼리](../querying-typed-datasets.md)를 참조 하세요. 선택적 `/n:` 지시문은 도구에서 **Xsdschema. Namespace**라는 **데이터 집합** 에 대 한 네임 스페이스를 생성 하도록 지시 합니다. 이 명령을 실행하면 XSDSchemaFileName.cs가 생성되며, 이 파일을 컴파일하여 ADO.NET 애플리케이션에서 사용할 수 있습니다. 생성된 코드는 라이브러리나 모듈로 컴파일할 수 있습니다.  
+ 이 구문에서 지시문은 `/d` 도구에 **데이터 집합** 을 생성 하도록 지시 하 고,는 `/l:` 사용할 언어 (예: c # 또는 Visual Basic .net)를 도구에 알려 줍니다. 선택적 `/eld` 지시문은 LINQ to DataSet를 사용 하 여 생성 된 **데이터 집합** 에 대해 쿼리할 수 있도록 지정 합니다. 이 옵션은 `/d` 옵션도 함께 지정한 경우에 사용합니다. 자세한 내용은 [형식화 된 데이터 집합 쿼리](../querying-typed-datasets.md)를 참조 하세요. 선택적 `/n:` 지시문은 도구에서 **Xsdschema. Namespace** 라는 **데이터 집합** 에 대 한 네임 스페이스를 생성 하도록 지시 합니다. 이 명령을 실행하면 XSDSchemaFileName.cs가 생성되며, 이 파일을 컴파일하여 ADO.NET 애플리케이션에서 사용할 수 있습니다. 생성된 코드는 라이브러리나 모듈로 컴파일할 수 있습니다.  
   
  다음 코드는 생성된 코드를 C# 컴파일러(csc.exe)를 사용하여 라이브러리로 컴파일하는 구문을 보여 줍니다.  
   
@@ -44,7 +45,7 @@ Imports XSDSchema.Namespace
 using XSDSchema.Namespace;  
 ```  
   
- 다음 코드 예제에서는 **customerdataset** 이라는 형식화 된 **데이터 집합** 을 사용 하 여 **Northwind** 데이터베이스에서 고객 목록을 로드 합니다. **Fill** 메서드를 사용 하 여 데이터가 로드 되 면이 예제에서는 형식화 된 **customersrow** (**DataRow**) 개체를 사용 하 여 **Customers** 테이블의 각 고객을 반복 합니다. 이렇게 하면 **DataColumnCollection**를 통하지 않고 **CustomerID** 열에 직접 액세스할 수 있습니다.  
+ 다음 코드 예제에서는 **customerdataset** 이라는 형식화 된 **데이터 집합** 을 사용 하 여 **Northwind** 데이터베이스에서 고객 목록을 로드 합니다. **Fill** 메서드를 사용 하 여 데이터가 로드 되 면이 예제에서는 형식화 된 **customersrow** (**DataRow**) 개체를 사용 하 여 **Customers** 테이블의 각 고객을 반복 합니다. 이렇게 하면 **DataColumnCollection** 를 통하지 않고 **CustomerID** 열에 직접 액세스할 수 있습니다.  
   
 ```vb  
 Dim customers As CustomerDataSet= New CustomerDataSet()  

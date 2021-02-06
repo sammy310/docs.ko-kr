@@ -1,24 +1,25 @@
 ---
+description: '자세한 정보: DataRelations 중첩'
 title: DataRelation 중첩
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 8db75f486c7c08b6a02401af35c9edf9969f9063
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d998802a11fbb2bf414aa28b4beee95cac70a819
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201280"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651758"
 ---
 # <a name="nesting-datarelations"></a>DataRelation 중첩
 
-데이터의 관계형 표현에서 각 테이블에는 열이나 열 집합을 사용하여 서로 연결시키는 행이 포함되어 있습니다. ADO.NET <xref:System.Data.DataSet>에서 각 테이블 사이의 관계는 <xref:System.Data.DataRelation>을 사용하여 구현됩니다. **DataRelation**을 만들 때 열의 부모-자식 관계는 관계를 통해서만 관리 됩니다. 테이블과 열은 별개의 엔터티입니다. XML에서 제공하는 데이터의 계층적 표현에서 부모-자식 관계는 중첩된 자식 요소를 포함하는 부모 요소에 의해 표현됩니다.  
+데이터의 관계형 표현에서 각 테이블에는 열이나 열 집합을 사용하여 서로 연결시키는 행이 포함되어 있습니다. ADO.NET <xref:System.Data.DataSet>에서 각 테이블 사이의 관계는 <xref:System.Data.DataRelation>을 사용하여 구현됩니다. **DataRelation** 을 만들 때 열의 부모-자식 관계는 관계를 통해서만 관리 됩니다. 테이블과 열은 별개의 엔터티입니다. XML에서 제공하는 데이터의 계층적 표현에서 부모-자식 관계는 중첩된 자식 요소를 포함하는 부모 요소에 의해 표현됩니다.  
   
- **데이터 집합이** 와 동기화 <xref:System.Xml.XmlDataDocument> 되거나 **WriteXml**을 사용 하 여 XML 데이터로 작성 되는 경우 자식 개체의 중첩을 용이 하 게 하기 위해 **DataRelation** 은 **중첩** 된 속성을 노출 합니다. **DataRelation** 의 **Nested** 속성을 **true** 로 설정 하면 XML 데이터로 작성 되거나 **XmlDataDocument**와 동기화 될 때 관계의 자식 행이 부모 열에 중첩 됩니다. **DataRelation** 의 **Nested** 속성은 기본적으로 **false**입니다.  
+ **데이터 집합이** 와 동기화 <xref:System.Xml.XmlDataDocument> 되거나 **WriteXml** 을 사용 하 여 XML 데이터로 작성 되는 경우 자식 개체의 중첩을 용이 하 게 하기 위해 **DataRelation** 은 **중첩** 된 속성을 노출 합니다. **DataRelation** 의 **Nested** 속성을 **true** 로 설정 하면 XML 데이터로 작성 되거나 **XmlDataDocument** 와 동기화 될 때 관계의 자식 행이 부모 열에 중첩 됩니다. **DataRelation** 의 **Nested** 속성은 기본적으로 **false** 입니다.  
   
- 예를 들어 다음 **데이터 집합**을 고려 합니다.  
+ 예를 들어 다음 **데이터 집합** 을 고려 합니다.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -60,9 +61,9 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- **DataRelation** 개체의 **Nested** **속성이이 데이터 집합에**대해 **true** 로 설정 되어 있지 않기 때문에이 데이터 **집합이** XML 데이터로 표현 될 때 자식 개체는 부모 요소 내에 중첩 되지 않습니다. 관련 데이터 **집합**을 포함 하는 데이터 **집합** 의 XML 표현을 중첩 되지 않은 데이터 관계로 변환 하면 성능이 저하 될 수 있습니다. 데이터 관계를 중첩하는 것이 좋습니다. 이렇게 하려면 **Nested** 속성을 **true**로 설정 합니다. 그런 다음 XSLT 스타일시트에서 하향 계층 구조적인 XPath 쿼리 식을 사용하여 데이터를 찾고 변환하는 코드를 작성합니다.  
+ **DataRelation** 개체의 **Nested** **속성이이 데이터 집합에** 대해 **true** 로 설정 되어 있지 않기 때문에이 데이터 **집합이** XML 데이터로 표현 될 때 자식 개체는 부모 요소 내에 중첩 되지 않습니다. 관련 데이터 **집합** 을 포함 하는 데이터 **집합** 의 XML 표현을 중첩 되지 않은 데이터 관계로 변환 하면 성능이 저하 될 수 있습니다. 데이터 관계를 중첩하는 것이 좋습니다. 이렇게 하려면 **Nested** 속성을 **true** 로 설정 합니다. 그런 다음 XSLT 스타일시트에서 하향 계층 구조적인 XPath 쿼리 식을 사용하여 데이터를 찾고 변환하는 코드를 작성합니다.  
   
- 다음 코드 예제에서는 **데이터 집합**에 대해 **WriteXml** 를 호출한 결과를 보여 줍니다.  
+ 다음 코드 예제에서는 **데이터 집합** 에 대해 **WriteXml** 를 호출한 결과를 보여 줍니다.  
   
 ```xml  
 <CustomerOrders>  

@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: XmlDataDocument를 사용 하 여 데이터 집합 동기화'
 title: XmlDataDocument로 데이터 세트 동기화
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: 95f1d21805dde86cd4eb59147f2fd012279b6dc1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5b5d95ef78746bb5b78146557a6ebd307895db13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173746"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651550"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>XmlDataDocument로 데이터 세트 동기화
 
@@ -158,9 +159,9 @@ ms.locfileid: "91173746"
 </xs:schema>  
 ```  
   
- 원래 XML 문서의 **OrderDetails** 및 **Products** 요소에 있는 정보만 **데이터 집합**에 대 한 스키마에 포함 됩니다. **데이터 집합** 을 **XmlDataDocument** 와 동기화 하면 **데이터 집합** 에 포함 되지 않은 요소가 XML 문서와 함께 유지 됩니다.  
+ 원래 XML 문서의 **OrderDetails** 및 **Products** 요소에 있는 정보만 **데이터 집합** 에 대 한 스키마에 포함 됩니다. **데이터 집합** 을 **XmlDataDocument** 와 동기화 하면 **데이터 집합** 에 포함 되지 않은 요소가 XML 문서와 함께 유지 됩니다.  
   
- XML 스키마에서 생성 된 강력한 형식의 **데이터 집합** (XmlDataDocument **의 네임**스페이스 포함)을 사용 하면 **데이터 집합** 을 원본 xml 문서에서 로드 된 **XmlDataDocument** 와 동기화 하 여 원래 xml 문서의 일부를 노출할 수 있습니다. 스키마에서 생성 된 **데이터 집합** 에는 구조는 포함 되지만 데이터는 포함 되지 않습니다. **XmlDataDocument**에 XML을 로드 하면 데이터가 채워집니다. 이미 데이터가 포함 된 데이터 **집합과** 동기화 된 **XmlDataDocument** 를 로드 하려고 하면 예외가 throw 됩니다.  
+ XML 스키마에서 생성 된 강력한 형식의 **데이터 집합** (XmlDataDocument **의 네임** 스페이스 포함)을 사용 하면 **데이터 집합** 을 원본 xml 문서에서 로드 된  와 동기화 하 여 원래 xml 문서의 일부를 노출할 수 있습니다. 스키마에서 생성 된 **데이터 집합** 에는 구조는 포함 되지만 데이터는 포함 되지 않습니다. **XmlDataDocument** 에 XML을 로드 하면 데이터가 채워집니다. 이미 데이터가 포함 된 데이터 **집합과** 동기화 된 **XmlDataDocument** 를 로드 하려고 하면 예외가 throw 됩니다.  
   
  **데이터 집합** (및 **XmlDataDocument**)을 업데이트 한 **후에는** 아래와 같이 **데이터 집합** 에서 무시 된 요소가 그대로 남아 있는 수정 된 XML 문서를 작성할 수 있습니다. 구매 주문 시나리오에서 주문 항목을 채웠으면 수정된 XML 문서를 주문 과정의 다음 단계인 회사의 배송 부서로 전달할 수 있습니다.  
   

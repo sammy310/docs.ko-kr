@@ -1,18 +1,19 @@
 ---
-title: 데이터 세트 콘텐츠 병합
+description: '자세한 정보: 데이터 집합 내용 병합'
+title: DataSet 콘텐츠 병합
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: abc9183666602a7ef369e690e3ae499f8c7b8b11
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bdd7184d2b3a46f8ee59a052239dcd472db5e404
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784404"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651875"
 ---
-# <a name="merging-dataset-contents"></a>데이터 세트 콘텐츠 병합
+# <a name="merging-dataset-contents"></a>DataSet 콘텐츠 병합
 
 <xref:System.Data.DataSet.Merge%2A> 메서드를 사용하여 <xref:System.Data.DataSet>, <xref:System.Data.DataTable> 또는 <xref:System.Data.DataRow> 배열의 내용을 기존 `DataSet`으로 병합할 수 있습니다. 새 데이터가 기존 `DataSet`으로 병합되는 방법은 몇 가지 요소 및 옵션에 따라 달라집니다.
 
@@ -35,7 +36,7 @@ ms.locfileid: "70784404"
 
 ## <a name="preservechanges"></a>PreserveChanges
 
-`DataSet`, `DataTable` 또는 `DataRow` 배열을 `Merge` 메서드로 전달할 때는 기존 `DataSet`의 변경 내용을 유지할 것인지 여부와 들어오는 데이터에서 발견되는 새 스키마 요소를 처리하는 방법을 지정하는 선택적 매개 변수를 포함할 수 있습니다. 들어오는 데이터 다음에 나오는 이러한 매개 변수 중 첫 번째는 부울 플래그인 <xref:System.Data.LoadOption.PreserveChanges>이며, 이 플래그는 기존 `DataSet`의 변경 내용을 유지할지 여부를 지정합니다. `PreserveChanges` 플래그가 `true`로 설정되어 있으면 들어오는 값은 기존 행의 `Current` 행 버전에 있는 기존 값을 덮어쓰지 않습니다. `PreserveChanges` 플래그가 `false`로 설정되어 있으면 들어오는 값은 기존 행의 `Current` 행 버전에 있는 기존 값을 덮어씁니다. `PreserveChanges` 플래그를 지정하지 않으면 `false`가 기본값으로 설정됩니다. 행 버전에 대 한 자세한 내용은 참조 하세요. [행 상태 및 행 버전](row-states-and-row-versions.md)합니다.
+`DataSet`, `DataTable` 또는 `DataRow` 배열을 `Merge` 메서드로 전달할 때는 기존 `DataSet`의 변경 내용을 유지할 것인지 여부와 들어오는 데이터에서 발견되는 새 스키마 요소를 처리하는 방법을 지정하는 선택적 매개 변수를 포함할 수 있습니다. 들어오는 데이터 다음에 나오는 이러한 매개 변수 중 첫 번째는 부울 플래그인 <xref:System.Data.LoadOption.PreserveChanges>이며, 이 플래그는 기존 `DataSet`의 변경 내용을 유지할지 여부를 지정합니다. `PreserveChanges` 플래그가 `true`로 설정되어 있으면 들어오는 값은 기존 행의 `Current` 행 버전에 있는 기존 값을 덮어쓰지 않습니다. `PreserveChanges` 플래그가 `false`로 설정되어 있으면 들어오는 값은 기존 행의 `Current` 행 버전에 있는 기존 값을 덮어씁니다. `PreserveChanges` 플래그를 지정하지 않으면 `false`가 기본값으로 설정됩니다. 행 버전에 대 한 자세한 내용은 [행 상태 및 행 버전](row-states-and-row-versions.md)을 참조 하세요.
 
 `PreserveChanges`가 `true`이면 기존 행의 데이터는 기존 행의 <xref:System.Data.DataRowVersion.Current> 행 버전에 유지되지만 기존 행의 <xref:System.Data.DataRowVersion.Original> 행 버전에 있는 데이터는 들어오는 행의 `Original` 행 버전에 있는 데이터로 덮어쓰여집니다. 기존 행의 <xref:System.Data.DataRow.RowState%2A>는 <xref:System.Data.DataRowState.Modified>로 설정됩니다. 다음과 같은 예외가 있습니다.
 
@@ -57,7 +58,7 @@ ms.locfileid: "70784404"
 
 |MissingSchemaAction 옵션|설명|
 |--------------------------------|-----------------|
-|<xref:System.Data.MissingSchemaAction.Add>|`DataSet`에 새 스키마 정보를 추가한 다음 새 열을 들어오는 값으로 채웁니다. 이 값이 기본값입니다.|
+|<xref:System.Data.MissingSchemaAction.Add>|`DataSet`에 새 스키마 정보를 추가한 다음 새 열을 들어오는 값으로 채웁니다. 기본값입니다.|
 |<xref:System.Data.MissingSchemaAction.AddWithKey>|`DataSet`에 새 스키마와 기본 키 정보를 추가한 다음 새 열을 들어오는 값으로 채웁니다.|
 |<xref:System.Data.MissingSchemaAction.Error>|일치하지 않는 스키마 정보가 발견되면 예외가 throw됩니다.|
 |<xref:System.Data.MissingSchemaAction.Ignore>|새 스키마 정보를 무시합니다.|
@@ -71,7 +72,7 @@ ms.locfileid: "70784404"
 > [!NOTE]
 > ID 열과 같은 자동 증분 열이 있는 데이터베이스 테이블에 행이 삽입되는 경우에는 삽입을 통해 반환되는 ID 열 값이 `DataSet`의 값과 일치하지 않을 수 있으므로 반환되는 행이 병합되는 대신 추가됩니다. 자세한 내용은 [id 또는 일련 번호 값 검색](../retrieving-identity-or-autonumber-values.md)을 참조 하세요.
 
-다음 코드 예제에서는 두 개의 `DataSet` 들어오는 `DataSet` 개체의 결합 된 스키마 `DataSet` 를 사용 하 여 스키마가 서로 다른 두 개의 개체를 하나로 병합 합니다.
+다음 코드 예제에서는 두 개의 `DataSet` `DataSet` 들어오는 개체의 결합 된 스키마를 사용 하 여 스키마가 서로 다른 두 개의 개체를 하나로 병합 합니다 `DataSet` .
 
 [!code-csharp[DataWorks DataSet.Merge#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.Merge#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/VB/source.vb#1)]
@@ -84,11 +85,11 @@ ms.locfileid: "70784404"
 [!code-csharp[DataWorks DataSet.MergeAcceptChanges#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/CS/source.cs#2)]
 [!code-vb[DataWorks DataSet.MergeAcceptChanges#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/VB/source.vb#2)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-- [DataSet, DataTable 및 DataView](index.md)
+- [DataSets, DataTables 및 DataViews](index.md)
 - [행 상태 및 행 버전](row-states-and-row-versions.md)
-- [DataAdapter 및 DataReader](../dataadapters-and-datareaders.md)
+- [DataAdapters 및 DataReaders](../dataadapters-and-datareaders.md)
 - [ADO.NET에서 데이터 검색 및 수정](../retrieving-and-modifying-data.md)
 - [ID 또는 일련 번호 값 검색](../retrieving-identity-or-autonumber-values.md)
 - [ADO.NET 개요](../ado-net-overview.md)

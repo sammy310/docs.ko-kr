@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: DataSet-Specific 연산자 예제 (LINQ to DataSet)'
 title: DataSet별 연산자 예제(LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8fdd64af-6ad0-46cd-91c8-dbe26620eeb1
-ms.openlocfilehash: 4cd99a103fabee3c87036a9933077a3a967f5a13
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2fd54453621ce180901aaf6fbb5b975067ad9831
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173694"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651329"
 ---
 # <a name="dataset-specific-operator-examples-linq-to-dataset"></a>DataSet별 연산자 예제(LINQ to DataSet)
 

@@ -1,19 +1,20 @@
 ---
+description: '자세히 알아보기: Diffgram'
 title: DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: aff9c2347fab51d853e19bd9dc16666c4ed549b5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: df00bbfb2c25014ff4e73a2777511bd3593ff8a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172803"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652512"
 ---
 # <a name="diffgrams"></a>DiffGram
 
 DiffGram은 현재 및 원래의 데이터 요소 버전을 식별하는 XML 형식입니다. <xref:System.Data.DataSet>은 DiffGram 형식을 사용하여 자신의 내용을 로드하고 유지시키며 네트워크 연결을 통한 전송을 위해 이 내용을 serialize합니다. <xref:System.Data.DataSet>이 diffgram으로 작성 되 면 diffgram은 스키마가 아닌 <xref:System.Data.DataSet> **원래** 및 **현재** 행 버전의 열 값, 행 오류 정보 및 행 순서를 포함 하 여의 내용을 정확 하 게 다시 만드는 데 필요한 모든 정보로 채워집니다.  
   
- XML Web services로부터 <xref:System.Data.DataSet>을 보내고 검색할 때 DiffGram 형식이 암시적으로 사용됩니다. 또한 <xref:System.Data.DataSet> **ReadXml** 메서드를 사용 하 여 xml에서의 콘텐츠를 로드 하거나 WriteXml 메서드를 사용 하 여 xml로의 콘텐츠를 작성 하는 경우 <xref:System.Data.DataSet> 내용을 DiffGram으로 읽거나 쓰도록 지정할 수 있습니다. **WriteXml** 자세한 내용은 [xml에서 데이터 집합 로드](loading-a-dataset-from-xml.md) 및 [데이터 집합 콘텐츠를 xml 데이터로 작성](writing-dataset-contents-as-xml-data.md)을 참조 하세요.  
+ XML Web services로부터 <xref:System.Data.DataSet>을 보내고 검색할 때 DiffGram 형식이 암시적으로 사용됩니다. 또한 <xref:System.Data.DataSet> **ReadXml** 메서드를 사용 하 여 xml에서의 콘텐츠를 로드 하거나 WriteXml 메서드를 사용 하 여 xml로의 콘텐츠를 작성 하는 경우 <xref:System.Data.DataSet> 내용을 DiffGram으로 읽거나 쓰도록 지정할 수 있습니다.  자세한 내용은 [xml에서 데이터 집합 로드](loading-a-dataset-from-xml.md) 및 [데이터 집합 콘텐츠를 xml 데이터로 작성](writing-dataset-contents-as-xml-data.md)을 참조 하세요.  
   
  DiffGram 형식은 .NET Framework에서 주로 <xref:System.Data.DataSet>의 내용에 대한 serialization 형식으로 사용되지만 DiffGrams을 사용하여 Microsoft SQL Server 데이터베이스의 테이블에 있는 데이터를 수정할 수도 있습니다.  
   
@@ -69,39 +70,39 @@ DiffGram은 현재 및 원래의 데이터 요소 버전을 식별하는 XML 형
   
  DiffGram 형식은 다음 데이터 블록으로 구성됩니다.  
   
- **\<**  ***DataInstance***  **>**  
- 이 요소의 이름 ***Datainstance***는이 설명서의 설명을 위해 사용 됩니다. ***Datainstance*** 요소는 <xref:System.Data.DataSet> 의 또는 행을 나타냅니다 <xref:System.Data.DataTable> . *Datainstance*대신 요소는 또는의 이름을 포함 합니다 <xref:System.Data.DataSet> <xref:System.Data.DataTable> . 이 DiffGram 형식의 블록에는 수정 여부에 관계없이 현재 데이터가 들어 있습니다. 수정 된 요소 또는 행은 **diffgr: hasChanges** 주석으로 식별 됩니다.  
+ **\<**  **_DataInstance_*_  _*>**  
+ 이 요소의 이름 ***Datainstance** _는이 설명서의 설명을 위해 사용 됩니다. _*_Datainstance_*_ 요소는 <xref:System.Data.DataSet> 의 또는 행을 나타냅니다 <xref:System.Data.DataTable> . _DataInstance * 대신 요소는 또는의 이름을 포함 합니다 <xref:System.Data.DataSet> <xref:System.Data.DataTable> . 이 DiffGram 형식의 블록에는 수정 여부에 관계없이 현재 데이터가 들어 있습니다. 수정 된 요소 또는 행은 **diffgr: hasChanges** 주석으로 식별 됩니다.  
   
  **\<diffgr:before>**  
- 이 DiffGram 블록 형식에는 행의 원래 버전이 포함됩니다. 이 블록의 요소는 **diffgr: id** 주석을 사용 하 여 ***datainstance*** 블록의 요소와 일치 합니다.  
+ 이 DiffGram 블록 형식에는 행의 원래 버전이 포함됩니다. 이 블록의 요소는 _ *diffgr: id** 주석을 사용 하는 ***datainstance** _ 블록의 요소와 일치 합니다.  
   
  **\<diffgr:errors>**  
- 이 DiffGram 블록 형식에는 ***Datainstance*** 블록의 특정 행에 대 한 오류 정보가 포함 됩니다. 이 블록의 요소는 **diffgr: id** 주석을 사용 하 여 ***datainstance*** 블록의 요소와 일치 합니다.  
+ 이 DiffGram 블록 형식에는 ***Datainstance** _ 블록의 특정 행에 대 한 오류 정보가 포함 되어 있습니다. 이 블록의 요소는 _ *diffgr: id** 주석을 사용 하 여 _*_datainstance_*_ 블록의 요소와 일치 합니다.  
   
 ## <a name="diffgram-annotations"></a>DiffGram 주석  
 
  DiffGrams은 여러 주석을 사용하여 <xref:System.Data.DataSet>에서 다른 행 버전이나 오류 정보를 표시하는 다양한 DiffGrams 블록의 요소를 나타냅니다.  
   
- 다음 표에서는 DiffGram 네임 스페이스 **urn: 스키마-microsoft-com: xml-DiffGram-v1**에 정의 된 diffgram 주석에 대해 설명 합니다.  
+ 다음 표에서는 DiffGram 네임 스페이스 **urn: 스키마-microsoft-com: xml-DiffGram-v1** 에 정의 된 diffgram 주석에 대해 설명 합니다.  
   
-|주석|Description|  
+|Annotation|Description|  
 |----------------|-----------------|  
-|**id**|의 요소와 블록의 요소를 쌍으로 연결 하는 데 사용 **\<diffgr:before>** **\<diffgr:errors>** **\<** ***DataInstance*** **>** 됩니다. **Diffgr: id** 주석이 있는 값은 *[TableName] [RowIdentifier]* 형식입니다. 예: `<Customers diffgr:id="Customers1">`.|  
-|**parentId**|**\<** ***DataInstance*** **>** 현재 요소의 부모 요소인 블록의 요소를 식별 합니다. **Diffgr: parentId** 주석이 있는 값은 *[TableName] [RowIdentifier]* 형식입니다. 예: `<Orders diffgr:parentId="Customers1">`.|  
-|**hasChanges**|블록의 행을 **\<** ***DataInstance*** **>** 수정 된 것으로 식별 합니다. **Haschanges** 주석에는 다음 두 값 중 하나를 사용할 수 있습니다.<br /><br /> **장착**<br /> **추가** 된 행을 식별 합니다.<br /><br /> **수정됨**<br /> 블록의 **원래** 행 버전이 포함 된 **수정** 된 행을 식별 **\<diffgr:before>** 합니다. **삭제** 된 행은 블록에 **원래** 행 버전이 **\<diffgr:before>** 있지만 블록에는 주석이 추가 된 요소가 없습니다 **\<** ***DataInstance*** **>** .|  
-|**hasErrors**|RowError를 사용 하 여 블록의 행을 식별 **\<** ***DataInstance*** **>** 합니다. **RowError** Error 요소는 블록에 배치 됩니다 **\<diffgr:errors>** .|  
+|**id**|의 요소와 블록의 요소를 쌍으로 연결 하는 데 사용 **\<diffgr:before>** **\<diffgr:errors>** **\<** **_DataInstance_*_ _*>** 됩니다. **Diffgr: id** 주석이 있는 값은 *[TableName] [RowIdentifier]* 형식입니다. `<Customers diffgr:id="Customers1">`를 예로 들 수 있습니다.|  
+|**parentId**|**\<** **_DataInstance_*_ _*>** 현재 요소의 부모 요소인 블록의 요소를 식별 합니다. **Diffgr: parentId** 주석이 있는 값은 *[TableName] [RowIdentifier]* 형식입니다. `<Orders diffgr:parentId="Customers1">`를 예로 들 수 있습니다.|  
+|**hasChanges**|블록의 행을 **\<** **_DataInstance_*_ _*>** 수정 된 것으로 식별 합니다. **Haschanges** 주석에는 다음 두 값 중 하나를 사용할 수 있습니다.<br /><br /> **장착**<br /> **추가** 된 행을 식별 합니다.<br /><br /> **수정됨**<br /> 블록의 **원래** 행 버전이 포함 된 **수정** 된 행을 식별 **\<diffgr:before>** 합니다. **삭제** 된 행은 블록에 **원래** 행 버전이 **\<diffgr:before>** 있지만 블록에는 주석이 추가 된 요소가 없습니다 **\<** **_DataInstance_*_ _*>** .|  
+|**hasErrors**|RowError를 사용 하 여 블록의 행을 식별 **\<** **_DataInstance_*_ _*>** 합니다.  Error 요소는 블록에 배치 됩니다 **\<diffgr:errors>** .|  
 |**오류**|블록의 특정 요소에 대 한 **RowError** 의 텍스트를 포함 **\<diffgr:errors>** 합니다.|  
   
- <xref:System.Data.DataSet>에는 자신의 내용을 DiffGram으로 읽거나 작성할 때 추가 주석이 포함됩니다. 다음 표에서는 **urn: msdata**의 네임 스페이스에 정의 된 이러한 추가 주석을 설명 합니다.  
+ <xref:System.Data.DataSet>에는 자신의 내용을 DiffGram으로 읽거나 작성할 때 추가 주석이 포함됩니다. 다음 표에서는 **urn: msdata** 의 네임 스페이스에 정의 된 이러한 추가 주석을 설명 합니다.  
   
-|주석|설명|  
+|Annotation|설명|  
 |----------------|-----------------|  
 |**RowOrder**|원래 데이터의 행 순서를 유지하며 특정 <xref:System.Data.DataTable>에 있는 행의 인덱스를 식별합니다.|  
-|**숨김**|**ColumnMapping** 속성이 **mappingtype.attribute**로 설정 된 열을 식별 합니다. 특성은 **msdata: hidden** *[ColumnName]*= "*value*" 형식으로 작성 됩니다. 예: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.<br /><br /> 데이터가 있는 숨겨진 열만 DiffGram 특성으로 작성됩니다. 그렇지 않으면 무시됩니다.|  
+|**숨김**|**ColumnMapping** 속성이 **mappingtype.attribute** 로 설정 된 열을 식별 합니다. 특성은 **msdata: hidden** *[ColumnName]*= "*value*" 형식으로 작성 됩니다. `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`를 예로 들 수 있습니다.<br /><br /> 데이터가 있는 숨겨진 열만 DiffGram 특성으로 작성됩니다. 그렇지 않으면 무시됩니다.|  
   
 ## <a name="sample-diffgram"></a>샘플 DiffGram  
 
- 다음은 DiffGram 형식의 예제입니다. 이 예제에서는 변경 사항이 커밋되기 전에 테이블에 있는 행을 업데이트한 결과를 보여 줍니다. CustomerID가 "ALFKI"인 행이 수정되었지만 업데이트되지는 않았습니다. 결과적으로 블록에 **diffgr: id** 가 "Customers1" 인 **현재** 행 **\<** ***DataInstance*** **>** 과 블록에 **Diffgr: Id** 가 "Customers1" 인 **원래** 행이 있습니다 **\<diffgr:before>** . CustomerID가 "ANATR" 인 행에는 **RowError**가 포함 되므로로 주석이 추가 되 `diffgr:hasErrors="true"` 고 블록에는 관련 요소가 있습니다 **\<diffgr:errors>** .  
+ 다음은 DiffGram 형식의 예제입니다. 이 예제에서는 변경 사항이 커밋되기 전에 테이블에 있는 행을 업데이트한 결과를 보여 줍니다. CustomerID가 "ALFKI"인 행이 수정되었지만 업데이트되지는 않았습니다. 결과적으로 블록에 **diffgr: id** 가 "Customers1" 인 **현재** 행 **\<** **_DataInstance_*_ _*>** 과 블록에 **Diffgr: Id** 가 "Customers1" 인 **원래** 행이 있습니다 **\<diffgr:before>** . CustomerID가 "ANATR" 인 행에는 **RowError** 가 포함 되므로로 주석이 추가 되 `diffgr:hasErrors="true"` 고 블록에는 관련 요소가 있습니다 **\<diffgr:errors>** .  
   
 ```xml  
 <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">  

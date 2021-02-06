@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 테이블 유추'
 title: 테이블 유추
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: 4a3d7b239dbc405cf2acae967b5be401dc772e38
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 00a24cbfc44aea4279b0a115214ec26d3eac59ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177555"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652161"
 ---
 # <a name="inferring-tables"></a>테이블 유추
 
@@ -63,7 +64,7 @@ XML 문서로부터 <xref:System.Data.DataSet>의 스키마를 유추할 때 ADO
 |-------------------|  
 |Text1|  
   
- 문서 요소 또는 루트 요소는 열로 유추되는 특성이나 자식 요소를 갖고 있는 경우 유추된 테이블이 됩니다. 문서 요소에 특성이 없고 열로 유추 되는 자식 요소가 없는 경우 요소는 **데이터 집합**으로 유추 됩니다. 예를 들어, 다음과 같은 XML을 가정해 봅시다.  
+ 문서 요소 또는 루트 요소는 열로 유추되는 특성이나 자식 요소를 갖고 있는 경우 유추된 테이블이 됩니다. 문서 요소에 특성이 없고 열로 유추 되는 자식 요소가 없는 경우 요소는 **데이터 집합** 으로 유추 됩니다. 예를 들어, 다음과 같은 XML을 가정해 봅시다.  
   
 ```xml  
 <DocumentElement>  

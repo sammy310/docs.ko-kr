@@ -1,21 +1,22 @@
 ---
+description: '자세히 알아보기: 열 유추'
 title: 열 유추
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: 45d27b78b5d83d333c16192e172e7b7e3dd88c10
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 528d4ea20260b5f1fbf30536eafcaec8c5f9215a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164703"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652252"
 ---
 # <a name="inferring-columns"></a>열 유추
 
-ADO.NET에서 XML 문서로부터 <xref:System.Data.DataSet>의 테이블로 유추할 요소를 결정한 후에는 해당 테이블의 열을 유추합니다. ADO.NET 2.0에는 각 **simpleType** 요소에 대해 강력한 형식의 데이터 형식을 유추 하는 새로운 스키마 유추 엔진이 도입 되었습니다. 이전 버전에서는 유추 된 **simpleType** 요소의 데이터 형식이 항상 **xsd: string**이었습니다.  
+ADO.NET에서 XML 문서로부터 <xref:System.Data.DataSet>의 테이블로 유추할 요소를 결정한 후에는 해당 테이블의 열을 유추합니다. ADO.NET 2.0에는 각 **simpleType** 요소에 대해 강력한 형식의 데이터 형식을 유추 하는 새로운 스키마 유추 엔진이 도입 되었습니다. 이전 버전에서는 유추 된 **simpleType** 요소의 데이터 형식이 항상 **xsd: string** 이었습니다.  
   
 ## <a name="migration-and-backward-compatibility"></a>마이그레이션 및 이전 버전과의 호환성  
 
- **ReadXml** 메서드는 **InferSchema**형식의 인수를 사용 합니다. 이 인수를 사용하면 이전 버전과 호환되는 유추 동작을 지정할 수 있습니다. **InferSchema** 열거에 사용할 수 있는 값은 다음 표에 나와 있습니다.  
+ **ReadXml** 메서드는 **InferSchema** 형식의 인수를 사용 합니다. 이 인수를 사용하면 이전 버전과 호환되는 유추 동작을 지정할 수 있습니다. **InferSchema** 열거에 사용할 수 있는 값은 다음 표에 나와 있습니다.  
   
  <xref:System.Data.XmlReadMode.InferSchema>  
  항상 단순 형식을 <xref:System.String>으로 유추하여 이전 버전과의 호환성을 제공합니다.  
@@ -36,7 +37,7 @@ ADO.NET에서 XML 문서로부터 <xref:System.Data.DataSet>의 테이블로 유
 </DocumentElement>  
 ```  
   
- 유추 프로세스는 **attr1** 및 **attr2**라는 두 개의 열이 있는 **Element1** 이라는 테이블을 생성 합니다. 두 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다.  
+ 유추 프로세스는 **attr1** 및 **attr2** 라는 두 개의 열이 있는 **Element1** 이라는 테이블을 생성 합니다. 두 열의 **ColumnMapping** 속성은 **mappingtype.attribute** 로 설정 됩니다.  
   
  **데이터 집합:** DocumentElement  
   
@@ -48,7 +49,7 @@ ADO.NET에서 XML 문서로부터 <xref:System.Data.DataSet>의 테이블로 유
   
 ## <a name="elements-without-attributes-or-child-elements"></a>특성이나 자식 요소가 없는 요소  
 
- 요소에 자식 요소나 특성이 없으면 해당 요소는 열로 유추됩니다. 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다. 자식 요소의 텍스트는 해당 테이블의 행에 저장됩니다. 예를 들어, 다음과 같은 XML을 가정해 봅시다.  
+ 요소에 자식 요소나 특성이 없으면 해당 요소는 열로 유추됩니다. 열의 **ColumnMapping** 속성은 **mappingtype.attribute** 로 설정 됩니다. 자식 요소의 텍스트는 해당 테이블의 행에 저장됩니다. 예를 들어, 다음과 같은 XML을 가정해 봅시다.  
   
 ```xml  
 <DocumentElement>  
@@ -59,7 +60,7 @@ ADO.NET에서 XML 문서로부터 <xref:System.Data.DataSet>의 테이블로 유
 </DocumentElement>  
 ```  
   
- 유추 프로세스는 **ChildElement1** 및 **childelement2 라는**라는 두 개의 열이 있는 **Element1** 이라는 테이블을 생성 합니다. 두 열의 **ColumnMapping** 속성은 **mappingtype.attribute**로 설정 됩니다.  
+ 유추 프로세스는 **ChildElement1** 및 **childelement2 라는** 라는 두 개의 열이 있는 **Element1** 이라는 테이블을 생성 합니다. 두 열의 **ColumnMapping** 속성은 **mappingtype.attribute** 로 설정 됩니다.  
   
  **데이터 집합:** DocumentElement  
   

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 데이터 집합 스키마 유추 프로세스 요약'
 title: 데이터 세트 스키마 유추 프로세스 요약
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: 8d517487b96aa7f204ea9f25d326500db7df413a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 637e4325558708c15d6d4eb17de9c0cf13b3b256
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198511"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651563"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>데이터 세트 스키마 유추 프로세스 요약
 
@@ -27,7 +28,7 @@ ms.locfileid: "91198511"
   
 - 특성이나 자식 요소가 없거나 반복되지 않는 요소는 열로 유추됩니다.  
   
-- 테이블로 유추 되는 다른 요소 내에서 중첩 테이블로 유추 되는 요소의 경우 두 테이블 간에 중첩 된 **DataRelation** 이 생성 됩니다. **TableName_Id** 라는 새로운 기본 키 열이 두 테이블에 모두 추가 되 고 **DataRelation**에서 사용 됩니다. **TableName_Id** 열을 사용 하 여 두 테이블 간에 **ForeignKeyConstraint** 생성 됩니다.  
+- 테이블로 유추 되는 다른 요소 내에서 중첩 테이블로 유추 되는 요소의 경우 두 테이블 간에 중첩 된 **DataRelation** 이 생성 됩니다. **TableName_Id** 라는 새로운 기본 키 열이 두 테이블에 모두 추가 되 고 **DataRelation** 에서 사용 됩니다. **TableName_Id** 열을 사용 하 여 두 테이블 간에 **ForeignKeyConstraint** 생성 됩니다.  
   
 - 테이블로 유추 되 고 텍스트가 포함 되지만 자식 요소가 없는 요소의 경우 각 요소의 텍스트에 대해 **TableName_Text** 이라는 새 열이 만들어집니다. 테이블로 유추되는 요소에 텍스트와 자식 요소가 모두 있으면 해당 텍스트는 무시됩니다.  
   

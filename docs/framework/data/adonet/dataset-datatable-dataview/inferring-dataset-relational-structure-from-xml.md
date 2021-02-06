@@ -1,19 +1,20 @@
 ---
+description: '자세히 알아보기: XML에서 데이터 집합 관계형 구조 유추'
 title: XML에서 데이터 세트 관계형 구조 유추
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: fca50491120346dea3e09c82324225f2114380fc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d89b6a42e7e1bc3d7514f180329e9c1d877a67ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177581"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652226"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>XML에서 데이터 세트 관계형 구조 유추
 
 <xref:System.Data.DataSet>의 관계형 구조 또는 스키마는 테이블, 열, 제약 조건 및 관계로 구성됩니다. XML에서 <xref:System.Data.DataSet>을 로드할 때 로드되는 XML에서 스키마를 명시적으로 또는 유추를 통해 미리 정의하거나 만들 수 있습니다. XML에서 스키마 및 콘텐츠를 로드 하는 방법에 대 한 자세한 내용은 xml <xref:System.Data.DataSet> [에서 데이터 집합 로드](loading-a-dataset-from-xml.md) 및 [Xml에서 데이터 집합 스키마 정보 로드](loading-dataset-schema-information-from-xml.md)를 참조 하세요.  
   
- XML에서의 스키마를 <xref:System.Data.DataSet> 만드는 경우 기본 방법은 Xml [스키마 (xsd)에서 데이터 집합 관계형 구조 파생](deriving-dataset-relational-structure-from-xml-schema-xsd.md)의 설명에 따라 Xsd (xml 스키마 정의 언어)를 사용 하 여 스키마를 명시적으로 지정 하는 것이 고 XDR (xml 데이터 축소)입니다. XML에서 XML 스키마나 XDR 스키마를 사용할 수 없으면 <xref:System.Data.DataSet>의 스키마는 XML 요소 및 특성의 구조로부터 유추할 수 있습니다.  
+ XML에서의 스키마를 <xref:System.Data.DataSet> 만드는 경우 기본 방법은 Xml [스키마 (xsd)에서 데이터 집합 관계형 구조 파생](deriving-dataset-relational-structure-from-xml-schema-xsd.md)의 설명에 따라 Xsd (xml 스키마 정의 언어)를 사용 하 여 스키마를 명시적으로 지정 하는 것이 고, 그렇지 않으면 XDR (XML-Data 축소)입니다. XML에서 XML 스키마나 XDR 스키마를 사용할 수 없으면 <xref:System.Data.DataSet>의 스키마는 XML 요소 및 특성의 구조로부터 유추할 수 있습니다.  
   
  이 단원에서는 XML 요소와 특성 및 이들의 구조, 그리고 결과로서 유추된 <xref:System.Data.DataSet> 스키마를 보여 줌으로써 <xref:System.Data.DataSet> 스키마 유추 규칙을 설명합니다.  
   

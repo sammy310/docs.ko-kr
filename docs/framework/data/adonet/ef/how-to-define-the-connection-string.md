@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 연결 문자열 정의'
 title: '방법: 연결 문자열 정의'
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-ms.openlocfilehash: 9b029644e0d4e4c7467fbe1e1144579e6edb3478
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 104264299e597bc142a689aa83f3207765d18c67
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536212"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650822"
 ---
 # <a name="how-to-define-the-connection-string"></a>방법: 연결 문자열 정의
 
@@ -30,9 +31,9 @@ ms.locfileid: "90536212"
 </connectionStrings>
 ```
 
-프로젝트에 응용 프로그램 구성 파일이 없는 경우 **프로젝트** 메뉴에서 **새 항목 추가** 를 선택 하 고 **일반** 범주를 선택한 다음 **응용 프로그램 구성 파일**을 선택 하 고 **추가**를 클릭 하 여 프로젝트를 추가할 수 있습니다.
+프로젝트에 응용 프로그램 구성 파일이 없는 경우 **프로젝트** 메뉴에서 **새 항목 추가** 를 선택 하 고 **일반** 범주를 선택한 다음 **응용 프로그램 구성 파일** 을 선택 하 고 **추가** 를 클릭 하 여 프로젝트를 추가할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [빠른 시작](/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))
 - [방법: 새 .edmx 파일 만들기](/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))

@@ -1,22 +1,23 @@
 ---
+description: '자세한 정보: 샘플 데이터베이스 다운로드 (LINQ to DataSet)'
 title: 샘플 데이터베이스 다운로드(LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: 53f4457052df899a3f9582f6e850965d3112ecd2
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: da4020304b89f046bb9fcb88ea9916597e02ca27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121568"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651095"
 ---
-# <a name="download-sample-databases-linq-to-dataset"></a>샘플 데이터베이스 다운로드(LINQ에서 데이터 집합까지)
+# <a name="download-sample-databases-linq-to-dataset"></a>예제 데이터베이스 다운로드 (LINQ to DataSet)
 
-LINQ에서 DataSet으로의 샘플 및 연습은 AdventureWorks 샘플 데이터베이스를 사용합니다. 이 샘플 데이터베이스를 무료로 다운로드할 수 있습니다. [AdventureWorks 샘플 데이터베이스를](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) 탐색하여 데이터베이스를 다운로드합니다. 그런 다음 데이터베이스 연결 또는 복원에 대한 해당 페이지의 지침을 따릅니다.
+LINQ to DataSet 설명서의 샘플과 연습에서는 AdventureWorks 예제 데이터베이스를 사용 합니다. 이 샘플 데이터베이스를 무료로 다운로드할 수 있습니다. [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) 를 찾아 데이터베이스를 다운로드 합니다. 그런 다음 해당 페이지의 지침에 따라 데이터베이스를 연결 하거나 복원 합니다.
   
 ## <a name="sql-server-express"></a>SQL Server Express
 
-LINQ에서 DataSet으로의 샘플 및 연습에서는 SQL Server 2005를 데이터 저장소로 사용하지만 대신 [SQL Server Express를](https://go.microsoft.com/fwlink/?linkid=866658) 사용하도록 수정할 수 있습니다. SQL Server 익스프레스는 무료이며 응용 프로그램과 함께 재배포할 수 있습니다.
+LINQ to DataSet 섹션의 샘플과 연습에서는 SQL Server 2005를 데이터 저장소로 사용 하지만 대신 [SQL Server Express](https://go.microsoft.com/fwlink/?linkid=866658) 를 사용 하도록 수정할 수 있습니다. SQL Server Express은 무료 이며 응용 프로그램과 함께 재배포할 수 있습니다.
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [시작](getting-started-linq-to-dataset.md)

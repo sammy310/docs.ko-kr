@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: XML 스키마에서 데이터 집합 관계 생성 (XSD)'
 title: XSD(XML 스키마)에서 데이터 세트 관계 생성
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: 2673280ebb94dcc10c130f3969f3e3250d3706a2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e18ae451085f536e7fe35053fadab35e30dbc225
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198589"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652460"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XSD(XML 스키마)에서 데이터 세트 관계 생성
 
@@ -81,7 +82,7 @@ msdata:childkey="" />
   </xs:annotation>  
 ```  
   
- 매핑 프로세스에서는 **Relationship** 요소를 사용 하 여 **Order** 테이블의 **Ordernumber** 열과 **데이터 집합**에 있는 **ordernumber** 테이블의 **ordernumber** 열 간에 부모-자식 관계를 만듭니다. 매핑 프로세스에서는 관계만 지정합니다. 즉, 관계형 데이터베이스의 기본 키/외래 키 제약 조건처럼 이러한 열의 값에 대해 제약 조건을 자동으로 지정하지는 않습니다.  
+ 매핑 프로세스에서는 **Relationship** 요소를 사용 하 여 **Order** 테이블의 **Ordernumber** 열과 **데이터 집합** 에 있는 **ordernumber** 테이블의 **ordernumber** 열 간에 부모-자식 관계를 만듭니다. 매핑 프로세스에서는 관계만 지정합니다. 즉, 관계형 데이터베이스의 기본 키/외래 키 제약 조건처럼 이러한 열의 값에 대해 제약 조건을 자동으로 지정하지는 않습니다.  
   
 ### <a name="in-this-section"></a>섹션 내용  
 
@@ -100,7 +101,7 @@ msdata:childkey="" />
  XSD (XML 스키마 정의 언어) 스키마에서 생성 되는 **데이터 집합** 의 관계형 구조 또는 스키마에 대해 설명 합니다.  
   
  [데이터 세트 제약 조건에 XSD(XML 스키마) 제약 조건 매핑](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- **데이터 집합**에서 unique 및 foreign key 제약 조건을 만드는 데 사용 되는 XML 스키마 요소에 대해 설명 합니다.  
+ **데이터 집합** 에서 unique 및 foreign key 제약 조건을 만드는 데 사용 되는 XML 스키마 요소에 대해 설명 합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 행 찾기'
 title: 행 찾기
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: dc0661e29e6d3ee5aa3f54179e8abf265cd67d58
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bf4752255945d5bbc0dd5551cd6e84c98fd78c3f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186980"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652473"
 ---
 # <a name="finding-rows"></a>행 찾기
 
@@ -18,11 +19,11 @@ ms.locfileid: "91186980"
   
  **Find** 메서드는 <xref:System.Data.DataRowView> 검색 조건과 일치 하는의 인덱스와 함께 정수를 반환 합니다. 검색 조건과 일치 하는 행이 두 개 이상 있으면 첫 번째 일치 하는 **DataRowView** 의 인덱스만 반환 됩니다. 일치 하는 항목이 없으면 **Find** 는-1을 반환 합니다.  
   
- 여러 행과 일치 하는 검색 결과를 반환 하려면 **Findrows** 메서드를 사용 합니다. **Findrows** 는 **DataView**에서 일치 하는 모든 행을 참조 하는 **DataRowView** 배열을 반환 한다는 점을 제외 하 고 **Find** 메서드와 똑같이 작동 합니다. 일치 하는 항목이 없으면 **DataRowView** 배열이 비어 있게 됩니다.  
+ 여러 행과 일치 하는 검색 결과를 반환 하려면 **Findrows** 메서드를 사용 합니다. **Findrows** 는 **DataView** 에서 일치 하는 모든 행을 참조 하는 **DataRowView** 배열을 반환 한다는 점을 제외 하 고 **Find** 메서드와 똑같이 작동 합니다. 일치 하는 항목이 없으면 **DataRowView** 배열이 비어 있게 됩니다.  
   
  **Find** 또는 **findrows** 메서드를 사용 하려면 **ApplyDefaultSort** 를 **true** 로 설정 하거나 **sort** 속성을 사용 하 여 정렬 순서를 지정 해야 합니다. 정렬 순서를 지정하지 않으면 예외가 throw됩니다.  
   
- **Find** 및 **findrows** 메서드는 값 배열을 입력으로 사용 합니다 .이 값의 길이는 정렬 순서의 열 수와 일치 합니다. 하나의 열에 대해 정렬하는 경우에는 하나의 값을 전달할 수 있습니다. 정렬 순서에 여러 열이 포함된 경우에는 개체 배열을 전달합니다. 여러 열에 대해 정렬 하는 경우 개체 배열의 값은 **DataView**의 **sort** 속성에 지정 된 열의 순서와 일치 해야 합니다.  
+ **Find** 및 **findrows** 메서드는 값 배열을 입력으로 사용 합니다 .이 값의 길이는 정렬 순서의 열 수와 일치 합니다. 하나의 열에 대해 정렬하는 경우에는 하나의 값을 전달할 수 있습니다. 정렬 순서에 여러 열이 포함된 경우에는 개체 배열을 전달합니다. 여러 열에 대해 정렬 하는 경우 개체 배열의 값은 **DataView** 의 **sort** 속성에 지정 된 열의 순서와 일치 해야 합니다.  
   
  다음 코드 예제에서는 단일 열 정렬 순서를 사용 하 여 **DataView** 에 대해 호출 되는 **Find** 메서드를 보여 줍니다.  
   

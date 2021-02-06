@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: 복합 형식을 반환 하는 쿼리 실행'
 title: '방법: 복합 형식을 반환하는 쿼리 실행'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2209fdb-70ef-4dea-8bb8-097fe96f5563
-ms.openlocfilehash: e5358e3a1295b180356ed6c127111313b44de277
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9a7fb3ea695115529b69def9f95281bac7f33273
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198485"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650679"
 ---
 # <a name="how-to-execute-a-query-that-returns-complex-types"></a>방법: 복합 형식을 반환하는 쿼리 실행
 
@@ -25,9 +26,9 @@ ms.locfileid: "91198485"
      [!code-csharp[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#namespaces)]
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
-3. .Edmx 파일을 두 번 클릭 하 여 Entity Designer의 [모델 브라우저 창](/previous-versions/dotnet/netframework-4.0/bb738483(v=vs.100)) 에 모델을 표시 합니다. Entity Designer 화면에서 `Email` `Phone` 엔터티 형식의 및 속성을 선택 하 `Contact` 고 마우스 오른쪽 단추를 클릭 한 다음 **새 복합 형식으로 리팩터링**을 선택 합니다.  
+3. .Edmx 파일을 두 번 클릭 하 여 Entity Designer의 [모델 브라우저 창](/previous-versions/dotnet/netframework-4.0/bb738483(v=vs.100)) 에 모델을 표시 합니다. Entity Designer 화면에서 `Email` `Phone` 엔터티 형식의 및 속성을 선택 하 `Contact` 고 마우스 오른쪽 단추를 클릭 한 다음 **새 복합 형식으로 리팩터링** 을 선택 합니다.  
   
-4. 선택한 및 속성을 포함 하는 새 복합 형식이 `Email` `Phone` **모델 브라우저**에 추가 됩니다. 복합 형식에는 기본 이름이 지정 됩니다. `EmailPhone` **속성** 창에서 형식의 이름을으로 바꿉니다. 또한 새 `ComplexProperty` 속성이 `Contact` 엔터티 형식에 추가됩니다. 속성의 이름을 `EmailPhoneComplexType.`으로 바꿉니다.  
+4. 선택한 및 속성을 포함 하는 새 복합 형식이 `Email` `Phone` **모델 브라우저** 에 추가 됩니다. 복합 형식에는 기본 이름이 지정 됩니다. `EmailPhone` **속성** 창에서 형식의 이름을으로 바꿉니다. 또한 새 `ComplexProperty` 속성이 `Contact` 엔터티 형식에 추가됩니다. 속성의 이름을 `EmailPhoneComplexType.`으로 바꿉니다.  
   
      엔터티 데이터 모델 마법사를 사용 하 여 복합 형식을 만들고 수정 하는 방법에 대 한 자세한 내용은 [방법: 기존 속성을 복합 형식 속성으로 리팩터링](/previous-versions/dotnet/netframework-4.0/dd456814(v=vs.100)) 및 [방법: 복합 형식 만들기 및 수정](/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))을 참조 하세요.  
   

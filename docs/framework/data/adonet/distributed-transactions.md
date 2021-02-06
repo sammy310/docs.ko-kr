@@ -1,26 +1,27 @@
 ---
+description: '다음에 대 한 자세한 정보: 분산 트랜잭션'
 title: 분산 트랜잭션
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: b6553d50039ca0f4888f0610b187c6b419a462b5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 611fe4e2139e69e9501a3ea04a6aa62425e06728
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153199"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651121"
 ---
 # <a name="distributed-transactions"></a>분산 트랜잭션
 
-트랜잭션은 하나의 단위로 성공(커밋)하거나 실패(중단)한 관련 작업의 집합입니다. *분산 트랜잭션은* 여러 리소스에 영향을 주는 트랜잭션입니다. 분산 트랜잭션을 커밋하는 경우 모든 참가자는 데이터의 모든 변경 내용이 영구적으로 유지된다는 것을 보증해야 합니다. 시스템 작동이 중단되거나 다른 예측할 수 없는 이벤트가 발생해도 변경 내용이 지속되어야 합니다. 참가자 중 하나라도 이러한 보증을 이행하지 못하면 전체 트랜잭션이 실패하게 되며 트랜잭션 범위 내의 모든 데이터 변경 내용이 롤백됩니다.  
+트랜잭션은 하나의 단위로 성공(커밋)하거나 실패(중단)한 관련 작업의 집합입니다. ‘분산 트랜잭션’은 여러 리소스에 영향을 주는 트랜잭션입니다. 분산 트랜잭션을 커밋하는 경우 모든 참가자는 데이터의 모든 변경 내용이 영구적으로 유지된다는 것을 보증해야 합니다. 시스템 작동이 중단되거나 다른 예측할 수 없는 이벤트가 발생해도 변경 내용이 지속되어야 합니다. 참가자 중 하나라도 이러한 보증을 이행하지 못하면 전체 트랜잭션이 실패하게 되며 트랜잭션 범위 내의 모든 데이터 변경 내용이 롤백됩니다.  
   
 > [!NOTE]
 > 트랜잭션이 활성화된 상태에서 `DataReader`를 시작하는 경우 트랜잭션을 커밋하거나 롤백하면 예외가 throw됩니다.  
   
 ## <a name="working-with-systemtransactions"></a>System.Transactions 사용  
 
- .NET Framework에서는 <xref:System.Transactions> 네임스페이스의 API를 통해 분산 트랜잭션을 관리합니다. 여러 영구 리소스 관리자가 관련되어 있는 경우 <xref:System.Transactions> API는 MS DTC(Microsoft Distributed Transaction Coordinator)와 같은 트랜잭션 모니터에 분산 트랜잭션 처리를 위임하게 됩니다. 자세한 내용은 [트랜잭션 기본 사항](../transactions/transaction-fundamentals.md)을 참조 하세요.  
+ .NET Framework에서는 <xref:System.Transactions> 네임스페이스의 API를 통해 분산 트랜잭션을 관리합니다. 여러 영구 리소스 관리자가 관련되어 있는 경우 <xref:System.Transactions> API는 MS DTC(Microsoft Distributed Transaction Coordinator)와 같은 트랜잭션 모니터에 분산 트랜잭션 처리를 위임하게 됩니다. 자세한 내용은 [트랜잭션 기본 사항](../transactions/transaction-fundamentals.md)을 참조하세요.  
   
- ADO.NET 2.0에서는 연결을 `EnlistTransaction` 인스턴스에 기록하는 <xref:System.Transactions.Transaction> 메서드를 사용하여 분산 트랜잭션에 기록하는 새로운 기능을 지원합니다. 이전 버전의 ADO.NET에서는 연결의 `EnlistDistributedTransaction` 메서드를 사용하여 연결을 이전 버전과의 호환성이 지원되는 <xref:System.EnterpriseServices.ITransaction> 인스턴스에 인리스트먼트함으로써 분산 트랜잭션에 명시적으로 인리스트먼트했습니다. 엔터프라이즈 서비스 트랜잭션에 대 한 자세한 내용은 [엔터프라이즈 서비스 및 COM + 트랜잭션과의 상호 운용성](../transactions/interoperability-with-enterprise-services-and-com-transactions.md)을 참조 하세요.  
+ ADO.NET 2.0에서는 연결을 `EnlistTransaction` 인스턴스에 기록하는 <xref:System.Transactions.Transaction> 메서드를 사용하여 분산 트랜잭션에 기록하는 새로운 기능을 지원합니다. 이전 버전의 ADO.NET에서는 연결의 `EnlistDistributedTransaction` 메서드를 사용하여 연결을 이전 버전과의 호환성이 지원되는 <xref:System.EnterpriseServices.ITransaction> 인스턴스에 인리스트먼트함으로써 분산 트랜잭션에 명시적으로 인리스트먼트했습니다. Enterprise Services 트랜잭션에 관한 자세한 내용은 [Enterprise Services 및 COM+ 트랜잭션과 상호 운용성](../transactions/interoperability-with-enterprise-services-and-com-transactions.md)을 참조하세요.  
   
  .NET Framework Provider for SQL Server를 사용하여 SQL Server 데이터베이스에서 <xref:System.Transactions> 트랜잭션을 실행하는 경우 간단한 <xref:System.Transactions.Transaction>이 자동으로 사용됩니다. 그러면 필요할 때만 트랜잭션을 완전 분산 트랜잭션으로 승격시킬 수 있습니다. 자세한 내용은 [SQL Server와의 시스템 트랜잭션 통합](system-transactions-integration-with-sql-server.md)을 참조 하세요.  
   
@@ -37,7 +38,7 @@ ms.locfileid: "91153199"
   
  분산 트랜잭션 인리스트먼트는 특히 비즈니스 개체를 풀링할 때 적용할 수 있습니다. 비즈니스 개체가 열린 연결로 풀링되는 경우 해당 연결이 열리면 자동 트랜잭션 인리스트먼트만 발생합니다. 풀링된 비즈니스 개체를 사용하여 여러 트랜잭션을 수행하는 경우 해당 개체에 대해 열린 연결은 새로 초기화된 트랜잭션에 자동으로 인리스트먼트하지 않습니다. 이 경우 연결에 대해 자동 트랜잭션 인리스트먼트를 비활성화한 다음 `EnlistTransaction`을 사용하여 연결을 트랜잭션에 인리스트먼트할 수 있습니다.  
   
- `EnlistTransaction` 기존 트랜잭션에 대 한 참조 인 형식의 단일 인수를 사용 <xref:System.Transactions.Transaction> 합니다. 연결의 `EnlistTransaction` 메서드를 호출한 후에는 해당 연결을 통해 데이터 소스에서 수정된 모든 내용이 트랜잭션에 포함됩니다. null 값을 전달하면 현재 분산 트랜잭션 인리스트먼트에서 연결의 인리스트먼트가 취소됩니다. 연결은 `EnlistTransaction`을 호출하기 전에 열려야 합니다.  
+ `EnlistTransaction`은 기존 트랜잭션에 대한 참조인 <xref:System.Transactions.Transaction> 형식의 단일 인수를 사용합니다. 연결의 `EnlistTransaction` 메서드를 호출한 후에는 해당 연결을 통해 데이터 소스에서 수정된 모든 내용이 트랜잭션에 포함됩니다. null 값을 전달하면 현재 분산 트랜잭션 인리스트먼트에서 연결의 인리스트먼트가 취소됩니다. 연결은 `EnlistTransaction`을 호출하기 전에 열려야 합니다.  
   
 > [!NOTE]
 > 트랜잭션에 연결을 명시적으로 인리스트먼트하면 첫 번째 트랜잭션이 종료될 때까지 인리스트먼트를 취소하거나 다른 트랜잭션에 인리스트먼트할 수 없습니다.  
@@ -53,8 +54,8 @@ ms.locfileid: "91153199"
 
  분산 트랜잭션을 사용하기 위해 네트워크에서 MS DTC를 사용해야 할 수도 있습니다. Windows 방화벽이 활성화되어 있는 경우 MS DTC 서비스에서 네트워크를 사용하거나 MS DTC 포트를 열 수 있도록 허용해야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [트랜잭션 및 동시성](transactions-and-concurrency.md)
-- [SQL Server와의 System.Transactions 통합](system-transactions-integration-with-sql-server.md)
+- [SQL Server와의 시스템 트랜잭션 통합](system-transactions-integration-with-sql-server.md)
 - [ADO.NET 개요](ado-net-overview.md)

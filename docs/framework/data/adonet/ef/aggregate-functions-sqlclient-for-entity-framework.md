@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 집계 함수 (Entity Framework의 SqlClient)'
 title: 집계 함수(Entity Framework용 SqlClient)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: 1c32ccfe18c67c9baeb7df0f981c9129b3bbc8bb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b9f1ff8c75fc09de7532b459090b0b5cd1d47262
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204517"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651082"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>집계 함수(Entity Framework용 SqlClient)
 
@@ -23,7 +24,7 @@ ms.locfileid: "91204517"
 
 `Int32`, `Int64`, `Double` 및 `Decimal`입니다.
 
-**반환 값**
+**Return Value**
 
 `expression`의 형식입니다.
 
@@ -39,7 +40,7 @@ ms.locfileid: "91204517"
 
  컬렉션 ( `Int32` )입니다.
 
- **반환 값**
+ **Return Value**
 
  `Int32`입니다.
 
@@ -60,7 +61,7 @@ ms.locfileid: "91204517"
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
 |`Time`|`String`|`Binary`|`Guid` (SQL Server 2000에서 반환 되지 않음)|
 
-**반환 값**
+**Return Value**
 
 `Int32`입니다.
 
@@ -81,7 +82,7 @@ ms.locfileid: "91204517"
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
 |`Time`|`String`|`Binary`|`Guid` (SQL Server 2000에서 반환 되지 않음)|
 
-**반환 값**
+**Return Value**
 
 `Int64`입니다.
 
@@ -102,7 +103,7 @@ ms.locfileid: "91204517"
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
 |`Time`|`String`|`Binary`||
 
-**반환 값**
+**Return Value**
 
 `expression`의 형식입니다.
 
@@ -123,7 +124,7 @@ ms.locfileid: "91204517"
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
 |`Time`|`String`|`Binary`||
 
-**반환 값**
+**Return Value**
 
 `expression`의 형식입니다.
 
@@ -139,7 +140,7 @@ ms.locfileid: "91204517"
 
 컬렉션 ( `Double` )입니다.
 
-**반환 값**
+**Return Value**
 
 `Double`
 
@@ -155,7 +156,7 @@ ms.locfileid: "91204517"
 
 컬렉션 ( `Double` )입니다.
 
-**반환 값**
+**Return Value**
 
 `Double`
 
@@ -171,7 +172,7 @@ ms.locfileid: "91204517"
 
 컬렉션 (T) 이며, 여기서 T는 `Int32` , `Int64` , `Double` , 형식 중 하나 `Decimal` 입니다.
 
-**반환 값**
+**Return Value**
 
 `expression`의 형식입니다.
 
@@ -187,7 +188,7 @@ ms.locfileid: "91204517"
 
 컬렉션 ( `Double` )입니다.
 
-**반환 값**
+**Return Value**
 
 `Double`
 
@@ -203,7 +204,7 @@ ms.locfileid: "91204517"
 
 컬렉션 ( `Double` )입니다.
 
-**반환 값**
+**Return Value**
 
 `Double`
 

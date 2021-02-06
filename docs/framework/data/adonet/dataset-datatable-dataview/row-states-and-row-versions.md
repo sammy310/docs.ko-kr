@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 행 상태 및 행 버전'
 title: 행 상태 및 행 버전
 ms.date: 07/19/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 1b80ae78fad22989f99fb1e992d4978a192e0c66
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7d436ffcfcf59f5daa4fc6eaa9f9018b92e5c608
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204530"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651680"
 ---
 # <a name="row-states-and-row-versions"></a>행 상태 및 행 버전
 

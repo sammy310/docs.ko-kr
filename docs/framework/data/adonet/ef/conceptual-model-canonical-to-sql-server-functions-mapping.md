@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: SQL Server 함수 매핑에 대 한 정식 개념 모델'
 title: 개념적 모델 정식 함수와 SQL Server 함수 매핑
 ms.date: 03/30/2017
 ms.assetid: 1a2631bc-a426-4c0a-ba8d-26d9c80d39e2
-ms.openlocfilehash: 495a662cbab84c2686e4c31945c30d6f82d117cb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 25e366a45e91db97693c42b3c8d2febd912320ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153120"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651069"
 ---
 # <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a>개념적 모델 정식 함수와 SQL Server 함수 매핑
 
@@ -81,7 +82,7 @@ ms.locfileid: "91153120"
 |[Floor(value)](./language-reference/math-canonical-functions.md)|`FLOOR(value)`|  
 |[Power(value)](./language-reference/math-canonical-functions.md)|`POWER(value, exponent)`|  
 |[Round(value)](./language-reference/math-canonical-functions.md)|`ROUND(value, digits, 0)`|  
-|[잘라내야](./language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
+|[Truncate](./language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
   
 ## <a name="string-functions"></a>문자열 함수  
 
