@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 트랜잭션에서 메시지 일괄 처리'
 title: 트랜잭션에서 메시지 일괄 처리
 ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: c18d5a36f4263a93589b75129517d66df80ce463
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0c84d87bc043f4ce1ae4d0a7674e862aa10011ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247462"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643698"
 ---
 # <a name="batching-messages-in-a-transaction"></a>트랜잭션에서 메시지 일괄 처리
 

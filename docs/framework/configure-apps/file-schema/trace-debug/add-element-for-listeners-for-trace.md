@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: <add> 의에 대 한 요소 <listeners><trace>'
 title: <add>의에 대 한 요소 <listeners><trace>
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-ms.openlocfilehash: da5c0ccae08a32c324a1633b5a7ff7592efa6e2d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ffc0823e0c0ce1dcd9d9f19853929496b3248177
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91174045"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639785"
 ---
 # <a name="add-element-for-listeners-for-trace"></a>\<add>의에 대 한 요소 \<listeners>\<trace>
 
@@ -69,7 +70,7 @@ ms.locfileid: "91174045"
 > [!NOTE]
 > 동일한 형식의 추적 수신기를 두 개 이상 추가 하면 해당 형식 및 이름이 컬렉션에 추가 되는 하나의 추적 수신기만 생성 `Listeners` 됩니다. 그러나 컬렉션에 여러 개의 동일한 수신기를 프로그래밍 방식으로 추가할 수 있습니다 `Listeners` .  
   
- **Initializedata** 특성의 값은 사용자가 만드는 수신기의 유형에 따라 달라 집니다. 모든 추적 수신기에서 **Initializedata**를 지정 해야 하는 것은 아닙니다.  
+ **Initializedata** 특성의 값은 사용자가 만드는 수신기의 유형에 따라 달라 집니다. 모든 추적 수신기에서 **Initializedata** 를 지정 해야 하는 것은 아닙니다.  
   
 > [!NOTE]
 > 특성을 사용 하는 경우 `initializeData` 컴파일러 경고 "' initializeData ' 특성이 선언 되지 않았습니다." 라는 메시지가 표시 될 수 있습니다. 이 경고는 특성을 인식 하지 않는 추상 기본 클래스에 대해 구성 설정의 유효성을 검사 하기 때문에 발생 합니다 <xref:System.Diagnostics.TraceListener> `initializeData` . 일반적으로 매개 변수를 사용 하는 생성자가 있는 추적 수신기 구현에 대해서는이 경고를 무시할 수 있습니다.  
@@ -87,7 +88,7 @@ ms.locfileid: "91174045"
   
 ## <a name="example"></a>예제  
 
- 다음 예제에서는 요소를 사용 하 여 수신기 **\<add>** `MyListener` 및 수신기 `MyEventListener` 컬렉션에 추가 **Listeners** 하는 방법을 보여 줍니다. `MyListener` 이라는 파일을 만들고 `MyListener.log` 출력을 파일에 씁니다. `MyEventListener` 이벤트 로그에 항목을 만듭니다.  
+ 다음 예제에서는 요소를 사용 하 여 수신기 **\<add>** `MyListener` 및 수신기 `MyEventListener` 컬렉션에 추가  하는 방법을 보여 줍니다. `MyListener` 이라는 파일을 만들고 `MyListener.log` 출력을 파일에 씁니다. `MyEventListener` 이벤트 로그에 항목을 만듭니다.  
   
 ```xml  
 <configuration>  

@@ -1,4 +1,5 @@
 ---
+description: '에 대 한 자세한 정보: <sectionGroup> 요소 <configSections>'
 title: <configSections>에 대한 <sectionGroup> 요소
 ms.date: 05/01/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - sectionGroup Element
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
-ms.openlocfilehash: eb221027470fe6e485f8fcc4b939b71e4f219712
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0d822b98acbc041b9d6e146e9cd15848a73d2f88
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77215255"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639889"
 ---
 # <a name="sectiongroup-element-for-configsections"></a>\<configSections>에 대한 \<sectionGroup> 요소
 
@@ -22,7 +23,7 @@ ms.locfileid: "77215255"
 &nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<sectionGroup>**
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```xml
 <sectionGroup name="section group name">
@@ -32,19 +33,19 @@ ms.locfileid: "77215255"
 
 ## <a name="attribute"></a>attribute
 
-|           | Description |
+|           | 설명 |
 | --------- | ----------- |
 | **name**  | 필수 특성입니다.<br><br>정의 하는 섹션 그룹의 이름을 지정 합니다. |
 
 ## <a name="parent-element"></a>부모 요소
 
-|     | Description |
+|     | 설명 |
 | --- | ----------- |
-| [**\<configSections>** 요소인](configsections-element-for-configuration.md) | 구성 섹션과 네임 스페이스 선언을 포함 합니다. |
+| [**\<configSections>** 요소](configsections-element-for-configuration.md) | 구성 섹션과 네임 스페이스 선언을 포함 합니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
-|     | Description |
+|     | 설명 |
 | --- | ----------- |
 | [**\<section>**](section-element.md) | 구성 섹션 선언을 포함 합니다. |
 
@@ -74,8 +75,8 @@ ms.locfileid: "77215255"
 
 ## <a name="configuration-file"></a>구성 파일
 
-이 요소는 응용 프로그램 구성 파일 *, 컴퓨터 구성 파일 (machine.config*) 및 응용 프로그램 디렉터리 수준에 없는 *web.config 파일* 에서 사용할 수 있습니다.
+이 요소는 응용 프로그램 구성 파일, 컴퓨터 구성 파일 (*Machine.config*) 및 응용 프로그램 디렉터리 수준에 없는 *Web.config* 파일에서 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework의 구성 파일 스키마](index.md)
+- [.NET Framework에 대 한 구성 파일 스키마](index.md)

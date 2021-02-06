@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: 파일이 너무 많음'
 title: 파일이 너무 많습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID67
 ms.assetid: 2ff203e2-bba6-43ae-b72f-8e92a881c98f
-ms.openlocfilehash: cd168ce86569d2d7558e21a5b4cc5ef385b28313
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 85d246c49f765cf618bf889d75dcc9c10b780280
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873551"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99641228"
 ---
 # <a name="too-many-files"></a>파일이 너무 많습니다.
 
@@ -21,6 +22,6 @@ ms.locfileid: "90873551"
   
 2. CONFIG.SYS 파일에서 **파일 =** 설정에 지정 된 파일 수를 늘리고 컴퓨터를 다시 시작 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [오류 형식](../../programming-guide/language-features/error-types.md)
+- [오류 유형](../../programming-guide/language-features/error-types.md)

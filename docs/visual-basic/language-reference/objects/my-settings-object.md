@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: My.settings 개체'
 title: My.Settings 개체
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: f3348e9eea5bdd7f4fd911150877c9aefdd66bcc
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 92323c5379d0c5a4dbf96cfdbe0becccc2bad7cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867290"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640604"
 ---
 # <a name="mysettings-object"></a>My.Settings 개체
 
@@ -24,21 +25,21 @@ ms.locfileid: "90867290"
   
 ## <a name="properties"></a>속성  
 
- `My.Settings` 개체의 속성을 통해 애플리케이션 설정에 액세스할 수 있습니다. 설정을 추가 하거나 제거 하려면 **설정 디자이너**를 사용 합니다.  
+ `My.Settings` 개체의 속성을 통해 애플리케이션 설정에 액세스할 수 있습니다. 설정을 추가 하거나 제거 하려면 **설정 디자이너** 를 사용 합니다.  
   
- 각 설정에는 **이름**, **형식**, **범위**및 **값**이 있습니다. 이러한 설정에 따라 각 설정에 액세스 하는 속성이 개체에 표시 되는 방식이 결정 됩니다 `My.Settings` .  
+ 각 설정에는 **이름**, **형식**, **범위** 및 **값** 이 있습니다. 이러한 설정에 따라 각 설정에 액세스 하는 속성이 개체에 표시 되는 방식이 결정 됩니다 `My.Settings` .  
   
 - **이름** 속성의 이름을 결정 합니다.  
   
 - **Type** 은 속성의 유형을 결정 합니다.  
   
-- **범위** 는 속성이 읽기 전용인 경우를 나타냅니다. **응용 프로그램**값 이면 속성이 읽기 전용입니다. 값이 **User**이면 속성은 읽기/쓰기입니다.  
+- **범위** 는 속성이 읽기 전용인 경우를 나타냅니다. **응용 프로그램** 값 이면 속성이 읽기 전용입니다. 값이 **User** 이면 속성은 읽기/쓰기입니다.  
   
 - **Value** 는 속성의 기본값입니다.  
   
 ## <a name="methods"></a>메서드  
   
-|방법|Description|  
+|메서드|설명|  
 |---|---|  
 |`Reload`|마지막으로 저장 된 값에서 사용자 설정을 다시 로드 합니다.|  
 |`Save`|현재 사용자 설정을 저장 합니다.|  
@@ -64,7 +65,7 @@ ms.locfileid: "90867290"
   
  이 예제가 작동하려면 애플리케이션에 `String` 형식의 `Nickname` 설정이 있어야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - [방법: Visual Basic에서 애플리케이션 설정 읽기](../../developing-apps/programming/app-settings/how-to-read-application-settings.md)

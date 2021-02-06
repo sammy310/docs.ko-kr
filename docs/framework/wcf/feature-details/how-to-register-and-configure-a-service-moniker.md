@@ -1,24 +1,25 @@
 ---
+description: '자세한 정보: 방법: 서비스 모니커 등록 및 구성'
 title: '방법: 서비스 모니커 등록 및 구성'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: fc0b2d00bcc8e3b14c491446f16297c1036b783b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 9c6867941a5b96c6ced0f8e371e10697144bd121
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747095"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643464"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>방법: 서비스 모니커 등록 및 구성
 
-형식화 된 계약을 사용 하 여 COM 응용 프로그램 내에서 WCF (Windows Communication Foundation) 서비스 모니커를 사용 하려면 먼저 필요한 특성을 사용 하는 형식을 COM에 등록 하 고 필요한 바인딩을 사용 하 여 COM 응용 프로그램 및 모니커를 구성 해야 합니다. 구성.
+형식화 된 계약을 사용 하 여 COM 응용 프로그램 내에서 WCF (Windows Communication Foundation) 서비스 모니커를 사용 하려면 먼저 필요한 특성을 사용 하는 형식을 COM에 등록 하 고 필요한 바인딩 구성을 사용 하 여 COM 응용 프로그램 및 모니커를 구성 해야 합니다.
 
 ## <a name="register-the-required-attributed-types-with-com"></a>필요한 특성 사용 형식을 COM에 등록 합니다.
 
-1. [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 도구를 사용 하 여 WCF 서비스에서 메타 데이터 계약을 검색할 수 있습니다. 이렇게 하면 WCF 클라이언트 어셈블리와 클라이언트 응용 프로그램 구성 파일에 대 한 소스 코드가 생성 됩니다.
+1. [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 도구를 사용 하 여 WCF 서비스에서 메타 데이터 계약을 검색할 수 있습니다. 이렇게 하면 WCF 클라이언트 어셈블리와 클라이언트 응용 프로그램 구성 파일에 대 한 소스 코드가 생성 됩니다.
 
 2. 어셈블리의 형식이 `ComVisible`로 표시되는지 확인합니다. 이렇게 하려면 Visual Studio 프로젝트의 *AssemblyInfo.cs* 파일에 다음 특성을 추가 합니다.
 
@@ -37,7 +38,7 @@ ms.locfileid: "76747095"
 
 ## <a name="configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>필요한 바인딩 구성을 사용 하 여 COM 응용 프로그램 및 모니커 구성
 
-- 클라이언트 응용 프로그램의 구성 파일에 생성 된 클라이언트 응용 프로그램 구성 파일에서 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 통해 생성 된 바인딩 정의를 저장 합니다. 예를 들어 이름이 CallCenterClient.exe인 Visual Basic 6.0 실행 파일에 대해 실행 파일과 동일한 디렉터리 내의 CallCenterConfig.exe.config 파일에 구성을 저장해야 합니다. 이제 클라이언트 애플리케이션에서 모니커를 사용할 수 있습니다. WCF에서 제공 하는 표준 바인딩 형식 중 하나를 사용 하는 경우에는 바인딩 구성이 필요 하지 않습니다.
+- 클라이언트 응용 프로그램 구성 파일에서 [ServiceModel 메타 데이터 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 에 의해 생성 된 바인딩 정의를 클라이언트 응용 프로그램 구성 파일에 저장 합니다. 예를 들어 이름이 CallCenterClient.exe인 Visual Basic 6.0 실행 파일에 대해 실행 파일과 동일한 디렉터리 내의 CallCenterConfig.exe.config 파일에 구성을 저장해야 합니다. 이제 클라이언트 애플리케이션에서 모니커를 사용할 수 있습니다. WCF에서 제공 하는 표준 바인딩 형식 중 하나를 사용 하는 경우에는 바인딩 구성이 필요 하지 않습니다.
 
      다음 형식이 등록됩니다.
 
@@ -60,7 +61,7 @@ ms.locfileid: "76747095"
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1
     ```
 
-     또는
+     or
 
     ```
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}
@@ -80,13 +81,13 @@ ms.locfileid: "76747095"
     result = mathProxy.Add(3, 5)
     ```
 
-     이 예제에서 바인딩 구성 `Binding1`에 대 한 정의는 클라이언트 응용 프로그램에 대해 적절 하 게 명명 된 구성 파일 (예: *vb6appname*)에 저장 됩니다.
+     이 예제에서는 바인딩 구성의 정의가 `Binding1` 클라이언트 응용 프로그램에 대 한 적절 한 이름의 구성 파일에 저장 됩니다 (예: *vb6appname.exe.config*).
 
     > [!NOTE]
     > C#, C++ 또는 다른 모든 .NET 언어 애플리케이션으로 유사한 코드를 사용할 수 있습니다.
 
     > [!NOTE]
-    > 모니커의 형식이 잘못 되었거나 서비스를 사용할 수 없는 경우 `GetObject`를 호출 하면 "구문이 잘못 되었습니다" 라는 오류가 반환 됩니다. 이 오류가 발생하면 사용하고 있는 모니커가 올바르고 서비스를 사용할 수 있는지 확인하세요.
+    > 모니커의 형식이 잘못 되었거나 서비스를 사용할 수 없는 경우를 호출 하면 `GetObject` "구문이 잘못 되었습니다" 라는 오류가 반환 됩니다. 이 오류가 발생하면 사용하고 있는 모니커가 올바르고 서비스를 사용할 수 있는지 확인하세요.
 
      이 항목에서는 Visual Basic 6.0 코드에서 서비스 모니커를 사용 하는 방법을 중점적으로 설명 하지만 다른 언어의 서비스 모니커를 사용할 수 있습니다. C++ 코드에서 모니커를 사용하는 경우 다음 코드와 같이 "no_namespace named_guids raw_interfaces_only"를 사용하여 Svcutil.exe에서 생성된 어셈블리를  가져와야 합니다.
 

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 배포 아키텍처'
 title: 배포 아키텍처
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: bc8c9cfbdc4f5d8ee01dfcf5098cfbc74afc2467
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 274ec121629bcb4e596401ad989309d3ef02c128
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96234806"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643737"
 ---
 # <a name="architecture-of-syndication"></a>배포 아키텍처
 
@@ -42,7 +43,7 @@ ms.locfileid: "96234806"
   
  클래스 형식 지정:  
   
-|인스턴스|Description|  
+|인스턴스|설명|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>|<xref:System.ServiceModel.Syndication.SyndicationFeed> 인스턴스를 Atom 1.0 형식으로 serialize하는 클래스입니다.|  
 |<xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601>|<xref:System.ServiceModel.Syndication.SyndicationFeed> 파생 클래스를 Atom 1.0 형식으로 serialize하는 클래스입니다.|  
@@ -55,7 +56,7 @@ ms.locfileid: "96234806"
   
  개체 모델 클래스:  
   
-|인스턴스|Description|  
+|인스턴스|설명|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Syndication.SyndicationCategory>|배포 피드의 범주를 나타내는 클래스입니다.|  
 |<xref:System.ServiceModel.Syndication.SyndicationContent>|배포 콘텐츠를 나타내는 기본 클래스입니다.|  

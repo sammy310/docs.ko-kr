@@ -1,4 +1,5 @@
 ---
+description: 다음에 대해 자세히 알아보세요. .Resources 개체
 title: My.Resources 개체
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: 3d12524706f680434d5b6d8da39c89042bea3281
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ecd8e79aacea85080dc341ae36b362a595893034
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867334"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640630"
 ---
 # <a name="myresources-object"></a>My.Resources 개체
 
@@ -29,11 +30,11 @@ ms.locfileid: "90867334"
   
 ## <a name="properties"></a>속성  
 
- 개체의 속성은 `My.Resources` 응용 프로그램의 리소스에 대 한 읽기 전용 액세스를 제공 합니다. 리소스를 추가 하거나 제거 하려면 **프로젝트 디자이너**를 사용 합니다. Context.resourcename을 사용 하 여 **프로젝트 디자이너** 를 통해 추가 된 리소스에 액세스할 수 있습니다 `My.Resources.` *resourceName*.  
+ 개체의 속성은 `My.Resources` 응용 프로그램의 리소스에 대 한 읽기 전용 액세스를 제공 합니다. 리소스를 추가 하거나 제거 하려면 **프로젝트 디자이너** 를 사용 합니다. Context.resourcename을 사용 하 여 **프로젝트 디자이너** 를 통해 추가 된 리소스에 액세스할 수 있습니다 `My.Resources.` .  
   
- **솔루션 탐색기** 에서 프로젝트를 선택한 다음 **프로젝트** 메뉴에서 **새 항목 추가** 또는 **기존 항목 추가** 를 클릭 하 여 리소스 파일을 추가 하거나 제거할 수도 있습니다. `My.Resources.` *ResourceFileName* `.` *context.resourcename*을 사용 하 여 이러한 방식으로 추가 된 리소스에 액세스할 수 있습니다.  
+ **솔루션 탐색기** 에서 프로젝트를 선택한 다음 **프로젝트** 메뉴에서 **새 항목 추가** 또는 **기존 항목 추가** 를 클릭 하 여 리소스 파일을 추가 하거나 제거할 수도 있습니다. `My.Resources.` *ResourceFileName* `.` *context.resourcename* 을 사용 하 여 이러한 방식으로 추가 된 리소스에 액세스할 수 있습니다.  
   
- 각 리소스에는 이름, 범주 및 값이 있으며, 이러한 리소스 설정에 따라 리소스에 액세스 하는 속성이 개체에 표시 되는 방식이 결정 됩니다 `My.Resources` . **프로젝트 디자이너**에 추가 된 리소스:  
+ 각 리소스에는 이름, 범주 및 값이 있으며, 이러한 리소스 설정에 따라 리소스에 액세스 하는 속성이 개체에 표시 되는 방식이 결정 됩니다 `My.Resources` . **프로젝트 디자이너** 에 추가 된 리소스:  
   
 - 이름은 속성의 이름을 결정 합니다.  
   
@@ -86,7 +87,7 @@ ms.locfileid: "90867334"
   
  [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [애플리케이션 리소스 관리(.NET)](/visualstudio/ide/managing-application-resources-dotnet)
 - [데스크톱 앱의 리소스](../../../framework/resources/index.md)

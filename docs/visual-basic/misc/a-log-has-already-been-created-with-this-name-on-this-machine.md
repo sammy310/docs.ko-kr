@@ -1,13 +1,14 @@
 ---
+description: 에 대 한 자세한 정보:이 컴퓨터에 이미이 이름을 사용 하 여 로그를 만들었습니다.
 title: 이 컴퓨터에 이 이름의 로그가 이미 만들어져 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 3dd78d9f-890e-4409-bebb-048fdf34711b
-ms.openlocfilehash: 89d65f282fd4f6ded7cb71577eea625ee17589d4
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e7d93ba0d3138fc6661e8ff46e5aeb05017fe8b6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91083165"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640175"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>이 컴퓨터에 이 이름의 로그가 이미 만들어져 있습니다.
 
@@ -19,7 +20,7 @@ ms.locfileid: "91083165"
   
 - 로그에 다른 이름을 사용합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [내 응용 프로그램 .Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
 - [방법: 로그 메시지 쓰기](../developing-apps/programming/log-info/how-to-write-log-messages.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 채택 Windows Communication Foundation'
 title: Windows Communication Foundation 채택
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
-ms.openlocfilehash: 40a2eac1e282640f0df70a7eca16e3b2401c0764
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c8d5808b246e40b504d2d07dcdd6dc3fd622361d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546010"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643919"
 ---
 # <a name="adopt-windows-communication-foundation"></a>Windows Communication Foundation 채택
 
@@ -21,6 +22,6 @@ WCF 클라이언트는 ASP.NET 웹 서비스를 사용할 수 있습니다. ASP.
 
 필요한 경우에도 한 기술에서 다른 기술로 코드를 마이그레이션하는 것은 거의 적절 하지 않은 방법입니다. 새 기술을 채택 하는 이유는 이전 기술로 충족 될 수 없는 새로운 요구 사항을 충족 하는 것입니다 .이 경우에는 새로 확장 된 요구 사항 집합을 충족 하도록 새 솔루션을 설계 하는 것이 좋습니다. 새롭게 디자인할 경우 기존 시스템에 대한 사용자 경험과 시스템이 디자인된 이후 얻은 지식을 활용할 수 있습니다. 또한 새 플랫폼에서 기존 디자인을 재현하지 않고 새 기술의 전체 기능을 사용할 수도 있습니다. 새 디자인의 주요 요소를 프로토타입 하 고 나면 새 디자인 내에서 기존 시스템의 코드를 더 쉽게 다시 사용할 수 있게 됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: 메타데이터 검색 및 규정 준수 서비스 구현](how-to-retrieve-metadata-and-implement-a-compliant-service.md)

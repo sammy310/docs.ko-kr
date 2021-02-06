@@ -1,4 +1,5 @@
 ---
+description: "자세히 알아보기: BC31019: 출력 파일 ' '에 쓸 수 없습니다 <filename> . <error>"
 title: "'<filename>' 출력 파일에 쓸 수 없습니다. <error>"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 5f4add95da7c996513ffb291a7794ea0e345ac94
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 4a1feff6429a5b82968d3a87e4c9c9ef80e6612a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161545"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640903"
 ---
 # <a name="bc31019-unable-to-write-to-output-file-filename-error"></a>BC31019: 출력 파일 ' '에 쓸 수 없습니다 \<filename> . \<error>
 
@@ -46,17 +47,17 @@ ms.locfileid: "92161545"
 
 1. 원하는 폴더를 엽니다.
 
-2. **보기** 아이콘을 클릭 하 고 **세부 정보**를 선택 합니다.
+2. **보기** 아이콘을 클릭 하 고 **세부 정보** 를 선택 합니다.
 
 3. 열 머리글을 마우스 오른쪽 단추로 클릭 하 고 드롭다운 목록에서 **특성** 을 선택 합니다.
 
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>파일이나 폴더의 특성을 변경하려면
 
-1. **파일 탐색기**에서 파일 또는 폴더를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
+1. **파일 탐색기** 에서 파일 또는 폴더를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다.
 
 2. **일반** 탭의 **특성** 섹션에서 **읽기 전용** 상자의 선택을 취소 합니다.
 
-3. **확인**을 누릅니다.
+3. **확인** 을 누릅니다.
 
 ## <a name="see-also"></a>참고 항목
 

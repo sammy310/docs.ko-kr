@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: WCF 확장'
 title: WCF 확장
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - extensibility [WCF]
 - Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
-ms.openlocfilehash: b82dd4fb6a5b41a0160df8680fb1ba65d9a5bd33
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e243e03a72e6530716959499c311bfe37a39b054
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254599"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644153"
 ---
 # <a name="extending-wcf"></a>WCF 확장
 

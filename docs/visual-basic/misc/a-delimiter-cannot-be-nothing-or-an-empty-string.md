@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 구분 기호는 Nothing 이나 빈 문자열일 수 없습니다.'
 title: 구분 기호는 Nothing이나 빈 문자열일 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_DelimiterNothing
 ms.assetid: 8885fcd1-c201-409d-9a32-6ff2b13c0c13
-ms.openlocfilehash: 786eb2bddc967e9b5b8fd6afec3ffbe264814834
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: b48e1b2fdf1fd1026d56944f37ac17c90c14685c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084933"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640201"
 ---
 # <a name="a-delimiter-cannot-be-nothing-or-an-empty-string"></a>구분 기호는 Nothing이나 빈 문자열일 수 없습니다.
 
@@ -19,7 +20,7 @@ ms.locfileid: "91084933"
   
 - `Delimiters`에 유효한 값을 지원합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters>

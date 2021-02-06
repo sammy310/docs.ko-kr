@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: WebServices 개체'
 title: My.WebServices 개체
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: 0b63b44c2cd9d55094fb83fed6c04e4de528a25c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e8d7ef8b349fef6d69b92d9df4a23222bd3c912e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867208"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640539"
 ---
 # <a name="mywebservices-object"></a>My.WebServices 개체
 
@@ -22,7 +23,7 @@ ms.locfileid: "90867208"
 
  `My.WebServices` 개체는 현재 프로젝트에서 참조하는 각 웹 서비스의 인스턴스를 제공합니다. 필요에 따라 각 인스턴스가 인스턴스화됩니다. `My.WebServices` 개체의 속성을 통해 이러한 웹 서비스에 액세스할 수 있습니다. 속성 이름은 속성이 액세스하는 웹 서비스의 이름과 같습니다. <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>에서 상속되는 모든 클래스는 웹 서비스입니다. 프로젝트에 웹 서비스를 추가 하는 방법에 대 한 자세한 내용은 [응용 프로그램 웹 서비스 액세스](../../developing-apps/programming/accessing-application-web-services.md)를 참조 하세요.  
   
- `My.WebServices`개체는 현재 프로젝트와 연결 된 웹 서비스만 노출 합니다. 참조 된 Dll에 선언 된 웹 서비스에 대 한 액세스는 제공 하지 않습니다. DLL이 제공 하는 웹 서비스에 액세스 하려면 웹 서비스의 정규화 된 이름을 *DllName*형식으로 사용 해야 합니다. *Webservicename*. 자세한 내용은 [응용 프로그램 웹 서비스 액세스](../../developing-apps/programming/accessing-application-web-services.md)를 참조 하세요.  
+ `My.WebServices`개체는 현재 프로젝트와 연결 된 웹 서비스만 노출 합니다. 참조 된 Dll에 선언 된 웹 서비스에 대 한 액세스는 제공 하지 않습니다. DLL이 제공 하는 웹 서비스에 액세스 하려면 웹 서비스의 정규화 된 이름을 *DllName* 형식으로 사용 해야 합니다. *Webservicename*. 자세한 내용은 [응용 프로그램 웹 서비스 액세스](../../developing-apps/programming/accessing-application-web-services.md)를 참조 하세요.  
   
  개체와 해당 속성은 웹 응용 프로그램에 사용할 수 없습니다.  
   
@@ -31,7 +32,7 @@ ms.locfileid: "90867208"
  개체의 각 속성은 `My.WebServices` 현재 프로젝트에서 참조 하는 웹 서비스의 인스턴스에 대 한 액세스를 제공 합니다. 속성의 이름은 속성이 액세스 하는 웹 서비스의 이름과 동일 하며, 속성 형식이 웹 서비스의 형식과 동일 합니다.  
   
 > [!NOTE]
-> 이름 충돌이 있는 경우 웹 서비스에 액세스 하기 위한 속성 이름은 *RootNamespace*_*Namespace* \_ *ServiceName*입니다. 예를 들어 라는 두 개의 웹 서비스를 가정 `Service1` 합니다. 이러한 서비스 중 하나가 루트 네임 스페이스 `WindowsApplication1` 및 네임 스페이스에 있는 경우를 `Namespace1` 사용 하 여 해당 서비스에 액세스 `My.WebServices.WindowsApplication1_Namespace1_Service1` 합니다.  
+> 이름 충돌이 있는 경우 웹 서비스에 액세스 하기 위한 속성 이름은 *RootNamespace* _ *Namespace* \_ *ServiceName* 입니다. 예를 들어 라는 두 개의 웹 서비스를 가정 `Service1` 합니다. 이러한 서비스 중 하나가 루트 네임 스페이스 `WindowsApplication1` 및 네임 스페이스에 있는 경우를 `Namespace1` 사용 하 여 해당 서비스에 액세스 `My.WebServices.WindowsApplication1_Namespace1_Service1` 합니다.  
   
  개체의 속성 중 하나에 처음으로 액세스 하는 경우 `My.WebServices` 웹 서비스의 새 인스턴스를 만들어 저장 합니다. 해당 속성에 대 한 후속 액세스는 웹 서비스의 인스턴스를 반환 합니다.  
   
@@ -64,7 +65,7 @@ ms.locfileid: "90867208"
 |Windows 컨트롤 라이브러리|**예**|  
 |웹 컨트롤 라이브러리|**예**|  
 |Windows 서비스|**예**|  
-|웹 사이트|예|  
+|웹 사이트|No|  
   
 ## <a name="see-also"></a>참고 항목
 

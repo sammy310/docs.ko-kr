@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: efc440adb59da1ef9838ec5445d9c55544c14380
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 2cda5a23bbc90ca5dc2305b5d7023e8ea6120b79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216475"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643074"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET 소스 코드 분석 개요
 
@@ -40,7 +40,7 @@ ms.locfileid: "99216475"
 
 다음 규칙은 기본적으로 .NET 5.0에서 사용 하도록 설정 됩니다.
 
-| 진단 ID | Category | 심각도 | 설명 |
+| 진단 ID | 범주 | 심각도 | 설명 |
 | - | - | - | - |
 | [CA1416](/visualstudio/code-quality/ca1416) | 상호 운용성 | 경고 | 플랫폼 호환성 분석기 |
 | [CA1417](/visualstudio/code-quality/ca1417) | 상호 운용성 | 경고 | `OutAttribute`P/invoke에 문자열 매개 변수를 사용 하지 마십시오. |
@@ -60,7 +60,7 @@ ms.locfileid: "99216475"
 
 *분석 모드* 는 none, some 또는 all 규칙이 설정 된 미리 정의 된 코드 분석 구성을 나타냅니다. 기본 분석 모드에서는 적은 수의 규칙만 [빌드 경고로 설정](#enabled-rules)됩니다. 프로젝트 파일에서 [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) 속성을 설정 하 여 프로젝트에 대 한 분석 모드를 변경할 수 있습니다. 허용 되는 값은 다음과 같습니다.
 
-| 값 | Description |
+| 값 | 설명 |
 | - | - |
 | `AllDisabledByDefault` | 이는 가장 보수적인 모드입니다. 모든 규칙은 기본적으로 사용 하지 않도록 설정 됩니다. 개별 규칙을 선택적으로 [옵트인](configuration-options.md)하여 사용하도록 설정할 수 있습니다.<br /><br />`<AnalysisMode>AllDisabledByDefault</AnalysisMode>` |
 | `AllEnabledByDefault` | 이는 가장 적극적인 모드입니다. 모든 규칙은 빌드 경고로 설정 됩니다. 개별적으로 사용 하지 않도록 설정 하는 규칙을 선택적으로 [옵트아웃 (opt out](configuration-options.md) ) 할 수 있습니다.<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
@@ -119,7 +119,7 @@ ms.locfileid: "99216475"
 
 1. MSBuild 속성 [EnforceCodeStyleInBuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) 을로 설정 `true` 합니다.
 
-1. *Editorconfig* 파일에서 빌드에서 실행 하려는 각 "IDE" 코드 스타일 규칙을 경고나 오류로 [구성](configuration-options.md) 합니다. 예를 들면 다음과 같습니다.
+1. *Editorconfig* 파일에서 빌드에서 실행 하려는 각 "IDE" 코드 스타일 규칙을 경고나 오류로 [구성](configuration-options.md) 합니다. 다음은 그 예입니다. 
 
    ```ini
    [*.{cs,vb}]
@@ -127,7 +127,7 @@ ms.locfileid: "99216475"
    dotnet_diagnostic.IDE0040.severity = warning
    ```
 
-   또는 전체 범주를 경고나 오류로 구성 하 고, 기본적으로이 범주에서 규칙을 선택적으로 해제 한 후에 빌드 시 실행 하지 않을 수 있습니다. 예를 들면 다음과 같습니다.
+   또는 전체 범주를 경고나 오류로 구성 하 고, 기본적으로이 범주에서 규칙을 선택적으로 해제 한 후에 빌드 시 실행 하지 않을 수 있습니다. 다음은 그 예입니다. 
 
    ```ini
    [*.{cs,vb}]
@@ -144,15 +144,13 @@ ms.locfileid: "99216475"
 
 ## <a name="suppress-a-warning"></a>경고 표시 안 함
 
-규칙 위반을 억제 하려면 EditorConfig 파일에서 해당 규칙 ID의 심각도 옵션을로 설정 `none` 합니다. 예를 들면 다음과 같습니다.
+규칙 위반을 억제 하는 한 가지 방법은 EditorConfig 파일에서 해당 규칙 ID에 대 한 심각도 옵션을로 설정 하는 것입니다 `none` . 다음은 그 예입니다. 
 
 ```ini
 dotnet_diagnostic.CA1822.severity = none
 ```
 
-Visual Studio에서는 코드 분석 규칙에서 경고를 표시 하지 않도록 하는 추가 방법을 제공 합니다. 자세한 내용은 [위반 표시 안 함](/visualstudio/code-quality/use-roslyn-analyzers#suppress-violations)을 참조 하세요.
-
-규칙 심각도에 대 한 자세한 내용은 [규칙 심각도 구성](configuration-options.md#severity-level)을 참조 하세요.
+경고를 표시 하지 않는 다른 방법 및 자세한 내용은 [코드 분석 경고를 표시 하지 않는 방법](suppress-warnings.md)을 참조 하세요.
 
 ## <a name="third-party-analyzers"></a>타사 분석기
 

@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <behavior><serviceBehaviors>'
 title: <serviceBehaviors>의 <behavior>
 ms.date: 03/30/2017
 ms.assetid: 78fc0a08-55de-416a-ac12-a5e6ffc9a987
-ms.openlocfilehash: 739f95f527fd73062c8cec43efc6777efeb077f3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e34254661026ad6dcb3429ad1b381cc3e6718f27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195157"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639538"
 ---
 # <a name="behavior-of-servicebehaviors"></a>\<serviceBehaviors>의 \<behavior>
 
@@ -40,7 +41,7 @@ ms.locfileid: "91195157"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |name|동작의 구성 이름을 포함하는 고유 문자열입니다. 이 값은 요소의 식별 문자열 역할을 하므로 고유한 사용자 정의 문자열이어야 합니다. .NET Framework 4부터 바인딩과 동작은 이름을 가질 필요가 없습니다. 기본 구성 및 이름이 없는 바인딩 및 동작에 대 한 자세한 내용은 [WCF 서비스에 대 한](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [간소화 된 구성](../../../wcf/simplified-configuration.md) 및 단순화 된 구성을 참조 하세요.|  
   

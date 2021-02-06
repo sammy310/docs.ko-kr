@@ -1,4 +1,5 @@
 ---
+description: '에 대 한 자세한 정보: <listeners> 요소 <trace>'
 title: <trace>에 대한 <listeners> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: 59d078f8dc573a1ce949d225f497dd4500fe808f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 25f6d4b49eeb57b25b4afbbdfdba484d6d7eea3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173863"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639629"
 ---
 # <a name="listeners-element-for-trace"></a>\<trace>에 대한 \<listeners> 요소
 
@@ -67,7 +68,7 @@ ms.locfileid: "91173863"
   
 ## <a name="example"></a>예제  
 
- 다음 예제에서는 요소를 사용 하 여 수신기 **\<listeners>** `MyListener` 및 수신기 `MyEventListener` 컬렉션에 **Listeners** 를 추가 하는 방법을 보여 줍니다. `MyListener` 이라는 파일을 만들고 `MyListener.log` 출력을 파일에 씁니다. `MyEventListener` 이벤트 로그에 항목을 만듭니다.  
+ 다음 예제에서는 요소를 사용 하 여 수신기 **\<listeners>** `MyListener` 및 수신기 `MyEventListener` 컬렉션에  를 추가 하는 방법을 보여 줍니다. `MyListener` 이라는 파일을 만들고 `MyListener.log` 출력을 파일에 씁니다. `MyEventListener` 이벤트 로그에 항목을 만듭니다.  
   
 ```xml  
 <configuration>  

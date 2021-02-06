@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 방법: 메타 데이터 끝점 보안 설정'
 title: '방법: 메타데이터 엔드포인트 보안'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: c5efd921d3826ef814bf45d6895255981101d992
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bcce3fd0708049435c791cae5064f84133dfd612
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592959"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643308"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>방법: 메타데이터 엔드포인트 보안
 

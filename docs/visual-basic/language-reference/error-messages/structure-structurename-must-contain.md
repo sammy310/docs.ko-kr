@@ -1,4 +1,5 @@
 ---
+description: "자세한 정보: BC30941: Structure ' '에는 <structurename> 적어도 하나의 인스턴스 멤버 변수 또는 ' Custom '으로 표시 되지 않은 인스턴스 이벤트 선언이 하나 이상 포함 되어야 합니다."
 title: "'<structurename>' 구조체에는 'Custom'으로 표시되지 않은 적어도 하나의 인스턴스 멤버 변수 또는 이벤트 선언이 있어야 합니다."
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-ms.openlocfilehash: 4e7ef82659c43be08ee444eaf3f4df663f7aaa53
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 08596997decd9d739ac95ad3e4191cb126b3efb3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159653"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99641449"
 ---
 # <a name="bc30941-structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>BC30941: Structure ' \<structurename> '에는 적어도 하나의 인스턴스 멤버 변수 또는 ' Custom '으로 표시 되지 않은 인스턴스 이벤트 선언이 하나 이상 포함 되어야 합니다.
 

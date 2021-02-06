@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 방법: 채널 팩터리를 만들어 채널을 만들고 관리 하는 데 사용'
 title: '방법: 채널 팩터리를 만들어 채널을 만들고 관리하는 데 사용'
 ms.date: 03/30/2017
 ms.assetid: 018dcc30-9f61-419e-af8e-412a85e8d282
-ms.openlocfilehash: 44b0f45d1a340b8e8229ded827ad3ded738ae677
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4e76e5ea0c6776e5623a2e716a3702e628f146f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96256783"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643477"
 ---
 # <a name="how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels"></a>방법: 채널 팩터리를 만들어 채널을 만들고 관리하는 데 사용
 

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: <add> 의에 대 한 요소 <listeners><source>'
 title: <add>의에 대 한 요소 <listeners><source>
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-ms.openlocfilehash: a5abaffbad986785b8879297883da9614f0a8103
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: cb2145738b81574397a8de13f68d0d4e572f20cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201696"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639837"
 ---
 # <a name="add-element-for-listeners-for-source"></a>\<add>의에 대 한 요소 \<listeners>\<source>
 

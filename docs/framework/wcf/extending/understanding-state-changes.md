@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 상태 변경 이해'
 title: 상태 변경 이해
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: babc62206fc700fe68c2220c4f2cd717cd758d56
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e537a7421ffa8ab924e4e9e4ab841343245534b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294047"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644010"
 ---
 # <a name="understanding-state-changes"></a>상태 변경 이해
 
@@ -149,8 +150,8 @@ ms.locfileid: "96294047"
 |열림|해당 없음|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |닫기|예|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |닫기|아니요|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|해결됨|예|이전에 명시적인 Abort 호출로 개체가 닫힌 경우 <xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>. 개체에서 Close를 호출하면 <xref:System.ObjectDisposedException?displayProperty=nameWithType>이 throw됩니다.|  
-|해결됨|아니요|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
+|닫힘|예|이전에 명시적인 Abort 호출로 개체가 닫힌 경우 <xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>. 개체에서 Close를 호출하면 <xref:System.ObjectDisposedException?displayProperty=nameWithType>이 throw됩니다.|  
+|닫힘|아니요|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |오류|해당 없음|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   
 ### <a name="timeouts"></a>시간 제한  

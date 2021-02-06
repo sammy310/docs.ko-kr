@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 엔터프라이즈에서 끝점 잠그기'
 title: '방법: 엔터프라이즈에서 엔드포인트 잠그기'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 68a7b80a01d9b1a8c5243331e63a1b82996e8ee6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8e54c3d1cadcfdb6f0102281813eb3758320a143
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558149"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644231"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>방법: 엔터프라이즈에서 엔드포인트 잠그기
 
@@ -66,7 +67,7 @@ ms.locfileid: "90558149"
 
 구성 파일 요소를 암호화할 수도 있습니다. 자세한 내용은 참고 항목 단원을 참조하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [How To: Encrypt Configuration Sections in ASP.NET 2.0 Using DPAPI](/previous-versions/msp-n-p/ff647398(v=pandp.10))
 - [How To: Encrypt Configuration Sections in ASP.NET 2.0 Using RSA](/previous-versions/msp-n-p/ff650304(v=pandp.10))

@@ -1,16 +1,17 @@
 ---
+description: 다음에 대해 자세히 알아보세요. User 개체
 title: My.User 개체
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.User property
 - My.User object
 ms.assetid: caa7462e-2149-4bdb-8850-802b80b93cbf
-ms.openlocfilehash: f8004045b68dd7102aa85292e8e60c3ca38cbbe3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 2b1c1265199d2f01a943381fed360bfc5a20931a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870001"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640591"
 ---
 # <a name="myuser-object"></a>My.User 개체
 
@@ -26,7 +27,7 @@ ms.locfileid: "90870001"
 
  **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Security.Principal.IPrincipal>
 - <xref:System.Threading.Thread.CurrentPrincipal%2A>

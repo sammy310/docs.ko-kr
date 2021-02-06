@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: <useLegacyJit> 요소'
 title: <useLegacyJit> 요소
 ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
-ms.openlocfilehash: a126b8c0050a8d1fd96a3d090f9b018a9faa07a7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a1449cbc69f0aa1b91cc427fbfc5b984bf605169
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73968847"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640006"
 ---
 # <a name="uselegacyjit-element"></a>\<useLegacyJit> 요소
 
@@ -17,7 +18,7 @@ ms.locfileid: "73968847"
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<useLegacyJit>**  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml
 <useLegacyJit enabled=0|1 />
@@ -31,24 +32,24 @@ ms.locfileid: "73968847"
   
 ### <a name="attributes"></a>특성  
   
-| attribute | Description                                                                                   |  
+| attribute | 설명                                                                                   |  
 | --------- | --------------------------------------------------------------------------------------------- |  
 | `enabled` | 필수 특성입니다.<br><br>런타임이 레거시 64 비트 JIT 컴파일러를 사용 하는지 여부를 지정 합니다. |  
   
 ### <a name="enabled-attribute"></a>enabled 특성  
   
-| 값 | Description                                                                                                         |  
+| 값 | 설명                                                                                                         |  
 | ----- | ------------------------------------------------------------------------------------------------------------------- |  
 | 0     | 공용 언어 런타임은 .NET Framework 4.6 이상 버전에 포함 된 새로운 64 비트 JIT 컴파일러를 사용 합니다. |  
 | 1     | 공용 언어 런타임에서는 이전 64 비트 JIT 컴파일러를 사용 합니다.                                                     |  
   
 ### <a name="child-elements"></a>자식 요소
 
-None
+없음
   
 ### <a name="parent-elements"></a>부모 요소  
   
-| 요소         | Description                                                                                                       |  
+| 요소         | 설명                                                                                                       |  
 | --------------- | ----------------------------------------------------------------------------------------------------------------- |  
 | `configuration` | 공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |  
 | `runtime`       | 런타임 초기화 옵션에 대한 정보를 포함합니다.                                                        |  
@@ -70,7 +71,7 @@ None
   COMPLUS_useLegacyJit=0|1  
   ```  
   
-  환경 변수에는 *전역 범위가*있습니다. 즉, 컴퓨터에서 실행 되는 모든 응용 프로그램에 영향을 줍니다. 설정 하는 경우 응용 프로그램 구성 파일 설정으로 재정의할 수 있습니다. 환경 변수 이름은 대/소문자를 구분하지 않습니다.
+  환경 변수에는 *전역 범위가* 있습니다. 즉, 컴퓨터에서 실행 되는 모든 응용 프로그램에 영향을 줍니다. 설정 하는 경우 응용 프로그램 구성 파일 설정으로 재정의할 수 있습니다. 환경 변수 이름은 대/소문자를 구분하지 않습니다.
   
 - 레지스트리 키 추가
 
@@ -91,8 +92,8 @@ None
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [\<runtime>요소인](runtime-element.md)
-- [\<configuration>요소인](../configuration-element.md)
-- [마이그레이션: 새로운 64비트 JIT 컴파일러](../../../migration-guide/mitigation-new-64-bit-jit-compiler.md)
+- [\<runtime> 요소](runtime-element.md)
+- [\<configuration> 요소](../configuration-element.md)
+- [완화: 새로운 64비트 JIT 컴파일러](../../../migration-guide/mitigation-new-64-bit-jit-compiler.md)

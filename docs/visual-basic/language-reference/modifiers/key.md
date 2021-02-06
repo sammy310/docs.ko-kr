@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 키 (Visual Basic)'
 title: 키
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-ms.openlocfilehash: 582ed5bb67b9c7504e736710aa4649cffb12ef45
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5ec918da661144053824ca2a734cdec11873b0e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90868000"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640799"
 ---
 # <a name="key-visual-basic"></a>Key(Visual Basic)
 
@@ -25,7 +26,7 @@ ms.locfileid: "90868000"
   
  새 무명 형식이 만들어지면에서 직접 상속 됩니다 <xref:System.Object> . 컴파일러는 세 개의 상속 된 멤버 <xref:System.Object.Equals%2A> , <xref:System.Object.GetHashCode%2A> 및를 재정의 <xref:System.Object.ToString%2A> 합니다. 및에 대해 생성 된 재정의 코드 <xref:System.Object.Equals%2A> 는 <xref:System.Object.GetHashCode%2A> 키 속성을 기반으로 합니다. 형식에 키 속성이 없는 경우 <xref:System.Object.GetHashCode%2A> 및 <xref:System.Object.Equals%2A> 는 재정의 되지 않습니다.  
   
-## <a name="equality"></a>등호  
+## <a name="equality"></a>같음  
 
  두 익명 형식 인스턴스는 동일한 형식의 인스턴스인 경우와 해당 키 속성의 값이 동일한 경우에 동일 합니다. 다음 예제에서 `flight2` 는 `flight1` 동일한 익명 형식의 인스턴스이며 해당 키 속성에 대해 일치 하는 값을 가지 므로 이전 예제와 같습니다. 그러나 `flight3` `flight1` 키 속성의 값이 서로 다르기 때문에와 같지 않습니다 `FlightNo` . 인스턴스 `flight4` 는 `flight1` 키 속성으로 다른 속성을 지정 하기 때문에와 동일한 형식이 아닙니다.  
   
@@ -51,13 +52,13 @@ ms.locfileid: "90868000"
   
  [!code-vb[VbVbalrAnonymousTypes#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#39)]  
   
-## <a name="read-only-values"></a>읽기 전용 값  
+## <a name="read-only-values"></a>Read-Only 값  
 
  키 속성의 값은 변경할 수 없습니다. 예를 들어 `flight1` 앞의 예제에서 `Airline` 및 필드는 `FlightNo` 읽기 전용 이지만 `Gate` 변경할 수 있습니다.  
   
  [!code-vb[VbVbalrAnonymousTypes#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#28)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [익명 형식 정의](../../programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
 - [방법: 익명 형식 선언에서 속성 이름 및 형식 유추](../../programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

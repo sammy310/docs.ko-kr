@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <requiredRuntime> 요소'
 title: <requiredRuntime> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: 19fa1561ca3acd845918d952379c5227121465b4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e9d0a88a65f72ec03f3b2b124920d8265b8bf0c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91174071"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639850"
 ---
 # <a name="requiredruntime-element"></a>\<requiredRuntime> 요소
 
@@ -45,9 +46,9 @@ safemode="true|false"/>
 
 ## <a name="safemode-attribute"></a>안전 안전 특성
 
-|Value|설명|
+|값|설명|
 |-----------|-----------------|
-|`false`|런타임 시작 코드는 레지스트리에서 찾습니다. 이것은 기본값입니다.|
+|`false`|런타임 시작 코드는 레지스트리에서 찾습니다. 기본값입니다.|
 |`true`|런타임 시작 코드는 레지스트리에 표시 되지 않습니다.|
 
 ### <a name="child-elements"></a>자식 요소

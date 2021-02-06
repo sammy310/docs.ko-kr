@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: WCF 웹 HTTP 서비스에 대 한 캐싱 지원'
 title: WCF 웹 HTTP 서비스에 대한 캐싱 지원
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 6ce3ceccde01879876960e0288cb600a3a20c204
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a1f7351566c06010ed70093a1cab3697ae0e9356
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279339"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643490"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF 웹 HTTP 서비스에 대한 캐싱 지원
 
@@ -166,6 +167,6 @@ public Customer GetCustomer(string id)
 }
 ```  
   
-## <a name="security-considerations"></a>보안 고려 사항  
+## <a name="security-considerations"></a>보안 고려사항  
 
  응답이 캐시에서 제공될 때는 권한 부여가 수행되지 않으므로 권한 부여가 필요한 요청의 경우 응답이 캐시되지 않아야 합니다.  이러한 응답을 캐시하면 보안이 심각하게 취약해집니다.  일반적으로 권한 부여가 필요한 요청에서는 사용자별 데이터를 제공하므로 서버 쪽 캐싱도 효과적이지 않습니다.  이러한 경우 클라이언트 쪽 캐싱을 사용하거나 캐싱을 전혀 사용하지 않는 것이 더 적절합니다.

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 달력 작업'
 title: 달력 작업
 ms.date: 04/01/2019
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - international applications [.NET], calendars
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
-ms.openlocfilehash: c30af36b3426c4abbdf9c55f6c9062a5d8fc8c23
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 978b084906573a18e19cca20db0740ba2a1276cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824254"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642476"
 ---
 # <a name="work-with-calendars"></a>달력 작업
 
@@ -240,9 +241,9 @@ ms.locfileid: "94824254"
 
    |  |  |
    |--|--|
-   | **Key** | **HKEY_LOCAL_MACHINE\Software\Microsoft\\ . NETFramework\AppContext** |
-   | **Name** | Tem를 Switch.Sys합니다. EnforceJapaneseEraYearRanges |
-   | **Type** | REG_SZ |
+   | **키** | **HKEY_LOCAL_MACHINE\Software\Microsoft\\ . NETFramework\AppContext** |
+   | **이름** | Tem를 Switch.Sys합니다. EnforceJapaneseEraYearRanges |
+   | **유형** | REG_SZ |
    | **값** | true |
 
 엄격한 범위 검사를 사용 하도록 설정 하면 이전 예제에서을 throw <xref:System.ArgumentOutOfRangeException> 하 고 다음과 같은 출력을 표시 합니다.
@@ -315,9 +316,9 @@ Parameter name: year
 
    |  |  |
    |--|--|
-   | **Key** | **HKEY_LOCAL_MACHINE\Software\Microsoft\\ . NETFramework\AppContext** |
-   | **Name** | Tem를 Switch.Sys합니다. FormatJapaneseFirstYearAsANumber |
-   | **Type** | REG_SZ |
+   | **키** | **HKEY_LOCAL_MACHINE\Software\Microsoft\\ . NETFramework\AppContext** |
+   | **이름** | Tem를 Switch.Sys합니다. FormatJapaneseFirstYearAsANumber |
+   | **유형** | REG_SZ |
    | **값** | true |
 
 서식 지정 작업에서 gannen 지원을 사용 하지 않도록 설정 하면 이전 예제에서 다음과 같은 출력을 표시 합니다.
@@ -353,9 +354,9 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 
    |  |  |
    |--|--|
-   | **Key** | **HKEY_LOCAL_MACHINE\Software\Microsoft\\ . NETFramework\AppContext** |
-   | **Name** | Tem를 Switch.Sys합니다. EnforceLegacyJapaneseDateParsing |
-   | **Type** | REG_SZ |
+   | **키** | **HKEY_LOCAL_MACHINE\Software\Microsoft\\ . NETFramework\AppContext** |
+   | **이름** | Tem를 Switch.Sys합니다. EnforceLegacyJapaneseDateParsing |
+   | **유형** | REG_SZ |
    | **값** | true |
 
 ## <a name="see-also"></a>참고 항목

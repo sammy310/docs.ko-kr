@@ -1,15 +1,16 @@
 ---
-title: <bookmarkResumptionQuery>WCF의
+description: '다음에 대 한 자세한 정보: <bookmarkResumptionQuery> WCF'
+title: <bookmarkResumptionQuery> WCF의
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 8cb254599a9742305ec958fd77174f4c4b8a57c2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9dadab3e304a2507a404bf43c377df46d5b33dda
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71834000"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639330"
 ---
-# <a name="bookmarkresumptionquery-of-wcf"></a>\<bookmarkResumptionQuery>WCF의
+# <a name="bookmarkresumptionquery-of-wcf"></a>\<bookmarkResumptionQuery> WCF의
 
 워크플로 인스턴스 내의 책갈피 다시 시작을 추적하는 데 사용되는 쿼리를 나타냅니다. 추적 참가자가 책갈피 다시 시작 레코드를 구독하려면 쿼리가 필요합니다.  
   
@@ -46,7 +47,7 @@ ms.locfileid: "71834000"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`name`|구독할 책갈피 레코드의 이름을 지정하는 문자열입니다.|  
   
@@ -56,7 +57,7 @@ ms.locfileid: "71834000"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<bookmarkResumptionQueries>](bookmarkresumptionqueries-of-wcf.md)|워크플로 인스턴스 내의 책갈피 다시 시작을 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다.|  
   

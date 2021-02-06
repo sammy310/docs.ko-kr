@@ -1,16 +1,17 @@
 ---
+description: '다음에 대 한 자세한 정보: Access Control 메커니즘'
 title: Access Control 메커니즘
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-ms.openlocfilehash: daa16c0d4a0450a3a7fcaae0f7660e0092aa7ea5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1863e91d67d55bbe9a4dc814d5475d271ea51686
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293977"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643932"
 ---
 # <a name="access-control-mechanisms"></a>Access Control 메커니즘
 

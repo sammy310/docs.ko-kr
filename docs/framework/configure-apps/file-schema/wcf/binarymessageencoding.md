@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <binaryMessageEncoding>
 title: <binaryMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: 1b72b73f0d9d312fd54ea6a5517d55bf251c0e05
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 910b8b70bab40c1eb099ed2b54c0545e73e96c6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201475"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639499"
 ---
 # \<binaryMessageEncoding>
 
@@ -76,7 +77,7 @@ ms.locfileid: "91201475"
 - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
 - [메시지 인코딩](message-encoding.md)
 - [메시지 인코더 선택](../../../wcf/feature-details/choosing-a-message-encoder.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 서비스 데이터 분할'
 title: '방법: 서비스 데이터 분할'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 7bb5eb6bda8bb2be3dfaaa88eb4b5ad787f47aa7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fd40ee37a80a8d5039231c6efe6369006022afad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268926"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643243"
 ---
 # <a name="how-to-service-data-partitioning"></a>방법: 서비스 데이터 분할
 

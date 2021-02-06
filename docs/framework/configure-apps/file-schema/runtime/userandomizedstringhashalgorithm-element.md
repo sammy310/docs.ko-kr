@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <UseRandomizedStringHashAlgorithm> 요소'
 title: <UseRandomizedStringHashAlgorithm> 요소
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - UseRandomizedStringHashAlgorithm element
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
-ms.openlocfilehash: 148d55c8b8a63737867c4bfdf3ab118dfdefd6f9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bb651fc9c9f6f3df448ed5ce19e81c1ae092838c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91174097"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639980"
 ---
 # <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm> 요소
 
@@ -42,9 +43,9 @@ ms.locfileid: "91174097"
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
-|`0`|공용 언어 런타임은 응용 프로그램 도메인 별로 문자열의 해시 코드를 계산 하지 않습니다. 단일 알고리즘은 문자열 해시 코드를 계산 하는 데 사용 됩니다. 이것이 기본값입니다.|  
+|`0`|공용 언어 런타임은 응용 프로그램 도메인 별로 문자열의 해시 코드를 계산 하지 않습니다. 단일 알고리즘은 문자열 해시 코드를 계산 하는 데 사용 됩니다. 기본값입니다.|  
 |`1`|공용 언어 런타임은 응용 프로그램 도메인 별로 문자열의 해시 코드를 계산 합니다. 서로 다른 응용 프로그램 도메인의 동일한 문자열과 다른 프로세스의 해시 코드는 서로 다릅니다.|  
   
 ### <a name="child-elements"></a>자식 요소  

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 서명 및 암호화에 별도의 x.509 인증서 사용'
 title: '방법: 서명 및 암호화에 별도의 X.509 인증서 사용'
 ms.date: 03/30/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: e464aff46f311ede1cd629fb459ade9a6e627d59
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a1cb72265d9fa2742718b88bd574efe4cc9a4918
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796952"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644244"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>방법: 서명 및 암호화에 별도의 X.509 인증서 사용
 
@@ -26,29 +27,29 @@ ms.locfileid: "70796952"
 
 - `MyClientCredentials`는 <xref:System.ServiceModel.Description.ClientCredentials>의 사용자 지정 구현입니다.
 
-  - 다이어그램에 표시된 속성은 모두 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>인스턴스를 반환합니다.
+  - 다이어그램에 표시된 속성은 모두 인스턴스를 반환합니다.
 
-  - 메서드 <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A>는 `MyClientCredentialsSecurityTokenManager`인스턴스를 반환합니다.
+  - 메서드 는 인스턴스를 반환합니다.
 
 - `MyClientCredentialsSecurityTokenManager`는 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>의 사용자 지정 구현입니다.
 
-  - 메서드 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>는 <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>인스턴스를 반환합니다.
+  - 메서드 는 인스턴스를 반환합니다.
 
-![클라이언트 자격 증명을 사용 하는 방법을 보여 주는 차트](./media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")
+![클라이언트 자격 증명을 사용하는 방법을 보여 주는 차트](./media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")
 
-사용자 지정 자격 증명 [에 대 한 자세한 내용은 연습: 사용자 지정 클라이언트 및 서비스 자격](walkthrough-creating-custom-client-and-service-credentials.md)증명을 만드는 중입니다.
+사용자 지정 자격 증명에 대 한 자세한 내용은 [연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기](walkthrough-creating-custom-client-and-service-credentials.md)를 참조 하세요.
 
 또한 사용자 지정 ID 검증 도구를 만들고 사용자 지정 바인딩의 보안 바인딩 요소에 연결해야 합니다. 그리고 기본 자격 증명 대신 사용자 지정 자격 증명을 사용해야 합니다.
 
-다음 다이어그램에서는 사용자 지정 바인딩에 관련된 클래스 및 사용자 지정 ID 검증 도구를 연결하는 방법을 보여 줍니다. 여러 바인딩 요소가 관련되어 있으며 이들 요소는 모두 <xref:System.ServiceModel.Channels.BindingElement>에서 상속합니다. <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>에는 <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> 속성이 있습니다. 이 속성은 <xref:System.ServiceModel.Security.IdentityVerifier>가 사용자 지정되는 `MyIdentityVerifier`인스턴스를 반환합니다.
+다음 다이어그램에서는 사용자 지정 바인딩에 관련된 클래스 및 사용자 지정 ID 검증 도구를 연결하는 방법을 보여 줍니다. 여러 바인딩 요소가 관련되어 있으며 이들 요소는 모두 <xref:System.ServiceModel.Channels.BindingElement>에서 상속합니다. 에는  속성이 있습니다. 이 속성은 가 사용자 지정되는 인스턴스를 반환합니다.
 
 ![사용자 지정 바인딩 요소를 보여 주는 차트](./media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")
 
-사용자 지정 id 검증 도구를 만드는 방법에 대 한 자세한 내용은 방법: [방법: 사용자 지정 클라이언트 Id 검증 도구](how-to-create-a-custom-client-identity-verifier.md)를 만듭니다.
+사용자 지정 id 검증 도구를 만드는 방법에 대 한 자세한 내용은 방법: [방법: 사용자 지정 클라이언트 Id 검증 도구 만들기](how-to-create-a-custom-client-identity-verifier.md)를 참조 하세요.
 
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>서명 및 암호화에 별도의 인증서를 사용하려면
 
-1. <xref:System.ServiceModel.Description.ClientCredentials> 클래스에서 상속되는 새로운 클라이언트 자격 증명 클래스를 정의합니다. 여러 인증서 지정을 허용하는 네 가지 새 속성인 `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate``ServiceEncryptingCertificate`및 를 구현합니다. 또한 <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> 메서드를 재정의하여 다음 단계에 정의된 사용자 지정된 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 클래스의 인스턴스를 반환합니다.
+1. <xref:System.ServiceModel.Description.ClientCredentials> 클래스에서 상속되는 새로운 클라이언트 자격 증명 클래스를 정의합니다. 여러 인증서 지정을 허용하는 네 가지 새 속성인 , , 및 를 구현합니다. 또한 <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> 메서드를 재정의하여 다음 단계에 정의된 사용자 지정된 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 클래스의 인스턴스를 반환합니다.
 
      [!code-csharp[c_FourCerts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#1)]
      [!code-vb[c_FourCerts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#1)]
@@ -58,7 +59,7 @@ ms.locfileid: "70796952"
      [!code-csharp[c_FourCerts#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#2)]
      [!code-vb[c_FourCerts#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#2)]
 
-3. <xref:System.ServiceModel.Description.ServiceCredentials> 클래스에서 상속되는 새로운 서비스 자격 증명 클래스를 정의합니다. 여러 인증서 지정을 허용하는 네 가지 새 속성인 `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate``ServiceEncryptingCertificate`및 를 구현합니다. 또한 <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> 메서드를 재정의하여 다음 단계에 정의된 사용자 지정된 <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 클래스의 인스턴스를 반환합니다.
+3. <xref:System.ServiceModel.Description.ServiceCredentials> 클래스에서 상속되는 새로운 서비스 자격 증명 클래스를 정의합니다. 여러 인증서 지정을 허용하는 네 가지 새 속성인 , , 및 를 구현합니다. 또한 <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> 메서드를 재정의하여 다음 단계에 정의된 사용자 지정된 <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 클래스의 인스턴스를 반환합니다.
 
      [!code-csharp[c_FourCerts#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#3)]
      [!code-vb[c_FourCerts#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#3)]
@@ -90,7 +91,7 @@ ms.locfileid: "70796952"
      [!code-csharp[c_FourCerts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#7)]
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>

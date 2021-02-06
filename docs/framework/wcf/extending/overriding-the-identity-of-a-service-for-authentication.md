@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 인증을 위해 서비스 id 재정의'
 title: 인증을 위해 서비스 ID 재정의
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: a02e5a2f69ad1819e6ab98b0454dd64599382cd0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f83c10d75c4ea71170a76a7fd10efb33958f5b52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262779"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644166"
 ---
 # <a name="override-the-identity-of-a-service-for-authentication"></a>인증을 위해 서비스 id 재정의
 
@@ -22,7 +23,7 @@ ms.locfileid: "96262779"
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos 인증 및 ID  
 
- 기본적으로 Windows 자격 증명을 사용 하도록 서비스를 구성 하면 [\<identity>](../../configure-apps/file-schema/wcf/identity.md) 또는 요소가 포함 된 요소가 [\<userPrincipalName>](../../configure-apps/file-schema/wcf/userprincipalname.md) [\<servicePrincipalName>](../../configure-apps/file-schema/wcf/serviceprincipalname.md) WSDL에서 생성 됩니다. , 또는 계정으로 서비스를 실행 하는 경우 `LocalSystem` `LocalService` `NetworkService` `host/` \<*hostname*> 해당 계정이 컴퓨터의 spn 데이터에 액세스할 수 있으므로 spn (서비스 사용자 이름)이 기본적으로 형식으로 생성 됩니다. 서비스가 다른 계정으로 실행 되는 경우 WCF (Windows Communication Foundation)는 domainName 형식의 UPN을 생성 \<*username*> @< *domainName* `>` 합니다. Kerberos 인증에서 서비스를 인증하려면 UPN 또는 SPN을 클라이언트에 제공해야 하므로 이 작업이 수행됩니다.  
+ 기본적으로 Windows 자격 증명을 사용 하도록 서비스를 구성 하면 [\<identity>](../../configure-apps/file-schema/wcf/identity.md) 또는 요소가 포함 된 요소가 [\<userPrincipalName>](../../configure-apps/file-schema/wcf/userprincipalname.md) [\<servicePrincipalName>](../../configure-apps/file-schema/wcf/serviceprincipalname.md) WSDL에서 생성 됩니다. , 또는 계정으로 서비스를 실행 하는 경우 `LocalSystem` `LocalService` `NetworkService` `host/` \<*hostname*> 해당 계정이 컴퓨터의 spn 데이터에 액세스할 수 있으므로 spn (서비스 사용자 이름)이 기본적으로 형식으로 생성 됩니다. 서비스가 다른 계정으로 실행 되는 경우 WCF (Windows Communication Foundation)는 domainName 형식의 UPN을 생성 \<*username*> @<  `>` 합니다. Kerberos 인증에서 서비스를 인증하려면 UPN 또는 SPN을 클라이언트에 제공해야 하므로 이 작업이 수행됩니다.  
   
  [Setspn](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731241(v=ws.10)) 도구를 사용 하 여 도메인의 서비스 계정으로 추가 SPN을 등록할 수도 있습니다. 그런 다음 SPN을 서비스 ID로 사용할 수 있습니다. 이 도구에 대 한 자세한 내용은 [Setspn Overview](/previous-versions/windows/it-pro/windows-server-2003/cc773257(v=ws.10))를 참조 하십시오.  
   

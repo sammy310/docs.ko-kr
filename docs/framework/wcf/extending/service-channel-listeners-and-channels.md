@@ -1,13 +1,14 @@
 ---
+description: '서비스: 채널 수신기 및 채널에 대 한 자세한 정보'
 title: '서비스: 채널 수신기 및 채널'
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
-ms.openlocfilehash: 4367d844867db7fdad013e30d047f9385addbce5
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2a092813faaa6f8964158adb55d11f21bf3ee60a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834794"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643997"
 ---
 # <a name="service-channel-listeners-and-channels"></a>서비스: 채널 수신기 및 채널
 
@@ -27,11 +28,11 @@ ms.locfileid: "71834794"
 
 WCF는이 프로세스에 대 한 기본 클래스 도우미를 제공 합니다. 이 문서에서 설명 하는 채널 도우미 클래스 다이어그램은 [채널 모델 개요](channel-model-overview.md)를 참조 하세요.
 
-- <xref:System.ServiceModel.Channels.CommunicationObject> 클래스는 <xref:System.ServiceModel.ICommunicationObject>를 구현 하 고 [채널 개발](developing-channels.md)의 2 단계에서 설명한 상태 시스템을 적용 합니다.
+- <xref:System.ServiceModel.Channels.CommunicationObject>클래스는 <xref:System.ServiceModel.ICommunicationObject> [채널 개발](developing-channels.md)의 2 단계에서 설명한 상태 시스템을 구현 하 고 적용 합니다.
 
 - <xref:System.ServiceModel.Channels.ChannelManagerBase> 클래스는 <xref:System.ServiceModel.Channels.CommunicationObject>를 구현하고 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 및 <xref:System.ServiceModel.Channels.ChannelListenerBase>에 대한 통합 기본 클래스를 제공합니다. <xref:System.ServiceModel.Channels.ChannelManagerBase> 클래스는 <xref:System.ServiceModel.Channels.ChannelBase>을 구현하는 기본 클래스인 <xref:System.ServiceModel.Channels.IChannel>와 함께 사용됩니다.
 
-- <xref:System.ServiceModel.Channels.ChannelFactoryBase> 클래스는 <xref:System.ServiceModel.Channels.ChannelManagerBase> 및 <xref:System.ServiceModel.Channels.IChannelFactory>를 구현 하 고 `CreateChannel` 오버 로드를 하나의 `OnCreateChannel` 추상 메서드에 통합 합니다.
+- <xref:System.ServiceModel.Channels.ChannelFactoryBase>클래스는 및를 구현 <xref:System.ServiceModel.Channels.ChannelManagerBase> <xref:System.ServiceModel.Channels.IChannelFactory> 하 고 `CreateChannel` 오버 로드를 하나의 `OnCreateChannel` 추상 메서드에 통합 합니다.
 
 - <xref:System.ServiceModel.Channels.ChannelListenerBase> 클래스는 <xref:System.ServiceModel.Channels.IChannelListener>을 구현합니다. 이 클래스는 기본 상태 관리를 담당합니다.
 
@@ -39,7 +40,7 @@ WCF는이 프로세스에 대 한 기본 클래스 도우미를 제공 합니다
 
 ## <a name="creating-a-channel-listener"></a>채널 수신기 만들기
 
-샘플이 구현 하는 `UdpChannelListener` <xref:System.ServiceModel.Channels.ChannelListenerBase> 클래스에서 파생 됩니다. 단일 UDP 소켓을 사용하여 데이터그램을 받습니다. `OnOpen` 메서드는 비동기 루프에서 UDP 소켓을 사용하여 데이터를 받습니다. 그런 다음 데이터는 메시지 인코딩 시스템을 사용하여 메시지로 변환됩니다.
+`UdpChannelListener`샘플에서 구현 하는는 클래스에서 파생 <xref:System.ServiceModel.Channels.ChannelListenerBase> 됩니다. 단일 UDP 소켓을 사용하여 데이터그램을 받습니다. `OnOpen` 메서드는 비동기 루프에서 UDP 소켓을 사용하여 데이터를 받습니다. 그런 다음 데이터는 메시지 인코딩 시스템을 사용하여 메시지로 변환됩니다.
 
 ```csharp
 message = UdpConstants.MessageEncoder.ReadMessage(
@@ -48,7 +49,7 @@ message = UdpConstants.MessageEncoder.ReadMessage(
 );
 ```
 
-같은 데이터그램 채널은 여러 소스에서 도착한 메시지를 나타내므로 `UdpChannelListener`는 singleton 수신기입니다. 한 번에 최대 하나의 활성 <xref:System.ServiceModel.Channels.IChannel>이 수신기에 연결 되어 있습니다. 이 샘플에서는 <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A> 메서드에서 반환되는 채널이 이후에 삭제되는 경우에만 새 채널을 생성합니다. 메시지가 수신 되 면이 단일 채널에 큐에 배치 됩니다.
+같은 데이터그램 채널은 여러 소스에서 도착한 메시지를 나타내므로 `UdpChannelListener`는 singleton 수신기입니다. 한 번에 최대 하나의 활성 <xref:System.ServiceModel.Channels.IChannel> 이이 수신기에 연결 되어 있습니다. 이 샘플에서는 <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A> 메서드에서 반환되는 채널이 이후에 삭제되는 경우에만 새 채널을 생성합니다. 메시지가 수신 되 면이 단일 채널에 큐에 배치 됩니다.
 
 ### <a name="udpinputchannel"></a>UdpInputChannel
 

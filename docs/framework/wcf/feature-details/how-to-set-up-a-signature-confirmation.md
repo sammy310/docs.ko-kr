@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 서명 확인 설정'
 title: '방법: 서명 확인 설정'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 9423922753efee7aac32e430f97307c715e43464
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 158ec2a5f74038f5c1ca1af847f57457a8881974
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586925"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643191"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>방법: 서명 확인 설정
 
@@ -25,7 +26,7 @@ ms.locfileid: "84586925"
 
 1. <xref:System.ServiceModel.Channels.BindingElementCollection> 클래스의 인스턴스를 만듭니다.
 
-2. 클래스의 인스턴스를 만듭니다 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> .
+2. 클래스의 인스턴스를 만듭니다  <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> .
 
 3. <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A>을 `true`으로 설정합니다.
 

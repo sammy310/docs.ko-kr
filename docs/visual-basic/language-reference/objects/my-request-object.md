@@ -1,4 +1,5 @@
 ---
+description: 다음에 대해 자세히 알아보세요. Request 개체
 title: My.Request 개체
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Request object
 ms.assetid: 93d5f0e2-6b60-4a2c-8652-d90216f6ad10
-ms.openlocfilehash: d0459506994fb69ebfaa4186ba137044b6fe9464
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 0b72252e261cd033bfc35c546de5c53a4f3cfe2c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870075"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640656"
 ---
 # <a name="myrequest-object"></a>My.Request 개체
 
@@ -30,7 +31,7 @@ ms.locfileid: "90870075"
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Web.HttpRequest>
 - [My.Response 개체](my-response-object.md)

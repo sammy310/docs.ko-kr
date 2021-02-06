@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 방법: 사용자 지정 정책 어설션 가져오기'
 title: '방법: 사용자 지정 정책 어설션 가져오기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: fb5e3ba5faca1b32eef63ac174bcd7731ee50771
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e9190a97ed7d2d369b8f9ddc3d7fec71daf1e54f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249152"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644335"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>방법: 사용자 지정 정책 어설션 가져오기
 

@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: x.509 인증서를 사용 하 여 서비스 보호'
 title: '방법: X.509 인증서를 사용하여 서비스 보안'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: bf498ee373f2d637a7a93fbc36225a38ff7744c0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 57c8e78777c620fd3078651dbafbbf010fbd3768
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293899"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643386"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>방법: X.509 인증서를 사용하여 서비스 보안
 
