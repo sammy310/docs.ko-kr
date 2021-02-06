@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: 열거형 COR_PRF_HIGH_MONITOR'
 title: COR_PRF_HIGH_MONITOR 열거형
 ms.date: 04/10/2018
 ms.assetid: 3ba543d8-15e5-4322-b6e7-1ebfc92ed7dd
-ms.openlocfilehash: b813b32ef4522f1707812d337d20790ce75f3d55
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 800bad21af96d8bbdf73f2af799f474f11294705
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500847"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648768"
 ---
 # <a name="cor_prf_high_monitor-enumeration"></a>COR_PRF_HIGH_MONITOR 열거형
 
@@ -37,7 +38,7 @@ typedef enum {
 } COR_PRF_HIGH_MONITOR;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -59,7 +60,7 @@ typedef enum {
   
 .NET Framework 4.6.1 부터는의 값이 `COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH` 0에서 (0x00000002)로 변경 되었습니다 `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` . .NET Framework 4.7.2부터 값이에서로 변경 되었습니다 `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS` .
 
-`COR_PRF_HIGH_MONITOR_IMMUTABLE`는 초기화 중에만 설정할 수 있는 모든 플래그를 나타내는 비트 마스크로 사용 됩니다. 다른 곳에서 이러한 플래그를 변경 하려고 하면 오류가 발생 `HRESULT` 합니다.
+`COR_PRF_HIGH_MONITOR_IMMUTABLE` 는 초기화 중에만 설정할 수 있는 모든 플래그를 나타내는 비트 마스크로 사용 됩니다. 다른 곳에서 이러한 플래그를 변경 하려고 하면 오류가 발생 `HRESULT` 합니다.
 
 ## <a name="requirements"></a>요구 사항
 

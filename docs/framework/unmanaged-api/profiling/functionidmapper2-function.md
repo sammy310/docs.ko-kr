@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: FunctionIDMapper2 함수'
 title: FunctionIDMapper2 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 466ad51b-8f0c-41d9-81f7-371aac3374cb
 topic_type:
 - apiref
-ms.openlocfilehash: 7aa90b92d129f1269d901f1cbb5c6a0750de9a90
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1fd6680ffaa7b28e679dc3eaeb9840981ead5c45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728539"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648573"
 ---
 # <a name="functionidmapper2-function"></a>FunctionIDMapper2 함수
 
@@ -49,7 +50,7 @@ UINT_PTR __stdcall FunctionIDMapper2 (
 
   \[out],,,,, 및 콜백을 수신 하려는 경우 프로파일러가 설정 하는 값에 대 한 포인터이 고, `true` `FunctionEnter3` `FunctionLeave3` `FunctionTailcall3` `FunctionEnter3WithInfo` `FunctionLeave3WithInfo` `FunctionTailcall3WithInfo` 그렇지 않으면이 값을로 설정 `false` 합니다.
 
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  프로파일러는 실행 엔진이 대체 함수 식별자로 사용하는 값을 반환합니다. `false`가 `pbHookFunction`에 반환되지 않는 한 반환 값은 null일 수 없습니다. 그러지 않은 경우 null 반환 값에서 프로세스 중지를 포함하여 예기치 않은 결과가 생성됩니다.  
   
@@ -67,7 +68,7 @@ UINT_PTR __stdcall FunctionIDMapper2 (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo::SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md)
 - [ICorProfilerInfo3::SetFunctionIDMapper2](icorprofilerinfo3-setfunctionidmapper2-method.md)

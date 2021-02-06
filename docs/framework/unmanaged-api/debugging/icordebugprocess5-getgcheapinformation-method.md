@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugProcess5:: GetGCHeapInformation 메서드'
 title: ICorDebugProcess5::GetGCHeapInformation 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9538ceb-230a-4079-9cb2-903dbf5c1848
 topic_type:
 - apiref
-ms.openlocfilehash: 43054a71445193bae7a74e0ed6785cccd1d02dc2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e63f8871a2c18d6daf2dcf93b92e49123c56442f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95670994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649808"
 ---
 # <a name="icordebugprocess5getgcheapinformation-method"></a>ICorDebugProcess5::GetGCHeapInformation 메서드
 
@@ -53,7 +54,7 @@ HRESULT GetGCHeapInformation(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugProcess5 인터페이스](icordebugprocess5-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

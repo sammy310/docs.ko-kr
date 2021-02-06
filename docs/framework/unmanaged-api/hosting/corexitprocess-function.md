@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: CorExitProcess 함수'
 title: CorExitProcess 함수
 ms.date: 03/30/2017
 api_name:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a5cab4c6-990e-47f3-8798-cf422b791015
 topic_type:
 - apiref
-ms.openlocfilehash: f6d8114732a3b7c15d0a0258a28a362d661b030a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 68d33dec76387e103a34e99c529a4e7aff7535b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673631"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649587"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess 함수
 
@@ -59,6 +60,6 @@ void STDMETHODCALLTYPE CorExitProcess (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)

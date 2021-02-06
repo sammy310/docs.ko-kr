@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugProcess5:: EnumerateHandles 메서드'
 title: ICorDebugProcess5::EnumerateHandles 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-ms.openlocfilehash: 607847180cca039d4c71f26e446a17a14dc2fb9e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 62ca1390ceec634e6651dc013345688fe5892bcd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724340"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649912"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles 메서드
 
@@ -63,7 +64,7 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 구조체](debugging-structures.md)
 - [디버깅](index.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICatalogServices:: NotAutodone 메서드'
 title: ICatalogServices::NotAutodone 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86a09871-33e4-412c-aeb8-4d18f924595b
 topic_type:
 - apiref
-ms.openlocfilehash: 878d11014856db2d5ae6f2eba7cde4b730e39996
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b209bdd004f32119145acde68cc6d12ab60f11bf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698444"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649522"
 ---
 # <a name="icatalogservicesnotautodone-method"></a>ICatalogServices::NotAutodone 메서드
 
@@ -32,6 +33,6 @@ ms.locfileid: "95698444"
 HRESULT NotAutodone ( );  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)

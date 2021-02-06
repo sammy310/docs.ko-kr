@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: CLR 프로파일러 및 Windows 스토어 앱'
 title: CLR 프로파일러 및 Windows 스토어 앱
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: 04b4b529a5a1adaa40e804988dee506942c863c4
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: e864f67aff106659194b91814bc2509d50cbf701
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440082"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649278"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 프로파일러 및 Windows 스토어 앱
 
@@ -25,7 +26,7 @@ ms.locfileid: "94440082"
 
 ## <a name="introduction"></a>소개
 
-소개 단락을 지난 후에는 CLR 프로 파일링 API에 대해 잘 알고 있습니다. 관리 되는 데스크톱 응용 프로그램에 대해 잘 작동 하는 진단 도구를 이미 작성 했습니다. 이제 도구가 관리 되는 Windows 스토어 앱에서 작동 하도록 할 수 있습니다. 아마도 이미이 작업을 수행 하려고 했 고 간단한 작업이 아니라는 것을 발견 했습니다. 실제로 모든 도구 개발자에 게 명확 하지 않을 수 있는 몇 가지 고려 사항이 있습니다. 예를 들면 다음과 같습니다.
+소개 단락을 지난 후에는 CLR 프로 파일링 API에 대해 잘 알고 있습니다. 관리 되는 데스크톱 응용 프로그램에 대해 잘 작동 하는 진단 도구를 이미 작성 했습니다. 이제 도구가 관리 되는 Windows 스토어 앱에서 작동 하도록 할 수 있습니다. 아마도 이미이 작업을 수행 하려고 했 고 간단한 작업이 아니라는 것을 발견 했습니다. 실제로 모든 도구 개발자에 게 명확 하지 않을 수 있는 몇 가지 고려 사항이 있습니다. 다음은 그 예입니다. 
 
 - Windows 스토어 앱은 심각 하 게 감소 된 권한으로 컨텍스트에서 실행 됩니다.
 
@@ -47,7 +48,7 @@ CLR 프로 파일링 API를 처음 접하는 경우이 항목의 끝에 있는 �
 
 이 항목 전체에서 사용 되는 용어는 다음과 같습니다.
 
-**애플리케이션**
+**응용 프로그램**
 
 프로파일러가 분석 중인 응용 프로그램입니다. 일반적으로이 응용 프로그램의 개발자는 이제 프로파일러를 사용 하 여 응용 프로그램의 문제를 진단 하는 데 도움이 됩니다. 일반적으로이 응용 프로그램은 Windows 데스크톱 응용 프로그램 이지만이 항목에서는 Windows 스토어 앱을 살펴보겠습니다.
 
@@ -302,7 +303,7 @@ tempDir = appData.TemporaryFolder.Path;
 
 프로파일러 UI와 프로파일러 DLL 간에 간단한 신호 의미 체계가 필요한 경우 Windows 스토어 앱 및 데스크톱 앱 내에서 이벤트를 사용할 수 있습니다.
 
-프로파일러 DLL에서 [Createeventex](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) 함수를 호출 하 여 원하는 이름을 가진 명명 된 이벤트를 만들 수 있습니다. 예를 들면 다음과 같습니다.
+프로파일러 DLL에서 [Createeventex](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) 함수를 호출 하 여 원하는 이름을 가진 명명 된 이벤트를 만들 수 있습니다. 다음은 그 예입니다. 
 
 ```cpp
 // Profiler DLL in Windows Store app (C++).
