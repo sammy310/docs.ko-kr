@@ -1,14 +1,14 @@
 ---
 title: C# 소개 - 대화형 자습서
 description: 브라우저에서 C#에 대해 알아보고 사용자만의 개발 환경을 시작합니다.
-ms.date: 08/22/2019
+ms.date: 02/02/2021
 ms.custom: mvc
-ms.openlocfilehash: 6037862c52fd59ba540e1f65297d787f0a964762
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 62856206c30afac04346d150560c458c6795077d
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162156"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585652"
 ---
 # <a name="introduction-to-c"></a>C\# 소개
 
@@ -59,7 +59,7 @@ Hello World 단원 다음에 나오는 모든 소개 자습서는 온라인 브�
 
 ## <a name="object-oriented-programming"></a>[개체 지향 프로그래밍](object-oriented-programming.md)
 
-이 자습서에서는 개체 지향 프로그래밍에 사용되는 개념을 설명합니다. C# 예제를 사용하여 *추상화*, *캡슐화*, *상속* 및 *다형성*의 개념을 학습합니다.
+이 자습서에서는 개체 지향 프로그래밍에 사용되는 개념을 설명합니다. C# 예제를 사용하여 *추상화*, *캡슐화*, *상속* 및 *다형성* 의 개념을 학습합니다.
 
 이 자습서에서는 온라인 소개 자습서를 완료했으며 개발 머신에 [.NET Core SDK](https://dotnet.microsoft.com/download)와 [Visual Studio Code](https://code.visualstudio.com/) 또는 [Visual Studio](https://visualstudio.com)를 설치했다고 가정합니다.
 

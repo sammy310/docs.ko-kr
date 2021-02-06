@@ -581,3 +581,6 @@ items:
           - name: .NET IoT 라이브러리
             tocHref: /dotnet/iot/
             topicHref: /dotnet/iot/index
+          - name: 새로운 기능
+            tocHref: /dotnet/whats-new/
+            topicHref: /dotnet/whats-new/index
