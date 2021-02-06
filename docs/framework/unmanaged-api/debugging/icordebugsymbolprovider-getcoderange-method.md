@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugSymbolProvider:: GetCodeRange 메서드'
 title: ICorDebugSymbolProvider::GetCodeRange 메서드
 ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
-ms.openlocfilehash: f61a98dbd5a65207a46e033d54f9d5f60adac201
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 98b228be7483e6365815f6b783167b20fb3bcc48
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709130"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659909"
 ---
 # <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange 메서드
 
@@ -49,7 +50,7 @@ HRESULT GetCodeRange(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugSymbolProvider 인터페이스](icordebugsymbolprovider-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

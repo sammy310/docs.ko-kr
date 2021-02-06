@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugModule2:: ApplyChanges 메서드'
 title: ICorDebugModule2::ApplyChanges 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-ms.openlocfilehash: a6b1a7c9be821890a3f15d8c3297273607f5bedd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 09cbc395c8d656d1dc27de86305432b26308c885
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709702"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660078"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges 메서드
 
