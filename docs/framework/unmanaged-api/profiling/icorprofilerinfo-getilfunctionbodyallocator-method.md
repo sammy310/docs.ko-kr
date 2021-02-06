@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo:: GetILFunctionBodyAllocator 메서드'
 title: ICorProfilerInfo::GetILFunctionBodyAllocator 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5da1bf3d-dddf-4892-b266-578ee54d570b
 topic_type:
 - apiref
-ms.openlocfilehash: b18de87cf89985e0f7ec11edf58b43d67720251c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 25d059d784fe64231d4d2ff3d23b4820443873cf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718022"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647429"
 ---
 # <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a>ICorProfilerInfo::GetILFunctionBodyAllocator 메서드
 
@@ -56,6 +57,6 @@ HRESULT GetILFunctionBodyAllocator(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)

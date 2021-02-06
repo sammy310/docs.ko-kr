@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo:: GetFunctionInfo 메서드'
 title: ICorProfilerInfo::GetFunctionInfo 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c42b5891-019d-46b3-b551-4606295b75b8
 topic_type:
 - apiref
-ms.openlocfilehash: 6aaa02d72dd10fe72d773246d55216143786dabb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e6ad1112f0e6938fc6de549d3a1d2f0901150025
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722542"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647528"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo 메서드
 
@@ -66,6 +67,6 @@ HRESULT GetFunctionInfo(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)

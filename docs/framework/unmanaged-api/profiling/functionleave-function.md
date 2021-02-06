@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: FunctionLeave 함수'
 title: FunctionLeave 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: 13636da9c3e8ac4aa9e8dc1fa02b2e33afef4717
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cc0db68df8976ce86197cc9b7570b00c6f662cb5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722260"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648482"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 함수
 
@@ -66,7 +67,7 @@ void __stdcall FunctionLeave (
   
  **.NET Framework 버전:** 1.1, 1.0  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [FunctionEnter2 함수](functionenter2-function.md)
 - [FunctionLeave2 함수](functionleave2-function.md)

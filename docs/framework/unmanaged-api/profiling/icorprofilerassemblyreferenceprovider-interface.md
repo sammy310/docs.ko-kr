@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerAssemblyReferenceProvider 인터페이스'
 title: ICorProfilerAssemblyReferenceProvider 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: 17205116-66e1-4acc-8f01-532fb3867028
 topic_type:
 - apiref
-ms.openlocfilehash: 2cee012be2665f5a7212600ec11e401b18160d8b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0f16bad95dba46452ce5cc8ad1bbe6ca1bfeb7c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691398"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648352"
 ---
 # <a name="icorprofilerassemblyreferenceprovider-interface"></a>ICorProfilerAssemblyReferenceProvider 인터페이스
 
@@ -43,6 +44,6 @@ ms.locfileid: "95691398"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 인터페이스](profiling-interfaces.md)

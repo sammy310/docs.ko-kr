@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo:: GetCodeInfo 메서드'
 title: ICorProfilerInfo::GetCodeInfo 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 90140b0f-a926-4a7e-b6fa-23e05f703cce
 topic_type:
 - apiref
-ms.openlocfilehash: da3b0acefa68be3506567ad4742784943f4ec5ab
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e965e9c21b7add0367b08f152bf509ad6b6ed4cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722520"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647663"
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo 메서드
 
@@ -64,7 +65,7 @@ HRESULT GetCodeInfo(
   
  **.NET Framework 버전:** 1.0  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

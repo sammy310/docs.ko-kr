@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo3:: GetFunctionEnter3Info 메서드'
 title: ICorProfilerInfo3::GetFunctionEnter3Info 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 542c7c65-dd56-4651-b76f-5db2465e4a15
 topic_type:
 - apiref
-ms.openlocfilehash: 4e240743894e0a7076e593b55966307d304ebd28
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3e6c0cfbf2518301e62ed5c57e956190066504ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731191"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646818"
 ---
 # <a name="icorprofilerinfo3getfunctionenter3info-method"></a>ICorProfilerInfo3::GetFunctionEnter3Info 메서드
 
@@ -44,7 +45,7 @@ HRESULT GetFunctionEnter3Info(
  [in] 입력 중인 함수의 `FunctionID`입니다.  
   
  `eltInfo`  
- [in] 지정된 스택 프레임에 대한 정보를 나타내는 불투명 핸들입니다. 프로파일러는 FunctionEnter3WithInfo 함수에 지정 된 것과 동일한를 제공 해야 합니다 `eltInfo` . [FunctionEnter3WithInfo](functionenter3withinfo-function.md)  
+ [in] 지정된 스택 프레임에 대한 정보를 나타내는 불투명 핸들입니다. 프로파일러는 FunctionEnter3WithInfo 함수에 지정 된 것과 동일한를 제공 해야 합니다 `eltInfo` . [](functionenter3withinfo-function.md)  
   
  `pFrameInfo`  
  [out] 지정된 스택 프레임에 대한 일반 정보를 나타내는 불투명 핸들입니다. 이 핸들은 프로파일러가 `GetFunctionEnter3Info` 메서드를 호출한 `FunctionEnter3WithInfo` 콜백 중에만 유효합니다.  
@@ -69,7 +70,7 @@ HRESULT GetFunctionEnter3Info(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [FunctionEnter3WithInfo](functionenter3withinfo-function.md)
 - [FunctionLeave3WithInfo](functionleave3withinfo-function.md)

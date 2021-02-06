@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo3:: EnumJITedFunctions 메서드'
 title: ICorProfilerInfo3::EnumJITedFunctions 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2847a36-f460-45e2-9b6c-b33b008f40d9
 topic_type:
 - apiref
-ms.openlocfilehash: 6227baaead518eae2de5913369b72de1072ac052
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2f5f8358e7f01c20fc6edee60869bad01b0936c1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681498"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646935"
 ---
 # <a name="icorprofilerinfo3enumjitedfunctions-method"></a>ICorProfilerInfo3::EnumJITedFunctions 메서드
 
@@ -54,7 +55,7 @@ HRESULT EnumJITedFunctions([out] ICorProfilerFunctionEnum** ppEnum);
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

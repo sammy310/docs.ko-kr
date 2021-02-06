@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerCallback2:: FinalizeableObjectQueued 메서드'
 title: ICorProfilerCallback2::FinalizeableObjectQueued 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92d76893-683c-475d-9996-5bff03cdb10f
 topic_type:
 - apiref
-ms.openlocfilehash: 4429524b5f3baff3251acbd7ef7954d30a3e0093
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 62424ea60f72cee2328a143e4e50acd7af33e221
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731953"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647911"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>ICorProfilerCallback2::FinalizeableObjectQueued 메서드
 
@@ -52,7 +53,7 @@ HRESULT FinalizeableObjectQueued(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 인터페이스](icorprofilercallback2-interface.md)

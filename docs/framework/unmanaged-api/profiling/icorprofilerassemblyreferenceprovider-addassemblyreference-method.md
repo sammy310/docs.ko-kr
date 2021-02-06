@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerAssemblyReferenceProvider:: AddAssemblyReference 메서드'
 title: ICorProfilerAssemblyReferenceProvider::AddAssemblyReference 메서드
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 3d5af8e7-c337-48f4-9fa6-97c83878b9b1
 topic_type:
 - apiref
-ms.openlocfilehash: 56468fd38bc110318e04d9b1beda61e279f731d1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 343e76dd64329c88bf4b52e24d45a1e7c8b639bd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685322"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648378"
 ---
 # <a name="icorprofilerassemblyreferenceprovideraddassemblyreference-method"></a>ICorProfilerAssemblyReferenceProvider::AddAssemblyReference 메서드
 
@@ -53,7 +54,7 @@ HRESULT AddAssemblyReference(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerAssemblyReferenceProvider 인터페이스](icorprofilerassemblyreferenceprovider-interface.md)
 - [GetAssemblyReferences 메서드](icorprofilercallback6-getassemblyreferences-method.md)
