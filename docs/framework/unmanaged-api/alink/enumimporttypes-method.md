@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: EnumImportTypes 메서드'
 title: EnumImportTypes 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 83a0e4e7-ec06-40cb-9b63-700b9695bb04
 topic_type:
 - apiref
-ms.openlocfilehash: ca7c7570aff63aa328dddc0626648fa74397addc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 39570740f3560f5bfef8ba80b95c0eb2aca41f59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448741"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638121"
 ---
-# <a name="enumimporttypes-method"></a><span data-ttu-id="fa75e-102">EnumImportTypes 메서드</span><span class="sxs-lookup"><span data-stu-id="fa75e-102">EnumImportTypes Method</span></span>
+# <a name="enumimporttypes-method"></a><span data-ttu-id="8dc16-103">EnumImportTypes 메서드</span><span class="sxs-lookup"><span data-stu-id="8dc16-103">EnumImportTypes Method</span></span>
 
-<span data-ttu-id="fa75e-103">각 범위에서 각 형식을 열거 합니다.</span><span class="sxs-lookup"><span data-stu-id="fa75e-103">Enumerates each type in each scope.</span></span>
+<span data-ttu-id="8dc16-104">각 범위에서 각 형식을 열거 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dc16-104">Enumerates each type in each scope.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="fa75e-104">구문</span><span class="sxs-lookup"><span data-stu-id="fa75e-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="8dc16-105">구문</span><span class="sxs-lookup"><span data-stu-id="8dc16-105">Syntax</span></span>
 
 ```cpp
 HRESULT EnumImportTypes(
@@ -37,30 +38,30 @@ HRESULT EnumImportTypes(
 ) PURE;
 ```
 
-## <a name="parameters"></a><span data-ttu-id="fa75e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="fa75e-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="8dc16-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8dc16-106">Parameters</span></span>
 
 `hEnum`\
-<span data-ttu-id="fa75e-106">열거자에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="fa75e-106">Handle for enumerator.</span></span>
+<span data-ttu-id="8dc16-107">열거자에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="8dc16-107">Handle for enumerator.</span></span>
 
 `dwMax`\
-<span data-ttu-id="fa75e-107">검색할 최대 형식 수입니다.</span><span class="sxs-lookup"><span data-stu-id="fa75e-107">Maximum number of types to retrieve.</span></span>
+<span data-ttu-id="8dc16-108">검색할 최대 형식 수입니다.</span><span class="sxs-lookup"><span data-stu-id="8dc16-108">Maximum number of types to retrieve.</span></span>
 
 `aTypeDefs`\
-<span data-ttu-id="fa75e-108">`dwMax`를 초과 하지 않는 형식 토큰을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="fa75e-108">Receives type tokens, not to exceed `dwMax`.</span></span>
+<span data-ttu-id="8dc16-109">는를 초과 하지 않는 형식 토큰을 받습니다 `dwMax` .</span><span class="sxs-lookup"><span data-stu-id="8dc16-109">Receives type tokens, not to exceed `dwMax`.</span></span>
 
 `pdwCount`\
-<span data-ttu-id="fa75e-109">`aTypeDefs`에서 실제 형식의 수를 받습니다.</span><span class="sxs-lookup"><span data-stu-id="fa75e-109">Receives actual number of type in `aTypeDefs`.</span></span>
+<span data-ttu-id="8dc16-110">에서 형식의 실제 수를 수신 `aTypeDefs` 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dc16-110">Receives actual number of type in `aTypeDefs`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="fa75e-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="fa75e-110">Return Value</span></span>
+## <a name="return-value"></a><span data-ttu-id="8dc16-111">Return Value</span><span class="sxs-lookup"><span data-stu-id="8dc16-111">Return Value</span></span>
 
-<span data-ttu-id="fa75e-111">메서드가 성공 하면 S_OK을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="fa75e-111">Returns S_OK if the method succeeds.</span></span>
+<span data-ttu-id="8dc16-112">메서드가 성공 하면 S_OK을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dc16-112">Returns S_OK if the method succeeds.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="fa75e-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="fa75e-112">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="8dc16-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8dc16-113">Requirements</span></span>
 
-<span data-ttu-id="fa75e-113">Alink 필요</span><span class="sxs-lookup"><span data-stu-id="fa75e-113">Requires alink.h</span></span>
+<span data-ttu-id="8dc16-114">Alink 필요</span><span class="sxs-lookup"><span data-stu-id="8dc16-114">Requires alink.h</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="fa75e-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="fa75e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8dc16-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8dc16-115">See also</span></span>
 
-- [<span data-ttu-id="fa75e-115">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fa75e-115">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="fa75e-116">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fa75e-116">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="fa75e-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="fa75e-117">ALink API</span></span>](index.md)
+- [<span data-ttu-id="8dc16-116">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8dc16-116">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="8dc16-117">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8dc16-117">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="8dc16-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="8dc16-118">ALink API</span></span>](index.md)
