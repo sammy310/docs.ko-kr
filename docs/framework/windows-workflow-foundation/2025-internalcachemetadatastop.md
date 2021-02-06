@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 2025-InternalCacheMetadataStop'
 title: 2025 - InternalCacheMetadataStop
 ms.date: 03/30/2017
 ms.assetid: 88e6dbcd-1c41-40a3-9800-4c60eca7d11d
-ms.openlocfilehash: 28e364623ea67dac1ee422d9110d65e65d1cef4a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bf394b3ad881b020041c28f9eb5cd6d04245ea8d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275065"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631673"
 ---
 # <a name="2025---internalcachemetadatastop"></a>2025 - InternalCacheMetadataStop
 
@@ -20,7 +21,7 @@ ms.locfileid: "96275065"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  InternalCacheMetadata가 작업에서 완료되었음을 나타냅니다.  
   

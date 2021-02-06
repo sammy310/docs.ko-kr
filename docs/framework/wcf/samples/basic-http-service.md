@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 기본 HTTP 서비스'
 title: 기본 HTTP 서비스
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 8dfcd5a751bcef6aa24b5cb4a200c8820c43fe81
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 5ac0011b98dd9c4d04d1cf049d31567edae5b2b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716098"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632167"
 ---
 # <a name="basic-http-service"></a>기본 HTTP 서비스
 
@@ -15,13 +16,13 @@ ms.locfileid: "74716098"
 
 ## <a name="sample-details"></a>샘플 세부 정보
 
-WCF 서비스는 입력으로 전달 된 문자열을 반환 하는 2 개의 작업, `EchoWithGet` 및 `EchoWithPost`를 노출 합니다.
+WCF 서비스는 `EchoWithGet` 입력으로 전달 된 문자열을 반환 하는 2 개의 작업 및를 노출 합니다 `EchoWithPost` .
 
 `EchoWithGet` 작업에는 <xref:System.ServiceModel.Web.WebGetAttribute>를 주석을 달아 해당 작업이 HTTP `GET` 요청을 처리함을 나타냅니다. <xref:System.ServiceModel.Web.WebGetAttribute>는 <xref:System.UriTemplate>을 명시적으로 지정하지 않으므로 이 작업을 위해서는 이름이 `s`인 쿼리 문자열 매개 변수를 사용하여 입력 문자열을 전달해야 합니다. 서비스에 필요한 URI 형식은 <xref:System.ServiceModel.Web.WebGetAttribute.UriTemplate%2A> 속성을 사용하여 사용자 지정할 수 있습니다.
 
 <xref:System.ServiceModel.Web.WebInvokeAttribute>로 주석을 달린 `EchoWithPost` 작업은 `GET` 작업이 아니며 의도하지 않은 결과가 발생함을 나타냅니다. <xref:System.ServiceModel.Web.WebInvokeAttribute>는 `Method`를 명시적으로 지정하지 않으므로 이 작업은 XML 형식과 같이 요청 본문에 문자열이 있는 HTTP `POST` 요청을 처리합니다. 요청에 대한 HTTP 메서드 및 URI 형식은 각각 <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> 및 <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate> 속성을 사용하여 사용자 지정할 수 있습니다.
 
-App.config 파일은 <xref:System.ServiceModel.Description.WebHttpEndpoint> 속성이 <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A>로 설정된 기본 `true`로 WCF 서비스를 구성합니다. 따라서 WCF 인프라는 서비스에 대 한 HTTP 요청을 생성 하는 방법 및 서비스의 HTTP 응답을 사용 하는 방법에 대 한 정보를 제공 하는 `http://localhost:8000/Customers/help`에 자동 HTML 기반 도움말 페이지를 만듭니다.
+App.config 파일은 <xref:System.ServiceModel.Description.WebHttpEndpoint> 속성이 <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A>로 설정된 기본 `true`로 WCF 서비스를 구성합니다. 결과적으로 WCF 인프라는에서 `http://localhost:8000/Customers/help` 서비스에 대 한 http 요청을 생성 하는 방법 및 서비스의 http 응답을 사용 하는 방법에 대 한 정보를 제공 하는 자동 HTML 기반 도움말 페이지를 만듭니다.
 
 Program.cs는 WCF 채널 팩터리를 사용 하 여 서비스를 호출 하 고 응답을 처리할 수 있는 방법을 보여 줍니다. 이 방법은 WCF 서비스에 액세스하는 여러 방법 중 하나일 뿐입니다. <xref:System.Net.HttpWebRequest> 및 <xref:System.Net.WebClient> 같은 다른 .NET Framework 클래스를 사용하여 서비스에 액세스할 수도 있습니다.
 
@@ -40,6 +41,6 @@ Program.cs는 WCF 채널 팩터리를 사용 하 여 서비스를 호출 하 고
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`

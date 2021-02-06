@@ -1,19 +1,20 @@
 ---
+description: PeerNodeClosing에 대해 자세히 알아보세요.
 title: System.ServiceModel.Channels.PeerNodeClosing
 ms.date: 03/30/2017
 ms.assetid: 47a008f0-04d7-4cf3-9099-c056f78c9bfa
-ms.openlocfilehash: 495e086590647e06ab69c6f6f2a916874fc20850
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6a9e990afcf48b0d014ae87b52f584af590e453b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292404"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634897"
 ---
 # <a name="systemservicemodelchannelspeernodeclosing"></a>System.ServiceModel.Channels.PeerNodeClosing
 
 PeerNode가 닫히기 시작했습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 추적은 PeerNode에서 Close 실행을 시작할 때 발생합니다.  
   

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 3552-MaxPendingMessagesPerChannelExceeded'
 title: 3552 - MaxPendingMessagesPerChannelExceeded
 ms.date: 03/30/2017
 ms.assetid: fc8309d9-eb3a-4636-a6f0-dd0018c1361d
-ms.openlocfilehash: bd3e7539922e6c430c4ffe5bd96ef1ac7dbd098f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5fb2d27f7d68716cebf2cfaafd21851226a456e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96261165"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631439"
 ---
 # <a name="3552---maxpendingmessagesperchannelexceeded"></a>3552 - MaxPendingMessagesPerChannelExceeded
 
@@ -20,7 +21,7 @@ ms.locfileid: "96261165"
 |Level|경고|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  스로틀 'MaxPendingMessagesPerChannel' 한도에 도달했음을 나타냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96261165"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |제한|xs:string|MaxPendingMessagesPerChannel 스로틀의 한도입니다.|  
 |AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.|

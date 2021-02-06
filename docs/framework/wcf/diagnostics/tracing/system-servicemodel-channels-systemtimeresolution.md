@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 System.ServiceModel.Channels.SystemTimeResolution을 (를) 확인 하세요.
 title: System.ServiceModel.Channels.SystemTimeResolution
 ms.date: 03/30/2017
 ms.assetid: eaab4ce9-b16a-4fe8-9271-3a1ab1dfa93a
-ms.openlocfilehash: f4f3b2189e87b5f93b618f67bbb4fea5c50b925b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8027c1b0c704118b69f37640d970ba59d7ee654e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291767"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634416"
 ---
 # <a name="systemservicemodelchannelssystemtimeresolution"></a>System.ServiceModel.Channels.SystemTimeResolution
 
 System.ServiceModel.Channels.SystemTimeResolution  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  운영 체제의 타이머 확인이 *n* 틱 (약 *m* 밀리초)으로 검색 되었습니다. 여기서 *n* 및 *m* 은 숫자 값입니다.  
   

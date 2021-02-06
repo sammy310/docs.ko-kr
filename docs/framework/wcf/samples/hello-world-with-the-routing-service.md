@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: 라우팅 서비스와 헬로 월드'
 title: Hello World 라우팅 서비스
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 3d91634d72481427f04e958f6dc2734829b6158b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1741c7d1f1e474864d66220fd160633997744876
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253858"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631972"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Hello World 라우팅 서비스
 
@@ -28,7 +29,7 @@ ms.locfileid: "96253858"
 
 3. Enter 키를 눌러 클라이언트를 시작합니다.
 
-     다음과 같은 출력이 표시됩니다.
+     다음 출력이 표시됩니다.
 
     ```console
      Add(100,15.99) = 115.99

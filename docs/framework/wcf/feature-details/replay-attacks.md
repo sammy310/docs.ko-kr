@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 재생 공격'
 title: 재생 공격
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-ms.openlocfilehash: 4325b3747074f13cf02752f99b25fa02e4117b4c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b367bd6238f85471871c59b393a8f28a40c4ddba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239083"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632856"
 ---
 # <a name="replay-attacks"></a>재생 공격
 
@@ -46,4 +47,4 @@ ms.locfileid: "96239083"
 - [권한 상승](elevation-of-privilege.md)
 - [서비스 거부](denial-of-service.md)
 - [변조](tampering.md)
-- [지원되지 않는 시나리오](unsupported-scenarios.md)
+- [지원 되지 않는 시나리오](unsupported-scenarios.md)

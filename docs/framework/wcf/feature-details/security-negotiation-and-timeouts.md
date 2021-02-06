@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 보안 협상 및 시간 제한'
 title: 보안 협상 및 시간 제한
 ms.date: 03/30/2017
 ms.assetid: 02a428f1-84e5-4d28-a11f-53ce31d63196
-ms.openlocfilehash: 4ccc7e5539b1a772be6f9edb5a4cb4d94a8d1c1b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 50055698f9a9946d0c0110a964cf9ce5b9f4fa28
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275985"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632440"
 ---
 # <a name="security-negotiation-and-timeouts"></a>보안 협상 및 시간 제한
 

@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 데이터의 보안 고려 사항'
 title: 데이터에 대한 보안 고려 사항
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: b9b033f779b083be8bcec195caf8e55607f14d31
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 6e0bf681ad8dd141ad030ef850c3e50c1d6e65c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188317"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632622"
 ---
 # <a name="security-considerations-for-data"></a>데이터에 대한 보안 고려 사항
 
@@ -44,7 +45,7 @@ WCF (Windows Communication Foundation) 인프라의 여러 위치는 사용자�
 
 보안을 염두에 두고 serialize 가능 형식을 디자인하는 경우 정보 공개는 고려해야 할 중요한 사항입니다.
 
-다음 사항을 고려합니다.
+다음 사항을 고려하세요.
 
 - <xref:System.Runtime.Serialization.DataContractSerializer> 프로그래밍 모델에서는 serialization 동안 형식 또는 어셈블리 외부의 개인 및 내부 데이터가 노출될 수 있습니다. 또한 스키마를 내보내는 동안 형식의 셰이프가 노출될 수 있으므로 형식의 serialization 프로젝션을 이해해야 합니다. 노출되지 않도록 하려면 serialize하지 않도록 설정해야 합니다. 예를 들어, 데이터 계약의 경우 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용하지 않을 수 있습니다.
 
@@ -388,7 +389,7 @@ WCF는 유연 하 고 사용자 지정이 가능한 시스템입니다. 이 항�
 
 - 일반적으로 할당량을 수락하는 구성 요소를 사용하는 경우에는 보안상의 영향을 이해하고 안전한 값으로 설정해야 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.XmlDictionaryReader>

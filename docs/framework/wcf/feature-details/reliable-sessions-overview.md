@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 신뢰할 수 있는 세션 개요'
 title: 신뢰할 수 있는 세션 개요
 ms.date: 03/30/2017
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
-ms.openlocfilehash: a85a34c5e2ec7928c01586e4b01cdf5e90e896a7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 51de6012245b4fc0a367069d02fe69ee031f2b30
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601090"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632895"
 ---
 # <a name="reliable-sessions-overview"></a>신뢰할 수 있는 세션 개요
 
@@ -17,7 +18,7 @@ WCF (Windows Communication Foundation) SOAP 신뢰할 수 있는 메시징은 SO
 
 ## <a name="wcf-reliable-sessions"></a>WCF 신뢰할 수 있는 세션
 
-WCF 신뢰할 수 있는 세션은 ws-reliablemessaging 프로토콜에서 정의한 SOAP 신뢰할 수 있는 메시징 구현입니다.
+WCF 신뢰할 수 있는 세션은 WS-ReliableMessaging 프로토콜에서 정의한 SOAP 신뢰할 수 있는 메시징 구현입니다.
 
 WCF SOAP 신뢰할 수 있는 메시징은 메시징 끝점을 분리 하는 중개의 수 나 유형에 관계 없이 두 끝점 사이에 종단 간 신뢰할 수 있는 세션을 제공 합니다. 여기에는 끝점 간에 메시지를 전달 하는 데 필요한 soap (예: HTTP 프록시) 또는 soap를 사용 하는 중개 (예: SOAP 기반 라우터 또는 브리지)를 사용 하지 않는 모든 전송 중개자가 포함 됩니다. 신뢰할 수 있는 세션 채널은 이러한 채널에서 연결 된 서비스가 동시에 실행 되 고 짧은 대기 시간, 즉 비교적 짧은 시간 간격 내에서 메시지를 교환 하 고 처리 하도록 *대화형* 통신을 지원 합니다. 이러한 결합은 이러한 구성 요소가 함께 진행 되거나 장애 조치 (failover) 되는 것을 의미 하기 때문에 격리를 제공 하지 않습니다.
 
@@ -67,7 +68,7 @@ HTTPS (문제에 대 한 자세한 내용은 <a href="#reliable-sessions-and-sec
 | ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
 | `IOutputSessionChannel`                         | 예               | 예                      | 예              | 예                     |
 | `IRequestSessionChannel`                        | 예               | 예                      | 아니요               | 아니요                      |
-| `IDuplexSessionChannel`                         | 아니요                | 예                       | 예              | 예                     |
+| `IDuplexSessionChannel`                         | 아니요                | 아니요                       | 예              | 예                     |
 
 &#8224;지원 되는 채널 형식은 `TChannel` 메서드에 전달 되는 제네릭 매개 변수 값에 사용할 수 있는 값입니다 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> .
 
@@ -77,7 +78,7 @@ HTTPS (문제에 대 한 자세한 내용은 <a href="#reliable-sessions-and-sec
 | ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
 | `IInputSessionChannel`                          | 예             | 예                    | 예              | 예                     |
 | `IReplySessionChannel`                          | 예             | 예                    | 아니요               | 아니요                      |
-| `IDuplexSessionChannel`                         | 아니요              | 예                     | 예              | 예                     |
+| `IDuplexSessionChannel`                         | 아니요              | 아니요                     | 예              | 예                     |
 
 &#8225;지원 되는 채널 형식은 `TChannel` 메서드에 전달 되는 제네릭 매개 변수 값에 사용할 수 있는 값입니다 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> .
 

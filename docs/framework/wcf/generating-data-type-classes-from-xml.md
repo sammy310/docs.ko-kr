@@ -1,13 +1,14 @@
 ---
+description: '자세한 내용: XML에서 데이터 형식 클래스 생성'
 title: XML에서 데이터 형식 클래스 생성
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: a7920a8c8c4f279dd3fc52029c5da5e9b685efe2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c79550b1e4804426267aef33860bc49d5d3b5efa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238251"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632141"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>XML에서 데이터 형식 클래스 생성
 

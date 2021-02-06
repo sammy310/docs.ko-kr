@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 ComIntegrationDllHostInitializerAddingHost를 확인 하세요.
 title: System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerAddingHost
 ms.date: 03/30/2017
 ms.assetid: 404bed8d-44d9-419f-972b-2809fec2a0f1
-ms.openlocfilehash: 116abc681ff1b48d8a8fa0f4eb1712fe51f005bc
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ee84911e3f24c9fd2fc266176767ed8ad9a8db2c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246747"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634325"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationdllhostinitializeraddinghost"></a>System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerAddingHost
 
 System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerAddingHost  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  ComPlus: DllHost 이니셜라이저: 호스트를 추가하는 중입니다.  
   

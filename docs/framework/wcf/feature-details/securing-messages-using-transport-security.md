@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 전송 보안을 사용 하 여 메시지 보안'
 title: 전송 보안을 사용하여 메시지에 보안 설정
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: b3931d594b585a176be7a9a2e2779df5d844c56b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0d8e84982f68eb8c067d54ac1b0451b17fd03a84
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288603"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632765"
 ---
 # <a name="securing-messages-using-transport-security"></a>전송 보안을 사용하여 메시지에 보안 설정
 

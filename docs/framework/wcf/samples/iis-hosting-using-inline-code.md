@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 인라인 코드를 사용 하 여 IIS 호스팅'
 title: 인라인 코드를 사용한 IIS 호스팅
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 41e19c318953d7e97eb5183c5a16a3780813f94c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 58c2e119ad49f56d015290747ab247bd45ff4d23
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558998"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631868"
 ---
 # <a name="iis-hosting-using-inline-code"></a>인라인 코드를 사용한 IIS 호스팅
 
@@ -94,6 +95,6 @@ Press <ENTER> to terminate client.
 
 4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요. 이 서비스를 호출할 수 있는 클라이언트 응용 프로그램을 만드는 방법에 대 한 예제는 [방법: 클라이언트 만들기](../how-to-create-a-wcf-client.md)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 호스팅 및 지속성 샘플](/previous-versions/appfabric/ff383418(v=azure.10))

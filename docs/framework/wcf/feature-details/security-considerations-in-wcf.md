@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: WCF의 보안 고려 사항'
 title: WCF에서의 보안 고려 사항
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-ms.openlocfilehash: 796098258601ec5fa208fd8a8060b28c3eeeb4d6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d75ff0d6eede4a46a5b795873e83445a04532993
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276024"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632479"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF에서의 보안 고려 사항
 
@@ -37,7 +38,7 @@ ms.locfileid: "96276024"
  [보안 세션에 대한 보안 고려 사항](security-considerations-for-secure-sessions.md)  
  보안 세션 구현 시 보안에 영향을 주는 다음 항목에 대해 설명합니다.  
   
- [지원되지 않는 시나리오](unsupported-scenarios.md)  
+ [지원 되지 않는 시나리오](unsupported-scenarios.md)  
  특정 측면의 보안을 지원하지 않고 방지하거나 고려해야 할 다양한 시나리오에 대해 설명합니다.  
   
 ## <a name="reference"></a>참고  

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: UriTemplate 및 UriTemplateTable'
 title: UriTemplate 및 UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 212cc0a7f90ac2e74837118a905519148ddc089d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7abcf0125108e4f48e392e8bb817dda77dfedd38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289674"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632414"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 및 UriTemplateTable
 

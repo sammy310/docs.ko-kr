@@ -1,19 +1,20 @@
 ---
+description: DroppedAMessage에 대해 자세히 알아보세요.
 title: System.ServiceModel.DroppedAMessage
 ms.date: 03/30/2017
 ms.assetid: a299401f-2983-45ea-b4f3-963bece3602e
-ms.openlocfilehash: ac5c3e754dc709aac970c4295d17dfc660bdfdca
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3f74764cdde28c9ef5e96049c649015efbcb5da3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96235963"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99633792"
 ---
 # <a name="systemservicemodeldroppedamessage"></a>System.ServiceModel.DroppedAMessage
 
 System.ServiceModel.DroppedAMessage  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  응답 메시지를 받았지만 이 메시지를 기다리고 있는 처리되지 않은 요청이 없습니다. WCF (Windows Communication Foundation) 런타임에 메시지를 삭제 하 고 있습니다.  
   

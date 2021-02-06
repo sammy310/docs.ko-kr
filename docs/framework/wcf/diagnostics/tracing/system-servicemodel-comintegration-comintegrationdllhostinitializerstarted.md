@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 ComIntegrationDllHostInitializerStarted를 확인 하세요.
 title: System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStarted
 ms.date: 03/30/2017
 ms.assetid: 232522dc-d6a1-4ac8-b632-5bbdf2d4f5a1
-ms.openlocfilehash: 959d858b261f45726dcc54cc0fa2dd6794fd4315
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f68c123ae400530ce44e9804dbeb63d2983fd65b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246695"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634260"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationdllhostinitializerstarted"></a>System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStarted
 
 System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStarted  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  ServiceModelInitializer가 구성된 서비스와 함께 시작되었습니다.  
   

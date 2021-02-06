@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 전송 보안을 사용 하 여 가장 사용'
 title: 전송 보안을 통해 가장 사용
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 14914bc65d5033c54640e06b79713ea1871daf18
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 49b454369e6bf02c5c3f20661f4116f51c64c6eb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289505"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632323"
 ---
 # <a name="using-impersonation-with-transport-security"></a>전송 보안을 통해 가장 사용
 
@@ -17,7 +18,7 @@ ms.locfileid: "96289505"
 
  전송 보안은 다음 표에 설명된 대로 5개의 가장 수준을 사용합니다.  
   
-|가장 수준|Description|  
+|가장 수준|설명|  
 |-------------------------|-----------------|  
 |없음|서버 애플리케이션에서 클라이언트 가장을 시도하지 않습니다.|  
 |익명|서버 애플리케이션에서 클라이언트의 자격 증명에 대한 액세스 검사를 수행할 수 있지만 클라이언트 ID에 대한 정보는 수신하지 않습니다. 이 가장 수준은 명명된 파이프와 같이 시스템 상의 통신을 위해서만 사용됩니다. 원격 연결을 통해 `Anonymous`를 사용하는 경우 가장 수준이 Identify로 승격됩니다.|  

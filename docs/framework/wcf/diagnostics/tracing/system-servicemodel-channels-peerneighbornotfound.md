@@ -1,19 +1,20 @@
 ---
+description: PeerNeighborNotFound에 대해 자세히 알아보세요.
 title: System.ServiceModel.Channels.PeerNeighborNotFound
 ms.date: 03/30/2017
 ms.assetid: 0aeb51a1-b82f-4008-920c-8604c5cbf600
-ms.openlocfilehash: c11309370c6d51ed17d903c075a6c20c06b63590
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ad57928e28f6f4a0eec7dabcd7b48be00815e693
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263310"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635092"
 ---
 # <a name="systemservicemodelchannelspeerneighbornotfound"></a>System.ServiceModel.Channels.PeerNeighborNotFound
 
 해당 환경이 환경 목록에 없으므로 환경에 대한 작업을 수행할 수 없습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 오류는 환경에 연결하거나 환경을 닫을 때 발생합니다.  
   

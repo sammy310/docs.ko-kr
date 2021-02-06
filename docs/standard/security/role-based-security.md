@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: Role-Based 보안'
 title: 역할 기반 보안
 ms.date: 07/15/2020
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - authentication [.NET], principals
 - role-based security, principals
 ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
-ms.openlocfilehash: a03cda3aac06cc247818ccea5c61c673225d7929
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 66457248ccfaa8535ce150e7654cd5be20fb6a68
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824137"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99629528"
 ---
 # <a name="role-based-security"></a>역할 기반 보안
 

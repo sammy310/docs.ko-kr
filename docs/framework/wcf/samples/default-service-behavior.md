@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 기본 서비스 동작'
 title: 기본 서비스 동작
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: acdb4652c0f49b610b8e7cad2aa5c0074fe00511
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a0b83180c9ab758cb7a8db7f92a8bf0c081e4489
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292755"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631985"
 ---
 # <a name="default-service-behavior"></a>기본 서비스 동작
 
@@ -48,7 +49,7 @@ public class CalculatorService : ICalculator
   
  서비스 동작은 <xref:System.ServiceModel.ServiceBehaviorAttribute> 특성으로 지정됩니다. 다음 표에서는 이러한 일부 동작에 대해 설명합니다.  
   
-|서비스 동작|Description|  
+|서비스 동작|설명|  
 |----------------------|-----------------|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|클라이언트 요청에 따라 세션을 자동으로 종료합니다.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|각 서비스 인스턴스의 동시성 모드를 지정합니다.|  
@@ -60,7 +61,7 @@ public class CalculatorService : ICalculator
   
  작업 동작은 <xref:System.ServiceModel.OperationBehaviorAttribute> 특성을 사용하여 지정합니다. 다음 표에서는 이러한 일부 동작에 대해 설명합니다.  
   
-|작업 동작|Description|  
+|작업 동작|설명|  
 |------------------------|-----------------|  
 |<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>|서비스 작업이 완료되면 현재 트랜잭션이 커밋되는지 여부를 결정합니다.|  
 |<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>|서비스 작업이 클라이언트 흐름 트랜잭션에 참여하는지 여부를 결정합니다.|  

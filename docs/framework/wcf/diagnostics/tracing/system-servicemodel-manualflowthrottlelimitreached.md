@@ -1,19 +1,20 @@
 ---
+description: ManualFlowThrottleLimitReached에 대해 자세히 알아보세요.
 title: System.ServiceModel.ManualFlowThrottleLimitReached
 ms.date: 03/30/2017
 ms.assetid: 9aba851f-1830-493b-8e3e-60f454eb923e
-ms.openlocfilehash: 180a06efc94acba40806e1f5d661553127549596
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 90c911131259ea02023eb05a97793f00f3eb43fe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248489"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99633337"
 ---
 # <a name="systemservicemodelmanualflowthrottlelimitreached"></a>System.ServiceModel.ManualFlowThrottleLimitReached
 
 System.ServiceModel.ManualFlowThrottleLimitReached  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  시스템이 ManualFlowControlLimit 스로틀에 대해 설정된 제한에 도달했습니다. 스로틀 값은 ServiceHost 또는 InstanceContext에서 ManualFlowControlLimit 속성을 수정하여 변경할 수 있습니다.  
   
