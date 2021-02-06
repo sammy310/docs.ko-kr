@@ -1,13 +1,14 @@
 ---
+description: '표면화 된 정책 작업에 대 한 자세한 정보: 4.5 .NET Framework'
 title: .NET Framework 4.5의 구체화된 정책 작업
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 00b671f169696728610e8ee32f874b44fbff9e33
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52dad208aacf2993acffa605b896c14c0a906d4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556917"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631218"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5의 구체화된 정책 작업
 
@@ -15,7 +16,7 @@ ms.locfileid: "90556917"
 
 ## <a name="projects-in-this-sample"></a>이 샘플의 프로젝트
 
-|프로젝트 이름|Description|기본 파일|
+|프로젝트 이름|설명|기본 파일|
 |-|-|-|
 |ExternalizedPolicy4|ExternalizedPolicy4 활동과 이 활동의 WF 4.5 디자이너가 들어 있습니다.|**ExternalizedPolicy4.cs**: 작업 정의입니다.<br /><br /> **ExternalizedPolicy4Designer**: ExternalizedPolicy4 작업에 대 한 사용자 지정 디자이너입니다. 이 디자이너는 WF 3.5 규칙 엔진의 규칙 편집기(<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>)를 사용합니다.|
 |ImperativeCodeClientSample|명령적 C# 코드를 사용하는 ExternalizedPolicy4 애플리케이션을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 애플리케이션입니다(디자이너가 사용되지 않음).|**Applydiscount 적용 됩니다. 규칙**: [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 규칙 정의를 포함 하는 파일입니다.<br /><br /> **Order.cs**: 고객 주문을 나타내는 형식입니다. 이 형식의 개체에 규칙이 적용됩니다.<br /><br /> **Program.cs**: applydiscount에 정의 된 규칙을 적용 하는 Policy4 활동이 있는 워크플로를 구성 하 고 실행 합니다. Order 개체의 인스턴스에 대 한 규칙입니다.<br /><br /> App.config: 규칙 파일의 경로가 있는 구성 파일입니다.|
@@ -42,7 +43,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 }
 ```
 
-|속성|Description|
+|속성|설명|
 |-|-|
 |RuleSetFilePath|활동을 실행할 때 평가할 .NET Framework 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> 파일의 경로입니다.|
 |RuleSetName|.rules 파일 내에서 사용할 <xref:System.Workflow.Activities.Rules.RuleSet>의 이름입니다.|
@@ -68,15 +69,15 @@ ExternalizedPolicy4 디자이너를 사용하면 코드를 작성하지 않고 �
 
 1. Visual Studio를 사용 하 여 *policy4sample.sln* 솔루션 파일을 엽니다.
 
-2. **솔루션 탐색기**에서 **ImperativeCodeClientSample** 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **시작 프로젝트로 설정**을 선택 합니다.
+2. **솔루션 탐색기** 에서 **ImperativeCodeClientSample** 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **시작 프로젝트로 설정** 을 선택 합니다.
 
-3. 프로젝트를 실행 하려면 **ctrl** + **F5**를 누릅니다.
+3. 프로젝트를 실행 하려면 **ctrl** + **F5** 를 누릅니다.
 
 ### <a name="run-the-designerclientsample-application"></a>DesignerClientSample 응용 프로그램 실행
 
 1. Visual Studio를 사용 하 여 *policy4sample.sln* 솔루션 파일을 엽니다.
 
-2. **솔루션 탐색기**에서 **designerclientsample** 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **시작 프로젝트로 설정**을 선택 합니다.
+2. **솔루션 탐색기** 에서 **designerclientsample** 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **시작 프로젝트로 설정** 을 선택 합니다.
 
 3. **Ctrl** + **Shift** + **B** 를 눌러 프로젝트를 컴파일합니다.
 

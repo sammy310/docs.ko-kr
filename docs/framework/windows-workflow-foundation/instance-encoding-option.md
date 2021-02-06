@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 인스턴스 인코딩 옵션'
 title: 인스턴스 인코딩 옵션
 ms.date: 03/30/2017
 ms.assetid: 89e4b029-4f68-438c-8117-9b21fe094ef4
-ms.openlocfilehash: 416394eb346a7c82385da32a89bd54179b255cd4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8cca7fd536673ca99b1014173e172508e3d97b7c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279898"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631166"
 ---
 # <a name="instance-encoding-option"></a>인스턴스 인코딩 옵션
 
