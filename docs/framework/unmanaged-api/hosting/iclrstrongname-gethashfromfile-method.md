@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRStrongName:: GetHashFromFile 메서드'
 title: ICLRStrongName::GetHashFromFile 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e50480a-8ada-4044-b2a5-97bb14ed3525
 topic_type:
 - apiref
-ms.openlocfilehash: ff346d8f7ba321904a8d91079298b58039e6eb54
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e930f1c21e5b0be441fe44ad352b2ef2f43d0f67
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727616"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637055"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile 메서드
 
@@ -55,7 +56,7 @@ HRESULT GetHashFromFile (
  `pchHash`  
  제한이 반환 된의 크기 (바이트)입니다 `pbHash` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `S_OK` 메서드가 성공적으로 완료 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
   
@@ -73,7 +74,7 @@ HRESULT GetHashFromFile (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [GetHashFromFileW 메서드](iclrstrongname-gethashfromfilew-method.md)
 - [ICLRStrongName 인터페이스](iclrstrongname-interface.md)

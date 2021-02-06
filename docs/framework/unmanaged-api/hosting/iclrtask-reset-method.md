@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: ICLRTask:: Reset 메서드'
 title: ICLRTask::Reset 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1bfb5d3a-0ffd-4bb4-9bf6-aec00cb675b7
 topic_type:
 - apiref
-ms.openlocfilehash: b87bc026a2cac2d0b913128c43142d56aee03025
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d30738b98003e0543c1a2a31c7471b15811efe5f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725198"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636990"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset 메서드
 
@@ -41,7 +42,7 @@ HRESULT Reset (
   
  값이 이면 `true` 런타임은 또는를 사용 하 여 저장 된 데이터를 다시 설정 합니다 <xref:System.Threading.Thread.AllocateDataSlot%2A> <xref:System.Threading.Thread.AllocateNamedDataSlot%2A> .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -80,7 +81,7 @@ HRESULT Reset (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

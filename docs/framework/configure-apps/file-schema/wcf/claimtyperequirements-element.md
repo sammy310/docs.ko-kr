@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: <claimTypeRequirements> 요소'
 title: <claimTypeRequirements> 요소
 ms.date: 03/30/2017
 ms.assetid: a26efe73-4bad-4731-8cad-27f00d54354b
-ms.openlocfilehash: 6a4e5da3bd3ef6977d6258190d397130b33eb56c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9553c129c246a5f4980d597406bee19ea949bdcc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148973"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638914"
 ---
 # <a name="claimtyperequirements-element"></a>\<claimTypeRequirements> 요소
 
@@ -30,9 +31,9 @@ ms.locfileid: "91148973"
 - [사용자 지정 바인딩을 사용하는 보안 기능](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [페더레이션 및 발급된 토큰](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [\<add>](add-of-claimtyperequirements.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Custom Binding Security](../../../wcf/samples/custom-binding-security.md)

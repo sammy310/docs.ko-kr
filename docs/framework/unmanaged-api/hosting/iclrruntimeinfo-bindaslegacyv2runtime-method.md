@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRRuntimeInfo:: BindAsLegacyV2Runtime 메서드'
 title: ICLRRuntimeInfo::BindAsLegacyV2Runtime 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65fd55ac-4a24-4479-9384-a2e8013bfb2b
 topic_type:
 - apiref
-ms.openlocfilehash: f0a03ecce49bbc3c1c03d037c9be31a8e994259d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 77b340cba18ea86546e1a8f4a17933f09289b1de
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732097"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637182"
 ---
 # <a name="iclrruntimeinfobindaslegacyv2runtime-method"></a>ICLRRuntimeInfo::BindAsLegacyV2Runtime 메서드
 
@@ -55,7 +56,7 @@ HRESULT BindAsLegacyV2Runtime ();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRRuntimeInfo 인터페이스](iclrruntimeinfo-interface.md)
 - [호스팅 인터페이스](hosting-interfaces.md)

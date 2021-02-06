@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: EmitAssembly 메서드'
 title: EmitAssembly 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 605ff39e-e5cc-4bff-8196-e8d68a9715b9
 topic_type:
 - apiref
-ms.openlocfilehash: b85b2576660f77eb901c504d398e8bc7909882f7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aada17d8df6435c5edfe6beb5db5ee13f887f253
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676376"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638342"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly 메서드
 
@@ -39,7 +40,7 @@ HRESULT EmitAssembly(
  `AssemblyID`  
  어셈블리의 ID입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -47,7 +48,7 @@ HRESULT EmitAssembly(
 
  Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

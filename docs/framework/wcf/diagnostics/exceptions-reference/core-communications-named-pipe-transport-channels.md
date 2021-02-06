@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 핵심 통신: 명명 된 파이프 전송 채널'
 title: '핵심 통신: 명명된 파이프 전송 채널'
 ms.date: 03/30/2017
 ms.assetid: 14ab8f84-ab3e-47cd-8ac5-dd68af940175
-ms.openlocfilehash: 9c4f381750296b78a7ce9bd160bfe094337270cb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 26b4547efb4e246c73d112ceb81bbde6105d6bf0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96277350"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635768"
 ---
 # <a name="core-communications-named-pipe-transport-channels"></a>핵심 통신: 명명된 파이프 전송 채널
 

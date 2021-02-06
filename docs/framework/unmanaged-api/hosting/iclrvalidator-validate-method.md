@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRValidator:: Validate 메서드'
 title: ICLRValidator::Validate 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b1b432a-d234-4002-839b-81366c3a8bdc
 topic_type:
 - apiref
-ms.openlocfilehash: 4ce50f7706583f291d2e6a141d40ab6dd3e4b3e2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a188315d44021fc8bf40be9bb9aecac436351467
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674387"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636744"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>ICLRValidator::Validate 메서드
 
@@ -67,7 +68,7 @@ HRESULT Validate (
  `ulSize`  
  진행 유효성을 검사할 파일의 크기 (바이트)입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -88,6 +89,6 @@ HRESULT Validate (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRValidator 인터페이스](iclrvalidator-interface.md)

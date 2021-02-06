@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorConfiguration 인터페이스'
 title: ICorConfiguration 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaf96116-372b-4538-afb1-9e0fcdac1f98
 topic_type:
 - apiref
-ms.openlocfilehash: fa8d15bc8e504a57d5cc87c170a3a5b022798add
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f75e9e445c7fe4615abcae27756bcc420b5255b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715786"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636691"
 ---
 # <a name="icorconfiguration-interface"></a>ICorConfiguration 인터페이스
 
@@ -44,7 +45,7 @@ CLR (공용 언어 런타임)을 구성 하는 메서드를 제공 합니다.
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)
 - [CorRuntimeHost Coclass](corruntimehost-coclass.md)

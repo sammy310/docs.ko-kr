@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorThreadpool:: CorGetMaxThreads 메서드'
 title: ICorThreadpool::CorGetMaxThreads 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2861533a-cda0-47b3-b716-0d363505289b
 topic_type:
 - apiref
-ms.openlocfilehash: 511b6e463bcd0d975cf7be96f870baefe27fc77b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 44de36a7ff3e086ab9389049137c66697af11af3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720518"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636470"
 ---
 # <a name="icorthreadpoolcorgetmaxthreads-method"></a>ICorThreadpool::CorGetMaxThreads 메서드
 
@@ -45,6 +46,6 @@ HRESULT CorGetMaxThreads (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorThreadpool 인터페이스](icorthreadpool-interface.md)

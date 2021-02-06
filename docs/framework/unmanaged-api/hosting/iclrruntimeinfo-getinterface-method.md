@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRRuntimeInfo:: GetInterface 메서드'
 title: ICLRRuntimeInfo::GetInterface 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-ms.openlocfilehash: 192163ed8af680e39f7f3a03aee3f46546bc7450
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5a5c55823ff9954735a712423d8aaab1256c947d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732075"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637133"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface 메서드
 
@@ -48,7 +49,7 @@ HRESULT GetInterface(
  `ppUnk`  
  제한이 쿼리 된 인터페이스에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -86,7 +87,7 @@ HRESULT GetInterface(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRRuntimeInfo 인터페이스](iclrruntimeinfo-interface.md)
 - [호스팅 인터페이스](hosting-interfaces.md)

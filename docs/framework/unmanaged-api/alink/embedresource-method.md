@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: EmbedResource 메서드'
 title: EmbedResource 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 667bd954-6dc6-4020-a3cb-0e8224179993
 topic_type:
 - apiref
-ms.openlocfilehash: 34439b7c01dee7d7789d989b58e8944c6282b71b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f7896172e7416048352788caf7e092096924b7af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676389"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638355"
 ---
 # <a name="embedresource-method"></a>EmbedResource 메서드
 
@@ -55,7 +56,7 @@ HRESULT EmbedResource(
  `dwFlags`  
  및와 같은 내게 필요한 옵션 플래그 `mrPublic` `mrPrivate` 입니다. 이러한 플래그는 [DefineExportedType 메서드에](../metadata/imetadataassemblyemit-defineexportedtype-method.md)전달 될 수 있습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -63,7 +64,7 @@ HRESULT EmbedResource(
 
  Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 다음에 대해 자세히 알아보세요. ExportTypeForwarder 메서드
 title: ExportTypeForwarder 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55989fa9-ab43-4f08-8eb6-2eb56fa7ca76
 topic_type:
 - apiref
-ms.openlocfilehash: 4e6ceabf37056bfc25247266be2c7801cb0e13e1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 59fb74c83f6d30dda87d908353795fb218190022
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684774"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637991"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder 메서드
 
@@ -50,7 +51,7 @@ HRESULT ExportTypeForwarder(
  `pType`  
  내보낸 형식의 토큰을 받습니다. 중첩 된 형식을 내보내는 경우에만 필요 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -58,7 +59,7 @@ HRESULT ExportTypeForwarder(
 
  Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

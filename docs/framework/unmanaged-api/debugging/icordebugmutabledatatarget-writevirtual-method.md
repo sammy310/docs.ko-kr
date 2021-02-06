@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugMutableDataTarget:: WriteVirtual 메서드'
 title: ICorDebugMutableDataTarget::WriteVirtual 메서드
 ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
-ms.openlocfilehash: 453ab23e292c5eab4a8300c32bf76743b787750d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3f3400456b7af51f4b24d7e14e35d641f03a8bfd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709338"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637822"
 ---
 # <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual 메서드
 
@@ -33,7 +34,7 @@ HRESULT WriteVirtual(
  `address`  
  [in] `pBuffer`의 바이트 수입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  성공하면 `S_OK`이고 실패하면 다른 `HRESULT`입니다.  
   
@@ -51,7 +52,7 @@ HRESULT WriteVirtual(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugMutableDataTarget 인터페이스](icordebugmutabledatatarget-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

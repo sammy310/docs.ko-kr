@@ -1,13 +1,14 @@
 ---
+description: '에 대 한 자세한 <certificate> 정보: <identity>'
 title: <identity>의 경우 <certificate>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: 24c39b5efaee7f8db12088d272efeb3783efab04
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b1ccda7e8e84825cc0b2b2be123fe30be449189a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198862"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639109"
 ---
 # <a name="certificate-for-identity"></a>\<identity>의 경우 \<certificate>
 

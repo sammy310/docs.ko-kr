@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ExportNestedTypeForwarder 메서드'
 title: ExportNestedTypeForwarder 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 886ea6c5-6b26-4b88-8bf6-448d6d191950
 topic_type:
 - apiref
-ms.openlocfilehash: 45adda6551e1cec994f59acbb0e8d2b5c56c4df6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fd791e3fea76338f191fcf924d56720d257d2e8b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684813"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638108"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder 메서드
 
@@ -62,7 +63,7 @@ HRESULT ExportNestedTypeForwarder(
  `pType`  
  내보내기 유형의 토큰을 받습니다. 중첩 된 형식을 내보내는 경우에만 필요 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -70,7 +71,7 @@ HRESULT ExportNestedTypeForwarder(
 
  Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

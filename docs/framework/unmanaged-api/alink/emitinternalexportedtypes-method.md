@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: EmitInternalExportedTypes 메서드'
 title: EmitInternalExportedTypes 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 28c8b00d-2c14-40b4-aed5-a1db0e2428eb
 topic_type:
 - apiref
-ms.openlocfilehash: faf1438f56cd49b235ffbb18a0154e3e20c202b9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5d23c593988b31c077d3b65b11b73113e164ed74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684969"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638303"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes 메서드
 
@@ -39,7 +40,7 @@ HRESULT EmitInternalExportedTypes(
  `AssemblyID`  
  어셈블리의 ID입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -47,7 +48,7 @@ HRESULT EmitInternalExportedTypes(
 
  Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink2 인터페이스](ialink2-interface.md)
 - [IALink 인터페이스](ialink-interface.md)

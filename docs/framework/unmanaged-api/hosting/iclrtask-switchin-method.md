@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: ICLRTask:: SwitchIn 메서드'
 title: ICLRTask::SwitchIn 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d37ce20-aa65-4043-8f13-7c728b5d8a52
 topic_type:
 - apiref
-ms.openlocfilehash: e98ae17d55c74d32844da96137c258d076ebc2db
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0bbcd2b9594a8ce465a1dcd7b5ae3f8a0799826d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691060"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636834"
 ---
 # <a name="iclrtaskswitchin-method"></a>ICLRTask::SwitchIn 메서드
 
@@ -39,7 +40,7 @@ HRESULT SwitchIn (
  `threadHandle`  
  진행 현재 인스턴스가 나타내는 작업이 실행 중인 실제 스레드에 대 한 핸들입니다 `ICLRTask` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -68,7 +69,7 @@ HRESULT SwitchIn (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

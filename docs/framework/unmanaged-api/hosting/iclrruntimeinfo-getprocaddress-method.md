@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRRuntimeInfo:: GetProcAddress 메서드'
 title: ICLRRuntimeInfo::GetProcAddress 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7732bfc-689a-4926-88fd-4f81e6f9ed78
 topic_type:
 - apiref
-ms.openlocfilehash: 028cfd51a713d8598598566a5b1edcf3fc70ecfc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1e5d08ed118930418106b28541b4081d6acad927
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732062"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637146"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress 메서드
 
@@ -44,7 +45,7 @@ HRESULT GetProcAddress(
  `ppProc`  
  제한이 내보낸 함수의 주소입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -68,7 +69,7 @@ HRESULT GetProcAddress(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRRuntimeInfo 인터페이스](iclrruntimeinfo-interface.md)
 - [호스팅 인터페이스](hosting-interfaces.md)

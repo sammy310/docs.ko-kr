@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: EmitManifest 메서드'
 title: EmitManifest 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdebc1f3-b62e-4d9e-b775-8ccaa8ecb250
 topic_type:
 - apiref
-ms.openlocfilehash: b1c005e58f18b03a7da5f3836f719b95c41bca95
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 770631864c030c067feb0b02d2f00c36076aa44c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684943"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638277"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest 메서드
 
@@ -47,7 +48,7 @@ HRESULT EmitManifest(
  `ptkManifest`  
  선택적으로 어셈블리 매니페스트 토큰을 받습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -55,7 +56,7 @@ HRESULT EmitManifest(
 
  Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRHostProtectionManager:: SetProtectedCategories 메서드'
 title: ICLRHostProtectionManager::SetProtectedCategories 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fa21dc7b-5da7-440b-b59e-9180e5181f9d
 topic_type:
 - apiref
-ms.openlocfilehash: 0557a8f1c7c495950933a44cacd23ada8e84964e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9138c31ea1a2d9b7ebeaeac8ef5ef9305eabef8d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730502"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637536"
 ---
 # <a name="iclrhostprotectionmanagersetprotectedcategories-method"></a>ICLRHostProtectionManager::SetProtectedCategories 메서드
 
@@ -39,7 +40,7 @@ HRESULT SetProtectedCategories (
  `categories`  
  진행 부분적으로 신뢰할 수 있는 코드에서 실행 되는 것을 차단 해야 하는 관리 되는 형식 및 멤버의 범주를 나타내는 [EApiCategories](eapicategories-enumeration.md) 값의 조합입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -64,7 +65,7 @@ HRESULT SetProtectedCategories (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Security.Permissions.HostProtectionAttribute>
 - <xref:System.Security.Permissions.HostProtectionResource>

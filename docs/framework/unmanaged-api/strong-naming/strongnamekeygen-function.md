@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: StrongNameKeyGen 함수'
 title: StrongNameKeyGen 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 883e413a-ad2f-4f7f-b1b9-aeb8fe5b65f8
 topic_type:
 - apiref
-ms.openlocfilehash: 4844701784a3e6a1008a5deb2bdff3b3ba47aa7e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c5f4cfcfa9030ae856acf5fd59ab34a2b8338670
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691411"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636264"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen 함수
 
@@ -56,7 +57,7 @@ BOOLEAN StrongNameKeyGen (
  `pcbKeyBlob`  
  제한이 의 크기 (바이트)입니다 `ppbKeyBlob` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `true` 성공적으로 완료 되 면 그렇지 않으면 `false` 입니다.  
   
@@ -76,7 +77,7 @@ BOOLEAN StrongNameKeyGen (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [StrongNameKeyGen 메서드](../hosting/iclrstrongname-strongnamekeygen-method.md)
 - [StrongNameKeyGenEx 메서드](../hosting/iclrstrongname-strongnamekeygenex-method.md)

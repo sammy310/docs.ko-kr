@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: ExportType 메서드'
 title: ExportType 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91a7ce63-f5b8-4f16-b2c4-e1d0baa88944
 topic_type:
 - apiref
-ms.openlocfilehash: b8db08b22765bac0ed2fe058db49d6882b8d22df
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6dc047cac3b80e6fe7a6f2cd980061b34bb7f286
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684800"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638069"
 ---
 # <a name="exporttype-method"></a>ExportType 메서드
 
@@ -58,7 +59,7 @@ HRESULT ExportType(
  `pType`  
  내보낸 형식에 대 한 토큰을 받습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -66,7 +67,7 @@ HRESULT ExportType(
 
  Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: GetALinkMessageDll 함수'
 title: GetALinkMessageDll 함수
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 67985a22-88a2-4c54-8d99-4bcde9d6213e
 topic_type:
 - apiref
-ms.openlocfilehash: 554bd32ae965b21a88a09577749bbd7975f5ec7e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 67a294d1f21f50cee938ddeb14d1f30b4ccf911b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684748"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637874"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll 함수
 
@@ -38,6 +39,6 @@ HINSTANCE WINAPI GetALinkMessageDll();
   
  **라이브러리**: alink.dll  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Al.exe(어셈블리 링커)](../../tools/al-exe-assembly-linker.md)

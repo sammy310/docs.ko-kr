@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 DurableParticipantReplayWhilePreparing를 확인 하세요.
 title: Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
 ms.date: 03/30/2017
 ms.assetid: 10ef3876-6f8e-4d4e-8444-f47847b64795
-ms.openlocfilehash: bfa279887339f025e4cb7c9c455fd25098684073
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fcaa50dd4faa548cad8ff085f1c66f94c63bd010
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236613"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635664"
 ---
 # <a name="microsofttransactionstransactionbridgedurableparticipantreplaywhilepreparing"></a>Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
 
 WS-AT 프로토콜 서비스가 Prepare 메시지에 응답하지 않은 영속 참가자로부터 Replay 메시지를 받았습니다. 따라서 트랜잭션이 중단되었습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  영속 참가자가 준비하는 동안 Reply 메시지를 받을 경우 추적됩니다. 이 상태에 대한 잘못된 메시지로 트랜잭션이 중단됩니다.  
   

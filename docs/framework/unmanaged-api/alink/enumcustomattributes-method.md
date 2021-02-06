@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: EnumCustomAttributes 메서드'
 title: EnumCustomAttributes 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08dff60c-f01b-4050-8865-ea3f95361c9f
 topic_type:
 - apiref
-ms.openlocfilehash: 445c833d10631341ef7ad579eaff8ddd96be3428
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d5b537462745914903f0cdb1e9f4436f2c27a68d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684852"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638136"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes 메서드
 
@@ -55,7 +56,7 @@ HRESULT EnumCustomAttributes(
  `pcCustomValues`  
  필요에 따라 토큰 값의 개수를 받습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -63,7 +64,7 @@ HRESULT EnumCustomAttributes(
 
  Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

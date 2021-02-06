@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: <cancelRequestedQueries> WCF'
 title: <cancelRequestedQueries> WCF의
 ms.date: 03/30/2017
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
-ms.openlocfilehash: 205399330c1aa69b332c2149ee32d9b6098ccdbe
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3850d7efd01f9092312567a0eba68a6e9547baad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151170"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639187"
 ---
 # <a name="cancelrequestedqueries-of-wcf"></a>\<cancelRequestedQueries> WCF의
 

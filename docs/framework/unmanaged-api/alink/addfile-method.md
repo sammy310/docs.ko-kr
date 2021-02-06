@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: AddFile 메서드'
 title: AddFile 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e707abb-f905-4568-9356-12aa21d1b11c
 topic_type:
 - apiref
-ms.openlocfilehash: 53ca4005f5681cfc5d550301d8aad1406aceb3a2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5e1253587298b2c1559c72dced43ec70dc169090
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717203"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638628"
 ---
 # <a name="addfile-method"></a>AddFile 메서드
 
@@ -55,7 +56,7 @@ HRESULT AddFile(
  `pFileToken`  
  추가 된 파일의 고유 ID가 저장 될 위치에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -63,7 +64,7 @@ HRESULT AddFile(
 
  Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

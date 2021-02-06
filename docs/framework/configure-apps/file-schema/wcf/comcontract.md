@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <comContract>
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: 35596f32bf0e0de9081bc0d4c33fb370c7ab708b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fde1188a087f13da6629460bcebcea16ceefc0e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173785"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638667"
 ---
 # \<comContract>
 
@@ -55,7 +56,7 @@ COM+ 통합 서비스 계약을 지정합니다.
 |---------------|-----------------|  
 |계약|계약 형식을 포함하는 문자열입니다.|  
 |name|계약 이름을 포함하는 문자열입니다.|  
-|namespace|계약 네임스페이스를 포함하는 문자열입니다.|  
+|네임스페이스|계약 네임스페이스를 포함하는 문자열입니다.|  
 |requiresSession|계약을 세션 바인딩에서만 사용할 수 있는지 여부를 지정하는 부울 값입니다. 서비스가 초기화될 때 통합 런타임에서는 사용될 바인딩 형식과 이 설정이 일치하는지 확인합니다. 계약의 바인딩 중 하나 이상이 충돌할 경우 예외가 생성됩니다. 이 속성이 `false`이고 단방향 채널을 사용하며 [out] 매개 변수가 있을 경우에도 예외가 생성됩니다.|  
   
 ### <a name="child-elements"></a>자식 요소  

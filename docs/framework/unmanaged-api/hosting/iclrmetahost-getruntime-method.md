@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRMetaHost:: GetRuntime 메서드'
 title: ICLRMetaHost::GetRuntime 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a10749f1-ab91-47cf-982f-d8ccd2e81bd2
 topic_type:
 - apiref
-ms.openlocfilehash: 093fa64a7d51e0c2fdc304d2bb4f1c9f7b03e2ec
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8a2ada652dbb139337150cb8ed20986ebf8ae7f4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730411"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637523"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>ICLRMetaHost::GetRuntime 메서드
 
@@ -52,7 +53,7 @@ HRESULT GetRuntime (
  `ppRuntime`  
  제한이 요청 된 런타임에 해당 하는 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 인터페이스에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -75,7 +76,7 @@ HRESULT GetRuntime (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRMetaHost 인터페이스](iclrmetahost-interface.md)
 - [사용되지 않는 CLR 호스팅 인터페이스 및 Coclass](deprecated-clr-hosting-interfaces-and-coclasses.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 중요 한 추적'
 title: 중요한 추적
 ms.date: 03/30/2017
 ms.assetid: 40a1770e-3b09-4142-b0dd-f9ef73642074
-ms.openlocfilehash: 9ad7c217b528cb2ad22169c1aea6391462bab1ae
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6d3e12c82312c2a8a3f0a19b4dc50e99e21b9730
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248672"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635547"
 ---
 # <a name="significant-traces"></a>중요한 추적
 
@@ -15,7 +16,7 @@ ms.locfileid: "96248672"
   
 ## <a name="significant-traces"></a>중요한 추적  
   
-|추적|Description|  
+|추적|설명|  
 |-----------|-----------------|  
 |메시지 로그 추적|추적 소스를 사용 하는 경우 메시지 로깅 기능을 통해 WCF 메시지가 기록 될 때 추적을 내보냅니다 `System.ServiceModel.MessageLogging` . 이 추적을 클릭하면 메시지가 표시됩니다. 메시지에 대해 네 가지 구성 가능한 로깅 지점은 `ServiceLevelSendRequest`, `TransportSend`, `TransportReceive` 및 `ServiceLevelReceiveRequest`이며 이러한 로깅 지점도 메시지 로그 추적의 메시지 소스 특성에 표시됩니다.|  
 |수신된 메시지 추적|`System.ServiceModel`추적 소스가 정보 또는 세부 정보 표시 수준에서 사용 하도록 설정 된 경우 WCF 메시지가 수신 되 면이 추적을 내보냅니다. 이 추적은 동작 그래프 보기에서 메시지 상관 관계 화살표를 확인해야 합니다.|  

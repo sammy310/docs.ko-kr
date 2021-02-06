@@ -1,4 +1,5 @@
 ---
+description: _EFN_GetManagedObjectFieldInfo 함수에 대해 자세히 알아보세요.
 title: _EFN_GetManagedObjectFieldInfo 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-ms.openlocfilehash: 4c088b7e1096f8b4cad11a3e27b4045e233989ae
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 749ab286a86db07c1b66ff2b61ff073d15334800
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676220"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637889"
 ---
 # <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN \_ GetManagedObjectFieldInfo 함수
 
@@ -68,6 +69,6 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 전역 정적 함수](debugging-global-static-functions.md)

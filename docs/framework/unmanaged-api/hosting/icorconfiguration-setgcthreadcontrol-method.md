@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorConfiguration:: SetGCThreadControl 메서드'
 title: ICorConfiguration::SetGCThreadControl 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 72e38e61-3d56-4ae3-b8f6-0ab7922aaf11
 topic_type:
 - apiref
-ms.openlocfilehash: 28b012bbe3f8c11ecd0afb8b5905336bd99c349c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8b9388bdefb9da2ce51b62ab68eeee54645e43ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724028"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636642"
 ---
 # <a name="icorconfigurationsetgcthreadcontrol-method"></a>ICorConfiguration::SetGCThreadControl 메서드
 
@@ -53,6 +54,6 @@ HRESULT SetGCThreadControl (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorConfiguration 인터페이스](icorconfiguration-interface.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 보안 문제 및 추적에 유용한 팁'
 title: 보안 고려 사항 및 추적에 대한 유용한 정보
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 415b27f5ac40d097c5bdf7b09d63ce901003f83f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 112ce91278e948f9b1ef540e12af7d14b34cd698
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243879"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635573"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>보안 고려 사항 및 추적에 대한 유용한 정보
 

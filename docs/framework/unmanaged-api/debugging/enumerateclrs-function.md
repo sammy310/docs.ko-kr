@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: EnumerateCLRs 함수'
 title: EnumerateCLRs 함수
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: 8fe0df3ee08f9915ed43990b6f9686e25b183a0b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 75124ef1e1e8588cb3d709161c3c1119e960be9e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676103"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637783"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs 함수
 
@@ -52,7 +53,7 @@ HRESULT EnumerateCLRs (
  `pdwArrayLengthOut`  
  [out] 크기가 같은 `ppHandleArrayOut` 및 `pdwArrayLengthOut`의 길이가 포함된 DWORD에 대한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  S_OK  
  프로세스의 CLR 수가 성공적으로 확인되었으며 해당 핸들 및 경로 배열이 제대로 채워졌습니다.  

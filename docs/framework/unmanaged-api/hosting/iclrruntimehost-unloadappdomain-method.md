@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRRuntimeHost:: UnloadAppDomain 메서드'
 title: ICLRRuntimeHost::UnloadAppDomain 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 571912bc-3429-4ff8-8eb2-ea993ffbd901
 topic_type:
 - apiref
-ms.openlocfilehash: cc5d0d65d213d952c0897a72d8ec38ea6b8b22db
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2a47c6250434c3ee4122f8eeae75f25ee4c08a34
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700667"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637289"
 ---
 # <a name="iclrruntimehostunloadappdomain-method"></a>ICLRRuntimeHost::UnloadAppDomain 메서드
 
@@ -43,7 +44,7 @@ HRESULT UnloadAppDomain(
  `fWaitUntilDone`  
  [in] `true` 응용 프로그램 도메인 언로드를 시도 하기 전에 CLR (공용 언어 런타임)이 응용 프로그램의 현재 스레드 실행이 완료 될 때까지 대기 해야 함을 나타내려면입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -68,6 +69,6 @@ HRESULT UnloadAppDomain(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRRuntimeHost 인터페이스](iclrruntimehost-interface.md)

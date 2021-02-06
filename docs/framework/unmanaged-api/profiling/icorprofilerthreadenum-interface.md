@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerThreadEnum 인터페이스'
 title: ICorProfilerThreadEnum 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e35031b-e095-4c14-9644-8deeb3081e0b
 topic_type:
 - apiref
-ms.openlocfilehash: 147694431d2c378b856577ef5a60e8a8b4e9a7a7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 035296412aabf20503588a558c8e8ccc1338210e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721220"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636392"
 ---
 # <a name="icorprofilerthreadenum-interface"></a>ICorProfilerThreadEnum 인터페이스
 
@@ -49,7 +50,7 @@ ms.locfileid: "95721220"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)
