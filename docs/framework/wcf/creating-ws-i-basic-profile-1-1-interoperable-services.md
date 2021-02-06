@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: WS-I Basic Profile 1.1 상호 운용 가능한 서비스 만들기'
 title: WS-I Basic Profile 1.1 상호 운용할 수 있는 서비스 만들기
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: b5d262c3e0443503ccbf49a1a468c82843799a61
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 46e2d925dfe431957198b1d53b40d28adf6fb1c4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255054"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646181"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>WS-I Basic Profile 1.1 상호 운용할 수 있는 서비스 만들기
 

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 1432-ConcurrentSessionsRatio'
 title: 1432 - ConcurrentSessionsRatio
 ms.date: 03/30/2017
 ms.assetid: a8b6efce-cf46-485f-9cd6-58126b627032
-ms.openlocfilehash: 37580c4b2ee6996aa06da8c07121f550a6a106ad
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 50a80d8694e076af036ce4fcd7f2548e90c2154f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96271046"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645427"
 ---
 # <a name="1432---concurrentsessionsratio"></a>1432 - ConcurrentSessionsRatio
 
@@ -20,7 +21,7 @@ ms.locfileid: "96271046"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 동시 세션 비율 정보를 제공하도록 내보내집니다.  
   

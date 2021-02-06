@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: ClickOnce를 사용 하 여 WCF 응용 프로그램 배포'
 title: ClickOnce를 사용하여 WCF 애플리케이션 배포
 ms.date: 03/30/2017
 ms.assetid: 1a11feee-2a47-4d3e-a28a-ad69d5ff93e0
-ms.openlocfilehash: ad4c603d07885aa16640b71d43038746d3702b05
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f0a78bab6bbe7ddfd431e8e12bfe1ca9c9143143
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260859"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646090"
 ---
 # <a name="deploying-wcf-applications-with-clickonce"></a>ClickOnce를 사용하여 WCF 애플리케이션 배포
 

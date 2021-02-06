@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 3392-TransactionScopeCreate'
 title: 3392 - TransactionScopeCreate
 ms.date: 03/30/2017
 ms.assetid: 2b6257a6-683b-4adc-aca5-6d095e4c03a0
-ms.openlocfilehash: 8466396d45e73205c0a51d07af3c7ae1bad014e3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 564e3a594faffd72d3de3d87c196fd4108551a7d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247631"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644920"
 ---
 # <a name="3392---transactionscopecreate"></a>3392 - TransactionScopeCreate
 
@@ -20,7 +21,7 @@ ms.locfileid: "96247631"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 TransactionScope가 생성될 때 내보내집니다.  
   

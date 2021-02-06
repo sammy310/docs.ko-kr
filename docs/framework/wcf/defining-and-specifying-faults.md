@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 오류 정의 및 지정'
 title: 오류 정의 및 지정
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 67096c4531d13bc66f584c09c458c0a5a2a41c6b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cf8c4dafaf3958cbb0be6fd096049d13f70685bd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260905"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646116"
 ---
 # <a name="defining-and-specifying-faults"></a>오류 정의 및 지정
 

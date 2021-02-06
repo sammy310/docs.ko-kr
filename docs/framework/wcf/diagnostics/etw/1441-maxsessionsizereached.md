@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 1441-MaxSessionSizeReached'
 title: 1441 - MaxSessionSizeReached
 ms.date: 03/30/2017
 ms.assetid: ccf51232-cdbc-4004-a4b9-aed0c256dfe4
-ms.openlocfilehash: 5c533ff3010977a0b5983a119ce4c627b8cb9ca7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0e330f3493719c50bd65b674557dd00217d236d5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285072"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645258"
 ---
 # <a name="1441---maxsessionsizereached"></a>1441 - MaxSessionSizeReached
 
@@ -20,7 +21,7 @@ ms.locfileid: "96285072"
 |Level|경고|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 최대 세션 크기에 도달하면 내보내집니다.  
   

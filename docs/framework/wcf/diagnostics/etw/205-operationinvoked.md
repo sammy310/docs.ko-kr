@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 205-OperationInvoked'
 title: 205 - OperationInvoked
 ms.date: 03/30/2017
 ms.assetid: 9c8d6c90-dfa5-4ae0-a589-96679a8fb3ba
-ms.openlocfilehash: c36294a4a430c3e372e8213246e85dba45ce03c8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 09afe4c29c5f56b06bbf524dd13d88ddf2319063
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286021"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644972"
 ---
 # <a name="205---operationinvoked"></a>205 - OperationInvoked
 
@@ -20,7 +21,7 @@ ms.locfileid: "96286021"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 서비스 모델의 기본 `OperationInvoker`가 메서드에 대한 호출을 시작하기 바로 전에 내보내집니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96286021"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |메서드 이름|`xs:string`|`OperationInvoker`의 호출을 받은 메서드의 CLR 이름입니다.|  
 |호출자 정보|`xs:string`|'IPAddress:PortNumber' 형식으로 된 클라이언트의 IP 주소와 포트 번호입니다. 이 두 값은 작업 컨텍스트 내의 'System.ServiceModel.Channels.RemoteEndpointMessageProperty' 메시지 속성에서 검색됩니다. 비 TCP 바인딩의 경우 이 값은 `null`입니다.|  

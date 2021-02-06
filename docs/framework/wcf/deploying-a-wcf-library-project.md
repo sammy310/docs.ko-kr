@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: WCF 라이브러리 프로젝트 배포'
 title: WCF 라이브러리 프로젝트 배포
 ms.date: 03/30/2017
 ms.assetid: 9f9222fe-d358-443c-9a49-12c5498e35e7
-ms.openlocfilehash: e3a90f03639a888b4528a1962a24b7adc5d43c58
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1476f564e3e341c77ab9ba4e4281d6f242a735cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260892"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646103"
 ---
 # <a name="deploying-a-wcf-library-project"></a>WCF 라이브러리 프로젝트 배포
 

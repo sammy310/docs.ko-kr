@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 1439-PendingAcceptsAtZero'
 title: 1439 - PendingAcceptsAtZero
 ms.date: 03/30/2017
 ms.assetid: a57d550d-70f5-4f63-9ba7-e0f666b8f0ac
-ms.openlocfilehash: b5b17803274779491a2806ab960026cc1af16f98
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 13515e372dd54a61c283bf41154e5b49f9a81133
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241137"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645271"
 ---
 # <a name="1439---pendingacceptsatzero"></a>1439 - PendingAcceptsAtZero
 
@@ -20,7 +21,7 @@ ms.locfileid: "96241137"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 보류 중인 수락 항목이 없는 경우에 내보내집니다.  
   

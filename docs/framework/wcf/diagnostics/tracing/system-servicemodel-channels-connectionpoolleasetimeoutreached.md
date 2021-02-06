@@ -1,19 +1,20 @@
 ---
+description: ConnectionPoolLeaseTimeoutReached에 대해 자세히 알아보세요.
 title: System.ServiceModel.Channels.ConnectionPoolLeaseTimeoutReached
 ms.date: 03/30/2017
 ms.assetid: bba612da-25ab-4051-916a-c0fba1ae6189
-ms.openlocfilehash: a9241ae96f9dc3cd3a0e7746c2209562405a5001
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6c9bee350b301ea5f9de145e3c4e1eaa5be07777
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286853"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644595"
 ---
 # <a name="systemservicemodelchannelsconnectionpoolleasetimeoutreached"></a>System.ServiceModel.Channels.ConnectionPoolLeaseTimeoutReached
 
 System.ServiceModel.Channels.ConnectionPoolLeaseTimeoutReached  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  연결이 이 연결 풀의 연결 대여 시간 제한을 초과했으므로 닫혔습니다.  
   

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 서비스 배포'
 title: 서비스 배포
 ms.date: 03/30/2017
 ms.assetid: ac361bfb-017d-4da9-a2d7-fc0fb72d65bb
-ms.openlocfilehash: 07bd2a3938f238336dc00fa2e0826a28a9363a4a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6a0b1d88410b865f57cd1eb16f070842a75ddb07
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294809"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645999"
 ---
 # <a name="deploying-services"></a>서비스 배포
 
