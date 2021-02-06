@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Select 절 (Visual Basic)'
 title: Select 절
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: d96423efbee075a7ad257df72471c71e38e09b63
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 029778ce8262a93eee9a69843579523e8434eb01
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875749"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653578"
 ---
 # <a name="select-clause-visual-basic"></a>Select 절 (Visual Basic)
 
 쿼리 결과를 정의 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]  
@@ -55,7 +56,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
  [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic의 LINQ 소개](../../programming-guide/language-features/linq/introduction-to-linq.md)
 - [쿼리](index.md)

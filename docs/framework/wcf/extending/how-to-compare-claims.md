@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 클레임 비교'
 title: '방법: 클레임 비교'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: 29254bd661e72b926b21695ccb646480c53b5475
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c2088ad3992852bdc12e7bcd71d5f3598a237b45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797105"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653851"
 ---
 # <a name="how-to-compare-claims"></a>방법: 클레임 비교
 
@@ -31,7 +32,7 @@ WCF (Windows Communication Foundation)의 Id 모델 인프라는 권한 부여 �
 [!code-csharp[c_CustomClaimComparison#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#4)]
 [!code-vb[c_CustomClaimComparison#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#4)]
 
-이 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 메서드의 비교 코드는를 반환 `true`하며, `example\someone` 이 경우는 "someone@example.com"와 동일한 도메인 사용자를 식별 합니다.
+이 메서드의 비교 코드는 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 를 반환 하며 `true` ,이 경우는 `example\someone` ""와 동일한 도메인 사용자를 식별 someone@example.com 합니다.
 
 사용자 지정 클레임 형식도 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 메서드를 통해 비교할 수 있습니다. 하지만 클레임의 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 속성에 의해 반환된 형식이 기본 형식이 아닌 경우에는 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 속성에 의해 반환된 값이 `true` 메서드별로 같을 경우에만 `Resource`에서 <xref:System.IdentityModel.Claims.Claim.Equals%2A>를 반환합니다. 이러한 사항이 적합하지 않은 경우 필요한 사용자 지정 처리 작업을 수행하려면, `Resource` 속성에 의해 반환된 사용자 지정 형식을 통해 <xref:System.IdentityModel.Claims.Claim.Equals%2A> 및 <xref:System.Object.GetHashCode%2A> 메서드를 재정의해야 합니다.
 
@@ -72,7 +73,7 @@ WCF (Windows Communication Foundation)의 Id 모델 인프라는 권한 부여 �
 [!code-csharp[c_CustomClaimComparison#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#0)]
 [!code-vb[c_CustomClaimComparison#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#0)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [ID 모델을 사용하여 클레임 및 권한 부여 관리](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [방법: 사용자 지정 클레임 만들기](how-to-create-a-custom-claim.md)

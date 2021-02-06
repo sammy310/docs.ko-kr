@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: <httpListener> 요소 (네트워크 설정)'
 title: <httpListener> 요소(네트워크 설정)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: 78526559164939667eab8848bc5fd2af6749d474
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 18c139ad7767370ecd3a4116e352b7614914d199
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195443"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652863"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener> 요소(네트워크 설정)
 
@@ -18,7 +19,7 @@ ms.locfileid: "91195443"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<httpListener>**
 
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <httpListener  
@@ -26,7 +27,7 @@ ms.locfileid: "91195443"
 />  
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
 
@@ -111,9 +112,9 @@ ms.locfileid: "91195443"
   
  요청을 보낸 사람의 의도 아닙니다.  
   
- **UnescapeRequestUrl** 특성이 **false**로 설정 된 경우에서 <xref:System.Net.HttpListener> 요청을 받으면에서 `http.sys` 속성에 대 한 입력으로 변환 된 uri 대신 원시 uri를 사용 합니다 <xref:System.Net.HttpListenerRequest.Url%2A> .  
+ **UnescapeRequestUrl** 특성이 **false** 로 설정 된 경우에서 <xref:System.Net.HttpListener> 요청을 받으면에서 `http.sys` 속성에 대 한 입력으로 변환 된 uri 대신 원시 uri를 사용 합니다 <xref:System.Net.HttpListenerRequest.Url%2A> .  
   
- **UnescapeRequestUrl** 특성의 기본값은 **true**입니다.  
+ **UnescapeRequestUrl** 특성의 기본값은 **true** 입니다.  
   
  <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A>속성을 사용 하 여 적용 가능한 구성 파일에서 **unescapeRequestUrl** 특성의 현재 값을 가져올 수 있습니다.  
   

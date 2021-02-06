@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 응용 프로그램 설정 스키마'
 title: 응용 프로그램 설정 스키마
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-ms.openlocfilehash: fc9cd8ac3819c6a02019c871e7bd45ceb4c2cef7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 24c5771e9d98d07bbdc8dab5fce0f1535bc9b582
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552312"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652902"
 ---
 # <a name="application-settings-schema"></a>응용 프로그램 설정 스키마
 
@@ -22,7 +23,7 @@ ms.locfileid: "90552312"
 
 응용 프로그램 설정은 사용 하는 구성 파일의 일부로 다음 요소를 정의 합니다.
 
-| 요소                    | Description                                                                           |
+| 요소                    | 설명                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
 | **\<applicationSettings>** | **\<setting>** 응용 프로그램과 관련 된 모든 태그를 포함 합니다.                         |
 | **\<userSettings>**        | **\<setting>** 현재 사용자와 관련 된 모든 태그를 포함 합니다.                        |
@@ -41,10 +42,10 @@ ms.locfileid: "90552312"
 
 이 요소는 설정을 정의 합니다. 여기에는 다음과 같은 특성이 있습니다.
 
-| attribute        | Description |
+| attribute        | 설명 |
 | ---------------- | ----------- |
 | **name**         | 필수 사항입니다. 설정의 고유 ID입니다. Visual Studio를 통해 만든 설정은 이름으로 저장 됩니다 `ProjectName.Properties.Settings` . |
-| **serializeAs** | 필수 요소. 값을 텍스트로 직렬화 하는 데 사용할 형식입니다. 유효한 값은 다음과 같습니다.<br><br>- `string`. 값은을 사용 하 여 문자열로 serialize 됩니다 <xref:System.ComponentModel.TypeConverter> .<br>- `xml`. 값은 XML 직렬화를 사용 하 여 serialize 됩니다.<br>- `binary`. 이 값은 이진 serialization을 사용 하 여 텍스트 인코딩 이진으로 serialize 됩니다.<br />- `custom`. 설정 공급자는이 설정에 대 한 기본적인 지식을 갖고 있으며 직렬화 및 역직렬화 합니다. |
+| **serializeAs** | 필수 사항입니다. 값을 텍스트로 직렬화 하는 데 사용할 형식입니다. 유효한 값은 다음과 같습니다.<br><br>- `string`. 값은을 사용 하 여 문자열로 serialize 됩니다 <xref:System.ComponentModel.TypeConverter> .<br>- `xml`. 값은 XML 직렬화를 사용 하 여 serialize 됩니다.<br>- `binary`. 이 값은 이진 serialization을 사용 하 여 텍스트 인코딩 이진으로 serialize 됩니다.<br />- `custom`. 설정 공급자는이 설정에 대 한 기본적인 지식을 갖고 있으며 직렬화 및 역직렬화 합니다. |
 
 ## <a name="value-element"></a>\<value> 요소
 
@@ -88,7 +89,7 @@ ms.locfileid: "90552312"
 </configuration>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [애플리케이션 설정 개요](/dotnet/desktop/winforms/advanced/application-settings-overview)
 - [애플리케이션 설정 아키텍처](/dotnet/desktop/winforms/advanced/application-settings-architecture)

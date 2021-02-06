@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Let 절 (Visual Basic)'
 title: Let 절
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: a6ff3fc80a2b6752c61a8b8f7d4ce62b5a46baad
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 88a7d96bb790a1e6ec5adfa4337c51f807930168
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869884"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653643"
 ---
 # <a name="let-clause-visual-basic"></a>Let 절(Visual Basic)
 
 값을 계산 하 여 쿼리 내의 새 변수에 할당 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Let variable = expression [, ...]  
@@ -44,7 +45,7 @@ Let variable = expression [, ...]
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic의 LINQ 소개](../../programming-guide/language-features/linq/introduction-to-linq.md)
 - [쿼리](index.md)

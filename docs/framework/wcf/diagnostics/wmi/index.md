@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 진단에 WMI(Windows Management Instrumentation) 사용'
 title: 진단에 Windows Management Instrumentation 사용
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: cb015096f9e7cb815e5bd4e4e5487c03fea49bc8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 508422e8e060e608032d7ed22c5736c56c838f10
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267938"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653877"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>진단에 Windows Management Instrumentation 사용
 

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Take 절 (Visual Basic)'
 title: Take 절
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: f2377d8d1635912885a310b2b0429a6a00083b47
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6542d262490d9d4acff893b2a99ffb60dd1446a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869680"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653539"
 ---
 # <a name="take-clause-visual-basic"></a>Take 절 (Visual Basic)
 
 컬렉션의 시작 위치에서 지정된 수의 연속 요소를 반환합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Take count  
@@ -46,7 +47,7 @@ Take count
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic의 LINQ 소개](../../programming-guide/language-features/linq/introduction-to-linq.md)
 - [쿼리](index.md)

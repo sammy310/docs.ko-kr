@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: <> 요소 (캐시 설정)'
 title: <system.runtime.caching> 요소(캐시 설정)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - system.runtime.caching element
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
-ms.openlocfilehash: df4887c8801dcf8af06b3826673a03cbc7dbc9b5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 602d863caedef5c1334948b25b0caa2b0e35f685
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153856"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652733"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<system.runtime.caching> 요소(캐시 설정)
 
@@ -38,13 +39,13 @@ ms.locfileid: "79153856"
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<memoryCache>](memorycache-element-cache-settings.md)|<xref:System.Runtime.Caching.MemoryCache> 클래스를 기반으로 하는 캐시 구성에 사용되는 요소를 정의합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<configuration>](../configuration-element.md)|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용 하는 모든 구성 파일의 루트 요소를 지정 합니다.|  
   
@@ -78,4 +79,4 @@ ms.locfileid: "79153856"
   
 ## <a name="see-also"></a>참고 항목
 
-- [\<memoryCache>요소 (캐시 설정)](memorycache-element-cache-settings.md)
+- [\<memoryCache> 요소 (캐시 설정)](memorycache-element-cache-settings.md)

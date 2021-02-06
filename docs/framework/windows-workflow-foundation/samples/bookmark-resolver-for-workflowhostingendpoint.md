@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: WorkflowHostingEndpoint에 대 한 책갈피 확인자'
 title: WorkflowHostingEndpoint에 대한 책갈피 확인자
 ms.date: 03/30/2017
 ms.assetid: 97fd5816-935e-4625-ad04-e6f6befa07de
-ms.openlocfilehash: 6bcf1c1ac7c0ac9e385c4259ba085ab63afd7cfa
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fc2a21a33560452b141069e88b4d7ff816712d96
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96274610"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653812"
 ---
 # <a name="bookmark-resolver-for-workflowhostingendpoint"></a>WorkflowHostingEndpoint에 대한 책갈피 확인자
 
@@ -31,7 +32,7 @@ ms.locfileid: "96274610"
   
 1. 솔루션을 빌드합니다.  
   
-2. 애플리케이션을 실행합니다. 워크플로 인스턴스를 만들 때 인스턴스 ID를 포함하는 메시지가 `CreationEndpoint` 콘솔에 표시됩니다. "Hello World!" 메시지 워크플로 인스턴스에 의해 인쇄 됩니다.  
+2. 애플리케이션을 실행합니다. 워크플로 인스턴스를 만들 때 인스턴스 ID를 포함하는 메시지가 `CreationEndpoint` 콘솔에 표시됩니다. "헬로 월드!" 메시지 워크플로 인스턴스에 의해 인쇄 됩니다.  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

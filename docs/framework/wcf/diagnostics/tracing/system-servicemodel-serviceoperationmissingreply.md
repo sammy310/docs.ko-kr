@@ -1,19 +1,20 @@
 ---
+description: ServiceOperationMissingReply에 대해 자세히 알아보세요.
 title: System.ServiceModel.ServiceOperationMissingReply
 ms.date: 03/30/2017
 ms.assetid: 734d1cac-9f9c-472c-bcf7-bed23454c82c
-ms.openlocfilehash: 669a0510ba9213ff2383154435a1c8efab0bbef7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 546fdc1a393d9b3e39b8ccdc761503c0ea382fce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96270005"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99654098"
 ---
 # <a name="systemservicemodelserviceoperationmissingreply"></a>System.ServiceModel.ServiceOperationMissingReply
 
 System.ServiceModel.ServiceOperationMissingReply  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  요청/회신 작업에 회신 메시지가 없습니다.  
   
