@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 4028-PipeTransportListenerListeningStart'
 title: 4028 - PipeTransportListenerListeningStart
 ms.date: 03/30/2017
 ms.assetid: 75f83342-09bc-4ab5-b363-01b3cebcc821
-ms.openlocfilehash: 9b407c2a00fd57c0a4bec3f25e16242d71e1836d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7cb140ec130e5f32b7f4ccb80c1223c9b2be1940
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238368"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99656451"
 ---
 # <a name="4028---pipetransportlistenerlisteningstart"></a>4028 - PipeTransportListenerListeningStart
 
@@ -20,7 +21,7 @@ ms.locfileid: "96238368"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 파이프 전송 수신기의 수신이 시작될 때 내보내집니다.  
   

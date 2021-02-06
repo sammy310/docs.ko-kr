@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 4022-WebhostUnregisterProtocolFailed'
 title: 4022 - WebhostUnregisterProtocolFailed
 ms.date: 03/30/2017
 ms.assetid: cdebf42c-d880-4509-82be-8fdc9f88d203
-ms.openlocfilehash: 0a171e577819d9b07a25fabade50014db071ee9b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 776dc97f51853813afbaf23ed128bb9c0c47fb53
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266807"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99656646"
 ---
 # <a name="4022---webhostunregisterprotocolfailed"></a>4022 - WebhostUnregisterProtocolFailed
 
@@ -17,10 +18,10 @@ ms.locfileid: "96266807"
 |-|-|  
 |ID|4022|  
 |키워드|ActivationServices|  
-|Level|오류|  
+|Level|Error|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 웹 호스트 등록 취소 프로토콜이 실패할 경우 내보내집니다.  
   

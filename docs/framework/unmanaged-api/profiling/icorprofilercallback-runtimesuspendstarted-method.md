@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerCallback:: RuntimeSuspendStarted 메서드'
 title: ICorProfilerCallback::RuntimeSuspendStarted 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8461cac-e31b-4efa-ad2c-26598173eb96
 topic_type:
 - apiref
-ms.openlocfilehash: b778088f53a3c49def95d715f5fefcb26af81489
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7f7ba6a2a8523589b025d98ea925b77d05d8a59d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731984"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657426"
 ---
 # <a name="icorprofilercallbackruntimesuspendstarted-method"></a>ICorProfilerCallback::RuntimeSuspendStarted 메서드
 
@@ -52,7 +53,7 @@ HRESULT RuntimeSuspendStarted(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [RuntimeSuspendAborted 메서드](icorprofilercallback-runtimesuspendaborted-method.md)

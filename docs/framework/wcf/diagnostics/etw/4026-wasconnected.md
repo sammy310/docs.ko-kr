@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 4026-WasConnected'
 title: 4026 - WasConnected
 ms.date: 03/30/2017
 ms.assetid: e0ba2cbf-28cf-4b8b-b40b-bfdb8a77afa0
-ms.openlocfilehash: bc529a0821d6ce458fd5cf775d67ee1d093800b0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d0ec93c3d039e1d13ef6414e018226c89eab5886
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242463"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99656490"
 ---
 # <a name="4026---wasconnected"></a>4026 - WasConnected
 
@@ -20,7 +21,7 @@ ms.locfileid: "96242463"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 Windows Activation Service가 연결될 때 내보내집니다.  
   

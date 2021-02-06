@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: 열거형 COR_PRF_MONITOR'
 title: COR_PRF_MONITOR 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9294d702-b4e5-441c-a930-e63d27b86bfd
 topic_type:
 - apiref
-ms.openlocfilehash: e5e850e2464c310697c1cd1797d2207958591907
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5b0bd17713e47e40982e88f33721bf7d6d27fd00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696871"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657792"
 ---
 # <a name="cor_prf_monitor-enumeration"></a>COR_PRF_MONITOR 열거형
 
@@ -98,7 +99,7 @@ typedef enum {
 } COR_PRF_MONITOR;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
 
  다음 섹션에서는 `COR_PRF_MONITOR` 범주별로 열거형 멤버를 나열 합니다. 범주는 다음과 같습니다.  
   
@@ -135,7 +136,7 @@ typedef enum {
 |`COR_PRF_MONITOR_CLR_EXCEPTIONS`|`ExceptionCLRCatcher*` [ICorProfilerCallback](icorprofilercallback-interface.md) 인터페이스에서 콜백을 제어 합니다.|  
 |`COR_PRF_MONITOR_CODE_TRANSITIONS`|[ICorProfilerCallback](icorprofilercallback-interface.md) 인터페이스에서 [UnmanagedToManagedTransition](icorprofilercallback-unmanagedtomanagedtransition-method.md) 및 [managedtounmanagedtransition](icorprofilercallback-managedtounmanagedtransition-method.md) 콜백을 제어 합니다.|  
 |`COR_PRF_MONITOR_ENTERLEAVE`|`FunctionEnter*`, `FunctionLeave*` 및 `FunctionTailCall*` [프로 파일링 전역 정적 함수](profiling-global-static-functions.md)를 제어 합니다.|  
-|`COR_PRF_MONITOR_EXCEPTIONS`|ICorProfilerCallback 인터페이스에서 [exceptionthrown](icorprofilercallback-exceptionthrown-method.md) 된 콜백과 `ExceptionSearch*` , `ExceptionOSHandler*` , `ExceptionUnwind*` 및 `ExceptionCatcher*` 콜백을 [ICorProfilerCallback](icorprofilercallback-interface.md) 제어 합니다.|  
+|`COR_PRF_MONITOR_EXCEPTIONS`|ICorProfilerCallback 인터페이스에서 [exceptionthrown](icorprofilercallback-exceptionthrown-method.md) 된 콜백과 `ExceptionSearch*` , `ExceptionOSHandler*` , `ExceptionUnwind*` 및 `ExceptionCatcher*` 콜백을 [](icorprofilercallback-interface.md) 제어 합니다.|  
 |`COR_PRF_MONITOR_FUNCTION_UNLOADS`|[ICorProfilerCallback](icorprofilercallback-interface.md) 인터페이스에서 [FunctionUnloadStarted](icorprofilercallback-functionunloadstarted-method.md) 콜백을 제어 합니다.|  
 |`COR_PRF_MONITOR_GC`|인터페이스에서 [GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md),   [GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md),  [movedreferences](icorprofilercallback-movedreferences-method.md), [MovedReferences2](icorprofilercallback4-movedreferences2-method.md),    [SurvivingReferences](icorprofilercallback2-survivingreferences-method.md),  [SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md),   [ObjectsAllocatedByClass](icorprofilercallback-objectsallocatedbyclass-method.md),  [rootreferences](icorprofilercallback-rootreferences-method.md), [RootReferences2](icorprofilercallback2-rootreferences2-method.md), [HandleCreated](icorprofilercallback2-handlecreated-method.md),  [handledestroyed](icorprofilercallback2-handledestroyed-method.md)및 [FinalizeableObjectQueued](icorprofilercallback2-finalizeableobjectqueued-method.md) 콜백을 제어 합니다 `ICorProfilerCallback*` . `COR_PRF_MONITOR_GC`이 할당 되 면 동시 가비지 수집이 꺼집니다.|  
 |`COR_PRF_MONITOR_JIT_COMPILATION`|`JITCompilation*` [ICorProfilerCallback](icorprofilercallback-interface.md) 인터페이스에서, [JITFunctionPitched](icorprofilercallback-jitfunctionpitched-method.md)및 [JITInlining](icorprofilercallback-jitinlining-method.md) 콜백을 제어 합니다.|  
@@ -153,7 +154,7 @@ typedef enum {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`COR_PRF_ENABLE_FRAME_INFO`|`ClassID`FunctionEnter2 콜백에서 반환 된 값으로 [GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 메서드를 호출 하 여 제네릭 함수에 대해 정확한를 검색할 수 있도록 합니다 `COR_PRF_FRAME_INFO` . [FunctionEnter2](functionenter2-function.md)|  
+|`COR_PRF_ENABLE_FRAME_INFO`|`ClassID`FunctionEnter2 콜백에서 반환 된 값으로 [GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 메서드를 호출 하 여 제네릭 함수에 대해 정확한를 검색할 수 있도록 합니다 `COR_PRF_FRAME_INFO` . [](functionenter2-function.md)|  
 |`COR_PRF_ENABLE_FUNCTION_ARGS`|[FunctionEnter2](functionenter2-function.md) Callback 또는 [FunctionEnter3WithInfo](functionenter3withinfo-function.md) callback 및 [GetFunctionEnter3Info](icorprofilerinfo3-getfunctionenter3info-method.md) 메서드를 사용 하 여 인수 추적을 사용 하도록 설정 합니다.|  
 |`COR_PRF_ENABLE_FUNCTION_RETVAL`|[FunctionLeave2](functionleave2-function.md) Callback 또는 [FunctionLeave3WithInfo](functionleave3withinfo-function.md) callback 및 [GetFunctionLeave3Info](icorprofilerinfo3-getfunctionleave3info-method.md) 메서드를 사용 하 여 반환 값을 추적할 수 있습니다.|  
 |`COR_PRF_ENABLE_INPROC_DEBUGGING`|더 이상 사용되지 않습니다.<br /><br /> 프로세스 내 디버깅은 지원되지 않습니다. 이 플래그는 아무런 영향을 주지 않습니다.|  
@@ -200,7 +201,7 @@ typedef enum {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 열거형](profiling-enumerations.md)
 - [GetEventMask 메서드](icorprofilerinfo-geteventmask-method.md)

@@ -1,19 +1,20 @@
 ---
+description: '다음에 대 한 자세한 정보: 끝점: 보안 유효성 검사 및 인증 실패 수/초'
 title: '엔드포인트: Security Validation and Authentication Failures Per Second'
 ms.date: 03/30/2017
 ms.assetid: 89a70b90-d7e4-4b03-9b84-4dc88ce3d605
-ms.openlocfilehash: b2c5022caa5abe6154a3cb4dd4281dd212599b74
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: aa5ccc4049dc81a7c2d545cfc70e9078ac72d87a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96256484"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99655437"
 ---
 # <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>엔드포인트: Security Validation and Authentication Failures Per Second
 
 카운터 이름: Security Validation and Authentication Failures Per Second  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 카운터는 "Security Calls Not Authorized" 카운터로 처리되지 않는 보안 문제 때문에 메시지가 거부될 때마다 증가합니다. 이러한 문제는 다음과 같습니다.  
   

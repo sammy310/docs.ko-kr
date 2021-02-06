@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: MissingNecessaryEnhancedKeyUsage'
 title: MissingNecessaryEnhancedKeyUsage
 ms.date: 03/30/2017
 ms.assetid: 9dffd071-0b79-4e10-9027-06760b4cc3ca
-ms.openlocfilehash: af624fe0440a0eb9cd8aa8fb8995dc8530a9a767
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 518eb9dd0e9f5dbd9b6764ebe0895f69362838b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96278650"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99655970"
 ---
 # <a name="missingnecessaryenhancedkeyusage"></a>MissingNecessaryEnhancedKeyUsage
 
@@ -17,7 +18,7 @@ Id: 157
   
  범주: TransactionBridge  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 특정 주체 이름 및 지문의 ID 인증서가 자체 EnhancedKeyUsage의 특정 데이터를 제공하지 않음을 나타냅니다. 이 이벤트는 프로세스 이름과 프로세스 ID를 표시합니다.  
   

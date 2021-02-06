@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerCallback:: RuntimeThreadResumed 메서드'
 title: ICorProfilerCallback::RuntimeThreadResumed 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da984f89-4f53-4ab0-ae6f-3e2ee6085994
 topic_type:
 - apiref
-ms.openlocfilehash: 0996d7eb5b7354a67106ec7aa8818d5e4d46232e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a01be057bb442c69890d3b1cb4ebe1f861d2518c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717269"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657348"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>ICorProfilerCallback::RuntimeThreadResumed 메서드
 
@@ -48,7 +49,7 @@ HRESULT RuntimeThreadResumed(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [RuntimeThreadSuspended 메서드](icorprofilercallback-runtimethreadsuspended-method.md)
