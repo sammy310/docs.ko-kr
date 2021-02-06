@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugManagedCallback2:: MDANotification 메서드'
 title: ICorDebugManagedCallback2::MDANotification 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 93f79627-bd31-4f4f-b95d-46a032a52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: 09a410f54ddf07c9a5f6bb7dd34f2aaf266e0734
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3f0c69c13ec30e604e07c284adca05f86283a5cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704580"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650497"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification 메서드
 
@@ -73,7 +74,7 @@ HRESULT MDANotification(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [ICorDebugManagedCallback2 인터페이스](icordebugmanagedcallback2-interface.md)
