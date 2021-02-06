@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugSymbolProvider:: GetMethodLocalSymbols 메서드'
 title: ICorDebugSymbolProvider::GetMethodLocalSymbols 메서드
 ms.date: 03/30/2017
 ms.assetid: 8b989e38-e779-49d1-9e90-f1f920484b08
-ms.openlocfilehash: c5a21436c939ddfca0219618efe64d9e0e40aef4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f4eaac208d98b25ae4a53acfd977d354c6f6ac1b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730853"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659818"
 ---
 # <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a>ICorDebugSymbolProvider::GetMethodLocalSymbols 메서드
 
@@ -53,7 +54,7 @@ HRESULT GetMethodLocalSymbols(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [GetMethodParameterSymbols 메서드](icordebugsymbolprovider-getmethodparametersymbols-method.md)
 - [ICorDebugSymbolProvider 인터페이스](icordebugsymbolprovider-interface.md)

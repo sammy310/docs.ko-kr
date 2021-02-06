@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugSymbolProvider:: GetStaticFieldSymbols 메서드'
 title: ICorDebugSymbolProvider::GetStaticFieldSymbols 메서드
 ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
-ms.openlocfilehash: 09e68c751da6500c5580f4945e8dd1c486a09217
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e95f77be86ef88a73ca4c833b242617a0d405e21
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698665"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659710"
 ---
 # <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider::GetStaticFieldSymbols 메서드
 
@@ -57,7 +58,7 @@ HRESULT GetStaticFieldSymbols(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [GetInstanceFieldSymbols 메서드](icordebugsymbolprovider-getinstancefieldsymbols-method.md)
 - [ICorDebugSymbolProvider 인터페이스](icordebugsymbolprovider-interface.md)
