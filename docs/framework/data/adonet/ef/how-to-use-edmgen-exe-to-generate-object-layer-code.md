@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: EdmGen.exe를 사용 하 여 Object-Layer 코드 생성'
 title: '방법: EdmGen.exe를 사용하여 개체 계층 코드 생성'
 ms.date: 03/30/2017
 ms.assetid: c44d2ebe-f66f-42cb-9741-4a3f0c2dcffb
-ms.openlocfilehash: a243a588dcb6f7e7001de331cb9011a23ee2fdbe
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1c1f614247f10c8819709b9494fb1ec04271b634
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198225"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697467"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a>방법: EdmGen.exe를 사용하여 개체 계층 코드 생성
 

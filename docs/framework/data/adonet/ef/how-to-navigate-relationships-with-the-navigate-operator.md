@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 방법: Navigate 연산자를 사용 하 여 관계 탐색'
 title: '방법: 탐색 연산자로 관계 탐색'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 79996d2d-9b03-4a9d-82cc-7c5e7c2ad93d
-ms.openlocfilehash: 7d0dbb590555f3e525cd328e4f4b0ad3584f108b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ff419a959c2ec895a238d37caeedcf1f06812050
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198251"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697532"
 ---
 # <a name="how-to-navigate-relationships-with-the-navigate-operator"></a>방법: 탐색 연산자로 관계 탐색
 
@@ -27,7 +28,7 @@ ms.locfileid: "91198251"
   
 ## <a name="example"></a>예제  
 
- 다음 예에서는 Navigate 연산자를 사용 하 여에서 관계를 탐색 하는 방법을 보여 줍니다 [!INCLUDE[esql](../../../../../includes/esql-md.md)] . [NAVIGATE](./language-reference/navigate-entity-sql.md) `Navigate`연산자는 엔터티 인스턴스, 관계 형식, 관계 끝 및 관계 시작과 같은 매개 변수를 사용 합니다. 필요에 따라 엔터티의 인스턴스와 관계 유형만 연산자에 전달할 수 있습니다 `Navigate` .  
+ 다음 예에서는 Navigate 연산자를 사용 하 여에서 관계를 탐색 하는 방법을 보여 줍니다 [!INCLUDE[esql](../../../../../includes/esql-md.md)] . [](./language-reference/navigate-entity-sql.md) `Navigate`연산자는 엔터티 인스턴스, 관계 형식, 관계 끝 및 관계 시작과 같은 매개 변수를 사용 합니다. 필요에 따라 엔터티의 인스턴스와 관계 유형만 연산자에 전달할 수 있습니다 `Navigate` .  
   
  [!code-csharp[DP EntityServices Concepts#NavigateWithNavOperatorWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#navigatewithnavoperatorwithentitycommand)]
  [!code-vb[DP EntityServices Concepts#NavigateWithNavOperatorWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#navigatewithnavoperatorwithentitycommand)]  

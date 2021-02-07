@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 방법: EdmGen.exe를 사용 하 여 모델 및 매핑 파일 생성'
 title: '방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 생성'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 8837afd05eec0eaf8ef3e909d46b280e8ae05da7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b601e7dd3c108f4bf4966df2fabcf8324365fe3c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198186"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697415"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 생성
 

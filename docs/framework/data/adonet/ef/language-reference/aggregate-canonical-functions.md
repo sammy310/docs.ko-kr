@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 집계 정식 함수'
 title: 집계 정식 함수
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: 3f4bb84c45e503fc0018e7869f3b41ddab4581a6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e26888ac15553a592f7d2cb9b1a0941161115615
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251349"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697298"
 ---
 # <a name="aggregate-canonical-functions"></a>집계 정식 함수
 
@@ -25,9 +26,9 @@ null이 아닌 값의 평균을 반환합니다.
 
 `Int32`, `Int64`, `Double` 및 `Decimal`입니다.
 
-**반환 값**
+**Return Value**
 
-의 `expression`형식 이거나 `null` , 모든 입력 값이 `null` 값인 경우입니다.
+의 형식 `expression` 이거나, `null` 모든 입력 값이 값인 경우입니다 `null` .
 
 **예제**
 
@@ -40,9 +41,9 @@ null 값과 중복 값을 비롯한 집계의 크기를 반환합니다.
 
 **인수**
 
-모든 형식입니다.
+모든 유형입니다.
 
-**반환 값**
+**Return Value**
 
 `Int64`입니다.
 
@@ -57,9 +58,9 @@ null 값과 중복 값을 비롯한 집계의 크기를 반환합니다.
 
 **인수**
 
-모든 형식입니다.
+모든 유형입니다.
 
-**반환 값**
+**Return Value**
 
 `Int32`입니다.
 
@@ -76,9 +77,9 @@ null이 아닌 값의 최대값을 반환합니다.
 
 `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`입니다.
 
-**반환 값**
+**Return Value**
 
-의 `expression`형식 이거나 `null` , 모든 입력 값이 `null` 값인 경우입니다.
+의 형식 `expression` 이거나, `null` 모든 입력 값이 값인 경우입니다 `null` .
 
 **예제**
 
@@ -93,9 +94,9 @@ null이 아닌 값의 최소값을 반환합니다.
 
 `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`입니다.
 
-**반환 값**
+**Return Value**
 
-의 `expression`형식 이거나 `null` , 모든 입력 값이 `null` 값인 경우입니다.
+의 형식 `expression` 이거나, `null` 모든 입력 값이 값인 경우입니다 `null` .
 
 **예제**
 
@@ -110,7 +111,7 @@ null이 아닌 값의 표준 편차를 반환합니다.
 
 `Int32`, `Int64`, `Double`, `Decimal`입니다.
 
-**반환 값**
+**Return Value**
 
 `Double` 모든 입력 값이 `Null` 값인 경우 `null`입니다.
 
@@ -127,9 +128,9 @@ null이 아닌 값의 표준 편차를 반환합니다.
 
 `Int32`, `Int64`, `Double`, `Decimal`입니다.
 
-**반환 값**
+**Return Value**
 
-`null` 이거나 `Double` ,`null` 모든 입력 값이 값 이면입니다.
+`Double`이거나, `null` 모든 입력 값이 값 이면 `null` 입니다.
 
 **예제**
 
@@ -144,9 +145,9 @@ null이 아닌 값의 합계를 반환합니다.
 
 `Int32`, `Int64`, `Double`, `Decimal`입니다.
 
-**반환 값**
+**Return Value**
 
-`null` 이거나 `Double` ,`null` 모든 입력 값이 값 이면입니다.
+`Double`이거나, `null` 모든 입력 값이 값 이면 `null` 입니다.
 
 **예제**
 
@@ -161,9 +162,9 @@ null이 아닌 모든 값의 분산을 반환합니다.
 
 `Int32`, `Int64`, `Double`, `Decimal`입니다.
 
-**반환 값**
+**Return Value**
 
-`null` 이거나 `Double` ,`null` 모든 입력 값이 값 이면입니다.
+`Double`이거나, `null` 모든 입력 값이 값 이면 `null` 입니다.
 
 **예제**
 
@@ -178,9 +179,9 @@ null이 아닌 모든 값의 모집단에 대한 분산을 반환합니다.
 
 `Int32`, `Int64`, `Double`, `Decimal`입니다.
 
-**반환 값**
+**Return Value**
 
-`null` 이거나 `Double` ,`null` 모든 입력 값이 값 이면입니다.
+`Double`이거나, `null` 모든 입력 값이 값 이면 `null` 입니다.
 
 **예제**
 
@@ -226,6 +227,6 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 Transact-sql에서와 마찬가지로 그룹 기반 집계도 ALL 또는 DISTINCT 한정자를 지정할 수 있습니다. DISTINCT 한정자를 지정하면 집계가 계산되기 전에 집계 입력 컬렉션에서 중복 항목이 제거됩니다. ALL 한정자를 지정하거나 어떠한 한정자도 지정하지 않으면 중복 항목이 제거되지 않습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [정식 함수](canonical-functions.md)

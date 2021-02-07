@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: <diagnostics> 활성화'
 title: <diagnostics> 활성화
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: c16f32357d40b9b69d52c525ce8a395a3de8fdb1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: aa1529a478ac367ea89c8926571c6c6f2f57cf74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192323"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698364"
 ---
 # <a name="diagnostics-for-activation"></a>\<diagnostics> 활성화
 
@@ -17,7 +18,7 @@ WCF (Windows Communication Foundation) 수신기의 진단 기능을 구성 합�
 &nbsp;&nbsp;[**\<system.serviceModel.activation>**](system-servicemodel-activation.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<diagnostics>**  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <configuration>
@@ -27,7 +28,7 @@ WCF (Windows Communication Foundation) 수신기의 진단 기능을 구성 합�
 </configuration>
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
 
  `Type`  
   

@@ -1,14 +1,15 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <trackingProfile>
 title: <trackingProfile>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 154830ff-ddd3-4397-a3b5-5b334907777f
-ms.openlocfilehash: 8bf7798443e2022adef2738aad3e4e1b9846af53
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4e0973cb44f61340e6cec7497362627cdccbd494
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161999"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697987"
 ---
 # \<trackingProfile>
 
@@ -85,7 +86,7 @@ ms.locfileid: "91161999"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |name|추적 프로필의 이름을 지정하는 문자열입니다.|  
   

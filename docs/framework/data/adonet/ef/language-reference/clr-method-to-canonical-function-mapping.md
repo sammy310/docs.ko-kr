@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 내용: 정식 함수 매핑에 대 한 CLR 메서드'
 title: 정식 함수 매핑에 대한 CLR 메서드
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-ms.openlocfilehash: 6f14ad8d9e8f919fe820447cc991b102319b38d5
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3a082f0b9bce63330e113e6ae9f50d15d71ce727
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251221"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697077"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>정식 함수 매핑에 대한 CLR 메서드
 
@@ -40,17 +41,17 @@ LINQ 시나리오의 경우, Entity Framework에 대한 쿼리에서는 정식 �
 
 |System.String 메서드(인스턴스)|정식 함수|참고|
 |---------------------------------------|------------------------|-----------|
-|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|가 상수가 아니면 IndexOf (`this`, `value`) > 0으로 매핑됩니다. `value`|
-|Boolean EndsWith(String `value`)|`this` LIKE `'`%`value`'|`value`가 상수가 아니면 Right(`this`, length(`value`)) = `value`에 매핑됩니다.|
+|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|`value`가 상수가 아니면 IndexOf ( `this` , `value` ) > 0으로 매핑됩니다.|
+|Boolean EndsWith(String `value`)|`this`LIKE `'` % `value` '|`value`가 상수가 아니면 Right(`this`, length(`value`)) = `value`에 매핑됩니다.|
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|`value`가 상수가 아니면 IndexOf(`this`, `value`) = 1에 매핑됩니다.|
 |길이|Length(`this`)||
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||
 |System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||
-|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (substring (`this`, 1, `startIndex`), substring (`this`, `startIndex` `count` `this``count` + + 1, Length ()-(`startIndex`)))  + |Remove(`startIndex`, `count`)는 `count`가 0 이상의 정수인 경우에만 지원됩니다.|
+|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (substring ( `this` , 1, `startIndex` ), substring ( `this` , `startIndex`  +  `count` + 1, Length ( `this` )-( `startIndex`  +  `count` )))|Remove(`startIndex`, `count`)는 `count`가 0 이상의 정수인 경우에만 지원됩니다.|
 |System.String Replace(String `oldValue`, String `newValue`)|Replace(`this`, `oldValue`, `newValue`)||
 |System.String Substring(Int32 `startIndex`)|Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)||
-|System.String Substring(Int32 `startIndex`, Int32 `length`)|Substring(`this`, `startIndex` +1, `length`)||
+|System.String Substring(Int32 `startIndex`, Int32 `length`)|Substring ( `this` , `startIndex` + 1, `length` )||
 |System.String ToLower()|ToLower(`this`)||
 |System.String ToUpper()|ToUpper(`this`)||
 |System.String Trim()|Trim(`this`)||
@@ -67,11 +68,11 @@ LINQ 시나리오의 경우, Entity Framework에 대한 쿼리에서는 정식 �
 |System.DateTime.UtcNow|CurrentUtcDateTime()||
 |Boolean op_Equality(DateTime `d1`, DateTime `d2`)|= 연산자||
 |Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> 연산자||
-|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|> = 연산자||
+|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|>= 연산자||
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= 연산자||
-|부울 op_LessThan (datetime `t1`, datetime `t2`)|< 연산자||
-|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|< = 연산자||
-|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> DateInterval `Interval` 로 서의 ByVal\_<br /><br /> `DateValue` DateTime을 DateTime으로\_<br /><br /> 선택적 ByVal `FirstDayOfWeekValue` As FirstDayOfWeek = vbsunday,\_<br /><br /> 선택적 ByVal `FirstWeekOfYearValue` As FirstWeekOfYear = VbFirstJan1\_<br /><br /> ) As Integer||자세한 내용은 DatePart 함수 단원을 참조하세요.|
+|부울 op_LessThan (DateTime `t1` , datetime `t2` )|< 연산자||
+|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= 연산자||
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> `Interval`DateInterval로 서의 ByVal\_<br /><br /> `DateValue`DateTime을 DateTime으로\_<br /><br /> 선택적 ByVal `FirstDayOfWeekValue` As FirstDayOfWeek = VbSunday, \_<br /><br /> 선택적 ByVal `FirstWeekOfYearValue` As FirstWeekOfYear = VbFirstJan1 \_<br /><br /> ) As Integer||자세한 내용은 DatePart 함수 단원을 참조하세요.|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||
 |Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||
@@ -85,12 +86,12 @@ LINQ 시나리오의 경우, Entity Framework에 대한 쿼리에서는 정식 �
 |System.DateTime 메서드(인스턴스)|정식 함수|
 |-----------------------------------------|------------------------|
 |Boolean Equals(DateTime `value`)|= 연산자|
-|Day|Day(`this`)|
-|Hour|Hour(`this`)|
+|일|Day(`this`)|
+|시간|Hour(`this`)|
 |Millisecond|Millisecond(`this`)|
 |Minute|Minute(`this`)|
-|Month|Month(`this`)|
-|Second|Second(`this`)|
+|월|Month(`this`)|
+|초|Second(`this`)|
 |Year|Year(`this`)|
 
 ## <a name="systemdatetimeoffset-method-instance-mapping"></a>System.DateTimeOffset 메서드(인스턴스) 매핑
@@ -99,12 +100,12 @@ LINQ 시나리오의 경우, Entity Framework에 대한 쿼리에서는 정식 �
 
 |System.DateTimeOffset 메서드(인스턴스)|정식 함수|참고|
 |-----------------------------------------------|------------------------|-----------|
-|Day|Day(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
-|Hour|Hour(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
+|일|Day(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
+|시간|Hour(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
 |Millisecond|Millisecond(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
 |Minute|Minute(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
-|Month|Month(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
-|Second|Second(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
+|월|Month(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
+|초|Second(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
 |Year|Year(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
 
 > [!NOTE]
@@ -124,10 +125,10 @@ LINQ 시나리오의 경우, Entity Framework에 대한 쿼리에서는 정식 �
 
 |System.TimeSpan 메서드(인스턴스)|정식 함수|참고|
 |-----------------------------------------|------------------------|-----------|
-|시|Hour(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
+|시간|Hour(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
 |밀리초|Millisecond(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
 |분|Minute(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
-|Seconds|Second(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
+|초|Second(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
 
 > [!NOTE]
 > <xref:System.TimeSpan.Equals%2A> 메서드는 비교된 `true` 개체가 같으면 <xref:System.TimeSpan>를 반환하고, 그렇지 않으면 `false`를 반환합니다. <xref:System.TimeSpan.CompareTo%2A> 메서드는 비교된 <xref:System.TimeSpan> 개체가 같으면 0을 반환하고, 크면 1을 반환하고, 작으면 -1을 반환합니다.
@@ -201,6 +202,6 @@ LINQ 시나리오의 경우, Entity Framework에 대한 쿼리에서는 정식 �
 |------------|------------------------|
 |Guid.NewGuid()|NewGuid()|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [LINQ to Entities](linq-to-entities.md)

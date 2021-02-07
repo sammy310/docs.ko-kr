@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: &amp; &amp; (및) (Entity SQL)'
 title: '&amp;&amp; 하거나 (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
-ms.openlocfilehash: 86ff43f8ed20c5696d15e21284394c3cb63200e3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 14fc6bc3f58ac78cb9806a7f421db87bbad048ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198043"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697181"
 ---
 # <a name="ampamp-and-entity-sql"></a>&amp;&amp; 하거나 (Entity SQL)
 

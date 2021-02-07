@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <connectionPoolSettings><tcpTransport>'
 title: <tcpTransport>의 <connectionPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 53523fd550ecad931bfb2af5eb9beb71c60d44f8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 065d3529740714ffd740c2cec71832a7b386b4a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176008"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698390"
 ---
 # <a name="connectionpoolsettings-of-tcptransport"></a>\<tcpTransport>의 \<connectionPoolSettings>
 
@@ -62,7 +63,7 @@ TCP 전송에 대한 추가 연결 풀 설정을 지정합니다.
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [전송](../../../wcf/feature-details/transports.md)
 - [전송 선택](../../../wcf/feature-details/choosing-a-transport.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
