@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostCrst:: TryEnter 메서드'
 title: IHostCrst::TryEnter 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a922fa98-beab-4f09-a342-cc94fc65687f
 topic_type:
 - apiref
-ms.openlocfilehash: 02f36068f12bf0a40e5f0ac477803abfb84c72a9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 59c632b7c9edd422e2ceee1e0526a7bb077759a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729540"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708725"
 ---
 # <a name="ihostcrsttryenter-method"></a>IHostCrst::TryEnter 메서드
 
@@ -43,7 +44,7 @@ HRESULT TryEnter (
  `pbSucceeded`  
  [out] `true` 임계 영역을 입력할 수 있으면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -68,7 +69,7 @@ HRESULT TryEnter (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRSyncManager 인터페이스](iclrsyncmanager-interface.md)
 - [IHostCrst 인터페이스](ihostcrst-interface.md)

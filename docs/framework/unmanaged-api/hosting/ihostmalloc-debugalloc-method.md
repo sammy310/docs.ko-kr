@@ -1,4 +1,5 @@
 ---
+description: IHostMAlloc::D ebugAlloc 메서드에 대해 자세히 알아보세요.
 title: IHostMAlloc::DebugAlloc 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0bfbc527-bea2-43ce-b041-69186f4440dd
 topic_type:
 - apiref
-ms.openlocfilehash: 49de0398dd32970bd8ceb0fd24178e75df5d14b1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f94ff0d6cc1e25daee12c67c38167f7f14829510
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713497"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708218"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc 메서드
 
@@ -55,7 +56,7 @@ HRESULT DebugAlloc (
  `ppMem`  
  제한이 할당 된 메모리에 대 한 포인터 이거나, 요청을 완료할 수 없는 경우 null입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -81,7 +82,7 @@ HRESULT DebugAlloc (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IHostMemoryManager 인터페이스](ihostmemorymanager-interface.md)
 - [IHostMalloc 인터페이스](ihostmalloc-interface.md)

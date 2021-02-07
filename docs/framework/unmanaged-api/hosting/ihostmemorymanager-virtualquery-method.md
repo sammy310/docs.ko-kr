@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostMemoryManager:: VirtualQuery 메서드'
 title: IHostMemoryManager::VirtualQuery 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 757af1e6-b9e8-49e7-b5db-342be3aa205f
 topic_type:
 - apiref
-ms.openlocfilehash: 6e3cb5bcec831f143d45f733c9e2f977390aade6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8518ef71ad7d493fa04d4e2321f1f90ef8ecd18d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731246"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707554"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>IHostMemoryManager::VirtualQuery 메서드
 
@@ -51,7 +52,7 @@ HRESULT VirtualQuery (
  `pResult`  
  제한이 정보 버퍼에서 반환 된 바이트 수에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -79,6 +80,6 @@ HRESULT VirtualQuery (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IHostMemoryManager 인터페이스](ihostmemorymanager-interface.md)

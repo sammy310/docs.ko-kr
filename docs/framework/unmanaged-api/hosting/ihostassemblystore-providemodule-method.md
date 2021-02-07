@@ -1,4 +1,5 @@
 ---
+description: IHostAssemblyStore::P rovideModule 메서드에 대해 자세히 알아보세요.
 title: IHostAssemblyStore::ProvideModule 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f42e3dd0-c88e-4748-b6c0-4c515a633180
 topic_type:
 - apiref
-ms.openlocfilehash: 35805d277774e1de03bb7dee1740a2e1305a97c9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9e783b9f8db303d095995507689d7567225a51fd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732998"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709028"
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>IHostAssemblyStore::ProvideModule 메서드
 
@@ -51,7 +52,7 @@ HRESULT ProvideModule (
  `ppStmPDB`  
  제한이 `IStream` 요청 된 모듈에 대 한 pdb (프로그램 디버그) 정보를 포함 하는 개체의 주소에 대 한 포인터 이거나 .pdb 파일을 찾을 수 없는 경우 null입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -78,7 +79,7 @@ HRESULT ProvideModule (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRAssemblyReferenceList 인터페이스](iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyManager 인터페이스](ihostassemblymanager-interface.md)

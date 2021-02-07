@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: CorThreadSafetyOptions 열거형'
 title: CorThreadSafetyOptions 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dae07d9b-df51-488c-b17e-52d6e48217bd
 topic_type:
 - apiref
-ms.openlocfilehash: 8c0527a7bc3cde7344bf809dc8e6f5a3fac04852
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 7915bcf5e7b71fa84ea83642467c1600cd38712d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007509"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707321"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions 열거형
 
@@ -35,11 +36,11 @@ typedef enum CorThreadSafetyOptions {
 } CorThreadSafetyOptions;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 |멤버|설명|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|기본값. `MDThreadSafetyOff`와 동일합니다.|
+|`MDThreadSafetyDefault`|기본값입니다. `MDThreadSafetyOff`와 동일합니다.|
 |`MDThreadSafetyOff`|판독기/작성기 잠금을 설정할 수 없음을 나타냅니다.|
 |`MDThreadSafetyOn`|판독기/작성기 잠금을 설정할 수 있음을 나타냅니다.|
 

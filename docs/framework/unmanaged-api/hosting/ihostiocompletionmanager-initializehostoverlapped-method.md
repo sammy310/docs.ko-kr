@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostIoCompletionManager:: InitializeHostOverlapped 메서드'
 title: IHostIoCompletionManager::InitializeHostOverlapped 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c35199bf-bc47-4901-b467-4e8a37644bbb
 topic_type:
 - apiref
-ms.openlocfilehash: 397dbbeb0b85cb549a8b5917f977ecb13b3d6539
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 10be7edb67143937dec6efc6e35466466374d32d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720219"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708465"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>IHostIoCompletionManager::InitializeHostOverlapped 메서드
 
@@ -39,7 +40,7 @@ HRESULT InitializeHostOverlapped (
  `pvOverlapped`  
  진행 I/o 요청에 포함 될 Win32 구조체에 대 한 포인터 `OVERLAPPED` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -70,7 +71,7 @@ HRESULT InitializeHostOverlapped (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRIoCompletionManager 인터페이스](iclriocompletionmanager-interface.md)
 - [GetHostOverlappedSize 메서드](ihostiocompletionmanager-gethostoverlappedsize-method.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostMemoryManager:: GetMemoryLoad 메서드'
 title: IHostMemoryManager::GetMemoryLoad 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8138f6e-a0a4-48d4-8dae-9466b4dc6180
 topic_type:
 - apiref
-ms.openlocfilehash: 0611b82e22ec9d5d2cde2a7f46e65b5e25733610
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 82288e6a705b014c2768c75e15376f7e6a0af428
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731360"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707847"
 ---
 # <a name="ihostmemorymanagergetmemoryload-method"></a>IHostMemoryManager::GetMemoryLoad 메서드
 
@@ -43,7 +44,7 @@ HRESULT GetMemoryLoad (
  `pAvailableBytes`  
  제한이 CLR (공용 언어 런타임)에 사용할 수 있는 바이트 수에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -70,7 +71,7 @@ HRESULT GetMemoryLoad (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.GC?displayProperty=nameWithType>
 - [IHostMemoryManager 인터페이스](ihostmemorymanager-interface.md)

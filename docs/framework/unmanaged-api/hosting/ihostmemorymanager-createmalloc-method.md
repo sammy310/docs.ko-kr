@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostMemoryManager:: CreateMAlloc 메서드'
 title: IHostMemoryManager::CreateMAlloc 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ee6e052-bef7-4350-9e4f-edfffd99ad6f
 topic_type:
 - apiref
-ms.openlocfilehash: 79580170d544cd3763992a4bc67fd20e3446bb1d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: de73490a5c8b4e1672beb4750bcc617c2371f07b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685723"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707890"
 ---
 # <a name="ihostmemorymanagercreatemalloc-method"></a>IHostMemoryManager::CreateMAlloc 메서드
 
@@ -43,7 +44,7 @@ HRESULT CreateMalloc (
  `ppMAlloc`  
  제한이 호스트에서 제공 하는 인스턴스의 주소에 대 한 포인터입니다 `IHostMAlloc` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -69,7 +70,7 @@ HRESULT CreateMalloc (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IHostMalloc 인터페이스](ihostmalloc-interface.md)
 - [IHostMemoryManager 인터페이스](ihostmemorymanager-interface.md)

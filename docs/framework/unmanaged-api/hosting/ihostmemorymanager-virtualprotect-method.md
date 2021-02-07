@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostMemoryManager:: VirtualProtect 메서드'
 title: IHostMemoryManager::VirtualProtect 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13be0299-df0d-4951-aabf-0676a30b385f
 topic_type:
 - apiref
-ms.openlocfilehash: 9822e5a1fb09e9d3bce541ff63cf766ae8611789
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 66e1fb5afdc3aa5c400ed0ffa9cea569d300e6a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731256"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707442"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>IHostMemoryManager::VirtualProtect 메서드
 
@@ -51,7 +52,7 @@ HRESULT VirtualProtect (
  `pflOldProtect`  
  제한이 이전 메모리 보호 값에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -76,6 +77,6 @@ HRESULT VirtualProtect (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IHostMemoryManager 인터페이스](ihostmemorymanager-interface.md)

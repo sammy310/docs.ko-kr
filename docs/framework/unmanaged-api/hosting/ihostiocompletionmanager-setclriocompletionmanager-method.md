@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostIoCompletionManager:: Setclrio Manager 메서드'
 title: IHostIoCompletionManager::SetCLRIoCompletionManager 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4254bb01-3a14-4f34-a3be-60ff1f5072b5
 topic_type:
 - apiref
-ms.openlocfilehash: d370cc81942269bd79e06e0fa57fe5d79832b3c2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1075c33d6de4f5edf34364d67cbc0a21c4f19802
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724847"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708296"
 ---
 # <a name="ihostiocompletionmanagersetclriocompletionmanager-method"></a>IHostIoCompletionManager::SetCLRIoCompletionManager 메서드
 
@@ -39,7 +40,7 @@ HRESULT SetCLRIoCompletionManager (
  `pManager`  
  진행 CLR에서 제공 하는 인스턴스에 대 한 인터페이스 포인터 `ICLRIoCompletionManager` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -64,7 +65,7 @@ HRESULT SetCLRIoCompletionManager (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRIoCompletionManager 인터페이스](iclriocompletionmanager-interface.md)
 - [IHostIoCompletionManager 인터페이스](ihostiocompletionmanager-interface.md)

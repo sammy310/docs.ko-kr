@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostMAlloc:: Free 메서드'
 title: IHostMAlloc::Free 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c89abf5b-1120-4437-8b57-4a99fb3ae7f9
 topic_type:
 - apiref
-ms.openlocfilehash: d4c9048c89d55ed048a55a771572823905a056df
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 097e2e95b6dfb9d6a1bae68f9e0455a96383159e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687140"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708205"
 ---
 # <a name="ihostmallocfree-method"></a>IHostMAlloc::Free 메서드
 
@@ -39,7 +40,7 @@ HRESULT Free (
  `pMem`  
  진행 해제할 메모리에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -65,7 +66,7 @@ HRESULT Free (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IHostMemoryManager 인터페이스](ihostmemorymanager-interface.md)
 - [IHostMalloc 인터페이스](ihostmalloc-interface.md)

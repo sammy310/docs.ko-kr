@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IGCThreadControl:: ThreadIsBlockingForSuspension 메서드'
 title: IGCThreadControl::ThreadIsBlockingForSuspension 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed5b5b58-7db7-46b5-9e2c-278db7159cee
 topic_type:
 - apiref
-ms.openlocfilehash: 39834ba868a21ead3113f2f0d9157cd210d9798c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 13023a75ab1c438abebbeb16fd9fe7c4b95c37ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721649"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709206"
 ---
 # <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a>IGCThreadControl::ThreadIsBlockingForSuspension 메서드
 
@@ -46,6 +47,6 @@ HRESULT ThreadIsBlockingForSuspension ( );
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IGCThreadControl 인터페이스](igcthreadcontrol-interface.md)

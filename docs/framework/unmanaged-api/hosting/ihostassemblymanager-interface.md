@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostAssemblyManager 인터페이스'
 title: IHostAssemblyManager 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfec05bb-3cd7-4bd5-b396-a4f097c3a636
 topic_type:
 - apiref
-ms.openlocfilehash: a06e7f13b6de9450aa2a81f28f591c0a3ce8db0f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 649771f79e65039adfa8c0ade9f167b1679bb917
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680991"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708998"
 ---
 # <a name="ihostassemblymanager-interface"></a>IHostAssemblyManager 인터페이스
 
@@ -48,7 +49,7 @@ ms.locfileid: "95680991"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRAssemblyReferenceList 인터페이스](iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyStore 인터페이스](ihostassemblystore-interface.md)

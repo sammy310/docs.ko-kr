@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IGCHost2 인터페이스'
 title: IGCHost2 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5323fa4-18ac-424d-859d-a65a550d08d9
 topic_type:
 - apiref
-ms.openlocfilehash: 7529ecd215d74eb0eedbec8b90eba367ed20d56f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e32a4894fcff3600c9385f0f559443e23b2bc307
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687745"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709323"
 ---
 # <a name="igchost2-interface"></a>IGCHost2 인터페이스
 
@@ -44,7 +45,7 @@ ms.locfileid: "95687745"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)
 - [CLR 호스팅 인터페이스](clr-hosting-interfaces.md)

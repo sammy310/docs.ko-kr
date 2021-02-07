@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IGCHost 인터페이스'
 title: IGCHost 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ad70ffd-6963-4ab2-8c84-3d86c3fb8deb
 topic_type:
 - apiref
-ms.openlocfilehash: 8965797321e68443c01d05f97d147f2320a76739
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 73b1125eb66a38373da85769ab80ddcaf0b955c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724301"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709596"
 ---
 # <a name="igchost-interface"></a>IGCHost 인터페이스
 
@@ -51,7 +52,7 @@ ms.locfileid: "95724301"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)
 - [CorRuntimeHost Coclass](corruntimehost-coclass.md)

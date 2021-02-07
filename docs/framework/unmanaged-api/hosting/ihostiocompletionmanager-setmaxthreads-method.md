@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostIoCompletionManager:: SetMaxThreads 메서드'
 title: IHostIoCompletionManager::SetMaxThreads 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ebad4f40-d9f1-4dc6-9b27-a89c9eb3926f
 topic_type:
 - apiref
-ms.openlocfilehash: 3cb001db74587beb5417bf57738c5efb9a274591
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6b36523b0b0d6cefba383d324eb23debefd7c41b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724821"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708283"
 ---
 # <a name="ihostiocompletionmanagersetmaxthreads-method"></a>IHostIoCompletionManager::SetMaxThreads 메서드
 
@@ -39,7 +40,7 @@ HRESULT SetMaxThreads (
  `dwMaxIoCompletionThreads`  
  진행 I/o 요청에 대해 할당할 최대 스레드 수입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -65,7 +66,7 @@ HRESULT SetMaxThreads (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRIoCompletionManager 인터페이스](iclriocompletionmanager-interface.md)
 - [IHostIoCompletionManager 인터페이스](ihostiocompletionmanager-interface.md)

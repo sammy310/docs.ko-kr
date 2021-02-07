@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: ICeeGen:: AddSectionReloc 메서드'
 title: ICeeGen::AddSectionReloc 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-ms.openlocfilehash: 87a5224247c2d94613de482fbaa34bf978198bf0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 715c506f0bdcb3fcef33b3e9165d1f9ae47c6073
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715539"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707178"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc 메서드
 
@@ -63,6 +64,6 @@ HRESULT AddSectionReloc (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICeeGen 인터페이스](iceegen-interface.md)

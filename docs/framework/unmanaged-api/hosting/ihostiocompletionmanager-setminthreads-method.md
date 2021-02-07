@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostIoCompletionManager:: SetMinThreads 메서드'
 title: IHostIoCompletionManager::SetMinThreads 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dea34b81-8d2b-4cc3-8696-0ad4291d8a92
 topic_type:
 - apiref
-ms.openlocfilehash: 64ea9fdd477ec005b089f451101b742278ab4266
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aade5ebb9e318d51296e52e7cf1c31c6ea9e4f6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672411"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708241"
 ---
 # <a name="ihostiocompletionmanagersetminthreads-method"></a>IHostIoCompletionManager::SetMinThreads 메서드
 
@@ -39,7 +40,7 @@ HRESULT SetMinThreads (
  `dwMinIoCompletionThreads`  
  진행 호스트에서 만들어야 하는 i/o 완료 스레드의 최소 수입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -65,7 +66,7 @@ HRESULT SetMinThreads (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRIoCompletionManager 인터페이스](iclriocompletionmanager-interface.md)
 - [SetMaxThreads 메서드](ihostiocompletionmanager-setmaxthreads-method.md)

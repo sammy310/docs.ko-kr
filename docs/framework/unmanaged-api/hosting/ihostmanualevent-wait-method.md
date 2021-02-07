@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostManualEvent:: Wait 메서드'
 title: IHostManualEvent::Wait 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1fbb7d8b-8a23-4c2b-8376-1a70cd2d6030
 topic_type:
 - apiref
-ms.openlocfilehash: 3fe8434ba4a7fc49b99bdf3084ce4f3981f25a9b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f9e681e5075f1de34dc45ed2b2485a0e1269cb11
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719829"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707871"
 ---
 # <a name="ihostmanualeventwait-method"></a>IHostManualEvent::Wait 메서드
 
@@ -43,7 +44,7 @@ HRESULT Wait (
  `option`  
  진행 이 작업이 차단 될 경우 호스트에서 수행할 작업을 나타내는 [WAIT_OPTION](wait-option-enumeration.md) 값 중 하나입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -65,7 +66,7 @@ HRESULT Wait (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRSyncManager 인터페이스](iclrsyncmanager-interface.md)
 - [IHostAutoEvent 인터페이스](ihostautoevent-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostAssemblyManager:: GetNonHostStoreAssemblies 메서드'
 title: IHostAssemblyManager::GetNonHostStoreAssemblies 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2250b38-c76a-40ce-80c8-ba45149886e8
 topic_type:
 - apiref
-ms.openlocfilehash: a34b907514376927d8a1aa66b136916108b704d8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ef551db45428b2381dfeae8f722257241a4deaf0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681147"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709050"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies 메서드
 
@@ -39,7 +40,7 @@ HRESULT GetNonHostStoreAssemblies (
  `ppReferenceList`  
  제한이 `ICLRAssemblyReferenceList` 호스트가 CLR에서 로드할 것으로 예상 하는 어셈블리에 대 한 참조 목록을 포함 하는의 주소에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -78,7 +79,7 @@ HRESULT GetNonHostStoreAssemblies (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRAssemblyReferenceList 인터페이스](iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyManager 인터페이스](ihostassemblymanager-interface.md)

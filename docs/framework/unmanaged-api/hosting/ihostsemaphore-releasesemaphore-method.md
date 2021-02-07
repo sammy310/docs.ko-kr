@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostSemaphore:: ReleaseSemaphore 메서드'
 title: IHostSemaphore::ReleaseSemaphore 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a343d197-979a-4ac6-ab8c-cb8a05f3120e
 topic_type:
 - apiref
-ms.openlocfilehash: 660062fb69bb8fe0a06bbca9046d65175fb72f9a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 368dc5ebe3017e03c0d6e8c57d0f122bc48d439f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683032"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707444"
 ---
 # <a name="ihostsemaphorereleasesemaphore-method"></a>IHostSemaphore::ReleaseSemaphore 메서드
 
@@ -43,7 +44,7 @@ HRESULT ReleaseSemaphore (
  `lpPreviousCount`  
  제한이 이전 개수에 대 한 포인터 이거나, 호출자에 게 이전 개수가 필요 하지 않은 경우 null입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -68,7 +69,7 @@ HRESULT ReleaseSemaphore (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRSyncManager 인터페이스](iclrsyncmanager-interface.md)
 - [IHostAutoEvent 인터페이스](ihostautoevent-interface.md)

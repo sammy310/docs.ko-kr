@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostTaskManager 인터페이스'
 title: IHostTaskManager 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-ms.openlocfilehash: deb14d291bfd511e8f3534f3c5e32787c259c5e8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 67574550ba26970189ea53b8e6bdb867fea8549b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673113"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707483"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager 인터페이스
 
@@ -62,7 +63,7 @@ ms.locfileid: "95673113"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

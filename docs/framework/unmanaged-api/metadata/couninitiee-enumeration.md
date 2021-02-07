@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: COUNINITIEE 열거형'
 title: COUNINITIEE 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c42baa79-f469-4330-95a2-baf7f021c2fc
 topic_type:
 - apiref
-ms.openlocfilehash: b0f8c7e6d2acf4d4c080cc147bf6d42bf13cb51b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 893ab96851e9c762a888f3c4cac98b486a0b4614
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723833"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707234"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE 열거형
 
@@ -35,7 +36,7 @@ typedef enum tagCOUNINITEE
 } COUNINITIEE;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -52,6 +53,6 @@ typedef enum tagCOUNINITEE
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](metadata-enumerations.md)

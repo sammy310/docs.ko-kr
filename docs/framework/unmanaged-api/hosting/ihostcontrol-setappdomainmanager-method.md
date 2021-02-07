@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostControl:: SetAppDomainManager 메서드'
 title: IHostControl::SetAppDomainManager 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6562bbe7-0d67-4c50-a958-3a18cf680375
 topic_type:
 - apiref
-ms.openlocfilehash: 2f4c004db39c14e7a71b0caa55a6089e8f69ca3a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1fc5efc0afad73d1805338140f186a50913ca542
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680661"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708899"
 ---
 # <a name="ihostcontrolsetappdomainmanager-method"></a>IHostControl::SetAppDomainManager 메서드
 
@@ -43,7 +44,7 @@ HRESULT SetAppDomainManager (
  `pUnkAppDomainManager`  
  진행 <xref:System.AppDomainManager> 호스트가 구현 하는 개체에 대 한 포인터 `IUnknown` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -70,7 +71,7 @@ HRESULT SetAppDomainManager (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.AppDomain>
 - <xref:System.AppDomainManager>

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostIoCompletionManager:: GetHostOverlappedSize 메서드'
 title: IHostIoCompletionManager::GetHostOverlappedSize 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2902578b-d5e2-4f8d-a103-0c7b6dceda9e
 topic_type:
 - apiref
-ms.openlocfilehash: 612a5f08982b1db5c940a7cca93166480b21e612
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2a2ebe1da82c5702269b634eadfe98b72739e3df
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724860"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708569"
 ---
 # <a name="ihostiocompletionmanagergethostoverlappedsize-method"></a>IHostIoCompletionManager::GetHostOverlappedSize 메서드
 
@@ -39,7 +40,7 @@ HRESULT GetHostOverlappedSize (
  `pcbSize`  
  제한이 CLR (공용 언어 런타임)에서 Win32 개체의 크기와 함께 할당 해야 하는 바이트 수에 대 한 포인터입니다 `OVERLAPPED` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -74,7 +75,7 @@ HRESULT GetHostOverlappedSize (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.NativeOverlapped>
 - [ICLRIoCompletionManager 인터페이스](iclriocompletionmanager-interface.md)

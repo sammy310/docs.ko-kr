@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostManualEvent:: Set 메서드'
 title: IHostManualEvent::Set 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e930c174-f71d-4faa-bb59-f0fb3df4d77b
 topic_type:
 - apiref
-ms.openlocfilehash: bc2b178c6c26a6de62982c35d5aeb9ea5359c2bf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e2de1fde2f8c0f512733ecde43d5240a94f84264
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679132"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707932"
 ---
 # <a name="ihostmanualeventset-method"></a>IHostManualEvent::Set 메서드
 
@@ -53,7 +54,7 @@ HRESULT Set ();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRSyncManager 인터페이스](iclrsyncmanager-interface.md)
 - [IHostAutoEvent 인터페이스](ihostautoevent-interface.md)

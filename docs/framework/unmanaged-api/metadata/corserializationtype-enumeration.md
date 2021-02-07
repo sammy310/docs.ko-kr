@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CorSerializationType 열거형'
 title: CorSerializationType 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b1fcd11-c7fb-4be2-8910-abc862d4caf4
 topic_type:
 - apiref
-ms.openlocfilehash: e9c9674bfe0e5a8006a4881e103b633ee8f2af1d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 86df23bf03037d329a3138798725058f1d24a450
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706056"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707386"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType 열거형
 
@@ -54,7 +55,7 @@ typedef enum CorSerializationType {
 } CorSerializationType;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -87,6 +88,6 @@ typedef enum CorSerializationType {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](metadata-enumerations.md)

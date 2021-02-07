@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostAssemblyManager:: GetAssemblyStore 메서드'
 title: IHostAssemblyManager::GetAssemblyStore 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0f74593-9bb1-4a11-8096-e29734b20698
 topic_type:
 - apiref
-ms.openlocfilehash: 936ea068f3cc5567a00af5f2bdd5f3d9cd52bc81
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5edfdc5481803ce0dd3a6f8f400b18e3f1600ea8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681186"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709115"
 ---
 # <a name="ihostassemblymanagergetassemblystore-method"></a>IHostAssemblyManager::GetAssemblyStore 메서드
 
@@ -39,7 +40,7 @@ HRESULT GetAssemblyStore (
  `ppAssemblyStore`  
  제한이 인스턴스에 대 한 함수 포인터 `IHostAssemblyStore` 이거나, 호스트에서을 구현 하지 않는 경우 null `IHostAssemblyStore` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -68,7 +69,7 @@ HRESULT GetAssemblyStore (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IHostAssemblyManager 인터페이스](ihostassemblymanager-interface.md)
 - [IHostAssemblyStore 인터페이스](ihostassemblystore-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostGCManager:: SuspensionEnding 메서드'
 title: IHostGCManager::SuspensionEnding 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8849a1db-17f0-44b7-880a-bd36d431eb91
 topic_type:
 - apiref
-ms.openlocfilehash: e2624f5fce168662fac8fd5f4324617c7acf802c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 43ec3db76e6e6448719f9c40ef2476da4e2ccf9c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729553"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708623"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>IHostGCManager::SuspensionEnding 메서드
 
@@ -39,7 +40,7 @@ HRESULT SuspensionEnding (
  `generation`  
  진행 스레드를 다시 시작 하는 방금 완료 된 가비지 컬렉션 생성입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -67,7 +68,7 @@ HRESULT SuspensionEnding (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

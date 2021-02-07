@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostControl:: GetHostManager 메서드'
 title: IHostControl::GetHostManager 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fa34bca-ed18-4626-9e78-d33684d18edb
 topic_type:
 - apiref
-ms.openlocfilehash: e340dcb5dc093f965e6c08a24a3d65ed0aa6e07a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7cc118808c8788504da2cc07a8c61c419d3c588f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680832"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708909"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager 메서드
 
@@ -43,7 +44,7 @@ HRESULT GetHostManager (
  `ppObject`  
  제한이 호스트에서 구현 하는 인터페이스에 대 한 포인터 이거나, 호스트가이 인터페이스를 지원 하지 않는 경우 null입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -92,6 +93,6 @@ HRESULT GetHostManager (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IHostControl 인터페이스](ihostcontrol-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostMemoryManager:: RegisterMemoryNotificationCallback 메서드'
 title: IHostMemoryManager::RegisterMemoryNotificationCallback 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65d301f6-4dbb-4b5f-8eff-82540e2b6465
 topic_type:
 - apiref
-ms.openlocfilehash: edb29378412583d7cdec804b08f8f622d642b02f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 26a7468aba4f473eebff78a8c67eeb5b3e866e9c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731308"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707766"
 ---
 # <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a>IHostMemoryManager::RegisterMemoryNotificationCallback 메서드
 
@@ -39,7 +40,7 @@ HRESULT RegisterMemoryNotificationCallback (
  `pCallback`  
  진행 CLR에서 구현 하는 [ICLRMemoryNotificationCallback](iclrmemorynotificationcallback-interface.md) 인스턴스에 대 한 인터페이스 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -67,7 +68,7 @@ HRESULT RegisterMemoryNotificationCallback (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRMemoryNotificationCallback 인터페이스](iclrmemorynotificationcallback-interface.md)
 - [IHostMemoryManager 인터페이스](ihostmemorymanager-interface.md)
