@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugBreakpoint 인터페이스'
 title: ICorDebugBreakpoint 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-ms.openlocfilehash: 0c84a91c7da553d0c84a4995b4744576d861dcb9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 63917512cceeccedea37acdf2ba7ab3b849d9fad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730203"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711806"
 ---
 # <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint 인터페이스
 
@@ -51,6 +52,6 @@ ms.locfileid: "95730203"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)

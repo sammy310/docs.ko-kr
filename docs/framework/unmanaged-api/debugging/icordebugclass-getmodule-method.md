@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugClass:: GetModule 메서드'
 title: ICorDebugClass::GetModule 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87029cc4-e5e1-42d5-8b98-655bb7ece520
 topic_type:
 - apiref
-ms.openlocfilehash: e95d10512da73d9f483b87557fd7cd4574503c70
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 338ea5aeede4a209f7a3e3ed685ae9bd84105890
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728461"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711546"
 ---
 # <a name="icordebugclassgetmodule-method"></a>ICorDebugClass::GetModule 메서드
 

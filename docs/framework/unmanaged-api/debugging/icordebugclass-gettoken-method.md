@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugClass:: GetToken 메서드'
 title: ICorDebugClass::GetToken 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ee5c848a-eac4-4462-b07a-07ccd76a75df
 topic_type:
 - apiref
-ms.openlocfilehash: 59f450117d1a52ce7b900d9d67330fc98281afa0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f87b71800410fc3a95790e6d35cf4bd10a5ce747
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728422"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711535"
 ---
 # <a name="icordebugclassgettoken-method"></a>ICorDebugClass::GetToken 메서드
 
@@ -49,6 +50,6 @@ HRESULT GetToken (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 인터페이스](../metadata/metadata-interfaces.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugClass 인터페이스'
 title: ICorDebugClass 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 03a6facb-f12f-49be-9839-e73b9c791cd5
 topic_type:
 - apiref
-ms.openlocfilehash: 4f488741f4233f06c128e0a262ce798ef27af3ff
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5ded26a8b3a98bd273bbfe1bfa9efd1bb70d5595
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699640"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711507"
 ---
 # <a name="icordebugclass-interface"></a>ICorDebugClass 인터페이스
 
@@ -52,6 +53,6 @@ ms.locfileid: "95699640"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)
