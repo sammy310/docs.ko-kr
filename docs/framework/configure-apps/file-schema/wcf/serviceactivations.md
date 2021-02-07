@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <serviceActivations>
 title: <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-ms.openlocfilehash: 64ae0bfd90ae941fc78515c7936c998201c87485
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 726514af4e42cc387daf61b688d528f690ec8ee8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855141"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683023"
 ---
 # \<serviceActivations>
 
@@ -39,13 +40,13 @@ WCF (Windows Communication Foundation) 서비스 형식에 매핑되는 가상 �
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<add>](add-of-serviceactivations.md)|서비스 애플리케이션의 활성화를 지정하는 구성 요소를 추가합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<serviceHostingEnvironment>](servicehostingenvironment.md)|특정 전송을 위해 서비스 호스팅 환경에서 인스턴스화하는 형식을 정의합니다.|
 

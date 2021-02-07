@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <serviceTimeouts>
 title: <serviceTimeouts>
 ms.date: 03/30/2017
 ms.assetid: ada536cf-97dc-4cd7-89ec-ed1466c1c557
-ms.openlocfilehash: 92d3de42daf6f7baf288e3e74242381a60e76618
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bc9ef99078f8c6fa3b441604e14df928eec054e1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153601"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682730"
 ---
 # \<serviceTimeouts>
 
@@ -20,13 +21,13 @@ ms.locfileid: "91153601"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceTimeouts>**  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <serviceTimeouts transactionTimeout="TimeSpan" />
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
 
  `Type`  
   

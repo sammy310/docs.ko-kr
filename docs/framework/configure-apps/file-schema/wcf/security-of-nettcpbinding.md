@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <security><netTcpBinding>'
 title: <netTcpBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: d39e3e5e655817aa91c5301274a860a00a6ab7ef
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ad924f5a6ea9e003f6427ee76d3aef3afde9d083
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169988"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683075"
 ---
 # <a name="security-of-nettcpbinding"></a>\<netTcpBinding>의 \<security>
 
@@ -43,7 +44,7 @@ ms.locfileid: "91169988"
   
 ## <a name="mode-attribute"></a>mode 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |없음|보안이 해제되어 있습니다.|  
 |전송|전송 보안은 TCP를 통한 TLS 또는 SPNego를 사용하여 제공됩니다. 서비스는 SSL 인증서로 구성해야 할 수도 있습니다. 이 모드에서는 보호 수준을 제어할 수 있습니다.|  
@@ -78,7 +79,7 @@ ms.locfileid: "91169988"
 - <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

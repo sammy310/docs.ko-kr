@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: <serviceAuthorization> 요소'
 title: <serviceAuthorization> 요소
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: f476f754a340f52859be2986e42754cba0ef3771
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ee447f487027ed12f829dd0fd364556ce095d7d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71834018"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682932"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization> 요소
 
@@ -39,7 +40,7 @@ ms.locfileid: "71834018"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |impersonateCallerForAllOperations|서비스의 모든 작업이 호출자를 가장하는지 여부를 지정하는 부울 값입니다. 기본값은 `false`입니다.<br /><br /> 특정 서비스 작업이 호출자를 가장하면 지정된 서비스를 실행하기 전에 스레드 컨텍스트가 호출자 컨텍스트로 전환됩니다.|  
 |principalPermissionMode|서버에서 작업을 수행할 때 사용되는 사용자를 설정합니다. 여기에는 다음 값이 포함됩니다.<br /><br /> -없음<br />-UseWindowsGroups<br />-Usa Pnetroles<br />-Custom<br /><br /> 기본값은 UseWindowsGroups입니다. 값은 <xref:System.ServiceModel.Description.PrincipalPermissionMode> 형식입니다. 이 특성을 사용 하는 방법에 대 한 자세한 내용은 [방법: PrincipalPermissionAttribute 클래스를 사용 하 여 액세스 제한](../../../wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)을 참조 하세요.|  
@@ -48,13 +49,13 @@ ms.locfileid: "71834018"
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |authorizationPolicies|`add` 키워드를 사용하여 추가할 수 있는 인증 정책 형식 컬렉션이 포함되어 있습니다. 각 인증 정책에는 문자열에 해당하는 단일 필수 `policyType` 특성이 포함되어 있습니다. 이 특성은 한 입력 클레임 집합을 다른 클레임 집합으로 변환할 수 있도록 하는 인증 정책을 지정합니다. 그에 따라 액세스 제어가 부여되거나 거부됩니다. 자세한 내용은 <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElement>를 참조하세요.|  
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|서비스의 동작에 대한 설정 컬렉션을 포함합니다.|  
 

@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <security><webHttpBinding>'
 title: <webHttpBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 60b863a0a2a846a60dde2e4b323a305b5096b1cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a80a919ef877f01503e5ceaeb4fe7432e46f288c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169897"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683049"
 ---
 # <a name="security-of-webhttpbinding"></a>\<webHttpBinding>의 \<security>
 
@@ -50,7 +51,7 @@ ms.locfileid: "91169897"
   
 ## <a name="mode-attribute"></a>Mode 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |없음|보안이 해제되어 있습니다.|  
 |전송|HTTPS를 사용하여 보안이 제공됩니다. 서비스는 SSL 인증서로 구성해야 합니다. 메시지는 HTTPS를 사용하여 완전하게 보안 처리되며, 서비스는 서비스의 SSL 인증서를 사용하여 클라이언트에 의해 인증됩니다. 클라이언트 인증은의 특성을 통해 제어 됩니다 `ClientCredentialType` [\<transport>](transport-of-webhttpbinding.md) .|  
@@ -77,7 +78,7 @@ ms.locfileid: "91169897"
 - <xref:System.ServiceModel.WebHttpSecurity>
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
 - [자격 증명 형식 선택](../../../wcf/feature-details/selecting-a-credential-type.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <webSocketSettings>
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 6cfddfb9ebfc7c3447af977e14738baabebc8fe9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a0b67a0088491c73ed0214191283ae5292a654b0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177853"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682490"
 ---
 # \<webSocketSettings>
 
@@ -56,7 +57,7 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
   
 ## <a name="transportusage-attribute"></a>transportUsage 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |WhenDuplex|이중 계약인 경우 WebSocket 프로토콜을 사용합니다.|  
 |항상|계약과 관계없이 항상 WebSocket 프로토콜을 사용합니다.|  
@@ -97,7 +98,7 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)
