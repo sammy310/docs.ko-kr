@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 검색 (샘플)'
 title: 검색(샘플)
 ms.date: 03/30/2017
 ms.assetid: 522a00b4-a789-4e8c-b8d7-a4c3d863a182
-ms.openlocfilehash: d5801452943a75e87d829e5d5004e3c259ce3afa
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 304f4449ff4259d1d1f30ff93deff3c6edd2b1cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292612"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726647"
 ---
 # <a name="discovery-samples"></a>검색(샘플)
 

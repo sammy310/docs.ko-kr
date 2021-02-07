@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 검색 라우터 서비스'
 title: 검색 라우터 서비스
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: f3ea32d10e27eceb3edcee8b6aeacbf9c5ebc6f1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f5fa4cd19758bef0b867fafc5af4b9cf6df27028
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292651"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726717"
 ---
 # <a name="discovery-router-service"></a>검색 라우터 서비스
 

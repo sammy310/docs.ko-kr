@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 인증서 클라이언트를 사용 하는 메시지 보안'
 title: 인증서 클라이언트를 사용하는 메시지 보안
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 4a1cb6d804d313f438fc8e7a92946d55f73b9ee5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f1924510c5860b377568da204bbd9154e4970c24
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288582"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99727066"
 ---
 # <a name="message-security-with-a-certificate-client"></a>인증서 클라이언트를 사용하는 메시지 보안
 
@@ -20,7 +21,7 @@ ms.locfileid: "96288582"
   
  응용 프로그램 예제는 [메시지 보안 인증서](../samples/message-security-certificate.md)를 참조 하세요.  
 
-|특성|Description|  
+|특성|설명|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
 |상호 운용성|WCF만|  
@@ -46,7 +47,7 @@ ms.locfileid: "96288582"
  [!code-csharp[C_SecurityScenarios#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#10)]
  [!code-vb[C_SecurityScenarios#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#10)]  
   
-### <a name="configuration"></a>구성  
+### <a name="configuration"></a>Configuration  
 
  코드 대신 다음 구성을 사용할 수 있습니다.  
   
@@ -94,7 +95,7 @@ ms.locfileid: "96288582"
   
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.  
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 다음은 그 예입니다.   
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -106,7 +107,7 @@ ms.locfileid: "96288582"
  [!code-csharp[C_SecurityScenarios#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#17)]
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
-### <a name="configuration"></a>구성  
+### <a name="configuration"></a>Configuration  
 
  다음 구성에서는 엔드포인트 동작을 사용하는 클라이언트 인증서를 지정합니다. 자세한 내용은 [인증서 작업](working-with-certificates.md)을 참조하세요. 또한이 코드는 <`identity`> 요소를 사용 하 여 필요한 서버 id의 DNS (Domain Name System)를 지정 합니다. Id에 대 한 자세한 내용은 [서비스 id 및 인증](service-identity-and-authentication.md)을 참조 하세요.  
   

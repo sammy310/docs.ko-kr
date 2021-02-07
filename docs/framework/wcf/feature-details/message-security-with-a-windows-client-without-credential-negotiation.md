@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 자격 증명 협상을 사용 하지 않는 Windows 클라이언트를 사용 하는 메시지 보안'
 title: 자격 증명 협상 없이 Windows 클라이언트를 사용하는 메시지 보안
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 3e5838c474a4f13136ed29baab440dc1559b95f5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e9edd63c80d868024d8a4b664c42456bb454cb69
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551095"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99727016"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>자격 증명 협상 없이 Windows 클라이언트를 사용하는 메시지 보안
 
@@ -23,14 +24,14 @@ ms.locfileid: "90551095"
 
 ![자격 증명 협상을 사용하지 않는 메시지 보안](media/0c9f9baa-2439-4ef9-92f4-43c242d85d0d.gif "0c9f9baa-2439-4ef9-92f4-43c242d85d0d")
 
-|특성|Description|
+|특성|설명|
 |--------------------|-----------------|
 |보안 모드|메시지|
 |상호 운용성|예, 클라이언트와 호환되는 WS-Security 및 Kerberos 토큰 프로필과 상호 운용할 수 있습니다.|
 |인증(서버)|서버와 클라이언트의 상호 인증|
 |인증(클라이언트)|서버와 클라이언트의 상호 인증|
 |무결성|예|
-|기밀성|예|
+|기밀성|Yes|
 |전송|HTTP|
 |바인딩|<xref:System.ServiceModel.WSHttpBinding>|
 
@@ -58,7 +59,7 @@ Spn, Kerberos 프로토콜 및 Active Directory에 대 한 자세한 내용은 [
 [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
 [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]
 
-### <a name="configuration"></a>구성
+### <a name="configuration"></a>Configuration
 
 코드 대신 다음 구성을 사용할 수 있습니다.
 
@@ -102,7 +103,7 @@ Spn, Kerberos 프로토콜 및 Active Directory에 대 한 자세한 내용은 [
 
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.
 
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 다음은 그 예입니다. 
 
   [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
   [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
@@ -119,7 +120,7 @@ Spn, Kerberos 프로토콜 및 Active Directory에 대 한 자세한 내용은 [
 [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
 [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]
 
-### <a name="configuration"></a>구성
+### <a name="configuration"></a>Configuration
 
 다음 코드에서는 클라이언트를 구성합니다. [\<servicePrincipalName>](../../configure-apps/file-schema/wcf/serviceprincipalname.md)Active Directory 도메인의 서비스 계정에 대해 등록 된 서비스의 SPN과 일치 하도록 요소를 설정 해야 합니다.
 
@@ -153,7 +154,7 @@ Spn, Kerberos 프로토콜 및 Active Directory에 대 한 자세한 내용은 [
 </configuration>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [보안 개요](security-overview.md)
 - [서비스 ID 및 인증](service-identity-and-authentication.md)

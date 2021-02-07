@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 메타 데이터 끝점 게시'
 title: 메타데이터 엔드포인트 게시
 ms.date: 03/30/2017
 ms.assetid: 29cd8a60-dfb7-460c-bf5a-c2b31b782671
-ms.openlocfilehash: 5be27a72c87d95e36a5b283e7930ba0a5191a5a1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8204a62413e09c0fbc6effaae1fd752aee397147
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249763"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726678"
 ---
 # <a name="publishing-metadata-endpoints"></a>메타데이터 엔드포인트 게시
 
