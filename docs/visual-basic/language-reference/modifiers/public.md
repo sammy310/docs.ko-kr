@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 공용 (Visual Basic)'
 title: 공용
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: f2b6a126435b111ef56ee2a9870ea6fbddf87901
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 1083ca877cf99917291523fe10f6561784ff06a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867689"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700925"
 ---
 # <a name="public-visual-basic"></a>Public(Visual Basic)
 
@@ -35,7 +36,7 @@ ms.locfileid: "90867689"
   
 - **기본 액세스.** 프로시저 내의 지역 변수는 기본적으로 공용 액세스로 설정 되며 액세스 한정자를 사용할 수 없습니다.  
   
-- **액세스 한정자입니다.** 액세스 수준을 지정 하는 키워드를 *액세스 한정자*라고 합니다. 액세스 한정자의 비교는 [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.  
+- **액세스 한정자입니다.** 액세스 수준을 지정 하는 키워드를 *액세스 한정자* 라고 합니다. 액세스 한정자의 비교는 [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.  
   
  `Public` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
@@ -67,12 +68,12 @@ ms.locfileid: "90867689"
   
  [Sub 문](../statements/sub-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [보호](protected.md)
+- [보호됨](protected.md)
 - [Friend](friend.md)
 - [개인](private.md)
-- [개인 보호](private-protected.md)
+- [비공개 보호](private-protected.md)
 - [Protected Friend](protected-friend.md)
 - [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)
 - [절차](../../programming-guide/language-features/procedures/index.md)

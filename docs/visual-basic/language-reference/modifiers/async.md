@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 비동기 (Visual Basic)'
 title: Async
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: 35df7a464937647c6d110142a3e2801cebbea505
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a20c80ace06e386e7c106acc2b7e6258abca13b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373169"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701159"
 ---
 # <a name="async-visual-basic"></a>Async(Visual Basic)
 
-`Async`한정자는 수정 하는 메서드 또는 [람다 식이](../../programming-guide/language-features/procedures/lambda-expressions.md) 비동기 임을 나타냅니다. 이러한 메서드를 *비동기 메서드*라고 합니다.
+`Async`한정자는 수정 하는 메서드 또는 [람다 식이](../../programming-guide/language-features/procedures/lambda-expressions.md) 비동기 임을 나타냅니다. 이러한 메서드를 *비동기 메서드* 라고 합니다.
 
 비동기 메서드는 호출자의 스레드를 차단하지 않고 오래 실행될 수 있는 작업을 수행하는 편리한 방법을 제공합니다. 비동기 메서드의 호출자는 비동기 메서드가 완료 될 때까지 기다리지 않고 작업을 다시 시작할 수 있습니다.
 
@@ -109,6 +110,6 @@ End Function
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
-- [Wait 연산자](../operators/await-operator.md)
-- [Async 및 Wait를 사용한 비동기 프로그래밍](../../programming-guide/concepts/async/index.md)
+- [Await 연산자](../operators/await-operator.md)
+- [Async 및 Await를 사용한 비동기 프로그래밍](../../programming-guide/concepts/async/index.md)
 - [연습: Async 및 Await를 사용하여 웹에 액세스](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Protected (Visual Basic)'
 title: 보호됨
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: d66ed68004f8b6ef21ae703f02b317589814764b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 74a695e7c8ff06543a7118c935365e31af258171
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398222"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700938"
 ---
 # <a name="protected-visual-basic"></a>Protected(Visual Basic)
 
@@ -41,7 +42,7 @@ ms.locfileid: "84398222"
 
      보호 된 액세스는 friend 액세스의 상위 집합이 나 하위 집합이 아닙니다.
 
-- **액세스 한정자입니다.** 액세스 수준을 지정 하는 키워드를 *액세스 한정자*라고 합니다. 액세스 한정자의 비교는 [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.
+- **액세스 한정자입니다.** 액세스 수준을 지정 하는 키워드를 *액세스 한정자* 라고 합니다. 액세스 한정자의 비교는 [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.
 
 `Protected` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.
 
@@ -73,8 +74,8 @@ ms.locfileid: "84398222"
 
 - [공용](public.md)
 - [Friend](friend.md)
-- [프라이빗](private.md)
-- [개인 보호](private-protected.md)
+- [개인](private.md)
+- [비공개 보호](private-protected.md)
 - [Protected Friend](protected-friend.md)
 - [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)
 - [절차](../../programming-guide/language-features/procedures/index.md)

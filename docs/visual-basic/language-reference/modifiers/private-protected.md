@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Private Protected (Visual Basic)'
 title: 비공개 보호
 ms.date: 05/10/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
 - Private Protected keyword [Visual Basic], syntax
-ms.openlocfilehash: 8ad1509da71bc80b33700d363ddd4569a0965dff
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: eb521ace77cd16f4904657cbdc035575e98e98fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303467"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700964"
 ---
 # <a name="private-protected-visual-basic"></a>개인 보호 (Visual Basic)
 
@@ -40,7 +41,7 @@ ms.locfileid: "87303467"
 
 - **액세스 수준입니다.** 클래스의 모든 코드는 해당 요소에 액세스할 수 있습니다. 기본 클래스에서 파생 되 고 동일한 어셈블리에 포함 된 모든 클래스의 코드는 기본 클래스의 모든 요소에 액세스할 수 있습니다 `Private Protected` . 그러나 기본 클래스에서 파생 되 고 다른 어셈블리에 포함 된 모든 클래스의 코드는 기본 클래스 요소에 액세스할 수 없습니다 `Private Protected` .
 
-- **액세스 한정자입니다.** 액세스 수준을 지정 하는 키워드를 *액세스 한정자*라고 합니다. 액세스 한정자의 비교는 [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.
+- **액세스 한정자입니다.** 액세스 수준을 지정 하는 키워드를 *액세스 한정자* 라고 합니다. 액세스 한정자의 비교는 [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.
 
 `Private Protected` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.
 
@@ -71,9 +72,9 @@ ms.locfileid: "87303467"
 ## <a name="see-also"></a>참고 항목
 
 - [공용](public.md)
-- [보호](protected.md)
+- [보호됨](protected.md)
 - [Friend](friend.md)
-- [프라이빗](private.md)
+- [개인](private.md)
 - [Protected Friend](./protected-friend.md)
 - [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)
 - [절차](../../programming-guide/language-features/procedures/index.md)

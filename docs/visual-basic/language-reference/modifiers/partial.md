@@ -1,5 +1,6 @@
 ---
-title: Partial
+description: '자세한 정보: 부분 (Visual Basic)'
+title: 부분
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Partial
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: 2482facadd0e0528ed1b71df6edb4a447947a902
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bf2d8b06b83f4a90ec2f4edd52405b58695c26e2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867779"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701016"
 ---
 # <a name="partial-visual-basic"></a>Partial(Visual Basic)
 
@@ -28,9 +29,9 @@ ms.locfileid: "90867779"
  `Partial` 키워드를 사용하여 형식 정의를 다수의 선언으로 나눌 수 있습니다. 원하는 만큼 다양한 소스 파일에서 원하는 만큼 partial 선언을 사용할 수 있습니다. 그러나 모든 선언이 동일한 어셈블리와 동일한 네임스페이스에 있어야 합니다.  
   
 > [!NOTE]
-> Visual Basic는 부분 클래스에서 일반적으로 구현 되는 *부분 메서드 (partial*method)를 지원 합니다. 자세한 내용은 [부분 메서드](../../programming-guide/language-features/procedures/partial-methods.md) 및 [Sub 문](../statements/sub-statement.md)을 참조 하세요.  
+> Visual Basic는 부분 클래스에서 일반적으로 구현 되는 *부분 메서드 (partial* method)를 지원 합니다. 자세한 내용은 [부분 메서드](../../programming-guide/language-features/procedures/partial-methods.md) 및 [Sub 문](../statements/sub-statement.md)을 참조 하세요.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 [ <attrlist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] _  
@@ -64,7 +65,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="remarks"></a>설명  
 
- Visual Basic에서는 사용자가 별도의 소스 파일에서 작성한 코드에서 생성된 코드를 구분하는 데 partial 클래스 정의를 사용합니다. 예를 들어, **Windows Form 디자이너**에서는 <xref:System.Windows.Forms.Form>과 같은 컨트롤에 대해 partial 클래스를 정의합니다. 이런 컨트롤에서 생성된 코드를 수정해서는 안 됩니다.  
+ Visual Basic에서는 사용자가 별도의 소스 파일에서 작성한 코드에서 생성된 코드를 구분하는 데 partial 클래스 정의를 사용합니다. 예를 들어, **Windows Form 디자이너** 에서는 <xref:System.Windows.Forms.Form>과 같은 컨트롤에 대해 partial 클래스를 정의합니다. 이런 컨트롤에서 생성된 코드를 수정해서는 안 됩니다.  
   
  부분 형식(Partial Type)을 만들면 클래스, 구조체, 인터페이스 및 모듈 만들기에 대한 모든 규칙(예; 한정자 사용 및 상속에 대한 규칙)이 적용됩니다.  
   
@@ -96,7 +97,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
  앞의 예제에서 두 개의 부분 정의는 동일한 소스 파일에 있거나 두 개의 서로 다른 소스 파일에 있을 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Class 문](../statements/class-statement.md)
 - [Structure 문](../statements/structure-statement.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: MustInherit (Visual Basic)'
 title: MustInherit
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-ms.openlocfilehash: 6502da947ae331a26e66d8ce2dbcda46e4172a6e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6ca11dd3fee8240f39ea1a3d278870d167d283d4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867958"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701042"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit(Visual Basic)
 
@@ -23,7 +24,7 @@ ms.locfileid: "90867958"
   
 ## <a name="remarks"></a>설명  
 
- *기본 클래스* ( *추상 클래스*라고도 함)의 목적은 클래스에서 파생 되는 모든 클래스에 공통적인 기능을 정의 하는 것입니다. 이렇게 하면 파생 클래스가 공통 요소를 다시 정의할 필요가 없습니다. 경우에 따라이 일반적인 기능은 사용 가능한 개체를 만들기에 충분 하지 않으며 각 파생 클래스는 누락 된 기능을 정의 합니다. 이러한 경우에는 사용 하는 코드가 파생 된 클래스 에서만 개체를 만들도록 할 수 있습니다. `MustInherit`기본 클래스에서를 사용 하 여이를 적용 합니다.  
+ *기본 클래스* ( *추상 클래스* 라고도 함)의 목적은 클래스에서 파생 되는 모든 클래스에 공통적인 기능을 정의 하는 것입니다. 이렇게 하면 파생 클래스가 공통 요소를 다시 정의할 필요가 없습니다. 경우에 따라이 일반적인 기능은 사용 가능한 개체를 만들기에 충분 하지 않으며 각 파생 클래스는 누락 된 기능을 정의 합니다. 이러한 경우에는 사용 하는 코드가 파생 된 클래스 에서만 개체를 만들도록 할 수 있습니다. `MustInherit`기본 클래스에서를 사용 하 여이를 적용 합니다.  
   
  클래스의 또 다른 용도 `MustInherit` 는 변수를 관련 클래스 집합으로 제한 하는 것입니다. 기본 클래스를 정의 하 고이 클래스에서 이러한 관련 클래스를 모두 파생 시킬 수 있습니다. 기본 클래스는 모든 파생 클래스에 공통적인 기능을 제공 하지 않아도 되지만 변수에 값을 할당 하는 필터 역할을 할 수 있습니다. 소비 하는 코드에서 변수를 기본 클래스로 선언 하는 경우 Visual Basic를 사용 하 여 파생 클래스 중 하나의 개체만 해당 변수에 할당할 수 있습니다.  
   
@@ -51,9 +52,9 @@ ms.locfileid: "90867958"
   
  [Class 문](../statements/class-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Inherits Statement](../statements/inherits-statement.md)
 - [NotInheritable](notinheritable.md)
-- [키워드](../keywords/index.md)
+- [C++ 키워드](../keywords/index.md)
 - [상속 기본 사항](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)

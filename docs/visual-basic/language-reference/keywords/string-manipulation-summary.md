@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 문자열 조작 요약 (Visual Basic)'
 title: 문자열 조작 요약
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - manipulating strings [Visual Basic]
 - strings [Visual Basic], manipulating
 ms.assetid: 5d3197eb-fe66-417e-9e2a-20450660c9c6
-ms.openlocfilehash: f9916fb00b4073e6b0b6ebfc4bb420975b320747
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d1e24c870816a10b493f0900b92b570b214663a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875535"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701172"
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>문자열 조작 요약(Visual Basic)
 
@@ -33,7 +34,7 @@ Visual Basic 언어 키워드 및 런타임 라이브러리 멤버는 목적과 
 |필터 기반 문자열 배열을 반환 합니다.|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|  
 |지정 된 수의 부분 문자열을 반환 합니다.|<xref:Microsoft.VisualBasic.Strings.Split%2A>, <xref:Microsoft.VisualBasic.Strings.Join%2A>|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [키워드](index.md)
+- [C++ 키워드](index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../runtime-library-members.md)

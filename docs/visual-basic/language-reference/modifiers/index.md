@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 한정자 (Visual Basic)'
 title: 한정자
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 6ee477e8d09ea7c8ea559ff8245784b2d0123141
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 581f484e81a7de2cb6c80061eb4730adc18f316b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875446"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701055"
 ---
 # <a name="modifiers-visual-basic"></a>한정자(Visual Basic)
 
@@ -35,7 +36,7 @@ ms.locfileid: "90875446"
   
  [Iterator](iterator.md)  
   
- [Key](key.md)  
+ [키](key.md)  
   
  [모듈 \<keyword>](module-keyword.md)  
   
@@ -51,7 +52,7 @@ ms.locfileid: "90875446"
   
  [선택 사항](optional.md)  
   
- [제한이](out-generic-modifier.md)  
+ [Out](out-generic-modifier.md)  
   
  [오버로드](overloads.md)  
   
@@ -65,9 +66,9 @@ ms.locfileid: "90875446"
   
  [개인](private.md)  
   
- [개인 보호](private-protected.md)  
+ [비공개 보호](private-protected.md)  
   
- [보호](protected.md)  
+ [보호됨](protected.md)  
 
  [Protected Friend](protected-friend.md)  
   
@@ -89,6 +90,6 @@ ms.locfileid: "90875446"
   
  [WriteOnly](writeonly.md)  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [Visual Basic 언어 참조](../index.md)  

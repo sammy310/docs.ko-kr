@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 그림자 (Visual Basic)'
 title: Overloads
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
-ms.openlocfilehash: 7aed6bec21bd484cca019b061bd5915de13a9eb8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4a455a78c36e15db977936b81c22e7a5b03d107e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402709"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700847"
 ---
 # <a name="shadows-visual-basic"></a>Shadows(Visual Basic)
 
@@ -24,7 +25,7 @@ ms.locfileid: "84402709"
 
 ## <a name="remarks"></a>설명
 
-숨김 ( *이름으로 숨기기*라고도 함)의 주요 용도는 클래스 멤버의 정의를 유지 하는 것입니다. 기본 클래스는 이미 정의한 것과 동일한 이름으로 요소를 만드는 변경 될 수 있습니다. 이 경우 `Shadows` 한정자는 클래스를 통해 참조가 새 기본 클래스 요소가 아닌 사용자가 정의한 멤버로 확인 되도록 합니다.
+숨김 ( *이름으로 숨기기* 라고도 함)의 주요 용도는 클래스 멤버의 정의를 유지 하는 것입니다. 기본 클래스는 이미 정의한 것과 동일한 이름으로 요소를 만드는 변경 될 수 있습니다. 이 경우 `Shadows` 한정자는 클래스를 통해 참조가 새 기본 클래스 요소가 아닌 사용자가 정의한 멤버로 확인 되도록 합니다.
 
 숨김과 재정의는 둘 다 상속된 요소를 다시 정의하지만 두 방법에는 중요한 차이점이 있습니다. 자세한 내용은 [Visual Basic에서 숨기기](../../programming-guide/language-features/declared-elements/shadowing.md)를 참조 하세요.
 
@@ -74,7 +75,7 @@ ms.locfileid: "84402709"
 
 - [공유](shared.md)
 - [정적](static.md)
-- [프라이빗](private.md)
+- [개인](private.md)
 - [Me, My, MyBase 및 MyClass](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [상속 기본 사항](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [New](mustoverride.md)

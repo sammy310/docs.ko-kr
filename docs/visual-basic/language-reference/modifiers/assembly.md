@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 어셈블리 (Visual Basic)'
 title: 어셈블리
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Assembly keyword [Visual Basic]
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
-ms.openlocfilehash: 34d6b94f31336e3e99b8ca981a9c4899e5a3d912
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 60b8ce4ed2b8b5cb7deeabb702c33d1e561d765f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875530"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99701185"
 ---
 # <a name="assembly-visual-basic"></a>Assembly(Visual Basic)
 
@@ -29,7 +30,7 @@ ms.locfileid: "90875530"
   
  AssemblyInfo 파일의 어셈블리에 특성을 적용할 수도 있습니다 .이 경우 기본 소스 코드 파일에서 특성 블록을 사용할 필요가 없습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [모듈 \<keyword>](module-keyword.md)
 - [특성 개요](../../programming-guide/concepts/attributes/index.md)

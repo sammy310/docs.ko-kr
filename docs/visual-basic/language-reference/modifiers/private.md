@@ -1,5 +1,6 @@
 ---
-title: Private
+description: '자세히 알아보기: 개인 (Visual Basic)'
+title: 비공개
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Private
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 59f1c1666ce38923a2861244fb377007cd0fa992
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 20dcd943856e20ccb1b7cb5c0603fa5f313d2421
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874976"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700951"
 ---
 # <a name="private-visual-basic"></a>Private(Visual Basic)
 
@@ -33,7 +34,7 @@ ms.locfileid: "90874976"
   
 - **액세스 수준입니다.** 선언 컨텍스트 내의 모든 코드는 해당 요소에 액세스할 수 있습니다 `Private` . 여기에는 중첩 된 클래스 또는 열거형의 할당 식과 같은 포함 된 형식 내의 코드가 포함 됩니다. 선언 컨텍스트 외부에 있는 코드는 해당 요소에 액세스할 수 없습니다 `Private` .  
   
-- **액세스 한정자입니다.** 액세스 수준을 지정 하는 키워드를 *액세스 한정자*라고 합니다. 액세스 한정자의 비교는 [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.  
+- **액세스 한정자입니다.** 액세스 수준을 지정 하는 키워드를 *액세스 한정자* 라고 합니다. 액세스 한정자의 비교는 [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.  
   
  `Private` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
@@ -61,12 +62,12 @@ ms.locfileid: "90874976"
   
  [Sub 문](../statements/sub-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [공용](public.md)
-- [보호](protected.md)
+- [보호됨](protected.md)
 - [Friend](friend.md)
-- [개인 보호](./private-protected.md)
+- [비공개 보호](./private-protected.md)
 - [Protected Friend](./protected-friend.md)
 - [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)
 - [절차](../../programming-guide/language-features/procedures/index.md)
