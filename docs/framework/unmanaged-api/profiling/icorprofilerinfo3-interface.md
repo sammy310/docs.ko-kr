@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo3 인터페이스'
 title: ICorProfilerInfo3 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 044a262f-0fa7-485d-b0c1-64cdc359c654
 topic_type:
 - apiref
-ms.openlocfilehash: 9944234da1677608aec10066b61bfc6a6cb72bcb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 52b4c699a122c302e47cffb11d01e7829009e219
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697859"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687183"
 ---
 # <a name="icorprofilerinfo3-interface"></a>ICorProfilerInfo3 인터페이스
 
@@ -60,7 +61,7 @@ ms.locfileid: "95697859"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 인터페이스](profiling-interfaces.md)
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)

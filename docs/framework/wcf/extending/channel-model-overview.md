@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: 채널 모델 개요'
 title: 채널 모델 개요
 ms.date: 03/30/2017
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-ms.openlocfilehash: 8a71adbc9c9b3f13cde250ff0bfbca67e9f23df9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8b22c2b957eec6e3b52a84c7a30d4a17c41293e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262179"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685883"
 ---
 # <a name="channel-model-overview"></a>채널 모델 개요
 
@@ -75,7 +76,7 @@ WCF (Windows Communication Foundation) 채널 스택은 메시지를 처리 하�
   
  다음 항목에서는 채널 개체 모델 및 사용자 지정 채널을 편리하게 빌드할 수 있는 다양한 개발 영역에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[서비스: 채널 수신기 및 채널](service-channel-listeners-and-channels.md)|서비스 애플리케이션에서 들어오는 채널을 수신 대기하는 채널 수신기에 대해 설명합니다.|  
 |[클라이언트 채널 팩터리 및 채널](client-channel-factories-and-channels.md)|서비스 애플리케이션에 연결할 채널을 만드는 채널 팩터리에 대해 설명합니다.|  

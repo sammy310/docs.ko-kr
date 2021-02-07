@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 예외 참조'
 title: 예외 참조
 ms.date: 03/30/2017
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
-ms.openlocfilehash: 233586c3a4fdda4cfbea2c3370d447c7bfa41b94
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 04f8ee1032b8938fea3de9655d921dc1ce088052
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254807"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686416"
 ---
 # <a name="exceptions-reference"></a>예외 참조
 
@@ -57,4 +58,4 @@ ms.locfileid: "96254807"
   
  [트랜잭션 포맷터](transaction-formatter.md)  
   
- [Tools](tools.md)
+ [도구](tools.md)

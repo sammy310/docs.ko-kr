@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 핵심 통신: 연결 프레임 워크'
 title: '핵심 통신: 연결 프레임워크'
 ms.date: 03/30/2017
 ms.assetid: 61ee00e1-896d-47c8-942f-1db28ac89cdc
-ms.openlocfilehash: bd90bf75370776382b584388330e59a0701ed772
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c0603f6f47c6259faeb2de4e9fc6c1be37bbb183
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96277506"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686559"
 ---
 # <a name="core-communications-connection-framework"></a>핵심 통신: 연결 프레임워크
 

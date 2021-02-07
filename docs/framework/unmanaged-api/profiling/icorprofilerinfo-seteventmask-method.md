@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo:: SetEventMask 메서드'
 title: ICorProfilerInfo::SetEventMask 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44bc0f56-32fa-491e-a62d-52fc96d48125
 topic_type:
 - apiref
-ms.openlocfilehash: 9d319b6523b2c2a1bcc5cb6ea7a28efa67d898e8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e389d25abfecfc9a5dec8834e412fe618324e311
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720949"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687196"
 ---
 # <a name="icorprofilerinfoseteventmask-method"></a>ICorProfilerInfo::SetEventMask 메서드
 
@@ -53,7 +54,7 @@ HRESULT SetEventMask(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
 - [SetEventMask2 메서드](icorprofilerinfo5-seteventmask2-method.md)

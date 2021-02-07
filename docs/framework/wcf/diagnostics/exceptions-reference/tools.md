@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 도구'
 title: 도구
 ms.date: 03/30/2017
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-ms.openlocfilehash: 2f7ef8b7f871dada676eb05713d6f624427d5395
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1400cee5c626f015d5b9a6efcd9c04411f0ba4f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285696"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686131"
 ---
 # <a name="tools"></a>도구
 
@@ -46,7 +47,7 @@ ms.locfileid: "96285696"
 |WrnNoServiceContractTypes|지정된 어셈블리에 대한 XmlSerializer 형식을 생성할 수 없습니다. 서비스 계약 형식을 찾을 수 없습니다.|
 |WrnCouldNotLoadTypesFromReferenceAssemblyAt|지정된 위치에서 로드된 어셈블리의 형식을 로드하는 동안 오류가 발생했습니다. 어셈블리의 일부 형식은 로드할 수 없고 도구에 사용할 수 없습니다.|
 |ErrDirectoryPointsToAFile|지정된 잘못된 값이 지정된 옵션에 전달되었습니다. 지정된 값은 파일 경로입니다.|
-|오류|오류:|
+|Error|오류:|
 |ErrDuplicateReferenceValues|지정된 어셈블리가 지정된 옵션을 사용하여 두 번 로드되었습니다. 어셈블리는 한 번만 참조할 수 있습니다.|
 |WrnNoXmlSerializerOperationBehavior|지정된 어셈블리에 대한 XmlSerializer를 생성할 수 없습니다. 해당 어셈블리의 서비스 계약에 XmlSerializerOperationBehavior가 포함된 작업이 없습니다.|
 |ErrCannotCreateDirectory|지정된 디렉터리를 만들 수 없습니다.|

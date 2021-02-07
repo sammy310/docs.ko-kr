@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo3:: RequestProfilerDetach 메서드'
 title: ICorProfilerInfo3::RequestProfilerDetach 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-ms.openlocfilehash: 2ea39c94a5a0f3d24d4123d6405115ac75105e26
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6d37c6df823aaebe4209e45cd459a8815a39852f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721584"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687040"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach 메서드
 
@@ -38,7 +39,7 @@ HRESULT RequestProfilerDetach(
  `dwExpectedCompletionMilliseconds`  
  [in] 프로파일러를 언로드하기에 안전한지를 확인하기 전에 CLR(공용 언어 런타임)이 대기해야 하는 시간(밀리초)입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -69,7 +70,7 @@ HRESULT RequestProfilerDetach(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

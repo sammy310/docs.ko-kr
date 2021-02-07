@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 바인딩 확장'
 title: 바인딩 확장명
 ms.date: 03/30/2017
 helpviewer_keywords:
 - extending bindings [WCF]
 ms.assetid: 5e40d306-b3c1-4429-80c4-fbb1d956856c
-ms.openlocfilehash: 80e155ff760af2f7478cd6865f6b703b857b0913
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 721a844a51aa2b8a7073f5e489b34eab8955d276
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251505"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685779"
 ---
 # <a name="extending-bindings"></a>바인딩 확장명
 
@@ -17,7 +18,7 @@ ms.locfileid: "96251505"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[바인딩 및 바인딩 요소](bindings-and-binding-elements.md)|바인딩 및 바인딩 요소와 그 사용 방법과 확장 방법에 대해 설명합니다.|  
 |[사용자 지정 바인딩](custom-bindings.md)|<xref:System.ServiceModel.Channels.CustomBinding> 클래스를 사용하여 시스템 정의 및 타사 바인딩 요소를 통해 사용자 지정 바인딩을 만드는 방법을 설명합니다.|  

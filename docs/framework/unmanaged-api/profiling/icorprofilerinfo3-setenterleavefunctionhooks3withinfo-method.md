@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo 메서드'
 title: ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ca8ea534-e441-47b8-be85-466410988c0a
 topic_type:
 - apiref
-ms.openlocfilehash: 2ae4b35feb2441fdd66fb68ba9bb3649269a983c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 15f6696635172972b09e68beeae13a7d6a8e195a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697820"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687014"
 ---
 # <a name="icorprofilerinfo3setenterleavefunctionhooks3withinfo-method"></a>ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo 메서드
 
@@ -64,7 +65,7 @@ HRESULT SetEnterLeaveFunctionHooks3WithInfo(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [SetEnterLeaveFunctionHooks3](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
 - [FunctionEnter3](functionenter3-function.md)

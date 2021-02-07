@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: MSMQ 전송'
 title: MSMQ 전송
 ms.date: 03/30/2017
 ms.assetid: 3f29a2fe-24df-4614-b64c-b0c084fb7003
-ms.openlocfilehash: 407512cbb129dd2e5497de92c32b0641dd21080b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: af371a6481e7137321f1c32d0183f68e529d13d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238030"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686351"
 ---
 # <a name="msmq-transport"></a>MSMQ 전송
 

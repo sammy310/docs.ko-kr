@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: FunctionTailcall 함수'
 title: FunctionTailcall 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: 02bc6f4bbb6754bd160fe2694f27563908f3a759
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8da3efde7d925fdb02232ca98662f8d6a6fd0adf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722221"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687313"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall 함수
 
@@ -68,7 +69,7 @@ void __stdcall FunctionTailcall (
   
  **.NET Framework 버전:** 1.1, 1.0  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [FunctionEnter2 함수](functionenter2-function.md)
 - [FunctionLeave2 함수](functionleave2-function.md)

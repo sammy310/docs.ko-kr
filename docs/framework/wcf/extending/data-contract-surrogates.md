@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: 데이터 계약 서로게이트'
 title: 데이터 계약 서로게이트
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: e33a487c03bbf87666d517040e00131f5482be6f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 335e7f64868177d00c747e29c463808f3eff3056
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251518"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685805"
 ---
 # <a name="data-contract-surrogates"></a>데이터 계약 서로게이트
 
@@ -37,7 +38,7 @@ ms.locfileid: "96251518"
 
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> 메서드는 특정 형식을 다른 형식에 매핑합니다. 이 메서드는 serialization, deserialization, 가져오기 및 내보내기에 필요합니다.  
   
- 첫 번째 작업은 다른 형식에 매핑할 형식을 정의하는 것입니다. 예를 들면 다음과 같습니다.  
+ 첫 번째 작업은 다른 형식에 매핑할 형식을 정의하는 것입니다. 다음은 그 예입니다.   
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
@@ -59,7 +60,7 @@ ms.locfileid: "96251518"
 
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 메서드는 원래 형식 인스턴스를 서로게이트된 형식 인스턴스로 변환합니다. 이 메서드는 serialization에 필요합니다.  
   
- 다음 단계는 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 메서드를 구현하여 물리적 데이터를 원래 인스턴스에서 서로게이트에 매핑하는 방식을 정의하는 것입니다. 예를 들면 다음과 같습니다.  
+ 다음 단계는 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 메서드를 구현하여 물리적 데이터를 원래 인스턴스에서 서로게이트에 매핑하는 방식을 정의하는 것입니다. 다음은 그 예입니다.   
   
  [!code-csharp[C_IDataContractSurrogate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#4)]  
   
@@ -77,7 +78,7 @@ ms.locfileid: "96251518"
 
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> 메서드는 서로게이트된 형식 인스턴스를 원래 형식 인스턴스로 변환합니다. 이 메서드는 deserialization에 필요합니다.  
   
- 다음 작업은 물리적 데이터를 서로게이트 인스턴스에서 원래 인스턴스에 매핑하는 방식을 정의하는 것입니다. 예를 들면 다음과 같습니다.  
+ 다음 작업은 물리적 데이터를 서로게이트 인스턴스에서 원래 인스턴스에 매핑하는 방식을 정의하는 것입니다. 다음은 그 예입니다.   
   
  [!code-csharp[C_IDataContractSurrogate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#5)]  
   
@@ -91,7 +92,7 @@ ms.locfileid: "96251518"
   
 ### <a name="getcustomdatatoexport-method"></a>GetCustomDataToExport 메서드  
 
- 스키마를 내보낼 때 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 메서드는 선택 사항입니다. 해당 메서드는 내보낸 스키마에 추가 데이터나 힌트를 삽입하는 데 사용됩니다. 추가 데이터는 멤버 수준 또는 형식 수준에서 삽입될 수 있습니다. 예를 들면 다음과 같습니다.  
+ 스키마를 내보낼 때 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 메서드는 선택 사항입니다. 해당 메서드는 내보낸 스키마에 추가 데이터나 힌트를 삽입하는 데 사용됩니다. 추가 데이터는 멤버 수준 또는 형식 수준에서 삽입될 수 있습니다. 다음은 그 예입니다.   
   
  [!code-csharp[C_IDataContractSurrogate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#6)]  
   
@@ -127,7 +128,7 @@ ms.locfileid: "96251518"
 
  <xref:System.Runtime.Serialization.IDataContractSurrogate.ProcessImportedType%2A> 메서드는 스키마 가져오기에서 만들어진 모든 형식을 사용자 지정합니다. 이 메서드는 선택 사항입니다.  
   
- 스키마를 가져올 때 이 메서드를 사용하면 가져온 형식 및 컴파일 정보를 사용자 지정할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 스키마를 가져올 때 이 메서드를 사용하면 가져온 형식 및 컴파일 정보를 사용자 지정할 수 있습니다. 다음은 그 예입니다.   
   
  [!code-csharp[C_IDataContractSurrogate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#7)]  
   

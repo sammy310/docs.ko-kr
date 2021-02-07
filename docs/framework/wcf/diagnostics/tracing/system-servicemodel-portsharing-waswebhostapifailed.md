@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 WasWebHostAPIFailed를 확인 하세요.
 title: System.ServiceModel.PortSharing.WasWebHostAPIFailed
 ms.date: 03/30/2017
 ms.assetid: 31a3ed07-16dc-4aa2-8cd7-6974ef75432b
-ms.openlocfilehash: d96c81cdaa9bbb7f8b06d9e8562bf860a64d3864
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a4599171c1e1cb2ef15ca98801a7adf28205f4ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96277441"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686000"
 ---
 # <a name="systemservicemodelportsharingwaswebhostapifailed"></a>System.ServiceModel.PortSharing.WasWebHostAPIFailed
 
 System.ServiceModel.PortSharing.WasWebHostAPIFailed  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  지정한 오류 코드로 인해 지정한 WAS(Windows Process Activation Service) API를 호출하지 못했습니다.  
   

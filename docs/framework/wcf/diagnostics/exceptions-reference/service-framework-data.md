@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 서비스 프레임 워크 데이터'
 title: 서비스 프레임워크 데이터
 ms.date: 03/30/2017
 ms.assetid: 2a2c8ddc-4e82-4e7f-a79f-97085c469517
-ms.openlocfilehash: 8bb6e9df6a77eda5875981a0bf7783f50671a589
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f2f4645e0a2473e565286a45e6d20e3d1ef7c2f4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255782"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686195"
 ---
 # <a name="service-framework-data"></a>서비스 프레임워크 데이터
 

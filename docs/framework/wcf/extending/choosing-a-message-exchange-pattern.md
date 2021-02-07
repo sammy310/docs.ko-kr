@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 메시지 교환 패턴 선택'
 title: 메시지 교환 패턴 선택
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 22c720beaa8dc70d2916a5b1d38819ad3d333a0f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c452a65e4d4108123deaab93be9bd825127eba70
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275660"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685857"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>메시지 교환 패턴 선택
 

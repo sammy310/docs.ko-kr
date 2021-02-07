@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: FunctionLeave3 함수'
 title: FunctionLeave3 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d798088-7992-48a0-ae55-d2a7ee31913f
 topic_type:
 - apiref
-ms.openlocfilehash: 8eaf36579bb82d66ff356aa68afc38c70d7eaca3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9da68ffa2c54ada1437b3bef8bd6324c0791d610
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720388"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687456"
 ---
 # <a name="functionleave3-function"></a>FunctionLeave3 함수
 
@@ -63,7 +64,7 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [FunctionEnter3](functionenter3-function.md)
 - [FunctionTailcall3](functiontailcall3-function.md)

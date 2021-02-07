@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataTables:: GetNextGuid 메서드'
 title: IMetaDataTables::GetNextGuid 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 68f6ea4d-9112-4d6b-93d9-e34f1e2f2496
 topic_type:
 - apiref
-ms.openlocfilehash: 71dce539941f78feff3d5f89028d654cade25feb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 86c248bf503410a07fc0b4cf622694c4da213c34
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727265"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688106"
 ---
 # <a name="imetadatatablesgetnextguid-method"></a>IMetaDataTables::GetNextGuid 메서드
 
@@ -57,7 +58,7 @@ HRESULT GetNextGuid (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataTables 인터페이스](imetadatatables-interface.md)
 - [IMetaDataTables2 인터페이스](imetadatatables2-interface.md)

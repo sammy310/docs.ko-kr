@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 보안 예외'
 title: 보안 예외
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
-ms.openlocfilehash: e96c317862867b9e461eb2d13dce6ede5b30cf13
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: efa3b7e132f3f3fdc8f2cb5b7dc09614ce584fdb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348237"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686234"
 ---
 # <a name="security-exceptions"></a>보안 예외
 
@@ -29,7 +30,7 @@ ms.locfileid: "75348237"
 |BindingDoesNotSupportWindowsIdenityForImpersonation|지정된 계약 작업에는 자동 가장을 위한 Windows ID가 필요합니다. 호출자를 나타내는 Windows ID는 지정된 계약에 대해 지정된 바인딩에 의해 제공되지 않습니다.|
 |CachedNegotiationStateQuotaReached|지정된 용량에 도달했기 때문에 서비스가 협상 상태를 캐시할 수 없습니다. 요청을 다시 시도하십시오.|
 |CacheQuotaReached|항목을 추가할 수 없습니다. 최대 캐시 크기가 지정되었습니다.|
-|CannotDetermineSPNBasedOnAddress|클라이언트가 SspiNegotiation/Kerberos 용도로 지정된 대상 주소의 ID에 기초하여 서비스 사용자 이름을 확인할 수 없습니다. 대상 주소 id는 UPN id (예: acmedomain\\\alice) 또는 SPN id (예: 호스트/bobs-컴퓨터) 여야 합니다.|
+|CannotDetermineSPNBasedOnAddress|클라이언트가 SspiNegotiation/Kerberos 용도로 지정된 대상 주소의 ID에 기초하여 서비스 사용자 이름을 확인할 수 없습니다. 대상 주소 id는 UPN id (예: acmedomain \\ \alice) 또는 SPN id (예: 호스트/bobs-컴퓨터) 여야 합니다.|
 |CannotFindCert|지정된 검색 조건인 StoreName, StoreLocation, FindType, FindValue를 사용하여 X.509 인증서를 찾을 수 없습니다.|
 |CannotFindCertForTarget|지정된 대상에 대해 지정된 검색 조건인 StoreName, StoreLocation, FindType, FindValue를 사용하여 X.509 인증서를 찾을 수 없습니다.|
 |CannotFindCorrelationStateForApplyingSecurity|응답자에서의 회신에 보안을 적용하기 위한 상관 관계 상태를 찾을 수 없습니다.|
@@ -121,7 +122,7 @@ ms.locfileid: "75348237"
 |SecurityProtocolFactoryShouldBeSetBeforeThisOperation|이 작업을 수행하기 전에 보안 프로토콜 팩터리를 설정해야 합니다.|
 |SecuritySessionAbortedFaultReason|보안 세션이 종료되었습니다. 이것은 세션에서 메시지가 너무 오래 수신되지 않았기 때문일 수 있습니다|
 |SecuritySessionKeyIsStale|세션 키가 애플리케이션 메시지를 보안할 수 있으려면 먼저 세션 키를 갱신해야 합니다.|
-|SecuritySessionLimitReached|보안 세션을 만들 수 없습니다 나중에 다시 시도하십시오.|
+|SecuritySessionLimitReached|보안 세션을 만들 수 없습니다 나중에 다시 시도하세요.|
 |SecuritySessionNotPending|지정 된 ID의 보안 세션이 보류 중이 아닙니다.|
 |SecurityTokenParametersHasIncompatibleInclusionMode|지정된 바인딩이 호환되지 않는 지정된 보안 토큰 포함 모드를 가지는 보안 토큰 매개 변수로 구성되었습니다. 대체 보안 토큰 포함 모드를 지정하십시오.|
 |SecurityVersionDoesNotSupportEncryptedKeyBinding|지정된 계약에 대해 지정된 바인딩이 EncryptedKeys에 대한 연결되지 않은 참조를 지원하지 않는 호환되지 않는 보안 버전으로 구성되었습니다. 지정된 값 이상을 바인딩에 대한 보안 버전으로 사용하십시오.|

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 모범 사례: 데이터 계약 버전 관리'
 title: '모범 사례: 데이터 계약 버전 관리'
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: d6a1eef949e30a1a6d9a1c5971d33c788cc548b9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8f12c620b6916c7b513b3491cbbb91c4cfd1fbe5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96277909"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686754"
 ---
 # <a name="best-practices-data-contract-versioning"></a>모범 사례: 데이터 계약 버전 관리
 

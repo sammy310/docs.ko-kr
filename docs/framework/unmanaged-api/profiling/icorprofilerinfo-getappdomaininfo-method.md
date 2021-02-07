@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo:: GetAppDomainInfo 메서드'
 title: ICorProfilerInfo::GetAppDomainInfo 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a6bf5a04-e03e-44f0-917a-96f6a6d3cc96
 topic_type:
 - apiref
-ms.openlocfilehash: 62055a98197f5f8bd4cfc02e99891b83ef6341e9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 981577320bdf04a2bf119115f066811d3c11b68f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680302"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687287"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>ICorProfilerInfo::GetAppDomainInfo 메서드
 
@@ -71,7 +72,7 @@ HRESULT GetAppDomainInfo(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

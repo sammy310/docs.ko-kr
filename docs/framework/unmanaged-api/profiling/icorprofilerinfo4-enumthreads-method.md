@@ -1,4 +1,5 @@
 ---
+description: 'ICorProfilerInfo4:: EnumThreads 메서드에 대해 자세히 알아보세요.'
 title: ICorProfilerInfo4::EnumThreads 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bca7a5b4-c207-4894-918c-0733926296dd
 topic_type:
 - apiref
-ms.openlocfilehash: df0e66c8563404d7de4f1e11f41483f2f61f519c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d597e68b8765e135d5bdb403dbdb161b7acbaa9b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721558"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99686936"
 ---
 # <a name="icorprofilerinfo4enumthreads-method"></a>ICorProfilerInfo4::EnumThreads 메서드
 
@@ -50,7 +51,7 @@ HRESULT EnumThreads([out]
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerThreadEnum 인터페이스](icorprofilerthreadenum-interface.md)
 - [ICorProfilerInfo4 인터페이스](icorprofilerinfo4-interface.md)
