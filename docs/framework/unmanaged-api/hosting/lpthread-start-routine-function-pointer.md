@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 함수 포인터 LPTHREAD_START_ROUTINE'
 title: LPTHREAD_START_ROUTINE 함수 포인터
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b9b93b0-fe92-42ba-8693-701168a29dde
 topic_type:
 - apiref
-ms.openlocfilehash: c86b65e136869603f93253678108b2ffa9d388e1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9f79cffb0b5290031915b453353dd47cb3959970
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730073"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679812"
 ---
 # <a name="lpthread_start_routine-function-pointer"></a>LPTHREAD_START_ROUTINE 함수 포인터
 
@@ -54,6 +55,6 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)

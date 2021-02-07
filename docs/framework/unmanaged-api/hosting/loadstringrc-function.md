@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: LoadStringRC 함수'
 title: LoadStringRC 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-ms.openlocfilehash: 16f95f8fce20f2cf46d4cda214e4494bd288bf60
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 188597f9dc21b6a67fb84e91cd66b50ba5a514f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727551"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679922"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC 함수
 
@@ -52,7 +53,7 @@ HRESULT LoadStringRC (
  `bQuiet`  
  진행 무시.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 Winerror.h에 정의 된 대로 다음 값 외에 표준 COM (구성 요소 개체 모델) 오류 코드를 반환 합니다.  
   
@@ -75,7 +76,7 @@ HRESULT LoadStringRC (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LoadStringRCEx 함수](loadstringrcex-function.md)
 - [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)

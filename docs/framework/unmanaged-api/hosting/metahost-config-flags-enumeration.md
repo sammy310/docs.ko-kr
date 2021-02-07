@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: 열거형 METAHOST_CONFIG_FLAGS'
 title: METAHOST_CONFIG_FLAGS 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f1e389f-ed99-4d6a-a0ba-72d7d869a01d
 topic_type:
 - apiref
-ms.openlocfilehash: 01e55659bf2a348ec763f51112cbdcd706f27c84
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 56d70f50d3b4c48b7fbf1aa3be6fc11cda904638
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730008"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679643"
 ---
 # <a name="metahost_config_flags-enumeration"></a>METAHOST_CONFIG_FLAGS 열거형
 
@@ -36,7 +37,7 @@ typedef enum {
 } METAHOST_CONFIG_FLAGS;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -57,7 +58,7 @@ typedef enum {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 열거형](hosting-enumerations.md)
 - [GetRequestedRuntime 메서드](iclrmetahostpolicy-getrequestedruntime-method.md)

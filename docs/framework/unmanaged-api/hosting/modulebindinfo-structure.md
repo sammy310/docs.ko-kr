@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: ModuleBindInfo 구조체'
 title: ModuleBindInfo 구조체
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 632d4adc-dbc9-4ce8-9397-abc3285c1c69
 topic_type:
 - apiref
-ms.openlocfilehash: 505015877985492edab4b761b379f33f1e5c6660
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0969c0ecc459414336800e8e7da5817ac0c1a8ce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729982"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679630"
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo 구조체
 
@@ -35,7 +36,7 @@ typedef struct _ModuleBindInfo {
 } ModuleBindInfo;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -57,7 +58,7 @@ typedef struct _ModuleBindInfo {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 구조체](hosting-structures.md)
 - [AssemblyBindInfo 구조체](assemblybindinfo-structure.md)

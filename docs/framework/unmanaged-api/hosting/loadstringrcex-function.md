@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: LoadStringRCEx 함수'
 title: LoadStringRCEx 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-ms.openlocfilehash: 1aa5c9f5dd7dd63e69c2eed1f6dd8ad6f007f01f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d3fe4b97014e5093dd8d209a5e27bac4ed7b879f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727538"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679918"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 함수
 
@@ -60,7 +61,7 @@ HRESULT LoadStringRCEx (
  `pcwchUsed`  
  제한이 오류 메시지의 길이에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 Winerror.h에 정의 된 대로 다음 값 외에 표준 COM 오류 코드를 반환 합니다.  
   
@@ -83,7 +84,7 @@ HRESULT LoadStringRCEx (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
 - [LoadStringRC 함수](loadstringrc-function.md)

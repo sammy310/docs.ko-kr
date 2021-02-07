@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: LoadLibraryShim 함수'
 title: LoadLibraryShim 함수
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30931874-4d0e-4df1-b3d1-e425b50655d1
 topic_type:
 - apiref
-ms.openlocfilehash: d5e9ba0023b6516eb6190f32bc65b2b8b6af79f9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 829d64b5215fc21b2d8c8b753f5ad99212267b6a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727564"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680007"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 함수
 
@@ -48,12 +49,12 @@ HRESULT LoadLibraryShim (
  진행 로드할 DLL의 버전을 나타내는 0으로 끝나는 문자열입니다. `szVersion`가 null 이면 로드 하도록 선택한 버전이 버전 4 보다 작은 최신 버전의 지정 된 DLL입니다. 즉,가 null 이면 버전 4 보다 크거나 같은 모든 버전이 무시 되 `szVersion` 고 버전 4 보다 작은 버전이 설치 되어 있으면 DLL이 로드 되지 않습니다. 이는 .NET Framework 4 설치가 기존 응용 프로그램 또는 구성 요소에 영향을 주지 않도록 하기 위한 것입니다. CLR 팀 블로그에서 [-Proc SxS 및 Migration 빠른 시작](https://devblogs.microsoft.com/dotnet/in-proc-sxs-and-migration-quick-start/) 항목을 참조 하세요.  
   
  `pvReserved`  
- 나중에 사용하기 위해 예약되어 있습니다.  
+ 다음에 사용하도록 예약됩니다.  
   
  `phModDll`  
  제한이 모듈의 핸들에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 Winerror.h에 정의 된 대로 다음 값 외에 표준 COM (구성 요소 개체 모델) 오류 코드를 반환 합니다.  
   
@@ -77,6 +78,6 @@ HRESULT LoadLibraryShim (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)

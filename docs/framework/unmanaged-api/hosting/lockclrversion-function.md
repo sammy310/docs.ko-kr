@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: LockClrVersion 함수'
 title: LockClrVersion 함수
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-ms.openlocfilehash: 2ff08ec8f194ccc9e968b3a7ee017afe788f4b03
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 268c08cdd24a826ba92cc8865dfd036f544febcd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704944"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679920"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 함수
 
@@ -49,7 +50,7 @@ HRESULT LockClrVersion (
  `pEndHostSetup`  
  진행 초기화가 완료 되었음을 CLR에 알리기 위해 호스트에서 호출 하는 함수입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 Winerror.h에 정의 된 대로 다음 값 외에 표준 COM 오류 코드를 반환 합니다.  
   
@@ -96,6 +97,6 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)
