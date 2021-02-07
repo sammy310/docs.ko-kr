@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <namespaceTable>
 title: <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
-ms.openlocfilehash: aefe7beec7335d80341e670961800907c2bd0200
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 73bfac93fba3247c02c2d86d1482af2563015a76
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855099"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684089"
 ---
 # \<namespaceTable>
 
@@ -41,13 +42,13 @@ None
 
 ### <a name="child-elements"></a>자식 요소
 
-|     | Description |
+|     | 설명 |
 | --- | ----------- |
 | [**\<filter>**](filter.md) | XPath 식에 사용되는 네임스페이스 접두사 매핑을 정의합니다. |
 
 ### <a name="parent-elements"></a>부모 요소
 
-|     | Description |
+|     | 설명 |
 | --- | ----------- |
 | [**\<routing>**](routing.md) | <xref:System.ServiceModel.Dispatcher.MessageFilter>들어오는 메시지를 평가할 때 사용할 WCF (Windows Communication Foundation 유형)와 필터가 일치할 때 메시지를 보낼 대상 끝점을 정의 하는 라우팅 테이블을 결정 하는 라우팅 필터 집합을 정의 하기 위한 구성 섹션을 나타냅니다. |
 

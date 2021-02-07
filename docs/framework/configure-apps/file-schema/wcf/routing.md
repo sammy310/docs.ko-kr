@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <routing>
 title: <routing>
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: fcf2d4eec93fd7127c6f800e1c739ad1fac49203
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 62222b527a14310b66015d4fdc4503e6cff25c8a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399969"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683348"
 ---
 # \<routing>
 
@@ -51,14 +52,14 @@ None
 
 ### <a name="child-elements"></a>자식 요소
 
-|     | Description |
+|     | 설명 |
 | --- | ----------- |
 | [**\<filters>**](filters-of-routing.md) | 들어오는 메시지를 평가할 때 사용 되는 Windows Communication Foundation (WCF) MessageFilter 유형을 결정 하는 라우팅 필터 집합을 포함 합니다. |
 | [**\<filterTables>**](filtertables.md) | 필터가 일치할 때 사용할 엔드포인트를 지정하기 위한 라우팅 필터와 대상 엔드포인트 간의 매핑을 포함합니다. |
 
 ### <a name="parent-elements"></a>부모 요소
 
-|     | Description |
+|     | 설명 |
 | --- | ----------- |
 | **\<system.ServiceModel>** | 모든 WCF 구성 요소의 루트 요소입니다. |
 

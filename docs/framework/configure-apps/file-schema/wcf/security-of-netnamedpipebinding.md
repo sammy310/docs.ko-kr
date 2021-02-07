@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <security><netNamedPipeBinding>'
 title: <netNamedPipeBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: 1a231a60d29cc6a4460de69a98753c23c0386027
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d64917c53390cade00d9e104c8581ce45355ac34
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170040"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683101"
 ---
 # <a name="security-of-netnamedpipebinding"></a>\<netNamedPipeBinding>의 \<security>
 
@@ -62,7 +63,7 @@ ms.locfileid: "91170040"
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
 - [자격 증명 형식 선택](../../../wcf/feature-details/selecting-a-credential-type.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

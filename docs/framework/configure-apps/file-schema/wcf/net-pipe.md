@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <net.pipe>
 title: <net.pipe>
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: d070b822cefeef3c281d5b0e47411f4c624dd83f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d95aebc62ab92b91c1633a99d8311b55bfaaf0d1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204608"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684076"
 ---
 # \<net.pipe>
 
@@ -17,7 +18,7 @@ ms.locfileid: "91204608"
 &nbsp;&nbsp;[**\<system.serviceModel.activation>**](system-servicemodel-activation.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<net.pipe>**  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <configuration>
@@ -42,7 +43,7 @@ ms.locfileid: "91204608"
 </configuration>
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
 
  `Type`  
   

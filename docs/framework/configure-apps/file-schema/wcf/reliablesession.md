@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <reliableSession>
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: ec69d9194d98302a4744e290f23fbb150b2e87cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5b5798326be9b376ece4e590f068f5b5e71bd878
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181315"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683413"
 ---
 # \<reliableSession>
 
@@ -131,7 +132,7 @@ WS-Reliable Messaging 설정을 정의합니다. 이 요소가 사용자 지정 
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
 - [신뢰할 수 있는 세션](../../../wcf/feature-details/reliable-sessions.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

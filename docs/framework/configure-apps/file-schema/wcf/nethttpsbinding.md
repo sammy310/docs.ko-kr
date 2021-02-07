@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <netHttpsBinding>
 title: <netHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
-ms.openlocfilehash: f6eca792f9bae6712a327fbcb5bdf47be9699062
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7f93e79fe8c390d2877d7e35ae6004475ddb849b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204595"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684037"
 ---
 # \<netHttpsBinding>
 
@@ -18,7 +19,7 @@ WCF (Windows Communication Foundation) 서비스가 HTTPS를 통해 통신할 �
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<netHttpsBinding>**  
 
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <netHttpsBinding>
@@ -54,7 +55,7 @@ WCF (Windows Communication Foundation) 서비스가 HTTPS를 통해 통신할 �
 </netHttpsBinding>
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
 
  `Type`  
   
@@ -185,7 +186,7 @@ WCF (Windows Communication Foundation) 서비스가 HTTPS를 통해 통신할 �
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

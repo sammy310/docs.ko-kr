@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <security><netHttpBinding>'
 title: <netHttpBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: 97c52fa4f062ed0c65d5b1a8ca47a1439ab04cf5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 70d6363c0ac7fa00d83880ddc8c873548b385a29
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736486"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683127"
 ---
 # <a name="security-of-nethttpbinding"></a>\<netHttpBinding>의 \<security>
 
@@ -38,15 +39,15 @@ ms.locfileid: "73736486"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |mode|선택 사항입니다. 사용되는 보안 형식을 지정합니다. 기본값은 `None`입니다. 이 특성은 <xref:System.ServiceModel.BasicHttpSecurityMode> 형식입니다.|
 
 ## <a name="mode-attribute"></a>mode 특성
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
-|None|-전송 중에는 메시지의 보안이 유지 되지 않습니다.|
+|없음|-전송 중에는 메시지의 보안이 유지 되지 않습니다.|
 |전송|HTTPS 전송을 사용하여 보안이 제공됩니다. SOAP 메시지는 HTTPS를 통해 보안이 유지됩니다. 이 서비스는 서비스의 X.509 인증서를 사용하여 클라이언트에 인증됩니다. 클라이언트는 제공된 ClientCredentialType을 사용하여 인증됩니다.|
 |메시지|SOAP 메시지 보안을 사용하여 보안이 제공됩니다. 기본적으로 본문에는 암호화 및 서명이 수행됩니다. 이 바인딩에서는 클라이언트에 out of band 방식으로 서버 인증서가 제공되어야 합니다. 이 바인딩의 유효한 `ClientCredentialType`은 `Certificate`뿐입니다.|
 |TransportWithMessageCredential|전송 보안에 의해 무결성, 기밀성 및 서버 인증이 제공됩니다. 클라이언트 인증은 SOAP 메시지 보안에 의해 제공됩니다. 이 모드는 사용자가 사용자 이름/암호를 사용하여 인증되며 메시지 전송 보호를 위한 기존의 HTTP 배포가 있는 경우에 적합합니다.|
@@ -54,14 +55,14 @@ ms.locfileid: "73736486"
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<transport>](transport-of-nethttpbinding.md)|기본 HTTP 서비스에 대한 전송 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.HttpTransportSecurity>에 해당합니다.|
 |[\<message>](message-of-nethttpbinding.md)|기본 HTTP 서비스에 대한 메시지 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.BasicHttpMessageSecurity>에 해당합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |바인딩|의 바인딩 요소 [\<basicHttpBinding>](basichttpbinding.md) 입니다.|
 

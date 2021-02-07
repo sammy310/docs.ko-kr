@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <parameter>
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 2ef674dc8601bc9afaf6b547265988bb8a99f943
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fb04cfb5bf451cdb99c23ae41ea8fafeb13f0d11
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170170"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683816"
 ---
 # \<parameter>
 
@@ -41,7 +42,7 @@ ms.locfileid: "91170170"
   
 ## <a name="index-attribute"></a>index 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |"0"|제네릭 형식의 첫 번째 매개 변수입니다. 예를 들어, <xref:System.Collections.Generic.List%601>에는 하나의 매개 변수만 있습니다. 이 형식이 선언된 형식으로 사용되면 index가 "0"으로 설정됩니다.|  
 |"1"|제네릭 형식의 두 번째 매개 변수입니다. 예를 들어, <xref:System.Collections.Generic.Dictionary%602>에는 두 개의 매개 변수가 있습니다. 이 알려진 형식이 두 번째 매개 변수에서 반환되면 index 특성을 "1"로 설정합니다.|  

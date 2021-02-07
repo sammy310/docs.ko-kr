@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <security><msmqIntegrationBinding>'
 title: <msmqIntegrationBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: be2f48f7d9c3be4ea0a5fe95436930b3f23c7551
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4ad4cb89599198661d764cfeb985609be027c0eb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170066"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683205"
 ---
 # <a name="security-of-msmqintegrationbinding"></a>\<msmqIntegrationBinding>의 \<security>
 
@@ -68,7 +69,7 @@ MSMQ(메시지 큐) 통합 채널을 위한 전송 보안 설정을 정의합니
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>
 - [WCF의 큐](../../../wcf/feature-details/queues-in-wcf.md)
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

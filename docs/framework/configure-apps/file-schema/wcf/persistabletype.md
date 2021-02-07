@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <persistableType>
 title: <persistableType>
 ms.date: 03/30/2017
 ms.assetid: e5425fe6-523a-4076-aab4-2c2515b1d830
-ms.openlocfilehash: 6425b21fe50865beb7bb2876ea478b415fbe3944
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: eadbb951d751dd88ce974edc8d5b343a1469b758
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181520"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683634"
 ---
 # \<persistableType>
 
@@ -20,7 +21,7 @@ ms.locfileid: "91181520"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<persistableTypes>**](persistabletypes.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<persistableType>**  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <comContracts>
@@ -34,7 +35,7 @@ ms.locfileid: "91181520"
 </comContracts>
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
 
  `Type`  
   

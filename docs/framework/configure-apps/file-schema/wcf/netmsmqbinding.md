@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <netMsmqBinding>
 title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 7dca85e4095e581c262611f0120ffb85e2174fee
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2d0e475065b1ed34df895fc289567d678489fbbf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204582"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683959"
 ---
 # \<netMsmqBinding>
 
@@ -146,7 +147,7 @@ ms.locfileid: "91204582"
 - <xref:System.ServiceModel.NetMsmqBinding>
 - <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>
 - [\<binding>](bindings.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [WCF의 큐](../../../wcf/feature-details/queues-in-wcf.md)

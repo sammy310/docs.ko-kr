@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: <scopedCertificates> 요소'
 title: <scopedCertificates> 요소
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: 4bee627fe186ed8dd85c118a37f59f575eb4650e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7aa108031831539396e8f737a214982655dd6bb1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162259"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99683335"
 ---
 # <a name="scopedcertificates-element"></a>\<scopedCertificates> 요소
 
