@@ -1,17 +1,18 @@
 ---
+description: '다음에 대 한 자세한 정보: Behavior 클래스'
 title: Behavior 클래스
 ms.date: 03/30/2017
 ms.assetid: 75d117f5-87f9-40fb-84c6-9e2fef6da6af
-ms.openlocfilehash: 73edea45ccd1d1684604a571fbc0615da52f5686
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7d5f62fa51ebee5fbd4c53506208faf579af51ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255704"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757932"
 ---
 # <a name="behavior-class"></a>Behavior 클래스
 
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class Behavior  
@@ -28,7 +29,7 @@ class Behavior
 
  Behavior 클래스에는 다음과 같은 속성이 있습니다.  
   
-### <a name="type"></a>유형  
+### <a name="type"></a>Type  
 
  데이터 형식: 문자열  
   
