@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostThreadPoolManager:: GetMaxThreads 메서드'
 title: IHostThreadPoolManager::GetMaxThreads 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db268876-6178-4a81-aca3-318ee7f96001
 topic_type:
 - apiref
-ms.openlocfilehash: 3aecebe2803d3a795db801491d0f60a5eb7c00ce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e8cae2aa29a50ef58a5b87deba9e275a441d43ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730788"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728384"
 ---
 # <a name="ihostthreadpoolmanagergetmaxthreads-method"></a>IHostThreadPoolManager::GetMaxThreads 메서드
 
@@ -39,7 +40,7 @@ HRESULT GetMaxThreads (
  `pdwMaxWorkerThreads`  
  제한이 호스트가 스레드 풀에서 유지 관리 하는 최대 스레드 수에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -67,7 +68,7 @@ HRESULT GetMaxThreads (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.ThreadPool.GetMaxThreads%2A>
 - <xref:System.Threading.ThreadPool>

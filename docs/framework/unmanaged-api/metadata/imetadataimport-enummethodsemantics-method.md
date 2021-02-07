@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataImport:: EnumMethodSemantics 메서드'
 title: IMetaDataImport::EnumMethodSemantics 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e7e3c630-9691-46d6-94df-b5593a7bb08a
 topic_type:
 - apiref
-ms.openlocfilehash: 3d14aea92633c944d21d867c8152767ae6f1f291
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9819afb2d7974e9f705c6ff665d3414eade0ab90
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720973"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728254"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>IMetaDataImport::EnumMethodSemantics 메서드
 
@@ -55,7 +56,7 @@ HRESULT EnumMethodSemantics (
  `pcEventProp`  
  제한이 에서 반환 되는 이벤트 또는 속성의 수입니다 `rEventProp` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -64,7 +65,7 @@ HRESULT EnumMethodSemantics (
   
 ## <a name="remarks"></a>설명  
 
- 대부분의 공용 언어 런타임 형식은 *Property* 속성과 `Changed` 관련 된 속성 이벤트와 `On` *속성* `Changed` 메서드를 정의 합니다. 예를 들어 <xref:System.Windows.Forms.Control?displayProperty=nameWithType> 형식은 <xref:System.Windows.Forms.Control.Font%2A> 속성, <xref:System.Windows.Forms.Control.FontChanged> 이벤트 및 메서드를 정의 합니다 <xref:System.Windows.Forms.Control.OnFontChanged%2A> . 속성의 set 접근자 메서드가 <xref:System.Windows.Forms.Control.Font%2A> 메서드를 호출 하면이 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 메서드는 이벤트를 발생 시킵니다 <xref:System.Windows.Forms.Control.FontChanged> . 에서 MethodDef를 `EnumMethodSemantics` 사용 하 여를 호출 하 여 <xref:System.Windows.Forms.Control.OnFontChanged%2A> <xref:System.Windows.Forms.Control.Font%2A> 속성 및 이벤트에 대 한 참조를 가져옵니다 <xref:System.Windows.Forms.Control.FontChanged> .  
+ 대부분의 공용 언어 런타임 형식은  속성과 `Changed` 관련 된 속성 이벤트와 `On` *속성* `Changed` 메서드를 정의 합니다. 예를 들어 <xref:System.Windows.Forms.Control?displayProperty=nameWithType> 형식은 <xref:System.Windows.Forms.Control.Font%2A> 속성, <xref:System.Windows.Forms.Control.FontChanged> 이벤트 및 메서드를 정의 합니다 <xref:System.Windows.Forms.Control.OnFontChanged%2A> . 속성의 set 접근자 메서드가 <xref:System.Windows.Forms.Control.Font%2A> 메서드를 호출 하면이 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 메서드는 이벤트를 발생 시킵니다 <xref:System.Windows.Forms.Control.FontChanged> . 에서 MethodDef를 `EnumMethodSemantics` 사용 하 여를 호출 하 여 <xref:System.Windows.Forms.Control.OnFontChanged%2A> <xref:System.Windows.Forms.Control.Font%2A> 속성 및 이벤트에 대 한 참조를 가져옵니다 <xref:System.Windows.Forms.Control.FontChanged> .  
   
 ## <a name="requirements"></a>요구 사항  
 
@@ -76,7 +77,7 @@ HRESULT EnumMethodSemantics (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

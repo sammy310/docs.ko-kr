@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 207-FaultProviderInvoked'
 title: 207 - FaultProviderInvoked
 ms.date: 03/30/2017
 ms.assetid: b730d903-01c2-4deb-85a4-da12f8a21fe4
-ms.openlocfilehash: 71381c9eee6aed4792500c8558db88e239bf89f7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 03c4f1669fc61019ccf4d23d2994f136e231fbec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295173"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728069"
 ---
 # <a name="207---faultproviderinvoked"></a>207 - FaultProviderInvoked
 
@@ -20,7 +21,7 @@ ms.locfileid: "96295173"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 `FaultProvider`가 호출된 후에 내보내집니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96295173"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |TypeName|`xs:string`|호출된 `FaultProvider` 형식의 CLR FullName입니다.|  
 |ExceptionTypeName|`xs:string`|`FaultProvider`가 처리한 예외의 CLR FullName입니다.|  

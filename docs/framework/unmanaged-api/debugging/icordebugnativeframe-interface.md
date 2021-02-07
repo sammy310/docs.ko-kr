@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugNativeFrame 인터페이스'
 title: ICorDebugNativeFrame 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04819c58-7246-4b32-befb-680cf1dbc436
 topic_type:
 - apiref
-ms.openlocfilehash: 043dc0fdd5218d7bc6b80428d1eb891b3f01ee8c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e417184c9f1ca5136e1b4dba07820fd8242ae932
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695545"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729135"
 ---
 # <a name="icordebugnativeframe-interface"></a>ICorDebugNativeFrame 인터페이스
 
@@ -54,6 +55,6 @@ ms.locfileid: "95695545"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)

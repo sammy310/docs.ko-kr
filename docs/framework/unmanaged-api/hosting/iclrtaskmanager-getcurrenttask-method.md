@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRTaskManager:: GetCurrentTask 메서드'
 title: ICLRTaskManager::GetCurrentTask 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c0b82a9f-edc6-4878-9c81-48de53c02142
 topic_type:
 - apiref
-ms.openlocfilehash: af855e3ba47dc329a4fb722c3e13d5f1816beba4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d7435f9099d6a8ceb173afbf79c1d0f5d4005980
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723275"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728550"
 ---
 # <a name="iclrtaskmanagergetcurrenttask-method"></a>ICLRTaskManager::GetCurrentTask 메서드
 
@@ -39,7 +40,7 @@ HRESULT GetCurrentTask (
  `ppTask`  
  제한이 호출이 시작 된 운영 체제 스레드에서 현재 실행 중인 인스턴스의 주소에 대 한 포인터 `ICLRTask` 이거나,이 스레드에서 현재 실행 중인 작업이 없는 경우 null입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -64,7 +65,7 @@ HRESULT GetCurrentTask (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

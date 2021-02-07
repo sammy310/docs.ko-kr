@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostThreadPoolManager 인터페이스'
 title: IHostThreadPoolManager 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3a2cd90-7c4e-4374-bb87-b41befb8344f
 topic_type:
 - apiref
-ms.openlocfilehash: b6625b0ef4dc3de4067514a0b39849c7a958d5c4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0361b7a08f781a8748e43959f65ce0e9f21bbac1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730762"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728407"
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>IHostThreadPoolManager 인터페이스
 
@@ -50,7 +51,7 @@ CLR (공용 언어 런타임)이 스레드 풀을 구성 하 고 작업 항목�
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading>
 - <xref:System.Threading.ThreadPool>

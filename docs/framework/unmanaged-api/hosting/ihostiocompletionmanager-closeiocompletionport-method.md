@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostIoCompletionManager:: Closeio Port 메서드'
 title: IHostIoCompletionManager::CloseIoCompletionPort 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e86ad7be-3758-498a-a972-5522d69dfbb3
 topic_type:
 - apiref
-ms.openlocfilehash: a45f8ab6372776bece09e408bc9887bfaddb0955
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 987b9f4e0fa22fa977fa1b14c77c8c0381e3e399
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727369"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728511"
 ---
 # <a name="ihostiocompletionmanagercloseiocompletionport-method"></a>IHostIoCompletionManager::CloseIoCompletionPort 메서드
 
@@ -39,7 +40,7 @@ HRESULT CloseIoCompletionPort (
  `hPort`  
  진행 닫을 포트의 핸들입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -65,7 +66,7 @@ HRESULT CloseIoCompletionPort (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRIoCompletionManager 인터페이스](iclriocompletionmanager-interface.md)
 - [IHostIoCompletionManager 인터페이스](ihostiocompletionmanager-interface.md)

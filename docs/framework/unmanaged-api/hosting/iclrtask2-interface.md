@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRTask2 인터페이스'
 title: ICLRTask2 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b5a22ebc-0582-49de-91f9-97a3d9789290
 topic_type:
 - apiref
-ms.openlocfilehash: 9332b3462ba389783a113d173e32850d40427ce2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 835b01e1c808c071e9393c5117d5e38415ec8eba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720232"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728640"
 ---
 # <a name="iclrtask2-interface"></a>ICLRTask2 인터페이스
 
@@ -54,7 +55,7 @@ ms.locfileid: "95720232"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

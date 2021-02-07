@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugVariableHome:: GetLocationType 메서드'
 title: 'ICorDebugVariableHome:: GetLocationType 메서드'
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 88027c55-8ec6-4f1e-a55b-7eefdbbc3515
 topic_type:
 - apiref
-ms.openlocfilehash: 3979ed19f8a61ac1fc045b83c52e23d7255ac364
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6efe9c045641d162be820961ca75c21a2b8fc14b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711873"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728797"
 ---
 # <a name="icordebugvariablehomegetlocationtype-method"></a>ICorDebugVariableHome:: GetLocationType 메서드
 
@@ -49,7 +50,7 @@ HRESULT GetLocationType(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugVariableHome 인터페이스](icordebugvariablehome-interface.md)
 - [VariableLocationType 열거형](variablelocationtype-enumeration.md)

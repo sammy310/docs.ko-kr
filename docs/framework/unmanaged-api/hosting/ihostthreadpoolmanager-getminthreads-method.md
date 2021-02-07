@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostThreadPoolManager:: GetMinThreads 메서드'
 title: IHostThreadPoolManager::GetMinThreads 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc07232b-b2e4-4dab-87e2-3c955974ab48
 topic_type:
 - apiref
-ms.openlocfilehash: 54dfa2741d3b4c1b2eada75ee8d214a2d0b250a0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2ebb828f9bc6230b4b0237aa1494f428a1834139
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730775"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728396"
 ---
 # <a name="ihostthreadpoolmanagergetminthreads-method"></a>IHostThreadPoolManager::GetMinThreads 메서드
 
@@ -39,7 +40,7 @@ HRESULT GetMinThreads (
  `MinThreads`  
  제한이 호스트가 현재 유지 관리 하는 최소 유휴 작업자 스레드 수에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -65,7 +66,7 @@ HRESULT GetMinThreads (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.ThreadPool.GetMinThreads%2A>
 - <xref:System.Threading.ThreadPool>

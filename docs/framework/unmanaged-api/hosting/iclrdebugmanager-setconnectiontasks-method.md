@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRDebugManager:: SetConnectionTasks 메서드'
 title: ICLRDebugManager::SetConnectionTasks 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b38bbc9a-872c-41a9-b8c3-ca011d25456a
 topic_type:
 - apiref
-ms.openlocfilehash: 5df01ac929874d00a5fddda83f532927dc46d67b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 851b3f54cc5599781596314dfb70296a3d86491a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719842"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728745"
 ---
 # <a name="iclrdebugmanagersetconnectiontasks-method"></a>ICLRDebugManager::SetConnectionTasks 메서드
 
@@ -47,7 +48,7 @@ HRESULT SetConnectionTasks (
  `ppCLRTask`  
  진행 `ICLRTask` 로 식별 되는 연결과 연결할 포인터의 배열입니다 `id` . 이 배열은 멤버를 하나 이상 포함 해야 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -76,7 +77,7 @@ HRESULT SetConnectionTasks (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRControl 인터페이스](iclrcontrol-interface.md)
 - [ICLRDebugManager 인터페이스](iclrdebugmanager-interface.md)
