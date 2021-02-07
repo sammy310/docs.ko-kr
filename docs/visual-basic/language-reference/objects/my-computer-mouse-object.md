@@ -1,15 +1,16 @@
 ---
+description: 다음에 대해 자세히 알아보세요. Computer. 마우스 개체
 title: My.Computer.Mouse 개체
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Mouse object
 ms.assetid: da473357-2120-47dd-bd42-c63d695157eb
-ms.openlocfilehash: 869352ae917d6095dce198bdaa9e9ef50fc318ea
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 27041987482f8f04bcd983f20ffa3e30c04f0e51
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867421"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674326"
 ---
 # <a name="mycomputermouse-object"></a>My.Computer.Mouse 개체
 
@@ -29,6 +30,6 @@ ms.locfileid: "90867421"
   
  **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [My.Computer 개체](my-computer-object.md)

@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 절 (Visual Basic)'
 title: 절
 ms.date: 07/20/2015
 helpviewer_keywords:
 - clauses [Visual Basic]
 ms.assetid: 5e89f5f3-d129-4ed1-8857-30cd71cff95e
-ms.openlocfilehash: 0acfc61476389e6dd3266c6de73889f54e77585e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 2d17121a5e2e48fba3617fba7b068991714ddaf4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90865943"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673884"
 ---
 # <a name="clauses-visual-basic"></a>절(Visual Basic)
 
@@ -31,6 +32,6 @@ ms.locfileid: "90865943"
   
  [으로](of-clause.md)  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [Visual Basic 언어 참조](../index.md)  

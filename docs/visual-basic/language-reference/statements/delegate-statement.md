@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Delegate 문'
 title: Delegate 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 29de4c174273c3c6c0d4f0cea1ee6dc254a1339b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 3fbf3d7b47b465fd0850f01170e02b19b7b93b4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866652"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673819"
 ---
 # <a name="delegate-statement"></a>Delegate 문
 
 대리자를 선언 하는 데 사용 됩니다. 대리자는 `Shared` 형식의 메서드 또는 개체의 인스턴스 메서드를 참조 하는 참조 형식입니다. 매개 변수와 반환 형식이 일치 하는 프로시저를 사용 하 여이 대리자 클래스의 인스턴스를 만들 수 있습니다. 그런 다음 나중에 대리자 인스턴스를 통해 프로시저를 호출할 수 있습니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 [ <attrlist> ] [ accessmodifier ] _  
@@ -67,7 +68,7 @@ ms.locfileid: "90866652"
   
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AddressOf 연산자](../operators/addressof-operator.md)
 - [으로](of-clause.md)
@@ -76,4 +77,4 @@ ms.locfileid: "90866652"
 - [Visual Basic의 제네릭 형식](../../programming-guide/language-features/data-types/generic-types.md)
 - [공 분산 및 반공 분산](../../programming-guide/concepts/covariance-contravariance/index.md)
 - [위치](../modifiers/in-generic-modifier.md)
-- [제한이](../modifiers/out-generic-modifier.md)
+- [Out](../modifiers/out-generic-modifier.md)

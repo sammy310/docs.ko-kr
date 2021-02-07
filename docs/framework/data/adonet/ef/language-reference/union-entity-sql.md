@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: UNION (Entity SQL)'
 title: UNION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: df98a4db-b00d-4c8b-bd74-0d285f27e1df
-ms.openlocfilehash: 9c4106d26fb73219d7b5f0c6763736aaf9163d4b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f02b3d76d8c21848b7a1b7ef5e7bbf749aea5c0f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200981"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673312"
 ---
 # <a name="union-entity-sql"></a>UNION (Entity SQL)
 
@@ -32,7 +33,7 @@ expression
  ALL  
  여러 컬렉션을 결합하여 중복된 값이 포함된 하나의 컬렉션으로 반환하도록 지정합니다. 지정하지 않을 경우 중복된 값은 결과 컬렉션에서 제거됩니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  형식이 같거나 기본 형식 또는 파생 형식이 `expression`인 컬렉션입니다.  
   

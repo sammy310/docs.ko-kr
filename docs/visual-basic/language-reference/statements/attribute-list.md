@@ -1,22 +1,23 @@
 ---
+description: '자세한 정보: 특성 목록 (Visual Basic)'
 title: 특성 목록
 ms.date: 07/20/2015
 helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: e566239c56efa8ca8e83bff92486fec4c434e92b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bde9387a48001a2696a6f69454edc311e7597bb6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874740"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674040"
 ---
 # <a name="attribute-list-visual-basic"></a>특성 목록(Visual Basic)
 
 선언 된 프로그래밍 요소에 적용할 특성을 지정 합니다. 여러 특성은 쉼표로 구분합니다. 다음은 한 특성에 대 한 구문입니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 [ attributemodifier ] attributename [ ( attributearguments | attributeinitializer ) ]  
@@ -57,7 +58,7 @@ ms.locfileid: "90874740"
   
  <xref:System.Runtime.InteropServices.DllImportAttribute> 특성 사용 프로시저가 관리 되지 않는 DLL (동적 연결 라이브러리)의 진입점을 나타내는지 여부를 나타냅니다. 특성은 DLL 이름을 위치 인수로 제공 하 고 다른 정보를 변수 이니셜라이저로 제공 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [어셈블리](../modifiers/assembly.md)
 - [모듈 \<keyword>](../modifiers/module-keyword.md)

@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: Method-Based 쿼리 구문 예제: 그룹화'
 title: '메서드 기반 쿼리 구문 예제: 그룹화'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cb23c25c-1075-4cc3-a8ff-4db72e536c0d
-ms.openlocfilehash: 2d84e755217878bfa248add37a752224a20d3f84
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dd605076a425207aa379216a9e8dba60eaeebc29
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191985"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673507"
 ---
 # <a name="method-based-query-syntax-examples-grouping"></a>메서드 기반 쿼리 구문 예제: 그룹화
 

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 클래스 문 (Visual Basic)'
 title: Class 문
 ms.date: 05/12/2018
 f1_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 3b64597fcd7453c20ed295fe263eeaa8783b20ae
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: de4541addc9f4755d973586c7d1b4410e4bf12ed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866031"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673897"
 ---
 # <a name="class-statement-visual-basic"></a>Class 문(Visual Basic)
 
 클래스의 이름을 선언 하 고 클래스에서 구성 하는 변수, 속성, 이벤트 및 프로시저의 정의를 소개 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] [ Partial ] _  
@@ -67,7 +68,7 @@ End Class
   
 ## <a name="rules"></a>규칙  
   
-- **중첩할.** 다른 클래스 내에서 클래스 하나를 정의할 수 있습니다. 외부 클래스를 *포함 하는 클래스*라고 하 고 내부 클래스를 *중첩 클래스*라고 합니다.  
+- **중첩할.** 다른 클래스 내에서 클래스 하나를 정의할 수 있습니다. 외부 클래스를 *포함 하는 클래스* 라고 하 고 내부 클래스를 *중첩 클래스* 라고 합니다.  
   
 - **상.** 클래스가 [Inherits 문을](inherits-statement.md)사용 하는 경우 기본 클래스 또는 인터페이스를 하나만 지정할 수 있습니다. 클래스는 둘 이상의 요소에서 상속할 수 없습니다.  
   
@@ -77,7 +78,7 @@ End Class
   
 - **구현이.** 클래스가 [Implements 문을](implements-statement.md)사용 하는 경우에서 지정 하는 모든 인터페이스에서 정의 된 모든 멤버를 구현 해야 합니다 `interfacenames` . 이에 대 한 예외는 기본 클래스 멤버의 재구현입니다. 자세한 내용은 [Implements](implements-clause.md)의 "재구현"를 참조 하십시오.  
   
-- **기본 속성입니다.** 클래스는 최대 하나의 속성을 *기본 속성*으로 지정할 수 있습니다. 자세한 내용은 [기본값](../modifiers/default.md)을 참조 하세요.  
+- **기본 속성입니다.** 클래스는 최대 하나의 속성을 *기본 속성* 으로 지정할 수 있습니다. 자세한 내용은 [기본값](../modifiers/default.md)을 참조 하세요.  
   
 ## <a name="behavior"></a>동작  
   
@@ -99,7 +100,7 @@ End Class
 
  이러한 요소에는 여러 가지 유사점이 있지만 몇 가지 중요 한 차이점도 있습니다.  
   
-- **용어** 이전 버전의 Visual Basic에서는 *클래스 모듈* (cls 파일)과 *표준 모듈* (bas 파일)의 두 가지 모듈 형식을 인식 합니다. 현재 버전은 이러한 *클래스* 및 *모듈*을 각각 호출 합니다.  
+- **용어** 이전 버전의 Visual Basic에서는 *클래스 모듈* (cls 파일)과 *표준 모듈* (bas 파일)의 두 가지 모듈 형식을 인식 합니다. 현재 버전은 이러한 *클래스* 및 *모듈* 을 각각 호출 합니다.  
   
 - **공유 멤버.** 클래스의 멤버가 공유 또는 인스턴스 멤버 인지 여부를 제어할 수 있습니다.  
   
@@ -111,7 +112,7 @@ End Class
   
  [!code-vb[VbVbalrStatements#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#62)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [개체 및 클래스](../../programming-guide/language-features/objects-and-classes/index.md)
 - [구조체와 클래스](../../programming-guide/language-features/data-types/structures-and-classes.md)

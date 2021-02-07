@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: Entity Frameworktypes 용 sqlclient의 SqlClient'
 title: Entity FrameworkTypes용 SqlClient
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
-ms.openlocfilehash: bca2cc0e0d9f43c51c66080f3bd38c245ce94381
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 92bd557198d203229394fb3a4c2fe286e217edca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156591"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673182"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Entity FrameworkTypes용 SqlClient
 

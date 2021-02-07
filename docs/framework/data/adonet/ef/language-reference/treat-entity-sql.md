@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: TREAT (Entity SQL)'
 title: TREAT(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: bb41c0fed944ce4db11878b9213a62c6f851418e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3f014cac631d246b35d145cdb80c9aa6ac401524
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201046"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673429"
 ---
 # <a name="treat-entity-sql"></a>TREAT(Entity SQL)
 
@@ -33,7 +34,7 @@ TREAT ( expression as type)
 > [!NOTE]
 > 지정된 식이 지정된 데이터 형식의 하위 형식이어야 하거나, 데이터 형식이 식의 하위 형식이어야 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  지정된 데이터 형식의 값입니다.  
   

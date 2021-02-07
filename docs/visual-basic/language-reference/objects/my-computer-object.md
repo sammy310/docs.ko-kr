@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: My.computer 개체'
 title: My.Computer 개체
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: 4e9019773c74aa570f52eb573677f687f2600419
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 524c742432b37345054ca76b046be921659dba82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867412"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674300"
 ---
 # <a name="mycomputer-object"></a>My.Computer 개체
 
@@ -27,7 +28,7 @@ ms.locfileid: "90867412"
   
  **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [My.Computer.Audio 개체](my-computer-audio-object.md)
 - [My.Computer.Clipboard 개체](my-computer-clipboard-object.md)

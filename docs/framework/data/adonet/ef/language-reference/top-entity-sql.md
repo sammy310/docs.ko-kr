@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 위쪽 (Entity SQL)'
 title: TOP(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-ms.openlocfilehash: 16be25336bac386c993eae7527c9377be1073d1e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 51e4ce53cff4b47f6f57b6b856ccb09b38e639cf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319269"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673442"
 ---
 # <a name="top-entity-sql"></a>TOP(Entity SQL)
 
@@ -21,9 +22,9 @@ SELECT 절에는 선택적인 TOP 하위 절과 선택적인 ALL/DISTINCT 한정
 
 ## <a name="arguments"></a>인수
 
-반환 될 행 수를 지정 하는 숫자 식을 `n` 합니다. `n` 은 단일 숫자 리터럴 또는 단일 매개 변수일 수 있습니다.
+`n` 반환할 행 수를 지정 하는 숫자 식입니다. `n` 은 단일 숫자 리터럴 또는 단일 매개 변수일 수 있습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 TOP 식은 단일 숫자 리터럴이거나 단일 매개 변수여야 합니다. 상수 리터럴이 사용되는 경우, 리터럴 형식은 Edm.Int64(바이트. int16, int32, int64이거나 Edm.Int64로 확장 가능한 형식으로 매핑되는 모든 공급자 형식)로의 암시적 확장이 가능해야 하며 그 값이 0이거나 0보다 커야 합니다. 그렇지 않으면 예외가 발생합니다. 매개 변수가 식으로 사용되는 경우에는 매개 변수 형식도 역시 암시적으로 Edm.Int64로 확장할 수 있어야 합니다. 하지만 매개 변수 값은 런타임에 바인딩되므로 컴파일 과정에서 실제 매개 변수 값에 대한 확인은 이루어지지 않습니다.
 
@@ -51,10 +52,10 @@ select distinct top(@topParam) c.a1, c.a2 from T as a
 
     [!code-sql[DP EntityServices Concepts#TOP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#top)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [SELECT](select-entity-sql.md)
-- [SKIP](skip-entity-sql.md)
-- [LIMIT](limit-entity-sql.md)
+- [킵](skip-entity-sql.md)
+- [제한](limit-entity-sql.md)
 - [ORDER BY](order-by-entity-sql.md)
 - [엔터티 SQL 참조](entity-sql-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Declare 문'
 title: Declare 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -27,18 +28,18 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 8a5802583db53bfd0444ec9df0de9a0b9346d424
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8ad8169515bbb2889c0adbed4df4e30a0215d47d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545521"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673845"
 ---
 # <a name="declare-statement"></a>Declare 문
 
 외부 파일에 구현 된 프로시저에 대 한 참조를 선언 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _
@@ -60,9 +61,9 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`charsetmodifier`|선택 사항입니다. 문자 집합 및 파일 검색 정보를 지정 합니다. 다음 중 하나일 수 있습니다.<br /><br /> -   [Ansi](../modifiers/ansi.md) (기본값)<br />-   [유니코드](../modifiers/unicode.md)<br />-   [자동](../modifiers/auto.md)|
 |`Sub`|선택 사항 이지만 또는 중 하나를 `Sub` `Function` 표시 해야 합니다. 외부 프로시저에서 값을 반환 하지 않음을 나타냅니다.|
 |`Function`|선택 사항 이지만 또는 중 하나를 `Sub` `Function` 표시 해야 합니다. 외부 프로시저에서 값을 반환 함을 나타냅니다.|
-|`name`|필수 요소. 이 외부 참조의 이름입니다. 자세한 내용은 [선언 된 요소 이름](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조 하세요.|
-|`Lib`|필수 요소. `Lib`외부 프로시저를 포함 하는 외부 파일 (DLL 또는 코드 리소스)을 식별 하는 절을 소개 합니다.|
-|`libname`|필수 요소. 선언 된 프로시저를 포함 하는 파일의 이름입니다.|
+|`name`|필수 사항입니다. 이 외부 참조의 이름입니다. 자세한 내용은 [선언 된 요소 이름](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조 하세요.|
+|`Lib`|필수 사항입니다. `Lib`외부 프로시저를 포함 하는 외부 파일 (DLL 또는 코드 리소스)을 식별 하는 절을 소개 합니다.|
+|`libname`|필수 사항입니다. 선언 된 프로시저를 포함 하는 파일의 이름입니다.|
 |`Alias`|선택 사항입니다. 선언 되는 프로시저를 파일 내에서에 지정 된 이름으로 식별할 수 없음을 나타냅니다 `name` . 에서 해당 id를 지정 `aliasname` 합니다.|
 |`aliasname`|키워드를 사용 하는 경우 필요 `Alias` 합니다. 다음 두 가지 방법 중 하나로 프로시저를 식별 하는 문자열입니다.<br /><br /> 해당 파일 내에 있는 프로시저의 진입점 이름 (따옴표 포함)입니다. `""`<br /><br /> 또는<br /><br /> `#`해당 파일 내에서 프로시저 진입점의 서 수를 지정 하는 숫자 기호 () 뒤에 오는 정수|
 |`parameterlist`|프로시저에서 매개 변수를 사용 하는 경우 필수입니다. [매개 변수 목록](parameter-list.md)을 참조 하세요.|
@@ -129,7 +130,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 - **방법일.** Visual Basic는 PInvoke (.NET Framework *platform invoke* ) 메커니즘을 사용 하 여 외부 프로시저를 확인 하 고 액세스 합니다. `Declare`문과 <xref:System.Runtime.InteropServices.DllImportAttribute> 클래스 모두이 메커니즘을 자동으로 사용 하 고 PInvoke에 대 한 지식이 필요 하지 않습니다. 자세한 내용은 [연습: Windows Api 호출](../../programming-guide/com-interop/walkthrough-calling-windows-apis.md)합니다.
 
 > [!IMPORTANT]
-> 외부 프로시저가 CLR (공용 언어 런타임) 외부에서 실행 되는 경우 *관리 되지 않는 코드*입니다. 이러한 프로시저 (예: Windows API 함수 또는 COM 메서드)를 호출 하는 경우 응용 프로그램을 보안 위험에 노출 시킬 수 있습니다. 자세한 내용은 [비관리 코드에 대 한 보안 코딩 지침](/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)을 참조 하세요.
+> 외부 프로시저가 CLR (공용 언어 런타임) 외부에서 실행 되는 경우 *관리 되지 않는 코드* 입니다. 이러한 프로시저 (예: Windows API 함수 또는 COM 메서드)를 호출 하는 경우 응용 프로그램을 보안 위험에 노출 시킬 수 있습니다. 자세한 내용은 [비관리 코드에 대 한 보안 코딩 지침](/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)을 참조 하세요.
 
 ## <a name="example"></a>예제
 
@@ -145,7 +146,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
 - [Imports 문(.NET 네임스페이스 및 형식)](imports-statement-net-namespace-and-type.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 형식 정의 (Entity SQL)'
 title: 형식 정의(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 7e4e6f0e9f64816d10a69a8b0639728e4cd7af80
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e5a66ed9ea456733bab9c68d96ef5c176dad5651
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201020"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673416"
 ---
 # <a name="type-definitions-entity-sql"></a>형식 정의(Entity SQL)
 
@@ -47,7 +48,7 @@ ms.locfileid: "91201020"
   
  지원되는 엔터티 형식은 현재 네임스페이스의 엔터티 형식만 참조합니다. 이러한 형식에는 기본 형식이 포함되지 않습니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
 
  다음은 간단한 형식 정의의 예제입니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Const 문 (Visual Basic)'
 title: Const 문
 ms.date: 05/12/2018
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: 3b05d4067ef99e03df07d2c316c982051180d961
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 61d898823c7697c91b207a502417b49cdeaf5eea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84382109"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673858"
 ---
 # <a name="const-statement-visual-basic"></a>Const 문(Visual Basic)
 
 하나 이상의 상수를 선언 하 고 정의 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attributelist> ] [ accessmodifier ] [ Shadows ]
@@ -27,7 +28,7 @@ Const constantlist
 ## <a name="parts"></a>부분
 
 `attributelist`  
-선택 사항입니다. 이 문에 선언 된 모든 상수에 적용 되는 특성의 목록입니다. 꺾쇠 [Attribute List](attribute-list.md) 괄호 (" `<` " 및 "")의 특성 목록을 참조 하십시오 `>` .
+선택 사항입니다. 이 문에 선언 된 모든 상수에 적용 되는 특성의 목록입니다. 꺾쇠 [](attribute-list.md) 괄호 (" `<` " 및 "")의 특성 목록을 참조 하십시오 `>` .
 
 `accessmodifier`  
 선택 사항입니다. 이러한 상수에 액세스할 수 있는 코드를 지정 하려면이 옵션을 사용 합니다. [Public](../modifiers/public.md), [protected](../modifiers/protected.md), [Friend](../modifiers/friend.md), [protected friend](../modifiers/protected-friend.md), [private](../modifiers/private.md)또는 [private Protected](../modifiers/private-protected.md)일 수 있습니다.
@@ -36,7 +37,7 @@ Const constantlist
 선택 사항입니다. 기본 클래스에서 프로그래밍 요소를 다시 선언 하 고 숨기는 데 사용 합니다. [그림자](../modifiers/shadows.md)를 참조 하세요.
 
 `constantlist`  
-필수 요소. 이 문에서 선언 되는 상수 목록입니다.
+필수 사항입니다. 이 문에서 선언 되는 상수 목록입니다.
 
 `constant` `[ ,` `constant` `... ]`
 
@@ -44,11 +45,11 @@ Const constantlist
 
 `constantname` `[ As` `datatype` `] =` `initializer`
 
-|부분|Description|
+|파트|설명|
 |----------|-----------------|
-|`constantname`|필수 요소. 상수의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.|
+|`constantname`|필수 사항입니다. 상수의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.|
 |`datatype`|필요한 경우 `Option Strict` 는 `On`합니다. 상수의 데이터 형식입니다.|
-|`initializer`|필수 요소. 컴파일 시간에 평가 되 고 상수에 할당 되는 식입니다.|
+|`initializer`|필수 사항입니다. 컴파일 시간에 평가 되 고 상수에 할당 되는 식입니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -60,9 +61,9 @@ Const constantlist
 
 ## <a name="rules"></a>규칙
 
-- **선언 컨텍스트.** 프로시저 외부에서 모듈 수준에 선언 된 상수는 *멤버 상수*입니다. 선언 하는 클래스, 구조체 또는 모듈의 멤버입니다.
+- **선언 컨텍스트.** 프로시저 외부에서 모듈 수준에 선언 된 상수는 *멤버 상수* 입니다. 선언 하는 클래스, 구조체 또는 모듈의 멤버입니다.
 
-  프로시저 수준에서 선언 된 상수는 *지역 상수*입니다. 선언 하는 프로시저 또는 블록에 대해 로컬입니다.
+  프로시저 수준에서 선언 된 상수는 *지역 상수* 입니다. 선언 하는 프로시저 또는 블록에 대해 로컬입니다.
 
 - **특성.** 로컬 상수가 아닌 멤버 상수에만 특성을 적용할 수 있습니다. 특성은 어셈블리의 메타 데이터에 정보를 제공 하며,이는 로컬 상수와 같은 임시 저장소에는 의미가 없습니다.
 
