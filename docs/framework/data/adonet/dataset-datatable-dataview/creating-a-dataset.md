@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 데이터 집합 만들기'
 title: 데이터 세트 만들기
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 57629d8f-393e-4677-8b83-29ffde27f5fc
-ms.openlocfilehash: cbf652cc3742cb880fe060743dcc2615e6283ca7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7a52c6e73b5ab3ba4bf384d6bab3640b85929fcc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202359"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739653"
 ---
 # <a name="creating-a-dataset"></a>데이터 세트 만들기
 

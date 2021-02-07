@@ -1,26 +1,27 @@
 ---
+description: 데이터 집합 및 XmlDataDocument 동기화에 대 한 자세한 정보
 title: 데이터 세트 및 XmlDataDocument 동기화
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 2790f0a9edd5bfde96683e00725dd04555379adf
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c3bb1af305dfc319cb2c4783f4e4edc108e9d737
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153302"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739562"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>데이터 세트 및 XmlDataDocument 동기화
 
 ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용할 수 있습니다. 계층적으로 데이터에 액세스하기 위해 .NET Framework에서 사용 가능한 XML 클래스를 사용할 수 있습니다. 지금까지는 데이터의 이와 같은 두 가지 표현이 별도로 사용되어 왔습니다. 그러나 .NET Framework를 사용 하면 데이터 **집합** 개체와 개체를 통해 각각 관계형 및 계층적 데이터 표현에 대 한 실시간 동기 액세스를 사용할 수 있습니다 <xref:System.Xml.XmlDataDocument> .  
   
- **데이터 집합이** **XmlDataDocument**와 동기화 되 면 두 개체가 모두 단일 데이터 집합을 사용 합니다. 즉, **데이터 집합이**변경 되 면 변경 내용이 **XmlDataDocument**적용 되 고 그 반대의 경우도 마찬가지입니다. **데이터 집합과** **XmlDataDocument** 간의 관계는 단일 응용 프로그램을 허용 하 여 상당한 유연성을 만듭니다. 단일 데이터 집합을 사용 하 여 데이터 **집합** (예: Web Forms 및 Windows Forms 컨트롤, Visual Studio .net 디자이너)을 기반으로 하는 전체 서비스 모음 뿐만 아니라 xsl (Extensible STYLESHEET Language), XSLT (XSL 변환), XPath (xml PATH language)를 비롯 한 xml 서비스 모음에 액세스할 수 있습니다. 두 서비스를 모두 사용할 수 있으므로 애플리케이션의 대상이 될 서비스 집합을 선택할 필요도 없습니다.  
+ **데이터 집합이** **XmlDataDocument** 와 동기화 되 면 두 개체가 모두 단일 데이터 집합을 사용 합니다. 즉, **데이터 집합이** 변경 되 면 변경 내용이 **XmlDataDocument** 적용 되 고 그 반대의 경우도 마찬가지입니다. **데이터 집합과** **XmlDataDocument** 간의 관계는 단일 응용 프로그램을 허용 하 여 상당한 유연성을 만듭니다. 단일 데이터 집합을 사용 하 여 데이터 **집합** (예: Web Forms 및 Windows Forms 컨트롤, Visual Studio .net 디자이너)을 기반으로 하는 전체 서비스 모음 뿐만 아니라 xsl (Extensible STYLESHEET Language), XSLT (XSL 변환), XPath (xml PATH language)를 비롯 한 xml 서비스 모음에 액세스할 수 있습니다. 두 서비스를 모두 사용할 수 있으므로 애플리케이션의 대상이 될 서비스 집합을 선택할 필요도 없습니다.  
   
- **데이터 집합** 을 **XmlDataDocument**와 동기화 하는 방법에는 여러 가지가 있습니다. 다음을 수행할 수 있습니다.  
+ **데이터 집합** 을 **XmlDataDocument** 와 동기화 하는 방법에는 여러 가지가 있습니다. 다음과 같습니다.  
   
-- 스키마 (즉, 관계형 구조)와 데이터를 사용 하 여 데이터 **집합** 을 채운 다음 새 **XmlDataDocument**와 동기화 합니다. 이렇게 하면 기존 관계형 데이터를 계층적으로 표시할 수 있습니다. 다음은 그 예입니다.   
+- 스키마 (즉, 관계형 구조)와 데이터를 사용 하 여 데이터 **집합** 을 채운 다음 새 **XmlDataDocument** 와 동기화 합니다. 이렇게 하면 기존 관계형 데이터를 계층적으로 표시할 수 있습니다. 다음은 그 예입니다.   
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -38,11 +39,11 @@ ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용
     XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);  
     ```  
   
-- 스키마만 포함 하는 **데이터 집합** (예: 강력한 형식의 **데이터 집합**)을 채운 다음 **XMLDATADOCUMENT**와 동기화 하 고 XML 문서에서 **XmlDataDocument** 을 로드 합니다. 이렇게 하면 기존 계층적 데이터를 관계형으로 표시할 수 있습니다. **데이터 집합** 스키마의 테이블 이름과 열 이름은 함께 동기화 할 XML 요소의 이름과 일치 해야 합니다. 이 때 대/소문자도 일치해야 합니다.  
+- 스키마만 포함 하는 **데이터 집합** (예: 강력한 형식의 **데이터 집합**)을 채운 다음 **XMLDATADOCUMENT** 와 동기화 하 고 XML 문서에서 **XmlDataDocument** 을 로드 합니다. 이렇게 하면 기존 계층적 데이터를 관계형으로 표시할 수 있습니다. **데이터 집합** 스키마의 테이블 이름과 열 이름은 함께 동기화 할 XML 요소의 이름과 일치 해야 합니다. 이 때 대/소문자도 일치해야 합니다.  
   
      **데이터 집합** 의 스키마는 관계형 보기에 노출할 XML 요소와만 일치 해야 합니다. 이렇게 하면 XML 문서는 아주 크게, 이 문서의 관계형 "창"은 매우 작게 만들 수 있습니다. **XmlDataDocument** 는 **데이터 집합이** 작은 부분만 노출 하는 경우에도 전체 XML 문서를 유지 합니다. 이에 대 한 자세한 예제는 [데이터 집합을 XmlDataDocument와 동기화](synchronizing-a-dataset-with-an-xmldatadocument.md)를 참조 하세요.  
   
-     다음 코드 예제에서는 **데이터 집합** 을 만들고 해당 스키마를 채운 다음 **XmlDataDocument**와 동기화 하는 단계를 보여 줍니다. **데이터 집합** 스키마는 **데이터 집합**을 사용 하 여 노출 하려는 **XmlDataDocument** 의 요소만 일치 해야 합니다.  
+     다음 코드 예제에서는 **데이터 집합** 을 만들고 해당 스키마를 채운 다음 **XmlDataDocument** 와 동기화 하는 단계를 보여 줍니다. **데이터 집합** 스키마는 **데이터 집합** 을 사용 하 여 노출 하려는 **XmlDataDocument** 의 요소만 일치 해야 합니다.  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -64,9 +65,9 @@ ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용
   
      데이터가 포함 된 데이터 **집합과** 동기화 된 경우에는 **XmlDataDocument** 을 로드할 수 없습니다. 로드하는 경우에는 예외가 throw됩니다.  
   
-- 새 **XmlDataDocument** 을 만들고 XML 문서에서 로드 한 다음 **XmlDataDocument**의 **DataSet** 속성을 사용 하 여 데이터의 관계형 뷰에 액세스 합니다. 데이터 **집합의** 스키마를 설정 해야 데이터 **집합**을 사용 하 여 **XmlDataDocument** 에서 데이터를 볼 수 있습니다. **데이터 집합** 스키마의 테이블 이름과 열 이름은 함께 동기화 할 XML 요소의 이름과 일치 해야 합니다. 이 때 대/소문자도 일치해야 합니다.  
+- 새 **XmlDataDocument** 을 만들고 XML 문서에서 로드 한 다음 **XmlDataDocument** 의 **DataSet** 속성을 사용 하 여 데이터의 관계형 뷰에 액세스 합니다. 데이터 **집합의** 스키마를 설정 해야 데이터 **집합** 을 사용 하 여 **XmlDataDocument** 에서 데이터를 볼 수 있습니다. **데이터 집합** 스키마의 테이블 이름과 열 이름은 함께 동기화 할 XML 요소의 이름과 일치 해야 합니다. 이 때 대/소문자도 일치해야 합니다.  
   
-     다음 코드 예제에서는 **XmlDataDocument**에서 데이터의 관계형 뷰에 액세스 하는 방법을 보여 줍니다.  
+     다음 코드 예제에서는 **XmlDataDocument** 에서 데이터의 관계형 뷰에 액세스 하는 방법을 보여 줍니다.  
   
     ```vb  
     Dim xmlDoc As XmlDataDocument = New XmlDataDocument  
@@ -86,20 +87,20 @@ ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용
     xmlDoc.Load("XMLDocument.xml");  
     ```  
   
- **XmlDataDocument** 를 **DataSet** 과 동기화 하는 또 다른 이점은 XML 문서의 충실도가 유지 된다는 것입니다. 데이터 **집합이** **ReadXml**를 사용 하 여 xml 문서에서 채워지는 경우 **WriteXml** 을 사용 하 여 데이터를 XML 문서로 다시 쓸 때 원래 xml 문서와 크게 다를 수 있습니다. 이는 **데이터 집합이** XML 문서에서 공백 등의 서식 지정 이나 요소 순서와 같은 계층적 정보를 유지 하지 않기 때문입니다. 데이터 **집합은** **데이터 집합**의 스키마와 일치 하지 않기 때문에 무시 된 XML 문서의 요소도 포함 하지 않습니다. **XmlDataDocument** 를 **dataset** 과 동기화 하면 원래 XML 문서의 서식 지정 및 계층 구조 요소를 **XmlDataDocument**에서 유지 관리할 수 있으며 데이터 집합에는 데이터 **집합**에 적합 한 데이터 및 스키마 **정보만 포함 됩니다** .  
+ **XmlDataDocument** 를 **DataSet** 과 동기화 하는 또 다른 이점은 XML 문서의 충실도가 유지 된다는 것입니다. 데이터 **집합이** **ReadXml** 를 사용 하 여 xml 문서에서 채워지는 경우 **WriteXml** 을 사용 하 여 데이터를 XML 문서로 다시 쓸 때 원래 xml 문서와 크게 다를 수 있습니다. 이는 **데이터 집합이** XML 문서에서 공백 등의 서식 지정 이나 요소 순서와 같은 계층적 정보를 유지 하지 않기 때문입니다. 데이터 **집합은** **데이터 집합** 의 스키마와 일치 하지 않기 때문에 무시 된 XML 문서의 요소도 포함 하지 않습니다. **XmlDataDocument** 를 **dataset** 과 동기화 하면 원래 XML 문서의 서식 지정 및 계층 구조 요소를 **XmlDataDocument** 에서 유지 관리할 수 있으며 데이터 집합에는 데이터 **집합** 에 적합 한 데이터 및 스키마 **정보만 포함 됩니다** .  
   
- **데이터 집합** 을 **XmlDataDocument**와 동기화 하는 경우에는 개체가 중첩 되었는지 여부에 따라 결과가 다를 수 있습니다 <xref:System.Data.DataRelation> . 자세한 내용은 [DataRelations 중첩](nesting-datarelations.md)을 참조 하세요.  
+ **데이터 집합** 을 **XmlDataDocument** 와 동기화 하는 경우에는 개체가 중첩 되었는지 여부에 따라 결과가 다를 수 있습니다 <xref:System.Data.DataRelation> . 자세한 내용은 [DataRelations 중첩](nesting-datarelations.md)을 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 
  [XmlDataDocument로 데이터 세트 동기화](synchronizing-a-dataset-with-an-xmldatadocument.md)  
- **XmlDataDocument**를 사용 하 여 강력한 형식의 **데이터 집합**을 최소 스키마와 동기화 하는 방법을 보여 줍니다.  
+ **XmlDataDocument** 를 사용 하 여 강력한 형식의 **데이터 집합** 을 최소 스키마와 동기화 하는 방법을 보여 줍니다.  
   
  [데이터 세트에서 XPath 쿼리 수행](performing-an-xpath-query-on-a-dataset.md)  
- **데이터 집합**의 내용에 대해 XPath 쿼리를 수행 하는 방법을 보여 줍니다.  
+ **데이터 집합** 의 내용에 대해 XPath 쿼리를 수행 하는 방법을 보여 줍니다.  
   
  [XSLT 변형을 DataSet에 적용](applying-an-xslt-transform-to-a-dataset.md)  
- XSLT 변환을 **데이터 집합**의 내용에 적용 하는 방법을 보여 줍니다.  
+ XSLT 변환을 **데이터 집합** 의 내용에 적용 하는 방법을 보여 줍니다.  
   
 ## <a name="related-sections"></a>관련 섹션  
 

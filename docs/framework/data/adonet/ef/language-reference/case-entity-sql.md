@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 대/소문자 (Entity SQL)'
 title: CASE(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 65efedd36401db402a32748afaebff0f2af9f2a7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 58f51aa46f41c3b502bcd6d364e893a12624f4cf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185225"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739497"
 ---
 # <a name="case-entity-sql"></a>CASE(Entity SQL)
 
@@ -39,7 +40,7 @@ END
  WHEN `Boolean_expression`  
  검색된 CASE 형식을 사용할 때 계산되는 `Boolean` 식입니다. `Boolean_expression` 은 유효한 `Boolean` 식입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `result_expression` 과 선택적 요소인 `else_result_expression`의 형식 집합에서 우선 순위가 가장 높은 형식을 반환합니다.  
   

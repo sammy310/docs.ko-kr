@@ -1,17 +1,18 @@
 ---
+description: '자세한 정보: CAST (Entity SQL)'
 title: CAST(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 5591f1947963dde45d34ad2342485af476765709
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f6a90c0ec2557391c2da6e46511a020f90d32ab7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198017"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739484"
 ---
 # <a name="cast-entity-sql"></a>CAST(Entity SQL)
 
-데이터 형식의 식을 다른 형식의 식으로 변환합니다.  
+한 데이터 형식의 식을 다른 데이터 형식으로 변환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -27,7 +28,7 @@ CAST ( expression AS data_type )
  `data_type`  
  대상 시스템 제공 데이터 형식입니다. 기본(스칼라) 형식이어야 합니다. 사용되는 `data_type` 은 쿼리 공간에 따라 달라집니다. 쿼리가 <xref:System.Data.EntityClient.EntityCommand>로 실행되는 경우 데이터 형식은 개념적 모델에 정의된 형식입니다. 자세한 내용은 [CSDL Specification](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)을 참조하십시오. 쿼리가 <xref:System.Data.Objects.ObjectQuery%601>로 실행되는 경우 데이터 형식은 CLR(공용 언어 런타임) 형식입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `data_type`과 동일한 값을 반환합니다.  
   
