@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 오류 요약 (Visual Basic)'
 title: 오류 요약
 ms.date: 07/20/2015
 helpviewer_keywords:
 - errors [Visual Basic]
 ms.assetid: 2557da60-c6dc-4e99-8128-fceb6f8a0736
-ms.openlocfilehash: ed3e4b358c7364fd555f753e219df96a596b4231
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 43fa015169ec2f968c81bb5a3919b6a10e7dc404
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90868843"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730735"
 ---
 # <a name="errors-summary-visual-basic"></a>오류 요약(Visual Basic)
 
@@ -24,7 +25,7 @@ Visual Basic 언어 키워드 및 런타임 라이브러리 멤버는 목적과 
 |오류의 줄 번호를 제공 합니다.|<xref:Microsoft.VisualBasic.ErrObject.Erl%2A>|  
 |시스템 오류 코드를 제공 합니다.|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [키워드](index.md)
+- [C++ 키워드](index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../runtime-library-members.md)

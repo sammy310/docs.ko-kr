@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Out (제네릭 한정자) (Visual Basic)'
 title: Out(제네릭 한정자)
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 28ae7d6fd51170aa822072fc2f5357443f51a353
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cdf80439fbae0d2411eecff1c7e8438534fcfdc1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392095"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730540"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out(제네릭 한정자)(Visual Basic)
 
@@ -61,7 +62,7 @@ Visual Basic에서는 대리자 형식을 지정 하지 않고 공변 (covariant
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [제네릭 인터페이스의 가변성](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [진행](in-generic-modifier.md)
+- [위치](in-generic-modifier.md)

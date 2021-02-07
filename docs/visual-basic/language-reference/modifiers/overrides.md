@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 재정의 (Visual Basic)'
 title: 재정의
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 657f838b2959a5b6a7cef5ff18295a4ada709e9a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d118bf4e366ff8f84806586dfc3977612ed6eff4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392030"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730449"
 ---
 # <a name="overrides-visual-basic"></a>Overrides(Visual Basic)
 

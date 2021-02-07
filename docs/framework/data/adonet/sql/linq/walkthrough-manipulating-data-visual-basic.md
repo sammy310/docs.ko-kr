@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 연습: 데이터 조작 (Visual Basic)'
 title: '연습: 데이터 조작(Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: dbf18273e69ff0977f5d16ff179b8659865ef696
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 22bef61c294a92984446402063bf14b06f5b2b2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164053"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729525"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>연습: 데이터 조작(Visual Basic)
 
@@ -59,15 +60,15 @@ ms.locfileid: "91164053"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션을 만들려면  
   
-1. Visual Studio의 **파일** 메뉴에서 **새 프로젝트**를 클릭합니다.  
+1. Visual Studio의 **파일** 메뉴에서 **새 프로젝트** 를 클릭합니다.  
   
-2. **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Visual Basic**을 클릭 합니다.  
+2. **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Visual Basic** 을 클릭 합니다.  
   
-3. **템플릿** 창에서 **콘솔 애플리케이션**을 클릭합니다.  
+3. **템플릿** 창에서 **콘솔 애플리케이션** 을 클릭합니다.  
   
-4. **이름** 상자에 **linqdatamanipulationapp 입력**을 입력 합니다.  
+4. **이름** 상자에 **linqdatamanipulationapp 입력** 을 입력 합니다.  
   
-5. **확인**을 클릭합니다.  
+5. **확인** 을 클릭합니다.  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ 참조 및 지시문 추가  
 
@@ -75,13 +76,13 @@ ms.locfileid: "91164053"
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq를 추가하려면  
   
-1. **솔루션 탐색기**에서 **참조**를 마우스 오른쪽 단추로 클릭 한 다음 **참조 추가**를 클릭 합니다.  
+1. **솔루션 탐색기** 에서 **참조** 를 마우스 오른쪽 단추로 클릭 한 다음 **참조 추가** 를 클릭 합니다.  
   
-2. **참조 추가** 대화 상자에서 **.net**을 클릭 하 고 system.xml 어셈블리를 클릭 한 다음 **확인**을 클릭 합니다.  
+2. **참조 추가** 대화 상자에서 **.net** 을 클릭 하 고 system.xml 어셈블리를 클릭 한 다음 **확인** 을 클릭 합니다.  
   
      어셈블리가 프로젝트에 추가됩니다.  
   
-3. 코드 편집기에서 **Module1**위에 다음 지시문을 추가 합니다.  
+3. 코드 편집기에서 **Module1** 위에 다음 지시문을 추가 합니다.  
   
      [!code-vb[DLinqWalk3VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#1)]  
   
@@ -91,9 +92,9 @@ ms.locfileid: "91164053"
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>northwind 코드 파일을 프로젝트에 추가하려면  
   
-1. **프로젝트** 메뉴에서 **기존 항목 추가**를 클릭합니다.  
+1. **프로젝트** 메뉴에서 **기존 항목 추가** 를 클릭합니다.  
   
-2. **기존 항목 추가** 대화 상자에서 c:\linqtest2\northwind.vb으로 이동한 다음 **추가**를 클릭 합니다.  
+2. **기존 항목 추가** 대화 상자에서 c:\linqtest2\northwind.vb으로 이동한 다음 **추가** 를 클릭 합니다.  
   
      northwind.vb 파일이 프로젝트에 추가됩니다.  
   

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 연습: 데이터 조작 (c #)'
 title: '연습: 데이터 조작(C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: fefbee533634ee42785c65e0265ce1e0567561b5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6176709a2e02d8c06ec54b70cc6e0e4c302509c3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164066"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729590"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>연습: 데이터 조작(C#)
 
@@ -57,17 +58,17 @@ ms.locfileid: "91164066"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션을 만들려면  
   
-1. Visual Studio **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭 합니다.  
+1. Visual Studio **파일** 메뉴에서 **새로 만들기** 를 가리킨 다음 **프로젝트** 를 클릭 합니다.  
   
 2. **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Visual c #** 을 클릭 합니다.  
   
-3. **템플릿** 창에서 **콘솔 애플리케이션**을 클릭합니다.  
+3. **템플릿** 창에서 **콘솔 애플리케이션** 을 클릭합니다.  
   
-4. **이름** 상자에 **linqdatamanipulationapp 입력**을 입력 합니다.  
+4. **이름** 상자에 **linqdatamanipulationapp 입력** 을 입력 합니다.  
   
 5. **위치** 상자에서 프로젝트 파일을 저장할 위치를 확인 합니다.  
   
-6. **확인**을 클릭합니다.  
+6. **확인** 을 클릭합니다.  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ 참조 및 지시문 추가  
 
@@ -75,9 +76,9 @@ ms.locfileid: "91164066"
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq를 추가하려면  
   
-1. **솔루션 탐색기**에서 **참조**를 마우스 오른쪽 단추로 클릭 한 다음 **참조 추가**를 클릭 합니다.  
+1. **솔루션 탐색기** 에서 **참조** 를 마우스 오른쪽 단추로 클릭 한 다음 **참조 추가** 를 클릭 합니다.  
   
-2. **참조 추가** 대화 상자에서 **.net**을 클릭 하 고 system.xml 어셈블리를 클릭 한 다음 **확인**을 클릭 합니다.  
+2. **참조 추가** 대화 상자에서 **.net** 을 클릭 하 고 system.xml 어셈블리를 클릭 한 다음 **확인** 을 클릭 합니다.  
   
      어셈블리가 프로젝트에 추가됩니다.  
   
@@ -91,9 +92,9 @@ ms.locfileid: "91164066"
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>northwind 코드 파일을 프로젝트에 추가하려면  
   
-1. **프로젝트** 메뉴에서 **기존 항목 추가**를 클릭합니다.  
+1. **프로젝트** 메뉴에서 **기존 항목 추가** 를 클릭합니다.  
   
-2. **기존 항목 추가** 대화 상자에서 c:\linqtest6\ northwind.cs으로 이동한 다음 **추가**를 클릭 합니다.  
+2. **기존 항목 추가** 대화 상자에서 c:\linqtest6\ northwind.cs으로 이동한 다음 **추가** 를 클릭 합니다.  
   
      northwind.cs 파일이 프로젝트에 추가됩니다.  
   

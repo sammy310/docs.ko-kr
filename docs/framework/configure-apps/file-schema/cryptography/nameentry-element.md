@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <nameEntry> 요소'
 title: <nameEntry> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: 4341b1fcd3762e5aa55f0ba988f7f49d4b5cacd6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0ca227a2ba17a6b1e67fb75ec91aac9194b54737
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201774"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730007"
 ---
 # <a name="nameentry-element"></a>\<nameEntry> 요소
 

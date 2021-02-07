@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <cryptographySettings> 요소'
 title: <cryptographySettings> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 3c3513c05485550202f2fc5bcae1faabb0e75d47
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: afd4fdbc24dfaac60ce24b7a439a8d4d8a9427ea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201813"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730098"
 ---
 # <a name="cryptographysettings-element"></a>\<cryptographySettings> 요소
 

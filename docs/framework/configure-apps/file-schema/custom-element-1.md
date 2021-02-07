@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: SingleTagSectionHandler에 대 한 사용자 지정 요소'
 title: SingleTagSectionHandler에 대 한 사용자 지정 요소
 ms.date: 05/01/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-ms.openlocfilehash: a40f35838655f6021af0b2e966335803ec8c16b4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 83022a1ebf295b89d5f868589e3d9a77c78e3fab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "80635394"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729981"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler에 대 한 사용자 지정 요소
 
@@ -31,13 +32,13 @@ ms.locfileid: "80635394"
 
 ## <a name="parent-element"></a>부모 요소
 
-|     | Description |
+|     | 설명 |
 | --- | ----------- |
 | [**\<configuration>**](configuration-element.md) | 공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
-None
+없음
 
 ## <a name="remarks"></a>설명
 
@@ -61,8 +62,8 @@ None
 
 ## <a name="configuration-file"></a>구성 파일
 
-이 요소는 응용 프로그램 구성 파일 *, 컴퓨터 구성 파일 (machine.config*) 및 응용 프로그램 디렉터리 수준에 *없는 web.config 파일* 에서 사용할 수 있습니다.
+이 요소는 응용 프로그램 구성 파일, 컴퓨터 구성 파일 (*Machine.config*) 및 응용 프로그램 디렉터리 수준에 없는 *Web.config* 파일에서 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework의 구성 파일 스키마](index.md)
+- [.NET Framework에 대 한 구성 파일 스키마](index.md)

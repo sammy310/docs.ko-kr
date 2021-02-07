@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연산자 요약 (Visual Basic)'
 title: 연산자 요약
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - symbols, operators
 - Visual Basic code, operators
 ms.assetid: cb44c210-686f-4417-a13f-51c0d60161f8
-ms.openlocfilehash: c268ee548a43d31e353f1f1b2679db36d7f86f14
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: aebdd1e6239e1f7a0792b82048f07ca7b30b23ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875561"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730579"
 ---
 # <a name="operators-summary-visual-basic"></a>연산자 요약(Visual Basic)
 
@@ -26,7 +27,7 @@ Visual Basic 언어 키워드 및 런타임 라이브러리 멤버는 목적과 
 |논리적/비트 연산|[Not](../operators/not-operator.md), [And](../operators/and-operator.md), [or](../operators/or-operator.md), [Xor](../operators/xor-operator.md), [AndAlso](../operators/andalso-operator.md), [OrElse](../operators/orelse-operator.md)|  
 |기타 작업|[AddressOf](../operators/addressof-operator.md), [wait](../operators/await-operator.md), [GetType](../operators/gettype-operator.md)|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [키워드](index.md)
+- [C++ 키워드](index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../runtime-library-members.md)

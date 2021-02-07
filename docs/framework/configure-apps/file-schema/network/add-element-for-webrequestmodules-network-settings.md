@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: <add> webRequestModules의 요소 (네트워크 설정)'
 title: webRequestModules의 <add> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: 8d792b967d967540469dca7c090e0f905ecb2e6b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1edb63a1e1095bb4b3c3d749fd389ffaad5ddf9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201761"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729896"
 ---
 # <a name="add-element-for-webrequestmodules-network-settings"></a>webRequestModules의 \<add> 요소(네트워크 설정)
 
@@ -62,7 +63,7 @@ ms.locfileid: "91201761"
   
  웹 요청 모듈은 URI 일치 접두사가 메서드에 전달 될 때 생성 됩니다 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> .  
   
- 특성의 값은 `prefix` 유효한 URI의 선행 문자 여야 합니다. 예를 들어 `http` 또는 `http://www.contoso.com`입니다.
+ 특성의 값은 `prefix` 유효한 URI의 선행 문자 여야 합니다. 예를 들어 `http` 또는 `http://www.contoso.com`로 이름을 지정할 수 있습니다.
   
  특성 값은 `type` 쉼표로 구분 된 유효한 형식 이름 및 해당 어셈블리 이름 이어야 합니다.
   

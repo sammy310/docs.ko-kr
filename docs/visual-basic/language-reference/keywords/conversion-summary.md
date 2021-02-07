@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 변환 요약 (Visual Basic)'
 title: 변환 요약
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - conversions [Visual Basic], Visual Basic
 - type conversion [Visual Basic], keywords
 ms.assetid: ae2c79a7-2d62-4fbe-8585-14360d11f987
-ms.openlocfilehash: a1e4df718eeac3f547fa29c148d5fc81880e3336
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 3bc299e29cd4bee8ec99e17cbb71b779bd76f5d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875642"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730891"
 ---
 # <a name="conversion-summary-visual-basic"></a>변환 요약(Visual Basic)
 
@@ -32,7 +33,7 @@ Visual Basic 언어 키워드 및 런타임 라이브러리 멤버는 목적과 
 |문자열을 숫자로 변환 합니다.|<xref:Microsoft.VisualBasic.Conversion.Val%2A>|  
 |시간을 일련 번호로 변환 합니다.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [키워드](index.md)
+- [C++ 키워드](index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../runtime-library-members.md)

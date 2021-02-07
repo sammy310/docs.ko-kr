@@ -1,17 +1,18 @@
 ---
+description: '자세한 정보: 연습: 관계 간 쿼리 (c #)'
 title: '연습: 관계 간 쿼리(C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: 9dfe34136f2d0a14a12f72e22a96d1882ddbce49
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35811043ddd7ecc9aca5e1bd87a370abebf90853
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164014"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729447"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>연습: 관계 간 쿼리(C#)
 
-이 연습에서는 연결을 사용 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associations* 하 여 데이터베이스에서 외래 키 관계를 나타내는 방법을 보여 줍니다.  
+이 연습에서는 연결을 사용 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]  하 여 데이터베이스에서 외래 키 관계를 나타내는 방법을 보여 줍니다.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   

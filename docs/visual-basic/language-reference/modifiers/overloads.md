@@ -1,5 +1,6 @@
 ---
-title: Overloads
+description: '자세한 정보: 오버 로드 (Visual Basic)'
+title: 오버로드
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Overloads
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: bd0931cab520f8580c0d7473a44e350752e287bb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7f0b440b537500595e465d8aabc7724671f3ae95
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392108"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99730514"
 ---
 # <a name="overloads-visual-basic"></a>Overloads(Visual Basic)
 
@@ -23,7 +24,7 @@ ms.locfileid: "84392108"
 
 ## <a name="remarks"></a>설명
 
-*오버 로드* 는 동일한 범위에서 지정 된 속성 또는 프로시저 이름에 대 한 정의를 두 개 이상 제공 하는 방법입니다. 서명이 다른 속성 또는 프로시저를 *서명으로*다시 선언할 하는 경우도 있습니다.
+*오버 로드* 는 동일한 범위에서 지정 된 속성 또는 프로시저 이름에 대 한 정의를 두 개 이상 제공 하는 방법입니다. 서명이 다른 속성 또는 프로시저를 *서명으로* 다시 선언할 하는 경우도 있습니다.
 
 ## <a name="rules"></a>규칙
 
@@ -61,7 +62,7 @@ ms.locfileid: "84392108"
 
 - **선택적 한정자.** `Overloads`동일한 클래스에서 여러 오버 로드 된 속성 또는 프로시저를 정의 하는 경우 한정자를 사용할 필요가 없습니다. 그러나 선언 중 하나에서 `Overloads`를 사용하는 경우에는 모든 선언에서 사용해야 합니다.
 
-- **숨김 및 오버 로드.** `Overloads`를 사용 하 여 기본 클래스에서 기존 멤버 또는 오버 로드 된 멤버 집합을 숨길 수도 있습니다. 이런 방식으로 `Overloads`를 사용하는 경우 기본 클래스 멤버와 동일한 이름 및 동일한 매개 변수 목록을 사용하여 속성 또는 메서드를 선언하고 `Shadows` 키워드는 제공하지 않습니다.
+- **숨김 및 오버 로드.** `Overloads` 를 사용 하 여 기본 클래스에서 기존 멤버 또는 오버 로드 된 멤버 집합을 숨길 수도 있습니다. 이런 방식으로 `Overloads`를 사용하는 경우 기본 클래스 멤버와 동일한 이름 및 동일한 매개 변수 목록을 사용하여 속성 또는 메서드를 선언하고 `Shadows` 키워드는 제공하지 않습니다.
 
 `Overrides`를 사용하는 경우 라이브러리 API가 보다 쉽게 C#으로 작업할 수 있도록 컴파일러에서 암시적으로 `Overloads`를 추가합니다.
 
