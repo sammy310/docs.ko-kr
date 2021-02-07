@@ -1,19 +1,20 @@
 ---
+description: '자세히 알아보기: PnrpPeerResolverBindingElement'
 title: PnrpPeerResolverBindingElement
 ms.date: 03/30/2017
 ms.assetid: 050f24bf-dc23-4181-ad1e-a4cce1dc89fb
-ms.openlocfilehash: 9bd203caf692f023c914e388e65acedb6193c662
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f348d5933f9f3cbc58ac59995b03f13db0fd8482
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962931"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743904"
 ---
 # <a name="pnrppeerresolverbindingelement"></a>PnrpPeerResolverBindingElement
 
 PnrpPeerResolverBindingElement
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```csharp
 class PnrpPeerResolverBindingElement : PeerResolverBindingElement
@@ -31,6 +32,6 @@ PnrpPeerResolverBindingElement 클래스는 PeerResolverBindingElement에서 상
 |---------|-----------------------------------|
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>

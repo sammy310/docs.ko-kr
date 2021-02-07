@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataEmit:: MergeEnd 메서드'
 title: IMetaDataEmit::MergeEnd 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d64315a-1af1-4c60-aedf-f8a781914aea
 topic_type:
 - apiref
-ms.openlocfilehash: feb81b86190f953b50f43f244f4e58a0a482f86e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: aac48b9bafb60cee4e3d73232d9f9c00cca7f796
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003921"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745881"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd 메서드
 
@@ -48,7 +49,7 @@ HRESULT MergeEnd ();
 
   현재 범위에 대해 모듈 속성이 이미 설정 된 경우 모듈 속성을 가져올 수 없습니다. 그러나 현재 범위에서 모듈 속성을 설정 하지 않은 경우에는 처음 발견 될 때 한 번만 가져옵니다. 이러한 모듈 속성이 다시 발생 하면 중복 됩니다. 모든 모듈 속성의 값 (MVID 제외)을 비교 하 고 중복 항목을 찾을 수 없는 경우 오류가 발생 합니다.
 
-- 형식 정의 ()의 경우에는 `TypeDef` 중복 항목이 현재 범위에 병합 되지 않습니다. `TypeDef`개체는 정규화 된 각 *개체 이름*  +  *GUID*  +  *버전 번호*에 대해 중복 항목을 확인 합니다. 이름 또는 GUID에 일치 하는 항목이 있고 다른 두 요소 중 하나가 다르면 오류가 발생 합니다. 그렇지 않고 세 항목 모두 일치 하는 경우 `MergeEnd` 항목이 실제로 중복 되는지 확인 하기 위해 간단한 검사를 수행 합니다. 그렇지 않으면 오류가 발생 합니다. 이 간단한 검사는 다음을 찾습니다.
+- 형식 정의 ()의 경우에는 `TypeDef` 중복 항목이 현재 범위에 병합 되지 않습니다. `TypeDef`개체는 정규화 된 각 *개체 이름*  +  *GUID*  +  *버전 번호* 에 대해 중복 항목을 확인 합니다. 이름 또는 GUID에 일치 하는 항목이 있고 다른 두 요소 중 하나가 다르면 오류가 발생 합니다. 그렇지 않고 세 항목 모두 일치 하는 경우 `MergeEnd` 항목이 실제로 중복 되는지 확인 하기 위해 간단한 검사를 수행 합니다. 그렇지 않으면 오류가 발생 합니다. 이 간단한 검사는 다음을 찾습니다.
 
   - 동일한 멤버 선언이 동일한 순서로 발생 합니다. `mdPrivateScope`( [CorMethodAttr](cormethodattr-enumeration.md) 열거형 참조)로 플래그가 지정 된 멤버는이 검사에 포함 되지 않으며 특수 하 게 병합 됩니다.
 
@@ -68,7 +69,7 @@ HRESULT MergeEnd ();
 
 **헤더:** Cor
 
-**라이브러리:** Mscoree.dll에서 리소스로 사용 됩니다.
+**라이브러리:** MSCorEE.dll에서 리소스로 사용 됩니다.
 
 **.NET Framework 버전:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 

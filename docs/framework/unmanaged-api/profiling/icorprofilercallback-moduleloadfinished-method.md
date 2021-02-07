@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerCallback:: ModuleLoadFinished 메서드'
 title: ICorProfilerCallback::ModuleLoadFinished 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 050649e5-ffc0-4458-a0a4-d9ee128a219e
 topic_type:
 - apiref
-ms.openlocfilehash: 5a29507ca56cac4ab800845e3a88706dc7a25379
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 960eb9edd036055069ef3f9ab3a93602ce4ef9bf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745348"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>ICorProfilerCallback::ModuleLoadFinished 메서드
 
@@ -58,7 +59,7 @@ HRESULT ModuleLoadFinished(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ModuleLoadStarted 메서드](icorprofilercallback-moduleloadstarted-method.md)

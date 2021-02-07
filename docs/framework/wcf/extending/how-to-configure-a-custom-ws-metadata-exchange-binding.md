@@ -1,20 +1,21 @@
 ---
+description: '자세한 정보: 방법: 사용자 지정 WS-Metadata Exchange 바인딩 구성'
 title: '방법: 사용자 지정 WS-Metadata Exchange 바인딩 구성'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 6459e3f0cf0ab72af8027bd6802a0e7aa574aece
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: ae9d1932e7539d25c117a98bd130d1def8e691fe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635791"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743735"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>방법: 사용자 지정 WS-Metadata Exchange 바인딩 구성
 
-이 문서에서는 사용자 지정 WS-메타데이터 교환 바인딩을 구성하는 방법을 설명합니다. WCF(Windows 통신 Foundation)에는 네 개의 시스템 정의 메타데이터 바인딩이 포함되어 있지만 원하는 바인딩을 사용하여 메타데이터를 게시할 수 있습니다. 이 문서에서는 `wsHttpBinding`을 사용하여 메타데이터를 게시하는 방법을 보여 주며 이 문서에서는 이 바인딩은 메타데이터를 보안 방법으로 노출하는 옵션을 제공합니다. 이 문서의 코드는 [시작하기](../samples/getting-started-sample.md)를 기반으로 합니다.  
+이 문서에서는 사용자 지정 WS-Metadata exchange 바인딩을 구성 하는 방법을 설명 합니다. WCF (Windows Communication Foundation)에는 네 개의 시스템 정의 메타 데이터 바인딩이 포함 되어 있지만 원하는 바인딩을 사용 하 여 메타 데이터를 게시할 수 있습니다. 이 문서에서는를 사용 하 여 메타 데이터를 게시 하는 방법을 보여 줍니다 `wsHttpBinding` . 이 바인딩은 메타데이터를 보안 방법으로 노출하는 옵션을 제공합니다. 이 문서의 코드는 [시작](../samples/getting-started-sample.md)을 기반으로 합니다.  
   
 ### <a name="using-a-configuration-file"></a>구성 파일 사용  
   
@@ -45,7 +46,7 @@ ms.locfileid: "80635791"
               contract="IMetadataExchange" />  
     ```  
   
-4. 메타데이터 교환 끝점이 제대로 작동하는지 확인하려면 클라이언트 구성 파일에 끝점 태그를 추가합니다.  
+4. 메타 데이터 교환 끝점이 제대로 작동 하는지 확인 하려면 클라이언트 구성 파일에 끝점 태그를 추가 합니다.  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  

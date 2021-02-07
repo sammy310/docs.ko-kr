@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 3825-RoutingServiceAbandoningReceiveContext'
 title: 3825 - RoutingServiceAbandoningReceiveContext
 ms.date: 03/30/2017
 ms.assetid: 3e16528e-d340-4245-89b2-f8ac16621e94
-ms.openlocfilehash: 80fc66a7f5a57b3edce9e6710db7213d0c85f041
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5eb99378822eba726e2d2b2da65e704f80dc3b0a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243087"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99744671"
 ---
 # <a name="3825---routingserviceabandoningreceivecontext"></a>3825 - RoutingServiceAbandoningReceiveContext
 
@@ -20,7 +21,7 @@ ms.locfileid: "96243087"
 |Level|경고|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 라우팅 서비스가 지정된 ID의 메시지에 대해 ReceiveContext.Abandon을 호출할 때 내보내집니다.  
   

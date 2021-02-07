@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRDebugManager 인터페이스'
 title: ICLRDebugManager 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-ms.openlocfilehash: 3836bd349423670a19a19dda67eba75419507a29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4306e38b7c868561276d5b00e7730b6fcee46fd7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724291"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746026"
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager 인터페이스
 
@@ -56,6 +57,6 @@ ms.locfileid: "95724291"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)

@@ -1,4 +1,5 @@
 ---
+description: 'ICorProfilerCallback:: ObjectAllocated 된 메서드에 대해 자세히 알아보세요.'
 title: ICorProfilerCallback::ObjectAllocated 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eb412622-77cc-4abd-a2cd-c910fe8edd54
 topic_type:
 - apiref
-ms.openlocfilehash: fda234a6a280aeea1f497ad195d6d41efb6aa951
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 58b58aeb4bb88d0df32cebc32440317a4d23632d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674346"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745166"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated 메서드
 
@@ -56,7 +57,7 @@ HRESULT ObjectAllocated(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ClassLoadStarted 메서드](icorprofilercallback-classloadstarted-method.md)

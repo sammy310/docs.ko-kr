@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: WCF의 이벤트 로깅'
 title: WCF에서 이벤트 로깅
 ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: 535b3570f41cbfb277eeb14fb07242b528acea46
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 741e6efce9f5fffec607d511f04a400e1292b682
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236158"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99744216"
 ---
 # <a name="event-logging-in-wcf"></a>WCF에서 이벤트 로깅
 
@@ -21,7 +22,7 @@ WCF (Windows Communication Foundation)는 Windows 이벤트 로그의 내부 이
   
 ### <a name="application-event-log"></a>애플리케이션 이벤트 로그  
 
- **응용 프로그램 이벤트 로그** 에는 WCF에 의해 생성 된 대부분의 이벤트가 포함 됩니다. 대부분의 항목은 애플리케이션에서 특정 기능을 시작하지 못한 것을 나타냅니다. 다음은 이러한 템플릿의 예입니다.  
+ **응용 프로그램 이벤트 로그** 에는 WCF에 의해 생성 된 대부분의 이벤트가 포함 됩니다. 대부분의 항목은 애플리케이션에서 특정 기능을 시작하지 못한 것을 나타냅니다. 다음은 템플릿의 예입니다.  
   
 - 메시지 로깅/추적: WCF는 추적 및 메시지 로깅이 실패할 때 이벤트 로그에 이벤트를 기록 합니다. 그러나 모든 추적 실패가 이벤트를 트리거하는 것은 아닙니다. 이벤트 로그가 추적 실패로 완전히 채워지지 않도록 WCF는 이러한 이벤트에 대해 10 분의 블랙 아웃 기간을 구현 합니다. 즉, WCF가 이벤트 로그에 추적 실패를 기록 하는 경우 10 분 이상 동안 다시 수행 하지 않습니다.  
   

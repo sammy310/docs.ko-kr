@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRGCManager:: Collect 메서드'
 title: ICLRGCManager::Collect 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c6cbbea-c27c-4695-bda3-17c1910d8ddb
 topic_type:
 - apiref
-ms.openlocfilehash: 90ce4e888ddb3a10dd0dfd7e68463311db86742f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7c2649f7ce3472c504c1e48a203cf89d4b8508e3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677767"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746063"
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect 메서드
 
@@ -39,7 +40,7 @@ HRESULT Collect (
  `Generation`  
  진행 수집할 세대입니다. 값-1은 모든 세대의 컬렉션을 강제 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -64,7 +65,7 @@ HRESULT Collect (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [자동 메모리 관리](../../../standard/automatic-memory-management.md)
 - [가비지 수집](../../../standard/garbage-collection/index.md)

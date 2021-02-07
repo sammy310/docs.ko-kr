@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataImport:: EnumMethodsWithName 메서드'
 title: IMetaDataImport::EnumMethodsWithName 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a8624913-2e23-46ad-a0c1-bb8eccbbf20f
 topic_type:
 - apiref
-ms.openlocfilehash: 5b5345fc4819716dc6c2a00323f94546cfc67f32
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b77fc15bd7752b5b6b2b95d66a6bf04518616884
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720934"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745608"
 ---
 # <a name="imetadataimportenummethodswithname-method"></a>IMetaDataImport::EnumMethodsWithName 메서드
 
@@ -63,7 +64,7 @@ HRESULT EnumMethodsWithName (
 
  이 메서드는 필드 및 메서드를 열거 하지만 속성이 나 이벤트는 열거 하지 않습니다. [IMetaDataImport:: EnumMethods](imetadataimport-enummethods-method.md)달리는 `EnumMethodsWithName` 지정 된 이름이 없는 메서드 토큰을 모두 삭제 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -80,7 +81,7 @@ HRESULT EnumMethodsWithName (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

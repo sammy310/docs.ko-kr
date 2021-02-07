@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataImport:: GetCustomAttributeProps 메서드'
 title: IMetaDataImport::GetCustomAttributeProps 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6eefb243-a281-41c1-bcdc-7e17513bc446
 topic_type:
 - apiref
-ms.openlocfilehash: b92e9ab714e2d8d2c66ed5546deba16352e8e390
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9bd8e83301252d7ead225146e562d3a58feb244a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711145"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99745385"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>IMetaDataImport::GetCustomAttributeProps 메서드
 
@@ -69,7 +70,7 @@ HRESULT GetCustomAttributeProps (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)
