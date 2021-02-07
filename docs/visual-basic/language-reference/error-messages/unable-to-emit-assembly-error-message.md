@@ -1,4 +1,5 @@
 ---
+description: '다음에 대해 자세히 알아보세요. BC30145: 어셈블리를 내보낼 수 없습니다. <error message>'
 title: 어셈블리를 생성할 수 없습니다. <error message>
 ms.date: 08/14/2018
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: c088f273c100b1a7eefcf74047865093f378e970
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 015ab6e1d186495d72bddd65678ab15088c0f1b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161662"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674885"
 ---
 # <a name="bc30145-unable-to-emit-assembly-error-message"></a>BC30145: 어셈블리를 내보낼 수 없습니다. \<error message>
 
-Visual Basic 컴파일러는 어셈블리 링커*Al.exe*(Alink 라고도 함)를 호출 하 여 매니페스트를 사용 하 여 어셈블리를 생성 하 고, 링커가 어셈블리 만들기의 내보내기 단계에서 오류를 보고 합니다.
+Visual Basic 컴파일러는 어셈블리 링커 *Al.exe*(Alink 라고도 함)를 호출 하 여 매니페스트를 사용 하 여 어셈블리를 생성 하 고, 링커가 어셈블리 만들기의 내보내기 단계에서 오류를 보고 합니다.
 
 **오류 ID:** BC30145
 

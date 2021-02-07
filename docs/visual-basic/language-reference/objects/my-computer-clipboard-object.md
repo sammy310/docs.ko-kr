@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: My.settings 개체'
 title: My.Computer.Clipboard 개체
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
-ms.openlocfilehash: 8a89494a622989ffb9efb502cf2f6597d10dfffe
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 4373b9e5bfc1016881a8c411dd1afedd2ed0a5f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875339"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674521"
 ---
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard 개체
 
@@ -33,7 +34,7 @@ ms.locfileid: "90875339"
   
  **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>
 - [My.Computer 개체](my-computer-object.md)

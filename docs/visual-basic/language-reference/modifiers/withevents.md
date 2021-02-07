@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: WithEvents (Visual Basic)'
 title: WithEvents
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: c2dcb044d04099c51f57d82a8bc08f0932bf3542
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: b27f84fe54aaa10bc9b2359cd74fad3d3ace1ad5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875428"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674768"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents(Visual Basic)
 
@@ -40,8 +41,8 @@ ms.locfileid: "90875428"
 Dim WithEvents app As Application
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [핸들](../statements/handles-clause.md)
-- [키워드](../keywords/index.md)
+- [C++ 키워드](../keywords/index.md)
 - [이벤트](../../programming-guide/language-features/events/index.md)

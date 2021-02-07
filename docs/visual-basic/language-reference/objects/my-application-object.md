@@ -1,15 +1,16 @@
 ---
+description: 다음에 대해 자세히 알아보세요. 응용 프로그램 개체
 title: My.Application 개체
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application object
 ms.assetid: a0ecfccf-acf7-49ec-a08b-72e6458c5c8d
-ms.openlocfilehash: 89ca6f9b3bac384a1155f236134f32e61c51a01e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: fa9f91cf100c6008f2f3b8c85c9792fa6ffd4904
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875355"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674560"
 ---
 # <a name="myapplication-object"></a>My.Application 개체
 
@@ -33,7 +34,7 @@ ms.locfileid: "90875355"
   
  **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [My.Application.Info 개체](my-application-info-object.md)
 - [My.Application.Log 개체](my-application-log-object.md)

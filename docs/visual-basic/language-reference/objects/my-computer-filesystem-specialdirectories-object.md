@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: My.computer.filesystem.specialdirectories 개체'
 title: My.Computer.FileSystem.SpecialDirectories 개체
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.SpecialDirectories object
 - SpecialDirectories object
 ms.assetid: d5f375c3-094b-4011-8438-17a31bc6df2b
-ms.openlocfilehash: bc93c7501a47da2c216553a770ad4759dbcfc6c5
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: b2e4e4a170522eb31099b79d02d3b1fde44e7cd8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867585"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674417"
 ---
 # <a name="mycomputerfilesystemspecialdirectories-object"></a>My.Computer.FileSystem.SpecialDirectories 개체
 
@@ -30,7 +31,7 @@ ms.locfileid: "90867585"
   
  **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [My.Computer.FileSystem 개체](my-computer-filesystem-object.md)
 - [My.Computer 개체](my-computer-object.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: WriteOnly (Visual Basic)'
 title: WriteOnly
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-ms.openlocfilehash: 12a1030a423359a3e4122eea98e223a1a02f680c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 514a1de3c8c2cfbde6a9cffc5c235d92454dd966
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867618"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674742"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly(Visual Basic)
 
@@ -51,8 +52,8 @@ ms.locfileid: "90867618"
   
  [Property Statement](../statements/property-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [읽기 전용](readonly.md)
 - [개인](private.md)
-- [키워드](../keywords/index.md)
+- [C++ 키워드](../keywords/index.md)

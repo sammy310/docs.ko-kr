@@ -1,4 +1,5 @@
 ---
+description: '다음에 대해 자세히 알아보기: My.computer 개체'
 title: My.Computer.FileSystem 개체
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 519571f665aed553f98f6b01a1cf9e03a0d78fe9
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 0700da02d9dfb136b11a9e0b4db1c00883fa8cff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867595"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99674482"
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem 개체
 
@@ -40,7 +41,7 @@ ms.locfileid: "90867595"
   
  **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [My.Computer.FileSystem.SpecialDirectories 개체](my-computer-filesystem-specialdirectories-object.md)
 - [My.Computer 개체](my-computer-object.md)
