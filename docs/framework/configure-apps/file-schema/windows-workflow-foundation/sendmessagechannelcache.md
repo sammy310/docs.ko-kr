@@ -1,14 +1,15 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <sendMessageChannelCache>
 title: <sendMessageChannelCache>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 241e428e-5030-4b13-8a0a-69f05288d3d9
-ms.openlocfilehash: c1775ddabffda58c7529a64b89c9c53ff3da7b99
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2c77372bb44df74a1d2186500367c5164e1e5042
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164924"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739783"
 ---
 # \<sendMessageChannelCache>
 
@@ -48,7 +49,7 @@ ms.locfileid: "91164924"
   
 |attribute|설명|  
 |---------------|-----------------|  
-|allowUnsafeCaching|캐시 설정 여부를 나타내는 부울 값입니다. 워크플로 서비스에 사용자 지정 바인딩 또는 사용자 지정 동작이 있는 경우 캐싱이 안전하지 않을 수 있으므로 기본적으로 사용되지 않도록 설정됩니다. 그러나 캐싱을 설정 하려는 경우이 속성을 **true**로 설정 합니다.|  
+|allowUnsafeCaching|캐시 설정 여부를 나타내는 부울 값입니다. 워크플로 서비스에 사용자 지정 바인딩 또는 사용자 지정 동작이 있는 경우 캐싱이 안전하지 않을 수 있으므로 기본적으로 사용되지 않도록 설정됩니다. 그러나 캐싱을 설정 하려는 경우이 속성을 **true** 로 설정 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   

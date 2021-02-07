@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <defaultHttpCachePolicy> 요소 (네트워크 설정)'
 title: <defaultHttpCachePolicy> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 4120c57fbb65da1c124414cbe9cfba7ae64388f8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d2df27c9b140c9bdb4def49aef7de1a3d80f4a11
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91190321"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740329"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy> 요소(네트워크 설정)
 
@@ -62,7 +63,7 @@ HTTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정�
 
  특성의 값 `policyLevel` 이 `BypassCache` 또는 `Default` 입니다.  
   
- `maximumAge`, `maximumStale` 및 `minimumFresh` 요소의 값은 형식이 *d*인 명시적 시간 간격입니다.* hh*:*mm*:*ss* (일, 시간, 분 및 초) 또는 상수 `minValue` 또는 (해당 하는 경우) `maxValue` .  
+ `maximumAge`, `maximumStale` 및 `minimumFresh` 요소의 값은 형식이 *d* 인 명시적 시간 간격입니다.*hh*:*mm*:*ss* (일, 시간, 분 및 초) 또는 상수 `minValue` 또는 (해당 하는 경우) `maxValue` .  
   
 ## <a name="configuration-files"></a>구성 파일  
 

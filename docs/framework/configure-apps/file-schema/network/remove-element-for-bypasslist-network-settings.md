@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: <remove> bypasslist 요소에 대 한 요소 (네트워크 설정)'
 title: bypasslist의 <remove> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: 97b49a8a520d6a4f72945366874991d2deb18710
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 48441f1b402b339a1bd2ea069678afb4b1d5f2e1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71697903"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740290"
 ---
 # <a name="remove-element-for-bypasslist-network-settings"></a>bypasslist의 \<remove> 요소(네트워크 설정)
 
@@ -41,7 +42,7 @@ ms.locfileid: "71697903"
 
 ### <a name="attributes"></a>특성
 
-|**특성**|**설명**|
+|**Attribute**|**설명**|
 |-------------------|---------------------|
 |`address`|IP 주소 또는 DNS 이름을 설명 하는 정규식입니다.|
 

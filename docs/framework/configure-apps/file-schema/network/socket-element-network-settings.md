@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <socket> 요소 (네트워크 설정)'
 title: <socket> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: b8df32745007b2a145d35b8cfcc4cbd2bd17eb33
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 564d6566bf6f6b1997b986cb6c0d85f841195e55
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201735"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740134"
 ---
 # <a name="socket-element-network-settings"></a>\<socket> 요소(네트워크 설정)
 
@@ -60,7 +61,7 @@ ms.locfileid: "91201735"
 
  `alwaysUseCompletionPortsForAccept` 및 `alwaysUseCompletionPortsForConnect` 특성이 <xref:System.Net.Sockets?displayProperty=nameWithType> 네임스페이스에 있는 클래스에 의해 완료 포트의 사용과 관련된 기본 동작을 지정하는 데 사용됩니다. 고성능 서버 응용 프로그램에는 완료 포트를 권장 합니다.  
   
- 및 특성의 기본값은 `alwaysUseCompletionPortsForAccept` `alwaysUseCompletionPortsForConnect` **false**입니다.  
+ 및 특성의 기본값은 `alwaysUseCompletionPortsForAccept` `alwaysUseCompletionPortsForConnect` **false** 입니다.  
   
  는 <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> `alwaysUseCompletionPortsForAccept` 적용 가능한 구성 파일에서 특성의 현재 값을 가져오는 데 사용할 수 있습니다. 는 <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> `alwaysUseCompletionPortsForConnect` 적용 가능한 구성 파일에서 특성의 현재 값을 가져오는 데 사용할 수 있습니다.  
   
@@ -83,7 +84,7 @@ ms.locfileid: "91201735"
 |제한 없음|IP 보호 수준이 제한하지 않음입니다. 이 값은 Windows에 구축된 IPv6 NAT 통과 기능(예: Teredo)을 이용하는 애플리케이션을 비롯하여 인터넷을 통해 작동하도록 디자인된 애플리케이션에서 사용됩니다. 이러한 애플리케이션에서는 IPv4 방화벽이 무시될 수 있으므로 열린 포트로 향하는 인터넷 공격을 막기 위해 애플리케이션의 보안 기능을 강화해야 합니다. Windows Server 2008 R2 및 Windows Vista에서는 소켓에 대한 IP 보호 수준이 기본적으로 제한되지 않음으로 설정됩니다.|  
 |Unspecified|IP 보호 수준이 지정되지 않음입니다. Windows 7 및 Windows Server 2008 R2에서는 소켓에 대한 IP 보호 수준이 기본적으로 지정되지 않음으로 설정됩니다.|  
   
- 특성의 기본값은 `ipProtectionLevel` **지정**되지 않습니다.  
+ 특성의 기본값은 `ipProtectionLevel` **지정** 되지 않습니다.  
   
  <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A>속성을 사용 하 여 `ipProtectionLevel` 적용 가능한 구성 파일에서 특성의 현재 값을 가져올 수 있습니다.  
   

@@ -1,5 +1,6 @@
 ---
-title: <remove>NameValueSectionHandler 및 DictionarySectionHandler에 대 한 요소
+description: NameValueSectionHandler 및 DictionarySectionHandler에 대 한 요소에 대해 자세히 알아보세요. <remove>
+title: <remove> NameValueSectionHandler 및 DictionarySectionHandler에 대 한 요소
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
-ms.openlocfilehash: d1e4f3478f6afd6a20c01c6b57a137020ee88f5f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bf1434b257aa014c8f46e34f2d57d109bd510452
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77214763"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740082"
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<remove>NameValueSectionHandler 및 DictionarySectionHandler에 대 한 요소
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<remove> NameValueSectionHandler 및 DictionarySectionHandler에 대 한 요소
 
 이전에 정의 된 설정을 제거 합니다.
 
@@ -22,7 +23,7 @@ ms.locfileid: "77214763"
 &nbsp;&nbsp;[**\<sectionName>**](custom-element-2.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```xml
 <add remove="key" />
@@ -36,13 +37,13 @@ ms.locfileid: "77214763"
 
 ## <a name="parent-element"></a>부모 요소
 
-| 요소 | Description |
+| 요소 | 설명 |
 | ------- | ------------|
-| [**\<sectionName>** 요소인](custom-element-2.md) | 및 클래스를 사용 하는 사용자 지정 구성 섹션에 대 한 설정을 정의 <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> 합니다. |
+| [**\<sectionName>** 요소](custom-element-2.md) | 및 클래스를 사용 하는 사용자 지정 구성 섹션에 대 한 설정을 정의 <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> 합니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
-None
+없음
 
 ## <a name="remarks"></a>설명
 
@@ -80,8 +81,8 @@ None
 
 ## <a name="configuration-file"></a>구성 파일
 
-이 요소는 응용 프로그램 구성 파일 *, 컴퓨터 구성 파일 (machine.config*) 및 응용 프로그램 디렉터리 수준에 없는 *web.config 파일* 에서 사용할 수 있습니다.
+이 요소는 응용 프로그램 구성 파일, 컴퓨터 구성 파일 (*Machine.config*) 및 응용 프로그램 디렉터리 수준에 없는 *Web.config* 파일에서 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework의 구성 파일 스키마](index.md)
+- [.NET Framework에 대 한 구성 파일 스키마](index.md)

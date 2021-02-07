@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <defaultFtpCachePolicy> 요소 (네트워크 설정)'
 title: <defaultFtpCachePolicy> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: e081882aa8df89c0a1bf5d4c60f1395a3319c417
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 77150ce0980e96dd949df4b5ad7e4557ed1b991a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91190373"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740368"
 ---
 # <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy> 요소(네트워크 설정)
 
@@ -44,7 +45,7 @@ FTP 캐싱이 활성 상태 인지 여부를 설명 하 고 기본 캐싱 정책
   
 ## <a name="policylevel-attribute"></a>policyLevel 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |`Default`|리소스가 최신이 고, 콘텐츠 길이가 정확 하며, 만료, 수정 및 콘텐츠 길이 특성이 있는 경우 캐시 된 리소스를 반환 합니다.|  
 |`BypassCache`|서버에서 리소스를 반환 합니다.|  

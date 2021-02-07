@@ -1,14 +1,15 @@
 ---
+description: Windows Workflow Foundation 구성 스키마에 대해 자세히 알아보세요.
 title: Windows Workflow Foundation 구성 스키마
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 7ae70357-b150-4342-8f2a-d5eb6f9c6a0d
-ms.openlocfilehash: 423e3241823def87381ed35c4367677009828a6f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bdc8164d4936436a41c217ce2eabddd9ec44c8d8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169780"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740056"
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Windows Workflow Foundation 구성 스키마
 
