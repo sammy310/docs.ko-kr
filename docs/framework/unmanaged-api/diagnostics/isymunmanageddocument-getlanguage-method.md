@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedDocument:: GetLanguage 메서드'
 title: ISymUnmanagedDocument::GetLanguage 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c6639418-e9f2-4a99-8ce2-ec9876e0bc79
 topic_type:
 - apiref
-ms.openlocfilehash: 075d46b0bbc68add0203daf7430afb712c998fe0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f30636303d310ed91aa4229f52a3197a29190d3a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700979"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710311"
 ---
 # <a name="isymunmanageddocumentgetlanguage-method"></a>ISymUnmanagedDocument::GetLanguage 메서드
 
@@ -38,10 +39,10 @@ HRESULT GetLanguage(
  `pRetVal`  
  제한이 언어 식별자를 받는 변수에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedDocument 인터페이스](isymunmanageddocument-interface.md)

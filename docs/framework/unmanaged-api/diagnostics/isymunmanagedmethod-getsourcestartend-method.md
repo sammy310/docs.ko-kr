@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedMethod:: GetSourceStartEnd 메서드'
 title: ISymUnmanagedMethod::GetSourceStartEnd 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2a420900-01f1-4461-8777-3a34a6dc1426
 topic_type:
 - apiref
-ms.openlocfilehash: f53afa5f87f1502f287b25e3d9756f9a54ad6869
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0d247427998970d86c1ad1ec37f5b32a846a6f7c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699289"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709986"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd 메서드
 
@@ -50,7 +51,7 @@ HRESULT GetSourceStartEnd(
  `pRetVal`  
  [out] `true` 위치가 정의 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -58,6 +59,6 @@ HRESULT GetSourceStartEnd(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedMethod 인터페이스](isymunmanagedmethod-interface.md)

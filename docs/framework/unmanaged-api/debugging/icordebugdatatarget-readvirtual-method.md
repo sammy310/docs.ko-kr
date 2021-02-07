@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugDataTarget:: ReadVirtual 메서드'
 title: ICorDebugDataTarget::ReadVirtual 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-ms.openlocfilehash: 8fb0cfc72867653eaff65f3183dacf9191604290
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4525ba1e5dc685813d963dab96879b886987f38f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679730"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710610"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual 메서드
 
@@ -65,7 +66,7 @@ HRESULT ReadVirtual(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugDataTarget 인터페이스](icordebugdatatarget-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

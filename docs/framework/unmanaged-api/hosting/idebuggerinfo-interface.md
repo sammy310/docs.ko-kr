@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IDebuggerInfo 인터페이스'
 title: IDebuggerInfo 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9395a8a0-ffb9-475f-8da6-890999ae4bb6
 topic_type:
 - apiref
-ms.openlocfilehash: 63114b07ff41639df61aa795bfedb0eb9f6334f6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ec5421d4efac2d50eb2900d58d7bd8ee80b6ead9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711652"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709815"
 ---
 # <a name="idebuggerinfo-interface"></a>IDebuggerInfo 인터페이스
 
@@ -41,7 +42,7 @@ ms.locfileid: "95711652"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)
 - [CorRuntimeHost Coclass](corruntimehost-coclass.md)

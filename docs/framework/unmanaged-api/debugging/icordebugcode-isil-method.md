@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugCode:: IsIL 메서드'
 title: ICorDebugCode::IsIL 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 132ef8cc-d938-43f3-b8f2-e3b97c0ceb33
 topic_type:
 - apiref
-ms.openlocfilehash: 77e55c4c3644ac4bd76f5c92152f4ee86cf5fa9a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: db41f9ebaa6a6403b21e10d1daa0e8b167c7cb96
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125559"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711128"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL 메서드
 
@@ -37,14 +38,14 @@ HRESULT IsIL (
 ## <a name="parameters"></a>매개 변수
 
 `pbIL`  
-[out]이 `ICorDebugCode` MSIL로 컴파일된 코드를 나타내는 경우 `true` 합니다. 그렇지 않으면 `false`합니다.
+[out] `true` 이가 `ICorDebugCode` MSIL로 컴파일된 코드를 나타내면이 고, 그렇지 않으면 `false` 입니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
 **헤더:** CorDebug.idl, CorDebug.h
 
 **라이브러리:** CorGuids.lib
 
-**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

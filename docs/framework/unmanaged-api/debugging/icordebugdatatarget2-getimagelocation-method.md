@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugDataTarget2:: Geation Agelocation 메서드'
 title: ICorDebugDataTarget2::GetImageLocation 메서드
 ms.date: 03/30/2017
 ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
-ms.openlocfilehash: c909b46a9bb70d23d1cd3a769ac24fcf58479308
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f79ba89d3ba467c2e81224d64147c2b5dd5db079
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713797"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710493"
 ---
 # <a name="icordebugdatatarget2getimagelocation-method"></a>ICorDebugDataTarget2::GetImageLocation 메서드
 
@@ -52,7 +53,7 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugDataTarget2 인터페이스](icordebugdatatarget2-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

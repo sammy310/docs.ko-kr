@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedDocument 인터페이스'
 title: ISymUnmanagedDocument 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c26b366-6e81-467c-9dd0-02dd26fee0a3
 topic_type:
 - apiref
-ms.openlocfilehash: 83c683e1f60f13f7cee4ddc6fe5af5a94e36eb93
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd1907e570dd15ebcac3ee12aa09c626c9bb7787
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95692178"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710142"
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument 인터페이스
 
@@ -40,6 +41,6 @@ ms.locfileid: "95692178"
 |[GetURL 메서드](isymunmanageddocument-geturl-method.md)|이 문서에 대 한 URL을 반환 합니다.|  
 |[HasEmbeddedSource 메서드](isymunmanageddocument-hasembeddedsource-method.md)|`true`문서에 디버깅 기호에 포함 된 소스가 있으면를 반환 하 고, 그렇지 않으면를 반환 `false` 합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)

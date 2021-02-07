@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedDocument:: GetURL 메서드'
 title: ISymUnmanagedDocument::GetURL 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 60600178-c2b5-4cab-b3a5-f0f61acebaf1
 topic_type:
 - apiref
-ms.openlocfilehash: c862b6d3bfa415b622b68898db1ff30c6759e8f2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b39b36054d80f9ad2f9dd076e2055ccbc6526973
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726940"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99710194"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL 메서드
 
@@ -46,10 +47,10 @@ HRESULT GetURL(
  `szUrl`  
  제한이 URL을 포함 하는 버퍼입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 오류 코드입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedDocument 인터페이스](isymunmanageddocument-interface.md)
