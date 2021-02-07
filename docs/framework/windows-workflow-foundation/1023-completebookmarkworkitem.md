@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 1023-Complete책갈피 작업 항목'
 title: 1023 - CompleteBookmarkWorkItem
 ms.date: 03/30/2017
 ms.assetid: fc5dac57-b3eb-4826-b505-c6d269e4774d
-ms.openlocfilehash: cb99fd72165182788955021fbedd2aa657b3a098
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c83972b41a844747c47b97a0dd2bd37c26ae78a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275325"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755527"
 ---
 # <a name="1023---completebookmarkworkitem"></a>1023 - CompleteBookmarkWorkItem
 
@@ -20,7 +21,7 @@ ms.locfileid: "96275325"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  BookmarkWorkItem이 완료되었음을 나타냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96275325"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |활동|xs:string|작업의 형식 이름입니다.|  
 |DisplayName|xs:string|작업의 표시 이름입니다.|  

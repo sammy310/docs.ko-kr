@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 1010-ActivityCompleted'
 title: 1010 - ActivityCompleted
 ms.date: 03/30/2017
 ms.assetid: d256284e-3fd2-4c33-82f4-abb617575706
-ms.openlocfilehash: d0ebf32ec1d5fe5b34ffe650d5547891be0eb665
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c72339449b94b0ea5d6d8fa227b606cc25c29704
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239915"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755540"
 ---
 # <a name="1010---activitycompleted"></a>1010 - ActivityCompleted
 
@@ -20,7 +21,7 @@ ms.locfileid: "96239915"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  작업의 실행이 완료되었음을 나타냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96239915"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |활동|xs:string|작업의 형식 이름입니다.|  
 |DisplayName|xs:string|작업의 표시 이름입니다.|  
