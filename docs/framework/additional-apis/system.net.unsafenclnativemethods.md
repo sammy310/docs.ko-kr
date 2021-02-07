@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: UnsafeNclNativeMethods 클래스'
 title: UnsafeNclNativeMethods 클래스 (System.Net)
 ms.date: 06/12/2020
 ms.technology: dotnet-networking
@@ -12,16 +13,16 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 46756a0d1d69b4768dbb8dcdd7ab098d3f1849bf
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: fa1084efddae0ba5cbfc9a949dcd94d2c64f3272
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990465"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699495"
 ---
 # <a name="unsafenclnativemethods-class"></a>UnsafeNclNativeMethods 클래스
 
-안전 하지 않은 네이티브 네트워킹 메서드를 가져오는 클래스를 포함 합니다. 이 클래스는 상속할 수 없습니다.
+안전 하지 않은 네이티브 네트워킹 메서드를 가져오는 클래스를 포함 합니다. 이 클래스는 상속될 수 없습니다.
 
 ```csharp
 internal static class UnsafeNclNativeMethods
@@ -34,7 +35,7 @@ internal static class UnsafeNclNativeMethods
 
 ## <a name="nativepki-class"></a>NativePKI 클래스
 
-crypt32.dll에서 가져온 메서드를 포함 합니다. 이러한 메서드는 HTTPS (하이퍼텍스트 전송 프로토콜 보안)를 사용 하는 경우 인증서를 처리 합니다. 이 클래스는 상속할 수 없습니다.
+crypt32.dll에서 가져온 메서드를 포함 합니다. 이러한 메서드는 HTTPS (하이퍼텍스트 전송 프로토콜 보안)를 사용 하는 경우 인증서를 처리 합니다. 이 클래스는 상속될 수 없습니다.
 
 ```csharp
 internal static class NativePKI

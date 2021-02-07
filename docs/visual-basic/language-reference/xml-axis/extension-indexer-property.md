@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 확장 인덱서 속성 (Visual Basic)'
 title: 확장명 인덱서 속성
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: 23417cd982c2ddf06afce69d9b120ae0737fb87d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ec165836f739db9a74ea266ebba32be5bb42cca6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866118"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700327"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>확장 인덱서 속성(Visual Basic)
 
 컬렉션의 개별 요소에 액세스할 수 있도록 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 object(index)  
@@ -35,7 +36,7 @@ object(index)
 |`index`|필수 사항입니다. 컬렉션 요소의 0부터 시작 하는 위치를 지정 하는 정수 식입니다.|  
 |)|필수 사항입니다. 인덱서 속성의 끝을 나타냅니다.|  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  컬렉션의 지정 된 위치에 있는 개체 이거나, `Nothing` 인덱스가 범위를 벗어난 경우입니다.  
   
@@ -59,7 +60,7 @@ object(index)
   
  `Second phone number: 425-555-0145`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Linq.XElement>
 - [XML 축 속성](index.md)

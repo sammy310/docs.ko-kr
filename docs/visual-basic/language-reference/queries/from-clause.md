@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: From 절 (Visual Basic)'
 title: From 절
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 120ba6da11bffc3a0e81873d1fd606633724723d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e35188412deb7fd9f2d8306c85057d050a60d030
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875251"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700561"
 ---
 # <a name="from-clause-visual-basic"></a>From 절 (Visual Basic)
 
 하나 이상의 범위 변수와 쿼리할 컬렉션을 지정 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 From element [ As type ] In collection [ _ ]  
@@ -38,7 +39,7 @@ From element [ As type ] In collection [ _ ]
   
 ## <a name="remarks"></a>설명  
 
- `From`절은 쿼리의 소스 데이터와 소스 컬렉션의 요소를 참조 하는 데 사용 되는 변수를 식별 하는 데 사용 됩니다. 이러한 변수를 *범위 변수*라고 합니다. 절 `From` `Aggregate` 이 집계 된 결과만 반환 하는 쿼리를 식별 하는 데 사용 되는 경우를 제외 하 고는 쿼리에 필요 합니다. 자세한 내용은 [Aggregate 절](aggregate-clause.md)을 참조 하세요.  
+ `From`절은 쿼리의 소스 데이터와 소스 컬렉션의 요소를 참조 하는 데 사용 되는 변수를 식별 하는 데 사용 됩니다. 이러한 변수를 *범위 변수* 라고 합니다. 절 `From` `Aggregate` 이 집계 된 결과만 반환 하는 쿼리를 식별 하는 데 사용 되는 경우를 제외 하 고는 쿼리에 필요 합니다. 자세한 내용은 [Aggregate 절](aggregate-clause.md)을 참조 하세요.  
   
  쿼리에 여러 절을 지정 `From` 하 여 조인할 여러 컬렉션을 식별할 수 있습니다. 여러 컬렉션을 지정 하는 경우 이러한 컬렉션은 독립적으로 반복 되거나 관련 된 경우 조인할 수 있습니다. `Select`절을 사용 하거나 또는 절을 사용 하 여 명시적으로 컬렉션을 조인할 수 있습니다 `Join` `Group Join` . 또는 여러 범위 변수와 컬렉션을 단일 절에 지정할 수 있으며 `From` , 각 관련 범위 변수와 컬렉션은 쉼표로 구분 됩니다. 다음 코드 예에서는 절의 구문 옵션을 모두 보여 줍니다 `From` .  
   
@@ -72,7 +73,7 @@ From element [ As type ] In collection [ _ ]
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [쿼리](index.md)
 - [Visual Basic의 LINQ 소개](../../programming-guide/language-features/linq/introduction-to-linq.md)

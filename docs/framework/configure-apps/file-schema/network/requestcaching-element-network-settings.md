@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <requestCaching> 요소 (네트워크 설정)'
 title: <requestCaching> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: 3eb32b7ae643efdb19892410b669c1e7ff80e0ad
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d09da8ad7a38ac363aaa740cca4de25e33fa8c56
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91174162"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698559"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching> 요소(네트워크 설정)
 
@@ -51,7 +52,7 @@ ms.locfileid: "91174162"
   
 ## <a name="policylevel-attribute"></a>policyLevel 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |`Default`|리소스가 최신이 고, 콘텐츠 길이가 정확 하며, 만료, 수정 및 콘텐츠 길이 특성이 있는 경우 캐시 된 리소스를 반환 합니다.|  
 |`BypassCache`|서버에서 리소스를 반환 합니다.|  

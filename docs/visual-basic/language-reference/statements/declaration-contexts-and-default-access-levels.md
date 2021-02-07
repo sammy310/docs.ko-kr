@@ -1,4 +1,5 @@
 ---
+description: 자세한 내용은 선언 컨텍스트 및 기본 액세스 수준 (Visual Basic)을 확인 하세요.
 title: 선언 컨텍스트 및 기본 액세스 수준
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - access levels, Visual Basic
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-ms.openlocfilehash: a659481b34b8b44f1f387b464d5d9656ed98ab3f
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: c550db39862fbe9f69e5651b6e9fc7fdfcc88513
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874956"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700340"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>선언 컨텍스트 및 기본 액세스 수준(Visual Basic)
 
@@ -22,7 +23,7 @@ ms.locfileid: "90874956"
   
 ## <a name="declaration-context-levels"></a>선언 컨텍스트 수준  
 
- 프로그래밍 요소의 *선언 컨텍스트* 는 선언 된 코드 영역입니다. 이는 일반적으로 *포함 하는 요소*라고 하는 또 다른 프로그래밍 요소입니다.  
+ 프로그래밍 요소의 *선언 컨텍스트* 는 선언 된 코드 영역입니다. 이는 일반적으로 *포함 하는 요소* 라고 하는 또 다른 프로그래밍 요소입니다.  
   
  선언 컨텍스트의 수준은 다음과 같습니다.  
   
@@ -53,7 +54,7 @@ ms.locfileid: "90874956"
   
  자세한 내용은 [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Friend](../modifiers/friend.md)
 - [개인](../modifiers/private.md)

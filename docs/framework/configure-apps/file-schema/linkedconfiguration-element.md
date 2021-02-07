@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <linkedConfiguration> 요소'
 title: <linkedConfiguration> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-ms.openlocfilehash: 14ee2275ecf690ab16ffaabd71fbbe7e1a4897bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e4312cf788784241efc35304b632dfe1fdef1bc4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74087957"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698663"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration> 요소
 
@@ -26,7 +27,7 @@ ms.locfileid: "74087957"
 &nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-configuration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```xml
 <linkedConfiguration href="URL of linked configuration file" />
@@ -34,19 +35,19 @@ ms.locfileid: "74087957"
 
 ## <a name="attribute"></a>attribute
 
-|           | Description |
+|           | 설명 |
 | --------- | ----------- |
 | **href**  | 필수 특성입니다.<br><br>포함할 구성 파일의 URL입니다. **Href** 특성에 대해 지원 되는 유일한 형식은 `file://` 입니다. 로컬 파일 및 UNC 파일이 지원 됩니다. |
 
 ## <a name="parent-element"></a>부모 요소
 
-|     | Description |
+|     | 설명 |
 | --- | ----------- |
-| [**\<assemblyBinding>** 요소인](assemblybinding-element-for-configuration.md) | 구성 수준에서 어셈블리 바인딩 정책을 지정합니다. |
+| [**\<assemblyBinding>** 요소](assemblybinding-element-for-configuration.md) | 구성 수준에서 어셈블리 바인딩 정책을 지정합니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
-None
+없음
 
 ## <a name="remarks"></a>설명
 
@@ -65,7 +66,7 @@ None
 
 - 모든 연결 된 구성 파일은 `#include` C/c + +의 지시문 동작과 유사 하 게 하나의 파일을 구성 하기 위해 병합 됩니다.
 
-- **\<linkedConfiguration>** 요소는 응용 프로그램 구성 파일 에서만 허용 되며 *machine.config*에서 무시 됩니다.
+- **\<linkedConfiguration>** 요소는 응용 프로그램 구성 파일 에서만 허용 되며 *Machine.config* 에서는 무시 됩니다.
 
 - 순환 참조가 감지 되 고 종료 됩니다. 즉, **\<linkedConfiguration>** 일련의 구성 파일 요소가 루프를 구성 하면 루프가 검색 되 고 중지 됩니다.
 
@@ -83,5 +84,5 @@ None
 
 ## <a name="see-also"></a>참고 항목
 
-- [**\<assemblyBinding>** 요소인](assemblybinding-element-for-configuration.md)
-- [.NET Framework의 구성 파일 스키마](index.md)
+- [**\<assemblyBinding>** 요소](assemblybinding-element-for-configuration.md)
+- [.NET Framework에 대 한 구성 파일 스키마](index.md)

@@ -1,15 +1,16 @@
 ---
+description: "자세한 정보: ' ' 인수가 <argumentname> Nothing 이거나 비어 있습니다."
 title: "'<argumentname>' 인수가 Nothing이거나 비어 있습니다."
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_PathNullOrEmpty1
 ms.assetid: 4a742518-30ce-4054-b1bb-df6978f15c06
-ms.openlocfilehash: ec4d272db0a64857b6e0df9d541d83123f293de3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2ce79ac6570972bc3ca0cfc3def429adbd2e8b80
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91080051"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700093"
 ---
 # <a name="argument-argumentname-is-nothing-or-empty"></a>'\<argumentname>' 인수가 Nothing이거나 비어 있습니다.
 
@@ -19,8 +20,8 @@ ms.locfileid: "91080051"
   
 - 유효한 인수 이름을 추가합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DirectoryPath.](xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo.DirectoryPath)
 - [방법: 파일 경로 구문 분석](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-- [없는지](../language-reference/nothing.md)
+- [Nothing](../language-reference/nothing.md)

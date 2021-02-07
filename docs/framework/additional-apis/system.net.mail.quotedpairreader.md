@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: QuotedPairReader 클래스'
 title: QuotedPairReader 클래스 (System.Net)
 ms.date: 06/12/2020
 ms.technology: dotnet-networking
@@ -11,15 +12,16 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 898c6e9d2d5dd02f3d5f9c096ad470b5dd445d1d
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 810a7b02948a1b7aa542a179563af9a6d79dd763
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051313"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699664"
 ---
 # <a name="quotedpairreader-class"></a>QuotedPairReader 클래스
 
-따옴표 붙은 문자열에서 따옴표로 묶인 (이스케이프 됨) 문자를 결정 합니다. 이 클래스는 상속할 수 없습니다.
+따옴표 붙은 문자열에서 따옴표로 묶인 (이스케이프 됨) 문자를 결정 합니다. 이 클래스는 상속될 수 없습니다.
 
 ```csharp
 internal static class QuotedPairReader
@@ -50,13 +52,13 @@ internal static int CountQuotedChars(string data, int index, bool permitUnicodeE
 
 - `permitUnicodeEscaping` <xref:System.Boolean>
 
-  `true`유니코드 문자를 이스케이프 하도록 허용 하려면 그렇지 않으면 `false` 입니다.
+  `true` 유니코드 문자를 이스케이프 하도록 허용 하려면 그렇지 않으면 `false` 입니다.
 
 ### <a name="return-value"></a>반환 값
 
 <xref:System.Int32?displayProperty=nameWithType>
 
-`0`지정 된 인덱스에 있는 문자가 이스케이프 되지 않으면이 고, 그렇지 않으면입니다. 그렇지 않으면에서 문자를 포함 하 여 최대 연속 따옴표 안에 포함 된 문자 수입니다 `index` .
+`0` 지정 된 인덱스에 있는 문자가 이스케이프 되지 않으면이 고, 그렇지 않으면입니다. 그렇지 않으면에서 문자를 포함 하 여 최대 연속 따옴표 안에 포함 된 문자 수입니다 `index` .
 
 ### <a name="exceptions"></a>예외
 

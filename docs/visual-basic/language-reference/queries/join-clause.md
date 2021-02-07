@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Join 절 (Visual Basic)'
 title: Join 절
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: f73dc31bbbb9014a8a1a315de406c53fa58d1c65
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 69d808e68a32b3f8799dabbbc8abc53acae42b57
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359776"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700444"
 ---
 # <a name="join-clause-visual-basic"></a>Join 절 (Visual Basic)
 
 두 컬렉션을 단일 컬렉션으로 결합합니다. 조인 작업은 일치 하는 키를 기반으로 하며 연산자를 사용 합니다 `Equals` .
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 Join element In collection _
@@ -35,7 +36,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 `element` 필수입니다. 조인 되는 컬렉션에 대 한 제어 변수입니다.
 
 `collection`  
-필수 요소. 연산자의 좌 변에 있는 컬렉션과 결합할 컬렉션 `Join` 입니다. `Join`절은 다른 `Join` 절 또는 절에 중첩 될 수 있습니다 `Group Join` .
+필수 사항입니다. 연산자의 좌 변에 있는 컬렉션과 결합할 컬렉션 `Join` 입니다. `Join`절은 다른 `Join` 절 또는 절에 중첩 될 수 있습니다 `Group Join` .
 
 `joinClause`  
 선택 사항입니다. `Join`쿼리를 추가로 구체화 하는 하나 이상의 추가 절입니다.
@@ -44,7 +45,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 선택 사항입니다. `Group Join`쿼리를 추가로 구체화 하는 하나 이상의 추가 절입니다.
 
 `key1` `Equals` `key2`  
-필수 요소. 조인 되는 컬렉션의 키를 식별 합니다. `Equals`조인 되는 컬렉션의 키를 비교 하려면 연산자를 사용 해야 합니다. 연산자를 사용 하 여 `And` 여러 키를 식별 하 여 조인 조건을 결합할 수 있습니다. `key1`연산자의 좌 변에 있는 컬렉션에서 가져와야 합니다 `Join` . `key2`연산자의 우변에 있는 컬렉션에서 가져와야 합니다 `Join` .
+필수 사항입니다. 조인 되는 컬렉션의 키를 식별 합니다. `Equals`조인 되는 컬렉션의 키를 비교 하려면 연산자를 사용 해야 합니다. 연산자를 사용 하 여 `And` 여러 키를 식별 하 여 조인 조건을 결합할 수 있습니다. `key1` 연산자의 좌 변에 있는 컬렉션에서 가져와야 합니다 `Join` . `key2` 연산자의 우변에 있는 컬렉션에서 가져와야 합니다 `Join` .
 
 조인 조건에 사용 되는 키는 컬렉션에서 두 개 이상의 항목을 포함 하는 식일 수 있습니다. 그러나 각 키 식에는 해당 컬렉션의 항목만 포함할 수 있습니다.
 

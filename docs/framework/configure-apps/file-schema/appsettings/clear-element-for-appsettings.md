@@ -1,4 +1,5 @@
 ---
+description: '에 대 한 자세한 정보: <clear> 요소 <appSettings>'
 title: <appSettings>에 대한 <clear> 요소
 ms.date: 05/01/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-ms.openlocfilehash: 266d32ccb8b322f0472e0f552f9c0fc877c9a78e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 88c6a02441c038619cb74947c024de7712189915
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77214796"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699339"
 ---
 # <a name="clear-element-for-appsettings"></a>\<appSettings>에 대한 \<clear> 요소
 
@@ -36,13 +37,13 @@ None
 
 ## <a name="parent-element"></a>부모 요소
 
-|     | Description |
+|     | 설명 |
 | --- | ----------- |
 | [**\<appSettings>**](appsettings-element-for-configuration.md) | 파일 경로, XML Web services Url 또는 기타 사용자 지정 응용 프로그램 구성 정보와 같은 사용자 지정 응용 프로그램 설정을 포함 합니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
-None
+없음
 
 ## <a name="example"></a>예제
 
@@ -56,4 +57,4 @@ None
 
 ## <a name="see-also"></a>참고 항목
 
-- [.NET Framework의 구성 파일 스키마](../index.md)
+- [.NET Framework에 대 한 구성 파일 스키마](../index.md)

@@ -1,16 +1,17 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <param> (Visual Basic)
 title: <param>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: 19300a928a59c7259f81b282bd28d9bdd447d76b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 94fe5e11d5846f7fa00eb73c1c4363990ae23b2f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872626"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700294"
 ---
 # <a name="param-visual-basic"></a>\<param>(Visual Basic)
 
@@ -48,6 +49,6 @@ ms.locfileid: "90872626"
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XML 주석 태그](index.md)

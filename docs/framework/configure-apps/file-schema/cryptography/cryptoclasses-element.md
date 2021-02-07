@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <cryptoClasses> 요소'
 title: <cryptoClasses> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: 89b96edcf1da20698cd203e78fa27e644fa69cc3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5ae9b85d477a71eedc3c8b32bba2b4639414163c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201826"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698923"
 ---
 # <a name="cryptoclasses-element"></a>\<cryptoClasses> 요소
 

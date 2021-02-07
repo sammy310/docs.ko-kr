@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 유니코드 (Visual Basic)'
 title: 유니코드(Unicode)
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Unicode keyword [Visual Basic]
 - Unicode, marshaling strings
 ms.assetid: 0021d5ff-3209-444e-8497-420f3e6ee075
-ms.openlocfilehash: 2f415e70e6ffb5295d49c919383462b9f726f88a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: b0c71d8fdefe3f0d240201e0d57265e5c6081d50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867654"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700717"
 ---
 # <a name="unicode-visual-basic"></a>Unicode(Visual Basic)
 
@@ -36,8 +37,8 @@ ms.locfileid: "90867654"
 
  이 키워드는 지원 되지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Ansi](ansi.md)
 - [자동](auto.md)
-- [키워드](../keywords/index.md)
+- [C++ 키워드](../keywords/index.md)

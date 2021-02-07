@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: + 연산자 (Visual Basic)'
 title: + 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: bc31e4c66c64d891e3fffd809b7ae99b9c9a0520
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 9a6517847945cb2edcbd97adac6a013498dde174
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873464"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700691"
 ---
 # <a name="-operator-visual-basic"></a>+ 연산자(Visual Basic)
 
@@ -92,7 +93,7 @@ expression1 + expression2
   
 ## <a name="overloading"></a>오버로딩  
 
- `+`연산자를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체의 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+ `+`연산자를 *오버 로드할* 수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체의 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 
@@ -118,7 +119,7 @@ expression1 + expression2
   
  모호성을 없애려면를 연결 하는 대신 연산자를 사용 해야 합니다 `&` `+` .  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [& 연산자](concatenation-operator.md)
 - [연결 연산자](concatenation-operators.md)

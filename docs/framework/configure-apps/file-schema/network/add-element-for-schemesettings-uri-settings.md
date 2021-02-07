@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: <add> schemeSettings 요소에 대 한 요소 (Uri 설정)'
 title: schemeSettings의 <add> 요소(URI 설정)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 55fcba41d4dabf8937ebaa11235e9309bcb57952
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c372577af1c7fbfe669455b50c8b55c82da4fc52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149463"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698623"
 ---
 # <a name="add-element-for-schemesettings-uri-settings"></a>schemeSettings의 \<add> 요소(URI 설정)
 
@@ -33,13 +34,13 @@ ms.locfileid: "91149463"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |name|이 설정이 적용 되는 체계 이름입니다. 유일 하 게 지원 되는 값은 name = "http" 및 name = "https"입니다.|  
   
 ## <a name="attribute-name-attribute"></a>{Attribute name} 특성도  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |genericUriParserOptions|이 스키마에 대 한 파서 옵션입니다. 유일 하 게 지원 되는 값은 genericUriParserOptions = "DontUnescapePathDotsAndSlashes"입니다.|  
   

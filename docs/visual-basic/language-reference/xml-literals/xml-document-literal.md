@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: XML 문서 리터럴 (Visual Basic)'
 title: XML 문서 리터럴
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - XML documents [Visual Basic], creating
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
-ms.openlocfilehash: bd1b2f43fce563af431d67b3817b05c7c1048314
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d268f205c9357598a631216879b424dd8155268a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866027"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700314"
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML 문서 리터럴(Visual Basic)
 
 개체를 나타내는 리터럴입니다 <xref:System.Xml.Linq.XDocument> .  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <?xml version="1.0" [encoding="encoding"] [standalone="standalone"] ?>  
@@ -38,7 +39,7 @@ rootElement
 |`piCommentList`|선택 사항입니다. XML 처리 명령 및 XML 주석 목록입니다. 는 다음과 같은 형식을 사용 합니다.<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> 각 `piComment` 항목은 다음 중 하나일 수 있습니다.<br /><br /> -   [XML 처리 명령 리터럴입니다](xml-processing-instruction-literal.md).<br />-   [XML 주석 리터럴입니다](xml-comment-literal.md).|  
 |`rootElement`|필수 사항입니다. 문서의 루트 요소입니다. 형식은 다음 중 하나입니다.<br /><br /> <ul><li>[XML 요소 리터럴입니다](xml-element-literal.md).</li><li>형식의 포함 된 식 `<%=` `elementExp` `%>` 입니다. 는 `elementExp` 다음 중 하나를 반환 합니다.<br /><br /> <ul><li><xref:System.Xml.Linq.XElement> 개체입니다.</li><li>하나의 <xref:System.Xml.Linq.XElement> 개체와 임의의 수의 <xref:System.Xml.Linq.XProcessingInstruction> 및 개체가 포함 된 컬렉션입니다 <xref:System.Xml.Linq.XComment> .</li></ul></li></ul><br /> 자세한 내용은 [XML의 포함 식](../../programming-guide/language-features/xml/embedded-expressions-in-xml.md)을 참조 하세요.|  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  <xref:System.Xml.Linq.XDocument> 개체입니다.  
   
@@ -59,7 +60,7 @@ rootElement
   
  [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Linq.XElement>
 - <xref:System.Xml.Linq.XProcessingInstruction>

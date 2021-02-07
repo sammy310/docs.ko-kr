@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <configuration> 요소'
 title: <configuration> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - configuration element
 - container tags, <configuration> element
 ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
-ms.openlocfilehash: 8f79981a55d0bc9b1cd522e45f5606fda102c72c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ee48a45ddb987201e84213a0d7674da004951ab1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544692"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699000"
 ---
 # <a name="configuration-element"></a>\<configuration> 요소
 
@@ -39,7 +40,7 @@ None
 
 ## <a name="child-elements"></a>자식 요소
 
-|     | Description |
+|     | 설명 |
 | --- | ----------- |
 | [**\<assemblyBinding>**](assemblybinding-element-for-configuration.md) | 구성 수준에서 어셈블리 바인딩 정책을 지정합니다.|
 | [**\<startup>** 설정 스키마](./startup/index.md) | 시작 설정 스키마의 모든 요소입니다. |
@@ -57,6 +58,6 @@ None
 
 각 구성 파일에는 정확히 하나의 요소만 포함 되어야 합니다 **\<configuration>** .
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [.NET Framework의 구성 파일 스키마](index.md)
+- [.NET Framework에 대 한 구성 파일 스키마](index.md)

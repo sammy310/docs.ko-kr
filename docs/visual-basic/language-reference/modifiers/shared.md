@@ -1,5 +1,6 @@
 ---
-title: 공유됨
+description: '자세한 정보: 공유 (Visual Basic)'
+title: Shared
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Shared
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: b51c88e1af3a720912af8ba6aaf8ae4016af9cfa
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 0cc671c67486d01026f2283837448db7b00c1a0a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990197"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99700756"
 ---
 # <a name="shared-visual-basic"></a>Shared(Visual Basic)
 
@@ -24,7 +25,7 @@ ms.locfileid: "84990197"
 
 ## <a name="when-to-use-shared"></a>공유를 사용 하는 경우
 
-클래스 또는 구조체의 멤버를 공유 하면 *비공유*가 아닌 모든 인스턴스에서 사용할 수 있습니다. 여기서 각 인스턴스는 자체 복사본을 유지 합니다. 예를 들어 변수 값이 전체 응용 프로그램에 적용 되는 경우 공유는 유용 합니다. 해당 변수를로 선언 하는 경우 `Shared` 모든 인스턴스가 동일한 저장소 위치에 액세스 하 고 한 인스턴스가 변수의 값을 변경 하는 경우 모든 인스턴스에서 업데이트 된 값에 액세스 합니다.
+클래스 또는 구조체의 멤버를 공유 하면 *비공유* 가 아닌 모든 인스턴스에서 사용할 수 있습니다. 여기서 각 인스턴스는 자체 복사본을 유지 합니다. 예를 들어 변수 값이 전체 응용 프로그램에 적용 되는 경우 공유는 유용 합니다. 해당 변수를로 선언 하는 경우 `Shared` 모든 인스턴스가 동일한 저장소 위치에 액세스 하 고 한 인스턴스가 변수의 값을 변경 하는 경우 모든 인스턴스에서 업데이트 된 값에 액세스 합니다.
 
 공유는 멤버의 액세스 수준을 변경 하지 않습니다. 예를 들어 클래스 멤버는 shared 및 private (클래스 내 에서만 액세스할 수 있음) 또는 비공유 및 public 일 수 있습니다. 자세한 내용은 [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조 하세요.
 

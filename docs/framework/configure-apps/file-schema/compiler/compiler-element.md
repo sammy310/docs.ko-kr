@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <compiler> 요소'
 title: <compiler> 요소
 ms.date: 08/14/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-ms.openlocfilehash: 0abbe594754cbd70ec4732a1e7ef98e8e88bf167
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 91540d2217320b225ae67a48d616720ef2a0b679
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544754"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699222"
 ---
 # <a name="compiler-element"></a>\<compiler> 요소
 

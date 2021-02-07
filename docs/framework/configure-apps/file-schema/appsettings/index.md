@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 앱 설정 스키마'
 title: 앱 설정 스키마
 ms.date: 05/01/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-ms.openlocfilehash: a67689bd9757f7586881fd910ef6103b1dffeab8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a98a60b0470e0fa2c03313f25de9b310f5fce785
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550451"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99699352"
 ---
 # <a name="app-settings-schema"></a>앱 설정 스키마
 
@@ -24,7 +25,7 @@ ms.locfileid: "90550451"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<clear>**](clear-element-for-appsettings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<remove>**](remove-element-for-appsettings.md)
 
-| 요소 | Description |
+| 요소 | 설명 |
 | ------- | ----------- |
 | [**\<appSettings>**](appsettings-element-for-configuration.md) | **\<add>** **\<clear>** **\<remove>** 응용 프로그램 설정을 제어 하는, 및 태그를 포함 합니다. 선택적 **파일** 특성이 있습니다. |
 | [**\<add>**](add-element-for-appsettings.md) | 설정을 정의합니다. 의 자식 **\<appSettings>** 입니다. **키** 및 **값** 특성이 필요합니다. |
@@ -33,11 +34,11 @@ ms.locfileid: "90550451"
 
 ## <a name="appsettings-element"></a>\<appSettings> 요소
 
-이 요소 **\<add>** 는 **\<clear>** **\<remove>** 응용 프로그램 설정을 제어 하는, 및 태그를 포함 합니다. **파일**에 대한 선택적 특성을 정의합니다.
+이 요소 **\<add>** 는 **\<clear>** **\<remove>** 응용 프로그램 설정을 제어 하는, 및 태그를 포함 합니다. **파일** 에 대한 선택적 특성을 정의합니다.
 
 ## <a name="add-element"></a>\<add> 요소
 
-애플리케이션 설정 컬렉션에 사용자 지정 애플리케이션 설정을 이름/값 쌍으로 추가합니다. **키** 및 **값**에 대한 특성을 정의합니다.
+애플리케이션 설정 컬렉션에 사용자 지정 애플리케이션 설정을 이름/값 쌍으로 추가합니다. **키** 및 **값** 에 대한 특성을 정의합니다.
 
 ## <a name="clear-element"></a>\<clear> 요소
 
@@ -45,7 +46,7 @@ ms.locfileid: "90550451"
 
 ## <a name="remove-element"></a>\<remove> 요소
 
-상속된 사용자 지정 애플리케이션 설정에 대한 참조를 애플리케이션 설정 컬렉션에서 제거합니다. **키**에 대한 특성을 정의합니다.
+상속된 사용자 지정 애플리케이션 설정에 대한 참조를 애플리케이션 설정 컬렉션에서 제거합니다. **키** 에 대한 특성을 정의합니다.
 
 ## <a name="example"></a>예제
 
@@ -68,7 +69,7 @@ ms.locfileid: "90550451"
 </configuration>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [애플리케이션 설정 개요](/dotnet/desktop/winforms/advanced/application-settings-overview)
 - [애플리케이션 설정 아키텍처](/dotnet/desktop/winforms/advanced/application-settings-architecture)

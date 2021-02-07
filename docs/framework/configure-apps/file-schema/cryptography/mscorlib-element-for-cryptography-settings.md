@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: <mscorlib> 암호화 설정에 대 한 요소'
 title: 암호화 설정에 대한 <mscorlib> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: 1788205997d0dc49df172c9dfe48faceb8fc3290
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7606cdd1349c7594b5303832eed59ac51c1ddfe6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201787"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99698897"
 ---
 # <a name="mscorlib-element-for-cryptography-settings"></a>암호화 설정에 대한 \<mscorlib> 요소
 
