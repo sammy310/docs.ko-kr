@@ -1,4 +1,5 @@
 ---
+description: 자세한 내용은 Visual Basic 언어 참조를 참조 하세요.
 title: 언어 참조
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: dd7b26d7b5acf924c3eac39b7a67c35245945aaa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 47a299437b5f3ceab1cb24b8a09666366c546a64
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362477"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731034"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic 언어 참조
 
@@ -66,7 +67,7 @@ ms.locfileid: "84362477"
  Visual Basic에서 사용할 수 있는 속성을 설명 합니다.  
   
  [쿼리](queries/index.md)  
- 코드에 LINQ (통합 언어 쿼리) 식을 사용 하는 방법에 대 한 참조 정보를 제공 합니다.  
+ 코드에서 LINQ (Language-Integrated Query) 식을 사용 하는 방법에 대 한 참조 정보를 제공 합니다.  
   
  [문](statements/index.md)  
  Visual Basic에서 사용할 수 있는 선언 및 실행 문을 문서화 합니다.  
@@ -83,7 +84,7 @@ ms.locfileid: "84362477"
  [오류 메시지](error-messages/index.md)  
  Visual Basic 컴파일러 및 런타임 오류 메시지의 목록과이를 처리 하는 방법에 대 한 도움말을 제공 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [Visual Basic 명령줄 컴파일러](../reference/command-line-compiler/index.md)  
  Visual Studio IDE (통합 개발 환경) 내에서 프로그램을 컴파일하는 대신 명령줄 컴파일러를 사용 하는 방법을 설명 합니다.

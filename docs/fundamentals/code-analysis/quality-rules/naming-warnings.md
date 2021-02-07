@@ -11,16 +11,16 @@ helpviewer_keywords:
 - rules, naming
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 88e7ec6bc1051fa98c46696b2193a5d5912eb111
-ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
+ms.openlocfilehash: 57524fbff364fd03a90b90a0900bd17e9c8a9248
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "96592405"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732321"
 ---
 # <a name="naming-rules"></a>이름 지정 규칙
 
-명명 규칙은 .NET 디자인 지침의 명명 규칙 준수를 지원 합니다.
+명명 규칙은 [.net 디자인 지침의 명명 규칙](../../../standard/design-guidelines/naming-guidelines.md)준수를 지원 합니다.
 
 ## <a name="in-this-section"></a>섹션 내용
 

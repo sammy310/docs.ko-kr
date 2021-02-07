@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Boolean 데이터 형식 (Visual Basic)'
 title: Boolean 데이터 형식
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: 851c524a83c5f24b77a151634a96798249c5905e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cdda6bc0571eb0a2a9ee6a079ffd276bfc89a9b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374423"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731411"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 데이터 형식(Visual Basic)
 
@@ -29,7 +30,7 @@ ms.locfileid: "84374423"
   
  `Boolean` 의 기본값은 `False`입니다.  
   
- `Boolean`값은 숫자로 저장 되지 않으며 저장 된 값은 숫자와 동일 하지 않습니다. 및에 대해 동일한 숫자 값을 사용 하는 코드를 작성 하면 안 됩니다 `True` `False` . 가능 하면 `Boolean` 변수의 사용을 디자인 된 논리 값으로 제한 해야 합니다.  
+ `Boolean` 값은 숫자로 저장 되지 않으며 저장 된 값은 숫자와 동일 하지 않습니다. 및에 대해 동일한 숫자 값을 사용 하는 코드를 작성 하면 안 됩니다 `True` `False` . 가능 하면 `Boolean` 변수의 사용을 디자인 된 논리 값으로 제한 해야 합니다.  
   
 ## <a name="type-conversions"></a>형식 변환  
 
@@ -39,9 +40,9 @@ ms.locfileid: "84374423"
   
 ## <a name="programming-tips"></a>프로그래밍 팁  
   
-- **음수.** `Boolean`는 숫자 형식이 아니므로 음수 값을 나타낼 수 없습니다. 어떤 경우에는를 사용 하 여 `Boolean` 숫자 값을 포함 하면 안 됩니다.  
+- **음수.** `Boolean` 는 숫자 형식이 아니므로 음수 값을 나타낼 수 없습니다. 어떤 경우에는를 사용 하 여 `Boolean` 숫자 값을 포함 하면 안 됩니다.  
   
-- **문자를 입력 합니다.** `Boolean`에는 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.  
+- **문자를 입력 합니다.** `Boolean` 에는 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.  
   
 - **Framework 형식.** .NET Framework에서 해당하는 형식은 <xref:System.Boolean?displayProperty=nameWithType> 구조체입니다.  
   

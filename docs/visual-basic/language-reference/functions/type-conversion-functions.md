@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 형식 변환 함수 (Visual Basic)'
 title: 형식 변환 함수
 ms.date: 10/24/2018
 f1_keywords:
@@ -81,18 +82,18 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: 5c0cfae01da02222d0827e81ec1ed35ce353ead1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c2e701b522bbeb32f4f6f448acd78e09b0616f46
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415377"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731086"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>형식 변환 함수(Visual Basic)
 
 이러한 함수는 인라인으로 컴파일됩니다. 즉, 변환 코드는 식을 계산 하는 코드의 일부입니다. 변환을 수행 하는 프로시저에 대 한 호출이 없을 수도 있으므로 성능이 향상 됩니다. 각 함수는 식을 특정 데이터 형식으로 강제 변환 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 CBool(expression)
@@ -113,10 +114,10 @@ CULng(expression)
 CUShort(expression)
 ```
 
-## <a name="part"></a>부분
+## <a name="part"></a>파트
 
 `expression`  
-필수 요소. 원본 데이터 형식의 식입니다.
+필수 사항입니다. 원본 데이터 형식의 식입니다.
 
 ## <a name="return-value-data-type"></a>반환 값 데이터 형식
 
@@ -125,23 +126,23 @@ CUShort(expression)
 |함수 이름|반환 데이터 형식|인수의 범위 `expression`|
 |-------------------|----------------------|-------------------------------------|
 |`CBool`|[Boolean 데이터 형식](../data-types/boolean-data-type.md)|모든 유효한 `Char` `String` 식 또는 숫자 식입니다.|
-|`CByte`|[Byte 데이터 형식](../data-types/byte-data-type.md)|<xref:System.Byte.MinValue?displayProperty=nameWithType>(0) ~ <xref:System.Byte.MaxValue?displayProperty=nameWithType> (255) (부호 없음). 소수 부분을 반올림 합니다.<sup> 1</sup><br/><br/>Visual Basic 15.8부터 Visual Basic 함수를 사용 하 여 부동 소수점에서 바이트 변환의 성능을 최적화 합니다 `CByte` . 자세한 내용은 [설명](#remarks) 부분을 참조 하세요. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오.|
+|`CByte`|[Byte 데이터 형식](../data-types/byte-data-type.md)|<xref:System.Byte.MinValue?displayProperty=nameWithType> (0) ~ <xref:System.Byte.MaxValue?displayProperty=nameWithType> (255) (부호 없음). 소수 부분을 반올림 합니다.<sup> 1</sup><br/><br/>Visual Basic 15.8부터 Visual Basic 함수를 사용 하 여 부동 소수점에서 바이트 변환의 성능을 최적화 합니다 `CByte` . 자세한 내용은 [설명](#remarks) 부분을 참조 하세요. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오.|
 |`CChar`|[Char 데이터 형식](../data-types/char-data-type.md)|모든 유효한 `Char` 또는 `String` 식입니다 .의 첫 번째 문자만 `String` 변환 됩니다. 값은 0에서 65535 (부호 없음) 일 수 있습니다.|
 |`CDate`|[Date 데이터 형식](../data-types/date-data-type.md)|날짜 및 시간에 대 한 유효한 표현입니다.|
 |`CDbl`|[Double 데이터 형식](../data-types/double-data-type.md)|-1.79769313486231570 e + 308 ~-4.94065645841246544 E-324 (음수 값의 경우) 4.94065645841246544 e-324 ~ 1.79769313486231570 E + 308 (양수 값)|
 |`CDec`|[Decimal 데이터 형식](../data-types/decimal-data-type.md)|0으로 크기가 조정 된 숫자, 즉 소수 자릿수가 없는 숫자의 경우 +/-79228162514264337593543950335입니다. 28 자리의 소수 자릿수가 포함 된 숫자의 경우 범위는 +/-7.9228162514264337593543950335입니다. 0이 아닌 가장 작은 숫자는 0.0000000000000000000000000001 (+/-1E-28)입니다.|
-|`CInt`|[Integer 데이터 형식](../data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType>(-2147483648) ~ <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2147483647). 소수 부분은 반올림 됩니다.<sup> 1</sup> <br/><br/>Visual Basic 15.8부터 Visual Basic 함수를 사용 하 여 부동 소수점에서 정수로의 성능을 최적화 합니다 `CInt` . 자세한 내용은 [설명](#remarks) 부분을 참조 하세요. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오. |
-|`CLng`|[Long 데이터 형식](../data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType>(-9223372036854775808) ~ <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9223372036854775807); 소수 부분은 반올림 됩니다.<sup> 1</sup><br/><br/>Visual Basic Visual Basic 15.8부터 함수를 사용 하 여 부동 소수점에서 64 비트 정수 변환의 성능을 최적화할 수 `CLng` 있습니다. 자세한 내용은 [설명](#remarks) 부분을 참조 하십시오. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오.|
+|`CInt`|[Integer 데이터 형식](../data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2147483648) ~ <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2147483647). 소수 부분은 반올림 됩니다.<sup> 1</sup> <br/><br/>Visual Basic 15.8부터 Visual Basic 함수를 사용 하 여 부동 소수점에서 정수로의 성능을 최적화 합니다 `CInt` . 자세한 내용은 [설명](#remarks) 부분을 참조 하세요. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오. |
+|`CLng`|[Long 데이터 형식](../data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9223372036854775808) ~ <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9223372036854775807); 소수 부분은 반올림 됩니다.<sup> 1</sup><br/><br/>Visual Basic Visual Basic 15.8부터 함수를 사용 하 여 부동 소수점에서 64 비트 정수 변환의 성능을 최적화할 수 `CLng` 있습니다. 자세한 내용은 [설명](#remarks) 부분을 참조 하십시오. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오.|
 |`CObj`|[Object Data Type](../data-types/object-data-type.md)|유효한 식입니다.|
-|`CSByte`|[SByte 데이터 형식](../data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType>(-128) ~ <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127). 소수 부분은 반올림 됩니다.<sup> 1</sup><br/><br/>Visual Basic 15.8부터 Visual Basic 함수를 사용 하 여 부동 소수점에서 부호 있는 바이트 변환의 성능을 최적화 합니다 `CSByte` . 자세한 내용은 [설명](#remarks) 부분을 참조 하세요. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오.|
-|`CShort`|[Short 데이터 형식](../data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType>(-32768) ~ <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32767). 소수 부분은 반올림 됩니다.<sup> 1</sup><br/><br/>Visual Basic Visual Basic 15.8부터 함수를 사용 하 여 부동 소수점에서 16 비트 정수 변환의 성능을 최적화 합니다 `CShort` . 자세한 내용은 [설명](#remarks) 부분을 참조 하십시오. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오.|
+|`CSByte`|[SByte 데이터 형식](../data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (-128) ~ <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127). 소수 부분은 반올림 됩니다.<sup> 1</sup><br/><br/>Visual Basic 15.8부터 Visual Basic 함수를 사용 하 여 부동 소수점에서 부호 있는 바이트 변환의 성능을 최적화 합니다 `CSByte` . 자세한 내용은 [설명](#remarks) 부분을 참조 하세요. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오.|
+|`CShort`|[Short 데이터 형식](../data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32768) ~ <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32767). 소수 부분은 반올림 됩니다.<sup> 1</sup><br/><br/>Visual Basic Visual Basic 15.8부터 함수를 사용 하 여 부동 소수점에서 16 비트 정수 변환의 성능을 최적화 합니다 `CShort` . 자세한 내용은 [설명](#remarks) 부분을 참조 하십시오. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오.|
 |`CSng`|[Single 데이터 형식](../data-types/single-data-type.md)|-3.402823 e + 38 ~-1.401298 E-45 (음수 값의 경우) 1.401298 e-45부터 3.402823 E + 38 까지의 양수 값입니다.|
 |`CStr`|[문자열 데이터 형식](../data-types/string-data-type.md)|에 대 한 `CStr` 는 인수에 따라를 반환 `expression` 합니다. [CStr 함수의 반환 값을](return-values-for-the-cstr-function.md)참조 하세요.|
-|`CUInt`|[UInteger 데이터 형식](../data-types/uinteger-data-type.md)|<xref:System.UInt32.MinValue?displayProperty=nameWithType>(0) ~ <xref:System.UInt32.MaxValue?displayProperty=nameWithType> (4294967295) (부호 없음). 소수 부분을 반올림 합니다.<sup> 1</sup><br/><br/>Visual Basic Visual Basic 15.8부터 함수를 사용 하 여 부동 소수점에서 부호 없는 정수 변환의 성능을 최적화 합니다 `CUInt` . 자세한 내용은 [설명](#remarks) 부분을 참조 하십시오. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오.|
-|`CULng`|[ULong 데이터 형식](../data-types/ulong-data-type.md)|<xref:System.UInt64.MinValue?displayProperty=nameWithType>(0) ~ <xref:System.UInt64.MaxValue?displayProperty=nameWithType> (18446744073709551615) (부호 없음). 소수 부분을 반올림 합니다.<sup> 1</sup><br/><br/>Visual Basic 15.8부터 Visual Basic 함수를 사용 하 여 부동 소수점에서 부호 없는 long 정수 변환의 성능을 최적화 합니다 `CULng` . 자세한 내용은 [설명](#remarks) 부분을 참조 하세요. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오.|
-|`CUShort`|[UShort 데이터 형식](../data-types/ushort-data-type.md)|<xref:System.UInt16.MinValue?displayProperty=nameWithType>(0) ~ <xref:System.UInt16.MaxValue?displayProperty=nameWithType> (65535) (부호 없음). 소수 부분을 반올림 합니다.<sup> 1</sup><br/><br/>Visual Basic Visual Basic 15.8부터 함수를 사용 하 여 부동 소수점을 부호 없는 16 비트 정수 변환으로 최적화 합니다. `CUShort` 자세한 내용은 [설명](#remarks) 부분을 참조 하십시오. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오.|
+|`CUInt`|[UInteger 데이터 형식](../data-types/uinteger-data-type.md)|<xref:System.UInt32.MinValue?displayProperty=nameWithType> (0) ~ <xref:System.UInt32.MaxValue?displayProperty=nameWithType> (4294967295) (부호 없음). 소수 부분을 반올림 합니다.<sup> 1</sup><br/><br/>Visual Basic Visual Basic 15.8부터 함수를 사용 하 여 부동 소수점에서 부호 없는 정수 변환의 성능을 최적화 합니다 `CUInt` . 자세한 내용은 [설명](#remarks) 부분을 참조 하십시오. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오.|
+|`CULng`|[ULong 데이터 형식](../data-types/ulong-data-type.md)|<xref:System.UInt64.MinValue?displayProperty=nameWithType> (0) ~ <xref:System.UInt64.MaxValue?displayProperty=nameWithType> (18446744073709551615) (부호 없음). 소수 부분을 반올림 합니다.<sup> 1</sup><br/><br/>Visual Basic 15.8부터 Visual Basic 함수를 사용 하 여 부동 소수점에서 부호 없는 long 정수 변환의 성능을 최적화 합니다 `CULng` . 자세한 내용은 [설명](#remarks) 부분을 참조 하세요. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오.|
+|`CUShort`|[UShort 데이터 형식](../data-types/ushort-data-type.md)|<xref:System.UInt16.MinValue?displayProperty=nameWithType> (0) ~ <xref:System.UInt16.MaxValue?displayProperty=nameWithType> (65535) (부호 없음). 소수 부분을 반올림 합니다.<sup> 1</sup><br/><br/>Visual Basic Visual Basic 15.8부터 함수를 사용 하 여 부동 소수점을 부호 없는 16 비트 정수 변환으로 최적화 합니다. `CUShort` 자세한 내용은 [설명](#remarks) 부분을 참조 하십시오. 예는 [CInt 예제](#cint-example) 섹션을 참조 하십시오.|
 
-<sup>1</sup> 소수 부분에는 *은행원의 반올림*이라고 하는 특수 한 형식의 반올림이 적용 될 수 있습니다. 자세한 내용은 "주의"를 참조 하십시오.
+<sup>1</sup> 소수 부분에는 *은행원의 반올림* 이라고 하는 특수 한 형식의 반올림이 적용 될 수 있습니다. 자세한 내용은 "주의"를 참조 하십시오.
 
 ## <a name="remarks"></a>설명
 
@@ -181,11 +182,11 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 - **소수 부분.** 비정 수 값을 정수 계열 형식으로 변환 하는 경우 정수 변환 함수 ( `CByte` , `CInt` , `CLng` , `CSByte` ,,, `CShort` `CUInt` `CULng` 및 `CUShort` )는 소수 부분을 제거 하 고 값을 가장 가까운 정수로 반올림 합니다.
 
-     소수 부분이 정확히 0.5 인 경우 정수 변환 함수는 해당 정수를 가장 가까운 짝수로 반올림 합니다. 예를 들어 0.5는 0으로 반올림 되 고 1.5 및 2.5는 모두 2로 반올림 됩니다. 이를 *은행원의 반올림*이라고 하며, 이러한 숫자를 여러 개 더하는 경우 누적 될 수 있는 바이어스를 보정 하기 위한 것입니다.
+     소수 부분이 정확히 0.5 인 경우 정수 변환 함수는 해당 정수를 가장 가까운 짝수로 반올림 합니다. 예를 들어 0.5는 0으로 반올림 되 고 1.5 및 2.5는 모두 2로 반올림 됩니다. 이를 *은행원의 반올림* 이라고 하며, 이러한 숫자를 여러 개 더하는 경우 누적 될 수 있는 바이어스를 보정 하기 위한 것입니다.
 
-     `CInt`및는 `CLng` <xref:Microsoft.VisualBasic.Conversion.Int%2A> <xref:Microsoft.VisualBasic.Conversion.Fix%2A> 숫자의 소수 부분을 반올림 하지 않고 잘라내는 및 함수와 다릅니다. 또한 `Fix` 및 `Int` 은 전달 하는 것과 동일한 데이터 형식의 값을 항상 반환 합니다.
+     `CInt` 및는 `CLng` <xref:Microsoft.VisualBasic.Conversion.Int%2A> <xref:Microsoft.VisualBasic.Conversion.Fix%2A> 숫자의 소수 부분을 반올림 하지 않고 잘라내는 및 함수와 다릅니다. 또한 `Fix` 및 `Int` 은 전달 하는 것과 동일한 데이터 형식의 값을 항상 반환 합니다.
 
-- **날짜/시간 변환입니다.** 함수를 사용 <xref:Microsoft.VisualBasic.Information.IsDate%2A> 하 여 값을 날짜 및 시간으로 변환할 수 있는지 여부를 확인 합니다. `CDate`는 날짜 리터럴과 시간 리터럴을 인식 하지만 숫자 값은 인식 하지 않습니다. Visual Basic 6.0 `Date` 값을 `Date` Visual Basic 2005 이상 버전의 값으로 변환 하려면 메서드를 사용할 수 있습니다 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> .
+- **날짜/시간 변환입니다.** 함수를 사용 <xref:Microsoft.VisualBasic.Information.IsDate%2A> 하 여 값을 날짜 및 시간으로 변환할 수 있는지 여부를 확인 합니다. `CDate` 는 날짜 리터럴과 시간 리터럴을 인식 하지만 숫자 값은 인식 하지 않습니다. Visual Basic 6.0 `Date` 값을 `Date` Visual Basic 2005 이상 버전의 값으로 변환 하려면 메서드를 사용할 수 있습니다 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> .
 
 - **중립 날짜/시간 값입니다.** [날짜 데이터 형식](../data-types/date-data-type.md) 에는 항상 날짜 및 시간 정보가 포함 됩니다. 형식 변환의 목적을 위해 Visual Basic은 1/1/0001 (1 년 1 월 1 일)을 날짜의 *중립 값* 으로 간주 하 고 00:00:00 (자정)을 시간에 대 한 중립 값으로 간주 합니다. 값을 문자열로 변환 하는 경우 `Date` `CStr` 은 결과 문자열에 중립 값을 포함 하지 않습니다. 예를 들어 문자열로 변환 하는 경우 `#January 1, 0001 9:30:00#` 결과는 "9:30:00 AM"이 고 날짜 정보는 표시 되지 않습니다. 그러나 날짜 정보는 여전히 원래 값에 존재 `Date` 하며 함수 등의 함수를 사용 하 여 복구할 수 있습니다 <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> .
 
@@ -283,7 +284,7 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 [!code-vb[VbVbalrFunctions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#15)]
 
-`CStr`는 항상 `Date` 현재 로캘의 표준 약식 형식으로 값을 렌더링 합니다 (예: "6/15/2003 4:35:47 PM"). 그러나는 `CStr` 시간에 대 한 날짜와 00:00:00의 *중립 값* 1/1/0001을 표시 하지 않습니다.
+`CStr` 는 항상 `Date` 현재 로캘의 표준 약식 형식으로 값을 렌더링 합니다 (예: "6/15/2003 4:35:47 PM"). 그러나는 `CStr` 시간에 대 한 날짜와 00:00:00의 *중립 값* 1/1/0001을 표시 하지 않습니다.
 
 에서 반환 하는 값에 대 한 자세한 `CStr` 내용은 [CStr 함수의 반환 값](return-values-for-the-cstr-function.md)을 참조 하세요.
 

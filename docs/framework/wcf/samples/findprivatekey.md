@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: FindPrivateKey 샘플'
 title: FindPrivateKey 샘플
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 0ed1e5e81a5d2f7f3586e5dce306e8244b5ebd48
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0e876aa3e1f6dde16acbb3ddd2a130ad49d369fc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346012"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732425"
 ---
 # <a name="findprivatekey-sample"></a>FindPrivateKey 샘플
 
@@ -22,7 +23,7 @@ X.509 인증서는 관리자 또는 시스템에 있는 모든 사용자가 설�
 
 처음에 인증서를 이 계정으로 설치하지 않았기 때문에 이 계정에 프라이빗 키 파일에 대한 액세스 권한이 없을 수도 있습니다. FindPrivateKey 도구는 지정된 X.509 인증서의 프라이빗 키 파일 위치를 알려줍니다. 특정 X.509 인증서의 프라이빗 키 파일 위치를 알고 나면 이 파일의 사용 권한을 추가하거나 제거할 수 있습니다.
 
-보안을 위해 인증서를 사용 하는 샘플은 *설치 .bat* 파일의 FindPrivateKey 도구를 사용 합니다. 개인 키 파일이 발견 되 면 *cacls.exe* 와 같은 다른 도구를 사용 하 여 파일에 대 한 적절 한 액세스 권한을 설정할 수 있습니다.
+보안을 위해 인증서를 사용 하는 샘플은 *Setup.bat* 파일의 FindPrivateKey 도구를 사용 합니다. 개인 키 파일을 찾았으면 *Cacls.exe* 와 같은 다른 도구를 사용 하 여 파일에 대 한 적절 한 액세스 권한을 설정할 수 있습니다.
 
 사용자 계정 (예: 자체 호스팅 실행 파일)에서 WCF (Windows Communication Foundation) 서비스를 실행 하는 경우 사용자 계정에 파일에 대 한 읽기 전용 액세스 권한이 있는지 확인 합니다. 인터넷 정보 서비스 (IIS)에서 WCF 서비스를 실행 하는 경우 서비스를 실행 하는 기본 계정은 IIS 7 및 이전 버전의 네트워크 서비스 이거나 IIS 7.5 이상 버전의 응용 프로그램 풀 Id입니다. 자세한 내용은 [응용 프로그램 풀 id](/iis/manage/configuring-security/application-pool-identities)를 참조 하세요.
 
@@ -50,7 +51,7 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 2. .sln 파일 아이콘을 두 번 클릭하여 Visual Studio에서 파일을 엽니다.
 
-3. **빌드** 메뉴에서 **솔루션 다시 빌드**를 선택 합니다.
+3. **빌드** 메뉴에서 **솔루션 다시 빌드** 를 선택 합니다.
 
 4. 솔루션을 빌드하면 FindPrivateKey.exe 파일이 생성됩니다.
 
@@ -62,20 +63,20 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
  "*옵션 1 마이그레이션* &#124; *옵션 2 마이그레이션*"는 옵션 집합 사이의 선택을 나타냅니다.
 
- "\<*값*>"는 입력할 매개 변수 값을 나타냅니다.
+ " \<*value*> "는 입력할 매개 변수 값을 나타냅니다.
 
-## <a name="usage"></a>용도
+## <a name="usage"></a>사용량
 
 ```console
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]
 ```
 
-조건:
+위치:
 
 | 매개 변수         | 설명                                                                       |
 |-----------------|-----------------------------------------------------------------------------------|
 | `<subjectName>` | 인증서의 주체 이름입니다.                                               |
-| `<thumbprint>`  | 인증서의 손 도장 (Certmgr.exe 도구를 사용 하 여 찾을 수 있음) |
+| `<thumbprint>`  | 인증서의 지문입니다 (Certmgr.exe 도구를 사용 하 여 찾을 수 있음). |
 | `-f`            | 출력 파일 이름만                                                             |
 | `-d`            | 출력 디렉터리만                                                             |
 | `-a`            | 출력 절대 파일 이름                                                         |

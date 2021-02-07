@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 문자열 함수 (Visual Basic)'
 title: 문자열 함수
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 778e57eadd75baf1aabd100f9d8d41a490f79a04
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1c121bc3de66caf748426b5cd04d049b30bf78bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406290"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731142"
 ---
 # <a name="string-functions-visual-basic"></a>문자열 함수(Visual Basic)
 

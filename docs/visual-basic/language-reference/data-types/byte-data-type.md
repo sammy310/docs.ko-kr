@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Byte 데이터 형식 (Visual Basic)'
 title: Byte 데이터 형식
 ms.date: 01/31/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-ms.openlocfilehash: 97acd1bc2ff29bac6588216b9ee4a4f187078815
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 983af36d8340b5df7ac44782bf56349901460c20
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374319"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731229"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte 데이터 형식 (Visual Basic)
 
@@ -39,7 +40,7 @@ Visual Basic 2017부터 `_` 다음 예제와 같이 밑줄 문자를 자릿수 �
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
 
-Visual Basic 15.5부터 `_` 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 밑줄 문자 ()를 사용할 수도 있습니다. 예를 들면 다음과 같습니다.
+Visual Basic 15.5부터 `_` 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 밑줄 문자 ()를 사용할 수도 있습니다. 다음은 그 예입니다. 
 
 ```vb
 Dim number As Byte = &H_6A
@@ -55,7 +56,7 @@ Dim number As Byte = &H_6A
 
 - **넓혀.** `Byte`데이터 형식은,,,,,,, 또는로 확대 변환 `Short` `UShort` `Integer` `UInteger` `Long` `ULong` `Decimal` `Single` `Double` 됩니다. 즉, `Byte` 오류가 발생 하지 않고 이러한 형식으로 변환할 수 있습니다 <xref:System.OverflowException?displayProperty=nameWithType> .
   
-- **문자를 입력 합니다.** `Byte`에는 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.
+- **문자를 입력 합니다.** `Byte` 에는 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.
 
 - **Framework 형식.** .NET Framework에서 해당하는 형식은 <xref:System.Byte?displayProperty=nameWithType> 구조체입니다.
 

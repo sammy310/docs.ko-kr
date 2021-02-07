@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 메시지 계약'
 title: 메시지 계약
 ms.date: 03/30/2017
 ms.assetid: e3df7c11-c653-4796-be47-26b09c35b691
-ms.openlocfilehash: e00720674a384e2b0ac1cdb5aeab84f9b2c91209
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3829f41c0fe6de79f2975403b99c0e4b4d70ee27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96264701"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732373"
 ---
 # <a name="message-contracts"></a>메시지 계약
 
