@@ -1,20 +1,21 @@
 ---
+description: '자세히 알아보기: Datarow 비교 (LINQ to DataSet)'
 title: DataRow 비교(LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 8cce52734c83e42312d71806d4151ef21e4df0ba
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: df410432ab31d5ee284cb1d7cd15661db65ca503
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203802"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663939"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>DataRow 비교(LINQ to DataSet)
 
-LINQ (언어 통합 쿼리)는 소스 요소를 비교 하 여 같은지 여부를 확인 하는 다양 한 집합 연산자를 정의 합니다. LINQ는 다음과 같은 집합 연산자를 제공 합니다.  
+LINQ (Language-Integrated Query)는 소스 요소를 비교 하 여 같은지 여부를 확인 하는 다양 한 집합 연산자를 정의 합니다. LINQ는 다음과 같은 집합 연산자를 제공 합니다.  
   
 - <xref:System.Linq.Enumerable.Distinct%2A>  
   

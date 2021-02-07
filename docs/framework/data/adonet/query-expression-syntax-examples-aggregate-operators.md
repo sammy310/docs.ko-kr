@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 쿼리 식 구문 예제: 집계 연산자 (LINQ to DataSet)'
 title: '쿼리 식 구문 예제: 집계 연산자(LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85dafa07-e102-46e7-ab78-37bf06f257a6
-ms.openlocfilehash: 2277058c4dad4632f4f47a39e32463eaf77dcd5e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9076f81a21892f467355c86871e49ae3e1a793e9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164573"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663640"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators-linq-to-dataset"></a>쿼리 식 구문 예제: 집계 연산자(LINQ to DataSet)
 
@@ -66,7 +67,7 @@ ms.locfileid: "91164573"
  [!code-csharp[DP LINQ to DataSet Examples#CountGrouped](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#countgrouped)]
  [!code-vb[DP LINQ to DataSet Examples#CountGrouped](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#countgrouped)]  
   
-## <a name="max"></a>최대  
+## <a name="max"></a>Max  
   
 ### <a name="example"></a>예제  
 

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ADO.NET의 데이터 추적'
 title: 데이터 추적
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 5fe04d6b6146079db7d4e110a94ced361949998c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7fc4407e76ea34bacc97177d6342730a8263b5c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557112"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663744"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET의 데이터 추적
 
@@ -33,13 +34,13 @@ ADO.NET에서 관리 되는 추적을 설정 하 고 구성 하는 방법에 대
 
 SQL Server에 대 한 .NET Framework Data Provider에서 데이터 액세스 추적 ([데이터 액세스 추적](/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10)))은 서버 연결 링 버퍼 및 확장 이벤트 로그의 응용 프로그램 성능 정보에서 클라이언트 이벤트와 진단 정보 (예: 연결 오류)를 더 쉽게 상호 연결할 수 있도록 업데이트 되었습니다. 확장 이벤트 로그를 읽는 방법에 대한 자세한 내용은 [View Event Session Data](/previous-versions/sql/sql-server-2012/hh710068(v=sql.110))를 참조하십시오.
 
-연결 동작의 경우 ADO.NET은 클라이언트 연결 ID를 전송합니다. 연결에 실패 하면 연결 링 버퍼 (연결[링 버퍼를 사용 하 여 SQL Server 2008의 연결 문제 해결](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer))에 액세스 하 고 필드를 찾아서 `ClientConnectionID` 연결 실패에 대 한 진단 정보를 얻을 수 있습니다. 클라이언트 연결 ID는 오류가 발생하는 경우에만 링 버퍼에 기록됩니다. 로그인 전 패킷을 전송하기 전에 연결이 실패하는 경우 클라이언트 연결 ID는 생성되지 않습니다. 클라이언트 연결 ID는 16바이트 GUID입니다. `client_connection_id` 동작이 확장 이벤트 세션에서 이벤트에 추가된 경우 확장 이벤트 대상 출력에서 클라이언트 연결 ID를 찾을 수도 있습니다. 추가 클라이언트 드라이버 진단이 필요한 경우 데이터 액세스 추적을 활성화하고 연결 명령을 다시 실행하여 데이터 액세스 추적에서 `ClientConnectionID` 필드를 관찰할 수 있습니다.
+연결 동작의 경우 ADO.NET은 클라이언트 연결 ID를 전송합니다. 연결에 실패하면 연결 링 버퍼에 액세스하고([연결 링 버퍼를 사용하여 SQL Server 2008의 연결 문제 해결](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) `ClientConnectionID` 필드를 검색하여 연결 실패에 대한 진단 정보를 얻을 수 있습니다. 클라이언트 연결 ID는 오류가 발생하는 경우에만 링 버퍼에 기록됩니다. 로그인 전 패킷을 전송하기 전에 연결이 실패하는 경우 클라이언트 연결 ID는 생성되지 않습니다. 클라이언트 연결 ID는 16바이트 GUID입니다. `client_connection_id` 동작이 확장 이벤트 세션에서 이벤트에 추가된 경우 확장 이벤트 대상 출력에서 클라이언트 연결 ID를 찾을 수도 있습니다. 추가 클라이언트 드라이버 진단이 필요한 경우 데이터 액세스 추적을 활성화하고 연결 명령을 다시 실행하여 데이터 액세스 추적에서 `ClientConnectionID` 필드를 관찰할 수 있습니다.
 
 `SqlConnection.ClientConnectionID` 속성을 사용하여 클라이언트 연결 ID를 프로그래밍 방식으로 가져올 수 있습니다.
 
 `ClientConnectionID`는 연결을 성공적으로 설정하는 <xref:System.Data.SqlClient.SqlConnection> 개체에 사용할 수 있습니다. 연결 시도에 실패한 경우에는 `ClientConnectionID`을 통해 `SqlException.ToString`를 확인할 수 있습니다.
 
-또한 ADO.NET은 스레드별 동작 ID를 전송합니다. 활동 ID는 세션이 TRACK_CAUSALITY 옵션을 사용 하도록 설정 된 상태에서 시작 되는 경우 확장 이벤트 세션에서 캡처됩니다. 활성 연결에 성능 문제가 발생할 경우 클라이언트의 데이터 액세스 추적(`ActivityID` 필드)에서 작업 ID를 가져온 다음 확장 이벤트 출력에서 작업 ID를 찾을 수 있습니다. 확장 이벤트의 동작 ID는16바이트 GUID(클라이언트 연결 ID의 GUID와는 다름)에 4바이트 시퀀스 번호를 추가한 것입니다. 시퀀스 번호는 스레드 내의 요청 순서를 나타내며 스레드에 대한 일괄 처리 및 RPC 문의 상대적인 순서를 표시합니다. `ActivityID`는 현재 데이터 액세스 추적이 활성화된 상태이고 데이터 액세스 추적 구성 단어의 18번째 비트가 ON 상태인 경우 SQL 일괄 처리 문과 RPC 요청에 대해 선택적으로 전송됩니다.
+또한 ADO.NET은 스레드별 동작 ID를 전송합니다. TRACK_CAUSALITY 옵션이 설정된 상태에서 세션을 시작한 경우 작업 ID는 확장 이벤트 세션에서 캡처됩니다. 활성 연결에 성능 문제가 발생할 경우 클라이언트의 데이터 액세스 추적(`ActivityID` 필드)에서 작업 ID를 가져온 다음 확장 이벤트 출력에서 작업 ID를 찾을 수 있습니다. 확장 이벤트의 동작 ID는16바이트 GUID(클라이언트 연결 ID의 GUID와는 다름)에 4바이트 시퀀스 번호를 추가한 것입니다. 시퀀스 번호는 스레드 내의 요청 순서를 나타내며 스레드에 대한 일괄 처리 및 RPC 문의 상대적인 순서를 표시합니다. `ActivityID`는 현재 데이터 액세스 추적이 활성화된 상태이고 데이터 액세스 추적 구성 단어의 18번째 비트가 ON 상태인 경우 SQL 일괄 처리 문과 RPC 요청에 대해 선택적으로 전송됩니다.
 
 다음은 Transact-sql을 사용 하 여 링 버퍼에 저장 되 고 RPC 및 일괄 처리 작업 시 클라이언트에서 전송 된 활동 ID를 기록 하는 확장 이벤트 세션을 시작 하는 샘플입니다.
 
@@ -53,7 +54,7 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework의 네트워크 추적](../../network-programming/network-tracing.md)
 - [애플리케이션 추적 및 조율](../../debug-trace-profile/tracing-and-instrumenting-applications.md)

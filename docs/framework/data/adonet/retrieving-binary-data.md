@@ -1,28 +1,29 @@
 ---
+description: '자세한 정보: 이진 데이터 검색'
 title: 이진 데이터 검색
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: 11f7a81bc0d4b0e2a8d66387410d9a24503c7519
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4304dd19b8a861baf936686edb858d7cf4da5757
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150663"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663445"
 ---
 # <a name="retrieving-binary-data"></a>이진 데이터 검색
 
-기본적으로 **DataReader** 는 전체 데이터 행을 사용할 수 있는 즉시 들어오는 데이터를 행으로 로드 합니다. 그러나 BLOB(Binary Large Object)는 단일 행에 포함할 수 없는 기가바이트 데이터를 포함할 수 있으므로 다르게 처리되어야 합니다. **Command.ExecuteReader** 메서드에는 인수를 사용 하 여 <xref:System.Data.CommandBehavior> **DataReader**의 기본 동작을 수정 하는 오버 로드가 있습니다. <xref:System.Data.CommandBehavior.SequentialAccess> **ExecuteReader** 메서드에 전달 하 여 데이터 행을 로드 하는 대신 데이터를 수신 하는 순서 대로 로드 하도록 **DataReader** 의 기본 동작을 수정할 수 있습니다. 이것은 BLOB 또는 기타 대형 데이터 구조를 로드하는 데 적합합니다. 이 동작은 데이터 소스에 따라 다를 수 있습니다. 예를 들어, Microsoft Access에서 BLOB를 반환할 경우에는 BLOB를 받을 때 데이터를 순서대로 로드하는 것이 아니라 전체 BLOB를 메모리에 로드합니다.  
+**DataReader** 는 기본적으로 전체 데이터 행을 사용할 수 있는 경우 곧바로 들어오는 데이터를 행으로 로드합니다. 그러나 BLOB(Binary Large Object)는 단일 행에 포함할 수 없는 기가바이트 데이터를 포함할 수 있으므로 다르게 처리되어야 합니다. **Command.ExecuteReader** 메서드에는 <xref:System.Data.CommandBehavior> 인수를 사용하여 **DataReader** 의 기본 동작을 수정하는 오버로드가 있습니다. <xref:System.Data.CommandBehavior.SequentialAccess>를 **ExecuteReader** 메서드에 전달하면 데이터 행을 로드하는 대신 데이터를 받을 때 순서대로 로드하도록 **DataReader** 의 기본 동작을 수정할 수 있습니다. 이것은 BLOB 또는 기타 대형 데이터 구조를 로드하는 데 적합합니다. 이 동작은 데이터 소스에 따라 다를 수 있습니다. 예를 들어, Microsoft Access에서 BLOB를 반환할 경우에는 BLOB를 받을 때 데이터를 순서대로 로드하는 것이 아니라 전체 BLOB를 메모리에 로드합니다.  
   
- **Commandbehavior.sequentialaccess**를 사용 하도록 **DataReader** 를 설정 하는 경우 반환 되는 필드에 액세스 하는 순서를 확인 하는 것이 중요 합니다. 사용 가능한 즉시 전체 행을 로드 하는 **DataReader**의 기본 동작을 사용 하면 다음 행을 읽을 때까지 임의의 순서로 반환 되는 필드에 액세스할 수 있습니다. 그러나 **commandbehavior.sequentialaccess** 를 사용 하는 경우 **DataReader** 에서 반환 하는 필드에 순서 대로 액세스 해야 합니다. 예를 들어, 쿼리에서 세 열을 반환하고 그 셋째 열이 BLOB이면 셋째 필드의 BLOB 데이터에 액세스하기 전에 첫째와 둘째 필드의 값을 반환해야 합니다. 첫째나 둘째 필드에 액세스하기 전에 셋째 필드에 액세스하면 첫째와 둘째 필드 값을 더 이상 사용할 수 없습니다. 이는 **commandbehavior.sequentialaccess** 가 데이터를 순서 대로 반환 하도록 **datareader** 를 수정 하 고 **datareader** 가 과거를 읽은 후에 데이터를 사용할 수 없기 때문입니다.  
+ **SequentialAccess** 를 사용하도록 **DataReader** 를 설정할 경우 반환된 필드에 액세스하는 순서에 주의해야 합니다. 행 전체를 사용할 수 있는 경우 곧바로 해당 전체 행을 로드하는 **DataReader** 의 기본 동작을 사용하면 다음 행을 읽기 전까지는 반환된 필드에 어떤 순서로든 액세스할 수 있습니다. 그러나 **SequentialAccess** 를 사용할 때는 **DataReader** 가 반환한 필드에 순서대로 액세스해야 합니다. 예를 들어, 쿼리에서 세 열을 반환하고 그 셋째 열이 BLOB이면 셋째 필드의 BLOB 데이터에 액세스하기 전에 첫째와 둘째 필드의 값을 반환해야 합니다. 첫째나 둘째 필드에 액세스하기 전에 셋째 필드에 액세스하면 첫째와 둘째 필드 값을 더 이상 사용할 수 없습니다. 이는 **SequentialAccess** 가 데이터를 순서대로 반환하도록 **DataReader** 를 수정했으므로 **DataReader** 가 한 번 데이터를 읽은 후에는 해당 데이터를 사용할 수 없기 때문입니다.  
   
- BLOB 필드의 데이터에 액세스 하는 경우 데이터를 사용 하 여 배열을 채우는 **DataReader**의 **GetBytes** 또는 **GetChars** 형식 접근자를 사용 합니다. 문자 데이터에 대해 **GetString** 를 사용할 수도 있습니다. 그러나. 하지만 시스템 리소스를 절약하기 위해 전체 BLOB 값을 단일 문자열 변수에 로드하지 않을 수도 있습니다. 대신 반환될 데이터의 특정 버퍼 크기와 반환된 데이터에서 읽은 첫째 바이트 또는 문자의 시작 위치를 지정할 수 있습니다. **GetBytes** 및 **GetChars** 는 반환 된 `long` 바이트 또는 문자 수를 나타내는 값을 반환 합니다. Null 배열을 **GetBytes** 또는 **GetChars**에 전달 하는 경우 반환 되는 long 값은 BLOB의 총 바이트 또는 문자 수입니다. 배열의 인덱스를 읽고 있는 데이터의 시작 위치로서 선택적으로 지정할 수 있습니다.  
+ BLOB 필드의 데이터에 액세스할 때는 **DataReader** 의 형식화된 접근자인 **GetBytes** 또는 **GetChars** 를 사용하여 배열에 데이터를 채웁니다. 문자 데이터에 대해 **GetString** 를 사용할 수도 있습니다. 그러나. 하지만 시스템 리소스를 절약하기 위해 전체 BLOB 값을 단일 문자열 변수에 로드하지 않을 수도 있습니다. 대신 반환될 데이터의 특정 버퍼 크기와 반환된 데이터에서 읽은 첫째 바이트 또는 문자의 시작 위치를 지정할 수 있습니다. **GetBytes** 및 **GetChars** 는 반환된 바이트 또는 문자 수를 나타내는 `long` 값을 반환합니다. **GetBytes** 또는 **GetChars** 에 null 배열을 전달하면 반환되는 long 값은 BLOB의 총 바이트 또는 문자 수가 됩니다. 배열의 인덱스를 읽고 있는 데이터의 시작 위치로서 선택적으로 지정할 수 있습니다.  
   
 ## <a name="example"></a>예제  
 
- 다음 예에서는 Microsoft SQL Server의 **pubs** 예제 데이터베이스에서 게시자 ID와 로고를 반환 합니다. 게시자 ID(`pub_id`)는 문자 필드이고 로고는 BLOB 이미지입니다. **로고** 필드는 비트맵 이므로이 예에서는 **GetBytes**를 사용 하 여 이진 데이터를 반환 합니다. 필드에 순차적으로 액세스해야 하므로 현재 데이터 행에 대해 게시자 ID가 로고에 앞서 액세스됩니다.  
+ 다음 예에서는 Microsoft SQL Server의 **pubs** 예제 데이터베이스에서 게시자 ID와 로고를 반환 합니다. 게시자 ID(`pub_id`)는 문자 필드이고 로고는 BLOB 이미지입니다. **logo** 필드는 비트맵이므로 이 예제는 **GetBytes** 를 사용하여 이진 데이터를 반환합니다. 필드에 순차적으로 액세스해야 하므로 현재 데이터 행에 대해 게시자 ID가 로고에 앞서 액세스됩니다.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -155,7 +156,7 @@ reader.Close();
 connection.Close();  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
-- [이진 및 대량 값 데이터 SQL Server](./sql/sql-server-binary-and-large-value-data.md)
+- [SQL Server 이진 및 큰 값 데이터](./sql/sql-server-binary-and-large-value-data.md)
 - [ADO.NET 개요](ado-net-overview.md)

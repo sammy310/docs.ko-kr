@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 쿼리 식 예제 (LINQ to DataSet)'
 title: 쿼리 식 예제(LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
-ms.openlocfilehash: 1671769871d8c224391a34f5a6294bb6015cafdc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1d1571a851fae685942cbdbd557b275e86e8b0d2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177373"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663692"
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>쿼리 식 예제(LINQ to DataSet)
 
@@ -24,7 +25,7 @@ ms.locfileid: "91177373"
  [분할](query-expression-syntax-examples-partitioning.md)  
  이 항목의 예제에서는 <xref:System.Linq.Enumerable.Skip%2A> 및 <xref:System.Linq.Enumerable.Take%2A> 메서드를 사용하여 <xref:System.Data.DataSet>을 쿼리하고 결과를 분할하는 방법을 보여 줍니다.  
   
- [순서 지정](query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+ [주](query-expression-syntax-examples-ordering-linq-to-dataset.md)  
  이 항목의 예제에서는 <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.Reverse%2A> 및 <xref:System.Linq.Enumerable.ThenByDescending%2A> 메서드를 사용하여 <xref:System.Data.DataSet>을 쿼리하고 결과를 정렬하는 방법을 보여 줍니다.  
   
  [요소 연산자](query-expression-syntax-examples-element-operators.md)  

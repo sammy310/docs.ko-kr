@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 쿼리 식 구문 예제: 요소 연산자 (LINQ to DataSet)'
 title: '쿼리 식 구문 예제: ELEMENT 연산자(LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca392dda-16e3-45c7-8d87-12d8d4ee0578
-ms.openlocfilehash: 1d722f642941c9ec37cd6304dfb428fd621a314a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0bef18eb78a03c8b41220dd51cdccea34e3c64b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189112"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663627"
 ---
 # <a name="query-expression-syntax-examples-element-operators-linq-to-dataset"></a>쿼리 식 구문 예제: ELEMENT 연산자(LINQ to DataSet)
 
