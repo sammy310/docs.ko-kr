@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 서비스 추적 뷰어를 사용 하 여 상호 관련 된 추적 보기 및 문제 해결'
 title: Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: e1cd1443e96e7195127cb95e7ef1b2c4d6d9c176
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3f6f48c3d366a024c5dcc0cdbc85c4aea47a7a8b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587757"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99758166"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결
 
@@ -15,9 +16,9 @@ ms.locfileid: "84587757"
 
 ## <a name="using-the-service-trace-viewer-tool"></a>Service Trace Viewer 도구 사용
 
-WCF (Windows Communication Foundation) 서비스 추적 뷰어 도구를 사용 하면 WCF 수신기에 의해 생성 된 진단 추적의 상관 관계를 파악 하 여 오류의 근본 원인을 찾을 수 있습니다. 이 도구를 사용 하면 WCF 서비스 문제를 진단, 복구 및 확인할 수 있도록 추적을 쉽게 보고 그룹화 하 고 필터링 하는 방법을 사용할 수 있습니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 [서비스 추적 뷰어 도구 (svctraceviewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)를 참조 하세요.
+WCF (Windows Communication Foundation) 서비스 추적 뷰어 도구를 사용 하면 WCF 수신기에 의해 생성 된 진단 추적의 상관 관계를 파악 하 여 오류의 근본 원인을 찾을 수 있습니다. 이 도구를 사용 하면 WCF 서비스 문제를 진단, 복구 및 확인할 수 있도록 추적을 쉽게 보고 그룹화 하 고 필터링 하는 방법을 사용할 수 있습니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 [서비스 추적 뷰어 도구 (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)를 참조 하세요.
 
-이 항목에는 [서비스 추적 뷰어 도구 (svctraceviewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)를 사용 하 여 볼 때 [추적 및 메시지 로깅](../../samples/tracing-and-message-logging.md) 예제를 실행 하 여 생성 된 추적의 스크린샷이 포함 되어 있습니다. 이 항목에서는 추적의 내용, 동작 및 상관 관계를 이해하는 방법과 문제 해결 시 많은 수의 추적을 분석하는 방법을 보여 줍니다.
+이 항목에는 [서비스 추적 뷰어 도구 (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)를 사용 하 여 볼 때 [추적 및 메시지 로깅](../../samples/tracing-and-message-logging.md) 예제를 실행 하 여 생성 된 추적의 스크린샷이 포함 되어 있습니다. 이 항목에서는 추적의 내용, 동작 및 상관 관계를 이해하는 방법과 문제 해결 시 많은 수의 추적을 분석하는 방법을 보여 줍니다.
 
 ## <a name="viewing-trace-content"></a>추적 내용 보기
 
@@ -46,15 +47,15 @@ WCF (Windows Communication Foundation) 서비스 추적 뷰어 도구를 사용 
 
 XML 보기에서 유용한 xml 태그는 다음과 같습니다.
 
-- `<SubType>`(추적 수준).
+- `<SubType>` (추적 수준).
 
 - `<TimeCreated>`.
 
-- `<Source>`(추적 소스 이름).
+- `<Source>` (추적 소스 이름).
 
-- `<Correlation>`(동작 id는 추적을 내보낼 때 설정).
+- `<Correlation>` (동작 id는 추적을 내보낼 때 설정).
 
-- `<Execution>`(프로세스 및 스레드 id).
+- `<Execution>` (프로세스 및 스레드 id).
 
 - `<Computer>`.
 

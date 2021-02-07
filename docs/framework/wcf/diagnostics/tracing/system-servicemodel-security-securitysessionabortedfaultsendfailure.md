@@ -1,19 +1,20 @@
 ---
+description: SecuritySessionAbortedFaultSendFailure에 대해 자세히 알아보세요.
 title: System.ServiceModel.Security.SecuritySessionAbortedFaultSendFailure
 ms.date: 03/30/2017
 ms.assetid: 7dc1a319-0978-46ed-b2ef-1de2317e7e2d
-ms.openlocfilehash: 6f88991da985a351fc3bd0765750ebffb9d01734
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9d178c57b3fa0b69cd3fbe954cc79f8460923cdd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291299"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99758667"
 ---
 # <a name="systemservicemodelsecuritysecuritysessionabortedfaultsendfailure"></a>System.ServiceModel.Security.SecuritySessionAbortedFaultSendFailure
 
 System.ServiceModel.Security.SecuritySessionAbortedFaultSendFailure  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  오류를 중단한 보안 세션을 클라이언트로 보내는 데 실패했습니다.  
   

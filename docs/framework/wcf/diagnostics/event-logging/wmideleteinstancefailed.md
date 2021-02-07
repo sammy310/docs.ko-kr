@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: WmiDeleteInstanceFailed'
 title: WmiDeleteInstanceFailed
 ms.date: 03/30/2017
 ms.assetid: 4d61107a-1428-4281-8d1b-372240f4a723
-ms.openlocfilehash: f8703a0bd5404ea5404c941d265696a323d3e1f3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 664ab45bd8a7709d33a3381ce90680b56a454105
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96277857"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759889"
 ---
 # <a name="wmideleteinstancefailed"></a>WmiDeleteInstanceFailed
 
@@ -17,7 +18,7 @@ Id: 122
   
  범주: ServiceModel  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 WMI DeleteInstance 요청이 처리되지 않았음을 나타냅니다. 이 이벤트는 예외, 프로세스 이름 및 프로세스 ID를 표시합니다.  
   

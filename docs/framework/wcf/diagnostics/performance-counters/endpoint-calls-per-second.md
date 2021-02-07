@@ -1,19 +1,20 @@
 ---
+description: '다음에 대 한 자세한 정보: 엔드포인트: 초당 호출 수'
 title: '엔드포인트: Calls Per Second'
 ms.date: 03/30/2017
 ms.assetid: ca0fc06d-d68f-4236-bd5f-c7ff6214acdd
-ms.openlocfilehash: 3c9f9882be935474ec187e2829e8e1e58b091afa
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 10e3cb892119999225abaa8b85ea59065650795d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253156"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759577"
 ---
 # <a name="endpoint-calls-per-second"></a>엔드포인트: Calls Per Second
 
 카운터 이름: Calls Per Second  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 엔드포인트에 대한 초당 호출 수입니다.  
   

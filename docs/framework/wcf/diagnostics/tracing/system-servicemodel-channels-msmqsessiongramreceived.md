@@ -1,19 +1,20 @@
 ---
+description: MsmqSessiongramReceived에 대해 자세히 알아보세요.
 title: System.ServiceModel.Channels.MsmqSessiongramReceived
 ms.date: 03/30/2017
 ms.assetid: 66cfc20b-3bf0-48f6-a715-d82d88f5e71e
-ms.openlocfilehash: 5398d69fe4a5848b2a5e2c46c15d833f1877ff05
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b5c5bec54cd93483b662834f6941e42c45851360
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96270890"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759174"
 ---
 # <a name="systemservicemodelchannelsmsmqsessiongramreceived"></a>System.ServiceModel.Channels.MsmqSessiongramReceived
 
 System.ServiceModel.Channels.MsmqSessiongramReceived  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  MSMQ 전송 세션을 받았습니다.  
   

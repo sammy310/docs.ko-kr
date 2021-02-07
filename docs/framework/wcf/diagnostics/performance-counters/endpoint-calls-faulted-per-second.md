@@ -1,19 +1,20 @@
 ---
+description: '다음에 대 한 자세한 정보: 엔드포인트: 초당 호출 수'
 title: '엔드포인트: Calls Faulted Per Second'
 ms.date: 03/30/2017
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
-ms.openlocfilehash: e69e37de9605afd4806fd628088948d0d69291da
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 160680f215dbb3eea5ad15c756c7dc68a0629a90
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250166"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759616"
 ---
 # <a name="endpoint-calls-faulted-per-second"></a>엔드포인트: Calls Faulted Per Second
 
 카운터 이름: Calls Faulted Per Second  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 엔드포인트에 오류를 반환한 초당 호출 수입니다.  
   

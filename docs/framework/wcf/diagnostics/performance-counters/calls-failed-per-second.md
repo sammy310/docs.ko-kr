@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: 초당 실패 한 호출'
 title: Calls Failed Per Second
 ms.date: 03/30/2017
 ms.assetid: e4ef3773-f650-4876-99cf-4d0c02aa03d4
-ms.openlocfilehash: d3eafc4b31f0e62093a972b7c9f2325a3648d21b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3961754eb73743a1213922f7c9e1bd164334cd6e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285462"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759720"
 ---
 # <a name="calls-failed-per-second"></a>Calls Failed Per Second
 
 카운터 이름: Calls Failed Per Second  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 작업에 처리되지 않은 예외가 있는 초당 호출 횟수입니다.  
   

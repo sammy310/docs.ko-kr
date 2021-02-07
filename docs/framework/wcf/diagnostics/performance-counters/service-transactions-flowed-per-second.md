@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: 서비스: 초당 이동 하는 트랜잭션 수'
 title: '서비스: Transactions Flowed Per Second'
 ms.date: 03/30/2017
 ms.assetid: ec72eb49-2942-4811-91df-d6e5dad81fd8
-ms.openlocfilehash: 158bd7e2f2f98e91215ef7351cf90493a2d3059d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: aae78853272b46a97ce25a710039661f36bf7079
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236834"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759499"
 ---
 # <a name="service-transactions-flowed-per-second"></a>서비스: Transactions Flowed Per Second
 
 카운터 이름: Transactions Flowed Per Second  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 서비스에서 작업에 적용된 초당 트랜잭션 수입니다.  
   

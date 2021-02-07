@@ -1,19 +1,20 @@
 ---
+description: MsmqPoolFull에 대해 자세히 알아보세요.
 title: System.ServiceModel.Channels.MsmqPoolFull
 ms.date: 03/30/2017
 ms.assetid: f1fb0cfe-cddd-4bed-aea5-c9fa60ccce76
-ms.openlocfilehash: 3ede4759696ae2d76fcca65b7efeecf9212a87b1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cdaa0a86f57d9a723753ba11eed92f694b780863
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243731"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759291"
 ---
 # <a name="systemservicemodelchannelsmsmqpoolfull"></a>System.ServiceModel.Channels.MsmqPoolFull
 
 System.ServiceModel.Channels.MsmqPoolFull  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  네이티브 MSMQ 메시지 풀이 꽉 찼습니다. 성능에 영향을 줄 수 있습니다.  
   

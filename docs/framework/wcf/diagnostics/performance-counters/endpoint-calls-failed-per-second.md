@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: 끝점: 초당 실패 한 호출 수'
 title: '엔드포인트: Calls Failed Per Second'
 ms.date: 03/30/2017
 ms.assetid: bcbe9da4-c8dd-4e27-b630-11611adc7580
-ms.openlocfilehash: 0aeafa3d273ae22d9bbfe5e3edbac80c6e4851bd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 262f0fdf0750e8fdb179d41d1a99788784270023
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96271255"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759642"
 ---
 # <a name="endpoint-calls-failed-per-second"></a>엔드포인트: Calls Failed Per Second
 
 카운터 이름: Calls Failed Per Second  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  처리되지 않은 예외가 있고 초당 이 엔드포인트에서 받은 호출 수입니다.  
   

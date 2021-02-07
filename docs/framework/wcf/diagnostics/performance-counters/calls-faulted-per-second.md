@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: 초당 호출 오류 수'
 title: Calls Faulted Per Second
 ms.date: 03/30/2017
 ms.assetid: 81c88073-8e32-4520-a71a-2c56b71ee515
-ms.openlocfilehash: 0e69cadfdbb4e387382ba33aa9cf977e4cdb9c08
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cbff7b24d2aa457bdbe3c600109f24c9672c7ab2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96271423"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759681"
 ---
 # <a name="calls-faulted-per-second"></a>Calls Faulted Per Second
 
 카운터 이름: Calls Faulted Per Second  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  초당 이 작업에 오류를 반환한 호출의 수입니다.  
   

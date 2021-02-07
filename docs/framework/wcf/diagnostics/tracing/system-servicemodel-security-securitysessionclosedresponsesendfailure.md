@@ -1,19 +1,20 @@
 ---
+description: SecuritySessionClosedResponseSendFailure에 대해 자세히 알아보세요.
 title: System.ServiceModel.Security.SecuritySessionClosedResponseSendFailure
 ms.date: 03/30/2017
 ms.assetid: 214e88fe-0476-4604-bca6-1b2f25fe1194
-ms.openlocfilehash: 0280789e9aa9328ce8270c2b09da93219aea3bde
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7cffe59d72f50f634668aebf8f122ef8624b477c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291234"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99758641"
 ---
 # <a name="systemservicemodelsecuritysecuritysessionclosedresponsesendfailure"></a>System.ServiceModel.Security.SecuritySessionClosedResponseSendFailure
 
 System.ServiceModel.Security.SecuritySessionClosedResponseSendFailure  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  보안 세션 Close 응답을 클라이언트에게 보내는 동안 오류가 발생했습니다.  
   

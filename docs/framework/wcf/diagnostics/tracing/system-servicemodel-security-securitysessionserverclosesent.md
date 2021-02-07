@@ -1,19 +1,20 @@
 ---
+description: SecuritySessionServerCloseSent에 대해 자세히 알아보세요.
 title: System.ServiceModel.Security.SecuritySessionServerCloseSent
 ms.date: 03/30/2017
 ms.assetid: 712716fd-6c89-4dea-9398-d2c5b30f6563
-ms.openlocfilehash: f4855aa37a8c0504c864a40c30e88359c6bc4165
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2040551193e8cbbc0632b9fa3b2b894daf2f8b5d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244459"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99758342"
 ---
 # <a name="systemservicemodelsecuritysecuritysessionserverclosesent"></a>System.ServiceModel.Security.SecuritySessionServerCloseSent
 
 System.ServiceModel.Security.SecuritySessionServerCloseSent  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  서비스 보안 세션이 Close를 클라이언트로 보냈습니다.  
   

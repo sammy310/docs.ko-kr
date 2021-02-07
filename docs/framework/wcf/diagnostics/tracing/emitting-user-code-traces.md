@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: User-Code 추적 내보내기'
 title: 사용자 코드 추적 내보내기
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: e8b2031165a83e24ba15a2fcf847a170f47e696a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0abc8a4b39979942fd291ffd9cbb96047274dab0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589294"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759512"
 ---
 # <a name="emitting-user-code-traces"></a>사용자 코드 추적 내보내기
 
@@ -109,7 +110,7 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
 
 ## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>서비스 추적 뷰어 도구에서 사용자 추적 보기
 
-이 섹션에는 [서비스 추적 뷰어 도구 (svctraceviewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)를 사용 하 여 볼 때 [추적 확장](../../samples/extending-tracing.md) 샘플을 실행 하 여 생성 된 추적의 스크린샷이 포함 되어 있습니다.
+이 섹션에는 [서비스 추적 뷰어 도구 (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)를 사용 하 여 볼 때 [추적 확장](../../samples/extending-tracing.md) 샘플을 실행 하 여 생성 된 추적의 스크린샷이 포함 되어 있습니다.
 
 다음 다이어그램에서는 이전에 만든 "요청 추가" 작업을 왼쪽 패널에서 선택 합니다. 애플리케이션 클라이언트 프로그램을 구성하는 세 개의 수학 연산 동작(나누기, 빼기, 곱하기)으로 나열됩니다. 다른 요청에서 발생할 수 있는 잠재적 오류를 격리시키기 위해 사용자 코드에서 작업별로 하나의 새로운 동작을 정의했습니다.
 
