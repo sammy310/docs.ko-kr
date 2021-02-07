@@ -1,158 +1,159 @@
 ---
+description: '자세한 정보: 트랜잭션 프로토콜 버전 1.0'
 title: 트랜잭션 프로토콜 버전 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 7b1cfc21a1361cee3027fd5a61ec61a4a0a998b7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5fb49e40ab76ff0eef9825ac886d5afbbf185565
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246240"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752719"
 ---
-# <a name="transaction-protocols-version-10"></a><span data-ttu-id="57339-102">트랜잭션 프로토콜 버전 1.0</span><span class="sxs-lookup"><span data-stu-id="57339-102">Transaction Protocols version 1.0</span></span>
+# <a name="transaction-protocols-version-10"></a><span data-ttu-id="8710e-103">트랜잭션 프로토콜 버전 1.0</span><span class="sxs-lookup"><span data-stu-id="8710e-103">Transaction Protocols version 1.0</span></span>
 
-<span data-ttu-id="57339-103">WCF (Windows Communication Foundation) 버전 1은 WS-Atomic 트랜잭션과 WS-Coordination 프로토콜의 1.0 버전을 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-103">Windows Communication Foundation (WCF) version 1 implements version 1.0 of the WS-Atomic Transaction and WS-Coordination protocols.</span></span> <span data-ttu-id="57339-104">버전 1.1에 대 한 자세한 내용은 [트랜잭션 프로토콜](transaction-protocols.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="57339-104">For more information about version 1.1, see [Transaction Protocols](transaction-protocols.md).</span></span>  
+<span data-ttu-id="8710e-104">WCF (Windows Communication Foundation) 버전 1은 WS-Atomic 트랜잭션과 WS-Coordination 프로토콜의 1.0 버전을 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-104">Windows Communication Foundation (WCF) version 1 implements version 1.0 of the WS-Atomic Transaction and WS-Coordination protocols.</span></span> <span data-ttu-id="8710e-105">버전 1.1에 대 한 자세한 내용은 [트랜잭션 프로토콜](transaction-protocols.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="8710e-105">For more information about version 1.1, see [Transaction Protocols](transaction-protocols.md).</span></span>  
   
-|<span data-ttu-id="57339-105">사양/문서</span><span class="sxs-lookup"><span data-stu-id="57339-105">Specification/Document</span></span>|<span data-ttu-id="57339-106">링크</span><span class="sxs-lookup"><span data-stu-id="57339-106">Link</span></span>|  
+|<span data-ttu-id="8710e-106">사양/문서</span><span class="sxs-lookup"><span data-stu-id="8710e-106">Specification/Document</span></span>|<span data-ttu-id="8710e-107">링크</span><span class="sxs-lookup"><span data-stu-id="8710e-107">Link</span></span>|  
 |-----------------------------|----------|  
-|<span data-ttu-id="57339-107">WS-Coordination</span><span class="sxs-lookup"><span data-stu-id="57339-107">WS-Coordination</span></span>|<http://specs.xmlsoap.org/ws/2004/10/wscoor/wscoor.pdf>|  
-|<span data-ttu-id="57339-108">WS-AtomicTransaction</span><span class="sxs-lookup"><span data-stu-id="57339-108">WS-AtomicTransaction</span></span>|<http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf>|  
+|<span data-ttu-id="8710e-108">WS-Coordination</span><span class="sxs-lookup"><span data-stu-id="8710e-108">WS-Coordination</span></span>|<http://specs.xmlsoap.org/ws/2004/10/wscoor/wscoor.pdf>|  
+|<span data-ttu-id="8710e-109">WS-AtomicTransaction</span><span class="sxs-lookup"><span data-stu-id="8710e-109">WS-AtomicTransaction</span></span>|<http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf>|  
   
- <span data-ttu-id="57339-109">이러한 프로토콜 사양에서의 상호 운용성은 애플리케이션 간 및 트랜잭션 관리자 간 이렇게 두 가지 수준에서 필요합니다(다음 그림 참조)</span><span class="sxs-lookup"><span data-stu-id="57339-109">Interoperability on these protocol specifications is required at two levels: between applications and between transaction managers (see the following figure).</span></span> <span data-ttu-id="57339-110">사양은 두 가지 수준의 상호 운용성을 위한 메시지 형식 및 메시지 교환을 상세하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-110">Specifications describe in great detail the message formats and message exchange for both interoperability levels.</span></span> <span data-ttu-id="57339-111">애플리케이션 간의 교환을 위한 보안, 안정성 및 인코딩은 일반적인 애플리케이션 교환을 위해 수행되는 것과 같은 방식으로 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="57339-111">Certain security, reliability, and encodings for application-to-application exchange apply as they do for regular application exchange.</span></span> <span data-ttu-id="57339-112">그러나 트랜잭션 관리자 간의 상호 운용성을 위해서는 특정한 바인딩에 대한 동의가 필요합니다. 이러한 부분은 일반적으로 사용자가 구성하지 않기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="57339-112">However, successful interoperability between transaction managers requires agreement on the particular binding, because it is usually not configured by the user.</span></span>  
+ <span data-ttu-id="8710e-110">이러한 프로토콜 사양에서의 상호 운용성은 애플리케이션 간 및 트랜잭션 관리자 간 이렇게 두 가지 수준에서 필요합니다(다음 그림 참조)</span><span class="sxs-lookup"><span data-stu-id="8710e-110">Interoperability on these protocol specifications is required at two levels: between applications and between transaction managers (see the following figure).</span></span> <span data-ttu-id="8710e-111">사양은 두 가지 수준의 상호 운용성을 위한 메시지 형식 및 메시지 교환을 상세하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-111">Specifications describe in great detail the message formats and message exchange for both interoperability levels.</span></span> <span data-ttu-id="8710e-112">애플리케이션 간의 교환을 위한 보안, 안정성 및 인코딩은 일반적인 애플리케이션 교환을 위해 수행되는 것과 같은 방식으로 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-112">Certain security, reliability, and encodings for application-to-application exchange apply as they do for regular application exchange.</span></span> <span data-ttu-id="8710e-113">그러나 트랜잭션 관리자 간의 상호 운용성을 위해서는 특정한 바인딩에 대한 동의가 필요합니다. 이러한 부분은 일반적으로 사용자가 구성하지 않기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-113">However, successful interoperability between transaction managers requires agreement on the particular binding, because it is usually not configured by the user.</span></span>  
   
- <span data-ttu-id="57339-113">이 항목에서는 WS-AT(WS-Atomic Transaction) 사양과 보안의 조합에 대해 설명하고, 트랜잭션 관리자 간 통신을 위해 사용하는 보안이 설정된 바인딩에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-113">This topic describes a composition of the WS-Atomic Transaction (WS-AT) specification with security and describes the secure binding used for communication between transaction managers.</span></span> <span data-ttu-id="57339-114">이 문서에서 설명하는 방식은 IBM, IONA, Sun Microsystems 등에서 WS-AT 및 WS-Coordination의 다른 구현과 함께 성공적으로 테스트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="57339-114">The approach described in this document has been successfully tested with other implementations of WS-AT and WS-Coordination including IBM, IONA, Sun Microsystems, and others.</span></span>  
+ <span data-ttu-id="8710e-114">이 항목에서는 WS-AT(WS-Atomic Transaction) 사양과 보안의 조합에 대해 설명하고, 트랜잭션 관리자 간 통신을 위해 사용하는 보안이 설정된 바인딩에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-114">This topic describes a composition of the WS-Atomic Transaction (WS-AT) specification with security and describes the secure binding used for communication between transaction managers.</span></span> <span data-ttu-id="8710e-115">이 문서에서 설명하는 방식은 IBM, IONA, Sun Microsystems 등에서 WS-AT 및 WS-Coordination의 다른 구현과 함께 성공적으로 테스트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-115">The approach described in this document has been successfully tested with other implementations of WS-AT and WS-Coordination including IBM, IONA, Sun Microsystems, and others.</span></span>  
   
- <span data-ttu-id="57339-115">다음 그림은 두 개의 트랜잭션 관리자, 트랜잭션 관리자 1과 트랜잭션 관리자 2, 응용 프로그램 1과 응용 프로그램 2의 상호 운용성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="57339-115">The following figure depicts the interoperability between two transaction managers, Transaction Manager 1 and Transaction Manager 2, and two applications, Application 1 and Application 2:</span></span>  
+ <span data-ttu-id="8710e-116">다음 그림은 두 개의 트랜잭션 관리자, 트랜잭션 관리자 1과 트랜잭션 관리자 2, 응용 프로그램 1과 응용 프로그램 2의 상호 운용성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-116">The following figure depicts the interoperability between two transaction managers, Transaction Manager 1 and Transaction Manager 2, and two applications, Application 1 and Application 2:</span></span>  
   
  ![트랜잭션 관리자 간의 상호 작용을 보여 주는 스크린샷](./media/transaction-protocols/transaction-managers-flow.gif)  
   
- <span data-ttu-id="57339-117">한 명의 개시자(I)와 한 명의 참가자(P)가 있는 일반적인 WS-Coordination/WS-Atomic Transaction 시나리오를 예로 들어 봅니다.</span><span class="sxs-lookup"><span data-stu-id="57339-117">Consider a typical WS-Coordination/WS-Atomic Transaction scenario with one Initiator (I) and one Participant (P).</span></span> <span data-ttu-id="57339-118">개시자와 참가자는 둘 다 트랜잭션 관리자(각각 ITM과 PTM)를 가집니다.</span><span class="sxs-lookup"><span data-stu-id="57339-118">Both Initiator and Participant have Transaction Managers, (ITM and PTM, respectively).</span></span> <span data-ttu-id="57339-119">이 항목에서는 2단계 커밋을 2PC라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-119">Two-phase commit is referred to as 2PC in this topic.</span></span>  
+ <span data-ttu-id="8710e-118">한 명의 개시자(I)와 한 명의 참가자(P)가 있는 일반적인 WS-Coordination/WS-Atomic Transaction 시나리오를 예로 들어 봅니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-118">Consider a typical WS-Coordination/WS-Atomic Transaction scenario with one Initiator (I) and one Participant (P).</span></span> <span data-ttu-id="8710e-119">개시자와 참가자는 둘 다 트랜잭션 관리자(각각 ITM과 PTM)를 가집니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-119">Both Initiator and Participant have Transaction Managers, (ITM and PTM, respectively).</span></span> <span data-ttu-id="8710e-120">이 항목에서는 2단계 커밋을 2PC라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-120">Two-phase commit is referred to as 2PC in this topic.</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="57339-120">1. CreateCoordinationContext</span><span class="sxs-lookup"><span data-stu-id="57339-120">1. CreateCoordinationContext</span></span>|<span data-ttu-id="57339-121">12. 응용 프로그램 메시지 응답</span><span class="sxs-lookup"><span data-stu-id="57339-121">12. Application Message Response</span></span>|  
-|<span data-ttu-id="57339-122">2. CreateCoordinationContextResponse</span><span class="sxs-lookup"><span data-stu-id="57339-122">2. CreateCoordinationContextResponse</span></span>|<span data-ttu-id="57339-123">13. 커밋 (완료)</span><span class="sxs-lookup"><span data-stu-id="57339-123">13. Commit (Completion)</span></span>|  
-|<span data-ttu-id="57339-124">3. Register (완료)</span><span class="sxs-lookup"><span data-stu-id="57339-124">3. Register (Completion)</span></span>|<span data-ttu-id="57339-125">14. 준비 (2PC)</span><span class="sxs-lookup"><span data-stu-id="57339-125">14. Prepare (2PC)</span></span>|  
-|<span data-ttu-id="57339-126">4. RegisterResponse</span><span class="sxs-lookup"><span data-stu-id="57339-126">4. RegisterResponse</span></span>|<span data-ttu-id="57339-127">15. 준비 (2PC)</span><span class="sxs-lookup"><span data-stu-id="57339-127">15. Prepare (2PC)</span></span>|  
-|<span data-ttu-id="57339-128">5. 응용 프로그램 메시지</span><span class="sxs-lookup"><span data-stu-id="57339-128">5. Application Message</span></span>|<span data-ttu-id="57339-129">16. 준비 됨 (2PC)</span><span class="sxs-lookup"><span data-stu-id="57339-129">16. Prepared (2PC)</span></span>|  
-|<span data-ttu-id="57339-130">6. 컨텍스트가 있는 CreateCoordinationContext</span><span class="sxs-lookup"><span data-stu-id="57339-130">6. CreateCoordinationContext with Context</span></span>|<span data-ttu-id="57339-131">17. 준비 됨 (2PC)</span><span class="sxs-lookup"><span data-stu-id="57339-131">17. Prepared (2PC)</span></span>|  
-|<span data-ttu-id="57339-132">7. Register (내구성)</span><span class="sxs-lookup"><span data-stu-id="57339-132">7. Register (Durable)</span></span>|<span data-ttu-id="57339-133">18. 커밋됨 (완료)</span><span class="sxs-lookup"><span data-stu-id="57339-133">18. Committed (Completion)</span></span>|  
-|<span data-ttu-id="57339-134">8. RegisterResponse</span><span class="sxs-lookup"><span data-stu-id="57339-134">8. RegisterResponse</span></span>|<span data-ttu-id="57339-135">19. 커밋 (2PC)</span><span class="sxs-lookup"><span data-stu-id="57339-135">19. Commit (2PC)</span></span>|  
-|<span data-ttu-id="57339-136">9. CreateCoordinationContextResponse</span><span class="sxs-lookup"><span data-stu-id="57339-136">9. CreateCoordinationContextResponse</span></span>|<span data-ttu-id="57339-137">20. 커밋 (2PC)</span><span class="sxs-lookup"><span data-stu-id="57339-137">20. Commit (2PC)</span></span>|  
-|<span data-ttu-id="57339-138">10. Register (내구성)</span><span class="sxs-lookup"><span data-stu-id="57339-138">10. Register (Durable)</span></span>|<span data-ttu-id="57339-139">21. 커밋 (2PC)</span><span class="sxs-lookup"><span data-stu-id="57339-139">21. Committed (2PC)</span></span>|  
-|<span data-ttu-id="57339-140">11. RegisterResponse</span><span class="sxs-lookup"><span data-stu-id="57339-140">11. RegisterResponse</span></span>|<span data-ttu-id="57339-141">22. 커밋 (2PC)</span><span class="sxs-lookup"><span data-stu-id="57339-141">22. Committed (2PC)</span></span>|  
+|<span data-ttu-id="8710e-121">1. CreateCoordinationContext</span><span class="sxs-lookup"><span data-stu-id="8710e-121">1. CreateCoordinationContext</span></span>|<span data-ttu-id="8710e-122">12. 응용 프로그램 메시지 응답</span><span class="sxs-lookup"><span data-stu-id="8710e-122">12. Application Message Response</span></span>|  
+|<span data-ttu-id="8710e-123">2. CreateCoordinationContextResponse</span><span class="sxs-lookup"><span data-stu-id="8710e-123">2. CreateCoordinationContextResponse</span></span>|<span data-ttu-id="8710e-124">13. 커밋 (완료)</span><span class="sxs-lookup"><span data-stu-id="8710e-124">13. Commit (Completion)</span></span>|  
+|<span data-ttu-id="8710e-125">3. Register (완료)</span><span class="sxs-lookup"><span data-stu-id="8710e-125">3. Register (Completion)</span></span>|<span data-ttu-id="8710e-126">14. 준비 (2PC)</span><span class="sxs-lookup"><span data-stu-id="8710e-126">14. Prepare (2PC)</span></span>|  
+|<span data-ttu-id="8710e-127">4. RegisterResponse</span><span class="sxs-lookup"><span data-stu-id="8710e-127">4. RegisterResponse</span></span>|<span data-ttu-id="8710e-128">15. 준비 (2PC)</span><span class="sxs-lookup"><span data-stu-id="8710e-128">15. Prepare (2PC)</span></span>|  
+|<span data-ttu-id="8710e-129">5. 응용 프로그램 메시지</span><span class="sxs-lookup"><span data-stu-id="8710e-129">5. Application Message</span></span>|<span data-ttu-id="8710e-130">16. 준비 됨 (2PC)</span><span class="sxs-lookup"><span data-stu-id="8710e-130">16. Prepared (2PC)</span></span>|  
+|<span data-ttu-id="8710e-131">6. 컨텍스트가 있는 CreateCoordinationContext</span><span class="sxs-lookup"><span data-stu-id="8710e-131">6. CreateCoordinationContext with Context</span></span>|<span data-ttu-id="8710e-132">17. 준비 됨 (2PC)</span><span class="sxs-lookup"><span data-stu-id="8710e-132">17. Prepared (2PC)</span></span>|  
+|<span data-ttu-id="8710e-133">7. Register (내구성)</span><span class="sxs-lookup"><span data-stu-id="8710e-133">7. Register (Durable)</span></span>|<span data-ttu-id="8710e-134">18. 커밋됨 (완료)</span><span class="sxs-lookup"><span data-stu-id="8710e-134">18. Committed (Completion)</span></span>|  
+|<span data-ttu-id="8710e-135">8. RegisterResponse</span><span class="sxs-lookup"><span data-stu-id="8710e-135">8. RegisterResponse</span></span>|<span data-ttu-id="8710e-136">19. 커밋 (2PC)</span><span class="sxs-lookup"><span data-stu-id="8710e-136">19. Commit (2PC)</span></span>|  
+|<span data-ttu-id="8710e-137">9. CreateCoordinationContextResponse</span><span class="sxs-lookup"><span data-stu-id="8710e-137">9. CreateCoordinationContextResponse</span></span>|<span data-ttu-id="8710e-138">20. 커밋 (2PC)</span><span class="sxs-lookup"><span data-stu-id="8710e-138">20. Commit (2PC)</span></span>|  
+|<span data-ttu-id="8710e-139">10. Register (내구성)</span><span class="sxs-lookup"><span data-stu-id="8710e-139">10. Register (Durable)</span></span>|<span data-ttu-id="8710e-140">21. 커밋 (2PC)</span><span class="sxs-lookup"><span data-stu-id="8710e-140">21. Committed (2PC)</span></span>|  
+|<span data-ttu-id="8710e-141">11. RegisterResponse</span><span class="sxs-lookup"><span data-stu-id="8710e-141">11. RegisterResponse</span></span>|<span data-ttu-id="8710e-142">22. 커밋 (2PC)</span><span class="sxs-lookup"><span data-stu-id="8710e-142">22. Committed (2PC)</span></span>|  
   
- <span data-ttu-id="57339-142">이 문서에서는 WS-AtomicTransaction 사양과 보안의 조합에 대해 설명하고, 트랜잭션 관리자 간 통신을 위해 사용하는 보안이 설정된 바인딩에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-142">This document describes a composition of the WS-AtomicTransaction specification with security and describes the secure binding used for communication between transaction managers.</span></span> <span data-ttu-id="57339-143">이 문서에서 설명하는 방식은 WS-AT 및 WS-Coordination의 다른 구현과 함께 성공적으로 테스트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="57339-143">The approach described in this document has been successfully tested with other implementations of WS-AT and WS-Coordination.</span></span>  
+ <span data-ttu-id="8710e-143">이 문서에서는 WS-AtomicTransaction 사양과 보안의 조합에 대해 설명하고, 트랜잭션 관리자 간 통신을 위해 사용하는 보안이 설정된 바인딩에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-143">This document describes a composition of the WS-AtomicTransaction specification with security and describes the secure binding used for communication between transaction managers.</span></span> <span data-ttu-id="8710e-144">이 문서에서 설명하는 방식은 WS-AT 및 WS-Coordination의 다른 구현과 함께 성공적으로 테스트되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-144">The approach described in this document has been successfully tested with other implementations of WS-AT and WS-Coordination.</span></span>  
   
- <span data-ttu-id="57339-144">그림과 표에서는 보안의 관점에서 메시지에 대한 4가지 클래스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="57339-144">The figure and table illustrate four classes of messages from the viewpoint of security:</span></span>  
+ <span data-ttu-id="8710e-145">그림과 표에서는 보안의 관점에서 메시지에 대한 4가지 클래스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-145">The figure and table illustrate four classes of messages from the viewpoint of security:</span></span>  
   
-- <span data-ttu-id="57339-145">활성화 메시지(CreateCoordinationContext 및 CreateCoordinationContextResponse)</span><span class="sxs-lookup"><span data-stu-id="57339-145">Activation messages (CreateCoordinationContext and CreateCoordinationContextResponse).</span></span>  
+- <span data-ttu-id="8710e-146">활성화 메시지(CreateCoordinationContext 및 CreateCoordinationContextResponse)</span><span class="sxs-lookup"><span data-stu-id="8710e-146">Activation messages (CreateCoordinationContext and CreateCoordinationContextResponse).</span></span>  
   
-- <span data-ttu-id="57339-146">등록 메시지(Register 및 RegisterResponse)</span><span class="sxs-lookup"><span data-stu-id="57339-146">Registration messages (Register and RegisterResponse)</span></span>  
+- <span data-ttu-id="8710e-147">등록 메시지(Register 및 RegisterResponse)</span><span class="sxs-lookup"><span data-stu-id="8710e-147">Registration messages (Register and RegisterResponse)</span></span>  
   
-- <span data-ttu-id="57339-147">프로토콜 메시지(준비, 롤백, 커밋, 중단 등)</span><span class="sxs-lookup"><span data-stu-id="57339-147">Protocol messages (Prepare, Rollback, Commit, Aborted, and so on).</span></span>  
+- <span data-ttu-id="8710e-148">프로토콜 메시지(준비, 롤백, 커밋, 중단 등)</span><span class="sxs-lookup"><span data-stu-id="8710e-148">Protocol messages (Prepare, Rollback, Commit, Aborted, and so on).</span></span>  
   
-- <span data-ttu-id="57339-148">애플리케이션 메시지</span><span class="sxs-lookup"><span data-stu-id="57339-148">Application messages.</span></span>  
+- <span data-ttu-id="8710e-149">애플리케이션 메시지</span><span class="sxs-lookup"><span data-stu-id="8710e-149">Application messages.</span></span>  
   
- <span data-ttu-id="57339-149">처음 세 개의 메시지 클래스는 트랜잭션 관리자 메시지로 간주되며, 해당 바인딩 구성은 이 항목의 뒷부분에 있는 &quot;애플리케이션 메시지 교환&quot;에서 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-149">The first three message classes are considered Transaction Manager messages and their binding configuration is described in the "Application Message Exchange" later in this topic.</span></span> <span data-ttu-id="57339-150">네 번째 메시지는 애플리케이션 간 메시지이며, 이 항목의 뒷부분에 있는 &quot;메시지 예제&quot; 단원에서 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-150">The fourth class of message is application to application messages and is described in the "Message Examples" section later in this topic.</span></span> <span data-ttu-id="57339-151">이 섹션에서는 WCF에서 이러한 각 클래스에 사용 되는 프로토콜 바인딩을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-151">This section describes the protocol bindings used for each of these classes by WCF.</span></span>  
+ <span data-ttu-id="8710e-150">처음 세 개의 메시지 클래스는 트랜잭션 관리자 메시지로 간주되며, 해당 바인딩 구성은 이 항목의 뒷부분에 있는 &quot;애플리케이션 메시지 교환&quot;에서 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-150">The first three message classes are considered Transaction Manager messages and their binding configuration is described in the "Application Message Exchange" later in this topic.</span></span> <span data-ttu-id="8710e-151">네 번째 메시지는 애플리케이션 간 메시지이며, 이 항목의 뒷부분에 있는 &quot;메시지 예제&quot; 단원에서 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-151">The fourth class of message is application to application messages and is described in the "Message Examples" section later in this topic.</span></span> <span data-ttu-id="8710e-152">이 섹션에서는 WCF에서 이러한 각 클래스에 사용 되는 프로토콜 바인딩을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-152">This section describes the protocol bindings used for each of these classes by WCF.</span></span>  
   
- <span data-ttu-id="57339-152">다음 XML 네임스페이스 및 관련 접두사는 이 문서 전체에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="57339-152">The following XML Namespaces and associated prefixes are used throughout this document.</span></span>  
+ <span data-ttu-id="8710e-153">다음 XML 네임스페이스 및 관련 접두사는 이 문서 전체에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-153">The following XML Namespaces and associated prefixes are used throughout this document.</span></span>  
   
-|<span data-ttu-id="57339-153">접두사</span><span class="sxs-lookup"><span data-stu-id="57339-153">Prefix</span></span>|<span data-ttu-id="57339-154">네임스페이스 URI</span><span class="sxs-lookup"><span data-stu-id="57339-154">Namespace URI</span></span>|  
+|<span data-ttu-id="8710e-154">접두사</span><span class="sxs-lookup"><span data-stu-id="8710e-154">Prefix</span></span>|<span data-ttu-id="8710e-155">네임스페이스 URI</span><span class="sxs-lookup"><span data-stu-id="8710e-155">Namespace URI</span></span>|  
 |------------|-------------------|  
-|<span data-ttu-id="57339-155">s11</span><span class="sxs-lookup"><span data-stu-id="57339-155">s11</span></span>|`http://schemas.xmlsoap.org/soap/envelope`|  
-|<span data-ttu-id="57339-156">wsa</span><span class="sxs-lookup"><span data-stu-id="57339-156">wsa</span></span>|`http://www.w3.org/2004/08/addressing`|  
-|<span data-ttu-id="57339-157">wscoor</span><span class="sxs-lookup"><span data-stu-id="57339-157">wscoor</span></span>|`http://schemas.xmlsoap.org/ws/2004/10/wscoor`|  
-|<span data-ttu-id="57339-158">wsat</span><span class="sxs-lookup"><span data-stu-id="57339-158">wsat</span></span>|`http://schemas.xmlsoap.org/ws/2004/10/wsat`|  
-|<span data-ttu-id="57339-159">t</span><span class="sxs-lookup"><span data-stu-id="57339-159">t</span></span>|`http://schemas.xmlsoap.org/ws/2005/02/trust`|  
-|<span data-ttu-id="57339-160">o</span><span class="sxs-lookup"><span data-stu-id="57339-160">o</span></span>|`http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd`|  
-|<span data-ttu-id="57339-161">xsd</span><span class="sxs-lookup"><span data-stu-id="57339-161">xsd</span></span>|`http://www.w3.org/2001/XMLSchema`|  
+|<span data-ttu-id="8710e-156">s11</span><span class="sxs-lookup"><span data-stu-id="8710e-156">s11</span></span>|`http://schemas.xmlsoap.org/soap/envelope`|  
+|<span data-ttu-id="8710e-157">wsa</span><span class="sxs-lookup"><span data-stu-id="8710e-157">wsa</span></span>|`http://www.w3.org/2004/08/addressing`|  
+|<span data-ttu-id="8710e-158">wscoor</span><span class="sxs-lookup"><span data-stu-id="8710e-158">wscoor</span></span>|`http://schemas.xmlsoap.org/ws/2004/10/wscoor`|  
+|<span data-ttu-id="8710e-159">wsat</span><span class="sxs-lookup"><span data-stu-id="8710e-159">wsat</span></span>|`http://schemas.xmlsoap.org/ws/2004/10/wsat`|  
+|<span data-ttu-id="8710e-160">t</span><span class="sxs-lookup"><span data-stu-id="8710e-160">t</span></span>|`http://schemas.xmlsoap.org/ws/2005/02/trust`|  
+|<span data-ttu-id="8710e-161">o</span><span class="sxs-lookup"><span data-stu-id="8710e-161">o</span></span>|`http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd`|  
+|<span data-ttu-id="8710e-162">xsd</span><span class="sxs-lookup"><span data-stu-id="8710e-162">xsd</span></span>|`http://www.w3.org/2001/XMLSchema`|  
   
-## <a name="transaction-manager-bindings"></a><span data-ttu-id="57339-162">트랜잭션 관리자 바인딩</span><span class="sxs-lookup"><span data-stu-id="57339-162">Transaction Manager Bindings</span></span>  
+## <a name="transaction-manager-bindings"></a><span data-ttu-id="8710e-163">트랜잭션 관리자 바인딩</span><span class="sxs-lookup"><span data-stu-id="8710e-163">Transaction Manager Bindings</span></span>  
 
- <span data-ttu-id="57339-163">R1001: 트랜잭션 관리자는 WS-Atomic Transaction 및 WS-Coordination 메시지 교환을 위해 SOAP 1.1과 WS-Addressing 2004/08을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-163">R1001: Transaction Managers must use SOAP 1.1 and WS-Addressing 2004/08 for WS-Atomic Transaction and WS-Coordination message exchanges.</span></span>  
+ <span data-ttu-id="8710e-164">R1001: 트랜잭션 관리자는 WS-Atomic Transaction 및 WS-Coordination 메시지 교환을 위해 SOAP 1.1과 WS-Addressing 2004/08을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-164">R1001: Transaction Managers must use SOAP 1.1 and WS-Addressing 2004/08 for WS-Atomic Transaction and WS-Coordination message exchanges.</span></span>  
   
- <span data-ttu-id="57339-164">애플리케이션 메시지는 이러한 바인딩에 제한되지 않으며, 이에 대해서는 나중에 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-164">Application messages are not constrained to these bindings and are described later.</span></span>  
+ <span data-ttu-id="8710e-165">애플리케이션 메시지는 이러한 바인딩에 제한되지 않으며, 이에 대해서는 나중에 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-165">Application messages are not constrained to these bindings and are described later.</span></span>  
   
-### <a name="transaction-manager-https-binding"></a><span data-ttu-id="57339-165">트랜잭션 관리자 HTTPS 바인딩</span><span class="sxs-lookup"><span data-stu-id="57339-165">Transaction Manager HTTPS Binding</span></span>  
+### <a name="transaction-manager-https-binding"></a><span data-ttu-id="8710e-166">트랜잭션 관리자 HTTPS 바인딩</span><span class="sxs-lookup"><span data-stu-id="8710e-166">Transaction Manager HTTPS Binding</span></span>  
 
- <span data-ttu-id="57339-166">트랜잭션 관리자 HTTPS 바인딩은 전송 보안에만 전적으로 의존하여 보안을 수행하며, 트랜잭션 트리에 있는 각 발신자-수신자 쌍 간의 신뢰를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-166">The transaction manager HTTPS binding relies solely on transport security to achieve security and establish trust between each sender-receiver pair in the transaction tree.</span></span>  
+ <span data-ttu-id="8710e-167">트랜잭션 관리자 HTTPS 바인딩은 전송 보안에만 전적으로 의존하여 보안을 수행하며, 트랜잭션 트리에 있는 각 발신자-수신자 쌍 간의 신뢰를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-167">The transaction manager HTTPS binding relies solely on transport security to achieve security and establish trust between each sender-receiver pair in the transaction tree.</span></span>  
   
-#### <a name="https-transport-configuration"></a><span data-ttu-id="57339-167">HTTPS 전송 구성</span><span class="sxs-lookup"><span data-stu-id="57339-167">HTTPS Transport Configuration</span></span>  
+#### <a name="https-transport-configuration"></a><span data-ttu-id="8710e-168">HTTPS 전송 구성</span><span class="sxs-lookup"><span data-stu-id="8710e-168">HTTPS Transport Configuration</span></span>  
 
- <span data-ttu-id="57339-168">X.509 인증서는 트랜잭션 관리자 ID를 설정하는 데 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-168">X.509 certificates are used to establish Transaction Manager Identity.</span></span> <span data-ttu-id="57339-169">클라이언트/서버 인증이 필요하며, 클라이언트/서버 권한 부여는 구현 정보로 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="57339-169">Client/server authentication is required, and client/server authorization is left as an implementation detail:</span></span>  
+ <span data-ttu-id="8710e-169">X.509 인증서는 트랜잭션 관리자 ID를 설정하는 데 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-169">X.509 certificates are used to establish Transaction Manager Identity.</span></span> <span data-ttu-id="8710e-170">클라이언트/서버 인증이 필요하며, 클라이언트/서버 권한 부여는 구현 정보로 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-170">Client/server authentication is required, and client/server authorization is left as an implementation detail:</span></span>  
   
-- <span data-ttu-id="57339-170">R1111: 연결을 통해 표시되는 X.509 인증서에는 원래 컴퓨터의 FQDN(정규화된 도메인 이름)과 일치하는 주체 이름이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-170">R1111: X.509 certificates presented over the wire must have a subject name that matches the fully qualified domain name (FQDN) of the originating machine.</span></span>  
+- <span data-ttu-id="8710e-171">R1111: 연결을 통해 표시되는 X.509 인증서에는 원래 컴퓨터의 FQDN(정규화된 도메인 이름)과 일치하는 주체 이름이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-171">R1111: X.509 certificates presented over the wire must have a subject name that matches the fully qualified domain name (FQDN) of the originating machine.</span></span>  
   
-- <span data-ttu-id="57339-171">B1112: DNS는 X.509 주체 이름을 확인한 시스템에서 각 발신자-수신자 쌍 간에 작동해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-171">B1112: DNS must be functional between each sender-receiver pair in the system for X.509 subject name checks to succeed.</span></span>  
+- <span data-ttu-id="8710e-172">B1112: DNS는 X.509 주체 이름을 확인한 시스템에서 각 발신자-수신자 쌍 간에 작동해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-172">B1112: DNS must be functional between each sender-receiver pair in the system for X.509 subject name checks to succeed.</span></span>  
   
-#### <a name="activation-and-registration-binding-configuration"></a><span data-ttu-id="57339-172">바인딩 구성 활성화 및 등록</span><span class="sxs-lookup"><span data-stu-id="57339-172">Activation and Registration Binding Configuration</span></span>  
+#### <a name="activation-and-registration-binding-configuration"></a><span data-ttu-id="8710e-173">바인딩 구성 활성화 및 등록</span><span class="sxs-lookup"><span data-stu-id="8710e-173">Activation and Registration Binding Configuration</span></span>  
 
- <span data-ttu-id="57339-173">WCF에는 HTTPS를 통한 상관 관계가 있는 요청/응답 이중 바인딩이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-173">WCF requires request/reply duplex binding with correlation over HTTPS.</span></span> <span data-ttu-id="57339-174">요청/회신 메시지 교환 패턴의 상관 관계 및 설명에 대한 자세한 내용은 8단원 WS-Atomic Transaction을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="57339-174">(For more information about correlation and descriptions of the request/reply message exchange patterns, see WS-Atomic Transaction, Section 8.)</span></span>  
+ <span data-ttu-id="8710e-174">WCF에는 HTTPS를 통한 상관 관계가 있는 요청/응답 이중 바인딩이 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-174">WCF requires request/reply duplex binding with correlation over HTTPS.</span></span> <span data-ttu-id="8710e-175">요청/회신 메시지 교환 패턴의 상관 관계 및 설명에 대한 자세한 내용은 8단원 WS-Atomic Transaction을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="8710e-175">(For more information about correlation and descriptions of the request/reply message exchange patterns, see WS-Atomic Transaction, Section 8.)</span></span>  
   
-#### <a name="2pc-protocol-binding-configuration"></a><span data-ttu-id="57339-175">2PC 프로토콜 바인딩 구성</span><span class="sxs-lookup"><span data-stu-id="57339-175">2PC Protocol Binding Configuration</span></span>  
+#### <a name="2pc-protocol-binding-configuration"></a><span data-ttu-id="8710e-176">2PC 프로토콜 바인딩 구성</span><span class="sxs-lookup"><span data-stu-id="8710e-176">2PC Protocol Binding Configuration</span></span>  
 
- <span data-ttu-id="57339-176">WCF는 HTTPS를 통해 단방향 (데이터 그램) 메시지를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-176">WCF supports one-way (datagram) messages over HTTPS.</span></span> <span data-ttu-id="57339-177">메시지 간의 상관 관계는 구현 정보로 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="57339-177">Correlation among the messages is left as an implementation detail.</span></span>  
+ <span data-ttu-id="8710e-177">WCF는 HTTPS를 통해 단방향 (데이터 그램) 메시지를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-177">WCF supports one-way (datagram) messages over HTTPS.</span></span> <span data-ttu-id="8710e-178">메시지 간의 상관 관계는 구현 정보로 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-178">Correlation among the messages is left as an implementation detail.</span></span>  
   
- <span data-ttu-id="57339-178">B2131: 구현은 `wsa:ReferenceParameters` WCF의 2pc 메시지의 상관 관계를 얻기 위해 WS-Addressing에 설명 된 대로를 지원 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-178">B2131: Implementations must support `wsa:ReferenceParameters` as described in WS-Addressing to achieve correlation of WCF’s 2PC messages.</span></span>  
+ <span data-ttu-id="8710e-179">B2131: 구현은 `wsa:ReferenceParameters` WCF의 2pc 메시지의 상관 관계를 얻기 위해 WS-Addressing에 설명 된 대로를 지원 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-179">B2131: Implementations must support `wsa:ReferenceParameters` as described in WS-Addressing to achieve correlation of WCF’s 2PC messages.</span></span>  
   
-### <a name="transaction-manager-mixed-security-binding"></a><span data-ttu-id="57339-179">트랜잭션 관리자가 혼합된 보안 바인딩</span><span class="sxs-lookup"><span data-stu-id="57339-179">Transaction Manager Mixed Security Binding</span></span>  
+### <a name="transaction-manager-mixed-security-binding"></a><span data-ttu-id="8710e-180">트랜잭션 관리자가 혼합된 보안 바인딩</span><span class="sxs-lookup"><span data-stu-id="8710e-180">Transaction Manager Mixed Security Binding</span></span>  
 
- <span data-ttu-id="57339-180">이는 id 설정 용도로 WS-Coordination 발급 된 토큰 모델과 결합 된 전송 보안을 사용 하는 대체 (혼합 모드) 바인딩입니다.</span><span class="sxs-lookup"><span data-stu-id="57339-180">This is an alternate (mixed mode) binding that uses transport security combined with the  WS-Coordination Issued Token model for identity establishment purposes.</span></span>  <span data-ttu-id="57339-181">두 바인딩 간에 다른 요소는 활성화와 등록뿐입니다.</span><span class="sxs-lookup"><span data-stu-id="57339-181">Activation and Registration are the only elements that differ between the two bindings.</span></span>  
+ <span data-ttu-id="8710e-181">이는 id 설정 용도로 WS-Coordination 발급 된 토큰 모델과 결합 된 전송 보안을 사용 하는 대체 (혼합 모드) 바인딩입니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-181">This is an alternate (mixed mode) binding that uses transport security combined with the  WS-Coordination Issued Token model for identity establishment purposes.</span></span>  <span data-ttu-id="8710e-182">두 바인딩 간에 다른 요소는 활성화와 등록뿐입니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-182">Activation and Registration are the only elements that differ between the two bindings.</span></span>  
   
-#### <a name="https-transport-configuration"></a><span data-ttu-id="57339-182">HTTPS 전송 구성</span><span class="sxs-lookup"><span data-stu-id="57339-182">HTTPS Transport Configuration</span></span>  
+#### <a name="https-transport-configuration"></a><span data-ttu-id="8710e-183">HTTPS 전송 구성</span><span class="sxs-lookup"><span data-stu-id="8710e-183">HTTPS Transport Configuration</span></span>  
 
- <span data-ttu-id="57339-183">X.509 인증서는 트랜잭션 관리자 ID를 설정하는 데 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-183">X.509 certificates are used to establish Transaction Manager Identity.</span></span> <span data-ttu-id="57339-184">클라이언트/서버 인증이 필요하며, 클라이언트/서버 권한 부여는 구현 정보로 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="57339-184">Client/Server authentication is required, and client/server authorization is left as an implementation detail.</span></span>  
+ <span data-ttu-id="8710e-184">X.509 인증서는 트랜잭션 관리자 ID를 설정하는 데 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-184">X.509 certificates are used to establish Transaction Manager Identity.</span></span> <span data-ttu-id="8710e-185">클라이언트/서버 인증이 필요하며, 클라이언트/서버 권한 부여는 구현 정보로 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-185">Client/Server authentication is required, and client/server authorization is left as an implementation detail.</span></span>  
   
-#### <a name="activation-message-binding-configuration"></a><span data-ttu-id="57339-185">활성화 메시지 바인딩 구성</span><span class="sxs-lookup"><span data-stu-id="57339-185">Activation Message Binding Configuration</span></span>  
+#### <a name="activation-message-binding-configuration"></a><span data-ttu-id="8710e-186">활성화 메시지 바인딩 구성</span><span class="sxs-lookup"><span data-stu-id="8710e-186">Activation Message Binding Configuration</span></span>  
 
- <span data-ttu-id="57339-186">활성화 메시지는 일반적으로 애플리케이션과 해당 로컬 트랜잭션 관리자 간에 발생하기 때문에 대개 상호 운용성에 관여하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="57339-186">Activation Messages usually do not participate in interoperability because they typically occur between an application and its local Transaction Manager.</span></span>  
+ <span data-ttu-id="8710e-187">활성화 메시지는 일반적으로 애플리케이션과 해당 로컬 트랜잭션 관리자 간에 발생하기 때문에 대개 상호 운용성에 관여하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-187">Activation Messages usually do not participate in interoperability because they typically occur between an application and its local Transaction Manager.</span></span>  
   
- <span data-ttu-id="57339-187">B1221: WCF는 활성화 메시지에 이중 HTTPS 바인딩 ( [메시징 프로토콜](messaging-protocols.md)에서 설명)을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-187">B1221: WCF uses duplex HTTPS binding (described in [Messaging Protocols](messaging-protocols.md)) for Activation messages.</span></span> <span data-ttu-id="57339-188">요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.</span><span class="sxs-lookup"><span data-stu-id="57339-188">Request and Reply messages are correlated using WS-Addressing 2004/08.</span></span>  
+ <span data-ttu-id="8710e-188">B1221: WCF는 활성화 메시지에 이중 HTTPS 바인딩 ( [메시징 프로토콜](messaging-protocols.md)에서 설명)을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-188">B1221: WCF uses duplex HTTPS binding (described in [Messaging Protocols](messaging-protocols.md)) for Activation messages.</span></span> <span data-ttu-id="8710e-189">요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-189">Request and Reply messages are correlated using WS-Addressing 2004/08.</span></span>  
   
- <span data-ttu-id="57339-189">8단원 WS-Atomic Transaction 사양에서는 상관 관계 및 메시지 교환 패턴에 대해 좀 더 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-189">WS-Atomic Transaction specification, Section 8, describes further details about correlation and the message exchange patterns.</span></span>  
+ <span data-ttu-id="8710e-190">8단원 WS-Atomic Transaction 사양에서는 상관 관계 및 메시지 교환 패턴에 대해 좀 더 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-190">WS-Atomic Transaction specification, Section 8, describes further details about correlation and the message exchange patterns.</span></span>  
   
-- <span data-ttu-id="57339-190">R1222: 코디네이터는 `CreateCoordinationContext`를 수신하는 즉시 연관된 비밀 `SecurityContextToken`로 `STx`을 발급해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-190">R1222: Upon receiving a `CreateCoordinationContext`, the Coordinator must issue a `SecurityContextToken` with associated secret `STx`.</span></span> <span data-ttu-id="57339-191">이 토큰은 WS-Trust 사양을 따르는 `t:IssuedTokens` 헤더의 내부로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="57339-191">This token is returned inside a `t:IssuedTokens` header following WS-Trust specification.</span></span>  
+- <span data-ttu-id="8710e-191">R1222: 코디네이터는 `CreateCoordinationContext`를 수신하는 즉시 연관된 비밀 `SecurityContextToken`로 `STx`을 발급해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-191">R1222: Upon receiving a `CreateCoordinationContext`, the Coordinator must issue a `SecurityContextToken` with associated secret `STx`.</span></span> <span data-ttu-id="8710e-192">이 토큰은 WS-Trust 사양을 따르는 `t:IssuedTokens` 헤더의 내부로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-192">This token is returned inside a `t:IssuedTokens` header following WS-Trust specification.</span></span>  
   
-- <span data-ttu-id="57339-192">R1223: 기존 코디네이션 컨텍스트 내에서 활성화가 수행되면 기존 컨텍스트와 연관된 `t:IssuedTokens`과 함께 `SecurityContextToken` 헤더가 `CreateCoordinationContext` 메시지에서 이동해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-192">R1223: If Activation occurs within an existing Coordination Context, the `t:IssuedTokens` header with the `SecurityContextToken` associated with existing Context must flow on the `CreateCoordinationContext` message.</span></span>  
+- <span data-ttu-id="8710e-193">R1223: 기존 코디네이션 컨텍스트 내에서 활성화가 수행되면 기존 컨텍스트와 연관된 `t:IssuedTokens`과 함께 `SecurityContextToken` 헤더가 `CreateCoordinationContext` 메시지에서 이동해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-193">R1223: If Activation occurs within an existing Coordination Context, the `t:IssuedTokens` header with the `SecurityContextToken` associated with existing Context must flow on the `CreateCoordinationContext` message.</span></span>  
   
- <span data-ttu-id="57339-193">`t:IssuedTokens`보내는 메시지에 연결 하기 위해 새 헤더를 생성 해야 합니다 `wscoor:CreateCoordinationContextResponse` .</span><span class="sxs-lookup"><span data-stu-id="57339-193">A new `t:IssuedTokens` header should be generated for attaching to the outgoing `wscoor:CreateCoordinationContextResponse` message.</span></span>  
+ <span data-ttu-id="8710e-194">`t:IssuedTokens`보내는 메시지에 연결 하기 위해 새 헤더를 생성 해야 합니다 `wscoor:CreateCoordinationContextResponse` .</span><span class="sxs-lookup"><span data-stu-id="8710e-194">A new `t:IssuedTokens` header should be generated for attaching to the outgoing `wscoor:CreateCoordinationContextResponse` message.</span></span>  
   
-#### <a name="registration-message-binding-configuration"></a><span data-ttu-id="57339-194">등록 메시지 바인딩 구성</span><span class="sxs-lookup"><span data-stu-id="57339-194">Registration Message Binding Configuration</span></span>  
+#### <a name="registration-message-binding-configuration"></a><span data-ttu-id="8710e-195">등록 메시지 바인딩 구성</span><span class="sxs-lookup"><span data-stu-id="8710e-195">Registration Message Binding Configuration</span></span>  
 
- <span data-ttu-id="57339-195">B1231: WCF는 이중 HTTPS 바인딩 ( [메시징 프로토콜](messaging-protocols.md)에 설명)을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-195">B1231: WCF uses duplex HTTPS binding (described in [Messaging Protocols](messaging-protocols.md)).</span></span> <span data-ttu-id="57339-196">요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.</span><span class="sxs-lookup"><span data-stu-id="57339-196">Request and Reply messages are correlated using WS-Addressing 2004/08.</span></span>  
+ <span data-ttu-id="8710e-196">B1231: WCF는 이중 HTTPS 바인딩 ( [메시징 프로토콜](messaging-protocols.md)에 설명)을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-196">B1231: WCF uses duplex HTTPS binding (described in [Messaging Protocols](messaging-protocols.md)).</span></span> <span data-ttu-id="8710e-197">요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-197">Request and Reply messages are correlated using WS-Addressing 2004/08.</span></span>  
   
- <span data-ttu-id="57339-197">8단원 WS-AtomicTransaction에서는 메시지 교환 패턴의 상관 관계 및 설명에 대해 좀 더 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-197">WS-AtomicTransaction, Section 8, describes further details about correlation and descriptions of the message exchange patterns.</span></span>  
+ <span data-ttu-id="8710e-198">8단원 WS-AtomicTransaction에서는 메시지 교환 패턴의 상관 관계 및 설명에 대해 좀 더 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-198">WS-AtomicTransaction, Section 8, describes further details about correlation and descriptions of the message exchange patterns.</span></span>  
   
- <span data-ttu-id="57339-198">R1232: 나가는 `wscoor:Register` 메시지는 `IssuedTokenOverTransport` [보안 프로토콜](security-protocols.md)에 설명 된 인증 모드를 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-198">R1232: Outgoing `wscoor:Register` messages must use the `IssuedTokenOverTransport` authentication mode described in [Security Protocols](security-protocols.md).</span></span>  
+ <span data-ttu-id="8710e-199">R1232: 나가는 `wscoor:Register` 메시지는 `IssuedTokenOverTransport` [보안 프로토콜](security-protocols.md)에 설명 된 인증 모드를 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-199">R1232: Outgoing `wscoor:Register` messages must use the `IssuedTokenOverTransport` authentication mode described in [Security Protocols](security-protocols.md).</span></span>  
   
- <span data-ttu-id="57339-199">`wsse:Timestamp`요소가 발급 된를 사용 하 여 서명 되어야 합니다 `SecurityContextToken STx` .</span><span class="sxs-lookup"><span data-stu-id="57339-199">The `wsse:Timestamp` element must be signed using the `SecurityContextToken STx` issued.</span></span> <span data-ttu-id="57339-200">이 서명은 특정 트랜잭션과 연관된 토큰을 소유했음을 나타내며, 트랜잭션에 등록된 참가자를 인증하는 데 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-200">This signature is a proof of possession of the token associated with particular transaction and is used to authenticate a participant enlisting in the transaction.</span></span> <span data-ttu-id="57339-201">RegistrationResponse 메시지는 HTTPS를 통해 다시 보내집니다.</span><span class="sxs-lookup"><span data-stu-id="57339-201">The RegistrationResponse message is sent back over HTTPS.</span></span>  
+ <span data-ttu-id="8710e-200">`wsse:Timestamp`요소가 발급 된를 사용 하 여 서명 되어야 합니다 `SecurityContextToken STx` .</span><span class="sxs-lookup"><span data-stu-id="8710e-200">The `wsse:Timestamp` element must be signed using the `SecurityContextToken STx` issued.</span></span> <span data-ttu-id="8710e-201">이 서명은 특정 트랜잭션과 연관된 토큰을 소유했음을 나타내며, 트랜잭션에 등록된 참가자를 인증하는 데 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-201">This signature is a proof of possession of the token associated with particular transaction and is used to authenticate a participant enlisting in the transaction.</span></span> <span data-ttu-id="8710e-202">RegistrationResponse 메시지는 HTTPS를 통해 다시 보내집니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-202">The RegistrationResponse message is sent back over HTTPS.</span></span>  
   
-#### <a name="2pc-protocol-binding-configuration"></a><span data-ttu-id="57339-202">2PC 프로토콜 바인딩 구성</span><span class="sxs-lookup"><span data-stu-id="57339-202">2PC Protocol Binding Configuration</span></span>  
+#### <a name="2pc-protocol-binding-configuration"></a><span data-ttu-id="8710e-203">2PC 프로토콜 바인딩 구성</span><span class="sxs-lookup"><span data-stu-id="8710e-203">2PC Protocol Binding Configuration</span></span>  
 
- <span data-ttu-id="57339-203">WCF는 HTTPS를 통해 단방향 (데이터 그램) 메시지를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-203">WCF supports one-way (datagram) messages over HTTPS.</span></span> <span data-ttu-id="57339-204">메시지 간의 상관 관계는 구현 정보로 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="57339-204">Correlation among the messages is left as an implementation detail.</span></span>  
+ <span data-ttu-id="8710e-204">WCF는 HTTPS를 통해 단방향 (데이터 그램) 메시지를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-204">WCF supports one-way (datagram) messages over HTTPS.</span></span> <span data-ttu-id="8710e-205">메시지 간의 상관 관계는 구현 정보로 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-205">Correlation among the messages is left as an implementation detail.</span></span>  
   
- <span data-ttu-id="57339-205">B2131: 구현은 `wsa:ReferenceParameters` WCF의 2pc 메시지의 상관 관계를 얻기 위해 WS-Addressing에 설명 된 대로를 지원 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-205">B2131: Implementations must support `wsa:ReferenceParameters` as described in WS-Addressing to achieve correlation of WCF’s 2PC messages.</span></span>  
+ <span data-ttu-id="8710e-206">B2131: 구현은 `wsa:ReferenceParameters` WCF의 2pc 메시지의 상관 관계를 얻기 위해 WS-Addressing에 설명 된 대로를 지원 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-206">B2131: Implementations must support `wsa:ReferenceParameters` as described in WS-Addressing to achieve correlation of WCF’s 2PC messages.</span></span>  
   
-## <a name="application-message-exchange"></a><span data-ttu-id="57339-206">애플리케이션 메시지 교환</span><span class="sxs-lookup"><span data-stu-id="57339-206">Application Message Exchange</span></span>  
+## <a name="application-message-exchange"></a><span data-ttu-id="8710e-207">애플리케이션 메시지 교환</span><span class="sxs-lookup"><span data-stu-id="8710e-207">Application Message Exchange</span></span>  
 
- <span data-ttu-id="57339-207">바인딩이 다음 보안 요구 사항을 만족하는 경우, 애플리케이션에서는 애플리케이션 간 메시지에 대해 특정 바인딩을 자유롭게 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="57339-207">Applications are free to use any particular binding for application-to-application messages, as long as the binding meets the following security requirements:</span></span>  
+ <span data-ttu-id="8710e-208">바인딩이 다음 보안 요구 사항을 만족하는 경우, 애플리케이션에서는 애플리케이션 간 메시지에 대해 특정 바인딩을 자유롭게 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-208">Applications are free to use any particular binding for application-to-application messages, as long as the binding meets the following security requirements:</span></span>  
   
-- <span data-ttu-id="57339-208">R2001: 애플리케이션 간 메시지는 메시지의 헤더에서 `t:IssuedTokens`와 함께 `CoordinationContext` 헤더를 이동시켜야 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-208">R2001: Application-to-application messages must flow the `t:IssuedTokens` header along with the `CoordinationContext` in the header of the message.</span></span>  
+- <span data-ttu-id="8710e-209">R2001: 애플리케이션 간 메시지는 메시지의 헤더에서 `t:IssuedTokens`와 함께 `CoordinationContext` 헤더를 이동시켜야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-209">R2001: Application-to-application messages must flow the `t:IssuedTokens` header along with the `CoordinationContext` in the header of the message.</span></span>  
   
-- <span data-ttu-id="57339-209">R2002: `t:IssuedToken`의 무결성 및 기밀성이 제공되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="57339-209">R2002: Integrity and confidentiality of `t:IssuedToken` must be provided.</span></span>  
+- <span data-ttu-id="8710e-210">R2002: `t:IssuedToken`의 무결성 및 기밀성이 제공되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-210">R2002: Integrity and confidentiality of `t:IssuedToken` must be provided.</span></span>  
   
- <span data-ttu-id="57339-210">`CoordinationContext` 헤더에는 `wscoor:Identifier`가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="57339-210">The `CoordinationContext` header contains `wscoor:Identifier`.</span></span> <span data-ttu-id="57339-211">의 정의는 `xsd:AnyURI` 절대 uri와 상대 uri를 모두 사용할 수 있지만 WCF는 절대 uri 인만 지원 합니다 `wscoor:Identifiers` .</span><span class="sxs-lookup"><span data-stu-id="57339-211">While the definition of `xsd:AnyURI` allows the use of both absolute and relative URIs, WCF supports only `wscoor:Identifiers`, which are absolute URIs.</span></span>  
+ <span data-ttu-id="8710e-211">`CoordinationContext` 헤더에는 `wscoor:Identifier`가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-211">The `CoordinationContext` header contains `wscoor:Identifier`.</span></span> <span data-ttu-id="8710e-212">의 정의는 `xsd:AnyURI` 절대 uri와 상대 uri를 모두 사용할 수 있지만 WCF는 절대 uri 인만 지원 합니다 `wscoor:Identifiers` .</span><span class="sxs-lookup"><span data-stu-id="8710e-212">While the definition of `xsd:AnyURI` allows the use of both absolute and relative URIs, WCF supports only `wscoor:Identifiers`, which are absolute URIs.</span></span>  
   
- <span data-ttu-id="57339-212">`wscoor:Identifier`의 `wscoor:CoordinationContext` 가 상대 URI 인 경우 트랜잭션 WCF 서비스에서 오류가 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="57339-212">If the `wscoor:Identifier` of the `wscoor:CoordinationContext` is a relative URI, faults will be returned from transactional WCF services.</span></span>  
+ <span data-ttu-id="8710e-213">`wscoor:Identifier`의 `wscoor:CoordinationContext` 가 상대 URI 인 경우 트랜잭션 WCF 서비스에서 오류가 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-213">If the `wscoor:Identifier` of the `wscoor:CoordinationContext` is a relative URI, faults will be returned from transactional WCF services.</span></span>  
   
-## <a name="message-examples"></a><span data-ttu-id="57339-213">메시지 예제</span><span class="sxs-lookup"><span data-stu-id="57339-213">Message Examples</span></span>  
+## <a name="message-examples"></a><span data-ttu-id="8710e-214">메시지 예제</span><span class="sxs-lookup"><span data-stu-id="8710e-214">Message Examples</span></span>  
   
-### <a name="createcoordinationcontext-requestresponse-messages"></a><span data-ttu-id="57339-214">CreateCoordinationContext 요청/응답 메시지</span><span class="sxs-lookup"><span data-stu-id="57339-214">CreateCoordinationContext Request/Response Messages</span></span>  
+### <a name="createcoordinationcontext-requestresponse-messages"></a><span data-ttu-id="8710e-215">CreateCoordinationContext 요청/응답 메시지</span><span class="sxs-lookup"><span data-stu-id="8710e-215">CreateCoordinationContext Request/Response Messages</span></span>  
 
- <span data-ttu-id="57339-215">다음 메시지는 요청/응답 패턴을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="57339-215">The following messages follow a request/response pattern.</span></span>  
+ <span data-ttu-id="8710e-216">다음 메시지는 요청/응답 패턴을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-216">The following messages follow a request/response pattern.</span></span>  
   
-#### <a name="createcoordinationcontext"></a><span data-ttu-id="57339-216">CreateCoordinationContext</span><span class="sxs-lookup"><span data-stu-id="57339-216">CreateCoordinationContext</span></span>  
+#### <a name="createcoordinationcontext"></a><span data-ttu-id="8710e-217">CreateCoordinationContext</span><span class="sxs-lookup"><span data-stu-id="8710e-217">CreateCoordinationContext</span></span>  
   
 ```xml  
 <s:Envelope>  
@@ -178,7 +179,7 @@ ms.locfileid: "96246240"
 </s11:Envelope>  
 ```  
   
-#### <a name="createcoordinationcontextresponse"></a><span data-ttu-id="57339-217">CreateCoordinationContextResponse</span><span class="sxs-lookup"><span data-stu-id="57339-217">CreateCoordinationContextResponse</span></span>  
+#### <a name="createcoordinationcontextresponse"></a><span data-ttu-id="8710e-218">CreateCoordinationContextResponse</span><span class="sxs-lookup"><span data-stu-id="8710e-218">CreateCoordinationContextResponse</span></span>  
   
 ```xml  
 <s:Envelope>  
@@ -260,11 +261,11 @@ ms.locfileid: "96246240"
 </s:Envelope>  
 ```  
   
-### <a name="registration-messages"></a><span data-ttu-id="57339-218">등록 메시지</span><span class="sxs-lookup"><span data-stu-id="57339-218">Registration Messages</span></span>  
+### <a name="registration-messages"></a><span data-ttu-id="8710e-219">등록 메시지</span><span class="sxs-lookup"><span data-stu-id="8710e-219">Registration Messages</span></span>  
 
- <span data-ttu-id="57339-219">다음 메시지는 등록 메시지입니다.</span><span class="sxs-lookup"><span data-stu-id="57339-219">The following messages are registration messages.</span></span>  
+ <span data-ttu-id="8710e-220">다음 메시지는 등록 메시지입니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-220">The following messages are registration messages.</span></span>  
   
-#### <a name="register"></a><span data-ttu-id="57339-220">등록</span><span class="sxs-lookup"><span data-stu-id="57339-220">Register</span></span>  
+#### <a name="register"></a><span data-ttu-id="8710e-221">등록</span><span class="sxs-lookup"><span data-stu-id="8710e-221">Register</span></span>  
   
 ```xml  
 <s:Envelope>  
@@ -325,7 +326,7 @@ ms.locfileid: "96246240"
 </s:Envelope>  
 ```  
   
-#### <a name="register-response"></a><span data-ttu-id="57339-221">응답 등록</span><span class="sxs-lookup"><span data-stu-id="57339-221">Register Response</span></span>  
+#### <a name="register-response"></a><span data-ttu-id="8710e-222">응답 등록</span><span class="sxs-lookup"><span data-stu-id="8710e-222">Register Response</span></span>  
   
 ```xml  
 <s:Envelope>  
@@ -361,11 +362,11 @@ ms.locfileid: "96246240"
 </s:Envelope>  
 ```  
   
-### <a name="two-phase-commit-protocol-messages"></a><span data-ttu-id="57339-222">2단계 커밋 프로토콜 메시지</span><span class="sxs-lookup"><span data-stu-id="57339-222">Two Phase Commit Protocol Messages</span></span>  
+### <a name="two-phase-commit-protocol-messages"></a><span data-ttu-id="8710e-223">2단계 커밋 프로토콜 메시지</span><span class="sxs-lookup"><span data-stu-id="8710e-223">Two Phase Commit Protocol Messages</span></span>  
 
- <span data-ttu-id="57339-223">다음 메시지는 2PC(2단계 커밋) 프로토콜과 관련됩니다.</span><span class="sxs-lookup"><span data-stu-id="57339-223">The following message relates to the two-phase commit (2PC) protocol.</span></span>  
+ <span data-ttu-id="8710e-224">다음 메시지는 2PC(2단계 커밋) 프로토콜과 관련됩니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-224">The following message relates to the two-phase commit (2PC) protocol.</span></span>  
   
-#### <a name="commit"></a><span data-ttu-id="57339-224">Commit</span><span class="sxs-lookup"><span data-stu-id="57339-224">Commit</span></span>  
+#### <a name="commit"></a><span data-ttu-id="8710e-225">Commit</span><span class="sxs-lookup"><span data-stu-id="8710e-225">Commit</span></span>  
   
 ```xml  
 <s:Envelope>  
@@ -388,11 +389,11 @@ ms.locfileid: "96246240"
 </s:Envelope>  
 ```  
   
-### <a name="application-messages"></a><span data-ttu-id="57339-225">애플리케이션 메시지</span><span class="sxs-lookup"><span data-stu-id="57339-225">Application Messages</span></span>  
+### <a name="application-messages"></a><span data-ttu-id="8710e-226">애플리케이션 메시지</span><span class="sxs-lookup"><span data-stu-id="8710e-226">Application Messages</span></span>  
 
- <span data-ttu-id="57339-226">다음 메시지는 애플리케이션 메시지입니다.</span><span class="sxs-lookup"><span data-stu-id="57339-226">The following messages are application messages.</span></span>  
+ <span data-ttu-id="8710e-227">다음 메시지는 애플리케이션 메시지입니다.</span><span class="sxs-lookup"><span data-stu-id="8710e-227">The following messages are application messages.</span></span>  
   
-#### <a name="application-message-request"></a><span data-ttu-id="57339-227">애플리케이션 메시지-요청</span><span class="sxs-lookup"><span data-stu-id="57339-227">Application message-Request</span></span>  
+#### <a name="application-message-request"></a><span data-ttu-id="8710e-228">애플리케이션 메시지-요청</span><span class="sxs-lookup"><span data-stu-id="8710e-228">Application message-Request</span></span>  
   
 ```xml  
 <s:Envelope>  

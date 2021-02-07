@@ -1,27 +1,28 @@
 ---
+description: '자세한 정보: WCF 웹 HTTP 서비스 도움말 페이지'
 title: WCF 웹 HTTP 서비스 도움말 페이지
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: fe6b22c6ebd637d3aa2bcd3744cb6b73e71c9482
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 30025eec04402f8112197a95cee0efed093a0ca6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266937"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752641"
 ---
-# <a name="wcf-web-http-service-help-page"></a><span data-ttu-id="ddc25-102">WCF 웹 HTTP 서비스 도움말 페이지</span><span class="sxs-lookup"><span data-stu-id="ddc25-102">WCF Web HTTP Service Help Page</span></span>
+# <a name="wcf-web-http-service-help-page"></a><span data-ttu-id="d7470-103">WCF 웹 HTTP 서비스 도움말 페이지</span><span class="sxs-lookup"><span data-stu-id="d7470-103">WCF Web HTTP Service Help Page</span></span>
 
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]<span data-ttu-id="ddc25-103">에서는 WCF WEB HTTP 서비스에 대한 자동 도움말 페이지를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-103">provides an automatic help page for WCF WEB HTTP services.</span></span> <span data-ttu-id="ddc25-104">이 도움말 페이지에는 각 작업에 대한 설명, 요청 및 응답 형식, 스키마 등이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-104">This help page lists a description of each operation, request and response formats, and schemas.</span></span> <span data-ttu-id="ddc25-105">이 기능은 기본적으로 사용하지 않도록 설정되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-105">This functionality is turned off by default.</span></span> <span data-ttu-id="ddc25-106">사용자가 WCF 웹 HTTP 서비스를 탐색 하 고 URL의 끝에 "/Help"를 추가 하는 경우, 예를 들어 `http://localhost:8000/Customers/Help` 다음과 같은 도움말 페이지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-106">When a user browses to a WCF WEB HTTP service and appends "/Help" on to the end of the URL, for example `http://localhost:8000/Customers/Help`, a help page like the following is displayed.</span></span>  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]<span data-ttu-id="d7470-104">에서는 WCF WEB HTTP 서비스에 대한 자동 도움말 페이지를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-104">provides an automatic help page for WCF WEB HTTP services.</span></span> <span data-ttu-id="d7470-105">이 도움말 페이지에는 각 작업에 대한 설명, 요청 및 응답 형식, 스키마 등이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-105">This help page lists a description of each operation, request and response formats, and schemas.</span></span> <span data-ttu-id="d7470-106">이 기능은 기본적으로 사용하지 않도록 설정되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-106">This functionality is turned off by default.</span></span> <span data-ttu-id="d7470-107">사용자가 WCF 웹 HTTP 서비스를 탐색 하 고 URL의 끝에 "/Help"를 추가 하는 경우, 예를 들어 `http://localhost:8000/Customers/Help` 다음과 같은 도움말 페이지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-107">When a user browses to a WCF WEB HTTP service and appends "/Help" on to the end of the URL, for example `http://localhost:8000/Customers/Help`, a help page like the following is displayed.</span></span>  
   
  ![WCF REST 도움말 페이지가 열려 있는 브라우저입니다.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
- <span data-ttu-id="ddc25-108">사용자가 이 도움말 페이지에 나열된 메서드를 클릭하면 메시지 형식과 예제 응답 등 메서드에 대한 자세한 내용을 보여 주는 해당 작업에 대한 상세 페이지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-108">The user can then click any method listed in the help page and detailed page for that operation is displayed showing more information about the method, including message formats and example responses.</span></span> <span data-ttu-id="ddc25-109">다음 그림은 메서드에 대한 도움말 페이지의 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-109">The following image is an example of a help page for a method.</span></span>  
+ <span data-ttu-id="d7470-109">사용자가 이 도움말 페이지에 나열된 메서드를 클릭하면 메시지 형식과 예제 응답 등 메서드에 대한 자세한 내용을 보여 주는 해당 작업에 대한 상세 페이지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-109">The user can then click any method listed in the help page and detailed page for that operation is displayed showing more information about the method, including message formats and example responses.</span></span> <span data-ttu-id="d7470-110">다음 그림은 메서드에 대한 도움말 페이지의 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-110">The following image is an example of a help page for a method.</span></span>  
   
  ![GetCustomers 메서드에 대 한 WCF REST 도움말 페이지 세부 정보를 포함 하는 브라우저가 열립니다.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
-## <a name="using-the-wcf-web-http-help-page"></a><span data-ttu-id="ddc25-111">WCF 웹 HTTP 도움말 페이지 사용</span><span class="sxs-lookup"><span data-stu-id="ddc25-111">Using the WCF Web HTTP Help Page</span></span>  
+## <a name="using-the-wcf-web-http-help-page"></a><span data-ttu-id="d7470-112">WCF 웹 HTTP 도움말 페이지 사용</span><span class="sxs-lookup"><span data-stu-id="d7470-112">Using the WCF Web HTTP Help Page</span></span>  
 
- <span data-ttu-id="ddc25-112">WCF 웹 HTTP 도움말 페이지에는 <xref:System.ComponentModel.DescriptionAttribute>를 사용하여 지정한 작업에 대한 간략한 설명이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-112">The WCF WEB HTTP Help page displays a short description for each operation provided that you specify one using the <xref:System.ComponentModel.DescriptionAttribute>.</span></span> <span data-ttu-id="ddc25-113">이 특성은 해당 특성이 적용되는 작업에 대한 간략한 설명이 포함된 문자열을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-113">This attribute takes a string that contains a short description of the operation it is applied to.</span></span> <span data-ttu-id="ddc25-114">예를 들어 다음 코드에서는 <xref:System.ComponentModel.DescriptionAttribute>를 사용하여 간략한 설명을 제공하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-114">For example, the following code shows how to use the <xref:System.ComponentModel.DescriptionAttribute> to provide a short description.</span></span>  
+ <span data-ttu-id="d7470-113">WCF 웹 HTTP 도움말 페이지에는 <xref:System.ComponentModel.DescriptionAttribute>를 사용하여 지정한 작업에 대한 간략한 설명이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-113">The WCF WEB HTTP Help page displays a short description for each operation provided that you specify one using the <xref:System.ComponentModel.DescriptionAttribute>.</span></span> <span data-ttu-id="d7470-114">이 특성은 해당 특성이 적용되는 작업에 대한 간략한 설명이 포함된 문자열을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-114">This attribute takes a string that contains a short description of the operation it is applied to.</span></span> <span data-ttu-id="d7470-115">예를 들어 다음 코드에서는 <xref:System.ComponentModel.DescriptionAttribute>를 사용하여 간략한 설명을 제공하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-115">For example, the following code shows how to use the <xref:System.ComponentModel.DescriptionAttribute> to provide a short description.</span></span>  
   
 ```csharp
 [OperationContract]  
@@ -30,7 +31,7 @@ ms.locfileid: "96266937"
 SyndicationFeedFormatter GetTemplate1();  
 ```  
   
- <span data-ttu-id="ddc25-115">WCF 웹 HTTP 도움말 페이지를 사용하도록 설정하려면 서비스의 엔드포인트에 엔드포인트 동작을 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-115">To turn on the WCF WEB HTTP Help page, you must add an endpoint behavior to your service's endpoints.</span></span> <span data-ttu-id="ddc25-116">이 작업은 구성 또는 코드에서 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-116">This can be done in configuration or code.</span></span> <span data-ttu-id="ddc25-117">구성에서 WCF 웹 HTTP 도움말 페이지를 사용하도록 설정하려면 `<webHttp>` 요소를 사용하여 엔드포인트 동작을 추가하고 `enableHelp`를 `true`로 설정합니다. 그런 다음 엔드포인트를 추가하고 방금 추가한 엔드포인트 동작을 사용하도록 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-117">To enable the WCF WEB HTTP Help age in configuration, add an endpoint behavior with a `<webHttp>` element, set `enableHelp` to `true`, and add an endpoint and configure it to use the endpoint behavior.</span></span> <span data-ttu-id="ddc25-118">다음 구성 코드에서는 이 작업을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-118">The following configuration code shows how to do this.</span></span>  
+ <span data-ttu-id="d7470-116">WCF 웹 HTTP 도움말 페이지를 사용하도록 설정하려면 서비스의 엔드포인트에 엔드포인트 동작을 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-116">To turn on the WCF WEB HTTP Help page, you must add an endpoint behavior to your service's endpoints.</span></span> <span data-ttu-id="d7470-117">이 작업은 구성 또는 코드에서 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-117">This can be done in configuration or code.</span></span> <span data-ttu-id="d7470-118">구성에서 WCF 웹 HTTP 도움말 페이지를 사용하도록 설정하려면 `<webHttp>` 요소를 사용하여 엔드포인트 동작을 추가하고 `enableHelp`를 `true`로 설정합니다. 그런 다음 엔드포인트를 추가하고 방금 추가한 엔드포인트 동작을 사용하도록 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-118">To enable the WCF WEB HTTP Help age in configuration, add an endpoint behavior with a `<webHttp>` element, set `enableHelp` to `true`, and add an endpoint and configure it to use the endpoint behavior.</span></span> <span data-ttu-id="d7470-119">다음 구성 코드에서는 이 작업을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-119">The following configuration code shows how to do this.</span></span>  
   
 ```xml  
 <endpointBehaviors>  
@@ -47,7 +48,7 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- <span data-ttu-id="ddc25-119">코드에서 WCF 웹 HTTP 도움말 페이지를 사용하도록 설정하려면 서비스 엔드포인트를 추가하고 <xref:System.ServiceModel.Description.WebHttpBehavior>를 <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A>로 설정한 다음 서비스 엔드포인트에 `true`를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-119">To enable the WCF Web HTTP Help page in code, add a service endpoint and add a <xref:System.ServiceModel.Description.WebHttpBehavior> to the endpoint setting <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> to `true`.</span></span> <span data-ttu-id="ddc25-120">다음 코드에서는 이 작업을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-120">The following code shows how to do this.</span></span>  
+ <span data-ttu-id="d7470-120">코드에서 WCF 웹 HTTP 도움말 페이지를 사용하도록 설정하려면 서비스 엔드포인트를 추가하고 <xref:System.ServiceModel.Description.WebHttpBehavior>를 <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A>로 설정한 다음 서비스 엔드포인트에 `true`를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-120">To enable the WCF Web HTTP Help page in code, add a service endpoint and add a <xref:System.ServiceModel.Description.WebHttpBehavior> to the endpoint setting <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> to `true`.</span></span> <span data-ttu-id="d7470-121">다음 코드에서는 이 작업을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-121">The following code shows how to do this.</span></span>  
   
 ```csharp
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
@@ -58,11 +59,11 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 }  
 ```  
   
- <span data-ttu-id="ddc25-121">도움말 페이지는 해당 페이지의 여러 부분을 식별하는 태그가 포함된 XHTML을 기반으로 하기 때문에</span><span class="sxs-lookup"><span data-stu-id="ddc25-121">The help page is XHTML based with mark-up that identifies the different parts of the page.</span></span> <span data-ttu-id="ddc25-122">클라이언트에서 <xref:System.Xml.Linq.XElement> 또는 다른 XLinq API를 사용하여 프로그래밍 방식으로 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-122">This enables clients to programmatically access the page using <xref:System.Xml.Linq.XElement> or other XLinq APIs.</span></span>  
+ <span data-ttu-id="d7470-122">도움말 페이지는 해당 페이지의 여러 부분을 식별하는 태그가 포함된 XHTML을 기반으로 하기 때문에</span><span class="sxs-lookup"><span data-stu-id="d7470-122">The help page is XHTML based with mark-up that identifies the different parts of the page.</span></span> <span data-ttu-id="d7470-123">클라이언트에서 <xref:System.Xml.Linq.XElement> 또는 다른 XLinq API를 사용하여 프로그래밍 방식으로 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-123">This enables clients to programmatically access the page using <xref:System.Xml.Linq.XElement> or other XLinq APIs.</span></span>  
   
-## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a><span data-ttu-id="ddc25-123">WCF 웹 HTTP 서비스 도움말 페이지에 사용되는 스키마</span><span class="sxs-lookup"><span data-stu-id="ddc25-123">Schemas Used in the WCF Web HTTP Service Help Page</span></span>  
+## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a><span data-ttu-id="d7470-124">WCF 웹 HTTP 서비스 도움말 페이지에 사용되는 스키마</span><span class="sxs-lookup"><span data-stu-id="d7470-124">Schemas Used in the WCF Web HTTP Service Help Page</span></span>  
 
- <span data-ttu-id="ddc25-124">다음은 WCF 웹 HTTP 서비스 도움말 페이지에 사용되는 스키마입니다.</span><span class="sxs-lookup"><span data-stu-id="ddc25-124">The following schemas are used in the WCF Web HTTP service help page.</span></span>  
+ <span data-ttu-id="d7470-125">다음은 WCF 웹 HTTP 서비스 도움말 페이지에 사용되는 스키마입니다.</span><span class="sxs-lookup"><span data-stu-id="d7470-125">The following schemas are used in the WCF Web HTTP service help page.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -243,4 +244,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- <span data-ttu-id="ddc25-125">데이터 계약 serialization 스키마에 대 한 자세한 내용은 [데이터 계약 스키마 참조](data-contract-schema-reference.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="ddc25-125">For more information about the data contract serialization schema, see [Data Contract Schema Reference](data-contract-schema-reference.md).</span></span>
+ <span data-ttu-id="d7470-126">데이터 계약 serialization 스키마에 대 한 자세한 내용은 [데이터 계약 스키마 참조](data-contract-schema-reference.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="d7470-126">For more information about the data contract serialization schema, see [Data Contract Schema Reference](data-contract-schema-reference.md).</span></span>
