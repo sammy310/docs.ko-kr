@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: DataView에서 DataTable 만들기'
 title: DataView에서 DataTable 만들기
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: 42843ec40f4f7271526e341dc53bdbc2ef11db38
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2cd1b4520cfcbeb626eea06ae2d87208339dae9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198732"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725055"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>DataView에서 DataTable 만들기
 

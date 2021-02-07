@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: CommandBuilders를 사용 하 여 명령 생성'
 title: CommandBuilder를 사용하여 명령 생성
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: d88f5772e038766d49baf8c758c547e6d5667904
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 495312f57d497421182384eff23b621130447940
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200721"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724104"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>CommandBuilder를 사용하여 명령 생성
 
@@ -20,7 +21,7 @@ ms.locfileid: "91200721"
   
  <xref:System.Data.Common.DbCommandBuilder>는 INSERT, UPDATE 및 DELETE SQL 명령을 생성하는 데 필요한 메타데이터를 반환하기 위해 `SelectCommand`를 실행해야 합니다. 결과적으로 데이터 소스에 추가로 이동해야 하므로 성능이 낮아질 수 있습니다. 최적의 성능을 얻으려면 <xref:System.Data.Common.DbCommandBuilder>를 사용하는 대신 명령을 명시적으로 지정합니다.  
   
- `SelectCommand`또한에서는 하나 이상의 기본 키 또는 고유 열을 반환 해야 합니다. 이러한 열이 없으면 `InvalidOperation` 예외가 생성되고 명령은 생성되지 않습니다.  
+ `SelectCommand`는 또한 하나 이상의 기본 키 또는 고유한 열을 반환해야 합니다. 이러한 열이 없으면 `InvalidOperation` 예외가 생성되고 명령은 생성되지 않습니다.  
   
  `DataAdapter`와 연결되어 있는 경우 <xref:System.Data.Common.DbCommandBuilder>는 `InsertCommand`의 `UpdateCommand`, `DeleteCommand` 및 `DataAdapter` 속성을 자동으로 생성합니다(속성이 null 참조인 경우). 속성에 대한 `Command`가 이미 있으면 기존 `Command`가 사용됩니다.  
   
@@ -40,7 +41,7 @@ ms.locfileid: "91200721"
   
 ## <a name="optimistic-concurrency-model-for-updates-and-deletes"></a>업데이트 및 삭제에 대한 낙관적 동시성 모델  
 
- UPDATE 및 DELETE 문에 대해 자동으로 명령을 생성 하는 논리는 *낙관적 동시성*을 기반으로 합니다. 즉, 레코드는 편집용으로 잠기지 않으며 언제 든 지 다른 사용자 또는 프로세스에서 수정할 수 있습니다. SELECT 문에서 반환된 후 UPDATE 또는 DELETE 문이 발행되기 전에 레코드를 수정할 수 있었으므로 자동으로 생성되는 UPDATE 또는 DELETE 문에는 행이 원래 값을 모두 포함하고 데이터 소스에서 삭제되지 않은 경우에만 업데이트되도록 지정하는 WHERE 절이 포함되어 있습니다. 따라서 새 데이터를 덮어쓰는 상황이 발생하지 않습니다. 자동 생성된 업데이트가 삭제되었거나 <xref:System.Data.DataSet>에 있는 원래 값을 포함하지 않는 행을 업데이트하려고 하는 경우 이 명령은 모든 레코드에 영향을 주지 않으며 <xref:System.Data.DBConcurrencyException>이 throw됩니다.  
+ UPDATE 및 DELETE 문에 대해 자동으로 명령을 생성 하는 논리는 *낙관적 동시성* 을 기반으로 합니다. 즉, 레코드는 편집용으로 잠기지 않으며 언제 든 지 다른 사용자 또는 프로세스에서 수정할 수 있습니다. SELECT 문에서 반환된 후 UPDATE 또는 DELETE 문이 발행되기 전에 레코드를 수정할 수 있었으므로 자동으로 생성되는 UPDATE 또는 DELETE 문에는 행이 원래 값을 모두 포함하고 데이터 소스에서 삭제되지 않은 경우에만 업데이트되도록 지정하는 WHERE 절이 포함되어 있습니다. 따라서 새 데이터를 덮어쓰는 상황이 발생하지 않습니다. 자동 생성된 업데이트가 삭제되었거나 <xref:System.Data.DataSet>에 있는 원래 값을 포함하지 않는 행을 업데이트하려고 하는 경우 이 명령은 모든 레코드에 영향을 주지 않으며 <xref:System.Data.DBConcurrencyException>이 throw됩니다.  
   
  원래 값에 관계없이 UPDATE나 DELETE가 완료되도록 하려면 자동 명령 생성을 사용하는 대신 `UpdateCommand`에 대해 `DataAdapter`를 명시적으로 설정해야 합니다.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "91200721"
   
 ### <a name="table-and-column-names"></a>테이블 및 열 이름  
 
- 열 이름이나 테이블 이름에 공백, 마침표, 인용 부호 및 기타 영숫자가 아닌 문자 등의 특수 문자가 있으면 이러한 문자가 대괄호로 구분되어 있더라도 자동 명령 생성 논리가 실패할 수 있습니다. 공급자에 따라서는 QuotePrefix 및 QuoteSuffix 매개 변수를 설정함으로써 생성 논리에서 공백이 허용되도록 할 수 있지만 특수 문자를 이스케이프할 수는 없습니다. *Catalog. schema. 테이블* 형식의 정규화 된 테이블 이름을 사용할 수 있습니다.  
+ 열 이름이나 테이블 이름에 공백, 마침표, 인용 부호 및 기타 영숫자가 아닌 문자 등의 특수 문자가 있으면 이러한 문자가 대괄호로 구분되어 있더라도 자동 명령 생성 논리가 실패할 수 있습니다. 공급자에 따라서는 QuotePrefix 및 QuoteSuffix 매개 변수를 설정함으로써 생성 논리에서 공백이 허용되도록 할 수 있지만 특수 문자를 이스케이프할 수는 없습니다. *catalog.schema.table* 형식의 정규화된 테이블 이름이 지원됩니다.  
   
 ## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>CommandBuilder를 사용하여 SQL 문 자동 생성  
 
@@ -98,7 +99,7 @@ Console.WriteLine(builder.GetUpdateCommand().CommandText)
 Console.WriteLine(builder.GetUpdateCommand().CommandText);
 ```
   
- 다음 예제에서는 `Customers` 데이터 세트에 `custDS` 테이블을 다시 만듭니다. 이 새 열 정보를 사용 하 여 자동으로 생성 된 명령을 새로 고치기 위해 **Refreshschema** 메서드가 호출 됩니다.  
+ 다음 예제에서는 `Customers` 데이터 세트에 `custDS` 테이블을 다시 만듭니다. 자동 생성된 명령을 이 새 열 정보로 새로 고치도록 **RefreshSchema** 메서드가 호출됩니다.  
   
 ```vb  
 ' Assumes an open SqlConnection and SqlDataAdapter inside of a Using block.  
@@ -120,7 +121,7 @@ custDS.Tables.Remove(custDS.Tables["Customers"]);
 adapter.Fill(custDS, "Customers");  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [명령 및 매개 변수](commands-and-parameters.md)
 - [명령 실행](executing-a-command.md)

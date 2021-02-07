@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 로깅 클래스'
 title: Logging 클래스 (System.Net)
 ms.date: 06/12/2020
 ms.technology: dotnet-networking
@@ -16,14 +17,14 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: ad85fdd41252ed147eb5fe1a9db029db046d720c
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 1ae3079ab21502ee3f5bf71db57f0695da9a8571
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990474"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726210"
 ---
-# <a name="logging-class"></a>로깅 클래스
+# <a name="logging-class"></a>Logging 클래스
 
 추적 로깅 기능을 제공 합니다.
 

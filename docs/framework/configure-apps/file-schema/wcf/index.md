@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: WCF 구성 스키마'
 title: WCF 구성 스키마
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: 44d5e0acc6f5a9ca43949bce0c7964354ad18270
-ms.sourcegitcommit: 665f8fc55258356f4d2f4a6585b750c974b26675
+ms.openlocfilehash: 31307fd299cc1e0b63d92b43b33aabafa28858f0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91573659"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725768"
 ---
 # <a name="wcf-configuration-schema"></a>WCF 구성 스키마
 

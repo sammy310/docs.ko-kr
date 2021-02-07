@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: XML web services에서 데이터 집합 사용'
 title: XML Web Services에서 데이터 집합 사용
 ms.date: 07/14/2020
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: d4f4d5d34698fbb9a7986f4628b282d4425da3f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3c9112d259d5a6450a968ba87b33c4072f6dc44c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554699"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725131"
 ---
 # <a name="consume-a-dataset-from-an-xml-web-service"></a>XML web services에서 데이터 집합 사용
 
@@ -28,7 +29,7 @@ ms.locfileid: "90554699"
   
      이 예제에서는 데이터를 반환 하는 XML Web services (이 경우 **Northwind** 데이터베이스의 고객 목록)를 생성 하 고 데이터에 대 한 업데이트를 포함 하는 데이터 **집합** 을 받습니다 .이 데이터는 xml web services가 원래 데이터 원본으로 다시 확인 합니다.  
   
-     XML Web services는 **GetCustomers**, 고객 목록을 반환 하기 위한 두 가지 메서드 및 **UpdateCustomers**를 노출 하 여 업데이트를 다시 데이터 원본으로 확인 합니다. XML Web services는 웹 서버에 있는 DataSetSample.asmx라는 파일로 저장됩니다. 다음 코드는 DataSetSample.asmx의 내용을 요약한 것입니다.  
+     XML Web services는 **GetCustomers**, 고객 목록을 반환 하기 위한 두 가지 메서드 및 **UpdateCustomers** 를 노출 하 여 업데이트를 다시 데이터 원본으로 확인 합니다. XML Web services는 웹 서버에 있는 DataSetSample.asmx라는 파일로 저장됩니다. 다음 코드는 DataSetSample.asmx의 내용을 요약한 것입니다.  
   
     ```vb  
     <% @ WebService Language = "vb" Class = "Sample" %>  
@@ -191,11 +192,11 @@ ms.locfileid: "90554699"
   
 3. XML Web services 클라이언트를 만듭니다.  
   
-     Visual Studio에서 웹 서비스 프록시 클래스를 생성 하도록 하려면 클라이언트 프로젝트를 만들고 솔루션 탐색기 창에서 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **Add**  >  **서비스 참조**추가를 선택 합니다. **서비스 참조 추가** 대화 상자에서 **고급**을 선택한 다음 **웹 참조 추가**를 선택 합니다. 사용 가능한 웹 서비스 목록에서 웹 서비스를 선택 합니다. 현재 솔루션 또는 현재 컴퓨터에서 웹 서비스를 사용할 수 없는 경우 웹 서비스 끝점의 주소를 제공 해야 할 수 있습니다. 이전 단계의 설명에 따라 XML Web services 프록시를 직접 만드는 경우 프록시를 클라이언트 코드에 가져와 XML Web services 메서드를 사용합니다.
+     Visual Studio에서 웹 서비스 프록시 클래스를 생성 하도록 하려면 클라이언트 프로젝트를 만들고 솔루션 탐색기 창에서 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음   >  **서비스 참조** 추가를 선택 합니다. **서비스 참조 추가** 대화 상자에서 **고급** 을 선택한 다음 **웹 참조 추가** 를 선택 합니다. 사용 가능한 웹 서비스 목록에서 웹 서비스를 선택 합니다. 현재 솔루션 또는 현재 컴퓨터에서 웹 서비스를 사용할 수 없는 경우 웹 서비스 끝점의 주소를 제공 해야 할 수 있습니다. 이전 단계의 설명에 따라 XML Web services 프록시를 직접 만드는 경우 프록시를 클라이언트 코드에 가져와 XML Web services 메서드를 사용합니다.
 
-     다음 샘플 코드는 프록시 라이브러리를 가져오고 **GetCustomers** 를 호출 하 여 고객 목록을 가져오고 새 고객을 추가한 다음 **UpdateCustomers**에 대 한 업데이트가 포함 된 **데이터 집합** 을 반환 합니다.  
+     다음 샘플 코드는 프록시 라이브러리를 가져오고 **GetCustomers** 를 호출 하 여 고객 목록을 가져오고 새 고객을 추가한 다음 **UpdateCustomers** 에 대 한 업데이트가 포함 된 **데이터 집합** 을 반환 합니다.  
   
-     이 예에서는 수정 된 행만 **UpdateCustomers**에 전달 해야 하므로 GetChanges에서 반환 된 **데이터 집합** 을 **UpdateCustomers** 에 전달 합니다 **.** **UpdateCustomers** 는 확인 된 **데이터 집합**을 반환 합니다 .이 데이터 집합은 업데이트의 해결 된 변경 내용 및 모든 행 오류 정보를 통합 하기 위해 기존 **데이터 집합** 에 **병합할** 수 있습니다. 다음 코드에서는 Visual Studio를 사용 하 여 웹 참조를 만들고 웹 **참조 추가** 대화 상자에서 dssample에 대 한 웹 참조의 이름을 바꾸 었는 것으로 가정 합니다.  
+     이 예에서는 수정 된 행만 **UpdateCustomers** 에 전달 해야 하므로 GetChanges에서 반환 된 **데이터 집합** 을 **UpdateCustomers** 에 전달 합니다 **.** **UpdateCustomers** 는 확인 된 **데이터 집합** 을 반환 합니다 .이 데이터 집합은 업데이트의 해결 된 변경 내용 및 모든 행 오류 정보를 통합 하기 위해 기존 **데이터 집합** 에 **병합할** 수 있습니다. 다음 코드에서는 Visual Studio를 사용 하 여 웹 참조를 만들고 웹 **참조 추가** 대화 상자에서 dssample에 대 한 웹 참조의 이름을 바꾸 었는 것으로 가정 합니다.  
   
     ```vb  
     Imports System  
@@ -263,7 +264,7 @@ ms.locfileid: "90554699"
     csc client.cs -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET](../index.md)
 - [DataSets, DataTables 및 DataViews](index.md)

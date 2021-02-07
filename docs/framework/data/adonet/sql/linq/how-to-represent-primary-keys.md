@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 기본 키 표현'
 title: '방법: 기본 키 표현'
 ms.date: 03/30/2017
 ms.assetid: 63c65289-6539-42b2-8493-891c232018fa
-ms.openlocfilehash: 02570176c8aef5cfdc7ba09fd6976f430900e8df
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1fbac2d60bd730718b5330bfd48910a61deae15c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166237"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723610"
 ---
 # <a name="how-to-represent-primary-keys"></a>방법: 기본 키 표현
 

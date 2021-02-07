@@ -1,13 +1,14 @@
 ---
+description: 자세한 내용은 Entity SQL 개요를 확인 하세요.
 title: Entity SQL 개요
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
-ms.openlocfilehash: e9a5117984380938e48e0cd1113107c74389480f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: eb337ff3894b24d787d829838c9cf12c934a823c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148129"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724611"
 ---
 # <a name="entity-sql-overview"></a>Entity SQL 개요
 

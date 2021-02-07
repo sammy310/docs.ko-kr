@@ -1,14 +1,15 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <bookmarkResumptionQuery>
 title: <bookmarkResumptionQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 226de75d-d25c-48d5-b069-4b7d80a6852b
-ms.openlocfilehash: efd1e4e54223ff9f5d60b4087fbe5b6bebf1af2f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4e6637b6edd54d9c1cf1a44986b362eb616bf14d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189592"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725248"
 ---
 # \<bookmarkResumptionQuery>
 
@@ -44,7 +45,7 @@ ms.locfileid: "91189592"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |name|구독할 책갈피 레코드의 이름을 지정하는 문자열입니다.|  
   

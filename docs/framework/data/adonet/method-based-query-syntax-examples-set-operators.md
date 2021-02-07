@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: Method-Based 쿼리 구문 예제: 집합 연산자 (LINQ to DataSet)'
 title: '메서드 기반 쿼리 구문 예제: 집합 연산자(LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fa93af15-28af-4b5e-846b-897308410edb
-ms.openlocfilehash: f91d009e66f1f0da25e508994040d7e9f80fc681
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3a50c9793e3af6fdab08227b4789c4042dd64931
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147868"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723753"
 ---
 # <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>메서드 기반 쿼리 구문 예제: 집합 연산자(LINQ to DataSet)
 

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 알려진 형식'
 title: 알려진 유형
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: e3f1365d69e218042e3a7c8f1c7f023d9ed7bafb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 52aedb226b1e7396820292af3782274bd0ece847
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263817"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99726327"
 ---
 # <a name="known-types"></a>알려진 유형
 

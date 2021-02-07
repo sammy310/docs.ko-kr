@@ -1,13 +1,14 @@
 ---
+description: '엔터티 데이터 모델: 기본 데이터 형식에 대 한 자세한 정보'
 title: '엔터티 데이터 모델: 기본 데이터 형식'
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-ms.openlocfilehash: 4d52f50dec44c7d667dfedc10a2c9c25fcde8917
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bdc34f3232e78d29e6c2ce25d8f159d7f5238f2f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194819"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724468"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>엔터티 데이터 모델: 기본 데이터 형식
 
@@ -38,7 +39,7 @@ EDM (엔터티 데이터 모델)은 개념적 모델에서 [속성](property.md)
 |Int64|부호 있는 64비트 정수 값을 포함합니다.|Precision, Nullable, Default|  
 |SByte|부호 있는 8비트 정수 값을 포함합니다.|Precision, Nullable, Default|  
 |String|문자 데이터를 포함합니다.|Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default|  
-|Time|시간을 포함합니다.|Precision, Nullable, Default|  
+|시간|시간을 포함합니다.|Precision, Nullable, Default|  
   
 ## <a name="see-also"></a>참고 항목
 

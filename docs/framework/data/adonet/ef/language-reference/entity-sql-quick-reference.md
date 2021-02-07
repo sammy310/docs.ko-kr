@@ -1,13 +1,14 @@
 ---
+description: Entity SQL 빠른 참조에 대해 자세히 알아보세요.
 title: Entity SQL 빠른 참조
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 7ec3b6fc184b4f169d6f6489bda0ec8fa4abb4f5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ddac48bece1f0e9df737db295d4d028529ea290f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148142"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724559"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL 빠른 참조
 
@@ -29,7 +30,7 @@ ms.locfileid: "91148142"
   
  출력:  
   
-|Value|  
+|값|  
 |-----------|  
 |hello|  
   
@@ -37,7 +38,7 @@ ms.locfileid: "91148142"
 
  DateTime 리터럴에서는 날짜와 시간 부분 모두 필수 요소입니다. 기본값은 없습니다.  
   
- 예:  
+ 예제:  
   
 ```sql  
 DATETIME '2006-12-25 01:01:00.000'
@@ -47,7 +48,7 @@ DATETIME '2006-12-25 01:01'
   
  출력:  
   
-|Value|  
+|값|  
 |-----------|  
 |12/25/2006 1:01:00 AM|  
   
@@ -55,7 +56,7 @@ DATETIME '2006-12-25 01:01'
 
  Integer 리터럴은 Int32(123), UInt32(123U), Int64(123L) 및 UInt64(123UL) 형식일 수 있습니다.  
   
- 예:  
+ 예제:  
   
 ```sql  
 --a collection of integers  
@@ -80,7 +81,7 @@ DATETIME '2006-12-25 01:01'
 
  [ROW](row-entity-sql.md) 는 다음과 같이 구조적으로 형식화 된 익명의 값을 생성 합니다. `ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
- 예:  
+ 예제:  
   
 ```sql  
 SELECT VALUE row (product.ProductID AS ProductID, product.Name
@@ -102,7 +103,7 @@ SELECT VALUE row (product.ProductID AS ProductID, product.Name
   
  `MULTISET(1,2,2,3)` `--same as`-`{1,2,2,3}.`  
   
- 예:  
+ 예제:  
   
 ```sql  
 SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE product.ListPrice IN MultiSet (125, 300)  
@@ -118,7 +119,7 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
 
  [명명 된 형식 생성자](named-type-constructor-entity-sql.md) 는와 같은 사용자 정의 개체를 생성 `person("abc", 12)` 합니다.  
   
- 예:  
+ 예제:  
   
 ```sql  
 SELECT VALUE AdventureWorksModel.SalesOrderDetail (o.SalesOrderDetailID, o.CarrierTrackingNumber, o.OrderQty,
@@ -156,7 +157,7 @@ SELECT REF(o) AS OrderID FROM Orders AS o
   
  다음 예제에서는 속성 추출 연산자(.)를 사용하여 엔터티의 속성에 액세스합니다. 속성 추출 연산자가 사용되면 해당 참조가 자동으로 역참조됩니다.  
   
- 예:  
+ 예제:  
   
 ```sql  
 SELECT VALUE REF(p).Name FROM
@@ -165,7 +166,7 @@ SELECT VALUE REF(p).Name FROM
   
  출력:  
   
-|Value|  
+|값|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -176,7 +177,7 @@ SELECT VALUE REF(p).Name FROM
 
  [DEREF](deref-entity-sql.md) 는 참조 값을 역참조 하 고이 역참조의 결과를 생성 합니다. 예를 들어, `SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2` 쿼리는 Orders 엔터티 집합의 개별 Order별로 Order 엔터티를 생성합니다.  
   
- 예:  
+ 예제:  
   
 ```sql  
 SELECT VALUE DEREF(REF(p)).Name FROM
@@ -185,7 +186,7 @@ SELECT VALUE DEREF(REF(p)).Name FROM
   
  출력:  
   
-|Value|  
+|값|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -196,7 +197,7 @@ SELECT VALUE DEREF(REF(p)).Name FROM
 
  [CREATEREF](createref-entity-sql.md) 키를 전달 하는 참조를 만듭니다. [Key](key-entity-sql.md) 는 형식 참조가 있는 식의 키 부분을 추출 합니다.  
   
- 예:  
+ 예제:  
   
 ```sql  
 SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
@@ -212,13 +213,13 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
 |771|  
 |...|  
   
-## <a name="functions"></a>함수  
+## <a name="functions"></a>Functions  
   
 ### <a name="canonical"></a>Canonical  
 
  [정식 함수](canonical-functions.md) 에 대 한 네임 스페이스는와 같이 Edm입니다 `Edm.Length("string")` . 정식 함수와 이름이 같은 함수가 포함된 다른 네임스페이스를 가져오지 않는 한, 네임스페이스를 지정할 필요가 없습니다. 두 네임스페이스의 함수가 동일한 경우 사용자는 전체 이름을 지정해야 합니다.  
   
- 예:  
+ 예제:  
   
 ```sql  
 SELECT Length(c. FirstName) AS NameLen FROM
@@ -238,7 +239,7 @@ SELECT Length(c. FirstName) AS NameLen FROM
 
  [Microsoft 공급자별 함수](../sqlclient-for-ef-functions.md) 는 네임 스페이스에 있습니다 `SqlServer` .  
   
- 예:  
+ 예제:  
   
 ```sql  
 SELECT SqlServer.LEN(c.EmailAddress) AS EmailLen FROM
@@ -258,7 +259,7 @@ SELECT SqlServer.LEN(c.EmailAddress) AS EmailLen FROM
 
  를 [사용 하 여](using-entity-sql.md) 쿼리 식에 사용 되는 네임 스페이스를 지정 합니다.  
   
- 예:  
+ 예제:  
   
 ```sql  
 using SqlServer; LOWER('AA');  
@@ -266,7 +267,7 @@ using SqlServer; LOWER('AA');
   
  출력:  
   
-|Value|  
+|값|  
 |-----------|  
 |aa|  
   
@@ -274,7 +275,7 @@ using SqlServer; LOWER('AA');
 
  [SKIP](skip-entity-sql.md) 및 [LIMIT](limit-entity-sql.md) 하위 절을 [ORDER by](order-by-entity-sql.md) 절에 선언 하 여 페이징을 표현할 수 있습니다.  
   
- 예:  
+ 예제:  
   
 ```sql  
 SELECT c.ContactID as ID, c.LastName AS Name FROM
@@ -293,7 +294,7 @@ SELECT c.ContactID as ID, c.LastName AS Name FROM
 
  [그룹화 방법](group-by-entity-sql.md) 쿼리 ([SELECT](select-entity-sql.md)) 식에서 반환 되는 개체가 배치 될 그룹을 지정 합니다.  
   
- 예:  
+ 예제:  
   
 ```sql  
 SELECT VALUE name FROM AdventureWorksEntities.Product AS P
@@ -313,7 +314,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product AS P
 
  관계 탐색 연산자를 사용하여 엔터티 간의(시작 End에서 끝 End) 관계를 탐색할 수 있습니다. [탐색](navigate-entity-sql.md) 은 .로 한정 된 관계 유형을 사용 합니다. \<namespace> \<relationship type name> \<T>To end의 카디널리티가 1 인 경우 Navigate는 Ref를 반환 합니다. 끝 end의 카디널리티가 n 인 경우<Ref \<T>> 컬렉션이 반환 됩니다.  
   
- 예:  
+ 예제:  
   
 ```sql  
 SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
@@ -336,7 +337,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 암시적 행 생성을 건너뛰도록 SELECT VALUE 절을 제공합니다. SELECT VALUE 절 하나에는 항목 하나만 지정할 수 있습니다. 이러한 절을 사용 하면 SELECT 절의 항목 주위에 행 래퍼가 생성 되지 않으며,와 같이 원하는 모양의 컬렉션이 생성 될 수 `SELECT VALUE a` 있습니다.  
   
- 예:  
+ 예제:  
   
 ```sql  
 SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
@@ -344,7 +345,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
   
  출력:  
   
-|이름|  
+|Name|  
 |----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -355,11 +356,11 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
 
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 임의의 행을 만드는 행 생성자도 제공합니다. SELECT는 `SELECT a, b, c`와 같이 프로젝션의 요소를 하나 이상 사용하며 필드가 있는 데이터 레코드를 생성합니다.  
   
- 예:  
+ 예제:  
   
  SELECT p.Name, p.ProductID FROM AdventureWorksEntities.Product as p 출력:  
   
-|이름|ProductID|  
+|Name|ProductID|  
 |----------|---------------|  
 |Adjustable Race|1|  
 |All-Purpose Bike Stand|879|  
@@ -370,7 +371,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
 
  [Case 식은](case-entity-sql.md) 부울 식 집합을 계산 하 여 결과를 확인 합니다.  
   
- 예:  
+ 예제:  
   
 ```sql  
 CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END  
@@ -378,7 +379,7 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
  출력:  
   
-|Value|  
+|값|  
 |-----------|  
 |TRUE|  
   

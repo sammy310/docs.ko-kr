@@ -1,14 +1,15 @@
 ---
+description: '자세한 정보: Windows Identity Foundation 구성 스키마'
 title: Windows Identity Foundation 구성 스키마
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
-ms.openlocfilehash: 14d596ae77019932d169e1a84732fb8522bfc46c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 926b2dbe25359ebc789c95f75a59090c7e5a52e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152725"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725339"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Windows Identity Foundation 구성 스키마
 
@@ -111,6 +112,6 @@ ms.locfileid: "79152725"
   
 ## <a name="in-this-section"></a>섹션 내용  
 
-[\<system.identityModel>](system-identitymodel.md)응용 프로그램에서 WIF 옵션을 사용 하기 위한 구성을 제공 합니다.  
+[\<system.identityModel>](system-identitymodel.md) 응용 프로그램에서 WIF 옵션을 사용 하기 위한 구성을 제공 합니다.  
   
-[\<system.identityModel.services>](system-identitymodel-services.md)WIF를 사용 하 여 수동 페더레이션을 위한 구성을 제공 합니다. SAM(Session Authentication Module) 및 WSFAM(Federated Authentication Module)을 구성합니다.
+[\<system.identityModel.services>](system-identitymodel-services.md) WIF를 사용 하 여 수동 페더레이션을 위한 구성을 제공 합니다. SAM(Session Authentication Module) 및 WSFAM(Federated Authentication Module)을 구성합니다.

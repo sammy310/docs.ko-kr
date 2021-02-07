@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: DEREF (Entity SQL)'
 title: DEREF(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4c78e833-b260-453d-9bf4-eb39857dd0fa
-ms.openlocfilehash: c0c975ab5cf2761496db6efa1f88f409aa1b1abd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9d0f29123c1459c6eab21ea9cd860b5c9e77f591
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148219"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724728"
 ---
 # <a name="deref-entity-sql"></a>DEREF(Entity SQL)
 
@@ -24,7 +25,7 @@ SELECT DEREF ( o.expression ) FROM Table AS o;
  `expression`  
  컬렉션을 반환하는 모든 유효한 쿼리 식입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  참조되는 엔터티의 값입니다.  
   

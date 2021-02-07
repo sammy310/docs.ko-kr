@@ -1,13 +1,14 @@
 ---
+description: Entity SQL 언어에 대해 자세히 알아보세요.
 title: Entity SQL 언어
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
-ms.openlocfilehash: 721a4cd9d4e5618c083392bbe1ae203f285f8feb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c05e561e5da3f9ee8788a25f8ca97b22444e109f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148116"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724572"
 ---
 # <a name="entity-sql-language"></a>Entity SQL 언어
 

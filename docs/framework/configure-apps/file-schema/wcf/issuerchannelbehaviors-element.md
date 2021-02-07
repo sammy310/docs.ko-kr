@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <issuerChannelBehaviors> 요소'
 title: <issuerChannelBehaviors> 요소
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
@@ -11,25 +12,25 @@ no-loc:
 - <issuedToken>
 - <issuerChannelBehaviors>
 - <dataContractSerializer>
-ms.openlocfilehash: cbbfb9d3b5af47a360aa82cf837cd6749f61b641
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6be79f2ee6afb442a7a399ce49df4ad59dff2db5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70893151"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725547"
 ---
-# <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors> 요소
+# <a name="issuerchannelbehaviors-element"></a>\::: no loc ( <issuerChannelBehaviors> )::: 요소
 
-지정 된 서비스 토큰 서비스와 통신할 때 사용할 WCF (Windows Communication Foundation) 클라이언트 끝점 동작 (구성에 정의 됨)의 컬렉션을 포함 합니다. 정의 된 동작에는 요소가 포함 될 수 없습니다 [\<clientCredentials>](clientcredentials.md) .
+지정 된 서비스 토큰 서비스와 통신할 때 사용할 WCF (Windows Communication Foundation) 클라이언트 끝점 동작 (구성에 정의 됨)의 컬렉션을 포함 합니다. 정의 된 동작에는: [ \: : no loc ( <clientCredentials> ):::](clientcredentials.md) 요소가 포함 될 수 없습니다.
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<system.serviceModel>](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<behaviors>](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<endpointBehaviors>](endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<behavior>](behavior-of-endpointbehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<clientCredentials>](clientcredentials.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<issuedToken>](issuedtoken.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<issuerChannelBehaviors>
+&nbsp;&nbsp;[\::: no loc (<System.servicemodel>):::](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\::: no loc ( <behaviors> ):::](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\::: no loc ( <endpointBehaviors> ):::](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\::: no loc ( <behavior> ):::](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\::: no loc ( <clientCredentials> ):::](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\::: no loc ( <issuedToken> ):::](issuedtoken.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\::: no loc ( <issuerChannelBehaviors> ):::
 
 ## <a name="syntax"></a>구문
 
@@ -50,19 +51,19 @@ ms.locfileid: "70893151"
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<add>](add-of-issuerchannelbehaviors.md)|동작을 컬렉션에 추가합니다.|
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
-|[\<issuedToken>](issuedtoken.md)|서비스에 대해 클라이언트를 인증할 때 사용되는 사용자 지정 토큰을 지정합니다.|
+|[\::: no loc ( <issuedToken> ):::](issuedtoken.md)|서비스에 대해 클라이언트를 인증할 때 사용되는 사용자 지정 토큰을 지정합니다.|
 
 ## <a name="remarks"></a>설명
 
-`<clientCredentials>` 요소를 포함하는 동작을 제외한 동작을 서비스와 통신하는 데 사용하는 경우 이 요소를 사용합니다. 예를 들어 [\<dataContractSerializer>](datacontractserializer-element.md) 동작 요소가 포함 되어야 하는 경우입니다.
+`<clientCredentials>` 요소를 포함하는 동작을 제외한 동작을 서비스와 통신하는 데 사용하는 경우 이 요소를 사용합니다. 예를 들어:: [ \: no loc ( <dataContractSerializer> ):::](datacontractserializer-element.md) behavior 요소를 포함 해야 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

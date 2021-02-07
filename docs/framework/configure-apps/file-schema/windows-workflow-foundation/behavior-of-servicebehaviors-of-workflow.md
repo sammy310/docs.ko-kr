@@ -1,18 +1,19 @@
 ---
+description: '다음에 대 한 자세한 정보: <behavior> <serviceBehaviors> 워크플로'
 title: <behavior> of <serviceBehaviors> 워크플로
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
-ms.openlocfilehash: 14c528746963a3078e0ab377d095414d2fca0dbe
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7504e9b307286871440bb6efdb672a59d3d13cb1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189619"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725287"
 ---
 # <a name="behavior-of-servicebehaviors-of-workflow"></a>\<behavior> of \<serviceBehaviors> 워크플로
 
-**Behavior** 요소는 서비스의 동작에 대 한 설정 컬렉션을 포함 합니다. 각 동작은 **이름**으로 인덱싱됩니다. 서비스는 요소의 **behaviorConfiguration** 특성을 사용 하 여이 이름을 통해 각 동작에 연결할 수 있습니다 [\<endpoint>](../wcf/endpoint-element.md) . 따라서 설정을 다시 정의하지 않고도 엔드포인트에서 일반 동작 구성을 공유할 수 있습니다.  
+**Behavior** 요소는 서비스의 동작에 대 한 설정 컬렉션을 포함 합니다. 각 동작은 **이름** 으로 인덱싱됩니다. 서비스는 요소의 **behaviorConfiguration** 특성을 사용 하 여이 이름을 통해 각 동작에 연결할 수 있습니다 [\<endpoint>](../wcf/endpoint-element.md) . 따라서 설정을 다시 정의하지 않고도 엔드포인트에서 일반 동작 구성을 공유할 수 있습니다.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
@@ -58,7 +59,7 @@ ms.locfileid: "91189619"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |name|동작의 구성 이름을 포함하는 고유 문자열입니다. 이 값은 요소의 식별 문자열 역할을 하므로 고유한 사용자 정의 문자열이어야 합니다.|  
   

@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <issuer><issuedTokenParameters>'
 title: <issuedTokenParameters>의 <issuer>
 ms.date: 03/30/2017
 ms.assetid: d6a95f32-d58c-40fc-8658-dd92564d3c90
-ms.openlocfilehash: bfe8163d2d6baba1d6e8053f7f6579673d8b4b21
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7d67583eda22414750631b6dff40f6e6ea8831e4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157280"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99725651"
 ---
 # <a name="issuer-of-issuedtokenparameters"></a>\<issuedTokenParameters>의 \<issuer>
 
@@ -60,9 +61,9 @@ ms.locfileid: "91157280"
 - [페더레이션 및 발급된 토큰](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [사용자 지정 바인딩을 사용하는 보안 기능](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [페더레이션 및 발급된 토큰](../../../wcf/feature-details/federation-and-issued-tokens.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Custom Binding Security](../../../wcf/samples/custom-binding-security.md)

@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 명령 실행'
 title: 명령 실행
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
-ms.openlocfilehash: d7d290c1c149f9eab2449c25e8d32f2568eb0277
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7b5fe46bf4d82fcd4f24cc0eb19e85a2ee9aca7b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156461"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99724325"
 ---
 # <a name="executing-a-command"></a>명령 실행
 
@@ -31,7 +32,7 @@ ms.locfileid: "91156461"
 |`StoredProcedure`|저장 프로시저의 이름입니다. 호출하는 `Parameters` 메서드에 관계없이 명령의 `Execute` 속성을 사용하면 입력 및 출력 매개 변수와 반환 값에 액세스할 수 있습니다. `ExecuteReader`를 사용하는 경우 `DataReader`가 닫히기 전에는 반환 값과 출력 매개 변수에 액세스할 수 없습니다.|  
 |`TableDirect`|테이블의 이름입니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 코드 예제에서는 <xref:System.Data.SqlClient.SqlCommand> 개체를 만든 다음 해당 속성을 설정하여 저장 프로시저를 실행하는 방법을 보여 줍니다. 저장 프로시저에 대한 입력 매개 변수를 지정하는 데는 <xref:System.Data.SqlClient.SqlParameter> 개체를 사용합니다. <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> 메서드를 사용하여 명령을 실행하고 <xref:System.Data.SqlClient.SqlDataReader>의 출력을 콘솔 창에 표시합니다.  
   
