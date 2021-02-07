@@ -1,13 +1,14 @@
 ---
+description: '에 대 한 자세한 정보: CLR 통합 보안 SQL Server'
 title: SQL Server의 CLR 통합 보안
 ms.date: 03/30/2017
 ms.assetid: 489fe096-fd1d-42de-8438-bf7aed46aea2
-ms.openlocfilehash: e5d15b4e5ac36f7ecddf45179c65a60995a1a578
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5de552c0f5b869712d2038b53abd50b8ded04747
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147777"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718540"
 ---
 # <a name="clr-integration-security-in-sql-server"></a>SQL Server의 CLR 통합 보안
 

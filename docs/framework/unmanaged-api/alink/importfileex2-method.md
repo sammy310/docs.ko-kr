@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ImportFileEx2 메서드'
 title: ImportFileEx2 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02c789fd-16fc-48c6-9619-56e87e2a37ca
 topic_type:
 - apiref
-ms.openlocfilehash: 59149e79e926a0b9a3e549e013bf178e54ddf6fa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0968318ab7e416e56b71f2f30f2745d538d0ff8a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705178"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718007"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2 메서드
 
@@ -66,7 +67,7 @@ HRESULT ImportFileEx2(
  `pdwCountOfScopes`  
  가져온 파일 및/또는 범위의 수를 받습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -74,7 +75,7 @@ HRESULT ImportFileEx2(
 
  Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink2 인터페이스](ialink2-interface.md)
 - [IALink 인터페이스](ialink-interface.md)

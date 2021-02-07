@@ -1,13 +1,14 @@
 ---
+description: ADO.NET에서 Side-by-side 실행에 대해 자세히 알아보세요.
 title: Side-by-Side 실행
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 609fc7b7cefd92e38ecfff54e5ac1651e855e4b7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ab55430382f49c40a577d5cac8501c0136c9f0a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91188940"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718774"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET에서 Side-by-Side 실행
 
@@ -25,9 +26,9 @@ ms.locfileid: "91188940"
 
  버전 1.1부터 ODBC ()에 대 한 .NET Framework Data Provider <xref:System.Data.Odbc> .NET Framework 일부로 포함 됩니다.
   
- ODBC 데이터 공급자를 사용 하 여 데이터 원본에 연결 하는 .NET Framework 버전 1.0 용 응용 프로그램을 개발 했 고 .NET Framework 버전 1.1 이상 버전에서 해당 응용 프로그램을 실행 하려는 경우 ODBC 데이터 공급자에 대 한 네임 **스페이스를 system.xml로 업데이트**해야 합니다. 그런 다음 최신 버전의 .NET Framework에 대해 다시 컴파일해야 합니다.  
+ ODBC 데이터 공급자를 사용 하 여 데이터 원본에 연결 하는 .NET Framework 버전 1.0 용 응용 프로그램을 개발 했 고 .NET Framework 버전 1.1 이상 버전에서 해당 응용 프로그램을 실행 하려는 경우 ODBC 데이터 공급자에 대 한 네임 **스페이스를 system.xml로 업데이트** 해야 합니다. 그런 다음 최신 버전의 .NET Framework에 대해 다시 컴파일해야 합니다.  
   
- ODBC 데이터 공급자를 사용 하 여 데이터 원본에 연결 하는 .NET Framework 버전 2.0 이상 버전의 응용 프로그램을 개발한 경우 .NET Framework 버전 1.0에서 해당 응용 프로그램을 실행 하려면 ODBC 데이터 공급자를 다운로드 하 고 .NET Framework 버전 1.0 시스템에 설치 해야 합니다. 그런 다음 ODBC 데이터 공급자에 대 한 네임 스페이스를 **Microsoft. data. odbc**로 변경 하 고 .NET Framework 버전 1.0에 대 한 응용 프로그램을 다시 컴파일해야 합니다.  
+ ODBC 데이터 공급자를 사용 하 여 데이터 원본에 연결 하는 .NET Framework 버전 2.0 이상 버전의 응용 프로그램을 개발한 경우 .NET Framework 버전 1.0에서 해당 응용 프로그램을 실행 하려면 ODBC 데이터 공급자를 다운로드 하 고 .NET Framework 버전 1.0 시스템에 설치 해야 합니다. 그런 다음 ODBC 데이터 공급자에 대 한 네임 스페이스를 **Microsoft. data. odbc** 로 변경 하 고 .NET Framework 버전 1.0에 대 한 응용 프로그램을 다시 컴파일해야 합니다.  
   
 ## <a name="the-net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle  
 
@@ -62,7 +63,7 @@ SELECT * FROM dbo.Customers;
   
  이러한 변경은 <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> 두 버전의 .NET Framework에 대 한의 동작에 의존 하는 경우 응용 프로그램의 이후 버전과 이전 버전과의 호환성에 모두 영향을 줄 수 있습니다.  
   
- 이전 및 이후 버전의 .NET Framework에서 실행 되는 응용 프로그램의 경우 실행 중인 버전과 관계 없이 동작이 동일한 지 확인 하기 위해 코드를 작성할 수 있습니다. 명령을 통해 모든 후속 명령에 대한 연결 상태가 수정되도록 하려면 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>를 사용하여 명령을 실행하는 것이 좋습니다. 명령을 통해 모든 후속 명령에 대한 연결이 수정되지 않도록 하려면 명령에 연결 상태를 다시 설정하는 명령을 포함하는 것이 좋습니다. 다음은 그 예입니다.  
+ 이전 및 이후 버전의 .NET Framework에서 실행 되는 응용 프로그램의 경우 실행 중인 버전과 관계 없이 동작이 동일한 지 확인 하기 위해 코드를 작성할 수 있습니다. 명령을 통해 모든 후속 명령에 대한 연결 상태가 수정되도록 하려면 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>를 사용하여 명령을 실행하는 것이 좋습니다. 명령을 통해 모든 후속 명령에 대한 연결이 수정되지 않도록 하려면 명령에 연결 상태를 다시 설정하는 명령을 포함하는 것이 좋습니다. 예를 들면 다음과 같습니다.  
   
 ```sql
 SET NOCOUNT ON;  

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 보안 개요'
 title: 보안 개요
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: ede9b24828da74c043bed103595073c4607c51f2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3aa6e5cbe444e9cfc417d79defce7e89a2034f71
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91188995"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718826"
 ---
 # <a name="security-overview"></a>보안 개요
 
@@ -21,7 +22,7 @@ ms.locfileid: "91188995"
 
 ### <a name="threat-modeling"></a>위협 모델링
 
- 노출되어 있는 모든 잠재적인 공격을 이해하지 못하면 시스템을 공격으로부터 보호할 수 없습니다. ADO.NET 응용 프로그램에서 보안 위반의 가능성 및 결과를 확인 하려면 *위협 모델링*이라고 하는 보안 위협 평가 프로세스가 필요 합니다.
+ 노출되어 있는 모든 잠재적인 공격을 이해하지 못하면 시스템을 공격으로부터 보호할 수 없습니다. ADO.NET 응용 프로그램에서 보안 위반의 가능성 및 결과를 확인 하려면 *위협 모델링* 이라고 하는 보안 위협 평가 프로세스가 필요 합니다.
 
  위협 모델링은 크게 공격자의 의도 파악, 시스템 보안 특성 결정, 위협 요소 확인이라는 세 단계로 구성됩니다.
 

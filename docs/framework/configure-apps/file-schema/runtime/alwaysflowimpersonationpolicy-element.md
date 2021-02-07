@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <alwaysFlowImpersonationPolicy> 요소'
 title: <alwaysFlowImpersonationPolicy> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - alwaysFlowImpersonationPolicy element
 - <alwaysFlowImpersonationPolicy> element
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
-ms.openlocfilehash: 9316f026a807b6ad36014157061f67bdbd7d3d18
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5ee8e763eddb810143522ce9e6df780ee77c26c3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149441"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719372"
 ---
 # <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy> 요소
 
@@ -42,9 +43,9 @@ ms.locfileid: "91149441"
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
-|`false`|와 같은 관리 되는 메서드를 통해 가장을 수행 하지 않는 한, Windows id는 비동기 요소를 통해 전달 되지 않습니다 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> . 이것이 기본값입니다.|  
+|`false`|와 같은 관리 되는 메서드를 통해 가장을 수행 하지 않는 한, Windows id는 비동기 요소를 통해 전달 되지 않습니다 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> . 기본값입니다.|  
 |`true`|Windows id는 가장이 수행 된 방법에 관계 없이 항상 비동기 요소를 통해 흐릅니다.|  
   
 ### <a name="child-elements"></a>자식 요소  

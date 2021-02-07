@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 보안 클라이언트 응용 프로그램'
 title: 안전한 클라이언트 애플리케이션
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 96b43d28d3e22df66cb7f7010916b5c7f7a86b77
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a40a6444c2e317b03f03688ca46de157ded6f0ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189008"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718956"
 ---
 # <a name="secure-client-applications"></a>안전한 클라이언트 애플리케이션
 
@@ -26,7 +27,7 @@ ms.locfileid: "91189008"
  [ASP.NET 웹 페이지에서 사용자 입력 유효성 검사](/previous-versions/aspnet/7kh55542(v=vs.100))  
  ASP.NET 유효성 검사 컨트롤을 통한 사용자 입력 유효성 검사에 대해 간략하게 설명합니다.  
   
- [Windows Forms에 사용자 입력](/dotnet/desktop/winforms/user-input-in-windows-forms)  
+ [Windows Forms의 사용자 입력](/dotnet/desktop/winforms/user-input-in-windows-forms)  
  Windows Forms 애플리케이션의 마우스 및 키보드 입력에 대한 유효성 검사와 관련된 정보 및 링크를 제공합니다.  
   
  [.NET Framework 정규식](../../../standard/base-types/regular-expressions.md)  

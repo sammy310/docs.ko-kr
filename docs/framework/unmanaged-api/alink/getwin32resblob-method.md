@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: GetWin32ResBlob 메서드'
 title: GetWin32ResBlob 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36997e04-f9f6-4254-a041-6767ac6c51d9
 topic_type:
 - apiref
-ms.openlocfilehash: 03f6c97b4a5bbbdc0aeaf7b3f07277e66d7d0e9a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e1140b14bfba56dfac03c443a537d6d2188575b8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684514"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718267"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob 메서드
 
@@ -58,7 +59,7 @@ HRESULT GetWin32ResBlob(
  `pcbResBlob`  
  Blob의 크기를 수신 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -66,7 +67,7 @@ HRESULT GetWin32ResBlob(
 
  Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

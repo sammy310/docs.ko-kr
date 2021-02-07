@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: GetPublicKeyToken 메서드'
 title: GetPublicKeyToken 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a16374c-94b0-47b0-9fed-88c2b0cdccd4
 topic_type:
 - apiref
-ms.openlocfilehash: e41be6407076a2609a83a5be3b0c42d28914ec38
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b864c1dc61c7498ccca6aa04ef29b57a30e1a9ea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720344"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718423"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken 메서드
 
@@ -50,7 +51,7 @@ HRESULT GetPublicKeyToken(
  `pcbPublicKeyToken`  
  로 표시 되는 버퍼의 크기 (바이트)를 지정 합니다 `pvPublicKeyToken` . 반환 시 실제 사용 된 바이트 수를 포함 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -58,7 +59,7 @@ HRESULT GetPublicKeyToken(
 
  Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink2 인터페이스](ialink2-interface.md)
 - [IALink 인터페이스](ialink-interface.md)

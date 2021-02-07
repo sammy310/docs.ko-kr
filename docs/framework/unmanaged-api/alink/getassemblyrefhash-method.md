@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: GetAssemblyRefHash 메서드'
 title: GetAssemblyRefHash 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 091a18bd-e901-46f6-b999-74d71c8a7c41
 topic_type:
 - apiref
-ms.openlocfilehash: af040c4a6c9b85930d2d9261f8587ba69eb204e5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d8222d2fdd2c05ca1a23f881989dc344ba294bc1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721480"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718475"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash 메서드
 
@@ -46,7 +47,7 @@ HRESULT GetAssemblyRefHash(
  `pcbHash`  
  해시 blob의 크기 (바이트)를 수신 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -54,7 +55,7 @@ HRESULT GetAssemblyRefHash(
 
  Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

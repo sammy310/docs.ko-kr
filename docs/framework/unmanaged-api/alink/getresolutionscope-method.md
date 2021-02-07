@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: GetResolutionScope 메서드'
 title: GetResolutionScope 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5b48ca60-dacd-44b2-9979-4a5122f00812
 topic_type:
 - apiref
-ms.openlocfilehash: 6318890dd6f0259d8d6a7675380684a129c14c8b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: add8ccb1ef6eb0f4b688dcf80563e9280099120d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684679"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718397"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope 메서드
 
@@ -50,7 +51,7 @@ HRESULT GetResolutionScope(
  `pScope`  
  어셈블리 또는 모듈 참조를 수신 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -58,7 +59,7 @@ HRESULT GetResolutionScope(
 
  Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

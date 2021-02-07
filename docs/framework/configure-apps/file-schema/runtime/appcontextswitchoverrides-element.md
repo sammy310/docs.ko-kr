@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <AppContextSwitchOverrides> 요소'
 title: AppContextSwitchOverrides 요소
 ms.date: 04/18/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: ab74886edcc86c900c56017867a3b81c9cb7886e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1c2e4ceaec83ee23990c2146960f602eb12361a6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176151"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719333"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> 요소
 
@@ -40,7 +41,7 @@ ms.locfileid: "91176151"
 
 ### <a name="value-attribute"></a>value 특성
 
-|Value|설명|
+|값|설명|
 |-----------|-----------------|
 |"name = value"|값 (또는)과 함께 미리 정의 된 스위치 이름 `true` `false` 입니다. 여러 스위치 이름/값 쌍은 세미콜론 (";")으로 구분 됩니다. .NET Framework에서 지 원하는 미리 정의 된 스위치 이름 목록은 설명 섹션을 참조 하세요.|
 

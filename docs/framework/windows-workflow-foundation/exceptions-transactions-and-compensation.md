@@ -1,15 +1,16 @@
 ---
+description: '에 대 한 자세한 정보: 예외, 트랜잭션 및 보정'
 title: 예외, 트랜잭션 및 보정
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], error handling
 ms.assetid: 694db4f9-7387-4b13-8f9f-b923b18c7490
-ms.openlocfilehash: 2d8574c0f0f6bd3f66214367c1ed15292adc24a9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3188b0238b1909847c289bb56274671ff4b307b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280249"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99720191"
 ---
 # <a name="exceptions-transactions-and-compensation"></a>예외, 트랜잭션 및 보정
 

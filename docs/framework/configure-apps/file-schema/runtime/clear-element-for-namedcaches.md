@@ -1,16 +1,17 @@
 ---
+description: '에 대 한 자세한 정보: <clear> 요소 <namedCaches>'
 title: <namedCaches>에 대한 <clear> 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <clear> element for <namedCaches>
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
-ms.openlocfilehash: d65712f091c5fb9212167b4759c70db7e5d744c1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9d883c102fc76875ce155f353920f730bf9700c4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149415"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719099"
 ---
 # <a name="clear-element-for-namedcaches"></a>\<namedCaches>에 대한 \<clear> 요소
 
@@ -22,7 +23,7 @@ ms.locfileid: "91149415"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <namedCaches>  
@@ -31,7 +32,7 @@ ms.locfileid: "91149415"
  </namedCaches>  
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
 
  `Type`  
   

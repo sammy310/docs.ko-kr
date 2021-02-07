@@ -1,20 +1,21 @@
 ---
+description: '자세한 정보: 스키마 제한 사항'
 title: 스키마 제한
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: c0a3cafef45341cd95fa0a4f65c818129e120e44
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 74ddfe5b8aaf9b8193e0c0b2a929ccde333eac26
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147826"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719047"
 ---
 # <a name="schema-restrictions"></a>스키마 제한
 
-**Getschema** 메서드의 두 번째 선택적 매개 변수는 반환 되는 스키마 정보의 양을 제한 하는 데 사용 되는 제한 사항이 며 **getschema** 메서드에 문자열 배열로 전달 됩니다. 배열의 위치는 전달할 수 있는 값을 결정하며 이 위치는 제한 번호와 동일합니다.  
+**GetSchema** 메서드의 두 번째 선택적 매개 변수는 반환되는 스키마 정보의 양을 제한하는 데 사용되는 제한이며, **GetSchema** 메서드에 문자열 배열로 전달됩니다. 배열의 위치는 전달할 수 있는 값을 결정하며 이 위치는 제한 번호와 동일합니다.  
   
  예를 들어 다음 표에는 .NET Framework Data Provider for SQL Server를 사용하는 "Table" 스키마 컬렉션에서 지원되는 제한에 대한 설명이 나와 있습니다. SQL Server 스키마 컬렉션의 추가 제한은 이 항목의 맨 마지막에 나열되어 있습니다.  
   
@@ -27,7 +28,7 @@ ms.locfileid: "91147826"
   
 ## <a name="specifying-restriction-values"></a>제한 값 지정  
 
- "Tables" 스키마 컬렉션의 제한 중 하나를 사용하려면 네 가지 요소로 된 문자열 배열을 만든 다음 제한 번호와 일치하는 요소에 값을 지정하면 됩니다. 예를 들어 **getschema** 메서드에서 반환 되는 테이블을 "sales" 스키마의 테이블로만 제한 하려면 **getschema** 메서드로 전달 하기 전에 배열의 두 번째 요소를 "sales"로 설정 합니다.  
+ "Tables" 스키마 컬렉션의 제한 중 하나를 사용하려면 네 가지 요소로 된 문자열 배열을 만든 다음 제한 번호와 일치하는 요소에 값을 지정하면 됩니다. 예를 들어, **GetSchema** 메서드에서 “Sales” 스키마의 테이블만 반환하도록 제한하려면 **GetSchema** 메서드로 전달하기 전에 배열의 두 번째 요소를 “Sales”로 설정합니다.  
   
 > [!NOTE]
 > `SqlClient` 및 `OracleClient`의 제한 컬렉션에는 하나의 추가 `ParameterName` 열이 있습니다. 제한 기본 열은 이전 버전과 여전히 호환되지만 현재는 무시됩니다. 문자열 대체보다는 매개 변수가 있는 쿼리를 사용하여 제한 값을 지정할 때 SQL 삽입 공격 위험을 최소화해야 합니다.  
@@ -147,7 +148,7 @@ class Program
   
 |제한 이름|매개 변수 이름|제한 기본값|제한 번호|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|이름|@Name|속성|1|  
+|속성|@Name|속성|1|  
   
 ### <a name="tables"></a>테이블  
   
@@ -199,7 +200,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |카탈로그|@Catalog|SPECIFIC_CATALOG|1|  
 |소유자|@Owner|SPECIFIC_SCHEMA|2|  
-|이름|@Name|SPECIFIC_NAME|3|  
+|속성|@Name|SPECIFIC_NAME|3|  
 |매개 변수|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>프로시저  
@@ -208,7 +209,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |카탈로그|@Catalog|SPECIFIC_CATALOG|1|  
 |소유자|@Owner|SPECIFIC_SCHEMA|2|  
-|이름|@Name|SPECIFIC_NAME|3|  
+|속성|@Name|SPECIFIC_NAME|3|  
 |형식|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
@@ -243,7 +244,7 @@ class Program
 |카탈로그|@Catalog|CONSTRAINT_CATALOG|1|  
 |소유자|@Owner|CONSTRAINT_SCHEMA|2|  
 |테이블|@Table|TABLE_NAME|3|  
-|이름|@Name|CONSTRAINT_NAME|4|  
+|속성|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008  
 
@@ -266,6 +267,6 @@ class Program
 |테이블|@Table|TABLE_NAME|3|  
 |열|@Column|COLUMN_NAME|4|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ADO.NET 개요](ado-net-overview.md)

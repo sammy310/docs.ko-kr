@@ -1,16 +1,17 @@
 ---
+description: '다음에 대 한 자세한 정보: <appDomainResourceMonitoring> 요소'
 title: <appDomainResourceMonitoring> 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - appDomainResourceMonitoring element
 - <appDomainResourceMonitoring> element
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
-ms.openlocfilehash: 9ecf2e382b5d483377df871835793219b3f74760
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: aee85386e6d0af2ca4fd30c0ad8fe69bae240315
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170274"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719294"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring> 요소
 
@@ -39,7 +40,7 @@ ms.locfileid: "91170274"
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |`true`|응용 프로그램 도메인 리소스 모니터링에 대 한 통계가 수집 됩니다.|  
 |`false`|응용 프로그램 도메인 리소스 모니터링에 대 한 통계는 수집 되지 않습니다.|  

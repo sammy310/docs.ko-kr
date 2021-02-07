@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IALink3 인터페이스'
 title: IALink3 인터페이스
 ms.date: 03/30/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - IALink3 interface
 ms.assetid: a96bf3cc-75a0-49c9-bf5e-4d7ad5dab716
-ms.openlocfilehash: 1d2da9d1d4c6029c3763f652a8ef30aa612dc2ce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ea432af56d9b7aabf5fd663cf5e7688e3d3299c4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705256"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718215"
 ---
 # <a name="ialink3-interface"></a>IALink3 인터페이스
 
@@ -22,7 +23,7 @@ ms.locfileid: "95705256"
  [SetManifestFile 메서드](setmanifestfile-method.md)  
  링커가 어셈블리를 만들 때 사용 하는 매니페스트 파일을 지정 하거나 다시 설정할 수 있습니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [ALink API](index.md)  
  .NET Framework 어셈블리 및 바인딩되지 않은 모듈 만들기를 지원합니다.  

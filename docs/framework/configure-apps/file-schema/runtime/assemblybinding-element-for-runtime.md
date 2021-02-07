@@ -1,4 +1,5 @@
 ---
+description: '에 대 한 자세한 정보: <assemblyBinding> 요소 <runtime>'
 title: <runtime>에 대한 <assemblyBinding> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-ms.openlocfilehash: b6a39bcecfd2485481677496adcf026d986c283b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a797b541f9f13852234872f1eb2fc68a2eac727d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170248"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719229"
 ---
 # <a name="assemblybinding-element-for-runtime"></a>\<runtime>에 대한 \<assemblyBinding> 요소
 

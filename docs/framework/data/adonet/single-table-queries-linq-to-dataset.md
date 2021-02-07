@@ -1,20 +1,21 @@
 ---
+description: '다음에 대 한 자세한 정보: Single-Table 쿼리 (LINQ to DataSet)'
 title: 단일 클래스 쿼리(LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 17a2fcf54cae64d9443b0cc0e8a37e1002bbd394
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a4b6ce2a60eeafc9221d838d1b86c9964774df60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175358"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718761"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>단일 클래스 쿼리(LINQ to DataSet)
 
-LINQ (언어 통합 쿼리) 쿼리는 인터페이스 또는 인터페이스를 구현 하는 데이터 소스에서 작동 <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Linq.IQueryable%601> 합니다. <xref:System.Data.DataTable>클래스는 두 인터페이스를 모두 구현 하지 않으므로 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> <xref:System.Data.DataTable> LINQ 쿼리의 절에서를 소스로 사용 하려면 메서드를 호출 해야 합니다 `From` .  
+LINQ (Language-Integrated Query) 쿼리는 인터페이스 또는 인터페이스를 구현 하는 데이터 소스에서 작동 <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Linq.IQueryable%601> 합니다. <xref:System.Data.DataTable>클래스는 두 인터페이스를 모두 구현 하지 않으므로 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> <xref:System.Data.DataTable> LINQ 쿼리의 절에서를 소스로 사용 하려면 메서드를 호출 해야 합니다 `From` .  
   
  다음 예제에서는 SalesOrderHeader 테이블에서 모든 온라인 주문을 가져와서 주문 ID, 주문 날짜 및 주문 번호를 콘솔에 출력합니다.  
   

@@ -1,20 +1,21 @@
 ---
+description: '자세한 정보: DataView를 사용 하 여 정렬 (LINQ to DataSet)'
 title: DataView로 정렬(LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: d80c00a4b06a31f61a521e7206c204c02106748a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ac07e5bc2c74a5724a4497d630d7352694ac9a7a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175280"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718683"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>DataView로 정렬(LINQ to DataSet)
 
-특정 조건을 기준으로 데이터를 정렬한 다음 UI 컨트롤을 통해 클라이언트에 데이터를 제공하는 기능은 데이터 바인딩의 중요한 기능입니다. <xref:System.Data.DataView>에서는 데이터를 정렬하여 특정 정렬 기준에 따라 정렬된 데이터 행을 반환하는 여러 방법을 제공합니다. 는 문자열 기반 정렬 기능 뿐만 아니라 <xref:System.Data.DataView> 정렬 조건에 LINQ (통합 언어 쿼리) 식을 사용할 수도 있습니다. LINQ 식을 사용 하면 문자열 기반 정렬에 비해 더 복잡 하 고 강력한 정렬 작업을 수행할 수 있습니다. 이 항목에서는 <xref:System.Data.DataView>를 사용하여 정렬하는 두 가지 방법을 모두 설명합니다.  
+특정 조건을 기준으로 데이터를 정렬한 다음 UI 컨트롤을 통해 클라이언트에 데이터를 제공하는 기능은 데이터 바인딩의 중요한 기능입니다. <xref:System.Data.DataView>에서는 데이터를 정렬하여 특정 정렬 기준에 따라 정렬된 데이터 행을 반환하는 여러 방법을 제공합니다. 문자열 기반 정렬 기능 외에 <xref:System.Data.DataView> 도를 사용 하 여 정렬 기준으로 LINQ (Language-Integrated Query) 식을 사용할 수 있습니다. LINQ 식을 사용 하면 문자열 기반 정렬에 비해 더 복잡 하 고 강력한 정렬 작업을 수행할 수 있습니다. 이 항목에서는 <xref:System.Data.DataView>를 사용하여 정렬하는 두 가지 방법을 모두 설명합니다.  
   
 ## <a name="creating-dataview-from-a-query-with-sorting-information"></a>정렬 정보가 있는 쿼리에서 DataView 만들기  
 

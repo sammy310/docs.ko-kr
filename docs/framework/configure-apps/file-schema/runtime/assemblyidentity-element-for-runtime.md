@@ -1,4 +1,5 @@
 ---
+description: '에 대 한 자세한 정보: <assemblyIdentity> 요소 <runtime>'
 title: <runtime>에 대한 <assemblyIdentity> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: f3e74b05ac0fd7c57963f2aad047ba3f2d63a10a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d53c4f7f5207fbcf9ad4a8f82667eacc1f57f5e2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170183"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719190"
 ---
 # <a name="assemblyidentity-element-for-runtime"></a>\<runtime>에 대한 \<assemblyIdentity> 요소
 
@@ -50,7 +51,7 @@ culture="assembly culture"/>
   
 ## <a name="processorarchitecture-attribute"></a>processorArchitecture 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |`amd64`|AMD x86-64 아키텍처 전용.|  
 |`ia64`|Intel Itanium 아키텍처에만 해당 합니다.|  

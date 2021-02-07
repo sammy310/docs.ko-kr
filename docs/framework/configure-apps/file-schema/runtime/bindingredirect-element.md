@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <bindingRedirect> 요소'
 title: <bindingRedirect> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-ms.openlocfilehash: 7667f78d2c341990585526fd153c0b230658a2ee
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 833ee73fa11d179ac855f3ac4d2bca8d7a2226ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167251"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719177"
 ---
 # <a name="bindingredirect-element"></a>\<bindingRedirect> 요소
 
@@ -42,7 +43,7 @@ newVersion="new assembly version"/>
   
 |attribute|설명|  
 |---------------|-----------------|  
-|`oldVersion`|필수 특성입니다.<br /><br /> 원래 요청된 어셈블리 버전을 지정합니다. 어셈블리 버전 번호의 형식은 주 버전. *부 버전. 빌드. 수정 버전*입니다. 이 버전 번호의 각 부분에 사용할 수 있는 값은 0부터 65535까지입니다.<br /><br /> 다음 형식으로 다양한 버전을 지정할 수도 있습니다.<br /><br /> *n.n.n.n. n. n. n. n. n. n. n*|  
+|`oldVersion`|필수 특성입니다.<br /><br /> 원래 요청된 어셈블리 버전을 지정합니다. 어셈블리 버전 번호의 형식은 주 버전. *부 버전. 빌드. 수정 버전* 입니다. 이 버전 번호의 각 부분에 사용할 수 있는 값은 0부터 65535까지입니다.<br /><br /> 다음 형식으로 다양한 버전을 지정할 수도 있습니다.<br /><br /> *n.n.n.n. n. n. n. n. n. n. n*|  
 |`newVersion`|필수 특성입니다.<br /><br /> 원래 요청 된 버전 대신 다음 형식으로 사용할 어셈블리의 버전을 지정 *합니다. n* . n. n<br /><br /> 이 값은 `oldVersion`보다 이전 버전을 지정할 수 있습니다.|  
   
 ### <a name="child-elements"></a>자식 요소  

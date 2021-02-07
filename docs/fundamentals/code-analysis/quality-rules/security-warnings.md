@@ -12,12 +12,12 @@ helpviewer_keywords:
 - rules, security
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: e907905b065d786fc8b3c370fb2d2e2b19e62a2b
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 861827662a771ec7cc1827cdd8125be6c05bf05c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "96594087"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719723"
 ---
 # <a name="security-rules"></a>보안 규칙
 
@@ -93,7 +93,7 @@ ms.locfileid: "96594087"
 |[CA5375: 계정 공유 액세스 시그니처를 사용하지 마세요.](ca5375.md)|계정 SAS는 서비스 SAS로 허용 되지 않는 blob 컨테이너, 테이블, 큐 및 파일 공유에 대 한 읽기, 쓰기 및 삭제 작업에 대 한 액세스를 위임할 수 있습니다. 그러나 컨테이너 수준 정책을 지원 하지 않으며 부여 된 사용 권한에 대 한 유연성과 제어 수준이 낮습니다. 악의적인 사용자가이를 가져오면 저장소 계정이 쉽게 손상 됩니다.|
 |[CA5376: SharedAccessProtocol HttpsOnly를 사용하세요.](ca5376.md)|SAS는 HTTP에서 일반 텍스트로 전송할 수 없는 중요 한 데이터입니다.|
 |[CA5377: 컨테이너 수준 액세스 정책을 사용하세요.](ca5377.md)|컨테이너 수준 액세스 정책은 언제 든 지 수정 하거나 취소할 수 있습니다. 이를 통해 부여 되는 사용 권한을 보다 유연 하 게 제어할 수 있습니다.|
-|[CA5378: ServicePointManagerSecurityProtocols를 비활성화하지 마세요.](ca5378.md)|`Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols`로 설정 `true` 하면 Windows Communication FRAMEWORK의 Tls (전송 계층 보안) 연결을 tls 1.0을 사용 하도록 제한 합니다. 해당 버전의 TLS는 더 이상 사용 되지 않습니다.|
+|[CA5378: ServicePointManagerSecurityProtocols를 비활성화하지 마세요.](ca5378.md)|`DisableUsingServicePointManagerSecurityProtocols`로 설정 `true` 하면 Windows Communication FRAMEWORK의 Tls (전송 계층 보안) 연결을 tls 1.0을 사용 하도록 제한 합니다. 해당 버전의 TLS는 더 이상 사용 되지 않습니다.|
 |[CA5379: 키 파생 함수 알고리즘이 충분히 강력한 지 확인 합니다.](ca5379.md)|<xref:System.Security.Cryptography.Rfc2898DeriveBytes>클래스는 기본적으로 알고리즘을 사용 <xref:System.Security.Cryptography.HashAlgorithmName.SHA1> 합니다. 이상에서 생성자의 일부 오버 로드에 사용할 해시 알고리즘을 지정 해야 합니다 <xref:System.Security.Cryptography.HashAlgorithmName.SHA256> . 속성에는 <xref:System.Security.Cryptography.Rfc2898DeriveBytes.HashAlgorithm> 접근자만 있으며 `get` 한정자가 없습니다 `overriden` .|
 |[CA5380: 루트 저장소에 인증서를 추가하지 마세요.](ca5380.md)|이 규칙은 신뢰할 수 있는 루트 인증 기관 인증서 저장소에 인증서를 추가 하는 코드를 검색 합니다. 기본적으로 신뢰할 수 있는 루트 인증 기관 인증서 저장소는 Microsoft 루트 인증서 프로그램의 요구 사항을 충족 하는 공용 Ca 집합을 사용 하 여 구성 됩니다.|
 |[CA5381: 인증서가 루트 저장소에 추가되지 않았는지 확인하세요.](ca5381.md)|이 규칙은 잠재적으로 신뢰할 수 있는 루트 인증 기관 인증서 저장소에 인증서를 추가 하는 코드를 검색 합니다. 기본적으로 신뢰할 수 있는 루트 인증 기관 인증서 저장소는 Microsoft 루트 인증서 프로그램의 요구 사항을 충족 하는 공용 Ca (인증 기관) 집합으로 구성 됩니다.|

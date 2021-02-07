@@ -1,17 +1,18 @@
 ---
+description: SQL Server 스키마 컬렉션에 대해 자세히 알아보세요.
 title: SQL Server 스키마 컬렉션
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: ebb0cea20aede3d04e37536c7c615678e109337a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0299daada77b6968a0b1f875956da7bd2a221322
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197666"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718670"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server 스키마 컬렉션
 
-Microsoft .NET Framework Data Provider for SQL Server는 공통 스키마 컬렉션뿐만 아니라 다른 스키마 컬렉션도 추가적으로 지원합니다. 지원되는 스키마 컬렉션은 현재 사용하고 있는 SQL Sever 버전에 따라 조금씩 다를 수 있습니다. 지원 되는 스키마 컬렉션의 목록을 확인 하려면 인수 없이 **GetSchema** 메서드를 호출 하거나 스키마 컬렉션 이름 "MetaDataCollections"을 사용 합니다. 그러면 지원되는 스키마 컬렉션의 목록, 각자 지원하는 제약 조건 수 및 사용하는 식별자 부분 수가 포함된 <xref:System.Data.DataTable>이 반환됩니다.  
+Microsoft .NET Framework Data Provider for SQL Server는 공통 스키마 컬렉션뿐만 아니라 다른 스키마 컬렉션도 추가적으로 지원합니다. 지원되는 스키마 컬렉션은 현재 사용하고 있는 SQL Sever 버전에 따라 조금씩 다를 수 있습니다. 지원되는 스키마 컬렉션 목록을 확인하려면 **GetSchema** 메서드를 인수 없이 호출하거나 “MetaDataCollections”라는 스키마 컬렉션 이름을 사용하여 호출합니다. 그러면 지원되는 스키마 컬렉션의 목록, 각자 지원하는 제약 조건 수 및 사용하는 식별자 부분 수가 포함된 <xref:System.Data.DataTable>이 반환됩니다.  
   
 ## <a name="databases"></a>데이터베이스  
   
@@ -53,7 +54,7 @@ Microsoft .NET Framework Data Provider for SQL Server는 공통 스키마 컬렉
   
 |ColumnName|DataType|설명|  
 |----------------|--------------|-----------------|  
-|type_desc|String|인덱스 형식은 다음 중 하나입니다.<br /><br /> -힙<br />-클러스터형<br />-비클러스터형<br />-XML<br />-공간|  
+|type_desc|String|인덱스 형식은 다음 중 하나입니다.<br /><br /> -   HEAP<br />-   CLUSTERED<br />-   NONCLUSTERED<br />-   XML<br />-   SPATIAL|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -260,7 +261,7 @@ Microsoft .NET Framework Data Provider for SQL Server는 공통 스키마 컬렉
 |Create_Date|DateTime|어셈블리가 만들어져 등록된 날짜입니다.|  
 |Permission_set_desc|String|어셈블리의 권한 집합/보안 수준 이름입니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터베이스 스키마 정보 검색](retrieving-database-schema-information.md)
 - [ADO.NET 개요](ado-net-overview.md)

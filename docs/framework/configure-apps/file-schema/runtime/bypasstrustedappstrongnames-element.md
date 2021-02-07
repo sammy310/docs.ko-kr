@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <bypassTrustedAppStrongNames> 요소'
 title: <bypassTrustedAppStrongNames> 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
-ms.openlocfilehash: 96361a6742d1d2f76cb237344189d3277d7c8069
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d23b9efa19481027480f2a1c7dab22bc97a05e13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73739091"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719164"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 요소
 
@@ -35,13 +36,13 @@ ms.locfileid: "73739091"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`enabled`|필수 특성입니다.<br /><br /> 완전 신뢰 어셈블리의 강력한 이름 유효성 검사를 방지 하는 바이패스 기능을 사용 하도록 설정할지 여부를 지정 합니다. 이 기능을 사용 하는 경우 어셈블리가 로드 될 때 강력한 이름의 유효성이 검사 되지 않습니다. 기본값은 `true`입니다.|
 
 ## <a name="enabled-attribute"></a>enabled 특성
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |`true`|완전 신뢰 어셈블리의 강력한 이름 서명은 어셈블리가 완전 신뢰로 로드 될 때 유효성이 검사 되지 않습니다 <xref:System.AppDomain> . 기본값입니다.|
 |`false`|완전 신뢰 어셈블리의 강력한 이름 서명은 어셈블리가 완전 신뢰로 로드 될 때 유효성이 검사 됩니다 <xref:System.AppDomain> . 강력한 이름 시그니처는 서명 정확성에 대해서만 확인 됩니다. 일치 항목에 대 한 다른 강력한 이름과 비교 되지 않습니다.|
@@ -52,7 +53,7 @@ ms.locfileid: "73739091"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|
@@ -72,7 +73,7 @@ ms.locfileid: "73739091"
 - 서명이 연기되지 않음
 
 > [!NOTE]
-> 레지스트리 키를 사용 하 여 컴퓨터의 모든 응용 프로그램에 대해 바이패스 기능이 꺼져 있는 경우이 구성 파일 설정은 적용 되지 않습니다. 자세한 내용은 [방법: 강력한 이름 건너뛰기 기능 사용 안 함](../../../../standard/assembly/disable-strong-name-bypass-feature.md)을 참조 하세요.
+> 레지스트리 키를 사용 하 여 컴퓨터의 모든 응용 프로그램에 대해 바이패스 기능이 꺼져 있는 경우이 구성 파일 설정은 적용 되지 않습니다. 자세한 내용은 [방법: Strong-Name 바이패스 기능 사용 안 함](../../../../standard/assembly/disable-strong-name-bypass-feature.md)을 참조 하세요.
 
 ## <a name="example"></a>예제
 

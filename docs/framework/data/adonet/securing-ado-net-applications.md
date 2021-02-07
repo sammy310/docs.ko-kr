@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ADO.NET 응용 프로그램 보안'
 title: 애플리케이션 보안
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: af184f64b43c2d3dc39f8c0add08940d3b002c24
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e4d219d1f4249846943d019e174abd6d43687c7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550757"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718878"
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET 응용 프로그램 보안
 
@@ -57,7 +58,7 @@ ms.locfileid: "90550757"
  [보안 참고 자료](/visualstudio/ide/securing-applications)  
  온라인 및 인쇄 작업에서 사용 가능한 외부 리소스의 링크를 제공합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET](index.md)
 - [ADO.NET 개요](ado-net-overview.md)

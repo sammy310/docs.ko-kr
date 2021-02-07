@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: ImportFile 메서드'
 title: ImportFile 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bcbe321f-b83a-4e9a-9f10-8d913e244dc9
 topic_type:
 - apiref
-ms.openlocfilehash: f30307884a268008fd4d1a8de31ec5a49b6ab92d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 82c9c7de7cd739ee205dc3695ea651643d01ea3a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705243"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99718163"
 ---
 # <a name="importfile-method"></a>ImportFile 메서드
 
@@ -58,7 +59,7 @@ HRESULT ImportFile(
  `pdwCountOfScopes`  
  가져온 파일 및/또는 범위 수에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -66,7 +67,7 @@ HRESULT ImportFile(
 
  Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)
