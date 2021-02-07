@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 메시지 보안 샘플'
 title: Message Security 샘플
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-ms.openlocfilehash: 267073d22d3b1b311e0de90454e0f2ec3744cf66
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: adec9df3b2a3b5ba022ec2123a8d90d85869246b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294393"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752303"
 ---
 # <a name="message-security-sample"></a>Message Security 샘플
 

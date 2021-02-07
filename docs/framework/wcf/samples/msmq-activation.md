@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: MSMQ 활성화'
 title: MSMQ 활성화
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 349eadb8f517993c343e81656204ad25e62ed931
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3360ae560cba9c3b42551617beb295154668814b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555239"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752238"
 ---
 # <a name="msmq-activation"></a>MSMQ 활성화
 
@@ -216,13 +217,13 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
 2. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다. 또한 WCF 비 HTTP 활성화 구성 요소를 설치 해야 합니다.
 
-    1. **시작** 메뉴에서 **제어판**을 선택합니다.
+    1. **시작** 메뉴에서 **제어판** 을 선택합니다.
 
-    2. **프로그램 및 기능**을 선택 합니다.
+    2. **프로그램 및 기능** 을 선택 합니다.
 
-    3. **Windows 기능 사용/사용 안 함을**클릭 합니다.
+    3. **Windows 기능 사용/사용 안 함을** 클릭 합니다.
 
-    4. **기능 요약**에서 **기능 추가**를 클릭 합니다.
+    4. **기능 요약** 에서 **기능 추가** 를 클릭 합니다.
 
     5. **Microsoft .NET Framework 3.0** 노드를 확장 하 고 **Windows Communication Foundation 비 HTTP 활성화** 기능을 확인 합니다.
 
@@ -232,13 +233,13 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
 5. MSMQ 활성화 서비스는 기본적으로 네트워크 서비스로 실행됩니다. 따라서 애플리케이션을 활성화하는 데 사용되는 큐는 네트워크 서비스에 대한 수신 및 피킹 권한이 있어야 합니다. 다음과 같이 메시지 큐 MMC를 사용하여 이러한 권한을 추가할 수 있습니다.
 
-    1. **시작** 메뉴에서 **실행**을 클릭 하 고를 입력 `Compmgmt.msc` 한 다음 enter 키를 누릅니다.
+    1. **시작** 메뉴에서 **실행** 을 클릭 하 고를 입력 `Compmgmt.msc` 한 다음 enter 키를 누릅니다.
 
-    2. **서비스 및 응용 프로그램**에서 **메시지 큐**를 확장 합니다.
+    2. **서비스 및 응용 프로그램** 에서 **메시지 큐** 를 확장 합니다.
 
-    3. **개인 큐**를 클릭 합니다.
+    3. **개인 큐** 를 클릭 합니다.
 
-    4. 큐 (servicemodelsamples/서비스 .svc)를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
+    4. 큐 (servicemodelsamples/서비스 .svc)를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다.
 
     5. **보안** 탭에서 **추가** 를 클릭 하 고 네트워크 서비스에 대 한 피킹 (peeking) 및 수신 권한을 부여 합니다.
 
@@ -269,7 +270,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         이 명령을 사용 하면 및을 사용 하 여/servicemodelsamples 응용 프로그램에 액세스할 수 있습니다 `http://localhost/servicemodelsamples` `net.msmq://localhost/servicemodelsamples` .
 
-7. 아직 설정하지 않은 경우 MSMQ 활성화 서비스를 사용하도록 설정합니다. **시작** 메뉴에서 **실행**을 클릭 하 고을 입력 `Services.msc` 합니다. **Net. Msmq 수신기 어댑터**에 대 한 서비스 목록을 검색 합니다. 마우스 오른쪽 단추를 클릭하고 **속성**을 선택합니다. **시작 유형** 을 **자동**으로 설정 하 고 **적용** 을 클릭 한 다음 **시작** 단추를 클릭 합니다. 이 단계는 Net.Msmq Listener Adapter 서비스를 처음 사용하기 전에 한 번만 수행해야 합니다.
+7. 아직 설정하지 않은 경우 MSMQ 활성화 서비스를 사용하도록 설정합니다. **시작** 메뉴에서 **실행** 을 클릭 하 고을 입력 `Services.msc` 합니다. **Net. Msmq 수신기 어댑터** 에 대 한 서비스 목록을 검색 합니다. 마우스 오른쪽 단추를 클릭하고 **속성** 을 선택합니다. **시작 유형** 을 **자동** 으로 설정 하 고 **적용** 을 클릭 한 다음 **시작** 단추를 클릭 합니다. 이 단계는 Net.Msmq Listener Adapter 서비스를 처음 사용하기 전에 한 번만 수행해야 합니다.
 
 8. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요. 또한 구매 주문 전송 시에 큐의 URI에서 컴퓨터 이름이 반영되도록 구매 주문을 전송하는 클라이언트에서 코드를 변경합니다. 다음 코드를 사용합니다.
 
@@ -329,7 +330,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     1. Inetmgr.exe를 실행합니다.
 
-    2. **응용 프로그램 풀**에서 **AppPool** (일반적으로 **DefaultAppPool**)을 마우스 오른쪽 단추로 클릭 하 고 **응용 프로그램 풀 기본값 설정**...을 선택 합니다.
+    2. **응용 프로그램 풀** 에서 **AppPool** (일반적으로 **DefaultAppPool**)을 마우스 오른쪽 단추로 클릭 하 고 **응용 프로그램 풀 기본값 설정**...을 선택 합니다.
 
     3. 특정 사용자 계정을 사용하도록 ID 속성을 변경합니다.
 
@@ -337,7 +338,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     1. Services.msc를 실행합니다.
 
-    2. **MsmqListener 어댑터**를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
+    2. **MsmqListener 어댑터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다.
 
 4. **로그온** 탭에서 계정을 변경 합니다.
 
@@ -347,6 +348,6 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     sc sidtype netmsmqactivator unrestricted
     ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 호스팅 및 지속성 샘플](/previous-versions/appfabric/ff383418(v=azure.10))

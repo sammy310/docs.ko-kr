@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 메시지 큐를 통한 메시지 보안'
 title: 메시지 큐에 대한 메시지 보안
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 1b262a5f4343e07aecf5eebda32cc995f86ec77b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bfbec02dec11d4f4eb153db942eb12ce4cb595e4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248935"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752329"
 ---
 # <a name="message-security-over-message-queuing"></a>메시지 큐에 대한 메시지 보안
 
@@ -95,7 +96,7 @@ ms.locfileid: "96248935"
 
  샘플에서는 MSMQ에서 메시지 수준의 상호 인증을 사용하는 방법을 보여 줍니다. 인증서는 out-of-band로 교환됩니다. 대기 중인 애플리케이션의 경우에는 서비스와 클라이언트가 동시에 실행 중이어야 할 필요가 없기 때문에 항상 적용됩니다.
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
  샘플 클라이언트 및 서비스 코드는 한 가지 차이점이 있는 [트랜잭션 된 MSMQ 바인딩](transacted-msmq-binding.md) 샘플과 같습니다. 작업 계약에는 보호 수준에서 주석을 달아야 하기 때문에 메시지에 서명과 암호화가 필요합니다.
 
@@ -289,7 +290,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
         Order status: Pending
 ```
 
-## <a name="comments"></a>의견
+## <a name="comments"></a>설명
 
 - 클라이언트 인증서 만들기
 
