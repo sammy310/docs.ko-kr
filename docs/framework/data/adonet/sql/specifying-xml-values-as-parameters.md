@@ -1,31 +1,32 @@
 ---
+description: '자세히 알아보기: XML 값을 매개 변수로 지정'
 title: XML 값을 매개 변수로 지정
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 20a573da0221704451f10138cb854523d5a17f17
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9c5b81270eeaec1fc0b3992971c9285863c92466
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183054"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767455"
 ---
-# <a name="specifying-xml-values-as-parameters"></a><span data-ttu-id="b8935-102">XML 값을 매개 변수로 지정</span><span class="sxs-lookup"><span data-stu-id="b8935-102">Specifying XML Values as Parameters</span></span>
+# <a name="specifying-xml-values-as-parameters"></a><span data-ttu-id="6a56c-103">XML 값을 매개 변수로 지정</span><span class="sxs-lookup"><span data-stu-id="6a56c-103">Specifying XML Values as Parameters</span></span>
 
-<span data-ttu-id="b8935-103">쿼리에 값이 XML 문자열인 매개 변수가 필요한 경우 개발자는 **SqlXml** 데이터 형식의 인스턴스를 사용하여 이 값을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b8935-103">If a query requires a parameter whose value is an XML string, developers can supply that value using an instance of the **SqlXml** data type.</span></span> <span data-ttu-id="b8935-104">여기에 까다로운 기법이 적용되는 것은 아니며 SQL Server의 XML 열은 다른 데이터 형식과 똑같은 방법으로 매개 변수 값을 받아들입니다.</span><span class="sxs-lookup"><span data-stu-id="b8935-104">There really are no tricks; XML columns in SQL Server accept parameter values in exactly the same way as other data types.</span></span>  
+<span data-ttu-id="6a56c-104">쿼리에 값이 XML 문자열인 매개 변수가 필요한 경우 개발자는 **SqlXml** 데이터 형식의 인스턴스를 사용하여 이 값을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6a56c-104">If a query requires a parameter whose value is an XML string, developers can supply that value using an instance of the **SqlXml** data type.</span></span> <span data-ttu-id="6a56c-105">여기에 까다로운 기법이 적용되는 것은 아니며 SQL Server의 XML 열은 다른 데이터 형식과 똑같은 방법으로 매개 변수 값을 받아들입니다.</span><span class="sxs-lookup"><span data-stu-id="6a56c-105">There really are no tricks; XML columns in SQL Server accept parameter values in exactly the same way as other data types.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b8935-105">예제</span><span class="sxs-lookup"><span data-stu-id="b8935-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="6a56c-106">예제</span><span class="sxs-lookup"><span data-stu-id="6a56c-106">Example</span></span>  
 
- <span data-ttu-id="b8935-106">다음 콘솔 애플리케이션에서는 **AdventureWorks** 데이터베이스에 새 테이블을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b8935-106">The following console application creates a new table in the **AdventureWorks** database.</span></span> <span data-ttu-id="b8935-107">이 새 테이블에는 **SalesID**라는 열과 **SalesInfo**라는 XML 열이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b8935-107">The new table includes a column named **SalesID** and an XML column named **SalesInfo**.</span></span>  
+ <span data-ttu-id="6a56c-107">다음 콘솔 애플리케이션에서는 **AdventureWorks** 데이터베이스에 새 테이블을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6a56c-107">The following console application creates a new table in the **AdventureWorks** database.</span></span> <span data-ttu-id="6a56c-108">이 새 테이블에는 **SalesID** 라는 열과 **SalesInfo** 라는 XML 열이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6a56c-108">The new table includes a column named **SalesID** and an XML column named **SalesInfo**.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="b8935-108">**AdventureWorks** 샘플 데이터베이스는 SQL Server를 설치할 때 기본적으로 설치되지 않으며</span><span class="sxs-lookup"><span data-stu-id="b8935-108">The **AdventureWorks** sample database is not installed by default when you install SQL Server.</span></span> <span data-ttu-id="b8935-109">SQL Server Setup을 실행하여 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b8935-109">You can install it by running SQL Server Setup.</span></span>  
+> <span data-ttu-id="6a56c-109">**AdventureWorks** 샘플 데이터베이스는 SQL Server를 설치할 때 기본적으로 설치되지 않으며</span><span class="sxs-lookup"><span data-stu-id="6a56c-109">The **AdventureWorks** sample database is not installed by default when you install SQL Server.</span></span> <span data-ttu-id="6a56c-110">SQL Server Setup을 실행하여 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6a56c-110">You can install it by running SQL Server Setup.</span></span>  
   
- <span data-ttu-id="b8935-110">이 예제에서는 새 테이블에 행을 삽입할 <xref:System.Data.SqlClient.SqlCommand> 개체를 준비합니다.</span><span class="sxs-lookup"><span data-stu-id="b8935-110">The example prepares a <xref:System.Data.SqlClient.SqlCommand> object to insert a row in the new table.</span></span> <span data-ttu-id="b8935-111">저장된 파일에서는 **SalesInfo** 열에 필요한 XML 데이터를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b8935-111">A saved file provides the XML data needed for the **SalesInfo** column.</span></span>  
+ <span data-ttu-id="6a56c-111">이 예제에서는 새 테이블에 행을 삽입할 <xref:System.Data.SqlClient.SqlCommand> 개체를 준비합니다.</span><span class="sxs-lookup"><span data-stu-id="6a56c-111">The example prepares a <xref:System.Data.SqlClient.SqlCommand> object to insert a row in the new table.</span></span> <span data-ttu-id="6a56c-112">저장된 파일에서는 **SalesInfo** 열에 필요한 XML 데이터를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6a56c-112">A saved file provides the XML data needed for the **SalesInfo** column.</span></span>  
   
- <span data-ttu-id="b8935-112">예제를 실행하는 데 필요한 파일을 만들려면 프로젝트와 동일한 폴더에 새 텍스트 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b8935-112">To create the file needed for the example to run, create a new text file in the same folder as your project.</span></span> <span data-ttu-id="b8935-113">파일 이름을 MyTestStoreData.xml로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b8935-113">Name the file MyTestStoreData.xml.</span></span> <span data-ttu-id="b8935-114">파일을 메모장에서 열고 다음 텍스트를 복사해 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="b8935-114">Open the file in Notepad and copy and paste the following text:</span></span>  
+ <span data-ttu-id="6a56c-113">예제를 실행하는 데 필요한 파일을 만들려면 프로젝트와 동일한 폴더에 새 텍스트 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6a56c-113">To create the file needed for the example to run, create a new text file in the same folder as your project.</span></span> <span data-ttu-id="6a56c-114">파일 이름을 MyTestStoreData.xml로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="6a56c-114">Name the file MyTestStoreData.xml.</span></span> <span data-ttu-id="6a56c-115">파일을 메모장에서 열고 다음 텍스트를 복사해 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="6a56c-115">Open the file in Notepad and copy and paste the following text:</span></span>  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
@@ -161,8 +162,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b8935-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b8935-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6a56c-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6a56c-116">See also</span></span>
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [<span data-ttu-id="b8935-116">SQL Server의 XML 데이터</span><span class="sxs-lookup"><span data-stu-id="b8935-116">XML Data in SQL Server</span></span>](xml-data-in-sql-server.md)
-- [<span data-ttu-id="b8935-117">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="b8935-117">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="6a56c-117">SQL Server의 XML 데이터</span><span class="sxs-lookup"><span data-stu-id="6a56c-117">XML Data in SQL Server</span></span>](xml-data-in-sql-server.md)
+- [<span data-ttu-id="6a56c-118">ADO.NET 개요</span><span class="sxs-lookup"><span data-stu-id="6a56c-118">ADO.NET Overview</span></span>](../ado-net-overview.md)

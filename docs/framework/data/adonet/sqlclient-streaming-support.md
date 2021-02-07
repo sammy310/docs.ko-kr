@@ -1,32 +1,33 @@
 ---
+description: '자세한 정보: SqlClient 스트리밍 지원'
 title: SqlClient 스트리밍 지원
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 7ff7feafb0501d5d98a0e692545e6b243c096e10
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0f669f4a3c0b16a6b4a113c055a830c40fe3bdcf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678872"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766844"
 ---
-# <a name="sqlclient-streaming-support"></a><span data-ttu-id="93f2f-102">SqlClient 스트리밍 지원</span><span class="sxs-lookup"><span data-stu-id="93f2f-102">SqlClient Streaming Support</span></span>
+# <a name="sqlclient-streaming-support"></a><span data-ttu-id="ace32-103">SqlClient 스트리밍 지원</span><span class="sxs-lookup"><span data-stu-id="ace32-103">SqlClient Streaming Support</span></span>
 
-<span data-ttu-id="93f2f-103">SQL Server와 응용 프로그램 간의 스트리밍 지원 (.NET Framework 4.5의 새로운 기능)은 서버 (문서, 이미지 및 미디어 파일)에서 구조화 되지 않은 데이터를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-103">Streaming support between SQL Server and an application (new in .NET Framework 4.5) supports unstructured data on the server (documents, images, and media files).</span></span> <span data-ttu-id="93f2f-104">SQL Server 데이터베이스는 Blob (binary large object)를 저장할 수 있지만 BLOB 검색은 많은 메모리를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-104">A SQL Server database can store binary large objects (BLOBs), but retrieving BLOBS can use a lot of memory.</span></span>
+<span data-ttu-id="ace32-104">SQL Server와 응용 프로그램 간의 스트리밍 지원 (.NET Framework 4.5의 새로운 기능)은 서버 (문서, 이미지 및 미디어 파일)에서 구조화 되지 않은 데이터를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-104">Streaming support between SQL Server and an application (new in .NET Framework 4.5) supports unstructured data on the server (documents, images, and media files).</span></span> <span data-ttu-id="ace32-105">SQL Server 데이터베이스는 BLOB(Binary Large Object)를 저장할 수 있지만 BLOB를 검색할 때 많은 메모리가 사용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-105">A SQL Server database can store binary large objects (BLOBs), but retrieving BLOBS can use a lot of memory.</span></span>
 
-<span data-ttu-id="93f2f-105">SQL Server에 대 한 스트리밍 지원을 통해 데이터를 메모리에 완전히 로드 하지 않고도 데이터를 스트리밍하는 응용 프로그램을 쉽게 작성할 수 있으므로 메모리 오버플로 예외가 줄어듭니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-105">Streaming support to and from SQL Server simplifies writing applications that stream data, without having to fully load the data into memory, resulting in fewer memory overflow exceptions.</span></span>
+<span data-ttu-id="ace32-106">SQL Server로의 스트리밍과 그 반대로의 스트리밍이 지원되면 데이터를 메모리에 완전하게 로드하지 않고 데이터를 스트리밍함으로써 메모리 오버플로 예외가 보다 적게 발생하는 애플리케이션을 간단하게 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-106">Streaming support to and from SQL Server simplifies writing applications that stream data, without having to fully load the data into memory, resulting in fewer memory overflow exceptions.</span></span>
 
-<span data-ttu-id="93f2f-106">또한 스트리밍 지원을 통해 중간 계층 애플리케이션의 확장성이 높아질 수 있습니다. 특히 대형 BLOB를 전송, 검색 및 조작하기 위해 비즈니스 개체를 SQL Azure에 연결하는 시나리오에서는 더욱 그렇습니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-106">Streaming support will also enable middle-tier applications to scale better, especially in scenarios where business objects connect to SQL Azure in order to send, retrieve, and manipulate large BLOBs.</span></span>
+<span data-ttu-id="ace32-107">또한 스트리밍 지원을 통해 중간 계층 애플리케이션의 확장성이 높아질 수 있습니다. 특히 대형 BLOB를 전송, 검색 및 조작하기 위해 비즈니스 개체를 SQL Azure에 연결하는 시나리오에서는 더욱 그렇습니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-107">Streaming support will also enable middle-tier applications to scale better, especially in scenarios where business objects connect to SQL Azure in order to send, retrieve, and manipulate large BLOBs.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="93f2f-107">애플리케이션에서 `Context Connection` 연결 문자열 키워드도 사용하는 경우에는 비동기 호출이 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-107">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>
+> <span data-ttu-id="ace32-108">애플리케이션에서 `Context Connection` 연결 문자열 키워드도 사용하는 경우에는 비동기 호출이 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-108">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>
 >
-> <span data-ttu-id="93f2f-108">스트리밍을 지원하기 위해 추가된 멤버는 쿼리에서 데이터를 검색하고 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-108">The members added to support streaming are used to retrieve data from queries and to pass parameters to queries and stored procedures.</span></span> <span data-ttu-id="93f2f-109">스트리밍 기능은 기본 OLTP 및 데이터 마이그레이션 시나리오를 처리 하며 온-프레미스 및 오프-프레미스 데이터 마이그레이션 환경에 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-109">The streaming feature addresses basic OLTP and data migration scenarios and is applicable to on-premises and off-premises data migrations environments.</span></span>
+> <span data-ttu-id="ace32-109">스트리밍을 지원하기 위해 추가된 멤버는 쿼리에서 데이터를 검색하고 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-109">The members added to support streaming are used to retrieve data from queries and to pass parameters to queries and stored procedures.</span></span> <span data-ttu-id="ace32-110">스트리밍 기능은 기본 OLTP 및 데이터 마이그레이션 시나리오를 처리하며 온-프레미스 및 오프-프레미스 데이터 마이그레이션 환경에 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-110">The streaming feature addresses basic OLTP and data migration scenarios and is applicable to on-premises and off-premises data migrations environments.</span></span>
 
-## <a name="streaming-support-from-sql-server"></a><span data-ttu-id="93f2f-110">SQL Server에서의 스트리밍 지원</span><span class="sxs-lookup"><span data-stu-id="93f2f-110">Streaming Support from SQL Server</span></span>
+## <a name="streaming-support-from-sql-server"></a><span data-ttu-id="ace32-111">SQL Server에서의 스트리밍 지원</span><span class="sxs-lookup"><span data-stu-id="ace32-111">Streaming Support from SQL Server</span></span>
 
-<span data-ttu-id="93f2f-111">SQL Server에서의 스트리밍 지원은 <xref:System.Data.Common.DbDataReader> <xref:System.Data.SqlClient.SqlDataReader> , 및 개체를 가져오고이에 대응할 수 있도록 클래스에서 및의 새로운 기능을 소개 <xref:System.IO.Stream> <xref:System.Xml.XmlReader> <xref:System.IO.TextReader> 합니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-111">Streaming support from SQL Server introduces new functionality in the <xref:System.Data.Common.DbDataReader> and in the <xref:System.Data.SqlClient.SqlDataReader> classes in order to get <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, and <xref:System.IO.TextReader> objects and react to them.</span></span> <span data-ttu-id="93f2f-112">이러한 클래스는 쿼리에서 데이터를 검색하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-112">These classes are used to retrieve data from queries.</span></span> <span data-ttu-id="93f2f-113">따라서 SQL Server에서의 스트리밍 지원은 OLTP 시나리오를 해결 하 고 온-프레미스 및 오프-프레미스 환경에 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-113">As a result, Streaming support from SQL Server addresses OLTP scenarios and applies to on-premises and off-premises environments.</span></span>
+<span data-ttu-id="ace32-112">SQL Server로부터의 스트리밍 지원은 <xref:System.Data.Common.DbDataReader> 및 <xref:System.Data.SqlClient.SqlDataReader> 클래스에 새로운 기능을 도입함으로써 <xref:System.IO.Stream>, <xref:System.Xml.XmlReader> 및 <xref:System.IO.TextReader> 개체를 가져오고 이러한 개체에 반응할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-112">Streaming support from SQL Server introduces new functionality in the <xref:System.Data.Common.DbDataReader> and in the <xref:System.Data.SqlClient.SqlDataReader> classes in order to get <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, and <xref:System.IO.TextReader> objects and react to them.</span></span> <span data-ttu-id="ace32-113">이러한 클래스는 쿼리에서 데이터를 검색하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-113">These classes are used to retrieve data from queries.</span></span> <span data-ttu-id="ace32-114">따라서 SQL Server로부터의 스트리밍 지원은 OLTP 시나리오를 처리하며 온-프레미스 및 오프-프레미스 환경에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-114">As a result, Streaming support from SQL Server addresses OLTP scenarios and applies to on-premises and off-premises environments.</span></span>
 
-<span data-ttu-id="93f2f-114"><xref:System.Data.SqlClient.SqlDataReader>SQL Server에서의 스트리밍 지원을 사용 하기 위해에 추가 된 멤버는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-114">The following members were added to <xref:System.Data.SqlClient.SqlDataReader> to enable streaming support from SQL Server:</span></span>
+<span data-ttu-id="ace32-115">SQL Server로부터의 스트리밍 지원을 활성화하기 위해 <xref:System.Data.SqlClient.SqlDataReader>에 추가된 멤버는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-115">The following members were added to <xref:System.Data.SqlClient.SqlDataReader> to enable streaming support from SQL Server:</span></span>
 
 1. <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>
 
@@ -40,7 +41,7 @@ ms.locfileid: "95678872"
 
 6. <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>
 
-<span data-ttu-id="93f2f-115"><xref:System.Data.Common.DbDataReader>SQL Server에서의 스트리밍 지원을 사용 하기 위해에 추가 된 멤버는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-115">The following members were added to <xref:System.Data.Common.DbDataReader> to enable streaming support from SQL Server:</span></span>
+<span data-ttu-id="ace32-116">SQL Server로부터의 스트리밍 지원을 활성화하기 위해 <xref:System.Data.Common.DbDataReader>에 추가된 멤버는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-116">The following members were added to <xref:System.Data.Common.DbDataReader> to enable streaming support from SQL Server:</span></span>
 
 1. <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>
 
@@ -48,37 +49,37 @@ ms.locfileid: "95678872"
 
 3. <xref:System.Data.Common.DbDataReader.GetTextReader%2A>
 
-## <a name="streaming-support-to-sql-server"></a><span data-ttu-id="93f2f-116">SQL Server에 대 한 스트리밍 지원</span><span class="sxs-lookup"><span data-stu-id="93f2f-116">Streaming Support to SQL Server</span></span>
+## <a name="streaming-support-to-sql-server"></a><span data-ttu-id="ace32-117">SQL Server에 대 한 스트리밍 지원</span><span class="sxs-lookup"><span data-stu-id="ace32-117">Streaming Support to SQL Server</span></span>
 
-<span data-ttu-id="93f2f-117">SQL Server에 대 한 스트리밍 지원은 <xref:System.Data.SqlClient.SqlParameter> , 및 개체를 허용 하 고 대응할 수 있도록 클래스의 새 기능을 도입 <xref:System.Xml.XmlReader> <xref:System.IO.Stream> <xref:System.IO.TextReader> 합니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-117">Streaming support to SQL Server introduces new functionality in the <xref:System.Data.SqlClient.SqlParameter> class so it can accept and react to <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, and <xref:System.IO.TextReader> objects.</span></span> <span data-ttu-id="93f2f-118"><xref:System.Data.SqlClient.SqlParameter>는 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-118"><xref:System.Data.SqlClient.SqlParameter> is used to pass parameters to queries and stored procedures.</span></span>
+<span data-ttu-id="ace32-118">SQL Server에 대 한 스트리밍 지원은 <xref:System.Data.SqlClient.SqlParameter> , 및 개체를 허용 하 고 대응할 수 있도록 클래스의 새 기능을 도입 <xref:System.Xml.XmlReader> <xref:System.IO.Stream> <xref:System.IO.TextReader> 합니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-118">Streaming support to SQL Server introduces new functionality in the <xref:System.Data.SqlClient.SqlParameter> class so it can accept and react to <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, and <xref:System.IO.TextReader> objects.</span></span> <span data-ttu-id="ace32-119"><xref:System.Data.SqlClient.SqlParameter>는 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-119"><xref:System.Data.SqlClient.SqlParameter> is used to pass parameters to queries and stored procedures.</span></span>
 
-<span data-ttu-id="93f2f-119"><xref:System.Data.SqlClient.SqlCommand> 개체를 삭제하거나 <xref:System.Data.SqlClient.SqlCommand.Cancel%2A>을 호출할 때는 모든 스트리밍 작업이 취소되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-119">Disposing a <xref:System.Data.SqlClient.SqlCommand> object or calling <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> must cancel any streaming operation.</span></span> <span data-ttu-id="93f2f-120">애플리케이션에서 <xref:System.Threading.CancellationToken>을 전송하면 취소되지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-120">If an application sends <xref:System.Threading.CancellationToken>, cancellation is not guaranteed.</span></span>
+<span data-ttu-id="ace32-120"><xref:System.Data.SqlClient.SqlCommand> 개체를 삭제하거나 <xref:System.Data.SqlClient.SqlCommand.Cancel%2A>을 호출할 때는 모든 스트리밍 작업이 취소되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-120">Disposing a <xref:System.Data.SqlClient.SqlCommand> object or calling <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> must cancel any streaming operation.</span></span> <span data-ttu-id="ace32-121">애플리케이션에서 <xref:System.Threading.CancellationToken>을 전송하면 취소되지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-121">If an application sends <xref:System.Threading.CancellationToken>, cancellation is not guaranteed.</span></span>
 
-<span data-ttu-id="93f2f-121">다음 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 형식에서는 <xref:System.Data.SqlClient.SqlParameter.Value%2A>의 <xref:System.IO.Stream>를 받아들입니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-121">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.Stream>:</span></span>
+<span data-ttu-id="ace32-122">다음 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 형식에서는 <xref:System.Data.SqlClient.SqlParameter.Value%2A>의 <xref:System.IO.Stream>를 받아들입니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-122">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.Stream>:</span></span>
 
-- <span data-ttu-id="93f2f-122">**이진**</span><span class="sxs-lookup"><span data-stu-id="93f2f-122">**Binary**</span></span>
+- <span data-ttu-id="ace32-123">**이진**</span><span class="sxs-lookup"><span data-stu-id="ace32-123">**Binary**</span></span>
 
-- <span data-ttu-id="93f2f-123">**VarBinary**</span><span class="sxs-lookup"><span data-stu-id="93f2f-123">**VarBinary**</span></span>
+- <span data-ttu-id="ace32-124">**VarBinary**</span><span class="sxs-lookup"><span data-stu-id="ace32-124">**VarBinary**</span></span>
 
-<span data-ttu-id="93f2f-124">다음 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 형식에서는 <xref:System.Data.SqlClient.SqlParameter.Value%2A>의 <xref:System.IO.TextReader>를 받아들입니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-124">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.TextReader>:</span></span>
+<span data-ttu-id="ace32-125">다음 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 형식에서는 <xref:System.Data.SqlClient.SqlParameter.Value%2A>의 <xref:System.IO.TextReader>를 받아들입니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-125">The following <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> types will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.IO.TextReader>:</span></span>
 
-- <span data-ttu-id="93f2f-125">**Char**</span><span class="sxs-lookup"><span data-stu-id="93f2f-125">**Char**</span></span>
+- <span data-ttu-id="ace32-126">**Char**</span><span class="sxs-lookup"><span data-stu-id="ace32-126">**Char**</span></span>
 
-- <span data-ttu-id="93f2f-126">**NChar**</span><span class="sxs-lookup"><span data-stu-id="93f2f-126">**NChar**</span></span>
+- <span data-ttu-id="ace32-127">**NChar**</span><span class="sxs-lookup"><span data-stu-id="ace32-127">**NChar**</span></span>
 
-- <span data-ttu-id="93f2f-127">**Varchar**</span><span class="sxs-lookup"><span data-stu-id="93f2f-127">**NVarChar**</span></span>
+- <span data-ttu-id="ace32-128">**NVarChar**</span><span class="sxs-lookup"><span data-stu-id="ace32-128">**NVarChar**</span></span>
 
-- <span data-ttu-id="93f2f-128">**Xml**</span><span class="sxs-lookup"><span data-stu-id="93f2f-128">**Xml**</span></span>
+- <span data-ttu-id="ace32-129">**Xml**</span><span class="sxs-lookup"><span data-stu-id="ace32-129">**Xml**</span></span>
 
-<span data-ttu-id="93f2f-129">**Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 형식은의를 허용 합니다 <xref:System.Data.SqlClient.SqlParameter.Value%2A> <xref:System.Xml.XmlReader> .</span><span class="sxs-lookup"><span data-stu-id="93f2f-129">The **Xml**<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> type will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.Xml.XmlReader>.</span></span>
+<span data-ttu-id="ace32-130">**Xml**<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 형식은 <xref:System.Xml.XmlReader>의 <xref:System.Data.SqlClient.SqlParameter.Value%2A>를 받아들입니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-130">The **Xml**<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> type will accept a <xref:System.Data.SqlClient.SqlParameter.Value%2A> of <xref:System.Xml.XmlReader>.</span></span>
 
-<span data-ttu-id="93f2f-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>는 <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> 및 <xref:System.IO.Stream> 형식의 값만 받아들일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-130"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> can accept values of type <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream>.</span></span>
+<span data-ttu-id="ace32-131"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>는 <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> 및 <xref:System.IO.Stream> 형식의 값만 받아들일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-131"><xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> can accept values of type <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream>.</span></span>
 
-<span data-ttu-id="93f2f-131"><xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> 및 <xref:System.IO.Stream> 개체는 <xref:System.Data.SqlClient.SqlParameter.Size%2A>에 정의된 값까지 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-131">The <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream> object will be transferred up to the value defined by the <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span></span>
+<span data-ttu-id="ace32-132"><xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> 및 <xref:System.IO.Stream> 개체는 <xref:System.Data.SqlClient.SqlParameter.Size%2A>에 정의된 값까지 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-132">The <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, and <xref:System.IO.Stream> object will be transferred up to the value defined by the <xref:System.Data.SqlClient.SqlParameter.Size%2A>.</span></span>
 
-## <a name="sample----streaming-from-sql-server"></a><span data-ttu-id="93f2f-132">샘플-SQL Server에서 스트리밍</span><span class="sxs-lookup"><span data-stu-id="93f2f-132">Sample -- Streaming from SQL Server</span></span>
+## <a name="sample----streaming-from-sql-server"></a><span data-ttu-id="ace32-133">샘플-SQL Server에서 스트리밍</span><span class="sxs-lookup"><span data-stu-id="ace32-133">Sample -- Streaming from SQL Server</span></span>
 
-<span data-ttu-id="93f2f-133">다음 Transact-sql을 사용 하 여 예제 데이터베이스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-133">Use the following Transact-SQL to create the sample database:</span></span>
+<span data-ttu-id="ace32-134">다음 Transact-SQL을 사용하여 샘플 데이터베이스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-134">Use the following Transact-SQL to create the sample database:</span></span>
 
 ```sql
 CREATE DATABASE [Demo]
@@ -97,17 +98,17 @@ INSERT INTO [Streams] (textdata, bindata, xmldata) VALUES (N'Another row', 0x666
 GO
 ```
 
-<span data-ttu-id="93f2f-134">이 샘플에서는 다음 작업의 수행 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-134">The sample shows how to do the following:</span></span>
+<span data-ttu-id="ace32-135">이 샘플에서는 다음 작업의 수행 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-135">The sample shows how to do the following:</span></span>
 
-- <span data-ttu-id="93f2f-135">큰 파일을 검색하는 비동기적 방법을 제공하여 사용자 인터페이스 스레드의 차단을 방지합니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-135">Avoid blocking a user-interface thread by providing an asynchronous way to retrieve large files.</span></span>
+- <span data-ttu-id="ace32-136">큰 파일을 검색하는 비동기적 방법을 제공하여 사용자 인터페이스 스레드의 차단을 방지합니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-136">Avoid blocking a user-interface thread by providing an asynchronous way to retrieve large files.</span></span>
 
-- <span data-ttu-id="93f2f-136">.NET Framework 4.5의 SQL Server에서 많은 텍스트 파일을 전송 합니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-136">Transfer a large text file from SQL Server in .NET Framework 4.5.</span></span>
+- <span data-ttu-id="ace32-137">.NET Framework 4.5의 SQL Server에서 많은 텍스트 파일을 전송 합니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-137">Transfer a large text file from SQL Server in .NET Framework 4.5.</span></span>
 
-- <span data-ttu-id="93f2f-137">SQL Server에서 .NET Framework 4.5의 대량 XML 파일을 전송 합니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-137">Transfer a large XML file from SQL Server in .NET Framework 4.5.</span></span>
+- <span data-ttu-id="ace32-138">SQL Server에서 .NET Framework 4.5의 대량 XML 파일을 전송 합니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-138">Transfer a large XML file from SQL Server in .NET Framework 4.5.</span></span>
 
-- <span data-ttu-id="93f2f-138">SQL Server에서 데이터를 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-138">Retrieve data from SQL Server.</span></span>
+- <span data-ttu-id="ace32-139">SQL Server에서 데이터를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-139">Retrieve data from SQL Server.</span></span>
 
-- <span data-ttu-id="93f2f-139">메모리가 부족 하지 않고 SQL Server 데이터베이스 간에 대량 파일 (Blob)을 전송 합니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-139">Transfer large files (BLOBs) from one SQL Server database to another without running out of memory.</span></span>
+- <span data-ttu-id="ace32-140">메모리를 지나치게 소모하지 않으면서 SQL Server 데이터베이스 간에 큰 파일(BLOB)을 전송합니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-140">Transfer large files (BLOBs) from one SQL Server database to another without running out of memory.</span></span>
 
 ```csharp
 using System;
@@ -298,9 +299,9 @@ namespace StreamingFromServer {
 }
 ```
 
-## <a name="sample----streaming-to-sql-server"></a><span data-ttu-id="93f2f-140">샘플-SQL Server로 스트리밍</span><span class="sxs-lookup"><span data-stu-id="93f2f-140">Sample -- Streaming to SQL Server</span></span>
+## <a name="sample----streaming-to-sql-server"></a><span data-ttu-id="ace32-141">샘플-SQL Server로 스트리밍</span><span class="sxs-lookup"><span data-stu-id="ace32-141">Sample -- Streaming to SQL Server</span></span>
 
-<span data-ttu-id="93f2f-141">다음 Transact-sql을 사용 하 여 예제 데이터베이스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-141">Use the following Transact-SQL to create the sample database:</span></span>
+<span data-ttu-id="ace32-142">다음 Transact-SQL을 사용하여 샘플 데이터베이스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-142">Use the following Transact-SQL to create the sample database:</span></span>
 
 ```sql
 CREATE DATABASE [Demo2]
@@ -321,19 +322,19 @@ CREATE TABLE [BinaryStreamsCopy] (
 GO
 ```
 
-<span data-ttu-id="93f2f-142">이 샘플에서는 다음 작업의 수행 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-142">The sample shows how to do the following:</span></span>
+<span data-ttu-id="ace32-143">이 샘플에서는 다음 작업의 수행 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-143">The sample shows how to do the following:</span></span>
 
-- <span data-ttu-id="93f2f-143">4.5 .NET Framework에서 SQL Server으로 대량 BLOB을 전송 합니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-143">Transferring a large BLOB to SQL Server in .NET Framework 4.5.</span></span>
+- <span data-ttu-id="ace32-144">4.5 .NET Framework에서 SQL Server으로 대량 BLOB을 전송 합니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-144">Transferring a large BLOB to SQL Server in .NET Framework 4.5.</span></span>
 
-- <span data-ttu-id="93f2f-144">4.5 .NET Framework에서 SQL Server에 대 한 많은 텍스트 파일 전송</span><span class="sxs-lookup"><span data-stu-id="93f2f-144">Transferring a large text file to SQL Server in .NET Framework 4.5.</span></span>
+- <span data-ttu-id="ace32-145">4.5 .NET Framework에서 SQL Server에 대 한 많은 텍스트 파일 전송</span><span class="sxs-lookup"><span data-stu-id="ace32-145">Transferring a large text file to SQL Server in .NET Framework 4.5.</span></span>
 
-- <span data-ttu-id="93f2f-145">새로운 비동기 기능을 사용하여 큰 BLOB를 전송합니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-145">Using the new asynchronous feature to transfer a large BLOB.</span></span>
+- <span data-ttu-id="ace32-146">새로운 비동기 기능을 사용하여 큰 BLOB를 전송합니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-146">Using the new asynchronous feature to transfer a large BLOB.</span></span>
 
-- <span data-ttu-id="93f2f-146">새로운 비동기 기능과 await 키워드를 사용하여 큰 BLOB를 전송합니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-146">Using the new asynchronous feature and the await keyword to transfer a large BLOB.</span></span>
+- <span data-ttu-id="ace32-147">새로운 비동기 기능과 await 키워드를 사용하여 큰 BLOB를 전송합니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-147">Using the new asynchronous feature and the await keyword to transfer a large BLOB.</span></span>
 
-- <span data-ttu-id="93f2f-147">대량 BLOB의 전송을 취소 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-147">Cancelling the transfer of a large BLOB.</span></span>
+- <span data-ttu-id="ace32-148">대규모 BLOB의 전송을 취소합니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-148">Cancelling the transfer of a large BLOB.</span></span>
 
-- <span data-ttu-id="93f2f-148">새 비동기 기능을 사용 하 여 한 SQL Server에서 다른으로 스트리밍</span><span class="sxs-lookup"><span data-stu-id="93f2f-148">Streaming from one SQL Server to another using the new asynchronous feature.</span></span>
+- <span data-ttu-id="ace32-149">새 비동기 기능을 사용 하 여 한 SQL Server에서 다른으로 스트리밍</span><span class="sxs-lookup"><span data-stu-id="ace32-149">Streaming from one SQL Server to another using the new asynchronous feature.</span></span>
 
 ```csharp
 using System;
@@ -455,9 +456,9 @@ namespace StreamingToServer {
 }
 ```
 
-## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a><span data-ttu-id="93f2f-149">샘플-한 SQL Server에서 다른 SQL Server로 스트리밍</span><span class="sxs-lookup"><span data-stu-id="93f2f-149">Sample -- Streaming From One SQL Server to Another SQL Server</span></span>
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a><span data-ttu-id="ace32-150">샘플-한 SQL Server에서 다른 SQL Server로 스트리밍</span><span class="sxs-lookup"><span data-stu-id="ace32-150">Sample -- Streaming From One SQL Server to Another SQL Server</span></span>
 
-<span data-ttu-id="93f2f-150">이 샘플에서는 취소를 지원 하 여 한 SQL Server에서 다른 BLOB으로 많은 BLOB을 비동기적으로 스트리밍하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="93f2f-150">This sample demonstrates how to asynchronously stream a large BLOB from one SQL Server to another, with support for cancellation.</span></span>
+<span data-ttu-id="ace32-151">이 예제에서는 SQL Server 간에 대규모 BLOB를 비동기적으로 스트리밍하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ace32-151">This sample demonstrates how to asynchronously stream a large BLOB from one SQL Server to another, with support for cancellation.</span></span>
 
 ```csharp
 using System;
@@ -522,6 +523,6 @@ namespace StreamingFromServerToAnother {
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="93f2f-151">참조</span><span class="sxs-lookup"><span data-stu-id="93f2f-151">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ace32-152">참조</span><span class="sxs-lookup"><span data-stu-id="ace32-152">See also</span></span>
 
-- [<span data-ttu-id="93f2f-152">ADO.NET에서 데이터 검색 및 수정</span><span class="sxs-lookup"><span data-stu-id="93f2f-152">Retrieving and Modifying Data in ADO.NET</span></span>](retrieving-and-modifying-data.md)
+- [<span data-ttu-id="ace32-153">ADO.NET에서 데이터 검색 및 수정</span><span class="sxs-lookup"><span data-stu-id="ace32-153">Retrieving and Modifying Data in ADO.NET</span></span>](retrieving-and-modifying-data.md)
