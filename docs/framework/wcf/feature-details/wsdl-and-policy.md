@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: WSDL 및 정책'
 title: WSDL 및 정책
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 123a878e90ee9099b009985a5e79155e8b1cd097
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e7d0ca81fbac1a746fa7c10efb8e8d32f1ee3240
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238342"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704149"
 ---
 # <a name="wsdl-and-policy"></a>WSDL 및 정책
 
@@ -56,7 +57,7 @@ ms.locfileid: "96238342"
 
  이 문서의 다른 섹션에 설명 된 WS-* (웹 서비스 사양)에 도입 된 정책 어설션 외에 WCF는 다음과 같은 정책 어설션을 구현 합니다.  
   
-|정책 어설션|정책 주체|Description|  
+|정책 어설션|정책 주체|설명|  
 |----------------------|--------------------|-----------------|  
 |http:HttpBasicAuthentication|엔드포인트|엔드포인트가 HTTP 기본 인증을 사용합니다.|  
 |http:HttpDigestAuthentication|엔드포인트|엔드포인트가 HTTP 다이제스트 인증을 사용합니다.|  

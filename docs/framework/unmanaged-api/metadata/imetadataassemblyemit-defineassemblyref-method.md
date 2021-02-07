@@ -1,4 +1,5 @@
 ---
+description: IMetaDataAssemblyEmit::D efineAssemblyRef 메서드에 대해 자세히 알아보세요.
 title: IMetaDataAssemblyEmit::DefineAssemblyRef 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b284b18-0084-4b3a-912a-5ebe9f29c88b
 topic_type:
 - apiref
-ms.openlocfilehash: ba53ff30f0b6d0ae7fed7db422b7c0a242204a2c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e3c3acce77e6b0cb2943d66f3477898c90ea6251
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689435"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706710"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef 메서드
 
@@ -83,6 +84,6 @@ HRESULT DefineAssemblyRef (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: ASP.NET AJAX 용 WCF 서비스 만들기'
 title: ASP.NET AJAX용 WCF 서비스 만들기
 ms.date: 03/30/2017
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-ms.openlocfilehash: 8c82d4c61b32572fd1ad7d8f19e939273cc2280b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e4ab977db5632de0c9e825e03369506d4917709f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599310"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705124"
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>ASP.NET AJAX용 WCF 서비스 만들기
 
@@ -25,7 +26,7 @@ Visual Studio 템플릿을 사용하지 않는 경우 다음 두 가지 방법�
 
 - 구성을 사용 하 여 WCF 서비스에 AJAX 사용 끝점을 추가 합니다. 자세한 내용은 [방법: 구성을 사용 하 여 ASP.NET AJAX 끝점 추가](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)를 참조 하세요.
 
-[WCF 웹 HTTP 프로그래밍 모델 개요](wcf-web-http-programming-model-overview.md) 에 설명 된 웹 프로그래밍 모델은 ASP.NET AJAX 서비스와 함께 사용할 수 있습니다. 특히 다음에 대한 내용을 설명합니다.
+[WCF 웹 HTTP 프로그래밍 모델 개요](wcf-web-http-programming-model-overview.md) 에 설명 된 웹 프로그래밍 모델은 ASP.NET AJAX 서비스와 함께 사용할 수 있습니다. 특히:
 
 - <xref:System.ServiceModel.Web.WebGetAttribute> 및 <xref:System.ServiceModel.Web.WebInvokeAttribute> 특성을 사용하여 HTTP GET 및 HTTP POST 동사 중에서 선택할 수 있습니다. 이 기능을 올바르게 사용하면 애플리케이션의 성능이 크게 향상될 수 있습니다. 자세한 내용은 [방법: ASP.NET AJAX 끝점에 대 한 HTTP POST 및 HTTP GET 요청 중에서 선택](http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)을 참조 하세요.
 

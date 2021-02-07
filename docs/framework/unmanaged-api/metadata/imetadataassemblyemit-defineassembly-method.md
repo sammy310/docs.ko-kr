@@ -1,4 +1,5 @@
 ---
+description: IMetaDataAssemblyEmit::D efineAssembly 메서드에 대해 자세히 알아보세요.
 title: IMetaDataAssemblyEmit::DefineAssembly 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-ms.openlocfilehash: 6d783e27c60db7381025f3b2382728e3996323ae
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd53a4398f49ca96072fc5f5b6dcac35a94bdc59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725731"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706749"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly 메서드
 
@@ -77,6 +78,6 @@ HRESULT DefineAssembly (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)

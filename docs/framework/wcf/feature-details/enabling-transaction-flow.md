@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 트랜잭션 흐름 설정'
 title: 트랜잭션 흐름 사용
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-ms.openlocfilehash: 206cbecc35c6b517ddfc3b14f4a1d139cf72fc34
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: abf8875c870894f6c1b0a08138356950a646e4d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276752"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704929"
 ---
 # <a name="enabling-transaction-flow"></a>트랜잭션 흐름 사용
 
@@ -39,7 +40,7 @@ WCF (Windows Communication Foundation)는 트랜잭션 흐름을 제어 하기 �
 |---------------------------------|--------------------------------------|----------------------------------------------|------------------------------|  
 |필수|true|WS-AT|트랜잭션이 상호 운용할 수 있는 WS-AT 형식으로 이동해야 합니다.|  
 |필수|true|OleTransactions|트랜잭션은 WCF OleTransactions 형식으로 이동 해야 합니다.|  
-|필수|false|해당 없음|이 구성이 잘못되었으므로 사용할 수 없습니다.|  
+|필수|false|적용할 수 없음|이 구성이 잘못되었으므로 사용할 수 없습니다.|  
 |허용|true|WS-AT|트랜잭션이 상호 운용할 수 있는 WS-AT 형식으로 이동할 수 있습니다.|  
 |허용|true|OleTransactions|트랜잭션은 WCF OleTransactions 형식으로 이동 될 수 있습니다.|  
 |허용|false|어떤 값|트랜잭션이 이동하지 않습니다.|  

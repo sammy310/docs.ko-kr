@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: Nat 및 방화벽 작업'
 title: NAT 및 방화벽 작업
 ms.date: 03/30/2017
 helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 185be9f6e33fcf107226e98d96d6be5c562384d8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6d5adb25ebe77e237a3456d450e8f59c65043bfc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238329"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704266"
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT 및 방화벽 작업
 

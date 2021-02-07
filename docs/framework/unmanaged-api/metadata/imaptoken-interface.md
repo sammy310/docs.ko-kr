@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMapToken 인터페이스'
 title: IMapToken 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c5c4df0-43f3-4830-a01b-8d029806f2c4
 topic_type:
 - apiref
-ms.openlocfilehash: 2ecd3a5660b0672185cd1b13f5a41261631713e4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 30f8e2cc73fcb932dae7d35dbb4e68d2b1115603
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690644"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706801"
 ---
 # <a name="imaptoken-interface"></a>IMapToken 인터페이스
 
@@ -44,6 +45,6 @@ ms.locfileid: "95690644"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 인터페이스](metadata-interfaces.md)

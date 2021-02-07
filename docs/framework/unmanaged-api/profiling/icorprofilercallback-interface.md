@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerCallback 인터페이스'
 title: ICorProfilerCallback 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4bae06f7-94d7-4ba8-b250-648b2da78674
 topic_type:
 - apiref
-ms.openlocfilehash: 8451f100f9e1b8d68045050d1b584ae44c29195d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5bc59839bfe352fb7d67688dcd7c8fe0d6c97eaf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684072"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705917"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback 인터페이스
 
@@ -120,7 +121,7 @@ ms.locfileid: "95684072"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 인터페이스](profiling-interfaces.md)
 - [ICorProfilerCallback2 인터페이스](icorprofilercallback2-interface.md)

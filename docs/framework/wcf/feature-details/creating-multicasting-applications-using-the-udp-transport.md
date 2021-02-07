@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: UDP 전송을 사용 하 여 멀티 캐스트 응용 프로그램 만들기'
 title: UDP 전송을 사용하여 멀티캐스트 애플리케이션 만들기
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: fd2fdc812f5fe06b3b89605b9478325932199a96
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cea76bc1256d52dabebe525b0fdd8b64c08f9e7e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239200"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705163"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>UDP 전송을 사용하여 멀티캐스트 애플리케이션 만들기
 
@@ -116,7 +117,7 @@ else
   
  이 코드는 보낸 사람 주소의 첫 번째 바이트를 보고 멀티캐스트 주소인지를 나타내는 0xE0이 들어 있는지 확인합니다.  
   
-### <a name="security-considerations"></a>보안 고려 사항  
+### <a name="security-considerations"></a>보안 고려사항  
 
  멀티캐스트 메시지를 수신 대기하는 경우 ICMP 패킷을 라우터로 전송하여 멀티캐스트 주소에서 수신 대기 중임을 알립니다. 로컬 서브넷에서 권한이 있는 모든 사용자는 이러한 형식의 패킷을 수신 대기하고 수신 대기할 멀티캐스트 주소와 포트를 결정할 수 있습니다.  
   

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 보내기 작업에 대 한 캐시 공유 수준 변경'
 title: Send 활동의 캐시 공유 수준 변경
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: cbb937ac47c93307db922b28e3df0ea694a77960
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7ced6a8a18779a0c0d5914e63fde658b6d0130ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262050"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705215"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Send 활동의 캐시 공유 수준 변경
 
@@ -93,7 +94,7 @@ serviceHost.WorkflowExtensions.Add(() => new SendMessageChannelCache
 
  채널 팩터리 캐시 및 채널 캐시에 대한 캐시 설정을 사용자 지정할 수 있습니다. 캐시 설정은 <xref:System.ServiceModel.Activities.ChannelCacheSettings> 클래스에서 정의됩니다. <xref:System.ServiceModel.Activities.SendMessageChannelCache>클래스는 매개 변수가 없는 생성자의 채널 팩터리 캐시 및 채널 캐시에 대 한 기본 캐시 설정을 정의 합니다. 다음 표에서는 각 캐시 유형에 대한 이러한 캐시 설정의 기본값을 보여 줍니다.  
   
-|설정|LeaseTimeout(분)|IdleTimeout(분)|MaxItemsInCache|  
+|Settings|LeaseTimeout(분)|IdleTimeout(분)|MaxItemsInCache|  
 |-|-|-|-|  
 |팩터리 캐시 기본값|TimeSpan.MaxValue|2|16|  
 |채널 캐시 기본값|5|2|16|  

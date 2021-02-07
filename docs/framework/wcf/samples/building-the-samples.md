@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: Windows Communication Foundation 샘플 빌드'
 title: Windows Communication Foundation 샘플 빌드
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: ee1c8101e31464fa203341d53137525433782c18
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a53073ac92369574b204dbce998bebb8844fce8d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253839"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704188"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플 빌드
 
@@ -27,7 +28,7 @@ WCF (Windows Communication Foundation) 샘플은 Visual Studio IDE를 사용 하
 
 ## <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio를 사용하여 샘플을 빌드하려면
 
-1. Visual Studio의 **파일** 메뉴에서 **Open**  >  **프로젝트/솔루션** 열기를 선택 합니다. 샘플을 설치한 디렉터리 아래의 언어별 하위 디렉터리로 이동 하 고 .sln 파일 아이콘을 두 번 클릭 하 여 Visual Studio에서 솔루션을 엽니다.
+1. Visual Studio의 **파일** 메뉴에서   >  **프로젝트/솔루션** 열기를 선택 합니다. 샘플을 설치한 디렉터리 아래의 언어별 하위 디렉터리로 이동 하 고 .sln 파일 아이콘을 두 번 클릭 하 여 Visual Studio에서 솔루션을 엽니다.
 
 1. **빌드** 메뉴에서 **솔루션 다시 빌드** 를 선택 합니다.
 

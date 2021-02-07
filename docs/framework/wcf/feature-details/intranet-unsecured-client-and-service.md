@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 인트라넷 보안 되지 않은 클라이언트 및 서비스'
 title: 보안이 설정되지 않은 인트라넷 클라이언트 및 서비스
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: f9cd297b479a07f2330eabbaaf81605a3874ec25
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a03abc5b8eb0317c4d5d19347b3974d615570069
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257223"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704526"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>보안이 설정되지 않은 인트라넷 클라이언트 및 서비스
 
@@ -18,7 +19,7 @@ ms.locfileid: "96257223"
   
  ![보안이 적용 되지 않은 인트라넷 클라이언트 및 서비스 시나리오](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
-|특성|Description|  
+|특성|설명|  
 |--------------------|-----------------|  
 |보안 모드|없음|  
 |전송|TCP|  
@@ -43,7 +44,7 @@ ms.locfileid: "96257223"
  [!code-csharp[C_UnsecuredService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#2)]
  [!code-vb[C_UnsecuredService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#2)]  
   
-### <a name="configuration"></a>구성  
+### <a name="configuration"></a>Configuration  
 
  다음 코드는 구성을 사용하여 동일한 엔드포인트를 설정합니다.  
   
@@ -80,7 +81,7 @@ ms.locfileid: "96257223"
   
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.  
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 다음은 그 예입니다.   
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -92,7 +93,7 @@ ms.locfileid: "96257223"
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
   
-### <a name="configuration"></a>구성  
+### <a name="configuration"></a>Configuration  
 
  다음 구성 코드는 클라이언트에 적용됩니다.  
   

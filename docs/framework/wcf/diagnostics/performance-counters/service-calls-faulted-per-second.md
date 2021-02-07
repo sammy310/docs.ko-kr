@@ -1,19 +1,20 @@
 ---
+description: '다음에 대 한 자세한 정보: 서비스: 초당 호출 오류 수'
 title: '서비스: Calls Faulted Per Second'
 ms.date: 03/30/2017
 ms.assetid: 94247356-2b29-4b50-b639-91ca8c1cf3a9
-ms.openlocfilehash: d9db777d17de51caff74610d099a79228df1f6d8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 87b4ec8a6868f2694f7aefa34d977e618db16e16
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96252948"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705423"
 ---
 # <a name="service-calls-faulted-per-second"></a>서비스: Calls Faulted Per Second
 
 카운터 이름: Calls Faulted Per Second  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 서비스에 오류를 반환한 초당 호출 수입니다.  
   

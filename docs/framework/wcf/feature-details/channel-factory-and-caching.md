@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 채널 팩터리 및 캐싱'
 title: 채널 팩터리 및 캐싱
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: 5b8348a98b484ca08e3dbeba141dc49825c8c071
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6922191c2b99dea516d0e85aac9ed7bc12a67b81
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587367"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705202"
 ---
 # <a name="channel-factory-and-caching"></a>채널 팩터리 및 캐싱
 
@@ -26,13 +27,13 @@ WCF 클라이언트 애플리케이션에서는 <xref:System.ServiceModel.Channe
 > [!TIP]
 > <xref:System.ServiceModel.ChannelFactory%601> 클래스를 직접 사용하면 채널 팩터리 생성을 직접 제어할 수 있습니다.
 
-[ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 생성 된 WCF 클라이언트 프록시는에서 파생 됩니다 <xref:System.ServiceModel.ClientBase%601> . <xref:System.ServiceModel.ClientBase%601>는 채널 팩터리 캐싱 동작을 정의하는 정적 <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> 속성을 정의합니다. 캐시 설정은 특정 형식에 대해 지정합니다. 예를 들어 아래에 정의 된 값 중 하나로 설정 하면 `ClientBase<ITest>.CacheSettings` 형식의 프록시/ClientBase에만 영향을 줍니다 `ITest` . 특정 <xref:System.ServiceModel.ClientBase%601>에 대한 캐시 설정은 첫 번째 프록시/ClientBase 인스턴스가 만들어지는 즉시 변경할 수 없게 됩니다.
+[ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 생성 된 WCF 클라이언트 프록시는에서 파생 됩니다 <xref:System.ServiceModel.ClientBase%601> . <xref:System.ServiceModel.ClientBase%601>는 채널 팩터리 캐싱 동작을 정의하는 정적 <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> 속성을 정의합니다. 캐시 설정은 특정 형식에 대해 지정합니다. 예를 들어 아래에 정의 된 값 중 하나로 설정 하면  `ClientBase<ITest>.CacheSettings` 형식의 프록시/ClientBase에만 영향을 줍니다 `ITest` . 특정 <xref:System.ServiceModel.ClientBase%601>에 대한 캐시 설정은 첫 번째 프록시/ClientBase 인스턴스가 만들어지는 즉시 변경할 수 없게 됩니다.
 
 ## <a name="specifying-caching-behavior"></a>캐싱 동작 지정
 
 캐싱 동작은 <xref:System.ServiceModel.ClientBase%601.CacheSetting> 속성을 다음 값 중 하나로 설정하여 지정할 수 있습니다.
 
-|캐시 설정 값|Description|
+|캐시 설정 값|설명|
 |-------------------------|-----------------|
 |<xref:System.ServiceModel.CacheSetting.AlwaysOn>|응용 프로그램 도메인 안의 모든 <xref:System.ServiceModel.ClientBase%601> 인스턴스가 캐싱에 참여할 수 있습니다. 개발자는 캐싱에 대해 보안 상의 문제가 없는 것으로 판단했습니다. 에서 "보안에 민감한" 속성에 액세스 하는 경우에도 캐싱이 해제 되지 않습니다 <xref:System.ServiceModel.ClientBase%601> . 의 "보안에 민감한" 속성은 <xref:System.ServiceModel.ClientBase%601> <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> , <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> 및 <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A> 입니다.|
 |<xref:System.ServiceModel.CacheSetting.Default>|구성 파일에 정의된 엔드포인트에서 만든 <xref:System.ServiceModel.ClientBase%601> 인스턴스만 응용 프로그램 도메인 안의 캐싱에 참여할 수 있습니다. 해당 응용 프로그램 도메인에서 프로그래밍 방식으로 생성된 모든 <xref:System.ServiceModel.ClientBase%601> 인스턴스는 캐싱에 참여하지 않습니다. 또한 <xref:System.ServiceModel.ClientBase%601> "보안이 중요 한" 속성에 액세스 한 후에는 인스턴스에 대해 캐싱이 사용 되지 않습니다.|

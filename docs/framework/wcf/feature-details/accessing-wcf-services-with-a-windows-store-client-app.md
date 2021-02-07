@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: Windows 스토어 클라이언트 앱을 사용 하 여 WCF 서비스에 액세스'
 title: Windows 스토어 클라이언트 응용 프로그램을 사용하여 WCF 서비스에 액세스
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: ab57adbe0effa2b74541053aa0fcc5b572a6b7fd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6586b07e72749b0c136072474c27c264568ed3f7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293938"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705410"
 ---
 # <a name="access-wcf-services-with-a-windows-store-client-app"></a>Windows 스토어 클라이언트 앱을 사용 하 여 WCF 서비스에 액세스
 

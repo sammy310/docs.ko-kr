@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: WCF 끝점 및 메시지 큐 응용 프로그램과 메시지 교환'
 title: '방법: WCF 엔드포인트 및 메시지 큐 애플리케이션과 메시지 교환'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-ms.openlocfilehash: 8f8baf345059c01b0fef3b61ef85556151269118
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0b8f315b00960ec87e68e9e2b11ac9b273dbbf93
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246422"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704617"
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>방법: WCF 엔드포인트 및 메시지 큐 애플리케이션과 메시지 교환
 

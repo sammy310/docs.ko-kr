@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ASP.NET 없이 WCF AJAX 서비스 만들기'
 title: ASP.NET을 사용하지 않고 WCF AJAX 서비스 만들기
 ms.date: 03/30/2017
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-ms.openlocfilehash: 37a442f85ddf5c0a1687c05e26f140d052eaa94f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 98171a67b3dd2f267edf2281396bb0da1858b0b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239096"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705150"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>ASP.NET을 사용하지 않고 WCF AJAX 서비스 만들기
 

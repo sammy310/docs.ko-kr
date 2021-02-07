@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 워크플로 제어 끝점'
 title: 워크플로 제어 엔드포인트
 ms.date: 03/30/2017
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-ms.openlocfilehash: ecc0946833db578c524ce7e4579024bd4cd46fd0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 235d7ce3552bb3452fc3ace52249311a7605a519
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266898"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704409"
 ---
 # <a name="workflow-control-endpoint"></a>워크플로 제어 엔드포인트
 
@@ -35,7 +36,7 @@ ms.locfileid: "96266898"
 
  <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 인터페이스는 동기 및 비동기 버전이 있는 일련의 제어 작업을 정의합니다. 트랜잭트 버전에서는 트랜잭션 인식 바인딩을 사용해야 합니다. 다음 표에서는 지원되는 제어 작업을 보여 줍니다.  
   
-|제어 작업|Description|  
+|제어 작업|설명|  
 |-----------------------|-----------------|  
 |중단|워크플로 인스턴스의 실행을 강제로 중지합니다.|  
 |취소|워크플로 인스턴스를 활성 또는 일시 중단됨 상태에서 완료됨 상태로 전환합니다.|  

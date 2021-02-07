@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 서명 되거나 암호화 된 사용자 지정 헤더 만들기'
 title: 서명되거나 암호화된 사용자 지정 헤더 만들기
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-ms.openlocfilehash: daa594950c25ea4a5c2012183c47231b4688719e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d3952eeb37cbe09f72e179fcaa50c650fe9aa90d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286723"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99705176"
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>서명되거나 암호화된 사용자 지정 헤더 만들기
 

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 채널 팩터리'
 title: 채널 팩터리
 ms.date: 03/30/2017
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-ms.openlocfilehash: 2aa44c4ef274fa548d490b0d8a648457a7b1e03b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fad406e14887524fc69900e9775f1b6fbbcbecda
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600661"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704136"
 ---
 # <a name="channel-factory"></a>채널 팩터리
 
@@ -16,7 +17,7 @@ ms.locfileid: "84600661"
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
 
-이 샘플에서는 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 서비스 엔드포인트에 채널을 만듭니다. 일반적으로 서비스 끝점에 대 한 채널을 만들려면 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 클라이언트 형식을 생성 하 고 생성 된 형식의 인스턴스를 만듭니다. 이 샘플에서와 같이 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 채널을 만들 수도 있습니다. 다음 샘플 코드에서 만든 서비스는 [시작](getting-started-sample.md)의 서비스와 동일 합니다.
+이 샘플에서는 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 서비스 엔드포인트에 채널을 만듭니다. 일반적으로 서비스 끝점에 대 한 채널을 만들려면 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 클라이언트 형식을 생성 하 고 생성 된 형식의 인스턴스를 만듭니다. 이 샘플에서와 같이 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 채널을 만들 수도 있습니다. 다음 샘플 코드에서 만든 서비스는 [시작](getting-started-sample.md)의 서비스와 동일 합니다.
 
 ```csharp
 EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");
