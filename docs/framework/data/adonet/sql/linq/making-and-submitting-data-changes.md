@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 데이터 변경 설정 및 전송'
 title: 데이터 변경 및 변경 내용 전송
 ms.date: 03/30/2017
 ms.assetid: d68c2dc3-99b3-49ab-b547-2ca5b386429a
-ms.openlocfilehash: 18468c9a2018a28e85d87155d98b0853854013fd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 260dab911057b45250d44ded7c254dd903e2aed7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792970"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695574"
 ---
 # <a name="making-and-submitting-data-changes"></a>데이터 변경 및 변경 내용 전송
 
@@ -23,7 +24,7 @@ ms.locfileid: "70792970"
 [방법: 데이터베이스에 행 삽입](how-to-insert-rows-into-the-database.md) \
 개체 모델에 개체를 추가하여 데이터베이스에 행을 삽입하는 방법에 대해 설명합니다.
 
-[방법: 데이터베이스의 행 업데이트](how-to-update-rows-in-the-database.md) \
+[방법: 데이터베이스에서 행 업데이트](how-to-update-rows-in-the-database.md) \
 개체 모델에 개체를 업데이트하여 데이터베이스에 행을 업데이트하는 방법에 대해 설명합니다.
 
 [방법: 데이터베이스에서 행 삭제](how-to-delete-rows-from-the-database.md) \
@@ -32,7 +33,7 @@ ms.locfileid: "70792970"
 [방법: 데이터베이스에 변경 내용 전송](how-to-submit-changes-to-the-database.md) \
 데이터베이스에 개체 모델 변경 내용을 보내는 방법에 대해 설명합니다.
 
-[방법: 트랜잭션을 사용 하 여 대괄호 데이터 전송](how-to-bracket-data-submissions-by-using-transactions.md) \
+[방법: 트랜잭션을 사용 하 여 데이터의 괄호를 사용 하 여 데이터 전송](how-to-bracket-data-submissions-by-using-transactions.md) \
 트랜젝션에 작업을 포함시키는 방법에 대해 설명합니다.
 
 [방법: 동적으로 데이터베이스 만들기](how-to-dynamically-create-a-database.md) \

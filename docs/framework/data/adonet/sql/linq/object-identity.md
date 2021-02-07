@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 개체 Id'
 title: 개체 ID
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-ms.openlocfilehash: 1a1617b4fb15a6adf94c0241c3ba577308c51a8b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1e525250e37e697e33ee53ea59b973882633ec15
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169429"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695517"
 ---
 # <a name="object-identity"></a>개체 ID
 
@@ -29,7 +30,7 @@ ms.locfileid: "91169429"
 > [!NOTE]
 > 쿼리에 의해 요청된 개체를 이미 검색된 개체로 쉽게 식별할 수 있는 경우 쿼리가 실행되지 않습니다. ID 테이블은 이전에 검색된 모든 개체의 캐시로 작동합니다.  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
   
 ### <a name="object-caching-example-1"></a>개체 캐싱 예제 1  
 

@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 컴파일된 쿼리 (LINQ to Entities)'
 title: 컴파일된 쿼리(LINQ to Entities)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: b8bed63cda505ad8c26c9c69d880a077053b8d2e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bed14f21b6f2b46bfa229dbca0aa7c31d9763af3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153055"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696921"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>컴파일된 쿼리 (LINQ to Entities)
 
@@ -22,14 +23,14 @@ ms.locfileid: "91153055"
   
  의 메서드가 컴파일하는 LINQ to Entities 쿼리 <xref:System.Data.Objects.CompiledQuery> 식은 `Compile` 와 같은 제네릭 대리자 중 하나로 표시 됩니다 `Func` <xref:System.Func%605> . 쿼리 식은 최대로 `ObjectContext` 매개 변수 1개, 반환 매개 변수 1개 및 쿼리 매개 변수 16개를 캡슐화할 수 있습니다. 쿼리 매개 변수가 17개 이상 필요한 경우 속성으로 쿼리 매개 변수를 나타내는 구조를 만들 수 있습니다. 속성을 설정한 후 쿼리 식에서 구조의 속성을 사용할 수 있습니다.  
   
-## <a name="example-1"></a>예 1  
+## <a name="example-1"></a>예제 1  
 
  다음 예제에서는 <xref:System.Decimal> 입력 매개 변수를 허용 하 고 total이 $200.00 보다 크거나 같은 일련의 주문을 반환 하는 쿼리를 컴파일한 다음 호출 합니다.  
   
  [!code-csharp[DP L2E Conceptual Examples - compiled query 2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery2)]
  [!code-vb[DP L2E Conceptual Examples - compiled query2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery2)]  
   
-## <a name="example-2"></a>예제 2  
+## <a name="example-2"></a>예 2  
 
  다음 예에서는 인스턴스를 반환 하는 쿼리를 컴파일한 다음 호출 합니다 <xref:System.Data.Objects.ObjectQuery%601> .  
   

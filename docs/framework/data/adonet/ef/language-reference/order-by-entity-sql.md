@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ORDER BY (Entity SQL)'
 title: ORDER BY(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 5e1c418a7f2bd40a42b259fb3784794b13098d7f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 092850e864ae95d50b615839265041a7e32b39a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173681"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696323"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY(Entity SQL)
 
@@ -35,7 +36,7 @@ SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합�
  `collation_name`에 지정된 데이터 정렬에 따라 ORDER BY 연산을 수행해야 함을 지정합니다. COLLATE는 문자열 식에만 적용됩니다.  
   
  ASC  
- 지정된 속성에서 값이 오름차순으로, 즉 가장 작은 값에서 가장 큰 값으로 정렬되도록 지정합니다. 이것이 기본값입니다.  
+ 지정된 속성에서 값이 오름차순으로, 즉 가장 작은 값에서 가장 큰 값으로 정렬되도록 지정합니다. 기본값입니다.  
   
  DESC  
  지정된 속성에서 값이 내림차순으로, 즉 가장 큰 값에서 가장 작은 값으로 정렬되도록 지정합니다.  

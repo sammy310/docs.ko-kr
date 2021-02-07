@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 원격 실행과 로컬 실행'
 title: 원격 및 로컬 실행
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: c99e726902192fc8324e77441b80aa4519c55ddc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ea4d85faedd4a299da292029e64d77132e1a65a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91196951"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695201"
 ---
 # <a name="remote-vs-local-execution"></a>원격 및 로컬 실행
 

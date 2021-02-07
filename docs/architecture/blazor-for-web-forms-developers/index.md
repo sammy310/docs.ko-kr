@@ -6,15 +6,15 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 12/01/2020
-ms.openlocfilehash: 47f684e1b48ca95b8d999e6f1429840eb5f541de
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.date: 02/02/2021
+ms.openlocfilehash: 267f7222865c5a92d20faaae41b052da08c284a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96509769"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653474"
 ---
-# <a name="no-locblazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms용 Blazor 개발자
+# <a name="blazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms용 Blazor 개발자
 
 ![서버리스 앱 eBook 표지를 보여주는 스크린샷.](./media/index/blazor-for-aspnet-web-forms-developers.png)
 
@@ -34,7 +34,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2020 by Microsoft Corporation
+Copyright © 2021 by Microsoft Corporation
 
 All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 서면 허가 없이는 어떠한 형식이나 방법으로도 복제하거나 전송할 수 없습니다.
 

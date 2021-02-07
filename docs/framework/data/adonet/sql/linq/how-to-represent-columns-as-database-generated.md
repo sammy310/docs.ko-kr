@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 열을 Database-Generated 표현'
 title: '방법: 열을 데이터베이스에서 생성된 열로 표현'
 ms.date: 03/30/2017
 ms.assetid: 6524b8a6-e5d2-4a3b-8e08-beafc4a84fd2
-ms.openlocfilehash: 914fdcb78efbaaddf08330e32e1d7f7c4e62436e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 01828ef3f73257d20023168f0ea471ee7e3863c5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166315"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695634"
 ---
 # <a name="how-to-represent-columns-as-database-generated"></a>방법: 열을 데이터베이스에서 생성된 열로 표현
 

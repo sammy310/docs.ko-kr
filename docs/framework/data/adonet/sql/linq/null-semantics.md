@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: Null 의미 체계'
 title: Null 의미 체계
 ms.date: 03/30/2017
 ms.assetid: a97017ae-d634-4cf3-bbaf-054a528fd683
-ms.openlocfilehash: 739ee95be45d7d64a4ad1678837b9706a533f07d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2326cd20a225f31693260aa038477f1f6090d02f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147543"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695582"
 ---
 # <a name="null-semantics"></a>Null 의미 체계
 

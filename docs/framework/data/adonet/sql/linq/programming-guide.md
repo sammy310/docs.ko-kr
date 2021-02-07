@@ -1,19 +1,20 @@
 ---
+description: '자세히 알아보기: 프로그래밍 가이드'
 title: 프로그래밍 가이드
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 50c4370e23faf8400eb23f1e8c0cc74cd4dce80e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 37f3974864e9bfc11bff762617bab27e25a44007
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203568"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695228"
 ---
 # <a name="programming-guide"></a>프로그래밍 가이드
 
 이 단원에는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 모델을 생성하고 사용하는 방법에 대한 정보가 들어 있습니다. Visual Studio를 사용 하는 경우 개체 관계형 디자이너를 사용 하 여 이러한 여러 작업을 수행할 수도 있습니다.  
   
- 또한 특정 문제에 대 한 Microsoft Docs 검색할 수 있으며, 전문가와 함께 보다 복잡 한 항목을 자세히 논의할 수 있는 [LINQ 포럼](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)에 참여할 수 있습니다. 마지막으로 [LINQ to SQL: 관계형 데이터에 대 한 .Net 언어 통합 쿼리](/previous-versions/dotnet/articles/bb425822(v=msdn.10)) 백서 정보 기술에 대 한 자세한 내용은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Basic 및 c # 코드 예제를 참조 하세요.  
+ 또한 특정 문제에 대 한 Microsoft Docs 검색할 수 있으며, 전문가와 함께 보다 복잡 한 항목을 자세히 논의할 수 있는 [LINQ 포럼](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)에 참여할 수 있습니다. 마지막으로 [LINQ to SQL: .net Language-Integrated 관계형 데이터에 대 한 쿼리](/previous-versions/dotnet/articles/bb425822(v=msdn.10)) [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 를 수행 합니다. 자세한 내용은 Visual Basic 및 c # 코드 예제를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 

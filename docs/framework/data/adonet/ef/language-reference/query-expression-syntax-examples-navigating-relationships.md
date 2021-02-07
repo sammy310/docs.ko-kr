@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 쿼리 식 구문 예제: 관계 탐색'
 title: '쿼리 식 구문 예제: 관계 탐색'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0d4a7f41-c758-4059-8f83-d2e9c2745593
-ms.openlocfilehash: c09a0458f5b0b7d313da3379b5dda9b969eaf7e4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0548cba8d1d3d834da6a8416cb444898981b4123
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156799"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696154"
 ---
 # <a name="query-expression-syntax-examples-navigating-relationships"></a>쿼리 식 구문 예제: 관계 탐색
 

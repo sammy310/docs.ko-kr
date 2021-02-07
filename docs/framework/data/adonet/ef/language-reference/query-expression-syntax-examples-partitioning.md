@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 쿼리 식 구문 예제: 분할'
 title: '쿼리 식 구문 예제: 분할'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e41aed0-3be9-4f75-98de-860a85552a3c
-ms.openlocfilehash: 548701f375b550e3a533a012bf34dc686ed42ac1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9322f43874054ac864bda5c84ae02dfe0a49ec4f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203607"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695998"
 ---
 # <a name="query-expression-syntax-examples-partitioning"></a>쿼리 식 구문 예제: 분할
 

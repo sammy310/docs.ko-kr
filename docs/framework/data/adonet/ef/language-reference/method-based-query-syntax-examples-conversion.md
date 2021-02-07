@@ -1,16 +1,17 @@
 ---
+description: '다음에 대 한 자세한 정보: Method-Based 쿼리 구문 예제: 변환'
 title: '메서드 기반 쿼리 구문 예제: 변환'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 19f66872-d5ab-49f8-969f-e53f9632a13d
-ms.openlocfilehash: e2b5ae3b7c7733216f18914c497d080fe8d71a8e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 054ef9291a66216b14e2f03ecebd28fb24c6574d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192089"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696752"
 ---
 # <a name="method-based-query-syntax-examples-conversion"></a>메서드 기반 쿼리 구문 예제: 변환
 

@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 데이터베이스 미러링 SQL Server'
 title: SQL Server에서 데이터베이스 미러링
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 7e2c1c8ea1cbc1bb22452b9ef9d1f250c96118ea
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 663f0a2a016a3f6c449c1d2694bc6c2d77eb6157
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173538"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695894"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server에서 데이터베이스 미러링
 
@@ -55,7 +56,7 @@ string activeServer = connection.DataSource;
   
 ## <a name="sqlclient-mirroring-behavior"></a>SqlClient 미러링 동작  
 
- 클라이언트는 항상 현재 주 서버에 연결을 시도합니다. 실패하면 장애 조치(failover) 파트너로 연결을 시도합니다. 미러 데이터베이스가 파트너 서버의 주 역할로 이미 전환된 경우에는 연결이 성공하고 새로운 주-미러 매핑이 클라이언트로 전송되며 호출 <xref:System.AppDomain>의 수명 동안 캐시됩니다. 이 매핑은 영구 스토리지에 저장되지 않으므로 다른 **AppDomain** 또는 프로세스의 후속 연결에는 사용할 수 없습니다. 그러나 동일한 **AppDomain** 내에서의 후속 연결에는 사용할 수 있습니다. 같거나 다른 컴퓨터에서 실행되는 다른 **AppDomain** 또는 프로세스에는 항상 연결 풀이 있으며 이러한 연결은 다시 설정되지 않습니다. 이 경우 주 데이터베이스가 다운되면 각 프로세스 또는 **AppDomain**이 실패하고 나서 풀이 자동으로 지워집니다.  
+ 클라이언트는 항상 현재 주 서버에 연결을 시도합니다. 실패하면 장애 조치(failover) 파트너로 연결을 시도합니다. 미러 데이터베이스가 파트너 서버의 주 역할로 이미 전환된 경우에는 연결이 성공하고 새로운 주-미러 매핑이 클라이언트로 전송되며 호출 <xref:System.AppDomain>의 수명 동안 캐시됩니다. 이 매핑은 영구 스토리지에 저장되지 않으므로 다른 **AppDomain** 또는 프로세스의 후속 연결에는 사용할 수 없습니다. 그러나 동일한 **AppDomain** 내에서의 후속 연결에는 사용할 수 있습니다. 같거나 다른 컴퓨터에서 실행되는 다른 **AppDomain** 또는 프로세스에는 항상 연결 풀이 있으며 이러한 연결은 다시 설정되지 않습니다. 이 경우 주 데이터베이스가 다운되면 각 프로세스 또는 **AppDomain** 이 실패하고 나서 풀이 자동으로 지워집니다.  
   
 > [!NOTE]
 > 서버에서의 미러링 지원은 데이터베이스별로 구성됩니다. 다중 파트 이름을 사용하거나 현재 데이터베이스를 변경하는 방식으로 주/미러 집합에 포함되지 않은 다른 데이터베이스에 대해 데이터 조작 작업이 실행되는 경우, 이러한 다른 데이터베이스에 대한 변경 내용은 실패 시 전파되지 않습니다. 미러되지 않은 데이터베이스에서 데이터가 수정되는 경우에는 오류가 발생하지 않습니다. 개발자는 이러한 작업이 미칠 수 있는 영향을 평가해야 합니다.  

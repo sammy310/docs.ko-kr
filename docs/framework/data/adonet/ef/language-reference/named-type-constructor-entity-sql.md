@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 명명 된 형식 생성자 (Entity SQL)'
 title: 명명된 형식 생성자(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: c673b58ee5811e3d3b74b3744d3f5291888e2253
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e5ec811f814898661cf8de28de1fb8406647332d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197783"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696544"
 ---
 # <a name="named-type-constructor-entity-sql"></a>명명된 형식 생성자(Entity SQL)
 
@@ -27,7 +28,7 @@ ms.locfileid: "91197783"
  `expression`  
  형식의 특성으로서, 형식 선언에 나타나는 것과 동일한 순서일 것으로 가정됩니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  명명된 복합 형식 및 엔터티 형식의 인스턴스입니다.  
   

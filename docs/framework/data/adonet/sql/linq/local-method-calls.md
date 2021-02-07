@@ -1,22 +1,23 @@
 ---
+description: '자세한 정보: 로컬 메서드 호출'
 title: 로컬 메서드 호출
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
-ms.openlocfilehash: 25aded1aa961e182e8d2d472fca4c5a84b501af1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7f3870a700ac86e87e3464f0bc6aaccbb2525168
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166172"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695543"
 ---
 # <a name="local-method-calls"></a>로컬 메서드 호출
 
 로컬 메서드 호출은 개체 모델 내에서 실행되는 작업입니다. 원격 메서드 호출은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 SQL로 변환하고 실행을 위해 데이터베이스 엔진으로 전송하는 작업입니다. 로컬 메서드 호출은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 호출을 SQL로 변환할 수 없는 경우 필요합니다. 그렇지 않으면 <xref:System.InvalidOperationException>이 throw됩니다.  
   
-## <a name="example-1"></a>예 1  
+## <a name="example-1"></a>예제 1  
 
  다음 예제에서는 `Order` 클래스를 Northwind 샘플 데이터베이스의 Orders 테이블에 매핑합니다. 로컬 인스턴스 메서드가 해당 클래스에 추가됩니다.  
   

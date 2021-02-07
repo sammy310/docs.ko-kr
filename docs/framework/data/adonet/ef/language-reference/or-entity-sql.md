@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: | | 디스크나 (Entity SQL)'
 title: '|| (OR) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
-ms.openlocfilehash: 89c0a92030f2f067d5e5d45b58d475414a224ce4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 83af0211de1dd86b057237c36312e3ce33a3512a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150806"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696336"
 ---
 # <a name="-or-entity-sql"></a>|| (OR) (Entity SQL)
 
@@ -26,7 +27,7 @@ boolean_expression || boolean_expression
  `boolean_expression`  
  `Boolean`을 반환하는 유효한 식입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  조건 중 하나가`true` 이면 `true`이고 그렇지 않으면 `false`입니다.  
   

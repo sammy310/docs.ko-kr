@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 쿼리 식 구문 예제: 조인 연산자'
 title: '쿼리 식 구문 예제: 조인 연산자'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 343e8dda-70b2-409d-9334-ce9a880c3cea
-ms.openlocfilehash: 3a99038f9432ffc485742587350e2752ba55706f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 01ca3157ef13097c5c89ac1e6bafd03873c05977
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158398"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696206"
 ---
 # <a name="query-expression-syntax-examples-join-operators"></a>쿼리 식 구문 예제: 조인 연산자
 

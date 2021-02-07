@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 관계 간 쿼리'
 title: 관계 간 쿼리
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: 24ab13a1d67eac39c7b3d7be8cb1c16ec7265d5e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a29a24b21cc486f59ae7535db0e5f97831249ee0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184886"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695257"
 ---
 # <a name="querying-across-relationships"></a>관계 간 쿼리
 
@@ -21,7 +22,7 @@ ms.locfileid: "91184886"
  [!code-csharp[DLinqQueryConcepts#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#3)]
  [!code-vb[DLinqQueryConcepts#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#3)]  
   
- 관계 속성이 존재 하지 않는 경우 다음 코드와 같이 SQL 쿼리에서 수행 하는 것과 마찬가지로 *조인*으로 수동으로 써야 합니다.  
+ 관계 속성이 존재 하지 않는 경우 다음 코드와 같이 SQL 쿼리에서 수행 하는 것과 마찬가지로 *조인* 으로 수동으로 써야 합니다.  
   
  [!code-csharp[DLinqQueryConcepts#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#4)]
  [!code-vb[DLinqQueryConcepts#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#4)]  
@@ -32,7 +33,7 @@ ms.locfileid: "91184886"
   
  이제 관계가 존재하므로 클래스에 정의된 관계 속성을 참조하여 쿼리를 작성할 수 있습니다. 이러한 관계 참조는 데이터베이스의 외래 키 관계에 해당합니다. 이러한 관계를 사용하는 작업은 해당 SQL에서 더 복잡한 조인으로 변환됩니다. <xref:System.Data.Linq.Mapping.AssociationAttribute> 특성을 사용하여 관계를 정의한 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 명시적 조인을 코딩할 필요가 없습니다.  
   
- 이 환상을 유지 하기 위해는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *지연 된 로드*라는 기법을 구현 합니다. 자세한 내용은 [지연 된 로드 및 즉시 로드](deferred-versus-immediate-loading.md)를 참조 하세요.  
+ 이 환상을 유지 하기 위해는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *지연 된 로드* 라는 기법을 구현 합니다. 자세한 내용은 [지연 된 로드 및 즉시 로드](deferred-versus-immediate-loading.md)를 참조 하세요.  
   
  다음 SQL 쿼리를 고려 하 여 쌍 목록을 프로젝션 합니다 `CustomerID` - `OrderID` .  
   

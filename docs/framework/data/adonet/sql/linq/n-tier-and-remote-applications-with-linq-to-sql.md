@@ -1,13 +1,14 @@
 ---
+description: LINQ to SQL를 사용 하는 N 계층 및 원격 응용 프로그램에 대해 자세히 알아보세요.
 title: LINQ to SQL을 사용한 N 계층 및 원격 애플리케이션
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-ms.openlocfilehash: 70f6a6ee91761196b62b34f6dde73d11dbe6b39d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6abaeed8d4953a9b810db32418a4ebd3e78683fc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200604"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695608"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>LINQ to SQL을 사용한 N 계층 및 원격 애플리케이션
 

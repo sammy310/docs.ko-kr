@@ -1,19 +1,20 @@
 ---
+description: '자세히 알아보기: 참조'
 title: 참조
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 05ff05d165ad902eba0e984089ab1dde7f24fca7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7125cbea5cf8689a77823ff85b9652bc2ca31096
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184861"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695229"
 ---
 # <a name="reference"></a>참조
 
 이 단원에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개발자를 위한 참조 정보를 제공합니다.  
   
- 특정 문제에 대 한 Microsoft Docs 검색 하는 것이 좋습니다. 특히, 전문가와 관련 하 여 더 복잡 한 항목을 자세히 논의할 수 있는 [LINQ 포럼](https://social.msdn.microsoft.com/forums/en-us/home?forum=linqtosql)에 참여 하는 것도 좋습니다. 또한 Visual Basic 및 C# 코드 예제를 통해 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기술에 대해 자세히 설명하는 백서를 학습할 수 있습니다. 자세한 내용은 [LINQ to SQL: 관계형 데이터에 대 한 .Net 언어 통합 쿼리](/previous-versions/dotnet/articles/bb425822(v=msdn.10))를 참조 하세요.  
+ 특정 문제에 대 한 Microsoft Docs 검색 하는 것이 좋습니다. 특히, 전문가와 관련 하 여 더 복잡 한 항목을 자세히 논의할 수 있는 [LINQ 포럼](https://social.msdn.microsoft.com/forums/en-us/home?forum=linqtosql)에 참여 하는 것도 좋습니다. 또한 Visual Basic 및 C# 코드 예제를 통해 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기술에 대해 자세히 설명하는 백서를 학습할 수 있습니다. 자세한 내용은 [LINQ to SQL: .net Language-Integrated 관계형 데이터 쿼리](/previous-versions/dotnet/articles/bb425822(v=msdn.10))를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 

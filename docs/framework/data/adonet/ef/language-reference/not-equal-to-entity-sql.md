@@ -1,13 +1,14 @@
 ---
+description: 자세히 알아보기:! = (같지 않음) (Entity SQL)
 title: '!= (같지 않음)(Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 3b4a02ad-ddfc-4c42-8dfa-676234461312
-ms.openlocfilehash: bebe85072f5a2cf6a133b88c6d3f5c97299aa63f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a7a96606fb1834b757253948c3a0d2cde11893dc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191777"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696401"
 ---
 # <a name="-not-equal-to-entity-sql"></a>!= (같지 않음)(Entity SQL)
 
@@ -24,7 +25,7 @@ expression <> expression
 ## <a name="arguments"></a>인수  
 
  `expression`  
- 모든 유효한 식입니다. 두 식은 모두 암시적으로 변환 가능한 데이터 형식이어야 합니다.  
+ 유효한 식입니다. 두 식은 모두 암시적으로 변환 가능한 데이터 형식이어야 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
 

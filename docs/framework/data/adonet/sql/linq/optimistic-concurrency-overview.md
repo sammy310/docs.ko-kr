@@ -1,24 +1,25 @@
 ---
+description: '자세한 정보: 낙관적 동시성: 개요'
 title: '낙관적 동시성: 개요'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: 7a1bc23d9f012b2f3541c1411a25b7527e696873
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fbf6714851dbb31982a110749c55e5fad7aa2206
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169403"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695426"
 ---
 # <a name="optimistic-concurrency-overview"></a>낙관적 동시성: 개요
 
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 낙관적 동시성 제어를 지원합니다. 다음 표에서는 설명서에서 낙관적 동시성에 적용 되는 용어에 대해 설명 합니다 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
-|용어|설명|  
+|사용 약관|설명|  
 |-----------|-----------------|  
 |동시성|둘 이상의 사용자가 동일한 데이터베이스 행을 동시에 업데이트하려는 상황입니다.|  
 |동시성 충돌(concurrency conflict)|둘 이상의 사용자가 한 행의 하나 이상의 열에 충돌하는 값을 동시에 전송하려는 상황입니다.|  
 |동시성 제어|동시성 충돌을 해결하는 데 사용되는 기술입니다.|  
-|낙관적 동시성 제어|변경 내용이 전송되도록 허용하기 전에 다른 트랜잭션에서 행의 값을 변경했는지 조사하는 기술입니다.<br /><br /> *비관적 동시성 제어*와 달리 동시성 충돌을 방지 하기 위해 레코드를 잠급니다.<br /><br /> *낙관적* 제어는 한 트랜잭션이 다른 트랜잭션으로 간섭 하는 가능성을 고려 하지 않기 때문에 가능 합니다.|  
+|낙관적 동시성 제어|변경 내용이 전송되도록 허용하기 전에 다른 트랜잭션에서 행의 값을 변경했는지 조사하는 기술입니다.<br /><br /> *비관적 동시성 제어* 와 달리 동시성 충돌을 방지 하기 위해 레코드를 잠급니다.<br /><br /> *낙관적* 제어는 한 트랜잭션이 다른 트랜잭션으로 간섭 하는 가능성을 고려 하지 않기 때문에 가능 합니다.|  
 |충돌 해결|데이터베이스를 다시 쿼리한 다음 차이를 조정하여 충돌하는 항목을 새로 고치는 프로세스입니다.<br /><br /> 개체를 새로 고칠 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 변경 추적기는 다음 데이터를 보유합니다.<br /><br /> -원래 데이터베이스에서 가져온 값으로 업데이트 확인에 사용 됩니다.<br />-후속 쿼리의 새 데이터베이스 값입니다.<br /><br /> 그런 다음 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 개체가 충돌하는지 여부(즉, 해당 멤버 값 중 하나 이상이 변경되었는지 여부)를 확인합니다. 개체가 충돌할 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 해당 멤버 중에서 충돌하는 멤버를 확인합니다.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]이 검색한 모든 멤버 충돌은 충돌 목록에 추가됩니다.|  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]개체 모델에서 *낙관적 동시성 충돌* 은 다음 두 조건에 모두 해당 하는 경우에 발생 합니다.  
@@ -42,7 +43,7 @@ ms.locfileid: "91169403"
   
 ||Manager|Assistant|department|  
 |------|-------------|---------------|----------------|  
-|원래 상태|Alfreds|Maria|Sales|  
+|원래 상태|Alfreds|Maria|매출|  
 |User1|Alfred||Marketing|  
 |User2||Mary|서비스|  
   

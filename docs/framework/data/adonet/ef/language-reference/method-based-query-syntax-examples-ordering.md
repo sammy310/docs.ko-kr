@@ -1,16 +1,17 @@
 ---
+description: '다음에 대 한 자세한 정보: Method-Based 쿼리 구문 예제: 정렬'
 title: '메서드 기반 쿼리 구문 예제: 순서 지정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5d21b178-d731-471a-8534-1f8184a2ef06
-ms.openlocfilehash: 02889fb4172d24634cdcb1c8384a804b2ce1a0e8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7b1c67ba66f549e82a57b5b34c645d36d1255a14
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191933"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696700"
 ---
 # <a name="method-based-query-syntax-examples-ordering"></a>메서드 기반 쿼리 구문 예제: 순서 지정
 

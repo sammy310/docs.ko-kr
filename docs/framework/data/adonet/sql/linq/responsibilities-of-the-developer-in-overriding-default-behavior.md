@@ -1,13 +1,14 @@
 ---
+description: 기본 동작 재정의에서 개발자의 책임에 대해 자세히 알아보세요.
 title: 기본 동작 재정의에서 개발자의 책임
 ms.date: 03/30/2017
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
-ms.openlocfilehash: 88a7076e12e39ed23aa6d661aa90f74258f3dded
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e97f49fb569547f97d295463e4ef3e848ecf390b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200435"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695270"
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>기본 동작 재정의에서 개발자의 책임
 

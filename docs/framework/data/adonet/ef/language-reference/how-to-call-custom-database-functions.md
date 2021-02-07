@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: 사용자 지정 데이터베이스 함수 호출'
 title: '방법: 사용자 지정 데이터베이스 함수 호출'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: 9879803c970b7965bf152c216367b216e201af38
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f33630f68740877ff2d0e7f0fec7202453d96bf7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540310"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696791"
 ---
 # <a name="how-to-call-custom-database-functions"></a>방법: 사용자 지정 데이터베이스 함수 호출
 
@@ -65,7 +66,7 @@ LINQ to Entities 쿼리에서 호출된 데이터베이스 함수는 데이터�
 [!code-csharp[DP L2E MapToDBFunction#4](~/samples/snippets/csharp/VS_Snippets_Data/dp l2e maptodbfunction/cs/program.cs#4)]
 [!code-vb[DP L2E MapToDBFunction#4](~/samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.edmx 파일 개요](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [LINQ to Entities에서 쿼리](queries-in-linq-to-entities.md)
