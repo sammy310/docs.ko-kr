@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기'
 title: '방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: 9aaaf6a10e0c51db35720d72512c1a91cfbb9720
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 69fa09b89c2eda871663ce10a265efa4f3b356f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96256744"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756190"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기
 
@@ -103,7 +104,7 @@ WCF (Windows Communication Foundation)에는 구성할 수 있지만 WCF에서 �
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
 
  다음 예제에서는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>를 사용하는 사용자 지정 바인딩을 만들기 위한 완전한 함수를 제공합니다.  
   

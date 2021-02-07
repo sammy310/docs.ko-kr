@@ -1,15 +1,16 @@
 ---
+description: Windows Communication Foundation 끝점에 대 한 자세한 정보
 title: Windows Communication Foundation 엔드포인트
 ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
-ms.openlocfilehash: d3281ac648ecb43ce5248fe86b6da1d268e382f8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: caa918f2dd7ca7b0289cc1faf6d189270596808b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262153"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756775"
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation 엔드포인트
 

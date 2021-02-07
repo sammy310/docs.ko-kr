@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 페더레이션'
 title: 페더레이션
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 5b5e944b96fc5e56fbb4d19a582ba9dd245904b4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 069017097b46ef0b86e74fb94c2e2823172fb1e0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286749"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756333"
 ---
 # <a name="federation"></a>페더레이션
 
@@ -29,7 +30,7 @@ ms.locfileid: "96286749"
 
  다음 표에 설명된 것처럼 페더레이션 보안 아키텍처에는 세 가지 요소가 있습니다.  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |도메인/영역|보안 관리 또는 신뢰의 단일 단위입니다. 일반 도메인은 단일 조직을 포함할 수 있습니다.|  
 |페더레이션|설정된 신뢰가 있는 도메인의 컬렉션입니다. 신뢰 수준은 다른 경우도 있지만 일반적으로 인증 및 권한 부여가 포함됩니다. 일반적인 페더레이션은 리소스 집합에 대한 공유 액세스에서 신뢰가 설정된 여러 조직을 포함할 수 있습니다.|  

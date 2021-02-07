@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: WCF 및 국제화 도메인 이름'
 title: WCF 및 IDN(Internationalized Domain Name)
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-ms.openlocfilehash: 2d93bbb0c284c2227a4d03acf1ad9a801df57bd8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e7e1ad999d7de749b4f8cf4b3efd823befffba43
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281991"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755995"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF 및 IDN(Internationalized Domain Name)
 

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 전송 보안이 포함 된 BasicBinding'
 title: 전송 보안 포함한 기본 바인딩
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: 822a7dcb20c6559a70ba77719b6e7a62633bb31c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e3d196136fcf91e3e61f82cee7e16421db221192
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575669"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755904"
 ---
 # <a name="basicbinding-with-transport-security"></a>전송 보안 포함한 기본 바인딩
 
@@ -56,7 +57,7 @@ ms.locfileid: "84575669"
 </system.serviceModel>
 ```
 
-이 샘플에 사용 된 인증서는 Makecert.exe를 사용 하 여 만든 테스트 인증서 이므로 브라우저에서와 같은 HTTPS: 주소에 액세스 하려고 하면 보안 경고가 나타납니다 `https://localhost/servicemodelsamples/service.svc` . WCF (Windows Communication Foundation) 클라이언트에서 테스트 인증서를 사용할 수 있도록 하기 위해 일부 추가 코드를 클라이언트에 추가 하 여 보안 경고를 표시 하지 않습니다. 실제 인증서를 사용할 때는 이 코드 및 함께 사용되는 클래스가 필요하지 않습니다.
+이 샘플에 사용 된 인증서는 Makecert.exe을 사용 하 여 만든 테스트 인증서 이므로 브라우저에서와 같은 HTTPS: 주소에 액세스 하려고 하면 보안 경고가 나타납니다 `https://localhost/servicemodelsamples/service.svc` . WCF (Windows Communication Foundation) 클라이언트에서 테스트 인증서를 사용할 수 있도록 하기 위해 일부 추가 코드를 클라이언트에 추가 하 여 보안 경고를 표시 하지 않습니다. 실제 인증서를 사용할 때는 이 코드 및 함께 사용되는 클래스가 필요하지 않습니다.
 
 ```csharp
 // This code is required only for test certificates such as those

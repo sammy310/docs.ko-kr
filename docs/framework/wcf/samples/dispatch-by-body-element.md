@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 본문 요소에의 한 디스패치'
 title: 본문 요소에 의한 디스패치
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: ddff361179c2ef071ca4df076e78b238de9041a1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 431a69e1650ca7481432f71e67b87750254bda9f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292599"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755800"
 ---
 # <a name="dispatch-by-body-element"></a>본문 요소에 의한 디스패치
 

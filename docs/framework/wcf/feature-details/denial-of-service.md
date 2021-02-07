@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 서비스 거부'
 title: 서비스 거부
 ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 6bf0dd8af32f50164138092684c4b82f12134718
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1f1b40f717453f3e55bedc48aa00ead31adb8725
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291598"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756476"
 ---
 # <a name="denial-of-service"></a>서비스 거부
 
@@ -98,4 +99,4 @@ ms.locfileid: "96291598"
 - [서비스 거부](denial-of-service.md)
 - [재생 공격](replay-attacks.md)
 - [변조](tampering.md)
-- [지원되지 않는 시나리오](unsupported-scenarios.md)
+- [지원 되지 않는 시나리오](unsupported-scenarios.md)

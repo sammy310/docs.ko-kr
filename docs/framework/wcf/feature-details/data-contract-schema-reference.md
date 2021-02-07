@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 데이터 계약 스키마 참조'
 title: 데이터 계약 스키마 참조
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 04d1f753e5788460404942a21a29e1612f674e90
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3449340600ea5c55ef46433031e53266a218bd6d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593570"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756645"
 ---
 # <a name="data-contract-schema-reference"></a>데이터 계약 스키마 참조
 
@@ -17,7 +18,7 @@ ms.locfileid: "84593570"
 
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer 매핑
 
-는 `DataContractSerializer` 메타 데이터 끝점 또는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용 하 여 Windows Communication Foundation (WCF) 서비스에서 메타 데이터를 내보낼 때 CLR 형식을 XSD에 매핑합니다. 자세한 내용은 [데이터 계약 Serializer](data-contract-serializer.md)를 참조 하세요.
+는 `DataContractSerializer` 메타 데이터 끝점 또는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용 하 여 Windows Communication Foundation (WCF) 서비스에서 메타 데이터를 내보낼 때 CLR 형식을 XSD에 매핑합니다. 자세한 내용은 [데이터 계약 Serializer](data-contract-serializer.md)를 참조 하세요.
 
 또한 WSDL(웹 서비스 기술 언어) 또는 XSD 문서에 액세스하여 서비스 또는 클라이언트에 대한 데이터 계약을 생성하기 위해 Svcutil.exe를 사용하는 경우 `DataContractSerializer` 는 XSD를 CLR 형식에 매핑합니다.
 
@@ -27,9 +28,9 @@ ms.locfileid: "84593570"
 
 `DataContractSerializer` 는 지정된 XML 스키마 기능에 대해 다음과 같은 수준의 지원을 제공합니다.
 
-- **지원됨**이라는 의미입니다. `DataContractSerializer`를 사용하여 이 기능에서 CLR 형식 또는 특성(또는 둘 다)으로 명시적 매핑이 지원됩니다.
+- **지원됨** 이라는 의미입니다. `DataContractSerializer`를 사용하여 이 기능에서 CLR 형식 또는 특성(또는 둘 다)으로 명시적 매핑이 지원됩니다.
 
-- **무시**됩니다. `DataContractSerializer`가 가져온 스키마에 이 기능을 사용할 수 있지만 코드 생성에 영향을 주지는 않습니다.
+- **무시** 됩니다. `DataContractSerializer`가 가져온 스키마에 이 기능을 사용할 수 있지만 코드 생성에 영향을 주지는 않습니다.
 
 - 사용할 수 **없음**. `DataContractSerializer` 는 이 기능을 사용하여 스키마 가져오기 작업을 지원하지 않습니다. 예를 들어, 이러한 기능을 사용하는 스키마를 통해 WSDL에 액세스하는 경우 Svcutil.exe는 대신 <xref:System.Xml.Serialization.XmlSerializer> 로 대체됩니다. 이 기능은 기본적으로 설정됩니다.
 
@@ -57,18 +58,18 @@ ms.locfileid: "84593570"
 
 |콘텐츠|스키마|
 |--------------|------------|
-|`include`|지원됩니다. `DataContractSerializer` 는 xs:include 및 xs:import를 지원합니다. 그러나 Svcutil.exe는 로컬 파일에서 메타데이터를 로드할 때 다음 `xs:include/@schemaLocation` 및 `xs:import/@location` 참조를 제한합니다. 이러한 경우 스키마 파일 목록은 `include` 가 아닌 out-of-band 메커니즘을 통해 전달해야 합니다. `include`된 스키마 문서는 무시됩니다.|
+|`include`|지원됨. `DataContractSerializer` 는 xs:include 및 xs:import를 지원합니다. 그러나 Svcutil.exe는 로컬 파일에서 메타데이터를 로드할 때 다음 `xs:include/@schemaLocation` 및 `xs:import/@location` 참조를 제한합니다. 이러한 경우 스키마 파일 목록은 `include` 가 아닌 out-of-band 메커니즘을 통해 전달해야 합니다. `include`된 스키마 문서는 무시됩니다.|
 |`redefine`|사용할 수 없습니다. 보안상의 이유로 `xs:redefine` 는 `DataContractSerializer` 을 사용할 수 없습니다. `x:redefine` 을 사용하려면 `schemaLocation` 을 따라야 합니다. 상황에 따라 DataContract를 사용하는 Svcutil.exe는 `schemaLocation`사용을 제한합니다.|
-|`import`|지원됩니다. `DataContractSerializer` 는 `xs:include` 및 `xs:import`를 지원합니다. 그러나 Svcutil.exe는 로컬 파일에서 메타데이터를 로드할 때 다음 `xs:include/@schemaLocation` 및 `xs:import/@location` 참조를 제한합니다. 이러한 경우 스키마 파일 목록은 `include` 가 아닌 out-of-band 메커니즘을 통해 전달해야 합니다. `include`된 스키마 문서는 무시됩니다.|
-|`simpleType`|지원됩니다. `xs:simpleType` 단원을 참조하십시오.|
+|`import`|지원됨. `DataContractSerializer` 는 `xs:include` 및 `xs:import`를 지원합니다. 그러나 Svcutil.exe는 로컬 파일에서 메타데이터를 로드할 때 다음 `xs:include/@schemaLocation` 및 `xs:import/@location` 참조를 제한합니다. 이러한 경우 스키마 파일 목록은 `include` 가 아닌 out-of-band 메커니즘을 통해 전달해야 합니다. `include`된 스키마 문서는 무시됩니다.|
+|`simpleType`|지원됨. `xs:simpleType` 단원을 참조하십시오.|
 |`complexType`|지원되며 데이터 계약으로 매핑됩니다. `xs:complexType` 단원을 참조하십시오.|
 |`group`|무시됩니다. `DataContractSerializer` 는 `xs:group`, `xs:attributeGroup`및 `xs:attribute`사용을 지원하지 않습니다. 이러한 선언은 `xs:schema`의 자식으로 무시되며 `complexType` 또는 기타 지원되는 구문 내에서 참조할 수 없습니다.|
 |`attributeGroup`|무시됩니다. `DataContractSerializer` 는 `xs:group`, `xs:attributeGroup`및 `xs:attribute`사용을 지원하지 않습니다. 이러한 선언은 `xs:schema`의 자식으로 무시되며 `complexType` 또는 기타 지원되는 구문 내에서 참조할 수 없습니다.|
-|`element`|지원됩니다. GED(전역 요소 선언)를 참조하십시오.|
+|`element`|지원됨. GED(전역 요소 선언)를 참조하십시오.|
 |`attribute`|무시됩니다. `DataContractSerializer` 는 `xs:group`, `xs:attributeGroup`및 `xs:attribute`사용을 지원하지 않습니다. 이러한 선언은 `xs:schema`의 자식으로 무시되며 `complexType` 또는 기타 지원되는 구문 내에서 참조할 수 없습니다.|
 |`notation`|무시됩니다.|
 
-## <a name="complex-types--xscomplextype"></a>복합 형식 –\<xs:complexType>
+## <a name="complex-types--xscomplextype"></a>복합 형식 – \<xs:complexType>
 
 ### <a name="general-information"></a>일반 정보
 
@@ -90,7 +91,7 @@ ms.locfileid: "84593570"
 |콘텐츠|스키마|
 |--------------|------------|
 |`simpleContent`|확장을 사용할 수 없습니다.<br /><br /> 제한은 `anySimpleType`에서만 허용됩니다.|
-|`complexContent`|지원됩니다. "상속"을 참조하십시오.|
+|`complexContent`|지원됨. "상속"을 참조하십시오.|
 |`group`|사용할 수 없습니다.|
 |`all`|사용할 수 없습니다.|
 |`choice`|사용할 수 없음|
@@ -98,9 +99,9 @@ ms.locfileid: "84593570"
 |`attribute`|한 가지 예외를 포함하여 use="prohibited"인 경우에도 사용할 수 없습니다. 표준 Serialization 스키마 네임스페이스에서 선택적 특성만 지원됩니다. 이러한 특성은 데이터 계약 프로그래밍 모델의 데이터 멤버에 매핑되지 않습니다. 현재 이러한 하나의 특성만 의미가 있으며, 여기에 대해서는 ISerializable 단원에서 설명합니다. 다른 특성은 모두 무시됩니다.|
 |`attributeGroup`|사용할 수 없습니다. WCF v1 릴리스에서는 `DataContractSerializer` 내부의 존재를 무시 합니다 `attributeGroup` `xs:complexType` .|
 |`anyAttribute`|사용할 수 없습니다.|
-|(비어 있음)|데이터 멤버 없이 데이터 계약에 매핑됩니다.|
+|(empty)|데이터 멤버 없이 데이터 계약에 매핑됩니다.|
 
-### <a name="xssequence-in-a-complex-type-attributes"></a>\<xs:sequence>복합 형식: 특성
+### <a name="xssequence-in-a-complex-type-attributes"></a>\<xs:sequence> 복합 형식: 특성
 
 |attribute|스키마|
 |---------------|------------|
@@ -108,7 +109,7 @@ ms.locfileid: "84593570"
 |`maxOccurs`|1이어야 합니다(기본값).|
 |`minOccurs`|1이어야 합니다(기본값).|
 
-### <a name="xssequence-in-a-complex-type-contents"></a>\<xs:sequence>복합 형식: 내용
+### <a name="xssequence-in-a-complex-type-contents"></a>\<xs:sequence> 복합 형식: 내용
 
 |콘텐츠|스키마|
 |--------------|------------|
@@ -117,9 +118,9 @@ ms.locfileid: "84593570"
 |`choice`|사용할 수 없습니다.|
 |`sequence`|사용할 수 없습니다.|
 |`any`|사용할 수 없습니다.|
-|(비어 있음)|데이터 멤버 없이 데이터 계약에 매핑됩니다.|
+|(empty)|데이터 멤버 없이 데이터 계약에 매핑됩니다.|
 
-## <a name="elements--xselement"></a>Elements\<xs:element>
+## <a name="elements--xselement"></a>Elements \<xs:element>
 
 ### <a name="general-information"></a>일반 정보
 
@@ -189,7 +190,7 @@ ms.locfileid: "84593570"
 |`final`|연결된 GED에 대해 false이어야 합니다.|
 |`fixed`|연결된 GED에서 사용할 수 없습니다.|
 |`id`|무시됩니다.|
-|`name`|지원됩니다. 연결된 GED의 정의를 참조하십시오.|
+|`name`|지원됨. 연결된 GED의 정의를 참조하십시오.|
 |`nillable`|연결된 GED에 대해 true이어야 합니다.|
 |`substitutionGroup`|연결된 GED에서 사용할 수 없습니다.|
 |`type`|지원되며 요소에 익명 형식이 포함되어 있는 경우 연결된 GED의 연결된 형식과 일치해야 합니다.|
@@ -203,9 +204,9 @@ ms.locfileid: "84593570"
 |`unique`|무시됩니다.|
 |`key`|무시됩니다.|
 |`keyref`|무시됩니다.|
-|(비어 있음)|지원됩니다.|
+|(비어 있음)|지원됨.|
 
-\*익명 형식에 대 한 및 매핑을 사용 하는 경우 익명 데이터 계약이 없다는 점을 제외 하 고는 익명이 `simpleType` `complexType,` 아닌 형식의 경우와 동일 합니다. 단, 명명 된 데이터 계약은 요소 이름에서 파생 된 생성 된 이름을 사용 하 여 생성 됩니다. 다음 목록에는 익명 형식에 대한 규칙이 포함되어 있습니다.
+\* 익명 형식에 대 한 및 매핑을 사용 하는 경우 익명 데이터 계약이 없다는 점을 제외 하 고는 익명이 `simpleType` `complexType,` 아닌 형식의 경우와 동일 합니다. 단, 명명 된 데이터 계약은 요소 이름에서 파생 된 생성 된 이름을 사용 하 여 생성 됩니다. 다음 목록에는 익명 형식에 대한 규칙이 포함되어 있습니다.
 
 - WCF 구현 세부 정보: 이름에 마침표가 없는 경우 `xs:element` 익명 형식은 외부 데이터 계약 형식의 내부 형식에 매핑됩니다. 이름에 마침표가 있는 경우 결과 데이터 계약 형식은 내부 형식이 아닌 독립적입니다.
 
@@ -213,7 +214,7 @@ ms.locfileid: "84593570"
 
 - 이러한 이름을 가진 데이터 계약이 이미 존재하는 경우 이름에 "1", "2", "3" 등을 추가하여 고유 이름으로 만듭니다.
 
-## <a name="simple-types---xssimpletype"></a>단순 형식-\<xs:simpleType>
+## <a name="simple-types---xssimpletype"></a>단순 형식- \<xs:simpleType>
 
 ### <a name="xssimpletype-attributes"></a>\<xs:simpleType>: 특성
 
@@ -227,8 +228,8 @@ ms.locfileid: "84593570"
 
 |콘텐츠|스키마|
 |--------------|------------|
-|`restriction`|지원됩니다. 열거형 데이터 계약에 매핑됩니다. 이 특성은 열거형 패턴과 일치하지 않는 경우 무시됩니다. `xs:simpleType` 제한 단원을 참조하십시오.|
-|`list`|지원됩니다. 열거형 데이터 계약에 플래그됩니다. `xs:simpleType` 목록 단원을 참조하십시오.|
+|`restriction`|지원됨. 열거형 데이터 계약에 매핑됩니다. 이 특성은 열거형 패턴과 일치하지 않는 경우 무시됩니다. `xs:simpleType` 제한 단원을 참조하십시오.|
+|`list`|지원됨. 열거형 데이터 계약에 플래그됩니다. `xs:simpleType` 목록 단원을 참조하십시오.|
 |`union`|사용할 수 없습니다.|
 
 ### \<xs:restriction>
@@ -246,7 +247,7 @@ ms.locfileid: "84593570"
 |`base`|지원되는 단순 형식 또는 `xs:anyType`이어야 합니다.|
 |`id`|무시됩니다.|
 
-### <a name="xsrestriction-for-all-other-cases-contents"></a>\<xs:restriction>기타 모든 경우: 내용
+### <a name="xsrestriction-for-all-other-cases-contents"></a>\<xs:restriction> 기타 모든 경우: 내용
 
 |콘텐츠|스키마|
 |--------------|------------|
@@ -263,18 +264,18 @@ ms.locfileid: "84593570"
 |`enumeration`|무시됩니다.|
 |`whiteSpace`|무시됩니다.|
 |`pattern`|무시됩니다.|
-|(비어 있음)|지원됩니다.|
+|(비어 있음)|지원됨.|
 
 ## <a name="enumeration"></a>열거형
 
-### <a name="xsrestriction-for-enumerations-attributes"></a>\<xs:restriction>열거형의 경우: 특성
+### <a name="xsrestriction-for-enumerations-attributes"></a>\<xs:restriction> 열거형의 경우: 특성
 
 |attribute|스키마|
 |---------------|------------|
 |`base`|있는 경우 `xs:string`이어야 합니다.|
 |`id`|무시됩니다.|
 
-### <a name="xsrestriction-for-enumerations-contents"></a>\<xs:restriction>열거형: 내용
+### <a name="xsrestriction-for-enumerations-contents"></a>\<xs:restriction> 열거형: 내용
 
 |콘텐츠|스키마|
 |--------------|------------|
@@ -288,10 +289,10 @@ ms.locfileid: "84593570"
 |`length`|사용할 수 없습니다.|
 |`minLength`|사용할 수 없습니다.|
 |`maxLength`|사용할 수 없습니다.|
-|`enumeration`|지원됩니다. 열거형 "ID"는 무시되고 "value"는 열거형 데이터 계약의 값 이름에 매핑됩니다.|
+|`enumeration`|지원됨. 열거형 "ID"는 무시되고 "value"는 열거형 데이터 계약의 값 이름에 매핑됩니다.|
 |`whiteSpace`|사용할 수 없습니다.|
 |`pattern`|사용할 수 없습니다.|
-|(비어 있음)|지원되며 비어 있는 열거형 형식에 매핑됩니다.|
+|(empty)|지원되며 비어 있는 열거형 형식에 매핑됩니다.|
 
  다음 코드는 C# 열거형 클래스를 보여 줍니다.
 
@@ -451,16 +452,16 @@ public class Employee : Person
 |콘텐츠|스키마|
 |--------------|------------|
 |`restriction`|base="`xs:anyType`"인 경우를 제외하고 사용할 수 없습니다. 후자는 `xs:restriction` 의 콘텐츠를 `xs:complexContent`컨테이너 바로 아래에 배치하는 것과 같습니다.|
-|`extension`|지원됩니다. 데이터 계약 상속에 매핑됩니다.|
+|`extension`|지원됨. 데이터 계약 상속에 매핑됩니다.|
 
-### <a name="xsextension-in-xscomplexcontent-attributes"></a>\<xs:extension>in \<xs:complexContent> : 특성
+### <a name="xsextension-in-xscomplexcontent-attributes"></a>\<xs:extension> in \<xs:complexContent> : 특성
 
 |attribute|스키마|
 |---------------|------------|
 |`id`|무시됩니다.|
-|`base`|지원됩니다. 이 형식이 상속되는 기본 데이터 계약 형식에 매핑됩니다.|
+|`base`|지원됨. 이 형식이 상속되는 기본 데이터 계약 형식에 매핑됩니다.|
 
-### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs:extension>in \<xs:complexContent> : 내용
+### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs:extension> in \<xs:complexContent> : 내용
 
 규칙은 `<xs:complexType>` 콘텐츠에서와 같습니다.
 

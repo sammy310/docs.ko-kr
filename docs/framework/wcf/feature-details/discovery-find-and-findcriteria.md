@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 검색 찾기 및 FindCriteria'
 title: 찾기 및 FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 1d6a0e3fcca45c3fe57aab84b0f2b6b86fabb404
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3a4428a89ba4122f528d1c01e4b5a6b8ea8d2935
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599180"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756320"
 ---
 # <a name="discovery-find-and-findcriteria"></a>찾기 및 FindCriteria
 
@@ -31,7 +32,7 @@ ms.locfileid: "84599180"
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType>는 기본 대/소문자 구분 문자열 비교를 수행합니다.
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>"/"로 구분 된 세그먼트로 일치 합니다. 검색은 `http://contoso/building1` 범위가 있는 서비스와 일치 `http://contoso/building/floor1` 합니다. `http://contoso/building100`마지막 두 세그먼트가 일치 하지 않기 때문에 일치 하지 않습니다.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> "/"로 구분 된 세그먼트로 일치 합니다. 검색은 `http://contoso/building1` 범위가 있는 서비스와 일치 `http://contoso/building/floor1` 합니다. `http://contoso/building100`마지막 두 세그먼트가 일치 하지 않기 때문에 일치 하지 않습니다.
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType>는 LDAP URL을 사용하여 세그먼트별로 범위를 일치시킵니다.
 

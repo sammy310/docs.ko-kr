@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: 코드에서 서비스 바인딩 지정'
 title: '방법: 코드에서 서비스 바인딩 지정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-ms.openlocfilehash: 7cf54754661182dca1e91c75b158d9b0a34a1f5e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 744919fee4ec28d7df4581ac1d608d1fa9e99a29
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236483"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755943"
 ---
 # <a name="how-to-specify-a-service-binding-in-code"></a>방법: 코드에서 서비스 바인딩 지정
 

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Windows 인증 오류 디버깅'
 title: Windows 인증 오류 디버깅
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: c8aa87bdbf9488bce8e1a62f6d1a3898f923d349
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cfc8bf8ce9b9c5da3d9b25949321ed1ac2b62d98
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291663"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756489"
 ---
 # <a name="debug-windows-authentication-errors"></a>Windows 인증 오류 디버깅
 
@@ -52,9 +53,9 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
   
 - 로컬 시스템: 도메인에 연결되지 않은 컴퓨터의 기본 제공 계정인 SYSTEM.  
   
-- 도메인 사용자: Windows 도메인의 사용자 계정. 예를 들면 `DomainName\ProfileName`과 다음과 같습니다.  
+- 도메인 사용자: Windows 도메인의 사용자 계정. `DomainName\ProfileName`를 예로 들 수 있습니다.  
   
-- 도메인 컴퓨터: Windows 도메인에 연결된 컴퓨터에서 실행 중인 컴퓨터 ID가 있는 프로세스. 예를 들면 `MachineName\Network Service`과 다음과 같습니다.  
+- 도메인 컴퓨터: Windows 도메인에 연결된 컴퓨터에서 실행 중인 컴퓨터 ID가 있는 프로세스. `MachineName\Network Service`를 예로 들 수 있습니다.  
   
 > [!NOTE]
 > 서비스 자격 증명은 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 클래스의 <xref:System.ServiceModel.ServiceHost> 메서드가 호출될 때 캡처됩니다. 클라이언트 자격 증명은 클라이언트가 메시지를 보낼 때마다 읽어 옵니다.  
@@ -164,4 +165,4 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.ClientBase%601>
 - [위임 및 가장](delegation-and-impersonation-with-wcf.md)
-- [지원되지 않는 시나리오](unsupported-scenarios.md)
+- [지원 되지 않는 시나리오](unsupported-scenarios.md)

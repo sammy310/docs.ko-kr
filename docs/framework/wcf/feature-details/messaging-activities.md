@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 메시징 작업'
 title: 메시징 활동
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-ms.openlocfilehash: 69a0e9a415b10d9c58d04eac27e48b1ed6a78064
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fc98081cabc552cd51bf35db3bed9443220fc065
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576397"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756073"
 ---
 # <a name="messaging-activities"></a>메시징 활동
 
@@ -101,7 +102,7 @@ Request = rcv
 
 ## <a name="add-service-reference"></a>서비스 참조 추가
 
-워크플로 응용 프로그램에서 워크플로 서비스를 호출 하는 경우 Visual Studio 2012은 <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> 요청/회신 mep에 사용 되는 일반적인 및 작업을 캡슐화 하는 사용자 지정 메시징 작업을 생성 합니다. 이 기능을 사용 하려면 Visual Studio에서 클라이언트 프로젝트를 마우스 오른쪽 단추로 클릭 하 **Add**고  >  **서비스 참조**추가를 선택 합니다. 주소 상자에 서비스의 기본 주소를 입력하고 이동을 클릭합니다. 사용 가능한 서비스가 **서비스:** 상자에 표시 됩니다. 서비스 노드를 확장하여 지원되는 계약을 표시합니다. 호출 하려는 계약을 선택 하면 **작업** 상자에 사용 가능한 작업 목록이 표시 됩니다. 그런 다음 생성 된 활동에 대 한 네임 스페이스를 지정 하 고 **확인**을 클릭 합니다. 그러면 프로젝트가 다시 빌드된 후 작업이 성공적으로 완료되었음을 알리고 사용자 지정 작업이 도구 상자에 표시된 대화 상자가 나타냅니다. 이 대화 상자에는 서비스 계약에 대해 정의된 작업마다 하나씩 작업이 있습니다. 프로젝트를 다시 빌드한 후에는 사용자 지정 작업을 워크플로에 끌어서 놓고 속성 창에서 필수 속성을 설정할 수 있습니다.
+워크플로 응용 프로그램에서 워크플로 서비스를 호출 하는 경우 Visual Studio 2012은 <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> 요청/회신 mep에 사용 되는 일반적인 및 작업을 캡슐화 하는 사용자 지정 메시징 작업을 생성 합니다. 이 기능을 사용 하려면 Visual Studio에서 클라이언트 프로젝트를 마우스 오른쪽 단추로 클릭 하 고  >  **서비스 참조** 추가를 선택 합니다. 주소 상자에 서비스의 기본 주소를 입력하고 이동을 클릭합니다. 사용 가능한 서비스가 **서비스:** 상자에 표시 됩니다. 서비스 노드를 확장하여 지원되는 계약을 표시합니다. 호출 하려는 계약을 선택 하면 **작업** 상자에 사용 가능한 작업 목록이 표시 됩니다. 그런 다음 생성 된 활동에 대 한 네임 스페이스를 지정 하 고 **확인** 을 클릭 합니다. 그러면 프로젝트가 다시 빌드된 후 작업이 성공적으로 완료되었음을 알리고 사용자 지정 작업이 도구 상자에 표시된 대화 상자가 나타냅니다. 이 대화 상자에는 서비스 계약에 대해 정의된 작업마다 하나씩 작업이 있습니다. 프로젝트를 다시 빌드한 후에는 사용자 지정 작업을 워크플로에 끌어서 놓고 속성 창에서 필수 속성을 설정할 수 있습니다.
 
 ## <a name="messaging-activity-templates"></a>메시징 활동 템플릿
 

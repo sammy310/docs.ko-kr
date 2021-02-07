@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 트랜잭션 응용 프로그램 진단'
 title: 트랜잭션 애플리케이션 진단
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: 696ebe7249a8388eaaf38a678581e28d472e821a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4b80dd5273781feaad0ef1c964c737a1cd470c75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290246"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756450"
 ---
 # <a name="diagnosing-transactional-applications"></a>트랜잭션 애플리케이션 진단
 
@@ -54,7 +55,7 @@ ms.locfileid: "96290246"
   
  서비스에서 `ServiceBehaviorAttribute`에는 다음 속성이 있습니다.  
   
-|이름|유형|Description|  
+|Name|Type|설명|  
 |----------|----------|-----------------|  
 |ReleaseServiceInstanceOnTransactionComplete|부울|현재 트랜잭션이 완료되면 서비스 개체를 재활용할지 여부를 지정합니다.|  
 |TransactionAutoCompleteOnSessionClose|부울|현재 세션이 닫히면 보류 중인 트랜잭션을 완료할지 여부를 지정합니다.|  
@@ -63,27 +64,27 @@ ms.locfileid: "96290246"
   
  `ServiceTimeoutsBehavior`에는 다음 속성이 있습니다.  
   
-|이름|유형|Description|  
+|Name|Type|설명|  
 |----------|----------|-----------------|  
 |TransactionTimeout|<xref:System.DateTime>|트랜잭션을 완료해야 하는 기간을 지정합니다.|  
   
  바인딩에서 `TransactionFlowBindingElement`에는 다음 속성이 있습니다.  
   
-|이름|유형|Description|  
+|Name|Type|설명|  
 |----------|----------|-----------------|  
 |TransactionProtocol|<xref:System.ServiceModel.TransactionProtocol> 형식에 대해 유효한 값이 들어 있는 문자열입니다.|트랜잭션을 이동하는 데 사용할 트랜잭션 프로토콜을 지정합니다.|  
 |TransactionFlow|부울|들어오는 트랜잭션 흐름을 사용할 수 있는지 여부를 지정합니다.|  
   
  작업에서 `OperationBehaviorAttribute`에는 다음 속성이 있습니다.  
   
-|이름|유형|Description|  
+|Name|Type|설명|  
 |----------|----------|-----------------|  
 |TransactionAutoComplete|부울|처리되지 않은 예외가 발생하지 않을 때 현재 트랜잭션을 자동으로 커밋할지 여부를 지정합니다.|  
 |TransactionScopeRequired|부울|작업에서 트랜잭션이 필요한지 여부를 지정합니다.|  
   
  작업에서 `TransactionFlowAttribute`에는 다음 속성이 있습니다.  
   
-|이름|유형|Description|  
+|Name|Type|설명|  
 |----------|----------|-----------------|  
 |TransactionFlowOption|유효한 <xref:System.ServiceModel.TransactionFlowOption> 열거형 값이 들어 있는 문자열입니다.|트랜잭션 이동이 필요한 범위를 지정합니다.|  
   

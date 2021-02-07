@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 관리 되는 응용 프로그램에서 호스팅'
 title: 관리되는 애플리케이션에서의 호스팅
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: 0f220b3eb249a9615024adbd798db49ea94376eb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 14fd6b2dea1a4315567611f505f2898314a07908
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289943"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756203"
 ---
 # <a name="hosting-in-a-managed-application"></a>관리되는 애플리케이션에서의 호스팅
 

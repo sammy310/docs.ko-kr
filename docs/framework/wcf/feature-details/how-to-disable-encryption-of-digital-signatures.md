@@ -1,13 +1,14 @@
 ---
+description: '방법에 대 한 자세한 정보: 방법: 디지털 서명 암호화 사용 안 함'
 title: '방법: 디지털 서명 암호화를 사용하지 않도록 설정'
 ms.date: 03/30/2017
 ms.assetid: fd174313-ad81-4dca-898a-016ccaff8187
-ms.openlocfilehash: 6d9102ab7676a8e751e608b6081da751464e6ee0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 95e9bd18b480f5fdf9c98fdb3447610e0d4e3c75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96237393"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756138"
 ---
 # <a name="how-to-disable-encryption-of-digital-signatures"></a>방법: 디지털 서명 암호화를 사용하지 않도록 설정
 

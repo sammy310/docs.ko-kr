@@ -1,4 +1,5 @@
 ---
+description: 데이터 전송 아키텍처 개요에 대해 자세히 알아보세요.
 title: 데이터 전송 아키텍처 개요
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: efb6933ba90975d5ba35deb2bf22af12fc7c2cdc
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3064797b41e146505062a07dc1786dd492a01298
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291689"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756502"
 ---
 # <a name="data-transfer-architectural-overview"></a>데이터 전송 아키텍처 개요
 
@@ -159,7 +160,7 @@ WCF (Windows Communication Foundation)는 메시징 인프라로 간주할 수 �
 
  인코더의 일반적인 작업을 설명하려면 다음 네 가지 경우를 고려하는 것이 좋습니다.  
   
-|연산|의견|  
+|작업|의견|  
 |---------------|-------------|  
 |인코딩, 버퍼링|버퍼링 모드에서는 인코더가 보통 다양한 크기의 버퍼를 만든 다음 이를 통해 XML 작성기를 만듭니다. 그런 다음 인코딩되는 메시지에서 <xref:System.ServiceModel.Channels.Message.WriteMessage%28System.Xml.XmlWriter%29> 를 호출합니다. 이 메시지는 이 항목의 <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29>에 대한 이전 단원에서 설명한 것처럼 `Message` 를 사용하여 헤더와 본문을 차례로 작성합니다. 그런 다음 사용할 전송 채널에 대해 바이트 배열로 표시되는 버퍼의 콘텐츠가 반환됩니다.|  
 |인코딩, 스트리밍|스트리밍 모드에서는 작업이 위의 모드와 비슷하지만 좀 더 간단합니다. 버퍼링할 필요가 없기 때문입니다. XML 작성기는 일반적으로 스트림을 통해 만들어지며, <xref:System.ServiceModel.Channels.Message.WriteMessage%28System.Xml.XmlWriter%29> 에서 `Message` 가 호출되어 이 작성기에 이를 작성합니다.|  

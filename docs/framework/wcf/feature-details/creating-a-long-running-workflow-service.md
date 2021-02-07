@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 장기 실행 워크플로 서비스 만들기'
 title: 장기 실행 워크플로 서비스 만들기
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 4ae01201230bf848c045158424db60097d8dd767
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9d26e763e2515f9e9ec2b61201512f02eeaeb1bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599349"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756905"
 ---
 # <a name="create-a-long-running-workflow-service"></a>장기 실행 워크플로 서비스 만들기
 
@@ -27,7 +28,7 @@ ms.locfileid: "84599349"
 
 ## <a name="set-up-the-sql-database"></a>SQL Database 설정
 
-1. 워크플로 서비스 인스턴스가 유지되려면 Microsoft SQL Server가 설치되어 있어야 하고 유지된 워크플로 인스턴스를 저장하도록 데이터베이스를 구성해야 합니다. **시작** 단추를 클릭 하 고 **모든 프로그램**, **Microsoft SQL Server 2008**및 **Microsoft SQL Management Studio**를 선택 하 여 microsoft sql Management Studio를 실행 합니다.
+1. 워크플로 서비스 인스턴스가 유지되려면 Microsoft SQL Server가 설치되어 있어야 하고 유지된 워크플로 인스턴스를 저장하도록 데이터베이스를 구성해야 합니다. **시작** 단추를 클릭 하 고 **모든 프로그램**, **Microsoft SQL Server 2008** 및 **Microsoft SQL Management Studio** 를 선택 하 여 microsoft sql Management Studio를 실행 합니다.
 
 2. **연결** 단추를 클릭 하 여 SQL Server 인스턴스에 로그온 합니다.
 
@@ -49,7 +50,7 @@ ms.locfileid: "84599349"
 
         ![워크플로 서비스 프로젝트 웹 속성](./media/creating-a-long-running-workflow-service/start-action-specific-page-option.png "웹 호스팅 워크플로 서비스별 페이지 옵션 만들기")
 
-    2. **서버** 에서 **로컬 IIS 웹 서버 사용**을 선택 합니다.
+    2. **서버** 에서 **로컬 IIS 웹 서버 사용** 을 선택 합니다.
 
         ![로컬 웹 서버 설정](./media/creating-a-long-running-workflow-service/use-local-web-server.png "웹 호스팅 워크플로 서비스 만들기-로컬 IIS 웹 서버 사용 옵션")
 
@@ -63,7 +64,7 @@ ms.locfileid: "84599349"
 5. **순차 서비스** 활동을 선택 하 고 **변수** 링크를 클릭 하 여 다음 그림에 표시 된 변수를 추가 합니다. 이렇게 하면 워크플로 서비스에서 나중에 사용할 일부 변수가 추가됩니다.
 
     > [!NOTE]
-    > CorrelationHandle가 변수 형식 드롭다운에 없으면 드롭다운에서 **형식 찾아보기** 를 선택 합니다. **유형 이름** 상자에 CorrelationHandle를 입력 하 고 목록 상자에서 CorrelationHandle를 선택한 다음 **확인**을 클릭 합니다.
+    > CorrelationHandle가 변수 형식 드롭다운에 없으면 드롭다운에서 **형식 찾아보기** 를 선택 합니다. **유형 이름** 상자에 CorrelationHandle를 입력 하 고 목록 상자에서 CorrelationHandle를 선택한 다음 **확인** 을 클릭 합니다.
 
     ![변수 추가](./media/creating-a-long-running-workflow-service/add-variables-sequential-service-activity.gif "순차 서비스 활동에 변수를 추가 합니다.")
 
@@ -93,7 +94,7 @@ ms.locfileid: "84599349"
 
         이렇게 하면 새 주문 ID가 만들어지고 orderId 변수에 값이 배치됩니다.
 
-    6. **ReplyToStartOrder** 활동을 선택 합니다. 속성 창에서 **CorrelationInitializers**에 대 한 줄임표 단추를 클릭 합니다. **이니셜라이저 추가** 링크를 선택 하 고 `orderIdHandle` 이니셜라이저 텍스트 상자에를 입력 한 다음 상관 관계 형식에 대해 쿼리 상관 관계 이니셜라이저를 선택 하 고 XPATH 쿼리 드롭다운 상자에서 p_orderId를 선택 합니다. 다음 그림에 이러한 설정이 나와 있습니다. **확인**을 클릭합니다.  클라이언트와 이 워크플로 서비스 인스턴스 간에 상관 관계가 초기화됩니다. 이 주문 ID가 포함된 메시지가 수신되면 이 워크플로 서비스 인스턴스로 라우팅됩니다.
+    6. **ReplyToStartOrder** 활동을 선택 합니다. 속성 창에서 **CorrelationInitializers** 에 대 한 줄임표 단추를 클릭 합니다. **이니셜라이저 추가** 링크를 선택 하 고 `orderIdHandle` 이니셜라이저 텍스트 상자에를 입력 한 다음 상관 관계 형식에 대해 쿼리 상관 관계 이니셜라이저를 선택 하 고 XPATH 쿼리 드롭다운 상자에서 p_orderId를 선택 합니다. 다음 그림에 이러한 설정이 나와 있습니다. **확인** 을 클릭합니다.  클라이언트와 이 워크플로 서비스 인스턴스 간에 상관 관계가 초기화됩니다. 이 주문 ID가 포함된 메시지가 수신되면 이 워크플로 서비스 인스턴스로 라우팅됩니다.
 
         ![상관 관계 이니셜라이저 추가](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "상관 관계 이니셜라이저를 추가 합니다.")
 
@@ -116,7 +117,7 @@ ms.locfileid: "84599349"
 
         ![두 번째 수신을 위한 매개 변수 지정](./media/creating-a-long-running-workflow-service/add-receive-two-parameters.png "두 개의 매개 변수를 받도록 receive 작업을 구성 합니다.")
 
-    4. **CorrelateOn** 줄임표 단추를 클릭 하 고을 입력 `orderIdHandle` 합니다. **XPath 쿼리**아래에서 드롭다운 화살표를 클릭 하 고를 선택 `p_orderId` 합니다. 이렇게 하면 두 번째 Receive 활동에 대한 상관 관계가 구성됩니다. 상관 관계에 대 한 자세한 내용은 참조 하세요 [상관 관계](correlation.md)합니다.
+    4. **CorrelateOn** 줄임표 단추를 클릭 하 고을 입력 `orderIdHandle` 합니다. **XPath 쿼리** 아래에서 드롭다운 화살표를 클릭 하 고를 선택 `p_orderId` 합니다. 이렇게 하면 두 번째 Receive 활동에 대한 상관 관계가 구성됩니다. 상관 관계에 대 한 자세한 내용은 참조 하세요 [상관 관계](correlation.md)합니다.
 
         ![CorrelatesOn 속성 설정](./media/creating-a-long-running-workflow-service/correlateson-setting.png "CorrelatesOn 속성을 설정 합니다.")
 
@@ -138,7 +139,7 @@ ms.locfileid: "84599349"
 
             ![SendReply 활동에 대 한 데이터 바인딩 설정](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "SendReplyToAddItem 활동에 대 한 속성을 설정 합니다.")
 
-8. Web.config 파일을 열고 섹션에 다음 요소를 추가 \<behavior> 하 여 워크플로 지 속성을 사용 하도록 설정 합니다.
+8. web.config 파일을 열고 섹션에 다음 요소를 추가 \<behavior> 하 여 워크플로 지 속성을 사용 하도록 설정 합니다.
 
     ```xml
     <sqlWorkflowInstanceStore connectionString="Data Source=your-machine\SQLExpress;Initial Catalog=SQLPersistenceStore;Integrated Security=True;Asynchronous Processing=True" instanceEncodingOption="None" instanceCompletionAction="DeleteAll" instanceLockedExceptionAction="BasicRetry" hostLockRenewalPeriod="00:00:30" runnableInstancesDetectionPeriod="00:00:02" />
@@ -195,9 +196,9 @@ ms.locfileid: "84599349"
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
     ```
 
-6. 워크플로 서비스가 지속 되었는지 확인 하려면 **시작** 메뉴로 이동 하 여 **모든 프로그램**, **Microsoft SQL Server 2008** **SQL Server Management Studio**를 선택 하 여 SQL Server Management Studio를 시작 합니다.
+6. 워크플로 서비스가 지속 되었는지 확인 하려면 **시작** 메뉴로 이동 하 여 **모든 프로그램**, **Microsoft SQL Server 2008** **SQL Server Management Studio** 를 선택 하 여 SQL Server Management Studio를 시작 합니다.
 
-    1. 왼쪽 창에서 **데이터베이스**, **SQLPersistenceStore**, **뷰** 를 확장 하 고 **DurableInstancing** 를 마우스 오른쪽 단추로 클릭 한 다음 **상위 1000 행 선택**을 선택 합니다. **결과** 창에서 하나 이상의 인스턴스가 나열 되는지 확인 합니다. 실행하는 동안 예외가 발생한 경우 이전 실행의 다른 인스턴스가 있을 수 있습니다. **DurableInstancing** 를 마우스 오른쪽 단추로 클릭 하 고 **상위 200 행 편집**을 선택한 다음 **실행** 단추를 누르고 결과 창에서 모든 행을 선택한 다음 **삭제**를 선택 하 여 기존 행을 삭제할 수 있습니다.  데이터베이스에 표시되는 인스턴스가 애플리케이션에서 만든 인스턴스인지 확인하려면 클라이언트를 실행하기 전에 인스턴스 뷰가 비어 있는지 확인합니다. 클라이언트가 실행되고 있으면 쿼리(상위 1000개의 행 선택)를 다시 실행하고 새 인스턴스가 추가되었는지 확인합니다.
+    1. 왼쪽 창에서 **데이터베이스**, **SQLPersistenceStore**, **뷰** 를 확장 하 고 **DurableInstancing** 를 마우스 오른쪽 단추로 클릭 한 다음 **상위 1000 행 선택** 을 선택 합니다. **결과** 창에서 하나 이상의 인스턴스가 나열 되는지 확인 합니다. 실행하는 동안 예외가 발생한 경우 이전 실행의 다른 인스턴스가 있을 수 있습니다. **DurableInstancing** 를 마우스 오른쪽 단추로 클릭 하 고 **상위 200 행 편집** 을 선택한 다음 **실행** 단추를 누르고 결과 창에서 모든 행을 선택한 다음 **삭제** 를 선택 하 여 기존 행을 삭제할 수 있습니다.  데이터베이스에 표시되는 인스턴스가 애플리케이션에서 만든 인스턴스인지 확인하려면 클라이언트를 실행하기 전에 인스턴스 뷰가 비어 있는지 확인합니다. 클라이언트가 실행되고 있으면 쿼리(상위 1000개의 행 선택)를 다시 실행하고 새 인스턴스가 추가되었는지 확인합니다.
 
 7. Enter 키를 눌러 워크플로 서비스에 품목 추가 메시지를 보냅니다. 클라이언트에서 다음 텍스트가 표시됩니다.
 

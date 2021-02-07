@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: 끝점'
 title: 엔드포인트
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: ceb4e4b41502b00d7bb21f1ecbd8249fccf1ce3b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1c28be37d1b1abfe1813e6da8903809affd309e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288816"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757464"
 ---
 # <a name="endpoint"></a>엔드포인트
 
 엔드포인트  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class Endpoint  
@@ -37,7 +38,7 @@ class Endpoint
 
  Endpoint 클래스는 다음과 같은 메서드를 정의합니다.  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[GetOperationCounterInstanceName](getoperationcounterinstancename.md)|작업 성능 카운터 인스턴스 이름을 검색합니다.|  
   
@@ -117,7 +118,7 @@ class Endpoint
   
  엔드포인트가 수신하는 URI입니다.  
   
-### <a name="name"></a>이름  
+### <a name="name"></a>Name  
 
  데이터 형식: 문자열  
   

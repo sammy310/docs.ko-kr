@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: Windows 클라이언트를 사용 하는 메시지 보안'
 title: Windows 클라이언트를 사용하는 메시지 보안
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: 1fe50f711c65871b811837a7f48cf6f45f4455b4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 97d415f68b4374ab2b18360347d7753f6be51313
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275608"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756099"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 클라이언트를 사용하는 메시지 보안
 
@@ -18,7 +19,7 @@ ms.locfileid: "96275608"
   
  ![Windows 클라이언트를 사용 하는 메시지 보안](media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
-|특성|Description|  
+|특성|설명|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
 |상호 운용성|WCF만|  
@@ -44,7 +45,7 @@ ms.locfileid: "96275608"
  [!code-csharp[C_SecurityScenarios#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#11)]
  [!code-vb[C_SecurityScenarios#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#11)]  
   
-### <a name="configuration"></a>구성  
+### <a name="configuration"></a>Configuration  
 
  다음 구성은 서비스를 설정하는 데 코드 대신 사용할 수 있습니다.  
   
@@ -82,7 +83,7 @@ ms.locfileid: "96275608"
   
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.  
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 다음은 그 예입니다.   
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -94,7 +95,7 @@ ms.locfileid: "96275608"
  [!code-csharp[C_SecurityScenarios#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#18)]
  [!code-vb[C_SecurityScenarios#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#18)]  
   
-### <a name="configuration"></a>구성  
+### <a name="configuration"></a>Configuration  
 
  다음 구성은 클라이언트 속성을 설정하는 데 사용됩니다.  
   

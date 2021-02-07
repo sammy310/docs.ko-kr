@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 클래스에서 스키마 내보내기'
 title: 클래스에서 스키마 내보내기
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: 8105ada41a2ec9dac962f5029ac89b66c69893ab
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f9ca33bb26237b3af9ff26b1ed693088c62e3b13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255561"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756281"
 ---
 # <a name="exporting-schemas-from-classes"></a>클래스에서 스키마 내보내기
 

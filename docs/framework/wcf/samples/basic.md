@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: 기본'
 title: 기본2
 ms.date: 03/30/2017
 ms.assetid: 04e4d3bd-ab89-4b50-8f42-2a4430751a9c
-ms.openlocfilehash: 91c8cee890f19a66feba6dd9a89145fb96102358
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b521649e7399463bd2cfbd2ec28397ad9a024b49
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96258779"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755930"
 ---
-# <a name="basic"></a>기본
+# <a name="basic"></a>Basic
 
 이 섹션에는 WCF (기본 Windows Communication Foundation) 기능을 보여 주는 샘플 섹션이 포함 되어 있습니다.  
   
@@ -21,7 +22,7 @@ ms.locfileid: "96258779"
  [AJAX](ajax.md)  
  AJAX(Asynchronous JavaScript and XML)를 보여 줍니다.  
   
- [바인딩](binding.md)  
+ [바인딩되](binding.md)  
  엔드포인트 요소의 바인딩 특성을 사용하는 방법을 보여 줍니다.  
   
  [클라이언트](client.md)  
@@ -42,7 +43,7 @@ ms.locfileid: "96258779"
  [보안](security-in-wcf.md)  
  WCF 보안을 보여 줍니다.  
   
- [Services](services.md)  
+ [서비스](services.md)  
  WCF 서비스를 보여 줍니다.  
   
  [신디케이션](syndication.md)  

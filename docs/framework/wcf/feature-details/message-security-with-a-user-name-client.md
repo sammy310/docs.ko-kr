@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 사용자 이름 클라이언트를 사용 하는 메시지 보안'
 title: 사용자 이름 클라이언트를 사용하는 메시지 보안
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 7168b393bde626c8c413cda3c7422e0eee4ce267
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4502635df3b52ba069c19fca7a73cc9395dd105d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292872"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756112"
 ---
 # <a name="message-security-with-a-user-name-client"></a>사용자 이름 클라이언트를 사용하는 메시지 보안
 
@@ -20,7 +21,7 @@ ms.locfileid: "96292872"
   
  ![사용자 이름 인증을 사용하는 메시지 보안](media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
-|특성|Description|  
+|특성|설명|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
 |상호 운용성|Windows Communication Foundation (WCF)만|  
@@ -46,7 +47,7 @@ ms.locfileid: "96292872"
  [!code-csharp[C_SecurityScenarios#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#9)]
  [!code-vb[C_SecurityScenarios#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#9)]  
   
-### <a name="configuration"></a>구성  
+### <a name="configuration"></a>Configuration  
 
  코드 대신 다음 구성을 사용할 수 있습니다.  
   
@@ -99,7 +100,7 @@ ms.locfileid: "96292872"
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
   
-### <a name="configuration"></a>구성  
+### <a name="configuration"></a>Configuration  
 
  다음 코드에서는 클라이언트를 구성합니다. 바인딩은 메시지 모드 보안으로 설정되며 클라이언트 자격 증명 형식은 `UserName`로 설정됩니다. 사용자 이름 및 암호는 코드(구성할 수 없음)를 사용해서만 지정할 수 있습니다.  
   

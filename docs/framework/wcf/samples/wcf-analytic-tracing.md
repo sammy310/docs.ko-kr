@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: WCF 분석 추적'
 title: WCF 분석 추적
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 490c67c92407626a67ea8561a378ef3e70266fe2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1f5ec26828bba99a127fea6a81f57fed717943a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243666"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755696"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 분석 추적
 
@@ -39,7 +40,7 @@ ms.locfileid: "96243666"
 
  WCF의 ETW 이벤트 공급자 매니페스트는 WCF 서비스 작성자가 서비스 코드 내에서 내보내도록 디자인 된 세 개의 이벤트를 정의 합니다. 다음 표에서는 세 개의 이벤트를 간략하게 설명합니다.  
   
-|이벤트|Description|이벤트 ID|  
+|이벤트|설명|이벤트 ID|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|문제는 아니지만 중요한 사항이 서비스에 발생하면 이 이벤트를 내보냅니다. 예를 들어 데이터베이스를 성공적으로 호출한 후 이벤트를 내보낼 수 있습니다.|301|  
 |UserDefinedWarningOccurred|이후에 오류를 초래할 수 있는 문제가 발생하면 이 이벤트를 내보냅니다. 예를 들어 데이터베이스에 대한 호출에 실패했지만 중복 데이터 저장소를 대신 사용하여 복구할 수 있는 경우 경고 이벤트를 내보낼 수 있습니다.|302|  
@@ -109,7 +110,7 @@ ms.locfileid: "96243666"
   
 4. **지우기** 를 클릭 하 여 이벤트를 지웁니다.  
   
-## <a name="known-issue"></a>알려진 문제  
+## <a name="known-issue"></a>알려진 이슈  
 
  **이벤트 뷰어** 에는 ETW 이벤트를 디코딩하는 데 실패할 수 있는 알려진 문제가 있습니다. 다음 오류 메시지가 표시 될 수 있습니다. " \<id> 소스 Microsoft-Windows 응용 프로그램의 이벤트 ID에 대 한 설명을 찾을 수 없습니다. Server-Applications 이 이벤트가 발생되는 구성 요소가 로컬 컴퓨터에 설치되지 않았거나 설치가 손상되었습니다. 로컬 컴퓨터에 구성 요소를 설치 하거나 복구할 수 있습니다. " 이 오류가 발생 하는 경우 **작업** 메뉴에서 **새로 고침** 을 선택 합니다. 그러면 이벤트가 올바르게 디코딩됩니다.  
   

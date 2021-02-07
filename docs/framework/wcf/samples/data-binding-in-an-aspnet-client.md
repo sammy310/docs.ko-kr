@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: ASP.NET 클라이언트의 데이터 바인딩'
 title: ASP.NET 클라이언트에서 데이터 바인딩
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: 3e30bcb9852b34eeb919339d57d701e4dda8a644
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9615c34805d406bb382ab252f317156e1750bed1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266872"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755865"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>ASP.NET 클라이언트에서 데이터 바인딩
 

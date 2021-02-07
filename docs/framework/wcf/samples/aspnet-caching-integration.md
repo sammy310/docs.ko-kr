@@ -1,13 +1,14 @@
 ---
+description: ASP.NET 캐싱 통합에 대해 자세히 알아보세요.
 title: ASP.NET 캐싱 통합
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: c541f3caad8a500b9fdb33d00b58706bac876e37
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c366efdc95cfa67f4fad9b8534edb047ad98ab32
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594753"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755956"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 캐싱 통합
 
@@ -26,11 +27,11 @@ ASP.NET 출력 캐시와 통합
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`
 
-## <a name="discussion"></a>토론
+## <a name="discussion"></a>토론(Discussion)
 
 이 샘플에서는 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> Windows Communication Foundation (WCF) 서비스에서를 사용 하 여 ASP.NET 출력 캐싱을 활용 합니다. <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>는 서비스 작업에 적용되며, 구성 파일에서 지정된 작업의 응답에 적용해야 하는 캐시 프로필의 이름을 제공합니다.
 
-샘플 서비스 프로젝트의 Service.cs 파일에서 `GetCustomer` 및 작업은 모두 `GetCustomers` <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 캐시 프로필 이름 "CacheFor60Seconds"을 제공 하는로 표시 됩니다. Service 프로젝트의 Web.config 파일에서 캐시 프로필 "CacheFor60Seconds"은 `caching` < >의 < > 요소 아래에 제공 됩니다 `system.web` . 이 캐시 프로필의 경우 특성의 값은 `duration` "60" 이므로이 프로필과 연결 된 응답은 60 초 동안 ASP.NET 출력 캐시에 캐시 됩니다. 또한이 캐시 프로필의 경우 특성은 `varmByParam` "format"으로 설정 되므로 쿼리 문자열 매개 변수에 대 한 값이 서로 다른 요청에서는 `format` 응답이 별도로 캐시 됩니다. 마지막으로, 캐시 프로필의 `varyByHeader` 특성이 "accept"로 설정 되어 있으므로 accept 헤더 값이 서로 다른 요청에서 응답이 별도로 캐시 됩니다.
+샘플 서비스 프로젝트의 Service.cs 파일에서 `GetCustomer` 및 작업은 모두 `GetCustomers` <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 캐시 프로필 이름 "CacheFor60Seconds"을 제공 하는로 표시 됩니다. 서비스 프로젝트의 Web.config 파일에서 캐시 프로필 "CacheFor60Seconds"는 `caching` <>의 <> 요소 아래에 제공 됩니다 `system.web` . 이 캐시 프로필의 경우 특성의 값은 `duration` "60" 이므로이 프로필과 연결 된 응답은 60 초 동안 ASP.NET 출력 캐시에 캐시 됩니다. 또한이 캐시 프로필의 경우 특성은 `varmByParam` "format"으로 설정 되므로 쿼리 문자열 매개 변수에 대 한 값이 서로 다른 요청에서는 `format` 응답이 별도로 캐시 됩니다. 마지막으로, 캐시 프로필의 `varyByHeader` 특성이 "accept"로 설정 되어 있으므로 accept 헤더 값이 서로 다른 요청에서 응답이 별도로 캐시 됩니다.
 
 Client 프로젝트의 Program.cs에서는 <xref:System.Net.HttpWebRequest>를 사용하여 이러한 클라이언트를 작성하는 방법을 보여 줍니다. 이 방법은 WCF 서비스에 액세스하는 여러 방법 중 하나일 뿐입니다. 또한 WCF 채널 팩터리 및와 같은 다른 .NET Framework 클래스를 사용 하 여 서비스에 액세스할 수 있습니다 <xref:System.Net.WebClient> . SDK의 다른 샘플 (예: [기본 HTTP 서비스](basic-http-service.md) 예제)에서는 이러한 클래스를 사용 하 여 WCF 서비스와 통신 하는 방법을 보여 줍니다.
 
@@ -54,9 +55,9 @@ Client 콘솔 애플리케이션이 실행되면 클라이언트에서는 서비
 
 3. **솔루션 탐색기** 창이 아직 열려 있지 않은 경우 Ctrl + W + S를 누릅니다.
 
-4. **솔루션 탐색기** 창에서 **서비스** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **새 인스턴스 시작**을 선택 합니다. 그러면 ASP.NET Development Server가 시작되어 서비스를 호스트합니다.
+4. **솔루션 탐색기** 창에서 **서비스** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **새 인스턴스 시작** 을 선택 합니다. 그러면 ASP.NET Development Server가 시작되어 서비스를 호스트합니다.
 
-5. **솔루션 탐색기** 창에서 **클라이언트** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **새 인스턴스 시작**을 선택 합니다.
+5. **솔루션 탐색기** 창에서 **클라이언트** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **새 인스턴스 시작** 을 선택 합니다.
 
 6. 클라이언트 콘솔 창이 나타나고 실행 중인 서비스의 URI와 실행 중인 서비스에 대한 HTML 도움말 페이지의 URI가 제공됩니다. 언제든지 브라우저에서 HTML 도움말 페이지의 URI를 입력하면 해당 도움말 페이지를 볼 수 있습니다.
 
@@ -66,4 +67,4 @@ Client 콘솔 애플리케이션이 실행되면 클라이언트에서는 서비
 
 9. Shift+F5를 눌러 서비스 디버깅을 중지합니다.
 
-10. Windows 알림 영역에서 ASP.NET development 서버 아이콘을 마우스 오른쪽 단추로 클릭 하 고 **중지**를 선택 합니다.
+10. Windows 알림 영역에서 ASP.NET development 서버 아이콘을 마우스 오른쪽 단추로 클릭 하 고 **중지** 를 선택 합니다.
