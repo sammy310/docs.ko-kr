@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: CorArgType 열거형'
 title: CorArgType 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c1cb268-57a0-4664-91c7-f6908ff29e32
 topic_type:
 - apiref
-ms.openlocfilehash: 6388d804df43964866073d7c3b32dca84fb2d06f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: de7067e6c7b825aae797d88dbd5f2ecd2f5280fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720427"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678525"
 ---
 # <a name="corargtype-enumeration"></a>CorArgType 열거형
 
@@ -53,6 +54,6 @@ typedef enum CorArgType {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](metadata-enumerations.md)

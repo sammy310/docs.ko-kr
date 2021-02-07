@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ValidatorFlags 열거형'
 title: ValidatorFlags 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3f5c266-3fcc-4ad1-aaf5-4cdbe26304ad
 topic_type:
 - apiref
-ms.openlocfilehash: 92c430cdb8b46cf75dde9a8395ce713116dc05a5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 473b0eef2851126256e1ea6b6d2b82be32e03e1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732864"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679123"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags 열거형
 
@@ -37,7 +38,7 @@ enum ValidatorFlags {
 };  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -57,7 +58,7 @@ enum ValidatorFlags {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRErrorReportingManager 인터페이스](iclrerrorreportingmanager-interface.md)
 - [호스팅 열거형](hosting-enumerations.md)

@@ -1,4 +1,5 @@
 ---
+description: COINITICOR 열거형에 대해 자세히 알아보세요.
 title: COINITICOR 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67fefd89-28d6-4588-84ea-dc7a5870e014
 topic_type:
 - apiref
-ms.openlocfilehash: 4d5bc66cdc292d390cb4ea187277fda8b8a071fc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7e08518901c04144529c4fae2b87356dc4c9a884
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724210"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678720"
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR 열거형
 
@@ -34,7 +35,7 @@ typedef enum tagCOINITCOR
 } COINITICOR;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -50,6 +51,6 @@ typedef enum tagCOINITCOR
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](metadata-enumerations.md)

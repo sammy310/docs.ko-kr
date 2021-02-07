@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: ASSEMBLYMETADATA 구조체'
 title: ASSEMBLYMETADATA 구조체
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1af98e57-9145-4d35-bb78-77d1da7c91a5
 topic_type:
 - apiref
-ms.openlocfilehash: 8071c3f43775975de37e3255582b6fc8f13f7de3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6fc9c03bea3b1413cd3a8421746137e37d43bd90
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732790"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678941"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA 구조체
 
@@ -42,7 +43,7 @@ typedef struct {
 } ASSEMBLYMETADATA;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -67,7 +68,7 @@ typedef struct {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 구조체](metadata-structures.md)
 - [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)

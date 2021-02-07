@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: CorAssemblyFlags 열거형'
 title: CorAssemblyFlags 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb8db3b6-d81d-49fc-b74c-dbc908a9eab9
 topic_type:
 - apiref
-ms.openlocfilehash: 615c4ac95ab777e8081e630cafb6671e64dea78a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bd74534b1f607eea15f1d8615f66723428ddae3f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718997"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678490"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 열거형
 
@@ -54,7 +55,7 @@ typedef enum CorAssemblyFlags {
 } CorAssemblyFlags;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -85,6 +86,6 @@ typedef enum CorAssemblyFlags {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](metadata-enumerations.md)

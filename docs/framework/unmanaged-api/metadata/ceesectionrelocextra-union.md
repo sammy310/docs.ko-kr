@@ -1,4 +1,5 @@
 ---
+description: CeeSectionRelocExtra 공용 구조체에 대해 자세히 알아보세요.
 title: CeeSectionRelocExtra 공용 구조체
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9568cf6-7f98-4cd6-ab36-0a2bd509afcc
 topic_type:
 - apiref
-ms.openlocfilehash: d5f61aa9b4a65a5f33e64aa4441370c3f7ca5b03
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 40001c1a0772e24633f4232da8e7817f3747f8ea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732725"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678850"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra 공용 구조체
 
@@ -33,7 +34,7 @@ typedef union  {
 } CeeSectionRelocExtra;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -49,6 +50,6 @@ typedef union  {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 공용 구조체](metadata-unions.md)

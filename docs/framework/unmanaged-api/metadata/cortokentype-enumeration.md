@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: CorTokenType 열거형'
 title: CorTokenType 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 70b28ab0ca73988093eadb9628142fecd9442948
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 954bddccd8fe20be46080f8843bcf754e0cf1bbb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705477"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678408"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 열거형
 
@@ -60,7 +61,7 @@ typedef enum CorTokenType {
 } CorTokenType;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -103,6 +104,6 @@ typedef enum CorTokenType {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](metadata-enumerations.md)

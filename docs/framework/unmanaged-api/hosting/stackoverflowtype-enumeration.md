@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: StackOverflowType 열거형'
 title: StackOverflowType 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dab648ad-972b-479c-b129-b4c1dcbd932e
 topic_type:
 - apiref
-ms.openlocfilehash: bbdc68721378e6bbb09f5e4eade08e2e6e03b097
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d39ccd99331a3e839236f1ede21254edb92b2dfb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729917"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679357"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType 열거형
 
@@ -35,7 +36,7 @@ typedef enum {
 } StackOverflowType;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -57,6 +58,6 @@ typedef enum {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 열거형](hosting-enumerations.md)

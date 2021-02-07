@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: AssemblyFlags 열거'
 title: AssemblyFlags 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 40f9bd9e-16ec-447e-81b0-168c875e9866
 topic_type:
 - apiref
-ms.openlocfilehash: 561b4d68a574a2859286fb5f2e2d950518a9d29d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 17cc0dec305c21d21693fe8f4f8d82c039f73278
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732782"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99679006"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 열거형
 
@@ -37,7 +38,7 @@ typedef enum {
 } AssemblyFlags;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -61,7 +62,7 @@ typedef enum {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](metadata-enumerations.md)
 - [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)
