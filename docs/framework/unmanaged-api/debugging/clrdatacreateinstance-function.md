@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: CLRDataCreateInstance 함수'
 title: CLRDataCreateInstance 함수
 ms.date: 03/30/2017
 api_name:
@@ -7,7 +8,7 @@ api_location:
 - mscordbi.dll
 - mscordacwks.dll
 api_type:
-- COM
+- DLLExport
 f1_keywords:
 - CLRDataCreateInstance
 helpviewer_keywords:
@@ -15,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 440bad90-5a88-45e7-9157-4596801d8d19
 topic_type:
 - apiref
-ms.openlocfilehash: 2ffc575cfcef1089a70ef3b6d38787a5b4c50443
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 923b0c687d2b337eacb475973927452e3b47ad0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729826"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747259"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance 함수
 
-지정 된 대상 항목에 대 한 인터페이스 개체를 만듭니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```cpp  
-HRESULT CLRDataCreateInstance (  
+지정 된 대상 항목에 대 한 인터페이스 개체를 만듭니다.
+
+## <a name="syntax"></a>구문
+
+```cpp
+HRESULT CLRDataCreateInstance (
     [in]  REFIID           iid,
     [in]  ICLRDataTarget  *target,
     [out] void           **iface  
@@ -58,9 +59,11 @@ HRESULT CLRDataCreateInstance (
  **헤더:** ClrData .idl  
   
  **라이브러리:** CorGuids.lib  
+
+ **어셈블리**: mscordacwks.dll, mscordbi.dll
   
- **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** .NET Framework 2.0부터 사용할 수 있음
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 전역 정적 함수](debugging-global-static-functions.md)

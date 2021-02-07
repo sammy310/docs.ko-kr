@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: <Assembly> 요소 (.NET 네이티브)'
 title: <Assembly> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-ms.openlocfilehash: 9d1556d8d414386d3f350a96396381bd7b66ffc5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 567a30a6a77e9de03635a9dfaae6bb28c9d728f0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251128"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747922"
 ---
 # <a name="assembly-element-net-native"></a>\<Assembly> 요소 (.NET 네이티브)
 
@@ -35,7 +36,7 @@ ms.locfileid: "96251128"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|특성 유형|Description|  
+|attribute|특성 유형|설명|  
 |---------------|--------------------|-----------------|  
 |`Name`|일반|필수 특성입니다. 어셈블리의 단순한 이름을 지정합니다.|  
 |`Activate`|반사|선택적 특성입니다. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.|  
@@ -51,19 +52,19 @@ ms.locfileid: "96251128"
   
 ## <a name="name-attribute"></a>Name 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*assembly_name*|파일 확장명이 없는 어셈블리의 단순한 이름입니다. 이 특성은 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 속성에 해당합니다. 예를 들어 Extensions.dll 어셈블리의 이름은 "Extensions"입니다.<br /><br /> 리터럴 문자열 `*Application*`을 지정하여 어셈블리 로드 여부에 관계없이 앱 패키지의 모든 어셈블리에 정책을 적용할 수도 있습니다. `*Application*`을 사용하는 경우 정책이 .NET Framework 어셈블리에 적용되지 않습니다.|  
   
 ## <a name="all-other-attributes"></a>기타 모든 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*policy_setting*|어셈블리의 모든 형식에 대해 이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Namespace>](namespace-element-net-native.md)|자식 네임스페이스의 모든 형식에 리플렉션 정책을 적용합니다.|  
 |[\<Type>](type-element-net-native.md)|형식에 리플렉션 정책을 적용합니다.|  
@@ -71,7 +72,7 @@ ms.locfileid: "96251128"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Application>](application-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 애플리케이션 수준 형식 및 형식 멤버에 대한 컨테이너로 사용됩니다. 요소에는 [\<Application>](application-element-net-native.md) 요소가 0 개, 1 개 또는 그 이상 있을 수 있습니다 `<Assembly>` .|  
 |[\<Library>](library-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 형식 및 형식 멤버가 포함된 어셈블리를 정의합니다. [\<Library>](library-element-net-native.md)요소는 0 개 또는 한 개의 요소를 포함할 수 있습니다 `<Assembly>` .|  

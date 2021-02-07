@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: ISNULL (Entity SQL)'
 title: ISNULL(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: 3360ad4ca7306a8cc1b7d6948204f825ff9a93c6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1dbaf964facf089ab6714ebd58baf8b040288cff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203620"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748494"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL(Entity SQL)
 
@@ -27,7 +28,7 @@ expression IS [ NOT ] NULL
  NOT  
  IS NULL의 EDM 부울 결과를 부정합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `true`이 null을 반환하면 `expression`이고, 그렇지 않으면 `false`입니다.  
   

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: <ImpliesType> 요소 (.NET 네이티브)'
 title: <ImpliesType> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-ms.openlocfilehash: 04c3a9498a5c9c24d67dedd02fb4c9d68d9efbdd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6476876f335788a276907fd2aef02d5623382699
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287958"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747688"
 ---
 # <a name="impliestype-element-net-native"></a>\<ImpliesType> 요소 (.NET 네이티브)
 
@@ -35,7 +36,7 @@ ms.locfileid: "96287958"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|특성 유형|Description|  
+|attribute|특성 유형|설명|  
 |---------------|--------------------|-----------------|  
 |`Name`|일반|필수 특성입니다. 형식 이름을 지정합니다.|  
 |`Activate`|반사|선택적 특성입니다. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.|  
@@ -51,13 +52,13 @@ ms.locfileid: "96287958"
   
 ## <a name="name-attribute"></a>Name 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*type_name*|형식 이름입니다. 이 `<ImpliesType>` 요소가 나타내는 형식이 포함 `<Type>` 요소와 같은 네임스페이스에 있으면 *type_name* 은 네임스페이스가 없는 형식 이름을 포함할 수 있습니다. 그러지 않으면 *type_name* 은 정규화된 형식 이름을 포함해야 합니다.|  
   
 ## <a name="all-other-attributes"></a>기타 모든 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
@@ -67,7 +68,7 @@ ms.locfileid: "96287958"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
@@ -93,7 +94,7 @@ ms.locfileid: "96287958"
   
  이 지시문은 `Explicit`의 인스턴스화에 정의된 `Dynamic` 정책 설정이 없으면 아무런 영향을 주지 않습니다. 예를 들어 `Explicit<Int32>`의 경우 `Implicit<Int32>`는 공용 멤버가 루트에 있는 상태로 인스턴스화되며 동적 프로그래밍을 위해 해당 메타데이터에 액세스할 수 있습니다.  
   
- 다음은 하나 이상의 serializer에 적용되는 실제 예제입니다. 지시문은 형식에 따라 형식이 지정 된 항목을 반영 하는 요구 사항을 캡처하여 `IList<` *something* `>` `List<` *something* `>` 응용 프로그램별 주석을 요구 하지 않고 해당 하는 항목을 반영 하는 것도 포함 합니다.  
+ 다음은 하나 이상의 serializer에 적용되는 실제 예제입니다. 지시문은 형식에 따라 형식이 지정 된 항목을 반영 하는 요구 사항을 캡처하여 `IList<`  `>` `List<`  `>` 응용 프로그램별 주석을 요구 하지 않고 해당 하는 항목을 반영 하는 것도 포함 합니다.  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  

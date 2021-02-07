@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: <= (작거나 같음) (Entity SQL)'
 title: <= (작거나 같음) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 7c46da5c-fa09-4d90-adcc-c7e1b769d8e6
-ms.openlocfilehash: 09f2a7f53d00739b8542cb1149397f24d3b04f42
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f720c4ef87cdd0cceea175b1ea70caf5ac6e1deb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161804"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748260"
 ---
 # <a name="-less-than-or-equal-to-entity-sql"></a>\<=(보다 작거나 같음)(Entity SQL)
 
@@ -22,7 +23,7 @@ expression <= expression
 ## <a name="arguments"></a>인수  
 
  `expression`  
- 모든 유효한 식입니다. 두 식은 모두 암시적으로 변환 가능한 데이터 형식이어야 합니다.  
+ 유효한 식입니다. 두 식은 모두 암시적으로 변환 가능한 데이터 형식이어야 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
 

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: <GenericParameter> 요소 (.NET 네이티브)'
 title: <GenericParameter> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
-ms.openlocfilehash: 1400fb7029df533d54e87a1c534f4ac3b0a5fc68
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 57cbb3418289d7da4f25577188299acd55ce6c94
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288023"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747831"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter> 요소 (.NET 네이티브)
 
@@ -35,7 +36,7 @@ ms.locfileid: "96288023"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|특성 유형|Description|  
+|attribute|특성 유형|설명|  
 |---------------|--------------------|-----------------|  
 |`Name`|일반|필수 특성입니다. 제네릭 매개 변수의 이름입니다. 예를 들어 <xref:System.Func%603> 제네릭 대리자의 경우 런타임 정책을 대리자의 반환 값에 적용할 수 있도록 `Name` 특성의 값은 "TResult"입니다.|  
 |`Activate`|반사|선택적 특성입니다. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.|  
@@ -51,13 +52,13 @@ ms.locfileid: "96288023"
   
 ## <a name="name-attribute"></a>Name 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*generic_parameter_name*|필수 특성입니다. 제네릭 형식 매개 변수의 이름입니다. 예를 들어 <xref:System.Func%603> 제네릭 대리자의 경우 *generic_parameter_name* 의 값이 “TResult”이면 런타임 정책이 대리자의 반환 값에 적용됩니다.|  
   
 ## <a name="all-other-attributes"></a>기타 모든 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
@@ -67,7 +68,7 @@ ms.locfileid: "96288023"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|생성자 또는 메서드에 런타임 리플렉션 정책을 적용합니다.|  
 |[\<Type>](type-element-net-native.md)|클래스 또는 구조체와 같은 특정 형식에 런타임 리플렉션 정책을 적용합니다.|  

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugProcess2:: ClearUnmanagedBreakpoint 메서드'
 title: ICorDebugProcess2::ClearUnmanagedBreakpoint 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 12ed0fff-7f0e-4d7a-bb70-b3376371f36c
 topic_type:
 - apiref
-ms.openlocfilehash: a713fd006f1e9ad8fe7109651c2cda5025da3566
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fba31a479e9bac525109e14c02995e78918d4c17
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673945"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746635"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>ICorDebugProcess2::ClearUnmanagedBreakpoint 메서드
 

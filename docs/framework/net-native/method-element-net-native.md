@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: <Method> 요소 (.NET 네이티브)'
 title: <Method> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
-ms.openlocfilehash: 1d57457c90e44c70caa301eccc02c5831d283cea
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 76c379ed81e721316e4293b20ba89acfbc9d174f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287906"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747526"
 ---
 # <a name="method-element-net-native"></a>\<Method> 요소 (.NET 네이티브)
 
@@ -28,7 +29,7 @@ ms.locfileid: "96287906"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|특성 유형|Description|  
+|attribute|특성 유형|설명|  
 |---------------|--------------------|-----------------|  
 |`Name`|일반|필수 특성입니다. 메서드 이름을 지정합니다.|  
 |`Signature`|일반|선택적 특성입니다. 메서드 시그니처를 지정합니다. 매개 변수가 여러 개이면 쉼표로 구분합니다. 예를 들어 다음 `<Method>` 요소는 <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29> 메서드에 대한 정책을 정의합니다.<br /><br /> `<Type Name="System.DateTime">    <Method Name="ToString" Signature="System.String,System.IFormatProvider"            Dynamic="Required" /> </Type>`<br /><br /> 특성이 없으면 런타임 지시문은 메서드의 모든 오버로드에 적용됩니다.|  
@@ -37,25 +38,25 @@ ms.locfileid: "96287906"
   
 ## <a name="name-attribute"></a>Name 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*method_name*|메서드 이름입니다. 메서드의 형식은 부모 [\<Type>](type-element-net-native.md) 또는 요소로 정의 됩니다 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .|  
   
 ## <a name="signature-attribute"></a>시그니처 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*method_signature*|메서드 시그니처를 구성하는 매개 변수 형식입니다. 매개 변수가 여러 개이면 `"System.String,System.Int32,System.Int32)"`와 같이 쉼표로 구분합니다. 매개 변수 형식 이름은 정규화해야 합니다.|  
   
 ## <a name="all-other-attributes"></a>기타 모든 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `Auto`, `Excluded`, `Included` 및 `Required`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Parameter>](parameter-element-net-native.md)|메서드에 전달된 인수의 형식에 정책을 적용합니다.|  
 |[\<GenericParameter>](genericparameter-element-net-native.md)|제네릭 형식 또는 메서드의 매개 변수 형식에 정책을 적용합니다.|  
@@ -64,7 +65,7 @@ ms.locfileid: "96287906"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  

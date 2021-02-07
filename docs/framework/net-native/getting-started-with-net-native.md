@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: .NET 네이티브 시작'
 title: .NET 네이티브 시작
 ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-ms.openlocfilehash: b6cd4acaa377de7fc172fb12c9fb9ff1b832f88a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6079e21764ebc39515eb9b9f217057d916da8942
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551212"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747805"
 ---
 # <a name="getting-started-with-net-native"></a>.NET 네이티브 시작
 
@@ -83,7 +84,7 @@ ms.locfileid: "90551212"
 
 앱이 정상적으로 작동하지 않는 경우(특히 런타임에 [MissingMetadataException](missingmetadataexception-class-net-native.md) 또는 [MissingInteropDataException](missinginteropdataexception-class-net-native.md) 예외가 throw되는 경우) 다음 섹션인 [4단계: 수동으로 누락된 메타데이터 문제 해결](#Step4)의 지침을 따릅니다. 첫째 예외를 사용하도록 설정하면 이러한 버그를 찾는 데 도움이 될 수 있습니다.
 
-앱의 디버그 빌드를 테스트 하 고 디버그할 때 [MissingMetadataException](missingmetadataexception-class-net-native.md) 및 [MissingInteropDataException](missinginteropdataexception-class-net-native.md) 예외를 제거 하는 것을 확신 하는 경우 앱을 최적화 된 .NET 네이티브 앱으로 테스트 해야 합니다. 이렇게 하려면 활성 프로젝트 구성을 **디버그** 에서 **릴리스**로 변경합니다.
+앱의 디버그 빌드를 테스트 하 고 디버그할 때 [MissingMetadataException](missingmetadataexception-class-net-native.md) 및 [MissingInteropDataException](missinginteropdataexception-class-net-native.md) 예외를 제거 하는 것을 확신 하는 경우 앱을 최적화 된 .NET 네이티브 앱으로 테스트 해야 합니다. 이렇게 하려면 활성 프로젝트 구성을 **디버그** 에서 **릴리스** 로 변경합니다.
 
 <a name="Step4"></a>
 
@@ -121,7 +122,7 @@ ms.locfileid: "90551212"
 
 - [.NET 네이티브 앱의 런타임 예외](runtime-exceptions-in-net-native-apps.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [.NET 네이티브 설치 및 구성](/previous-versions/dn600164(v=vs.110))

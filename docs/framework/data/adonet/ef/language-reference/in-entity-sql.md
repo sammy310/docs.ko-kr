@@ -1,13 +1,14 @@
 ---
+description: 자세히 알아보기:에서 (Entity SQL)
 title: IN(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
-ms.openlocfilehash: 582a3b988247f1484197c0905fecf7f4407f88b0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 234ed15430e44d12d4ca7c98fcb4a7bc03d117f9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203672"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748598"
 ---
 # <a name="in-entity-sql"></a>IN(Entity SQL)
 
@@ -30,7 +31,7 @@ value [ NOT ] IN expression
  `expression`  
  일치 여부를 테스트할 컬렉션을 반환하는 모든 유효한 식입니다. 모든 식은 형식이 같거나 기본 형식 또는 파생 형식이 `value`이어야 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  값이 컬렉션에 있으면 `true`이고, 값 또는 컬렉션이 null이면 null이고, 그렇지 않으면 `false`입니다. NOT IN을 사용하면 IN의 결과가 부정됩니다.  
   

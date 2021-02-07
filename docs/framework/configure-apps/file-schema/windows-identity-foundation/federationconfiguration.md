@@ -1,18 +1,19 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <federationConfiguration>
 title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 39e96a161a2e75d5f00b73f6b08b1e4a0c109aee
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f8793a8fbd6fc6d5e6994c8e368f587b740e5973
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201358"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748988"
 ---
 # \<federationConfiguration>
 
-<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>Ws-federation 프로토콜을 통해 페더레이션된 인증을 사용 하는 경우 (wsfam) 및 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM)을 구성 합니다. <xref:System.Security.Claims.ClaimsAuthorizationManager>또는 클래스를 사용 하 여 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 클레임 기반 액세스 제어를 제공 하는 경우를 구성 합니다.  
+<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>WS-Federation 프로토콜을 통해 페더레이션된 인증을 사용 하는 경우 (wsfam) 및 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM)을 구성 합니다. <xref:System.Security.Claims.ClaimsAuthorizationManager>또는 클래스를 사용 하 여 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 클레임 기반 액세스 제어를 제공 하는 경우를 구성 합니다.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel.services>**](system-identitymodel-services.md)\
@@ -33,7 +34,7 @@ ms.locfileid: "91201358"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |name|이 페더레이션 구성 요소의 이름입니다. 이 특성은 주로 이후 프로토콜에 대 한 확장성 지점을 제공 합니다. 선택 사항입니다.|  
 |identityConfigurationName|사용할 요소에 지정 된 id 구성 섹션의 이름입니다 [\<identityConfiguration>](identityconfiguration.md) . 이 특성을 지정 하지 않으면 기본 id 구성 섹션이 사용 됩니다. 선택 사항입니다.|  
@@ -44,19 +45,19 @@ ms.locfileid: "91201358"
 |-------------|-----------------|  
 |[\<cookieHandler>](cookiehandler.md)|SAM에서 사용 하는 쿠키 처리기를 구성 합니다. 선택 사항입니다.|  
 |[\<serviceCertificate>](servicecertificate.md)|토큰을 암호화 하 고 해독 하는 데 사용 되는 인증서를 구성 합니다. 선택 사항입니다.|  
-|[\<wsFederation>](wsfederation.md)|WS-FEDERATION 인증 모듈 (WSFAM)을 구성 합니다. 선택 사항입니다.|  
+|[\<wsFederation>](wsfederation.md)|WSFAM (WS-Federation 인증 모듈)을 구성 합니다. 선택 사항입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<system.identityModel.services>](system-identitymodel-services.md)|WS-FEDERATION 프로토콜을 사용 하는 인증에 대 한 구성 섹션입니다.|  
+|[\<system.identityModel.services>](system-identitymodel-services.md)|WS-Federation 프로토콜을 사용 하는 인증에 대 한 구성 섹션입니다.|  
   
 ## <a name="remarks"></a>설명  
 
  \<federationConfiguration>요소는 다음과 같은 두 가지 시나리오에서 설정을 제공 합니다.  
   
-- 수동 웹 응용 프로그램에서 WS-FEDERATION을 사용 하는 경우 요소에는 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (wsfam) 및 (SAM)을 구성 하는 설정이 포함 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 됩니다. 또한 보안 토큰 처리기 및 인증서를 구성 하는 데 사용 되는 id 구성과 클레임 권한 부여 관리자 및 클레임 인증 관리자와 같은 구성 요소를 참조 합니다.  
+- 수동 웹 응용 프로그램에서 WS-Federation를 사용 하는 경우 요소에는 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (wsfam) 및 (SAM)을 구성 하는 설정이 포함 <xref:System.IdentityModel.Services.SessionAuthenticationModule> 됩니다. 또한 보안 토큰 처리기 및 인증서를 구성 하는 데 사용 되는 id 구성과 클레임 권한 부여 관리자 및 클레임 인증 관리자와 같은 구성 요소를 참조 합니다.  
   
 - 또는 클래스를 사용 하 여 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 코드에서 클레임 기반 액세스 제어를 제공 하는 경우 요소는 권한 부여를 결정 하는 데 사용 되는 클레임 권한 부여 관리자 및 정책을 구성 하는 id 구성을 참조 합니다. 이는 수동 웹 시나리오가 아닌 시나리오 에서도 마찬가지입니다. 예를 들어 WCF (Windows Communication Foundation) 응용 프로그램 또는 웹 기반이 아닌 응용 프로그램이 있습니다. 응용 프로그램이 수동 웹 응용 프로그램이 아닌 경우 [\<claimsAuthorizationManager>](claimsauthorizationmanager.md) 요소가 참조 하는 id 구성의 요소 및 자식 정책 요소 (있는 경우) `<federationConfiguration>` 만 적용 됩니다. 다른 특성은 모두 무시됩니다.  
   

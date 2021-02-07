@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <useManagedPresentation>
 title: <useManagedPresentation>
 ms.date: 03/30/2017
 ms.assetid: 17a0dd77-af54-41db-a9d0-4b17ff42878f
-ms.openlocfilehash: 86a6f975b05133d5f9f21fcfb82ef4c23d2ffaba
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9203daedcc0553c7a1308b2763b9e818ca6560c1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148814"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749040"
 ---
 # \<useManagedPresentation>
 
@@ -53,7 +54,7 @@ WS-Trust의 CardSpace 프로필을 지원하는 CardSpace 보안 토큰 서비�
 - <xref:System.ServiceModel.Configuration.UseManagedPresentationElement>
 - <xref:System.ServiceModel.Channels.UseManagedPresentationBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

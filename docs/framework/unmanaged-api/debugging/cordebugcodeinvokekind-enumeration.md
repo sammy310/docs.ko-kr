@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CorDebugCodeInvokeKind 열거형'
 title: CorDebugCodeInvokeKind 열거형
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: e795e6a2-1008-4a81-af88-d777888e942e
 topic_type:
 - apiref
-ms.openlocfilehash: ece5bd5373fed1a10e6592ff884e98b614e7991d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d3fc3fe6f7568adcb2d1bbbe18c98d9d84bac337
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715993"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747090"
 ---
 # <a name="cordebugcodeinvokekind-enumeration"></a>CorDebugCodeInvokeKind 열거형
 
@@ -32,7 +33,7 @@ typedef enum CorDebugCodeInvokeKind
 } CorDebugCodeInvokeKind;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -57,7 +58,7 @@ typedef enum CorDebugCodeInvokeKind
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)
 - [디버깅](index.md)

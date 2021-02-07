@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ISOF (Entity SQL)'
 title: ISOF(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: 3cbbc9b6feda1bde104ed2c95d4dca274b090028
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4a44ddc74ef16ec16285132f6567ca2500e173a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202281"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748351"
 ---
 # <a name="isof-entity-sql"></a>ISOF(Entity SQL)
 
@@ -33,7 +34,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  `type`  
  `expression`을 테스트할 형식입니다. 형식은 네임스페이스로 한정되어야 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `true`이 T 형식이며 T가 기본 형식이거나 `expression`의 파생 형식인 경우 `type`이고, `expression`이 런타임에 null인 경우 null이며, 그 이외의 경우 `false`입니다.  
   

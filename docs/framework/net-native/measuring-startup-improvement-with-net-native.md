@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: .NET 네이티브 시작 개선 기능 측정'
 title: .NET 네이티브로 시작 속도 개선 측정
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-ms.openlocfilehash: 6d89edaff184692eabb11e928f5211f664ff5afa
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ef3245811f79475fc7c267e7376f6140e8686724
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250972"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747597"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET 네이티브로 시작 속도 개선 측정
 

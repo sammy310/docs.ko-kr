@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CLRDataSourceType 열거형'
 title: CLRDataSourceType 열거형
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7ace405e2624f15b1cdb6d383222ae87c93289bb
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 06590e21aa4cdf6e89977a79da36a413d5ff4f1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274103"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747244"
 ---
 # <a name="clrdatasourcetype-enumeration"></a>CLRDataSourceType 열거형
 
@@ -37,7 +38,7 @@ typedef enum
 } CLRDataSourceType;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 | 멤버                        | 설명                           |
 | ----------------------------- | ------------------------------------- |
@@ -45,14 +46,14 @@ typedef enum
 
 ## <a name="remarks"></a>설명
 
-이 열거형은 런타임 내부에 있고 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 이를 사용 하려면 코드에서 위에 정의 된 열거형을 정의 합니다. 또한 [공통 데이터 형식](../common-data-types-unmanaged-api-reference.md)에 `CLRDATA_ENUM` 설명 된 대로이 별칭을로 지정 합니다.
+이 열거형은 런타임 내부에 있고 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 이를 사용 하려면 코드에서 위에 정의 된 열거형을 정의 합니다. 또한 `CLRDATA_ENUM` [공통 데이터 형식](../common-data-types-unmanaged-api-reference.md)에 설명 된 대로이 별칭을로 지정 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
-**헤더:** 없음  
-**라이브러리** 없음  
-**.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
+**헤더:** 없음을  
+**라이브러리:** 없음을  
+**.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>참고 항목
 

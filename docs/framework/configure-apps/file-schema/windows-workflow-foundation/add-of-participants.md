@@ -1,14 +1,15 @@
 ---
+description: '다음에 대 한 자세한 정보:: <add><participants>'
 title: <participants>의 <add>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
-ms.openlocfilehash: 84177f62e6f1ce0cb89bdf85e1ba5a2a1e82fa21
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 58e8fa9b0e9685421a044cf2f11473cb73d8ae6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189801"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748936"
 ---
 # <a name="add-of-participants"></a>\<participants>의 \<add>
 
@@ -38,7 +39,7 @@ ms.locfileid: "91189801"
   
 ### <a name="attributes"></a>특성  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |name|추적 참가자의 이름을 지정하는 문자열입니다.|  
 |profileName|추적 참가자가 구독하는 추적 레코드를 정의하는 추적 프로필의 이름을 지정하는 문자열입니다.|  

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: <Library> 요소 (.NET 네이티브)'
 title: <Library> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
-ms.openlocfilehash: aeaa6b1a9c3c4ceebdd0eab3f331a044971398bf
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 224b2b9cbce8123f4a15b9ec3e3793674633822a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287919"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747610"
 ---
 # <a name="library-element-net-native"></a>\<Library> 요소 (.NET 네이티브)
 
@@ -28,19 +29,19 @@ ms.locfileid: "96287919"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`Name`|필수 특성입니다. 어셈블리의 이름을 지정합니다. 이 `<Library>` 요소의 자식 요소는 이 어셈블리에 있는 형식 및 형식 멤버에 대한 런타임 리플렉션 정책을 정의합니다.|  
   
 ## <a name="name-attribute"></a>Name 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*assembly_name*|파일 확장명이 없는 어셈블리의 단순한 이름입니다. 이 특성은 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 속성에 해당합니다. 예를 들어 Extensions.dll 어셈블리의 이름은 "Extensions"입니다. 어셈블리에서 조건부 메타데이터 포함을 지원하는 특수 *assembly_name* 형식에 대한 내용은 설명 섹션을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Assembly>](assembly-element-net-native.md)|특정 어셈블리의 모든 형식에 정책을 적용합니다.|  
 |[\<Namespace>](namespace-element-net-native.md)|특정 네임스페이스의 모든 형식에 정책을 적용합니다.|  
@@ -49,7 +50,7 @@ ms.locfileid: "96287919"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Directives>](directives-element-net-native.md)|런타임 지시문 파일의 루트 요소입니다.|  
   

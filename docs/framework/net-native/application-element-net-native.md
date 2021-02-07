@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: <Application> 요소 (.NET 네이티브)'
 title: <Application> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-ms.openlocfilehash: a7f2eca5a5bb5cfb7b9827f2463454a17fc128cb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ebbc6292b5936e6b7d54666070b33df2da80f57f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288140"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747948"
 ---
 # <a name="application-element-net-native"></a>\<Application> 요소 (.NET 네이티브)
 
@@ -37,7 +38,7 @@ ms.locfileid: "96288140"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|특성 유형|Description|  
+|attribute|특성 유형|설명|  
 |---------------|--------------------|-----------------|  
 |`Activate`|반사|선택적 특성입니다. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.|  
 |`Browse`|반사|선택적 특성입니다. 형식에 대한 정보 쿼리 또는 형식 열거는 제어하지만 런타임에 동적 호출을 사용하도록 설정하지는 않습니다.|  
@@ -52,13 +53,13 @@ ms.locfileid: "96288140"
   
 ## <a name="all-attributes"></a>모든 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*policy_setting*|앱의 형식에 적용할 이 정책에 대한 설정입니다. 가능한 값은 `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Assembly>](assembly-element-net-native.md)|특정 어셈블리의 모든 형식에 정책을 적용합니다.|  
 |[\<Namespace>](namespace-element-net-native.md)|특정 네임스페이스의 모든 형식에 정책을 적용합니다.|  
@@ -72,7 +73,7 @@ ms.locfileid: "96288140"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Directives>](directives-element-net-native.md)|런타임 지시문 파일의 루트 요소입니다.|  
   

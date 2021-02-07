@@ -1,17 +1,20 @@
 ---
+description: WCF Data Services 리소스에 대해 자세히 알아보세요.
 title: WCF Data Services 리소스
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 52de0dc16ea2363c48ed48291883352b02f2015c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: bbd4430430d64952aba4ac111033aaa4302c7f4f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202151"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748156"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Data Services 리소스
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services 소개 항목은 다음 위치에서 찾을 수 있습니다. 이들 항목 중 상당수에는 자세한 정보가 포함된 관련 항목 링크가 제공됩니다.  
   
@@ -52,7 +55,7 @@ WCF Data Services 소개 항목은 다음 위치에서 찾을 수 있습니다. 
  [Microsoft WCF Data Services 사용](/previous-versions/visualstudio/visual-studio-2008/cc907912(v=msdn.10))  
  클라이언트 애플리케이션에서 데이터 서비스를 만들고 액세스하는 방법에 대한 추가 정보와 예제를 제공하는 백서입니다.  
   
- [엔터티-관계 모델:](https://dl.acm.org/doi/10.1145/320434.320440) Peter Pin-shan, Massachusetts의 기술을 통해 통합 된 데이터 보기 지향  
+ Entity-Relationship 모델: Peter Pin-Shan Massachusetts,의 기술 자료를 통해 [통합 된 데이터 보기 지향](https://dl.acm.org/doi/10.1145/320434.320440)  
  WCF Data Services에서 구현 하는 엔터티 관계형 모델의 기초에 대해 설명 합니다. 1976년에 작성되었으며 컴퓨터 분야에서 가장 흔히 인용되는 논문 중 하나입니다.  
   
 ## <a name="see-also"></a>참고 항목
