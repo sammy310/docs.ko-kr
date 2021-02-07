@@ -1,40 +1,41 @@
 ---
+description: '자세히 알아보기: 방법: EdmGen.exe를 사용 하 여 모델 및 매핑 파일 생성'
 title: '방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 생성'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 8837afd05eec0eaf8ef3e909d46b280e8ae05da7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b601e7dd3c108f4bf4966df2fabcf8324365fe3c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198186"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99697415"
 ---
-# <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a><span data-ttu-id="20c09-102">방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 생성</span><span class="sxs-lookup"><span data-stu-id="20c09-102">How to: Use EdmGen.exe to Generate the Model and Mapping Files</span></span>
+# <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a><span data-ttu-id="2a8b9-103">방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 생성</span><span class="sxs-lookup"><span data-stu-id="2a8b9-103">How to: Use EdmGen.exe to Generate the Model and Mapping Files</span></span>
 
-<span data-ttu-id="20c09-103">이 항목에서는 EDM 생성기(EdmGen.exe) 도구를 사용하여 School 데이터베이스를 기반으로 하는 다음 파일을 생성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="20c09-103">This topic shows how to use the EDM Generator (EdmGen.exe) tool to generate the following files based on the School database:</span></span>  
+<span data-ttu-id="2a8b9-104">이 항목에서는 EDM 생성기(EdmGen.exe) 도구를 사용하여 School 데이터베이스를 기반으로 하는 다음 파일을 생성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2a8b9-104">This topic shows how to use the EDM Generator (EdmGen.exe) tool to generate the following files based on the School database:</span></span>  
   
-- <span data-ttu-id="20c09-104">개념적 모델(.csdl 파일)</span><span class="sxs-lookup"><span data-stu-id="20c09-104">A conceptual model (a .csdl file).</span></span>  
+- <span data-ttu-id="2a8b9-105">개념적 모델(.csdl 파일)</span><span class="sxs-lookup"><span data-stu-id="2a8b9-105">A conceptual model (a .csdl file).</span></span>  
   
-- <span data-ttu-id="20c09-105">스토리지 모델(.ssdl 파일)</span><span class="sxs-lookup"><span data-stu-id="20c09-105">A storage model (a .ssdl file).</span></span>  
+- <span data-ttu-id="2a8b9-106">스토리지 모델(.ssdl 파일)</span><span class="sxs-lookup"><span data-stu-id="2a8b9-106">A storage model (a .ssdl file).</span></span>  
   
-- <span data-ttu-id="20c09-106">개념적 모델과 스토리지 모델 간의 매핑(.msl 파일)</span><span class="sxs-lookup"><span data-stu-id="20c09-106">Mapping between the conceptual and storage models (a .msl file).</span></span>  
+- <span data-ttu-id="2a8b9-107">개념적 모델과 스토리지 모델 간의 매핑(.msl 파일)</span><span class="sxs-lookup"><span data-stu-id="2a8b9-107">Mapping between the conceptual and storage models (a .msl file).</span></span>  
   
-- <span data-ttu-id="20c09-107">Visual Basic 또는 C#의 개체 계층 코드</span><span class="sxs-lookup"><span data-stu-id="20c09-107">Object-layer code in Visual Basic or C#.</span></span>  
+- <span data-ttu-id="2a8b9-108">Visual Basic 또는 C#의 개체 계층 코드</span><span class="sxs-lookup"><span data-stu-id="2a8b9-108">Object-layer code in Visual Basic or C#.</span></span>  
   
-- <span data-ttu-id="20c09-108">뷰 파일</span><span class="sxs-lookup"><span data-stu-id="20c09-108">View files.</span></span>  
+- <span data-ttu-id="2a8b9-109">뷰 파일</span><span class="sxs-lookup"><span data-stu-id="2a8b9-109">View files.</span></span>  
   
- <span data-ttu-id="20c09-109">EdmGen.exe 도구에서는 /mode:FullGeneration을 사용하여 위에 나열된 파일을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="20c09-109">The EdmGen.exe tool uses /mode:FullGeneration to generate the files listed above.</span></span> <span data-ttu-id="20c09-110">EdmGen.exe 명령에 대 한 자세한 내용은 [EDM 생성기 (EdmGen.exe)](edm-generator-edmgen-exe.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="20c09-110">For more information about EdmGen.exe commands, see [EDM Generator (EdmGen.exe)](edm-generator-edmgen-exe.md).</span></span>  
+ <span data-ttu-id="2a8b9-110">EdmGen.exe 도구에서는 /mode:FullGeneration을 사용하여 위에 나열된 파일을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2a8b9-110">The EdmGen.exe tool uses /mode:FullGeneration to generate the files listed above.</span></span> <span data-ttu-id="2a8b9-111">EdmGen.exe 명령에 대 한 자세한 내용은 [EDM 생성기 (EdmGen.exe)](edm-generator-edmgen-exe.md)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="2a8b9-111">For more information about EdmGen.exe commands, see [EDM Generator (EdmGen.exe)](edm-generator-edmgen-exe.md).</span></span>  
   
- <span data-ttu-id="20c09-111">EdmGen.exe를 사용 하 여 모델 및 매핑 파일을 생성 하는 경우에도 Entity Framework를 사용 하도록 Visual Studio 프로젝트를 구성 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="20c09-111">If you use EdmGen.exe to generate the model and mapping files, you still need to configure your Visual Studio project to use the Entity Framework.</span></span> <span data-ttu-id="20c09-112">자세한 내용은 [방법: Entity Framework 프로젝트 수동 구성](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="20c09-112">For more information, see [How to: Manually Configure an Entity Framework Project](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).</span></span>  
+ <span data-ttu-id="2a8b9-112">EdmGen.exe를 사용 하 여 모델 및 매핑 파일을 생성 하는 경우에도 Entity Framework를 사용 하도록 Visual Studio 프로젝트를 구성 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2a8b9-112">If you use EdmGen.exe to generate the model and mapping files, you still need to configure your Visual Studio project to use the Entity Framework.</span></span> <span data-ttu-id="2a8b9-113">자세한 내용은 [방법: Entity Framework 프로젝트 수동 구성](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="2a8b9-113">For more information, see [How to: Manually Configure an Entity Framework Project](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="20c09-113">EdmGen.exe에서 생성된 개념적 모델에는 데이터베이스의 모든 개체가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="20c09-113">A conceptual model generated by EdmGen.exe includes all the objects in the database.</span></span> <span data-ttu-id="20c09-114">특정 개체만 포함된 개념적 모델을 생성하려면 엔터티 데이터 모델 마법사를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="20c09-114">If you want to generate a conceptual model that includes only specific objects, use the Entity Data Model Wizard.</span></span> <span data-ttu-id="20c09-115">자세한 내용은 [방법: 엔터티 데이터 모델 마법사 사용](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="20c09-115">For more information, see [How to: Use the Entity Data Model Wizard](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).</span></span>  
+> <span data-ttu-id="2a8b9-114">EdmGen.exe에서 생성된 개념적 모델에는 데이터베이스의 모든 개체가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="2a8b9-114">A conceptual model generated by EdmGen.exe includes all the objects in the database.</span></span> <span data-ttu-id="2a8b9-115">특정 개체만 포함된 개념적 모델을 생성하려면 엔터티 데이터 모델 마법사를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2a8b9-115">If you want to generate a conceptual model that includes only specific objects, use the Entity Data Model Wizard.</span></span> <span data-ttu-id="2a8b9-116">자세한 내용은 [방법: 엔터티 데이터 모델 마법사 사용](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="2a8b9-116">For more information, see [How to: Use the Entity Data Model Wizard](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).</span></span>  
   
-### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a><span data-ttu-id="20c09-116">EdmGen.exe를 사용하여 Visual Basic 프로젝트용 School 모델을 생성하려면</span><span class="sxs-lookup"><span data-stu-id="20c09-116">To generate the School model for a Visual Basic project using EdmGen.exe</span></span>  
+### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a><span data-ttu-id="2a8b9-117">EdmGen.exe를 사용하여 Visual Basic 프로젝트용 School 모델을 생성하려면</span><span class="sxs-lookup"><span data-stu-id="2a8b9-117">To generate the School model for a Visual Basic project using EdmGen.exe</span></span>  
   
-1. <span data-ttu-id="20c09-117">School 데이터베이스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="20c09-117">Create the School database.</span></span> <span data-ttu-id="20c09-118">자세한 내용은 [School 샘플 데이터베이스 만들기](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="20c09-118">For more information, see [Creating the School Sample Database](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
+1. <span data-ttu-id="2a8b9-118">School 데이터베이스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2a8b9-118">Create the School database.</span></span> <span data-ttu-id="2a8b9-119">자세한 내용은 [School 샘플 데이터베이스 만들기](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="2a8b9-119">For more information, see [Creating the School Sample Database](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
   
-2. <span data-ttu-id="20c09-119">명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="20c09-119">At the command prompt, execute the following command without line breaks:</span></span>  
+2. <span data-ttu-id="2a8b9-120">명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="2a8b9-120">At the command prompt, execute the following command without line breaks:</span></span>  
   
     ```console  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:fullgeneration
@@ -42,11 +43,11 @@ ms.locfileid: "91198186"
     /project:School /entitycontainer:SchoolEntities /namespace:SchoolModel /language:VB  
     ```  
   
-### <a name="to-generate-the-school-model-for-a-c-project-using-edmgenexe"></a><span data-ttu-id="20c09-120">EdmGen.exe를 사용하여 C# 프로젝트용 School 모델을 생성하려면</span><span class="sxs-lookup"><span data-stu-id="20c09-120">To generate the School model for a C# project using EdmGen.exe</span></span>  
+### <a name="to-generate-the-school-model-for-a-c-project-using-edmgenexe"></a><span data-ttu-id="2a8b9-121">EdmGen.exe를 사용하여 C# 프로젝트용 School 모델을 생성하려면</span><span class="sxs-lookup"><span data-stu-id="2a8b9-121">To generate the School model for a C# project using EdmGen.exe</span></span>  
   
-1. <span data-ttu-id="20c09-121">School 데이터베이스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="20c09-121">Create the School database.</span></span> <span data-ttu-id="20c09-122">자세한 내용은 [School 샘플 데이터베이스 만들기](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="20c09-122">For more information, see [Creating the School Sample Database](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
+1. <span data-ttu-id="2a8b9-122">School 데이터베이스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2a8b9-122">Create the School database.</span></span> <span data-ttu-id="2a8b9-123">자세한 내용은 [School 샘플 데이터베이스 만들기](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="2a8b9-123">For more information, see [Creating the School Sample Database](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
   
-2. <span data-ttu-id="20c09-123">명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="20c09-123">At the command prompt, execute the following command without line breaks:</span></span>  
+2. <span data-ttu-id="2a8b9-124">명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="2a8b9-124">At the command prompt, execute the following command without line breaks:</span></span>  
   
     ```console  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:fullgeneration
@@ -54,10 +55,10 @@ ms.locfileid: "91198186"
     /project:School /entitycontainer:SchoolEntities /namespace:SchoolModel /language:CSharp  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="20c09-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="20c09-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2a8b9-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2a8b9-125">See also</span></span>
 
-- [<span data-ttu-id="20c09-125">모델링 및 매핑</span><span class="sxs-lookup"><span data-stu-id="20c09-125">Modeling and Mapping</span></span>](modeling-and-mapping.md)
-- <span data-ttu-id="20c09-126">[방법: 수동으로 Entity Framework 프로젝트 구성](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="20c09-126">[How to: Manually Configure an Entity Framework Project](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))</span></span>
-- <span data-ttu-id="20c09-127">[방법: 뷰를 미리 생성하여 쿼리 성능 향상](/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="20c09-127">[How to: Pre-Generate Views to Improve Query Performance](/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))</span></span>
-- <span data-ttu-id="20c09-128">[ADO.NET 엔터티 데이터 모델 도구](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="20c09-128">[ADO.NET Entity Data Model Tools](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span></span>
-- [<span data-ttu-id="20c09-129">방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="20c09-129">How to: Use EdmGen.exe to Validate Model and Mapping Files</span></span>](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+- [<span data-ttu-id="2a8b9-126">모델링 및 매핑</span><span class="sxs-lookup"><span data-stu-id="2a8b9-126">Modeling and Mapping</span></span>](modeling-and-mapping.md)
+- <span data-ttu-id="2a8b9-127">[방법: 수동으로 Entity Framework 프로젝트 구성](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="2a8b9-127">[How to: Manually Configure an Entity Framework Project](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))</span></span>
+- <span data-ttu-id="2a8b9-128">[방법: 뷰를 미리 생성하여 쿼리 성능 향상](/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="2a8b9-128">[How to: Pre-Generate Views to Improve Query Performance](/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))</span></span>
+- <span data-ttu-id="2a8b9-129">[ADO.NET 엔터티 데이터 모델 도구](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="2a8b9-129">[ADO.NET Entity Data Model Tools](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span></span>
+- [<span data-ttu-id="2a8b9-130">방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="2a8b9-130">How to: Use EdmGen.exe to Validate Model and Mapping Files</span></span>](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
