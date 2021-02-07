@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataAssemblyEmit 인터페이스'
 title: IMetaDataAssemblyEmit 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 34fb03cc-2285-4a45-ac48-ad993b7a921a
 topic_type:
 - apiref
-ms.openlocfilehash: 5d8bc54a94e1571ff8335c934407bbf235179ecc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bcfca4eedc14f2292c40874d86c4984b4c1948f5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728292"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678213"
 ---
 # <a name="imetadataassemblyemit-interface"></a>IMetaDataAssemblyEmit 인터페이스
 
@@ -52,7 +53,7 @@ ms.locfileid: "95728292"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 인터페이스](metadata-interfaces.md)
 - [IMetaDataAssemblyImport 인터페이스](imetadataassemblyimport-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataAssemblyEmit:: SetAssemblyProps 메서드'
 title: IMetaDataAssemblyEmit::SetAssemblyProps 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 91b633d7-9e75-43c3-a8d2-2144984e5f9e
 topic_type:
 - apiref
-ms.openlocfilehash: 3736e7279056e015b157758b1233cf6dc5aa6d8d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d5dfb5fa472bb83863c8e4909998deeb2b9fc53b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720206"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99678200"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps 메서드
 
@@ -77,6 +78,6 @@ HRESULT SetAssemblyProps (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)

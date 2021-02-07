@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 3308-ClientBaseUsingLocalChannelFactory'
 title: 3308 - ClientBaseUsingLocalChannelFactory
 ms.date: 03/30/2017
 ms.assetid: f1488c75-38ab-47a0-9951-852488683f2a
-ms.openlocfilehash: e408cadf90092b74ae26a7af0e9aff48a34c42e9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3072bac9e58d79196bc18a412487d050867cd892
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279612"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677381"
 ---
 # <a name="3308---clientbaseusinglocalchannelfactory"></a>3308 - ClientBaseUsingLocalChannelFactory
 
@@ -20,7 +21,7 @@ ms.locfileid: "96279612"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 캐시에서 채널 팩터리를 사용하지 않을 때 내보내집니다.  
   
