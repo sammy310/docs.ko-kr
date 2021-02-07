@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 3406-EncryptedDataProcessingSuccess'
 title: 3406 - EncryptedDataProcessingSuccess
 ms.date: 03/30/2017
 ms.assetid: 7065c508-46c4-49ea-a7cf-e038e9246e29
-ms.openlocfilehash: b5cf4190b9de75ec54c7ce6076259fdda69bc424
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3decd94814c2a8ca25a8f0940d60a289aa116407
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254859"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99669893"
 ---
 # <a name="3406---encrypteddataprocessingsuccess"></a>3406 - EncryptedDataProcessingSuccess
 
@@ -20,7 +21,7 @@ ms.locfileid: "96254859"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 암호화된 데이터 처리가 성공한 경우에 내보내집니다.  
   
