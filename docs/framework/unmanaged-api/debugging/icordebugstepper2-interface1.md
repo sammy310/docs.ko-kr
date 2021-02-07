@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugStepper2 인터페이스'
 title: ICorDebugStepper2 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a191c2a-95ea-4d47-83b0-44de2b632d63
 topic_type:
 - apiref
-ms.openlocfilehash: ecbedfbca37a3630fc6d40c173f8a6cd05b4d3fb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 31e9216535da239573a7a4ecde8cb2e670ad5418
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727642"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717552"
 ---
 # <a name="icordebugstepper2-interface"></a>ICorDebugStepper2 인터페이스
 
@@ -46,6 +47,6 @@ ms.locfileid: "95727642"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)

@@ -1,19 +1,20 @@
 ---
+description: '자세히 알아보기: ServiceBehaviorAttribute'
 title: ServiceBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 5faa266f-587f-4e03-828d-1c7dd5acfe65
-ms.openlocfilehash: e3716d42d479bcbdfd900b4fd2e335576a71574b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 57ffa9103523618db752b3be6d43bb16603d1728
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295602"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715576"
 ---
 # <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 
 ServiceBehaviorAttribute  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class ServiceBehaviorAttribute : Behavior  
@@ -99,7 +100,7 @@ class ServiceBehaviorAttribute : Behavior
   
  serialize된 개체에 허용되는 최대 항목 수입니다.  
   
-### <a name="name"></a>이름  
+### <a name="name"></a>Name  
 
  데이터 형식: 문자열  
   

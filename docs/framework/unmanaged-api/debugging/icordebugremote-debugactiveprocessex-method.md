@@ -1,4 +1,5 @@
 ---
+description: ICorDebugRemote::D ebugActiveProcessEx 메서드에 대해 자세히 알아보세요.
 title: ICorDebugRemote::DebugActiveProcessEx 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-ms.openlocfilehash: c9847fd6122aa32c95aecd5643a62a6775ae38d3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ccbde152e59146bd852a5a0a2f991d10333fa9d6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712120"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717903"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx 메서드
 
@@ -51,7 +52,7 @@ HRESULT DebugActiveProcessEx (
  `ppProcess`  
  제한이 디버거가 연결 된 프로세스를 나타내는 "ICorDebugProcess" 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  S_OK  
  원격 컴퓨터의 프로세스에 연결 했습니다.  
@@ -73,7 +74,7 @@ HRESULT DebugActiveProcessEx (
   
  **.NET Framework 버전:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugRemote 인터페이스](icordebugremote-interface.md)
 - [ICorDebug 인터페이스](icordebug-interface.md)

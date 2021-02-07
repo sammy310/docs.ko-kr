@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugStepperEnum 인터페이스'
 title: ICorDebugStepperEnum 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 988718c1-1a4a-40f2-a04c-7d67e5cfe1e2
 topic_type:
 - apiref
-ms.openlocfilehash: facea5cd7f0b0e0e6c0b1049e87a2355f1d3965a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d645b20d54af6898afe00d19029747f9d53cdbe4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697170"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717526"
 ---
 # <a name="icordebugstepperenum-interface"></a>ICorDebugStepperEnum 인터페이스
 
@@ -46,6 +47,6 @@ ICorDebugEnum 메서드를 구현 하 고 ICorDebugStepper 배열을 열거 합�
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)

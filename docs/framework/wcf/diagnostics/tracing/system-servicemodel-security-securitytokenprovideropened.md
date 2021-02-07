@@ -1,19 +1,20 @@
 ---
+description: SecurityTokenProviderOpened에 대해 자세히 알아보세요.
 title: System.ServiceModel.Security.SecurityTokenProviderOpened
 ms.date: 03/30/2017
 ms.assetid: b8222922-35d9-4361-8bc0-d360164a9266
-ms.openlocfilehash: 37cf4125ac2a7ee349fa2b1f32ae3be1f5174f31
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a09f20f3fb1e6ae4364fbb0367143f2c7b3c310e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262413"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715849"
 ---
 # <a name="systemservicemodelsecuritysecuritytokenprovideropened"></a>System.ServiceModel.Security.SecurityTokenProviderOpened
 
 System.ServiceModel.Security.SecurityTokenProviderOpened  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  보안 토큰 공급자가 열렸습니다.  
   

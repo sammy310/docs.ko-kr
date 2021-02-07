@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: CorMarkThreadInThreadPool 함수'
 title: CorMarkThreadInThreadPool 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3f958d41-e82e-4ec3-ae6f-16c7b3b31e3e
 topic_type:
 - apiref
-ms.openlocfilehash: 69508e1ccab2e7aa98f33bf048ccfca5e6f70811
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 68d945870075f2f8c06fe76b7a71e2f806078694
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688018"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716941"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>CorMarkThreadInThreadPool 함수
 
@@ -41,6 +42,6 @@ void CorMarkThreadInThreadPool ();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)

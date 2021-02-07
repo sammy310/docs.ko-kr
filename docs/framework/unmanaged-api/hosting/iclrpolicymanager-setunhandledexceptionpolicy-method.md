@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRPolicyManager:: SetUnhandledExceptionPolicy 메서드'
 title: ICLRPolicyManager::SetUnhandledExceptionPolicy 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5268480e-280a-4931-b7a3-dc3ffdf7f78f
 topic_type:
 - apiref
-ms.openlocfilehash: 1088374c9df18ded38b44384be44de245f0bd403
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 489127bb00b2b65466460baa3cfd31439672cd1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728955"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716551"
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>ICLRPolicyManager::SetUnhandledExceptionPolicy 메서드
 
@@ -39,7 +40,7 @@ HRESULT SetUnhandledExceptionPolicy (
  `policy`  
  진행 동작이 CLR 또는 호스트에 의해 설정 되는지 여부를 나타내는 [EClrUnhandledException](eclrunhandledexception-enumeration.md) 값 중 하나입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -64,7 +65,7 @@ HRESULT SetUnhandledExceptionPolicy (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [EClrUnhandledException 열거형](eclrunhandledexception-enumeration.md)
 - [ICLRControl 인터페이스](iclrcontrol-interface.md)

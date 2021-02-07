@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRAssemblyIdentityManager:: IsStronglyNamed 메서드'
 title: ICLRAssemblyIdentityManager::IsStronglyNamed 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 954bd386-2076-4d00-9d46-38c728aa9cab
 topic_type:
 - apiref
-ms.openlocfilehash: 9ac3b2ae349a696ba0cea1bad3e3484bb1c113fa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f6f1715513fba56e10b10c14c298d3c553fd4652
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679249"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716850"
 ---
 # <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a>ICLRAssemblyIdentityManager::IsStronglyNamed 메서드
 
@@ -43,7 +44,7 @@ RESULT IsStronglyNamed (
  `pbIsStronglyNamed`  
  [out] `true` 매개 변수에서 참조 하는 어셈블리의 `pwzAssemblyIdentity` 이름이 강력한 이름이 면이 고, 그렇지 않으면 `false` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -64,6 +65,6 @@ RESULT IsStronglyNamed (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRAssemblyIdentityManager 인터페이스](iclrassemblyidentitymanager-interface.md)

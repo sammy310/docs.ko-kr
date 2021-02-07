@@ -1,4 +1,5 @@
 ---
+description: _CorImageUnloading 함수에 대해 자세히 알아보세요.
 title: _CorImageUnloading 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4367214-6dac-4280-aa11-fd487ff30bc4
 topic_type:
 - apiref
-ms.openlocfilehash: a8326f95286ef05dd370797a531417f81ed5c65b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fe10c97be66aab21793b1ad306aa5d90eaa1ade2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723157"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716993"
 ---
 # <a name="_corimageunloading-function"></a>_CorImageUnloading 함수
 
@@ -50,6 +51,6 @@ STDAPI (VOID) _CorImageUnloading(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 전역 정적 함수](../metadata/metadata-global-static-functions.md)

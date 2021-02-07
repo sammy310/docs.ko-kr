@@ -1,4 +1,5 @@
 ---
+description: _CorExeMain2 함수에 대해 자세히 알아보세요.
 title: _CorExeMain2 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72ea68b4-689f-4733-9416-9664b75e8892
 topic_type:
 - apiref
-ms.openlocfilehash: a3fb9d87b6433d46dad081619e0692a42219408d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4629ea2f6c2ba13351c409bc382077eea926b507
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673626"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717110"
 ---
 # <a name="_corexemain2-function"></a>_CorExeMain2 함수
 
@@ -64,6 +65,6 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 전역 정적 함수](../metadata/metadata-global-static-functions.md)

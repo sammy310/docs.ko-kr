@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: 서비스'
 title: 서비스
 ms.date: 03/30/2017
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
-ms.openlocfilehash: aa4eecbcc8a2ef818cd99d777b0e3c2f1f222e46
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e66f9a23f8c182327899904c26ff6a6368b9bdc6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96273284"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715628"
 ---
 # <a name="service"></a>서비스
 
 서비스  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class Service  
@@ -97,7 +98,7 @@ class Service
   
  서비스 메타데이터 설정입니다.  
   
-### <a name="name"></a>이름  
+### <a name="name"></a>Name  
 
  데이터 형식: 문자열  
   

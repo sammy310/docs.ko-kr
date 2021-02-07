@@ -1,19 +1,20 @@
 ---
+description: MessageProcessingPaused에 대해 자세히 알아보세요.
 title: System.ServiceModel.MessageProcessingPaused
 ms.date: 03/30/2017
 ms.assetid: 36b5302a-93cc-478a-9bb2-8a1601fba1df
-ms.openlocfilehash: e4c8040d2350e3824b5d68dc6f32376007792a7f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 77e4742bc5617904136b2ddd9cb90fe886d38b10
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96235118"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716182"
 ---
 # <a name="systemservicemodelmessageprocessingpaused"></a>System.ServiceModel.MessageProcessingPaused
 
 System.ServiceModel.MessageProcessingPaused  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  메시지를 처리하는 동안 스레드가 전환되었습니다.  
   

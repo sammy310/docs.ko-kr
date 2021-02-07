@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: 보안 호출이 승인 되지 않음/초'
 title: Security Calls Not Authorized Per Second
 ms.date: 03/30/2017
 ms.assetid: 0f189767-8c05-478a-8f0b-9228e5d351e5
-ms.openlocfilehash: 1e1e58946783c2eb376ae6ba50c3595c037a1e00
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 60e1baf2b1ed1f3dc502608e6667266608010f0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276115"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99716213"
 ---
 # <a name="security-calls-not-authorized-per-second"></a>Security Calls Not Authorized Per Second
 
 카운터 이름: Security Calls Not Authorized Per Second  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 작업에서 권한 부여에 실패한 초당 호출 횟수입니다.  
   

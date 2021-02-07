@@ -1,19 +1,20 @@
 ---
+description: SecurityTokenAuthenticatorOpened에 대해 자세히 알아보세요.
 title: System.ServiceModel.Security.SecurityTokenAuthenticatorOpened
 ms.date: 03/30/2017
 ms.assetid: c6cb0065-b4f6-40eb-89ac-5e8f0e05e0de
-ms.openlocfilehash: eef7c76836c6d8bc2b7964dedbe743bd8ca844c5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 168e4420c152214cccfb0e2949cbf4defc6beadf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96272217"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715888"
 ---
 # <a name="systemservicemodelsecuritysecuritytokenauthenticatoropened"></a>System.ServiceModel.Security.SecurityTokenAuthenticatorOpened
 
 System.ServiceModel.Security.SecurityTokenAuthenticatorOpened  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  보안 토큰 인증자가 열렸습니다.  
   

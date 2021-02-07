@@ -1,4 +1,5 @@
 ---
+description: _CorDllMain 함수에 대해 자세히 알아보세요.
 title: _CorDllMain 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc7b51cf-39d3-48ec-a5cb-2f179fbefff8
 topic_type:
 - apiref
-ms.openlocfilehash: 1b3ebcabc66ee7ca29245bb02d958be311bc65fa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 442afae3a627eb684a86c02fbc6e546aa804b7a5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673698"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99717151"
 ---
 # <a name="_cordllmain-function"></a>\_CorDllMain 함수
 
@@ -46,7 +47,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
  `lpReserved`  
  진행 사용 되지 않는.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드 `true` 는 성공에 대해를 반환 하 고 `false` 오류가 발생 하면를 반환 합니다.  
   
@@ -70,6 +71,6 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 전역 정적 함수](../metadata/metadata-global-static-functions.md)
