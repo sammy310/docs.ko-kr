@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <trace> 요소'
 title: <trace> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 617b42a0be2be272a78b33be997cce632d1c6dcb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 470bc300911656a9c9951e52e3883ba5c8b01c59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198927"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750327"
 ---
 # <a name="trace-element"></a>\<trace> 요소
 
@@ -47,17 +48,17 @@ ms.locfileid: "91198927"
   
 ## <a name="autoflush-attribute"></a>autoflush 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
-|`false`|는 출력 버퍼를 자동으로 플러시하지 않습니다. 이것이 기본값입니다.|  
+|`false`|는 출력 버퍼를 자동으로 플러시하지 않습니다. 기본값입니다.|  
 |`true`|출력 버퍼를 자동으로 플러시합니다.|  
   
 ## <a name="usegloballock-attribute"></a>useGlobalLock 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |`false`|수신기가 스레드로부터 안전 하 게 보호 되는 경우 전역 잠금을 사용 하지 않습니다. 그렇지 않으면 전역 잠금을 사용 합니다.|  
-|`true`|수신기가 스레드로부터 안전한 지 여부에 관계 없이 전역 잠금을 사용 합니다. 이것이 기본값입니다.|  
+|`true`|수신기가 스레드로부터 안전한 지 여부에 관계 없이 전역 잠금을 사용 합니다. 기본값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   

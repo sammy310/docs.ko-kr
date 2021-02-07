@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: <messageSenderAuthentication> 요소'
 title: <messageSenderAuthentication> 요소
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: e7e636571c0dbb1845438c22f7e7509dfc7987f9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 03c1cd626e7c3ad71026c076df3d757419810d74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204790"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749339"
 ---
 # <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication> 요소
 
@@ -48,25 +49,25 @@ ms.locfileid: "91204790"
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 특성  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |String|선택 사항입니다. 형식 이름 및 어셈블리와 형식을 찾는 데 사용되는 기타 데이터를 지정합니다. 적어도 네임스페이스 및 형식 이름이 필요합니다. 선택적 정보로는 어셈블리 이름, 버전 번호, 문화권 및 공개 키 토큰이 있습니다.|  
   
 ## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |열거형|선택 사항입니다. `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom` 값 중 하나입니다. 기본값은 `ChainTrust`입니다. 기본값은 `ChainTrust`입니다.<br /><br /> 자세한 내용은 [Working with Certificates](../../../wcf/feature-details/working-with-certificates.md)합니다.|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |열거형|`NoCheck`, `Online`, `Offline` 값 중 하나입니다. 기본값은 `Online`입니다.<br /><br /> 자세한 내용은 [Working with Certificates](../../../wcf/feature-details/working-with-certificates.md)합니다.|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |열거형|`LocalMachine` 또는 `CurrentUser` 값 중 하나입니다. 기본값은 `CurrentUser`입니다. 시스템 계정으로 클라이언트 애플리케이션을 실행하는 경우 인증서는 대개 `LocalMachine`에 있습니다. 사용자 계정으로 클라이언트 애플리케이션을 실행하는 경우 인증서는 대개 `CurrentUser`에 있습니다. 기본값은 `CurrentUser`입니다.|  
   

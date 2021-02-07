@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: <authentication> <clientCertificate> 요소'
 title: <authentication> of <clientCertificate> 요소
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 13296dbc2b3bc8836770197a1549586c841b4635
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 346e1012fd9d799b093be15381aebbc026ea2591
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201605"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749898"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<authentication> of \<clientCertificate> 요소
 
@@ -44,31 +45,31 @@ ms.locfileid: "91201605"
 |customCertificateValidatorType|선택적 문자열입니다. 사용자 지정 형식의 유효성을 검사하는 데 사용되는 형식 및 어셈블리입니다. 이 특성은 `certificateValidationMode`가 `Custom`으로 설정되어 있을 때 설정해야 합니다.|  
 |certificateValidationMode|선택적 열거형입니다. 자격 증명의 유효성을 검사하는 데 사용되는 모드 중 하나를 지정합니다. 이 특성은 <xref:System.ServiceModel.Security.X509CertificateValidationMode> 형식입니다. <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>으로 설정되면 `customCertificateValidator`도 지정해야 합니다. 기본값은 <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType>입니다.|  
 |includeWindowsGroups|선택적 부울입니다. Windows 그룹이 보안 컨텍스트에 포함될지 여부를 지정합니다. 이 특성을 `true`로 설정하면 전체 그룹이 확장되므로 성능에 영향을 줍니다. 사용자가 속한 그룹의 목록을 설정할 필요가 없으면 이 특성을 `false`로 설정합니다.|  
-|mapClientCertificateToWindowsAccount|Boolean입니다. 클라이언트가 인증서를 사용하여 Windows ID에 매핑될 수 있는지 여부를 지정합니다. 이 작업을 위해서는 Active Directory를 사용할 수 있어야 합니다.|  
+|mapClientCertificateToWindowsAccount|부울. 클라이언트가 인증서를 사용하여 Windows ID에 매핑될 수 있는지 여부를 지정합니다. 이 작업을 위해서는 Active Directory를 사용할 수 있어야 합니다.|  
 |revocationMode|선택적 열거형입니다. RCL(해지된 인증서 목록)을 검사하는 데 사용되는 모드 중 하나입니다. 기본값은 `Online`입니다. 이 값은 HTTP 전송 보안을 사용할 때 무시됩니다.|  
 |trustedStoreLocation|선택적 열거형입니다. 시스템 저장소 위치 `LocalMachine` 또는 `CurrentUser` 중 하나입니다. 서비스 인증서가 클라이언트와 협상될 때 이 값이 사용됩니다. 지정 된 저장소 위치에 있는 **신뢰할 수 있는 사용자** 저장소에 대해 유효성 검사가 수행 됩니다. 기본값은 `CurrentUser`입니다.|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 특성  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |String|형식 이름 및 어셈블리와 형식을 찾는 데 사용되는 기타 데이터를 지정합니다.|  
   
 ## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |열거형|None, PeerTrust, ChainTrust, PeerOrChainTrust, Custom 값 중 하나입니다.<br /><br /> 자세한 내용은 [Working with Certificates](../../../wcf/feature-details/working-with-certificates.md)합니다.|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |열거형|NoCheck, Online, Offline 값 중 하나입니다. 자세한 내용은 [Working with Certificates](../../../wcf/feature-details/working-with-certificates.md)합니다.|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |열거형|`LocalMachine` 또는 `CurrentUser` 값 중 하나입니다. 기본값은 `CurrentUser`입니다. 시스템 계정으로 클라이언트 애플리케이션을 실행하는 경우 인증서는 대개 `LocalMachine`에 있습니다. 사용자 계정으로 클라이언트 애플리케이션을 실행하는 경우 인증서는 대개 `CurrentUser`에 있습니다.|  
   

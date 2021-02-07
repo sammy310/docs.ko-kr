@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <add><serviceActivations>'
 title: <serviceActivations>의 <add>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: a0f68717f765482f53e675458fae63d1a374d6fb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 53c89321c8cde1966a04870c62fa0777610ff547
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850323"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750145"
 ---
 # <a name="add-of-serviceactivations"></a>\<serviceActivations>의 \<add>
 
@@ -36,10 +37,10 @@ WCF (Windows Communication Foundation) 서비스 형식에 매핑되는 가상 �
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |공장|서비스 활성화 요소를 생성하는 팩터리의 CLR 형식 이름을 지정하는 문자열입니다.|
-|서비스|서비스를 구현하는 ServiceType입니다(App_Code 폴더에 있는 경우 정규화된 Typename 또는 짧은 Typename).|
+|service|서비스를 구현하는 ServiceType입니다(App_Code 폴더에 있는 경우 정규화된 Typename 또는 짧은 Typename).|
 |relativeAddress|현재 IIS 애플리케이션 내에서의 상대 주소입니다(예: &quot;Service.svc&quot;). WCF 4.0에서이 상대 주소는 알려진 파일 확장명 (.svc,. .xamlx, ...) 중 하나를 포함 해야 합니다. RelativeUrl에 대 한 물리적 파일이 존재 하지 않습니다.|
 
 ### <a name="child-elements"></a>자식 요소
@@ -48,7 +49,7 @@ WCF (Windows Communication Foundation) 서비스 형식에 매핑되는 가상 �
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<serviceHostingEnvironment>](servicehostingenvironment.md)|활성화 설정을 설명하는 구성 섹션입니다.|
 

@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: <add> WCF'
 title: <add> WCF의
 ms.date: 03/30/2017
 ms.assetid: c196f6d7-77f6-4266-973c-305b2b4dd8a2
-ms.openlocfilehash: b3b2883e711cea036ed8a61631e698a9d41fcadd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4fa9985ea101cc020f4fd9796f0874aff8b60720
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172933"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750041"
 ---
 # <a name="add-of-wcf"></a>\<add> WCF의
 
@@ -39,7 +40,7 @@ ms.locfileid: "91172933"
   
 ### <a name="attributes"></a>특성  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |name|추적 참가자의 이름을 지정하는 문자열입니다.|  
 |profileName|추적 참가자가 구독하는 추적 레코드를 정의하는 추적 프로필의 이름을 지정하는 문자열입니다.|  

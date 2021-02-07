@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <dispatcherSynchronization>
 title: <dispatcherSynchronization>
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
-ms.openlocfilehash: b95f25217c2a3558846cc7a0ef43e21aacd2ee2a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 93664dec3648ed58df7e3e5c0760f1694c60ba7e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398010"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749606"
 ---
 # \<dispatcherSynchronization>
   
@@ -20,7 +21,7 @@ ms.locfileid: "70398010"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dispatcherSynchronization>**  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <dispatcherSynchronizationBehavior asynchronousSendEnabled="Boolean"
@@ -37,7 +38,7 @@ ms.locfileid: "70398010"
   
 ### <a name="attributes"></a>특성
 
-| attribute               | Description       |
+| attribute               | 설명       |
 | ----------------------- | ----------------- |
 | asynchronousSendEnabled | 비동기 보내기 동작 사용 여부를 나타내는 부울입니다. |
 | `maxPendingReceives`    | 채널에서 발급할 수 있는 동시 수신의 수를 지정하는 정수입니다.<br /><br /> 이 값은 서비스 스로틀 동작을 제대로 구성한 후에 구성해야 합니다. |
@@ -48,7 +49,7 @@ ms.locfileid: "70398010"
 
 ### <a name="parent-elements"></a>부모 요소
 
-| 요소 | Description |  
+| 요소 | 설명 |  
 | ------- | ----------- |  
 | [\<behavior>](behavior-of-endpointbehaviors.md)|엔드포인트 동작을 지정합니다. |
 

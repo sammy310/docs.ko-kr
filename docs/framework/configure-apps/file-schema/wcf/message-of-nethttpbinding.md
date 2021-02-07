@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <message><netHttpBinding>'
 title: <netHttpBinding>의 <message>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: b37d6b1bd8f5372c230acbc2ada299415b2e40b3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 508e58e58dbb298081a075588ddda87289c1a3d1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204855"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749618"
 ---
 # <a name="message-of-nethttpbinding"></a>\<netHttpBinding>의 \<message>
 
@@ -41,7 +42,7 @@ ms.locfileid: "91204855"
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 특성  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |UserName|-사용자 이름 자격 증명을 사용 하 여 서버에 대해 클라이언트를 인증 해야 합니다. 이 자격 증명은 <> 요소를 사용 하 여 지정 해야 `clientCredentials` 합니다.<br />-WCF는 암호 다이제스트를 보내거나 암호를 사용 하 여 키를 파생 하 고 메시지 보안에 이러한 키를 사용 하는 것을 지원 하지 않습니다. 따라서 WCF는 사용자 이름 자격 증명을 사용할 때 전송에 보안을 적용 합니다. `basicHttpBinding`의 경우 SSL 채널을 설정해야 합니다.|  
 |인증서|클라이언트가 인증서를 사용하여 서버의 인증을 받도록 요구합니다. 이 경우 <`clientCredentials`> 및 <>를 사용 하 여 클라이언트 자격 증명을 지정 해야 합니다 `clientCertificate` . 또한 메시지 보안 모드를 사용하는 경우 서비스 인증서를 사용하여 클라이언트를 구축해야 합니다. 이 경우 클래스 또는 동작 요소를 사용 하 여 서비스 자격 증명을 지정 하 <xref:System.ServiceModel.Description.ClientCredentials> `ClientCredentials` 고 \<serviceCertificate> serviceCredentials의 요소를 사용 하 여 서비스 인증서를 지정 해야 합니다.|  
@@ -127,7 +128,7 @@ ms.locfileid: "91204855"
 ## <a name="see-also"></a>참고 항목
 
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

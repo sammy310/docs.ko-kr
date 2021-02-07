@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <message><ws2007HttpBinding>'
 title: <ws2007HttpBinding>의 <message>
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: 0979bd1c74061bb13a240bb46e1a37cd7ea1129c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f36e4447debe6fc55740a77a5fd1057378c6afc6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204842"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749573"
 ---
 # <a name="message-of-ws2007httpbinding"></a>\<ws2007HttpBinding>의 \<message>
 
@@ -21,7 +22,7 @@ ms.locfileid: "91204842"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-ws2007httpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<message>**  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <ws2007HttpBinding>
@@ -37,7 +38,7 @@ ms.locfileid: "91204842"
 </ws2007HttpBinding>
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
 
  <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
   
@@ -56,7 +57,7 @@ ms.locfileid: "91204842"
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |Basic128|Aes128 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.|  
 |Basic192|Aes192 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.|  
@@ -77,7 +78,7 @@ ms.locfileid: "91204842"
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |`None`|이를 통해 서비스와 익명 클라이언트가 상호 작용할 수 있습니다. 서비스 쪽에서는 서비스가 클라이언트 자격 증명을 요구하지 않음을 의미하고 클라이언트 쪽에서는 클라이언트가 클라이언트 자격 증명을 제공하지 않음을 의미합니다.|  
 |`Certificate`|서비스에서 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다. `message` 보안 모드가 사용되고 `negotiateServiceCredential` 특성이 `false`로 설정되면 서비스 인증서를 사용하여 클라이언트를 구축해야 합니다.|  
@@ -102,7 +103,7 @@ ms.locfileid: "91204842"
 - <xref:System.ServiceModel.WSHttpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement>
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

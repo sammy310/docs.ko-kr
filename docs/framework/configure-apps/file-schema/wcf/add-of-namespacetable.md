@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <add><namespaceTable>'
 title: <namespaceTable>의 <add>
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: 7d055d4933f1ad625d6842f91a140f668c05c64e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b7804bdec4a1fb2199c81ba0dde031b80b451d2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204998"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750262"
 ---
 # <a name="add-of-namespacetable"></a>\<namespaceTable>의 \<add>
 
@@ -38,7 +39,7 @@ ms.locfileid: "91204998"
   
 |attribute|설명|  
 |---------------|-----------------|  
-|namespace|네임스페이스를 포함하는 문자열입니다.|  
+|네임스페이스|네임스페이스를 포함하는 문자열입니다.|  
 |접두사|이 네임스페이스에 대한 접두사를 포함하는 문자열입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  

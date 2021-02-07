@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: <authentication> <serviceCertificate> 요소'
 title: <authentication> of <serviceCertificate> 요소
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: c6f2578d85971740e5bd3d75151305a475187492
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35a94f4f9c089f86aef38e7e9a1115a7cd22a325
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201592"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749885"
 ---
 # <a name="authentication-of-servicecertificate-element"></a>\<authentication> of \<serviceCertificate> 요소
 
@@ -39,32 +40,32 @@ SSL/TLS 협상을 사용하여 가져온 서비스 인증서를 인증하기 위
   
 |attribute|설명|  
 |---------------|-----------------|  
-|customCertificateValidatorType|문자열. 사용자 지정 형식의 유효성을 검사하는 데 사용되는 형식 및 어셈블리입니다.|  
+|customCertificateValidatorType|문자열입니다. 사용자 지정 형식의 유효성을 검사하는 데 사용되는 형식 및 어셈블리입니다.|  
 |certificateValidationMode|자격 증명의 유효성을 검사하는 데 사용되는 세 가지 모드 중 하나를 지정합니다. `Custom`으로 설정되면 customCertificateValidator도 지정해야 합니다. 기본값은 `ChainTrust`입니다.|  
 |revocationMode|CRL(해지된 인증서 목록)을 검사하는 데 사용되는 모드 중 하나입니다. 기본값은 `Online`입니다.|  
 |trustedStoreLocation|시스템 저장소 위치 `LocalMachine` 또는 `CurrentUser` 중 하나입니다. 서비스 인증서가 클라이언트와 협상될 때 이 값이 사용됩니다. 지정 된 저장소 위치에 있는 **신뢰할 수 있는 사용자** 저장소에 대해 유효성 검사가 수행 됩니다. 기본값은 `CurrentUser`입니다.|  
   
 ## <a name="customcertificatevalidator-attribute"></a>customCertificateValidator 특성  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |String|형식 이름 및 어셈블리와 형식을 찾는 데 사용되는 기타 데이터를 지정합니다.|  
   
 ## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |열거형|None, PeerTrust, ChainTrust, PeerOrChainTrust, Custom 값 중 하나입니다.<br /><br /> 자세한 내용은 [Working with Certificates](../../../wcf/feature-details/working-with-certificates.md)합니다.|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |열거형|NoCheck, Online, Offline 값 중 하나입니다.<br /><br /> 자세한 내용은 [Working with Certificates](../../../wcf/feature-details/working-with-certificates.md)합니다.|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |열거형|LocalMachine 또는 CurrentUser 값 중 하나입니다. 기본값은 CurrentUser입니다. 시스템 계정으로 클라이언트 애플리케이션을 실행하는 경우 인증서는 대개 LocalMachine에 있습니다. 사용자 계정으로 클라이언트 애플리케이션을 실행하는 경우 인증서는 대개 CurrentUser에 있습니다.|  
   

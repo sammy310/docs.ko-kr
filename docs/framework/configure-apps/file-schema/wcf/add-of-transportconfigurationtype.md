@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <add><transportConfigurationType>'
 title: <transportConfigurationType>의 <add>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: 9bef44ed39ee892080342058206f779b38fb460d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4a4a68e1f70bcb2ec7d55d5d6c3b530e71ddc55d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151157"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750015"
 ---
 # <a name="add-of-transportconfigurationtype"></a>\<transportConfigurationType>의 \<add>
 
@@ -36,7 +37,7 @@ ms.locfileid: "91151157"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |name|필수 문자열 특성입니다.<br /><br /> 전송 형식을 고유하게 식별하는 사용자 정의 키를 포함합니다.|  
 |transportConfigurationType|특정 전송을 구현하는 형식을 포함하는 문자열입니다.|  

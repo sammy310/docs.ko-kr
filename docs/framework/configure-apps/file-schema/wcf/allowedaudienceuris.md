@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <allowedAudienceUris>
 title: <allowedAudienceUris>
 ms.date: 03/30/2017
 ms.assetid: 0f4dc73d-d95d-4193-9755-7df4cf2b8e1c
-ms.openlocfilehash: 602e25240ddbd337543efa8c4097d4da9e5c25e9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d556a9dcb71222ff52f38e43ad2608e1046e1a60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201631"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749976"
 ---
 # \<allowedAudienceUris>
 

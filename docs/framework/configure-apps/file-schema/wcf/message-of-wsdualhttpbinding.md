@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <message><wsDualHttpBinding>'
 title: <wsDualHttpBinding>의 <message>
 ms.date: 03/30/2017
 ms.assetid: 75101744-eed8-4d61-91f4-5fc4473a21f2
-ms.openlocfilehash: 41cd555fb60cf42819b21a23456802acbe8dab1b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7924d29235b17fa9de61293d031ebb05d49a2cc1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204820"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749560"
 ---
 # <a name="message-of-wsdualhttpbinding"></a>\<wsDualHttpBinding>의 \<message>
 
@@ -21,7 +22,7 @@ ms.locfileid: "91204820"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-wsdualhttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<message>**  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <message clientCredentialType="None/Windows/UserName/Certificate/CardSpace"
@@ -30,7 +31,7 @@ ms.locfileid: "91204820"
 </message>
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
 
  <xref:System.ServiceModel.MessageSecurityOverHttp>  
   
@@ -48,7 +49,7 @@ ms.locfileid: "91204820"
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |Basic128|Aes128 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.|  
 |Basic192|Aes192 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.|  
@@ -69,7 +70,7 @@ ms.locfileid: "91204820"
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |없음|이를 통해 서비스와 익명 클라이언트가 상호 작용할 수 있습니다. 서비스 쪽에서는 서비스가 클라이언트 자격 증명을 요구하지 않음을 의미하고 클라이언트 쪽에서는 클라이언트가 클라이언트 자격 증명을 제공하지 않음을 의미합니다.|  
 |Windows|Windows 자격 증명의 인증된 컨텍스트에서 SOAP 교환을 수행할 수 있습니다. `negotiateServiceCredential` 특성이 `true`로 설정되면 SSPI 협상 또는 Kerberos(상호 운용 가능 표준)가 수행됩니다.|  
@@ -94,7 +95,7 @@ ms.locfileid: "91204820"
 - <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>
 - <xref:System.ServiceModel.MessageSecurityOverHttp>
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

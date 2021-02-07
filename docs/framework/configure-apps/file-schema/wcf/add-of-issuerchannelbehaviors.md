@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <add><issuerChannelBehaviors>'
 title: <issuerChannelBehaviors>의 <add>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: cf7ac2691ad1c641352a8047373ced538b19e983
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ccd8ba015b7a6837c74ce2c051a794d36ce8ceaa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398328"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750301"
 ---
 # <a name="add-of-issuerchannelbehaviors"></a>\<issuerChannelBehaviors>의 \<add>
 
@@ -39,7 +40,7 @@ STS와 통신할 때 사용할 엔드포인트 동작을 추가합니다.
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |issuerAddress|통신할 보안 토큰 발급자의 URI입니다.|
 |behaviorConfiguration|동일한 구성 파일에 정의된 엔드포인트 동작 이름입니다.|
@@ -50,13 +51,13 @@ STS와 통신할 때 사용할 엔드포인트 동작을 추가합니다.
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|지정 된 서비스 토큰 서비스와 통신할 때 사용할 WCF (Windows Communication Foundation) 클라이언트 끝점 동작의 컬렉션을 포함 합니다.|
 
 ## <a name="remarks"></a>설명
 
-`issuerAddress`는 클라이언트가 통신하려는 보안 토큰 서비스의 URI를 포함합니다. `behaviorConfiguration`응용 프로그램이 보안 토큰 서비스에서 발급 된 토큰을 가져오기 위해 Windows Communication Foundation (WCF)에서 만든 채널에서 사용 하는 끝점 동작을 가리킵니다.
+`issuerAddress`는 클라이언트가 통신하려는 보안 토큰 서비스의 URI를 포함합니다. `behaviorConfiguration` 응용 프로그램이 보안 토큰 서비스에서 발급 된 토큰을 가져오기 위해 Windows Communication Foundation (WCF)에서 만든 채널에서 사용 하는 끝점 동작을 가리킵니다.
 
 ## <a name="see-also"></a>참고 항목
 

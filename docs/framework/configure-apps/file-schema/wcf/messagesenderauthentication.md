@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <messageSenderAuthentication>
 title: <messageSenderAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ea62fc06-55fb-42e0-aa2b-8867bdf4b415
-ms.openlocfilehash: e7888d01838312aa51397ca39133edb9318fac80
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e98388eafce24b0f19647364b6bbec94ee6ba135
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204777"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749325"
 ---
 # \<messageSenderAuthentication>
 

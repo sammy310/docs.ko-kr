@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <transport><wsHttpBinding>'
 title: <wsHttpBinding>의 <transport>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: 1afeed62fcbf3b083d69a7cedb7eb80b81f5c17b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7801148d76aaa9c074eeb7a83c1dd2fa152d871c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732743"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749300"
 ---
 # <a name="transport-of-wshttpbinding"></a>\<wsHttpBinding>의 \<transport>
 
@@ -21,7 +22,7 @@ HTTP 전송의 인증 설정을 정의합니다.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-wshttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```xml
 <wsHttpBinding>
@@ -51,7 +52,7 @@ HTTP 전송의 인증 설정을 정의합니다.
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`clientCredentialType`|클라이언트를 서비스에 인증할 때 사용되는 자격 증명을 지정합니다. 이 특성은 <xref:System.ServiceModel.HttpClientCredentialType> 형식입니다.|
 |`proxyCredentialType`|클라이언트를 도메인 프록시에 인증할 때 사용되는 자격 증명을 지정합니다. 이 특성은 <xref:System.ServiceModel.HttpProxyCredentialType> 형식입니다.|
@@ -60,7 +61,7 @@ HTTP 전송의 인증 설정을 정의합니다.
 
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 특성
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |`None`|보안이 해제되어 있습니다.|
 |`Basic`|기본 인증을 사용합니다.|
@@ -71,7 +72,7 @@ HTTP 전송의 인증 설정을 정의합니다.
 
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 특성
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |`None`|보안이 해제되어 있습니다.|
 |`Basic`|기본 인증을 사용합니다.|
@@ -86,7 +87,7 @@ HTTP 전송의 인증 설정을 정의합니다.
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<security>](security-of-wshttpbinding.md)|의 보안 기능을 나타냅니다 [\<wsHttpBinding>](wshttpbinding.md) .|
 

@@ -1,12 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. @ServiceHost
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: cb425d9f4dadd97e93946a2b4cd9d059ea8504ce
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: d16fda68bdc753121f02f6332dabedf236fac257
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051365"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99750314"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 
@@ -32,15 +34,15 @@ CodeBehind = "CodeBehind"
 
 ### <a name="factory"></a>Factory
 
-서비스 호스트를 인스턴스화하는 데 사용되는 서비스 호스트 팩터리의 CLR 형식 이름입니다. 이 특성은 선택적 요소입니다. 지정되지 않은 경우 <xref:System.ServiceModel.Activation.ServiceHostFactory>의 인스턴스를 반환하는 <xref:System.ServiceModel.ServiceHost> 기본값이 사용됩니다.
+서비스 호스트를 인스턴스화하는 데 사용되는 서비스 호스트 팩터리의 CLR 형식 이름입니다. 이 특성은 선택 사항입니다. 지정되지 않은 경우 <xref:System.ServiceModel.Activation.ServiceHostFactory>의 인스턴스를 반환하는 <xref:System.ServiceModel.ServiceHost> 기본값이 사용됩니다.
 
 ### <a name="debug"></a>디버그
 
-디버그 기호를 사용 하 여 WCF (Windows Communication Foundation) 서비스를 컴파일해야 하는지 여부를 나타냅니다. `true`디버그 기호를 사용 하 여 WCF 서비스를 컴파일해야 하면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false` 입니다.
+디버그 기호를 사용 하 여 WCF (Windows Communication Foundation) 서비스를 컴파일해야 하는지 여부를 나타냅니다. `true` 디버그 기호를 사용 하 여 WCF 서비스를 컴파일해야 하면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false` 입니다.
 
 ### <a name="language"></a>언어
 
-파일(.svc) 내의 인라인 코드를 모두 컴파일할 때 사용되는 언어를 지정합니다. 값은 any를 나타낼 수 있습니다. , 및를 포함 하 여 `C#` `VB` `JS` c #, Visual Basic 및 JScript .net을 각각 참조 하는 NET 지원 언어. 이 특성은 선택적 요소입니다.
+파일(.svc) 내의 인라인 코드를 모두 컴파일할 때 사용되는 언어를 지정합니다. 값은 any를 나타낼 수 있습니다. , 및를 포함 하 여 `C#` `VB` `JS` c #, Visual Basic 및 JScript .net을 각각 참조 하는 NET 지원 언어. 이 특성은 선택 사항입니다.
 
 ### <a name="codebehind"></a>CodeBehind
 
@@ -71,6 +73,6 @@ Factory="WebScriptServiceHostFactory"
 %>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [사용자 지정 서비스 호스트](../../../wcf/samples/custom-service-host.md)
