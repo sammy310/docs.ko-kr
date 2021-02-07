@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugVariableHome:: GetArgumentIndex 메서드'
 title: 'ICorDebugVariableHome:: GetArgumentIndex 메서드'
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e86fcc72-388d-4009-ab21-8f9c3323e9a3
 topic_type:
 - apiref
-ms.openlocfilehash: 27a676fd1d2d7903943e44f8a7201b88af4fba89
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 827ef55d3e3509cbfbfc8213ef5b53fbe2e2220e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397000"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690043"
 ---
 # <a name="icordebugvariablehomegetargumentindex-method"></a>ICorDebugVariableHome:: GetArgumentIndex 메서드
 
@@ -39,11 +40,11 @@ HRESULT GetArgumentIndex(
 `pArgumentIndex`\
 제한이 인수 인덱스에 대 한 포인터입니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 메서드는 다음 값을 반환 합니다.
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |`S_OK`|메서드 호출에서 유효한 인수 인덱스를 반환 했습니다.|
 |`E_FAIL`|현재 [ICorDebugVariableHome](icordebugvariablehome-interface.md) 인스턴스는 지역 변수를 나타냅니다.|
@@ -62,6 +63,6 @@ HRESULT GetArgumentIndex(
 
 **.NET Framework 버전:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugVariableHome 인터페이스](icordebugvariablehome-interface.md)

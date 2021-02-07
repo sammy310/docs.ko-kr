@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataImport2:: GetGenericParamConstraintProps 메서드'
 title: IMetaDataImport2::GetGenericParamConstraintProps 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c5fee4a0-b132-4e5e-8730-e586ce314b9a
 topic_type:
 - apiref
-ms.openlocfilehash: 8beaea0b7493b7cea76466bb15355cfc5c6d5c7d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 03cc4df655f9ab7a1c04840e9d4fa782a90ce1ff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702708"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688743"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>IMetaDataImport2::GetGenericParamConstraintProps 메서드
 
@@ -57,7 +58,7 @@ HRESULT GetGenericParamConstraintProps (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedBinder2 인터페이스'
 title: ISymUnmanagedBinder2 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a59f405-73e8-4434-8bcc-a9dc45ea08e6
 topic_type:
 - apiref
-ms.openlocfilehash: c5a43f6c277f582f9f14cefe5bfba6f5300c09d8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 73847cdc9366ec18974fac261cbbad4d7dc6ccc6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727356"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689887"
 ---
 # <a name="isymunmanagedbinder2-interface"></a>ISymUnmanagedBinder2 인터페이스
 
@@ -38,7 +39,7 @@ ms.locfileid: "95727356"
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedBinder 인터페이스](isymunmanagedbinder-interface.md)

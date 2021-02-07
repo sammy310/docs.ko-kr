@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedBinder2:: GetReaderForFile2 메서드'
 title: ISymUnmanagedBinder2::GetReaderForFile2 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd92dcaf-403c-464d-a254-21594985dddd
 topic_type:
 - apiref
-ms.openlocfilehash: e0fc6cf2a08de4a00cb8b7f98d3922df98f427c5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c1a180ceec07c3087150613365acfce646adc34e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706972"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689939"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>ISymUnmanagedBinder2::GetReaderForFile2 메서드
 
@@ -56,7 +57,7 @@ HRESULT GetReaderForFile2(
  `pRetVal`  
  제한이 반환 된 [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface로 설정 된 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -68,7 +69,7 @@ HRESULT GetReaderForFile2(
 
  이 버전의 메서드는 모듈 바로 옆의 영역에서 PDB 파일을 검색할 수 있습니다. [Corsymsearchpolicyattributes](corsymsearchpolicyattributes-enumeration.md)를 결합 하 여 검색 정책을 제어할 수 있습니다. 예를 들어은 `AllowReferencePathAccess | AllowSymbolServerAccess` 실행 파일 및 기호 서버 옆에 있는 PDB를 찾지만 레지스트리를 쿼리하거나 실행 파일의 경로를 사용 하지 않습니다. `searchPath`매개 변수가 제공 되는 경우 해당 디렉터리는 항상 검색 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedBinder2 인터페이스](isymunmanagedbinder2-interface.md)
 - [GetReaderForFile 메서드](isymunmanagedbinder-getreaderforfile-method.md)

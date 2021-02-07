@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRMetaHost:: ExitProcess 메서드'
 title: ICLRMetaHost::ExitProcess 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4df98cc-4e4e-407b-b8f4-e0076afef3a4
 topic_type:
 - apiref
-ms.openlocfilehash: 6d601ac3ece801353b630c74ed852c2657f25d7f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3bc832538a5ad2b457de758fc35a632b09c02974
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730465"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689159"
 ---
 # <a name="iclrmetahostexitprocess-method"></a>ICLRMetaHost::ExitProcess 메서드
 
@@ -38,7 +39,7 @@ HRESULT ExitProcess (
  `iExitCode`  
  진행 프로세스의 종료 코드입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는를 반환 하지 않으므로 반환 값이 정의 되지 않습니다.  
   
@@ -54,7 +55,7 @@ HRESULT ExitProcess (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRMetaHost 인터페이스](iclrmetahost-interface.md)
 - [호스팅](index.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRErrorReportingManager:: GetBucketParametersForCurrentException 메서드'
 title: ICLRErrorReportingManager::GetBucketParametersForCurrentException 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a13ec8a6-8e18-4acb-8054-77f5b1a0e0b9
 topic_type:
 - apiref
-ms.openlocfilehash: 33927cc0e3a3cdaad70d437f9dd5ca5dfdcdc46b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ba2b6cf1215e5d57f608a76a870b0a9c846ee8ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673563"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689406"
 ---
 # <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a>ICLRErrorReportingManager::GetBucketParametersForCurrentException 메서드
 
@@ -51,6 +52,6 @@ HRESULT GetBucketParametersForCurrentException(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRErrorReportingManager 인터페이스](iclrerrorreportingmanager-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRMetaHost:: EnumerateInstalledRuntimes 메서드'
 title: ICLRMetaHost::EnumerateInstalledRuntimes 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e359384-0d3d-451c-807e-5d7fcebf2be7
 topic_type:
 - apiref
-ms.openlocfilehash: f8f67edde7f99878429ca0bbd89aaf52336aa79c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a1c2fe46a64339e013df0f65dc073d183036a0fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730450"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689198"
 ---
 # <a name="iclrmetahostenumerateinstalledruntimes-method"></a>ICLRMetaHost::EnumerateInstalledRuntimes 메서드
 
@@ -38,7 +39,7 @@ HRESULT EnumerateInstalledRuntimes (
  `ppEnumerator`  
  제한이 컴퓨터에 설치 된 각 CLR 버전에 해당 하는 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 인터페이스의 열거형입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -57,7 +58,7 @@ HRESULT EnumerateInstalledRuntimes (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRMetaHost 인터페이스](iclrmetahost-interface.md)
 - [호스팅](index.md)

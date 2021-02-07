@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRAssemblyIdentityManager:: GetBindingIdentityFromFile 메서드'
 title: ICLRAssemblyIdentityManager::GetBindingIdentityFromFile 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7797562d-7b4c-4bd9-8b93-f35e0e2869e4
 topic_type:
 - apiref
-ms.openlocfilehash: 443acfa77dc8103008263f19bed116d02e7ea676
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 82e72155b38f71fe2c024994f07178638095be9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716743"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689550"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromFile 메서드
 
@@ -51,7 +52,7 @@ HRESULT GetBindingIdentityFromFile(
  `pcchBufferSize`  
  [in, out] 의 크기에 대 한 포인터입니다 `pwzBuffer` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -78,7 +79,7 @@ HRESULT GetBindingIdentityFromFile(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRAssemblyIdentityManager 인터페이스](iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList 인터페이스](iclrassemblyreferencelist-interface.md)

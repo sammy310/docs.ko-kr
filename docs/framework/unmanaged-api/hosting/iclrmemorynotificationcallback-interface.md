@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRMemoryNotificationCallback 인터페이스'
 title: ICLRMemoryNotificationCallback 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 873639e2-4837-4568-83b3-4493e67e4174
 topic_type:
 - apiref
-ms.openlocfilehash: 5762a354bec485cb382b5460dfd2a337f79bee1a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 46e53cdf0b7f797b8945237d47fc3b521b08ddb7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689539"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689228"
 ---
 # <a name="iclrmemorynotificationcallback-interface"></a>ICLRMemoryNotificationCallback 인터페이스
 
@@ -45,7 +46,7 @@ ms.locfileid: "95689539"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IHostMemoryManager 인터페이스](ihostmemorymanager-interface.md)
 - [호스팅 인터페이스](hosting-interfaces.md)

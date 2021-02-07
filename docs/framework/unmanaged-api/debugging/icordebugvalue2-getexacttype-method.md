@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugValue2:: GetExactType 메서드'
 title: ICorDebugValue2::GetExactType 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8e9aae1b-d1b7-4b6e-b577-6faf36dcec85
 topic_type:
 - apiref
-ms.openlocfilehash: cb5bec66ab02de248109d8aaf444a93e67c2c6d2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d0ef08b119106ced89ec2094b5bf67d0c874b6bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720362"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690308"
 ---
 # <a name="icordebugvalue2getexacttype-method"></a>ICorDebugValue2::GetExactType 메서드
 
@@ -53,4 +54,4 @@ HRESULT GetExactType (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목

@@ -1,13 +1,14 @@
 ---
+description: ICorDebugProcess6::P rocessStateChanged 메서드에 대해 자세히 알아보세요.
 title: ICorDebugProcess6::ProcessStateChanged 메서드
 ms.date: 03/30/2017
 ms.assetid: fb6d30d9-54f3-462b-8ebf-ce0440791ad5
-ms.openlocfilehash: 006c81e0339a00aac14fb4f83f2bc140990bd546
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8060c29598adf5d4bbe7bffb4cd6611ee19a2669
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732582"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691369"
 ---
 # <a name="icordebugprocess6processstatechanged-method"></a>ICorDebugProcess6::ProcessStateChanged 메서드
 
@@ -41,7 +42,7 @@ HRESULT ProcessStateChanged(   [in] CorDebugStateChange change);
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugProcess6 인터페이스](icordebugprocess6-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

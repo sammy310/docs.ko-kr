@@ -1,4 +1,5 @@
 ---
+description: ICorDebugUnmanagedCallback::D ebugEvent 메서드에 대해 자세히 알아보세요.
 title: ICorDebugUnmanagedCallback::DebugEvent 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: be9cab04-65ec-44d5-a39a-f90709fdd043
 topic_type:
 - apiref
-ms.openlocfilehash: 75341b1af034972c861b75f29a06eaa2c4e33c3a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fcd7bc3b380add7465473cb01585eb1656d00aad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703039"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690576"
 ---
 # <a name="icordebugunmanagedcallbackdebugevent-method"></a>ICorDebugUnmanagedCallback::DebugEvent 메서드
 
@@ -63,6 +64,6 @@ HRESULT DebugEvent (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugUnmanagedCallback 인터페이스](icordebugunmanagedcallback-interface.md)

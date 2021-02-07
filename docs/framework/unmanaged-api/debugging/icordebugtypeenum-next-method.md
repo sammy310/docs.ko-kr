@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugTypeEnum:: Next 메서드'
 title: ICorDebugTypeEnum::Next 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0fdeba3-c195-4ece-8caf-79b1f40025d2
 topic_type:
 - apiref
-ms.openlocfilehash: 78ea76033b0b83c84446e16fb330bd3ba34c6e21
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9260f5f2d1a2d6943a705f7e7ef1ead3d2924cdc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725705"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690589"
 ---
 # <a name="icordebugtypeenumnext-method"></a>ICorDebugTypeEnum::Next 메서드
 
@@ -58,4 +59,4 @@ HRESULT Next (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목

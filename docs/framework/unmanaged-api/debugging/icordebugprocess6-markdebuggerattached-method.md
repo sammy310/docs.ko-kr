@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugProcess6:: MarkDebuggerAttached 메서드'
 title: ICorDebugProcess6::MarkDebuggerAttached 메서드
 ms.date: 03/30/2017
 ms.assetid: bf94f090-5265-4112-8e57-5b4e20e070d0
-ms.openlocfilehash: c6543a89a375d4a2887dbe8cff56d66a15650811
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: adbe16049cea73ca5e797f7758a17902b33645c5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732595"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691382"
 ---
 # <a name="icordebugprocess6markdebuggerattached-method"></a>ICorDebugProcess6::MarkDebuggerAttached 메서드
 
@@ -26,7 +27,7 @@ HRESULT MarkDebuggerAttached(
  `fIsAttached`  
  `true` 메서드가 디버거가 연결되어 있음을 나타내야 하는 경우 <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType>이고, 그러지 않으면 `false`입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음 표에 나와 있는 값을 반환할 수 있습니다.  
   
@@ -51,7 +52,7 @@ HRESULT MarkDebuggerAttached(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugProcess6 인터페이스](icordebugprocess6-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

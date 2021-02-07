@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugValueEnum 인터페이스'
 title: ICorDebugValueEnum 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88989482-a09f-4bd0-9adb-16f47b0291fd
 topic_type:
 - apiref
-ms.openlocfilehash: e3934cbce76df3997fa07d8fa3a99bd8ddab09a2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bbc9ee8d8db570c8cb45abf7d47360349820225d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684345"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690121"
 ---
 # <a name="icordebugvalueenum-interface"></a>ICorDebugValueEnum 인터페이스
 
@@ -46,6 +47,6 @@ ms.locfileid: "95684345"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)

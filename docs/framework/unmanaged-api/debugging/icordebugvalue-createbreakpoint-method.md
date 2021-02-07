@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: ICorDebugValue:: CreateBreakpoint 메서드'
 title: ICorDebugValue::CreateBreakpoint 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87af9661-b59d-4077-aabf-d59fb8673602
 topic_type:
 - apiref
-ms.openlocfilehash: 5944d7f39d327c2787c517aeebdb302834551b59
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 98009fdb69a37780e6d6f85f58451f185bded46c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731152"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690498"
 ---
 # <a name="icordebugvaluecreatebreakpoint-method"></a>ICorDebugValue::CreateBreakpoint 메서드
 
@@ -44,4 +45,4 @@ HRESULT CreateBreakpoint (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목

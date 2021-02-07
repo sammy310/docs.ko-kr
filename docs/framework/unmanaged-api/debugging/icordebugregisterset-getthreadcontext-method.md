@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugRegisterSet:: GetThreadContext 메서드'
 title: ICorDebugRegisterSet::GetThreadContext 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f63400b-dc1c-48d6-b51a-75c3f7f28e03
 topic_type:
 - apiref
-ms.openlocfilehash: a7d78daf74d3cc01c2313f092bce53950dbd7bfb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: be6384562858d04b6e139eda83c172c09f2dfc0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681225"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690803"
 ---
 # <a name="icordebugregistersetgetthreadcontext-method"></a>ICorDebugRegisterSet::GetThreadContext 메서드
 
@@ -60,7 +61,7 @@ HRESULT GetThreadContext(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugRegisterSet 인터페이스](icordebugregisterset-interface.md)
 - [ICorDebugRegisterSet2 인터페이스](icordebugregisterset2-interface.md)

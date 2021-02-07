@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRErrorReportingManager:: EndCustomDump 메서드'
 title: ICLRErrorReportingManager::EndCustomDump 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 88a5da04-8729-4108-82c4-af206a7d483e
 topic_type:
 - apiref
-ms.openlocfilehash: feaeba15fcc4e8264f7fde57d3b268a6b583ad83
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 406d7d77f4cd63c69fec56acb0819d56c6271630
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677834"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689471"
 ---
 # <a name="iclrerrorreportingmanagerendcustomdump-method"></a>ICLRErrorReportingManager::EndCustomDump 메서드
 
@@ -60,7 +61,7 @@ HRESULT EndCustomDump ();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [CustomDumpItem 구조체](customdumpitem-structure.md)
 - [ECustomDumpFlavor 열거형](ecustomdumpflavor-enumeration.md)

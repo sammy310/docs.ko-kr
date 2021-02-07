@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRErrorReportingManager:: BeginCustomDump 메서드'
 title: ICLRErrorReportingManager::BeginCustomDump 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 93424a87-ba13-4fa1-b4dc-69d44437b7ae
 topic_type:
 - apiref
-ms.openlocfilehash: 199c130d70cfbf0d383c2e0dc148ffe3dc1242d1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3f8498068d50ffc6ea00cf4f08f969c92f010d6c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673564"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689484"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>ICLRErrorReportingManager::BeginCustomDump 메서드
 
@@ -51,7 +52,7 @@ HRESULT BeginCustomDump (
  `dwReserved`  
  진행 나중에 사용 하도록 예약 되어 있습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -79,7 +80,7 @@ HRESULT BeginCustomDump (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [CustomDumpItem 구조체](customdumpitem-structure.md)
 - [ECustomDumpFlavor 열거형](ecustomdumpflavor-enumeration.md)
