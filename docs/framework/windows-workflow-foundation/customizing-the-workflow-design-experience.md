@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 워크플로 디자인 환경 사용자 지정'
 title: 워크플로 디자인 환경 사용자 지정
 ms.date: 03/30/2017
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-ms.openlocfilehash: 27be398d874747b65ae051224070d3f40f1fbbb0
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 02049f8b42de3de6e4dfdfe8a4151be1500bcca9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715133"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742656"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>워크플로 디자인 환경 사용자 지정
 
@@ -21,7 +22,7 @@ ms.locfileid: "74715133"
 
  새로운 사용자 지정 활동 디자이너와 템플릿을 만드는 방법을 설명합니다.
 
- [워크플로 디자이너 재호스트](rehosting-the-workflow-designer.md)
+ [Workflow Designer 재호스팅](rehosting-the-workflow-designer.md)
 
  Visual Studio 외부에서 Windows 워크플로 디자이너를 다시 호스팅하는 방법 및 유효성 검사 오류를 표시 하는 방법에 대해 설명 합니다.
 
@@ -29,13 +30,13 @@ ms.locfileid: "74715133"
 
  Visual Studio 2010 외부에서 다시 호스트 되는 워크플로 디자이너에서 사용할 사용자 지정 식 편집기를 구현 하는 방법을 설명 합니다.
 
-## <a name="reference"></a>참조
+## <a name="reference"></a>참고
 
 <xref:System.Activities.Presentation.ActivityDesigner>
 
 ## <a name="see-also"></a>참조
 
 - [Windows Workflow Foundation 확장](extend.md)
-- [디자이너](./samples/designer.md)
-- [사용자 지정 작업 디자이너](./samples/custom-activity-designers.md)
+- [Designer](./samples/designer.md)
+- [사용자 지정 활동 디자이너](./samples/custom-activity-designers.md)
 - [디자이너 재호스팅](./samples/designer-rehosting.md)

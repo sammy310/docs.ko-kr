@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: REM 문 (Visual Basic)'
 title: REM 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: 6161a9f7e589988882b5f76477bc069afd2b9b41
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: c82621db98dc66060ae098ee6537ee58b24046a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871951"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741317"
 ---
 # <a name="rem-statement-visual-basic"></a>REM 문(Visual Basic)
 
 프로그램의 소스 코드에 설명 설명을 포함 하는 데 사용 됩니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 REM comment  
@@ -51,7 +52,7 @@ REM comment
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [코드 주석](../../programming-guide/program-structure/comments-in-code.md)
 - [방법: 코드에서 명령문 분리 및 결합](../../programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

@@ -1,25 +1,26 @@
 ---
+description: '자세히 알아보기: 제네릭이 아닌 ParallelForEach'
 title: 제네릭이 아닌 ParallelForEach
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
-ms.openlocfilehash: ea7f57b8812dca3dfcb4908730dd788182d50c5c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9eaa4ed565fa00a0479f21d907fe5433317d88f8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347612"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741941"
 ---
 # <a name="non-generic-parallelforeach"></a>제네릭이 아닌 ParallelForEach
 
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]의 도구 상자에는 <xref:System.Activities.Statements.ParallelForEach%601> 컬렉션을 반복할 수 있도록 하는 <xref:System.Collections.Generic.IEnumerable%601>을 비롯한 흐름 제어 활동이 제공됩니다.
 
-<xref:System.Activities.Statements.ParallelForEach%601> <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> 속성이 <xref:System.Collections.Generic.IEnumerable%601>형식 이어야 합니다. 그러면 사용자가 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 구현하는 데이터 구조(예: <xref:System.Collections.ArrayList>)를 반복하지 못합니다. <xref:System.Activities.Statements.ParallelForEach%601>의 비제네릭 버전은 컬렉션 값의 형식에 대한 호환성을 유지하기 위해 런타임 복잡성이 더 높아지지만 이러한 요구 사항의 제약을 받지 않습니다.
+<xref:System.Activities.Statements.ParallelForEach%601><xref:System.Activities.Statements.ParallelForEach%601.Values%2A>의 속성은 형식 이어야 <xref:System.Collections.Generic.IEnumerable%601> 합니다. 그러면 사용자가 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 구현하는 데이터 구조(예: <xref:System.Collections.ArrayList>)를 반복하지 못합니다. <xref:System.Activities.Statements.ParallelForEach%601>의 비제네릭 버전은 컬렉션 값의 형식에 대한 호환성을 유지하기 위해 런타임 복잡성이 더 높아지지만 이러한 요구 사항의 제약을 받지 않습니다.
 
 이 샘플에서는 비제네릭 <xref:System.Activities.Statements.ParallelForEach%601> 활동과 디자이너를 구현하는 방법을 보여 줍니다. 이 활동을 사용하여 <xref:System.Collections.ArrayList>를 반복할 수 있습니다.
 
 ## <a name="parallelforeach-activity"></a>ParallelForEach 활동
 
-C#/Ovisual Basic `foreach` 문은 컬렉션의 각 요소에 대해 포함 문을 실행 하 여 컬렉션의 요소를 열거 합니다. 그에 상응하는 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 활동은 <xref:System.Activities.Statements.ForEach%601> 및 <xref:System.Activities.Statements.ParallelForEach%601>입니다. <xref:System.Activities.Statements.ForEach%601> 활동은 값 목록과 본문을 포함합니다. 런타임에 목록이 반복되고 목록의 각 값에 대해 본문이 실행됩니다.
+C #/Visual Basic `foreach` 문은 컬렉션의 각 요소에 대해 포함 문을 실행 하 여 컬렉션의 요소를 열거 합니다. 그에 상응하는 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 활동은 <xref:System.Activities.Statements.ForEach%601> 및 <xref:System.Activities.Statements.ParallelForEach%601>입니다. <xref:System.Activities.Statements.ForEach%601> 활동은 값 목록과 본문을 포함합니다. 런타임에 목록이 반복되고 목록의 각 값에 대해 본문이 실행됩니다.
 
 <xref:System.Activities.Statements.ParallelForEach%601>에는 <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>이 있습니다. <xref:System.Activities.Statements.ParallelForEach%601>의 반환 결과가 <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>이면 `true` 활동이 일찍 완료될 수 있습니다. <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>은 각 반복을 완료한 후에 확인됩니다.
 
@@ -53,7 +54,7 @@ public class ParallelForEach : NativeActivity
 반복되는 요소의 컬렉션입니다. 컬렉션의 모든 요소가 호환 가능한 형식인지 확인하는 작업은 런타임에 수행됩니다.
 
 이상 상태 (선택 사항) \
-<xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> 속성은 반복을 완료한 후에 매번 확인됩니다. 그 결과가 `true`이면 예약하여 대기 중인 반복이 취소됩니다. 이 속성을 설정하지 않으면 분기 컬렉션의 모든 활동이 완료될 때까지 실행됩니다.
+<xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> 속성은 반복을 완료한 후에 매번 확인됩니다. 로 계산 되 면 `true` 예약 된 보류 중인 반복이 취소 됩니다. 이 속성을 설정하지 않으면 분기 컬렉션의 모든 활동이 완료될 때까지 실행됩니다.
 
 ## <a name="example-of-using-parallelforeach"></a>ParallelForEach 사용 예제
 
@@ -81,7 +82,7 @@ Activity sampleUsage =
 
 ## <a name="parallelforeach-designer"></a>ParallelForEach 디자이너
 
-샘플의 활동 디자이너는 기본 제공 <xref:System.Activities.Statements.ParallelForEach%601> 활동에 제공되는 디자이너와 모양이 비슷합니다. 디자이너는 **샘플**, **제네릭이 아닌 작업** 범주의 도구 상자에 나타납니다. 도구 상자에 디자이너의 이름이 **ParallelForEachWithBodyFactory** 로 지정 됩니다 .이 작업은 적절 하 게 구성 된 <xref:System.Activities.ActivityAction>를 사용 하 여 활동을 만드는 도구 상자에 <xref:System.Activities.Presentation.IActivityTemplateFactory>를 노출 합니다.
+샘플의 활동 디자이너는 기본 제공 <xref:System.Activities.Statements.ParallelForEach%601> 활동에 제공되는 디자이너와 모양이 비슷합니다. 디자이너는 **샘플**, **제네릭이 아닌 작업** 범주의 도구 상자에 나타납니다. 작업은 적절 하  <xref:System.Activities.Presentation.IActivityTemplateFactory> 게 구성 된를 사용 하 여 활동을 만드는 도구 상자에서를 노출 하므로 디자이너의 이름은 도구 상자에서 ParallelForEachWithBodyFactory입니다 <xref:System.Activities.ActivityAction> .
 
 ```csharp
 public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
@@ -110,13 +111,13 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
 
     2. **Designertestclient** 는 디자이너 내에서 활동을 사용 하는 방법을 보여 줍니다.
 
-2. 프로젝트를 빌드 및 실행합니다.
+2. 프로젝트를 빌드하고 실행합니다.
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericParallelForEach`

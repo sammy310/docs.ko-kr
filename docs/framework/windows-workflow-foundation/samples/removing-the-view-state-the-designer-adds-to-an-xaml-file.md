@@ -1,19 +1,20 @@
 ---
+description: '자세히 알아보기: 디자이너에서 XAML 파일에 추가 하는 뷰 상태 제거'
 title: 디자이너에서 XAML 파일에 추가 하는 뷰 상태 제거-WF
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: f431275140e821aa5ec4d2235322f06be87d5ee2
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: e6be1e8e4f754085b98f912923ad67cb12893910
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715615"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741798"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>디자이너에서 XAML 파일에 추가 하는 뷰 상태 제거
 
-이 샘플에서는 <xref:System.Xaml.XamlWriter>에서 파생되며 XAML 파일에서 뷰 상태를 제거하는 클래스를 만드는 방법을 보여 줍니다. Windows 워크플로 디자이너는 뷰 상태 라고 하는 XAML 문서에 정보를 씁니다. 뷰 상태는 런타임에 필요하지 않으며 디자인 타임에 필요한 레이아웃 위치 등과 같은 정보를 가리킵니다. 워크플로 디자이너이 정보를 XAML 문서를 편집할 때 삽입 합니다. 워크플로 디자이너는 `mc:Ignorable` 특성을 사용 하 여 뷰 상태를 XAML 파일에 쓰며,이 정보는 런타임에서 XAML 파일을 로드할 때 로드 되지 않습니다. 이 샘플에서는 XAML 노드를 처리하는 동안 이와 같은 뷰 상태 정보를 제거하는 클래스를 만드는 방법을 보여 줍니다.
+이 샘플에서는 <xref:System.Xaml.XamlWriter>에서 파생되며 XAML 파일에서 뷰 상태를 제거하는 클래스를 만드는 방법을 보여 줍니다. Windows 워크플로 디자이너는 뷰 상태 라고 하는 XAML 문서에 정보를 씁니다. 뷰 상태는 런타임에 필요하지 않으며 디자인 타임에 필요한 레이아웃 위치 등과 같은 정보를 가리킵니다. 워크플로 디자이너이 정보를 XAML 문서를 편집할 때 삽입 합니다. 워크플로 디자이너는 특성을 사용 하 여 뷰 상태를 XAML 파일에 쓰며 `mc:Ignorable` ,이 정보는 런타임에서 xaml 파일을 로드할 때 로드 되지 않습니다. 이 샘플에서는 XAML 노드를 처리하는 동안 이와 같은 뷰 상태 정보를 제거하는 클래스를 만드는 방법을 보여 줍니다.
 
-## <a name="discussion"></a>토론
+## <a name="discussion"></a>토론(Discussion)
 
 이 샘플에서는 사용자 지정 작성기를 만드는 방법을 보여 줍니다.
 
@@ -99,7 +100,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
    ViewStateCleaningWriter.exe [input file] [output file]
    ```
 
-   그러면 XAML 파일이 \[출력 파일에 출력 되 고 모든 뷰 상태 정보가 제거 됩니다.
+   그러면 XAML 파일이 출력 파일에 출력 \[ 되 고 모든 뷰 상태 정보가 제거 됩니다.
 
 > [!NOTE]
 > <xref:System.Activities.Statements.Sequence> 워크플로의 경우 여러 개의 가상화 힌트도 제거됩니다. 따라서 다음 번 로드 시 디자이너를 통해 레이아웃이 다시 계산됩니다. <xref:System.Activities.Statements.Flowchart>에 대해 이 샘플을 사용하면 위치 및 선 라우팅 정보가 모두 제거되며, 이를 다음 번에 디자이너로 다시 로드하면 모든 활동이 화면 왼쪽에 쌓입니다.
@@ -121,6 +122,6 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

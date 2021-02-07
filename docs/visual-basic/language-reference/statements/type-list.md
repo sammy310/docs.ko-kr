@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 형식 목록 (Visual Basic)'
 title: Type List
 ms.date: 07/20/2015
 f1_keywords:
@@ -24,18 +25,18 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: 7e22ad6e32ec13f081391e1d47a80df8b1e65063
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d4c8bcab4a39af0ac0747d6be0d04408edd98a55
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84412990"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740901"
 ---
 # <a name="type-list-visual-basic"></a>형식 목록(Visual Basic)
 
 *제네릭* 프로그래밍 요소에 대 한 *형식 매개 변수* 를 지정 합니다. 여러 매개 변수는 쉼표로 구분 됩니다. 다음은 하나의 형식 매개 변수에 대 한 구문입니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 [genericmodifier] typename [ As constraintlist ]
@@ -46,7 +47,7 @@ ms.locfileid: "84412990"
 |용어|정의|
 |---|---|
 |`genericmodifier`|선택 사항입니다. 제네릭 인터페이스 및 대리자 에서만 사용할 수 있습니다. In 키워드를 사용 하 여 [Out](../modifiers/out-generic-modifier.md) 키워드나 반공 변을 사용 하 여 형식을 공변 [(](../modifiers/in-generic-modifier.md) covariant)으로 선언할 수 있습니다. [공변성(Covariance) 및 반공변성(Contravariance)](../../programming-guide/concepts/covariance-contravariance/index.md)을 참조하세요.|
-|`typename`|필수 요소. 형식 매개 변수의 이름입니다. 해당 형식 인수가 제공 하는 정의 된 형식으로 대체 될 자리 표시자입니다.|
+|`typename`|필수 사항입니다. 형식 매개 변수의 이름입니다. 해당 형식 인수가 제공 하는 정의 된 형식으로 대체 될 자리 표시자입니다.|
 |`constraintlist`|선택 사항입니다. 에 대해 제공할 수 있는 데이터 형식을 제한 하는 요구 사항 목록입니다 `typename` . 제약 조건이 여러 개인 경우 중괄호 ()로 묶고 쉼표를 `{ }` 사용 하 여 구분 합니다. 제약 조건 목록에 [As](as-clause.md) 키워드를 사용 해야 합니다. `As`목록의 시작 부분에는 한 번만 사용 합니다.|
 
 ## <a name="remarks"></a>설명
@@ -65,7 +66,7 @@ ms.locfileid: "84412990"
 
   - 최대 하나의 클래스입니다. 제공 된 형식은 해당 클래스에서 상속 해야 합니다.
 
-  - `New` 키워드입니다. 제공 된 형식은 제네릭 형식에서 액세스할 수 있는 매개 변수가 없는 생성자를 노출 해야 합니다. 이는 하나 이상의 인터페이스로 형식 매개 변수를 제한 하는 경우에 유용 합니다. 인터페이스를 구현 하는 형식이 반드시 생성자를 노출 하는 것은 아니며, 생성자의 액세스 수준에 따라 제네릭 형식 내의 코드에서 액세스 하지 못할 수도 있습니다.
+  - `New` 키워드. 제공 된 형식은 제네릭 형식에서 액세스할 수 있는 매개 변수가 없는 생성자를 노출 해야 합니다. 이는 하나 이상의 인터페이스로 형식 매개 변수를 제한 하는 경우에 유용 합니다. 인터페이스를 구현 하는 형식이 반드시 생성자를 노출 하는 것은 아니며, 생성자의 액세스 수준에 따라 제네릭 형식 내의 코드에서 액세스 하지 못할 수도 있습니다.
 
   - `Class`키워드나 키워드 중 하나 `Structure` 입니다. `Class`키워드는 제네릭 형식 매개 변수에 전달 된 형식 인수가 문자열, 배열 또는 대리자와 같은 참조 형식 이거나 클래스에서 만든 개체를 참조 형식으로 요구 하도록 제한 합니다. `Structure`키워드는 제네릭 형식 매개 변수에 전달 된 형식 인수가 값 형식 (예: 구조체, 열거형 또는 기본 데이터 형식)이 되도록 제약을 받도록 제한 합니다. `Class`와 `Structure` 는 모두 동일한에 포함할 수 없습니다 `constraintlist` .
 
@@ -100,7 +101,7 @@ ms.locfileid: "84412990"
 ## <a name="see-also"></a>참고 항목
 
 - [으로](of-clause.md)
-- [새 운영자](../operators/new-operator.md)
+- [New 연산자](../operators/new-operator.md)
 - [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)
 - [Object Data Type](../data-types/object-data-type.md)
 - [Function 문](function-statement.md)
@@ -108,5 +109,5 @@ ms.locfileid: "84412990"
 - [Sub 문](sub-statement.md)
 - [방법: 제네릭 클래스 사용](../../programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [공 분산 및 반공 분산](../../programming-guide/concepts/covariance-contravariance/index.md)
-- [진행](../modifiers/in-generic-modifier.md)
-- [제한이](../modifiers/out-generic-modifier.md)
+- [위치](../modifiers/in-generic-modifier.md)
+- [Out](../modifiers/out-generic-modifier.md)

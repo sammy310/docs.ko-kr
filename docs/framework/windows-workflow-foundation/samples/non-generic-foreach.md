@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 제네릭이 아닌 ForEach'
 title: 비제네릭 ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 9678d929375857a76d01f575e637a069b0911ae5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 16635da4ef57ff7b59e178f5954465d8b86bf488
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96283577"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741954"
 ---
 # <a name="non-generic-foreach"></a>비제네릭 ForEach
 
@@ -73,7 +74,7 @@ Activity sampleUsage =
   
 |조건|메시지|심각도|예외 유형|  
 |---------------|-------------|--------------|--------------------|  
-|값은 `null`입니다.|필수 활동 인수 'Values'의 값이 제공되지 않았습니다.|오류|<xref:System.InvalidOperationException>|  
+|값은 `null`입니다.|필수 활동 인수 'Values'의 값이 제공되지 않았습니다.|Error|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEach 디자이너  
 

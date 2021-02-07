@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Set 문 (Visual Basic)'
 title: Set 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: b3524769567a56a87184bf916a3e5ccb1fd4fa1c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5ee27b35a4639bc20d5b6634de8332c6ede9bf12
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871751"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741122"
 ---
 # <a name="set-statement-visual-basic"></a>Set 문(Visual Basic)
 
 `Set`속성에 값을 할당 하는 데 사용 되는 속성 프로시저를 선언 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 [ <attributelist> ] [ accessmodifier ] Set (ByVal value [ As datatype ])  
@@ -37,7 +38,7 @@ End Set
  `accessmodifier`  
  `Get`이 속성의 및 문 중 최대 하나에 대해 선택적입니다 `Set` . 다음 중 하나일 수 있습니다.  
   
-- [보호](../modifiers/protected.md)  
+- [보호됨](../modifiers/protected.md)  
   
 - [Friend](../modifiers/friend.md)  
   
@@ -91,7 +92,7 @@ End Set
   
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Get 문](get-statement.md)
 - [Property Statement](property-statement.md)

@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: WCF 배포 개체 모델을 Atom 및 RSS에 매핑하는 방법'
 title: WCF 배포 개체 모델을 Atom 및 RSS로 매핑하는 방법
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-ms.openlocfilehash: 6fa390c8ae05035e589392c909ef340fb9c7948a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d66fb30acde18053e866b8986ebf71a6eed562ec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257817"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742942"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 배포 개체 모델을 Atom 및 RSS로 매핑하는 방법
 

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Stop 문 (Visual Basic)'
 title: Stop 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: c9226ccaea9a0709a9d6a49900f69cb9ac9e1dbe
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 1e25eb88d1b85f38a53023dfb7dfbc877f498e5e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871747"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741083"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop 문(Visual Basic)
 
@@ -44,6 +45,6 @@ Stop
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [End 문](end-statement.md)

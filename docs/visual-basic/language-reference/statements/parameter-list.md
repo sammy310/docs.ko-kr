@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 매개 변수 목록 (Visual Basic)'
 title: 매개 변수 목록
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-ms.openlocfilehash: 706fc2414806db5608cce410bf4156839ec2d83e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f69063fac82887ba4da3119d8ec4fcac11b7f4c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404319"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741408"
 ---
 # <a name="parameter-list-visual-basic"></a>매개 변수 목록(Visual Basic)
 
 프로시저를 호출할 때 프로시저에 필요한 매개 변수를 지정 합니다. 여러 매개 변수는 쉼표로 구분 됩니다. 다음은 하나의 매개 변수에 대 한 구문입니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attributelist> ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]
@@ -46,7 +47,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 선택 사항입니다. 매개 변수 목록의 마지막 매개 변수가 지정 된 데이터 형식의 선택적 요소 배열 임을 지정 합니다. 이를 통해 호출 코드는 프로시저에 임의 개수의 인수를 전달할 수 있습니다.
 
 `parametername`  
-필수 요소. 매개 변수를 나타내는 지역 변수의 이름입니다.
+필수 사항입니다. 매개 변수를 나타내는 지역 변수의 이름입니다.
 
 `parametertype`  
 필요한 경우 `Option Strict` 는 `On`합니다. 매개 변수를 나타내는 지역 변수의 데이터 형식입니다.

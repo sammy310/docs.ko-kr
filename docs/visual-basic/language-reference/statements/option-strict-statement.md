@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Option Strict 문'
 title: Option Strict 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: ab1094961e2bc3aed0e975e40369a5f5c1ba93eb
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a128aca1bdaa6ce8bd4c4cd8e63e05348f00e4d4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873135"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741434"
 ---
 # <a name="option-strict-statement"></a>Option Strict 문
 
 암시적 데이터 형식 변환을 확대 변환 으로만 제한 하 고 런타임에 바인딩을 허용 하지 않으며 형식을 생성 하는 암시적 형식화를 허용 하지 `Object` 않습니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Option Strict { On | Off }  
@@ -104,7 +105,7 @@ Option Strict { On | Off }
 |---|---|---|---|  
 |아니요|아니요|`Dim qty`|`Option Strict`가 off(기본값)이면 변수는 `Nothing`으로 설정됩니다.<br /><br /> `Option Strict`가 on이면 컴파일 시간 오류가 발생합니다.|  
 |아니요|예|`Dim qty = 5`|`Option Infer`가 on(기본값)이면 변수가 이니셜라이저의 데이터 형식을 사용합니다. [지역 형식 유추](../../programming-guide/language-features/variables/local-type-inference.md)를 참조 하세요.<br /><br /> `Option Infer`가 off이고 `Option Strict`고 off이면 변수가 `Object`의 데이터 형식을 사용합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`는 on이면 컴파일 시간 오류가 발생합니다.|  
-|예|예|`Dim qty As Integer`|변수는 데이터 형식의 기본값으로 초기화됩니다. 자세한 내용은 [Dim 문](dim-statement.md)을 참조 하세요.|  
+|예|아니요|`Dim qty As Integer`|변수는 데이터 형식의 기본값으로 초기화됩니다. 자세한 내용은 [Dim 문](dim-statement.md)을 참조 하세요.|  
 |예|예|`Dim qty  As Integer = 5`|이니셜라이저의 데이터 형식을 지정한 데이터 형식으로 변환할 수 없으면 컴파일 시간 오류가 발생합니다.|  
   
 ## <a name="when-an-option-strict-statement-is-not-present"></a>Option Strict 문이 없는 경우  
@@ -117,7 +118,7 @@ Option Strict { On | Off }
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1. **솔루션 탐색기**에서 프로젝트를 선택 합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1. **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다.  
   
 2. **컴파일** 탭에서 **Option Strict** 상자에 값을 설정 합니다.  
   
@@ -131,15 +132,15 @@ Option Strict { On | Off }
   
 - **암시적 형식; 개체로 간주**  
   
- **Option Strict**를 **On**으로 설정하는 경우 이러한 세 가지 경고 구성 설정은 모두 **Error**로 설정됩니다. **Option Strict**를 **Off**로 설정하는 경우 세 가지 설정은 모두 **None**으로 설정됩니다.  
+ **Option Strict** 를 **On** 으로 설정하는 경우 이러한 세 가지 경고 구성 설정은 모두 **Error** 로 설정됩니다. **Option Strict** 를 **Off** 로 설정하는 경우 세 가지 설정은 모두 **None** 으로 설정됩니다.  
   
- 각 경고 구성 설정은 **None**, **Warning** 또는 **Error**로 개별적으로 변경할 수 있습니다. 세 가지 경고 구성 설정이 모두 **Error**로 설정 된 경우이 `On` 상자에 나타납니다 `Option strict` . 3 개가 모두 **없음**으로 설정 된 경우 `Off` 이 상자에 표시 됩니다. 이러한 설정의 다른 조합의 경우 **(사용자 지정)** 이 나타납니다.  
+ 각 경고 구성 설정은 **None**, **Warning** 또는 **Error** 로 개별적으로 변경할 수 있습니다. 세 가지 경고 구성 설정이 모두 **Error** 로 설정된 경우 `On`이 `Option strict` 상자에 표시됩니다. 세 가지 모두 **None** 으로 설정된 경우 `Off`가 이 상자에 표시됩니다. 이러한 설정의 다른 조합의 경우 **(사용자 지정)** 이 나타납니다.  
   
 ### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>새 프로젝트에 대 한 Strict 기본 설정 옵션을 설정 하려면  
 
  프로젝트를 만들 때 **컴파일** 탭의 **옵션 strict** 설정이 **옵션** 대화 상자의 **option strict** 설정으로 설정 됩니다.  
   
- `Option Strict`이 대화 상자에서 설정 하려면 **도구** 메뉴에서 **옵션**을 클릭 합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장하고 **VB 기본값**을 클릭합니다. **VB 기본값** 의 초기 기본 설정은 `Off` 입니다.  
+ `Option Strict`이 대화 상자에서 설정 하려면 **도구** 메뉴에서 **옵션** 을 클릭 합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션** 을 확장하고 **VB 기본값** 을 클릭합니다. **VB 기본값** 의 초기 기본 설정은 `Off` 입니다.  
   
 ### <a name="to-set-option-strict-on-the-command-line"></a>명령줄에서 Option Strict를 설정 하려면  
 
@@ -147,25 +148,25 @@ Option Strict { On | Off }
   
 ## <a name="example"></a>예제  
 
- 다음 예제에서는 축소 변환 인 암시적 형식 변환으로 인해 발생 하는 컴파일 시간 오류를 보여 줍니다. 이 범주의 오류는 **컴파일 페이지**의 **암시적 변환** 조건에 해당 합니다.  
+ 다음 예제에서는 축소 변환 인 암시적 형식 변환으로 인해 발생 하는 컴파일 시간 오류를 보여 줍니다. 이 범주의 오류는 **컴파일 페이지** 의 **암시적 변환** 조건에 해당 합니다.  
   
  [!code-vb[VbVbalrStatements#161](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#161)]  
   
 ## <a name="example"></a>예제  
 
- 다음 예제에서는 런타임에 바인딩으로 인해 발생 하는 컴파일 시간 오류를 보여 줍니다. 이 범주의 오류는 런타임에 바인딩과 일치 합니다. **컴파일 페이지**에서 **런타임에 호출이 실패할 수** 있습니다.  
+ 다음 예제에서는 런타임에 바인딩으로 인해 발생 하는 컴파일 시간 오류를 보여 줍니다. 이 범주의 오류는 런타임에 바인딩과 일치 합니다. **컴파일 페이지** 에서 **런타임에 호출이 실패할 수** 있습니다.  
   
  [!code-vb[VbVbalrStatements#162](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#162)]  
   
 ## <a name="example"></a>예제  
 
- 다음 예제에서는의 암시적 형식으로 선언 된 변수에 의해 발생 하는 오류를 보여 줍니다 `Object` . 이 범주의 오류는 **컴파일 페이지**에서 **암시적 형식, 개체를 사용한** 조건에 해당 합니다.  
+ 다음 예제에서는의 암시적 형식으로 선언 된 변수에 의해 발생 하는 오류를 보여 줍니다 `Object` . 이 범주의 오류는 **컴파일 페이지** 에서 **암시적 형식, 개체를 사용한** 조건에 해당 합니다.  
   
  [!code-vb[VbVbalrStatements#163](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#163)]  
   
  [!code-vb[VbVbalrStatements#164](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#164)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Widening and Narrowing Conversions](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [암시적 변환과 명시적 변환](../../programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

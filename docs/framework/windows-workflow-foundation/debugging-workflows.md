@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 워크플로 디버깅'
 title: 워크플로 디버깅
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-ms.openlocfilehash: 31c688f5f45b41f337176108486ec2074e1915a7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9de65e580d47395a9528f4672014ceb491b09230
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543838"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742565"
 ---
 # <a name="debugging-workflows"></a>워크플로 디버깅
 
@@ -34,7 +35,7 @@ ms.locfileid: "90543838"
 WF (Windows Workflow Foundation) 원격 디버깅은 다른 Visual Studio 구성 요소에 대 한 원격 디버깅과 동일 하 게 작동 합니다. 원격 디버깅 사용에 대 한 자세한 내용은 [방법: 원격 디버깅 사용](/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100))을 참조 하세요.
 
 > [!NOTE]
-> 워크플로 응용 프로그램에서 x86 아키텍처를 대상으로 하 고 64 비트 운영 체제를 실행 하는 컴퓨터에서 호스트 되는 경우 원격 컴퓨터에 Visual Studio가 설치 되어 있지 않거나 워크플로 응용 프로그램의 대상이 **모든 CPU**로 변경 되지 않으면 원격 디버깅이 작동 하지 않습니다.
+> 워크플로 응용 프로그램에서 x86 아키텍처를 대상으로 하 고 64 비트 운영 체제를 실행 하는 컴퓨터에서 호스트 되는 경우 원격 컴퓨터에 Visual Studio가 설치 되어 있지 않거나 워크플로 응용 프로그램의 대상이 **모든 CPU** 로 변경 되지 않으면 원격 디버깅이 작동 하지 않습니다.
 
 ## <a name="extending-the-workflow-debugging-service"></a>워크플로 디버깅 서비스 확장
 

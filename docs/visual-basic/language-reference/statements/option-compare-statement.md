@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Option Compare 문'
 title: Option Compare 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -18,18 +19,18 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 396770a2fc6996475d408cf8023a4eafdf6d3011
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: fba8b207c0077f95540485d79311b47f1b8c209c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869649"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741668"
 ---
 # <a name="option-compare-statement"></a>Option Compare 문
 
 문자열 데이터를 비교할 때 사용할 기본 비교 방법을 선언합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Option Compare { Binary | Text }  
@@ -68,13 +69,13 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-in-the-ide"></a>IDE에서 Option Compare를 설정하려면  
   
-1. **솔루션 탐색기**에서 프로젝트를 선택 합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1. **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다.  
   
 2. **컴파일** 탭을 클릭합니다.  
   
 3. **옵션 비교** 상자에서 값을 설정 합니다.  
   
- 프로젝트를 만들 때 **컴파일** 탭의 **옵션 비교** 설정이 **옵션** 대화 상자의 **옵션 비교** 설정으로 설정 됩니다. 이 설정을 변경 하려면 **도구** 메뉴에서 **옵션**을 클릭 합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장하고 **VB 기본값**을 클릭합니다. **VB 기본값** 의 초기 기본 설정은 **Binary**입니다.  
+ 프로젝트를 만들 때 **컴파일** 탭의 **옵션 비교** 설정이 **옵션** 대화 상자의 **옵션 비교** 설정으로 설정 됩니다. 이 설정을 변경 하려면 **도구** 메뉴에서 **옵션** 을 클릭 합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션** 을 확장하고 **VB 기본값** 을 클릭합니다. **VB 기본값** 의 초기 기본 설정은 **Binary** 입니다.  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>명령줄에서 Option Compare를 설정하려면  
   
@@ -92,7 +93,7 @@ Option Compare { Binary | Text }
   
  [!code-vb[VbVbalrStatements#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#46)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>
 - <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>

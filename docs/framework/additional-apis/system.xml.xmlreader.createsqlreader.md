@@ -1,5 +1,6 @@
 ---
-title: XmlReader.CreateSqlReader 방법 (System.Xml)
+description: '자세히 알아보기: CreateSqlReader 메서드'
+title: CreateSqlReader 메서드 (System.Xml)
 ms.date: 10/17/2019
 topic_type:
 - apiref
@@ -9,12 +10,12 @@ api_location:
 - system.xml.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 7bd2ef5158516acede47f73f9937d06159bc16c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61d594c0438c86863ce4052387439f5483d8a34c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155741"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740436"
 ---
 # <a name="xmlreadercreatesqlreader-method"></a>XmlReader.CreateSqlReader 메서드
 
@@ -44,14 +45,14 @@ internal static XmlReader CreateSqlReader(Stream input,
 ## <a name="remarks"></a>설명
 
 > [!WARNING]
-> 메서드는 `XmlReader.CreateSqlReader` 내부이며 코드에서 직접 사용할 수 없습니다.
+> `XmlReader.CreateSqlReader`메서드는 내부 이며 코드에서 직접 사용할 수 없습니다.
 >
-> Microsoft는 어떠한 상황에서도 프로덕션 응용 프로그램에서 이 메서드의 사용을 지원하지 않습니다.
+> Microsoft는 어떤 경우에도 프로덕션 응용 프로그램에서이 방법을 사용 하는 것을 지원 하지 않습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**네임스페이스:**<xref:System.Xml>
+**네임스페이스:** <xref:System.Xml>
 
-**어셈블리:** 시스템.Xml.dll
+**어셈블리:** System.Xml.dll
 
-**.NET 프레임워크 버전:** 2.0 부터 사용할 수 있습니다.
+**.NET Framework 버전:** 2.0부터 사용할 수 있습니다.

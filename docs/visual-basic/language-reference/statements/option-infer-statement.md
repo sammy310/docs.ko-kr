@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Option 유추 문'
 title: Option Infer 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 977e492c1c8ec5040c22169d91268c9c2241f6c4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d0c3de7bdafb7e9b361da7a8538046e3d76b5ce7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404358"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741590"
 ---
 # <a name="option-infer-statement"></a>Option Infer 문
 
 변수를 선언할 때 지역 형식 유추를 사용하도록 설정합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 Option Infer { On | Off }
@@ -66,13 +67,13 @@ Option Infer { On | Off }
 
 #### <a name="to-set-option-infer-in-the-ide"></a>IDE에서 Option Infer를 설정하려면
 
-1. **솔루션 탐색기**에서 프로젝트를 선택 합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.
+1. **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다.
 
 2. **컴파일** 탭을 클릭합니다.
 
 3. **유추 옵션** 상자에서 값을 설정 합니다.
 
-새 프로젝트를 만들 때 **컴파일** 탭의 **유추 설정 옵션이** **VB 기본값** 대화 상자의 **유추 옵션** 으로 설정 됩니다. **VB 기본값** 대화 상자에 액세스 하려면 **도구** 메뉴에서 **옵션**을 클릭 합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장하고 **VB 기본값**을 클릭합니다. **VB 기본값** 의 초기 기본 설정은 `On` 입니다.
+새 프로젝트를 만들 때 **컴파일** 탭의 **유추 설정 옵션이** **VB 기본값** 대화 상자의 **유추 옵션** 으로 설정 됩니다. **VB 기본값** 대화 상자에 액세스 하려면 **도구** 메뉴에서 **옵션** 을 클릭 합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션** 을 확장하고 **VB 기본값** 을 클릭합니다. **VB 기본값** 의 초기 기본 설정은 `On` 입니다.
 
 #### <a name="to-set-option-infer-on-the-command-line"></a>명령줄에서 Option Infer를 설정하려면
 
@@ -84,9 +85,9 @@ Option Infer { On | Off }
 
 |데이터 형식 지정 여부|이니셜라이저 지정 여부|예제|결과|
 |---|---|---|---|
-|아니요|예|`Dim qty`|`Option Strict`가 off(기본값)이면 변수는 `Nothing`으로 설정됩니다.<br /><br /> `Option Strict`가 on이면 컴파일 시간 오류가 발생합니다.|
-|예|예|`Dim qty = 5`|`Option Infer`가 on(기본값)이면 변수가 이니셜라이저의 데이터 형식을 사용합니다. [지역 형식 유추](../../programming-guide/language-features/variables/local-type-inference.md)를 참조 하세요.<br /><br /> `Option Infer`가 off이고 `Option Strict`고 off이면 변수가 `Object`의 데이터 형식을 사용합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`는 on이면 컴파일 시간 오류가 발생합니다.|
-|예|예|`Dim qty As Integer`|변수는 데이터 형식의 기본값으로 초기화됩니다. 자세한 내용은 [Dim 문](dim-statement.md)을 참조 하세요.|
+|아니요|아니요|`Dim qty`|`Option Strict`가 off(기본값)이면 변수는 `Nothing`으로 설정됩니다.<br /><br /> `Option Strict`가 on이면 컴파일 시간 오류가 발생합니다.|
+|아니요|예|`Dim qty = 5`|`Option Infer`가 on(기본값)이면 변수가 이니셜라이저의 데이터 형식을 사용합니다. [지역 형식 유추](../../programming-guide/language-features/variables/local-type-inference.md)를 참조 하세요.<br /><br /> `Option Infer`가 off이고 `Option Strict`고 off이면 변수가 `Object`의 데이터 형식을 사용합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`는 on이면 컴파일 시간 오류가 발생합니다.|
+|예|아니요|`Dim qty As Integer`|변수는 데이터 형식의 기본값으로 초기화됩니다. 자세한 내용은 [Dim 문](dim-statement.md)을 참조 하세요.|
 |예|예|`Dim qty  As Integer = 5`|이니셜라이저의 데이터 형식을 지정한 데이터 형식으로 변환할 수 없으면 컴파일 시간 오류가 발생합니다.|
 
 ## <a name="example"></a>예제

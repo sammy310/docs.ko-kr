@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: ReDim 문 (Visual Basic)'
 title: ReDim 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -26,18 +27,18 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 17bc806f2e92c61f1dd7425de40b1a68f926a583
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 8f7525064c8b32748cf5ebb2df7d4a5dfc76f794
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872030"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741330"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim 문 (Visual Basic)
 
 배열 변수의 스토리지 공간을 다시 할당합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]  
@@ -103,11 +104,11 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  추가 예제는 [배열](../../programming-guide/language-features/arrays/index.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.IndexOutOfRangeException>
 - [Const 문](const-statement.md)
 - [Dim 문](dim-statement.md)
 - [Erase 문](erase-statement.md)
-- [없는지](../nothing.md)
+- [Nothing](../nothing.md)
 - [배열](../../programming-guide/language-features/arrays/index.md)

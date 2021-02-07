@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: SyncLock 문'
 title: SyncLock 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: cc8706b95e0785459e36abe27ce915b5bab8711a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 206c10c8bca85a496345576d0d5f9ff260db82e3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875197"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740979"
 ---
 # <a name="synclock-statement"></a>SyncLock 문
 
 블록을 실행 하기 전에 문 블록에 대 한 단독 잠금을 획득 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 SyncLock lockobject  
@@ -45,7 +46,7 @@ End SyncLock
   
  의 가장 일반적인 용도는 `SyncLock` 두 개 이상의 스레드에서 데이터를 동시에 업데이트 하지 않도록 보호 하는 것입니다. 데이터를 조작 하는 문이 중단 없이 완료로 이동 해야 하는 경우 블록 안에 배치 합니다 `SyncLock` .  
   
- 배타적 잠금으로 보호 되는 문 블록은 *임계 영역*이 라고도 합니다.  
+ 배타적 잠금으로 보호 되는 문 블록은 *임계 영역* 이 라고도 합니다.  
   
 ## <a name="rules"></a>규칙  
   
@@ -99,7 +100,7 @@ End SyncLock
   
 ### <a name="comments"></a>주석  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>

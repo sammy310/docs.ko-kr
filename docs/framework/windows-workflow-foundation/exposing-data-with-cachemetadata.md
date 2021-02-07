@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: CacheMetadata를 사용 하 여 데이터 노출'
 title: CacheMetadata를 사용하여 데이터 노출
 ms.date: 03/30/2017
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
-ms.openlocfilehash: a044c896e56541ee954fc33853376eb8293c6ede
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac4623881ebd76270f773a3b7acfe205ad365118
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945706"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742344"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>CacheMetadata를 사용하여 데이터 노출
 
@@ -17,19 +18,19 @@ ms.locfileid: "61945706"
 
 <xref:System.Activities.NativeActivity.CacheMetadata%2A>에서 파생되는 작업에 대한 <xref:System.Activities.NativeActivity>의 기본 구현에서는 다음 메서드 형식을 다음과 같은 방식으로 처리합니다.
 
-- <xref:System.Activities.InArgument%601>하십시오 <xref:System.Activities.OutArgument%601>, 또는 <xref:System.Activities.InOutArgument%601> (제네릭 인수): 이러한 인수 이름으로 인수로 런타임에 노출 됩니다 하 고 노출된 된 속성 이름 및 형식, 적절 한 인수 방향 및 일부 유효성 검사 데이터가 같은 입력 합니다.
+- <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> 또는 <xref:System.Activities.InOutArgument%601>(제네릭 인수): 이러한 인수는 이름과 형식이 노출된 속성 이름 및 형식과 같고 적절한 인수 방향 및 일부 유효성 검사 데이터가 포함된 인수로 런타임에 노출됩니다.
 
-- <xref:System.Activities.Variable> 또는 해당 서브: 이러한 멤버는 런타임에 공용 변수로 노출 됩니다.
+- <xref:System.Activities.Variable> 또는 해당 서브클래스: 이러한 멤버는 런타임에 공용 변수로 노출됩니다.
 
-- <xref:System.Activities.Activity> 또는 해당 서브: 이러한 멤버는 런타임에 공용 자식 작업으로 노출 됩니다. 호출 하 여 기본 동작을 명시적으로 구현할 수 있습니다 <xref:System.Activities.ActivityMetadata.AddImportedChild%2A>자식 활동에 전달 합니다.
+- <xref:System.Activities.Activity> 또는 해당 서브클래스: 이러한 멤버는 런타임에 공용 자식 작업으로 노출됩니다. 기본 동작은를 호출 하 고 자식 활동을 전달 하 여 명시적으로 구현할 수 있습니다 <xref:System.Activities.ActivityMetadata.AddImportedChild%2A> .
 
-- <xref:System.Activities.ActivityDelegate> 또는 해당 서브: 이러한 멤버는 런타임에 공용 대리자로 노출 됩니다.
+- <xref:System.Activities.ActivityDelegate> 또는 해당 서브클래스: 이러한 멤버는 런타임에 공용 대리자로 노출됩니다.
 
-- <xref:System.Collections.ICollection> 형식의 <xref:System.Activities.Variable>: 컬렉션의 모든 요소가 런타임에 공용 변수로 노출 됩니다.
+- <xref:System.Collections.ICollection> 형식의 <xref:System.Activities.Variable>: 컬렉션의 모든 요소가 런타임에 공용 변수로 노출됩니다.
 
-- <xref:System.Collections.ICollection> 형식의 <xref:System.Activities.Activity>: 컬렉션의 모든 요소는 런타임에 공용 자식으로 노출 됩니다.
+- <xref:System.Collections.ICollection> 형식의 <xref:System.Activities.Activity>: 컬렉션의 모든 요소가 런타임에 공용 자식으로 노출됩니다.
 
-- <xref:System.Collections.ICollection> 형식의 <xref:System.Activities.ActivityDelegate>: 컬렉션의 모든 요소가 런타임에 공용 대리자로 노출 됩니다.
+- <xref:System.Collections.ICollection> 형식의 <xref:System.Activities.ActivityDelegate>: 컬렉션의 모든 요소가 런타임에 공용 대리자로 노출됩니다.
 
 <xref:System.Activities.Activity.CacheMetadata%2A>, <xref:System.Activities.Activity> 및 <xref:System.Workflow.Activities.CodeActivity>에서 파생되는 작업에 대한 <xref:System.Activities.AsyncCodeActivity>도 다음과 같은 차이점을 제외하고 위와 동일하게 작동합니다.
 

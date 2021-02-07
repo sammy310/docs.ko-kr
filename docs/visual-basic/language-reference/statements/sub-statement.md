@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Sub 문 (Visual Basic)'
 title: Sub 문
 ms.date: 05/12/2018
 f1_keywords:
@@ -29,18 +30,18 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: e50b79c31c92ac116d6c82bcececba3340894d74
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9be40c8284c677a151e4b1665f0b49e5f852bf00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404176"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740992"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub 문(Visual Basic)
 
 프로시저를 정의 하는 이름, 매개 변수 및 코드를 선언 `Sub` 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attributelist> ] [ Partial ] [ accessmodifier ] [ proceduremodifiers ] [ Shared ] [ Shadows ] [ Async ]
@@ -67,15 +68,15 @@ End Sub
 
   - [공용](../modifiers/public.md)
 
-  - [보호](../modifiers/protected.md)
+  - [보호됨](../modifiers/protected.md)
 
   - [Friend](../modifiers/friend.md)
 
-  - [프라이빗](../modifiers/private.md)
+  - [개인](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
-  - [개인 보호](../modifiers/private-protected.md)
+  - [비공개 보호](../modifiers/private-protected.md)
 
   [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조하세요.
 
@@ -111,7 +112,7 @@ End Sub
 
 - `name`
 
-  필수 요소. 프로시저의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요. 클래스에 대 한 생성자 프로시저를 만들려면 프로시저의 이름을 키워드로 설정 합니다 `Sub` `New` . 자세한 내용은 [개체 수명: 개체가 만들어지고 소멸 되는 방법](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)을 참조 하세요.
+  필수 사항입니다. 프로시저의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요. 클래스에 대 한 생성자 프로시저를 만들려면 프로시저의 이름을 키워드로 설정 합니다 `Sub` `New` . 자세한 내용은 [개체 수명: 개체가 만들어지고 소멸 되는 방법](../../programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)을 참조 하세요.
 
 - `typeparamlist`
 
@@ -135,10 +136,10 @@ End Sub
 
   `interface.definedname`
 
-  |부분|Description|
+  |파트|설명|
   |---|---|
-  |`interface`|필수 요소. 이 프로시저에 포함 된 클래스 또는 구조체에 의해 구현 된 인터페이스의 이름입니다.|
-  |`definedname`|필수 요소. 프로시저가 `interface`에 정의되는 이름입니다.|
+  |`interface`|필수 사항입니다. 이 프로시저에 포함 된 클래스 또는 구조체에 의해 구현 된 인터페이스의 이름입니다.|
+  |`definedname`|필수 사항입니다. 프로시저가 `interface`에 정의되는 이름입니다.|
 
 - `Handles`
 
@@ -154,10 +155,10 @@ End Sub
 
   `eventvariable.event`
 
-  |부분|Description|
+  |파트|설명|
   |---|---|
-  |`eventvariable`|필수 요소. 이벤트를 발생 시키는 클래스 또는 구조체의 데이터 형식으로 선언 된 개체 변수입니다.|
-  |`event`|필수 요소. 이 프로시저가 처리 하는 이벤트의 이름입니다.|
+  |`eventvariable`|필수 사항입니다. 이벤트를 발생 시키는 클래스 또는 구조체의 데이터 형식으로 선언 된 개체 변수입니다.|
+  |`event`|필수 사항입니다. 이 프로시저가 처리 하는 이벤트의 이름입니다.|
 
 - `statements`
 
@@ -175,7 +176,7 @@ End Sub
 
 `Sub`모듈 수준 에서만 프로시저를 정의할 수 있습니다. 따라서 sub 프로시저의 선언 컨텍스트는 클래스, 구조체, 모듈 또는 인터페이스 여야 하며 소스 파일, 네임 스페이스, 프로시저 또는 블록일 수 없습니다. 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](declaration-contexts-and-default-access-levels.md)을 참조하세요.
 
-`Sub`프로시저는 기본적으로 공용 액세스입니다. 액세스 한정자를 사용 하 여 액세스 수준을 조정할 수 있습니다.
+`Sub` 프로시저는 기본적으로 공용 액세스입니다. 액세스 한정자를 사용 하 여 액세스 수준을 조정할 수 있습니다.
 
 프로시저에서 키워드를 사용 하는 경우 `Implements` 포함 하는 클래스 또는 구조체에는 `Implements` 또는 문 바로 다음에 오는 문이 있어야 합니다 `Class` `Structure` . `Implements`문에는에 지정 된 각 인터페이스가 포함 되어야 합니다 `implementslist` . 그러나 인터페이스에서 `Sub` (의)를 정의 하는 이름은 `definedname` 이 프로시저 (에서)의 이름과 일치할 필요가 없습니다 `name` .
 

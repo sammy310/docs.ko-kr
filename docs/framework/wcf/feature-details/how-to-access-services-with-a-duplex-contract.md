@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 이중 계약을 사용 하 여 서비스 액세스'
 title: '방법: 이중 계약을 사용 하 여 서비스 액세스'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-ms.openlocfilehash: bc42792b827b49265a0b1addf959de2fa1a041e3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e58225e6b77115004c3c201d606e328aab184b75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597217"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742890"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>방법: 이중 계약을 사용 하 여 서비스 액세스
 
@@ -28,7 +29,7 @@ WCF (Windows Communication Foundation)의 한 가지 기능은 이중 메시징 
 
 2. 서비스를 실행합니다.
 
-3. [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 클라이언트에 대 한 계약 (인터페이스)을 생성 합니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 [방법: 클라이언트 만들기](../how-to-create-a-wcf-client.md)를 참조 하세요.
+3. [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 를 사용 하 여 클라이언트에 대 한 계약 (인터페이스)을 생성 합니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은  [방법: 클라이언트 만들기](../how-to-create-a-wcf-client.md)를 참조 하세요.
 
 4. 다음 예제에 표시된 것처럼 클라이언트 클래스에서 콜백 인터페이스를 구현합니다.
 

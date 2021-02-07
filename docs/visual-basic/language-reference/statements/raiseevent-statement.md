@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: RaiseEvent 문'
 title: RaiseEvent 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: 13d86aad8b68391f7effe2f6637adc68d8a3b59a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 9549eb64ef32147ed49ae8f805d01db8610b336e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872009"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741343"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent 문
 
 클래스, 폼 또는 문서 내의 모듈 수준에서 선언 된 이벤트를 트리거합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 RaiseEvent eventname[( argumentlist )]  
@@ -75,7 +76,7 @@ RaiseEvent eventname[( argumentlist )]
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
- F5 키를 눌러 앞의 예제를 실행 하 고 **시작**이라는 레이블이 지정 된 단추를 클릭 합니다. 첫 번째 텍스트 상자에서 초를 카운트 다운하기 시작합니다. 전체 시간(10초)이 경과되면 첫 번째 텍스트 상자에 "Done"이 표시됩니다.  
+ F5 키를 눌러 앞의 예제를 실행 하 고 **시작** 이라는 레이블이 지정 된 단추를 클릭 합니다. 첫 번째 텍스트 상자에서 초를 카운트 다운하기 시작합니다. 전체 시간(10초)이 경과되면 첫 번째 텍스트 상자에 "Done"이 표시됩니다.  
   
 > [!NOTE]
 > `My.Application.DoEvents`메서드는 양식이 수행 하는 것과 정확히 같은 방식으로 이벤트를 처리 하지 않습니다. 폼에서 이벤트를 직접 처리할 수 있도록 하려면 다중 스레딩을 사용할 수 있습니다. 자세한 내용은 [관리 되는 스레딩](../../../standard/threading/index.md)을 참조 하세요.  

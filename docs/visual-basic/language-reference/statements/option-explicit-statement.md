@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Option Explicit 문 (Visual Basic)'
 title: Option Explicit 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: 44bf8205ec071710ee3660968ab3c3e9af33f74d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 11f59508125167fde98b4fc359dde7fd7c539b75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874943"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741616"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 문(Visual Basic)
 
 파일의 모든 변수를 명시적으로 선언 하거나 변수의 암시적 선언을 허용 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Option Explicit { On | Off }  
@@ -51,13 +52,13 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>IDE에서 Option Explicit를 설정 하려면  
   
-1. **솔루션 탐색기**에서 프로젝트를 선택 합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1. **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다.  
   
 2. **컴파일** 탭을 클릭합니다.  
   
 3. **옵션 Explicit** 상자에서 값을 설정 합니다.  
   
- 새 프로젝트를 만들 때 **컴파일** 탭의 **옵션 Explicit** 설정은 **VB 기본값** 대화 상자의 **옵션 explicit** 설정으로 설정 됩니다. **VB 기본값** 대화 상자에 액세스 하려면 **도구** 메뉴에서 **옵션**을 클릭 합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장하고 **VB 기본값**을 클릭합니다. **VB 기본값** 의 초기 기본 설정은 `On` 입니다.  
+ 새 프로젝트를 만들 때 **컴파일** 탭의 **옵션 Explicit** 설정은 **VB 기본값** 대화 상자의 **옵션 explicit** 설정으로 설정 됩니다. **VB 기본값** 대화 상자에 액세스 하려면 **도구** 메뉴에서 **옵션** 을 클릭 합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션** 을 확장하고 **VB 기본값** 을 클릭합니다. **VB 기본값** 의 초기 기본 설정은 `On` 입니다.  
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>명령줄에서 Option Explicit를 설정 하려면  
   
@@ -71,7 +72,7 @@ Option Explicit { On | Off }
   
  [!code-vb[VbVbalrStatements#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#48)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Dim 문](dim-statement.md)
 - [ReDim 문](redim-statement.md)

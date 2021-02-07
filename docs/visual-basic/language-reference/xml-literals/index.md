@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: XML 리터럴 (Visual Basic)'
 title: XML 리터럴
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic], reference
 - literals [Visual Basic], XML
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
-ms.openlocfilehash: 3477196230ec5e87b49e94f45c842b90b19102fb
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bbc00530f3ce1efa801ee9fae5dd9a94d8806e43
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869423"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740875"
 ---
 # <a name="xml-literals-visual-basic"></a>XML 리터럴(Visual Basic)
 
@@ -22,7 +23,7 @@ ms.locfileid: "90869423"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[XML 요소 리터럴](xml-element-literal.md)|<xref:System.Xml.Linq.XElement> 개체를 나타내는 리터럴 구문을 설명합니다.|  
 |[XML 문서 리터럴](xml-document-literal.md)|<xref:System.Xml.Linq.XDocument> 개체를 나타내는 리터럴 구문을 설명합니다.|  
@@ -30,6 +31,6 @@ ms.locfileid: "90869423"
 |[XML 주석 리터럴](xml-comment-literal.md)|<xref:System.Xml.Linq.XComment> 개체를 나타내는 리터럴 구문을 설명합니다.|  
 |[XML 처리 명령 리터럴](xml-processing-instruction-literal.md)|<xref:System.Xml.Linq.XProcessingInstruction> 개체를 나타내는 리터럴 구문을 설명합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XML](../../programming-guide/language-features/xml/index.md)

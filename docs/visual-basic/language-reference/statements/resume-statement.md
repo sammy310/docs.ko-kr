@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Resume 문'
 title: Resume 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: db9d47798d087d60f4318b06fe3291fb895e6618
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: fd3a02fc2606355d7e3a34f5c0d69eef577809de
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871867"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741187"
 ---
 # <a name="resume-statement"></a>Resume 문
 
@@ -28,7 +29,7 @@ ms.locfileid: "90871867"
   
  구조화 되지 않은 예외 처리 및 및 문을 사용 하는 대신 가능한 경우 코드에서 구조적 예외 처리를 사용 하는 것이 좋습니다 `On Error` `Resume` . 자세한 내용은 [Try...Catch...Finally 문](try-catch-finally-statement.md)을 참조하세요.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Resume [ Next | line ]  
@@ -66,8 +67,8 @@ Resume [ Next | line ]
   
  **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [Try...Catch...Finally 명령문](try-catch-finally-statement.md)
+- [Try...Catch...Finally 문](try-catch-finally-statement.md)
 - [Error 문](error-statement.md)
 - [On Error 문](on-error-statement.md)

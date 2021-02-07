@@ -1,27 +1,28 @@
 ---
+description: '자세한 정보: 방법: 사용자 지정 인스턴스 저장소 만들기'
 title: '방법: 사용자 지정 인스턴스 저장소 만들기'
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a1a511e6a97dffe510c839aceec8c9d91a77ec1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945641"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742136"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>방법: 사용자 지정 인스턴스 저장소 만들기
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 SQL Server을 사용하여 워크플로 데이터를 유지하는 인스턴스 저장소인 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>가 있습니다. 애플리케이션에서 워크플로 데이터를 다른 매체(예: 다른 데이터베이스 또는 파일 시스템)에 유지해야 할 경우 사용자 지정 인스턴스 스토리지를 구현할 수 있습니다. 사용자 지정 인스턴스 저장소는 추상 <xref:System.Runtime.DurableInstancing.InstanceStore> 클래스를 확장하고 구현에 필요한 메서드를 구현하여 만듭니다. 사용자 지정 인스턴스 저장소의 완전 한 구현에 대 한 참조를 [기업 구매 프로세스](./samples/corporate-purchase-process.md) 샘플입니다.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 SQL Server을 사용하여 워크플로 데이터를 유지하는 인스턴스 저장소인 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>가 있습니다. 애플리케이션에서 워크플로 데이터를 다른 매체(예: 다른 데이터베이스 또는 파일 시스템)에 유지해야 할 경우 사용자 지정 인스턴스 스토리지를 구현할 수 있습니다. 사용자 지정 인스턴스 저장소는 추상 <xref:System.Runtime.DurableInstancing.InstanceStore> 클래스를 확장하고 구현에 필요한 메서드를 구현하여 만듭니다. 사용자 지정 인스턴스 저장소를 완벽 하 게 구현 하려면 [회사 구매 프로세스](./samples/corporate-purchase-process.md) 샘플을 참조 하세요.
 
 ## <a name="implementing-the-begintrycommand-method"></a>BeginTryCommand 메서드 구현
 
 지속성 엔진은 <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A>을 인스턴스 저장소에 보냅니다. `command` 매개 변수의 형식은 실행될 명령을 나타냅니다. 이 매개 변수는 다음 형식일 수 있습니다.
 
-- <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>: 지 속성 엔진은 워크플로 저장 매체에 유지 되어야 하는 경우이 명령을 인스턴스 저장소에 보냅니다. 워크플로 지속성 데이터는 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> 매개 변수의 `command` 멤버의 메서드에 제공됩니다.
+- <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>: 워크플로를 저장 매체에 유지할 때 지속성 엔진은 이 명령을 인스턴스 스토리지에 보냅니다. 워크플로 지속성 데이터는 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> 매개 변수의 `command` 멤버의 메서드에 제공됩니다.
 
-- <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>: 지 속성 엔진은 워크플로를 저장 매체에 로드할 때이 명령을 인스턴스 저장소에 보냅니다. 로드되는 워크플로의 인스턴스 ID가 `instanceId` 매개 변수의 <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> 속성의 `context` 매개 변수의 메서드에 제공됩니다.
+- <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>: 워크플로를 저장 매체에 로드할 때 지속성 엔진은 이 명령을 인스턴스 스토리지에 보냅니다. 로드되는 워크플로의 인스턴스 ID가 `instanceId` 매개 변수의 <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> 속성의 `context` 매개 변수의 메서드에 제공됩니다.
 
-- <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>: 이 명령은 인스턴스를 저장할 때 지 속성 엔진 보냅니다는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 잠금 소유자로 등록 해야 합니다. <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> 매개 변수의 `context` 메서드를 사용하여 현재 워크플로의 인스턴스 ID를 인스턴스 저장소에 제공해야 합니다.
+- <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>: <xref:System.ServiceModel.Activities.WorkflowServiceHost>를 잠금 소유자로 등록해야 할 경우 지속성 엔진은 이 메서드를 인스턴스 저장소에 보냅니다. <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> 매개 변수의 `context` 메서드를 사용하여 현재 워크플로의 인스턴스 ID를 인스턴스 저장소에 제공해야 합니다.
 
      다음 코드 조각에서는 CreateWorkflowOwner 명령을 구현하여 명시적 잠금 소유자를 할당하는 방법을 보여 줍니다.
 
@@ -43,7 +44,7 @@ ms.locfileid: "61945641"
     childInstance.AddInitialInstanceValues(new Dictionary<XName, object>() { { WorkflowHostTypeName, WFInstanceScopeName } });
     ```
 
-- <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: 지 속성 엔진은 잠금 소유자의 인스턴스 ID를 인스턴스 저장소에서 제거할 수 있습니다 하는 경우이 명령을 인스턴스 저장소에 보냅니다. <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>를 사용하기 때문에 잠금 소유자의 ID를 애플리케이션에 제공해야 합니다.
+- <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: 인스턴스 저장소에서 잠금 소유자의 인스턴스 ID를 제거할 수 있을 경우 지속성 엔진은 이 명령을 인스턴스 저장소에 보냅니다. <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>를 사용하기 때문에 잠금 소유자의 ID를 애플리케이션에 제공해야 합니다.
 
      다음 코드 조각에서는 <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>를 사용하여 잠금을 해제하는 방법에 대해 설명합니다.
 
@@ -87,11 +88,11 @@ ms.locfileid: "61945641"
     }
     ```
 
-- <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>: 지 속성 엔진은 워크플로 인스턴스가 워크플로 인스턴스 키를 사용 하 여 로드할 때이 명령을 인스턴스 저장소에 보냅니다. 인스턴스 키의 ID는 명령의 <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> 매개 변수를 사용하여 확인할 수 있습니다.
+- <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>: 워크플로의 인스턴스 키를 사용하여 워크플로 인스턴스를 로드할 때 지속성 엔진은 이 명령을 인스턴스 저장소에 보냅니다. 인스턴스 키의 ID는 명령의 <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> 매개 변수를 사용하여 확인할 수 있습니다.
 
-- <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>: 지 속성 엔진은 워크플로 로드할 수 있는 워크플로 호스트를 만들기 위해 지속형된 워크플로에 대 한 활성화 매개 변수를 검색할 인스턴스 저장소에이 명령을 보냅니다. 활성화할 수 있는 인스턴스를 찾을 때 <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent>를 발생시키는 인스턴스 저장소에 대한 응답으로 엔진은 호스트로 이 명령을 보냅니다. 인스턴스 저장소는 활성화할 수 있는 워크플로가 있는지 확인하기 위해 폴링되어야 합니다.
+- <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>: 워크플로를 로드할 수 있는 워크플로 호스트를 만들기 위해 지속성 엔진은 이 명령을 인스턴스 저장소에 보내 지속형 워크플로에 대한 활성화 매개 변수를 가져옵니다. 활성화할 수 있는 인스턴스를 찾을 때 <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent>를 발생시키는 인스턴스 저장소에 대한 응답으로 엔진은 호스트로 이 명령을 보냅니다. 인스턴스 저장소는 활성화할 수 있는 워크플로가 있는지 확인하기 위해 폴링되어야 합니다.
 
-- <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>: 지 속성 엔진은 실행 가능한 워크플로 인스턴스를 로드 하도록 인스턴스 저장소에이 명령을 보냅니다. 실행할 수 있는 인스턴스를 찾을 때 <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>를 발생시키는 인스턴스 저장소에 대한 응답으로 엔진은 호스트로 이 명령을 보냅니다. 인스턴스 저장소는 실행할 수 있는 워크플로에 대해 폴링해야 합니다. 다음 코드 조각에서는 실행 또는 활성화할 수 있는 워크플로의 인스턴스 저장소를 폴링하는 방법을 보여 줍니다.
+- <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>: 실행 가능한 워크플로 인스턴스를 로드하기 위해 지속성 엔진은 이 명령을 인스턴스 저장소에 보냅니다. 실행할 수 있는 인스턴스를 찾을 때 <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>를 발생시키는 인스턴스 저장소에 대한 응답으로 엔진은 호스트로 이 명령을 보냅니다. 인스턴스 저장소는 실행할 수 있는 워크플로에 대해 폴링해야 합니다. 다음 코드 조각에서는 실행 또는 활성화할 수 있는 워크플로의 인스턴스 저장소를 폴링하는 방법을 보여 줍니다.
 
     ```csharp
     public void PollForEvents()
@@ -226,11 +227,11 @@ ms.locfileid: "61945641"
 
 ## <a name="using-a-custom-instance-store"></a>사용자 지정 인스턴스 저장소 사용
 
-사용자 지정 인스턴스 저장소를 구현하려면 인스턴스 저장소의 인스턴스를 <xref:System.Activities.WorkflowApplication.InstanceStore%2A>에 할당하고 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> 메서드를 구현합니다. 참조 된 [방법: 만들기 및 장기 실행 워크플로 실행](how-to-create-and-run-a-long-running-workflow.md) 세부 사항에 대 한 자습서입니다.
+사용자 지정 인스턴스 저장소를 구현하려면 인스턴스 저장소의 인스턴스를 <xref:System.Activities.WorkflowApplication.InstanceStore%2A>에 할당하고 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> 메서드를 구현합니다. 자세한 내용은 [방법: 장기 실행 워크플로 만들기 및 실행](how-to-create-and-run-a-long-running-workflow.md) 을 참조 하세요.
 
 ## <a name="a-sample-instance-store"></a>샘플 인스턴스 저장소
 
-다음 코드 샘플에서 가져온 전체 인스턴스 저장소 구현 되는 [기업 구매 프로세스](./samples/corporate-purchase-process.md) 샘플입니다. 이 인스턴스 저장소는XML을 사용하여 워크플로 데이터를 파일에 유지합니다.
+다음 코드 샘플은 [회사 구매 프로세스](./samples/corporate-purchase-process.md) 샘플에서 가져온 전체 인스턴스 저장소 구현입니다. 이 인스턴스 저장소는XML을 사용하여 워크플로 데이터를 파일에 유지합니다.
 
 ```csharp
 using System;

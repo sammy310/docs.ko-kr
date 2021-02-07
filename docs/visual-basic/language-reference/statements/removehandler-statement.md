@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: RemoveHandler 문'
 title: RemoveHandler 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - RemoveHandler keyword [Visual Basic]
 - RemoveHandler statement [Visual Basic]
 ms.assetid: 647cd825-e877-4910-b4f1-8d168beebe6a
-ms.openlocfilehash: a815241f20be12b3b7b4f2b87d50a8965021bbf0
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 699db9edfc029b4149246e8b654645040ae6d89e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871939"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741304"
 ---
 # <a name="removehandler-statement"></a>RemoveHandler 문
 
 이벤트와 이벤트 처리기 간의 연결을 제거 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 RemoveHandler event, AddressOf eventhandler  
@@ -44,7 +45,7 @@ RemoveHandler event, AddressOf eventhandler
 
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AddHandler 문](addhandler-statement.md)
 - [핸들](handles-clause.md)

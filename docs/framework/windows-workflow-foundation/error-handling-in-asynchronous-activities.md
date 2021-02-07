@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 비동기 작업에서 오류 처리'
 title: 비동기 작업에서 오류 처리
 ms.date: 03/30/2017
 ms.assetid: e8f8ce2b-50c9-4e44-b187-030e0cf30a5d
-ms.openlocfilehash: 2c214ce1d0f435cda79deb6976ca9196a5d7aee1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: df223998737259aca01a4dc18ed9f2a911d80366
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280262"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742409"
 ---
 # <a name="error-handling-in-asynchronous-activities"></a>비동기 작업에서 오류 처리
 

@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: 식'
 title: 식-WF
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-ms.openlocfilehash: 1dca2090dda981fabb27d3e5f2dff78051d7af24
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: de16168585e2bbcbf8251c8e4b7c06784d72859d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280223"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742357"
 ---
 # <a name="expressions"></a>식
 

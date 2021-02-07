@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: SQL 추적'
 title: SQL 추적
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 916c04b03dee296b7e6f5c792f0c4e50fb4203c0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2b336839b9c63c0b7bde8b6451add00cb353fec6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559352"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741746"
 ---
 # <a name="sql-tracking"></a>SQL 추적
 
@@ -36,11 +37,11 @@ ms.locfileid: "90559352"
 
    로컬 서비스 WSDL 주소의 예는 `http://localhost:65193/StockPriceService.xamlx?wsdl` 입니다.
 
-8. 파일 탐색기를 사용 하 여 WCF 테스트 클라이언트 (WcfTestClient.exe)를 실행 합니다. *Microsoft Visual Studio 10.0 \ Common7\IDE 디렉터리*에 있습니다.
+8. 파일 탐색기를 사용 하 여 WCF 테스트 클라이언트 (WcfTestClient.exe)를 실행 합니다. *Microsoft Visual Studio 10.0 \ Common7\IDE 디렉터리* 에 있습니다.
 
-9. WCF 테스트 클라이언트에서 **파일** 메뉴를 클릭 하 고 **서비스 추가**를 선택 합니다. 로컬 서비스 주소를 텍스트 상자에 붙여넣습니다. **확인**을 클릭하여 대화 상자를 닫습니다.
+9. WCF 테스트 클라이언트에서 **파일** 메뉴를 클릭 하 고 **서비스 추가** 를 선택 합니다. 로컬 서비스 주소를 텍스트 상자에 붙여넣습니다. **확인** 을 클릭하여 대화 상자를 닫습니다.
 
-10. WCF 테스트 클라이언트에서 **GetStockPrice**를 두 번 클릭 합니다. 그러면 `GetStockPrice` 하나의 매개 변수를 사용 하는 작업이 열리고 값에을 입력 하 `Contoso` 고 **호출**을 클릭 합니다.
+10. WCF 테스트 클라이언트에서 **GetStockPrice** 를 두 번 클릭 합니다. 그러면 `GetStockPrice` 하나의 매개 변수를 사용 하는 작업이 열리고 값에을 입력 하 `Contoso` 고 **호출** 을 클릭 합니다.
 
 11. 내보낸 추적 레코드가 SQL 데이터베이스에 기록됩니다. 추적 레코드를 보려면 SQL Management Studio에서 TrackingSample 데이터베이스를 열고 테이블을 찾습니다. 테이블에 대해 선택 쿼리를 실행하면 해당 테이블에 저장되어 있는 추적 레코드 내의 데이터가 표시됩니다.
 
@@ -62,6 +63,6 @@ ms.locfileid: "90559352"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 모니터링 샘플](/previous-versions/appfabric/ff383407(v=azure.10))

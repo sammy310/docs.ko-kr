@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Throw 문 (Visual Basic)'
 title: Throw 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -14,24 +15,24 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 95572b1739490e90f53da6b6ec283bfb532c46d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b7fa4183b5997e5dac8045502a8eed1afe66fc0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404137"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740940"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw 문(Visual Basic)
 
 프로시저 내에서 예외를 throw 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 Throw [ expression ]
 ```
 
-## <a name="part"></a>부분
+## <a name="part"></a>파트
 
 `expression`\
 Throw 되는 예외에 대 한 정보를 제공 합니다. 문에 있으면 선택 사항이 고 `Catch` , 그렇지 않으면 필수입니다.
@@ -52,5 +53,5 @@ Throw 되는 예외에 대 한 정보를 제공 합니다. 문에 있으면 선�
 
 ## <a name="see-also"></a>참고 항목
 
-- [Try...Catch...Finally 명령문](try-catch-finally-statement.md)
+- [Try...Catch...Finally 문](try-catch-finally-statement.md)
 - [On Error 문](on-error-statement.md)

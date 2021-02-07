@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Select ... Case 문 (Visual Basic)'
 title: Select...Case 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -21,18 +22,18 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-ms.openlocfilehash: 750e765390ad223976b000fe64e656fa2d62a34b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 4f8edecd0a0b1afd59e182a372e308c3829a9b93
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871784"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741135"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case 문(Visual Basic)
 
 식의 값에 따라 여러 문 그룹 중 하나를 실행 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Select [ Case ] testexpression  
@@ -48,7 +49,7 @@ End Select
 |용어|정의|  
 |---|---|  
 |`testexpression`|필수 요소. 식 는 기본 데이터 형식 (,,,,,,,,,,,,,, `Boolean` `Byte` `Char` `Date` `Double` `Decimal` `Integer` `Long` `Object` `SByte` `Short` `Single` `String` `UInteger` `ULong` 및 `UShort` ) 중 하나로 계산 되어야 합니다.|  
-|`expressionlist`|`Case`문에 필요 합니다. 에 대해 일치 하는 값을 나타내는 식 절의 목록입니다 `testexpression` . 여러 식 절은 쉼표로 구분 됩니다. 각 절은 다음 형식 중 하나를 사용할 수 있습니다.<br /><br /> -   *expression1* `To` *식 2*<br />-[ `Is` ] *comparisonoperator.equals* *식*<br />-   *식*<br /><br /> 키워드를 사용 `To` 하 여에 대 한 일치 값 범위의 경계를 지정 `testexpression` 합니다. 값은 `expression1` 의 값 보다 작거나 같아야 합니다 `expression2` .<br /><br /> `Is`비교 연산자 (,,,, 또는)와 함께 키워드를 사용 `=` `<>` 하 여 `<` `<=` `>` `>=` 에 대 한 일치 값에 대 한 제한을 지정 `testexpression` 합니다. 키워드를 `Is` 제공 하지 않으면 *comparisonoperator.equals*앞에 자동으로 삽입 됩니다.<br /><br /> 만 지정 하는 폼은 `expression` `Is` *comparisonoperator.equals* 가 등호 () 인 특수 한 경우로 취급 됩니다 `=` . 이 폼은로 평가 됩니다 `testexpression`  =  `expression` .<br /><br /> 의 식은 `expressionlist` 의 형식으로 암시적으로 변환 가능 하 고 해당가 사용 되는 `testexpression` `comparisonoperator` 두 가지 형식에 적합 한 경우의 모든 데이터 형식일 수 있습니다.|  
+|`expressionlist`|`Case`문에 필요 합니다. 에 대해 일치 하는 값을 나타내는 식 절의 목록입니다 `testexpression` . 여러 식 절은 쉼표로 구분 됩니다. 각 절은 다음 형식 중 하나를 사용할 수 있습니다.<br /><br /> -   *expression1* `To` *식 2*<br />-[ `Is` ] *comparisonoperator.equals* *식*<br />-   *식*<br /><br /> 키워드를 사용 `To` 하 여에 대 한 일치 값 범위의 경계를 지정 `testexpression` 합니다. 값은 `expression1` 의 값 보다 작거나 같아야 합니다 `expression2` .<br /><br /> `Is`비교 연산자 (,,,, 또는)와 함께 키워드를 사용 `=` `<>` 하 여 `<` `<=` `>` `>=` 에 대 한 일치 값에 대 한 제한을 지정 `testexpression` 합니다. 키워드를 `Is` 제공 하지 않으면 *comparisonoperator.equals* 앞에 자동으로 삽입 됩니다.<br /><br /> 만 지정 하는 폼은 `expression` `Is` *comparisonoperator.equals* 가 등호 () 인 특수 한 경우로 취급 됩니다 `=` . 이 폼은로 평가 됩니다 `testexpression`  =  `expression` .<br /><br /> 의 식은 `expressionlist` 의 형식으로 암시적으로 변환 가능 하 고 해당가 사용 되는 `testexpression` `comparisonoperator` 두 가지 형식에 적합 한 경우의 모든 데이터 형식일 수 있습니다.|  
 |`statements`|선택 사항입니다. `Case`가 `testexpression` 에서 절과 일치 하는 경우이 실행 되는 하나 이상의 문입니다 `expressionlist` .|  
 |`elsestatements`|선택 사항입니다. `Case Else`가 문의에 있는 절과 일치 하지 않는 경우 실행 되는 다음 문이 하나 이상 `testexpression` `expressionlist` `Case` 있습니다.|  
 |`End Select`|... 생성의 정의를 종료 합니다. `Select` `Case`|  
@@ -73,7 +74,7 @@ End Select
  의 설정은 `Option Compare` 문자열 비교에 영향을 줄 수 있습니다. 에서 `Option Compare Text` "사과" 및 "사과" 문자열은 동일한 것으로 간주 되지만 `Option Compare Binary` 에서는 그렇지 않습니다.  
   
 > [!NOTE]
-> `Case`여러 절이 있는 문은 단락 이라는 동작을 나타낼 *short-circuiting*수 있습니다. Visual Basic는 절을 왼쪽에서 오른쪽으로 계산 하 고, 일치 하는을 생성 하는 경우 `testexpression` 나머지 절은 계산 되지 않습니다. 단락을 통해 성능을 향상 시킬 수 있지만의 모든 식이 계산 될 것으로 예상 되는 경우 예기치 않은 결과가 발생할 수 있습니다 `expressionlist` . 단락에 대 한 자세한 내용은 [부울 식](../../programming-guide/language-features/operators-and-expressions/boolean-expressions.md)을 참조 하세요.  
+> `Case`여러 절이 있는 문은 단락 이라는 동작을 나타낼 수 있습니다. Visual Basic는 절을 왼쪽에서 오른쪽으로 계산 하 고, 일치 하는을 생성 하는 경우 `testexpression` 나머지 절은 계산 되지 않습니다. 단락을 통해 성능을 향상 시킬 수 있지만의 모든 식이 계산 될 것으로 예상 되는 경우 예기치 않은 결과가 발생할 수 있습니다 `expressionlist` . 단락에 대 한 자세한 내용은 [부울 식](../../programming-guide/language-features/operators-and-expressions/boolean-expressions.md)을 참조 하세요.  
   
  `Case`또는 문 블록 내의 코드에서 `Case Else` 블록의 문을 더 이상 실행할 필요가 없는 경우 문을 사용 하 여 블록을 종료할 수 있습니다 `Exit Select` . 그러면 다음 문으로 제어가 즉시 전송 `End Select` 됩니다.  
   
@@ -85,7 +86,7 @@ End Select
   
  [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
 - [End 문](end-statement.md)

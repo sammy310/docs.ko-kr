@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: WCF 클라이언트를 사용 하 여 WSE 3.0 서비스 액세스'
 title: '방법: WCF 클라이언트를 사용하여 WSE 3.0 서비스에 액세스'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: c955244c2e6821abda3a1fc5e25f00a73389ff1d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5a117b4c3d743d783c37ed3e27e3cf11e44abec3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257771"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742929"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>방법: WCF 클라이언트를 사용하여 WSE 3.0 서비스에 액세스
 

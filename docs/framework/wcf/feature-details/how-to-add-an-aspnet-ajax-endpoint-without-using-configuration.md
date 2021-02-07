@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 구성을 사용 하지 않고 ASP.NET AJAX 끝점 추가'
 title: '방법: 구성을 사용하지 않고 ASP.NET AJAX 엔드포인트 추가'
 ms.date: 03/30/2017
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-ms.openlocfilehash: e33f1fed7dd7bf45966815949ac544250f4d1de8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 52f572b8da1358911760808688574b6a1ac1bccd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257628"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742773"
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>방법: 구성을 사용하지 않고 ASP.NET AJAX 엔드포인트 추가
 
