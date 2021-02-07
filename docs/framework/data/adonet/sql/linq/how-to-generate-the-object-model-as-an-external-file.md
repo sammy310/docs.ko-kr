@@ -1,32 +1,33 @@
 ---
+description: '자세한 정보: 방법: 외부 파일로 개체 모델 생성'
 title: '방법: 외부 파일로 개체 모델 생성'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 2442caec5400759ae2bfeca35f99ebd2ff52d011
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7270e0204b1de5c56d9bc7bf9df89f72d8030e7b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180766"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738899"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="b360b-102">방법: 외부 파일로 개체 모델 생성</span><span class="sxs-lookup"><span data-stu-id="b360b-102">How to: Generate the Object Model as an External File</span></span>
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a><span data-ttu-id="81241-103">방법: 외부 파일로 개체 모델 생성</span><span class="sxs-lookup"><span data-stu-id="81241-103">How to: Generate the Object Model as an External File</span></span>
 
-<span data-ttu-id="b360b-103">특성 기반 매핑을 사용하는 대신 SQLMetal 명령줄 도구를 사용하여 개체 모델을 외부 XML 파일로 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b360b-103">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="b360b-104">자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b360b-104">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="b360b-105">외부 XML 매핑 파일을 사용하면 코드를 간단하게 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b360b-105">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="b360b-106">또한 애플리케이션의 이진 파일을 다시 컴파일할 필요 없이 외부 파일을 수정하여 동작을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b360b-106">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="b360b-107">자세한 내용은 [외부 매핑](external-mapping.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="b360b-107">For more information, see [External Mapping](external-mapping.md).</span></span>  
+<span data-ttu-id="81241-104">특성 기반 매핑을 사용하는 대신 SQLMetal 명령줄 도구를 사용하여 개체 모델을 외부 XML 파일로 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="81241-104">As an alternative to attribute-based mapping, you can generate your object model as an external XML file by using the SQLMetal command-line tool.</span></span> <span data-ttu-id="81241-105">자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="81241-105">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="81241-106">외부 XML 매핑 파일을 사용하면 코드를 간단하게 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="81241-106">By using an external XML mapping file, you reduce clutter in your code.</span></span> <span data-ttu-id="81241-107">또한 애플리케이션의 이진 파일을 다시 컴파일할 필요 없이 외부 파일을 수정하여 동작을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="81241-107">You can also change behavior by modifying the external file without recompiling the binaries of your application.</span></span> <span data-ttu-id="81241-108">자세한 내용은 [외부 매핑](external-mapping.md)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="81241-108">For more information, see [External Mapping](external-mapping.md).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="b360b-108">개체 관계형 디자이너는 외부 매핑 파일의 생성을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b360b-108">The Object Relational Designer does not support generation of an external mapping file.</span></span>  
+> <span data-ttu-id="81241-109">개체 관계형 디자이너는 외부 매핑 파일의 생성을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="81241-109">The Object Relational Designer does not support generation of an external mapping file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b360b-109">예제</span><span class="sxs-lookup"><span data-stu-id="b360b-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="81241-110">예제</span><span class="sxs-lookup"><span data-stu-id="81241-110">Example</span></span>  
 
- <span data-ttu-id="b360b-110">다음 명령에서는 Northwind 샘플 데이터베이스에서 외부 매핑 파일을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="b360b-110">The following command generates an external mapping file from the Northwind sample database.</span></span>  
+ <span data-ttu-id="81241-111">다음 명령에서는 Northwind 샘플 데이터베이스에서 외부 매핑 파일을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="81241-111">The following command generates an external mapping file from the Northwind sample database.</span></span>  
   
 ```console  
 sqlmetal /server:myserver /database:northwind /map:externalfile.xml  
 ```  
   
-## <a name="example"></a><span data-ttu-id="b360b-111">예제</span><span class="sxs-lookup"><span data-stu-id="b360b-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="81241-112">예제</span><span class="sxs-lookup"><span data-stu-id="81241-112">Example</span></span>  
 
- <span data-ttu-id="b360b-112">다음 예제에서는 외부 매핑 파일의 일부로, Northwind 샘플 데이터베이스의 Customers 테이블에 대한 매핑을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b360b-112">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="b360b-113">이 발췌는 **/map** 옵션과 함께 SQLMetal을 실행 하 여 생성 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="b360b-113">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
+ <span data-ttu-id="81241-113">다음 예제에서는 외부 매핑 파일의 일부로, Northwind 샘플 데이터베이스의 Customers 테이블에 대한 매핑을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="81241-113">The following excerpt from an external mapping file shows the mapping for the Customers table in the Northwind sample database.</span></span> <span data-ttu-id="81241-114">이 발췌는 **/map** 옵션과 함께 SQLMetal을 실행 하 여 생성 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="81241-114">This excerpt was generated by executing SQLMetal with the **/map** option.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -51,8 +52,8 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 </Database>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b360b-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b360b-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81241-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="81241-115">See also</span></span>
 
-- [<span data-ttu-id="b360b-115">개체 모델 만들기</span><span class="sxs-lookup"><span data-stu-id="b360b-115">Creating the Object Model</span></span>](creating-the-object-model.md)
-- [<span data-ttu-id="b360b-116">외부 매핑</span><span class="sxs-lookup"><span data-stu-id="b360b-116">External Mapping</span></span>](external-mapping.md)
-- [<span data-ttu-id="b360b-117">방법: Visual Basic 또는 C#에서 개체 모델 생성</span><span class="sxs-lookup"><span data-stu-id="b360b-117">How to: Generate the Object Model in Visual Basic or C#</span></span>](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [<span data-ttu-id="81241-116">개체 모델 만들기</span><span class="sxs-lookup"><span data-stu-id="81241-116">Creating the Object Model</span></span>](creating-the-object-model.md)
+- [<span data-ttu-id="81241-117">외부 매핑</span><span class="sxs-lookup"><span data-stu-id="81241-117">External Mapping</span></span>](external-mapping.md)
+- [<span data-ttu-id="81241-118">방법: Visual Basic 또는 C#에서 개체 모델 생성</span><span class="sxs-lookup"><span data-stu-id="81241-118">How to: Generate the Object Model in Visual Basic or C#</span></span>](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
