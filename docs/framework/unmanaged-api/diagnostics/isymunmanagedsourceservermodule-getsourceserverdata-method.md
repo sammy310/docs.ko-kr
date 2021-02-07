@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedSourceServerModule:: GetSourceServerData 메서드'
 title: ISymUnmanagedSourceServerModule::GetSourceServerData 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-ms.openlocfilehash: c76c8b23e707b530cbf1c28d03fbf2f84d424482
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cdba764534000273170ccd693a3fbc7b5df9c3c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734012"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763165"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData 메서드
 
@@ -42,7 +43,7 @@ HRESULT GetSourceServerData(
  `ppData`  
  제한이 반환 된 값에 대 한 포인터 `pDataByteCount` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -50,6 +51,6 @@ HRESULT GetSourceServerData(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedSourceServerModule 인터페이스](isymunmanagedsourceservermodule-interface.md)

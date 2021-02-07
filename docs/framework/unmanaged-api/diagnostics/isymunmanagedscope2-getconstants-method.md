@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedScope2:: GetConstants 메서드'
 title: ISymUnmanagedScope2::GetConstants 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-ms.openlocfilehash: df42e58a9bb3bf00b3fa4df45086dc2219658e25
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 025bb9ddd0501f2309b2c0a3f7af20eb961604cb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725848"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763217"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants 메서드
 
@@ -48,7 +49,7 @@ HRESULT GetConstants(
  `constants`  
  제한이 상수를 저장 하는 버퍼입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -56,6 +57,6 @@ HRESULT GetConstants(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedScope2 인터페이스](isymunmanagedscope2-interface.md)

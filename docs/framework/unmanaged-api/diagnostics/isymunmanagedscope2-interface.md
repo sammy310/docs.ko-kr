@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedScope2 인터페이스'
 title: ISymUnmanagedScope2 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2ed6a387-ba45-483e-9a1e-b0c69f67998b
 topic_type:
 - apiref
-ms.openlocfilehash: 40c437e109eaa4352a83c5566185593cbc6b0eba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a15094da68b00dbec454b2f6a642ac333f9a34ed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725835"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763152"
 ---
 # <a name="isymunmanagedscope2-interface"></a>ISymUnmanagedScope2 인터페이스
 
@@ -36,7 +37,7 @@ ms.locfileid: "95725835"
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedScope 인터페이스](isymunmanagedscope-interface.md)
