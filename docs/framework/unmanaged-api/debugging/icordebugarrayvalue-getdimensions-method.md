@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugArrayValue:: GetDimensions 메서드'
 title: ICorDebugArrayValue::GetDimensions 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-ms.openlocfilehash: bf498a14af3dccc7278155ecfc74132c2b519ed3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 007a48891a01e5779e3f9ef10cec720d6647c8f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698197"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723103"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions 메서드
 

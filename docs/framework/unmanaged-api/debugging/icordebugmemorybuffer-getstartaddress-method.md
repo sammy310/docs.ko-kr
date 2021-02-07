@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugMemoryBuffer:: GetStartAddress 메서드'
 title: ICorDebugMemoryBuffer::GetStartAddress 메서드
 ms.date: 03/30/2017
 ms.assetid: f804d9ab-8c88-44f0-b278-5fcca7f87726
-ms.openlocfilehash: f76bf1479db987e4956d8b876f67d629d927f956
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 46720d70b8a1019e712b577b24dec5d4c3d5a31d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710764"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722713"
 ---
 # <a name="icordebugmemorybuffergetstartaddress-method"></a>ICorDebugMemoryBuffer::GetStartAddress 메서드
 
@@ -41,7 +42,7 @@ HRESULT GetStartAddress(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugMemoryBuffer 인터페이스](icordebugmemorybuffer-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

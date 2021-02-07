@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 CommitMessageRetry를 확인 하세요.
 title: Microsoft.Transactions.TransactionBridge.CommitMessageRetry
 ms.date: 03/30/2017
 ms.assetid: 4abe01f0-6398-4fba-b2f3-c054b7f7e971
-ms.openlocfilehash: 28b83b293570adf3b1cfdc15c77afd0f0cf768eb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8f45463ac31c210acd8534df2c4e1ef2922f1c8e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96259027"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99720607"
 ---
 # <a name="microsofttransactionstransactionbridgecommitmessageretry"></a>Microsoft.Transactions.TransactionBridge.CommitMessageRetry
 
 커밋 메시지 재시도를 응답하지 않는 참가자에게 보냈습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  로컬 트랜잭션 관리자가 주어진 시간 내에 응답을 받지 못해서 커밋 메시지를 하위 참가자에게 다시 전송해야 할 경우에 추적됩니다.  
   

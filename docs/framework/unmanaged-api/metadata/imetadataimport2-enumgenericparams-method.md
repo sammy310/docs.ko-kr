@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataImport2:: EnumGenericParams 메서드'
 title: IMetaDataImport2::EnumGenericParams 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b50488a5-3cf0-483c-82dc-2892a3ec61ac
 topic_type:
 - apiref
-ms.openlocfilehash: 6b1a8e66eea6caec9dfc8d99e343c987cefa1b0c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9d4e9d163da07ec4a3af1aa628b8b6ec4b2338fe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702760"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99720945"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams 메서드
 
@@ -55,7 +56,7 @@ HRESULT EnumGenericParams (
  `pcGenericParams`  
  제한이 에 배치 된 반환 된 토큰 수 `rGenericParams` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -72,7 +73,7 @@ HRESULT EnumGenericParams (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)

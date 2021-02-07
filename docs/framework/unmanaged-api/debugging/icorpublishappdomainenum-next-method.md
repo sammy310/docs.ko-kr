@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorPublishAppDomainEnum:: Next 메서드'
 title: ICorPublishAppDomainEnum::Next 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: 00aff9ab4edbbebe4b924d335fa12f92e9840737
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8e8255aa2326c6f0678132f5735d6cdf504dcbd0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95693699"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721725"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next 메서드
 
@@ -58,6 +59,6 @@ HRESULT Next (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorPublishAppDomainEnum 인터페이스](icorpublishappdomainenum-interface.md)

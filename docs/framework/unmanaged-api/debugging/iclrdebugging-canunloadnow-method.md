@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRDebugging:: CanUnloadNow 메서드'
 title: ICLRDebugging::CanUnloadNow 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 62e0630c-8cb7-45d2-b622-5a472abfd8cf
 topic_type:
 - apiref
-ms.openlocfilehash: e89d936c528ea7482487a8629dbd882f6f67483e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 537494fe862c58aa8a8768dd5ce2abc8ca94f87d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723573"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723376"
 ---
 # <a name="iclrdebuggingcanunloadnow-method"></a>ICLRDebugging::CanUnloadNow 메서드
 
@@ -37,7 +38,7 @@ HRESULT CanUnloadNow(HMODULE hModule);
  `hmodule`  
  진행 대상 프로세스에 있는 모듈의 기본 주소입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -63,7 +64,7 @@ HRESULT CanUnloadNow(HMODULE hModule);
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)

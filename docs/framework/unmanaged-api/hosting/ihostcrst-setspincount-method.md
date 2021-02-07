@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostCrst:: SetSpinCount 메서드'
 title: IHostCrst::SetSpinCount 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 863fc8ce-9b8a-477e-8dd8-75c8544bb43a
 topic_type:
 - apiref
-ms.openlocfilehash: 22274759f931da614a234efe0a6f6eb3aade027c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f04281d2649f210e64fc4c0585eb7d52be3e8ec5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729566"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721231"
 ---
 # <a name="ihostcrstsetspincount-method"></a>IHostCrst::SetSpinCount 메서드
 
@@ -39,7 +40,7 @@ HRESULT SetSpinCount (
  `dwSpinCount`  
  진행 현재 인스턴스의 새 스핀 개수 `IHostCrst` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -66,7 +67,7 @@ HRESULT SetSpinCount (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRSyncManager 인터페이스](iclrsyncmanager-interface.md)
 - [IHostCrst 인터페이스](ihostcrst-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRDebugging:: OpenVirtualProcess 메서드'
 title: ICLRDebugging::OpenVirtualProcess 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-ms.openlocfilehash: 2edd7f628e17c8dc6cbcbb577d06269ba8c64cb1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f9f195e1202a26a13b09cace74328c3937a9fcf1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723544"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723298"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 메서드
 
@@ -61,21 +62,21 @@ HRESULT OpenVirtualProcess(
  제한이 로 식별 되는 COM 인터페이스에 대 한 포인터입니다 `riidProcess` .  
   
  `pVersion`  
- [in, out] CLR의 버전입니다. 입력 시이 값은 일 수 있습니다 `null` . 구조체의 필드를 [CLR_DEBUGGING_VERSION](clr-debugging-version-structure.md) `wStructVersion` 0 (영)으로 초기화 해야 하는 CLR_DEBUGGING_VERSION 구조를 가리킬 수도 있습니다.  
+ [in, out] CLR의 버전입니다. 입력 시이 값은 일 수 있습니다 `null` . 구조체의 필드를 [](clr-debugging-version-structure.md) `wStructVersion` 0 (영)으로 초기화 해야 하는 CLR_DEBUGGING_VERSION 구조를 가리킬 수도 있습니다.  
   
  출력 시 반환 된 `CLR_DEBUGGING_VERSION` 구조체는 CLR의 버전 정보로 채워집니다.  
   
  `pdwFlags`  
  제한이 지정 된 런타임에 대 한 정보 플래그입니다. 플래그에 대 한 설명은 [CLR_DEBUGGING_PROCESS_FLAGS](clr-debugging-process-flags-enumeration.md) 항목을 참조 하세요.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pDataTarget`이(가) `null`인 경우.|  
+|E_POINTER|`pDataTarget`이(가) `null`인 경우|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](iclrdebugginglibraryprovider-interface.md) 콜백에서 오류를 반환 하거나 올바른 핸들을 제공 하지 않습니다.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` 는이 버전의 런타임에 필요한 데이터 대상 인터페이스를 구현 하지 않습니다.|  
 |CORDBG_E_NOT_CLR|표시 된 모듈이 CLR 모듈이 아닙니다. 이 HRESULT는 메모리가 손상 되었거나, 모듈을 사용할 수 없거나, CLR 버전이 shim 버전 보다 이후 CLR 모듈을 검색할 수 없는 경우에도 반환 됩니다.|  
@@ -98,7 +99,7 @@ HRESULT OpenVirtualProcess(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)

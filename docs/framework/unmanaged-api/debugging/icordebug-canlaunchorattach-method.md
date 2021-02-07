@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebug:: CanLaunchOrAttach 메서드'
 title: ICorDebug::CanLaunchOrAttach 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ca7723db-7c07-4cdd-bd92-fba34928b623
 topic_type:
 - apiref
-ms.openlocfilehash: 195c7e1e7c61fd6ac8a21226b52e3782d2f7e421
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cb813c4bae968941de731d9d5b74d8f804b3c8ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723495"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723246"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach 메서드
 
@@ -43,7 +44,7 @@ HRESULT CanLaunchOrAttach (
  `win32DebuggingEnabled`  
  진행 `true` Win32 디버깅을 사용 하도록 설정 하 여를 시작 하거나 win32 디버깅을 사용 하도록 설정 하 여 연결 하려면를 전달 하 고, 그렇지 않으면를 전달 `false` 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  현재 컴퓨터와 런타임 구성에 대 한 정보를 고려 하 여 디버깅 서비스에서 새 프로세스를 시작 하거나 지정 된 프로세스에 연결 하는 것이 가능한 지 확인 하는 경우에 S_OK 합니다. 가능한 HRESULT 값은 다음과 같습니다.  
   
@@ -71,6 +72,6 @@ HRESULT CanLaunchOrAttach (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebug 인터페이스](icordebug-interface.md)

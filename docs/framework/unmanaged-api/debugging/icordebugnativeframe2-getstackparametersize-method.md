@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugNativeFrame2:: GetStackParameterSize 메서드'
 title: ICorDebugNativeFrame2::GetStackParameterSize 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f6a449c8-a941-43ba-9a90-c98b29ae3c36
 topic_type:
 - apiref
-ms.openlocfilehash: 21af3980de9b5a768b6af9a8aca74b693c7ac528
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 08a17ced0be75737c1c49aa3f9bb42b13bbe8aa0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695493"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722336"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize 메서드
 
@@ -37,7 +38,7 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
  `pSize`  
  제한이 스택에 있는 매개 변수의 누적 크기에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -64,7 +65,7 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugNativeFrame2 인터페이스](icordebugnativeframe2-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

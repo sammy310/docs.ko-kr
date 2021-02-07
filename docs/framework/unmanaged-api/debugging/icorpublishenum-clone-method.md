@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorPublishEnum:: Clone 메서드'
 title: ICorPublishEnum::Clone 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c9a26ea3-b8eb-4b8e-854f-9a2ca26b3b39
 topic_type:
 - apiref
-ms.openlocfilehash: 44ecba99999d04603477f411e68834548f6a7cda
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6001f27451afdb564da6275a31256ac348bc693a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95693556"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721647"
 ---
 # <a name="icorpublishenumclone-method"></a>ICorPublishEnum::Clone 메서드
 
@@ -49,6 +50,6 @@ HRESULT Clone (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorPublishEnum 인터페이스](icorpublishenum-interface.md)

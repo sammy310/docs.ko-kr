@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugModule2:: ResolveAssembly 메서드'
 title: ICorDebugModule2::ResolveAssembly 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddf9085c-7161-44bd-9609-cd2732b9009f
 topic_type:
 - apiref
-ms.openlocfilehash: e64e39d10d20f63430ffe9d2c4df8643e286a677
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: fba53b8ff76e4d3deb1876d2a20a7a2edc20bd06
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210038"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722596"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>ICorDebugModule2::ResolveAssembly 메서드
 
@@ -38,7 +39,7 @@ HRESULT ResolveAssembly (
 ## <a name="parameters"></a>매개 변수
 
 `tkAssemblyRef`\
-진행 `mdToken`어셈블리를 참조 하는 값입니다.
+진행 `mdToken` 어셈블리를 참조 하는 값입니다.
 
 `ppAssembly`\
 제한이 어셈블리를 나타내는 ICorDebugAssembly 개체의 주소에 대 한 포인터입니다.

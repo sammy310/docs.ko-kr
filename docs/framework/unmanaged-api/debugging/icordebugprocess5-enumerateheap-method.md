@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugProcess5:: EnumerateHeap 메서드'
 title: ICorDebugProcess5::EnumerateHeap 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b0192104-6073-4089-a4df-dc29ee033074
 topic_type:
 - apiref
-ms.openlocfilehash: 22ab29f8a204a4b27dafdefcd3652cc3dcf9769c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b43e7993b114ed64d009f91746ea987198edde74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671137"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722037"
 ---
 # <a name="icordebugprocess5enumerateheap-method"></a>ICorDebugProcess5::EnumerateHeap 메서드
 
@@ -55,7 +56,7 @@ HRESULT EnumerateHeap(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugProcess5 인터페이스](icordebugprocess5-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

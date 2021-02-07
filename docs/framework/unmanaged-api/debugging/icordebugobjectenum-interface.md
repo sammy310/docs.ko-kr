@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugObjectEnum 인터페이스'
 title: ICorDebugObjectEnum 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ffb4498-7719-49d3-8890-df2c22248a0c
 topic_type:
 - apiref
-ms.openlocfilehash: 9400c4fa3ddcefef923d7bcfaae80e2cef62dc7d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d5cd8580bfa81af7d644c2fb11524a43a9062ddf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695467"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722245"
 ---
 # <a name="icordebugobjectenum-interface"></a>ICorDebugObjectEnum 인터페이스
 
@@ -46,6 +47,6 @@ ICorDebugEnum 메서드를 구현 하 고 개체의 배열을 Rva (상대 가상
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)

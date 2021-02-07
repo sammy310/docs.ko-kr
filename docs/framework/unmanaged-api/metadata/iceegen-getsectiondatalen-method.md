@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: ICeeGen:: GetSectionDataLen 메서드'
 title: ICeeGen::GetSectionDataLen 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2a06ee4-b8ee-49c7-935a-c1031a29eef2
 topic_type:
 - apiref
-ms.openlocfilehash: b45b0a59a29a27e7b0a395f3928215959450f9a5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9475112a6f25e9a4c57c4ded6cd11dab9bf352b9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698470"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721056"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen 메서드
 
@@ -59,6 +60,6 @@ HRESULT GetSectionDataLen (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICeeGen 인터페이스](iceegen-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugNativeFrame:: GetLocalDoubleRegisterValue 메서드'
 title: ICorDebugNativeFrame::GetLocalDoubleRegisterValue 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1f838215-ac8a-434f-8ce6-03021d3098d9
 topic_type:
 - apiref
-ms.openlocfilehash: 10f06fb04099ef947711bc7c5641e5a7f1fa36b7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a478c51ea7bf04b3fc3faf49fef39f9b29a30599
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695701"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722427"
 ---
 # <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a>ICorDebugNativeFrame::GetLocalDoubleRegisterValue 메서드
 
@@ -69,4 +70,4 @@ HRESULT GetLocalDoubleRegisterValue (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목

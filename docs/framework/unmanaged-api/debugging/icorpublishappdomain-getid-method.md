@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorPublishAppDomain:: GetID 메서드'
 title: ICorPublishAppDomain::GetID 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 229437e3-1465-4bd8-8846-9804b2488133
 topic_type:
 - apiref
-ms.openlocfilehash: ab331145a8147e8830cb9b158a1975bc748c7cce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b3de19c053b5fcce2af5e0036ee6174b01700aac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716865"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721842"
 ---
 # <a name="icorpublishappdomaingetid-method"></a>ICorPublishAppDomain::GetID 메서드
 
@@ -53,6 +54,6 @@ HRESULT GetID (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorPublishAppDomain 인터페이스](icorpublishappdomain-interface.md)

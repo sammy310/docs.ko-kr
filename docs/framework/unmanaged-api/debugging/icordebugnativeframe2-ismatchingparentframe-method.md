@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugNativeFrame2:: IsMatchingParentFrame 메서드'
 title: ICorDebugNativeFrame2::IsMatchingParentFrame 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-ms.openlocfilehash: 213bee96531fa0bbc9bf0ae76b2505019833abfc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6dff1cb7f5205ad742ac4b886f72938dd28bd88f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724704"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722206"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame 메서드
 
@@ -42,7 +43,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
  `pIsParent`  
  [out] `true` `pPotentialParentFrame` 가 현재 프레임의 부모 이면이 고, 그렇지 않으면 `false` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -68,7 +69,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugNativeFrame2 인터페이스](icordebugnativeframe2-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorPublishAppDomainEnum 인터페이스'
 title: ICorPublishAppDomainEnum 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb798c56-042e-475d-a245-b6fac36d0c07
 topic_type:
 - apiref
-ms.openlocfilehash: 5b5a901bef779948467cfcc3d71a1fcd057c1aeb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4e84af576103a792308fd44f903f2ae4daa5d736
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95693712"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721790"
 ---
 # <a name="icorpublishappdomainenum-interface"></a>ICorPublishAppDomainEnum 인터페이스
 
@@ -45,7 +46,7 @@ ms.locfileid: "95693712"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [CorpubPublish Coclass](corpubpublish-coclass.md)

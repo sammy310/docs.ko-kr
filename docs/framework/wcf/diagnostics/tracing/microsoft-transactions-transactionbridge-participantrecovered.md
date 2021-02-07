@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 ParticipantRecovered를 확인 하세요.
 title: Microsoft.Transactions.TransactionBridge.ParticipantRecovered
 ms.date: 03/30/2017
 ms.assetid: be6f1ede-2b05-437d-8f86-165dc9968a35
-ms.openlocfilehash: d87b2e97dfeaa75a4432fde1e872bc0afd66bdc0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 179bd34ca0497bf38c04496f99a4638bc3575b9f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96258987"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99720594"
 ---
 # <a name="microsofttransactionstransactionbridgeparticipantrecovered"></a>Microsoft.Transactions.TransactionBridge.ParticipantRecovered
 
 TM 로그에서 참가자 인리스트먼트를 복구했습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  로컬 트랜잭션 관리자가 지정된 하위 참가자 인리스트먼트에 대해 성공적으로 복구를 수행했을 때 추적됩니다.  
   

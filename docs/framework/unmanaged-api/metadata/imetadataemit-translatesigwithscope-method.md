@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataEmit:: TranslateSigWithScope 메서드'
 title: IMetaDataEmit::TranslateSigWithScope 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-ms.openlocfilehash: 80d33da2eb2a7f0cfbe5dcb7279fff9973dada2e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e5f4e522e993f2f391ca0c29e5fcc2cbb71775e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712926"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99720934"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope 메서드
 
@@ -89,7 +90,7 @@ HRESULT TranslateSigWithScope (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)
 - [IMetaDataAssemblyImport 인터페이스](imetadataassemblyimport-interface.md)

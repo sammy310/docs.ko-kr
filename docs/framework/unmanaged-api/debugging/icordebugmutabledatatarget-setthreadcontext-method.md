@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugMutableDataTarget:: SetThreadContext 메서드'
 title: ICorDebugMutableDataTarget::SetThreadContext 메서드
 ms.date: 03/30/2017
 ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
-ms.openlocfilehash: 558a1ee2eb0ac06213c2ebcebbd5595b69ecc43e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4674df92b72b44e19eff663c9a17dd8ca4b5a1b0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695712"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99722479"
 ---
 # <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>ICorDebugMutableDataTarget::SetThreadContext 메서드
 
@@ -46,7 +47,7 @@ HRESULT SetThreadContext(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugMutableDataTarget 인터페이스](icordebugmutabledatatarget-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataDispenser 인터페이스'
 title: IMetaDataDispenser 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 989840b3-9822-4ce5-a6c5-b375d3340a7a
 topic_type:
 - apiref
-ms.openlocfilehash: c798aeba46adf91a8c13f8143c00f02173a0bb52
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5ba37fc05a4e1897b100967d32b268f91a0e4402
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726108"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721010"
 ---
 # <a name="imetadatadispenser-interface"></a>IMetaDataDispenser 인터페이스
 
@@ -43,7 +44,7 @@ ms.locfileid: "95726108"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataDispenserEx 인터페이스](imetadatadispenserex-interface.md)
 - [메타데이터 인터페이스](metadata-interfaces.md)

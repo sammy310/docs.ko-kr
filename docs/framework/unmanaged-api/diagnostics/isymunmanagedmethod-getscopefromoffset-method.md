@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedMethod:: GetScopeFromOffset 메서드'
 title: ISymUnmanagedMethod::GetScopeFromOffset 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d14cf210-81f8-46e1-8b19-6ddec0ba8b11
 topic_type:
 - apiref
-ms.openlocfilehash: cf2784ce0ac6e614e75a341660808b9fe03ada0e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 87dd1f1732ec5d7c8669dbc2bf73b0b6128aafa1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699445"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99721322"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset 메서드
 
@@ -42,7 +43,7 @@ HRESULT GetScopeFromOffset(
  `pRetVal`  
  제한이 반환 된 [ISymUnmanagedScope](isymunmanagedscope-interface.md) interface로 설정 된 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -50,6 +51,6 @@ HRESULT GetScopeFromOffset(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedMethod 인터페이스](isymunmanagedmethod-interface.md)

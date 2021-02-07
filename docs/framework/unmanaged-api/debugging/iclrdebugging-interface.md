@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRDebugging 인터페이스'
 title: ICLRDebugging 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 429d8fce-b1b1-49d7-895c-28c1c1aa2dbd
 topic_type:
 - apiref
-ms.openlocfilehash: 6eea7f6c222b8e30376ec72ee0c193a68c23f0d0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 647b6f7634ef3b9f6ec6080aaff19476c027952a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723560"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99723337"
 ---
 # <a name="iclrdebugging-interface"></a>ICLRDebugging 인터페이스
 
@@ -46,7 +47,7 @@ ms.locfileid: "95723560"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)
