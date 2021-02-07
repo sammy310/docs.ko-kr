@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataFilter:: MarkToken 메서드'
 title: IMetaDataFilter::MarkToken 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: bd492834-6529-4d39-b93d-f8cdbd3e297f
 topic_type:
 - apiref
-ms.openlocfilehash: c942838fb62bf86c4054761f4e7f2ef0518b3d89
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 97191533ae7d2bdc951521f1929a4c001c521b9d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95701811"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99677797"
 ---
-# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="15094-102">IMetaDataFilter::MarkToken 메서드</span><span class="sxs-lookup"><span data-stu-id="15094-102">IMetaDataFilter::MarkToken Method</span></span>
+# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="efaf1-103">IMetaDataFilter::MarkToken 메서드</span><span class="sxs-lookup"><span data-stu-id="efaf1-103">IMetaDataFilter::MarkToken Method</span></span>
 
-<span data-ttu-id="15094-103">지정 된 메타 데이터 토큰이 처리 되었음을 나타내는 값을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="15094-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  
+<span data-ttu-id="efaf1-104">지정 된 메타 데이터 토큰이 처리 되었음을 나타내는 값을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="efaf1-104">Sets a value indicating that the specified metadata token has been processed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15094-104">구문</span><span class="sxs-lookup"><span data-stu-id="15094-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="efaf1-105">구문</span><span class="sxs-lookup"><span data-stu-id="efaf1-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT MarkToken (  
@@ -34,21 +35,21 @@ HRESULT MarkToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="15094-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="15094-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="efaf1-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="efaf1-106">Parameters</span></span>  
 
  `tk`  
- <span data-ttu-id="15094-106">진행 처리 된 것으로 표시할 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="15094-106">[in] The token to mark as processed.</span></span>  
+ <span data-ttu-id="efaf1-107">진행 처리 된 것으로 표시할 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="efaf1-107">[in] The token to mark as processed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="15094-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="15094-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="efaf1-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="efaf1-108">Requirements</span></span>  
 
- <span data-ttu-id="15094-108">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="15094-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="efaf1-109">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="efaf1-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="15094-109">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="15094-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="efaf1-110">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="efaf1-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="15094-110">**라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="15094-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="efaf1-111">**라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="efaf1-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="15094-111">**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15094-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="efaf1-112">**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="efaf1-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15094-112">참조</span><span class="sxs-lookup"><span data-stu-id="15094-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="efaf1-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="efaf1-113">See also</span></span>
 
-- [<span data-ttu-id="15094-113">IMetaDataFilter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="15094-113">IMetaDataFilter Interface</span></span>](imetadatafilter-interface.md)
+- [<span data-ttu-id="efaf1-114">IMetaDataFilter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="efaf1-114">IMetaDataFilter Interface</span></span>](imetadatafilter-interface.md)
