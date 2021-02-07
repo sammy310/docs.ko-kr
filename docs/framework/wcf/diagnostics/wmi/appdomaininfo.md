@@ -1,19 +1,20 @@
 ---
+description: '자세히 알아보기: AppDomainInfo'
 title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
-ms.openlocfilehash: c5c44f4d8f6d93443802d5e1950c4d850976c5b6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1e527f2a25c48a3bf35d974e3ac192d937a8a86e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291130"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757971"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 
 애플리케이션 도메인 정보  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class AppDomainInfo  
@@ -89,7 +90,7 @@ class AppDomainInfo
   
  System.Wmi.MessageLogging 추적 소스를 수신 대기하는 컬렉션 추적 수신기입니다.  
   
-### <a name="name"></a>이름  
+### <a name="name"></a>Name  
 
  데이터 형식: 문자열  
   
