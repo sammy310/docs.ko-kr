@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: GetHistoryFileDirectory 함수'
 title: GetHistoryFileDirectory 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93232222-926e-42ac-b85d-8a6d33977672
 topic_type:
 - apiref
-ms.openlocfilehash: 484adf288356b9955fe0cac0bb30002ec1f012d3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 960bc75d69f4be6d1639e109d6327b5e65d3e129
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724440"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760968"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory 함수
 
@@ -42,7 +43,7 @@ HRESULT GetHistoryFileDirectory (
  `pdwSize`  
  [in, out] 버퍼의 길이입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 Winerror.h 파일에 정의 된 대로 다음 값 외에 표준 COM 오류 코드를 반환 합니다.  
   
@@ -65,7 +66,7 @@ HRESULT GetHistoryFileDirectory (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [CreateHistoryReader 함수](createhistoryreader-function.md)
 - [NukeDownloadedCache 함수](nukedownloadedcache-function.md)

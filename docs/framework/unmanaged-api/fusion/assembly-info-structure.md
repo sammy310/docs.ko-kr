@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: ASSEMBLY_INFO 구조체'
 title: ASSEMBLY_INFO 구조체
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b3cbb47c-457f-4083-8895-49562ca99ab8
 topic_type:
 - apiref
-ms.openlocfilehash: 520a24ced6e897d926ce68ef5973ab7083731b9d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c28d9abf13769197b62705d51bbcf4f099616bbc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717632"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761287"
 ---
 # <a name="assembly_info-structure"></a>ASSEMBLY_INFO 구조체
 
@@ -37,7 +38,7 @@ typedef struct _ASSEMBLY_INFO {
 } ASSEMBLY_INFO;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -55,7 +56,7 @@ typedef struct _ASSEMBLY_INFO {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Fusion 구조체](fusion-structures.md)
 - [전역 어셈블리 캐시](../../app-domains/gac.md)

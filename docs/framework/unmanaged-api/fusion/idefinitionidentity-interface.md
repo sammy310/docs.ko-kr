@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: IDefinitionIdentity 인터페이스'
 title: IDefinitionIdentity 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce5ba888-5fbe-4efd-91cf-f0ff94d8428b
 topic_type:
 - apiref
-ms.openlocfilehash: 4f08fbbf9c8be16dff092327713e731c5aa14661
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3471879cc822b655b786dd9d8234950cb4b99c1d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732879"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760656"
 ---
 # <a name="idefinitionidentity-interface"></a>IDefinitionIdentity 인터페이스
 
@@ -42,6 +43,6 @@ ms.locfileid: "95732879"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Fusion 인터페이스](fusion-interfaces.md)

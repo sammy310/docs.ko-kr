@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedWriter5:: MapTokenToSourceSpan 메서드'
 title: ISymUnmanagedWriter5::MapTokenToSourceSpan 메서드
 ms.date: 03/30/2017
 ms.assetid: d0fbbf61-71c6-4fb1-8c9f-d619ca5d7d68
-ms.openlocfilehash: e4b09e6d89b3ba8ba3bf7e149d31a14a74b945b5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b30d8051f5d2872488639ce999cccd4248af367f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723937"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761618"
 ---
 # <a name="isymunmanagedwriter5maptokentosourcespan-method"></a>ISymUnmanagedWriter5::MapTokenToSourceSpan 메서드
 
@@ -32,7 +33,7 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
 |`endLine`||  
 |`endColumn`||  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `HRESULT`를 반환합니다.  
   
@@ -40,6 +41,6 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedWriter5 인터페이스](isymunmanagedwriter5-interface.md)

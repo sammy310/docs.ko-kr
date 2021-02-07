@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CreateHistoryReader 함수'
 title: CreateHistoryReader 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66a89acf-8c32-44c0-8787-960c99c7b3ec
 topic_type:
 - apiref
-ms.openlocfilehash: 9dae3f1403d33aaf3cfb87d17856640548a90b4d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0943f3d0f3322d34ed92c0a96b909e4d63ec5e7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688964"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761124"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader 함수
 
@@ -42,7 +43,7 @@ HRESULT CreateHistoryReader (
  `ppHistoryReader`  
  제한이 성공적으로 완료 되 면 기록 판독기에 대 한 포인터를 포함 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 Winerror.h에 정의 된 대로 표준 COM 오류 코드와 함께 다음 표에 설명 된 값을 반환 합니다.  
   
@@ -59,6 +60,6 @@ HRESULT CreateHistoryReader (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Fusion 전역 정적 함수](fusion-global-static-functions.md)

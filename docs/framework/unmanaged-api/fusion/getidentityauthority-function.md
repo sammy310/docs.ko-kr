@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: GetIdentityAuthority 함수'
 title: GetIdentityAuthority 함수
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 843cd5ab-d2b7-4ff6-86bd-e68c7a91c098
 topic_type:
 - apiref
-ms.openlocfilehash: e9631211993afbfe968c7122828251746f15c3f6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5126aa9b319af41f7ecd30845a9f74ba69016588
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732128"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760998"
 ---
 # <a name="getidentityauthority-function"></a>GetIdentityAuthority 함수
 
@@ -47,7 +48,7 @@ HRESULT GetIdentityAuthority (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IIdentityAuthority 인터페이스](iidentityauthority-interface.md)
 - [Fusion 전역 정적 함수](fusion-global-static-functions.md)

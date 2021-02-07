@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: IAssemblyCache:: CreateAssemblyCacheItem 메서드'
 title: IAssemblyCache::CreateAssemblyCacheItem 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 017a7ba5-aaaf-44e2-9cbe-ceebef259df0
 topic_type:
 - apiref
-ms.openlocfilehash: b417377ea1d0746e563490d87cc9a988e857d943
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3377901d358bcf643ce0d30336c1c0cd8089e50c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697040"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760981"
 ---
 # <a name="iassemblycachecreateassemblycacheitem-method"></a>IAssemblyCache::CreateAssemblyCacheItem 메서드
 
@@ -63,7 +64,7 @@ HRESULT CreateAssemblyCacheItem (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IAssemblyCache 인터페이스](iassemblycache-interface.md)
 - [IAssemblyCacheItem 인터페이스](iassemblycacheitem-interface.md)

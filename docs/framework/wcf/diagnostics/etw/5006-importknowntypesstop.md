@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 5006-ImportKnownTypesStop'
 title: 5006 - ImportKnownTypesStop
 ms.date: 03/30/2017
 ms.assetid: 2e1786c1-cbdd-4427-b8fc-cbf86b8debae
-ms.openlocfilehash: ed1a3e03e2684fb41a34129abd423a36586ce21d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f4f2fa4dbdbbaf3849a23f76edd22b37a510ab32
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96235599"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760175"
 ---
 # <a name="5006---importknowntypesstop"></a>5006 - ImportKnownTypesStop
 
@@ -20,7 +21,7 @@ ms.locfileid: "96235599"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 ImportKnownTypes이 중지될 때 내보내집니다.  
   

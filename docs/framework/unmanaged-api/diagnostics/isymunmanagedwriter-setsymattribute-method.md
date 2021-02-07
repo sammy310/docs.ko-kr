@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedWriter:: SetSymAttribute 메서드'
 title: ISymUnmanagedWriter::SetSymAttribute 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64d9b80e-b883-4539-89c7-03573185a1eb
 topic_type:
 - apiref
-ms.openlocfilehash: 484affb2ca87ca50a805d1bb46b7749d294d09f2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0509e6430646fa67112b29d30d5053eb4a541415
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683513"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761995"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute 메서드
 
@@ -50,7 +51,7 @@ HRESULT SetSymAttribute(
  `data`  
  진행 특성 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -58,6 +59,6 @@ HRESULT SetSymAttribute(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedWriter 인터페이스](isymunmanagedwriter-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedVariable:: GetName 메서드'
 title: ISymUnmanagedVariable::GetName 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eedf1ef0-9d4a-4847-a201-4e99572dfe5e
 topic_type:
 - apiref
-ms.openlocfilehash: f9da3ca8684da3bbc87146b3b52effdc4f91393d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 88d8cf4c81200a30e2a102b63af2817fef2b50c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726888"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762788"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>ISymUnmanagedVariable::GetName 메서드
 
@@ -47,7 +48,7 @@ HRESULT GetName(
  `szName`  
  제한이 이름을 저장 하는 버퍼입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -55,6 +56,6 @@ HRESULT GetName(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedVariable 인터페이스](isymunmanagedvariable-interface.md)

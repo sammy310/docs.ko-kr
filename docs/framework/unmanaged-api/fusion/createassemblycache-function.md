@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: CreateAssemblyCache 함수'
 title: CreateAssemblyCache 함수
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 348c7c8c-8578-46ae-97cf-480d6015c3c6
 topic_type:
 - apiref
-ms.openlocfilehash: 3197c650b4f167e7a5043270797d2c4a62413d8e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1646e1d33401c557b13ae5c025f53aef48042004
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683201"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761163"
 ---
 # <a name="createassemblycache-function"></a>CreateAssemblyCache 함수
 
@@ -54,7 +55,7 @@ HRESULT CreateAssemblyCache (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IAssemblyCache 인터페이스](iassemblycache-interface.md)
 - [Fusion 전역 정적 함수](fusion-global-static-functions.md)

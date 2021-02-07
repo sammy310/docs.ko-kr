@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 5008-Dcgen<c13> Start'
 title: 5008 - DCGenWriterStart
 ms.date: 03/30/2017
 ms.assetid: a132bd14-15e9-4a14-8a64-41ac85adf620
-ms.openlocfilehash: 61273ac5e56984a2b44d8ead98e2140a4c628bf8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ac279de3b91d4d6a5744bfd18cb66414338055bf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96235573"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760149"
 ---
 # <a name="5008---dcgenwriterstart"></a>5008 - DCGenWriterStart
 
@@ -20,7 +21,7 @@ ms.locfileid: "96235573"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 DataContract 작성기 생성이 시작될 때 내보내집니다.  
   

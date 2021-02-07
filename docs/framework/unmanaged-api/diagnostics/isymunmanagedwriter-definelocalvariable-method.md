@@ -1,4 +1,5 @@
 ---
+description: ISymUnmanagedWriter::D efineLocalVariable 메서드에 대해 자세히 알아보세요.
 title: ISymUnmanagedWriter::DefineLocalVariable 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-ms.openlocfilehash: b8b9f8e63a0b52dde0e814f53cfc75e6f6d48e78
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd817e3002c2a55fd8bbd7e565283752926f746b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723027"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762372"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable 메서드
 
@@ -69,12 +70,12 @@ HRESULT DefineLocalVariable(
  진행 매개 변수 사양의 세 번째 주소입니다.  
   
  `startOffset`  
- 진행 변수의 시작 오프셋입니다. 이 매개 변수는 선택 사항입니다. 0 인 경우이 매개 변수는 무시 되 고 변수는 전체 범위에서 정의 됩니다. 0이 아닌 값인 경우 변수는 현재 범위의 오프셋 내에 속합니다.  
+ 진행 변수의 시작 오프셋입니다. 이 매개 변수는 선택적 요소입니다. 0 인 경우이 매개 변수는 무시 되 고 변수는 전체 범위에서 정의 됩니다. 0이 아닌 값인 경우 변수는 현재 범위의 오프셋 내에 속합니다.  
   
  `endOffset`  
- 진행 변수의 끝 오프셋입니다. 이 매개 변수는 선택 사항입니다. 0 인 경우이 매개 변수는 무시 되 고 변수는 전체 범위에서 정의 됩니다. 0이 아닌 값인 경우 변수는 현재 범위의 오프셋 내에 속합니다.  
+ 진행 변수의 끝 오프셋입니다. 이 매개 변수는 선택적 요소입니다. 0 인 경우이 매개 변수는 무시 되 고 변수는 전체 범위에서 정의 됩니다. 0이 아닌 값인 경우 변수는 현재 범위의 오프셋 내에 속합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -82,7 +83,7 @@ HRESULT DefineLocalVariable(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedWriter 인터페이스](isymunmanagedwriter-interface.md)
 - [DefineGlobalVariable 메서드](isymunmanagedwriter-defineglobalvariable-method.md)

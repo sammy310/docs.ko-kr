@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: IAssemblyCacheItem:: AbortItem 메서드'
 title: IAssemblyCacheItem::AbortItem 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: be9f47f1-f532-4603-a192-a73cb7a0c4b2
 topic_type:
 - apiref
-ms.openlocfilehash: 8fff7c2c30d49de5fb7c14c2b094bc214d4992cd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ef488f089fd75bc5e9c5b81e597a1c8fcc7ac554
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95670682"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760890"
 ---
 # <a name="iassemblycacheitemabortitem-method"></a>IAssemblyCacheItem::AbortItem 메서드
 
@@ -40,6 +41,6 @@ HRESULT AbortItem ();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IAssemblyCacheItem 인터페이스](iassemblycacheitem-interface.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedWriter4 인터페이스'
 title: ISymUnmanagedWriter4 인터페이스
 ms.date: 03/30/2017
 ms.assetid: 4af5e8c0-987d-405e-b934-8b9e70fcae6e
-ms.openlocfilehash: c2b57897e4f0e8b23337302f344065d79677e0c4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3814d7e2728f28d224a4e9a6d99f699f220e8a4d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725809"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761683"
 ---
 # <a name="isymunmanagedwriter4-interface"></a>ISymUnmanagedWriter4 인터페이스
 
@@ -31,7 +32,7 @@ ISymUnmanagedWriter4 인터페이스입니다.
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedWriter3 인터페이스](isymunmanagedwriter3-interface.md)

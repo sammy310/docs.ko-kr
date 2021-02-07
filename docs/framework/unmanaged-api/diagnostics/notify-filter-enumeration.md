@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: 열거형 NOTIFY_FILTER'
 title: NOTIFY_FILTER 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4789d08f-8683-45d3-ac30-73d48c61e470
 topic_type:
 - apiref
-ms.openlocfilehash: 365bc0dc73b04d3afd171c40f336432f77552b6d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0ed09af0af302b08102b7b08fa72a2d255c5b231
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690956"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761488"
 ---
 # <a name="notify_filter-enumeration"></a>NOTIFY_FILTER 열거형
 
@@ -40,7 +41,7 @@ enum tagNOTIFY_FILTER
 };  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -56,6 +57,6 @@ enum tagNOTIFY_FILTER
 
  **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 열거형](diagnostics-symbol-store-enumerations.md)

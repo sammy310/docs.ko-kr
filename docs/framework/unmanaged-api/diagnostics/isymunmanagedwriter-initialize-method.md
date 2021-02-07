@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedWriter:: Initialize 메서드'
 title: ISymUnmanagedWriter::Initialize 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e0ebd793-3764-4df0-8f12-0e95f60b9eae
 topic_type:
 - apiref
-ms.openlocfilehash: c702aa32e8c8d6d5c137f7968d1578715102180f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: eab60e9539df3d43a1602268d704ac324f028915
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726863"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762294"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize 메서드
 
@@ -52,7 +53,7 @@ HRESULT Initialize(
  `fFullBuild`  
  [in] `true` 전체 다시 작성 인 경우 `false` 증분 컴파일 인 경우입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -60,7 +61,7 @@ HRESULT Initialize(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedWriter 인터페이스](isymunmanagedwriter-interface.md)
 - [Initialize2 메서드](isymunmanagedwriter-initialize2-method.md)

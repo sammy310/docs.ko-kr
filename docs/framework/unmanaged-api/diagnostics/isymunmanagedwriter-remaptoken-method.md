@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedWriter:: RemapToken 메서드'
 title: ISymUnmanagedWriter::RemapToken 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bca92682-ee1e-467f-8fb0-d8d4617f82fe
 topic_type:
 - apiref
-ms.openlocfilehash: 8799815f7c6c6aefc7081f3583e6fd174cd478f7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c065d42c3d2749f0262fdd81a74de918274ba67d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683559"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762086"
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a>ISymUnmanagedWriter::RemapToken 메서드
 
@@ -42,7 +43,7 @@ HRESULT RemapToken(
  `newToken`  
  진행 가 다시 매핑되는 새 메타 데이터 토큰입니다 `oldToken` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -50,6 +51,6 @@ HRESULT RemapToken(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedWriter 인터페이스](isymunmanagedwriter-interface.md)

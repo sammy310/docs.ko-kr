@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorThreadpool:: Corget Threads 메서드'
 title: ICorThreadpool::CorGetAvailableThreads 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b09b750-0b86-4ba4-9621-041857cfe8ba
 topic_type:
 - apiref
-ms.openlocfilehash: 09b1f56600c05bf8e6028328adb80083b03ccc13
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ca6b476a00ce781e10c0708f5132b398b4c85398
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725781"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760591"
 ---
 # <a name="icorthreadpoolcorgetavailablethreads-method"></a>ICorThreadpool::CorGetAvailableThreads 메서드
 
@@ -45,6 +46,6 @@ HRESULT CorGetAvailableThreads (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorThreadpool 인터페이스](icorthreadpool-interface.md)

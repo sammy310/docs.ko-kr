@@ -1,4 +1,5 @@
 ---
+description: ISymUnmanagedWriter2::D efineGlobalVariable2 메서드에 대해 자세히 알아보세요.
 title: ISymUnmanagedWriter2::DefineGlobalVariable2 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04d569d6-a151-4957-9872-f3f694c3e4a9
 topic_type:
 - apiref
-ms.openlocfilehash: e417854f5f82ba2e0f16848f53b2b605dccf9eb5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9a33ff8d452419ff103c9f4402620bd28196ae54
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683461"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761904"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2 메서드
 
@@ -62,7 +63,7 @@ HRESULT DefineGlobalVariable2(
  `addr3`  
  진행 매개 변수 사양의 세 번째 주소입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -70,7 +71,7 @@ HRESULT DefineGlobalVariable2(
 
  **헤더:** CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedWriter2 인터페이스](isymunmanagedwriter2-interface.md)
 - [DefineGlobalVariable 메서드](isymunmanagedwriter-defineglobalvariable-method.md)

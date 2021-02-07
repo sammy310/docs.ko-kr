@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Fusion 열거형'
 title: Fusion 열거형
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - fusion enumerations [.NET Framework]
 - enumerations [.NET Framework fusion]
 ms.assetid: 5817b4bc-b0ba-4b2f-a11c-a03dd8cb8f84
-ms.openlocfilehash: c014d6fcf8ac34ebc82b43214a358039d8c28907
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6549347a80d4831c9065da94a6d9bab318058dec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688759"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761098"
 ---
 # <a name="fusion-enumerations"></a>Fusion 열거형
 
@@ -37,7 +38,7 @@ ms.locfileid: "95688759"
  [CREATE_ASM_NAME_OBJ_FLAGS 열거형](create-asm-name-obj-flags-enumeration.md)  
  `IAssemblyName` [Createassemblynameobject](createassemblynameobject-function.md) 함수에 의해 생성 되는 개체의 특성을 지정 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [Fusion 인터페이스](fusion-interfaces.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedWriter:: SetScopeRange 메서드'
 title: ISymUnmanagedWriter::SetScopeRange 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d4d98676-444b-46ca-bfe6-0d827385cd22
 topic_type:
 - apiref
-ms.openlocfilehash: 06dff4847ec3d15f446f1c89219b10eddb8eec4f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 43cfbeaa0d366b9f2d25068cfa7b91a0fea8ac59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683526"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762060"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>ISymUnmanagedWriter::SetScopeRange 메서드
 
@@ -46,7 +47,7 @@ HRESULT OpenScope(
  `endOffset`  
  진행 메서드의 시작 부분에서 어휘 범위에 있는 마지막 명령의 오프셋 (바이트)입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -58,6 +59,6 @@ HRESULT OpenScope(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedWriter 인터페이스](isymunmanagedwriter-interface.md)

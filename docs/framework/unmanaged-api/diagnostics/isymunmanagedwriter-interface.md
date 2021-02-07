@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedWriter 인터페이스'
 title: ISymUnmanagedWriter 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d6733ec-f081-4166-bc17-de09e16dc304
 topic_type:
 - apiref
-ms.openlocfilehash: fddfd2a163f6e6513b648ee0b724c0b5bd54c81a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 20fc0fd9b76b1aae4090582fe48a8a8e77d77c9f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722936"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762242"
 ---
 # <a name="isymunmanagedwriter-interface"></a>ISymUnmanagedWriter 인터페이스
 
@@ -58,7 +59,7 @@ ms.locfileid: "95722936"
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedWriter2 인터페이스](isymunmanagedwriter2-interface.md)

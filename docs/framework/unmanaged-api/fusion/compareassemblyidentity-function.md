@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CompareAssemblyIdentity 함수'
 title: CompareAssemblyIdentity 함수
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8b364ae1-8efa-4744-a7da-81fd093d84d6
 topic_type:
 - apiref
-ms.openlocfilehash: da32ce6a40378a6f88cf71bd7707be2079d71068
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aa55d1ea0b1968ec4e50106139e154e29e159ec7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717597"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761215"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 함수
 
@@ -59,7 +60,7 @@ STDAPI CompareAssemblyIdentity (
  `pResult`  
  제한이 비교에 대 한 자세한 정보를 포함 하는 [AssemblyComparisonResult](assemblycomparisonresult-enumeration.md) 열거형입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `pfEquivalent` 두 어셈블리가 동일한 지 여부를 나타내는 부울 값을 반환 합니다. `pResult` 값 중 하나를 반환 `AssemblyComparisonResult` 하 여 값에 대 한 보다 자세한 원인을 제공 `pfEquivalent` 합니다.  
   
@@ -87,7 +88,7 @@ STDAPI CompareAssemblyIdentity (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Fusion 전역 정적 함수](fusion-global-static-functions.md)
 - [AssemblyComparisonResult 열거형](assemblycomparisonresult-enumeration.md)

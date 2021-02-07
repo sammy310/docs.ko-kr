@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IAssemblyName:: GetVersion 메서드'
 title: IAssemblyName::GetVersion 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 42230928-2c33-41fd-9519-d96efef6c7af
 topic_type:
 - apiref
-ms.openlocfilehash: 6f37979c7a4873a7751db0296dc7d485c3444561
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3339dda6a0b4f083655ece7bef86b080a8fcf5c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715903"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760721"
 ---
 # <a name="iassemblynamegetversion-method"></a>IAssemblyName::GetVersion 메서드
 
@@ -51,6 +52,6 @@ HRESULT GetVersion (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IAssemblyName 인터페이스](iassemblyname-interface.md)

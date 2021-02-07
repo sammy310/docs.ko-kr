@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: IAssemblyCacheItem:: Commit 메서드'
 title: IAssemblyCacheItem::Commit 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c2321f17-f46f-4815-ae41-b28678753613
 topic_type:
 - apiref
-ms.openlocfilehash: 2b7c10e82aca2b2ece7ea4d7209c1f3c9a456434
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bd73bb9099090089e52d52009cfef309b33adc53
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95670409"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760858"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit 메서드
 
@@ -51,6 +52,6 @@ HRESULT Commit (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IAssemblyCacheItem 인터페이스](iassemblycacheitem-interface.md)

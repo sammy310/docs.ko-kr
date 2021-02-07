@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Fusion 구조체'
 title: Fusion 구조체
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - structures [.NET Framework fusion]
 - unmanaged structures [.NET Framework], fusion
 ms.assetid: 3feb4fc5-a1e9-445d-929c-0a7490244114
-ms.openlocfilehash: 0e901ab6c78333a430ca43b01c65bfb01ee1b08e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b514a6e537de1e18dbb626b904830e3b1f505bb1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728338"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761022"
 ---
 # <a name="fusion-structures"></a>Fusion 구조체
 
@@ -31,7 +32,7 @@ ms.locfileid: "95728338"
  [IDENTITY_ATTRIBUTE_BLOB 구조체](identity-attribute-blob-structure.md)  
  연결 된 [IDENTITY_ATTRIBUTE](identity-attribute-structure.md) 구조체의 오프셋 정보를 포함 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [Fusion 인터페이스](fusion-interfaces.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Fusion 전역 정적 함수'
 title: Fusion 전역 정적 함수
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - fusion global static functions [.NET Framework]
 - global static functions [.NET Framework fusion]
 ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
-ms.openlocfilehash: 691fd50e05cadd3f82196fc6ba5df9bb84a66faa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c696908f72d67ecff5e7383e7a2754dd5436b819
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688746"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761085"
 ---
 # <a name="fusion-global-static-functions"></a>Fusion 전역 정적 함수
 
@@ -67,7 +68,7 @@ ms.locfileid: "95688746"
  [PreBindAssemblyEx 함수](prebindassemblyex-function.md)  
  어셈블리의 정책 후 표시 이름을 가져옵니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [Fusion 인터페이스](fusion-interfaces.md)  
   
