@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 배포 응용 프로그램 보안'
 title: 분산 애플리케이션 보안
 ms.date: 03/30/2017
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 80878857145c7a4e09106b6e1c4cb9ad68b7680a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 79e206157e7bb0a242b66064d345038d4272cf3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254248"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743163"
 ---
 # <a name="distributed-application-security"></a>분산 애플리케이션 보안
 
@@ -32,7 +33,7 @@ WCF (Windows Communication Foundation) 보안은 전송 보안, 액세스 제어
 
  세 함수(무결성, 기밀성, 인증)를 총칭하여 전송 보안이라고 합니다. 전송 보안은 분산 애플리케이션에 대한 위협을 줄이는 데 도움이 되는 함수를 제공합니다. 다음 표에서는 전송 보안을 구성하는 세 함수에 대해 간략하게 설명합니다.  
   
-|기능|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |무결성|*무결성* 은 데이터를 완료 하 고 정확 하 게 지정 하는 것입니다. 특히, 한 지점에서 다른 지점으로 이동 하 여 많은 행위자가 읽을 수 있습니다. 무결성은 데이터 변조 방지를 위해 유지되어야 하며, 일반적으로 메시지에 대한 디지털 서명을 통해 수행됩니다.|  
 |기밀성|*기밀성* 은 의도 된 판독기가 아닌 다른 사람이 메시지를 읽지 않았다는 것입니다. 예를 들어, 인터넷을 통해 전송되는 신용 카드 번호를 기밀로 유지해야 합니다. 기밀성은 대개 퍼블릭 키/프라이빗 키 스키마를 사용하는 데이터 암호화를 통해 제공됩니다.|  
@@ -68,10 +69,10 @@ WCF (Windows Communication Foundation) 보안은 전송 보안, 액세스 제어
 
  다음 표에서는 전송 보안을 사용하는 애플리케이션을 만들 때 사용할 수 있는 값을 보여 줍니다. 이러한 값은 코드 또는 바인딩 설정에 사용할 수 있습니다.  
   
-|설정|Description|  
+|설정|설명|  
 |-------------|-----------------|  
 |없음|클라이언트가 자격 증명을 제공할 필요가 없음을 지정합니다. 익명 클라이언트로 변환됩니다.|  
-|기본|기본 인증을 지정합니다. 자세한 내용은 RFC2617, "[HTTP 인증: 기본 및 다이제스트 인증](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)"을 참조 하세요.|  
+|Basic|기본 인증을 지정합니다. 자세한 내용은 RFC2617, "[HTTP 인증: 기본 및 다이제스트 인증](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)"을 참조 하세요.|  
 |다이제스트|다이제스트 인증을 지정합니다. 자세한 내용은 RFC2617, "[HTTP 인증: 기본 및 다이제스트 인증](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)"을 참조 하세요.|  
 |Ntlm|Windows 도메인에서 SSPI 협상을 사용하여 Windows 인증을 지정합니다.<br /><br /> SSPI 협상은 Kerberos 프로토콜 또는 NTLM(NT LanMan)을 사용합니다.|  
 |Windows|Windows 도메인에서 SSPI를 사용하여 Windows 인증을 지정합니다. SSPI는 Kerberos 프로토콜 또는 NTLM을 인증 서비스로 선택합니다.<br /><br /> SSPI는 Kerberos 프로토콜을 먼저 시도한 다음 실패하면 NTLM을 사용합니다.|  
@@ -81,7 +82,7 @@ WCF (Windows Communication Foundation) 보안은 전송 보안, 액세스 제어
 
  다음 표에서는 메시지 보안을 사용하는 애플리케이션을 만들 때 사용할 수 있는 값을 보여 줍니다. 이러한 값은 코드 또는 바인딩 설정에 사용할 수 있습니다.  
   
-|설정|Description|  
+|설정|설명|  
 |-------------|-----------------|  
 |없음|서비스와 익명 클라이언트가 상호 작용할 수 있습니다.|  
 |Windows|Windows 자격 증명의 인증된 컨텍스트에서 SOAP 메시지 교환을 수행할 수 있습니다. SSPI 협상 메커니즘을 사용하여 Kerberos 프로토콜 또는 NTLM을 인증 서비스로 선택합니다.|  

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 워크플로 서비스에서 Serialization 구성'
 title: 워크플로 서비스에서 Serialization 구성
 ms.date: 03/30/2017
 ms.assetid: aa70b290-a2ee-4c3c-90ea-d0a7665096ae
-ms.openlocfilehash: d1cda33c8a469b4a54b6d282b99c07b23e91543e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e268f82fc3c1f65086e3c6b112e481ad8abed070
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96284201"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743241"
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>워크플로 서비스에서 Serialization 구성
 

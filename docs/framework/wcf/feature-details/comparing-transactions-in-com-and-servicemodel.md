@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: COM + 및 ServiceModel의 트랜잭션 비교'
 title: COM+ 및 ServiceModel의 트랜잭션 비교
 ms.date: 03/30/2017
 ms.assetid: e493bcdd-b91a-4486-853f-83dbcd1931b7
-ms.openlocfilehash: 30ecbd374e909141dbc944740f90c1b41ac44ed2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9b4e8e0940297e887ec9a3085ebe521afe4d000d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96264910"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743423"
 ---
 # <a name="comparing-transactions-in-com-and-servicemodel"></a>COM+ 및 ServiceModel의 트랜잭션 비교
 
@@ -22,5 +23,5 @@ ms.locfileid: "96264910"
 |RequiresNew|<xref:System.ServiceModel.TransactionFlowAttribute>이 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>로 설정됩니다.<br /><br /> <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>이(가) `true`인 경우<br /><br /> 바인딩 요소의 `TransactionFlow` 특성이 `false`인 경우|  
 |필수|<xref:System.ServiceModel.TransactionFlowAttribute>이 <xref:System.ServiceModel.TransactionFlowOption.Allowed>로 설정됩니다.<br /><br /> <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>이(가) `true`인 경우<br /><br /> 바인딩 요소의 `TransactionFlow` 특성이 `true`인 경우|  
 |지원됨|직접 대응하는 특성이 없습니다. 일반적으로 `Required`에 지정된 동작을 대신 사용해야 합니다.|  
-|NotSupported|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>은 `false`입니다.<br /><br /> 바인딩 요소의 `TransactionFlow` 특성이 `false`인 경우|  
+|NotSupported|<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>이(가) `false`인 경우<br /><br /> 바인딩 요소의 `TransactionFlow` 특성이 `false`인 경우|  
 |사용 안 함|직접 대응하는 특성이 없습니다. 일반적으로 `NotSupported`에 지정된 동작을 대신 사용해야 합니다.|

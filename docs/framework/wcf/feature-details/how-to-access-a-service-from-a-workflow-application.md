@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 워크플로 응용 프로그램에서 서비스 액세스'
 title: '방법: 워크플로 애플리케이션에서 서비스 액세스'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 13fae7dec3026e96e3c196467da29fe768a3655f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f8972bf7755c0103d164633d53d8d32508ce2efe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257934"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743098"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>방법: 워크플로 애플리케이션에서 서비스 액세스
 
@@ -31,7 +32,7 @@ ms.locfileid: "96257934"
 
      ![WCF 도움말 페이지 및 URI를 표시 하는 IE](./media/how-to-access-a-service-from-a-workflow-application/ie-wcf-help-page-uri.jpg)
 
-6. **솔루션 탐색기** 에서 **MyWFClient** 프로젝트를 마우스 오른쪽 단추로 클릭 하 **Add** 고  >  **서비스 참조** 추가를 선택 합니다. **검색** 단추를 클릭 하 여 서비스에 대 한 현재 솔루션을 검색 합니다. 서비스 목록에서 Service1.xamlx 옆에 있는 삼각형을 클릭합니다. Service1 옆에 있는 삼각형을 클릭하여 Service1 서비스에 의해 구현되는 계약을 나열합니다. **서비스** 목록에서 **Service1** 노드를 확장 합니다. 다음 그림과 같이 **작업** 목록에 Echo 작업이 표시 됩니다.
+6. **솔루션 탐색기** 에서 **MyWFClient** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고  >  **서비스 참조** 추가를 선택 합니다. **검색** 단추를 클릭 하 여 서비스에 대 한 현재 솔루션을 검색 합니다. 서비스 목록에서 Service1.xamlx 옆에 있는 삼각형을 클릭합니다. Service1 옆에 있는 삼각형을 클릭하여 Service1 서비스에 의해 구현되는 계약을 나열합니다. **서비스** 목록에서 **Service1** 노드를 확장 합니다. 다음 그림과 같이 **작업** 목록에 Echo 작업이 표시 됩니다.
 
      ![서비스 참조 추가 대화 상자](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference.jpg)
 
@@ -53,7 +54,7 @@ ms.locfileid: "96257934"
 
      ![변수에 인수 바인딩](./media/how-to-access-a-service-from-a-workflow-application/bind-arguments-variables.jpg)
 
-10. 서비스 호출에서 반환 된 문자열을 표시 하는 **WriteLine** 활동을 **Echo** 활동 아래로 끌어서 놓습니다. **WriteLine** 활동은 도구 상자의 **기본 형식** 노드에 있습니다. Writeline 활동 **Text** 의 **WriteLine** `outString` `outString` 텍스트 상자에를 **WriteLine** 입력 하 여 writeline 활동의 text 인수를 변수에 바인딩합니다. 그러면 워크플로가 다음 그림과 같이 표시됩니다.
+10. 서비스 호출에서 반환 된 문자열을 표시 하는 **WriteLine** 활동을 **Echo** 활동 아래로 끌어서 놓습니다. **WriteLine** 활동은 도구 상자의 **기본 형식** 노드에 있습니다. Writeline 활동  의  `outString` `outString` 텍스트 상자에를  입력 하 여 writeline 활동의 text 인수를 변수에 바인딩합니다. 그러면 워크플로가 다음 그림과 같이 표시됩니다.
 
      ![완료된 클라이언트 워크플로](./media/how-to-access-a-service-from-a-workflow-application/complete-client-workflow.jpg)
 

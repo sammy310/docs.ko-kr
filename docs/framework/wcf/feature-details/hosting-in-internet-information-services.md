@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 호스트의 호스트 인터넷 정보 서비스'
 title: 인터넷 정보 서비스에서의 호스팅
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 7bfdf2b057c791da7e15619d69c0314557944093
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 23c81bcfccba316500d333d277907d66e5d457c7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555837"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99743137"
 ---
 # <a name="host-in-internet-information-services"></a>인터넷 정보 서비스 호스트
 
@@ -55,13 +56,13 @@ IIS에서 호스트 하는 WCF 서비스의 개발 및 배포는 다음과 같�
 
 - WCF 서비스를 구성 합니다.
 
-이러한 각 작업에 대 한 설명은 [인터넷 정보 서비스 호스팅된 WCF 서비스 배포](deploying-an-internet-information-services-hosted-wcf-service.md)를 참조 하세요.
+이러한 각 작업에 대 한 설명은 [WCF 서비스 Services-Hosted 인터넷 정보 배포](deploying-an-internet-information-services-hosted-wcf-service.md)를 참조 하세요.
 
 ## <a name="wcf-services-and-aspnet"></a>WCF 서비스 및 ASP.NET
 
 WCF 서비스는 서비스에서 ASP.NET 웹 응용 프로그램 플랫폼에서 제공 하는 기능을 모두 활용할 수 있는 ASP.NET 또는 ASP.NET 호환성 모드에서 함께 호스팅될 수 있습니다. 이러한 기능에 대 한 설명은 [WCF 서비스 및 ASP.NET](wcf-services-and-aspnet.md)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ServiceHostFactory를 사용하여 호스팅 확장명](../extending/extending-hosting-using-servicehostfactory.md)
 - [인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포](deploying-an-internet-information-services-hosted-wcf-service.md)
