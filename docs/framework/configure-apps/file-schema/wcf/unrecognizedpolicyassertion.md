@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <unrecognizedPolicyAssertion>
 title: <unrecognizedPolicyAssertion>
 ms.date: 03/30/2017
 ms.assetid: 043c3c8f-f263-4ac7-a1af-945d03413f0b
-ms.openlocfilehash: a2e0bf9dc4d72bd8f5fed528cb22e2ea7008a5c1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 59911861e9f4a4bdc201940bac27d5a57035e0ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172855"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749131"
 ---
 # \<unrecognizedPolicyAssertion>
 
@@ -20,13 +21,13 @@ ms.locfileid: "91172855"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<unrecognizedPolicyAssertion>**  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <unrecognizedPolicyAssertion />
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
 
  `Type`  
   
@@ -51,7 +52,7 @@ ms.locfileid: "91172855"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
