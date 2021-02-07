@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: NetTCPBinding'
 title: NetTCPBinding
 ms.date: 03/30/2017
 ms.assetid: 1690b42f-acfd-4bb3-8f0d-0b17cd5ca36c
-ms.openlocfilehash: 109ce1b6bc30e323558bed1f6ec3702ad84bb295
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a72a0bc488d47b966640e31b113c5f4ccc12ae77
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96235235"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752108"
 ---
 # <a name="nettcpbinding"></a>NetTCPBinding
 

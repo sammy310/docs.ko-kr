@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: af2984e73c554e8a1e1b32df9460933f86cc41be
-ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
+ms.openlocfilehash: 2721d4e8fda6012b304637477c3618ee0ff2ea18
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "96592573"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752069"
 ---
 # <a name="code-quality-rule-configuration-options"></a>코드 품질 규칙 구성 옵션
 
@@ -30,7 +30,7 @@ ms.locfileid: "96592573"
 
 ### <a name="category-of-rules"></a>규칙 범주
 
-규칙 *범주* 에 대 한 옵션을 구성 하는 구문 (예: 이름 지정, 디자인 또는 성능)은 다음과 같습니다.
+[규칙 *범주*](categories.md) 에 대 한 옵션을 구성 하는 구문은 다음과 같습니다.
 
 |구문|예제|
 |-|-|

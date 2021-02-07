@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 메타 데이터 확장성'
 title: 메타데이터 확장성
 ms.date: 03/30/2017
 ms.assetid: f92fcc76-0806-4c84-9d63-7aae0d3899de
-ms.openlocfilehash: fb37e33026a5f99bfa033f04eea0bb85fbbe65c7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3ca1117bd5b1e3098a8d8d0ceb21e90bc7e4d39e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294328"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752173"
 ---
 # <a name="metadata-extensibility"></a>메타데이터 확장성
 

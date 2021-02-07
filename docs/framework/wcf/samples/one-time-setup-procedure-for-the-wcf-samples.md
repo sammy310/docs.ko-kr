@@ -1,22 +1,23 @@
 ---
+description: '자세한 정보: Windows Communication Foundation 샘플에 대 한 설치 절차 One-Time'
 title: Windows Communication Foundation 샘플의 일회 설치 절차
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: bf25ea4734bad007fa3ac19df0664932d981519c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8d57da5e018a61c6d11c9a9dc319ee74ec19d2ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548119"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752095"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플의 일회 설치 절차
 
-대부분의 WCF (Windows Communication Foundation) 샘플은 인터넷 정보 서비스 (IIS)에서 호스팅되고 공용 가상 디렉터리에서 실행 됩니다. 이 일회성 설치 절차에서는 디스크에 폴더를 만듭니다. 또한 **ServiceModelSamples**이라는 IIS에 가상 디렉터리를 추가 합니다.
+대부분의 WCF (Windows Communication Foundation) 샘플은 인터넷 정보 서비스 (IIS)에서 호스팅되고 공용 가상 디렉터리에서 실행 됩니다. 이 일회성 설치 절차에서는 디스크에 폴더를 만듭니다. 또한 **ServiceModelSamples** 이라는 IIS에 가상 디렉터리를 추가 합니다.
 
 **ServiceModelSamples** 가상 디렉터리는 IIS에서 호스팅되는 서비스를 사용 하는 모든 샘플을 빌드하고 실행 하는 데 사용 됩니다. 이 디렉터리는 샘플을 실행하는 데 필요한 유일한 가상 디렉터리입니다. 샘플을 빌드하면 이 가상 디렉터리에서 이전에 배포된 서비스가 대체되고 가장 최근에 빌드된 샘플만 배포되어 이 가상 디렉터리에서 사용할 수 있게 됩니다.
 
 > [!NOTE]
-> 모든 명령을 로컬 관리자 계정으로 실행해야 합니다. Windows 7, Windows Vista 또는 Windows Server 2008 r 2를 사용 하는 경우 상승 된 권한으로 명령 프롬프트도 실행 해야 합니다. 이렇게 하려면 명령 프롬프트 아이콘을 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다. 이 항목의 모든 명령은 경로 설정이 적절한 명령 프롬프트에서 실행해야 합니다.  이를 위한 가장 쉬운 방법은 Visual Studio 명령 프롬프트를 사용하는 것입니다. 이 프롬프트를 열려면 **시작**을 클릭 하 고, **모든 프로그램**을 선택 하 고, **visual studio 2010**으로 스크롤하고, **Visual Studio Tools**을 선택 하 고 **visual Studio 명령 프롬프트 (2010)** 를 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행**을 클릭 합니다. Visual Studio Express Edition 중 하나가 설치되어 있어 이 명령 프롬프트를 사용할 수 없는 경우에는 시스템 경로에 "C:\Windows\Microsoft.Net\Framework\v4.0"을 추가해야 합니다.
+> 모든 명령을 로컬 관리자 계정으로 실행해야 합니다. Windows 7, Windows Vista 또는 Windows Server 2008 r 2를 사용 하는 경우 상승 된 권한으로 명령 프롬프트도 실행 해야 합니다. 이렇게 하려면 명령 프롬프트 아이콘을 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행** 을 클릭 합니다. 이 항목의 모든 명령은 경로 설정이 적절한 명령 프롬프트에서 실행해야 합니다.  이를 위한 가장 쉬운 방법은 Visual Studio 명령 프롬프트를 사용하는 것입니다. 이 프롬프트를 열려면 **시작** 을 클릭 하 고, **모든 프로그램** 을 선택 하 고, **visual studio 2010** 으로 스크롤하고, **Visual Studio Tools** 을 선택 하 고 **visual Studio 명령 프롬프트 (2010)** 를 마우스 오른쪽 단추로 클릭 한 다음 **관리자 권한으로 실행** 을 클릭 합니다. Visual Studio Express Edition 중 하나가 설치되어 있어 이 명령 프롬프트를 사용할 수 없는 경우에는 시스템 경로에 "C:\Windows\Microsoft.Net\Framework\v4.0"을 추가해야 합니다.
 
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF 샘플의 일회 설치 절차
 
@@ -45,7 +46,7 @@ ms.locfileid: "90548119"
 
 7. 예제가 설치 되어 있지 않은 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (WCF) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459)에서 설치 합니다.
 
-8. 샘플을 설치한 후: \<InstallDrive> :**\ WF_WCF_Samples \wcf\setup \\ ** 로 이동 합니다.
+8. 샘플을 설치한 후: \<InstallDrive> :**\ WF_WCF_Samples \wcf\setup \\** 로 이동 합니다.
 
 9. **Setupvroot.bat** 배치 파일을 실행 합니다. 다음 단계를 수행합니다.
 
@@ -63,7 +64,7 @@ ms.locfileid: "90548119"
     > [!NOTE]
     > 이 단계를 완료하지 않으면 IIS에서 호스팅되는 모든 샘플이 빌드 중에 실패합니다. 사용 권한을 올바르게 설정했는지 확인하거나 SDK 명령 프롬프트와 Visual Studio 명령 프롬프트(2012)를 관리자 권한으로 실행하십시오.
 
-11. 컴퓨터에 C:\logs 디렉터리를 만듭니다. 일부 샘플에 이 디렉터리가 필요할 수 있습니다. 적절한 계정에 이 폴더에 대한 쓰기 권한을 부여해야 합니다. Windows 7, Windows Vista 및 Windows Server 2008 r 2의 경우이 계정은 **네트워크 서비스**입니다. Windows Server 2008의 경우 계정은 NT Authority\Network Service입니다. Windows XP 및 Windows Server 2003의 경우 계정은 ASPNET입니다.
+11. 컴퓨터에 C:\logs 디렉터리를 만듭니다. 일부 샘플에 이 디렉터리가 필요할 수 있습니다. 적절한 계정에 이 폴더에 대한 쓰기 권한을 부여해야 합니다. Windows 7, Windows Vista 및 Windows Server 2008 r 2의 경우이 계정은 **네트워크 서비스** 입니다. Windows Server 2008의 경우 계정은 NT Authority\Network Service입니다. Windows XP 및 Windows Server 2003의 경우 계정은 ASPNET입니다.
 
 12. Setupcerttool.bat 파일을 실행합니다. 이 파일은  \<InstallPath> \ WF_WCF_Samples \wcf\setup\ 폴더에 있습니다.  이 스크립트는 다음 작업을 수행합니다.
 
