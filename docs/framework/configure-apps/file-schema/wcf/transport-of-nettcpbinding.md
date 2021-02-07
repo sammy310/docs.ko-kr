@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <transport><netTcpBinding>'
 title: <netTcpBinding>의 <transport>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 8f752373c51992c51b747f5f4dc4a63910a387c6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9005de300b41c9f53c62875ee185d0f8a3ee8d7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162194"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664550"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<netTcpBinding>의 \<transport>
 
@@ -56,7 +57,7 @@ ms.locfileid: "91162194"
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |없음|클라이언트는 익명입니다. 여기에는 서비스 인증서가 필요합니다.|  
 |Windows|SP 협상(Kerberos 협상)을 사용하는 클라이언트의 Windows 인증을 지정합니다.|  
@@ -64,10 +65,10 @@ ms.locfileid: "91162194"
   
 ## <a name="protectionlevel-attribute"></a>protectionLevel 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |없음|보호되지 않습니다.|  
-|로그인|메시지가 서명됩니다.|  
+|Sign|메시지가 서명됩니다.|  
 |EncryptAndSign|-메시지가 암호화 되 고 서명 됩니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
@@ -91,7 +92,7 @@ ms.locfileid: "91162194"
 - <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 112-WorkflowInstanceSuspendedRecord'
 title: 112 - WorkflowInstanceSuspendedRecord
 ms.date: 03/30/2017
 ms.assetid: bc825c7c-8c90-48f7-9336-9a978a8246c6
-ms.openlocfilehash: 697dfe18fdb4ae6c05ae758077c1c2d9198e053c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6d2088da6e395476bba05d5e2f4557ea527ecdd8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96265819"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667397"
 ---
 # <a name="112---workflowinstancesuspendedrecord"></a>112 - WorkflowInstanceSuspendedRecord
 
@@ -20,7 +21,7 @@ ms.locfileid: "96265819"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  워크플로 인스턴스가 WorkflowInstanceSuspended Record를 내보내면 ETW 추적 참가자가 이 이벤트를 내보냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96265819"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|워크플로의 인스턴스 ID|  
 |RecordNumber|xs:long|내보낸 레코드의 시퀀스 번호|  

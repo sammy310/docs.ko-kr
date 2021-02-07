@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <exposedMethod>
 title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 2947f0de6a88f39463e58a3b39bda52588fe4baa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7bf271ba03ee16c6a45726e2bcb522bf6f55d441
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203906"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664732"
 ---
 # \<exposedMethod>
 
@@ -38,7 +39,7 @@ COM+ 구성 요소의 인터페이스가 웹 서비스로 노출될 때 노출�
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |name|COM+ 구성 요소의 인터페이스가 웹 서비스로 공개될 때 노출되는 COM+ 메서드를 포함하는 문자열입니다.|  
   

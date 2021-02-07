@@ -1,4 +1,5 @@
 ---
+description: 에 대해 자세히 알아보세요. 하거나? () null 조건 연산자 (Visual Basic)
 title: Null 조건 연산자
 ms.date: 10/19/2018
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: bffbba859968e0a050397cd9e685c142f801798a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 558b8921d0da4089505dd1035cb6039af24a2802
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401474"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665369"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. 하거나? () null 조건 연산자 (Visual Basic)
 
 `Nothing`멤버 액세스 () 또는 인덱스 () 작업을 수행 하기 전에 null ()의 왼쪽 피연산자 값을 테스트 `?.` `?()` 하 고, `Nothing` 왼쪽 피연산자가로 계산 되 면를 반환 `Nothing` 합니다. 일반적으로 값 형식을 반환 하는 식에서 null 조건 연산자는를 반환 합니다 <xref:System.Nullable%601> .
 
-이러한 연산자는 null 검사를 처리 하는 코드를 작성 하는 데 도움이 됩니다. 특히 데이터 구조체로 내림차순으로 사용할 수 있습니다. 예를 들면 다음과 같습니다.
+이러한 연산자는 null 검사를 처리 하는 코드를 작성 하는 데 도움이 됩니다. 특히 데이터 구조체로 내림차순으로 사용할 수 있습니다. 다음은 그 예입니다. 
 
 ```vb
 ' Nothing if customers is Nothing

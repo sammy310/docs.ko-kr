@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: IsFalse 연산자 (Visual Basic)'
 title: IsFalse 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - AndAlso operator [Visual Basic]
 - IsFalse operator [Visual Basic]
 ms.assetid: 37fc9dbf-e5cc-4570-b93f-7213447974df
-ms.openlocfilehash: bbcdb9bcf645a4e9cb54c657ccd46e04437d207e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 190399dd29ba2d643bd26dfe4f6191211c9a3740
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873376"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665707"
 ---
 # <a name="isfalse-operator-visual-basic"></a>IsFalse 연산자(Visual Basic)
 
@@ -20,10 +21,10 @@ ms.locfileid: "90873376"
   
  `IsFalse`코드에서 명시적으로 호출할 수는 없지만 Visual Basic 컴파일러는이를 사용 하 여 절에서 코드를 생성할 수 있습니다 `AndAlso` . 클래스 또는 구조체를 정의한 다음 해당 형식의 변수를 절에서 사용 하는 경우 `AndAlso` `IsFalse` 해당 클래스 또는 구조체에 대해를 정의 해야 합니다.  
   
- 컴파일러는 `IsFalse` 및 연산자를 `IsTrue` 일치 하는 *쌍*으로 간주 합니다. 즉, 이러한 항목 중 하나를 정의 하는 경우 다른 항목을 정의 해야 합니다.  
+ 컴파일러는 `IsFalse` 및 연산자를 `IsTrue` 일치 하는 *쌍* 으로 간주 합니다. 즉, 이러한 항목 중 하나를 정의 하는 경우 다른 항목을 정의 해야 합니다.  
   
 > [!NOTE]
-> `IsFalse`연산자를 *오버 로드할*수 있습니다. 즉, 해당 피연산자의 형식이 해당 클래스 또는 구조체의 형식인 경우 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+> `IsFalse`연산자를 *오버 로드할* 수 있습니다. 즉, 해당 피연산자의 형식이 해당 클래스 또는 구조체의 형식인 경우 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 
@@ -31,7 +32,7 @@ ms.locfileid: "90873376"
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IsTrue 연산자](istrue-operator.md)
 - [방법: 연산자 정의](../../programming-guide/language-features/procedures/how-to-define-an-operator.md)

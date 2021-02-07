@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: IsTrue 연산자 (Visual Basic)'
 title: IsTrue 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: 2e67a4adabe58ab12d317ae6318c0a2fac29da7d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 50b618c888ce988da5241041fb2f728e0a581c70
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866939"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665655"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue 연산자(Visual Basic)
 
@@ -20,7 +21,7 @@ ms.locfileid: "90866939"
   
  `IsTrue`코드에서 명시적으로 호출할 수는 없지만 Visual Basic 컴파일러는이를 사용 하 여 절에서 코드를 생성할 수 있습니다 `OrElse` . 클래스 또는 구조체를 정의한 다음 해당 형식의 변수를 절에서 사용 하는 경우 `OrElse` `IsTrue` 해당 클래스 또는 구조체에 대해를 정의 해야 합니다.  
   
- 컴파일러는 `IsTrue` 및 연산자를 `IsFalse` 일치 하는 *쌍*으로 간주 합니다. 즉, 이러한 항목 중 하나를 정의 하는 경우 다른 항목을 정의 해야 합니다.  
+ 컴파일러는 `IsTrue` 및 연산자를 `IsFalse` 일치 하는 *쌍* 으로 간주 합니다. 즉, 이러한 항목 중 하나를 정의 하는 경우 다른 항목을 정의 해야 합니다.  
   
 ## <a name="compiler-use-of-istrue"></a>IsTrue의 컴파일러 사용  
 
@@ -39,7 +40,7 @@ ms.locfileid: "90866939"
  또는 연산자로의 변환이 정의 되지 않은 경우 `Boolean` `IsTrue` 컴파일러는 오류를 표시 합니다.  
   
 > [!NOTE]
-> `IsTrue`연산자를 *오버 로드할*수 있습니다. 즉, 해당 피연산자의 형식이 해당 클래스 또는 구조체의 형식인 경우 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+> `IsTrue`연산자를 *오버 로드할* 수 있습니다. 즉, 해당 피연산자의 형식이 해당 클래스 또는 구조체의 형식인 경우 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 
@@ -47,7 +48,7 @@ ms.locfileid: "90866939"
   
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IsFalse 연산자](isfalse-operator.md)
 - [방법: 연산자 정의](../../programming-guide/language-features/procedures/how-to-define-an-operator.md)

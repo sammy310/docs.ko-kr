@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: If 연산자 (Visual Basic)'
 title: If 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 28fb2afb2c4cf78ffbbb028145de647a8dc512ed
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3b25ab4b6c5f0d2608644adb6e35ff4ad5128f42
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371105"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665876"
 ---
 # <a name="if-operator-visual-basic"></a>If 연산자(Visual Basic)
 
 는 단락 평가를 사용 하 여 조건에 따라 두 값 중 하나를 반환 합니다. 연산자는 세 개의 인수를 사용 `If` 하거나 두 개의 인수를 사용 하 여 호출할 수 있습니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 If( [argument1,] argument2, argument3 )
@@ -38,7 +39,7 @@ If( [argument1,] argument2, argument3 )
 |---|---|
 |`argument1`|필수 요소. `Boolean`. 평가 하 여 반환할 다른 인수를 결정 합니다.|
 |`argument2`|필수 요소. `Object`. 가로 계산 되는 경우 평가 되 고 반환 `argument1` `True` 됩니다.|
-|`argument3`|필수 요소. `Object`. 가로 계산 되는 경우이 계산 및 반환 되 고 `argument1` `False` , `argument1` 가 [Nullable](../../programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` [Nothing](../nothing.md)으로 계산 되는 Nullable 변수 이면이 반환 됩니다.|
+|`argument3`|필수 요소. `Object`. 가로 계산 되는 경우이 계산 및 반환 되 고 `argument1` `False` , `argument1` 가 [](../../programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` [Nothing](../nothing.md)으로 계산 되는 Nullable 변수 이면이 반환 됩니다.|
 
 `If`세 개의 인수를 사용 하 여 호출 되는 연산자는 `IIf` 단락 계산을 사용 한다는 점을 제외 하 고 함수 처럼 작동 합니다. `IIf`함수는 항상 세 개의 인수를 모두 계산 하는 반면, `If` 세 개의 인수가 있는 연산자는 둘 중 하나만 계산 합니다. 첫 번째 `If` 인수를 계산 하 고 결과를 `Boolean` 값 또는로 캐스팅 합니다 `True` `False` . 값이 이면 `True` `argument2` 가 평가 되 고 해당 값이 반환 되지만 `argument3` 계산 되지 않습니다. 식의 값 `Boolean` 이 인 경우이 `False` `argument3` 평가 되 고 해당 값이 반환 되지만 `argument2` 계산 되지 않습니다. 다음 예에서는 세 개의 인수를 사용 하는 경우를 사용 하는 방법을 보여 줍니다 `If` .
 

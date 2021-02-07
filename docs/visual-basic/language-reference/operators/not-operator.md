@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Not 연산자 (Visual Basic)'
 title: Not 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-ms.openlocfilehash: 7d0beea16a2ac00be090c6a241f9790a0ba33390
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 91f3525b52d6f38081b8e5ba208c193f714a4045
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874803"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665356"
 ---
 # <a name="not-operator-visual-basic"></a>Not 연산자(Visual Basic)
 
 식에 논리 부정을 수행 `Boolean` 하거나 숫자 식에 비트 부정을 수행 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 result = Not expression  
@@ -64,7 +65,7 @@ result = Not expression
   
 ## <a name="overloading"></a>오버로딩  
 
- `Not`연산자를 *오버 로드할*수 있습니다. 즉, 해당 피연산자의 형식이 해당 클래스 또는 구조체의 형식인 경우 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+ `Not`연산자를 *오버 로드할* 수 있습니다. 즉, 해당 피연산자의 형식이 해당 클래스 또는 구조체의 형식인 경우 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 
@@ -82,7 +83,7 @@ result = Not expression
   
  앞의 예제에서는 – 11, – 9 및 – 7의 결과를 각각 생성 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [논리/비트 연산자(Visual Basic)](logical-bitwise-operators.md)
 - [Visual Basic에서의 연산자 우선 순위](operator-precedence.md)

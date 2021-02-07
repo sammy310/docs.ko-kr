@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 114-WorkflowInstanceRecordWithId'
 title: 114 - WorkflowInstanceRecordWithId
 ms.date: 03/30/2017
 ms.assetid: 2bd8b4a1-b210-4c07-8156-f19392318c08
-ms.openlocfilehash: ebeff6af6d18d2794723250bceeecd682d0af6df
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 77d39cd91476d9de41bbb00b5df034fc79cdec08
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96261854"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667254"
 ---
 # <a name="114---workflowinstancerecordwithid"></a>114 - WorkflowInstanceRecordWithId
 
@@ -20,7 +21,7 @@ ms.locfileid: "96261854"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  워크플로 인스턴스가 Started, Resumed, Persisted, Idle, Deleted, Completed, Canceled, Unloaded, Unsuspended 등의 워크플로 상태에 대한 WorkflowInstanceRecord를 내보내면 ETW 추적 참가자가 이 이벤트를 내보냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96261854"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|워크플로의 인스턴스 ID|  
 |RecordNumber|xs:long|내보낸 레코드의 시퀀스 번호|  

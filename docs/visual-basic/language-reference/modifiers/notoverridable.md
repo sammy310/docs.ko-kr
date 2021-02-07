@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: NotOverridable (Visual Basic)'
 title: NotOverridable
 ms.date: 07/20/2015
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - methods [Visual Basic], sealed
 - properties [Visual Basic], overriding
 ms.assetid: 66ec6984-f5f5-4857-b362-6a3907aaf9e0
-ms.openlocfilehash: 8eec54a12c7fb748df46e8c48a8b07eab983cc72
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f0363024aacc1ed6ab9d8820cc965b5b71e557b6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867865"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666097"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable(Visual Basic)
 
@@ -53,12 +54,12 @@ ms.locfileid: "90867865"
   
  [Sub 문](../statements/sub-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [한정자](index.md)
 - [상속 기본 사항](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [New](mustoverride.md)
 - [Overrides](overridable.md)
 - [재정의](overrides.md)
-- [키워드](../keywords/index.md)
+- [C++ 키워드](../keywords/index.md)
 - [Visual Basic에서 숨김](../../programming-guide/language-features/declared-elements/shadowing.md)

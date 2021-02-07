@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 1126-InvokedMethodThrewException'
 title: 1126 - InvokedMethodThrewException
 ms.date: 03/30/2017
 ms.assetid: 0d3cff1a-97e6-4b6c-be18-108c6881bfc0
-ms.openlocfilehash: 7caaebe42f49a62fec61ba17a4d3fe3a538e2ab4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 35c4311a4ab7750cc54a5c9ffb379f34b1cb12aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262842"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667358"
 ---
 # <a name="1126---invokedmethodthrewexception"></a>1126 - InvokedMethodThrewException
 
@@ -20,7 +21,7 @@ ms.locfileid: "96262842"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  InvokeMethod 작업에서 호출된 메서드에서 예외가 throw되었음을 나타냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96262842"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |InvokeMethod|xs:string|InvokeMethod 작업의 표시 이름입니다.|  
 |예외|xs:string|예외에 대한 예외 정보|  

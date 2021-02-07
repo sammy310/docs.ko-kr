@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <transport><peerTransport>'
 title: <peerTransport>의 <transport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 7328d67c4649010dce3e1c866238d1e0067e4990
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ba3405c5dfadb513f92ebd537409a3f7b12fa291
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157072"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664511"
 ---
 # <a name="transport-of-peertransport"></a>\<peerTransport>의 \<transport>
 
@@ -42,7 +43,7 @@ ms.locfileid: "91157072"
   
 ## <a name="credentialtype-attribute"></a>credentialType 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |인증서|피어 채널 전송을 인증하려면 X509 인증서가 필요합니다.|  
 |암호|피어 채널 전송을 인증하려면 올바른 암호가 필요합니다.|  
@@ -70,7 +71,7 @@ ms.locfileid: "91157072"
 - [전송 보안](../../../wcf/feature-details/transport-security.md)
 - [전송](../../../wcf/feature-details/transports.md)
 - [전송 선택](../../../wcf/feature-details/choosing-a-transport.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

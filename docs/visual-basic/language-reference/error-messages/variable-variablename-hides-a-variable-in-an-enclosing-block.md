@@ -1,4 +1,5 @@
 ---
+description: "자세히 알아보기: BC30616: ' ' 변수 <variablename> 는 바깥쪽 블록의 변수를 숨깁니다."
 title: "'<variablename>' 변수는 바깥쪽 블록에 있는 변수를 숨깁니다."
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 408acaafd5e266266b5191313611b94b72a5c270
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: a0b2a4d024ff0409b5617354b5e671ca6dc0305b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161350"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666123"
 ---
 # <a name="bc30616-variable-variablename-hides-a-variable-in-an-enclosing-block"></a>BC30616: ' \<variablename> ' 변수는 바깥쪽 블록의 변수를 숨깁니다.
 
@@ -22,7 +23,7 @@ ms.locfileid: "92161350"
 
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면
 
-- 다른 지역 변수와 동일 하지 않도록 포함 된 블록의 변수 이름을 바꿉니다. 예를 들면 다음과 같습니다.
+- 다른 지역 변수와 동일 하지 않도록 포함 된 블록의 변수 이름을 바꿉니다. 다음은 그 예입니다. 
 
     ```vb
     Dim a, b, x As Integer
@@ -37,5 +38,5 @@ ms.locfileid: "92161350"
 
 ## <a name="see-also"></a>참고 항목
 
-- [Try...Catch...Finally 명령문](../statements/try-catch-finally-statement.md)
+- [Try...Catch...Finally 문](../statements/try-catch-finally-statement.md)
 - [변수 선언](../../programming-guide/language-features/variables/variable-declaration.md)

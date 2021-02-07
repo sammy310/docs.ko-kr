@@ -1,4 +1,5 @@
 ---
+description: '에 대 한 자세한 정보: 연산자 우선 순위 Visual Basic'
 title: 연산자 우선 순위
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: b5649cd2a58fd8d300df58c563aebeed8976c4f5
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 7aa4677549328d450834f3a1ecb047d405893f69
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874791"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665291"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic에서의 연산자 우선 순위
 
-식에서 여러 연산이 수행 될 때 각 부분은 *연산자 우선 순위*라는 미리 결정 된 순서에 따라 평가 되 고 해결 됩니다.
+식에서 여러 연산이 수행 될 때 각 부분은 *연산자 우선 순위* 라는 미리 결정 된 순서에 따라 평가 되 고 해결 됩니다.
 
 ## <a name="precedence-rules"></a>선행 규칙
 
@@ -77,7 +78,7 @@ ms.locfileid: "90874791"
 
  배타적 분리 ( `Xor` )
 
-### <a name="comments"></a>의견
+### <a name="comments"></a>설명
 
  `=`연산자는 대입 연산자가 아닌 같음 비교 연산자입니다.
 
@@ -121,13 +122,13 @@ g = (a - (b + c)) / (d * e)
 ' The preceding line sets g to 0.5.
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [= 연산자](assignment-operator.md)
 - [Is 연산자](is-operator.md)
 - [IsNot 연산자](isnot-operator.md)
 - [Like 연산자](like-operator.md)
 - [TypeOf 연산자](typeof-operator.md)
-- [Wait 연산자](await-operator.md)
+- [Await 연산자](await-operator.md)
 - [기능별 연산자 목록](operators-listed-by-functionality.md)
 - [연산자 및 식](../../programming-guide/language-features/operators-and-expressions/index.md)

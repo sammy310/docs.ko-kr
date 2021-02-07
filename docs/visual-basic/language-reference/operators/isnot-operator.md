@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: IsNot 연산자 (Visual Basic)'
 title: IsNot 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - TypeOf...IsNot expression
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-ms.openlocfilehash: ea978f8874cee20fb3a005189fd846f7564da777
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: ac3e127676dfa57d14e07838152022de62fc336b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811043"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665668"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot 연산자(Visual Basic)
 
@@ -29,15 +30,15 @@ result = object1 IsNot object2
 
 - `result`
 
-  필수 요소. `Boolean` 값입니다.
+  필수 사항입니다. `Boolean` 값입니다.
 
 - `object1`
 
-  필수 요소. `Object`변수 또는 식입니다.
+  필수 사항입니다. `Object`변수 또는 식입니다.
 
 - `object2`
 
-  필수 요소. `Object`변수 또는 식입니다.
+  필수 사항입니다. `Object`변수 또는 식입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -55,7 +56,7 @@ result = object1 IsNot object2
 
 ## <a name="use-typeof-operator-with-isnot-operator"></a>IsNot 연산자에 TypeOf 연산자 사용
 
-Visual Basic 14부터 연산자를 `TypeOf` 연산자와 함께 사용 하 여 `IsNot` 개체가 데이터 형식과 호환 *되지* 않는지 여부를 테스트할 수 있습니다. 예를 들어:
+Visual Basic 14부터 연산자를 `TypeOf` 연산자와 함께 사용 하 여 `IsNot` 개체가 데이터 형식과 호환 *되지* 않는지 여부를 테스트할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```vb
 If TypeOf sender IsNot Button Then

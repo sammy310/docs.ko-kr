@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: GetType 연산자 (Visual Basic)'
 title: GetType Operator
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: 9ff207ea4f2b89ea30eb8f46a3e640ccf3789974
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 15fe9c28997aa01527f23c0cc8fdbb0fe6cc53f7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867015"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665993"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType 연산자(Visual Basic)
 
@@ -26,7 +27,7 @@ GetType(typename)
   
 ## <a name="parameters"></a>매개 변수  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---|---|  
 |`typename`|정보를 원하는 형식의 이름입니다.|  
   
@@ -60,7 +61,7 @@ GetType(typename)
   
  [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Visual Basic에서의 연산자 우선 순위](operator-precedence.md)
 - [기능별 연산자 목록](operators-listed-by-functionality.md)

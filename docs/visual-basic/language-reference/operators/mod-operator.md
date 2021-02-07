@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Mod 연산자 (Visual Basic)'
 title: Mod 연산자
 ms.date: 04/24/2018
 f1_keywords:
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: 32065567799b023556a018ae2f5ba338796e0b49
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bfec39f54041714258e21f087a044dce24edcb6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401513"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665434"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 연산자 (Visual Basic)
 
 두 숫자를 나누고 나머지만 반환 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 result = number1 Mod number2
@@ -32,7 +33,7 @@ result = number1 Mod number2
 ## <a name="parts"></a>부분
 
 `result` \
-필수 요소. 임의의 숫자 변수 또는 속성입니다.
+필수 사항입니다. 임의의 숫자 변수 또는 속성입니다.
 
 `number1` \
 필수 요소. 임의의 숫자 식입니다.
@@ -102,7 +103,7 @@ End Module
 
 ## <a name="overloading"></a>오버로딩
 
-`Mod`연산자를 *오버 로드할*수 있습니다. 즉, 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. 코드가 `Mod` 이러한 오버 로드를 포함 하는 클래스 또는 구조체의 인스턴스에 적용 되는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.
+`Mod`연산자를 *오버 로드할* 수 있습니다. 즉, 클래스 또는 구조체에서 해당 동작을 다시 정의할 수 있습니다. 코드가 `Mod` 이러한 오버 로드를 포함 하는 클래스 또는 구조체의 인스턴스에 적용 되는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.
 
 ## <a name="example"></a>예제
 

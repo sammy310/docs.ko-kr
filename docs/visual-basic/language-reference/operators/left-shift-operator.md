@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보:  << 연산자 (Visual Basic)'
 title: << 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: 77bf26d4e6bb068f9130deed5eb1ecbaee62afce
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 079af61e5c4ce3834db0877feace724c74c8169c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866789"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665629"
 ---
 # <a name="-operator-visual-basic"></a>\<\< 연산자 (Visual Basic)
 
 비트 패턴에 산술 왼쪽 시프트를 수행 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 result = pattern << amount  
@@ -54,7 +55,7 @@ result = pattern << amount
  산술 시프트는 오버플로 예외를 생성 하지 않습니다.  
   
 > [!NOTE]
-> `<<`연산자를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체의 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+> `<<`연산자를 *오버 로드할* 수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체의 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 
@@ -76,7 +77,7 @@ result = pattern << amount
   
  의 이동 금액 `result4` 은 17과 15로 계산 되며 1과 같습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [비트 시프트 연산자](bit-shift-operators.md)
 - [할당 연산자](assignment-operators.md)

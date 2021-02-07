@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 함수 식 (Visual Basic)'
 title: 함수 식
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 719969be23a6d94f22a1d86cb4ad3f37e4c3b254
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bef5db7f167b615c2a0c20539521c186683da985
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873419"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666019"
 ---
 # <a name="function-expression-visual-basic"></a>함수 식(Visual Basic)
 
 함수 람다 식을 정의 하는 매개 변수 및 코드를 선언 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Function ( [ parameterlist ] ) expression  
@@ -79,7 +80,7 @@ End Function
   
 ## <a name="example"></a>예제  
 
- 람다 식은 LINQ (통합 언어 쿼리)에서 많은 쿼리 연산자의 기반이 되며 메서드 기반 쿼리에서 명시적으로 사용할 수 있습니다. 다음 예제에서는 일반적인 LINQ 쿼리를 보여 오고 쿼리를 메서드 형식으로 변환 합니다.  
+ 람다 식은 LINQ (Language-Integrated Query)에서 많은 쿼리 연산자의 기반이 되며 메서드 기반 쿼리에서 명시적으로 사용할 수 있습니다. 다음 예제에서는 일반적인 LINQ 쿼리를 보여 오고 쿼리를 메서드 형식으로 변환 합니다.  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  
@@ -94,7 +95,7 @@ Dim londonCusts = db.Customers.
   
  쿼리 메서드에 대 한 자세한 내용은 [쿼리](../queries/index.md)를 참조 하세요. 표준 쿼리 연산자에 대 한 자세한 내용은 [표준 쿼리 연산자 개요](../../programming-guide/concepts/linq/standard-query-operators-overview.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Function 문](../statements/function-statement.md)
 - [람다 식](../../programming-guide/language-features/procedures/lambda-expressions.md)

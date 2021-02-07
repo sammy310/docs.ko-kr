@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Is 연산자 (Visual Basic)'
 title: Is 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: 1c2d87ef0a8202332c87af552f488d652c400213
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 0912ebd9bc9c33149568c6cea0197ef24c305ff2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812265"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665687"
 ---
 # <a name="is-operator-visual-basic"></a>Is 연산자 (Visual Basic)
 
@@ -29,13 +30,13 @@ result = object1 Is object2
 ## <a name="parts"></a>부분
 
  `result`  
- 필수 요소. 모든 `Boolean` 값입니다.  
+ 필수 사항입니다. 모든 `Boolean` 값입니다.  
   
  `object1`  
- 필수 요소. 모든 `Object` 이름입니다.  
+ 필수 사항입니다. 모든 `Object` 이름입니다.  
   
  `object2`  
- 필수 요소. 모든 `Object` 이름입니다.  
+ 필수 사항입니다. 모든 `Object` 이름입니다.  
   
 ## <a name="remarks"></a>설명
 
@@ -54,7 +55,7 @@ result = object1 Is object2
 
 ## <a name="use-typeof-operator-with-is-operator"></a>Is 연산자에 TypeOf 연산자 사용
 
-`Is` 연산자는 키워드와 함께 사용 `TypeOf` 하 여 `TypeOf` `Is` 개체 변수가 데이터 형식과 호환 되는지 여부를 테스트 하는 ... 식을 만들 수도 있습니다. 예를 들어:
+`Is` 연산자는 키워드와 함께 사용 `TypeOf` 하 여 `TypeOf` `Is` 개체 변수가 데이터 형식과 호환 되는지 여부를 테스트 하는 ... 식을 만들 수도 있습니다. 예를 들면 다음과 같습니다.
 
 ```vb
 If TypeOf sender Is Button Then
