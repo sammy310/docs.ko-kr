@@ -11,12 +11,12 @@ helpviewer_keywords:
 - rules, design
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 7b49403b1aa3d48008e6f7448ab0ed5a84468373
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 548e0eaaa6239a9b9ee6a08677cd720710bb48c2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851531"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99714133"
 ---
 # <a name="design-rules"></a>디자인 규칙
 
@@ -75,4 +75,3 @@ ms.locfileid: "96851531"
 | [CA1068: CancellationToken 매개 변수는 마지막에 위치해야 합니다.](ca1068.md) | 메서드에 마지막 매개 변수가 아닌 CancellationToken 매개 변수가 있습니다. |
 | [CA1069: 열거형에 중복 값이 없어야 합니다.](ca1069.md) | 열거형에는 동일한 상수 값을 명시적으로 할당 하는 여러 멤버가 있습니다. |
 | [CA1070: 이벤트 필드를 가상으로 선언하지 마세요.](ca1070.md) | [필드와 유사한 이벤트가](../../../csharp/event-pattern.md#defining-and-raising-field-like-events) 가상으로 선언 되었습니다. |
-| [CA1071: Override base. IEquatable 구현 시 같음](ca1071.md) | 파생 된 형식은 <xref:System.IEquatable%601> 를 구현 하지만 기본 클래스 메서드를 재정의 하지 않습니다 <xref:System.IEquatable%601.Equals%2A> . |

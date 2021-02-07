@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 타임 스탬프 또는 버전 열로 열 표현'
 title: '방법: 열을 타임스탬프 또는 버전 열로 표현'
 ms.date: 03/30/2017
 ms.assetid: 5afd5ce8-1d20-4bc3-a34f-49d95449f493
-ms.openlocfilehash: cc8538ab7b2ecf5183cfb97995c04648493a369f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 042e6a62c66b3f1ef522453157560e5e4c0f7de6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191751"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712508"
 ---
 # <a name="how-to-represent-columns-as-timestamp-or-version-columns"></a>방법: 열을 타임스탬프 또는 버전 열로 표현
 

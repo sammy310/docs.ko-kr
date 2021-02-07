@@ -1,13 +1,14 @@
 ---
+description: '자세한 내용: 배경 정보'
 title: 배경 정보
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: 56ba323aee3b559fbb8afd506be4c23595df6d2d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8e2027319145a5e88049c66fb2b8935128115e43
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156097"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712664"
 ---
 # <a name="background-information"></a>배경 정보
 
@@ -19,7 +20,7 @@ ms.locfileid: "91156097"
   
 - 전문가와 관련 하 여 더 복잡 한 항목을 자세히 논의할 수 있는 [LINQ 포럼](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)에 참여 하세요.  
   
-- 기술에 대해 자세히 설명 하 고 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Basic 및 c # 코드 예제를 설명 하는 백서를 학습 합니다. 자세한 내용은 [LINQ to SQL: 관계형 데이터에 대 한 .Net 언어 통합 쿼리](/previous-versions/dotnet/articles/bb425822(v=msdn.10))를 참조 하세요.  
+- 기술에 대해 자세히 설명 하 고 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Basic 및 c # 코드 예제를 설명 하는 백서를 학습 합니다. 자세한 내용은 [LINQ to SQL: .net Language-Integrated 관계형 데이터 쿼리](/previous-versions/dotnet/articles/bb425822(v=msdn.10))를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 

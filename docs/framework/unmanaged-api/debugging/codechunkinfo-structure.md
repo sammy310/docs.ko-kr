@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CodeChunkInfo Structure'
 title: CodeChunkInfo 구조체
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f482454-8517-48de-ba7a-d7aedab13bb5
 topic_type:
 - apiref
-ms.openlocfilehash: 11197246662a93f6a8b57c6e61e49505a9999d00
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 017a9ee8c608d4efae98eb0a342a3371ef8ec310
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727434"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712352"
 ---
 # <a name="codechunkinfo-structure"></a>CodeChunkInfo 구조체
 
@@ -34,7 +35,7 @@ typedef struct _CodeChunkInfo {
 } CodeChunkInfo;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -55,7 +56,7 @@ typedef struct _CodeChunkInfo {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [GetCodeChunks 메서드](icordebugcode2-getcodechunks-method.md)
 - [디버깅 구조체](debugging-structures.md)

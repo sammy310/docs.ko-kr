@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 형식을 제네릭 IEnumerable로 변환'
 title: 제네릭 IEnumerable로 형식 변환
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 64774fb5-7447-4296-ad3b-8a94346f99a1
-ms.openlocfilehash: c2d34ae708f79d9f920679b3714a100fe8943c38
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9be9022bce84808e18514937116ea962065dc1a8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164417"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712521"
 ---
 # <a name="convert-a-type-to-a-generic-ienumerable"></a>제네릭 IEnumerable로 형식 변환
 

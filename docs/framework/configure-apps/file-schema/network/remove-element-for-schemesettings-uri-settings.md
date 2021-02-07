@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: <remove> schemeSettings 요소에 대 한 요소 (Uri 설정)'
 title: schemeSettings의 <remove> 요소(URI 설정)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-ms.openlocfilehash: 018a08693a39bb297bdaa468ba59d4bf097f6922
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 125a347cfcbb1393ea70032b7e1b198a1a5a4ed0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151391"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713028"
 ---
 # <a name="remove-element-for-schemesettings-uri-settings"></a>schemeSettings의 \<remove> 요소(URI 설정)
 
@@ -32,7 +33,7 @@ ms.locfileid: "91151391"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |name|이 설정이 적용 되는 체계 이름입니다. 유일 하 게 지원 되는 값은 name = "http" 및 name = "https"입니다.|  
   

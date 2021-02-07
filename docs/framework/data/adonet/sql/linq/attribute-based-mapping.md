@@ -1,13 +1,14 @@
 ---
+description: Attribute-Based 매핑에 대해 자세히 알아보세요.
 title: 특성 기반 매핑
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 986a5022ea9e70868689c898649067135eac944b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9dfe9fce10d7ba76281afd843385c734e86af245
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156110"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712729"
 ---
 # <a name="attribute-based-mapping"></a>특성 기반 매핑
 
@@ -97,7 +98,7 @@ ms.locfileid: "91156110"
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|String|없음 값을 제공해야 함|판별자의 코드 값을 지정합니다.|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|부울|`false`|true이면 저장소의 판별자 값이 지정된 값 중 하나와 일치하지 않을 경우 이 형식의 개체를 인스턴스화합니다.|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|형식|없음 값을 제공해야 함|계층 구조에서 클래스의 형식을 지정합니다.|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|Type|없음 값을 제공해야 함|계층 구조에서 클래스의 형식을 지정합니다.|  
   
  자세한 내용은 <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>를 참조하세요.  
   
@@ -135,7 +136,7 @@ ms.locfileid: "91156110"
   
 |속성|Type|기본값|설명|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ResultTypeAttribute.Type%2A>|형식|(없음)|<xref:System.Data.Linq.IMultipleResults>를 반환하는 저장 프로시저에 매핑되는 메서드에 사용됩니다. 저장 프로시저에 대해 유효하거나 필요한 형식 매핑을 선언합니다.|  
+|<xref:System.Data.Linq.Mapping.ResultTypeAttribute.Type%2A>|Type|(없음)|<xref:System.Data.Linq.IMultipleResults>를 반환하는 저장 프로시저에 매핑되는 메서드에 사용됩니다. 저장 프로시저에 대해 유효하거나 필요한 형식 매핑을 선언합니다.|  
   
  자세한 내용은 <xref:System.Data.Linq.Mapping.ResultTypeAttribute>를 참조하세요.  
   
