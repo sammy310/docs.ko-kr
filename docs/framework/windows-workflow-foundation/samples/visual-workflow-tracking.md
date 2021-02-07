@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 시각적 워크플로 추적'
 title: Visual Workflow Tracking
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: 4c6e0c1bc4bb9d017a3341f165409ff3e427ed01
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: efa88186fe0c2d0b2e7324c2d859bed46cd4a4de
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267574"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755267"
 ---
 # <a name="visual-workflow-tracking"></a>Visual Workflow Tracking
 

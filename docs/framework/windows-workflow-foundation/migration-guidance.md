@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 마이그레이션 지침'
 title: 마이그레이션 지침
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: b9b90aedc06fb4a4564596d61aa0ac2dc4c6143f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 05aede02d7ad615ddeeceab6d71a545db9bcf5ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733596"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755356"
 ---
 # <a name="migration-guidance"></a>마이그레이션 지침
 
@@ -47,6 +48,6 @@ ms.locfileid: "95733596"
 
  [WF 지침: 워크플로 서비스](/previous-versions/appfabric/ff383417(v=azure.10)) 기본 제공 활동에 대 한 일반적인 시나리오에 대해 W F 4를 사용 하기 위해 WF3에서 만든 WCF (Windows Communication Foundation) 웹 서비스 (일반적으로 워크플로 서비스 라고 함)를 구현 하는 워크플로를 다시 디자인 하는 방법에 대 한 예제 기반의 단계별 지침을 제공 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Activities.Statements.Interop>

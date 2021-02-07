@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 추적 이벤트 참조'
 title: 추적 이벤트 참조
 ms.date: 03/30/2017
 ms.assetid: c1c1ee87-f80a-449b-acd0-50d81eef116e
-ms.openlocfilehash: 7a1bbabbbc122429908b0f9c038c145a5d4a1e7e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 64df938dc7e37ebc8b3da8f10939bebe1e638be1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293353"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755189"
 ---
 # <a name="tracking-events-reference"></a>추적 이벤트 참조
 
@@ -18,7 +19,7 @@ ms.locfileid: "96293353"
 |이벤트 ID|이벤트 수준|이벤트 메시지|키워드|  
 |--------------|-----------------|-------------------|--------------|  
 |[100 - WorkflowInstanceRecord](100-workflowinstancerecord.md)|정보|TrackRecord= WorkflowInstanceRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, Annotations = %6, ProfileName = %7|EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
-|[101 - WorkflowInstanceUnhandledExceptionRecord](101-workflowinstanceunhandledexceptionrecord.md)|오류|TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9, Annotations= %10, ProfileName = %11|EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
+|[101 - WorkflowInstanceUnhandledExceptionRecord](101-workflowinstanceunhandledexceptionrecord.md)|Error|TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9, Annotations= %10, ProfileName = %11|EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
 |[102 - WorkflowInstanceAbortedRecord](102-workflowinstanceabortedrecord.md)|경고|TrackRecord = WorkflowInstanceAbortedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7|EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
 |[103 - ActivityStateRecord](103-activitystaterecord.md)|정보|TrackRecord = ActivityStateRecord, InstanceID = %1, RecordNumber=%2, EventTime=%3, State = %4, Name=%5, ActivityId=%6, ActivityInstanceId=%7, ActivityTypeName=%8, Arguments=%9, Variables=%10, Annotations=%11, ProfileName = %12|EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
 |[104 - ActivityScheduledRecord](104-activityscheduledrecord.md)|정보|TrackRecord = ActivityScheduledRecord, InstanceID = %1,  RecordNumber = %2, EventTime = %3, Name = %4, ActivityId = %5, ActivityInstanceId = %6, ActivityTypeName = %7, ChildActivityName = %8, ChildActivityId = %9, ChildActivityInstanceId = %10, ChildActivityTypeName =%11, Annotations=%12, ProfileName = %13|EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
@@ -27,14 +28,14 @@ ms.locfileid: "96293353"
 |[107 -- BookmarkResumptionRecord](107-bookmarkresumptionrecord.md)|정보|TrackRecord = BookmarkResumptionRecord, InstanceID=%1, RecordNumber=%2,EventTime=%3, Name=%4, SubInstanceID=%5,  OwnerActivityName=%6, OwnerActivityId =%7, OwnerActivityInstanceId=%8, OwnerActivityTypeName=%9, Annotations=%10, ProfileName = %11|EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
 |[108 - CustomTrackingRecordInfo](108-customtrackingrecordinfo.md)|정보|TrackRecord = CustomTrackingRecord, InstanceID = %1, RecordNumber=%2, EventTime=%3, Name=%4, ActivityName=%5, ActivityId=%6, ActivityInstanceId=%7, ActivityTypeName=%8, Data=%9, Annotations=%10, ProfileName = %11|UserEvents, EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
 |[110 - CustomTrackingRecordWarning](110-customtrackingrecordwarning.md)|경고|TrackRecord = CustomTrackingRecord, InstanceID = %1, RecordNumber=%2, EventTime=%3, Name=%4, ActivityName=%5, ActivityId=%6, ActivityInstanceId=%7, ActivityTypeName=%8, Data=%9, Annotations=%10, ProfileName = %11|UserEvents, EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
-|[111 - CustomTrackingRecordError](111-customtrackingrecorderror.md)|오류|TrackRecord = CustomTrackingRecord, InstanceID = %1, RecordNumber=%2, EventTime=%3, Name=%4, ActivityName=%5, ActivityId=%6, ActivityInstanceId=%7, ActivityTypeName=%8, Data=%9, Annotations=%10, ProfileName = %11|UserEvents, EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
+|[111 - CustomTrackingRecordError](111-customtrackingrecorderror.md)|Error|TrackRecord = CustomTrackingRecord, InstanceID = %1, RecordNumber=%2, EventTime=%3, Name=%4, ActivityName=%5, ActivityId=%6, ActivityInstanceId=%7, ActivityTypeName=%8, Data=%9, Annotations=%10, ProfileName = %11|UserEvents, EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
 |[112 - WorkflowInstanceSuspendedRecord](112-workflowinstancesuspendedrecord.md)|정보|TrackRecord = WorkflowInstanceSuspendedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7|EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
-|[113 - WorkflowInstanceTerminatedRecord](113-workflowinstanceterminatedrecord.md)|오류|TrackRecord = WorkflowInstanceTerminatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7|EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
+|[113 - WorkflowInstanceTerminatedRecord](113-workflowinstanceterminatedrecord.md)|Error|TrackRecord = WorkflowInstanceTerminatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7|EndToEndMonitoring, 문제 해결, HealthMonitoring, WFTracking|  
 |[114 - WorkflowInstanceRecordWithId](114-workflowinstancerecordwithid.md)|정보|TrackRecord= WorkflowInstanceRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8|HealthMonitoring, WFTracking|  
 |[115 - WorkflowInstanceAbortedRecordWithId](115-workflowinstanceabortedrecordwithid.md)|경고|TrackRecord = WorkflowInstanceAbortedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8|HealthMonitoring, WFTracking|  
 |[116 - WorkflowInstanceSuspendedRecordWithId](116-workflowinstancesuspendedrecordwithid.md)|정보|TrackRecord = WorkflowInstanceSuspendedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8|HealthMonitoring, WFTracking|  
-|[117 - WorkflowInstanceTerminatedRecordWithId](117-workflowinstanceterminatedrecordwithid.md)|오류|TrackRecord = WorkflowInstanceTerminatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5,  Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8|HealthMonitoring, WFTracking|  
-|[118 - WorkflowInstanceUnhandledExceptionRecordWithId](118-workflowinstanceunhandledexceptionrecordwithid.md)|오류|TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9, Annotations= %10, ProfileName = %11, WorkflowDefinitionIdentity = %12|HealthMonitoring, WFTrackingHealthMonitoring, WFTracking|  
+|[117 - WorkflowInstanceTerminatedRecordWithId](117-workflowinstanceterminatedrecordwithid.md)|Error|TrackRecord = WorkflowInstanceTerminatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5,  Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8|HealthMonitoring, WFTracking|  
+|[118 - WorkflowInstanceUnhandledExceptionRecordWithId](118-workflowinstanceunhandledexceptionrecordwithid.md)|Error|TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9, Annotations= %10, ProfileName = %11, WorkflowDefinitionIdentity = %12|HealthMonitoring, WFTrackingHealthMonitoring, WFTracking|  
 |[119 - WorkflowInstanceUpdatedRecord](119-workflowinstanceupdatedrecord.md)|정보|TrackRecord= WorkflowInstanceUpdatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, OriginalDefinitionIdentity = %6, UpdatedDefinitionIdentity = %7, Annotations = %8, ProfileName = %9|HealthMonitoring, WFTracking|  
 |[225 - TraceCorrelationKeys](225-tracecorrelationkeys.md)|정보|'%3' 부모 범위에서 '%2' 값을 사용하여 '%1' 상관 관계 키를 계산했습니다.|WFServices 문제 해결|  
 |[440 - StartSignpostEvent](440-startsignpostevent.md)|정보|동작 경계입니다.|WFServices 문제 해결|  
@@ -44,7 +45,7 @@ ms.locfileid: "96293353"
 |[1003 - WorkflowInstanceCanceled](1003-workflowinstancecanceled.md)|정보|WorkflowInstance Id: '%1'이(가) Canceled 상태에서 완료되었습니다.|WFRuntime|  
 |[1004 - WorkflowInstanceAborted](1004-workflowinstanceaborted.md)|정보|WorkflowInstance Id: '%1'이(가) 예외와 함께 중단되었습니다.|WFRuntime|  
 |[1005 - WorkflowApplicationIdled](1005-workflowapplicationidled.md)|정보|WorkflowApplication Id: '%1'이(가) 유휴 상태가 되었습니다.|WFRuntime|  
-|[1006 - WorkflowApplicationUnhandledException](1006-workflowapplicationunhandledexception.md)|오류|WorkflowInstance Id: ' %1 '에서 처리 되지 않은 예외가 발생 했습니다.  작업 ' %2 ', DisplayName: ' %3 '에서 예외가 발생 했습니다.  다음 작업이 수행 됩니다. %4.|WFRuntime|  
+|[1006 - WorkflowApplicationUnhandledException](1006-workflowapplicationunhandledexception.md)|Error|WorkflowInstance Id: ' %1 '에서 처리 되지 않은 예외가 발생 했습니다.  작업 ' %2 ', DisplayName: ' %3 '에서 예외가 발생 했습니다.  다음 작업이 수행 됩니다. %4.|WFRuntime|  
 |[1007 - WorkflowApplicationPersisted](1007-workflowapplicationpersisted.md)|정보|WorkflowApplication Id: '%1'이(가) 지속되었습니다.|WFRuntime|  
 |[1008 - WorkflowApplicationUnloaded](1008-workflowapplicationunloaded.md)|정보|WorkflowInstance Id: '%1'이(가) 언로드되었습니다.|WFRuntime|  
 |[1009 - ActivityScheduled](1009-activityscheduled.md)|정보|Parent Activity '%1', DisplayName: '%2', InstanceId: '%3' scheduled child Activity '%4', DisplayName: '%5', InstanceId: '%6'.|WFRuntime|  
@@ -122,17 +123,17 @@ ms.locfileid: "96293353"
 |[3557 - TransactedReceiveScopeEndCommitFailed](3557-transactedreceivescopeendcommitfailed.md)|정보|ID = '%1'인 CommittableTransaction에 대한 EndCommit 호출에서 다음 메시지와 함께 TransactionException이 발생했습니다. '%2'.|WFServices|  
 |[4201 - EndSqlCommandExecute](4201-endsqlcommandexecute.md)|자세히|SQL 명령 실행 종료: %1|WFInstanceStore|  
 |[4202 - StartSqlCommandExecute](4202-startsqlcommandexecute.md)|자세히|SQL 명령 실행 시작: %1|WFInstanceStore|  
-|[4203 - RenewLockSystemError](4203-renewlocksystemerror.md)|오류|잠금 만료를 연장하지 못했습니다. 잠금 만료가 이미 지났거나 잠금 소유자가 삭제되었습니다. SqlWorkflowInstanceStore를 중단하는 중입니다.|WFInstanceStore|  
-|[4205 - FoundProcessingError](4205-foundprocessingerror.md)|오류|명령 실패: %1|WFInstanceStore|  
-|[4206 - UnlockInstanceException](4206-unlockinstanceexception.md)|오류|인스턴스 잠금을 해제하는 동안 %1 예외가 발생했습니다.|WFInstanceStore|  
+|[4203 - RenewLockSystemError](4203-renewlocksystemerror.md)|Error|잠금 만료를 연장하지 못했습니다. 잠금 만료가 이미 지났거나 잠금 소유자가 삭제되었습니다. SqlWorkflowInstanceStore를 중단하는 중입니다.|WFInstanceStore|  
+|[4205 - FoundProcessingError](4205-foundprocessingerror.md)|Error|명령 실패: %1|WFInstanceStore|  
+|[4206 - UnlockInstanceException](4206-unlockinstanceexception.md)|Error|인스턴스 잠금을 해제하는 동안 %1 예외가 발생했습니다.|WFInstanceStore|  
 |[4207 - MaximumRetriesExceededForSqlCommand](4207-maximumretriesexceededforsqlcommand.md)|정보|최대 재시도 횟수를 초과하여 SQL 명령 재시도를 중단합니다.|할당량 WFInstanceStore|  
 |[4208 - RetryingSqlCommandDueToSqlError](4208-retryingsqlcommandduetosqlerror.md)|정보|SQL 오류 %1번으로 인해 SQL 명령을 재시도합니다.|WFInstanceStore|  
-|[4209 - TimeoutOpeningSqlConnection](4209-timeoutopeningsqlconnection.md)|오류|SQL 연결을 열려는 중 시간이 초과했습니다. 할당된 시간 제한인 %1 내에 작업을 완료하지 못했습니다. 이 작업에 할당된 시간은 더 긴 시간 제한의 일부였을 수 있습니다.|WFInstanceStore|  
+|[4209 - TimeoutOpeningSqlConnection](4209-timeoutopeningsqlconnection.md)|Error|SQL 연결을 열려는 중 시간이 초과했습니다. 할당된 시간 제한인 %1 내에 작업을 완료하지 못했습니다. 이 작업에 할당된 시간은 더 긴 시간 제한의 일부였을 수 있습니다.|WFInstanceStore|  
 |[4210 - SqlExceptionCaught](4210-sqlexceptioncaught.md)|경고|SQL 예외 %1번 메시지 %2을(를) catch했습니다.|WFInstanceStore|  
 |[4211 - QueuingSqlRetry](4211-queuingsqlretry.md)|경고|%1밀리초의 지연으로 SQL 재시도를 큐에 넣고 있습니다.|WFInstanceStore|  
 |[4212 - LockRetryTimeout](4212-lockretrytimeout.md)|경고|인스턴스 잠금을 얻으려고 시도 하는 동안 시간이 초과 되었습니다.  할당된 시간 제한인 %1 내에 작업을 완료하지 못했습니다. 이 작업에 할당된 시간은 더 긴 시간 제한의 일부였을 수 있습니다.|WFInstanceStore|  
-|[4213 - RunnableInstancesDetectionError](4213-runnableinstancesdetectionerror.md)|오류|다음 예외로 인해 실행 가능한 인스턴스를 검색하지 못했습니다.|WFInstanceStore|  
-|[4214 - InstanceLocksRecoveryError](4214-instancelocksrecoveryerror.md)|오류|다음 예외로 인해 인스턴스 잠금을 복구하지 못했습니다.|WFInstanceStore|  
+|[4213 - RunnableInstancesDetectionError](4213-runnableinstancesdetectionerror.md)|Error|다음 예외로 인해 실행 가능한 인스턴스를 검색하지 못했습니다.|WFInstanceStore|  
+|[4214 - InstanceLocksRecoveryError](4214-instancelocksrecoveryerror.md)|Error|다음 예외로 인해 인스턴스 잠금을 복구하지 못했습니다.|WFInstanceStore|  
 |[39456 - TrackingRecordDropped](39456-trackingrecorddropped.md)|경고|추적 레코드 %1의 크기가 %2 공급자의 ETW 세션에서 허용된 최대값을 초과합니다.|WFTracking|  
 |[39457 - TrackingRecordRaised](39457-trackingrecordraised.md)|정보|추적 레코드 %1이(가) %2(으)로 증가했습니다.|WFRuntime|  
 |[39458 - TrackingRecordTruncated](39458-trackingrecordtruncated.md)|경고|잘린 추적 레코드 %1이(가) 공급자가 %2인 ETW 세션에 기록되었습니다. 변수/주석/사용자 데이터가 제거되었습니다.|WFTracking|  

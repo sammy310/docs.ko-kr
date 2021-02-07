@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 외부 규칙 집합 Toolkit'
 title: External RuleSet Toolkit
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: eb59b02d469788b23126f4e02c5b7ae5a63081f0
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 41ee739ee90ba6dc1583369930919816e9afd53b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094672"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755384"
 ---
 # <a name="external-ruleset-toolkit"></a>External RuleSet Toolkit
 
@@ -37,7 +38,7 @@ Visual Studio는 Windows Workflow Foundation (WF)의 일부로 규칙 집합 편
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ExternalRuleSetToolKit`
 
@@ -47,9 +48,9 @@ Visual Studio는 Windows Workflow Foundation (WF)의 일부로 규칙 집합 편
 
 ![규칙 집합 브라우저를 보여 주는 스크린샷](./media/external-ruleset-toolkit/ruleset-browser-dialog.gif)
 
-RuleSet 도구에서는 RuleSet에 주 버전 및 부 버전 번호를 적용하여 동시에 여러 버전을 유지하고 저장할 수 있게 합니다. 이 도구에서는 버전 관리 기능 이외에 잠금이나 기타 구성 관리 기능을 제공하지 않습니다. 이 도구를 사용하여 새 RuleSet 버전을 만들거나 기존 버전을 삭제할 수 있습니다. **새로 만들기**를 클릭 하면 도구에서 새 규칙 집합 이름을 만들고 버전 1.0을 적용 합니다. 버전을 복사하면 도구에서 포함된 규칙을 비롯하여 선택한 RuleSet 버전의 복사본을 만들고 고유한 새 버전 번호를 할당합니다. 이러한 버전 번호는 기존 RuleSet의 버전 번호를 기반으로 합니다. 양식에서 연결된 필드를 사용하여 RuleSet 이름 및 버전 번호를 변경할 수 있습니다.
+RuleSet 도구에서는 RuleSet에 주 버전 및 부 버전 번호를 적용하여 동시에 여러 버전을 유지하고 저장할 수 있게 합니다. 이 도구에서는 버전 관리 기능 이외에 잠금이나 기타 구성 관리 기능을 제공하지 않습니다. 이 도구를 사용하여 새 RuleSet 버전을 만들거나 기존 버전을 삭제할 수 있습니다. **새로 만들기** 를 클릭 하면 도구에서 새 규칙 집합 이름을 만들고 버전 1.0을 적용 합니다. 버전을 복사하면 도구에서 포함된 규칙을 비롯하여 선택한 RuleSet 버전의 복사본을 만들고 고유한 새 버전 번호를 할당합니다. 이러한 버전 번호는 기존 RuleSet의 버전 번호를 기반으로 합니다. 양식에서 연결된 필드를 사용하여 RuleSet 이름 및 버전 번호를 변경할 수 있습니다.
 
-**규칙 편집**을 클릭 하면 다음 이미지와 같이 규칙 집합 편집기가 시작 됩니다.
+**규칙 편집** 을 클릭 하면 다음 이미지와 같이 규칙 집합 편집기가 시작 됩니다.
 
 ![규칙 집합 편집기를 보여 주는 스크린샷](./media/external-ruleset-toolkit/ruleset-editor-dialog.gif)
 
@@ -61,13 +62,13 @@ RuleSet 도구에서는 RuleSet에 주 버전 및 부 버전 번호를 적용하
 
 **워크플로/형식 선택기** 대화 상자를 사용 하 여 어셈블리와 해당 어셈블리 내의 특정 형식을 지정할 수 있습니다. 이 형식은 규칙이 제작 및 실행되는 대상 형식입니다. 대부분의 경우 대상 형식은 워크플로나 다른 활동 형식입니다. 그러나 .NET 형식에 대해 RuleSet을 실행할 수 있습니다.
 
-데이터베이스에서 규칙 집합이 검색 될 때 도구에서 대상 형식을 자동으로 로드 하도록 데이터베이스에서 어셈블리 파일 및 형식 `name are stored with the` 규칙 집합의 경로입니다.
+데이터베이스 `name are stored with the` 에서 규칙 집합이 검색 될 때 도구에서 대상 형식을 자동으로 로드 하기 때문에 데이터베이스의 형식 규칙 집합 및 어셈블리 파일에 대 한 경로입니다.
 
-**워크플로/형식 선택기** 대화 상자에서 **확인** 을 클릭 하면 대상 형식에 규칙에서 참조 하는 모든 멤버가 포함 되도록 규칙 집합에 대해 선택한 형식의 유효성을 검사 합니다. 오류는 **유효성 검사 오류** 대화 상자에 표시 됩니다. 오류가 발생 하더라도 변경을 계속 하도록 선택 하거나 **취소**를 클릭할 수 있습니다. 주 도구 대화 상자의 **도구** 메뉴에서 **유효성 검사** 를 클릭 하 여 대상 활동에 대해 규칙 집합 버전의 유효성을 다시 검사할 수 있습니다.
+**워크플로/형식 선택기** 대화 상자에서 **확인** 을 클릭 하면 대상 형식에 규칙에서 참조 하는 모든 멤버가 포함 되도록 규칙 집합에 대해 선택한 형식의 유효성을 검사 합니다. 오류는 **유효성 검사 오류** 대화 상자에 표시 됩니다. 오류가 발생 하더라도 변경을 계속 하도록 선택 하거나 **취소** 를 클릭할 수 있습니다. 주 도구 대화 상자의 **도구** 메뉴에서 **유효성 검사** 를 클릭 하 여 대상 활동에 대해 규칙 집합 버전의 유효성을 다시 검사할 수 있습니다.
 
 ![유효성 검사 오류 대화 상자를 보여 주는 스크린샷](./media/external-ruleset-toolkit/validation-errors-dialog.png)
 
-도구의 **데이터** 메뉴에서 규칙 집합을 가져오고 내보낼 수 있습니다. **가져오기**를 클릭 하면 rules 파일을 선택할 수 있는 파일 선택 대화 상자가 나타납니다. 이 파일은 처음에 Visual Studio에서 만든 파일 일 수도 있고 그렇지 않을 수도 있습니다. .rules 파일에는 조건 컬렉션과 RuleSet 컬렉션을 포함하는 serialize된 `RuleDefinitions` 인스턴스가 포함되어야 합니다. 도구는 조건 컬렉션을 사용 하지 않지만 Visual Studio 환경과의 상호 작용을 허용 하려면 `RuleDefinitions` 형식을 사용 합니다.
+도구의 **데이터** 메뉴에서 규칙 집합을 가져오고 내보낼 수 있습니다. **가져오기** 를 클릭 하면 rules 파일을 선택할 수 있는 파일 선택 대화 상자가 나타납니다. 이 파일은 처음에 Visual Studio에서 만든 파일 일 수도 있고 그렇지 않을 수도 있습니다. .rules 파일에는 조건 컬렉션과 RuleSet 컬렉션을 포함하는 serialize된 `RuleDefinitions` 인스턴스가 포함되어야 합니다. 이 도구는 조건 컬렉션을 사용 하지 않지만 `RuleDefinitions` . rules 형식을 사용 하 여 Visual Studio 환경과의 상호 작용을 허용 합니다.
 
 Rules 파일을 선택한 후에는 규칙 **집합 선택기** 대화 상자가 나타납니다. 이 대화 상자를 사용하여 파일에서 가져올 RuleSet을 선택할 수 있습니다. 기본적으로 모든 RuleSet으로 지정되어 있습니다. WF 프로젝트 내의 버전 관리는 어셈블리의 버전과 동일하기 때문에 .rules 파일의 RuleSet에는 버전 번호가 없습니다. 가져오기 프로세스 중에이 도구는 사용 가능한 다음 주 버전 번호를 자동으로 할당 합니다 (가져온 후 변경 가능). **규칙 집합 선택기** 목록에서 할당 된 버전 번호를 볼 수 있습니다.
 
@@ -75,7 +76,7 @@ Rules 파일을 선택한 후에는 규칙 **집합 선택기** 대화 상자가
 
 ![규칙 집합 선택 대화 상자를 보여 주는 스크린샷](./media/external-ruleset-toolkit/ruleset-selector-dialog.gif)
 
-주 도구 메뉴에서 **데이터-내보내기** 를 클릭 하면 **규칙 집합 선택** 대화 상자가 다시 표시 됩니다 .이 대화 상자에서 내보낼 데이터베이스의 규칙 집합을 확인할 수 있습니다. **확인**을 클릭 하면 결과 파일의 이름과 위치를 지정할 수 있는 **파일 저장** 대화 상자가 나타납니다. .rules 파일에는 버전 정보가 저장되지 않으므로 지정된 RuleSet 이름을 사용하는 RuleSet 버전을 하나만 선택할 수 있습니다.
+주 도구 메뉴에서 **데이터-내보내기** 를 클릭 하면 **규칙 집합 선택** 대화 상자가 다시 표시 됩니다 .이 대화 상자에서 내보낼 데이터베이스의 규칙 집합을 확인할 수 있습니다. **확인** 을 클릭 하면 결과 파일의 이름과 위치를 지정할 수 있는 **파일 저장** 대화 상자가 나타납니다. .rules 파일에는 버전 정보가 저장되지 않으므로 지정된 RuleSet 이름을 사용하는 RuleSet 버전을 하나만 선택할 수 있습니다.
 
 ## <a name="policyfromservice-activity"></a>PolicyFromService 활동
 
@@ -109,9 +110,9 @@ Rules 파일을 선택한 후에는 규칙 **집합 선택기** 대화 상자가
 
     - **도구 상자 항목 선택** 대화 상자가 나타나면 **작업** 탭을 클릭 합니다.
 
-    - `ExternalRuleSetToolkit` 솔루션에서 `PolicyActivities` 어셈블리로 이동 하 고 **열기**를 클릭 합니다.
+    - `PolicyActivities`솔루션에서 어셈블리로 이동 `ExternalRuleSetToolkit` 하 고 **열기** 를 클릭 합니다.
 
-    - **도구 상자 항목 선택** 대화 상자에서 `PolicyFromService` 작업이 선택 되어 있는지 확인 한 다음 **확인**을 클릭 합니다.
+    - `PolicyFromService` **도구 상자 항목 선택** 대화 상자에서 작업이 선택 되어 있는지 확인 한 다음 **확인** 을 클릭 합니다.
 
     - 이제 활동은 **RuleSetToolkitUsageSample Components** 범주의 도구 상자에 표시 됩니다.
 
@@ -125,7 +126,7 @@ Rules 파일을 선택한 후에는 규칙 **집합 선택기** 대화 상자가
 
 9. 애플리케이션 구성 파일이 워크플로 프로젝트에 추가되어 서비스에서 사용할 데이터베이스에 대한 연결 문자열을 지정합니다. 이 문자열은 RuleSet 도구에서 사용하는 연결 문자열과 동일해야 합니다. RuleSet 도구에서 사용하는 연결 문자열은 RuleSet 테이블을 포함하는 데이터베이스를 가리킵니다.
 
-10. 이제 다른 모든 워크플로 콘솔 애플리케이션처럼 `RuleSetToolkitUsageSample` 프로젝트를 실행할 수 있습니다. Visual Studio 내에서 F5 또는 Ctrl + F5 키를 누르거나 RuleSetToolkitUsageSample 파일을 직접 실행 합니다.
+10. 이제 다른 모든 워크플로 콘솔 애플리케이션처럼 `RuleSetToolkitUsageSample` 프로젝트를 실행할 수 있습니다. Visual Studio 내에서 F5 또는 Ctrl + F5 키를 누르거나 RuleSetToolkitUsageSample.exe 파일을 직접 실행 합니다.
 
     > [!NOTE]
     > RuleSet 도구에서는 사용 샘플 어셈블리를 로드하므로 사용 샘플을 다시 컴파일하려면 도구를 닫아야 합니다.

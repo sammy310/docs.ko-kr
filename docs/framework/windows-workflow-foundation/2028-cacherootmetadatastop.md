@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 2028-CacheRootMetadataStop'
 title: 2028 - CacheRootMetadataStop
 ms.date: 03/30/2017
 ms.assetid: d799b707-ee16-4b04-8b6d-b87c0d60e71d
-ms.openlocfilehash: a59c645fb02d0676781f15ccdd253a1d3c13d4d5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 863941d18cb30a0cd7544366727889bcd595bc94
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294523"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755397"
 ---
 # <a name="2028---cacherootmetadatastop"></a>2028 - CacheRootMetadataStop
 
@@ -20,7 +21,7 @@ ms.locfileid: "96294523"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  CacheRootMetadata가 작업에서 완료되었음을 나타냅니다.  
   
