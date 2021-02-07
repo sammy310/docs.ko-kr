@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugFunction3 인터페이스'
 title: ICorDebugFunction3 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: b22717b9-ead5-4eea-887e-789b52d613dc
 topic_type:
 - apiref
-ms.openlocfilehash: 17eda7470e5f2e4b41d1f2ed164843eaeeedea93
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f6f3ce78fbb0ca7efb6ba6a95da20f8c698b923c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695871"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692071"
 ---
 # <a name="icordebugfunction3-interface"></a>ICorDebugFunction3 인터페이스
 
@@ -41,7 +42,7 @@ ms.locfileid: "95695871"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)

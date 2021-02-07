@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugMetaDataLocator:: GetMetaData 메서드'
 title: ICorDebugMetaDataLocator::GetMetaData 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9b0ff22-54db-45eb-9cc3-508000a3141d
 topic_type:
 - apiref
-ms.openlocfilehash: 63efb788d8bca84da94921371309704cc7b20ac4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 419a03e42a54057ab70e31a368e918612f3a85f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710443"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691694"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData 메서드
 
@@ -64,7 +65,7 @@ HRESULT GetMetaData(
   
  `ofReadOnly` [Coropenflags](../metadata/coropenflags-enumeration.md) 열거형의 플래그는이 파일의 메타 데이터에 대 한 읽기 전용 액세스를 요청 하는 데 사용 됩니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다. 모든 기타 오류 HRESULT는 파일을 검색할 수 없음을 의미합니다.  
   
@@ -87,7 +88,7 @@ HRESULT GetMetaData(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugThread4 인터페이스](icordebugthread4-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

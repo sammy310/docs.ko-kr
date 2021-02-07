@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugEval:: CallFunction 메서드'
 title: ICorDebugEval::CallFunction 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7f470c5c-e1c0-4d8d-aad8-830f113ae751
 topic_type:
 - apiref
-ms.openlocfilehash: 1cf0080945ad78565fae3fedb454ceba7825cb4a
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: c0978ab3bdffc83e3eb5e3a6553e7f374ab6d5da
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976241"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694190"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction 메서드
 
@@ -51,7 +52,7 @@ HRESULT CallFunction (
 
 ## <a name="remarks"></a>설명
 
-함수가 virtual 인 경우는 가상 `CallFunction` 디스패치를 수행 합니다. 함수가 다른 응용 프로그램 도메인에 있는 경우 모든 인수가 해당 응용 프로그램 도메인에 있는 경우에만 전환이 수행 됩니다.
+함수가 virtual 인 경우는 `CallFunction` 가상 디스패치를 수행 합니다. 함수가 다른 응용 프로그램 도메인에 있는 경우 모든 인수가 해당 응용 프로그램 도메인에 있는 경우에만 전환이 수행 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 

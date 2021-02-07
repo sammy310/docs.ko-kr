@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugFunction2:: SetJMCStatus 메서드'
 title: ICorDebugFunction2::SetJMCStatus 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-ms.openlocfilehash: 55f219b5b834f365b87440e69bfa7d2c4e519235
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d2df9d47808b0220a91bd344e7600f8d16eccdb4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696096"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692188"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus 메서드
 

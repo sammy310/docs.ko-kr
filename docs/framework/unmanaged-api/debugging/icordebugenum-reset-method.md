@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugEnum:: Reset 메서드'
 title: ICorDebugEnum::Reset 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab03dcb8-ceed-4f7a-abf8-9d31604bf90c
 topic_type:
 - apiref
-ms.openlocfilehash: 39c6371791e90e97cca9357c825f13fe45e6c211
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c1308611f05bbf190f9675b611a77e0c1077f52f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705893"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694502"
 ---
 # <a name="icordebugenumreset-method"></a>ICorDebugEnum::Reset 메서드
 
@@ -42,6 +43,6 @@ HRESULT Reset ();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugEnum 인터페이스](icordebugenum-interface1.md)

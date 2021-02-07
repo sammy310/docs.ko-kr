@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugFunction3:: GetActiveReJitRequestILCode 메서드'
 title: ICorDebugFunction3::GetActiveReJitRequestILCode 메서드
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 88584574-ade5-45b2-9778-489ed5c4dd7f
 topic_type:
 - apiref
-ms.openlocfilehash: 7ab5f8826da0b38fc9f92d9be955991a88d15f69
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9225c5cdf97395b7e1b11c61d653cab8d52031c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696000"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692123"
 ---
 # <a name="icordebugfunction3getactiverejitrequestilcode-method"></a>ICorDebugFunction3::GetActiveReJitRequestILCode 메서드
 
@@ -54,7 +55,7 @@ HRESULT GetActiveReJitRequestILCode(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugFunction3 인터페이스](icordebugfunction3-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)
