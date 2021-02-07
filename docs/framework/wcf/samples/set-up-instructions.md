@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: Set-Up 지침'
 title: 설치 지침
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: 92e0924143b42309b98fb967dfea0502bae29203
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f84e3b7b9dd7b26973f757f3456d6ce9bba5a8ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289908"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703499"
 ---
 # <a name="set-up-instructions"></a>설치 지침
 
@@ -42,6 +43,6 @@ ms.locfileid: "96289908"
  [메시지 큐(MSMQ) 설치](installing-message-queuing-msmq.md)  
  메시지 큐를 설치하는 단계를 간략하게 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [WCF 샘플에 대 한 문제 해결 팁](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 메시지 상관 관계'
 title: 메시지 상관 관계
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: c6c68ec36ecee294aa217f77f462dcea31f1e211
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e38e2e8d6936132e165fd3372ac57fef27240d1a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557972"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704032"
 ---
 # <a name="message-correlation"></a>메시지 상관 관계
 
@@ -280,7 +281,7 @@ static void DisplayOrderStatus()
 
     2. **기능** 탭을 확장 합니다.
 
-    3. **개인 메시지 큐**를 마우스 오른쪽 단추로 클릭 하 고 **새로 만들기**, **개인 큐**를 선택 합니다.
+    3. **개인 메시지 큐** 를 마우스 오른쪽 단추로 클릭 하 고 **새로 만들기**, **개인 큐** 를 선택 합니다.
 
     4. **트랜잭션** 상자를 확인 합니다.
 
@@ -313,7 +314,7 @@ static void DisplayOrderStatus()
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WCF의 큐](../feature-details/queuing-in-wcf.md)
 - [메시지 큐](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

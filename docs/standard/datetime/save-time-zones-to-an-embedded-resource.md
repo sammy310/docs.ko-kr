@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 포함 리소스에 표준 시간대 저장'
 title: '방법: 포함 리소스에 표준 시간대 저장'
 ms.date: 04/10/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - time zone objects [.NET], serializing
 - time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: 23f86076b2858404f3dbc900d8c40a6509abe8db
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4f1455ffa790652d2dad605a0eb71fb81a05326d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817603"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702472"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>방법: 포함 리소스에 표준 시간대 저장
 
@@ -22,7 +23,7 @@ ms.locfileid: "94817603"
 
 일반적으로 개체 직렬화는 <xref:System.TimeZoneInfo> 표준 시간대 인식 응용 프로그램과는 차이가 있습니다. 직렬화 된 개체를 저장 하는 데 사용 되는 데이터 저장소에 따라 <xref:System.TimeZoneInfo> 표준 시간대 데이터는 설치 또는 설치 루틴 (예: 데이터가 레지스트리의 응용 프로그램 키에 저장 된 경우) 또는 최종 응용 프로그램이 컴파일되기 전에 실행 되는 유틸리티 루틴의 일부로 serialize 될 수 있습니다 (예: serialize 된 데이터가 .NET XML 리소스 (.resx) 파일에 저장 된 경우).
 
-응용 프로그램을 사용 하 여 컴파일되는 리소스 파일 외에도 여러 다른 데이터 저장소를 표준 시간대 정보에 사용할 수 있습니다. 여기에는 다음이 포함됩니다.
+응용 프로그램을 사용 하 여 컴파일되는 리소스 파일 외에도 여러 다른 데이터 저장소를 표준 시간대 정보에 사용할 수 있습니다. 포함되는 내용은 다음과 같습니다.
 
 - 레지스트리. 응용 프로그램은 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones 하위 키를 사용 하는 대신 자체 응용 프로그램 키의 하위 키를 사용 하 여 사용자 지정 표준 시간대 데이터를 저장 해야 합니다.
 

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 날짜 및 시간으로 산술 연산 수행'
 title: 날짜 및 시간에 대한 산술 연산 수행
 ms.date: 04/10/2017
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - DateTime structure, arithmetic operations
 - DateTimeOffset structure, arithmetic operations
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
-ms.openlocfilehash: af294c45359f6226c4189aabb34fdfc670bbd1c9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7b39a6dec3abc2206c8eef7566f74aab6614aae6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817772"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702563"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>날짜 및 시간에 대한 산술 연산 수행
 
@@ -33,7 +34,7 @@ ms.locfileid: "94817772"
 
 <xref:System.DateTime.CompareTo%28System.DateTime%29> 메서드는 현지 시간이 UTC 시간보다 빠르거나 느리다고 보고하고, 빼기 연산은 미국 태평양 표준 시간대에 있는 시스템의 UTC와 현지 시간 간 차이가 일곱 시간임을 나타냅니다. 그러나이 두 값은 단일 시점에 대 한 다양 한 표현을 제공 하므로이 경우 시간 간격이 UTC에서 현지 표준 시간대의 오프셋으로 완전히 발생 합니다.
 
-보다 일반적으로 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 속성은 비교 및 산술 메서드에서 반환 되는 결과에 영향을 주지 않습니다 <xref:System.DateTime.Kind> (시간에서 두 개의 동일한 지점의 비교는 해당 결과의 해석에 영향을 줄 수 있음). 예를 들면 다음과 같습니다.
+보다 일반적으로 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 속성은 비교 및 산술 메서드에서 반환 되는 결과에 영향을 주지 않습니다 <xref:System.DateTime.Kind> (시간에서 두 개의 동일한 지점의 비교는 해당 결과의 해석에 영향을 줄 수 있음). 다음은 그 예입니다. 
 
 - 두 개의 날짜 및 시간 값에 대해 수행 되는 산술 연산 결과는 두 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> <xref:System.DateTimeKind> 값 사이의 실제 시간 간격을 반영 합니다. 마찬가지로 이러한 두 개의 날짜 및 시간 값을 비교하면 시간 간의 관계를 정확하게 반영합니다.
 
@@ -67,7 +68,7 @@ ms.locfileid: "94817772"
 
 ## <a name="arithmetic-operations-with-times-in-time-zones"></a>표준 시간대의 시간을 사용한 산술 연산
 
-클래스에는 <xref:System.TimeZoneInfo> 시간을 한 표준 시간대에서 다른 표준 시간대로 변환 하는 경우 자동으로 조정을 적용 하는 여러 변환 메서드가 포함 되어 있습니다. 여기에는 다음이 포함됩니다.
+클래스에는 <xref:System.TimeZoneInfo> 시간을 한 표준 시간대에서 다른 표준 시간대로 변환 하는 경우 자동으로 조정을 적용 하는 여러 변환 메서드가 포함 되어 있습니다. 포함되는 내용은 다음과 같습니다.
 
 - <xref:System.TimeZoneInfo.ConvertTime%2A>및 <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A> 메서드로, 두 표준 시간대 간에 시간을 변환 합니다.
 

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 포함 리소스에서 표준 시간대 복원'
 title: '방법: 포함 리소스에서 표준 시간대 복원'
 ms.date: 04/10/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - time zones [.NET], deserializing
 - time zones [.NET], restoring
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
-ms.openlocfilehash: a1302f595a0907103bae2695e703e5af6da660a7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 593fb392c073ca0a3b557b7d82d430b024b3d13a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817668"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702485"
 ---
 # <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>방법: 포함 리소스에서 표준 시간대 복원
 

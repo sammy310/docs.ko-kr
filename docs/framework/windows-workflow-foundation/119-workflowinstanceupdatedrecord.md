@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 119-WorkflowInstanceUpdatedRecord'
 title: 119 - WorkflowInstanceUpdatedRecord
 ms.date: 03/30/2017
 ms.assetid: 32485d0a-dcdb-45bc-b1e3-79fa9ad9439b
-ms.openlocfilehash: c76ce2ffcd25ebe09463e6d704787f321baa2cb3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e59bbe81d548fccb0d44d6f8c1b442ee6ad685f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96278663"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703200"
 ---
 # <a name="119---workflowinstanceupdatedrecord"></a>119 - WorkflowInstanceUpdatedRecord
 
@@ -20,7 +21,7 @@ ms.locfileid: "96278663"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  워크플로 인스턴스가 업데이트되면 ETW 추적 참가자가 이 이벤트를 내보냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96278663"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|워크플로의 인스턴스 ID|  
 |RecordNumber|xs:long|내보낸 레코드의 시퀀스 번호|  

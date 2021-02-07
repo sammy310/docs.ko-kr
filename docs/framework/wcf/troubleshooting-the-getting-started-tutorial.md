@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: Windows Communication Foundation 시작 자습서 문제 해결'
 title: Windows Communication Foundation 시작 자습서 문제 해결
 ms.date: 01/25/2019
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 4d471372419996c5bc490c2d0fdd83927428a41e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c57598da80beb7b95d324359f6f9cf7cab9a4879
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281341"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703395"
 ---
 # <a name="troubleshoot-the-get-started-with-windows-communication-foundation-tutorials"></a>Windows Communication Foundation 시작 자습서 문제 해결
 
@@ -43,7 +44,7 @@ Visual Basic 응용 프로그램에 대 한 진입점이 잘못 되었습니다.
     a. **GettingStartedHost** 창에서 **시작 개체** 에 대해 목록에서 **Service. Program** (또는 특정 응용 프로그램의 진입점)을 선택 합니다.
     b. 주 메뉴에서 **파일**  >  **모두 저장** 을 선택 합니다.
 
-### <a name="run-the-service-application"></a>서비스 응용 프로그램 실행
+### <a name="run-the-service-application"></a>서비스 애플리케이션 실행
 
 **HTTP에서 URL ' http: \/ /+: 8000/GetCalculatorService started/'를 등록할 수 없습니다. 프로세스에이 네임 스페이스에 대 한 액세스 권한이 없습니다.**
 

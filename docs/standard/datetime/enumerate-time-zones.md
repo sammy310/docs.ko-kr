@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 컴퓨터에 있는 표준 시간대 열거'
 title: '방법: 컴퓨터에 있는 표준 시간대 열거'
 ms.date: 04/10/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - time zones [.NET], enumerating
 - enumerating time zones [.NET]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-ms.openlocfilehash: 276c13bb95685e9588e25238f1a6e45cd57a6c91
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 98227d61ed81828f9c0614f622fed9a9667c6f4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817967"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702680"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>방법: 컴퓨터에 있는 표준 시간대 열거
 
@@ -24,7 +25,7 @@ ms.locfileid: "94817967"
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>로컬 시스템에 있는 표준 시간대를 열거하려면
 
-1. <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> 메서드를 호출합니다. 메서드는 개체의 제네릭 컬렉션을 반환 합니다 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> <xref:System.TimeZoneInfo> . 컬렉션의 항목은 해당 속성을 기준으로 정렬 됩니다 <xref:System.TimeZoneInfo.DisplayName%2A> . 예를 들면 다음과 같습니다.
+1. <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> 메서드를 호출합니다. 메서드는 개체의 제네릭 컬렉션을 반환 합니다 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> <xref:System.TimeZoneInfo> . 컬렉션의 항목은 해당 속성을 기준으로 정렬 됩니다 <xref:System.TimeZoneInfo.DisplayName%2A> . 다음은 그 예입니다. 
 
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]

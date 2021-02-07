@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 1150-CompensationState'
 title: 1150 - CompensationState
 ms.date: 03/30/2017
 ms.assetid: eb015842-cc5a-47be-bce5-6af39e567723
-ms.openlocfilehash: 2adb317521b8659c2419e4c04aabf4cf4499b36f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4adc246cbe46dee3594bc6c0330c8e0306489219
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285111"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703343"
 ---
 # <a name="1150---compensationstate"></a>1150 - CompensationState
 
@@ -20,7 +21,7 @@ ms.locfileid: "96285111"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  CompensableActivity에서 상태 변경을 나타냅니다.  
   

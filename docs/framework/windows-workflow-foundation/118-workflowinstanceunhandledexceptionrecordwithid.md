@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 118-WorkflowInstanceUnhandledExceptionRecordWithId'
 title: 118 - WorkflowInstanceUnhandledExceptionRecordWithId
 ms.date: 03/30/2017
 ms.assetid: 2ce4b193-e141-4cc4-86a3-2e8c984c110d
-ms.openlocfilehash: 54bbb267902fe547821d4a5580f86da944ae70cd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9d39afb95db8a393b967d590ee37e9f3f2529ffd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96278689"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99703226"
 ---
 # <a name="118---workflowinstanceunhandledexceptionrecordwithid"></a>118 - WorkflowInstanceUnhandledExceptionRecordWithId
 
@@ -17,10 +18,10 @@ ms.locfileid: "96278689"
 |-|-|  
 |ID|118|  
 |키워드|HealthMonitoring, WFTracking|  
-|Level|오류|  
+|Level|Error|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  워크플로 인스턴스가 WorkflowInstanceUnhandledExceptionRecord를 내보내면 ETW 추적 참가자가 이 이벤트를 내보냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96278689"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|워크플로의 인스턴스 ID|  
 |RecordNumber|xs:long|내보낸 레코드의 시퀀스 번호|  

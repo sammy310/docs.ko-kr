@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 날짜 및 시간 산술 연산의 표준 시간대 사용'
 title: '방법: 날짜 및 시간 산술 연산에서 표준 시간대 사용'
 ms.date: 04/10/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - arithmetic operations [.NET], dates and times
 - dates [.NET], adding and subtracting
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
-ms.openlocfilehash: ca7e9e1fbd73eafa80c444ba2d5ddaa84a6d7f5e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 74f878da85dc959114013d7296b738e8198fc992
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817486"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702368"
 ---
 # <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>방법: 날짜 및 시간 산술 연산에서 표준 시간대 사용
 

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 조정 규칙을 사용 하지 않고 표준 시간대 만들기'
 title: '방법: 조정 규칙을 사용하지 않고 표준 시간대 만들기'
 ms.date: 04/10/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - time zones [.NET], creating
 - adjustment rule [.NET]
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
-ms.openlocfilehash: 411a0c0b581830a45a986216681ca2800a9a4c42
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c2d1f2d2ea21c53c6a3b41603be4f31ec5442a30
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817993"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99702732"
 ---
 # <a name="how-to-create-time-zones-without-adjustment-rules"></a>방법: 조정 규칙을 사용하지 않고 표준 시간대 만들기
 

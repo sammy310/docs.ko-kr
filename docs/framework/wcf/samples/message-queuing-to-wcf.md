@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: Windows Communication Foundation 메시지 큐'
 title: Windows Communication Foundation로 메시지 큐
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: 5132e0380aebd595e79429fab9df8a7fb94574a0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 53c535379584bcb8fa50d1b550f87ea7acc15175
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558695"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99704006"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Windows Communication Foundation로 메시지 큐
 
@@ -123,7 +124,7 @@ Console.ReadLine();
 
     2. **기능** 탭을 확장 합니다.
 
-    3. **개인 메시지 큐**를 마우스 오른쪽 단추로 클릭 하 고 **새로 만들기**, **개인 큐**를 선택 합니다.
+    3. **개인 메시지 큐** 를 마우스 오른쪽 단추로 클릭 하 고 **새로 만들기**, **개인 큐** 를 선택 합니다.
 
     4. **트랜잭션** 상자를 확인 합니다.
 
@@ -154,7 +155,7 @@ Console.ReadLine();
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WCF의 큐](../feature-details/queues-in-wcf.md)
 - [방법: WCF 엔드포인트 및 메시지 큐 애플리케이션과 메시지 교환](../feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
