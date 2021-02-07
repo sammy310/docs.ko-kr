@@ -1,15 +1,16 @@
 ---
-title: <workflowInstanceQuery>WCF의
+description: '다음에 대 한 자세한 정보: <workflowInstanceQuery> WCF'
+title: <workflowInstanceQuery> WCF의
 ms.date: 03/30/2017
 ms.assetid: 35c73f9d-474e-42eb-874d-ddc04b1987f3
-ms.openlocfilehash: eaf0cd204265aac7c1421e3de0c33963e6bbb7a1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 30df1a6b4fc0aeac5b7094f1a1f7d9d02599c94d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854733"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682321"
 ---
-# <a name="workflowinstancequery-of-wcf"></a>\<workflowInstanceQuery>WCF의
+# <a name="workflowinstancequery-of-wcf"></a>\<workflowInstanceQuery> WCF의
 
 시작된 이벤트나 완료된 이벤트와 같이 워크플로 인스턴스 수명 주기의 변경 내용을 추적하는 쿼리를 나타냅니다.  
   
@@ -54,13 +55,13 @@ ms.locfileid: "70854733"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<states>](states-of-wcf-workflowinstancequery.md)|추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태의 컬렉션입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<workflowInstanceQueries>](workflowinstancequeries-of-wcf.md)|시작된 이벤트나 완료된 이벤트와 같이 워크플로 인스턴스 수명 주기의 변경 내용을 추적하는 구성 요소의 컬렉션을 나타냅니다.|  
   

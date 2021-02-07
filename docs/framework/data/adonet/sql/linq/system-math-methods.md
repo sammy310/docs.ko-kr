@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: System.web 메서드'
 title: System.Math 메서드
 ms.date: 03/30/2017
 ms.assetid: 0f299521-6f41-4720-bd70-67c93fc50948
-ms.openlocfilehash: e91c8ea95d21288ad2577f1550333febd448766d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e97e0a16b6eafdb57f4aaf72d62788e6657afbdc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158203"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681346"
 ---
 # <a name="systemmath-methods"></a>System.Math 메서드
 
@@ -21,7 +22,7 @@ ms.locfileid: "91158203"
   
 ## <a name="differences-from-net"></a>.NET과의 차이점  
 
- .NET Framework의 반올림 구문은 SQL Server와 다릅니다. <xref:System.Math.Round%2A>.NET Framework의 메서드는 *은행원의 반올림*을 수행 합니다. 여기서 0.5로 끝나는 숫자는 다음으로 큰 숫자가 아닌 가장 가까운 짝수로 반올림 됩니다. 예를 들어 2.5는 2가 되고 3.5는 4가 됩니다. 이 방법은 많은 데이터 트랜잭션에서 값이 높아질수록 발생할 수 있는 체계적 오차를 방지할 수 있습니다.  
+ .NET Framework의 반올림 구문은 SQL Server와 다릅니다. <xref:System.Math.Round%2A>.NET Framework의 메서드는 *은행원의 반올림* 을 수행 합니다. 여기서 0.5로 끝나는 숫자는 다음으로 큰 숫자가 아닌 가장 가까운 짝수로 반올림 됩니다. 예를 들어 2.5는 2가 되고 3.5는 4가 됩니다. 이 방법은 많은 데이터 트랜잭션에서 값이 높아질수록 발생할 수 있는 체계적 오차를 방지할 수 있습니다.  
   
  SQL에서 `ROUND` 함수는 항상 0 이상의 정수 값으로 반올림됩니다. 따라서 2.5의 경우 .NET Framework에서는 2가 되는데 반해 SQL에서는 3이 됩니다.  
   

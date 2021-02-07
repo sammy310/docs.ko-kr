@@ -1,15 +1,16 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <wsFederationHttpBinding>
 title: <wsFederationHttpBinding>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
-ms.openlocfilehash: a57b5ff0b4a8186ffc4c01b5e0824100f265551c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1217c4e46fe18ea5df478b8a790be4da33590c92
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557283"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682100"
 ---
 # \<wsFederationHttpBinding>
 
@@ -109,7 +110,7 @@ WS-Federation을 지원하는 바인딩을 정의합니다.
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |bypassProxyOnLocal|로컬 주소에 대해 프록시 서버를 사용하지 않을 것인지 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다.|
 |closeTimeout|닫기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다. 기본값은 00:01:00입니다.|
@@ -130,7 +131,7 @@ WS-Federation을 지원하는 바인딩을 정의합니다.
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<security>](security-of-wsfederationhttpbinding.md)|메시지에 대한 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement> 형식입니다.|
 |[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|
@@ -138,7 +139,7 @@ WS-Federation을 지원하는 바인딩을 정의합니다.
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<bindings>](bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|
 
@@ -195,7 +196,7 @@ WS-Federation을 지원하는 바인딩을 정의합니다.
 </configuration>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.WSFederationHttpBinding>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement>

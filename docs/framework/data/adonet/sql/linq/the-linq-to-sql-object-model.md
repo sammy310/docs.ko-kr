@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: LINQ to SQL 개체 모델'
 title: LINQ to SQL 개체 모델
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: b17e1b6f4a6f849e3b42d69e9b9c2d5f906218e1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: be4021019d09d1479364b25268eefda50b6eaa6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155512"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681268"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 개체 모델
 
@@ -34,7 +35,7 @@ ms.locfileid: "91155512"
   
 ## <a name="linq-to-sql-entity-classes-and-database-tables"></a>LINQ to SQL 엔터티 클래스 및 데이터베이스 테이블  
 
- 에서 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 데이터베이스 테이블은 *엔터티 클래스로*표현 됩니다. 엔터티 클래스는 클래스를 데이터베이스 테이블과 연결하는 특수한 정보를 사용하여 클래스에 주석을 단다는 점을 제외하고 사용자가 만들 수 있는 다른 클래스와 같습니다. 다음 예제와 같이 사용자 지정 특성(<xref:System.Data.Linq.Mapping.TableAttribute>)을 클래스 선언에 추가하여 이 주석을 만듭니다.  
+ 에서 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 데이터베이스 테이블은 *엔터티 클래스로* 표현 됩니다. 엔터티 클래스는 클래스를 데이터베이스 테이블과 연결하는 특수한 정보를 사용하여 클래스에 주석을 단다는 점을 제외하고 사용자가 만들 수 있는 다른 클래스와 같습니다. 다음 예제와 같이 사용자 지정 특성(<xref:System.Data.Linq.Mapping.TableAttribute>)을 클래스 선언에 추가하여 이 주석을 만듭니다.  
   
 ### <a name="example"></a>예제  
 

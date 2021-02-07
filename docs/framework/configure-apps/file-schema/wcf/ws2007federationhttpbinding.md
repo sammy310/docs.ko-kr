@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <ws2007FederationHttpBinding>
 title: <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-ms.openlocfilehash: fe9ab2e19706a5d295b5916aeb818621d1132c11
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 90635805573e5bee64d8adf0f79de827733f178b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558773"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682191"
 ---
 # \<ws2007FederationHttpBinding>
 
@@ -63,7 +64,7 @@ ms.locfileid: "90558773"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`bypassProxyOnLocal`|로컬 주소에 대해 프록시 서버를 우회할지 여부를 나타내는 값입니다. 기본값은 `false`입니다.|
 |`closeTimeout`|닫기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다. 기본값은 00:01:00입니다.|
@@ -84,7 +85,7 @@ ms.locfileid: "90558773"
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<security>](security-of-wsfederationhttpbinding.md)|메시지에 대한 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement> 형식입니다.|
 |[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|
@@ -92,13 +93,13 @@ ms.locfileid: "90558773"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<bindings>](bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|
 
 ## <a name="remarks"></a>설명
 
-페더레이션은 인증 및 권한 부여를 위해 여러 회사나 트러스트 도메인 간에 ID를 공유하는 기능입니다. WS-Trust 프로토콜을 사용하여 ID 표현을 트러스트 도메인 간에 매핑합니다. 페더레이션 HTTP 바인딩은 SOAP 보안과 혼합 모드 보안을 지원하지만 전송 보안을 지원하지는 않습니다. 이 바인딩으로 구성된 서비스는 HTTP 전송을 사용해야 합니다. 자세한 내용은 [\<wsFederationHttpBinding>](wsfederationhttpbinding.md)를 참조하세요.
+페더레이션은 인증 및 권한 부여를 위해 여러 회사나 트러스트 도메인 간에 ID를 공유하는 기능입니다. WS-Trust 프로토콜을 사용하여 ID 표현을 트러스트 도메인 간에 매핑합니다. 페더레이션 HTTP 바인딩은 SOAP 보안과 혼합 모드 보안을 지원하지만 전송 보안을 지원하지는 않습니다. 이 바인딩으로 구성된 서비스는 HTTP 전송을 사용해야 합니다. 자세한 내용은 [\<wsFederationHttpBinding>](wsfederationhttpbinding.md)을(를) 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -133,7 +134,7 @@ ms.locfileid: "90558773"
 </configuration>
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.WS2007FederationHttpBinding>
 - <xref:System.ServiceModel.Configuration.WS2007FederationHttpBindingElement>

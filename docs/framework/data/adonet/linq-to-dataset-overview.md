@@ -1,13 +1,14 @@
 ---
+description: 자세한 내용은 LINQ to DataSet 개요를 확인 하세요.
 title: LINQ to DataSet 개요
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-ms.openlocfilehash: f7659d03005df69d7debe604581ce49973f938cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 73054a4f9b7397e3fa5d417d85afa2fa23aec643
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200617"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681697"
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ to DataSet 개요
 
@@ -19,7 +20,7 @@ ms.locfileid: "91200617"
   
 ## <a name="querying-datasets-using-linq-to-dataset"></a>LINQ to DataSet을 사용한 데이터 집합 쿼리  
 
- <xref:System.Data.DataSet>LINQ to DataSet를 사용 하 여 개체를 쿼리하려면 먼저을 채워야 합니다 <xref:System.Data.DataSet> . <xref:System.Data.DataSet> <xref:System.Data.Common.DataAdapter> 클래스 또는 [LINQ to SQL](./sql/linq/index.md)를 사용 하는 등의 여러 가지 방법으로에 데이터를 로드할 수 있습니다. 데이터가 <xref:System.Data.DataSet> 개체에 로드되면 해당 개체를 쿼리할 수 있습니다. LINQ to DataSet를 사용 하 여 쿼리를 작성 하는 것은 linq (통합 언어 쿼리)를 다른 LINQ 사용 데이터 소스에 대해 사용 하는 것과 비슷합니다. LINQ 쿼리는 <xref:System.Data.DataSet> <xref:System.Linq.Enumerable.Join%2A> 및 <xref:System.Linq.Enumerable.GroupJoin%2A> 표준 쿼리 연산자를 사용 하 여의 단일 테이블 또는 둘 이상의 테이블에 대해 수행할 수 있습니다.  
+ <xref:System.Data.DataSet>LINQ to DataSet를 사용 하 여 개체를 쿼리하려면 먼저을 채워야 합니다 <xref:System.Data.DataSet> . <xref:System.Data.DataSet> <xref:System.Data.Common.DataAdapter> 클래스 또는 [LINQ to SQL](./sql/linq/index.md)를 사용 하는 등의 여러 가지 방법으로에 데이터를 로드할 수 있습니다. 데이터가 <xref:System.Data.DataSet> 개체에 로드되면 해당 개체를 쿼리할 수 있습니다. LINQ to DataSet를 사용 하 여 쿼리를 작성 하는 것은 다른 LINQ 사용 데이터 소스에 대해 LINQ (Language-Integrated Query)를 사용 하는 것과 비슷합니다 LINQ 쿼리는 <xref:System.Data.DataSet> <xref:System.Linq.Enumerable.Join%2A> 및 <xref:System.Linq.Enumerable.GroupJoin%2A> 표준 쿼리 연산자를 사용 하 여의 단일 테이블 또는 둘 이상의 테이블에 대해 수행할 수 있습니다.  
   
  LINQ 쿼리는 형식화 된 개체와 형식화 되지 않은 개체 모두에 대해 지원 됩니다 <xref:System.Data.DataSet> . 애플리케이션 디자인 타임에 <xref:System.Data.DataSet> 스키마가 인식되는 경우 형식화된 <xref:System.Data.DataSet>을 사용하는 것이 좋습니다. 형식화된 <xref:System.Data.DataSet>에서 테이블과 행에는 각 열에 대한 형식화된 멤버가 있으며, 이를 통해 간단하고 이해하기 쉬운 쿼리를 만들 수 있습니다.  
   

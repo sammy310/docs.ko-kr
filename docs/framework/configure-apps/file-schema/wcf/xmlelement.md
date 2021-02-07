@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <xmlElement>
 title: <xmlElement>
 ms.date: 03/30/2017
 ms.assetid: 395205c2-d8c0-4a5e-90f3-7ce3c085fccd
-ms.openlocfilehash: 0ab7fbd64cc92e940617f5334eeb16fcb3a50c4a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 891f1a95c1f6a79127d48a1572bc805574225530
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181234"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682009"
 ---
 # \<xmlElement>
 
@@ -59,4 +60,4 @@ ms.locfileid: "91181234"
 - [페더레이션 및 발급된 토큰](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [사용자 지정 바인딩을 사용하는 보안 기능](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [페더레이션 및 발급된 토큰](../../../wcf/feature-details/federation-and-issued-tokens.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)

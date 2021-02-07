@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ITypeNameBuilder:: CloseGenericArguments 메서드'
 title: ITypeNameBuilder::CloseGenericArguments 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 583d13f9-786b-49e3-bc42-a4ba3aa8d9c6
 topic_type:
 - apiref
-ms.openlocfilehash: f1201330ac89616557572e72f125787fe875b789
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f84a3a50083b491512ccf78c740c2e18f4787a4c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721233"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680436"
 ---
 # <a name="itypenamebuilderclosegenericarguments-method"></a>ITypeNameBuilder::CloseGenericArguments 메서드
 
@@ -42,6 +43,6 @@ HRESULT CloseGenericArguments ( );
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)

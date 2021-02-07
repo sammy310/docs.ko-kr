@@ -1,14 +1,15 @@
 ---
+description: 자세한 내용은 <System.servicemodel> 워크플로의
 title: 워크플로의>를 <합니다.
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: c18cc4886d3e7a19b750a005b27d00a841b9fc5d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 393c1055d6b136ed27a297e00133f5b53d12fd38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194858"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99681749"
 ---
 # <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel> 워크플로
 
@@ -101,7 +102,7 @@ ms.locfileid: "91194858"
   
 ### <a name="attributes"></a>특성  
 
- 없음  
+ None  
   
 ### <a name="child-elements"></a>자식 요소  
   

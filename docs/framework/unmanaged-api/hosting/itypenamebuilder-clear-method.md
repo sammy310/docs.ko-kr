@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ITypeNameBuilder:: Clear 메서드'
 title: ITypeNameBuilder::Clear 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 18d54280-46af-479f-8d84-5ab64f8b23b9
 topic_type:
 - apiref
-ms.openlocfilehash: 53926d04ed10dc3f02124310675e00edfdba423d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8acfb50e0cbad3f92c65aaa195eb84103ea57718
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721259"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680585"
 ---
 # <a name="itypenamebuilderclear-method"></a>ITypeNameBuilder::Clear 메서드
 
@@ -42,6 +43,6 @@ HRESULT Clear ( );
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)

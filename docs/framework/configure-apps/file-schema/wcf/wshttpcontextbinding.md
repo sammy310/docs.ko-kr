@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <wsHttpContextBinding>
 title: <wsHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1e40b5c9-0df2-4d66-afc5-a99d0e4ae7a4
-ms.openlocfilehash: 4b611443e836773ad615f919921c8e7ddb29cba9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b020bbcaaa8d7680aeda8dc1a72cbc70fb4f9ada
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181286"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682061"
 ---
 # \<wsHttpContextBinding>
 
@@ -107,7 +108,7 @@ ms.locfileid: "91181286"
 - <xref:System.ServiceModel.WSHttpContextBinding>
 - <xref:System.ServiceModel.Configuration.WSHttpContextBindingElement>
 - <xref:System.ServiceModel.Channels.ContextBindingElement>
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

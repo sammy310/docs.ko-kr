@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <wsdlImporter>
 title: <wsdlImporter>
 ms.date: 03/30/2017
 ms.assetid: 986b2165-8430-4dba-b1b8-00396841bb96
-ms.openlocfilehash: 82704aa40b508f1b1e2237c9768a7b7599c5c87e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9f95d4e6b940f36e9142eb9865327c772e3ce4db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158593"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99682152"
 ---
 # \<wsdlImporter>
 

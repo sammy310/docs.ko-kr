@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ITypeNameFactory 인터페이스'
 title: ITypeNameFactory 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fa4247c4-f4f1-4855-9241-e04d737f5f73
 topic_type:
 - apiref
-ms.openlocfilehash: 1b7118ed356fe73464ea9f0d1917b70f35dc020b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: dcef36a000d9d04a6ad41a9962bc561023943d1b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728734"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680241"
 ---
 # <a name="itypenamefactory-interface"></a>ITypeNameFactory 인터페이스
 
@@ -37,7 +38,7 @@ ms.locfileid: "95728734"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)
 - [TypeNameFactory Coclass](typenamefactory-coclass.md)

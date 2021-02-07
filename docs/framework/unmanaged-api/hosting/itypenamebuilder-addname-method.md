@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ITypeNameBuilder:: AddName 메서드'
 title: ITypeNameBuilder::AddName 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: be2f6e55-f46d-49aa-b477-80fd7e4515f7
 topic_type:
 - apiref
-ms.openlocfilehash: 6498a7d9c9c1666d4644ce8e865ae821b38459c6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9a55f1fd3d3f1e46292996767ed42f3266aef52c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727733"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99680783"
 ---
 # <a name="itypenamebuilderaddname-method"></a>ITypeNameBuilder::AddName 메서드
 
@@ -44,6 +45,6 @@ HRESULT AddName (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)
