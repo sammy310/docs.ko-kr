@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: GetHashFromBlob 함수'
 title: GetHashFromBlob 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b712d862-f2d0-4b55-87d4-65bbeadef982
 topic_type:
 - apiref
-ms.openlocfilehash: d1027aea1d800bda1654b223fec992aa70efd4b7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dc5039e44440afa7a000bc61167faec0e5b6cc84
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140720"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736611"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob 함수
 
@@ -55,22 +56,22 @@ HRESULT GetHashFromBlob (
 제한이 반환 된 해시 버퍼입니다.
 
 `cchHash`\
-진행 `pbHash`요청 된 최대 크기입니다.
+진행 요청 된 최대 크기 `pbHash` 입니다.
 
 `pchHash`\
-제한이 반환 된 `pbHash`의 크기 (바이트)입니다.
+제한이 반환 된의 크기 (바이트)입니다 `pbHash` .
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
 **헤더:** StrongName
 
-**라이브러리:** Mscoree.dll에 리소스로 포함 됩니다.
+**라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.
 
-**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [GetHashFromBlob 메서드](../hosting/iclrstrongname-gethashfromblob-method.md)
 - [ICLRStrongName 인터페이스](../hosting/iclrstrongname-interface.md)

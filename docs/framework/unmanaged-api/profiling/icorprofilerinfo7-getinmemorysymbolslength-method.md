@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo7:: Getinmemory기호 Slength 메서드'
 title: 'ICorProfilerInfo7:: Getinmemory기호 Slength 메서드'
 ms.date: 03/30/2017
 api_name:
@@ -9,12 +10,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
-ms.openlocfilehash: 46ffa5cb4fac6988240d32cb1939cc25bdf0a412
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5d96b17e8abbd023f2d050eff3f121a871a94754
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686074"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737118"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7:: Getinmemory기호 Slength 메서드
 
@@ -39,7 +40,7 @@ HRESULT GetInMemorySymbolsLength(
  Pcount기호 바이트  
  제한이 `DWORD` 메서드가 반환 될 때 스트림의 길이 (바이트)를 포함 하는 값에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `S_OK`메모리 스트림의 길이가 0 인 경우에도이 메서드는를 반환 합니다.  
   
@@ -62,6 +63,6 @@ HRESULT GetInMemorySymbolsLength(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo7 인터페이스](icorprofilerinfo7-interface.md)

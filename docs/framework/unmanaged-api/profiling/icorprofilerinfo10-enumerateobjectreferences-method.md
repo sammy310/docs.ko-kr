@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo10:: EnumerateObjectReferences 메서드'
 title: ICorProfilerInfo10::EnumerateObjectReferences
 ms.date: 08/06/2019
 dev_langs:
@@ -11,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: a276ecfe65ed9752f39ed68a36e8e17a24255508
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3e31192426ea38e177b636bcc6a4b6e54057801f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558318"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737326"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences 메서드
 
@@ -58,6 +59,6 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 **.Net 버전:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo10 인터페이스](icorprofilerinfo10-interface.md)

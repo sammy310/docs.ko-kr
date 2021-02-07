@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo5 인터페이스'
 title: ICorProfilerInfo5 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: 7bd48c34-37ed-4230-9eec-39a17280f05d
 topic_type:
 - apiref
-ms.openlocfilehash: a6206e35280e073df2abfb7ae46aa84d34b30208
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c89faf3db08adeee3ffcfbb755a5da5ae44b3c7d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733804"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737274"
 ---
 # <a name="icorprofilerinfo5-interface"></a>ICorProfilerInfo5 인터페이스
 
@@ -42,6 +43,6 @@ ms.locfileid: "95733804"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 인터페이스](profiling-interfaces.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: GetHashFromFileW 함수'
 title: GetHashFromFileW 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97c2d7a6-5376-45a1-ba65-146a249147cc
 topic_type:
 - apiref
-ms.openlocfilehash: 8038d0abc93e058e6bde897bbf2261d8f1df885a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: daebd06de02dfe936f1bdeb8697de4fe6524dce3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732325"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736552"
 ---
 # <a name="gethashfromfilew-function"></a>GetHashFromFileW 함수
 
@@ -70,7 +71,7 @@ HRESULT GetHashFromFileW (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [GetHashFromFileW 메서드](../hosting/iclrstrongname-gethashfromfilew-method.md)
 - [GetHashFromFile 메서드](../hosting/iclrstrongname-gethashfromfile-method.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 프로 파일링 열거형'
 title: 프로파일링 열거형
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework profiling]
 - unmanaged enumerations [.NET Framework], profiling
 ms.assetid: 8d5f9570-9853-4ce8-8101-df235d5b258e
-ms.openlocfilehash: 8956a09cf76aa54452e8c020239e650e55d8a0d1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f202e70dd27654dd39740851549477d4a6bf77a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95701616"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736754"
 ---
 # <a name="profiling-enumerations"></a>프로파일링 열거형
 
@@ -70,7 +71,7 @@ ms.locfileid: "95701616"
  [COR_PRF_TRANSITION_REASON 열거형](cor-prf-transition-reason-enumeration.md)  
  관리 코드에서 비관리 코드로 전환 또는 그 반대의 경우로 전환하는 이유를 나타냅니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [프로파일링 개요](profiling-overview.md)  
   

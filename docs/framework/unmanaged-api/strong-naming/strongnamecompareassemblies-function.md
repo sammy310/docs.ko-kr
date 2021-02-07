@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: StrongNameCompareAssemblies 함수'
 title: StrongNameCompareAssemblies 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 763f2375-efc6-4219-8806-a3b0567ef72b
 topic_type:
 - apiref
-ms.openlocfilehash: e7292635ea0344f1c77c8d44908a9a811e464ff9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e59bb96a89dc1e1cf8b809c3e0d538aaffe83b8e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732309"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736546"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 함수
 
@@ -54,7 +55,7 @@ BOOLEAN StrongNameCompareAssemblies (
   
 - `SN_CMP_SIGONLY` (2)-어셈블리가 시그니처와 체크섬만 다른 것으로 지정 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `true` 성공적으로 완료 되 면 그렇지 않으면 `false` 입니다.  
   
@@ -74,7 +75,7 @@ BOOLEAN StrongNameCompareAssemblies (
   
  `StrongNameCompareAssemblies`함수가 성공적으로 완료되지 않으면 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 함수를 호출하여 마지막으로 생성된 오류를 검색합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [StrongNameCompareAssemblies 메서드](../hosting/iclrstrongname-strongnamecompareassemblies-method.md)
 - [ICLRStrongName 인터페이스](../hosting/iclrstrongname-interface.md)

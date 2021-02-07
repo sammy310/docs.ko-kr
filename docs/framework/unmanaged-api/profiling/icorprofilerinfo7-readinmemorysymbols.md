@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo7:: ReadInMemorySymbols'
 title: 'ICorProfilerInfo7:: ReadInMemorySymbols'
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
-ms.openlocfilehash: 6917900b7494550992dfa82f45ed0140f95e68cb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7f1a88d823e7cdfcc89aa140681f61cfbe3f63ec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733622"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736988"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7:: ReadInMemorySymbols
 
@@ -52,7 +53,7 @@ HRESULT ReadInMemorySymbols(
  `pCountSymbolBytesRead`  
  제한이 메서드가 반환 될 때 읽은 실제 바이트 수를 포함 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `S_OK`0이 아닌 바이트 수를 읽은 경우입니다.  
   
@@ -75,6 +76,6 @@ HRESULT ReadInMemorySymbols(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo7 인터페이스](icorprofilerinfo7-interface.md)

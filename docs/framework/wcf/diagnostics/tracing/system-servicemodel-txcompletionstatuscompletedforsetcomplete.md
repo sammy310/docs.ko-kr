@@ -1,19 +1,20 @@
 ---
+description: TxCompletionStatusCompletedForSetComplete에 대해 자세히 알아보세요.
 title: System.ServiceModel.TxCompletionStatusCompletedForSetComplete
 ms.date: 03/30/2017
 ms.assetid: 201ffd59-df9e-40d9-9697-7de442ab8b35
-ms.openlocfilehash: 50f1a76c01d5e182b1271c72576d2d19ef6185e0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 88a7bb24037b3c491b1e595acb9645aa61a8f5e5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254287"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735584"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforsetcomplete"></a>System.ServiceModel.TxCompletionStatusCompletedForSetComplete
 
 지정한 작업에 대해 지정된 트랜잭션이 SetTransactionComplete에 대한 호출로 인해 완료되었습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  사용자가 OperationContext를 통해 현재 트랜잭션을 완료하도록 명시적으로 결정한 경우 추적됩니다.  
   

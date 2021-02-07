@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: ServiceAuthorizationFailure'
 title: ServiceAuthorizationFailure
 ms.date: 03/30/2017
 ms.assetid: a6a57896-41d5-4c05-a2fb-184d828e20c1
-ms.openlocfilehash: fbb54c6f67be6ed4f1abc1142fb3729115d7349c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1c3cd5c199906a0a19fcd6a4be579bca61c0ecce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263349"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735974"
 ---
 # <a name="serviceauthorizationfailure"></a>ServiceAuthorizationFailure
 
@@ -17,7 +18,7 @@ Id: 168
   
  범주: SecurityAudit  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 서비스 인증 실패를 나타냅니다. 이벤트에서는 서비스, 동작, 클라이언트 ID, AuthorizationContext, 동작 ID 및 ServiceAuthorizationManager를 나열합니다.  
   

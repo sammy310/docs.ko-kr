@@ -1,19 +1,20 @@
 ---
+description: TxFailedToNegotiateOleTx에 대해 자세히 알아보세요.
 title: System.ServiceModel.TxFailedToNegotiateOleTx
 ms.date: 03/30/2017
 ms.assetid: 3f0f0b4b-a1ad-4704-8329-455daf54892d
-ms.openlocfilehash: 7b468a57409e9a473a5bbf8e3324435e65e8c60b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c7f18ef73ff9c09cc51ad3aa6c54c2bd672d0cc3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295316"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735571"
 ---
 # <a name="systemservicemodeltxfailedtonegotiateoletx"></a>System.ServiceModel.TxFailedToNegotiateOleTx
 
 지정된 코디네이션 컨텍스트에 대해 OleTransactions 프로토콜 협상을 완료하지 못했습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  OleTx 정보가 포함된 들어오는 트랜잭션이 첨부된 OleTx 정보를 사용할 수 없고 대신 WS-AT를 사용하는 경우 추적됩니다.  
   

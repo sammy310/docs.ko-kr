@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: StrongNameGetBlob 함수'
 title: StrongNameGetBlob 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15d09166-be00-4696-913f-2c1fbc7ac2e1
 topic_type:
 - apiref
-ms.openlocfilehash: 8f5cb89294004dfb1f020627ceb1edb58735f72c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 72f7ce50ce6170a23e5b24b68f911ff58bebe3bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732283"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736442"
 ---
 # <a name="strongnamegetblob-function"></a>StrongNameGetBlob 함수
 
@@ -48,7 +49,7 @@ BOOLEAN StrongNameGetBlob (
  `pcbBlob`  
  [in, out] 요청 된 최대 크기 (바이트)입니다 `pbBlob` . 반환 시의 실제 크기 (바이트)입니다 `pbBlob` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `true` 성공적으로 완료 되 면 그렇지 않으면 `false` 입니다.  
   
@@ -66,7 +67,7 @@ BOOLEAN StrongNameGetBlob (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [StrongNameGetBlob 메서드](../hosting/iclrstrongname-strongnamegetblob-method.md)
 - [StrongNameGetBlobFromImage 메서드](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md)

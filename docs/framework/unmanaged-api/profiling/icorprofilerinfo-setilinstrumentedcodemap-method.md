@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo:: SetILInstrumentedCodeMap 메서드'
 title: ICorProfilerInfo::SetILInstrumentedCodeMap 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-ms.openlocfilehash: cac8e9570dab55af6b6e1fcf6f53b6a697727972
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0cf3b4ccf31076c2d1ea2df581003e3a07f0e795
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502914"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737352"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap 메서드
 
@@ -45,7 +46,7 @@ HRESULT SetILInstrumentedCodeMap(
 진행 코드 맵을 설정할 함수의 ID입니다.
 
 `fStartJit`\
-진행 `SetILInstrumentedCodeMap`메서드에 대 한 호출이 특정에 대해 첫 번째 인지 여부를 나타내는 부울 값입니다 `FunctionID` . 지정 된에 `fStartJit` `true` 대 한 첫 번째 호출에서을로 설정 하 `SetILInstrumentedCodeMap` `FunctionID` 고, 그 이후에를로 설정 `false` 합니다.
+진행 `SetILInstrumentedCodeMap` 메서드에 대 한 호출이 특정에 대해 첫 번째 인지 여부를 나타내는 부울 값입니다 `FunctionID` . 지정 된에 `fStartJit` `true` 대 한 첫 번째 호출에서을로 설정 하 `SetILInstrumentedCodeMap` `FunctionID` 고, 그 이후에를로 설정 `false` 합니다.
 
 `cILMapEntries`\
 진행 배열의 요소 수 `cILMapEntries` 입니다.
@@ -55,7 +56,7 @@ HRESULT SetILInstrumentedCodeMap(
 
 ## <a name="remarks"></a>설명
 
-프로파일러는 메서드를 계측 하기 위해 메서드 소스 코드 내에 문을 삽입 하는 경우가 있습니다. 예를 들어 지정 된 소스 줄에 도달할 때 알림을 받을 수 있습니다. `SetILInstrumentedCodeMap`프로파일러가 원래 MSIL 명령을 새 위치에 매핑할 수 있도록 합니다. 프로파일러는 [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md) 메서드를 사용 하 여 지정 된 네이티브 오프셋의 원래 MSIL 오프셋을 가져올 수 있습니다.
+프로파일러는 메서드를 계측 하기 위해 메서드 소스 코드 내에 문을 삽입 하는 경우가 있습니다. 예를 들어 지정 된 소스 줄에 도달할 때 알림을 받을 수 있습니다. `SetILInstrumentedCodeMap` 프로파일러가 원래 MSIL 명령을 새 위치에 매핑할 수 있도록 합니다. 프로파일러는 [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md) 메서드를 사용 하 여 지정 된 네이티브 오프셋의 원래 MSIL 오프셋을 가져올 수 있습니다.
 
 디버거는 각각의 이전 오프셋이 원래 수정 되지 않은 MSIL 코드 내에서 MSIL 오프셋을 참조 하 고 각각의 새 오프셋이 새로운 계측 된 코드 내에서 MSIL 오프셋을 참조 한다고 가정 합니다. 맵은 오름차순으로 정렬 되어야 합니다. 단계별 실행이 제대로 작동 하려면 다음 지침을 따르세요.
 

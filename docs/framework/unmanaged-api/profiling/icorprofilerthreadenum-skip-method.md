@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerThreadEnum:: Skip 메서드'
 title: ICorProfilerThreadEnum::Skip 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: acb8b029-4a96-4ed7-ae3c-310204e5ceea
 topic_type:
 - apiref
-ms.openlocfilehash: 12b7b53c408388c21d7508f6591ead5ccf55936b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1da191980364868ed4237fccaf7495d5417705cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721181"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736897"
 ---
 # <a name="icorprofilerthreadenumskip-method"></a>ICorProfilerThreadEnum::Skip 메서드
 
@@ -38,7 +39,7 @@ HRESULT Skip (    [in] ULONG celt
  `celt`  
  진행 건너뛸 요소의 수입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -61,7 +62,7 @@ HRESULT Skip (    [in] ULONG celt
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerThreadEnum 인터페이스](icorprofilerthreadenum-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugType2:: GetTypeID 메서드'
 title: 'ICorDebugType2:: GetTypeID 메서드'
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b933686-226e-4373-92b7-fac579ee7b1a
 topic_type:
 - apiref
-ms.openlocfilehash: 2a4a0bfae6f9a1970f0d4aca8b37f8fc68194462
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8143ede1a11ee5f73c49fc723920f53430339ed0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725692"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738106"
 ---
 # <a name="icordebugtype2gettypeid-method"></a>ICorDebugType2:: GetTypeID 메서드
 
@@ -39,7 +40,7 @@ HRESULT GetTypeID(
  `id`  
  제한이 이 ICorDebugType에 대 한 [COR_TYPEID](cor-typeid-structure.md) 에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  반환 값은 성공 시 `S_OK`이고 실패 시에는 오류 `HRESULT` 코드입니다. 코드에는 `HRESULT` 다음이 포함 됩니다.  
   
@@ -65,6 +66,6 @@ HRESULT GetTypeID(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugType2 인터페이스](icordebugtype2-interface.md)

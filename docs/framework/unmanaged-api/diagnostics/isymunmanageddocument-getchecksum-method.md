@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedDocument:: GetCheckSum 메서드'
 title: ISymUnmanagedDocument::GetCheckSum 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-ms.openlocfilehash: 4030da31400b7075952d146e5d6740306863e9ad
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9f9a42e58b22661a2233fcb457b9b42b0d6a3d1a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721090"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737690"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum 메서드
 
@@ -46,10 +47,10 @@ HRESULT GetCheckSum(
  `data`  
  제한이 체크섬을 수신 하는 버퍼입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 오류 코드입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedDocument 인터페이스](isymunmanageddocument-interface.md)
