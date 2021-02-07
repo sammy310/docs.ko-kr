@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: WS 신뢰할 수 있는 세션'
 title: WS 신뢰할 수 있는 세션
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-ms.openlocfilehash: cf3e206724636113646c478407e61dc1c775b620
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a8ccdefd3ef585e3ae164246d69e5cc004390728
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267197"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99714952"
 ---
 # <a name="ws-reliable-session"></a>WS 신뢰할 수 있는 세션
 

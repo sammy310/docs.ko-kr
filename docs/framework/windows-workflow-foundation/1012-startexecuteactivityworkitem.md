@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 1012-StartExecuteActivityWorkItem'
 title: 1012 - StartExecuteActivityWorkItem
 ms.date: 03/30/2017
 ms.assetid: 29e9b1c6-c5d7-4b58-b59d-a06a923d3c80
-ms.openlocfilehash: b9cfceb12d56f93c0f9726849e34f4333f1399ac
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3b57fc6d37a6708a4e22537de87a2566612088e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239642"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99714887"
 ---
 # <a name="1012---startexecuteactivityworkitem"></a>1012 - StartExecuteActivityWorkItem
 
@@ -20,7 +21,7 @@ ms.locfileid: "96239642"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  ExecuteActivityWorkItem이 실행을 시작했음을 나타냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96239642"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |활동|xs:string|작업의 형식 이름입니다.|  
 |DisplayName|xs:string|작업의 표시 이름입니다.|  
