@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: GenericPrincipal 및 Genericprincipal 개체 만들기'
 title: '방법: GenericPrincipal 및 GenericIdentity 개체 만들기'
 ms.date: 07/15/2020
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Creating GenericPrincipal Objects
 - GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-ms.openlocfilehash: cde4669a1bac49d1d9fde39c99707561379aec19
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 8c77a9afec7bd166a71abb6af19d8766b02d0523
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818995"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685220"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>방법: GenericPrincipal 및 GenericIdentity 개체 만들기
 

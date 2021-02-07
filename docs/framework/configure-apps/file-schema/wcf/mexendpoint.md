@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <mexEndpoint>
 title: <mexEndpoint>
 ms.date: 03/30/2017
 ms.assetid: c9823060-0a5d-4f9d-99d4-4d113b758247
-ms.openlocfilehash: e8f0e0fa2ea1606bf980fd6fa1fcd47f12c3b540
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1872b6104aaaaa2787ca3f359026552499bade9d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204751"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684414"
 ---
 # \<mexEndpoint>
 
@@ -36,7 +37,7 @@ ms.locfileid: "91204751"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |name|표준 엔드포인트의 구성 이름을 지정하는 문자열입니다. 이 이름은 서비스 엔드포인트의 `endpointConfiguration` 특성에서 표준 엔드포인트를 해당 구성에 연결하기 위해 사용됩니다.|  
   

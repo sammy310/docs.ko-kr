@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: SqlStreamChars. Flush 메서드'
 title: SqlStreamChars. Flush 메서드 (SqlTypes)
 author: stevestein
 ms.author: sstein
@@ -12,16 +13,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 38ade5ce38cfe5003b2d06c0d8bb2db1a20bc05b
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8f519ffb8248a17608319eb0fbfe598f9ee3487a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395618"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684466"
 ---
 # <a name="sqlstreamcharsflush-method"></a>SqlStreamChars. Flush 메서드
 
-파생 클래스에서 재정의되면 이 스트림에 대해 모든 버퍼를 지우고 버퍼링된 데이터가 내부 디바이스에 쓰여지도록 합니다. 이 메서드를 포함 하는 어셈블리에는 SQLAccess .dll과의 friend 관계가 있습니다. SQL Server에서 사용 하기 위한 것입니다. 다른 데이터베이스의 경우 해당 데이터베이스에서 제공 하는 호스팅 메커니즘을 사용 합니다.
+파생 클래스에서 재정의되면 이 스트림에 대해 모든 버퍼를 지우고 버퍼링된 데이터가 내부 디바이스에 쓰여지도록 합니다. 이 메서드를 포함 하는 어셈블리에 SQLAccess.dll와의 friend 관계가 있습니다. SQL Server에서 사용 하기 위한 것입니다. 다른 데이터베이스의 경우 해당 데이터베이스에서 제공 하는 호스팅 메커니즘을 사용 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -29,10 +30,10 @@ ms.locfileid: "72395618"
 public abstract void Flush ();
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 > [!WARNING]
-> @No__t-0 메서드는 private 이며 코드에서 직접 사용할 수 없습니다.
+> `SqlStreamChars.Flush`메서드는 전용 이며 코드에서 직접 사용할 수 없습니다.
 >
 > Microsoft는 어떤 경우에도 프로덕션 응용 프로그램에서이 방법을 사용 하는 것을 지원 하지 않습니다.
 
@@ -40,6 +41,6 @@ public abstract void Flush ();
 
 **네임스페이스:** <xref:System.Data.SqlTypes>
 
-**어셈블리:** System.object (system.string)입니다.
+**어셈블리:** System.Data(System.Data.dll에서)
 
 **.NET Framework 버전:** 2.0부터 사용할 수 있습니다.

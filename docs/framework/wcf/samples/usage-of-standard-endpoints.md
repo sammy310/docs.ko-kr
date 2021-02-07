@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 표준 끝점 사용'
 title: 표준 엔드포인트 사용
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: 2b210bfe683669aeebf54a1701f07d492e6abdb4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 804fdd84d3f6ff6f961aed81e8bd14cf8c43063c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715341"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685415"
 ---
 # <a name="usage-of-standard-endpoints"></a>표준 엔드포인트 사용
 
@@ -143,13 +144,13 @@ public class CustomEndpoint : ServiceEndpoint
 
 2. 여러 개의 프로젝트가 시작되도록 설정합니다.
 
-    1. **솔루션 탐색기**에서 표준 끝점 솔루션을 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 선택 합니다.
+    1. **솔루션 탐색기** 에서 표준 끝점 솔루션을 마우스 오른쪽 단추로 클릭 한 다음 **속성** 을 선택 합니다.
 
-    2. **공용 속성**에서 **시작 프로젝트**를 선택한 다음 **여러 개의 시작 프로젝트**를 클릭 합니다.
+    2. **공용 속성** 에서 **시작 프로젝트** 를 선택한 다음 **여러 개의 시작 프로젝트** 를 클릭 합니다.
 
-    3. 서비스 프로젝트를 목록의 시작 부분으로 이동 하 고 **작업** 을 **시작**으로 설정 합니다.
+    3. 서비스 프로젝트를 목록의 시작 부분으로 이동 하 고 **작업** 을 **시작** 으로 설정 합니다.
 
-    4. 서비스 프로젝트를 실행 하 고 **작업** 을 **시작**으로 설정 하 여 클라이언트 프로젝트를 이동 합니다.
+    4. 서비스 프로젝트를 실행 하 고 **작업** 을 **시작** 으로 설정 하 여 클라이언트 프로젝트를 이동 합니다.
 
          이렇게 하면 Client 프로젝트가 Service 프로젝트 다음에 실행됩니다.
 

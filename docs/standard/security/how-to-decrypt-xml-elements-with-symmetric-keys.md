@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 대칭 키를 사용 하 여 XML 요소 암호 해독'
 title: '방법: 대칭 키를 사용하여 XML 요소 해독'
 ms.date: 07/14/2020
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - XML encryption
 - decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-ms.openlocfilehash: 67ace547fc539ab0a2d7affb339f908eb9670a29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 894b202143daf2af767fd9877266e2323e0057e2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729358"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685181"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>방법: 대칭 키를 사용하여 XML 요소 해독
 
@@ -82,7 +83,7 @@ ms.locfileid: "95729358"
   
 대칭 암호화 키를 사용하여 작업이 완료되면 각 바이트를 0으로 설정하거나 관리되는 암호화 클래스의 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 메서드를 호출하여 메모리에서 지웁니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [암호화 모델](cryptography-model.md)
 - [암호화 서비스](cryptographic-services.md)

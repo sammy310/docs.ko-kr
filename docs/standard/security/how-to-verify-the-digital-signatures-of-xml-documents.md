@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: XML 문서의 디지털 서명 확인'
 title: '방법: XML 문서의 디지털 서명 확인'
 ms.date: 07/14/2020
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - XML digital signatures
 - digital signatures, verifying
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
-ms.openlocfilehash: 9cbebd34866b66c00bf4aca708d75e315b067b0d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 37ef72c6bedf73ced7c2dde4335034f603190946
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820074"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685038"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>방법: XML 문서의 디지털 서명 확인
 

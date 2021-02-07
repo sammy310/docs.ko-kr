@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <mexNamedPipeBinding>
 title: <mexNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 193412fa-3260-414c-92c6-b32ed3b94a34
-ms.openlocfilehash: 64e250ae5ccb30da3f8857b94628b85b8c237a03
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a7d1c6b10ed436d5ec1b20092d042d6b0a80bd34
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204712"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684323"
 ---
 # \<mexNamedPipeBinding>
 
@@ -62,7 +63,7 @@ ms.locfileid: "91204712"
 - [방법: 구성 파일을 사용하여 서비스에 대한 메타데이터 게시](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [사용자 지정 바인딩을 통해 메타데이터 게시 및 검색](../../../wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
 - [메타데이터](../../../wcf/feature-details/metadata.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

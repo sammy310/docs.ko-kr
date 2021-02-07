@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 주요 보안 개념'
 title: 주요 보안 개념
 ms.date: 07/15/2020
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: 73e4d0474810d097c5eee8b99ae30b6096ee1695
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8643c87197049465371da00b2ecb70ac99d70f9e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687549"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99684999"
 ---
 # <a name="key-security-concepts"></a>주요 보안 개념
 
@@ -75,6 +76,6 @@ JIT(Just-In-Time) 컴파일 중에 선택적 검증 프로세스는 네이티브
 
 권한 부여는 보안 주체가 요청된 작업을 수행할 수 있는지 여부를 확인하는 프로세스입니다. 권한 부여는 인증 후 발생하며 보안 주체의 ID 및 역할에 대한 정보를 사용하여 보안 주체가 액세스할 수 있는 리소스를 확인합니다. .NET 역할 기반 보안을 사용 하 여 권한 부여를 구현할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ASP.NET Core 보안](/aspnet/core/security/)

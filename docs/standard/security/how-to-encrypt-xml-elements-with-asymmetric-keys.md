@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 비대칭 키를 사용 하 여 XML 요소 암호화'
 title: '방법: 비대칭 키를 사용하여 XML 요소 암호화'
 ms.date: 07/14/2020
 dev_langs:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Advanced Encryption Standard algorithm
 - encryption [.NET], asymmetric keys
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
-ms.openlocfilehash: 29fe7c229664b08c9e1563413525818f2e883198
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fff8ec57da0318e48f2a230f01dba26497837028
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729345"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685155"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>방법: 비대칭 키를 사용하여 XML 요소 암호화
 
@@ -143,7 +144,7 @@ ms.locfileid: "95729345"
   
 암호화 키를 사용하여 작업이 완료되면 각 바이트를 0으로 설정하거나 관리되는 암호화 클래스의 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 메서드를 호출하여 메모리에서 지웁니다.  디버거가 메모리에서 암호화 키를 읽거나 메모리 위치가 디스크에 페이징된 경우 하드 드라이브에서 읽을 수 있는 경우도 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [암호화 모델](cryptography-model.md)
 - [암호화 서비스](cryptographic-services.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: x.509 인증서를 사용 하 여 XML 요소 암호화'
 title: '방법: X.509 인증서로 XML 요소 암호화'
 ms.date: 07/14/2020
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-ms.openlocfilehash: a336997a8cb81f1838d9c5b1ec82bbb04326ed0c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f815d253b15823070e074c5d922d3024da602a0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729332"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99685103"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>방법: X.509 인증서로 XML 요소 암호화
 
@@ -36,7 +37,7 @@ XML 요소의 암호를 해독 하려면 메서드를 호출 합니다 <xref:Sys
 
 이 예제를 실행 하려면 테스트 인증서를 만들어 인증서 저장소에 저장 해야 합니다. 해당 작업에 대 한 지침은 Windows [인증서 생성 도구 (Makecert.exe)](/windows/desktop/SecCrypto/makecert)에 대해서만 제공 됩니다.
 
-1. [Makecert.exe](/windows/desktop/SecCrypto/makecert) 를 사용 하 여 테스트 x.509 인증서를 생성 하 고 로컬 사용자 저장소에 넣습니다. 교환 키를 생성해야 하며 키를 내보낼 수 있도록 설정해야 합니다. 다음 명령 실행:  
+1. [Makecert.exe](/windows/desktop/SecCrypto/makecert) 를 사용 하 여 테스트 x.509 인증서를 생성 하 고 로컬 사용자 저장소에 넣습니다. 교환 키를 생성해야 하며 키를 내보낼 수 있도록 설정해야 합니다. 다음 명령을 실행합니다.  
   
     ```console  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2020 -e 01/01/2025 -sky exchange -ss my  
@@ -120,7 +121,7 @@ XML 요소의 암호를 해독 하려면 메서드를 호출 합니다 <xref:Sys
   
 이 예제에서 사용된 X.509 인증서는 테스트 전용입니다.  응용 프로그램은 신뢰할 수 있는 인증 기관에서 생성 한 x.509 인증서를 사용 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [암호화 모델](cryptography-model.md)
 - [암호화 서비스](cryptographic-services.md)
