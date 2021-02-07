@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataDispenserEx:: SetOption 메서드'
 title: IMetaDataDispenserEx::SetOption 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-ms.openlocfilehash: 4216658eb562c5c57b75c3c257cd8e53a7a34221
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0fdaa280619eb750ea9357f590c3b91cf398608f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700589"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753512"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption 메서드
 
@@ -73,7 +74,7 @@ HRESULT SetOption (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataDispenserEx 인터페이스](imetadatadispenserex-interface.md)
 - [IMetaDataDispenser 인터페이스](imetadatadispenser-interface.md)

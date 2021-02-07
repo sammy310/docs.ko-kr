@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRRuntimeHost:: GetCLRControl 메서드'
 title: ICLRRuntimeHost::GetCLRControl 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e47e3655-efd5-4572-a1dc-50c69bf2a468
 topic_type:
 - apiref
-ms.openlocfilehash: 928ac05fbd3a19a17e7f37674b2a75f8bc799fc6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 832ae03c0126f0c08afa9b5c0312a636ec1de294
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728876"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753941"
 ---
 # <a name="iclrruntimehostgetclrcontrol-method"></a>ICLRRuntimeHost::GetCLRControl 메서드
 
@@ -39,7 +40,7 @@ HRESULT GetCLRControl(
  `pCLRControl`  
  제한이 호스트가 CLR의 추가 측면을 구성할 수 있도록 하는 [ICLRControl interface](iclrcontrol-interface.md) 형식의 인터페이스 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -65,7 +66,7 @@ HRESULT GetCLRControl(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRControl 인터페이스](iclrcontrol-interface.md)
 - [ICLRRuntimeHost 인터페이스](iclrruntimehost-interface.md)

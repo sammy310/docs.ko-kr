@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: System.servicemodel의 트랜잭션 지원'
 title: System.ServiceModel의 트랜잭션 지원
 ms.date: 03/30/2017
 ms.assetid: e7e54ed3-d1e5-4aa7-a653-1300c6b304eb
-ms.openlocfilehash: 1a5c7e6fc8c5e116764c6dd9813d7cccf600af8c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: eb1ffe63e3f2abd7148662335908b7961c0eea05
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96251791"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752680"
 ---
 # <a name="transactional-support-in-systemservicemodel"></a>System.ServiceModel의 트랜잭션 지원
 

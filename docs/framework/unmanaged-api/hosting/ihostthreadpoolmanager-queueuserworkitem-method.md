@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostThreadPoolManager:: QueueUserWorkItem 메서드'
 title: IHostThreadPoolManager::QueueUserWorkItem 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41602053-8670-4827-9d61-cbfcba509b9c
 topic_type:
 - apiref
-ms.openlocfilehash: 4537d367518dd80b2559f8ca058684e234ff7a91
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: edfbf5cfb34473a5fd920307981237fd5deab9aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730749"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753785"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem 메서드
 
@@ -47,7 +48,7 @@ HRESULT QueueUserWorkItem (
  `Flags`  
  진행 Win32 메서드에 대해 정의 된 대로 `QueueUserWorkItem` 실행을 제어 하는 플래그 값 중 하나입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -72,7 +73,7 @@ HRESULT QueueUserWorkItem (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>
 - <xref:System.Threading.ThreadPool>

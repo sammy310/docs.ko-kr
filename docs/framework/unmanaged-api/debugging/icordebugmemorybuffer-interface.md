@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugMemoryBuffer 인터페이스'
 title: ICorDebugMemoryBuffer 인터페이스
 ms.date: 03/30/2017
 ms.assetid: 85dc2d65-3657-4b93-9f23-9feaa95d37ff
-ms.openlocfilehash: 2765852309401d2aa30f91b506ba55156cd8a3e2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 94eeb0f31c0e1c053fabbd556768fa65dda2d328
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710744"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754019"
 ---
 # <a name="icordebugmemorybuffer-interface"></a>ICorDebugMemoryBuffer 인터페이스
 
@@ -35,7 +36,7 @@ ms.locfileid: "95710744"
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)

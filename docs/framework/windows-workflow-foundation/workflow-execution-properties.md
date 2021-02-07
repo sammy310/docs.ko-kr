@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 워크플로 실행 속성'
 title: 워크플로 실행 속성
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: be9ae5924786ea1e23cc649034d927789c64e405
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d6f83109da0a14382098322858a6e0493750a748
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293795"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754903"
 ---
 # <a name="workflow-execution-properties"></a>워크플로 실행 속성
 

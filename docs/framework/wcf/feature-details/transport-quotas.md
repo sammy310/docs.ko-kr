@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 전송 할당량'
 title: 전송 할당량
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: bcc63e6645580c1021667b278b80c09baf5700c1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0359d088402235a34b8cf1d13820c0a7c920b023
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96261464"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752628"
 ---
 # <a name="transport-quotas"></a>전송 할당량
 
@@ -33,7 +34,7 @@ ms.locfileid: "96261464"
   
  각 할당량 설정에는 형식, 최소값 및 기본값이 있습니다. 할당량의 최대값은 형식에 의해 제한됩니다. 시스템 제한으로 인해 할당량을 최대값으로 설정할 수 없는 경우도 있습니다.  
   
-|이름|유형|최소<br /><br /> 값|기본값<br /><br /> value|설명|  
+|Name|Type|최소<br /><br /> 값|기본값<br /><br /> value|설명|  
 |----------|----------|--------------------|-----------------------|-----------------|  
 |`ChannelInitializationTimeout`|TimeSpan|1틱|5초|처음에 읽는 동안 프리앰블을 보내기 위해 연결을 기다리는 최대 시간입니다. 이 데이터는 인증이 발생되기 전에 수신됩니다. 일반적으로 이 설정은 `ReceiveTimeout` 할당량 값보다 상당히 작습니다.|  
 |`CloseTimeout`|TimeSpan|0|1분|전송에서 예외가 발생되기 전에 연결을 닫을 때까지 기다리는 최대 시간입니다.|  
@@ -64,7 +65,7 @@ ms.locfileid: "96261464"
 
  바인딩 요소를 통한 전송 할당량 설정은 전송 동작 제어 시 뛰어난 유연성을 제공합니다. Close, Open, Receive 및 Send 작업에 대한 기본 시간 제한은 채널 작성 시 바인딩에서 가져옵니다.  
   
-|이름|HTTP|TCP/IP|명명된 파이프|  
+|Name|HTTP|TCP/IP|명명된 파이프|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||X|X|  
 |`CloseTimeout`||||  
@@ -87,7 +88,7 @@ ms.locfileid: "96261464"
 
  바인딩을 통한 전송 할당량 설정에서는 가장 일반적인 할당량 값에 대한 액세스를 제공하는 동시에 선택할 수 있는 간단한 할당량 집합을 제공합니다.  
   
-|이름|HTTP|TCP/IP|명명된 파이프|  
+|Name|HTTP|TCP/IP|명명된 파이프|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
 |`CloseTimeout`|X|X|X|  

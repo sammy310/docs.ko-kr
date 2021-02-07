@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 속성'
 title: 속성(property)
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: 6aeb29c5aa608987466ec858416a4ac141ff1da3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8b25c19b0673817945fa6cc786589346462f7e61
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180922"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754328"
 ---
 # <a name="property"></a>속성(property)
 

@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <gcServer> 요소'
 title: gcServer 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - gcServer element
 - <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
-ms.openlocfilehash: 8eab5e36bab90510aff4f1a3e15328197ac59ed7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bed347699786682421292392a8d2449b7aac61d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73968943"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754539"
 ---
 # <a name="gcserver-element"></a>\<gcServer> 요소
 
@@ -36,13 +37,13 @@ ms.locfileid: "73968943"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`enabled`|필수 특성입니다.<br /><br />런타임이 서버 가비지 수집을 실행하는지 여부를 지정합니다.|
 
 #### <a name="enabled-attribute"></a>enabled 특성
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |`false`|서버 가비지 컬렉션을 실행하지 않습니다. 기본값입니다.|
 |`true`|서버 가비지 컬렉션을 실행합니다.|
@@ -53,7 +54,7 @@ ms.locfileid: "73968943"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|

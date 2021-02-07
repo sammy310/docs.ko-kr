@@ -1,15 +1,16 @@
 ---
-title: <customTrackingQueries>WCF의
+description: '다음에 대 한 자세한 정보: <customTrackingQueries> WCF'
+title: <customTrackingQueries> WCF의
 ms.date: 03/30/2017
 ms.assetid: 14cfe47e-9935-4120-84f1-8f38de8ca4c1
-ms.openlocfilehash: 2c4bd74ae346c536e8bc0ae454e638b7c76a40fc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ac1cdcc074201b97344b3727f6957e1b62c88dab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855438"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754474"
 ---
-# <a name="customtrackingqueries-of-wcf"></a>\<customTrackingQueries>WCF의
+# <a name="customtrackingqueries-of-wcf"></a>\<customTrackingQueries> WCF의
 
 코드 활동에서 정의하는 이벤트를 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다. 추적 참가자가 사용자 지정 추적 레코드를 구독하려면 쿼리가 필요합니다.  
   
@@ -50,13 +51,13 @@ ms.locfileid: "70855438"
   
 ### <a name="child-elements"></a>자식 요소
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<customTrackingQuery>](customtrackingquery-of-wcf.md)|코드 활동에서 정의하는 이벤트를 추적하기 위해 사용되는 쿼리입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<workflow>](../windows-workflow-foundation/workflow.md)|`activityDefinitionId` 속성에 의해 식별되는 특정 워크플로에 대한 모든 쿼리를 포함하는 구성 요소입니다.|  
   

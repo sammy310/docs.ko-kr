@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 오류 처리 및 보고에 대 한 제어 확장'
 title: 오류 처리 및 오류 보고에 대한 확장 제어
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 2e9298c6a282b9df8499458ad166e320d41e63a9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9b9dd7761757235b2381fce575021aca2be404f2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96283330"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752381"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>오류 처리 및 오류 보고에 대한 확장 제어
 

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugAssembly3:: EnumerateContainedAssemblies 메서드'
 title: ICorDebugAssembly3::EnumerateContainedAssemblies 메서드
 ms.date: 03/30/2017
 ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
-ms.openlocfilehash: 1e040453d5eb7a312f2e665974486492b99de16d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8933500713661ef785eb3ce5abc574e512580b6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719686"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754084"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a>ICorDebugAssembly3::EnumerateContainedAssemblies 메서드
 
@@ -26,7 +27,7 @@ HRESULT EnumerateContainedAssemblies(
  `ppAssemblies`  
  [out] 열거자인 ICorDebugAssemblyEnum 인터페이스 개체의 주소에 대한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 `S_OK` 개체가 컨테이너이면 `ICorDebugAssembly3`이고, 그러지 않으면 `S_FALSE`이며 열거형은 비어 있습니다.  
   
@@ -47,7 +48,7 @@ HRESULT EnumerateContainedAssemblies(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugAssembly3 인터페이스](icordebugassembly3-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

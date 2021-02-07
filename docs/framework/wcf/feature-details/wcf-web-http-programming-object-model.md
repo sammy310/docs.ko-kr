@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: WCF 웹 HTTP 프로그래밍 개체 모델'
 title: WCF 웹 HTTP 프로그래밍 개체 모델
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 4cd23ccb1956a73e36d5c7d3e444c347247e338d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cfec94d323e2580cab64b426215cc2c7284743ec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266885"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752576"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF 웹 HTTP 프로그래밍 개체 모델
 
@@ -47,7 +48,7 @@ WCF 웹 HTTP 프로그래밍 모델을 통해 개발자는 SOAP 없이 기본 HT
 
  <xref:System.ServiceModel.Web.WebGetAttribute> 특성은 서비스 작업을 HTTP GET 요청에 응답하는 작업으로 표시하는 데 사용됩니다. 이는 작업 설명에 메타데이터를 추가하는 수동 작업 동작입니다(<xref:System.ServiceModel.Description.IOperationBehavior> 메서드는 아무 작업도 하지 않음). 작업 설명에서 이 메타데이터를 찾는 동작(특히 <xref:System.ServiceModel.Web.WebGetAttribute>)이 서비스의 동작 컬렉션에 추가되지 않으면 <xref:System.ServiceModel.Description.WebHttpBehavior>를 적용해도 아무 효과가 없습니다. <xref:System.ServiceModel.Web.WebGetAttribute> 특성은 다음 표에 있는 선택적 매개 변수를 사용합니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |`BodyStyle`|특성이 적용된 서비스 작업으로 보내거나 받은 요청 및 응답을 래핑할지 여부를 제어합니다.|  
 |`RequestFormat`|요청 메시지의 형식을 지정하는 방법을 제어합니다.|  
@@ -64,7 +65,7 @@ WCF 웹 HTTP 프로그래밍 모델을 통해 개발자는 SOAP 없이 기본 HT
   
  <xref:System.ServiceModel.Web.WebInvokeAttribute> 특성은 다음 표에 있는 선택적 매개 변수를 사용합니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |`BodyStyle`|특성이 적용된 서비스 작업으로 보내거나 받은 요청 및 응답을 래핑할지 여부를 제어합니다.|  
 |`Method`|서비스 작업이 매핑되는 HTTP 메서드를 지정합니다.|  

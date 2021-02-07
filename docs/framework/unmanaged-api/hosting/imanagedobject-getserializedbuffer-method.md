@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IManagedObject:: GetSerializedBuffer 메서드'
 title: IManagedObject::GetSerializedBuffer 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c17105bb-b49f-434e-8f9b-77f8c85b9220
 topic_type:
 - apiref
-ms.openlocfilehash: 159ece09ae0b6a67780639da8aae8c0e4b412bb8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f324b6ed1e9cea21fec9027a954fbad54174dd0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730697"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753772"
 ---
 # <a name="imanagedobjectgetserializedbuffer-method"></a>IManagedObject::GetSerializedBuffer 메서드
 
@@ -53,6 +54,6 @@ HRESULT GetSerializedBuffer (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IManagedObject 인터페이스](imanagedobject-interface.md)

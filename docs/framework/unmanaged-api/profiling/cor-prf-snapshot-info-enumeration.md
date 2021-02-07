@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: 열거형 COR_PRF_SNAPSHOT_INFO'
 title: COR_PRF_SNAPSHOT_INFO 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5906b2a-ad4a-4cc6-a421-2d7d8adf7468
 topic_type:
 - apiref
-ms.openlocfilehash: 5290db008bfe5727ed5899c2ed6f7e41ae9a353a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fcdaeeb6170cb9998281100c5628b3d95f9e9326
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716358"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753343"
 ---
 # <a name="cor_prf_snapshot_info-enumeration"></a>COR_PRF_SNAPSHOT_INFO 열거형
 
@@ -35,9 +36,9 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
 } COR_PRF_SNAPSHOT_INFO;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
-|멤버|설명|  
+|구성원|설명|  
 |-------------|-----------------|  
 |`COR_PRF_SNAPSHOT_DEFAULT`|매개 변수를 제외 하 고 모든 매개 변수에 대 한 값을 전달 해야 함을 나타냅니다 `StackSnapshotCallback` `context` .|  
 |`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|매개 변수를 포함 하 여 모든 매개 변수에 대 한 값을 전달 해야 함을 나타냅니다 `StackSnapshotCallback` `context` .|  
@@ -57,7 +58,7 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DoStackSnapshot 메서드](icorprofilerinfo2-dostacksnapshot-method.md)
 - [프로파일링 열거형](profiling-enumerations.md)

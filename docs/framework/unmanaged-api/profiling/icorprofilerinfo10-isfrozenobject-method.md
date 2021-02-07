@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo10:: IsFrozenObject 메서드'
 title: ICorProfilerInfo10::IsFrozenObject
 ms.date: 08/06/2019
 dev_langs:
@@ -11,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 3755260b885768de6b5b2d6342c0ad590a95caff
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b07e456f7fa9c328217b8779733d45dfe2793fe2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548672"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753278"
 ---
 # <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10:: IsFrozenObject 메서드
 
@@ -49,6 +50,6 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 
 **.Net 버전:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo10 인터페이스](icorprofilerinfo10-interface.md)

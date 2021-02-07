@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRAppDomainResourceMonitor:: GetCurrentAllocated 된 메서드'
 title: ICLRAppDomainResourceMonitor::GetCurrentAllocated 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7bab209c-efd4-44c2-af30-61abab0ae2fc
 topic_type:
 - apiref
-ms.openlocfilehash: d3bd948dfe4a5cf97e3e3e430f551e7bc6404690
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d7aaf31f775a9d6e2af95cf1a832c78587a85fe1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700797"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753954"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a>ICLRAppDomainResourceMonitor::GetCurrentAllocated 메서드
 
@@ -41,7 +42,7 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
  `pBytesAllocated`  
  제한이 모든 메모리 할당의 총 크기에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   

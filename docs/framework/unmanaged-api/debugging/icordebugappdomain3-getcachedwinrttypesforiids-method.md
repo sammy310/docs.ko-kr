@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugAppDomain3:: GetCachedWinRTTypesForIIDs 메서드'
 title: ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23682ca0-1bcf-48e6-996e-69f7ba337682
 topic_type:
 - apiref
-ms.openlocfilehash: 2aff86fb63b87869ed13028bd7344afe11363f51
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 76b93cdb8c465935a4aaf36090ee44f2b6253a3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723183"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754175"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs 메서드
 
@@ -61,6 +62,6 @@ HRESULT GetCachedWinRTTypesForIIDs (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugAppDomain3 인터페이스](icordebugappdomain3-interface.md)

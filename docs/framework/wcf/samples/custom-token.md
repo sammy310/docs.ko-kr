@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 사용자 지정 토큰'
 title: Custom Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 1a8c312248b0c15bb2e366a3d9925014556b6dd8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 500cc187db0280e508ef079ca370483c716ea2c5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553163"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752433"
 ---
 # <a name="custom-token"></a>Custom Token
 

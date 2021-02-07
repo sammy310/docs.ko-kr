@@ -1,4 +1,5 @@
 ---
+description: ICorProfilerCallback9::D ynamicMethodUnloaded 메서드에 대해 자세히 알아보세요.
 title: ICorProfilerCallback9::D ynamicMethodUnloaded 메서드
 ms.date: 04/10/2018
 api_name:
@@ -8,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 0e6fe3430696c16405d4ae414436bb12882c08a5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 243660d3159e3c8c1d052c08e9c7499e7065d301
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732350"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753330"
 ---
 # <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9::D ynamicMethodUnloaded 메서드
 
@@ -44,7 +45,7 @@ HRESULT DynamicMethodUnloaded(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback8 DynamicMethodJITCompilationStarted 메서드](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [ICorProfilerCallback8 DynamicMethodJITCompilationFinished 메서드](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)

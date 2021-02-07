@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugAppDomain 인터페이스'
 title: ICorDebugAppDomain 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: be7ae711-1217-4a44-be40-166e29641b77
 topic_type:
 - apiref
-ms.openlocfilehash: 98273a5d4602c023863758045bdb2a6a502ba7a7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5f1ac20a7376a741da2e34de74c810c0f45e8293
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687231"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754201"
 ---
 # <a name="icordebugappdomain-interface"></a>ICorDebugAppDomain 인터페이스
 
@@ -55,6 +56,6 @@ ms.locfileid: "95687231"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)

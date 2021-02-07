@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 3371-MtomMessageEncodingStart'
 title: 3371 - MtomMessageEncodingStart
 ms.date: 03/30/2017
 ms.assetid: b1ba417f-f765-4567-82e3-ea2080e0ac73
-ms.openlocfilehash: f66aa1f4c9117fe10076c972e74bb9f87717f0ae
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 234ce0e5cad1353aa58c9ec38344bb8424fbf148
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96259644"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753018"
 ---
 # <a name="3371---mtommessageencodingstart"></a>3371 - MtomMessageEncodingStart
 
@@ -20,7 +21,7 @@ ms.locfileid: "96259644"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 MtomMessageEncoder가 메시지 인코딩을 시작할 때 내보내집니다.  
   

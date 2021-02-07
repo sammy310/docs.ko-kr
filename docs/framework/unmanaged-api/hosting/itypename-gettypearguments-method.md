@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ITypeName:: GetTypeArguments 메서드'
 title: ITypeName::GetTypeArguments 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 638d77df-ff9c-40d9-88ee-930f5f87ada1
 topic_type:
 - apiref
-ms.openlocfilehash: bcc1cb2755c4c0a2beb0829ce58b921f073f63d4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b88ffcfb856905bf891ebeafa1e6dbeda2563aaf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727785"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753663"
 ---
 # <a name="itypenamegettypearguments-method"></a>ITypeName::GetTypeArguments 메서드
 
@@ -46,6 +47,6 @@ HRESULT GetTypeArguments (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)

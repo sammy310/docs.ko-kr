@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataDispenser:: OpenScopeOnMemory 메서드'
 title: IMetaDataDispenser::OpenScopeOnMemory 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 14218249-bdec-48ae-b5fc-9f57f7ca8501
 topic_type:
 - apiref
-ms.openlocfilehash: 26293e38a275ca691c7d48dceb12c1e7dd316536
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 589c68ab60eec55efc43d077807789e75ae1682f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713420"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753590"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>IMetaDataDispenser::OpenScopeOnMemory 메서드
 
@@ -75,7 +76,7 @@ HRESULT OpenScopeOnMemory (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataDispenser 인터페이스](imetadatadispenser-interface.md)
 - [IMetaDataDispenserEx 인터페이스](imetadatadispenserex-interface.md)

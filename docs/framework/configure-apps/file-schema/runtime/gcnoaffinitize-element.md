@@ -1,15 +1,16 @@
 ---
+description: '다음에 대 한 자세한 정보: <GCNoAffinitize> 요소'
 title: GCNoAffinitize 요소
 ms.date: 11/08/2019
 helpviewer_keywords:
 - gcNoAffinitize element
 - <gcNoAffinitize> element
-ms.openlocfilehash: 16d6e5adefe2b632d7251669650058d7df7cea70
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 139c0fd9e1ec829a3569b77a85e6526bec765e21
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84004740"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754552"
 ---
 # <a name="gcnoaffinitize-element"></a>\<GCNoAffinitize> 요소
 
@@ -32,13 +33,13 @@ Cpu가 있는 서버 GC 스레드를 선호도 여부를 지정 합니다.
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`enabled`|필수 특성입니다.<br /><br />서버 GC 스레드/힙이 컴퓨터에서 사용할 수 있는 프로세서와 선호도가 설정 여부를 지정 합니다.|
 
 #### <a name="enabled-attribute"></a>enabled 특성
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |`false`|Cpu가 있는 서버 GC 스레드를 선호도 합니다. 기본값입니다.|
 |`true`|는 Cpu가 있는 서버 GC 스레드를 선호도 하지 않습니다.|
@@ -49,7 +50,7 @@ Cpu가 있는 서버 GC 스레드를 선호도 여부를 지정 합니다.
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|

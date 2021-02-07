@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 사용자 지정 메시지 필터'
 title: 사용자 지정 메시지 필터
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 24dab723a06c128337c1d956a98a1aa85a258e33
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 41205badf4d1133dc160fb0b1c4da8e0edb47a16
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96240929"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752485"
 ---
 # <a name="custom-message-filter"></a>사용자 지정 메시지 필터
 

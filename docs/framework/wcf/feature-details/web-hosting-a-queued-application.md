@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 대기 중인 응용 프로그램을 호스트 하는 웹'
 title: 대기 중인 애플리케이션 웹 호스팅
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: c2b41ee1d0a82693760bc3e1b6144d2190153f24
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5fb056a75598523554869f0089689979986dba7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249776"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752563"
 ---
 # <a name="web-hosting-a-queued-application"></a>대기 중인 애플리케이션 웹 호스팅
 

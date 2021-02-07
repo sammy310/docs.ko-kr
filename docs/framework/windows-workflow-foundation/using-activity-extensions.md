@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 작업 확장 사용'
 title: 활동 확장 사용
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: 3a9cabda9fe92b2ea4e708da8f853f3029328775
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d0286850bf685497d3a2471a3b4e0db4630070b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293288"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755072"
 ---
 # <a name="using-activity-extensions"></a>활동 확장 사용
 

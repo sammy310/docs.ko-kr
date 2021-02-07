@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 보안 프로토콜 버전 1.0'
 title: 보안 프로토콜 버전 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: d98a05bbcb8413c33672a17580c6d16b57c63b83
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c807f0b844fb9cb861148afa63d83826a9740c98
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254027"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752732"
 ---
 # <a name="security-protocols-version-10"></a>보안 프로토콜 버전 1.0
 
@@ -39,7 +40,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
   
 - 메시지 교환 패턴  
   
-|인증 모드|클라이언트 인증|서버 인증|Mode|  
+|인증 모드|클라이언트 인증|서버 인증|모드|  
 |-------------------------|---------------------------|---------------------------|----------|  
 |UserNameOverTransport|사용자 이름/암호|X509|전송|  
 |CertificateOverTransport|X509|X509|전송|  

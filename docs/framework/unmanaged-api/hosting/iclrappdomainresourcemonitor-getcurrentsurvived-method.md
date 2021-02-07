@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRAppDomainResourceMonitor:: GetCurrentSurvived 메서드'
 title: ICLRAppDomainResourceMonitor::GetCurrentSurvived 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 392e9009-40ef-40e3-ad4d-7ce93a989e78
 topic_type:
 - apiref
-ms.openlocfilehash: eba9caece91e369cd46aed652b559ace49c77725
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 20aea8583da207144aa0ffe29591a113da789fa8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704908"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753915"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived 메서드
 
@@ -46,7 +47,7 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
  `pRuntimeBytesSurvived`  
  제한이 마지막 가비지 수집에서 남아 있는 총 바이트 수에 대 한 포인터입니다. 전체 컬렉션 후에이 수는 관리 되는 힙에서 보유 되는 바이트 수를 나타냅니다. 임시 수집 후에이 수는 임시 생성에 실시간으로 저장 되는 바이트 수를 나타냅니다. 이 매개 변수는 `null`일 수 있습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   

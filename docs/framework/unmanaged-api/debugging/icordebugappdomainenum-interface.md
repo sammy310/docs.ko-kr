@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugAppDomainEnum 인터페이스'
 title: ICorDebugAppDomainEnum 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9226e6e-ca2c-428e-bb38-0c099210f507
 topic_type:
 - apiref
-ms.openlocfilehash: 37b6bcb48681704e3db47f81a51a9d21f00dfb37
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: dfea6254e6cf4f162e44d057fb4126a67a087b61
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723196"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754162"
 ---
 # <a name="icordebugappdomainenum-interface"></a>ICorDebugAppDomainEnum 인터페이스
 
@@ -46,7 +47,7 @@ ms.locfileid: "95723196"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebug 인터페이스](icordebug-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

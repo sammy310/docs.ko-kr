@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataDispenserEx:: OpenScopeOnITypeInfo 메서드'
 title: IMetaDataDispenserEx::OpenScopeOnITypeInfo 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3480bbdb-c442-44a0-b7c6-333354503c52
 topic_type:
 - apiref
-ms.openlocfilehash: 6056a64b354f69ce39692173da01892870fba9e1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bc36bac9e7c63f56f442f1e25fd7a6a93f75924b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682850"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753525"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo 메서드
 
@@ -61,7 +62,7 @@ HRESULT OpenScopeOnITypeInfo (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataDispenserEx 인터페이스](imetadatadispenserex-interface.md)
 - [IMetaDataDispenser 인터페이스](imetadatadispenser-interface.md)

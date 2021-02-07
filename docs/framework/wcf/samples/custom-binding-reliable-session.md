@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 사용자 지정 바인딩 신뢰할 수 있는 세션'
 title: 사용자 지정 바인딩 신뢰할 수 있는 세션
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: bd690f96eea885c4d414f9725125e1918fdffa23
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0799e10c0fb86727bc21553584646031dc6f3606
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585145"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752518"
 ---
 # <a name="custom-binding-reliable-session"></a>사용자 지정 바인딩 신뢰할 수 있는 세션
 

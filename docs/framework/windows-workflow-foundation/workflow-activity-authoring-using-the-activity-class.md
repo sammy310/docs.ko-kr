@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 활동 클래스를 사용 하 여 워크플로 활동 제작'
 title: 활동 클래스를 사용하여 워크플로 활동 제작
 ms.date: 03/30/2017
 ms.assetid: 7b7b1c66-f093-43c3-b4d1-7173b46516da
-ms.openlocfilehash: 21f1c8b1249d41029fa7a19360e96ad866c823a7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0d3ffc88bacfd941dfa0c853991bf72045468323
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293847"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754942"
 ---
 # <a name="workflow-activity-authoring-using-the-activity-class"></a>활동 클래스를 사용하여 워크플로 활동 제작
 

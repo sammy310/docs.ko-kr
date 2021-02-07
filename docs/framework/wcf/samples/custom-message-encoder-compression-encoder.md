@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 사용자 지정 메시지 인코더: 압축 인코더'
 title: '사용자 지정 메시지 인코더: 압축 인코더'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: db20ec20579d6fcb0ec202920db0d7781b0676df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 61c28435000333b1411a3fbcba485e0a252aed63
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600622"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752521"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>사용자 지정 메시지 인코더: 압축 인코더
 

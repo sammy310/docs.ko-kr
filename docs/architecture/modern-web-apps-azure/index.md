@@ -3,13 +3,13 @@ title: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 �
 description: ASP.NET Core 및 Azure를 사용하여 모놀리식 웹 애플리케이션을 빌드하는 방법에 대한 포괄적인 지침을 제공하는 가이드입니다.
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/07/2020
-ms.openlocfilehash: 90d092b2269315e5b6734430e82cc7211324479b
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.date: 02/02/2021
+ms.openlocfilehash: 37aec94625071fdc07f2b8433f6e9ef200d92099
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851297"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754591"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계
 
@@ -29,7 +29,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2020 by Microsoft Corporation
+Copyright © 2021 by Microsoft Corporation
 
 All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 서면 허가 없이는 어떠한 형식이나 방법으로도 복제하거나 전송할 수 없습니다.
 

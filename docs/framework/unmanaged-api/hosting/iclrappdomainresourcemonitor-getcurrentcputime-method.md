@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRAppDomainResourceMonitor:: GetCurrentCpuTime 메서드'
 title: ICLRAppDomainResourceMonitor::GetCurrentCpuTime 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ebc9cc33-fcd6-4cae-9ecb-ea21c51874e6
 topic_type:
 - apiref
-ms.openlocfilehash: a0b966e85bedcbef622aba2f6b181b98e0950e01
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ce36bf4ab88f953834d3ff12404bcaadcb42812d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700680"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753931"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentcputime-method"></a>ICLRAppDomainResourceMonitor::GetCurrentCpuTime 메서드
 
@@ -41,13 +42,13 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
  `pMilliseconds`  
  제한이 응용 프로그램 도메인이 만들어진 후 현재 응용 프로그램 도메인에서 실행 되는 동안 모든 스레드에서 사용 된 총 프로세서 시간에 대 한 포인터입니다. 이 매개 변수는 `null`일 수 있습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
 |COR_E_APPDOMAINUNLOADED|응용 프로그램 도메인이 언로드 되었거나 존재 하지 않습니다.|  
-|E_FAIL|응용 프로그램 도메인 리소스 모니터링이 사용 하도록 설정 되어 있지 않습니다.<br /><br /> -또는-<br /><br /> 다른 모든 오류입니다.|  
+|E_FAIL|응용 프로그램 도메인 리소스 모니터링이 사용 하도록 설정 되어 있지 않습니다.<br /><br /> 또는<br /><br /> 다른 모든 오류입니다.|  
   
 ## <a name="remarks"></a>설명  
 

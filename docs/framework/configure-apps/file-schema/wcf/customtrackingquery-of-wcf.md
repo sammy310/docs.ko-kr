@@ -1,15 +1,16 @@
 ---
-title: <customTrackingQuery>WCF의
+description: '다음에 대 한 자세한 정보: <customTrackingQuery> WCF'
+title: <customTrackingQuery> WCF의
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: 204bbb6cf5ebcb30bf92b697885ecbbbd94385e0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3eac26ee94a95b480d743e3c6ec554a84b8747a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855425"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754461"
 ---
-# <a name="customtrackingquery-of-wcf"></a>\<customTrackingQuery>WCF의
+# <a name="customtrackingquery-of-wcf"></a>\<customTrackingQuery> WCF의
 
 코드 활동에서 정의 하는 이벤트를 추적 하는 데 사용 되는 쿼리를 나타냅니다. 추적 참가자가 사용자 지정 추적 레코드를 구독하려면 쿼리가 필요합니다.
 
@@ -47,7 +48,7 @@ ms.locfileid: "70855425"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`activityName`|추적 레코드를 생성하는 활동의 이름을 지정하는 문자열입니다.|  
 |`name`|내보내는 사용자 지정 추적 레코드의 이름을 지정하는 문자열입니다.|  
@@ -58,7 +59,7 @@ ms.locfileid: "70855425"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<customTrackingQueries>](customtrackingqueries-of-wcf.md)|코드 활동에서 정의하는 이벤트를 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다.|
   

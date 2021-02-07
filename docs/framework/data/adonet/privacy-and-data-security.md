@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 개인 정보 및 데이터 보안'
 title: 개인 정보 및 데이터 보안
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: b0721cbc4957dfe64627f3a18064110f96a26f2b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 81783b09fe4070cc5c3ae927160480f78e47f6e0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177386"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754305"
 ---
 # <a name="privacy-and-data-security"></a>개인 정보 및 데이터 보안
 

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 사용자 지정 WSDL 게시'
 title: 사용자 지정 WSDL 게시
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 83377e1c72ef5774c909729abd1312cce5364ab0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 39bb884a6c89d24fc38b89db09c848c87e663870
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262868"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752420"
 ---
 # <a name="custom-wsdl-publication"></a>사용자 지정 WSDL 게시
 

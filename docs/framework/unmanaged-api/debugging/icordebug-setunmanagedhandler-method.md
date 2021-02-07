@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebug:: SetUnmanagedHandler 메서드'
 title: ICorDebug::SetUnmanagedHandler 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b546be4-f86d-4536-8cfc-1d08e5066eb6
 topic_type:
 - apiref
-ms.openlocfilehash: 0bce14a6853c872d27057b9fffc32b54c59abf13
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ffd4eb7ff0056a2468ec53eb3534434c2c8d556a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723391"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754318"
 ---
 # <a name="icordebugsetunmanagedhandler-method"></a>ICorDebug::SetUnmanagedHandler 메서드
 
@@ -53,6 +54,6 @@ HRESULT SetUnmanagedHandler (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebug 인터페이스](icordebug-interface.md)

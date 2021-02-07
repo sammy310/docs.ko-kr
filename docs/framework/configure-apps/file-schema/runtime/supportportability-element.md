@@ -1,16 +1,17 @@
 ---
+description: '다음에 대 한 자세한 정보: <supportPortability> 요소'
 title: <supportPortability> 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - supportPortability element
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-ms.openlocfilehash: 05ce6943b9456d4fd380ea8d6cf354d197b92f96
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5a39f946d5b3841af5f4254cc2f70142aa6c013d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183951"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754513"
 ---
 # <a name="supportportability-element"></a>\<supportPortability> 요소
 
@@ -40,9 +41,9 @@ ms.locfileid: "91183951"
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
-|true|지정 된 .NET Framework 어셈블리의 구현 간 이식성에 대 한 지원을 사용 하도록 설정 합니다. 이것이 기본값입니다.|  
+|true|지정 된 .NET Framework 어셈블리의 구현 간 이식성에 대 한 지원을 사용 하도록 설정 합니다. 기본값입니다.|  
 |false|지정 된 .NET Framework 어셈블리의 구현 간 이식성에 대 한 지원을 사용 하지 않도록 설정 합니다. 이렇게 하면 응용 프로그램에서 지정 된 어셈블리의 여러 구현에 대 한 참조를 사용할 수 있습니다.|  
   
 ### <a name="child-elements"></a>자식 요소  

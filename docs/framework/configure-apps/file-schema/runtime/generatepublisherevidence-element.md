@@ -1,16 +1,17 @@
 ---
+description: '다음에 대 한 자세한 정보: <generatePublisherEvidence> 요소'
 title: <generatePublisherEvidence> 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: 506e7873fab8e41fce121587c22d85600a8b1760
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2a949b52abe5ec10872d2cade49a0556063b2018
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158775"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754526"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> 요소
 
@@ -39,10 +40,10 @@ ms.locfileid: "91158775"
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |`false`|<xref:System.Security.Policy.Publisher>증명 정보를 만들지 않습니다.|  
-|`true`|<xref:System.Security.Policy.Publisher>증명 정보를 만듭니다. 이것이 기본값입니다.|  
+|`true`|<xref:System.Security.Policy.Publisher>증명 정보를 만듭니다. 기본값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
 

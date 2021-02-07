@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: WorkflowIdentity 및 버전 관리 사용'
 title: WorkflowIdentity 및 버전 관리 사용
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 1d31739c135dbb518f05c40ba802c782b6817bff
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: b51bce26b69d77e0be702e40a315dcd138d2fc03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855636"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754968"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity 및 버전 관리 사용
 
@@ -23,7 +24,7 @@ ms.locfileid: "87855636"
 
   - [데이터베이스 스키마를 업그레이드하려면](using-workflowidentity-and-versioning.md#ToUpgrade)
 
-## <a name="using-workflowidentity"></a><a name="UsingWorkflowIdentity"></a>WorkflowIdentity 사용
+## <a name="using-workflowidentity"></a><a name="UsingWorkflowIdentity"></a> WorkflowIdentity 사용
 
 <xref:System.Activities.WorkflowIdentity>를 사용하려면 인스턴스를 만들어 구성한 다음 <xref:System.Activities.WorkflowApplication> 인스턴스에 연결합니다. <xref:System.Activities.WorkflowIdentity> 인스턴스에는 세 가지 식별 정보가 포함됩니다. 필수 요소인 <xref:System.Activities.WorkflowIdentity.Name%2A> 및 <xref:System.Activities.WorkflowIdentity.Version%2A>에는 이름과 <xref:System.Version>이 포함되며, 선택적인 <xref:System.Activities.WorkflowIdentity.Package%2A>는 어셈블리 이름 등의 정보나 원하는 다른 정보를 포함하는 추가 문자열을 지정하는 데 사용할 수 있습니다. 세 개의 속성 중 하나라도 다른 <xref:System.Activities.WorkflowIdentity>와 다르면 <xref:System.Activities.WorkflowIdentity>가 고유한 것으로 간주됩니다.
 
@@ -82,7 +83,7 @@ wfApp.Load(instanceId);
 The WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') of the loaded instance does not match the WorkflowIdentity ('MortgageWorkflow v2; Version=2.0.0.0') of the provided workflow definition. The instance can be loaded using a different definition, or updated using Dynamic Update.
 ```
 
-### <a name="side-by-side-execution-using-workflowidentity"></a><a name="SxS"></a>WorkflowIdentity를 사용한 side-by-side 실행
+### <a name="side-by-side-execution-using-workflowidentity"></a><a name="SxS"></a> WorkflowIdentity를 사용한 side-by-side 실행
 
 <xref:System.Activities.WorkflowIdentity>를 사용하면 여러 버전의 워크플로를 손쉽게 side-by-side로 실행할 수 있습니다. 한 가지 일반적인 시나리오는 장기 실행 워크플로에 대한 비즈니스 요구 사항을 변경하는 것입니다. 업데이트된 버전이 배포될 때 여러 워크플로 인스턴스가 실행 중일 수 있습니다. 새 인스턴스를 시작할 때 업데이트된 워크플로 정의를 사용하도록 호스트 애플리케이션을 구성할 수 있으며, 호스트 애플리케이션에서는 인스턴스를 다시 시작할 때 올바른 워크플로 정의를 제공해야 합니다. <xref:System.Activities.WorkflowIdentity>를 사용하면 워크플로 인스턴스를 다시 시작할 때 일치하는 워크플로 정의를 식별하고 제공할 수 있습니다.
 
@@ -144,7 +145,7 @@ wfApp.Load(instance);
 // Resume the workflow...
 ```
 
-## <a name="upgrading-net-framework-4-persistence-databases-to-support-workflow-versioning"></a><a name="UpdatingWF4PersistenceDatabases"></a>워크플로 버전 관리를 지원 하도록 .NET Framework 4 지 속성 데이터베이스 업그레이드
+## <a name="upgrading-net-framework-4-persistence-databases-to-support-workflow-versioning"></a><a name="UpdatingWF4PersistenceDatabases"></a> 워크플로 버전 관리를 지원 하도록 .NET Framework 4 지 속성 데이터베이스 업그레이드
 
 .NET Framework 4 데이터베이스 스크립트를 사용 하 여 만든 지 속성 데이터베이스를 업그레이드 하는 Sqlworkflowinstancestoreschemaupgrade.sql 데이터베이스 스크립트가 제공 됩니다. 이 스크립트는 .NET Framework 4.5에 도입 된 새로운 버전 관리 기능을 지원 하도록 데이터베이스를 업데이트 합니다. 데이터베이스의 지속형 워크플로 인스턴스는 기본 버전 관리 값이 제공 받으며, side-by-side 실행 및 동적 업데이트에 참여할 수 있습니다.
 
@@ -154,16 +155,16 @@ wfApp.Load(instance);
 The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' cannot be run against this database version.  Please upgrade the database to '4.5.0.0'.
 ```
 
-### <a name="to-upgrade-the-database-schema"></a><a name="ToUpgrade"></a>데이터베이스 스키마를 업그레이드 하려면
+### <a name="to-upgrade-the-database-schema"></a><a name="ToUpgrade"></a> 데이터베이스 스키마를 업그레이드 하려면
 
 1. SQL Server Management Studio를 열고 지 속성 데이터베이스 서버에 연결 합니다 (예: **.\SQLEXPRESS**).
 
 2. **파일** 메뉴에서 **열기**, **파일** 을 선택 합니다. `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en` 폴더로 이동합니다.
 
-3. **Sqlworkflowinstancestoreschemaupgrade.sql** 를 선택 하 고 **열기**를 클릭 합니다.
+3. **Sqlworkflowinstancestoreschemaupgrade.sql** 를 선택 하 고 **열기** 를 클릭 합니다.
 
 4. **사용 가능한 데이터베이스** 드롭다운에서 지 속성 데이터베이스의 이름을 선택 합니다.
 
 5. **쿼리** 메뉴에서 **실행** 을 선택 합니다.
 
-쿼리가 완료되면 데이터베이스 스키마가 업그레이드되고 지속형 워크플로 인스턴스에 할당된 기본 워크플로 ID를 볼 수 있습니다. **개체 탐색기**의 **데이터베이스** 노드에서 지 속성 데이터베이스를 확장 한 다음 **뷰** 노드를 확장 합니다. **DurableInstancing** 를 마우스 오른쪽 단추로 클릭 하 고 **상위 1000 행 선택**을 선택 합니다. 열 끝으로 스크롤하고 **IdentityName**, **IdentityPackage**, **Build**, **Major**, **Minor**및 **Revision**의 추가 열이 6 개 추가 되어 있는지 확인 합니다. 지속형 워크플로는 이러한 필드에 null 값을 가지 **며 null 워크플로** id를 나타냅니다.
+쿼리가 완료되면 데이터베이스 스키마가 업그레이드되고 지속형 워크플로 인스턴스에 할당된 기본 워크플로 ID를 볼 수 있습니다. **개체 탐색기** 의 **데이터베이스** 노드에서 지 속성 데이터베이스를 확장 한 다음 **뷰** 노드를 확장 합니다. **DurableInstancing** 를 마우스 오른쪽 단추로 클릭 하 고 **상위 1000 행 선택** 을 선택 합니다. 열 끝으로 스크롤하고 **IdentityName**, **IdentityPackage**, **Build**, **Major**, **Minor** 및 **Revision** 의 추가 열이 6 개 추가 되어 있는지 확인 합니다. 지속형 워크플로는 이러한 필드에 null 값을 가지 **며 null 워크플로** id를 나타냅니다.

@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <supportedRuntime> 요소'
 title: <supportedRuntime> 구성 요소-.NET
 ms.date: 04/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: 79b49cbc9b122e6591d07643a341841b262edff4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 04c2b3fec591e1b99757085afdddf26c529591b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201709"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99754500"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime> 요소
 
@@ -33,7 +34,7 @@ ms.locfileid: "91201709"
 
 |attribute|설명|
 |---------------|-----------------|
-|**version**|선택적 특성입니다.<br /><br /> 애플리케이션이 지원하는 공용 언어 런타임(CLR) 버전을 지정하는 문자열 값입니다. 특성의 유효한 값 `version` 은 ["런타임 버전" 값](#version) 섹션을 참조 하세요. **참고:**  .NET Framework 3.5를 통해 "*런타임 버전*" 값은 *major*형식을 사용 합니다. *부*. *빌드*. .NET Framework 4부터 주 버전 및 부 버전 번호만 필요 합니다 (즉, "v 4.0.30319" 대신 "v 4.0"). 짧은 문자열이 권장됩니다.|
+|**version**|선택적 특성입니다.<br /><br /> 애플리케이션이 지원하는 공용 언어 런타임(CLR) 버전을 지정하는 문자열 값입니다. 특성의 유효한 값 `version` 은 ["런타임 버전" 값](#version) 섹션을 참조 하세요. **참고:**  .NET Framework 3.5를 통해 "*런타임 버전*" 값은 *major* 형식을 사용 합니다. *부*. *빌드*. .NET Framework 4부터 주 버전 및 부 버전 번호만 필요 합니다 (즉, "v 4.0.30319" 대신 "v 4.0"). 짧은 문자열이 권장됩니다.|
 |**sku**|선택적 특성입니다.<br /><br /> 이 애플리케이션이 지원하는 .NET Framework 버전을 지정하는 SKU(Stock Keeping Unit)를 지정하는 문자열 값입니다.<br /><br /> .NET Framework 4.0을 시작할 때에는 `sku` 특성을 사용하는 것이 좋습니다.  존재한다면 앱이 대상으로 하는 .NET Framework의 버전을 나타냅니다.<br /><br /> Sku 특성의 유효한 값은 ["sku id" 값](#sku) 섹션을 참조 하세요.|
 
 ## <a name="remarks"></a>설명
@@ -83,7 +84,7 @@ ms.locfileid: "91201709"
 |4.0, Client Profile, 업데이트 2|". NETFramework, Version = v 4.0.2, Profile = Client "|
 |4.0, 플랫폼 업데이트 3|". NETFramework, Version = v 4.0.3 "|
 |4.0, Client Profile, 업데이트 3|". NETFramework, Version = v 4.0.3, Profile = Client "|
-|4.5|".NETFramework,Version=v4.5"|
+|4.5.|".NETFramework,Version=v4.5"|
 |4.5.1|".NETFramework,Version=v4.5.1"|
 |4.5.2|".NETFramework,Version=v4.5.2"|
 |4.6|".NETFramework,Version=v4.6"|
