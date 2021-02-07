@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRDataTarget2:: FreeVirtual 메서드'
 title: ICLRDataTarget2::FreeVirtual 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 26fb69f8-1467-4711-bd24-cb117c63938f
 topic_type:
 - apiref
-ms.openlocfilehash: 1fb701a40abe2dc6e51443837c07ee5ba05ddfbe
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ef4048f421fcdc7d284663036f8cc9f2614f4e13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723651"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729252"
 ---
-# <a name="iclrdatatarget2freevirtual-method"></a><span data-ttu-id="bd9c2-102">ICLRDataTarget2::FreeVirtual 메서드</span><span class="sxs-lookup"><span data-stu-id="bd9c2-102">ICLRDataTarget2::FreeVirtual Method</span></span>
+# <a name="iclrdatatarget2freevirtual-method"></a><span data-ttu-id="4054d-103">ICLRDataTarget2::FreeVirtual 메서드</span><span class="sxs-lookup"><span data-stu-id="4054d-103">ICLRDataTarget2::FreeVirtual Method</span></span>
 
-<span data-ttu-id="bd9c2-103">이전에 대상 프로세스의 주소 공간에 할당 된 메모리를 확보 하기 위해 CLR (공용 언어 런타임) 데이터 액세스 서비스에 의해 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bd9c2-103">Called by the common language runtime (CLR) data access services to free memory that was previously allocated in the address space of the target process.</span></span>  
+<span data-ttu-id="4054d-104">이전에 대상 프로세스의 주소 공간에 할당 된 메모리를 확보 하기 위해 CLR (공용 언어 런타임) 데이터 액세스 서비스에 의해 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4054d-104">Called by the common language runtime (CLR) data access services to free memory that was previously allocated in the address space of the target process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bd9c2-104">구문</span><span class="sxs-lookup"><span data-stu-id="bd9c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4054d-105">구문</span><span class="sxs-lookup"><span data-stu-id="4054d-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT FreeVirtual(  
@@ -36,34 +37,34 @@ HRESULT FreeVirtual(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bd9c2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="bd9c2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4054d-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4054d-106">Parameters</span></span>  
 
  `addr`  
- <span data-ttu-id="bd9c2-106">진행 `CLRDATA_ADDRESS` 해제할 메모리의 시작 주소를 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="bd9c2-106">[in] A `CLRDATA_ADDRESS` value that specifies the starting address of the memory to be freed.</span></span>  
+ <span data-ttu-id="4054d-107">진행 `CLRDATA_ADDRESS` 해제할 메모리의 시작 주소를 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="4054d-107">[in] A `CLRDATA_ADDRESS` value that specifies the starting address of the memory to be freed.</span></span>  
   
  `size`  
- <span data-ttu-id="bd9c2-107">진행 해제할 메모리의 크기 (바이트)입니다.</span><span class="sxs-lookup"><span data-stu-id="bd9c2-107">[in] The size, in bytes, of the memory to be freed.</span></span>  
+ <span data-ttu-id="4054d-108">진행 해제할 메모리의 크기 (바이트)입니다.</span><span class="sxs-lookup"><span data-stu-id="4054d-108">[in] The size, in bytes, of the memory to be freed.</span></span>  
   
  `typeFlags`  
- <span data-ttu-id="bd9c2-108">진행 메모리 해제를 제어 하는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="bd9c2-108">[in] Flags that control the freeing of memory.</span></span> <span data-ttu-id="bd9c2-109">Win32 함수를 참조 하세요 `VirtualFree` .</span><span class="sxs-lookup"><span data-stu-id="bd9c2-109">See the Win32 `VirtualFree` function.</span></span>  
+ <span data-ttu-id="4054d-109">진행 메모리 해제를 제어 하는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="4054d-109">[in] Flags that control the freeing of memory.</span></span> <span data-ttu-id="4054d-110">Win32 함수를 참조 하세요 `VirtualFree` .</span><span class="sxs-lookup"><span data-stu-id="4054d-110">See the Win32 `VirtualFree` function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bd9c2-110">설명</span><span class="sxs-lookup"><span data-stu-id="bd9c2-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4054d-111">설명</span><span class="sxs-lookup"><span data-stu-id="4054d-111">Remarks</span></span>  
 
- <span data-ttu-id="bd9c2-111">`FreeVirtual`메서드는 Win32 함수에 대 한 논리 래퍼로 사용 `VirtualFree` 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bd9c2-111">The `FreeVirtual` method serves as a logical wrapper for the Win32 `VirtualFree` function.</span></span>  
+ <span data-ttu-id="4054d-112">`FreeVirtual`메서드는 Win32 함수에 대 한 논리 래퍼로 사용 `VirtualFree` 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4054d-112">The `FreeVirtual` method serves as a logical wrapper for the Win32 `VirtualFree` function.</span></span>  
   
- <span data-ttu-id="bd9c2-112">이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="bd9c2-112">This method is implemented by the writer of the debugging application.</span></span>  
+ <span data-ttu-id="4054d-113">이 메서드는 디버깅 애플리케이션의 작성자가 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="4054d-113">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bd9c2-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bd9c2-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4054d-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4054d-114">Requirements</span></span>  
 
- <span data-ttu-id="bd9c2-114">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="bd9c2-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="4054d-115">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4054d-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bd9c2-115">**헤더:** ClrData .idl, ClrData .h</span><span class="sxs-lookup"><span data-stu-id="bd9c2-115">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="4054d-116">**헤더:** ClrData .idl, ClrData .h</span><span class="sxs-lookup"><span data-stu-id="4054d-116">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="bd9c2-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bd9c2-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4054d-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4054d-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bd9c2-117">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bd9c2-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4054d-118">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4054d-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bd9c2-118">참조</span><span class="sxs-lookup"><span data-stu-id="bd9c2-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4054d-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4054d-119">See also</span></span>
 
-- [<span data-ttu-id="bd9c2-119">ICLRDataTarget2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bd9c2-119">ICLRDataTarget2 Interface</span></span>](iclrdatatarget2-interface.md)
-- [<span data-ttu-id="bd9c2-120">AllocVirtual 메서드</span><span class="sxs-lookup"><span data-stu-id="bd9c2-120">AllocVirtual Method</span></span>](iclrdatatarget2-allocvirtual-method.md)
+- [<span data-ttu-id="4054d-120">ICLRDataTarget2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4054d-120">ICLRDataTarget2 Interface</span></span>](iclrdatatarget2-interface.md)
+- [<span data-ttu-id="4054d-121">AllocVirtual 메서드</span><span class="sxs-lookup"><span data-stu-id="4054d-121">AllocVirtual Method</span></span>](iclrdatatarget2-allocvirtual-method.md)

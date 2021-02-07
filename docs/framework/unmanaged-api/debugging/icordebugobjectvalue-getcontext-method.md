@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugObjectValue:: GetContext 메서드'
 title: ICorDebugObjectValue::GetContext 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 40594774-5105-4187-a06b-4e7f50bada3c
 topic_type:
 - apiref
-ms.openlocfilehash: 0ba3a1899abfea10393a57bbf6ed61bbfc483262
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f3536f3256fe6a4b91a0270382aebf9f5b999642
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724665"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729005"
 ---
-# <a name="icordebugobjectvaluegetcontext-method"></a><span data-ttu-id="bbdd4-102">ICorDebugObjectValue::GetContext 메서드</span><span class="sxs-lookup"><span data-stu-id="bbdd4-102">ICorDebugObjectValue::GetContext Method</span></span>
+# <a name="icordebugobjectvaluegetcontext-method"></a><span data-ttu-id="6ba23-103">ICorDebugObjectValue::GetContext 메서드</span><span class="sxs-lookup"><span data-stu-id="6ba23-103">ICorDebugObjectValue::GetContext Method</span></span>
 
-<span data-ttu-id="bbdd4-103">`GetContext` 는이 버전의 .NET Framework에서 구현 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="bbdd4-103">`GetContext` is not implemented in this version of the .NET Framework.</span></span>  
+<span data-ttu-id="6ba23-104">`GetContext` 는이 버전의 .NET Framework에서 구현 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6ba23-104">`GetContext` is not implemented in this version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bbdd4-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="bbdd4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6ba23-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="6ba23-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetContext (  
@@ -34,8 +35,8 @@ HRESULT GetContext (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="bbdd4-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bbdd4-105">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6ba23-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6ba23-106">Requirements</span></span>  
 
- <span data-ttu-id="bbdd4-106">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bbdd4-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6ba23-107">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6ba23-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bbdd4-107">참조</span><span class="sxs-lookup"><span data-stu-id="bbdd4-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6ba23-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6ba23-108">See also</span></span>
