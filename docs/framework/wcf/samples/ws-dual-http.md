@@ -1,31 +1,32 @@
 ---
+description: '자세한 정보: WS 이중 Http'
 title: WS 다중 Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 4acf2491c242099f6c8b6c9c01dc18e9c99c9934
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 44245691a47982f427c82cf8ad81ac2dd8f0b557
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589736"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99715004"
 ---
-# <a name="ws-dual-http"></a><span data-ttu-id="68f8b-102">WS 다중 Http</span><span class="sxs-lookup"><span data-stu-id="68f8b-102">WS Dual Http</span></span>
+# <a name="ws-dual-http"></a><span data-ttu-id="81572-103">WS 다중 Http</span><span class="sxs-lookup"><span data-stu-id="81572-103">WS Dual Http</span></span>
 
-<span data-ttu-id="68f8b-103">Dual Http 샘플에서는 `WSDualHttpBinding` 바인딩을 구성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-103">The Dual Http sample demonstrates how to configure the `WSDualHttpBinding` binding.</span></span> <span data-ttu-id="68f8b-104">이 샘플은 IIS(인터넷 정보 서비스)에 의해 호스트되는 클라이언트 콘솔 프로그램(.exe) 및 서비스 라이브러리(.dll)로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-104">This sample consists of a client console program (.exe) and a service library (.dll) hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="68f8b-105">서비스는 이중 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-105">The service implements a duplex contract.</span></span> <span data-ttu-id="68f8b-106">계약은 수학 연산(Add, Subtract, Multiply 및 Divide)을 노출시키는 `ICalculatorDuplex` 인터페이스에 의해 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-106">The contract is defined by the `ICalculatorDuplex` interface, which exposes math operations (Add, Subtract, Multiply, and Divide).</span></span> <span data-ttu-id="68f8b-107">이 샘플에서 클라이언트는 `ICalculatorDuplex` 인터페이스를 통해 수학 연산을 수행하고 세션 중에 실행 결과를 계산할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-107">In this sample, the `ICalculatorDuplex` interface allows the client to perform math operations, calculating a running result over the session.</span></span> <span data-ttu-id="68f8b-108">서비스는 독립적으로 `ICalculatorDuplexCallback` 인터페이스에 결과를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-108">Independently, the service returns results on the `ICalculatorDuplexCallback` interface.</span></span> <span data-ttu-id="68f8b-109">클라이언트와 서비스 간에 전송되는 메시지 집합을 서로 연결하기 위해 컨텍스트를 설정해야 하므로 이중 계약에는 세션이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-109">A duplex contract requires a session, because a context must be established to correlate the set of messages being sent between client and service.</span></span> <span data-ttu-id="68f8b-110">`WSDualHttpBinding` 바인딩은 이중 통신을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-110">The `WSDualHttpBinding` binding supports duplex communication.</span></span>
+<span data-ttu-id="81572-104">Dual Http 샘플에서는 `WSDualHttpBinding` 바인딩을 구성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="81572-104">The Dual Http sample demonstrates how to configure the `WSDualHttpBinding` binding.</span></span> <span data-ttu-id="81572-105">이 샘플은 IIS(인터넷 정보 서비스)에 의해 호스트되는 클라이언트 콘솔 프로그램(.exe) 및 서비스 라이브러리(.dll)로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="81572-105">This sample consists of a client console program (.exe) and a service library (.dll) hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="81572-106">서비스는 이중 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="81572-106">The service implements a duplex contract.</span></span> <span data-ttu-id="81572-107">계약은 수학 연산(Add, Subtract, Multiply 및 Divide)을 노출시키는 `ICalculatorDuplex` 인터페이스에 의해 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="81572-107">The contract is defined by the `ICalculatorDuplex` interface, which exposes math operations (Add, Subtract, Multiply, and Divide).</span></span> <span data-ttu-id="81572-108">이 샘플에서 클라이언트는 `ICalculatorDuplex` 인터페이스를 통해 수학 연산을 수행하고 세션 중에 실행 결과를 계산할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="81572-108">In this sample, the `ICalculatorDuplex` interface allows the client to perform math operations, calculating a running result over the session.</span></span> <span data-ttu-id="81572-109">서비스는 독립적으로 `ICalculatorDuplexCallback` 인터페이스에 결과를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="81572-109">Independently, the service returns results on the `ICalculatorDuplexCallback` interface.</span></span> <span data-ttu-id="81572-110">클라이언트와 서비스 간에 전송되는 메시지 집합을 서로 연결하기 위해 컨텍스트를 설정해야 하므로 이중 계약에는 세션이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="81572-110">A duplex contract requires a session, because a context must be established to correlate the set of messages being sent between client and service.</span></span> <span data-ttu-id="81572-111">`WSDualHttpBinding` 바인딩은 이중 통신을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="81572-111">The `WSDualHttpBinding` binding supports duplex communication.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="68f8b-111">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-111">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>
+> <span data-ttu-id="81572-112">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="81572-112">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="68f8b-112">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-112">The samples may already be installed on your machine.</span></span> <span data-ttu-id="68f8b-113">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="68f8b-113">Check for the following (default) directory before continuing.</span></span>
+> <span data-ttu-id="81572-113">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="81572-113">The samples may already be installed on your machine.</span></span> <span data-ttu-id="81572-114">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="81572-114">Check for the following (default) directory before continuing.</span></span>
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> <span data-ttu-id="68f8b-114">이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-114">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="68f8b-115">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-115">This sample is located in the following directory.</span></span>
+> <span data-ttu-id="81572-115">이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다.</span><span class="sxs-lookup"><span data-stu-id="81572-115">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="81572-116">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="81572-116">This sample is located in the following directory.</span></span>
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`
 
-<span data-ttu-id="68f8b-116">`WSDualHttpBinding`을 사용하여 서비스 엔드포인트를 구성하려면 다음과 같이 엔드포인트 구성에 바인딩을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-116">To configure a service endpoint with the `WSDualHttpBinding`, specify the binding in the endpoint configuration as shown.</span></span>
+<span data-ttu-id="81572-117">`WSDualHttpBinding`을 사용하여 서비스 엔드포인트를 구성하려면 다음과 같이 엔드포인트 구성에 바인딩을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="81572-117">To configure a service endpoint with the `WSDualHttpBinding`, specify the binding in the endpoint configuration as shown.</span></span>
 
 ```xml
 <endpoint address=""
@@ -33,7 +34,7 @@ ms.locfileid: "84589736"
          contract="Microsoft.ServiceModel.Samples.ICalculatorDuplex" />
 ```
 
-<span data-ttu-id="68f8b-117">클라이언트에서는 다음 샘플 구성과 같이 서버가 클라이언트에 연결하는 데 사용할 수 있는 주소를 구성해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-117">On the client, you must configure an address that the server can use to connect to the client as shown in the following sample configuration.</span></span>
+<span data-ttu-id="81572-118">클라이언트에서는 다음 샘플 구성과 같이 서버가 클라이언트에 연결하는 데 사용할 수 있는 주소를 구성해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="81572-118">On the client, you must configure an address that the server can use to connect to the client as shown in the following sample configuration.</span></span>
 
 ```xml
 <system.serviceModel>
@@ -59,7 +60,7 @@ ms.locfileid: "84589736"
 </system.serviceModel>
 ```
 
-<span data-ttu-id="68f8b-118">샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-118">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="68f8b-119">클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-119">Press ENTER in the client window to shut down the client.</span></span>
+<span data-ttu-id="81572-119">샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="81572-119">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="81572-120">클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="81572-120">Press ENTER in the client window to shut down the client.</span></span>
 
 ```console
 Press <ENTER> to terminate client once the output is displayed.
@@ -71,24 +72,24 @@ Result(441.25)
 Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 ```
 
-<span data-ttu-id="68f8b-120">샘플을 실행하면 서비스에서 전송된 콜백 인터페이스에서 클라이언트에 반환된 메시지를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-120">When you run the sample, you see the messages returned to the client on the callback interface sent from the service.</span></span> <span data-ttu-id="68f8b-121">각 중간 결과가 표시된 다음 모든 작업이 완료되면 전체 수식이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-121">Each intermediate result is displayed, followed by the entire equation upon completion of all operations.</span></span> <span data-ttu-id="68f8b-122">클라이언트를 종료하려면 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-122">Press ENTER to shut down the client.</span></span>
+<span data-ttu-id="81572-121">샘플을 실행하면 서비스에서 전송된 콜백 인터페이스에서 클라이언트에 반환된 메시지를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="81572-121">When you run the sample, you see the messages returned to the client on the callback interface sent from the service.</span></span> <span data-ttu-id="81572-122">각 중간 결과가 표시된 다음 모든 작업이 완료되면 전체 수식이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="81572-122">Each intermediate result is displayed, followed by the entire equation upon completion of all operations.</span></span> <span data-ttu-id="81572-123">클라이언트를 종료하려면 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="81572-123">Press ENTER to shut down the client.</span></span>
 
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="68f8b-123">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="68f8b-123">To set up, build, and run the sample</span></span>
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="81572-124">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="81572-124">To set up, build, and run the sample</span></span>
 
-1. <span data-ttu-id="68f8b-124">다음 명령을 사용 하 여 ASP.NET 4.0을 설치 합니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-124">Install ASP.NET 4.0 using the following command.</span></span>
+1. <span data-ttu-id="81572-125">다음 명령을 사용 하 여 ASP.NET 4.0을 설치 합니다.</span><span class="sxs-lookup"><span data-stu-id="81572-125">Install ASP.NET 4.0 using the following command.</span></span>
 
     ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. <span data-ttu-id="68f8b-125">[Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-125">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](one-time-setup-procedure-for-the-wcf-samples.md).</span></span>
+2. <span data-ttu-id="81572-126">[Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="81572-126">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](one-time-setup-procedure-for-the-wcf-samples.md).</span></span>
 
-3. <span data-ttu-id="68f8b-126">C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-126">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](building-the-samples.md).</span></span>
+3. <span data-ttu-id="81572-127">C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="81572-127">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](building-the-samples.md).</span></span>
 
-4. <span data-ttu-id="68f8b-127">단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="68f8b-127">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](running-the-samples.md).</span></span>
+4. <span data-ttu-id="81572-128">단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="81572-128">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](running-the-samples.md).</span></span>
 
     > [!IMPORTANT]
-    > <span data-ttu-id="68f8b-128">다중 컴퓨터 구성에서 클라이언트를 실행 하는 경우 다음과 같이 요소의 `address` 특성 [ \<endpoint> \<client> ](../../configure-apps/file-schema/wcf/endpoint-of-client.md) 및 요소의 특성에 있는 localhost를 `clientBaseAddress` [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) [\<wsDualHttpBinding>](../../configure-apps/file-schema/wcf/wsdualhttpbinding.md) 해당 컴퓨터의 이름으로 바꾸어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="68f8b-128">When running the client in a cross-machine configuration, be sure to replace localhost in both the `address` attribute of the [\<endpoint> of \<client>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) element and the `clientBaseAddress` attribute of the [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) element of the [\<wsDualHttpBinding>](../../configure-apps/file-schema/wcf/wsdualhttpbinding.md) element with the name of the appropriate machine, as shown:</span></span>
+    > <span data-ttu-id="81572-129">다중 컴퓨터 구성에서 클라이언트를 실행 하는 경우 다음과 같이 요소의 `address` 특성 [ \<endpoint> \<client> ](../../configure-apps/file-schema/wcf/endpoint-of-client.md) 및 요소의 특성에 있는 localhost를 `clientBaseAddress` [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) [\<wsDualHttpBinding>](../../configure-apps/file-schema/wcf/wsdualhttpbinding.md) 해당 컴퓨터의 이름으로 바꾸어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="81572-129">When running the client in a cross-machine configuration, be sure to replace localhost in both the `address` attribute of the [\<endpoint> of \<client>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) element and the `clientBaseAddress` attribute of the [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) element of the [\<wsDualHttpBinding>](../../configure-apps/file-schema/wcf/wsdualhttpbinding.md) element with the name of the appropriate machine, as shown:</span></span>
 
     ```xml
     <client>
