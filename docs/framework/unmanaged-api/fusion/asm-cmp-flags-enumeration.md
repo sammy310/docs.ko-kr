@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: 열거형 ASM_CMP_FLAGS'
 title: ASM_CMP_FLAGS 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4d1e6700-d4be-4fbd-8796-bfb4c07abbc8
 topic_type:
 - apiref
-ms.openlocfilehash: fea06a3e6d06aeff56ba7e20e8e64f0a6feb5e69
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6d35691e853d76dc0e363651b23a6e5ff94244a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731061"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761423"
 ---
-# <a name="asm_cmp_flags-enumeration"></a><span data-ttu-id="96ff8-102">ASM_CMP_FLAGS 열거형</span><span class="sxs-lookup"><span data-stu-id="96ff8-102">ASM_CMP_FLAGS Enumeration</span></span>
+# <a name="asm_cmp_flags-enumeration"></a><span data-ttu-id="4865b-103">ASM_CMP_FLAGS 열거형</span><span class="sxs-lookup"><span data-stu-id="4865b-103">ASM_CMP_FLAGS Enumeration</span></span>
 
-<span data-ttu-id="96ff8-103">[IAssemblyName:: IsEqual](iassemblyname-isequal-method.md) 메서드와 비교할 두 어셈블리의 버전, 빌드, 문화권, 서명 등을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="96ff8-103">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](iassemblyname-isequal-method.md) method.</span></span>  
+<span data-ttu-id="4865b-104">[IAssemblyName:: IsEqual](iassemblyname-isequal-method.md) 메서드와 비교할 두 어셈블리의 버전, 빌드, 문화권, 서명 등을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="4865b-104">Indicates the version, build, culture, signature, and so on, of two assemblies to be compared by the [IAssemblyName::IsEqual](iassemblyname-isequal-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="96ff8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="96ff8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4865b-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="4865b-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -66,17 +67,17 @@ typedef enum {
 } ASM_CMP_FLAGS;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="96ff8-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="96ff8-105">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4865b-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4865b-106">Requirements</span></span>  
 
- <span data-ttu-id="96ff8-106">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="96ff8-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="4865b-107">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4865b-107">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="96ff8-107">**헤더:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="96ff8-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="4865b-108">**헤더:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="4865b-108">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="96ff8-108">**라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="96ff8-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="4865b-109">**라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4865b-109">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="96ff8-109">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96ff8-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4865b-110">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4865b-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="96ff8-110">참조</span><span class="sxs-lookup"><span data-stu-id="96ff8-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4865b-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4865b-111">See also</span></span>
 
-- [<span data-ttu-id="96ff8-111">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="96ff8-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
-- [<span data-ttu-id="96ff8-112">Fusion 열거형</span><span class="sxs-lookup"><span data-stu-id="96ff8-112">Fusion Enumerations</span></span>](fusion-enumerations.md)
+- [<span data-ttu-id="4865b-112">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4865b-112">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="4865b-113">Fusion 열거형</span><span class="sxs-lookup"><span data-stu-id="4865b-113">Fusion Enumerations</span></span>](fusion-enumerations.md)

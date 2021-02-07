@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: 열거형 ASM_NAME'
 title: ASM_NAME 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: c8b65b19-d777-428f-bc0c-0d84c78a37bc
 topic_type:
 - apiref
-ms.openlocfilehash: 64a34cdf92df345041cb94e9069bcc4d489e3cf5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d4fc18b24e3de31e4c6679bb30a013f61346f4dd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728643"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761332"
 ---
-# <a name="asm_name-enumeration"></a><span data-ttu-id="bc584-102">ASM_NAME 열거형</span><span class="sxs-lookup"><span data-stu-id="bc584-102">ASM_NAME Enumeration</span></span>
+# <a name="asm_name-enumeration"></a><span data-ttu-id="d1eb1-103">ASM_NAME 열거형</span><span class="sxs-lookup"><span data-stu-id="d1eb1-103">ASM_NAME Enumeration</span></span>
 
-<span data-ttu-id="bc584-103">[IAssemblyName](iassemblyname-interface.md) 메서드에서 속성을 검색 하거나 설정 하는 어셈블리의 버전, 빌드, 문화권, 서명 등을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="bc584-103">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](iassemblyname-interface.md) methods.</span></span>  
+<span data-ttu-id="d1eb1-104">[IAssemblyName](iassemblyname-interface.md) 메서드에서 속성을 검색 하거나 설정 하는 어셈블리의 버전, 빌드, 문화권, 서명 등을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d1eb1-104">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](iassemblyname-interface.md) methods.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bc584-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="bc584-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d1eb1-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="d1eb1-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -63,17 +64,17 @@ typedef enum {
 } ASM_NAME;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="bc584-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bc584-105">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d1eb1-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d1eb1-106">Requirements</span></span>  
 
- <span data-ttu-id="bc584-106">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="bc584-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="d1eb1-107">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d1eb1-107">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bc584-107">**헤더:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="bc584-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="d1eb1-108">**헤더:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="d1eb1-108">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="bc584-108">**라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bc584-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d1eb1-109">**라이브러리:** MsCorEE.dll의 리소스로 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1eb1-109">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="bc584-109">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bc584-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d1eb1-110">**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d1eb1-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc584-110">참조</span><span class="sxs-lookup"><span data-stu-id="bc584-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d1eb1-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d1eb1-111">See also</span></span>
 
-- [<span data-ttu-id="bc584-111">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bc584-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
-- [<span data-ttu-id="bc584-112">Fusion 열거형</span><span class="sxs-lookup"><span data-stu-id="bc584-112">Fusion Enumerations</span></span>](fusion-enumerations.md)
+- [<span data-ttu-id="d1eb1-112">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d1eb1-112">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="d1eb1-113">Fusion 열거형</span><span class="sxs-lookup"><span data-stu-id="d1eb1-113">Fusion Enumerations</span></span>](fusion-enumerations.md)
