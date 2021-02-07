@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugEditAndContinueSnapshot:: GetRoDataRVA 메서드'
 title: ICorDebugEditAndContinueSnapshot::GetRoDataRVA 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: efc32294-292b-419a-9d6e-24251322a85a
 topic_type:
 - apiref
-ms.openlocfilehash: 5c4befabbc8a45da3180dd1f0519396917f672b8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1d86d989a41ff85c78a972937e5ea93f87b8aa3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730892"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694775"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="dea91-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA 메서드</span><span class="sxs-lookup"><span data-stu-id="dea91-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
+# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="79cf2-103">ICorDebugEditAndContinueSnapshot::GetRoDataRVA 메서드</span><span class="sxs-lookup"><span data-stu-id="79cf2-103">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
 
-<span data-ttu-id="dea91-103">`GetRoDataRVA`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="dea91-103">`GetRoDataRVA` is obsolete.</span></span> <span data-ttu-id="dea91-104">이 메서드를 호출 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="dea91-104">Do not call this method.</span></span>  
+<span data-ttu-id="79cf2-104">`GetRoDataRVA`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="79cf2-104">`GetRoDataRVA` is obsolete.</span></span> <span data-ttu-id="79cf2-105">이 메서드를 호출 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="79cf2-105">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dea91-105">참조</span><span class="sxs-lookup"><span data-stu-id="dea91-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="79cf2-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="79cf2-106">See also</span></span>
 
-- [<span data-ttu-id="dea91-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="dea91-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="79cf2-107">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="79cf2-107">Debugging Interfaces</span></span>](debugging-interfaces.md)
