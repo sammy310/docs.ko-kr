@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: Entity Framework의 SqlClient'
 title: Entity Framework용 SqlClient
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: 7f3a1d4bbd18977bbb1dc9ce65140428ea6fe2f8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: eba5602c13f66d1ee4404bbc27035304e34c1cd0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156539"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673130"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>Entity Framework용 SqlClient
 
@@ -38,11 +39,11 @@ ms.locfileid: "91156539"
 
  모든 공급자에서 네임스페이스가 지정되어야 합니다. 이 속성이 있으면 특정 구문(예: 형식 및 함수)에 대해 이 공급자에서 사용할 수 있는 접두사를 Entity Framework에서 구할 수 있습니다. SqlClient 공급자 매니페스트의 네임스페이스는 `SqlServer`입니다. 네임 스페이스에 대 한 자세한 내용은 [네임 스페이스](./language-reference/namespaces-entity-sql.md)를 참조 하세요.  
   
-## <a name="types"></a>유형  
+## <a name="types"></a>형식  
 
  Entity Framework에 대한 SqlClient 공급자는 개념적 모델 형식과 SQL Server 형식 간의 매핑 정보를 제공합니다. 자세한 내용은 [Entity frameworktypes 용 sqlclient의 SqlClient](sqlclient-for-ef-types.md)를 참조 하세요.  
   
-## <a name="functions"></a>함수  
+## <a name="functions"></a>Functions  
 
  Entity Framework에 대한 SqlClient 공급자는 해당 공급자가 지원하는 함수 목록을 정의합니다. 지원 되는 함수 목록은 [Entity Framework 함수에 대 한 SqlClient](sqlclient-for-ef-functions.md)를 참조 하세요.  
   

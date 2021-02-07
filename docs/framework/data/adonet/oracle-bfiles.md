@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: Oracle BFILEs'
 title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: d43dfccd9735ce1ab822d7b14de2abaa0940c77b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e1fda4ad4acb225dc9a70c92b2c4f2b1d61ab1d7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166601"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672493"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 
@@ -21,7 +22,7 @@ ms.locfileid: "91166601"
   
 - 서버 쪽 청크를 지원 합니다.  
   
-- 참조 복사 의미 체계를 사용 합니다. 예를 들어 **bfile**에서 복사 작업을 수행 하는 경우 파일에 대 한 참조 인 **bfile** 로케이터만 복사 됩니다. 파일의 데이터는 복사 되지 않습니다.  
+- 참조 복사 의미 체계를 사용 합니다. 예를 들어 **bfile** 에서 복사 작업을 수행 하는 경우 파일에 대 한 참조 인 **bfile** 로케이터만 복사 됩니다. 파일의 데이터는 복사 되지 않습니다.  
   
  **BFILE** 데이터 형식은 크기가 큰 lob를 참조 하는 데 사용 해야 하므로 데이터베이스에 저장 하는 것은 실용적이 지 않습니다. **LOB** 데이터 형식과 비교 하 여 **BFILE** 데이터 형식을 사용 하는 경우 더 많은 클라이언트, 서버 및 통신 오버 헤드가 수반 됩니다. 적은 양의 데이터를 가져와야 하는 경우에는 **BFILE** 에 액세스 하는 것이 더 효율적입니다. 반면에 전체 개체를 가져와야 하는 경우에는 데이터베이스 상주 LOB에 액세스 하는 것이 효율적입니다.  
   

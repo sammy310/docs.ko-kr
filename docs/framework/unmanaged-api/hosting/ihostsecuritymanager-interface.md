@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostSecurityManager 인터페이스'
 title: IHostSecurityManager 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-ms.openlocfilehash: 37f606a67bef79936c81b2a36f12a00d24bd82f1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 76ba26443fa2a4e65459dd073eb6d22031548112
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680536"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671544"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager 인터페이스
 
@@ -60,7 +61,7 @@ ms.locfileid: "95680536"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IHostSecurityContext 인터페이스](ihostsecuritycontext-interface.md)
 - [호스팅 인터페이스](hosting-interfaces.md)

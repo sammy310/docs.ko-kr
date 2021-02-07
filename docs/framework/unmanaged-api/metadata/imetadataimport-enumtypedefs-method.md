@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataImport:: EnumTypeDefs 메서드'
 title: IMetaDataImport::EnumTypeDefs 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-ms.openlocfilehash: 4545f5f8d78e588c655a72340210a785b0feb619
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 28bd06b70573b780b687da9de0e13e17c29bb39a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720414"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670684"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs 메서드
 
@@ -51,7 +52,7 @@ HRESULT EnumTypeDefs (
  `pcTypeDefs`  
  제한이 에서 반환 된 TypeDef 토큰의 수입니다 `rTypeDefs` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -72,7 +73,7 @@ HRESULT EnumTypeDefs (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

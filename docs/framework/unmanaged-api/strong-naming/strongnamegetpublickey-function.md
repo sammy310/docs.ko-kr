@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: StrongNameGetPublicKey 함수'
 title: StrongNameGetPublicKey 함수
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5b58c87f-3f72-40df-9b9a-291076931cc3
 topic_type:
 - apiref
-ms.openlocfilehash: c97cc0c1d4c022583d0823abeff998e2ed5f719e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c94ffdd20e83b03da27b2f44ebbc279cfd8b8afc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710976"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670572"
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey 함수
 
@@ -61,7 +62,7 @@ BOOLEAN StrongNameGetPublicKey (
  `pcbPublicKeyBlob`  
  제한이 반환 된 공개 키 BLOB의 크기입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `true` 성공적으로 완료 되 면 그렇지 않으면 `false` 입니다.  
   
@@ -81,7 +82,7 @@ BOOLEAN StrongNameGetPublicKey (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [StrongNameGetPublicKey 메서드](../hosting/iclrstrongname-strongnamegetpublickey-method.md)
 - [StrongNameTokenFromPublicKey 메서드](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md)

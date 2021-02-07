@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostSecurityManager:: SetThreadToken 메서드'
 title: IHostSecurityManager::SetThreadToken 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e951c345-8a86-4587-911b-a1a57bc6428a
 topic_type:
 - apiref
-ms.openlocfilehash: 5a2b2e5560c292598f0110de9445eb66ba794997
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 96fb8d487cecc0e62d9b7787c686c74898d99d70
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683110"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671388"
 ---
 # <a name="ihostsecuritymanagersetthreadtoken-method"></a>IHostSecurityManager::SetThreadToken 메서드
 
@@ -39,7 +40,7 @@ HRESULT SetThreadToken (
  `hToken`  
  진행 현재 실행 중인 스레드에 대해 설정할 토큰에 대 한 핸들입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -66,7 +67,7 @@ HRESULT SetThreadToken (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IHostSecurityManager 인터페이스](ihostsecuritymanager-interface.md)
 - [IHostThreadPoolManager 인터페이스](ihostthreadpoolmanager-interface.md)

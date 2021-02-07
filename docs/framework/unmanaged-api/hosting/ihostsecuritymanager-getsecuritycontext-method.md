@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostSecurityManager:: GetSecurityContext 메서드'
 title: IHostSecurityManager::GetSecurityContext 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 958970d6-f6a2-4b84-b32a-f555cbaf8f61
 topic_type:
 - apiref
-ms.openlocfilehash: dfb96de02549e6d0f178c099793741f7fbd61d55
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0dc9e0380d2fb218b68f6beb85fa1ccba8826d85
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724795"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671566"
 ---
 # <a name="ihostsecuritymanagergetsecuritycontext-method"></a>IHostSecurityManager::GetSecurityContext 메서드
 
@@ -43,7 +44,7 @@ HRESULT GetSecurityContext (
  `ppSecurityContext`  
  제한이 의에 대 한 인터페이스 포인터의 주소 `IHostSecurityContext` 입니다 `eContextType` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -68,7 +69,7 @@ HRESULT GetSecurityContext (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [EContextType 열거형](econtexttype-enumeration.md)
 - [IHostSecurityContext 인터페이스](ihostsecuritycontext-interface.md)

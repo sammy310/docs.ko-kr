@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostSecurityManager:: SetSecurityContext 메서드'
 title: IHostSecurityManager::SetSecurityContext 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e4372384-ee69-48d7-97e0-8fab7866597a
 topic_type:
 - apiref
-ms.openlocfilehash: dadacaea2b8741afc7b8c51404e2604dc759a629
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ee2de40e043e626aba1d75540faab3cae4c8fb7e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680380"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671479"
 ---
 # <a name="ihostsecuritymanagersetsecuritycontext-method"></a>IHostSecurityManager::SetSecurityContext 메서드
 
@@ -43,7 +44,7 @@ HRESULT SetSecurityContext (
  `ppSecurityContext`  
  제한이 새 [IHostSecurityContext](ihostsecuritycontext-interface.md) 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -70,7 +71,7 @@ HRESULT SetSecurityContext (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.ThreadPool?displayProperty=nameWithType>
 - [EContextType 열거형](econtexttype-enumeration.md)

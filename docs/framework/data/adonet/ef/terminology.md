@@ -1,13 +1,14 @@
 ---
+description: Entity Framework 용어에 대해 자세히 알아보세요.
 title: Entity Framework 용어
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: dbe03de44b8ae2a857b923cd9dc74c42ea18f4e8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b2cdaa4fb71403915ae5df57f785efde8cf54d24
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200942"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99673104"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 용어
 

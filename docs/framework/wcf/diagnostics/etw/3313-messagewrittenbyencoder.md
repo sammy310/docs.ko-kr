@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 3313-MessageWrittenByEncoder'
 title: 3313 - MessageWrittenByEncoder
 ms.date: 03/30/2017
 ms.assetid: abdb7db5-373e-4862-b53d-befbb0949e32
-ms.openlocfilehash: f30cb43c575e0e7bbb9879df2de6f223c678969c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1e5bcaa96313221b679b68ca2ce365d6db7a0cc1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279430"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670400"
 ---
 # <a name="3313---messagewrittenbyencoder"></a>3313 - MessageWrittenByEncoder
 
@@ -20,7 +21,7 @@ ms.locfileid: "96279430"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 인코더가 메시지를 쓸 때 내보내집니다.  
   

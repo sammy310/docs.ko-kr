@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: N 계층 응용 프로그램의 데이터 검색 및 CUD 작업 (LINQ to SQL)'
 title: N 계층 애플리케이션에서 데이터 검색 및 CUD 작업(LINQ to SQL)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: 1bc97504b4dd053ce9ef747460a79865cbe836ee
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dbad65e1bd29227f434166dca364946a68256177
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197419"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672168"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 계층 애플리케이션에서 데이터 검색 및 CUD 작업(LINQ to SQL)
 
@@ -400,7 +401,7 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
  이러한 필수 멤버가 하나라도 없으면 <xref:System.Data.Linq.ChangeConflictException>를 호출했을 때 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>("행이 없거나 변경되었습니다.")이 throw됩니다.  
   
-### <a name="state"></a>상태  
+### <a name="state"></a>시스템 상태  
 
  엔터티 개체를 <xref:System.Data.Linq.DataContext> 인스턴스에 연결하면 개체가 `PossiblyModified` 상태가 됩니다. 다음과 같은 세 가지 방법을 사용하여 연결된 개체를 강제로 `Modified` 상태로 만들 수 있습니다.  
   

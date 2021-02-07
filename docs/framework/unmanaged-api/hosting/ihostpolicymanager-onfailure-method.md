@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostPolicyManager:: OnFailure 메서드'
 title: IHostPolicyManager::OnFailure 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 77d3f31e-9a53-4349-9c02-610a71736d42
 topic_type:
 - apiref
-ms.openlocfilehash: efa7b9d49ea9807af2164bb6ee54422dd72b14e2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9fb359d4ba1b1b89e029a0772a0f67a49b2b380b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730424"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671843"
 ---
 # <a name="ihostpolicymanageronfailure-method"></a>IHostPolicyManager::OnFailure 메서드
 
@@ -43,7 +44,7 @@ HRESULT OnFailure(
  `action`  
  진행 CLR이 응답 하는 작업을 나타내는 [EPolicyAction](epolicyaction-enumeration.md) 값 중 하나 `failure` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -64,7 +65,7 @@ HRESULT OnFailure(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [EClrFailure 열거형](eclrfailure-enumeration.md)
 - [EPolicyAction 열거형](epolicyaction-enumeration.md)

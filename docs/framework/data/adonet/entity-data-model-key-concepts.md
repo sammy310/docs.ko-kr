@@ -1,17 +1,18 @@
 ---
+description: 엔터티 데이터 모델 주요 개념에 대해 자세히 알아보세요.
 title: 엔터티 데이터 모델의 주요 개념
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: d020de65ff64d93c0ea925b71e5f1546eb4402aa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4b97a39a5989689662db7be92b259b9a08d84cc7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191764"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672798"
 ---
 # <a name="entity-data-model-key-concepts"></a>엔터티 데이터 모델의 주요 개념
 
-EDM (엔터티 데이터 모델)에서는 *엔터티 형식*, *연결 형식*및 *속성*의 세 가지 주요 개념을 사용 하 여 데이터 구조를 설명 합니다. 이는 모든 EDM 구현의 데이터 구조 설명에 가장 중요한 개념입니다.  
+EDM (엔터티 데이터 모델)에서는 *엔터티 형식*, *연결 형식* 및 *속성* 의 세 가지 주요 개념을 사용 하 여 데이터 구조를 설명 합니다. 이는 모든 EDM 구현의 데이터 구조 설명에 가장 중요한 개념입니다.  
   
 ## <a name="entity-type"></a>엔터티 형식  
 
@@ -39,7 +40,7 @@ EDM (엔터티 데이터 모델)에서는 *엔터티 형식*, *연결 형식*및
   
  ![세 개의 엔터티 형식이 포함 된 개념적 모델을 보여 주는 다이어그램](./media/entity-data-model-key-concepts/conceptual-model-entity-types-associations.gif)  
   
- 그러나 이 표현은 모델에 대한 일부 세부 정보의 표시와 관련하여 몇 가지 단점이 있습니다. 예를 들어, 속성 형식과 엔터티 집합 정보가 다이어그램에 표시되지 않습니다. DSL(Domain-Specific Language)을 사용하면 개념적 모델의 세부 정보를 보다 명확하게 표시할 수 있습니다. [ADO.NET Entity Framework](./ef/index.md) 에서는[CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)( *개념 스키마 정의 언어* ) 이라는 XML 기반 DSL을 사용 하 여 개념적 모델을 정의 합니다. 다음은 위의 다이어그램에 표시된 개념적 모델의 CSDL 정의입니다.  
+ 그러나 이 표현은 모델에 대한 일부 세부 정보의 표시와 관련하여 몇 가지 단점이 있습니다. 예를 들어, 속성 형식과 엔터티 집합 정보가 다이어그램에 표시되지 않습니다. DSL(Domain-Specific Language)을 사용하면 개념적 모델의 세부 정보를 보다 명확하게 표시할 수 있습니다. [ADO.NET Entity Framework](./ef/index.md) 에서는 [CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)( *개념 스키마 정의 언어* ) 이라는 XML 기반 DSL을 사용 하 여 개념적 모델을 정의 합니다. 다음은 위의 다이어그램에 표시된 개념적 모델의 CSDL 정의입니다.  
   
  [!code-xml[EDM_Example_Model#EDMExampleCSDL](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#edmexamplecsdl)]  
   

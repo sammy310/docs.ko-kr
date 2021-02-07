@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: SQL Server 인스턴스 열거 (ADO.NET)'
 title: SQL Server 인스턴스 열거
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: 2966157921894356836765edee6160d8e0f3e6e0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dd52142a06d5c7203eb8a2a14d0e6fc48f1e2a27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156136"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672311"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server의 인스턴스 열거(ADO.NET)
 

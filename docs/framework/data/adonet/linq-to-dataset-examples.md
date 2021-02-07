@@ -1,13 +1,14 @@
 ---
+description: LINQ to DataSet 예제에 대해 자세히 알아보세요.
 title: LINQ to DataSet 예제
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 48511dc7ae249e35b9bd76e0d6d3d9f1ef39dde0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 65977210fb160439231ea723134c94eb56ca8930
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169520"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672753"
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ to DataSet 예제
 
@@ -24,7 +25,7 @@ ms.locfileid: "91169520"
   
 - [분할](query-expression-syntax-examples-partitioning.md)  
   
-- [순서 지정](query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+- [주](query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
 - [요소 연산자](query-expression-syntax-examples-element-operators.md)  
   
@@ -39,7 +40,7 @@ ms.locfileid: "91169520"
   
 - [분할](method-based-query-syntax-examples-partitioning-linq.md)  
   
-- [순서 지정](method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
+- [주](method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
 - [세트 연산자](method-based-query-syntax-examples-set-operators.md)  
   

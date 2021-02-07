@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: Method-Based 쿼리 구문 예제: 정렬 (LINQ to DataSet)'
 title: '메서드 기반 쿼리 구문 예제: 정렬(LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8f9ce4fd-e84f-48c0-bb64-89e217236d3e
-ms.openlocfilehash: 635b7f6e498e27ef8ca2e133df639f1010184a93
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d655ff52fe30a9af15245a4c9989062107bb6842
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197874"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672662"
 ---
 # <a name="method-based-query-syntax-examples-ordering-linq-to-dataset"></a>메서드 기반 쿼리 구문 예제: 정렬(LINQ to DataSet)
 

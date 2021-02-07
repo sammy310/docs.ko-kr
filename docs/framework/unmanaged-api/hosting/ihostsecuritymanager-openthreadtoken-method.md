@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostSecurityManager:: OpenThreadToken 메서드'
 title: IHostSecurityManager::OpenThreadToken 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d5999052-8bf0-4a9e-8621-da6284406b18
 topic_type:
 - apiref
-ms.openlocfilehash: 30ec8cc8bbbd6d49f89cd67371c3326c0cb0df9a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9e0273f379f4adcf71396630b367a94c623ae15f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680614"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671564"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken 메서드
 
@@ -47,7 +48,7 @@ HRESULT OpenThreadToken (
  `phThreadToken`  
  제한이 새로 열린 액세스 토큰에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -74,7 +75,7 @@ HRESULT OpenThreadToken (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IHostSecurityContext 인터페이스](ihostsecuritycontext-interface.md)
 - [IHostSecurityManager 인터페이스](ihostsecuritymanager-interface.md)

@@ -1,13 +1,14 @@
 ---
+description: OLE DB 스키마 컬렉션에 대해 자세히 알아보세요.
 title: OLE DB 스키마 컬렉션
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: 90899a123b3dafcd47a50ef8f6eb003938b22a03
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d4d4bae5387575bdaeaf013ed690e95aa3259068
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186941"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672623"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB 스키마 컬렉션
 

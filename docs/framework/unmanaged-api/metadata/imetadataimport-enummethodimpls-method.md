@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataImport:: EnumMethodImpls 메서드'
 title: IMetaDataImport::EnumMethodImpls 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: 40ab610110e96018b1c598d04b24a762ecb50717
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3ae5795bdde36ad07c447370553e24e1ceacf493
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690518"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99670699"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls 메서드
 
@@ -59,7 +60,7 @@ HRESULT EnumMethodImpls (
  `pcTokens`  
  진행 및에서 반환 된 실제 메서드 수 `rMethodBody` 입니다 `rMethodDecl` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -76,7 +77,7 @@ HRESULT EnumMethodImpls (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 변경 내용 충돌 관리'
 title: '방법: 변경 충돌 관리'
 ms.date: 03/30/2017
 ms.assetid: cd292c51-a3d1-4c6f-8d8e-04323c36054e
-ms.openlocfilehash: 496971a99522c2547759905833ce2e89ea00826b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9b4afe5538d74dea574451d8678c07e0aa50198c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173408"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672064"
 ---
 # <a name="how-to-manage-change-conflicts"></a>방법: 변경 충돌 관리
 

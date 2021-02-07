@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostSecurityContext 인터페이스'
 title: IHostSecurityContext 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88e2eac0-8ccb-404f-abbc-287d55159842
 topic_type:
 - apiref
-ms.openlocfilehash: aafaa1d648396ddaa76193fa15cf7f74394777a9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c4c1be00a8b1c9df58797a0f2fc7e60abcab9673
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724808"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99671648"
 ---
 # <a name="ihostsecuritycontext-interface"></a>IHostSecurityContext 인터페이스
 
@@ -45,7 +46,7 @@ CLR (공용 언어 런타임)이 호스트에서 구현 하는 보안 컨텍스�
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRHostProtectionManager 인터페이스](iclrhostprotectionmanager-interface.md)
 - [IHostSecurityManager 인터페이스](ihostsecuritymanager-interface.md)
