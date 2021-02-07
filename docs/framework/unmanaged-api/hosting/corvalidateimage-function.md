@@ -1,4 +1,5 @@
 ---
+description: _CorValidateImage 함수에 대해 자세히 알아보세요.
 title: _CorValidateImage 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 2d49a40610bd0e1a7629594e245bde9eacfcc06d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f3d91c2d7e05786f7bfb0ab94b64e2cfb84a21d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687979"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746245"
 ---
 # <a name="_corvalidateimage-function"></a>_CorValidateImage 함수
 
@@ -42,7 +43,7 @@ STDAPI _CorValidateImage (
  `FileName`  
  진행 이미지의 파일 이름입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 함수는 `E_INVALIDARG` `E_OUTOFMEMORY` `E_UNEXPECTED` 다음 값 뿐만 아니라 표준 값,, 및를 반환 합니다 `E_FAIL` .  
   
@@ -85,6 +86,6 @@ STDAPI _CorValidateImage (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 전역 정적 함수](../metadata/metadata-global-static-functions.md)
