@@ -1,19 +1,20 @@
 ---
+description: '자세히 알아보기: 기본 AJAX 서비스'
 title: Basic AJAX Service
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-ms.openlocfilehash: 334cc9e53d7d9746c204abe37e7c30d00baa824b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 08670c0e87a6f258d29288e2072cd04dd875088a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716120"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732724"
 ---
 # <a name="basic-ajax-service"></a>Basic AJAX Service
 
 이 샘플에서는 WCF (Windows Communication Foundation)를 사용 하 여 기본 AJAX (ASP.NET 비동기 JavaScript and XML) 서비스 (웹 브라우저 클라이언트에서 JavaScript 코드를 사용 하 여 액세스할 수 있는 서비스)를 만드는 방법을 보여 줍니다. 이 서비스에서는 HTTP GET 요청에 응답하고 JSON(JavaScript Object Notation) 데이터 형식을 응답에 사용하도록 <xref:System.ServiceModel.Web.WebGetAttribute> 특성이 사용됩니다.
 
-WCF의 AJAX 지원은 `ScriptManager` 컨트롤을 통해 ASP.NET AJAX와 함께 사용 하도록 최적화 되어 있습니다. ASP.NET AJAX에서 WCF를 사용 하는 예제는 [Ajax 샘플](ajax.md)을 참조 하세요.
+WCF의 AJAX 지원은 컨트롤을 통해 ASP.NET AJAX와 함께 사용 하도록 최적화 되어 `ScriptManager` 있습니다. ASP.NET AJAX에서 WCF를 사용 하는 예제는 [Ajax 샘플](ajax.md)을 참조 하세요.
 
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
@@ -30,7 +31,7 @@ public interface ICalculator
 }
 ```
 
-샘플 .svc 파일은 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 표준 엔드포인트를 서비스에 추가하는 <xref:System.ServiceModel.Description.WebScriptEndpoint>를 사용합니다. 엔드포인트는 .svc 파일을 기준으로 빈 주소에서 구성됩니다. 이는 서비스의 주소가 작업 이름이 아닌 추가 접미사를 사용 하지 않고 `http://localhost/ServiceModelSamples/service.svc`는 것을 의미 합니다.
+샘플 .svc 파일은 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 표준 엔드포인트를 서비스에 추가하는 <xref:System.ServiceModel.Description.WebScriptEndpoint>를 사용합니다. 엔드포인트는 .svc 파일을 기준으로 빈 주소에서 구성됩니다. 즉, 서비스의 주소는 이며 `http://localhost/ServiceModelSamples/service.svc` 작업 이름이 아닌 추가 접미사를 포함 하지 않습니다.
 
 `<%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>`
 
@@ -47,7 +48,7 @@ public interface ICalculator
 </system.serviceModel>
 ```
 
-<xref:System.ServiceModel.Description.WebScriptEndpoint>는 서비스의 기본 데이터 형식을 XML 대신 JSON으로 설정합니다. 서비스를 호출 하려면이 항목의 뒷부분에 나오는 설치 및 빌드 단계를 완료 한 후 `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200`으로 이동 합니다. 이 테스트 기능은 HTTP GET 요청을 사용해 설정됩니다.
+<xref:System.ServiceModel.Description.WebScriptEndpoint>는 서비스의 기본 데이터 형식을 XML 대신 JSON으로 설정합니다. 서비스를 호출 하려면 `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` 이 항목의 뒷부분에 나오는 설치 및 빌드 단계를 완료 한 후로 이동 합니다. 이 테스트 기능은 HTTP GET 요청을 사용해 설정됩니다.
 
 클라이언트 웹 페이지 SimpleAjaxClientPage.aspx에는 사용자가 페이지에 있는 작업 단추 중 하나를 클릭할 때마다 서비스를 호출하는 ASP.NET 코드가 포함되어 있습니다. `ScriptManager` 컨트롤은 서비스에 대한 프록시를 JavaScript를 통해 액세스할 수 있게 만드는 데 사용됩니다.
 
@@ -82,6 +83,6 @@ function onSuccess(mathResult){
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\SimpleAjaxService`

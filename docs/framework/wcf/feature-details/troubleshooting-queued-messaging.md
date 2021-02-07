@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 대기 중인 메시지 문제 해결'
 title: 대기 중인 메시지 문제 해결
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: f695af3d2ad498e1f5975e1a396f1e7b05bf63bc
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e7cf2706e7c0853f14bad449b6ecaa8dd5983755
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595130"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733088"
 ---
 # <a name="troubleshooting-queued-messaging"></a>대기 중인 메시지 문제 해결
 
@@ -17,11 +18,11 @@ ms.locfileid: "84595130"
 
 **Q:** WCF Beta 1을 사용 하 고 MSMQ 핫픽스를 설치 했습니다. 핫픽스를 제거해야 합니까?
 
-**A:** 예로. 이 핫픽스는 더 이상 지원되지 않습니다. WCF는 이제 핫픽스 요구 사항 없이 MSMQ에서 작동 합니다.
+**A:** 예. 이 핫픽스는 더 이상 지원되지 않습니다. WCF는 이제 핫픽스 요구 사항 없이 MSMQ에서 작동 합니다.
 
 **Q:** MSMQ에는 및 라는 두 가지 <xref:System.ServiceModel.NetMsmqBinding> 바인딩이 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 있습니다. 어느 것을 언제 사용해야 합니까?
 
-**A:** <xref:System.ServiceModel.NetMsmqBinding>두 WCF 응용 프로그램 간의 대기 중인 통신에 대 한 전송으로 MSMQ를 사용 하려는 경우를 사용 합니다. <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>기존 MSMQ 응용 프로그램을 사용 하 여 새 WCF 응용 프로그램과 통신 하려는 경우를 사용 합니다.
+**A:** <xref:System.ServiceModel.NetMsmqBinding> 두 WCF 응용 프로그램 간의 대기 중인 통신에 대 한 전송으로 MSMQ를 사용 하려는 경우를 사용 합니다. <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>기존 MSMQ 응용 프로그램을 사용 하 여 새 WCF 응용 프로그램과 통신 하려는 경우를 사용 합니다.
 
 **Q:** 및 바인딩을 사용 하려면 MSMQ를 업그레이드 해야 하나요 <xref:System.ServiceModel.NetMsmqBinding> `MsmqIntegration` ?
 
@@ -41,7 +42,7 @@ ms.locfileid: "84595130"
 
 **Q:** 대기 중인 통신의 한쪽에서 MSMQ 3.0를 사용 하 고 다른 쪽에서는 MSMQ 4.0를 사용할 수 있나요?
 
-**A:** 예로.
+**A:** 예.
 
 **Q:** 기존 MSMQ 응용 프로그램을 새 WCF 클라이언트 또는 서버와 통합 하려고 합니다. MSMQ 인프라의 양쪽을 모두 업그레이드해야 합니까?
 
@@ -55,11 +56,11 @@ ms.locfileid: "84595130"
 
 **A:** 구성 및 코드에서 큐 URI (Uniform Resource Identifier)를 확인 합니다. URI에는 "$" 문자를 사용하지 마십시오. 예를 들어 OrdersQueue 이라는 개인 큐의 주소를 지정 하려면 URI를로 지정 `net.msmq://localhost/private/ordersQueue` 합니다.
 
-**Q:** `ServiceHost.Open()`대기 중인 응용 프로그램에서를 호출 하면 다음 예외가 throw 됩니다. `System.ArgumentException` : 기본 주소는 URI 쿼리 문자열을 포함할 수 없습니다. 이유
+**Q:** `ServiceHost.Open()` 대기 중인 응용 프로그램에서를 호출 하면 다음 예외가 throw 됩니다. `System.ArgumentException` : 기본 주소는 URI 쿼리 문자열을 포함할 수 없습니다. 그 이유는
 
 **A:** 구성 파일 및 코드에서 큐 URI를 확인 합니다. MSMQ 큐에서는 '?' 문자 사용을 지원하지만 URI에서는 이 문자를 문자열 쿼리의 시작으로 해석합니다. 이 문제를 방지하려면 '?' 문자가 포함되지 않은 큐 이름을 사용합니다.
 
-**Q:** 내 보내기가 성공 했지만 수신자에 대해 서비스 작업이 호출 되지 않습니다. 이유
+**Q:** 내 보내기가 성공 했지만 수신자에 대해 서비스 작업이 호출 되지 않습니다. 그 이유는
 
 **A:** 답변을 확인 하려면 다음 검사 목록을 사용 합니다.
 
@@ -87,7 +88,7 @@ ms.locfileid: "84595130"
 
 보장 ()이 없는 경우 <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>  =  `false` 기본값은 배달 못 한 편지 큐 기능입니다.
 
-**Q:** 내 서비스에서 Svchost.exe를 throw 합니다. "EndpointListener 요구 사항은 ListenerFactory에서 만족할 수 없습니다." 라는 메시지와 함께 열립니다. 이유
+**Q:** 내 서비스에서 Svchost.exe를 throw 합니다. "EndpointListener 요구 사항은 ListenerFactory에서 만족할 수 없습니다." 라는 메시지와 함께 열립니다. 그 이유는
 
 A. 서비스 계약을 확인하십시오. 모든 서비스 작업에 "IsOneWay ="를 추가 하는 것을 잊은 것일 수 있습니다 `true` . 큐에서는 단방향 서비스 작업만 지원합니다.
 
@@ -95,7 +96,7 @@ A. 서비스 계약을 확인하십시오. 모든 서비스 작업에 "IsOneWay 
 
 **A:** 서비스 호스트에 오류가 발생 했는지 확인 합니다. 추적을 검토하거나 `IErrorHandler`를 구현하면 확인할 수 있습니다. 포이즌 메시지가 검색되면 기본적으로 서비스 호스트 오류가 발생합니다.
 
-**Q:** 큐에 메시지가 있지만 웹에서 호스팅되는 대기 중인 서비스가 활성화 되지 않았습니다. 이유
+**Q:** 큐에 메시지가 있지만 웹에서 호스팅되는 대기 중인 서비스가 활성화 되지 않았습니다. 그 이유는
 
 **A:** 가장 일반적인 이유는 사용 권한입니다.
 
@@ -111,9 +112,9 @@ A. 서비스 계약을 확인하십시오. 모든 서비스 작업에 "IsOneWay 
 
 **Q:** 세션에 액세스 하는 가장 쉬운 방법은 무엇 인가요?
 
-**A:** `true`세션의 마지막 메시지에 해당 하는 작업에 자동 완성 =을 설정 하 고 `false` 나머지 모든 서비스 작업에서 자동 완성 =을 설정 합니다.
+**A:** `true` 세션의 마지막 메시지에 해당 하는 작업에 자동 완성 =을 설정 하 고 `false` 나머지 모든 서비스 작업에서 자동 완성 =을 설정 합니다.
 
-**Q:** `ProtocolException`큐에서 대기 중인 세션 메시지와 대기 중인 데이터 그램 메시지를 모두 포함 하는 큐를 읽을 때 서비스에서을 throw 하는 이유는 무엇 인가요?
+**Q:** `ProtocolException` 큐에서 대기 중인 세션 메시지와 대기 중인 데이터 그램 메시지를 모두 포함 하는 큐를 읽을 때 서비스에서을 throw 하는 이유는 무엇 인가요?
 
 **A:** 대기 중인 세션 메시지와 대기 중인 데이터 그램 메시지를 구성 하는 방법에는 근본적인 차이가 있습니다. 따라서 대기 중인 세션 메시지를 읽으려는 서비스에서 대기 중인 데이터그램 메시지를 받을 수 없고, 대기 중인 데이터그램 메시지를 읽으려는 서비스에서 대기 중인 세션 메시지를 받을 수 없습니다. 같은 큐에서 두 형식의 메시지를 모두 읽으려고 하면 다음 예외가 throw됩니다.
 
@@ -126,15 +127,15 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 ### <a name="msmq-integration-specific-troubleshooting"></a>MSMQ 통합: 특정 문제 해결
 
-**Q:** 메시지를 보낼 때 또는 서비스 호스트를 열 때 스키마가 잘못 되었음을 나타내는 오류가 발생 합니다. 이유
+**Q:** 메시지를 보낼 때 또는 서비스 호스트를 열 때 스키마가 잘못 되었음을 나타내는 오류가 발생 합니다. 그 이유는
 
 **A:** MSMQ 통합 바인딩을 사용 하는 경우 msmq.formatname 체계를 사용 해야 합니다. 예를 들어 msmq.formatname:DIRECT=OS:.\private$\OrdersQueue입니다. 하지만 사용자 지정 배달 못한 편지 큐를 지정하는 경우에는 net.msmq 체계를 사용해야 합니다.
 
-**Q:** 공용 또는 개인 형식 이름을 사용 하 고 Windows Vista에서 서비스 호스트를 여는 경우 오류가 발생 합니다. 이유
+**Q:** 공용 또는 개인 형식 이름을 사용 하 고 Windows Vista에서 서비스 호스트를 여는 경우 오류가 발생 합니다. 그 이유는
 
 **A:** Windows Vista의 WCF 통합 채널은 포이즌 메시지를 처리 하기 위해 주 응용 프로그램 큐에 대 한 하위 큐를 열 수 있는지 확인 합니다. 하위 큐 이름은 수신기에 전달 된 msmq.formatname URI에서 파생 됩니다. MSMQ의 하위 큐 이름은 직접 형식 이름일 수만 있습니다. 따라서 오류가 발생합니다. 큐 URI를 직접 형식 이름으로 변경하십시오.
 
-**Q:** MSMQ 응용 프로그램에서 메시지를 수신 하는 경우 메시지는 큐에 있으며 수신 하는 WCF 응용 프로그램에서 읽지 않습니다. 이유
+**Q:** MSMQ 응용 프로그램에서 메시지를 수신 하는 경우 메시지는 큐에 있으며 수신 하는 WCF 응용 프로그램에서 읽지 않습니다. 그 이유는
 
 **A:** 메시지에 본문이 있는지 여부를 확인 합니다. 메시지에 본문이 없으면 MSMQ 통합 채널에서 메시지를 무시합니다. 예외에 대한 알림을 받고 추적을 확인하려면 `IErrorHandler`를 구현하십시오.
 
@@ -152,25 +153,25 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 **Q:** Active Directory에서 기본 바인딩 (전송 보안이 설정 됨)을 사용 하 여 큐에 메시지를 보내면 "내부 인증서를 찾을 수 없음" 메시지가 표시 됩니다. 이 문제를 해결하려면 어떻게 해야 합니까?
 
-**A:** 즉, 보낸 사람의 Active Directory에 있는 인증서를 갱신 해야 합니다. 이렇게 하려면 **제어판**, **관리 도구**, **컴퓨터 관리**를 열고 **MSMQ**를 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 선택 합니다. **사용자 인증서** 탭을 선택 하 고 **갱신** 단추를 클릭 합니다.
+**A:** 즉, 보낸 사람의 Active Directory에 있는 인증서를 갱신 해야 합니다. 이렇게 하려면 **제어판**, **관리 도구**, **컴퓨터 관리** 를 열고 **MSMQ** 를 마우스 오른쪽 단추로 클릭 한 다음 **속성** 을 선택 합니다. **사용자 인증서** 탭을 선택 하 고 **갱신** 단추를 클릭 합니다.
 
 **Q:** 를 사용 하 여 메시지를 보낼 때 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 사용할 인증서를 지정 하면 "잘못 된 인증서" 메시지가 표시 됩니다. 이 문제를 해결하려면 어떻게 해야 합니까?
 
 **A:** 인증서 모드에서는 로컬 컴퓨터 인증서 저장소를 사용할 수 없습니다. 인증서 스냅인을 사용하여 시스템 인증서 저장소에서 현재 사용자 저장소로 인증서를 복사해야 합니다. 인증서 스냅인을 가져오려면 다음을 수행하십시오.
 
-1. **시작**을 클릭 하 고 **실행**을 선택 하 `mmc` 고를 입력 한 다음 **확인**을 클릭 합니다.
+1. **시작** 을 클릭 하 고 **실행** 을 선택 하 `mmc` 고를 입력 한 다음 **확인** 을 클릭 합니다.
 
-2. **Microsoft Management Console**에서 **파일** 메뉴를 열고 **스냅인 추가/제거**를 선택 합니다.
+2. **Microsoft Management Console** 에서 **파일** 메뉴를 열고 **스냅인 추가/제거** 를 선택 합니다.
 
 3. **스냅인 추가/제거** 대화 상자에서 **추가** 단추를 클릭 합니다.
 
-4. **독립 실행형 스냅인 추가** 대화 상자에서 인증서를 선택 하 고 **추가**를 클릭 합니다.
+4. **독립 실행형 스냅인 추가** 대화 상자에서 인증서를 선택 하 고 **추가** 를 클릭 합니다.
 
-5. **인증서** 스냅인 대화 상자에서 **내 사용자 계정을** 선택 하 고 **마침**을 클릭 합니다.
+5. **인증서** 스냅인 대화 상자에서 **내 사용자 계정을** 선택 하 고 **마침** 을 클릭 합니다.
 
-6. 다음으로, 이전 단계를 사용 하 여 두 번째 인증서 스냅인을 추가 하지만 이번에는 **컴퓨터 계정** 을 선택 하 고 **다음**을 클릭 합니다.
+6. 다음으로, 이전 단계를 사용 하 여 두 번째 인증서 스냅인을 추가 하지만 이번에는 **컴퓨터 계정** 을 선택 하 고 **다음** 을 클릭 합니다.
 
-7. **로컬 컴퓨터**를 선택하고 **마침**을 클릭합니다. 이제 시스템 인증서 저장소에서 현재 사용자 저장소로 인증서를 끌어서 놓을 수 있습니다.
+7. **로컬 컴퓨터** 를 선택하고 **마침** 을 클릭합니다. 이제 시스템 인증서 저장소에서 현재 사용자 저장소로 인증서를 끌어서 놓을 수 있습니다.
 
 **Q:** 서비스 그룹 모드의 다른 컴퓨터에 있는 큐에서 서비스를 읽으면 "액세스 거부" 예외가 발생 합니다.
 
@@ -186,7 +187,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 **A:** 다음과 같은 세 가지 원인이 있을 수 있습니다.
 
-- 도메인 모드에 있는 경우 트랜잭션된 원격 수신을 수행하려면 MSDTC(Microsoft Distributed Transaction Coordinator) 네트워크 액세스가 필요합니다. **구성 요소 추가/제거**를 사용 하 여이 기능을 사용 하도록 설정할 수 있습니다.
+- 도메인 모드에 있는 경우 트랜잭션된 원격 수신을 수행하려면 MSDTC(Microsoft Distributed Transaction Coordinator) 네트워크 액세스가 필요합니다. **구성 요소 추가/제거** 를 사용 하 여이 기능을 사용 하도록 설정할 수 있습니다.
 
   ![네트워크 DTC 액세스 사용을 보여 주는 스크린샷](./media/troubleshooting-queued-messaging/enable-distributed-transaction-coordinator-access.jpg)
 
@@ -204,7 +205,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 **Q:** MSMQ 정품 인증 서비스를 사용 하 여 원격 컴퓨터의 큐에 있는 메시지를 기반으로 응용 프로그램을 활성화할 수 있나요?
 
-**A:** 예로. 이렇게 하려면 네트워크 서비스로 실행되도록 MSMQ 정품 인증 서비스를 구성하고 원격 시스템의 큐에 대한 네트워크 서비스 액세스 권한을 추가해야 합니다.
+**A:** 예. 이렇게 하려면 네트워크 서비스로 실행되도록 MSMQ 정품 인증 서비스를 구성하고 원격 시스템의 큐에 대한 네트워크 서비스 액세스 권한을 추가해야 합니다.
 
 ## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>ReceiveContext를 사용하는 사용자 지정 MSMQ 바인딩 사용
 

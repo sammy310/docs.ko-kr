@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 부분 신뢰 기능 호환성'
 title: 부분 신뢰 기능 호환성
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: baf7758bc83419a68f900aa51233006ecb61d8e0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 470cedde3eb38508feb1c2950f7f504390914834
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247995"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733530"
 ---
 # <a name="partial-trust-feature-compatibility"></a>부분 신뢰 기능 호환성
 
@@ -107,7 +108,7 @@ WCF (Windows Communication Foundation)는 부분적으로 신뢰할 수 있는 �
   
  일반적인 동작에 대 한 예제는 [방법: 엔터프라이즈에서 끝점 잠그기](../extending/how-to-lock-down-endpoints-in-the-enterprise.md)를 참조 하세요.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
 
  한 가지 예외를 제외 하 고 부분적으로 신뢰할 수 있는 코드는 로컬 파일의 WCF 구성 섹션만 로드할 수 있습니다 `app.config` . machine.config 또는 루트 web.config 파일에서 WCF 섹션을 참조 하는 WCF 구성 섹션을 로드 하려면 ConfigurationPermission (제한 없음)이 필요 합니다. 이 권한이 없으면 로컬 구성 파일 외부에 있는 WCF 구성 섹션 (동작, 바인딩)을 참조할 때 구성이 로드 될 때 예외가 발생 합니다.  
   

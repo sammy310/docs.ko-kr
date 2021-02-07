@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 페더레이션된 클라이언트 만들기'
 title: '방법: 페더레이션 클라이언트 만들기'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: a03d388f2773e312a149b5caf1747627d1c17864
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0078a07ff23dd364dcb8513a55e4ea6a54df40db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286628"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734740"
 ---
 # <a name="how-to-create-a-federated-client"></a>방법: 페더레이션 클라이언트 만들기
 
@@ -85,7 +86,7 @@ WCF (Windows Communication Foundation)에서 *페더레이션된 서비스* 에 
   
 2. 토큰 캐싱이 필요 하지 않은 경우 `cacheIssuedTokens` <`issuedToken`> 요소의 특성을로 설정 `false` 합니다.  
   
-3. 캐시 된 토큰에 시간 제한이 필요한 경우 `maxIssuedTokenCachingTime` <`issuedToken`> 요소의 특성을 적절 한 값으로 설정 합니다. 예를 들면 다음과 같습니다.  
+3. 캐시 된 토큰에 시간 제한이 필요한 경우 `maxIssuedTokenCachingTime` <`issuedToken`> 요소의 특성을 적절 한 값으로 설정 합니다. 다음은 그 예입니다.   
     `<issuedToken maxIssuedTokenCachingTime='00:10:00' />`  
   
 4. 기본값 이외의 값을 선호 하는 경우 `issuedTokenRenewalThresholdPercentage` <> 요소의 특성을 적절 한 값으로 설정 합니다 `issuedToken` . 예를 들면 다음과 같습니다.  

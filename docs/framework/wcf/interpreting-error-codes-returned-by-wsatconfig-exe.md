@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: wsatConfig.exe에서 반환 된 오류 코드 해석'
 title: wsatConfig.exe에서 반환된 오류 코드 해석
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: c5f423f5054a3a80bc0c730444ca9e90c203e288
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3cde6e3f38ff09ca86159e8f499ba725ec7734f2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262751"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732854"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>wsatConfig.exe에서 반환된 오류 코드 해석
 

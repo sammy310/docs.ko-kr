@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: BindingElement 만들기'
 title: BindingElement 만들기
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 285bed029cf8487b37757de6a56075abe448f3ce
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: de5ef045f2e83985cabd36c53652d46536889fa2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257869"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735428"
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement 만들기
 

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 메시징 작업을 사용 하 여 워크플로 서비스 만들기'
 title: '방법: 메시징 활동을 사용하여 워크플로 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 21d08d9c3c78cc8774d038018703ffb0c7ceb1fe
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c8f01574c2880e3a75a4db8edea949648d49426c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286320"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734544"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>방법: 메시징 활동을 사용하여 워크플로 서비스 만들기
 
@@ -53,13 +54,13 @@ ms.locfileid: "96286320"
   
      **변수 단추를** 다시 클릭 하 여 변수 편집기를 닫습니다.  
   
-6. **정의 ...** 를 클릭 합니다. 활동의 **콘텐츠** 텍스트 상자에 링크 <xref:System.ServiceModel.Activities.Receive> 하 여 **콘텐츠 정의** 대화 상자를 표시 합니다. 다음 그림과 같이 **매개 변수** 라디오 단추를 선택 하 고 **새 매개 변수 추가** 링크를 클릭 한 다음 이름 입력란에를 입력 하 `inMsg` 고 **형식** 드롭다운 목록 상자에서 **문자열** 을 선택 하 고 **name** `msg` **할당 대상** 텍스트 상자에을 입력 합니다.  
+6. **정의 ...** 를 클릭 합니다. 활동의 **콘텐츠** 텍스트 상자에 링크 <xref:System.ServiceModel.Activities.Receive> 하 여 **콘텐츠 정의** 대화 상자를 표시 합니다. 다음 그림과 같이 **매개 변수** 라디오 단추를 선택 하 고 **새 매개 변수 추가** 링크를 클릭 한 다음 이름 입력란에를 입력 하 `inMsg` 고 **형식** 드롭다운 목록 상자에서 **문자열** 을 선택 하 고  `msg` **할당 대상** 텍스트 상자에을 입력 합니다.  
   
      ![매개 변수 콘텐츠를 추가 하는 것을 보여 주는 스크린샷](./media/how-to-create-a-workflow-service-with-messaging-activities/adding-parameters-content.jpg)  
   
      그러면 받기 작업이 문자열 매개 변수를 받고 데이터가 `msg` 변수에 바인딩되도록 지정됩니다. **확인** 을 클릭 하 여 **콘텐츠 정의** 대화 상자를 닫습니다.  
   
-7. 활동의 **콘텐츠** 상자에서 **정의 ...** 링크를 클릭 <xref:System.ServiceModel.Activities.SendReply> 하 여 **콘텐츠 정의** 대화 상자를 표시 합니다. 다음 그림과 같이 **매개 변수** 라디오 단추를 선택 하 고, **새 매개 변수 추가** 링크를 클릭 하 고, 이름 텍스트 상자에를 입력 하 고, `outMsg` **형식** 드롭다운 목록 상자에서 문자열을 선택 하 고, **name** **String** `msg` **값** 텍스트 상자에서 문자열을 선택 합니다.  
+7. 활동의 **콘텐츠** 상자에서 **정의 ...** 링크를 클릭 <xref:System.ServiceModel.Activities.SendReply> 하 여 **콘텐츠 정의** 대화 상자를 표시 합니다. 다음 그림과 같이 **매개 변수** 라디오 단추를 선택 하 고, **새 매개 변수 추가** 링크를 클릭 하 고, 이름 텍스트 상자에를 입력 하 고, `outMsg` **형식** 드롭다운 목록 상자에서 문자열을 선택 하 고,   `msg` **값** 텍스트 상자에서 문자열을 선택 합니다.  
   
      ![OutMsg 매개 변수를 추가 하는 방법을 보여 주는 스크린샷](./media/how-to-create-a-workflow-service-with-messaging-activities/outmsg-parameters-content.jpg)  
   

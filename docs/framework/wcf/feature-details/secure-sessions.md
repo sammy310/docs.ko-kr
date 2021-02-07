@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 보안 세션'
 title: 보안 세션
 ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
-ms.openlocfilehash: fd8406af0c37981b2ddc7ab8ddb0c82c63cbc0b1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8a4a2d23d5a27f5066bd5f004582829e499f714c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288554"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733075"
 ---
 # <a name="secure-sessions"></a>보안 세션
 

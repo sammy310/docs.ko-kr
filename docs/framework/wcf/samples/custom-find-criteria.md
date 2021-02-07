@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 사용자 지정 찾기 조건'
 title: 사용자 지정 찾기 조건
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: 9271ae1ec4bbd555fe93df24c7d38f0f345a03ab
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 71082f303e3464e27e1bad3995d20b5f6cf7d647
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241813"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732568"
 ---
 # <a name="custom-find-criteria"></a>사용자 지정 찾기 조건
 

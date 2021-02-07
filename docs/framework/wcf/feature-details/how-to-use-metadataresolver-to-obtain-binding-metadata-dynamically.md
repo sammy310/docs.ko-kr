@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: MetadataResolver를 사용 하 여 동적으로 바인딩 메타 데이터 가져오기'
 title: '방법: MetadataResolver를 사용하여 동적으로 바인딩 메타데이터 가져오기'
 ms.date: 03/30/2017
 ms.assetid: 56ffcb99-fff0-4479-aca0-e3909009f605
-ms.openlocfilehash: fc64e11271c6901a8d4598c0efa563a06a92decf
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 00f33b31504ede6868113040ba83b6f9462ee808
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280717"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734284"
 ---
 # <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>방법: MetadataResolver를 사용하여 동적으로 바인딩 메타데이터 가져오기
 

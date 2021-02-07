@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 메타 데이터 아키텍처 개요'
 title: 메타데이터 아키텍처 개요
 ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: db601a26eb7a7703403432590e359f51231e3ca1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 63e513c340ea37914da5942ac2479af4be6b8519
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248294"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733933"
 ---
 # <a name="metadata-architecture-overview"></a>메타데이터 아키텍처 개요
 

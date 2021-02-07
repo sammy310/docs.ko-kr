@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: WSFederationHttpBinding 만들기'
 title: '방법: WSFederationHttpBinding 만들기'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-ms.openlocfilehash: ccc28c46e8be0b835cf08d372ef85b8a66e989ef
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f0b40cf074d5c3f2575c5a94baa2fdd4271f280f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595442"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734401"
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>방법: WSFederationHttpBinding 만들기
 
@@ -24,7 +25,7 @@ WCF (Windows Communication Foundation)에서 <xref:System.ServiceModel.WSFederat
 1. 보안 모드를 선택합니다. <xref:System.ServiceModel.WSFederationHttpBinding>은 여러 홉을 통과하는 경우에도 메시지 수준에서 엔드투엔드 보안을 제공하는 `Message`와 클라이언트 및 서비스가 HTTPS를 통해 직접 연결할 수 있는 경우 성능을 향상시키는 `TransportWithMessageCredential`을 지원합니다.
 
     > [!NOTE]
-    > <xref:System.ServiceModel.WSFederationHttpBinding>은 보안 모드로 `None`도 지원합니다. 이 모드는 보안되지 않으며 디버깅 목적을 위해서만 제공됩니다. 로 설정 된 보안 모드를 사용 하 여 서비스 끝점을 배포 하는 경우에는 <xref:System.ServiceModel.WSFederationHttpBinding> `None` 의 보안 모드를 사용 하 여 클라이언트 바인딩 ( [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md))이 생성 됩니다 <xref:System.ServiceModel.WSHttpBinding> `None` .
+    > <xref:System.ServiceModel.WSFederationHttpBinding>은 보안 모드로 `None`도 지원합니다. 이 모드는 보안되지 않으며 디버깅 목적을 위해서만 제공됩니다. 로 설정 된 보안 모드를 사용 하 여 서비스 끝점을 배포 하는 경우 생성 되는 <xref:System.ServiceModel.WSFederationHttpBinding> `None` 클라이언트 바인딩 ( [Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)은 <xref:System.ServiceModel.WSHttpBinding> 의 보안 모드를 사용 하는입니다 `None` .
 
      다른 시스템 제공 바인딩과 달리 `WSFederationHttpBinding`을 사용할 때는 클라이언트 자격 증명 형식을 선택할 필요가 없습니다. 이는 클라이언트 자격 증명 형식이 항상 발급된 토큰이기 때문입니다. WCF는 지정 된 발급자 로부터 토큰을 획득 하 고 해당 토큰을 서비스에 제공 하 여 클라이언트를 인증 합니다.
 

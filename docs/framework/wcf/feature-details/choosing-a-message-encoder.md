@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 메시지 인코더 선택'
 title: 메시지 인코더 선택
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 8b53c17cccc74153e652494ec9753302cda8679b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 16f58dd0510584fa94363f63e1a2e56a9de83b52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295160"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734999"
 ---
 # <a name="choose-a-message-encoder"></a>메시지 인코더 선택
 
@@ -33,7 +34,7 @@ ms.locfileid: "96295160"
 
  다음 표에서는 메시지 인코더를 선택하는 데 사용하는 일반 요소에 대해 설명합니다. 애플리케이션의 중요한 요소에 우선 순위를 지정한 다음 이러한 요소에 가장 적합한 메시지 인코더를 선택합니다. 이 표에 나열되지 않은 모든 추가 요소 및 애플리케이션에 필요할 수 있는 모든 사용자 지정 메시지 인코더를 고려해야 합니다.  
   
-|요인|Description|이 요소를 지원하는 인코더|  
+|요인|설명|이 요소를 지원하는 인코더|  
 |------------|-----------------|---------------------------------------|  
 |지원되는 문자 집합|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 및 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 은 UTF8 및 UTF16 Unicode (*빅 endian* 및 *작은 endian*) 인코딩만 지원 합니다. UTF7 또는 ASCII와 같은 다른 인코딩이 필요한 경우 사용자 지정 인코더를 사용해야 합니다. 샘플 사용자 지정 인코더는 [사용자 지정 메시지 인코더](../samples/custom-message-encoder-custom-text-encoder.md)를 참조 하세요.|텍스트|  
 |검사|검사는 전송을 하는 동안 메시지를 검사하는 기능입니다. SOAP의 사용 여부에 관계없이 특수화된 도구를 사용하지 않고도 텍스트 인코딩을 통해 많은 애플리케이션에서 메시지를 검사 및 분석할 수 있습니다. 메시지 또는 전송 수준에서 전송 보안을 사용 하는 것은 메시지를 검사할 수 있는 기능에 영향을 줍니다. 기밀성은 메시지를 검사하지 않도록 보호해주며 무결성은 메시지를 수정하지 않도록 보호해줍니다.|텍스트|  

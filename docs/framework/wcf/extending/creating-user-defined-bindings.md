@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: User-Defined 바인딩 만들기'
 title: 사용자 정의 바인딩 만들기
 ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: ba40bcfd8a9e9fea1a422ed124b9a966819bf184
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9eabb1840f343439d8a8cc79fb0a9b1582b9126d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257856"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735402"
 ---
 # <a name="creating-user-defined-bindings"></a>사용자 정의 바인딩 만들기
 

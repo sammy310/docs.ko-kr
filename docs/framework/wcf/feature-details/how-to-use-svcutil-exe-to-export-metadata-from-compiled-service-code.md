@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: Svcutil.exe를 사용 하 여 컴파일된 서비스 코드에서 메타 데이터 내보내기'
 title: '방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드에서 메타데이터 내보내기'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: f60d0c9ad3f6fc4e9596d466b5eabdaab0f4822f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 509d987ff27f9a05ca59d6065d76f27006f3cb25
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280613"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734206"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드에서 메타데이터 내보내기
 

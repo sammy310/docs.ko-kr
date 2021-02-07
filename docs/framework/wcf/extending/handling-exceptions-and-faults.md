@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 예외 및 오류 처리'
 title: 예외 및 오류 처리
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: 41ec9cc5138d6b3006d8384203a0bd7cb5aae8fa
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9851d63705ba8b28819b11e3893bcd6b019d565d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96265624"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735077"
 ---
 # <a name="handling-exceptions-and-faults"></a>예외 및 오류 처리
 

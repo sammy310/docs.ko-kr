@@ -1,20 +1,21 @@
 ---
+description: '자세한 정보: 사용자 지정 바인딩'
 title: 사용자 지정 바인딩
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 062aba26227fedeea3e5f462ebf5d55cf0cba56c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ced0f9ada7238b43216a246d75dd391aa6eb3f2b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539999"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735350"
 ---
 # <a name="custom-bindings"></a>사용자 지정 바인딩
 
-시스템에서 제공하는 바인딩 중 하나가 사용자의 서비스 요구 사항을 충족하지 않을 때 <xref:System.ServiceModel.Channels.CustomBinding> 클래스를 사용할 수 있습니다. 모든 바인딩은 정렬된 바인딩 요소 집합으로부터 생성됩니다. 사용자 지정 바인딩은 시스템 제공 바인딩 요소로부터 만들거나 사용자 정의 사용자 지정 바인딩 요소를 포함할 수 있습니다. 예를 들어 사용자 지정 바인딩 요소를 사용하여 서비스 엔드포인트에서 새 전송 또는 새 인코더를 사용하도록 설정할 수 있습니다. 작업 예제는 [사용자 지정 바인딩 샘플](/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))을 참조 하세요. 자세한 내용은 [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md)를 참조하세요.
+시스템에서 제공하는 바인딩 중 하나가 사용자의 서비스 요구 사항을 충족하지 않을 때 <xref:System.ServiceModel.Channels.CustomBinding> 클래스를 사용할 수 있습니다. 모든 바인딩은 정렬된 바인딩 요소 집합으로부터 생성됩니다. 사용자 지정 바인딩은 시스템 제공 바인딩 요소로부터 만들거나 사용자 정의 사용자 지정 바인딩 요소를 포함할 수 있습니다. 예를 들어 사용자 지정 바인딩 요소를 사용하여 서비스 엔드포인트에서 새 전송 또는 새 인코더를 사용하도록 설정할 수 있습니다. 작업 예제는 [사용자 지정 바인딩 샘플](/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))을 참조 하세요. 자세한 내용은 [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md)을(를) 참조하세요.
 
 ## <a name="construction-of-a-custom-binding"></a>사용자 지정 바인딩 생성
 
@@ -66,15 +67,15 @@ ms.locfileid: "90539999"
 
 |계층|옵션|필수|
 |-----------|-------------|--------------|
-|트랜잭션|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|아니요|
-|안정성|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|아니요|
-|보안|<xref:System.ServiceModel.Channels.SecurityBindingElement>|아니요|
-|Encoding|텍스트, 이진, MTOM(Message Transmission Optimization Mechanism), 사용자 지정|예|
-|전송|TCP, HTTP, HTTPS, 명명된 파이프(IPC), P2P(Peer-to-Peer), 메시지 큐(MSMQ), 사용자 지정|예|
+|트랜잭션|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|No|
+|안정성|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|No|
+|보안|<xref:System.ServiceModel.Channels.SecurityBindingElement>|No|
+|Encoding|텍스트, 이진, MTOM(Message Transmission Optimization Mechanism), 사용자 지정|Yes|
+|전송|TCP, HTTP, HTTPS, 명명된 파이프(IPC), P2P(Peer-to-Peer), 메시지 큐(MSMQ), 사용자 지정|Yes|
 
 또한 사용자 고유의 바인딩 요소를 정의 하 고 앞에서 정의한 계층 사이에 삽입할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [엔드포인트 만들기 개요](../endpoint-creation-overview.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../using-bindings-to-configure-services-and-clients.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 사용자 지정 바인딩 보안'
 title: Custom Binding Security
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: ce4cd76a053b9b3611751fe081d0ca710240049d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f0ed4b40fe4e0869f34a4f6016123dc9f0a57f45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555707"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99732633"
 ---
 # <a name="custom-binding-security"></a>Custom Binding Security
 

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 확장 된 보호 인증 샘플 추가 정보'
 title: 인증에 대한 확장된 보호 ReadMe 샘플
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-ms.openlocfilehash: 9b0a3535282a1fcc1103651f5601459e80d3d8d4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: edab04c7762bf8964f634107debd3de35a7702ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601103"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733309"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>인증에 대한 확장된 보호 ReadMe 샘플
 

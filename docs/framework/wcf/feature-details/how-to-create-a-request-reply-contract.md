@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: Request-Reply 계약 만들기'
 title: '방법: 요청-회신 계약 만들기'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 506ce527348286bb53223c64245c74e4cb21879a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f5e63538a405aa451ffd3be114485604c00fa407
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286554"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734700"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>방법: 요청-회신 계약 만들기
 
@@ -47,7 +48,7 @@ public interface ICalculator
   
 - 작업 계약을 지정 하는 방법에 대 한 자세한 내용은 <xref:System.ServiceModel.OperationContractAttribute> 클래스 및 속성을 참조 하세요 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> .  
   
-- <xref:System.ServiceModel.ServiceContractAttribute> 및 <xref:System.ServiceModel.OperationContractAttribute> 특성을 적용하면 서비스를 배포한 후에 WSDL(웹 서비스 기술 언어) 문서에서 서비스 계약 정의가 자동으로 생성됩니다. 서비스의 HTTP 기본 주소에 `?wsdl`을 추가하면 문서가 다운로드됩니다. 예, `http://microsoft/CalculatorService?wsdl`  
+- <xref:System.ServiceModel.ServiceContractAttribute> 및 <xref:System.ServiceModel.OperationContractAttribute> 특성을 적용하면 서비스를 배포한 후에 WSDL(웹 서비스 기술 언어) 문서에서 서비스 계약 정의가 자동으로 생성됩니다. 서비스의 HTTP 기본 주소에 `?wsdl`을 추가하면 문서가 다운로드됩니다. 예를 들면 `http://microsoft/CalculatorService?wsdl`과 같습니다.  
   
 ## <a name="see-also"></a>참고 항목
 

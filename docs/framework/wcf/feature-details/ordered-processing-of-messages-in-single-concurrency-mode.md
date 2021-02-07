@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 단일 동시성 모드로 메시지의 순서가 지정 된 처리'
 title: 단일 동시성 모델에서 메시지의 순서 지정 처리
 ms.date: 03/30/2017
 ms.assetid: a90f5662-a796-46cd-ae33-30a4072838af
-ms.openlocfilehash: d70087a6dc1501f9a7f7ed057eae3dad181761ae
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2dd876f1831dda8b388108f238810be333e693be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248021"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733686"
 ---
 # <a name="ordered-processing-of-messages-in-single-concurrency-mode"></a>단일 동시성 모델에서 메시지의 순서 지정 처리
 

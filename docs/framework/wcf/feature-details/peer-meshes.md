@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 피어 메시'
 title: 피어 메시
 ms.date: 03/30/2017
 ms.assetid: d93e312e-ac04-40f8-baea-5da1cacb546e
-ms.openlocfilehash: 62feb237dd4a8a471175e32363887376f7d86212
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bedb8931c4ed4c4f62cb3556699d7f9f07f6f022
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96272100"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733387"
 ---
 # <a name="peer-meshes"></a>피어 메시
 

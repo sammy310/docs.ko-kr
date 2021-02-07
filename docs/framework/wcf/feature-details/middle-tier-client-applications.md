@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: 클라이언트 응용 프로그램 Middle-Tier'
 title: 중간 계층 클라이언트 애플리케이션
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: 5019215567f4c9127f2e53fd4cdf0d4a67b84d17
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 90de03bb72e14f023db86e6f8226ae84f7461bee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248255"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733816"
 ---
 # <a name="middle-tier-client-applications"></a>중간 계층 클라이언트 애플리케이션
 

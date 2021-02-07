@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 서비스와 함께 ASP.NET 권한 부여 관리자 역할 공급자 사용'
 title: '방법: 서비스에서 ASP.NET 권한 부여 관리자 역할 공급자 사용'
 ms.date: 03/30/2017
 ms.assetid: f21deb81-91ef-49ef-94d6-494785143271
-ms.openlocfilehash: bbdafdd96a32b41d7c6892944ed872e3f8702f0e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 24d6bbbf2181189104fb0df0068130c402fd2f68
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280600"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734128"
 ---
 # <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a>방법: 서비스에서 ASP.NET 권한 부여 관리자 역할 공급자 사용
 

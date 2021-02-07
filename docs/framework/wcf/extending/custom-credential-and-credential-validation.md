@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 사용자 지정 자격 증명 및 자격 증명 유효성 검사'
 title: 사용자 지정 자격 증명 및 자격 증명 유효성 검사
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - credential validation [WCF]
 - credentials [WCF], validation
 ms.assetid: da831bec-e281-4d44-b343-437b5eef688e
-ms.openlocfilehash: 5f2909bb088a5f3d3203fe3c9e24b2df3450aa3f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f1ceb8cf46cca01ac31faeb9485cbeb6c8663d31
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257830"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735311"
 ---
 # <a name="custom-credential-and-credential-validation"></a>사용자 지정 자격 증명 및 자격 증명 유효성 검사
 

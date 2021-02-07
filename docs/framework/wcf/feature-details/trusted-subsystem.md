@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 신뢰할 수 있는 하위 시스템'
 title: 신뢰할 수 있는 하위 시스템
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 93770c8f4d92a12dcfe29290c84708949d9a1d4a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 41c2943c7794206dba06ef8b5bbee762931ce0c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293392"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733049"
 ---
 # <a name="trusted-subsystem"></a>신뢰할 수 있는 하위 시스템
 
@@ -30,7 +31,7 @@ ms.locfileid: "96293392"
   
 5. 신뢰할 수 있는 하위 시스템은 해당 응답을 처리하고 클라이언트에 자체 응답을 보냅니다.  
   
-|특성|Description|  
+|특성|설명|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
 |상호 운용성|Windows Communication Foundation (WCF)만 해당 합니다.|  
@@ -50,7 +51,7 @@ ms.locfileid: "96293392"
  [!code-csharp[TrustedSubSystemsResource#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsresource/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsResource#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsresource/vb/source.vb#1)]  
   
-### <a name="configuration"></a>구성  
+### <a name="configuration"></a>Configuration  
 
  다음 구성에서는 구성을 사용하여 동일한 엔드포인트를 설정합니다.  
   
@@ -104,7 +105,7 @@ ms.locfileid: "96293392"
  [!code-csharp[TrustedSubSystems#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#2)]
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
-### <a name="configuration"></a>구성  
+### <a name="configuration"></a>Configuration  
 
  다음 구성에서는 구성을 사용하여 동일한 엔드포인트를 설정합니다. 두 개의 바인딩 중 하나는 신뢰할 수 있는 하위 시스템에서 호스팅되는 서비스를 보안하고, 다른 하나는 신뢰할 수 있는 하위 시스템과 백 엔드 서비스 간의 통신을 담당합니다.  
   
@@ -177,7 +178,7 @@ ms.locfileid: "96293392"
  [!code-csharp[TrustedSubSystemsClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsclient/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsclient/vb/source.vb#1)]  
   
-### <a name="configuration"></a>구성  
+### <a name="configuration"></a>Configuration  
 
  다음 코드에서는 HTTP 프로토콜에서 메시지 보안을 사용하고, 인증용 사용자 이름과 암호를 사용하도록 클라이언트를 구성합니다. 사용자 이름 및 암호는 코드(구성할 수 없음)를 사용해서만 지정할 수 있습니다.  
   

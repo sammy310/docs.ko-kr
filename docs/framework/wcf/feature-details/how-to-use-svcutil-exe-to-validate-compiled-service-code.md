@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: Svcutil.exe를 사용 하 여 컴파일된 서비스 코드 유효성 검사'
 title: '방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드 유효성 검사'
 ms.date: 03/30/2017
 ms.assetid: d0d820fb-41c2-45b8-8f22-0fa5aeebbbaa
-ms.openlocfilehash: 21cd0c13cea764efb60b7b94b699e9a483269da8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b68cdeb61ac1f42cacdcf7d1468623acb8542abe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280665"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734167"
 ---
 # <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드 유효성 검사
 

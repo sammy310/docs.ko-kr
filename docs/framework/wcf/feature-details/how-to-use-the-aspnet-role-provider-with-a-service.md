@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 서비스와 함께 ASP.NET 역할 공급자 사용'
 title: '방법: 서비스에서 ASP.NET 역할 공급자 사용'
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: 45eeda046e877b4379d7d0e5edd90fac305f5e44
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 24bf9ad72d3634baf1d7120e4e60ccde5a4078a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595299"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734115"
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>방법: 서비스에서 ASP.NET 역할 공급자 사용
 
@@ -19,7 +20,7 @@ ASP.NET 역할 공급자 (ASP.NET 멤버 자격 공급자와 함께 사용)는 A
   
 ## <a name="configure-the-role-provider"></a>역할 공급자 구성  
   
-1. Web.config 파일의 < `system.web` > 요소 아래에서 < > 요소를 추가 하 `roleManager` 고 `enabled` 특성을로 설정 `true` 합니다.  
+1. Web.config 파일의 <> 요소 아래에서 `system.web` <> 요소를 추가 하 `roleManager` 고 `enabled` 특성을로 설정 `true` 합니다.  
   
 2. `defaultProvider` 특성을 `SqlRoleProvider`으로 설정합니다.  
   

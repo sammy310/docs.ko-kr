@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 구성을 사용 하 여 ASP.NET AJAX 끝점 추가'
 title: '방법: 구성을 사용하여 ASP.NET AJAX 엔드포인트 추가'
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: b229173381eed3e821a9ad9e1a6639912521731c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 629df635e9b19148db317a2d953bed9034556cd2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268432"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734349"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>방법: 구성을 사용하여 ASP.NET AJAX 엔드포인트 추가
 

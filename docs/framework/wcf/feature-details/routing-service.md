@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 라우팅 서비스'
 title: 라우팅 서비스
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: 833c824e17d70a982a2f7bb13fe388b9b2b0dec1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 29fec780e6bc9266a8fe17d779ff0998e13e5c68
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590451"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99733257"
 ---
 # <a name="routing-service"></a>라우팅 서비스
 
@@ -21,7 +22,7 @@ ms.locfileid: "84590451"
 
   - 서비스 버전 관리
 
-  - 우선 순위 라우팅
+  - 우선 라우팅
 
   - 동적 구성
 
@@ -44,7 +45,7 @@ ms.locfileid: "84590451"
 
 내용 기반 라우팅은 메시지에 들어 있는 하나 이상의 값을 기반으로 메시지를 라우트할 수 있는 기능입니다. 라우팅 서비스는 각 메시지를 검사하고 메시지 내용과 사용자 제공 라우팅 논리를 기반으로 메시지를 대상 엔드포인트에 라우트합니다. 내용 기반 라우팅은 서비스 집계, 서비스 버전 관리 및 우선 순위 라우팅에 대한 기초를 제공합니다.
 
-내용 기반 라우팅을 구현하기 위해 라우팅 서비스는 라우트할 메시지 내의 특정 값과 일치시키는 데 사용되는 <xref:System.ServiceModel.Dispatcher.MessageFilter> 구현을 사용합니다. **Messagefilter** 가 메시지와 일치 하는 경우 메시지는 **messagefilter**와 연결 된 대상 끝점으로 라우팅됩니다.  메시지 필터는 필터 테이블(<xref:System.ServiceModel.Routing.Configuration.FilterTableCollection>)로 그룹화되어 복잡한 라우팅 논리를 생성합니다. 예를 들어 필터 테이블에 다섯 개의 대상 엔드포인트 중 하나로만 메시지를 라우트할 수 있도록 하는 상호 배타적인 다섯 개의 메시지 필터가 있을 수 있습니다.
+내용 기반 라우팅을 구현하기 위해 라우팅 서비스는 라우트할 메시지 내의 특정 값과 일치시키는 데 사용되는 <xref:System.ServiceModel.Dispatcher.MessageFilter> 구현을 사용합니다. **Messagefilter** 가 메시지와 일치 하는 경우 메시지는 **messagefilter** 와 연결 된 대상 끝점으로 라우팅됩니다.  메시지 필터는 필터 테이블(<xref:System.ServiceModel.Routing.Configuration.FilterTableCollection>)로 그룹화되어 복잡한 라우팅 논리를 생성합니다. 예를 들어 필터 테이블에 다섯 개의 대상 엔드포인트 중 하나로만 메시지를 라우트할 수 있도록 하는 상호 배타적인 다섯 개의 메시지 필터가 있을 수 있습니다.
 
 라우팅 서비스를 사용하면 내용 기반 라우팅을 수행하는 데 사용되는 논리를 구성할 수 있을 뿐 아니라 런타임에 라우팅 논리를 동적으로 업데이트할 수 있습니다.
 
@@ -54,7 +55,7 @@ ms.locfileid: "84590451"
 
 - 서비스 버전 관리
 
-- 우선 순위 라우팅
+- 우선 라우팅
 
 - 동적 구성
 
@@ -86,7 +87,7 @@ ms.locfileid: "84590451"
 
 ## <a name="soap-processing"></a>SOAP 처리
 
-라우팅에 공통적으로 요구되는 기능은 SOAP 요구 사항이 서로 다른 엔드포인트 간에 메시지를 라우트할 수 있는 기능입니다. 이러한 요구 사항을 지원 하기 위해 라우팅 서비스는 <xref:System.ServiceModel.Routing.SoapProcessingBehavior> 메시지를 라우팅하도록 대상 끝점의 요구 사항을 충족 하는 새 **MessageVersion** 을 자동으로 만드는를 제공 합니다. 이 동작은 응답 메시지를 요청 하는 클라이언트 응용 프로그램으로 반환 하기 전에 응답 메시지에 대 한 새 **MessageVersion** 를 만들어 응답의 MessageVersion 원래 요청의 **MessageVersion** 일치 하는지 확인 합니다.
+라우팅에 공통적으로 요구되는 기능은 SOAP 요구 사항이 서로 다른 엔드포인트 간에 메시지를 라우트할 수 있는 기능입니다. 이러한 요구 사항을 지원 하기 위해 라우팅 서비스는 <xref:System.ServiceModel.Routing.SoapProcessingBehavior> 메시지를 라우팅하도록 대상 끝점의 요구 사항을 충족 하는 새 **MessageVersion** 을 자동으로 만드는를 제공 합니다. 이 동작은 응답 메시지를 요청 하는 클라이언트 응용 프로그램으로 반환 하기 전에 응답 메시지에 대 한 새 **MessageVersion** 를 만들어 응답의 MessageVersion 원래 요청의  일치 하는지 확인 합니다.
 
 SOAP 처리에 대 한 자세한 내용은 [라우팅 소개](routing-introduction.md)를 참조 하세요.
 
@@ -94,7 +95,7 @@ SOAP 처리에 대 한 자세한 내용은 [라우팅 소개](routing-introducti
 
 네트워크 통신을 사용하는 분산 서비스로 구성된 시스템에서는 시스템 내의 통신이 일시적인 네트워크 오류를 처리할 수 있는지 확인해야 합니다.  라우팅 서비스는 서비스 중지를 초래하는 다양한 통신 오류 시나리오를 처리할 수 있는 오류 처리를 구현합니다.
 
-라우팅 서비스에서 메시지를 보내려고 시도하는 중에 <xref:System.ServiceModel.CommunicationException>이 발생하면 오류 처리가 수행됩니다.  일반적으로 이러한 예외는 정의된 클라이언트 엔드포인트와 통신을 시도하는 중에 문제가 발생했음을 나타냅니다(예: <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> 또는 <xref:System.ServiceModel.CommunicationObjectFaultedException>).  또한 오류 처리 코드는 **CommunicationException**에서 파생 되지 않는 또 다른 일반적인 예외인 **timeoutexception** 이 발생 하는 경우에도이를 catch 하 고 보내기를 시도 합니다.
+라우팅 서비스에서 메시지를 보내려고 시도하는 중에 <xref:System.ServiceModel.CommunicationException>이 발생하면 오류 처리가 수행됩니다.  일반적으로 이러한 예외는 정의된 클라이언트 엔드포인트와 통신을 시도하는 중에 문제가 발생했음을 나타냅니다(예: <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> 또는 <xref:System.ServiceModel.CommunicationObjectFaultedException>).  또한 오류 처리 코드는 **CommunicationException** 에서 파생 되지 않는 또 다른 일반적인 예외인 **timeoutexception** 이 발생 하는 경우에도이를 catch 하 고 보내기를 시도 합니다.
 
 오류 처리에 대 한 자세한 내용은 [라우팅 소개](routing-introduction.md)를 참조 하세요.
 

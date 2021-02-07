@@ -1,19 +1,20 @@
 ---
+description: TxSourceTxScopeRequiredIsTransactionFlow에 대해 자세히 알아보세요.
 title: System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow
 ms.date: 03/30/2017
 ms.assetid: 41a3a5d7-bb16-4d16-bb51-db7ac0cfb748
-ms.openlocfilehash: 1541b0638f92c1f6b6777462d9cac9a73d1406ac
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 806504dd4f732824db383a6f971aefdd5bbe76a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295706"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735493"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredistransactionflow"></a>System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow
 
 지정된 트랜잭션이 지정된 작업으로 이동했습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  사용자 코드에 대해 사용 가능한 트랜잭션이 외부 소스에서 이동한 경우 추적됩니다.  
   

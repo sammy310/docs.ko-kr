@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 방법: WSDL 계약을 통해 서비스 모니커 사용'
 title: '방법: WSDL 계약을 통해 서비스 모니커 사용'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 6b1a6c905008b0232a098f253b9007e5147d71a2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 70a8ef0258cd8490d8e14b6a80e8de0248fa0ae2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280886"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734375"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>방법: WSDL 계약을 통해 서비스 모니커 사용
 
