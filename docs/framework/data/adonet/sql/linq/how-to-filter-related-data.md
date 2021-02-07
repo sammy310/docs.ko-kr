@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: 관련 데이터 필터링'
 title: '방법: 관련 데이터 필터링'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ec8b8f97-5d01-4f31-9b97-d1556df6a4bc
-ms.openlocfilehash: e12bab55b03fac3383b98b8ee1c56ab1954ff978
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d44e0805b82c0c58f9ee19808e078f9f9b337050
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173460"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738951"
 ---
 # <a name="how-to-filter-related-data"></a>방법: 관련 데이터 필터링
 

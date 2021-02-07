@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 리플렉션 및 .NET 네이티브'
 title: 리플렉션 및 .NET 네이티브
 ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
-ms.openlocfilehash: c38070ec4afe0a7311133e0ef7b5b24eb2fe4fb5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 150afe5964cbf3a8983540d5948b246a8f330793
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287841"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738444"
 ---
 # <a name="reflection-and-net-native"></a>리플렉션 및 .NET 네이티브
 

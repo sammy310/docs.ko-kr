@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRDataTarget 인터페이스'
 title: ICLRDataTarget 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2f05155-9bef-4e11-b703-7f05890665ca
 topic_type:
 - apiref
-ms.openlocfilehash: 0d3e6a95d8fd71a67b97923dac53c1f615dfe666
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f24760f638705a1bde7e055069cbc3a18a0896fd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703423"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738223"
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget 인터페이스
 
@@ -55,7 +56,7 @@ CLR (공용 언어 런타임)의 대상 항목과 상호 작용 하기 위한 �
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRDataTarget2 인터페이스](iclrdatatarget2-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

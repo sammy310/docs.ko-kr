@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: .NET 네이티브 일반 문제 해결'
 title: .NET 네이티브 일반 문제 해결
 ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
-ms.openlocfilehash: 2bea81e380fed6c456898e9883658ef874c8dd97
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c486b1968036c42ac6d6e565abd9a9f7d795abc3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128235"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738535"
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET 네이티브 일반 문제 해결
 
@@ -27,13 +28,13 @@ ms.locfileid: "73128235"
 
 - **문제:** .NET 네이티브를 사용 하 여 앱을 컴파일 했는지 알 수 없습니다.
 
-  **해결 방법:** .NET 네이티브 컴파일러를 호출 하면 빌드 시간이 길어질 수 있으며, 작업 관리자는 ILC 및 nutc_driver와 같은 다양 한 .NET 네이티브 구성 요소 프로세스를 표시 합니다.
+  **해결 방법:** .NET 네이티브 컴파일러를 호출 하면 빌드 시간이 길어질 수 있으며, 작업 관리자는 ILC.exe 및 nutc_driver.exe과 같은 다양 한 .NET 네이티브 구성 요소 프로세스를 표시 합니다.
 
   .NET 네이티브를 사용 하 여 프로젝트를 성공적으로 빌드한 후에는 obj \\ *구성* \  *아치* \\ *projectname*. ilc\out. 아래에 출력을 찾을 수 있습니다.  최종 네이티브 패키지 내용은 bin \\ *아치* \\ *config*\appx에서 확인할에서 찾을 수 있습니다. 앱을 배포한 경우 최종 네이티브 패키지 콘텐츠는 \bin \\ *아치* \\ *config*\appx 아래에 있습니다.
 
 - **문제:** .NET 네이티브를 사용해서 컴파일한 앱에서 .NET 네이티브 없이 컴파일했을 때는 throw하지 않던 런타임 예외(일반적으로 [MissingMetadataException](missingmetadataexception-class-net-native.md) 또는 [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 예외)를 throw합니다.
 
-  **해결 방법:** .NET 네이티브가 리플렉션을 통해 사용할 수 있는 구현 코드 또는 메타데이터를 제공하지 않았기 때문에 예외가 throw됩니다. 자세한 내용은 [.NET 네이티브 및 컴파일](net-native-and-compilation.md)을 참조 하세요. 예외를 제거 하려면 런타임 [지시문 (rd .xml) 파일](runtime-directives-rd-xml-configuration-file-reference.md) 에 항목을 추가 하 여 .NET 네이티브 도구 체인이 런타임에 메타 데이터 또는 구현 코드를 사용할 수 있도록 해야 합니다. 런타임 지시문 파일에 추가할 필수 항목을 생성하는 데 두 가지 문제 해결사를 사용할 수 있습니다.
+  **해결 방법:** .NET 네이티브가 리플렉션을 통해 사용할 수 있는 구현 코드 또는 메타데이터를 제공하지 않았기 때문에 예외가 throw됩니다. 자세한 내용은 [.NET 네이티브 및 컴파일](net-native-and-compilation.md)을 참조 하세요. 예외를 제거 하려면 .NET 네이티브 도구 체인이 런타임에 메타 데이터 나 구현 코드를 사용할 수 있도록 [런타임 지시문 (rd.xml) 파일](runtime-directives-rd-xml-configuration-file-reference.md) 에 항목을 추가 해야 합니다. 런타임 지시문 파일에 추가할 필수 항목을 생성하는 데 두 가지 문제 해결사를 사용할 수 있습니다.
 
   - 형식의 경우 [MissingMetadataException 문제 해결사](https://dotnet.github.io/native/troubleshooter/type.html) 입니다.
 

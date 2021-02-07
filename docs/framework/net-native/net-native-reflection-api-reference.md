@@ -1,13 +1,14 @@
 ---
+description: 자세한 내용은 .NET 네이티브 리플렉션 API 참조를 참조 하세요.
 title: .NET 네이티브 리플렉션 API 참조
 ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
-ms.openlocfilehash: 4cded310397ffa4dea057899b6f008146d35a03b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 44786812b5bf8c7bd470a588730b7b03ee91f00c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250881"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738522"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET 네이티브 리플렉션 API 참조
 
@@ -30,7 +31,7 @@ ms.locfileid: "96250881"
 
  <xref:System.Reflection> 네임스페이스에는 .NET Framework의 리플렉션에 사용되는 핵심 형식이 포함되어 있습니다. .NET 네이티브의 경우 두 가지 새 예외 형식도 포함 합니다.  
   
-|인스턴스|Description|  
+|인스턴스|설명|  
 |-----------|-----------------|  
 |[MissingMetadataException](missingmetadataexception-class-net-native.md)|리플렉션을 사용하여 존재하지 않는 메타데이터를 검색하면 throw되는 예외입니다.|  
 |[MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)|형식 또는 형식 멤버의 메타데이터를 사용할 수는 있지만 해당 구현이 제거된 경우 throw되는 예외입니다.|  
@@ -41,7 +42,7 @@ ms.locfileid: "96250881"
 
  <xref:System.Runtime.CompilerServices> 네임스페이스는 언어 컴파일러에서 사용자용으로 디자인된 형식을 포함합니다. .NET 네이티브의 경우 새 예외 형식이 포함 되어 있습니다.  
   
-|인스턴스|Description|  
+|인스턴스|설명|  
 |-----------|-----------------|  
 |[MissingInteropDataException](missinginteropdataexception-class-net-native.md)|수동 마샬링 메서드를 호출했는데 정적 분석 또는 런타임 지시문 파일에서 형식의 메타데이터를 찾을 수 없을 때 throw되는 예외입니다.|  
   

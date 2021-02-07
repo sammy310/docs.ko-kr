@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: <Property> 요소 (.NET 네이티브)'
 title: <Property> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-ms.openlocfilehash: a0bdf95a1d1cadf7423f8c6595add13eda4d0d9a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cd3c033fd2ce21b69ff0d8563f0782838f39b09f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250855"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738470"
 ---
 # <a name="property-element-net-native"></a>\<Property> 요소 (.NET 네이티브)
 
@@ -28,7 +29,7 @@ ms.locfileid: "96250855"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|특성 유형|Description|  
+|attribute|특성 유형|설명|  
 |---------------|--------------------|-----------------|  
 |`Name`|일반|필수 특성입니다. 속성 이름을 지정합니다.|  
 |`Browse`|반사|선택적 특성입니다. 속성에 대한 정보 쿼리 또는 속성 열거는 제어하지만 런타임에 동적 호출을 사용하도록 설정하지는 않습니다.|  
@@ -37,13 +38,13 @@ ms.locfileid: "96250855"
   
 ## <a name="name-attribute"></a>Name 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*method_name*|속성 이름입니다. 속성의 형식은 부모 [\<Type>](type-element-net-native.md) 또는 요소로 정의 됩니다 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .|  
   
 ## <a name="all-other-attributes"></a>기타 모든 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*policy_setting*|속성에 대해 이 정책 형식에 적용할 설정입니다. 가능한 값은 `Auto`, `Excluded`, `Included` 및 `Required`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
@@ -53,7 +54,7 @@ ms.locfileid: "96250855"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  

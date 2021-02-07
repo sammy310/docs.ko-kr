@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 방법: 충돌 하는 전송 검색 및 해결'
 title: '방법: 충돌하는 전송 검색 및 문제 해결'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 91e27206-01fb-4c7a-8afc-1383a6ac5067
-ms.openlocfilehash: 96e96208d9bb28092701164e6cd5943ef81515a5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7ccfc9aeba8a21c3f5e950569d7650af087416a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147725"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739042"
 ---
 # <a name="how-to-detect-and-resolve-conflicting-submissions"></a>방법: 충돌하는 전송 검색 및 문제 해결
 

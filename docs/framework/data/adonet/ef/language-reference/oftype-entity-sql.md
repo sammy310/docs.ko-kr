@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: OFTYPE (Entity SQL)'
 title: OFTYPE(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
-ms.openlocfilehash: b5600b4cee23945fe60142b370feb35ac1a2efa1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d916ea4487fcc7a21f5fb62aa7e6f8a23d73fed2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175683"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739341"
 ---
 # <a name="oftype-entity-sql"></a>OFTYPE(Entity SQL)
 
@@ -27,7 +28,7 @@ OFTYPE ( expression, [ONLY] test_type )
  `test_type`  
  `expression` 에서 반환된 각 개체를 테스트할 형식입니다. 형식은 네임스페이스로 한정되어야 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `test_type`형식이거나 `test_type`의 기본 형식 또는 파생 형식인 개체 컬렉션입니다. ONLY를 지정하면 `test_type` 인스턴스나 빈 컬렉션만 반환됩니다.  
   

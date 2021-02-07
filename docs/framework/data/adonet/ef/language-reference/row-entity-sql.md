@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ROW (Entity SQL)'
 title: ROW(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-ms.openlocfilehash: 2ab91d0c6d3c3ed3f88a7f0ddbf3a6c2f36d8b04
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2d0bcf3c5be8ef3b67e170af5159ae7dd8744630
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202255"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739276"
 ---
 # <a name="row-entity-sql"></a>ROW(Entity SQL)
 
@@ -27,7 +28,7 @@ ROW ( expression [ AS alias ] [,...] )
  `alias`  
  행 형식에서 지정된 값의 별칭을 지정합니다. 별칭이 제공되지 않은 경우 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 별칭 생성 규칙에 따라 별칭을 생성합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  행 형식입니다.  
   

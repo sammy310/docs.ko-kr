@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 런타임 지시문 정책 설정'
 title: 런타임 지시문 정책 설정
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
-ms.openlocfilehash: 7a8933decaec45e8000f3f3d1717847f333deddd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b8bbb0f713900b4f0b3808431ce45ab85a7f8225
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "76738500"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738418"
 ---
 # <a name="runtime-directive-policy-settings"></a>런타임 지시문 정책 설정
 
@@ -115,7 +116,7 @@ ms.locfileid: "76738500"
 
 각 정책 형식은 다음 표에 나와 있는 값 중 하나로 설정할 수 있습니다. 형식 멤버를 나타내는 요소는 기타 요소와는 다른 정책 설정 집합을 지원합니다.
 
-|정책 설정|Description|`Assembly`, `Namespace`, `Type` 및 `TypeInstantiation` 요소|`Event`, `Field`, `Method`, `MethodInstantiation` 및 `Property` 요소|
+|정책 설정|설명|`Assembly`, `Namespace`, `Type` 및 `TypeInstantiation` 요소|`Event`, `Field`, `Method`, `MethodInstantiation` 및 `Property` 요소|
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
 |`All`|.NET 네이티브 도구 체인에서 제거하지 않는 모든 형식과 멤버에 대해 정책을 사용하도록 설정합니다.|✔️||
 |`Auto`|해당 프로그램 요소에 대한 정책 형식으로 기본 정책을 사용해야 함을 지정합니다. 이 설정은 해당 정책 형식에 대해 정책을 생략하는 것과 같습니다. `Auto`는 보통 부모 요소에서 정책이 상속됨을 나타내는 데 사용됩니다.|✔️|✔️|
@@ -128,7 +129,7 @@ ms.locfileid: "76738500"
 |`Required PublicAndInternal`|public 및 내부 형식 또는 멤버에 대해 정책을 사용하도록 설정하며 public 및 내부 형식 또는 멤버의 메타데이터를 항상 사용할 수 있습니다. 이 설정은 도구 체인이 필요하다고 결정하는 public 및 내부 형식과 멤버의 메타데이터만 제공하는 `PublicAndInternal`과는 다릅니다.|✔️||
 |`Required All`|도구 체인이 사용 여부에 관계없이 모든 형식과 멤버를 유지해야 하도록 지정하고 해당 형식과 멤버에 대해 정책을 사용하도록 설정합니다.|✔️||
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](runtime-directive-elements.md)

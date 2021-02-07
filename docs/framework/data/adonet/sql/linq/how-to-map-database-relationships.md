@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 방법: 데이터베이스 관계 매핑'
 title: '방법: 데이터베이스 관계 매핑'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: 2f612877f5e7da6442c242aa0d56d811c0aa7cf8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: cbccf9ec33a76b6446549fe8031300174506bd00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166458"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738847"
 ---
 # <a name="how-to-map-database-relationships"></a>방법: 데이터베이스 관계 매핑
 
@@ -51,7 +52,7 @@ ms.locfileid: "91166458"
  또한 이 상황을 반대로 적용할 수도 있습니다. `Customer` 클래스를 사용하여 고객과 주문 간의 연결을 설명하는 대신에 `Order` 클래스를 사용할 수 있습니다. 다음 코드 예제와 같이 `Order` 클래스는 <xref:System.Data.Linq.EntityRef%601> 형식을 사용하여 고객에 대한 관계를 설명합니다.  
   
 > [!NOTE]
-> <xref:System.Data.Linq.EntityRef%601>클래스는 *지연 된 로드*를 지원 합니다. 자세한 내용은 [지연 된 로드 및 즉시 로드](deferred-versus-immediate-loading.md)를 *참조 하세요* .  
+> <xref:System.Data.Linq.EntityRef%601>클래스는 *지연 된 로드* 를 지원 합니다. 자세한 내용은 [지연 된 로드 및 즉시 로드](deferred-versus-immediate-loading.md)를 *참조 하세요* .  
   
  [!code-csharp[DLinqCustomize#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#5)]
  [!code-vb[DLinqCustomize#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#5)]  

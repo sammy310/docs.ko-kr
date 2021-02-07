@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: Windows 스토어 앱을 .NET 네이티브로 마이그레이션'
 title: Windows 스토어 앱을 .NET 네이티브로 마이그레이션
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: ee17e50590a80d8973197b46910d5e22296c265f
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 39f8427474b37c42d856366bf4e4d677ba77e7f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440896"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738717"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>.NET 네이티브로 Windows 스토어 앱 마이그레이션
 
@@ -157,7 +158,7 @@ Windows 스토어 앱 용 .NET과 .NET 네이티브 간의 동작에는 다양 �
 
 **기타 API**
 
-- [TypeInfo.GUID](xref:System.Type.GUID) <xref:System.PlatformNotSupportedException> <xref:System.Runtime.InteropServices.GuidAttribute> 특성이 형식에 적용 되지 않으면 TypeInfo 속성이 예외를 throw 합니다. GUID는 주로 COM 지원을 위해 사용됩니다.
+- [](xref:System.Type.GUID) <xref:System.PlatformNotSupportedException> <xref:System.Runtime.InteropServices.GuidAttribute> 특성이 형식에 적용 되지 않으면 TypeInfo 속성이 예외를 throw 합니다. GUID는 주로 COM 지원을 위해 사용됩니다.
 
 - <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>메서드는 .NET 네이티브에서 짧은 날짜를 포함 하는 문자열을 올바르게 구문 분석 합니다. 그러나 Microsoft 기술 자료 문서 [KB2803771](https://support.microsoft.com/kb/2803771) 및 [KB2803755](https://support.microsoft.com/kb/2803755)에서 설명하는 날짜 및 시간 구문 분석 변경 내용과의 호환성은 유지되지 않습니다.
 
@@ -663,7 +664,7 @@ Visual Studio에서 기본적으로 사용되는 x86 빌드 도구를 사용합�
 
 Windows 스토어 앱 프로젝트에 대 한 단위 테스트 라이브러리에서 .NET 네이티브를 사용 하도록 설정 하는 것은 지원 되지 않으며 프로젝트 빌드에 실패 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [시작](getting-started-with-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)

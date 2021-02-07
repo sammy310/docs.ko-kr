@@ -1,16 +1,17 @@
 ---
+description: '방법에 대 한 자세한 정보: 방법: 쿼리 저장 및 다시 사용'
 title: '방법: 쿼리 저장 및 다시 사용'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: aae1cf3faf2ecb3d8e9511390cdaa1e004905bea
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a9c467cc9b2e39e6bd7616c6439d02c67f43d7c2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197094"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738821"
 ---
 # <a name="how-to-store-and-reuse-queries"></a>방법: 쿼리 저장 및 다시 사용
 
@@ -31,7 +32,7 @@ ms.locfileid: "91197094"
   
 ## <a name="example"></a>예제  
 
- 형식에 제네릭 인수로 제공할 이름이 없기 때문에 현재 *익명 형식을*반환 하는 (정적 변수) 쿼리를 저장할 수 없습니다. 다음 예제에서는 결과를 나타낼 수 있는 형식을 만든 다음 이를 제네릭 인수로 사용하여 이 문제를 해결할 수 있는 방법을 보여 줍니다.  
+ 형식에 제네릭 인수로 제공할 이름이 없기 때문에 현재 *익명 형식을* 반환 하는 (정적 변수) 쿼리를 저장할 수 없습니다. 다음 예제에서는 결과를 나타낼 수 있는 형식을 만든 다음 이를 제네릭 인수로 사용하여 이 문제를 해결할 수 있는 방법을 보여 줍니다.  
   
  [!code-csharp[DLinqQuerying#8](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#8)]
  [!code-vb[DLinqQuerying#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#8)]  

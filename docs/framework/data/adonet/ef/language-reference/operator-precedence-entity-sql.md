@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 연산자 우선 순위 (Entity SQL)'
 title: 연산자 우선 순위(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
-ms.openlocfilehash: f8aa0f213a24d6431d8910af849571a67fbd9f57
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 72cfdecf7dfe4ce590d99e866429e771f9ede231
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175644"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739328"
 ---
 # <a name="operator-precedence-entity-sql"></a>연산자 우선 순위(Entity SQL)
 
@@ -22,7 +23,7 @@ ms.locfileid: "91175644"
 |3|곱하기|`* / %`|  
 |4|더하기|`+ -`|  
 |5|순서 지정|`< > <= >=`|  
-|6|등호|`= != <>`|  
+|6|같음|`= != <>`|  
 |7|조건부 AND|`and &&`|  
 |8|조건부 OR|`or &#124;&#124;`|  
   

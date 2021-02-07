@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: MissingInteropDataException 클래스 (.NET 네이티브)'
 title: MissingInteropDataException 클래스(.NET 네이티브)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
-ms.openlocfilehash: bbbb484e5cb8060568b321a2a41474d60c9f87f6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ee1544d6a0e1e6a3f0e4386650754ed84b49015b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250920"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738704"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException 클래스(.NET 네이티브)
 
@@ -21,9 +22,9 @@ ms.locfileid: "96250920"
  **네임스페이스:** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
-> `MissingInteropDataException`클래스는 .NET 네이티브 도구 체인에서 내부용 으로만 사용 됩니다. 이 클래스는 타사 코드에서 사용하면 안 되고 애플리케이션 코드에서 예외를 처리하면 안 됩니다. 대신, [런타임 지시문 파일](runtime-directives-rd-xml-configuration-file-reference.md)에 항목을 추가하여 예외를 제거합니다. 자세한 내용은 설명 섹션을 참조하세요.  
+> `MissingInteropDataException`클래스는 .NET 네이티브 도구 체인에서 내부용 으로만 사용 됩니다. 이 클래스는 타사 코드에서 사용하면 안 되고 애플리케이션 코드에서 예외를 처리하면 안 됩니다. 대신, [런타임 지시문 파일](runtime-directives-rd-xml-configuration-file-reference.md)에 항목을 추가하여 예외를 제거합니다. 자세한 내용은 주의 섹션을 참조하세요.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
 
  [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
  [!code-vb[ProjectN#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/projectn/vb/missinginteropdataexception_syntax1.vb#21)]  
@@ -38,7 +39,7 @@ ms.locfileid: "96250920"
   
 ## <a name="properties"></a>속성  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |`public IDictionary Data { get; }`|예외에 대한 사용자 정의 정보를 추가로 제공하는 키/값 쌍 컬렉션을 가져옵니다. <xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.|  
 |`public string HelpLink { get; set; }`|이 예외와 연결된 도움말 파일에 대한 링크를 가져오거나 설정합니다. <xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.|  
@@ -52,7 +53,7 @@ ms.locfileid: "96250920"
   
 ## <a name="methods"></a>메서드  
   
-|메서드|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |`public bool Equals(Object obj)`|지정된 개체가 현재 개체와 같은지 확인합니다.  <xref:System.Object>에서 상속됩니다.|  
 |`protected void Finalize()`|가비지 컬렉션이 회수하기 전에 개체가 리소스를 해제하고 다른 정리 작업을 수행할 수 있게 합니다. <xref:System.Object>에서 상속됩니다.|  
@@ -65,7 +66,7 @@ ms.locfileid: "96250920"
   
 ## <a name="events"></a>이벤트  
   
-|이벤트|Description|  
+|이벤트|설명|  
 |-----------|-----------------|  
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|예외에 대한 serialize된 데이터가 들어 있는 예외 상태 개체가 만들어지도록 예외가 serialize될 때 발생합니다. <xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.|  
   

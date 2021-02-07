@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 낙관적 동시성'
 title: 낙관적 동시성
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 681044a9d905f052516ba240e25ffff84928e58e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1034720b2c57b863b87eef440424a7e2f4c2c6c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166640"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739146"
 ---
 # <a name="optimistic-concurrency"></a>낙관적 동시성
 
@@ -43,7 +44,7 @@ ms.locfileid: "91166640"
   
  오후 1시 1분에 User2가 같은 행을 읽습니다.  
   
- 오후 1:03 시, u s e r 2는 "Bob"에서 "Robert"로 **FirstName** 을 변경 하 고 데이터베이스를 업데이트 합니다.  
+ 오후 1시 3분에 User2가 **FirstName** 을 “Bob”에서 “Robert”로 변경하고 데이터베이스를 업데이트합니다.  
   
 |열 이름|원래 값|현재 값|데이터베이스 값|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -67,13 +68,13 @@ ms.locfileid: "91166640"
 
  여러 가지 기법을 사용하여 낙관적 동시성 위반을 테스트할 수 있는데, 그 중 하나가 테이블에 타임스탬프 열을 포함시키는 것입니다. 일반적으로 데이터베이스에서는 레코드가 마지막으로 업데이트된 날짜와 시간을 식별하기 위해 타임스탬프 기능을 제공합니다. 이 기법을 사용하면 타임스탬프 열이 테이블 정의에 포함됩니다. 타임스탬프는 레코드가 업데이트될 때마다 현재 날짜와 시간을 적용하도록 업데이트됩니다. 낙관적 동시성 위반을 테스트하는 경우, 타임스탬프 열은 테이블의 내용에 대한 모든 쿼리와 함께 반환됩니다. 업데이트를 시도하면 데이터베이스의 타임스탬프 값과 수정된 행에 포함된 원래 타임스탬프 값이 비교됩니다. 두 값이 일치하면 업데이트가 수행되고 업데이트를 적용하기 위해 타임스탬프 열이 현재 시간에 맞게 업데이트됩니다. 반대로, 두 값이 일치하지 않으면 낙관적 동시성 위반이 발생합니다.  
   
- 원래 열의 모든 값이 데이터베이스에 있는 해당 값과 계속 일치하는지를 확인하여 낙관적 동시성 위반을 테스트하는 기법도 있습니다. 예를 들어 다음 쿼리를 참조하십시오.  
+ 원래 열의 모든 값이 데이터베이스에 있는 해당 값과 계속 일치하는지를 확인하여 낙관적 동시성 위반을 테스트하는 기법도 있습니다. 예를 들어 다음과 같은 쿼리를 고려해 보겠습니다.  
   
 ```sql
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- **Table1**에서 행을 업데이트할 때 낙관적 동시성 위반을 테스트 하려면 다음 UPDATE 문을 실행 합니다.  
+ **Table1** 의 행을 업데이트할 때 낙관적 동시성 위반을 테스트하려면 다음 UPDATE 문을 실행합니다.  
   
 ```sql
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -99,15 +100,15 @@ UPDATE Table1 Set Col1 = @NewVal1
   
 ### <a name="the-dataadapterrowupdated-event"></a>DataAdapter.RowUpdated 이벤트  
 
- 개체의 **RowUpdated** 이벤트는 <xref:System.Data.Common.DataAdapter> 이전에 설명한 기술과 함께 사용 하 여 낙관적 동시성 위반을 응용 프로그램에 알릴 수 있습니다. **RowUpdated** 는 각 **데이터 집합**에서 **수정** 된 행을 업데이트 하려고 시도한 후에 발생 합니다. 이로써 예외 발생 시의 처리와 사용자 지정 오류 정보 및 다시 시도 논리 등의 추가를 포함하여 특별한 처리 코드를 추가할 수 있습니다. <xref:System.Data.Common.RowUpdatedEventArgs>개체는 테이블의 수정 된 행에 대해 특정 update 명령의 영향을 받는 행 수를 포함 하는 **RecordsAffected** 속성을 반환 합니다. 업데이트 명령을 낙관적 동시성을 테스트 하도록 설정 하 여 **RecordsAffected** 속성은 업데이트 된 레코드가 없어 낙관적 동시성 위반이 발생 했을 때 값 0을 반환 합니다. 또한 이 경우 예외가 throw됩니다. **RowUpdated** 이벤트를 사용 하면이 발생을 처리 하 고 **UpdateStatus**와 같은 적절 한 **RowUpdatedEventArgs** 값을 설정 하 여 예외를 방지할 수 있습니다. **RowUpdated** 이벤트에 대 한 자세한 내용은 [DataAdapter 이벤트 처리](handling-dataadapter-events.md)를 참조 하세요.  
+ <xref:System.Data.Common.DataAdapter> 개체의 **RowUpdated** 이벤트를 앞에서 설명한 기법과 함께 사용하면 낙관적 동시성 위반을 애플리케이션에 알릴 수 있습니다. **RowUpdated** 는 **DataSet** 에서 **Modified** 행의 업데이트를 시도했을 때마다 발생하며, 이로써 예외 발생 시의 처리와 사용자 지정 오류 정보 및 다시 시도 논리 등의 추가를 포함하여 특별한 처리 코드를 추가할 수 있습니다. <xref:System.Data.Common.RowUpdatedEventArgs> 개체는 테이블에서 수정된 행의 특정 업데이트 명령이 영향을 준 행 수가 들어 있는 **RecordsAffected** 속성을 반환합니다. 낙관적 동시성을 테스트하도록 업데이트 명령을 설정하면 결과적으로 **RecordsAffected** 속성은 낙관적 동시성 위반이 발생했을 때 업데이트된 레코드가 없으므로 0을 반환합니다. 또한 이 경우 예외가 throw됩니다. **RowUpdated** 이벤트를 사용하면 이 상황을 처리할 수 있고 **UpdateStatus.SkipCurrentRow** 와 같은 적절한 **RowUpdatedEventArgs.Status** 값을 설정하여 예외를 방지할 수 있습니다. **RowUpdated** 이벤트에 관한 자세한 내용은 [DataAdapter 이벤트 처리](handling-dataadapter-events.md)를 참조하세요.  
   
- 필요에 따라 **update**를 호출 하기 전에 **ContinueUpdateOnError** 를 **True**로 설정 하 고 **업데이트가** 완료 되 면 특정 행의 **RowError** 속성에 저장 된 오류 정보에 응답할 수 있습니다. 자세한 내용은 [행 오류 정보](./dataset-datatable-dataview/row-error-information.md)를 참조 하세요.  
+ 필요에 따라 **Update** 를 호출하기 전에 **DataAdapter.ContinueUpdateOnError** 를 **true** 로 설정하고 **Update** 가 완료되면 특정 행의 **RowError** 속성에 저장된 오류 정보에 응답할 수 있습니다. 자세한 내용은 [행 오류 정보](./dataset-datatable-dataview/row-error-information.md)를 참조하세요.  
   
 ## <a name="optimistic-concurrency-example"></a>낙관적 동시성 예제  
 
- 다음은 낙관적 동시성을 테스트할 **DataAdapter** 의 **UpdateCommand** 를 설정 하 고 **RowUpdated** 이벤트를 사용 하 여 낙관적 동시성 위반을 테스트 하는 간단한 예제입니다. 낙관적 동시성 위반이 발생 하면 응용 프로그램은 낙관적 동시성 위반을 반영 하기 위해 업데이트가 실행 된 행의 **RowError** 를 설정 합니다.  
+ 다음의 간단한 예제에서는 낙관적 동시성을 테스트하도록 **DataAdapter** 의 **UpdateCommand** 를 설정한 다음, **RowUpdated** 이벤트를 사용하여 낙관적 동시성 위반을 테스트합니다. 낙관적 동시성 위반이 발생하면 애플리케이션에서는 업데이트가 시도된 행의 **RowError** 를 설정하여 낙관적 동시성 위반이 발생했다는 것을 나타냅니다.  
   
- UPDATE 명령의 WHERE 절에 전달 된 매개 변수 값은 해당 열의 **원래** 값에 매핑됩니다.  
+ UPDATE 명령의 WHERE 절에 전달된 매개 변수 값은 해당 열의 **Original** 값에 매핑됩니다.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -210,7 +211,7 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)
 - [DataAdapters로 데이터 원본 업데이트](updating-data-sources-with-dataadapters.md)
