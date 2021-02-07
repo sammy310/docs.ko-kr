@@ -1,24 +1,25 @@
 ---
+description: '자세히 알아보기: 여러 끝점'
 title: 다중 엔드포인트
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: 92c329ff922b5e4fc025245dac596c6abebc2716
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f11110cdc53c6e9a8abc876f0304b144a2d82964
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260151"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99752240"
 ---
-# <a name="multiple-endpoints"></a><span data-ttu-id="f4cf7-102">다중 엔드포인트</span><span class="sxs-lookup"><span data-stu-id="f4cf7-102">Multiple Endpoints</span></span>
+# <a name="multiple-endpoints"></a><span data-ttu-id="314e5-103">다중 엔드포인트</span><span class="sxs-lookup"><span data-stu-id="314e5-103">Multiple Endpoints</span></span>
 
-<span data-ttu-id="f4cf7-103">Multiple Endpoints 샘플은 서비스에서 여러 엔드포인트를 구성하는 방법과 클라이언트에서 각 엔드포인트와 통신하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-103">The Multiple Endpoints sample demonstrates how to configure multiple endpoints on a service and how to communicate with each endpoint from a client.</span></span> <span data-ttu-id="f4cf7-104">이 샘플은 [시작](getting-started-sample.md)을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-104">This sample is based on the [Getting Started](getting-started-sample.md).</span></span> <span data-ttu-id="f4cf7-105">서비스 구성은 `ICalculator` 계약을 지원하지만 각각 다른 바인딩을 사용하여 다른 주소에 있는 두 개의 엔드포인트를 정의하기 위해 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-105">The service configuration has been modified to define two endpoints that support the `ICalculator` contract, but each at a different address using a different binding.</span></span> <span data-ttu-id="f4cf7-106">클라이언트 구성과 코드는 두 서비스 엔드포인트 모두와 통신하기 위해 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-106">The client configuration and code have been modified to communicate with both of the service endpoints.</span></span>  
+<span data-ttu-id="314e5-104">Multiple Endpoints 샘플은 서비스에서 여러 엔드포인트를 구성하는 방법과 클라이언트에서 각 엔드포인트와 통신하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-104">The Multiple Endpoints sample demonstrates how to configure multiple endpoints on a service and how to communicate with each endpoint from a client.</span></span> <span data-ttu-id="314e5-105">이 샘플은 [시작](getting-started-sample.md)을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-105">This sample is based on the [Getting Started](getting-started-sample.md).</span></span> <span data-ttu-id="314e5-106">서비스 구성은 `ICalculator` 계약을 지원하지만 각각 다른 바인딩을 사용하여 다른 주소에 있는 두 개의 엔드포인트를 정의하기 위해 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-106">The service configuration has been modified to define two endpoints that support the `ICalculator` contract, but each at a different address using a different binding.</span></span> <span data-ttu-id="314e5-107">클라이언트 구성과 코드는 두 서비스 엔드포인트 모두와 통신하기 위해 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-107">The client configuration and code have been modified to communicate with both of the service endpoints.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="f4cf7-107">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="314e5-108">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="f4cf7-108">서비스 Web.config 파일은 각각 동일한 `ICalculator` 계약을 지원하지만 다른 바인딩을 사용하여 다른 주소에 있는 두 개의 엔드포인트를 정의하기 위해 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-108">The service Web.config file has been modified to define two endpoints, each supporting the same `ICalculator` contract, but at different addresses using different bindings.</span></span> <span data-ttu-id="f4cf7-109">첫 번째 엔드포인트는 `basicHttpBinding` 바인딩을 사용하여 기본 주소에 정의되고 보안은 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-109">The first endpoint is defined at the base address using a `basicHttpBinding` binding, which does not have security enabled.</span></span> <span data-ttu-id="f4cf7-110">두 번째 엔드포인트는 `wsHttpBinding` 바인딩을 사용하여 {baseaddress}/secure에 정의되고 Windows 인증과 함께 WS-Security를 사용하여 기본적으로 보안됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-110">The second endpoint is defined at {baseaddress}/secure using a `wsHttpBinding` binding, which is secure by default, using WS-Security with Windows authentication.</span></span>  
+ <span data-ttu-id="314e5-109">서비스 Web.config 파일은 각각 동일한 `ICalculator` 계약을 지원하지만 다른 바인딩을 사용하여 다른 주소에 있는 두 개의 엔드포인트를 정의하기 위해 수정되었습니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-109">The service Web.config file has been modified to define two endpoints, each supporting the same `ICalculator` contract, but at different addresses using different bindings.</span></span> <span data-ttu-id="314e5-110">첫 번째 엔드포인트는 `basicHttpBinding` 바인딩을 사용하여 기본 주소에 정의되고 보안은 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-110">The first endpoint is defined at the base address using a `basicHttpBinding` binding, which does not have security enabled.</span></span> <span data-ttu-id="314e5-111">두 번째 엔드포인트는 `wsHttpBinding` 바인딩을 사용하여 {baseaddress}/secure에 정의되고 Windows 인증과 함께 WS-Security를 사용하여 기본적으로 보안됩니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-111">The second endpoint is defined at {baseaddress}/secure using a `wsHttpBinding` binding, which is secure by default, using WS-Security with Windows authentication.</span></span>  
   
 ```xml  
 <service
@@ -38,7 +39,7 @@ ms.locfileid: "96260151"
 </service>  
 ```  
   
- <span data-ttu-id="f4cf7-111">두 엔드포인트는 또한 클라이언트에서 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-111">Both endpoints are also configured on the client.</span></span> <span data-ttu-id="f4cf7-112">이러한 엔드포인트에 이름이 제공되므로 호출자는 원하는 엔드포인트 이름을 클라이언트의 생성자에 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-112">These endpoints are given names so that the caller can pass the desired endpoint name into the constructor of the client.</span></span>  
+ <span data-ttu-id="314e5-112">두 엔드포인트는 또한 클라이언트에서 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-112">Both endpoints are also configured on the client.</span></span> <span data-ttu-id="314e5-113">이러한 엔드포인트에 이름이 제공되므로 호출자는 원하는 엔드포인트 이름을 클라이언트의 생성자에 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-113">These endpoints are given names so that the caller can pass the desired endpoint name into the constructor of the client.</span></span>  
   
 ```xml  
 <client>  
@@ -57,7 +58,7 @@ ms.locfileid: "96260151"
 </client>  
 ```  
   
- <span data-ttu-id="f4cf7-113">다음 코드와 같이 클라이언트는 두 엔드포인트를 모두 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-113">The client uses both endpoints as shown in the following code.</span></span>  
+ <span data-ttu-id="314e5-114">다음 코드와 같이 클라이언트는 두 엔드포인트를 모두 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-114">The client uses both endpoints as shown in the following code.</span></span>  
   
 ```csharp  
 static void Main()  
@@ -86,7 +87,7 @@ static void Main()
 }  
 ```  
   
- <span data-ttu-id="f4cf7-114">클라이언트를 실행하면 두 엔드포인트와의 상호 작용이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-114">When you run the client, interactions with both endpoints are displayed.</span></span>  
+ <span data-ttu-id="314e5-115">클라이언트를 실행하면 두 엔드포인트와의 상호 작용이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-115">When you run the client, interactions with both endpoints are displayed.</span></span>  
   
 ```console
 Communicate with basic endpoint.  
@@ -103,19 +104,19 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="f4cf7-115">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="f4cf7-115">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="314e5-116">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="314e5-116">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="f4cf7-116">[Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="314e5-117">[Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-117">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2. <span data-ttu-id="f4cf7-117">C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](building-the-samples.md).</span></span>  
+2. <span data-ttu-id="314e5-118">C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-118">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](building-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="f4cf7-118">단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-118">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](running-the-samples.md).</span></span>  
+3. <span data-ttu-id="314e5-119">단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="314e5-119">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="f4cf7-119">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="f4cf7-120">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-120">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="314e5-120">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-120">The samples may already be installed on your machine.</span></span> <span data-ttu-id="314e5-121">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="314e5-121">Check for the following (default) directory before continuing.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> <span data-ttu-id="f4cf7-121">이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="f4cf7-122">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4cf7-122">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="314e5-122">이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-122">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="314e5-123">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="314e5-123">This sample is located in the following directory.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  
