@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataInfo:: GetFileMapping 메서드'
 title: IMetaDataInfo::GetFileMapping 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2868dfec-c992-4606-88bb-a8e0b6b18271
 topic_type:
 - apiref
-ms.openlocfilehash: 8823f3cc016072d3f20100c29532459da5e97492
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 82a1a23c50a4d8340804f66966933fc6a11e0f8c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682392"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688483"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping 메서드
 
@@ -47,7 +48,7 @@ HRESULT GetFileMapping (
  `pdwMappingType`  
  제한이 매핑의 유형을 나타내는 [CorFileMapping](corfilemapping-enumeration.md) 값입니다. CLR (공용 언어 런타임)의 현재 구현은 항상를 반환 `fmFlat` 합니다. 다른 값은 나중에 사용할 수 있도록 예약되어 있습니다. 그러나 이후 버전 또는 서비스 릴리스에서 다른 값을 사용할 수 있기 때문에 항상 반환 된 값을 확인 해야 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -75,7 +76,7 @@ HRESULT GetFileMapping (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataInfo 인터페이스](imetadatainfo-interface.md)
 - [CorFileMapping 열거형](corfilemapping-enumeration.md)
