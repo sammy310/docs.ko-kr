@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 레코드 추적'
 title: 추적 레코드
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: 0344c802ef779d1f13f58c35c2f0e4fa67a37578
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ab04f7c964ae8ba64b6c67606031217fbe122951
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238108"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755124"
 ---
 # <a name="tracking-records"></a>추적 레코드
 
@@ -17,7 +18,7 @@ ms.locfileid: "96238108"
 
  다음 표에서는 워크플로 런타임에서 내보내는 추적 레코드에 대해 자세히 설명합니다.  
   
-|추적 레코드|Description|  
+|추적 레코드|설명|  
 |---------------------|-----------------|  
 |워크플로 수명 주기 레코드|워크플로 인스턴스 수명 주기의 다양한 단계에서 내보냅니다. 예를 들어 워크플로가 시작되거나 완료되면 레코드를 내보냅니다.|  
 |활동 수명 주기 레코드|활동 실행에 대해 자세히 설명합니다. 이러한 레코드는 활동이 예약된 시점, 활동이 완료된 시점, 오류가 발생한 시점 등과 같은 워크플로 활동 상태를 나타냅니다.|  

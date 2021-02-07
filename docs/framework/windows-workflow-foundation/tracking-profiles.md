@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 추적 프로필'
 title: 추적 프로필
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: ceeb0f5533bb4c637ea7df52249f5b00067d9b3d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9748f0452a1699e08760372f826f2458d82f4b79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551389"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755150"
 ---
 # <a name="tracking-profiles"></a>추적 프로필
 
@@ -64,9 +65,9 @@ TrackingProfile profile = new TrackingProfile()
 
 추적 프로필의 `implementationVisibility` 특성은 두 가지 표시 모드(`RootScope` 및 `All`)를 지정합니다. 복합 활동이 워크플로의 루트가 아닌 경우 `RootScope` 모드를 사용하면 활동의 구현을 구성하는 활동에 대한 추적 레코드가 표시되지 않습니다. 즉, 다른 활동을 사용하여 구현되는 활동이 워크플로에 추가되고 `implementationVisibility`가 RootScope로 설정된 경우에는 해당 복합 활동의 최상위 활동만 추적됩니다. 활동이 워크플로의 루트인 경우 활동 구현이 워크플로 자체이고 구현 단계를 구성하는 활동에 대한 추적 레코드가 내보내집니다. 모두 모드에서는 루트 활동과 모든 복합 활동에 대해 모든 추적 레코드가 내보내집니다.
 
-예를 들어, *MyActivity* 는 *Activity1* 및 *Activity2*라는 두 개의 작업을 포함 하는 복합 활동입니다. 이 활동을 워크플로에 추가 하 고 추적을로 설정 하 여 추적을 사용 하도록 `implementationVisibility` 설정 하면 `RootScope` *MyActivity*에 대해서만 추적 레코드가 내보내집니다. 그러나 활동 *Activity1* 및 *Activity2*에 대 한 레코드는 내보내지 않습니다.
+예를 들어, *MyActivity* 는 *Activity1* 및 *Activity2* 라는 두 개의 작업을 포함 하는 복합 활동입니다. 이 활동을 워크플로에 추가 하 고 추적을로 설정 하 여 추적을 사용 하도록 `implementationVisibility` 설정 하면 `RootScope` *MyActivity* 에 대해서만 추적 레코드가 내보내집니다. 그러나 활동 *Activity1* 및 *Activity2* 에 대 한 레코드는 내보내지 않습니다.
 
-그러나 `implementationVisibility` 추적 프로필에 대 한 특성이로 설정 된 경우 MyActivity 뿐만 아니라 `All` 작업 *Activity1* 및 *Activity2*에 대 한 *MyActivity*추적 레코드가 내보내집니다.
+그러나 `implementationVisibility` 추적 프로필에 대 한 특성이로 설정 된 경우 MyActivity 뿐만 아니라 `All` 작업 *Activity1* 및 *Activity2* 에 대 한 추적 레코드가 내보내집니다.
 
 `implementationVisibility` 플래그가 적용되는 추적 레코드 형식은 다음과 같습니다.
 
@@ -386,7 +387,7 @@ XML 구성 파일로 구성된 프로필은 동작 확장을 사용하여 추적
   </trackingProfile>
   ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [SQL 추적](./samples/sql-tracking.md)
 - [Windows Server App Fabric 모니터링](/previous-versions/appfabric/ee677251(v=azure.10))

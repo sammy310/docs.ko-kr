@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 작업 3: 도구 상자 및 PropertyGrid 창 만들기'
 title: '작업 3: 도구 상자 및 PropertyGrid 창 만들기'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 29e50b24135cd3d6a02052d846e1781b0d9fa325
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c07bfc2f974018cb0d789a6cc1181f9bed861382
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716226"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755164"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>작업 3: 도구 상자 및 PropertyGrid 창 만들기
 
@@ -19,9 +20,9 @@ ms.locfileid: "74716226"
 
 1. [작업 2: 호스트 워크플로 디자이너](task-2-host-the-workflow-designer.md)에 설명 된 절차에 따라 가져온 HostingApplication 프로젝트를 엽니다.
 
-2. **솔루션 탐색기** 창에서 *mainwindow.xaml* 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 선택 합니다.
+2. **솔루션 탐색기** 창에서 *mainwindow.xaml* 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기** 를 선택 합니다.
 
-3. <xref:System.Activities.Presentation.Toolbox.ToolboxControl>를 만들고 **도구 상자**에 새 **도구 상자** 범주를 추가 하 고 <xref:System.Activities.Statements.Assign> 및 <xref:System.Activities.Statements.Sequence> 활동 유형을 해당 범주에 할당 하는 `GetToolboxControl` 메서드를 `MainWindow` 클래스에 추가 합니다.
+3. 를 `GetToolboxControl` `MainWindow` 만들고 <xref:System.Activities.Presentation.Toolbox.ToolboxControl> , **도구 상자** 에 새 **도구 상자** 범주를 추가 하 고, <xref:System.Activities.Statements.Assign> 및 <xref:System.Activities.Statements.Sequence> 활동 형식을 해당 범주에 할당 하는 메서드를 클래스에 추가 합니다.
 
     ```csharp
     private ToolboxControl GetToolboxControl()
@@ -50,7 +51,7 @@ ms.locfileid: "74716226"
     }
     ```
 
-4. 모눈의 왼쪽 열에 **도구 상자** 를 배치 하는 private `AddToolbox` 메서드를 `MainWindow` 클래스에 추가 합니다.
+4. `AddToolbox` `MainWindow` 모눈의 왼쪽 열에 **도구 상자** 를 배치 하는 전용 메서드를 클래스에 추가 합니다.
 
     ```csharp
     private void AddToolBox()
@@ -61,7 +62,7 @@ ms.locfileid: "74716226"
     }
     ```
 
-5. 다음 코드와 같이 `MainWindow()` 클래스 생성자에서 `AddToolBox` 메서드에 대 한 호출을 추가 합니다.
+5. `AddToolBox` `MainWindow()` 다음 코드와 같이 클래스 생성자에 메서드에 대 한 호출을 추가 합니다.
 
     ```csharp
     public MainWindow()
@@ -74,13 +75,13 @@ ms.locfileid: "74716226"
     }
     ```
 
-6. <kbd>F5</kbd> 키를 눌러 솔루션을 빌드하고 실행 합니다. <xref:System.Activities.Statements.Assign> 및 <xref:System.Activities.Statements.Sequence> 활동을 포함 하는 **도구 상자가** 표시 됩니다.
+6. <kbd>F5</kbd> 키를 눌러 솔루션을 빌드하고 실행 합니다. 및 활동을 포함 하는 **도구 상자가** <xref:System.Activities.Statements.Assign> <xref:System.Activities.Statements.Sequence> 표시 됩니다.
 
 ## <a name="to-create-the-propertygrid"></a>PropertyGrid를 만들려면
 
-1. **솔루션 탐색기** 창에서 *mainwindow.xaml* 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 선택 합니다.
+1. **솔루션 탐색기** 창에서 *mainwindow.xaml* 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기** 를 선택 합니다.
 
-2. `MainWindow` 클래스에 `AddPropertyInspector` 메서드를 추가 하 여 **PropertyGrid** 창을 표의 맨 오른쪽 열에 놓습니다.
+2. `AddPropertyInspector`클래스에 메서드를 추가 `MainWindow` 하 여 **PropertyGrid** 창을 표의 맨 오른쪽 열에 놓습니다.
 
     ```csharp
     private void AddPropertyInspector()
@@ -90,7 +91,7 @@ ms.locfileid: "74716226"
     }
     ```
 
-3. 다음 코드와 같이 `MainWindow()` 클래스 생성자에서 `AddPropertyInspector` 메서드에 대 한 호출을 추가 합니다.
+3. `AddPropertyInspector` `MainWindow()` 다음 코드와 같이 클래스 생성자에 메서드에 대 한 호출을 추가 합니다.
 
     ```csharp
     public MainWindow()
@@ -104,7 +105,7 @@ ms.locfileid: "74716226"
     }
     ```
 
-4. <kbd>F5</kbd> 키를 눌러 솔루션을 빌드하고 실행 합니다. **도구 상자**, 워크플로 디자인 캔버스 및 **PropertyGrid** 창이 모두 표시 되어야 하며, <xref:System.Activities.Statements.Assign> 활동 또는 <xref:System.Activities.Statements.Sequence> 활동을 디자인 캔버스로 끌어다 놓으면 강조 표시 된 활동에 따라 속성 표가 업데이트 됩니다.
+4. <kbd>F5</kbd> 키를 눌러 솔루션을 빌드하고 실행 합니다. **도구 상자**, 워크플로 디자인 캔버스 및 **PropertyGrid** 창이 모두 표시 되어야 하며, <xref:System.Activities.Statements.Assign> 활동 또는 <xref:System.Activities.Statements.Sequence> 활동을 디자인 캔버스로 끌어 오면 강조 표시 된 활동에 따라 속성 표가 업데이트 됩니다.
 
 ## <a name="example"></a>예제
 
@@ -214,8 +215,8 @@ namespace HostingApplication
 }
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [워크플로 디자이너 재호스트](rehosting-the-workflow-designer.md)
+- [Workflow Designer 재호스팅](rehosting-the-workflow-designer.md)
 - [작업 1: 새 Windows Presentation Foundation 애플리케이션 만들기](task-1-create-a-new-wpf-app.md)
 - [작업 2: 워크플로 디자이너 호스트](task-2-host-the-workflow-designer.md)
