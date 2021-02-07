@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Init 메서드'
 title: Init 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e48b5c64-049f-4f93-ad87-d07ae9cd5845
 topic_type:
 - apiref
-ms.openlocfilehash: 25a1c29ab94a785304b83d5b1bcb2d7176742a68
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 531e05a09cbecbfb67c8c004d1e4ba1deb7e59a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726020"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662561"
 ---
 # <a name="init-method"></a>Init 메서드
 
@@ -42,7 +43,7 @@ HRESULT Init(
  `pErrorHandler`  
  선택적 오류 처리 인터페이스에 대 한 [IMetaDataError 인터페이스](../metadata/imetadataerror-interface.md) 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -50,7 +51,7 @@ HRESULT Init(
 
  Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

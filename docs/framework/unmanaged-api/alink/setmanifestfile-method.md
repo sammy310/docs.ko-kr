@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: SetManifestFile 메서드'
 title: SetManifestFile 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b33de4c-19cb-4a36-a93f-8675b2a36d58
 topic_type:
 - apiref
-ms.openlocfilehash: a4518e93db887dbdc4397636479be8bf5a705c2d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fe91c7f2b4e6f58a0a740de84e055ead49adb77d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733726"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662327"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile 메서드
 
@@ -39,7 +40,7 @@ HRESULT SetManifestFile(
   
  Win32 리소스 blob에 콘텐츠를 포함 하는 매니페스트 파일의 이름입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -51,7 +52,7 @@ HRESULT SetManifestFile(
 
  ALink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink3 인터페이스](ialink3-interface.md)
 - [ALink API](index.md)

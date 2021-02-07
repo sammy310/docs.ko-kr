@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CorDebugThreadState 열거형'
 title: CorDebugThreadState 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-ms.openlocfilehash: 5eee2aee5873fe512136bc5407e395acdc31af29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0cf83ee31547e49ccc7d09e0ab4ee85548688b36
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722611"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661808"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState 열거형
 
@@ -34,7 +35,7 @@ typedef enum CorDebugThreadState {
 } CorDebugThreadState;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -57,6 +58,6 @@ typedef enum CorDebugThreadState {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)

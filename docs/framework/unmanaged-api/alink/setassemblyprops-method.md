@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: SetAssemblyProps 메서드'
 title: SetAssemblyProps 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3d7cf29-1414-49e6-8aae-9b3283c4f5f0
 topic_type:
 - apiref
-ms.openlocfilehash: 4b0de5f9759491f1303edc978b1548e91214daf8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 212d8aad22ac1cb231db46f20ff65de2339a21aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733752"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662353"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps 메서드
 
@@ -50,7 +51,7 @@ HRESULT SetAssemblyProps(
  `Value`  
  옵션의 새 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -58,7 +59,7 @@ HRESULT SetAssemblyProps(
 
  Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

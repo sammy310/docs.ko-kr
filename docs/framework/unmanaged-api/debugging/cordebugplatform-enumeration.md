@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: CorDebugPlatform 열거형'
 title: CorDebugPlatform 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5444816-7378-4521-afd3-bf5e4b5303d5
 topic_type:
 - apiref
-ms.openlocfilehash: 5435f78b28975a5426fcb2fce94904efc1051c5b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d6a78ec00f99ff34158f784e039372c8937e6d16
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696403"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661859"
 ---
 # <a name="cordebugplatform-enumeration"></a>CorDebugPlatform 열거형
 
@@ -40,7 +41,7 @@ typedef enum CorDebugPlatform
 } CorDebugPlatform;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -64,6 +65,6 @@ typedef enum CorDebugPlatform
   
  `CORDB_PLATFORM_WINDOWS_ARM` 및 `CORDB_PLATFORM_MAC_AMD64` 멤버는 .NET Framework 4.5.2 이상 버전에서 사용 가능합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)

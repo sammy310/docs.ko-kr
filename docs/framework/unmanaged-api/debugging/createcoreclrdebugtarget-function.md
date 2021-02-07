@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CreateCoreClrDebugTarget 함수'
 title: CreateCoreClrDebugTarget 함수
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-ms.openlocfilehash: f0188facf0b7d33e6e1ecc12921a139165f777a1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 30a6af29e6e1a6ee2c827049a3c792f2d663a702
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686633"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661578"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget 함수
 
@@ -44,7 +45,7 @@ HRESULT CreateCoreClrDebugTarget (
  `ppTarget`  
  제한이 생성 될 [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) 개체에 대 한 포인터에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  S_OK  
  프로세스의 CLR 수가 성공적으로 확인되었으며 해당 핸들 및 경로 배열이 제대로 채워졌습니다.  

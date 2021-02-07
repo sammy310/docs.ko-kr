@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: SetAssemblyFile2 메서드'
 title: SetAssemblyFile2 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eedb9125-1ef1-4000-abfc-7de86e5a1f17
 topic_type:
 - apiref
-ms.openlocfilehash: 131f5d951e524ef48f2cfe1e3e88ef80ac21c452
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 890646b718c211b476d013daf021f8889198c1ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703683"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662405"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 메서드
 
@@ -50,7 +51,7 @@ HRESULT SetAssemblyFile2(
  `pAssemblyID`  
  생성 되는 어셈블리에 대 한 고유 ID를 받습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -58,7 +59,7 @@ HRESULT SetAssemblyFile2(
 
  Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink2 인터페이스](ialink2-interface.md)
 - [IALink 인터페이스](ialink-interface.md)

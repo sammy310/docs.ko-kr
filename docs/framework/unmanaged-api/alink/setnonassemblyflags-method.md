@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: SetNonAssemblyFlags 메서드'
 title: SetNonAssemblyFlags 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f8ba6fc8-f5aa-4066-ac96-56332758f5ec
 topic_type:
 - apiref
-ms.openlocfilehash: b7bcf530947c161decc9c01c07df310550d69738
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9cf311ec8f04f97da03be626e20c1c07065eac38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733765"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662314"
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags 메서드
 
@@ -38,7 +39,7 @@ HRESULT SetNonAssemblyFlags(
  `afFlags`  
  ALink 플래그입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -46,7 +47,7 @@ HRESULT SetNonAssemblyFlags(
 
  Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink 인터페이스](ialink-interface.md)
 - [IALink2 인터페이스](ialink2-interface.md)

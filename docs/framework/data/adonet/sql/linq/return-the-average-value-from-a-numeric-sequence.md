@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 숫자 시퀀스에서 평균 값 반환'
 title: 숫자 시퀀스에서 평균 값 반환
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: 1f113a475bb350640aef7a6b4d7a70b32509d1e0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4e0415c9ef981364fc3d6481ed6455f132e84932
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200409"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663068"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>숫자 시퀀스에서 평균 값 반환
 

@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 파일에서 이미지 삽입'
 title: 파일에서 이미지 삽입
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: e70576637d44e874532aa06da4fe94115ac8ed9c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 009b652988a6ce5dc532d3af926f865f7fc806e0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194585"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663198"
 ---
 # <a name="inserting-an-image-from-a-file"></a>파일에서 이미지 삽입
 
@@ -134,8 +135,8 @@ public static byte[] GetPhoto(string filePath)
   
 ## <a name="see-also"></a>참고 항목
 
-- [명령을 사용하여 데이터 수정](../using-commands-to-modify-data.md)
+- [명령을 사용 하 여 데이터 수정](../using-commands-to-modify-data.md)
 - [이진 데이터 검색](../retrieving-binary-data.md)
-- [이진 및 대량 값 데이터 SQL Server](sql-server-binary-and-large-value-data.md)
+- [SQL Server 이진 및 큰 값 데이터](sql-server-binary-and-large-value-data.md)
 - [SQL Server 데이터 형식 매핑](../sql-server-data-type-mappings.md)
 - [ADO.NET 개요](../ado-net-overview.md)

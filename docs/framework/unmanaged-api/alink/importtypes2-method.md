@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ImportTypes2 메서드'
 title: ImportTypes2 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32f3ba58-9695-41e9-ba58-fd19e45ed396
 topic_type:
 - apiref
-ms.openlocfilehash: 2ec7708edd86b9f2656d0eee434992c3b73200ca
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ca0d174061608f9b4abf524c43023e867e9a9646
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705048"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662613"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 메서드
 
@@ -58,7 +59,7 @@ HRESULT ImportTypes2(
  `pdwCountOfTypes`  
  선택적으로 지정 된 범위에 있는 형식의 수를 받습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -66,7 +67,7 @@ HRESULT ImportTypes2(
 
  Alink 필요  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IALink2 인터페이스](ialink2-interface.md)
 - [IALink 인터페이스](ialink-interface.md)

@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 많은 Udt'
 title: 큰 UDT
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 032093244f51893cd3b0cf50ad81c79413aaa32e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e1a40330bb48d6320dc96533e764f1b856e0f410
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663185"
 ---
 # <a name="large-udts"></a>큰 UDT
 
@@ -44,7 +45,7 @@ UDT(사용자 정의 형식)는 개발자가 CLR(공용 언어 런타임) 개체
 |`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|UDT 인스턴스|  
 |`ProviderType`|21 (`SqlDbType.VarBinary`)|29 (`SqlDbType.Udt`)|  
 |`NonVersionedProviderType`|29 (`SqlDbType.Udt`)|29 (`SqlDbType.Udt`)|  
-|`DataTypeName`|`SqlDbType.VarBinary`|*Database.SchemaName.TypeName*과 같이 세 부분으로 지정되는 이름|  
+|`DataTypeName`|`SqlDbType.VarBinary`|*Database.SchemaName.TypeName* 과 같이 세 부분으로 지정되는 이름|  
 |`IsLong`|상황에 따라 다름|상황에 따라 다름|  
   
 ## <a name="sqldatareader-considerations"></a>SqlDataReader 고려 사항  
@@ -142,5 +143,5 @@ End Using
 - [매개 변수 및 매개 변수 데이터 형식 구성](../configuring-parameters-and-parameter-data-types.md)
 - [데이터베이스 스키마 정보 검색](../retrieving-database-schema-information.md)
 - [SQL Server 데이터 형식 매핑](../sql-server-data-type-mappings.md)
-- [이진 및 대량 값 데이터 SQL Server](sql-server-binary-and-large-value-data.md)
+- [SQL Server 이진 및 큰 값 데이터](sql-server-binary-and-large-value-data.md)
 - [ADO.NET 개요](../ado-net-overview.md)

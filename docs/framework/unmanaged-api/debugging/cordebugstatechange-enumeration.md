@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CorDebugStateChange 열거형'
 title: CorDebugStateChange 열거형
 ms.date: 02/07/2019
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: 1d4424ab-5143-4e50-a84a-ceeb4ddf3bba
 topic_type:
 - apiref
-ms.openlocfilehash: d94422d25da91cd2a6653a95cbd852c3930a151a
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 1900baa77432daa10d0f1a32dd9cb25198b86ed1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795692"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661820"
 ---
 # <a name="cordebugstatechange-enumeration"></a>CorDebugStateChange 열거형
 
@@ -40,7 +41,7 @@ typedef enum CorDebugStateChange
 
 ## <a name="remarks"></a>설명
 
- `CorDebugStateChange` [ICorDebugProcess4::P rocessstatechanged](icordebugprocess4-processstatechanged-method.md) 또는 [ICorDebugProcess6::P rocessstatechanged](icordebugprocess6-processstatechanged-method.md) 를 사용 하 여 디버거가 메서드 `ProcessStateChanged` 를 호출할 때 열거형의 멤버가 인수로 제공 됩니다.
+ `CorDebugStateChange` `ProcessStateChanged` [ICorDebugProcess4::P rocessstatechanged](icordebugprocess4-processstatechanged-method.md) 또는 [ICorDebugProcess6::P rocessstatechanged](icordebugprocess6-processstatechanged-method.md) 를 사용 하 여 디버거가 메서드를 호출할 때 열거형의 멤버가 인수로 제공 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 

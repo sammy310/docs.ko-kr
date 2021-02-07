@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugGuidToTypeEnum 인터페이스'
 title: ICorDebugGuidToTypeEnum 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa32b12b-05fc-4ea8-a904-adae25034269
 topic_type:
 - apiref
-ms.openlocfilehash: 149c5b09639c8809e736ade09566e7b1b530e3eb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: abcdc9537f6f6ff2e0ac9b2be86734efbf303493
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705717"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660988"
 ---
 # <a name="icordebugguidtotypeenum-interface"></a>ICorDebugGuidToTypeEnum 인터페이스
 
@@ -45,6 +46,6 @@ ICorDebugType 인스턴스로 표시 되는 Guid 집합과 해당 형식 간의 
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)

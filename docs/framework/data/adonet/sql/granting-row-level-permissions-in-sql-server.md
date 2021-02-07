@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: SQL Server에서 Row-Level 권한 부여'
 title: SQL Server에서 행 수준 권한 부여
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 0b34eaee4b66a2be82049816f0a98b9f53012303
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fe69a023b5befbdb53473881647fff8bdf0e9795
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554855"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663302"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>SQL Server에서 행 수준 권한 부여
 
@@ -61,7 +62,7 @@ ms.locfileid: "90554855"
 
 - 데이터베이스 역할에 저장 프로시저에 대한 EXECUTE 권한을 부여합니다. 사용자는 제공된 저장 프로시저를 통해서만 데이터에 액세스할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [행 수준 보안](/sql/relational-databases/security/row-level-security)
 - [ADO.NET 애플리케이션 보안](../securing-ado-net-applications.md)

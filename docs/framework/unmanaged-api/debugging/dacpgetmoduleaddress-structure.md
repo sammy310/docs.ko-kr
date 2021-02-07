@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: DacpGetModuleAddress Structure'
 title: DacpGetModuleAddress 구조체
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: a65fa9974165fa36e59a7fb83dca6dd902f7d8dc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3de76cc4f15bffd35d7a43ae25a313eb2fe59b82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724397"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661599"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress 구조체
 
@@ -37,7 +38,7 @@ struct DacpGetModuleAddress
 };
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 | 멤버      | 설명                |
 | ----------- | -------------------------- |
@@ -60,7 +61,7 @@ struct DacpGetModuleAddress
 **라이브러리:** 없음을  
 **.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅](index.md)
 - [디버깅 구조체](debugging-structures.md)

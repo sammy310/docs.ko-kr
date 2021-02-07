@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: <Parameter> 요소 (.NET 네이티브)'
 title: <Parameter> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
-ms.openlocfilehash: 7e812ab60eb0a89eb868346733a8ea74e2f76d3e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 53b84027e8393e0a799d9652767d173c2787cd27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287867"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662795"
 ---
 # <a name="parameter-element-net-native"></a>\<Parameter> 요소 (.NET 네이티브)
 
@@ -35,7 +36,7 @@ ms.locfileid: "96287867"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|특성 유형|Description|  
+|attribute|특성 유형|설명|  
 |---------------|--------------------|-----------------|  
 |`Name`|일반|필수 특성입니다. 매개 변수 이름입니다. 예를 들어 메서드 시그니처 `String.CompareTo(Object value)`의 경우 `Name` 특성의 값은 "value"입니다.|  
 |`Activate`|반사|선택적 특성입니다. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.|  
@@ -51,13 +52,13 @@ ms.locfileid: "96287867"
   
 ## <a name="name-attribute"></a>Name 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*parameter_name*|정책이 적용되는 메서드 매개 변수의 이름입니다. 예를 들어 메서드 시그니처 `String.CompareTo(Object value)`의 경우 `Name` 특성의 값은 "value"입니다.|  
   
 ## <a name="all-other-attributes"></a>기타 모든 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
@@ -67,7 +68,7 @@ ms.locfileid: "96287867"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|생성자 또는 메서드에 런타임 리플렉션 정책을 적용합니다.|  
   

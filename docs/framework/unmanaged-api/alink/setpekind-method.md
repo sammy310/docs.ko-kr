@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: SetPEKind 메서드'
 title: SetPEKind 메서드
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-ms.openlocfilehash: be8a11cbf70e2c6f19ace67648b124515c1fb3c3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4154e9e80b7f88b6951c9aa8da5fc23d340c96dc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680042"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662301"
 ---
 # <a name="setpekind-method"></a>SetPEKind 메서드
 
@@ -50,7 +51,7 @@ HRESULT SetPEKind(
  `dwMachine`  
  NT 헤더에 표시 된 대상 컴퓨터 아키텍처입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK을 반환 합니다.  
   
@@ -58,7 +59,7 @@ HRESULT SetPEKind(
 
  Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [GetPEKind 메서드](../metadata/imetadataimport2-getpekind-method.md)
 - [IALink2 인터페이스](ialink2-interface.md)

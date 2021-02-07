@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Coclass 디버깅'
 title: 디버깅 Coclass
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - debugging coclasses [.NET Framework]
 - coclasses [.NET Framework debugging]
 ms.assetid: 94f94159-108e-436c-99e7-dff3beeb2503
-ms.openlocfilehash: b33f4a906bfe719ac81537325b3509e94196403a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c9248cdb305b1d5198d4410be774c47f31b09f82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723014"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661521"
 ---
 # <a name="debugging-coclasses"></a>디버깅 Coclass
 
@@ -22,7 +23,7 @@ ms.locfileid: "95723014"
  [CorpubPublish Coclass](corpubpublish-coclass.md)  
  애플리케이션 도메인 및 프로세스에 대한 정보를 게시하기 위한 인터페이스를 제공합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [디버깅 인터페이스](debugging-interfaces.md)  
   
