@@ -1,23 +1,24 @@
 ---
+description: '자세한 정보: WS-AtomicTransaction 구성 MMC 스냅인'
 title: WS-AtomicTransaction 구성 MMC 스냅인
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 0bcd08f9a3450c850ead941df6313526d076df2d
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 5f1ac32a98b93a3ec3edb9cfa31ae0ebf424aba8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921338"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676302"
 ---
-# <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Ws-atomictransaction 구성 MMC 스냅인
+# <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction 구성 MMC 스냅인
 
-Ws-atomictransaction 구성 MMC 스냅인은 로컬 및 원격 컴퓨터 모두에서 ws-atomictransaction 설정의 일부를 구성 하는 데 사용 됩니다.
+WS-AtomicTransaction 구성 MMC 스냅인은 로컬 및 원격 컴퓨터 모두에서 WS-AtomicTransaction 설정의 일부를 구성 하는 데 사용 됩니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-Windows XP 또는 Windows Server 2003를 실행 하는 경우 **제어판/관리 도구/구성 요소 서비스/** 로 이동 하 여 **내 컴퓨터**를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 하 여 MMC 스냅인을 찾을 수 있습니다. 이 위치는 MSDTC를 구성할 수 있는 위치와 동일합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.
+Windows XP 또는 Windows Server 2003를 실행 하는 경우 **제어판/관리 도구/구성 요소 서비스/** 로 이동 하 여 **내 컴퓨터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 MMC 스냅인을 찾을 수 있습니다. 이 위치는 MSDTC를 구성할 수 있는 위치와 동일합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.
 
- Windows Vista 또는 Windows Server 2008를 실행 하는 경우 **시작** 단추를 클릭 하 고 **검색** 상자에 `dcomcnfg.exe`를 입력 하 여 MMC 스냅인을 찾을 수 있습니다. MMC를 열면 **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** 노드로 이동 하 고 마우스 오른쪽 단추를 클릭 한 다음 **속성**을 선택 합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.
+ Windows Vista 또는 Windows Server 2008를 실행 하는 경우 **시작** 단추를 클릭 하 고 `dcomcnfg.exe` **검색** 상자에를 입력 하 여 MMC 스냅인을 찾을 수 있습니다. MMC를 열면 **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** 노드로 이동 하 고 마우스 오른쪽 단추를 클릭 한 다음 **속성** 을 선택 합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.
 
  앞의 단계는 로컬 컴퓨터를 구성하기 위한 스냅인을 시작하는 데 사용됩니다. 원격 컴퓨터를 구성 하려면 **제어판/관리 도구/구성 요소 서비스/** 에서 원격 컴퓨터의 이름을 찾고, windows XP 또는 windows Server 2003를 실행 하는 경우 비슷한 단계를 수행 해야 합니다. Windows Vista 또는 Windows Server 2008를 실행 하는 경우 Vista 및 Windows Server 2008의 이전 단계를 수행 하지만 원격 컴퓨터의 노드에서 **Distributed Transaction COORDINATOR\LOCAL DTC** 노드를 사용 합니다.
 
@@ -33,13 +34,13 @@ regasm.exe /codebase WsatUI.dll
 
  이 도구를 사용하여 기본 WS-AtomicTransaction 설정을 수정할 수 있습니다. 예를 들어, WS-AtomicTransaction 활성화 및 비활성화하고, WS-AT에 대해 HTTP 포트를 구성하고, SSL 인증서를 HTTP 포트에 바인딩하고, 인증서 주체 이름을 지정하여 인증서를 구성하고, 추적 모드를 선택하고, 기본 및 최대 시간 제한을 설정할 수 있습니다.
 
- 로컬 컴퓨터 에서만 WS-ATOMICTRANSACTION 지원을 구성 해야 하는 경우이 도구의 명령줄 버전을 사용할 수 있습니다. 명령줄 도구에 대 한 자세한 내용은 [Ws-atomictransaction 구성 유틸리티 (wsatconfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md) 항목을 참조 하세요.
+ 로컬 컴퓨터 에서만 WS-AtomicTransaction 지원을 구성 해야 하는 경우이 도구의 명령줄 버전을 사용할 수 있습니다. 명령줄 도구에 대 한 자세한 내용은 [Ws-atomictransaction 구성 유틸리티 (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md) 항목을 참조 하세요.
 
- MMC 스냅인과 명령줄 도구 모두 일부 WS-AT 설정 구성을 지원하지 않습니다. 이러한 설정은 레지스트리를 직접 수정해야지만 편집할 수 있습니다. 이러한 레지스트리 설정에 대 한 자세한 내용은 [WS-원자성 트랜잭션 지원 구성](./feature-details/configuring-ws-atomic-transaction-support.md)을 참조 하세요.
+ MMC 스냅인과 명령줄 도구 모두 일부 WS-AT 설정 구성을 지원하지 않습니다. 이러한 설정은 레지스트리를 직접 수정해야지만 편집할 수 있습니다. 이러한 레지스트리 설정에 대 한 자세한 내용은 [WS-Atomic 트랜잭션 지원 구성](./feature-details/configuring-ws-atomic-transaction-support.md)을 참조 하세요.
 
 ### <a name="user-interface-description"></a>사용자 인터페이스 설명
 
-**WS 원자성 트랜잭션 네트워크 지원 사용**:
+**WS-Atomic 트랜잭션 네트워크 지원 사용**:
 
  이 확인란을 선택하거나 선택 취소하여 이 스냅인의 모든 GUI 구성 요소를 사용하거나 사용하지 않습니다.
 
@@ -58,24 +59,24 @@ regasm.exe /codebase WsatUI.dll
 
  WS-AT를 구성한 후에 방화벽을 활성화하는 경우 이 도구를 다시 실행하고 이 매개 변수를 사용하여 포트 번호를 제공해야 합니다. 구성한 후에 방화벽을 비활성화하는 경우 WS-AT는 추가 입력 없이 계속 작동합니다.
 
- **끝점 인증서**
+ **엔드포인트 인증서**
 
  **선택** 단추를 클릭 하면 로컬 컴퓨터에서 현재 사용할 수 있는 인증서가 포함 된 목록이 표시 되어 사용자가 SSL 암호화에 사용할 수 있는 인증서를 선택할 수 있습니다. 인증서에는 프라이빗 키가 있어야 합니다. 그렇지 않으면 오류 메시지가 표시됩니다.
 
 > [!NOTE]
 > 선택한 포트에 대한 SSL 인증서를 설정하는 경우 인증서가 있으면 해당 포트와 연결된 원래 SSL 인증서를 덮어씁니다.
 
- **권한 있는 계정**
+ **허가된 계정**
 
- **선택** 단추를 클릭 하면 Windows Access Control 목록 편집기가 호출 됩니다 .이 편집기에서는 **참여** 권한 그룹의 **허용** 또는 **거부** 상자를 선택 하 여 WS 원자성 트랜잭션에 참여할 수 있는 사용자 또는 그룹을 지정할 수 있습니다.
+ 선택 단추를 클릭 하면 Windows Access Control 목록 편집기가 호출 됩니다. 그러면 **참여** 권한 그룹의 **허용** 또는 **거부** 상자를 **선택** 하 여 WS-Atomic 트랜잭션에 참여할 수 있는 사용자 또는 그룹을 지정할 수 있습니다.
 
- **권한 있는 인증서**
+ **허가된 인증서**
 
  **선택** 단추를 클릭 하면 LocalMachine에서 현재 사용할 수 있는 인증서 목록이 표시 됩니다. 그런 다음 WS-Atomic Transaction에 참여시할 수 있는 인증서 ID를 선택할 수 있습니다.
 
 #### <a name="timeout-group-box"></a>시간 제한 그룹 상자
 
-**시간 제한** 그룹 상자를 사용 하 여 WS 원자성 트랜잭션에 대 한 기본 및 최대 제한 시간을 지정할 수 있습니다. 보내기 시간 제한의 유효한 값은 1부터 3600까지입니다. 받기 시간 제한의 유효한 값은 0에서 3600까지입니다.
+**시간 제한** 그룹 상자를 사용 하 여 WS-Atomic 트랜잭션에 대 한 기본 및 최대 제한 시간을 지정할 수 있습니다. 보내기 시간 제한의 유효한 값은 1부터 3600까지입니다. 받기 시간 제한의 유효한 값은 0에서 3600까지입니다.
 
 #### <a name="tracing-and-logging-group-box"></a>추적 및 로깅 그룹 상자
 
@@ -83,7 +84,7 @@ regasm.exe /codebase WsatUI.dll
 
  **옵션** 단추를 클릭 하면 추가 설정을 지정할 수 있는 페이지가 호출 됩니다.
 
- **추적 수준** 조합 상자를 사용 하면 <xref:System.Diagnostics.TraceLevel> 열거의 유효한 값 중에서 선택할 수 있습니다. 또한 동작 추적 및 동작 전파를 수행할지 또는 개인적으로 식별할 수 있는 정보를 수집할지를 지정하는 확인란을 사용할 수 있습니다.
+ **추적 수준** 조합 상자를 사용 하 여 열거형의 유효한 값 중에서 선택할 수 있습니다 <xref:System.Diagnostics.TraceLevel> . 또한 동작 추적 및 동작 전파를 수행할지 또는 개인적으로 식별할 수 있는 정보를 수집할지를 지정하는 확인란을 사용할 수 있습니다.
 
  로깅 **세션** 그룹 상자에서 로깅 세션을 지정할 수도 있습니다.
 
@@ -92,7 +93,7 @@ regasm.exe /codebase WsatUI.dll
 
  추적 및 로깅에 대 한 자세한 내용은 [관리 및 진단](./diagnostics/index.md)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WS-Atomic Transaction 지원 구성](./feature-details/configuring-ws-atomic-transaction-support.md)
 - [WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

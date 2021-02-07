@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 ComIntegrationWsdlChannelBuilderLoaded를 확인 하세요.
 title: System.ServiceModel.ComIntegration.ComIntegrationWsdlChannelBuilderLoaded
 ms.date: 03/30/2017
 ms.assetid: b816e27e-e902-4009-bd61-325d68195f28
-ms.openlocfilehash: b25653929935bdb5d32f99889716555e29395035
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e036d08613fe8c9a7565d5974cac63efd91aad7a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290363"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676861"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationwsdlchannelbuilderloaded"></a>System.ServiceModel.ComIntegration.ComIntegrationWsdlChannelBuilderLoaded
 
 System.ServiceModel.ComIntegration.ComIntegrationWsdlChannelBuilderLoaded  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  ComPlus: WSDL 채널 작성기가 로드되었습니다.  
   

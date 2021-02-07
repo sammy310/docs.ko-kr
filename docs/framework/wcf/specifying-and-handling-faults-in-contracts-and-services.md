@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 계약 및 서비스에서 오류 지정 및 처리'
 title: 계약 및 서비스에서 오류 지정 및 처리
 ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: bbc1ca97c8887ebdfbe30f7dd76549572367efbe
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 32a1c795d2be964ff5da259b70a5695ddedfadb2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321107"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676393"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>계약 및 서비스에서 오류 지정 및 처리
 
@@ -47,12 +48,12 @@ WCF 응용 프로그램은 두 가지 유형의 오류 시스템에서 실행 �
 
 ## <a name="undeclared-soap-faults-and-debugging"></a>선언되지 않은 SOAP 오류 및 디버깅
 
-선언된 SOAP 오류는 강력하고 상호 운용 가능하며 배포된 애플리케이션에 특히 유용합니다. 그러나 일부 경우에서는 서비스 또는 이중 클라이언트가 해당 작업에 대해 WSDL(웹 서비스 기술 언어)에서 언급되지 않은 오류인 선언되지 않은 SOAP 오류를 보내는 데 유용합니다. 예를 들어 서비스를 개발할 때 클라이언트에게 정보를 다시 보내기 위해 디버깅에 유용하지만 예기치 않은 상황이 발생할 수 있습니다. 또한 WCF 클라이언트가 내부 서비스 작업 예외에 대 한 정보를 가져올 수 있도록 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 속성 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 속성을 `true`로 설정할 수 있습니다. 개별 오류를 보내고 디버깅 동작 속성을 설정 하는 것은 [오류 송수신](sending-and-receiving-faults.md)에 설명 되어 있습니다.
+선언된 SOAP 오류는 강력하고 상호 운용 가능하며 배포된 애플리케이션에 특히 유용합니다. 그러나 일부 경우에서는 서비스 또는 이중 클라이언트가 해당 작업에 대해 WSDL(웹 서비스 기술 언어)에서 언급되지 않은 오류인 선언되지 않은 SOAP 오류를 보내는 데 유용합니다. 예를 들어 서비스를 개발할 때 클라이언트에게 정보를 다시 보내기 위해 디버깅에 유용하지만 예기치 않은 상황이 발생할 수 있습니다. 또한 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 속성 또는 속성을로 설정 하 여 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> `true` WCF 클라이언트가 내부 서비스 작업 예외에 대 한 정보를 얻을 수 있도록 합니다. 개별 오류를 보내고 디버깅 동작 속성을 설정 하는 것은 [오류 송수신](sending-and-receiving-faults.md)에 설명 되어 있습니다.
 
 > [!IMPORTANT]
 > 관리 되는 예외는 내부 애플리케이션 정보를 노출할 수, 있으므로 설정 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 나 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 에 `true` WCF 클라이언트에서는 개인적으로 포함 하 여 내부 서비스 작업 예외에 대 한 정보를 허용 하려면 식별할 수 있는 정보나 기타 중요 한 정보입니다.
 >
-> 그러므로 임시로 서비스 애플리케이션을 디버깅하려는 경우 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>를 `true`로 설정하는 것이 유일한 좋은 방법입니다. 또한이 방법으로 처리 되지 않은 관리 되는 예외를 반환 하는 메서드의 WSDL에는 <xref:System.ServiceModel.ExceptionDetail> 형식의 <xref:System.ServiceModel.FaultException%601>에 대 한 계약이 포함 되지 않습니다. 클라이언트는 디버깅 정보를 올바르게 얻기 위해 알 수 없는 SOAP 오류의 가능성 (WCF 클라이언트에 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 개체로 반환 됨)을 고려해 야 합니다.
+> 그러므로 임시로 서비스 애플리케이션을 디버깅하려는 경우 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>를 `true`로 설정하는 것이 유일한 좋은 방법입니다. 또한 이 방법으로 처리되지 않은 관리되는 예외를 반환하는 메서드의 WSDL에는 <xref:System.ServiceModel.FaultException%601> 형식의 <xref:System.ServiceModel.ExceptionDetail>에 대한 계약이 포함되지 않습니다. 클라이언트에서는 알 수 없는 SOAP 오류 (WCF 클라이언트에 개체로 반환 됨)가 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 디버깅 정보를 제대로 가져올 가능성을 고려해 야 합니다.
 
 ## <a name="customizing-error-handling-with-ierrorhandler"></a>IErrorHandler를 사용하여 오류 처리 사용자 지정
 
@@ -62,7 +63,7 @@ WCF 응용 프로그램은 두 가지 유형의 오류 시스템에서 실행 �
 
 오류 계약을 역직렬화할 때 WCF에서는 먼저 SOAP 메시지의 오류 계약 이름과 일치하는 오류 계약 형식을 찾으려고 시도합니다. 정확히 일치하는 것을 찾을 수 없으면 알파벳 순서로 정렬된 사용 가능한 오류 계약 목록에서 호환되는 형식을 검색합니다. 두 오류 계약이 호환되는 형식인 경우(예: 한 계약이 다른 계약의 서브클래스인 경우) 잘못된 형식이 오류를 deserialize하는 데 사용될 수 있습니다. 이 문제는 오류 계약이 이름, 네임스페이스 및 동작을 지정하지 않은 경우에만 발생합니다. 이 문제가 발생하지 않도록 하려면 항상 이름, 네임스페이스 및 동작 특성을 지정하여 오류 계약을 정규화합니다. 또한 공유 기본 클래스에서 파생되는 많은 관련 오류 계약을 정의한 경우 `[DataMember(IsRequired=true)]`를 사용하여 모든 새 멤버를 표시해야 합니다. 이 `IsRequired` 특성에 대한 자세한 내용은 <xref:System.Runtime.Serialization.DataMemberAttribute>를 참조하십시오. 이렇게 하면 기본 클래스가 호환되는 형식이 될 수 없으며 오류가 올바른 파생 형식으로 역직렬화됩니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultContractAttribute>

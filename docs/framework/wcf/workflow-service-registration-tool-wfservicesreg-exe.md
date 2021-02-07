@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 워크플로 서비스 등록 도구 (WFServicesReg.exe)'
 title: 워크플로 서비스 등록 도구(WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 763b617a99c98383b5b873e4fb8646884f9b5253
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 302da7e6e62db771472f95dc422cc7e97408600b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96261880"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99676328"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>워크플로 서비스 등록 도구(WFServicesReg.exe)
 
@@ -25,7 +26,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  다음 표에서는 워크플로 서비스 등록 도구(WFServicesReg.exe)에서 사용할 수 있는 옵션에 대해 설명합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |`/c`|Windows Workflow Services를 구성합니다. 설치 및 복구 시나리오에서 사용됩니다.|  
 |`/r`|Windows Workflow Services 구성을 제거합니다.|  
