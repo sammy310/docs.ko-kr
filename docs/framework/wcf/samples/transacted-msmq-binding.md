@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: 트랜잭션 된 MSMQ 바인딩'
 title: 트랜잭션된 MSMQ 바인딩
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-ms.openlocfilehash: fa53099caba144f321698f180fe18f7614a1fa64
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 17fdcdb169c9e57c1a95d5aea4c79654e3739664
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596567"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668528"
 ---
 # <a name="transacted-msmq-binding"></a>트랜잭션된 MSMQ 바인딩
 
@@ -50,7 +51,7 @@ public interface IOrderProcessor
 }
 ```
 
-서비스는 자체 호스트됩니다. MSMQ 전송을 사용하는 경우에는 사용되는 큐를 미리 만들어야 합니다. 수동으로 또는 코드를 통해 이 작업을 수행할 수 있습니다. 이 샘플에서 서비스에는 큐가 있는지 확인하고 큐가 없으면 이를 만드는 코드가 포함되어 있습니다. 큐 이름은 구성 파일에서 읽습니다. 기본 주소는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 에서 서비스에 대 한 프록시를 생성 하는 데 사용 됩니다.
+서비스는 자체 호스트됩니다. MSMQ 전송을 사용하는 경우에는 사용되는 큐를 미리 만들어야 합니다. 수동으로 또는 코드를 통해 이 작업을 수행할 수 있습니다. 이 샘플에서 서비스에는 큐가 있는지 확인하고 큐가 없으면 이를 만드는 코드가 포함되어 있습니다. 큐 이름은 구성 파일에서 읽습니다. 기본 주소는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 에서 서비스에 대 한 프록시를 생성 하는 데 사용 됩니다.
 
 ```csharp
 // Host the service within this EXE console application.
@@ -167,7 +168,7 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 
     2. **기능** 탭을 확장 합니다.
 
-    3. **개인 메시지 큐**를 마우스 오른쪽 단추로 클릭 하 고 **새로 만들기**, **개인 큐**를 선택 합니다.
+    3. **개인 메시지 큐** 를 마우스 오른쪽 단추로 클릭 하 고 **새로 만들기**, **개인 큐** 를 선택 합니다.
 
     4. **트랜잭션** 상자를 확인 합니다.
 

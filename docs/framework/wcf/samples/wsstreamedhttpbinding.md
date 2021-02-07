@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: WSStreamedHttpBinding'
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: 619c7e793ff94efffcb72774cf3e367df377a3a3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ef5b3bf3501f64389005ea1542874ff32a42ad82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600895"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668281"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 
@@ -137,7 +138,7 @@ public class StreamedEchoService : IStreamedEchoService
 
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>WSStreamedHttpBinding 샘플 클라이언트
 
-`WSStreamedHttpBinding`을 사용하여 상호 작용하는 데 사용되는 클라이언트는 클라이언트 하위 디렉터리에 있습니다. 이 샘플에 사용 된 인증서는 Makecert.exe를 사용 하 여 만든 테스트 인증서 이므로 브라우저에서와 같은 HTTPS 주소에 액세스 하려고 하면 보안 경고가 표시 됩니다 `https://localhost/servicemodelsamples/service.svc` . WCF 클라이언트가 테스트 인증서를 사용 하 여 작동 하도록 허용 하기 위해 일부 추가 코드를 클라이언트에 추가 하 여 보안 경고를 표시 하지 않습니다. 코드 및 함께 사용되는 클래스는 프로덕션 인증서를 사용할 때에는 필요가 없습니다.
+`WSStreamedHttpBinding`을 사용하여 상호 작용하는 데 사용되는 클라이언트는 클라이언트 하위 디렉터리에 있습니다. 이 샘플에 사용 된 인증서는 Makecert.exe으로 만든 테스트 인증서 이므로 브라우저에서와 같은 HTTPS 주소에 액세스 하려고 하면 보안 경고가 표시 됩니다 `https://localhost/servicemodelsamples/service.svc` . WCF 클라이언트가 테스트 인증서를 사용 하 여 작동 하도록 허용 하기 위해 일부 추가 코드를 클라이언트에 추가 하 여 보안 경고를 표시 하지 않습니다. 코드 및 함께 사용되는 클래스는 프로덕션 인증서를 사용할 때에는 필요가 없습니다.
 
 ```csharp
 // WARNING: This code is only required for test certificates such as those created by makecert. It is

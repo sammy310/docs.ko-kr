@@ -1,15 +1,16 @@
 ---
+description: WS 트랜잭션 흐름에 대해 자세히 알아보세요.
 title: WS Transaction Flow
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 7fd4968bbe4e1a3dafbfc35cc0617cef7083d291
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4d0a0af77dd516bf98c5dc8318ac110a31e731e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96252402"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668372"
 ---
 # <a name="ws-transaction-flow"></a>WS Transaction Flow
 

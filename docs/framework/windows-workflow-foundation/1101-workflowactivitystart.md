@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 1101-WorkflowActivityStart'
 title: 1101 - WorkflowActivityStart
 ms.date: 03/30/2017
 ms.assetid: 831cd386-b9b5-47a9-9690-aff6292ff348
-ms.openlocfilehash: 6e43b0ab1e2d35657bae43e7239a677643154fa9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f84a3de405d05e5f4669244577a4a16c1c53f8d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238732"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667592"
 ---
 # <a name="1101---workflowactivitystart"></a>1101 - WorkflowActivityStart
 
@@ -20,7 +21,7 @@ ms.locfileid: "96238732"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  워크플로 작업이 시작되었음을 나타냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96238732"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |WorkflowInstanceId|xs:string|워크플로 인스턴스 ID입니다.|  
 |AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.|

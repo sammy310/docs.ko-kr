@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 105-FaultPropagationRecord'
 title: 105 - FaultPropagationRecord
 ms.date: 03/30/2017
 ms.assetid: 168473b1-b1e5-4e9f-8a2a-35bbdb2ef531
-ms.openlocfilehash: 3390a77f16cc52e52ea1b3e4c1a34d0f44795abb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 95f82763606bf16219fa4234b5f6e7101c0954fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238914"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667683"
 ---
 # <a name="105---faultpropagationrecord"></a>105 - FaultPropagationRecord
 
@@ -20,7 +21,7 @@ ms.locfileid: "96238914"
 |Level|경고|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  워크플로 인스턴스가 포함된 활동에서 FaultPropagationRecord를 내보내면 ETW 추적 참여자가 이 이벤트를 내보냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96238914"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|워크플로의 인스턴스 ID|  
 |RecordNumber|xs:long|내보낸 레코드의 시퀀스 번호|  

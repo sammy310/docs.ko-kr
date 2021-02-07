@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: WCF 오류 처리'
 title: WCF 오류 처리
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: 72db5db9f6b4a3cd2ba62fe938fcfeed2dfda1e5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 57f2c5078e0f73ff57eec79041cb7a2b2d42b498
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96240942"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668177"
 ---
 # <a name="wcf-error-handling"></a>WCF 오류 처리
 
@@ -45,7 +46,7 @@ WCF 애플리케이션에서 발생하는 오류는 다음 세 그룹 중 하나
   
 ## <a name="servicehost-events"></a>ServiceHost 이벤트  
 
- <xref:System.ServiceModel.ServiceHost> 클래스는 서비스를 호스트하며 오류 처리에 필요할 수 있는 여러 이벤트를 정의합니다. 예를 들면 다음과 같습니다.  
+ <xref:System.ServiceModel.ServiceHost> 클래스는 서비스를 호스트하며 오류 처리에 필요할 수 있는 여러 이벤트를 정의합니다. 다음은 그 예입니다.   
   
 1. <xref:System.ServiceModel.Channels.CommunicationObject.Faulted>
   

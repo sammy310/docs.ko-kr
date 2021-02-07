@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 토큰 지원'
 title: Supporting Tokens
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: d7e2a824060f4be05e0b0e9d1765fcf271eacbd3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 455c69ce1ae03bd612f78a7977b013955bd81868
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293665"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668736"
 ---
 # <a name="supporting-tokens"></a>Supporting Tokens
 

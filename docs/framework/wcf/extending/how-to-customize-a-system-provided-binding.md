@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 방법: System-Provided 바인딩 사용자 지정'
 title: '방법: 시스템 제공 바인딩 사용자 지정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: e3d7cb72bcbdd636530e7861071b73f8a5f38b31
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c0463a8e427e6503f0e68bc58eb488f9b0bad15a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249230"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668957"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>방법: 시스템 제공 바인딩 사용자 지정
 

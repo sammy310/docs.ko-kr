@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 사용자 지정 인증서 유효성 검사기를 활용 하는 서비스 만들기'
 title: '방법: 사용자 지정 인증서 유효성 검사기를 사용하는 서비스 만들기'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: 31918ca2d96b63911130d22476a6e5a6d48999ee
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8ed5d23143b7b69768cc556d9fd5663e46fd7da7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249243"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668983"
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>방법: 사용자 지정 인증서 유효성 검사기를 사용하는 서비스 만들기
 
@@ -123,7 +124,7 @@ ms.locfileid: "96249243"
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
 
  다음 샘플에서는 서비스에 사용자 지정 인증서 유효성 검사기를 구현하고 사용하는 방법을 보여 줍니다.  
   

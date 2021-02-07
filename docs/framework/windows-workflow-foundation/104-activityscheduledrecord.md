@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 104-ActivityScheduledRecord'
 title: 104 - ActivityScheduledRecord
 ms.date: 03/30/2017
 ms.assetid: ae202178-8fb1-4646-a3aa-18beeda8ff93
-ms.openlocfilehash: b2c7cbd169053188d5e84a0b8afd87c4916c87cb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9d52dac3ec68de0d38959e81294c5c6ead21428e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238966"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99667813"
 ---
 # <a name="104---activityscheduledrecord"></a>104 - ActivityScheduledRecord
 
@@ -20,7 +21,7 @@ ms.locfileid: "96238966"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  워크플로 인스턴스 내의 활동이 ActivityScheduledRecord를 내보내면 ETW 추적 참가자가 이 이벤트를 내보냅니다.  
   
@@ -30,12 +31,12 @@ ms.locfileid: "96238966"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|워크플로의 인스턴스 ID|  
 |RecordNumber|xs:long|내보낸 레코드의 시퀀스 번호|  
 |EventTime|xs:dateTime|이벤트를 내보낸 시간(UTC)|  
-|이름|xs:string|자식 활동을 예약한 활동의 이름|  
+|Name|xs:string|자식 활동을 예약한 활동의 이름|  
 |ActivityId|xs:string|자식 활동을 예약한 활동의 ID|  
 |ActivityInstanceId|xs:string|자식 활동을 예약한 활동의 인스턴스 ID|  
 |ActivityTypeName|xs:string|취소 작업을 요청한 활동의 형식|  

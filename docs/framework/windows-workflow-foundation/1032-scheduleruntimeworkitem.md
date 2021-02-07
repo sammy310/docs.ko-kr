@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 1032-ScheduleRuntimeWorkItem'
 title: 1032 - ScheduleRuntimeWorkItem
 ms.date: 03/30/2017
 ms.assetid: 54688101-becf-42f3-80ca-f53a7b527620
-ms.openlocfilehash: da35201f2b3e3bc07e0b9139b0584ce37011e168
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d96226b4ab0f856218d292c9c2481bca6c463c8a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294315"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668047"
 ---
 # <a name="1032---scheduleruntimeworkitem"></a>1032 - ScheduleRuntimeWorkItem
 
@@ -20,7 +21,7 @@ ms.locfileid: "96294315"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  RuntimeWorkItem이 예약되었음을 나타냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96294315"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |활동|xs:string|작업의 형식 이름입니다.|  
 |DisplayName|xs:string|작업의 표시 이름입니다.|  

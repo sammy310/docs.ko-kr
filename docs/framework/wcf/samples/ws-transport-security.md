@@ -1,13 +1,14 @@
 ---
+description: WS 전송 보안에 대해 자세히 알아보세요.
 title: WS 전송 보안
 ms.date: 03/30/2017
 ms.assetid: 33a20358-5e1b-458a-a6a9-15753bc7b99b
-ms.openlocfilehash: 64059a5a09d49f83c9abda5b2f3d1601acf41a3e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0fc09815e757e1cda1a7fd196e33fab4d56d2cde
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96252415"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99668359"
 ---
 # <a name="ws-transport-security"></a>WS 전송 보안
 
