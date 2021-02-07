@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: ASP.NET 응용 프로그램의 SqlDependency'
 title: ASP.NET 애플리케이션에서 SqlDependency
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: 7c982550533cb6d8547ab2ce78ad2e814d07857f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 686586af834884f97ff8e62fdc792b3cdc23f507
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184796"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767026"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET 애플리케이션에서 SqlDependency
 

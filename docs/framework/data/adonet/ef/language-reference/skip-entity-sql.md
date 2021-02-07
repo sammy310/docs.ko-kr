@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: SKIP (Entity SQL)'
 title: SKIP(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
-ms.openlocfilehash: 68f54dc5118e09d78f98c687e8a44def43b45c7d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f4924acae6e351e076b5795cf47d63966ebdcb43
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768014"
 ---
 # <a name="skip-entity-sql"></a>SKIP(Entity SQL)
 
@@ -40,9 +41,9 @@ SKIP 식 하위 절이 ORDER BY 절에 있으면 결과는 정렬 지정에 따�
 
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] [방법: 쿼리 결과를 통한 페이지](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)) 의 쿼리는 SKIP과 함께 ORDER by 연산자를 사용 하 여 SELECT 문에서 반환 되는 개체에 사용 되는 정렬 순서를 지정 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ORDER BY](order-by-entity-sql.md)
 - [방법: 쿼리 결과를 통해 페이징](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [페이징](paging-entity-sql.md)
-- [맨 위로](top-entity-sql.md)
+- [맨 위로 이동](top-entity-sql.md)

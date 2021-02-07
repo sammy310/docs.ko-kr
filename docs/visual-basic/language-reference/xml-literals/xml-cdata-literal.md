@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: XML CDATA 리터럴 (Visual Basic)'
 title: XML CDATA 리터럴
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: 4447ad6cf0fb251b0d2d1387c109b06d32f69cb8
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d0b419954acb5a9e8ae824dbac8234e2116d09b9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866100"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768755"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA 리터럴(Visual Basic)
 
 개체를 나타내는 리터럴입니다 <xref:System.Xml.Linq.XCData> .  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <![CDATA[content]]>  
@@ -36,7 +37,7 @@ ms.locfileid: "90866100"
  `]]>`  
  필수 사항입니다. 섹션의 끝을 나타냅니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  <xref:System.Xml.Linq.XCData> 개체입니다.  
   
@@ -61,7 +62,7 @@ ms.locfileid: "90866100"
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Linq.XCData>
 - [XML 요소 리터럴](xml-element-literal.md)

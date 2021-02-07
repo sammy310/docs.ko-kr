@@ -1,17 +1,20 @@
 ---
+description: '자세히 알아보기: WCF Data Services 시작'
 title: WCF Data Services로 시작
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
-ms.openlocfilehash: 011d49688a1aa611ab2a3cfb314e03bb0b38b56d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 051de9c86ac9b0ec058339da13ea43b0b31cf9ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172608"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765882"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF Data Services로 시작
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 이 섹션의 항목에서는 OData (Open Data Protocol) 및 WCF Data Services를 사용 하 여 기본 기술을 설명 하 여 OData 피드를 노출 하 고 사용 하는 방법을 신속 하 게 이해 하는 데 도움이 됩니다. 이 섹션에서는 개념 콘텐츠와 [빠른](quickstart-wcf-data-services.md) 시작 자습서를 모두 제공 합니다.  
   

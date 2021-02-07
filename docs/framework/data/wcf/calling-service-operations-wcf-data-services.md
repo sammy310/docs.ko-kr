@@ -1,18 +1,21 @@
 ---
+description: '자세한 정보: 서비스 작업 호출 (WCF Data Services)'
 title: 서비스 작업 호출(WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: ac1b28665dcaaa9f8c6ae6a6611757f6c4969adb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 49b08581e42fcd20b9d560d73379eb43ebbf2eb4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152847"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766467"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>서비스 작업 호출(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 OData (Open Data Protocol)는 데이터 서비스에 대 한 서비스 작업을 정의 합니다. WCF Data Services를 사용 하면 데이터 서비스에서 메서드로 이러한 작업을 정의할 수 있습니다. 다른 데이터 서비스 리소스와 마찬가지로, 이러한 서비스 작업도 URI를 사용하여 지정합니다. 서비스 작업은 엔터티 형식의 컬렉션, 단일 엔터티 형식 인스턴스, 그리고 정수, 문자열과 같은 기본 형식을 반환할 수 있습니다. 서비스 작업은 `null`(Visual Basic에서 `Nothing`)도 반환할 수 있습니다. WCF Data Services 클라이언트 라이브러리를 사용 하 여 HTTP GET 요청을 지 원하는 서비스 작업에 액세스할 수 있습니다. 이러한 종류의 서비스 작업은 <xref:System.ServiceModel.Web.WebGetAttribute>가 적용된 메서드로 정의할 수 있습니다. 자세한 내용은 [서비스 작업](service-operations-wcf-data-services.md)을 참조 하세요.  
   

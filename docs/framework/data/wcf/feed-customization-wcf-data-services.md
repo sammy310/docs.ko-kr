@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 피드 사용자 지정 (WCF Data Services)'
 title: 피드 사용자 지정(WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -10,14 +11,16 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: bf25737d98a880ac720318de18b687b4df5b0708
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9c9e0ead05c446b293fd728c3720472529a0cf0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172634"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765960"
 ---
 # <a name="feed-customization-wcf-data-services"></a>피드 사용자 지정(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services는 OData (Open Data Protocol)를 사용 하 여 데이터를 피드로 노출 합니다. OData는 데이터 피드에 대해 Atom 및 JavaScript Object Notation (JSON) 형식을 모두 지원 합니다. Atom 피드를 사용 하는 경우 OData는 엔터티 및 관계와 같은 데이터를 HTTP 메시지의 본문에 포함할 수 있는 XML 형식으로 serialize 하는 표준 메서드를 제공 합니다. OData는 엔터티와 Atom 요소에 포함 된 데이터 간의 기본 엔터티 속성 매핑을 정의 합니다. 자세한 내용은 [OData: Atom Format](https://www.odata.org/documentation/odata-version-2-0/atom-format/)을 참조 하십시오.  
   

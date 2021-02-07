@@ -1,18 +1,21 @@
 ---
+description: '응용 프로그램 시나리오에 대 한 자세한 정보: 응용 프로그램 시나리오 (WCF Data Services)'
 title: 애플리케이션 시나리오(WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 842f560df5229fc8a2249e1317cb348b7ed3361a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: af772a3197e1fee312d70797c8a954434db6ffdf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556891"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766636"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>애플리케이션 시나리오(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services는 OData (Open Data Protocol) 피드로 데이터를 표시 하 고 소비 하는 핵심 시나리오 집합을 지원 합니다. 이 항목에서는 이 시나리오와 관련된 항목으로 연결됩니다.
 
@@ -98,7 +101,7 @@ OData 피드를 WPF (Windows Presentation Framework) 응용 프로그램의 컨�
 
 - [서비스 작업](service-operations-wcf-data-services.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [빠른 시작](quickstart-wcf-data-services.md)
 - [리소스](wcf-data-services-resources.md)

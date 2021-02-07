@@ -1,17 +1,20 @@
 ---
+description: '자세한 정보: 사용자 지정 데이터 서비스 공급자 (WCF Data Services)'
 title: 사용자 지정 데이터 서비스 공급자(WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: 4c92bf2f4e75b78cd6236c023246cc6c999086fa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: df0cafae46cfdbd71a96341686a9200f032a9938
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186694"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766155"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>사용자 지정 데이터 서비스 공급자(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services에는 런타임에 바인딩된 데이터 형식을 기반으로 데이터 모델을 정의 하는 데 사용할 수 있는 공급자 집합이 포함 되어 있습니다.  
   

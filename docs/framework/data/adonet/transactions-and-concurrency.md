@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 트랜잭션 및 동시성'
 title: 트랜잭션 및 동시성
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: 049e402345e1abbb46739e48c89101207a43bb27
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c77b9abc72ae662eec76fc40a9856ad73f000c27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191673"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766766"
 ---
 # <a name="transactions-and-concurrency"></a>트랜잭션 및 동시성
 
@@ -20,7 +21,7 @@ ms.locfileid: "91191673"
   
  같은 데이터베이스나 서버에 여러 테이블이 있는 트랜잭션의 경우에는 저장 프로시저의 명시적 트랜잭션이 더 효과적으로 수행되는 경우가 많습니다. SQL Server 저장 프로시저에서는 Transact-SQL `BEGIN TRANSACTION`, `COMMIT TRANSACTION` 및 `ROLLBACK TRANSACTION` 문을 사용하여 트랜잭션을 만들 수 있습니다. 자세한 내용은 SQL Server 온라인 설명서를 참조하십시오.  
   
- SQL Server와 Oracle 간의 트랜잭션과 같이 서로 다른 리소스 관리자와 관련 된 트랜잭션에는 분산 트랜잭션이 필요 합니다.  
+ SQL Server와 Oracle 간 트랜잭션 같은 여러 리소스 관리자가 관련된 트랜잭션에는 분산 트랜잭션이 필요합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 
@@ -30,8 +31,8 @@ ms.locfileid: "91191673"
  [분산 트랜잭션](distributed-transactions.md)  
  ADO.NET에서 분산 트랜잭션을 수행하는 방법을 설명합니다.  
   
- [SQL Server와의 System.Transactions 통합](system-transactions-integration-with-sql-server.md)  
- <xref:System.Transactions>분산 트랜잭션 작업을 위한 SQL Server와의 통합에 대해 설명 합니다.  
+ [SQL Server와의 시스템 트랜잭션 통합](system-transactions-integration-with-sql-server.md)  
+ 분산 트랜잭션 작업을 위한 <xref:System.Transactions>와 SQL Server 간 통합을 설명합니다.  
   
  [낙관적 동시성](optimistic-concurrency.md)  
  낙관적 및 비관적 동시성에 대해 설명하고 동시성 위반을 테스트하는 방법에 대해 살펴봅니다.  

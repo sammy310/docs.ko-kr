@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 개발 및 배포 WCF Data Services'
 title: WCF Data Services 개발 및 배포
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,14 +8,16 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 484505406701b52a2b80b95b718a23a2156aa22c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 52d7a00ffbd333b9a6ad01298fd1133ea8d5e731
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "90556091"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766077"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF Data Services 개발 및 배포
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 이 문서에서는 WCF Data Services 개발 및 배포에 대 한 정보를 제공 합니다. WCF Data Services에 대 한 자세한 기본 정보는 [시작](getting-started-with-wcf-data-services.md) 및 [개요](wcf-data-services-overview.md)를 참조 하세요.
 

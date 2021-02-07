@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: SQL Server에서 저장 프로시저 서명'
 title: SQL Server에서 저장 프로시저에 서명
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 3f33af0238781407dd845a823ff28d87af48feb2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1189f3ac24c8499cd8fb3ff9e6b6263a71fcc3a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558552"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767507"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>SQL Server에서 저장 프로시저에 서명
 
@@ -52,12 +53,12 @@ ms.locfileid: "90558552"
 
 자세한 내용은 다음 리소스를 참조하세요.
 
-|리소스|Description|
+|리소스|설명|
 |--------------|-----------------|
 |[모듈 서명](/previous-versions/sql/sql-server-2008/ms345102(v=sql.100))|모듈 서명에 대해 설명 하 고 샘플 시나리오와 관련 Transact-sql 문서에 대 한 링크를 제공 합니다.|
 |[인증서로 저장 프로시저 서명](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate)|인증서로 저장 프로시저에 서명하는 방법에 대한 자습서를 제공합니다.|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ADO.NET 애플리케이션 보안](../securing-ado-net-applications.md)
 - [SQL Server 보안 개요](overview-of-sql-server-security.md)

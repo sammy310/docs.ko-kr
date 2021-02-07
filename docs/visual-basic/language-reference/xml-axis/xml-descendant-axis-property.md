@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: XML 하위 항목 축 속성 (Visual Basic)'
 title: XML Descendant Axis Property
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: 52544619171dbc7034baeb5feb61395d81096387
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c356d4d6f9a84755e9df171b26060fc6bfc4ead6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400255"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768781"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>XML 하위 항목 축 속성(Visual Basic)
 
 <xref:System.Xml.Linq.XElement>개체, <xref:System.Xml.Linq.XDocument> 개체, 개체 컬렉션 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument> 개체 컬렉션의 하위 항목에 대 한 액세스를 제공 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 object...<descendant>
@@ -35,14 +36,14 @@ object...<descendant>
 
 `descendant` 필수입니다. [. 형식으로 액세스할 하위 노드의 이름입니다 `prefix:]name` .
 
-|부분|Description|
+|파트|설명|
 |----------|-----------------|
 |`prefix`|선택 사항입니다. 하위 노드에 대 한 XML 네임 스페이스 접두사입니다. 는 문을 사용 하 여 정의 된 전역 XML 네임 스페이스 여야 합니다 `Imports` .|
-|`name`|필수 요소. 하위 노드의 로컬 이름입니다. [선언 된 XML 요소 및 특성의 이름](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)을 참조 하세요.|
+|`name`|필수 사항입니다. 하위 노드의 로컬 이름입니다. [선언 된 XML 요소 및 특성의 이름](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)을 참조 하세요.|
 
 `>` 필수입니다. 하위 축 속성의 끝을 나타냅니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 <xref:System.Xml.Linq.XElement> 개체의 컬렉션입니다.
 

@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: SQL Server에 대 한 공급자 통계'
 title: SQL Server용 공급자 통계
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: 21bf7662094d5bc8948a1ce6378c454713cacc62
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ece5a6214d438ecac64e8738755d5fb5d0ed7245
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183119"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767598"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server용 공급자 통계
 
@@ -342,7 +343,7 @@ namespace CS_Stats_Console_GetAll
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [SQL Server 및 ADO.NET](index.md)
 - [ADO.NET 개요](../ado-net-overview.md)

@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: XML 값을 매개 변수로 지정'
 title: XML 값을 매개 변수로 지정
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 20a573da0221704451f10138cb854523d5a17f17
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9c5b81270eeaec1fc0b3992971c9285863c92466
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183054"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767455"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>XML 값을 매개 변수로 지정
 
@@ -18,7 +19,7 @@ ms.locfileid: "91183054"
   
 ## <a name="example"></a>예제  
 
- 다음 콘솔 애플리케이션에서는 **AdventureWorks** 데이터베이스에 새 테이블을 만듭니다. 이 새 테이블에는 **SalesID**라는 열과 **SalesInfo**라는 XML 열이 포함되어 있습니다.  
+ 다음 콘솔 애플리케이션에서는 **AdventureWorks** 데이터베이스에 새 테이블을 만듭니다. 이 새 테이블에는 **SalesID** 라는 열과 **SalesInfo** 라는 XML 열이 포함되어 있습니다.  
   
 > [!NOTE]
 > **AdventureWorks** 샘플 데이터베이스는 SQL Server를 설치할 때 기본적으로 설치되지 않으며 SQL Server Setup을 실행하여 설치할 수 있습니다.  

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: LINQ to SQL 데이터 소스를 사용 하 여 데이터 서비스 만들기 (WCF Data Services)'
 title: '방법: LINQ to SQL 데이터 원본을 사용하여 데이터 서비스 만들기(WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,36 +9,38 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: cde5b9903a1fd164ce106a6a408ac4bb79976642
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 18c59cc8a067372f2a5c5b4b25d9aec77515ad98
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802289"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766246"
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>방법: LINQ to SQL 데이터 원본을 사용하여 데이터 서비스 만들기(WCF Data Services)
 
-WCF Data Services 엔터티 데이터를 데이터 서비스로 노출 합니다. 리플렉션 공급자를 사용 하면 <xref:System.Linq.IQueryable%601> 구현을 반환 하는 멤버를 노출 하는 클래스를 기반으로 하는 데이터 모델을 정의할 수 있습니다. 데이터 소스의 데이터를 업데이트할 수 있으려면 이러한 클래스도 <xref:System.Data.Services.IUpdatable> 인터페이스를 구현해야 합니다. 자세한 내용은 [데이터 서비스 공급자](data-services-providers-wcf-data-services.md)합니다. 이 항목에서는 리플렉션 공급자를 사용하여 Northwind 샘플 데이터베이스에 액세스하는 LINQ to SQL 클래스를 만드는 방법과 이러한 데이터 클래스를 기반으로 하는 데이터 서비스를 만드는 방법을 보여 줍니다.
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+WCF Data Services 엔터티 데이터를 데이터 서비스로 노출 합니다. 리플렉션 공급자를 사용 하면 구현을 반환 하는 멤버를 노출 하는 클래스를 기반으로 하는 데이터 모델을 정의할 수 있습니다 <xref:System.Linq.IQueryable%601> . 데이터 소스의 데이터를 업데이트할 수 있으려면 이러한 클래스도 <xref:System.Data.Services.IUpdatable> 인터페이스를 구현해야 합니다. 자세한 내용은 [데이터 서비스 공급자](data-services-providers-wcf-data-services.md)합니다. 이 항목에서는 리플렉션 공급자를 사용하여 Northwind 샘플 데이터베이스에 액세스하는 LINQ to SQL 클래스를 만드는 방법과 이러한 데이터 클래스를 기반으로 하는 데이터 서비스를 만드는 방법을 보여 줍니다.
 
 ## <a name="to-add-linq-to-sql-classes-to-a-project"></a>프로젝트에 LINQ to SQL 클래스를 추가하려면
 
-1. Visual Basic C# 또는 응용 프로그램 내에서 **프로젝트** 메뉴의 > **새 항목** **추가** 를 클릭 합니다.
+1. Visual Basic 또는 c # 응용 프로그램에서 **프로젝트** 메뉴의   >  **새 항목** 추가를 클릭 합니다.
 
 2. **LINQ to SQL 클래스** 템플릿을 클릭 합니다.
 
-3. 이름을 **Northwind .dbml**로 변경 합니다.
+3. 이름을 **Northwind .dbml** 로 변경 합니다.
 
-4. **추가**를 클릭합니다.
+4. **추가** 를 클릭합니다.
 
      Northwind.dbml 파일이 프로젝트에 추가되고 Object Relational Designer(O/R Designer)가 열립니다.
 
-5. **서버**/**데이터베이스 탐색기**Northwind에서 **테이블** 을 확장 하 고 `Customers` 테이블을 개체 관계형 디자이너 (O/R 디자이너)로 끌어 옵니다.
+5. **서버** / **데이터베이스 탐색기** Northwind 아래에서 **테이블** 을 확장 하 고 테이블을 `Customers` 개체 관계형 디자이너 (O/R 디자이너)로 끕니다.
 
      `Customer` 엔터티 클래스가 만들어져 디자인 화면에 표시됩니다.
 
 6. `Orders`, `Order_Details` 및 `Products` 테이블에 대해 6단계를 반복합니다.
 
-7. LINQ to SQL 클래스를 나타내는 새 .dbml 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 클릭 합니다.
+7. LINQ to SQL 클래스를 나타내는 새 .dbml 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기** 를 클릭 합니다.
 
      이렇게 하면 <xref:System.Data.Linq.DataContext> 클래스에서 상속되는 클래스(이 경우 `NorthwindDataContext`)의 partial 클래스 정의가 포함된 Northwind.cs라는 새 코드 숨김 페이지가 만들어집니다.
 
@@ -48,7 +51,7 @@ WCF Data Services 엔터티 데이터를 데이터 서비스로 노출 합니다
 
 ### <a name="to-create-a-data-service-by-using-a-linq-to-sql-based-data-model"></a>LINQ to SQL 기반 데이터 모델을 사용하여 데이터 서비스를 만들려면
 
-1. **솔루션 탐색기**에서 ASP.NET 프로젝트의 이름을 마우스 오른쪽 단추로 클릭 한 다음 **추가** > **새 항목**을 클릭 합니다.
+1. **솔루션 탐색기** 에서 ASP.NET 프로젝트의 이름을 마우스 오른쪽 단추로 클릭 한 다음   >  **새 항목** 추가를 클릭 합니다.
 
 2. **새 항목 추가** 대화 상자의 **웹** 범주에서 **WCF 데이터 서비스** 템플릿을 선택 합니다.
 
@@ -57,9 +60,9 @@ WCF Data Services 엔터티 데이터를 데이터 서비스로 노출 합니다
    > [!NOTE]
    > **WCF 데이터 서비스** 템플릿은 visual studio 2015 이상에서 사용할 수 있지만 visual studio 2017 이상에서는 사용할 수 없습니다.
 
-3. 서비스의 이름을 입력 하 고 **확인**을 클릭 합니다.
+3. 서비스의 이름을 입력 하 고 **확인** 을 클릭 합니다.
 
-     에서 새 서비스의 XML 태그와 코드 파일이 만들어집니다. 기본적으로 코드 편집기 창이 열립니다.
+     Visual Studio에서 새 서비스의 XML 태그 및 코드 파일이 생성됩니다. 기본적으로 코드 편집기 창이 열립니다.
 
 4. 데이터 서비스 코드에서 데이터 서비스를 정의하는 클래스 정의의 `/* TODO: put your data source class name here */` 주석을 데이터 모델의 엔터티 컨테이너인 형식(이 경우 `NorthwindDataContext`)으로 바꿉니다.
 
@@ -72,8 +75,8 @@ WCF Data Services 엔터티 데이터를 데이터 서비스로 노출 합니다
 
 6. 웹 브라우저를 사용 하 여 Northwind 데이터 서비스를 테스트 하려면 [웹 브라우저에서 서비스 액세스](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)항목의 지침을 따르세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: ADO.NET Entity Framework 데이터 원본을 사용하여 데이터 서비스 만들기](create-a-data-service-using-an-adonet-ef-data-wcf.md)
-- [방법: 리플렉션 공급자 사용하여 데이터 서비스 만들기](create-a-data-service-using-rp-wcf-data-services.md)
+- [방법: 리플렉션 공급자를 사용하여 데이터 서비스 만들기](create-a-data-service-using-rp-wcf-data-services.md)
 - [Data Services 공급자](data-services-providers-wcf-data-services.md)

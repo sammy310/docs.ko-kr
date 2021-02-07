@@ -1,16 +1,17 @@
 ---
-title: 대량 값 (max) 데이터 수정
+description: '자세한 정보: ADO.NET에서 Large-Value (max) 데이터 수정'
+title: Large-Value (max) 데이터 수정
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 4748740379df689669ee87f66dce58a7015d1217
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2d4721d2de24399a33322bde9e70eb68e59480cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172699"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767676"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET에서 큰 값(최대값) 데이터 수정
 
@@ -67,11 +68,11 @@ FROM OPENROWSET
   
  { *column_name* = {. WRITE ( *expression* , @Offset , @Length )}  
   
- WRITE 메서드에서는 *column_name* 값의 일정 부분이 수정되도록 지정합니다. 식은 *column_name*에 복사되는 값이고, `@Offset`은 식이 작성되는 시작점이며, `@Length` 인수는 열에 있는 일정 부분의 길이입니다.  
+ WRITE 메서드에서는 *column_name* 값의 일정 부분이 수정되도록 지정합니다. 식은 *column_name* 에 복사되는 값이고, `@Offset`은 식이 작성되는 시작점이며, `@Length` 인수는 열에 있는 일정 부분의 길이입니다.  
   
 |조건|결과|  
 |--------|----------|  
-|식이 NULL로 설정되었습니다.|`@Length`가 무시되고 *column_name*의 값은 지정된 `@Offset`에서 잘립니다.|  
+|식이 NULL로 설정되었습니다.|`@Length`가 무시되고 *column_name* 의 값은 지정된 `@Offset`에서 잘립니다.|  
 |`@Offset`은 NULL입니다.|업데이트 작업을 통해 기존 *column_name* 값의 끝에 식이 추가되고 `@Length`는 무시됩니다.|  
 |`@Offset`이 column_name 값의 길이 보다 큰 경우|SQL Server에서 오류를 반환합니다.|  
 |`@Length`은 NULL입니다.|업데이트 작업 시 `@Offset`에서부터 `column_name` 값의 끝까지 모든 데이터를 제거합니다.|  
@@ -266,7 +267,7 @@ WHERE   DocumentID=@DocumentID
   
 ## <a name="see-also"></a>참고 항목
 
-- [이진 및 대량 값 데이터 SQL Server](sql-server-binary-and-large-value-data.md)
+- [SQL Server 이진 및 큰 값 데이터](sql-server-binary-and-large-value-data.md)
 - [SQL Server 데이터 형식 매핑](../sql-server-data-type-mappings.md)
 - [ADO.NET의 SQL Server 데이터 작업](sql-server-data-operations.md)
 - [ADO.NET 개요](../ado-net-overview.md)

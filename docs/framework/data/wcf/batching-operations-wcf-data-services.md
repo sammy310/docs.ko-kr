@@ -1,17 +1,20 @@
 ---
+description: '자세한 정보: 일괄 처리 작업 (WCF Data Services)'
 title: 일괄 처리 작업(WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
-ms.openlocfilehash: 95524c1397172e645d682a6ef3f03b17bb3a639d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0f8f4043e35c872445f73483832311ed86989101
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166068"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766545"
 ---
 # <a name="batching-operations-wcf-data-services"></a>일괄 처리 작업(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 OData (Open Data Protocol)는 OData 기반 서비스에 대 한 요청의 일괄 처리를 지원 합니다. 자세한 내용은 [OData: 일괄 처리](https://www.odata.org/documentation/odata-version-2-0/batch-processing/)를 참조 하세요. WCF Data Services에서 쿼리 실행 또는 변경 내용 저장과 같이를 사용 하는 각 작업을 수행 하면 <xref:System.Data.Services.Client.DataServiceContext> 별도의 요청이 데이터 서비스로 전송 됩니다. 작업 집합에 대해 논리적 범위를 유지하려면 작업 일괄 처리를 명시적으로 정의합니다. 이렇게 하면 일괄 처리의 모든 작업이 단일 HTTP 요청으로 데이터 서비스에 전송되고, 서버에서 작업을 개별적으로 처리할 수 있으며, 데이터 서비스에 대한 왕복 수가 줄어듭니다.  
   

@@ -1,21 +1,22 @@
 ---
+description: '자세히 알아보기: 명령을 사용 하 여 데이터 수정'
 title: 명령을 사용하여 데이터 수정
 ms.date: 03/30/2017
 ms.assetid: f4160389-b9ff-4b74-b655-437c76dcd586
-ms.openlocfilehash: e2f61dbf74f28d026ae91a2bc8f5bb78530ffeac
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3addcb93850aa8e26fe441b5c859502779433bfb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177256"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766558"
 ---
 # <a name="using-commands-to-modify-data"></a>명령을 사용하여 데이터 수정
 
 .NET Framework 데이터 공급자를 사용하여 저장 프로시저나 CREATE TABLE 및 ALTER COLUMN과 같은 데이터 정의 언어 문을 실행하여 데이터베이스 또는 카탈로그의 스키마를 조작할 수 있습니다. 이러한 명령은 행을 쿼리로 반환 하지 않으므로 **Command** 개체는이를 처리 하는 **ExecuteNonQuery** 을 제공 합니다.  
   
- **ExecuteNonQuery** 를 사용 하 여 스키마를 수정 하는 것 외에도이 메서드를 사용 하 여 데이터를 수정 하지만 행을 반환 하지 않는 SQL 문 (예: 삽입, 업데이트 및 삭제)을 처리할 수 있습니다.  
+ **ExecuteNonQuery** 메서드를 사용하면 스키마를 수정하는 것 외에, 데이터를 수정하지만 행을 반환하지 않는 INSERT, UPDATE, DELETE 등의 SQL 문을 처리할 수도 있습니다.  
   
- **ExecuteNonQuery** 메서드는 행을 반환 하지 않지만 **Command** 개체의 **parameters** 컬렉션을 통해 입력 및 출력 매개 변수와 반환 값을 전달 하 고 반환할 수 있습니다.  
+ **ExecuteNonQuery** 메서드는 행을 반환하지 않지만 **Command** 개체의 **Parameters** 컬렉션을 통해 입력 및 출력 매개 변수와 반환 값을 전달하고 반환할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 

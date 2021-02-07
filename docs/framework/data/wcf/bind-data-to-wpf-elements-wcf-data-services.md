@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: Windows Presentation Foundation 요소에 데이터 바인딩 (WCF Data Services)'
 title: '방법: Windows Presentation Foundation 요소에 데이터 바인딩(WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: d6538ab0-0abe-426a-b9d9-e6f3a5ca2016
-ms.openlocfilehash: d6f50fb849d958ae1109324f1055b84451bde5a9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 57ad03770681fbedf9b0d5afae82a0a2590f0bc6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191634"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766532"
 ---
 # <a name="how-to-bind-data-to-windows-presentation-foundation-elements-wcf-data-services"></a>방법: Windows Presentation Foundation 요소에 데이터 바인딩(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services를 사용 하면 또는와 같은 WPF (Windows Presentation Foundation) 요소를 컨트롤 <xref:System.Windows.Controls.ListBox> 의 <xref:System.Windows.Controls.ComboBox> <xref:System.Data.Services.Client.DataServiceCollection%601> 데이터 변경 내용과 동기화 된 상태로 유지 하기 위해 컨트롤에 의해 발생 된 이벤트를 처리 하는 인스턴스에 바인딩할 수 있습니다 <xref:System.Data.Services.Client.DataServiceContext> . 자세한 내용은 [컨트롤에 데이터 바인딩](binding-data-to-controls-wcf-data-services.md)을 참조 하세요.  
   

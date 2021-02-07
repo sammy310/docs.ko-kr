@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: SQL Server에서 보안 동적 SQL 작성'
 title: SQL Server에서 동적 보안 SQL 작성
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: c598427a17ceb289f75fab481a55016f0efe5624
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35db22358bae1150a80daa72cf4a86ef8fba9620
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147452"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766948"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server에서 동적 보안 SQL 작성
 

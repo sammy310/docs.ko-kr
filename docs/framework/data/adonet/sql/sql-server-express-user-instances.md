@@ -1,16 +1,17 @@
 ---
+description: 사용자 인스턴스 SQL Server Express에 대해 자세히 알아보세요.
 title: SQL Server Express 사용자 인스턴스
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 401b62f56918e8ac406a5ee2dda2252d328592bc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8579dee5c31a2b63156db72df6cc109beb843f08
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147582"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767274"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 사용자 인스턴스
 
@@ -39,13 +40,13 @@ sp_configure 'user instances enabled','0'
   
 ## <a name="connecting-to-a-user-instance"></a>사용자 인스턴스에 연결  
 
- <xref:System.Data.SqlClient.SqlConnection>에서 `User Instance` 및 `AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 키워드를 사용하여 사용자 인스턴스에 연결할 수 있습니다. 사용자 인스턴스는 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` 및 `AttachDBFilename` 속성에 의해서도 지원됩니다.  
+ `User Instance`에서 `AttachDBFilename` 및 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A><xref:System.Data.SqlClient.SqlConnection> 키워드를 사용하여 사용자 인스턴스에 연결할 수 있습니다. 사용자 인스턴스는 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` 및 `AttachDBFilename` 속성에 의해서도 지원됩니다.  
   
  아래에 표시된 샘플 연결 문자열에 대해 다음을 확인하세요.  
   
 - `Data Source` 키워드는 사용자 인스턴스를 생성하는 SQL Server Express의 부모 인스턴스를 참조합니다. 기본 인스턴스는 .\sqlexpress입니다.  
   
-- `Integrated Security`이 `true`로 설정됩니다. 사용자 인스턴스에 연결하려면 Windows 인증이 필요합니다. SQL Server 로그인은 지원되지 않습니다.  
+- `Integrated Security`가 `true`로 설정됩니다. 사용자 인스턴스에 연결하려면 Windows 인증이 필요합니다. SQL Server 로그인은 지원되지 않습니다.  
   
 - `User Instance`는 `true`로 설정되어 있습니다(사용자 인스턴스를 호출함). (기본값은 `false`다.)  
   
@@ -119,11 +120,11 @@ private static void OpenSqlConnection()
 ```  
   
 > [!NOTE]
-> 사용자 인스턴스는 SQL Server 내부에서 실행되는 CLR(공용 언어 런타임) 코드에서 지원되지 않습니다. 연결 문자열에 <xref:System.InvalidOperationException>를 포함하는 `Open`에서 <xref:System.Data.SqlClient.SqlConnection>을 호출하면 `User Instance=true`이 throw됩니다.  
+> 사용자 인스턴스는 SQL Server 내부에서 실행되는 CLR(공용 언어 런타임) 코드에서 지원되지 않습니다. 연결 문자열에 `User Instance=true`를 포함하는 <xref:System.Data.SqlClient.SqlConnection>에서 `Open`을 호출하면 <xref:System.InvalidOperationException>이 throw됩니다.  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>사용자 인스턴스 연결 수명  
 
- 서비스로 실행되는 SQL Server 버전과 달리 SQL Server Express 인스턴스는 수동으로 시작 및 중지할 필요가 없습니다. 사용자가 로그인하여 사용자 인스턴스에 연결할 때마다 이미 실행 중이지 않은 경우 사용자 인스턴스가 시작됩니다. 사용자 인스턴스 데이터베이스는 `AutoClose` 옵션이 설정되어 있어 일정 시간 비활성 상태를 유지하면 데이터베이스가 자동으로 종료됩니다. 시작된 sqlservr.exe 프로세스는 인스턴스에 대한 마지막 연결이 닫힌 후 제한된 시간 동안 계속 실행되므로 이 제한 시간이 만료되기 전에 다른 연결이 열리는 경우 다시 시작할 필요가 없습니다. 해당 제한 시간이 만료되기 전에 새 연결이 열리지 않으면 사용자 인스턴스는 자동으로 종료됩니다. 부모 인스턴스의 시스템 관리자는 **user instance timeout** 옵션을 변경하려면 **sp_configure**를 사용하여 사용자 인스턴스에 대한 시간 제한 기간의 지속 시간을 설정할 수 있습니다. 기본값은 60분입니다.  
+ 서비스로 실행되는 SQL Server 버전과 달리 SQL Server Express 인스턴스는 수동으로 시작 및 중지할 필요가 없습니다. 사용자가 로그인하여 사용자 인스턴스에 연결할 때마다 이미 실행 중이지 않은 경우 사용자 인스턴스가 시작됩니다. 사용자 인스턴스 데이터베이스는 `AutoClose` 옵션이 설정되어 있어 일정 시간 비활성 상태를 유지하면 데이터베이스가 자동으로 종료됩니다. 시작된 sqlservr.exe 프로세스는 인스턴스에 대한 마지막 연결이 닫힌 후 제한된 시간 동안 계속 실행되므로 이 제한 시간이 만료되기 전에 다른 연결이 열리는 경우 다시 시작할 필요가 없습니다. 해당 제한 시간이 만료되기 전에 새 연결이 열리지 않으면 사용자 인스턴스는 자동으로 종료됩니다. 부모 인스턴스의 시스템 관리자는 **user instance timeout** 옵션을 변경하려면 **sp_configure** 를 사용하여 사용자 인스턴스에 대한 시간 제한 기간의 지속 시간을 설정할 수 있습니다. 기본값은 60분입니다.  
   
 > [!NOTE]
 > 연결 문자열에 0보다 큰 값의 `Min Pool Size`를 사용하는 경우 연결 풀러는 항상 몇 개의 열린 연결을 유지하며 사용자 인스턴스는 자동으로 종료되지 않습니다.  

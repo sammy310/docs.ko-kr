@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 컨트롤에 데이터 바인딩 (WCF Data Services)'
 title: 컨트롤에 데이터 바인딩(WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 178d77c225144497982487afa00f4493e17d1744
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 01ef24c2723bb690a8f441a315085c4312307b03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805215"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766480"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>컨트롤에 데이터 바인딩(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services를 사용 하 여 및 컨트롤과 같은 컨트롤을 `ComboBox` `ListView` 클래스의 인스턴스에 바인딩할 수 있습니다 <xref:System.Data.Services.Client.DataServiceCollection%601> . 클래스에서 상속 되는이 컬렉션은 <xref:System.Collections.ObjectModel.ObservableCollection%601> OData (Open Data Protocol) 피드의 데이터를 포함 합니다. 이 클래스는 항목이 추가 또는 제거될 때 알림을 제공하는 동적 데이터 컬렉션을 나타냅니다. 데이터 바인딩에 인스턴스를 사용 하는 경우 <xref:System.Data.Services.Client.DataServiceCollection%601> WCF Data Services 클라이언트 라이브러리는 이러한 이벤트를 처리 하 여에 의해 추적 되는 개체가 <xref:System.Data.Services.Client.DataServiceContext> 바인딩된 UI 요소의 데이터와 동기화 된 상태를 유지 하는지 확인 합니다.  
   

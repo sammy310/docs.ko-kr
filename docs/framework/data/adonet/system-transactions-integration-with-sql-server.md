@@ -1,24 +1,25 @@
 ---
+description: '에 대 한 자세한 정보: 시스템 트랜잭션과 SQL Server 통합'
 title: SQL Server와의 System.Transactions 통합
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 5adf40f96854e08736cdef77300d69e452de5eea
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 977ff18600256613dabc0212c2f7aa1bc2650408
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191686"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766779"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server와의 System.Transactions 통합
 
 .NET Framework 버전 2.0에는 네임 스페이스를 통해 액세스할 수 있는 트랜잭션 프레임 워크가 도입 <xref:System.Transactions> 되었습니다. 이 프레임 워크는 ADO.NET을 포함 하 여 .NET Framework에 완전히 통합 된 방식으로 트랜잭션을 노출 합니다.  
   
- 프로그래밍 기능 향상 외에도 <xref:System.Transactions> ADO.NET를 함께 사용 하 여 트랜잭션을 사용할 때 최적화를 조정할 수 있습니다. 승격 가능한 트랜잭션이란 필요에 따라 완전 분산 트랜잭션으로 자동 승격될 수 있는 간단한(로컬) 트랜잭션입니다.  
+ 프로그래밍 기능 향상 외에도 <xref:System.Transactions> 및 ADO.NET은 함께 작동하여 트랜잭션을 사용할 때 최적화를 조정할 수 있습니다. 승격 가능한 트랜잭션이란 필요에 따라 완전 분산 트랜잭션으로 자동 승격될 수 있는 간단한(로컬) 트랜잭션입니다.  
   
- ADO.NET 2.0부터는 <xref:System.Data.SqlClient> SQL Server 작업할 때 승격 가능한 트랜잭션을 지원 합니다. 승격 가능한 트랜잭션은 추가 오버헤드가 필요한 경우를 제외하고 분산 트랜잭션의 추가 오버헤드를 호출하지 않습니다. 승격 가능한 트랜잭션은 자동으로 수행 되며 개발자의 개입이 필요 하지 않습니다.  
+ ADO.NET 2.0부터는 <xref:System.Data.SqlClient> SQL Server 작업할 때 승격 가능한 트랜잭션을 지원 합니다. 승격 가능한 트랜잭션은 추가 오버헤드가 필요한 경우를 제외하고 분산 트랜잭션의 추가 오버헤드를 호출하지 않습니다. 승격 가능한 트랜잭션은 자동으로 수행되며 개발자의 개입이 필요하지 않습니다.  
   
  승격 가능한 트랜잭션은 SQL Server에서 SQL Server ()에 대 한 .NET Framework Data Provider를 사용 하는 경우에만 사용할 수 있습니다 `SqlClient` .  
   
@@ -31,7 +32,7 @@ ms.locfileid: "91191686"
   
 ## <a name="promotable-transaction-scenarios"></a>승격 가능한 트랜잭션 시나리오  
 
- 분산 트랜잭션에서는 일반적으로 MS DTC(Microsoft Distributed Transaction Coordinator)를 통해 관리되는 많은 양의 시스템 리소스를 사용합니다. MS DTC는 트랜잭션에서 액세스하는 모든 리소스 관리자를 통합합니다. 승격 <xref:System.Transactions> 가능한 트랜잭션은 작업을 간단한 SQL Server 트랜잭션에 효과적으로 위임 하는 특별 한 형태의 트랜잭션입니다. <xref:System.Transactions>, <xref:System.Data.SqlClient> 및 SQL Server 트랜잭션 처리와 관련 된 작업을 조정 하 고 필요에 따라 완전 분산 트랜잭션으로 승격 합니다.  
+ 분산 트랜잭션에서는 일반적으로 MS DTC(Microsoft Distributed Transaction Coordinator)를 통해 관리되는 많은 양의 시스템 리소스를 사용합니다. MS DTC는 트랜잭션에서 액세스하는 모든 리소스 관리자를 통합합니다. 승격 가능한 트랜잭션은 실제로 작업을 단순한 SQL Server 트랜잭션에 위임하는 특수한 형식의 <xref:System.Transactions> 트랜잭션입니다. <xref:System.Transactions>, <xref:System.Data.SqlClient> 및 SQL Server는 트랜잭션 처리와 관련된 작업을 조정하고 필요에 따라 완전한 분산 트랜잭션으로 승격합니다.  
   
  승격 가능한 트랜잭션을 사용하면 활성 <xref:System.Transactions.TransactionScope> 트랜잭션을 사용하여 연결이 열리고, 다른 연결이 열려 있지 않은 경우 완전 분산 트랜잭션의 추가 오버헤드를 발생시키는 대신 간단한 트랜잭션으로 커밋됩니다.  
   
@@ -234,7 +235,7 @@ Public Function CreateTransactionScope( _
 End Function  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [트랜잭션 및 동시성](transactions-and-concurrency.md)
 - [ADO.NET 개요](ado-net-overview.md)

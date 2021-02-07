@@ -1,14 +1,15 @@
 ---
+description: SQL Server 데이터 형식 및 ADO.NET에 대해 자세히 알아보세요.
 title: SQL Server 데이터 형식 및 ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: db4618ac624ea8401cab682a8c21d8f23c253d05
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 841fa5864bf54b5e4fc4dc24dab64e6ac1435c7e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155460"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767299"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 데이터 형식 및 ADO.NET
 
@@ -63,5 +64,5 @@ SQL Server와 .NET Framework는 서로 다른 형식 시스템을 기반으로 �
 - [SQL Server 데이터 형식 매핑](../sql-server-data-type-mappings.md)
 - [매개 변수 및 매개 변수 데이터 형식 구성](../configuring-parameters-and-parameter-data-types.md)
 - [테이블 반환 매개 변수](table-valued-parameters.md)
-- [이진 및 대량 값 데이터 SQL Server](sql-server-binary-and-large-value-data.md)
+- [SQL Server 이진 및 큰 값 데이터](sql-server-binary-and-large-value-data.md)
 - [ADO.NET 개요](../ado-net-overview.md)

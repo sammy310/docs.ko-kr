@@ -1,20 +1,21 @@
 ---
+description: '자세히 알아보기: 데이터 조작'
 title: 데이터 조작
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: b5f649f0247c150ebc2f0e7e54c3fc8c0b607c5c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dba948fe923e709f6564e6c64fd9adce7f3f15f5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172712"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767689"
 ---
 # <a name="manipulating-data"></a>데이터 조작
 
-MARS(Multiple Active Result Sets)가 도입되기 전에는 개발자가 여러 연결 또는 서버 쪽 커서를 사용하여 특정 시나리오를 해결해야 했습니다. 또한 트랜잭션 상황에서 다중 연결을 사용하는 경우 **sp_getbindtoken** 및 **sp_bindsession**으로 바인딩된 연결을 사용해야 했습니다. 다음 시나리오에서는 여러 연결 대신 MARS 사용 연결을 사용하는 방법을 보여 줍니다.  
+MARS(Multiple Active Result Sets)가 도입되기 전에는 개발자가 여러 연결 또는 서버 쪽 커서를 사용하여 특정 시나리오를 해결해야 했습니다. 또한 트랜잭션 상황에서 다중 연결을 사용하는 경우 **sp_getbindtoken** 및 **sp_bindsession** 으로 바인딩된 연결을 사용해야 했습니다. 다음 시나리오에서는 여러 연결 대신 MARS 사용 연결을 사용하는 방법을 보여 줍니다.  
   
 ## <a name="using-multiple-commands-with-mars"></a>MARS로 여러 명령 사용  
 
@@ -168,11 +169,11 @@ static void Main()
   
 ## <a name="reading-and-updating-data-with-mars"></a>MARS로 데이터 읽기 및 업데이트  
 
- MARS를 사용하면 둘 이상의 보류 중인 작업을 포함하는 읽기 작업 및 DML(데이터 조작 언어) 작업 모두에 하나의 연결을 사용할 수 있습니다. 이 기능을 사용하면 애플리케이션에서 연결 사용 오류를 처리할 필요가 없습니다. 또한 MARS는 일반적으로 더 많은 리소스를 사용 하는 서버 쪽 커서의 사용을 대체할 수 있습니다. 마지막으로 여러 작업이 단일 연결에서 실행될 수 있으므로 동일한 트랜잭션 컨텍스트를 공유하여 **sp_getbindtoken** 및 **sp_bindsession** 시스템 저장 프로시저를 사용할 필요가 없습니다.  
+ MARS를 사용하면 둘 이상의 보류 중인 작업을 포함하는 읽기 작업 및 DML(데이터 조작 언어) 작업 모두에 하나의 연결을 사용할 수 있습니다. 이 기능을 사용하면 애플리케이션에서 연결 사용 오류를 처리할 필요가 없습니다. 또한 MARS는 일반적으로 더 많은 리소스를 사용하는 서버 쪽 커서의 사용자를 대체할 수 있습니다. 마지막으로 여러 작업이 단일 연결에서 실행될 수 있으므로 동일한 트랜잭션 컨텍스트를 공유하여 **sp_getbindtoken** 및 **sp_bindsession** 시스템 저장 프로시저를 사용할 필요가 없습니다.  
   
 ### <a name="example"></a>예제  
 
- 다음 콘솔 애플리케이션에서는 MARS가 설정된 상태에서 세 개의 <xref:System.Data.SqlClient.SqlCommand> 개체와 단일 <xref:System.Data.SqlClient.SqlConnection> 개체와 함께 두 개의 <xref:System.Data.SqlClient.SqlDataReader> 개체를 사용하는 방법을 보여 줍니다. 첫 번째 명령 개체는 신용 등급이 5인 공급업체 목록을 검색합니다. 두 번째 명령 개체는 <xref:System.Data.SqlClient.SqlDataReader>에서 제공한 공급업체 ID를 사용하여 특정 공급업체의 모든 제품을 두 번째 <xref:System.Data.SqlClient.SqlDataReader>에 로드합니다. 두 번째 <xref:System.Data.SqlClient.SqlDataReader>는 각 제품 레코드를 방문합니다. 또한 새로운 **OnOrderQty**를 확인하기 위한 계산을 수행합니다. 그런 다음 세 번째 명령 개체를 사용하여 **ProductVendor** 테이블을 새 값으로 업데이트합니다. 이 전체 프로세스는 단일 트랜잭션 내에서 발생하며 마지막에는 롤백됩니다.  
+ 다음 콘솔 애플리케이션에서는 MARS가 설정된 상태에서 세 개의 <xref:System.Data.SqlClient.SqlCommand> 개체와 단일 <xref:System.Data.SqlClient.SqlConnection> 개체와 함께 두 개의 <xref:System.Data.SqlClient.SqlDataReader> 개체를 사용하는 방법을 보여 줍니다. 첫 번째 명령 개체는 신용 등급이 5인 공급업체 목록을 검색합니다. 두 번째 명령 개체는 <xref:System.Data.SqlClient.SqlDataReader>에서 제공한 공급업체 ID를 사용하여 특정 공급업체의 모든 제품을 두 번째 <xref:System.Data.SqlClient.SqlDataReader>에 로드합니다. 두 번째 <xref:System.Data.SqlClient.SqlDataReader>는 각 제품 레코드를 방문합니다. 또한 새로운 **OnOrderQty** 를 확인하기 위한 계산을 수행합니다. 그런 다음 세 번째 명령 개체를 사용하여 **ProductVendor** 테이블을 새 값으로 업데이트합니다. 이 전체 프로세스는 단일 트랜잭션 내에서 발생하며 마지막에는 롤백됩니다.  
   
 > [!NOTE]
 > 다음 예제에서는 SQL Server에 포함된 샘플 **AdventureWorks** 데이터베이스를 사용합니다. 샘플 코드에 제공된 연결 문자열은 데이터베이스가 로컬 컴퓨터에 설치되어 있고 사용 가능한 것으로 가정합니다. 사용자 환경에 필요한 경우 연결 문자열을 수정합니다.  
@@ -407,7 +408,7 @@ private static string GetConnectionString()
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [MARS(Multiple Active Result Sets)](multiple-active-result-sets-mars.md)
 - [ADO.NET 개요](../ado-net-overview.md)

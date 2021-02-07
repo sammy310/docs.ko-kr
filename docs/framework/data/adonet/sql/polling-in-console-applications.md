@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 콘솔 응용 프로그램에서 폴링'
 title: 콘솔 애플리케이션에서 폴링
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 35275206e0486c35f262116fa1deb06b9f285723
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: be67132b80716079bb4694d1c7b8eb44b6c4d4a8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183132"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99767637"
 ---
 # <a name="polling-in-console-applications"></a>콘솔 애플리케이션에서 폴링
 

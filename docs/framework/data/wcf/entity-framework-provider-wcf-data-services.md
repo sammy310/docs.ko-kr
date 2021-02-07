@@ -1,19 +1,22 @@
 ---
+description: '자세한 정보: Entity Framework 공급자 (WCF Data Services)'
 title: Entity Framework 공급자(WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: cb7bd7e793f73fc34057150ee5217dba6653237e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0c321ca49520c9b2957a807c01175bea8ee7ae3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172647"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766051"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Entity Framework 공급자(WCF Data Services)
 
-WCF Data Services와 마찬가지로 ADO.NET Entity Framework는 엔터티-관계 모델의 유형인 엔터티 데이터 모델을 기반으로 합니다. Entity Framework은 *개념적 모델*이라고 하는 엔터티 데이터 모델의 구현에 대해 작업을 데이터 소스에 대 한 동등한 작업으로 변환 합니다. 이를 통해 Entity Framework는 관계형 데이터를 기반으로 하는 데이터 서비스에 적합 한 공급자 이며 Entity Framework를 지 원하는 데이터 공급자가 있는 모든 데이터베이스를 WCF Data Services와 함께 사용할 수 있습니다. 현재 Entity Framework을 지 원하는 데이터 원본 목록은 [Entity Framework 공급자](/ef/ef6/fundamentals/providers/)를 참조 하세요.
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+WCF Data Services와 마찬가지로 ADO.NET Entity Framework는 엔터티-관계 모델의 유형인 엔터티 데이터 모델을 기반으로 합니다. Entity Framework은 *개념적 모델* 이라고 하는 엔터티 데이터 모델의 구현에 대해 작업을 데이터 소스에 대 한 동등한 작업으로 변환 합니다. 이를 통해 Entity Framework는 관계형 데이터를 기반으로 하는 데이터 서비스에 적합 한 공급자 이며 Entity Framework를 지 원하는 데이터 공급자가 있는 모든 데이터베이스를 WCF Data Services와 함께 사용할 수 있습니다. 현재 Entity Framework을 지 원하는 데이터 원본 목록은 [Entity Framework 공급자](/ef/ef6/fundamentals/providers/)를 참조 하세요.
   
  개념적 모델에서 엔터티 컨테이너는 서비스 루트입니다. 먼저 Entity Framework에서 개념적 모델을 정의해야 데이터 서비스가 데이터를 노출할 수 있습니다. 자세한 내용은 [방법: ADO.NET Entity Framework 데이터 원본을 사용 하 여 데이터 서비스 만들기](create-a-data-service-using-an-adonet-ef-data-wcf.md)를 참조 하세요.  
   

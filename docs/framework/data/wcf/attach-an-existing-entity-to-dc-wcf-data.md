@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 기존 엔터티를 DataServiceContext에 연결 (WCF Data Services)'
 title: '방법: 기존 엔터티를 DataServiceContext에 연결(WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: e3f2d71d-434c-4e98-91c3-95adae4702b6
-ms.openlocfilehash: 69ca64f4ab3470c1a4f58c582b31c06aed9cadd5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 039225ec992a4ddd23fd9f7013e04562f6fe72a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166133"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766597"
 ---
 # <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>방법: 기존 엔터티를 DataServiceContext에 연결(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 엔터티가 데이터 서비스에 이미 있는 경우에는 WCF Data Services 클라이언트 라이브러리를 사용 하 여 <xref:System.Data.Services.Client.DataServiceContext> 먼저 쿼리를 실행 하지 않고 엔터티를 나타내는 개체를에 직접 연결할 수 있습니다. 자세한 내용은 [데이터 서비스 업데이트](updating-the-data-service-wcf-data-services.md)를 참조 하세요.  
   

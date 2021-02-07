@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 비동기 작업 (WCF Data Services)'
 title: 비동기 작업(WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,14 +7,16 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: cf3a81914d78e8f08c06602600ce5dcef4f4d35b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ede69fef4e284f2f7a06f4e1e842f07380d77cbf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191647"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99766610"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>비동기 작업(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 웹 애플리케이션의 경우 내부 네트워크 내에서 실행되는 애플리케이션보다 클라이언트와 서버 간에 보다 긴 대기 시간을 허용해야 합니다. 응용 프로그램의 성능 및 사용자 환경을 최적화 하려면 <xref:System.Data.Services.Client.DataServiceContext> <xref:System.Data.Services.Client.DataServiceQuery%601> 웹을 통해 WCF Data Services 서버에 액세스할 때 및 클래스의 비동기 메서드를 사용 하는 것이 좋습니다.  
   
@@ -26,7 +29,7 @@ ms.locfileid: "91191647"
   
  .NET Framework 클라이언트 라이브러리는 다음 비동기 작업을 지원합니다.  
   
-|작업(Operation)|메서드|  
+|작업|메서드|  
 |---------------|-------------|  
 |<xref:System.Data.Services.Client.DataServiceQuery%601> 실행|-   <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A><br />-   <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>|  
 |<xref:System.Data.Services.Client.DataServiceContext>에서 쿼리 실행|-   <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>|  
