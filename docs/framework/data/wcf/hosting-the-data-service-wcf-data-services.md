@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 데이터 서비스 호스팅 (WCF Data Services)'
 title: 데이터 서비스 호스팅(WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 5dfa1d9f02f660b55ecf6598ef5012174a1ba853
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 519adde3a3e054d68ff9a1b7acf7ff06c0ca7532
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172595"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765791"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>데이터 서비스 호스팅(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services를 사용 하 여 데이터를 OData (Open Data Protocol) 피드로 노출 하는 서비스를 만들 수 있습니다. 이 데이터 서비스는 <xref:System.Data.Services.DataService%601>에서 상속되는 클래스로 정의됩니다. 이 클래스는 OData에서 요구 하는 요청 메시지를 처리 하 고, 데이터 원본에 대 한 업데이트를 수행 하 고, 응답 메시지를 생성 하는 데 필요한 기능을 제공 합니다. 그러나 데이터 서비스는 네트워크 소켓에 바인딩되어 들어오는 HTTP 요청을 수신 대기할 수 없습니다. 이 필요한 기능을 위해 데이터 서비스는 호스팅 구성 요소를 사용합니다.
 

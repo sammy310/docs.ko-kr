@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugController:: Stop 메서드'
 title: ICorDebugController::Stop 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c34e79be-a7fb-479e-8dec-d126a4c330e5
 topic_type:
 - apiref
-ms.openlocfilehash: 11cc6e4108a2064a8a9fcefa760bf3c3411d63fb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 613fd81a03114580ae3d826a94d855023895b694
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679860"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764608"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop 메서드
 
@@ -58,4 +59,4 @@ HRESULT Stop (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 엔터티 추가, 수정 및 삭제 (WCF Data Services)'
 title: '방법: 엔터티 추가, 수정 및 삭제(WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: 3d147f05e2911cdaa05c5fc2374e14c539235fda
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 300ec4d710b376979b77c02b2831bb6b64393709
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172530"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765739"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>방법: 엔터티 추가, 수정 및 삭제(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services 클라이언트 라이브러리를 사용 하면의 개체에 대해 동일한 작업을 수행 하 여 데이터 서비스의 엔터티 데이터를 만들고 업데이트 하 고 삭제할 수 있습니다 <xref:System.Data.Services.Client.DataServiceContext> . 자세한 내용은 [데이터 서비스 업데이트](updating-the-data-service-wcf-data-services.md)를 참조 하세요.  
   

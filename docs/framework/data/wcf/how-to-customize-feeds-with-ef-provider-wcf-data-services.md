@@ -1,18 +1,21 @@
 ---
+description: '자세히 알아보기: 방법: Entity Framework 공급자를 사용 하 여 피드 사용자 지정 (WCF Data Services)'
 title: '방법: Entity Framework 공급자를 사용한 피드 사용자 지정(WCF Data Services)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-ms.openlocfilehash: 76cc8da052ee51157857418cd81088a523f95ea2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b2d2432065ee0982822d0f332744f988d80add12
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91186595"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765674"
 ---
 # <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>방법: Entity Framework 공급자를 사용한 피드 사용자 지정(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services를 사용 하면 엔터티의 속성이 AtomPub 프로토콜에 정의 된 사용 하지 않은 요소에 매핑될 수 있도록 데이터 서비스 응답에서 Atom serialization을 사용자 지정할 수 있습니다. 이 항목에서는 Entity Framework 공급자를 사용하여 .edmx 파일에 정의된 데이터 모델의 엔터티 형식에 대한 매핑 특성을 정의하는 방법을 보여 줍니다. 자세한 내용은 [피드 사용자 지정](feed-customization-wcf-data-services.md)을 참조 하세요.  
   
@@ -20,9 +23,9 @@ WCF Data Services를 사용 하면 엔터티의 속성이 AtomPub 프로토콜�
   
 ### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a>Northwind.edmx 파일을 수동으로 수정하여 피드 사용자 지정 특성을 추가하려면  
   
-1. **솔루션 탐색기**에서 파일을 마우스 오른쪽 단추로 클릭 한 `Northwind.edmx` 다음 **연결 프로그램**을 클릭 합니다.  
+1. **솔루션 탐색기** 에서 파일을 마우스 오른쪽 단추로 클릭 한 `Northwind.edmx` 다음 **연결 프로그램** 을 클릭 합니다.  
   
-2. **열기-Northwind .edmx** 대화 상자에서 **XML 편집기**를 선택한 다음 **확인**을 클릭 합니다.  
+2. **열기-Northwind .edmx** 대화 상자에서 **XML 편집기** 를 선택한 다음 **확인** 을 클릭 합니다.  
   
 3. `ConceptualModels` 요소를 찾아 기존 `Customers` 엔터티 형식을 피드 사용자 지정 매핑 특성이 포함된 다음 요소로 바꿉니다.  
   
@@ -30,7 +33,7 @@ WCF Data Services를 사용 하면 엔터티의 속성이 AtomPub 프로토콜�
   
 4. 변경 내용을 저장하고 Northwind.edmx 파일을 닫습니다.  
   
-5. 필드 Northwind .edmx 파일을 마우스 오른쪽 단추로 클릭 한 다음 **사용자 지정 도구 실행**을 클릭 합니다.  
+5. 필드 Northwind .edmx 파일을 마우스 오른쪽 단추로 클릭 한 다음 **사용자 지정 도구 실행** 을 클릭 합니다.  
   
      이렇게 하면 필요한 개체 계층 파일이 다시 생성됩니다.  
   

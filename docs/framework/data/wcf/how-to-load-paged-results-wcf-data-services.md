@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 페이지 단위 결과 로드 (WCF Data Services)'
 title: '방법: 페이지 단위 결과 로드 (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: bb786ea4-f3ef-4ad3-9a41-3a0b7feb6a1f
-ms.openlocfilehash: c49e0b170743332d6cc3aaef7e5503eabab52d97
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2a5ba738a63de11045dec78f4381b93c844a4fc6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91182794"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765271"
 ---
 # <a name="how-to-load-paged-results-wcf-data-services"></a>방법: 페이지 단위 결과 로드 (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services를 사용 하면 데이터 서비스에서 단일 응답 피드에 반환 되는 엔터티 수를 제한할 수 있습니다. 이 경우 피드의 최종 항목에 다음 데이터 페이지에 대한 링크가 포함됩니다. 다음 데이터 페이지의 URI는 <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A>를 실행할 때 반환되는 <xref:System.Data.Services.Client.QueryOperationResponse%601>의 <xref:System.Data.Services.Client.DataServiceQuery%601> 메서드를 호출하여 가져옵니다. 이 개체가 나타내는 URI를 사용하여 다음 결과 페이지를 로드합니다. 자세한 내용은 [지연 된 콘텐츠 로드](loading-deferred-content-wcf-data-services.md)를 참조 하세요.  
   

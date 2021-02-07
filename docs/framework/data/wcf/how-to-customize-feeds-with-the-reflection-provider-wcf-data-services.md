@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 리플렉션 공급자를 사용 하 여 피드 사용자 지정 (WCF Data Services)'
 title: '방법: 리플렉션 공급자를 사용한 피드 사용자 지정(WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: 00c23dcf-9bb8-459a-a012-6c4d9bcad7e9
-ms.openlocfilehash: fb22e87569a8e243813b3186232b6989abeb2a5e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 91ac9cd3a5e882714335ce1d4ef29510d4640534
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161310"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765635"
 ---
 # <a name="how-to-customize-feeds-with-the-reflection-provider-wcf-data-services"></a>방법: 리플렉션 공급자를 사용한 피드 사용자 지정(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services를 사용 하면 엔터티의 속성이 AtomPub 프로토콜에 정의 된 사용 하지 않은 요소에 매핑될 수 있도록 데이터 서비스 응답에서 Atom serialization을 사용자 지정할 수 있습니다. 이 항목에서는 리플렉션 공급자를 사용하여 정의된 데이터 모델의 엔터티 형식에 대한 매핑 특성을 정의하는 방법을 보여 줍니다. 자세한 내용은 [피드 사용자 지정](feed-customization-wcf-data-services.md)을 참조 하세요.  
   

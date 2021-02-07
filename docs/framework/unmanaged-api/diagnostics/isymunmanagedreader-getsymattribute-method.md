@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedReader:: GetSymAttribute 메서드'
 title: ISymUnmanagedReader::GetSymAttribute 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c675ce7e-76e7-45ff-8273-3b6489a2767c
 topic_type:
 - apiref
-ms.openlocfilehash: aa3b742babe4a94a43e4e6168dea67c0a0245eb0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd1c453e9f2ef68799fc5eccf1288a7665c5cfdf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720583"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763971"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute 메서드
 
@@ -55,7 +56,7 @@ HRESULT GetSymAttribute (
  `buffer`  
  제한이 특성 데이터를 받는 변수에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -63,6 +64,6 @@ HRESULT GetSymAttribute (
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReader 인터페이스](isymunmanagedreader-interface.md)

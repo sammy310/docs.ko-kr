@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugComObjectValue:: GetCachedInterfaceTypes 메서드'
 title: ICorDebugComObjectValue::GetCachedInterfaceTypes 메서드
 ms.date: 03/30/2017
 api_name:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d492284f-d3c5-4614-adb8-d718d5042500
 topic_type:
 - apiref
-ms.openlocfilehash: f5f0f11683043f1c287dd3ca3071830bcfb46502
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b1c65979895dfaeacae3d171adbcfd1455b7030d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677559"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764621"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a>ICorDebugComObjectValue::GetCachedInterfaceTypes 메서드
 
@@ -52,7 +53,7 @@ HRESULT GetCachedInterfaceTypes(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugComObjectValue 인터페이스](icordebugcomobjectvalue-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 데이터 바인딩 동작 사용자 지정 (WCF Data Services)'
 title: '방법: 데이터 바인딩 동작 사용자 지정 (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
-ms.openlocfilehash: 13847923a5f31108e93ef12cf7775109be3cd9eb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 60c8808f90f8e0a824a8b2b641508c0fe33f14cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172517"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765687"
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>방법: 데이터 바인딩 동작 사용자 지정 (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services를 사용 하면 <xref:System.Data.Services.Client.DataServiceCollection%601> 바인딩 컬렉션에서 개체가 추가 또는 제거 되거나 속성 변경이 검색 될 때에서 호출 하는 사용자 지정 논리를 제공할 수 있습니다. 이 사용자 지정 논리는 <xref:System.Func%602> `false` 사용자 지정 메서드가 완료 될 때 기본 동작을 수행 해야 하는 경우의 값을 반환 하 고, `true` 이벤트의 후속 처리가 중지 되어야 하는 경우의 값을 반환 하는 대리자로 참조 된 메서드로 제공 됩니다.  
   

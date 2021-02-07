@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 데이터 서비스 쿼리에 쿼리 옵션 추가 (WCF Data Services)'
 title: '방법: 쿼리 옵션을 데이터 서비스 쿼리에 추가(WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: e4258526-557e-4e96-91e1-2175400c7c8f
-ms.openlocfilehash: 76d2b1ff3cbb5440bfed62ba840e646cf68de025
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8b5fdf1105ae06485ab8fea7c5db2adf78e7e3e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180727"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765726"
 ---
 # <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>방법: 쿼리 옵션을 데이터 서비스 쿼리에 추가(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services를 사용 하면 생성 된 클라이언트 데이터 서비스 클래스를 사용 하 여 .NET Framework 기반 클라이언트 응용 프로그램에서 데이터 서비스를 쿼리할 수 있습니다. 이렇게 하는 가장 쉬운 방법은 원하는 쿼리 옵션을 포함하는 LINQ(Language-Integrated Query) 쿼리 식을 작성하는 것입니다. 일련의 LINQ 쿼리 메서드를 호출하여 동등한 쿼리를 작성할 수도 있습니다. 마지막으로 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 메서드를 사용하여 쿼리에 쿼리 옵션을 추가할 수 있습니다. 이러한 각 경우에 클라이언트에서 생성된 URI에는 선택한 쿼리 옵션이 적용된 요청한 엔터티 집합이 포함됩니다. 자세한 내용은 [데이터 서비스 쿼리](querying-the-data-service-wcf-data-services.md)를 참조 하세요.  
   

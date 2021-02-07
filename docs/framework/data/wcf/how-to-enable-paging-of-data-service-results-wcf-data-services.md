@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 데이터 서비스 결과의 페이징 사용 (WCF Data Services)'
 title: '방법: 데이터 서비스 결과의 페이징 사용(WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
-ms.openlocfilehash: 1c8bb8fe757c35f6096b139da6ca939b1ce1c283
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 27a2b37f432d906022d06492b2f687681d9b9ac8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150624"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765336"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>방법: 데이터 서비스 결과의 페이징 사용(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services를 사용 하면 데이터 서비스 쿼리에서 반환 되는 엔터티 수를 제한할 수 있습니다. 페이지 제한은 서비스가 초기화될 때 호출되는 메서드에서 정의되며 각 엔터티 집합에 대해 별도로 설정될 수 있습니다.  
   

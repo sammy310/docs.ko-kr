@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugDataTarget2:: GetImageFromPointer 메서드'
 title: ICorDebugDataTarget2::GetImageFromPointer 메서드
 ms.date: 03/30/2017
 ms.assetid: 939cabe1-b647-4090-b662-eeec23c6c58d
-ms.openlocfilehash: 41385fe915733f052af67c82d984c8b9d853c579
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bcf73fa522072707a7b08d90965fcd38188c2bb5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713823"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764400"
 ---
 # <a name="icordebugdatatarget2getimagefrompointer-method"></a>ICorDebugDataTarget2::GetImageFromPointer 메서드
 
@@ -49,7 +50,7 @@ HRESULT GetImageFromPointer(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugDataTarget2 인터페이스](icordebugdatatarget2-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

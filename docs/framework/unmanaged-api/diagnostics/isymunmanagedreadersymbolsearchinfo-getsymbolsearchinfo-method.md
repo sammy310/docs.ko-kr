@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedReaderSymbolSearchInfo:: Get기호 Searchinfo 메서드'
 title: ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 40fcdbc5-3bb2-41e9-b995-40984c209a7f
 topic_type:
 - apiref
-ms.openlocfilehash: 69e05fc33b3489f535f1d051da0294fe59e11e00
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e14f78d6736684205b3f86150ce1fbb44a8112b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708961"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763607"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfo-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo 메서드
 
@@ -47,7 +48,7 @@ HRESULT GetSymbolSearchInfo(
  `rgpSearchInfo`  
  제한이 반환 된 [ISymUnmanagedSymbolSearchInfo](isymunmanagedsymbolsearchinfo-interface.md) interface로 설정 된 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -55,6 +56,6 @@ HRESULT GetSymbolSearchInfo(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReaderSymbolSearchInfo 인터페이스](isymunmanagedreadersymbolsearchinfo-interface.md)

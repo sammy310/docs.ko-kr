@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugCode2:: GetCodeChunks 메서드'
 title: ICorDebugCode2::GetCodeChunks 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 210a2f02-2678-4555-bc4a-78a0408764c8
 topic_type:
 - apiref
-ms.openlocfilehash: e419ebb6ffd404368baf32e591e08c4a70645127
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 371d077466ff2390293d9d4e320d4c95a992fe54
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121117"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764972"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>ICorDebugCode2::GetCodeChunks 메서드
 
@@ -43,21 +44,21 @@ HRESULT GetCodeChunks (
 진행 `chunks` 배열의 크기입니다.
 
 `pcnumChunks`  
-제한이 `chunks` 배열에 반환 된 청크의 수입니다.
+제한이 배열에 반환 된 청크의 수 `chunks` 입니다.
 
 `chunks`  
-제한이 각각 단일 코드 청크를 나타내는 "CodeChunkInfo" 구조체의 배열입니다. `cbufSize` 값이 0 이면이 매개 변수는 null 일 수 있습니다.
+제한이 각각 단일 코드 청크를 나타내는 "CodeChunkInfo" 구조체의 배열입니다. 의 값 `cbufSize` 이 0 이면이 매개 변수는 null 일 수 있습니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 코드 청크가 겹치면 안 되며, [ICorDebugCode:: GetCode](icordebugcode-getcode-method.md)에 의해 연결 된 순서를 따릅니다. .NET Framework 버전 2.0의 MSIL (Microsoft 중간 언어) 코드 개체는 단일 코드 청크로 구성 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
+**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.
 
 **헤더:** CorDebug.idl, CorDebug.h
 
 **라이브러리:** CorGuids.lib
 
-**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

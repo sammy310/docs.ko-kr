@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedReader2:: GetMethodsInDocument 메서드'
 title: ISymUnmanagedReader2::GetMethodsInDocument 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c7ae84d6-81e8-4cb7-a1f9-d48b6cde5d79
 topic_type:
 - apiref
-ms.openlocfilehash: 2e7eb183200c6e6de8ee18b58aab457c7e7bf2eb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1f75594a479edbf2e0160c9d3543384c0cbf68a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675752"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763685"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument 메서드
 
@@ -51,7 +52,7 @@ HRESULT GetMethodsInDocument(
  `pRetVal`  
  제한이 메서드를 받는 버퍼에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -59,6 +60,6 @@ HRESULT GetMethodsInDocument(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReader2 인터페이스](isymunmanagedreader2-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugController:: IsRunning 메서드'
 title: ICorDebugController::IsRunning 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b33ff059-40c4-4dfe-9cb2-21bfed2de0b0
 topic_type:
 - apiref
-ms.openlocfilehash: 73ed86ee12b02d292dc6dfc1d652459a679f81ca
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6a0628cc39765d9cb295877d912d92dbb27937da
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679938"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764582"
 ---
 # <a name="icordebugcontrollerisrunning-method"></a>ICorDebugController::IsRunning 메서드
 
@@ -49,4 +50,4 @@ HRESULT IsRunning (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목

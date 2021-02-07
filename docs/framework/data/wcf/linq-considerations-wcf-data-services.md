@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: LINQ 고려 사항 (WCF Data Services)'
 title: LINQ 고려 사항(WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 2523aac510516fdf19087425b10ab3f2296eb726
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4205fc5c67c5939377e2a964d5a82d8855b03fce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194346"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764966"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ 고려 사항(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 이 항목에서는 WCF Data Services 클라이언트를 사용할 때 LINQ 쿼리를 작성 하 고 실행 하는 방법에 대 한 정보를 제공 하 고 LINQ를 사용 하 여 OData (Open Data Protocol)를 구현 하는 데이터 서비스를 쿼리할 수 있는 제한 사항을 제공 합니다. OData 기반 데이터 서비스에 대 한 쿼리를 작성 하 고 실행 하는 방법에 대 한 자세한 내용은 [데이터 서비스 쿼리](querying-the-data-service-wcf-data-services.md)를 참조 하세요.  
   

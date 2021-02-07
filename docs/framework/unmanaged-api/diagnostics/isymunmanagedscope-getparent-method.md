@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedScope:: GetParent 메서드'
 title: ISymUnmanagedScope::GetParent 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c7963c87-6ec5-49b3-a5cd-e0fe0c43f9b4
 topic_type:
 - apiref
-ms.openlocfilehash: db7fb5f2c1b5d1fa8be1328852ca4402538396f3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c6a056c828bfaefd171ef3f0c546d93d30fb6863
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725900"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763334"
 ---
 # <a name="isymunmanagedscopegetparent-method"></a>ISymUnmanagedScope::GetParent 메서드
 
@@ -38,7 +39,7 @@ HRESULT GetParent(
  `pRetVal`  
  제한이 반환 된 [ISymUnmanagedScope](isymunmanagedscope-interface.md) interface에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -46,7 +47,7 @@ HRESULT GetParent(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedScope 인터페이스](isymunmanagedscope-interface.md)
 - [GetChildren 메서드](isymunmanagedscope-getchildren-method.md)

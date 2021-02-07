@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugDataTarget2:: CreateVirtualUnwinder 메서드'
 title: ICorDebugDataTarget2::CreateVirtualUnwinder Method
 ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
-ms.openlocfilehash: 0967b1cda86eab35015279edeed9a6b9852036b6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0646c85000f42b303769d6587354b3105e2deabd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713940"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764413"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>ICorDebugDataTarget2::CreateVirtualUnwinder Method
 
@@ -42,7 +43,7 @@ HRESULT CreateVirtualUnwinder(
  ppUnwinder  
  [out] ICorDebugVirtualUnwinder 인터페이스 개체의 주소에 대한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  성공하는 경우 `S_OK`입니다. 기타 `HRESULT`는 오류를 나타냅니다. `HRESULT`Mscordbi.dll에서 수신 하는 모든 오류는 치명적인 것으로 간주 되 고 [ICorDebug](icordebug-interface.md) 메서드는를 반환 `CORDBG_E_DATA_TARGET_ERROR` 합니다.  
   
@@ -61,7 +62,7 @@ HRESULT CreateVirtualUnwinder(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugDataTarget2 인터페이스](icordebugdatatarget2-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

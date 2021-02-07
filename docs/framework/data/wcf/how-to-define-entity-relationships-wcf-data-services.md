@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 엔터티 관계 정의 (WCF Data Services)'
 title: '방법: 엔터티 관계 정의(WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: cc255524-1534-4fae-b83c-250933d5a72b
-ms.openlocfilehash: dec22f2f1e1d259e341100bce2b99d71540797db
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 08add639fe333d4892737c64b12ca370129d0bf7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150637"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765518"
 ---
 # <a name="how-to-define-entity-relationships-wcf-data-services"></a>방법: 엔터티 관계 정의(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services에서 새 엔터티를 추가 하는 경우 새 엔터티와 관련 엔터티 간의 관계가 자동으로 정의 되지 않습니다. 엔터티 인스턴스 간의 관계를 만들고 변경할 수 있으며 클라이언트 라이브러리에서 이러한 변경 사항을 데이터 서비스에 반영하도록 지정할 수 있습니다. 자세한 내용은 [데이터 서비스 업데이트](updating-the-data-service-wcf-data-services.md)를 참조 하세요.  
   

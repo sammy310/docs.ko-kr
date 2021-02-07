@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 관련 엔터티 로드 (WCF Data Services)'
 title: '방법: 관련 엔터티 로드(WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
-ms.openlocfilehash: 1ef7fa93b5afdf664f22bd69d3fe3a3b17e98f18
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 004e52b17c399abe8564dd069dd251d7baf296cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180714"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765258"
 ---
 # <a name="how-to-load-related-entities-wcf-data-services"></a>방법: 관련 엔터티 로드(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services에서 연결 된 엔터티를 로드 해야 하는 경우 클래스에서 메서드를 사용할 수 있습니다 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> <xref:System.Data.Services.Client.DataServiceContext> . 또한에서 메서드를 사용 하 여 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> <xref:System.Data.Services.Client.DataServiceQuery%601> 관련 엔터티를 동일한 쿼리 응답에서 적극적으로 로드할 수 있습니다.  
   

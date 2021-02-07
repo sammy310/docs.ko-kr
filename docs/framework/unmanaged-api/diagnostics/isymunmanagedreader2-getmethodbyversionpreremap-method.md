@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedReader2:: GetMethodByVersionPreRemap 메서드'
 title: ISymUnmanagedReader2::GetMethodByVersionPreRemap 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d144ed4-bdb0-4cac-960c-cb90f4dca173
 topic_type:
 - apiref
-ms.openlocfilehash: 5484242562deaf463b7435ad4e54735a7abee45e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b827821f529b9917c6bbb3452f0c3fe3283f1ee9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730489"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763724"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>ISymUnmanagedReader2::GetMethodByVersionPreRemap 메서드
 
@@ -46,7 +47,7 @@ HRESULT GetMethodByVersionPreRemap(
  `pRetVal`  
  제한이 반환 된 [ISymUnmanagedMethod](isymunmanagedmethod-interface.md) interface에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -54,6 +55,6 @@ HRESULT GetMethodByVersionPreRemap(
 
  **헤더:** CorSym. CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReader2 인터페이스](isymunmanagedreader2-interface.md)

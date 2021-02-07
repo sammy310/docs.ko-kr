@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: 인터셉터 (WCF Data Services)'
 title: 인터셉터(WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 64c5c82f33daf677e58d49655897c392f1f7b7f9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f73ee498d0419df9e083248802ea52ed050a914b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204400"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765076"
 ---
 # <a name="interceptors-wcf-data-services"></a>인터셉터(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services를 사용 하면 응용 프로그램에서 요청 메시지를 가로채서 작업에 사용자 지정 논리를 추가할 수 있습니다. 이 사용자 지정 논리를 사용하여 들어오는 메시지의 데이터 유효성을 검사할 수 있습니다. 요청별로 사용자 지정 인증 정책을 삽입하는 등 쿼리 요청 범위를 추가로 제한하는 데에도 이 논리를 사용할 수 있습니다.  
   

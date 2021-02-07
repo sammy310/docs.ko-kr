@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 데이터 서비스 업데이트 (WCF Data Services)'
 title: 데이터 서비스 업데이트(WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 3e2bd3f4ca5402abe4a7f8ec8f5410effaee6700
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3223207b310c28d8e586a537b5c76b7e1b7ca17c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180610"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764894"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>데이터 서비스 업데이트(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services 클라이언트 라이브러리를 사용 하 여 OData (Open Data Protocol) 피드를 사용 하는 경우 라이브러리는 피드의 항목을 클라이언트 데이터 서비스 클래스의 인스턴스로 변환 합니다. 이러한 데이터 서비스 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>를 사용하여 추적됩니다. 클라이언트는 <xref:System.Data.Services.Client.DataServiceContext>의 메서드를 사용하여 보고하는 엔터티의 변경 내용을 추적합니다. 클라이언트는 이러한 메서드를 사용하여 추가된 엔터티와 삭제된 엔터티를 추적하고 속성 값 또는 엔터티 인스턴스 간의 관계에 대한 변경 내용도 추적할 수 있습니다. 이렇게 추적된 변경 내용은 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 메서드를 호출할 때 REST 기반 작업으로 데이터 서비스에 전송됩니다.  
   
@@ -29,7 +32,7 @@ WCF Data Services 클라이언트 라이브러리를 사용 하 여 OData (Open 
  [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#createnewproduct)]
  [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#createnewproduct)]  
   
- 엔터티 인스턴스를 추가 하려면 *AddTo* <xref:System.Data.Services.Client.DataServiceContext> 다음 예제와 같이 **서비스 참조 추가** 대화 상자에 의해 생성 된 클래스에 대해 적절 한 AddTo 메서드를 호출 합니다.  
+ 엔터티 인스턴스를 추가 하려면  <xref:System.Data.Services.Client.DataServiceContext> 다음 예제와 같이 **서비스 참조 추가** 대화 상자에 의해 생성 된 클래스에 대해 적절 한 AddTo 메서드를 호출 합니다.  
   
  [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addproductspecific)]
  [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addproductspecific)]  
@@ -69,7 +72,7 @@ WCF Data Services 클라이언트 라이브러리를 사용 하 여 OData (Open 
   
 ## <a name="creating-and-modifying-relationship-links"></a>관계 링크 만들기 및 수정  
 
- <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>서비스 참조 추가 대화 상자에서 생성 하는 클래스의 메서드 또는 적절 한 *AddTo* 메서드를 사용 하 여 새 엔터티를 추가 하는 경우 <xref:System.Data.Services.Client.DataServiceContext> 새 엔터티와 관련 엔터티 간의 관계가 자동으로 정의 되지 않습니다. **Add Service Reference**  
+ <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>서비스 참조 추가 대화 상자에서 생성 하는 클래스의 메서드 또는 적절 한 *AddTo* 메서드를 사용 하 여 새 엔터티를 추가 하는 경우 <xref:System.Data.Services.Client.DataServiceContext> 새 엔터티와 관련 엔터티 간의 관계가 자동으로 정의 되지 않습니다.   
   
  엔터티 인스턴스 간의 관계를 만들고 변경할 수 있으며 클라이언트 라이브러리에서 이러한 변경 사항을 데이터 서비스에 반영하도록 지정할 수 있습니다. 엔터티 간의 관계는 모델에서 연결로 정의되며 <xref:System.Data.Services.Client.DataServiceContext>는 각 관계를 컨텍스트의 링크 개체로 추적합니다. WCF Data Services 클래스에 대해 다음 메서드를 제공 <xref:System.Data.Services.Client.DataServiceContext> 하 여 이러한 링크를 만들고 수정 및 삭제할 수 있습니다.  
   

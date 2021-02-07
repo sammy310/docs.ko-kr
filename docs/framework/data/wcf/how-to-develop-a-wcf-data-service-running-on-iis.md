@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: IIS에서 실행 되는 WCF 데이터 서비스 개발'
 title: '방법: IIS에서 실행되는 WCF Data Service 개발'
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 75dc18f3ee91ec077ed48c68ec62cb47910d9ddd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b4d7b322a00e3c9c43005a416c608e1b98f1ce51
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543487"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765479"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>방법: IIS에서 실행 되는 WCF 데이터 서비스 개발
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 이 문서에서는 WCF Data Services를 사용 하 여 인터넷 정보 서비스 (IIS)에서 실행 되는 ASP.NET 웹 앱에서 호스트 되는 Northwind 샘플 데이터베이스를 기반으로 하는 데이터 서비스를 만드는 방법을 보여 줍니다. ASP.NET 개발 서버에서 실행 되는 ASP.NET 웹 앱으로 동일한 Northwind 데이터 서비스를 만드는 방법에 대 한 예제는 [WCF Data Services 빠른](quickstart-wcf-data-services.md)시작을 참조 하세요.
 
@@ -29,7 +32,7 @@ ms.locfileid: "90543487"
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>IIS에서 실행 되는 ASP.NET 웹 응용 프로그램 만들기
 
-1. Visual Studio의 **파일** 메뉴에서 **새로 만들기** > **프로젝트**를 차례로 선택합니다.
+1. Visual Studio의 **파일** 메뉴에서 **새로 만들기** > **프로젝트** 를 차례로 선택합니다.
 
 2. **새 프로젝트** 대화 상자에서 **설치** 된 > [**Visual c #** 또는 **Visual Basic**] > **웹** 범주를 선택 합니다.
 
@@ -37,13 +40,13 @@ ms.locfileid: "90543487"
 
 4. `NorthwindService`프로젝트의 이름으로를 입력 합니다.
 
-5. **확인**을 클릭합니다.
+5. **확인** 을 클릭합니다.
 
-6. **프로젝트** 메뉴에서 **NorthwindService 속성**을 선택 합니다.
+6. **프로젝트** 메뉴에서 **NorthwindService 속성** 을 선택 합니다.
 
-7. **웹** 탭을 선택한 다음 **로컬 IIS 웹 서버 사용**을 선택 합니다.
+7. **웹** 탭을 선택한 다음 **로컬 IIS 웹 서버 사용** 을 선택 합니다.
 
-8. **가상 디렉터리 만들기** 를 클릭 한 다음 **확인을**클릭 합니다.
+8. **가상 디렉터리 만들기** 를 클릭 한 다음 **확인을** 클릭 합니다.
 
 9. 관리자 권한으로 실행되는 명령 프롬프트에서 운영 체제에 따라 다음 명령 중 하나를 실행합니다.
 
@@ -79,15 +82,15 @@ ms.locfileid: "90543487"
 
 11. ASP.NET 애플리케이션이 IIS7에서 실행되는 경우 다음 단계도 수행해야 합니다.
 
-    1. IIS 관리자를 열고 **기본 웹 사이트**아래에 있는 사진 서비스 응용 프로그램으로 이동 합니다.
+    1. IIS 관리자를 열고 **기본 웹 사이트** 아래에 있는 사진 서비스 응용 프로그램으로 이동 합니다.
 
-    2. **기능 보기**에서 **인증**을 두 번 클릭합니다.
+    2. **기능 보기** 에서 **인증** 을 두 번 클릭합니다.
 
-    3. **인증** 페이지에서 **익명 인증**을 선택합니다.
+    3. **인증** 페이지에서 **익명 인증** 을 선택합니다.
 
     4. **작업** 창에서 **편집** 을 클릭 하 여 익명 사용자가 사이트에 연결 하는 보안 주체를 설정 합니다.
 
-    5. **익명 인증 자격 증명 편집** 대화 상자에서 **응용 프로그램 풀 id**를 선택 합니다.
+    5. **익명 인증 자격 증명 편집** 대화 상자에서 **응용 프로그램 풀 id** 를 선택 합니다.
 
     > [!IMPORTANT]
     > Network Service 계정을 사용하는 경우 해당 계정과 연결된 모든 내부 네트워크 액세스 권한이 익명 사용자에게 부여됩니다.
@@ -122,13 +125,13 @@ ms.locfileid: "90543487"
 
 ## <a name="define-the-data-model"></a>데이터 모델 정의
 
-1. **솔루션 탐색기**에서 ASP.NET 프로젝트의 이름을 마우스 오른쪽 단추로 클릭 한 다음 **Add**  >  **새 항목**추가를 클릭 합니다.
+1. **솔루션 탐색기** 에서 ASP.NET 프로젝트의 이름을 마우스 오른쪽 단추로 클릭 한 다음   >  **새 항목** 추가를 클릭 합니다.
 
-2. **새 항목 추가** 대화 상자에서 **ADO.NET 엔터티 데이터 모델**를 선택 합니다.
+2. **새 항목 추가** 대화 상자에서 **ADO.NET 엔터티 데이터 모델** 를 선택 합니다.
 
 3. 데이터 모델의 이름에을 입력 `Northwind.edmx` 합니다.
 
-4. 엔터티 데이터 모델 마법사에서 **데이터베이스에서 생성**을 선택 하 고 **다음**을 클릭 합니다.
+4. 엔터티 데이터 모델 마법사에서 **데이터베이스에서 생성** 을 선택 하 고 **다음** 을 클릭 합니다.
 
 5. 다음 단계 중 하나를 수행 하 여 데이터 모델을 데이터베이스에 연결한 **후 다음을 클릭 합니다**.
 
@@ -144,9 +147,9 @@ ms.locfileid: "90543487"
 
 ## <a name="create-the-data-service"></a>데이터 서비스 만들기
 
-1. **솔루션 탐색기**에서 ASP.NET 프로젝트의 이름을 마우스 오른쪽 단추로 클릭 한 다음 **Add**  >  **새 항목**추가를 클릭 합니다.
+1. **솔루션 탐색기** 에서 ASP.NET 프로젝트의 이름을 마우스 오른쪽 단추로 클릭 한 다음   >  **새 항목** 추가를 클릭 합니다.
 
-2. **새 항목 추가** 대화 상자에서 **WCF Data Service**를 선택 합니다.
+2. **새 항목 추가** 대화 상자에서 **WCF Data Service** 를 선택 합니다.
 
    ![Visual Studio 2015의 WCF 데이터 서비스 항목 템플릿](./media/wcf-data-service-item-template.png)
 
@@ -155,13 +158,13 @@ ms.locfileid: "90543487"
 
 3. 서비스의 이름으로을 입력 `Northwind` 합니다.
 
-     Visual Studio에서 새 서비스의 XML 태그 및 코드 파일이 생성됩니다. 기본적으로 코드 편집기 창이 열립니다. **솔루션 탐색기**에서 서비스에는 이름, Northwind 및 확장명이 svc.cs 또는. n b n이 있습니다.
+     Visual Studio에서 새 서비스의 XML 태그 및 코드 파일이 생성됩니다. 기본적으로 코드 편집기 창이 열립니다. **솔루션 탐색기** 에서 서비스에는 이름, Northwind 및 확장명이 svc.cs 또는. n b n이 있습니다.
 
 4. 데이터 서비스 코드에서 데이터 서비스를 정의하는 클래스 정의의 `/* TODO: put your data source class name here */` 주석을 데이터 모델의 엔터티 컨테이너인 형식(이 경우 `NorthwindEntities`)으로 바꿉니다. 클래스 정의는 다음과 같이 나타납니다.
 
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [서비스로 데이터 공개](exposing-your-data-as-a-service-wcf-data-services.md)

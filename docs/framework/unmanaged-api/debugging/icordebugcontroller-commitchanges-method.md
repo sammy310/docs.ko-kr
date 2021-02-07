@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugController:: CommitChanges 메서드'
 title: ICorDebugController::CommitChanges 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8e38bf6-0312-4517-bed5-42031ed86331
 topic_type:
 - apiref
-ms.openlocfilehash: 57481c858c876fd9c60425bced7a13297086f0d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3e7f24958c56dc5be0f18f66efbb86641586843f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125443"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764595"
 ---
 # <a name="icordebugcontrollercommitchanges-method"></a>ICorDebugController::CommitChanges 메서드
 

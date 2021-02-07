@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedReader 인터페이스'
 title: ISymUnmanagedReader 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa3cc15d-058e-4e6f-b03e-39569646ba47
 topic_type:
 - apiref
-ms.openlocfilehash: bca84fdba575ed9bfe572b9fd7a5869620962de6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bad4fdbac3bf6f03fa0db79ce54a5b0ca897028f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675869"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763802"
 ---
 # <a name="isymunmanagedreader-interface"></a>ISymUnmanagedReader 인터페이스
 
@@ -51,7 +52,7 @@ ms.locfileid: "95675869"
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedReader2 인터페이스](isymunmanagedreader2-interface.md)

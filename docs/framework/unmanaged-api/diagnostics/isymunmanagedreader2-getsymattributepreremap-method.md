@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedReader2:: GetSymAttributePreRemap 메서드'
 title: ISymUnmanagedReader2::GetSymAttributePreRemap 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7580d546-a709-40c5-ad02-aa70d774fd0b
 topic_type:
 - apiref
-ms.openlocfilehash: 812c0d08930efff9140c6e897d3f93c4909e8464
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 843a3d2d2a568fdff83d2e416fff426daad14645
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709091"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763633"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap 메서드
 
@@ -55,7 +56,7 @@ HRESULT GetSymAttributePreRemap(
  `buffer`  
  제한이 특성 바이트를 받는 버퍼에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -63,6 +64,6 @@ HRESULT GetSymAttributePreRemap(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReader2 인터페이스](isymunmanagedreader2-interface.md)

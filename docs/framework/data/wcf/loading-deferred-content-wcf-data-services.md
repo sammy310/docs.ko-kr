@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 지연 콘텐츠 로드 (WCF Data Services)'
 title: 지연 콘텐츠 로드(WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: 6eff454bf4f79f7fe215828956ffe79d0c1f6757
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e14796ba003cbad721160ed4a0e2be3e8d148660
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194325"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764920"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>지연 콘텐츠 로드(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 기본적으로 WCF Data Services는 쿼리가 반환 하는 데이터의 양을 제한 합니다. 그러나 필요한 경우 데이터 서비스에서 관련 엔터티, 페이징 응답 데이터 및 이진 데이터 스트림을 포함한 추가 데이터를 명시적으로 로드할 수 있습니다. 이 항목에서는 이러한 지연된 콘텐츠를 애플리케이션에 로드하는 방법을 설명합니다.  
   

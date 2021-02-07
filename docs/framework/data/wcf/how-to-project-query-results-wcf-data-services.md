@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 쿼리 결과 프로젝트 (WCF Data Services)'
 title: '방법: 프로젝트 쿼리 결과(WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -10,14 +11,16 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
-ms.openlocfilehash: 8a3a278a8459da073b7ad3cbf8d1fff1d435a18c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a851176e5f97e31d2e8d9ac62c720d04df4ddc37
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175189"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765115"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>방법: 프로젝트 쿼리 결과(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 프로젝션은 엔터티의 특정 속성만 응답에서 반환되도록 지정하여 쿼리에서 반환되는 데이터의 양을 줄이는 메커니즘을 제공합니다. `$select`쿼리 옵션을 사용 하거나 LINQ 쿼리에서 [select](../../../csharp/language-reference/keywords/select-clause.md) 절 (Visual Basic에서[선택](../../../visual-basic/language-reference/queries/select-clause.md) )을 사용 하 여 WCF Data Services 쿼리의 결과에 대해 프로젝션을 수행할 수 있습니다. 자세한 내용은 [데이터 서비스 쿼리](querying-the-data-service-wcf-data-services.md)를 참조 하세요.  
   

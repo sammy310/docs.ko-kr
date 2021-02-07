@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 비동기 데이터 서비스 쿼리 실행 (WCF Data Services)'
 title: '방법: 비동기 데이터 서비스 쿼리 실행 (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
-ms.openlocfilehash: 84eb88695580598d41615653723c137d3f766a47
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35300de319673b29484dc981b5d6d51c964ad908
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150611"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765349"
 ---
 # <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>방법: 비동기 데이터 서비스 쿼리 실행 (WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services 클라이언트 라이브러리를 사용 하 여 쿼리 실행, 변경 내용 저장 등의 클라이언트-서버 작업을 비동기식으로 수행할 수 있습니다. 자세한 내용은 [비동기 작업](asynchronous-operations-wcf-data-services.md)합니다.  
   

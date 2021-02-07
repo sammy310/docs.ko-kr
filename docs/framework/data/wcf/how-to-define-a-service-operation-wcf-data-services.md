@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 서비스 작업 정의 (WCF Data Services)'
 title: '방법: 서비스 작업 정의(WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,16 +9,18 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: e9d15698c1e020f5b4179efb3e8492f3754ff02f
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 9fcad3a31ea5b439c248ba103cbf4ddd75b8109a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569137"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765622"
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>방법: 서비스 작업 정의(WCF Data Services)
 
-WCF Data Services 서버에 서비스 작업으로 정의 된 메서드를 노출 합니다. 서비스 작업을 통해 데이터 서비스는 URI를 통해 서버에 정의 된 메서드에 대 한 액세스를 제공할 수 있습니다. 서비스 작업을 정의 하려면 메서드에 [`WebGet]` 또는 `[WebInvoke]` 특성을 적용 합니다. 쿼리 연산자를 지원 하려면 서비스 작업에서 <xref:System.Linq.IQueryable%601> 인스턴스를 반환 해야 합니다. 서비스 작업은 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A>의 <xref:System.Data.Services.DataService%601> 속성을 통해 기본 데이터 소스에 액세스할 수 있습니다. 자세한 내용은 [서비스 작업](service-operations-wcf-data-services.md)을 참조 하세요.
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
+
+WCF Data Services 서버에 서비스 작업으로 정의 된 메서드를 노출 합니다. 데이터 서비스는 서비스 작업을 사용하여 URI를 통해 서버에 정의된 메서드에 액세스할 수 있도록 합니다. 서비스 작업을 정의 하려면 [ `WebGet]` 또는 특성을 메서드에 적용 하십시오 `[WebInvoke]` . 쿼리 연산자를 지원 하려면 서비스 작업에서 인스턴스를 반환 해야 합니다 <xref:System.Linq.IQueryable%601> . 서비스 작업은 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A>의 <xref:System.Data.Services.DataService%601> 속성을 통해 기본 데이터 소스에 액세스할 수 있습니다. 자세한 내용은 [서비스 작업](service-operations-wcf-data-services.md)을 참조 하세요.
 
 이 항목의 예제에서는 `GetOrdersByCity`의 필터링된 <xref:System.Linq.IQueryable%601> 인스턴스 및 관련 `Orders` 개체를 반환하는 `Order_Details`라는 서비스 작업을 정의합니다. 이 예제에서는 Northwind 샘플 데이터 서비스의 데이터 소스인 <xref:System.Data.Objects.ObjectContext> 인스턴스에 액세스합니다. 이 서비스는 [WCF Data Services 빠른](quickstart-wcf-data-services.md)시작을 완료 하면 생성 됩니다.
 
@@ -55,6 +58,6 @@ WCF Data Services 서버에 서비스 작업으로 정의 된 메서드를 노�
 [!code-csharp[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperation)]
 [!code-vb[Astoria Northwind Service#ServiceOperation](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperation)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WCF Data Services 정의](defining-wcf-data-services.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedReader:: GetMethodsFromDocumentPosition 메서드'
 title: ISymUnmanagedReader::GetMethodsFromDocumentPosition 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 83605f1e-e4f3-49e6-859b-f13cad68bb54
 topic_type:
 - apiref
-ms.openlocfilehash: 5298dd0f53693d96b748f6c839660838fdfad4ac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 033bdce2cd70e578ebd3be8a187d983a2c58b99d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689552"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764036"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition 메서드
 
@@ -59,7 +60,7 @@ HRESULT GetMethodsFromDocumentPosition (
  `pRetVal`  
  제한이 각각 중단점을 포함 하는 메서드를 나타내는 [ISymUnmanagedMethod](isymunmanagedmethod-interface.md) 개체를 가리키는 포인터의 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -67,6 +68,6 @@ HRESULT GetMethodsFromDocumentPosition (
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedReader 인터페이스](isymunmanagedreader-interface.md)

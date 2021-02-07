@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 데이터 서비스 쿼리 실행 (WCF Data Services)'
 title: '방법: 데이터 서비스 쿼리 실행(WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -9,14 +10,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: 11a37340df879db7c2f8fdeaa792c1466e4a75d0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0d78a5a82f23bb6035d21bd45d68a0b1bb76f34b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184757"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99765323"
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a>방법: 데이터 서비스 쿼리 실행(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services를 사용 하면 생성 된 클라이언트 데이터 서비스 클래스를 사용 하 여 .NET Framework 기반 클라이언트 응용 프로그램에서 데이터 서비스를 쿼리할 수 있습니다. 다음 방법 중 하나를 사용하여 쿼리를 실행할 수 있습니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedScope:: GetChildren 메서드'
 title: ISymUnmanagedScope::GetChildren 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-ms.openlocfilehash: 8f3c83a7a89553ba600f3e0e368eec0ddd0350e9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 55d72c98d34fcb30a479611895228fbc1b9f7f55
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727611"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763503"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren 메서드
 
@@ -47,7 +48,7 @@ HRESULT GetChildren(
  `children`  
  제한이 반환 된 자식의 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -55,7 +56,7 @@ HRESULT GetChildren(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedScope 인터페이스](isymunmanagedscope-interface.md)
 - [GetParent 메서드](isymunmanagedscope-getparent-method.md)
