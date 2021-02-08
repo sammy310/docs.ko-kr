@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 716-ClientChannelOpenStop'
 title: 716 - ClientChannelOpenStop
 ms.date: 03/30/2017
 ms.assetid: 55dc74a8-348f-47f3-aaca-4aef6cd75651
-ms.openlocfilehash: e3ae06b20818e10a0bbe001403b4a180696ed82c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fcab982457621dbc4942d633ac59d20239a6518c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96259514"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793911"
 ---
 # <a name="716---clientchannelopenstop"></a>716 - ClientChannelOpenStop
 
@@ -20,7 +21,7 @@ ms.locfileid: "96259514"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 ServiceChannel 열기가 종료되었을 때 내보내집니다.  
   

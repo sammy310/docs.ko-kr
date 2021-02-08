@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugObjectValue 인터페이스'
 title: ICorDebugObjectValue 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 937de6a0-6fbf-4ddc-80ea-a6217b73e62b
 topic_type:
 - apiref
-ms.openlocfilehash: 2a5a618491bf2c624669728d97a690cca315bff8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a2af438bbb4c2f56eb1a72151e339b6b0a978eec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724678"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794774"
 ---
 # <a name="icordebugobjectvalue-interface"></a>ICorDebugObjectValue 인터페이스
 
@@ -54,6 +55,6 @@ ms.locfileid: "95724678"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)

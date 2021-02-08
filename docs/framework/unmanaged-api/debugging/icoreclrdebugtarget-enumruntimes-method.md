@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICoreClrDebugTarget:: EnumRuntimes 메서드'
 title: ICoreClrDebugTarget::EnumRuntimes 메서드
 ms.date: 03/30/2017
 api_name:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-ms.openlocfilehash: 093f49508e8e96a4003f1aab8eed59e2fd196ba9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 675747106b2acec2e8be3fcdf15831958bea7c7c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679275"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794626"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes 메서드
 
@@ -49,7 +50,7 @@ HRESULT EnumRuntimes (
  `ppRuntimes`  
  제한이 원격 대상 프로세스에 로드 된 런타임을 나타내는 [CoreClrDebugRuntimeInfo](coreclrdebugruntimeinfo-structure.md) 구조체의 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  S_OK  
  성공했습니다.  
@@ -77,6 +78,6 @@ HRESULT EnumRuntimes (
   
  **.NET Framework 버전:** 3.5 SP1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICoreClrDebugTarget 인터페이스](icoreclrdebugtarget-interface.md)

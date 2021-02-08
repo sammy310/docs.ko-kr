@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <codeBase> 요소'
 title: <codeBase> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: 475b7df55ed509157c1da0aeb8f979de238c72b5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 714392444d3ee3db9126e9fe67832cb5f0bf5e3a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70971880"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795120"
 ---
 # <a name="codebase-element"></a>\<codeBase> 요소
 
@@ -40,16 +41,16 @@ ms.locfileid: "70971880"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`href`|필수 특성입니다.<br /><br /> 런타임이 지정 된 버전의 어셈블리를 찾을 수 있는 URL을 지정 합니다.|
-|`version`|필수 특성입니다.<br /><br /> 코드 베이스가 적용 되는 어셈블리의 버전을 지정 합니다. 어셈블리 버전 번호의 형식은 주 버전. *부 버전. 빌드. 수정 버전*입니다.|
+|`version`|필수 특성입니다.<br /><br /> 코드 베이스가 적용 되는 어셈블리의 버전을 지정 합니다. 어셈블리 버전 번호의 형식은 주 버전. *부 버전. 빌드. 수정 버전* 입니다.|
 
 ## <a name="version-attribute"></a>version 특성
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
-|버전 번호의 각 부분에 대해 유효한 값은 0에서 65535입니다.|해당 사항 없음|
+|버전 번호의 각 부분에 대해 유효한 값은 0에서 65535입니다.|해당 사항 없음.|
 
 ### <a name="child-elements"></a>자식 요소
 
@@ -57,7 +58,7 @@ ms.locfileid: "70971880"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |`buildproviders`|사용자 지정 리소스 파일의 컴파일에 사용되는 빌드 공급자의 컬렉션을 정의합니다. 빌드 공급자 수에는 제한이 없습니다.|
 |`compilation`|ASP.NET에서 사용 하는 모든 컴파일 설정을 구성 합니다.|

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: BC30506: Handles 절에는 포함 하는 형식 또는 해당 기본 형식 중 하나에 정의 된 WithEvents 변수가 필요 합니다.'
 title: Handles 절에는 포함하는 형식 또는 해당 형식의 기본 형식 중 하나에 정의된 WithEvents 변수가 필요합니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-ms.openlocfilehash: e16a157d0621d5baecb06ce118e3ab390bf68cf8
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 7253a4766b2015ccbe0ae62f64bc10aaca073dc3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162884"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796121"
 ---
 # <a name="bc30506-handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>BC30506: Handles 절에는 포함 하는 형식 또는 해당 기본 형식 중 하나에 정의 된 WithEvents 변수가 필요 합니다.
 

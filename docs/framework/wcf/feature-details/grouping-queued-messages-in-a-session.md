@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 세션의 대기 중인 메시지 그룹화'
 title: 세션의 대기 중인 메시지 그룹화
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 9ad3bd29535e14231d07b9e491e606f8349ca3ac
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5a23133090ebfd5db9f59bb37a69cdca83ce2bc0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290064"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793846"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>세션의 대기 중인 메시지 그룹화
 
@@ -72,7 +73,7 @@ WCF (Windows Communication Foundation)는 단일 수신 응용 프로그램에�
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
 
  다음 예제에서는 `IProcessOrder` 서비스와 이 서비스를 사용하는 클라이언트에 대한 코드를 제공합니다. WCF에서 큐에 대기 중인 세션을 사용 하 여 그룹화 동작을 제공 하는 방법을 보여 줍니다.  
   

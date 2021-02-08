@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo10:: SuspendRuntime 메서드'
 title: ICorProfilerInfo10::SuspendRuntime
 ms.date: 08/06/2019
 dev_langs:
@@ -11,18 +12,18 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 121ed0401628193f6e2fe632a124c08aad7bd1b4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d019b163c8c71331b2d9a77fc0384d42a04c1fbd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551441"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794561"
 ---
 # <a name="icorprofilerinfo10suspendruntime-method"></a>ICorProfilerInfo10:: SuspendRuntime 메서드
 
 GC를 수행 하지 않고 런타임을 일시 중단 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT SuspendRuntime();
@@ -38,6 +39,6 @@ HRESULT SuspendRuntime();
 
 **.Net 버전:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo10 인터페이스](icorprofilerinfo10-interface.md)

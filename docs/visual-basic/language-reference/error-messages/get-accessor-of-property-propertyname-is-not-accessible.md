@@ -1,4 +1,5 @@
 ---
+description: "BC31103: ' ' 속성의 ' Get ' 접근자에 <propertyname> 액세스할 수 없음에 대해 자세히 알아보세요."
 title: "'<propertyname>' 속성의 'Get' 접근자에 액세스할 수 없습니다."
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
-ms.openlocfilehash: bd6830e16ba3d1f76c61519b4456832a2efec716
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 3517bc7ec512ec99909539eb4d7cf3fafe9016fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162910"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796134"
 ---
 # <a name="bc31103-get-accessor-of-property-propertyname-is-not-accessible"></a>BC31103: ' ' 속성의 ' Get ' 접근자 \<propertyname> 에 액세스할 수 없습니다.
 

@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 오버플로 (Visual Basic Run-Time 오류)'
 title: 오버플로가 발생했습니다(Visual Basic 런타임 오류).
 ms.date: 07/20/2015
 f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-ms.openlocfilehash: e287d6c24eca75d8bf20181a201056f467d6fc4e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a01a8916e09f9278dbdf6d594c5ef84d63b04c51
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871227"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795458"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>오버플로가 발생했습니다(Visual Basic 런타임 오류).
 
@@ -23,7 +24,7 @@ ms.locfileid: "90871227"
   
 3. 정수로 강제 변환 된 계산에 사용 되는 숫자의 결과가 정수 보다 크지 않은지 확인 하십시오.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Int32.MaxValue?displayProperty=nameWithType>
 - <xref:System.Double.MaxValue?displayProperty=nameWithType>

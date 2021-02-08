@@ -1,4 +1,5 @@
 ---
+description: "자세한 내용은 다음에 대해 자세히 알아보세요. BC33107: 이항 ' If ' 식의 첫 번째 피연산자는 nullable 이거나 참조 형식 이어야 합니다."
 title: "'If' 이항 식의 첫 번째 피연산자는 nullable이거나 참조 형식이어야 합니다."
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: bca9b74a68815b4e5a3bb2dc114b9031cdf24099
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 4a0037680e31a8220cb796e6d8f3215139e01b20
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162741"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796251"
 ---
 # <a name="bc33107-first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>BC33107: 이항 ' If ' 식의 첫 번째 피연산자는 nullable 이거나 참조 형식 이어야 합니다.
 

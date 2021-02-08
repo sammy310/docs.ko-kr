@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: StrongNameSignatureVerificationEx 함수'
 title: StrongNameSignatureVerificationEx 함수
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfe4b634-18bf-44b8-9773-d94fb7e8a480
 topic_type:
 - apiref
-ms.openlocfilehash: 27417c379411e242c48d6d9b0c99de833f7ede8a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9e20044e9c3caef8c2276ac5f390269ee978d55b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719270"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794535"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx 함수
 
@@ -49,7 +50,7 @@ BOOLEAN StrongNameSignatureVerificationEx (
  `pfWasVerified`  
  [out] `true` 강력한 이름 서명을 확인 했으면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false` 입니다. `pfWasVerified``false`레지스트리 설정으로 인해 확인이 성공적으로 수행 된 경우에도로 설정 됩니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `true` 확인에 성공 했으면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false` 입니다.  
   
@@ -67,7 +68,7 @@ BOOLEAN StrongNameSignatureVerificationEx (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [StrongNameSignatureVerificationEx 메서드](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
 - [StrongNameSignatureVerification 메서드](../hosting/iclrstrongname-strongnamesignatureverification-method.md)

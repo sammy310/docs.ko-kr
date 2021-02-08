@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugRemote:: CreateProcessEx 메서드'
 title: ICorDebugRemote::CreateProcessEx 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: 37bf800f27754d1bf80aece962b7cbb85b1cbedc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd27400f5c9f348621fb66b3b7730cf15d397151
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712185"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794730"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx 메서드
 
@@ -87,7 +88,7 @@ HRESULT CreateProcessEx (
  `ppProcess`  
  제한이 프로세스를 나타내는 "ICorDebugProcess Interface" 개체의 주소에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  S_OK  
  원격 컴퓨터에서 프로세스를 시작 하 고 디버깅을 위해 "ICorDebugProcess Interface"를 반환 했습니다.  
@@ -109,7 +110,7 @@ HRESULT CreateProcessEx (
   
  **.NET Framework 버전:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugRemote 인터페이스](icordebugremote-interface.md)
 - [ICorDebug 인터페이스](icordebug-interface.md)

@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 경로/파일 액세스 오류'
 title: 경로-파일 액세스 오류
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-ms.openlocfilehash: 70de8f9cb33ab3d889f4916ae3d5de48cd218092
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d4fc7e716f025c0a482ab414f4a25a2b521634e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871194"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795445"
 ---
 # <a name="pathfile-access-error"></a>경로/파일 액세스 오류입니다.
 
@@ -25,6 +26,6 @@ ms.locfileid: "90871194"
   
 4. 데이터베이스 또는 문서 내의 Visual Basic 프로젝트를 변경 하지 않았는지 확인 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [오류 형식](../../programming-guide/language-features/error-types.md)
+- [오류 유형](../../programming-guide/language-features/error-types.md)

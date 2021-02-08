@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: BC30812: 선택적 매개 변수는 기본값을 지정 해야 합니다.'
 title: 선택적 매개 변수는 기본값을 지정해야 합니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-ms.openlocfilehash: 3718fe5c42c8af0948f3b5cb0d120c6876c6f98f
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 1cbed1c0f1297ecacdae94d9234d18a3d268f487
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162455"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795536"
 ---
 # <a name="bc30812-optional-parameters-must-specify-a-default-value"></a>BC30812: 선택적 매개 변수는 기본값을 지정 해야 합니다.
 

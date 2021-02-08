@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 215-MessageReceivedByTransport'
 title: 215 - MessageReceivedByTransport
 ms.date: 03/30/2017
 ms.assetid: bb32aa60-5207-4711-9f08-110e8ac327e5
-ms.openlocfilehash: 2f247e751a0690f13d059eff29d633c6d047775d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e9645cfc8c4013f8891cb645db7df35477a57412
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279079"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794366"
 ---
 # <a name="215---messagereceivedbytransport"></a>215 - MessageReceivedByTransport
 
@@ -20,7 +21,7 @@ ms.locfileid: "96279079"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 TCP 기반 전송이 메시지를 받을 때 발생합니다. 전송 수준에서는 단일 작업에 대해 클라이언트와 서비스 간에 여러 메시지가 교환될 수 있습니다. 이는 보안과 같은 인프라 동작 때문일 수 있습니다. 따라서 내보내지는 `MessageReceivedByTransport` 이벤트의 수는 서비스의 바인딩과 해당 구성에 따라 달라집니다.  
   
@@ -33,7 +34,7 @@ ms.locfileid: "96279079"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |Listen Address|`xs:string`|메시지를 받은 주소입니다.|  
 |HostReference|`xs:string`|웹 호스팅 서비스의 경우 이 필드는 웹 계층의 서비스를 고유하게 식별합니다. 해당 형식은 ' 웹 사이트 이름 응용 프로그램 가상 경로&#124;서비스 가상 경로&#124;ServiceName '으로 정의 됩니다. 예: ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService '.|  

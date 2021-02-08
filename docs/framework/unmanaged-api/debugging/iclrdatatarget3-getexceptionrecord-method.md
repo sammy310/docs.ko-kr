@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRDataTarget3:: GetExceptionRecord 메서드'
 title: ICLRDataTarget3::GetExceptionRecord 메서드
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 6643c2af-2ee6-4789-aa25-1d8eaf500c94
 topic_type:
 - apiref
-ms.openlocfilehash: 8f6eaa6ad310e9a01b2307bff091b670c3e1d6cb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cb816d1be72ee57b556b78dba6ed7503d941b210
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723612"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794808"
 ---
 # <a name="iclrdatatarget3getexceptionrecord-method"></a>ICLRDataTarget3::GetExceptionRecord 메서드
 
@@ -36,7 +37,7 @@ HRESULT GetExceptionRecord(
 ## <a name="parameters"></a>매개 변수  
 
  `bufferSize`  
- [in] 입력 버퍼 크기(바이트)로, MINIDUMP_EXCEPTION와 같아야 합니다 `sizeof(` [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) `)` .  
+ [in] 입력 버퍼 크기(바이트)로, MINIDUMP_EXCEPTION와 같아야 합니다 `sizeof(` [](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) `)` .  
   
  `bufferUsed`  
  [out] 실제로 버퍼에 기록되는 바이트 수를 받는 `ULONG32` 형식에 대한 포인터입니다.  
@@ -44,7 +45,7 @@ HRESULT GetExceptionRecord(
  `buffer`  
  [out] 예외 레코드 복사본을 받는 메모리 버퍼에 대한 포인터입니다. 예외 레코드는 [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) 형식으로 반환 됩니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  반환 값은 성공 시 `S_OK`이고 실패 시에는 오류 `HRESULT` 코드입니다. `HRESULT` 코드는 다음을 비롯한 여러 항목을 포함할 수 있습니다.  
   
@@ -70,7 +71,7 @@ HRESULT GetExceptionRecord(
   
  **.NET Framework 버전:**[!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRDataTarget3 인터페이스](iclrdatatarget3-interface.md)
 - [GetExceptionContextRecord 메서드](iclrdatatarget3-getexceptioncontextrecord-method.md)

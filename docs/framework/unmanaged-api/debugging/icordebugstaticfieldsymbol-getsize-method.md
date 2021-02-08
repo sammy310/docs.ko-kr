@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugStaticFieldSymbol:: GetSize 메서드'
 title: ICorDebugStaticFieldSymbol::GetSize 메서드
 ms.date: 03/30/2017
 ms.assetid: 72389860-7e37-4656-ba46-b6aeee1860f8
-ms.openlocfilehash: 34567247935588363d96b141717d7ec07bb76546
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f6fd2fe60d7cb8a77dcff5ca259d05ae1ef195ed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677212"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794691"
 ---
 # <a name="icordebugstaticfieldsymbolgetsize-method"></a>ICorDebugStaticFieldSymbol::GetSize 메서드
 
@@ -41,7 +42,7 @@ HRESULT GetSize(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugStaticFieldSymbol 인터페이스](icordebugstaticfieldsymbol-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

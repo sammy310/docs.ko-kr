@@ -1,15 +1,18 @@
 ---
+description: '자세한 정보: 데이터 서비스 컨텍스트 관리 (WCF Data Services)'
 title: 데이터 서비스 컨텍스트 관리(WCF Data Services)
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-ms.openlocfilehash: e67f7280bc85c7577f960707659890f59470e535
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 713136245ae2d7d27010cc527efad83979929761
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194299"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795016"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>데이터 서비스 컨텍스트 관리(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 <xref:System.Data.Services.Client.DataServiceContext> 클래스는 지정한 데이터 서비스에 대해 지원되는 작업을 캡슐화합니다. OData 서비스는 상태 비저장 이지만 컨텍스트는 그렇지 않습니다. 따라서 <xref:System.Data.Services.Client.DataServiceContext> 변경 관리 등의 기능을 지원 하기 위해 클래스를 사용 하 여 데이터 서비스와의 상호 작용 간에 클라이언트의 상태를 유지할 수 있습니다. 또한 이 클래스는 ID를 관리하고 변경 내용을 추적합니다.  
   
@@ -40,7 +43,7 @@ ms.locfileid: "91194299"
   
 ### <a name="post-tunneling"></a>POST 터널링  
 
- 기본적으로 클라이언트 라이브러리는 POST, GET, PUT/MERGE/PATCH 및 DELETE에 해당 하는 HTTP 메서드를 사용 하 여 OData 서비스에 대 한 만들기, 읽기, 업데이트 및 삭제 요청을 보냅니다. 이는 REST(Representational State Transfer) 기본 원칙을 준수합니다. 그러나, 모든 웹 서버 구현이 전체 HTTP 메서드 집합을 지원하는 것은 아닙니다. 경우에 따라 지원되는 메서드가 GET 및 POST로만 제한될 수 있습니다. 이는 방화벽 같은 매개자가 특정 메서드를 사용하여 요청을 차단할 경우 발생할 수 있습니다. GET 및 POST 메서드가 가장 자주 지원 되기 때문에 OData는 POST 요청을 사용 하 여 지원 되지 않는 HTTP 메서드를 실행 하는 방법을 규정 합니다. *메서드 터널링* 또는 *사후 터널링*이라고 하는이를 통해 클라이언트는 사용자 지정 헤더에 지정 된 실제 메서드를 사용 하 여 POST 요청을 보낼 수 있습니다 `X-HTTP-Method` . 요청에 대해 POST 터널링을 사용하도록 설정하려면 <xref:System.Data.Services.Client.DataServiceContext.UsePostTunneling%2A> 인스턴스의 <xref:System.Data.Services.Client.DataServiceContext> 속성을 `true`로 설정합니다.  
+ 기본적으로 클라이언트 라이브러리는 POST, GET, PUT/MERGE/PATCH 및 DELETE에 해당 하는 HTTP 메서드를 사용 하 여 OData 서비스에 대 한 만들기, 읽기, 업데이트 및 삭제 요청을 보냅니다. 이는 REST(Representational State Transfer) 기본 원칙을 준수합니다. 그러나, 모든 웹 서버 구현이 전체 HTTP 메서드 집합을 지원하는 것은 아닙니다. 경우에 따라 지원되는 메서드가 GET 및 POST로만 제한될 수 있습니다. 이는 방화벽 같은 매개자가 특정 메서드를 사용하여 요청을 차단할 경우 발생할 수 있습니다. GET 및 POST 메서드가 가장 자주 지원 되기 때문에 OData는 POST 요청을 사용 하 여 지원 되지 않는 HTTP 메서드를 실행 하는 방법을 규정 합니다. *메서드 터널링* 또는 *사후 터널링* 이라고 하는이를 통해 클라이언트는 사용자 지정 헤더에 지정 된 실제 메서드를 사용 하 여 POST 요청을 보낼 수 있습니다 `X-HTTP-Method` . 요청에 대해 POST 터널링을 사용하도록 설정하려면 <xref:System.Data.Services.Client.DataServiceContext.UsePostTunneling%2A> 인스턴스의 <xref:System.Data.Services.Client.DataServiceContext> 속성을 `true`로 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

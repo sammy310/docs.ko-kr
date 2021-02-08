@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugStaticFieldSymbol:: GetName 메서드'
 title: ICorDebugStaticFieldSymbol::GetName 메서드
 ms.date: 03/30/2017
 ms.assetid: e2be4af2-15d1-4e6a-8b68-1d78c93294a4
-ms.openlocfilehash: 6284a27921e0ba5bd3cedf07ef9f62348460ad06
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c74de604f5880a69b77c89e56a82ae08517dd69c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677238"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794704"
 ---
 # <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol::GetName 메서드
 
@@ -49,7 +50,7 @@ HRESULT GetName(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugStaticFieldSymbol 인터페이스](icordebugstaticfieldsymbol-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 방법: 지원 자격 증명 만들기'
 title: '방법: 지원하는 자격 증명 만들기'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 1e11da11de68b1d3e24115387ec61ad22ec031b1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2f84e58eb0b8df5e1297fcbc50ddcac96db4fe5c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286307"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793820"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>방법: 지원하는 자격 증명 만들기
 
@@ -30,7 +31,7 @@ ms.locfileid: "96286307"
 
  지원 자격 증명은 메시지 내부에 전송 된 *지원 토큰* 을 생성 합니다. WS-SecurityPolicy 사양은 다음 표에 설명된 것처럼 지원 토큰을 메시지에 첨부하는 네 가지 방법을 정의합니다.  
   
-|목적|Description|  
+|목적|설명|  
 |-------------|-----------------|  
 |서명|지원 토큰은 보안 헤더에 포함되고 메시지 서명으로 서명됩니다.|  
 |보증|*보증 토큰* 은 메시지 서명에 서명 합니다.|  
@@ -73,13 +74,13 @@ ms.locfileid: "96286307"
   
 #### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a>지원 자격 증명을 포함하는 사용자 지정 바인딩을 만들려면  
   
-1. 보안 바인딩 요소를 만듭니다. 아래 예제에서는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 인증 모드로 `UserNameForCertificate`를 만듭니다. <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A> 메서드를 사용하세요.  
+1. 보안 바인딩 요소를 만듭니다. 아래 예제에서는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 인증 모드로 `UserNameForCertificate`를 만듭니다. <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A> 메서드를 사용합니다.  
   
 2. 해당 속성(`Endorsing`, `Signed`, `SignedEncrypted` 또는 `SignedEndorsed`)에 의해 반환된 형식 컬렉션에 지원 매개 변수를 추가합니다. <xref:System.ServiceModel.Security.Tokens> 네임스페이스의 형식에는 <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters> 같은 자주 사용되는 형식이 포함됩니다.  
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
 
  다음 예제에서는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>의 인스턴스를 만들고 <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters> 클래스의 인스턴스를 반환된 Endorsing 속성 컬렉션에 추가합니다.  
   

@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 사용 권한 거부 됨 (Visual Basic)'
 title: 사용 권한이 거부됨
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-ms.openlocfilehash: 5ac585a86a783f36642545e368b1c2e694b89f62
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: dcd7f69c1294d22510a3600a3feb045da30faf17
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871169"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795419"
 ---
 # <a name="permission-denied-visual-basic"></a>사용 권한이 거부되었습니다(Visual Basic).
 
@@ -23,6 +24,6 @@ ms.locfileid: "90871169"
   
 3. 레지스트리에 액세스 하려면 사용자 권한이이 유형의 레지스트리 액세스를 포함 하는지 확인 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [오류 형식](../../programming-guide/language-features/error-types.md)
+- [오류 유형](../../programming-guide/language-features/error-types.md)

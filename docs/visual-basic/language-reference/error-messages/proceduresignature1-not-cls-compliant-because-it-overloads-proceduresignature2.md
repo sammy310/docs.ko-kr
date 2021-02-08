@@ -1,4 +1,5 @@
 ---
+description: 자세한 내용은 다음에 대해 자세히 알아보세요. BC40035:은 (는 <proceduresignature1> ) 배열 <proceduresignature2> 매개 변수 형식의 배열 또는 배열 매개 변수 형식의 차수만 다른 오버 로드로 인해 CLS 규격이 아닙니다.
 title: <proceduresignature1>는 배열 매개 변수 형식의 배열만 다르거나 배열 매개 변수 형식의 차수만 다른 <proceduresignature2>를 오버로드하므로 CLS 규격이 아닙니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
-ms.openlocfilehash: 5376f0513b1180da511a508cf8e0e754e8938384
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 056683033a4eacdc6ad783f5056b639e849e3507
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159796"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795393"
 ---
 # <a name="bc40035-proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>BC40035: \<proceduresignature1> 는 배열 \<proceduresignature2> 매개 변수 형식의 배열 또는 배열 매개 변수 형식의 차수만 다른 오버 로드 이므로 CLS 규격이 아닙니다.
 

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRDataTarget3 인터페이스'
 title: ICLRDataTarget3 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: d2711bdf-64b3-404c-a0c3-01ba4907f703
 topic_type:
 - apiref
-ms.openlocfilehash: 7297bfa5297878dde6867a99029ac88754a05290
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: deea609298563e60897f9bedab9fb1e175dc7b73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723586"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794791"
 ---
 # <a name="iclrdatatarget3-interface"></a>ICLRDataTarget3 인터페이스
 
@@ -43,7 +44,7 @@ ms.locfileid: "95723586"
   
  **.NET Framework 버전:**[!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRDataTarget 인터페이스](iclrdatatarget-interface.md)
 - [ICLRDataTarget2 인터페이스](iclrdatatarget2-interface.md)

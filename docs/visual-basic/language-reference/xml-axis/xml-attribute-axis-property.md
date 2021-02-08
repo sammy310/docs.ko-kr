@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: XML 특성 축 속성 (Visual Basic)'
 title: XML Attribute Axis Property
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: 9eddd132b2d4dd6ffbd935a0c8c57a03a3d65435
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 2085ef2151e7aef7c5642e0ba9ac2e6fa90bfd4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869444"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795172"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML 특성 축 속성(Visual Basic)
 
 개체의 특성 값 <xref:System.Xml.Linq.XElement> 또는 개체 컬렉션의 첫 번째 요소에 대 한 액세스를 제공 합니다 <xref:System.Xml.Linq.XElement> .  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 object.@attribute  
@@ -43,7 +44,7 @@ object.@<attribute>
  `attribute`  
  필수 사항입니다. [:] 형식의 액세스할 특성의 이름입니다 `prefix` `name` .  
   
-|파트|Description|  
+|파트|설명|  
 |----------|-----------------|  
 |`prefix`|선택 사항입니다. 특성에 대 한 XML 네임 스페이스 접두사입니다. `Imports` 문으로 정의되는 전역 XML 네임스페이스여야 합니다.|  
 |`name`|필수 사항입니다. 로컬 특성 이름입니다. [선언 된 XML 요소 및 특성의 이름](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)을 참조 하세요.|  
@@ -51,7 +52,7 @@ object.@<attribute>
  \>  
  선택 사항입니다. 가 Visual Basic의 올바른 식별자가 아닌 경우 특성 이름의 끝을 나타냅니다 `attribute` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  의 값을 포함 하는 문자열입니다 `attribute` . 특성 이름이 없으면 `Nothing` 이 반환 됩니다.  
   
@@ -115,7 +116,7 @@ object.@<attribute>
   
  `Phone type: home`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Linq.XElement>
 - [XML 축 속성](index.md)

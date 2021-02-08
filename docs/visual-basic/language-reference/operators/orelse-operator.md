@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: OrElse 연산자 (Visual Basic)'
 title: OrElse 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: edac3eeaef5d0127f10a0d570ca27c8158806ff3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 48ccbda1e0cb4f655b28e902b22fbfe0c3e66ac8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866725"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795328"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse 연산자(Visual Basic)
 
 두 식에 순환이 짧은 논리 분리를 수행 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb
 result = expression1 OrElse expression2  
@@ -58,7 +59,7 @@ result = expression1 OrElse expression2
   
 ## <a name="overloading"></a>오버로딩  
 
- [Or 연산자](or-operator.md) 와 [IsTrue 연산자](istrue-operator.md) 를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체에서 해당 동작을 재정의할 수 있습니다. 및 연산자를 오버 로드 하면 `Or` `IsTrue` 연산자의 동작에 영향을 줍니다 `OrElse` . `OrElse`및를 오버 로드 하는 클래스 또는 구조체에서 코드를 사용 하는 경우 `Or` 다시 `IsTrue` 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+ [Or 연산자](or-operator.md) 와 [IsTrue 연산자](istrue-operator.md) 를 *오버 로드할* 수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체에서 해당 동작을 재정의할 수 있습니다. 및 연산자를 오버 로드 하면 `Or` `IsTrue` 연산자의 동작에 영향을 줍니다 `OrElse` . `OrElse`및를 오버 로드 하는 클래스 또는 구조체에서 코드를 사용 하는 경우 `Or` 다시 `IsTrue` 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 
@@ -74,7 +75,7 @@ result = expression1 OrElse expression2
   
  [!code-vb[VbVbalrOperators#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#38)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [논리/비트 연산자(Visual Basic)](logical-bitwise-operators.md)
 - [Visual Basic에서의 연산자 우선 순위](operator-precedence.md)

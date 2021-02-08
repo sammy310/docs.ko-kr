@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Xor 연산자 (Visual Basic)'
 title: Xor 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -14,18 +15,18 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-ms.openlocfilehash: ce7592c73f387d6ddbfd328abce8555cb7dcd303
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 313ff30ace91b1832c0d35df13294e570a8e410d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875294"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795224"
 ---
 # <a name="xor-operator-visual-basic"></a>배타적 or 연산자(Visual Basic)
 
 두 식에 논리 제외를 수행 `Boolean` 하거나 두 숫자 식에 비트 제외를 수행 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 result = expression1 Xor expression2  
@@ -78,7 +79,7 @@ result = expression1 Xor expression2
   
 ## <a name="overloading"></a>오버로딩  
 
- `Xor`연산자를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체의 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+ `Xor`연산자를 *오버 로드할* 수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체의 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 
@@ -96,7 +97,7 @@ result = expression1 Xor expression2
   
  이전 예제에서는 각각 2, 12 및 14의 결과를 생성 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [논리/비트 연산자(Visual Basic)](logical-bitwise-operators.md)
 - [Visual Basic에서의 연산자 우선 순위](operator-precedence.md)

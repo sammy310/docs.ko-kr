@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 하위 식 (Visual Basic)'
 title: 하위 식
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: e564fa3f717fc1a9f4e9961d9b3e961912a4d56b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e47aa8f9707701b5fd9d90fb3fabb31e9c052b53
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873325"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795289"
 ---
 # <a name="sub-expression-visual-basic"></a>하위 식(Visual Basic)
 
 서브루틴 람다 식을 정의 하는 매개 변수 및 코드를 선언 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Sub ( [ parameterlist ] ) statement  
@@ -61,7 +62,7 @@ End Sub
   
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Sub 문](../statements/sub-statement.md)
 - [람다 식](../../programming-guide/language-features/procedures/lambda-expressions.md)

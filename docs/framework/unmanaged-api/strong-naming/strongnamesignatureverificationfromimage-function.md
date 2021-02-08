@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: StrongNameSignatureVerificationFromImage 함수'
 title: StrongNameSignatureVerificationFromImage 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9fb144d2-07e0-4a0e-8e05-907bbb6c9e03
 topic_type:
 - apiref
-ms.openlocfilehash: b90cc6fe99cf592f1b3fd117888462a957e4ce35
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9dca8d0b221dfe8959be2de9b8347b95d3802a0e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708428"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794496"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>StrongNameSignatureVerificationFromImage 함수
 
@@ -66,7 +67,7 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
   
 - `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-이 값은 `false` 레지스트리 설정으로 인해 확인이 성공 하도록 지정 하기 위해로 설정 됩니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `true` 성공적으로 완료 되 면 그렇지 않으면 `false` 입니다.  
   
@@ -84,7 +85,7 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [StrongNameSignatureVerificationFromImage 메서드](../hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)
 - [ICLRStrongName 인터페이스](../hosting/iclrstrongname-interface.md)

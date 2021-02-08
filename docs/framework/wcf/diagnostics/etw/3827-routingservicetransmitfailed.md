@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 3827-RoutingServiceTransmitFailed'
 title: 3827 - RoutingServiceTransmitFailed
 ms.date: 03/30/2017
 ms.assetid: 92e94472-e91e-4c9c-81b1-b5bb11655c04
-ms.openlocfilehash: 72fd66e4dcd84fe6c9ca2facc8f4692dd620b668
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 551ef03bab39514a9f22801c4592c049fd363dc8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262491"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794067"
 ---
 # <a name="3827---routingservicetransmitfailed"></a>3827 - RoutingServiceTransmitFailed
 
@@ -20,7 +21,7 @@ ms.locfileid: "96262491"
 |Level|경고|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 라우팅 서비스 전송이 실패했을 때 내보내집니다.  
   

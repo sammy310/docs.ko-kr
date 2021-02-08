@@ -1,4 +1,5 @@
 ---
+description: 다음에 대해 자세히 알아보세요. Loop 문 (Visual Basic)
 title: Do...Loop 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -20,18 +21,18 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: 86a702aefeea1e5e359a579a3f29e9c06f1c619c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d170074c44d1692517f6b51abd4a6b3d005941c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90865936"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795185"
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop 문(Visual Basic)
 
 `Boolean`조건이 `True` 이거나 조건이이 될 때까지 문 블록을 반복 `True` 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Do { While | Until } condition  
@@ -83,7 +84,7 @@ Loop { While | Until } condition
 
  [Exit Do](exit-statement.md) 문은를 종료 하는 다른 방법을 제공할 수 있습니다 `Do…Loop` . `Exit Do` 문 다음에 오는 문으로 제어를 즉시 전달 `Loop` 합니다.  
   
- `Exit Do` 는 구조체와 같이 일부 조건을 평가한 후에 사용 되는 경우가 많습니다 `If...Then...Else` . 오류가 발생 하거나 종료 요청 등의 반복을 계속할 수 없게 하는 조건을 감지 하는 경우 루프를 종료할 수 있습니다. 를 사용 하는 한 가지 `Exit Do` 방법은 *무한 루프*를 발생 시킬 수 있는 조건을 테스트 하는 것입니다 .이는 무한 하거나 무한 한 횟수를 실행할 수 있는 루프입니다. 를 사용 하 여 루프를 이스케이프할 수 있습니다 `Exit Do` .  
+ `Exit Do` 는 구조체와 같이 일부 조건을 평가한 후에 사용 되는 경우가 많습니다 `If...Then...Else` . 오류가 발생 하거나 종료 요청 등의 반복을 계속할 수 없게 하는 조건을 감지 하는 경우 루프를 종료할 수 있습니다. 를 사용 하는 한 가지 `Exit Do` 방법은 *무한 루프* 를 발생 시킬 수 있는 조건을 테스트 하는 것입니다 .이는 무한 하거나 무한 한 횟수를 실행할 수 있는 루프입니다. 를 사용 하 여 루프를 이스케이프할 수 있습니다 `Exit Do` .  
   
  에는 임의 개수의 문을 포함할 수 있습니다 `Exit Do` `Do…Loop` .  
   
@@ -113,7 +114,7 @@ Loop { While | Until } condition
   
  [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [루프 구조체](../../programming-guide/language-features/control-flow/loop-structures.md)
 - [For...Next 문](for-next-statement.md)

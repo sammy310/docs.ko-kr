@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 218-ClientOperationCompleted'
 title: 218 - ClientOperationCompleted
 ms.date: 03/30/2017
 ms.assetid: b069bced-7bb2-4e01-8227-e5dbda17af09
-ms.openlocfilehash: d74aa77aff7b45b50f6891c999889011d9e03381
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3719b77ce653c5177cf7b92901ecd51982504b83
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96278858"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794340"
 ---
 # <a name="218---clientoperationcompleted"></a>218 - ClientOperationCompleted
 
@@ -20,7 +21,7 @@ ms.locfileid: "96278858"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 작업이 완료된 직후에 클라이언트에서 내보내집니다. 즉, 단방향 작업의 경우 메시지가 성공적으로 보내진 직후에 내보내지고 요청-응답 작업의 경우 응답이 수신된 후에 내보내집니다.  
   

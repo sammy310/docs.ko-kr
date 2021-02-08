@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 223-OperationFaulted 발생 했습니다.'
 title: 223 - OperationFaulted
 ms.date: 03/30/2017
 ms.assetid: 2f7d89d7-3a6a-40fe-9610-5424eb6bbf61
-ms.openlocfilehash: 310e91320d27dd9817302fc14ef088d180152b73
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e4155516e07568d4ee4ca76d63754ec4171e1064
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263076"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794288"
 ---
 # <a name="223---operationfaulted"></a>223 - OperationFaulted
 
@@ -20,7 +21,7 @@ ms.locfileid: "96263076"
 |Level|경고|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 서비스 모델의 기본 `OperationInvoker`에서 해당 메서드를 호출하는 동안 `FaultException`에서 파생되는 예외가 발생하면 내보내집니다.  
   
@@ -30,9 +31,9 @@ ms.locfileid: "96263076"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |MethodName|`xs:string`|`OperationInvoker`의 호출을 받은 메서드의 CLR 이름입니다.|  
-|기간|`xs:long`|`OperationInvoker`가 메서드를 호출하는 데 걸린 시간(밀리초)입니다.|  
+|Duration|`xs:long`|`OperationInvoker`가 메서드를 호출하는 데 걸린 시간(밀리초)입니다.|  
 |HostReference|`xs:string`|웹 호스팅 서비스의 경우 이 필드는 웹 계층의 서비스를 고유하게 식별합니다. 해당 형식은 ' 웹 사이트 이름 응용 프로그램 가상 경로&#124;서비스 가상 경로&#124;ServiceName '으로 정의 됩니다. 예: ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService '.|  
 |AppDomain|`xs:string`|AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.|

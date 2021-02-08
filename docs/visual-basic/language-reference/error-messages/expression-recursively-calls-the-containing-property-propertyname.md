@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: BC42026: 식이 포함 하는 속성을 재귀적으로 호출 합니다.<propertyname>'
 title: 식이 포함하는 속성 '<propertyname>'을(를) 재귀적으로 호출합니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: f5b8b226d46afa0555559de0930f20025ba27f2b
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 4b6abcbab62ae0c4c5b18b0e6946bcfb21857112
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162767"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796342"
 ---
 # <a name="bc42026-expression-recursively-calls-the-containing-property-propertyname"></a>BC42026: 식이 포함 하는 속성 ' '을 재귀적으로 호출 합니다. \<propertyname>
 

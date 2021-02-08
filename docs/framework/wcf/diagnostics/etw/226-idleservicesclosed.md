@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 226-IdleServicesClosed'
 title: 226 - IdleServicesClosed
 ms.date: 03/30/2017
 ms.assetid: b5e72de3-33c6-46a2-998a-3809b520bb30
-ms.openlocfilehash: e7563244fead615c0e5fc42cfc341480fab6702f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 449069804644bde9f3b2b3d7b79c88636d2118cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243536"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794262"
 ---
 # <a name="226---idleservicesclosed"></a>226 - IdleServicesClosed
 
@@ -20,7 +21,7 @@ ms.locfileid: "96243536"
 |Level|LogAlways|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 유휴 서비스를 닫을 때 내보내집니다.  
   

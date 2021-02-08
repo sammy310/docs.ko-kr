@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 서 수가 유효 하지 않음'
 title: 서수가 잘못되었습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-ms.openlocfilehash: 64f56b2ecace0ceafb310a175ea605e6959b7256
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 7c58675a08d3821cd05ba0109e5ce0107c68e497
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871387"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795523"
 ---
 # <a name="ordinal-is-not-valid"></a>서수가 잘못되었습니다.
 
@@ -29,6 +30,6 @@ ms.locfileid: "90871387"
   
 3. 코드를 주석으로 처리 하 여 문제를 일으킨 프로시저 호출을 분리 합니다. `Declare`프로시저에 대 한 문을 작성 하 고 형식 라이브러리 공급 업체에 문제를 보고 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Declare 문](../statements/declare-statement.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRDataTarget3:: GetExceptionContextRecord 메서드'
 title: ICLRDataTarget3::GetExceptionContextRecord 메서드
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 66076ed5-f05c-4114-9788-94cb143abb8a
 topic_type:
 - apiref
-ms.openlocfilehash: 87065b83e0b28eafdf5099f99fd188e2e21e7a12
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c722eaaf0f9935bc7adaa69a1792f934f631a728
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723625"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794834"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>ICLRDataTarget3::GetExceptionContextRecord 메서드
 
@@ -44,7 +45,7 @@ HRESULT GetExceptionContextRecord(
  `buffer`  
  [out] 컨텍스트 레코드 복사본을 받는 메모리 버퍼에 대한 포인터입니다. 예외 레코드는 [컨텍스트](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) 형식으로 반환 됩니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  반환 값은 성공 시 `S_OK`이고 실패 시에는 오류 `HRESULT` 코드입니다. `HRESULT` 코드는 다음을 비롯한 여러 항목을 포함할 수 있습니다.  
   
@@ -70,7 +71,7 @@ HRESULT GetExceptionContextRecord(
   
  **.NET Framework 버전:**[!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRDataTarget3 인터페이스](iclrdatatarget3-interface.md)
 - [GetExceptionRecord 메서드](iclrdatatarget3-getexceptionrecord-method.md)

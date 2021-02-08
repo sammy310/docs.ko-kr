@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRDataTarget3:: GetExceptionThreadID 메서드'
 title: ICLRDataTarget3::GetExceptionThreadID 메서드
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 307d6ac7-4a86-45f3-999d-6b47004a68f2
 topic_type:
 - apiref
-ms.openlocfilehash: 0a8b7a90cd909379f870f6a501a940386d2e1451
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8202b6d83d0c81853111c5da7cfb8deec4d4e222
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723599"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794821"
 ---
 # <a name="iclrdatatarget3getexceptionthreadid-method"></a>ICLRDataTarget3::GetExceptionThreadID 메서드
 
@@ -36,7 +37,7 @@ HRESULT GetExceptionThreadID(
  `threadID`  
  [out] 예외를 throw한 스레드의 ID입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  반환 값은 성공 시 `S_OK`이고 실패 시에는 오류 `HRESULT` 코드입니다. `HRESULT` 코드는 다음을 비롯한 여러 항목을 포함할 수 있습니다.  
   
@@ -59,7 +60,7 @@ HRESULT GetExceptionThreadID(
   
  **.NET Framework 버전:**[!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRDataTarget3 인터페이스](iclrdatatarget3-interface.md)
 - [GetExceptionContextRecord 메서드](iclrdatatarget3-getexceptioncontextrecord-method.md)

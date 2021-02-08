@@ -1,4 +1,5 @@
 ---
+description: 다음에 대 한 자세한 정보:-연산자 (Visual Basic)
 title: '- 연산자'
 ms.date: 07/20/2015
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: b5129c2dbb361940fa6da2cb424ee23736ba72c5
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 858e887fa7c5c0cc6129996c98bddb78bc53045c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875327"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795263"
 ---
 # <a name="--operator-visual-basic"></a>- 연산자(Visual Basic)
 
@@ -67,7 +68,7 @@ expression1 – expression2
  두 식이 모두 [Nothing](../nothing.md)으로 계산 되는 경우 `–` 연산자는이 값을 0으로 처리 합니다.  
   
 > [!NOTE]
-> `–`연산자를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체의 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+> `–`연산자를 *오버 로드할* 수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체의 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 
@@ -77,7 +78,7 @@ expression1 – expression2
   
  이러한 문을 실행 한 후에는 `binaryResult` 124.45이 포함 되 고 `unaryResult` -334.90가 포함 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [-= 연산자 (Visual Basic)](subtraction-assignment-operator.md)
 - [산술 연산자](arithmetic-operators.md)

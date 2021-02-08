@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: BC36629: Nullable 형식 유추는이 컨텍스트에서 지원 되지 않습니다.'
 title: 이 컨텍스트에서는 nullable 형식을 유추할 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: 610d2dc427d882c412b87eb67f021a8a86025f25
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 915f964d55068f39b0468e2c47cc6e5538be1a6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159929"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795627"
 ---
 # <a name="bc36629-nullable-type-inference-is-not-supported-in-this-context"></a>BC36629:이 컨텍스트에서는 Nullable 형식 유추를 지원 하지 않습니다.
 

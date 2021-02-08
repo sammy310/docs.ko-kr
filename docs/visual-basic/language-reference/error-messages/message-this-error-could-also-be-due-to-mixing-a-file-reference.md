@@ -1,4 +1,5 @@
 ---
+description: '자세한 내용은 다음에 대해 자세히 알아보세요. BC30971: <message> 이 오류는 파일 참조가 어셈블리에 대 한 프로젝트 참조를 혼합 했기 때문에 발생할 수도 있습니다.<assemblyname>'
 title: <message> 이 오류는 '<assemblyname>' 어셈블리에 대한 프로젝트 참조와 파일 참조가 섞여 있기 때문에 발생할 수도 있습니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-ms.openlocfilehash: 9340c5c58c0cdb70c517534a339f57eb9ec1f906
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: c3b7c27c3f253389cd0a8e725ddcae3816c612b5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162429"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795848"
 ---
 # <a name="bc30971-message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>BC30971: \<message> 이 오류는 ' ' 어셈블리에 대 한 프로젝트 참조와 파일 참조가 섞여 있기 때문에 발생할 수도 있습니다. \<assemblyname>
 

@@ -1,4 +1,5 @@
 ---
+description: "BC30920: ' <constructorname> '의 기본 클래스 ' '에 있는 ' '이 ( <baseclassname> <derivedclassname> 가) obsolete로 표시 되어 있으므로이 ' Sub n e w '의 첫 번째 문은 ' mybase.new ' 또는 ' m y s s. n e w '에 대 한 명시적 호출 이어야 합니다. '<errormessage>"
 title: "'<constructorname>'의 기본 클래스 '<baseclassname>'에 있는 '<derivedclassname>'이(가) obsolete로 표시되어 있으므로 이 'Sub New'의 첫 번째 문은 'MyBase.New' 또는 'MyClass.New'에 대한 명시적 호출이어야 합니다. '<errormessage>'"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 4b927e3eed8f9d7f46255b907342465f48263724
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 777543b7f29fb17dd5eb6a6196035ef0f18bb907
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163040"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796238"
 ---
 # <a name="bc30920-first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>BC30920: ' \<constructorname> '의 기본 클래스 ' '에 있는 ' '이 ( \<baseclassname> \<derivedclassname> 가) obsolete로 표시 되어 있으므로이 ' Sub n e w '의 첫째 문은 ' mybase.new ' 또는 ' m a s s. n e w '에 대 한 명시적 호출 이어야 합니다. \<errormessage> ' '
 

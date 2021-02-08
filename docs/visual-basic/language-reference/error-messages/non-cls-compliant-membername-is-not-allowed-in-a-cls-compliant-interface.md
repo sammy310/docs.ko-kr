@@ -1,4 +1,5 @@
 ---
+description: 'BC40033: cls 규격이 아닌 경우에 대 한 자세한 내용은 <membername> cls 규격 인터페이스에서 사용할 수 없습니다.'
 title: CLS 규격 인터페이스에는 CLS 규격이 아닌 <membername>을(를) 사용할 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: aa7944e90857436553435ce783c0820770496a49
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 070b56a8bf9df930de5bb5e363a9b157fcdc7ad7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159991"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795640"
 ---
 # <a name="bc40033-non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>BC40033: cls \<membername> 규격 인터페이스에는 cls 규격이 아닙니다.
 

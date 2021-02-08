@@ -1,22 +1,25 @@
 ---
-title: 개체 구체화 (WCF Data Services)
+description: '자세한 정보: 개체 구체화 (WCF Data Services)'
+title: 개체 구체화(WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 7a2b201e5690c4304e663e9429c54f377e05f556
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 4beb72b9fb4402ee9a751b870f012bfa2cf15951
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568913"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794977"
 ---
-# <a name="object-materialization-wcf-data-services"></a>개체 구체화 (WCF Data Services)
+# <a name="object-materialization-wcf-data-services"></a>개체 구체화(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 **서비스 참조 추가** 대화 상자를 사용 하 여 .NET Framework 기반 클라이언트 응용 프로그램에서 OData (Open Data Protocol) 피드를 사용 하는 경우 해당 피드에서 노출 하는 데이터 모델의 각 엔터티 형식에 대해 해당 하는 데이터 클래스가 생성 됩니다. 자세한 내용은 [데이터 서비스 클라이언트 라이브러리 생성](generating-the-data-service-client-library-wcf-data-services.md)을 참조 하십시오. 쿼리에서 반환되는 엔터티 데이터는 이러한 생성된 클라이언트 데이터 서비스 클래스 중 하나의 인스턴스로 구체화됩니다. 추적 되는 개체에 대 한 병합 옵션 및 id 확인에 대 한 자세한 내용은 [데이터 서비스 컨텍스트 관리](managing-the-data-service-context-wcf-data-services.md)를 참조 하세요.
 
-또한 WCF Data Services를 사용 하면 도구에서 생성 된 데이터 클래스를 사용 하는 대신 고유한 클라이언트 데이터 서비스 클래스를 정의할 수 있습니다. 이에 따라 POCO(Plain Old CLR Object) 데이터 클래스라고도 하는 고유 데이터 클래스를 사용할 수 있습니다. 이러한 유형의 사용자 지정 데이터 클래스를 사용 하는 경우 <xref:System.Data.Services.Common.DataServiceKeyAttribute> 또는 <xref:System.Data.Services.Common.DataServiceEntityAttribute>를 사용 하 여 데이터 클래스의 특성을 지정 하 고 클라이언트의 형식 이름이 데이터 서비스의 데이터 모델에 있는 형식 이름과 일치 하는지 확인 해야 합니다.
+또한 WCF Data Services를 사용 하면 도구에서 생성 된 데이터 클래스를 사용 하는 대신 고유한 클라이언트 데이터 서비스 클래스를 정의할 수 있습니다. 이에 따라 POCO(Plain Old CLR Object) 데이터 클래스라고도 하는 고유 데이터 클래스를 사용할 수 있습니다. 이러한 유형의 사용자 지정 데이터 클래스를 사용 하는 경우 또는 중 하나를 사용 하 여 데이터 클래스의 특성을 지정 하 <xref:System.Data.Services.Common.DataServiceKeyAttribute> <xref:System.Data.Services.Common.DataServiceEntityAttribute> 고 클라이언트의 형식 이름이 데이터 서비스의 데이터 모델에 있는 형식 이름과 일치 하는지 확인 해야 합니다.
 
 라이브러리는 쿼리 응답 메시지를 받은 후 반환 된 데이터를 OData 피드의 쿼리 형식에 해당 하는 클라이언트 데이터 서비스 클래스의 인스턴스로 구체화 합니다. 이러한 개체를 구체화하는 일반적인 프로세스는 다음과 같습니다.
 
@@ -47,7 +50,7 @@ ms.locfileid: "74568913"
 
 5. 클라이언트 라이브러리는 개체를 <xref:System.Data.Services.Client.DataServiceContext>에 연결합니다. <xref:System.Data.Services.Client.MergeOption>이 <xref:System.Data.Services.Client.MergeOption.NoTracking>인 경우에는 개체가 연결되지 않습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [데이터 서비스 쿼리](querying-the-data-service-wcf-data-services.md)
-- [프로젝트 쿼리](query-projections-wcf-data-services.md)
+- [프로젝션 쿼리](query-projections-wcf-data-services.md)

@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 개체 필요 (Visual Basic)'
 title: 필요한 개체
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID424
 ms.assetid: afdc660b-81a5-4c92-ac7e-9c3a3105fc16
-ms.openlocfilehash: 5384dc603d51b31c252c9cad0775a453210f29ff
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: b5f213641d9b7c52db15c47afbcf767f040c04f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873641"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795588"
 ---
 # <a name="object-required-visual-basic"></a>개체가 필요합니다(Visual Basic).
 
@@ -25,6 +26,6 @@ ms.locfileid: "90873641"
   
 4. 개체의 설명서를 확인 하 고 작업이 유효한 지 확인 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [오류 형식](../../programming-guide/language-features/error-types.md)
+- [오류 유형](../../programming-guide/language-features/error-types.md)

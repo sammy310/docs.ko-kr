@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: TypeOf 연산자 (Visual Basic)'
 title: TypeOf 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 0a01b49cf1e0bf9ad7b2ce541cee39cba83025ca
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 59a03095b2abbaa304221b30402b9a058954db63
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875307"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795237"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 연산자(Visual Basic)
 
 식의 결과에 대 한 런타임 형식이 지정 된 형식과 호환 되는지 여부를 확인 합니다.
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 result = TypeOf objectexpression Is typename  
@@ -50,7 +51,7 @@ result = TypeOf objectexpression IsNot typename
   
 |`typename`의 형식 범주|호환성 조건|  
 |---------------------------------|-----------------------------|  
-|클래스|`objectexpression`이 `typename` 형식이거나 `typename`에서 상속됩니다.|  
+|인스턴스|`objectexpression`이 `typename` 형식이거나 `typename`에서 상속됩니다.|  
 |구조체|`objectexpression`이 `typename` 형식입니다.|  
 |인터페이스|`objectexpression`이 `typename`을 구현하거나 `typename`을 구현하는 클래스에서 상속됩니다.|  
   
@@ -66,7 +67,7 @@ result = TypeOf objectexpression IsNot typename
   
  `refInteger` 변수에 `Integer`의 런타임 형식이 있습니다. 이 변수는 `Integer`와 호환되지만 `Double`과는 호환되지 않습니다. `refForm` 변수에 <xref:System.Windows.Forms.Form>의 런타임 형식이 있습니다. 이 변수는 해당 형식이기 때문에 <xref:System.Windows.Forms.Form>과 호환되고, <xref:System.Windows.Forms.Form>이 <xref:System.Windows.Forms.Control>에서 상속되기 때문에 <xref:System.Windows.Forms.Control>과 호환되며, <xref:System.Windows.Forms.Form>이 <xref:System.ComponentModel.IComponent>를 구현하는 <xref:System.ComponentModel.Component>에서 상속되기 때문에 <xref:System.ComponentModel.IComponent>와 호환됩니다. 그러나 `refForm`은 <xref:System.Windows.Forms.Label>과 호환되지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Is 연산자](is-operator.md)
 - [IsNot 연산자](isnot-operator.md)

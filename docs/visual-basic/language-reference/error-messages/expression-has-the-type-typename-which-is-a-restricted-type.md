@@ -1,4 +1,5 @@
 ---
+description: "자세한 정보: BC31393: Expression의 ' <typename> ' 형식은 제한 된 형식 이므로 ' Object ' 또는 ' ValueType '에서 상속 된 멤버에 액세스 하는 데 사용할 수 없습니다."
 title: 식에 있는 '<typename>' 형식은 제한된 형식이므로 'Object' 또는 'ValueType'에서 상속된 멤버에 액세스하는 데 사용할 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-ms.openlocfilehash: 3e19c0d71ee47ac61e9704f0fcd2637f01aa0896
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 3b5f9bbb85d1645936286ea0e907e3e25764f69a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163053"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796381"
 ---
 # <a name="bc31393-expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>BC31393: Expression의 ' ' 형식은 \<typename> 제한 된 형식 이므로 ' Object ' 또는 ' ValueType '에서 상속 된 멤버에 액세스 하는 데 사용할 수 없습니다.
 

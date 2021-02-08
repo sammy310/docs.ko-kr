@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo10:: ResumeRuntime 메서드'
 title: ICorProfilerInfo10::ResumeRuntime
 ms.date: 08/06/2019
 dev_langs:
@@ -11,18 +12,18 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 41e95a9f3ad34853f9cd71fa2cb81d3fca0fb2cd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 42cad42c5fb6706e395c1c172e48bf12b563590e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540567"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794574"
 ---
 # <a name="icorprofilerinfo10resumeruntime-method"></a>ICorProfilerInfo10:: ResumeRuntime 메서드
 
 GC를 수행 하지 않고 런타임을 다시 시작 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT ResumeRuntime();
@@ -38,6 +39,6 @@ HRESULT ResumeRuntime();
 
 **.Net 버전:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo10 인터페이스](icorprofilerinfo10-interface.md)

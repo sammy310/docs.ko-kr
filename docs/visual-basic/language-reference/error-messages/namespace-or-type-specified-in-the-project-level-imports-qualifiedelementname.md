@@ -1,4 +1,5 @@
 ---
+description: "자세한 정보: BC40057: 프로젝트 수준 Imports ' '에 지정 된 네임 스페이스 또는 형식에 <qualifiedelementname> public 멤버가 없거나 해당 네임 스페이스를 찾을 수 없습니다."
 title: 프로젝트 수준의 Imports '<qualifiedelementname>'에 지정된 네임스페이스 또는 형식에 public 멤버가 없거나 해당 네임스페이스 또는 형식을 찾을 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 54ee046cda998be8bd70e531918d6ab2a67d0494
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 66ae40ca6a2feff78f80bdbc8886387e801f7db2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160121"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795692"
 ---
 # <a name="bc40057-namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>BC40057: 프로젝트 수준의 Imports ' '에 지정 된 네임 스페이스 또는 형식에 \<qualifiedelementname> public 멤버가 없거나 해당 네임 스페이스를 찾을 수 없습니다.
 
@@ -26,7 +27,7 @@ ms.locfileid: "92160121"
 
  컴파일러가 지정 된 포함 요소를 찾을 수 없는 경우 해당 요소를 사용 하는 참조를 확인할 수 없습니다. 요소를 찾았지만 요소가 멤버를 노출 하지 않는 경우에는 `Public` 참조가 실패할 수 있습니다. 두 경우 모두 요소를 가져오는 것은 의미가 없습니다.
 
- **프로젝트 디자이너** 를 사용 하 여 가져올 요소를 지정할 수 있습니다. **참조** 페이지의 **가져온 네임 스페이스** 섹션을 사용 합니다. **솔루션 탐색기**에서 **내 프로젝트** 아이콘을 두 번 클릭 하 여 **프로젝트 디자이너** 에 액세스할 수 있습니다.
+ **프로젝트 디자이너** 를 사용 하 여 가져올 요소를 지정할 수 있습니다. **참조** 페이지의 **가져온 네임 스페이스** 섹션을 사용 합니다. **솔루션 탐색기** 에서 **내 프로젝트** 아이콘을 두 번 클릭 하 여 **프로젝트 디자이너** 에 액세스할 수 있습니다.
 
  **오류 ID:** BC40057
 

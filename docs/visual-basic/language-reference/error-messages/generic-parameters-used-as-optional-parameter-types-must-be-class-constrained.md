@@ -1,4 +1,5 @@
 ---
+description: '자세한 내용은 다음에 대해 자세히 알아보세요. BC32124: 선택적 매개 변수 형식으로 사용 되는 제네릭 매개 변수는 클래스 제한 이어야 합니다.'
 title: 선택적 매개 변수 형식으로 사용된 제네릭 매개 변수에는 클래스 제약 조건이 있어야 합니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-ms.openlocfilehash: 5e0d4eaf7557eb9a544a8845299f3d69dbb78486
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 0014720d55dc4395178186b5e183d5b0279d7029
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163222"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796147"
 ---
 # <a name="bc32124-generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>BC32124: 선택적 매개 변수 형식으로 사용 되는 제네릭 매개 변수는 클래스 제약 조건 이어야 합니다.
 
@@ -35,4 +36,4 @@ ms.locfileid: "92163222"
 - [Class 문](../statements/class-statement.md)
 - [선택적 매개 변수](../../programming-guide/language-features/procedures/optional-parameters.md)
 - [구조체](../../programming-guide/language-features/data-types/structures.md)
-- [없는지](../nothing.md)
+- [Nothing](../nothing.md)

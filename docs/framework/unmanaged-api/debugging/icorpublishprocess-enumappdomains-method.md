@@ -1,4 +1,5 @@
 ---
+description: 'ICorPublishProcess:: EnumAppDomains 메서드에 대해 자세히 알아보세요.'
 title: ICorPublishProcess::EnumAppDomains 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7da621fc-e7d0-4c00-9439-5c93619d7414
 topic_type:
 - apiref
-ms.openlocfilehash: 2acf8fb507ab617e066a31c9c2657b1ef0d18e47
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c7834b23967ab467c1589ee31929bf346b4b3b8f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95693283"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99794613"
 ---
 # <a name="icorpublishprocessenumappdomains-method"></a>ICorPublishProcess::EnumAppDomains 메서드
 
@@ -55,6 +56,6 @@ HRESULT EnumAppDomains (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorPublishProcess 인터페이스](icorpublishprocess-interface.md)
