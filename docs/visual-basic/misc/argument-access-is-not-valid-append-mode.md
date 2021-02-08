@@ -1,15 +1,16 @@
 ---
+description: "자세한 정보: ' Access ' 인수가 잘못 되었습니다. 추가 모드에 유효한 값은 ' o ' 및 ' o '입니다."
 title: "'Access' 인수가 잘못되었습니다. 추가 모드의 올바른 값은 'OpenAccess.Write'와 'OpenAccess.Default'입니다."
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_IllegalAppendAccess
 ms.assetid: f584056e-5eb7-401f-b43d-d08252e66d1c
-ms.openlocfilehash: a8e5c4fc4f2f3714b6a2f614dbe6434ad13e5ef1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bc01aae1fa7bd73e0c07dbec7d4a9b0609f6c2aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084894"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787333"
 ---
 # <a name="argument-access-is-not-valid-valid-values-for-append-mode-are-openaccesswrite-and-openaccessdefault"></a>'Access' 인수가 잘못되었습니다. 추가 모드의 올바른 값은 'OpenAccess.Write'와 'OpenAccess.Default'입니다.
 

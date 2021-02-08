@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <security><peerTransport>'
 title: <peerTransport>의 <security>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: f37c336b0e42993e1eef3f06e2f919705f425a2e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 592f886377a2d5f2008be900a9e7586385fb3782
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169962"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786826"
 ---
 # <a name="security-of-peertransport"></a>\<peerTransport>의 \<security>
 
@@ -41,7 +42,7 @@ ms.locfileid: "91169962"
   
 ## <a name="mode-attribute"></a>mode 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |`None`|보안이 해제되어 있습니다.|  
 |`Transport`|HTTPS를 사용하여 보안이 제공됩니다.|  
@@ -68,7 +69,7 @@ ms.locfileid: "91169962"
 - [전송 보안](../../../wcf/feature-details/transport-security.md)
 - [전송](../../../wcf/feature-details/transports.md)
 - [전송 선택](../../../wcf/feature-details/choosing-a-transport.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

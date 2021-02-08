@@ -1,16 +1,17 @@
 ---
+description: '다음에 대 한 자세한 정보: <gcAllowVeryLargeObjects> 요소'
 title: gcAllowVeryLargeObjects 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - gcAllowVeryLargeObjects element
 - <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
-ms.openlocfilehash: 1e54b0780ffb5bbe81ab1be2b376ff7a038ee05c
-ms.sourcegitcommit: 0273f8845eb1ea8de64086bef2271b4f22182c91
+ms.openlocfilehash: ff8380a13c4284cc24178e185344207c3b9a39b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2021
-ms.locfileid: "98058131"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787021"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> 요소
 
@@ -36,7 +37,7 @@ ms.locfileid: "98058131"
   
 |값|설명|  
 |-----------|-----------------|  
-|`false`|전체 크기의 2gb 보다 큰 배열은 사용할 수 없습니다. 이것이 기본값입니다.|  
+|`false`|전체 크기의 2gb 보다 큰 배열은 사용할 수 없습니다. 기본값입니다.|  
 |`true`|총 크기가 2gb 보다 큰 배열은 64 비트 플랫폼에서 사용 하도록 설정 됩니다.|  
   
 ## <a name="child-elements"></a>자식 요소  

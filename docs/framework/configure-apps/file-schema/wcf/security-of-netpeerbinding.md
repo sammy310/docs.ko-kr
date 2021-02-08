@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <security><netPeerBinding>'
 title: <netPeerBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 543c57d6b2dba1ff5934b49e0e219cf2e5cad153
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f67cfa445a5a605b99783cfd67dd1bae6e17b51e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91170027"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786839"
 ---
 # <a name="security-of-netpeerbinding"></a>\<netPeerBinding>의 \<security>
 
@@ -44,7 +45,7 @@ ms.locfileid: "91170027"
   
 ## <a name="mode-attribute"></a>mode 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |메시지|SOAP 전송은 무결성, 기밀성 및 인증을 제공합니다.|  
 |없음|보안이 해제되어 있습니다.|  
@@ -75,7 +76,7 @@ ms.locfileid: "91170027"
 - <xref:System.ServiceModel.PeerSecuritySettings>
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
 - [자격 증명 형식 선택](../../../wcf/feature-details/selecting-a-credential-type.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

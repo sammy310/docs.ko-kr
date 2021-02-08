@@ -1,16 +1,17 @@
 ---
+description: '다음에 대 한 자세한 정보: <etwEnable> 요소'
 title: <etwEnable> 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - etwEnable element
 - <etwEnable> element
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
-ms.openlocfilehash: 1c3e42dfbc2c27841ed065e90bad24575e4fb2b1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 224784f47d15788ded41a5756e1d179a5a25907b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178270"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787047"
 ---
 # <a name="etwenable-element"></a>\<etwEnable> 요소
 
@@ -38,7 +39,7 @@ ms.locfileid: "91178270"
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |true|ETW를 사용 하도록 설정 합니다. Windows Vista 및 Windows Server 2008 운영 체제에서 시작 하는 Windows 버전에 대 한 기본값입니다.|  
 |false|ETW를 사용 하지 않습니다. 이는 이전 버전의 Windows에 대 한 기본값입니다.|  

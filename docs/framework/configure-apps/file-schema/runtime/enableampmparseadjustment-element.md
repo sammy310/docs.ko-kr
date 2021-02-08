@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: <EnableAmPmParseAdjustment> 요소'
 title: <EnableAmPmParseAdjustment> 요소
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
-ms.openlocfilehash: f935f213e1bca8dac7a5401970bc6183575e2301
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 86fd04ab536f44f0cffdb5a37f4718fc03698485
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167231"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787060"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment> 요소
 
@@ -35,7 +36,7 @@ ms.locfileid: "91167231"
   
 ### <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |0|날짜 및 시간 구문 분석 메서드는 일, 월, 시간 및 AM/PM 지정자만 포함 하는 날짜 문자열을 구문 분석 하는 데 조정 된 규칙을 사용 하지 않습니다.|  
 |1|날짜 및 시간 구문 분석 메서드는 날짜, 월, 시간 및 AM/PM 지정자만 포함 하는 날짜 문자열을 구문 분석 하기 위해 조정 된 규칙을 사용 합니다.|  

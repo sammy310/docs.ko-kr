@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <routing><serviceBehavior>'
 title: <serviceBehavior>의 <routing>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: cd53b720bad5752189f1c30d9e4acd3a66830396
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1d8a056d708b3c42aeccf3e46a0703b3fc78a17d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150884"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786891"
 ---
 # <a name="routing-of-servicebehavior"></a>\<serviceBehavior>의 \<routing>
 

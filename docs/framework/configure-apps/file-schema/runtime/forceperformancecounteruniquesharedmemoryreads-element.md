@@ -1,16 +1,17 @@
 ---
+description: '다음에 대 한 자세한 정보: <forcePerformanceCounterUniqueSharedMemoryReads> 요소'
 title: <forcePerformanceCounterUniqueSharedMemoryReads> 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forcePerformanceCounterUniqueSharedMemoryReads element
 - <forcePerformanceCounterUniqueSharedMemoryReads> element
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
-ms.openlocfilehash: 719448ba3de2aca0621fc17b9fadbdd3b8588f2e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 63fe695cc993faa851a9ea3196294397d2992c45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178244"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787034"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> 요소
 
@@ -39,7 +40,7 @@ enabled="true|false"/>
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |`false`|PerfCounter.dll는 CategoryOptions 레지스트리 설정을 사용 하지 않습니다 (기본값).|  
 |`true`|PerfCounter.dll는 CategoryOptions 레지스트리 설정을 사용 합니다.|  
@@ -66,7 +67,7 @@ enabled="true|false"/>
 > [!NOTE]
 > 요소를 사용 하도록 설정 `<forcePerformanceCounterUniqueSharedMemoryReads>` 해도 범주 관련 공유 메모리가 사용 되는 것은 아닙니다. 사용 하도록 설정 `true` 하면 PerfCounter.dll에서 CategoryOptions 레지스트리 설정을 참조 하 게 됩니다. CategoryOptions의 기본 설정은 범주 관련 공유 메모리를 사용 하는 것입니다. 그러나 CategoryOptions를 변경 하 여 전역 공유 메모리를 사용 해야 함을 나타낼 수 있습니다.  
   
- CategoryOptions 설정이 포함 된 레지스트리 키는 HKEY_LOCAL_MACHINE \System\CurrentControlSet\Services \\<범주 \> \Performance. 기본적으로 CategoryOptions는 3으로 설정 되며,이는 범주 관련 공유 메모리를 사용 하도록 PerfCounter.dll에 지시 합니다. CategoryOptions가 0으로 설정 된 경우 PerfCounter.dll는 전역 공유 메모리를 사용 합니다. 인스턴스 데이터는 생성 중인 인스턴스의 이름이 다시 사용 중인 인스턴스와 동일한 경우에만 다시 사용 됩니다. 모든 버전은 범주에 쓸 수 있습니다. CategoryOptions를 1로 설정 하면 전역 공유 메모리가 사용 되지만 범주 이름이 다시 사용 하는 범주와 동일한 경우 인스턴스 데이터를 다시 사용할 수 있습니다.  
+ CategoryOptions 설정이 포함 된 레지스트리 키는 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\<범주 \> \Performance. 기본적으로 CategoryOptions는 3으로 설정 되며,이는 범주 관련 공유 메모리를 사용 하도록 PerfCounter.dll에 지시 합니다. CategoryOptions가 0으로 설정 된 경우 PerfCounter.dll는 전역 공유 메모리를 사용 합니다. 인스턴스 데이터는 생성 중인 인스턴스의 이름이 다시 사용 중인 인스턴스와 동일한 경우에만 다시 사용 됩니다. 모든 버전은 범주에 쓸 수 있습니다. CategoryOptions를 1로 설정 하면 전역 공유 메모리가 사용 되지만 범주 이름이 다시 사용 하는 범주와 동일한 경우 인스턴스 데이터를 다시 사용할 수 있습니다.  
   
  설정 0 및 1은 메모리 누수를 야기 하 고 성능 카운터 메모리를 채울 수 있습니다.  
   

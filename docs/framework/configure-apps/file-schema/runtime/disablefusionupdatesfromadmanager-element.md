@@ -1,16 +1,17 @@
 ---
+description: '다음에 대 한 자세한 정보: <disableFusionUpdatesFromADManager> 요소'
 title: <disableFusionUpdatesFromADManager> 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - disableFusionUpdatesFromADManager element
 - <disableFusionUpdatesFromADManager> element
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
-ms.openlocfilehash: c3971379b358ae16fc463df2b8d6288cf8881391
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c3b5758a12fc78c67ec0a4a9631361808724e72a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91205037"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787086"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager> 요소
 
@@ -38,7 +39,7 @@ ms.locfileid: "91205037"
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |0|Fusion 설정을 재정의 하는 기능을 사용 하지 않도록 설정 하지 마십시오. 이는 .NET Framework 4부터 시작 하는 기본 동작입니다.|  
 |1|Fusion 설정을 재정의 하는 기능을 사용 하지 않도록 설정 합니다. 이는 이전 버전의 .NET Framework 동작으로 되돌아갑니다.|  

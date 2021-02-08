@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <enforceFIPSPolicy> 요소'
 title: <enforceFIPSPolicy> 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - <enforceFIPSPolicy> element
 - Federal Information Processing Standards (FIPS)
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
-ms.openlocfilehash: 864a371d4ad10585e672452ad85cc09d4b684068
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d445570db634867a15b6d97d4e20186bd0641c2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158840"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787073"
 ---
 # <a name="enforcefipspolicy-element"></a>\<enforceFIPSPolicy> 요소
 
@@ -40,9 +41,9 @@ ms.locfileid: "91158840"
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
-|`true`|암호화 알고리즘을 FIPS 규격으로 요구 하도록 컴퓨터를 구성한 경우에는 해당 요구 사항이 적용 됩니다. 클래스가 FIPS와 호환 되지 않는 알고리즘을 구현 하는 경우 해당 `Create` 클래스에 대 한 생성자 또는 메서드는 해당 컴퓨터에서 실행 될 때 예외를 throw 합니다. 이것이 기본값입니다.|  
+|`true`|암호화 알고리즘을 FIPS 규격으로 요구 하도록 컴퓨터를 구성한 경우에는 해당 요구 사항이 적용 됩니다. 클래스가 FIPS와 호환 되지 않는 알고리즘을 구현 하는 경우 해당 `Create` 클래스에 대 한 생성자 또는 메서드는 해당 컴퓨터에서 실행 될 때 예외를 throw 합니다. 기본값입니다.|  
 |`false`|응용 프로그램에서 사용 하는 암호화 알고리즘은 컴퓨터 구성에 관계 없이 FIPS를 준수 하지 않아도 됩니다.|  
   
 ### <a name="child-elements"></a>자식 요소  

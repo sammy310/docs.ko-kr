@@ -1,13 +1,14 @@
 ---
+description: <net.tcp>에 대해 자세히 알아보세요.
 title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 12709d58d9192825598b15a50baa10a54450226e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b7b36e0309139508011e5abceab97cc6f6f9a53d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178075"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786943"
 ---
 # \<net.tcp>
 
@@ -17,7 +18,7 @@ ms.locfileid: "91178075"
 &nbsp;&nbsp;[**\<system.serviceModel.activation>**](system-servicemodel-activation.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<net.tcp>**  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <configuration>
@@ -44,7 +45,7 @@ ms.locfileid: "91178075"
 </configuration>
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
 
  `Type`  
   

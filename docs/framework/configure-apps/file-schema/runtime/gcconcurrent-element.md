@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <gcConcurrent> 요소'
 title: gcConcurrent 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-ms.openlocfilehash: 249518ae7477d284d50f9010757db83b7752c657
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dff8b073977c007a132cfbd685724a02ba37684b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "82102920"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787008"
 ---
 # <a name="gcconcurrent-element"></a>\<gcConcurrent> 요소
 
@@ -37,13 +38,13 @@ ms.locfileid: "82102920"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`enabled`|필수 특성입니다.<br /><br />런타임이 동시에 가비지 컬렉션을 실행하는지 여부를 지정합니다.|
 
 #### <a name="enabled-attribute"></a>enabled 특성
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |`false`|가비지 수집을 동시에 실행 하지 않습니다.|
 |`true`|동시에 가비지 컬렉션을 실행합니다. 기본값입니다.|
@@ -54,7 +55,7 @@ ms.locfileid: "82102920"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|

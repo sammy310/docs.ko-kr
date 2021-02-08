@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <address> 가 올바른 원격 파일 주소가 아닙니다.
 title: <address> 가 올바른 원격 파일 주소가 아닙니다.
 ms.date: 07/20/2015
 ms.assetid: 2c312242-6c42-4754-a1f5-7e801a542604
-ms.openlocfilehash: c651169d783533d933b92d509015eb3b6f219c79
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c0d3c0366da025a70e1e676be138a9c26c7f2cb1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91083945"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787398"
 ---
 # <a name="address-is-not-a-valid-remote-file-address"></a>\<address>가 올바른 원격 파일 주소가 아닙니다.
 
@@ -19,7 +20,7 @@ ms.locfileid: "91083945"
   
 - 지정한 주소를 확인하여 잘못된 부분을 확인하고 필요한 정보를 제공합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [UploadFile.](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)
 - [DownloadFile.](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)

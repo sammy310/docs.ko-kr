@@ -1,15 +1,16 @@
 ---
+description: '다음에 대 한 자세한 정보: <GCHeapCount> 요소'
 title: GCHeapCount 요소
 ms.date: 11/08/2019
 helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
-ms.openlocfilehash: 3d6cac4185af182758cb82e6bfd9d96ed24869b4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9e1e000d647435fe7a8c4b1a8f7549f06c2a3b38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74283080"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786969"
 ---
 # <a name="gcheapcount-element"></a>\<GCHeapCount> 요소
 
@@ -32,13 +33,13 @@ ms.locfileid: "74283080"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`enabled`|필수 특성입니다.<br /><br />서버 가비지 수집에 사용할 힙 수를 지정 합니다. 실제 힙 수는 사용자가 지정 하는 힙 수와 프로세스에서 사용할 수 있는 프로세서 수의 최소값입니다. |
 
 #### <a name="enabled-attribute"></a>enabled 특성
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |`nn`|서버 GC에 사용할 힙 수입니다.|
 
@@ -48,7 +49,7 @@ ms.locfileid: "74283080"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|

@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <disableCommitThreadStack> 요소'
 title: <disableCommitThreadStack> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <disableCommitThreadStack> element
 - disableCommitThreadStack element
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
-ms.openlocfilehash: f717f57fe8670b126ed1468713a2114aaa772762
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f80a23b12f67b9f3df1ddb010edb735225f6f7a8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198992"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787099"
 ---
 # <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack> 요소
 
@@ -41,7 +42,7 @@ ms.locfileid: "91198992"
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |0|스레드가 시작될 때 전체 스레드 스택을 커밋하는 공용 언어 런타임의 기본 동작을 해제하지 않습니다.|  
 |1|스레드가 시작될 때 전체 스레드 스택을 커밋하는 공용 언어 런타임의 기본 동작을 해제합니다.|  

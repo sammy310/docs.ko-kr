@@ -1,15 +1,16 @@
 ---
+description: '다음에 대 한 자세한 정보: <GCHeapAffinitizeMask> 요소'
 title: GCHeapAffinitizeMask 요소
 ms.date: 11/08/2019
 helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
-ms.openlocfilehash: 09d6523fb10692dd3617a3827d5bccf112bc632b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ea6be3fa3d973f228576db69d0700b1f7ddba585
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73978422"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786982"
 ---
 # <a name="gcheapaffinitizemask-element"></a>\<GCHeapAffinitizeMask> 요소
 
@@ -32,13 +33,13 @@ GC 힙과 개별 프로세서 간의 선호도를 정의 합니다.
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`enabled`|필수 특성입니다.<br /><br />GC 힙과 개별 프로세서 간의 선호도를 지정 합니다. |
 
 #### <a name="enabled-attribute"></a>enabled 특성
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |`nnnn`|서버 GC 힙과 개별 프로세서 간의 선호도를 정의 하는 비트 마스크를 형성 하는 10 진수 값입니다. |
 
@@ -48,7 +49,7 @@ GC 힙과 개별 프로세서 간의 선호도를 정의 합니다.
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|
@@ -63,7 +64,7 @@ GC 힙과 개별 프로세서 간의 선호도를 정의 합니다.
 
 - [GCHeapCount](gcheapcount-element.md)-서버 GC에 대해 프로세스에서 사용 하는 힙 수를 제한 합니다. 기본적으로 각 프로세서에 대해 하나의 힙이 있습니다.
 
-**nnnn** 은 10 진수 값으로 표현 되는 비트 마스크입니다. 바이트 0의 비트 0은 프로세서 0, 바이트 0의 비트 1은 프로세서 1을 나타냅니다. 다음은 그 예입니다.
+**nnnn** 은 10 진수 값으로 표현 되는 비트 마스크입니다. 바이트 0의 비트 0은 프로세서 0, 바이트 0의 비트 1은 프로세서 1을 나타냅니다. 다음은 그 예입니다. 
 
 ```xml
 <GCHeapAffinitizeMask enabled="1023"/>

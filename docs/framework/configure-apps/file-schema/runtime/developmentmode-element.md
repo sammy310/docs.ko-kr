@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <developmentMode> 요소'
 title: <developmentMode> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - container tags, <developmentMode> element
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
-ms.openlocfilehash: ddcabb831193baee30016f663f32d8562283d936
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 668461d13c8a1767268692804e9783bb6d4b9a56
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91205024"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787125"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode> 요소
 
@@ -42,7 +43,7 @@ ms.locfileid: "91205024"
   
 ## <a name="developerinstallation-attribute"></a>developerInstallation 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |**true**|DEVPATH 환경 변수로 지정 된 디렉터리에서 어셈블리를 검색 합니다.|  
 |**false**|는 DEVPATH 환경 변수로 지정 된 디렉터리에서 어셈블리를 검색 하지 않습니다. 이것이 기본값입니다.|  

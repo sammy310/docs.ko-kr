@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 마지막 요소를 제외한 모든 필드 너비는 0 보다 커야 합니다.'
 title: 마지막 요소를 제외한 모든 필드 너비는 0보다 커야 합니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_FieldWidthsMustPositive
 ms.assetid: 41d8c661-a749-4c89-be56-905c6e7c3c9d
-ms.openlocfilehash: 4fb40e5f2b458fbbd0bfdb329f75250e70fd7e28
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: cf2edb21f017031c7dd333893d554353eceebe73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91083919"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787385"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a>마지막 요소를 제외한 모든 필드 너비는 0보다 커야 합니다.
 
@@ -21,7 +22,7 @@ ms.locfileid: "91083919"
   
 - 필드 너비를 올바른 길이로 설정합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths>

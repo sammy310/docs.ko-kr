@@ -1,4 +1,5 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <list> (Visual Basic)
 title: <list>
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 900cd8c467a21812d980cffa7e41120ae557704b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: c9e2e8d1c370bfdeefae4a8f19b25acc6a336ecc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872780"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787437"
 ---
 # <a name="list-visual-basic"></a>\<list>(Visual Basic)
 
@@ -66,6 +67,6 @@ ms.locfileid: "90872780"
   
  [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [XML 주석 태그](index.md)
