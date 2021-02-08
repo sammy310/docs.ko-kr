@@ -1,37 +1,38 @@
 ---
+description: '자세히 알아보기: 클라이언트'
 title: 클라이언트
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
-ms.openlocfilehash: b9887d6200a0101be2185b5bc2fdcc969fc7c69e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a7aaf08007a5ca0731a0212066368b37b80330cf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243302"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778557"
 ---
-# <a name="client"></a><span data-ttu-id="6e649-102">클라이언트</span><span class="sxs-lookup"><span data-stu-id="6e649-102">Client</span></span>
+# <a name="client"></a><span data-ttu-id="33b36-103">클라이언트</span><span class="sxs-lookup"><span data-stu-id="33b36-103">Client</span></span>
 
-<span data-ttu-id="6e649-103">이 섹션에는 WCF (Windows Communication Foundation) 클라이언트 응용 프로그램을 보여 주는 샘플이 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6e649-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) client applications.</span></span>  
+<span data-ttu-id="33b36-104">이 섹션에는 WCF (Windows Communication Foundation) 클라이언트 응용 프로그램을 보여 주는 샘플이 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="33b36-104">This section contains samples that demonstrate Windows Communication Foundation (WCF) client applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6e649-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="6e649-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="33b36-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="33b36-105">In This Section</span></span>  
 
- [<span data-ttu-id="6e649-105">클라이언트 상호 운용성</span><span class="sxs-lookup"><span data-stu-id="6e649-105">Client Interoperability</span></span>](client-interoperability.md)  
- <span data-ttu-id="6e649-106">WCF와 다른 기술 간의 상호 운용성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6e649-106">Demonstrates interoperability between WCF and other technologies.</span></span>  
+ [<span data-ttu-id="33b36-106">클라이언트 상호 운용성</span><span class="sxs-lookup"><span data-stu-id="33b36-106">Client Interoperability</span></span>](client-interoperability.md)  
+ <span data-ttu-id="33b36-107">WCF와 다른 기술 간의 상호 운용성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="33b36-107">Demonstrates interoperability between WCF and other technologies.</span></span>  
   
- [<span data-ttu-id="6e649-107">주소 헤더</span><span class="sxs-lookup"><span data-stu-id="6e649-107">Address Headers</span></span>](address-headers.md)  
- <span data-ttu-id="6e649-108">클라이언트가 WCF를 사용 하 여 참조 매개 변수를 서비스에 전달 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6e649-108">Demonstrates how clients can pass reference parameters to a service using WCF.</span></span>  
+ [<span data-ttu-id="33b36-108">주소 헤더</span><span class="sxs-lookup"><span data-stu-id="33b36-108">Address Headers</span></span>](address-headers.md)  
+ <span data-ttu-id="33b36-109">클라이언트가 WCF를 사용 하 여 참조 매개 변수를 서비스에 전달 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="33b36-109">Demonstrates how clients can pass reference parameters to a service using WCF.</span></span>  
   
- [<span data-ttu-id="6e649-109">채널 팩터리</span><span class="sxs-lookup"><span data-stu-id="6e649-109">Channel Factory</span></span>](channel-factory.md)  
- <span data-ttu-id="6e649-110">클라이언트 애플리케이션에서 생성된 클라이언트 대신 <xref:System.ServiceModel.ChannelFactory> 클래스가 있는 채널을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6e649-110">Demonstrates how a client application can create a channel with the <xref:System.ServiceModel.ChannelFactory> class instead of a generated client.</span></span>  
+ [<span data-ttu-id="33b36-110">채널 팩터리</span><span class="sxs-lookup"><span data-stu-id="33b36-110">Channel Factory</span></span>](channel-factory.md)  
+ <span data-ttu-id="33b36-111">클라이언트 애플리케이션에서 생성된 클라이언트 대신 <xref:System.ServiceModel.ChannelFactory> 클래스가 있는 채널을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="33b36-111">Demonstrates how a client application can create a channel with the <xref:System.ServiceModel.ChannelFactory> class instead of a generated client.</span></span>  
   
- [<span data-ttu-id="6e649-111">예상되는 예외</span><span class="sxs-lookup"><span data-stu-id="6e649-111">Expected Exceptions</span></span>](expected-exceptions.md)  
- <span data-ttu-id="6e649-112">형식화된 클라이언트를 사용할 때 예상된 예외를 catch하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6e649-112">Demonstrates how to catch expected exceptions when using a typed client.</span></span>  
+ [<span data-ttu-id="33b36-112">예상되는 예외</span><span class="sxs-lookup"><span data-stu-id="33b36-112">Expected Exceptions</span></span>](expected-exceptions.md)  
+ <span data-ttu-id="33b36-113">형식화된 클라이언트를 사용할 때 예상된 예외를 catch하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="33b36-113">Demonstrates how to catch expected exceptions when using a typed client.</span></span>  
   
- [<span data-ttu-id="6e649-113">메타데이터 검색</span><span class="sxs-lookup"><span data-stu-id="6e649-113">Retrieve Metadata</span></span>](retrieve-metadata.md)  
- <span data-ttu-id="6e649-114">통신할 엔드포인트를 선택하기 위해 서비스에서 메타데이터를 동적으로 검색하는 클라이언트를 구현하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6e649-114">Demonstrates how to implement a client that dynamically retrieves metadata from a service to choose an endpoint with which to communicate.</span></span>  
+ [<span data-ttu-id="33b36-114">메타데이터 검색</span><span class="sxs-lookup"><span data-stu-id="33b36-114">Retrieve Metadata</span></span>](retrieve-metadata.md)  
+ <span data-ttu-id="33b36-115">통신할 엔드포인트를 선택하기 위해 서비스에서 메타데이터를 동적으로 검색하는 클라이언트를 구현하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="33b36-115">Demonstrates how to implement a client that dynamically retrieves metadata from a service to choose an endpoint with which to communicate.</span></span>  
   
- [<span data-ttu-id="6e649-115">닫기 및 중단을 사용하여 WCF 클라이언트 리소스 해제</span><span class="sxs-lookup"><span data-stu-id="6e649-115">Use Close and Abort to release WCF client resources</span></span>](use-close-abort-release-wcf-client-resources.md)  
- <span data-ttu-id="6e649-116">형식화된 클라이언트를 사용할 때 C# "using" 문을 사용하여 리소스를 자동으로 정리하지 않아야 한다는 것을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6e649-116">Demonstrates how you should not use the C# "using" statement to automatically clean up resources when using a typed client.</span></span>  
+ [<span data-ttu-id="33b36-116">닫기 및 중단을 사용하여 WCF 클라이언트 리소스 해제</span><span class="sxs-lookup"><span data-stu-id="33b36-116">Use Close and Abort to release WCF client resources</span></span>](use-close-abort-release-wcf-client-resources.md)  
+ <span data-ttu-id="33b36-117">형식화된 클라이언트를 사용할 때 C# "using" 문을 사용하여 리소스를 자동으로 정리하지 않아야 한다는 것을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="33b36-117">Demonstrates how you should not use the C# "using" statement to automatically clean up resources when using a typed client.</span></span>  
   
- [<span data-ttu-id="6e649-117">형식화된 클라이언트</span><span class="sxs-lookup"><span data-stu-id="6e649-117">Typed Client</span></span>](typed-client.md)  
- <span data-ttu-id="6e649-118">[ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)에서 생성 한 형식화 된 클라이언트에서 정보를 가져오는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6e649-118">Demonstrates how to obtain information from a typed client generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span>
+ [<span data-ttu-id="33b36-118">형식화된 클라이언트</span><span class="sxs-lookup"><span data-stu-id="33b36-118">Typed Client</span></span>](typed-client.md)  
+ <span data-ttu-id="33b36-119">[ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)에서 생성 한 형식화 된 클라이언트에서 정보를 가져오는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="33b36-119">Demonstrates how to obtain information from a typed client generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span>
