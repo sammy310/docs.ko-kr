@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: XML 요소 리터럴 (Visual Basic)'
 title: XML 요소 리터럴
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: d6a91de4e279816bafd29f46bb4f5422cbd934ff
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dfc78beded5c6f472b67fa272835ef0aa29d0187
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400191"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787541"
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML 요소 리터럴(Visual Basic)
 
 개체를 나타내는 리터럴입니다 <xref:System.Xml.Linq.XElement> .
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```xml
 <name [ attributeList ] />
@@ -31,18 +32,18 @@ ms.locfileid: "84400191"
 
 - `<`
 
-  필수 요소. 시작 요소 태그를 엽니다.
+  필수 사항입니다. 시작 요소 태그를 엽니다.
 
 - `name`
 
-  필수 요소. 요소 이름입니다. 형식은 다음 중 하나입니다.
+  필수 사항입니다. 요소 이름입니다. 형식은 다음 중 하나입니다.
 
   - 다음 형식의 요소 이름에 대 한 리터럴 텍스트입니다 `[ePrefix:]eName` .
 
-    |부분|Description|
+    |파트|설명|
     |---|---|
     |`ePrefix`|선택 사항입니다. 요소에 대 한 XML 네임 스페이스 접두사입니다. `Imports`는 파일이 나 프로젝트 수준의 문으로 정의 되거나이 요소 또는 부모 요소에 정의 된 로컬 xml 네임 스페이스에 정의 된 전역 xml 네임 스페이스 여야 합니다.|
-    |`eName`|필수 요소. 요소 이름입니다. 형식은 다음 중 하나입니다.<br /><br /> -리터럴 텍스트 [선언 된 XML 요소 및 특성의 이름](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)을 참조 하세요.<br />-폼의 포함 식 `<%= eNameExp %>` 입니다. 의 형식은 `eNameExp` `String` 이거나로 암시적으로 변환할 수 있는 형식 이어야 합니다 <xref:System.Xml.Linq.XName> .|
+    |`eName`|필수 사항입니다. 요소 이름입니다. 형식은 다음 중 하나입니다.<br /><br /> -리터럴 텍스트 [선언 된 XML 요소 및 특성의 이름](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)을 참조 하세요.<br />-폼의 포함 식 `<%= eNameExp %>` 입니다. 의 형식은 `eNameExp` `String` 이거나로 암시적으로 변환할 수 있는 형식 이어야 합니다 <xref:System.Xml.Linq.XName> .|
 
   - 형식의 포함 된 식 `<%= nameExp %>` 입니다. 의 형식은 `nameExp` `String` 이거나로 암시적으로 변환할 수 있는 형식 이어야 합니다 <xref:System.Xml.Linq.XName> . 요소의 닫는 태그에는 포함 식이 허용 되지 않습니다.
 
@@ -56,10 +57,10 @@ ms.locfileid: "84400191"
 
   - 형식의 특성 할당은 `[aPrefix:]aName=aValue` 다음과 같습니다.
 
-    |부분|Description|
+    |파트|설명|
     |---|---|
     |`aPrefix`|선택 사항입니다. 특성에 대 한 XML 네임 스페이스 접두사입니다. 는 `Imports` 문 또는이 요소 또는 부모 요소에 정의 된 로컬 xml 네임 스페이스를 사용 하 여 정의 된 전역 xml 네임 스페이스 여야 합니다.|
-    |`aName`|필수 요소. 특성의 이름입니다. 형식은 다음 중 하나입니다.<br /><br /> -리터럴 텍스트 [선언 된 XML 요소 및 특성의 이름](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)을 참조 하세요.<br />-폼의 포함 식 `<%= aNameExp %>` 입니다. 의 형식은 `aNameExp` `String` 이거나로 암시적으로 변환할 수 있는 형식 이어야 합니다 <xref:System.Xml.Linq.XName> .|
+    |`aName`|필수 사항입니다. 특성의 이름입니다. 형식은 다음 중 하나입니다.<br /><br /> -리터럴 텍스트 [선언 된 XML 요소 및 특성의 이름](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)을 참조 하세요.<br />-폼의 포함 식 `<%= aNameExp %>` 입니다. 의 형식은 `aNameExp` `String` 이거나로 암시적으로 변환할 수 있는 형식 이어야 합니다 <xref:System.Xml.Linq.XName> .|
     |`aValue`|선택 사항입니다. 특성의 값입니다. 형식은 다음 중 하나입니다.<br /><br /> -따옴표로 묶인 리터럴 텍스트입니다.<br />-폼의 포함 식 `<%= aValueExp %>` 입니다. 모든 형식을 사용할 수 있습니다.|
 
   - 형식의 포함 된 식 `<%= aExp %>` 입니다.
@@ -70,7 +71,7 @@ ms.locfileid: "84400191"
 
 - `>`
 
-  필수 요소. 시작 또는 빈 요소 태그를 끝냅니다.
+  필수 사항입니다. 시작 또는 빈 요소 태그를 끝냅니다.
 
 - `elementContents`
 
@@ -96,7 +97,7 @@ ms.locfileid: "84400191"
 
   선택 사항입니다. 요소의 닫는 태그를 나타냅니다. 선택적 `name` 매개 변수는 포함 된 식의 결과일 때 허용 되지 않습니다.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 
 <xref:System.Xml.Linq.XElement> 개체입니다.
 

@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 0687bcb16cae6a0a2dde6c7864a1af1d0027e122
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 8f76c9c86c202ef1bad23bffe8379b0b93a53f17
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216462"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787723"
 ---
 # <a name="configuration-options-for-code-analysis"></a>코드 분석에 대 한 구성 옵션
 
@@ -80,7 +80,7 @@ generated_code = true
 dotnet_diagnostic.<rule ID>.severity = <severity value>
 ```
 
-분석기 규칙의 범주에 대 한 기본 규칙 심각도를 설정 하려면 다음 구문을 사용 합니다. 각 규칙의 범주는 개별 규칙 참조 페이지 (예: [CA1000](quality-rules/ca1000.md))에서 제공 됩니다.
+[규칙 범주](categories.md)에 대 한 기본 규칙 심각도를 설정 하려면 다음 구문을 사용 합니다. 각 규칙의 범주는 개별 규칙 참조 페이지 (예: [CA1000](quality-rules/ca1000.md))에서 제공 됩니다.
 
 ```ini
 dotnet_analyzer_diagnostic.category-<rule category>.severity = <severity value>

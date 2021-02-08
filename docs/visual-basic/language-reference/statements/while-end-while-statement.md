@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: End While 문 (Visual Basic)'
 title: While...End While 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-ms.openlocfilehash: e3ab95f43e101a9ad8abe6fa61b94ae7542e409c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ab452e2d9446c9c44b952c6ebf026f7a6f9080cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869485"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787580"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While 문(Visual Basic)
 
 지정 된 조건이 인 동안 일련의 문을 실행 `True` 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 While condition  
@@ -61,7 +62,7 @@ End While
 
  [Exit While](exit-statement.md) 문은 루프를 종료 하는 다른 방법을 제공할 수 있습니다 `While` . `Exit While` 문 다음에 오는 문으로 제어를 즉시 전송 `End While` 합니다.  
   
- `Exit While`특정 조건 (예: 구조체)을 평가한 후에 일반적으로를 사용 `If...Then...Else` 합니다. 오류가 발생 하거나 종료 요청 등의 반복을 계속할 수 없게 하는 조건을 감지 하는 경우 루프를 종료할 수 있습니다. `Exit While`매우 크거나 무한 한 번 실행 될 수 있는 루프로 *무한 루프*를 발생 시킬 수 있는 조건을 테스트할 때를 사용할 수 있습니다. 그런 다음를 사용 `Exit While` 하 여 루프를 이스케이프할 수 있습니다.  
+ `Exit While`특정 조건 (예: 구조체)을 평가한 후에 일반적으로를 사용 `If...Then...Else` 합니다. 오류가 발생 하거나 종료 요청 등의 반복을 계속할 수 없게 하는 조건을 감지 하는 경우 루프를 종료할 수 있습니다. `Exit While`매우 크거나 무한 한 번 실행 될 수 있는 루프로 *무한 루프* 를 발생 시킬 수 있는 조건을 테스트할 때를 사용할 수 있습니다. 그런 다음를 사용 `Exit While` 하 여 루프를 이스케이프할 수 있습니다.  
   
  `Exit While`루프의 어디에 든 원하는 개수의 문을 넣을 수 있습니다 `While` .  
   
@@ -87,7 +88,7 @@ End While
   
  [!code-vb[VbVbalrStatements#173](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#173)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [루프 구조체](../../programming-guide/language-features/control-flow/loop-structures.md)
 - [Do...Loop 문](do-loop-statement.md)

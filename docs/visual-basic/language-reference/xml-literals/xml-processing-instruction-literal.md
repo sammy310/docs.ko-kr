@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: XML 처리 명령 리터럴 (Visual Basic)'
 title: XML 처리 명령 리터럴
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: 3d18e58cb643fa075f6eb08eb6fe909d27a6737b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5037aab343cbe50ebc48614991e96da8198a481f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866402"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787528"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML 처리 명령 리터럴(Visual Basic)
 
 개체를 나타내는 리터럴입니다 <xref:System.Xml.Linq.XProcessingInstruction> .  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <?piName [ = piData ] ?>  
@@ -39,7 +40,7 @@ ms.locfileid: "90866402"
  `?>`  
  필수 사항입니다. 처리 명령의 끝을 나타냅니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  <xref:System.Xml.Linq.XProcessingInstruction> 개체입니다.  
   
@@ -65,7 +66,7 @@ ms.locfileid: "90866402"
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Linq.XProcessingInstruction>
 - [XML 문서 리터럴](xml-document-literal.md)

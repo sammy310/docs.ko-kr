@@ -1,4 +1,5 @@
 ---
+description: 다음에 대해 자세히 알아보세요. End With 문 (Visual Basic)
 title: With...End With 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: 50f3bd0c6e96254274b429794901e2e4ac719ad0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 86393d5dee7a03b2b8396b34b31326d1b0ea3c28
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401383"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787567"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With 문(Visual Basic)
 
 개체 또는 구문의 멤버에 액세스할 때 문에서 단순화된 구문을 사용할 수 있도록 단일 개체를 반복적으로 참조하는 일련의 문을 실행합니다.  구조체를 사용하면 멤버 또는 호출 메서드의 값을 읽을 수만 있으며, `With...End With` 문에서 사용된 구조체의 멤버에 값을 할당하도록 시도하는 경우 오류가 발생합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 With objectExpression
@@ -40,7 +41,7 @@ End With
 |---|---|
 |`objectExpression`|필수 요소. 개체를 평가하는 식입니다. 식은 임의적으로 복잡할 수 있으며, 한 번만 계산됩니다. 식이 기본 형식을 포함하여 모든 데이터 형식으로 계산될 수 있습니다.|
 |`statements`|선택 사항입니다. `With`의 평가를 통해 생성된 개체의 멤버를 참조할 수 있는 `End With`와 `objectExpression` 사이의 하나 이상의 문입니다.|
-|`End With`|필수 요소. `With` 블록의 정의를 종료합니다.|
+|`End With`|필수 사항입니다. `With` 블록의 정의를 종료합니다.|
 
 ## <a name="remarks"></a>설명
 

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 사용자 지정 활동 디자이너에서 ExpressionTextBox 사용'
 title: 사용자 지정 활동 디자이너에서 ExpressionTextBox 사용
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: dfb53096be59abd9924a024880d4125ca774d4b8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c333832c2f955354233371c6572f8ae27e5d8643
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267496"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787762"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>사용자 지정 활동 디자이너에서 ExpressionTextBox 사용
 
