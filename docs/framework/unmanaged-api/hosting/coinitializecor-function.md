@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CoInitializeCor 함수'
 title: CoInitializeCor 함수
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9b9079fb-579e-4141-b3f0-791072dd40dc
 topic_type:
 - apiref
-ms.openlocfilehash: 9d077d5c5a414568b5643cad0171e101d7bb06f9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e1db9914cce8a92cecf78123a2e247d75ec74acf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731711"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799852"
 ---
-# <a name="coinitializecor-function"></a><span data-ttu-id="5fe6c-102">CoInitializeCor 함수</span><span class="sxs-lookup"><span data-stu-id="5fe6c-102">CoInitializeCor Function</span></span>
+# <a name="coinitializecor-function"></a><span data-ttu-id="76b3e-103">CoInitializeCor 함수</span><span class="sxs-lookup"><span data-stu-id="76b3e-103">CoInitializeCor Function</span></span>
 
-<span data-ttu-id="5fe6c-103">`CoInitializeCor`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-103">`CoInitializeCor` is obsolete.</span></span>  
+<span data-ttu-id="76b3e-104">`CoInitializeCor`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="76b3e-104">`CoInitializeCor` is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5fe6c-104">구문</span><span class="sxs-lookup"><span data-stu-id="5fe6c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="76b3e-105">구문</span><span class="sxs-lookup"><span data-stu-id="76b3e-105">Syntax</span></span>  
   
 ```cpp  
 STDAPI CoInitializeCor (  
@@ -34,14 +35,14 @@ STDAPI CoInitializeCor (
 );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="5fe6c-105">설명</span><span class="sxs-lookup"><span data-stu-id="5fe6c-105">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="76b3e-106">설명</span><span class="sxs-lookup"><span data-stu-id="76b3e-106">Remarks</span></span>  
 
- <span data-ttu-id="5fe6c-106">공용 언어 런타임을 초기화 하려면 [CorBindToRuntimeEx](corbindtoruntimeex-function.md) 또는 [CorBindToCurrentRuntime](corbindtocurrentruntime-function.md)중 하나를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="5fe6c-106">To initialize the common language runtime, use either [CorBindToRuntimeEx](corbindtoruntimeex-function.md) or [CorBindToCurrentRuntime](corbindtocurrentruntime-function.md).</span></span>  
+ <span data-ttu-id="76b3e-107">공용 언어 런타임을 초기화 하려면 [CorBindToRuntimeEx](corbindtoruntimeex-function.md) 또는 [CorBindToCurrentRuntime](corbindtocurrentruntime-function.md)중 하나를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="76b3e-107">To initialize the common language runtime, use either [CorBindToRuntimeEx](corbindtoruntimeex-function.md) or [CorBindToCurrentRuntime](corbindtocurrentruntime-function.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5fe6c-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5fe6c-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="76b3e-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="76b3e-108">Requirements</span></span>  
 
- <span data-ttu-id="5fe6c-108">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="5fe6c-108">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="76b3e-109">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="76b3e-109">**Header:** Cor.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5fe6c-109">참조</span><span class="sxs-lookup"><span data-stu-id="5fe6c-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="76b3e-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="76b3e-110">See also</span></span>
 
-- [<span data-ttu-id="5fe6c-110">메타데이터 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="5fe6c-110">Metadata Global Static Functions</span></span>](../metadata/metadata-global-static-functions.md)
+- [<span data-ttu-id="76b3e-111">메타데이터 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="76b3e-111">Metadata Global Static Functions</span></span>](../metadata/metadata-global-static-functions.md)
