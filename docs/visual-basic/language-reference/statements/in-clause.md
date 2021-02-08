@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: In 절 (Visual Basic)'
 title: In 절
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-ms.openlocfilehash: fe9444482d3ab17f7adcbd5a76fdb1f4759de2cd
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f70ce60721b87b788e61e4b7fcffc488181d5c6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866511"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768950"
 ---
-# <a name="in-clause-visual-basic"></a><span data-ttu-id="d5d38-102">In 절(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d5d38-102">In Clause (Visual Basic)</span></span>
+# <a name="in-clause-visual-basic"></a><span data-ttu-id="9f5b2-103">In 절(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9f5b2-103">In Clause (Visual Basic)</span></span>
 
-<span data-ttu-id="d5d38-103">루프 변수가 루프에서 트래버스할 그룹을 지정 `For Each` 하거나 `From` , 또는 절에서 쿼리할 컬렉션을 지정 합니다 `Join` `Group Join` .</span><span class="sxs-lookup"><span data-stu-id="d5d38-103">Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.</span></span>  
+<span data-ttu-id="9f5b2-104">루프 변수가 루프에서 트래버스할 그룹을 지정 `For Each` 하거나 `From` , 또는 절에서 쿼리할 컬렉션을 지정 합니다 `Join` `Group Join` .</span><span class="sxs-lookup"><span data-stu-id="9f5b2-104">Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d5d38-104">설명</span><span class="sxs-lookup"><span data-stu-id="d5d38-104">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9f5b2-105">설명</span><span class="sxs-lookup"><span data-stu-id="9f5b2-105">Remarks</span></span>  
 
- <span data-ttu-id="d5d38-105">`In`키워드는 다음 컨텍스트에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d5d38-105">The `In` keyword can be used in the following contexts:</span></span>  
+ <span data-ttu-id="9f5b2-106">`In`키워드는 다음 컨텍스트에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9f5b2-106">The `In` keyword can be used in the following contexts:</span></span>  
   
- [<span data-ttu-id="d5d38-106">For Each...Next 문</span><span class="sxs-lookup"><span data-stu-id="d5d38-106">For Each...Next Statement</span></span>](for-each-next-statement.md)  
+ [<span data-ttu-id="9f5b2-107">For Each...Next 문</span><span class="sxs-lookup"><span data-stu-id="9f5b2-107">For Each...Next Statement</span></span>](for-each-next-statement.md)  
   
- [<span data-ttu-id="d5d38-107">From 절</span><span class="sxs-lookup"><span data-stu-id="d5d38-107">From Clause</span></span>](../queries/from-clause.md)  
+ [<span data-ttu-id="9f5b2-108">From 절</span><span class="sxs-lookup"><span data-stu-id="9f5b2-108">From Clause</span></span>](../queries/from-clause.md)  
   
- [<span data-ttu-id="d5d38-108">Join 절</span><span class="sxs-lookup"><span data-stu-id="d5d38-108">Join Clause</span></span>](../queries/join-clause.md)  
+ [<span data-ttu-id="9f5b2-109">Join 절</span><span class="sxs-lookup"><span data-stu-id="9f5b2-109">Join Clause</span></span>](../queries/join-clause.md)  
   
- [<span data-ttu-id="d5d38-109">Group Join 절</span><span class="sxs-lookup"><span data-stu-id="d5d38-109">Group Join Clause</span></span>](../queries/group-join-clause.md)  
+ [<span data-ttu-id="9f5b2-110">Group Join 절</span><span class="sxs-lookup"><span data-stu-id="9f5b2-110">Group Join Clause</span></span>](../queries/group-join-clause.md)  
   
-## <a name="see-also"></a><span data-ttu-id="d5d38-110">참조</span><span class="sxs-lookup"><span data-stu-id="d5d38-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f5b2-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9f5b2-111">See also</span></span>
 
-- [<span data-ttu-id="d5d38-111">키워드</span><span class="sxs-lookup"><span data-stu-id="d5d38-111">Keywords</span></span>](../keywords/index.md)
+- [<span data-ttu-id="9f5b2-112">C++ 키워드</span><span class="sxs-lookup"><span data-stu-id="9f5b2-112">Keywords</span></span>](../keywords/index.md)
