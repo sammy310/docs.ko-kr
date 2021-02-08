@@ -1,18 +1,21 @@
 ---
+description: '자세한 정보: 클라이언트 응용 프로그램에서 데이터 서비스 사용 (WCF Data Services)'
 title: 클라이언트 애플리케이션에서 데이터 서비스 사용(WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: b921e78c1b3d3d90d9ac8b4a459df496cf6d14dd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f16b927a00aae55a3cb95630fc5d75a1c4c9e238
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180584"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791727"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>클라이언트 애플리케이션에서 데이터 서비스 사용(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 웹 브라우저에 URI를 제공 하 여 OData (Open Data Protocol) 피드를 노출 하는 서비스에 액세스할 수 있습니다. URI는 리소스의 주소를 제공하고 요청 메시지는 해당 리소스가 나타내는 기본 데이터에 액세스하거나 변경하기 위해 이러한 주소로 전송됩니다. 브라우저는 HTTP GET 명령을 실행 하 고 요청 된 리소스를 OData 피드로 반환 합니다. 자세한 내용은 [웹 브라우저에서 서비스 액세스](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)를 참조 하세요.  
   

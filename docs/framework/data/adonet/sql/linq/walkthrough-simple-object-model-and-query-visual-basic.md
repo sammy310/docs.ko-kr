@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 연습: 간단한 개체 모델 및 쿼리 (Visual Basic)'
 title: '연습: 간단한 개체 모델 및 쿼리(Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: c21a187739ba19be2dc8e89b4dddc94ad799f036
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: def2fecf0d6d97841ebd47a1d675f85341053d39
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792124"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791805"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>연습: 간단한 개체 모델 및 쿼리(Visual Basic)
 
@@ -21,7 +22,7 @@ ms.locfileid: "70792124"
 
 이 연습은 Visual Basic 개발 설정을 사용하여 작성했습니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - 이 연습에서는 파일을 저장하기 위해 전용 폴더("c:\linqtest")가 사용됩니다. 연습을 시작하기 전에 먼저 이 폴더를 만듭니다.
 
@@ -31,7 +32,7 @@ ms.locfileid: "70792124"
 
 이 연습은 다음과 같은 여섯 가지 주요 작업으로 구성됩니다.
 
-- Visual Studio에서 솔루션 만들기 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio에서 솔루션 만들기
 
 - 데이터베이스 테이블에 클래스 매핑
 
@@ -45,33 +46,33 @@ ms.locfileid: "70792124"
 
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션 만들기
 
-이 첫 번째 작업에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트를 빌드하고 실행 하는 데 필요한 참조를 포함 하는 Visual Studio 솔루션을 만듭니다.
+이 첫 번째 작업에서는 프로젝트를 빌드하고 실행 하는 데 필요한 참조를 포함 하는 Visual Studio 솔루션을 만듭니다 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .
 
 ### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션을 만들려면
 
-1. **파일** 메뉴에서 **새 프로젝트**를 클릭합니다.
+1. **파일** 메뉴에서 **새 프로젝트** 를 클릭합니다.
 
-2. **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Visual Basic**을 클릭 합니다.
+2. **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Visual Basic** 을 클릭 합니다.
 
-3. **템플릿** 창에서 **콘솔 애플리케이션**을 클릭합니다.
+3. **템플릿** 창에서 **콘솔 애플리케이션** 을 클릭합니다.
 
-4. **이름** 상자에 **linqconsoleapp 입력**을 입력 합니다.
+4. **이름** 상자에 **linqconsoleapp 입력** 을 입력 합니다.
 
-5. **확인**을 클릭합니다.
+5. **확인** 을 클릭합니다.
 
 ## <a name="adding-linq-references-and-directives"></a>LINQ 참조 및 지시문 추가
 
-이 연습에서는 프로젝트에 기본적으로 설치되어 있지 않을 수 있는 어셈블리를 사용합니다. 이 `System.Data.Linq` 프로젝트에 참조로 나열 되지 않은 경우 ( **솔루션 탐색기** 의 **모든 파일 표시** 를 클릭 하 고 **참조** 노드를 확장) 다음 단계에 설명 된 대로 추가 합니다.
+이 연습에서는 프로젝트에 기본적으로 설치되어 있지 않을 수 있는 어셈블리를 사용합니다. `System.Data.Linq`이 프로젝트에 참조로 나열 되지 않은 경우 ( **솔루션 탐색기** 의 **모든 파일 표시** 를 클릭 하 고 **참조** 노드를 확장) 다음 단계에 설명 된 대로 추가 합니다.
 
 ### <a name="to-add-systemdatalinq"></a>System.Data.Linq를 추가하려면
 
-1. **솔루션 탐색기**에서 **참조**를 마우스 오른쪽 단추로 클릭 한 다음 **참조 추가**를 클릭 합니다.
+1. **솔루션 탐색기** 에서 **참조** 를 마우스 오른쪽 단추로 클릭 한 다음 **참조 추가** 를 클릭 합니다.
 
-2. **참조 추가** 대화 상자에서 **.net**을 클릭 하 고 system.xml 어셈블리를 클릭 한 다음 **확인**을 클릭 합니다.
+2. **참조 추가** 대화 상자에서 **.net** 을 클릭 하 고 system.xml 어셈블리를 클릭 한 다음 **확인** 을 클릭 합니다.
 
      어셈블리가 프로젝트에 추가됩니다.
 
-3. 또한 **참조 추가** 대화 상자에서 **.net**을 클릭 하 고,로 스크롤하고, 클릭 한 다음 **확인**을 클릭 합니다.
+3. 또한 **참조 추가** 대화 상자에서 **.net** 을 클릭 하 고,로 스크롤하고, 클릭 한 다음 **확인** 을 클릭 합니다.
 
      연습에서 메시지 상자를 지원하는 어셈블리가 프로젝트에 추가됩니다.
 
@@ -81,7 +82,7 @@ ms.locfileid: "70792124"
 
 ## <a name="mapping-a-class-to-a-database-table"></a>데이터베이스 테이블에 클래스 매핑
 
-이 단계에서는 클래스를 생성하여 데이터베이스 테이블에 매핑합니다. 이러한 클래스를 *엔터티 클래스*라고 합니다. 매핑을 수행하려면 <xref:System.Data.Linq.Mapping.TableAttribute> 특성을 추가하면 됩니다. <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 속성은 데이터베이스의 테이블 이름을 지정합니다.
+이 단계에서는 클래스를 생성하여 데이터베이스 테이블에 매핑합니다. 이러한 클래스를 *엔터티 클래스* 라고 합니다. 매핑을 수행하려면 <xref:System.Data.Linq.Mapping.TableAttribute> 특성을 추가하면 됩니다. <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 속성은 데이터베이스의 테이블 이름을 지정합니다.
 
 ### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>엔터티 클래스를 만들어 데이터베이스 테이블에 매핑하려면
 
@@ -121,7 +122,7 @@ ms.locfileid: "70792124"
 
 ## <a name="creating-a-simple-query"></a>단순 쿼리 작성
 
-이 단계에서는 데이터베이스 Customers 테이블에서 London에 있는 고객을 찾는 쿼리를 만듭니다. 이 단계의 쿼리 코드는 쿼리를 설명하기만 하고 실행하지는 않습니다. 이 방법을 *지연 된 실행*이라고 합니다. 자세한 내용은 [LINQ 쿼리 소개(C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)를 참조하세요.
+이 단계에서는 데이터베이스 Customers 테이블에서 London에 있는 고객을 찾는 쿼리를 만듭니다. 이 단계의 쿼리 코드는 쿼리를 설명하기만 하고 실행하지는 않습니다. 이 방법을 *지연 된 실행* 이라고 합니다. 자세한 내용은 [LINQ 쿼리 소개(C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)를 참조하세요.
 
 또한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 생성하는 SQL 명령을 보여 주는 로그 출력을 만듭니다. <xref:System.Data.Linq.DataContext.Log%2A>를 사용하는 이 로깅 기능은 디버깅할 때와 데이터베이스로 전송되는 명령이 쿼리를 정확히 나타내는지 확인할 때 유용합니다.
 
@@ -148,20 +149,20 @@ ms.locfileid: "70792124"
 
      메시지 상자에 여섯 명의 고객이 나열됩니다. 콘솔 창에 생성된 SQL 코드가 표시됩니다.
 
-3. **확인**을 클릭하여 메시지 상자를 닫습니다.
+3. **확인** 을 클릭하여 메시지 상자를 닫습니다.
 
      애플리케이션을 닫습니다.
 
-4. **파일** 메뉴에서 **모두 저장**을 클릭합니다.
+4. **파일** 메뉴에서 **모두 저장** 을 클릭합니다.
 
      다음 연습을 계속하려면 이 애플리케이션이 필요합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-[연습: 관계 간 쿼리 (Visual Basic)](walkthrough-querying-across-relationships-visual-basic.md) 토픽은이 연습을 종료 하는 위치에서 계속 됩니다. 관계 간 쿼리 연습에서는에서 관계형 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 데이터베이스의 *조인과* 유사 하 게 테이블을 쿼리 하는 방법을 보여 줍니다.
+[연습: 관계 간 쿼리 (Visual Basic)](walkthrough-querying-across-relationships-visual-basic.md) 항목은이 연습을 종료 하는 위치에서 계속 됩니다. 관계 간 쿼리 연습에서는에서 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 관계형 데이터베이스의 *조인과* 유사 하 게 테이블을 쿼리 하는 방법을 보여 줍니다.
 
 관계 간 쿼리 연습을 수행하려면 지금까지 완료한 연습에 대한 솔루션을 저장해야 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [연습으로 학습](learning-by-walkthroughs.md)

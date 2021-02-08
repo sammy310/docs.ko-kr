@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 리터럴 (Entity SQL)'
 title: 리터럴(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 4402f4c6ee38432a0f606e39dd4a18639076ce04
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: cae2ec7ab8cf19166dc3100a85473fca2ed0a7be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161778"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791883"
 ---
 # <a name="literals-entity-sql"></a>리터럴(Entity SQL)
 
@@ -64,7 +65,7 @@ DATETIME'2006-10-1 23:11'
 DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'  
 ```  
   
-## <a name="time"></a>Time  
+## <a name="time"></a>시간  
 
  time 리터럴은 로캘과 무관하며 시간 부분만으로 구성됩니다. 시간 부분은 필수 요소이며 기본값은 없습니다. 이 형식은 HH:MM[:SS[.fffffff]]이어야 하며, 여기서 HH는 0에서 23 사이의 시간 값이고, MM은 0에서 59 사이의 분 값이며, SS는 0에서 59 사이의 초 값이며, fffffff는 0에서 9999999 사이의 소수로 나타낸 초 값입니다. 모든 값 범위에서 해당 시작 값과 끝 값이 포함됩니다. 소수로 나타낸 초는 선택적 요소입니다. 소수로 나타낸 초가 지정되지 않은 경우 초를 선택하며, 이 경우 초는 필수 요소입니다. 초 또는 소수로 나타낸 초가 지정되지 않은 경우에는 기본값 0이 대신 사용됩니다.  
   

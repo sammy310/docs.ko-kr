@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 분석 추적 이벤트 참조'
 title: 분석 추적 이벤트 참조
 ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
-ms.openlocfilehash: 28ae252d562b57df0553f0fd4370845e836ef537
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1f4773692d3481cd5fa662d4fc70905215939db3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254846"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798838"
 ---
 # <a name="analytic-trace-event-reference"></a>분석 추적 이벤트 참조
 
@@ -41,14 +42,14 @@ ms.locfileid: "96254846"
 |[216 - MessageSentByTransport](216-messagesentbytransport.md)|정보|전송이 '%1'에 메시지를 보냈습니다.|문제 해결, ServiceModel|  
 |[217 - ClientOperationPrepared](217-clientoperationprepared.md)|정보|클라이언트가 '%2' 계약에 정의된 '%1' 작업을 실행하는 중입니다. 메시지를 '%3'(으)로 보냅니다.|문제 해결, ServiceModel|  
 |[218 - ClientOperationCompleted](218-clientoperationcompleted.md)|정보|클라이언트가 '%2' 계약에 정의된 '%1' 작업 실행을 완료했습니다. 메시지가 '%3'(으)로 전송되었습니다.|문제 해결, ServiceModel|  
-|[219 - ServiceException](219-serviceexception.md)|오류|메시지를 처리하는 동안 '%2' 형식의 처리되지 않은 예외가 발생했습니다.  전체 예외 ToString: %1.|HealthMonitoring, EndToEndMonitoring, 문제 해결, ServiceModel|  
+|[219 - ServiceException](219-serviceexception.md)|Error|메시지를 처리하는 동안 '%2' 형식의 처리되지 않은 예외가 발생했습니다.  전체 예외 ToString: %1.|HealthMonitoring, EndToEndMonitoring, 문제 해결, ServiceModel|  
 |[220 - MessageSentToTransport](220-messagesenttotransport.md)|정보|디스패처가 전송에 메시지를 보냈습니다. Correlation ID == '%1'.|EndToEndMonitoring, 문제 해결, ServiceModel|  
 |[221 - MessageReceivedFromTransport](221-messagereceivedfromtransport.md)|정보|디스패처가 전송에서 메시지를 받았습니다. Correlation ID == '%1'.|EndToEndMonitoring, 문제 해결, ServiceModel|  
 |[222 - OperationFailed](222-operationfailed.md)|경고|OperationInvoker의 호출을 받은 '%1' 메서드에서 처리되지 않은 예외가 발생했습니다. 메서드 호출 기간은 '%2'밀리초입니다.|HealthMonitoring, EndToEndMonitoring, 문제 해결, ServiceModel|  
 |[223 - OperationFaulted](223-operationfaulted.md)|경고|OperationInvoker의 호출을 받은 '%1' 메서드에서 FaultException이 발생했습니다. 메서드 호출 기간은 '%2'밀리초입니다.|HealthMonitoring, EndToEndMonitoring, 문제 해결, ServiceModel|  
 |[224 - MessageThrottleAtSeventyPercent](224-messagethrottleatseventypercent.md)|경고|'%2'의 스로틀 제한 '%1'이(가) 70퍼센트입니다.|HealthMonitoring, EndToEndMonitoring, 문제 해결, ServiceModel|  
 |[226 - IdleServicesClosed](226-idleservicesclosed.md)|LogAlways|활성화된 총 %2개 서비스 중에서 %1개의 유휴 서비스가 종료되었습니다.|HealthMonitoring WebHost|  
-|[301 - UserDefinedErrorOccurred](301-userdefinederroroccurred.md)|오류|이름: '%1', 참조: '%2', 페이로드: %3.|UserEvents, HealthMonitoring, EndToEndMonitoring, 문제 해결, ServiceModel|  
+|[301 - UserDefinedErrorOccurred](301-userdefinederroroccurred.md)|Error|이름: '%1', 참조: '%2', 페이로드: %3.|UserEvents, HealthMonitoring, EndToEndMonitoring, 문제 해결, ServiceModel|  
 |[302 - UserDefinedWarningOccurred](302-userdefinedwarningoccurred.md)|경고|이름: '%1', 참조: '%2', 페이로드: %3.|UserEvents, HealthMonitoring, EndToEndMonitoring, 문제 해결, ServiceModel|  
 |[303 - UserDefinedInformationEventOccured](303-userdefinedinformationeventoccured.md)|정보|이름: '%1', 참조: '%2', 페이로드: %3.|UserEvents, HealthMonitoring, EndToEndMonitoring, 문제 해결, ServiceModel|  
 |[401- StopSignPostEvent](401-stopsignpostevent.md)|정보|동작 경계입니다.|문제 해결|  
@@ -90,20 +91,20 @@ ms.locfileid: "96254846"
 |[715 - ClientChannelOpenStart](715-clientchannelopenstart.md)|정보|ServiceChannel 열기가 시작됩니다.|ServiceModel|  
 |[716 - ClientChannelOpenStop](716-clientchannelopenstop.md)|정보|ServiceChannel 열기가 중지됩니다.|ServiceModel|  
 |[717 - HttpSendStreamedMessageStart](717-httpsendstreamedmessagestart.md)|정보|Http 전송 스트리밍 메시지가 시작되었습니다.|HTTP|  
-|[1400 - ChannelInitializationTimeout](1400-channelinitializationtimeout.md)|오류|1%|ServiceModel|  
-|[1401 - CloseTimeout](1401-closetimeout.md)|오류|1%|ServiceModel|  
-|[1402 - IdleTimeout](1402-idletimeout.md)|오류|%1 연결 풀 키: %2|ServiceModel|  
+|[1400 - ChannelInitializationTimeout](1400-channelinitializationtimeout.md)|Error|1%|ServiceModel|  
+|[1401 - CloseTimeout](1401-closetimeout.md)|Error|1%|ServiceModel|  
+|[1402 - IdleTimeout](1402-idletimeout.md)|Error|%1 연결 풀 키: %2|ServiceModel|  
 |[1403 - LeaseTimeout](1403-leasetimeout.md)|정보|%1 연결 풀 키: %2|ServiceModel|  
-|[1405 - OpenTimeout](1405-opentimeout.md)|오류|%1|ServiceModel|  
-|[1406 - ReceiveTimeout](1406-receivetimeout.md)|오류|%1|ServiceModel|  
-|[1407 - SendTimeout](1407-sendtimeout.md)|오류|%1|ServiceModel|  
+|[1405 - OpenTimeout](1405-opentimeout.md)|Error|%1|ServiceModel|  
+|[1406 - ReceiveTimeout](1406-receivetimeout.md)|Error|%1|ServiceModel|  
+|[1407 - SendTimeout](1407-sendtimeout.md)|Error|%1|ServiceModel|  
 |[1409 - InactivityTimeout](1409-inactivitytimeout.md)|정보|%1|ServiceModel|  
-|[1416 - MaxReceivedMessageSizeExceeded](1416-maxreceivedmessagesizeexceeded.md)|오류|%1|할당량|  
-|[1417 - MaxSentMessageSizeExceeded](1417-maxsentmessagesizeexceeded.md)|오류|%1|할당량|  
+|[1416 - MaxReceivedMessageSizeExceeded](1416-maxreceivedmessagesizeexceeded.md)|Error|%1|할당량|  
+|[1417 - MaxSentMessageSizeExceeded](1417-maxsentmessagesizeexceeded.md)|Error|%1|할당량|  
 |[1418 - MaxOutboundConnectionsPerEndpointExceeded](1418-maxoutboundconnectionsperendpointexceeded.md)|정보|%1|할당량|  
 |[1419 - MaxPendingConnectionsExceeded](1419-maxpendingconnectionsexceeded.md)|정보|%1|할당량|  
-|[1420 - ReaderQuotaExceeded](1420-readerquotaexceeded.md)|오류|%1|할당량|  
-|[1422 - NegotiateTokenAuthenticatorStateCacheExceeded](1422-negotiatetokenauthenticatorstatecacheexceeded.md)|오류|%1|할당량|  
+|[1420 - ReaderQuotaExceeded](1420-readerquotaexceeded.md)|Error|%1|할당량|  
+|[1422 - NegotiateTokenAuthenticatorStateCacheExceeded](1422-negotiatetokenauthenticatorstatecacheexceeded.md)|Error|%1|할당량|  
 |[1423 - NegotiateTokenAuthenticatorStateCacheRatio](1423-negotiatetokenauthenticatorstatecacheratio.md)|자세히|협상 토큰 인증자 상태 캐시 비율: %1/%2|할당량|  
 |[1424 - SecuritySessionRatio](1424-securitysessionratio.md)|자세히|보안 세션 비율: %1/%2|할당량|  
 |[1430 - PendingConnectionsRatio](1430-pendingconnectionsratio.md)|자세히|보류 중인 연결 비율: %1/%2|할당량|  
@@ -115,10 +116,10 @@ ms.locfileid: "96254846"
 |[1439 - PendingAcceptsAtZero](1439-pendingacceptsatzero.md)|정보|보류 중인 수락 항목 없음|할당량|  
 |[1441 - MaxSessionSizeReached](1441-maxsessionsizereached.md)|경고|1%|할당량|  
 |[1442 - ReceiveRetryCountReached](1442-receiveretrycountreached.md)|경고|ID가 '%1'인 MSMQ 메시지에서 수신 재시도 횟수에 도달했습니다.|할당량|  
-|[1443 - MaxRetryCyclesExceededMsmq](1443-maxretrycyclesexceededmsmq.md)|오류|ID가 '%1'인 MSMQ 메시지에서 최대 재시도 주기가 초과되었습니다.|할당량|  
+|[1443 - MaxRetryCyclesExceededMsmq](1443-maxretrycyclesexceededmsmq.md)|Error|ID가 '%1'인 MSMQ 메시지에서 최대 재시도 주기가 초과되었습니다.|할당량|  
 |[1445 - ReadPoolMiss](1445-readpoolmiss.md)|자세히|새 '%1'이(가) 만들어졌습니다.|할당량|  
 |[1446 - WritePoolMiss](1446-writepoolmiss.md)|자세히|새 '%1'이(가) 만들어졌습니다.|할당량|  
-|[1451 - MaxRetryCyclesExceeded](1451-maxretrycyclesexceeded.md)|오류|1%|할당량|  
+|[1451 - MaxRetryCyclesExceeded](1451-maxretrycyclesexceeded.md)|Error|1%|할당량|  
 |[3300 - ReceiveContextCompleteFailed](3300-receivecontextcompletefailed.md)|경고|'%1'을(를) 완료하지 못했습니다.|채널|  
 |[3301 - ReceiveContextAbandonFailed](3301-receivecontextabandonfailed.md)|경고|%1을(를) 중단하지 못했습니다.|채널|  
 |[3303 - ReceiveContextAbandonWithException](3303-receivecontextabandonwithexception.md)|경고|컨텍스트 수신 오류가 발생했습니다.|ServiceModel|  
@@ -128,11 +129,11 @@ ms.locfileid: "96254846"
 |[3307 - ClientBaseChannelFactoryCacheHit](3307-clientbasechannelfactorycachehit.md)|정보|캐시에서 사용된 일치하는 채널 팩터리가 발견되었습니다.|ServiceModel|  
 |[3308 - ClientBaseUsingLocalChannelFactory](3308-clientbaseusinglocalchannelfactory.md)|정보|캐시에서 채널 팩터리를 사용 하지 않습니다 (예: 캐싱에 사용 하지 않도록 설정 됨).|ServiceModel|  
 |[3309 - QueryCompositionExecuted](3309-querycompositionexecuted.md)|정보|'%1'을(를) 사용한 쿼리 작성이 요청 Uri: '%2'에서 실행되었습니다.|ServiceModel|  
-|[3310 - DispatchFailed](3310-dispatchfailed.md)|오류|'%1' 작업이 디스패치되었지만 오류가 발생했습니다.|ServiceModel|  
+|[3310 - DispatchFailed](3310-dispatchfailed.md)|Error|'%1' 작업이 디스패치되었지만 오류가 발생했습니다.|ServiceModel|  
 |[3311 - DispatchSuccessful](3311-dispatchsuccessful.md)|정보|'%1' 작업이 성공적으로 디스패치되었습니다.|ServiceModel|  
 |[3312 - MessageReadByEncoder](3312-messagereadbyencoder.md)|정보|인코더가 크기가 '%1'바이트인 메시지를 읽었습니다.|채널|  
 |[3312 - MessageReadByEncoder](3312-messagereadbyencoder.md)|정보|인코더가 크기가 '%1'바이트인 메시지를 썼습니다.|채널|  
-|[3314 - SessionIdleTimeout](3314-sessionidletimeout.md)|오류|URI: '%1'에 대한 유휴 채널에 대해 세션을 중단하는 중입니다.|ServiceModel|  
+|[3314 - SessionIdleTimeout](3314-sessionidletimeout.md)|Error|URI: '%1'에 대한 유휴 채널에 대해 세션을 중단하는 중입니다.|ServiceModel|  
 |[3319 - SocketAcceptEnqueued](3319-socketacceptenqueued.md)|자세히|연결 수락이 시작되었습니다.|TCP|  
 |[3320 - SocketAccepted](3320-socketaccepted.md)|자세히|ListenerId:%1에서 SocketId:%2이(가) 수락되었습니다.|TCP|  
 |[3321 - ConnectionPoolMiss](3321-connectionpoolmiss.md)|자세히|%1에 대한 풀에 사용 가능한 연결이 없고 %2개의 연결을 사용 중입니다.|채널|  
@@ -159,18 +160,18 @@ ms.locfileid: "96254846"
 |[3342 - EstablishConnectionStart](3342-establishconnectionstart.md)|자세히|%1에 대해 연결 설정이 시작되었습니다.|채널|  
 |[3343 - EstablishConnectionStop](3343-establishconnectionstop.md)|자세히|연결이 설정되었습니다.|채널|  
 |[3345 - SessionPreambleUnderstood](3345-sessionpreambleunderstood.md)|자세히|'%1'에 대한 세션 프리앰블이 확인되었습니다.|채널|  
-|[3346 - ConnectionReaderSendFault](3346-connectionreadersendfault.md)|오류|연결 판독기가 오류 '%1'을(를) 전송하고 있습니다.|채널|  
+|[3346 - ConnectionReaderSendFault](3346-connectionreadersendfault.md)|Error|연결 판독기가 오류 '%1'을(를) 전송하고 있습니다.|채널|  
 |[3347 - SocketAcceptClosed](3347-socketacceptclosed.md)|자세히|소켓 수락이 종료되었습니다.|TCP|  
 |[3348 - ServiceHostFaulted](3348-servicehostfaulted.md)|위험|서비스 호스트에 오류가 발생했습니다.|TCP|  
 |[3349 - ListenerOpenStart](3349-listeneropenstart.md)|자세히|'%1'에 대한 리스너가 열려 있습니다.|채널|  
 |[3350 - ListenerOpenStop](3350-listeneropenstop.md)|자세히|리스너 열기가 완료되었습니다.|채널|  
 |[3351 - ServerMaxPooledConnectionsQuotaReached](3351-servermaxpooledconnectionsquotareached.md)|자세히|서버 최대 풀 연결 할당량에 도달했습니다.|할당량|  
-|[3352 - TcpConnectionTimedOut](3352-tcpconnectiontimedout.md)|오류|원격 주소 %2에 대한 SocketId:%1이(가) 시간 초과되었습니다.|TCP|  
+|[3352 - TcpConnectionTimedOut](3352-tcpconnectiontimedout.md)|Error|원격 주소 %2에 대한 SocketId:%1이(가) 시간 초과되었습니다.|TCP|  
 |[3353 - TcpConnectionResetError](3353-tcpconnectionreseterror.md)|경고|원격 주소 %2에 대한 SocketId:%1에 연결 재설정 오류가 발생했습니다.|TCP|  
 |[3354 - ServiceSecurityNegotiationCompleted](3354-servicesecuritynegotiationcompleted.md)|자세히|서비스 보안 협상이 완료되었습니다.|보안|  
-|[3355 - SecurityNegotiationProcessingFailure](3355-securitynegotiationprocessingfailure.md)|오류|보안 협상을 처리하지 못했습니다.|보안|  
+|[3355 - SecurityNegotiationProcessingFailure](3355-securitynegotiationprocessingfailure.md)|Error|보안 협상을 처리하지 못했습니다.|보안|  
 |[3356 - SecurityIdentityVerificationSuccess](3356-securityidentityverificationsuccess.md)|자세히|보안 확인에 성공했습니다.|보안|  
-|[3357 - SecurityIdentityVerificationFailure](3357-securityidentityverificationfailure.md)|오류|보안 확인에 실패했습니다.|보안|  
+|[3357 - SecurityIdentityVerificationFailure](3357-securityidentityverificationfailure.md)|Error|보안 확인에 실패했습니다.|보안|  
 |[3358 - PortSharingDuplicatedSocket](3358-portsharingduplicatedsocket.md)|자세히|%1에 대해 소켓이 중복되었습니다.|ActivationServices|  
 |[3359 - SecurityImpersonationSuccess](3359-securityimpersonationsuccess.md)|자세히|보안 가장에 성공했습니다.|보안|  
 |[3360 - SecurityImpersonationFailure](3360-securityimpersonationfailure.md)|경고|보안 가장에 실패했습니다.|보안|  
@@ -179,8 +180,8 @@ ms.locfileid: "96254846"
 |[3363 - HttpAuthFailed](3363-httpauthfailed.md)|경고|Http 인증이 실패했습니다.|HTTP|  
 |[3364 - SharedListenerProxyRegisterStart](3364-sharedlistenerproxyregisterstart.md)|자세히|SharedListenerProxy 등록이 URI '%1'에 대해 시작되었습니다.|ActivationServices|  
 |[3365 - SharedListenerProxyRegisterStop](3365-sharedlistenerproxyregisterstop.md)|자세히|SharedListenerProxy 등록이 중지됩니다.|ActivationServices|  
-|[3366 - SharedListenerProxyRegisterFailed](3366-sharedlistenerproxyregisterfailed.md)|오류|SharedListenerProxy 등록이 '%1' 상태로 실패했습니다.|ActivationServices|  
-|[3367 - ConnectionPoolPreambleFailed](3367-connectionpoolpreamblefailed.md)|오류|ConnectionPoolPreambleFailed가 발생했습니다.|채널|  
+|[3366 - SharedListenerProxyRegisterFailed](3366-sharedlistenerproxyregisterfailed.md)|Error|SharedListenerProxy 등록이 '%1' 상태로 실패했습니다.|ActivationServices|  
+|[3367 - ConnectionPoolPreambleFailed](3367-connectionpoolpreamblefailed.md)|Error|ConnectionPoolPreambleFailed가 발생했습니다.|채널|  
 |[3368 - SslOnInitiateUpgrade](3368-ssloninitiateupgrade.md)|자세히|SslOnAcceptUpgradeStart|보안|  
 |[3369 - SslOnAcceptUpgrade](3369-sslonacceptupgrade.md)|자세히|SslOnAcceptUpgradeStop|보안|  
 |[3370 - BinaryMessageEncodingStart](3370-binarymessageencodingstart.md)|자세히|BinaryMessageEncoder에서 메시지 인코딩이 시작되었습니다.|채널|  
@@ -222,7 +223,7 @@ ms.locfileid: "96254846"
 |[3408 - HttpPipelineBeginProcessInboundRequestStart](3408-httppipelinebeginprocessinboundrequeststart.md)|자세히|Http 메시지 처리기가 비동기 인바운드 요청 처리를 시작했습니다.|HTTP|  
 |[3409 - HttpPipelineProcessInboundRequestStop](3409-httppipelineprocessinboundrequeststop.md)|자세히|Http 메시지 처리기가 인바운드 요청 처리를 완료했습니다.|HTTP|  
 |[3410 - HttpPipelineFaulted](3410-httppipelinefaulted.md)|경고|Http 메시지 처리기에서 오류가 발생했습니다.|HTTP|  
-|[3411 - HttpPipelineTimeoutException](3411-httppipelinetimeoutexception.md)|오류|WebSocket 연결 시간이 초과되었습니다.|HTTP|  
+|[3411 - HttpPipelineTimeoutException](3411-httppipelinetimeoutexception.md)|Error|WebSocket 연결 시간이 초과되었습니다.|HTTP|  
 |[3412 - HttpPipelineProcessResponseStart](3412-httppipelineprocessresponsestart.md)|자세히|Http 메시지 처리기가 응답 처리를 시작했습니다.|HTTP|  
 |[3413 - HttpPipelineBeginProcessResponseStart](3413-httppipelinebeginprocessresponsestart.md)|자세히|Http 메시지 처리기가 비동기 응답 처리를 시작했습니다.|HTTP|  
 |[3414 - HttpPipelineProcessResponseStop](3414-httppipelineprocessresponsestop.md)|자세히|Http 메시지 처리기가 응답 처리를 완료했습니다.|HTTP|  
@@ -230,9 +231,9 @@ ms.locfileid: "96254846"
 |[3416 - WebSocketConnectionRequestSendStop](3416-websocketconnectionrequestsendstop.md)|자세히|WebSocketId:%1 연결 요청을 보냈습니다.|HTTP|  
 |[3417 - WebSocketConnectionAcceptStart](3417-websocketconnectionacceptstart.md)|자세히|WebSocket 연결 수락을 시작합니다.|HTTP|  
 |[3418 - WebSocketConnectionAccepted](3418-websocketconnectionaccepted.md)|자세히|WebSocketId:%1 연결이 수락되었습니다.|HTTP|  
-|[3419 - WebSocketConnectionDeclined](3419-websocketconnectiondeclined.md)|오류|WebSocket 연결이 상태 코드 '%1'(으)로 거부되었습니다.|HTTP|  
-|[3420 - WebSocketConnectionFailed](3420-websocketconnectionfailed.md)|오류|WebSocket 연결 요청이 실패했습니다. '%1'|HTTP|  
-|[3421 - WebSocketConnectionAborted](3421-websocketconnectionaborted.md)|오류|WebSocketId:%1 연결이 중단되었습니다.|HTTP|  
+|[3419 - WebSocketConnectionDeclined](3419-websocketconnectiondeclined.md)|Error|WebSocket 연결이 상태 코드 '%1'(으)로 거부되었습니다.|HTTP|  
+|[3420 - WebSocketConnectionFailed](3420-websocketconnectionfailed.md)|Error|WebSocket 연결 요청이 실패했습니다. '%1'|HTTP|  
+|[3421 - WebSocketConnectionAborted](3421-websocketconnectionaborted.md)|Error|WebSocketId:%1 연결이 중단되었습니다.|HTTP|  
 |[3422 - WebSocketAsyncWriteStart](3422-websocketasyncwritestart.md)|자세히|WebSocketId:%1에서 '%3'에 '%2'바이트를 쓰는 중입니다.|HTTP|  
 |[3423 - WebSocketAsyncWriteStop](3423-websocketasyncwritestop.md)|자세히|WebSocketId:%1에서 비동기 쓰기를 중지합니다.|HTTP|  
 |[3424 - WebSocketAsyncReadStart](3424-websocketasyncreadstart.md)|자세히|WebSocketId:%1에서 읽기를 시작합니다.|HTTP|  
@@ -253,7 +254,7 @@ ms.locfileid: "96254846"
 |[3800 - RoutingServiceClosingClient](3800-routingserviceclosingclient.md)|정보|라우팅 서비스에서 클라이언트 '%1'을(를) 닫는 중입니다.|RoutingServices|  
 |[3800 - RoutingServiceClosingClient](3800-routingserviceclosingclient.md)|경고|라우팅 서비스 클라이언트 '%1'에 오류가 발생했습니다.|RoutingServices|  
 |[3802 - RoutingServiceCompletingOneWay](3802-routingservicecompletingoneway.md)|정보|라우팅 서비스 단방향 메시지를 완료하는 중입니다.|RoutingServices|  
-|[3803 - RoutingServiceProcessingFailure](3803-routingserviceprocessingfailure.md)|오류|주소가 '%1'인 엔드포인트에서 메시지를 처리하는 동안 라우팅 서비스에 오류가 발생했습니다.|RoutingServices|  
+|[3803 - RoutingServiceProcessingFailure](3803-routingserviceprocessingfailure.md)|Error|주소가 '%1'인 엔드포인트에서 메시지를 처리하는 동안 라우팅 서비스에 오류가 발생했습니다.|RoutingServices|  
 |[3804 - RoutingServiceCreatingClientForEndpoint](3804-routingservicecreatingclientforendpoint.md)|정보|라우팅 서비스에서 엔드포인트 '%1'에 대한 클라이언트를 만드는 중입니다.|RoutingServices|  
 |[3805 - RoutingServiceDisplayConfig](3805-routingservicedisplayconfig.md)|자세히|라우팅 서비스가 RouteOnHeadersOnly: %1, SoapProcessingEnabled: %2, EnsureOrderedDispatch: %3(으)로 구성되어 있습니다.|RoutingServices|  
 |[3807 - RoutingServiceCompletingTwoWay](3807-routingservicecompletingtwoway.md)|정보|라우팅 서비스 요청 회신 메시지를 완료하는 중입니다.|RoutingServices|  
@@ -262,7 +263,7 @@ ms.locfileid: "96254846"
 |[3815 - RoutingServiceProcessingMessage](3815-routingserviceprocessingmessage.md)|정보|라우팅 서비스에서 트랜잭션 %4에서 받은 ID: '%1', 동작: '%2', 인바운드 URL: '%3'인 메시지를 처리하는 중입니다.|RoutingServices|  
 |[3816 - RoutingServiceTransmittingMessage](3816-routingservicetransmittingmessage.md)|정보|라우팅 서비스에서 ID가 '%1'인 메시지[작업 %2]를 '%3'(으)로 전송하는 중입니다.|RoutingServices|  
 |[3817 - RoutingServiceCommittingTransaction](3817-routingservicecommittingtransaction.md)|정보|라우팅 서비스에서 ID가 '%1'인 트랜잭션을 커밋하는 중입니다.|RoutingServices|  
-|[3818 - RoutingServiceDuplexCallbackException](3818-routingserviceduplexcallbackexception.md)|오류|라우팅 서비스 구성 요소 %1에 중복 콜백 예외가 발생했습니다.|RoutingServices|  
+|[3818 - RoutingServiceDuplexCallbackException](3818-routingserviceduplexcallbackexception.md)|Error|라우팅 서비스 구성 요소 %1에 중복 콜백 예외가 발생했습니다.|RoutingServices|  
 |[3819 - RoutingServiceMovedToBackup](3819-routingservicemovedtobackup.md)|정보|ID가 '%1'인 라우팅 서비스 메시지[작업 %2]를 백업 엔드포인트 '%3'(으)로 이동했습니다.|RoutingServices|  
 |[3820 - RoutingServiceCreatingTransaction](3820-routingservicecreatingtransaction.md)|정보|라우팅 서비스에서 메시지를 처리하기 위해 ID가 '%1'인 새 트랜잭션을 만들었습니다.|RoutingServices|  
 |[3821 - RoutingServiceCloseFailed](3821-routingserviceclosefailed.md)|경고|아웃바운드 클라이언트 '%1'을(를) 닫는 동안 라우팅 서비스에 오류가 발생했습니다.|RoutingServices|  
@@ -279,28 +280,28 @@ ms.locfileid: "96254846"
 |[3832 - RoutingServiceTransmitSucceeded](3832-routingservicetransmitsucceeded.md)|정보|라우팅 서비스가 ID '%1인 메시지[작업 %2]를 '%3'(으)로 전송했습니다.|RoutingServices|  
 |[4001 - TransportListenerSessionsReceived](4001-transportlistenersessionsreceived.md)|자세히|'%1'을(를) 통해 전송 리스너 세션이 수신되었습니다.|ActivationServices|  
 |[4002 - FailFastException](4002-failfastexception.md)|위험|FailFastException이 발생했습니다.|ActivationServices|  
-|[4003 - ServiceStartPipeError](4003-servicestartpipeerror.md)|오류|서비스 시작 파이프 오류가 발생했습니다.|ActivationServices|  
+|[4003 - ServiceStartPipeError](4003-servicestartpipeerror.md)|Error|서비스 시작 파이프 오류가 발생했습니다.|ActivationServices|  
 |[4008 - DispatchSessionStart](4008-dispatchsessionstart.md)|자세히|세션 디스패치가 시작되었습니다.|ActivationServices|  
 |[4008 - DispatchSessionStart](4008-dispatchsessionstart.md)|경고|보류 중인 항목이 '%2'개로 보류 중인 세션 큐가 꽉 차서 '%1'에 대한 세션을 디스패치하지 못했습니다.|ActivationServices|  
 |[4011 - MessageQueueRegisterStart](4011-messagequeueregisterstart.md)|자세히|메시지 큐 등록이 시작됩니다.|ActivationServices|  
-|[4012 - MessageQueueRegisterAbort](4012-messagequeueregisterabort.md)|오류|URI '%2'에 대한 메시지 큐 등록이 중단되었습니다. 상태: '%1'.|ActivationServices|  
+|[4012 - MessageQueueRegisterAbort](4012-messagequeueregisterabort.md)|Error|URI '%2'에 대한 메시지 큐 등록이 중단되었습니다. 상태: '%1'.|ActivationServices|  
 |[4013 - MessageQueueUnregisterSucceeded](4013-messagequeueunregistersucceeded.md)|자세히|URI '%1'에 대한 메시지 큐 등록을 취소했습니다.|ActivationServices|  
-|[4014 - MessageQueueRegisterFailed](4014-messagequeueregisterfailed.md)|오류|URI '%1'에 대한 메시지 큐를 등록하지 못했습니다. 상태: '%2'.|ActivationServices|  
+|[4014 - MessageQueueRegisterFailed](4014-messagequeueregisterfailed.md)|Error|URI '%1'에 대한 메시지 큐를 등록하지 못했습니다. 상태: '%2'.|ActivationServices|  
 |[4015 - MessageQueueRegisterCompleted](4015-messagequeueregistercompleted.md)|정보|URI '%1'에 대한 메시지 큐 등록이 완료되었습니다.|ActivationServices|  
-|[4016 - MessageQueueDuplicatedSocketError](4016-messagequeueduplicatedsocketerror.md)|오류|메시지 큐로 소켓을 복제하지 못했습니다.|ActivationServices|  
+|[4016 - MessageQueueDuplicatedSocketError](4016-messagequeueduplicatedsocketerror.md)|Error|메시지 큐로 소켓을 복제하지 못했습니다.|ActivationServices|  
 |[4019 - MessageQueueDuplicatedSocketComplete](4019-messagequeueduplicatedsocketcomplete.md)|자세히|MessageQueueDuplicatedSocketComplete|ActivationServices|  
 |[4020 - TcpTransportListenerListeningStart](4020-tcptransportlistenerlisteningstart.md)|자세히|TCP 전송 리스너가 URI '%1'에서 수신을 시작하는 중입니다.|ActivationServices|  
 |[4021 - TcpTransportListenerListeningStop](4021-tcptransportlistenerlisteningstop.md)|자세히|TCP 전송 리스너가 수신 중입니다.|ActivationServices|  
-|[4022 - WebhostUnregisterProtocolFailed](4022-webhostunregisterprotocolfailed.md)|오류|오류 코드:%1|ActivationServices|  
+|[4022 - WebhostUnregisterProtocolFailed](4022-webhostunregisterprotocolfailed.md)|Error|오류 코드:%1|ActivationServices|  
 |[4023 - WasCloseAllListenerChannelInstancesCompleted](4023-wasclosealllistenerchannelinstancescompleted.md)|정보|WAS에서 모든 리스너 채널 인스턴스를 종료했습니다.|ActivationServices|  
-|[4024 - WasCloseAllListenerChannelInstancesFailed](4024-wasclosealllistenerchannelinstancesfailed.md)|오류|오류 코드:%1|ActivationServices|  
-|[4025 - OpenListenerChannelInstanceFailed](4025-openlistenerchannelinstancefailed.md)|오류|오류 코드:%1|ActivationServices|  
+|[4024 - WasCloseAllListenerChannelInstancesFailed](4024-wasclosealllistenerchannelinstancesfailed.md)|Error|오류 코드:%1|ActivationServices|  
+|[4025 - OpenListenerChannelInstanceFailed](4025-openlistenerchannelinstancefailed.md)|Error|오류 코드:%1|ActivationServices|  
 |[4026 - WasConnected](4026-wasconnected.md)|자세히|WAS가 연결되었습니다.|ActivationServices|  
 |[4027 - WasDisconnected](4027-wasdisconnected.md)|자세히|WAS 연결이 해제되었습니다.|ActivationServices|  
 |[4028 - PipeTransportListenerListeningStart](4028-pipetransportlistenerlisteningstart.md)|자세히|파이프 전송 리스너 수신이 URI %1에서 시작됩니다.|ActivationServices|  
 |[4029 - PipeTransportListenerListeningStop](4029-pipetransportlistenerlisteningstop.md)|자세히|파이프 전송 리스너 수신이 중지됩니다.|ActivationServices|  
 |[4030 - DispatchSessionSuccess](4030-dispatchsessionsuccess.md)|정보|세션을 디스패치했습니다.|ActivationServices|  
-|[4031 - DispatchSessionFailed](4031-dispatchsessionfailed.md)|오류|세션을 디스패치하지 못했습니다.|ActivationServices|  
+|[4031 - DispatchSessionFailed](4031-dispatchsessionfailed.md)|Error|세션을 디스패치하지 못했습니다.|ActivationServices|  
 |[4032 - WasConnectionTimedout](4032-wasconnectiontimedout.md)|위험|WAS 연결 시간이 초과되었습니다.|ActivationServices|  
 |[4033 - RoutingTableLookupStart](4033-routingtablelookupstart.md)|자세히|라우팅 테이블 조회가 시작되었습니다.|ActivationServices|  
 |[4034 - RoutingTableLookupStop](4034-routingtablelookupstop.md)|자세히|라우팅 테이블 조회가 완료되었습니다.|ActivationServices|  
@@ -348,9 +349,9 @@ ms.locfileid: "96254846"
 |[5204 - JsonMessageEncodingStart](5204-jsonmessageencodingstart.md)|자세히|JsonMessageEncoder에서 메시지 인코딩이 시작되었습니다.|채널|  
 |[5402 - TokenValidationStarted](5402-tokenvalidationstarted.md)|자세히|SecurityToken('%1' 형식, ID '%2') 유효성 검사가 시작되었습니다.|보안|  
 |[5403 - TokenValidationSuccess](5403-tokenvalidationsuccess.md)|자세히|SecurityToken('%1' 형식, ID '%2') 유효성 검사에 성공했습니다.|보안|  
-|[5404 - TokenValidationFailure](5404-tokenvalidationfailure.md)|오류|SecurityToken('%1' 형식, ID '%2') 유효성 검사에 실패했습니다. %3|보안|  
+|[5404 - TokenValidationFailure](5404-tokenvalidationfailure.md)|Error|SecurityToken('%1' 형식, ID '%2') 유효성 검사에 실패했습니다. %3|보안|  
 |[5405 - GetIssuerNameSuccess](5405-getissuernamesuccess.md)|자세히|tokenid %2에서 발급자 이름 %1 검색에 성공했습니다.|보안|  
-|[5406 - GetIssuerNameFailure](5406-getissuernamefailure.md)|오류|tokenId:%1에서 발급자 이름 검색에 실패했습니다.|보안|  
+|[5406 - GetIssuerNameFailure](5406-getissuernamefailure.md)|Error|tokenId:%1에서 발급자 이름 검색에 실패했습니다.|보안|  
 |[5600 - FederationMessageProcessingStarted](5600-federationmessageprocessingstarted.md)|자세히|페더레이션 메시지 처리가 시작되었습니다.|보안|  
 |[5601 - FederationMessageProcessingSuccess](5601-federationmessageprocessingsuccess.md)|자세히|페더레이션 메시지 처리에 성공했습니다.|보안|  
 |[5602 - FederationMessageCreationStarted](5602-federationmessagecreationstarted.md)|자세히|폼 게시에서 페더레이션 메시지를 만들기 시작했습니다.|보안|  
@@ -361,11 +362,11 @@ ms.locfileid: "96254846"
 |[5607 - PrincipalSettingFromSessionTokenSuccess](5607-principalsettingfromsessiontokensuccess.md)|자세히|세션 토큰에서 보안 주체 설정에 성공했습니다.|보안|  
 |[57393 - AppDomainUnload](57393-appdomainunload.md)|정보|AppDomain을 언로드하고 있습니다. AppDomain.FriendlyName %1, ProcessName %2, ProcessId %3.|인프라|  
 |[57394 - HandledException](57394-handledexception.md)|정보|예외를 처리하는 중입니다.|인프라|  
-|[57395 - ShipAssertExceptionMessage](57395-shipassertexceptionmessage.md)|오류|예기치 않은 오류가 발생했습니다. 이 오류는 애플리케이션에서 처리할 수 없습니다. 오류와 관련된 다음 메시지가 진단용으로 제공됩니다. %1.|인프라|  
+|[57395 - ShipAssertExceptionMessage](57395-shipassertexceptionmessage.md)|Error|예기치 않은 오류가 발생했습니다. 이 오류는 애플리케이션에서 처리할 수 없습니다. 오류와 관련된 다음 메시지가 진단용으로 제공됩니다. %1.|인프라|  
 |[57396 - ThrowingException](57396-throwingexception.md)|경고|예외를 throw하고 있습니다. 원본: %1.|인프라|  
 |[57397 - UnhandledException](57397-unhandledexception.md)|위험|처리되지 않은 예외가 발생했습니다.|인프라|  
 |[57399 - TraceCodeEventLogCritical](57399-tracecodeeventlogcritical.md)|위험|EventLog에 기록합니다.|인프라|  
-|[57400 - TraceCodeEventLogError](57400-tracecodeeventlogerror.md)|오류|EventLog에 기록합니다.|인프라|  
+|[57400 - TraceCodeEventLogError](57400-tracecodeeventlogerror.md)|Error|EventLog에 기록합니다.|인프라|  
 |[57401 - TraceCodeEventLogInfo](57401-tracecodeeventloginfo.md)|정보|EventLog에 기록합니다.|인프라|  
 |[57402 - TraceCodeEventLogVerbose](57402-tracecodeeventlogverbose.md)|자세히|EventLog에 기록합니다.|인프라|  
 |[57403 - TraceCodeEventLogWarning](57403-tracecodeeventlogwarning.md)|경고|EventLog에 기록합니다.|인프라|  

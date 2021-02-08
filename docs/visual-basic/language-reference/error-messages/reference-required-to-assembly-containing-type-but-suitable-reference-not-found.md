@@ -1,4 +1,5 @@
 ---
+description: "' ' 형식을 포함 하는 ' ' 어셈블리에 대해 BC30969: Reference가 필요 <assemblyidentity> <typename> 하지만, ' <projectname1> ' 및 ' 프로젝트 간의 모호성 때문에 적합 한 참조를 찾을 수 없습니다.<projectname2>"
 title: "'<assemblyidentity>' 형식을 포함하는 '<typename>' 어셈블리에 대한 참조가 필요하지만 '<projectname1>' 프로젝트와 '<projectname2>' 프로젝트 사이의 모호성 때문에 적합한 참조를 찾을 수 없습니다."
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: ca574bfe926b7b9df272e296190b36f8635263db
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 945a6558ff9eea20a28bc27da27e495d0eddfb15
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162312"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792039"
 ---
 # <a name="bc30969-reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>BC30969: ' ' 형식을 포함 하는 ' ' 어셈블리에 대 한 참조가 필요 \<assemblyidentity> \<typename> 하지만 ' \<projectname1> ' 프로젝트와 ' ' 프로젝트 사이의 모호성 때문에 적합 한 참조를 찾을 수 없습니다. \<projectname2>
 

@@ -1,19 +1,20 @@
 ---
+description: SecurityBindingIncomingMessageVerified에 대해 자세히 알아보세요.
 title: System.ServiceModel.Security.SecurityBindingIncomingMessageVerified
 ms.date: 03/30/2017
 ms.assetid: 40fc744e-8d6f-49e0-a5fd-4f9a31cc0ed7
-ms.openlocfilehash: 0e177fe45e499d90fc24657aa755f7072e61d869
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 61867a9f4762bfa82b8636d0e7d759d1211f85dd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276830"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798578"
 ---
 # <a name="systemservicemodelsecuritysecuritybindingincomingmessageverified"></a>System.ServiceModel.Security.SecurityBindingIncomingMessageVerified
 
 System.ServiceModel.Security.SecurityBindingIncomingMessageVerified  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  보안 프로토콜에서 들어오는 메시지를 확인했습니다.  
   

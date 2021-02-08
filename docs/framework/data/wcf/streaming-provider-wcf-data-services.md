@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 스트리밍 공급자 (WCF Data Services)'
 title: 스트리밍 공급자(WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
@@ -10,14 +11,16 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 9ed728fa8d1d56c835aa27645a28921aa4f641e9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a87cd0764156e803bf30520160b54f6baaf4f644
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544455"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791740"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>스트리밍 공급자(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 데이터 서비스에서 BLOB(Binary Large Object) 데이터를 노출할 수 있습니다. 이 이진 데이터는 비디오 및 오디오 스트림, 이미지, 문서 파일 또는 다른 형식의 이진 미디어를 나타낼 수 있습니다. 데이터 모델의 엔터티에 이진 속성이 하나 이상 포함되어 있는 경우 데이터 서비스가 이 이진 데이터를 응답 피드의 항목 안에 base-64로 인코딩하여 반환합니다. 이러한 방식으로 많은 이진 데이터를 로드 하 고 serialize 하면 성능에 영향을 줄 수 있으므로 OData (Open Data Protocol)는 자신이 속한 엔터티와 독립적으로 이진 데이터를 검색 하기 위한 메커니즘을 정의 합니다. 이 작업은 엔터티의 이진 데이터를 하나 이상의 데이터 스트림으로 구분하여 수행됩니다.
 
@@ -67,7 +70,7 @@ Entity Framework 공급자를 사용 하 고 미디어 리소스를 노출 하�
 
 이진 데이터 스트림을 지원하는 데이터 서비스를 만들려면 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 인터페이스를 구현해야 합니다. 이 구현을 통해 데이터 서비스에서 이진 데이터를 스트림으로 클라이언트에 반환하고 클라이언트에서 전송되는 스트림으로 이진 데이터를 사용할 수 있습니다. 데이터 서비스는 스트림으로 이진 데이터에 액세스해야 할 때마다 이 인터페이스의 인스턴스를 만듭니다. <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 인터페이스는 다음 멤버를 지정합니다.
 
-|멤버 이름|Description|
+|멤버 이름|설명|
 |-----------------|-----------------|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>|이 메서드는 미디어 링크 항목이 삭제될 때 해당 미디어 리소스를 삭제하기 위해 데이터 서비스에서 호출됩니다. <xref:System.Data.Services.Providers.IDataServiceStreamProvider>를 구현하는 경우 이 메서드에는 제공된 미디어 링크 항목과 연결된 미디어 리소스를 삭제하는 코드가 포함됩니다.|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>|이 메서드는 미디어 리소스를 스트림으로 반환하기 위해 데이터 서비스에서 호출됩니다. <xref:System.Data.Services.Providers.IDataServiceStreamProvider>를 구현하는 경우 이 메서드에는 제공된 미디어 링크 항목과 연결된 미디어 리소스를 반환하기 위해 데이터 서비스에서 사용되는 스트림을 제공하는 코드가 포함됩니다.|
@@ -137,7 +140,7 @@ WCF Data Services 클라이언트 라이브러리를 사용 하면 클라이언�
 
 자세한 내용은 [데이터 서비스 버전 관리](data-service-versioning-wcf-data-services.md)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Data Services 공급자](data-services-providers-wcf-data-services.md)
 - [사용자 지정 데이터 서비스 공급자](custom-data-service-providers-wcf-data-services.md)

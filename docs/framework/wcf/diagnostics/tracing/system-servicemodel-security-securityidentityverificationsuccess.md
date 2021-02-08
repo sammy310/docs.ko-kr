@@ -1,19 +1,20 @@
 ---
+description: SecurityIdentityVerificationSuccess에 대해 자세히 알아보세요.
 title: System.ServiceModel.Security.SecurityIdentityVerificationSuccess
 ms.date: 03/30/2017
 ms.assetid: 6744ac2f-4944-421d-9a17-bcc64f0f3d2f
-ms.openlocfilehash: e4edcefb7d2508b85d86150a25e72e1c27c1263d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7c2dd2bef77279a8eacc8dbfff6b99ba7c940237
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241007"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798396"
 ---
 # <a name="systemservicemodelsecuritysecurityidentityverificationsuccess"></a>System.ServiceModel.Security.SecurityIdentityVerificationSuccess
 
 System.ServiceModel.Security.SecurityIdentityVerificationSuccess  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  ID를 확인했습니다.  
   

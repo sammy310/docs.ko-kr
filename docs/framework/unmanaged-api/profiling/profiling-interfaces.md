@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 프로 파일링 인터페이스'
 title: 프로파일링 인터페이스
 ms.date: 04/10/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-ms.openlocfilehash: dd6999e9f9e16264bde3cf62ce3a888841347607
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d35931c0caad93116d7ea26d29020d84e48ebc29
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727473"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798929"
 ---
 # <a name="profiling-interfaces"></a>프로파일링 인터페이스
 
@@ -91,7 +92,7 @@ ms.locfileid: "95727473"
  [IMethodMalloc 인터페이스](imethodmalloc-interface.md)  
  새 MSIL (Microsoft 중간 언어) 함수 본문에 메모리를 할당 하는 [Alloc](imethodmalloc-alloc-method.md) 메서드를 제공 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [프로파일링 개요](profiling-overview.md)  
   

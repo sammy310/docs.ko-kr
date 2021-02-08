@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: StrongNameSignatureGenerationEx 함수'
 title: StrongNameSignatureGenerationEx 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9a75469e-aa49-4e32-ad48-3bafd5202f09
 topic_type:
 - apiref
-ms.openlocfilehash: 96dae519d73505a30c8593e9883da7338525ea2c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e4d35cf51df6047d3a89d4146ceb8bf62e3f1b8b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708522"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798877"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx 함수
 
@@ -74,7 +75,7 @@ BOOLEAN StrongNameSignatureGenerationEx (
   
 - `SN_TEST_SIGN` (0x00000002)-어셈블리를 테스트 하 여 서명 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `true` 성공적으로 완료 되 면 그렇지 않으면 `false` 입니다.  
   
@@ -100,7 +101,7 @@ BOOLEAN StrongNameSignatureGenerationEx (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [StrongNameSignatureGenerationEx 메서드](../hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
 - [StrongNameSignatureGeneration 메서드](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md)

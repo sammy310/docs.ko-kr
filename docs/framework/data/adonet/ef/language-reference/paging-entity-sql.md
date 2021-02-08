@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 페이징 (Entity SQL)'
 title: 페이징(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ba4f334d-03e5-4a7b-9d42-628f4639b9a2
-ms.openlocfilehash: 42f685e0b84109f3099b501b2a75e681af1ea1bb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c32474b772be359dbf2ffd46e5489cc0b4b2abb8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177477"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791857"
 ---
 # <a name="paging-entity-sql"></a>페이징(Entity SQL)
 
@@ -19,7 +20,7 @@ ms.locfileid: "91177477"
   
 ## <a name="skip-and-limit-overview"></a>SKIP 및 LIMIT 개요  
 
- SKIP과 LIMIT는 ORDER BY 절의 일부입니다. SKIP 식 하위 절이 ORDER BY 절에 있으면 결과는 정렬 기준에 따라 정렬되고 SKIP 식 바로 뒤에 있는 행에서 시작하는 행이 결과 집합에 포함됩니다. 예를 들어, SKIP 5를 사용하면 처음 다섯 개의 행을 건너뛰고 여섯 번째 행부터 반환됩니다. LIMIT 식 하위 절이 ORDER BY 절에 있으면 쿼리는 정렬 지정에 따라 정렬되고 결과 행의 수는 LIMIT 식으로 제한됩니다. 예를 들어, LIMIT 5는 결과 집합을 다섯 개의 인스턴스 또는 행으로 제한합니다. SKIP과 LIMIT를 반드시 함께 사용해야 하는 것은 아니므로 ORDER BY 절에 SKIP과 LIMIT 중 하나만 사용할 수 있습니다. 자세한 내용은 아래 항목을 참조하세요.  
+ SKIP과 LIMIT는 ORDER BY 절의 일부입니다. SKIP 식 하위 절이 ORDER BY 절에 있으면 결과는 정렬 기준에 따라 정렬되고 SKIP 식 바로 뒤에 있는 행에서 시작하는 행이 결과 집합에 포함됩니다. 예를 들어, SKIP 5를 사용하면 처음 다섯 개의 행을 건너뛰고 여섯 번째 행부터 반환됩니다. LIMIT 식 하위 절이 ORDER BY 절에 있으면 쿼리는 정렬 지정에 따라 정렬되고 결과 행의 수는 LIMIT 식으로 제한됩니다. 예를 들어, LIMIT 5는 결과 집합을 다섯 개의 인스턴스 또는 행으로 제한합니다. SKIP과 LIMIT를 반드시 함께 사용해야 하는 것은 아니므로 ORDER BY 절에 SKIP과 LIMIT 중 하나만 사용할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
   
 - [킵](skip-entity-sql.md)  
   

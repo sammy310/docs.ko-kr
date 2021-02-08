@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 겹치기 (Entity SQL)'
 title: OVERLAPS(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: 6902a44af343c37ccb26412738d9f96b28551814
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dd2f4a0925c57edcc3dd2d1264d00921b092525a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204426"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791909"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS(Entity SQL)
 
@@ -24,7 +25,7 @@ expression OVERLAPS expression
  `expression`  
  다른 쿼리 식에서 반환된 컬렉션과 비교할 컬렉션을 반환하는 모든 유효한 쿼리 식입니다. 모든 식은 형식이 같거나 기본 형식 또는 파생 형식이 `expression`이어야 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  두 컬렉션에 공통 요소가 있으면`true` 이고, 그렇지 않으면 `false`입니다.  
   

@@ -1,16 +1,17 @@
 ---
+description: 자세한 내용은 WCF Data Services 개요를 확인 하세요.
 title: WCF Data Services 개요
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 6f085f87286aa5af4a3c2aaf2b74c9bf19023356
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: 26ad6bc1775a5315bcf5b825b66b995a8bd53914
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899440"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791688"
 ---
 # <a name="wcf-data-services-overview"></a>WCF Data Services 개요
 
@@ -66,7 +67,7 @@ OData는 AtomPub (Atom Publishing Protocol)에 대 한 확장 집합을 정의 �
   
  ![WCF Data Services 아키텍처 다이어그램을 보여 주는 스크린샷](./media/wcf-data-services-overview/windows-communication-foundation-data-services-architecture.gif)  
   
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [WCF Data Services 4.5](index.md)
 - [시작](getting-started-with-wcf-data-services.md)

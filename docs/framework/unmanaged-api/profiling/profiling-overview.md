@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 프로 파일링 개요'
 title: 프로파일링 개요
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: cf29260c36437aaf679498f648d0fcac5d65f321
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f83a4435f6a4a62a190383543cf824c76a54a838
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558331"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798916"
 ---
 # <a name="profiling-overview"></a>프로파일링 개요
 
@@ -46,7 +47,7 @@ CLR 애플리케이션을 프로파일링하려면 기존의 컴파일된 기계
 
 ## <a name="the-profiling-api"></a>프로파일링 API
 
-일반적으로 프로 파일링 API는 관리 되는 응용 프로그램의 실행을 모니터링 하는 프로그램인 *코드 프로파일러*를 작성 하는 데 사용 됩니다.
+일반적으로 프로 파일링 API는 관리 되는 응용 프로그램의 실행을 모니터링 하는 프로그램인 *코드 프로파일러* 를 작성 하는 데 사용 됩니다.
 
 프로파일링 API는 프로파일링되는 애플리케이션과 동일한 프로세스에 로드된 프로파일러 DLL에서 사용됩니다. 프로파일러 DLL은 콜백 인터페이스 (.NET Framework 버전 1.0 및 1.1, [ICorProfilerCallback2](icorprofilercallback2-interface.md) 버전 2.0 이상)에서[ICorProfilerCallback](icorprofilercallback-interface.md) 를 구현 합니다. CLR은 해당 인터페이스의 메서드를 호출하여 프로파일링된 프로세스의 이벤트를 프로파일러에 알립니다. 프로파일러는 [ICorProfilerInfo](icorprofilerinfo-interface.md) 및 [ICorProfilerInfo2](icorprofilerinfo2-interface.md) 인터페이스의 메서드를 사용 하 여 프로 파일링 된 응용 프로그램의 상태에 대 한 정보를 가져올 때 런타임으로 다시 호출할 수 있습니다.
 
@@ -127,7 +128,7 @@ CLR 애플리케이션을 프로파일링하려면 기존의 컴파일된 기계
 
 대부분의 경우 이벤트를 생성하는 스레드도 알림을 실행합니다. 이러한 알림 (예: [Functionenter](functionenter-function.md) 및 [functionenter](functionleave-function.md))은 명시적를 제공할 필요가 없습니다 `ThreadID` . 또한 프로파일러는 영향을 받는 스레드의 `ThreadID`에 따라, 전역 스토리지의 분석 블록을 인덱싱하는 대신 스레드 로컬 스토리지를 사용하여 분석 블록을 저장 및 업데이트할 수 있습니다.
 
-이러한 콜백은 직렬화되지 않습니다. 사용자는 스레드로부터 안전한 데이터 구조를 만들고 여러 스레드에서의 병렬 액세스를 방지하기 위해 필요에 따라 프로파일러 코드를 잠가 코드를 보호해야 합니다. 따라서 특정 경우에서는 사용자가 평소와 다른 콜백 시퀀스를 받을 수 있습니다. 예를 들어 관리되는 애플리케이션이 동일한 코드를 실행하는 두 스레드를 생성한다고 가정합니다. 이 경우 [ICorProfilerCallback::JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md) `FunctionEnter` [ICorProfilerCallback:: JITCompilationFinished](icorprofilercallback-jitcompilationfinished-method.md) 콜백을 받기 전에 한 스레드에서 일부 함수에 대해 ICorProfilerCallback:: JITCompilationStarted 이벤트를 수신 하 고 다른 스레드의 콜백을 받을 수 있습니다. 이 경우에는 사용자가 아직 완전히 JIT(Just-In-Time) 컴파일되지 않았을 수 있는 함수에 대해 `FunctionEnter` 콜백을 받는 것입니다.
+이러한 콜백은 직렬화되지 않습니다. 사용자는 스레드로부터 안전한 데이터 구조를 만들고 여러 스레드에서의 병렬 액세스를 방지하기 위해 필요에 따라 프로파일러 코드를 잠가 코드를 보호해야 합니다. 따라서 특정 경우에서는 사용자가 평소와 다른 콜백 시퀀스를 받을 수 있습니다. 예를 들어 관리되는 애플리케이션이 동일한 코드를 실행하는 두 스레드를 생성한다고 가정합니다. 이 경우 [](icorprofilercallback-jitcompilationstarted-method.md) `FunctionEnter` [ICorProfilerCallback:: JITCompilationFinished](icorprofilercallback-jitcompilationfinished-method.md) 콜백을 받기 전에 한 스레드에서 일부 함수에 대해 ICorProfilerCallback:: JITCompilationStarted 이벤트를 수신 하 고 다른 스레드의 콜백을 받을 수 있습니다. 이 경우에는 사용자가 아직 완전히 JIT(Just-In-Time) 컴파일되지 않았을 수 있는 함수에 대해 `FunctionEnter` 콜백을 받는 것입니다.
 
 ## <a name="security"></a>보안
 
@@ -187,7 +188,7 @@ CLR(공용 언어 런타임) 프로파일링 API는 비관리 코드 프로파�
 
 ## <a name="related-topics"></a>관련 항목
 
-|제목|Description|
+|제목|설명|
 |-----------|-----------------|
 |[프로파일링 환경 설정](setting-up-a-profiling-environment.md)|프로파일러를 초기화하고, 이벤트 알림을 설정하고, Windows 서비스를 프로파일링하는 방법을 설명합니다.|
 |[프로파일링 인터페이스](profiling-interfaces.md)|프로파일링 API에서 사용하는 관리되지 않는 인터페이스를 설명합니다.|

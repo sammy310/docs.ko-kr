@@ -1,13 +1,14 @@
 ---
+description: '자세한 내용: 분석 추적을 동적으로 사용'
 title: 동적으로 분석 추적을 사용하도록 설정
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: 2c213507f6ed4e9fff4f1385b10f22e96b0a41b4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5fff4da8839b986ccb43a2280d6f994f31be7423
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96282355"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798825"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>동적으로 분석 추적을 사용하도록 설정
 
@@ -27,7 +28,7 @@ Windows 운영 체제에 포함된 도구와 함께 ETW(Event Tracing for Window
   
  WCF 분석 추적의 경우 각 추적 이벤트에 두 가지 유형의 키워드가 있습니다. 첫 번째는 각 이벤트에 하나 이상 있는 시나리오 키워드입니다. 이러한 키워드는 각 이벤트가 지원하는 시나리오를 나타냅니다. 시나리오 키워드는 세 가지가 있는데, 각 키워드는 다음 표와 같이 고유한 용도로 설계되었습니다. 키워드를 사용한 필터링은 WCF 서비스를 방해 하지 않고 동적으로 변경할 수 있습니다. 즉, 현재 추적 시나리오와 수집되는 추적 정보의 양을 동적으로 변경할 수 있습니다. 예를 들어 `HealthMonitoring` 을 `Troubleshooting` 으로 변경하고 추적 이벤트 세분성을 높일 수 있습니다.  
   
-|키워드|Description|  
+|키워드|설명|  
 |-------------|-----------------|  
 |`HealthMonitoring`|서비스의 작업을 모니터링할 수 있는 매우 간단한 최소한의 추적입니다.|  
 |`EndToEndMonitoring`|메시지 흐름 추적을 지원하는 데 사용되는 이벤트입니다.|  
@@ -35,7 +36,7 @@ Windows 운영 체제에 포함된 도구와 함께 ETW(Event Tracing for Window
   
  키워드의 두 번째 그룹은 이벤트를 내보낼 .NET Framework의 구성 요소를 정의 합니다.  
   
-|키워드|Description|  
+|키워드|설명|  
 |-------------|-----------------|  
 |`UserEvents`|.NET Framework 아닌 사용자 코드에서 내보내는 이벤트입니다.|  
 |`ServiceModel`|WCF 런타임에서 내보내는 이벤트입니다.|  

@@ -1,15 +1,18 @@
 ---
+description: '자세한 정보: 작업을 사용 하 여 서버 쪽 동작 구현'
 title: 동작을 사용하여 서버 쪽 동작 구현
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 19139a7efd955448a1f97c492a7245c1bbfe6c3d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6decd6134184de860ae2865b6dcf34b3c0b81813
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180597"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791714"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>동작을 사용하여 서버 쪽 동작 구현
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 OData 동작을 통해 OData 서비스에서 검색한 리소스에 따른 동작을 구현할 수 있습니다. 예를 들어 디지털 영화를 리소스로 가정하면, 체크 아웃, 등급/코멘트 또는 체크 인 등 디지털 영화와 관련하여 수행할 수 있는 여러 동작이 있습니다. 이러한 동작은 디지털 영화를 관리하는 WCF Data Service로 구현할 수 있는 동작의 예입니다. 동작은 동작을 호출할 수 있는 리소스를 포함하는 OData 응답에 설명되어 있습니다. 사용자가 디지털 영화를 나타내는 리소스를 요청하면 WCF Data Service에서 반환된 응답은 해당 리소스에서 사용할 수 있는 동작에 대한 정보를 포함합니다. 동작의 사용 가능 여부는 데이터 서비스 또는 리소스의 상태에 따라 달라질 수 있습니다. 예를 들어 디지털 영화를 체크 아웃하면 다른 사용자가 이 디지털 영화를 체크 아웃할 수 없습니다. 클라이언트는 URL을 지정하기만 하면 동작을 호출할 수 있습니다. 예를 들어는 `http://MyServer/MovieService.svc/Movies(6)` 특정 디지털 영화를 식별 하 고 `http://MyServer/MovieService.svc/Movies(6)/Checkout` 특정 영화에 대 한 작업을 호출 합니다. 동작을 사용하여 데이터 모델을 노출하지 않고 서비스 모델을 노출할 수 있습니다. 영화 서비스를 계속 예로 들자면 사용자가 영화의 평점을 매길 수 있도록 하지만 등급 데이터를 리소스로 직접적으로 노출하지 않도록 할 수 있습니다. 사용자가 영화에 대한 평점을 매길 수 있지만 평가 데이터를 리소스로 직접 액세스하지 않도록 평가 동작을 구현할 수 있습니다.
 

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ExceptionHelper 클래스'
 title: ExceptionHelper 클래스 (System.Net)
 ms.date: 06/12/2020
 ms.technology: dotnet-networking
@@ -11,16 +12,16 @@ api_location:
 - System.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 14a6172f7a0321ba9b2dd1744799017271c4332c
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: d1411eae985b45903ceca2ef2d3ff772b643bd52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990481"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99804129"
 ---
 # <a name="exceptionhelper-class"></a>ExceptionHelper 클래스
 
-표준화 된 오류 메시지와 함께 예외를 제공 합니다. 이 클래스는 상속할 수 없습니다.
+표준화 된 오류 메시지와 함께 예외를 제공 합니다. 이 클래스는 상속될 수 없습니다.
 
 ```csharp
 internal static class ExceptionHelper

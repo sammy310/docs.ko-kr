@@ -1,4 +1,5 @@
 ---
+description: '자세한 내용은 다음에 대해 자세히 알아보세요. BC36599: 범위 변수 이름은 인수가 없는 단순한 이름 또는 정규화 된 이름 에서만 유추할 수 있습니다.'
 title: 범위 변수 이름은 인수가 없는 단순한 이름 또는 정규화된 이름에서만 유추할 수 있습니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: 63990b7d37388057ff2cdb430d29878a1c7b39ba
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: b729b6786f9b7803a794b9a4e786d94fa41a57ec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162364"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792065"
 ---
 # <a name="bc36599-range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>BC36599: 범위 변수 이름은 인수가 없는 단순한 이름 또는 정규화 된 이름 에서만 유추할 수 있습니다.
 

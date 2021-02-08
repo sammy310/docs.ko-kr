@@ -1,19 +1,20 @@
 ---
+description: '자세히 알아보기: System.servicemodel Clientsessionkey갱신 됨'
 title: System.ServiceModel.Security.SecurityClientSessionKeyRenewed
 ms.date: 03/30/2017
 ms.assetid: c99048ee-062b-4b21-bb9b-77c465a318c6
-ms.openlocfilehash: ef1ea552e3877223ee4aa05723b65255116c0ad0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cdcd536b4bb7b6139c3f212a8e67cdb2bac467bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249516"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798487"
 ---
 # <a name="systemservicemodelsecuritysecurityclientsessionkeyrenewed"></a>System.ServiceModel.Security.SecurityClientSessionKeyRenewed
 
 System.ServiceModel.Security.SecurityClientSessionKeyRenewed  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  클라이언트 보안 세션에서 세션 키를 갱신했습니다.  
   
