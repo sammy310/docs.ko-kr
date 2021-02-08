@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 39459-TrackingDataExtracted'
 title: 39459 - TrackingDataExtracted
 ms.date: 03/30/2017
 ms.assetid: fcf7be96-8a7b-4ae1-bf38-b77ea9ebfb6b
-ms.openlocfilehash: c830bba55d3cde8a922ee021df1351d94fbcb8d2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 34ff025210252992655e4f2ccce5cdb85bf17d7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275881"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99777894"
 ---
 # <a name="39459---trackingdataextracted"></a>39459 - TrackingDataExtracted
 
@@ -20,7 +21,7 @@ ms.locfileid: "96275881"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  추적 데이터가 작업에서 추출되었음을 나타냅니다.  
   
