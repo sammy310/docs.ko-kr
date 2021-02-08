@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataValidate:: ValidateMetaData 메서드'
 title: IMetaDataValidate::ValidateMetaData 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,33 +16,33 @@ helpviewer_keywords:
 ms.assetid: e5ceed11-0f54-4097-8302-883284dddbc1
 topic_type:
 - apiref
-ms.openlocfilehash: 4fd0cf5cdd8d56564c40321336373ac1fd277783
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e86f9f79c731adf0227dc3605d73a9c968850eca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95708662"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799202"
 ---
-# <a name="imetadatavalidatevalidatemetadata-method"></a><span data-ttu-id="9ed28-102">IMetaDataValidate::ValidateMetaData 메서드</span><span class="sxs-lookup"><span data-stu-id="9ed28-102">IMetaDataValidate::ValidateMetaData Method</span></span>
+# <a name="imetadatavalidatevalidatemetadata-method"></a><span data-ttu-id="9b267-103">IMetaDataValidate::ValidateMetaData 메서드</span><span class="sxs-lookup"><span data-stu-id="9b267-103">IMetaDataValidate::ValidateMetaData Method</span></span>
 
-<span data-ttu-id="9ed28-103">현재 메타데이터 범위에서 개체에 대한 메타데이터 서명의 유효성을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="9ed28-103">Validates the metadata signatures of the objects in the current metadata scope.</span></span>  
+<span data-ttu-id="9b267-104">현재 메타데이터 범위에서 개체에 대한 메타데이터 서명의 유효성을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="9b267-104">Validates the metadata signatures of the objects in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ed28-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9ed28-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9b267-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="9b267-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT ValidateMetaData ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="9ed28-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9ed28-105">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9b267-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9b267-106">Requirements</span></span>  
 
- <span data-ttu-id="9ed28-106">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9ed28-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="9b267-107">**플랫폼:**[시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9b267-107">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9ed28-107">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="9ed28-107">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9b267-108">**헤더:** Cor</span><span class="sxs-lookup"><span data-stu-id="9b267-108">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9ed28-108">**라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9ed28-108">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9b267-109">**라이브러리:** MsCorEE.dll에서 리소스로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9b267-109">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9ed28-109">**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ed28-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9b267-110">**.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9b267-110">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ed28-110">참조</span><span class="sxs-lookup"><span data-stu-id="9ed28-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9b267-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9b267-111">See also</span></span>
 
-- [<span data-ttu-id="9ed28-111">IMetaDataValidate 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9ed28-111">IMetaDataValidate Interface</span></span>](imetadatavalidate-interface.md)
+- [<span data-ttu-id="9b267-112">IMetaDataValidate 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9b267-112">IMetaDataValidate Interface</span></span>](imetadatavalidate-interface.md)
