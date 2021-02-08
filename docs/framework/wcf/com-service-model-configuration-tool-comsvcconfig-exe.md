@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: COM + 서비스 모델 구성 도구 (ComSvcConfig.exe)'
 title: COM+ 서비스 모델 구성 도구(ComSvcConfig.exe)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: ee0fb5f08446b03485f97de0037e898415016fea
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 81bfcbd468cb5401646a49967b6381b48e2f7cf0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295277"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781066"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>COM+ 서비스 모델 구성 도구(ComSvcConfig.exe)
 
@@ -35,7 +36,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
  다음 표에서는 ComSvcConfig.exe에 사용할 수 있는 모드에 대해 설명합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |`install`|서비스 모델 통합을 위해 COM+ 인터페이스에 대한 구성을 설치합니다.<br /><br /> 약식은 `/i`입니다.|  
 |`uninstall`|서비스 모델 통합에서 COM+ 인터페이스에 대한 구성을 제거합니다.<br /><br /> 약식은 `/u`입니다.|  

@@ -1,19 +1,20 @@
 ---
+description: PeerMaintainerActivity에 대해 자세히 알아보세요.
 title: System.ServiceModel.Channels.PeerMaintainerActivity
 ms.date: 03/30/2017
 ms.assetid: ef28d086-d7fb-4e81-82e9-45a54647783b
-ms.openlocfilehash: c1e82611bb776531ad3e3d60283d970602eb7f15
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: da4e4cf87da808cb6779445b6507b51d098132b3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293028"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780883"
 ---
 # <a name="systemservicemodelchannelspeermaintaineractivity"></a>System.ServiceModel.Channels.PeerMaintainerActivity
 
 PeerMaintainer 모듈이 특정 작업을 수행하고 있습니다(상세 정보는 추적 메시지 본문에 포함).  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 추적은 다양한 PeerMaintainer 작업을 수행하는 동안 발생합니다.  
   

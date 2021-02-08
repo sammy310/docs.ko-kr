@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: System-Provided 바인딩 구성'
 title: 시스템 제공 바인딩 구성
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: ab608ba954eafd9035335f00c8755629c5703c22
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1254d40638dd27ea14d79888cdf326d49345e02a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96284162"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780728"
 ---
 # <a name="configuring-system-provided-bindings"></a>시스템 제공 바인딩 구성
 
@@ -35,7 +36,7 @@ ms.locfileid: "96284162"
 
  다음 바인딩은 WCF와 함께 제공 됩니다.  
   
-|바인딩|구성 요소|Description|  
+|바인딩|구성 요소|설명|  
 |-------------|---------------------------|-----------------|  
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md)|WS-Basic Profile 사양의 웹 서비스와 통신하는 데 적합한 바인딩에는 ASP.NET 웹 서비스(ASMX) 기반 서비스 등이 있습니다. 이 바인딩은 HTTP를 전송으로 사용하고 텍스트/XML을 기본 메시지 인코딩으로 사용합니다.|  
 |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)|비이중 서비스 계약에 적합한 안전하고 상호 운용할 수 있는 바인딩입니다.|  
@@ -71,7 +72,7 @@ ms.locfileid: "96284162"
   
  다음 표에서는 앞의 표에서 볼 수 있는 기능에 대해 설명합니다.  
   
-|기능|Description|  
+|기능|설명|  
 |-------------|-----------------|  
 |상호 운용성 형식|바인딩이 상호 운용하는 프로토콜 또는 기술에 이름을 지정합니다.|  
 |보안|채널 보안 방식을 지정합니다.<br /><br /> -None: SOAP 메시지가 보호 되지 않고 클라이언트가 인증 되지 않았습니다.<br />-전송: 전송 계층에서 보안 요구 사항이 충족 됩니다.<br />-Message: 메시지 계층에서 보안 요구 사항이 충족 됩니다.<br />-Mixed:이 보안 모드를 라고 `TransportWithMessageCredentials` 합니다. 이 보안 모드는 메시지 수준에서 자격 증명을 처리하고 전송 계층에서 무결성 및 기밀성 요구 사항을 충족합니다.<br />-Both: 메시지 수준과 전송 수준 보안이 모두 사용 됩니다. 이 기능은 <xref:System.ServiceModel.NetMsmqBinding>에 고유합니다.|  

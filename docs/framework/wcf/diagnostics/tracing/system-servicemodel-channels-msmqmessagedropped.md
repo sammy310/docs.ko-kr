@@ -1,19 +1,20 @@
 ---
+description: MsmqMessageDropped에 대해 자세히 알아보세요.
 title: System.ServiceModel.Channels.MsmqMessageDropped
 ms.date: 03/30/2017
 ms.assetid: 8b6e644d-fa68-4be7-abe9-3659671a37c1
-ms.openlocfilehash: 6e8b134f61d2dc9bd5daf541db4ec81604166baa
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 41b9c6d5399f0f6b458404ee4b64624e5863c777
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96260385"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780962"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagedropped"></a>System.ServiceModel.Channels.MsmqMessageDropped
 
 MSMQ에서 메시지를 삭제했습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  추적은 MSMQ 메시지가 삭제되었음을 나타냅니다. Windows Communication Foundation (WCF) (NetMsmqBinding 또는 MsmqIntegrationBinding에서 사용)가 처리할 수 없는 경우 MSMQ 메시지를 삭제할 수 있습니다. 이러한 메시지를 포이즌 메시지라고 합니다.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: ada336ee5fce317315bb5f3974e0366f7bca3985
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 111430bf32debfcb80ea12aa9eb89c52f695d3cb
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557105"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585691"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -21,12 +21,15 @@ ms.locfileid: "94557105"
 
 ## <a name="current-version"></a>현재 버전
 
-Visual Basic 16.0/Visual Studio 2019 버전 16.0\
-새 기능은 [Visual Basic 16.0](#visual-basic-160)을 참조하세요.
+Visual Basic 16.9/Visual Studio 2019 버전 16.9\
+새 기능은 [Visual Basic 16.9](#visual-basic-169)를 참조하세요.
 
 [.NET 다운로드 페이지](https://dotnet.microsoft.com/download)에서 최신 .NET SDK를 다운로드할 수 있습니다.
 
 ## <a name="previous-versions"></a>이전 버전
+
+Visual Basic 16.0/Visual Studio 2019 버전 16.0\
+새 기능은 [Visual Basic 16.0](#visual-basic-160)을 참조하세요.
 
 Visual Basic 15.8/Visual Studio 2017 버전 15.8\
 새 기능은 [Visual Basic 15.8](#visual-basic-158)을 참조하세요.
@@ -63,6 +66,10 @@ Visual Basic/Visual Studio .NET 2003\
 
 Visual Basic/Visual Studio .NET 2002\
 Visual Basic .NET의 첫 번째 릴리스
+
+## <a name="visual-basic-169"></a>Visual Basic 16.9
+
+Visual Basic 16.9는 init 전용 속성을 사용할 수 있습니다.
 
 ## <a name="visual-basic-160"></a>Visual Basic 16.0
 

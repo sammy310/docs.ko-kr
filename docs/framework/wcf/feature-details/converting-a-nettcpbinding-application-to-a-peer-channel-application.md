@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: NetTcpBinding 응용 프로그램을 피어 채널 응용 프로그램으로 변환'
 title: NetTcpBinding 애플리케이션을 피어 채널 애플리케이션으로 변환
 ms.date: 03/30/2017
 ms.assetid: d4137292-a923-4b8f-8594-42276f2d3ce2
-ms.openlocfilehash: 5444b53f0373a2f2b06da680a53e8e5fa77d39b7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 828ffce38fb05acff851c9fe5a6fbb38fffad6aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286736"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780416"
 ---
 # <a name="converting-a-nettcpbinding-application-to-a-peer-channel-application"></a>NetTcpBinding 애플리케이션을 피어 채널 애플리케이션으로 변환
 

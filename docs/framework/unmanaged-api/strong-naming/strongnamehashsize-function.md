@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: StrongNameHashSize 함수'
 title: StrongNameHashSize 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 738c98d7-a60c-45fe-a296-220af05e6991
 topic_type:
 - apiref
-ms.openlocfilehash: 1116fcde754f966a783f4fdca85df8bd3ca1b0ba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3e6700bfce3ba480814f3837011c5f8f7107bbd5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724431"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781248"
 ---
 # <a name="strongnamehashsize-function"></a>StrongNameHashSize 함수
 
@@ -44,7 +45,7 @@ BOOLEAN StrongNameHashSize (
  `pcbSize`  
  제한이 반환 된 버퍼 크기 (바이트)입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `true` 성공적으로 완료 되 면 그렇지 않으면 `false` 입니다.  
   
@@ -62,7 +63,7 @@ BOOLEAN StrongNameHashSize (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [StrongNameHashSize 메서드](../hosting/iclrstrongname-strongnamehashsize-method.md)
 - [ICLRStrongName 인터페이스](../hosting/iclrstrongname-interface.md)

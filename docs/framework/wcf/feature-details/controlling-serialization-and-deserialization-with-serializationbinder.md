@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: SerializationBinder를 사용 하 여 Serialization 및 Deserialization 제어'
 title: SerializationBinder를 사용하여 serialization 및 deserialization 제어
 ms.date: 07/14/2020
 ms.assetid: ba8dcecf-acc7-467c-939d-021bbac797d4
-ms.openlocfilehash: be4068411e2154db53a9616df6cf4d83803954e6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e1a437fa2f627fd3d5989d053a21540f139c9797
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293743"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780429"
 ---
 # <a name="controlling-serialization-and-deserialization-with-serializationbinder"></a>SerializationBinder를 사용하여 serialization 및 deserialization 제어
 

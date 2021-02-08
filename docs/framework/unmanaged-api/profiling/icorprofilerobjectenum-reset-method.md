@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerObjectEnum:: Reset 메서드'
 title: ICorProfilerObjectEnum::Reset 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 973dbcc5-bce8-43a7-9a66-d9a1db7cc5b7
 topic_type:
 - apiref
-ms.openlocfilehash: f5a63de0c5871454de132473d4a5d0d2b21741ad
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2f4f627432cadba2f708f57f237652676d91596f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731425"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781326"
 ---
 # <a name="icorprofilerobjectenumreset-method"></a>ICorProfilerObjectEnum::Reset 메서드
 
@@ -42,6 +43,6 @@ HRESULT Reset ();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerObjectEnum 인터페이스](icorprofilerobjectenum-interface.md)

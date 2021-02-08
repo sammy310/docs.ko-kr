@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 방법: 사용자 지정 WSDL 가져오기'
 title: '방법: 사용자 지정 WSDL 가져오기'
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: c5aa554394743314a91afd6a5cdf86f9974e81f8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f21e5cace532bd6d20d409f297480f65bb23cbf4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249087"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780741"
 ---
 # <a name="how-to-import-custom-wsdl"></a>방법: 사용자 지정 WSDL 가져오기
 

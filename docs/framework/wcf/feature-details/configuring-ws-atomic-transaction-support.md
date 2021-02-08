@@ -1,17 +1,18 @@
 ---
+description: '자세한 정보: 트랜잭션 지원 구성 WS-Atomic'
 title: WS-Atomic Transaction 지원 구성
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 9c0e75d58fbcf61137ceae3fba9d8acfe3902171
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c9b732bd0d6b6aa8cb1cf04803ae302a00348987
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556592"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780546"
 ---
-# <a name="configure-ws-atomic-transaction-support"></a>WS 원자성 트랜잭션 지원 구성
+# <a name="configure-ws-atomic-transaction-support"></a>WS-Atomic 트랜잭션 지원 구성
 
 이 항목에서는 WS-AT 구성 유틸리티를 사용하여 WS-AT(WS-AtomicTransaction) 지원을 구성하는 방법에 대해 설명합니다.
 
@@ -25,7 +26,7 @@ WS-AT 구성 유틸리티(wsatConfig.exe)는 WS-AT 설정을 구성하는 데 �
 
 명령줄 도구에 대 한 자세한 내용은 [Ws-atomictransaction 구성 유틸리티 (wsatConfig.exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)를 참조 하세요.
 
-Windows XP 또는 Windows Server 2003를 실행 하는 경우 **제어판/관리 도구/구성 요소 서비스로**이동 하 여 **내 컴퓨터**를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 하 여 MMC 스냅인에 액세스할 수 있습니다. 동일한 위치에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성할 수 있습니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다. Windows Vista 또는 Windows Server 2008를 실행 하는 경우 **시작** 단추를 클릭 하 고 `dcomcnfg.exe` **검색** 상자에를 입력 하 여 MMC 스냅인을 찾을 수 있습니다. MMC를 열면 **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** 노드로 이동 하 고 마우스 오른쪽 단추를 클릭 한 다음 **속성**을 선택 합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.
+Windows XP 또는 Windows Server 2003를 실행 하는 경우 **제어판/관리 도구/구성 요소 서비스로** 이동 하 여 **내 컴퓨터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하 여 MMC 스냅인에 액세스할 수 있습니다. 동일한 위치에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성할 수 있습니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다. Windows Vista 또는 Windows Server 2008를 실행 하는 경우 **시작** 단추를 클릭 하 고 `dcomcnfg.exe` **검색** 상자에를 입력 하 여 MMC 스냅인을 찾을 수 있습니다. MMC를 열면 **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** 노드로 이동 하 고 마우스 오른쪽 단추를 클릭 한 다음 **속성** 을 선택 합니다. 구성에 사용할 수 있는 옵션은 **ws-at** 탭에서 그룹화 됩니다.
 
 스냅인에 대 한 자세한 내용은 [Ws-atomictransaction 구성 MMC 스냅인](../ws-atomictransaction-configuration-mmc-snap-in.md)을 참조 하세요.
 
@@ -57,11 +58,11 @@ WS-AT 프로토콜 서비스를 사용하려면 관리자가 분산 트랜잭션
 
 ### <a name="create-and-export-certificates"></a>인증서 만들기 및 내보내기
 
-이 절차에는 MMC 인증서 스냅인이 필요합니다. 이 스냅인은 시작/실행 메뉴를 열고 입력 상자에 "mmc"를 입력한 다음 확인을 눌러 액세스할 수 있습니다. 그런 다음, **콘솔** 1 창에서 **파일/추가/제거** 스냅인으로 이동 하 고 추가를 클릭 한 다음 **사용 가능한 독립 실행형 스냅인** 목록에서 **인증서** 를 선택 합니다. 마지막으로 관리할 **컴퓨터 계정** 을 선택 하 고 **확인**을 클릭 합니다. **인증서** 노드가 스냅인 콘솔에 표시 됩니다.
+이 절차에는 MMC 인증서 스냅인이 필요합니다. 이 스냅인은 시작/실행 메뉴를 열고 입력 상자에 "mmc"를 입력한 다음 확인을 눌러 액세스할 수 있습니다. 그런 다음, **콘솔** 1 창에서 **파일/추가/제거** 스냅인으로 이동 하 고 추가를 클릭 한 다음 **사용 가능한 독립 실행형 스냅인** 목록에서 **인증서** 를 선택 합니다. 마지막으로 관리할 **컴퓨터 계정** 을 선택 하 고 **확인** 을 클릭 합니다. **인증서** 노드가 스냅인 콘솔에 표시 됩니다.
 
 트러스트를 설정하려면 필요한 인증서가 이미 있어야 합니다. 다음 단계를 수행 하기 전에 새 인증서를 만들고 설치 하는 방법을 알아보려면 [방법: 개발 하는 동안 WCF에서 임시 클라이언트 인증서 만들기 및 설치](/previous-versions/msp-n-p/ff650751(v=pandp.10))를 참조 하세요.
 
-1. 컴퓨터 A에서 MMC 인증서 스냅인을 사용하여 기존 인증서(certA)를 LocalMachine\MY(개인 노드) 및 LocalMachine\ROOT 저장소(신뢰할 수 있는 루트 인증 기관 노드)로 가져옵니다. 특정 노드로 인증서를 가져오려면 노드를 마우스 오른쪽 단추로 클릭 하 고 **모든 작업/가져오기**를 선택 합니다.
+1. 컴퓨터 A에서 MMC 인증서 스냅인을 사용하여 기존 인증서(certA)를 LocalMachine\MY(개인 노드) 및 LocalMachine\ROOT 저장소(신뢰할 수 있는 루트 인증 기관 노드)로 가져옵니다. 특정 노드로 인증서를 가져오려면 노드를 마우스 오른쪽 단추로 클릭 하 고 **모든 작업/가져오기** 를 선택 합니다.
 
 2. 컴퓨터 B에서 MMC 인증서 스냅인을 사용하여 프라이빗 키가 있는 certB 인증서를 만들거나 얻어 LocalMachine\MY(개인 노드) 및 LocalMachine\ROOT 저장소(신뢰할 수 있는 루트 인증 기관 노드)로 가져옵니다.
 
@@ -106,11 +107,11 @@ WS-AT 프로토콜 서비스는 ws-atomictransaction [구성 MMC 스냅인](../w
 
 또한 WS-AT 프로토콜 서비스는 ETW 추적 세션을 통해 통합된 ServiceModel 추적을 지원합니다. 이 추적 기능은 기존의 트랜잭션 추적 외에 보다 자세한 통신 관련 추적을 제공합니다.  이러한 추가 추적을 사용하려면 다음 단계를 수행합니다.
 
-1. **시작/실행** 메뉴를 열고 입력 상자에 "regedit"를 입력 한 다음 **확인**을 선택 합니다.
+1. **시작/실행** 메뉴를 열고 입력 상자에 "regedit"를 입력 한 다음 **확인** 을 선택 합니다.
 
-2. **레지스트리 편집기**의 왼쪽 창에서 다음 폴더로 이동 하 여 \software\microsoft\wsat\3.0\를 Hkey_Local_Machine 합니다.
+2. **레지스트리 편집기** 의 왼쪽 창에서 다음 폴더로 이동 하 여 \software\microsoft\wsat\3.0\를 Hkey_Local_Machine 합니다.
 
-3. 오른쪽 창에서 값을 마우스 오른쪽 단추로 클릭 `ServiceModelDiagnosticTracing` 하 고 **수정**을 선택 합니다.
+3. 오른쪽 창에서 값을 마우스 오른쪽 단추로 클릭 `ServiceModelDiagnosticTracing` 하 고 **수정** 을 선택 합니다.
 
 4. **값 데이터** 입력 상자에 다음 유효한 값 중 하나를 입력 하 여 사용할 추적 수준을 지정 합니다.
 
@@ -126,7 +127,7 @@ WS-AT 프로토콜 서비스는 ws-atomictransaction [구성 MMC 스냅인](../w
 
 - 31: 자세한 정보
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
 - [WS-AtomicTransaction 구성 MMC 스냅인](../ws-atomictransaction-configuration-mmc-snap-in.md)

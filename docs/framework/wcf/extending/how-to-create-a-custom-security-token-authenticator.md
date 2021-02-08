@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 사용자 지정 보안 토큰 인증자 만들기'
 title: '방법: 사용자 지정 보안 토큰 인증자 만들기'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-ms.openlocfilehash: 667dc82502ba881b067b5588271947f7c18c8810
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dd1dbd413638ab8693ec5ac3454d9fac9b26565b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249256"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780754"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>방법: 사용자 지정 보안 토큰 인증자 만들기
 
