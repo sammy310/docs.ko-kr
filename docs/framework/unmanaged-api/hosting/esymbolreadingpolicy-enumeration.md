@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ESymbolReadingPolicy 열거형'
 title: ESymbolReadingPolicy 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4dc6c80d-b694-480b-a378-d5b18420ce17
 topic_type:
 - apiref
-ms.openlocfilehash: 42ce1f02294db98c5c593a5f16de5226703d5f9d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e84c31343b589cb6019d88fafc9b94207c5f5892
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733713"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785421"
 ---
 # <a name="esymbolreadingpolicy-enumeration"></a>ESymbolReadingPolicy 열거형
 
@@ -35,7 +36,7 @@ typedef enum {
 } ESymbolReadingPolicy;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -57,6 +58,6 @@ typedef enum {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 열거형](hosting-enumerations.md)

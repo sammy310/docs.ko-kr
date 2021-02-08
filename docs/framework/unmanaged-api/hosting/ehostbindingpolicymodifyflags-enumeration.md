@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: EHostBindingPolicyModifyFlags 열거형'
 title: EHostBindingPolicyModifyFlags 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0339af16-ee1d-48ec-837d-a79d9a9c89f8
 topic_type:
 - apiref
-ms.openlocfilehash: ec64f9bec0ee9b63796958b17c7f10b87692f1d0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: be8a15cad49097d1ea2e206e01da2d5d5dcb165a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686152"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785486"
 ---
 # <a name="ehostbindingpolicymodifyflags-enumeration"></a>EHostBindingPolicyModifyFlags 열거형
 
@@ -36,7 +37,7 @@ typedef enum _hostBindingPolicyModifyFlags {
 } EHostBindingPolicyModifyFlags;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -59,7 +60,7 @@ typedef enum _hostBindingPolicyModifyFlags {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRHostBindingPolicyManager 인터페이스](iclrhostbindingpolicymanager-interface.md)
 - [호스팅 열거형](hosting-enumerations.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: Oracle 분산 트랜잭션'
 title: Oracle 분산 트랜잭션
 ms.date: 03/30/2017
 ms.assetid: c340ca81-ef79-402f-b204-c5156b890fe5
-ms.openlocfilehash: a21134c3283d3d9d8d7660eecaaf74d60ecf6662
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d0c41920f18e0f56ebdf57e3cb82cf829a59c450
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166523"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786175"
 ---
 # <a name="oracle-distributed-transactions"></a>Oracle 분산 트랜잭션
 

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ECLRAssemblyIdentityFlags 열거형'
 title: ECLRAssemblyIdentityFlags 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1e0b654-ccaf-4fa2-9aa3-8e007813c84d
 topic_type:
 - apiref
-ms.openlocfilehash: c3fed9166d95c0ca71ac44f5447b95eee97af310
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d0211c6116b566964aeca29a52aede7e232f5556
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726836"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785582"
 ---
 # <a name="eclrassemblyidentityflags-enumeration"></a>ECLRAssemblyIdentityFlags 열거형
 
@@ -33,7 +34,7 @@ typedef enum _CLRAssemblyIdentityFlags {
 } ECLRAssemblyIdentityFlags;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -47,6 +48,6 @@ typedef enum _CLRAssemblyIdentityFlags {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 열거형](hosting-enumerations.md)

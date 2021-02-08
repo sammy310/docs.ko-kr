@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRRuntimeHost:: SetHostControl 메서드'
 title: ICLRRuntimeHost::SetHostControl 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6136be87-e631-4756-81ed-74b66581bad4
 topic_type:
 - apiref
-ms.openlocfilehash: 32483be43d4d4fe9d185c091e15a13c6feb95600
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e51c61666716badc7214f9a74ad11aa646f2316c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728825"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785105"
 ---
 # <a name="iclrruntimehostsethostcontrol-method"></a>ICLRRuntimeHost::SetHostControl 메서드
 
@@ -39,7 +40,7 @@ HRESULT SetHostControl(
  `pHostControl`  
  진행 호스트의 [IHostControl 인터페이스](ihostcontrol-interface.md)구현에 대 한 인터페이스 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -65,7 +66,7 @@ HRESULT SetHostControl(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRRuntimeHost 인터페이스](iclrruntimehost-interface.md)
 - [IHostControl 인터페이스](ihostcontrol-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 사용 되지 않는 CLR 호스팅 인터페이스 및 Coclass'
 title: 사용되지 않는 CLR 호스팅 인터페이스 및 Coclass
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework], version 1
 - .NET Framework 1.0, hosting interfaces
 ms.assetid: 7b3d2755-cbab-4160-bc69-eb85791e38c7
-ms.openlocfilehash: 8b90a33e2a0e6780a2ce908ff7ab251e94fbce90
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3d5e8d545dadb4f84c29e2e03a6b23e3729bfe66
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673100"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785642"
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>사용되지 않는 CLR 호스팅 인터페이스 및 Coclass
 
@@ -29,7 +30,7 @@ ms.locfileid: "95673100"
  [ICorRuntimeHost 인터페이스](icorruntimehost-interface.md)  
  호스트가 CLR 설정을 구성 하는 데 사용할 수 있는 메서드를 제공 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [CLR 호스팅 인터페이스](clr-hosting-interfaces.md)  
  .NET Framework 버전 2.0 이상 버전에서 제공 되는 호스팅 인터페이스에 대해 설명 하는 항목을 제공 합니다.

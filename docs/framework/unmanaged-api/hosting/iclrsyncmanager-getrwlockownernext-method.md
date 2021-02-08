@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRSyncManager:: GetRWLockOwnerNext 메서드'
 title: ICLRSyncManager::GetRWLockOwnerNext 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0e025b6a-280e-40a2-a2d0-b15f58777b81
 topic_type:
 - apiref
-ms.openlocfilehash: 93a8b3884d831b7da412b6c53dd599af216cbbf2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f49bdd5065ac896147967c0a013347ab39ce1eff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728318"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784998"
 ---
 # <a name="iclrsyncmanagergetrwlockownernext-method"></a>ICLRSyncManager::GetRWLockOwnerNext 메서드
 
@@ -43,7 +44,7 @@ HRESULT GetRWLockOwnerNext (
  `ppOwnerHostTask`  
  제한이 잠금을 기다리는 다음에 대 한 포인터 `IHostTask` 이거나, 대기 중인 태스크가 없는 경우 null입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -71,7 +72,7 @@ HRESULT GetRWLockOwnerNext (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRSyncManager 인터페이스](iclrsyncmanager-interface.md)
 - [IHostSyncManager 인터페이스](ihostsyncmanager-interface.md)

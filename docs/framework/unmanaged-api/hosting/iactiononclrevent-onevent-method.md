@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IActionOnCLREvent:: OnEvent 메서드'
 title: IActionOnCLREvent::OnEvent 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0970f10c-4304-4c12-91c0-83e51455afb4
 topic_type:
 - apiref
-ms.openlocfilehash: 3bfcb01e30b4cb33ec9276f1d3c6ac2f3bde4b58
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 163956ab319eb34d58da23d2c4ef2a6b592aab0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721766"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785146"
 ---
 # <a name="iactiononclreventonevent-method"></a>IActionOnCLREvent::OnEvent 메서드
 
@@ -43,7 +44,7 @@ HRESULT OnEvent (
  `data`  
  진행 에 대 한 세부 정보를 포함 하는 개체에 대 한 포인터 `event` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -70,7 +71,7 @@ HRESULT OnEvent (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [EClrEvent 열거형](eclrevent-enumeration.md)

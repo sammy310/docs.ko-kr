@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: DBML 및 외부 매핑 파일 유효성 검사'
 title: '방법: DBML 및 외부 매핑 파일 유효성 검사'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: b5901705ac7c0692025ff1f4a4b78f976d62176d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 46e5c787bef8e152020fc97631ef8c1c4928fe74
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793044"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785785"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>방법: DBML 및 외부 매핑 파일 유효성 검사
 
@@ -17,13 +18,13 @@ ms.locfileid: "70793044"
 
 ### <a name="to-validate-a-dbml-or-xml-file"></a>.dbml 또는 XML 파일의 유효성을 검사하려면
 
-1. Visual Studio **파일** 메뉴에서 **열기**를 가리킨 다음 **파일**을 클릭 합니다.
+1. Visual Studio **파일** 메뉴에서 **열기** 를 가리킨 다음 **파일** 을 클릭 합니다.
 
 2. **파일 열기** 대화 상자에서 유효성 검사를 수행 하려는 .DBML 또는 XML 매핑 파일을 클릭 합니다.
 
-    파일이 **XML 편집기**에서 열립니다.
+    파일이 **XML 편집기** 에서 열립니다.
 
-3. 창을 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.
+3. 창을 마우스 오른쪽 단추로 클릭 한 다음 **속성** 을 클릭 합니다.
 
 4. **속성** 창에서 **스키마** 속성에 대 한 줄임표를 클릭 합니다.
 
@@ -35,13 +36,13 @@ ms.locfileid: "70793044"
 
     - LinqToSqlMapping.xsd는 외부 XML 매핑 파일의 유효성 검사를 위한 스키마 정의입니다. 자세한 내용은 [외부 매핑](external-mapping.md)을 참조 하세요.
 
-6. 원하는 스키마 정의 행의 **사용** 열에서 드롭다운 상자를 클릭 하 여 연 다음 **이 스키마 사용**을 클릭 합니다.
+6. 원하는 스키마 정의 행의 **사용** 열에서 드롭다운 상자를 클릭 하 여 연 다음 **이 스키마 사용** 을 클릭 합니다.
 
     이제 스키마 정의 파일이 DBML 또는 XML 매핑 파일과 연관됩니다.
 
     다른 스키마 정의가 선택되지 않았는지 확인합니다.
 
-7. **보기** 메뉴에서 **오류 목록**를 클릭 합니다.
+7. **보기** 메뉴에서 **오류 목록** 을 클릭합니다.
 
     오류, 경고 또는 메시지가 생성되었는지 여부를 확인합니다. 생성된 것이 없는 경우 스키마 정의에 대해 XML 파일이 유효합니다.
 
@@ -63,15 +64,15 @@ ms.locfileid: "70793044"
 
 4. 클립보드에서 메모장 파일로 코드를 붙여넣습니다.
 
-5. 메모장 **파일** 메뉴에서 다른 **이름으로 저장**을 클릭 합니다.
+5. 메모장 **파일** 메뉴에서 다른 **이름으로 저장** 을 클릭 합니다.
 
-6. **인코딩** 상자에서 **유니코드**를 선택 합니다.
+6. **인코딩** 상자에서 **유니코드** 를 선택 합니다.
 
     > [!IMPORTANT]
     > 이렇게 하면 유니코드 16바이트 순서 마커(`FFFE`)가 텍스트 파일 앞에 추가됩니다.
 
 7. **파일 이름** 상자에서 확장명이 .xsd 인 파일 이름을 만듭니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [참조](reference.md)

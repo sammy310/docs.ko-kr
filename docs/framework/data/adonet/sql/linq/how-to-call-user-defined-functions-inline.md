@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: 인라인 User-Defined 함수 호출'
 title: '방법: 사용자 정의 함수 인라인 호출'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-ms.openlocfilehash: 24b23c436fd7d4d5f3fdd0c364c0bdaf6feb8d1b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2a7cf185af05a1ed58a2dd3b365a5bbcaa2a4fd5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161349"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786058"
 ---
 # <a name="how-to-call-user-defined-functions-inline"></a>방법: 사용자 정의 함수 인라인 호출
 

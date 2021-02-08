@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 호스팅 열거형'
 title: 호스팅 열거형
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework hosting]
 - hosting enumerations [.NET Framework]
 ms.assetid: e09131eb-1f7d-4f52-ae42-7393e9b62ef6
-ms.openlocfilehash: 907b1343ddbfa28b97ac2210e28b99cd38aa6fd4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4affff56c6c516d89d01691a1b63768146113db2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721831"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785213"
 ---
 # <a name="hosting-enumerations"></a>호스팅 열거형
 
@@ -109,7 +110,7 @@ ms.locfileid: "95721831"
  [WAIT_OPTION 열거형](wait-option-enumeration.md)  
  CLR에서 요청 하는 작업이 실행 되는 경우 호스트에서 수행할 동작을 나타냅니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [호스팅 Coclass](hosting-coclasses.md)  
   

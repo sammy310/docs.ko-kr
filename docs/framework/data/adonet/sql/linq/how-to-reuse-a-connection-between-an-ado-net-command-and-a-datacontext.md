@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: ADO.NET 명령 및 DataContext 간 연결 다시 사용'
 title: '방법: ADO.NET 명령 및 DataContext 간의 연결 다시 사용'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e26c7eb-c18a-43b5-a8f0-28fd8b04b0f0
-ms.openlocfilehash: 89c9a12399d3d76487d1fdc2bd82aa037c167710
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d5bf45dfd705ed6e9b9d4ed9659e01bfcb539df2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197354"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785954"
 ---
 # <a name="how-to-reuse-a-connection-between-an-adonet-command-and-a-datacontext"></a>방법: ADO.NET 명령 및 DataContext 간의 연결 다시 사용
 

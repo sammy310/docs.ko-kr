@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <tcpTransport>
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 6d4302e1840f58e2daad855942493cc96b7d5e34
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b660443ac58e8ed72d70adb5bf9e9e87b060e3af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158671"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786618"
 ---
 # \<tcpTransport>
 
@@ -92,7 +93,7 @@ ms.locfileid: "91158671"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [전송](../../../wcf/feature-details/transports.md)
 - [전송 선택](../../../wcf/feature-details/choosing-a-transport.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

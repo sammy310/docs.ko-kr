@@ -1,13 +1,14 @@
 ---
+description: OLE DB 데이터 형식 매핑에 대해 자세히 알아보세요.
 title: OLE DB 데이터 형식 매핑
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 7f3b498e39feac4a6fe98e739793d20e0268b8f4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8dd750754a67921437ca9b8fac751857961385cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150702"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786188"
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB 데이터 형식 매핑
 

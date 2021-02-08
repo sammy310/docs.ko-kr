@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IApartmentCallback 인터페이스'
 title: IApartmentCallback 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57c33c58-bf0b-4533-b569-e6a682d02cba
 topic_type:
 - apiref
-ms.openlocfilehash: 0f38314df766b74164bf5e98d9b2153d2dddbcc1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ddf99b1d926bd2d9765b936143785a975ea378a7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721740"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785140"
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback 인터페이스
 
@@ -41,6 +42,6 @@ ms.locfileid: "95721740"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)

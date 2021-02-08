@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: GetFileVersion 함수'
 title: GetFileVersion 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-ms.openlocfilehash: 57b30824c7849127f48d4da61872945366e7141e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7de19484f2f8123d61eb94e6a5ae09f56a3b5541
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733245"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785304"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion 함수
 
@@ -60,6 +61,6 @@ HRESULT GetFileVersion (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)

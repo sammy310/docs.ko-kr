@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <security><wsFederationHttpBinding>'
 title: <wsFederationHttpBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: 650483099c7d70450cfc56a9a28efac076d64675
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6c01c7a50b05f1723b3620407eb5e5761bae35cb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162240"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786800"
 ---
 # <a name="security-of-wsfederationhttpbinding"></a>\<wsFederationHttpBinding>의 \<security>
 
@@ -92,7 +93,7 @@ ms.locfileid: "91162240"
   
 ## <a name="mode-attribute"></a>Mode 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |없음|SOAP 메시지의 경우 전송 중에는 안전하지 않습니다.|  
 |메시지|SOAP 메시지 보안을 사용하여 무결성, 기밀성, 서버 인증 및 클라이언트 인증을 제공합니다. 기본적으로 본문에는 암호화 및 서명이 수행됩니다. 서비스는 인증서로 구성해야 합니다. 클라이언트 인증은 보안 토큰 서비스가 클라이언트에 발급한 토큰에 따라 수행됩니다.|  
@@ -119,7 +120,7 @@ ms.locfileid: "91162240"
 - [방법: WSFederationHttpBinding 만들기](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
 - [자격 증명 형식 선택](../../../wcf/feature-details/selecting-a-credential-type.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

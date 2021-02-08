@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <serviceCertificate><serviceCredentials>'
 title: <serviceCredentials>의 <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-ms.openlocfilehash: 936661595813d7b8f3e894efb7bf6cf3aab7e89e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ab52f27949168562ec0cab0433c95843a7c312d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91167104"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786735"
 ---
 # <a name="servicecertificate-of-servicecredentials"></a>\<serviceCredentials>의 \<serviceCertificate>
 

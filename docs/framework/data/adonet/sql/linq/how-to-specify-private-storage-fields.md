@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 방법: 개인 저장소 필드 지정'
 title: '방법: 전용 스토리지 필드 지정'
 ms.date: 03/30/2017
 ms.assetid: 5a40e816-cc6e-43a0-b32a-9caaa0ab6912
-ms.openlocfilehash: 7b47504e7dbad8a2d8414304ec19f2e9e2c06ef5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 09f3566ca85a69f27794329ae12fc45d88bb518c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197172"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785902"
 ---
 # <a name="how-to-specify-private-storage-fields"></a>방법: 전용 스토리지 필드 지정
 

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: SQL Server에서 가장으로 권한 사용자 지정'
 title: SQL Server에서 가장으로 권한 사용자 지정
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 84c5585912ba259fdcefaae186138c4466b16206
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1c2cada004b8f604ccbb9448f40e00bea472771f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180857"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786123"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>SQL Server에서 가장으로 권한 사용자 지정
 

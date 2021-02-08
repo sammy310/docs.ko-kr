@@ -1,17 +1,18 @@
 ---
+description: '자세히 알아보기: 외부 매핑'
 title: 외부 매핑
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 79427cde0784746480e851cf1be56c8bce854919
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8c09e3bdf1798757bedfac9e568a0384a8e6bb49
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161388"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786084"
 ---
 # <a name="external-mapping"></a>외부 매핑
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 는 별도의 XML 파일을 사용 하 여 데이터베이스의 데이터 모델과 개체 모델 간의 매핑을 지정 하는 프로세스에 대 한 *외부 매핑을*지원 합니다. 외부 매핑 파일을 사용하면 다음과 같은 장점이 있습니다.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 는 별도의 XML 파일을 사용 하 여 데이터베이스의 데이터 모델과 개체 모델 간의 매핑을 지정 하는 프로세스에 대 한 *외부 매핑을* 지원 합니다. 외부 매핑 파일을 사용하면 다음과 같은 장점이 있습니다.  
   
 - 매핑 코드를 애플리케이션 코드와 따로 유지할 수 있어 애플리케이션 코드를 간단하게 표시할 수 있습니다.  
   

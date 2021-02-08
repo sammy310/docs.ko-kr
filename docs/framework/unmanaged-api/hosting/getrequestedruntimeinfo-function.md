@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: GetRequestedRuntimeInfo 함수'
 title: GetRequestedRuntimeInfo 함수
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-ms.openlocfilehash: b120b854e1787824808dd64d95b0fa78ba6c9fa2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 63d0bdcd07be5727cddc0acc352e8358b5ff0090
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705490"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785291"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 함수
 
@@ -81,7 +82,7 @@ HRESULT GetRequestedRuntimeInfo (
  `dwlength`  
  제한이 버전 문자열의 길이에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 Winerror.h에 정의 된 대로 다음 값 외에 표준 COM (구성 요소 개체 모델) 오류 코드를 반환 합니다.  
   
@@ -126,7 +127,7 @@ HRESULT GetRequestedRuntimeInfo (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [GetRequestedRuntimeVersion 함수](getrequestedruntimeversion-function.md)
 - [GetVersionFromProcess 함수](getversionfromprocess-function.md)

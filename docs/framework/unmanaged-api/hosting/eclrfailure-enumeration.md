@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: EClrFailure 열거형'
 title: EClrFailure 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-ms.openlocfilehash: d2794b53ed17640413928b3af0d1ed3656e25f22
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9f3a2270651e5b05d2d31ed90511b8eb05dd4d44
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675765"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785590"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure 열거형
 
@@ -39,7 +40,7 @@ typedef enum {
 } EClrFailure;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -65,7 +66,7 @@ typedef enum {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRPolicyManager 인터페이스](iclrpolicymanager-interface.md)
 - [SetActionOnFailure 메서드](iclrpolicymanager-setactiononfailure-method.md)

@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <security><ws2007HttpBinding>'
 title: <ws2007HttpBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: 48b49bf69f791f90ed5b2eea8e6d412438cd9519
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ef8b82d34b318db79db061b9c01b147e619d39c4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169845"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786813"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<ws2007HttpBinding>의 \<security>
 
@@ -51,7 +52,7 @@ ms.locfileid: "91169845"
   
 ## <a name="mode-attribute"></a>Mode 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |`None`|보안이 해제되어 있습니다.|  
 |`Transport`|HTTPS를 사용하여 보안이 제공됩니다. SSL(Secure Sockets Layer) 인증서를 사용하여 서비스를 구성해야 합니다. 메시지는 HTTPS를 사용하여 완전하게 보안 처리되며, 서비스는 서비스의 SSL 인증서를 사용하여 클라이언트에 의해 인증됩니다. 클라이언트 인증은 요소의 특성을 통해 제어 됩니다 `ClientCredentials` [\<transport>](transport-of-ws2007httpbinding.md) .|  
@@ -83,7 +84,7 @@ ms.locfileid: "91169845"
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
 - <xref:System.ServiceModel.BasicHttpSecurity>
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

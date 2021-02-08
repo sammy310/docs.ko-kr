@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: ICLRTask:: GetMemStats 메서드'
 title: ICLRTask::GetMemStats 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c9e07657-1682-4c30-a336-f8658ff1a125
 topic_type:
 - apiref
-ms.openlocfilehash: 5d57bc742ebcba00f9fbe569a4be27b82a5f8055
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ed81e9ced20a43528247d70012077ffd466f9ed1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726511"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784979"
 ---
 # <a name="iclrtaskgetmemstats-method"></a>ICLRTask::GetMemStats 메서드
 
@@ -39,7 +40,7 @@ HRESULT GetMemStats (
  `pMemUsage`  
  제한이 할당 된 바이트 수를 포함 하 여 태스크의 메모리 사용에 대 한 세부 정보를 포함 하는 [COR_GC_THREAD_STATS](cor-gc-thread-stats-structure.md) 인스턴스에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -60,7 +61,7 @@ HRESULT GetMemStats (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

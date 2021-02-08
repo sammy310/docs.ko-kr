@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: 여러 결과 도형에 매핑된 저장 프로시저 사용'
 title: '방법: 여러 결과 도형에 매핑된 저장 프로시저 사용'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 26cc30790da26949fba889106d060cdef89013a3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9faf80e565656120a2601b30424df80ca10913e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185004"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785824"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>방법: 여러 결과 도형에 매핑된 저장 프로시저 사용
 

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRSyncManager:: GetMonitorOwner 메서드'
 title: ICLRSyncManager::GetMonitorOwner 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 840983a4-396d-47b4-86a0-d35f9b437cdb
 topic_type:
 - apiref
-ms.openlocfilehash: a2cb82d8071518af4d4bc3276871f3846a5a5693
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 67fb966c415009236cabef5e6b4d27cbb90d50ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687088"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785031"
 ---
 # <a name="iclrsyncmanagergetmonitorowner-method"></a>ICLRSyncManager::GetMonitorOwner 메서드
 
@@ -43,7 +44,7 @@ HRESULT GetMonitorOwner (
  `ppOwnerHostTask`  
  제한이 현재 모니터를 소유 하 고 있는에 대 한 포인터 `IHostTask` 이거나, 소유 하는 작업이 없는 경우 null입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -73,7 +74,7 @@ HRESULT GetMonitorOwner (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRSyncManager 인터페이스](iclrsyncmanager-interface.md)
 - [IHostSyncManager 인터페이스](ihostsyncmanager-interface.md)

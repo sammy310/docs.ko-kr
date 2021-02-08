@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: EXISTS (Entity SQL)'
 title: EXISTS(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
-ms.openlocfilehash: f08b3ea60a985e56e05e4686cd531f94e0bd4e18
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c6c5b86616d63b9cc3389365a96c382101463732
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166770"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786383"
 ---
 # <a name="exists-entity-sql"></a>EXISTS(Entity SQL)
 
@@ -27,7 +28,7 @@ ms.locfileid: "91166770"
  NOT  
  EXISTS의 결과를 부정하도록 지정합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  컬렉션이 비어 있지 않으면 `true`이고 비어 있으면 `false`입니다.  
   

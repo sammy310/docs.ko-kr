@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 호스팅 인터페이스'
 title: 호스팅 인터페이스
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], hosting
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
-ms.openlocfilehash: f82301da1813b8d50deebf4452d8c07809c186c5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 596de1e74fc9c80e5f8b63f40c91a9ef29abcc6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721805"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785187"
 ---
 # <a name="hosting-interfaces"></a>호스팅 인터페이스
 
@@ -34,7 +35,7 @@ ms.locfileid: "95721805"
  [.NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스](clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
  .NET Framework 4에서 도입 된 호스팅 인터페이스에 대해 설명 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [호스팅 Coclass](hosting-coclasses.md)  
   

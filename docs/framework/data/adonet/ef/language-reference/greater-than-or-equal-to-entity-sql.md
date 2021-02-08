@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: >= (크거나 같음) (Entity SQL)'
 title: '>=(보다 크거나 같음)(Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
-ms.openlocfilehash: 02e03d6d2da321bd02ea2b14e45a910853d39c4d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d05685123e3262a2d2ae01553c7c5334a7e53c40
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158424"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786279"
 ---
 # <a name="-greater-than-or-equal-to-entity-sql"></a>>= (크거나 같음) (Entity SQL)
 
@@ -22,7 +23,7 @@ expression >= expression
 ## <a name="arguments"></a>인수  
 
  `expression`  
- 모든 유효한 식입니다. 두 식은 모두 암시적으로 변환 가능한 데이터 형식이어야 합니다.  
+ 유효한 식입니다. 두 식은 모두 암시적으로 변환 가능한 데이터 형식이어야 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
 

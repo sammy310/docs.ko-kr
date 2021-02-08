@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: = (같음) (Entity SQL)'
 title: = (같음) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
-ms.openlocfilehash: 31299670d9f47ed7672b980a3415b8d214463b8e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 500c3fdde2377b3b5160436f23d051c2bcd0ee62
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148089"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786409"
 ---
 # <a name="-equals-entity-sql"></a>= (같음) (Entity SQL)
 
@@ -24,7 +25,7 @@ expression == expression
 ## <a name="arguments"></a>인수  
 
  `expression`  
- 모든 유효한 식입니다. 두 식은 모두 암시적으로 변환 가능한 데이터 형식이어야 합니다.  
+ 유효한 식입니다. 두 식은 모두 암시적으로 변환 가능한 데이터 형식이어야 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
 

@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: DbDataAdapter를 사용 하 여 데이터 수정'
 title: DbDataAdapter로 데이터 수정
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 5272a53ae0b3ac1888d01dc2a59778c6c7231619
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 749c56e8db76a469d7ebf0e503508665c2fdbd94
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150767"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786253"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter로 데이터 수정
 
@@ -36,7 +37,7 @@ ms.locfileid: "91150767"
   
 |데이터 공급자|매개 변수 명명 구문|  
 |-------------------|-----------------------------|  
-|`SqlClient`|`@`*parametername*형식의 명명된 매개 변수를 사용합니다.|  
+|`SqlClient`|`@`*parametername* 형식의 명명된 매개 변수를 사용합니다.|  
 |`OracleClient`|`:`*parmname* (또는 *parmname*) 형식의 명명된 매개 변수를 사용합니다.|  
 |`OleDb`|물음표(`?`)로 표시된 위치 매개 변수 마커를 사용합니다.|  
 |`Odbc`|물음표(`?`)로 표시된 위치 매개 변수 마커를 사용합니다.|  
@@ -46,7 +47,7 @@ ms.locfileid: "91150767"
 > [!IMPORTANT]
 > 문자열 연결을 사용하여 직접 SQL 문을 구성함으로써 공급자 특정 매개 변수를 사용하지 않는 것은 보안상 권장하지 않습니다. 매개 변수 대신 문자열 연결을 사용하면 애플리케이션이 SQL 삽입 공격에 취약해집니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [DbProviderFactories](dbproviderfactories.md)
 - [DbProviderFactory 가져오기](obtaining-a-dbproviderfactory.md)

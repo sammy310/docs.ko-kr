@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: EHostApplicationPolicy 열거형'
 title: EHostApplicationPolicy 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0be52d90-1976-4bf7-9717-908833a8a78d
 topic_type:
 - apiref
-ms.openlocfilehash: a62bf0934159f2337a59020f366a299827068c30
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a9aa2910babe819658035869c10358fd24bf46db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686230"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785508"
 ---
 # <a name="ehostapplicationpolicy-enumeration"></a>EHostApplicationPolicy 열거형
 
@@ -43,6 +44,6 @@ typedef enum _HostApplicationPolicy {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 열거형](hosting-enumerations.md)

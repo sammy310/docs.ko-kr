@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: GetRequestedRuntimeVersionForCLSID 함수'
 title: GetRequestedRuntimeVersionForCLSID 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-ms.openlocfilehash: 3afb89a42d7e26c5e89e6f9458ef3406cc0102ca
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 10fdc947181d3f1fa12b33f11cf31b68fc4285cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684189"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785265"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID 함수
 
@@ -60,7 +61,7 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
   
 - CLSID_RESOLUTION_REGISTERED: (0x1) 레지스트리를 검색 하 고 shim 정책을 적용 하도록 지정 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -78,6 +79,6 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: FLockClrVersionCallback 함수 포인터'
 title: FLockClrVersionCallback 함수 포인터
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98a4762d-9ad2-45bd-9d03-39064a028b44
 topic_type:
 - apiref
-ms.openlocfilehash: d18702a1bb15d2cc6c7b8577b91ed011e9bd0c05
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3506cd30ab2a9e5a06b03f5010c9870280a38378
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733674"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785382"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>FLockClrVersionCallback 함수 포인터
 
@@ -47,7 +48,7 @@ typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LockClrVersion 함수](lockclrversion-function.md)
 - [사용되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md)

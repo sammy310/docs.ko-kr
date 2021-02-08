@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 사용 되지 않는 CLR 호스팅 함수'
 title: 사용되지 않는 CLR 호스팅 함수
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - .NET Framework 2.0, hosting global static functions
 - hosting global static functions [.NET Framework], version 2.0
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
-ms.openlocfilehash: 9e19502672973f292991b72c7ea9b4fdc17f5707
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3d16b5829e29c5c963f4790bbb3be7adcaeedbfc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673126"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785668"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>사용되지 않는 CLR 호스팅 함수
 
@@ -161,6 +162,6 @@ ms.locfileid: "95673126"
  [_CorValidateImage 함수](corvalidateimage-function.md)  
  관리 되는 모듈 이미지의 유효성을 검사 하 고, 운영 체제 로더가 로드 된 후이를 알립니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [.NET Framework 4 호스팅 전역 정적 함수](net-framework-4-hosting-global-static-functions.md)

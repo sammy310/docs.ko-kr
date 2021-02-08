@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <services>
 title: <services>
 ms.date: 03/30/2017
 ms.assetid: 80d76ba9-2058-48ad-9b91-5e4be7e5c113
-ms.openlocfilehash: b8cb5075ba41bed5a22b152a231c7213b326a62f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6e8c0c5ad5390c097db7bf1be1f0d489e1c0d624
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153718"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786709"
 ---
 # \<services>
 
@@ -34,7 +35,7 @@ ms.locfileid: "91153718"
   
 ### <a name="attributes"></a>특성  
 
- 없음  
+ None  
   
 ### <a name="child-elements"></a>자식 요소  
   

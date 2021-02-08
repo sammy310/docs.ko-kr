@@ -1,14 +1,15 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <cookieHandler>
 title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 5f5b432830a61adab324b2b6cd2ebe6eeccca7f0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 036646ca5c8aaedebba9466ecb8c9232e87a773d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189840"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786579"
 ---
 # \<cookieHandler>
 
@@ -44,7 +45,7 @@ ms.locfileid: "91189840"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |name|작성 된 모든 쿠키의 기본 이름을 지정 합니다. 기본값은 "FedAuth"입니다.|  
 |path|작성 된 모든 쿠키에 대 한 경로 값을 지정 합니다. 기본값은 "HttpRuntime. AppDomainAppVirtualPath"입니다.|  

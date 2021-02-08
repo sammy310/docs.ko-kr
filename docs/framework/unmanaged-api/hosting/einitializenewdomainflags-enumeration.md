@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: EInitializeNewDomainFlags 열거형'
 title: EInitializeNewDomainFlags 열거형
 ms.date: 03/30/2017
 api_name:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - EInitializeNewDomainFlags enumeration [.NET Framework hosting]
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
-ms.openlocfilehash: 8350b507609e63c060cda08514200d386c37a6b3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b856d061e86c0c79b35f842975378307b79a37e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724327"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785467"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags 열거형
 
@@ -32,7 +33,7 @@ typedef enum {
 } EInitializeNewDomainFlags;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -53,7 +54,7 @@ typedef enum {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 열거형](hosting-enumerations.md)
 - [SetAppDomainManagerType 메서드](iclrdomainmanager-setappdomainmanagertype-method.md)

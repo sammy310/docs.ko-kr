@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: EXCEPT (Entity SQL)'
 title: EXCEPT(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 69cc23e5-3f8f-4b49-b20e-2f84ff11c80d
-ms.openlocfilehash: 6797f8038a83533b5a6bd41ad402daec7abdc7de
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fd66d8dc6e22a73afbfd27e6eb1fd6c8bb9d3475
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148058"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786396"
 ---
 # <a name="except-entity-sql"></a>EXCEPT(Entity SQL)
 
@@ -24,7 +25,7 @@ expression EXCEPT expression
  `expression`  
  다른 쿼리 식에서 반환된 컬렉션과 비교할 컬렉션을 반환하는 모든 유효한 쿼리 식입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  형식이 같거나 기본 형식 또는 파생 형식이 `expression`인 컬렉션입니다.  
   

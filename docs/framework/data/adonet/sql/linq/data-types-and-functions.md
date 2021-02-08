@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 데이터 형식 및 함수'
 title: 데이터 형식 및 함수
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: 456cf5acf42221379e68ff79ee57c084664e30e5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5a718d5fd4b110d35153e4486e42cee0b8a215bd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147764"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786149"
 ---
 # <a name="data-types-and-functions"></a>데이터 형식 및 함수
 

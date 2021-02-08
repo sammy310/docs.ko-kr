@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRRuntimeInfo:: SetDefaultStartupFlags 메서드'
 title: ICLRRuntimeInfo::SetDefaultStartupFlags 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98ae174f-bff0-48f1-9e05-6cb63b451824
 topic_type:
 - apiref
-ms.openlocfilehash: 8020db491c3b66be38a9f6cbcb7551721859dcd5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: eb839b2ff71836adc1b3858092f7caf5787275b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723118"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785044"
 ---
 # <a name="iclrruntimeinfosetdefaultstartupflags-method"></a>ICLRRuntimeInfo::SetDefaultStartupFlags 메서드
 
@@ -42,7 +43,7 @@ HRESULT SetDefaultStartupFlags(
  `pwzHostConfigFile`  
  진행 설정할 호스트 구성 파일의 디렉터리 경로입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT 및 메서드 오류를 나타내는 HRESULT 오류를 반환 합니다.  
   
@@ -64,7 +65,7 @@ HRESULT SetDefaultStartupFlags(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRRuntimeInfo 인터페이스](iclrruntimeinfo-interface.md)
 - [호스팅 인터페이스](hosting-interfaces.md)

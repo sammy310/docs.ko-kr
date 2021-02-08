@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ECustomDumpItemKind 열거형'
 title: ECustomDumpItemKind 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7105a6c8-6e4e-48de-ac3d-74ac75e5de2e
 topic_type:
 - apiref
-ms.openlocfilehash: 6520815106ae1084d4281d5ebeb0680bb9bb91c5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e12bfdc3cd7c38d8fbb2326e05d05b6a7b2daa27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686308"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785507"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>ECustomDumpItemKind 열거형
 
@@ -33,11 +34,11 @@ typedef enum {
 } ECustomDumpItemKind;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
-|`DUMP_ITEM_None`|나중에 사용하기 위해 예약되어 있습니다.|  
+|`DUMP_ITEM_None`|다음에 사용하도록 예약됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
 
@@ -49,7 +50,7 @@ typedef enum {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRErrorReportingManager 인터페이스](iclrerrorreportingmanager-interface.md)
 - [호스팅 열거형](hosting-enumerations.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: EPolicyAction 열거형'
 title: EPolicyAction 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-ms.openlocfilehash: 72b371d72b2f055f2840da5595d9022ffd7e2507
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fb66de2211972bd4d25ccfbab4965f315c0144a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674751"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785473"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction 열거형
 
@@ -42,7 +43,7 @@ typedef enum {
 } EPolicyAction;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -71,7 +72,7 @@ typedef enum {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [EClrFailure 열거형](eclrfailure-enumeration.md)
 - [ICLRPolicyManager 인터페이스](iclrpolicymanager-interface.md)

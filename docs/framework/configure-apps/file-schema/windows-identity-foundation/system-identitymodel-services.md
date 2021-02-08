@@ -1,18 +1,19 @@
 ---
+description: 자세한 내용은 <System.identitymodel>을 (를) 확인 하세요.
 title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: e909756a58d5008d917fca84af0e478fc4878d2f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 037a96c2620e06ef6aed85d1dbaba62aca72e9eb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91156812"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786553"
 ---
 # \<system.identityModel.services>
 
-WS-FEDERATION 프로토콜을 사용 하는 인증에 대 한 구성 섹션입니다.  
+WS-Federation 프로토콜을 사용 하는 인증에 대 한 구성 섹션입니다.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;**\<system.identityModel.services>**  
@@ -32,7 +33,7 @@ WS-FEDERATION 프로토콜을 사용 하는 인증에 대 한 구성 섹션입�
   
 ### <a name="attributes"></a>특성  
 
- 없음  
+ None  
   
 ### <a name="child-elements"></a>자식 요소  
   

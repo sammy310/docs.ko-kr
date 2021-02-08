@@ -22,6 +22,10 @@
           items:
             - name: 개요
               href: 6.0.md
+            - name: ASP.NET Core
+              items:
+                - name: 'Kestrel: 로그 메시지 특성이 변경됨'
+                  href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
             - name: Windows Forms
               items:
                 - name: NotifyIcon.Text 최대 텍스트 길이가 늘어남
@@ -298,6 +302,10 @@
       items:
         - name: ASP.NET Core
           items:
+            - name: .NET 6.0
+              items:
+                - name: 'Kestrel: 로그 메시지 특성이 변경됨'
+                  href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
             - name: .NET 5.0
               items:
                 - name: ASP.NET Core 앱이 따옴표 붙은 숫자를 역직렬화함

@@ -1,15 +1,16 @@
 ---
-title: <states>WCF의<workflowInstanceQuery>
+description: '다음에 대 한 자세한 정보: <states> WCF, <workflowInstanceQuery>'
+title: <states> WCF의 <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: 5b779cf1074687dbd648b23d04f7cf3a354a2014
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 66b3008b352d1f76c30aab9a0ec038836f33d408
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855034"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786644"
 ---
-# <a name="states-of-wcf-workflowinstancequery"></a>\<states>WCF의\<workflowInstanceQuery>
+# <a name="states-of-wcf-workflowinstancequery"></a>\<states> WCF의 \<workflowInstanceQuery>
 
 추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태의 컬렉션을 나타냅니다.  
   
@@ -55,13 +56,13 @@ ms.locfileid: "70855034"
   
 ### <a name="child-elements"></a>자식 요소
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<states>](state-of-wcf-workflowinstancequery.md)|추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<workflowInstanceQuery>](../windows-workflow-foundation/workflowinstancequery.md)|시작된 이벤트나 완료된 이벤트와 같이 워크플로 인스턴스 수명 주기의 변경 내용을 추적하는 쿼리입니다.|  
   

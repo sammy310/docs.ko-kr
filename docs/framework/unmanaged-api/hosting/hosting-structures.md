@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 호스팅 구조'
 title: 호스팅 구조체
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], hosting
 - structures [.NET Framework hosting]
 ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
-ms.openlocfilehash: 9d0349e4801c550731b6d126197003917c4a46e8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0eb7c95c22d7dc6c6018ad5071eaa47b0ecea2d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721792"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785161"
 ---
 # <a name="hosting-structures"></a>호스팅 구조체
 
@@ -43,7 +44,7 @@ ms.locfileid: "95721792"
  [StackOverflowInfo 구조체](stackoverflowinfo-structure.md)  
  발생 한 오버플로 형식과 오버플로로 인해 throw 된 예외에 대 한 정보를 저장 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [호스팅 Coclass](hosting-coclasses.md)  
   

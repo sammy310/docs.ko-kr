@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 시퀀스의 모든 요소 또는 모든 요소가 조건을 만족 하는지 확인'
 title: 시퀀스에서 일부 또는 모든 요소가 조건을 만족하는지 확인
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 339ec145-826c-46d2-8cf2-3acd252cd072
-ms.openlocfilehash: 65a9a7cf289c2006bab14cb384efb07eaea7f7a0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a46cf7e4e213eba830dc203f9266a408103cee80
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194429"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786110"
 ---
 # <a name="determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition"></a>시퀀스에서 일부 또는 모든 요소가 조건을 만족하는지 확인
 

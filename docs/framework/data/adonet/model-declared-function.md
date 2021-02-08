@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 모델 선언 함수'
 title: 모델 선언 함수
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: fb30dd86c29d6a7fff6f2c71d5fd892326e1fda4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c9a5cedb8c9706aa0d299635f60f762b92ca6d78
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147855"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99786266"
 ---
 # <a name="model-declared-function"></a>모델 선언 함수
 
@@ -15,7 +16,7 @@ ms.locfileid: "91147855"
   
  모델 선언 함수의 선언에는 다음 정보가 들어 있습니다.  
   
-- 함수의 이름. (필수)  
+- 함수의 이름입니다. (필수)  
   
 - 반환 값의 형식 (선택 사항)  
   
