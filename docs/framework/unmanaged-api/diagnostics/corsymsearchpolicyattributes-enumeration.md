@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: CorSymSearchPolicyAttributes 열거형'
 title: CorSymSearchPolicyAttributes 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-ms.openlocfilehash: 2d5d19fb3fb7c727227827dacbaac2c910ac8b3c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a9af0e96809ec8eba5c03c2e372e818c74914baf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725224"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800476"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes 열거형
 
@@ -40,7 +41,7 @@ typedef enum CorSymSearchPolicyAttributes
 } CorSymSearchPolicyAttributes;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -53,6 +54,6 @@ typedef enum CorSymSearchPolicyAttributes
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 열거형](diagnostics-symbol-store-enumerations.md)

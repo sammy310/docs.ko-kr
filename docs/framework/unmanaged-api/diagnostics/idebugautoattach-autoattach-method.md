@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IDebugAutoAttach:: AutoAttach 메서드'
 title: IDebugAutoAttach::AutoAttach 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3cf3bd9c-7d88-4afa-a476-94cdc7609aa6
 topic_type:
 - apiref
-ms.openlocfilehash: 64dd653bb0d4e383075a999e0803e4acfd0fae3d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8abd35b1d94fc074d4dafe424c52c274b1de1541
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720102"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800359"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach 메서드
 
@@ -56,7 +57,7 @@ HRESULT AutoAttach
  `pszSessionId`  
  진행 디버그 동사에 의해 전달 된 문자열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK 합니다.  
   
@@ -64,6 +65,6 @@ HRESULT AutoAttach
 
  **헤더:** DbgAutoAttach  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IDebugAutoAttach 인터페이스](idebugautoattach-interface.md)

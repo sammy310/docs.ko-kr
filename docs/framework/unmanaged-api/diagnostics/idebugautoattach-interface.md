@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IDebugAutoAttach 인터페이스'
 title: IDebugAutoAttach 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4cc51ac-c1d6-41b9-ab8e-ef0073f13241
 topic_type:
 - apiref
-ms.openlocfilehash: 9cb0f7a93c370d5ce291f3a038af70770aa506e1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 00c88bad70c91ae8e8c9d3b0e4bc4693fbb89df6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720089"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800372"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach 인터페이스
 
@@ -35,6 +36,6 @@ ms.locfileid: "95720089"
 
  **헤더:** DbgAutoAttach  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 진단 기호 저장소 인터페이스'
 title: 진단 기호 저장소 인터페이스
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
-ms.openlocfilehash: e376544a9d428ce5110a7e38b92a8e830f574664
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 253a6e5eaa97c91332bca62f8fc47ad2945bf741
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725185"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800437"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>진단 기호 저장소 인터페이스
 
@@ -115,7 +116,7 @@ ms.locfileid: "95725185"
  [ISymUnmanagedWriter5 인터페이스](isymunmanagedwriter5-interface.md)  
  ISymUnmanagedWriter5 인터페이스입니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [진단 기호 저장소 열거형](diagnostics-symbol-store-enumerations.md)  
   

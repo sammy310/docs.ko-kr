@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 진단 기호 저장소 구조'
 title: 진단 기호 저장소 구조체
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - diagnostics symbol store structures [.NET Framework]
 - structures [.NET Framework debugging]
 ms.assetid: 0d423791-d40d-45c6-a82b-1a165768d737
-ms.openlocfilehash: df62ec39f781f24a81a9c768a5920eded99880c3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 584e7840a5160ff8fcad3731cd6c4f6cae79d407
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725172"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800398"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>진단 기호 저장소 구조체
 
@@ -29,7 +30,7 @@ ms.locfileid: "95725172"
  [USER_THREAD 구조체](user-thread-structure.md)  
  스레드에 대 한 정보를 디버거에 제공 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)  
   

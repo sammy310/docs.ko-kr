@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CorSymAddrKind 열거형'
 title: CorSymAddrKind 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3ef841c2-cade-42ee-ba34-2ef91d6d0879
 topic_type:
 - apiref
-ms.openlocfilehash: f71d8956e8706cdc71b94b6e6e2e8210e5b9161e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 94ee9f3da63a33a9f4a80289dbf9b03969d37b3d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725237"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800502"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 열거형
 
@@ -43,7 +44,7 @@ typedef enum CorSymAddrKind
 } CorSymAddrKind;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -62,6 +63,6 @@ typedef enum CorSymAddrKind
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 열거형](diagnostics-symbol-store-enumerations.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: WriteableMetadataUpdateMode 열거형'
 title: WriteableMetadataUpdateMode 열거형
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 6758f4d3-6bc7-4c99-8582-e9be00566784
 topic_type:
 - apiref
-ms.openlocfilehash: 1553e18da10844da28bbaf84ba76bc5c34ca49b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b8136963e315c429643bd0ebf4bdb509d5173bec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725302"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800515"
 ---
 # <a name="writeablemetadataupdatemode-enumeration"></a>WriteableMetadataUpdateMode 열거형
 
@@ -34,7 +35,7 @@ typedef enum WriteableMetadataUpdateMode {
 } WriteableMetadataUpdateMode;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버 이름|설명|  
 |-----------------|-----------------|  
@@ -57,7 +58,7 @@ typedef enum WriteableMetadataUpdateMode {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)
 - [SetWriteableMetadataUpdateMode 메서드](icordebugprocess7-setwriteablemetadataupdatemode-method.md)
