@@ -1,4 +1,5 @@
 ---
+description: '#ExternalSource 지시문에 대해 자세히 알아보세요.'
 title: '#ExternalSource 지시문'
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: e4c7704c32c3a6c73e069d0b7129d5386696b438
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1f2e73aa152fbe2d97edcde912626696faacd5af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797239"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource 지시문
 
 소스 코드의 특정 줄과 소스 외부의 텍스트 간 매핑을 나타냅니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 #ExternalSource( StringLiteral , IntLiteral )  

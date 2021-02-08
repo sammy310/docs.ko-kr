@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 메시지 큐에 Windows Communication Foundation'
 title: Windows Communication Foundation에서 메시지 큐로
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: a6e322936740f7d88d30b9a205ac937a807bedc1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef4fe5f23b4ce462b13e12b706a3a72225a74f8a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552929"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798188"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation에서 메시지 큐로
 
@@ -143,7 +144,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 
     2. **기능** 탭을 확장 합니다.
 
-    3. **개인 메시지 큐**를 마우스 오른쪽 단추로 클릭 한 다음 **새**  >  **개인 큐**를 선택 합니다.
+    3. **개인 메시지 큐** 를 마우스 오른쪽 단추로 클릭 한 다음 **새**  >  **개인 큐** 를 선택 합니다.
 
     4. **트랜잭션** 상자를 확인 합니다.
 
@@ -174,7 +175,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [방법: WCF 엔드포인트 및 메시지 큐 애플리케이션과 메시지 교환](../feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [메시지 큐](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

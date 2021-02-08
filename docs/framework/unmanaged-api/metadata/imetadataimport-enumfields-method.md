@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataImport:: EnumFields 메서드'
 title: IMetaDataImport::EnumFields 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-ms.openlocfilehash: 74035e9551cb1d622b326e511c3884e1eadf057f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5cb9b3a47dc4c51b9eba24b9519e4b97846c1a6d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711600"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799384"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields 메서드
 
@@ -55,7 +56,7 @@ HRESULT EnumFields (
  `pcTokens`  
  제한이 에서 반환 되는 실제 FieldDef 토큰 수입니다 `rFields` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -72,7 +73,7 @@ HRESULT EnumFields (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

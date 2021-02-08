@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 잘못 된 파일 모드'
 title: 파일 모드가 잘못되었습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-ms.openlocfilehash: 99b84902ddf032f2ecb6e26400e200bea862dfdf
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: da792407fb37f5c206be7ff39da14d314ef1e2d2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875143"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797083"
 ---
 # <a name="bad-file-mode"></a>파일 모드가 잘못되었습니다.
 
@@ -35,7 +36,7 @@ ms.locfileid: "90875143"
   
 - `My.Computer.FileSystem` 개체에서 사용할 수 있는 기능을 사용합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.FileSystem>
 - [문제 해결: 텍스트 파일 읽기 및 쓰기](../../developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

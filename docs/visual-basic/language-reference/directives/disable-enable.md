@@ -1,16 +1,17 @@
 ---
+description: '다음에 대 한 자세한 정보: #Disable 및 #Enable 지시문 (Visual Basic)'
 title: 지시문 사용 및 사용 안 함
 ms.date: 01/28/2021
 helpviewer_keywords:
 - directives, enable
 - directives, disable
 - disable directive
-ms.openlocfilehash: 3104b25c903465f3a650304f477b25a74591c8ba
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: d600cc959639a3f70bca5678fbc81aae0806c9cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99217239"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797265"
 ---
 # <a name="disable-and-enable-directives-visual-basic"></a>#Disable 및 #Enable 지시문 (Visual Basic)
 
@@ -30,4 +31,4 @@ ms.locfileid: "99217239"
 ## <a name="see-also"></a>참조
 
 - [Visual Basic 언어 참조](../index.md)
-- [코드 분석 경고를 표시 하지 않는 방법](../../../fundamentals/code-analysis/suppress-warnings.md)
+- [코드 분석 경고를 표시하지 않는 방법](../../../fundamentals/code-analysis/suppress-warnings.md)

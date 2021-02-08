@@ -1,4 +1,5 @@
 ---
+description: 'IMetaDataImport:: EnumEvents 메서드에 대해 자세히 알아보세요.'
 title: IMetaDataImport::EnumEvents 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-ms.openlocfilehash: 3a181f1ef29810058c57bdb13338a01aa1fe7dff
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e944c15a19314b315e01493836ce078fccc917eb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700472"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799410"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents 메서드
 
@@ -55,7 +56,7 @@ HRESULT EnumEvents (
  `pcEvents`  
  제한이 에서 반환 되는 실제 이벤트 수 `rEvents` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -72,7 +73,7 @@ HRESULT EnumEvents (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

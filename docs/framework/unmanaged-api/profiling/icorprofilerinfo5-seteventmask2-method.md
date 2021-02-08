@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo5:: SetEventMask2 메서드'
 title: ICorProfilerInfo5::SetEventMask2 메서드
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 05dbbe2b-049c-4a60-be69-2ad7a949405e
 topic_type:
 - apiref
-ms.openlocfilehash: 75e2bfc8dfae4d0cd453eba0697d6ee2f0da7133
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2928ec408f2fdeb363164530258a3bf5c9719e2b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733791"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799007"
 ---
 # <a name="icorprofilerinfo5seteventmask2-method"></a>ICorProfilerInfo5::SetEventMask2 메서드
 
@@ -56,7 +57,7 @@ HRESULT SetEventMask2(        [in] DWORD dwEventsLow,        [in] DWORD dwEvents
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo5 인터페이스](icorprofilerinfo5-interface.md)
 - [GetEventMask2 메서드](icorprofilerinfo5-geteventmask2-method.md)

@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: 인수를 선택 하지 않음 (Visual Basic)'
 title: 선택적 인수가 아닙니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID449
 ms.assetid: 76e7bcf3-24ed-4cd5-945b-b98f1c76944b
-ms.openlocfilehash: cac81d364d71af65d922faa2f2db5d7ede415126
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3683f07174b980f6ceebf42151658a5be4615310
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409987"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797161"
 ---
 # <a name="argument-not-optional-visual-basic"></a>필수 인수입니다(Visual Basic).
 

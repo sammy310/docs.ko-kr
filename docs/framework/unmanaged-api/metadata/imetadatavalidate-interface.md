@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataValidate 인터페이스'
 title: IMetaDataValidate 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: db98608a-e85c-4f50-9d7b-5f57a426ddb6
 topic_type:
 - apiref
-ms.openlocfilehash: 518ee65bc684f643bf4f608223c0fa40ea3f0dd9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fbdbdf6880d7cb5ee6d4c21df587eb63b26b456e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685541"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799220"
 ---
 # <a name="imetadatavalidate-interface"></a>IMetaDataValidate 인터페이스
 
@@ -42,6 +43,6 @@ ms.locfileid: "95685541"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 인터페이스](metadata-interfaces.md)

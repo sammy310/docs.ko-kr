@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorRuntimeHost:: SwitchOutLogicalThreadState 메서드'
 title: ICorRuntimeHost::SwitchOutLogicalThreadState 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e1968f0b-2675-4dc2-8507-46164e1df154
 topic_type:
 - apiref
-ms.openlocfilehash: e41ead54b50b8b28ebd9ee9c97d15ca6c71e7313
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b4190ebe6b2c260f85afd8dd17127d0c63dca6c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690124"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799449"
 ---
 # <a name="icorruntimehostswitchoutlogicalthreadstate-method"></a>ICorRuntimeHost::SwitchOutLogicalThreadState 메서드
 
@@ -49,6 +50,6 @@ HRESULT SwitchOutLogicalThreadState(
   
  **.NET Framework 버전:** 1.0, 1.1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorRuntimeHost 인터페이스](icorruntimehost-interface.md)

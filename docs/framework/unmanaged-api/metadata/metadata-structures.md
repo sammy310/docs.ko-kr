@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 메타 데이터 구조'
 title: 메타데이터 구조체
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], metadata
 - metadata structures [.NET Framework]
 ms.assetid: 3eeaec36-5e1a-4a62-9de3-ea3942f67d04
-ms.openlocfilehash: 591699e2d3e58f7efc1c72d2c47f2f956198fcf0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 992181abd4d78560c03f1463d55567a3f9d62457
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685476"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799106"
 ---
 # <a name="metadata-structures"></a>메타데이터 구조체
 
@@ -34,7 +35,7 @@ ms.locfileid: "95685476"
  [OSINFO 구조체](osinfo-structure.md)  
  운영 체제에 대한 정보를 포함합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [메타데이터 인터페이스](metadata-interfaces.md)  
   

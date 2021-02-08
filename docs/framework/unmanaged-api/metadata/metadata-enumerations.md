@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 메타 데이터 열거형'
 title: 메타데이터 열거형
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - metadata enumerations [.NET Framework]
 - unmanaged enumerations [.NET Framework], metadata
 ms.assetid: 711ab251-cfdb-4280-aaa6-9bc1b341cdc3
-ms.openlocfilehash: d0a146ff5b6887e6678ee69d7e39731bd109c6d5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 790da8ce7573e607ce072dc384aeac9fecb389a6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672905"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799163"
 ---
 # <a name="metadata-enumerations"></a>메타데이터 열거형
 
@@ -157,7 +158,7 @@ ms.locfileid: "95672905"
  [COUNINITIEE 열거형](couninitiee-enumeration.md)  
  공용 언어 런타임을 초기화할 때 [CoUninitializeEE](../hosting/couninitializeee-function.md) 에서 사용 하는 상수를 지정 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [메타데이터 인터페이스](metadata-interfaces.md)  
   

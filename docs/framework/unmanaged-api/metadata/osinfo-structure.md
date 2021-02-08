@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: OSINFO Structure'
 title: OSINFO 구조체
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fac7b480-7adb-4450-a5e9-690fed81ffae
 topic_type:
 - apiref
-ms.openlocfilehash: 49e29cc0367d5162dffcd641b163fd7b9a56ffd0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5027ef5cf4137aa1e781134b325407e1251fdd31
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672892"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799111"
 ---
 # <a name="osinfo-structure"></a>OSINFO 구조체
 
@@ -35,7 +36,7 @@ typedef struct {
 } OSINFO;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -57,7 +58,7 @@ typedef struct {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 구조체](metadata-structures.md)
 - [IMetaDataAssemblyEmit 인터페이스](imetadataassemblyemit-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerModuleEnum:: Next 메서드'
 title: ICorProfilerModuleEnum::Next 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3cea59d-7622-4323-897a-0a464c40f77f
 topic_type:
 - apiref
-ms.openlocfilehash: 94c2c159cf386e00dfc0d1df97536d7ade53407e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 06c9528d5468847a905e84fe38591c9b5ef3ee44
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732946"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798994"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>ICorProfilerModuleEnum::Next 메서드
 
@@ -46,7 +47,7 @@ HRESULT Next([in]  ULONG      celt,
  `pceltFetched`  
  [out] `ids` 배열에 실제로 반환된 모듈 수에 대한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -65,7 +66,7 @@ HRESULT Next([in]  ULONG      celt,
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerModuleEnum 인터페이스](icorprofilermoduleenum-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

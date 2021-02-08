@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 잘못 된 DLL 호출 규칙'
 title: DLL 호출 규칙이 잘못되었습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID49
 ms.assetid: 7c7def45-b0ab-450f-ad3f-4383dfd9aed7
-ms.openlocfilehash: 0481bd5e4dfe7a24dff454d0754b519509fa967f
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 7e98ce5131d440a12bff4a4630da087102bdc4da
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875735"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797096"
 ---
 # <a name="bad-dll-calling-convention"></a>DLL 호출 규칙이 잘못되었습니다.
 
@@ -23,8 +24,8 @@ DLL (동적 연결 라이브러리)로 전달 되는 인수는 루틴에서 예�
   
 3. DLL 루틴에 값으로 인수가 필요한 경우 `ByVal` 루틴 선언에서 해당 인수에 대해가 지정 되어 있는지 확인 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [오류 형식](../../programming-guide/language-features/error-types.md)
+- [오류 유형](../../programming-guide/language-features/error-types.md)
 - [Call 문](../statements/call-statement.md)
 - [Declare 문](../statements/declare-statement.md)

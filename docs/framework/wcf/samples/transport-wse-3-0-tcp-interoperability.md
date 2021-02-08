@@ -1,13 +1,14 @@
 ---
+description: ': 전송: WSE 3.0 TCP 상호 운용성에 대해 자세히 알아보세요.'
 title: '전송: WSE 3.0 TCP 상호 운용성'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: c268043a9d5c3f6a48b7b66dc807e4e30f029f61
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2e0a5927b8f16116dc07910970268ff6ec35f396
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292508"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798240"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>전송: WSE 3.0 TCP 상호 운용성
 

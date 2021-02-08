@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: WorkflowHostingEndpoint 다시 시작 책갈피'
 title: WorkflowHostingEndpoint 다시 시작 책갈피
 ms.date: 03/30/2017
 ms.assetid: a708064f-50b0-4751-b44e-d5410d08d451
-ms.openlocfilehash: b7f701c012c05dcc7e05c56123436af3dbacf4c4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3da4579a7c0c09122cacaa5e3db39359b8e62936
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267444"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798136"
 ---
 # <a name="workflowhostingendpoint-resume-bookmark"></a>WorkflowHostingEndpoint 다시 시작 책갈피
 
@@ -31,7 +32,7 @@ ms.locfileid: "96267444"
   
 1. 솔루션을 빌드합니다.  
   
-2. 애플리케이션을 실행합니다. 워크플로 인스턴스를 만들 때 인스턴스 ID를 포함하는 메시지가 `CreationEndpoint` 콘솔에 표시됩니다. "Hello World!" 메시지 는 책갈피가 성공적으로 다시 시작 될 때 인쇄 됩니다.  
+2. 애플리케이션을 실행합니다. 워크플로 인스턴스를 만들 때 인스턴스 ID를 포함하는 메시지가 `CreationEndpoint` 콘솔에 표시됩니다. "헬로 월드!" 메시지 는 책갈피가 성공적으로 다시 시작 될 때 인쇄 됩니다.  
   
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

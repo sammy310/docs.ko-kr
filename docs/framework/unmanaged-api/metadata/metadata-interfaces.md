@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 메타 데이터 인터페이스'
 title: 메타데이터 인터페이스
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - metadata interfaces [.NET Framework]
 - interfaces (.NET Framework metadata]
 ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
-ms.openlocfilehash: 5d9b48df740668797a7c901219401e9ea304a8f8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4851fbc93bfa29f1b4b5015c82f05c1b200b9092
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672883"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799137"
 ---
 # <a name="metadata-interfaces"></a>메타데이터 인터페이스
 
@@ -73,7 +74,7 @@ ms.locfileid: "95672883"
  [IMetaDataValidate 인터페이스](imetadatavalidate-interface.md)  
  메타데이터 서명의 유효성을 검사하는 데 사용할 메서드를 제공합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [메타데이터 전역 정적 함수](metadata-global-static-functions.md)  
   

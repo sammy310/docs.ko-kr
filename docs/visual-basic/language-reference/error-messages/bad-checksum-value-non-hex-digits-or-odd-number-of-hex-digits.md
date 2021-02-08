@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: BC42033: 잘못 된 체크섬 값, 16 진수가 아닌 숫자 또는 홀수의 16 진수'
 title: 체크섬 값이 잘못되었습니다. 16진수가 아니거나 16진수 값이 홀수입니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: e380033f9353781ee7dc86696e93c8d0f18a1a73
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 8af1ca5e3f733278054300c2a79134817c56cf5c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162975"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797109"
 ---
 # <a name="bc42033-bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>BC42033: 잘못 된 체크섬 값, 16 진수가 아니거나 16 진수 숫자가 홀수입니다.
 

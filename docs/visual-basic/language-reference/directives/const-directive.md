@@ -1,4 +1,5 @@
 ---
+description: '#Const 지시문에 대해 자세히 알아보세요.'
 title: '#Const 지시문'
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 91152771a4ef5ec74a7408511ccc2afe28dd442e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9597666ee1320f5dfda226040f93a84eb60a3deb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415468"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797278"
 ---
 # <a name="const-directive"></a>#Const 지시문
 
 Visual Basic에 대 한 조건부 컴파일러 상수를 정의 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 #Const constname = expression  
@@ -35,10 +36,10 @@ Visual Basic에 대 한 조건부 컴파일러 상수를 정의 합니다.
 ## <a name="parts"></a>부분  
 
  `constname`  
- 필수 요소. 정의 되는 상수의 이름입니다.  
+ 필수 사항입니다. 정의 되는 상수의 이름입니다.  
   
  `expression`  
- 필수 요소. 리터럴, 기타 조건부 컴파일러 상수 또는를 제외한 모든 산술 연산자 또는 논리 연산자를 포함 하는 모든 조합 `Is` 입니다.  
+ 필수 사항입니다. 리터럴, 기타 조건부 컴파일러 상수 또는를 제외한 모든 산술 연산자 또는 논리 연산자를 포함 하는 모든 조합 `Is` 입니다.  
   
 ## <a name="remarks"></a>설명  
 

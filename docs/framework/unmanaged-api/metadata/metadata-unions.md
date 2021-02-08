@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 메타 데이터 공용 구조체'
 title: 메타데이터 공용 구조체
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - unions [.NET Framework metadata]
 - metadata unions [.NET Framework]
 ms.assetid: 2c7534cf-34fa-470a-b29e-6cf5a7bd03d3
-ms.openlocfilehash: c6876d17fba842d9e33e030ef2863b210ba7fd64
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b40275707155f79fe3f242ed7d7a4de7e897dd4b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672840"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799078"
 ---
 # <a name="metadata-unions"></a>메타데이터 공용 구조체
 
@@ -22,7 +23,7 @@ ms.locfileid: "95672840"
  [CeeSectionRelocExtra 공용 구조체](ceesectionrelocextra-union.md)  
  [ICeeGen](iceegen-interface.md) 인터페이스에서 섹션의 위치를 다시 배치 하는 데 사용 하는 주소 오프셋을 나타냅니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [메타데이터 인터페이스](metadata-interfaces.md)  
   

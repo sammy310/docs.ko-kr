@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 잘못 된 레코드 길이'
 title: 레코드 길이가 잘못되었습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID59
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
-ms.openlocfilehash: 6967015572b2567f52697f7ddcb1ff594013a2c4
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 820597a3c4e157894aadb280ae141098cae7eed4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869259"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797057"
 ---
 # <a name="bad-record-length"></a>레코드 길이가 잘못되었습니다.
 
@@ -29,7 +30,7 @@ ms.locfileid: "90869259"
   
 3. 또는의 변수가 이거나를 포함 하는 경우 `FilePut` `FilePutObject` `Variant` 가변 길이 문자열이 문의 절에 지정 된 레코드 길이 보다 4 바이트 이상 길어야 합니다 `Len` `FileOpen` .  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>
 - <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>

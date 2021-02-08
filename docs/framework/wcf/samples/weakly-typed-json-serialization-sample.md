@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 약한 형식의 JSON Serialization 샘플'
 title: 약한형 JSON Serialization 샘플
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 65330e77622920f02b12bd69348aa635529e030e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 82dba83b27e569c2356598b249c0b9e29ed2e847
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244433"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99798162"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>약한형 JSON Serialization 샘플
 

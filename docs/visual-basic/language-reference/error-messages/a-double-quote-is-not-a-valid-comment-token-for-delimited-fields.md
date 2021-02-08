@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 큰따옴표는 EscapeQuote이 True로 설정 된 구분 기호로 분리 된 필드에 대 한 올바른 주석 토큰이 아닙니다.'
 title: EscapeQuote가 True로 설정되어 있으면 큰따옴표가 구분된 필드의 올바른 주석 토큰이 아닙니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_InvalidComment
 ms.assetid: 636d4b81-00ba-4cfd-98f7-4d57036f494d
-ms.openlocfilehash: a66d43d249a12ffa552073866f2e0a1e6d453608
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d0668c6ffb479e649d4d3900070dc125db6dec05
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409943"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797213"
 ---
 # <a name="a-double-quote-is-not-a-valid-comment-token-for-delimited-fields-where-escapequote-is-set-to-true"></a>EscapeQuote가 True로 설정되어 있으면 큰따옴표가 구분된 필드의 올바른 주석 토큰이 아닙니다.
 

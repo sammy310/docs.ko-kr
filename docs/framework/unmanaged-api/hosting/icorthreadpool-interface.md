@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorThreadpool 인터페이스'
 title: ICorThreadpool 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 18485a27-cae3-4c6a-baa8-f7df601122d5
 topic_type:
 - apiref
-ms.openlocfilehash: 2be1c5273a5450ce0f793ffa1fc10746e2f1161f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0aa3eb25c53bbcbf4db65b6d719b66d5cc755e3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733947"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799423"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool 인터페이스
 
@@ -54,6 +55,6 @@ ms.locfileid: "95733947"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)

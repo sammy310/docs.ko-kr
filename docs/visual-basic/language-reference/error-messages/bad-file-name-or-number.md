@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 잘못 된 파일 이름 또는 숫자'
 title: 파일 이름 또는 번호가 잘못되었습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
-ms.openlocfilehash: d57a9e78e6ae179d3050e5a92399ca731fa16ba7
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6e568a721fb3606c5b4bc046041c9d6f24b6d126
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874900"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797070"
 ---
 # <a name="bad-file-name-or-number"></a>파일 이름 또는 번호가 잘못되었습니다.
 
@@ -29,7 +30,7 @@ ms.locfileid: "90874900"
   
 3. 파일 이름을 확인 하 여 운영 체제 규칙을 준수 하는지 확인 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>
 - [Visual Basic 명명 규칙](../../programming-guide/program-structure/naming-conventions.md)
