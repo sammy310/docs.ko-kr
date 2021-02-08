@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRTask:: YieldTask 메서드'
 title: ICLRTask::YieldTask 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8eb4095-3a8f-4be3-9446-63e9893dce7d
 topic_type:
 - apiref
-ms.openlocfilehash: 7b9b47daa96ffcb1f66b462ff8e227250c5a81ca
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b72b31b0a1c10a2b0b1e2ad379b140ff33419fa1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720284"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784927"
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask 메서드
 
@@ -57,7 +58,7 @@ HRESULT YieldTask ();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

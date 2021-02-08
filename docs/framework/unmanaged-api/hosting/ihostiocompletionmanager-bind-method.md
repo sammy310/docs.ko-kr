@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostIoCompletionManager:: Bind 메서드'
 title: IHostIoCompletionManager::Bind 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: acd74cb5-7e22-4a07-83c3-82288e1abd9f
 topic_type:
 - apiref
-ms.openlocfilehash: 5231db8de6129ed593e4e0d508b312b7034c01f0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2105bf06c23f70588d0c1bc0cd849b8e810d121e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733908"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784862"
 ---
 # <a name="ihostiocompletionmanagerbind-method"></a>IHostIoCompletionManager::Bind 메서드
 
@@ -43,7 +44,7 @@ HRESULT Bind (
  `hHandle`  
  진행 바인딩할 운영 체제 핸들 `hPort` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -71,6 +72,6 @@ HRESULT Bind (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRIoCompletionManager 인터페이스](iclriocompletionmanager-interface.md)

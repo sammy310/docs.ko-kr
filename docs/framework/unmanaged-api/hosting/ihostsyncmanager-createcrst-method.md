@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostSyncManager:: CreateCrst 메서드'
 title: IHostSyncManager::CreateCrst 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ac278cc8-2540-4a6c-b5c6-b90c3970b4f4
 topic_type:
 - apiref
-ms.openlocfilehash: 27861a9258916f4c188d981c44833e5be4c507f2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7d1880f1553d159f62efe65afe8368a60b5bf9cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682883"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784810"
 ---
 # <a name="ihostsyncmanagercreatecrst-method"></a>IHostSyncManager::CreateCrst 메서드
 
@@ -39,7 +40,7 @@ HRESULT CreateCrst (
  `ppCrst`  
  제한이 호스트에서 구현 하는 [IHostCrst](ihostcrst-interface.md) 인스턴스의 주소에 대 한 포인터 이거나, 임계 영역을 만들 수 없는 경우 null입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -65,7 +66,7 @@ HRESULT CreateCrst (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRSyncManager 인터페이스](iclrsyncmanager-interface.md)
 - [IHostCrst 인터페이스](ihostcrst-interface.md)

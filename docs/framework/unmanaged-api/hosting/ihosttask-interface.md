@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: IHostTask 인터페이스'
 title: IHostTask 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a71dbbd5-64b8-47eb-9f03-8e8c85fbe2bc
 topic_type:
 - apiref
-ms.openlocfilehash: 10efe853c9a7ad7676058bc01b07063c557623d8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c46bbdd2e881c20d1ffd634bec8ddfa3b70b0f82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699224"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784667"
 ---
 # <a name="ihosttask-interface"></a>IHostTask 인터페이스
 
@@ -50,7 +51,7 @@ CLR (공용 언어 런타임)이 호스트와 통신 하 여 작업을 관리 �
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

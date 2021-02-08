@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostTaskManager:: CallNeedsHostHook 메서드'
 title: IHostTaskManager::CallNeedsHostHook 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b60f1f59-9825-4b57-961f-d2979518e6a7
 topic_type:
 - apiref
-ms.openlocfilehash: 7c7af1bbf3d13c3f66d525dfce69d8b49fbe045c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 777e1e6c4ac094a7af077c481415167f57eed14d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675141"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784589"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>IHostTaskManager::CallNeedsHostHook 메서드
 
@@ -43,7 +44,7 @@ HRESULT CallNeedsHostHook (
  `pbCallNeedsHostHook`  
  제한이 호스트에서 후크를 호출 해야 하는지 여부를 나타내는 부울 값에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -70,7 +71,7 @@ HRESULT CallNeedsHostHook (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

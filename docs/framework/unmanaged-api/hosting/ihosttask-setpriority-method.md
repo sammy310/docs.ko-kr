@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: IHostTask:: SetPriority 메서드'
 title: IHostTask::SetPriority 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd8c379b-c7a0-434f-8e23-899bd26be75d
 topic_type:
 - apiref
-ms.openlocfilehash: 80b4bb2f6a547250acbc16a89e7396c60cc50d87
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c3e8fee954e5cbea2d084141a4b2d22d2fa5e95b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720453"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784641"
 ---
 # <a name="ihosttasksetpriority-method"></a>IHostTask::SetPriority 메서드
 
@@ -39,7 +40,7 @@ HRESULT SetPriority (
  `newPriority`  
  진행 현재 인스턴스에서 나타내는 작업의 요청 된 스레드 우선 순위 값을 나타내는 정수입니다 `IHostTask` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -85,7 +86,7 @@ HRESULT SetPriority (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading.Thread>
 - [ICLRTask 인터페이스](iclrtask-interface.md)

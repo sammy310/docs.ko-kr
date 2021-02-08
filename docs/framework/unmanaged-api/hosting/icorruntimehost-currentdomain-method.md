@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorRuntimeHost:: CurrentDomain 메서드'
 title: ICorRuntimeHost::CurrentDomain 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd2afb38-675b-4c3c-a9f3-8ab3b133eb02
 topic_type:
 - apiref
-ms.openlocfilehash: 33d56354a560949b2f451df9ef82d4f433951195
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fd75028b57475a620cc88a75016911dd0ab55b2e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715565"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784901"
 ---
 # <a name="icorruntimehostcurrentdomain-method"></a>ICorRuntimeHost::CurrentDomain 메서드
 
@@ -39,7 +40,7 @@ HRESULT CurrentDomain (
  `pAppDomain`  
  제한이 <xref:System.AppDomain?displayProperty=nameWithType> 스레드의 현재 응용 프로그램 도메인을 나타내는 형식의 포인터입니다. 이 포인터는 형식화 되어 `IUnknown` 있으므로 호출자가 일반적으로를 호출 `QueryInterface` 하 여 형식의 포인터를 가져와야 합니다 <xref:System._AppDomain> .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -58,7 +59,7 @@ HRESULT CurrentDomain (
   
  **.NET Framework 버전:** 1.0, 1.1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>

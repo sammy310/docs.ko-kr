@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostTaskManager:: BeginThreadAffinity 메서드'
 title: IHostTaskManager::BeginThreadAffinity 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fea3ab88-ce41-4c5a-847b-bb78cd748da6
 topic_type:
 - apiref
-ms.openlocfilehash: 6f6d57a52d960c975d468f370477b5d7e29c3aa2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 15ee917f5c81ee605c0cb4df3180041797c18daf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727343"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784602"
 ---
 # <a name="ihosttaskmanagerbeginthreadaffinity-method"></a>IHostTaskManager::BeginThreadAffinity 메서드
 
@@ -57,7 +58,7 @@ HRESULT BeginThreadAffinity ();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

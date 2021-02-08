@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostSyncManager:: CreateAutoEvent 메서드'
 title: IHostSyncManager::CreateAutoEvent 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3153643e-cf5c-4b44-8e0e-c2b22cb08208
 topic_type:
 - apiref
-ms.openlocfilehash: 37c306df76a796d6e0a2b7540ebd85c13865dfbe
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 69767f1e01ead93c874eecf01c3167a5dc0e4b82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682980"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784849"
 ---
 # <a name="ihostsyncmanagercreateautoevent-method"></a>IHostSyncManager::CreateAutoEvent 메서드
 
@@ -39,7 +40,7 @@ HRESULT CreateAutoEvent (
  `ppEvent`  
  제한이 호스트에서 구현 하는 [IHostAutoEvent](ihostautoevent-interface.md) 인스턴스의 주소에 대 한 포인터 이거나, 이벤트 개체를 만들 수 없는 경우 null입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -65,7 +66,7 @@ HRESULT CreateAutoEvent (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRSyncManager 인터페이스](iclrsyncmanager-interface.md)
 - [IHostAutoEvent 인터페이스](ihostautoevent-interface.md)

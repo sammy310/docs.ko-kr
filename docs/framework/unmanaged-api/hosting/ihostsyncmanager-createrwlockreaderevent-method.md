@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostSyncManager:: CreateRWLockReaderEvent 메서드'
 title: IHostSyncManager::CreateRWLockReaderEvent 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 68c4ea19-c47c-45c6-b420-d3a2ba1c2d50
 topic_type:
 - apiref
-ms.openlocfilehash: 7c9bf2186d3dc4500694225ea4023df3609b9010
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: be20757924aa45d2a44edab9bf921026aa0247a5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704385"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784771"
 ---
 # <a name="ihostsyncmanagercreaterwlockreaderevent-method"></a>IHostSyncManager::CreateRWLockReaderEvent 메서드
 
@@ -47,7 +48,7 @@ HRESULT CreateRWLockReaderEvent (
  `ppEvent`  
  제한이 [IHostManualEvent](ihostmanualevent-interface.md) 인스턴스의 주소에 대 한 포인터 이거나, 이벤트 개체를 만들 수 없는 경우 null입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -73,7 +74,7 @@ HRESULT CreateRWLockReaderEvent (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRSyncManager 인터페이스](iclrsyncmanager-interface.md)
 - [IHostAutoEvent 인터페이스](ihostautoevent-interface.md)

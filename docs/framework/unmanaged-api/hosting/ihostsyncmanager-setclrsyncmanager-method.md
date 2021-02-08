@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostSyncManager:: SetCLRSyncManager 메서드'
 title: IHostSyncManager::SetCLRSyncManager 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b8bbe76-a45d-4989-bacb-11df42f8798c
 topic_type:
 - apiref
-ms.openlocfilehash: 79a41b6705b41414f0926c2ed819e437ecfb51d5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e2a6a54334f7b8a63696ead918f4f34e0c36e438
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714837"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784717"
 ---
 # <a name="ihostsyncmanagersetclrsyncmanager-method"></a>IHostSyncManager::SetCLRSyncManager 메서드
 
@@ -39,7 +40,7 @@ HRESULT SetCLRSyncManager (
  `pManager`  
  진행 `ICLRSyncManager` CLR (공용 언어 런타임)에서 제공 하는 인스턴스에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -64,7 +65,7 @@ HRESULT SetCLRSyncManager (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRSyncManager 인터페이스](iclrsyncmanager-interface.md)
 - [IHostSyncManager 인터페이스](ihostsyncmanager-interface.md)

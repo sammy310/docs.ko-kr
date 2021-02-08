@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: IHostTask:: SetCLRTask 메서드'
 title: IHostTask::SetCLRTask 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e9d39c80-41a1-49e7-bb5e-ea3433bfb5d7
 topic_type:
 - apiref
-ms.openlocfilehash: e6b9a4015a6139d6c8d7101fa7811c7ad9134e4c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 381b7827f043b6ef1d4a6698f5eb103233c9af55
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720466"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784680"
 ---
 # <a name="ihosttasksetclrtask-method"></a>IHostTask::SetCLRTask 메서드
 
@@ -39,7 +40,7 @@ HRESULT SetCLRTask (
  `pCLRTask`  
  진행 `ICLRTask` 현재 인스턴스와 연결할 인스턴스에 대 한 인터페이스 포인터 `IHostTask` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -64,7 +65,7 @@ HRESULT SetCLRTask (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

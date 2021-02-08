@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: IHostTask:: Alert 메서드'
 title: IHostTask::Alert 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5245d4b5-b6c3-48df-9cb9-8caf059f43fb
 topic_type:
 - apiref
-ms.openlocfilehash: 5a4870a4472081a78cd1fade51f441c22aa5eb48
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 378552db882aada0b6d0f531a871f2deb02132d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720479"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784712"
 ---
 # <a name="ihosttaskalert-method"></a>IHostTask::Alert 메서드
 
@@ -60,7 +61,7 @@ HRESULT Alert ();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

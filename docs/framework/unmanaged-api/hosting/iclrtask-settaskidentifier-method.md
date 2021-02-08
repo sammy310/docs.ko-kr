@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: ICLRTask:: SetTaskIdentifier 메서드'
 title: ICLRTask::SetTaskIdentifier 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: bdb7f047-1e90-40fc-9e3b-d44a16509073
 topic_type:
 - apiref
-ms.openlocfilehash: d1f731e00d4917b997dfba392cb9b6ce2afc082e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e746d8ec96d16f7761dd49ac814ddbed073c2686
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690748"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784953"
 ---
 # <a name="iclrtasksettaskidentifier-method"></a>ICLRTask::SetTaskIdentifier 메서드
 
 지정 된 식별자 값을 현재 [ICLRTask](iclrtask-interface.md) 인스턴스로 표시 되는 작업과 연결 하도록 CLR (공용 언어 런타임)에 지시 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT SetTaskIdentifier (  
@@ -39,7 +40,7 @@ HRESULT SetTaskIdentifier (
  `Asked`  
  진행 현재 인스턴스가 나타내는 작업과 연결할 공용 언어 런타임의 고유 식별자입니다 `ICLRTask` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -64,7 +65,7 @@ HRESULT SetTaskIdentifier (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

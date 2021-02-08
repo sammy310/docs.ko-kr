@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: CorLocalRefPreservation 열거'
 title: CorLocalRefPreservation 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44757163-1228-4213-a4c4-d4de503cc75d
 topic_type:
 - apiref
-ms.openlocfilehash: 49b0298f4fa776c93f89ac380ce65568b493379b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: afcdf6ce22c5f786e8f728cc1e45ad3ca44e7ef5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677117"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784420"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation 열거형
 
@@ -36,7 +37,7 @@ typedef enum CorLocalRefPreservation
 } CorLocalRefPreservation;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -52,6 +53,6 @@ typedef enum CorLocalRefPreservation
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](metadata-enumerations.md)

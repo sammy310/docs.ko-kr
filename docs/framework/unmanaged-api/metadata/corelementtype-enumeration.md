@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: CorElementType 열거형'
 title: CorElementType 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: 25fb3278e576ebe4a538379918e868b2e5f87911
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3eaf75a6d2094ec875ab1861aac49e4382e65801
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007873"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784537"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType 열거형
 
@@ -75,7 +76,7 @@ typedef enum CorElementType {
 } CorElementType;
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 |멤버|설명|
 |------------|-----------------|
@@ -121,22 +122,22 @@ typedef enum CorElementType {
 형식 한정자는 보다 복잡 한 형식을 나타내는 기본을 형성 합니다. 형식 `CorElementType` 한정자 값은 형식 시그니처에서 바로 다음에 오는 값에 적용 됩니다. `CorElementType`다음 표에 지정 된 것 처럼 형식 한정자 값 다음에 오는 값은 `CorElementType` 단순 형식 값, 메타 데이터 토큰 또는 다른 값일 수 있습니다.
 
 > [!NOTE]
-> 모든 숫자 (*숫자*, *인수 개수*, *메타 데이터 토큰*, *순위*, *개수*및 *바운드*)는 압축 된 정수로 저장 됩니다. 자세한 내용은 ECMA 웹 사이트의 [표준 ECMA-335-CLI (공용 언어 인프라)](http://www.ecma-international.org/publications/standards/Ecma-335.htm) 를 참조 하세요.
+> 모든 숫자 (*숫자*, *인수 개수*, *메타 데이터 토큰*, *순위*, *개수* 및 *바운드*)는 압축 된 정수로 저장 됩니다. 자세한 내용은 ECMA 웹 사이트의 [표준 ECMA-335-CLI (공용 언어 인프라)](http://www.ecma-international.org/publications/standards/Ecma-335.htm) 를 참조 하세요.
 
 |형식 한정자|서식|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR\<a `CorElementType` value>|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF\<a `CorElementType` value>|
-|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE\<an `mdTypeDef` metadata token>|
-|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS\<an `mdTypeDef` metadata token>|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR\<number>|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<a `CorElementType` value>|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<a `CorElementType` value>|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<number>|
 |`ELEMENT_TYPE_ARRAY`|\<a `CorElementType` value> \<rank> \<count1> \<bound1> ELEMENT_TYPE_ARRAY ... \<countN>\<boundN>|
 |`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<an `mdTypeDef` metadata token> ... \<argument Count> \<arg1>\<argN>|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR\<complete signature for the function, including calling convention>|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY\<a `CorElementType` value>|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR\<number>|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention>|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<a `CorElementType` value>|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number>|
 |`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<a `mdTypeRef` or `mdTypeDef` metadata token>|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT\<a `mdTypeRef` or `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<a `mdTypeRef` or `mdTypeDef` metadata token>|
 
 ## <a name="requirements"></a>요구 사항
 
