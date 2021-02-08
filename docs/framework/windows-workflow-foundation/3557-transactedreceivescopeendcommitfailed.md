@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 3557-TransactedReceiveScopeEndCommitFailed'
 title: 3557 - TransactedReceiveScopeEndCommitFailed
 ms.date: 03/30/2017
 ms.assetid: 079f0188-8146-49ee-b6ae-a08f4e4d2b9b
-ms.openlocfilehash: 4a4979047481687ef0d5c9d5891dec8f2826beed
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7865ae27e7ce5b3f13b3567f3f8aeebd6edf3fd4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263661"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99777985"
 ---
 # <a name="3557---transactedreceivescopeendcommitfailed"></a>3557 - TransactedReceiveScopeEndCommitFailed
 
@@ -20,7 +21,7 @@ ms.locfileid: "96263661"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  CommittableTransaction에 대한 EndCommit 호출에서 TransactionException이 발생했음을 나타냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96263661"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |TransactionId|xs:string|CommittableTransaction의 ID입니다.|  
 |예외|xs:string|예외에 대한 예외 정보|  

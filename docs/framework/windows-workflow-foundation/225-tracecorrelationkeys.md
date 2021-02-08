@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 225-TraceCorrelationKeys'
 title: 225 - TraceCorrelationKeys
 ms.date: 03/30/2017
 ms.assetid: d9083aaf-3816-4c1c-bae0-2d7f49628345
-ms.openlocfilehash: 04c5e0f4fbf3b95485e5bf4aae53aa2e4912d893
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c5fdb9305815cdc4df6bbae3e54209d2b5cffd9d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294497"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778115"
 ---
 # <a name="225---tracecorrelationkeys"></a>225 - TraceCorrelationKeys
 
@@ -20,7 +21,7 @@ ms.locfileid: "96294497"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 워크플로 서비스에 내용 기반 상관 관계가 사용될 때 내보내집니다. 여기에는 메시지를 인스턴스에 연결하기 위해 적용되는 상관 관계 키가 포함됩니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96294497"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |Instance Key|`xs:GUID`|상관 관계 값에서 생성된 키입니다.|  
 |값|`xs:string`|상관 관계 인스턴스 키를 컴퓨팅하는 데 사용된 값입니다.|  
