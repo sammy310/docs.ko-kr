@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: BC30494: 줄이 너무 깁니다.'
 title: 줄이 너무 깁니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,23 +8,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30494
 ms.assetid: 27270ec3-82a4-4693-a948-dd4664a5f060
-ms.openlocfilehash: c43ef096d2f6554cff1fa4490910315a1596337a
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 305691b0343245879e5555a1e63c2d8f9c5af777
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162494"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795887"
 ---
-# <a name="bc30494-line-is-too-long"></a><span data-ttu-id="52db0-102">BC30494: 줄이 너무 깁니다.</span><span class="sxs-lookup"><span data-stu-id="52db0-102">BC30494: Line is too long</span></span>
+# <a name="bc30494-line-is-too-long"></a><span data-ttu-id="ed7c1-103">BC30494: 줄이 너무 깁니다.</span><span class="sxs-lookup"><span data-stu-id="ed7c1-103">BC30494: Line is too long</span></span>
 
-<span data-ttu-id="52db0-103">소스 텍스트 줄은 65535 자를 초과할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="52db0-103">Source text lines cannot exceed 65535 characters.</span></span>
+<span data-ttu-id="ed7c1-104">소스 텍스트 줄은 65535 자를 초과할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ed7c1-104">Source text lines cannot exceed 65535 characters.</span></span>
 
- <span data-ttu-id="52db0-104">**오류 ID:** BC30494</span><span class="sxs-lookup"><span data-stu-id="52db0-104">**Error ID:** BC30494</span></span>
+ <span data-ttu-id="ed7c1-105">**오류 ID:** BC30494</span><span class="sxs-lookup"><span data-stu-id="ed7c1-105">**Error ID:** BC30494</span></span>
 
-## <a name="to-correct-this-error"></a><span data-ttu-id="52db0-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="52db0-105">To correct this error</span></span>
+## <a name="to-correct-this-error"></a><span data-ttu-id="ed7c1-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="ed7c1-106">To correct this error</span></span>
 
-- <span data-ttu-id="52db0-106">줄의 길이를 65535 자 이하로 줄이십시오.</span><span class="sxs-lookup"><span data-stu-id="52db0-106">Shorten the length of the line to 65535 characters or fewer.</span></span>
+- <span data-ttu-id="ed7c1-107">줄의 길이를 65535 자 이하로 줄이십시오.</span><span class="sxs-lookup"><span data-stu-id="ed7c1-107">Shorten the length of the line to 65535 characters or fewer.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="52db0-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="52db0-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ed7c1-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ed7c1-108">See also</span></span>
 
-- [<span data-ttu-id="52db0-108">오류 형식</span><span class="sxs-lookup"><span data-stu-id="52db0-108">Error Types</span></span>](../../programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="ed7c1-109">오류 유형</span><span class="sxs-lookup"><span data-stu-id="ed7c1-109">Error Types</span></span>](../../programming-guide/language-features/error-types.md)
