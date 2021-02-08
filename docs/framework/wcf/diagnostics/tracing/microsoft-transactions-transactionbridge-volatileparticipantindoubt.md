@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 VolatileParticipantInDoubt를 확인 하세요.
 title: Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt
 ms.date: 03/30/2017
 ms.assetid: 3e8fc825-9f22-47e7-9c16-d64ef291c932
-ms.openlocfilehash: 9ad9dc9fd078f7ad4c0934c8bf9bb73feb935014
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c9d95285e09d017aa82c86e7c5c6f9fd758b9f80
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236652"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803245"
 ---
 # <a name="microsofttransactionstransactionbridgevolatileparticipantindoubt"></a>Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt
 
 WS-AT 프로토콜 서비스가 인식할 수 없는 일시적 참가자로부터 Prepared 또는 Replay 메시지를 받았습니다. 트랜잭션 결과가 확실하지 않음을 선언하는 결함을 참가자에게 반환했습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  로컬 트랜잭션 관리자가 이미 잊어 버린 일시적인 인리스트먼트로부터 Prepared 또는 Replay 메시지를 받는 경우 추적됩니다.  
   

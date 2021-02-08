@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: COM 응용 프로그램과 통합 개요'
 title: COM 애플리케이션과 통합 개요
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: c283e7cbc4cb4b8bc37dd1313480410df93a93bf
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a179fd73c8065fff1e16d3f86202d717df155b81
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596827"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802816"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM 애플리케이션과 통합 개요
 
@@ -32,7 +33,7 @@ WCF (Windows Communication Foundation)는 관리 코드 개발자에 게 연결 
 
 다음 표에서는 서비스 모니커에서 지원하는 매개 변수를 보여 줍니다.
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |`address`|서비스의 URL 위치입니다.|
 |`binding`|애플리케이션 구성의 바인딩 섹션 이름입니다.|

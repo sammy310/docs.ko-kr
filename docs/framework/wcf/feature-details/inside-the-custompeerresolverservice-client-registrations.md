@@ -1,13 +1,14 @@
 ---
+description: 'CustomPeerResolverService: 클라이언트 등록 내에서 다음에 대해 자세히 알아보세요.'
 title: 'CustomPeerResolverService 내: 클라이언트 등록'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: a905e5d1e467f32575eb38451d66392be25a0759
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2cc0706fc473985cf6572e6ee5387a26366bc2c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96265884"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802842"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService 내: 클라이언트 등록
 

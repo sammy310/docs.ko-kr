@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugManagedCallback:: Break 메서드'
 title: ICorDebugManagedCallback::Break 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7d78a301-82b3-43b2-9d65-3cda3285ae97
 topic_type:
 - apiref
-ms.openlocfilehash: f70a88df00d15729a6bde06b49417b6439f7c0ec
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2ef273a693291685c4c3a0ce2b20ed45613e3376
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212466"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801217"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>ICorDebugManagedCallback::Break 메서드
 

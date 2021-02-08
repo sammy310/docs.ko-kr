@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: 서비스: 초당 실패 한 호출 수'
 title: '서비스: Calls Failed Per Second'
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-ms.openlocfilehash: c97e4b0c6c2c71756a9bed7b1a2359ad0c118a98
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b271d5076d0f0c89c4d33b124e0184584795466a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96252974"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803362"
 ---
 # <a name="service-calls-failed-per-second"></a>서비스: Calls Failed Per Second
 
 카운터 이름: Calls Failed Per Second  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  초당 이 서비스에서 받은, 처리되지 않은 예외가 있는 호출 수입니다.  
   

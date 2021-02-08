@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 상호 운용 가능한 개체 참조'
 title: 상호 운용 가능한 개체 참조
 ms.date: 04/15/2019
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-ms.openlocfilehash: bf395c187c46e88406bfb81798c7e359b48255e3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 27c801fb3954c7ea3f821a6588a2229502702989
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263232"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802686"
 ---
 # <a name="interoperable-object-references"></a>상호 운용 가능한 개체 참조
 

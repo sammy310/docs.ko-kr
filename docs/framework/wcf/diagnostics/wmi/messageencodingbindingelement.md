@@ -1,19 +1,20 @@
 ---
+description: '자세히 알아보기: MessageEncodingBindingElement'
 title: MessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 7f750742-b96b-498f-bf5e-05933a1a5961
-ms.openlocfilehash: f7af547148acacfb83d4e41aa1a085e3eabaafdc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c6660245165acb67db8af9043d956e8a82d9a03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963477"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803193"
 ---
 # <a name="messageencodingbindingelement"></a>MessageEncodingBindingElement
 
 MessageEncodingBindingElement
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```csharp
 class MessageEncodingBindingElement : BindingElement
@@ -32,7 +33,7 @@ MessageEncodingBindingElement 클래스에는 다음과 같은 속성이 있습�
 
 ### <a name="messageversion"></a>MessageVersion
 
-데이터 형식: string
+데이터 형식: 문자열
 
 액세스 형식: 읽기 전용
 
@@ -44,6 +45,6 @@ MessageEncodingBindingElement 클래스에는 다음과 같은 속성이 있습�
 |---------|-----------------------------------|
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>

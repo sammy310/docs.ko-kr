@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 추적 유형 요약'
 title: 추적 형식 요약
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: e8d222d6f093f5db3bd620194bfde7edd4b998a8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ebfe9de16766494a6aebe0a8d2501954855dc4df
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96259247"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803219"
 ---
 # <a name="trace-type-summary"></a>추적 형식 요약
 
@@ -20,7 +21,7 @@ ms.locfileid: "96259247"
 |추적 형식|설명|  
 |----------------|-----------------|  
 |위험|오류 또는 애플리케이션 충돌|  
-|오류|복구할 수 있는 오류|  
+|Error|복구할 수 있는 오류|  
 |경고|정보 메시지.|  
 |정보|중요하지 않은 문제|  
 |자세히|추적 디버깅|  

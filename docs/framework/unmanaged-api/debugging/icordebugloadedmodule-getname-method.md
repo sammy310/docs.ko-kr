@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugLoadedModule:: GetName 메서드'
 title: ICorDebugLoadedModule::GetName 메서드
 ms.date: 03/30/2017
 ms.assetid: 88c304d5-edaa-4c0e-a8e1-144e8a76877e
-ms.openlocfilehash: c18af45184f5a9485e13b9d4789bff2c570834cc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 40a0715b513115177cabac01727ce9166a40d50b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731854"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801256"
 ---
 # <a name="icordebugloadedmodulegetname-method"></a>ICorDebugLoadedModule::GetName 메서드
 
@@ -50,7 +51,7 @@ HRESULT GetName(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugLoadedModule 인터페이스](icordebugloadedmodule-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

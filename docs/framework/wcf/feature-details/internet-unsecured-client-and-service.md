@@ -1,16 +1,17 @@
 ---
+description: '에 대 한 자세한 정보: 인터넷 보안 되지 않은 클라이언트 및 서비스'
 title: 보안이 설정되지 않은 인터넷 클라이언트 및 서비스
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 32c08daaacb482aa98a58d7f8882da2c9389293d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8b402b276c80b2e1c148de0837d8644aad7a2d4a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276674"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802777"
 ---
 # <a name="internet-unsecured-client-and-service"></a>보안이 설정되지 않은 인터넷 클라이언트 및 서비스
 
@@ -18,7 +19,7 @@ ms.locfileid: "96276674"
   
  ![보안 되지 않은 인터넷 시나리오를 보여 주는 스크린샷](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
-|특성|Description|  
+|특성|설명|  
 |--------------------|-----------------|  
 |보안 모드|없음|  
 |전송|HTTP|  
@@ -77,7 +78,7 @@ ms.locfileid: "96276674"
   
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
-- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.  
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 다음은 그 예입니다.   
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

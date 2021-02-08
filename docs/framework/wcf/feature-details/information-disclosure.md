@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 정보 공개'
 title: 정보 공개
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: a58ac4dd3715052031c7fb5c1da480c0d01396ea
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 420437703fab883698cdd7217efb14c214a1f529
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596866"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802855"
 ---
 # <a name="information-disclosure"></a>정보 공개
 
@@ -35,7 +36,7 @@ X.509 인증서를 사용하여 클라이언트를 인증하는 경우 인증서
 
 ## <a name="service-references"></a>서비스 참조
 
-서비스 참조는 다른 서비스에 대한 참조입니다. 예를 들어, 서비스가 작업 과정에서 서비스 참조를 클라이언트에 전달할 수 있습니다. 서비스 참조는 응용 프로그램 데이터 또는 자격 증명과 같은 정보를 대상에 공개 하기 전에 대상 주체의 id를 확인 하는 내부 구성 요소인 *트러스트 id 검증 도구*와 함께 사용 됩니다. 원격 트러스트 ID를 검증할 수 없거나 잘못된 경우 보낸 사람이 데이터 자체, 애플리케이션 또는 사용자를 손상시킬 수 있는 공개된 데이터가 없는지 확인해야 합니다.
+서비스 참조는 다른 서비스에 대한 참조입니다. 예를 들어, 서비스가 작업 과정에서 서비스 참조를 클라이언트에 전달할 수 있습니다. 서비스 참조는 응용 프로그램 데이터 또는 자격 증명과 같은 정보를 대상에 공개 하기 전에 대상 주체의 id를 확인 하는 내부 구성 요소인 *트러스트 id 검증 도구* 와 함께 사용 됩니다. 원격 트러스트 ID를 검증할 수 없거나 잘못된 경우 보낸 사람이 데이터 자체, 애플리케이션 또는 사용자를 손상시킬 수 있는 공개된 데이터가 없는지 확인해야 합니다.
 
 완화 방안에는 다음이 포함됩니다.
 

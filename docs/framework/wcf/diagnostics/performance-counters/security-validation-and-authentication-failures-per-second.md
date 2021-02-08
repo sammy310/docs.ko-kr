@@ -1,19 +1,20 @@
 ---
+description: '자세히 알아보기: 보안 유효성 검사 및 초당 인증 실패 횟수'
 title: Security Validation and Authentication Failures Per Second
 ms.date: 03/30/2017
 ms.assetid: 266c3bd3-2ffc-4471-94b7-3675443be1ac
-ms.openlocfilehash: c64c121550043127db674fac6287a870449d789d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 77c11e8f47b5d91ea38030841f6ca33ba0f0795c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253127"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803401"
 ---
 # <a name="security-validation-and-authentication-failures-per-second"></a>Security Validation and Authentication Failures Per Second
 
 카운터 이름: Security Validation and Authentication Failures Per Second  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 카운터는 "Security Calls Not Authorized" 카운터로 처리되지 않는 보안 문제 때문에 메시지가 거부될 때마다 증가합니다. 이러한 문제는 다음과 같습니다.  
   

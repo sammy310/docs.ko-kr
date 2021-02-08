@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugLoadedModule:: GetSize 메서드'
 title: ICorDebugLoadedModule::GetSize 메서드
 ms.date: 03/30/2017
 ms.assetid: aaa0e5c0-be9d-4fe1-8418-5295b9b184d6
-ms.openlocfilehash: 2ed19cb4a190f2af7581a827e8bd11b748b3d4a2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6701d2578559a039f352df19bf9e859658c6687f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721324"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801243"
 ---
 # <a name="icordebugloadedmodulegetsize-method"></a>ICorDebugLoadedModule::GetSize 메서드
 
@@ -41,7 +42,7 @@ HRESULT GetSize(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugLoadedModule 인터페이스](icordebugloadedmodule-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

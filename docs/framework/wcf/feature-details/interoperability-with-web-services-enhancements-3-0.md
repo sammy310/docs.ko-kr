@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 웹 서비스와의 상호 운용성 향상 3.0'
 title: Web Services Enhancements 3.0과의 상호 운용성
 ms.date: 03/30/2017
 ms.assetid: e8e589d2-12c6-4794-8a11-1ee90b47dfaa
-ms.openlocfilehash: 9c921909980f14a79e365925eab241ee2b84ea88
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 43963226ec97538cda529db7715a7ca60d7ed62f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276622"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802699"
 ---
 # <a name="interoperability-with-web-services-enhancements-30"></a>Web Services Enhancements 3.0과의 상호 운용성
 
@@ -21,10 +22,10 @@ Wcf 클라이언트 및 서비스는 WS-Addressing 사양의 8 월 2004 버전�
  [방법: WSE3.0 서비스와 상호 운용하도록 WCF 클라이언트 구성](how-to-configure-a-wcf-client-to-interoperate-with-wse3-0-services.md)  
  WCF 클라이언트를 구성 하는 방법에 대해 자세히 설명 합니다 .이 클라이언트는 WSE (웹 서비스 향상 3.0 for Microsoft .NET) 서비스와 통신할 수 있습니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [WSE 3.0 웹 서비스를 WCF로 마이그레이션](migrating-wse-3-0-web-services-to-wcf.md)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ASP.NET 웹 서비스와의 상호 운용성](interop-with-aspnet-web-services.md)

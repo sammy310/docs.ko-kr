@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: Operation 클래스'
 title: 작업 클래스
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: 6b47d933dc84813532398830c92c95210208a709
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 035c02bc05b7a64c5d15538001dbdcf2ec0b135b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96269160"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803076"
 ---
 # <a name="operation-class"></a>작업 클래스
 
-연산  
+작업  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class Operation  
@@ -105,7 +106,7 @@ class Operation
   
  작업의 메서드 서명입니다.  
   
-### <a name="name"></a>이름  
+### <a name="name"></a>Name  
 
  데이터 형식: 문자열  
   

@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 ReplayMessageRetry를 확인 하세요.
 title: Microsoft.Transactions.TransactionBridge.ReplayMessageRetry
 ms.date: 03/30/2017
 ms.assetid: e5b820ae-504d-405a-926a-9effa41d2369
-ms.openlocfilehash: 23a0113488b1b1ef0bc161d4134b9325ef81406c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e4de1416fab2cf7098d0276b6130999c01ea6e3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96236717"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803258"
 ---
 # <a name="microsofttransactionstransactionbridgereplaymessageretry"></a>Microsoft.Transactions.TransactionBridge.ReplayMessageRetry
 
 되풀이 메시지 재시도를 응답하지 않는 코디네이터에게 보냈습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  로컬 트랜잭션 관리자가 주어진 시간 내에 응답을 받지 못해서 되풀이 메시지를 상위 코디네이터에게 다시 전송해야 할 경우에 추적됩니다.  
   

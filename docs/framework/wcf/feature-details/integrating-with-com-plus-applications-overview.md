@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: COM + 응용 프로그램과 통합 개요'
 title: COM+ 애플리케이션과 통합 개요
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 1b9b7e57760c2aba0a8e9eadd53ca8e72529b787
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c24ce95651aff222b8374243143afc7166406fcf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248970"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802790"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ 애플리케이션과 통합 개요
 
@@ -92,7 +93,7 @@ WCF (Windows Communication Foundation)는 분산 응용 프로그램을 만들�
   
      웹 서비스와 COM+ 애플리케이션 논리는 웹 서버 작업자 프로세스 내에 호스트됩니다. 이 경우 웹 서비스 요청에 대한 프로세스 홉이 발생하지 않고 웹 호스팅 모드가 자동으로 활성화됩니다. DCOM을 통해 서버 애플리케이션에 액세스할 수 없다는 단점이 있습니다.  
   
-### <a name="security-considerations"></a>보안 고려 사항  
+### <a name="security-considerations"></a>보안 고려사항  
 
  다른 WCF 서비스와 마찬가지로 노출 된 서비스에 대 한 보안 설정은 WCF 채널에 대 한 구성 설정을 통해 관리 됩니다. 시스템 수준의 DCOM 사용 권한 설정 같은 일반적인 DCOM 보안 설정은 적용되지 않습니다. COM+ 애플리케이션 역할을 적용하려면 해당 구성 요소에 대해 &quot;구성 요소 수준 액세스 검사&quot; 권한 부여를 사용해야 합니다.  
   
