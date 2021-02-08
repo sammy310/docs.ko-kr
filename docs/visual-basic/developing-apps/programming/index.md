@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: Visual Basic의 프로그래밍'
 title: 프로그래밍
 ms.date: 07/20/2015
 helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 0016e6c107baefffd050c99c48cfd10d01522dfc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 38b7bcaf5fdec1f589305a1865b89c949be9bb6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406601"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775242"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic의 프로그래밍
 

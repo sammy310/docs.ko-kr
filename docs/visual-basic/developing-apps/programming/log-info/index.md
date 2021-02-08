@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 애플리케이션의 정보 기록(Visual Basic)'
 title: 응용 프로그램의 정보 기록
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - My.Application.Log object
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-ms.openlocfilehash: 43738b2d654435532a98654cbc40af134d43f02c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6e0adf45c12d98c8bc6d177d85accf9bee347f75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410025"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775073"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>애플리케이션의 정보 기록(Visual Basic)
 

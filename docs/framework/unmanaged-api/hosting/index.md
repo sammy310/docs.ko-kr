@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 호스팅(관리되지 않는 API 참조)'
 title: 호스팅(관리되지 않는 API 참조)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework], hosting
 - hosting [.NET Framework], using the unmanaged API
 ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
-ms.openlocfilehash: 2abb23e53284440b68e139c6807007fad10f20c9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 710c8e6e8c3f2a2e4299deb02e317f1026be41e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730648"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99753733"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>호스팅(관리되지 않는 API 참조)
 

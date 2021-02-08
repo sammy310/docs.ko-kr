@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: Windows Forms 애플리케이션 기초(Visual Basic)'
 title: Windows Forms 응용 프로그램의 기본 사항
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: ef02662a5492f117b252e464e92ec46e7484ef66
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 04f360a0262e08fa018f19577b0e950c15a7253a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282163"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675327"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms 애플리케이션 기초(Visual Basic)
 

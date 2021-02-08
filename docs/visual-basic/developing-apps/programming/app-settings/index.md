@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 애플리케이션 설정 액세스(Visual Basic)'
 title: 응용 프로그램 설정 액세스
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
-ms.openlocfilehash: 1c564694c7ca047378c66fd2b7f3f3ecd5ce687b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e6803a5f175b4af8ef37b1cd2ba4d87ec96fde0a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410129"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797811"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>애플리케이션 설정 액세스(Visual Basic)
 
@@ -18,7 +19,7 @@ ms.locfileid: "84410129"
   
 ## <a name="mysettings"></a>My.Settings  
 
- `My.Settings` 개체의 속성을 통해 애플리케이션 설정에 액세스할 수 있습니다. 설정을 추가하거나 제거하려면 **프로젝트 디자이너**의 **설정** 창을 사용합니다.  
+ `My.Settings` 개체의 속성을 통해 애플리케이션 설정에 액세스할 수 있습니다. 설정을 추가하거나 제거하려면 **프로젝트 디자이너** 의 **설정** 창을 사용합니다.  
   
  `My.Settings` 개체의 메서드를 사용하여 현재 사용자 설정을 저장하거나 사용자 설정을 마지막으로 저장된 값으로 되돌릴 수 있습니다.  
   

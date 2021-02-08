@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 강력한 이름 지정(관리되지 않는 API 참조)'
 title: 강력한 이름 지정(관리되지 않는 API 참조)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework], strong naming
 - unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
-ms.openlocfilehash: 7e431f3a41fadb7247f20d7ab9bb9120e827b0cd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 058cc51d8e9eb2ef4a2d0670811aefcd32dafb6e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732296"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646363"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>강력한 이름 지정(관리되지 않는 API 참조)
 
