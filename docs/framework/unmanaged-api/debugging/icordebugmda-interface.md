@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugMDA 인터페이스'
 title: ICorDebugMDA 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8ecbb854-295c-4dd4-b9fc-01ebeac46e06
 topic_type:
 - apiref
-ms.openlocfilehash: c4ff28ff1019b5314902a4e71f6d02b5a2fd8d70
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8e6e779c58d71b07edc9b63dff72aef728ebe050
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710846"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801126"
 ---
 # <a name="icordebugmda-interface"></a>ICorDebugMDA 인터페이스
 
@@ -50,7 +51,7 @@ MDA(관리 디버깅 도우미) 메시지를 나타냅니다.
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

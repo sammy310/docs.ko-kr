@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IXCLRDataProcess:: EndEnumMethodInstancesByAddress 메서드'
 title: 'IXCLRDataProcess:: EndEnumMethodInstancesByAddress 메서드'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 5960d08ccfc09010a20d28a22c2e2f3f5b339c7d
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 2e01fe0737319a7b336d9f6992bf81b2c57f9e70
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420828"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800723"
 ---
 # <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>IXCLRDataProcess:: EndEnumMethodInstancesByAddress 메서드
 

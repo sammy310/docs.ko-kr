@@ -1,4 +1,5 @@
 ---
+description: LogSwitchCallReason 열거형에 대해 자세히 알아보세요.
 title: LogSwitchCallReason 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5bbb8d1b-bbc4-47b0-b1b1-2d54cc0be291
 topic_type:
 - apiref
-ms.openlocfilehash: dfb34595530a47b74762610f5824b68ea00a8a69
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 46c457ee4c12fe9a73796aa7b7a5f599d90c9c6c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671943"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800614"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason 열거형
 
@@ -35,7 +36,7 @@ typedef enum LogSwitchCallReason {
 } LogSwitchCallReason;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -53,6 +54,6 @@ typedef enum LogSwitchCallReason {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IXCLRDataProcess 인터페이스'
 title: IXCLRDataProcess 인터페이스
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 376ec2b840bc17c79ed1f27c17a8ddd22c37a0f4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b611491e5c9a5957c07a305a3f395b67ad208649
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96245356"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800645"
 ---
 # <a name="ixclrdataprocess-interface"></a>IXCLRDataProcess 인터페이스
 
@@ -30,7 +31,7 @@ ms.locfileid: "96245356"
 
 ## <a name="methods"></a>메서드
 
-| 메서드                                                                                                                                               | Description                                                                                     |
+| 메서드                                                                                                                                               | 설명                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | [GetRuntimeNameByAddress](ixclrdataprocess-getruntimenamebyaddress-method.md)                     | 지정 된 주소에 대 한 이름을 가져옵니다.                                                               |
 | [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | `AppDomain`프로세스의 고유 id로를 가져옵니다.                                              |

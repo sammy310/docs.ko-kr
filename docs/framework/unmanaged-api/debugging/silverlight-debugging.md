@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: Silverlight 디버깅'
 title: Silverlight 디버깅
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
-ms.openlocfilehash: 49f026b8e1a3dd78a62091e77a5aba0c9a2e09d6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 54a3f7f4b2de867509ff94dafa25c067a78b3ee6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671839"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800541"
 ---
 # <a name="silverlight-debugging"></a>Silverlight 디버깅
 
@@ -54,7 +55,7 @@ ms.locfileid: "95671839"
  [ShutdownDbgTransportManager 함수](shutdowndbgtransportmanager-function.md)  
  원격 대상 컴퓨터에 대한 연결을 위해 전송 관리자를 종료합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 Coclass](debugging-coclasses.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

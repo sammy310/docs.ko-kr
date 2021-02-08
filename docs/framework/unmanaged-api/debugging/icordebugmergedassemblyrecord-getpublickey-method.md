@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugMergedAssemblyRecord:: GetPublicKey 메서드'
 title: ICorDebugMergedAssemblyRecord::GetPublicKey 메서드
 ms.date: 03/30/2017
 ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
-ms.openlocfilehash: e89ecca25edb0d7eae3a7e65f9585d71ad4ace4d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 15175b0d02773bcbce46bfaec9ce1de3021b7dde
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710599"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801100"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKey 메서드
 
@@ -48,7 +49,7 @@ HRESULT GetPublicKey(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugMergedAssemblyRecord 인터페이스](icordebugmergedassemblyrecord-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

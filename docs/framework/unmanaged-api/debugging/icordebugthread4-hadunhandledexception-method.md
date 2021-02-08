@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugThread4:: HadUnhandledException 메서드'
 title: ICorDebugThread4::HadUnhandledException 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 05558daa-39e2-4c38-aeaf-e2aec4a09468
 topic_type:
 - apiref
-ms.openlocfilehash: 4e368b2c63e8e43b5c392bec4b79daac8bae249d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd0ccdbdd68c37b5fbdbd705da7136e5d36baa60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678540"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800931"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException 메서드
 
@@ -39,7 +40,7 @@ HRESULT GetBlockingObjects (
  `ppBlockingObjectEnum`  
  제한이 [CorDebugBlockingObject](cordebugblockingobject-structure.md) 구조체의 정렬 된 열거 주소에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -62,7 +63,7 @@ HRESULT GetBlockingObjects (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugThread4 인터페이스](icordebugthread4-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)
