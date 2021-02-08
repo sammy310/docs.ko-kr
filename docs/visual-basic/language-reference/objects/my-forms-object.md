@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: My.forms 개체'
 title: My.Forms 개체
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: 001f6fbfae2467ea0af5e98ca041b694d1e7b8f9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 18ef8ee475163ff7eb177dfee590d959a242a88e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372442"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774410"
 ---
 # <a name="myforms-object"></a>My.Forms 개체
 
@@ -22,9 +23,9 @@ ms.locfileid: "84372442"
 
 `My.Forms`개체는 현재 프로젝트에 있는 각 폼의 인스턴스를 제공 합니다. 속성의 이름은 속성이 액세스 하는 폼의 이름과 동일 합니다.
 
-`My.Forms`한정자를 사용 하지 않고 폼 이름을 사용 하 여 개체에서 제공 하는 폼에 액세스할 수 있습니다. 속성 이름이 폼의 형식 이름과 동일 하기 때문에 기본 인스턴스가 있는 것 처럼 폼에 액세스할 수 있습니다. 예를 들어 `My.Forms.Form1.Show`은 `Form1.Show`와 같습니다.
+`My.Forms`한정자를 사용 하지 않고 폼 이름을 사용 하 여 개체에서 제공 하는 폼에 액세스할 수 있습니다. 속성 이름이 폼의 형식 이름과 동일 하기 때문에 기본 인스턴스가 있는 것 처럼 폼에 액세스할 수 있습니다. 예를 들어 `My.Forms.Form1.Show`는 `Form1.Show`와 같습니다.
 
-`My.Forms`개체는 현재 프로젝트와 연결 된 폼만 노출 합니다. 참조 된 Dll에 선언 된 폼에 대 한 액세스 권한은 제공 하지 않습니다. DLL이 제공 하는 폼에 액세스 하려면 *DllName*로 작성 된 양식의 정규화 된 이름을 사용 해야 합니다. *FormName*.
+`My.Forms`개체는 현재 프로젝트와 연결 된 폼만 노출 합니다. 참조 된 Dll에 선언 된 폼에 대 한 액세스 권한은 제공 하지 않습니다. DLL이 제공 하는 폼에 액세스 하려면 *DllName* 로 작성 된 양식의 정규화 된 이름을 사용 해야 합니다. *FormName*.
 
 속성을 사용 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> 하 여 모든 응용 프로그램의 열려 있는 폼의 컬렉션을 가져올 수 있습니다.
 
@@ -35,7 +36,7 @@ ms.locfileid: "84372442"
 개체의 각 속성은 `My.Forms` 현재 프로젝트에 있는 폼의 인스턴스에 대 한 액세스를 제공 합니다. 속성의 이름은 속성이 액세스 하는 폼의 이름과 동일 하며, 속성 형식은 폼의 형식과 동일 합니다.
 
 > [!NOTE]
-> 이름 충돌이 있는 경우 폼에 액세스 하기 위한 속성 이름은 *RootNamespace*_*Namespace* \_ *FormName*입니다. 예를 들어, `Form1.` 이러한 폼 중 하나가 루트 네임 스페이스 및 네임 스페이스에 있는 경우 라는 두 개의 폼을 고려 하 여를 `WindowsApplication1` `Namespace1` 통해 해당 폼에 액세스 `My.Forms.WindowsApplication1_Namespace1_Form1` 합니다.
+> 이름 충돌이 있는 경우 폼에 액세스 하기 위한 속성 이름은 *RootNamespace* _ *Namespace* \_ *FormName* 입니다. 예를 들어, `Form1.` 이러한 폼 중 하나가 루트 네임 스페이스 및 네임 스페이스에 있는 경우 라는 두 개의 폼을 고려 하 여를 `WindowsApplication1` `Namespace1` 통해 해당 폼에 액세스 `My.Forms.WindowsApplication1_Namespace1_Form1` 합니다.
 
 `My.Forms`개체는 시작 시 만들어진 응용 프로그램 기본 폼의 인스턴스에 대 한 액세스를 제공 합니다. 다른 모든 폼의 경우 `My.Forms` 개체는 액세스 될 때 폼의 새 인스턴스를 만들고 저장 합니다. 이후에 해당 속성에 액세스 하려고 하면 해당 폼의 인스턴스가 반환 됩니다.
 
@@ -63,12 +64,12 @@ ms.locfileid: "84372442"
 |프로젝트 형식|사용 가능|
 |---|---|
 |Windows 애플리케이션|**예**|
-|클래스 라이브러리|예|
-|콘솔 애플리케이션|예|
-|Windows 컨트롤 라이브러리|예|
-|웹 컨트롤 라이브러리|예|
-|Windows 서비스|예|
-|웹 사이트|예|
+|클래스 라이브러리|No|
+|콘솔 애플리케이션|No|
+|Windows 컨트롤 라이브러리|No|
+|웹 컨트롤 라이브러리|No|
+|Windows 서비스|No|
+|웹 사이트|No|
 
 ## <a name="see-also"></a>참고 항목
 
