@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRDebugManager:: IsDebuggerAttached 메서드'
 title: ICLRDebugManager::IsDebuggerAttached 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2f105fe0-f52d-49c5-bda5-583fb27e3aa6
 topic_type:
 - apiref
-ms.openlocfilehash: 71e11d7db3bd679e7972fb2f6ce098edc3399885
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 74305989797bcb553feb727a133e24bd308ac715
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731022"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772135"
 ---
 # <a name="iclrdebugmanagerisdebuggerattached-method"></a>ICLRDebugManager::IsDebuggerAttached 메서드
 
@@ -39,7 +40,7 @@ HRESULT IsDebuggerAttached (
  `pbAttached`  
  [out] `true` 디버거가 프로세스에 연결 되어 있으면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -64,7 +65,7 @@ HRESULT IsDebuggerAttached (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRControl 인터페이스](iclrcontrol-interface.md)
 - [ICLRDebugManager 인터페이스](iclrdebugmanager-interface.md)

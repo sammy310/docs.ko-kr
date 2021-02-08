@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <transport><netNamedPipeBinding>'
 title: <netNamedPipeBinding>의 <transport>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: 81c52405478d4c1ab5c65aab73f7feff61b879d0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a54c429bcac192ddc46df7232c33ab98bd1a4c58
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178023"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773487"
 ---
 # <a name="transport-of-netnamedpipebinding"></a>\<netNamedPipeBinding>의 \<transport>
 
@@ -60,7 +61,7 @@ ms.locfileid: "91178023"
 - <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

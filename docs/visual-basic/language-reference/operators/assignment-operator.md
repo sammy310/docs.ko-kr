@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: = 연산자 (Visual Basic)'
 title: = 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - = operator [Visual Basic]
 - = assignment statements [Visual Basic]
 ms.assetid: 2dac2e49-86c8-42f8-80c1-458452fb5e29
-ms.openlocfilehash: eccea0b43564a4980778c9d1a5b8f9a8c2a9207d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 3cf45fb93bf5138f9e7fa5a43650019ab58674fd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874819"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774254"
 ---
 # <a name="-operator-visual-basic"></a>= 연산자(Visual Basic)
 
 변수 또는 속성에 값을 할당 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 variableorproperty = value  
@@ -50,7 +51,7 @@ variableorproperty = value
   
  [!code-vb[VbVbalrOperators#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [&= 연산자](and-assignment-operator.md)
 - [* = 연산자](multiplication-assignment-operator.md)

@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <transport><netHttpBinding>'
 title: <netHttpBinding>의 <transport>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 996b3655b0698595256c9a7197f705d46e6e9fcf
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1c2029fcbc57632b828fa180ba0ffbbf6b974775
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169819"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773513"
 ---
 # <a name="transport-of-nethttpbinding"></a>\<netHttpBinding>의 \<transport>
 
@@ -57,7 +58,7 @@ HTTP 전송의 인증 매개 변수를 제어하는 속성을 정의합니다.
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |없음|메시지가 전송 중에 보호되지 않습니다.|  
 |Basic|기본 인증을 지정합니다.|  
@@ -67,7 +68,7 @@ HTTP 전송의 인증 매개 변수를 제어하는 속성을 정의합니다.
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |없음|-전송 중에는 메시지의 보안이 유지 되지 않습니다.|  
 |Basic|RFC 2617 – HTTP 인증: 기본 및 다이제스트 인증에 정의된 대로 기본 인증을 지정합니다.|  
@@ -128,7 +129,7 @@ HTTP 전송의 인증 매개 변수를 제어하는 속성을 정의합니다.
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
 - <xref:System.ServiceModel.HttpTransportSecurity>
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

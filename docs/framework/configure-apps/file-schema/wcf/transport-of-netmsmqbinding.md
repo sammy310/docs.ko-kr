@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <transport><netMsmqBinding>'
 title: <netMsmqBinding>의 <transport>
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
-ms.openlocfilehash: 84a5437de851ecdb96d0463ec574186ba5f91d9e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 04768f259629277abd758d102f3873bb28f16514
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203880"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773500"
 ---
 # <a name="transport-of-netmsmqbinding"></a>\<netMsmqBinding>의 \<transport>
 
@@ -67,7 +68,7 @@ ms.locfileid: "91203880"
 - <xref:System.ServiceModel.MsmqTransportSecurity>
 - [WCF의 큐](../../../wcf/feature-details/queues-in-wcf.md)
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

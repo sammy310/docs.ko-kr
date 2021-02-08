@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: AndAlso 연산자 (Visual Basic)'
 title: AndAlso 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: aff4621b8f415b9441ad1edf537b9b0736892bb8
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: dcf6c2685bf8f9ffee27b00543786cd3b315b327
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874849"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774267"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso 연산자(Visual Basic)
 
 두 식에 순환이 짧은 논리 결합을 수행 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb
 result = expression1 AndAlso expression2  
@@ -55,7 +56,7 @@ result = expression1 AndAlso expression2
   
 ## <a name="overloading"></a>오버로딩  
 
- [And 연산자](and-operator.md) 와 [IsFalse 연산자](isfalse-operator.md) 를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체에서 해당 동작을 재정의할 수 있습니다. 및 연산자를 오버 로드 하면 `And` `IsFalse` 연산자의 동작에 영향을 줍니다 `AndAlso` . `AndAlso`및를 오버 로드 하는 클래스 또는 구조체에서 코드를 사용 하는 경우 `And` 다시 `IsFalse` 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+ [And 연산자](and-operator.md) 와 [IsFalse 연산자](isfalse-operator.md) 를 *오버 로드할* 수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체에서 해당 동작을 재정의할 수 있습니다. 및 연산자를 오버 로드 하면 `And` `IsFalse` 연산자의 동작에 영향을 줍니다 `AndAlso` . `AndAlso`및를 오버 로드 하는 클래스 또는 구조체에서 코드를 사용 하는 경우 `And` 다시 `IsFalse` 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 
@@ -71,7 +72,7 @@ result = expression1 AndAlso expression2
   
  [!code-vb[VbVbalrOperators#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#25)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [논리/비트 연산자(Visual Basic)](logical-bitwise-operators.md)
 - [Visual Basic에서의 연산자 우선 순위](operator-precedence.md)

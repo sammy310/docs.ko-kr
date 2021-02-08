@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 비교 연산자 (Visual Basic)'
 title: 비교 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basic
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: fcbb9052a79fa4b20b5a0f8fdc15de73d55a4281
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 28eded0cfae54ec83ad9546b801243e4de0e45fc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873446"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774111"
 ---
 # <a name="comparison-operators-visual-basic"></a>비교 연산자(Visual Basic)
 
@@ -61,7 +62,7 @@ ms.locfileid: "90873446"
 
  이러한 연산자는 두 식을 비교 하 여 같은지 여부와 그렇지 않은 경우의 차이점을 확인 합니다. `Is`, `IsNot` 및 `Like` 은 별도의 도움말 페이지에 자세히 설명 되어 있습니다. 관계형 비교 연산자에 대해서는이 페이지에서 자세히 설명 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
   
 ```vb
 result = expression1 comparisonoperator expression2  
@@ -148,7 +149,7 @@ result = string Like pattern
 
 ## <a name="overloading"></a>오버로딩
 
- 관계형 비교 연산자 ( `<` . `<=`,,, `>` `>=` `=` , `<>` )를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체에서 해당 동작을 재정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서 이러한 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.
+ 관계형 비교 연산자 ( `<` . `<=`,,, `>` `>=` `=` , `<>` )를 *오버 로드할* 수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체에서 해당 동작을 재정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서 이러한 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.
 
  [= 연산자](assignment-operator.md) 는 할당 연산자가 아닌 관계형 비교 연산자로만 오버 로드 될 수 있습니다.
 
@@ -160,7 +161,7 @@ result = string Like pattern
 
  앞의 예제에서 첫 번째 비교는을 반환 하 `False` 고 나머지 비교는를 반환 합니다 `True` .
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.InvalidCastException>
 - [= 연산자](assignment-operator.md)

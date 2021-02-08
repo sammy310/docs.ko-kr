@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CloseCLREnumeration 함수'
 title: CloseCLREnumeration 함수
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5e3c3958-80bb-43b1-a96b-dd3e6dbd9cd7
 topic_type:
 - apiref
-ms.openlocfilehash: 575e194cf952f02a3fe4fce9e955e45e1bc3653d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7669332cc23b78afbb3bf597e7d208a5f707aae5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673915"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99772772"
 ---
 # <a name="closeclrenumeration-function"></a>CloseCLREnumeration 함수
 
@@ -48,7 +49,7 @@ HRESULT CloseCLREnumeration (
  `dwArrayLength`  
  [in] `pHandleArray` 또는 `pStringArray`의 크기(길이)를 포함하는 DWORD입니다(동일).  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  S_OK  
  [EnumerateCLRs 함수](enumerateclrs-function.md) 에 의해 열린 핸들이 닫히고 핸들 및 문자열 배열에 할당 된 메모리가 해제 됩니다.  

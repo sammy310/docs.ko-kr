@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 구성 요소 Windows Forms 추가'
 title: 구성 요소 Windows Forms 추가
 ms.date: 04/07/2017
 helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-ms.openlocfilehash: dc1786f1f2dcc7bd01488dd24c6ef454f7e1cfbd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a0db81e0dd86f9ee6f2a47183100645ece78280c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557634"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773259"
 ---
 # <a name="windows-forms-add-configuration-element"></a>구성 요소 Windows Forms 추가
 
@@ -30,14 +31,14 @@ ms.locfileid: "90557634"
 
 ### <a name="attributes"></a>특성
 
-| attribute | Description |
+| attribute | 설명 |
 | --------- | ----------- |
 | `key`     | 필수 특성입니다. 특정 Windows Forms 사용자 지정 가능 기능에 해당 하는 미리 정의 된 키 이름입니다. |
 | `value`   | 필수 특성입니다. `key`에 할당할 값입니다. |
 
 ### <a name="key-attribute-names-and-associated-values"></a>`key` 특성 이름 및 관련 값
 
-| `key` 이름 | 값 | Description |
+| `key` 이름 | 값 | 설명 |
 | ---------- | ------ | ----------- |
 | "AnchorLayout.DisableSinglePassControlScaling" | "true" &#124; "false"입니다. | 앵커 된 컨트롤이 단일 패스에서 확장 되는지 여부를 나타냅니다. 단일 패스 크기 조정을 사용 하지 않도록 설정 하려면 "true"로 설정 합니다. 그렇지 않으면 false입니다. 자세한 내용은 [설명](#remarks) 의 "단일 패스 크기 조정" 섹션을 참조 하세요. |
 | "DpiAwareness" | "PerMonitorV2" &#124; "false" | 응용 프로그램이 DPI를 인식 하는지 여부를 나타냅니다. Dpi 인식을 지원 하려면 키를 "PerMonitorV2"로 설정 합니다. 그렇지 않으면 "false"로 설정 합니다. DPI 인식은 옵트인 (opt in) 기능입니다. Windows Forms의 높은 DPI 지원 기능을 활용 하려면 해당 값을 "PerMonitorV2"로 설정 해야 합니다. 자세한 내용은 [설명](#remarks) 부분을 참조 하세요. |
@@ -55,7 +56,7 @@ ms.locfileid: "90557634"
 
 ### <a name="parent-elements"></a>부모 요소
 
-| 요소 | Description |
+| 요소 | 설명 |
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](index.md) | 새 Windows Forms 응용 프로그램 기능에 대 한 지원을 구성 합니다. |
 
@@ -107,7 +108,7 @@ Windows Forms 응용 프로그램에서 높은 DPI 지원을 활용 하는 방�
 
 단일 또는 다중 패스 배율은 사용자 인터페이스의 인식 되는 응답성과 크기가 조정 될 때 사용자 인터페이스 요소의 시각적 모양에 영향을 미칩니다. .NET Framework 4.7부터 Windows Forms는 단일 패스 크기 조정을 사용 합니다. 이전 버전의 .NET Framework에서는 여러 패스를 통해 크기 조정을 수행 했습니다 .이로 인해 일부 컨트롤의 크기가 필요 이상으로 조정 되었습니다. 앱이 이전 동작에 종속 되는 경우에만 단일 패스 크기 조정을 사용 하지 않도록 설정 해야 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Forms 구성 섹션](index.md)
 - [Windows Forms의 높은 DPI 지원](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms)

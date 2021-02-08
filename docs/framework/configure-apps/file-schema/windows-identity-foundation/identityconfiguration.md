@@ -1,14 +1,15 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <identityConfiguration>
 title: <identityConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
 author: BrucePerlerMS
-ms.openlocfilehash: 0fa8c574fd5663606cf081f1000a24884306edfe
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 987dfb006984f757ad117157e915f1909ab3a8c2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251991"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773409"
 ---
 # \<identityConfiguration>
 
@@ -36,7 +37,7 @@ ms.locfileid: "70251991"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |name|Id 구성 섹션의 이름입니다. 이 이름을 사용 하 여 특정 구성 섹션을 참조할 수 있습니다. 특성을 `name` 지정 하지 않으면 섹션에서 기본 구성을 정의 합니다. 기본 구성은 항상 수동 페더레이션 시나리오에 사용 됩니다. 자세한 내용은 요소를 참조 하세요 [\<federationConfiguration>](federationconfiguration.md) .|
 |saveBootstrapContext|부트스트랩 토큰이 세션 토큰에 포함 되어야 하는지 여부를 지정 합니다. `saveBootstrapContext`요소에 대 한 특성을 설정 하 여 토큰 처리기 컬렉션에서 값을 설정할 수도 있습니다 [\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md) . 토큰 처리기 컬렉션에 설정 된 값은 서비스에 설정 된 값을 재정의 합니다.|
@@ -44,7 +45,7 @@ ms.locfileid: "70251991"
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<caches>](caches.md)|세션 토큰 및 토큰 재생 검색에 사용 되는 캐시를 등록 합니다. 는 서비스 수준 또는 보안 토큰 처리기 컬렉션에서 지정할 수 있습니다. 선택 사항입니다.|
 |[\<certificateValidation>](certificatevalidation.md)|토큰 처리기에서 인증서의 유효성을 검사 하는 데 사용 하는 설정을 제어 합니다. 는 서비스 수준 또는 보안 토큰 처리기 컬렉션에서 지정할 수 있습니다. 선택 사항입니다.|
@@ -56,7 +57,7 @@ ms.locfileid: "70251991"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<system.identityModel>](system-identitymodel.md)|응용 프로그램에서 WIF (Windows Identity Foundation) 옵션을 사용 하도록 구성 하는 구성을 제공 합니다.|
 

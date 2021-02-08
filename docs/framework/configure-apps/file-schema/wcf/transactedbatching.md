@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <transactedBatching>
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 6167a4ad56a9481a9f695b770605991a0a88d2d9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9a57226c3a2f2b026c69324e37b00e87fd3dd693
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399408"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773695"
 ---
 # \<transactedBatching>
 
@@ -32,7 +33,7 @@ ms.locfileid: "70399408"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`maxBatchSize`|트랜잭션 한 번으로 일괄 처리할 수 있는 받기 작업의 최대 수를 지정하는 정수입니다. 기본값은 0입니다.|
 
@@ -42,7 +43,7 @@ ms.locfileid: "70399408"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<behavior>](behavior-of-endpointbehaviors.md)|엔드포인트 동작을 지정합니다.|
 

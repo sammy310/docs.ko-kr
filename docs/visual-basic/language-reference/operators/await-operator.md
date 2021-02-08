@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: Wait 연산자 (Visual Basic)'
 title: Await 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: 9d55ba82547dfcb0336c3a3fd12521c0dcb3eb58
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 04e32f31de970b389ae38fc3a4cdc6ab3f873f3d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371832"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774137"
 ---
 # <a name="await-operator-visual-basic"></a>Await 연산자(Visual Basic)
 
 대기 중인 작업이 완료될 때까지 메서드 실행을 일시 중단하려면 비동기 메서드 또는 람다 식의 피연산자에 `Await` 연산자를 적용합니다. 작업은 진행 중인 작업을 나타냅니다.
 
-이 사용 되는 메서드에는 `Await` [비동기](../modifiers/async.md) 한정자가 있어야 합니다. `Async` 한정자를 사용하여 정의하고 일반적으로 하나 이상의 `Await` 식을 포함하는 이러한 메서드를 *비동기 메서드*라고 합니다.
+이 사용 되는 메서드에는 `Await` [비동기](../modifiers/async.md) 한정자가 있어야 합니다. `Async` 한정자를 사용하여 정의하고 일반적으로 하나 이상의 `Await` 식을 포함하는 이러한 메서드를 *비동기 메서드* 라고 합니다.
 
 > [!NOTE]
 > `Async` 및 `Await` 키워드는 Visual Studio 2012에서 도입되었습니다. 비동기 프로그래밍에 대 한 소개는 [async 및 wait를 사용한 비동기 프로그래밍](../../programming-guide/concepts/async/index.md)을 참조 하세요.
@@ -108,6 +109,6 @@ End Function
 
 ## <a name="see-also"></a>참고 항목
 
-- [Async 및 Wait를 사용한 비동기 프로그래밍](../../programming-guide/concepts/async/index.md)
+- [Async 및 Await를 사용한 비동기 프로그래밍](../../programming-guide/concepts/async/index.md)
 - [연습: Async 및 Await를 사용하여 웹에 액세스](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async](../modifiers/async.md)

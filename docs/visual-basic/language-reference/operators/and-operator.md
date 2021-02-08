@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: And 연산자 (Visual Basic)'
 title: And 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-ms.openlocfilehash: b4d6d08cca2907befeab2e31c6804b69849c9e38
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 238ef0b2f14f2014da6e65684bfac183e03d963e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874863"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774280"
 ---
 # <a name="and-operator-visual-basic"></a>And 연산자(Visual Basic)
 
 두 식에 논리 결합을 수행 `Boolean` 하거나 두 숫자 식에 비트 결합을 수행 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 result = expression1 And expression2  
@@ -53,7 +54,7 @@ result = expression1 And expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
-> 부울 비교에서 `And` 연산자는 항상 프로시저 호출을 포함 하는 두 식을 모두 계산 합니다. [AndAlso 연산자](andalso-operator.md) 는 *단락*을 수행 합니다. 즉,가 이면 `expression1` 이 `False` `expression2` 계산 되지 않습니다.  
+> 부울 비교에서 `And` 연산자는 항상 프로시저 호출을 포함 하는 두 식을 모두 계산 합니다. [AndAlso 연산자](andalso-operator.md) 는 *단락* 을 수행 합니다. 즉,가 이면 `expression1` 이 `False` `expression2` 계산 되지 않습니다.  
   
  숫자 값에 적용 되는 `And` 연산자는 두 숫자 식에서 동일 하 게 배치 된 비트의 비트 비교를 수행 하 고 `result` 다음 표에 따라의 해당 비트를 설정 합니다.  
   
@@ -74,7 +75,7 @@ result = expression1 And expression2
  부울 비교의 경우 결과의 데이터 형식은 `Boolean` 입니다. 비트 비교의 경우 결과 데이터 형식은 및의 데이터 형식에 적합 한 숫자 형식입니다 `expression1` `expression2` . [연산자 결과의 데이터 형식](data-types-of-operator-results.md)에서 "관계형 및 비트 비교" 표를 참조 하세요.  
   
 > [!NOTE]
-> `And`연산자를 *오버 로드할*수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체의 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
+> `And`연산자를 *오버 로드할* 수 있습니다. 즉, 피연산자가 해당 클래스 또는 구조체의 형식일 때 클래스 또는 구조체의 동작을 다시 정의할 수 있습니다. 코드가 이러한 클래스 또는 구조체에서이 연산자를 사용 하는 경우 다시 정의 된 동작을 이해 해야 합니다. 자세한 내용은 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 
@@ -92,7 +93,7 @@ result = expression1 And expression2
   
  앞의 예제에서는 각각 8, 2 및 0의 결과를 생성 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [논리/비트 연산자(Visual Basic)](logical-bitwise-operators.md)
 - [Visual Basic에서의 연산자 우선 순위](operator-precedence.md)

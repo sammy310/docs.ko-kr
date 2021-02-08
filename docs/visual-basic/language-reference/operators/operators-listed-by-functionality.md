@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 기능별 목록 (Visual Basic)'
 title: 기능별 연산자 목록
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: d1fb027c-872b-4ccc-afc8-2380e3f65d4a
-ms.openlocfilehash: 7eaf7390e0c6ba1c9e350a6aab903c0a794e4e80
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bd038192b08c94aefd32235a3a7cd5063b2cc43f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874775"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773877"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>기능별 연산자 목록(Visual Basic)
 
@@ -27,7 +28,7 @@ ms.locfileid: "90874775"
 |[비트 시프트 연산자](bit-shift-operators.md)|이러한 연산자는 비트 패턴에서 산술 시프트를 수행 합니다.|  
 |[기타 연산자](miscellaneous-operators.md)|이러한 연산자는 기타 작업을 수행 합니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [연산자 및 식](../../programming-guide/language-features/operators-and-expressions/index.md)
 - [Visual Basic에서의 연산자 우선 순위](operator-precedence.md)

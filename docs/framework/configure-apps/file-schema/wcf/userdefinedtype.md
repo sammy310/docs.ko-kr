@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <userDefinedType>
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: a4bbd677aba27d93389f8d2f99aadd801c86b65f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 11f4380f54abbdb0faf37998b07473e38ec9245f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172842"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773422"
 ---
 # \<userDefinedType>
 

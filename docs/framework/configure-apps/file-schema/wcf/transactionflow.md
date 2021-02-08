@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <transactionFlow>
 title: <transactionFlow>
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-ms.openlocfilehash: c4e5cbac24e2c72791c2f5c0faed0703363c99e1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8a853beaec1837606ecb96156b8ec9381fa3e07a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201423"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773552"
 ---
 # \<transactionFlow>
 
@@ -60,7 +61,7 @@ ms.locfileid: "91201423"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [ServiceModel 트랜잭션 구성](../../../wcf/feature-details/servicemodel-transaction-configuration.md)
 - [트랜잭션 흐름 사용](../../../wcf/feature-details/enabling-transaction-flow.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)

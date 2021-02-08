@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: DirectCast 연산자 (Visual Basic)'
 title: DirectCast 연산자
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
-ms.openlocfilehash: 7b070b8eba240440821f7984a9336c2ecaf61706
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: be1eb4885940571788769bae968b1a094e256c79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867085"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773903"
 ---
 # <a name="directcast-operator-visual-basic"></a>DirectCast 연산자(Visual Basic)
 
@@ -46,7 +47,7 @@ ms.locfileid: "90867085"
   
  앞의 예제에서의 런타임 형식은입니다 `q` `Double` . `CType``Double`는로 변환 될 수 있으므로 성공 `Integer` 합니다. 그러나 `DirectCast` 변환이 있는 경우에도의 런타임 형식은와의 상속 관계가 없기 때문에 첫 번째는 런타임에 실패 합니다 `Double` `Integer` . 두 번째는 `DirectCast` 형식에서를 <xref:System.Windows.Forms.Form> 상속 하는 형식으로 변환 하기 때문에 성공 합니다 <xref:System.Windows.Forms.Control> <xref:System.Windows.Forms.Form> .  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Convert.ChangeType%2A?displayProperty=nameWithType>
 - [Widening and Narrowing Conversions](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <transport><ws2007HttpBinding>'
 title: <ws2007HttpBinding>의 <transport>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 60e8758d653848176ca3f287e253bd7990e78470
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8c6890bc291458ba0849ab7a206487431b279576
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91162051"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773435"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<ws2007HttpBinding>의 \<transport>
 
@@ -21,7 +22,7 @@ HTTP 전송의 인증 설정을 정의합니다.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-ws2007httpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
@@ -29,7 +30,7 @@ HTTP 전송의 인증 설정을 정의합니다.
            realm="string" />
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
 
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
@@ -47,7 +48,7 @@ HTTP 전송의 인증 설정을 정의합니다.
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |없음|보안이 해제되어 있습니다.|  
 |Basic|기본 인증을 사용합니다.|  
@@ -58,7 +59,7 @@ HTTP 전송의 인증 설정을 정의합니다.
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |없음|보안이 해제되어 있습니다.|  
 |Basic|기본 인증을 사용합니다.|  
@@ -84,7 +85,7 @@ HTTP 전송의 인증 설정을 정의합니다.
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

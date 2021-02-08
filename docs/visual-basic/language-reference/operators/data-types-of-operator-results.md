@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연산자 결과의 데이터 형식 (Visual Basic)'
 title: 연산자 결과의 데이터 형식
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: f7a1249cec159f98ede48b960fadc5e2ff4a75f3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ebc99d5d735c30124feb52232e28a5fe6fe5fd50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867101"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773929"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>연산자 결과의 데이터 형식(Visual Basic)
 
@@ -50,7 +51,7 @@ Visual Basic는 피연산자의 데이터 형식에 따라 작업의 결과 데�
   
  ,,, 또는 연산의 피연산자 중 하나가 `+` `–` `*` `/` `Mod` 이 `Decimal` 고 다른 피연산자가 또는가 아니면 `Single` `Double` 다른 피연산자를로 넓힙니다 Visual Basic `Decimal` . 에서 작업을 수행 하 `Decimal` 고, 결과 데이터 형식은 `Decimal` 입니다.  
   
-## <a name="floating-point-arithmetic"></a>부동 소수점 산술  
+## <a name="floating-point-arithmetic"></a>Floating-Point 산술  
 
  Visual Basic는 [Double](../data-types/double-data-type.md)에서 대부분의 부동 소수점 산술 연산을 수행 하며, 이러한 연산에 대해 가장 효율적인 데이터 형식입니다. 그러나 하나의 피연산자가 [단일](../data-types/single-data-type.md) 피연산자이 고 다른 피연산자가이 아닌 경우 `Double` Visual Basic에서 연산을 수행 `Single` 합니다. 필요에 따라 각 피연산자를 작업 이전에 적절 한 데이터 형식으로 확대 하 고 결과에 해당 데이터 형식이 있습니다.  
   
@@ -190,7 +191,7 @@ Visual Basic는 피연산자의 데이터 형식에 따라 작업의 결과 데�
   
  `Like`연산자는 피연산자의 패턴 일치에 대해서만 정의 됩니다 `String` . Visual Basic는 작업 이전에 필요에 따라 각 피연산자를 변환 하려고 시도 `String` 합니다. 결과 데이터 형식은 항상 `Boolean` 입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [데이터 형식](../data-types/index.md)
 - [연산자 및 식](../../programming-guide/language-features/operators-and-expressions/index.md)

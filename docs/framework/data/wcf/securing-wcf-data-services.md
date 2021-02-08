@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 보안 WCF Data Services'
 title: WCF Data Services에 보안 설정
 ms.date: 03/30/2017
 dev_langs:
@@ -8,14 +9,16 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: e45e09e821928d110e67f82810f51e2d9d4a85e8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c7f8cb989c33df3d124a1745046ea68cb27e8c2f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180688"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773110"
 ---
 # <a name="securing-wcf-data-services"></a>WCF Data Services에 보안 설정
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 이 문서에서는 Open Data Protocol (OData)을 지 원하는 서비스에 액세스 하는 WCF Data Services 및 응용 프로그램의 개발, 배포 및 실행과 관련 된 보안 고려 사항을 설명 합니다. 또한 보안 .NET Framework 응용 프로그램을 만들기 위한 권장 사항을 따라야 합니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 데이터 서비스 요청에 대 한 클라이언트 자격 증명 지정 (WCF Data Services)'
 title: '방법: 데이터 서비스 요청에 대한 클라이언트 자격 증명 지정(WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: fd69d5f7eddf713612000b0ad677e7ada378553e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 45ccb237d310479d708b6ab0a7dcfe8812c1ea3f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180662"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99773058"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>방법: 데이터 서비스 요청에 대한 클라이언트 자격 증명 지정(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 기본적으로 클라이언트 라이브러리는 OData 서비스에 요청을 보낼 때 자격 증명을 제공 하지 않습니다. 하지만 <xref:System.Net.NetworkCredential>의 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 속성에 대해 <xref:System.Data.Services.Client.DataServiceContext>을 제공하여 데이터 서비스에 요청을 인증하기 위해 자격 증명이 보내지도록 지정할 수 있습니다. 자세한 내용은 [Securing WCF Data Services](securing-wcf-data-services.md)을 참조하세요. 이 항목의 예제에서는 데이터 서비스에서 데이터를 요청할 때 WCF Data Services 클라이언트에서 사용 하는 자격 증명을 명시적으로 제공 하는 방법을 보여 줍니다.  
   

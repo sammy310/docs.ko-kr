@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: IMetaDataEmit:: Set Setprops 메서드'
 title: IMetaDataEmit::SetPermissionSetProps 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8eaee971-40bf-45e2-a3d8-6e57674213b6
 topic_type:
 - apiref
-ms.openlocfilehash: 4c3e0953d71020ba62ee4ab68aa9e21ea3f0f521
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1e2786a21a1024f32328e36878a1a2427af54f51
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675037"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771888"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>IMetaDataEmit::SetPermissionSetProps 메서드
 
@@ -65,7 +66,7 @@ HRESULT SetPermissionSetProps (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)
