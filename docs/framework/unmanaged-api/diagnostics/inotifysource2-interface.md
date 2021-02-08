@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: INotifySource2 인터페이스'
 title: INotifySource2 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,29 +15,29 @@ helpviewer_keywords:
 ms.assetid: f432fb85-5c78-43d1-8302-53b8fc605c97
 topic_type:
 - apiref
-ms.openlocfilehash: efb7ca77b2468bf05b8973d80c2c20b85a64faf6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8a14f4578d322802360de35396c684d69e2d12da
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719972"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790336"
 ---
-# <a name="inotifysource2-interface"></a><span data-ttu-id="f072a-102">INotifySource2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f072a-102">INotifySource2 Interface</span></span>
+# <a name="inotifysource2-interface"></a><span data-ttu-id="7b000-103">INotifySource2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7b000-103">INotifySource2 Interface</span></span>
 
-<span data-ttu-id="f072a-103">알림 필터를 설정 하는 메서드를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="f072a-103">Declares a method for setting notification filters.</span></span>  
+<span data-ttu-id="7b000-104">알림 필터를 설정 하는 메서드를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b000-104">Declares a method for setting notification filters.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="f072a-104">메서드</span><span class="sxs-lookup"><span data-stu-id="f072a-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="7b000-105">메서드</span><span class="sxs-lookup"><span data-stu-id="7b000-105">Methods</span></span>  
   
-|<span data-ttu-id="f072a-105">메서드</span><span class="sxs-lookup"><span data-stu-id="f072a-105">Method</span></span>|<span data-ttu-id="f072a-106">설명</span><span class="sxs-lookup"><span data-stu-id="f072a-106">Description</span></span>|  
+|<span data-ttu-id="7b000-106">메서드</span><span class="sxs-lookup"><span data-stu-id="7b000-106">Method</span></span>|<span data-ttu-id="7b000-107">설명</span><span class="sxs-lookup"><span data-stu-id="7b000-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="f072a-107">SetNotifyFilter 메서드</span><span class="sxs-lookup"><span data-stu-id="f072a-107">SetNotifyFilter Method</span></span>](inotifysource2-setnotifyfilter-method.md)|<span data-ttu-id="f072a-108">이 원본에 사용할 알림 필터를 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="f072a-108">Assigns a notification filter for use with this source.</span></span>|  
+|[<span data-ttu-id="7b000-108">SetNotifyFilter 메서드</span><span class="sxs-lookup"><span data-stu-id="7b000-108">SetNotifyFilter Method</span></span>](inotifysource2-setnotifyfilter-method.md)|<span data-ttu-id="7b000-109">이 원본에 사용할 알림 필터를 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b000-109">Assigns a notification filter for use with this source.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f072a-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f072a-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7b000-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7b000-110">Requirements</span></span>  
 
- <span data-ttu-id="f072a-110">**헤더:** ProtocolNotify2</span><span class="sxs-lookup"><span data-stu-id="f072a-110">**Header:** ProtocolNotify2.idl</span></span>  
+ <span data-ttu-id="7b000-111">**헤더:** ProtocolNotify2</span><span class="sxs-lookup"><span data-stu-id="7b000-111">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f072a-111">참조</span><span class="sxs-lookup"><span data-stu-id="f072a-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7b000-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7b000-112">See also</span></span>
 
-- [<span data-ttu-id="f072a-112">INotifyConnection2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f072a-112">INotifyConnection2 Interface</span></span>](inotifyconnection2-interface.md)
-- [<span data-ttu-id="f072a-113">INotifySink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f072a-113">INotifySink2 Interface</span></span>](inotifysink2-interface.md)
-- [<span data-ttu-id="f072a-114">진단 기호 저장소 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f072a-114">Diagnostics Symbol Store Interfaces</span></span>](diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="7b000-113">INotifyConnection2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7b000-113">INotifyConnection2 Interface</span></span>](inotifyconnection2-interface.md)
+- [<span data-ttu-id="7b000-114">INotifySink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7b000-114">INotifySink2 Interface</span></span>](inotifysink2-interface.md)
+- [<span data-ttu-id="7b000-115">진단 기호 저장소 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7b000-115">Diagnostics Symbol Store Interfaces</span></span>](diagnostics-symbol-store-interfaces.md)
