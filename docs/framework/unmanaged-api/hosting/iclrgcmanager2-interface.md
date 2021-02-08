@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRGCManager2 인터페이스'
 title: ICLRGCManager2 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ffd7b-9ad7-41cd-9bba-34030ae3da7e
 topic_type:
 - apiref
-ms.openlocfilehash: d2873b5e1f8229e8a16dfaacf1c9737ac47405bb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 455b3a99d10fa43bf325e9f7075d255dd55ae38b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672801"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789959"
 ---
 # <a name="iclrgcmanager2-interface"></a>ICLRGCManager2 인터페이스
 
@@ -47,7 +48,7 @@ ms.locfileid: "95672801"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [자동 메모리 관리](../../../standard/automatic-memory-management.md)
 - [COR_GC_STATS 구조체](cor-gc-stats-structure.md)

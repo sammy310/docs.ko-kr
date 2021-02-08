@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerCallback3 인터페이스'
 title: ICorProfilerCallback3 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: be83af41-3dec-4c77-8529-9dd6b8042af6
 topic_type:
 - apiref
-ms.openlocfilehash: fd482bfe8e95a53cafd1530c88f09df146a1b150
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 70fba8768fef5da411b566d918308989a3f6e863
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729436"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788802"
 ---
 # <a name="icorprofilercallback3-interface"></a>ICorProfilerCallback3 인터페이스
 
@@ -45,7 +46,7 @@ CLR (공용 언어 런타임)에서 연결 및 분리 상태 정보를 프로파
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 인터페이스](profiling-interfaces.md)
 - [ICorProfilerInfo 인터페이스](icorprofilerinfo-interface.md)

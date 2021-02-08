@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataAssemblyImport:: FindAssembliesByName 메서드'
 title: IMetaDataAssemblyImport::FindAssembliesByName 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4db97cf9-e4c1-4233-8efa-cbdc0e14a8e4
 topic_type:
 - apiref
-ms.openlocfilehash: a2bf0335f8d75c7dbd1a651afdb54da8c7be2460
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f9c25392cc2c70a0ebc17181b876cf9c6ba03c78
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731629"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789296"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName 메서드
 
@@ -59,7 +60,7 @@ HRESULT FindAssembliesByName (
  `pcAssemblies`  
  제한이 반환 된 인터페이스 포인터의 수입니다. 즉, 실제로 배치 된 인터페이스 포인터의 수입니다 `ppIUnk` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorRuntimeHost:: NextDomain 메서드'
 title: ICorRuntimeHost::NextDomain 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe07a05b-f6d6-44b5-ab01-b9a6eb15c350
 topic_type:
 - apiref
-ms.openlocfilehash: 598c46d50d7b4a67c1b2c0d844c9b12deb12a428
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cfced9d1d3c91f4ec9508b86157ceebae9f95a56
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671371"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789621"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>ICorRuntimeHost::NextDomain 메서드
 
@@ -43,7 +44,7 @@ HRESULT NextDomain (
  `pAppDomain`  
  제한이 <xref:System._AppDomain?displayProperty=nameWithType> 열거형의 다음 도메인을 나타내는 형식에 대 한 인터페이스 포인터 이거나, 더 이상 도메인이 없는 경우 null입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -62,7 +63,7 @@ HRESULT NextDomain (
   
  **.NET Framework 버전:** 1.0, 1.1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>

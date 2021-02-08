@@ -1,19 +1,20 @@
 ---
+description: PnrpRegisteredAddresses에 대해 자세히 알아보세요.
 title: System.ServiceModel.Channels.PnrpRegisteredAddresses
 ms.date: 03/30/2017
 ms.assetid: b770e042-0555-4668-9b41-e20da092c16a
-ms.openlocfilehash: 254c9247f4fecffffd698e5870ea056934b7ed63
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d70b7f7cc9c336301950bafe28956e623d6d3681
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292195"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788087"
 ---
 # <a name="systemservicemodelchannelspnrpregisteredaddresses"></a>System.ServiceModel.Channels.PnrpRegisteredAddresses
 
 Pnrp Resolver에서 로컬 노드의 주소를 등록했습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 추적은 PNRP 서비스에서 로컬 노드의 주소를 성공적으로 등록 한 후에 발생 합니다.  
   

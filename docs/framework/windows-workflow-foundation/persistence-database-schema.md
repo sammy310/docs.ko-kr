@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: 지 속성 데이터베이스 스키마'
 title: 지속성 데이터베이스 스키마
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: f0ee076aa327f298007dfb18af324fb81c309067
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 40c47c5bfcb6c974eab6f2f2c926e0fa13054a38
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246097"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787840"
 ---
 # <a name="persistence-database-schema"></a>지속성 데이터베이스 스키마
 
@@ -17,7 +18,7 @@ ms.locfileid: "96246097"
 
  **인스턴스** 뷰에는 데이터베이스의 모든 워크플로 인스턴스에 대 한 일반 정보가 포함 되어 있습니다.  
   
-|열 이름|열 유형|Description|  
+|열 이름|열 유형|설명|  
 |-----------------|-----------------|-----------------|  
 |InstanceId|UniqueIdentifier|워크플로 인스턴스의 ID입니다.|  
 |PendingTimer|DateTime|워크플로가 Delay 활동에서 차단되었으며 타이머가 만료된 후 다시 시작될 것임을 나타냅니다. 워크플로가 차단되지 않고 타이머가 만료될 때까지 기다리는 경우 이 값은 Null일 수 있습니다.|  
@@ -30,9 +31,9 @@ ms.locfileid: "96246097"
 |CurrentMachine|Nvarchar(128)|현재 워크플로 인스턴스가 메모리에 로드된 컴퓨터의 이름을 나타냅니다.|  
 |LastMachine|Nvarchar(450)|워크플로 인스턴스를 마지막으로 로드한 컴퓨터를 나타냅니다.|  
 |ExecutionStatus|Nvarchar(450)|워크플로의 현재 실행 상태를 나타냅니다. 가능한 상태에는 **실행** 중, **유휴** 상태, **닫힘** 됨이 있습니다.|  
-|IsInitialized|비트|워크플로 인스턴스가 초기화되었는지 여부를 나타냅니다. 초기화된 워크플로 인스턴스는 한 번 이상 유지된 워크플로 인스턴스입니다.|  
-|IsSuspended|비트|워크플로 인스턴스가 일시 중단되었는지 여부를 나타냅니다.|  
-|IsCompleted|비트|워크플로 인스턴스의 실행이 완료되었는지 여부를 나타냅니다. **참고:**  Iif **InstanceCompletionAction** 속성은 **DeleteAll** 로 설정 되 고, 완료 되 면 뷰에서 인스턴스가 제거 됩니다.|  
+|IsInitialized|bit|워크플로 인스턴스가 초기화되었는지 여부를 나타냅니다. 초기화된 워크플로 인스턴스는 한 번 이상 유지된 워크플로 인스턴스입니다.|  
+|IsSuspended|bit|워크플로 인스턴스가 일시 중단되었는지 여부를 나타냅니다.|  
+|IsCompleted|bit|워크플로 인스턴스의 실행이 완료되었는지 여부를 나타냅니다. **참고:**  Iif **InstanceCompletionAction** 속성은 **DeleteAll** 로 설정 되 고, 완료 되 면 뷰에서 인스턴스가 제거 됩니다.|  
 |EncodingOption|TinyInt|데이터 속성을 serialize하는 데 사용된 인코딩에 대해 설명합니다.<br /><br /> -0 – 인코딩 안 함<br />-1 – GzipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary(max)|인스턴스가 로드될 때 워크플로 런타임에 다시 제공될 serialize된 인스턴스 데이터 속성을 포함합니다.<br /><br /> 각각의 기본 속성은 네이티브 CLR 형식이며, 이는 blob를 역직렬화하는 데 특별한 어셈블리가 필요하지 않음을 의미합니다.|  
 |WriteOnlyPrimitiveDataProperties|Varbinary(max)|인스턴스가 로드될 때 워크플로 런타임에 다시 제공되지 않는 serialize된 인스턴스 데이터 속성을 포함합니다.<br /><br /> 각각의 기본 속성은 네이티브 CLR 형식이며, 이는 blob를 역직렬화하는 데 특별한 어셈블리가 필요하지 않음을 의미합니다.|  
@@ -52,7 +53,7 @@ ms.locfileid: "96246097"
 
  **Servicedeployments** 뷰에는 모든 웹 (IIS/WAS) 호스팅 워크플로 서비스에 대 한 배포 정보가 포함 되어 있습니다. 웹 호스트 되는 각 워크플로 인스턴스에는이 뷰의 행을 참조 하는 **Servicedeploymentid** 가 포함 됩니다.  
   
-|열 이름|열 유형|Description|  
+|열 이름|열 유형|설명|  
 |-----------------|-----------------|-----------------|  
 |ServiceDeploymentId|BigInt|이 뷰의 기본 키입니다.|  
 |SiteName|Nvarchar(max)|워크플로 서비스 (예: **기본 웹 사이트**)를 포함 하는 사이트의 이름을 나타냅니다.|  
@@ -61,7 +62,7 @@ ms.locfileid: "96246097"
 |ServiceName|Nvarchar(max)|워크플로 서비스의 이름을 나타냅니다. (예: **PurchaseOrderService**).|  
 |ServiceNamespace|Nvarchar(max)|워크플로 서비스의 네임스페이스를 나타냅니다. (예: **MyCompany**).|  
   
- ServiceDeployments 뷰에는 삭제 트리거도 포함되어 있습니다. 적절한 사용 권한을 가진 사용자는 이 뷰에 대해 삭제 문을 실행하여 데이터베이스에서 ServiceDeployment 항목을 제거할 수 있습니다. 다음 사항에 유의하십시오.  
+ ServiceDeployments 뷰에는 삭제 트리거도 포함되어 있습니다. 적절한 사용 권한을 가진 사용자는 이 뷰에 대해 삭제 문을 실행하여 데이터베이스에서 ServiceDeployment 항목을 제거할 수 있습니다. 다음 사항에 유의합니다.  
   
 1. 이 뷰에서 항목을 삭제하려면 먼저 전체 데이터베이스를 잠궈야 하므로 이 작업은 부담이 되는 작업입니다. 이 작업은 워크플로 인스턴스가 존재하지 않는 ServiceDeployment 항목을 참조하는 일이 발생하지 않게 하려는 경우 필요합니다. 다운 시간이나 유지 관리 창에 있는 동안에만 이 뷰에서 삭제하는 작업을 수행하기 바랍니다.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "96246097"
 
  **InstancePromotedProperties** 보기에는 사용자가 지정한 모든 승격 된 속성에 대 한 정보가 포함 되어 있습니다. 승격된 속성은 사용자가 인스턴스를 검색할 때 쿼리에 사용할 수 있는 고급 속성 역할을 합니다.  예를 들어 사용자는 항상 **Value1** 열에 주문 비용을 저장 하는 PurchaseOrder 승격을 추가할 수 있습니다. 그러면 사용자는 가격이 특정 값을 초과하는 모든 구매 주문을 쿼리할 수 있습니다.  
   
-|열 유형|열 유형|Description|  
+|열 유형|열 유형|설명|  
 |-|-|-|  
 |InstanceId|UniqueIdentifier|워크플로 인스턴스의 ID입니다.|  
 |EncodingOption|TinyInt|승격된 이진 속성을 serialize하는 데 사용된 인코딩에 대해 설명합니다.<br /><br /> -0 – 인코딩 안 함<br />-1 – GZipStream|  

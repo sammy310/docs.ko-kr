@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLROnEventManager:: UnregisterActionOnEvent 메서드'
 title: ICLROnEventManager::UnregisterActionOnEvent 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4c02ec37-cdf0-46b2-890e-235092741236
 topic_type:
 - apiref
-ms.openlocfilehash: ca3c7fe813f22d3beab3087414100b3d8e5814ac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8131c58669ff7be0fdc2b2e063c70d3b370921e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725601"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789816"
 ---
 # <a name="iclroneventmanagerunregisteractiononevent-method"></a>ICLROnEventManager::UnregisterActionOnEvent 메서드
 
@@ -43,7 +44,7 @@ HRESULT UnregisterActionOnEvent (
  `pAction`  
  진행 [Registeractiononevent](iclroneventmanager-registeractiononevent-method.md) 메서드에 매개 변수로 전달 된 [IActionOnCLREvent](iactiononclrevent-interface.md) 개체에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -64,7 +65,7 @@ HRESULT UnregisterActionOnEvent (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [EClrEvent 열거형](eclrevent-enumeration.md)
 - [IActionOnCLREvent 인터페이스](iactiononclrevent-interface.md)

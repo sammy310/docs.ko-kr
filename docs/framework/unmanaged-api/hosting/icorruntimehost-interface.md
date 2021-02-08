@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorRuntimeHost 인터페이스'
 title: ICorRuntimeHost 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-ms.openlocfilehash: 9fcb5e189af9f72de7635aad550a5e8ab5522dbd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd50d31668b2dd0718dbe644343bfe314a0afdbe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720622"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789660"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost 인터페이스
 
@@ -61,7 +62,7 @@ ms.locfileid: "95720622"
   
  **.NET Framework 버전:** 1.0, 1.1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.AppDomain>
 - [호스팅](index.md)

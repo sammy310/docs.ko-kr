@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRPolicyManager:: SetActionOnFailure 메서드'
 title: ICLRPolicyManager::SetActionOnFailure 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-ms.openlocfilehash: 8f44247ca7904a40f5ebc092d95c2e08b6048438
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 67d3ca5d7924caf0a768b4de53b4b24f1c72fa27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725575"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789803"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure 메서드
 
@@ -43,7 +44,7 @@ HRESULT SetActionOnFailure (
  `action`  
  진행 오류가 발생할 때 수행할 작업을 나타내는 [EPolicyAction](epolicyaction-enumeration.md) 값 중 하나입니다. 지원 되는 값의 목록은 설명 섹션을 참조 하세요.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -82,7 +83,7 @@ HRESULT SetActionOnFailure (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [EClrFailure 열거형](eclrfailure-enumeration.md)
 - [EPolicyAction 열거형](epolicyaction-enumeration.md)

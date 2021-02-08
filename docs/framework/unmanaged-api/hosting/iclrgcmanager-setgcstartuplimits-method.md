@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRGCManager:: SetGCStartupLimits 메서드'
 title: ICLRGCManager::SetGCStartupLimits 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c8d9959-95b5-4131-be4a-556d97774014
 topic_type:
 - apiref
-ms.openlocfilehash: 169d344975762b97f89e8dc32d72f2b9c95fea11
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5614b41cfd7a7938cdb653d879119ddbd9560b9d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678176"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789985"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>ICLRGCManager::SetGCStartupLimits 메서드
 
@@ -50,7 +51,7 @@ HRESULT SetGCStartupLimits (
   
  최소 0 세대 크기는 64 KB입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -75,7 +76,7 @@ HRESULT SetGCStartupLimits (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [자동 메모리 관리](../../../standard/automatic-memory-management.md)
 - [가비지 수집](../../../standard/garbage-collection/index.md)

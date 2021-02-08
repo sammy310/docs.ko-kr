@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorRuntimeHost:: CreateDomain 메서드'
 title: ICorRuntimeHost::CreateDomain 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b96c5ef3-a9df-4c7c-9952-432d3272cb5c
 topic_type:
 - apiref
-ms.openlocfilehash: c495ce47b699d2e32d1f02e4afcf0444a9930c34
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6173d74d97ddb9dec619db8583036ec763a9e293
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723911"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789712"
 ---
 # <a name="icorruntimehostcreatedomain-method"></a>ICorRuntimeHost::CreateDomain 메서드
 
@@ -47,7 +48,7 @@ HRESULT CreateDomain (
  `pAppDomain`  
  제한이 <xref:System._AppDomain> <xref:System.AppDomain?displayProperty=nameWithType> 도메인을 추가로 제어 하는 데 사용할 수 있는 인스턴스에 대 한 형식의 인터페이스 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -66,7 +67,7 @@ HRESULT CreateDomain (
   
  **.NET Framework 버전:** 1.0, 1.1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>

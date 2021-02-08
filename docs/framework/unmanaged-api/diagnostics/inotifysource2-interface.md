@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: INotifySource2 인터페이스'
 title: INotifySource2 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f432fb85-5c78-43d1-8302-53b8fc605c97
 topic_type:
 - apiref
-ms.openlocfilehash: efb7ca77b2468bf05b8973d80c2c20b85a64faf6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8a14f4578d322802360de35396c684d69e2d12da
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719972"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790336"
 ---
 # <a name="inotifysource2-interface"></a>INotifySource2 인터페이스
 
@@ -35,7 +36,7 @@ ms.locfileid: "95719972"
 
  **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [INotifyConnection2 인터페이스](inotifyconnection2-interface.md)
 - [INotifySink2 인터페이스](inotifysink2-interface.md)

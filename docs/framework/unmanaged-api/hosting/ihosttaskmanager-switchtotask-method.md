@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostTaskManager:: SwitchToTask 메서드'
 title: IHostTaskManager::SwitchToTask 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 35d0c27e-4b14-49ce-810d-7ab2120177e8
 topic_type:
 - apiref
-ms.openlocfilehash: bf3ddd91a58669540ef310e268162ec78408494f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6333dcdf7e1bbe6bde575f53f4743a1300c770f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702031"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789361"
 ---
 # <a name="ihosttaskmanagerswitchtotask-method"></a>IHostTaskManager::SwitchToTask 메서드
 
@@ -39,7 +40,7 @@ HRESULT SwitchToTask (
  `option`  
  진행 요청 된 작업이 차단 되는 경우 호스트에서 수행 해야 하는 작업을 나타내는 [WAIT_OPTION](wait-option-enumeration.md) 열거형 값 중 하나입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -67,7 +68,7 @@ HRESULT SwitchToTask (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRTask 인터페이스](iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](iclrtaskmanager-interface.md)

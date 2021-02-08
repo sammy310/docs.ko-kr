@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedAsyncMethod 인터페이스'
 title: ISymUnmanagedAsyncMethod 인터페이스
 ms.date: 03/30/2017
 ms.assetid: f2de5224-fd91-45de-9e58-bc600c6d22f1
-ms.openlocfilehash: 02b1866f2b9e89cdc8c8795f399ecc0c733c7202
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cb3120464224137dfdcff4f13ca4aee82ef4d89e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707167"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790271"
 ---
 # <a name="isymunmanagedasyncmethod-interface"></a>ISymUnmanagedAsyncMethod 인터페이스
 
@@ -36,6 +37,6 @@ ms.locfileid: "95707167"
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)

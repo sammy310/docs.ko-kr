@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedAsyncMethodPropertiesWriter 인터페이스'
 title: ISymUnmanagedAsyncMethodPropertiesWriter 인터페이스
 ms.date: 03/30/2017
 ms.assetid: caa71820-8058-4b6a-93a2-25ee757d92d3
-ms.openlocfilehash: 779b737da43f61d1023a0a640dce936e11c4704c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4c8b1bc037485e22160af28b59d751859a157499
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707037"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790193"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a>ISymUnmanagedAsyncMethodPropertiesWriter 인터페이스
 
@@ -33,6 +34,6 @@ ms.locfileid: "95707037"
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [진단 기호 저장소 인터페이스](diagnostics-symbol-store-interfaces.md)

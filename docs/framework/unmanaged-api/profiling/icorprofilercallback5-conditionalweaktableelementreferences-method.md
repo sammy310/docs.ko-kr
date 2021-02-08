@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerCallback5:: ConditionalWeakTableElementReferences 메서드'
 title: ICorProfilerCallback5::ConditionalWeakTableElementReferences 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-ms.openlocfilehash: 17fbc99b30921f795c1f7ff882ec73432aade8c6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 40114f6e1d80719eceaf2dbc398b74c1e790c76a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499248"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788672"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences 메서드
 
@@ -80,7 +81,7 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>설명
 
-.NET Framework 4.5 이상 버전에 대 한 프로파일러는 [ICorProfilerCallback5](icorprofilercallback5-interface.md) 인터페이스를 구현 하 고 메서드로 지정 된 종속성을 기록 합니다 `ConditionalWeakTableElementReferences` . `ICorProfilerCallback5`항목이 나타내는 라이브 개체 간의 전체 종속성 집합을 제공 합니다 `ConditionalWeakTable` . 이러한 종속성 및 [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md) 메서드로 지정 된 멤버 필드 참조를 사용 하면 관리 되는 프로파일러가 라이브 개체의 전체 개체 그래프를 생성할 수 있습니다.
+.NET Framework 4.5 이상 버전에 대 한 프로파일러는 [ICorProfilerCallback5](icorprofilercallback5-interface.md) 인터페이스를 구현 하 고 메서드로 지정 된 종속성을 기록 합니다 `ConditionalWeakTableElementReferences` . `ICorProfilerCallback5` 항목이 나타내는 라이브 개체 간의 전체 종속성 집합을 제공 합니다 `ConditionalWeakTable` . 이러한 종속성 및 [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md) 메서드로 지정 된 멤버 필드 참조를 사용 하면 관리 되는 프로파일러가 라이브 개체의 전체 개체 그래프를 생성할 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 

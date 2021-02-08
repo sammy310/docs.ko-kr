@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISOSDacInterface:: GetMethodDescPtrFromIP 메서드'
 title: 'ISOSDacInterface:: GetMethodDescPtrFromIP 메서드'
 ms.date: 02/01/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: c3de9e5ffe23a13c126343c6f74f042bf1239609
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 8d7c7071b7b3fc520faea71c8d7792317745cfde
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421009"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790414"
 ---
 # <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>ISOSDacInterface:: GetMethodDescPtrFromIP 메서드
 
@@ -43,7 +44,7 @@ HRESULT GetMethodDescPtrFromIP(
 진행 런타임에 메서드 내의 주소입니다.
 
 `ppMD`\
-제한이 `MethodDesc`특정 메서드에 대 한의 주소입니다.
+제한이 `MethodDesc` 특정 메서드에 대 한의 주소입니다.
 
 ## <a name="remarks"></a>설명
 

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 3343-EstablishConnectionStop'
 title: 3343 - EstablishConnectionStop
 ms.date: 03/30/2017
 ms.assetid: 4ddbaae5-2de0-45d0-90d2-0ab135fea31f
-ms.openlocfilehash: 7fc3b3d47064f3a569b2571d2ffae975021ff16c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: bd628bcc321ceb130e7765b99f980b993c835a1b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96237237"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788594"
 ---
 # <a name="3343---establishconnectionstop"></a>3343 - EstablishConnectionStop
 
@@ -20,7 +21,7 @@ ms.locfileid: "96237237"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 연결 설정이 중지될 때 내보내집니다.  
   

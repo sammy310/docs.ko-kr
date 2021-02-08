@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerCallback4:: ReJITError 메서드'
 title: ICorProfilerCallback4::ReJITError 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-ms.openlocfilehash: 46312aaf530e69f0e6a90e35515f1373d01b4340
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f5173d90e65a1e9f1049ba7eadc1ce9cf7630096
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730242"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788698"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError 메서드
 
@@ -50,7 +51,7 @@ HRESULT ReJITError(
  `hrStatus`  
  진행 오류의 특성을 나타내는 HRESULT입니다. 값 목록은 상태 HRESULT 섹션을 참조 하세요.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 콜백의 반환 값은 무시됩니다.  
   
@@ -75,7 +76,7 @@ HRESULT ReJITError(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ICorProfilerCallback4 인터페이스](icorprofilercallback4-interface.md)

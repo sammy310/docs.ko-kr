@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ISymUnmanagedENCUpdate:: UpdateSymbolStore2 메서드'
 title: ISymUnmanagedENCUpdate::UpdateSymbolStore2 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 35588317-6184-485c-ab41-4b15fc1765d9
 topic_type:
 - apiref
-ms.openlocfilehash: c68cf632b789a523b19cc78d8d919c2278b1befa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f2e5cbf51c1bab3a538fbf5a3e5824739fa3b250
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699575"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790141"
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>ISymUnmanagedENCUpdate::UpdateSymbolStore2 메서드
 
@@ -46,7 +47,7 @@ HRESULT UpdateSymbolStore2(
  `cDeltaLines`  
  진행 `ULONG` 변경 된 줄의 수를 나타내는입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면이 고, 그렇지 않으면 S_OK입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
@@ -54,6 +55,6 @@ HRESULT UpdateSymbolStore2(
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedENCUpdate 인터페이스](isymunmanagedencupdate-interface.md)

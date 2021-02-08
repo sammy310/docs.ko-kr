@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataImport:: IsGlobal 메서드'
 title: IMetaDataImport::IsGlobal 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44cf6908-f555-4ae8-b2cf-24bd974bf2fe
 topic_type:
 - apiref
-ms.openlocfilehash: 0d76abf8a9c923089f367ab4e1786ac8cc92622d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5230b2967990e3c52b429d62dd03566c3043e45f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702981"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789075"
 ---
 # <a name="imetadataimportisglobal-method"></a>IMetaDataImport::IsGlobal 메서드
 
@@ -53,7 +54,7 @@ HRESULT IsGlobal (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

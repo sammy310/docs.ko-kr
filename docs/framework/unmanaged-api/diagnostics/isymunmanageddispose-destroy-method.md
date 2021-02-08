@@ -1,4 +1,5 @@
 ---
+description: ISymUnmanagedDispose::D estroy 메서드에 대해 자세히 알아보세요.
 title: ISymUnmanagedDispose::Destroy 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a854ab9f-d2ba-470e-867f-808c1e7bd07a
 topic_type:
 - apiref
-ms.openlocfilehash: 6a31026f5b1669c0c29762048dc2c5c1c7bbb6a2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c13f90e08f2ba0dd7c70acc3321913b14195f1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732829"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790206"
 ---
 # <a name="isymunmanageddisposedestroy-method"></a>ISymUnmanagedDispose::Destroy 메서드
 
@@ -40,6 +41,6 @@ HRESULT Destroy();
 
  **헤더:** CorSym, CorSym  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ISymUnmanagedDispose 인터페이스](isymunmanageddispose-interface.md)

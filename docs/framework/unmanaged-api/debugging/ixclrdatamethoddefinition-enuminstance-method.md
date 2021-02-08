@@ -1,4 +1,5 @@
 ---
+description: 'IXCLRDataMethodDefinition:: EnumInstance 메서드에 대해 자세히 알아보세요.'
 title: 'IXCLRDataMethodDefinition:: EnumInstance 메서드'
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: ae1ef2a3c8cf9e042ab9ab233ed993f8e36b2fce
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 4038dc4706b8362acaf9c13abd9c7326cce376a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420944"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790362"
 ---
 # <a name="ixclrdatamethoddefinitionenuminstance-method"></a>IXCLRDataMethodDefinition:: EnumInstance 메서드
 

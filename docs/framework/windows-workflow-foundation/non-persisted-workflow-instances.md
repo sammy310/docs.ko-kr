@@ -1,19 +1,20 @@
 ---
+description: '다음에 대 한 자세한 정보: 비지속형 워크플로 인스턴스'
 title: 비지속형 워크플로 인스턴스
 ms.date: 03/30/2017
 ms.assetid: 5e01af77-6b14-4964-91a5-7dfd143449c0
-ms.openlocfilehash: 315d791585ace6ce4adf281abbba0a4c8c72d75a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0ee5968426a6bb800b9e70ac592c6da191c22511
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663038"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787905"
 ---
 # <a name="non-persisted-workflow-instances"></a>비지속형 워크플로 인스턴스
 
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>에 상태를 유지하는 워크플로의 새 인스턴스가 만들어지면 서비스 호스트에서는 인스턴스 저장소에 해당 서비스에 대한 항목을 만듭니다. 이후 워크플로 인스턴스가 처음으로 유지될 때 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>는 현재 인스턴스 상태를 저장합니다. 워크플로가 Windows Process Activation Service에서 호스트되는 경우에는 인스턴스가 처음으로 유지될 때 서비스 배포 데이터도 인스턴스 저장소에 기록됩니다.
 
-워크플로 인스턴스가 유지 되지 않은 것으로에 **비지속형** 상태. 이 상태에 있는 동안에는 애플리케이션 도메인 재활용, 호스트 오류 또는 컴퓨터 오류 후 워크플로 인스턴스를 복구할 수 없습니다.
+워크플로 인스턴스가 지속 되지 않으면 **지속** 되지 않는 상태에 있습니다. 이 상태에 있는 동안에는 애플리케이션 도메인 재활용, 호스트 오류 또는 컴퓨터 오류 후 워크플로 인스턴스를 복구할 수 없습니다.
 
 ## <a name="the-non-persisted-state"></a>비지속형 상태
 
@@ -23,9 +24,9 @@ ms.locfileid: "67663038"
 
 - 워크플로 인스턴스가 처음으로 유지되기 전에 워크플로 인스턴스에서 예외가 발생한 경우. 반환되는 <xref:System.Activities.UnhandledExceptionAction>에 따라 다음과 같은 시나리오가 발생합니다.
 
-  - <xref:System.Activities.UnhandledExceptionAction> 로 설정 된 <xref:System.Activities.UnhandledExceptionAction.Abort>: 예외가 발생 하는 경우 서비스 배포 정보가 인스턴스 저장소에 기록 됩니다 하 고 워크플로 인스턴스가 메모리에서 언로드 되었습니다. 워크플로 인스턴스는 비지속형 상태로 남아 있으며 다시 로드될 수 없습니다.
+  - <xref:System.Activities.UnhandledExceptionAction>이 <xref:System.Activities.UnhandledExceptionAction.Abort>로 설정된 경우: 예외가 발생하면 서비스 배포 정보가 인스턴스 저장소에 기록되고 워크플로 인스턴스가 메모리에서 언로드됩니다. 워크플로 인스턴스는 비지속형 상태로 남아 있으며 다시 로드될 수 없습니다.
 
-  - <xref:System.Activities.UnhandledExceptionAction> 로 설정 되어 <xref:System.Activities.UnhandledExceptionAction.Cancel> 또는 <xref:System.Activities.UnhandledExceptionAction.Terminate>: 예외가 발생 하는, 서비스 배포 정보가 인스턴스 저장소에 기록 되 고 활동 인스턴스 상태 설정 된 경우 <xref:System.Activities.ActivityInstanceState.Closed>합니다.
+  - <xref:System.Activities.UnhandledExceptionAction>이 <xref:System.Activities.UnhandledExceptionAction.Cancel> 또는 <xref:System.Activities.UnhandledExceptionAction.Terminate>로 설정된 경우: 예외가 발생하면 서비스 배포 정보가 인스턴스 저장소에 기록되고 활동 인스턴스 상태가 <xref:System.Activities.ActivityInstanceState.Closed>로 설정됩니다.
 
 언로드된 비지속형 워크플로 인스턴스가 발생하는 위험을 최소화하려면 수명 주기의 초기에 워크플로를 유지하는 것이 좋습니다.
 

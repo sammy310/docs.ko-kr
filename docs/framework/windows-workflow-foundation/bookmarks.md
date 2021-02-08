@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 책갈피'
 title: 책갈피-WF
 ms.date: 03/30/2017
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-ms.openlocfilehash: 7a52823ff68d8f09895bb3a9323a57d3abccd823
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b4f0e68e0868ecd4eb97673ff6c09ee8c806cf43
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289115"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787931"
 ---
 # <a name="bookmarks"></a>책갈피
 

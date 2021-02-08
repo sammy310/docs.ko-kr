@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 워크플로 일시 중지 및 다시 시작'
 title: 워크플로 일시 중지 및 다시 시작
 ms.date: 03/30/2017
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-ms.openlocfilehash: e8d1806c6d2c8e72b4e3a8b18bff669fcd0e0538
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 787dc2e2ddac03a059df30798645d561cb57437b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268542"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787892"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>워크플로 일시 중지 및 다시 시작
 

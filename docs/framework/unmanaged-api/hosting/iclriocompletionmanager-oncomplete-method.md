@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: IclrioOnComplete Manager:: 메서드'
 title: ICLRIoCompletionManager::OnComplete 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 003f6974-9727-4322-bed5-e330d1224d0b
 topic_type:
 - apiref
-ms.openlocfilehash: 15119974acf74b49669e5ffbee59fbff9e5c84c9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d54b189debdfc2959676b53fd3fb51b2c10dce17
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714109"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789888"
 ---
 # <a name="iclriocompletionmanageroncomplete-method"></a>ICLRIoCompletionManager::OnComplete 메서드
 
@@ -53,7 +54,7 @@ HRESULT OnComplete (
  `pvOverlapped`  
  진행 `OVERLAPPED` 메서드 호출에 전달 된 구조체에 대 한 포인터 `IHostIoCompletionManager::Bind` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -78,7 +79,7 @@ HRESULT OnComplete (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRIoCompletionManager 인터페이스](iclriocompletionmanager-interface.md)
 - [IHostIoCompletionManager 인터페이스](ihostiocompletionmanager-interface.md)

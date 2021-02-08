@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostTaskManager:: EndThreadAffinity 메서드'
 title: IHostTaskManager::EndThreadAffinity 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7738a904-0cd7-4fde-a3eb-2323a5533157
 topic_type:
 - apiref
-ms.openlocfilehash: c662e242cf6745223b1e87716ce4f64971347d2a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0bbe42d8e14d20fb5be18fe7ebb266100ae72fd7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731659"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789426"
 ---
 # <a name="ihosttaskmanagerendthreadaffinity-method"></a>IHostTaskManager::EndThreadAffinity 메서드
 
@@ -58,7 +59,7 @@ HRESULT EndThreadAffinity ();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Threading>
 - [ICLRTask 인터페이스](iclrtask-interface.md)

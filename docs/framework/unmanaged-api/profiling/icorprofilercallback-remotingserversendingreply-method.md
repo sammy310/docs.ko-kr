@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerCallback:: RemotingServerSendingReply 메서드'
 title: ICorProfilerCallback::RemotingServerSendingReply 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dfe84a19-2e03-4be2-8b25-f02bad38e4a9
 topic_type:
 - apiref
-ms.openlocfilehash: 1d876644ae35d13a481b01d9e0e5ff0d0764ca18
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 236a707fcbc051a3d00c408f71f3b4f9f452c220
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713953"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788880"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>ICorProfilerCallback::RemotingServerSendingReply 메서드
 
@@ -60,6 +61,6 @@ HRESULT RemotingServerSendingReply(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

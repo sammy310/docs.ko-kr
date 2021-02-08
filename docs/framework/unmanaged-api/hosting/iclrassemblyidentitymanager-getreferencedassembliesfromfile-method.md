@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRAssemblyIdentityManager:: GetReferencedAssembliesFromFile 메서드'
 title: ICLRAssemblyIdentityManager::GetReferencedAssembliesFromFile 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eed63d31-d977-4c7d-9443-f9d37a2a7d81
 topic_type:
 - apiref
-ms.openlocfilehash: 6b67ba9d022d94f51d7cc6a4645855f6b6ac3e19
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 46b2f392746c6e23e2a8a11aded5eacd8f5a597b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679323"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790059"
 ---
 # <a name="iclrassemblyidentitymanagergetreferencedassembliesfromfile-method"></a>ICLRAssemblyIdentityManager::GetReferencedAssembliesFromFile 메서드
 
@@ -51,7 +52,7 @@ HRESULT GetReferencedAssembliesFromFile (
  `ppReferenceEnum`  
  제한이 에서 나타내는 어셈블리를 제외 하 고에서 `ICLRReferenceAssemblyEnum` 어셈블리에 의해 참조 되는 어셈블리에 대 한 어셈블리 id 데이터를 포함 하는 개체의 주소에 대 한 포인터입니다 `pwzFilePath` `pExcludeAssembliesList` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -76,7 +77,7 @@ HRESULT GetReferencedAssembliesFromFile (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRAssemblyIdentityManager 인터페이스](iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList 인터페이스](iclrassemblyreferencelist-interface.md)

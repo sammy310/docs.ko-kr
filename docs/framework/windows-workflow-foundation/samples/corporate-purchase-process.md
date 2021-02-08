@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 회사 구매 프로세스'
 title: 기업 구매 프로세스
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: aa2ca2577eb68204ffcb755ce1b16b9354348ee3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c26b1f46f29b7a6ec06acf5d19381b5c8f460433
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293470"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99787866"
 ---
 # <a name="corporate-purchase-process"></a>기업 구매 프로세스
 
@@ -93,7 +94,7 @@ ms.locfileid: "96293470"
 
  다음 표에는 WfDefinition 프로젝트의 주요 파일에 대한 설명이 나와 있습니다.  
   
-|파일|Description|  
+|파일|설명|  
 |----------|-----------------|  
 |IPurchaseProcessHost.cs|워크플로의 호스트에 대한 인터페이스입니다.|  
 |PurchaseProcessHost.cs|워크플로에 대한 호스트의 구현입니다. 이 호스트는 워크플로 런타임에 대한 세부 사항을 추상화하며, 모든 클라이언트 애플리케이션에서 `PurchaseProcess` 워크플로 인스턴스를 로드 및 실행하고 상호 작용하는 데 사용됩니다.|  
@@ -108,7 +109,7 @@ ms.locfileid: "96293470"
 
  다음 표에는 Common 프로젝트의 주요 클래스에 대한 설명이 나와 있습니다.  
   
-|인스턴스|Description|  
+|인스턴스|설명|  
 |-----------|-----------------|  
 |Vendor|제안 요청서에 제안을 제출하는 공급업체입니다.|  
 |RequestForProposal|RFP(제안 요청서)는 특정 상품이나 서비스에 대한 제안서를 제출하도록 공급업체에 요청하는 초대장입니다.|  
@@ -121,7 +122,7 @@ ms.locfileid: "96293470"
 
  다음 표에는 WebClient 프로젝트의 주요 웹 페이지에 대한 설명이 나와 있습니다.  
   
-|파일|Description|  
+|파일|설명|  
 |-|-|  
 |CreateRfp.aspx|새 제안 요청서를 만들고 제출합니다.|  
 |Default.aspx|활성화된 제안 요청서와 완료된 제안 요청서를 모두 표시합니다.|  
@@ -132,7 +133,7 @@ ms.locfileid: "96293470"
 
  다음 표에는 WinFormsClient 프로젝트의 주요 폼에 대한 설명이 나와 있습니다.  
   
-|Form|Description|  
+|Form|설명|  
 |-|-|  
 |NewRfp|새 제안 요청서를 만들고 제출합니다.|  
 |ShowProposals|활성화된 제안 요청서와 완료된 제안 요청서를 모두 표시합니다. **참고:**  제안에 대 한 요청을 만들거나 수정한 후 해당 화면에 변경 내용을 표시 하려면 UI에서 **새로 고침** 단추를 클릭 해야 할 수도 있습니다.|  

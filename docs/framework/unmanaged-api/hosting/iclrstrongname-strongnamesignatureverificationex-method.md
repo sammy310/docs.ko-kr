@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRStrongName:: StrongNameSignatureVerificationEx 메서드'
 title: ICLRStrongName::StrongNameSignatureVerificationEx 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dbd2f662-208b-4174-b301-5c99af91040f
 topic_type:
 - apiref
-ms.openlocfilehash: 9caeb72c57260012ae2b459950bf19d907da1d98
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0e1692d7151e09a621b93823424b3ac10b6607d7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671553"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789764"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationex-method"></a>ICLRStrongName::StrongNameSignatureVerificationEx 메서드
 
@@ -47,7 +48,7 @@ HRESULT StrongNameSignatureVerificationEx (
  `pfWasVerified`  
  [out] `true` 강력한 이름 서명을 확인 했으면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false` 입니다. `pfWasVerified``false`레지스트리 설정으로 인해 확인이 성공적으로 수행 된 경우에도로 설정 됩니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `S_OK` 확인에 성공 했으면이 고, 그렇지 않으면입니다. 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
   
@@ -65,7 +66,7 @@ HRESULT StrongNameSignatureVerificationEx (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [StrongNameSignatureVerification 메서드](iclrstrongname-strongnamesignatureverification-method.md)
 - [ICLRStrongName 인터페이스](iclrstrongname-interface.md)

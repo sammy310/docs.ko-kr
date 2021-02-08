@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataImport:: GetTypeSpecFromToken 메서드'
 title: IMetaDataImport::GetTypeSpecFromToken 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-ms.openlocfilehash: 62495aa4280bb1799af09fea2e550ae6107e09e9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b71f8f856da517b3e5046c20d787a555816fb728
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729150"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789114"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken 메서드
 
@@ -47,7 +48,7 @@ HRESULT GetTypeSpecFromToken (
  `pcbSig`  
  제한이 메타 데이터 시그니처의 크기 (바이트)입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  성공 또는 실패를 나타내는 HRESULT입니다. 실패 한 매크로를 사용 하 여 오류를 테스트할 수 있습니다.  
   
@@ -61,7 +62,7 @@ HRESULT GetTypeSpecFromToken (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

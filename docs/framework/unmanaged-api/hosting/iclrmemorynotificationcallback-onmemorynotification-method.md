@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRMemoryNotificationCallback:: OnMemoryNotification 메서드'
 title: ICLRMemoryNotificationCallback::OnMemoryNotification 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5612a44d-56cc-4f34-af31-8c9809ba9431
 topic_type:
 - apiref
-ms.openlocfilehash: f9b2715801ebcaff3d97962540a4b1b103bbd53b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 92041c433fa82bb63afda7968eb8c6e1fa72acb3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730476"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789915"
 ---
 # <a name="iclrmemorynotificationcallbackonmemorynotification-method"></a>ICLRMemoryNotificationCallback::OnMemoryNotification 메서드
 
@@ -39,7 +40,7 @@ HRESULT OnMemoryNotification (
  `eMemoryAvailable`  
  진행 컴퓨터에 현재 발생 하 고 있는 메모리 압력을 나타내는 [EMemoryAvailable](ememoryavailable-enumeration.md) 값 중 하나입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -67,7 +68,7 @@ HRESULT OnMemoryNotification (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IHostMemoryManager 인터페이스](ihostmemorymanager-interface.md)
 - [RegisterMemoryNotificationCallback 메서드](ihostmemorymanager-registermemorynotificationcallback-method.md)

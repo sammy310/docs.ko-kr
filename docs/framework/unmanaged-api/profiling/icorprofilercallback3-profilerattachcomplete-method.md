@@ -1,4 +1,5 @@
 ---
+description: ICorProfilerCallback3::P rofilerAttachComplete 메서드에 대해 자세히 알아보세요.
 title: ICorProfilerCallback3::ProfilerAttachComplete 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 257d6076-06e0-4d93-bb33-651fbb2b92d7
 topic_type:
 - apiref
-ms.openlocfilehash: a16e77619ec85ebdf47a2b821309bbb3af63282b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: dcd8ab9fed402593fc955050b0d3be6f8a46730a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705321"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99788789"
 ---
 # <a name="icorprofilercallback3profilerattachcomplete-method"></a>ICorProfilerCallback3::ProfilerAttachComplete 메서드
 
@@ -52,7 +53,7 @@ HRESULT ProfilerAttachComplete ();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)

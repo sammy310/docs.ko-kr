@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorRuntimeHost:: Start 메서드'
 title: ICorRuntimeHost::Start 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c66f3ac5-6489-484a-9bed-c31b711cee01
 topic_type:
 - apiref
-ms.openlocfilehash: bc647ad025b5e22187b476383ed0128761cb632f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d07c0144c7192bc2f57927c294ea472cd6b47f9f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721038"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789608"
 ---
 # <a name="icorruntimehoststart-method"></a>ICorRuntimeHost::Start 메서드
 
@@ -55,6 +56,6 @@ HRESULT Start ();
   
  **.NET Framework 버전:** 1.0, 1.1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorRuntimeHost 인터페이스](icorruntimehost-interface.md)
