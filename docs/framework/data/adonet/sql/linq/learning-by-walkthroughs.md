@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 연습 별 학습'
 title: 연습으로 학습
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: f3d313fd50108420b631cff783708191f97a8b04
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8a0163e03ee7e992d75c8f8864a6a2b256c40a7c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158242"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803830"
 ---
 # <a name="learning-by-walkthroughs"></a>연습으로 학습
 
@@ -58,11 +59,11 @@ ms.locfileid: "91158242"
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>데이터베이스 로그온을 확인하거나 변경하려면  
   
-1. Windows **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server 2005**, **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭 합니다.  
+1. Windows **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server 2005**, **구성 도구** 를 차례로 가리킨 다음 **SQL Server 구성 관리자** 를 클릭 합니다.  
   
-2. **SQL Server 구성 관리자**의 왼쪽 창에서 **SQL Server 2005 서비스**를 클릭 합니다.  
+2. **SQL Server 구성 관리자** 의 왼쪽 창에서 **SQL Server 2005 서비스** 를 클릭 합니다.  
   
-3. 오른쪽 창에서 **SQL Server (SQLEXPRESS)** 를 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.  
+3. 오른쪽 창에서 **SQL Server (SQLEXPRESS)** 를 마우스 오른쪽 단추로 클릭 한 다음 **속성** 을 클릭 합니다.  
   
 4. **로그온** 탭을 클릭 하 고 서버에 로그온을 시도 하는 방법을 확인 합니다.  
   
@@ -76,9 +77,9 @@ ms.locfileid: "91158242"
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>명명된 파이프 프로토콜을 사용하도록 설정하려면  
   
-1. **SQL Server 구성 관리자**왼쪽 창에서 **SQL Server 2005 네트워크 구성**을 확장 한 다음 **SQLEXPRESS에 대 한 프로토콜**을 클릭 합니다.  
+1. **SQL Server 구성 관리자** 왼쪽 창에서 **SQL Server 2005 네트워크 구성** 을 확장 한 다음 **SQLEXPRESS에 대 한 프로토콜** 을 클릭 합니다.  
   
-2. 오른쪽 창에서 **명명 된 파이프** 프로토콜을 사용 하도록 설정 했는지 확인 합니다. 그렇지 않은 경우 **이름 파이프** 를 마우스 오른쪽 단추로 클릭 한 다음 **사용**을 클릭 합니다.  
+2. 오른쪽 창에서 **명명 된 파이프** 프로토콜을 사용 하도록 설정 했는지 확인 합니다. 그렇지 않은 경우 **이름 파이프** 를 마우스 오른쪽 단추로 클릭 한 다음 **사용** 을 클릭 합니다.  
   
      서비스를 중지했다가 다시 시작해야 합니다. 다음 블록의 단계를 따릅니다.  
   
@@ -88,11 +89,11 @@ ms.locfileid: "91158242"
   
 ##### <a name="to-stop-and-restart-the-service"></a>서비스를 중지했다가 다시 시작하려면  
   
-1. **SQL Server 구성 관리자**의 왼쪽 창에서 **SQL Server 2005 서비스**를 클릭 합니다.  
+1. **SQL Server 구성 관리자** 의 왼쪽 창에서 **SQL Server 2005 서비스** 를 클릭 합니다.  
   
-2. 오른쪽 창에서 **SQL Server (SQLEXPRESS)** 를 마우스 오른쪽 단추로 클릭 한 다음 **중지**를 클릭 합니다.  
+2. 오른쪽 창에서 **SQL Server (SQLEXPRESS)** 를 마우스 오른쪽 단추로 클릭 한 다음 **중지** 를 클릭 합니다.  
   
-3. **SQL Server (SQLEXPRESS)** 를 마우스 오른쪽 단추로 클릭 한 다음 **다시 시작**을 클릭 합니다.  
+3. **SQL Server (SQLEXPRESS)** 를 마우스 오른쪽 단추로 클릭 한 다음 **다시 시작** 을 클릭 합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

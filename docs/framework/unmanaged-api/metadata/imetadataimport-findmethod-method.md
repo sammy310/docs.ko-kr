@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataImport:: FindMethod 메서드'
 title: IMetaDataImport::FindMethod 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f9bde1d-e306-438d-941b-d0925b322304
 topic_type:
 - apiref
-ms.openlocfilehash: 111e42a6d8f413c616779bc44e0722ab38781588
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0d2866554fcb4dcf3984310e4da24d501f1fc7b6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711340"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803557"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod 메서드
 
@@ -73,7 +74,7 @@ HRESULT FindMethod (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Reflection.MethodInfo>
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)

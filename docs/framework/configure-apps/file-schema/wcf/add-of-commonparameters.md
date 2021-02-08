@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <add><commonParameters>'
 title: <commonParameters>의 <add>
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: 11be233d846f9025f041a26174e5b3bd2abdab55
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d7a1b78ed79b7eab472460b364b90bd372ecf6bf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149194"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99804012"
 ---
 # <a name="add-of-commonparameters"></a>\<commonParameters>의 \<add>
 
@@ -38,10 +39,10 @@ ms.locfileid: "91149194"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |name|서비스에 지정한 매개 변수 이름입니다.|  
-|value|서비스에 지정한 매개 변수 값입니다.|  
+|값|서비스에 지정한 매개 변수 값입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
 

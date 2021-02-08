@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: Serialization'
 title: Serialization2
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: 778cc73575ffc7421854fd89592f1c4eaa284678
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f4d9ecd63d4d15744fca4c6a6c61d9737cc8a196
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203555"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803778"
 ---
 # <a name="serialization"></a>Serialization
 
@@ -18,7 +19,7 @@ ms.locfileid: "91203555"
   
  다음 방법 중 하나로 디자인 타임에 serialization 코드를 추가할 수 있습니다.  
   
-- 개체 관계형 디자이너에서 **Serialization 모드** 속성을 **단방향**으로 변경 합니다.  
+- 개체 관계형 디자이너에서 **Serialization 모드** 속성을 **단방향** 으로 변경 합니다.  
   
 - SQLMetal 명령줄에서 **/serialization** 옵션을 추가 합니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
   
@@ -40,7 +41,7 @@ ms.locfileid: "91203555"
   
      단방향 serialization은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 지원되는 유일한 serialization 형식입니다.  
   
-## <a name="code-example"></a>코드 예  
+## <a name="code-example"></a>코드 예제  
 
  다음 코드에서는 Northwind 샘플 데이터베이스의 일반 `Customer` 및 `Order` 클래스를 사용하고 이러한 클래스가 serialization 특성으로 데코레이팅되는 방법을 보여 줍니다.  
   

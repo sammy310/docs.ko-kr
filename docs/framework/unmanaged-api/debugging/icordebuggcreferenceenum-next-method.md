@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugGCReferenceEnum:: Next 메서드'
 title: ICorDebugGCReferenceEnum::Next 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 91b1345c-a94f-4ef8-9696-3823d06c6d05
 topic_type:
 - apiref
-ms.openlocfilehash: e55c53b9610dcadee92ba9871bf52e3dacb5796b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aec135fcb737a200d5a267529fa812c0852a24df
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726238"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803700"
 ---
 # <a name="icordebuggcreferenceenumnext-method"></a>ICorDebugGCReferenceEnum::Next 메서드
 
@@ -58,7 +59,7 @@ HRESULT Next(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugGCReferenceEnum 인터페이스](icordebuggcreferenceenum-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

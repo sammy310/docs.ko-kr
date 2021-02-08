@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: <TypeParameter> 요소 (.NET 네이티브)'
 title: <TypeParameter> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
-ms.openlocfilehash: dc04115914b7571b677c6d069d2d4b820b895d59
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 182cd62dc0584991b8ef0f5757d6005173d6d7a7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287672"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803648"
 ---
 # <a name="typeparameter-element-net-native"></a>\<TypeParameter> 요소 (.NET 네이티브)
 
@@ -35,7 +36,7 @@ ms.locfileid: "96287672"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|특성 유형|Description|  
+|attribute|특성 유형|설명|  
 |---------------|--------------------|-----------------|  
 |`Name`|일반|필수 특성입니다. <xref:System.Type> 형식의 매개 변수 이름입니다. 예를 들어 메서드 시그니처 `Type.GetInterfaceMap(Type interfaceType)`의 경우 `Name` 특성의 값은 "interfaceType"입니다.|  
 |`Activate`|반사|선택적 특성입니다. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.|  
@@ -51,13 +52,13 @@ ms.locfileid: "96287672"
   
 ## <a name="name-attribute"></a>Name 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*parameter_name*|<xref:System.Type> 형식의 매개 변수 이름입니다. 예를 들어 메서드 시그니처 `Type.GetInterfaceMap(Type interfaceType)`의 경우 `Name` 특성의 값은 "interfaceType"입니다.|  
   
 ## <a name="all-other-attributes"></a>기타 모든 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
@@ -67,7 +68,7 @@ ms.locfileid: "96287672"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|생성자 또는 메서드에 런타임 리플렉션 정책을 적용합니다.|  
   

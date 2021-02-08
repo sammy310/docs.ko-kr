@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugHeapValue 인터페이스'
 title: ICorDebugHeapValue 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1bca66db-0359-4ae8-846e-e35f7e547e8b
 topic_type:
 - apiref
-ms.openlocfilehash: ee3ea319360bba1a113c15daf8cf143ea512e5cd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7c65cbce530f0d1f00d8610031fb604a0118ee29
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733323"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803687"
 ---
 # <a name="icordebugheapvalue-interface"></a>ICorDebugHeapValue 인터페이스
 
@@ -47,6 +48,6 @@ CLR (공용 언어 런타임) 가비지 수집기에 의해 수집 된 개체를
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)

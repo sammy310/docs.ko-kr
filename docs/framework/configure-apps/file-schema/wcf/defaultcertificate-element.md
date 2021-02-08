@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: <defaultCertificate> 요소'
 title: <defaultCertificate> 요소
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: 2eaec4f4296f90579ca32d817f0a20da4ccc9a37
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 580236e521e91c8b475586f6c6378630960f233c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153900"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803921"
 ---
 # <a name="defaultcertificate-element"></a>\<defaultCertificate> 요소
 
@@ -39,32 +40,32 @@ ms.locfileid: "91153900"
   
 |attribute|설명|  
 |---------------|-----------------|  
-|findValue|문자열. 검색할 값입니다.|  
+|findValue|문자열입니다. 검색할 값입니다.|  
 |x509FindType|열거형입니다. 검색할 인증서 필드 중 하나입니다.|  
 |storeLocation|열거형입니다. 검색할 두 시스템 저장소 위치 중 하나입니다.|  
 |storeName|열거형입니다. 검색할 시스템 저장소 중 하나입니다.|  
   
 ## <a name="findvalue-attribute"></a>findValue 특성  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |String|이 값은 검색 중인 필드(X509FindType 특성으로 지정)에 따라 다릅니다. 예를 들어, 지문을 검색할 경우 이 값은 16진수 문자열이어야 합니다.|  
   
 ## <a name="x509findtype-attribute"></a>x509FindType 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |열거형|값에는 FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier가 있습니다.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |열거형|CurrentUser 또는 LocalMachine입니다.|  
   
 ## <a name="storename-attribute"></a>storeName 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |열거형|값에는 AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople 및 TrustedPublisher가 포함됩니다.|  
   

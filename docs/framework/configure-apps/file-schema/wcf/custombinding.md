@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <customBinding>
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: cdaaacf0dfa75209d001f6e8d6ac7175816048aa
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a4d297750d107648aa10b349c6febc1a8929a30b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140801"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803947"
 ---
 # \<customBinding>
 
@@ -179,7 +180,7 @@ ms.locfileid: "74140801"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |closeTimeout|닫기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다. 기본값은 00:01:00입니다.|
 |name|바인딩의 구성 이름을 포함하는 문자열입니다. 이 값은 사용자 지정 바인딩의 식별 문자열 역할을 하는 사용자 정의 문자열입니다. .NET Framework 4부터 바인딩과 동작은 이름을 가질 필요가 없습니다. 기본 구성 및 이름이 없는 바인딩 및 동작에 대 한 자세한 내용은 [WCF 서비스에 대 한](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [간소화 된 구성](../../../wcf/simplified-configuration.md) 및 단순화 된 구성을 참조 하세요.|
@@ -189,7 +190,7 @@ ms.locfileid: "74140801"
 
 ### <a name="child-elements"></a>자식 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |[\<compositeDuplex>](compositeduplex.md)|사용자 지정 바인딩에 대한 양방향 메시징을 정의합니다. 예를 들어, HTTP와 같이 원래는 이중 통신을 허용하지 않는 전송에 사용됩니다. 그에 반해 TCP는 기본적으로 이중 통신을 허용하므로, 이 바인딩 요소를 사용하지 않더라도 서비스에서 클라이언트로 회신 메시지를 보낼 수 있습니다.<br /><br /> 서비스에서 접속하여 연결을 설정하려면 클라이언트가 주소를 공개해야 합니다. 이 클라이언트 주소는 `ClientBaseAddress` 특성을 사용하여 제공합니다.<br /><br /> 이 요소는 <xref:System.ServiceModel.Configuration.CompositeDuplexElement> 형식입니다.|
 |[\<pnrpPeerResolver>](pnrppeerresolver.md)|PNRP(피어 이름 확인 프로토콜) 피어 이름 확인자를 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement> 형식입니다.|
@@ -201,7 +202,7 @@ ms.locfileid: "74140801"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |바인딩|Windows Communication Foundation 애플리케이션에 대한 모든 바인딩을 포함합니다.|
 
@@ -229,7 +230,7 @@ ms.locfileid: "74140801"
 
 - 맨 위에는 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 트랜잭션 이동을 허용 하는 선택적가 있습니다.
 
-- 다음은 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> ws-reliablemessaging 사양에 정의 된 대로 세션 및 순서 지정 메커니즘을 제공 하는 선택적입니다. 이 세션의 개념은 SOAP 및 전송 중개자를 통과할 수 있습니다.
+- 다음은 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> WS-ReliableMessaging 사양에 정의 된 세션 및 순서 지정 메커니즘을 제공 하는 선택적입니다. 이 세션의 개념은 SOAP 및 전송 중개자를 통과할 수 있습니다.
 
 - 다음은 권한 부여, 인증, 보호 및 기밀성과 같은 보안 기능을 제공 하는 선택적 보안 바인딩 요소입니다. WCF (Windows Communication Foundation)에서 제공 하는 보안 바인딩 요소는 다음과 같습니다.
 
@@ -281,17 +282,17 @@ ms.locfileid: "74140801"
 
 |계층|옵션|필수|
 |-----------|-------------|--------------|
-|트랜잭션 흐름|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|예|
-|안정성|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|예|
-|보안|대칭, 비대칭, 전송 수준|예|
-|모양 변경|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|예|
-|전송 업그레이드|SSL 스트림, Windows 스트림, 피어 확인자|예|
-|Encoding|텍스트, 이진, MTOM, 사용자 지정|예|
-|전송|TCP, 명명 된 파이프, HTTP, HTTPS, MSMQ의 특성, 사용자 지정|예|
+|트랜잭션 흐름|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|No|
+|안정성|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|No|
+|보안|대칭, 비대칭, Transport-Level|No|
+|모양 변경|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|No|
+|전송 업그레이드|SSL 스트림, Windows 스트림, 피어 확인자|No|
+|Encoding|텍스트, 이진, MTOM, 사용자 지정|Yes|
+|전송|TCP, 명명 된 파이프, HTTP, HTTPS, MSMQ의 특성, 사용자 지정|Yes|
 
 또한 사용자 고유의 바인딩 요소를 정의 하 고 앞에서 정의한 계층 사이에 삽입할 수 있습니다.
 
-사용자 지정 바인딩을 사용 하 여 시스템 제공 바인딩을 수정 하는 방법에 대 한 설명은 [방법: 시스템 제공 바인딩 사용자 지정](../../../wcf/extending/how-to-customize-a-system-provided-binding.md)을 참조 하세요.
+사용자 지정 바인딩을 사용 하 여 시스템 제공 바인딩을 수정 하는 방법에 대 한 자세한 내용은 [방법: System-Provided 바인딩 사용자 지정](../../../wcf/extending/how-to-customize-a-system-provided-binding.md)을 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 

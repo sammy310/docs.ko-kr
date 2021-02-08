@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <add><claimTypeRequirements>'
 title: <claimTypeRequirements>의 <add>
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
-ms.openlocfilehash: 00699a6fa5d0de7ac554db6ef8d0bbe511a85c0a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 63cdbce62c20cda1cabe18bbd7b045e2b9a109d5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149220"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99804025"
 ---
 # <a name="add-of-claimtyperequirements"></a>\<claimTypeRequirements>의 \<add>
 
@@ -88,9 +89,9 @@ ms.locfileid: "91149220"
 - <xref:System.ServiceModel.Configuration.ClaimTypeElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [\<claimTypeRequirements>](claimtyperequirements-element.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Custom Binding Security](../../../wcf/samples/custom-binding-security.md)

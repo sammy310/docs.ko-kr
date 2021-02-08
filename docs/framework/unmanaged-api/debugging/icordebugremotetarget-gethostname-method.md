@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugRemoteTarget:: GetHostName 메서드'
 title: ICorDebugRemoteTarget::GetHostName 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-ms.openlocfilehash: 3e946d8a27ec6b568b2f3c3633695c9f6795c938
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a24f34dd638c7031211c2185cd761af0aa24105e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712055"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803528"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName 메서드
 
@@ -47,7 +48,7 @@ HRESULT GetHostName (
  `szHostName`  
  [out] 호스트 이름 또는 IP 주소를 포함하는 버퍼입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  S_OK  
  호스트 이름 또는 IP 주소가 성공적으로 반환 되었습니다.  
@@ -69,7 +70,7 @@ HRESULT GetHostName (
   
  **.NET Framework 버전:** 3.5 SP1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugRemoteTarget 인터페이스](icordebugremotetarget-interface.md)
 - [ICorDebug 인터페이스](icordebug-interface.md)

@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <add><entries>'
 title: <entries>의 <add>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 156d8b8d9d0eb05efbf306434ab4555a98bc317e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0be24fb9d2327d411368dd05afc21156dfaf3d3a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91149051"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803973"
 ---
 # <a name="add-of-entries"></a>\<entries>의 \<add>
 

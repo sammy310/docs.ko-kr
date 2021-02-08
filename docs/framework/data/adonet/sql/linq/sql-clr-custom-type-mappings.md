@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: SQL-CLR 사용자 지정 형식 매핑'
 title: SQL-CLR 사용자 지정 대/소문자 매핑
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-ms.openlocfilehash: 14d7f8409f93a5414a37a8b1c8e172f53478e817
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5ad929ae4a47964b333616867ad01da2892c21af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155707"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803752"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>SQL-CLR 사용자 지정 대/소문자 매핑
 

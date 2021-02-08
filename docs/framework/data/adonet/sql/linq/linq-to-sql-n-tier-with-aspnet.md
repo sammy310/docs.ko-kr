@@ -1,13 +1,14 @@
 ---
+description: ASP.NET를 사용 하는 LINQ to SQL N 계층에 대해 자세히 알아보세요.
 title: ASP.NET을 사용하는 LINQ to SQL N 계층
 ms.date: 03/30/2017
 ms.assetid: f6cc863a-d6a6-4281-ba8b-197c01cf6c6f
-ms.openlocfilehash: a184c9dcb29e7994aefa4062be2b30484539c4e1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a455525f8f0bbef38487b058d89fd2c9b4dda377
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175319"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803804"
 ---
 # <a name="linq-to-sql-n-tier-with-aspnet"></a>ASP.NET을 사용하는 LINQ to SQL N 계층
 
