@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 데이터베이스 액세스 작업'
 title: Database Access Activities
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: ed3f0ad3f2fd19f622c9cb0faf7d5cd864b81995
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 421da4a55997dac62ccc5c598bc401a20711ec61
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094646"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792546"
 ---
 # <a name="database-access-activities"></a>Database Access Activities
 
@@ -18,7 +19,7 @@ ms.locfileid: "77094646"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 (다운로드 페이지)로 이동 하 여 모든 Windows Communication Foundation (WCF) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없으면 (다운로드 페이지)로 이동 하 여 모든 Windows Communication Foundation (WCF) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`
 
@@ -92,7 +93,7 @@ Public class DbUpdate: AsyncCodeActivity
 
 실행할 쿼리는 `Sql` 속성에서 구성하며 매개 변수는 `Parameters` 컬렉션을 통해 전달됩니다.
 
-`DbQueryScalar`를 실행 한 후에는 기본 클래스 <xref:System.Activities.AsyncCodeActivity%601>에 정의 된 `TResult`형식의 `Result out` 인수에 스칼라가 반환 됩니다.
+가 실행 된 후에는 `DbQueryScalar` `Result out` `TResult` 기본 클래스에 정의 된 형식의 인수에서 스칼라가 반환 됩니다 <xref:System.Activities.AsyncCodeActivity%601> .
 
 ```csharp
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
@@ -138,13 +139,13 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 
 ## <a name="dbquery"></a>DbQuery
 
-개체 목록을 검색하는 쿼리를 실행합니다. 쿼리가 실행 된 후 매핑 함수가 실행 됩니다 .이 함수는 <`DbDataReader`, `TResult`> 또는 <xref:System.Activities.ActivityFunc%601><`DbDataReader`)를 <xref:System.Func%601>수 있습니다.`TResult` 이 매핑 함수는 `DbDataReader`에서 레코드를 가져오고 이를 반환할 개체에 매핑합니다.
+개체 목록을 검색하는 쿼리를 실행합니다. 쿼리가 실행 된 후 매핑 함수가 실행 됩니다 ( <xref:System.Func%601> < `DbDataReader` , `TResult`> 또는 <xref:System.Activities.ActivityFunc%601> < `DbDataReader` `TResult`>). 이 매핑 함수는 `DbDataReader`에서 레코드를 가져오고 이를 반환할 개체에 매핑합니다.
 
 공급자 고정 이름(`ProviderName`)과 연결 문자열(`ConnectionString`)을 설정하거나 애플리케이션 구성 파일의 연결 문자열 구성 이름(`ConfigFileSectionName`)만 사용하여 연결 정보를 구성할 수 있습니다.
 
 실행할 쿼리는 `Sql` 속성에서 구성하며 매개 변수는 `Parameters` 컬렉션을 통해 전달됩니다.
 
-SQL 쿼리의 결과는 `DbDataReader`를 사용하여 검색됩니다. 활동에서는 `DbDataReader`를 반복하고 `DbDataReader`의 행을 `TResult`의 인스턴스에 매핑합니다. `DbQuery`의 사용자는 매핑 코드를 제공 해야 하며이 작업은 <xref:System.Func%601><`DbDataReader`, `TResult`> 또는 <xref:System.Activities.ActivityFunc%601><`DbDataReader``TResult`를 사용 하는 두 가지 방법으로 수행할 수 있습니다. 첫 번째의 경우에는 단일 실행 펄스에서 매핑이 수행됩니다. 따라서 속도가 더 빠르지만 매핑이 XAML로 serialize될 수 없습니다. 두 번째의 경우에는 매핑이 여러 펄스에서 수행됩니다. 따라서 속도가 더 느릴 수 있지만, 매핑이 XAML로 serialize되고 선언적으로 작성될 수 있으며 기존 활동이 매핑에 참여할 수 있습니다.
+SQL 쿼리의 결과는 `DbDataReader`를 사용하여 검색됩니다. 활동에서는 `DbDataReader`를 반복하고 `DbDataReader`의 행을 `TResult`의 인스턴스에 매핑합니다. 의 사용자는 `DbQuery` 매핑 코드를 제공 해야 하며이 작업은 <xref:System.Func%601> < `DbDataReader` , `TResult`> 또는 <xref:System.Activities.ActivityFunc%601> < `DbDataReader` `TResult`>를 사용 하는 두 가지 방법으로 수행할 수 있습니다. 첫 번째의 경우에는 단일 실행 펄스에서 매핑이 수행됩니다. 따라서 속도가 더 빠르지만 매핑이 XAML로 serialize될 수 없습니다. 두 번째의 경우에는 매핑이 여러 펄스에서 수행됩니다. 따라서 속도가 더 느릴 수 있지만, 매핑이 XAML로 serialize되고 선언적으로 작성될 수 있으며 기존 활동이 매핑에 참여할 수 있습니다.
 
 ```csharp
 public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult : class
@@ -194,19 +195,19 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 |CommandType|실행할 <xref:System.Data.Common.DbCommand>의 형식입니다.|
 |Sql|실행할 SQL 명령입니다.|
 |매개 변수|SQL 쿼리의 매개 변수 컬렉션입니다.|
-|Mapper|쿼리 실행 결과로 얻은 >의 레코드를 사용 하는 매핑 함수 (<xref:System.Func%601><`DbDataReader`, `TResult``DataReader`) 이며 `TResult` 컬렉션에 추가할 `Result` 형식의 개체 인스턴스를 반환 합니다.<br /><br /> 이 경우 매핑은 단일 실행 펄스에서 수행되지만 디자이너를 사용하여 선언적으로 작성될 수는 없습니다.|
-|MapperFunc|쿼리 실행 결과로 얻은 >의 레코드를 사용 하는 매핑 함수 (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult``DataReader`) 이며 `TResult` 컬렉션에 추가할 `Result` 형식의 개체 인스턴스를 반환 합니다.<br /><br /> 이 경우에는 여러 실행 펄스에서 매핑이 수행됩니다. 이 함수는 XAML로 serialize되고 선언적으로 작성될 수 있으며 기존 활동이 매핑에 참여할 수 있습니다.|
+|Mapper|<xref:System.Func%601> < `DbDataReader` `TResult` 쿼리 실행 결과로 얻은의 레코드를 사용 하 `DataReader` 고 `TResult` 컬렉션에 추가할 형식의 개체 인스턴스를 반환 하는 매핑 함수 (,>)입니다 `Result` .<br /><br /> 이 경우 매핑은 단일 실행 펄스에서 수행되지만 디자이너를 사용하여 선언적으로 작성될 수는 없습니다.|
+|MapperFunc|<xref:System.Activities.ActivityFunc%601> < `DbDataReader` `TResult` 쿼리 실행 결과로 얻은의 레코드를 사용 하 `DataReader` 고 `TResult` 컬렉션에 추가할 형식의 개체 인스턴스를 반환 하는 매핑 함수 (,>)입니다 `Result` .<br /><br /> 이 경우에는 여러 실행 펄스에서 매핑이 수행됩니다. 이 함수는 XAML로 serialize되고 선언적으로 작성될 수 있으며 기존 활동이 매핑에 참여할 수 있습니다.|
 |결과|쿼리를 실행하고 `DataReader`의 각 레코드에 대해 매핑 함수를 실행한 결과로 얻은 개체 목록입니다.|
 
 ## <a name="dbquerydataset"></a>DbQueryDataSet
 
-<xref:System.Data.DataSet>을 반환하는 쿼리를 실행합니다. 이 클래스는 작업을 비동기적으로 수행합니다. <xref:System.Activities.AsyncCodeActivity><`TResult`>에서 파생 되며 해당 비동기 기능을 사용 합니다.
+<xref:System.Data.DataSet>을 반환하는 쿼리를 실행합니다. 이 클래스는 작업을 비동기적으로 수행합니다. >에서 파생 되 <xref:System.Activities.AsyncCodeActivity> < `TResult` 고 비동기 기능을 사용 합니다.
 
 공급자 고정 이름(`ProviderName`)과 연결 문자열(`ConnectionString`)을 설정하거나 애플리케이션 구성 파일의 연결 문자열 구성 이름(`ConfigFileSectionName`)만 사용하여 연결 정보를 구성할 수 있습니다.
 
 실행할 쿼리는 `Sql` 속성에서 구성하며 매개 변수는 `Parameters` 컬렉션을 통해 전달됩니다.
 
-`DbQueryDataSet`를 실행 하면 `DataSet` 기본 클래스 <xref:System.Activities.AsyncCodeActivity%601>에 정의 된 `Result out` 인수 (`TResult`형식)로 반환 됩니다.
+가 실행 된 후는 `DbQueryDataSet` `DataSet` `Result out` `TResult` 기본 클래스에 정의 된 형식의 인수에서 반환 됩니다 <xref:System.Activities.AsyncCodeActivity%601> .
 
 ```csharp
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>
@@ -333,6 +334,6 @@ Setup.cmd 스크립트는 다음을 수행하는 SQL 명령이 포함된 CreateD
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

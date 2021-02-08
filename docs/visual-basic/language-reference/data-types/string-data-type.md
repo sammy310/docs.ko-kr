@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: String 데이터 형식 (Visual Basic)'
 title: 문자열 데이터 형식
 ms.date: 07/20/2015
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: cd4b64c101ae56928e84a04649e49c17b6f4023c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6597a5c4b8ee0eb961d3e33bee52ae493068da35
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415507"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792117"
 ---
 # <a name="string-data-type-visual-basic"></a>String 데이터 형식(Visual Basic)
 
-0에서 65535 사이의 값 범위에 해당 하는 부호 없는 16 비트 (2 바이트) 코드 요소의 시퀀스를 저장 합니다. 각 *코드 포인트*또는 문자 코드는 단일 유니코드 문자를 나타냅니다. 문자열은 0에서 약 20억 (2 ^ 31) 자의 유니코드 문자를 포함할 수 있습니다.  
+0에서 65535 사이의 값 범위에 해당 하는 부호 없는 16 비트 (2 바이트) 코드 요소의 시퀀스를 저장 합니다. 각 *코드 포인트* 또는 문자 코드는 단일 유니코드 문자를 나타냅니다. 문자열은 0에서 약 20억 (2 ^ 31) 자의 유니코드 문자를 포함할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
 
@@ -59,7 +60,7 @@ MsgBox("Joe said """ & h & """ to me.")
   
 ## <a name="string-manipulations"></a>문자열 조작  
 
- 변수에 문자열을 할당 하면 `String` 해당 문자열은 변경할 수 없습니다. *immutable*즉, 해당 문자열의 길이 또는 콘텐츠를 변경할 수 없습니다. 어떤 방식으로든 문자열을 변경 하는 경우 Visual Basic는 새 문자열을 만들어 이전 문자열을 무시 합니다. `String`그런 다음 변수는 새 문자열을 가리킵니다.  
+ 변수에 문자열을 할당 하면 `String` 해당 문자열은 변경할 수 없습니다. 즉, 해당 문자열의 길이 또는 콘텐츠를 변경할 수 없습니다. 어떤 방식으로든 문자열을 변경 하는 경우 Visual Basic는 새 문자열을 만들어 이전 문자열을 무시 합니다. `String`그런 다음 변수는 새 문자열을 가리킵니다.  
   
  `String`다양 한 문자열 함수를 사용 하 여 변수의 내용을 조작할 수 있습니다. 다음 예제에서는 함수를 보여 줍니다. <xref:Microsoft.VisualBasic.Strings.Left%2A>  
   
@@ -79,7 +80,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 - **Interop 고려 사항.** .NET Framework 용으로 작성 되지 않은 구성 요소 (예: Automation 또는 COM 개체)와 상호 작용 하는 경우 다른 환경에서는 문자열 문자에 다른 데이터 너비 (8 비트)가 있다는 점에 주의 해야 합니다. 이러한 구성 요소에 8 비트 문자의 문자열 인수를 전달 하는 경우 `Byte()` `Byte` 새 Visual Basic 코드가 아닌 요소의 배열인로 선언 `String` 합니다.  
   
-- **문자를 입력 합니다.** 식별자 형식 문자를 `$` 식별자에 추가 하면 `String` 데이터 형식이 됩니다. `String`에는 리터럴 형식 문자가 없습니다. 그러나 컴파일러는 인용 부호 ( `" "` )로 묶인 리터럴을로 처리 합니다 `String` .  
+- **문자를 입력 합니다.** 식별자 형식 문자를 `$` 식별자에 추가 하면 `String` 데이터 형식이 됩니다. `String` 에는 리터럴 형식 문자가 없습니다. 그러나 컴파일러는 인용 부호 ( `" "` )로 묶인 리터럴을로 처리 합니다 `String` .  
   
 - **Framework 형식.** .NET Framework에서 해당 하는 형식은 <xref:System.String?displayProperty=nameWithType> 클래스입니다.  
   

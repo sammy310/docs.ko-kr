@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 사용자 지정 추적'
 title: 사용자 지정 추적
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 3d125c59196cb2a7d33961e0f271aab8c5663a50
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a06faaaa50a06d613f7183ca018438a8f2b4460b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96234573"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792559"
 ---
 # <a name="custom-tracking"></a>사용자 지정 추적
 
@@ -17,7 +18,7 @@ ms.locfileid: "96234573"
 
  WF (Windows Workflow Foundation)는 워크플로 인스턴스 실행을 추적 하기 위한 추적 인프라를 제공 합니다. 추적 런타임은 워크플로 인스턴스를 구현하여 워크플로 수명 주기와 관련된 이벤트, 워크플로 활동의 이벤트 및 사용자 지정 추적 이벤트를 내보냅니다. 다음 표에서는 추적 인프라의 기본 구성 요소에 대해 자세히 설명합니다
 
-|구성 요소|Description|
+|구성 요소|설명|
 |---------------|-----------------|
 |추적 런타임|추적 레코드를 내보낼 인프라를 제공합니다.|
 |추적 참가자|추적 레코드를 사용합니다. .NET Framework 4는 추적 레코드를 ETW (ETW(Windows용 이벤트 추적)) 이벤트로 기록 하는 추적 참가자와 함께 제공 됩니다.|
@@ -25,7 +26,7 @@ ms.locfileid: "96234573"
 
  다음 표에서는 워크플로 런타임에서 내보내는 추적 레코드에 대해 자세히 설명합니다.
 
-|추적 레코드|Description|
+|추적 레코드|설명|
 |---------------------|-----------------|
 |워크플로 인스턴스 추적 레코드|워크플로 인스턴스의 수명 주기에 대해 설명합니다. 예를 들어 워크플로가 시작되거나 완료되면 인스턴스 레코드를 내보냅니다.|
 |활동 상태 추적 레코드|활동 실행에 대해 자세히 설명합니다. 이러한 레코드는 활동이 예약된 시점, 활동이 완료된 시점, 오류가 throw된 시점 등과 같은 워크플로 활동 상태를 나타냅니다.|

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugManagedCallback:: Exception 메서드'
 title: ICorDebugManagedCallback::Exception 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab18a509-dff3-4930-b585-bd15e0414176
 topic_type:
 - apiref
-ms.openlocfilehash: 05fed13a556cbcc3b8362e41d73c2b659b1e5eeb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f738c328e1f6edfeb61a1d5e2ba8f9dd827d05dd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731789"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790973"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>ICorDebugManagedCallback::Exception 메서드
 
@@ -61,6 +62,6 @@ HRESULT Exception (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

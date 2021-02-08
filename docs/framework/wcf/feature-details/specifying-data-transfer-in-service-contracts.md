@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 서비스 계약의 데이터 전송 지정'
 title: 서비스 계약에서 데이터 전송 지정
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: 30cdae7e15b80ca826eeea652566a535271477d9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 672d2127af95847c0a085a8ca1c358f2a8440dee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246396"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793430"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>서비스 계약에서 데이터 전송 지정
 
@@ -89,7 +90,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- `DataContractSerializer`는 사용자의 형식을 serialize하기에 적합하지 않은 경우도 있습니다. WCF는 <xref:System.Xml.Serialization.XmlSerializer> 매개 변수를 serialize 하는 데 사용할 수 있는 대체 serialization 엔진인를 지원 합니다. <xref:System.Xml.Serialization.XmlSerializer>를 통해 `XmlAttributeAttribute`와 같은 특성을 사용하여 결과 XML을 보다 효과적으로 제어할 수 있습니다. 특정 연산이나 전체 서비스에 <xref:System.Xml.Serialization.XmlSerializer>를 사용하려면 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 특성을 연산이나 서비스에 적용합니다. 예를 들면 다음과 같습니다.  
+ `DataContractSerializer`는 사용자의 형식을 serialize하기에 적합하지 않은 경우도 있습니다. WCF는 <xref:System.Xml.Serialization.XmlSerializer> 매개 변수를 serialize 하는 데 사용할 수 있는 대체 serialization 엔진인를 지원 합니다. <xref:System.Xml.Serialization.XmlSerializer>를 통해 `XmlAttributeAttribute`와 같은 특성을 사용하여 결과 XML을 보다 효과적으로 제어할 수 있습니다. 특정 연산이나 전체 서비스에 <xref:System.Xml.Serialization.XmlSerializer>를 사용하려면 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 특성을 연산이나 서비스에 적용합니다. 다음은 그 예입니다.   
   
 ```csharp  
 [ServiceContract]  

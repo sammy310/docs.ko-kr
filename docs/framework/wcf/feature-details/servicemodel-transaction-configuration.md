@@ -1,15 +1,16 @@
 ---
+description: ServiceModel 트랜잭션 구성에 대해 자세히 알아보세요.
 title: ServiceModel 트랜잭션 구성
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-ms.openlocfilehash: 27deaf38a8809b8a7fca560cc6783bd24dc43686
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 260e3cbe94ce0d22887554705134eef72a031981
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242892"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793469"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel 트랜잭션 구성
 

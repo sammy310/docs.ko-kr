@@ -1,13 +1,14 @@
 ---
+description: ServiceModel 특성 및 ServiceDescription 참조에 대해 자세히 알아보세요.
 title: ServiceModel 특성 및 ServiceDescription 참조
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-ms.openlocfilehash: db2824d7452f1ec4c675782e18ad25bd4be6a483
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 52d800d1aab7fc7d60f0b1234065aa876944ea3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253871"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793508"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 특성 및 ServiceDescription 참조
 
@@ -49,7 +50,7 @@ ms.locfileid: "96253871"
 |IsOneWay|<xref:System.ServiceModel.Description.MessageDescription>에서 단일 <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>으로 매핑됩니다.|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
-|이름|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
+|Name|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> 및 가능한 자식 보호 수준입니다. 보호 수준 계층 구조에 대 한 자세한 내용은 [보호 수준 이해](../understanding-protection-level.md)를 참조 하세요.|  
 |ReplyAction|계약/콜백 계약에 따른 출력 메시지 또는 입력 메시지에 대한 <xref:System.ServiceModel.Description.MessageDescription.Action%2A>입니다.|  
   
@@ -63,12 +64,12 @@ ms.locfileid: "96253871"
   
 |DataContractFormatAttribute 값|영향을 받은 설명 트리 값|  
 |---------------------------------------|-------------------------------------|  
-|용도|<xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> 값이 작업의 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>에서 설정됩니다.|  
+|기능|<xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> 값이 작업의 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>에서 설정됩니다.|  
   
 |XmlSerializerFormatAttribute 값|영향을 받은 설명 트리 값|  
 |----------------------------------------|-------------------------------------|  
 |스타일|이 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 속성이 작업의 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>에서 설정됩니다.|  
-|용도|<xref:System.ServiceModel.XmlSerializerFormatAttribute>가 작업의 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>에서 설정됩니다.|  
+|기능|<xref:System.ServiceModel.XmlSerializerFormatAttribute>가 작업의 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>에서 설정됩니다.|  
   
 |TransactionFlowAttribute 값|영향을 받은 설명 트리 값|  
 |------------------------------------|-------------------------------------|  
@@ -84,14 +85,14 @@ ms.locfileid: "96253871"
 |----------------------------------|-------------------------------------|  
 |행위자|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|이름|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |네임스페이스|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |릴레이|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>의 해당 헤더에 대한 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
   
 |MessageBodyMemberAttribute 값|영향을 받은 설명 트리 값|  
 |--------------------------------------|-------------------------------------|  
-|이름|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |네임스페이스|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |주문|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
@@ -107,11 +108,11 @@ ms.locfileid: "96253871"
   
 |MessagePropertyAttribute 값|영향을 받은 설명 트리 값|  
 |------------------------------------|-------------------------------------|  
-|이름|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
   
 |MessageParameterAttribute 값|영향을 받은 설명 트리 값|  
 |-------------------------------------|-------------------------------------|  
-|이름|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|Name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>의 해당 부분에 대한 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
  설명 트리 값이 메타 데이터로 변환 되는 방법에 대 한 자세한 내용은 [ServiceDescription 및 WSDL 참조](servicedescription-and-wsdl-reference.md)를 참조 하세요.  
   

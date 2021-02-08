@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: WorkflowServiceHost의 side-by-side 버전 관리'
 title: WorkflowServiceHost에서 Side-by-side 버전 관리
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 1505582e5ac7303a2df20539fdcf67435746b9d3
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: c4b883350d4a600b193cb62efec57f20f6fe852a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190496"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793495"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost에서 Side-by-side 버전 관리
 

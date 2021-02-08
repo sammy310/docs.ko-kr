@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 지원 되는 배포 시나리오'
 title: 지원 되는 배포 시나리오
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 299c8f2e29806a123e0a8b6e1e70d8cc13daa7bf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 090f0912660fc113bad8640afb1360b64071fa78
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546252"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793365"
 ---
 # <a name="supported-deployment-scenarios"></a>지원 되는 배포 시나리오
 
@@ -43,7 +44,7 @@ WCF는 지원 되는 SOAP 바인딩 중 하나를 사용 하는 SOAP 메시징 �
 
 WCF는 [ClickOnce 배포](/visualstudio/deployment/clickonce-security-and-deployment) 또는 XBAP에서 배포한 부분 신뢰 응용 프로그램 내에서 원격 서버와 통신 하는 데 사용할 수 있습니다. 인터넷 영역 권한 집합에는 <xref:System.Net.WebPermission> 원래 호스트에 대 한가 포함 되어 있으며, 이러한 응용 프로그램은 [부분 신뢰 기능 호환성](partial-trust-feature-compatibility.md)에 설명 된 지원 되는 WCF 바인딩 중 하나를 사용 하 여 원본 서버와 통신할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [코드 액세스 보안](../../misc/code-access-security.md)
 - [Windows Presentation Foundation 브라우저에서 호스팅되는 애플리케이션 개요](/dotnet/desktop/wpf/app-development/wpf-xaml-browser-applications-overview)

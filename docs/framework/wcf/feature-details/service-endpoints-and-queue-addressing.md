@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 서비스 끝점 및 큐 주소 지정'
 title: 서비스 엔드포인트 및 큐 주소 지정
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: f7c3221d466d2599139eb29a8358d726c2b4edda
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 61b4e35de6bd89f45aa9f5e54a55beaf8536b74b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253923"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793560"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>서비스 엔드포인트 및 큐 주소 지정
 
@@ -80,8 +81,8 @@ ms.locfileid: "96253923"
 |WCF URI 기반 큐 주소|Active Directory 속성 사용|큐 전송 프로토콜 속성|결과 MSMQ 형식 이름|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |`Net.msmq://<machine-name>/private/abc`|False(기본값)|Native(기본값)|`DIRECT=OS:machine-name\private$\abc`|  
-|`Net.msmq://<machine-name>/private/abc`|False|SRMP|`DIRECT=http://machine/msmq/private$/abc`|  
-|`Net.msmq://<machine-name>/private/abc`|True|네이티브|`PUBLIC=some-guid` (큐의 GUID)|  
+|`Net.msmq://<machine-name>/private/abc`|거짓|SRMP|`DIRECT=http://machine/msmq/private$/abc`|  
+|`Net.msmq://<machine-name>/private/abc`|참|네이티브|`PUBLIC=some-guid` (큐의 GUID)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>배달 못 한 편지 큐 또는 포이즌 메시지 큐에서 메시지 읽기  
 

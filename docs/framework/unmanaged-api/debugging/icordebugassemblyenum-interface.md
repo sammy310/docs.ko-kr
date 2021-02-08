@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugAssemblyEnum 인터페이스'
 title: ICorDebugAssemblyEnum 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 891ceb43-5161-421e-a0bf-299962fd7efd
 topic_type:
 - apiref
-ms.openlocfilehash: dea5c0fd5d4ed1f830d9e75097d49c544dac2e57
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e9dab7560da10efcb33fc48f5718f26b960cdaa3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719249"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791493"
 ---
 # <a name="icordebugassemblyenum-interface"></a>ICorDebugAssemblyEnum 인터페이스
 
@@ -46,6 +47,6 @@ ICorDebugEnum 메서드를 구현 하 고 ICorDebugAssembly 배열을 열거 합
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)

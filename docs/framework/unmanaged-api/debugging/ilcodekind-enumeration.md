@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ILCodeKind 열거형'
 title: ILCodeKind 열거형
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-ms.openlocfilehash: 7e9cf760ec609786804a05177349ee2eacd79eaf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2d3163b2c601c6f53d9a532fa877c014a67b3e18
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95692243"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790466"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind 열거형
 
@@ -34,7 +35,7 @@ typedef enum ILCodeKind {
 } ILCodeKind;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버 이름|설명|  
 |-----------------|-----------------|  
@@ -55,7 +56,7 @@ typedef enum ILCodeKind {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)
 - [ICorDebugILFrame4 인터페이스](icordebugilframe4-interface.md)

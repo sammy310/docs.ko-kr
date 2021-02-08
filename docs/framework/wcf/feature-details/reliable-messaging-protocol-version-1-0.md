@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: 신뢰할 수 있는 메시징 프로토콜 버전 1.0'
 title: Reliable Messaging 프로토콜 버전 1.0
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
-ms.openlocfilehash: 8d192afcffca52136d6d71de49770c5a5ad13895
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: dbd0184fd6ea9f92c96639d71088ac61bec20f3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202299"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793599"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>Reliable Messaging 프로토콜 버전 1.0
 
-이 항목에서는 HTTP 전송을 사용 하 여 상호 운용에 필요한 WS-TRUST 메시징 2 월 2005 (버전 1.0) 프로토콜에 대 한 WCF (Windows Communication Foundation) 구현 세부 정보를 다룹니다. WCF는이 항목에서 설명 하는 제약 조건 및 설명에 따라 신뢰할 수 있는 메시징 사양을 따릅니다. WS-RELIABLEMESSAGING 버전 1.0 프로토콜은 WinFX를 사용 하 여 구현 됩니다.
+이 항목에서는 HTTP 전송을 사용 하 여 상호 운용에 필요한 WS-Reliable 메시징 2 월 2005 (버전 1.0) 프로토콜에 대 한 WCF (Windows Communication Foundation) 구현 세부 정보를 다룹니다. WCF는이 항목에서 설명 하는 제약 조건 및 설명과 함께 WS-Reliable 메시징 사양을 따릅니다. WS-ReliableMessaging 버전 1.0 프로토콜은 WinFX부터 구현 됩니다.
 
-WS-TRUST Messaging 2 월 2005 프로토콜은 WCF에서에 의해 구현 됩니다 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> .
+WS-Reliable 메시징 2 월 2005 프로토콜은 WCF에서에 의해 구현 됩니다 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> .
 
 편의상 이 항목에서는 다음 역할을 사용합니다.
 
@@ -27,7 +28,7 @@ WS-TRUST Messaging 2 월 2005 프로토콜은 WCF에서에 의해 구현 됩니�
 |------------|---------------|
 |wsrm|`http://schemas.xmlsoap.org/ws/2005/02/rm`|
 |netrm|`http://schemas.microsoft.com/ws/2006/05/rm`|
-|s|`http://www.w3.org/2003/05/soap-envelope`|
+|초|`http://www.w3.org/2003/05/soap-envelope`|
 |wsa|`http://schemas.xmlsoap.org/ws/2005/08/addressing`|
 |wsse|`http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd`|
 
@@ -35,7 +36,7 @@ WS-TRUST Messaging 2 월 2005 프로토콜은 WCF에서에 의해 구현 됩니�
 
 ### <a name="sequence-establishment-messages"></a>시퀀스 설정 메시지
 
-WCF `CreateSequence` 는 및 `CreateSequenceResponse` 메시지를 구현 하 여 신뢰할 수 있는 메시지 시퀀스를 설정 합니다. 적용되는 제약 조건은 다음과 같습니다.
+WCF `CreateSequence` 는 및 `CreateSequenceResponse` 메시지를 구현 하 여 신뢰할 수 있는 메시지 시퀀스를 설정 합니다. 다음 제약 조건이 적용됩니다.
 
 - B1101: WCF 개시자는 메시지에 선택적 Expires 요소를 생성 하지 않으며 `CreateSequence` , 메시지에 요소가 포함 된 경우 요소의 `CreateSequence` `Offer` 선택적 `Expires` 요소 `Offer` 입니다.
 
@@ -61,7 +62,7 @@ WS-Reliable Messaging은 `Offer` 메커니즘을 사용하여 세션을 형성�
 
 - R1109: `Offer` 메커니즘을 사용하여 두 개의 역방향 시퀀스가 설정된 경우 개시자가 보낸 메시지 및 응답자의 메시지 승인을 같은 엔드포인트 참조로 보내야 합니다.
 
-  WCF는 신뢰할 수 있는 메시징을 사용 하 여 개시자와 응답자 간에 신뢰할 수 있는 세션을 설정 합니다. WCF의 WS-TRUST 메시징 구현은 단방향, 요청-회신 및 전체 이중 메시징 패턴에 신뢰할 수 있는 세션을 제공 합니다. 에서 신뢰할 수 있는 메시징 `Offer` 메커니즘을 사용 하면 상호 관련 된 `CreateSequence` / `CreateSequenceResponse` 두 개의 역방향 시퀀스를 설정 하 고 모든 메시지 끝점에 적합 한 세션 프로토콜을 제공할 수 있습니다. WCF는 세션 무결성을 위한 종단 간 보호를 포함 하 여 세션에 대 한 보안 보장을 제공 하므로 같은 파티에 대 한 메시지가 동일한 대상에 도착 하는지 확인 하는 것이 실용적입니다. 이렇게 하면 애플리케이션 메시지에서 피기백킹이라고 하는 시퀀스 승인을 사용할 수 있습니다. 따라서 제약 조건 R1104, R1105 및 R1108가 WCF에 적용 됩니다.
+  WCF는 WS-Reliable 메시징을 사용 하 여 개시자와 응답자 간에 신뢰할 수 있는 세션을 설정 합니다. WCF의 WS-Reliable 메시징 구현은 단방향, 요청-회신 및 전체 이중 메시징 패턴에 신뢰할 수 있는 세션을 제공 합니다. 의 WS-Reliable 메시징 `Offer` 메커니즘을 `CreateSequence` / `CreateSequenceResponse` 사용 하면 상호 관련 된 두 개의 역방향 시퀀스를 설정 하 고 모든 메시지 끝점에 적합 한 세션 프로토콜을 제공할 수 있습니다. WCF는 세션 무결성을 위한 종단 간 보호를 포함 하 여 세션에 대 한 보안 보장을 제공 하므로 같은 파티에 대 한 메시지가 동일한 대상에 도착 하는지 확인 하는 것이 실용적입니다. 이렇게 하면 애플리케이션 메시지에서 피기백킹이라고 하는 시퀀스 승인을 사용할 수 있습니다. 따라서 제약 조건 R1104, R1105 및 R1108가 WCF에 적용 됩니다.
 
 `CreateSequence` 메시지의 예입니다.
 
@@ -170,7 +171,7 @@ WCF는 `AckRequested` 헤더를 연결 유지 메커니즘으로 사용 합니�
 
 ### <a name="sequenceacknowledgement-header"></a>SequenceAcknowledgement 헤더
 
-WCF는 신뢰할 수 있는 메시징에 제공 된 시퀀스 승인에 피기백 메커니즘을 사용 합니다.
+WCF는 WS-Reliable 메시징에 제공 된 시퀀스 승인에 피기백 메커니즘을 사용 합니다.
 
 - R1401: `Offer` 메커니즘을 사용하여 두 개의 역방향 시퀀스가 설정된 경우 `SequenceAcknowledgement` 헤더가 받는 사람에게 전송된 애플리케이션 메시지에 포함될 수 있습니다.
 
@@ -189,7 +190,7 @@ WCF는 신뢰할 수 있는 메시징에 제공 된 시퀀스 승인에 피기�
 
 ### <a name="ws-reliablemessaging-faults"></a>WS-ReliableMessaging 오류
 
-다음은 WS-TRUST 메시징 오류의 WCF 구현에 적용 되는 제약 조건 목록입니다.
+다음은 WS-Reliable 메시징 오류의 WCF 구현에 적용 되는 제약 조건의 목록입니다.
 
 - B1501: WCF는 오류를 생성 하지 않습니다 `MessageNumberRollover` .
 
@@ -233,7 +234,7 @@ WCF는 신뢰할 수 있는 메시징에 제공 된 시퀀스 승인에 피기�
 
 ### <a name="ws-addressing-faults"></a>WS-Addressing 오류
 
-WS 신뢰할 수 있는 메시징에서 WS-ADDRESSING을 사용 하기 때문에 WCF WS-TRUST 메시징 구현 시 WS-ADDRESSING 오류가 발생할 수 있습니다. 이 섹션에서는 WCF가 신뢰할 수 있는 메시징 계층에서 명시적으로 생성 하는 WS-ADDRESSING 오류에 대해 설명 합니다.
+WS-Reliable 메시징에서 WS-ADDRESSING을 사용 하기 때문에 WCF WS-Reliable 메시징 구현에서 WS-Addressing 오류를 생성할 수 있습니다. 이 섹션에서는 WCF가 WS-Reliable 메시징 계층에서 명시적으로 생성 하는 WS-Addressing 오류에 대해 설명 합니다.
 
 - B1601: WCF는 다음 조건 중 하나에 해당 하는 경우 필요한 오류 메시지 주소 지정 헤더를 생성 합니다.
 
@@ -243,7 +244,7 @@ WS 신뢰할 수 있는 메시징에서 WS-ADDRESSING을 사용 하기 때문에
 
   - `CreateSequence` 메시지에 `ReplyTo` 헤더가 없습니다.
 
-- B1602: WCF는 헤더가 누락 된 메시지에 대 한 회신에서 지원 되지 않는 오류 작업을 생성 `Sequence` 하며, `Action` 신뢰할 수 있는 메시징 사양에서 인식할 수 없는 헤더를 포함 합니다.
+- B1602: WCF는 헤더가 누락 된 메시지에 대 한 회신에서 지원 되지 않는 오류 작업을 생성 하 `Sequence` 고 `Action` WS-Reliable 메시징 사양에서 인식할 수 없는 헤더를 포함 합니다.
 
 - B1603: WCF는 끝점에서 `CreateSequence` 메시지의 주소 지정 헤더 검사를 기반으로 시퀀스를 처리 하지 않음을 나타내는 오류 끝점을 생성 합니다.
 
@@ -251,23 +252,23 @@ WS 신뢰할 수 있는 메시징에서 WS-ADDRESSING을 사용 하기 때문에
 
 ### <a name="composition-with-ws-addressing"></a>WS-Addressing을 사용하여 구성
 
-WCF는 ws-addressing 2004/08 [WS-ADDR] 및 W3C WS-ADDRESSING 1.0 권장 사항 [WS-POLICY-CORE] 및 [WS-ADDRESSING-SOAP]의 두 가지 버전 주소를 지원 합니다.
+WCF는 두 가지 버전의 WS-ADDRESSING을 지원 합니다. WS-Addressing 2004/08 [WS-ADDR] 및 W3C WS-Addressing 1.0 권장 사항 [WS-addr] 및 [WS-ADDRESSING-SOAP].
 
 WS-Reliable Messaging 사양에는 WS-Addressing 2004/08만 언급되어 있지만 WS-Addressing 버전만 사용하도록 제한되지는 않습니다. 다음은 WCF에 적용 되는 제약 조건의 목록입니다.
 
 - R2101:WS-Addressing 2004/08과 WS-Addressing 1.0 모두 WS-Reliable Messaging과 함께 사용할 수 있습니다.
 
-- R2102: 단일 ws-addressing 버전은 메커니즘을 사용 하 여 상호 관련 된 지정 된 WS-TRUST 메시징 시퀀스 또는 상반 되는 시퀀스 쌍 전체에서 사용 해야 합니다 `wsrm:Offer` .
+- R2102: 단일 버전의 WS-Addressing는 지정 된 WS-Reliable 메시징 시퀀스 또는 메커니즘을 사용 하 여 상호 관련 된 역방향 시퀀스 쌍을 통해 사용 해야 합니다 `wsrm:Offer` .
 
 ### <a name="composition-with-soap"></a>SOAP를 사용하여 구성
 
-WCF는 신뢰할 수 있는 메시징에 SOAP 1.1 및 SOAP 1.2을 모두 사용할 수 있도록 지원 합니다.
+WCF는 WS-Reliable 메시징에 SOAP 1.1 및 SOAP 1.2을 모두 사용할 수 있도록 지원 합니다.
 
 ### <a name="composition-with-ws-security-and-ws-secureconversation"></a>WS-Security 및 WS-SecureConversation을 사용하여 구성
 
-WCF는 보안 전송 (HTTPS), WS-SECURITY를 사용한 컴퍼지션 및 ws-security (ws-security) 대화를 사용 하 여 WS-TRUST 메시징 시퀀스에 대 한 보호를 제공 합니다. 다음은 WCF에 적용 되는 제약 조건의 목록입니다.
+WCF는 보안 전송 (HTTPS), WS-SECURITY를 사용 하 여 컴퍼지션 및 WS-Secure 대화를 사용 하 여 컴퍼지션을 WS-Reliable 메시징 시퀀스를 보호 합니다. 다음은 WCF에 적용 되는 제약 조건의 목록입니다.
 
-- R2301: 개별 메시지의 무결성과 기밀성 외에도 신뢰할 수 있는 메시징 시퀀스의 무결성을 보호 하기 위해 WCF에서는 WS-SECURITY 대화를 사용 해야 합니다.
+- R2301: 개별 메시지의 무결성과 기밀성 뿐만 아니라 WS-Reliable 메시징 시퀀스의 무결성을 보호 하기 위해 WCF를 사용 하려면 WS-Secure 대화를 사용 해야 합니다.
 
 - R2302:WS-Secure Conversation 세션은 WS-Reliable Messaging 시퀀스를 설정하기 전에 설정해야 합니다.
 
@@ -277,21 +278,21 @@ WCF는 보안 전송 (HTTPS), WS-SECURITY를 사용한 컴퍼지션 및 ws-secur
 
   WCF 소스는 `wsse:SecurityTokenReference` 메시지의 요소 확장성 섹션에서 요소를 생성 합니다 `CreateSequence` .
 
-- R2305: WS-SECURITY 대화로 구성 된 경우 `CreateSequence` 메시지에는 요소가 포함 되어야 합니다 `wsse:SecurityTokenReference` .
+- R2305: WS-Secure 대화로 구성 된 경우 메시지에는 `CreateSequence` 요소가 포함 되어야 합니다 `wsse:SecurityTokenReference` .
 
 ## <a name="ws-reliable-messaging-ws-policy-assertion"></a>WS-Reliable Messaging WS-Policy Assertion
 
-WCF는 WS 신뢰할 수 있는 메시징 WS-POLICY 어설션을 사용 하 여 `wsrm:RMAssertion` 끝점 기능을 설명 합니다. 다음은 WCF에 적용 되는 제약 조건의 목록입니다.
+WCF는 WS-Reliable 메시징 WS-Policy 어설션을 사용 하 여 `wsrm:RMAssertion` 끝점 기능을 설명 합니다. 다음은 WCF에 적용 되는 제약 조건의 목록입니다.
 
-- B3001: WCF는 `wsrm:RMAssertion` Ws-policy 어설션을 요소에 연결 `wsdl:binding` 합니다. WCF는 및 요소에 대 한 첨부 파일을 모두 지원 `wsdl:binding` `wsdl:port` 합니다.
+- B3001: WCF `wsrm:RMAssertion` WS-Policy Assertion을 요소에 연결 `wsdl:binding` 합니다. WCF는 및 요소에 대 한 첨부 파일을 모두 지원 `wsdl:binding` `wsdl:port` 합니다.
 
-- B3002: WCF는 WS-TRUST 메시징 어설션의 다음과 같은 선택적 속성을 지원 하 고 WCF에서이에 대 한 제어를 제공 합니다 `ReliableMessagingBindingElement` .
+- B3002: WCF는 WS-Reliable 메시징 어설션의 다음과 같은 선택적 속성을 지원 하 고 WCF에서이를 제어할 수 있도록 합니다 `ReliableMessagingBindingElement` .
 
   - `wsrm:InactivityTimeout`
 
   - `wsrm:AcknowledgementInterval`
 
-  다음은 이에 대한 예입니다.
+  다음은 예제입니다.
 
   ```xml
   <wsrm:RMAssertion>
@@ -302,7 +303,7 @@ WCF는 WS 신뢰할 수 있는 메시징 WS-POLICY 어설션을 사용 하 여 `
 
 ## <a name="flow-control-ws-reliable-messaging-extension"></a>흐름 제어 WS-Reliable Messaging 확장
 
-WCF는 WS-TRUST 메시징 확장성을 사용 하 여 시퀀스 메시지 흐름에 대 한 선택적인 추가 제어 기능을 제공 합니다.
+WCF는 WS-Reliable 메시징 확장성을 사용 하 여 시퀀스 메시지 흐름에 대 한 선택적 추가 제어를 제공 합니다.
 
 속성을로 설정 하 여 흐름 제어를 사용 하도록 설정 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled?displayProperty=nameWithType> `true` 합니다. 다음은 WCF에 적용 되는 제약 조건의 목록입니다.
 
@@ -330,7 +331,7 @@ WCF는 WS-TRUST 메시징 확장성을 사용 하 여 시퀀스 메시지 흐름
 
 ## <a name="message-exchange-patterns"></a>메시지 교환 패턴
 
-이 섹션에서는 다른 메시지 교환 패턴에 대해 WS-TRUST 메시징을 사용 하는 경우 WCF의 동작에 대해 설명 합니다. 각 메시지 교환 패턴에 대해 다음 두 가지 배포 시나리오를 고려합니다.
+이 섹션에서는 여러 메시지 교환 패턴에 WS-Reliable Messaging이 사용 되는 경우 WCF의 동작에 대해 설명 합니다. 각 메시지 교환 패턴에 대해 다음 두 가지 배포 시나리오를 고려합니다.
 
 - 주소를 지정할 수 없는 개시자: 개시자가 방화벽으로 보호됩니다. 응답자는 HTTP 응답에서만 개시자에게 메시지를 배달할 수 있습니다.
 

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugAssembly3:: GetContainerAssembly 메서드'
 title: ICorDebugAssembly3::GetContainerAssembly 메서드
 ms.date: 03/30/2017
 ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
-ms.openlocfilehash: 51e68e73983425cdd7d648b6856809fcba590f70
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5a6bc6dfb1c8403137a9444ff1cc4f64e75da65d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688551"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791519"
 ---
 # <a name="icordebugassembly3getcontainerassembly-method"></a>ICorDebugAssembly3::GetContainerAssembly 메서드
 
@@ -26,7 +27,7 @@ HRESULT GetContainerAssembly(
  `ppAssembly`  
  컨테이너 어셈블리를 나타내는 ICorDebugAssembly 개체의 주소에 대 한 포인터 이거나, 메서드 호출이 실패할 경우 **null** 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `S_OK` 메서드 호출이 성공 하면이 고, 그렇지 않으면입니다. 그렇지 않으면, `S_FALSE` 및 `ppAssembly` 가 **null** 입니다.  
   
@@ -47,7 +48,7 @@ HRESULT GetContainerAssembly(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugAssembly3 인터페이스](icordebugassembly3-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: SByte 데이터 형식 (Visual Basic)'
 title: SByte 데이터 형식
 ms.date: 04/20/2017
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: e7d45c74056ce5b6aa66674c99e48b5ab60015f0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e6e314a34469083433289c0fff9b404d4549824d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415572"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792169"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte 데이터 형식 (Visual Basic)
 
@@ -46,7 +47,7 @@ Visual Basic 2017부터 `_` 다음 예제와 같이 밑줄 문자를 자릿수 �
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]
 
-Visual Basic 15.5부터 `_` 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 밑줄 문자 ()를 사용할 수도 있습니다. 예를 들면 다음과 같습니다.
+Visual Basic 15.5부터 `_` 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 밑줄 문자 ()를 사용할 수도 있습니다. 다음은 그 예입니다. 
 
 ```vb
 Dim number As SByte = &H_F9
@@ -68,7 +69,7 @@ Dim number As SByte = &H_F9
 
 - **넓혀.** `SByte`데이터 형식은,,,, 및로 확대 변환 `Short` `Integer` `Long` `Decimal` `Single` `Double` 됩니다. 즉, `SByte` 오류가 발생 하지 않고 이러한 형식으로 변환할 수 있습니다 <xref:System.OverflowException?displayProperty=nameWithType> .
 
-- **문자를 입력 합니다.** `SByte`에는 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.
+- **문자를 입력 합니다.** `SByte` 에는 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.
 
 - **Framework 형식.** .NET Framework에서 해당하는 형식은 <xref:System.SByte?displayProperty=nameWithType> 구조체입니다.
 

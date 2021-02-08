@@ -1,4 +1,5 @@
 ---
+description: UInteger 데이터 형식에 대해 자세히 알아보세요.
 title: UInteger 데이터 형식
 ms.date: 01/31/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: 11070f6c7f3259b8c34528eb54d99b031b68f9f9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5202619909de4a132bda8ab3dca63337c6f3493f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792104"
 ---
 # <a name="uinteger-data-type"></a>UInteger 데이터 형식
 
@@ -48,7 +49,7 @@ Visual Basic 2017부터 `_` 다음 예제와 같이 밑줄 문자를 자릿수 �
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]
 
-Visual Basic 15.5부터 `_` 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 밑줄 문자 ()를 사용할 수도 있습니다. 예를 들면 다음과 같습니다.
+Visual Basic 15.5부터 `_` 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 밑줄 문자 ()를 사용할 수도 있습니다. 다음은 그 예입니다. 
 
 ```vb
 Dim number As UInteger = &H_0F8C_0326
@@ -74,7 +75,7 @@ Dim number = &H_0FAC_14D7ui
 
 - **넓혀.** `UInteger`데이터 형식은,,, 및로 확대 변환 `Long` `ULong` `Decimal` `Single` `Double` 됩니다. 즉, `UInteger` 오류가 발생 하지 않고 이러한 형식으로 변환할 수 있습니다 <xref:System.OverflowException?displayProperty=nameWithType> .
 
-- **문자를 입력 합니다.** 리터럴 형식 문자를 리터럴에 추가 하면 `UI` `UInteger` 데이터 형식이 됩니다. `UInteger`에는 식별자 형식 문자가 없습니다.
+- **문자를 입력 합니다.** 리터럴 형식 문자를 리터럴에 추가 하면 `UI` `UInteger` 데이터 형식이 됩니다. `UInteger` 에는 식별자 형식 문자가 없습니다.
 
 - **Framework 형식.** .NET Framework에서 해당하는 형식은 <xref:System.UInt32?displayProperty=nameWithType> 구조체입니다.
 

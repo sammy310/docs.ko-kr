@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugILFrame4:: EnumerateLocalVariablesEx 메서드'
 title: ICorDebugILFrame4::EnumerateLocalVariablesEx 메서드
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 6f60aae6-70ec-4c4c-963a-138df98c4668
 topic_type:
 - apiref
-ms.openlocfilehash: 86a3b22851aa07a546cba5a0c0b69c81ec580cee
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8808b1ac337304ab37a35f7733b317dad274d48e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724977"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791246"
 ---
 # <a name="icordebugilframe4enumeratelocalvariablesex-method"></a>ICorDebugILFrame4::EnumerateLocalVariablesEx 메서드
 
@@ -58,7 +59,7 @@ HRESULT EnumerateLocalVariablesEx(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugILFrame4 인터페이스](icordebugilframe4-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

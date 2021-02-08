@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugVariableSymbol:: GetSlotIndex 메서드'
 title: ICorDebugVariableSymbol::GetSlotIndex 메서드
 ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
-ms.openlocfilehash: fc42517cb95dfc14c472b5bb9111ebd70639cee7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3b5cba06a5e80ffa323d2e6521e9ec4666f6f5f3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725991"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790557"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol::GetSlotIndex 메서드
 
@@ -26,7 +27,7 @@ HRESULT GetSlotIndex(
  `pSlotIndex`  
  [out] 지역 변수의 슬롯 인덱스에 대한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  성공하는 경우 `S_OK`입니다. 변수가 함수 인수인 경우 `E_FAIL`입니다.  
   
@@ -47,7 +48,7 @@ HRESULT GetSlotIndex(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugVariableSymbol 인터페이스](icordebugvariablesymbol-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

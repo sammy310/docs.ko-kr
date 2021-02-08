@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 워크플로에서 OData 피드 사용'
 title: 워크플로에서 OData 피드 사용-WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: ceac2c2d07351fcb79e2345068f07fa22f356411
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8296fe912b1f40deb10670c5ef7ea24cf8fd47eb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743787"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792728"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>워크플로에서 OData 피드 사용
 
@@ -15,7 +16,7 @@ WCF Data Services는 Representational State Transfer (REST)의 의미 체계를 
 
 ## <a name="using-the-sample-northwind-odata-service"></a>Sample Northwind OData 서비스 사용
 
-이 항목의 예제에서는 <https://services.odata.org/Northwind/Northwind.svc/>에 있는 샘플 Northwind 데이터 서비스를 사용 합니다. 이 서비스는 [OData SDK](https://www.odata.org/ecosystem/#sdk) 의 일부로 제공되며 샘플 Northwind 데이터베이스에 읽기 전용으로 액세스할 수 있게 해줍니다. 쓰기 권한이 필요하거나 로컬 WCF 데이터 서비스가 필요한 경우 [퀵 스타트(WCF Data Services)](../data/wcf/quickstart-wcf-data-services.md) 의 단계를 수행하여 Northwind 데이터베이스에 액세스할 수 있게 해 주는 로컬 OData 서비스를 만들 수 있습니다. 퀵 스타트를 따르는 경우 이 항목의 예제 코드에 제공된 URI를 로컬 URI로 바꿉니다.
+이 항목의 예제에서는에 있는 샘플 Northwind 데이터 서비스를 사용 합니다 <https://services.odata.org/Northwind/Northwind.svc/> . 이 서비스는 [OData SDK](https://www.odata.org/ecosystem/#sdk) 의 일부로 제공되며 샘플 Northwind 데이터베이스에 읽기 전용으로 액세스할 수 있게 해줍니다. 쓰기 권한이 필요하거나 로컬 WCF 데이터 서비스가 필요한 경우 [퀵 스타트(WCF Data Services)](../data/wcf/quickstart-wcf-data-services.md) 의 단계를 수행하여 Northwind 데이터베이스에 액세스할 수 있게 해 주는 로컬 OData 서비스를 만들 수 있습니다. 퀵 스타트를 따르는 경우 이 항목의 예제 코드에 제공된 URI를 로컬 URI로 바꿉니다.
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>클라이언트 라이브러리를 사용 하 여 OData 피드 사용
 
@@ -34,16 +35,16 @@ Northwind 클라이언트 라이브러리를 생성 하려면 Visual Studio 2012
 
 ### <a name="using-asynchronous-methods"></a>비동기 메서드 사용
 
-웹을 통해 리소스에 액세스할 때 발생할 수 있는 지연 문제를 해결하려면 WCF Data Services에 비동기적으로 액세스하는 것이 좋습니다. WCF Data Services 클라이언트 라이브러리에는 쿼리를 호출 하는 비동기 메서드가 포함 되어 있으며 WF (Windows Workflow Foundation)는 비동기 작업을 작성 하기 위한 <xref:System.Activities.AsyncCodeActivity> 클래스를 제공 합니다. 비동기 메서드를 사용 하는 .NET Framework 클래스를 활용 하도록 파생 작업을 작성할 수 있습니다. 또는 비동기적으로 실행 되는 코드는 메서드에 배치 하 고 대리자를 사용 하 여 호출할 수 있습니다. <xref:System.Activities.AsyncCodeActivity> 이 단원에서는 <xref:System.Activities.AsyncCodeActivity> 파생 활동의 두 가지 예제를 제공합니다. 한 예제에서는 WCF Data Services 클라이언트 라이브러리의 비동기 메서드를 사용하고 다른 예제에서는 대리자를 사용합니다.
+웹을 통해 리소스에 액세스할 때 발생할 수 있는 지연 문제를 해결하려면 WCF Data Services에 비동기적으로 액세스하는 것이 좋습니다. WCF Data Services 클라이언트 라이브러리에는 쿼리를 호출 하는 비동기 메서드가 포함 되어 있으며 WF (Windows Workflow Foundation)는 <xref:System.Activities.AsyncCodeActivity> 비동기 작업을 작성 하기 위한 클래스를 제공 합니다. <xref:System.Activities.AsyncCodeActivity> 파생 작업은 비동기 메서드를 포함 하는 .NET Framework 클래스를 활용 하기 위해 작성 하거나 비동기적으로 실행 되는 코드를 메서드에 추가 하 고 대리자를 사용 하 여 호출할 수 있습니다. 이 단원에서는 <xref:System.Activities.AsyncCodeActivity> 파생 활동의 두 가지 예제를 제공합니다. 한 예제에서는 WCF Data Services 클라이언트 라이브러리의 비동기 메서드를 사용하고 다른 예제에서는 대리자를 사용합니다.
 
 > [!NOTE]
 > 자세한 내용은 [비동기 작업 (WCF Data Services)](../data/wcf/asynchronous-operations-wcf-data-services.md) 및 [비동기 작업 만들기](creating-asynchronous-activities-in-wf.md)를 참조 하세요.
 
 ### <a name="using-client-library-asynchronous-methods"></a>클라이언트 라이브러리 비동기 메서드 사용
 
-<xref:System.Data.Services.Client.DataServiceQuery%601> 클래스는 OData 서비스를 비동기적으로 쿼리하기 위한 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 및 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 메서드를 제공합니다. 이러한 메서드는 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 파생 클래스의 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 및 <xref:System.Activities.AsyncCodeActivity> 재정의에서 호출할 수 있습니다. <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 재정의가 반환 되 면 워크플로가 유휴 상태가 될 수 있으며 (지속 되지 않음), 비동기 작업이 완료 되 면 런타임에서 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>를 호출 합니다.
+<xref:System.Data.Services.Client.DataServiceQuery%601> 클래스는 OData 서비스를 비동기적으로 쿼리하기 위한 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 및 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 메서드를 제공합니다. 이러한 메서드는 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 파생 클래스의 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 및 <xref:System.Activities.AsyncCodeActivity> 재정의에서 호출할 수 있습니다. <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 재정의가 반환 되 면 워크플로가 유휴 상태가 될 수 있으며 (지속 되지 않음), 비동기 작업이 완료 되 면 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 가 런타임에 의해 호출 됩니다.
 
-다음 예제에서는 두 입력 인수를 가진 `OrdersByCustomer` 활동을 정의합니다. `CustomerId` 인수는 반환할 주문을 식별하는 고객을 나타내고, `ServiceUri` 인수는 쿼리할 OData 서비스의 URI를 나타냅니다. 활동이 `AsyncCodeActivity<IEnumerable<Order>>` 에서 파생되기 때문에 쿼리의 결과를 반환하는 데 사용되는 <xref:System.Activities.Activity%601.Result%2A> 출력 인수도 있습니다. <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 재정의는 지정된 고객의 모든 주문을 선택하는 LINQ 쿼리를 만듭니다. 이 쿼리는 전달된 <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> 의 <xref:System.Activities.AsyncCodeActivityContext>로 지정되며, 그런 다음 쿼리의 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 메서드가 호출됩니다. 쿼리의 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 로 전달된 콜백과 상태는 활동의 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 메서드에 전달되는 콜백과 상태입니다. 쿼리 실행이 완료되면 활동의 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 메서드가 호출됩니다. 쿼리는 <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>에서 검색되며, 그런 다음 쿼리의 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 메서드가 호출됩니다. 이 메서드는 지정된 엔터티 형식의 <xref:System.Collections.Generic.IEnumerable%601> 을 반환합니다. 이 경우에는 `Order`를 반환합니다. `IEnumerable<Order>`은 <xref:System.Activities.AsyncCodeActivity%601>의 제네릭 형식 이므로이 <xref:System.Collections.IEnumerable>은 활동의 <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> 설정 됩니다.
+다음 예제에서는 두 입력 인수를 가진 `OrdersByCustomer` 활동을 정의합니다. `CustomerId` 인수는 반환할 주문을 식별하는 고객을 나타내고, `ServiceUri` 인수는 쿼리할 OData 서비스의 URI를 나타냅니다. 활동이 `AsyncCodeActivity<IEnumerable<Order>>` 에서 파생되기 때문에 쿼리의 결과를 반환하는 데 사용되는 <xref:System.Activities.Activity%601.Result%2A> 출력 인수도 있습니다. <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 재정의는 지정된 고객의 모든 주문을 선택하는 LINQ 쿼리를 만듭니다. 이 쿼리는 전달된 <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> 의 <xref:System.Activities.AsyncCodeActivityContext>로 지정되며, 그런 다음 쿼리의 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 메서드가 호출됩니다. 쿼리의 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 로 전달된 콜백과 상태는 활동의 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 메서드에 전달되는 콜백과 상태입니다. 쿼리 실행이 완료되면 활동의 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 메서드가 호출됩니다. 쿼리는 <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>에서 검색되며, 그런 다음 쿼리의 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 메서드가 호출됩니다. 이 메서드는 지정된 엔터티 형식의 <xref:System.Collections.Generic.IEnumerable%601> 을 반환합니다. 이 경우에는 `Order`를 반환합니다. `IEnumerable<Order>`는의 제네릭 형식 이므로 <xref:System.Activities.AsyncCodeActivity%601> <xref:System.Collections.IEnumerable> <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> 활동의로 설정 됩니다.
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#100](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#100)]
 
@@ -72,7 +73,7 @@ Calling WCF Data Service...
 
 ### <a name="using-a-delegate"></a>대리자 사용
 
-<xref:System.Activities.AsyncCodeActivity>기반 활동은 .NET Framework 클래스의 비동기 메서드를 호출 하는 것 외에도 해당 메서드 중 하나에서 비동기 논리를 정의할 수 있습니다. 이 메서드는 활동의 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 재정의에서 대리자를 사용하여 지정됩니다. 메서드가 반환될 때 런타임에서 활동의 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 재정의를 호출합니다. 워크플로에서 OData 서비스를 호출할 때 이 메서드를 사용하여 서비스를 쿼리하고 추가 처리를 제공할 수 있습니다.
+기반 활동은 .NET Framework 클래스의 비동기 메서드를 호출 하는 것 외에 <xref:System.Activities.AsyncCodeActivity> 도 해당 메서드 중 하나에서 비동기 논리를 정의할 수 있습니다. 이 메서드는 활동의 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 재정의에서 대리자를 사용하여 지정됩니다. 메서드가 반환될 때 런타임에서 활동의 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 재정의를 호출합니다. 워크플로에서 OData 서비스를 호출할 때 이 메서드를 사용하여 서비스를 쿼리하고 추가 처리를 제공할 수 있습니다.
 
 다음 예제에서는 `ListCustomers` 활동을 정의합니다. 이 활동은 샘플 Northwind 데이터 서비스를 쿼리하고 Northwind 데이터베이스의 모든 고객이 포함된 `List<Customer>` 를 반환합니다. 비동기 작업은 `GetCustomers` 메서드에서 수행됩니다. 이 메서드는 서비스에서 모든 고객을 쿼리하여 `List<Customer>`에 복사합니다. 그런 다음 결과가 페이징되는지 확인하고 페이징되면 서비스에서 결과의 다음 페이지를 쿼리하여 목록에 추가하고 모든 고객 데이터가 검색될 때까지 계속합니다.
 

@@ -1,19 +1,20 @@
 ---
+description: ServiceModel 트랜잭션 특성에 대해 자세히 알아보세요.
 title: ServiceModel 트랜잭션 특성
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel attributes
 ms.assetid: 1e0d2436-6ae5-439b-9765-a448d6f60000
-ms.openlocfilehash: d4b7482431404241577111d8dd3841319b65696e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0b443fc6b9503007574608afe03c5e0508f666d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663690"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793482"
 ---
 # <a name="servicemodel-transaction-attributes"></a>ServiceModel 트랜잭션 특성
 
-세 가지 표준에 속성을 제공 하는 Windows Communication Foundation (WCF) <xref:System.ServiceModel> WCF 서비스에 대 한 트랜잭션의 동작을 구성할 수 있도록 하는 특성:
+WCF (Windows Communication Foundation) <xref:System.ServiceModel> 는 wcf 서비스에 대 한 트랜잭션의 동작을 구성할 수 있는 세 가지 표준 특성에 대 한 속성을 제공 합니다.
 
 - <xref:System.ServiceModel.TransactionFlowAttribute>
 
@@ -23,7 +24,7 @@ ms.locfileid: "67663690"
 
 ## <a name="transactionflowattribute"></a>TransactionFlowAttribute
 
-<xref:System.ServiceModel.TransactionFlowAttribute> 특성은 클라이언트로부터 들어오는 트랜잭션을 허용하도록 서비스 계약에서 작업의 의지를 지정합니다. 특성 속성을 사용 하 여이 컨트롤을 제공합니다. 트랜잭션을 사용 합니다 <xref:System.ServiceModel.TransactionFlowOption> 들어오는 트랜잭션이 인지 여부를 지정 하는 열거형 <xref:System.ServiceModel.TransactionFlowOption.Mandatory>, <xref:System.ServiceModel.TransactionFlowOption.Allowed>, 또는 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>합니다.
+<xref:System.ServiceModel.TransactionFlowAttribute> 특성은 클라이언트로부터 들어오는 트랜잭션을 허용하도록 서비스 계약에서 작업의 의지를 지정합니다. 해당 특성은 다음 속성과 함께 이 컨트롤을 제공합니다. 트랜잭션은 <xref:System.ServiceModel.TransactionFlowOption> 열거형을 사용하여 들어오는 트랜잭션이 <xref:System.ServiceModel.TransactionFlowOption.Mandatory>, <xref:System.ServiceModel.TransactionFlowOption.Allowed>인지 또는 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>인지를 지정합니다.
 
 이 특성은 클라이언트와의 외부 상호 작용에 서비스 작업을 연관시키는 유일한 특성입니다. 다음 단원에서 설명할 특성은 작업 실행 내에서의 트랜잭션 사용과 연관된 특성입니다.
 
@@ -41,7 +42,7 @@ ms.locfileid: "67663690"
 
 ## <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute
 
-<xref:System.ServiceModel.OperationBehaviorAttribute> 특성은 서비스 구현에서 메서드의 동작을 지정합니다. 이를 사용하여 작업의 특정 실행 동작을 나타낼 수 있습니다. 이 특성의 속성 서비스 계약의 웹 서비스 설명 언어 (WSDL) 설명 하는 데 영향을 주지 않습니다 되며 순수 하 게 요소의 WCF 프로그래밍 모델을 개발자가 직접 구현 해야 하는 일반적인 기능을 사용할 수 있습니다.
+<xref:System.ServiceModel.OperationBehaviorAttribute> 특성은 서비스 구현에서 메서드의 동작을 지정합니다. 이를 사용하여 작업의 특정 실행 동작을 나타낼 수 있습니다. 이 특성의 속성은 서비스 계약의 WSDL (웹 서비스 기술 언어) 설명에 영향을 주지 않으며, 개발자가 직접 구현 해야 하는 일반적인 기능을 가능 하 게 하는 WCF 프로그래밍 모델의 요소입니다.
 
 이 특성에는 다음과 같은 트랜잭션별 속성이 있습니다.
 

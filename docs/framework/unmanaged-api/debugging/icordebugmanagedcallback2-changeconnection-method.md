@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugManagedCallback2:: ChangeConnection 메서드'
 title: ICorDebugManagedCallback2::ChangeConnection 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7263f9a9-4c0b-4d82-a181-288873fb2b18
 topic_type:
 - apiref
-ms.openlocfilehash: 4ba04b1a4815587b40d03819fdac795dcc7f2c4f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 854ea7f40cad9bce613b4034afe7688f4aaf4e52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95697274"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790921"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection 메서드
 
@@ -63,7 +64,7 @@ HRESULT ChangeConnection (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugManagedCallback2 인터페이스](icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

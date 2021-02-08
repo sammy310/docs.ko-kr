@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: WS-AtomicTransaction 구성 유틸리티 (wsatConfig.exe)'
 title: WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: dbd33869de6b1ecee6406dfeede88afc4eca07f1
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 8b315e5aa5df23a4d9bb032db41b7067accfa010
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720493"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792962"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)
 
@@ -21,7 +22,7 @@ wsatConfig [Options]
   
 ## <a name="remarks"></a>설명
 
- 이 명령줄 도구는 로컬 컴퓨터 에서만 기본 WS-AT 설정을 구성 하는 데 사용할 수 있습니다. 로컬 및 원격 컴퓨터 모두에서 설정을 구성 해야 하는 경우에는 [WS 원자성 트랜잭션 지원 구성](./feature-details/configuring-ws-atomic-transaction-support.md)에 설명 된 대로 MMC 스냅인을 사용 해야 합니다.  
+ 이 명령줄 도구는 로컬 컴퓨터 에서만 기본 WS-AT 설정을 구성 하는 데 사용할 수 있습니다. 로컬 및 원격 컴퓨터 모두에서 설정을 구성 해야 하는 경우 [WS-Atomic 트랜잭션 지원 구성](./feature-details/configuring-ws-atomic-transaction-support.md)에 설명 된 대로 MMC 스냅인을 사용 해야 합니다.  
   
  명령줄 도구는 Windows SDK 설치 위치에서 찾을 수 있습니다.
   
@@ -32,7 +33,7 @@ wsatConfig [Options]
 > [!NOTE]
 > 선택한 포트에 대한 SSL 인증서를 설정하는 경우 인증서가 있으면 해당 포트와 연결된 원래 SSL 인증서를 덮어씁니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |-------------|-----------------|  
 |계좌\<account,>|WS-AtomicTransaction에 참여할 수 있는 계정의 쉼표로 구분된 목록을 지정합니다. 이러한 계정의 유효성 검사는 수행되지 않습니다.|  
 |-accountsCerts: \<thumb>&#124; "Issuer\SubjectName", >|WS-AtomicTransaction에 참여할 수 있는 인증서의 쉼표로 구분된 목록을 지정합니다. 인증서는 지문이나 Issuer\SubjectName 쌍으로 표시됩니다. 비어 있으면 제목 이름으로 {EMPTY}를 사용하십시오.|  
@@ -49,7 +50,7 @@ wsatConfig [Options]
 |-show|현재 WS-AtomicTransaction 프로토콜 설정을 표시합니다.|  
 |virtualServer\<virtualServer>|DTC 리소스 클러스터 이름을 지정합니다.|  
   
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 - [WS-AtomicTransaction 사용](./feature-details/using-ws-atomictransaction.md)
 - [WS-Atomic Transaction 지원 구성](./feature-details/configuring-ws-atomic-transaction-support.md)

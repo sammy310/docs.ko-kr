@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 102-WorkflowInstanceAbortedRecord'
 title: 102 - WorkflowInstanceAbortedRecord
 ms.date: 03/30/2017
 ms.assetid: bde4378d-4eea-4907-aaf2-c1a2bc770a37
-ms.openlocfilehash: a48e3e27787a9f6dd133240f20ed67230d837698
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2fd192af1624618a2800843ad58a1fc65d5f86b8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275468"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792858"
 ---
 # <a name="102---workflowinstanceabortedrecord"></a>102 - WorkflowInstanceAbortedRecord
 
@@ -20,7 +21,7 @@ ms.locfileid: "96275468"
 |Level|경고|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  워크플로 인스턴스가 WorkflowInstanceAbortedRecord를 내보내면 ETW 추적 참가자가 이 이벤트를 내보냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96275468"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |InstanceId|xs:GUID|워크플로의 인스턴스 ID|  
 |RecordNumber|xs:long|내보낸 레코드의 시퀀스 번호|  

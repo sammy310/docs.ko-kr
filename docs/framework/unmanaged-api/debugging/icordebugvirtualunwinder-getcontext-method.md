@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugVirtualUnwinder:: GetContext 메서드'
 title: ICorDebugVirtualUnwinder::GetContext 메서드
 ms.date: 03/30/2017
 ms.assetid: fe502a76-3068-47e5-a0a0-85ccb72dfac3
-ms.openlocfilehash: a5a1afa47e52eff7c930698a3354a03d8c62259f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 864f32ce82149658b2d4a617b08e8d7aa41fe642
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679457"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790531"
 ---
 # <a name="icordebugvirtualunwindergetcontext-method"></a>ICorDebugVirtualUnwinder::GetContext 메서드
 
@@ -38,7 +39,7 @@ HRESULT GetContext(
  `contextBuf`  
  [out] 이 해제기의 현재 컨텍스트를 포함하는 바이트 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  mscordbi에 수신되는 모든 오류 HRESULT는 심각한 오류로 간주하여 ICorDebug API에서 `CORDBG_E_DATA_TARGET_ERROR`가 반환됩니다.  
   
@@ -61,7 +62,7 @@ HRESULT GetContext(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugMemoryBuffer 인터페이스](icordebugmemorybuffer-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

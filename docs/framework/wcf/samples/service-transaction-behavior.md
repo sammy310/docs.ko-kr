@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 서비스 트랜잭션 동작'
 title: 서비스 트랜잭션 동작
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: 0be5bf0dbe6416febb898fb5150c5a516c8b0969
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f8b76de250ef87ec5ca2d4ea4353a9a28bac248
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591529"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793066"
 ---
 # <a name="service-transaction-behavior"></a>서비스 트랜잭션 동작
 
@@ -213,21 +214,21 @@ Creating new service instance...
 
 3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.
 
-여러 컴퓨터에서 샘플을 실행 하는 경우 네트워크 트랜잭션 흐름을 사용 하도록 MSDTC (Microsoft DTC(Distributed Transaction Coordinator))를 구성 하 고 Wsatconfig.exe 도구를 사용 하 여 WCF (Windows Communication Foundation) 트랜잭션 네트워크 지원을 사용 하도록 설정 해야 합니다.
+여러 컴퓨터에서 샘플을 실행 하는 경우 네트워크 트랜잭션 흐름을 사용 하도록 MSDTC (Microsoft DTC(Distributed Transaction Coordinator))를 구성 하 고 WsatConfig.exe 도구를 사용 하 여 WCF (Windows Communication Foundation) 트랜잭션 네트워크 지원을 사용 하도록 설정 해야 합니다.
 
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>여러 컴퓨터에서 샘플을 실행할 수 있도록 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하려면
 
 1. 서비스 컴퓨터에서 들어오는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.
 
-    1. **시작** 메뉴에서 **제어판**, **관리 도구**, **구성 요소 서비스**로 차례로 이동 합니다.
+    1. **시작** 메뉴에서 **제어판**, **관리 도구**, **구성 요소 서비스** 로 차례로 이동 합니다.
 
-    2. **내 컴퓨터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
+    2. **내 컴퓨터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다.
 
-    3. **MSDTC** 탭에서 **보안 구성**을 클릭 합니다.
+    3. **MSDTC** 탭에서 **보안 구성** 을 클릭 합니다.
 
-    4. **네트워크 DTC 액세스** 를 확인 하 고 **인바운드를 허용**합니다.
+    4. **네트워크 DTC 액세스** 를 확인 하 고 **인바운드를 허용** 합니다.
 
-    5. **예** 를 클릭 하 여 MS DTC 서비스를 다시 시작한 다음 **확인**을 클릭 합니다.
+    5. **예** 를 클릭 하 여 MS DTC 서비스를 다시 시작한 다음 **확인** 을 클릭 합니다.
 
     6. **확인** 을 클릭하여 대화 상자를 닫습니다.
 
@@ -235,25 +236,25 @@ Creating new service instance...
 
     1. 제어판에서 Windows 방화벽 애플리케이션을 실행합니다.
 
-    2. **예외** 탭에서 **프로그램 추가**를 클릭 합니다.
+    2. **예외** 탭에서 **프로그램 추가** 를 클릭 합니다.
 
     3. C:\WINDOWS\System32 폴더로 이동합니다.
 
-    4. Mmc.exe를 선택 하 고 **열기**를 클릭 합니다.
+    4. Msdtc.exe를 선택 하 고 **열기** 를 클릭 합니다.
 
     5. **확인** 을 클릭 하 여 **프로그램 추가** 대화 상자를 닫고 **확인** 을 다시 클릭 하 여 Windows 방화벽 애플릿을 닫습니다.
 
 3. 클라이언트 컴퓨터에서 나가는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.
 
-    1. **시작** 메뉴에서 **제어판**, **관리 도구**, **구성 요소 서비스**로 차례로 이동 합니다.
+    1. **시작** 메뉴에서 **제어판**, **관리 도구**, **구성 요소 서비스** 로 차례로 이동 합니다.
 
-    2. **내 컴퓨터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
+    2. **내 컴퓨터** 를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다.
 
-    3. **MSDTC** 탭에서 **보안 구성**을 클릭 합니다.
+    3. **MSDTC** 탭에서 **보안 구성** 을 클릭 합니다.
 
-    4. **네트워크 DTC 액세스** 를 확인 하 고 **아웃 바운드를 허용**합니다.
+    4. **네트워크 DTC 액세스** 를 확인 하 고 **아웃 바운드를 허용** 합니다.
 
-    5. **예** 를 클릭 하 여 MS DTC 서비스를 다시 시작한 다음 **확인**을 클릭 합니다.
+    5. **예** 를 클릭 하 여 MS DTC 서비스를 다시 시작한 다음 **확인** 을 클릭 합니다.
 
     6. **확인** 을 클릭하여 대화 상자를 닫습니다.
 

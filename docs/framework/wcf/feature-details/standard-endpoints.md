@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 표준 끝점'
 title: 표준 엔드포인트
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-ms.openlocfilehash: a2f8d45990c5bc845aeee87ee82a2d043d6d1292
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5879bab5dff4dee8ac574bad1c4452a60cf7c323
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246448"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793443"
 ---
 # <a name="standard-endpoints"></a>표준 엔드포인트
 

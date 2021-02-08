@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugVirtualUnwinder:: Next 메서드'
 title: ICorDebugVirtualUnwinder::Next 메서드
 ms.date: 03/30/2017
 ms.assetid: 790e0426-e5cd-49fd-a792-f8c8635d72fe
-ms.openlocfilehash: bfc827a1503b0367a442e3f3ca0915bd2aaeb01e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b509e8e4fb24c66764999e67ba7e36299ce7f570
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725952"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790518"
 ---
 # <a name="icordebugvirtualunwindernext-method"></a>ICorDebugVirtualUnwinder::Next 메서드
 
@@ -23,7 +24,7 @@ HRESULT Next();
 
  없음  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  해제가 성공적으로 발생한 경우 `S_OK`이고, 더 이상 프레임이 없어 해제를 완료할 수 없는 경우 `CORDBG_S_AT_END_OF_STACK`입니다.  
   
@@ -46,7 +47,7 @@ HRESULT Next();
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugMemoryBuffer 인터페이스](icordebugmemorybuffer-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

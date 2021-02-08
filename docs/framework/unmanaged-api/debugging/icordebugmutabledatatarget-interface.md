@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugMutableDataTarget 인터페이스'
 title: ICorDebugMutableDataTarget 인터페이스
 ms.date: 03/30/2017
 ms.assetid: 14aad5b3-84ab-4bbc-94e3-1eb92e258d10
-ms.openlocfilehash: cd22707832504ca2f08299872bc39bca2af782bb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 387c5317bea015459e306994c36761571b427628
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709351"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790700"
 ---
 # <a name="icordebugmutabledatatarget-interface"></a>ICorDebugMutableDataTarget 인터페이스
 
@@ -39,7 +40,7 @@ ms.locfileid: "95709351"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: ULong 데이터 형식 (Visual Basic)'
 title: ULong 데이터 형식
 ms.date: 01/31/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: ee9297ae917345d44d8e630bd09beea2245b56da
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9082fc9444f0754c60a6aa3f9b58db1d833349b8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415520"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792091"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong 데이터 형식 (Visual Basic)
 
@@ -48,7 +49,7 @@ Visual Basic 2017부터 `_` 다음 예제와 같이 밑줄 문자를 자릿수 �
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Visual Basic 15.5부터 `_` 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 밑줄 문자 ()를 사용할 수도 있습니다. 예를 들면 다음과 같습니다.
+Visual Basic 15.5부터 `_` 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 밑줄 문자 ()를 사용할 수도 있습니다. 다음은 그 예입니다. 
 
 ```vb
 Dim number As ULong = &H_F9AC_0326_1489_D68C
@@ -74,7 +75,7 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 - **넓혀.** `ULong`데이터 형식은, 및로 확대 변환 `Decimal` `Single` `Double` 됩니다. 즉, `ULong` 오류가 발생 하지 않고 이러한 형식으로 변환할 수 있습니다 <xref:System.OverflowException?displayProperty=nameWithType> .
 
-- **문자를 입력 합니다.** 리터럴 형식 문자를 리터럴에 추가 하면 `UL` `ULong` 데이터 형식이 됩니다. `ULong`에는 식별자 형식 문자가 없습니다.
+- **문자를 입력 합니다.** 리터럴 형식 문자를 리터럴에 추가 하면 `UL` `ULong` 데이터 형식이 됩니다. `ULong` 에는 식별자 형식 문자가 없습니다.
 
 - **Framework 형식.** .NET Framework에서 해당하는 형식은 <xref:System.UInt64?displayProperty=nameWithType> 구조체입니다.
 

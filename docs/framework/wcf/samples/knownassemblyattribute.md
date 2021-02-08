@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: KnownAssemblyAttribute'
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 2faeeaab98a4adeec38ed9c03dc9e01ec2a3aaea
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e528f547d67b77bd088288a4d079cea903318611
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96264948"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793248"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 

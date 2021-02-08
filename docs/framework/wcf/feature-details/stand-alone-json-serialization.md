@@ -1,18 +1,19 @@
 ---
-title: DataContractJsonSerializer를 사용 하는 독립 실행형 JSON Serialization
+description: DataContractJsonSerializer를 사용 하 여 JSON Serialization Stand-Alone에 대해 자세히 알아보세요.
+title: DataContractJsonSerializer를 사용 하 여 JSON Serialization Stand-Alone
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 5561cddb22a02fdae9f792b1d1ec71d01c4fc916
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c88a996eeac7e9e62caa7797bc0bf7cd68dfd67b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600908"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793417"
 ---
-# <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>DataContractJsonSerializer를 사용 하는 독립 실행형 JSON Serialization
+# <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>DataContractJsonSerializer를 사용 하 여 JSON Serialization Stand-Alone
 
 > [!NOTE]
-> 이 문서는에 대 한 내용입니다 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> . JSON 직렬화 및 역직렬화를 포함 하는 대부분의 시나리오에서는 system.xml [네임 스페이스](../../../standard/serialization/system-text-json-overview.md)의 api를 권장 합니다.
+> 이 문서는에 대 한 내용입니다 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> . JSON 직렬화 및 역직렬화를 포함 하는 대부분의 시나리오에서는 [ 네임 스페이스의System.Text.Js](../../../standard/serialization/system-text-json-overview.md)에 api를 권장 합니다.
 
 JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실행되는 JavaScript 코드에 의해 사용되도록 특별히 디자인된 데이터 형식이며 Windows Communication Foundation (WCF)에서 만든 ASP.NET AJAX 서비스에서 사용 하는 기본 데이터 형식입니다.
 
@@ -26,7 +27,7 @@ JSON으로 작업할 경우 몇 가지 예외를 제외하고는 <xref:System.Ru
 
 다음 표에서는 serialization 및 deserialization 절차를 통해 매핑될 때 .NET 형식과 JSON/JavaScript 형식 간의 대응 관계를 보여 줍니다.
 
-|.NET 형식|JSON/JavaScript|메모|
+|.NET 형식|JSON/JavaScript|참고|
 |----------------|----------------------|-----------|
 |모든 숫자 형식. 예: <xref:System.Int32>, <xref:System.Decimal> 또는 <xref:System.Double>|숫자|`Double.NaN`, `Double.PositiveInfinity` 및 `Double.NegativeInfinity`와 같은 특수한 값은 지원되지 않으므로 잘못된 JSON이 됩니다.|
 |<xref:System.Enum>|숫자|이 항목의 뒷부분에 있는 "열거 및 JSON"을 참조하십시오.|
@@ -95,7 +96,7 @@ XML 형식은 JSON 문자열이 됩니다.
 
   - Serialization 컨텍스트의 *다형성* 은 기본 형식이 필요한 경우 파생 형식을 serialize 하는 기능을 의미 합니다. 예를 들어 컬렉션을 <xref:System.Object>에 할당할 때처럼 컬렉션을 다형적으로 사용하는 경우 특수한 JSON 관련 규칙이 있습니다. 이러한 내용은 이 항목의 뒷부분에 있는 고급 정보 단원에 자세히 설명되어 있습니다.
 
-## <a name="additional-details"></a>추가 세부 정보
+## <a name="additional-details"></a>추가 정보
 
 ### <a name="order-of-data-members"></a>데이터 멤버 순서
 
@@ -275,7 +276,7 @@ JSON 메시지의 크기를 줄이기 위해 기본 데이터 계약 네임 스�
 
 <xref:System.Object>로 다시 역직렬화하는 경우:
 
-- `Shape`알려진 형식 목록에 있어야 합니다. <xref:System.Collections.Generic.List%601>형식이 `Shape` 알려진 형식에는 영향을 주지 않습니다. `Shape`이 경우에는 serialization에서 알려진 형식에 추가할 필요가 없습니다 .이 작업은 자동으로 수행 됩니다.
+- `Shape` 알려진 형식 목록에 있어야 합니다. <xref:System.Collections.Generic.List%601>형식이 `Shape` 알려진 형식에는 영향을 주지 않습니다. `Shape`이 경우에는 serialization에서 알려진 형식에 추가할 필요가 없습니다 .이 작업은 자동으로 수행 됩니다.
 
 - 컬렉션은 <xref:System.Array> <xref:System.Object> 인스턴스를 포함 하는 형식의로 deserialize 됩니다 `Shape` .
 

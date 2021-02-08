@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 1014-ScheduleCompletionWorkItem'
 title: 1014 - ScheduleCompletionWorkItem
 ms.date: 03/30/2017
 ms.assetid: 84203735-478d-42d8-a320-c175dbddcb38
-ms.openlocfilehash: 7fd93683851c5a8c4ab253272c3f2129b3f0bb49
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 85bbd9b749c1dd34d026d90d708ea7f880665fbb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275559"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792936"
 ---
 # <a name="1014---schedulecompletionworkitem"></a>1014 - ScheduleCompletionWorkItem
 
@@ -20,7 +21,7 @@ ms.locfileid: "96275559"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  CompletionWorkItem이 예약되었음을 나타냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96275559"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |ParentActivity|xs:string|부모 작업의 형식 이름입니다.|  
 |ParentDisplayName|xs:string|부모 작업의 표시 이름입니다.|  

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugVariableHome:: GetSlotIndex 메서드'
 title: 'ICorDebugVariableHome:: GetSlotIndex 메서드'
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-ms.openlocfilehash: 4b071bd8e9d96084848c1553385eec5f8beca624
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7f6ee01c2bfcee4c78f8463a7cefac1f90a3295f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711730"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790648"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome:: GetSlotIndex 메서드
 
@@ -39,7 +40,7 @@ HRESULT GetSlotIndex(
  `pSlotIndex`  
  제한이 지역 변수의 슬롯 인덱스에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드는 다음 값을 반환 합니다.  
   
@@ -62,6 +63,6 @@ HRESULT GetSlotIndex(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugVariableHome 인터페이스](icordebugvariablehome-interface.md)

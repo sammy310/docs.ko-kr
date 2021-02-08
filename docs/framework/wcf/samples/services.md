@@ -1,19 +1,20 @@
 ---
+description: '다음에 대 한 자세한 정보: 서비스'
 title: 서비스 샘플
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: a225d9bfb4d0ab70904a6e03c22269d69122f00b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 706d42a022a53d8f270b791df78b9b534d0cb2c2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591461"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793040"
 ---
 # <a name="services"></a>서비스
 
 이 섹션에는 WCF (Windows Communication Foundation) 서비스를 보여 주는 샘플이 포함 되어 있습니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 - [호스트할](../feature-details/hosting.md)\
 WCF 서비스를 호스트 하는 방법을 보여 줍니다.

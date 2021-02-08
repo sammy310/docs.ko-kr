@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 인스턴스 잠김 예외 동작'
 title: 인스턴스 잠금 예외 동작
 ms.date: 03/30/2017
 ms.assetid: 164a5419-315c-4987-ad72-54cbdb88d402
-ms.openlocfilehash: 3554975589bb6d55cef3611320d25687d1ee9ba6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ebbd86aad0f2e628f2656392fd464e3c1436c148
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279859"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792676"
 ---
 # <a name="instance-locked-exception-action"></a>인스턴스 잠금 예외 동작
 

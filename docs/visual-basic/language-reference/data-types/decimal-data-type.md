@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Decimal 데이터 형식 (Visual Basic)'
 title: Decimal 데이터 형식
 ms.date: 07/20/2015
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 690c8061b6df1115aa24668520170b44edfa8287
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5806041e7737b8fe0f1c7ffa63f6cbadcbf92e42
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415649"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792234"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal 데이터 형식(Visual Basic)
 
@@ -39,7 +40,7 @@ ms.locfileid: "84415649"
 
 ## <a name="programming-tips"></a>프로그래밍 팁
 
-- **소수.** `Decimal`이 부동 소수점 데이터 형식이 아닌 경우 `Decimal`구조체는 부호 비트와 소수 부분을 지정 하는 정수 배율 인수와 함께 이진 정수 값을 포함 합니다. 이로 인해 `Decimal` 숫자는 부동 소수점 형식 (및) 보다 메모리를 보다 정확 하 게 `Single` 표현 `Double` 합니다.
+- **소수.** `Decimal` 이 부동 소수점 데이터 형식이 아닌 경우 `Decimal`구조체는 부호 비트와 소수 부분을 지정 하는 정수 배율 인수와 함께 이진 정수 값을 포함 합니다. 이로 인해 `Decimal` 숫자는 부동 소수점 형식 (및) 보다 메모리를 보다 정확 하 게 `Single` 표현 `Double` 합니다.
 
 - **성능.** `Decimal`데이터 형식은 모든 숫자 형식이 가장 느립니다. 데이터 형식을 선택 하기 전에 성능에 대 한 정밀도의 중요도를 평가 해야 합니다.
 

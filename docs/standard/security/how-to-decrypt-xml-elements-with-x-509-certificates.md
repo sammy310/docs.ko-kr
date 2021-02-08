@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: x.509 인증서를 사용 하 여 XML 요소 암호 해독'
 title: '방법: X.509 인증서로 XML 요소 해독'
 ms.date: 07/14/2020
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
-ms.openlocfilehash: 02a4a4ada6dcc242a96d630699797f2ea76987e3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 40006ca1d3e76dbbc0899c0c22090b27c2cfb0de
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820282"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792377"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>방법: X.509 인증서로 XML 요소 해독
 

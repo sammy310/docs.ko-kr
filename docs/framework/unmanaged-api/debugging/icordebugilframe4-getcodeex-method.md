@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugILFrame4:: GetCodeEx 메서드'
 title: ICorDebugILFrame4::GetCodeEx 메서드
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: aeda0e42-29ee-4ca8-9f21-ac4641677a62
 topic_type:
 - apiref
-ms.openlocfilehash: a88bb02626dc125c494e4bbe68bfe6ed8bfd3b7b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1d17dfa531354b8a4b0dd3c0d3d2eb47206900cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719647"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791233"
 ---
 # <a name="icordebugilframe4getcodeex-method"></a>ICorDebugILFrame4::GetCodeEx 메서드
 
@@ -56,7 +57,7 @@ HRESULT GetCodeEx(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugILFrame4 인터페이스](icordebugilframe4-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 세션 및 큐'
 title: 세션 및 큐
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-ms.openlocfilehash: 425135b533b898cbc75464f50ce8a5e8f6550755
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 94ff58fca628e44b78b002291fa78a39cc10a14f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584170"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793014"
 ---
 # <a name="sessions-and-queues"></a>세션 및 큐
 

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugRemote 인터페이스'
 title: ICorDebugRemote 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-ms.openlocfilehash: 276d36c511105087190cb7e9dfeaa6932efc67ff
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4c9d92800c68155216a077180ea0b613c67423dd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712107"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790674"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote 인터페이스
 
@@ -78,7 +79,7 @@ interface ICorDebugRemote : IUnknown
   
  **.NET Framework 버전:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugRemoteTarget 인터페이스](icordebugremotetarget-interface.md)
 - [ICorDebug 인터페이스](icordebug-interface.md)

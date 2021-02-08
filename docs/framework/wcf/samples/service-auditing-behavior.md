@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 서비스 감사 동작'
 title: Service Auditing Behavior
 ms.date: 03/30/2017
 ms.assetid: 59bf0cda-e496-4418-a3a1-2f0f6e85f8ce
-ms.openlocfilehash: ae7ed2059b491a71de9c806e78f1fb784da197fa
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 101f737d790d7e5ec0fdefc3a60695cb3c432c28
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262569"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793131"
 ---
 # <a name="service-auditing-behavior"></a>Service Auditing Behavior
 

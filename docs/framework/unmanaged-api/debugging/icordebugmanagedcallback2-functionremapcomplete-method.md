@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugManagedCallback2:: FunctionRemapComplete 메서드'
 title: ICorDebugManagedCallback2::FunctionRemapComplete 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5396c4c3-4ec3-4e3a-a38d-d65b21f0a2fc
 topic_type:
 - apiref
-ms.openlocfilehash: 7eb7fb55a5077d2914eb85a67ca62163a1aa8cc0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fcb4388185de17d602c1e3dbc725e104a0a48b3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704606"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790853"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a>ICorDebugManagedCallback2::FunctionRemapComplete 메서드
 
@@ -61,7 +62,7 @@ HRESULT FunctionRemapComplete (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugManagedCallback2 인터페이스](icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

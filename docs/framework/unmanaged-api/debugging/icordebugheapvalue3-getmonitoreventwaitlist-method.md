@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugHeapValue3:: GetMonitorEventWaitList 메서드'
 title: ICorDebugHeapValue3::GetMonitorEventWaitList 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 035a9035-ac66-4953-b48a-99652b42b7fe
 topic_type:
 - apiref
-ms.openlocfilehash: 21bf0122039a720ff8a1d38d62e77c2560dcc435
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ffc849e83151719062133382989344a8f0057caf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726537"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791454"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList 메서드
 
@@ -39,7 +40,7 @@ HRESULT GetMonitorEventWaitList (
  `ppThreadEnum`  
  제한이 정렬 된 스레드 목록을 제공 하는 ICorDebugThreadEnum 열거자입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -72,7 +73,7 @@ HRESULT GetMonitorEventWaitList (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)

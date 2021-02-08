@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 구조체 디버깅'
 title: 디버깅 구조체
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - debugging structures [.NET Framework]
 - structures [.NET Framework debugging]
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
-ms.openlocfilehash: bf84f8ddb1e86da3b9d0e4326584e61304640558
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2b3b9e3678b34a25f9bfa58fcf6913cfe95aa729
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676272"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791558"
 ---
 # <a name="debugging-structures"></a>디버깅 구조체
 
@@ -71,7 +72,7 @@ ms.locfileid: "95676272"
 
  [StackTrace_SimpleContext 구조체](stacktrace-simplecontext-structure.md) 전체 구조 대신 사용할 수 있는 간단한 컨텍스트를 제공 `CONTEXT` 합니다.
 
-## <a name="related-sections"></a>관련 단원
+## <a name="related-sections"></a>관련 섹션
 
  [디버깅 Coclass](debugging-coclasses.md)
 

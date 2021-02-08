@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugInternalFrame2:: Get프레임 주소 메서드'
 title: ICorDebugInternalFrame2::GetFrameAddress 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ee8d058-ffc8-4967-9133-a5adfef4e518
 topic_type:
 - apiref
-ms.openlocfilehash: 05a9ab58acb3bf5829fd231ae6d8bcc96ae06da6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bb745424680c5b9a5277badfbe2d96db46e2e3d8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724873"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791116"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress 메서드
 
@@ -37,7 +38,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
  `pAddress`  
  제한이 `CORDB_ADDRESS` 내부 프레임의에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -45,7 +46,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |-------------|-----------------|  
 |S_OK|내부 프레임의 주소가 성공적으로 반환 되었습니다.|  
 |E_FAIL|내부 프레임의 주소를 반환할 수 없습니다.|  
-|E_INVALIDARG|`pAddress`이(가) `null`인 경우.|  
+|E_INVALIDARG|`pAddress`이(가) `null`인 경우|  
   
 ## <a name="remarks"></a>설명  
 
@@ -61,7 +62,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugInternalFrame2 인터페이스](icordebuginternalframe2-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

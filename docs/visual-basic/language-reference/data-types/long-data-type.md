@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Long 데이터 형식 (Visual Basic)'
 title: Long 데이터 형식
 ms.date: 01/31/2018
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-ms.openlocfilehash: 7c076cd2198c85560f7c63c69e051697966c9524
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cb4a22fa3b9d1440f755c8a3412aa3a918b7f261
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415598"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792182"
 ---
 # <a name="long-data-type-visual-basic"></a>Long 데이터 형식 (Visual Basic)
 
@@ -52,7 +53,7 @@ Visual Basic 2017부터 `_` 다음 예제와 같이 밑줄 문자를 자릿수 �
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-Visual Basic 15.5부터 `_` 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 밑줄 문자 ()를 사용할 수도 있습니다. 예를 들면 다음과 같습니다.
+Visual Basic 15.5부터 `_` 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 밑줄 문자 ()를 사용할 수도 있습니다. 다음은 그 예입니다. 
 
 ```vb
 Dim number As Long = &H_0FAC_0326_1489_D68C

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 워크플로에 대 한 추적 구성'
 title: 워크플로 추적 구성
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 098b295be00b1b8283e26e79ea14e78634fdb504
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 061a0edf107296e04d86ed1a50b9a8bfefd7bfce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557556"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792767"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>워크플로 추적 구성
 
@@ -148,17 +149,17 @@ invoker.Invoke();
 
 ### <a name="viewing-tracking-records-in-event-viewer"></a>이벤트 뷰어에서 추적 레코드 보기
 
-WF 실행을 추적할 때 특별히 관심을 두고 확인할 이벤트 뷰어 로그 두 가지는 분석 로그와 디버그 로그입니다. 둘 다 Microsoft&#124;Windows&#124;응용 프로그램 서버-응용 프로그램 노드 아래에 있습니다. 이 섹션의 로그에는 전체 시스템에 영향을 미치는 이벤트가 아닌 단일 애플리케이션의 이벤트가 있습니다.
+WF 실행을 추적할 때 특별히 관심을 두고 확인할 이벤트 뷰어 로그 두 가지는 분석 로그와 디버그 로그입니다. 둘 다 Microsoft&#124;Windows&#124;응용 프로그램 Server-Applications 노드에 있습니다. 이 섹션의 로그에는 전체 시스템에 영향을 미치는 이벤트가 아닌 단일 애플리케이션의 이벤트가 있습니다.
 
 디버그 추적 이벤트는 디버그 로그에 기록됩니다. 이벤트 뷰어에서 WF 디버그 추적 이벤트를 수집하려면 디버그 로그를 사용합니다.
 
-1. 이벤트 뷰어를 열려면 **시작**을 클릭 한 다음 실행을 클릭 **합니다.** 실행 대화 상자에서을 입력 `eventvwr` 합니다.
+1. 이벤트 뷰어를 열려면 **시작** 을 클릭 한 다음 실행을 클릭 **합니다.** 실행 대화 상자에서을 입력 `eventvwr` 합니다.
 
 2. 이벤트 뷰어 대화 상자에서 **응용 프로그램 및 서비스 로그** 노드를 확장 합니다.
 
-3. **Microsoft**, **Windows**및 **응용 프로그램 서버-응용** 프로그램 노드를 확장 합니다.
+3. **Microsoft**, **Windows** 및 **응용 프로그램 서버-응용** 프로그램 노드를 확장 합니다.
 
-4. **응용 프로그램 서버-응용 프로그램** 노드 아래의 **디버그** 노드를 마우스 오른쪽 단추로 클릭 하 고 **로그 사용**을 선택 합니다.
+4. **응용 프로그램 서버-응용 프로그램** 노드 아래의 **디버그** 노드를 마우스 오른쪽 단추로 클릭 하 고 **로그 사용** 을 선택 합니다.
 
 5. 추적이 설정된 애플리케이션을 실행하여 추적 이벤트를 생성합니다.
 
@@ -168,13 +169,13 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
 
 추적 레코드를 보려면 아래 단계를 따릅니다.
 
-1. 이벤트 뷰어를 열려면 **시작**을 클릭 한 다음 실행을 클릭 **합니다.** 실행 대화 상자에서을 입력 `eventvwr` 합니다.
+1. 이벤트 뷰어를 열려면 **시작** 을 클릭 한 다음 실행을 클릭 **합니다.** 실행 대화 상자에서을 입력 `eventvwr` 합니다.
 
 2. 이벤트 뷰어 대화 상자에서 **응용 프로그램 및 서비스 로그** 노드를 확장 합니다.
 
-3. **Microsoft**, **Windows**및 **응용 프로그램 서버-응용** 프로그램 노드를 확장 합니다.
+3. **Microsoft**, **Windows** 및 **응용 프로그램 서버-응용** 프로그램 노드를 확장 합니다.
 
-4. **응용 프로그램 서버-응용 프로그램** 노드 아래의 **분석** 노드를 마우스 오른쪽 단추로 클릭 하 고 **로그 사용**을 선택 합니다.
+4. **응용 프로그램 서버-응용 프로그램** 노드 아래의 **분석** 노드를 마우스 오른쪽 단추로 클릭 하 고 **로그 사용** 을 선택 합니다.
 
 5. 추적이 설정된 애플리케이션을 실행하여 추적 레코드를 생성합니다.
 
@@ -196,7 +197,7 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
     </system.serviceModel>
     ```
 
-2. %Windir%\Microsoft.NET\Framework \Microsoft.Windows.ApplicationServer.Applications.man에서 임시 위치로 매니페스트 파일을 복사 하 \\ \<latest version of [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> 고 이름을 Applications_Provider1로 바꿉니다.
+2. %Windir%\Microsoft.NET\Framework \Microsoft.Windows.ApplicationServer.Applications.man의 매니페스트 파일을 임시 위치에 복사 하 \\ \<latest version of [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> 고 Microsoft.Windows.ApplicationServer.Applications_Provider1. man로 이름을 바꿉니다.
 
 3. 매니페스트 파일의 GUID를 새 GUID로 변경합니다.
 
@@ -256,7 +257,7 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
         ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Windows Server App Fabric 모니터링](/previous-versions/appfabric/ee677251(v=azure.10))
 - [App Fabric을 사용 하 여 응용 프로그램 모니터링](/previous-versions/appfabric/ee677276(v=azure.10))

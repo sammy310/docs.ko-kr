@@ -1,22 +1,23 @@
 ---
+description: '자세한 정보: 사용자 지정 복합 디자이너-워크플로 항목 프레 젠 터'
 title: 사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 081dce85946fab85cff474508c46770c762b9e76
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 07970763e12eccd981370f1241642cc28f675824
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338717"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792585"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
 
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 는 포함된 요소의 컬렉션을 편집할 수 있도록 하는 WF 디자이너 프로그래밍 모델의 키 형식입니다. 이 샘플에서는 이러한 편집 가능한 컬렉션을 표시하는 활동 디자이너를 빌드하는 방법을 보여 줍니다.
 
-이 샘플에서는 다음 작업을 수행하는 방법을 보여 줍니다.
+이 샘플에서 설명하는 방법은 다음과 같습니다.
 
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>를 사용하여 사용자 지정 활동 디자이너 만들기
 
@@ -26,7 +27,7 @@ ms.locfileid: "75338717"
 
 ## <a name="set-up-build-and-run-the-sample"></a>샘플 설정, 빌드 및 실행
 
-1. Visual Studio 2010에서 C# 또는의 Visual Basic에 대 한 usingworkflowitemspresenter.sln 샘플 솔루션을 엽니다.
+1. C #에 대 한 **usingworkflowitemspresenter.sln** 샘플 솔루션 또는 Visual Studio 2010의 Visual Basic을 엽니다.
 
 2. 솔루션을 빌드하고 실행합니다.
 
@@ -157,11 +158,11 @@ ms.locfileid: "75338717"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - [워크플로 디자이너로 애플리케이션 개발](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

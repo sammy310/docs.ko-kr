@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 포이즌 메시지 처리'
 title: 포이즌 메시지 처리
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 9aeb404cea18a7dd6a9c416c0728d9905c0d782d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1d6c8027d44da4d79562e4e427654a3d85df3e88
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244823"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793625"
 ---
 # <a name="poison-message-handling"></a>포이즌 메시지 처리
 
@@ -35,7 +36,7 @@ ms.locfileid: "96244823"
   
 - Reject. 이 옵션은 Windows Vista 에서만 사용할 수 있습니다. 이렇게 하면 응용 프로그램에서 메시지를 받을 수 없다는 메시지 큐 (MSMQ)가 전송 큐 관리자에 게 부정 승인을 다시 보내도록 지시 합니다. 이 메시지는 전송 큐 관리자의 배달 못한 편지 큐에 배치됩니다.  
   
-- Move. 이 옵션은 Windows Vista 에서만 사용할 수 있습니다. 이 옵션은 포이즌 메시지 처리 애플리케이션이 나중에 처리할 수 있도록 포이즌 메시지를 포이즌 메시지 큐로 이동합니다. 포이즌 메시지 큐는 애플리케이션 큐의 하위 큐입니다. 포이즌 메시지 처리 응용 프로그램은 포이즌 큐에서 메시지를 읽는 WCF 서비스 일 수 있습니다. 포이즌 큐는 응용 프로그램 큐의 하위 큐로 주소를 지정할 수 있습니다. \<*machine-name*> / *applicationQueue* oison;p. 여기서 *컴퓨터 이름* 은 큐가 있는 컴퓨터의 이름이 고 *applicationqueue* 는 응용 프로그램별 큐의 이름입니다.  
+- Move. 이 옵션은 Windows Vista 에서만 사용할 수 있습니다. 이 옵션은 포이즌 메시지 처리 애플리케이션이 나중에 처리할 수 있도록 포이즌 메시지를 포이즌 메시지 큐로 이동합니다. 포이즌 메시지 큐는 애플리케이션 큐의 하위 큐입니다. 포이즌 메시지 처리 응용 프로그램은 포이즌 큐에서 메시지를 읽는 WCF 서비스 일 수 있습니다. 포이즌 큐는 응용 프로그램 큐의 하위 큐로 주소를 지정할 수 있습니다. \<*machine-name*> / oison;p. 여기서 *컴퓨터 이름* 은 큐가 있는 컴퓨터의 이름이 고 *applicationqueue* 는 응용 프로그램별 큐의 이름입니다.  
   
 다음은 메시지에 대한 최대 전달 시도 횟수입니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Object 데이터 형식'
 title: Object Data Type
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 14770e74a0169dba3a45a04845dd32323e6201e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b1f169e4e590335a0879f5ecd9b68507a3fa2ccb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415585"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792156"
 ---
 # <a name="object-data-type"></a>Object Data Type
 
@@ -54,9 +55,9 @@ datTyp = Type.GetTypeCode(myObject.GetType())
 
 - **넓혀.** 모든 데이터 형식과 모든 참조 형식은 데이터 형식으로 확장 `Object` 됩니다. 즉, `Object` 오류가 발생 하지 않고 모든 형식을로 변환할 수 있습니다 <xref:System.OverflowException?displayProperty=nameWithType> .
 
-  그러나 값 형식과 Visual Basic 사이를 변환 하 `Object` 는 경우 실행 속도가 느려질 수 있도록 *boxing* 및 *unboxing*이라는 작업을 수행 합니다.
+  그러나 값 형식과 Visual Basic 사이를 변환 하 `Object` 는 경우 실행 속도가 느려질 수 있도록 *boxing* 및 *unboxing* 이라는 작업을 수행 합니다.
 
-- **문자를 입력 합니다.** `Object`에는 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.
+- **문자를 입력 합니다.** `Object` 에는 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.
 
 - **Framework 형식.** .NET Framework에서 해당 하는 형식은 <xref:System.Object?displayProperty=nameWithType> 클래스입니다.
 

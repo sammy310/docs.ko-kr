@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 작업 유효성 검사 구성'
 title: 활동 유효성 검사 구성
 ms.date: 03/30/2017
 ms.assetid: 25a4eccb-b8fc-4857-a01d-2683b6341219
-ms.openlocfilehash: c3e10fc096b16ef2cf7a6c7533ac9bad8c5ec205
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9e40842a18dd2afd9a5ec0104d66e8971d691b5f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288959"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792754"
 ---
 # <a name="configuring-activity-validation"></a>활동 유효성 검사 구성
 

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 1015-Start작업 항목'
 title: 1015 - StartCompletionWorkItem
 ms.date: 03/30/2017
 ms.assetid: 96fd1d4e-c5d0-46ad-8a71-4b4b49ac7262
-ms.openlocfilehash: c0d8572f192a8faa22327fd671cd9ea49c5054ca
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6c79a02b144aa1176eb1cb334c8430c8f0babc3a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792923"
 ---
 # <a name="1015---startcompletionworkitem"></a>1015 - StartCompletionWorkItem
 
@@ -20,7 +21,7 @@ ms.locfileid: "96275546"
 |Level|자세히|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  CompletionWorkItem이 실행을 시작했음을 나타냅니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96275546"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |ParentActivity|xs:string|부모 작업의 형식 이름입니다.|  
 |ParentDisplayName|xs:string|부모 작업의 표시 이름입니다.|  

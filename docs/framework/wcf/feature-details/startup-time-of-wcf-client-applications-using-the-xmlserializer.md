@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: XmlSerializer를 사용 하 여 WCF 클라이언트 응용 프로그램의 시작 시간 개선'
 title: '방법: XmlSerializer를 사용하여 WCF 클라이언트 애플리케이션의 시작 시간 향상'
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: ac54a766161db146331a3e072b97822b609344c0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8cf46cc35753934e8f4cb3abadc20c912e9efca9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246383"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793404"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>방법: XmlSerializer를 사용하여 WCF 클라이언트 애플리케이션의 시작 시간 향상
 

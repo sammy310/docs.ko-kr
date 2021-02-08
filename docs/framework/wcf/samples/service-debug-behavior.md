@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 서비스 디버그 동작'
 title: 서비스 디버그 동작
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
-ms.openlocfilehash: 53f21129860c644d09d1a2eb9cb956aecf8ab0ad
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3aae4a4cca53fce50bff8ec02896e748f430166f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596645"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793105"
 ---
 # <a name="service-debug-behavior"></a>서비스 디버그 동작
 
@@ -32,7 +33,7 @@ ms.locfileid: "84596645"
 </behaviors>
 ```
 
-[\<serviceDebug>](../../configure-apps/file-schema/wcf/servicedebug.md)는 서비스 디버그 동작 속성을 변경할 수 있도록 하는 구성 요소입니다. 사용자는 이 동작을 수정하여 다음을 수행할 수 있습니다.
+[\<serviceDebug>](../../configure-apps/file-schema/wcf/servicedebug.md) 는 서비스 디버그 동작 속성을 변경할 수 있도록 하는 구성 요소입니다. 사용자는 이 동작을 수정하여 다음을 수행할 수 있습니다.
 
 - <xref:System.ServiceModel.FaultContractAttribute>를 사용하여 예외가 선언되지 않은 경우에도 서비스에서 애플리케이션 코드에 의해 throw된 예외를 반환할 수 있습니다. 이 작업은 `includeExceptionDetailInFaults`를 `true`로 설정하여 수행합니다. 이 설정은 서버가 예기치 않은 예외를 throw하는 경우를 디버깅할 때 유용합니다.
 

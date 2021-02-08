@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugAppDomain4 인터페이스'
 title: ICorDebugAppDomain4 인터페이스
 ms.date: 03/30/2017
 ms.assetid: c536b9dc-148e-4924-bde1-1daa98d49d90
-ms.openlocfilehash: 794db463781b1dbae09311a59842e9eb5cb0dc9f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f31758551d2c3470c02c5b65b5ed51c08c95c657
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731438"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791545"
 ---
 # <a name="icordebugappdomain4-interface"></a>ICorDebugAppDomain4 인터페이스
 
@@ -31,7 +32,7 @@ ICorDebugAppDomain 인터페이스를 논리적으로 확장하여 COM 호출 �
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 인터페이스](debugging-interfaces.md)
 - [디버깅](index.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugManagedCallback2::D estroyConnection 메서드'
 title: ICorDebugManagedCallback2::DestroyConnection 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf7940e9-4558-4319-925c-09f6c98c8fcd
 topic_type:
 - apiref
-ms.openlocfilehash: d725cbe89e0631630affb6b0540a7d5f57ab6b89
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f17def5599dc02ed6b7b49d7f8ed4db02eb40181
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720115"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790895"
 ---
 # <a name="icordebugmanagedcallback2destroyconnection-method"></a>ICorDebugManagedCallback2::DestroyConnection 메서드
 
@@ -57,7 +58,7 @@ HRESULT DestroyConnection (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugManagedCallback2 인터페이스](icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback 인터페이스](icordebugmanagedcallback-interface.md)

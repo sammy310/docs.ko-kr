@@ -1,16 +1,17 @@
 ---
+description: '방법에 대 한 자세한 정보: 방법: 코드를 사용 하 여 서비스에 대 한 메타 데이터 게시'
 title: '방법: 코드를 사용하여 서비스에 대한 메타데이터 게시'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-ms.openlocfilehash: 1291cb040fdcad17135e2187ade1966f3032fb44
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 94939c77b1c66643b0cc378516479e35c41aefbb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295537"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99793690"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>방법: 코드를 사용하여 서비스에 대한 메타데이터 게시
 
