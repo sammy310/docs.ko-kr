@@ -1,4 +1,5 @@
 ---
+description: "BC30014: ' #ElseIf '는 짝이 되는 ' #If ' 또는 ' #ElseIf 앞에와 야 합니다."
 title: "'#ElseIf'는 짝이 되는 '#If' 또는 '#ElseIf' 뒤에 와야 합니다."
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30014
 ms.assetid: 5215585e-2efa-485a-9efe-9833a1cc83a0
-ms.openlocfilehash: 142c142afe0d9be0ecd4d8a0340f0f1957b20470
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 5eeb9c2fc0fd7267d95a8713a7071cd08788e48b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162780"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796563"
 ---
 # <a name="bc30014-elseif-must-be-preceded-by-a-matching-if-or-elseif"></a>BC30014: ' #ElseIf '는 짝이 되는 ' #If ' 또는 ' #ElseIf ' 뒤에와 야 합니다.
 

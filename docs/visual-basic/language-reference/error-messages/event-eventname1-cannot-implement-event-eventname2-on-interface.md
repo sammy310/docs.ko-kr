@@ -1,4 +1,5 @@
 ---
+description: "' ' <eventname1> <eventname2> <interface> <delegate1> 및 ' ' 대리자 형식이 <delegate2> 일치 하지 않기 때문에 BC31423: event ' '에서 ' ' 인터페이스에 대해 ' ' 이벤트를 구현할 수 없습니다."
 title: 대리자 형식 '<eventname1>'과(와) '<eventname2>'이(가) 일치하지 않으므로 '<interface>' 이벤트에서 '<delegate1>' 인터페이스에 대해 '<delegate2>' 이벤트를 구현할 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31423
 ms.assetid: 2e754b66-5836-48ff-9697-b9c0d7085f18
-ms.openlocfilehash: d0b2b095ed355b420b28e87ed0b9d6a31f049ebf
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: cfb967d2b43ce1f34f56f3d019a9a663b000296c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162026"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796459"
 ---
 # <a name="bc31423-event-eventname1-cannot-implement-event-eventname2-on-interface-interface-because-their-delegate-types-delegate1-and-delegate2-do-not-match"></a>BC31423: ' ' \<eventname1> \<eventname2> 인터페이스의 \<interface> 대리자 형식 ' \<delegate1> ' 및 ' '이 (가) \<delegate2> 일치 하지 않으므로 ' ' 이벤트에서 ' ' 이벤트를 구현할 수 없습니다.
 

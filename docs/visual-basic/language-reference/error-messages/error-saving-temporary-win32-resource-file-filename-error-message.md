@@ -1,4 +1,5 @@
 ---
+description: "자세히 알아보기: BC30137: 임시 Win32 리소스 파일을 저장 하는 동안 오류가 발생 했습니다 <filename> . ' ': <error message>"
 title: "'<filename>' 임시 Win32 리소스 파일을 저장하는 동안 오류가 발생했습니다. <error message>"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30137
 ms.assetid: 61c23f48-0e06-42fc-be00-5598053c86dd
-ms.openlocfilehash: 62d42cec5b60b1124680f94601314e5565c974fa
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 21051f648eee41c0415795a18bbe47e97e1c7077
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162078"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796472"
 ---
 # <a name="bc30137-error-saving-temporary-win32-resource-file-filename-error-message"></a>BC30137: 임시 Win32 리소스 파일 ' '을 (를) 저장 하는 동안 오류가 발생 했습니다 \<filename> . \<error message>
 

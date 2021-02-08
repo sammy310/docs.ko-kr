@@ -1,4 +1,5 @@
 ---
+description: "자세한 내용은 다음에 대해 자세히 알아보세요. BC31122: 명시적 대리자 형식 없이 선언 된 이벤트에는 ' Custom ' 한정자를 사용할 수 없습니다."
 title: 명시적 대리자 형식 없이 선언된 이벤트에는 'Custom' 한정자를 사용할 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: a2277e3778c2c252fd4b1eaeb033d549f041c15c
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 6cbddd31dfa9c923038f8ea706bfc49233574cfb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160635"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796680"
 ---
 # <a name="bc31122-custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>BC31122: 명시적 대리자 형식 없이 선언 된 이벤트에는 ' Custom ' 한정자를 사용할 수 없습니다.
 

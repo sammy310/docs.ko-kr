@@ -1,4 +1,5 @@
 ---
+description: "자세한 정보: BC32053: ' ByRef ' 매개 변수 ' '의 값을 <parametername> 일치 하는 인수에 다시 복사 ' '에서 ' <typename1> ' 형식으로 축소<typename2>"
 title: ByRef' 매개 변수 '<parametername>'의 값을 해당 인수에 다시 복사하면 '<typename1>' 형식에서 '<typename2>' 형식으로 축소 변환됩니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: b9a38d3eb4e25d5c9ac765adf47df72e45fd082a
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: a90e64cd81443831a7b8f934fea646411eb5a220
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160934"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796706"
 ---
 # <a name="bc32053-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>BC32053: ' ByRef ' 매개 변수 ' '의 값을 일치 하는 \<parametername> 인수에 다시 복사 하면 ' \<typename1> ' 형식에서 ' ' 형식으로 축소 변환 됩니다. \<typename2>
 

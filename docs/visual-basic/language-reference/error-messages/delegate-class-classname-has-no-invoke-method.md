@@ -1,4 +1,5 @@
 ---
+description: "자세한 내용은 다음에 대해 자세히 알아보세요. BC30220: Delegate 클래스 ' <classname> '에 Invoke 메서드가 없으므로이 형식의 식은 메서드 호출의 대상일 수 없습니다."
 title: "'<classname>' 대리자 클래스에는 Invoke 메서드가 없으므로 이러한 형식의 식은 프로시저 호출의 대상일 수 없습니다."
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30220
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
-ms.openlocfilehash: 4e0fc61c7356008755134f670fa1fab0165cfd48
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: c0d3f6e352a98e194b2c2ddca04bfa7254ec37a7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162793"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796628"
 ---
 # <a name="bc30220-delegate-class-classname-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>BC30220: 대리자 클래스 ' \<classname> '에는 Invoke 메서드가 없으므로이 형식의 식은 메서드 호출의 대상일 수 없습니다.
 

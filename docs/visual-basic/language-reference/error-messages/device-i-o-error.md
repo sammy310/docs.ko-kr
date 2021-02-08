@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 장치 i/o 오류'
 title: 디바이스 입/출력(I/O) 오류입니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID57
 ms.assetid: 17d22252-f374-400b-9ddb-be5367dd7278
-ms.openlocfilehash: ebc4983de9e5bc84c5b96a10eecb6830160bc9b6
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 1cd01fcc87f0722842bdf3c5b972c2cb5d91306f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874475"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796615"
 ---
 # <a name="device-io-error"></a>디바이스 입/출력(I/O) 오류입니다.
 
@@ -19,6 +20,6 @@ ms.locfileid: "90874475"
   
 - 장치가 제대로 작동 하는지 확인 한 후 작업을 다시 시도 하십시오.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [오류 형식](../../programming-guide/language-features/error-types.md)
+- [오류 유형](../../programming-guide/language-features/error-types.md)

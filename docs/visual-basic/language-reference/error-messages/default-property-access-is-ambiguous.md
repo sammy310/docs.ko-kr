@@ -1,4 +1,5 @@
 ---
+description: "자세히 알아보기: BC30686: ' ' 인터페이스와 ' ' 인터페이스의 상속 된 인터페이스 멤버 ' ' 사이에 기본 속성 액세스가 모호 합니다. <defaultpropertyname> <interfacename1> <defaultpropertyname> '<interfacename2>"
 title: 기본 속성 액세스가 '<defaultpropertyname>' 인터페이스의 상속된 인터페이스 멤버 '<interfacename1>'과(와) '<defaultpropertyname>' 인터페이스의 상속된 인터페이스 멤버 '<interfacename2>' 사이에서 모호합니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: b7c4c9c75de1b3777f34a70470b89f323a5699f9
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 5ae5e5b2dc7a61540e26d125e960d4755141d975
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162065"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796654"
 ---
 # <a name="bc30686-default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>BC30686: 인터페이스 ' ' \<defaultpropertyname> \<interfacename1> 및 ' \<defaultpropertyname> ' 인터페이스의 상속 된 인터페이스 멤버 ' ' 사이에 기본 속성 액세스가 모호 합니다. \<interfacename2>
 

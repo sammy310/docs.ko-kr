@@ -1,4 +1,5 @@
 ---
+description: '다음에 대해 자세히 알아보세요. BC30205: 문의 끝이 필요 합니다.'
 title: 문의 끝이 필요합니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 36883989fe5aa0b5c70aa9ab1f7c991fab99e778
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: a3f309a4674f6de34c0be8abfef31e293a10dec5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163131"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796550"
 ---
 # <a name="bc30205-end-of-statement-expected"></a>BC30205: 문의 끝이 필요 합니다.
 
