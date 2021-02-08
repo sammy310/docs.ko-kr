@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: MustOverride (Visual Basic)'
 title: New
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - MustOverride keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-ms.openlocfilehash: cf73f07b6e13d524281129e3c5d8dceceb90764c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: df7200a7f7ec4bfda34765747d6318bc50a38dd1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867948"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774527"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride(Visual Basic)
 
@@ -48,11 +49,11 @@ ms.locfileid: "90867948"
   
  [Sub 문](../statements/sub-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [NotOverridable](notoverridable.md)
 - [Overrides](overridable.md)
 - [재정의](overrides.md)
 - [MustInherit](mustinherit.md)
-- [키워드](../keywords/index.md)
+- [C++ 키워드](../keywords/index.md)
 - [Visual Basic에서 숨김](../../programming-guide/language-features/declared-elements/shadowing.md)

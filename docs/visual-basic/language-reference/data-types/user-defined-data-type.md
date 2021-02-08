@@ -1,4 +1,5 @@
 ---
+description: User-Defined 데이터 형식에 대해 자세히 알아보세요.
 title: 사용자 정의 데이터 형식
 ms.date: 07/20/2015
 f1_keywords:
@@ -23,18 +24,18 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: fbd9536a54d7fb471d6cb2e130b14a84e40a4940
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6eb94b38e2d29a4bbdfcf94de307bbe07a2c1b0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415494"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774969"
 ---
 # <a name="user-defined-data-type"></a>사용자 정의 데이터 형식
 
 사용자가 정의한 형식으로 데이터를 저장 합니다. `Structure`문은 형식을 정의 합니다.
 
-이전 버전의 Visual Basic에서는 UDT (사용자 정의 형식)를 지원 합니다. 현재 버전은 UDT를 *구조체로*확장 합니다. 구조는 다양 한 데이터 형식에 대 한 하나 이상의 *멤버* 를 연결 하는 것입니다. Visual Basic는 구조체를 단일 단위로 처리 하지만 해당 멤버에 개별적으로 액세스할 수도 있습니다.
+이전 버전의 Visual Basic에서는 UDT (사용자 정의 형식)를 지원 합니다. 현재 버전은 UDT를 *구조체로* 확장 합니다. 구조는 다양 한 데이터 형식에 대 한 하나 이상의 *멤버* 를 연결 하는 것입니다. Visual Basic는 구조체를 단일 단위로 처리 하지만 해당 멤버에 개별적으로 액세스할 수도 있습니다.
 
 ## <a name="remarks"></a>설명
 

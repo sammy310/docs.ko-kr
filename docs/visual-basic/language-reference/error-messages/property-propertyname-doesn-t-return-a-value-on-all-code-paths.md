@@ -1,4 +1,5 @@
 ---
+description: "자세한 정보: BC42107: ' ' 속성 <propertyname> 은 모든 코드 경로에 대 한 값을 반환 하지 않습니다."
 title: "'<propertyname>' 속성이 일부 코드 경로에 대해서만 값을 반환합니다."
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-ms.openlocfilehash: 0736e2cbcdea1422d40161c88f898d487f72e3bc
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 9aa0d6fea1feeaf7503f5f8831fbd3de910a4822
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162390"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774891"
 ---
 # <a name="bc42107-property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>BC42107: ' \<propertyname> ' 속성이 일부 코드 경로에 대해서만 값을 반환 합니다.
 

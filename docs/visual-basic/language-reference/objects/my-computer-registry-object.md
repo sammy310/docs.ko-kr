@@ -1,16 +1,17 @@
 ---
+description: 다음에 대해 자세히 알아보세요. Computer. Registry 개체
 title: My.Computer.Registry 개체
 ms.date: 07/20/2015
 helpviewer_keywords:
 - DeleteSetting function [Visual Basic], increasing performance
 - My.Computer.Registry object
 ms.assetid: afd9edf9-ef9b-438b-a390-d71a02dc8203
-ms.openlocfilehash: 720dcc5dd97eca724ff3e52509e7dc41fcdae8a6
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 68f6cd641f8761ac86e33829c4073f506dacd671
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867370"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774449"
 ---
 # <a name="mycomputerregistry-object"></a>My.Computer.Registry 개체
 
@@ -33,6 +34,6 @@ ms.locfileid: "90867370"
   
  **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [My.Computer 개체](my-computer-object.md)

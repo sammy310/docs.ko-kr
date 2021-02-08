@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: UShort 데이터 형식 (Visual Basic)'
 title: UShort 데이터 형식
 ms.date: 01/31/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: ee31156e00059699125fd72a7f091afbb21beab0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9c709e2110aef4281c348f697408044a191314c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415481"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774982"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort 데이터 형식 (Visual Basic)
 
@@ -48,7 +49,7 @@ Visual Basic 2017부터 `_` 다음 예제와 같이 밑줄 문자를 자릿수 �
 
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShortS)]
 
-Visual Basic 15.5부터 `_` 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 밑줄 문자 ()를 사용할 수도 있습니다. 예를 들면 다음과 같습니다.
+Visual Basic 15.5부터 `_` 접두사와 16 진수, 이진 또는 8 진수 숫자 사이의 선행 구분 기호로 밑줄 문자 ()를 사용할 수도 있습니다. 다음은 그 예입니다. 
 
 ```vb
 Dim number As UShort = &H_FF8C
@@ -70,7 +71,7 @@ Dim number = &H_5826us
   
 - **넓혀.** `UShort`데이터 형식은,,,,, 및로 확대 변환 `Integer` `UInteger` `Long` `ULong` `Decimal` `Single` `Double` 됩니다. 즉, `UShort` 오류가 발생 하지 않고 이러한 형식으로 변환할 수 있습니다 <xref:System.OverflowException?displayProperty=nameWithType> .  
   
-- **문자를 입력 합니다.** 리터럴 형식 문자를 리터럴에 추가 하면 `US` `UShort` 데이터 형식이 됩니다. `UShort`에는 식별자 형식 문자가 없습니다.  
+- **문자를 입력 합니다.** 리터럴 형식 문자를 리터럴에 추가 하면 `US` `UShort` 데이터 형식이 됩니다. `UShort` 에는 식별자 형식 문자가 없습니다.  
   
 - **Framework 형식.** .NET Framework에서 해당하는 형식은 <xref:System.UInt16?displayProperty=nameWithType> 구조체입니다.  
   

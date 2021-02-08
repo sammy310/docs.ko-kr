@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: ByVal (Visual Basic)'
 title: ByVal
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], contexts
 - ByVal keyword [Visual Basic]
 ms.assetid: 1eaf4e58-b305-4785-9e3d-e416b9c75598
-ms.openlocfilehash: 8daf6600f59cea343e0d02b99632b92ce4bf3183
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: cd7116c0bcc3d263cc2bb6a9b95e46e8ff0cc116
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875480"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774618"
 ---
 # <a name="byval-visual-basic"></a>ByVal(Visual Basic)
 
@@ -42,7 +43,7 @@ ms.locfileid: "90875480"
 
  [!code-vb[VbVbalrKeywords#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class5.vb#10)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [키워드](../keywords/index.md)
+- [C++ 키워드](../keywords/index.md)
 - [값 또는 참조로 인수 전달](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ByRef (Visual Basic)'
 title: ByRef
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic]
 - ByRef keyword [Visual Basic], contexts
 ms.assetid: 4692e032-46f3-4e41-b0fa-3004364d9138
-ms.openlocfilehash: e872c675d06290023ac697f1b129604c3c39d42c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 0f958ca3918a17ca5e183e2dec348b84e4a2681b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875503"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774633"
 ---
 # <a name="byref-visual-basic"></a>ByRef(Visual Basic)
 
@@ -29,7 +30,7 @@ ms.locfileid: "90875503"
   
  [Sub 문](../statements/sub-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [키워드](../keywords/index.md)
+- [C++ 키워드](../keywords/index.md)
 - [값 또는 참조로 인수 전달](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

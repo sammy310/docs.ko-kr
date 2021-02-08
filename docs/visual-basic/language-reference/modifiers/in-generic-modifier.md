@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: In (제네릭 한정자) (Visual Basic)'
 title: In (제네릭 한정자)-Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-ms.openlocfilehash: 9c0f7d454767112e1e309af81407b5fdef22eee9
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: e6ac95a77253b28e45a4be8a29623bdd76a231f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004875"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774540"
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In(제네릭 한정자)(Visual Basic)
 
 제네릭 형식 매개 변수에서 `In` 키워드는 형식 매개 변수를 반공변(contravariant)으로 지정합니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 반공변성(Contravariance)을 통해 제네릭 매개 변수에 지정된 것보다 적은 파생 형식을 사용할 수 있습니다. 따라서 variant 인터페이스를 구현하는 클래스의 암시적 변환과 대리자 형식의 암시적 변환이 허용됩니다.
 
@@ -36,7 +37,7 @@ Visual Basic에서는 대리자 형식을 지정 하지 않고 반공 변 (contr
 
 ## <a name="behavior"></a>동작
 
-반공변(contravariant) 형식 매개 변수가 있는 인터페이스는 해당 메서드가 인터페이스 형식 매개 변수에 지정된 형식보다 덜 파생된 형식의 인수를 사용할 수 있도록 합니다. 예를 들어 .NET Framework 4에서는 <xref:System.Collections.Generic.IComparer%601> 인터페이스에서 T가 반공 변 (contravariant) 이기 때문에 `Employee`에서 상속 하는 경우 특수 변환 메서드를 사용 하지 않고 `IComparer(Of Person)` 형식의 개체를 `IComparer(Of Employee)` 형식의 개체에 할당할 수 있습니다.`Person`
+반공변(contravariant) 형식 매개 변수가 있는 인터페이스는 해당 메서드가 인터페이스 형식 매개 변수에 지정된 형식보다 덜 파생된 형식의 인수를 사용할 수 있도록 합니다. 예를 들어 .NET Framework 4에서는 <xref:System.Collections.Generic.IComparer%601> 인터페이스에서 T 형식이 반공 변 (contravariant) 이기 때문에 `IComparer(Of Person)` 에서 상속 하는 `IComparer(Of Employee)` 경우 특수 변환 메서드를 사용 하지 않고 형식의 개체를 형식의 개체에 할당할 수 있습니다 `Employee` `Person` .
 
 반공변(contravariant) 대리자에 동일한 형식의 다른 대리자를 할당할 수 있지만 덜 파생된 제네릭 형식 매개 변수가 필요합니다.
 
@@ -52,7 +53,7 @@ Visual Basic에서는 대리자 형식을 지정 하지 않고 반공 변 (contr
 
 [!code-vb[vbVarianceKeywords#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#2)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [제네릭 인터페이스의 가변성](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [Out](out-generic-modifier.md)

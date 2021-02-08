@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Friend (Visual Basic)'
 title: Friend
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: d37a93343822d069295477958780c2b9c72043fa
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ef2444555c05d6a4b24048316e282d269d4b7f1b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875465"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774592"
 ---
 # <a name="friend-visual-basic"></a>Friend(Visual Basic)
 
@@ -79,9 +80,9 @@ ms.locfileid: "90875465"
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [공용](public.md)
-- [보호](protected.md)
+- [보호됨](protected.md)
 - [개인](private.md)
-- [개인 보호](./private-protected.md)
+- [비공개 보호](./private-protected.md)
 - [Protected Friend](./protected-friend.md)
 - [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)
 - [절차](../../programming-guide/language-features/procedures/index.md)
