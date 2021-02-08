@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: 트랜잭션 작업 (의심 스러운 초당 트랜잭션 작업)'
 title: Transacted Operations In Doubt Per Second
 ms.date: 03/30/2017
 ms.assetid: 7e6b0716-c107-42e5-a21d-31d988e7a691
-ms.openlocfilehash: 9162809ec467f282674e0ab21f7ce5e4d2222da4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e4f8b8c9db1c92ea4348763cdc4a633f058dbaf2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249984"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771095"
 ---
 # <a name="transacted-operations-in-doubt-per-second"></a>Transacted Operations In Doubt Per Second
 
 카운터 이름: Transacted Operations In Doubt Per Second  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  초당 이 서비스에서 확실하지 않은 결과가 있는 트랜잭션 작업의 수입니다.  
   

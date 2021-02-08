@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 ComIntegrationServiceMonikerParsed를 확인 하세요.
 title: System.ServiceModel.ComIntegration.ComIntegrationServiceMonikerParsed
 ms.date: 03/30/2017
 ms.assetid: 827bf29b-bb7d-4f45-86ea-92752f656f5a
-ms.openlocfilehash: ba4c05e231da9f57599bf4130cb2c6064fb6ba75
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9accca0b5979c0102a72c2aa4657425f2ead82b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290597"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769639"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationservicemonikerparsed"></a>System.ServiceModel.ComIntegration.ComIntegrationServiceMonikerParsed
 
 System.ServiceModel.ComIntegration.ComIntegrationServiceMonikerParsed  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  ComPlus: 서비스 모니커가 구문 분석되었습니다.  
   

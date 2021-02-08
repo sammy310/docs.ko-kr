@@ -1,19 +1,20 @@
 ---
+description: PeerFloodedMessageNotPropagated에 대해 자세히 알아보세요.
 title: System.ServiceModel.Channels.PeerFloodedMessageNotPropagated
 ms.date: 03/30/2017
 ms.assetid: a99275b9-4975-4899-8e21-594ba552f981
-ms.openlocfilehash: 2898691e54795c0a735204438062e3ab4afbdc45
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4a5eb427bfa7952c30294c9a2396bc64111676ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295303"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769769"
 ---
 # <a name="systemservicemodelchannelspeerfloodedmessagenotpropagated"></a>System.ServiceModel.Channels.PeerFloodedMessageNotPropagated
 
 PeerNode에서 메시지를 받았지만 환경에 전파되지 않았습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 추적은 들어오는 서비스 장애 유발 메시지를 처리하는 동안 발생합니다.  
   

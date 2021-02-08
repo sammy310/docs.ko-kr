@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 MessageQueueDuplicatedPipe를 확인 하세요.
 title: System.ServiceModel.Activation.MessageQueueDuplicatedPipe
 ms.date: 03/30/2017
 ms.assetid: 97c4e6a3-6673-4eb7-a8b2-fc8c6d782ddf
-ms.openlocfilehash: 13133070b27e7fc8bc736de018f472248e299ab2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7b2699df6f7bfe3ff24067c6116b46d928869d96
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242385"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99770393"
 ---
 # <a name="systemservicemodelactivationmessagequeueduplicatedpipe"></a>System.ServiceModel.Activation.MessageQueueDuplicatedPipe
 
 System.ServiceModel.Activation.MessageQueueDuplicatedPipe  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  명명된 파이프 핸들이 복제되었습니다.  
   

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataImport:: EnumSignatures 메서드'
 title: IMetaDataImport::EnumSignatures 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0d65060-6f90-42a2-95cf-6ffb04352996
 topic_type:
 - apiref
-ms.openlocfilehash: 3021124184ab0491337a07144e6f77b5bfea3681
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ed41dd42151791e3d27950f30b10d91217ad7e7a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721974"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771628"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>IMetaDataImport::EnumSignatures 메서드
 
@@ -51,7 +52,7 @@ HRESULT EnumSignatures (
  `pcSignatures`  
  제한이 에서 반환 된 서명 토큰의 수입니다 `rSignatures` .  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -72,7 +73,7 @@ HRESULT EnumSignatures (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataImport 인터페이스](imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](imetadataimport2-interface.md)

@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 ServicePause를 확인 하세요.
 title: System.ServiceModel.Activation.ServicePause
 ms.date: 03/30/2017
 ms.assetid: 3aeef78f-835e-4a72-b759-bf3e25dd8412
-ms.openlocfilehash: 07e9c47d041166fbcafabe9d8f7a25d8403b0330
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 499d02ea2b3762a5d3265e4d28cf6c59bbd53dfd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96253676"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99770159"
 ---
 # <a name="systemservicemodelactivationservicepause"></a>System.ServiceModel.Activation.ServicePause
 
 System.ServiceModel.Activation.ServicePause  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  서비스를 일시 중지하라는 요청이 수신되었습니다.  
   

@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 ComIntegrationServiceHostStartedService를 확인 하세요.
 title: System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedService
 ms.date: 03/30/2017
 ms.assetid: f395f028-8c9c-4b5d-857b-8d18f94d3375
-ms.openlocfilehash: 3272202a10ea57dbaeac04d1a7553e551076f145
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 2c73d99941f14c82d87a65b99f8af6cfd48fc0aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290779"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769691"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationservicehoststartedservice"></a>System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedService
 
 System.ServiceModel.ComIntegration.ComIntegrationServiceHostStartedService  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  ComPlus: 서비스를 시작했습니다.  
   

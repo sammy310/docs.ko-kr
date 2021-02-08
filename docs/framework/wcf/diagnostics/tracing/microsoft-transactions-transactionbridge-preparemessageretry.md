@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 PrepareMessageRetry를 확인 하세요.
 title: Microsoft.Transactions.TransactionBridge.PrepareMessageRetry
 ms.date: 03/30/2017
 ms.assetid: ada4baa5-b60d-46b8-ad46-4d69f8d8a9fa
-ms.openlocfilehash: d5ebe3e1ccce7a85073e2de19d915d116f709b2d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7555336f1082eb097017f9440015f6ab201cdeae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286970"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99770783"
 ---
 # <a name="microsofttransactionstransactionbridgepreparemessageretry"></a>Microsoft.Transactions.TransactionBridge.PrepareMessageRetry
 
 준비 메시지 재시도를 응답하지 않는 참가자에게 보냈습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  로컬 트랜잭션 관리자가 주어진 시간 내에 응답을 받지 못해서 준비 메시지를 하위 참가자에게 다시 전송해야 할 경우에 추적됩니다.  
   

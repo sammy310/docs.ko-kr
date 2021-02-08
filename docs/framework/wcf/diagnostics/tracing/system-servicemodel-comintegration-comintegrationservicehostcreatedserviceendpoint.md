@@ -1,19 +1,20 @@
 ---
+description: MsmqMoveOrDeleteAttemptFailed에 대해 자세히 알아보세요.
 title: System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
 ms.date: 03/30/2017
 ms.assetid: d75d39da-7502-4a6a-91b9-eaa05b8e24d5
-ms.openlocfilehash: aeeba38eaf674453f4c87cf62f5088c55b5fde2d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7b3c8dad9e3a3e88dff72706917f3729d55b3799
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290818"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769743"
 ---
 # <a name="systemservicemodelchannelsmsmqmoveordeleteattemptfailed"></a>System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
 
 메시지를 이동하거나 삭제할 수 없습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 추적은 MSMQ 메시지를 이동, 삭제 및 거부하는 동안 오류가 발생했음을 나타냅니다.  
   

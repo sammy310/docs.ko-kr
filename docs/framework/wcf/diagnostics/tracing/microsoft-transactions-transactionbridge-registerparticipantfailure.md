@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 RegisterParticipantFailure를 확인 하세요.
 title: Microsoft.Transactions.TransactionBridge.RegisterParticipantFailure
 ms.date: 03/30/2017
 ms.assetid: 3a4ead79-8550-4037-84e3-fd70ff56e001
-ms.openlocfilehash: 2f0198d3c288b4c3833cdac8e5f943ba822c22e9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e930ee66720a9f397999d729e8d680fce9a37e29
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96252025"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99770627"
 ---
 # <a name="microsofttransactionstransactionbridgeregisterparticipantfailure"></a>Microsoft.Transactions.TransactionBridge.RegisterParticipantFailure
 
 WS-AT 프로토콜 서비스가 제어 프로토콜에 대한 참가자를 등록하지 못했습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  MSDTC가 잘못된 등록 요청을 감지하는 경우 추적됩니다. 이는 여러 완료 등록 요청 및 내부 오류에 의해 발생할 수 있습니다.  
   

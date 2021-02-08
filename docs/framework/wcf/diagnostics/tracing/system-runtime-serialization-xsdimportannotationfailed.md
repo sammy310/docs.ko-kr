@@ -1,19 +1,20 @@
 ---
+description: XsdImportAnnotationFailed에 대해 자세히 알아보세요.
 title: System.Runtime.Serialization.XsdImportAnnotationFailed
 ms.date: 03/30/2017
 ms.assetid: f52ff1d8-7b0d-421c-bf08-a9fbd0e76968
-ms.openlocfilehash: 61ef55d5b6a8cede44e032f4f0a69dea409ccddd
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ff2c30c4136a660cf309a0379540f3e3810a3a0f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242437"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99770575"
 ---
 # <a name="systemruntimeserializationxsdimportannotationfailed"></a>System.Runtime.Serialization.XsdImportAnnotationFailed
 
 System.Runtime.Serialization.XsdImportAnnotationFailed  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  XSD를 가져오기 도중에 주석을 가져오지 못했습니다.  
   

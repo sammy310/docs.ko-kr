@@ -1,19 +1,20 @@
 ---
+description: 자세한 내용은 RoutingTableNamespaceConflict를 확인 하세요.
 title: System.ServiceModel.PortSharing.RoutingTableNamespaceConflict
 ms.date: 03/30/2017
 ms.assetid: 5698b658-211b-4c92-b052-2dba57315551
-ms.openlocfilehash: a9c55e2792702184f6486694cdcdfb6beaeb20b4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 54f28b3b2d7bbc356d563921bc09626b23f24dfe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276076"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769496"
 ---
 # <a name="systemservicemodelportsharingroutingtablenamespaceconflict"></a>System.ServiceModel.PortSharing.RoutingTableNamespaceConflict
 
 System.ServiceModel.PortSharing.RoutingTableNamespaceConflict  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  네임스페이스가 이미 등록되어 있습니다.  
   

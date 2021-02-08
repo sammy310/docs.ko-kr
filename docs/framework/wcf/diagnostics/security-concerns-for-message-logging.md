@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 메시지 로깅에 대 한 보안 문제'
 title: 메시지 로깅에 대한 보안 고려 사항
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 8594329fb27aa1d77a2baffee2a7e37ea0d009c4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 88adc4eb772ad8c39ace23f2771ee68fa2288c3c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96283772"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99771017"
 ---
 # <a name="security-concerns-for-message-logging"></a>메시지 로깅에 대한 보안 고려 사항
 
@@ -109,7 +110,7 @@ ms.locfileid: "96283772"
   
 - Log Known PII On: 이 이벤트는 알려진 PII의 로깅을 사용하도록 설정하면 내보내집니다. 이는 `enableLoggingKnownPii` `machineSettings` Machine.config 파일의 요소에 있는 특성이로 설정 되 `true` 고 `logKnownPii` `source` App.config 또는 Web.config 파일에서 요소의 특성이로 설정 된 경우에 발생 `true` 합니다.  
   
-- Log Known PII Not Allowed: 이 이벤트는 알려진 PII의 로깅이 허용되지 않을 때 내보내집니다. 이는 `logKnownPii` `source` App.config 또는 Web.config 파일에 있는 요소의 특성이로 설정 되어 `true` 있지만 `enableLoggingKnownPii` `machineSettings` Machine.config 파일의 요소에 있는 특성이로 설정 `false` 된 경우에 발생 합니다. 예외가 throw되지 않습니다.  
+- Log Known PII Not Allowed: 이 이벤트는 알려진 PII의 로깅이 허용되지 않을 때 내보내집니다. 이는 `logKnownPii` `source` App.config 또는 Web.config 파일에 있는 요소의 특성이로 설정 되어 `true` 있지만 `enableLoggingKnownPii` `machineSettings` Machine.config 파일의 요소에 있는 특성이로 설정 `false` 된 경우에 발생 합니다. 예외는 throw되지 않습니다.  
   
  이러한 이벤트는 Windows에 포함된 이벤트 뷰어 도구에서 볼 수 있습니다. 이에 대 한 자세한 내용은 [이벤트 로깅](./event-logging/index.md)을 참조 하세요.  
   

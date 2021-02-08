@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: System.servicemodel. WebHostProtocolMisconfigured 구성 됨'
 title: System.ServiceModel.Activation.WebHostProtocolMisconfigured
 ms.date: 03/30/2017
 ms.assetid: cb5bdc6b-4281-452d-bc42-1181f2966e2a
-ms.openlocfilehash: aeeb7fa74e7bd8aeca308f4ff4e4390509415689
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 02713f125be427c6aca55aacf047cb6b2656ede8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96263050"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769977"
 ---
 # <a name="systemservicemodelactivationwebhostprotocolmisconfigured"></a>System.ServiceModel.Activation.WebHostProtocolMisconfigured
 
 WAS(Windows Process Activation Service)에서 프로토콜이 잘못 구성되었습니다.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 오류는 전송 프로토콜이 잘못 구성되었을 때 발생합니다.  
   
