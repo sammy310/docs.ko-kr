@@ -1,5 +1,6 @@
 ---
-title: 신뢰할 수 있는 서비스
+description: '다음에 대 한 자세한 정보: Reliable Services'
+title: Reliable Services
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], reliable messaging
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-ms.openlocfilehash: d028af80a30fd18b6aa6e9678e7fd8788e7b7b95
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c38f949e57b1891da2433875571443656c7044dd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249750"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779207"
 ---
-# <a name="reliable-services"></a>신뢰할 수 있는 서비스
+# <a name="reliable-services"></a>Reliable Services
 
 큐 및 신뢰할 수 있는 세션은 신뢰할 수 있는 메시징을 구현 하는 WCF (Windows Communication Foundation) 기능입니다. 이 항목에서는 WCF의 신뢰할 수 있는 메시징 기능에 대해 설명 합니다.  
   

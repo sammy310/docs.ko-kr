@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: WCF REST 프로그래밍 모델을 사용 하 여 임의의 데이터를 허용 하는 서비스 만들기'
 title: '방법: WCF REST 프로그래밍 모델을 사용하여 임의의 데이터를 허용하는 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: 9c9899705861cc1cf2cda2559c30a0a60d8cc635
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a08e611b51d92e070f18620d61a2b95de2cd6cfb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96237835"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780325"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>방법: WCF REST 프로그래밍 모델을 사용하여 임의의 데이터를 허용하는 서비스 만들기
 

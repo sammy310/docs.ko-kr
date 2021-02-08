@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 페더레이션 서비스 자격 증명 구성'
 title: '방법: 페더레이션 서비스에서 자격 증명 구성'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 692ccc0c39ca7ed40601551ea6bbcdd840fa03af
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 100012312b9b900f35753e1fa0761ba132fe0c06
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257589"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780078"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>방법: 페더레이션 서비스에서 자격 증명 구성
 

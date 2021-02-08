@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: JSON 및 XML 샘플을 사용 하는 AJAX 서비스'
 title: JSON 및 XML 샘플을 포함한 AJAX 서비스
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 8f70b6aa2e61d01a075a6edb3fe490ef593e73b0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e47f6cbd7e4659488325e158e5594ca94322c520
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575955"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779064"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>JSON 및 XML 샘플을 포함한 AJAX 서비스
 
@@ -59,7 +60,7 @@ MathResult DoMathJson(double n1, double n2);
 
 두 경우 모두, 작업은 `MathResult` 표준 WCF 데이터 계약 형식인 복합 형식인을 반환 합니다.
 
-클라이언트 웹 페이지 Xmlajaxclientpage.htm에는 사용자가 **계산 수행 (JSON 반환)** 또는 페이지에서 **계산 수행 (XML 반환)** 단추를 클릭할 때 앞의 두 작업 중 하나를 호출 하는 JavaScript 코드가 포함 됩니다. 서비스를 호출하는 코드는 JSON 본문을 만든 다음 HTTP POST를 사용하여 전송합니다. [기본 Ajax 서비스](basic-ajax-service.md) 샘플과 ASP.NET ajax를 사용 하는 다른 샘플과 달리이 요청은 JavaScript에서 수동으로 생성 됩니다.
+클라이언트 웹 페이지 XmlAjaxClientPage.htm는 사용자가 **계산 수행 (JSON 반환)** 또는 페이지에서 **계산 수행 (XML 반환)** 단추를 클릭할 때 위의 두 작업 중 하나를 호출 하는 JavaScript 코드를 포함 합니다. 서비스를 호출하는 코드는 JSON 본문을 만든 다음 HTTP POST를 사용하여 전송합니다. [기본 Ajax 서비스](basic-ajax-service.md) 샘플과 ASP.NET ajax를 사용 하는 다른 샘플과 달리이 요청은 JavaScript에서 수동으로 생성 됩니다.
 
 ```csharp
 // Create HTTP request
@@ -108,7 +109,7 @@ xmlHttp.onreadystatechange=function(){
 
 2. [Windows Communication Foundation 샘플 빌드](building-the-samples.md)에 설명 된 대로 XmlAjaxService 솔루션을 빌드합니다.
 
-3. 로 이동 `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` 합니다 (프로젝트 디렉터리에서 브라우저의 xmlajaxclientpage.htm을 열지 마십시오.).
+3. 로 이동 `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` 합니다 (브라우저의 프로젝트 디렉터리에서 XmlAjaxClientPage.htm 열지 않음).
 
 ## <a name="see-also"></a>참고 항목
 

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: WCF 서비스를 사용 하는 ASMX 클라이언트'
 title: WCF 서비스를 사용한 ASMX 클라이언트
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: fd13d4907f1be09440387a36e14ecdc4926ba7e7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b9f561f6651c591556f821478c4c4bfd7d7da23d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594779"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778921"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>WCF 서비스를 사용한 ASMX 클라이언트
 

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 보안 이벤트 감사 Windows Communication Foundation'
 title: '방법: Windows Communication Foundation 보안 이벤트 감사'
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 67ab5d4a4592a8b772cfdd70befe32f339062b8c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b9cd258f51dbc726108fef0bbf173c7ee26c1d0f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257563"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780208"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>방법: Windows Communication Foundation 보안 이벤트 감사
 

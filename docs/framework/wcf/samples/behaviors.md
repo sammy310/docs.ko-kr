@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: 동작'
 title: 동작
 ms.date: 03/30/2017
 ms.assetid: b0885b65-4e74-4bc9-bbf0-eb7ebe566da1
-ms.openlocfilehash: e963da6d151b82b205f6f52b70aeb69b09eae4f4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 71c66c6df4b286f2c3bd7300593412b30db271f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96283616"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778726"
 ---
 # <a name="behaviors"></a>동작
 
@@ -21,7 +22,7 @@ ms.locfileid: "96283616"
  [기본 서비스 동작](default-service-behavior.md)  
  서비스 동작 설정을 구성하는 방법을 보여 줍니다.  
   
- [인스턴스 만들기](instancing.md)  
+ [인스턴싱](instancing.md)  
  클라이언트 요청에 응답하여 서비스 클래스의 인스턴스가 만들어지는 방식을 제어하는 인스턴스 만들기 동작 설정을 보여 줍니다.  
   
  [메타데이터 게시 동작](metadata-publishing-behavior.md)  

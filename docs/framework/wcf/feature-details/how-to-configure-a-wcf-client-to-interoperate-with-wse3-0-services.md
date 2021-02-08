@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: WSE 3.0 서비스와 상호 운용 하도록 WCF 클라이언트 구성'
 title: '방법: WSE3.0 서비스와 상호 운용하도록 WCF 클라이언트 구성'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: b5284db1329c572bdecf3ef607e697c63835d508
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 97de90c491a29cdacf881a92013a11db6aea416f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257524"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780130"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>방법: WSE3.0 서비스와 상호 운용하도록 WCF 클라이언트 구성
 

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 보안 컨텍스트 검사'
 title: '방법: 보안 컨텍스트 검사'
 ms.date: 03/30/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: 40950614892ddfd4eb24194f0389e057a5a13378
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e82491a877cf1f741767c91d1e7c304ba7676e6c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96272946"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779402"
 ---
 # <a name="how-to-examine-the-security-context"></a>방법: 보안 컨텍스트 검사
 

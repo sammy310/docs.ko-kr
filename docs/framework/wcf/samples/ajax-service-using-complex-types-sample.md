@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: AJAX 서비스를 사용 하는 복합 형식 샘플'
 title: AJAX Service Using Complex Types 샘플
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: 4227446e8844accd06490d8e7cf933da43d875a6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 438bceb91f10f5ba91d02272d2ba266a50a05f82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575916"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779129"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>AJAX Service Using Complex Types 샘플
 

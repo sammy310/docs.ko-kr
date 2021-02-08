@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: PrincipalPermissionAttribute 클래스를 사용 하 여 액세스 제한'
 title: '방법: PrincipalPermissionAttribute 클래스를 사용하여 액세스 제한'
 ms.date: 03/30/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 92d27548c510a19bf36ffaffb532f48461146d99
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 533bd3358d5e337071c6419264d1dac03b8987ca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96269615"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779350"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>방법: PrincipalPermissionAttribute 클래스를 사용하여 액세스 제한
 
@@ -42,7 +43,7 @@ Windows 도메인 컴퓨터의 리소스에 대한 액세스 제어는 기본적
   
 1. 구현 된 서비스 계약 코드가 포함 된 WCF (Windows Communication Foundation) 코드 파일을 엽니다. 계약을 구현 하는 방법에 대 한 자세한 내용은 [서비스 계약 구현](implementing-service-contracts.md)을 참조 하세요.  
   
-2. <xref:System.Security.Permissions.PrincipalPermissionAttribute> 특성을 특정 그룹에 대해 제한되어야 하는 각 메서드에 적용합니다. <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 속성을 <xref:System.Security.Permissions.SecurityAction.Demand>로 설정하고 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 속성을 그룹 이름으로 설정합니다. 예를 들면 다음과 같습니다.  
+2. <xref:System.Security.Permissions.PrincipalPermissionAttribute> 특성을 특정 그룹에 대해 제한되어야 하는 각 메서드에 적용합니다. <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 속성을 <xref:System.Security.Permissions.SecurityAction.Demand>로 설정하고 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 속성을 그룹 이름으로 설정합니다. 다음은 그 예입니다.   
   
      [!code-csharp[c_PrincipalPermissionAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#1)]
      [!code-vb[c_PrincipalPermissionAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#1)]  

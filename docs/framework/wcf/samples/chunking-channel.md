@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 청크 채널'
 title: 청크 채널
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 7a5e5292bcb37e83de21458716e34887a0557d91
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 826db33186aa8e01ade9123d6b0d8b696b7e77ce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585547"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778778"
 ---
 # <a name="chunking-channel"></a>청크 채널
 
@@ -256,7 +257,7 @@ interface ITestService
 
 - Send에 전달되는 시간 제한은 모든 청크의 보내기를 포함하는 전체 Send 작업의 시간 제한으로 사용됩니다.
 
-- 전체 원본 메시지 본문의 버퍼링을 방지하기 위해 사용자 지정 <xref:System.Xml.XmlDictionaryWriter> 디자인이 선택되었습니다. <xref:System.Xml.XmlDictionaryReader>를 사용하여 본문에서 `message.GetReaderAtBodyContents`를 가져올 경우에는 전체 본문이 버퍼링됩니다. 대신 <xref:System.Xml.XmlDictionaryWriter> 에 전달 되는 사용자 지정이 있습니다 `message.WriteBodyContents` . 메시지가 작성기에서 WriteBase64를 호출할 경우 작성기는 청크를 메시지에 패키지하고 내부 채널을 사용하여 보냅니다. 청크가 보내질 때까지 WriteBase64는 차단됩니다.
+- 전체 원본 메시지 본문의 버퍼링을 방지하기 위해 사용자 지정 <xref:System.Xml.XmlDictionaryWriter> 디자인이 선택되었습니다. <xref:System.Xml.XmlDictionaryReader>를 사용하여 본문에서 `message.GetReaderAtBodyContents`를 가져올 경우에는 전체 본문이 버퍼링됩니다. 대신  <xref:System.Xml.XmlDictionaryWriter> 에 전달 되는 사용자 지정이 있습니다 `message.WriteBodyContents` . 메시지가 작성기에서 WriteBase64를 호출할 경우 작성기는 청크를 메시지에 패키지하고 내부 채널을 사용하여 보냅니다. 청크가 보내질 때까지 WriteBase64는 차단됩니다.
 
 ## <a name="implementing-the-receive-operation"></a>Receive 작업 구현
 
@@ -308,7 +309,7 @@ interface ITestService
 
 `ChunkingBindingElement`는 `ChunkingChannelFactory` 및 `ChunkingChannelListener`를 만드는 작업을 담당합니다. 는 `ChunkingBindingElement` 및의 T `CanBuildChannelFactory` \<T> `CanBuildChannelListener` \<T> 가 형식 `IDuplexSessionChannel` (청크 채널에서 지 원하는 유일한 채널)이 고 바인딩의 다른 바인딩 요소가이 채널 형식을 지원 하는지 여부를 확인 합니다.
 
-`BuildChannelFactory`\<T>는 먼저 요청 된 채널 형식을 생성할 수 있는지 확인 한 다음 청크 되는 메시지 동작 목록을 가져옵니다. 자세한 내용은 다음 섹션을 참조하세요. 그런 다음 새 `ChunkingChannelFactory`를 만들어 내부 채널 팩터리(`context.BuildInnerChannelFactory<IDuplexSessionChannel>`에서 반환), 메시지 동작 목록 및 버퍼링할 최대 청크 수를 전달합니다. 최대 청크 수는 `MaxBufferedChunks`에 의해 노출되는 `ChunkingBindingElement`라는 속성에서 제공됩니다.
+`BuildChannelFactory`\<T> 는 먼저 요청 된 채널 형식을 생성할 수 있는지 확인 한 다음 청크 되는 메시지 동작 목록을 가져옵니다. 자세한 내용은 다음 섹션을 참조하세요. 그런 다음 새 `ChunkingChannelFactory`를 만들어 내부 채널 팩터리(`context.BuildInnerChannelFactory<IDuplexSessionChannel>`에서 반환), 메시지 동작 목록 및 버퍼링할 최대 청크 수를 전달합니다. 최대 청크 수는 `MaxBufferedChunks`에 의해 노출되는 `ChunkingBindingElement`라는 속성에서 제공됩니다.
 
 `BuildChannelListener<T>`에서도 `ChunkingChannelListener`를 만들어 내부 채널 수신기에 전달하는 구현 방법이 비슷합니다.
 

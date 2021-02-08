@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 알림 샘플'
 title: 알림 샘플
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: c3824fb0dc7ab4169c309d1a5154127d6bc3b78f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 076efed31f862f6de68e924446528d682a62824a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747006"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778947"
 ---
 # <a name="announcements-sample"></a>알림 샘플
 
@@ -38,7 +39,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }
 ```
 
-## <a name="client"></a>Client
+## <a name="client"></a>클라이언트
 
 이 프로젝트에서는 클라이언트가 <xref:System.ServiceModel.Discovery.AnnouncementService>를 호스팅합니다. 또한 두 개의 대리자가 이벤트에 등록됩니다. 이러한 이벤트는 온라인 및 오프라인 알림을 받을 때 클라이언트에서 수행하는 작업을 나타냅니다.
 
@@ -86,6 +87,6 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 이 디렉터리가 없으면 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://www.microsoft.com/download/details.aspx?id=21459) 로 이동 하 여 모든 WINDOWS COMMUNICATION FOUNDATION (wcf) 및 샘플을 다운로드 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 합니다. 이 샘플은 다음 디렉터리에 있습니다.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`

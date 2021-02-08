@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: 포트 공유를 사용 하도록 Windows Communication Foundation 서비스 구성'
 title: '방법: 포트 공유를 사용하도록 Windows Communication Foundation 서비스 구성'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: 39b9da1096c38eba648f528f7c2b3ecaa39ab7c2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 53fe3449ece5a5e545d7add5c4e6c7feebe5a8ff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257511"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780104"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>방법: 포트 공유를 사용하도록 Windows Communication Foundation 서비스 구성
 

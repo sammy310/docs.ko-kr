@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 로컬 발급자 구성'
 title: '방법: 로컬 발급자 구성'
 ms.date: 03/30/2017
 dev_langs:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 7da3cd34d0840eea48c9ef0bb89fb6580b87623b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1c950c2bbbb55954fc65e35632523ea14ee3ac00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601246"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780169"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>방법: 로컬 발급자 구성
 
 이 항목에서는 발급된 토큰에 로컬 발급자를 사용하도록 클라이언트를 구성하는 방법에 대해 설명합니다.
 
-흔히 클라이언트가 페더레이션 서비스와 통신하는 경우, 이 서비스에서는 클라이언트가 페더레이션 서비스에 자신을 인증하는 데 사용하는 토큰을 발급할 보안 토큰 서비스의 주소를 지정합니다. 특정 상황에서는 클라이언트가 *로컬 발급자*를 사용 하도록 구성 될 수 있습니다.
+흔히 클라이언트가 페더레이션 서비스와 통신하는 경우, 이 서비스에서는 클라이언트가 페더레이션 서비스에 자신을 인증하는 데 사용하는 토큰을 발급할 보안 토큰 서비스의 주소를 지정합니다. 특정 상황에서는 클라이언트가 *로컬 발급자* 를 사용 하도록 구성 될 수 있습니다.
 
 WCF (Windows Communication Foundation)는 페더레이션된 바인딩의 발급자 주소가 또는 인 경우 로컬 발급자를 사용 `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` `null` 합니다. 이러한 경우 로컬 발급자와의 통신에 사용할 바인딩과 이 발급자의 주소를 사용하여 <xref:System.ServiceModel.Description.ClientCredentials>를 구성해야 합니다.
 

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: WCF 웹 HTTP 오류 처리'
 title: WCF 웹 HTTP 오류 처리
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: cfbf98c69370764a9526c32459d43521177476e3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 88483c249bc1b6b866517ca10b348c0885fc34fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239031"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779481"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF 웹 HTTP 오류 처리
 

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ASP.NET Compatibility'
 title: ASP.NET 호환성
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: b1d1a72b9ac3041a1547ac42a33eb7d3e1f87a63
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a5685481a16d87715d4fc9096055af5be479f459
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553195"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778856"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 호환성
 
@@ -20,7 +21,7 @@ ms.locfileid: "90553195"
 
 이 샘플을 실행 하려면 .NET Framework 4 응용 프로그램 풀이 필요 합니다. 새 애플리케이션 풀을 만들거나 기본 애플리케이션 풀을 수정하려면 다음 단계를 따릅니다.
 
-1. **제어판**을 엽니다.  **시스템 및 보안** 머리글 아래의 **관리 도구** 애플릿을 엽니다. **인터넷 정보 서비스 (IIS) 관리자** 애플릿을 엽니다.
+1. **제어판** 을 엽니다.  **시스템 및 보안** 머리글 아래의 **관리 도구** 애플릿을 엽니다. **인터넷 정보 서비스 (IIS) 관리자** 애플릿을 엽니다.
 
 2. **연결** 창에서 treeview를 확장 합니다. **응용 프로그램 풀** 노드를 선택 합니다.
 
@@ -128,6 +129,6 @@ Press <ENTER> to terminate client.
 
 4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](running-the-samples.md)의 지침을 따르세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 호스팅 및 지속성 샘플](/previous-versions/appfabric/ff383418(v=azure.10))

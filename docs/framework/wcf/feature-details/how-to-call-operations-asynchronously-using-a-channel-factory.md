@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 방법: 채널 팩터리를 사용 하 여 비동기적으로 작업 호출'
 title: '방법: 채널 팩터리를 사용하여 비동기적으로 작업 호출'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: c288df6059cfe1cd1f4ff35cebffafd3fddb38d1
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 081211d0202550e93e3aabb5c8b5b5b5adbcdcde
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257537"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780195"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>방법: 채널 팩터리를 사용하여 비동기적으로 작업 호출
 
@@ -18,7 +19,7 @@ ms.locfileid: "96257537"
   
  이 항목에서 설명하는 서비스에서는 `ICalculator` 인터페이스를 구현합니다. 클라이언트는 이 인터페이스의 작업을 비동기적으로 호출할 수 있는데, 이는 `Add` 등의 작업이 호출을 시작하는 `BeginAdd`와 작업 완료 시 결과를 검색하는 `EndAdd`라는 두 개의 메서드로 나뉨을 의미합니다. 서비스에서 비동기적으로 작업을 구현 하는 방법을 보여 주는 예제는 [방법: 비동기 서비스 작업 구현](../how-to-implement-an-asynchronous-service-operation.md)을 참조 하세요. 동기 및 비동기 작업에 대 한 자세한 내용은 [동기 및 비동기 작업](../synchronous-and-asynchronous-operations.md)을 참조 하세요.  
   
-## <a name="procedure"></a>절차  
+## <a name="procedure"></a>프로시저  
   
 #### <a name="to-call-wcf-service-operations-asynchronously"></a>WCF 서비스 작업을 비동기적으로 호출하려면  
   

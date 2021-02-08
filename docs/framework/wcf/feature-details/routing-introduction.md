@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 라우팅 소개'
 title: 라우팅 소개
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 8ce98aab2ed14401fa7c2cbf43eb92a633fa96b0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 86f5b5dcc0bea067ac3dcfc8a87331da42c642aa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746472"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99779896"
 ---
 # <a name="routing-introduction"></a>라우팅 소개
 
@@ -15,11 +16,11 @@ ms.locfileid: "76746472"
 
 이 항목은 라우팅 서비스를 새로 접하는 사용자를 대상으로 하며 기본적인 구성과 라우팅 서비스의 호스팅에 대해 설명합니다.
 
-## <a name="configuration"></a>구성
+## <a name="configuration"></a>Configuration
 
-라우팅 서비스는 클라이언트 애플리케이션으로부터 메시지를 수신하여 이 메시지를 하나 이상의 대상 엔드포인트로 라우트하는 하나 이상의 서비스 엔드포인트를 노출하는 WCF 서비스로 구현됩니다. 이 서비스는 서비스에 의해 노출되는 서비스 엔드포인트에 적용되는 <xref:System.ServiceModel.Routing.RoutingBehavior>를 제공합니다. 이 동작은 서비스 작동 방식의 다양한 측면을 구성하는 데 사용됩니다. 구성 파일을 사용 하는 경우 구성의 용이성을 위해 **Routingbehavior**에서 매개 변수가 지정 됩니다. 코드 기반 시나리오에서 이러한 매개 변수는 <xref:System.ServiceModel.Routing.RoutingConfiguration> 개체의 일부로 지정 될 수 있으며, 그런 다음 **Routingbehavior**에 전달 될 수 있습니다.
+라우팅 서비스는 클라이언트 애플리케이션으로부터 메시지를 수신하여 이 메시지를 하나 이상의 대상 엔드포인트로 라우트하는 하나 이상의 서비스 엔드포인트를 노출하는 WCF 서비스로 구현됩니다. 이 서비스는 서비스에 의해 노출되는 서비스 엔드포인트에 적용되는 <xref:System.ServiceModel.Routing.RoutingBehavior>를 제공합니다. 이 동작은 서비스 작동 방식의 다양한 측면을 구성하는 데 사용됩니다. 구성 파일을 사용 하는 경우 구성의 용이성을 위해 **Routingbehavior** 에서 매개 변수가 지정 됩니다. 코드 기반 시나리오에서는 이러한 매개 변수를 개체의 일부로 지정 하 여 <xref:System.ServiceModel.Routing.RoutingConfiguration> **routingbehavior** 에 전달할 수 있습니다.
 
-이러한 동작은 시작 시 SOAP 메시지 처리를 수행하는 데 사용되는 <xref:System.ServiceModel.Routing.SoapProcessingBehavior>를 클라이언트 엔드포인트에 추가합니다. 이를 통해 라우팅 서비스는 메시지를 받은 끝점과 다른 **MessageVersion** 가 필요한 끝점으로 메시지를 전송할 수 있습니다. 또한 **Routingbehavior** 는 런타임에 라우팅 서비스 구성을 수정 하는 데 필요한 액세스 지점을 제공 하는 서비스 확장 인 <xref:System.ServiceModel.Routing.RoutingExtension>등록 합니다.
+이러한 동작은 시작 시 SOAP 메시지 처리를 수행하는 데 사용되는 <xref:System.ServiceModel.Routing.SoapProcessingBehavior>를 클라이언트 엔드포인트에 추가합니다. 이를 통해 라우팅 서비스는 메시지를 받은 끝점과 다른 **MessageVersion** 가 필요한 끝점으로 메시지를 전송할 수 있습니다. 또한 **Routingbehavior** 는 <xref:System.ServiceModel.Routing.RoutingExtension> 런타임에 라우팅 서비스 구성을 수정 하기 위한 액세스 가능성 지점을 제공 하는 서비스 확장인를 등록 합니다.
 
 **Routingconfiguration** 클래스는 라우팅 서비스의 구성을 구성 하 고 업데이트 하는 일관 된 방법을 제공 합니다.  여기에는 라우팅 서비스의 설정 역할을 하는 매개 변수가 포함 되며, 서비스가 시작 될 때 **Routingbehavior** 를 구성 하는 데 사용 되 고, 런타임에 라우팅 구성을 수정 하기 위해 **routingbehavior** 으로 전달 됩니다.
 
@@ -36,7 +37,7 @@ ms.locfileid: "76746472"
 
 라우팅 계약에 대 한 자세한 내용은 [라우팅 계약](routing-contracts.md)을 참조 하세요.
 
-서비스 끝점이 정의 된 후에는 **Routingbehavior** 를 사용 하 여 특정 **routingbehavior** 을 끝점과 연결할 수 있습니다. 구성 파일을 사용 하 여 라우팅 서비스를 구성 하는 경우 **Routingbehavior** 는이 끝점에서 받은 메시지를 처리 하는 데 사용 되는 라우팅 논리를 포함 하는 필터 테이블을 지정 하는 데 사용 됩니다. 라우팅 서비스를 프로그래밍 방식으로 구성 하는 경우 **Routingconfiguration**을 사용 하 여 필터 테이블을 지정할 수 있습니다.
+서비스 끝점이 정의 된 후에는 **Routingbehavior** 를 사용 하 여 특정 **routingbehavior** 을 끝점과 연결할 수 있습니다. 구성 파일을 사용 하 여 라우팅 서비스를 구성 하는 경우 **Routingbehavior** 는이 끝점에서 받은 메시지를 처리 하는 데 사용 되는 라우팅 논리를 포함 하는 필터 테이블을 지정 하는 데 사용 됩니다. 라우팅 서비스를 프로그래밍 방식으로 구성 하는 경우 **Routingconfiguration** 을 사용 하 여 필터 테이블을 지정할 수 있습니다.
 
 다음 예제에서는 라우팅 서비스에서 프로그래밍 방식으로, 구성 파일을 통해 사용되는 서비스와 클라이언트 엔드포인트를 정의합니다.
 
@@ -101,7 +102,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));
 ```
 
-이 예제에서는 라우팅할 메시지를 수신 하는 데 사용 되는 `http://localhost:8000/routingservice/router`주소를 사용 하 여 단일 끝점을 노출 하도록 라우팅 서비스를 구성 합니다. 메시지는 요청-회신 엔드포인트로 라우트되므로 서비스 엔드포인트는 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 계약을 사용합니다. 또한이 구성은 메시지가 라우팅되는 `http://localhost:8000/servicemodelsample/service`의 단일 클라이언트 엔드포인트를 정의 합니다. "RoutingTable1" 라는 필터 테이블은 메시지를 라우팅하는 데 사용 되는 라우팅 논리를 포함 하며, **Routingbehavior** (구성 파일의 경우) 또는 **routingbehavior** (프로그래밍 방식 구성의 경우)을 사용 하 여 서비스 끝점과 연결 됩니다.
+이 예제에서는 `http://localhost:8000/routingservice/router` 라우팅할 메시지를 수신 하는 데 사용 되는 주소를 사용 하 여 단일 끝점을 노출 하도록 라우팅 서비스를 구성 합니다. 메시지는 요청-회신 엔드포인트로 라우트되므로 서비스 엔드포인트는 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 계약을 사용합니다. 또한이 구성은 메시지가 라우팅되는의 단일 클라이언트 엔드포인트를 정의 `http://localhost:8000/servicemodelsample/service` 합니다. "RoutingTable1" 라는 필터 테이블은 메시지를 라우팅하는 데 사용 되는 라우팅 논리를 포함 하며, **Routingbehavior** (구성 파일의 경우) 또는 **routingbehavior** (프로그래밍 방식 구성의 경우)을 사용 하 여 서비스 끝점과 연결 됩니다.
 
 ### <a name="routing-logic"></a>라우팅 논리
 
@@ -156,7 +157,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 > [!NOTE]
 > 기본적으로 라우팅 서비스는 메시지의 헤더만 평가합니다. 필터에서 메시지 본문에 액세스하도록 허용하려면 <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A>를 `false`로 설정해야 합니다.
 
-**멀티 캐스트**
+**멀티캐스트**
 
 많은 라우팅 서비스 구성에서 하나의 특정 엔드포인트로만 메시지를 라우트하는 단독 필터 논리를 사용하지만 주어진 메시지를 여러 대상 엔드포인트로 라우트해야 하는 경우도 있습니다. 메시지를 여러 대상으로 멀티캐스트하려면 다음 조건이 충족되어야 합니다.
 
@@ -164,7 +165,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 
 - 메시지를 평가할 때 여러 필터에서 `true`를 반환해야 합니다.
 
-이러한 조건이 충족되면 `true`를 반환하는 모든 필터의 모든 엔드포인트로 메시지가 라우트됩니다. 다음 예에서는 메시지의 끝점 주소가 `http://localhost:8000/routingservice/router/rounding`경우 메시지를 두 끝점으로 라우팅하는 라우팅 구성을 정의 합니다.
+이러한 조건이 충족되면 `true`를 반환하는 모든 필터의 모든 엔드포인트로 메시지가 라우트됩니다. 다음 예제에서는 메시지의 끝점 주소가 인 경우 메시지가 두 끝점으로 라우팅되는 라우팅 구성을 정의 합니다 `http://localhost:8000/routingservice/router/rounding` .
 
 ```xml
 <!--ROUTING SECTION -->
@@ -194,7 +195,7 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
 
 ### <a name="soap-processing"></a>SOAP 처리
 
-서로 다른 프로토콜 간의 메시지 라우팅을 지원 하기 위해 **Routingbehavior** 는 기본적으로 메시지를 라우팅하는 모든 클라이언트 끝점에 <xref:System.ServiceModel.Routing.SoapProcessingBehavior>를 추가 합니다. 이 동작은 메시지를 끝점으로 라우팅하기 전에 새 **MessageVersion** 를 자동으로 만들고, 요청 하는 클라이언트 응용 프로그램으로 반환 하기 전에 응답 문서에 대해 호환 되는 **MessageVersion** 를 만듭니다.
+서로 다른 프로토콜 간의 메시지 라우팅을 지원 하기 위해 **Routingbehavior** 는 기본적으로 <xref:System.ServiceModel.Routing.SoapProcessingBehavior> 메시지를 라우팅하는 모든 클라이언트 끝점에를 추가 합니다. 이 동작은 메시지를 끝점으로 라우팅하기 전에 새 **MessageVersion** 를 자동으로 만들고, 요청 하는 클라이언트 응용 프로그램으로 반환 하기 전에 응답 문서에 대해 호환 되는 **MessageVersion** 를 만듭니다.
 
 아웃 바운드 메시지에 대 한 새 **MessageVersion** 를 만드는 단계는 다음과 같습니다.
 
@@ -204,9 +205,9 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
 
 - 원본 메시지에 대한 본문 판독기를 가져옵니다.
 
-- 동일한 작업, 본문 판독기 및 새 **MessageVersion**를 사용 하 여 새 메시지를 만듭니다.
+- 동일한 작업, 본문 판독기 및 새 **MessageVersion** 를 사용 하 여 새 메시지를 만듭니다.
 
-- <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **주소 지정. 없음**인 경우 To, From, FaultTo 및 RelatesTo 헤더를 새 메시지에 복사 합니다.
+- <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **주소 지정. None** 이면 To, From, FaultTo 및 RelatesTo 헤더를 새 메시지에 복사 합니다.
 
 - 모든 메시지 속성을 새 메시지에 복사합니다.
 
@@ -222,13 +223,13 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
 
 - 동일한 작업, 본문 판독기 및 원래 요청 메시지의 **MessageVersion** 를 사용 하 여 새 응답 메시지를 만듭니다.
 
-- <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **주소 지정. 없음**인 경우 To, From, FaultTo 및 RelatesTo 헤더를 새 메시지에 복사 합니다.
+- <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **주소 지정. None** 이면 To, From, FaultTo 및 RelatesTo 헤더를 새 메시지에 복사 합니다.
 
 - 메시지 속성을 새 메시지에 복사합니다.
 
 - 새 응답 메시지를 반환합니다.
 
-기본적으로 **SoapProcessingBehavior** 는 서비스가 시작 될 때 <xref:System.ServiceModel.Routing.RoutingBehavior>에 의해 클라이언트 끝점에 자동으로 추가 됩니다. 그러나 <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> 속성을 사용 하 여 SOAP 처리가 모든 클라이언트 끝점에 추가 되는지 여부를 제어할 수 있습니다. 또한 SOAP 처리에 대한 더 세부적인 제어가 필요한 경우에는 특정 엔드포인트에 동작을 직접 추가하고 엔드포인트 수준에서 이 동작을 사용하거나 사용하지 않도록 설정할 수 있습니다.
+기본적으로 **SoapProcessingBehavior** 는 서비스가 시작 될 때에 의해 클라이언트 끝점에 자동으로 추가 되지만 <xref:System.ServiceModel.Routing.RoutingBehavior> , 속성을 사용 하 여 SOAP 처리가 모든 클라이언트 끝점에 추가 되는지 여부를 제어할 수 있습니다 <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> . 또한 SOAP 처리에 대한 더 세부적인 제어가 필요한 경우에는 특정 엔드포인트에 동작을 직접 추가하고 엔드포인트 수준에서 이 동작을 사용하거나 사용하지 않도록 설정할 수 있습니다.
 
 > [!NOTE]
 > 원본 요청 메시지와 다른 MessageVersion을 요구하는 엔드포인트에 대해 SOAP 처리를 사용하지 않도록 설정할 경우 메시지를 대상 엔드포인트로 보내기 전에 필요한 SOAP 수정 작업을 수행하기 위한 사용자 지정 메커니즘을 제공해야 합니다.
@@ -256,7 +257,7 @@ rc.SoapProcessingEnabled = false;
 
 부가적인 클라이언트 엔드포인트를 추가하는 경우 또는 메시지를 라우트하는 데 사용되는 필터를 수정해야 하는 경우 현재 라우팅 서비스를 통해 메시지를 수신하는 엔드포인트에 대한 서비스를 중단시키지 않도록 런타임에 동적으로 구성을 업데이트하는 방법이 필요합니다. 구성 파일이나 호스트 애플리케이션의 코드를 수정하는 것으로는 부족한 경우가 있습니다. 두 방법에는 모두 애플리케이션 재활용이 필요하고, 이 경우 현재 전송 중인 메시지가 손실될 가능성, 그리고 서비스가 다시 시작될 때까지 대기하는 동안 작동 중단이 발생할 가능성이 있기 때문입니다.
 
-**Routingconfiguration** 은 프로그래밍 방식 으로만 수정할 수 있습니다. 처음에 구성 파일을 사용 하 여 서비스를 구성할 수 있지만, 새 **Routingconfiguration** 을 생성 하 고 <xref:System.ServiceModel.Routing.RoutingExtension> 서비스 확장에 의해 노출 되는 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 메서드에 매개 변수로 전달 하 여 런타임에만 구성을 수정할 수 있습니다. 현재 전송 중인 모든 메시지는 이전 구성을 사용 하 여 계속 라우팅됩니다. 반면 **ApplyConfiguration** 를 호출한 후 받은 메시지는 새 구성을 사용 합니다. 다음 예제에서는 라우팅 서비스의 인스턴스를 만들고 그 후 구성을 수정하는 것을 보여 줍니다.
+**Routingconfiguration** 은 프로그래밍 방식 으로만 수정할 수 있습니다. 처음에 구성 파일을 사용 하 여 서비스를 구성할 수 있지만, 새 **Routingconfiguration** 을 생성 하 고 <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> 서비스 확장에서 노출 하는 메서드에 매개 변수로 전달 하 여 런타임에만 구성을 수정할 수 있습니다 <xref:System.ServiceModel.Routing.RoutingExtension> . 현재 전송 중인 모든 메시지는 이전 구성을 사용 하 여 계속 라우팅됩니다. 반면 **ApplyConfiguration** 를 호출한 후 받은 메시지는 새 구성을 사용 합니다. 다음 예제에서는 라우팅 서비스의 인스턴스를 만들고 그 후 구성을 수정하는 것을 보여 줍니다.
 
 ```csharp
 RoutingConfiguration routingConfig = new RoutingConfiguration();
@@ -287,18 +288,18 @@ routerHost.routerHost.Extensions.Find<RoutingExtension>().ApplyConfiguration(rc2
 
 ## <a name="error-handling"></a>오류 처리
 
-메시지를 보내려고 시도하는 중에 <xref:System.ServiceModel.CommunicationException>이 발생하는 경우 오류 처리가 수행됩니다. 일반적으로 이러한 예외는 정의된 클라이언트 엔드포인트와 통신을 시도하는 중에 문제가 발생했음을 나타냅니다(예: <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> 또는 <xref:System.ServiceModel.CommunicationObjectFaultedException>). 오류 처리 코드는 **CommunicationException**에서 파생 되지 않는 또 다른 일반적인 예외인 <xref:System.TimeoutException> 발생 하는 경우에도이를 catch 하 고 보내기를 시도 합니다.
+메시지를 보내려고 시도하는 중에 <xref:System.ServiceModel.CommunicationException>이 발생하는 경우 오류 처리가 수행됩니다. 일반적으로 이러한 예외는 정의된 클라이언트 엔드포인트와 통신을 시도하는 중에 문제가 발생했음을 나타냅니다(예: <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> 또는 <xref:System.ServiceModel.CommunicationObjectFaultedException>). 오류 처리 코드는 <xref:System.TimeoutException> **CommunicationException** 에서 파생 되지 않는 또 다른 일반적인 예외인이 발생 하는 경우에도를 catch 하 고 보내기를 다시 시도 하려고 합니다.
 
 앞서 언급한 예외 중 하나가 발생하면 라우팅 서비스는 백업 엔드포인트 목록으로 장애 조치됩니다. 모든 백업 엔드포인트가 통신 오류로 인해 실패하거나 엔드포인트에서 대상 서비스 내의 오류를 나타내는 예외를 반환하는 경우 라우팅 서비스는 클라이언트 애플리케이션에 오류를 반환합니다.
 
 > [!NOTE]
-> 오류 처리 기능은 메시지 보내기를 시도할 때와 채널 닫기를 시도할 때 발생하는 예외를 캡처하여 처리합니다. 오류 처리 코드는 통신 중인 응용 프로그램 끝점에 의해 생성 된 예외를 검색 하거나 처리 하기 위한 것이 아닙니다. 서비스에서 throw 되는 <xref:System.ServiceModel.FaultException>는 라우팅 서비스에서 **Faultmessage** 로 표시 되 고 클라이언트에 다시 전달 됩니다.
+> 오류 처리 기능은 메시지 보내기를 시도할 때와 채널 닫기를 시도할 때 발생하는 예외를 캡처하여 처리합니다. 오류 처리 코드는 통신 중인 응용 프로그램 끝점에 의해 생성 된 예외를 검색 하거나 처리 하기 위한 것이 아닙니다. <xref:System.ServiceModel.FaultException> 서비스에서 throw 된는 라우팅 서비스에서 **faultmessage** 로 나타나고 클라이언트에 다시 전달 됩니다.
 >
 > 라우팅 서비스에서 메시지를 릴레이하려고 할 때 오류가 발생하는 경우 라우팅 서비스가 없을 때 일반적으로 발생하는 <xref:System.ServiceModel.FaultException> 대신 <xref:System.ServiceModel.EndpointNotFoundException>이 클라이언트측에서 발생할 수 있습니다. 따라서 중첩된 예외를 검사하지 않는 한 라우팅 서비스는 예외를 마스킹하고 완전한 투명성을 제공하지 않을 수 있습니다.
 
 ### <a name="tracing-exceptions"></a>예외 추적
 
-목록의 끝점으로 메시지를 보낼 수 없는 경우 라우팅 서비스는 결과 예외 데이터를 추적 하 고 예외 정보를 **예외**라는 메시지 속성으로 첨부 합니다. 이 속성은 예외 데이터를 보존하며 사용자가 메시지 검사자를 통해 프로그래밍 방식으로 액세스하도록 허용합니다.  예외 데이터는 메시지를 보내려고 시도할 때 발생하는 예외 정보에 엔드포인트 이름을 매핑하는 사전에 메시지별로 저장됩니다.
+목록의 끝점으로 메시지를 보낼 수 없는 경우 라우팅 서비스는 결과 예외 데이터를 추적 하 고 예외 정보를 **예외** 라는 메시지 속성으로 첨부 합니다. 이 속성은 예외 데이터를 보존하며 사용자가 메시지 검사자를 통해 프로그래밍 방식으로 액세스하도록 허용합니다.  예외 데이터는 메시지를 보내려고 시도할 때 발생하는 예외 정보에 엔드포인트 이름을 매핑하는 사전에 메시지별로 저장됩니다.
 
 ### <a name="backup-endpoints"></a>백업 엔드포인트
 
@@ -364,7 +365,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 
 다음 표에서는 백업 엔드포인트 목록 사용과 호환되는 패턴에 대해 설명하고 특정 패턴에 대한 오류 처리의 세부 정보를 설명하는 참고 사항을 제공합니다.
 
-|무늬|세션|트랜잭션|받기 컨텍스트|백업 목록 지원|참고 사항|
+|무늬|세션|트랜잭션|받기 컨텍스트|백업 목록 지원|참고|
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|
 |단방향||||예|백업 엔드포인트에 메시지를 다시 보내려고 시도합니다. 이 메시지가 멀티캐스트되는 경우 실패한 채널의 메시지만 백업 대상으로 이동됩니다.|
 |단방향||✔️||아니요|예외가 throw되고 트랜잭션이 롤백됩니다.|

@@ -1,13 +1,14 @@
 ---
-title: Visual Studio에서 AJAX 사용 WCF 서비스 및 ASP.NET 클라이언트 만들기
+description: '자세한 정보: 방법: 서비스에 액세스 하는 AJAX-Enabled WCF 서비스 및 ASP.NET 클라이언트 만들기'
+title: Visual Studio에서 AJAX-Enabled WCF 서비스 및 ASP.NET 클라이언트 만들기
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 0bfe55c68f68bfef7b7ec2034413b53d41b0c785
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 59b0cab9b28dd68b27529b5d880138cc283144a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609358"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99780351"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>방법: AJAX 사용 WCF 서비스 및 해당 서비스에 액세스하는 ASP.NET 클라이언트 만들기
 
@@ -21,19 +22,19 @@ ms.locfileid: "91609358"
 
 1. **새 프로젝트** 대화 상자에서 **설치 된**  >  **Visual c #**  >  **웹** 범주를 확장 한 다음 **ASP.NET 웹 응용 프로그램 (.NET Framework)** 을 선택 합니다.
 
-1. 프로젝트 이름을 **SandwichServices** 로 확인 하 고 **확인을**클릭 합니다.
+1. 프로젝트 이름을 **SandwichServices** 로 확인 하 고 **확인을** 클릭 합니다.
 
-1. **새 ASP.NET 웹 응용 프로그램** 대화 상자에서 **비어 있음** 을 선택 하 고 **확인**을 선택 합니다.
+1. **새 ASP.NET 웹 응용 프로그램** 대화 상자에서 **비어 있음** 을 선택 하 고 **확인** 을 선택 합니다.
 
    ![Visual Studio의 ASP.NET 웹 앱 형식 대화 상자](./media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
 
 ## <a name="add-a-web-form"></a>웹 폼 추가
 
-1. **솔루션 탐색기** 에서 SandwichServices 프로젝트를 마우스 오른쪽 단추로 클릭 하 **Add**고  >  **새 항목**추가를 선택 합니다.
+1. **솔루션 탐색기** 에서 SandwichServices 프로젝트를 마우스 오른쪽 단추로 클릭 하 고  >  **새 항목** 추가를 선택 합니다.
 
 1. **새 항목 추가** 대화 상자에서 **설치 된**  >  **Visual c #**  >  **웹** 범주를 확장 한 다음 **web Form** 템플릿을 선택 합니다.
 
-1. 기본 이름 (**WebForm1**)을 적용 한 다음 **추가**를 선택 합니다.
+1. 기본 이름 (**WebForm1**)을 적용 한 다음 **추가** 를 선택 합니다.
 
    *WebForm1* 이 **소스** 뷰에서 열립니다.
 
@@ -47,13 +48,13 @@ ms.locfileid: "91609358"
 
 ## <a name="create-an-ajax-enabled-wcf-service"></a>AJAX 사용 WCF 서비스 만들기
 
-1. **솔루션 탐색기** 에서 SandwichServices 프로젝트를 마우스 오른쪽 단추로 클릭 하 **Add**고  >  **새 항목**추가를 선택 합니다.
+1. **솔루션 탐색기** 에서 SandwichServices 프로젝트를 마우스 오른쪽 단추로 클릭 하 고  >  **새 항목** 추가를 선택 합니다.
 
 1. **새 항목 추가** 대화 상자에서 **설치 된**  >  **Visual c #**  >  **웹** 범주를 확장 한 다음 **WCF 서비스 (AJAX 사용)** 템플릿을 선택 합니다.
 
    ![Visual Studio의 WCF 서비스 (AJAX 사용) 항목 템플릿](./media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
-1. 서비스 이름을 **CostService** 로 지정한 다음 **추가**를 선택 합니다.
+1. 서비스 이름을 **CostService** 로 지정한 다음 **추가** 를 선택 합니다.
 
    *CostService.svc.cs* 이 편집기에서 열립니다.
 
@@ -71,7 +72,7 @@ ms.locfileid: "91609358"
 
 1. *WebForm1 .aspx* 파일을 열고 **디자인** 뷰를 선택 합니다.
 
-2. **보기** 메뉴에서 **도구 상자**를 선택 합니다.
+2. **보기** 메뉴에서 **도구 상자** 를 선택 합니다.
 
 3. **AJAX 확장** 노드를 확장 하 고 **ScriptManager** 를 폼으로 끌어다 놓습니다.
 
@@ -100,7 +101,7 @@ ms.locfileid: "91609358"
     </script>
     ```
 
-   이 코드는 CostService의 메서드를 호출 하 여 세 sandwiches의 가격을 계산 하 고 **additionResult**이라는 범위에 결과를 표시 합니다.
+   이 코드는 CostService의 메서드를 호출 하 여 세 sandwiches의 가격을 계산 하 고 **additionResult** 이라는 범위에 결과를 표시 합니다.
 
 ## <a name="run-the-program"></a>프로그램 실행
 

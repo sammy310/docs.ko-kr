@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 순환 추적'
 title: 순환 추적
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
-ms.openlocfilehash: d9af1f18a507a79c9c287393652e65dcb3372444
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4b50420c7eb0c6ca9bc6b3354c78e7922b00f16c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552520"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99778752"
 ---
 # <a name="circular-tracing"></a>순환 추적
 
@@ -24,7 +25,7 @@ ms.locfileid: "90552520"
 
 이 수신기는에서 파생 `XmlWriteTraceListener` 되며 [서비스 추적 뷰어 도구 (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)를 사용 하 여 로그를 볼 수 있습니다. 로그를 볼 때는 Service Trace Viewer 도구에서 두 개의 로그 파일을 동시에 열어 쉽게 다시 결합할 수 있습니다. Service Trace Viewer 도구는 추적이 올바른 순서대로 표시되도록 자동으로 정렬합니다.
 
-## <a name="configuration"></a>구성
+## <a name="configuration"></a>Configuration
 
 수신기 및 소스 요소에 대한 다음 코드를 추가하여 순환 버퍼 추적 수신기를 사용하도록 서비스를 구성할 수 있습니다. 순환 추적 수신기의 구성에서 `maxFileSizeKB` 특성을 설정하여 최대 파일 크기를 지정합니다. 다음 코드는 이 설정을 보여 줍니다.
 
@@ -62,6 +63,6 @@ ms.locfileid: "90552520"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [AppFabric 모니터링 샘플](/previous-versions/appfabric/ff383407(v=azure.10))
