@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorDebugILFrame:: GetStackValue 메서드'
 title: ICorDebugILFrame::GetStackValue 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 397a4d72-6a87-4f0b-8813-af31af91d68f
 topic_type:
 - apiref
-ms.openlocfilehash: 55ed00cfdb6b2dba90ad11b34496bfa646e4419c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0ccc4a5eb3ae6137e1a099af450e92f60eb0cbf8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721363"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791337"
 ---
-# <a name="icordebugilframegetstackvalue-method"></a><span data-ttu-id="16bcb-102">ICorDebugILFrame::GetStackValue 메서드</span><span class="sxs-lookup"><span data-stu-id="16bcb-102">ICorDebugILFrame::GetStackValue Method</span></span>
+# <a name="icordebugilframegetstackvalue-method"></a><span data-ttu-id="088cc-103">ICorDebugILFrame::GetStackValue 메서드</span><span class="sxs-lookup"><span data-stu-id="088cc-103">ICorDebugILFrame::GetStackValue Method</span></span>
 
-<span data-ttu-id="16bcb-103">이 메서드는 구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="16bcb-103">This method has not been implemented.</span></span>  
+<span data-ttu-id="088cc-104">이 메서드는 구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="088cc-104">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16bcb-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="16bcb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="088cc-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="088cc-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStackValue (  
@@ -35,6 +36,6 @@ HRESULT GetStackValue (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="16bcb-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="16bcb-105">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="088cc-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="088cc-106">Requirements</span></span>  
 
- <span data-ttu-id="16bcb-106">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="16bcb-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
+ <span data-ttu-id="088cc-107">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="088cc-107">**Header:** CorDebug.idl, CorDebug.h</span></span>
