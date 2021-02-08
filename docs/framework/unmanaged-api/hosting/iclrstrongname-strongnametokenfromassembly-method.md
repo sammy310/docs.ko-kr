@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRStrongName:: StrongNameTokenFromAssembly 메서드'
 title: ICLRStrongName::StrongNameTokenFromAssembly 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc725afb-b66b-4015-aa44-1c0d1304197f
 topic_type:
 - apiref
-ms.openlocfilehash: 90a7e60e35e1fc555681102ffa62967eb5ac01fc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 520d327767f91763f8f2b3efea098c7c2790939e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95671540"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781820"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassembly-method"></a>ICLRStrongName::StrongNameTokenFromAssembly 메서드
 
@@ -47,7 +48,7 @@ HRESULT StrongNameTokenFromAssembly (
  `pcbStrongNameToken`  
  제한이 강력한 이름 토큰의 크기 (바이트)입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `S_OK` 메서드가 성공적으로 완료 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
   
@@ -67,7 +68,7 @@ HRESULT StrongNameTokenFromAssembly (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [StrongNameTokenFromAssemblyEx 메서드](iclrstrongname-strongnametokenfromassemblyex-method.md)
 - [ICLRStrongName 인터페이스](iclrstrongname-interface.md)

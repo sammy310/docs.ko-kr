@@ -1,14 +1,15 @@
 ---
+description: '다음에 대 한 자세한 정보:: <state><states>'
 title: <states>의 <state>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ab483c7f-a091-4933-ba6b-708d96846d38
-ms.openlocfilehash: 058480c29d6c5b554d5187a1a12a0c2e54587428
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 748044986143f182faa0edafb0cfe299a79a704e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169754"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781989"
 ---
 # <a name="state-of-states"></a>\<states>의 \<state>
 
@@ -49,7 +50,7 @@ ms.locfileid: "91169754"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |name|추적 레코드를 내보내야 할 구독된 활동의 상태를 지정하는 문자열입니다.|  
   

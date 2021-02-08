@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRPolicyManager:: SetTimeout 메서드'
 title: ICLRPolicyManager::SetTimeout 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 954404fd-d52d-4e68-b582-8692f3a5f608
 topic_type:
 - apiref
-ms.openlocfilehash: 459c5bc0699487b62d5dcf76f1044faf53ebab8b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5fb65e93cc6eea7826498ff6b03147773f06e0b8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732465"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781898"
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>ICLRPolicyManager::SetTimeout 메서드
 
@@ -51,7 +52,7 @@ HRESULT SetTimeout (
  `dwMilliseconds`  
  진행 새 시간 제한 값 (밀리초)입니다. 값이 INFINITE 이면 작업이 시간 초과 되지 않습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -73,7 +74,7 @@ HRESULT SetTimeout (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [EClrOperation 열거형](eclroperation-enumeration.md)
 - [ICLRControl 인터페이스](iclrcontrol-interface.md)

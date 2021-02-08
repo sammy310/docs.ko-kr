@@ -1,14 +1,15 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <securityTokenHandlers>
 title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: d892fbd802ed366ca7af9b85fbf5c23d4d27e0f1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 14937f6763644f9b7f43c0f7be71ea2352b21402
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157007"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782028"
 ---
 # \<securityTokenHandlers>
 
@@ -36,7 +37,7 @@ ms.locfileid: "91157007"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |name|토큰 처리기 컬렉션의 이름을 지정 합니다. 프레임 워크에서 인식 되는 값은 "ActAs" 및 "OnBehalfOf" 뿐입니다. 이러한 이름 중 하나를 사용 하 여 토큰 처리기 컬렉션을 지정 하면 ActAs 또는 OnBehalfOf 토큰을 각각 처리할 때 컬렉션이 사용 됩니다.|  
   

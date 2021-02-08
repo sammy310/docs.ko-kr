@@ -1,16 +1,17 @@
 ---
+description: '다음에 대 한 자세한 정보: <loadFromRemoteSources> 요소'
 title: <loadFromRemoteSources> 요소
 ms.date: 05/24/2018
 helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-ms.openlocfilehash: 568c0c814dcc57be0f5be435bb7750c970ffec19
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f5dcff1fb7b0393fe5896dd9d107461a3151f79a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192453"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782353"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources> 요소
 
@@ -42,9 +43,9 @@ ms.locfileid: "91192453"
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
-|`false`|원격 원본에서 응용 프로그램에 완전 신뢰를 부여 하지 마십시오. 이것이 기본값입니다.|  
+|`false`|원격 원본에서 응용 프로그램에 완전 신뢰를 부여 하지 마십시오. 기본값입니다.|  
 |`true`|원격 원본에서 응용 프로그램에 완전 신뢰를 부여 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  

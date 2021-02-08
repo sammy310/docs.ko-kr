@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo4:: InitializeCurrentThread 메서드'
 title: ICorProfilerInfo4::InitializeCurrentThread 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 18a3335c-8c75-476c-b6de-72c0bfedae5d
 topic_type:
 - apiref
-ms.openlocfilehash: 51f16523c00cc3dd95b786f1586ccfd75ce8d5f1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a78816c736507a4a59da3ea1c75b078b54c34125
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733830"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781406"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>ICorProfilerInfo4::InitializeCurrentThread 메서드
 
@@ -49,7 +50,7 @@ HRESULT InitializeCurrentThread ();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo4 인터페이스](icorprofilerinfo4-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

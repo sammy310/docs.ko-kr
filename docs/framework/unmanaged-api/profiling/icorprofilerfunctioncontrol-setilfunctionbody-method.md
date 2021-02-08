@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerFunctionControl:: SetILFunctionBody 메서드'
 title: ICorProfilerFunctionControl::SetILFunctionBody 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c33f0f7-75b2-4c19-b2c7-c94b54997576
 topic_type:
 - apiref
-ms.openlocfilehash: fa82cd1e646777c9841c1b3d653134aa7ba7ed7c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 470eefce5b211adcfd111951be9a004b3bd7d8fc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712744"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781612"
 ---
 # <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>ICorProfilerFunctionControl::SetILFunctionBody 메서드
 
@@ -42,7 +43,7 @@ HRESULT SetILFunctionBody(
  `pbNewILMethodHeader`  
  [in] 새 CIL 헤더에 대한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT를 반환합니다.  
   
@@ -64,6 +65,6 @@ HRESULT SetILFunctionBody(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerFunctionControl 인터페이스](icorprofilerfunctioncontrol-interface.md)

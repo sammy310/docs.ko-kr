@@ -1,16 +1,17 @@
 ---
+description: <NetFx40_PInvokeStackResilience> 요소에 대해 자세히 알아보세요.
 title: <NetFx40_PInvokeStackResilience> 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <NetFx40_PInvokeStackResilience> element
 - NetFx40_PInvokeStackResilience element
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
-ms.openlocfilehash: 86f50aafe0b21d5080288e09ac7118ca1e4c939a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 59e2a5845868ebfa186344c9a731871739a29c47
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73116154"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782301"
 ---
 # <a name="netfx40_pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience> 요소
 
@@ -32,13 +33,13 @@ ms.locfileid: "73116154"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`enabled`|필수 특성입니다.<br /><br /> 런타임이 잘못 된 플랫폼 호출 선언을 검색 하 고 런타임에 32 비트 플랫폼에서 스택을 자동으로 수정 하는지 여부를 지정 합니다.|
 
 ## <a name="enabled-attribute"></a>enabled 특성
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |`0`|런타임은 잘못 된 플랫폼 호출 선언을 검색 하 고 수정 하지 않는 .NET Framework 4에서 도입 된 더 빠른 interop 마샬링 아키텍처를 사용 합니다. 기본값입니다.|
 |`1`|런타임에서는 잘못 된 플랫폼 호출 선언을 검색 하 고 수정 하는 느린 전환을 사용 합니다.|
@@ -49,7 +50,7 @@ ms.locfileid: "73116154"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|

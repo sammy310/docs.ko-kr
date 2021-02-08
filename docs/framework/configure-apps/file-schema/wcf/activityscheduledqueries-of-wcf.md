@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: <activityScheduledQueries> WCF'
 title: <activityScheduledQueries> WCF의
 ms.date: 03/30/2017
 ms.assetid: e351329f-9676-4f11-9b19-f4bac82f36fc
-ms.openlocfilehash: 86f196437b2230d6541570aa8994d99e7b340f66
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b92bb2827b4c8bce43e4ee0b8dc03c7be124e3da
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151196"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782249"
 ---
 # <a name="activityscheduledqueries-of-wcf"></a>\<activityScheduledQueries> WCF의
 

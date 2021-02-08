@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <diagnostics>
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 775ec3a4d3dd8709c61fb46155b5085a3343d218
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d1651d949cdc095e630e9cde0bacbe51a5eb6062
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192271"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782158"
 ---
 # \<diagnostics>
 

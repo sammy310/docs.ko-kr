@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IMetaDataAssemblyImport:: GetAssemblyRefProps 메서드'
 title: IMetaDataAssemblyImport::GetAssemblyRefProps 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-ms.openlocfilehash: 25aefff46f7557f89f27d1eccab58c9c70d2d13e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f7011806920ba37ca84b1a48f12da3a5557fa464
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722117"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784134"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps 메서드
 
@@ -75,7 +76,7 @@ HRESULT GetAssemblyRefProps (
  `pdwAssemblyRefFlags`  
  제한이 어셈블리에 적용 된 메타 데이터를 설명 하는 플래그에 대 한 포인터입니다. Flags 값은 하나 이상의 [Corassemblyflags](corassemblyflags-enumeration.md) 값의 조합입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  성공 하면이 메서드는 S_OK를 반환 합니다. 그렇지 않으면 Winerror.h 헤더 파일에 정의 된 오류 코드 중 하나를 반환 합니다.  
   
@@ -89,6 +90,6 @@ HRESULT GetAssemblyRefProps (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataAssemblyImport 인터페이스](imetadataassemblyimport-interface.md)

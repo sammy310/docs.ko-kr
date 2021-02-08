@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerModuleEnum:: GetCount 메서드'
 title: ICorProfilerModuleEnum::GetCount 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f0a4a5e0-4689-474b-b0f4-37ca0639c918
 topic_type:
 - apiref
-ms.openlocfilehash: 53009a1805056b83047299ebdca8f21d98ad5137
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: efdd812795002c25aaeb7634e7a4f4e4287553e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732985"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781391"
 ---
 # <a name="icorprofilermoduleenumgetcount-method"></a>ICorProfilerModuleEnum::GetCount 메서드
 
@@ -47,7 +48,7 @@ HRESULT GetCount([out] ULONG * pcelt);
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerModuleEnum 인터페이스](icorprofilermoduleenum-interface.md)
 - [프로파일링 인터페이스](profiling-interfaces.md)

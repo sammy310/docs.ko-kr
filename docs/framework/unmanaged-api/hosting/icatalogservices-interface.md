@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICatalogServices 인터페이스'
 title: ICatalogServices 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0d7e49b-2394-4ae0-8820-1b64cae0cfe8
 topic_type:
 - apiref
-ms.openlocfilehash: 5198efc14a57bf0a496a9c78569af45595d0b4a6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 579ad06e3388c6b7397b68e95fd8f9a2d4d2f29f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698431"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781911"
 ---
 # <a name="icatalogservices-interface"></a>ICatalogServices 인터페이스
 
@@ -34,6 +35,6 @@ ms.locfileid: "95698431"
 |[Autodone 메서드](icatalogservices-autodone-method.md)|이 속성은 내부 전용으로 예약되어 있으므로|  
 |[NotAutodone 메서드](icatalogservices-notautodone-method.md)|이 속성은 내부 전용으로 예약되어 있으므로|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)

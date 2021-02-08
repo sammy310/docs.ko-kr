@@ -1,4 +1,5 @@
 ---
+description: ICorProfilerCallback8::D ynamicMethodJITCompilationFinished 메서드에 대해 자세히 알아보세요.
 title: ICorProfilerCallback8::D ynamicMethodJITCompilationFinished 메서드
 ms.date: 04/10/2018
 api_name:
@@ -8,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 6354667e754da42692cc0de2dc5330c56f951aa1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d076307b9e57c27753297cad8eebc1b9aa9433f6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725445"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781716"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::D ynamicMethodJITCompilationFinished 메서드
 
@@ -58,7 +59,7 @@ JIT 컴파일이 시작 되는 메모리 내 함수의 식별자입니다.
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [DynamicMethodJITCompilationStarted 메서드](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [ICorProfilerCallback8 인터페이스](icorprofilercallback8-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: IHostFilter:: MarkToken 메서드'
 title: IHostFilter::MarkToken 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d7061343-d0a3-4fd5-b312-61974f98bd62
 topic_type:
 - apiref
-ms.openlocfilehash: b4db3b115517f0a146aeab469f091008d31efc86
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c8f5ecdef56b77e1b0031a93d6d8f7de79de4c3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718230"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784186"
 ---
 # <a name="ihostfiltermarktoken-method"></a>IHostFilter::MarkToken 메서드
 
@@ -53,7 +54,7 @@ HRESULT MarkToken (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 인터페이스](metadata-interfaces.md)
 - [IHostFilter 인터페이스](ihostfilter-interface.md)

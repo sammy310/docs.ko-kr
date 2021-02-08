@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 방법: 사용자가 모호한 시간을 확인할 수 있도록 허용'
 title: '방법: 사용자에게 모호한 시간 확인 작업 허용'
 ms.date: 04/10/2017
 helpviewer_keywords:
 - time zones [.NET], ambiguous time
 - ambiguous time [.NET]
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
-ms.openlocfilehash: d543db20161057764749210533f35f7c2a1ec81d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a64d20080ed021af273a2d114c7558615b8b04e4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817798"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782483"
 ---
 # <a name="how-to-let-users-resolve-ambiguous-times"></a>방법: 사용자에게 모호한 시간 확인 작업 허용
 

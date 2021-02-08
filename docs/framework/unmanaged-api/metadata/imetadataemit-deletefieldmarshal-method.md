@@ -1,4 +1,5 @@
 ---
+description: IMetaDataEmit::D eleteFieldMarshal 메서드에 대해 자세히 알아보세요.
 title: IMetaDataEmit::DeleteFieldMarshal 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7c75aef9-c742-4b33-a14b-56ff94b0f725
 topic_type:
 - apiref
-ms.openlocfilehash: 5989c45782b4f83ecfa285cb305080320abf6a3c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 966f2ae20ad9ff4b9c1c9eec32974bc89aa76d13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700550"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783965"
 ---
 # <a name="imetadataemitdeletefieldmarshal-method"></a>IMetaDataEmit::DeleteFieldMarshal 메서드
 
@@ -49,7 +50,7 @@ HRESULT DeleteFieldMarshal (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)

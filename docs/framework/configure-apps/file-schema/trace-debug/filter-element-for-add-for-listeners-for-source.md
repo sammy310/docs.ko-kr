@@ -1,4 +1,5 @@
 ---
+description: 에 대 한 자세한 내용:의에 대 한 <filter> 요소 <add> <listeners><source>
 title: <filter>의에 <add> 대 한의 요소 <listeners><source>
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: 2b83fd10da506202427aaeee454411822ff1ae5b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 65233aa2d9ea000d1d27d0241c734bee7097b7ca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201683"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782262"
 ---
 # <a name="filter-element-for-add-for-listeners-for-source"></a>\<filter>의에 \<add> 대 한의 요소 \<listeners>\<source>
 

@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <endpointDiscovery>
 title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 621c742e3bb06ce91fa5a6b8951351295f73df9e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 01913de37ae426484d5bb1ff6a815a64302024fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185810"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782132"
 ---
 # \<endpointDiscovery>
 

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRSyncManager:: CreateRWLockOwnerIterator 메서드'
 title: ICLRSyncManager::CreateRWLockOwnerIterator 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b5535b87-9439-424e-b9b3-7d6fafb9819e
 topic_type:
 - apiref
-ms.openlocfilehash: 2b6a2082d27fca4c78dcb15a13cfd87e8066e388
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c6997b7720586f422cba3c96ca06a93f747d05bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687218"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781781"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator 메서드
 
@@ -43,7 +44,7 @@ HRESULT CreateRWLockOwnerIterator (
  `pIterator`  
  제한이 [GetRWLockOwnerNext](iclrsyncmanager-getrwlockownernext-method.md) 및 [DeleteRWLockOwnerIterator](iclrsyncmanager-deleterwlockowneriterator-method.md) 메서드에 전달할 수 있는 반복기에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -76,7 +77,7 @@ HRESULT CreateRWLockOwnerIterator (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRSyncManager 인터페이스](iclrsyncmanager-interface.md)
 - [IHostSyncManager 인터페이스](ihostsyncmanager-interface.md)

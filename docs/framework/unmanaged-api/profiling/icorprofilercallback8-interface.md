@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerCallback8 인터페이스'
 title: ICorProfilerCallback8 인터페이스
 ms.date: 04/10/2018
 api_name:
@@ -8,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 22a133d02bb69026190428905379323362943d40
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8dd9b8eea82f38b7598d578bd718743af826070d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732387"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99781677"
 ---
 # <a name="icorprofilercallback8-interface"></a>ICorProfilerCallback8 인터페이스
 
@@ -36,7 +37,7 @@ ms.locfileid: "95732387"
   
 **.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로파일링 인터페이스](profiling-interfaces.md)
 - [ICorProfilerCallback9 인터페이스](icorprofilercallback9-interface.md)

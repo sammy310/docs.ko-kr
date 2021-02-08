@@ -1,16 +1,17 @@
 ---
+description: '다음에 대 한 자세한 정보: <PreferComInsteadOfManagedRemoting> 요소'
 title: <PreferComInsteadOfManagedRemoting> 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <PreferComInsteadOfManagedRemoting> element
 - PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
-ms.openlocfilehash: 2fb0d94f91d28f9d9d4f247411d273f786f7b63b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b621af9b584d1ea2623ffe5a44f74b5b7bd520e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195287"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782275"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting> 요소
 
@@ -38,9 +39,9 @@ ms.locfileid: "91195287"
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
-|`false`|런타임은 응용 프로그램 도메인 경계에서 원격 기능을 사용 합니다. 이것이 기본값입니다.|  
+|`false`|런타임은 응용 프로그램 도메인 경계에서 원격 기능을 사용 합니다. 기본값입니다.|  
 |`true`|런타임은 응용 프로그램 도메인 경계에 걸쳐 COM interop를 사용 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  

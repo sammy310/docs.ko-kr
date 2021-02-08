@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <legacyImpersonationPolicy> 요소'
 title: <legacyImpersonationPolicy> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <legacyImpersonationPolicy> element
 - legacyImpersonationPolicy element
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
-ms.openlocfilehash: ca10c809ddf319817aaa074ba5fc3415abf6387d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 36cc3336e8e3c0196ae20fc749fc2239c35c8584
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192518"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782366"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy> 요소
 
@@ -42,9 +43,9 @@ ms.locfileid: "91192518"
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
-|`false`|<xref:System.Security.Principal.WindowsIdentity><xref:System.Threading.ExecutionContext>현재 스레드에 대 한 흐름 설정에 따라 비동기 요소를 통해 흐릅니다. 이것이 기본값입니다.|  
+|`false`|<xref:System.Security.Principal.WindowsIdentity><xref:System.Threading.ExecutionContext>현재 스레드에 대 한 흐름 설정에 따라 비동기 요소를 통해 흐릅니다. 기본값입니다.|  
 |`true`|<xref:System.Security.Principal.WindowsIdentity> 는 현재 스레드의 흐름 설정에 관계 없이 비동기 요소를 통해 이동 하지 않습니다 <xref:System.Threading.ExecutionContext> .|  
   
 ### <a name="child-elements"></a>자식 요소  

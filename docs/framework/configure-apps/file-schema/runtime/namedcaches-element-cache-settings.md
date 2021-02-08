@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: <namedCaches> 요소 (캐시 설정)'
 title: <namedCaches> 요소(캐시 설정)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: ad76c01bba859934be399d73262bd974309efe98
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 543650513270c0cee24d965b8efe98a75d7b8f9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192401"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99782327"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<namedCaches> 요소(캐시 설정)
 
@@ -22,7 +23,7 @@ ms.locfileid: "91192401"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<namedCaches>**  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <namedCaches>  
@@ -30,7 +31,7 @@ ms.locfileid: "91192401"
 </namedCaches>  
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
 
  `None`  
   
