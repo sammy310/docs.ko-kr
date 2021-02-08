@@ -1,4 +1,5 @@
 ---
+description: 다음에 대해 자세히 알아보기 ... 다음 문 (Visual Basic)
 title: For Each...Next 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -22,18 +23,18 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: 0feb938121a97b06509b472652e6a753841ab2b8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ff7afb5e3b505ebe2326343063a7884dc4f567b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404656"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769106"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 문(Visual Basic)
 
 컬렉션의 각 요소에 대해 문 그룹을 반복 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 For Each element [ As datatype ] In group
@@ -51,11 +52,11 @@ Next [ element ]
 |---|---|
 |`element`|`For Each`문에 필요 합니다. `Next`문에서 선택적입니다. 변수 컬렉션의 요소를 반복 하는 데 사용 됩니다.|
 |`datatype`|[`Option Infer`](option-infer-statement.md)가 on (기본값) 이거나 `element` 이미 선언 된 경우 선택 사항입니다. `Option Infer` 가 off이 고 `element` 아직 선언 되지 않은 경우에는 필수입니다. `element`의 데이터 형식입니다.|
-|`group`|필수 요소. 컬렉션 형식 또는 개체인 형식의 변수입니다. 가 반복 될 컬렉션을 참조 `statements` 합니다.|
+|`group`|필수 사항입니다. 컬렉션 형식 또는 개체인 형식의 변수입니다. 가 반복 될 컬렉션을 참조 `statements` 합니다.|
 |`statements`|선택 사항입니다. `For Each` `Next` 에서 각 항목에 대해 실행 되는 하나 이상의 문입니다 `group` .|
 |`Continue For`|선택 사항입니다. 루프의 시작 부분으로 제어를 전달 `For Each` 합니다.|
 |`Exit For`|선택 사항입니다. 루프 외부로 제어를 전달 `For Each` 합니다.|
-|`Next`|필수 요소. 루프의 정의를 종료 `For Each` 합니다.|
+|`Next`|필수 사항입니다. 루프의 정의를 종료 `For Each` 합니다.|
 
 ## <a name="simple-example"></a>간단한 예
 
@@ -94,11 +95,11 @@ Next [ element ]
 
 루프에 원하는 수의 문을 넣을 수 있습니다 `Exit For` `For Each` . 중첩 된 루프 내에서 사용 되는 경우 `For Each` `Exit For` 실행이 가장 안쪽의 루프를 종료 하 고 다음으로 높은 중첩 수준으로 제어를 전달 합니다.
 
-`Exit For`는 경우에 따라 일부 조건을 평가한 후에 `If` `Then` 사용 됩니다. 예를 들어 ... ...`Else` 구조체나. 다음 조건에 대해를 사용 하는 것이 좋습니다 `Exit For` .
+`Exit For` 는 경우에 따라 일부 조건을 평가한 후에 `If` `Then` 사용 됩니다. 예를 들어 ... ...`Else` 구조체나. 다음 조건에 대해를 사용 하는 것이 좋습니다 `Exit For` .
 
 - 계속 반복은 불필요 하거나 불가능 합니다. 이 오류는 잘못 된 값 이나 종료 요청으로 인해 발생할 수 있습니다.
 
-- 예외가 `Try` catch `Catch` ... ...`Finally`. `Exit For`블록의 끝에를 사용할 수 있습니다 `Finally` .
+- 예외가 `Try` catch `Catch` ... ...`Finally`. `Exit For` 블록의 끝에를 사용할 수 있습니다 `Finally` .
 
 - 무한 하거나 무한 한 횟수를 실행 하는 루프 인 무한 루프가 있습니다. 이러한 조건을 감지한 경우를 사용 하 여 루프를 `Exit For` 이스케이프할 수 있습니다. 자세한 내용은 다음 [을 참조 하세요. Loop 문](do-loop-statement.md).
 

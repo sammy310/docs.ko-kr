@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 함수 문 (Visual Basic)'
 title: Function 문
 ms.date: 05/12/2018
 f1_keywords:
@@ -28,18 +29,18 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 49cf4fead2c5594b7ac6815f82fea0dc995ea436
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e8a05b02c3a214f0572e85c1fc973cb9f03118ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404630"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769067"
 ---
 # <a name="function-statement-visual-basic"></a>Function 문(Visual Basic)
 
 프로시저를 정의 하는 이름, 매개 변수 및 코드를 선언 `Function` 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attributelist> ] [ accessmodifier ] [ proceduremodifiers ] [ Shared ] [ Shadows ] [ Async | Iterator ]
@@ -62,15 +63,15 @@ End Function
 
   - [공용](../modifiers/public.md)
 
-  - [보호](../modifiers/protected.md)
+  - [보호됨](../modifiers/protected.md)
 
   - [Friend](../modifiers/friend.md)
 
-  - [프라이빗](../modifiers/private.md)
+  - [개인](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
-  - [개인 보호](../modifiers/private-protected.md)
+  - [비공개 보호](../modifiers/private-protected.md)
 
   [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조하세요.
 
@@ -110,7 +111,7 @@ End Function
 
 - `name`
 
-  필수 요소. 프로시저의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.
+  필수 사항입니다. 프로시저의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.
 
 - `typeparamlist`
 
@@ -138,10 +139,10 @@ End Function
 
   `interface.definedname`
 
-  |부분|Description|
+  |파트|설명|
   |---|---|
-  |`interface`|필수 요소. 이 프로시저에 포함 된 클래스 또는 구조체에 의해 구현 된 인터페이스의 이름입니다.|
-  |`definedname`|필수 요소. 프로시저가 `interface`에 정의되는 이름입니다.|
+  |`interface`|필수 사항입니다. 이 프로시저에 포함 된 클래스 또는 구조체에 의해 구현 된 인터페이스의 이름입니다.|
+  |`definedname`|필수 사항입니다. 프로시저가 `interface`에 정의되는 이름입니다.|
 
 - `Handles`
 
@@ -157,10 +158,10 @@ End Function
 
   `eventvariable.event`
 
-  |부분|Description|
+  |파트|설명|
   |---|---|
-  |`eventvariable`|필수 요소. 이벤트를 발생 시키는 클래스 또는 구조체의 데이터 형식으로 선언 된 개체 변수입니다.|
-  |`event`|필수 요소. 이 프로시저가 처리 하는 이벤트의 이름입니다.|
+  |`eventvariable`|필수 사항입니다. 이벤트를 발생 시키는 클래스 또는 구조체의 데이터 형식으로 선언 된 개체 변수입니다.|
+  |`event`|필수 사항입니다. 이 프로시저가 처리 하는 이벤트의 이름입니다.|
 
 - `statements`
 
@@ -180,7 +181,7 @@ End Function
 
 `Function`모듈 수준 에서만 프로시저를 정의할 수 있습니다. 따라서 함수의 선언 컨텍스트는 클래스, 구조체, 모듈 또는 인터페이스 여야 하며 소스 파일, 네임 스페이스, 프로시저 또는 블록일 수 없습니다. 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](declaration-contexts-and-default-access-levels.md)을 참조하세요.
 
-`Function`프로시저는 기본적으로 공용 액세스입니다. 액세스 한정자를 사용 하 여 액세스 수준을 조정할 수 있습니다.
+`Function` 프로시저는 기본적으로 공용 액세스입니다. 액세스 한정자를 사용 하 여 액세스 수준을 조정할 수 있습니다.
 
 프로시저는 `Function` 프로시저에서 반환 하는 값의 데이터 형식을 선언할 수 있습니다. 모든 데이터 형식 또는 열거형, 구조체, 클래스 또는 인터페이스의 이름을 지정할 수 있습니다. 매개 변수를 지정 하지 않으면 `returntype` 프로시저가 반환 `Object` 됩니다.
 
@@ -242,7 +243,7 @@ For Each ...를 사용 하 여 클라이언트 코드에서 반복기를 호출 
 
 반복기 함수의 반환 형식은,, 또는 일 수 <xref:System.Collections.IEnumerable> 있습니다 <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.IEnumerator> <xref:System.Collections.Generic.IEnumerator%601> .
 
-자세한 내용은 [반복기](../../programming-guide/concepts/iterators.md)를 참조 하세요.
+자세한 내용은 [반복기](../../programming-guide/concepts/iterators.md)를 참조하세요.
 
 ## <a name="example"></a>예제
 

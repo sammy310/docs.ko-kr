@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: GoTo 문'
 title: GoTo 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 000f6754575bcce6b2d79d85541e755219aca956
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 804baec130111562225b09cbdc7b5fb2d73adba5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866619"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769054"
 ---
 # <a name="goto-statement"></a>GoTo 문
 
 프로시저에서 지정 된 줄로 무조건 분기 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 GoTo line  
@@ -50,9 +51,9 @@ GoTo line
   
 |블록 또는 지역|외부에서 분기|내부에서 외부 분기|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try` 블록|`Catch`같은 생성의 블록 에서만 <sup>1</sup>|전체 생성 외부에만|  
-|`Catch` 블록|허용 되지 않음|전체 생성 외부 또는 `Try` 동일한 생성의 블록 <sup>1</sup> 에만 해당|  
-|`Finally` 블록|허용 되지 않음|허용 되지 않음|  
+|`Try` 거부|`Catch`같은 생성의 블록 에서만 <sup>1</sup>|전체 생성 외부에만|  
+|`Catch` 거부|허용 되지 않음|전체 생성 외부 또는 `Try` 동일한 생성의 블록 <sup></sup> 에만 해당|  
+|`Finally` 거부|허용 되지 않음|허용 되지 않음|  
   
  <sup>1</sup> 일 경우 `Try` `Catch` ...`Finally` 생성은 다른 중첩 수준에서 중첩 되 고 `Catch` `Try` 다른 블록에는 포함 되지 않을 수 있습니다 `Try` . 중첩 된 ... `Try` `Catch` ...`Finally` 생성 `Try` 은 중첩 된 생성의 또는 블록에 완전히 포함 되어야 합니다 `Catch` .  
   
@@ -66,13 +67,13 @@ GoTo line
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Do...Loop 문](do-loop-statement.md)
 - [For...Next 문](for-next-statement.md)
 - [For Each...Next 문](for-each-next-statement.md)
 - [If...Then...Else 문](if-then-else-statement.md)
 - [Select...Case 문](select-case-statement.md)
-- [Try...Catch...Finally 명령문](try-catch-finally-statement.md)
+- [Try...Catch...Finally 문](try-catch-finally-statement.md)
 - [While...End While 문](while-end-while-statement.md)
 - [With...End With 문](with-end-with-statement.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Erase 문 (Visual Basic)'
 title: Erase 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - Erase keyword [Visual Basic]
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-ms.openlocfilehash: 33d88b5ce71ceab8d4b4b59d356c53a804c360be
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 295abec89f3d69f8f2641a5a3d574a2d10f98474
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873290"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769158"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase 문(Visual Basic)
 
 배열 변수를 해제 하 고 해당 요소에 사용 되는 메모리의 할당을 취소 하는 데 사용 됩니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Erase arraylist  
@@ -41,7 +42,7 @@ Erase arraylist
   
  [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [없는지](../nothing.md)
+- [Nothing](../nothing.md)
 - [ReDim 문](redim-statement.md)

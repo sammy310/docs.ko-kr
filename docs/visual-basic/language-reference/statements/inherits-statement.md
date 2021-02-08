@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: Inherits 문'
 title: Inherits Statement
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: dd8fbc71fdc859bb127764951464278267c0984c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: fba574ec207b384c1e7219341526a4a89c8a619c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875233"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768924"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 
 현재 클래스 또는 인터페이스가 다른 클래스나 인터페이스 집합에서 특성, 변수, 속성, 프로시저 및 이벤트를 상속 하도록 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Inherits basetypenames  
@@ -67,7 +68,7 @@ Inherits basetypenames
   
  이제 이라는 인터페이스에는 `thisInterface` , 및 인터페이스의 모든 정의가 포함 되어 있습니다 <xref:System.IComparable> <xref:System.IDisposable> <xref:System.IFormattable> . 상속 된 멤버는 두 개체의 형식 관련 비교를 위해 각각 제공 하 고 할당 된 리소스를 해제 하 고 개체의 값을로 표현 합니다 `String` . 을 구현 하는 클래스는 `thisInterface` 모든 기본 인터페이스의 모든 멤버를 구현 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [MustInherit](../modifiers/mustinherit.md)
 - [NotInheritable](../modifiers/notinheritable.md)

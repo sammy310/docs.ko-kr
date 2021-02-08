@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Mid 문'
 title: Mid 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: 0379a6cabe819365b22994a5e4f9353d98b2c768
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 29cf933cb38fc6ef831570d0940b481abf9cfecf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873200"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768885"
 ---
 # <a name="mid-statement"></a>Mid 문
 
 변수의 지정 된 문자 수를 `String` 다른 문자열의 문자로 바꿉니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Mid( _  

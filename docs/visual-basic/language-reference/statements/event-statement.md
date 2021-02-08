@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Event Statement'
 title: Event 문
 ms.date: 05/12/2018
 f1_keywords:
@@ -18,18 +19,18 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 0575a67f89f734c79259036fe48d6e2671c2d1ed
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 719b7af664795e2ff39d86bfa204112b7a90e1b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873261"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769126"
 ---
 # <a name="event-statement"></a>Event 문
 
 사용자 정의된 이벤트를 선언합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 [ <attrlist> ] [ accessmodifier ] _  
@@ -57,7 +58,7 @@ End Event
   
 ## <a name="parts"></a>부분  
   
-|파트|Description|  
+|파트|설명|  
 |---|---|  
 |`attrlist`|선택 사항입니다. 이 이벤트에 적용되는 특성 목록입니다. 여러 특성은 쉼표로 구분합니다. [특성 목록을](attribute-list.md) 꺾쇠 괄호 (" `<` " 및 "")로 묶어야 합니다 `>` .|  
 |`accessmodifier`|선택 사항입니다. 이벤트에 액세스할 수 있는 코드를 지정합니다. 다음 중 하나일 수 있습니다.<br /><br /> -   [Public](../modifiers/public.md)-이를 선언 하는 요소에 액세스할 수 있는 모든 코드에서 액세스할 수 있습니다.<br />-   [Protected](../modifiers/protected.md)-클래스 또는 파생 클래스 내의 코드만 액세스할 수 있습니다.<br />-   [Friend](../modifiers/friend.md)-동일한 어셈블리의 코드만 액세스할 수 있습니다.<br />-   [Private](../modifiers/private.md)-이를 선언 하는 요소의 코드만 액세스할 수 있습니다.<br /> -   이벤트 클래스, 파생 클래스 또는 동일한 어셈블리에 있는 [보호 된 Friend](../modifiers/protected-friend.md)전용 코드를 사용 하 여 액세스할 수 있습니다. <br />- 이벤트 클래스의 [Private Protected](../modifiers/private-protected.md)전용 코드 또는 동일한 어셈블리의 파생 클래스에서 액세스할 수 있습니다.|  
@@ -115,12 +116,12 @@ End Event
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
- F5 키를 눌러 이전 예제를 실행 하 고 **시작**이라는 레이블이 지정 된 단추를 클릭 합니다. 첫 번째 텍스트 상자에서 초를 카운트 다운하기 시작합니다. 전체 시간(10초)이 경과되면 첫 번째 텍스트 상자에 "Done"이 표시됩니다.  
+ F5 키를 눌러 이전 예제를 실행 하 고 **시작** 이라는 레이블이 지정 된 단추를 클릭 합니다. 첫 번째 텍스트 상자에서 초를 카운트 다운하기 시작합니다. 전체 시간(10초)이 경과되면 첫 번째 텍스트 상자에 "Done"이 표시됩니다.  
   
 > [!NOTE]
 > `My.Application.DoEvents` 메서드는 폼과 같은 방식으로 이벤트를 처리하지 않습니다. 폼에서 이벤트를 직접 처리하도록 하려면 다중 스레딩을 사용할 수 있습니다. 자세한 내용은 [관리 되는 스레딩](../../../standard/threading/index.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [RaiseEvent 문](raiseevent-statement.md)
 - [Implements 문](implements-statement.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Implements 절 (Visual Basic)'
 title: Implements 절
 ms.date: 07/20/2015
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: 7c95cf76b1bac24e2a0f20857b8984d54ebbea85
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 360d8812a7c49d6462818246b1448e171dcd597f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866160"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769002"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements 절(Visual Basic)
 
@@ -48,7 +49,7 @@ ms.locfileid: "90866160"
 - [Property Statement](property-statement.md)
 - [Sub 문](sub-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Implements 문](implements-statement.md)
 - [Interface 문](interface-statement.md)

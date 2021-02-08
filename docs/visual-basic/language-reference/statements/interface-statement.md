@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Interface 문 (Visual Basic)'
 title: Interface 문
 ms.date: 05/12/2018
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 3025adfe8c881a08df3b5f03253510c263c624d1
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e7fccec585fdbfd3946c2fa9874b5ea9b65ff014
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873230"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768911"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface 문(Visual Basic)
 
 인터페이스 이름을 선언 하 고 인터페이스에서 구성 하는 멤버의 정의를 소개 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 [ <attributelist> ] [ accessmodifier ] [ Shadows ] _  
@@ -69,7 +70,7 @@ End Interface
   
 ## <a name="rules"></a>규칙  
   
-- **인터페이스를 중첩 합니다.** 다른 인터페이스 내에서 인터페이스 하나를 정의할 수 있습니다. 외부 인터페이스를 *포함 하는 인터페이스*라고 하 고 내부 인터페이스를 *중첩 된 인터페이스*라고 합니다.  
+- **인터페이스를 중첩 합니다.** 다른 인터페이스 내에서 인터페이스 하나를 정의할 수 있습니다. 외부 인터페이스를 *포함 하는 인터페이스* 라고 하 고 내부 인터페이스를 *중첩 된 인터페이스* 라고 합니다.  
   
 - **멤버 선언입니다.** 속성 또는 프로시저를 인터페이스의 멤버로 선언 하는 경우 해당 속성 또는 프로시저의 *서명만* 정의 합니다. 여기에는 요소 형식 (속성 또는 프로시저), 해당 매개 변수 및 매개 변수 형식 및 반환 형식이 포함 됩니다. 이로 인해 멤버 정의는 한 줄의 코드만 사용 하 고 또는와 같은 종료 문은 `End Function` `End Property` 인터페이스에서 유효 하지 않습니다.  
   
@@ -87,7 +88,7 @@ End Interface
   
      클래스가 프로시저를 구현 하는 경우 프로시저를로 지정할 수 없습니다 `Shared` .  
   
-- **기본 속성입니다.** 인터페이스는 속성 이름을 사용 하지 않고 참조할 수 있는 *기본 속성*으로 최대 하나의 속성을 지정할 수 있습니다. 이러한 속성을 [Default](../modifiers/default.md) 한정자로 선언 하 여 지정 합니다.  
+- **기본 속성입니다.** 인터페이스는 속성 이름을 사용 하지 않고 참조할 수 있는 *기본 속성* 으로 최대 하나의 속성을 지정할 수 있습니다. 이러한 속성을 [Default](../modifiers/default.md) 한정자로 선언 하 여 지정 합니다.  
   
      이는 인터페이스가 none을 상속 하는 경우에만 기본 속성을 정의할 수 있음을 의미 합니다.  
   
@@ -115,7 +116,7 @@ End Interface
   
  `Property`및 `Function` 문은 `End Property` `End Function` 인터페이스 내에서 및로 끝나는 블록을 제공 하지 않습니다. 인터페이스는 해당 멤버의 서명만 정의 합니다. 전체 `Property` 및 블록은를 `Function` 구현 하는 클래스에 나타납니다 `thisInterface` .  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [인터페이스](../../programming-guide/language-features/interfaces/index.md)
 - [Class 문](class-statement.md)
@@ -127,4 +128,4 @@ End Interface
 - [Visual Basic의 제네릭 형식](../../programming-guide/language-features/data-types/generic-types.md)
 - [제네릭 인터페이스의 가변성](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
 - [위치](../modifiers/in-generic-modifier.md)
-- [제한이](../modifiers/out-generic-modifier.md)
+- [Out](../modifiers/out-generic-modifier.md)

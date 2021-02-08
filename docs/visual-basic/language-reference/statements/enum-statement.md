@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Enum 문 (Visual Basic)'
 title: Enum 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 976cc68d67c69ec86918962ab2dd3406d15aed9a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dcaf28e949f8d34b8d72b07d8029ea10d6baeabf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404734"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769171"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum 문(Visual Basic)
 
 열거형을 선언 하 고 해당 멤버의 값을 정의 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attributelist> ] [ accessmodifier ]  [ Shadows ]
@@ -45,15 +46,15 @@ End Enum
 
   - [공용](../modifiers/public.md)
 
-  - [보호](../modifiers/protected.md)
+  - [보호됨](../modifiers/protected.md)
 
   - [Friend](../modifiers/friend.md)
 
-  - [프라이빗](../modifiers/private.md)
+  - [개인](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
-  - [개인 보호](../modifiers/private-protected.md)
+  - [비공개 보호](../modifiers/private-protected.md)
 
 - `Shadows`
 
@@ -61,7 +62,7 @@ End Enum
 
 - `enumerationname`
 
-  필수 요소. 열거형의 이름입니다. 올바른 이름에 대 한 자세한 내용은 [선언 된 요소 이름](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조 하세요.
+  필수 사항입니다. 열거형의 이름입니다. 올바른 이름에 대 한 자세한 내용은 [선언 된 요소 이름](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조 하세요.
 
 - `datatype`
 
@@ -69,13 +70,13 @@ End Enum
 
 - `memberlist`
 
-  필수 요소. 이 문에서 선언 되는 멤버 상수 목록입니다. 개별 소스 코드 줄에 여러 멤버가 표시 됩니다.
+  필수 사항입니다. 이 문에서 선언 되는 멤버 상수 목록입니다. 개별 소스 코드 줄에 여러 멤버가 표시 됩니다.
 
-  각 `member` 에는 다음과 같은 구문과 파트가 있습니다.`[<attribute list>] member name [ = initializer ]`
+  각 `member` 에는 다음과 같은 구문과 파트가 있습니다. `[<attribute list>] member name [ = initializer ]`
 
-  |부분|Description|
+  |파트|설명|
   |---|---|
-  |`membername`|필수 요소. 이 멤버의 이름입니다.|
+  |`membername`|필수 사항입니다. 이 멤버의 이름입니다.|
   |`initializer`|선택 사항입니다. 컴파일 시간에 평가 되 고이 멤버에 할당 되는 식입니다.|
 
 - `End` `Enum`
@@ -98,7 +99,7 @@ End Enum
 
 열거형에는 이름, 기본 데이터 형식 및 멤버 집합이 있습니다. 각 멤버는 상수를 나타냅니다.
 
-프로시저 외부의 클래스, 구조체, 모듈 또는 인터페이스 수준에서 선언 된 열거형은 *멤버 열거형*입니다. 선언 하는 클래스, 구조체, 모듈 또는 인터페이스의 멤버입니다.
+프로시저 외부의 클래스, 구조체, 모듈 또는 인터페이스 수준에서 선언 된 열거형은 *멤버 열거형* 입니다. 선언 하는 클래스, 구조체, 모듈 또는 인터페이스의 멤버입니다.
 
 멤버 열거형은 클래스, 구조체, 모듈 또는 인터페이스 내의 어디에서 나 액세스할 수 있습니다. 클래스, 구조체 또는 모듈 외부의 코드는 해당 클래스, 구조체 또는 모듈의 이름을 사용 하 여 멤버 열거형의 이름을 한정 해야 합니다. 소스 파일에 [Imports](imports-statement-net-namespace-and-type.md) 문을 추가 하 여 정규화 된 이름을 사용 하지 않아도 되는 것을 방지할 수 있습니다.
 

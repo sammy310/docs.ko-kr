@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: Operator 문'
 title: Operator Statement
 ms.date: 07/20/2015
 f1_keywords:
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: f9e6ffe5a49715592399321ab471d73826e05d8e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f6a8ae2ac51e8bc8fe1be0de3549004b9dda4ef4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404397"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768820"
 ---
 # <a name="operator-statement"></a>Operator Statement
 
 클래스 또는 구조체에서 연산자 프로시저를 정의 하는 연산자 기호, 피연산자 및 코드를 선언 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attrlist> ] Public [ Overloads ] Shared [ Shadows ] [ Widening | Narrowing ]
@@ -46,13 +47,13 @@ End Operator
 선택 사항입니다. [특성 목록](attribute-list.md)을 참조 하십시오.
 
 `Public`  
-필수 요소. 이 연산자 프로시저에 [공용](../modifiers/public.md) 액세스 권한이 있음을 나타냅니다.
+필수 사항입니다. 이 연산자 프로시저에 [공용](../modifiers/public.md) 액세스 권한이 있음을 나타냅니다.
 
 `Overloads`  
 선택 사항입니다. [오버 로드](../modifiers/overloads.md)를 참조 하세요.
 
 `Shared`  
-필수 요소. 이 연산자 프로시저가 [공유](../modifiers/shared.md) 프로시저 임을 나타냅니다.
+필수 사항입니다. 이 연산자 프로시저가 [공유](../modifiers/shared.md) 프로시저 임을 나타냅니다.
 
 `Shadows`  
 선택 사항입니다. [그림자](../modifiers/shadows.md)를 참조 하세요.
@@ -64,22 +65,22 @@ End Operator
 을 지정 하지 않는 한 변환 연산자에 필요 `Widening` 합니다. 이 연산자 프로시저가 [축소](../modifiers/narrowing.md) 변환을 정의 함을 나타냅니다. 이 도움말 페이지의 "확대 및 축소 변환"을 참조 하십시오.
 
 `operatorsymbol`  
-필수 요소. 이 연산자 프로시저가 정의 하는 연산자의 기호 또는 식별자입니다.
+필수 사항입니다. 이 연산자 프로시저가 정의 하는 연산자의 기호 또는 식별자입니다.
 
 `operand1`  
-필수 요소. 단항 연산자의 단일 피연산자 이름 및 형식 (변환 연산자 포함) 또는 이항 연산자의 왼쪽 피연산자입니다.
+필수 사항입니다. 단항 연산자의 단일 피연산자 이름 및 형식 (변환 연산자 포함) 또는 이항 연산자의 왼쪽 피연산자입니다.
 
 `operand2`  
 이항 연산자에 필요 합니다. 이항 연산자 오른쪽 피연산자의 이름과 형식입니다.
 
-`operand1`및에 `operand2` 는 다음과 같은 구문과 부분이 있습니다.
+`operand1` 및에 `operand2` 는 다음과 같은 구문과 부분이 있습니다.
 
 `[ ByVal ] operandname [ As operandtype ]`
 
-|부분|Description|
+|파트|설명|
 |----------|-----------------|
 |`ByVal`|선택 사항 이지만 전달 메커니즘이 [ByVal](../modifiers/byval.md)이어야 합니다.|
-|`operandname`|필수 요소. 이 피연산자를 나타내는 변수의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.|
+|`operandname`|필수 사항입니다. 이 피연산자를 나타내는 변수의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.|
 |`operandtype`|가이 아닌 경우 선택 사항입니다 `Option Strict` `On` . 이 피연산자의 데이터 형식입니다.|
 
 `type`  
@@ -89,10 +90,10 @@ End Operator
 선택 사항입니다. 연산자 프로시저에서 실행 하는 문 블록입니다.
 
 `returnvalue`  
-필수 요소. 연산자 프로시저가 호출 코드에 반환 하는 값입니다.
+필수 사항입니다. 연산자 프로시저가 호출 코드에 반환 하는 값입니다.
 
 `End` `Operator`  
-필수 요소. 이 연산자 프로시저의 정의를 종료 합니다.
+필수 사항입니다. 이 연산자 프로시저의 정의를 종료 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -102,11 +103,11 @@ End Operator
 
 연산자 기호 또는 식별자를 사용 하 여 반환 값을 저장할 수 없습니다. 문을 사용 해야 하 `Return` 고 값을 지정 해야 합니다. `Return`프로시저의 아무 곳에 나 원하는 수의 문이 표시 될 수 있습니다.
 
-이러한 방식으로 연산자를 정의 하는 것은 키워드를 사용 하는지 여부에 관계 없이 *연산자 오버 로드*라고 `Overloads` 합니다. 다음 표에는 정의할 수 있는 연산자가 나와 있습니다.
+이러한 방식으로 연산자를 정의 하는 것은 키워드를 사용 하는지 여부에 관계 없이 *연산자 오버 로드* 라고 `Overloads` 합니다. 다음 표에는 정의할 수 있는 연산자가 나와 있습니다.
 
 |Type|연산자|
 |----------|---------------|
-|단항 연산자|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|
+|단항|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|
 |이진|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|
 |변환(단항)|`CType`|
 
@@ -174,7 +175,7 @@ End Operator
 
 ## <a name="example"></a>예제
 
-다음 코드 예제에서는 문을 사용 하 여 `Operator` `And` ,, `Or` `IsFalse` 및 `IsTrue` 연산자에 대 한 연산자 프로시저를 포함 하는 구조체의 개요를 정의 합니다. `And`및 `Or` 는 각각 형식과 반환 형식의 두 피연산자를 사용 `abc` `abc` 합니다. `IsFalse`및 `IsTrue` 는 각각 형식의 단일 피연산자를 사용 `abc` 하 고를 반환 `Boolean` 합니다. 이러한 정의를 통해 호출 코드는 `And` ,, `AndAlso` 및를 `Or` `OrElse` 형식의 피연산자와 함께 사용할 수 `abc` 있습니다.
+다음 코드 예제에서는 문을 사용 하 여 `Operator` `And` ,, `Or` `IsFalse` 및 `IsTrue` 연산자에 대 한 연산자 프로시저를 포함 하는 구조체의 개요를 정의 합니다. `And` 및 `Or` 는 각각 형식과 반환 형식의 두 피연산자를 사용 `abc` `abc` 합니다. `IsFalse` 및 `IsTrue` 는 각각 형식의 단일 피연산자를 사용 `abc` 하 고를 반환 `Boolean` 합니다. 이러한 정의를 통해 호출 코드는 `And` ,, `AndAlso` 및를 `Or` `OrElse` 형식의 피연산자와 함께 사용할 수 `abc` 있습니다.
 
 [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]
 

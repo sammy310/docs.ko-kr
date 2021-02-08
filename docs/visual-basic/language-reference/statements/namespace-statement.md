@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Namespace 문'
 title: Namespace 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: cef339a66458ee9657dc1706082c3c5328746dc6
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 2c315947a26f72a90e03bc1f4bf1b5f647866b33
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875218"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768859"
 ---
 # <a name="namespace-statement"></a>Namespace 문
 
 네임 스페이스의 이름을 선언 하 고이 선언 뒤에 오는 소스 코드가 해당 네임 스페이스 내에서 컴파일되도록 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Namespace [Global.] { name | name.name }  
@@ -65,7 +66,7 @@ End Namespace
   
 ## <a name="root-namespace"></a>루트 네임 스페이스  
 
- 프로젝트의 모든 네임 스페이스 이름은 *루트 네임 스페이스*를 기반으로 합니다. Visual Studio는 프로젝트 이름을 프로젝트의 모든 코드에 대한 기본 루트 네임스페이스로 할당합니다. 예를 들어 프로젝트 이름이 `Payroll`이면 해당 프로그래밍 요소는 해당 네임스페이스 `Payroll`에 속합니다. 을 선언 하는 경우 `Namespace funding` 해당 네임 스페이스의 전체 이름은 `Payroll.funding` 입니다.  
+ 프로젝트의 모든 네임 스페이스 이름은 *루트 네임 스페이스* 를 기반으로 합니다. Visual Studio는 프로젝트 이름을 프로젝트의 모든 코드에 대한 기본 루트 네임스페이스로 할당합니다. 예를 들어 프로젝트 이름이 `Payroll`이면 해당 프로그래밍 요소는 해당 네임스페이스 `Payroll`에 속합니다. 을 선언 하는 경우 `Namespace funding` 해당 네임 스페이스의 전체 이름은 `Payroll.funding` 입니다.  
   
  `Namespace`제네릭 목록 클래스 예제와 같이 문에서 기존 네임 스페이스를 지정 하려는 경우 루트 네임 스페이스를 null 값으로 설정할 수 있습니다. 이렇게 하려면 **프로젝트** 메뉴에서 **프로젝트 속성** 을 클릭 한 다음, 상자가 비어 있도록 **루트 네임 스페이스** 항목의 선택을 취소 합니다. 제네릭 목록 클래스 예제에서이 작업을 수행 하지 않은 경우 Visual Basic 컴파일러는 `System.Collections.Generic` `Payroll` 전체 이름을 사용 하 여 프로젝트 내에서 새 네임 스페이스를 사용 합니다 `Payroll.System.Collections.Generic` .  
   
@@ -112,7 +113,7 @@ Namespace System.Collections.Generic
 End Namespace  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Imports 문(.NET 네임스페이스 및 형식)](imports-statement-net-namespace-and-type.md)
 - [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)

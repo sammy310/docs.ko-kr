@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Module 문'
 title: Module 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: 24a27ba41f5ac889f2f2725a2852368a4292a6fb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2a19bcfa4521d34b5a91fbc9de412a6d8f6f39c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404460"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768872"
 ---
 # <a name="module-statement"></a>Module 문
 
 모듈 이름을 선언 하 고 모듈에서 구성 하는 변수, 속성, 이벤트 및 프로시저의 정의를 소개 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attributelist> ] [ accessmodifier ]  Module name
@@ -47,7 +48,7 @@ End Module
 [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)을 참조하세요.
 
 `name`  
-필수 요소. 이 모듈의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.
+필수 사항입니다. 이 모듈의 이름입니다. [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)을 참조하세요.
 
 `statements`  
 선택 사항입니다. 이 모듈의 변수, 속성, 이벤트, 프로시저 및 중첩 형식을 정의 하는 문입니다.
@@ -57,7 +58,7 @@ End Module
 
 ## <a name="remarks"></a>설명
 
-`Module`문은 네임 스페이스 전체에서 사용할 수 있는 참조 형식을 정의 합니다. *모듈* ( *표준 모듈이*라고도 함)은 클래스와 비슷하지만 몇 가지 중요 한 차이점이 있습니다. 모든 모듈에는 정확히 하나의 인스턴스가 있으며 변수에 만들거나 할당할 필요가 없습니다. 모듈은 상속을 지원 하거나 인터페이스를 구현 하지 않습니다. 모듈은 클래스 또는 구조체 라는 점에서 *형식이* 아닙니다. 프로그래밍 요소를 모듈의 데이터 형식으로 선언할 수 없습니다.
+`Module`문은 네임 스페이스 전체에서 사용할 수 있는 참조 형식을 정의 합니다. *모듈* ( *표준 모듈이* 라고도 함)은 클래스와 비슷하지만 몇 가지 중요 한 차이점이 있습니다. 모든 모듈에는 정확히 하나의 인스턴스가 있으며 변수에 만들거나 할당할 필요가 없습니다. 모듈은 상속을 지원 하거나 인터페이스를 구현 하지 않습니다. 모듈은 클래스 또는 구조체 라는 점에서 *형식이* 아닙니다. 프로그래밍 요소를 모듈의 데이터 형식으로 선언할 수 없습니다.
 
 는 `Module` 네임 스페이스 수준 에서만 사용할 수 있습니다. 즉, 모듈의 *선언 컨텍스트* 는 소스 파일 또는 네임 스페이스 여야 하 고 클래스, 구조체, 모듈, 인터페이스, 프로시저 또는 블록일 수 없습니다. 모듈은 다른 모듈 또는 모든 형식 내에서 중첩할 수 없습니다. 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](declaration-contexts-and-default-access-levels.md)을 참조하세요.
 
@@ -71,7 +72,7 @@ End Module
 
 이러한 요소에는 여러 가지 유사점이 있지만 몇 가지 중요 한 차이점도 있습니다.
 
-- **기술.** 이전 버전의 Visual Basic에서는 *클래스 모듈* (cls 파일)과 *표준 모듈* (bas 파일)의 두 가지 모듈 형식을 인식 합니다. 현재 버전은 이러한 *클래스* 및 *모듈*을 각각 호출 합니다.
+- **용어** 이전 버전의 Visual Basic에서는 *클래스 모듈* (cls 파일)과 *표준 모듈* (bas 파일)의 두 가지 모듈 형식을 인식 합니다. 현재 버전은 이러한 *클래스* 및 *모듈* 을 각각 호출 합니다.
 
 - **공유 멤버.** 클래스의 멤버가 공유 또는 인스턴스 멤버 인지 여부를 제어할 수 있습니다.
 
@@ -93,7 +94,7 @@ End Module
 
 - **범위.** 모듈은 전체 네임 스페이스 범위에 있습니다.
 
-  모든 모듈 멤버의 범위는 전체 모듈입니다. 모든 멤버가 *형식 승격*을 거칩니다. 그러면 해당 범위가 모듈이 포함 된 네임 스페이스로 승격 됩니다. 자세한 내용은 [형식 승격](../../programming-guide/language-features/declared-elements/type-promotion.md)을 참조 하세요.
+  모든 모듈 멤버의 범위는 전체 모듈입니다. 모든 멤버가 *형식 승격* 을 거칩니다. 그러면 해당 범위가 모듈이 포함 된 네임 스페이스로 승격 됩니다. 자세한 내용은 [형식 승격](../../programming-guide/language-features/declared-elements/type-promotion.md)을 참조 하세요.
 
 - **조인의.** 프로젝트에 여러 모듈을 포함할 수 있으며, 둘 이상의 모듈에서 같은 이름을 사용 하 여 멤버를 선언할 수 있습니다. 그러나 참조를 해당 모듈 외부에서 가져온 경우 적절 한 모듈 이름을 사용 하 여 이러한 멤버에 대 한 참조를 정규화 해야 합니다. 자세한 내용은 [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)을 참조하세요.
 

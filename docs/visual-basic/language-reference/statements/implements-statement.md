@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Implements 문'
 title: Implements 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: b982057d2094f807b68d5190dfad388fb9a2c65a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: aa53d1f3b4ba9d9111f5ffb09198a11511f8d9e9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873240"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768989"
 ---
 # <a name="implements-statement"></a>Implements 문
 
 인터페이스가 표시 되는 클래스 또는 구조체 정의에 구현 해야 하는 인터페이스 또는 인터페이스 멤버를 하나 이상 지정 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Implements interfacename [, ...]  
@@ -42,7 +43,7 @@ Implements interfacename.interfacemember [, ...]
   
  `Implements`문은 또는 문 바로 뒤에와 야 합니다 `Class` `Structure` .  
   
- 인터페이스를 구현 하는 경우 인터페이스에 선언 된 모든 멤버를 구현 해야 합니다. 멤버를 생략 하면 구문 오류로 간주 됩니다. 개별 멤버를 구현 하려면 [Implements](implements-clause.md) `Implements` 클래스 또는 구조체에서 멤버를 선언할 때 Implements 키워드 (문과 분리 됨)를 지정 합니다. 자세한 내용은 [인터페이스](../../programming-guide/language-features/interfaces/index.md)를 참조하세요.  
+ 인터페이스를 구현 하는 경우 인터페이스에 선언 된 모든 멤버를 구현 해야 합니다. 멤버를 생략 하면 구문 오류로 간주 됩니다. 개별 멤버를 구현 하려면 [](implements-clause.md) `Implements` 클래스 또는 구조체에서 멤버를 선언할 때 Implements 키워드 (문과 분리 됨)를 지정 합니다. 자세한 내용은 [인터페이스](../../programming-guide/language-features/interfaces/index.md)를 참조하세요.  
   
  클래스는 속성 및 프로시저의 [전용](../modifiers/private.md) 구현을 사용할 수 있지만 이러한 멤버는 구현 클래스의 인스턴스를 인터페이스 형식으로 선언 된 변수로 캐스팅 하 여 액세스할 수 있습니다.  
   
@@ -60,7 +61,7 @@ Implements interfacename.interfacemember [, ...]
   
  [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [구현](implements-clause.md)
 - [Interface 문](interface-statement.md)

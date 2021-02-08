@@ -1,4 +1,5 @@
 ---
+description: 다음에 대해 자세히 알아보세요. 다음 문 (Visual Basic)
 title: For...Next 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -23,18 +24,18 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 6896c6cfb4ec5d6207011e56b72639c459120e53
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f26d9cb1885d9d22b96d622f44325aad64e34d1d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404643"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769080"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 문(Visual Basic)
 
 지정 된 횟수 만큼 문 그룹을 반복 합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 For counter [ As datatype ] = start To end [ Step step ]
@@ -48,7 +49,7 @@ Next [ counter ]
 
 ## <a name="parts"></a>부분
 
-|부분|Description|
+|파트|설명|
 |----------|-----------------|
 |`counter`|`For`문에 필요 합니다. 숫자 변수입니다. 루프의 제어 변수입니다. 자세한 내용은이 항목의 뒷부분에 나오는 [Counter 인수](#BKMK_Counter) 를 참조 하세요.|
 |`datatype`|선택 사항입니다. 의 데이터 형식 `counter` 입니다. 자세한 내용은이 항목의 뒷부분에 나오는 [Counter 인수](#BKMK_Counter) 를 참조 하세요.|
@@ -58,7 +59,7 @@ Next [ counter ]
 |`statements`|선택 사항입니다. `For`에서 `Next` 지정 된 횟수 만큼 실행 하는 하나 이상의 문입니다.|
 |`Continue For`|선택 사항입니다. 제어를 다음 루프 반복으로 전송 합니다.|
 |`Exit For`|선택 사항입니다. 루프 외부로 제어를 전달 `For` 합니다.|
-|`Next`|필수 요소. 루프의 정의를 종료 `For` 합니다.|
+|`Next`|필수 사항입니다. 루프의 정의를 종료 `For` 합니다.|
 
 > [!NOTE]
 > `To`이 문에는 키워드를 사용 하 여 카운터의 범위를 지정 합니다. Select ...에서이 키워드를 사용할 수도 있습니다. [ Case 문과](select-case-statement.md) 배열 선언에 있습니다. 배열 선언에 대 한 자세한 내용은 [Dim 문](dim-statement.md)을 참조 하십시오.
@@ -100,7 +101,7 @@ Next [ counter ]
 
 에 원하는 수의 문을 추가할 수 있습니다. `Exit For` `For``Next` loop. 중첩 된 내에서 사용 하는 `For` 경우 ...`Next` 루프 `Exit For` 는 가장 안쪽의 루프를 종료 하 고 다음으로 높은 중첩 수준으로 제어를 전달 합니다.
 
-`Exit For`는 일부 조건을 평가한 후에 사용 됩니다. 예 `If` `Then` 를 들어 ... ...`Else` 구조). 다음 조건에 대해를 사용 하는 것이 좋습니다 `Exit For` .
+`Exit For` 는 일부 조건을 평가한 후에 사용 됩니다. 예 `If` `Then` 를 들어 ... ...`Else` 구조). 다음 조건에 대해를 사용 하는 것이 좋습니다 `Exit For` .
 
 - 계속 반복은 불필요 하거나 불가능 합니다. 잘못 된 값 또는 종료 요청은이 조건을 만들 수 있습니다.
 
@@ -127,18 +128,18 @@ Next [ counter ]
 |**단계 값**|**루프 실행**|
 |--------------------|--------------------------|
 |양수 또는 0|`counter` <= `end`|
-|Negative|`counter` >= `end`|
+|음수|`counter` >= `end`|
 
 `step`의 기본값은 1입니다.
 
-### <a name="counter-argument"></a><a name="BKMK_Counter"></a>Counter 인수
+### <a name="counter-argument"></a><a name="BKMK_Counter"></a> Counter 인수
 
 다음 표에서는가 `counter` 전체 루프로 범위가 지정 된 새 지역 변수를 정의 하는지 여부를 나타냅니다 `For…Next` . 이러한 결정은가 있는지 여부 `datatype` 와 `counter` 가 이미 정의 되어 있는지 여부에 따라 달라 집니다.
 
 |`datatype`있나요?|`counter`이미 정의 되어 있나요?|결과 ( `counter` 가 전체 루프로 범위가 지정 된 새 지역 변수를 정의 `For...Next` )|
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|
-|예|예|`counter`는 이미 정의 되어 있으므로 아니요입니다. 의 범위가 `counter` 프로시저에 로컬인 경우 컴파일 타임 경고가 발생 합니다.|
-|예|아니요|예. 데이터 형식은 `start` , 및 식에서 유추 됩니다 `end` `step` . 형식 유추에 대 한 자세한 내용은 [Option 유추 문](option-infer-statement.md) 및 [지역 형식 유추](../../programming-guide/language-features/variables/local-type-inference.md)를 참조 하세요.|
+|아니요|예|`counter`는 이미 정의 되어 있으므로 아니요입니다. 의 범위가 `counter` 프로시저에 로컬인 경우 컴파일 타임 경고가 발생 합니다.|
+|아니요|아니요|예. 데이터 형식은 `start` , 및 식에서 유추 됩니다 `end` `step` . 형식 유추에 대 한 자세한 내용은 [Option 유추 문](option-infer-statement.md) 및 [지역 형식 유추](../../programming-guide/language-features/variables/local-type-inference.md)를 참조 하세요.|
 |예|예|예, 하지만 기존 변수가 프로시저 외부에서 정의 된 경우에만 가능 `counter` 합니다. 해당 변수는 분리 된 상태로 유지 됩니다. 기존 `counter` 변수의 범위가 프로시저에 로컬인 경우 컴파일 타임 오류가 발생 합니다.|
 |예|아니요|예.|
 

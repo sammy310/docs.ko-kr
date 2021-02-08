@@ -1,4 +1,5 @@
 ---
+description: 다음에 대해 자세히 알아보세요. 그런 다음 ... Else 문 (Visual Basic)
 title: If...Then...Else 문
 ms.date: 04/16/2018
 f1_keywords:
@@ -21,18 +22,18 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: 0884b71c24742286e695e720add9d00dd4bfe52b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 83850771354b95f0e2d9c1bf1360a61d5264fe2e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404591"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769015"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else 문(Visual Basic)
 
 식의 값에 따라 문 그룹을 조건부로 실행합니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 ' Multiline syntax:
@@ -59,9 +60,9 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
 ## <a name="parts"></a>부분
 
 `condition` \
-필수 요소. 식 는 또는로 `True` 계산 `False` 하거나 암시적으로로 변환할 수 있는 데이터 형식으로 계산 되어야 합니다 `Boolean` .
+필수 사항입니다. 식 는 또는로 `True` 계산 `False` 하거나 암시적으로로 변환할 수 있는 데이터 형식으로 계산 되어야 합니다 `Boolean` .
 
-식이 Nothing으로 계산 되는 [null을 허용](../../programming-guide/language-features/data-types/nullable-value-types.md) 하는 변수인 경우 `Boolean` 조건은 식이 인 것 처럼 처리 되 고 블록이 있는 경우에는 블록을 [Nothing](../nothing.md)평가 하 고 블록이 있으면 `False` `ElseIf` `Else` 실행 합니다.
+식이 Nothing으로 계산 되는 [null을 허용](../../programming-guide/language-features/data-types/nullable-value-types.md) 하는 변수인 경우 `Boolean` 조건은 식이 인 것 처럼 처리 되 고 블록이 있는 경우에는 블록을 [](../nothing.md)평가 하 고 블록이 있으면 `False` `ElseIf` `Else` 실행 합니다.
 
 `Then` \
 한 줄 구문에 필요 합니다. 여러 줄 구문에서 선택 사항입니다.
@@ -94,7 +95,7 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
 > [!TIP]
 > [Select ... Case 문은](select-case-statement.md) 가능한 값이 여러 개 있는 단일 식을 평가할 때 더 유용할 수 있습니다.
 
-### <a name="single-line-syntax"></a>한 줄 구문
+### <a name="single-line-syntax"></a>Single-Line 구문
 
 True 인 경우 코드를 실행 하는 단일 조건에 대해 한 줄 구문을 사용할 수 있습니다. 그러나 여러 줄로 구성 된 구문은 더 많은 구조와 유연성을 제공 하며 읽기, 유지 관리 및 디버깅 하기가 더 쉽습니다.
 
@@ -118,9 +119,9 @@ True 인 경우 코드를 실행 하는 단일 조건에 대해 한 줄 구문�
 
 [!code-vb[VbVbalrStatements#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#102)]
 
-## <a name="single-line-syntax-example"></a>한 줄 구문 예제
+## <a name="single-line-syntax-example"></a>Single-Line 구문 예제
 
-<a name="single-line"></a>다음 예제에서는 한 줄의 구문을 사용 하는 방법을 보여 줍니다.
+<a name="single-line"></a> 다음 예제에서는 한 줄의 구문을 사용 하는 방법을 보여 줍니다.
 
 [!code-vb[VbVbalrStatements#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#103)]
 

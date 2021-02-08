@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: On Error 문 (Visual Basic)'
 title: On Error 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 7e007d59292fc577c0c8927766423ba6f7896a71
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 593e90b07101d08d18a0db127bcb74cf6509f317
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873187"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768833"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 문(Visual Basic)
 
@@ -38,7 +39,7 @@ ms.locfileid: "90873187"
 > [!NOTE]
 > `Error`키워드는 이전 버전과의 호환성을 위해 지원 되는 [오류 문에서](error-statement.md)도 사용 됩니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 On Error { GoTo [ line | 0 | -1 ] | Resume Next }
@@ -125,7 +126,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 
  **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.VisualBasic.dll)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.Information.Err%2A>
 - <xref:Microsoft.VisualBasic.ErrObject.Number%2A>
@@ -135,4 +136,4 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 - [Exit 문](exit-statement.md)
 - [Resume 문](resume-statement.md)
 - [오류 메시지](../error-messages/index.md)
-- [Try ... Catch ... Finally 문](try-catch-finally-statement.md)
+- [Try...Catch...Finally 문](try-catch-finally-statement.md)

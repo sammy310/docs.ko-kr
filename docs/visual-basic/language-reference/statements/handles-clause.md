@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Handles 절 (Visual Basic)'
 title: Handles 절
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 347f521267d4fd954ac359ab25ed5810cfd71d34
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 2bddfdecc163feacaaf042a7928ab16af324b0a3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873252"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769028"
 ---
 # <a name="handles-clause-visual-basic"></a>Handles 절(Visual Basic)
 
 지정된 이벤트를 처리하는 프로시저를 선언합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 proceduredeclaration Handles eventlist  
@@ -60,7 +61,7 @@ proceduredeclaration Handles eventlist
   
  [!code-vb[VbVbalrEvents#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#42)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [WithEvents](../modifiers/withevents.md)
 - [AddHandler 문](addhandler-statement.md)

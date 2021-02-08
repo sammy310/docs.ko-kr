@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Error 문'
 title: Error 문
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: f3f9f5ecb96686fe525e98cf64672d81a3145796
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6c152e9e4fb4fa3a937042761c7d776b337f4fef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873275"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99769145"
 ---
 # <a name="error-statement"></a>Error 문
 
 오류가 발생 한 경우를 시뮬레이션 합니다.  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Error errornumber  
@@ -67,7 +68,7 @@ Error 11   ' Simulate the "Division by zero" error.
   
  **어셈블리:** Visual Basic 런타임 라이브러리 (Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>
 - <xref:Microsoft.VisualBasic.Information.Err%2A>

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Imports 문 (XML 네임 스페이스)'
 title: Imports 문-XML 네임 스페이스
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: a3184d68b0e4cdff5d4296a5a638e22b4e83bcde
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2ca285c9104c5a03b265dd15ce38a378e66d6916
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404539"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99768963"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports 문(XML 네임스페이스)
 
 Xml 리터럴 및 XML 축 속성에 사용할 XML 네임 스페이스 접두사를 가져옵니다.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```vb
 Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
@@ -32,7 +33,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 선택 사항입니다. XML 요소 및 특성에서 참조할 수 있는 문자열 `xmlNamespaceName` 입니다. 을 제공 하지 않으면 `xmlNamespacePrefix` 가져온 xml 네임 스페이스가 기본 xml 네임 스페이스입니다. 유효한 XML 식별자 여야 합니다. 자세한 내용은 [선언 된 XML 요소 및 특성의 이름](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)을 참조 하세요.
 
 `xmlNamespaceName`  
-필수 요소. 가져올 XML 네임 스페이스를 식별 하는 문자열입니다.
+필수 사항입니다. 가져올 XML 네임 스페이스를 식별 하는 문자열입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -42,7 +43,7 @@ XML 네임 스페이스 접두사는 동일한 네임 스페이스에 있는 XML
 
 네임 스페이스 접두사 없이 전역 XML 네임 스페이스를 정의 하는 경우 (예: `Imports <xmlns="http://SomeNameSpace>"` ) 해당 네임 스페이스는 기본 XML 네임 스페이스로 간주 됩니다. 기본 XML 네임 스페이스는 네임 스페이스를 명시적으로 지정 하지 않는 모든 XML 요소 리터럴 또는 XML 특성 축 속성에 사용 됩니다. 기본 네임 스페이스는 지정 된 네임 스페이스가 빈 네임 스페이스 (즉,) 인 경우에도 사용 됩니다 `xmlns=""` . 기본 XML 네임 스페이스는 xml 리터럴의 XML 특성이 나 네임 스페이스를 포함 하지 않는 XML 특성 축 속성에는 적용 되지 않습니다.
 
-*로컬 xml 네임 스페이스*라고 하는 xml 리터럴에 정의 된 xml 네임 스페이스는 문에 정의 된 xml 네임 스페이스 보다 우선적으로 적용 됩니다 `Imports` . 문에 의해 정의 된 XML 네임 스페이스는 `Imports` Visual Basic 프로젝트에 대해 가져온 xml 네임 스페이스 보다 우선적으로 적용 됩니다. Xml 리터럴이 XML 네임 스페이스를 정의 하는 경우 해당 로컬 네임 스페이스는 포함 식에 적용 되지 않습니다.
+*로컬 xml 네임 스페이스* 라고 하는 xml 리터럴에 정의 된 xml 네임 스페이스는 문에 정의 된 xml 네임 스페이스 보다 우선적으로 적용 됩니다 `Imports` . 문에 의해 정의 된 XML 네임 스페이스는 `Imports` Visual Basic 프로젝트에 대해 가져온 xml 네임 스페이스 보다 우선적으로 적용 됩니다. Xml 리터럴이 XML 네임 스페이스를 정의 하는 경우 해당 로컬 네임 스페이스는 포함 식에 적용 되지 않습니다.
 
 전역 XML 네임 스페이스는 .NET Framework 네임 스페이스와 동일한 범위 지정 및 정의 규칙을 따릅니다. 따라서 `Imports` .NET Framework 네임 스페이스를 가져올 수 있는 위치에 전역 XML 네임 스페이스를 정의 하는 문을 포함할 수 있습니다. 여기에는 코드 파일과 프로젝트 수준 가져온 네임 스페이스가 모두 포함 됩니다. 프로젝트 수준에서 가져온 네임 스페이스에 대 한 자세한 내용은 [참조 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)를 참조 하세요.
 
