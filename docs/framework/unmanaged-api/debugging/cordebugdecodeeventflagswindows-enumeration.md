@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CorDebugDecodeEventFlagsWindows 열거형'
 title: CorDebugDecodeEventFlagsWindows 열거형
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: aa6cf962-30ae-4cfd-8895-826deeb46a54
 topic_type:
 - apiref
-ms.openlocfilehash: 60eab923aac5dea927105e8ca9fa77eb5708f5ac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 765ce4b967d00bd70becca666e2ed418614d6fe3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733362"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801698"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a>CorDebugDecodeEventFlagsWindows 열거형
 
@@ -29,7 +30,7 @@ typedef enum CorDebugDecodeEventFlagsWindows {
 } CorDebugDecodeEventFlagsWindows;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -52,6 +53,6 @@ typedef enum CorDebugDecodeEventFlagsWindows {
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)

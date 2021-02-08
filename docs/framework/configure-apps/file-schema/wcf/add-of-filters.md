@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보:: <add><filters>'
 title: <filters>의 <add>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: c1de0605bc8afc502a85d9b2917b975ee45a3d26
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 546ff41fddfd8a48e14508e27f09236c67c9abc9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201657"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802348"
 ---
 # <a name="add-of-filters"></a>\<filters>의 \<add>
 

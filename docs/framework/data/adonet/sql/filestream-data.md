@@ -1,17 +1,18 @@
 ---
+description: '자세한 정보: FILESTREAM 데이터'
 title: FILESTREAM 데이터
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 87bed5dd345c240cc00b2c36aa976ec53fe63b93
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0110be6b867a07ec1cd204e2a3de371367bbfa36
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794102"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802049"
 ---
 # <a name="filestream-data"></a>FILESTREAM 데이터
 
-FILESTREAM 스토리지 특성은 varbinary(max) 열에 저장된 이진(BLOB) 데이터에 사용됩니다. FILESTREAM 이전에는 이진 데이터를 저장하려면 특별한 처리가 필요했습니다. 텍스트 문서, 이미지 및 비디오 같이 구조화되지 않은 데이터는 대개 데이터베이스의 외부에 저장되어 관리가 어렵습니다.
+FILESTREAM 저장소 특성은 varbinary(max) 열에 저장된 이진(BLOB) 데이터를 위한 것입니다. FILESTREAM 이전에는 이진 데이터를 저장하는 데 특별한 처리가 필요했습니다. 텍스트 문서, 이미지 및 비디오와 같은 구조화되지 않은 데이터는 종종 데이터베이스 외부에 저장되므로 관리가 어렵습니다.
 
 > [!NOTE]
 > SqlClient에서 FILESTREAM 데이터로 작업하려면 .NET Framework 3.5 SP1 이상을 설치해야 합니다.
@@ -20,11 +21,11 @@ varbinary(max) 열에 FILESTREAM 특성을 지정하면 SQL Server에서는 데�
 
 ## <a name="sqlclient-support-for-filestream"></a>FILESTREAM에 대한 SqlClient 지원
 
-SQL Server <xref:System.Data.SqlClient>에 대 한 .NET Framework Data Provider는 <xref:System.Data.SqlTypes> 네임 스페이스에 정의 된 클래스를 <xref:System.Data.SqlTypes.SqlFileStream> 사용 하 여 FILESTREAM 데이터에 대 한 읽기 및 쓰기를 지원 합니다. `SqlFileStream`은 데이터 스트림에 대한 읽기 및 쓰기 메서드를 제공하는 <xref:System.IO.Stream> 클래스에서 상속됩니다. 스트림에서 읽으면 바이트 배열과 같은 데이터가 스트림에서 데이터 구조로 전송되고, 데이터를 쓰면 데이터가 데이터 구조에서 스트림으로 전송됩니다.
+SQL Server에 대 한 .NET Framework Data Provider는 <xref:System.Data.SqlClient> <xref:System.Data.SqlTypes.SqlFileStream> 네임 스페이스에 정의 된 클래스를 사용 하 여 FILESTREAM 데이터에 대 한 읽기 및 쓰기를 지원 합니다 <xref:System.Data.SqlTypes> . `SqlFileStream`은 데이터 스트림에 대한 읽기 및 쓰기 메서드를 제공하는 <xref:System.IO.Stream> 클래스에서 상속합니다. 스트림에서 읽으면 스트림의 데이터를 바이트 배열과 같은 데이터 구조로 전송합니다. 쓰기는 데이터 구조에서 스트림으로 데이터를 전송합니다.
 
 ### <a name="creating-the-sql-server-table"></a>SQL Server 테이블 만들기
 
-다음 Transact-SQL 문은 employees라는 테이블을 만들어 데이터 행을 삽입합니다. FILESTREAM 스토리지를 설정한 후에는 다음에 나오는 코드 예제와 함께 이 테이블을 사용할 수 있습니다. SQL Server 온라인 설명서의 리소스에 대 한 링크는이 항목의 끝에 있습니다.
+다음 Transact-SQL 문은 employees라는 테이블을 만들어 데이터 행을 삽입합니다. FILESTREAM 스토리지를 사용하도록 설정한 후에는 다음 코드 예제에 이 테이블을 사용할 수 있습니다. SQL Server 온라인 설명서의 리소스 링크는 이 항목의 맨 마지막에 나옵니다.
 
 ```sql
 CREATE TABLE employees
@@ -42,11 +43,11 @@ GO
 
 ### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>예제: FILESTREAM 데이터 읽기, 덮어쓰기 및 삽입
 
-다음 샘플에서는 FILESTREAM에서 데이터를 읽는 방법을 보여 줍니다. 이 코드에서는 `FileAccess`를 `Read`로 설정하고 `FileOptions`를 `SequentialScan`으로 설정하여 파일의 논리 경로를 가져옵니다. 그런 다음 코드에서는 SqlFileStream의 바이트를 버퍼로 읽어오고 콘솔 창에 바이트를 씁니다.
+다음 샘플에서는 FILESTREAM에서 데이터를 읽는 방법을 보여 줍니다. 이 코드는 파일에 대한 논리적 경로를 가져와 `FileAccess`를 `Read`로 설정하고 `FileOptions`를 `SequentialScan`으로 설정합니다. 그런 다음 코드는 바이트를 SqlFileStream에서 버퍼로 읽습니다. 그러면 바이트가 콘솔 창에 기록됩니다.
 
-이 샘플에서는 FILESTREAM에 데이터를 써서 기존의 모든 데이터를 덮어쓰는 방법도 보여 줍니다. 이 코드에서는 `SqlFileStream`를 `FileAccess`로 설정하고 `Write`를 `FileOptions`으로 설정하여 파일의 논리 경로를 가져오고 `SequentialScan`을 만듭니다. 그런 다음 `SqlFileStream`에 단일 바이트를 써서 파일의 모든 데이터를 대체합니다.
+또한 이 샘플에서는 모든 기존 데이터를 덮어쓰도록 FILESTREAM에 데이터를 쓰는 방법을 보여 줍니다. 이 코드는 파일에 대한 논리적 경로를 가져오고 `SqlFileStream`을 만들어 `FileAccess`를 `Write`로 설정하고 `FileOptions`를 `SequentialScan`으로 설정합니다. 단일 바이트를 `SqlFileStream`에 기록하여 파일의 모든 데이터를 대체합니다.
 
-이 샘플에서는 Seek 메서드로 파일 끝에 데이터를 추가하여 FILESTREAM에 데이터를 쓰는 방법도 보여 줍니다. 이 코드에서는 `SqlFileStream`를 `FileAccess`로 설정하고 `ReadWrite`를 `FileOptions`으로 설정하여 파일의 논리 경로를 가져오고 `SequentialScan`을 만듭니다. 코드에서는 Seek 메서드를 사용하여 파일의 끝을 찾은 다음 기존 파일에 단일 바이트를 추가합니다.
+예제에서는 Seek 메서드를 사용하여 파일 끝에 데이터를 추가하는 방법으로 FILESTREAM에 데이터를 쓰는 방법도 보여 줍니다. 이 코드는 파일에 대한 논리적 경로를 가져오고 `SqlFileStream`을 만들어 `FileAccess`를 `ReadWrite`로 설정하고 `FileOptions`를 `SequentialScan`으로 설정합니다. 이 코드는 Seek 메서드를 사용하여 파일의 끝을 검색하고, 기존 파일에 단일 바이트를 추가합니다.
 
 ```csharp
 using System;
@@ -171,19 +172,19 @@ namespace FileStreamTest
 }
 ```
 
-다른 샘플은 [파일 스트림 열에 이진 데이터를 저장 하 고 가져오는 방법](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)을 참조 하세요.
+다른 샘플은 [파일 스트림 열에 이진 데이터를 저장 및 페치하는 방법](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)을 참조하세요.
 
-## <a name="resources-in-sql-server-books-online"></a>SQL Server 온라인 설명서 리소스
+## <a name="resources-in-sql-server-books-online"></a>SQL Server 온라인 설명서 내 리소스
 
-FILESTREAM에 대 한 전체 설명서는 SQL Server 온라인 설명서의 다음 섹션에 있습니다.
+FILESTREAM에 대한 자세한 설명은 SQL Server 온라인 설명서의 다음 섹션에 나와 있습니다.
 
-|항목|설명|
+|항목|Description|
 |-----------|-----------------|
-|[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|FILESTREAM 스토리지를 사용해야 하는 경우 및 FILESTREAM 스토리지가 SQL Server 데이터베이스 엔진을 NTFS 파일 시스템과 통합하는 방법에 대해 설명합니다.|
-|[FILESTREAM 데이터용 클라이언트 응용 프로그램 만들기](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|FILESTREAM 데이터 작업을 위한 Windows API 함수에 대해 설명 합니다.|
-|[FILESTREAM 및 기타 SQL Server 기능](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|SQL Server의 다른 기능과 함께 FILESTREAM 데이터를 사용할 경우의 고려 사항, 지침 및 제한 사항을 제공합니다.|
+|[FILESTREAM [SQL Server]](/sql/relational-databases/blob/filestream-sql-server)|FILESTREAM 스토리지를 사용하는 시기와 SQL Server 데이터베이스 엔진을 NTFS 파일 시스템과 통합하는 방법을 설명합니다.|
+|[FILESTREAM 데이터용 클라이언트 애플리케이션 만들기](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|FILESTREAM 데이터 작업을 위한 Windows API 함수에 대해 설명합니다.|
+|[다른 SQL Server 기능과 함께 FILESTREAM 사용](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|FILESTREAM 데이터를 SQL Server의 다른 기능과 함께 사용하기 위한 고려 사항, 지침 및 제한 사항을 제공합니다.|
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [SQL Server 데이터 형식 및 ADO.NET](sql-server-data-types.md)
 - [ADO.NET에서 데이터 검색 및 수정](../retrieving-and-modifying-data.md)

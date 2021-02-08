@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CorDebugStepReason 열거형'
 title: CorDebugStepReason 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-ms.openlocfilehash: 50903b3737c0fc63eda2b1190e4c3d961ce3ae7b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2a331b09709ffb6179f2e481baf4bf421d60ea99
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726043"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801542"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason 열거형
 
@@ -39,7 +40,7 @@ typedef enum CorDebugStepReason {
 } CorDebugStepReason;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -61,7 +62,7 @@ typedef enum CorDebugStepReason {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [StepComplete 메서드](icordebugmanagedcallback-stepcomplete-method.md)
 - [디버깅 열거형](debugging-enumerations.md)

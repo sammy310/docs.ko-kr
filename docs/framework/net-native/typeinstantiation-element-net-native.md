@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: <TypeInstantiation> 요소 (.NET 네이티브)'
 title: <TypeInstantiation> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-ms.openlocfilehash: a1db497762b3dc8c135154086d72fb3ac92ff5a4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8939767e016283ea525fbd74554fe30b1cca952a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250751"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801932"
 ---
 # <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation> 요소 (.NET 네이티브)
 
@@ -36,7 +37,7 @@ ms.locfileid: "96250751"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|특성 유형|Description|  
+|attribute|특성 유형|설명|  
 |---------------|--------------------|-----------------|  
 |`Name`|일반|필수 특성입니다. 형식 이름을 지정합니다.|  
 |`Arguments`|일반|필수 특성입니다. 제네릭 형식 인수를 지정합니다. 인수가 여러 개이면 쉼표로 구분합니다.|  
@@ -53,25 +54,25 @@ ms.locfileid: "96250751"
   
 ## <a name="name-attribute"></a>Name 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*type_name*|형식 이름입니다. 이 `<TypeInstantiation>` 요소가 [\<Namespace>](namespace-element-net-native.md) 요소, [\<Type>](type-element-net-native.md) 요소 또는 다른 요소의 자식인 경우 `<TypeInstantiation>` 네임 스페이스 없이 형식의 이름을 지정할 수 *type_name* . 그러지 않으면 *type_name* 은 정규화된 형식 이름을 포함해야 합니다. 형식 이름은 데코레이팅되지 않습니다. 예를 들어 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 개체의 `<TypeInstantiation>` 요소는 다음과 같이 표시될 수 있습니다.<br /><br /> `\<TypeInstantiation Name=System.Collections.Generic.List Dynamic="Required Public" />`|  
   
 ## <a name="arguments-attribute"></a>인수 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*type_argument*|제네릭 형식 인수를 지정합니다. 인수가 여러 개이면 쉼표로 구분합니다. 각 인수는 정규화된 형식 이름으로 구성되어야 합니다.|  
   
 ## <a name="all-other-attributes"></a>기타 모든 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*policy_setting*|생성된 제네릭 형식에 대해 이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Event>](event-element-net-native.md)|이 형식에 속하는 이벤트에 리플렉션 정책을 적용합니다.|  
 |[\<Field>](field-element-net-native.md)|이 형식에 속하는 필드에 리플렉션 정책을 적용합니다.|  
@@ -84,7 +85,7 @@ ms.locfileid: "96250751"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Application>](application-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 애플리케이션 수준 형식 및 형식 멤버에 대한 컨테이너로 사용됩니다.|  
 |[\<Assembly>](assembly-element-net-native.md)|지정된 어셈블리의 모든 형식에 리플렉션 정책을 적용합니다.|  

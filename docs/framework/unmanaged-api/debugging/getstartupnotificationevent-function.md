@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: GetStartupNotificationEvent 함수'
 title: GetStartupNotificationEvent 함수
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c94b1b61-045a-4695-bacd-0f18c5acc246
 topic_type:
 - apiref
-ms.openlocfilehash: 1c6ad35cd42760a4d88cf78bb084a25cf58a1064
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 49b0e3f9b2acec87e419bae03086a7e437f45f98
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676090"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801386"
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent 함수
 
@@ -45,7 +46,7 @@ HRESULT GetStartupNotificationEvent
  `phStartupEvent`  
  [out] 시작 시 CLR에서 신호를 전송할 핸들에 대한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  S_OK  
  시작 알림 이벤트에 대한 핸들을 성공적으로 가져왔습니다.  

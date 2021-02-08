@@ -1,15 +1,16 @@
 ---
-title: <activityScheduledQuery>WCF의
+description: '다음에 대 한 자세한 정보: <activityScheduledQuery> WCF'
+title: <activityScheduledQuery> WCF의
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: b173964cf5d691f4b9300bca69ca4a1fe1ea7e11
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b1b5f971dccfbc650ee12a08a9ae2fa7b745db50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850470"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802361"
 ---
-# <a name="activityscheduledquery-of-wcf"></a>\<activityScheduledQuery>WCF의
+# <a name="activityscheduledquery-of-wcf"></a>\<activityScheduledQuery> WCF의
 
 부모 활동에 의해 실행이 예약된 활동을 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다. 추적 참가자가 활동 예약 레코드를 구독하려면 쿼리가 필요합니다.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "70850470"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`activityName`|취소를 요청하는 활동의 이름을 지정하는 문자열입니다.|  
 |`childActivityName`|취소가 요청된 자식 활동의 이름을 지정하는 문자열입니다.|  
@@ -58,7 +59,7 @@ ms.locfileid: "70850470"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<activityScheduledQueries>](activityscheduledqueries-of-wcf.md)|부모 활동에 의해 실행이 예약 된 활동을 추적 하는 데 사용 되는 쿼리의 컬렉션입니다.|  
   

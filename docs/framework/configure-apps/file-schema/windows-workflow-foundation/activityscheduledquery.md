@@ -1,14 +1,15 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <activityScheduledQuery>
 title: <activityScheduledQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a8bcd6d4-b389-4daf-86bf-1ade85fec114
-ms.openlocfilehash: 207931f68303883c29161cc28a5fc1974d01b6b8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 72aa9c2d3480488d4468d008fa8a4306929c190d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148739"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802114"
 ---
 # \<activityScheduledQuery>
 

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 참조 (Entity SQL)'
 title: REF(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
-ms.openlocfilehash: 56ae576ac60d1716d86fbbb797882bf96e99813f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 05f87ce8027e8e095722eb13d39f3f13d56f6faa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202242"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802062"
 ---
 # <a name="ref-entity-sql"></a>REF(Entity SQL)
 
@@ -24,7 +25,7 @@ REF( expression )
  `expression`  
  엔터티 형식의 인스턴스를 생성하는 모든 유효한 식입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  지정한 엔터티 인스턴스에 대한 참조입니다.  
   

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 런타임 지시문 (rd.xml) 구성 파일 참조'
 title: 런타임 지시문(rd.xml) 구성 파일 참조
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-ms.openlocfilehash: e74d34693446cca645003a9f93bc1777849e3182
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9c995bd831f01e47c651d015895398e1ad42633d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "76738414"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801997"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>런타임 지시문(rd.xml) 구성 파일 참조
 

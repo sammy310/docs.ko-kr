@@ -1,16 +1,17 @@
 ---
+description: '에 대 한 자세한 정보: <remove> 요소 <namedCaches>'
 title: <namedCaches>에 대한 <remove> 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-ms.openlocfilehash: c8ad5a0ce6d7a3059943b3962b9255385cea6e15
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5b39fc596735d746c52cdb5623962f5b9952fa3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183990"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802464"
 ---
 # <a name="remove-element-for-namedcaches"></a>\<namedCaches>에 대한 \<remove> 요소
 
@@ -22,7 +23,7 @@ ms.locfileid: "91183990"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <namedCaches>  
@@ -31,7 +32,7 @@ ms.locfileid: "91183990"
  </namedCaches>  
 ```  
   
-## <a name="type"></a>형식  
+## <a name="type"></a>Type  
 
  `None`  
   

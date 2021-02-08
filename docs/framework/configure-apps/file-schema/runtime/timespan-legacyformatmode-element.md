@@ -1,4 +1,5 @@
 ---
+description: <TimeSpan_LegacyFormatMode> 요소에 대해 자세히 알아보세요.
 title: <TimeSpan_LegacyFormatMode> 요소
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <TimeSpan_LegacyFormatMode> element
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
-ms.openlocfilehash: 9d9eedf52f5d711412e4549e39e6ea23abb68ff3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1fa5c3a15941004ebab9e3622d4b3e7b27130e22
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73968901"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802387"
 ---
 # <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode> 요소
 
@@ -36,13 +37,13 @@ ms.locfileid: "73968901"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`enabled`|필수 특성입니다.<br /><br /> 런타임에서 값에 레거시 서식 동작을 사용할지 여부를 지정 합니다 <xref:System.TimeSpan?displayProperty=nameWithType> .|
 
 ## <a name="enabled-attribute"></a>enabled 특성
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |`false`|런타임은 레거시 서식 지정 동작을 복원 하지 않습니다.|
 |`true`|런타임이 레거시 서식 지정 동작을 복원 합니다.|
@@ -53,7 +54,7 @@ ms.locfileid: "73968901"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|

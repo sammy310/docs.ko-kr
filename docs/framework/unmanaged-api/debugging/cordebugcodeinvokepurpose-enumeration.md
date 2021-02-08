@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CorDebugCodeInvokePurpose 열거형'
 title: CorDebugCodeInvokePurpose 열거형
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_type:
 ms.assetid: 31833a2d-a0d6-48a1-b05f-995ca307a08f
 topic_type:
 - apiref
-ms.openlocfilehash: cb65663ec1c1562009d0281c2e176b628b6366b6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1402343cc15e451975567564e6ce353900454bf4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732179"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801724"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>CorDebugCodeInvokePurpose 열거형
 
@@ -33,7 +34,7 @@ typedef enum CorDebugCodeInvokePurpose
 } CorDebugCodeInvokePurpose;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -59,7 +60,7 @@ typedef enum CorDebugCodeInvokePurpose
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)
 - [디버깅](index.md)

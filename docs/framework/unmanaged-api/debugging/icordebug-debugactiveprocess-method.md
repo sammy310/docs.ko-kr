@@ -1,4 +1,5 @@
 ---
+description: ICorDebug::D ebugActiveProcess 메서드에 대해 자세히 알아보세요.
 title: ICorDebug::DebugActiveProcess 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdab0ade-7f56-4fa2-b3ef-f7a1d2852bba
 topic_type:
 - apiref
-ms.openlocfilehash: 1713623fa575bea6df649106b37212f7aeaee6db
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9c3a212adf962f96fd2c7345fe8b580b6af3b544
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723469"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801321"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a>ICorDebug::DebugActiveProcess 메서드
 
@@ -61,6 +62,6 @@ HRESULT DebugActiveProcess (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebug 인터페이스](icordebug-interface.md)

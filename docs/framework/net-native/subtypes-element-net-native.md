@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: <Subtypes> 요소 (.NET 네이티브)'
 title: <Subtypes> 요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-ms.openlocfilehash: 7484152c351f59ee84b601584bd84347186628a3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d30bb482e784d912d3f5d61f688ed2b824e45f27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287815"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801958"
 ---
 # <a name="subtypes-element-net-native"></a>\<Subtypes> 요소 (.NET 네이티브)
 
@@ -34,7 +35,7 @@ ms.locfileid: "96287815"
   
 ### <a name="attributes"></a>특성  
   
-|attribute|특성 유형|Description|  
+|attribute|특성 유형|설명|  
 |---------------|--------------------|-----------------|  
 |`Activate`|반사|선택적 특성입니다. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.|  
 |`Browse`|반사|선택적 특성입니다. 프로그램 요소에 대한 정보 쿼리를 제어하지만 런타임 액세스를 사용하도록 설정하지는 않습니다.|  
@@ -49,7 +50,7 @@ ms.locfileid: "96287815"
   
 ## <a name="all-attributes"></a>모든 특성  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
@@ -59,7 +60,7 @@ ms.locfileid: "96287815"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|Description|  
+|요소|설명|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
   

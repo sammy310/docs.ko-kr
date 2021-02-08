@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <ThrowUnobservedTaskExceptions> 요소'
 title: <ThrowUnobservedTaskExceptions> 요소
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-ms.openlocfilehash: 012c2e70e66015bc317606a7eea07812b5df26e7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 53f3f1275ea8419bed52fd73726c043e1c49eed7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183925"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802400"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions> 요소
 
@@ -42,9 +43,9 @@ ms.locfileid: "91183925"
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
-|`false`|처리 되지 않은 작업 예외에 대 한 실행 중인 프로세스를 종료 하지 않습니다. 이것이 기본값입니다.|  
+|`false`|처리 되지 않은 작업 예외에 대 한 실행 중인 프로세스를 종료 하지 않습니다. 기본값입니다.|  
 |`true`|처리 되지 않은 작업 예외에 대 한 실행 중인 프로세스를 종료 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
@@ -73,7 +74,7 @@ ms.locfileid: "91183925"
   
 - 환경 변수 `COMPlus_ThrowUnobservedTaskExceptions` ()를 설정 `set COMPlus_ThrowUnobservedTaskExceptions=1` 합니다.  
   
-- HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft에서 레지스트리 DWORD 값 ThrowUnobservedTaskExceptions = 1을 설정 합니다 \\ . NETFramework 키입니다.  
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft에서 레지스트리 DWORD 값 ThrowUnobservedTaskExceptions = 1을 설정 \\ 합니다. NETFramework 키입니다.  
   
 ## <a name="example"></a>예제  
 

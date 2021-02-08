@@ -1,4 +1,5 @@
 ---
+description: '에 대 한 자세한 정보: <appSettings> 요소 <configuration>'
 title: <configuration>에 대한 <appSettings> 요소
 ms.date: 05/01/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-ms.openlocfilehash: 66260d15768781b7fa3d9397b8e8a7d9ad68ab95
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 74a25bb0dffd97057cda45575745b6f51ad2a675
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009796"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802491"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<configuration>에 대한 \<appSettings> 요소
 
@@ -21,7 +22,7 @@ ms.locfileid: "97009796"
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;**\<appSettings>**
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 ```xml
 <appSettings>
@@ -37,13 +38,13 @@ ms.locfileid: "97009796"
 
 ## <a name="parent-element"></a>부모 요소
 
-|     | Description |
+|     | 설명 |
 | --- | ----------- |
 | [**\<configuration>** 요소](../configuration-element.md) | 공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
-|     | Description |
+|     | 설명 |
 | --- | ----------- |
 | [**\<add>**](add-element-for-appsettings.md) | 사용자 지정 응용 프로그램 설정을 추가 합니다. |
 | [**\<clear>**](clear-element-for-appsettings.md) | 이전에 정의 된 모든 응용 프로그램 설정을 지웁니다. |

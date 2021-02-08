@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: <localServiceSettings> 요소'
 title: <localServiceSettings> 요소
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 3043c07afd316d90cc5525a67bef144f33d9b136
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ee3306588d6a86ed9ced9c66624cd34f18e2c5c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204933"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802205"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings> 요소
 
@@ -99,9 +100,9 @@ ms.locfileid: "91204933"
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [바인딩 확장명](../../../wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Custom Binding Security](../../../wcf/samples/custom-binding-security.md)

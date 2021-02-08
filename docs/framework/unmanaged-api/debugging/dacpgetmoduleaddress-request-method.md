@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: DacpGetModuleAddress:: Request 메서드'
 title: DacpGetModuleAddress::Request 메서드
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1755526636bed6d78663112e4c2ad5ab7c3f731c
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 4cdec9cf6b9bd818ce1137fb5b2c691532fab94e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860845"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801503"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Request 메서드
 
@@ -45,7 +46,7 @@ HRESULT Request(
 
 이 구조체는 런타임 내에 있으며 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 이를 사용 하는 가장 쉬운 방법은 구현을 모방 하는 것입니다.
 
-- 다음 매개 변수를 사용 하 여 `Request` `IXCLRDataModule*` 매개 변수에 대해 메서드를 호출 하 여 가져온 값을 반환 합니다.`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
+- `Request` `IXCLRDataModule*` 다음 매개 변수를 사용 하 여 매개 변수에 대해 메서드를 호출 하 여 가져온 값을 반환 합니다.`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
 
 ## <a name="requirements"></a>요구 사항
 

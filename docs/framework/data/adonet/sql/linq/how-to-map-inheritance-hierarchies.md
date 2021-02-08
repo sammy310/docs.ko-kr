@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: 상속 계층 구조 매핑'
 title: '방법: 상속 계층 구조 매핑'
 ms.date: 03/30/2017
 ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: c0709fde96a5d2f39f04a08ccd24ddf90c782f30
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 19d7e73dd477a474c98612fae8b0376188d1f08f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166419"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802036"
 ---
 # <a name="how-to-map-inheritance-hierarchies"></a>방법: 상속 계층 구조 매핑
 

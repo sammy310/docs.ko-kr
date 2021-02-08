@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: DacpMethodDescData Structure'
 title: DacpMethodDescData 구조체
 ms.date: 02/01/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: dcf01c00a106c131646a16597dca4092a06c5983
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fe5b09874b3f8e123cb2501fcb00e3351aa44757
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723066"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801464"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData 구조체
 
@@ -52,7 +53,7 @@ struct DacpMethodDescData
 };
 ```
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
 | 멤버                       | 설명                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -84,7 +85,7 @@ struct DacpMethodDescData
 **라이브러리:** 없음을  
 **.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅](index.md)
 - [디버깅 구조체](debugging-structures.md)

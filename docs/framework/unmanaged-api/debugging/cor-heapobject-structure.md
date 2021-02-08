@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: COR_HEAPOBJECT 구조체'
 title: COR_HEAPOBJECT 구조체
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a92fdf95-492b-49ae-a741-2186e5c1d7c5
 topic_type:
 - apiref
-ms.openlocfilehash: 54af02b48dabdf2042763954805f0d454323ac89
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f41e02e7c528063f4b7ed485cbadbabb4d3e5ca7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726368"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801802"
 ---
 # <a name="cor_heapobject-structure"></a>COR_HEAPOBJECT 구조체
 
@@ -35,7 +36,7 @@ typedef struct _COR_HEAPOBJECT {
 } COR_HEAPOBJECT;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -65,7 +66,7 @@ typedef struct _COR_HEAPOBJECT {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 구조체](debugging-structures.md)
 - [디버깅](index.md)

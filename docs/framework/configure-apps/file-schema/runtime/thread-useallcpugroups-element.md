@@ -1,13 +1,14 @@
 ---
+description: <Thread_UseAllCpuGroups> 요소에 대해 자세히 알아보세요.
 title: <Thread_UseAllCpuGroups> 요소
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
-ms.openlocfilehash: a3a612c0ffbcb211157b9623d298ce8ad7a13e94
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3f11ba6855caab25bd261de71c80c78232f2690f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73115405"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802413"
 ---
 # <a name="thread_useallcpugroups-element"></a>\<Thread_UseAllCpuGroups> 요소
 
@@ -30,13 +31,13 @@ ms.locfileid: "73115405"
 
 ### <a name="attributes"></a>특성
 
-|attribute|Description|
+|attribute|설명|
 |---------------|-----------------|
 |`enabled`|필수 특성입니다.<br /><br /> 런타임이 모든 CPU 그룹에 관리되는 스레드를 배포할지를 지정합니다.|
 
 ## <a name="enabled-attribute"></a>enabled 특성
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |`false`|런타임은 여러 CPU 그룹에 관리 되는 스레드를 배포 하지 않습니다. 기본값입니다.|
 |`true`|컴퓨터에 여러 CPU 그룹이 있고 요소가 사용 되는 경우 런타임은 여러 CPU 그룹에 관리 되는 스레드를 배포 합니다 [\<GCCpuGroup>](gccpugroup-element.md) .|
@@ -47,7 +48,7 @@ ms.locfileid: "73115405"
 
 ### <a name="parent-elements"></a>부모 요소
 
-|요소|Description|
+|요소|설명|
 |-------------|-----------------|
 |`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|
@@ -74,4 +75,4 @@ ms.locfileid: "73115405"
 
 - [런타임 설정 스키마](index.md)
 - [구성 파일 스키마](../index.md)
-- [\<GCCpuGroup>요소인](gccpugroup-element.md)
+- [\<GCCpuGroup> 요소](gccpugroup-element.md)

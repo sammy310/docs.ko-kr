@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: COR_GC_REFERENCE 구조체'
 title: COR_GC_REFERENCE 구조체
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 162e8179-0cd4-4110-8f06-5f387698bd62
 topic_type:
 - apiref
-ms.openlocfilehash: bb4a8f7ff3ee54474804e3e5620dcce7c9f79fb5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 38518bb1eb870081621bf32af9e63cdaa208dbd3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726615"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801815"
 ---
 # <a name="cor_gc_reference-structure"></a>COR_GC_REFERENCE 구조체
 
@@ -36,14 +37,14 @@ typedef struct _COR_GC_REFERENCE {
 } COR_GC_REFERENCE;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
 |`domain`|핸들이 나 개체가 속한 응용 프로그램 도메인에 대 한 포인터입니다. 값은 일 수 있습니다 `null` .|  
 |`location`|가비지 수집 될 개체에 해당 하는 ICorDebugValue 또는 ICorDebugReferenceValue 인터페이스입니다.|  
-|`type`|루트의 출처를 나타내는 [CorGCReferenceType](corgcreferencetype-enumeration.md) 열거형 값입니다. 자세한 내용은 설명 섹션을 참조하세요.|  
-|`extraData`|가비지 수집 될 개체에 대 한 추가 데이터입니다. 이 정보는 필드에 표시 되는 개체의 원본에 따라 달라 집니다 `type` . 자세한 내용은 설명 섹션을 참조하세요.|  
+|`type`|루트의 출처를 나타내는 [CorGCReferenceType](corgcreferencetype-enumeration.md) 열거형 값입니다. 자세한 내용은 주의 섹션을 참조하세요.|  
+|`extraData`|가비지 수집 될 개체에 대 한 추가 데이터입니다. 이 정보는 필드에 표시 되는 개체의 원본에 따라 달라 집니다 `type` . 자세한 내용은 주의 섹션을 참조하세요.|  
   
 ## <a name="remarks"></a>설명  
 
@@ -55,7 +56,7 @@ typedef struct _COR_GC_REFERENCE {
   
 - 종료자 큐 ()의 개체 `CorGCReferenceType.CorReferenceFinalizer` 입니다. 종료자는 종료 자가 실행 될 때까지 개체를 큐에 대기 합니다.  
   
- 필드에는 `extraData` 참조의 원본 (또는 형식)에 따라 추가 데이터가 포함 됩니다. 가능한 값은 다음과 같습니다.  
+ 필드에는 `extraData` 참조의 원본 (또는 형식)에 따라 추가 데이터가 포함 됩니다. 가능한 값은  
   
 - `DependentSource`. 가 이면 `type` `CorGCREferenceType.CorHandleStrongDependent` 이 필드는 활성 상태인 경우에서 가비지 수집 될 개체의 루트를 나타내는 개체입니다 `COR_GC_REFERENCE.Location` .  
   
@@ -73,7 +74,7 @@ typedef struct _COR_GC_REFERENCE {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 구조체](debugging-structures.md)
 - [디버깅](index.md)

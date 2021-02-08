@@ -1,13 +1,14 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <discoveryEndpoint>
 title: <discoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: 32b14f8fb3235040a51455f2099a403c8312c699
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 32be673aac9604d8285d002640f11a29b9545afb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855401"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802309"
 ---
 # \<discoveryEndpoint>
 
@@ -39,7 +40,7 @@ ms.locfileid: "70855401"
   
 ### <a name="attributes"></a>특성
 
-| attribute        | Description |  
+| attribute        | 설명 |  
 | ---------------- | ----------- |  
 | discoveryMode    | 검색 프로토콜의 모드를 지정하는 문자열입니다. 유효한 값은 "임시" 및 "관리"입니다. 관리 모드에서는 프로토콜이 검색 가능한 서비스의 리포지토리로 작동하는 검색 프록시를 사용하고, 애드혹 모드에서는 프로토콜이 UDP 멀티캐스트 메커니즘을 사용하여 사용 가능한 서비스를 찾아야 합니다. 속성에 대 한 자세한 내용은을 참조 하십시오 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode%2A> . |  
 | discoveryVersion | WS-Discovery 프로토콜의 두 버전 중 하나를 지정하는 문자열입니다. 유효한 값은 WSDiscovery11 및 WSDiscoveryApril2005입니다. 이 값은 <xref:System.ServiceModel.Discovery.DiscoveryVersion> 형식입니다. |  
@@ -52,7 +53,7 @@ ms.locfileid: "70855401"
   
 ### <a name="parent-elements"></a>부모 요소
 
-| 요소 | Description |  
+| 요소 | 설명 |  
 | ------- | ----------- |  
 | [\<standardEndpoints>](standardendpoints.md) | 하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 엔드포인트인 표준 엔드포인트의 컬렉션입니다. |  
   

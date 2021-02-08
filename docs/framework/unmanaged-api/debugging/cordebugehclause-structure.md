@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CorDebugEHClause Structure'
 title: CorDebugEHClause 구조
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-ms.openlocfilehash: 225523280a2e1e0d8f51321e9dd865d901e725ba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ecb00e2a110719ab82de32fb1f1c861e2033a528
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712705"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801672"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause 구조
 
@@ -39,11 +40,11 @@ typedef struct _CorDebugEHClause {
 } CorDebugEHClause;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
-|`Flags`|EH 절의 예외 정보를 설명하는 비트 필드입니다. 자세한 내용은 설명 섹션을 참조하세요.|  
+|`Flags`|EH 절의 예외 정보를 설명하는 비트 필드입니다. 자세한 내용은 주의 섹션을 참조하세요.|  
 |`TryOffset`|메서드 본문 시작 지점부터 `try` 블록의 오프셋(바이트)입니다.|  
 |`TryLength`|`try` 블록의 길이(바이트)입니다.|  
 |`HandlerOffset`|이 `try` 블록의 처리기 위치입니다.|  
@@ -76,7 +77,7 @@ typedef struct _CorDebugEHClause {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [GetEHClauses 메서드](icordebugilcode-getehclauses-method.md)
 - [디버깅 구조체](debugging-structures.md)

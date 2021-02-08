@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: ICorDebugLoadedModule:: GetBaseAddress 메서드'
 title: ICorDebugLoadedModule::GetBaseAddress 메서드
 ms.date: 03/30/2017
 ms.assetid: 7c036772-d58a-47f1-a5fa-31779898ef0d
-ms.openlocfilehash: 29153da86812583a0ea789da0c0816f08e0a6b43
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2852131d543cfb9593cf4ff607d1f752226c2880
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698080"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801269"
 ---
 # <a name="icordebugloadedmodulegetbaseaddress-method"></a>ICorDebugLoadedModule::GetBaseAddress 메서드
 
@@ -41,7 +42,7 @@ HRESULT GetBaseAddress(
   
  **.NET Framework 버전:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorDebugLoadedModule 인터페이스](icordebugloadedmodule-interface.md)
 - [디버깅 인터페이스](debugging-interfaces.md)

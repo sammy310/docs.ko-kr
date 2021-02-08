@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CreateCordbObject 함수'
 title: CreateCordbObject 함수
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-ms.openlocfilehash: eccdfcb60b2d2b5d652ccac948c01c16e7cb828d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b6a585fc89f780b22f842127e1923414dbb8230f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725978"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801477"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject 함수
 
@@ -44,7 +45,7 @@ HRESULT CordbCreateObject (
  `ppCordb`  
  제한이 [ICorDebug](icordebug-interface.md) 인터페이스로 캐스팅 되 고 반환 되는 개체에 대 한 포인터에 대 한 포인터입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  S_OK  
  프로세스의 CLR 수가 성공적으로 확인되었으며 해당 핸들 및 경로 배열이 제대로 채워졌습니다.  

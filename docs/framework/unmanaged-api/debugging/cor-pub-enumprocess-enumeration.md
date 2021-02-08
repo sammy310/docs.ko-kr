@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: 열거형 COR_PUB_ENUMPROCESS'
 title: COR_PUB_ENUMPROCESS 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d3ada6e-feea-47da-a7ed-b664107c137f
 topic_type:
 - apiref
-ms.openlocfilehash: 30a522fbf96aebaa96f33f4a1dc381683f183871
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 66bbd08aabb9d2c93e385ed098bae54754a85b85
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726420"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801789"
 ---
 # <a name="cor_pub_enumprocess-enumeration"></a>COR_PUB_ENUMPROCESS 열거형
 
@@ -33,7 +34,7 @@ typedef enum {
 } COR_PUB_ENUMPROCESS;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버 이름|설명|  
 |-----------------|-----------------|  
@@ -53,6 +54,6 @@ typedef enum {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)

@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: <publisherPolicy> 요소'
 title: <publisherPolicy> 요소
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - container tags, <publisherPolicy> element
 - <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-ms.openlocfilehash: bd6ab1123ef3f84f7e8a06b25ce48aed37e4bef7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 35d729d5b195e010a80e7272312f14ac5802001b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91195261"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802439"
 ---
 # <a name="publisherpolicy-element"></a>\<publisherPolicy> 요소
 
@@ -45,7 +46,7 @@ ms.locfileid: "91195261"
   
 ## <a name="apply-attribute"></a>특성 적용  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |`yes`|게시자 정책을 적용 합니다. 이 값은 기본 설정입니다.|  
 |`no`|게시자 정책을 적용 하지 않습니다.|  
@@ -67,7 +68,7 @@ ms.locfileid: "91195261"
 
  구성 요소 공급 업체에서 새 버전의 어셈블리를 출시 하는 경우 이전 버전을 사용 하는 응용 프로그램이 이제 새 버전을 사용 하도록 공급 업체에 게시자 정책을 포함할 수 있습니다. 특정 어셈블리에 대해 게시자 정책을 적용할지 여부를 지정 하려면 요소를 **\<publisherPolicy>** 요소에 배치 **\<dependentAssembly>** 합니다.  
   
- **Apply** 특성의 기본 설정은 **예**입니다. **Apply** 특성을 **no** 로 설정 하면 어셈블리의 모든 이전 **예** 설정이 무시 됩니다.  
+ **Apply** 특성의 기본 설정은 **예** 입니다. **Apply** 특성을 **no** 로 설정 하면 어셈블리의 모든 이전 **예** 설정이 무시 됩니다.  
   
  응용 프로그램 구성 파일의 요소를 사용 하 여 응용 프로그램에서 게시자 정책을 명시적으로 무시 하려면 권한이 필요 [\<publisherPolicy apply="no"/>](publisherpolicy-element.md) 합니다. 에 플래그를 설정 하 여 사용 권한을 부여 합니다 <xref:System.Security.Permissions.SecurityPermissionFlag> <xref:System.Security.Permissions.SecurityPermission> . 자세한 내용은 [어셈블리 바인딩 리디렉션 보안 권한](../../assembly-binding-redirection-security-permission.md)을 참조 하세요.  
   

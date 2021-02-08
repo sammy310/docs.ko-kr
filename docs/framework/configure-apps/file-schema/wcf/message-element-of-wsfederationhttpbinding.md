@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: <message> 의 요소 <wsFederationHttpBinding>'
 title: <message> 의 요소 <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: ea320b1d97e742d4f90ec55502f3bd429803283d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 64978902081ec9e5a603804fed3b378da12fe42e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204894"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802192"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<message> 의 요소 \<wsFederationHttpBinding>
 
@@ -96,7 +97,7 @@ ms.locfileid: "91204894"
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 특성  
   
-|Value|설명|  
+|값|설명|  
 |-----------|-----------------|  
 |Basic128|Basic128 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.|  
 |Basic192|Basic192 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.|  
@@ -137,7 +138,7 @@ ms.locfileid: "91204894"
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>
 - [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
-- [바인딩하](../../../wcf/bindings.md)
+- [바인딩](../../../wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

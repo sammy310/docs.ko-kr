@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: 쿼리 계획 캐싱 (Entity SQL)'
 title: 쿼리 계획 캐싱(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 51c5de8365819065f8e505468f37a47370ec502f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: eee8e3afcd6f97b7e6021389d59a8ce03507fb9f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175553"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802101"
 ---
 # <a name="query-plan-caching-entity-sql"></a>쿼리 계획 캐싱(Entity SQL)
 
 쿼리 실행 시도가 있으면 쿼리 파이프라인에서는 항상 해당 쿼리가 이미 컴파일되어 사용 가능한지 알아보기 위해 쿼리 계획 캐시를 확인합니다. 사용 가능한 쿼리가 있으면 새 쿼리를 작성하지 않고 캐시된 계획을 재사용합니다. 쿼리 계획 캐시에 일치 항목이 없을 경우에는 쿼리를 컴파일하고 캐시합니다. 쿼리는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 텍스트 및 매개 변수 컬렉션(이름과 형식)으로 식별됩니다. 모든 텍스트 비교에서는 대/소문자가 구별됩니다.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
 
  쿼리 계획 캐싱은 <xref:System.Data.EntityClient.EntityCommand>를 통해 구성할 수 있습니다.  
   

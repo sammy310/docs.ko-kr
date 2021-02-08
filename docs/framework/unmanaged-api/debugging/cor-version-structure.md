@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: COR_VERSION 구조체'
 title: COR_VERSION 구조체
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5efaee1c-a001-4c73-9525-4160f4c71567
 topic_type:
 - apiref
-ms.openlocfilehash: 874c0520482cc5a3bbfcdd17924edee84fe91ff5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: abdbe2a62d89db9dd673a429d81209fc42c34b73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675323"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801776"
 ---
 # <a name="cor_version-structure"></a>COR_VERSION 구조체
 
@@ -36,7 +37,7 @@ typedef struct _COR_VERSION {
 } COR_VERSION;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -59,7 +60,7 @@ typedef struct _COR_VERSION {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 구조체](debugging-structures.md)
 - [디버깅](index.md)

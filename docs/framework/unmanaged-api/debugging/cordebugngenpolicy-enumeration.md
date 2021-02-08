@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: CorDebugNGenPolicy 열거형'
 title: CorDebugNGenPolicy 열거형
 ms.date: 03/30/2017
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: edb4e4d2-3166-44d4-8b17-bf302f7ea093
 topic_type:
 - apiref
-ms.openlocfilehash: b64de0fa2ecbddd2decf69a4099d9897ec42a563
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 529a5979bacef32ce78262c122004a66b54156ed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696429"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801581"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy 열거형
 
@@ -35,7 +36,7 @@ enum CorDebugNGENPolicy {
 } CorDebugNGENPolicy;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버 이름|설명|  
 |-----------------|-----------------|  
@@ -55,6 +56,6 @@ enum CorDebugNGENPolicy {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)

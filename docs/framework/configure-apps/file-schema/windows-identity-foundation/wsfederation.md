@@ -1,14 +1,15 @@
 ---
+description: 다음에 대해 자세히 알아보세요. <wsFederation>
 title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 93661af6c907d8cce1a73536a8ebca7bd53c00d8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f28c140816dc6de6d618772d5213d6ab094b78c5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185511"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802127"
 ---
 # \<wsFederation>
 
@@ -53,22 +54,22 @@ ms.locfileid: "91185511"
   
 |attribute|설명|  
 |---------------|-----------------|  
-|authenticationType|인증 형식을 지정하는 URI입니다. WS-FEDERATION 로그인 요청 wauth 매개 변수를 설정 합니다. 선택 사항입니다. 기본값은 빈 문자열로, wauth 매개 변수가 요청에 포함 되지 않도록 지정 합니다.|  
+|authenticationType|인증 형식을 지정하는 URI입니다. WS-Federation 로그인 요청 wauth 매개 변수를 설정 합니다. 선택 사항입니다. 기본값은 빈 문자열로, wauth 매개 변수가 요청에 포함 되지 않도록 지정 합니다.|  
 |고침|원하는 최대 인증 요청 나이(분)입니다. WS-Federation 로그인 요청 wfresh 매개 변수를 설정합니다. 선택 사항입니다. 기본값은 0입니다. 선택 사항입니다. **경고:**  .NET Framework 4.5의 다음 릴리스에서는 `freshness` 특성이 형식이 되며 `xs:string` 기본값은 `null` 입니다.|  
 |homeRealm|인증에 사용할 id 공급자 (IdP)의 홈 영역입니다. WS-Federation 로그인 요청 whr 매개 변수를 설정합니다. 선택 사항입니다. 기본값은 빈 문자열로, whr 매개 변수가 요청에 포함 되지 않도록 지정 합니다.|  
-|발급자|의도 한 토큰 발급자의 URI입니다. WS-FEDERATION 로그인 요청 및 로그 아웃 요청에 대 한 기준 URL을 설정 합니다.|  
+|발급자|의도 한 토큰 발급자의 URI입니다. 필요한 WS-Federation 로그인 요청 및 로그 아웃 요청에 대 한 기준 URL을 설정 합니다.|  
 |persistentCookiesOnPassiveRedirects|인증 시 영구적 쿠키가 발급 되는지 여부를 지정 합니다. 선택 사항입니다. 기본값은 "false" 이며 쿠키가 발급 되지 않습니다.|  
 |passiveRedirectEnabled|WSFAM이 인증 되지 않은 요청을 STS로 자동 리디렉션할 수 있는지 여부를 지정 합니다. 선택 사항입니다. 기본값은 "true" 이며 권한이 없는 요청은 자동으로 리디렉션됩니다.|  
 |policy|로그인 요청에 사용할 관련 정책의 위치를 지정 하는 URL입니다. 기본값은 빈 문자열입니다. WS-Federation 로그인 요청 wp 매개 변수를 설정합니다. 선택 사항입니다. 기본값은 빈 문자열로, wp 매개 변수가 요청에 포함 되지 않도록 지정 합니다.|  
-|realm|요청 영역에 대 한 URI입니다. (STS (보안 토큰 서비스)에 대 한 RP (신뢰 당사자)를 식별 하는 URI입니다. Wtrealm WS-FEDERATION 로그인 요청 매개 변수를 설정 합니다. 필수 사항입니다.|  
-|회신|RP(신뢰 당사자) 애플리케이션이 STS(보안 토큰 서비스)에서 응답을 받을 주소를 식별하는 URL입니다. WS-FEDERATION 로그인 요청 wreply 매개 변수를 설정 합니다. 선택 사항입니다. 기본값은 빈 문자열로, wreply 매개 변수가 요청에 포함 되지 않도록 지정 합니다.|  
+|realm|요청 영역에 대 한 URI입니다. (STS (보안 토큰 서비스)에 대 한 RP (신뢰 당사자)를 식별 하는 URI입니다. 요청 wtrealm WS-Federation 로그인 요청 매개 변수를 설정 합니다. 필수 사항입니다.|  
+|회신|RP(신뢰 당사자) 애플리케이션이 STS(보안 토큰 서비스)에서 응답을 받을 주소를 식별하는 URL입니다. WS-Federation 로그인 요청 wreply 매개 변수를 설정 합니다. 선택 사항입니다. 기본값은 빈 문자열로, wreply 매개 변수가 요청에 포함 되지 않도록 지정 합니다.|  
 |request|토큰 발급 요청입니다. WS-Federation 로그인 요청 wreq 매개 변수를 설정합니다. 선택 사항입니다. 기본값은 빈 문자열로, wreq 매개 변수가 요청에 포함 되지 않도록 지정 합니다. 요청에 wreq 또는 wreqptr 매개 변수를 포함 하지 않으면 STS가 발급할 토큰의 종류를 알고 있음을 의미 합니다.|  
 |requestPtr|토큰 발급 요청의 위치를 지정하는 URL입니다. Request wreqptr 매개 변수를 설정 합니다. 선택 사항입니다. 기본값은 빈 문자열로, wreqptr 매개 변수가 요청에 포함 되지 않도록 지정 합니다. 요청에 wreq 또는 wreqptr 매개 변수를 포함 하지 않으면 STS가 발급할 토큰의 종류를 알고 있음을 의미 합니다.|  
 |requireHttps|STS (보안 토큰 서비스)와의 통신에서 HTTPS 프로토콜을 사용 해야 하는지 여부를 지정 합니다. 선택 사항입니다. 기본값은 "true"이 고, HTTPS를 사용 해야 합니다.|  
-|resource|RP(신뢰 당사자)인 액세스될 리소스를 STS(보안 토큰 서비스)에 식별하는 URI입니다. 선택 사항입니다. WS-FEDERATION 로그인 요청 wres 매개 변수를 설정 합니다. 선택 사항입니다. 기본값은 빈 문자열로, wres 매개 변수가 요청에 포함 되지 않도록 지정 합니다. **참고:**  wres는 레거시 매개 변수입니다. `realm`대신 wtrealm 매개 변수를 사용 하는 특성을 지정 합니다.|  
-|signInQueryString|WS-FEDERATION 로그인 요청 URL에서 응용 프로그램 정의 쿼리 매개 변수를 지정 하기 위한 확장 지점을 제공 합니다. 선택 사항입니다. 기본값은 빈 문자열로, 요청에 추가 매개 변수를 포함 하지 않도록 지정 합니다. 매개 변수는 다음과 같은 형식을 사용 하 여 쿼리 문자열 조각으로 지정 `"param1=value1&param2=value2&param3=value3"` 됩니다. **참고:**  구성 파일에서 쿼리 문자열의 ' & ' 문자는 해당 엔터티 참조를 사용 하 여 지정 해야 합니다 `&` .|  
-|signOutQueryString|WS-FEDERATION 로그인 요청 URL에서 응용 프로그램 정의 쿼리 매개 변수를 지정 하기 위한 확장 지점을 제공 합니다. 선택 사항입니다. 기본값은 빈 문자열로, 요청에 추가 매개 변수를 포함 하지 않도록 지정 합니다. 매개 변수는 다음과 같은 형식을 사용 하 여 쿼리 문자열 조각으로 지정 `"param1=value1&param2=value2&param3=value3"` 됩니다. **참고:**  구성 파일에서 쿼리 문자열의 ' & ' 문자는 해당 엔터티 참조를 사용 하 여 지정 해야 합니다 `&` .|  
-|signOutReply|WS-FEDERATION 프로토콜을 통해 수동 로그 아웃 하는 동안 STS (보안 토큰 서비스)에서 클라이언트를 리디렉션해야 하는 URL을 지정 합니다. WS-FEDERATION 로그 아웃 요청에 대 한 wreply 매개 변수를 설정 합니다. 선택 사항입니다. 기본값은 빈 문자열로, 요청에 추가 매개 변수를 포함 하지 않도록 지정 합니다.|  
+|리소스|RP(신뢰 당사자)인 액세스될 리소스를 STS(보안 토큰 서비스)에 식별하는 URI입니다. 선택 사항입니다. WS-Federation 로그인 요청 wres 매개 변수를 설정 합니다. 선택 사항입니다. 기본값은 빈 문자열로, wres 매개 변수가 요청에 포함 되지 않도록 지정 합니다. **참고:**  wres는 레거시 매개 변수입니다. `realm`대신 wtrealm 매개 변수를 사용 하는 특성을 지정 합니다.|  
+|signInQueryString|WS-Federation 로그인 요청 URL에 응용 프로그램 정의 쿼리 매개 변수를 지정 하기 위한 확장 지점을 제공 합니다. 선택 사항입니다. 기본값은 빈 문자열로, 요청에 추가 매개 변수를 포함 하지 않도록 지정 합니다. 매개 변수는 다음과 같은 형식을 사용 하 여 쿼리 문자열 조각으로 지정 `"param1=value1&param2=value2&param3=value3"` 됩니다. **참고:**  구성 파일에서 쿼리 문자열의 ' & ' 문자는 해당 엔터티 참조를 사용 하 여 지정 해야 합니다 `&` .|  
+|signOutQueryString|WS-Federation 로그인 요청 URL에 응용 프로그램 정의 쿼리 매개 변수를 지정 하기 위한 확장 지점을 제공 합니다. 선택 사항입니다. 기본값은 빈 문자열로, 요청에 추가 매개 변수를 포함 하지 않도록 지정 합니다. 매개 변수는 다음과 같은 형식을 사용 하 여 쿼리 문자열 조각으로 지정 `"param1=value1&param2=value2&param3=value3"` 됩니다. **참고:**  구성 파일에서 쿼리 문자열의 ' & ' 문자는 해당 엔터티 참조를 사용 하 여 지정 해야 합니다 `&` .|  
+|signOutReply|WS-Federation 프로토콜을 통해 수동 로그 아웃 하는 동안 STS (보안 토큰 서비스)에서 클라이언트를 리디렉션해야 하는 URL을 지정 합니다. WS-Federation 로그 아웃 요청에 대 한 wreply 매개 변수를 설정 합니다. 선택 사항입니다. 기본값은 빈 문자열로, 요청에 추가 매개 변수를 포함 하지 않도록 지정 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
 
@@ -82,7 +83,7 @@ ms.locfileid: "91185511"
   
 ## <a name="remarks"></a>설명  
 
- 요소를 사용 하 여 `<wsFederation>` 기본 ws-federation 매개 변수 설정 및 WSFAM의 기본 동작을 구성할 수 있습니다. 요소 아래에 정의 된 WS-FEDERATION 매개 변수 설정은 `<wsFederation>` 클래스에 의해 노출 되는 동등한 속성 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 을 설정 합니다. 이러한 속성은 WSFAM에서 발행 한 모든 요청에 대해 동일 하 게 유지 됩니다. WSFAM에서 노출 하는 이벤트에 대 한 이벤트 처리기를 추가 하 여 요청을 처리 하는 동안 WS-FEDERATION 매개 변수를 동적으로 변경할 수 있습니다. 예를 들어 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> 이벤트입니다. 자세한 내용은 클래스에 대 한 설명서를 참조 하세요 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> .  
+ 요소를 사용 `<wsFederation>` 하 여 기본 WS-Federation 매개 변수 설정 및 WSFAM의 기본 동작을 구성할 수 있습니다. 요소 아래에 정의 된 WS-Federation 매개 변수 설정은 `<wsFederation>` 클래스에서 노출 하는 동등한 속성 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 을 설정 합니다. 이러한 속성은 WSFAM에서 발행 한 모든 요청에 대해 동일 하 게 유지 됩니다. WSFAM에서 노출 하는 이벤트에 대 한 이벤트 처리기를 추가 하 여 요청을 처리 하는 동안 WS-Federation 매개 변수를 동적으로 변경할 수 있습니다. 예를 들어 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> 이벤트입니다. 자세한 내용은 클래스에 대 한 설명서를 참조 하세요 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> .  
   
  합니다 `<wsFederation>` 에서 요소가 표시 되는 <xref:System.IdentityModel.Services.Configuration.WSFederationElement> 클래스입니다. 구성 개체 자체는 클래스로 표현 됩니다 <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> . 단일 <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> 인스턴스는 속성을 통해 액세스 되는 개체에 대해 설정 되 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 고 wsfam에 대 한 구성을 제공 합니다.  
   

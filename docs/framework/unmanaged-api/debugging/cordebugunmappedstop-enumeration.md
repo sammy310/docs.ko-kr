@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CorDebugUnmappedStop 열거형'
 title: CorDebugUnmappedStop 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-ms.openlocfilehash: e251bf67adcaf2bbd6565eda068d487eb0d70efd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9c4f70c5de451689f98a1c08627fd6df5128fdbd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725776"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801529"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop 열거형
 
@@ -39,7 +40,7 @@ typedef enum CorDebugUnmappedStop {
 } CorDebugUnmappedStop;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -65,6 +66,6 @@ typedef enum CorDebugUnmappedStop {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)

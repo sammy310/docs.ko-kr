@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: COR_TYPE_LAYOUT 구조체'
 title: COR_TYPE_LAYOUT 구조체
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43a7addd-f25a-4049-9907-abec3eb17af2
 topic_type:
 - apiref
-ms.openlocfilehash: f33c8f5cf218979404063342d9b1cc5123839f83
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 07bed0c526aae38cb380b57da505a3f02bdf4aae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726329"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801767"
 ---
 # <a name="cor_type_layout-structure"></a>COR_TYPE_LAYOUT 구조체
 
@@ -37,7 +38,7 @@ typedef struct COR_TYPE_LAYOUT {
 } COR_TYPE_LAYOUT;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -61,7 +62,7 @@ typedef struct COR_TYPE_LAYOUT {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 구조체](debugging-structures.md)
 - [디버깅](index.md)

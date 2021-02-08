@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Cordebug인터페이스 버전 열거'
 title: CorDebugInterfaceVersion 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d1e6cd9-2a15-41c6-9b68-008705a4ed90
 topic_type:
 - apiref
-ms.openlocfilehash: 939400fcc40edd62532d459d6ed626dbdc4f41fc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 35b8fd6eae2b7999d7669632506cfea43dffbd45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675310"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801646"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 열거형
 
@@ -131,7 +132,7 @@ typedef enum CorDebugInterfaceVersion {
 } CorDebugInterfaceVersion;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
 
  다음 테이블에는 각 열거형 값에서 해당 인터페이스의 링크와 인터페이스가 지원되는 첫 번째.NET Framework 버전이 나와 있습니다.  
   
@@ -142,7 +143,7 @@ typedef enum CorDebugInterfaceVersion {
 |`CorDebugVersion_1_1`|모든 서비스 팩을 포함한 .NET Framework 버전이 1.1입니다.|1.1|  
 |`CorDebugVersion_2_0`|모든 서비스 팩을 포함한 .NET Framework 버전이 2.0입니다.|2.0|  
 |`CorDebugVersion_4_0`|모든 서비스 팩을 포함한 .NET Framework 버전이 4입니다.|4|  
-|`CorDebugVersion_4_5`|모든 서비스 팩을 포함한 .NET Framework 버전이 4.5입니다.|4.5|  
+|`CorDebugVersion_4_5`|모든 서비스 팩을 포함한 .NET Framework 버전이 4.5입니다.|4.5.|  
 |`ver_ICorDebugManagedCallback`|[ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)|1.0|  
 |`ver_ICorDebugUnmanagedCallback`|[ICorDebugUnmanagedCallback](icordebugunmanagedcallback-interface.md)|1.0|  
 |`ver_ICorDebug`|[ICorDebug](icordebug-interface.md)|1.0|  
@@ -215,10 +216,10 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugHeapValue3`|[ICorDebugHeapValue3 인터페이스](icordebugheapvalue3-interface.md)|4|  
 |`ver_ICorDebugBlockingObjectEnum`|[ICorDebugBlockingObjectEnum 인터페이스](icordebugblockingobjectenum-interface.md)|4|  
 |`ver_ICorDebugValue3`|[ICorDebugValue3](icordebugvalue3-interface.md)|4|  
-|`ver_ICorDebugComObjectValue`|[ICorDebugComObjectValue](icordebugcomobjectvalue-interface.md)|4.5|  
-|`ver_ICorDebugAppDomain3`|[ICorDebugAppDomain3](icordebugappdomain3-interface.md)|4.5|  
-|`ver_ICorDebugCode3`|[ICorDebugCode3](icordebugcode3-interface.md)|4.5|  
-|`ver_ICorDebugILFrame3`|[ICorDebugILFrame3](icordebugilframe3-interface.md)|4.5|  
+|`ver_ICorDebugComObjectValue`|[ICorDebugComObjectValue](icordebugcomobjectvalue-interface.md)|4.5.|  
+|`ver_ICorDebugAppDomain3`|[ICorDebugAppDomain3](icordebugappdomain3-interface.md)|4.5.|  
+|`ver_ICorDebugCode3`|[ICorDebugCode3](icordebugcode3-interface.md)|4.5.|  
+|`ver_ICorDebugILFrame3`|[ICorDebugILFrame3](icordebugilframe3-interface.md)|4.5.|  
 |`CorDebugLatestVersion`|모든 서비스 팩을 포함한 .NET Framework 버전이 최신 버전입니다.|-|  
   
 ## <a name="remarks"></a>설명  
@@ -249,6 +250,6 @@ typedef enum CorDebugInterfaceVersion {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버깅 열거형](debugging-enumerations.md)
