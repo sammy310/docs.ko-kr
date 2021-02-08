@@ -1,28 +1,29 @@
 ---
+description: 연결 연산자 (Visual Basic)에 대해 자세히 알아보세요.
 title: 연결 연산자
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: d787368b-3713-47ff-bce8-f112720a673a
-ms.openlocfilehash: 282747043197ad2fded6f5cccc85ec7eaadbe2bf
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 168cf28749d8e9fd166ad1f1ef3e99827ca9e1fe
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867112"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99774046"
 ---
-# <a name="concatenation-operators-visual-basic"></a><span data-ttu-id="a1361-102">연결 연산자(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a1361-102">Concatenation Operators (Visual Basic)</span></span>
+# <a name="concatenation-operators-visual-basic"></a><span data-ttu-id="65c41-103">연결 연산자(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="65c41-103">Concatenation Operators (Visual Basic)</span></span>
 
-<span data-ttu-id="a1361-103">Visual Basic에 정의 된 연결 연산자는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="a1361-103">The following are the concatenation operators defined in Visual Basic.</span></span>  
+<span data-ttu-id="65c41-104">Visual Basic에 정의 된 연결 연산자는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="65c41-104">The following are the concatenation operators defined in Visual Basic.</span></span>  
   
- [<span data-ttu-id="a1361-104">& 연산자</span><span class="sxs-lookup"><span data-stu-id="a1361-104">& Operator</span></span>](concatenation-operator.md)  
+ [<span data-ttu-id="65c41-105">& 연산자</span><span class="sxs-lookup"><span data-stu-id="65c41-105">& Operator</span></span>](concatenation-operator.md)  
   
- [<span data-ttu-id="a1361-105">+ 연산자</span><span class="sxs-lookup"><span data-stu-id="a1361-105">+ Operator</span></span>](addition-operator.md)  
+ [<span data-ttu-id="65c41-106">+ 연산자</span><span class="sxs-lookup"><span data-stu-id="65c41-106">+ Operator</span></span>](addition-operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a1361-106">참조</span><span class="sxs-lookup"><span data-stu-id="a1361-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="65c41-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="65c41-107">See also</span></span>
 
 - <xref:System.Text>
 - <xref:System.Text.StringBuilder>
-- [<span data-ttu-id="a1361-107">Visual Basic에서의 연산자 우선 순위</span><span class="sxs-lookup"><span data-stu-id="a1361-107">Operator Precedence in Visual Basic</span></span>](operator-precedence.md)
-- [<span data-ttu-id="a1361-108">Visual Basic의 연결 연산자</span><span class="sxs-lookup"><span data-stu-id="a1361-108">Concatenation Operators in Visual Basic</span></span>](../../programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [<span data-ttu-id="65c41-108">Visual Basic에서의 연산자 우선 순위</span><span class="sxs-lookup"><span data-stu-id="65c41-108">Operator Precedence in Visual Basic</span></span>](operator-precedence.md)
+- [<span data-ttu-id="65c41-109">Visual Basic의 연결 연산자</span><span class="sxs-lookup"><span data-stu-id="65c41-109">Concatenation Operators in Visual Basic</span></span>](../../programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
