@@ -1,4 +1,5 @@
 ---
+description: IMetaDataEmit::D efinePermissionSet 메서드에 대해 자세히 알아보세요.
 title: IMetaDataEmit::DefinePermissionSet 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36cffbf7-82ca-4cf9-bf60-50ab491ac2d9
 topic_type:
 - apiref
-ms.openlocfilehash: 3698525c139ed52b59ca577c598e675b6c26eef4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f5c3f1466217713cb3970c805079d8f65fd429c0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719517"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784082"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>IMetaDataEmit::DefinePermissionSet 메서드
 
@@ -65,7 +66,7 @@ HRESULT DefinePermissionSet (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)

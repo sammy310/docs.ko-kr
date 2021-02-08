@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 클라이언트: 채널 팩터리 및 채널'
 title: 클라이언트 채널 팩터리 및 채널
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: 2476147d20b1aec27986a01773c3d16fb764c665
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b61c37743899b8ba74ec18cc84397e4521e7bde7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275634"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803037"
 ---
 # <a name="client-channel-factories-and-channels"></a>클라이언트 채널 팩터리 및 채널
 

@@ -1,4 +1,5 @@
 ---
+description: "자세한 정보: BC42015: ' ' <interfacename> <membername> 이 (가) 기본 클래스 ' '에 의해 이미 구현 되었습니다 <baseclassname> . <type>을 다시 구현하는 것으로 간주합니다."
 title: "'<interfacename>.<membername>'은 기본 클래스 '<baseclassname>'에 의해 이미 구현되어 있습니다. <type>을 다시 구현하는 것으로 간주합니다."
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-ms.openlocfilehash: 8137f6b1712b6a0752a991f5a3d598b5f958252c
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 7e9cce6250d21dfc4255d9971eea407b3a60e96a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162819"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796030"
 ---
 # <a name="bc42015-interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>BC42015: ' \<interfacename> . \<membername> '은 (는) 기본 클래스 ' '에 의해 이미 구현 되었습니다 \<baseclassname> . \<type>을 다시 구현하는 것으로 간주합니다.
 

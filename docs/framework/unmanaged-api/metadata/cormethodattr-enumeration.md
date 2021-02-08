@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CorMethodAttr 열거형'
 title: CorMethodAttr 열거형
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-ms.openlocfilehash: 6c3e721c24da217eaf2e8857377359e1c51b7b59
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4050235675f4b237b184d31378a614a0613ab3df
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95677026"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784381"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr 열거형
 
@@ -63,7 +64,7 @@ typedef enum CorMethodAttr {
 } CorMethodAttr;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -80,7 +81,7 @@ typedef enum CorMethodAttr {
 |`mdVirtual`|메서드를 재정의할 수 있도록 지정 합니다.|  
 |`mdHideBySig`|메서드가 이름 뿐만 아니라 이름 및 시그니처로 숨기도록 지정 합니다.|  
 |`mdVtableLayoutMask`|가상 테이블 레이아웃을 지정 합니다.|  
-|`mdReuseSlot`|가상 테이블에서이 메서드에 사용 되는 슬롯을 다시 사용 하도록 지정 합니다. 이것이 기본값입니다.|  
+|`mdReuseSlot`|가상 테이블에서이 메서드에 사용 되는 슬롯을 다시 사용 하도록 지정 합니다. 기본값입니다.|  
 |`mdNewSlot`|메서드가 항상 가상 테이블에 새 슬롯을 가져옵니다.|  
 |`mdCheckAccessOnOverride`|표시 되는 형식과 동일한 형식으로 메서드를 재정의할 수 있도록 지정 합니다.|  
 |`mdAbstract`|메서드가 구현 되지 않도록 지정 합니다.|  
@@ -100,6 +101,6 @@ typedef enum CorMethodAttr {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 열거형](metadata-enumerations.md)

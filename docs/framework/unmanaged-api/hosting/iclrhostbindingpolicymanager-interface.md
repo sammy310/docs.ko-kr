@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRHostBindingPolicyManager 인터페이스'
 title: ICLRHostBindingPolicyManager 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9da168b-366b-4b2b-bdb9-330b6bad5a6b
 topic_type:
 - apiref
-ms.openlocfilehash: 49d1ee4dd0965d4ae5b54b53208809cfbdf7e718
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 07a18d622ff8d8483fe6dcb0242cb5f1ee284b14
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725634"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789946"
 ---
 # <a name="iclrhostbindingpolicymanager-interface"></a>ICLRHostBindingPolicyManager 인터페이스
 
@@ -42,7 +43,7 @@ ms.locfileid: "95725634"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRAssemblyIdentityManager 인터페이스](iclrassemblyidentitymanager-interface.md)
 - [IHostAssemblyStore 인터페이스](ihostassemblystore-interface.md)

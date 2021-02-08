@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 검색 알림 및 알림 클라이언트'
 title: 검색 알림 및 알림 클라이언트
 ms.date: 03/30/2017
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-ms.openlocfilehash: 4ad0b3ea5c257fa3117c426391bd59ad7b560d4f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2076b4dbdc57bd3de47fccdb4a51ef9e6fc48366
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040175"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802972"
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>검색 알림 및 알림 클라이언트
 
@@ -18,7 +19,7 @@ WCF 검색 기능을 사용 하면 구성 요소에서 해당 가용성을 알�
 알림을 받도록 구성된 서비스는 네트워크에 연결되어 검색 가능한 상태가 되면 수신 대기 중인 클라이언트에 자신의 가용성을 알리는 Hello 메시지를 보냅니다. 이 메시지에는 계약, 엔드포인트 주소, 연결된 범위 등 서비스에 대한 검색 관련 정보가 포함됩니다. <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 클래스를 사용하면 알림 메시지를 보낼 위치를 지정할 수 있습니다. 알림 엔드포인트가 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>이면 Hello 및 Bye가 적절히 멀티캐스트됩니다. 그러나 알림 엔드포인트가 유니캐스트이면 메시지가 지정된 엔드포인트에 직접 보내집니다.
 
 > [!NOTE]
-> 알림은 서비스 호스트가 열리고 닫힐 때 보내집니다. 이러한 호출이 올바로 완료되지 않으면 알림 메시지가 보내지지 않을 수 있습니다. 예를 들어 서비스에서 오류가 발생해도 Bye 알림 메시지가 보내지지 않습니다.
+> 알림은 서비스 호스트가 열리고 닫힐 때 보내집니다. 이러한 호출이 제대로 완료 되지 않으면 알림 메시지를 보낼 수 없습니다. 예를 들어 서비스에 오류가 발생 한 경우 Bye 알림 메시지가 전송 되지 않습니다.
 
 > [!TIP]
 > 선택할 때마다 알림을 보낼 수 있도록 알림 기능을 사용자 지정할 수 있습니다.
@@ -62,7 +63,7 @@ serviceHost.Description.Behaviors.Add(serviceDiscoveryBehavior);
 
 ### <a name="announcements-on-the-client"></a>클라이언트에서의 알림
 
-클라이언트 애플리케이션에서는 Hello 및 Bye 메시지에 응답하고 <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> 및 <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived> 이벤트를 구독할 수 있도록 알림 서비스를 호스팅해야 합니다. 다음 예제에서는 이 작업을 수행하는 방법을 보여 줍니다.
+클라이언트 애플리케이션에서는 Hello 및 Bye 메시지에 응답하고 <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> 및 <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived> 이벤트를 구독할 수 있도록 알림 서비스를 호스팅해야 합니다. 다음 예제에 이 작업을 수행하는 방법이 나와 있습니다.
 
 ```csharp
 // Create an AnnouncementService instance

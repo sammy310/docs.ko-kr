@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRMetaHost:: EnumerateLoadedRuntimes 메서드'
 title: ICLRMetaHost::EnumerateLoadedRuntimes 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22fc0a3f-dce4-4766-9a3c-9fab15f4b4ca
 topic_type:
 - apiref
-ms.openlocfilehash: 98184dd6ea16df066905039b028acd689ff3f290
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 508c4daca7e34366e0da35591f4e7a780301e823
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730437"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789868"
 ---
 # <a name="iclrmetahostenumerateloadedruntimes-method"></a>ICLRMetaHost::EnumerateLoadedRuntimes 메서드
 
@@ -43,7 +44,7 @@ HRESULT EnumerateLoadedRuntimes (
  `ppEnumerator`  
  제한이 <xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown> 프로세스에서 로드 한 각 CLR에 해당 하는 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 인터페이스의 열거형입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -66,7 +67,7 @@ HRESULT EnumerateLoadedRuntimes (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRMetaHost 인터페이스](iclrmetahost-interface.md)
 - [호스팅](index.md)

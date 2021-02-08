@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorRuntimeHost:: CloseEnum 메서드'
 title: ICorRuntimeHost::CloseEnum 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f7ce7e8c-0a3e-4587-a180-063e2b85940e
 topic_type:
 - apiref
-ms.openlocfilehash: d3748621474373fee8248496d48414ff67c699d6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1fc18ff3e00f85a4f047417f880ec2b0e06496b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715698"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789725"
 ---
 # <a name="icorruntimehostcloseenum-method"></a>ICorRuntimeHost::CloseEnum 메서드
 
@@ -39,7 +40,7 @@ HRESULT CloseEnum (
  `hEnum`  
  진행 다시 설정할 열거자입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -58,7 +59,7 @@ HRESULT CloseEnum (
   
  **.NET Framework 버전:** 1.0, 1.1  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [CorBindToRuntimeEx 함수](corbindtoruntimeex-function.md)
 - [ICorRuntimeHost 인터페이스](icorruntimehost-interface.md)

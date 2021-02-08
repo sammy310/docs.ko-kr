@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRMetaHost:: QueryLegacyV2RuntimeBinding 메서드'
 title: ICLRMetaHost::QueryLegacyV2RuntimeBinding 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9929817e-acc9-40b7-960c-598664e04b60
 topic_type:
 - apiref
-ms.openlocfilehash: d65191e515db9c302cef669a824ffd08327faf34
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ae825c2b2dfe2ce5b75ac9b82511215704fa357f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713992"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99789855"
 ---
 # <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a>ICLRMetaHost::QueryLegacyV2RuntimeBinding 메서드
 
@@ -42,7 +43,7 @@ HRESULT QueryLegacyV2RuntimeBinding (
  `ppUnk`  
  [out] 필수입니다. 이 메서드는 반환 될 때 레거시 활성화 정책에 바인딩된 런타임을 나타내는 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 인터페이스에 대 한 포인터를 포함 합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -64,7 +65,7 @@ HRESULT QueryLegacyV2RuntimeBinding (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRMetaHost 인터페이스](iclrmetahost-interface.md)
 - [호스팅](index.md)

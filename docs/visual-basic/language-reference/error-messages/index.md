@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic의 오류 메시지'
 title: Visual Basic 오류 메시지
 titleSuffix: ''
 ms.date: 10/13/2020
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - errors [Visual Basic]
 - error messages
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: 70973b6d34ed1a84a38af3694e144dfcefa61c20
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 28e59a47c47ff7905dfec93b057f7cb534842b91
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163378"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796069"
 ---
 # <a name="error-messages-in-visual-basic"></a>Visual Basic의 오류 메시지
 
@@ -31,7 +32,7 @@ Visual Basic 응용 프로그램이 시스템에서 실행할 수 없는 작업�
 
 ## <a name="compile-time-errors"></a>컴파일 타임 오류
 
-Visual Basic 컴파일러를 사용하는 동안 코드에서 문제가 발생하는 경우 컴파일 타임 오류가 발생합니다. Visual Studio 코드 편집기에서 코드 줄 아래에 물결선이 표시 되기 때문에 오류가 발생 한 코드 줄을 쉽게 식별할 수 있습니다. 물결 무늬 밑줄을 가리키거나 **오류 목록**을 열어도 오류 메시지가 표시됩니다. 오류 목록을 열면 다른 메시지도 볼 수 있습니다.
+Visual Basic 컴파일러를 사용하는 동안 코드에서 문제가 발생하는 경우 컴파일 타임 오류가 발생합니다. Visual Studio 코드 편집기에서 코드 줄 아래에 물결선이 표시 되기 때문에 오류가 발생 한 코드 줄을 쉽게 식별할 수 있습니다. 물결 무늬 밑줄을 가리키거나 **오류 목록** 을 열어도 오류 메시지가 표시됩니다. 오류 목록을 열면 다른 메시지도 볼 수 있습니다.
 
 식별자에 물결선 밑줄이 있고 가장 오른쪽 문자 아래에 짧은 밑줄이 표시 되는 경우 클래스, 생성자, 메서드, 속성, 필드 또는 열거형에 대 한 스텁을 생성할 수 있습니다. 자세한 내용은 관례 [에서 생성 (Visual Studio)](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage)을 참조 하세요.
 

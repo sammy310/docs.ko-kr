@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: 페더레이션 및 신뢰'
 title: 페더레이션 및 트러스트
 ms.date: 03/30/2017
 helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
-ms.openlocfilehash: 6baa336f96f2349315cab2ed51bfb67c4745a110
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ccacb38f9542fab5522331d53dc29792318c5dea
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255483"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802946"
 ---
 # <a name="federation-and-trust"></a>페더레이션 및 트러스트
 
@@ -21,7 +22,7 @@ ms.locfileid: "96255483"
   
  마찬가지로 대칭 키를 사용하는 경우 해당 키는 대상 서비스에 대해 암호화되기 때문에 대상 서비스에 대해 올바른 자격 증명으로 보안 토큰 서비스를 구성해야 합니다. 그렇지 않을 경우 대상 서비스에 대해 키를 암호화할 수 없고 클라이언트도 서비스와 통신할 수 없습니다.  
   
- WCF 서비스는 SecurityBindingElement의 속성 값을 사용 <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> 하 [SecurityBindingElement](../diagnostics/wmi/securitybindingelement.md) 여 클라이언트와 서비스 간의 클록 기울이기를 허용 합니다. 페더레이션에서 `MaxClockSkew` 설정은 클라이언트가 발급된 토큰을 가져온 클라이언트 및 보안 토큰 서비스 사이에 모두 클럭 오차를 적용합니다. 따라서 보안 토큰 서비스는 발급된 토큰의 유효 시간 및 만료 시간을 설정할 때 클럭 오차를 허용할 필요가 없습니다.  
+ WCF 서비스는 SecurityBindingElement의 속성 값을 사용 <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> 하 [](../diagnostics/wmi/securitybindingelement.md) 여 클라이언트와 서비스 간의 클록 기울이기를 허용 합니다. 페더레이션에서 `MaxClockSkew` 설정은 클라이언트가 발급된 토큰을 가져온 클라이언트 및 보안 토큰 서비스 사이에 모두 클럭 오차를 적용합니다. 따라서 보안 토큰 서비스는 발급된 토큰의 유효 시간 및 만료 시간을 설정할 때 클럭 오차를 허용할 필요가 없습니다.  
   
 > [!NOTE]
 > 발급된 토큰 수명이 단축될수록 클럭 오차의 중요성이 증가합니다. 대부분의 경우 토큰 수명이 30분 이상이면 클럭 오차가 중요한 문제가 되지 않습니다. 수명이 짧거나 토큰의 정확한 유효 시간이 중요한 경우 클럭 오차를 고려하도록 디자인해야 합니다.  

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 206-ErrorHandlerInvoked'
 title: 206 - ErrorHandlerInvoked
 ms.date: 03/30/2017
 ms.assetid: 97340f4d-4e09-4e42-a17a-982b3868dbcf
-ms.openlocfilehash: 99415733624752217d32f6f026a419b2b32bfa7b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: addbcbdea25c7f8e7515b743e98e426476fa0b28
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244615"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783783"
 ---
 # <a name="206---errorhandlerinvoked"></a>206 - ErrorHandlerInvoked
 
@@ -20,7 +21,7 @@ ms.locfileid: "96244615"
 |Level|정보|  
 |채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
 
  이 이벤트는 서비스 작업에서 발생한 예외를 처리할 수 있는 기회가 `ErrorHandler`에 제공된 후에 내보내집니다.  
   
@@ -30,7 +31,7 @@ ms.locfileid: "96244615"
   
 ## <a name="details"></a>세부 정보  
   
-|데이터 항목 이름|데이터 항목 형식|Description|  
+|데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |TypeName|`xs:string`|호출된 `ErrorHandler` 형식의 CLR FullName입니다.|  
 |처리됨|`xs:unsignedByte`|오류 처리기가 오류를 처리했으면 `true`이고, 그렇지 않으면 `false`입니다.|  

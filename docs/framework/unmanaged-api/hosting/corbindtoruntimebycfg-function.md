@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CorBindToRuntimeByCfg 함수'
 title: CorBindToRuntimeByCfg 함수
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-ms.openlocfilehash: d319382b577844a804c3e4562676491a15de5f63
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c1acf6a8f1d8637bc2d6cd180016ff51cf500107
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673789"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790076"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg 함수
 
@@ -74,7 +75,7 @@ HRESULT CorBindToRuntimeByCfg (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [CorBindToCurrentRuntime 함수](corbindtocurrentruntime-function.md)
 - [CorBindToRuntime 함수](corbindtoruntime-function.md)

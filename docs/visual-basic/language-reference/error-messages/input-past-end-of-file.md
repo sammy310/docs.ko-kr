@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: 파일의 끝을 지난 입력'
 title: 입력(값)이 파일의 끝을 넘습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID62
 ms.assetid: 65292704-6e7d-4622-9f50-eb655a59b016
-ms.openlocfilehash: c0cb0373fb0652e9600ac8651661708414561aca
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: b65a57bdc56367518a93880be28781e56c9b99cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873965"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796043"
 ---
 # <a name="input-past-end-of-file"></a>입력(값)이 파일의 끝을 넘습니다.
 
@@ -21,7 +22,7 @@ ms.locfileid: "90873965"
   
 2. 이진 액세스용으로 파일을 연 경우 및를 사용 `Seek` `Loc` 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.FileSystem.Input%2A>
 - <xref:Microsoft.VisualBasic.FileSystem.EOF%2A>

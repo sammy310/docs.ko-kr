@@ -1,4 +1,5 @@
 ---
+description: "<typename1> <typename2> ' ByRef ' 매개 변수 ' '의 값을 일치 하는 <parametername> 인수에 다시 복사 하는 중에 BC41999: ' '에서 ' ' (으)로의 암시적 변환에 대해 자세히 알아보세요."
 title: ByRef' 매개 변수 '<typename1>'의 값을 해당 인수에 다시 복사하는 동안 발생하는 '<typename2>'에서 '<parametername>'(으)로의 암시적 변환입니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: a95a4b792742efcc165f7c7a9592582d34618f11
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: debe9d248a41d1b5c1f541392a1846b8598c126f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162806"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796082"
 ---
 # <a name="bc41999-implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>BC41999: ' \<typename1> \<typename2> ByRef ' 매개 변수 ' '의 값을 일치 하는 인수에 다시 복사 하는 동안 ' '에서 ' ' (으)로 암시적으로 변환 \<parametername> 합니다.
 

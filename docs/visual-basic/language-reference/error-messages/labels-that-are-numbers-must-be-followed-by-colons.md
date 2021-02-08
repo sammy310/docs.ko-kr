@@ -1,4 +1,5 @@
 ---
+description: '자세한 내용은 다음에 대해 자세히 알아보세요. BC30801: 숫자 레이블 뒤에 콜론이와 야 합니다.'
 title: 숫자 레이블 뒤에는 콜론이 와야 합니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30801
 ms.assetid: 67743319-2d1c-496e-bfd9-22b046b43b5a
-ms.openlocfilehash: 6b89f23731e75b5248390d02e3c05410104bde6b
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 4c179cc6b74f323c330b093af988f33173e901fa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163313"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99795965"
 ---
 # <a name="bc30801-labels-that-are-numbers-must-be-followed-by-colons"></a>BC30801: 숫자 레이블 뒤에는 콜론이와 야 합니다.
 

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 방법: 신뢰할 수 있는 세션 내에서 메시지 교환'
 title: '방법: 신뢰할 수 있는 세션 내에서 메시지 교환'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 97371f8572d5d0db633ab8dd1ca82067d9d55c3f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e4a8f6a180b9c2ff9471558997034d02acc817e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550191"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802907"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>방법: 신뢰할 수 있는 세션 내에서 메시지 교환
 
@@ -77,6 +78,6 @@ ms.locfileid: "90550191"
 
 신뢰할 수 있는 세션을 지 원하는 사용자 지정 바인딩을 만드는 방법에 대 한 예제는 [방법: HTTPS를 사용 하 여 신뢰할 수 있는 사용자 지정 세션 바인딩 만들기](how-to-create-a-custom-reliable-session-binding-with-https.md)를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [신뢰할 수 있는 세션](reliable-sessions.md)

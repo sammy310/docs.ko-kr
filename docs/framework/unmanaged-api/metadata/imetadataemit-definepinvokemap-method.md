@@ -1,4 +1,5 @@
 ---
+description: IMetaDataEmit::D efinePinvokeMap 메서드에 대해 자세히 알아보세요.
 title: IMetaDataEmit::DefinePinvokeMap 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 03abf921-5154-4070-88fa-10b7092901fb
 topic_type:
 - apiref
-ms.openlocfilehash: b46d39ab3958227c1fca24ceb3a9934f2778aa2c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b0477ca603241e773a67f335da579daa2ed3d30
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719504"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99784069"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap 메서드
 
@@ -61,7 +62,7 @@ HRESULT DefinePinvokeMap (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [IMetaDataEmit 인터페이스](imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](imetadataemit2-interface.md)

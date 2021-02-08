@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRGCManager:: GetStats 메서드'
 title: ICLRGCManager::GetStats 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ce259d1d-cd81-4490-a7a1-0d0ea0804872
 topic_type:
 - apiref
-ms.openlocfilehash: 70fe8b132f03925c41b6bc7aae8e60fea1b05202
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 94b20fb313f06d73f1e7fafd1f46fefb0da3fe95
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678300"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99790024"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats 메서드
 
@@ -39,7 +40,7 @@ HRESULT GetStats (
  `pStats`  
  [in, out] 요청한 통계를 포함 하는 [COR_GC_STATS](cor-gc-stats-structure.md) 인스턴스입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -74,7 +75,7 @@ pCLRGCManager->GetStats(&GCStats);
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [자동 메모리 관리](../../../standard/automatic-memory-management.md)
 - [COR_GC_STATS 구조체](cor-gc-stats-structure.md)

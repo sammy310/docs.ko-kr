@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICorProfilerInfo9:: GetCodeInfo4 메서드'
 title: ICorProfilerInfo9::GetCodeInfo4
 ms.date: 08/06/2019
 dev_langs:
@@ -11,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: ecaff179378eb417393c0a0d17d0a00d3b99e5a4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 765f3dfee6c56148eb7807b0606e79d4b3a2e7a1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541300"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99783809"
 ---
 # <a name="icorprofilerinfo9getcodeinfo4-method"></a>ICorProfilerInfo9:: GetCodeInfo4 메서드
 
@@ -72,6 +73,6 @@ HRESULT GetCodeInfo4( [in]  UINT_PTR pNativeCodeStartAddress,
 
 **.Net 버전:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICorProfilerInfo9 인터페이스](ICorProfilerInfo9-interface.md)

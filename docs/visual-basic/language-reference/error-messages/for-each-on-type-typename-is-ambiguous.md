@@ -1,4 +1,5 @@
 ---
+description: "' ' 형식에 대 한 자세한 내용은 BC32096: ' ' 형식에 대 한 ' For Each ' 형식이 모호 합니다. <typename>"
 title: "'<typename>' 형식은 'System.Collections.Generic.IEnumerable(Of T)'의 여러 인스턴스를 구현하므로 이 형식의 'For Each'가 모호합니다."
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32096
 ms.assetid: ed20d09c-913f-482e-89f8-c0a596c3ec24
-ms.openlocfilehash: 0f19836efeabcf1d9e5097667c719c1f7d99cbbb
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: c96bab40d4f7216f90368cf4c5526c7b4e5532f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92163469"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99796212"
 ---
 # <a name="bc32096-for-each-on-type-typename-is-ambiguous-because-the-type-implements-multiple-instantiations-of-systemcollectionsgenericienumerableof-t"></a>' ' 형식에 대 한 ' For Each ' BC32096: \<typename> 형식이 ' (Of T) '의 여러 인스턴스를 구현 하므로 모호 합니다.
 

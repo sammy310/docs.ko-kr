@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: PeerSecuritySettings'
 title: PeerSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 24ae0d35-f3a3-419b-afd6-686e22aae27b
-ms.openlocfilehash: 2de417e4a4f5c6197551c1408da6907e2fa7c635
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a8b5b8c88e71cb46110fa35186599c0f9c366d17
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96269004"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99803011"
 ---
 # <a name="peersecuritysettings"></a>PeerSecuritySettings
 
 PeerSecuritySettings  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class PeerSecuritySettings  
@@ -31,7 +32,7 @@ class PeerSecuritySettings
 
  PeerSecuritySettings 클래스에는 다음과 같은 속성이 있습니다.  
   
-### <a name="mode"></a>Mode  
+### <a name="mode"></a>모드  
 
  데이터 형식: 문자열  
   
