@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: CoEEShutDownCOM 함수'
 title: CoEEShutDownCOM 함수
 ms.date: 03/30/2017
 api_name:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b634cae2-632f-4737-9be4-92d0652844d7
 topic_type:
 - apiref
-ms.openlocfilehash: 774704698f92d546d6bafa61c65d18d083c65f89
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4f1ac8107c9a121ebf52ef21a5f2c9006880914f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95716761"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799865"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM 함수
 
@@ -54,6 +55,6 @@ void CoEEShutDownCOM ();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [메타데이터 전역 정적 함수](../metadata/metadata-global-static-functions.md)

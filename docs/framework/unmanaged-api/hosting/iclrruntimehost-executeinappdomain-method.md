@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRRuntimeHost:: ExecuteInAppDomain 메서드'
 title: ICLRRuntimeHost::ExecuteInAppDomain 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2b0e2db-3fae-4b56-844e-d30a125a660c
 topic_type:
 - apiref
-ms.openlocfilehash: 4c28c4a5cc64b20c9ac9c57e1aef5e7b90a20e01
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6640713b55e05817f39af819d5e41ee1f2a10b68
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728890"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799748"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>ICLRRuntimeHost::ExecuteInAppDomain 메서드
 
@@ -47,7 +48,7 @@ HRESULT ExecuteInAppDomain(
  `cookie`  
  진행 호출자가 할당 한 불투명 메모리에 대 한 포인터입니다. 이 매개 변수는 CLR (공용 언어 런타임)에서 도메인 콜백에 전달 됩니다. 런타임 관리 힙 메모리가 아닙니다. 이 메모리의 할당 및 수명은 모두 호출자에 의해 제어 됩니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
@@ -72,6 +73,6 @@ HRESULT ExecuteInAppDomain(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRRuntimeHost 인터페이스](iclrruntimehost-interface.md)

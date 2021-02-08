@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: CLR 호스팅 인터페이스'
 title: CLR 호스팅 인터페이스
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework], version 2.0
 - .NET Framework 2.0, hosting interfaces
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
-ms.openlocfilehash: 77f2ba64d9bdbe9793d56e88dae46fd506119ab8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f42a74698607ffbed4a981f061d13ea4e9d634d8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719049"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799904"
 ---
 # <a name="clr-hosting-interfaces"></a>CLR 호스팅 인터페이스
 
@@ -186,7 +187,7 @@ ms.locfileid: "95719049"
  IValidator  
  PE (이식 가능한 실행) 이미지를 확인 하 고 유효성 검사 오류를 보고 하는 메서드를 제공 합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+## <a name="related-sections"></a>관련 섹션  
 
  [사용되지 않는 CLR 호스팅 인터페이스 및 Coclass](deprecated-clr-hosting-interfaces-and-coclasses.md)  
  .NET Framework 버전 1.0 및 1.1에 제공 된 호스팅 인터페이스를 설명 하는 항목을 포함 합니다.  

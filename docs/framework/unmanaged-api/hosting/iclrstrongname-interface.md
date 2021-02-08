@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRStrongName 인터페이스'
 title: ICLRStrongName 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 691cc3cf4ec8d036a4de04247f243d99daa887d4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5565e864d35e68e714602b291a724a0ad9999a28
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733635"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799670"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName 인터페이스
 
@@ -69,7 +70,7 @@ ms.locfileid: "95733635"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 인터페이스](hosting-interfaces.md)
 - [호스팅](index.md)

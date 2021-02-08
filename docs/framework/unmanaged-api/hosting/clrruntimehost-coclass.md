@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: CLRRuntimeHost Coclass'
 title: CLRRuntimeHost Coclass
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2ac9cbf5-8a2d-4e4f-8831-0dad8ef0a897
 topic_type:
 - apiref
-ms.openlocfilehash: 7c77cb2e89cb8fd87bf219780b9460649de19c9d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a371b9b7263f8bb58b5c513de6647320f000beed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731769"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799891"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost Coclass
 
@@ -51,6 +52,6 @@ coclass CLRRuntimeHost {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 Coclass](hosting-coclasses.md)

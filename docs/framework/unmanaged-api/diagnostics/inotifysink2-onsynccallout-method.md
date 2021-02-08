@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: INotifySink2:: OnSyncCallOut 메서드'
 title: INotifySink2::OnSyncCallOut 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 97f15656-8677-4079-8553-a1d8603355d6
 topic_type:
 - apiref
-ms.openlocfilehash: 00f6032f41caf54d7366de30a449f1ae76e8bbd0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 03028b138a7d95c618ae20530f66aa692d314cab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719985"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800242"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>INotifySink2::OnSyncCallOut 메서드
 
@@ -48,7 +49,7 @@ HRESULT OnSyncCallOut
  `out_pBufferSize`  
  제한이 호출 버퍼의 크기 (바이트)입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK 합니다.  
   
@@ -56,7 +57,7 @@ HRESULT OnSyncCallOut
 
  **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [INotifySink2 인터페이스](inotifysink2-interface.md)
 - [INotifySource2 인터페이스](inotifysource2-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRStrongName:: StrongNameGetPublicKey 메서드'
 title: ICLRStrongName::StrongNameGetPublicKey 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a31dcaa9-a404-4c1d-8cc7-081827c52935
 topic_type:
 - apiref
-ms.openlocfilehash: 5bd314b2b63474d2a1d159f74564e2d4ca13aef6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7be64e145f1e26a1260e2b23fd9fe5f97e289478
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725549"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799605"
 ---
 # <a name="iclrstrongnamestrongnamegetpublickey-method"></a>ICLRStrongName::StrongNameGetPublicKey 메서드
 
@@ -59,7 +60,7 @@ HRESULT StrongNameGetPublicKey (
  `pcbPublicKeyBlob`  
  제한이 반환 된 공개 키 BLOB의 크기입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `S_OK` 메서드가 성공적으로 완료 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
   
@@ -77,7 +78,7 @@ HRESULT StrongNameGetPublicKey (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [StrongNameTokenFromPublicKey 메서드](iclrstrongname-strongnametokenfrompublickey-method.md)
 - [PublicKeyBlob 구조체](../strong-naming/publickeyblob-structure.md)

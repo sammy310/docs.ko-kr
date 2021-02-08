@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: COR_GC_THREAD_STATS 구조체'
 title: COR_GC_THREAD_STATS 구조체
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01f9a59b-7679-4d42-9ced-4a8981625c3d
 topic_type:
 - apiref
-ms.openlocfilehash: 25a90965dc5466b7cf1a07140705424cf2ba4cd9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 179eb335e9f8c118ee98d4b777c347f3758ee0c6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699237"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799787"
 ---
 # <a name="cor_gc_thread_stats-structure"></a>COR_GC_THREAD_STATS 구조체
 
@@ -34,7 +35,7 @@ typedef struct _COR_GC_THREAD_STATS {
 } COR_GC_THREAD_STATS;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -55,7 +56,7 @@ typedef struct _COR_GC_THREAD_STATS {
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 구조체](hosting-structures.md)
 - [IHostTask 인터페이스](ihosttask-interface.md)

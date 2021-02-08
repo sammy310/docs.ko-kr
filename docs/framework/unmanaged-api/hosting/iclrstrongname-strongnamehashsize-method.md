@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRStrongName:: StrongNameHashSize 메서드'
 title: ICLRStrongName::StrongNameHashSize 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a05ee56-08e4-4f3a-86a9-9b52083d5c0f
 topic_type:
 - apiref
-ms.openlocfilehash: 6ee87fdbf75d4a07a7337a1c9fdc58a06191b992
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 74781f0eaec720a84a242e6a9637036408652601
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674817"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799592"
 ---
 # <a name="iclrstrongnamestrongnamehashsize-method"></a>ICLRStrongName::StrongNameHashSize 메서드
 
@@ -43,7 +44,7 @@ HRESULT StrongNameHashSize (
  `pcbSize`  
  제한이 반환 된 버퍼 크기 (바이트)입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  `S_OK` 메서드가 성공적으로 완료 되었으면이 고, 그렇지 않으면입니다. 그렇지 않으면 오류를 나타내는 HRESULT 값입니다 (목록의 [일반적인 Hresult 값](/windows/win32/seccrypto/common-hresult-values) 참조).  
   

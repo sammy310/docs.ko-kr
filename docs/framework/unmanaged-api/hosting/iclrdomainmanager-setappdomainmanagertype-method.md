@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRDomainManager:: SetAppDomainManagerType 메서드'
 title: ICLRDomainManager::SetAppDomainManagerType 메서드
 ms.date: 03/30/2017
 api_name:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - SetAppDomainManagerType method, ICLRDomainManager interface [.NET Framework hosting]
 - ICLRDomainManager::SetAppDomainManagerType method [.NET Framework hosting]
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
-ms.openlocfilehash: 7c6b328793e6437682ad8d642e611be30e7b0fe6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 479e6596982d21c4e9ae445a7d4453235dbef729
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95702150"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799761"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>ICLRDomainManager::SetAppDomainManagerType 메서드
 
@@ -45,7 +46,7 @@ HRESULT SetAppDomainManagerType(
  `dwInitializeDomainFlags`  
  진행 응용 프로그램 도메인 관리자에 대 한 정보를 제공 하는 [EInitializeNewDomainFlags](einitializenewdomainflags-enumeration.md) 열거형 값의 조합입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -73,7 +74,7 @@ HRESULT SetAppDomainManagerType(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅](index.md)
 - [ICLRDomainManager 인터페이스](iclrdomainmanager-interface.md)

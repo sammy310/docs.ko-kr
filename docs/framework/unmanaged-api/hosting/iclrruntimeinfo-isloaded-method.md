@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: ICLRRuntimeInfo:: IsLoaded 메서드'
 title: ICLRRuntimeInfo::IsLoaded 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdc5a3a7-71ff-4025-99a1-59e4ee0bfe1b
 topic_type:
 - apiref
-ms.openlocfilehash: 66ae74deba9ceab9d1ea6b2c0b96a87bf44f32ab
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e6a5984dbd2340fe07af546dd48ae6760d5b4271
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714928"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799706"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>ICLRRuntimeInfo::IsLoaded 메서드
 
@@ -42,7 +43,7 @@ HRESULT IsLoaded(
  `pbLoaded`  
  [out] `true` CLR이 프로세스에 로드 되 면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false` 입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
@@ -61,7 +62,7 @@ HRESULT IsLoaded(
   
 - 사용 되지 않는 `CorBindTo*` 함수 (.NET Framework 2.0 호스팅 API에서 [사용 되지 않는 CLR 호스팅 함수](deprecated-clr-hosting-functions.md) 참조)  
   
- 호스트는 CorBindToRuntime 함수와 같은 사용 되지 않는 함수 중 하나를 호출 `CorBindTo*` 하 여 특정 버전의 CLR을 인스턴스화할 수 있습니다. [CorBindToRuntime](corbindtoruntime-function.md) 그러면 호스트에서 [ICLRMetaHost:: GetRuntime](iclrmetahost-getruntime-method.md) 메서드를 호출 하 고 동일한 버전 번호를 지정 하 여 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 인터페이스를 가져올 수 있습니다.  
+ 호스트는 CorBindToRuntime 함수와 같은 사용 되지 않는 함수 중 하나를 호출 `CorBindTo*` 하 여 특정 버전의 CLR을 인스턴스화할 수 있습니다. [](corbindtoruntime-function.md) 그러면 호스트에서 [ICLRMetaHost:: GetRuntime](iclrmetahost-getruntime-method.md) 메서드를 호출 하 고 동일한 버전 번호를 지정 하 여 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 인터페이스를 가져올 수 있습니다.  
   
  그런 다음 호스트에서 반환 된 `IsLoaded` [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) 인터페이스에 대해 메서드를 호출 하면 `pbLoaded` 이 반환 되 고, `true` 그렇지 않으면를 반환 `false` 합니다.  
   
@@ -75,7 +76,7 @@ HRESULT IsLoaded(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ICLRRuntimeInfo 인터페이스](iclrruntimeinfo-interface.md)
 - [호스팅 인터페이스](hosting-interfaces.md)

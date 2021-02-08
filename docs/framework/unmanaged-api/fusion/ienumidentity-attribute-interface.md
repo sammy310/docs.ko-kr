@@ -1,4 +1,5 @@
 ---
+description: IEnumIDENTITY_ATTRIBUTE 인터페이스에 대해 자세히 알아보세요.
 title: IEnumIDENTITY_ATTRIBUTE 인터페이스
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c2ec2748-e9ae-4e1b-80db-6fcec5cb81a1
 topic_type:
 - apiref
-ms.openlocfilehash: 71a6ea9f593da093985a4420e690f1bdd7f9d139
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b621a722e35d5b31f487e8823b1627fdfe1e7888
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728994"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800151"
 ---
 # <a name="ienumidentity_attribute-interface"></a>IEnumIDENTITY_ATTRIBUTE 인터페이스
 
@@ -43,6 +44,6 @@ ms.locfileid: "95728994"
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [Fusion 인터페이스](fusion-interfaces.md)

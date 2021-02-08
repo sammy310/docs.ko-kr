@@ -1,4 +1,5 @@
 ---
+description: '다음에 대 한 자세한 정보: COR_GC_STATS 구조체'
 title: COR_GC_STATS 구조체
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-ms.openlocfilehash: 53a70c53a06ac55a2dab7c646018d63189ee0b36
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9b1002f462fb9b447e521cd1b3e5c78297eefc04
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726225"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99799808"
 ---
 # <a name="cor_gc_stats-structure"></a>COR_GC_STATS 구조체
 
@@ -43,7 +44,7 @@ typedef struct _COR_GC_STATS {
 } COR_GC_STATS;  
 ```  
   
-## <a name="members"></a>멤버  
+## <a name="members"></a>구성원  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -87,7 +88,7 @@ pCLRGCManager->GetStats(&GCStats);
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [호스팅 구조체](hosting-structures.md)
 - [자동 메모리 관리](../../../standard/automatic-memory-management.md)

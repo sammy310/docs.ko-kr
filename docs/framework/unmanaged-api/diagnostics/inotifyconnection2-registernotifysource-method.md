@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: INotifyConnection2:: RegisterNotifySource 메서드'
 title: INotifyConnection2::RegisterNotifySource 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2632da80-6e4b-4429-8dee-b382745a5f81
 topic_type:
 - apiref
-ms.openlocfilehash: 1286dd970e437af0a8b607ed050ab4838f73a41f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 97aacf7f2005a1e9f21acebd6c5f5ed65867b245
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720050"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800320"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource 메서드
 
@@ -44,7 +45,7 @@ HRESULT RegisterNotifySource
  `out_ppNotifySink`  
  제한이 알림 싱크로 사용할 개체를 받습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK 합니다.  
   
@@ -52,7 +53,7 @@ HRESULT RegisterNotifySource
 
  **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [INotifyConnection2 인터페이스](inotifyconnection2-interface.md)
 - [INotifySource2 인터페이스](inotifysource2-interface.md)

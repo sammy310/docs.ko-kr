@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: INotifySink2:: OnSyncCallEnter 메서드'
 title: INotifySink2::OnSyncCallEnter 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e33265be-c25d-4145-ad02-c3e89d6f26c1
 topic_type:
 - apiref
-ms.openlocfilehash: 57d12a463bc0904e1a5c873d24f843e004b95101
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e7537b16ec8ea8d92ad92498c1bfdac5a9de6475
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720011"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800281"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>INotifySink2::OnSyncCallEnter 메서드
 
@@ -48,7 +49,7 @@ HRESULT OnSyncCallEnter
  `in_BufferSize`  
  진행 호출 버퍼의 크기 (바이트)입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK 합니다.  
   
@@ -56,7 +57,7 @@ HRESULT OnSyncCallEnter
 
  **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [INotifySink2 인터페이스](inotifysink2-interface.md)
 - [INotifySource2 인터페이스](inotifysource2-interface.md)

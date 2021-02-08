@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: INotifySink2:: OnSyncCallExit 메서드'
 title: INotifySink2::OnSyncCallExit 메서드
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d9d7600e-a8f5-443a-96de-67d26e130f2d
 topic_type:
 - apiref
-ms.openlocfilehash: 9049cd42e9c10cdcff62b005094b56c9df9ce975
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2de55c3b7956576049e4ad65b2cb6fbc69fa84af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719998"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800268"
 ---
 # <a name="inotifysink2onsynccallexit-method"></a>INotifySink2::OnSyncCallExit 메서드
 
@@ -48,7 +49,7 @@ HRESULT OnSyncCallExit
  `out_pBufferSize`  
  제한이 호출 버퍼의 크기 (바이트)입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 
  메서드가 성공 하면 S_OK 합니다.  
   
@@ -56,7 +57,7 @@ HRESULT OnSyncCallExit
 
  **헤더:** ProtocolNotify2  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [INotifySink2 인터페이스](inotifysink2-interface.md)
 - [INotifySource2 인터페이스](inotifysource2-interface.md)

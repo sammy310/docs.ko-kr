@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: NukeDownloadedCache 함수'
 title: NukeDownloadedCache 함수
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fac2b1c6-6fa3-4818-805b-b63972024c86
 topic_type:
 - apiref
-ms.openlocfilehash: 5ae0a887d666a150b717d495848c8a411d030a09
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2239473b8e6e43a539b0507c8255d40f87e72043
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728578"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99800034"
 ---
 # <a name="nukedownloadedcache-function"></a>NukeDownloadedCache 함수
 
@@ -51,7 +52,7 @@ HRESULT NukeDownloadedCache();
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [CreateHistoryReader 함수](createhistoryreader-function.md)
 - [GetHistoryFileDirectory 함수](gethistoryfiledirectory-function.md)
