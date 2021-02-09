@@ -1,15 +1,15 @@
 ---
 title: 작업 목록 취소(C#)
 description: 취소 토큰을 사용하여 작업 목록에 대한 취소 요청을 신호로 보내는 방법을 알아봅니다.
-ms.date: 08/19/2020
+ms.date: 02/03/2021
 ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 79c9db53674182489c89d657786bf39e8bb44b21
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 532c61ab6499583620ba2ee5c710c58f7886f89d
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805254"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585743"
 ---
 # <a name="cancel-a-list-of-tasks-c"></a>작업 목록 취소(C#)
 
@@ -159,7 +159,7 @@ foreach (string url in s_urlList)
 static async Task<int> ProcessUrlAsync(string url, HttpClient client, CancellationToken token)
 {
     HttpResponseMessage response = await client.GetAsync(url, token);
-    byte[] content = await response.Content.ReadAsByteArrayAsync();
+    byte[] content = await response.Content.ReadAsByteArrayAsync(token);
     Console.WriteLine($"{url,-60} {content.Length,10:#,#}");
 
     return content.Length;

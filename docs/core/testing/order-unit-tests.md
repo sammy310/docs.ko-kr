@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 05/18/2020
 zone_pivot_groups: unit-testing-framework-set-one
-ms.openlocfilehash: eb426b790e0623b0cf233a763e93d2bd501b8034
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: a7b6b66e4cc865d4ec6b7cfc31ac79767935df2f
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100823"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506385"
 ---
 # <a name="order-unit-tests"></a>단위 테스트 순서 지정
 
@@ -30,7 +30,7 @@ MSTest를 사용하면 테스트 순서가 테스트 이름을 기준으로 자�
 > [!NOTE]
 > `2`가 `14`보다 작지만 `Test14`라는 테스트는 `Test2`보다 먼저 실행됩니다. 이는 테스트 이름 순서 지정이 테스트의 텍스트 이름을 사용하기 때문입니다.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/MSTest.Project/ByAlphabeticalOrder.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/MSTest.Project/ByAlphabeticalOrder.cs":::
 
 :::zone-end
 :::zone pivot="xunit"
@@ -41,35 +41,35 @@ xUnit 테스트 프레임워크를 사용하면 테스트 실행 순서를 보�
 
 테스트 사례를 해당 메서드 이름에 따라 순서를 지정하려면 `ITestCaseOrderer`를 구현하고 순서 지정 메커니즘을 제공합니다.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/XUnit.TestProject/Orderers/AlphabeticalOrderer.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/XUnit.TestProject/Orderers/AlphabeticalOrderer.cs":::
 
 그런 다음 테스트 클래스에서 `TestCaseOrdererAttribute`를 사용하여 테스트 사례 순서를 설정합니다.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/XUnit.TestProject/ByAlphabeticalOrder.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/XUnit.TestProject/ByAlphabeticalOrder.cs":::
 
 ## <a name="order-by-collection-alphabetically"></a>사전순으로 컬렉션 순서 지정
 
 테스트 컬렉션을 해당 표시 이름에 따라 순서를 지정하려면 `ITestCollectionOrderer`을 구현하고 순서 지정 메커니즘을 제공합니다.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/XUnit.TestProject/Orderers/DisplayNameOrderer.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/XUnit.TestProject/Orderers/DisplayNameOrderer.cs":::
 
 테스트 컬렉션은 잠재적으로 병렬로 실행되므로 `CollectionBehaviorAttribute`를 사용하여 컬렉션의 테스트 병렬 처리를 명시적으로 사용하지 않도록 설정해야 합니다. 그런 다음 `TestCollectionOrdererAttribute`에 대한 구현을 지정합니다.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/XUnit.TestProject/ByDisplayName.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/XUnit.TestProject/ByDisplayName.cs":::
 
 ## <a name="order-by-custom-attribute"></a>사용자 지정 특성별로 순서 지정
 
 사용자 지정 특성을 사용하는 xUnit 테스트의 순서를 지정하려면 먼저 사용할 특성이 필요합니다. 다음과 같이 `TestPriorityAttribute`를 정의합니다.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/XUnit.TestProject/Attributes/TestPriorityAttribute.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/XUnit.TestProject/Attributes/TestPriorityAttribute.cs":::
 
 다음으로 `ITestCaseOrderer` 인터페이스의 다음 `PriorityOrderer` 구현을 고려합니다.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/XUnit.TestProject/Orderers/PriorityOrderer.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/XUnit.TestProject/Orderers/PriorityOrderer.cs":::
 
 그런 다음 테스트 클래스에서 `TestCaseOrdererAttribute`를 `PriorityOrderer`로 지정하여 테스트 사례 순서를 설정합니다.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/XUnit.TestProject/ByPriorityOrder.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/XUnit.TestProject/ByPriorityOrder.cs":::
 
 :::zone-end
 :::zone pivot="nunit"
@@ -78,7 +78,7 @@ xUnit 테스트 프레임워크를 사용하면 테스트 실행 순서를 보�
 
 명시적으로 테스트의 순서를 지정하기 위해 NUnit은 [`OrderAttribute`](https://github.com/nunit/docs/wiki/Order-Attribute)를 제공합니다. 이 특성이 지정된 테스트는 그렇지 않은 테스트보다 먼저 시작합니다. 순서 값은 단위 테스트를 실행하는 순서를 결정하는 데 사용됩니다.
 
-:::code language="csharp" source="~/dotnet-samples/csharp/unit-testing/NUnit.TestProject/ByOrder.cs":::
+:::code language="csharp" source="snippets/order-unit-tests/csharp/NUnit.TestProject/ByOrder.cs":::
 
 :::zone-end
 

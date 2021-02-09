@@ -3,16 +3,16 @@ title: .NET Core 자체 포함 앱 배포에 대한 런타임 롤포워드입니
 description: 자체 포함된 배포에 대한 dotnet 게시 변경 내용에 대해 알아봅니다.
 author: KathleenDollard
 ms.date: 05/31/2018
-ms.openlocfilehash: 22385c7b5d2bf87755fd51cd6268d21fe3431c74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6bc578c63b28f51f1dd98e3e7e56fbe2c7a3e7cf
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75740788"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505910"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>자체 포함된 배포 런타임 롤포워드
 
-.NET Core [자체 포함된 애플리케이션 배포](index.md)에는 .NET Core 라이브러리와 .NET Core 런타임이 모두 포함됩니다. .NET Core 2.1 SDK(버전 2.1.300)부터 자체 포함 애플리케이션 배포가 [사용자 머신에 가장 높은 패치 런타임을 게시합니다](https://github.com/dotnet/designs/pull/36). 기본적으로 자체 포함된 배포에 대한 [`dotnet publish`](../tools/dotnet-publish.md)는 게시 컴퓨터에서 SDK의 일부로 설치된 최신 버전을 선택합니다. 이렇게 하면 보안 수정 사항(및 기타 수정 사항)과 함께 실행할 배포된 애플리케이션을 `publish` 중에 사용할 수 있습니다. 새 패치를 얻으려면 애플리케이션을 다시 게시해야 합니다. 자체 포함 애플리케이션은 `dotnet publish` 명령에서 `-r <RID>`를 지정하거나 프로젝트 파일(csproj/vbproj) 또는 명령줄에서 [RID(런타임 식별자)](../rid-catalog.md)를 지정하여 만듭니다.
+.NET Core [자체 포함된 애플리케이션 배포](index.md)에는 .NET Core 라이브러리와 .NET Core 런타임이 모두 포함됩니다. .NET Core 2.1 SDK(버전 2.1.300)부터 자체 포함 애플리케이션 배포가 [사용자 머신에 가장 높은 패치 런타임을 게시합니다](https://github.com/dotnet/designs/blob/main/accepted/2018/self-contained-roll-forward.md). 기본적으로 자체 포함된 배포에 대한 [`dotnet publish`](../tools/dotnet-publish.md)는 게시 컴퓨터에서 SDK의 일부로 설치된 최신 버전을 선택합니다. 이렇게 하면 보안 수정 사항(및 기타 수정 사항)과 함께 실행할 배포된 애플리케이션을 `publish` 중에 사용할 수 있습니다. 새 패치를 얻으려면 애플리케이션을 다시 게시해야 합니다. 자체 포함 애플리케이션은 `dotnet publish` 명령에서 `-r <RID>`를 지정하거나 프로젝트 파일(csproj/vbproj) 또는 명령줄에서 [RID(런타임 식별자)](../rid-catalog.md)를 지정하여 만듭니다.
 
 ## <a name="patch-version-roll-forward-overview"></a>패치 버전 롤포워드 개요
 
