@@ -1,13 +1,13 @@
 ---
 title: Docker 기반 애플리케이션의 개발 프로세스
 description: Docker 기반 애플리케이션의 개발 옵션을 개괄적으로 살펴봅니다. Windows용 Visual Studio, Mac용 Visual Studio 또는 여러 플랫폼(Windows, macOS, Linux)을 지원하는 Visual Studio Code를 선택할 수 있습니다.
-ms.date: 01/13/2021
-ms.openlocfilehash: 3a4f4078e745c52e8eca46473668e3319917bfd2
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: e979fcd5277fb07f3b614b79fa8a384d61e08c47
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188298"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719658"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker 기반 애플리케이션의 개발 프로세스
 
@@ -19,7 +19,7 @@ ms.locfileid: "98188298"
 
 완전하고 강력한 IDE를 선호하든지 아니면 간단하고 민첩한 편집기를 선호하든지 상관없이 Microsoft는 Docker 애플리케이션을 개발하는 데 사용할 수 있는 도구를 제공합니다.
 
-**Visual Studio(Windows용)** . Visual Studio를 사용하여 Docker 기반 .NET 5 애플리케이션을 개발하려면 Visual Studio 2019 버전 16.4 이상이 필요합니다. Visual Studio 2019에는 Docker용 도구가 함께 제공됩니다. Docker용 도구를 통해 대상 Docker 환경에서 직접 애플리케이션을 개발하고 실행할 수 있으며, 애플리케이션의 유효성을 검사할 수 있습니다. F5 키를 눌러 애플리케이션(단일 컨테이너 또는 여러 컨테이너)을 Docker 호스트에 직접 실행 및 디버그하거나, Ctrl+F5를 눌러 컨테이너를 다시 빌드하지 않고도 애플리케이션을 편집 및 새로 고칠 수 있습니다. 해당 IDE는 Docker 기반 앱을 위한 가장 강력한 개발 옵션입니다.
+**Visual Studio(Windows용)** . Visual Studio를 사용하여 Docker 기반 .NET 5 애플리케이션을 개발하려면 Visual Studio 2019 버전 16.8 이상이 필요합니다. Visual Studio 2019에는 Docker용 도구가 함께 제공됩니다. Docker용 도구를 통해 대상 Docker 환경에서 직접 애플리케이션을 개발하고 실행할 수 있으며, 애플리케이션의 유효성을 검사할 수 있습니다. F5 키를 눌러 애플리케이션(단일 컨테이너 또는 여러 컨테이너)을 Docker 호스트에 직접 실행 및 디버그하거나, Ctrl+F5를 눌러 컨테이너를 다시 빌드하지 않고도 애플리케이션을 편집 및 새로 고칠 수 있습니다. 해당 IDE는 Docker 기반 앱을 위한 가장 강력한 개발 옵션입니다.
 
 **Mac용 Visual Studio.** Xamarin Studio가 확장된 IDE이며 macOS에서 실행됩니다. .NET 5 개발의 경우 버전 8.4 이상이 필요합니다. 해당 도구는 macOS 머신에서 작업 중인 개발자로, 강력한 IDE도 사용하려는 경우에 권장되는 옵션입니다.
 

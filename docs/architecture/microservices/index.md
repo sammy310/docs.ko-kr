@@ -1,17 +1,17 @@
 ---
 title: .NET 마이크로 서비스. 컨테이너화된 .NET 애플리케이션을 위한 아키텍처
 description: 컨테이너화된 .NET 애플리케이션에 대한 .NET 마이크로 서비스 아키텍처 | 마이크로 서비스는 독립적으로 배포 가능한 모듈 형식 서비스입니다. (Linux 및 Windows용) Docker 컨테이너는서비스 및 해당 종속성을 단일 단위로 묶어서 배포 및 테스트를 간소화합니다. 그러면 격리된 환경에서 실행됩니다.
-ms.date: 01/13/2021
-ms.openlocfilehash: a9017d2e9acbcbb861a35f0187632dc90c52e171
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: e9862445414dbe0bf9a1c5d36d790b57710028f0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188376"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665312"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 마이크로 서비스: 컨테이너화된 .NET 애플리케이션을 위한 아키텍처
 
-![책 표지](./media/cover-small.png)
+![책 표지](./media/cover-large.png)
 
 **EDITION v5.0** - ASP.NET Core 5.0으로 업데이트됨
 
@@ -68,9 +68,9 @@ Windows 및 Linux 에코시스템에서 가장 중요한 공급업체가 지원�
 
 ### <a name="how-to-use-this-guide"></a>이 가이드를 사용하는 방법
 
-이 가이드의 첫 번째 부분에서는 Docker 컨테이너를 소개하고, .NET Core와 .NET Framework 중에서 하나를 개발 프레임워크로 선택하는 방법에 대해 설명하고, 마이크로 서비스에 대해 간략하게 안내합니다. 이 콘텐츠는 개요만 알면 되고 코드 구현 세부 정보에 집중할 필요가 없는 설계자 및 기술 의사 결정자를 위한 것입니다.
+이 가이드의 첫 번째 부분에서는 Docker 컨테이너를 소개하고, .NET 5와 .NET Framework 중에서 하나를 개발 프레임워크로 선택하는 방법에 대해 설명하고, 마이크로 서비스에 대해 간략하게 안내합니다. 이 콘텐츠는 개요만 알면 되고 코드 구현 세부 정보에 집중할 필요가 없는 설계자 및 기술 의사 결정자를 위한 것입니다.
 
-이 가이드의 두 번째 부분은 [Docker 기반 애플리케이션의 개발 프로세스](./docker-application-development-process/index.md) 섹션으로 시작합니다. 이 섹션은 .NET Core 및 Docker를 사용하여 애플리케이션을 구현하기 위한 개발 및 마이크로 서비스 패턴에 중점을 둡니다. 이 섹션은 코드와 패턴 및 구현 세부 정보에 중점을 두려는 개발자 및 설계자에게 가장 중요합니다.
+이 가이드의 두 번째 부분은 [Docker 기반 애플리케이션의 개발 프로세스](./docker-application-development-process/index.md) 섹션으로 시작합니다. 이 섹션은 .NET 및 Docker를 사용하여 애플리케이션을 구현하기 위한 개발 및 마이크로 서비스 패턴에 중점을 둡니다. 이 섹션은 코드와 패턴 및 구현 세부 정보에 중점을 두려는 개발자 및 설계자에게 가장 중요합니다.
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>관련 마이크로 서비스 및 컨테이너 기반 참조 애플리케이션: eShopOnContainers
 
@@ -162,7 +162,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2020 by Microsoft Corporation
+Copyright © 2021 by Microsoft Corporation
 
 All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 서면 허가 없이는 어떠한 형식이나 방법으로도 복제하거나 전송할 수 없습니다.
 

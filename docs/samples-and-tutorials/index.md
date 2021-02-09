@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core 및 .NET에 대해 배우는 데 도움이 
 author: BillWagner
 ms.author: wiwagn
 ms.date: 02/01/2021
-ms.openlocfilehash: 3f54221f0b22b2ee24750c01885e39a6eec39e0e
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: c7bbb99eeb4e00771cd1e4a3ab33b7690620b194
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506411"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585730"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 샘플 및 자습서
 

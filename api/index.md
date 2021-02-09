@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: .NET API 브라우저'
 layout: ApiBrowserPage
 hide_bc: true
 title: .NET API 브라우저
@@ -8,12 +9,12 @@ quickFilterColumn3: azure-dotnet,ml-dotnet,spark-dotnet
 ms.topic: landing-page
 ms.custom: updateeachrelease
 ms.date: 01/24/2020
-ms.openlocfilehash: cf15aaacc853cba386f99205cfe5bf625e8dda21
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 63d2b572ba21f4653af9384600026e0f0f63d24e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539920"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653513"
 ---
 # <a name="net-api-browser"></a>.NET API 브라우저
 
