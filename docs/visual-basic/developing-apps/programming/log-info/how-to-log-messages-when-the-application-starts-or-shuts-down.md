@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 애플리케이션이 시작 또는 종료될 때 메시지 기록(Visual Basic)'
 title: '방법: 애플리케이션이 시작 또는 종료될 때 메시지 기록'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Shutdown event [Visual Basic]
 - My.Log object, logging
 ms.assetid: 67624d05-cddf-48b7-8c36-5c99baa4c621
-ms.openlocfilehash: ac5fb17e527bcbcb55f98ec0ced06c152555ce6c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 545a57c3666aa12e3763961d05067face9fe324a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410077"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775190"
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>방법: 애플리케이션이 시작 또는 종료될 때 메시지 기록(Visual Basic)
 
@@ -22,7 +23,7 @@ ms.locfileid: "84410077"
   
 ### <a name="to-access-the-applications-event-handler-code"></a>애플리케이션의 이벤트 처리기 코드에 액세스하려면  
   
-1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 선택합니다.  
+1. **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 선택합니다.  
   
 2. **애플리케이션** 탭을 클릭합니다.  
   
@@ -32,9 +33,9 @@ ms.locfileid: "84410077"
   
 ### <a name="to-log-messages-when-the-application-starts"></a>애플리케이션이 시작될 때 메시지를 기록하려면  
   
-1. 코드 편집기에서 ApplicationEvents.vb 파일을 엽니다. **일반** 메뉴에서 **MyApplication 이벤트**를 선택합니다.  
+1. 코드 편집기에서 ApplicationEvents.vb 파일을 엽니다. **일반** 메뉴에서 **MyApplication 이벤트** 를 선택합니다.  
   
-2. **선언** 메뉴에서 **Startup**을 선택합니다.  
+2. **선언** 메뉴에서 **Startup** 을 선택합니다.  
   
      주 애플리케이션이 실행되기 전에 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> 이벤트가 발생합니다.  
   
@@ -44,9 +45,9 @@ ms.locfileid: "84410077"
   
 ### <a name="to-log-messages-when-the-application-shuts-down"></a>애플리케이션이 종료될 때 메시지를 기록하려면  
   
-1. 코드 편집기에서 ApplicationEvents.vb 파일을 엽니다. **일반** 메뉴에서 **MyApplication 이벤트**를 선택합니다.  
+1. 코드 편집기에서 ApplicationEvents.vb 파일을 엽니다. **일반** 메뉴에서 **MyApplication 이벤트** 를 선택합니다.  
   
-2. **선언** 메뉴에서 **Shutdown**을 선택합니다.  
+2. **선언** 메뉴에서 **Shutdown** 을 선택합니다.  
   
      주 애플리케이션이 실행된 후 종료되기 전에 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> 이벤트가 발생합니다.  
   
@@ -60,7 +61,7 @@ ms.locfileid: "84410077"
   
  [!code-vb[VbVbalrMyApplicationLog#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#3)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>

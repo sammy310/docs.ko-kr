@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: NetworkInformation'
 title: NetworkInformation
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: 550555be7cc95cafebabfd3ac230ced024a9202c
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9092fd0593d9046f419018b882c08066a6bc654c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96261620"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99785707"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 
@@ -27,7 +28,7 @@ ms.locfileid: "96261620"
 
  <xref:System.Net.NetworkInformation.Ping> 클래스를 사용하여 원격 호스트가 가동되어 네트워크에 있으며 연결 가능한지 확인할 수 있습니다. 자세한 내용은 [방법: 호스트에 대해 ping 실행](how-to-ping-a-host.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [네트워크 프로그래밍 샘플](network-programming-samples.md)
 

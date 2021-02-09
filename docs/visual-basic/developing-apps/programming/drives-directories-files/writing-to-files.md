@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic에서 파일에 쓰기'
 title: 파일에 쓰기
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-ms.openlocfilehash: 06809ce8a846ea06ff2decdd87f304d1b26a7750
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c56714a0f8c2679a99fd0851999d886b426e62fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406614"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775281"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Visual Basic에서 파일에 쓰기
 
@@ -52,10 +53,10 @@ ms.locfileid: "84406614"
   
 ## <a name="related-sections"></a>관련 단원  
 
- [파일 읽기](reading-from-files.md)  
+ [파일에서 읽기](reading-from-files.md)  
  파일 읽기와 관련된 작업을 수행하는 방법을 설명합니다.  
   
- [파일/디렉터리 만들기, 삭제 및 이동](creating-deleting-and-moving-files-and-directories.md)  
+ [파일 및 디렉터리 만들기, 삭제 및 이동](creating-deleting-and-moving-files-and-directories.md)  
  파일 및 디렉터리 만들기, 삭제, 이동, 이름 바꾸기와 관련된 작업을 수행하는 방법을 설명합니다.  
   
  [데이터를 클립보드에 저장하고 클립보드에서 읽기](../computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  

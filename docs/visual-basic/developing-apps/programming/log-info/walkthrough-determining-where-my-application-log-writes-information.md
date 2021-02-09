@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연습: My.Application.Log가 정보를 기록하는 위치 확인(Visual Basic)'
 title: My.Application.Log가 정보를 기록하는 위치 확인
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 00b543dbe96ca99446f6797a13b66ee62c422b93
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4ddb5777bcbdde07069efd2fd3a66f0c220ee135
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398281"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792286"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>연습: My.Application.Log가 정보를 기록하는 위치 확인(Visual Basic)
 
@@ -24,7 +25,7 @@ ms.locfileid: "84398281"
 
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>My.Application.Log의 수신기를 확인하려면
 
-1. 어셈블리의 구성 파일을 찾습니다. 어셈블리를 개발하는 경우 Visual Studio의 **솔루션 탐색기**에서 app.config에 액세스할 수 있습니다. 그렇지 않은 경우 구성 파일 이름은 어셈블리의 이름에 ".config"가 붙은 형태이며 어셈블리와 같은 디렉터리에 위치합니다.
+1. 어셈블리의 구성 파일을 찾습니다. 어셈블리를 개발하는 경우 Visual Studio의 **솔루션 탐색기** 에서 app.config에 액세스할 수 있습니다. 그렇지 않은 경우 구성 파일 이름은 어셈블리의 이름에 ".config"가 붙은 형태이며 어셈블리와 같은 디렉터리에 위치합니다.
 
     > [!NOTE]
     > 구성 파일에 없는 어셈블리도 있습니다.
@@ -55,7 +56,7 @@ ms.locfileid: "84398281"
 
     - 소개에서 설명한 것처럼 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 수신기는 파일 로그에 씁니다.
 
-    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 수신기는 `initializeData` 매개 변수로 지정된 컴퓨터 이벤트 로그에 정보를 씁니다. 이벤트 로그를 보려면 **서버 탐색기** 또는 **Windows 이벤트 뷰어**를 사용합니다. 자세한 내용은 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)을 참조하세요.
+    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 수신기는 `initializeData` 매개 변수로 지정된 컴퓨터 이벤트 로그에 정보를 씁니다. 이벤트 로그를 보려면 **서버 탐색기** 또는 **Windows 이벤트 뷰어** 를 사용합니다. 자세한 내용은 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)를 참조하세요.
 
     - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 및 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 수신기는 `initializeData` 매개 변수에 지정된 파일에 씁니다.
 
@@ -63,7 +64,7 @@ ms.locfileid: "84398281"
 
     - 다른 형식의 로그 수신기가 정보를 쓰는 위치에 대한 자세한 내용은 해당 형식의 설명서를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:System.Diagnostics.DefaultTraceListener>
@@ -73,8 +74,8 @@ ms.locfileid: "84398281"
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics>
 - [애플리케이션 로그 작업](working-with-application-logs.md)
-- [방법: 예외 기록](how-to-log-exceptions.md)
+- [방법: 로그 예외](how-to-log-exceptions.md)
 - [방법: 로그 메시지 쓰기](how-to-write-log-messages.md)
 - [연습: My.Application.Log가 정보를 기록하는 위치 변경](walkthrough-changing-where-my-application-log-writes-information.md)
-- [.NET Framework의 ETW 이벤트](../../../../framework/performance/etw-events.md)
+- [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)
 - [문제 해결: 로그 수신기](troubleshooting-log-listeners.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: Visual Basic에서 내 문서 디렉터리의 파일에 텍스트 쓰기'
 title: '방법: 내 문서 디렉터리의 파일에 텍스트 쓰기'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 - writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
-ms.openlocfilehash: bb3a9bdc44f86fbcdb3c56ee088740efdfebe95d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: da7472e9d8d4c39509dda814a18e7c0149236eeb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546460"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797369"
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>방법: Visual Basic에서 내 문서 디렉터리의 파일에 텍스트 쓰기
 
 `My.Computer.FileSystem.SpecialDirectories` 개체를 사용하면 **MyDocuments** 디렉터리 등의 특수 디렉터리에 액세스할 수 있습니다.  
   
-## <a name="procedure"></a>절차  
+## <a name="procedure"></a>프로시저  
   
 #### <a name="to-write-new-text-files-in-the-my-documents-directory"></a>내 문서 디렉터리에 새 텍스트 파일을 쓰려면  
   
@@ -44,7 +45,7 @@ ms.locfileid: "90546460"
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
 
- 부분 신뢰 컨텍스트에서 실행하는 경우 권한 부족으로 인해 코드에서 예외를 throw할 수 있습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](../../../../framework/misc/code-access-security-basics.md)을 참조하세요.  
+ 부분 신뢰 컨텍스트에서 실행하는 경우 권한 부족으로 인해 코드에서 예외를 throw할 수 있습니다. 자세한 내용은 [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md)을 참조하세요.  
   
  이 예제에서는 새 파일을 만듭니다. 애플리케이션에서 파일을 만들어야 하는 경우 해당 애플리케이션에 폴더에 대한 만들기 권한이 있어야 합니다. 권한은 액세스 제어 목록을 사용하여 설정됩니다. 파일이 이미 있는 경우에는 애플리케이션에 더 낮은 권한인 쓰기 권한만 있으면 됩니다. 가능한 경우 배포하는 동안 파일을 만들고, 폴더에 대한 만들기 권한 대신 단일 파일에 대한 읽기 권한만 부여하는 것이 더 안전합니다. 또한 루트 폴더나 **Program Files** 폴더보다 사용자 폴더에 데이터를 쓰는 것이 더 안전합니다. 자세한 내용은 [ACL 기술 개요](/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100))를 참조하세요.  
   

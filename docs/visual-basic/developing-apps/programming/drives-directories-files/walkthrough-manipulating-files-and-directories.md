@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연습: Visual Basic에서 파일과 디렉터리 조작'
 title: 파일 및 디렉터리 조작
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,40 +16,40 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 4b77618e5cd525cf3ad012405f402681aa5bb52c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 315635ee43ee4d4956fc35b7f9bc635b374646f8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406666"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775385"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>연습: Visual Basic에서 파일과 디렉터리 조작
 
 이 연습에서는 Visual Basic에서 파일 I/O의 기본 개념을 소개합니다. 디렉터리에 텍스트 파일을 나열하고 검사하는 작은 애플리케이션을 만드는 방법을 설명합니다. 선택한 각 텍스트 파일에 대해 애플리케이션은 파일 특성 및 내용의 첫 줄을 제공합니다. 로그 파일에 정보를 기록하는 옵션이 있습니다.  
   
- 이 연습에서는 Visual Basic에서 사용 가능한 `My.Computer.FileSystem Object`의 멤버를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.FileSystem>를 참조하세요. 연습의 끝 부분에서 <xref:System.IO> 네임스페이스의 클래스를 사용하는 동등한 예제가 제공됩니다.  
+ 이 연습에서는 Visual Basic에서 사용 가능한 `My.Computer.FileSystem Object`의 멤버를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.FileSystem> 을 참조하세요. 연습의 끝 부분에서 <xref:System.IO> 네임스페이스의 클래스를 사용하는 동등한 예제가 제공됩니다.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-the-project"></a>프로젝트를 만들려면  
   
-1. **파일** 메뉴에서 **새 프로젝트**를 클릭합니다.  
+1. **파일** 메뉴에서 **새 프로젝트** 를 클릭합니다.  
   
      **새 프로젝트** 대화 상자가 나타납니다.  
   
-2. **설치된 템플릿** 창에서 **Visual Basic**을 확장한 다음 **Windows**를 클릭합니다. **템플릿** 창 가운데에서 **Windows Forms 애플리케이션**을 클릭합니다.  
+2. **설치된 템플릿** 창에서 **Visual Basic** 을 확장한 다음 **Windows** 를 클릭합니다. **템플릿** 창 가운데에서 **Windows Forms 애플리케이션** 을 클릭합니다.  
   
-3. **이름** 상자에 `FileExplorer`를 입력하여 프로젝트 이름을 설정한 다음 **확인**을 클릭합니다.  
+3. **이름** 상자에 `FileExplorer`를 입력하여 프로젝트 이름을 설정한 다음 **확인** 을 클릭합니다.  
   
-     Visual Studio에서 **솔루션 탐색기**에 프로젝트를 추가합니다. 그러면 Windows Forms 디자이너가 열립니다.  
+     Visual Studio에서 **솔루션 탐색기** 에 프로젝트를 추가합니다. 그러면 Windows Forms 디자이너가 열립니다.  
   
 4. 다음 표의 컨트롤을 양식에 추가하고 속성의 해당 값을 설정합니다.  
   
-    |Control|속성|값|  
+    |제어|속성|값|  
     |-------------|--------------|-----------|  
     |**ListBox**|**이름**|`filesListBox`|  
-    |**Button**|**이름**<br /><br /> **Text**|`browseButton`<br /><br /> **찾아보기**|  
-    |**Button**|**이름**<br /><br /> **Text**|`examineButton`<br /><br /> **검사**|  
+    |**단추**|**이름**<br /><br /> **Text**|`browseButton`<br /><br /> **찾아보기**|  
+    |**단추**|**이름**<br /><br /> **Text**|`examineButton`<br /><br /> **검사**|  
     |**CheckBox**|**이름**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **결과 저장**|  
     |**FolderBrowserDialog**|**이름**|`FolderBrowserDialog1`|  
   
@@ -60,19 +61,19 @@ ms.locfileid: "84406666"
   
      [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
-     `FolderBrowserDialog1.ShowDialog` 호출은 **폴더 찾아보기** 대화 상자를 엽니다. 사용자가 **확인**을 클릭하면 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 속성이 `ListFiles` 메서드로 인수에 전송됩니다. 다음 단계에서 이 메서드를 추가합니다.  
+     `FolderBrowserDialog1.ShowDialog` 호출은 **폴더 찾아보기** 대화 상자를 엽니다. 사용자가 **확인** 을 클릭하면 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 속성이 `ListFiles` 메서드로 인수에 전송됩니다. 다음 단계에서 이 메서드를 추가합니다.  
   
 3. 다음 `ListFiles` 메서드를 추가합니다.  
   
      [!code-vb[VbVbcnMyFileSystem#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#104)]  
   
-     이 코드는 먼저 **ListBox**를 지웁니다.  
+     이 코드는 먼저 **ListBox** 를 지웁니다.  
   
      <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> 메서드는 디렉터리에 있는 각 파일에 대해 나하씩 문자열 컬렉션을 검색합니다. `GetFiles` 메서드는 특정 패턴과 일치하는 파일을 검색하기 위해 패턴 인수를 허용합니다. 이 예제에서는 확장명이 .txt인 파일만 반환됩니다.  
   
-     `GetFiles` 메서드에 의해 반환되는 문자열은 **ListBox**에 추가됩니다.  
+     `GetFiles` 메서드에 의해 반환되는 문자열은 **ListBox** 에 추가됩니다.  
   
-4. 애플리케이션을 실행합니다. **찾아보기** 단추를 클릭합니다. **폴더 찾아보기** 대화 상자에서 .txt 파일이 있는 폴더로 이동하여 폴더를 선택하고 **확인**을 클릭합니다.  
+4. 애플리케이션을 실행합니다. **찾아보기** 단추를 클릭합니다. **폴더 찾아보기** 대화 상자에서 .txt 파일이 있는 폴더로 이동하여 폴더를 선택하고 **확인** 을 클릭합니다.  
   
      `ListBox`에는 선택한 폴더에 있는 .txt 파일의 목록이 포함되어 있습니다.  
   
@@ -88,7 +89,7 @@ ms.locfileid: "84406666"
   
      이 코드는 항목이 `ListBox`에서 선택되었는지 확인합니다. 그런 다음 `ListBox`에서 파일 경로 항목을 가져옵니다. <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> 메서드는 파일이 아직 있는지를 확인하는 데 사용됩니다.  
   
-     파일 경로가 인수로서 `GetTextForOutput` 메서드로 전송됩니다. 이 메서드는 다음 단계에서 추가되어, 파일 정보를 포함하는 문자열을 반환합니다. 파일 정보는 **MessageBox**에 나타납니다.  
+     파일 경로가 인수로서 `GetTextForOutput` 메서드로 전송됩니다. 이 메서드는 다음 단계에서 추가되어, 파일 정보를 포함하는 문자열을 반환합니다. 파일 정보는 **MessageBox** 에 나타납니다.  
   
 3. 다음 `GetTextForOutput` 메서드를 추가합니다.  
   
@@ -98,9 +99,9 @@ ms.locfileid: "84406666"
   
      <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> 메서드는 파일 내용을 <xref:System.IO.StreamReader>로 읽어들입니다. 내용의 첫 번째 줄을 `StreamReader`에서 가져와 `StringBuilder`에 추가합니다.  
   
-4. 애플리케이션을 실행합니다. **찾아보기**를 클릭하고 .txt 파일이 포함된 폴더로 이동합니다. **확인**을 클릭합니다.  
+4. 애플리케이션을 실행합니다. **찾아보기** 를 클릭하고 .txt 파일이 포함된 폴더로 이동합니다. **확인** 을 클릭합니다.  
   
-     `ListBox`에서 파일을 선택하고 **검사**를 클릭합니다. `MessageBox`에 파일 정보가 표시됩니다.  
+     `ListBox`에서 파일을 선택하고 **검사** 를 클릭합니다. `MessageBox`에 파일 정보가 표시됩니다.  
   
 5. 애플리케이션 실행을 중지합니다.  
   
@@ -114,7 +115,7 @@ ms.locfileid: "84406666"
   
      `append` 인수가 `True`로 설정된 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 메서드를 사용하여 로그 항목을 만듭니다.  
   
-2. 애플리케이션을 실행합니다. 텍스트 파일로 이동하고, `ListBox`에서 선택하고, **결과 저장** 확인란을 선택한 다음 **검사**를 클릭합니다. 로그 항목이 `log.txt` 파일에 기록되었는지 확인합니다.  
+2. 애플리케이션을 실행합니다. 텍스트 파일로 이동하고, `ListBox`에서 선택하고, **결과 저장** 확인란을 선택한 다음 **검사** 를 클릭합니다. 로그 항목이 `log.txt` 파일에 기록되었는지 확인합니다.  
   
 3. 애플리케이션 실행을 중지합니다.  
   
@@ -128,7 +129,7 @@ ms.locfileid: "84406666"
   
      이 코드는 폴더 브라우저의 기본 디렉터리를 현재 디렉터리로 설정합니다.  
   
-3. 애플리케이션을 실행합니다. **찾아보기**를 처음 클릭하면 **폴더 찾아보기** 대화 상자가 현재 디렉터리로 열립니다.  
+3. 애플리케이션을 실행합니다. **찾아보기** 를 처음 클릭하면 **폴더 찾아보기** 대화 상자가 현재 디렉터리로 열립니다.  
   
 4. 애플리케이션 실행을 중지합니다.  
   

@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: Visual Basic에서 예외 기록'
 title: '방법: 예외 기록'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: 59ed7b836126a38f32b7c6f479570a566d236e6c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a4155de4e73c632edf071256976161cfdbffba77
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410116"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775216"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>방법: Visual Basic에서 예외 기록
 
@@ -44,7 +45,7 @@ ms.locfileid: "84410116"
   
 ### <a name="to-log-an-unhandled-exception"></a>처리되지 않은 예외를 기록하려면  
   
-1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 선택합니다.  
+1. **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 선택합니다.  
   
 2. **애플리케이션** 탭을 클릭합니다.  
   
@@ -52,9 +53,9 @@ ms.locfileid: "84410116"
   
      그러면 ApplicationEvents.vb 파일이 열립니다.  
   
-4. 코드 편집기에서 ApplicationEvents.vb 파일을 엽니다. **일반** 메뉴에서 **MyApplication 이벤트**를 선택합니다.  
+4. 코드 편집기에서 ApplicationEvents.vb 파일을 엽니다. **일반** 메뉴에서 **MyApplication 이벤트** 를 선택합니다.  
   
-5. **선언** 메뉴에서 **UnhandledException**을 선택합니다.  
+5. **선언** 메뉴에서 **UnhandledException** 을 선택합니다.  
   
      주 애플리케이션이 실행되기 전에 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 이벤트가 발생합니다.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "84410116"
   
      [!code-vb[VbVbalrMyApplicationLog#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#5)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>

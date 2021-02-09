@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 문제 해결: 텍스트 파일 읽기 및 쓰기(Visual Basic)'
 title: '문제 해결: 텍스트 파일 읽기 및 쓰기'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], troubleshooting
 - reading text files [Visual Basic], troubleshooting
 ms.assetid: a8e9b44d-facb-4718-8c0f-466537171182
-ms.openlocfilehash: 8af4160d09f39f2622a007aef793173d614a8b44
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1c01f7673ef021759a9c1892f685aa90ef1acdf6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406627"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675340"
 ---
 # <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>문제 해결: 텍스트 파일 읽기 및 쓰기(Visual Basic)
 
@@ -39,6 +40,6 @@ ms.locfileid: "84406627"
 ## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
-- [파일 읽기](reading-from-files.md)
+- [파일에서 읽기](reading-from-files.md)
 - [파일에 쓰기](writing-to-files.md)
 - [TextFieldParser 개체를 사용하여 텍스트 파일 구문 분석](parsing-text-files-with-the-textfieldparser-object.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: IPv6 라우팅'
 title: IPv6 라우팅
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: 646eef4ec178472a99f60de4785fd53381296c3a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 75499a7380ab0ea7c38c83a6407a0c2a269b5fce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96258337"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99672038"
 ---
 # <a name="ipv6-routing"></a>IPv6 라우팅
 
@@ -35,7 +36,7 @@ ms.locfileid: "96258337"
   
 - 리디렉션. 전송 노드의 특정 대상으로 더 유용한 다음 홉 주소를 알리기 위해 라우터에서 전송합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [인터넷 프로토콜 버전 6](internet-protocol-version-6.md)
 - [소켓](sockets.md)

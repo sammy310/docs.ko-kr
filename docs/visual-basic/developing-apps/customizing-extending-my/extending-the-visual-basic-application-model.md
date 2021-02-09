@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: Visual Basic 애플리케이션 모델 확장'
 title: Visual Basic 애플리케이션 모델 확장
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: e707f034f05aababdc70d5d6e1f9e1da0ed558bc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3aea2ab77b46976b6f7b220ee0b5811dc97e373c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410233"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775580"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Visual Basic 애플리케이션 모델 확장
 
@@ -85,7 +86,7 @@ ms.locfileid: "84410233"
 
  Visual Basic 애플리케이션 모델의 일부로 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 클래스는 애플리케이션을 구성하는 보호된 속성을 제공합니다. 이러한 속성은 구현 클래스의 생성자에서 설정해야 합니다.
 
- 기본 Windows Forms 프로젝트에서 **프로젝트 디자이너**는 디자이너 설정을 사용하여 속성을 설정하는 코드를 만듭니다. 속성은 애플리케이션이 시작할 때만 사용됩니다. 애플리케이션이 시작한 후 속성을 설정하면 아무런 영향을 주지 않습니다.
+ 기본 Windows Forms 프로젝트에서 **프로젝트 디자이너** 는 디자이너 설정을 사용하여 속성을 설정하는 코드를 만듭니다. 속성은 애플리케이션이 시작할 때만 사용됩니다. 애플리케이션이 시작한 후 속성을 설정하면 아무런 영향을 주지 않습니다.
 
 |속성|결정|프로젝트 디자이너의 애플리케이션 창에서의 설정|
 |---|---|---|

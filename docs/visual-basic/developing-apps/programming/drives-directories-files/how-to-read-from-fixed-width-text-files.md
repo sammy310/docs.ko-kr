@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: Visual Basic에서 고정 너비 텍스트 파일 읽기'
 title: '방법: 고정 너비 텍스트 파일 읽기'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - text files [Visual Basic], tasks
 - text files [Visual Basic], reading
 ms.assetid: 99be5692-967a-4e85-993e-cd18139a5a69
-ms.openlocfilehash: 77b2e0a4ebe36b68501f821ef5731935ee3b16a7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4f5868fa68009851cc65eeaf5ff6431ac22840d3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411631"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797460"
 ---
 # <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>방법: Visual Basic에서 고정 너비 텍스트 파일 읽기
 

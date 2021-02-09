@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 연습: 사용자 지정 로그 수신기 만들기(Visual Basic)'
 title: 사용자 지정 로그 수신기 만들기
 ms.date: 07/20/2015
 helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 5a140607a4fe7e1e13de54e8d56cab53e52aaa2a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bc5e1743eeaec427adf909ca95aa1979ce61a993
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398268"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792299"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>연습: 사용자 지정 로그 수신기 만들기(Visual Basic)
 
@@ -39,7 +40,7 @@ ms.locfileid: "84398268"
 
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>로그 수신기 어셈블리에 강력한 이름을 지정하려면
 
-1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 선택합니다.
+1. **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 선택합니다.
 
 2. **시그니처** 탭을 클릭합니다.
 
@@ -53,7 +54,7 @@ ms.locfileid: "84398268"
 
 6. **암호 입력** 및 **암호 확인** 상자에 암호를 입력합니다.
 
-7. **확인**을 클릭합니다.
+7. **확인** 을 클릭합니다.
 
 8. 애플리케이션을 다시 빌드합니다.
 
@@ -77,17 +78,17 @@ ms.locfileid: "84398268"
 
 #### <a name="to-add-the-listener-to-myapplicationlog"></a>My.Application.Log에 수신기를 추가하려면
 
-1. **솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.
+1. **솔루션 탐색기** 에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기** 를 선택합니다.
 
      또는
 
      app.config 파일이 있는 경우:
 
-    1. **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.
+    1. **프로젝트** 메뉴에서 **새 항목 추가** 를 선택합니다.
 
-    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.
+    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일** 을 선택합니다.
 
-    3. **추가**를 클릭합니다.
+    3. **추가** 를 클릭합니다.
 
 2. `<listeners>` 특성이 "DefaultSource"인 `<source>` 섹션에서 `name` 섹션에 있는 `<sources>` 섹션을 찾습니다. `<sources>` 섹션은 최상위 `<system.diagnostics>` 섹션의 `<configuration>` 섹션에 있습니다.
 

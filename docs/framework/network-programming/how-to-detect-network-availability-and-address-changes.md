@@ -1,17 +1,18 @@
 ---
+description: '자세한 정보: 방법: 네트워크 가용성 및 주소 변경 내용 검색'
 title: '방법: 네트워크 가용성 및 주소 변경 검색'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
-ms.openlocfilehash: 8f5eef7b6ba41f1ac4050fbc9168fafea31b103f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b9465cbfc538c551725d6510cac3c73d006b7b59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287316"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747441"
 ---
-# <a name="how-to-detect-network-availability-and-address-changes"></a>방법: 네트워크 가용성 및 주소 변경 검색
+# <a name="how-to-detect-network-availability-and-address-changes"></a>방법: 네트워크 가용성 및 주소 변경 내용 검색
 
 이 샘플은 인터페이스에서 네트워크 주소의 변경 내용을 검색하는 방법을 보여 줍니다.  
   

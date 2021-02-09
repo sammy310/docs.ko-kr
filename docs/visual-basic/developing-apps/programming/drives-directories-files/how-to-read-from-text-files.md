@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: Visual Basic에서 텍스트 파일에서 읽기'
 title: '방법: 텍스트 파일에서 읽기'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: 0d99209ed123686355e8d49c82ba23f94084f895
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 76f8bbbb7a0064818d324fc6dd9f1f37f7271401
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411618"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797434"
 ---
-# <a name="how-to-read-from-text-files-in-visual-basic"></a>방법: Visual Basic에서 텍스트 파일에서 읽기
+# <a name="how-to-read-from-text-files-in-visual-basic"></a>방법: Visual Basic에서 텍스트 파일 읽기
 
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> 개체의 `My.Computer.FileSystem` 메서드를 사용하면 텍스트 파일을 읽을 수 있습니다. 파일 내용에 ASCII 또는 UTF-8 등의 인코딩이 사용된 경우 파일 인코딩을 지정할 수 있습니다.
 
@@ -42,7 +43,7 @@ ms.locfileid: "84411618"
 
 - 길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)
 
-- 경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)
+- 경로가 `Nothing` 이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)
 
 - 파일이 없는 경우(<xref:System.IO.FileNotFoundException>)
 
@@ -60,11 +61,11 @@ ms.locfileid: "84411618"
 
 애플리케이션에서 데이터를 사용하기 전에 모든 입력을 확인해야 합니다. 파일의 내용이 예상한 내용과 다를 수 있으며 파일을 읽는 메서드가 실패할 수도 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>
-- [파일 읽기](reading-from-files.md)
+- [파일에서 읽기](reading-from-files.md)
 - [방법: 쉼표로 구분된 텍스트 파일에서 읽기](how-to-read-from-comma-delimited-text-files.md)
 - [방법: 고정 너비 텍스트 파일에서 읽기](how-to-read-from-fixed-width-text-files.md)
 - [방법: 여러 형식의 텍스트 파일에서 읽기](how-to-read-from-text-files-with-multiple-formats.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: .NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)'
 title: .NET Framework 파일 I/O 및 파일 시스템의 기본 사항
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 187a20617ec901e722a30ebfa571e4a55ed0b5c3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 78ab7f572f0e2cc6255af470f73a549a4d7f274a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401799"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666357"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)
 
@@ -62,7 +63,7 @@ ms.locfileid: "84401799"
 |대상|참조 항목|
 |---|---|
 |데이터 파일 읽기 및 쓰기|[방법: 새로 만든 데이터 파일 읽기 및 쓰기](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
-|파일에서 텍스트 읽기|[방법: 파일의 텍스트 읽기](../../../../standard/io/how-to-read-text-from-a-file.md)|
+|파일의 텍스트 읽기|[방법: 파일에서 텍스트 읽기](../../../../standard/io/how-to-read-text-from-a-file.md)|
 |파일에 텍스트 쓰기|[방법: 파일에 텍스트 쓰기](../../../../standard/io/how-to-write-text-to-a-file.md)|
 |문자열에서 문자 읽기|[방법: 문자열에서 문자 읽기](../../../../standard/io/how-to-read-characters-from-a-string.md)|
 |문자열에 문자 쓰기|[방법: 문자열에 문자 쓰기](../../../../standard/io/how-to-write-characters-to-a-string.md)|
@@ -82,9 +83,9 @@ ms.locfileid: "84401799"
 |로그 파일 열기 및 텍스트 추가|[방법: 로그 파일 열기 및 추가](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
 |파일의 특성 확인|<xref:System.IO.FileAttributes>|
 
-## <a name="file-permissions"></a>파일 사용 권한
+## <a name="file-permissions"></a>파일 권한
 
-파일 및 디렉터리에 대한 액세스 제어는 <xref:System.Security.Permissions.FileIOPermission> 클래스로 수행할 수 있습니다. 이는 기본적으로 ASPNET(ASP.NET 및 .NET Framework 설치 과정에서 생성됨)이라는 이름의 특수한 로컬 사용자 계정 컨텍스트 내에서 실행되는 Web Forms로 작업하는 개발자에게 특히 중요할 수 있습니다. 그러한 애플리케이션 요청이 리소스에 액세스할 경우 ASPNET 사용자 계정은 제한된 권한을 갖게 되며, 따라서 웹 애플리케이션에서 파일에 쓰기 등의 작업을 수행하지 못할 수 있습니다. 자세한 내용은 <xref:System.Security.Permissions.FileIOPermission>을 참조하세요.
+파일 및 디렉터리에 대한 액세스 제어는 <xref:System.Security.Permissions.FileIOPermission> 클래스로 수행할 수 있습니다. 이는 기본적으로 ASPNET(ASP.NET 및 .NET Framework 설치 과정에서 생성됨)이라는 이름의 특수한 로컬 사용자 계정 컨텍스트 내에서 실행되는 Web Forms로 작업하는 개발자에게 특히 중요할 수 있습니다. 그러한 애플리케이션 요청이 리소스에 액세스할 경우 ASPNET 사용자 계정은 제한된 권한을 갖게 되며, 따라서 웹 애플리케이션에서 파일에 쓰기 등의 작업을 수행하지 못할 수 있습니다. 자세한 내용은 <xref:System.Security.Permissions.FileIOPermission>를 참조하세요.
 
 ## <a name="isolated-file-storage"></a>격리된 파일 스토리지
 
@@ -97,7 +98,7 @@ ms.locfileid: "84401799"
 |격리된 저장소 만들기|[방법: 격리된 스토리지의 저장소 가져오기](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
 |격리된 저장소 열거|[방법: 격리된 스토리지의 저장소 열거](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|
 |격리된 저장소 삭제|[방법: 격리된 스토리지에서 저장소 삭제](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|
-|격리된 스토리지에서 파일 또는 디렉터리 만들기|[방법: 격리된 스토리지에 파일 및 디렉터리 만들기](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|
+|격리된 스토리지에서 파일 또는 디렉터리 만들기|[방법: 격리된 스토리지의 파일 및 디렉터리 만들기](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|
 |격리된 스토리지에서 파일 찾기|[방법: 격리된 스토리지의 기존 파일 및 디렉터리 찾기](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|
 |격리된 스토리지에서 파일 읽기 또는 쓰기|[방법: 격리된 스토리지의 파일 읽기 및 쓰기](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|
 |격리된 스토리지에서 파일 또는 디렉터리 삭제|[방법: 격리된 스토리지의 파일 및 디렉터리 삭제](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|

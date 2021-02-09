@@ -1,5 +1,6 @@
 ---
-title: '방법: 사용할 수 있는 직렬 포트 표시'
+description: '자세한 정보: 방법: Visual Basic에서 사용할 수 있는 직렬 포트 표시'
+title: '방법: 사용 가능한 직렬 포트 표시'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports, availability
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-ms.openlocfilehash: b19bdd56311ab7029fb224256d138a0dc0dd8ddc
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0f55e7ed7155940dd279a22ae9da5f21097f56a6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557348"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775294"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>방법: Visual Basic에서 사용할 수 있는 직렬 포트 표시
 
@@ -28,7 +29,7 @@ ms.locfileid: "90557348"
   
  [!code-vb[VbVbalrMyComputer#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#45)]  
   
- 이 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다. 코드 조각 선택에서는 **연결 및 네트워킹**에 있습니다. 자세한 내용은 [Code Snippets](/visualstudio/ide/code-snippets)을 참조하세요.  
+ 이 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다. 코드 조각 선택에서는 **연결 및 네트워킹** 에 있습니다. 자세한 내용은 [코드 조각](/visualstudio/ide/code-snippets)을 참조하세요.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
 

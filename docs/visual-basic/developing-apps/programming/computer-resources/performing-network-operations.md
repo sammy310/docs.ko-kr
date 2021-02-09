@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 네트워크 작업 수행(Visual Basic)'
 title: 네트워크 작업 수행
 ms.date: 07/20/2015
 helpviewer_keywords:
 - network operations, performing
 - My.Computer.Network object, tasks
 ms.assetid: 8ecc47ce-7730-49cd-b21d-3a13477eec6b
-ms.openlocfilehash: 67cfc1363c840c98f1df6529498fce1a82a0a5bf
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c4d2d867d9cec85562c93fb40fb688ba07fa6599
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84360152"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792325"
 ---
 # <a name="performing-network-operations-visual-basic"></a>네트워크 작업 수행(Visual Basic)
 

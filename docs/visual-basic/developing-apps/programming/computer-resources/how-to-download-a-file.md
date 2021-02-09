@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: Visual Basic에서 파일 다운로드'
 title: '방법: 파일 다운로드'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - files [Visual Basic], downloading
 - files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-ms.openlocfilehash: a5b379da00656f65476e4d9504457bf8b464beac
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dd296a5958431b74ccc8e0fb41a49073f4847ded
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411657"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797694"
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 다운로드
 
@@ -60,4 +61,4 @@ ms.locfileid: "84411657"
 - <xref:Microsoft.VisualBasic.Devices.Network>
 - <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>
 - [방법: 파일 업로드](how-to-upload-a-file.md)
-- [방법: 파일 경로의 구문 분석](../drives-directories-files/how-to-parse-file-paths.md)
+- [방법: 파일 경로 구문 분석](../drives-directories-files/how-to-parse-file-paths.md)

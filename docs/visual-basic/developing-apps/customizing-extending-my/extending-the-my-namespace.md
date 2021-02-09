@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic에서 `My` 네임스페이스 확장'
 title: My 네임스페이스 확장
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 2a7b0b84061fccd9a333a68e4a19477bd19ca4ff
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 896e85da14e6e8a417c93560b1d3b78a5954b769
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330312"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797967"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Visual Basic에서 `My` 네임스페이스 확장
 
@@ -53,7 +54,7 @@ Visual Basic의 `My` 네임스페이스는 애플리케이션, 컴퓨터 등에 
 
 ## <a name="adding-events-to-custom-my-objects"></a>사용자 지정 `My` 개체에 이벤트 추가
 
-`My.Application` 개체를 사용하여 `My` 네임스페이스의 `MyApplication` partial 클래스를 확장해 사용자 지정 `My` 개체에 대한 이벤트를 노출할 수 있습니다. Windows 기반 프로젝트의 경우 **솔루션 탐색기**에서 프로젝트에 대한 **내 프로젝트** 노드를 두 번 클릭할 수 있습니다. Visual Basic **프로젝트 디자이너**에서 **애플리케이션** 탭을 클릭한 다음 **애플리케이션 이벤트 보기** 단추를 클릭합니다. *ApplicationEvents.vb*라는 새 파일이 생성됩니다. 여기에 `MyApplication` 클래스를 확장하는 다음 코드가 포함되어 있습니다.
+`My.Application` 개체를 사용하여 `My` 네임스페이스의 `MyApplication` partial 클래스를 확장해 사용자 지정 `My` 개체에 대한 이벤트를 노출할 수 있습니다. Windows 기반 프로젝트의 경우 **솔루션 탐색기** 에서 프로젝트에 대한 **내 프로젝트** 노드를 두 번 클릭할 수 있습니다. Visual Basic **프로젝트 디자이너** 에서 **애플리케이션** 탭을 클릭한 다음 **애플리케이션 이벤트 보기** 단추를 클릭합니다. *ApplicationEvents.vb* 라는 새 파일이 생성됩니다. 여기에 `MyApplication` 클래스를 확장하는 다음 코드가 포함되어 있습니다.
 
 [!code-vb[VbVbcnExtendingMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#5)]
 

@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: Visual Basic에서 파일 이름 바꾸기'
 title: '방법: 파일 이름 바꾸기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: 3de41ee6627315f0e26964b75f564ff98fe472ec
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cf182fa94befdfdcb1568052a0193d483670cf49
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411592"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797408"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 이름 바꾸기
 
@@ -22,7 +23,7 @@ ms.locfileid: "84411592"
   
      [!code-vb[VbVbcnMyFileSystem#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#9)]  
   
- 이 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다. 코드 조각 선택에서 코드 조각은 **파일 시스템 - 드라이브, 폴더, 파일 처리**에 있습니다. 자세한 내용은 [Code Snippets](/visualstudio/ide/code-snippets)을 참조하세요.  
+ 이 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다. 코드 조각 선택에서 코드 조각은 **파일 시스템 - 드라이브, 폴더, 파일 처리** 에 있습니다. 자세한 내용은 [코드 조각](/visualstudio/ide/code-snippets)을 참조하세요.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
 
@@ -32,11 +33,11 @@ ms.locfileid: "84411592"
   
 - `newName`에 경로 정보가 포함된 경우(<xref:System.ArgumentException>)  
   
-- 경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
+- 경로가 `Nothing` 이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
 - `newName` 이 `Nothing` 이거나 빈 문자열인 경우(<xref:System.ArgumentNullException>)  
   
-- 소스 파일이 잘못되었거나 존재하지 않는 경우(<xref:System.IO.FileNotFoundException>)  
+- 소스 파일이 잘못되었거나 없는 경우(<xref:System.IO.FileNotFoundException>)  
   
 - `newName`에 지정된 이름의 기존 파일 또는 디렉터리가 있는 경우(<xref:System.IO.IOException>)  
   
@@ -52,6 +53,6 @@ ms.locfileid: "84411592"
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>
 - [방법: 파일 이동](how-to-move-a-file.md)
-- [파일/디렉터리 만들기, 삭제 및 이동](creating-deleting-and-moving-files-and-directories.md)
+- [파일 및 디렉터리 만들기, 삭제 및 이동](creating-deleting-and-moving-files-and-directories.md)
 - [방법: 동일한 디렉터리에 파일의 복사본 만들기](how-to-create-a-copy-of-a-file-in-the-same-directory.md)
 - [방법: 다른 디렉터리에 파일의 복사본 만들기](how-to-create-a-copy-of-a-file-in-a-different-directory.md)

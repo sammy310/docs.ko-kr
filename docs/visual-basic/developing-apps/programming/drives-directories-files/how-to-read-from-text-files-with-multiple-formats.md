@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: Visual Basic에서 여러 형식의 텍스트 파일 읽기'
 title: '방법: 여러 형식의 텍스트 파일에서 읽기'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: b36c781d5f8333749d346bb8f19540f0d1bd1692
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 90d981ad051fb395d57604434cf9ba6b74603e7d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74334580"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797447"
 ---
 # <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>방법: Visual Basic에서 여러 형식의 텍스트 파일 읽기
 
@@ -24,7 +25,7 @@ ms.locfileid: "74334580"
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>여러 형식이 포함된 텍스트 파일을 구문 분석하려면
 
-1. *testfile.txt*라는 텍스트 파일을 프로젝트에 추가합니다. 텍스트 파일에 다음 콘텐츠를 추가합니다.
+1. *testfile.txt* 라는 텍스트 파일을 프로젝트에 추가합니다. 텍스트 파일에 다음 콘텐츠를 추가합니다.
 
     ```text
     Err  1001 Cannot access resource.
@@ -67,7 +68,7 @@ ms.locfileid: "74334580"
 - 경로가 너무 긴 경우(<xref:System.IO.PathTooLongException>)
 - 사용자에게 파일에 액세스할 수 있는 권한이 없는 경우(<xref:System.UnauthorizedAccessException>)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>

@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: HTTP 관련 속성에 액세스'
 title: '방법: HTTP 관련 속성에 액세스'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: ea709bba17d4e2f00b760c8713f9e8100496f0bf
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a54ef247b479cf6cdec8dc28732304cf03b0b202
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250517"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729304"
 ---
 # <a name="how-to-access-http-specific-properties"></a>방법: HTTP 관련 속성에 액세스
 
@@ -51,7 +52,7 @@ HttpWResp.Close();
   
 - **System.Net** 네임스페이스에 대한 참조.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프록시를 통해 인터넷 액세스](accessing-the-internet-through-a-proxy.md)
 - [애플리케이션 프로토콜 사용](using-application-protocols.md)

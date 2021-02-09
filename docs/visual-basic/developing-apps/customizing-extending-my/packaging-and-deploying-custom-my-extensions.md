@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 사용자 지정 My 확장 패키징 및 배포(Visual Basic)'
 title: 사용자 지정 My 확장 패키징 및 배포
 ms.date: 08/14/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-ms.openlocfilehash: 6d2cc2b01b04b30bd3b1a4371352ded20ea8664b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7037cc72951fc5228ae47998f39dca3455bf57de
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411755"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775411"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>사용자 지정 My 확장 패키징 및 배포(Visual Basic)
 
@@ -58,7 +59,7 @@ CustomData 파일은 .CustomData의 파일 이름 확장명을 가진 텍스트 
 
 CustomData 파일에는 다음 표에 나열된 특성을 포함하는 <`VBMyExtensionTemplate>` 요소가 포함되어 있습니다.
 
-|특성|설명|
+|특성|Description|
 |---|---|
 |`ID`|필수 요소. 확장에 대한 고유 식별자입니다. 이 ID를 가진 확장이 프로젝트에 이미 추가된 경우 사용자에게 다시 추가하라는 메시지가 표시되지 않습니다.|
 |`Version`|필수 요소. 항목 템플릿에 대한 버전 번호입니다.|
@@ -99,7 +100,7 @@ Visual Studio 항목 템플릿을 `My` 네임스페이스 확장으로 식별하
 
 ## <a name="install-the-template"></a>템플릿 설치
 
-템플릿을 설치하려면 압축된 폴더( *.zip* 파일)를 Visual Basic 항목 템플릿 폴더에 복사하면 됩니다. 기본적으로 사용자 항목 템플릿은 *%USERPROFILE%\Documents\Visual Studio \<Version\>\Templates\ItemTemplates\Visual Basic*에 있습니다. 또는 템플릿을 Visual Studio 설치 관리자( *.vsi*) 파일로 게시할 수 있습니다.
+템플릿을 설치하려면 압축된 폴더( *.zip* 파일)를 Visual Basic 항목 템플릿 폴더에 복사하면 됩니다. 기본적으로 사용자 항목 템플릿은 *%USERPROFILE%\Documents\Visual Studio \<Version\>\Templates\ItemTemplates\Visual Basic* 에 있습니다. 또는 템플릿을 Visual Studio 설치 관리자( *.vsi*) 파일로 게시할 수 있습니다.
 
 ## <a name="see-also"></a>참조
 

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: Visual Basic에서 직렬 포트에 연결된 모뎀 전화 접속'
 title: '방법: 직렬 포트에 연결된 모뎀 전화 접속'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - serial ports [Visual Basic], dialing
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
-ms.openlocfilehash: e55ce6399dae435fbd5b2f730d4d0848c98d8955
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 016a3f768020c551c4f4ca7f5a097f4f1f9d07d7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363269"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797707"
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>방법: Visual Basic에서 직렬 포트에 연결된 모뎀 전화 접속
 
@@ -23,7 +24,7 @@ ms.locfileid: "84363269"
   
 1. 모뎀이 연결된 직렬 포트를 확인합니다. 이 예제에서는 모뎀이 COM1에 있다고 가정합니다.  
   
-2. `My.Computer.Ports.OpenSerialPort` 메서드를 사용하여 포트에 대한 참조를 가져옵니다. 자세한 내용은 <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>을 참조하세요.  
+2. `My.Computer.Ports.OpenSerialPort` 메서드를 사용하여 포트에 대한 참조를 가져옵니다. 자세한 내용은 <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>를 참조하세요.  
   
      `Using` 블록을 사용하면 예외를 생성하는 경우 애플리케이션이 직렬 포트를 닫을 수 있습니다. 직렬 포트를 조작하는 모든 코드는 이 블록 안이나 `Try...Catch...Finally` 블록 안에 표시되어야 합니다.  
   
@@ -41,7 +42,7 @@ ms.locfileid: "84363269"
 
  [!code-vb[VbVbalrMyComputer#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#27)]  
   
- 이 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다. 코드 조각 선택에서는 **연결 및 네트워킹**에 있습니다. 자세한 내용은 [Code Snippets](/visualstudio/ide/code-snippets)을 참조하세요.  
+ 이 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다. 코드 조각 선택에서는 **연결 및 네트워킹** 에 있습니다. 자세한 내용은 [코드 조각](/visualstudio/ide/code-snippets)을 참조하세요.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
 
@@ -61,4 +62,4 @@ ms.locfileid: "84363269"
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
 - [방법: 직렬 포트로 문자열 보내기](how-to-send-strings-to-serial-ports.md)
 - [방법: 직렬 포트에서 문자열 받기](how-to-receive-strings-from-serial-ports.md)
-- [방법: 사용할 수 있는 직렬 포트 표시](how-to-show-available-serial-ports.md)
+- [방법: 사용 가능한 직렬 포트 표시](how-to-show-available-serial-ports.md)

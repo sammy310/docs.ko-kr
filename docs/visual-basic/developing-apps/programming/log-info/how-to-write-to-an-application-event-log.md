@@ -1,5 +1,6 @@
 ---
-title: '방법: 응용 프로그램 이벤트 로그에 쓰기'
+description: '자세한 정보: 방법: 애플리케이션 이벤트 로그에 쓰기(Visual Basic)'
+title: '방법: 애플리케이션 이벤트 로그에 쓰기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Computer.EventLog element
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - My.Computer.EventLog element
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
-ms.openlocfilehash: 298d6d85f8b21176b72db8e676617577eb03fada
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ea53ff84f1fcf175912e35eb7433ece26886cf44
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410038"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797291"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>방법: 애플리케이션 이벤트 로그에 쓰기(Visual Basic)
 
@@ -20,21 +21,21 @@ ms.locfileid: "84410038"
 
 보안 로그에는 쓸 수 없습니다. 시스템 로그에 쓰려면 LocalSystem 또는 Administrator 계정의 멤버여야 합니다.
 
-이벤트 로그를 보려면 **서버 탐색기** 또는 **Windows 이벤트 뷰어**를 사용합니다. 자세한 내용은 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)을 참조하세요.
+이벤트 로그를 보려면 **서버 탐색기** 또는 **Windows 이벤트 뷰어** 를 사용합니다. 자세한 내용은 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)를 참조하세요.
 
 ## <a name="to-add-and-configure-the-event-log-listener"></a>이벤트 로그 수신기를 추가하고 구성하려면
 
-1. **솔루션 탐색기** 에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.
+1. **솔루션 탐색기** 에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기** 를 선택합니다.
 
     \- 또는 -
 
     app.config 파일이 없는 경우
 
-    1. **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.
+    1. **프로젝트** 메뉴에서 **새 항목 추가** 를 선택합니다.
 
-    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.
+    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일** 을 선택합니다.
 
-    3. **추가**를 클릭합니다.
+    3. **추가** 를 클릭합니다.
 
 2. 애플리케이션 구성 파일에서 `<listeners>` 섹션을 찾습니다.
 
@@ -67,11 +68,11 @@ ms.locfileid: "84410038"
 
 어셈블리에 대한 이벤트 로그 수신기를 구성하면 수신기는 `My.Application.Log` 가 해당 어셈블리에서 쓰는 모든 메시지를 수신합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [애플리케이션 로그 작업](working-with-application-logs.md)
-- [방법: 예외 기록](how-to-log-exceptions.md)
+- [방법: 로그 예외](how-to-log-exceptions.md)
 - [연습: My.Application.Log가 정보를 기록하는 위치 확인](walkthrough-determining-where-my-application-log-writes-information.md)

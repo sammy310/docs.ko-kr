@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 언어 독립성 및 언어 독립적 구성 요소'
 title: 언어 독립성 및 언어 독립적 구성 요소
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: aeaf58276537fab72fdcde81b0465acbbdb23140
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2208f515bcab5f423b32fabc5364e02ed7230919
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831158"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99713210"
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 시간 기반 캐시 정책'
 title: 시간 기반 캐시 정책
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 372621ce55891cb87594e6d059c7bbeeb99f6468
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 42a76be0da664899295a583d72477de0698cc39e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239421"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99712300"
 ---
 # <a name="time-based-cache-policies"></a>시간 기반 캐시 정책
 
@@ -43,7 +44,7 @@ ms.locfileid: "96239421"
 > [!NOTE]
 > 기본 시간 기반 캐시 정책 사용과 애플리케이션에 대한 기본 캐시 정책 설정을 혼동하면 안 됩니다. 기본 시간 기반 정책은 요청 또는 애플리케이션 수준에서 사용할 수 있는 특정 정책입니다. 애플리케이션에 대한 기본 캐시 정책은 요청에 설정된 정책이 없는 경우 적용되는 정책(위치 기반 또는 시간 기반)입니다. 애플리케이션에 대한 기본 캐시 정책을 설정하는 방법에 대한 자세한 내용은 <xref:System.Net.WebRequest.DefaultCachePolicy%2A>를 참조하세요.  
   
-### <a name="maximum-age"></a>최대 보존 기간  
+### <a name="maximum-age"></a>Maximum Age  
 
  최대 보존 기간 정책 조건은 리소스의 캐시된 복사본을 사용할 수 있는 시간을 지정합니다. 리소스의 캐시된 복사본이 지정된 시간보다 오래된 경우 서버 콘텐츠와 비교해서 확인하여 리소스의 유효성을 재검사해야 합니다. 최대 보존 기간이 만료된 리소스를 사용할 수 있도록 허용하는 경우 최대 부실 값도 지정하지 않으면 이 조건은 적용되지 않습니다.  
   

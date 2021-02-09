@@ -1,17 +1,18 @@
 ---
-title: 'How to: Write Event Information to a Text File'
+description: '자세한 정보: 방법: 텍스트 파일에 이벤트 정보 쓰기(Visual Basic)'
+title: '방법: 텍스트 파일에 이벤트 정보 쓰기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs [Visual Studio], writing event information
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: 6e83f8450ca7be8a2dcd5ff43eab3dd2ec0d2f1b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: eb6fab9976c010080c0cffa37edd4f790dc73956
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410064"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775138"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>방법: 텍스트 파일에 이벤트 정보 쓰기(Visual Basic)
 
@@ -19,17 +20,17 @@ ms.locfileid: "84410064"
 
 ### <a name="to-add-and-configure-the-file-log-listener"></a>파일 로그 수신기를 추가하고 구성하려면
 
-1. **솔루션 탐색기** 에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.
+1. **솔루션 탐색기** 에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기** 를 선택합니다.
 
      \- 또는 -
 
      app.config 파일이 없는 경우
 
-    1. **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.
+    1. **프로젝트** 메뉴에서 **새 항목 추가** 를 선택합니다.
 
-    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.
+    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일** 을 선택합니다.
 
-    3. **추가**를 클릭합니다.
+    3. **추가** 를 클릭합니다.
 
 2. 애플리케이션 구성 파일에서 `<listeners>` 섹션을 찾습니다.
 
@@ -66,10 +67,10 @@ ms.locfileid: "84410064"
 
 어셈블리에 대한 파일 로그 수신기를 구성하면 수신기는 `My.Application.Log`가 해당 어셈블리에서 쓰는 모든 메시지를 수신합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [애플리케이션 로그 작업](working-with-application-logs.md)
-- [방법: 예외 기록](how-to-log-exceptions.md)
+- [방법: 로그 예외](how-to-log-exceptions.md)

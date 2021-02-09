@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: Visual Basic에서 다른 디렉터리에 파일의 복사본 만들기'
 title: '방법: 다른 디렉터리에 파일의 복사본 만들기'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: 88e2145c-d414-45a5-ad03-6f5d58ecca26
-ms.openlocfilehash: 3b4b41e105d6bb6a17fbb688aa4718b33c23b9d6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 128a813ec3e5c759d5320d59a1e83f9d66af3bbd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401695"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797642"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>방법: Visual Basic에서 다른 디렉터리에 파일의 복사본 만들기
 
@@ -32,9 +33,9 @@ ms.locfileid: "84401695"
   
 - 시스템이 절대 경로를 검색할 수 없는 경우(<xref:System.ArgumentException>)  
   
-- 경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
+- 경로가 `Nothing` 이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
-- 소스 파일이 잘못되었거나 존재하지 않는 경우(<xref:System.IO.FileNotFoundException>)  
+- 소스 파일이 잘못되었거나 없는 경우(<xref:System.IO.FileNotFoundException>)  
   
 - 조합된 경로가 기존 디렉터리를 가리키는 경우(<xref:System.IO.IOException>)  
   
@@ -61,7 +62,7 @@ ms.locfileid: "84401695"
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
-- [방법: 특정 패턴의 파일을 디렉터리에 복사](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
+- [방법: 특정 패턴의 파일을 디렉터리로 복사](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
 - [방법: 동일한 디렉터리에 파일의 복사본 만들기](how-to-create-a-copy-of-a-file-in-the-same-directory.md)
 - [방법: 디렉터리를 다른 디렉터리에 복사](how-to-copy-a-directory-to-another-directory.md)
 - [방법: 파일 이름 바꾸기](how-to-rename-a-file.md)

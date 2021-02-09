@@ -1,5 +1,6 @@
 ---
-title: '방법: 이진 파일 읽기'
+description: '자세한 정보: 방법: Visual Basic의 이진 파일에서 읽기'
+title: '방법: 이진 파일에서 읽기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - binary files [Visual Basic], reading from
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-ms.openlocfilehash: 3b4108034b86d99143fff6943e68ca0077ebd21b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0d522c6f55c0ef2e39437ba732040afdf5113d7a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359931"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797512"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>방법: Visual Basic에서 이진 파일 읽기
 
@@ -34,7 +35,7 @@ ms.locfileid: "84359931"
   
 - 길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  
   
-- 경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
+- 경로가 `Nothing` 이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
 - 파일이 없는 경우(<xref:System.IO.FileNotFoundException>)  
   
@@ -56,6 +57,6 @@ ms.locfileid: "84359931"
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
-- [파일 읽기](reading-from-files.md)
+- [파일에서 읽기](reading-from-files.md)
 - [방법: 여러 형식의 텍스트 파일에서 읽기](how-to-read-from-text-files-with-multiple-formats.md)
 - [데이터를 클립보드에 저장하고 클립보드에서 읽기](../computer-resources/storing-data-to-and-reading-from-the-clipboard.md)

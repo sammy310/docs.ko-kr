@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic을 사용한 파일 액세스'
 title: 파일 액세스
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-ms.openlocfilehash: 3b2042862ae81a52d62374e35a456766ed47edc9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b3ea742185e7219ce7fdfb8eee987fd9c17e3a88
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401734"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666318"
 ---
 # <a name="file-access-with-visual-basic"></a>Visual Basic을 사용한 파일 액세스
 
@@ -27,13 +28,13 @@ ms.locfileid: "84401734"
   
 ## <a name="in-this-section"></a>섹션 내용  
 
- [파일 읽기](reading-from-files.md)  
+ [파일에서 읽기](reading-from-files.md)  
  `My.Computer.FileSystem` 개체를 사용하여 파일에서 읽기에 대한 항목을 나열합니다.  
   
  [파일에 쓰기](writing-to-files.md)  
  `My.Computer.FileSystem` 개체를 사용하여 파일에 쓰기에 대한 항목을 나열합니다.  
   
- [파일/디렉터리 만들기, 삭제 및 이동](creating-deleting-and-moving-files-and-directories.md)  
+ [파일 및 디렉터리 만들기, 삭제 및 이동](creating-deleting-and-moving-files-and-directories.md)  
  `My.Computer.FileSystem` 개체를 사용하여 파일 및 폴더 만들기, 복사, 삭제 및 이동에 대한 항목을 나열합니다.  
   
  [TextFieldParser 개체를 사용하여 텍스트 파일 구문 분석](parsing-text-files-with-the-textfieldparser-object.md)  

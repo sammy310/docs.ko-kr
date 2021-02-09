@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: My가 프로젝트 형식에 의존하는 방식(Visual Basic)'
 title: My가 프로젝트 형식에 의존하는 방식
 ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 740185d8030c09e8813bc7680b451f6326588593
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 69c1ffdbd241816c9061bf4b4feb6d4359258059
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411716"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797980"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My가 프로젝트 형식에 의존하는 방식(Visual Basic)
 

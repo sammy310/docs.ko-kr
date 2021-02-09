@@ -1,40 +1,41 @@
 ---
+description: '자세한 정보: 연습: My.Application.Log가 정보를 기록하는 위치 변경(Visual Basic)'
 title: My.Application.Log가 정보를 기록하는 위치 변경
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: f9e45cdf4507840f62e32678f4c0a7be2c0be054
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aa4e1b8ce33e2afd8dd51c68340feb3e85eb8966
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398294"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99731424"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>연습: My.Application.Log가 정보를 기록하는 위치 변경(Visual Basic)
 
 `My.Application.Log` 및 `My.Log` 개체를 사용하여 애플리케이션에서 발생하는 이벤트에 대한 정보를 기록할 수 있습니다. 이 연습에서는 기본 설정을 재정의하고 `Log` 개체가 다른 로그 수신기에 쓰도록 만드는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 준비 사항
 
-`Log` 개체는 여러 로그 수신기에 정보를 쓸 수 있습니다. 구성을 변경하기 전에 로그 수신기의 현재 구성을 확인해야 합니다. 자세한 내용은 [Walkthrough: Determining Where My.Application.Log Writes Information](walkthrough-determining-where-my-application-log-writes-information.md)을 참조하세요.
+`Log` 개체는 여러 로그 수신기에 정보를 쓸 수 있습니다. 구성을 변경하기 전에 로그 수신기의 현재 구성을 확인해야 합니다. 자세한 내용은 [연습: My.Application.Log가 정보를 기록하는 위치 확인](walkthrough-determining-where-my-application-log-writes-information.md)을 참조하세요.
 
 [방법: 텍스트 파일에 이벤트 정보 쓰기](how-to-write-event-information-to-a-text-file.md) 또는 [방법: 애플리케이션 이벤트 로그에 쓰기](how-to-write-to-an-application-event-log.md)도 검토할 수 있습니다.
 
 ### <a name="to-add-listeners"></a>수신기를 추가하려면
 
-1. **솔루션 탐색기** 에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.
+1. **솔루션 탐색기** 에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기** 를 선택합니다.
 
      \- 또는 -
 
      app.config 파일이 없는 경우
 
-    1. **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.
+    1. **프로젝트** 메뉴에서 **새 항목 추가** 를 선택합니다.
 
-    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.
+    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일** 을 선택합니다.
 
-    3. **추가**를 클릭합니다.
+    3. **추가** 를 클릭합니다.
 
 2. `<listeners>` 섹션에서 `<source>` 특성이 "DefaultSource"인 `name` 섹션 아래에 있는 `<sources>` 섹션을 찾습니다. `<sources>` 섹션은 최상위 `<system.diagnostics>` 섹션의 `<configuration>` 섹션에 있습니다.
 

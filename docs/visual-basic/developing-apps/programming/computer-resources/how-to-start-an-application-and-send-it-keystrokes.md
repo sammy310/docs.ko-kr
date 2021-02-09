@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 애플리케이션 시작 및 키 입력 보내기(Visual Basic)'
 title: '방법: 애플리케이션 시작 및 키 입력 보내기 - Visual Basic'
 ms.date: 10/23/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - processes, starting and sending keystrokes
 - SendKeys.SendWait examples
 ms.assetid: f1303184-fce4-44fb-88b4-aac5f42d5d77
-ms.openlocfilehash: 033999c07bb5839a264122b2ca330916bdf844b8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea54b940b528e0833d9c7a6cbef67f65a4cb4f6b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "72919385"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666461"
 ---
 # <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>방법: 애플리케이션 시작 및 키 입력 보내기(Visual Basic)
 

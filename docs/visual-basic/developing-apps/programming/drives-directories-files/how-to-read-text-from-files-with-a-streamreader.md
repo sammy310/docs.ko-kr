@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: StreamReader(Visual Basic)를 사용하여 파일에서 텍스트 읽기'
 title: '방법: StreamReader를 사용하여 파일에서 텍스트 읽기'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - reading text from files [Visual Basic]
 - files [Visual Basic], reading
 ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
-ms.openlocfilehash: 5ec161f5146d5bea7f34d4a5b6c154f6c45b1cf4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9a2eb08209a2a65f7be846c8cb5357978a48ed73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546499"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797421"
 ---
 # <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>방법: StreamReader를 사용하여 파일에서 텍스트 읽기(Visual Basic)
 
@@ -34,7 +35,7 @@ ms.locfileid: "90546499"
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
 
- 파일에서 읽으려면 어셈블리에 <xref:System.Security.Permissions.FileIOPermission> 클래스에서 부여한 권한 수준이 필요합니다. 부분 신뢰 컨텍스트에서 실행하는 경우 권한 부족으로 인해 코드에서 예외를 throw할 수 있습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](../../../../framework/misc/code-access-security-basics.md)을 참조하세요. 사용자에게 파일에 대한 액세스 권한도 필요합니다. 자세한 내용은 [ACL 기술 개요](/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100))를 참조하세요.  
+ 파일에서 읽으려면 어셈블리에 <xref:System.Security.Permissions.FileIOPermission> 클래스에서 부여한 권한 수준이 필요합니다. 부분 신뢰 컨텍스트에서 실행하는 경우 권한 부족으로 인해 코드에서 예외를 throw할 수 있습니다. 자세한 내용은 [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md)을 참조하세요. 사용자에게 파일에 대한 액세스 권한도 필요합니다. 자세한 내용은 [ACL 기술 개요](/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100))를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
@@ -43,4 +44,4 @@ ms.locfileid: "90546499"
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>
 - [SaveFileDialog 구성 요소](/dotnet/desktop/winforms/controls/savefiledialog-component-windows-forms)
-- [파일 읽기](reading-from-files.md)
+- [파일에서 읽기](reading-from-files.md)

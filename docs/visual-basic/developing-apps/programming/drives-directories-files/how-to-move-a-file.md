@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 방법: Visual Basic에서 파일 이동'
 title: '방법: 파일 이동'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: 2dafeb3b5f8b8c3a8976b25c1a57f405aebb32b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 31049d2b7f0516c056fc1f1620a3ad8c1f0a2e1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401604"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797525"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 이동
 
@@ -33,11 +34,11 @@ ms.locfileid: "84401604"
   
 - 길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  
   
-- 경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
+- 경로가 `Nothing` 이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
 - `destinationFileName` 이 `Nothing` 이거나 빈 문자열인 경우(<xref:System.ArgumentNullException>)  
   
-- 소스 파일이 잘못되었거나 존재하지 않는 경우(<xref:System.IO.FileNotFoundException>)  
+- 소스 파일이 잘못되었거나 없는 경우(<xref:System.IO.FileNotFoundException>)  
   
 - 조합된 경로가 기존 디렉터리를 가리키거나, 대상 파일이 이미 있고 `overwrite` 가 `False`로 설정되었거나, 대상 디렉터리에 있는 동일한 이름의 파일이 사용 중이거나, 사용자에게 파일에 액세스할 권한이 없는 경우(<xref:System.IO.IOException>)  
   
@@ -56,4 +57,4 @@ ms.locfileid: "84401604"
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>
 - [방법: 파일 이름 바꾸기](how-to-rename-a-file.md)
 - [방법: 다른 디렉터리에 파일의 복사본 만들기](how-to-create-a-copy-of-a-file-in-a-different-directory.md)
-- [방법: 파일 경로의 구문 분석](how-to-parse-file-paths.md)
+- [방법: 파일 경로 구문 분석](how-to-parse-file-paths.md)

@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: Visual Basic에서 디렉터리의 파일 컬렉션 가져오기'
 title: '방법: 디렉터리의 파일 컬렉션 가져오기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders, working with
 - files [Visual Basic], accessing
 ms.assetid: 6c8ba7e8-dd37-4853-92bf-762b67c98160
-ms.openlocfilehash: 055151d4b3e3aba6be9b9b03ac9abffc6eb7b734
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bd799390c0ad0868f51387ba12e8612fe8948297
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401617"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797538"
 ---
 # <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>방법: Visual Basic에서 디렉터리의 파일 컬렉션 가져오기
 
@@ -34,7 +35,7 @@ ms.locfileid: "84401617"
   
 - 길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  
   
-- 경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
+- 경로가 `Nothing` 이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
 - `directory`가 없는 경우(<xref:System.IO.DirectoryNotFoundException>)  
   

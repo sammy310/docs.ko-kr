@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 캐시 정책 상호 작용 - 최대 보존 기간 및 최소 새로 고침'
 title: 캐시 정책 상호 작용 - 최대 보존 기간 및 최소 새로 고침
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
-ms.openlocfilehash: d4182268341f4a4334a627fc8c9e24fa235f003f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 882df93d44c0d745fcf30a7d9be3152797df4844
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287555"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791649"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>캐시 정책 상호 작용 - 최대 보존 기간 및 최소 새로 고침
 

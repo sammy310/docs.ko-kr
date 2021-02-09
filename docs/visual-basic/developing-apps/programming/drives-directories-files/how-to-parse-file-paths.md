@@ -1,16 +1,17 @@
 ---
-title: '방법: 파일 경로의 구문 분석'
+description: '자세한 정보: 방법: Visual Basic에서 파일 경로 구문 분석'
+title: '방법: 파일 경로 구문 분석'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
-ms.openlocfilehash: eb7714a8594c0bce344eb2e48ebc5053dc3bfbb4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dff423679324974d64c613a292c253d99d668c7e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359944"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797499"
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a>방법: Visual Basic에서 파일 경로의 구문 분석
 

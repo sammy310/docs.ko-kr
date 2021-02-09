@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 캐시 정책 조작 -최대 사용 기간 및 최대 부실'
 title: 캐시 정책 조작 -최대 사용 기간 및 최대 부실
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-ms.openlocfilehash: bdfa608b5169755b2b4daaaa26e562308ae2be01
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 909a7203d4c9813c90dc0dea9bae7f8a1f7336cf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250608"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791662"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>캐시 정책 조작 -최대 사용 기간 및 최대 부실
 

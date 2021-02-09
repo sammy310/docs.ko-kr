@@ -1,20 +1,21 @@
 ---
+description: '자세한 정보: 방법: 그룹 연결에 사용자 정보 할당'
 title: '방법: 그룹 연결에 사용자 정보 할당'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 01b686702250c68131e8a46b410ce05e67e7c950
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2af901b91c561f5f46c63ed627cbd0053d30e624
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180840"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729265"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>방법: 그룹 연결에 사용자 정보 할당
 
- 다음 예제에서는 이 코드 섹션이 호출되기 전에 애플리케이션이 *UserName*, *SecurelyStoredPassword* 및 *Domain* 변수를 설정하고 *UserName*이 고유하다고 가정하여 사용자 정보를 그룹 연결에 할당하는 방법을 보여 줍니다.  
+ 다음 예제에서는 이 코드 섹션이 호출되기 전에 애플리케이션이 *UserName*, *SecurelyStoredPassword* 및 *Domain* 변수를 설정하고 *UserName* 이 고유하다고 가정하여 사용자 정보를 그룹 연결에 할당하는 방법을 보여 줍니다.  
   
 ### <a name="to-assign-user-information-to-a-group-connection"></a>그룹 연결에 사용자 정보를 할당하려면  
   
@@ -42,7 +43,7 @@ ms.locfileid: "79180840"
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3. 웹 요청에 대한 자격 증명 및 연결 그룹 이름을 설정하고 **GetResponse**를 호출하여 **WebResponse** 개체를 검색합니다.  
+3. 웹 요청에 대한 자격 증명 및 연결 그룹 이름을 설정하고 **GetResponse** 를 호출하여 **WebResponse** 개체를 검색합니다.  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);

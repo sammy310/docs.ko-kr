@@ -1,5 +1,6 @@
 ---
-title: '방법: 특정 패턴의 파일을 디렉터리에 복사'
+description: '자세한 정보: 방법: Visual Basic에서 특정 패턴의 파일을 디렉터리에 복사'
+title: '방법: 특정 패턴의 파일을 디렉터리로 복사'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 7e263e2c9035db54dbb58c6c78c0647d5442504e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2a5163e6420d747a724fec9b8ede8dbcc6a938be
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401708"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797629"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>방법: Visual Basic에서 특정 패턴의 파일을 디렉터리에 복사
 
@@ -48,7 +49,7 @@ ms.locfileid: "84401708"
   
 - 길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  
   
-- 경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
+- 경로가 `Nothing` 이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
 - 디렉터리가 없는 경우(<xref:System.IO.DirectoryNotFoundException>)  
   

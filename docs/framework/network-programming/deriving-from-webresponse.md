@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: WebResponse에서 파생'
 title: WebResponse에서 파생
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: 793533b632952df3f0866bb6377efd0e313cd007
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5e941ce055091c6034640733465020ff62ce3721
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287529"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747480"
 ---
 # <a name="deriving-from-webresponse"></a>WebResponse에서 파생
 
@@ -45,7 +46,7 @@ ms.locfileid: "96287529"
   
  **GetResponseStream** 메서드에서 반환되는 스트림 인스턴스는 애플리케이션이 소유하고 **WebResponse** 를 닫지 않고도 닫을 수 있습니다. 규칙에 따라 **WebResponse.Close** 메서드를 호출하면 **GetResponse** 에서 반환된 스트림도 닫힙니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.WebResponse>
 - <xref:System.Net.HttpWebResponse>

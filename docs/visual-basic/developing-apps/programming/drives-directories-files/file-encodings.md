@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 파일 인코딩(Visual Basic)'
 title: 파일 인코딩
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-ms.openlocfilehash: f906b2f2d747a7950c70a24549bbf5423e5b87b4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f573b5d8f83c27cbf4ddacb9fd40474d7d1be1ae
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401747"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99675366"
 ---
 # <a name="file-encodings-visual-basic"></a>파일 인코딩(Visual Basic)
 
@@ -30,7 +31,7 @@ ms.locfileid: "84401747"
 
 <xref:System.Text.Encoding> 클래스는 문자 인코딩을 나타냅니다. 이 표에서는 사용 가능한 인코딩 형식을 나열하고 각 인코딩 형식을 설명합니다.
 
-|name|설명|
+|이름|Description|
 |---|---|
 |<xref:System.Text.ASCIIEncoding>|유니코드 문자의 ASCII 문자 인코딩을 나타냅니다.|
 |<xref:System.Text.UnicodeEncoding>|유니코드 문자의 UTF-16 인코딩을 나타냅니다.|
@@ -40,5 +41,5 @@ ms.locfileid: "84401747"
 
 ## <a name="see-also"></a>참고 항목
 
-- [파일 읽기](reading-from-files.md)
+- [파일에서 읽기](reading-from-files.md)
 - [파일에 쓰기](writing-to-files.md)

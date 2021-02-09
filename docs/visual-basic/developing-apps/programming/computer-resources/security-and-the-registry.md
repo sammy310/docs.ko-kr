@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 보안 및 레지스트리(Visual Basic)'
 title: 보안 및 레지스트리
 ms.date: 07/20/2015
 helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: 2eba9d177769b22de3f931bc7af4905a80e316b5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2dc6413328bc32c004d281b096ee095d4f827feb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359970"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666383"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>보안 및 레지스트리(Visual Basic)
 
@@ -20,7 +21,7 @@ ms.locfileid: "84359970"
 
  레지스트리 키가 ACL(액세스 제어 목록)로 보호된 경우에도 비밀(예: 암호)을 레지스트리에 일반 텍스트로 저장하는 것은 안전하지 않습니다.  
   
- 레지스트리로 작업하면 시스템 리소스나 보호된 정보에 부적절하게 액세스하여 보안이 손상될 수 있습니다. 이러한 속성을 사용하려면 레지스트리 변수에 대한 액세스를 제어하는 <xref:System.Security.Permissions.RegistryPermissionAccess> 열거형의 읽기 및 쓰기 권한이 있어야 합니다. 완전 신뢰로 실행되는 코드(기본 보안 정책에서 사용자의 로컬 하드 디스크에 설치된 모든 코드)에는 레지스트리에 액세스하는 데 필요한 권한이 있습니다. 자세한 내용은 <xref:System.Security.Permissions.RegistryPermission> 클래스를 참조하세요.  
+ 레지스트리로 작업하면 시스템 리소스나 보호된 정보에 부적절하게 액세스하여 보안이 손상될 수 있습니다. 이러한 속성을 사용하려면 레지스트리 변수에 대한 액세스를 제어하는 <xref:System.Security.Permissions.RegistryPermissionAccess> 열거형의 읽기 및 쓰기 권한이 있어야 합니다. 완전 신뢰로 실행되는 코드(기본 보안 정책에서 사용자의 로컬 하드 디스크에 설치된 모든 코드)에는 레지스트리에 액세스하는 데 필요한 권한이 있습니다. 자세한 내용은 <xref:System.Security.Permissions.RegistryPermission> 클래스를 참조하십시오.  
   
  <xref:System.Security.Permissions.RegistryPermission> 없이 코드에서 액세스할 수 있는 메모리 위치에 레지스트리 변수를 저장하면 안 됩니다. 마찬가지로, 사용 권한을 부여하는 경우 작업을 완료하는 데 필요한 최소 권한을 부여합니다.  
   
@@ -29,10 +30,10 @@ ms.locfileid: "84359970"
 |값|레지스트리 변수에 대한 액세스 권한|  
 |-----------|----------------------------------|  
 |`AllAccess`|만들기, 읽기, 쓰기|  
-|`Create`|만들기|  
+|`Create`|생성|  
 |`NoAccess`|액세스 권한 없음|  
 |`Read`|읽기|  
-|`Write`|Write|  
+|`Write`|쓰기|  
   
 ## <a name="checking-values-in-registry-keys"></a>레지스트리 키의 값 검사  
 

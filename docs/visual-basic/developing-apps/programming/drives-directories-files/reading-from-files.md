@@ -1,5 +1,6 @@
 ---
-title: 파일 읽기
+description: '자세한 정보: Visual Basic에서 파일 읽기'
+title: 파일에서 읽기
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data [Visual Basic], reading from files
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: b94a92567c62efca37b1f0ec34f79fb3ceca54bc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d2ed1c46a1b3f11782dafa75bb5130433aec5acd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406640"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792312"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Visual Basic에서 파일 읽기
 

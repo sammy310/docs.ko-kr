@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연습: .NET Framework 메서드를 사용하여 파일 조작(Visual Basic)'
 title: .NET Framework 메서드를 사용하여 파일 조작
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 9abb87f3f6cdefefef29eb37c2c2d4d15155e93d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e59dca15660a981c487688234c864a818398af65
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406653"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775372"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>연습: .NET Framework 메서드를 사용하여 파일 조작(Visual Basic)
 
@@ -34,13 +35,13 @@ Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데
 
 ### <a name="to-create-the-project"></a>프로젝트를 만들려면
 
-1. **파일** 메뉴에서 **새 프로젝트**를 선택합니다.
+1. **파일** 메뉴에서 **새 프로젝트** 를 선택합니다.
 
-2. **새 프로젝트** 창에서 **Windows 애플리케이션**을 클릭합니다.
+2. **새 프로젝트** 창에서 **Windows 애플리케이션** 을 클릭합니다.
 
-3. **이름** 상자에 `MyDiary`를 입력한 다음 **확인**을 클릭합니다.
+3. **이름** 상자에 `MyDiary`를 입력한 다음 **확인** 을 클릭합니다.
 
-     Visual Studio에서 **솔루션 탐색기**에 프로젝트를 추가합니다. 그러면 **Windows Forms 디자이너**가 열립니다.
+     Visual Studio에서 **솔루션 탐색기** 에 프로젝트를 추가합니다. 그러면 **Windows Forms 디자이너** 가 열립니다.
 
 4. 다음 표의 컨트롤을 양식에 추가하고 속성의 해당 값을 설정합니다.
 
@@ -48,7 +49,7 @@ Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데
 |---|---|---|
 |<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **Text**|`Submit`<br /><br /> **항목 제출**|
 |<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **Text**|`Clear`<br /><br /> **항목 지우기**|
-|<xref:System.Windows.Forms.TextBox>|**이름**<br /><br /> **Text**<br /><br /> **Multiline**|`Entry`<br /><br /> **내용을 입력하세요.**<br /><br /> `False`|
+|<xref:System.Windows.Forms.TextBox>|**이름**<br /><br /> **Text**<br /><br /> **여러 줄**|`Entry`<br /><br /> **내용을 입력하세요.**<br /><br /> `False`|
 
 ## <a name="writing-to-the-file"></a>파일에 쓰기
 
@@ -56,7 +57,7 @@ Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데
 
 ### <a name="to-add-writing-functionality"></a>쓰기 기능을 추가하려면
 
-1. **보기** 메뉴에서 **코드**를 선택하여 코드 편집기를 엽니다.
+1. **보기** 메뉴에서 **코드** 를 선택하여 코드 편집기를 엽니다.
 
 2. 애플리케이션은 <xref:System.IO> 네임스페이스를 참조하므로 다음 문을 코드의 시작 부분(`Public Class Form1`을 시작하는 양식에 대한 클래스 선언 전)에 추가합니다.
 
@@ -64,7 +65,7 @@ Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데
 
      파일에 쓰기 전에 <xref:System.IO.StreamWriter> 클래스의 인스턴스를 만들어야 합니다.
 
-3. **보기** 메뉴에서 **디자이너**를 선택하여 **Windows Forms 디자이너**로 돌아갑니다. `Submit` 단추를 두 번 클릭하여 단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 만들고 다음 코드를 추가합니다.
+3. **보기** 메뉴에서 **디자이너** 를 선택하여 **Windows Forms 디자이너** 로 돌아갑니다. `Submit` 단추를 두 번 클릭하여 단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 만들고 다음 코드를 추가합니다.
 
      [!code-vb[VbVbcnMyFileSystem#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#36)]
 
@@ -93,9 +94,9 @@ Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데
 
 이 연습의 이 섹션에서는 다음 표의 컨트롤을 양식에 추가하고 각 속성의 해당 값을 설정합니다.
 
-|Control|속성|값|
+|제어|속성|값|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.TextBox>|**이름**<br /><br /> **Visible**<br /><br /> **Size**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
+|<xref:System.Windows.Forms.TextBox>|**이름**<br /><br /> **Visible**<br /><br /> **Size**<br /><br /> **여러 줄**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
 |<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **Text**|`Display`<br /><br /> **표시**|
 |<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **Text**|`GetEntries`<br /><br /> **항목 가져오기**|
 |<xref:System.Windows.Forms.ComboBox>|**이름**<br /><br /> **Text**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **항목 선택**<br /><br /> `False`|
@@ -106,7 +107,7 @@ Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데
 
      [!code-vb[VbVbcnMyFileSystem#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#41)]
 
-2. 코드를 테스트하려면 F5를 눌러 애플리케이션을 컴파일한 다음 **항목 가져오기**를 클릭합니다. <xref:System.Windows.Forms.ComboBox>에서 드롭다운 화살표를 클릭하여 항목 날짜를 표시합니다.
+2. 코드를 테스트하려면 F5를 눌러 애플리케이션을 컴파일한 다음 **항목 가져오기** 를 클릭합니다. <xref:System.Windows.Forms.ComboBox>에서 드롭다운 화살표를 클릭하여 항목 날짜를 표시합니다.
 
 ### <a name="to-choose-and-display-individual-entries"></a>개별 항목을 선택하고 표시하려면
 
@@ -114,7 +115,7 @@ Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데
 
      [!code-vb[VbVbcnMyFileSystem#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#42)]
 
-2. 코드를 테스트하려면 F5를 눌러 애플리케이션을 컴파일한 다음 항목을 제출합니다. **항목 가져오기**를 클릭하고 <xref:System.Windows.Forms.ComboBox>에서 항목을 선택한 다음, **표시**를 클릭합니다. 선택한 항목의 내용이 `DisplayEntry`<xref:System.Windows.Forms.TextBox>에 표시됩니다.
+2. 코드를 테스트하려면 F5를 눌러 애플리케이션을 컴파일한 다음 항목을 제출합니다. **항목 가져오기** 를 클릭하고 <xref:System.Windows.Forms.ComboBox>에서 항목을 선택한 다음, **표시** 를 클릭합니다. 선택한 항목의 내용이 `DisplayEntry`<xref:System.Windows.Forms.TextBox>에 표시됩니다.
 
 ## <a name="enabling-users-to-delete-or-modify-entries"></a>사용자가 항목을 삭제 또는 수정하도록 설정
 
@@ -122,7 +123,7 @@ Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데
 
 다음 표의 컨트롤을 양식에 추가하고 속성의 해당 값을 설정합니다.
 
-|Control|속성|값|
+|제어|속성|값|
 |-------------|----------------|------------|
 |<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **Text**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **항목 삭제**<br /><br /> `False`|
 |<xref:System.Windows.Forms.Button>|**이름**<br /><br /> **Text**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **항목 편집**<br /><br /> `False`|
@@ -150,7 +151,7 @@ Visual Studio를 시작하고, 사용자가 지정된 파일에 작성하는 데
 
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]
 
-코드를 테스트하려면 F5를 눌러 애플리케이션을 컴파일합니다. **항목 가져오기**를 클릭하고 항목을 선택한 다음 **표시**를 클릭합니다. 항목이 `DisplayEntry`<xref:System.Windows.Forms.TextBox>에 나타납니다. **항목 편집**을 클릭합니다. 항목이 `Entry`<xref:System.Windows.Forms.TextBox>에 나타납니다. `Entry`<xref:System.Windows.Forms.TextBox>에서 항목을 편집하고 **편집 제출**을 클릭합니다. `MyDiary.txt` 파일을 열어 수정한 내용을 확인합니다. 이제 항목을 선택하고 **항목 삭제**를 클릭합니다. <xref:System.Windows.Forms.MessageBox>에 확인을 요청하는 메시지가 표시되면 **확인**을 클릭합니다. 애플리케이션을 닫고 `MyDiary.txt`를 열어 삭제를 확인합니다.
+코드를 테스트하려면 F5를 눌러 애플리케이션을 컴파일합니다. **항목 가져오기** 를 클릭하고 항목을 선택한 다음 **표시** 를 클릭합니다. 항목이 `DisplayEntry`<xref:System.Windows.Forms.TextBox>에 나타납니다. **항목 편집** 을 클릭합니다. 항목이 `Entry`<xref:System.Windows.Forms.TextBox>에 나타납니다. `Entry`<xref:System.Windows.Forms.TextBox>에서 항목을 편집하고 **편집 제출** 을 클릭합니다. `MyDiary.txt` 파일을 열어 수정한 내용을 확인합니다. 이제 항목을 선택하고 **항목 삭제** 를 클릭합니다. <xref:System.Windows.Forms.MessageBox>에 확인을 요청하는 메시지가 표시되면 **확인** 을 클릭합니다. 애플리케이션을 닫고 `MyDiary.txt`를 열어 삭제를 확인합니다.
 
 ## <a name="see-also"></a>참고 항목
 

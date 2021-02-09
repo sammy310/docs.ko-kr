@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: .NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스(Visual Basic)'
 title: .NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 2c696d5b8c83ae55caf61e4710630ad1e34c088d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a8cbe476044df92fcdbdd0421b91f3c7c098e063
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401773"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666331"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스(Visual Basic)
 
@@ -21,7 +22,7 @@ ms.locfileid: "84401773"
 
  다음 표에서는 파일 I/O에 사용되는 기본 클래스를 나열하고 설명합니다.  
   
-|클래스|설명|  
+|인스턴스|Description|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|디렉터리와 하위 디렉터리를 통해 만들고, 이동하고, 열거하기 위한 정적 메서드를 제공합니다.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|디렉터리와 하위 디렉터리를 통해 만들고, 이동하고, 열거하기 위한 인스턴스 메서드를 제공합니다.|  
@@ -39,7 +40,7 @@ ms.locfileid: "84401773"
 
  다음 표에서는 스트림을 만드는 데 사용되는 기본 클래스를 나열하고 설명합니다.  
   
-|클래스|설명|  
+|인스턴스|Description|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|다른 스트림에서 작업을 읽고 쓰기 위한 버퍼링 레이어를 추가합니다.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|<xref:System.IO.FileStream.Seek%2A> 메서드를 통해 임의 파일 액세스를 지원합니다. <xref:System.IO.FileStream>은 기본적으로 파일을 동기적으로 열지만 비동기 작업도 지원합니다.|  

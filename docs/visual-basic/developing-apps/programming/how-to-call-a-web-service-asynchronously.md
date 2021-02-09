@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: 비동기적으로 웹 서비스 호출(Visual Basic)'
 title: '방법: 비동기적으로 웹 서비스 호출'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: d288cc1f2991a8f504dc9f1b206bba76fa378b75
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a702177f60ac598f624676072116bd3ce78da0bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76794559"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99775255"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>방법: 비동기적으로 웹 서비스 호출(Visual Basic)
 

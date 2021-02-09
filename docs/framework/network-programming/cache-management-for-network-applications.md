@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 네트워크 애플리케이션에 대한 캐시 관리'
 title: 네트워크 애플리케이션에 대한 캐시 관리
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - network resources, caching
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
-ms.openlocfilehash: 81f0eaa33b185c6bfbc8758e73a68a6bfc248872
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6383403b41440f26b29fbb5a22c5b25ee6aab465
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287568"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791675"
 ---
 # <a name="cache-management-for-network-applications"></a>네트워크 애플리케이션에 대한 캐시 관리
 

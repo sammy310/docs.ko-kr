@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: Visual Basic에서 특정 패턴의 파일 찾기'
 title: '방법: 특정 패턴의 파일 찾기'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - pattern matching
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
-ms.openlocfilehash: 71073672ed14cb2d5df5b5365266b718c59cb18f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 42266ad354e1ac8e3920663447e4d39fe7ad1b8f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401643"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797564"
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>방법: Visual Basic에서 특정 패턴의 파일 찾기
 
@@ -34,7 +35,7 @@ ms.locfileid: "84401643"
   
 - 길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  
   
-- 경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
+- 경로가 `Nothing` 이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
 - `directory`가 없는 경우(<xref:System.IO.DirectoryNotFoundException>)  
   

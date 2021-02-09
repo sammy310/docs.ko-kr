@@ -1,17 +1,18 @@
 ---
-title: 응용 프로그램 로그 작업
+description: '자세한 정보: Visual Basic에서 애플리케이션 로그 작업'
+title: 애플리케이션 로그 작업
 ms.date: 07/20/2015
 helpviewer_keywords:
 - logs, application
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: e33efac8f65832c87d5c9271eba25c2ca1d1803b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0c05bd63cfbae668c58a87aa39651b6c3ef166ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387597"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792273"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Visual Basic에서 애플리케이션 로그 작업
 
@@ -33,7 +34,7 @@ ms.locfileid: "84387597"
 
 어셈블리에 구성 파일이 없으면 `My.Application.Log` 및 `My.Log` 개체가 <xref:System.Diagnostics.DefaultTraceListener> 클래스를 통해 애플리케이션의 디버그 출력에 메시지를 기록합니다. 또한 `My.Application.Log` 개체는 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 클래스를 통해 어셈블리의 로그 파일에 기록하고, `My.Log` 개체는 <xref:System.Web.WebPageTraceListener> 클래스를 통해 ASP.NET 웹 페이지의 출력에 기록합니다.
 
-디버그 출력은 디버그 모드에서 애플리케이션을 실행할 때 Visual Studio **출력** 창에서 볼 수 있습니다. **출력** 창을 열려면 **디버그** 메뉴 항목을 클릭하고 **창**을 가리킨 다음 **출력**을 클릭합니다. **출력** 창의 **다음에서 출력 보기** 상자에서 **디버그** 를 선택합니다.
+디버그 출력은 디버그 모드에서 애플리케이션을 실행할 때 Visual Studio **출력** 창에서 볼 수 있습니다. **출력** 창을 열려면 **디버그** 메뉴 항목을 클릭하고 **창** 을 가리킨 다음 **출력** 을 클릭합니다. **출력** 창의 **다음에서 출력 보기** 상자에서 **디버그** 를 선택합니다.
 
 기본적으로 `My.Application.Log` 는 사용자의 애플리케이션 데이터가 있는 경로에 로그 파일을 씁니다. 경로는 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> 개체의 <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> 속성에서 가져올 수 있습니다. 해당 경로의 형식은 다음과 같습니다.
 
@@ -45,11 +46,11 @@ C:\Documents and Settings\\`username`\Application Data
 
 `CompanyName`, `ProductName`및 `ProductVersion` 값은 애플리케이션의 어셈블리 정보에서 가져옵니다. 로그 파일 이름의 형식은 *AssemblyName*.log이며 여기서 *AssemblyName* 은 확장명을 제외한 어셈블리의 파일 이름입니다. 애플리케이션에서 로그에 쓰려고 할 때 원본 로그를 사용할 수 없는 경우와 같이 둘 이상의 로그 파일이 필요한 경우 로그 파일 이름의 형식은 *AssemblyName*-*iteration*.log이며 여기서 `iteration` 은 양의 `Integer`을 클릭합니다.
 
-컴퓨터 및 애플리케이션의 구성 파일을 추가하거나 변경하여 기본 동작을 재정의할 수 있습니다. 자세한 내용은 [연습: My.Application.Log가 정보를 기록하는 위치 변경](walkthrough-changing-where-my-application-log-writes-information.md)을 참조하세요.
+컴퓨터 및 애플리케이션의 구성 파일을 추가하거나 변경하여 기본 동작을 재정의할 수 있습니다. 자세한 내용은 [연습: My.Application.Log가 정보를 기록하는 위치 변경](walkthrough-changing-where-my-application-log-writes-information.md)을 참조하십시오.
 
 ## <a name="configuring-log-settings"></a>로그 설정 구성
 
-`Log` 개체에는 애플리케이션 구성 파일인 app.config 없이 작동하는 기본 구현이 있습니다. 기본값을 변경하려면 새 설정이 지정된 구성 파일을 추가해야 합니다. 자세한 내용은 [연습: My.Application.Log 출력 필터링](walkthrough-filtering-my-application-log-output.md)을 참조하세요.
+`Log` 개체에는 애플리케이션 구성 파일인 app.config 없이 작동하는 기본 구현이 있습니다. 기본값을 변경하려면 새 설정이 지정된 구성 파일을 추가해야 합니다. 자세한 내용은 [Walkthrough: Filtering My.Application.Log Output](walkthrough-filtering-my-application-log-output.md)을 참조하세요.
 
 로그 구성 섹션은 app.config 파일의 주 `<system.diagnostics>` 노드에 있는 `<configuration>` 노드에 있습니다. 로그 정보는 다음과 같은 여러 노드에 정의되어 있습니다.
 
@@ -94,7 +95,7 @@ C:\Documents and Settings\\`username`\Application Data
 
 배포된 애플리케이션에서는 애플리케이션을 시작하기 전에 스위치 개체를 다시 구성하여 추적 코드를 사용하도록 설정합니다. 일반적으로 이 경우에는 스위치 개체를 설정 및 해제하거나 추적 수준을 변경한 다음 애플리케이션을 다시 시작해야 합니다.
 
-## <a name="security-considerations"></a>보안 고려 사항
+## <a name="security-considerations"></a>보안 고려사항
 
 데이터를 로그에 쓸 때는 다음을 고려하세요.
 
@@ -106,7 +107,7 @@ C:\Documents and Settings\\`username`\Application Data
 
 - **서비스 거부가 발생하지 않도록 합니다.** 애플리케이션에서 로그에 너무 많은 정보를 쓰면 로그가 가득 차거나 중요한 정보를 찾기가 어려워질 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [애플리케이션의 정보 기록](index.md)

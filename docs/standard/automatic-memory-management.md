@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Automatic Memory Management'
 title: Automatic Memory Management
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-ms.openlocfilehash: a38a95073759fa95d19a2baf4add191103f9264a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1897167faecb112ffa4aa7b0dd0c8bb55b8d9459
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682018"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99629970"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 
@@ -54,7 +55,7 @@ ms.locfileid: "95682018"
 
  가비지 수집기는 사용자 애플리케이션에서 만들어지는 대부분의 개체에 대해 메모리 관리 작업을 자동으로 수행할 수 있습니다. 하지만 관리되지 않는 리소스의 경우는 명시적으로 정리할 필요가 있습니다. 가장 일반적인 형태의 관리되지 않는 리소스로는 파일 핸들, 창 핸들 또는 네트워크 연결 등의 운영 체제 리소스를 래핑하는 개체를 들 수 있습니다. 가비지 수집기에서는 관리되지 않는 리소스를 캡슐화하는 데 사용되는 관리되는 개체의 수명을 추적할 수 있지만, 리소스 정리 방법에 대한 구체적인 정보는 알 수 없습니다. 관리되지 않는 리소스를 캡슐화해 주는 개체를 만드는 경우 관리되지 않는 리소스를 정리하는 데 필요한 코드를 공용 **Dispose** 메서드에 제공하는 것이 좋습니다. 개체 사용자는 **Dispose** 메서드를 사용하여 메모리 할당을 명시적으로 해제할 수 있습니다. 관리되지 않는 리소스를 캡슐화해 주는 개체를 사용하는 경우 사용자는 **Dispose** 메서드를 알아 두고 필요한 경우 이 메서드를 호출해야 합니다. 관리되지 않는 리소스 정리 및 **Dispose** 를 구현하는 디자인 패턴 예제에 대해서는 [가비지 수집](garbage-collection/index.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.GC>
 - [가비지 수집](garbage-collection/index.md)

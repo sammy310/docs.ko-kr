@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: WebRequest에서 파생'
 title: WebRequest에서 파생
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-ms.openlocfilehash: a480f38aeefed3481187e5027409a49d1535c9f4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ede2480767f11ef66bccc79ab4e3a4bc8aafc1fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250556"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801906"
 ---
 # <a name="deriving-from-webrequest"></a>WebRequest에서 파생
 
@@ -105,7 +106,7 @@ ms.locfileid: "96250556"
   
  **GetResponse** 메서드는 들어오는 응답을 포함할 적절한 **WebResponse** 하위 항목을 만들어야 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.HttpWebRequest>

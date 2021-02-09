@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 애플리케이션 폼 액세스(Visual Basic)'
 title: 애플리케이션 폼 액세스
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - My.Forms object
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
-ms.openlocfilehash: 44f98632fd2fd6c4c087a78b805d5b7da750df87
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dae73700434f9cdbb145ebea605c87c33f7c0c73
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410207"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99797902"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>애플리케이션 폼 액세스(Visual Basic)
 
@@ -29,7 +30,7 @@ ms.locfileid: "84410207"
 |애플리케이션의 열려 있는 모든 폼의 제목을 표시합니다.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
 |애플리케이션이 시작될 때 시작 화면을 상태 정보로 업데이트합니다.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>

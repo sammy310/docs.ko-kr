@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 버전 3.5 SP1에서 HttpWebRequest에 대한 NTLM 인증 변경 내용'
 title: 버전 3.5 SP1에서 HttpWebRequest에 대한 NTLM 인증 변경 내용
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-ms.openlocfilehash: 388e6dc648e1fd68e24a852cb08de107f09f9c9f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cdb17317dbafc167cce7a9b2785be68a35d3bd5b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "64754884"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99791636"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>버전 3.5 SP1에서 HttpWebRequest에 대한 NTLM 인증 변경 내용
 
@@ -19,7 +20,7 @@ Windows 통합 인증의 디자인을 사용하면 일부 자격 증명 응답�
 
 <xref:System.Net> 및 <xref:System.Net.Security> 네임스페이스의 여러 구성 요소는 호출하는 애플리케이션 대신 Windows 통합 인증을 수행합니다. 이 섹션에서는 Windows 통합 인증 사용에 확장된 보호를 추가하기 위한 System.Net 구성 요소의 변경 내용을 설명합니다.
 
-## <a name="changes"></a>변경 내용
+## <a name="changes"></a>변경
 
 Windows 통합 인증과 함께 사용되는 NTLM 인증 프로세스는 대상 컴퓨터에서 실행되고 다시 클라이언트 컴퓨터로 전송되는 시도를 포함합니다. 컴퓨터 자체가 생성한 시도를 수신하는 경우 연결이 루프백 연결(예: IPv4 주소 127.0.0.1)이 아니면 인증이 실패합니다.
 
@@ -43,7 +44,7 @@ Windows 통합 인증과 함께 사용되는 NTLM 인증 프로세스는 대상 
 
 3. MSV1_0을 마우스 오른쪽 단추로 클릭하고 새로 만들기를 가리킨 다음 다중 문자열 값을 클릭합니다.
 
-4. `BackConnectionHostNames`를 입력한 후 Enter 키를 누릅니다.
+4. `BackConnectionHostNames`를 입력하고 Enter 키를 누릅니다.
 
 5. `BackConnectionHostNames`를 마우스 오른쪽 단추로 클릭하고 수정을 클릭합니다.
 

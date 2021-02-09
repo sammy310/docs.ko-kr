@@ -1,5 +1,6 @@
 ---
-title: 파일/디렉터리 만들기, 삭제 및 이동
+description: '자세한 정보: Visual Basic에서 파일/디렉터리 만들기, 삭제 및 이동'
+title: 파일 및 디렉터리 만들기, 삭제 및 이동
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [Visual Basic], moving files and directories
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming folders
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
-ms.openlocfilehash: 12f5e8d29ea92750884e45bf1d9ef05bbfe672b8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3f0a718a5222fc9840152b3379ce3d56af25f9c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401760"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99666305"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Visual Basic에서 파일/디렉터리 만들기, 삭제 및 이동
 
@@ -35,7 +36,7 @@ ms.locfileid: "84401760"
   
 ## <a name="in-this-section"></a>섹션 내용  
 
- [방법: 특정 패턴의 파일을 디렉터리에 복사](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
+ [방법: 특정 패턴의 파일을 디렉터리로 복사](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
  .txt 파일만 등 특정 파일 이름 패턴을 사용하는 파일을 디렉터리에 복사하는 방법을 보여 줍니다.  
   
  [방법: 동일한 디렉터리에 파일의 복사본 만들기](how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
@@ -74,7 +75,7 @@ ms.locfileid: "84401760"
  [방법: 내 문서 디렉터리의 내용 검색](how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
  특수 디렉터리에서 읽는 방법을 보여 줍니다.  
   
- [방법: 파일 경로의 구문 분석](how-to-parse-file-paths.md)  
+ [방법: 파일 경로 구문 분석](how-to-parse-file-paths.md)  
  `My` 메서드를 사용하여 파일 경로를 결합하는 방법을 보여 줍니다.  
   
 ## <a name="reference"></a>참조  
@@ -120,7 +121,7 @@ ms.locfileid: "84401760"
   
 ## <a name="related-sections"></a>관련 단원  
 
- [파일 읽기](reading-from-files.md)  
+ [파일에서 읽기](reading-from-files.md)  
  파일 읽기와 관련된 작업을 나열합니다.  
   
  [파일에 쓰기](writing-to-files.md)  

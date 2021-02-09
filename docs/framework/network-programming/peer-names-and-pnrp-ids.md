@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 피어 이름 및 PNRP ID'
 title: 피어 이름 및 PNRP ID
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: a56200d599d417dac549af000b35024338d43796
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ff9f77917ef05754f2373369d623b66e66b5a753
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239226"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99801867"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>피어 이름 및 PNRP ID
 
@@ -27,13 +28,13 @@ ms.locfileid: "96239226"
   
  PNRP ID는 다음으로 구성됩니다.  
   
-- 순위가 높은 128비트는 P2P(피어 투 피어) ID라고 하며 엔드포인트에 할당된 피어 이름의 해시입니다. 피어 이름의 형식은 다음과 같습니다. *Authority.Classifier* 보안되는 이름의 경우, *Authority* 는 16진수 문자 형식의 피어 이름 공개 키의 SHA1(Secure Hash Algorithm 1) 해시입니다. 보안되지 않는 이름의 경우 *Authority* 는 단일 문자 “0”입니다. *분류자* 는 애플리케이션을 식별하는 문자열입니다. 피어 이름 분류자는 `null` 종결자를 포함하여 길이지 149자를 초과할 수 없습니다.  
+- 순위가 높은 128비트는 P2P(피어 투 피어) ID라고 하며 엔드포인트에 할당된 피어 이름의 해시입니다. 피어 이름의 형식은 *Authority.Classifier* 입니다. 보안되는 이름의 경우, *Authority* 는 16진수 문자 형식의 피어 이름 공개 키의 SHA1(Secure Hash Algorithm 1) 해시입니다. 보안되지 않는 이름의 경우 *Authority* 는 단일 문자 “0”입니다. *분류자* 는 애플리케이션을 식별하는 문자열입니다. 피어 이름 분류자는 `null` 종결자를 포함하여 길이지 149자를 초과할 수 없습니다.  
   
 - 순위가 낮은 128비트는 특정 클라우드에서 동일한 P2P ID의 여러 인스턴스를 식별하도록 생성된 수로 서비스 위치를 나타내는 데 사용됩니다.  
   
  이렇게 PNRP ID는 P2P ID와 서비스 위치가 조합된 형식이기 때문에 단일 컴퓨터에서 여러 PNRP ID를 등록할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - <xref:System.Net.PeerToPeer.PeerName>
 - <xref:System.Net.PeerToPeer>
