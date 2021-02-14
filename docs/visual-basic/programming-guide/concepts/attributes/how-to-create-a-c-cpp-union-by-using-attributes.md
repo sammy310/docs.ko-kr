@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 방법: 특성을 사용 하 여 C/c + + 공용 구조체 만들기 (Visual Basic)'
 title: '방법: 특성을 사용 하 여 C-C + + 공용 구조체 만들기'
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: ebab0ad947f776932f9379af3969e369eeec1941
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 10717ec97efe866f4c3993cc26789f29d97b148a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400683"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437750"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>방법: 특성을 사용하여 C/C++ 공용 구조체 만들기(Visual Basic)
 

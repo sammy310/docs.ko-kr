@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: AttributeUsage (Visual Basic)'
 title: AttributeUsage
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: 677d49aba38801f2adf42cc745983af30b3eddc5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: afb043c1b16da3e134888a38ec73f0b6f4ec5f58
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400734"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437815"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 
@@ -83,7 +84,7 @@ End Class
 
 자세한 내용은 [리플렉션을 사용하여 특성 액세스(Visual Basic)](accessing-attributes-by-using-reflection.md)를 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 `AttributeUsage` 특성에 대한 `Inherited` 및 `AllowMultiple`의 영향과 클래스에 적용되는 사용자 지정 특성을 열거하는 방법을 보여 줍니다.
 
@@ -148,7 +149,7 @@ A3
 A2
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>

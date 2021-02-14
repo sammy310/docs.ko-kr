@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 함수 프로시저 (Visual Basic)'
 title: Function 프로시저
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: b0ba96a875fd8785e45eee565beefe4b961ffc9d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4997059fc33fb5d438519356b2c9fdd9e6a27cce
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388753"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436151"
 ---
 # <a name="function-procedures-visual-basic"></a>함수 프로시저 (Visual Basic)
 
@@ -92,7 +93,7 @@ End Function
 
 `If ((`*functionname* `[(` *argumentlist* `)] / 3) <=` *식*  `) Then`
 
-프로시저를 호출할 때는 `Function` 해당 반환 값을 사용 하지 않아도 됩니다. 그렇지 않으면 함수의 모든 동작이 수행 되지만 반환 값은 무시 됩니다. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>는 이러한 방식으로 호출 되는 경우가 많습니다.
+프로시저를 호출할 때는 `Function` 해당 반환 값을 사용 하지 않아도 됩니다. 그렇지 않으면 함수의 모든 동작이 수행 되지만 반환 값은 무시 됩니다. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 는 이러한 방식으로 호출 되는 경우가 많습니다.
 
 ### <a name="illustration-of-declaration-and-call"></a>선언 및 호출에 대 한 그림
 
@@ -104,7 +105,7 @@ End Function
 
 [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [하위 프로시저](./sub-procedures.md)

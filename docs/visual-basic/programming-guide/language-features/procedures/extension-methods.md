@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 확장 메서드 (Visual Basic)'
 title: 확장 메서드
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: a88756fce9137f89db1b6b8b007d528e98381830
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5a1482502b144524c0be90e1c83a38f49b4a4d26
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74341182"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434357"
 ---
 # <a name="extension-methods-visual-basic"></a>확장 메서드(Visual Basic)
 
@@ -20,31 +21,31 @@ ms.locfileid: "74341182"
 
 ## <a name="remarks"></a>설명
 
-확장 메서드는 `Sub` 프로시저 또는 `Function` 프로시저만 될 수 있습니다. 확장 속성, 필드 또는 이벤트를 정의할 수 없습니다. 모든 확장 메서드는 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 네임 스페이스의 `<Extension>` 확장 특성으로 표시 되어야 하며 [모듈](../../../language-reference/statements/module-statement.md)에서 정의 되어야 합니다. 확장 메서드가 모듈 외부에서 정의 된 경우 Visual Basic 컴파일러는 "모듈 에서만 확장 메서드를 정의할 수 있습니다" 라는 오류 [BC36551](../../../misc/bc36551.md)를 생성 합니다.
+확장 메서드는 `Sub` 프로시저 또는 프로시저만 될 수 있습니다 `Function` . 확장 속성, 필드 또는 이벤트를 정의할 수 없습니다. 모든 확장 메서드는 네임 스페이스에서 확장 특성으로 표시 되어야 `<Extension>` <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 하며 [모듈](../../../language-reference/statements/module-statement.md)에서 정의 되어야 합니다. 확장 메서드가 모듈 외부에서 정의 된 경우 Visual Basic 컴파일러는 "모듈 에서만 확장 메서드를 정의할 수 있습니다" 라는 오류 [BC36551](../../../misc/bc36551.md)를 생성 합니다.
 
 확장 메서드 정의의 첫 번째 매개 변수는 메서드가 확장 하는 데이터 형식을 지정 합니다. 메서드가 실행 될 때 첫 번째 매개 변수는 메서드를 호출 하는 데이터 형식의 인스턴스에 바인딩됩니다.
 
-`Extension` 특성은 Visual Basic [`Module`](../../../language-reference/statements/module-statement.md), [`Sub`](../../../language-reference/statements/sub-statement.md)또는 [`Function`](../../../language-reference/statements/function-statement.md)에만 적용할 수 있습니다. `Class` 또는 `Structure`에 적용 하는 경우 Visual Basic 컴파일러는 오류 [BC36550](../../../language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md)를 생성 합니다. "' Extension ' 특성은 ' Module ', ' Sub ' 또는 ' Function ' 선언에만 적용할 수 있습니다."
+`Extension`특성은, 또는 Visual Basic에만 적용할 수 [`Module`](../../../language-reference/statements/module-statement.md) 있습니다 [`Sub`](../../../language-reference/statements/sub-statement.md) [`Function`](../../../language-reference/statements/function-statement.md) . 또는에 적용 하는 경우 `Class` `Structure` Visual Basic 컴파일러는 오류 [BC36550](../../../language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md)를 생성 하 고 "' Extension ' 특성은 ' Module ', ' Sub ' 또는 ' Function ' 선언에만 적용할 수 있습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-다음 예에서는 <xref:System.String> 데이터 형식에 대 한 `Print` 확장을 정의 합니다. 메서드는 `Console.WriteLine`을 사용 하 여 문자열을 표시 합니다. `Print` 메서드의 매개 변수 `aString`는 메서드가 <xref:System.String> 클래스를 확장 하도록 설정 합니다.
+다음 예에서는 `Print` 데이터 형식에 대 한 확장을 정의 합니다 <xref:System.String> . 메서드는 `Console.WriteLine` 를 사용 하 여 문자열을 표시 합니다. 메서드의 매개 변수는 `Print` `aString` 메서드가 클래스를 확장 하도록 설정 합니다 <xref:System.String> .
 
 [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]
 
-확장 메서드 정의는 `<Extension()>`확장 특성으로 표시 되어 있습니다. 메서드가 정의 되는 모듈을 표시 하는 것은 선택 사항 이지만 각 확장 메서드는로 표시 되어야 합니다. 확장 특성에 액세스 하려면 <xref:System.Runtime.CompilerServices>를 가져와야 합니다.
+확장 메서드 정의는 확장 특성으로 표시 됩니다 `<Extension()>` . 메서드가 정의 되는 모듈을 표시 하는 것은 선택 사항 이지만 각 확장 메서드는로 표시 되어야 합니다. <xref:System.Runtime.CompilerServices> 확장 특성에 액세스 하려면를 가져와야 합니다.
 
-확장 메서드는 모듈 내 에서만 선언할 수 있습니다. 일반적으로 확장 메서드가 정의 된 모듈은 호출 되는 모듈과 동일한 모듈이 아닙니다. 대신 확장 메서드를 포함 하는 모듈을 가져온 후 범위로 가져와야 합니다. `Print`를 포함 하는 모듈이 범위에 있으면 메서드는 `ToUpper`와 같이 인수를 사용 하지 않는 일반 인스턴스 메서드인 것 처럼 호출 될 수 있습니다.
+확장 메서드는 모듈 내 에서만 선언할 수 있습니다. 일반적으로 확장 메서드가 정의 된 모듈은 호출 되는 모듈과 동일한 모듈이 아닙니다. 대신 확장 메서드를 포함 하는 모듈을 가져온 후 범위로 가져와야 합니다. 가 포함 된 모듈이 `Print` 범위 내에 있으면 다음과 같이 인수를 사용 하지 않는 일반 인스턴스 메서드인 것 처럼 메서드를 호출할 수 있습니다 `ToUpper` .
 
 [!code-vb[VbVbalrExtensionMethods#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class1.vb#2)]
 
-다음 예제 `PrintAndPunctuate`는 <xref:System.String>에 대 한 확장 이며,이 시간은 두 개의 매개 변수로 정의 됩니다. 첫 번째 매개 변수인 `aString`는 확장 메서드가 <xref:System.String>를 확장 하도록 설정 합니다. 두 번째 매개 변수 `punc`은 메서드가 호출 될 때 인수로 전달 되는 문장 부호의 문자열입니다. 메서드는 문자열 뒤에 문장 부호를 표시 합니다.
+다음 예제 인는 `PrintAndPunctuate` 이에 대 한 확장 이며 <xref:System.String> ,이 시간은 두 개의 매개 변수로 정의 됩니다. 첫 번째 매개 변수인는 `aString` 확장 메서드가을 확장 하도록 설정 합니다 <xref:System.String> . 두 번째 매개 변수는 `punc` 메서드가 호출 될 때 인수로 전달 되는 문장 부호의 문자열입니다. 메서드는 문자열 뒤에 문장 부호를 표시 합니다.
 
 [!code-vb[VbVbalrExtensionMethods#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class2.vb#3)]
 
-메서드는 `punc`에 대 한 문자열 인수를 전송 하 여 호출 됩니다 `example.PrintAndPunctuate(".")`
+메서드는 다음에 대 한 문자열 인수를 전송 하 여 호출 됩니다 `punc` . `example.PrintAndPunctuate(".")`
 
-다음 예에서는 `Print` 및 `PrintAndPunctuate` 정의 및 호출 되는 방법을 보여 줍니다. 확장 특성에 대 한 액세스를 사용 하기 위해 정의 모듈에 <xref:System.Runtime.CompilerServices>를 가져옵니다.
+다음 예제에서는 `Print` 및를 `PrintAndPunctuate` 정의 하 고 호출 합니다. <xref:System.Runtime.CompilerServices> 는 확장 특성에 대 한 액세스를 사용 하기 위해 정의 모듈에서 가져옵니다.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -83,9 +84,9 @@ End Module
 
 이러한 메서드 또는 유사한 확장 메서드를 실행 하려면 범위 내에 있어야 합니다. 확장 메서드를 포함 하는 모듈이 범위에 있으면 IntelliSense에 표시 되 고 일반 인스턴스 메서드인 것 처럼 호출 될 수 있습니다.
 
-메서드가 호출 되 면 첫 번째 매개 변수에 대해 인수가 전송 되지 않습니다. 이전 메서드 정의의 매개 변수 `aString`은 해당 매개 변수를 호출 하는 `String` 인스턴스인 `example`에 바인딩됩니다. 컴파일러는 `example`을 첫 번째 매개 변수로 전송 되는 인수로 사용 합니다.
+메서드가 호출 되 면 첫 번째 매개 변수에 대해 인수가 전송 되지 않습니다. 이전 메서드 정의의 매개 변수는 해당 매개 변수를 `aString` `example` 호출 하는의 인스턴스인에 바인딩됩니다 `String` . 컴파일러는 `example` 첫 번째 매개 변수로 전달 되는 인수로를 사용 합니다.
 
-`Nothing`로 설정 된 개체에 대해 확장 메서드를 호출 하면 확장 메서드가 실행 됩니다. 이는 일반 인스턴스 메서드에는 적용 되지 않습니다. 확장 메서드에서 `Nothing`을 명시적으로 확인할 수 있습니다.
+로 설정 된 개체에 대해 확장 메서드를 호출 하면 `Nothing` 확장 메서드가 실행 됩니다. 이는 일반 인스턴스 메서드에는 적용 되지 않습니다. 확장 메서드에서에 대해를 명시적으로 확인할 수 있습니다 `Nothing` .
 
 ## <a name="types-that-can-be-extended"></a>확장할 수 있는 형식
 
@@ -99,9 +100,9 @@ End Module
 - 제네릭 메서드 매개 변수
 - 배열
 
-첫 번째 매개 변수는 확장 메서드가 확장 하는 데이터 형식을 지정 하므로이 매개 변수는 필수 이며 선택 사항이 될 수 없습니다. 이러한 이유로 `Optional` 매개 변수 및 `ParamArray` 매개 변수는 매개 변수 목록의 첫 번째 매개 변수가 될 수 없습니다.
+첫 번째 매개 변수는 확장 메서드가 확장 하는 데이터 형식을 지정 하므로이 매개 변수는 필수 이며 선택 사항이 될 수 없습니다. 이러한 이유로 매개 변수 `Optional` 및 매개 변수는 `ParamArray` 매개 변수 목록의 첫 번째 매개 변수가 될 수 없습니다.
 
-확장 메서드는 런타임에 바인딩에서 고려 되지 않습니다. 다음 예제에서 문은 두 번째 `PrintMe` 확장 메서드 정의가 삭제 된 경우와 동일한 예외로 <xref:System.MissingMemberException> 예외를 발생 `anObject.PrintMe()` 발생 시킵니다.
+확장 메서드는 런타임에 바인딩에서 고려 되지 않습니다. 다음 예제에서 문은 `anObject.PrintMe()` <xref:System.MissingMemberException> 두 번째 `PrintMe` 확장 메서드 정의가 삭제 된 경우와 동일한 예외인 예외를 발생 시킵니다.
 
 [!code-vb[VbVbalrExtensionMethods#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class6.vb#9)]
 
@@ -123,11 +124,11 @@ End Module
 
 ## <a name="extension-methods-instance-methods-and-properties"></a>확장 메서드, 인스턴스 메서드 및 속성
 
-범위 내 인스턴스 메서드에 호출 문의 인수와 호환 되는 시그니처가 있는 경우 해당 인스턴스 메서드는 모든 확장 메서드의 기본 설정에서 선택 됩니다. 인스턴스 메서드는 확장 메서드가 더 잘 일치 하는 경우에도 우선 순위가 높습니다. 다음 예제에서 `ExampleClass`에는 `Integer`형식의 매개 변수 하나를 포함 하는 `ExampleMethod` 인스턴스 메서드가 포함 되어 있습니다. 확장 메서드 `ExampleMethod` `ExampleClass`를 확장 하 고 `Long`형식의 매개 변수 하나를 포함 합니다.
+범위 내 인스턴스 메서드에 호출 문의 인수와 호환 되는 시그니처가 있는 경우 해당 인스턴스 메서드는 모든 확장 메서드의 기본 설정에서 선택 됩니다. 인스턴스 메서드는 확장 메서드가 더 잘 일치 하는 경우에도 우선 순위가 높습니다. 다음 예제에서에 `ExampleClass` `ExampleMethod` 는 형식의 매개 변수 하나를 포함 하는 라는 인스턴스 메서드가 포함 되어 있습니다 `Integer` . 확장 메서드 `ExampleMethod` 는 `ExampleClass` 를 확장 하 고 형식의 매개 변수 하나를 포함 `Long` 합니다.
 
 [!code-vb[VbVbalrExtensionMethods#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#4)]
 
-다음 코드의 `ExampleMethod`에 대 한 첫 번째 호출은 `arg1` `Long` 되 고 확장 메서드의 `Long` 매개 변수와만 호환 되기 때문에 확장 메서드를 호출 합니다. `ExampleMethod`에 대 한 두 번째 호출에는 `arg2``Integer` 인수가 있으며 인스턴스 메서드를 호출 합니다.
+다음 코드의에 대 한 첫 번째 호출은 `ExampleMethod` `arg1` 가이 `Long` 고가 `Long` 확장 메서드의 매개 변수와만 호환 되기 때문에 확장 메서드를 호출 합니다. 에 대 한 두 번째 호출에는 `ExampleMethod` `Integer` 인수가 있고 `arg2` , 인스턴스 메서드를 호출 합니다.
 
 [!code-vb[VbVbalrExtensionMethods#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#5)]
 
@@ -135,11 +136,11 @@ End Module
 
 [!code-vb[VbVbalrExtensionMethods#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#6)]
 
-이번에는 `Main` 코드가 인스턴스 메서드를 두 번 호출 합니다. 이는 `arg1`와 `arg2` 모두 확대 변환 `Long`를 포함 하 고 있기 때문입니다. 두 경우 모두 인스턴스 메서드가 확장 메서드 보다 우선적으로 사용 됩니다.
+이번에는의 코드가 `Main` 인스턴스 메서드를 두 번 호출 합니다. 이는와가 `arg1` 모두 `arg2` 로 확대 변환 되 `Long` 고 인스턴스 메서드가 두 경우 모두 확장 메서드 보다 우선적으로 수행 되기 때문입니다.
 
 [!code-vb[VbVbalrExtensionMethods#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#7)]
 
-따라서 확장 메서드는 기존 인스턴스 메서드를 대체할 수 없습니다. 그러나 확장 메서드의 이름이 인스턴스 메서드와 동일 하지만 서명이 충돌 하지 않는 경우 두 메서드 모두에 액세스할 수 있습니다. 예를 들어, `ExampleClass` 클래스에 인수를 사용 하지 않는 `ExampleMethod` 라는 메서드가 포함 된 경우 다음 코드와 같이 이름이 같지만 시그니처가 다른 확장 메서드를 사용할 수 있습니다.
+따라서 확장 메서드는 기존 인스턴스 메서드를 대체할 수 없습니다. 그러나 확장 메서드의 이름이 인스턴스 메서드와 동일 하지만 서명이 충돌 하지 않는 경우 두 메서드 모두에 액세스할 수 있습니다. 예를 들어, 클래스에 `ExampleClass` 인수를 사용 하지 않는 라는 메서드가 포함 된 경우 `ExampleMethod` 다음 코드와 같이 이름이 같지만 시그니처가 다른 확장 메서드를 사용할 수 있습니다.
 
 [!code-vb[VbVbalrExtensionMethods#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Module3.vb#8)]
 
@@ -168,9 +169,9 @@ Instance method
 
 6. 프로젝트 수준 네임 스페이스 가져오기 안에 정의 된 확장 메서드
 
-우선 순위에 의해 모호성을 해결 하지 못하는 경우 정규화 된 이름을 사용 하 여 호출 하는 메서드를 지정할 수 있습니다. 앞의 예제에서 `Print` 메서드가 `StringExtensions`라는 모듈에 정의 되어 있는 경우 정규화 된 이름이 `example.Print()`대신 `StringExtensions.Print(example)` 됩니다.
+우선 순위에 의해 모호성을 해결 하지 못하는 경우 정규화 된 이름을 사용 하 여 호출 하는 메서드를 지정할 수 있습니다. `Print`이전 예제의 메서드가 라는 모듈에 정의 되어 있는 경우 정규화 `StringExtensions` 된 이름은 `StringExtensions.Print(example)` 대신입니다 `example.Print()` .
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
@@ -180,4 +181,4 @@ Instance method
 - [선택적 매개 변수](optional-parameters.md)
 - [매개 변수 배열](parameter-arrays.md)
 - [특성 개요](../../concepts/attributes/index.md)
-- [Visual Basic 범위](../declared-elements/scope.md)
+- [Visual Basic의 범위](../declared-elements/scope.md)

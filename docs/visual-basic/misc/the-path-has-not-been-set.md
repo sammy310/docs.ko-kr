@@ -1,13 +1,14 @@
 ---
+description: '에 대 한 자세한 정보: 경로가 설정 되지 않았습니다.'
 title: 경로가 설정되지 않았습니다.
 ms.date: 07/20/2015
 ms.assetid: 2e61146f-1b42-4798-b823-bd1041d9d248
-ms.openlocfilehash: 9a2ee516fe4e2a1801a4d7172024905553764865
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9f67c3d8e2206ab06ebc00bdfeff6ea8da28574e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090406"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430757"
 ---
 # <a name="the-path-has-not-been-set"></a>경로가 설정되지 않았습니다.
 
@@ -17,7 +18,7 @@ ms.locfileid: "91090406"
   
 - 파일 경로가 제공되었고 올바른지 확인합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [방법: 파일 경로 구문 분석](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
 - [Visual Basic을 사용한 파일 액세스](../developing-apps/programming/drives-directories-files/file-access.md)

@@ -1,13 +1,14 @@
 ---
+description: '에 대 한 자세한 정보: 지정 된 레지스트리 키가 없습니다.'
 title: 지정한 레지스트리 키가 없습니다.
 ms.date: 07/20/2015
 ms.assetid: 837e925a-aac5-4745-8eaa-d08bebbcbcd3
-ms.openlocfilehash: 17f41711c522581f8b5b1019a43e8a4f448d37fd
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7bdaecd07e3a992b621d5ab6c2c918e4f9c3417a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078751"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431082"
 ---
 # <a name="specified-registry-key-does-not-exist"></a>지정한 레지스트리 키가 없습니다.
 
@@ -19,7 +20,7 @@ ms.locfileid: "91078751"
   
 - 쓰기를 시도하기 전에 레지스트리 키를 만듭니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:Microsoft.Win32.RegistryKey>
 - [My.computer. Registry](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 두 개체가 동일한 지 여부 테스트 (Visual Basic)'
 title: '방법: 두 개체가 동일한지 테스트'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - objects [Visual Basic], variables referring to same
 - Visual Basic code, operators
 ms.assetid: f760e828-8704-4256-bc2d-c22a4c93b524
-ms.openlocfilehash: d29d1b0026b3f62d47859cd5b4b7a601532e27b8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a0136d9db487ad0ce70b9d55ff8ee014ec30b05a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071692"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435540"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>방법: 두 개체가 동일한지 테스트(Visual Basic)
 
@@ -30,6 +31,6 @@ ms.locfileid: "91071692"
   
  `Is`사용자가 또는를 사용 하는지에 `IsNot` 관계 없이 사용자가 개인적으로 편리 하 게 사용할 수 있습니다. 지정 된 식에서 다른 항목 보다 읽기가 더 쉬울 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Comparison Operators in Visual Basic](comparison-operators.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 한 배열에 다른 배열 할당 (Visual Basic)'
 title: '방법: 한 배열에 다른 배열 할당'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: c38def1ba9f3720bc760d6f6e4264510c884c930
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dc86225c1f25c207e793e33a048d948646ac77b6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413081"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434734"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>방법: 한 배열에 다른 배열 할당(Visual Basic)
 
@@ -39,11 +40,11 @@ ms.locfileid: "84413081"
 
   - 두 배열에 모두 값 형식 요소가 있으면 요소 데이터 형식이 정확히 동일 해야 합니다. 이에 대 한 유일한 예외는 `Enum` 요소의 배열을 기본 형식의 배열에 할당할 수 있다는 것입니다 `Enum` .
 
-  - 두 배열에 모두 참조 형식 요소가 있으면 원본 요소 형식이 대상 요소 형식에서 파생 되어야 합니다. 이 경우 두 배열의 요소와 상속 관계가 동일 합니다. 이를 *배열 공분산*이라고 합니다.
+  - 두 배열에 모두 참조 형식 요소가 있으면 원본 요소 형식이 대상 요소 형식에서 파생 되어야 합니다. 이 경우 두 배열의 요소와 상속 관계가 동일 합니다. 이를 *배열 공분산* 이라고 합니다.
 
 위의 규칙을 위반 하는 경우 (예: 데이터 형식이 호환 되지 않거나 순위가 같지 않은 경우) 컴파일러에서 오류를 보고 합니다. 코드에 오류 처리를 추가 하 여 배열이 호환 되는지 확인 하 고 할당을 시도할 수 있습니다. 예외를 throw 하지 않으려면 [TryCast Operator](../../../language-reference/operators/trycast-operator.md) 키워드를 사용할 수도 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [배열](index.md)
 - [배열 문제 해결](troubleshooting-arrays.md)

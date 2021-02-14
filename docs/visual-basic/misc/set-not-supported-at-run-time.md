@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: Set은 런타임에 지원 되지 않습니다.'
 title: Set은 런타임에 지원되지 않습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID382
 ms.assetid: cb7285d3-778f-423d-a2be-88573be8ad48
-ms.openlocfilehash: 563cecde105f18ebba6da909a1977a272b052413
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e6ea52ed6fa20cef2059351b509f89b99ebd402d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060629"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438257"
 ---
 # <a name="set-not-supported-at-run-time"></a>Set은 런타임에 지원되지 않습니다.
 
@@ -21,6 +22,6 @@ ms.locfileid: "91060629"
   
 2. 런타임에만 속성의 값을 반환하도록 참조를 변경합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

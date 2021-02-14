@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 입력 경로가 파일을 참조 하지만 디렉터리 구분 문자로 끝납니다.'
 title: 입력 경로가 파일을 참조하지만 디렉터리 구분 문자로 끝납니다.
 ms.date: 07/20/2015
 ms.assetid: 319181c1-a015-4038-a23f-f53c0d91d806
-ms.openlocfilehash: a23bf75dec58dd07c4cc9ebf30a541ea36e153e0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 30cedf7286fd505bbe11745aaf14ae4bb3859914
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078465"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430809"
 ---
 # <a name="the-input-path-refers-to-a-file-but-ends-with-a-directory-separator-character"></a>입력 경로가 파일을 참조하지만 디렉터리 구분 문자로 끝납니다.
 
@@ -19,7 +20,7 @@ ms.locfileid: "91078465"
   
 - 잘못 사용된 문자를 제거합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [방법: 파일 경로 구문 분석](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
 - [파일에서 읽기](../developing-apps/programming/drives-directories-files/reading-from-files.md)

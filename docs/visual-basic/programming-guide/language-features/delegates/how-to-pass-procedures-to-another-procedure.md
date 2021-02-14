@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: 프로시저를 다른 프로시저에 전달 Visual Basic'
 title: '방법: 다른 프로시저에 프로시저 전달'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: 3a7a653bbf238b50e3c7339da76df0f68ab9b59f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: dfd75d1f58519365bfb6ac59892238b5322743f3
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085791"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434448"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>방법: Visual Basic에서 프로시저에 다른 프로시저 전달
 
@@ -46,7 +47,7 @@ ms.locfileid: "91085791"
   
      `Test`가 호출 되 면 먼저 `AddNumbers` 및에 대 한 작동 결과 `5` `3` (8)를 표시 합니다. 그런 다음 및에 대해 작동 하는 결과가 6 인 것으로 `SubtractNumbers` `9` `3` 표시 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [대리자](index.md)
 - [AddressOf 연산자](../../../language-reference/operators/addressof-operator.md)

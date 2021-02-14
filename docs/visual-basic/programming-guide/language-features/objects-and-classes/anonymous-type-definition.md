@@ -1,21 +1,22 @@
 ---
+description: '자세한 정보: 익명 형식 정의 (Visual Basic)'
 title: 익명 형식 정의
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: 952eb295cc71eab5d0ad6e18f2b697a9b701b434
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2e3f847f5f844e3ed6e036c26efc330a237d193f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404903"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436918"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>익명 형식 정의(Visual Basic)
 
 익명 형식의 인스턴스 선언에 대 한 응답으로 컴파일러는 해당 형식에 대해 지정 된 속성을 포함 하는 새 클래스 정의를 만듭니다.
 
-## <a name="compiler-generated-code"></a>컴파일러 생성 코드
+## <a name="compiler-generated-code"></a>Compiler-Generated 코드
 
 다음 정의의 경우 `product` 컴파일러는, 및 속성을 포함 하는 새 클래스 정의를 만듭니다 `Name` `Price` `OnHand` .
 
@@ -70,9 +71,9 @@ End Class
 
     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]
 
-- `GetHashcode`적절 한 고유 GetHashCode 알고리즘을 제공 합니다. 알고리즘은 키 속성만 사용 하 여 해시 코드를 계산 합니다.
+- `GetHashcode` 적절 한 고유 GetHashCode 알고리즘을 제공 합니다. 알고리즘은 키 속성만 사용 하 여 해시 코드를 계산 합니다.
 
-- `ToString`다음 예제와 같이 연결 된 속성 값의 문자열을 반환 합니다. 키와 키가 아닌 속성은 모두 포함 됩니다.
+- `ToString` 다음 예제와 같이 연결 된 속성 값의 문자열을 반환 합니다. 키와 키가 아닌 속성은 모두 포함 됩니다.
 
   [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]
 
@@ -83,7 +84,7 @@ End Class
 > [!NOTE]
 > 익명 형식 선언은 동일한 어셈블리에서 발생 하는 경우에만 동일한 익명 형식을 만들며, 해당 속성은 동일한 이름 및 유추 된 형식을 가지 며 속성은 동일한 순서로 선언 되며 동일한 속성이 키 속성으로 표시 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [익명 형식](anonymous-types.md)
 - [방법: 익명 형식 선언에서 속성 이름 및 형식 유추](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

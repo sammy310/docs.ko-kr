@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 형식 승격 (Visual Basic)'
 title: 형식 승격
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: 6c28ca22e96616ff09e147400bfdb2adb922ff0e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: fd8a30fb7e442d82222ae55daabf70bd8e532138
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085804"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434721"
 ---
 # <a name="type-promotion-visual-basic"></a>형식 승격(Visual Basic)
 
-모듈에서 프로그래밍 요소를 선언 하는 경우 해당 범위를 모듈이 포함 된 네임 스페이스로 승격 Visual Basic. 이를 *유형 승격*이라고 합니다.  
+모듈에서 프로그래밍 요소를 선언 하는 경우 해당 범위를 모듈이 포함 된 네임 스페이스로 승격 Visual Basic. 이를 *유형 승격* 이라고 합니다.  
   
  다음 예제에서는 모듈의 기본 정의와 해당 모듈의 두 멤버를 보여 줍니다.  
   
@@ -63,7 +64,7 @@ ms.locfileid: "91085804"
   
 - **모든 자격.** 같은 네임 스페이스에서 모듈 및 기타 요소를 사용 하는 경우 가장 안전한 방법은 항상 모든 프로그래밍 요소에 대 한 전체 한정자를 사용 하는 것입니다. 모듈 멤버에 대해 형식 승격을 사용할 수 없고 해당 멤버를 완전히 정규화 하지 않은 경우 실수로 다른 프로그래밍 요소에 액세스할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Module 문](../../../language-reference/statements/module-statement.md)
 - [Namespace 문](../../../language-reference/statements/namespace-statement.md)

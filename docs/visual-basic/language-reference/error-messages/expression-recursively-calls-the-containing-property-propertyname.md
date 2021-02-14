@@ -1,5 +1,5 @@
 ---
-description: '자세히 알아보기: BC42026: 식이 포함 하는 속성을 재귀적으로 호출 합니다.<propertyname>'
+description: "자세히 알아보기: BC42026: 식이 포함 하는 속성 ' '을 재귀적으로 호출 합니다. <propertyname>"
 title: 식이 포함하는 속성 '<propertyname>'을(를) 재귀적으로 호출합니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 4b6abcbab62ae0c4c5b18b0e6946bcfb21857112
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: e9e8a39458fe930eb77c548866e62c1c32b4ed16
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99796342"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437672"
 ---
 # <a name="bc42026-expression-recursively-calls-the-containing-property-propertyname"></a>BC42026: 식이 포함 하는 속성 ' '을 재귀적으로 호출 합니다. \<propertyname>
 
@@ -65,7 +65,7 @@ End Class
 
 - 앞의 예제에서 설명한 것 처럼 권장 된 방법을 사용 하도록 속성 정의를 다시 작성 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [속성 프로시저](../../programming-guide/language-features/procedures/property-procedures.md)
 - [Property Statement](../statements/property-statement.md)

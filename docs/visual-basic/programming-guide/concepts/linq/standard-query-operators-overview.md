@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: 표준 쿼리 연산자 개요 (Visual Basic)'
 title: 표준 쿼리 연산자 개요
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 7c229a576f6695282473352d6253d2c699c76604
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: febf0fa85c020504858587bdb080c1bd6725158e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406783"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434903"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>표준 쿼리 연산자 개요(Visual Basic)
 
-*표준 쿼리 연산자*는 LINQ 패턴을 형성하는 메서드입니다. 이 메서드 중 대부분은 시퀀스에서 작동합니다. 여기서 시퀀스란 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 형식의 개체를 의미합니다. 표준 쿼리 연산자는 필터링, 프로젝션, 집계, 정렬 등을 포함하여 다양한 쿼리 기능을 제공합니다.
+*표준 쿼리 연산자* 는 LINQ 패턴을 형성하는 메서드입니다. 이 메서드 중 대부분은 시퀀스에서 작동합니다. 여기서 시퀀스란 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 형식의 개체를 의미합니다. 표준 쿼리 연산자는 필터링, 프로젝션, 집계, 정렬 등을 포함하여 다양한 쿼리 기능을 제공합니다.
 
-<xref:System.Collections.Generic.IEnumerable%601> 형식의 개체와 작동하는 연산자와 <xref:System.Linq.IQueryable%601> 형식의 개체와 작동하는 연산자로 두 가지 LINQ 표준 쿼리 연산자 집합이 있습니다. 각 집합을 구성하는 메서드는 각각 <xref:System.Linq.Enumerable> 및 <xref:System.Linq.Queryable> 클래스의 정적 멤버입니다. 작동하는 형식의 *확장 메서드*로 정의됩니다. 따라서 정적 메서드 구문 또는 인스턴스 메서드 구문을 사용하여 호출할 수 있습니다.
+<xref:System.Collections.Generic.IEnumerable%601> 형식의 개체와 작동하는 연산자와 <xref:System.Linq.IQueryable%601> 형식의 개체와 작동하는 연산자로 두 가지 LINQ 표준 쿼리 연산자 집합이 있습니다. 각 집합을 구성하는 메서드는 각각 <xref:System.Linq.Enumerable> 및 <xref:System.Linq.Queryable> 클래스의 정적 멤버입니다. 작동하는 형식의 *확장 메서드* 로 정의됩니다. 따라서 정적 메서드 구문 또는 인스턴스 메서드 구문을 사용하여 호출할 수 있습니다.
 
 또한 여러 표준 쿼리 연산자 메서드는 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IQueryable%601>을 기반으로 하는 형식이 아닌 다른 형식에서 작동합니다. <xref:System.Linq.Enumerable> 형식은 <xref:System.Collections.IEnumerable> 형식의 개체에서 작동하는 이러한 두 메서드를 정의합니다. 두 메서드 <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> 및 <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29>을 사용하면 LINQ 패턴에서 매개 변수가 없는 컬렉션이나 제네릭이 아닌 컬렉션을 쿼리할 수 있습니다. 이 작업을 위해 강력한 형식의 개체 컬렉션을 만듭니다. <xref:System.Linq.Queryable> 클래스는 <xref:System.Linq.Queryable> 형식의 개체에서 작동하는 두 개의 유사한 메서드 <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> 및 <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29>을 정의합니다.
 
@@ -66,7 +67,7 @@ MsgBox(output.ToString())
 
 ## <a name="query-expression-syntax"></a>쿼리 식 구문
 
-자주 사용되는 표준 쿼리 연산자 중 일부에는 ‘쿼리 식’의 일부로 호출할 수 있는 전용 C# 및 Visual Basic 언어 키워드 구문이 있습니다.  전용 키워드와 해당 구문을 포함 하는 표준 쿼리 연산자에 대 한 자세한 내용은 [표준 쿼리 연산자의 쿼리 식 구문 (Visual Basic)](query-expression-syntax-for-standard-query-operators.md)을 참조 하세요.
+자주 사용되는 표준 쿼리 연산자 중 일부에는 ‘쿼리 식’의 일부로 호출할 수 있는 전용 C# 및 Visual Basic 언어 키워드 구문이 있습니다. 전용 키워드와 해당 구문을 포함 하는 표준 쿼리 연산자에 대 한 자세한 내용은 [표준 쿼리 연산자의 쿼리 식 구문 (Visual Basic)](query-expression-syntax-for-standard-query-operators.md)을 참조 하세요.
 
 ## <a name="extending-the-standard-query-operators"></a>표준 쿼리 연산자 확장
 
@@ -104,7 +105,7 @@ MsgBox(output.ToString())
 
 - [집계 작업 (Visual Basic)](aggregation-operations.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>

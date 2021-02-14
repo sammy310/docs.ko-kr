@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic에서 숨김'
 title: 섀도잉
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -18,24 +19,24 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 81e54875a3c1a4bbc5f5631e7ebac649a2e5afaf
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 468ad72808d689016cacb8d2be56fa9f9fcd1eec
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085895"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434825"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic에서 숨김
 
-두 프로그래밍 요소가 동일한 이름을 공유 하는 경우 그 중 하나는 다른 *요소를 숨기 거 나 숨길*수 있습니다. 이러한 경우에는 숨겨진 요소를 참조할 수 없습니다. 대신, 코드에서 요소 이름을 사용 하는 경우 Visual Basic 컴파일러에서 해당 요소 이름을 숨기는 요소로 확인 합니다.  
+두 프로그래밍 요소가 동일한 이름을 공유 하는 경우 그 중 하나는 다른 *요소를 숨기 거 나 숨길* 수 있습니다. 이러한 경우에는 숨겨진 요소를 참조할 수 없습니다. 대신, 코드에서 요소 이름을 사용 하는 경우 Visual Basic 컴파일러에서 해당 요소 이름을 숨기는 요소로 확인 합니다.  
   
-## <a name="purpose"></a>목적  
+## <a name="purpose"></a>용도  
 
  숨김의 주요 목적은 클래스 멤버의 정의를 보호 하는 것입니다. 기본 클래스는 이미 정의한 것과 동일한 이름으로 요소를 만드는 변경 될 수 있습니다. 이 경우 `Shadows` 한정자는 클래스를 통해 참조가 새 기본 클래스 요소가 아닌 사용자가 정의한 멤버로 확인 되도록 합니다.  
   
 ## <a name="types-of-shadowing"></a>섀도잉 유형  
 
- 요소는 서로 다른 두 가지 방법으로 다른 요소를 숨길 수 있습니다. 섀도잉 요소는 숨겨진 요소를 포함 하는 영역의 하위 영역 내에서 선언할 수 있으며,이 경우 *범위를 통해*숨김은 수행 됩니다. 또는 파생 클래스에서 기본 클래스의 멤버를 다시 정의할 수 있습니다 .이 경우에는 *상속이 상속을 통해*수행 됩니다.  
+ 요소는 서로 다른 두 가지 방법으로 다른 요소를 숨길 수 있습니다. 섀도잉 요소는 숨겨진 요소를 포함 하는 영역의 하위 영역 내에서 선언할 수 있으며,이 경우 *범위를 통해* 숨김은 수행 됩니다. 또는 파생 클래스에서 기본 클래스의 멤버를 다시 정의할 수 있습니다 .이 경우에는 *상속이 상속을 통해* 수행 됩니다.  
   
 ### <a name="shadowing-through-scope"></a>범위를 통한 숨김  
 
@@ -147,7 +148,7 @@ End Class
   
  앞의 예제에서 변수는 `basObj` 기본 클래스로 선언 됩니다. 개체를 할당 `dervCls` 하는 것은 확대 변환을 구성 하므로 유효 합니다. 그러나 기본 클래스는 파생 클래스에 있는 변수의 숨김 버전에 액세스할 수 없으므로 `z` 컴파일러가 `basObj.z` 원래 기본 클래스 값으로 확인 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [References to Declared Elements](references-to-declared-elements.md)
 - [Visual Basic의 범위](scope.md)

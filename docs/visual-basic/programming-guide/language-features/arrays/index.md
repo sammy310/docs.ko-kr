@@ -1,4 +1,5 @@
 ---
+description: 자세히 알아보기:의 배열 Visual Basic
 title: 배열
 ms.date: 12/06/2017
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: 5093f28f05c5b72294dce9a4e69723acafb31a9f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b6e8349fe02e77f12fb827618f84d44288914b62
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413093"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454601"
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic의 배열
 
-배열은 *요소로*표현 되는 값 집합으로, 논리적으로 서로 관련 되어 있습니다. 예를 들어 배열은 문법 학교에서 각 학년의 학생 수로 구성 될 수 있습니다. 배열의 각 요소는 단일 등급의 학생 수입니다. 마찬가지로, 배열은 클래스에 대 한 학생의 등급으로 구성 될 수 있습니다. 배열의 각 요소는 단일 등급입니다.
+배열은 *요소로* 표현 되는 값 집합으로, 논리적으로 서로 관련 되어 있습니다. 예를 들어 배열은 문법 학교에서 각 학년의 학생 수로 구성 될 수 있습니다. 배열의 각 요소는 단일 등급의 학생 수입니다. 마찬가지로, 배열은 클래스에 대 한 학생의 등급으로 구성 될 수 있습니다. 배열의 각 요소는 단일 등급입니다.
 
 각 데이터 항목을 저장 하는 개별 변수가 있을 수 있습니다. 예를 들어 응용 프로그램에서 학생 성적을 분석 하는 경우, 등의 각 학생 등급에 대해 별도의 변수를 사용할 수 있습니다 `englishGrade1` `englishGrade2` . 이 방법에는 세 가지 주요 제한 사항이 있습니다.
 
@@ -73,7 +74,7 @@ Dim sales()() As Double = New Double(11)() {}
 - 배열의 각 요소에 값을 할당 합니다. 배열 요소는 배열 이름을 사용 하 고 개별 요소의 인덱스를 괄호 안에 포함 하 여 액세스할 수 있습니다.
 - 배열의 각 값을 나열 합니다. 이 예제에서는 문을 사용 하 여 [`For`](../../../language-reference/statements/for-next-statement.md) 인덱스 번호로 배열의 각 요소에 액세스 합니다.
 
-`students`앞의 예제에서 배열은 하나의 인덱스를 사용 하기 때문에 1 차원 배열입니다. 둘 이상의 인덱스나 첨자를 사용 하는 배열을 *다차원*이라고 합니다. 자세한 내용은이 문서의 나머지 부분과 [Visual Basic의 배열 차원](array-dimensions.md)을 참조 하세요.
+`students`앞의 예제에서 배열은 하나의 인덱스를 사용 하기 때문에 1 차원 배열입니다. 둘 이상의 인덱스나 첨자를 사용 하는 배열을 *다차원* 이라고 합니다. 자세한 내용은이 문서의 나머지 부분과 [Visual Basic의 배열 차원](array-dimensions.md)을 참조 하세요.
 
 ## <a name="creating-an-array"></a>배열 만들기
 
@@ -116,7 +117,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 앞의 예제에서는 `values` `Double` 모든 배열 리터럴이 형식인 경우에도 형식의 배열로 정의 됩니다 `Integer` . 배열 리터럴의 값이 값으로 확장 될 수 있기 때문에이 배열을 만들 수 있습니다 `Double` .
 
-*중첩 된 배열 리터럴을*사용 하 여 다차원 배열을 만들고 채울 수도 있습니다. 중첩 된 배열 리터럴에는 결과 배열과 일치 하는 여러 차원이 있어야 합니다. 다음 예제에서는 중첩 된 배열 리터럴을 사용 하 여 정수의 2 차원 배열을 만듭니다.
+*중첩 된 배열 리터럴을* 사용 하 여 다차원 배열을 만들고 채울 수도 있습니다. 중첩 된 배열 리터럴에는 결과 배열과 일치 하는 여러 차원이 있어야 합니다. 다음 예제에서는 중첩 된 배열 리터럴을 사용 하 여 정수의 2 차원 배열을 만듭니다.
 
 [!code-vb[nested-array-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#5)]
 
@@ -130,13 +131,13 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="iterating-through-an-array"></a>배열 반복
 
-배열을 반복 하는 경우에는 가장 낮은 인덱스부터 가장 높은 인덱스까지 배열의 각 요소에 액세스 합니다. 일반적으로 다음 중 하나를 사용 [합니다. 다음 문](../../../language-reference/statements/for-next-statement.md) 또는 [For Each ... ](../../../language-reference/statements/for-each-next-statement.md)배열의 요소를 반복 하는 다음 문입니다. 배열의 상한을 모를 경우 메서드를 호출 <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType> 하 여 인덱스의 가장 높은 값을 가져올 수 있습니다. 가장 낮은 인덱스 값은 거의 항상 0 이지만 메서드를 호출 <xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType> 하 여 인덱스의 가장 낮은 값을 가져올 수 있습니다.
+배열을 반복 하는 경우에는 가장 낮은 인덱스부터 가장 높은 인덱스까지 배열의 각 요소에 액세스 합니다. 일반적으로 다음 중 하나를 사용 [합니다. 다음 문](../../../language-reference/statements/for-next-statement.md) 또는 [For Each ... ](../../../language-reference/statements/for-each-next-statement.md) 배열의 요소를 반복 하는 다음 문입니다. 배열의 상한을 모를 경우 메서드를 호출 <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType> 하 여 인덱스의 가장 높은 값을 가져올 수 있습니다. 가장 낮은 인덱스 값은 거의 항상 0 이지만 메서드를 호출 <xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType> 하 여 인덱스의 가장 낮은 값을 가져올 수 있습니다.
 
 다음 예제에서는 문을 사용 하 여 1 차원 배열을 반복 합니다 [`For...Next`](../../../language-reference/statements/for-next-statement.md) .
 
 [!code-vb[iterate-one-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]
 
-다음 예에서는 문을 사용 하 여 다차원 배열을 반복 합니다 [`For...Next`](../../../language-reference/statements/for-next-statement.md) . <xref:System.Array.GetUpperBound%2A> 메서드에는 차원을 지정하는 매개 변수가 있습니다. `GetUpperBound(0)`첫 번째 차원의 가장 큰 인덱스를 반환 하 고 `GetUpperBound(1)` 두 번째 차원의 가장 높은 인덱스를 반환 합니다.
+다음 예에서는 문을 사용 하 여 다차원 배열을 반복 합니다 [`For...Next`](../../../language-reference/statements/for-next-statement.md) . <xref:System.Array.GetUpperBound%2A> 메서드에는 차원을 지정하는 매개 변수가 있습니다. `GetUpperBound(0)` 첫 번째 차원의 가장 큰 인덱스를 반환 하 고 `GetUpperBound(1)` 두 번째 차원의 가장 높은 인덱스를 반환 합니다.
 
 [!code-vb[iterate-two-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]
 
@@ -170,7 +171,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="the-array-type"></a>배열 형식입니다.
 
-모든 배열에는 해당 요소의 데이터 형식과 다른 데이터 형식이 있습니다. 모든 배열에 대한 단일 데이터 형식은 없습니다. 대신, 배열의 데이터 형식은 배열의 차원 수 또는 *차수*와 배열에 있는 요소의 데이터 형식에 의해 결정됩니다. 두 배열 변수는 차수가 동일 하 고 해당 요소의 데이터 형식이 동일한 경우에만 동일한 데이터 형식입니다. 배열 차원의 길이는 배열 데이터 형식에 영향을 주지 않습니다.
+모든 배열에는 해당 요소의 데이터 형식과 다른 데이터 형식이 있습니다. 모든 배열에 대한 단일 데이터 형식은 없습니다. 대신, 배열의 데이터 형식은 배열의 차원 수 또는 *차수* 와 배열에 있는 요소의 데이터 형식에 의해 결정됩니다. 두 배열 변수는 차수가 동일 하 고 해당 요소의 데이터 형식이 동일한 경우에만 동일한 데이터 형식입니다. 배열 차원의 길이는 배열 데이터 형식에 영향을 주지 않습니다.
 
 모든 배열은 <xref:System.Array?displayProperty=nameWithType> 클래스에서 상속되며 `Array` 형식으로 변수를 선언할 수 있지만, `Array` 형식의 배열을 만들 수는 없습니다. 예를 들어 다음 코드에서는 `arr` 변수를 형식으로 선언 하 `Array` 고 메서드를 호출 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 하 여 배열을 인스턴스화합니다. 배열의 형식은 Object []로 증명 됩니다.
 
@@ -203,7 +204,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="jagged-arrays"></a>가변 배열
 
-애플리케이션의 데이터 구조가 2차원 배열이지만 사각형이 아닌 경우도 있습니다. 예를 들어 배열을 사용 하 여 해당 월의 각 날짜에 대 한 높은 온도에 대 한 데이터를 저장할 수 있습니다. 배열의 첫 번째 차원은 월을 나타내지만, 두 번째 차원은 일 수를 나타내고, 한 달의 일 수는 균일 하지 않습니다. 배열의 *배열*라고도 하는 *가변 배열은*이러한 시나리오를 위해 설계 되었습니다. 가변 배열은 요소가 배열인 배열입니다. 가변 배열 및 가변 배열의 각 요소에는 하나 이상의 차원이 있을 수 있습니다.
+애플리케이션의 데이터 구조가 2차원 배열이지만 사각형이 아닌 경우도 있습니다. 예를 들어 배열을 사용 하 여 해당 월의 각 날짜에 대 한 높은 온도에 대 한 데이터를 저장할 수 있습니다. 배열의 첫 번째 차원은 월을 나타내지만, 두 번째 차원은 일 수를 나타내고, 한 달의 일 수는 균일 하지 않습니다. 배열의 *배열* 라고도 하는 *가변 배열은* 이러한 시나리오를 위해 설계 되었습니다. 가변 배열은 요소가 배열인 배열입니다. 가변 배열 및 가변 배열의 각 요소에는 하나 이상의 차원이 있을 수 있습니다.
 
 다음 예제에서는 월 배열을 사용 합니다. 각 요소는 일의 배열입니다. 다른 월의 일 수가 서로 다르므로이 예제에서는 가변 배열을 사용 합니다.  이 예제에서는 가변 배열을 만들고, 값을 할당 하 고, 값을 검색 및 표시 하는 방법을 보여 줍니다.
 
@@ -269,7 +270,7 @@ Dim arrZ(-1) As String
 > [!NOTE]
 > 이 단원에서는 문자열 배열을 단일 문자열로 조인 하는 방법에 대해 설명 하지 않습니다. 문자열 배열 조인에 대 한 자세한 내용은 메서드를 참조 하세요 <xref:System.String.Join%2A?displayProperty=nameWithType> .
 
-각 배열의 요소를 새 배열에 복사 하기 전에 먼저 새 배열을 수용할 수 있을 만큼 충분히 큰지 배열을 초기화 해야 합니다. 이 작업은 다음 두 가지 방법 중 하나로 수행할 수 있습니다.
+각 배열의 요소를 새 배열에 복사 하기 전에 먼저 새 배열을 수용할 수 있을 만큼 충분히 큰지 배열을 초기화 해야 합니다. 이 작업은 다음 두 가지 방법 중 한 가지로 수행할 수 있습니다.
 
 - 문을 사용 하 여 [`ReDim Preserve`](../../../language-reference/statements/redim-statement.md) 새 요소를 추가 하기 전에 배열을 동적으로 확장 합니다. 가장 쉬운 방법 이지만, 많은 배열을 복사할 때 성능이 저하 되 고 메모리 소비가 과도 해질 수 있습니다.
 - 새 큼 배열에 필요한 총 요소 수를 계산 하 고 각 소스 배열의 요소를 추가 합니다.
@@ -304,7 +305,7 @@ Dim arrZ(-1) As String
 |[방법: 한 배열에 다른 배열 할당](how-to-assign-one-array-to-another-array.md)|다른 배열 변수에 배열을 할당하는 규칙 및 단계를 설명합니다.|
 |[배열 문제 해결](troubleshooting-arrays.md)|배열에서 작업할 때 발생할 수 있는 몇 가지 일반적인 문제를 설명합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Array?displayProperty=nameWithType>
 - [Dim 문](../../../language-reference/statements/dim-statement.md)

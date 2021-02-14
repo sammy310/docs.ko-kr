@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 숫자 값 계산 (Visual Basic)'
 title: '방법: 숫자 값 계산'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 452a8392b46f0c25b6ad2a8a30c51071f2ae1d93
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 35acd7b9b1732514a8fe4399b6a815dce62b2468
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071718"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435592"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>방법: 숫자 값 계산(Visual Basic)
 
@@ -64,7 +65,7 @@ ms.locfileid: "91071718"
   
      자세한 내용은 [Visual Basic 연산자 우선 순위](../../../language-reference/operators/operator-precedence.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [연산자 및 식](index.md)
 - [값 비교](value-comparisons.md)

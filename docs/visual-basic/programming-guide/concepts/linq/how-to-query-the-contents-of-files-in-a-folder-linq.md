@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 폴더의 파일 내용을 쿼리 하는 방법 (LINQ) (Visual Basic)'
 title: 폴더의 파일 내용 쿼리 방법(LINQ)
 ms.date: 07/20/2015
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
-ms.openlocfilehash: 3ad5fd6c893d590d46be67e6320ac5b915829f4b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5043f64a0bb38811b6155394b18a88f702515cc5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346040"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434994"
 ---
 # <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>폴더에 있는 파일의 내용을 쿼리 하는 방법 (LINQ) (Visual Basic)
 
@@ -77,7 +78,7 @@ End Module
 
 Visual Basic 콘솔 응용 프로그램 프로젝트를 만들고, 코드 샘플을 복사 하 여 붙여넣고, 프로젝트 속성에서 시작 개체 값을 조정 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [LINQ to Objects(Visual Basic)](linq-to-objects.md)
 - [LINQ 및 파일 디렉터리(Visual Basic)](linq-and-file-directories.md)

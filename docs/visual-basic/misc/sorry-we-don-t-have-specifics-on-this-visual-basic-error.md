@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 죄송 합니다 .이 Visual Basic 오류에 대 한 구체적인 정보가 없습니다.'
 title: 죄송 합니다. 이 Visual Basic 오류에 대한 구체적인 정보가 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -3044,12 +3045,12 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: d96f2512e2fae038853baedfb78fcf2feb84542b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 51cd9e21ba40677953fc63d64758dd9c122bc69c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059641"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431147"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>죄송 합니다. 이 Visual Basic 오류에 대한 구체적인 정보가 없습니다.
 
@@ -3073,7 +3074,7 @@ ms.locfileid: "91059641"
  또한 다음을 참조하세요.  
  [Visual Basic 프로그래머를 위한 추가 리소스](../getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic 프로그래밍 가이드](../programming-guide/index.md)
 - [Visual Basic 참조](../reference/index.md)
