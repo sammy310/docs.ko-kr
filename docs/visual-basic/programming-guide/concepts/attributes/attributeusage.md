@@ -1,17 +1,18 @@
 ---
+description: '자세히 알아보기: AttributeUsage (Visual Basic)'
 title: AttributeUsage
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: 677d49aba38801f2adf42cc745983af30b3eddc5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: afb043c1b16da3e134888a38ec73f0b6f4ec5f58
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400734"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437815"
 ---
-# <a name="attributeusage-visual-basic"></a><span data-ttu-id="e5b78-102">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5b78-102">AttributeUsage (Visual Basic)</span></span>
+# <a name="attributeusage-visual-basic"></a><span data-ttu-id="da3f0-103">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="da3f0-103">AttributeUsage (Visual Basic)</span></span>
 
-<span data-ttu-id="e5b78-103">사용자 지정 특성 클래스를 사용하는 방법을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="e5b78-104">`AttributeUsage`는 새 특성 적용 방법을 제어하기 위해 사용자 지정 특성 정의에 적용할 수 있는 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-104">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="e5b78-105">기본 설정은 명시적으로 적용될 경우 다음과 같이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-105">The default settings look like this when applied explicitly:</span></span>
+<span data-ttu-id="da3f0-104">사용자 지정 특성 클래스를 사용하는 방법을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-104">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="da3f0-105">`AttributeUsage`는 새 특성 적용 방법을 제어하기 위해 사용자 지정 특성 정의에 적용할 수 있는 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-105">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="da3f0-106">기본 설정은 명시적으로 적용될 경우 다음과 같이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-106">The default settings look like this when applied explicitly:</span></span>
 
 ```vb
 <System.AttributeUsage(System.AttributeTargets.All,
@@ -22,9 +23,9 @@ Class NewAttribute
 End Class
 ```
 
-<span data-ttu-id="e5b78-106">이 예제에서 `NewAttribute` 클래스는 모든 특성 가능 코드 엔터티에 적용될 수 있지만 각 엔터티에 한 번만 적용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-106">In this example, the `NewAttribute` class can be applied to any attribute-able code entity, but can be applied only once to each entity.</span></span> <span data-ttu-id="e5b78-107">이 특성은 기본 클래스에 적용될 때 파생 클래스가 상속합니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-107">It is inherited by derived classes when applied to a base class.</span></span>
+<span data-ttu-id="da3f0-107">이 예제에서 `NewAttribute` 클래스는 모든 특성 가능 코드 엔터티에 적용될 수 있지만 각 엔터티에 한 번만 적용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-107">In this example, the `NewAttribute` class can be applied to any attribute-able code entity, but can be applied only once to each entity.</span></span> <span data-ttu-id="da3f0-108">이 특성은 기본 클래스에 적용될 때 파생 클래스가 상속합니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-108">It is inherited by derived classes when applied to a base class.</span></span>
 
-<span data-ttu-id="e5b78-108">`AllowMultiple` 및 `Inherited` 인수는 선택 사항이므로 이 코드에 미치는 영향은 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-108">The `AllowMultiple` and `Inherited` arguments are optional, so this code has the same effect:</span></span>
+<span data-ttu-id="da3f0-109">`AllowMultiple` 및 `Inherited` 인수는 선택 사항이므로 이 코드에 미치는 영향은 같습니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-109">The `AllowMultiple` and `Inherited` arguments are optional, so this code has the same effect:</span></span>
 
 ```vb
 <System.AttributeUsage(System.AttributeTargets.All)>
@@ -33,7 +34,7 @@ Class NewAttribute
 End Class
 ```
 
-<span data-ttu-id="e5b78-109">첫 번째 `AttributeUsage` 인수는 <xref:System.AttributeTargets> 열거형의 요소가 하나 이상이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-109">The first `AttributeUsage` argument must be one or more elements of the <xref:System.AttributeTargets> enumeration.</span></span> <span data-ttu-id="e5b78-110">다음과 같이 OR 연산자를 사용하여 여러 대상 형식을 함께 연결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-110">Multiple target types can be linked together with the OR operator, like this:</span></span>
+<span data-ttu-id="da3f0-110">첫 번째 `AttributeUsage` 인수는 <xref:System.AttributeTargets> 열거형의 요소가 하나 이상이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-110">The first `AttributeUsage` argument must be one or more elements of the <xref:System.AttributeTargets> enumeration.</span></span> <span data-ttu-id="da3f0-111">다음과 같이 OR 연산자를 사용하여 여러 대상 형식을 함께 연결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-111">Multiple target types can be linked together with the OR operator, like this:</span></span>
 
 ```vb
 <AttributeUsage(AttributeTargets.Property Or AttributeTargets.Field)>
@@ -42,7 +43,7 @@ Class NewPropertyOrFieldAttribute
 End Class
 ```
 
-<span data-ttu-id="e5b78-111">`AllowMultiple` 인수를 `true`로 설정하면 다음과 같이 결과 특성을 단일 엔터티에 두 번 이상 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-111">If the `AllowMultiple` argument is set to `true`, then the resulting attribute can be applied more than once to a single entity, like this:</span></span>
+<span data-ttu-id="da3f0-112">`AllowMultiple` 인수를 `true`로 설정하면 다음과 같이 결과 특성을 단일 엔터티에 두 번 이상 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-112">If the `AllowMultiple` argument is set to `true`, then the resulting attribute can be applied more than once to a single entity, like this:</span></span>
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, AllowMultiple:=True)>
@@ -55,9 +56,9 @@ Class Class1
 End Class
 ```
 
-<span data-ttu-id="e5b78-112">이 경우 `AllowMultiple`이 `true`로 설정되므로 `MultiUseAttr`를 반복적으로 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-112">In this case `MultiUseAttr` can be applied repeatedly because `AllowMultiple` is set to `true`.</span></span> <span data-ttu-id="e5b78-113">여러 특성을 적용하기 위해 표시된 두 형식이 모두 유효합니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-113">Both formats shown for applying multiple attributes are valid.</span></span>
+<span data-ttu-id="da3f0-113">이 경우 `AllowMultiple`이 `true`로 설정되므로 `MultiUseAttr`를 반복적으로 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-113">In this case `MultiUseAttr` can be applied repeatedly because `AllowMultiple` is set to `true`.</span></span> <span data-ttu-id="da3f0-114">여러 특성을 적용하기 위해 표시된 두 형식이 모두 유효합니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-114">Both formats shown for applying multiple attributes are valid.</span></span>
 
-<span data-ttu-id="e5b78-114">`Inherited`를 `false`로 설정하면 특성이 지정된 클래스에서 파생된 클래스가 특성을 상속하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-114">If `Inherited` is set to `false`, then the attribute is not inherited by classes that are derived from a class that is attributed.</span></span> <span data-ttu-id="e5b78-115">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-115">For example:</span></span>
+<span data-ttu-id="da3f0-115">`Inherited`를 `false`로 설정하면 특성이 지정된 클래스에서 파생된 클래스가 특성을 상속하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-115">If `Inherited` is set to `false`, then the attribute is not inherited by classes that are derived from a class that is attributed.</span></span> <span data-ttu-id="da3f0-116">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-116">For example:</span></span>
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, Inherited:=False)>
@@ -75,17 +76,17 @@ Class DClass
 End Class
 ```
 
-<span data-ttu-id="e5b78-116">이 경우 `Attr1`은 상속을 통해 `DClass`에 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-116">In this case `Attr1` is not applied to `DClass` via inheritance.</span></span>
+<span data-ttu-id="da3f0-117">이 경우 `Attr1`은 상속을 통해 `DClass`에 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-117">In this case `Attr1` is not applied to `DClass` via inheritance.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="e5b78-117">설명</span><span class="sxs-lookup"><span data-stu-id="e5b78-117">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="da3f0-118">설명</span><span class="sxs-lookup"><span data-stu-id="da3f0-118">Remarks</span></span>
 
-<span data-ttu-id="e5b78-118">`AttributeUsage` 특성은 단일 사용 특성입니다. 같은 클래스에 두 번 이상 적용될 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-118">The `AttributeUsage` attribute is a single-use attribute--it cannot be applied more than once to the same class.</span></span> <span data-ttu-id="e5b78-119">`AttributeUsage`는 <xref:System.AttributeUsageAttribute>의 별칭입니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-119">`AttributeUsage` is an alias for <xref:System.AttributeUsageAttribute>.</span></span>
+<span data-ttu-id="da3f0-119">`AttributeUsage` 특성은 단일 사용 특성입니다. 같은 클래스에 두 번 이상 적용될 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-119">The `AttributeUsage` attribute is a single-use attribute--it cannot be applied more than once to the same class.</span></span> <span data-ttu-id="da3f0-120">`AttributeUsage`는 <xref:System.AttributeUsageAttribute>의 별칭입니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-120">`AttributeUsage` is an alias for <xref:System.AttributeUsageAttribute>.</span></span>
 
-<span data-ttu-id="e5b78-120">자세한 내용은 [리플렉션을 사용하여 특성 액세스(Visual Basic)](accessing-attributes-by-using-reflection.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e5b78-120">For more information, see [Accessing Attributes by Using Reflection (Visual Basic)](accessing-attributes-by-using-reflection.md).</span></span>
+<span data-ttu-id="da3f0-121">자세한 내용은 [리플렉션을 사용하여 특성 액세스(Visual Basic)](accessing-attributes-by-using-reflection.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="da3f0-121">For more information, see [Accessing Attributes by Using Reflection (Visual Basic)](accessing-attributes-by-using-reflection.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="e5b78-121">예제</span><span class="sxs-lookup"><span data-stu-id="e5b78-121">Example</span></span>
+## <a name="example"></a><span data-ttu-id="da3f0-122">예</span><span class="sxs-lookup"><span data-stu-id="da3f0-122">Example</span></span>
 
-<span data-ttu-id="e5b78-122">다음 예제에서는 `AttributeUsage` 특성에 대한 `Inherited` 및 `AllowMultiple`의 영향과 클래스에 적용되는 사용자 지정 특성을 열거하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e5b78-122">The following example demonstrates the effect of the `Inherited` and `AllowMultiple` arguments to the `AttributeUsage` attribute, and how the custom attributes applied to a class can be enumerated.</span></span>
+<span data-ttu-id="da3f0-123">다음 예제에서는 `AttributeUsage` 특성에 대한 `Inherited` 및 `AllowMultiple`의 영향과 클래스에 적용되는 사용자 지정 특성을 열거하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="da3f0-123">The following example demonstrates the effect of the `Inherited` and `AllowMultiple` arguments to the `AttributeUsage` attribute, and how the custom attributes applied to a class can be enumerated.</span></span>
 
 ```vb
 ' Create some custom attributes:
@@ -136,7 +137,7 @@ Public Class TestAttributeUsage
 End Class
 ```
 
-## <a name="sample-output"></a><span data-ttu-id="e5b78-123">샘플 출력</span><span class="sxs-lookup"><span data-stu-id="e5b78-123">Sample Output</span></span>
+## <a name="sample-output"></a><span data-ttu-id="da3f0-124">샘플 출력</span><span class="sxs-lookup"><span data-stu-id="da3f0-124">Sample Output</span></span>
 
 ```console
 Attributes on Base Class:
@@ -148,13 +149,13 @@ A3
 A2
 ```
 
-## <a name="see-also"></a><span data-ttu-id="e5b78-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e5b78-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="da3f0-125">추가 정보</span><span class="sxs-lookup"><span data-stu-id="da3f0-125">See also</span></span>
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>
-- [<span data-ttu-id="e5b78-125">Visual Basic 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="e5b78-125">Visual Basic Programming Guide</span></span>](../../index.md)
-- [<span data-ttu-id="e5b78-126">특성</span><span class="sxs-lookup"><span data-stu-id="e5b78-126">Attributes</span></span>](../../../../standard/attributes/index.md)
-- [<span data-ttu-id="e5b78-127">리플렉션(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5b78-127">Reflection (Visual Basic)</span></span>](../reflection.md)
-- [<span data-ttu-id="e5b78-128">특성(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5b78-128">Attributes (Visual Basic)</span></span>](../../../language-reference/attributes.md)
-- [<span data-ttu-id="e5b78-129">사용자 지정 특성 만들기(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5b78-129">Creating Custom Attributes (Visual Basic)</span></span>](creating-custom-attributes.md)
-- [<span data-ttu-id="e5b78-130">리플렉션을 사용하여 특성 액세스(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5b78-130">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](accessing-attributes-by-using-reflection.md)
+- [<span data-ttu-id="da3f0-126">Visual Basic 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="da3f0-126">Visual Basic Programming Guide</span></span>](../../index.md)
+- [<span data-ttu-id="da3f0-127">특성</span><span class="sxs-lookup"><span data-stu-id="da3f0-127">Attributes</span></span>](../../../../standard/attributes/index.md)
+- [<span data-ttu-id="da3f0-128">리플렉션(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="da3f0-128">Reflection (Visual Basic)</span></span>](../reflection.md)
+- [<span data-ttu-id="da3f0-129">특성(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="da3f0-129">Attributes (Visual Basic)</span></span>](../../../language-reference/attributes.md)
+- [<span data-ttu-id="da3f0-130">사용자 지정 특성 만들기(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="da3f0-130">Creating Custom Attributes (Visual Basic)</span></span>](creating-custom-attributes.md)
+- [<span data-ttu-id="da3f0-131">리플렉션을 사용하여 특성 액세스(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="da3f0-131">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](accessing-attributes-by-using-reflection.md)
