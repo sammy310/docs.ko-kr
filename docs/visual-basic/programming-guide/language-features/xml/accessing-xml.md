@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic에서 XML 액세스'
 title: XML에 액세스
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - XML [Visual Basic], axis properties
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
-ms.openlocfilehash: 8ffe6d5ed368aee6d6984ec6ab28c8832921a3f8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2d77b2aa5f4136095ce5684976fe3ba03be7c28c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91080181"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462661"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Visual Basic에서 XML에 액세스
 
@@ -45,7 +46,7 @@ Visual Basic는 구조에 액세스 하 고 탐색 하기 위한 XML 축 속성�
  [방법: XML 네임스페이스 접두사 선언 및 사용](how-to-declare-and-use-xml-namespace-prefixes.md)  
  XML 네임 스페이스 접두사를 선언 하 고이 접두사를 사용 하 여 XML 요소를 만들고 액세스 하는 방법을 보여 줍니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 
  [XML 축 속성](../../../language-reference/xml-axis/index.md)  
  다양 한 XML 액세스 속성을 설명 하는 섹션에 대 한 링크를 제공 합니다.  

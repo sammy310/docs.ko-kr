@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 구분 기호가 Nothing 이거나 비어 있기 때문에 구분 된 필드를 읽을 수 없습니다.'
 title: 구분 기호가 Nothing이거나 비어 있기 때문에 구분된 필드를 읽을 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_DelimitersNothing
 ms.assetid: 94f64c48-8e17-449d-b92a-0426efec879c
-ms.openlocfilehash: 3442168d4fee00ea74d236eb7bc21d1bbbf915c5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e17f3abf17b4a2cafc9104a2cb75fe545eeb13ee
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075748"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455264"
 ---
 # <a name="unable-to-read-delimited-fields-because-delimiters-is-nothing-or-empty"></a>구분 기호가 Nothing이거나 비어 있기 때문에 구분된 필드를 읽을 수 없습니다.
 
@@ -19,7 +20,7 @@ ms.locfileid: "91075748"
   
 - `Delimiters`에 유효한 값을 지원합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [TextFieldParser.SetDelimiters 메서드](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A)
 - [TextFieldParser.Delimiters 속성](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A)

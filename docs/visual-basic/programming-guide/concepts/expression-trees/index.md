@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 식 트리 (Visual Basic)'
 title: 식 트리
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: 29f2545a3bc1d53e8ab28478f63ef7b0dfe7a15e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7fa4f36334a5a951cbe86c6db80af77db40e245a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075410"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462258"
 ---
 # <a name="expression-trees-visual-basic"></a>식 트리(Visual Basic)
 
@@ -147,7 +148,7 @@ Console.WriteLine(expr.Compile()(4))
   
  자세한 내용은 [방법: 식 트리 실행(Visual Basic)](how-to-execute-expression-trees.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Linq.Expressions>
 - [방법: 식 트리 실행(Visual Basic)](how-to-execute-expression-trees.md)

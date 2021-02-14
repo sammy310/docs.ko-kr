@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: XML 리터럴 개요 (Visual Basic)'
 title: XML 리터럴 개요
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: c65cac4f6e8f5f314587f20d5c373c92ea0c51e5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5544c0238b117ed5b9b2f9cdab312127736e97d7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085388"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423851"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML 리터럴 개요(Visual Basic)
 
 *Xml 리터럴을* 사용 하면 xml을 Visual Basic 코드에 직접 통합할 수 있습니다. XML 리터럴 구문은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개체를 나타내며 xml 1.0 구문과 유사 합니다. 이렇게 하면 코드의 구조가 최종 XML과 동일 하기 때문에 XML 요소와 문서를 프로그래밍 방식으로 쉽게 만들 수 있습니다.  
   
- Visual Basic XML 리터럴을 개체로 컴파일합니다 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML을 만들고 조작 하는 간단한 개체 모델을 제공 하며,이 모델은 LINQ (통합 언어 쿼리)와 잘 통합 됩니다. 자세한 내용은 <xref:System.Xml.Linq.XElement>를 참조하세요.  
+ Visual Basic XML 리터럴을 개체로 컴파일합니다 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML을 만들고 조작 하는 간단한 개체 모델을 제공 하며,이 모델은 LINQ (Language-Integrated Query)와 잘 통합 됩니다. 자세한 내용은 <xref:System.Xml.Linq.XElement>를 참조하세요.  
   
  Visual Basic 식을 XML 리터럴에 포함할 수 있습니다. 런타임에 응용 프로그램은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 포함 된 식의 값을 통합 하 여 각 리터럴에 대 한 개체를 만듭니다. 이렇게 하면 XML 리터럴 내에서 동적 콘텐츠를 지정할 수 있습니다. 자세한 내용은 [XML의 포함 식](embedded-expressions-in-xml.md)을 참조 하세요.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "91085388"
   
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Xml.Linq.XElement>
 - [Visual Basic에서 XML 만들기](creating-xml.md)

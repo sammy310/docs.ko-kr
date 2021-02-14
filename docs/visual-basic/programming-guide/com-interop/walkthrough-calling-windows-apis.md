@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연습: Windows Api 호출 (Visual Basic)'
 title: '연습: Windows API 호출'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 88b3df2f18add6641d0355d2c605bc5f74dabbc7
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9ffe89cabade780dbe1ced189a92c37e822c59e9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098322"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100427260"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>연습: Windows API 호출(Visual Basic)
 
@@ -41,7 +42,7 @@ Windows Api는 Windows 운영 체제의 일부인 Dll (동적 연결 라이브�
     > [!NOTE]
     > Windows Api에 대 한 전체 정보는 Platform SDK Windows API에서 Win32 SDK 설명서를 참조 하세요. Windows Api에서 사용 하는 상수에 대 한 자세한 내용은 Platform SDK에 포함 된 Windows 등의 헤더 파일을 검사 합니다.  
   
-2. **파일** 메뉴에서 **새로 만들기** 를 클릭 한 다음 **프로젝트**를 클릭 하 여 새 Windows 응용 프로그램 프로젝트를 엽니다. **새 프로젝트** 대화 상자가 나타납니다.  
+2. **파일** 메뉴에서 **새로 만들기** 를 클릭 한 다음 **프로젝트** 를 클릭 하 여 새 Windows 응용 프로그램 프로젝트를 엽니다. **새 프로젝트** 대화 상자가 나타납니다.  
   
 3. Visual Basic 프로젝트 템플릿 목록에서 **Windows 응용 프로그램** 을 선택 합니다. 새 프로젝트가 표시 됩니다.  
   
@@ -67,7 +68,7 @@ Windows Api는 Windows 운영 체제의 일부인 Dll (동적 연결 라이브�
   
 #### <a name="argument-and-data-type-declarations"></a>인수 및 데이터 형식 선언  
 
- 인수와 해당 데이터 형식을 선언 합니다. 이 부분은 Windows에서 사용 하는 데이터 형식이 Visual Studio 데이터 형식과 일치 하지 않기 때문에 어려울 수 있습니다. Visual Basic는 인수를 호환 되는 데이터 형식으로 변환 하 여 *마샬링*이라는 프로세스를 수행 하는 데 많은 작업을 수행 합니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute>네임 스페이스에 정의 된 특성을 사용 하 여 인수가 마샬링되는 방식을 명시적으로 제어할 수 있습니다 <xref:System.Runtime.InteropServices> .  
+ 인수와 해당 데이터 형식을 선언 합니다. 이 부분은 Windows에서 사용 하는 데이터 형식이 Visual Studio 데이터 형식과 일치 하지 않기 때문에 어려울 수 있습니다. Visual Basic는 인수를 호환 되는 데이터 형식으로 변환 하 여 *마샬링* 이라는 프로세스를 수행 하는 데 많은 작업을 수행 합니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute>네임 스페이스에 정의 된 특성을 사용 하 여 인수가 마샬링되는 방식을 명시적으로 제어할 수 있습니다 <xref:System.Runtime.InteropServices> .  
   
 > [!NOTE]
 > 이전 버전의 Visual Basic을 사용 하 여 매개 변수를 선언할 수 있습니다 `As Any` . 즉, 모든 데이터 형식의 데이터를 사용할 수 있습니다. Visual Basic를 사용 하려면 모든 문에 특정 데이터 형식을 사용 해야 `Declare` 합니다.  
@@ -84,7 +85,7 @@ Windows Api는 Windows 운영 체제의 일부인 Dll (동적 연결 라이브�
   
      `#define MB_ICONQUESTION             0x00000020L`  
   
-3. `Const`이러한 상수를 응용 프로그램에서 사용할 수 있도록 클래스 또는 모듈에 해당 하는 문을 추가 합니다. 다음은 그 예입니다.  
+3. `Const`이러한 상수를 응용 프로그램에서 사용할 수 있도록 클래스 또는 모듈에 해당 하는 문을 추가 합니다. 예를 들면 다음과 같습니다.  
   
      [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
@@ -118,11 +119,11 @@ Windows Api는 Windows 운영 체제의 일부인 Dll (동적 연결 라이브�
 
  `DllImport`특성은 형식 라이브러리 없이 dll에서 함수를 호출 하는 두 번째 방법을 제공 합니다. `DllImport` 는 문을 사용 하는 것과 거의 동일 `Declare` 하지만 함수가 호출 되는 방법을 보다 세밀 하 게 제어할 수 있습니다.  
   
- `DllImport`호출이 shared ( *static*이 라고도 함) 메서드를 참조 하는 한 대부분의 Windows API 호출에서을 사용할 수 있습니다. 클래스의 인스턴스를 필요로 하는 메서드는 사용할 수 없습니다. `Declare`문과 달리 `DllImport` 호출은 특성을 사용할 수 없습니다 `MarshalAs` .  
+ `DllImport`호출이 shared ( *static* 이 라고도 함) 메서드를 참조 하는 한 대부분의 Windows API 호출에서을 사용할 수 있습니다. 클래스의 인스턴스를 필요로 하는 메서드는 사용할 수 없습니다. `Declare`문과 달리 `DllImport` 호출은 특성을 사용할 수 없습니다 `MarshalAs` .  
   
 ### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>DllImport 특성을 사용 하 여 Windows API를 호출 하려면  
   
-1. **파일** 메뉴에서 **새로 만들기** 를 클릭 한 다음 **프로젝트**를 클릭 하 여 새 Windows 응용 프로그램 프로젝트를 엽니다. **새 프로젝트** 대화 상자가 나타납니다.  
+1. **파일** 메뉴에서 **새로 만들기** 를 클릭 한 다음 **프로젝트** 를 클릭 하 여 새 Windows 응용 프로그램 프로젝트를 엽니다. **새 프로젝트** 대화 상자가 나타납니다.  
   
 2. Visual Basic 프로젝트 템플릿 목록에서 **Windows 응용 프로그램** 을 선택 합니다. 새 프로젝트가 표시 됩니다.  
   
@@ -154,9 +155,9 @@ Windows Api는 Windows 운영 체제의 일부인 Dll (동적 연결 라이브�
   
 11. F5 키를 눌러 애플리케이션을 시작합니다. 기본 폼이 나타납니다.  
   
-12. **Button2**를 클릭 합니다. 파일을 이동할 수 있는 경우 "파일이 성공적으로 이동 되었습니다." 라는 메시지가 표시 됩니다.  
+12. **Button2** 를 클릭 합니다. 파일을 이동할 수 있는 경우 "파일이 성공적으로 이동 되었습니다." 라는 메시지가 표시 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>

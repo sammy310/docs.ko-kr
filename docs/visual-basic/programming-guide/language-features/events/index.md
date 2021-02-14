@@ -1,20 +1,21 @@
 ---
+description: '다음에 대 한 자세한 정보: 이벤트 (Visual Basic)'
 title: 이벤트
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 15ab02c20c1baf0fbc9087bfe2e75ec97acd0734
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6cd4a4b997ec13b394cae38e9d66c7dd9c283aaf
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91057938"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483679"
 ---
 # <a name="events-visual-basic"></a>이벤트(Visual Basic)
 
-Visual Studio 프로젝트를 순서 대로 실행 되는 일련의 프로시저로 시각화할 수도 있지만 실제로 대부분의 프로그램은 이벤트 구동 방식입니다. 즉, 실행 흐름이 *이벤트*라는 외부 발생에 의해 결정 됩니다.  
+Visual Studio 프로젝트를 순서 대로 실행 되는 일련의 프로시저로 시각화할 수도 있지만 실제로 대부분의 프로그램은 이벤트 구동 방식입니다. 즉, 실행 흐름이 *이벤트* 라는 외부 발생에 의해 결정 됩니다.  
   
  이벤트는 중요한 문제가 발생했음을 애플리케이션에 알리는 신호입니다. 예를 들어 사용자가 폼의 컨트롤을 클릭하면 폼이 `Click` 이벤트를 발생시키고 이벤트를 처리하는 프로시저를 호출할 수 있습니다. 또한 이벤트는 개별 작업이 통신할 수 있도록 합니다. 예를 들어 애플리케이션이 주 애플리케이션과는 별도로 정렬 작업을 수행한다고 가정해 봅니다. 사용자가 정렬을 취소하면 애플리케이션은 정렬 프로세스를 중지하도록 지시하는 취소 이벤트를 전송할 수 있습니다.  
   
@@ -30,7 +31,7 @@ Visual Studio 프로젝트를 순서 대로 실행 되는 일련의 프로시저
   
 ### <a name="raising-events"></a>이벤트 발생  
 
- 이벤트는 중요한 문제가 발생했음을 알리는 메시지와 같습니다. 메시지를 브로드캐스트하는 동작을 이벤트 *발생*이라고 합니다. Visual Basic에서 `RaiseEvent` 다음 예제와 같이 문을 사용 하 여 이벤트를 발생 시킵니다.  
+ 이벤트는 중요한 문제가 발생했음을 알리는 메시지와 같습니다. 메시지를 브로드캐스트하는 동작을 이벤트 *발생* 이라고 합니다. Visual Basic에서 `RaiseEvent` 다음 예제와 같이 문을 사용 하 여 이벤트를 발생 시킵니다.  
   
  [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
   
@@ -38,11 +39,11 @@ Visual Studio 프로젝트를 순서 대로 실행 되는 일련의 프로시저
   
 ### <a name="event-senders"></a>이벤트 전송자  
 
- 이벤트를 발생시킬 수 있는 개체는 *이벤트 소스*라고도 하는 *이벤트 전송자*입니다. 폼, 컨트롤 및 사용자 정의 개체는 이벤트 전송자에 속합니다.  
+ 이벤트를 발생시킬 수 있는 개체는 *이벤트 소스* 라고도 하는 *이벤트 전송자* 입니다. 폼, 컨트롤 및 사용자 정의 개체는 이벤트 전송자에 속합니다.  
   
 ### <a name="event-handlers"></a>이벤트 처리기  
 
- *이벤트 처리기*는 해당 이벤트가 발생할 때 호출되는 프로시저입니다. 서명이 일치하는 모든 유효한 서브루틴을 이벤트 처리기로 사용할 수 있습니다. 그러나 함수는 이벤트 처리기로 사용할 수 없습니다. 이벤트 소스에 값을 반환할 수 없기 때문입니다.  
+ *이벤트 처리기* 는 해당 이벤트가 발생할 때 호출되는 프로시저입니다. 서명이 일치하는 모든 유효한 서브루틴을 이벤트 처리기로 사용할 수 있습니다. 그러나 함수는 이벤트 처리기로 사용할 수 없습니다. 이벤트 소스에 값을 반환할 수 없기 때문입니다.  
   
  Visual Basic는 이벤트 보낸 사람의 이름, 밑줄 및 이벤트 이름을 결합 하는 이벤트 처리기에 표준 명명 규칙을 사용 합니다. 예를 들어 `button1`이라는 단추의 `Click` 이벤트의 이름은 `Sub button1_Click`으로 지정됩니다.  
   
@@ -83,7 +84,7 @@ Visual Studio 프로젝트를 순서 대로 실행 되는 일련의 프로시저
   
  [!code-vb[VbVbalrEvents#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#28)]  
   
- 이벤트 처리기에서 이벤트의 연결을 끊는 `RemoveHandler`는 `AddHandler`와 동일한 구문을 사용합니다. 다음은 그 예입니다.  
+ 이벤트 처리기에서 이벤트의 연결을 끊는 `RemoveHandler`는 `AddHandler`와 동일한 구문을 사용합니다. 예를 들면 다음과 같습니다.  
   
  [!code-vb[VbVbalrEvents#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#29)]  
   
@@ -97,11 +98,11 @@ Visual Studio 프로젝트를 순서 대로 실행 되는 일련의 프로시저
   
 ## <a name="handling-events-inherited-from-a-base-class"></a>기본 클래스에서 상속된 이벤트 처리  
 
- 기본 클래스에서 특성을 상속하는 클래스인 *파생 클래스*는 `Handles MyBase` 문을 사용하여 기본 클래스에 의해 발생된 이벤트를 처리할 수 있습니다.  
+ 기본 클래스에서 특성을 상속하는 클래스인 *파생 클래스* 는 `Handles MyBase` 문을 사용하여 기본 클래스에 의해 발생된 이벤트를 처리할 수 있습니다.  
   
 ### <a name="to-handle-events-from-a-base-class"></a>기본 클래스의 이벤트를 처리하려면  
   
-- 이벤트 처리기 프로시저의 선언 줄에 `Handles MyBase.`*eventname* 문을 추가하여 파생 클래스에서 이벤트 처리기를 선언합니다. 여기서 *eventname*은 처리하는 기본 클래스의 이벤트 이름입니다. 다음은 그 예입니다.  
+- 이벤트 처리기 프로시저의 선언 줄에 `Handles MyBase.`*eventname* 문을 추가하여 파생 클래스에서 이벤트 처리기를 선언합니다. 여기서 *eventname* 은 처리하는 기본 클래스의 이벤트 이름입니다. 예를 들면 다음과 같습니다.  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   

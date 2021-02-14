@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: Get은 지원 되지 않습니다 (쓰기 전용 속성).'
 title: Get은 지원되지 않습니다(쓰기 전용 속성).
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID394
 ms.assetid: bbe0b526-d6b6-430a-92e2-9e8051847595
-ms.openlocfilehash: 943ce2e20dea17becddb09c8884ad3aa5cb70425
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: da776d2e30dd18bb7b97b2746b4a60feec954acb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100401"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462916"
 ---
 # <a name="get-not-supported-write-only-property"></a>Get은 지원되지 않습니다(쓰기 전용 속성).
 
@@ -21,6 +22,6 @@ ms.locfileid: "91100401"
   
 2. 속성에 대한 참조를 제거합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

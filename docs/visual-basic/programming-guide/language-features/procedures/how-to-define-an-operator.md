@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 연산자 정의 (Visual Basic)'
 title: '방법: 연산자 정의'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 5acbd0439ddbb956b80d56e23d11cd5e152f37ff
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ead96a302426c6f5b1667bb030aab56afe3284c8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087403"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462713"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>방법: 연산자 정의(Visual Basic)
 
@@ -28,7 +29,7 @@ ms.locfileid: "91087403"
   
  클래스 또는 구조체에서 연산자를 정의 하는 것을 연산자 *오버 로드* 라고도 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예에서는 `+` 라는 구조체의 연산자를 정의 합니다 `height` . 구조체는 피트와 인치로 측정 된 높이를 사용 합니다. 1 *인치* 는 2.54 센티미터이 고 1 *피트* 는 12 인치입니다. 정규화 된 값 (인치 < 12.0)을 보장 하기 위해 생성자는 *모듈로* 12 산술 연산을 수행 합니다. 연산자는 생성자를 사용 하 여 `+` 정규화 된 값을 생성 합니다.  
   
@@ -38,7 +39,7 @@ ms.locfileid: "91087403"
   
  [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [연산자 프로시저](./operator-procedures.md)
 - [방법: 변환 연산자 정의](./how-to-define-a-conversion-operator.md)

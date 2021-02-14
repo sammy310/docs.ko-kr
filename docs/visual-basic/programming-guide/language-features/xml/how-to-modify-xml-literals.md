@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: XML 리터럴 수정 (Visual Basic)'
 title: '방법: XML 리터럴 수정'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic]
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
-ms.openlocfilehash: a2ac2e9802d4c8ab522bb430d15cce5616430437
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 23b900c3da5864ac7a91e6c7a43f44a0d4ab1a21
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374903"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483614"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>방법: XML 리터럴 수정(Visual Basic)
 
@@ -286,7 +287,7 @@ Visual Basic은 XML 리터럴을 수정할 수 있는 편리한 방법을 제공
     </Catalog>
     ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic에서 XML 조작](manipulating-xml.md)
 - [XML](index.md)
