@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 식 트리를 사용 하 여 동적 쿼리 빌드 (Visual Basic)'
 title: '방법: 식 트리를 사용하여 동적 쿼리 빌드'
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: 1f686c37b5d04263ac5ae0dd6883aa8a519ed19e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bb8abb22749cbf7c15b72632f60a5bd08287378d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410981"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423097"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>방법: 식 트리를 사용 하 여 동적 쿼리 빌드 (Visual Basic)
 
@@ -103,13 +104,13 @@ Next
 
 ## <a name="compile-the-code"></a>코드 컴파일
 
-- 새 **콘솔 응용 프로그램** 프로젝트를 만듭니다.
+- **콘솔 애플리케이션** 프로젝트를 새로 만듭니다.
 
 - System.Linq.Expressions 네임스페이스를 포함합니다.
 
 - 예제의 코드를 복사 하 여 프로시저에 붙여넣습니다 `Main` `Sub` .
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [식 트리(Visual Basic)](index.md)
 - [방법: 식 트리 실행(Visual Basic)](how-to-execute-expression-trees.md)

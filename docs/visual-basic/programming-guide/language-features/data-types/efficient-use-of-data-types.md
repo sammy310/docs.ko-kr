@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 데이터 형식에 대 한 효율적인 사용 (Visual Basic)'
 title: 데이터 형식의 효율적 사용
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: 7f446b264dcb5c05ed6ddfba34acbbf66be0e447
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e7660bbdec530ef18d663975e314d90b64e4b055
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084114"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476438"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>데이터 형식의 효율적 사용(Visual Basic)
 
@@ -26,7 +27,7 @@ ms.locfileid: "91084114"
 
 ## <a name="strong-typing"></a>강력한 형식 지정
 
- 모든 변수에 대 한 데이터 형식을 지정 하는 것을 *강력한 형식화*라고 합니다. 강력한 형식화를 사용 하는 경우 다음과 같은 여러 이점이 있습니다.
+ 모든 변수에 대 한 데이터 형식을 지정 하는 것을 *강력한 형식화* 라고 합니다. 강력한 형식화를 사용 하는 경우 다음과 같은 여러 이점이 있습니다.
 
 - 변수에 대해 IntelliSense를 지원할 수 있습니다. 이렇게 하면 코드에 입력할 때 해당 속성 및 기타 멤버를 볼 수 있습니다.
 
@@ -53,7 +54,7 @@ Protected s As String
 
  `AscW`및 `ChrW` 함수는 유니코드로 작동 합니다. 및에 대 한 기본 설정에서 사용 해야 하며 `Asc` `Chr` ,이는 유니코드로 변환 해야 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>

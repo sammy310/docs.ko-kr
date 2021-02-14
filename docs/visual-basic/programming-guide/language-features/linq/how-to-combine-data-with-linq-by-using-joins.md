@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 조인을 사용 하 여 LINQ와 데이터 결합 (Visual Basic)'
 title: '방법: 조인을 사용하여 LINQ와 데이터 결합'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: ebda8d3b7fa2e712c337ed2c1fadc580bed7fe61
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 69cf0bcfb8d9241afdd0616621f35d7ca93bbb9e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075072"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100422746"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>방법: 조인을 사용하여 데이터와 LINQ 결합(Visual Basic)
 
@@ -83,7 +84,7 @@ Visual Basic는 `Join` 및 `Group Join` 쿼리 절을 제공 하 여 컬렉션 �
   
 2. F5 키를 눌러 예제를 실행 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [LINQ](index.md)
 - [Visual Basic의 LINQ 소개](introduction-to-linq.md)

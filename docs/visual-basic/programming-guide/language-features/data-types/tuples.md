@@ -1,15 +1,16 @@
 ---
+description: '다음에 대 한 자세한 정보: 튜플 (Visual Basic)'
 title: 튜플
 ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: b169a1c13b3f20d7b5e2a1386cfb28a9cc093dcd
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: f598facb446b7d50864c0cf9151195cfcde158bb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559091"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100454458"
 ---
 # <a name="tuples-visual-basic"></a>튜플(Visual Basic)
 
@@ -84,7 +85,7 @@ Visual Basic 튜플은 **system.valuetuple** 제네릭 형식 중 하나의 인�
 
 Visual Basic 튜플은 **system.valuetuple** 형식의 멤버를 상속 합니다. 이러한 필드 외에도 다음과 같은 메서드가 포함 됩니다.
 
-| 방법 | Description |
+| 방법 | 설명 |
 | ---|---|
 | CompareTo | 현재 튜플을 동일한 수의 요소를 사용 하는 다른 튜플로 비교 합니다. |
 | 같음 | 현재 튜플이 다른 튜플 또는 개체와 같은지 여부를 확인 합니다. |

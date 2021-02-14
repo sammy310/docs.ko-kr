@@ -1,15 +1,16 @@
 ---
+description: "자세한 정보: ' Per ' 인수가 잘못 되었습니다."
 title: "'Per' 인수가 잘못되었습니다."
 ms.date: 07/20/2015
 f1_keywords:
 - vbrPPMT_PerGT0AndLTNPer
 ms.assetid: 5f3fadba-d32c-4e52-b949-85a907e6c12f
-ms.openlocfilehash: cf1b6d035d9be7c95c87a8e98398837a1c2faec2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 15bdb046c39a6d6eb89b78ba3ce3cd374b639b32
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087117"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459060"
 ---
 # <a name="argument-per-is-not-valid"></a>'Per' 인수가 잘못되었습니다.
 
@@ -19,6 +20,6 @@ ms.locfileid: "91087117"
   
 - 인수가 유효한 범위 내에 들어가는지 확인합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [값 또는 참조로 인수 전달](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

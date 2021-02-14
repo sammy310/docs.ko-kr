@@ -1,4 +1,5 @@
 ---
+description: 자세히 알아보기:의 문 Visual Basic
 title: 문
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-ms.openlocfilehash: 09fe53f4bc2b6d025b762c6595c5337263456bae
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9da27c77c858075e413580047b7ed688b328c87f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401981"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436892"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic의 문
 
 Visual Basic 문은 전체 명령입니다. 키워드, 연산자, 변수, 상수 및 식을 포함할 수 있습니다. 각 문은 다음 범주 중 하나에 속합니다.
 
-- 변수, 상수 또는 프로시저의 이름을 지정 하는 **선언문**을 지정 하 고 데이터 형식을 지정할 수도 있습니다.
+- 변수, 상수 또는 프로시저의 이름을 지정 하는 **선언문** 을 지정 하 고 데이터 형식을 지정할 수도 있습니다.
 
-- 작업을 시작 하는 **실행 가능한 문** 이러한 문은 메서드나 함수를 호출할 수 있으며 코드 블록을 통해 루프 또는 분기할 수 있습니다. 실행 문에는 변수나 상수에 값 또는 식을 할당 하는 **대입문**이 포함 됩니다.
+- 작업을 시작 하는 **실행 가능한 문** 이러한 문은 메서드나 함수를 호출할 수 있으며 코드 블록을 통해 루프 또는 분기할 수 있습니다. 실행 문에는 변수나 상수에 값 또는 식을 할당 하는 **대입문** 이 포함 됩니다.
 
 이 항목에서는 각 범주에 대해 설명 합니다. 또한이 항목에서는 여러 문을 한 줄에 결합 하는 방법과 문을 여러 줄로 계속 하는 방법에 대해 설명 합니다.
 
@@ -82,7 +83,7 @@ Visual Basic 문은 전체 명령입니다. 키워드, 연산자, 변수, 상수
 
 ### <a name="eligible-programming-elements"></a>적합 한 프로그래밍 요소
 
-할당 연산자의 좌 변에 있는 프로그래밍 요소는 값을 허용 하 고 저장할 수 있어야 합니다. 즉, [ReadOnly](../../language-reference/modifiers/readonly.md)이거나 배열 요소 여야 하는 변수 또는 속성 이어야 합니다. 대입문의 컨텍스트에서 "left value"의 경우 이러한 요소를 *lvalue*라고도 합니다.
+할당 연산자의 좌 변에 있는 프로그래밍 요소는 값을 허용 하 고 저장할 수 있어야 합니다. 즉, [ReadOnly](../../language-reference/modifiers/readonly.md)이거나 배열 요소 여야 하는 변수 또는 속성 이어야 합니다. 대입문의 컨텍스트에서 "left value"의 경우 이러한 요소를 *lvalue* 라고도 합니다.
 
 대입 연산자의 오른쪽에 있는 값은 리터럴, 상수, 변수, 속성, 배열 요소, 기타 식 또는 함수 호출의 조합으로 구성 될 수 있는 식에 의해 생성 됩니다. 다음은 이에 대한 예입니다.
 

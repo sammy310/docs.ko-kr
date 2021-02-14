@@ -1,15 +1,16 @@
 ---
+description: "자세한 정보: 식 ' <name> '은 프로시저가 아니지만 프로시저 호출의 대상으로 발생 합니다."
 title: 식 '<name>'은 프로시저가 아니지만 프로시저 호출 대상인 것처럼 나타납니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrExpressionNotProcedure
 ms.assetid: 59169d44-a279-4aca-8f14-fba8d69d8959
-ms.openlocfilehash: 3f0b9c70fbf5c3b4a0ae5f912b23b7e62ee57a94
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 11ffc1a785eec215dbc00dcd04f47812178b090d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100466"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459099"
 ---
 # <a name="expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call"></a>식 '\<name>'은 프로시저가 아니지만 프로시저 호출 대상인 것처럼 나타납니다.
 
@@ -21,6 +22,6 @@ ms.locfileid: "91100466"
   
 2. <> 호출 하는 프로시저를 제공 `name` 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [절차](../programming-guide/language-features/procedures/index.md)

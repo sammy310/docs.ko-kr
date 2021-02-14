@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 문자열과 다른 형식 간 변환 (Visual Basic)'
 title: 문자열과 다른 형식 사이의 변환
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: 823931f7d6beb8218e8b99d4a8d45716b7214304
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c0f7f7637d173d039d58b2516fba41ae55b990ac
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077152"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477218"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>문자열과 다른 형식 사이의 변환(Visual Basic)
 
@@ -26,7 +27,7 @@ ms.locfileid: "91077152"
   
 ## <a name="conversion-of-numbers-to-strings"></a>숫자를 문자열로 변환  
 
- 함수를 사용 하 여 `Format` 숫자를 서식이 지정 된 문자열로 변환할 수 있습니다. 여기에는 해당 숫자 뿐만 아니라 통화 기호 (예: `$` ), 천 단위 구분 기호 또는 *자릿수 그룹화 기호* (예:) `,` 및 소수 구분 기호 (예:)와 같은 기호에 대 한 서식 지정도 포함 될 수 있습니다 `.` . `Format`는 Windows **제어판**에 지정 된 **국가별 옵션** 설정에 따라 적절 한 기호를 자동으로 사용 합니다.  
+ 함수를 사용 하 여 `Format` 숫자를 서식이 지정 된 문자열로 변환할 수 있습니다. 여기에는 해당 숫자 뿐만 아니라 통화 기호 (예: `$` ), 천 단위 구분 기호 또는 *자릿수 그룹화 기호* (예:) `,` 및 소수 구분 기호 (예:)와 같은 기호에 대 한 서식 지정도 포함 될 수 있습니다 `.` . `Format`는 Windows **제어판** 에 지정 된 **국가별 옵션** 설정에 따라 적절 한 기호를 자동으로 사용 합니다.  
   
  `&`다음 예제에 나와 있는 것 처럼 연결 () 연산자는 숫자를 암시적으로 문자열로 변환할 수 있습니다.  
   
@@ -43,7 +44,7 @@ Str = "The total count is " & count
   
  Visual Basic 문자열을 숫자 값으로 변환 하는 경우 Windows **제어판** 에 지정 된 **국가별 옵션** 설정을 사용 하 여 천 단위 구분 기호, 소수 구분 기호 및 통화 기호를 해석 합니다. 즉, 한 설정에서는 변환이 성공 하지만 다른 설정에는 성공 하지 못할 수 있습니다. 예를 들어 `"$14.20"` 은 영어 (미국) 로캘에서는 사용할 수 있지만 프랑스어 로캘에서는 사용할 수 없습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic의 형식 변환](type-conversions.md)
 - [Widening and Narrowing Conversions](widening-and-narrowing-conversions.md)
