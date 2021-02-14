@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 비동기 및 Wait를 사용한 비동기 프로그래밍 (Visual Basic)'
 title: Async 및 Await를 사용한 비동기 프로그래밍
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: b4f35b482b4ee3fc7e08c296cf3815fb2bdd6874
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e0723490a5f3863dc05acd49d6e3e91133413420
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555382"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474358"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Async 및 Wait를 사용한 비동기 프로그래밍 (Visual Basic)
 
@@ -165,7 +166,7 @@ Windows 런타임에는 Windows 앱에서 `Async` 및 `Await`와 함께 사용�
 `Async` 및 `Await`은 상황별 키워드입니다. 자세한 내용과 예제는 다음 항목을 참조하세요.
 
 - [Async](../../../language-reference/modifiers/async.md)
-- [Wait 연산자](../../../language-reference/operators/await-operator.md)
+- [Await 연산자](../../../language-reference/operators/await-operator.md)
 
 ## <a name="return-types-and-parameters"></a><a name="BKMK_ReturnTypesandParameters"></a> 반환 형식 및 매개 변수
 
@@ -257,5 +258,5 @@ Windows 런타임 프로그래밍의 비동기 API에는 작업과 유사한 다
 
 ## <a name="see-also"></a>참조
 
-- [Wait 연산자](../../../language-reference/operators/await-operator.md)
+- [Await 연산자](../../../language-reference/operators/await-operator.md)
 - [Async](../../../language-reference/modifiers/async.md)

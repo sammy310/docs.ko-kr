@@ -5,16 +5,16 @@ ms.date: 02/05/2021
 ms.topic: reference
 helpviewer_keywords:
 - code analysis, categories
-ms.openlocfilehash: 3eaff57a7ea175fbe0895fb7bb8d8d0d8df1365d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: fdb4662f52a13906a2d9bcb3fd9a90860e394e72
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99804193"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100467331"
 ---
 # <a name="rule-categories"></a>규칙 범주
 
-각 코드 분석 규칙은 규칙의 범주에 속합니다. 예를 들어 디자인 규칙은 .NET 디자인 지침을 준수 하도록 지원 하 고 보안 규칙은 보안 결함을 방지 하는 데 도움이 됩니다. 규칙의 [전체 범주를 사용 하거나 사용 하지 않도록](configuration-options.md#scope) 설정할 수 있습니다. 범주 별로 [추가 옵션을 구성할](code-quality-rule-options.md#category-of-rules) 수도 있습니다.
+각 코드 분석 규칙은 규칙의 범주에 속합니다. 예를 들어 디자인 규칙은 .NET 디자인 지침을 준수 하도록 지원 하 고 보안 규칙은 보안 결함을 방지 하는 데 도움이 됩니다. 규칙의 전체 범주에 대 한 [심각도 수준을 구성할](configuration-options.md#scope) 수 있습니다. 범주 별로 [추가 옵션을 구성할](code-quality-rule-options.md#category-of-rules) 수도 있습니다.
 
 다음 표에서는 다양 한 코드 분석 규칙 범주를 보여 주고 각 범주의 규칙에 대 한 링크를 제공 합니다.
 

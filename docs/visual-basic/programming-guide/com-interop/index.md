@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: COM Interop (Visual Basic)'
 title: COM Interop
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 66762d4551e458b36b70fb0831bf17ade70aa8cb
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 02ce21c6175f76bca17ae6ab57aa1569800167f4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91083230"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100460711"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop(Visual Basic)
 
@@ -48,7 +49,7 @@ COM(구성 요소 개체 모델)을 통해 개체는 기능을 다른 구성 요
  [연습: COM 개체를 사용한 상속 구현](walkthrough-implementing-inheritance-with-com-objects.md)  
  기존 COM 개체를 새 개체의 기반으로 사용하는 방법을 설명합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 
  [비관리 코드와의 상호 운용](../../../framework/interop/index.md)  
  공용 언어 런타임에서 제공하는 상호 운용성 서비스를 설명합니다.  

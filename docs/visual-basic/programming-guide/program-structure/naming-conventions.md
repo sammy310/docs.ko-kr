@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic 명명 규칙'
 title: 명명 규칙
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: b25d246bd31147b7a9ba2c72214926fdb5ca8895
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 058d3b06ca1da71c4d8993c6bd451531ec758dbd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072147"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461010"
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic 명명 규칙
 
-Visual Basic 응용 프로그램에서 요소의 이름을 지정할 때 해당 이름의 첫 문자는 영문자 또는 밑줄 이어야 합니다. 그러나 밑줄로 시작 하는 이름은 [언어 독립성 및 언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md) (CLS)와 호환 되지 않습니다.  
+Visual Basic 응용 프로그램에서 요소의 이름을 지정할 때 해당 이름의 첫 문자는 영문자 또는 밑줄 이어야 합니다. 그러나 밑줄로 시작 하는 이름은 [언어 독립성 및 Language-Independent 구성 요소](../../../standard/language-independence-and-language-independent-components.md) (CLS)와 호환 되지 않습니다.  
   
  다음 제안 사항이 이름 지정에 적용 됩니다.  
   
@@ -41,7 +42,7 @@ Visual Basic 응용 프로그램에서 요소의 이름을 지정할 때 해당 
   
 - 외부 범위의 이름과 동일한 내부 범위에서 이름을 사용 하지 마십시오. 잘못 된 변수에 액세스 하면 오류가 발생할 수 있습니다. 변수와 이름이 같은 키워드 사이에 충돌이 발생 하는 경우 적절 한 형식 라이브러리를 사용 하 여 키워드 앞에 키워드를 식별 해야 합니다. 예를 들어, 라는 변수를 사용 하는 경우 `Date` 를 호출 해야만 내장 함수를 사용할 수 있습니다 `Date` <xref:System.DateTime.Date%2A?displayProperty=nameWithType> .  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [코드에서 요소 이름으로 사용되는 키워드](keywords-as-element-names-in-code.md)
 - [Me, My, MyBase 및 MyClass](me-my-mybase-and-myclass.md)

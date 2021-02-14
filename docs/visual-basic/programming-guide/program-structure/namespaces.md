@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic의 네임 스페이스'
 title: 네임스페이스
 ms.date: 07/20/2015
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: f4521fa10c3bb9e8e121e3c228a23061becd1741
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2f7c0bfd29bf6fe104252aa125b4ddff1259b50a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072199"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100460750"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic의 네임스페이스
 
@@ -33,7 +34,7 @@ ms.locfileid: "91072199"
   
 ## <a name="avoiding-name-collisions"></a>이름 충돌 방지  
 
- .NET Framework 네임 스페이스는 다른 라이브러리에서 유사한 이름을 사용 하 여 클래스 라이브러리 개발자가 방해 하는 *네임 스페이스 오염*이라고 하는 문제를 해결 합니다. 기존 구성 요소와의 이러한 충돌을 *이름 충돌*이라고도 합니다.  
+ .NET Framework 네임 스페이스는 다른 라이브러리에서 유사한 이름을 사용 하 여 클래스 라이브러리 개발자가 방해 하는 *네임 스페이스 오염* 이라고 하는 문제를 해결 합니다. 기존 구성 요소와의 이러한 충돌을 *이름 충돌* 이라고도 합니다.  
   
  예를 들어 `ListBox`라는 새 클래스를 만드는 경우, 프로젝트 내부에서 한정자 없이 사용할 수 있습니다. 그러나 동일한 프로젝트에서 .NET Framework 클래스를 사용 하려면 <xref:System.Windows.Forms.ListBox> 참조를 고유 하 게 지정 하기 위해 정규화 된 참조를 사용 해야 합니다. 참조가 고유 하지 않으면 Visual Basic는 이름이 모호 하다는 오류를 생성 합니다. 다음 코드 예제에서는 이러한 개체를 선언하는 방법을 보여 줍니다.  
   
@@ -53,7 +54,7 @@ ms.locfileid: "91072199"
   
  [!code-vb[VbVbalrApplication#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#8)]  
   
- 어떤 개체가 사용되고 있는지를 컴파일러가 확인할 수 있도록 해주기 때문에 정규화된 이름은 이름 충돌을 방지합니다. 그러나 이름 자체가 길고 복잡할 수 있습니다. 이를 해결하려면 `Imports` 문을 사용하여 *별칭*을 정의할 수 있습니다. 별칭이란 정규화된 이름 대신 사용할 수 있는 약식 이름을 말합니다. 예를 들어 다음 코드 예제에서는 정규화된 이름 두 개의 별칭을 만들고 이러한 별칭을 사용하여 두 개체를 정의합니다.  
+ 어떤 개체가 사용되고 있는지를 컴파일러가 확인할 수 있도록 해주기 때문에 정규화된 이름은 이름 충돌을 방지합니다. 그러나 이름 자체가 길고 복잡할 수 있습니다. 이를 해결하려면 `Imports` 문을 사용하여 *별칭* 을 정의할 수 있습니다. 별칭이란 정규화된 이름 대신 사용할 수 있는 약식 이름을 말합니다. 예를 들어 다음 코드 예제에서는 정규화된 이름 두 개의 별칭을 만들고 이러한 별칭을 사용하여 두 개체를 정의합니다.  
   
  [!code-vb[VbVbalrApplication#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#9)]  
   
