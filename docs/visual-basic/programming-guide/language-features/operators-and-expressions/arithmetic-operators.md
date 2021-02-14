@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 산술 연산자 Visual Basic'
 title: 산술 연산자
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 023e479736285aa2d04509e05f49fe930cb4721d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3a7005b0a44f9b0358e393d8580a2a19a9a19881
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090081"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100465329"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic의 산술 연산자
 
 산술 연산자는 리터럴, 변수, 기타 식, 함수 및 속성 호출, 상수로 표시 되는 숫자 값의 계산과 관련 된 많은 익숙한 산술 연산을 수행 하는 데 사용 됩니다. 또한 산술 연산자를 사용 하 여 분류 하는 비트 시프트 연산자는 피연산자의 개별 비트 수준에서 작동 하 고 비트 패턴을 왼쪽 또는 오른쪽으로 이동 하는 연산자입니다.  
   
-## <a name="arithmetic-operations"></a>산술 연산자  
+## <a name="arithmetic-operations"></a>산술 연산  
 
  다음 예제가 보여 주는 것 처럼 [+ 연산자](../../../language-reference/operators/addition-operator.md)를 사용 하 여 식에 두 값을 추가 하거나 [-연산자 (Visual Basic)](../../../language-reference/operators/subtraction-operator.md)를 사용 하 여 다른 값에서 1을 뺄 수 있습니다.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "91090081"
   
  예외를 catch 하는 경우 <xref:System.DivideByZeroException> 해당 멤버를 사용 하 여 처리를 지원할 수 있습니다. 예를 들어 <xref:System.Exception.Message%2A> 속성은 예외에 대 한 메시지 텍스트를 포함 합니다. 자세한 내용은 [Try...Catch...Finally 문](../../../language-reference/statements/try-catch-finally-statement.md)을 참조하세요.  
   
-## <a name="bit-shift-operations"></a>비트 시프트 연산  
+## <a name="bit-shift-operations"></a>Bit-Shift 작업  
 
  비트 시프트 연산은 비트 패턴에서 산술 시프트를 수행 합니다. 패턴은 왼쪽에 있는 피연산자에 포함 되 고 오른쪽의 피연산자는 패턴을 이동할 위치 수를 지정 합니다. [>> 연산자](../../../language-reference/operators/right-shift-operator.md) 를 사용 하 여 패턴을 오른쪽으로 이동 하거나 [<< 연산자](../../../language-reference/operators/left-shift-operator.md)를 사용 하 여 왼쪽으로 이동할 수 있습니다.  
   
@@ -100,7 +101,7 @@ ms.locfileid: "91090081"
   
  그러나를 설정 하는 경우에는 `Option Strict Off` Visual Basic에서 암시적 축소 변환을 수행할 수 있지만 예기치 않은 데이터 손실 또는 전체 자릿수가 발생할 수 있습니다. 따라서 프로덕션 코드를 작성할 때를 사용 하는 것이 좋습니다 `Option Strict On` . 자세한 내용은 [Widening and Narrowing Conversions](../data-types/widening-and-narrowing-conversions.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [산술 연산자](../../../language-reference/operators/arithmetic-operators.md)
 - [비트 시프트 연산자](../../../language-reference/operators/bit-shift-operators.md)

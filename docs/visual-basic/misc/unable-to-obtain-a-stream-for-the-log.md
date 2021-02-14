@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 로그에 대 한 스트림을 가져올 수 없습니다.'
 title: 로그에 대한 스트림을 가져올 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLog_ExhaustedPossibleStreamNames
 ms.assetid: 33994f52-8efb-4790-a459-033e5c1db632
-ms.openlocfilehash: 887356fac3abe5c9d28751f7c4d3b1908ed35acb
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6eda12eb4dc2b3cf303e543a66e1f2f7d739eb6b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078387"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455277"
 ---
 # <a name="unable-to-obtain-a-stream-for-the-log"></a>로그에 대한 스트림을 가져올 수 없습니다.
 
@@ -25,7 +26,7 @@ ms.locfileid: "91078387"
   
 2. <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 개체가 새 로그를 만들 수 있도록 기존 로그를 보관하고 컴퓨터에서 제거합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A>

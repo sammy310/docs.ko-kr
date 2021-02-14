@@ -1,22 +1,23 @@
 ---
+description: '에 대 한 자세한 정보: 문화권의 문자열에 영향을 주는 방법 Visual Basic'
 title: 문화권이 문자열에 영향을 주는 방식
 ms.date: 07/20/2015
 helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 878e028f7c7f0e93752765272e93baa3ffe1426d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e1d330c9bf879ad174f58d7a91c0ddac7e68c0dd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059218"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459970"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Visual Basic에서 문화권이 문자열에 영향을 주는 방식
 
 이 도움말 페이지에서는 Visual Basic 문화권 정보를 사용 하 여 문자열 변환 및 비교를 수행 하는 방법을 설명 합니다.  
   
-## <a name="when-to-use-culture-specific-strings"></a>문화권 관련 문자열을 사용 하는 경우  
+## <a name="when-to-use-culture-specific-strings"></a>Culture-Specific 문자열을 사용 하는 경우  
 
  일반적으로 사용자에 게 제공 되는 모든 데이터에 대해 문화권별 문자열을 사용 하 고 응용 프로그램의 내부 데이터에 대해 문화권 고정 문자열을 사용 해야 합니다.  
   
@@ -24,7 +25,7 @@ ms.locfileid: "91059218"
   
  그러나 응용 프로그램이 날짜를 중앙 서버에 업로드 하는 경우에는 잠재적으로 서로 다른 날짜 형식 간의 혼동을 방지 하기 위해 하나의 특정 문화권에 따라 문자열의 형식을 지정 해야 합니다.  
   
-## <a name="culture-sensitive-functions"></a>문화권 구분 함수  
+## <a name="culture-sensitive-functions"></a>Culture-Sensitive 함수  
 
  및 함수를 제외 하 고 모든 Visual Basic 문자열 변환 함수는 `Str` 응용 프로그램의 `Val` 문화권 정보를 사용 하 여 변환과 비교가 응용 프로그램 사용자의 문화권에 적합 한지 확인 합니다.  
   
@@ -80,11 +81,11 @@ ms.locfileid: "91059218"
 |`CurrentCulture` 또는 `CurrentCultureIgnoreCase`|현재 문화권의 문자열 해석을 기반으로 하는 비교입니다.|사용자에 게 표시 되는 데이터, 대부분의 사용자 입력 및 언어 해석이 필요한 기타 데이터를 비교할 때 이러한 값을 사용 합니다.|  
 |`InvariantCulture` 또는 `InvariantCultureIgnoreCase`|고정 문화권의 문자열 해석을 기반으로 하는 비교입니다.<br /><br /> `Ordinal` `OrdinalIgnoreCase` 고정 문화권은 허용 된 범위를 벗어난 문자를 동일한 고정 문자로 처리 하기 때문에이는 및와는 다릅니다.|데이터 유지를 비교 하거나 고정 정렬 순서가 필요한 언어적으로 관련 된 데이터를 표시 하는 경우에만 이러한 값을 사용 합니다.|  
   
-### <a name="security-considerations"></a>보안 고려 사항  
+### <a name="security-considerations"></a>보안 고려사항  
 
  애플리케이션에서 비교 또는 대/소문자 변경 작업의 결과에 따라 보안 결정 다음 작업을 사용 해야 합니다 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 통과 `Ordinal` 또는 `OrdinalIgnoreCase` 에 대 한는 `comparisonType` 인수입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Globalization.CultureInfo>
 - [Visual Basic의 문자열 소개](introduction-to-strings.md)

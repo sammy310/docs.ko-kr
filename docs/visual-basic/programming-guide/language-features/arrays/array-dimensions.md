@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic의 배열 차원'
 title: 배열 차원
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: f971f0c3693177adbcb8869d487e3ad41d49ddc2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 055a3efc1410bf80daf3804453adc2c20266733c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413106"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486552"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 
-*차원은* 배열의 요소에 대 한 사양을 변경할 수 있는 방향입니다. 해당 월의 각 날짜에 대 한 판매량 합계를 포함 하는 배열에는 1 차원 (해당 월의 일)이 있습니다. 해당 월의 각 날짜에 대 한 총 판매량을 포함 하는 배열에는 두 개의 차원 (부서 번호와 해당 월의 일)이 있습니다. 배열에 포함 된 차원의 수를 *차수*라고 합니다.
+*차원은* 배열의 요소에 대 한 사양을 변경할 수 있는 방향입니다. 해당 월의 각 날짜에 대 한 판매량 합계를 포함 하는 배열에는 1 차원 (해당 월의 일)이 있습니다. 해당 월의 각 날짜에 대 한 총 판매량을 포함 하는 배열에는 두 개의 차원 (부서 번호와 해당 월의 일)이 있습니다. 배열에 포함 된 차원의 수를 *차수* 라고 합니다.
 
 > [!NOTE]
 > 속성을 사용 하 여 <xref:System.Array.Rank%2A> 배열에 포함 된 차원의 수를 확인할 수 있습니다.
@@ -51,7 +52,7 @@ Dim ageCounts(120) As UInteger
 Dim officeCounts(40, 5) As Byte
 ```
 
-2 차원 배열을 *사각형 배열*이 라고도 합니다.
+2 차원 배열을 *사각형 배열* 이 라고도 합니다.
 
 ### <a name="three-dimensions"></a>3 차원
 
@@ -93,7 +94,7 @@ Dim salesAmounts(4, 11, 30) As Double
 > [!NOTE]
 > 문 또는 절을 사용 하지 않고 배열을 만들 수 있습니다 `Dim` `New` . 예를 들어 메서드를 호출 <xref:System.Array.CreateInstance%2A> 하거나 다른 구성 요소에서 이러한 방식으로 만든 배열에 코드를 전달할 수 있습니다. 이러한 배열의 하한값은 0이 될 수 없습니다. 항상 메서드나 함수를 사용 하 여 차원의 하 한을 테스트할 수 있습니다 <xref:System.Array.GetLowerBound%2A> `LBound` .
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [배열](index.md)
 - [배열 문제 해결](troubleshooting-arrays.md)

@@ -1,23 +1,24 @@
 ---
+description: '자세한 정보: 개체 지향 프로그래밍 (Visual Basic)'
 title: 개체 지향 프로그래밍
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-ms.openlocfilehash: f7e222cde8ce80d4c52cc8b4b111c576eb4041b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: af2fbac16bfefc90876bf22bb8c67de162ee6459
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413195"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486799"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>개체 지향 프로그래밍 (Visual Basic)
 
 Visual Basic은 캡슐화, 상속 및 다형성을 포함 하는 개체 지향 프로그래밍에 대 한 완전 한 지원을 제공 합니다.
 
- *캡슐화*는 서로 관련된 속성, 메서드 및 기타 멤버의 그룹을 하나의 단위나 개체로 취급하는 것을 말합니다.
+ *캡슐화* 는 서로 관련된 속성, 메서드 및 기타 멤버의 그룹을 하나의 단위나 개체로 취급하는 것을 말합니다.
 
- *상속*은 기존 클래스를 기반으로 새로운 클래스를 만들 수 있는 능력을 나타냅니다.
+ *상속* 은 기존 클래스를 기반으로 새로운 클래스를 만들 수 있는 능력을 나타냅니다.
 
- *다형성*은 동일한 속성 또는 메서드를 각각 다른 방식으로 구현하는 여러 클래스를 서로 교체하여 사용할 수 있음을 의미합니다.
+ *다형성* 은 동일한 속성 또는 메서드를 각각 다른 방식으로 구현하는 여러 클래스를 서로 교체하여 사용할 수 있음을 의미합니다.
 
  이 단원에서는 다음과 같은 개념에 대해 설명합니다.
 
@@ -41,7 +42,7 @@ Visual Basic은 캡슐화, 상속 및 다형성을 포함 하는 개체 지향 �
 
 ## <a name="classes-and-objects"></a>클래스 및 개체
 
-*클래스*와 *개체*를 혼용하는 경우가 있지만 클래스는 개체의 *형식*을 나타내고 개체는 사용 가능한 클래스의 *인스턴스*를 나타냅니다. 따라서 개체를 만드는 작업을 *인스턴스화*라고 합니다. 청사진에 비유한다면 클래스는 청사진이고 개체는 해당 청사진을 사용하여 만든 빌딩입니다.
+*클래스* 와 *개체* 를 혼용하는 경우가 있지만 클래스는 개체의 *형식* 을 나타내고 개체는 사용 가능한 클래스의 *인스턴스* 를 나타냅니다. 따라서 개체를 만드는 작업을 *인스턴스화* 라고 합니다. 청사진에 비유한다면 클래스는 청사진이고 개체는 해당 청사진을 사용하여 만든 빌딩입니다.
 
 클래스를 정의하려면
 
@@ -59,14 +60,14 @@ Structure SampleStructure
 End Structure
 ```
 
-자세한 내용은 다음을 참조하십시오.
+자세한 내용은 다음을 참조하세요.
 
 - [Class 문](../../language-reference/statements/class-statement.md)
 - [Structure 문](../../language-reference/statements/structure-statement.md)
 
 ### <a name="class-members"></a>클래스 멤버
 
-각 클래스에는 클래스 데이터를 설명하는 속성, 클래스 동작을 정의하는 메서드 및 서로 다른 클래스와 개체 간의 통신을 제공하는 이벤트가 포함된 다양한 *클래스 멤버*가 있을 수 있습니다.
+각 클래스에는 클래스 데이터를 설명하는 속성, 클래스 동작을 정의하는 메서드 및 서로 다른 클래스와 개체 간의 통신을 제공하는 이벤트가 포함된 다양한 *클래스 멤버* 가 있을 수 있습니다.
 
 #### <a name="properties-and-fields"></a>속성 및 필드
 
@@ -112,17 +113,17 @@ End Class
 
 대부분의 속성에는 속성 값을 설정하고 가져오는 메서드나 프로시저가 있습니다. 그러나 읽기 전용 또는 쓰기 전용 속성을 만들어 속성을 수정하거나 읽지 못하도록 제한할 수도 있습니다. 이렇게 하려면 Visual Basic에서는 `ReadOnly` 및 `WriteOnly` 키워드를 사용하면 되고 하지만 자동 구현 속성은 읽기 전용 또는 쓰기 전용일 수 없습니다.
 
-자세한 내용은 다음을 참조하십시오.
+자세한 내용은 다음을 참조하세요.
 
 - [Property Statement](../../language-reference/statements/property-statement.md)
 - [Get 문](../../language-reference/statements/get-statement.md)
 - [Set 문](../../language-reference/statements/set-statement.md)
-- [ReadOnly](../../language-reference/modifiers/readonly.md)
+- [읽기 전용](../../language-reference/modifiers/readonly.md)
 - [WriteOnly](../../language-reference/modifiers/writeonly.md)
 
 #### <a name="methods"></a>메서드
 
- *메서드*는 개체에서 수행할 수 있는 작업입니다.
+ *메서드* 는 개체에서 수행할 수 있는 작업입니다.
 
 > [!NOTE]
 > Visual Basic에서는 두 가지 방법으로 메서드를 만들 수 있습니다. 메서드가 값을 반환하지 않으면 `Sub` 문을 사용하고 메서드가 값을 반환하면 `Function` 문을 사용합니다.
@@ -137,7 +138,7 @@ Class SampleClass
 End Class
 ```
 
-클래스에는 매개 변수 개수나 매개 변수 형식이 다른 동일한 메서드의 구현 또는 *오버로드*가 여러 개 있을 수 있습니다.
+클래스에는 매개 변수 개수나 매개 변수 형식이 다른 동일한 메서드의 구현 또는 *오버로드* 가 여러 개 있을 수 있습니다.
 
 메서드를 오버로드하려면
 
@@ -152,7 +153,7 @@ End Sub
 
 대부분의 경우 클래스 정의 내에서 메서드를 선언하지만 그러나 Visual Basic는 클래스의 실제 정의 밖에 있는 기존 클래스에 메서드를 추가할 수 있는 *확장 메서드도* 지원 합니다.
 
-자세한 내용은 다음을 참조하십시오.
+자세한 내용은 다음을 참조하세요.
 
 - [Function 문](../../language-reference/statements/function-statement.md)
 - [Sub 문](../../language-reference/statements/sub-statement.md)
@@ -183,7 +184,7 @@ End Class
 
 #### <a name="events"></a>이벤트
 
-클래스나 개체에서는 특정 상황이 발생할 때 이벤트를 통해 다른 클래스나 개체에 이를 알려 줄 수 있습니다. 이벤트를 보내거나 발생시키는 클래스를 *게시자*라고 하며 이벤트를 받거나 처리하는 클래스를 *구독자*라고 합니다. 이벤트를 발생시키고 처리하는 방법에 대한 자세한 내용은 [이벤트](../../../standard/events/index.md)를 참조하세요.
+클래스나 개체에서는 특정 상황이 발생할 때 이벤트를 통해 다른 클래스나 개체에 이를 알려 줄 수 있습니다. 이벤트를 보내거나 발생시키는 클래스를 *게시자* 라고 하며 이벤트를 받거나 처리하는 클래스를 *구독자* 라고 합니다. 이벤트를 발생시키고 처리하는 방법에 대한 자세한 내용은 [이벤트](../../../standard/events/index.md)를 참조하세요.
 
 - 이벤트를 선언 하려면 [이벤트 문을](../../language-reference/statements/event-statement.md)사용 합니다.
 
@@ -195,7 +196,7 @@ End Class
 
 #### <a name="nested-classes"></a>중첩 클래스
 
-다른 클래스 내에 정의된 클래스를 *중첩 클래스*라고 합니다. 기본적으로 중첩 클래스는 전용입니다.
+다른 클래스 내에 정의된 클래스를 *중첩 클래스* 라고 합니다. 기본적으로 중첩 클래스는 전용입니다.
 
 ```vb
 Class Container
@@ -213,14 +214,14 @@ Dim nestedInstance As Container.Nested = New Container.Nested()
 
 ### <a name="access-modifiers-and-access-levels"></a>액세스 한정자 및 액세스 수준
 
-모든 클래스 및 클래스 멤버는 *액세스 한정자*를 사용하여 다른 클래스에 제공할 액세스 수준을 지정할 수 있습니다.
+모든 클래스 및 클래스 멤버는 *액세스 한정자* 를 사용하여 다른 클래스에 제공할 액세스 수준을 지정할 수 있습니다.
 
 다음과 같은 액세스 한정자를 사용할 수 있습니다.
 
 |Visual Basic 한정자|정의|
 |---------------------------|----------------|
 |[공용](../../language-reference/modifiers/public.md)|동일한 어셈블리의 다른 코드나 해당 어셈블리를 참조하는 다른 어셈블리의 코드에서 형식이나 멤버에 액세스할 수 있습니다.|
-|[프라이빗](../../language-reference/modifiers/private.md)|동일한 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
+|[개인](../../language-reference/modifiers/private.md)|동일한 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
 |[보호](../../language-reference/modifiers/protected.md)|동일한 클래스의 코드나 파생 클래스의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.|
 |[Friend](../../language-reference/modifiers/friend.md)|동일한 어셈블리의 코드에서는 형식이나 멤버에 액세스할 수 있지만 다른 어셈블리의 코드에서는 액세스할 수 없습니다.|
 |`Protected Friend`|동일한 어셈블리의 코드 또는 다른 어셈블리의 파생 클래스에서 형식이나 멤버에 액세스할 수 있습니다.|
@@ -251,7 +252,7 @@ Dim sampleObject = New SampleClass With
     {.FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-자세한 내용은 다음을 참조하십시오.
+자세한 내용은 다음을 참조하세요.
 
 - [새 운영자](../../language-reference/operators/new-operator.md)
 - [개체 이니셜라이저: 명명된 형식 및 무명 형식](../language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
@@ -276,7 +277,7 @@ MsgBox(SampleClass.SampleString)
 
  Visual Basic 공유 모듈은 공유 멤버만 포함 하며 인스턴스화할 수 없습니다. 공유 멤버도 비공유 속성, 필드 또는 메서드에 액세스할 수 없습니다.
 
- 자세한 내용은 다음을 참조하십시오.
+ 자세한 내용은 다음을 참조하세요.
 
 - [공유](../../language-reference/modifiers/shared.md)
 - [Module 문](../../language-reference/statements/module-statement.md)
@@ -297,7 +298,7 @@ Dim sampleObject =
 
 ## <a name="inheritance"></a>상속
 
-상속을 사용하면 다른 클래스에 정의된 동작을 다시 사용, 확장 및 수정하는 새 클래스를 만들 수 있습니다. 멤버가 상속되는 클래스를 *기본 클래스*라고 하고 해당 멤버를 상속하는 클래스를 *파생 클래스*라고 합니다. 그러나 Visual Basic의 모든 클래스는 <xref:System.Object> .net 클래스 계층 구조를 지원 하 고 모든 클래스에 하위 수준 서비스를 제공 하는 클래스에서 암시적으로 상속 됩니다.
+상속을 사용하면 다른 클래스에 정의된 동작을 다시 사용, 확장 및 수정하는 새 클래스를 만들 수 있습니다. 멤버가 상속되는 클래스를 *기본 클래스* 라고 하고 해당 멤버를 상속하는 클래스를 *파생 클래스* 라고 합니다. 그러나 Visual Basic의 모든 클래스는 <xref:System.Object> .net 클래스 계층 구조를 지원 하 고 모든 클래스에 하위 수준 서비스를 제공 하는 클래스에서 암시적으로 상속 됩니다.
 
 > [!NOTE]
 > Visual Basic는 다중 상속을 지원 하지 않습니다. 즉, 파생된 클래스에 대해 하나의 기본 클래스만 지정할 수 있습니다.
@@ -326,7 +327,7 @@ MustInherit Class BaseClass
 End Class
 ```
 
-자세한 내용은 다음을 참조하십시오.
+자세한 내용은 다음을 참조하세요.
 
 - [Inherits Statement](../../language-reference/statements/inherits-statement.md)
 - [NotInheritable](../../language-reference/modifiers/notinheritable.md)
@@ -369,7 +370,7 @@ Class SampleClass
 End Class
 ```
 
-자세한 내용은 다음을 참조하십시오.
+자세한 내용은 다음을 참조하세요.
 
 - [인터페이스](../language-features/interfaces/index.md)
 - [Interface 문](../../language-reference/statements/interface-statement.md)
@@ -401,7 +402,7 @@ sampleObject.Field = "Sample string"
 
 ## <a name="delegates"></a>대리자
 
- *대리자*는 메서드 시그니처를 정의하는 형식으로, 호환되는 시그니처가 있는 모든 메서드에 대한 참조를 제공할 수 있습니다. 대리자를 통해 메서드를 호출할 수 있습니다. 대리자는 메서드를 다른 메서드에 인수로 전달하는 데 사용됩니다.
+ *대리자* 는 메서드 시그니처를 정의하는 형식으로, 호환되는 시그니처가 있는 모든 메서드에 대한 참조를 제공할 수 있습니다. 대리자를 통해 메서드를 호출할 수 있습니다. 대리자는 메서드를 다른 메서드에 인수로 전달하는 데 사용됩니다.
 
 > [!NOTE]
 > 이벤트 처리기는 대리자를 통해 호출되는 메서드라고 할 수 있습니다. 이벤트를 처리할 때 대리자를 사용하는 방법에 대한 자세한 내용은 [이벤트](../../../standard/events/index.md)를 참조하세요.
@@ -428,12 +429,12 @@ Class SampleClass
 End Class
 ```
 
-자세한 내용은 다음을 참조하십시오.
+자세한 내용은 다음을 참조하세요.
 
 - [대리자](../language-features/delegates/index.md)
 - [Delegate 문](../../language-reference/statements/delegate-statement.md)
 - [AddressOf 연산자](../../language-reference/operators/addressof-operator.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic 프로그래밍 가이드](../index.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연습:에서 IEnumerable (Of T) 구현 Visual Basic'
 title: IEnumerable 구현
 ms.date: 07/31/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: f1f0036c38299f2392f8c8705e67b7bb6b7db068
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 87905e4f110d3a9d95b1cad642296ea8105f32f4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058640"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428144"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>연습: Visual Basic에서 IEnumerable (Of T) 구현
 
@@ -30,13 +31,13 @@ ms.locfileid: "91058640"
   
 **열거 가능한 클래스 프로젝트 만들기**
 
-1. Visual Basic의 **파일** 메뉴에서 **새로 만들기** 를 가리킨 다음 **프로젝트**를 클릭 합니다.
+1. Visual Basic의 **파일** 메뉴에서 **새로 만들기** 를 가리킨 다음 **프로젝트** 를 클릭 합니다.
 
-1. **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **클래스 라이브러리**를 선택합니다. **이름** 상자에 `StreamReaderEnumerable`를 입력한 다음 **확인**을 클릭합니다. 새 프로젝트가 표시 됩니다.
+1. **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows** 가 선택되었는지 확인합니다. **템플릿** 창에서 **클래스 라이브러리** 를 선택합니다. **이름** 상자에 `StreamReaderEnumerable`를 입력한 다음 **확인** 을 클릭합니다. 새 프로젝트가 표시 됩니다.
 
-1. **솔루션 탐색기**에서 Class1 파일을 마우스 오른쪽 단추로 클릭 하 고 **이름 바꾸기**를 클릭 합니다. 파일 이름을 `StreamReaderEnumerable.vb`로 바꾸고 ENTER 키를 누릅니다. 파일 이름을 바꾸면 클래스 이름도 `StreamReaderEnumerable`으로 바뀝니다. 이 클래스는 `IEnumerable(Of String)` 인터페이스를 구현합니다.
+1. **솔루션 탐색기** 에서 Class1 파일을 마우스 오른쪽 단추로 클릭 하 고 **이름 바꾸기** 를 클릭 합니다. 파일 이름을 `StreamReaderEnumerable.vb`로 바꾸고 ENTER 키를 누릅니다. 파일 이름을 바꾸면 클래스 이름도 `StreamReaderEnumerable`으로 바뀝니다. 이 클래스는 `IEnumerable(Of String)` 인터페이스를 구현합니다.
 
-1. StreamReaderEnumerable 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가**를 가리킨 다음 **새 항목**을 클릭 합니다. **클래스** 템플릿을 선택 합니다. **이름** 상자에 `StreamReaderEnumerator.vb`를 입력하고 **확인**을 클릭합니다.
+1. StreamReaderEnumerable 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가** 를 가리킨 다음 **새 항목** 을 클릭 합니다. **클래스** 템플릿을 선택 합니다. **이름** 상자에를 입력 `StreamReaderEnumerator.vb` 하 고 **확인** 을 클릭 합니다.
 
  이 프로젝트의 첫 번째 클래스는 열거 가능한 클래스 이며 인터페이스를 구현 합니다 `IEnumerable(Of String)` . 이 제네릭 인터페이스는 인터페이스를 구현 <xref:System.Collections.IEnumerable> 하 고이 클래스의 소비자가 형식의 값에 액세스할 수 있도록 보장 `String` 합니다.  
   
@@ -94,7 +95,7 @@ ms.locfileid: "91058640"
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/Module1.vb#10)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic의 LINQ 소개](../linq/introduction-to-linq.md)
 - [제어 흐름](index.md)

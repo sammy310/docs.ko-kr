@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 리플렉션 (Visual Basic)'
 title: 반사
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 79603e0951732c7d0d0031d4fc44ddd7dbd392c9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 532087f2ac32242b473d4524a6026519951d96d2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077256"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486812"
 ---
 # <a name="reflection-visual-basic"></a>리플렉션(Visual Basic)
 
@@ -22,7 +23,7 @@ Dim type As System.Type = i.GetType()
 System.Console.WriteLine(type)  
 ```  
   
- 결과는 다음과 같습니다.  
+ 출력은 다음과 같습니다.  
   
  `System.Int32`  
   
@@ -34,7 +35,7 @@ Dim info As System.Reflection.Assembly = GetType(System.Int32).Assembly
 System.Console.WriteLine(info)  
 ```  
   
- 결과는 다음과 같습니다.  
+ 출력은 다음과 같습니다.  
   
  `mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089`  
   

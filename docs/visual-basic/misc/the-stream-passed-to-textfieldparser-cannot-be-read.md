@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: TextFieldParser에 전달 된 스트림을 읽을 수 없습니다.'
 title: TextFieldParser에 전달된 스트림을 읽을 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_StreamNotReadable
 ms.assetid: b6ac8043-b939-441c-822f-de6f16f45525
-ms.openlocfilehash: 5307f6da4847672c91c2596c3c79f6558de95c03
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4af841502b56308a79061a2097f95c7c8000849e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095826"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428014"
 ---
 # <a name="the-stream-passed-to-textfieldparser-cannot-be-read"></a>TextFieldParser에 전달된 스트림을 읽을 수 없습니다.
 
@@ -19,7 +20,7 @@ ms.locfileid: "91095826"
   
 - 파일이 텍스트 파일인지 확인합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [방법: 여러 형식의 텍스트 파일에서 읽기](../developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
 - [My.computer.filesystem.opentextfieldparser.](xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 논리 및 비트 연산자 Visual Basic'
 title: 논리 및 비트 연산자
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: c15b9337f262563941699c0ff8fe5219ca6a5c93
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 55d9567813a9114573e1e3f70fe181cb8621b350
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085999"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472724"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic의 논리 및 비트 연산자
 
@@ -42,7 +43,7 @@ ms.locfileid: "91085999"
 
  [And 연산자](../../../language-reference/operators/and-operator.md) 는 두 식에 논리 *결합* 을 수행 `Boolean` 합니다. 두 식이 모두로 계산 `True` 되 면를 `And` 반환 `True` 합니다. 식 중 하나 이상이로 평가 `False` 되 면를 `And` 반환 `False` 합니다.  
   
- [Or 연산자](../../../language-reference/operators/or-operator.md) 는 두 식 *disjunction* 에 논리합 *inclusion* 연산을 수행 합니다 `Boolean` . 두 식이 모두로 계산 `True` 되거나 모두로 계산 `True` 되 면이 `Or` 반환 `True` 됩니다. 식이로 계산 되지 않는 경우 `True` 는을 `Or` 반환 `False` 합니다.  
+ [Or 연산자](../../../language-reference/operators/or-operator.md) 는 두 식  에 논리합  연산을 수행 합니다 `Boolean` . 두 식이 모두로 계산 `True` 되거나 모두로 계산 `True` 되 면이 `Or` 반환 `True` 됩니다. 식이로 계산 되지 않는 경우 `True` 는을 `Or` 반환 `False` 합니다.  
   
  [Xor 연산자](../../../language-reference/operators/xor-operator.md) 는 두 식에 대해 논리적 *제외* 를 수행 합니다 `Boolean` . 정확히 하나의 식이로 계산 `True` 되지만 둘 다로 계산 되지 않는 경우는를 `Xor` 반환 `True` 합니다. 두 식이 모두로 계산 `True` 되거나 모두로 계산 `False` 되는 경우는를 `Xor` 반환 `False` 합니다.  
   
@@ -50,13 +51,13 @@ ms.locfileid: "91085999"
   
  [!code-vb[VbVbalrOperators#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#78)]  
   
-## <a name="short-circuiting-logical-operations"></a>순환이 짧은 논리 작업  
+## <a name="short-circuiting-logical-operations"></a>Short-Circuiting 논리 작업  
 
  [AndAlso 연산자](../../../language-reference/operators/andalso-operator.md) 는 `And` 두 식에서 논리적 결합도 수행 한다는 점에서 연산자와 매우 비슷합니다 `Boolean` . 둘 사이의 주요 차이점은 `AndAlso` *단락* 동작을 보여 주는 것입니다. 식의 첫 번째 식이 `AndAlso` 로 계산 되는 경우 `False` 최종 결과를 변경할 수 없고를 반환할 수 없으므로 두 번째 식이 계산 되지 않습니다 `AndAlso` `False` .  
   
  마찬가지로 [OrElse 연산자](../../../language-reference/operators/orelse-operator.md) 는 두 식에 순환이 짧은 논리 분리를 수행 `Boolean` 합니다. 식의 첫 번째 식이 `OrElse` 로 계산 되는 경우 `True` 최종 결과를 변경할 수 없고를 반환할 수 없으므로 두 번째 식이 계산 되지 않습니다 `OrElse` `True` .  
   
-### <a name="short-circuiting-trade-offs"></a>단락 장단점  
+### <a name="short-circuiting-trade-offs"></a>Short-Circuiting Trade-Offs  
 
  단락을 통해 논리 연산의 결과를 변경할 수 없는 식을 계산 하지 않고 성능을 향상 시킬 수 있습니다. 그러나 해당 식에서 추가 작업을 수행 하는 경우 단락에서는 이러한 작업을 건너뜁니다. 예를 들어 식에 프로시저에 대 한 호출이 포함 된 경우 `Function` 식이 short short-circuit 경우 해당 프로시저는 호출 되지 않으며에 포함 된 추가 코드는 `Function` 실행 되지 않습니다. 따라서 함수는 가끔씩만 실행 될 수 있으며 제대로 테스트 되지 않을 수도 있습니다. 또는 프로그램 논리는의 코드에 따라 달라질 수 있습니다 `Function` .  
   
@@ -101,7 +102,7 @@ ms.locfileid: "91085999"
 > [!NOTE]
 > 비트 연산은 정수 계열 형식에 대해서만 수행할 수 있습니다. 비트 연산을 계속 하려면 부동 소수점 값을 정수 계열 형식으로 변환 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [논리/비트 연산자(Visual Basic)](../../../language-reference/operators/logical-bitwise-operators.md)
 - [부울 식](boolean-expressions.md)

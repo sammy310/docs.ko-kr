@@ -8,21 +8,21 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 2cda5a23bbc90ca5dc2305b5d7023e8ea6120b79
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: eb978d6af6695fd2e4b5473ac5c0dc216e726e52
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99643074"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459957"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET 소스 코드 분석 개요
 
-.NET 컴파일러 플랫폼(Roslyn) 분석기는 C# 또는 Visual Basic 코드를 검사하여 코드 품질 및 코드 스타일 문제를 확인합니다. .NET 5.0부터 이러한 분석기는 .NET SDK에 포함 되어 있으므로 별도로 설치할 필요가 없습니다. 프로젝트가 .NET 5 이상을 대상으로 하는 경우 기본적으로 코드 분석이 사용 됩니다. 프로젝트가 .NET Core, .NET Standard 또는 .NET Framework 같은 다른 .NET 구현을 대상으로 하는 경우 [EnableNETAnalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) 속성을로 설정 하 여 코드 분석을 수동으로 사용 하도록 설정 해야 합니다 `true` .
+.NET 컴파일러 플랫폼 (Roslyn) 분석기는 c # 또는 Visual Basic 코드에서 코드 품질 및 스타일 문제를 검사 합니다. .NET 5.0부터 이러한 분석기는 .NET SDK에 포함 되어 있으므로 별도로 설치할 필요가 없습니다. 프로젝트가 .NET 5 이상을 대상으로 하는 경우 기본적으로 코드 분석이 사용 됩니다. 프로젝트가 .NET Core, .NET Standard 또는 .NET Framework 같은 다른 .NET 구현을 대상으로 하는 경우 [EnableNETAnalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) 속성을로 설정 하 여 코드 분석을 수동으로 사용 하도록 설정 해야 합니다 `true` .
 
-.NET 5 + SDK로 이동 하지 않거나 NuGet 패키지 기반 모델을 선호 하는 경우에는 [Microsoft CodeAnalysis. Netanalyzers NuGet 패키지](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)에서도 분석기를 사용할 수 있습니다. 주문형 버전 업데이트에 대 한 패키지 기반 모델을 사용 하는 것이 좋습니다.
+.NET 5 + SDK로 이동 하거나 SDK 스타일이 아닌 .NET Framework 프로젝트를 사용 하거나 NuGet 패키지 기반 모델을 선호 하는 경우에는 [Microsoft. CodeAnalysis. NetAnalyzers NuGet 패키지](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)에서도 분석기를 사용할 수 있습니다. 주문형 버전 업데이트에 대 한 패키지 기반 모델을 사용 하는 것이 좋습니다.
 
 > [!NOTE]
-> .NET 분석기는 대상 프레임 워크에 독립적입니다. 즉, 프로젝트에서 특정 .NET 구현을 대상으로 하지 않아도 됩니다. 분석기는 및와 같은 이전 버전의 .NET을 대상으로 하는 프로젝트에 대해서도 작동 합니다 `net5.0` `netcoreapp3.1` `net472` .
+> .NET 분석기는 대상 프레임 워크에 독립적입니다. 즉, 프로젝트에서 특정 .NET 구현을 대상으로 하지 않아도 됩니다. 분석기는 및와 같은 이전 버전의 .NET을 대상으로 하는 프로젝트에 대해서도 작동 합니다 `net5.0` `netcoreapp3.1` `net472` . 그러나 [EnableNETAnalyzers](../../core/project-sdk/msbuild-props.md#enablenetanalyzers) 속성을 사용 하 여 코드 분석을 사용 하도록 설정 하려면 프로젝트에서 [프로젝트 SDK](../../core/project-sdk/overview.md)를 참조 해야 합니다.
 
 분석기에서 규칙 위반을 발견 하는 경우 각 규칙의 [구성](configuration-options.md)방법에 따라 제안, 경고 또는 오류로 보고 됩니다. 코드 분석 위반은 컴파일러 오류와 구별 하기 위해 접두사 "CA" 또는 "IDE"와 함께 표시 됩니다.
 
@@ -58,7 +58,7 @@ ms.locfileid: "99643074"
 
 ### <a name="enable-additional-rules"></a>추가 규칙 사용
 
-*분석 모드* 는 none, some 또는 all 규칙이 설정 된 미리 정의 된 코드 분석 구성을 나타냅니다. 기본 분석 모드에서는 적은 수의 규칙만 [빌드 경고로 설정](#enabled-rules)됩니다. 프로젝트 파일에서 [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) 속성을 설정 하 여 프로젝트에 대 한 분석 모드를 변경할 수 있습니다. 허용 되는 값은 다음과 같습니다.
+*분석 모드* 는 none, some 또는 all 규칙이 설정 된 미리 정의 된 코드 분석 구성을 나타냅니다. 기본 분석 모드에서는 적은 수의 규칙만 [빌드 경고로 설정](#enabled-rules)됩니다. 프로젝트 파일에서 속성을 설정 하 여 프로젝트에 대 한 분석 모드를 변경할 수 있습니다 [\<AnalysisMode>](../../core/project-sdk/msbuild-props.md#analysismode) . 허용 되는 값은 다음과 같습니다.
 
 | 값 | 설명 |
 | - | - |
@@ -119,7 +119,7 @@ ms.locfileid: "99643074"
 
 1. MSBuild 속성 [EnforceCodeStyleInBuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) 을로 설정 `true` 합니다.
 
-1. *Editorconfig* 파일에서 빌드에서 실행 하려는 각 "IDE" 코드 스타일 규칙을 경고나 오류로 [구성](configuration-options.md) 합니다. 다음은 그 예입니다. 
+1. *Editorconfig* 파일에서 빌드에서 실행 하려는 각 "IDE" 코드 스타일 규칙을 경고나 오류로 [구성](configuration-options.md) 합니다. 예를 들면 다음과 같습니다.
 
    ```ini
    [*.{cs,vb}]
@@ -127,7 +127,7 @@ ms.locfileid: "99643074"
    dotnet_diagnostic.IDE0040.severity = warning
    ```
 
-   또는 전체 범주를 경고나 오류로 구성 하 고, 기본적으로이 범주에서 규칙을 선택적으로 해제 한 후에 빌드 시 실행 하지 않을 수 있습니다. 다음은 그 예입니다. 
+   또는 전체 범주를 경고나 오류로 구성 하 고, 기본적으로이 범주에서 규칙을 선택적으로 해제 한 후에 빌드 시 실행 하지 않을 수 있습니다. 예를 들면 다음과 같습니다.
 
    ```ini
    [*.{cs,vb}]
@@ -144,7 +144,7 @@ ms.locfileid: "99643074"
 
 ## <a name="suppress-a-warning"></a>경고 표시 안 함
 
-규칙 위반을 억제 하는 한 가지 방법은 EditorConfig 파일에서 해당 규칙 ID에 대 한 심각도 옵션을로 설정 하는 것입니다 `none` . 다음은 그 예입니다. 
+규칙 위반을 억제 하는 한 가지 방법은 EditorConfig 파일에서 해당 규칙 ID에 대 한 심각도 옵션을로 설정 하는 것입니다 `none` . 예를 들면 다음과 같습니다.
 
 ```ini
 dotnet_diagnostic.CA1822.severity = none
@@ -156,7 +156,7 @@ dotnet_diagnostic.CA1822.severity = none
 
 공식 .NET 분석기 외에도 [StyleCop,](https://www.nuget.org/packages/StyleCop.Analyzers/) [rosl](https://www.nuget.org/packages/Roslynator.Analyzers/), [Xunit 분석기](https://www.nuget.org/packages/xunit.analyzers/)및 [sonar.projectname) Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/)와 같은 타사 분석기를 설치할 수도 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [코드 품질 분석 규칙 참조](quality-rules/index.md)
 - [코드 스타일 분석 규칙 참조](style-rules/index.md)

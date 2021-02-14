@@ -1,15 +1,16 @@
 ---
+description: "자세한 정보: ' ' 경로를 <pathname> 찾을 수 없습니다."
 title: ‘<pathname>’ 경로를 찾을 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_PathNotFound1
 ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
-ms.openlocfilehash: c9b10aecd906b0a132f3c34d5f4d9c085ff96b32
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5b30a87f2c68ea99a0a6b038db5a4f9d516c29ab
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078764"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486786"
 ---
 # <a name="path-pathname-not-found"></a>‘\<pathname>’ 경로를 찾을 수 없습니다.
 
@@ -19,7 +20,7 @@ ms.locfileid: "91078764"
   
 1. 경로에 필수 요소가 포함되었는지 확인합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [My.user. 컴퓨터 파일 시스템](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [방법: 파일 경로 구문 분석](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

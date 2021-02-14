@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연습: 이벤트 처리 (Visual Basic)'
 title: 이벤트 처리
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 4489f75e50a783a9b1acfb9c30568fdec6614488
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5101bd2287c81e03efb69b398d6cc961d3e6d9dc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91057912"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436177"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>연습: 이벤트 처리(Visual Basic)
 
@@ -36,11 +37,11 @@ ms.locfileid: "91057912"
   
 ## <a name="writing-code-to-handle-an-event"></a>이벤트를 처리 하는 코드 작성  
 
- 를 사용 하 여 변수를 선언 하는 즉시 `WithEvents` 변수 이름이 클래스 **코드 편집기**의 왼쪽 드롭다운 목록에 나타납니다. 를 선택 하면 `mWidget` `Widget` 클래스의 이벤트가 오른쪽 드롭다운 목록에 표시 됩니다. 이벤트를 선택 하면 접두사와 밑줄을 사용 하 여 해당 이벤트 프로시저가 표시 됩니다 `mWidget` . 변수와 연결 된 모든 이벤트 프로시저에는 `WithEvents` 변수 이름이 접두사로 지정 됩니다.  
+ 를 사용 하 여 변수를 선언 하는 즉시 `WithEvents` 변수 이름이 클래스 **코드 편집기** 의 왼쪽 드롭다운 목록에 나타납니다. 를 선택 하면 `mWidget` `Widget` 클래스의 이벤트가 오른쪽 드롭다운 목록에 표시 됩니다. 이벤트를 선택 하면 접두사와 밑줄을 사용 하 여 해당 이벤트 프로시저가 표시 됩니다 `mWidget` . 변수와 연결 된 모든 이벤트 프로시저에는 `WithEvents` 변수 이름이 접두사로 지정 됩니다.  
   
 #### <a name="to-handle-an-event"></a>이벤트를 처리 하려면  
   
-1. `mWidget` **코드 편집기**의 왼쪽 드롭다운 목록에서 선택 합니다.  
+1. `mWidget` **코드 편집기** 의 왼쪽 드롭다운 목록에서 선택 합니다.  
   
 2. `PercentDone`오른쪽 드롭다운 목록에서 이벤트를 선택 합니다. **코드 편집기** 가 `mWidget_PercentDone` 이벤트 프로시저를 엽니다.  
   
@@ -67,7 +68,7 @@ ms.locfileid: "91057912"
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>개체를 만들고이 개체에 대 한 참조를 할당 하려면  
   
-1. **코드 편집기**의 왼쪽 드롭다운 목록에서 **(Form1 이벤트)** 를 선택 합니다.  
+1. **코드 편집기** 의 왼쪽 드롭다운 목록에서 **(Form1 이벤트)** 를 선택 합니다.  
   
 2. `Load`오른쪽 드롭다운 목록에서 이벤트를 선택 합니다. **코드 편집기** 가 `Form1_Load` 이벤트 프로시저를 엽니다.  
   
@@ -119,7 +120,7 @@ ms.locfileid: "91057912"
 > [!NOTE]
 > `WithEvents`필요한 만큼의 변수를 선언할 수 있지만 `WithEvents` 변수 배열은 지원 되지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [연습: 이벤트 선언 및 발생](walkthrough-declaring-and-raising-events.md)
 - [이벤트](index.md)

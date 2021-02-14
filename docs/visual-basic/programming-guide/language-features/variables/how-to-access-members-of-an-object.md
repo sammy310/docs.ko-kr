@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 방법: 개체의 멤버에 액세스 (Visual Basic)'
 title: '방법: 개체의 멤버에 액세스'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 2826a3c98b9f19b08cc943d0f67cdd34ac90f526
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b4aed213bbe520b7b7027acc146d0973f7273fd1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410544"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435527"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>방법: 개체의 멤버에 액세스(Visual Basic)
 
@@ -74,7 +75,7 @@ ms.locfileid: "84410544"
 
     개체 변수에 할당 하는 개체의 멤버에 액세스할 수 있으려면를 설정 해야 합니다 `Option Strict Off` . 이 작업을 수행 하는 경우 컴파일러는 지정 된 멤버가 변수에 할당 한 개체에 의해 노출 되는 것을 보장할 수 없습니다. 개체에서 액세스 하려는 멤버를 노출 하지 않는 경우 <xref:System.MemberAccessException> 예외가 발생 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Object>
 - <xref:System.Windows.Forms.Form>
