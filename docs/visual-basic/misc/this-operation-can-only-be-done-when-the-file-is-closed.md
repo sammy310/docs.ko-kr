@@ -1,13 +1,14 @@
 ---
+description: 자세한 정보:이 작업은 파일이 닫혀 있을 때만 수행할 수 있습니다.
 title: 이 작업은 파일이 닫혀 있을 때만 수행할 수 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 79fe95ae-4aff-469f-beda-d5a85c91d421
-ms.openlocfilehash: 45afaa585591f16e10d42a6792719c201a5d1709
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1f408eb2fd9a7300a83fee981e9026f90845b2c1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060435"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462297"
 ---
 # <a name="this-operation-can-only-be-done-when-the-file-is-closed"></a>이 작업은 파일이 닫혀 있을 때만 수행할 수 있습니다.
 
@@ -17,7 +18,7 @@ ms.locfileid: "91060435"
   
 - 파일을 닫고 작업을 다시 시도합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Security.Permissions.FileIOPermission>
 - <xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>

@@ -1,5 +1,5 @@
 ---
-description: "자세한 정보: BC30955: ' ' 형식의 값 <typename1> 을 ' ' (으)로 변환할 수 없습니다.<typename2>"
+description: "자세한 정보: BC30955: ' ' 형식의 값 <typename1> 을 ' ' (으)로 변환할 수 없습니다. <typename2>"
 title: "'<typename1>' 형식의 값을 '<typename2>'(으)로 변환할 수 없습니다."
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: e03201d5dbb84faf06b7acbe42fe6b3bb4272ab9
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: a013e274a1776dee6a98add63138236ad11111b8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99666253"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100426558"
 ---
 # <a name="bc30955-value-of-type-typename1-cannot-be-converted-to-typename2"></a>BC30955: ' ' 형식의 값 \<typename1> 을 ' ' (으)로 변환할 수 없습니다. \<typename2>
 
@@ -61,7 +61,7 @@ ms.locfileid: "99666253"
 
 - 프로젝트 참조에 대 한 파일 참조를 변경 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic의 형식 변환](../../programming-guide/language-features/data-types/type-conversions.md)
 - [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)

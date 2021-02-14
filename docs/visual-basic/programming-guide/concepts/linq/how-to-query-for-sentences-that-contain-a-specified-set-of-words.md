@@ -1,13 +1,14 @@
 ---
+description: '방법: 지정 된 단어 집합이 들어 있는 문장 쿼리 (LINQ) (Visual Basic)에 대해 자세히 알아보세요.'
 title: '방법: 지정된 단어 세트가 포함된 문장 쿼리(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-ms.openlocfilehash: ce88bf001346f90eb9b08ca1ff14afc7dcb04fa0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b6d2f428e499b8b22fa5bc13015f2405430c1bbd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397962"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435098"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>방법: 지정된 단어 집합이 들어 있는 문장 쿼리(LINQ)(Visual Basic)
 
@@ -67,6 +68,6 @@ End Class
 
 System.xml `Imports` 네임 스페이스에 대 한 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [LINQ 및 문자열(Visual Basic)](linq-and-strings.md)

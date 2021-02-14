@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 동적 개체 작업 (Visual Basic)'
 title: 동적 개체 작업
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic objects [Visual Basic]
 ms.assetid: bdee2a00-07ff-46f9-86dd-fdac9b99cc97
-ms.openlocfilehash: 45f8b5c327d40f93b59c2115c75b3b7d385f5a8d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4991ae3deca908fc0b96760f50c85514df92714f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91057925"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434396"
 ---
 # <a name="working-with-dynamic-objects-visual-basic"></a>동적 개체 작업 (Visual Basic)
 
@@ -19,7 +20,7 @@ ms.locfileid: "91057925"
   
  인터페이스를 구현 하는 개체에 런타임에 바인딩된 호출이 수행 되는 경우 `IDynamicMetaObjectProvider` Visual Basic는 해당 인터페이스를 사용 하 여 동적 개체에 바인딩합니다. 인터페이스를 구현 하지 않는 개체에 대 한 런타임에 바인딩된 호출이 수행 `IDynamicMetaObjectProvider` 되거나 `IDynamicMetaObjectProvider` 인터페이스 호출이 실패 하면 Visual Basic Visual Basic 런타임의 런타임에 바인딩 기능을 사용 하 여 개체에 바인딩합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Dynamic.DynamicObject>
 - <xref:System.Dynamic.ExpandoObject>
