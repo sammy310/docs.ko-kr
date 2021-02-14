@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 파일 액세스에 Async 사용 (Visual Basic)'
 title: 파일 액세스에 Async 사용
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: 2e7fa4a78363a08f2ff25e6a961868e85994e200
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f065ef8d8672569921e1652e62d24c10a506f828
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077360"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474215"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>파일 액세스에 Async 사용(Visual Basic)
 
@@ -27,7 +28,7 @@ ms.locfileid: "91077360"
   
 ## <a name="running-the-examples"></a>예제 실행  
 
- 이 항목의 예제를 실행하려면 **WPF 애플리케이션** 또는 **Windows Forms 애플리케이션**을 만든 후 **단추**를 추가할 수 있습니다. 단추의 `Click` 이벤트에서 각 예제의 첫 번째 메서드에 대한 호출을 추가합니다.  
+ 이 항목의 예제를 실행하려면 **WPF 애플리케이션** 또는 **Windows Forms 애플리케이션** 을 만든 후 **단추** 를 추가할 수 있습니다. 단추의 `Click` 이벤트에서 각 예제의 첫 번째 메서드에 대한 호출을 추가합니다.  
   
  다음 예제에서는 `Imports` 문을 포함합니다.  
   
@@ -166,7 +167,7 @@ End Sub
   
  <xref:System.IO.Stream.WriteAsync%2A> 및 <xref:System.IO.Stream.ReadAsync%2A> 메서드를 사용하는 경우 중간에 작업을 취소하는 데 사용할 수 있는 <xref:System.Threading.CancellationToken>을 지정할 수 있습니다. 자세한 내용은 [비동기 응용 프로그램 미세 조정 (Visual Basic)](fine-tuning-your-async-application.md) 및 [관리 되는 스레드의 취소](../../../../standard/threading/cancellation-in-managed-threads.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](index.md)
 - [비동기 반환 형식(Visual Basic)](async-return-types.md)

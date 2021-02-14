@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 방법: 두 폴더의 내용 비교 (LINQ) (Visual Basic)'
 title: '방법: 두 폴더의 콘텐츠 비교(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 63a062c562e2c79ea81ac270651aa16776801b99
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8891617b7b95bf4543603ca40e7b85abb914da34
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410762"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424491"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>방법: 두 폴더의 내용 비교 (LINQ) (Visual Basic)
 
@@ -118,7 +119,7 @@ End Module
 
 System.xml `Imports` 네임 스페이스에 대 한 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [LINQ to Objects(Visual Basic)](linq-to-objects.md)
 - [LINQ 및 파일 디렉터리(Visual Basic)](linq-and-file-directories.md)

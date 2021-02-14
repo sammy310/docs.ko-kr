@@ -1,13 +1,14 @@
 ---
+description: '자세한 내용: 방법: 문자열 컬렉션 결합 및 비교 (LINQ) (Visual Basic)'
 title: '방법: 문자열 컬렉션 결합 및 비교(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 271ef7805cd2285fa2d8796a31257c0f31bb9a76
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9265750bfc55f60cc683fe0e8235174eee76272c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374864"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424505"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>방법: 문자열 컬렉션 결합 및 비교 (LINQ) (Visual Basic)
 
@@ -167,7 +168,7 @@ End Class
 
 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다. System.xml `Imports` 네임 스페이스에 대 한 문을 추가 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ 및 문자열(Visual Basic)](linq-and-strings.md)
 - [LINQ 및 파일 디렉터리(Visual Basic)](linq-and-file-directories.md)

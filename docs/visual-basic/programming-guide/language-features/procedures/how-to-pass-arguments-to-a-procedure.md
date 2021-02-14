@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 프로시저에 인수 전달 (Visual Basic)'
 title: '방법: 프로시저에 인수 전달'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 816d6388a0dbb7ae346074d258ff651c793c5e0e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e4dcdac19699c4b4b1f88327034a9e9d4364f040
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071510"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434331"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>방법: 프로시저에 인수 전달(Visual Basic)
 
@@ -46,7 +47,7 @@ ms.locfileid: "91071510"
   
      인수 목록에서 두 번째 쉼표는 생략 된 두 번째 인수의 자리를 표시 하 고 마지막 문자열은 `MsgBox` 제목 표시줄에 표시 되는 텍스트인의 선택적 세 번째 매개 변수로 전달 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [하위 프로시저](./sub-procedures.md)
 - [함수 프로시저](./function-procedures.md)

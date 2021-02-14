@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 컬렉션 (Visual Basic)'
 title: 컬렉션
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 91c6048caf622f21a02032bac31cb2ba5565c54c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8189eb6d3b95ef81b47f5694092a20a18894103c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551069"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435111"
 ---
 # <a name="collections-visual-basic"></a>컬렉션(Visual Basic)
 
@@ -47,7 +48,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-컬렉션의 내용을 사전에 알고 있는 경우 *컬렉션 이니셜라이저*를 사용하여 컬렉션을 초기화할 수 있습니다. 자세한 내용은 [컬렉션 이니셜라이저](../language-features/collection-initializers/index.md)를 참조하세요.
+컬렉션의 내용을 사전에 알고 있는 경우 *컬렉션 이니셜라이저* 를 사용하여 컬렉션을 초기화할 수 있습니다. 자세한 내용은 [컬렉션 이니셜라이저](../language-features/collection-initializers/index.md)를 참조하세요.
 
 다음 예제는 컬렉션 이니셜라이저를 사용하여 컬렉션에 요소를 추가한다는 점을 제외하고 이전 예제와 같습니다.
 
@@ -173,7 +174,7 @@ End Class
 
 다음 표에서는 자주 사용되는 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스 클래스 중 일부를 보여 줍니다.
 
-|클래스|Description|
+|클래스|설명|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|키에 따라 구성된 키/값 쌍의 컬렉션을 나타냅니다.|
 |<xref:System.Collections.Generic.List%601>|인덱스로 액세스할 수 있는 개체 목록을 나타냅니다. 목록의 검색, 정렬 및 수정에 사용할 수 있는 메서드를 제공합니다.|
@@ -538,7 +539,7 @@ End Class
 
 ## <a name="iterators"></a>반복기
 
-*반복기*는 컬렉션에 대해 사용자 지정 반복을 수행하는 데 사용됩니다. 반복기는 메서드 또는 `get` 접근자일 수 있습니다. 반복기는 [Yield](../../language-reference/statements/yield-statement.md) 문을 사용 하 여 컬렉션의 각 요소를 한 번에 하나씩 반환 합니다.
+*반복기* 는 컬렉션에 대해 사용자 지정 반복을 수행하는 데 사용됩니다. 반복기는 메서드 또는 `get` 접근자일 수 있습니다. 반복기는 [Yield](../../language-reference/statements/yield-statement.md) 문을 사용 하 여 컬렉션의 각 요소를 한 번에 하나씩 반환 합니다.
 
 For Each ...를 사용 하 여 반복기를 호출 합니다. [ 다음](../../language-reference/statements/for-each-next-statement.md) 문. 각각의 `For Each` 루프의 반복이 반복기를 호출합니다. `Yield` 문이 반복기 메서드에 도달하면 식이 반환되고 코드에서 현재 위치는 유지됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.
 

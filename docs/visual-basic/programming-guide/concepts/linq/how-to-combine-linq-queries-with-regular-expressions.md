@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: LINQ 쿼리를 정규식과 결합 하는 방법 (Visual Basic)'
 title: LINQ 쿼리와 정규식을 결합하는 방법
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: a091418be1f7cc30d42a98f80ebae2d36d29b5d8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a2fd06f76c5c278ad1a67f3822151e5f73a2630e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337555"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424516"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>정규식을 사용 하 여 LINQ 쿼리를 결합 하는 방법 (Visual Basic)
 
 이 예제에서는 <xref:System.Text.RegularExpressions.Regex> 클래스를 사용하여 더 복잡한 텍스트 문자열 일치를 찾는 정규식을 작성하는 방법을 보여 줍니다. LINQ 쿼리를 사용하면 손쉽게 정규식을 통해 검색하려는 파일을 정확히 필터링하고 결과를 구성할 수 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```vb
 Imports System.IO
@@ -90,5 +91,5 @@ Visual Basic 콘솔 응용 프로그램 프로젝트를 만들고, 코드 샘플
 
 ## <a name="see-also"></a>참조
 
-- [LINQ 및 문자열 (Visual Basic)](linq-and-strings.md)
+- [LINQ 및 문자열(Visual Basic)](linq-and-strings.md)
 - [LINQ 및 파일 디렉터리(Visual Basic)](linq-and-file-directories.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: XML의 포함 식 (Visual Basic)'
 title: XML의 포함 식
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: 44a6c3408b57fa7f89e2834aa677fe8801ef21f3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 52cf8341cb0a55abad230543bbc6367aea071142
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058315"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433189"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML의 포함 식(Visual Basic)
 
@@ -37,7 +38,7 @@ ms.locfileid: "91058315"
   
 |리터럴의 위치|식의 형식|처리 `Nothing`|  
 |---|---|---|  
-|XML 요소 이름|<xref:System.Xml.Linq.XName>|Error|  
+|XML 요소 이름|<xref:System.Xml.Linq.XName>|오류|  
 |XML 요소 내용|`Object` 또는 배열 `Object`|무시됨|  
 |XML 요소 특성 이름|<xref:System.Xml.Linq.XName>|특성 값이 없는 경우 오류가 발생 합니다. `Nothing`|  
 |XML 요소 특성 값|`Object`|특성 선언이 무시 되었습니다.|  
@@ -83,7 +84,7 @@ ms.locfileid: "91058315"
 > [!NOTE]
 > 네임 스페이스 특성을 사용 하 여 XML 네임 스페이스 접두사를 선언 하는 경우 `xmlns` 특성 값은 상수 문자열 이어야 합니다. 이와 관련 하 여 특성을 사용 하는 `xmlns` 것은 문을 사용 하 여 `Imports` XML 네임 스페이스를 선언 하는 것과 같습니다. 포함 식을 사용 하 여 XML 네임 스페이스 값을 지정할 수 없습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic에서 XML 만들기](creating-xml.md)
 - [XML 문서 리터럴](../../../language-reference/xml-literals/xml-document-literal.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 연습: Async 및 Wait를 사용 하 여 웹에 액세스 (Visual Basic)'
 title: '연습: Async 및 Await를 사용하여 웹에 액세스'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 41ededd4d4335b78b8d7a33e8fe387c7d632cbee
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 08488d4909e4fbc40cc11213eb293c2693fdec71
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400747"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474163"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)
 
@@ -37,7 +38,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
 
 전체 비동기 예제는 [예제](#example) 섹션을 참조 하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자세한 내용은 Visual Studio [다운로드](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 페이지를 참조 하세요.
 
@@ -45,7 +46,7 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
 
 1. Visual Studio를 시작합니다.
 
-2. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.
+2. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트** 를 차례로 선택합니다.
 
     **새 프로젝트** 대화 상자가 열립니다.
 
@@ -53,13 +54,13 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
 
 4. **이름** 텍스트 상자에 `AsyncExampleWPF`를 입력하고 **확인** 단추를 선택합니다.
 
-    **솔루션 탐색기**에 새 프로젝트가 표시됩니다.
+    **솔루션 탐색기** 에 새 프로젝트가 표시됩니다.
 
 ## <a name="design-a-simple-wpf-mainwindow"></a>간단한 WPF MainWindow 디자인
 
 1. Visual Studio 코드 편집기에서 **MainWindow.xaml** 탭을 선택합니다.
 
-2. **도구 상자** 창이 표시되지 않으면 **보기** 메뉴를 열고 **도구 상자**를 선택합니다.
+2. **도구 상자** 창이 표시 되지 않으면 **보기** 메뉴를 열고 **도구 상자** 를 선택 합니다.
 
 3. **Button** 컨트롤 및 **TextBox** 컨트롤을 **MainWindow** 창에 추가합니다.
 
@@ -75,9 +76,9 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
 
 5. **Button** 컨트롤을 강조 표시하고 **속성** 창에서 다음 값을 설정합니다.
 
-    - **Name** 속성을 `startButton`로 설정합니다.
+    - **Name** 속성을 `startButton`으로 설정합니다.
 
-    - **Content** 속성 값을 **Button**에서 **Start**로 변경합니다.
+    - **Content** 속성 값을 **Button** 에서 **Start** 로 변경합니다.
 
 6. 텍스트 상자와 단추가 둘 다 **MainWindow** 창에 나타나도록 위치를 지정합니다.
 
@@ -85,15 +86,15 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
 
 ## <a name="add-a-reference"></a>참조 추가
 
-1. **솔루션 탐색기**에서 프로젝트의 이름을 강조 표시합니다.
+1. **솔루션 탐색기** 에서 프로젝트의 이름을 강조 표시합니다.
 
-2. 메뉴 모음에서 **프로젝트**, **참조 추가**를 선택합니다.
+2. 메뉴 모음에서 **프로젝트**, **참조 추가** 를 선택합니다.
 
     **참조 관리자** 대화 상자가 나타납니다.
 
 3. 대화 상자 맨 위에서 프로젝트가 .NET Framework 4.5 이상을 대상으로 하는지 확인합니다.
 
-4. **어셈블리** 영역에서 **프레임워크**가 선택되지 않은 경우 선택합니다.
+4. **어셈블리** 영역에서 **프레임워크** 가 선택되지 않은 경우 선택합니다.
 
 5. 이름 목록에서 **System.Net.Http** 확인란을 선택합니다.
 
@@ -101,7 +102,7 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
 
 ## <a name="add-necessary-imports-statements"></a>필요한 Imports 문 추가
 
-1. **솔루션 탐색기**에서 mainwindow.xaml의 바로 가기 메뉴를 열고 **코드 보기**를 선택 합니다.
+1. **솔루션 탐색기** 에서 mainwindow.xaml의 바로 가기 메뉴를 열고 **코드 보기** 를 선택 합니다.
 
 2. `Imports`아직 없는 경우 코드 파일의 맨 위에 다음 문을 추가 합니다.
 
@@ -213,7 +214,7 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
 
 ## <a name="test-the-synchronous-solution"></a>동기 솔루션 테스트
 
-1. F5 키를 선택하여 프로그램을 실행한 후 **시작** 단추를 선택합니다.
+1. F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.
 
     다음 목록과 유사한 출력이 표시되어야 합니다.
 
@@ -251,9 +252,9 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
     Using response As WebResponse = webReq.GetResponseAsync()
     ```
 
-2. `GetResponseAsync`는 <xref:System.Threading.Tasks.Task%601>를 반환합니다. 이 경우 *작업 반환 변수*는 `TResult` 형식 <xref:System.Net.WebResponse> 입니다. 작업은 요청한 데이터를 다운로드하고 작업을 실행하여 완료한 후 실제 `WebResponse` 개체를 생성한다는 약속입니다.
+2. `GetResponseAsync`는 <xref:System.Threading.Tasks.Task%601>를 반환합니다. 이 경우 *작업 반환 변수*`TResult`는 <xref:System.Net.WebResponse> 형식입니다. 작업은 요청한 데이터를 다운로드하고 작업을 실행하여 완료한 후 실제 `WebResponse` 개체를 생성한다는 약속입니다.
 
-    `WebResponse`작업에서 값을 검색 하려면 [Await](../../../language-reference/operators/await-operator.md) `GetResponseAsync` 다음 코드에 표시 된 것 처럼에 대 한 호출에 wait 연산자를 적용 합니다.
+    `WebResponse`작업에서 값을 검색 하려면 [](../../../language-reference/operators/await-operator.md) `GetResponseAsync` 다음 코드에 표시 된 것 처럼에 대 한 호출에 wait 연산자를 적용 합니다.
 
     ```vb
     Using response As WebResponse = Await webReq.GetResponseAsync()
@@ -293,7 +294,7 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
         Await copyTask
         ```
 
-4. `GetURLContents`에서 수행해야 할 나머지 작업은 메서드 시그니처를 조정하는 것입니다. `Await`연산자는 [Async](../../../language-reference/modifiers/async.md) 한정자로 표시 된 메서드에서만 사용할 수 있습니다. 다음 코드에 표시된 대로 한정자를 추가하여 메서드를 *비동기 메서드*로 표시합니다.
+4. `GetURLContents`에서 수행해야 할 나머지 작업은 메서드 시그니처를 조정하는 것입니다. `Await`연산자는 [Async](../../../language-reference/modifiers/async.md) 한정자로 표시 된 메서드에서만 사용할 수 있습니다. 다음 코드에 표시된 대로 한정자를 추가하여 메서드를 *비동기 메서드* 로 표시합니다.
 
     ```vb
     Private Async Function GetURLContents(url As String) As Byte()
@@ -403,7 +404,7 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
 
 ## <a name="test-the-asynchronous-solution"></a>비동기 솔루션 테스트
 
-1. F5 키를 선택하여 프로그램을 실행한 후 **시작** 단추를 선택합니다.
+1. F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.
 
 2. 동기 솔루션의 출력과 유사한 출력이 표시되어야 합니다. 그러나 다음과 같은 차이가 있습니다.
 
@@ -432,11 +433,11 @@ Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자�
 
 3. 작성한 `GetURLContentsAsync` 메서드를 제거하거나 주석 처리합니다.
 
-4. F5 키를 선택하여 프로그램을 실행한 후 **시작** 단추를 선택합니다.
+4. F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.
 
     이 버전의 프로젝트 동작은 "비동기 솔루션을 테스트하려면" 절차에서 설명한 동작과 일치해야 하지만 사용자의 노력은 훨씬 줄어듭니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음은 비동기 메서드를 사용 하는 변환 된 비동기 솔루션의 전체 예제입니다 `GetURLContentsAsync` . 원래의 동기 솔루션과 매우 유사해야 합니다.
 
@@ -658,10 +659,10 @@ Class MainWindow
 End Class
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [Async 샘플: 웹 연습에 액세스(C# 및 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
-- [Wait 연산자](../../../language-reference/operators/await-operator.md)
+- [비동기 샘플: 웹 연습에 액세스(C# 및 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Await 연산자](../../../language-reference/operators/await-operator.md)
 - [Async](../../../language-reference/modifiers/async.md)
 - [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](index.md)
 - [비동기 반환 형식(Visual Basic)](async-return-types.md)

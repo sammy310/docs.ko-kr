@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: Label 문 (Visual Basic)'
 title: '방법: Label 문'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 8f04d592c51b6a0630bfe623fd3574555aef9ff8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4efb320dad7d52f6e9b94f6e6f81730f94b5966b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403215"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433254"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>방법: Label 문(Visual Basic)
 
-문 블록은 콜론으로 구분 된 코드 줄로 구성 됩니다. 식별 문자열이 나 정수로 시작 하는 코드 줄에는 *레이블이 지정*된 것으로 간주 됩니다. 문 레이블은와 같은 문에서 사용할 수 있도록 코드 줄을 표시 하는 데 사용 됩니다 `On Error Goto` .
+문 블록은 콜론으로 구분 된 코드 줄로 구성 됩니다. 식별 문자열이 나 정수로 시작 하는 코드 줄에는 *레이블이 지정* 된 것으로 간주 됩니다. 문 레이블은와 같은 문에서 사용할 수 있도록 코드 줄을 표시 하는 데 사용 됩니다 `On Error Goto` .
 
 레이블은 프로그래밍 요소를 식별 하는 식별자 (예: 올바른 Visual Basic 식별자 또는 정수 리터럴) 일 수 있습니다. 레이블은 소스 코드 줄의 시작 부분에 표시 되어야 하며, 뒤에 동일한 줄에 문이 있는지 여부에 관계 없이 콜론이와 야 합니다.
 

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 선언 된 XML 요소 및 특성의 이름 (Visual Basic)'
 title: 선언된 XML 요소 및 특성의 이름
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - attribute names [XML in Visual Basic]
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
-ms.openlocfilehash: 2142674c3de4c5ac9e806c1328daa3efb697beb9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 0c5d049a7d877a23562b91c5d7b3306d8e68ea3a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085622"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100422733"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>선언된 XML 요소 및 특성의 이름(Visual Basic)
 
@@ -49,7 +50,7 @@ ms.locfileid: "91085622"
 
  XML 요소 리터럴을 만들 때 요소 이름에 대 한 XML 네임 스페이스 접두사를 지정할 수 있습니다. 자세한 내용은 [XML 요소 리터럴](../../../language-reference/xml-literals/xml-element-literal.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic에서 XML 만들기](creating-xml.md)
 - [XML 요소 리터럴](../../../language-reference/xml-literals/xml-element-literal.md)

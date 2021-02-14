@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 개체 형식 확인 (Visual Basic)'
 title: 개체 형식 확인
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: ae338bc9bad9646abc045a652d4ef33a8863354b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 0cf64b6dde74b98edaf055537533cb648ed3381a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086064"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434409"
 ---
 # <a name="determining-object-type-visual-basic"></a>개체 형식 확인(Visual Basic)
 
@@ -46,7 +47,7 @@ ms.locfileid: "91086064"
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [문자열 이름을 사용하여 속성 또는 메서드 호출](calling-a-property-or-method-using-a-string-name.md)

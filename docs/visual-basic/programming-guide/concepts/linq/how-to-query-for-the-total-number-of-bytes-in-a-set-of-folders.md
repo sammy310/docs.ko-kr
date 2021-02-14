@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 방법: 폴더 집합의 총 바이트 수 쿼리 (LINQ) (Visual Basic)'
 title: '방법: 폴더 세트에서 총 바이트 수 쿼리(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-ms.openlocfilehash: c8e1ee66c2c9b570acd2c815bdc1ba0324380eda
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 493caa8c3f42a9f00ccca539ec8349b9f8d361b8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100206"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100435046"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>방법: 폴더 집합의 총 바이트 수 쿼리 (LINQ) (Visual Basic)
 
@@ -77,7 +78,7 @@ End Module
 
 System.xml `Imports` 네임 스페이스에 대 한 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [LINQ to Objects(Visual Basic)](linq-to-objects.md)
 - [LINQ 및 파일 디렉터리(Visual Basic)](linq-and-file-directories.md)
