@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연습: 클래스 정의 (Visual Basic)'
 title: 클래스 정의
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Terminate event [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-ms.openlocfilehash: 646c6ce307131f3edba194af19920eade9c1753c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a97e04b92db3387966afa410d5697a05b482ae09
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84389116"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438790"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>연습: 클래스 정의(Visual Basic)
 
@@ -67,7 +68,7 @@ ms.locfileid: "84389116"
   
 ## <a name="to-create-a-button-to-test-the-class"></a>클래스를 테스트 하는 단추를 만들려면
   
-1. **솔루션 탐색기** 에서 해당 이름을 마우스 오른쪽 단추로 클릭 한 다음 **디자이너 보기**를 클릭 하 여 시작 폼을 디자인 모드로 변경 합니다. 기본적으로 Windows 응용 프로그램 프로젝트의 시작 폼에는 form1.vb 라는 이름이 지정 됩니다. 그러면 기본 폼이 표시 됩니다.  
+1. **솔루션 탐색기** 에서 해당 이름을 마우스 오른쪽 단추로 클릭 한 다음 **디자이너 보기** 를 클릭 하 여 시작 폼을 디자인 모드로 변경 합니다. 기본적으로 Windows 응용 프로그램 프로젝트의 시작 폼에는 form1.vb 라는 이름이 지정 됩니다. 그러면 기본 폼이 표시 됩니다.  
   
 2. 기본 폼에 단추를 추가 하 고 두 번 클릭 하 여 이벤트 처리기에 대 한 코드를 표시 합니다 `Button1_Click` . 다음 코드를 추가 하 여 테스트 프로시저를 호출 합니다.  
   
@@ -77,9 +78,9 @@ ms.locfileid: "84389116"
   
 1. F5 키를 눌러 응용 프로그램을 실행 합니다. 폼의 단추를 클릭 하 여 테스트 프로시저를 호출 합니다. `UserName`프로시저에서 개체의 메서드를 호출 했기 때문에 원래는 "일, 강현수" 이라는 메시지를 표시 합니다 `Capitalize` .  
   
-2. **확인**을 클릭하여 메시지 상자를 닫습니다. `Button1 Click`이 프로시저는 속성의 값을 변경 `UserName` 하 고의 새 값 `UserName` 이 "Worden, Joe" 라는 메시지를 표시 합니다.  
+2. **확인** 을 클릭하여 메시지 상자를 닫습니다. `Button1 Click`이 프로시저는 속성의 값을 변경 `UserName` 하 고의 새 값 `UserName` 이 "Worden, Joe" 라는 메시지를 표시 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [개체 지향 프로그래밍(Visual Basic)](../../concepts/object-oriented-programming.md)
 - [개체 및 클래스](index.md)

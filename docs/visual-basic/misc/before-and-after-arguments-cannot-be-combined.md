@@ -1,15 +1,16 @@
 ---
+description: "자세한 정보: ' Before ' 및 ' After ' 인수는 함께 사용할 수 없습니다."
 title: "'Before'와 'After' 인수는 함께 사용할 수 없습니다."
 ms.date: 07/20/2015
 f1_keywords:
 - vbrCollection_BeforeAfterExclusive
 ms.assetid: f55fb8d2-746d-45de-b350-5a47f83e5ab4
-ms.openlocfilehash: 75a0a565987cb72507cde1a763942430ce57d8e6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c0998caa4674999d5e6393143d8dfd0ed01da886
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059888"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100460633"
 ---
 # <a name="before-and-after-arguments-cannot-be-combined"></a>'Before'와 'After' 인수는 함께 사용할 수 없습니다.
 

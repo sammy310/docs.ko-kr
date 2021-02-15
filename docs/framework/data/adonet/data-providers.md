@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: b61fede9144e554ee68f0b41adac36209adb7288
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ff5ee6569d8526f44ca489ddc48b09b02f6f8804
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177805"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461660"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 데이터 공급자
 
@@ -112,7 +112,7 @@ using System.Data.OleDb;
   
 |드라이버|  
 |------------|  
-|SQL  Server|  
+|SQL Server|  
 |Microsoft ODBC for Oracle|  
 |Microsoft Access Driver(*.mdb)|  
   
@@ -129,7 +129,7 @@ using System.Data.Odbc;
 ```  
   
 > [!NOTE]
-> ODBC의 .NET Framework Data Provider에는 MDAC 2.6 이상 버전이 필요 하며, MDAC 2.8 s p 1을 사용 하는 것이 좋습니다. [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=5793)에서 MDAC 2.8 s p 1을 다운로드할 수 있습니다.
+> ODBC의 .NET Framework Data Provider에는 MDAC 2.6 이상 버전이 필요 하며, MDAC 2.8 s p 1을 사용 하는 것이 좋습니다.
   
 ## <a name="net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle  
 
@@ -166,7 +166,7 @@ using System.Data.OracleClient;
 
  EntityClient 공급자는 EDM(엔터티 데이터 모델)을 기반으로 데이터에 액세스하는 데 사용됩니다. EntityClient 공급자는 다른 .NET Framework 데이터 공급자와 달리 데이터 소스와 직접 상호 작용하지 않고 대신 Entity SQL을 사용하여 기본 데이터 공급자와 통신합니다. 자세한 내용은 [Entity Framework용 EntityClient 공급자](./ef/entityclient-provider-for-the-entity-framework.md)(영문)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [ADO.NET 개요](ado-net-overview.md)
 - [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)

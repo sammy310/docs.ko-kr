@@ -1,21 +1,22 @@
 ---
+description: '자세히 알아보기: 특성 개요 (Visual Basic)'
 title: 특성 개요
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: a0a080d44796289cc3562803c84ec915dcedd314
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f25e69452f0af1c89af667619e673f8906704d1f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400708"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437724"
 ---
 # <a name="attributes-overview-visual-basic"></a>특성 개요(Visual Basic)
 
-특성은 메타데이터 또는 선언적 정보를 코드(어셈블리, 형식, 메서드, 속성 등)에 연결하는 강력한 방법을 제공합니다. 특성이 프로그램 엔터티와 연결되면 *리플렉션*이라는 기법을 사용하여 런타임에 특성이 쿼리될 수 있습니다. 자세한 내용은 [리플렉션(Visual Basic)](../reflection.md)을 참조하세요.
+특성은 메타데이터 또는 선언적 정보를 코드(어셈블리, 형식, 메서드, 속성 등)에 연결하는 강력한 방법을 제공합니다. 특성이 프로그램 엔터티와 연결되면 *리플렉션* 이라는 기법을 사용하여 런타임에 특성이 쿼리될 수 있습니다. 자세한 내용은 [리플렉션(Visual Basic)](../reflection.md)을 참조하세요.
 
 특성에는 다음과 같은 속성이 있습니다.
 
-- 특성은 프로그램에 메타데이터를 추가합니다. *메타데이터*는 프로그램에 정의된 형식에 대한 정보를 의미합니다. 모든 .NET 어셈블리에는 어셈블리에 정의된 형식 및 형식 멤버를 설명하는 지정된 메타데이터 집합이 포함됩니다. 필요한 추가 정보를 지정하는 사용자 지정 특성을 추가할 수 있습니다. 자세한 내용은 [사용자 지정 특성 만들기(Visual Basic)](creating-custom-attributes.md)를 참조하세요.
+- 특성은 프로그램에 메타데이터를 추가합니다. *메타데이터* 는 프로그램에 정의된 형식에 대한 정보를 의미합니다. 모든 .NET 어셈블리에는 어셈블리에 정의된 형식 및 형식 멤버를 설명하는 지정된 메타데이터 집합이 포함됩니다. 필요한 추가 정보를 지정하는 사용자 지정 특성을 추가할 수 있습니다. 자세한 내용은 [사용자 지정 특성 만들기(Visual Basic)](creating-custom-attributes.md)를 참조하세요.
 
 - 전체 어셈블리, 모듈 또는 좀 더 작은 프로그램 요소(예: 클래스 및 속성)에 하나 이상의 특성을 적용할 수 있습니다.
 
@@ -85,7 +86,7 @@ End Sub
 
 ### <a name="attribute-targets"></a>특성 대상
 
-특성의 *대상*은 특성이 적용되는 엔터티입니다. 예를 들어 특성은 클래스, 특정 메서드 또는 전체 어셈블리에 적용될 수 있습니다. 기본적으로 특성은 그 앞에 오는 요소에 적용됩니다. 하지만 특성이 메서드, 해당 매개 변수 또는 해당 반환 값 중 어디에 적용될지를 명시적으로 지정할 수 있습니다.
+특성의 *대상* 은 특성이 적용되는 엔터티입니다. 예를 들어 특성은 클래스, 특정 메서드 또는 전체 어셈블리에 적용될 수 있습니다. 기본적으로 특성은 그 앞에 오는 요소에 적용됩니다. 하지만 특성이 메서드, 해당 매개 변수 또는 해당 반환 값 중 어디에 적용될지를 명시적으로 지정할 수 있습니다.
 
 특성 대상을 명시적으로 식별하려면 다음 구문을 사용합니다.
 
@@ -148,7 +149,7 @@ Module: CLSCompliant(True)>
 
 - [호출자 정보(Visual Basic)](../caller-information.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic 프로그래밍 가이드](../../index.md)
 - [리플렉션(Visual Basic)](../reflection.md)

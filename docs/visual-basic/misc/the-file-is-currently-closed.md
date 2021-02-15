@@ -1,13 +1,14 @@
 ---
+description: '에 대 한 자세한 정보: 파일이 현재 닫혀 있습니다.'
 title: 파일이 현재 닫혀 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 095c38ae-a741-4b46-b099-bc6826a49c83
-ms.openlocfilehash: 9a4767a7d510336fa388caf59aafa1c1d6443b5e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c25151e23e8d4aaf4bc3ecd966525ab084f30483
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059472"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430887"
 ---
 # <a name="the-file-is-currently-closed"></a>파일이 현재 닫혀 있습니다.
 
@@ -17,7 +18,7 @@ ms.locfileid: "91059472"
   
 - 파일을 열고 작업을 다시 시도합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [My.user. 컴퓨터 파일 시스템](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [Visual Basic을 사용한 파일 액세스](../developing-apps/programming/drives-directories-files/file-access.md)

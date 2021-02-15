@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: ConnectionTimeout는 0 보다 커야 합니다.'
 title: ConnectionTimeout은 0보다 커야 합니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNetwork_BadConnectionTimeout
 ms.assetid: 15ac09a7-47f0-44f3-9e84-5bd10bd07450
-ms.openlocfilehash: 1fa368fa8f82cbd701362438a133f82a0c8e1764
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ca9cd67ca75c99636534b8eff393de91b9328dc0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078478"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430952"
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>ConnectionTimeout은 0보다 커야 합니다.
 
@@ -19,7 +20,7 @@ ms.locfileid: "91078478"
   
 - `connectionTimeout` 보다 큰 `0`을 제공합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [UploadFile.](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)
 - [DownloadFile.](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)

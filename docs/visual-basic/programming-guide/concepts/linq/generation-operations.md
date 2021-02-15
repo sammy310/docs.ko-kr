@@ -1,13 +1,14 @@
 ---
+description: '다음에 대 한 자세한 정보: 생성 작업 (Visual Basic)'
 title: 생성 작업
 ms.date: 07/20/2015
 ms.assetid: 22b8e380-8eb0-4c93-b4ff-7ac21caf27d5
-ms.openlocfilehash: 89e5c6b05d4912835210f39295fd390a2c573d93
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6182de8e313bea6a359f437e8242d5bf48ab46ed
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078283"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464887"
 ---
 # <a name="generation-operations-visual-basic"></a>생성 작업 (Visual Basic)
 
