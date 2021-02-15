@@ -1,15 +1,16 @@
 ---
+description: '에 대 한 자세한 정보: 원격 서버 컴퓨터가 없거나 사용할 수 없는 경우 (Visual Basic)'
 title: 원격 서버 컴퓨터가 없거나 사용할 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID462
 ms.assetid: fa2cf36e-2169-42db-8449-6aca579e8303
-ms.openlocfilehash: 8e51ae2e4fc2da472848f88884d23cc279c890a9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e71dd21993ab9fa4c91e54c6aee5e8d2069e8554
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086597"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461543"
 ---
 # <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a>원격 서버 컴퓨터가 없거나 사용할 수 없습니다(Visual Basic).
 
@@ -19,6 +20,6 @@ ms.locfileid: "91086597"
   
 - 네트워크에 다시 연결하여 시도합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
-- [오류 형식](../programming-guide/language-features/error-types.md)
+- [오류 유형](../programming-guide/language-features/error-types.md)

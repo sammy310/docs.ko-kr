@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 상속 된 변수 숨기기 (Visual Basic)'
 title: '방법: 상속된 변수 숨기기'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: f49bba0497f9f4f2774b01284c815bba9aaed119
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: be2de980e27b318151c795ae36bd92a01d47d55e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357272"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429899"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>방법: 상속된 변수 숨기기(Visual Basic)
 
-파생 클래스는 기본 클래스의 모든 정의를 상속 합니다. 기본 클래스의 요소와 같은 이름을 사용 하 여 변수를 정의 하려면 파생 클래스에서 변수를 정의할 때 기본 클래스 요소 *를 숨기 거 나 숨길*수 있습니다. 이 작업을 수행 하는 경우 파생 클래스의 코드는 숨기는 메커니즘을 명시적으로 우회 하지 않는 한 변수에 액세스 합니다.
+파생 클래스는 기본 클래스의 모든 정의를 상속 합니다. 기본 클래스의 요소와 같은 이름을 사용 하 여 변수를 정의 하려면 파생 클래스에서 변수를 정의할 때 기본 클래스 요소 *를 숨기 거 나 숨길* 수 있습니다. 이 작업을 수행 하는 경우 파생 클래스의 코드는 숨기는 메커니즘을 명시적으로 우회 하지 않는 한 변수에 액세스 합니다.
 
 상속 된 변수를 숨기려는 또 다른 이유는 기본 클래스 수정 버전 으로부터 보호 하는 것입니다. 기본 클래스는 상속 하는 요소를 변경 하는 변경 될 수 있습니다. 이 경우 `Shadows` 한정자는 파생 클래스의 참조를 기본 클래스 요소가 아니라 변수로 확인 하도록 합니다.
 
@@ -56,7 +57,7 @@ ms.locfileid: "84357272"
 
 섀도잉 시 이름이 같은 변수의 버전이 두 개 이상 도입 되었습니다. 코드 문이 변수 이름을 참조 하는 경우 컴파일러가 참조를 확인 하는 버전은 코드 문의 위치 및 한정 된 문자열이 있는지 여부와 같은 요소에 따라 달라 집니다. 이로 인해 숨겨진 변수의 의도 하지 않은 버전을 참조 하는 위험이 늘어날 수 있습니다. 숨겨진 변수에 대 한 모든 참조를 정규화 하 여이 위험을 낮출 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [References to Declared Elements](references-to-declared-elements.md)
 - [Visual Basic에서 숨김](shadowing.md)

@@ -1,15 +1,16 @@
 ---
+description: "자세한 정보: ' ' 형식의 시작 값 <type1> 과 ' ' 형식의 단계 값 <type2> 을 공통 형식으로 변환할 수 없습니다."
 title: "'<type1>' 형식의 시작 값 및 '<type2>' 형식의 단계 값을 공통 형식으로 변환할 수 없습니다."
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_CommonType2
 ms.assetid: ce400fe1-5edd-4aee-94d8-530be03cfd9a
-ms.openlocfilehash: b9605ca8087e0039b5028d83bd2ccfea3506418a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 85fe3275f05e9ef8e0230d7a87dfb63ed3953414
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077633"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472967"
 ---
 # <a name="cannot-convert-start-value-of-type-type1-and-step-value-of-type-type2-to-a-common-type"></a>'\<type1>' 형식의 시작 값 및 '\<type2>' 형식의 단계 값을 공통 형식으로 변환할 수 없습니다.
 
@@ -19,7 +20,7 @@ ms.locfileid: "91077633"
   
 1. 모든 값이 공통 형식으로 변환될 수 있도록 하나 이상의 값 형식을 변경합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [디버거로 코드 탐색](/visualstudio/debugger/navigating-through-code-with-the-debugger)
 - [For...Next 문](../language-reference/statements/for-next-statement.md)

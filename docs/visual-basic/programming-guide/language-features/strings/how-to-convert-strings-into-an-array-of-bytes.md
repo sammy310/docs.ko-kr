@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 문자열을 Visual Basic 바이트 배열로 변환'
 title: '방법: 문자열을 바이트 배열로 변환'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - examples [Visual Basic], string conversion
 - arrays [Visual Basic], byte arrays
 ms.assetid: f477d35c-a3fc-4a30-b1d4-cd0d353aae1d
-ms.openlocfilehash: d9a5a329a82555e66a391fd93005634106569232
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: edd41bc1dd7026c5b4ed061211f4b7884cd6044a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071185"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429848"
 ---
 # <a name="how-to-convert-strings-into-an-array-of-bytes-in-visual-basic"></a>방법: Visual Basic에서 문자열을 바이트 배열로 변환
 
 이 항목에서는 문자열을 바이트 배열로 변환 하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  이 예제에서는 <xref:System.Text.Encoding.GetBytes%2A> encoding 클래스의 메서드를 사용 하 여 <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 문자열을 바이트 배열로 변환 합니다.  
   
@@ -41,7 +42,7 @@ ms.locfileid: "91071185"
   
 - <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: UTF-8 형식에 대 한 인코딩을 가져옵니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Text.Encoding?displayProperty=nameWithType>
 - <xref:System.Text.Encoding.GetBytes%2A>

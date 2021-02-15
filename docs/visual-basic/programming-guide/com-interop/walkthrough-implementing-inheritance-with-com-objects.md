@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연습: COM 개체를 사용 하 여 상속 구현 (Visual Basic)'
 title: '연습: COM 개체를 사용한 상속 구현'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: bdb891e1a150f0d7b79aefcc3db1f18dc8e84be4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dc16990f25126cba52ef3ea457e8c3157c987c60
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396729"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438946"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>연습: COM 개체를 사용한 상속 구현(Visual Basic)
 
@@ -26,15 +27,15 @@ ms.locfileid: "84396729"
 
 1. Visual Basic 6.0에서 새 ActiveX DLL 프로젝트를 엽니다. 이라는 프로젝트가 `Project1` 생성 됩니다. 이라는 클래스가 `Class1` 있습니다.
 
-2. **프로젝트 탐색기**에서 **Project1**를 마우스 오른쪽 단추로 클릭 한 다음 **Project1 속성**을 클릭 합니다. **프로젝트 속성** 대화 상자가 표시 됩니다.
+2. **프로젝트 탐색기** 에서 **Project1** 를 마우스 오른쪽 단추로 클릭 한 다음 **Project1 속성** 을 클릭 합니다. **프로젝트 속성** 대화 상자가 표시 됩니다.
 
 3. **프로젝트 속성** 대화 상자의 **일반** 탭에서 `ComObject1` **프로젝트 이름** 필드에를 입력 하 여 프로젝트 이름을 변경 합니다.
 
-4. **프로젝트 탐색기**에서를 마우스 오른쪽 단추로 클릭 한 `Class1` 다음 **속성**을 클릭 합니다. 클래스에 대 한 **속성** 창이 표시 됩니다.
+4. **프로젝트 탐색기** 에서를 마우스 오른쪽 단추로 클릭 한 `Class1` 다음 **속성** 을 클릭 합니다. 클래스에 대 한 **속성** 창이 표시 됩니다.
 
 5. 속성을 `Name` 로 변경 `MathFunctions` 합니다.
 
-6. **프로젝트 탐색기**에서를 마우스 오른쪽 단추로 클릭 한 `MathFunctions` 다음 **코드 보기**를 클릭 합니다. **코드 편집기** 가 표시 됩니다.
+6. **프로젝트 탐색기** 에서를 마우스 오른쪽 단추로 클릭 한 `MathFunctions` 다음 **코드 보기** 를 클릭 합니다. **코드 편집기** 가 표시 됩니다.
 
 7. 속성 값을 보유할 지역 변수를 추가 합니다.
 
@@ -67,7 +68,7 @@ ms.locfileid: "84396729"
     End Function
     ```
 
-10. **파일** 메뉴에서 **ComObject1 만들기** 를 클릭 하 여 COM 개체를 만들고 등록 합니다.
+10. **파일** 메뉴에서 **ComObject1.dll만들기** 를 클릭 하 여 COM 개체를 만들고 등록 합니다.
 
     > [!NOTE]
     > Visual Basic를 사용 하 여 만든 클래스를 COM 개체로 노출할 수도 있지만이 클래스는 진정한 COM 개체가 아니므로이 연습에서 사용할 수 없습니다. 자세한 내용은 참조 하세요 [.NET Framework 애플리케이션의 COM 상호 운용성](com-interoperability-in-net-framework-applications.md)합니다.
@@ -80,19 +81,19 @@ ms.locfileid: "84396729"
 
 1. 새 Visual Basic Windows 애플리케이션 프로젝트를 엽니다.
 
-2. **프로젝트** 메뉴에서 **참조 추가**를 클릭합니다.
+2. **프로젝트** 메뉴에서 **참조 추가** 를 클릭합니다.
 
      **참조 추가** 대화 상자가 표시됩니다.
 
-3. **COM** 탭에서 `ComObject1` **구성 요소 이름** 목록을 두 번 클릭 하 고 **확인**을 클릭 합니다.
+3. **COM** 탭에서 `ComObject1` **구성 요소 이름** 목록을 두 번 클릭 하 고 **확인** 을 클릭 합니다.
 
-4. **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다.
+4. **프로젝트** 메뉴에서 **새 항목 추가** 를 클릭합니다.
 
      **새 항목 추가** 대화 상자가 표시됩니다.
 
-5. **템플릿** 창에서 **클래스**를 클릭 합니다.
+5. **템플릿** 창에서 **클래스** 를 클릭 합니다.
 
-     기본 파일 이름인는 `Class1.vb` **이름** 필드에 표시 됩니다. 이 필드를 MathClass로 변경 하 고 **추가**를 클릭 합니다. 그러면 이라는 클래스가 만들어지고 `MathClass` 해당 코드가 표시 됩니다.
+     기본 파일 이름인는 `Class1.vb` **이름** 필드에 표시 됩니다. 이 필드를 MathClass로 변경 하 고 **추가** 를 클릭 합니다. 그러면 이라는 클래스가 만들어지고 `MathClass` 해당 코드가 표시 됩니다.
 
 6. 다음 코드를의 맨 위에 추가 `MathClass` 하 여 COM 클래스에서 상속 합니다.
 
@@ -132,7 +133,7 @@ COM 클래스에서 상속 된 속성 및 메서드를 재정의할 수 있습�
 
 - 매개 변수를 사용 하는 속성 `ByRef` 은 재정의할 수 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [.NET Framework 애플리케이션의 COM 상호 운용성](com-interoperability-in-net-framework-applications.md)
 - [Inherits Statement](../../language-reference/statements/inherits-statement.md)

@@ -1,5 +1,5 @@
 ---
-description: "BC30007: ' <assemblyname> ' 기본 클래스를 포함 하는 ' ' 어셈블리에 대 한 참조가 필요 합니다.<classname>"
+description: "BC30007: <assemblyname> 기본 클래스 ' '을 (를) 포함 하는 ' ' 어셈블리에 필요한 참조에 대해 자세히 알아보세요. <classname>"
 title: 기본 클래스 '<assemblyname>'을(를) 포함하는 '<classname>' 어셈블리에 대한 참조가 필요합니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30007
 ms.assetid: 5f34cf47-6c6e-4954-bd8e-d6b020b75fb7
-ms.openlocfilehash: f01795d3e8147015f9f46697b047a8c63099ff32
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: e6d4cf660453078d9a0f9825bc81bb990c1f55b9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99792052"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456889"
 ---
 # <a name="bc30007-reference-required-to-assembly-assemblyname-containing-the-base-class-classname"></a>BC30007: ' ' \<assemblyname> 기본 클래스를 포함 하는 ' ' 어셈블리에 대 한 참조가 필요 합니다. \<classname>
 

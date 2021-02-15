@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 람다 식 (Visual Basic)'
 title: 람다 식
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 54a9c0cf275a67c77748c32771c3c5dcbdb916d7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: adac7f0d0dbbff575837f691d70c7752eebb39f1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406705"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480091"
 ---
 # <a name="lambda-expressions-visual-basic"></a>람다 식(Visual Basic)
 
@@ -63,7 +64,7 @@ ms.locfileid: "84406705"
 
 - 키워드를 사용 하 여 람다 식 매개 변수의 데이터 형식을 지정 `As` 하거나 매개 변수의 데이터 형식을 유추할 수 있습니다. 모든 매개 변수에는 지정 된 데이터 형식이 있어야 합니다. 그렇지 않으면 모두 유추 해야 합니다.
 
-- `Optional`및 `Paramarray` 매개 변수는 허용 되지 않습니다.
+- `Optional` 및 `Paramarray` 매개 변수는 허용 되지 않습니다.
 
 - 제네릭 매개 변수는 허용 되지 않습니다.
 
@@ -122,15 +123,15 @@ End Class
 
 다음 예제에서는 중첩 된 람다 식의 광범위 한 액세스 권한을 보여 줍니다. 반환 된 람다 식이로에서 실행 될 `Main` 때 `aDel` 다음 요소에 액세스 합니다.
 
-- 클래스가 정의 된 클래스의 필드입니다.`aField`
+- 클래스가 정의 된 클래스의 필드입니다. `aField`
 
-- 정의 된 클래스의 속성:`aProp`
+- 정의 된 클래스의 속성: `aProp`
 
-- 메서드가 정의 된 메서드의 매개 변수는 `functionWithNestedLambda` 다음과 같습니다.`level1`
+- 메서드가 정의 된 메서드의 매개 변수는 `functionWithNestedLambda` 다음과 같습니다. `level1`
 
-- 의 지역 변수입니다 `functionWithNestedLambda` .`localVar`
+- 의 지역 변수입니다 `functionWithNestedLambda` . `localVar`
 
-- 중첩 된 람다 식의 매개 변수는 다음과 같습니다.`level2`
+- 중첩 된 람다 식의 매개 변수는 다음과 같습니다. `level2`
 
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]
 
@@ -156,7 +157,7 @@ End Class
 
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [Visual Basic의 LINQ 소개](../linq/introduction-to-linq.md)

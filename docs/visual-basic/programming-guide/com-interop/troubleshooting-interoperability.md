@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 상호 운용성 문제 해결 (Visual Basic)'
 title: 상호 운용성 문제 해결
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 135b121638b92adc5a3b0920aa29d10fd1d62d14
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 49a108e47c9614f11db6f6c1e7ba0b8714e936b2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075995"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438959"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>상호 운용성 문제 해결(Visual Basic)
 
@@ -31,7 +32,7 @@ COM과 .NET Framework의 관리 코드 간에 상호 운용 하는 경우 다음
 
  때때로 .NET Framework에 포함 되지 않은 데이터 형식을 사용 해야 할 수 있습니다. Interop 어셈블리는 대부분의 COM 개체 작업을 처리 하지만 관리 되는 개체를 COM에 노출할 때 사용 되는 데이터 형식을 제어 해야 할 수도 있습니다. 예를 들어 클래스 라이브러리의 구조체는 `BStr` Visual Basic 6.0 이전 버전에서 만든 COM 개체로 전송 되는 문자열에 대해 관리 되지 않는 형식을 지정 해야 합니다. 이러한 경우 특성을 사용 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 하 여 관리 되는 형식을 관리 되지 않는 형식으로 노출 시킬 수 있습니다.  
   
-## <a name="exporting-fixed-length-strings-to-unmanaged-code"></a><a name="vbconinteroperabilitymarshalinganchor2"></a> 고정 길이 문자열을 비관리 코드로 내보내기  
+## <a name="exporting-fixed-length-strings-to-unmanaged-code"></a><a name="vbconinteroperabilitymarshalinganchor2"></a> Fixed-Length 문자열을 비관리 코드로 내보내기  
 
  Visual Basic 6.0 이전 버전에서 문자열은 null 종결 문자가 없는 바이트 시퀀스로 COM 개체로 내보내집니다. 다른 언어와의 호환성을 위해 Visual Basic .NET은 문자열을 내보낼 때 종료 문자를 포함 합니다. 이러한 비 호환성 문제를 해결 하는 가장 좋은 방법은 종료 문자를 또는 배열로 하지 않는 문자열을 내보내는 것입니다 `Byte` `Char` .  
   
@@ -103,7 +104,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
 ### <a name="understanding-com-interop-errors"></a>COM interop 오류 이해  
 
- 오류 처리를 사용 하지 않으면 interop 호출은 종종 거의 정보를 제공 하지 않는 오류를 생성 합니다. 가능 하면 구조화 된 오류 처리를 사용 하 여 발생 하는 문제에 대 한 자세한 정보를 제공 합니다. 응용 프로그램을 디버그할 때 특히 유용할 수 있습니다. 다음은 그 예입니다.  
+ 오류 처리를 사용 하지 않으면 interop 호출은 종종 거의 정보를 제공 하지 않는 오류를 생성 합니다. 가능 하면 구조화 된 오류 처리를 사용 하 여 발생 하는 문제에 대 한 자세한 정보를 제공 합니다. 응용 프로그램을 디버그할 때 특히 유용할 수 있습니다. 예를 들면 다음과 같습니다.  
   
  [!code-vb[VbVbalrInterop#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#25)]  
   
@@ -115,7 +116,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
 - Microsoft Forms 2.0 프레임 컨트롤  
   
-- Up-down 컨트롤 (spin 컨트롤이 라고도 함)  
+- Up-Down 컨트롤 (spin 컨트롤이 라고도 함)  
   
 - Sheridan 탭 컨트롤  
   
@@ -125,7 +126,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 
  Visual Basic .NET은 `ReadOnly` 일부 이전 ActiveX 컨트롤의 속성을 `ByRef` 다른 프로시저에 대 한 매개 변수로 전달 하는 경우 "오류 0x800A017F CTL_E_SETNOTSUPPORTED"와 같은 COM 오류를 발생 시킬 수 있습니다. Visual Basic 6.0의 비슷한 프로시저 호출은 오류를 발생 시 키 지 않으며 매개 변수는 값으로 전달 된 것 처럼 처리 됩니다. Visual Basic .NET 오류 메시지는 속성 프로시저가 없는 속성을 변경 하려고 함을 나타냅니다 `Set` .  
   
- 호출 중인 프로시저에 대 한 액세스 권한이 있는 경우 키워드를 사용 하 여 `ByVal` 속성을 허용 하는 매개 변수를 선언 하 여이 오류를 방지할 수 있습니다 `ReadOnly` . 다음은 그 예입니다.  
+ 호출 중인 프로시저에 대 한 액세스 권한이 있는 경우 키워드를 사용 하 여 `ByVal` 속성을 허용 하는 매개 변수를 선언 하 여이 오류를 방지할 수 있습니다 `ReadOnly` . 예를 들면 다음과 같습니다.  
   
  [!code-vb[VbVbalrInterop#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#26)]  
   
@@ -141,7 +142,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  공유 되지 않은 어셈블리는 호출 하는 응용 프로그램과 함께 디렉터리에 나란히 배치 되어야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [COM Interop](index.md)

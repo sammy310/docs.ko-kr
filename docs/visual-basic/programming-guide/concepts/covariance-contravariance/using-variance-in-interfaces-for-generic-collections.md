@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 제네릭 컬렉션에 대 한 인터페이스에서 가변성 사용 (Visual Basic)'
 title: 제네릭 컬렉션용 인터페이스에서 가변성 사용
 ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-ms.openlocfilehash: b762ce42215f9b24371313446637e95962677bfb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9f98facbe1b89e468902384d2145fc5f91aae66a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375643"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100458982"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>제네릭 컬렉션용 인터페이스의 가변성 사용(Visual Basic)
 
@@ -53,7 +54,7 @@ End Sub
 
 ## <a name="comparing-generic-collections"></a>제네릭 컬렉션 비교
 
-다음 예제에서는 <xref:System.Collections.Generic.IComparer%601> 인터페이스에서 반공변성(Contravariance) 지원의 이점을 보여 줍니다. `PersonComparer` 클래스는 `IComparer(Of Person)` 인터페이스를 구현합니다. 그러나 `Employee`는 `Person`을 상속하므로 `Employee` 형식 개체의 시퀀스를 비교하기 위해 이 클래스를 다시 사용할 수 있습니다.
+다음 예제에서는 <xref:System.Collections.Generic.IComparer%601> 인터페이스에서 반공변성(Contravariance) 지원의 이점을 보여 줍니다. `PersonComparer` 클래스가 `IComparer(Of Person)` 인터페이스를 구현합니다. 그러나 `Employee`는 `Person`을 상속하므로 `Employee` 형식 개체의 시퀀스를 비교하기 위해 이 클래스를 다시 사용할 수 있습니다.
 
 ```vb
 ' Simple hierarchy of classes.
@@ -112,6 +113,6 @@ Sub Main()
 End Sub
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [제네릭 인터페이스의 가변성(Visual Basic)](variance-in-generic-interfaces.md)
