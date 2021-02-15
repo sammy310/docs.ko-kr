@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic의 제네릭 형식 (Visual Basic)'
 title: 제네릭 형식
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: f9b343c664baaf316e5cd6df72da8dcf56222382
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1164513825240b1e83fbce2aeb6478430b0bc250
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090263"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428547"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic의 제네릭 형식(Visual Basic)
 
@@ -71,7 +72,7 @@ ms.locfileid: "91090263"
   
  [!code-vb[VbVbalrDataTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#3)]  
   
- 위의 문에서는 특정 형식이 형식 매개 변수를 대체하는 *생성된 클래스*를 선언합니다. 이 대체는 생성된 클래스 내에서 코드 전체로 전파됩니다. 다음 예에서는 `processNewItem` 의 `integerClass`프로시저 모습을 보여 줍니다.  
+ 위의 문에서는 특정 형식이 형식 매개 변수를 대체하는 *생성된 클래스* 를 선언합니다. 이 대체는 생성된 클래스 내에서 코드 전체로 전파됩니다. 다음 예에서는 `processNewItem` 의 `integerClass`프로시저 모습을 보여 줍니다.  
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
@@ -129,7 +130,7 @@ ms.locfileid: "91090263"
   
 - 형식 인수는 매개 변수 없는 생성자로부터 개체를 만드는 코드에 액세스할 수 있는 매개 변수 없는 생성자를 노출해야 함  
   
-- 형식 인수는 *참조 형식*이거나 *값 형식* 이어야 합니다.  
+- 형식 인수는 *참조 형식* 이거나 *값 형식* 이어야 합니다.  
   
  둘 이상의 요구 사항을 적용해야 하는 경우 쉼표로 구분된 *제약 조건 목록* 을 중괄호(`{ }`) 안에 넣으세요. 액세스 가능한 생성자를 요구 하려면 목록에 [New Operator](../../../language-reference/operators/new-operator.md) 키워드를 포함 합니다. 참조 형식을 요구하려면 `Class` 키워드를 넣고, 값 형식을 요구하려면 `Structure` 키워드를 넣으세요.  
   
@@ -145,7 +146,7 @@ ms.locfileid: "91090263"
 
  제네릭 형식에서는 다음의 용어를 사용합니다.  
   
-- *제네릭 형식*입니다. 선언할 때 최소 하나의 데이터 형식을 제공하는 클래스, 구조체, 인터페이스, 프로시저 또는 대리자의 정의입니다.  
+- *제네릭 형식* 입니다. 선언할 때 최소 하나의 데이터 형식을 제공하는 클래스, 구조체, 인터페이스, 프로시저 또는 대리자의 정의입니다.  
   
 - *형식 매개 변수*. 제네릭 형식 정의에서 형식을 선언할 때 제공하는 데이터 형식에 대한 자리 표시자입니다.  
   
@@ -155,7 +156,7 @@ ms.locfileid: "91090263"
   
 - *생성된 형식*. 형식 매개 변수에 대한 형식 인수를 제공하여 제네릭 형식에서 선언된 클래스, 구조체, 인터페이스, 프로시저 또는 대리자입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [데이터 형식](index.md)
 - [형식 문자](type-characters.md)

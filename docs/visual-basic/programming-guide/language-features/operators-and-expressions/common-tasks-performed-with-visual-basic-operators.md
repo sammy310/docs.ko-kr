@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic 연산자를 사용 하 여 수행 되는 일반 작업'
 title: Visual Basic 연산자를 사용한 일반적인 작업
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-ms.openlocfilehash: a8a8d7898e52077fef47b91172e34ad50d7f54e7
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5103241c7c92ffe7264178e9abb6a56ba03d4b52
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075215"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100465264"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Visual Basic 연산자를 사용한 일반적인 작업
 
-연산자는 *피연산자*라는 하나 이상의 식과 관련 된 여러 일반적인 작업을 수행 합니다.  
+연산자는 *피연산자* 라는 하나 이상의 식과 관련 된 여러 일반적인 작업을 수행 합니다.  
   
 ## <a name="arithmetic-and-bit-shift-tasks"></a>산술 및 비트 시프트 작업  
 
@@ -31,8 +32,8 @@ ms.locfileid: "91075215"
 |대상|참조 항목|  
 |---|---|  
 |한 숫자 값을 다른 숫자 값에 추가 합니다.|[+ 연산자](../../../language-reference/operators/addition-operator.md)|  
-|다른 숫자 값에서 한 숫자 값을 뺍니다.|[-연산자 (Visual Basic)](../../../language-reference/operators/subtraction-operator.md)|  
-|숫자 값의 부호를 반대로 바꿉니다.|[-연산자 (Visual Basic)](../../../language-reference/operators/subtraction-operator.md)|  
+|다른 숫자 값에서 한 숫자 값을 뺍니다.|[- 연산자(Visual Basic)](../../../language-reference/operators/subtraction-operator.md)|  
+|숫자 값의 부호를 반대로 바꿉니다.|[- 연산자(Visual Basic)](../../../language-reference/operators/subtraction-operator.md)|  
 |한 숫자 값을 다른 숫자 값과 곱합니다.|[* 연산자](../../../language-reference/operators/multiplication-operator.md)|  
 |한 숫자 값을 다른 숫자 값으로 나눕니다.|[/연산자 (Visual Basic)](../../../language-reference/operators/floating-point-division-operator.md)|  
 |한 숫자 값을 다른 값으로 나눈 값 (나머지는 제외)을 찾습니다.|[\ 연산자 (Visual Basic)](../../../language-reference/operators/integer-division-operator.md)|  
@@ -83,7 +84,7 @@ ms.locfileid: "91075215"
 |두 정수 값에 비트 배타적 논리 분리를 수행 합니다.|[Xor 연산자](../../../language-reference/operators/xor-operator.md)|  
 |정수 계열 값에 비트 논리 부정 연산을 수행 합니다.|[Not 연산자](../../../language-reference/operators/not-operator.md)|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [연산자 및 식](index.md)
 - [기능별 연산자 목록](../../../language-reference/operators/operators-listed-by-functionality.md)

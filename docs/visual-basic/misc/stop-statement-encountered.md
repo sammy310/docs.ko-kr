@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: Stop 문 발생'
 title: Stop 문을 발견했습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID999
 ms.assetid: 4ef7216c-761a-41dc-a20c-ba133f4f1d18
-ms.openlocfilehash: 3ec7e78638f83bb63b573e3541769963bc2bec47
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 22a06d9ae95757b264a5bc6e0decad5895a9b121
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078712"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455446"
 ---
 # <a name="stop-statement-encountered"></a>Stop 문을 발견했습니다.
 
@@ -19,7 +20,7 @@ ms.locfileid: "91078712"
   
 1. `Stop` 문을 제거합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Stop 문](../language-reference/statements/stop-statement.md)
 - [제어 Flow 요약](../language-reference/keywords/control-flow-summary.md)

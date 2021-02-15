@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 선언 된 요소 이름 (Visual Basic)'
 title: Declared Element Names
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 327a18644c1dc1d8dae59016b8e30600357d2ca9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ba0a6d6b236c0c4e9ce81c37a1cca4e709cc5588
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086181"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425687"
 ---
 # <a name="declared-element-names-visual-basic"></a>선언된 요소 이름(Visual Basic)
 
-선언 된 모든 요소에는 *식별자*라고도 하는 이름이 있습니다 .이 이름은 코드에서이를 참조 하는 데 사용 됩니다.  
+선언 된 모든 요소에는 *식별자* 라고도 하는 이름이 있습니다 .이 이름은 코드에서이를 참조 하는 데 사용 됩니다.  
   
 ## <a name="rules"></a>규칙  
 
@@ -65,7 +66,7 @@ ms.locfileid: "91086181"
  `xyz$wv`  
   
 > [!CAUTION]
-> 밑줄 ()로 시작 하는 요소 이름은 `_` [언어 독립성 및 언어 독립적 구성 요소](../../../../standard/language-independence-and-language-independent-components.md) (cls)의 일부가 아니므로 cls 규격 코드는 이러한 이름을 정의 하는 구성 요소를 사용할 수 없습니다. 그러나 요소 이름에서 다른 위치의 밑줄은 CLS 규격입니다.  
+> 밑줄 ()로 시작 하는 요소 이름은 `_` [언어 독립성 및 Language-Independent 구성 요소](../../../../standard/language-independence-and-language-independent-components.md) (cls)의 일부가 아니므로 cls 규격 코드는 이러한 이름을 정의 하는 구성 요소를 사용할 수 없습니다. 그러나 요소 이름에서 다른 위치의 밑줄은 CLS 규격입니다.  
   
 ### <a name="name-length-guidelines"></a>이름 길이 지침  
 
@@ -75,7 +76,7 @@ ms.locfileid: "91086181"
   
 ## <a name="escaped-names"></a>이스케이프 된 이름  
 
- 일반적으로 요소 이름은 Visual Basic에 예약 된 키워드 (예: 또는)와 일치 하지 않아야 `Case` 합니다 `Friend` . 그러나 대괄호 ()로 묶인 *이스케이프 된 이름을*정의할 수 있습니다 `[ ]` . 괄호는 모호성을 제거 하므로 이스케이프 된 이름은 모든 Visual Basic 키워드와 일치할 수 있습니다. 또한 코드에서 나중에 이름을 참조할 때 괄호를 사용 합니다.  
+ 일반적으로 요소 이름은 Visual Basic에 예약 된 키워드 (예: 또는)와 일치 하지 않아야 `Case` 합니다 `Friend` . 그러나 대괄호 ()로 묶인 *이스케이프 된 이름을* 정의할 수 있습니다 `[ ]` . 괄호는 모호성을 제거 하므로 이스케이프 된 이름은 모든 Visual Basic 키워드와 일치할 수 있습니다. 또한 코드에서 나중에 이름을 참조할 때 괄호를 사용 합니다.  
   
  일반적으로 다음과 같은 경우에만 이스케이프 된 이름을 사용 해야 합니다.  
   
@@ -95,9 +96,9 @@ ms.locfileid: "91086181"
 
  이름 비교는 로캘과 무관 합니다. 한 로캘에서 두 이름이 일치 하는 경우 모든 로캘에서 일치 하도록 보장 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
-- [선언 된 요소](index.md)
+- [선언 요소](index.md)
 - [선언 요소의 특징](declared-element-characteristics.md)
 - [References to Declared Elements](references-to-declared-elements.md)
 - [문](../../../language-reference/statements/index.md)

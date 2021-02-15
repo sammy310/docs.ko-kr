@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 연산자 프로시저 호출 (Visual Basic)'
 title: '방법: 연산자 프로시저 호출'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: 0e88ff7b36535a709671a1f9b838f2b4488d1d37
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f58d12ac5e4c9071646073184f7824946c00b39b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075189"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472607"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>방법: 연산자 프로시저 호출(Visual Basic)
 
@@ -42,7 +43,7 @@ ms.locfileid: "91075189"
   
 3. `CType` 변환 연산자 프로시저를 호출 하 고 변환 된 값을 반환 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예에서는 두 개의 <xref:System.TimeSpan> 구조체를 만들고 함께 추가 하 고 그 결과를 세 번째 구조에 저장 합니다 <xref:System.TimeSpan> . <xref:System.TimeSpan>구조는 여러 표준 연산자를 오버 로드 하는 연산자 프로시저를 정의 합니다.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "91075189"
 
  사용 중인 클래스 또는 구조체에서 사용 하려는 연산자를 정의 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [연산자 프로시저](./operator-procedures.md)
 - [방법: 연산자 정의](./how-to-define-an-operator.md)

@@ -16,22 +16,24 @@ helpviewer_keywords:
 - naming code style rules [EditorConfig]
 - naming rules
 - EditorConfig naming conventions
-ms.openlocfilehash: 1fce275204b729b4d23729ca432e06a5a249620d
-ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
+ms.openlocfilehash: df2cbc8299d853b5730bc39eb25c6f97b6575655
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99065137"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429210"
 ---
 # <a name="naming-rules"></a>이름 지정 규칙
 
-파일에서 `.editorconfig` .net 프로그래밍 언어 코드 요소  ( &mdash; 예: 클래스, 속성 및 메서드)의 이름을 지정 하는 방법에 대 한 명명 규칙을 정의할 수 있습니다 &mdash; . 예를 들어 public 멤버가 대문자로 표시 되거나 전용 필드가로 시작 되어야 하도록 지정할 수 있습니다 `_` .
+파일에서 `.editorconfig` 클래스, 속성, 메서드 등의 .net 프로그래밍 언어 코드 요소 이름을 지정 하는 방법을 지정 하 고 적용 하는 **명명 규칙** 을 정의할 수 있습니다 &mdash; &mdash; . 예를 들어 public 멤버가 대문자로 표시 되거나 전용 필드가로 시작 되어야 하도록 지정할 수 있습니다 `_` .
 
 명명 규칙에는 다음과 같은 세 가지 구성 요소가 있습니다.
 
-*  &mdash; 규칙이 적용 되는 기호 그룹의 기호 그룹입니다.
-* 규칙과 연결할 **명명 스타일** 입니다.
+* 규칙이 적용 되는 **기호 그룹** (예: public 멤버 또는 전용 필드)입니다.
+* 규칙에 연결할 **명명 스타일** 입니다. 예를 들어 이름이 대문자로 또는 밑줄로 시작 해야 합니다.
 * 규칙 적용의 심각도입니다.
+
+먼저 기호 그룹 및 명명 스타일을 지정 하 고 각각에 제목을 지정 해야 합니다. 그런 다음 모든 항목을 연결 하는 명명 규칙을 지정 합니다.
 
 ## <a name="general-syntax"></a>일반 구문
 
@@ -49,7 +51,7 @@ ms.locfileid: "99065137"
 
 **\<kind>** 정의 되는 &mdash; 명명 규칙, 기호 그룹 또는 명명 스타일의 요소 종류를 지정 &mdash; 하 고 다음 중 하나 여야 합니다.
 
-| 속성을 설정 하려면 | 값 사용 \<kind> | 예제 |
+| 속성을 설정 하려면 | 값 사용 \<kind> | 예 |
 | --- | --- | -- |
 | 명명 규칙 | `dotnet_naming_rule` | `dotnet_naming_rule.types_should_be_pascal_case.severity = suggestion` |
 | 기호 그룹 | `dotnet_naming_symbols` | `dotnet_naming_symbols.interface.applicable_kinds = interface` |
@@ -73,7 +75,7 @@ dotnet_naming_symbols.types.applicable_accessibilities = public, internal, priva
 
 규칙이 적용 되려면 모든 명명 규칙 속성이 필요 합니다.
 
-| 속성 | Description |
+| 속성 | 설명 |
 | -- | -- |
 | `symbols` | 기호 그룹의 제목입니다. 명명 규칙은이 그룹의 기호에 적용 됩니다. |
 | `style` | 이 규칙과 연결 되어야 하는 명명 스타일의 제목입니다. |
@@ -89,9 +91,9 @@ dotnet_naming_symbols.types.applicable_accessibilities = public, internal, priva
 
 | 속성 | Description | 허용되는 값 | 필수 |
 | -- | -- | -- | -- |
-| `applicable_kinds` | 그룹 1의 기호 종류 <sup>1</sup> | `*`(모든 기호를 지정하려면 이 값을 사용합니다.)<br/>`namespace`<br/>`class`<br/>`struct`<br/>`interface`<br/>`enum`<br/>`property`<br/>`method`<br/>`field`<br/>`event`<br/>`delegate`<br/>`parameter`<br/>`type_parameter`<br/>`local`<br/>`local_function` | 예 |
-| `applicable_accessibilities` | 그룹에 있는 기호의 액세스 가능성 수준 | `*`(모든 액세스 가능성 수준을 지정하려면 이 값을 사용합니다.)<br/>`public`<br/>`internal` 또는 `friend`<br/>`private`<br/>`protected`<br/>`protected_internal` 또는 `protected_friend`<br/>`private_protected`<br/>`local` (메서드 내에 정의 된 기호의 경우) | 예 |
-| `required_modifiers` | 지정 된 한정자 <sup>2</sup> 를 _모두_ 사용 하는 기호만 일치 | `abstract` 또는 `must_inherit`<br/>`async`<br/>`const`<br/>`readonly`<br/>`static` 또는 `shared` <sup>3</sup> | 아니요 |
+| `applicable_kinds` | 그룹 1의 기호 종류 <sup>1</sup> | `*`(모든 기호를 지정하려면 이 값을 사용합니다.)<br/>`namespace`<br/>`class`<br/>`struct`<br/>`interface`<br/>`enum`<br/>`property`<br/>`method`<br/>`field`<br/>`event`<br/>`delegate`<br/>`parameter`<br/>`type_parameter`<br/>`local`<br/>`local_function` | Yes |
+| `applicable_accessibilities` | 그룹에 있는 기호의 액세스 가능성 수준 | `*`(모든 액세스 가능성 수준을 지정하려면 이 값을 사용합니다.)<br/>`public`<br/>`internal` 또는 `friend`<br/>`private`<br/>`protected`<br/>`protected_internal` 또는 `protected_friend`<br/>`private_protected`<br/>`local` (메서드 내에 정의 된 기호의 경우) | Yes |
+| `required_modifiers` | 지정 된 한정자 <sup>2</sup> 를 _모두_ 사용 하는 기호만 일치 | `abstract` 또는 `must_inherit`<br/>`async`<br/>`const`<br/>`readonly`<br/>`static` 또는 `shared` <sup>3</sup> | 예 |
 
 **참고:**
 
@@ -113,9 +115,9 @@ dotnet_naming_symbols.types.applicable_accessibilities = public, internal, priva
 | 속성 | Description | 허용되는 값 | 필수 |
 | -- | -- | -- | -- |
 | `capitalization` | 기호 내의 단어에 대 한 대/소문자 스타일 | `pascal_case`<br/>`camel_case`<br/>`first_word_upper`<br/>`all_upper`<br/>`all_lower` | 예<sup>1</sup> |
-| `required_prefix` | 다음 문자로 시작 해야 합니다. | | 아니요 |
-| `required_suffix` | 다음 문자로 끝나야 합니다. | | 아니요 |
-| `word_separator` | 기호 내의 단어는이 문자로 구분 해야 합니다. | | 아니요 |
+| `required_prefix` | 다음 문자로 시작 해야 합니다. | | 예 |
+| `required_suffix` | 다음 문자로 끝나야 합니다. | | 예 |
+| `word_separator` | 기호 내의 단어는이 문자로 구분 해야 합니다. | | 예 |
 
 **참고:**
 
@@ -170,7 +172,7 @@ dotnet_naming_rule.public_members_must_be_capitalized.style    = first_word_uppe
 dotnet_naming_rule.public_members_must_be_capitalized.severity = suggestion
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [언어 규칙](language-rules.md)
 - [서식 지정 규칙](formatting-rules.md)

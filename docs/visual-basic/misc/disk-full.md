@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 디스크가 꽉 참 (Visual Basic)'
 title: 디스크가 꽉 참
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID61
 ms.assetid: 039fd26a-947d-4c64-a08e-96c2b53c6d50
-ms.openlocfilehash: 0bc1add3ce6360f2f25ff6ea9f4d25b1b0764745
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3a2cf1492fb8117d120e985ac78fe10b53198ef5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084478"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428729"
 ---
 # <a name="disk-full-visual-basic"></a>디스크가 꽉 찼습니다(Visual Basic).
 
@@ -19,6 +20,6 @@ ms.locfileid: "91084478"
   
 - 일부 파일을 다른 디스크로 이동하거나 일부 파일을 삭제하여 디스크에 더 많은 공간을 만듭니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
-- [오류 형식](../programming-guide/language-features/error-types.md)
+- [오류 유형](../programming-guide/language-features/error-types.md)

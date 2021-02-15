@@ -1,17 +1,18 @@
 ---
+description: '자세한 정보: 방법: LINQ 쿼리에 대 한 사용자 지정 메서드 추가 (Visual Basic)'
 title: '방법: LINQ 쿼리용 사용자 지정 메서드 추가'
 ms.date: 08/28/2020
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: 7d38a45263135fa10dc53dc0d09b8129838e78e6
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 62acf22a8be9986388233ee34121a97d65a87f43
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89117781"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100424530"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>방법: LINQ 쿼리에 대 한 사용자 지정 메서드 추가 (Visual Basic)
 
-인터페이스에 확장 메서드를 추가 하 여 LINQ 쿼리에 사용 하는 메서드 집합을 확장 합니다 <xref:System.Collections.Generic.IEnumerable%601> . 예를 들어 표준 평균 또는 최대 작업 외에도 값 시퀀스에서 단일 값을 계산 하는 사용자 지정 집계 메서드를 만듭니다. 또한 사용자 지정 필터 또는 값 시퀀스에 대 한 특정 데이터 변환으로 작동 하는 메서드를 만들고 새 시퀀스를 반환 합니다. 이러한 메서드의 예로는 <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> 및 <xref:System.Linq.Enumerable.Reverse%2A>가 있습니다.
+<xref:System.Collections.Generic.IEnumerable%601> 인터페이스에 확장 메서드를 추가하여 LINQ 쿼리에 사용하는 메서드 세트를 확장합니다. 예를 들어 표준 평균 또는 최대 작업 외에 사용자 지정 집계 메서드를 만들어 값 시퀀스에서 단일 값을 계산합니다. 값 시퀀스에 대한 특정 데이터 변환 또는 사용자 지정 필터로 작동하고 새 시퀀스를 반환하는 메서드도 만듭니다. 이러한 메서드의 예로는 <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> 및 <xref:System.Linq.Enumerable.Reverse%2A>가 있습니다.
 
 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 확장하면 사용자 지정 메서드를 열거 가능한 컬렉션에 적용할 수 있습니다. 자세한 내용은 [확장 메서드](../../language-features/procedures/extension-methods.md)를 참조하세요.
 
