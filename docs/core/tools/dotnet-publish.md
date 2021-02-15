@@ -1,13 +1,13 @@
 ---
 title: dotnet publish 명령
 description: dotnet publish 명령은 .NET 프로젝트 또는 솔루션을 디렉터리에 게시합니다.
-ms.date: 11/11/2020
-ms.openlocfilehash: 3918c0708e207157ac33dd1a8fdefb993a1d6741
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/03/2021
+ms.openlocfilehash: 5391e56a88f782294c3a71c523d0fc27a09e0dd8
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190067"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585678"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -146,6 +146,8 @@ dotnet publish -p:PublishProfile=FolderProfile
 - **`-p:PublishReadyToRun=true`**
 
   애플리케이션 어셈블리를 R2R(ReadyToRun) 형식으로 컴파일합니다. R2R은 AOT(Ahead-Of-Time) 컴파일 양식입니다. 자세한 내용은 [ReadyToRun 이미지](../deploying/ready-to-run.md)를 참조하세요. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
+
+  런타임 오류를 발생시킬 수 있는 누락된 종속성에 대한 경고를 보려면 `-p:PublishReadyToRunShowWarnings=true`를 사용합니다.
 
   이 옵션은 명령줄이 아닌 게시 프로필에서 지정하는 것이 좋습니다. 자세한 내용은 [MSBuild](#msbuild)를 참조하세요.
 

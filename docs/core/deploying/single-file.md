@@ -4,12 +4,12 @@ description: 단일 파일 애플리케이션이란 무엇이고, 이 애플리�
 author: lakshanf
 ms.author: lakshanf
 ms.date: 12/17/2020
-ms.openlocfilehash: 10ffc947f6a3adcf2889a03edd2616007ce236f3
-ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
+ms.openlocfilehash: fb768fa6fe390fbe8390e441f4eb71c3172ad395
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98536140"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505428"
 ---
 # <a name="single-file-deployment-and-executable"></a>단일 파일 배포 및 실행 파일
 
@@ -168,8 +168,8 @@ Visual Studio는 애플리케이션의 게시 방식을 제어하는 재사용 �
 
 01. **프로필 설정** 대화 상자에서 다음 옵션을 설정합니다.
 
-    - **배포 모드** 를 **자체 포함** 으로 설정합니다.
-    - **대상 런타임** 을 게시할 플랫폼으로 설정합니다.
+    - **배포 모드** 를 **자체 포함** 또는 **프레임워크 종속** 으로 설정합니다.
+    - **대상 런타임** 을 게시할 플랫폼으로 설정합니다. (**이식 가능** 이외의 항목이어야 합니다.)
     - **단일 파일 생성** 을 선택합니다.
 
     **저장** 을 선택하여 설정을 저장하고 **게시** 대화 상자로 돌아갑니다.

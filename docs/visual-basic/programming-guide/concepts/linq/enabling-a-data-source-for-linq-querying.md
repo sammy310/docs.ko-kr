@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: LINQ 쿼리에 대 한 데이터 소스 활성화'
 title: LINQ Querying2에 데이터 소스 사용
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
-ms.openlocfilehash: a60527f0594964ec9642cdd565fd06eb5d46cf85
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: b5a325b28c5ac3d3a0adc869ca77d775774fbb2a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078348"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469853"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>LINQ 쿼리에 대한 데이터 소스 활성화
 

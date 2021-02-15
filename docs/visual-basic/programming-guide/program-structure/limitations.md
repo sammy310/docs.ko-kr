@@ -1,4 +1,5 @@
 ---
+description: Visual Basic 제한 사항에 대해 자세히 알아보세요.
 title: 제한 사항
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: abe4acd5850aa6065bf4f6fd41bc610ede7ad13f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9182c5fe475e4350cb17ed3e4b734e3924bb9f7b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097958"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432847"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic 제한 사항
 
@@ -33,7 +34,7 @@ ms.locfileid: "91097958"
   
 - **환경 문자열 길이입니다.** 명령줄 인수로 사용 되는 환경 문자열에는 최대 32768 자까지 사용할 수 있습니다. 이는 모든 플랫폼에 대 한 제한 사항입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [프로그램 구조 및 코드 규칙](program-structure-and-code-conventions.md)
 - [Visual Basic 명명 규칙](naming-conventions.md)

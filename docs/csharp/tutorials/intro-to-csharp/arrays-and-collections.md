@@ -3,24 +3,26 @@ title: 컬렉션 작업 - C# 소개 자습서
 description: 이 자습서에서는 목록 컬렉션을 살펴보면서 C#에 대해 학습합니다.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: e2282df21420630634911e07f4fb3b94f34a792b
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 4ecd2cfebddf460d3766d708d2f6740bd1c6e29a
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414685"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585665"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>일반 목록 형식을 사용하여 데이터 컬렉션을 관리하는 방법 알아보기
 
 이 소개 자습서에서는 C# 언어 및 <xref:System.Collections.Generic.List%601> 클래스의 기본 사항을 소개합니다.
 
-이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Windows, Linux 또는 macOS의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [개발 도구 익히기](local-environment.md)에 자세한 정보의 링크와 함께 나와 있습니다.
+## <a name="prerequisites"></a>사전 준비 사항
+
+이 자습서에서는 컴퓨터가 로컬 개발용으로 설정되어 있다고 가정합니다. Windows, Linux 또는 macOS에서 .NET CLI를 사용하여 애플리케이션을 만들고, 빌드하고, 실행할 수 있습니다. Windows에서 Visual Studio 2019를 사용할 수 있습니다. 설정 지침은 [로컬 환경 설정](local-environment.md)을 참조하세요.
 
 ## <a name="a-basic-list-example"></a>기본 목록 예제
 
-*list-tutorial*이라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console`을 실행합니다.
+*list-tutorial* 이라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console`을 실행합니다.
 
-편집기에서 *Program.cs*를 열고 기존 코드를 다음으로 바꿉니다.
+편집기에서 *Program.cs* 를 열고 기존 코드를 다음으로 바꿉니다.
 
 ```csharp
 using System;
@@ -42,7 +44,7 @@ namespace list_tutorial
 }
 ```
 
-`<name>`을 사용자의 이름으로 바꿉니다. *Program.cs*를 저장합니다. 콘솔 창에 `dotnet run`을 입력하여 시도해 보세요.
+`<name>`을 사용자의 이름으로 바꿉니다. *Program.cs* 를 저장합니다. 콘솔 창에 `dotnet run`을 입력하여 시도해 보세요.
 
 문자열 목록을 만들고, 해당 목록에 세 개의 이름을 추가하고, 모든 CAPS에 이름을 인쇄했습니다. 이전 자습서에서 학습한 개념을 사용하여 목록을 반복합니다.
 
@@ -69,7 +71,7 @@ foreach (var name in names)
 
 목록 끝에 이름을 두 개 더 추가했습니다. 또한 이름을 하나 제거했습니다. 파일을 저장하고 `dotnet run`을 입력하여 시도해 보세요.
 
-<xref:System.Collections.Generic.List%601>를 사용하면 **인덱스**별로 각 항목을 참조할 수도 있습니다. 목록 이름 뒤 `[`와 `]` 토큰 사이에 인덱스를 배치합니다. C#은 첫 번째 인덱스에 0을 사용합니다. 방금 추가한 코드 바로 아래에 이 코드를 추가하여 시도합니다.
+<xref:System.Collections.Generic.List%601>를 사용하면 **인덱스** 별로 각 항목을 참조할 수도 있습니다. 목록 이름 뒤 `[`와 `]` 토큰 사이에 인덱스를 배치합니다. C#은 첫 번째 인덱스에 0을 사용합니다. 방금 추가한 코드 바로 아래에 이 코드를 추가하여 시도합니다.
 
 ```csharp
 Console.WriteLine($"My name is {names[0]}");
@@ -201,7 +203,7 @@ namespace list_tutorial
 var fibonacciNumbers = new List<int> {1, 1};
 ```
 
-정수 목록을 만들고 처음 두 정수를 값 1로 설정합니다. 숫자 시퀀스인 *피보나치 시퀀스*의 첫 번째 두 값입니다. 다음 각 피보나치 수는 이전의 두 수의 합계를 사용하여 찾습니다. 이 코드를 추가합니다.
+정수 목록을 만들고 처음 두 정수를 값 1로 설정합니다. 숫자 시퀀스인 *피보나치 시퀀스* 의 첫 번째 두 값입니다. 다음 각 피보나치 수는 이전의 두 수의 합계를 사용하여 찾습니다. 이 코드를 추가합니다.
 
 ```csharp
 var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];

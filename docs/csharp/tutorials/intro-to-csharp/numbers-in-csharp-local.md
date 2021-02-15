@@ -1,30 +1,32 @@
 ---
 title: C#의 숫자 - C# 소개 자습서
 description: 숫자 형식, 해당 사용, 속성 및 메서드를 살펴보면서 C#을 학습합니다.
-ms.date: 10/31/2017
+ms.date: 02/02/2021
 ms.custom: mvc
-ms.openlocfilehash: 3dc2a5afc6321da45351525a632f586cb84bf7fe
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 253ecbc089722961013d058aff900bdde23fd366
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794613"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585639"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\#에서 정수 및 부동 소수점 수 조작
 
 이 자습서에서는 C#의 숫자 형식을 대화형으로 설명합니다. 작은 양의 코드를 작성한 다음 해당 코드를 컴파일하고 실행합니다. 이 자습서에는 C#의 숫자 및 수학 연산을 살펴보는 일련의 단원이 포함되어 있습니다. 이러한 단원에서는 C# 언어의 기본 사항을 설명합니다.
 
-이 자습서에서는 개발에 사용할 수 있는 머신이 있다고 예상합니다. .NET 자습서 [Hello World 10분 완성](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)에는 Windows, Linux 또는 macOS의 로컬 개발 환경 설정에 대한 지침이 포함되어 있습니다. 사용할 명령에 대한 간단한 개요는 [개발 도구 익히기](local-environment.md)에 자세한 정보의 링크와 함께 나와 있습니다.
+## <a name="prerequisites"></a>사전 준비 사항
+
+이 자습서에서는 컴퓨터가 로컬 개발용으로 설정되어 있다고 가정합니다. Windows, Linux 또는 macOS에서 .NET CLI를 사용하여 애플리케이션을 만들고, 빌드하고, 실행할 수 있습니다. Windows에서 Visual Studio 2019를 사용할 수 있습니다. 설정 지침은 [로컬 환경 설정](local-environment.md)을 참조하세요.
 
 ## <a name="explore-integer-math"></a>정수 계산 살펴보기
 
-*numbers-quickstart*라는 디렉터리를 만듭니다. 현재 디렉터리로 만들고 다음 명령을 실행합니다.
+*numbers-quickstart* 라는 디렉터리를 만듭니다. 현재 디렉터리로 만들고 다음 명령을 실행합니다.
 
 ```dotnetcli
 dotnet new console -n NumbersInCSharp -o .
 ```
 
-원하는 편집기에서 *Program.cs*를 열고 `Console.WriteLine("Hello World!");` 줄을 다음 코드로 바꿉니다.
+원하는 편집기에서 *Program.cs* 를 열고 `Console.WriteLine("Hello World!");` 줄을 다음 코드로 바꿉니다.
 
 ```csharp
 int a = 18;
@@ -63,7 +65,7 @@ Console.WriteLine(c);
 원하는 경우 동일한 줄에서 여러 수학 연산을 작성하여 실험할 수도 있습니다. 예를 들어 `c = a + b - 12 * 17;`을 사용해 보세요. 변수와 상수를 혼합해서 사용할 수 있습니다.
 
 > [!TIP]
-> C# (또는 다른 프로그래밍 언어)를 살펴보면서 코드를 작성할 때 실수를 하게 될 것입니다. **컴파일러**는 그러한 오류를 찾아 사용자에게 보고합니다. 출력에 오류 메시지가 포함되어 있으면 예제 코드와 창의 코드를 자세히 살펴보고 수정 사항을 확인하세요.
+> C# (또는 다른 프로그래밍 언어)를 살펴보면서 코드를 작성할 때 실수를 하게 될 것입니다. **컴파일러** 는 그러한 오류를 찾아 사용자에게 보고합니다. 출력에 오류 메시지가 포함되어 있으면 예제 코드와 창의 코드를 자세히 살펴보고 수정 사항을 확인하세요.
 > 이 연습은 C# 코드의 구조를 학습하는 데 도움이 됩니다.
 
 첫 번째 단계를 완료했습니다. 다음 섹션을 시작하기 전에 현재 코드를 별도의 메서드로 이동합니다. 이렇게 하면 새 예제 작업을 쉽게 시작할 수 있습니다. `Main` 메서드의 이름을 `WorkingWithIntegers`로 바꾸고 `WorkingWithIntegers`를 호출하는 새 `Main` 메서드를 작성합니다. 작업을 마치면 코드가 다음과 같이 됩니다.
@@ -113,7 +115,7 @@ namespace NumbersInCSharp
 //WorkingWithIntegers();
 ```
 
-`//`는 C#에서 **주석**을 시작합니다. 주석은 소스 코드에 유지하되 코드로 실행하지는 않으려는 모든 텍스트입니다. 컴파일러는 주석에서 실행 코드를 생성하지 않습니다.
+`//`는 C#에서 **주석** 을 시작합니다. 주석은 소스 코드에 유지하되 코드로 실행하지는 않으려는 모든 텍스트입니다. 컴파일러는 주석에서 실행 코드를 생성하지 않습니다.
 
 C# 언어는 수학에서 배운 규칙과 일치하는 규칙으로 여러 가지 수학 연산의 우선 순위를 정의합니다.
 곱하기와 나누기는 더하기와 빼기보다 우선 순위가 높습니다.
@@ -224,7 +226,7 @@ namespace NumbersInCSharp
 ## <a name="explore-integer-precision-and-limits"></a>정수 전체 자릿수 및 한도 살펴보기
 
 마지막 샘플에서는 정수 나누기가 결과를 자르는 것을 보여 줍니다.
-**modulo** 연산자(`%` 문자)를 사용하여 **나머지**를 얻을 수 있습니다. `Main` 메서드에 다음 코드를 사용해 봅니다.
+**modulo** 연산자(`%` 문자)를 사용하여 **나머지** 를 얻을 수 있습니다. `Main` 메서드에 다음 코드를 사용해 봅니다.
 
 ```csharp
 int a = 7;
@@ -261,7 +263,7 @@ Console.WriteLine($"An example of overflow: {what}");
 
 ## <a name="work-with-the-double-type"></a>double 형식 작업
 
-`double` 숫자 형식은 배정밀도 부동 소수점 수를 나타냅니다. 이러한 용어는 생소할 수 있습니다. **부동 소수점** 수는 아주 크거나 작은 정수가 아닌 수를 나타낼 때 유용합니다. **배정밀도**는 값을 저장하는 데 사용되는 이진 자릿수를 설명하는 상대 용어입니다. **배정밀도** 숫자의 이진 자릿수는 **단정밀도**의 두 배입니다. 최신 컴퓨터에서는 단정밀도 숫자보다 배정밀도를 더 많이 사용합니다. **단정밀도** 숫자는 `float` 키워드를 사용하여 선언됩니다.
+`double` 숫자 형식은 배정밀도 부동 소수점 수를 나타냅니다. 이러한 용어는 생소할 수 있습니다. **부동 소수점** 수는 아주 크거나 작은 정수가 아닌 수를 나타낼 때 유용합니다. **배정밀도** 는 값을 저장하는 데 사용되는 이진 자릿수를 설명하는 상대 용어입니다. **배정밀도** 숫자의 이진 자릿수는 **단정밀도** 의 두 배입니다. 최신 컴퓨터에서는 단정밀도 숫자보다 배정밀도를 더 많이 사용합니다. **단정밀도** 숫자는 `float` 키워드를 사용하여 선언됩니다.
 지금 살펴보세요. 다음 코드를 추가하고 결과를 확인합니다.
 
 ```csharp

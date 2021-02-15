@@ -1,22 +1,22 @@
 ---
 title: 탭 완성 기능 사용
-description: 이 문서에서는 PowerShell, Bash, zsh용 .NET CLI에 대해 탭 완성 기능을 사용하도록 설정하는 방법을 설명합니다.
+description: 이 문서에서는 PowerShell, Bash, zsh 및 fish용 .NET CLI에 대해 탭 완성 기능을 사용하도록 설정하는 방법을 설명합니다.
 author: adegeo
 ms.author: adegeo
 ms.topic: how-to
 ms.date: 11/03/2019
-ms.openlocfilehash: 31bf5e74644680fc30ca5b79972fbed6367363e1
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: b5b63166faa1762d9fa82a93aa70aebb33167630
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634014"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585561"
 ---
 # <a name="how-to-enable-tab-completion-for-the-net-cli"></a>.NET CLI에 대해 탭 완성 기능을 사용하도록 설정하는 방법
 
 **이 문서의 적용 대상:**  ✔️ .NET Core 2.1 SDK 이상 버전
 
-이 문서에서는 세 개의 셸, PowerShell, Bash 및 zsh에 대한 탭 완성 기능을 구성하는 방법을 설명합니다. 그 밖의 셸은 해당 셸의 설명서에서 탭 완성 기능을 구현하는 방법을 확인하세요.
+이 문서에서는 네 개의 셸 PowerShell, Bash, zsh 및 fish에 대한 탭 완성 기능을 구성하는 방법을 설명합니다. 그 밖의 셸은 해당 셸의 설명서에서 탭 완성 기능을 구현하는 방법을 확인하세요.
 
 설정되면 셸에 `dotnet` 명령을 입력하고 Tab 키를 누르면 .NET CLI의 탭 완성 기능이 트리거됩니다. 현재 명령줄은 `dotnet complete` 명령으로 전송되고, 결과는 셸에 의해 처리됩니다. `dotnet complete` 명령으로 직접 전송하여 탭 완성 기능을 사용하지 않고 결과를 테스트할 수 있습니다. 예를 들어:
 
@@ -97,4 +97,12 @@ _dotnet_zsh_complete()
 }
 
 compctl -K _dotnet_zsh_complete dotnet
+```
+
+## <a name="fish"></a>fish
+
+.NET CLI용 **fish** 셸에 탭 완성 기능을 추가하려면 `config.fish` 파일에 다음 코드를 추가합니다.
+
+```fish
+complete -f -c dotnet -a "(dotnet complete)"
 ```

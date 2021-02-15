@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Visual Basic LINQ 시작'
 title: LINQ 시작
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - LINQ [Visual Basic]
 - LINQ, Visual Basic
 ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
-ms.openlocfilehash: 2097eb9caccd65a7983244cd06cbc18759677be1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 264ee4cef26cd2ee965771e50aeaafbeb71d91f9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090315"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469814"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Visual Basic에서 LINQ 시작
 
-이 섹션에는 Visual Basic 및 LINQ (통합 언어 쿼리)를 이해 하 고 사용 하는 데 도움이 되는 개요, 예제 및 배경 정보가 포함 되어 있습니다.  
+이 섹션에는 Visual Basic 및 Language-Integrated 쿼리 (LINQ)를 이해 하 고 사용 하는 데 도움이 되는 개요, 예제 및 배경 정보가 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 
@@ -36,7 +37,7 @@ ms.locfileid: "91090315"
  [연습: Visual Basic에서 쿼리 작성](walkthrough-writing-queries.md)  
  LINQ 프로젝트 Visual Basic 만들고 간단한 데이터 원본을 추가 하 고 몇 가지 기본 쿼리 작업을 수행 하는 단계별 지침을 설명 합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 
  [Visual Basic의 LINQ 소개](../../language-features/linq/introduction-to-linq.md)  
  LINQ의 쿼리에 대한 개요를 포함하고 추가 리소스에 대한 링크를 제공합니다.  

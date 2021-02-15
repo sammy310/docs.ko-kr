@@ -1,4 +1,5 @@
 ---
+description: 자세한 내용은 값 형식 및 참조 형식을 참조 하세요.
 title: Value Types and Reference Types
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 72cb1455300e1ff00d9d558aa5a9df95f32aa7b0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 22cce68260955545e810f6fefe645b5ad6a37ca5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090120"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462141"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 
@@ -49,7 +50,7 @@ Visual Basic에는 참조 형식 및 값 형식 이라는 두 가지 종류의 �
   
 - 대리자  
   
- 클래스는 *참조 형식*입니다. 모든 배열은 멤버가 값 형식인 경우에도 참조 형식입니다.  
+ 클래스는 *참조 형식* 입니다. 모든 배열은 멤버가 값 형식인 경우에도 참조 형식입니다.  
   
  모든 참조 형식은 기본 .NET Framework 클래스를 나타내므로 초기화할 때 [New Operator](../../../language-reference/operators/new-operator.md) 키워드를 사용 해야 합니다. 다음 문은 배열을 초기화 합니다.  
   
@@ -77,7 +78,7 @@ Dim totals() As Single = New Single(8) {}
   
  `Object`변수를 <xref:Microsoft.VisualBasic.Information.IsReference%2A> <xref:Microsoft.VisualBasic.Information> 네임 스페이스 클래스의 메서드에 전달 하 여 변수를 참조 형식 또는 값 형식으로 사용할지 여부를 확인할 수 있습니다 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> . <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType>`True` `Object` 변수의 내용이 참조 형식을 나타내면를 반환 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Nullable 값 형식](nullable-value-types.md)
 - [Visual Basic의 형식 변환](type-conversions.md)

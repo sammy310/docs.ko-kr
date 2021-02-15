@@ -2,12 +2,12 @@
 title: '호환성이 손상되는 변경: ConsoleLoggerOptions에서 사용되지 않는 속성'
 description: ConsoleLoggerFormat 형식 및 ConsoleLoggerOptions의 일부 속성이 이제 사용되지 않는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: e38ba3bda371c713a8b2cb4cda8b4c585dac29f5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bd039dfa84ae3399d7fb36f992010a9a3c9f6ddf
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759924"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548385"
 ---
 # <a name="obsolete-properties-on-consoleloggeroptions"></a>ConsoleLoggerOptions에서 사용되지 않는 속성
 
@@ -53,12 +53,23 @@ ms.locfileid: "95759924"
   - `"Format": "Systemd"`은 `"FormatterName": "Systemd"`에 매핑됩니다.
   - `"Format": "Default"`은 `"FormatterName": "Simple"`에 매핑됩니다.
 
-- <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.DisableColors>, <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.IncludeScopes>, <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.TimestampFormat>, <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.UseUtcTimestamp> 속성의 경우 새로운 <xref:Microsoft.Extensions.Logging.Console.ConsoleFormatterOptions>, <xref:Microsoft.Extensions.Logging.Console.JsonConsoleFormatterOptions> 또는 <xref:Microsoft.Extensions.Logging.Console.SimpleConsoleFormatterOptions> 형식의 해당 속성을 대신 사용합니다. 예를 들면 다음과 같습니다.
+- <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.DisableColors>, <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.IncludeScopes>, <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.TimestampFormat>, <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.UseUtcTimestamp> 속성의 경우 새로운 <xref:Microsoft.Extensions.Logging.Console.ConsoleFormatterOptions>, <xref:Microsoft.Extensions.Logging.Console.JsonConsoleFormatterOptions> 또는 <xref:Microsoft.Extensions.Logging.Console.SimpleConsoleFormatterOptions> 형식의 해당 속성을 대신 사용합니다. 예를 들어 <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.DisableColors?displayProperty=nameWithType>에 해당하는 설정은 <xref:Microsoft.Extensions.Logging.Console.SimpleConsoleFormatterOptions.ColorBehavior?displayProperty=nameWithType>입니다.
+
+  이전 코드:
+
+  ```csharp
+  loggingBuilder.AddConsole(options =>
+  {
+      options.DisableColors = true;
+  });
+  ```
+
+  새로운 코드:
 
   ```csharp
   loggingBuilder.AddSimpleConsole(options =>
   {
-      options.DisableColors = true;
+      options.ColorBehavior = LoggerColorBehavior.Disabled;
   });
   ```
 

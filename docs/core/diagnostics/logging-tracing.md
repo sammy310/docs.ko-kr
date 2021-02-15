@@ -2,12 +2,12 @@
 title: 로깅 및 추적 - .NET Core
 description: .NET Core 로깅 및 추적에 대해 간략히 설명합니다.
 ms.date: 10/12/2020
-ms.openlocfilehash: fac8eeed63e8737ad42699d81b421747b207c69a
-ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
+ms.openlocfilehash: a8c6d82ddb7bc3f8b4cc9eae9dd7aaf65732a0b8
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753629"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548397"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 로깅 및 추적
 
@@ -72,6 +72,10 @@ ms.locfileid: "97753629"
   - Windows만 해당합니다.
   - 메시지를 Windows 이벤트 로그에 씁니다.
   - 시스템 관리자는 Windows 이벤트 로그에 심각한 애플리케이션 오류 메시지가 표시될 것으로 예상합니다.
+
+## <a name="distributed-tracing"></a>분산 추적
+
+[분산 추적](./distributed-tracing.md)은 분산 시스템에서 추적 데이터를 게시하고 관찰하는 방법입니다.
 
 ## <a name="ilogger-and-logging-frameworks"></a>ILogger 및 로깅 프레임워크
 

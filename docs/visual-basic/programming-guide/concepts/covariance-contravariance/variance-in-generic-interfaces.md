@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 제네릭 인터페이스의 가변성 (Visual Basic)'
 title: 제네릭 인터페이스의 가변성
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-ms.openlocfilehash: df28a9f24518f24d1be89acba726da7dfbbf9570
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 42257f80cb929756583b1e488cd315450b9db35e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375592"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469840"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>제네릭 인터페이스의 가변성(Visual Basic)
 
@@ -27,7 +28,7 @@ ms.locfileid: "84375592"
 
 - <xref:System.IComparable%601>(T는 반공변(contravariant)임)
 
-공변성(covariance)은 메서드가 인터페이스의 제네릭 형식 매개 변수에 정의된 것보다 더 많은 수의 파생된 반환 형식을 갖도록 허용합니다. 공변성(covariance) 기능을 설명하려면 `IEnumerable(Of Object)` 및 `IEnumerable(Of String)`이라는 제네릭 인터페이스를 고려하세요. `IEnumerable(Of String)` 인터페이스는 `IEnumerable(Of Object)` 인터페이스를 상속하지 않습니다. 그러나 `String` 형식은 `Object` 형식을 상속하며, 경우에 따라 이러한 인터페이스의 개체를 서로 할당할 수 있습니다. 다음 코드 예제에 이러한 내용이 나와 있습니다.
+공변성(covariance)은 메서드가 인터페이스의 제네릭 형식 매개 변수에 정의된 것보다 더 많은 수의 파생된 반환 형식을 갖도록 허용합니다. 공변성(covariance) 기능을 설명하려면 `IEnumerable(Of Object)` 및 `IEnumerable(Of String)`이라는 제네릭 인터페이스를 고려하세요. `IEnumerable(Of String)` 인터페이스는 `IEnumerable(Of Object)` 인터페이스를 상속하지 않습니다. 그러나 `String` 형식은 `Object` 형식을 상속하며, 경우에 따라 이러한 인터페이스의 개체를 서로 할당할 수 있습니다. 다음 코드 예제에서 이를 확인할 수 있습니다.
 
 ```vb
 Dim strings As IEnumerable(Of String) = New List(Of String)
@@ -36,7 +37,7 @@ Dim objects As IEnumerable(Of Object) = strings
 
 이전 버전의 .NET Framework에서는이 코드를 사용 하 여 Visual Basic에 컴파일 오류가 발생 `Option Strict On` 합니다. 그러나 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스는 공변(covariant) 이므로 이제 다음 예제와 같이 `objects` 대신 `strings`를 사용할 수 있습니다.
 
-반공변성(Contravariance)은 메서드가 인터페이스의 제네릭 매개 변수에 지정된 것보다 더 적은 수의 파생된 형식의 인수 형식을 갖도록 허용합니다. 반공변성(contravariance)을 설명하기 위해, 사용자가 `BaseComparer` 클래스를 만들어 `BaseClass` 클래스의 인스턴스를 비교한다고 가정합니다. `BaseComparer` 클래스가 `IEqualityComparer(Of BaseClass)` 인터페이스를 구현합니다. <xref:System.Collections.Generic.IEqualityComparer%601> 인터페이스는 이제 반공변(contravariant)이므로 `BaseClass` 클래스를 상속하는 클래스의 인스턴스를 비교하는 데 `BaseComparer`를 사용할 수 있습니다. 다음 코드 예제에 이러한 내용이 나와 있습니다.
+반공변성(Contravariance)은 메서드가 인터페이스의 제네릭 매개 변수에 지정된 것보다 더 적은 수의 파생된 형식의 인수 형식을 갖도록 허용합니다. 반공변성(contravariance)을 설명하기 위해, 사용자가 `BaseComparer` 클래스를 만들어 `BaseClass` 클래스의 인스턴스를 비교한다고 가정합니다. `BaseComparer` 클래스가 `IEqualityComparer(Of BaseClass)` 인터페이스를 구현합니다. <xref:System.Collections.Generic.IEqualityComparer%601> 인터페이스는 이제 반공변(contravariant)이므로 `BaseClass` 클래스를 상속하는 클래스의 인스턴스를 비교하는 데 `BaseComparer`를 사용할 수 있습니다. 다음 코드 예제에서 이를 확인할 수 있습니다.
 
 ```vb
 ' Simple hierarchy of classes.
@@ -92,7 +93,7 @@ Variant 인터페이스를 구현하는 클래스는 여전히 비 variant라는
 Dim listObjects As IEnumerable(Of Object) = New List(Of String)
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [제네릭 컬렉션용 인터페이스의 가변성 사용(Visual Basic)](using-variance-in-interfaces-for-generic-collections.md)
 - [Variant 제네릭 인터페이스 만들기(Visual Basic)](creating-variant-generic-interfaces.md)

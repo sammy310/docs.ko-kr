@@ -1,7 +1,7 @@
 ---
 title: 연결 관리
 description: 데이터 리소스에 HTTP를 사용하는 애플리케이션이 .NET Framework ServicePoint 및 ServicePointManager 클래스를 사용하여 연결을 관리할 수 있는 방법을 알아봅니다.
-ms.date: 03/30/2017
+ms.date: 01/25/2021
 dev_langs:
 - csharp
 - vb
@@ -18,16 +18,19 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 00db05c99cf232a31b10bbd0356e6d43d3bc3e28
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9ea93c3a9c484fd2a3de58b4d484b1e8445da155
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96282862"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548060"
 ---
 # <a name="managing-connections"></a>연결 관리
 
 HTTP를 사용하여 데이터 리소스에 연결하는 애플리케이션은 .NET Framework의 <xref:System.Net.ServicePoint> 및 <xref:System.Net.ServicePointManager> 클래스를 사용하여 인터넷에 대한 연결을 관리하고 최적의 규모 및 성능을 달성하도록 지원합니다.  
+
+> [!NOTE]
+> `ServicePoint` 및 `ServicePointManager`는 .NET Core, .NET 5 이상 버전에서 레거시로 간주됩니다. 대부분의 속성 및 메서드는 이러한 버전에서 구현되지 않습니다. 구현된 경우에는 `HttpClient` 네트워킹 API에 대한 어떤 것도 영향을 주거나 추적하지 않습니다.
   
  **ServicePoint** 클래스는 애플리케이션이 인터넷 리소스에 액세스하기 위해 연결할 수 있는 엔드포인트를 제공합니다. 각 **ServicePoint** 에는 성능을 향상시키기 위해 연결 간 최적화 정보를 공유하여 인터넷 서버와의 연결을 최적화시킬 수 있는 정보가 들어 있습니다.  
   

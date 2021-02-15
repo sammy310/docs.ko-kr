@@ -1,44 +1,44 @@
 ---
-title: 사용할 .NET Core 버전 선택
-description: .NET Core에서 프로그램에 대한 런타임 버전을 자동으로 찾아 선택하는 방법을 알아봅니다. 또한 이 문서에서는 특정 버전을 강제로 적용하는 방법을 설명합니다.
+title: 사용할 .NET 버전 선택
+description: .NET에서 프로그램에 대한 런타임 버전을 자동으로 찾아 선택하는 방법을 알아봅니다. 또한 이 문서에서는 특정 버전을 강제로 적용하는 방법을 설명합니다.
 author: adegeo
 ms.author: adegeo
-ms.date: 03/24/2020
-ms.openlocfilehash: 82b5522601b0ed5d3f4faf6e6c6c970ba285b11f
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.date: 02/05/2021
+ms.openlocfilehash: 2fe30041cbf85de644d9ba17330884961fcf7504
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608201"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99792000"
 ---
-# <a name="select-the-net-core-version-to-use"></a>사용할 .NET Core 버전 선택
+# <a name="select-the-net-version-to-use"></a>사용할 .NET 버전 선택
 
-이 문서에서는 버전을 선택하기 위해 .NET Core 도구, SDK 및 런타임에서 사용되는 정책에 대해 설명합니다. 이러한 정책은 지정된 버전을 사용하여 애플리케이션을 실행하고 개발자와 최종 사용자 모두의 머신을 쉽게 업그레이드할 수 있도록 하는 균형을 제공합니다. 이러한 정책은 다음 작업을 수행합니다.
+이 문서에서는 버전을 선택하기 위해 .NET 도구, SDK 및 런타임에서 사용되는 정책에 대해 설명합니다. 이러한 정책은 지정된 버전을 사용하여 애플리케이션을 실행하고 개발자와 최종 사용자 모두의 머신을 쉽게 업그레이드할 수 있도록 하는 균형을 제공합니다. 이러한 정책은 다음 작업을 수행합니다.
 
-- 보안 및 안정성 업데이트를 포함하여 .NET Core를 쉽고 효율적으로 배포합니다.
+- 보안 및 안정성 업데이트를 포함하여 .NET을 쉽고 효율적으로 배포합니다.
 - 대상 런타임과 독립적으로 최신 도구 및 명령을 사용합니다.
 
 버전을 선택하는 경우 발생하는 상황은 다음과 같습니다.
 
 - SDK 명령을 실행할 때 [SDK에서 설치된 최신 버전을 사용](#the-sdk-uses-the-latest-installed-version)합니다.
 - 어셈블리를 빌드할 때 [대상 프레임워크 모니커에서 빌드 시간 API를 정의](#target-framework-monikers-define-build-time-apis)합니다.
-- .NET Core 애플리케이션을 실행할 때 [대상 프레임워크 종속 애플리케이션이 롤포워드](#framework-dependent-apps-roll-forward)됩니다.
+- .NET 애플리케이션을 실행할 때 [대상 프레임워크 종속 애플리케이션이 롤포워드](#framework-dependent-apps-roll-forward)됩니다.
 - 자체 포함 애플리케이션을 게시할 때 [자체 포함 배포에는 선택한 런타임](#self-contained-deployments-include-the-selected-runtime)이 포함됩니다.
 
 이 문서의 나머지 부분에서는 이 네 가지 시나리오를 검토합니다.
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>SDK에서 설치된 최신 버전 사용
 
-SDK 명령에는 `dotnet new` 및 `dotnet run`이 포함됩니다. .NET Core CLI는 모든 `dotnet` 명령의 SDK 버전을 선택해야 합니다. 다음의 경우에도 기본적으로 머신에 설치된 최신 SDK를 사용합니다.
+SDK 명령에는 `dotnet new` 및 `dotnet run`이 포함됩니다. .NET CLI는 모든 `dotnet` 명령의 SDK 버전을 선택해야 합니다. 다음의 경우에도 기본적으로 머신에 설치된 최신 SDK를 사용합니다.
 
-- 프로젝트가 이전 버전의 .NET Core 런타임을 대상으로 하는 경우
-- 최신 버전의 .NET Core SDK가 미리 보기 버전인 경우
+- 프로젝트가 이전 버전의 .NET 런타임을 대상으로 하는 경우
+- 최신 버전의 .NET SDK가 미리 보기 버전인 경우
 
-이전의 .NET Core 런타임 버전을 대상으로 하면서 최신 SDK 기능과 향상된 기능을 활용할 수 있습니다. 모든 프로젝트에 대해 동일한 SDK 도구를 사용하여 여러 프로젝트에서 .NET Core의 여러 런타임 버전을 대상으로 지정할 수 있습니다.
+이전의 .NET 런타임 버전을 대상으로 하면서 최신 SDK 기능과 향상된 기능을 활용할 수 있습니다. 모든 프로젝트에 대해 동일한 SDK 도구를 사용하여 여러 프로젝트에서 .NET의 여러 런타임 버전을 대상으로 지정할 수 있습니다.
 
-드물지만 경우에 따라 이전 버전의 SDK를 사용해야 할 수도 있습니다. 해당 버전은 [*global.json* 파일](../tools/global-json.md)에 지정합니다. "최신 버전 사용" 정책은 *global.json*을 사용하여 설치된 최신 버전보다 이전의 .NET Core SDK 버전을 지정한다는 것을 의미합니다.
+드물지만 경우에 따라 이전 버전의 SDK를 사용해야 할 수도 있습니다. 해당 버전은 [*global.json* 파일](../tools/global-json.md)에 지정합니다. "최신 버전 사용" 정책은 *global.json* 을 사용하여 설치된 최신 버전보다 이전의 .NET SDK 버전을 지정한다는 것을 의미합니다.
 
-*global.json*은 파일 계층 구조에서 원하는 위치에 배치할 수 있습니다. CLI는 검색된 첫 번째 *global.json*의 프로젝트 디렉터리에서 위쪽 방향으로 검색합니다. 파일 시스템의 해당 위치에 따라 지정된 *global.json*이 적용되는 프로젝트를 제어합니다. .NET CLI는 현재 작업 디렉터리에서 위쪽 경로로 반복적으로 탐색하면서 *global.json* 파일을 검색합니다. 검색된 첫 번째 *global.json* 파일에서 사용된 버전을 지정합니다. 해당 SDK 버전이 설치되어 있으면 이 버전이 사용됩니다. *global.json*에 지정된 SDK를 찾을 수 없는 경우 .NET CLI에서는 [일치 규칙](../tools/global-json.md#matching-rules)을 사용하여 호환되는 SDK를 선택하며, 아무 것도 찾을 수 없는 경우 실패합니다.
+*global.json* 은 파일 계층 구조에서 원하는 위치에 배치할 수 있습니다. CLI는 검색된 첫 번째 *global.json* 의 프로젝트 디렉터리에서 위쪽 방향으로 검색합니다. 파일 시스템의 해당 위치에 따라 지정된 *global.json* 이 적용되는 프로젝트를 제어합니다. .NET CLI는 현재 작업 디렉터리에서 위쪽 경로로 반복적으로 탐색하면서 *global.json* 파일을 검색합니다. 검색된 첫 번째 *global.json* 파일에서 사용된 버전을 지정합니다. 해당 SDK 버전이 설치되어 있으면 이 버전이 사용됩니다. *global.json* 에 지정된 SDK를 찾을 수 없는 경우 .NET CLI에서는 [일치 규칙](../tools/global-json.md#matching-rules)을 사용하여 호환되는 SDK를 선택하며, 아무 것도 찾을 수 없는 경우 실패합니다.
 
 다음 예제에서는 *global.json* 구문을 보여 줍니다.
 
@@ -53,10 +53,10 @@ SDK 명령에는 `dotnet new` 및 `dotnet run`이 포함됩니다. .NET Core CLI
 SDK 버전을 선택하는 프로세스는 다음과 같습니다.
 
 1. `dotnet`은 현재 작업 디렉터리에서 위쪽 경로로의 역방향으로 반복하여 탐색하면서 *global.json* 파일을 검색합니다.
-1. `dotnet`은 검색된 첫 번째 *global.json*에 지정된 SDK를 사용합니다.
-1. *global.json*이 없으면 `dotnet`에서 설치된 최신 SDK를 사용합니다.
+1. `dotnet`은 검색된 첫 번째 *global.json* 에 지정된 SDK를 사용합니다.
+1. *global.json* 이 없으면 `dotnet`에서 설치된 최신 SDK를 사용합니다.
 
-*global.json*에 있는 문서의 [일치 규칙](../tools/global-json.md#matching-rules) 섹션에서 SDK 버전 선택에 대해 자세히 알아볼 수 있습니다.
+*global.json* 에 있는 문서의 [일치 규칙](../tools/global-json.md#matching-rules) 섹션에서 SDK 버전 선택에 대해 자세히 알아볼 수 있습니다.
 
 ## <a name="target-framework-monikers-define-build-time-apis"></a>대상 프레임워크 모니커에서 빌드 시간 API 정의
 
@@ -72,13 +72,13 @@ SDK 버전을 선택하는 프로세스는 다음과 같습니다.
 <TargetFrameworks>netcoreapp3.0;net47</TargetFrameworks>
 ```
 
-지정된 SDK는 함께 제공되는 런타임의 대상 프레임워크로 제한된 프레임워크의 고정된 집합을 지원합니다. 예를 들어 .NET Core 3.0 SDK에는 `netcoreapp3.0` 대상 프레임워크의 구현인 .NET Core 3.0 런타임이 포함되어 있습니다. .NET Core 3.0 SDK는 `netcoreapp2.1`, `netcoreapp2.2`, `netcoreapp3.0`을 지원하지만, `netcoreapp3.1`(또는 그 이상)은 지원하지 않습니다. .NET Core 3.1 SDK를 설치하여 `netcoreapp3.1`을 빌드합니다.
+지정된 SDK는 함께 제공되는 런타임의 대상 프레임워크로 제한된 프레임워크의 고정된 집합을 지원합니다. 예를 들어 .NET Core 3.1 SDK에는 `netcoreapp3.0` 대상 프레임워크의 구현인 .NET Core 3.1 런타임이 포함되어 있습니다. .NET Core 3.1 SDK는 `netcoreapp2.1`, `netcoreapp2.2`, `netcoreapp3.0`을 지원하지만, `net5.0`(또는 그 이상)은 지원하지 않습니다. .NET 5.0 SDK를 설치하여 `net5.0`을 빌드합니다.
 
-또한 .NET Standard 대상 프레임워크도 SDK에서 제공하는 런타임의 대상 프레임워크로 제한됩니다. .NET Core 3.1 SDK는 `netstandard2.1`으로 제한됩니다. 자세한 내용은 [.NET 표준](../../standard/net-standard.md)을 참조하세요.
+또한 .NET Standard 대상 프레임워크도 SDK에서 제공하는 런타임의 대상 프레임워크로 제한됩니다. .NET 5.0 SDK는 `netstandard2.1`로 제한됩니다. 자세한 내용은 [.NET 표준](../../standard/net-standard.md)을 참조하세요.
 
 ## <a name="framework-dependent-apps-roll-forward"></a>프레임워크 종속 응용 프로그램 롤포워드
 
-[`dotnet run`](../tools/dotnet-run.md)를 사용하여 소스에서, [`dotnet myapp.dll`](../tools/dotnet.md#description)을 사용하여 [**프레임워크 종속 배포**](../deploying/index.md#publish-framework-dependent)에서 또는 `myapp.exe`를 사용하여 [**프레임워크 종속 실행 파일**](../deploying/index.md#publish-framework-dependent)에서 애플리케이션을 실행하는 경우 `dotnet` 실행 파일이 애플리케이션의 **호스트**입니다.
+[`dotnet run`](../tools/dotnet-run.md)를 사용하여 소스에서, [`dotnet myapp.dll`](../tools/dotnet.md#description)을 사용하여 [**프레임워크 종속 배포**](../deploying/index.md#publish-framework-dependent)에서 또는 `myapp.exe`를 사용하여 [**프레임워크 종속 실행 파일**](../deploying/index.md#publish-framework-dependent)에서 애플리케이션을 실행하는 경우 `dotnet` 실행 파일이 애플리케이션의 **호스트** 입니다.
 
 호스트는 머신에 설치된 최신 패치 버전을 선택합니다. 예를 들어 프로젝트 파일에서 `netcoreapp3.0`을 지정하고 `3.0.2`가 설치된 최신 .NET 런타임인 경우 `3.0.2` 런타임이 사용됩니다.
 
@@ -101,11 +101,11 @@ SDK 버전을 선택하는 프로세스는 다음과 같습니다.
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>자체 포함 배포에 선택한 런타임 포함
 
-애플리케이션을 [**자체 포함 배포**](../deploying/index.md#publish-self-contained)로 게시할 수 있습니다. 이 방법은 .NET Core 런타임 및 라이브러리를 애플리케이션과 함께 번들로 제공합니다. 자체 포함 배포에는 런타임 환경에 대한 종속성이 없습니다. 런타임 버전 선택은 런타임이 아니라 게시 시간에 수행됩니다.
+애플리케이션을 [**자체 포함 배포**](../deploying/index.md#publish-self-contained)로 게시할 수 있습니다. 이 방법은 .NET 런타임 및 라이브러리를 애플리케이션과 함께 번들로 제공합니다. 자체 포함 배포에는 런타임 환경에 대한 종속성이 없습니다. 런타임 버전 선택은 런타임이 아니라 게시 시간에 수행됩니다.
 
 게시 프로세스는 지정된 런타임 제품군의 최신 패치 버전을 선택합니다. 예를 들어 .NET Core 3.0.3이 .NET Core 3.0 런타임 제품군의 최신 패치 버전인 경우 `dotnet publish`는 .NET Core 3.0.3을 선택합니다. 대상 프레임워크(설치된 최신 보안 패치 포함)는 애플리케이션과 함께 패키지됩니다.
 
-애플리케이션에 대해 지정된 최소 버전이 충족되지 않으면 오류가 발생합니다. `dotnet publish`는 최신 런타임 패치 버전(지정된 major.minor 버전 제품군 내에서)에 바인딩합니다. `dotnet publish`는 `dotnet run`의 롤포워드 의미 체계를 지원하지 않습니다. 패치 및 자체 포함 배포에 대한 자세한 내용은 .NET Core 애플리케이션 배포의 [런타임 패치 선택](../deploying/runtime-patch-selection.md)에 대한 문서를 참조하세요.
+애플리케이션에 대해 지정된 최소 버전이 충족되지 않으면 오류가 발생합니다. `dotnet publish`는 최신 런타임 패치 버전(지정된 major.minor 버전 제품군 내에서)에 바인딩합니다. `dotnet publish`는 `dotnet run`의 롤포워드 의미 체계를 지원하지 않습니다. 패치 및 자체 포함 배포에 대한 자세한 내용은 .NET 애플리케이션 배포의 [런타임 패치 선택](../deploying/runtime-patch-selection.md)에 대한 문서를 참조하세요.
 
 자체 포함 배포에는 특정 패치 버전이 필요할 수 있습니다. 다음 예제와 같이 프로젝트 파일에서 최소 런타임 패치 버전(더 높거나 낮은 버전)을 재정의할 수 있습니다.
 
@@ -117,5 +117,5 @@ SDK 버전을 선택하는 프로세스는 다음과 같습니다.
 
 ## <a name="see-also"></a>참조
 
-- [.NET Core 다운로드 및 설치](../install/index.yml)
-- [.NET Core 런타임 및 SDK를 제거하는 방법](../install/remove-runtime-sdk-versions.md)
+- [.NET 다운로드 및 설치](../install/index.yml)
+- [.NET 런타임 및 SDK를 제거하는 방법](../install/remove-runtime-sdk-versions.md)

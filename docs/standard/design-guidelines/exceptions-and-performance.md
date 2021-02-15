@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 예외 및 성능'
 title: 예외 및 성능
 ms.date: 10/22/2008
 helpviewer_keywords:
@@ -8,31 +9,31 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-ms.openlocfilehash: babe378e0d61357709006e08f71ff578492f116c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
-ms.translationtype: MT
+ms.openlocfilehash: 72b35ccca5514e56dcc04fc0a07d1f9887c4a2f7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734753"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99642125"
 ---
 # <a name="exceptions-and-performance"></a>예외 및 성능
 
-예외와 관련 된 일반적인 문제 중 하나는 정기적으로 실패 하는 코드에 예외가 사용 되는 경우 구현의 성능이 허용 되지 않는 것입니다. 이는 유효한 우려입니다. 멤버가 예외를 throw 하는 경우 성능이 저하 될 수 있습니다. 그러나 오류 코드를 사용할 수 없도록 하는 예외 지침을 엄격 하 게 준수 하는 동시에 성능을 향상 시킬 수 있습니다. 이 섹션에서 설명 하는 두 가지 패턴은이 작업을 수행 하는 방법을 제안 합니다.
+예외와 관련된 한 가지 일반적인 문제는 정기적으로 실패하는 코드에 예외를 사용할 경우 구현 성능이 저하될 수 있다는 점입니다. 이는 유효한 우려입니다. 멤버가 예외를 throw하는 경우 성능이 현저하게 저하될 수 있습니다. 그러나 오류 코드 사용을 허용하지 않는 예외 지침을 엄격하게 준수하면 성능을 향상할 수 있습니다. 이 섹션에서 설명하는 두 가지 패턴은 이렇게 하는 방법을 제안합니다.
 
- ❌ 예외가 성능에 부정적인 영향을 줄 수 있으므로 오류 코드를 사용 하지 마십시오.
+ ❌ 예외로 인해 성능이 저하될 수 있으므로 오류 코드를 사용하지 마세요.
 
- 성능을 향상 시키려면 다음 두 섹션에서 설명 하는 Tester-Doer 패턴 또는 Try-Parse 패턴 중 하나를 사용할 수 있습니다.
+ 성능을 향상하려면 다음 두 섹션에서 설명하는 Tester-Doer 패턴이나 Try-Parse 패턴을 사용할 수 있습니다.
 
 ## <a name="tester-doer-pattern"></a>Tester-Doer 패턴
 
- 경우에 따라 멤버를 두 개로 분리 하 여 예외 throw 멤버의 성능을 향상 시킬 수 있습니다. <xref:System.Collections.Generic.ICollection%601.Add%2A>인터페이스의 메서드를 살펴보겠습니다 <xref:System.Collections.Generic.ICollection%601> .
+ 경우에 따라 예외 throw 멤버의 성능은 멤버를 둘로 구분하여 향상할 수 있습니다. <xref:System.Collections.Generic.ICollection%601> 인터페이스의 <xref:System.Collections.Generic.ICollection%601.Add%2A> 메서드를 살펴보겠습니다.
 
 ```csharp
 ICollection<int> numbers = ...
 numbers.Add(1);
 ```
 
- 컬렉션은 `Add` 읽기 전용 이면 메서드는을 throw 합니다. 이는 메서드 호출이 자주 실패할 것으로 예상 되는 시나리오에서 성능 문제를 일으킬 수 있습니다. 문제를 완화 하는 방법 중 하나는 값을 추가 하기 전에 컬렉션을 쓸 수 있는지 여부를 테스트 하는 것입니다.
+ `Add` 메서드는 컬렉션이 읽기 전용인 경우에 throw됩니다. 따라서 메서드 호출이 자주 실패할 것으로 예상되는 시나리오에서는 성능 문제가 될 수 있습니다. 문제를 완화하는 방법 중 하나는 값을 추가하기 전에 컬렉션이 쓰기 가능한지를 테스트하는 것입니다.
 
 ```csharp
 ICollection<int> numbers = ...
@@ -43,13 +44,13 @@ if (!numbers.IsReadOnly)
 }
 ```
 
- 조건을 테스트 하는 데 사용 되는 멤버 (이 예제에서는 속성)를 `IsReadOnly` 테스터 라고 합니다. 잠재적으로 throw 되는 작업을 수행 하는 데 사용 되는 멤버입니다 `Add` .이 예제에서 메서드를 doer 라고 합니다.
+ 조건을 테스트하는 데 사용되는 멤버를 tester라고 하며, 이 예제에서는 `IsReadOnly` 속성입니다. 잠재적으로 throw되는 작업을 수행하는 데 사용되는 멤버를 doer라고 하며, 이 예제에서는 `Add` 메서드입니다.
 
- 예외와 관련 된 성능 문제를 방지 하기 위해 일반적인 시나리오에서 예외를 throw 할 수 있는 멤버의 Tester-Doer 패턴을 고려 ✔️.
+ ✔️ 예외와 관련된 성능 문제를 방지하려면 일반적인 시나리오에서 예외를 throw할 수 있는 멤버에 Tester-Doer 패턴을 사용하는 것이 좋습니다.
 
 ## <a name="try-parse-pattern"></a>Try-Parse 패턴
 
- 매우 성능에 민감한 Api의 경우 이전 섹션에서 설명한 Tester-Doer 패턴 보다 훨씬 더 빠른 패턴을 사용 해야 합니다. 패턴은 멤버 이름을 조정 하 여 잘 정의 된 테스트 사례를 멤버 의미 체계의 일부로 만드는 작업을 호출 합니다. 예를 들어는 <xref:System.DateTime> <xref:System.DateTime.Parse%2A> 문자열의 구문 분석이 실패 하는 경우 예외를 throw 하는 메서드를 정의 합니다. 또한 <xref:System.DateTime.TryParse%2A> 구문 분석을 시도 하는 해당 메서드를 정의 하지만 구문 분석이 실패 하 고 매개 변수를 사용 하 여 성공적으로 구문 분석 한 결과를 반환 하는 경우에는 false를 반환 합니다 `out` .
+ 성능이 매우 중요한 API에서는 이전 섹션에서 설명한 Tester-Doer 패턴보다 훨씬 더 빠른 패턴을 사용해야 합니다. 이 패턴은 멤버 이름 조정을 요청하여 잘 정의된 테스트 사례를 멤버 의미 체계의 일부로 만듭니다. 예를 들어 <xref:System.DateTime>은 문자열의 구문 분석이 실패할 경우 예외를 throw하는 <xref:System.DateTime.Parse%2A> 메서드를 정의합니다. 구문 분석을 시도하는 해당 <xref:System.DateTime.TryParse%2A> 메서드도 정의하지만 구문 분석이 실패할 경우 false를 반환하고 `out` 매개 변수를 사용하여 성공한 구문 분석의 결과를 반환합니다.
 
 ```csharp
 public struct DateTime
@@ -65,19 +66,19 @@ public struct DateTime
 }
 ```
 
- 이 패턴을 사용 하는 경우에는 엄격한 용어로 try 기능을 정의 하는 것이 중요 합니다. 잘 정의 된 시도 이외의 이유로 멤버가 실패 하면 해당 멤버는 여전히 해당 예외를 throw 해야 합니다.
+ 이 패턴을 사용할 때는 엄격한 조건으로 try 기능을 정의하는 것이 중요합니다. 잘 정의된 try 이외의 이유로 멤버가 실패할 경우 멤버는 해당 예외를 계속 throw해야 합니다.
 
- 예외와 관련 된 성능 문제를 방지 하기 위해 일반적인 시나리오에서 예외를 throw 할 수 있는 멤버의 Try-Parse 패턴을 고려 ✔️.
+ ✔️ 예외와 관련된 성능 문제를 방지하려면 일반적인 시나리오에서 예외를 throw할 수 있는 멤버에 Try-Parse 패턴을 사용하는 것이 좋습니다.
 
- 이 패턴을 구현 하는 메서드에 대해 접두사 "Try" 및 부울 반환 형식을 사용 ✔️ 합니다.
+ ✔️ 이 패턴을 구현하는 메서드에 접두사 “Try” 및 부울 반환 형식을 사용하세요.
 
- Try-Parse 패턴을 사용 하 여 각 멤버에 대 한 예외 throw 멤버를 제공 ✔️ 합니다.
+ ✔ Try-Parse 패턴을 사용하는 각 멤버에 대해 예외 throw 멤버를 제공하세요.
 
- *2005, 2009 Microsoft Corporation © 부분입니다. All rights reserved.*
+ *Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*
 
  *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-- [프레임 워크 디자인 지침](index.md)
+- [프레임워크 디자인 지침](index.md)
 - [예외 디자인 지침](exceptions.md)

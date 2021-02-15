@@ -1,22 +1,22 @@
 ---
 title: 'C# 예약된 특성: null 허용 정적 분석'
-ms.date: 04/14/2020
+ms.date: 02/02/2021
 description: null 허용 참조 형식 및 null을 허용하지 않는 참조 형식에 대한 더 나은 정적 분석을 제공하기 위해 컴파일러가 이 특성을 해석합니다.
-ms.openlocfilehash: 6678cd21de23d4ed391eff089e33939b5adff0fa
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c1c3e0a0fe1ee9000e0a1a85ee08e6e966200be5
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955605"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548359"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>예약된 특성은 컴파일러의 null 상태 정적 분석에 사용됩니다.
 
 null 허용 컨텍스트에서 컴파일러는 코드의 정적 분석을 수행하여 모든 참조 형식 변수의 null 상태를 확인합니다.
 
 - ‘null이 아님’: 정적 분석을 통해 변수에 null이 아닌 값이 할당되었는지 확인합니다.
-- ‘null일 수 있음’:  정적 분석에서 변수에 null이 아닌 값이 할당되었는지 확인할 수 없습니다.
+- ‘null일 수 있음’: 정적 분석에서 변수에 null이 아닌 값이 할당되었는지 확인할 수 없습니다.
 
-API의 의미 체계에 대한 정보를 컴파일러에 제공하는 다양한 특성을 적용할 수 있습니다. 이 정보는 컴파일러에서 정적 분석을 수행하고 변수가 null이 아닌 경우를 확인하는 데 도움이 됩니다. 이 문서에서는 각 특성 및 사용 방법에 대해 간단하게 설명합니다. 모든 예제에서는 C# 8.0 이상을 사용한다고 가정하며 코드는 null 허용 컨텍스트에 있습니다.
+API의 의미 체계에 대한 정보를 컴파일러에 제공하는 특성을 적용할 수 있습니다. 이 정보는 컴파일러에서 정적 분석을 수행하고 변수가 null이 아닌 경우를 확인하는 데 도움이 됩니다. 이 문서에서는 각 특성 및 사용 방법에 대해 간단하게 설명합니다. 모든 예제에서는 C# 8.0 이상을 사용한다고 가정하며 코드는 null 허용 컨텍스트에 있습니다.
 
 친숙한 예제부터 살펴보겠습니다. 라이브러리에 리소스 문자열을 검색하는 다음 API가 있다고 가정합니다.
 
@@ -45,10 +45,12 @@ API에 대한 규칙은 `TryGetValue` API 시나리오에서 살펴본 것처럼
 - [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): 지정된 매개 변수의 인수가 null이 아닌 경우 반환 값은 null이 아닙니다.
 - [DoesNotReturn](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute): 메서드는 값을 반환하지 않습니다. 즉, 항상 예외를 throw합니다.
 - [DoesNotReturnIf](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute): 연결된 `bool` 매개 변수에 지정된 값이 있는 경우 이 메서드는 값을 반환하지 않습니다.
+- [MemberNotNull](xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute): 메서드가 반환하는 경우 나열된 멤버는 null이 아닙니다.
+- [MemberNotNullWhen](xref:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute): 메서드가 지정된 `bool` 값을 반환하는 경우 나열된 멤버는 null이 아닙니다.
 
 앞의 설명은 각 특성이 수행하는 작업에 대한 빠른 참조입니다. 다음 각 섹션에서는 동작과 의미에 대해 더 자세히 설명합니다.
 
-이 특성을 추가하면 API 규칙에 대한 자세한 정보가 컴파일러에 제공됩니다. 호출 코드가 null 허용 사용 가능 컨텍스트에서 컴파일되는 경우 컴파일러는 해당 규칙을 위반할 때 호출자에게 경고를 표시합니다. 이 특성은 구현에 대한 추가 검사를 사용하지 않습니다.
+이 특성을 추가하면 API 규칙에 대한 자세한 정보가 컴파일러에 제공됩니다. 호출 코드가 null 허용 사용 가능 컨텍스트에서 컴파일되는 경우 컴파일러는 해당 규칙을 위반할 때 호출자에게 경고를 표시합니다. 이러한 특성은 구현에 대한 더 많은 검사를 사용하지 않습니다.
 
 ## <a name="specify-preconditions-allownull-and-disallownull"></a>전제 조건 지정: `AllowNull` 및 `DisallowNull`
 
@@ -63,7 +65,7 @@ public string ScreenName
 private string _screenName;
 ```
 
-null 허용 인식 불가능 컨텍스트에서 이전 코드를 컴파일하면 정상적으로 작동합니다. null 허용 참조 형식을 사용하도록 설정하면 `ScreenName` 속성이 null을 허용하지 않는 참조가 됩니다. `get` 접근자의 경우도 마찬가지입니다. 이 접근자는 `null`을 반환하지 않습니다. 호출자는 `null`에 대해 반환된 속성을 검사할 필요가 없습니다. 그러나 지금 속성을 `null`로 설정하면 경고가 생성됩니다. 이 형식의 코드를 계속 지원하기 위해 다음 코드와 같이 속성에 <xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute?displayProperty=nameWithType> 특성을 추가합니다.
+null 허용 인식 불가능 컨텍스트에서 이전 코드를 컴파일하면 정상적으로 작동합니다. null 허용 참조 형식을 사용하도록 설정하면 `ScreenName` 속성이 null을 허용하지 않는 참조가 됩니다. `get` 접근자의 경우도 마찬가지입니다. 이 접근자는 `null`을 반환하지 않습니다. 호출자는 `null`에 대해 반환된 속성을 검사할 필요가 없습니다. 그러나 지금 속성을 `null`로 설정하면 경고가 생성됩니다. 이 형식의 코드를 지원하려면 다음 코드와 같이 속성에 <xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute?displayProperty=nameWithType> 특성을 추가합니다.
 
 ```csharp
 [AllowNull]
@@ -107,7 +109,7 @@ public string? ReviewComment
 string? _comment;
 ```
 
-null 허용 컨텍스트에서 `ReviewComment` `get` 접근자는 `null`의 기본값을 반환할 수 있습니다. 컴파일러는 액세스하기 전에 검사해야 한다는 경고를 표시합니다. 또한 `null`일 수 있는 경우에도 호출자가 명시적으로 `null`로 설정하지 않아야 한다는 경고를 호출자에게 표시합니다. 또한 `DisallowNull` 특성은 ‘전제 조건’을 지정하며 `get` 접근자에는 영향을 주지 않습니다.  다음에 대해 이 특성을 관찰할 때 `DisallowNull` 특성을 사용합니다.
+null 허용 컨텍스트에서 `ReviewComment` `get` 접근자는 `null`의 기본값을 반환할 수 있습니다. 컴파일러는 액세스하기 전에 검사해야 한다는 경고를 표시합니다. 또한 `null`일 수 있는 경우에도 호출자가 명시적으로 `null`로 설정하지 않아야 한다는 경고를 호출자에게 표시합니다. 또한 `DisallowNull` 특성은 전제 조건을 지정하며 `get` 접근자에는 영향을 주지 않습니다. 다음에 대해 이 특성을 관찰할 때 `DisallowNull` 특성을 사용합니다.
 
 1. 변수는 처음 인스턴스화될 때 주로 핵심 시나리오에서 `null`일 수 있습니다.
 1. 변수를 명시적으로 `null`로 설정하면 안 됩니다.
@@ -129,7 +131,7 @@ public Customer FindCustomer(string lastName, string firstName)
 
 검색한 이름을 찾을 수 없는 경우 `null`을 반환하도록 이 메서드를 작성했을 수 있습니다. `null`은 분명히 레코드를 찾을 수 없음을 나타냅니다. 이 예제에서는 반환 형식을 `Customer`에서 `Customer?`로 변경할 수 있습니다. 반환 값을 null 허용 참조 형식으로 선언하면 이 API의 의도가 분명하게 지정됩니다.
 
-[제네릭 정의 및 null 허용 여부](../../nullable-migration-strategies.md#generic-definitions-and-nullability)에서 설명되는 이유로 해당 기술은 제네릭 메서드에서 작동하지 않습니다. 비슷한 패턴을 따르는 제네릭 메서드가 있을 수 있습니다.
+[제네릭 정의 및 null 허용 여부](../../nullable-migration-strategies.md#generic-definitions-and-nullability)에서 설명하는 이유로 해당 기술은 제네릭 메서드에서 작동하지 않습니다. 비슷한 패턴을 따르는 제네릭 메서드가 있을 수 있습니다.
 
 ```csharp
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> predicate)
@@ -180,7 +182,7 @@ public void EnsureCapacity<T>([NotNull] ref T[]? storage, int size)
 bool IsNullOrEmpty([NotNullWhen(false)] string? value);
 ```
 
-이를 통해 반환 값이 `false`인 코드는 null 검사할 필요가 없음을 컴파일러에 알립니다. 특성을 추가하여 `IsNullOrEmpty`가 필요한 null 검사를 수행한다는 것을 컴파일러의 정적 분석에 알립니다. `false`를 반환하는 경우 입력 인수는 `null`이 아닙니다.
+이를 통해 반환 값이 `false`인 코드는 null 검사가 필요하지 않음을 컴파일러에 알립니다. 특성을 추가하여 `IsNullOrEmpty`가 필요한 null 검사를 수행한다는 것을 컴파일러의 정적 분석에 알립니다. `false`를 반환하는 경우 입력 인수는 `null`이 아닙니다.
 
 ```csharp
 string? userInput = GetUserInput();
@@ -215,7 +217,7 @@ bool TryGetMessage(string key, [NotNullWhen(true)] out string? message)
 string GetTopLevelDomainFromFullUrl(string url);
 ```
 
-`url` 인수가 null이 아니면 출력은 `null`이 아닙니다. null 허용 참조가 사용하도록 설정되면 API에서 null 입력을 허용하지 않는 경우 해당 시그니처가 제대로 작동합니다. 그러나 입력이 null일 수 있는 경우에는 반환 값도 null일 수 있습니다. 따라서 시그니처를 다음 코드로 변경할 수 있습니다.
+`url` 인수가 null이 아니면 출력은 `null`이 아닙니다. null 허용 참조가 사용하도록 설정되면 API에서 null 입력을 허용하지 않는 경우 해당 시그니처가 제대로 작동합니다. 그러나 입력이 null일 수 있는 경우에는 반환 값도 null일 수 있습니다. 시그니처를 다음 코드로 변경할 수 있습니다.
 
 ```csharp
 string? GetTopLevelDomainFromFullUrl(string? url);
@@ -236,11 +238,21 @@ string? GetTopLevelDomainFromFullUrl(string? url);
 - [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): 메서드가 지정된 `bool` 값을 반환하는 경우 null 허용 입력 인수는 null이 아닙니다.
 - [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): 지정된 매개 변수의 입력 인수가 null이 아닌 경우 반환 값은 null이 아닙니다.
 
+## <a name="constructor-helper-methods-membernotnull-and-membernotnullwhen"></a>생성자 도우미 메서드: `MemberNotNull` 및 `MemberNotNullWhen`
+
+이러한 특성은 생성자에서 공용 코드를 도우미 메서드로 리팩터링할 때 의도를 지정합니다. C# 컴파일러는 생성자 및 필드 이니셜라이저를 분석하여 각 생성자를 반환하기 전에 null을 허용하지 않는 모든 참조 필드가 초기화되도록 합니다. 그러나 C# 컴파일러가 모든 도우미 메서드에서 필드 할당을 추적하지는 않습니다. 컴파일러는 필드가 생성자에서 직접 초기화되지 않고 도우미 메서드에서 초기화되는 경우 `CS8618` 경고를 생성합니다. 메서드에서 null이 아닌 값으로 초기화되는 필드에 대한 메서드 선언에 <xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute>를 추가합니다. 예를 들어 다음 예제를 고려해 보겠습니다.
+
+:::code language="csharp" source="snippets/InitializeMembers.cs" ID="MemberNotNullExample":::
+
+`MemberNotNull` 특성 생성자에 대한 인수로 여러 필드 이름을 지정할 수 있습니다.
+
+<xref:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute>에는 `bool` 인수가 있습니다. 도우미 메서드가 도우미 메서드에서 필드를 초기화했는지 여부를 나타내는 `bool`을 반환하는 경우 `MemberNotNullWhen`을 사용합니다.
+
 ## <a name="verify-unreachable-code"></a>접근할 수 없는 코드 확인
 
 일반적으로 예외 도우미 또는 기타 유틸리티 메서드와 같은 일부 메서드는 항상 예외를 throw하여 종료됩니다. 또는 도우미는 부울 인수 값을 기반으로 예외를 throw할 수 있습니다.
 
-첫 번째 경우에 `DoesNotReturn` 특성을 메서드 선언에 추가할 수 있습니다. 컴파일러는 세 가지 방법으로 도움이 됩니다. 첫째, 예외를 throw하지 않고 메서드가 종료될 수 있는 경로가 있는 경우 컴파일러는 경고를 발생시킵니다. 둘째, 컴파일러는 해당 메서드를 호출한 후 적절한 `catch` 절이 나타날 때까지 코드를 ‘접근할 수 없음’으로 표시합니다.  셋째, 접근할 수 없는 코드는 null 상태에 영향을 주지 않습니다. 이 메서드를 살펴봅니다.
+첫 번째 경우에 `DoesNotReturn` 특성을 메서드 선언에 추가할 수 있습니다. 컴파일러는 세 가지 방법으로 도움이 됩니다. 첫째, 예외를 throw하지 않고 메서드가 종료될 수 있는 경로가 있는 경우 컴파일러는 경고를 생성합니다. 둘째, 컴파일러는 해당 메서드를 호출한 후 적절한 `catch` 절이 나타날 때까지 코드를 접근할 수 없음으로 표시합니다. 셋째, 접근할 수 없는 코드는 null 상태에 영향을 주지 않습니다. 이 메서드를 살펴봅니다.
 
 ```csharp
 [DoesNotReturn]
@@ -285,7 +297,7 @@ public void SetState(object containedField)
 
 [!INCLUDE [C# version alert](../../includes/csharp-version-alert.md)]
 
-null 허용 참조 형식을 추가하면 `null`일 수 있는 변수의 API 기대치를 설명하는 초기 어휘가 제공됩니다. 추가 특성은 변수의 null 상태를 전제 조건 및 사후 조건으로 설명하는 다양한 어휘를 제공합니다. 해당 특성은 기대치를 명확하게 설명하며 API를 사용하는 개발자에게 더 나은 환경을 제공합니다.
+null 허용 참조 형식을 추가하면 `null`일 수 있는 변수의 API 기대치를 설명하는 초기 어휘가 제공됩니다. 특성은 변수의 null 상태를 전제 조건 및 사후 조건으로 설명하는 다양한 어휘를 제공합니다. 해당 특성은 기대치를 명확하게 설명하며 API를 사용하는 개발자에게 더 나은 환경을 제공합니다.
 
 null 허용 컨텍스트의 라이브러리를 업데이트할 때 해당 특성을 추가하여 API 사용자가 올바르게 사용하도록 안내합니다. 해당 특성을 통해 입력 인수 및 반환 값의 null 상태를 완벽하게 설명할 수 있습니다.
 

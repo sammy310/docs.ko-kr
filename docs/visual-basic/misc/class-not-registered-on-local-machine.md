@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: 클래스가 로컬 컴퓨터에 등록 되지 않았습니다.'
 title: 클래스가 로컬 컴퓨터에 등록되지 않았습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID463
 ms.assetid: 40c4c622-41d8-4005-9303-c30abe0707bb
-ms.openlocfilehash: 4fc71c5385d64711aa58c18f03b4f0168d6310c1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ca6a06b3b20adc18f97b2b06c4803679bf729856
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060889"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463509"
 ---
 # <a name="class-not-registered-on-local-machine"></a>클래스가 로컬 컴퓨터에 등록되지 않았습니다.
 
@@ -19,6 +20,6 @@ ms.locfileid: "91060889"
   
 - Visual Studio를 다시 설치합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
-- [오류 형식](../programming-guide/language-features/error-types.md)
+- [오류 유형](../programming-guide/language-features/error-types.md)

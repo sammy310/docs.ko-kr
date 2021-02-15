@@ -4,12 +4,12 @@ description: 튜플 및 기타 형식을 분해하는 방법을 알아봅니다.
 ms.technology: csharp-fundamentals
 ms.date: 11/23/2017
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 96168b729ae3ec11d7a38444b8c100bdbff4efbf
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 5aaf7157b87de4f67f6e4beba18794a6dd13b6d0
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439705"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585353"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>튜플 및 기타 형식 분해
 
@@ -81,11 +81,7 @@ C#은 튜플이 아닌 형식의 분해에 대해 기본 제공 지원을 제공
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
 
-`Deconstruct` 메서드를 오버로드하여 개체에서 일반적으로 추출되는 데이터 그룹을 반영하려면 먼저 고유하고 명확한 시그니처를 사용하여 `Deconstruct` 메서드를 신중하게 정의해야 합니다. 여러 `Deconstruct` 메서드의 `out` 매개 변수 수가 동일하거나 `out` 매개 변수 수와 형식은 동일하지만 순서가 다른 경우 혼동이 생길 수 있습니다.
-
-다음 예제의 오버로드된 `Deconstruct` 메서드에서는 가능한 혼동 원인 중 하나를 보여 줍니다. 첫 번째 오버로드는 `Person` 개체의 이름, 중간 이름, 성 및 나이를 해당 순서로 반환합니다. 두 번째 오버로드는 연간 소득과 함께 이름 정보만 반환하지만 이름, 중간 이름 및 성의 순서가 다릅니다. 따라서 `Person` 인스턴스를 분해할 때 인수 순서를 혼동하기 쉽습니다.
-
-[!code-csharp[Deconstruct-ambiguity](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-ambiguous.cs)]
+매개 변수 수가 같은 여러 `Deconstruct` 메서드는 모호합니다. 매개 변수 수, 즉 "인자"가 다른 `Deconstruct` 메서드를 정의하도록 주의해야 합니다. 오버로드 확인 중에 동일한 수의 매개 변수를 가진 `Deconstruct` 메서드를 구분할 수 없습니다.
 
 ## <a name="deconstructing-a-user-defined-type-with-discards"></a>무시 항목을 사용한 사용자 정의 형식 분해
 

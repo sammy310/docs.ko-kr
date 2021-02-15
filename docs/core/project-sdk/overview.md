@@ -4,12 +4,12 @@ titleSuffix: ''
 description: .NET 프로젝트 SDK에 대해 알아봅니다.
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 2adb0713fabda142d071425a2affe66cc9d4c172
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: d0eb4291f4def9263f37d2d09f09ef43d40dfbac
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189670"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506398"
 ---
 # <a name="net-project-sdks"></a>.NET 프로젝트 SDK
 
@@ -131,6 +131,30 @@ SDK를 지정하는 또 다른 방법은 최상위 [Sdk](/visualstudio/msbuild/s
   ```
 
   `Compile` GLOB만 사용하지 않도록 설정하는 경우 Visual Studio의 솔루션 탐색기는 \*.cs 항목을 `None` 항목으로 포함된 프로젝트의 일부로 계속 표시합니다. 암시적 `None` GLOB를 사용하지 않도록 설정하려면 `EnableDefaultNoneItems`도 `false`로 설정합니다.
+
+## <a name="implicit-package-references"></a>암시적 패키지 참조
+
+.NET Core 1.0 ~ 2.2 또는 .NET Standard 1.0 ~ 2.0을 대상으로 지정하는 경우 .NET SDK는 특정 메타패키지에 대한 암시적 참조를 추가합니다. 메타패키지는 다른 패키지에 대한 종속성으로만 구성된 프레임워크 기반 패키지입니다. 메타패키지는 프로젝트 파일의 [TargetFramework](msbuild-props.md#targetframework) 또는 [TargetFrameworks](msbuild-props.md#targetframeworks) 속성에 지정된 대상 프레임워크를 기준으로 암시적으로 참조됩니다.
+
+```xml
+<PropertyGroup>
+  <TargetFramework>netcoreapp2.1</TargetFramework>
+</PropertyGroup>
+```
+
+```xml
+<PropertyGroup>
+  <TargetFrameworks>netcoreapp2.1;net462</TargetFrameworks>
+</PropertyGroup>
+```
+
+필요한 경우 [DisableImplicitFrameworkReferences](msbuild-props.md#disableimplicitframeworkreferences) 속성을 사용하여 암시적 패키지 참조를 비활성화하고 필요한 프레임워크 또는 패키지에 대해서만 명시적 참조를 추가할 수 있습니다.
+
+권장 사항:
+
+- .NET Framework, .NET Core 1.0 ~ 2.2 또는 .NET Standard 1.0 ~ 2.0을 대상으로 하는 경우 프로젝트 파일의 `<PackageReference>` 항목을 통해 `Microsoft.NETCore.App` 또는 `NETStandard.Library` 메타패키지에 대한 명시적 참조를 추가하지 마세요. .NET Core 1.0~2.2 및 .NET Standard 1.0~2.0 프로젝트의 경우 이러한 메타패키지를 암시적으로 참조합니다. .NET Framework 프로젝트의 경우 .NET Standard 기반 NuGet 패키지를 사용할 때 모든 버전의 `NETStandard.Library`가 필요하면 NuGet은 자동으로 해당 버전을 설치합니다.
+- .NET Core 1.0 ~ 2.2을 대상으로 할 때 특정 버전의 런타임이 필요하면 메타패키지를 참조하는 대신 프로젝트의 `<RuntimeFrameworkVersion>` 속성(예: `1.0.4`)을 사용해야 합니다. 예를 들어 [자체 포함 배포](../deploying/index.md#publish-self-contained)를 사용하는 경우 1.0.0 LTS 런타임의 특정 패치 버전이 필요할 수 있습니다.
+- .NET Standard 1.0 ~ 2.0을 대상으로 할 때 특정 버전의 `NETStandard.Library` 메타패키지가 필요하면 `<NetStandardImplicitPackageVersion>` 속성을 사용하고 필요한 버전을 설정할 수 있습니다.
 
 ## <a name="build-events"></a>빌드 이벤트
 

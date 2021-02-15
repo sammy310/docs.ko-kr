@@ -1,17 +1,17 @@
 ---
 title: 개체 - C# 프로그래밍 가이드
 description: C#은 클래스 또는 구조체 정의를 사용하여 개체의 형식을 정의합니다. C#과 같은 개체 지향 언어에서 프로그램은 동적으로 상호 작용하는 개체로 구성됩니다.
-ms.date: 07/20/2015
+ms.date: 02/03/2021
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 61d79f5647fa05edade9aef90653544b08c20c83
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: df549b76c5bd49fa91424915928527ec14d7689c
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181832"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585716"
 ---
 # <a name="objects-c-programming-guide"></a>개체(C# 프로그래밍 가이드)
 
@@ -24,7 +24,7 @@ ms.locfileid: "91181832"
 
  클래스는 참조 형식이므로 클래스 개체의 변수는 관리되는 힙의 개체 주소에 대한 참조를 포함합니다. 동일한 형식의 두 번째 개체가 첫 번째 개체에 할당되면 두 변수가 모두 해당 주소의 개체를 참조합니다. 이 내용에 대해서는 이 항목의 뒷부분에서 자세히 설명합니다.  
   
- 클래스 인스턴스는 [new 연산자](../../language-reference/operators/new-operator.md)를 사용하여 생성됩니다. 다음 예제에서 `Person`은 형식이고 `person1` 및 `person 2`는 해당 형식의 인스턴스 또는 개체입니다.  
+ 클래스 인스턴스는 [new 연산자](../../language-reference/operators/new-operator.md)를 사용하여 생성됩니다. 다음 예제에서 `Person`은 형식이고 `person1` 및 `person2`는 해당 형식의 인스턴스 또는 개체입니다.  
   
  [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
@@ -41,14 +41,14 @@ ms.locfileid: "91181832"
 
  두 개체가 같은지를 비교하는 경우 먼저 두 변수가 메모리에서 동일한 개체를 나타내는지 또는 해당 필드 값이 하나 이상 같은지를 알고 싶은 것인지 구분해야 합니다. 값을 비교하려는 경우 개체가 값 형식(구조체) 또는 참조 형식(클래스, 대리자, 배열)의 인스턴스인지 고려해야 합니다.  
   
-- 두 클래스 인스턴스가 메모리의 동일한 위치를 참조하는지 확인하려면(즉, *ID*가 같음) 정적 <xref:System.Object.Equals%2A> 메서드를 사용합니다. <xref:System.Object?displayProperty=nameWithType>은 사용자 정의 구조체 및 클래스를 포함하여 모든 값 형식 및 참조 형식에 대한 암시적 기본 클래스입니다.  
+- 두 클래스 인스턴스가 메모리의 동일한 위치를 참조하는지 확인하려면(즉, *ID* 가 같음) 정적 <xref:System.Object.Equals%2A> 메서드를 사용합니다. <xref:System.Object?displayProperty=nameWithType>은 사용자 정의 구조체 및 클래스를 포함하여 모든 값 형식 및 참조 형식에 대한 암시적 기본 클래스입니다.  
   
 - 두 구조체 인스턴스의 인스턴스 필드 값이 같은지 확인하려면 <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> 메서드를 사용합니다. 모든 구조체가 <xref:System.ValueType?displayProperty=nameWithType>에서 암시적으로 상속하기 때문에 다음 예제와 같이 개체에서 직접 메서드를 호출합니다.  
   
  [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
- `Equals`의 <xref:System.ValueType?displayProperty=nameWithType> 구현에서는 구조체의 필드를 확인할 수 있어야 하므로 리플렉션을 사용합니다. 고유한 구조체를 만드는 경우 `Equals` 메서드를 재정의하여 해당 형식과 관련된 효율적인 같음 알고리즘을 제공합니다.  
-  
+ `Equals`의 <xref:System.ValueType?displayProperty=nameWithType> 구현에서는 경우에 따라 boxing 및 리플렉션을 사용합니다. 형식에 따라 효율적인 같음 알고리즘을 제공하는 방법에 대한 자세한 내용은 [형식의 값 같음을 정의하는 방법](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md)을 참조하세요.
+
 - 두 클래스 인스턴스의 필드 값이 같은지 확인하기 위해 <xref:System.Object.Equals%2A> 메서드 또는 [== 연산자](../../language-reference/operators/equality-operators.md#equality-operator-)를 사용할 수 있습니다. 그러나 클래스가 해당 형식의 개체에 대해 "같음"이 무엇을 의미하는지의 사용자 지정 정의를 제공하도록 재정의 또는 오버로드한 경우에만 사용합니다. 클래스는 <xref:System.IEquatable%601> 인터페이스 또는 <xref:System.Collections.Generic.IEqualityComparer%601> 인터페이스도 구현할 수 있습니다. 두 인터페이스 모두 값이 같은지를 테스트하는 데 사용할 수 있는 메서드를 제공합니다. `Equals`을 재정의하는 고유한 클래스를 디자인하는 경우 [형식의 값 같음을 정의하는 방법](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md) 및 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>에 명시된 지침을 따라야 합니다.
   
 ## <a name="related-sections"></a>관련 단원  

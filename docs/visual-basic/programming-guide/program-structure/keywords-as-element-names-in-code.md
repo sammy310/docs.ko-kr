@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 키워드를 코드에서 요소 이름으로 (Visual Basic)'
 title: 코드에서 요소 이름으로 사용되는 키워드
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: e895db180dbb44cd4cfe4053d4be429f13324fe8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4782c0f3ea065e3e140d449575c187cf2254cd08
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91065751"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433215"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>코드에서 요소 이름으로 사용되는 키워드(Visual Basic)
 
@@ -31,8 +32,8 @@ ms.locfileid: "91065751"
 > [!NOTE]
 > 또한 프로그램에는 다른 참조 된 어셈블리에서 제공 하는 요소 이름이 포함 될 수 있습니다. 이러한 이름이 제한 된 키워드와 충돌 하는 경우 대괄호를 사용 하면 Visual Basic 정의 된 요소로 해석 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic 명명 규칙](naming-conventions.md)
 - [프로그램 구조 및 코드 규칙](program-structure-and-code-conventions.md)
-- [키워드](../../language-reference/keywords/index.md)
+- [C++ 키워드](../../language-reference/keywords/index.md)
