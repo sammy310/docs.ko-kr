@@ -4,12 +4,12 @@ description: 이 자습서에서는 Docker를 사용하여 .NET Core 애플리�
 ms.date: 04/27/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7605f847a76907f4f9d0a451ba69332d6d174615
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c92f5823f56f74941afdd28638d30e759b2c51c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724730"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740758"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>자습서: .NET Core 앱 컨테이너화
 
@@ -33,7 +33,7 @@ ms.locfileid: "95724730"
 
 다음 필수 구성 요소를 설치합니다.
 
-- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)\
+- [.NET Core 5.0 SDK](https://dotnet.microsoft.com/download)\
 .NET Core가 설치되어 있는 경우 `dotnet --info` 명령을 사용하여 사용 중인 SDK를 확인합니다.
 - [Docker Community Edition](https://www.docker.com/products/docker-desktop)
 - *Dockerfile* 및 .NET Core 예제 앱의 임시 작업 폴더입니다. 이 자습서에서는 이름 *docker-working* 이 작업 폴더로 사용됩니다.
@@ -144,16 +144,16 @@ Docker 이미지에 .NET Core 앱을 추가하기 전에 먼저 앱을 게시해
 dotnet publish -c Release
 ```
 
-이 명령은 앱을 *publish* 폴더로 컴파일합니다. 작업 폴더에서 *publish* 폴더의 경로는 `.\App\bin\Release\netcoreapp3.1\publish\`이어야 합니다.
+이 명령은 앱을 *publish* 폴더로 컴파일합니다. 작업 폴더에서 *publish* 폴더의 경로는 `.\App\bin\Release\net5.0\publish\`이어야 합니다.
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
 *App* 폴더에서 publish 폴더의 디렉터리 목록을 가져오고 *NetCore.Docker.dll* 파일이 생성되었는지 확인합니다.
 
 ```powershell
-dir .\bin\Release\netcoreapp3.1\publish\
+dir .\bin\Release\net5.0\publish\
 
-    Directory: C:\Users\dapine\App\bin\Release\netcoreapp3.1\publish
+    Directory: C:\Users\dapine\App\bin\Release\net5.0\publish
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
@@ -169,7 +169,7 @@ Mode                LastWriteTime         Length Name
 `ls` 명령을 사용하여 디렉터리 목록을 가져오고 *NetCore.Docker.dll* 파일이 생성되었는지 확인합니다.
 
 ```bash
-me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp3.1/publish
+me@DESKTOP:/docker-working/app$ ls bin/Release/net5.0/publish
 NetCore.Docker.deps.json  NetCore.Docker.dll  NetCore.Docker.pdb  NetCore.Docker.runtimeconfig.json
 ```
 
@@ -182,13 +182,13 @@ NetCore.Docker.deps.json  NetCore.Docker.dll  NetCore.Docker.pdb  NetCore.Docker
 *.csproj* 를 포함하는 디렉터리에 *Dockerfile* 이라는 파일을 만들고 텍스트 편집기에서 엽니다. 이 자습서에서는 .NET Core 런타임 이미지를 포함하고 .NET Core 콘솔 애플리케이션과 일치하는 ASP.NET Core 런타임 이미지를 사용합니다.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 ```
 
 > [!NOTE]
-> `mcr.microsoft.com/dotnet/runtime:3.1` 이미지를 사용할 수 있지만 여기서는 의도적으로 ASP.NET Core 런타임 이미지가 사용됩니다.
+> `mcr.microsoft.com/dotnet/runtime:5.0` 이미지를 사용할 수 있지만 여기서는 의도적으로 ASP.NET Core 런타임 이미지가 사용됩니다.
 
-`FROM` 키워드에는 정규화된 Docker 컨테이너 이미지 이름이 필요합니다. MCR(Microsoft Container Registry, mcr.microsoft.com)은 공개적으로 액세스할 수 있는 컨테이너를 호스트하는 Docker 허브의 신디케이트입니다. `dotnet/core` 세그먼트는 컨테이너 리포지토리입니다. 여기서 `aspnet` 세그먼트는 컨테이너 이미지 이름입니다. 이미지에는 버전 관리에 사용되는 `3.1`태그가 지정됩니다. 따라서 `mcr.microsoft.com/dotnet/aspnet:3.1`은 .NET Core 3.1 런타임입니다. SDK에서 대상으로 지정된 런타임과 일치하는 런타임 버전을 풀해야 합니다. 예를 들어 이전 섹션에서 만든 앱은 .NET Core 3.1 SDK를 사용하 고 *Dockerfile* 에서 참조하는 기본 이미지에 **3.1** 태그가 지정됩니다.
+`FROM` 키워드에는 정규화된 Docker 컨테이너 이미지 이름이 필요합니다. MCR(Microsoft Container Registry, mcr.microsoft.com)은 공개적으로 액세스할 수 있는 컨테이너를 호스트하는 Docker 허브의 신디케이트입니다. `dotnet/core` 세그먼트는 컨테이너 리포지토리입니다. 여기서 `aspnet` 세그먼트는 컨테이너 이미지 이름입니다. 이미지에는 버전 관리에 사용되는 `5.0`태그가 지정됩니다. 따라서 `mcr.microsoft.com/dotnet/aspnet:5.0`은 .NET Core 5.0 런타임입니다. SDK에서 대상으로 지정된 런타임과 일치하는 런타임 버전을 풀해야 합니다. 예를 들어 이전 섹션에서 만든 앱은 .NET Core 5.0 SDK를 사용하고 *Dockerfile* 에서 참조하는 기본 이미지에 **5.0** 태그가 지정됩니다.
 
 *Dockerfile* 파일을 저장합니다. 작업 폴더의 디렉터리 구조는 다음과 같이 표시됩니다. 문서에서 공간을 절약하기 위해 더 깊은 수준의 파일과 폴더의 일부가 생략되었습니다.
 
@@ -200,7 +200,7 @@ docker-working
         ├──Program.cs
         ├──bin
         │   └──Release
-        │       └──netcoreapp3.1
+        │       └──net5.0
         │           └──publish
         │               ├──NetCore.Docker.deps.json
         │               ├──NetCore.Docker.exe
@@ -223,13 +223,13 @@ Docker가 *Dockerfile* 에서 각 줄을 처리합니다. `docker build` 명령�
 docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
 counter-image                           latest              e6780479db63        4 days ago          190MB
-mcr.microsoft.com/dotnet/aspnet         3.1                 e6780479db63        4 days ago          190MB
+mcr.microsoft.com/dotnet/aspnet         5.0                 e6780479db63        4 days ago          190MB
 ```
 
 두 이미지가 동일한 **IMAGE ID** 값을 공유함을 알 수 있습니다. *Dockerfile* 의 유일한 명령은 기존 이미지를 기반으로 새 이미지를 만드는 것이므로 두 이미지에서 해당 값이 동일합니다. *Dockerfile* 에 세 개의 명령을 추가하겠습니다. 각 명령은 **counter-image** 리포지토리 진입점을 나타내는 마지막 명령으로 새 이미지 계층을 만듭니다.
 
 ```dockerfile
-COPY bin/Release/netcoreapp3.1/publish/ App/
+COPY bin/Release/net5.0/publish/ App/
 WORKDIR /App
 ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
 ```
@@ -245,9 +245,9 @@ ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
 ```console
 docker build -t counter-image -f Dockerfile .
 Sending build context to Docker daemon  1.117MB
-Step 1/4 : FROM mcr.microsoft.com/dotnet/aspnet:3.1
+Step 1/4 : FROM mcr.microsoft.com/dotnet/aspnet:5.0
  ---> e6780479db63
-Step 2/4 : COPY bin/Release/netcoreapp3.1/publish/ App/
+Step 2/4 : COPY bin/Release/net5.0/publish/ App/
  ---> d1732740eed2
 Step 3/4 : WORKDIR /App
  ---> Running in b1701a42f3ff
@@ -263,7 +263,7 @@ Successfully tagged counter-image:latest
 docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
 counter-image                           latest              cd11c3df9b19        41 seconds ago      190MB
-mcr.microsoft.com/dotnet/aspnet         3.1                 e6780479db63        4 days ago          190MB
+mcr.microsoft.com/dotnet/aspnet         5.0                 e6780479db63        4 days ago          190MB
 ```
 
 *Dockerfile* 의 각 명령이 계층을 생성하고 **IMAGE ID** 를 만들었습니다. 마지막 **IMAGE ID**(사용자에 따라 다름)는 **cd11c3df9b19** 이고 다음에 이 이미지를 기반으로 컨테이너를 만듭니다.
@@ -470,7 +470,7 @@ Docker에는 컨테이너와 이미지를 만들고, 관리하며, 이와 상호
 
 ```console
 docker rmi counter-image:latest
-docker rmi mcr.microsoft.com/dotnet/aspnet:3.1
+docker rmi mcr.microsoft.com/dotnet/aspnet:5.0
 ```
 
 `docker images` 명령을 사용하여 설치된 이미지 목록을 확인합니다.

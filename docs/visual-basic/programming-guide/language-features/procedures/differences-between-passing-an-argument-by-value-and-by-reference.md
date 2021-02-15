@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 인수를 값으로 전달할 때와 참조로 전달할 때의 차이점 (Visual Basic)'
 title: 인수를 값으로 전달할 때와 참조로 전달할 때의 차이점
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], passing arguments by value
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
-ms.openlocfilehash: f9fdb1e98fb827391b615f5fe0afd1ee43c9f8e1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 632895eae82a20c9bcd773da71f88ebef26d786c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075046"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464731"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>인수를 값으로 전달할 때와 참조로 전달할 때의 차이점(Visual Basic)
 
-하나 이상의 인수를 프로시저에 전달 하는 경우 각 인수는 호출 코드의 기본 프로그래밍 요소에 해당 합니다. 이 기본 요소의 값 이나 참조를 전달할 수 있습니다. 이를 *전달 메커니즘*이라고 합니다.  
+하나 이상의 인수를 프로시저에 전달 하는 경우 각 인수는 호출 코드의 기본 프로그래밍 요소에 해당 합니다. 이 기본 요소의 값 이나 참조를 전달할 수 있습니다. 이를 *전달 메커니즘* 이라고 합니다.  
   
 ## <a name="passing-by-value"></a>값으로 전달  
 
@@ -44,7 +45,7 @@ ms.locfileid: "91075046"
 |값 형식 (값만 포함)|프로시저는 변수나 해당 멤버를 변경할 수 없습니다.|프로시저는 변수와 해당 멤버를 변경할 수 있습니다.|  
 |참조 형식 (클래스 또는 구조체 인스턴스에 대 한 포인터 포함)|프로시저는 변수를 변경할 수 없지만 해당 변수를 가리키는 인스턴스의 멤버를 변경할 수 있습니다.|프로시저는 변수가 가리키는 인스턴스의 멤버 및 멤버를 변경할 수 있습니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

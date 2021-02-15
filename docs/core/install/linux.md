@@ -4,12 +4,12 @@ description: Linux에서 .NET 설치를 지원하는 Linux 배포에 대해 알�
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 3834bd7d977bb13e9543d511bee7170161a755ac
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 27be7151d95810d8cc607564d5c0ce8dfe5b9ed8
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970735"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506281"
 ---
 # <a name="install-net-on-linux"></a>Linux에 .NET 설치
 
@@ -34,6 +34,16 @@ ms.locfileid: "97970735"
 - 2.0
 
 지원되지 않는 버전은 아래 섹션에 자세히 설명되어 있지 않으며, 설치를 시도할 경우 진행 정도가 다양할 수 있습니다.
+
+## <a name="manual-installation"></a>수동 설치
+
+패키지 관리자를 사용하여 Linux에 .NET을 설치하지 않으려는 경우 다음 방법 중 하나를 사용하여 .NET을 설치할 수 있습니다.
+
+- [Snap 패키지](linux-snap.md)
+- [_install-dotnet.sh_ 스크립트를 통한 설치](linux-scripted-manual.md#scripted-install)
+- [수동 이진 추출](linux-scripted-manual.md#manual-install)
+
+수동으로 설치할 때 누락될 수 있는 필수 종속성에 대한 자세한 내용은 해당 배포 페이지를 확인해야 합니다.
 
 ## <a name="alpine"></a>Alpine
 

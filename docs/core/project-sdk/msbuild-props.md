@@ -4,12 +4,12 @@ description: .NET SDK에서 이해하는 MSBuild 속성 및 항목에 대한 참
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 21bbe46cf60540c01344cc8fcb82c62ff0fbbee5
-ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
+ms.openlocfilehash: e140491c694291438fe1db7fd60d581ffed0319d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98692711"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99802673"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 프로젝트용 MSBuild 참조
 
@@ -344,7 +344,12 @@ MSBuild 항목의 `CopyToPublishDirectory` 메타데이터는 항목이 게시 �
 
 ### <a name="analysislevel"></a>AnalysisLevel
 
-`AnalysisLevel` 속성을 사용하여 코드 분석 수준을 지정할 수 있습니다. 예를 들어 코드 분석기를 미리 보기 위해 액세스하려면 `AnalysisLevel`을 `preview`로 설정합니다. 기본값은 `latest`입니다.
+`AnalysisLevel` 속성을 사용하여 코드 분석 수준을 지정할 수 있습니다. 예를 들어 코드 분석기를 미리 보기 위해 액세스하려면 `AnalysisLevel`을 `preview`로 설정합니다.
+
+기본값:
+
+- 프로젝트가 .NET 5.0 이상을 대상으로 하거나 [AnalysisMode](#analysismode) 속성을 추가한 경우 기본값은 `latest`입니다.
+- 그렇지 않으면 프로젝트 파일에 명시적으로 추가하지 않는 한 이 속성이 생략됩니다.
 
 ```xml
 <PropertyGroup>
@@ -398,9 +403,6 @@ MSBuild 항목의 `CopyToPublishDirectory` 메타데이터는 항목이 게시 �
   <EnableNETAnalyzers>true</EnableNETAnalyzers>
 </PropertyGroup>
 ```
-
-> [!TIP]
-> .Net 5.0 이전 .NET 버전을 대상으로 하는 프로젝트에서 .NET 코드 분석을 사용할 수 있는 또 다른 방법은 [AnalysisLevel](#analysislevel) 속성을 `latest`로 설정하는 것입니다.
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
 

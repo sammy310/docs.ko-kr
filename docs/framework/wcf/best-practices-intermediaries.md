@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 모범 사례: 중간'
 title: '모범 사례: 매개자'
 ms.date: 03/30/2017
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
-ms.openlocfilehash: 57be78681147dfc5bc37701a76c1347040f5da1f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 54fd367c9dd7a3b40f585d095d51042acd8b5722
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96277896"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430497"
 ---
 # <a name="best-practices-intermediaries"></a>모범 사례: 매개자
 
@@ -33,7 +34,7 @@ catch (Exception e)
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [WCF 오류 처리](wcf-error-handling.md)
 - [계약 및 서비스에서 오류 지정 및 처리](specifying-and-handling-faults-in-contracts-and-services.md)

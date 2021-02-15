@@ -1,15 +1,16 @@
 ---
+description: '에 대 한 자세한 정보: 잘못 된 인수 수 또는 속성 할당이 잘못 되었습니다.'
 title: 인수 개수가 잘못되었거나 잘못된 속성이 할당되었습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID450
 ms.assetid: 61700dd4-ebd0-4088-b439-2cd1ef9fc8f4
-ms.openlocfilehash: cc58c8c770b19bd3773fe5a29b437f13b872ec90
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 8ac77d009bb3c9dbecee81976e015be340ac0bf8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100271"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475658"
 ---
 # <a name="wrong-number-of-arguments-or-property-assignment-not-valid"></a>인수 개수가 잘못되었거나 잘못된 속성이 할당되었습니다.
 

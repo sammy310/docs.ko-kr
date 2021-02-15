@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 첫 번째 LINQ 쿼리 작성 (Visual Basic)'
 title: 첫 번째 LINQ 쿼리 작성
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: c7d0595b991bdad6ef05b567f95ead8c7fccdbc2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: cb57ae3c22b7e2ee2c3b66a8f033eda6fd72e16a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077282"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477517"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>LINQ 쿼리 처음 작성(Visual Basic)
 
-*쿼리*는 데이터 소스에서 데이터를 검색하는 식입니다. 쿼리는 전용 쿼리 언어로 표현 됩니다. 시간이 지남에 따라 다양 한 유형의 데이터 원본에 대해 다양 한 언어 (예: 관계형 데이터베이스의 경우 SQL, XML 용 XQuery)가 개발 되었습니다. 이를 통해 응용 프로그램 개발자는 지원 되는 데이터 원본 또는 데이터 형식에 따라 새로운 쿼리 언어를 배워야 합니다.  
+*쿼리* 는 데이터 소스에서 데이터를 검색하는 식입니다. 쿼리는 전용 쿼리 언어로 표현 됩니다. 시간이 지남에 따라 다양 한 유형의 데이터 원본에 대해 다양 한 언어 (예: 관계형 데이터베이스의 경우 SQL, XML 용 XQuery)가 개발 되었습니다. 이를 통해 응용 프로그램 개발자는 지원 되는 데이터 원본 또는 데이터 형식에 따라 새로운 쿼리 언어를 배워야 합니다.  
   
- LINQ (통합 언어 쿼리)는 다양 한 종류의 데이터 원본 및 형식에서 데이터를 사용 하기 위한 일관 된 모델을 제공 하 여 상황을 단순화 합니다. LINQ 쿼리에서는 항상 개체를 사용합니다. 동일한 기본 코딩 패턴을 사용 하 여 XML 문서, SQL 데이터베이스, ADO.NET 데이터 집합 및 엔터티, .NET Framework 컬렉션 및 LINQ 공급자를 사용할 수 있는 다른 모든 원본 또는 형식에서 데이터를 쿼리하고 변환 합니다. 이 문서에서는 기본 LINQ 쿼리를 만들고 사용 하는 세 가지 단계에 대해 설명 합니다.  
+ LINQ (Language-Integrated Query)는 다양 한 종류의 데이터 원본 및 형식에서 데이터를 사용 하기 위한 일관 된 모델을 제공 하 여 상황을 단순화 합니다. LINQ 쿼리에서는 항상 개체를 사용합니다. 동일한 기본 코딩 패턴을 사용 하 여 XML 문서, SQL 데이터베이스, ADO.NET 데이터 집합 및 엔터티, .NET Framework 컬렉션 및 LINQ 공급자를 사용할 수 있는 다른 모든 원본 또는 형식에서 데이터를 쿼리하고 변환 합니다. 이 문서에서는 기본 LINQ 쿼리를 만들고 사용 하는 세 가지 단계에 대해 설명 합니다.  
   
 ## <a name="three-stages-of-a-query-operation"></a>쿼리 작업의 세 단계  
 
@@ -34,7 +35,7 @@ ms.locfileid: "91077282"
  다음 예에서는 쿼리 작업의 세 부분을 보여 줍니다. 예제에서는 데모를 위해 정수 배열을 편리한 데이터 소스로 사용 합니다. 그러나 다른 데이터 소스에도 동일한 개념이 적용 됩니다.  
   
 > [!NOTE]
-> [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)에서 **옵션 유추** 가 **On**으로 설정 되어 있는지 확인 합니다.  
+> [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)에서 **옵션 유추** 가 **On** 으로 설정 되어 있는지 확인 합니다.  
   
  [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
@@ -44,7 +45,7 @@ ms.locfileid: "91077282"
   
 ## <a name="the-data-source"></a>데이터 소스  
 
- 이전 예제의 데이터 소스는 배열 이기 때문에 제네릭 인터페이스를 암시적으로 지원 <xref:System.Collections.Generic.IEnumerable%601> 합니다. 이 사실은 배열을 LINQ 쿼리의 데이터 원본으로 사용할 수 있도록 하는 것입니다. <xref:System.Collections.Generic.IEnumerable%601> 또는 제네릭 <xref:System.Linq.IQueryable%601> 같은 파생된 인터페이스를 지원하는 형식을 *쿼리 가능 형식*이라고 합니다.  
+ 이전 예제의 데이터 소스는 배열 이기 때문에 제네릭 인터페이스를 암시적으로 지원 <xref:System.Collections.Generic.IEnumerable%601> 합니다. 이 사실은 배열을 LINQ 쿼리의 데이터 원본으로 사용할 수 있도록 하는 것입니다. <xref:System.Collections.Generic.IEnumerable%601> 또는 제네릭 <xref:System.Linq.IQueryable%601> 같은 파생된 인터페이스를 지원하는 형식을 *쿼리 가능 형식* 이라고 합니다.  
   
  암시적으로 쿼리 가능한 형식이 면 배열을 수정 하거나 특별 한 처리를 수행 하지 않아도 LINQ 데이터 원본으로 사용할 수 있습니다. <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.Dictionary%602> .NET Framework 클래스 라이브러리의 제네릭, 및 기타 클래스를 포함 하 여를 지 원하는 모든 컬렉션 형식의 경우에도 마찬가지입니다.  
   
@@ -83,7 +84,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
 ### <a name="deferred-execution"></a>지연된 실행  
 
- 일반적인 LINQ 쿼리는가 정의 된 이전 예제와 유사 합니다 `evensQuery` . 쿼리를 만들지만 즉시 실행 하지는 않습니다. 대신 쿼리 정의는 쿼리 변수에 저장 됩니다 `evensQuery` . 나중에 쿼리를 실행 합니다. 일반적으로는 `For Each` 루프를 사용 하 여 값의 시퀀스를 반환 하거나 또는와 같은 표준 쿼리 연산자를 적용 하 여 쿼리를 실행 합니다 `Count` `Max` . 이 프로세스를 *지연 된 실행*이라고 합니다.  
+ 일반적인 LINQ 쿼리는가 정의 된 이전 예제와 유사 합니다 `evensQuery` . 쿼리를 만들지만 즉시 실행 하지는 않습니다. 대신 쿼리 정의는 쿼리 변수에 저장 됩니다 `evensQuery` . 나중에 쿼리를 실행 합니다. 일반적으로는 `For Each` 루프를 사용 하 여 값의 시퀀스를 반환 하거나 또는와 같은 표준 쿼리 연산자를 적용 하 여 쿼리를 실행 합니다 `Count` `Max` . 이 프로세스를 *지연 된 실행* 이라고 합니다.  
   
  [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
   
@@ -125,7 +126,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  메서드와 같은 메서드를 사용 하 여 쿼리를 실행할 수도 있습니다 `IEnumerable` <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> .  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic에서 LINQ 시작](getting-started-with-linq.md)
 - [지역 형식 유추](../../language-features/variables/local-type-inference.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: Windows Api 호출 (Visual Basic)'
 title: '방법: Windows API 호출'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: 40b40c1a489d514c82cbccdeacda27900d9ec87d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ec25df3715b1f8a4612c1575b5f7192d0a133c4b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91083360"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464913"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>방법: Windows API 호출(Visual Basic)
 
 이 예제에서는 user32.dll에서 함수를 정의 하 고 호출한 `MessageBox` 다음 문자열을 전달 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  [!code-vb[VbVbalrInterop#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#1)]  
   
@@ -38,7 +39,7 @@ ms.locfileid: "91083360"
   
 - 포함하는 형식은 `CreateType`을 사용하여 이전에 만든 것입니다. (<xref:System.InvalidOperationException>)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [플랫폼 호출 자세히 보기](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [플랫폼 호출 예제](../../../framework/interop/platform-invoke-examples.md)

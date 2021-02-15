@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 구조 변수 (Visual Basic)'
 title: 구조체 변수
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: 270e8ca26185e4a68def3b95f4ce6ab4c57a629c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 64c53b06369bc7d7d0c46bc87d4c73ce90b4011f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393587"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100484160"
 ---
 # <a name="structure-variables-visual-basic"></a>구조체 변수(Visual Basic)
 
-구조를 만든 후에는 프로시저 수준 및 모듈 수준 변수를 해당 형식으로 선언할 수 있습니다. 예를 들어 컴퓨터 시스템에 대 한 정보를 기록 하는 구조를 만들 수 있습니다. 다음 예에 이러한 부하 분산 방식이 나와 있습니다.
+구조를 만든 후에는 프로시저 수준 및 모듈 수준 변수를 해당 형식으로 선언할 수 있습니다. 예를 들어 컴퓨터 시스템에 대 한 정보를 기록 하는 구조를 만들 수 있습니다. 다음은 이에 대한 예입니다.
 
 ```vb
 Public Structure systemInfo
@@ -55,7 +56,7 @@ yourSystem = mySystem
 
 구조체 요소가, 또는 배열과 같은 참조 형식이 면 `String` `Object` 데이터에 대 한 포인터가 복사 됩니다. 이전 예제에서가 `systemInfo` 개체 변수를 포함 한 경우 앞의 예제는에서로 포인터를 복사 했 `mySystem` `yourSystem` 고 한 구조를 통해 개체의 데이터 변경 내용이 다른 구조를 통해 액세스 될 때 적용 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [데이터 형식](index.md)
 - [기본 데이터 형식](elementary-data-types.md)
