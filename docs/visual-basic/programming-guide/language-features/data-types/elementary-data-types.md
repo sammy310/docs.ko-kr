@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 기본 데이터 형식 (Visual Basic)'
 title: 기본 데이터 형식
 ms.date: 07/20/2015
 helpviewer_keywords:
 - elementary data types [Visual Basic]
 - data types [Visual Basic], elementary
 ms.assetid: dfad6fe9-2da6-49a4-b0b1-2d7ae0283de5
-ms.openlocfilehash: b4ecb67e346b06085217bc1f7660755c061916ee
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 71bf05f72521694b8aeef344dc8604d0e1a292e5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077139"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462050"
 ---
 # <a name="elementary-data-types-visual-basic"></a>기본 데이터 형식(Visual Basic)
 
@@ -30,7 +31,7 @@ Visual Basic는 여러 프로그래밍 요소에 사용할 수 있는 미리 정
  [기타 데이터 형식](miscellaneous-data-types.md)  
  `Boolean`, 및 형식에 대해 설명 합니다 `Date` `Object` .  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 
  [데이터 형식](index.md)  
  Visual Basic 데이터 형식을 소개 하 고이를 사용 하는 방법을 설명 합니다.  

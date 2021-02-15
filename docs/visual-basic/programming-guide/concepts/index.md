@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 프로그래밍 개념 (Visual Basic)'
 title: 프로그래밍 개념
 ms.date: 02/27/2017
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: 500e2670e9f2aafce31f814a08d1da4f0a1d06fd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 83cf59325de4616cce705d87c702eccee27c42ad
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410956"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462206"
 ---
 # <a name="programming-concepts-visual-basic"></a>프로그래밍 개념(Visual Basic)
 
@@ -15,7 +16,7 @@ ms.locfileid: "84410956"
 
 ## <a name="in-this-section"></a>단원 내용
 
-|제목|Description|
+|제목|설명|
 |-----------|-----------------|
 |[Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](async/index.md)|[Async](../../language-reference/modifiers/async.md) 및 [Await](../../language-reference/operators/await-operator.md) 키워드를 사용하여 비동기 솔루션을 작성하는 방법을 설명합니다. 연습이 포함되어 있습니다.|
 |[특성 개요(Visual Basic)](attributes/index.md)|특성을 사용하여 형식, 필드, 메서드 및 속성 등의 요소를 프로그래밍하는 방법에 대한 추가 정보를 제공하는 방법을 설명합니다.|

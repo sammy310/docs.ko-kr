@@ -1,5 +1,6 @@
 ---
-title: 범위
+description: '자세히 알아보기: 범위의 범위 Visual Basic'
+title: Scope
 ms.date: 07/20/2015
 helpviewer_keywords:
 - module scope [Visual Basic]
@@ -15,18 +16,18 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 1bee904996257474b7457b2aefb1f17d250933cb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5b5412f5743162bb91fc3651d08f5c7ff9ba8abd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410736"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480208"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic의 범위
 
 선언 된 요소의 *범위* 는 이름을 한정 하거나 [Imports 문 (.net 네임 스페이스 및 형식)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)을 통해 사용할 수 있도록 하는 것을 제외 하 고이를 참조할 수 있는 모든 코드 집합입니다. 요소는 다음 수준 중 하나에서 범위를 가질 수 있습니다.
 
-|Level|Description|
+|Level|설명|
 |-----------|-----------------|
 |블록 범위|선언 된 코드 블록 내 에서만 사용할 수 있습니다.|
 |프로시저 범위|선언 된 프로시저 내의 모든 코드에서 사용할 수 있습니다.|
@@ -57,7 +58,7 @@ ms.locfileid: "84410736"
 
 - `Do` 및 `Loop`
 
-- `For`[ `Each` ] 및`Next`
+- `For` [ `Each` ] 및 `Next`
 
 - `If` 및 `End If`
 
@@ -85,7 +86,7 @@ End If
 
 ### <a name="procedure-scope"></a>프로시저 범위
 
-프로시저 내에서 선언 된 요소는 해당 프로시저 외부에서 사용할 수 없습니다. 선언을 포함 하는 프로시저만이 프로시저를 사용할 수 있습니다. 이 수준의 변수는 *지역 변수*라고도 합니다. [Static](../../../language-reference/modifiers/static.md) 키워드를 사용 하거나 사용 하지 않고 [Dim 문으로](../../../language-reference/statements/dim-statement.md)선언 합니다.
+프로시저 내에서 선언 된 요소는 해당 프로시저 외부에서 사용할 수 없습니다. 선언을 포함 하는 프로시저만이 프로시저를 사용할 수 있습니다. 이 수준의 변수는 *지역 변수* 라고도 합니다. [Static](../../../language-reference/modifiers/static.md) 키워드를 사용 하거나 사용 하지 않고 [Dim 문으로](../../../language-reference/statements/dim-statement.md)선언 합니다.
 
 프로시저 및 블록 범위는 밀접 하 게 관련 되어 있습니다. 프로시저 내에서 변수를 선언 하 고 해당 프로시저 내의 블록 외부에서 변수를 선언 하는 경우 해당 변수는 블록 범위가 있는 것으로 간주할 수 있습니다. 여기서 블록은 전체 프로시저입니다.
 
@@ -126,7 +127,7 @@ Public strMsg As String
 
 네임 스페이스 범위에는 중첩 된 네임 스페이스가 포함 됩니다. 네임 스페이스 내에서 사용할 수 있는 요소는 해당 네임 스페이스 내에 중첩 된 모든 네임 스페이스 내 에서도 사용할 수 있습니다.
 
-프로젝트에 [네임 스페이스 문이](../../../language-reference/statements/namespace-statement.md)포함 되어 있지 않으면 프로젝트의 모든 항목이 동일한 네임 스페이스에 있습니다. 이 경우 네임 스페이스 범위를 프로젝트 범위로 간주할 수 있습니다. `Public`모듈, 클래스 또는 구조체의 요소는 해당 프로젝트를 참조 하는 모든 프로젝트 에서도 사용할 수 있습니다.
+프로젝트에 [네임 스페이스 문이](../../../language-reference/statements/namespace-statement.md)포함 되어 있지 않으면 프로젝트의 모든 항목이 동일한 네임 스페이스에 있습니다. 이 경우 네임 스페이스 범위를 프로젝트 범위로 간주할 수 있습니다. `Public` 모듈, 클래스 또는 구조체의 요소는 해당 프로젝트를 참조 하는 모든 프로젝트 에서도 사용할 수 있습니다.
 
 ## <a name="choice-of-scope"></a>범위 선택
 
@@ -144,7 +145,7 @@ Public strMsg As String
 
 일반적으로 변수 또는 상수를 선언 하는 경우 범위를 최대한 좁게 만드는 것이 좋습니다 (블록 범위는 가장 좁은). 이렇게 하면 메모리를 절약 하 고 잘못 된 변수를 잘못 참조 하는 코드의 가능성을 최소화 합니다. 마찬가지로 프로시저 호출 사이에 값을 유지 해야 하는 경우에만 변수를 [정적](../../../language-reference/modifiers/static.md) 으로 선언 해야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [선언 요소의 특징](declared-element-characteristics.md)
 - [방법: 변수의 범위 제어](how-to-control-the-scope-of-a-variable.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic의 변수 선언'
 title: 변수 선언
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 8d78509e1604fee4a151608f6166de6fc8ccfdaa
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ef0e7bc7a99f320bd40788ef019b05c7ebf4ce46
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91080155"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462700"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic의 변수 선언
 
@@ -38,9 +39,9 @@ ms.locfileid: "91080155"
   
 ### <a name="shared-and-instance-variables"></a>공유 및 인스턴스 변수  
 
- 클래스 또는 구조체에서 멤버 변수의 범주는 공유 여부에 따라 달라 집니다. [Shared](../../../language-reference/modifiers/shared.md) 키워드를 사용 하 여 선언 된 경우 *공유 변수*이며, 클래스 또는 구조체의 모든 인스턴스 간에 공유 되는 단일 복사본에 존재 합니다.  
+ 클래스 또는 구조체에서 멤버 변수의 범주는 공유 여부에 따라 달라 집니다. [Shared](../../../language-reference/modifiers/shared.md) 키워드를 사용 하 여 선언 된 경우 *공유 변수* 이며, 클래스 또는 구조체의 모든 인스턴스 간에 공유 되는 단일 복사본에 존재 합니다.  
   
- 그렇지 않으면 *인스턴스 변수*이며, 클래스 또는 구조체의 각 인스턴스에 대해 별도의 복사본을 만듭니다. 인스턴스 변수의 지정 된 복사본은 해당 복사본이 생성 된 클래스 또는 구조체의 인스턴스에만 사용할 수 있습니다. 클래스 또는 구조체의 다른 인스턴스에 있는 인스턴스 변수의 복사본과는 독립적입니다.  
+ 그렇지 않으면 *인스턴스 변수* 이며, 클래스 또는 구조체의 각 인스턴스에 대해 별도의 복사본을 만듭니다. 인스턴스 변수의 지정 된 복사본은 해당 복사본이 생성 된 클래스 또는 구조체의 인스턴스에만 사용할 수 있습니다. 클래스 또는 구조체의 다른 인스턴스에 있는 인스턴스 변수의 복사본과는 독립적입니다.  
   
 ## <a name="declaring-data-type"></a>데이터 형식 선언  
 
@@ -83,12 +84,12 @@ Dim l, m As Long, x, y As Single
   
  변수의 *액세스 수준은* 액세스 권한이 있는 코드의 범위입니다. 이는 문에 사용 하는 액세스 한정자 (예: [공용](../../../language-reference/modifiers/public.md) 또는 [개인](../../../language-reference/modifiers/private.md))에 의해 결정 됩니다 `Dim` . 자세한 내용은 [Visual Basic의 액세스 수준](../declared-elements/access-levels.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [방법: 새 변수 만들기](how-to-create-a-new-variable.md)
 - [방법: 변수 값 저장 및 검색](how-to-move-data-into-and-out-of-a-variable.md)
 - [데이터 형식](../../../language-reference/data-types/index.md)
-- [보호](../../../language-reference/modifiers/protected.md)
+- [보호됨](../../../language-reference/modifiers/protected.md)
 - [Friend](../../../language-reference/modifiers/friend.md)
 - [정적](../../../language-reference/modifiers/static.md)
 - [선언 요소의 특징](../declared-elements/declared-element-characteristics.md)

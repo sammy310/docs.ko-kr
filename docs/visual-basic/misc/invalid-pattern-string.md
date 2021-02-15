@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 잘못 된 패턴 문자열'
 title: 잘못된 패턴 문자열
 ms.date: 07/20/2015
 ms.assetid: ec1aecdb-5339-4a93-be71-eec56b1d7438
-ms.openlocfilehash: 5ef12ac27e96205f9ef1c964293847f56b11cb78
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4fbf16dd43ac4ae44e1a99d85caae4a7baf99109
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090692"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462063"
 ---
 # <a name="invalid-pattern-string"></a>잘못된 패턴 문자열
 
@@ -23,6 +24,6 @@ ms.locfileid: "91090692"
   
 4. 닫는 대괄호를 사용하여 패턴 범위를 종료합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Like 연산자](../language-reference/operators/like-operator.md)

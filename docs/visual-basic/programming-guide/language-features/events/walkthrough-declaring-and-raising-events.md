@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연습: 이벤트 선언 및 발생 (Visual Basic)'
 title: 이벤트 선언 및 발생
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 07ef611b50cfa13f77fa168d58dd3b43e97eeec6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 98e9d2eabd1ace06de9f8cc7931013093d864e7a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91057990"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466382"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>연습: 이벤트 선언 및 발생(Visual Basic)
 
@@ -75,7 +76,7 @@ ms.locfileid: "91057990"
   
  이제 `Widget` 클래스가 이벤트를 발생 시킬 수 있으므로 다음 연습으로 이동할 수 있습니다. [연습: 이벤트 처리](walkthrough-handling-events.md) 는를 사용 하 여 이벤트 `WithEvents` 처리기를 이벤트와 연결 하는 방법을 보여 줍니다 `PercentDone` .  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>
 - <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>

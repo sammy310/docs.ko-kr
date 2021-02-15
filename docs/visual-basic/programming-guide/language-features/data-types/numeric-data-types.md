@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 숫자 데이터 형식 (Visual Basic)'
 title: 숫자 데이터 형식
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 317c0862953e7bb866faa4712d42dfd5995ecf35
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 0e44301d953ab75378aabbec82fdb6dce00a02e2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086233"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430692"
 ---
 # <a name="numeric-data-types-visual-basic"></a>숫자 데이터 형식(Visual Basic)
 
@@ -88,7 +89,7 @@ Visual Basic는 다양 한 표현에서 숫자를 처리 하기 위한 여러 *�
 
  데이터 형식의 전체 범위가 필요 하지 않은 경우 `Double` `Single` -3.4028235 e + 38에서 3.4028235 e + 38 까지의 부동 소수점 수를 포함할 수 있는 데이터 형식을 사용할 수 있습니다. 변수에 대 한 최소 크고 많을는 `Single` 음수 값의 경우-1.401298 e-45이 고 양수 값의 경우 1.401298 e-45입니다. 작은 부동 소수점 숫자를 포함 하는 변수를 매우 많이 사용 하는 경우 공용 언어 런타임에서는 때때로 `Single` 변수를 더 효율적으로 저장 하 고 메모리 사용을 줄일 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [기본 데이터 형식](elementary-data-types.md)
 - [문자 데이터 형식](character-data-types.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 비동기 앱에서 재입력 처리 (Visual Basic)'
 title: 비동기 앱에서 재진입 처리
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 2d1af14016f82b5de875d3638b132e14c7d2280d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aca917c1b22655547f155009c5877140d9ca5e43
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396638"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425804"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>비동기 응용 프로그램에서 재진입 처리(Visual Basic)
 
@@ -540,11 +541,11 @@ End Function
 
 2. 다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.
 
-3. 메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.
+3. 메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션** 을 선택합니다.
 
 4. 압축을 푼 샘플 코드가 저장된 폴더로 이동한 다음 솔루션(.sln) 파일을 엽니다.
 
-5. **솔루션 탐색기**에서 실행하려는 프로젝트의 바로 가기 메뉴를 연 후 **StartUpProject로 설정**을 선택합니다.
+5. **솔루션 탐색기** 에서 실행하려는 프로젝트의 바로 가기 메뉴를 연 후 **StartUpProject로 설정** 을 선택합니다.
 
 6. CTRL+F5를 선택하여 프로젝트를 빌드하고 실행합니다.
 
@@ -556,21 +557,21 @@ End Function
 
 1. Visual Studio를 시작합니다.
 
-2. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.
+2. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트** 를 차례로 선택합니다.
 
      **새 프로젝트** 대화 상자가 열립니다.
 
-3. **설치 된 템플릿** 창에서 **Visual Basic**을 확장 한 다음 **Windows**를 확장 합니다.
+3. **설치 된 템플릿** 창에서 **Visual Basic** 을 확장 한 다음 **Windows** 를 확장 합니다.
 
-4. 프로젝트 형식 목록에서 **WPF 애플리케이션**을 선택합니다.
+4. 프로젝트 형식 목록에서 **WPF 애플리케이션** 을 선택합니다.
 
 5. 프로젝트 이름을 `WebsiteDownloadWPF`로 지정하고 .NET Framework 버전 4.6 이상을 선택한 다음, **확인** 단추를 클릭합니다.
 
-     **솔루션 탐색기**에 새 프로젝트가 표시됩니다.
+     **솔루션 탐색기** 에 새 프로젝트가 표시됩니다.
 
 6. Visual Studio 코드 편집기에서 **MainWindow.xaml** 탭을 선택합니다.
 
-     탭이 표시되지 않는 경우 **솔루션 탐색기**에서 MainWindow.xaml의 바로 가기 메뉴를 열고 **코드 보기**를 선택합니다.
+     탭이 표시되지 않는 경우 **솔루션 탐색기** 에서 MainWindow.xaml의 바로 가기 메뉴를 열고 **코드 보기** 를 선택합니다.
 
 7. MainWindow.xaml의 **XAML** 보기에서 코드를 다음 코드로 바꿉니다.
 
@@ -592,11 +593,11 @@ End Function
 
      텍스트 상자와 버튼이 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.
 
-8. **솔루션 탐색기**에서 **참조**를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다.
+8. **솔루션 탐색기** 에서 **참조** 를 마우스 오른쪽 단추로 클릭하고 **참조 추가** 를 선택합니다.
 
      아직 선택하지 않은 경우 <xref:System.Net.Http>에 대한 참조를 추가합니다.
 
-9. **솔루션 탐색기**에서 mainwindow.xaml의 바로 가기 메뉴를 열고 **코드 보기**를 선택 합니다.
+9. **솔루션 탐색기** 에서 mainwindow.xaml의 바로 가기 메뉴를 열고 **코드 보기** 를 선택 합니다.
 
 10. Mainwindow.xaml에서 코드를 다음 코드로 바꿉니다.
 

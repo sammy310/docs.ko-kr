@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 데이터 분할 (Visual Basic)'
 title: 데이터 분할
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-ms.openlocfilehash: 07e33c4ce0d062a0f083d8970c0ad01f98923a52
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 264a81d1217c7f5034058761033171b9c232fae2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075319"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100465615"
 ---
 # <a name="partitioning-data-visual-basic"></a>데이터 분할 (Visual Basic)
 
@@ -54,7 +55,7 @@ LINQ의 분할은 요소를 다시 정렬한 후 섹션 중 하나를 반환하�
   
  [!code-vb[CsLINQPartitioning#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#4)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(Visual Basic)](standard-query-operators-overview.md)

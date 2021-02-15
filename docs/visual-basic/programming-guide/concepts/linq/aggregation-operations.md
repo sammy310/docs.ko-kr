@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 집계 작업 (Visual Basic)'
 title: 집계 작업
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: 1cf82d8acfdb1f8b0fc33c324064574b0dd01f4a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2ef41faf03100814e062ec98afb8fe17b1ef64bc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078400"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462167"
 ---
 # <a name="aggregation-operations-visual-basic"></a>집계 작업 (Visual Basic)
 
@@ -51,7 +52,7 @@ ms.locfileid: "91078400"
   
  [!code-vb[CsLINQAggregating#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#3)]  
   
-### <a name="max"></a>최대  
+### <a name="max"></a>Max  
 
  다음 코드 예제에서는 절을 사용 하 여 `Aggregate Into Max` 온도를 나타내는 숫자 배열의 최대 온도를 계산 합니다.  
   
@@ -69,7 +70,7 @@ ms.locfileid: "91078400"
   
  [!code-vb[CsLINQAggregating#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#6)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(Visual Basic)](standard-query-operators-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연습: Visual Basic에서 쿼리 작성'
 title: 쿼리 작성
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: c2abca183f1241cff314a4367c7bd9f1b9f239ea
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 55a1b3382d587b7982b79448334c4688895fa6e6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554595"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466811"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>연습: Visual Basic에서 쿼리 작성
 
-이 연습에서는 Visual Basic 언어 기능을 사용 하 여 LINQ (통합 언어 쿼리) 쿼리 식을 작성 하는 방법을 보여 줍니다. 이 연습에서는 학생 개체 목록에 대 한 쿼리를 만드는 방법, 쿼리를 실행 하는 방법 및 수정 하는 방법을 보여 줍니다. 이 쿼리는 개체 이니셜라이저, 로컬 형식 유추 및 익명 형식을 비롯 한 여러 기능을 통합 합니다.
+이 연습에서는 Visual Basic 언어 기능을 사용 하 여 LINQ (Language-Integrated Query) 쿼리 식을 작성 하는 방법을 보여 줍니다. 이 연습에서는 학생 개체 목록에 대 한 쿼리를 만드는 방법, 쿼리를 실행 하는 방법 및 수정 하는 방법을 보여 줍니다. 이 쿼리는 개체 이니셜라이저, 로컬 형식 유추 및 익명 형식을 비롯 한 여러 기능을 통합 합니다.
 
 이 연습을 완료 하면 관심 있는 특정 LINQ 공급자에 대 한 샘플 및 설명서로 이동할 준비가 됩니다. LINQ 공급자는 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] , LINQ to DataSet 및를 포함 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 합니다.
 
@@ -26,17 +27,17 @@ ms.locfileid: "90554595"
 
 1. Visual Studio를 시작합니다.
 
-2. **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.
+2. **파일** 메뉴에서 **새로 만들기** 를 가리킨 다음 **프로젝트** 를 클릭합니다.
 
-3. **설치 된 템플릿** 목록에서 **Visual Basic**을 클릭 합니다.
+3. **설치 된 템플릿** 목록에서 **Visual Basic** 을 클릭 합니다.
 
-4. 프로젝트 형식 목록에서 **콘솔 응용 프로그램**을 클릭 합니다. **이름** 상자에 프로젝트의 이름을 입력 하 고 **확인**을 클릭 합니다.
+4. 프로젝트 형식 목록에서 **콘솔 응용 프로그램** 을 클릭 합니다. **이름** 상자에 프로젝트의 이름을 입력 하 고 **확인** 을 클릭 합니다.
 
     프로젝트가 생성 됩니다. 기본적으로 System.Core.dll에 대 한 참조가 포함 되어 있습니다. 또한 [프로젝트 디자이너 (Visual Basic)의 참조 페이지](/visualstudio/ide/reference/references-page-project-designer-visual-basic) 에서 **가져온 네임 스페이스** 목록에는 <xref:System.Linq?displayProperty=nameWithType> 네임 스페이스가 포함 됩니다.
 
-5. [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)에서 **옵션 유추** 가 **On**으로 설정 되어 있는지 확인 합니다.
+5. [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)에서 **옵션 유추** 가 **On** 으로 설정 되어 있는지 확인 합니다.
 
-## <a name="add-an-in-memory-data-source"></a>메모리 내 데이터 원본 추가
+## <a name="add-an-in-memory-data-source"></a>In-Memory 데이터 원본 추가
 
 이 연습의 쿼리에 대 한 데이터 소스는 개체의 목록입니다 `Student` . 각 `Student` 개체에는 학생 본문의 이름, 성, 클래스 연도 및 교육 등급이 포함 되어 있습니다.
 
@@ -149,7 +150,7 @@ ms.locfileid: "90554595"
 
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [LINQ(Language-Integrated Query)(Visual Basic)](index.md)
 - [Visual Basic에서 LINQ 시작](getting-started-with-linq.md)

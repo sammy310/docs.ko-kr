@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: LINQ in Visual Basic'
 title: LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: 25e118f7c2e08420326783b788df480373ba4270
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e4413a5d6103aefc4bcf303326dcadc7dfc28cc5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085765"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430549"
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic의 LINQ
 
-이 섹션에는 Visual Basic 및 LINQ (통합 언어 쿼리)를 이해 하 고 사용 하는 데 도움이 되는 개요, 예제 및 배경 정보가 포함 되어 있습니다.  
+이 섹션에는 Visual Basic 및 Language-Integrated 쿼리 (LINQ)를 이해 하 고 사용 하는 데 도움이 되는 개요, 예제 및 배경 정보가 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 
@@ -47,7 +48,7 @@ ms.locfileid: "91085765"
  [방법: LINQ 쿼리 결과를 특정 형식으로 반환](how-to-return-a-linq-query-result-as-a-specific-type.md)  
  LINQ 쿼리 결과를 무명 형식 대신 특정 형식으로 반환하는 방법의 예를 제공합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [LINQ(Language-Integrated Query)](../../concepts/linq/index.md)
 - [Visual Basic의 LINQ to XML 개요](../xml/overview-of-linq-to-xml.md)
