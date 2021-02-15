@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 제어 흐름 Visual Basic'
 title: 제어 흐름
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - structures [Visual Basic], control
 - conditional statements [Visual Basic], control flow
 ms.assetid: 5623ef47-52b1-4202-befd-9af36422ec6f
-ms.openlocfilehash: e47a48755c6752dc8c46e35399f1a1efae9c4a08
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 01db948049e0dd964aa94d80b43ba648e296a797
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353925"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480637"
 ---
 # <a name="control-flow-in-visual-basic"></a>Visual Basic의 제어 흐름
 
@@ -23,19 +24,19 @@ ms.locfileid: "74353925"
   
 ## <a name="in-this-section"></a>섹션 내용
 
- [판단 구조](decision-structures.md)  
+ [판단 구조체](decision-structures.md)  
  분기에 사용되는 제어 구조를 설명합니다.
 
- [루프 구조](loop-structures.md)  
+ [루프 구조체](loop-structures.md)  
  프로세스를 반복하는 데 사용되는 제어 구조를 설명합니다.
 
- [기타 제어 구조](other-control-structures.md)  
+ [기타 제어 구조체](other-control-structures.md)  
  리소스 삭제 및 개체 액세스에 사용되는 제어 구조를 설명합니다.
 
- [중첩 제어 구조](nested-control-structures.md)  
+ [중첩 제어 구조체](nested-control-structures.md)  
  다른 제어 구조 내에 있는 제어 구조를 설명합니다.
 
 ## <a name="related-sections"></a>관련 단원
 
- [제어 흐름 요약](../../../language-reference/keywords/control-flow-summary.md)  
+ [제어 Flow 요약](../../../language-reference/keywords/control-flow-summary.md)  
  이 주제에 대한 언어 참조 페이지 링크를 제공합니다.

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 변수의 범위 제어 (Visual Basic)'
 title: '방법: 변수의 범위 제어'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 2ce7c1700eec54542719e6e0880466ca136e86f6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c6da599f76883cba545efbdf9570aa05770602a2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095435"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429873"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>방법: 변수의 범위 제어(Visual Basic)
 
-일반적으로 변수는 *범위*내에 있거나 선언 하는 지역 전체에서 참조로 표시 됩니다. 경우에 따라 변수의 *액세스 수준이* 범위에 영향을 줄 수 있습니다.  
+일반적으로 변수는 *범위* 내에 있거나 선언 하는 지역 전체에서 참조로 표시 됩니다. 경우에 따라 변수의 *액세스 수준이* 범위에 영향을 줄 수 있습니다.  
   
  자세한 내용은 [Scope in Visual Basic](scope.md)을 참조하세요.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "91095435"
   
 3. 모듈, 클래스 또는 구조체를 포함 하는 네임 스페이스 내의 어디에서 나 변수를 참조할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예제에서는 모듈 수준에서 변수를 선언 하 고 모듈 내의 코드에 대 한 표시 여부를 제한 합니다.  
   
@@ -91,7 +92,7 @@ Public strMsg As String
 
  변수의 범위가 작을수록 악의적인 코드가이를 부적절 하 게 사용할 수 있는 기회가 줄어듭니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic의 범위](scope.md)
 - [Visual Basic의 수명](lifetime.md)

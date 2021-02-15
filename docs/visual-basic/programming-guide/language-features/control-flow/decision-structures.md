@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 의사 결정 구조 (Visual Basic)'
 title: 판단 구조체
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 79c4949cd4d5b07d1b1d666b21467bf8db41ab3d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 76b63d2cdc238ec5590d11a6a802f55866990a3a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095618"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480689"
 ---
 # <a name="decision-structures-visual-basic"></a>판단 구조(Visual Basic)
 
@@ -49,7 +50,7 @@ Visual Basic를 사용 하면 조건을 테스트 하 고 해당 테스트의 �
 > [!NOTE]
 > 많은 컨트롤 구조에서 키워드를 클릭 하면 구조에 있는 모든 키워드가 강조 표시 됩니다. 예를 들어, `If` 생성을 클릭 하면 `If...Then...Else` 생성에서,,, 및의 모든 인스턴스가 `If` `Then` `ElseIf` `Else` `End If` 강조 표시 됩니다. 다음 또는 이전 강조 표시 된 키워드로 이동 하려면 CTRL + SHIFT + 아래쪽 화살표 또는 CTRL + SHIFT + 위쪽 화살표를 누릅니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [제어 흐름](index.md)
 - [루프 구조체](loop-structures.md)

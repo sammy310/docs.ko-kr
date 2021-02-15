@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 파일 정보를 쓰기용으로 여는 동안 쿼리할 수 없습니다.'
 title: 파일이 쓰기용으로 열려 있는 동안에는 파일 정보를 쿼리할 수 없습니다.
 ms.date: 07/20/2015
 ms.assetid: 2198af10-f128-4b1d-baba-a251e1369146
-ms.openlocfilehash: fa1bf4c16e475bc1cac4a52f743d810f5006a15d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 68a0ee52e6a620fc0784d4bd1f850212bf3f2a14
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090900"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480832"
 ---
 # <a name="file-information-cannot-be-queried-while-open-for-writing"></a>파일이 쓰기용으로 열려 있는 동안에는 파일 정보를 쿼리할 수 없습니다.
 
@@ -17,7 +18,7 @@ ms.locfileid: "91090900"
   
 - 파일을 닫고 작업을 다시 시도합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.IO.FileInfo>
 - <xref:System.Security.Permissions.FileIOPermission>

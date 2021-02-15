@@ -1,4 +1,5 @@
 ---
+description: Visual Basic 코딩 규칙에 대해 자세히 알아보세요.
 title: 코딩 규칙
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: eae283c757ddeb1290c15d82a41c8028a8941e63
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: 424871ab0e77629ded977bd0be768ed8736d1761
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "91059160"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100460035"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 코딩 규칙
 

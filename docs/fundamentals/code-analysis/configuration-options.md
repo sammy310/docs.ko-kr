@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 8f76c9c86c202ef1bad23bffe8379b0b93a53f17
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 9c09fc381a161a9deea012d98d06ab57f2f7345e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99787723"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480546"
 ---
 # <a name="configuration-options-for-code-analysis"></a>코드 분석에 대 한 구성 옵션
 
@@ -60,14 +60,14 @@ generated_code = true
 
 다음 표에서는 [코드 품질](quality-rules/index.md) 및 [코드 스타일](style-rules/index.md) 규칙을 포함 하 여 모든 분석기 규칙에 대해 구성할 수 있는 다양 한 규칙 심각도를 보여 줍니다.
 
-| 심각도 | 빌드 시간 동작 |
+| 심각도 구성 값 | 빌드 시간 동작 |
 |-|-|
 | `error` | 위반은 빌드 *오류로* 표시 되 고 빌드가 실패 합니다.|
 | `warning` | 위반은 빌드 *경고* 로 나타나지만 빌드 실패를 유발 하지 않습니다 (경고를 오류로 처리 하도록 설정 하지 않은 경우). |
 | `suggestion` | 위반은 빌드 *메시지로* 표시 되 고 VISUAL Studio IDE에서 제안 사항으로 표시 됩니다. |
 | `silent` | 위반은 사용자에 게 표시 되지 않습니다. |
 | `none` | 규칙은 전혀 표시되지 않습니다. |
-| `default` | 규칙의 기본 심각도가 사용 됩니다. |
+| `default` | 규칙의 기본 심각도가 사용 됩니다. 각 .NET 릴리스의 기본 심각도가 [roslyn 리포지토리](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)에 나열 되어 있습니다. 이 테이블에서 "Disabled"는에 해당 하 고 "Hidden"은에 해당 `none` `silent` 하며 "Info"는에 해당 `suggestion` 합니다. |
 
 > [!TIP]
 > Visual Studio의 규칙 심각도 화면에 대 한 자세한 내용은 [심각도 수준](/visualstudio/ide/editorconfig-language-conventions#severity-levels)을 참조 하세요.
@@ -91,6 +91,12 @@ dotnet_analyzer_diagnostic.category-<rule category>.severity = <severity value>
 ```ini
 dotnet_analyzer_diagnostic.severity = <severity value>
 ```
+
+> [!IMPORTANT]
+> 규칙 *범주* 또는 *모든* 규칙에 대해 단일 항목을 사용 하 여 여러 규칙에 대 한 심각도 수준을 구성할 때 심각도는 [기본적으로 사용](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)되는 규칙에만 적용 됩니다. 기본적으로 사용 하지 않도록 설정 된 규칙을 사용 하도록 설정 하려면 다음 중 하나를 수행 해야 합니다.
+>
+> - `dotnet_diagnostic.<rule ID>.severity = <severity>`각 규칙에 대 한 명시적 구성 항목을 추가 합니다.
+> - 을로 설정 하 여 *모든* 규칙을 사용 하도록 설정 [\<AnalysisMode>](../../core/project-sdk/msbuild-props.md#analysismode) `AllEnabledByDefault` 합니다.
 
 #### <a name="precedence"></a>우선 순위
 

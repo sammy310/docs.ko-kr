@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 값 및 참조로 인수 전달 (Visual Basic)'
 title: 값 또는 참조로 인수 전달
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: b7430b209f53a0a924ec587a0097178baf0075e3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: dbe020a7fffd48c14d377fff740f57e4bcc43ed2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059223"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466681"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>값 및 참조로 인수 전달(Visual Basic)
 
-Visual Basic에서 인수를 *값* 또는 *참조로*프로시저에 전달할 수 있습니다. 이를 *전달 메커니즘*이라고 하며 프로시저에서 호출 코드의 인수 내부 프로그래밍 요소를 수정할 수 있는지 여부를 결정 합니다. 프로시저 선언은 [ByVal](../../../language-reference/modifiers/byval.md) 또는 [ByRef](../../../language-reference/modifiers/byref.md) 키워드를 지정 하 여 각 매개 변수에 대 한 전달 메커니즘을 결정 합니다.  
+Visual Basic에서 인수를 *값* 또는 *참조로* 프로시저에 전달할 수 있습니다. 이를 *전달 메커니즘* 이라고 하며 프로시저에서 호출 코드의 인수 내부 프로그래밍 요소를 수정할 수 있는지 여부를 결정 합니다. 프로시저 선언은 [ByVal](../../../language-reference/modifiers/byval.md) 또는 [ByRef](../../../language-reference/modifiers/byref.md) 키워드를 지정 하 여 각 매개 변수에 대 한 전달 메커니즘을 결정 합니다.  
   
 ## <a name="distinctions"></a>기준을  
 

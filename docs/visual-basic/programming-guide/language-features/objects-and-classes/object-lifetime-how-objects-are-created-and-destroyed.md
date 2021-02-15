@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 개체 수명: 개체를 만들고 제거 하는 방법 (Visual Basic)'
 title: '개체 수명: 개체가 만들어지고 제거되는 방법'
 ms.date: 07/20/2015
 f1_keywords:
@@ -22,18 +23,18 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: a32a5d075b5b1d02632c80216e7c2c12920bf4a2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 424a5619ea50d9da9bf069488ce7cac16527efbe
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544143"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438829"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>개체 수명: 개체가 만들어지고 소멸되는 방법(Visual Basic)
 
 `New` 키워드를 사용하여 클래스의 인스턴스인 개체를 만듭니다. 새 개체를 사용하기 전에 초기화 작업을 수행해야 하는 경우가 많습니다. 일반적인 초기화 작업으로는 파일 열기, 데이터베이스에 연결, 레지스트리 키의 값 읽기 등이 포함됩니다. Visual Basic는 *생성자* (초기화에 대 한 제어를 허용 하는 특수 메서드) 라는 프로시저를 사용 하 여 새 개체의 초기화를 제어 합니다.
 
-범위를 벗어나는 개체는 CLR(공용 언어 런타임)에 의해 해제됩니다. Visual Basic은 *소멸자*라는 프로시저를 사용 하 여 시스템 리소스의 릴리스를 제어 합니다. 생성자와 소멸자를 통해 예측 가능하며 효율적인 클래스 라이브러리 만들기를 지원할 수 있습니다.
+범위를 벗어나는 개체는 CLR(공용 언어 런타임)에 의해 해제됩니다. Visual Basic은 *소멸자* 라는 프로시저를 사용 하 여 시스템 리소스의 릴리스를 제어 합니다. 생성자와 소멸자를 통해 예측 가능하며 효율적인 클래스 라이브러리 만들기를 지원할 수 있습니다.
 
 ## <a name="using-constructors-and-destructors"></a>생성자 및 소멸자 사용
 
@@ -151,14 +152,14 @@ End Sub
 
 .NET Framework는 *참조 추적 가비지 수집* 시스템을 사용 하 여 사용 하지 않는 리소스를 정기적으로 해제 합니다. Visual Basic 6.0 이전 버전에서는 *참조 계산* 이라는 다른 시스템을 사용 하 여 리소스를 관리 합니다. 두 시스템은 동일한 기능을 자동으로 수행하지만 몇 가지 중요한 차이점이 있습니다.
 
-CLR은 시스템에서 더 이상 필요하지 않다고 결정하는 개체를 주기적으로 제거합니다. 개체는 시스템 리소스가 부족하면 더 빨리 해제되고 그렇지 않으면 더 천천히 해제됩니다. 개체의 범위가 손실되는 시점과 CLR이 해당 개체를 해제하는 시점 사이에는 지연 시간이 있습니다. 즉, Visual Basic 6.0 이하 버전의 개체와는 달리 개체 소멸 시기를 정확하게 확인할 수는 없습니다. 이러한 상황에서 개체는 *비결 정적 수명*이라고 합니다. `Finalize` 소멸자가 즉시 실행되지 않을 수도 있다는 점만 기억한다면 대부분의 경우 수명이 명확하지 않더라도 개체의 범위 손실 시 애플리케이션 작성 방법을 변경할 필요가 없습니다.
+CLR은 시스템에서 더 이상 필요하지 않다고 결정하는 개체를 주기적으로 제거합니다. 개체는 시스템 리소스가 부족하면 더 빨리 해제되고 그렇지 않으면 더 천천히 해제됩니다. 개체의 범위가 손실되는 시점과 CLR이 해당 개체를 해제하는 시점 사이에는 지연 시간이 있습니다. 즉, Visual Basic 6.0 이하 버전의 개체와는 달리 개체 소멸 시기를 정확하게 확인할 수는 없습니다. 이러한 상황에서 개체는 *비결 정적 수명* 이라고 합니다. `Finalize` 소멸자가 즉시 실행되지 않을 수도 있다는 점만 기억한다면 대부분의 경우 수명이 명확하지 않더라도 개체의 범위 손실 시 애플리케이션 작성 방법을 변경할 필요가 없습니다.
 
 가비지 컬렉션 시스템 간의 또 다른 차이점은 `Nothing` 사용법입니다. Visual Basic 6.0 이하 버전에서는 프로그래머가 참조 횟수 기능을 활용하기 위해 개체 변수에 `Nothing`을 할당하여 해당 변수에 저장된 참조를 해제하는 경우가 있었습니다. 이때 개체에 대한 마지막 참조가 변수에 저장되어 있었다면 해당 개체의 리소스가 즉시 해제됩니다. 최신 Visual Basic 버전에서는 이 프로시저가 계속 유용한 경우도 있지만, 해당 프로시저를 수행해도 참조되는 개체가 리소스를 즉시 해제하지는 않습니다. 리소스를 즉시 해제하려면 개체의 <xref:System.IDisposable.Dispose%2A> 메서드를 사용합니다(사용 가능한 경우). 가비지 수집기가 분리된 개체를 검색하는 데 걸리는 시간에 비해 변수의 수명이 더 긴 경우에만 해당 변수를 `Nothing`로 설정해야 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.IDisposable.Dispose%2A>
 - [구성 요소의 초기화 및 종료](/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
-- [새 운영자](../../../language-reference/operators/new-operator.md)
+- [New 연산자](../../../language-reference/operators/new-operator.md)
 - [관리되지 않는 리소스 정리](../../../../standard/garbage-collection/unmanaged.md)
-- [없는지](../../../language-reference/nothing.md)
+- [Nothing](../../../language-reference/nothing.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 비동기 반환 형식 (Visual Basic)'
 title: 비동기 반환 형식
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 5d19fc9831580412da24333be0885fce55384658
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 12a7f577a89ff8f8037de879f9e37d6fdb917aa8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396716"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438920"
 ---
 # <a name="async-return-types-visual-basic"></a>비동기 반환 형식(Visual Basic)
 
@@ -81,7 +82,7 @@ textBox1.Text &= $"Value of result2 variable:   {result2}" & vbCrLf
 textBox1.Text &= $"Value of resultTask.Result:  {integerTask.Result}" & vbCrLf
 ```
 
-## <a name="task-return-type"></a><a name="BKMK_TaskReturnType"></a>작업 반환 형식
+## <a name="task-return-type"></a><a name="BKMK_TaskReturnType"></a> 작업 반환 형식
 
 return 문을 포함하지 않거나 피연산자를 반환하지 않는 return 문을 포함하는 비동기 메서드에는 일반적으로 <xref:System.Threading.Tasks.Task>의 반환 형식이 있습니다. 이러한 메서드는 동기적으로 실행 되도록 작성 된 경우 [하위](../../language-features/procedures/sub-procedures.md) 프로시저입니다. 비동기 메서드에 대해 `Task` 반환 형식을 사용하는 경우 호출된 비동기 메서드가 완료될 때까지 호출 메서드는 `Await` 연산자를 사용하여 호출자의 완료를 일시 중단할 수 있습니다.
 
@@ -124,7 +125,7 @@ textBox1.Text &= vbCrLf & "Application can continue working while the Task runs.
 Await simpleTask
 ```
 
-## <a name="void-return-type"></a><a name="BKMK_VoidReturnType"></a>Void 반환 형식
+## <a name="void-return-type"></a><a name="BKMK_VoidReturnType"></a> Void 반환 형식
 
 프로시저의 주요 용도는 `Sub` 이벤트 처리기에 있습니다. 여기에는 반환 형식 (다른 언어에서는 void 반환 형식 이라고 함)이 없습니다. void 반환은 또한 "실행 후 제거"로 분류할 수 있는 작업을 수행하는 메서드 또는 viod를 반환하는 메서드를 재정의하는 데 사용할 수 있습니다. 하지만 void를 반환하는 비동기 메서드는 대기할 수가 없기 때문에 가능할 때마다 `Task`를 반환하는 것이 좋습니다. 이러한 메서드의 호출자는 호출된 비동기 메서드가 마치는 것을 기다리지 않고 완료될 때까지 계속 진행할 수 있어야 하므로, 해당 호출자는 비동기 메서드가 생성하는 모든 값 또는 예외와 독립되어 있어야 합니다.
 
@@ -149,7 +150,7 @@ Async Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.
 End Sub
 ```
 
-## <a name="complete-example"></a><a name="BKMK_Example"></a>전체 예제
+## <a name="complete-example"></a><a name="BKMK_Example"></a> 전체 예제
 
 다음 WPF(Windows Presentation Foundation) 프로젝트는 이 항목의 코드 예제를 포함합니다.
 
@@ -157,19 +158,19 @@ End Sub
 
 1. Visual Studio를 시작합니다.
 
-2. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.
+2. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트** 를 차례로 선택합니다.
 
      **새 프로젝트** 대화 상자가 열립니다.
 
-3. **설치 됨**의 **템플릿** 범주에서 **Visual Basic**를 선택 하 고 **Windows**를 선택 합니다. 프로젝트 형식 목록에서 **WPF 애플리케이션**을 선택합니다.
+3. **설치 됨** 의 **템플릿** 범주에서 **Visual Basic** 를 선택 하 고 **Windows** 를 선택 합니다. 프로젝트 형식 목록에서 **WPF 애플리케이션** 을 선택합니다.
 
 4. 프로젝트의 이름으로 `AsyncReturnTypes`를 입력한 다음 **확인** 단추를 선택합니다.
 
-     **솔루션 탐색기**에 새 프로젝트가 표시됩니다.
+     **솔루션 탐색기** 에 새 프로젝트가 표시됩니다.
 
 5. Visual Studio 코드 편집기에서 **MainWindow.xaml** 탭을 선택합니다.
 
-     탭이 표시되지 않는 경우 **솔루션 탐색기**에서 MainWindow.xaml의 바로 가기 메뉴를 열고 **열기**를 선택합니다.
+     탭이 표시되지 않는 경우 **솔루션 탐색기** 에서 MainWindow.xaml의 바로 가기 메뉴를 열고 **열기** 를 선택합니다.
 
 6. MainWindow.xaml의 **XAML** 창에서 코드를 다음 코드로 바꿉니다.
 
@@ -188,7 +189,7 @@ End Sub
 
      텍스트 상자와 단추가 포함된 간단한 창이 MainWindow.xaml의 **디자인** 창에 나타납니다.
 
-7. **솔루션 탐색기**에서 mainwindow.xaml의 바로 가기 메뉴를 열고 **코드 보기**를 선택 합니다.
+7. **솔루션 탐색기** 에서 mainwindow.xaml의 바로 가기 메뉴를 열고 **코드 보기** 를 선택 합니다.
 
 8. MainWindow.xaml.vb의 코드를 다음 코드로 바꿉니다.
 
@@ -277,7 +278,7 @@ End Sub
     End Class
     ```
 
-9. F5 키를 선택하여 프로그램을 실행한 후 **시작** 단추를 선택합니다.
+9. F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.
 
      다음과 같은 출력이 표시 됩니다.
 
@@ -297,10 +298,10 @@ End Sub
     All done, exiting button-click event handler.
     ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
 - [연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [비동기 프로그램의 제어 흐름(Visual Basic)](control-flow-in-async-programs.md)
 - [Async](../../../language-reference/modifiers/async.md)
-- [Wait 연산자](../../../language-reference/operators/await-operator.md)
+- [Await 연산자](../../../language-reference/operators/await-operator.md)

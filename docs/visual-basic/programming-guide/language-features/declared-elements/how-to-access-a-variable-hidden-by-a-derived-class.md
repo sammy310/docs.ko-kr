@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 파생 클래스에 의해 숨겨진 변수에 액세스 (Visual Basic)'
 title: '방법: 파생 클래스에 의해 숨겨진 변수에 액세스'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-ms.openlocfilehash: c5ff802a0f6e081acd00d7cdfab4a8296b4daad9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5ac1dd8afc8c32c91b748c8316d035d69468d887
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392859"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430054"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>방법: 파생 클래스에 의해 숨겨진 변수에 액세스(Visual Basic)
 
@@ -45,13 +46,13 @@ ms.locfileid: "84392859"
     End Class
     ```
 
-    앞의 예제에서는 `shadowString` 기본 클래스에서 변수를 선언 하 고 파생 클래스에서 해당 변수를 숨깁니다. `showStrings`파생 클래스의 프로시저는 이름이 한정 되지 않은 경우 문자열의 숨김 버전을 표시 합니다 `shadowString` . 그런 다음 `shadowString` 키워드를 사용 하 여 정규화 된 버전을 표시 `MyBase` 합니다.
+    앞의 예제에서는 `shadowString` 기본 클래스에서 변수를 선언 하 고 파생 클래스에서 해당 변수를 숨깁니다. `showStrings`파생 클래스의 프로시저는 이름이 한정 되지 않은 경우 문자열의 숨김 버전을 표시 합니다 `shadowString` . 그런 다음 `shadowString` 키워드를 사용 하 여 정규화 된 버전을 표시 `MyBase`  합니다.
 
 ## <a name="robust-programming"></a>강력한 프로그래밍
 
 숨겨진 변수의 의도 하지 않은 버전을 참조 하는 위험을 줄이려면 숨겨진 변수에 대 한 모든 참조를 정규화 할 수 있습니다. 섀도잉 시 이름이 같은 변수의 버전이 두 개 이상 도입 되었습니다. 코드 문이 변수 이름을 참조 하는 경우 컴파일러가 참조를 확인 하는 버전은 코드 문의 위치 및 한정 된 문자열이 있는지 여부와 같은 요소에 따라 달라 집니다. 이로 인해 잘못 된 버전의 변수를 참조 하는 위험이 늘어날 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [References to Declared Elements](references-to-declared-elements.md)
 - [Visual Basic에서 숨김](shadowing.md)
