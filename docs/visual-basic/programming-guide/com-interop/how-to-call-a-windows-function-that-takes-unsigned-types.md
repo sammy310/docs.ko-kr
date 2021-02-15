@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 부호 없는 형식을 사용 하는 Windows 함수 호출 (Visual Basic)'
 title: '방법: 부호 없는 형식을 사용하는 Windows 함수 호출'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 5b78c808de4a16060d37844ad0f17e89fa6f6d84
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 45851e22db88b9d35e5315398fb4cdbc2a7b920c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548080"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475645"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>방법: 부호 없는 형식을 사용하는 Windows 함수 호출(Visual Basic)
 
@@ -70,7 +71,7 @@ ms.locfileid: "90548080"
     ```
 
     > [!CAUTION]
-    > `UInteger`,, `ULong` `UShort` 및 `SByte` 데이터 형식은 [언어 독립성 및 언어 독립적 구성 요소](../../../standard/language-independence-and-language-independent-components.md) (cls)의 일부가 아니므로 cls 규격 코드는이를 사용 하는 구성 요소를 사용할 수 없습니다.
+    > `UInteger`,, `ULong` `UShort` 및 `SByte` 데이터 형식은 [언어 독립성 및 Language-Independent 구성 요소](../../../standard/language-independence-and-language-independent-components.md) (cls)의 일부가 아니므로 cls 규격 코드는이를 사용 하는 구성 요소를 사용할 수 없습니다.
 
     > [!IMPORTANT]
     > Windows API (응용 프로그래밍 인터페이스)와 같은 비관리 코드에 대 한 호출을 수행 하면 잠재적인 보안 위험에 대 한 코드를 노출 합니다.
@@ -78,7 +79,7 @@ ms.locfileid: "90548080"
     > [!IMPORTANT]
     > Windows API를 호출 하려면 부분 신뢰 상황에서 실행에 영향을 줄 수 있는 비관리 코드 권한이 필요 합니다. 자세한 내용은 <xref:System.Security.Permissions.SecurityPermission> 및 [코드 액세스 권한](/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100))을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [데이터 형식](../../language-reference/data-types/index.md)
 - [Integer 데이터 형식](../../language-reference/data-types/integer-data-type.md)

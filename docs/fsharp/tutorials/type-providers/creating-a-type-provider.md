@@ -2,12 +2,12 @@
 title: '자습서: 형식 공급자 만들기'
 description: '기본 개념을 설명 하는 몇 가지 간단한 형식 공급자를 검사 하 여 F # 3.0에서 고유한 F # 형식 공급자를 만드는 방법에 대해 알아봅니다.'
 ms.date: 11/04/2019
-ms.openlocfilehash: 65cb9616f66b5850135dbfcdd9b9a9dad30421de
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 803b6ea141ed4404daf5daccd1a53212d8b42234
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739700"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468306"
 ---
 # <a name="tutorial-create-a-type-provider"></a>자습서: 형식 공급자 만들기
 
@@ -15,7 +15,7 @@ F #의 형식 공급자 메커니즘은 정보 기능이 풍부한 프로그래�
 
 F # 에코 시스템에는 일반적으로 사용 되는 인터넷 및 엔터프라이즈 데이터 서비스에 대 한 형식 공급자 범위가 포함 되어 있습니다. 예를 들면 다음과 같습니다.
 
-- [Fsharp.core](https://fsharp.github.io/FSharp.Data/) 에는 JSON, XML, CSV 및 HTML 문서 형식에 대 한 형식 공급자가 포함 되어 있습니다.
+- Fsharp.core에는 JSON, XML, CSV 및 HTML 문서 형식에 대 한 형식 공급자가 포함 되어 있습니다.
 
 - [Sqlprovider](https://fsprojects.github.io/SQLProvider/) 는 이러한 데이터 원본에 대 한 개체 매핑 및 F # LINQ 쿼리를 통해 SQL database에 대 한 강력한 형식의 액세스를 제공 합니다.
 
@@ -1136,7 +1136,7 @@ devenv /debugexe fsc.exe script.fsx
 
   인쇄 stdout 로깅을 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [형식 공급자](index.md)
 - [형식 공급자 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

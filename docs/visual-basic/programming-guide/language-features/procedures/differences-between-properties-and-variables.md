@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Visual Basic 속성과 변수 간의 차이점'
 title: 속성과 변수의 차이점
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,24 +15,24 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: 95bafcaca98e1a0fbdd62a550291c8ece932c1ba
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6118d37616f3df1f21dda8e3a6392b6a6f37a24e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075033"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464718"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic에서 속성과 변수의 차이점
 
 변수와 속성은 모두 액세스할 수 있는 값을 나타냅니다. 그러나 저장소와 구현에는 차이점이 있습니다.  
   
-## <a name="variables"></a>variables  
+## <a name="variables"></a>변수  
 
- *변수* 는 메모리 위치에 직접 대응 됩니다. 단일 선언문을 사용 하 여 변수를 정의 합니다. 변수는 프로시저 내에 정의 되 고 해당 프로시저 내 에서만 사용할 수 있는 *지역 변수*이거나 모듈, 클래스 또는 구조에 정의 되어 있지만 프로시저 내에서 정의 되지 않은 *멤버 변수일*수 있습니다. 멤버 변수는 *필드*라고도 합니다.  
+ *변수* 는 메모리 위치에 직접 대응 됩니다. 단일 선언문을 사용 하 여 변수를 정의 합니다. 변수는 프로시저 내에 정의 되 고 해당 프로시저 내 에서만 사용할 수 있는 *지역 변수* 이거나 모듈, 클래스 또는 구조에 정의 되어 있지만 프로시저 내에서 정의 되지 않은 *멤버 변수일* 수 있습니다. 멤버 변수는 *필드* 라고도 합니다.  
   
 ## <a name="properties"></a>속성  
 
- *속성* 은 모듈, 클래스 또는 구조에 정의 된 데이터 요소입니다. 및 문 사이에 코드 블록을 사용 하 여 속성을 정의 `Property` `End Property` 합니다. 코드 블록은 `Get` 프로시저, `Set` 프로시저 또는 둘 다를 포함 합니다. 이러한 프로시저를 *속성 프로시저* 또는 *속성 접근자*라고 합니다. 속성의 값을 검색 하거나 저장 하는 것 외에도 액세스 카운터를 업데이트 하는 등의 사용자 지정 작업을 수행할 수 있습니다.  
+ *속성* 은 모듈, 클래스 또는 구조에 정의 된 데이터 요소입니다. 및 문 사이에 코드 블록을 사용 하 여 속성을 정의 `Property` `End Property` 합니다. 코드 블록은 `Get` 프로시저, `Set` 프로시저 또는 둘 다를 포함 합니다. 이러한 프로시저를 *속성 프로시저* 또는 *속성 접근자* 라고 합니다. 속성의 값을 검색 하거나 저장 하는 것 외에도 액세스 카운터를 업데이트 하는 등의 사용자 지정 작업을 수행할 수 있습니다.  
   
 ## <a name="differences"></a>차이점  
 
@@ -48,7 +49,7 @@ ms.locfileid: "91075033"
   
  <sup>1</sup> 변수와 달리 속성의 값은 저장소의 단일 항목에 직접적으로 해당 하지 않을 수 있습니다. 저장소는 편리 하거나 보안을 위해 여러 조각으로 분할 될 수 있으며, 값은 암호화 된 형식으로 저장 될 수 있습니다. 이러한 경우 프로시저는 `Get` 조각을 조합 하거나 저장 된 값의 암호를 해독 하 고 `Set` 새 값을 암호화 하거나이를 구성 저장소로 분할 합니다. 속성 값은 하루와 같이 임시 일 수 있으며, `Get` 이 경우 프로시저는 속성에 액세스할 때마다 즉석에서이를 계산 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

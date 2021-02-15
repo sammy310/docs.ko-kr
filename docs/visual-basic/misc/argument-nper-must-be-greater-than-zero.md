@@ -1,15 +1,16 @@
 ---
+description: "자세한 정보: ' NPer ' 인수는 0 보다 커야 합니다."
 title: "'NPer' 인수는 0보다 커야 합니다."
 ms.date: 07/20/2015
 f1_keywords:
 - vbrRate_NPerMustBeGTZero
 ms.assetid: d49242df-dbd1-4b26-bd8c-ed56d24fdfcd
-ms.openlocfilehash: f0185e30cb711472105955f5febf8d7702b29c72
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ece5e775e2f05f757b2af53594c626f5a023161e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087143"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433410"
 ---
 # <a name="argument-nper-must-be-greater-than-zero"></a>'NPer' 인수는 0보다 커야 합니다.
 
@@ -21,6 +22,6 @@ ms.locfileid: "91087143"
   
 - 이전 작업에서 식의 변수 특히, 다른 프로시저에서 해당 프로시저로 인수로 전달된 변수를 검사합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [값 또는 참조로 인수 전달](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

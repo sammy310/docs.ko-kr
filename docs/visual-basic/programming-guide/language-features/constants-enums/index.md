@@ -1,4 +1,5 @@
 ---
+description: '에 대 한 자세한 정보: 상수 및 열거형 Visual Basic'
 title: 상수 및 열거형
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], constants
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
-ms.openlocfilehash: aad4f8b24a43ecc51c372916b438daee72adc405
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 78436f1e00c95c33d547fb9819b21bbe8ebafc2c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058692"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468449"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic의 상수 및 열거형
 
@@ -31,7 +32,7 @@ ms.locfileid: "91058692"
 |[상수 개요](constants-overview.md)|이 단원의 항목에서는 상수 및 해당 용도를 설명합니다.|  
 |[열거형 개요](enumerations-overview.md)|이 단원의 항목에서는 열거형 및 해당 용도를 설명합니다.|  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
   
 |용어|정의|  
 |---|---|  

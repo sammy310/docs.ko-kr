@@ -1,13 +1,14 @@
 ---
+description: '에 대 한 자세한 정보: 원본 폴더가 없습니다.'
 title: 원본 폴더가 없는 경우
 ms.date: 07/20/2015
 ms.assetid: c891d006-b721-4d93-b57d-ce51d91fca00
-ms.openlocfilehash: 8dc4fa80c4328cbeea5c63eb110c62b988da91c4
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: afae118614fca4b80ad34bf339187d64b3c680e1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086558"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430744"
 ---
 # <a name="the-source-folder-does-not-exist"></a>원본 폴더가 없는 경우
 
@@ -17,7 +18,7 @@ ms.locfileid: "91086558"
   
 - 특히 상대 경로를 사용하는 경우 올바른 경로를 사용하고 있는지 확인합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [방법: 파일 경로 구문 분석](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
 - [파일에서 읽기](../developing-apps/programming/drives-directories-files/reading-from-files.md)

@@ -1,4 +1,5 @@
 ---
+description: '에 대 한 자세한 정보: 주 프로시저 Visual Basic'
 title: 기본 절차
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: d6708ee13963aaae43a73b159032f64f0fffac10
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: b25190ef216fe4219923a27d6bbe0acff4536685
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072212"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432808"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic의 Main 프로시저
 
@@ -111,7 +112,7 @@ ms.locfileid: "91072212"
     End Module
     ```
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>

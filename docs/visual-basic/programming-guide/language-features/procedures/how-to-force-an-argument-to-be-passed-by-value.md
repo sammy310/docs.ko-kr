@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 인수를 값으로 전달 하도록 강제 (Visual Basic)'
 title: '방법: 인수가 값으로 전달되도록 설정'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 0be49e7d4aacbb30956bda7f6ee8494a7ded8b78
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 471ddbf8993ad671dc4285729a11f5b17a5b19dc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071627"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475424"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>방법: 인수가 값으로 전달되도록 설정(Visual Basic)
 
@@ -33,7 +34,7 @@ ms.locfileid: "91071627"
   
 - 해당 매개 변수가 프로시저에 선언 된 경우 `ByRef` 프로시저 호출에서 인수를 괄호로 묶습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예제에서는 `ByRef` 매개 변수 선언을 재정의 합니다. 강제로 호출 하는 호출에서 `ByVal` 두 가지 수준의 괄호를 확인 합니다.  
   
@@ -57,7 +58,7 @@ ms.locfileid: "91071627"
 
  프로시저에서 호출 코드의 인수를 기반으로 하는 값을 변경 하는 것이 항상 발생할 수 있는 위험이 있습니다. 이 값을 변경 하 고이 값을 사용 하기 전에 유효성 검사를 수행할 준비를 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

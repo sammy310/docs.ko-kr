@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: CSV 텍스트 파일의 열 값 계산 (LINQ) (Visual Basic)'
 title: '방법: CSV 텍스트 파일에서 열 값 컴퓨팅(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 679d53787b1392181696c05e0327ca1b1b910015
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f2bed49cf69d812659aae0cee398a735b3b42dbe
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357506"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100484186"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>방법: CSV 텍스트 파일의 열 값 계산 (LINQ) (Visual Basic)
 
@@ -147,7 +148,7 @@ End Class
 
 System.xml `Imports` 네임 스페이스에 대 한 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ 및 문자열(Visual Basic)](linq-and-strings.md)
 - [LINQ 및 파일 디렉터리(Visual Basic)](linq-and-file-directories.md)

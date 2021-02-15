@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 프로시저 Visual Basic'
 title: 프로시저
 ms.date: 04/28/2017
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: 926d2dcc7f29102457d5ed9632e7455f8f0c7b96
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: faff01163511d71f6dc5c6fd540b292e1dea72fb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071328"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475151"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic의 프로시저
 
@@ -21,7 +22,7 @@ ms.locfileid: "91071328"
   
 ## <a name="calling-a-procedure"></a>프로시저 호출  
 
- 코드에서 다른 위치에 있는 프로시저를 호출합니다. 이것을 *프로시저 호출*이라고 합니다. 프로시저는 실행이 완료되면 자신을 호출한 코드(*호출 코드*라고 함)로 컨트롤을 반환합니다. 호출 코드란 프로시저를 이름으로 지정하고 프로시저에 컨트롤을 전달하는 문 또는 문 내부의 식입니다.  
+ 코드에서 다른 위치에 있는 프로시저를 호출합니다. 이것을 *프로시저 호출* 이라고 합니다. 프로시저는 실행이 완료되면 자신을 호출한 코드(*호출 코드* 라고 함)로 컨트롤을 반환합니다. 호출 코드란 프로시저를 이름으로 지정하고 프로시저에 컨트롤을 전달하는 문 또는 문 내부의 식입니다.  
   
 ## <a name="returning-from-a-procedure"></a>프로시저에서 반환  
 
@@ -35,7 +36,7 @@ ms.locfileid: "91071328"
   
 ## <a name="parameters-and-arguments"></a>매개 변수 및 인수  
 
- 대부분의 경우 프로시저는 사용자가 호출할 때마다 다른 데이터에서 작동해야 합니다. 프로시저 호출의 일부로 이 정보를 프로시저에 전달할 수 있습니다. 프로시저는 0개 이상의 *매개 변수*를 정의하며, 각 매개 변수는 사용자가 전달할 것으로 예상하는 값을 나타냅니다. 프로시저 정의의 각 매개 변수에 해당하는 것이 프로시저 호출의 *인수*입니다. 인수는 지정된 프로시저 호출에서 해당 매개 변수에 전달하는 값을 나타냅니다.  
+ 대부분의 경우 프로시저는 사용자가 호출할 때마다 다른 데이터에서 작동해야 합니다. 프로시저 호출의 일부로 이 정보를 프로시저에 전달할 수 있습니다. 프로시저는 0개 이상의 *매개 변수* 를 정의하며, 각 매개 변수는 사용자가 전달할 것으로 예상하는 값을 나타냅니다. 프로시저 정의의 각 매개 변수에 해당하는 것이 프로시저 호출의 *인수* 입니다. 인수는 지정된 프로시저 호출에서 해당 매개 변수에 전달하는 값을 나타냅니다.  
   
 ## <a name="types-of-procedures"></a>프로시저 유형  
 
@@ -47,13 +48,13 @@ ms.locfileid: "91071328"
   
 - [Function 프로시저](./function-procedures.md)는 호출 코드에 값을 반환합니다. 반환하기 전에 다른 작업을 수행할 수 있습니다.
 
-    C#으로 작성된 일부 함수는 *참조 반환 값*을 반환합니다. 함수 호출자는 반환 값을 수정할 수 있으며, 이 수정은 호출된 개체의 상태에 반영됩니다. Visual Basic 2017부터 Visual Basic 코드는 참조 반환 값을 사용할 수는 있지만, 값을 참조로 반환할 수는 없습니다. 자세한 내용은 [참조 반환 값](ref-return-values.md)을 참조하세요.
+    C#으로 작성된 일부 함수는 *참조 반환 값* 을 반환합니다. 함수 호출자는 반환 값을 수정할 수 있으며, 이 수정은 호출된 개체의 상태에 반영됩니다. Visual Basic 2017부터 Visual Basic 코드는 참조 반환 값을 사용할 수는 있지만, 값을 참조로 반환할 수는 없습니다. 자세한 내용은 [참조 반환 값](ref-return-values.md)을 참조하세요.
   
 - [Property 프로시저](./property-procedures.md)는 개체 및 모듈에 대한 속성 값을 반환하고 할당합니다.  
   
 - [Operator 프로시저](./operator-procedures.md)는 피연산자 중 하나 또는 둘 모두가 새로 정의된 클래스 또는 구조일 때 표준 연산자의 동작을 정의합니다.  
   
-- 호출 코드가 호출할 때마다 특정 데이터 유형을 전달할 수 있도록, [Visual Basic의 제네릭 프로시저](../data-types/generic-procedures.md)는 일반 매개 변수 외에도 하나 이상의 *형식 매개 변수*를 정의합니다.  
+- 호출 코드가 호출할 때마다 특정 데이터 유형을 전달할 수 있도록, [Visual Basic의 제네릭 프로시저](../data-types/generic-procedures.md)는 일반 매개 변수 외에도 하나 이상의 *형식 매개 변수* 를 정의합니다.  
   
 ## <a name="procedures-and-structured-code"></a>프로시저 및 구조적 코드  
 
@@ -67,7 +68,7 @@ ms.locfileid: "91071328"
   
 - 한 프로그램에서 사용하기 위해 프로시저를 개발한 후, 거의 또는 전혀 수정하지 않고 종종 다른 프로그램에서 사용할 수 있습니다. 이를 통해 코드 중복을 방지할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [방법: 프로시저 만들기](./how-to-create-a-procedure.md)
 - [하위 프로시저](./sub-procedures.md)

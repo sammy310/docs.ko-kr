@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: XML 파일 처리 (Visual Basic)'
 title: XML 파일 처리
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: 9e12f6f5d86957a7f9aaea6047a79957fac8ce1e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2314e7dafbd747f9a19b73d06d71c73631e53861
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072134"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468397"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>XML 파일 처리(Visual Basic)
 
@@ -37,13 +38,13 @@ ms.locfileid: "91072134"
   
 - 속성 및 메서드의 경우 메서드에 대한 인수가 있으면 괄호로 묶인 인수 목록이 문자열 뒤에 붙습니다. 인수가 없으면 괄호도 없습니다. 인수는 쉼표로 구분됩니다. 각 인수의 인코딩은 .NET Framework 시그니처에서 인코딩 되는 방식을 직접 따릅니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 코드에서는 클래스 및 해당 멤버에 대 한 ID 문자열이 생성 되는 방법을 보여 줍니다.  
   
  [!code-vb[VbVbcnXmlDocComments#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#10)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [-doc](../../reference/command-line-compiler/doc.md)
 - [방법: XML 설명서 만들기](how-to-create-xml-documentation.md)

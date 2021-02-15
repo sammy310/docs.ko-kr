@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic 프로그램 구조'
 title: Visual Basic 프로그램의 구조
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 90bc1fd62a05f670424e1fac368376401d1030c0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e5941b1cbdfdc460e3e860a5449e8ccae0673612
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097776"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468202"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 프로그램의 구조
 
@@ -20,7 +21,7 @@ Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. *솔루
   
  Visual Basic 프로그램의 이러한 구성 요소에 대 한 자세한 내용은 .NET의 [솔루션 및 프로젝트](/visualstudio/ide/solutions-and-projects-in-visual-studio) 및 [어셈블리](../../../standard/assembly/index.md)를 참조 하세요.  
   
-## <a name="file-level-programming-elements"></a>파일 수준 프로그래밍 요소  
+## <a name="file-level-programming-elements"></a>File-Level 프로그래밍 요소  
 
  프로젝트 또는 파일을 시작 하 고 코드 편집기를 열면 일부 코드가 이미 있고 올바른 순서로 표시 됩니다. 작성 하는 모든 코드는 다음 순서를 따라야 합니다.  
   
@@ -50,7 +51,7 @@ Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. *솔루
 
  조건부 컴파일 문은 소스 파일의 거의 모든 위치에 나타날 수 있습니다. 특정 조건에 따라 코드의 일부를 컴파일 시간에 포함 하거나 제외 시킵니다. 조건부 코드는 디버깅 모드 에서만 실행 되므로 응용 프로그램을 디버깅 하는 데 사용할 수도 있습니다. 자세한 내용은 [조건부 컴파일](conditional-compilation.md)을 참조 하세요.  
   
-## <a name="namespace-level-programming-elements"></a>네임 스페이스 수준 프로그래밍 요소  
+## <a name="namespace-level-programming-elements"></a>Namespace-Level 프로그래밍 요소  
 
  클래스, 구조체 및 모듈은 소스 파일의 모든 코드를 포함 합니다. 네임 스페이스는 네임 스페이스 또는 소스 파일 수준에서 나타날 수 있는 *네임 스페이스 수준* 요소입니다. 다른 모든 프로그래밍 요소의 선언을 보유 합니다. 요소 시그니처를 정의 하지만 구현을 제공 하지 않는 인터페이스는 모듈 수준에도 표시 됩니다. 모듈 수준 요소에 대 한 자세한 내용은 다음을 참조 하세요.  
   
@@ -64,7 +65,7 @@ Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. *솔루
   
  네임 스페이스 수준에서 데이터 요소는 열거형 및 대리자입니다.  
   
-## <a name="module-level-programming-elements"></a>모듈 수준 프로그래밍 요소  
+## <a name="module-level-programming-elements"></a>Module-Level 프로그래밍 요소  
 
  프로시저, 연산자, 속성 및 이벤트는 실행 코드 (런타임에 동작을 수행 하는 문)를 보유할 수 있는 유일한 프로그래밍 요소입니다. 프로그램의 *모듈 수준* 요소입니다. 프로시저 수준 요소에 대 한 자세한 내용은 다음을 참조 하십시오.  
   
@@ -82,7 +83,7 @@ Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. *솔루
   
  모듈 수준에서 데이터 요소는 변수, 상수, 열거형 및 대리자입니다.  
   
-## <a name="procedure-level-programming-elements"></a>프로시저 수준 프로그래밍 요소  
+## <a name="procedure-level-programming-elements"></a>Procedure-Level 프로그래밍 요소  
 
  *프로시저 수준* 요소의 내용 대부분은 프로그램의 런타임 코드를 구성 하는 실행 가능한 문입니다. 모든 실행 코드는 일부 프로시저 ( `Function` ,,,,,,,)에 있어야 합니다 `Sub` `Operator` `Get` `Set` `AddHandler` `RemoveHandler` `RaiseEvent` . 자세한 내용은 [문](../language-features/statements.md)을 참조하십시오.  
   
@@ -102,7 +103,7 @@ Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. *솔루
   
  이 절차의 가장 일반적인 방법은 `Sub Main()` 입니다. 자세한 내용은 [Visual Basic 주 절차](main-procedure.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic의 Main 프로시저](main-procedure.md)
 - [Visual Basic 명명 규칙](naming-conventions.md)

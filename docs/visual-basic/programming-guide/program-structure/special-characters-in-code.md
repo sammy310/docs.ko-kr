@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 코드의 특수 문자 (Visual Basic)'
 title: 코드의 특수 문자
 ms.date: 07/20/2015
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 60f815f0d30fa785f4a2166db5a041d3851aa954
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4afadc13cea6cc41480cb1674b7ff6f31629b569
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097828"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468254"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>코드의 특수 문자(Visual Basic)
 
@@ -61,7 +62,7 @@ ms.locfileid: "91097828"
   
 ## <a name="concatenation"></a>연결  
 
- 연산자를 사용 하 여 `&` *연결*하거나 문자열을 연결 합니다. 숫자 값을 더하는 연산자와 혼동 하지 마십시오 `+` . 연산자를 사용 하 여 `+` 숫자 값에 대해 작업할 때 연결 하는 경우 잘못 된 결과를 얻을 수 있습니다. 다음은 이에 대한 예입니다.  
+ 연산자를 사용 하 여 `&` *연결* 하거나 문자열을 연결 합니다. 숫자 값을 더하는 연산자와 혼동 하지 마십시오 `+` . 연산자를 사용 하 여 `+` 숫자 값에 대해 작업할 때 연결 하는 경우 잘못 된 결과를 얻을 수 있습니다. 다음은 이에 대한 예입니다.  
   
  [!code-vb[VbVbcnConventions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#13)]  
   
@@ -94,7 +95,7 @@ ms.locfileid: "91097828"
   
  `!`문자는 문자 형식으로도 사용 됩니다 `Single` .  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [프로그램 구조 및 코드 규칙](program-structure-and-code-conventions.md)
 - [형식 문자](../language-features/data-types/type-characters.md)

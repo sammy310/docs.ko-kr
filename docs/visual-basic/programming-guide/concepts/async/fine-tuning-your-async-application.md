@@ -1,13 +1,14 @@
 ---
+description: 자세한 내용은 비동기 응용 프로그램 Fine-Tuning (Visual Basic)을 (를) 확인 하세요.
 title: 비동기 애플리케이션 미세 조정
 ms.date: 07/20/2015
 ms.assetid: 4c3e7997-a95f-4fbe-a6ac-60ba042d30b9
-ms.openlocfilehash: 6ad4f9a526e0497029ff8ddc3e93637a4f9acb00
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1e31ffdee4d2af9379e8073010ed2b1925023e43
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075436"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464419"
 ---
 # <a name="fine-tuning-your-async-application-visual-basic"></a>Async 애플리케이션 미세 조정(Visual Basic)
 

@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: 방법: 컬렉션 이니셜라이저에 사용 되는 추가 확장 메서드 만들기 (Visual Basic)'
 title: '방법: 컬렉션 이니셜라이저에서 사용되는 확장 메서드 만들기 및 추가'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: f64b52c7-8b11-4410-93a6-cb3aeebcc772
-ms.openlocfilehash: c36fab6635a9f7820c52c5f73c20487b92879b9a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1fbe6f438c4761ae668a6bd6a0a2c38c8efdb439
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086350"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475476"
 ---
 # <a name="how-to-create-an-add-extension-method-used-by-a-collection-initializer-visual-basic"></a>방법: 컬렉션 이니셜라이저에 사용되는 확장 추가 메서드 만들기(Visual Basic)
 
@@ -17,7 +18,7 @@ ms.locfileid: "91086350"
   
  일치 하는 `Add` 메서드가 없고 컬렉션에 대 한 코드를 수정할 수 없는 경우 `Add` 컬렉션 이니셜라이저에 필요한 매개 변수를 사용 하는 라는 확장명 메서드를 추가할 수 있습니다. 일반적으로 제네릭 컬렉션에 대해 컬렉션 이니셜라이저를 사용할 때 수행 해야 하는 작업입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예제에서는 <xref:System.Collections.Generic.List%601> 컬렉션 이니셜라이저를 사용 하 여 형식의 개체를 추가할 수 있도록 제네릭 형식에 확장 메서드를 추가 하는 방법을 보여 줍니다 `Employee` . 확장 메서드를 사용 하면 축약 된 컬렉션 이니셜라이저 구문을 사용할 수 있습니다.  
   
@@ -27,7 +28,7 @@ ms.locfileid: "91086350"
   
  [!code-vb[VbVbalrCollectionInitializersHowTo1#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializersHowTo1/VB/Module1.vb#3)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [컬렉션 이니셜라이저](index.md)
 - [방법: 컬렉션 이니셜라이저에서 사용되는 컬렉션 만들기](how-to-create-a-collection-used-by-a-collection-initializer.md)

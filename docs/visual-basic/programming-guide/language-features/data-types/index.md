@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic의 데이터 형식'
 title: 데이터 형식
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: 8cb9642c1d7e6876030efe17f5c09e4888700a24
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f431b501b40d2fafd4422b1f3fa1ea3a2ebf56fb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095592"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483939"
 ---
 # <a name="data-types-in-visual-basic"></a>Visual Basic의 데이터 형식
 
-프로그래밍 요소의 *데이터 형식*은 사용할 수 있는 데이터의 종류 및 데이터를 저장하는 방식을 의미합니다. 데이터 형식은 컴퓨터 메모리에 저장할 수 있거나 식의 계산에 사용되는 모든 값에 적용됩니다. 모든 변수, 리터럴, 상수, 열거형, 속성, 프로시저 매개 변수, 프로시저 인수 및 프로시저 반환 값은 데이터 형식을 가집니다.  
+프로그래밍 요소의 *데이터 형식* 은 사용할 수 있는 데이터의 종류 및 데이터를 저장하는 방식을 의미합니다. 데이터 형식은 컴퓨터 메모리에 저장할 수 있거나 식의 계산에 사용되는 모든 값에 적용됩니다. 모든 변수, 리터럴, 상수, 열거형, 속성, 프로시저 매개 변수, 프로시저 인수 및 프로시저 반환 값은 데이터 형식을 가집니다.  
   
 ## <a name="declared-data-types"></a>선언된 데이터 형식  
 
@@ -36,7 +37,7 @@ ms.locfileid: "91095592"
   
  Visual Basic 데이터 형식 목록은 [데이터 형식](../../../language-reference/data-types/index.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [형식 문자](type-characters.md)
 - [기본 데이터 형식](elementary-data-types.md)

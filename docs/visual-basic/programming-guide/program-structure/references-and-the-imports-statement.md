@@ -1,4 +1,5 @@
 ---
+description: 참조 및 Imports 문 (Visual Basic)에 대해 자세히 알아보세요.
 title: 참조 및 Imports 문
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: 13f250e1b015e5a821da83e557033bc878a8a3b8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3ca685d33f69224a6eea324d7357be4b5203eb45
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097906"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468241"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>참조 및 Imports 문(Visual Basic)
 
@@ -51,7 +52,7 @@ ms.locfileid: "91097906"
   
  `Imports`문에 별칭 이름이 포함 되지 않은 경우에는 가져온 네임 스페이스 내에 정의 된 요소를 한정자 없이 모듈에서 사용할 수 있습니다. 별칭 이름을 지정 하는 경우 해당 네임 스페이스 내에 포함 된 이름에 대 한 한정자로 사용 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:Microsoft.VisualBasic.ControlChars>
 - <xref:Microsoft.VisualBasic>
