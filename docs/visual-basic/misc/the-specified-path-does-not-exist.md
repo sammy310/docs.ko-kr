@@ -1,13 +1,14 @@
 ---
+description: '에 대 한 자세한 정보: 지정한 경로가 존재 하지 않습니다.'
 title: 지정한 경로가 없습니다.
 ms.date: 07/20/2015
 ms.assetid: b0855f92-03c2-446b-94c1-856c87359c54
-ms.openlocfilehash: 369730fb65d49cf3ca0a9e279b2e837f0e96247d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6a81cb90f275122f6b2dc6c7a851410d0eb5ee68
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086532"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430718"
 ---
 # <a name="the-specified-path-does-not-exist"></a>지정한 경로가 없습니다.
 
@@ -17,7 +18,7 @@ ms.locfileid: "91086532"
   
 - 경로가 정확한지 확인합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [방법: 파일 경로 구문 분석](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
 - [문자열과 다른 형식 사이의 변환](../programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)

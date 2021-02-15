@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic에서 이벤트 처리기를 호출 하는 방법'
 title: 이벤트 처리기를 호출 하는 방법
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 no-loc:
 - WithEvents
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: 3762c79dd3d883ae2ccfe76b335cf98ac87d4246
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 7e65b36d392211be533bb4881658b1cdb8057d5d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89464963"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476256"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Visual Basic에서 이벤트 처리기를 호출 하는 방법
 
@@ -27,7 +28,7 @@ Visual Basic 이벤트 처리기는 `Sub` 프로시저입니다. 그러나 일�
 
 둘 이상의 이벤트 처리기를 동일한 이벤트와 연결할 수 있습니다. 경우에 따라 이벤트에서 처리기를 분리할 수 있습니다. 자세한 내용은 [이벤트](../events/index.md)를 참조하세요.
 
-## <a name="call-an-event-handler-using-no-loc-texthandles-and-no-locwithevents"></a>및를 사용 하 여 이벤트 처리기 호출 :::no-loc text="Handles":::WithEvents
+## <a name="call-an-event-handler-using-no-loc-texthandles-and-withevents"></a>및를 사용 하 여 이벤트 처리기 호출 :::no-loc text="Handles":::WithEvents
 
 1. 이벤트가 [이벤트 문으로](../../../language-reference/statements/event-statement.md)선언 되었는지 확인 합니다.
 
@@ -55,7 +56,7 @@ Visual Basic 이벤트 처리기는 `Sub` 프로시저입니다. 그러나 일�
 
     [RemoveHandler 문을](../../../language-reference/statements/removehandler-statement.md)실행 하 여 이벤트에서 이벤트 처리기를 분리할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [절차](index.md)
 - [하위 프로시저](sub-procedures.md)

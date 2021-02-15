@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 열거형 개요 (Visual Basic)'
 title: 열거형 개요
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-ms.openlocfilehash: 7d0f28ff8b7f773b8b4ecc68320fbfa34c263136
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 56d7b823e6c5367ae1249a1ab30c94ad7ced32ae
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095657"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477465"
 ---
 # <a name="enumerations-overview-visual-basic"></a>열거형 개요(Visual Basic)
 
@@ -30,7 +31,7 @@ ms.locfileid: "91095657"
 |열거형과 연결 된 문자열 확인|[방법: 열거형 값과 연결된 문자열 확인](how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
 |열거형 사용 시기 결정|[열거형을 사용하는 경우](when-to-use-an-enumeration.md)|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [상수 개요](constants-overview.md)
 - [사용자 정의 상수](user-defined-constants.md)

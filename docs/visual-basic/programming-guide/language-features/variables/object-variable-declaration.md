@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 개체 변수 선언 (Visual Basic)'
 title: 개체 변수 선언
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-ms.openlocfilehash: 74b1401df3dbb2d744de74734d10cbcd92e9689e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 853f9e775976022e52121c164884fd91ef0a831c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077048"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463717"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>개체 변수 선언(Visual Basic)
 
@@ -45,9 +46,9 @@ Dim objC As System.OperatingSystem
   
 ## <a name="late-binding-and-early-binding"></a>런타임에 바인딩 및 초기 바인딩  
 
- 코드를 실행할 때까지 특정 클래스를 알 수 없는 경우가 있습니다. 이 경우에는 데이터 형식을 사용 하 여 개체 변수를 선언 해야 합니다 `Object` . 이렇게 하면 모든 개체 형식에 대 한 일반 참조가 만들어지고 런타임에 특정 클래스가 할당 됩니다. 이를 *후기 바인딩*이라고 합니다. 런타임에 바인딩에는 추가 실행 시간이 필요 합니다. 또한 가장 최근에 할당 된 클래스의 메서드 및 속성으로 코드를 제한 합니다. 코드에서 다른 클래스의 멤버에 액세스 하려고 하면 런타임 오류가 발생할 수 있습니다.  
+ 코드를 실행할 때까지 특정 클래스를 알 수 없는 경우가 있습니다. 이 경우에는 데이터 형식을 사용 하 여 개체 변수를 선언 해야 합니다 `Object` . 이렇게 하면 모든 개체 형식에 대 한 일반 참조가 만들어지고 런타임에 특정 클래스가 할당 됩니다. 이를 *후기 바인딩* 이라고 합니다. 런타임에 바인딩에는 추가 실행 시간이 필요 합니다. 또한 가장 최근에 할당 된 클래스의 메서드 및 속성으로 코드를 제한 합니다. 코드에서 다른 클래스의 멤버에 액세스 하려고 하면 런타임 오류가 발생할 수 있습니다.  
   
- 컴파일 타임에 특정 클래스를 알고 있으면 개체 변수를 해당 클래스로 선언 해야 합니다. 이것을 *초기 바인딩*이라고 합니다. 초기 바인딩은 성능을 향상 시키고 코드에서 특정 클래스의 모든 메서드와 속성에 액세스할 수 있도록 보장 합니다. 위의 예제 선언에서 변수가 `objA` 클래스의 개체만 사용 하는 경우 <xref:System.Windows.Forms.Label?displayProperty=nameWithType> 해당 선언에를 지정 해야 합니다 `As System.Windows.Forms.Label` .  
+ 컴파일 타임에 특정 클래스를 알고 있으면 개체 변수를 해당 클래스로 선언 해야 합니다. 이것을 *초기 바인딩* 이라고 합니다. 초기 바인딩은 성능을 향상 시키고 코드에서 특정 클래스의 모든 메서드와 속성에 액세스할 수 있도록 보장 합니다. 위의 예제 선언에서 변수가 `objA` 클래스의 개체만 사용 하는 경우 <xref:System.Windows.Forms.Label?displayProperty=nameWithType> 해당 선언에를 지정 해야 합니다 `As System.Windows.Forms.Label` .  
   
 ### <a name="advantages-of-early-binding"></a>초기 바인딩의 장점  
 
@@ -131,13 +132,13 @@ Dim anyForm As System.Windows.Forms.Form
   
  기본 클래스의 모든 멤버를 파생 클래스에서 사용할 수 있지만 기본 클래스에서 파생 클래스의 추가 멤버를 사용할 수 없습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [개체 변수](object-variables.md)
 - [개체 변수 할당](object-variable-assignment.md)
 - [개체 변수 값](object-variable-values.md)
 - [방법: Visual Basic에서 개체 변수 선언 및 개체 변수에 개체 할당](how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
 - [방법: 개체의 멤버에 액세스](how-to-access-members-of-an-object.md)
-- [새 운영자](../../../language-reference/operators/new-operator.md)
+- [New 연산자](../../../language-reference/operators/new-operator.md)
 - [Option Strict 문](../../../language-reference/statements/option-strict-statement.md)
 - [지역 형식 유추](local-type-inference.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 구조체 및 클래스 (Visual Basic)'
 title: 구조체와 클래스
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: e7ca5b9d55611eafad88517e71f9807fe2aa4416
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 129948bd9a16309ffea5b1e4c690d8883c450b74
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086220"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430627"
 ---
 # <a name="structures-and-classes-visual-basic"></a>구조체와 클래스(Visual Basic)
 
@@ -38,7 +39,7 @@ Visual Basic는 구조체와 클래스에 대 한 구문을 통합 하며, 두 �
   
 - 둘 다 매개 변수를 포함 하거나 포함 하지 않는 공유 생성자를 가질 수 있습니다.  
   
-- 속성에 하나 이상의 매개 변수가 사용 되는 경우 둘 다 *기본 속성*을 노출할 수 있습니다.  
+- 속성에 하나 이상의 매개 변수가 사용 되는 경우 둘 다 *기본 속성* 을 노출할 수 있습니다.  
   
 - 둘 다 이벤트를 선언 하 고 발생 시킬 수 있으며 둘 다 대리자를 선언할 수 있습니다.  
   
@@ -46,7 +47,7 @@ Visual Basic는 구조체와 클래스에 대 한 구문을 통합 하며, 두 �
 
  구조체와 클래스는 다음 인스턴스와 관련 사항을 다릅니다.  
   
-- 구조체는 *값 형식*입니다. 클래스는 *참조 형식*입니다. 구조체 형식의 변수에는 클래스 형식의 데이터에 대 한 참조를 포함 하는 대신 구조체의 데이터가 포함 됩니다.  
+- 구조체는 *값 형식* 입니다. 클래스는 *참조 형식* 입니다. 구조체 형식의 변수에는 클래스 형식의 데이터에 대 한 참조를 포함 하는 대신 구조체의 데이터가 포함 됩니다.  
   
 - 구조체는 스택 할당을 사용 합니다. 클래스는 힙 할당을 사용 합니다.  
   
@@ -56,7 +57,7 @@ Visual Basic는 구조체와 클래스에 대 한 구문을 통합 하며, 두 �
   
 - 구조체 요소는로 선언할 수 없습니다. `Protected` 클래스 멤버는 일 수 있습니다.  
   
-- 구조 프로시저는 [공유](../../../language-reference/modifiers/shared.md) 프로시저인 경우에만 이벤트를 처리할 수 있으며, AddHandler 문을 통해서만 이벤트를 처리할 수 있습니다 `Sub` . 모든 클래스 프로시저는 [Handles](../../../language-reference/statements/handles-clause.md) 키워드 또는 문을 사용 하 여 이벤트를 처리할 수 있습니다 [AddHandler Statement](../../../language-reference/statements/addhandler-statement.md) `AddHandler` . 자세한 내용은 [이벤트](../events/index.md)를 참조하세요.  
+- 구조 프로시저는 [공유](../../../language-reference/modifiers/shared.md) 프로시저인 경우에만 이벤트를 처리할 수 있으며, AddHandler 문을 통해서만 이벤트를 처리할 수 있습니다 `Sub` . 모든 클래스 프로시저는 [Handles](../../../language-reference/statements/handles-clause.md) 키워드 또는 문을 사용 하 여 이벤트를 처리할 수 있습니다 [](../../../language-reference/statements/addhandler-statement.md) `AddHandler` . 자세한 내용은 [이벤트](../events/index.md)를 참조하세요.  
   
 - 구조체 변수 선언에서 배열의 초기값 또는 초기 크기를 지정할 수 없습니다. 클래스 변수 선언에는를 사용할 수 있습니다.  
   
@@ -90,7 +91,7 @@ Visual Basic는 구조체와 클래스에 대 한 구문을 통합 하며, 두 �
   
 - **연산.** 두 구조체의 같음 테스트는 요소 및 요소 테스트를 사용 하 여 수행 해야 합니다. 메서드를 사용 하 여 두 개체 변수를 비교할 수 있습니다 <xref:System.Object.Equals%2A> . <xref:System.Object.Equals%2A> 두 변수가 동일한 인스턴스를 가리키도록 할지 여부를 나타냅니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [데이터 형식](index.md)
 - [복합 데이터 형식](composite-data-types.md)

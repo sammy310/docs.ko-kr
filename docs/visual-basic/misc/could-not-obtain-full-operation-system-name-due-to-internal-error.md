@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 내부 오류로 인해 전체 작업 시스템 이름을 가져올 수 없습니다.'
 title: 내부 오류로 인해 전체 작업 시스템 이름을 가져올 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrDiagnosticInfo_FullOSName
 ms.assetid: f69da02b-eb9a-4284-bb9e-3025517ae6c1
-ms.openlocfilehash: 744d549b9313727af2feb82e45c24b729cae7262
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d274a08728b084b21309862de69e2fded5c164da
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91079089"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463496"
 ---
 # <a name="could-not-obtain-full-operation-system-name-due-to-internal-error"></a>내부 오류로 인해 전체 작업 시스템 이름을 가져올 수 없습니다.
 
@@ -23,8 +24,8 @@ ms.locfileid: "91079089"
   
 2. WMI 및 설치 방법에 대 한 자세한 내용을 보려면로 이동 하 여 "WMI(Windows Management Instrumentation) Core"를 검색 하십시오.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [My.computer. Svfullname](xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName)
 - [.NET의 예외 처리 및 Throw](../../standard/exceptions/index.md)
-- [Try ... Catch ... Finally 문](../language-reference/statements/try-catch-finally-statement.md)
+- [Try...Catch...Finally 문](../language-reference/statements/try-catch-finally-statement.md)

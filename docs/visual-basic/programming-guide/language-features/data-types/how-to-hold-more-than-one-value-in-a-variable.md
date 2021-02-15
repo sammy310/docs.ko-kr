@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 변수에 둘 이상의 값 저장 (Visual Basic)'
 title: '방법: 변수에 두 개 이상의 값 사용'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 399c5909ee6988f96bcc85260b0401f3bd18a0f2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5248bc29f58cccf3b8ced95d3fba8f0d39033a83
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393898"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100484004"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>방법: 변수에 두 개 이상의 값 사용(Visual Basic)
 
-*복합 데이터 형식*으로 선언 하는 경우 변수에 두 개 이상의 값이 포함 됩니다.
+*복합 데이터 형식* 으로 선언 하는 경우 변수에 두 개 이상의 값이 포함 됩니다.
 
 [복합 데이터 형식](composite-data-types.md) 에는 구조체, 배열 및 클래스가 포함 됩니다. 복합 데이터 형식의 변수는 기본 데이터 형식과 기타 복합 형식의 조합을 포함할 수 있습니다. 구조체와 클래스는 데이터 뿐만 아니라 코드도 포함할 수 있습니다.
 
@@ -42,7 +43,7 @@ ms.locfileid: "84393898"
 
 5. 키워드 뒤에 `As` 적절 한 복합 데이터 형식의 이름을 추가 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [데이터 형식](../../../language-reference/data-types/index.md)
 - [형식 문자](type-characters.md)

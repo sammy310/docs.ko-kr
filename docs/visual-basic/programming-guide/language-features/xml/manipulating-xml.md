@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic에서 XML 조작'
 title: XML 조작
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: 52c8822c34a85af81dde505d36e6e159745a0d12
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 34ac12d522b0b4e2d6a78a1117984cfd8de33fdb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085693"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483627"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Visual Basic에서 XML 조작
 
-*Xml 리터럴을* 사용 하 여 문자열, 파일 또는 스트림과 같은 외부 원본에서 xml을 로드할 수 있습니다. 그런 다음를 사용 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 하 여 xml을 조작 하 고 LINQ (통합 언어 쿼리)를 사용 하 여 xml을 쿼리할 수 있습니다.  
+*Xml 리터럴을* 사용 하 여 문자열, 파일 또는 스트림과 같은 외부 원본에서 xml을 로드할 수 있습니다. 그런 다음를 사용 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 하 여 xml을 조작 하 고 LINQ (Language-Integrated Query)를 사용 하 여 xml을 쿼리할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 
@@ -28,7 +29,7 @@ ms.locfileid: "91085693"
  [방법: XML 리터럴 수정](how-to-modify-xml-literals.md)  
  XML 리터럴에서 요소, 특성 및 값을 수정 하는 방법을 보여 줍니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 
  [XML 축 속성](../../../language-reference/xml-axis/index.md)  
  다양 한 XML 액세스 속성을 설명 하는 섹션에 대 한 링크를 제공 합니다.  
@@ -45,7 +46,7 @@ ms.locfileid: "91085693"
  [XML](index.md)  
  Visual Basic에서를 사용 하는 방법을 설명 하는 섹션에 대 한 링크를 제공 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [XML](index.md)
 - [LINQ](../linq/index.md)

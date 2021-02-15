@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: TextFieldParser는 endline 문자를 포함 하는 구분 기호를 지원 하지 않습니다.'
 title: TextFieldParser는 EndLine 문자가 포함된 구분 기호를 지원하지 않습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_EndCharsInDelimiter
 ms.assetid: 0701f3b6-635b-468e-b908-867df00dd5db
-ms.openlocfilehash: 9282d061e2c93d408855557e3b260935310a7c52
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c1b18875f3003cb6b1a7252f71098faa416b80cb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078491"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431004"
 ---
 # <a name="textfieldparser-does-not-support-delimiters-that-contain-endline-characters"></a>TextFieldParser는 EndLine 문자가 포함된 구분 기호를 지원하지 않습니다.
 
@@ -19,7 +20,7 @@ Endline 문자를 포함 하는 구분 기호가 제공 되었지만에서는 `T
   
 - 올바른 구분 기호를 제공합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [TextFieldParser.Delimiters 속성](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A)
 - [TextFieldParser.SetDelimiters 메서드](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A)

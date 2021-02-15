@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 데이터 그룹화 (Visual Basic)'
 title: 데이터 그룹화
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: aae48543472ee71990d0bc96defa9ad6a6ab4c0d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: fa6dbcc22c7d991d48775c3974cfc529840ef933
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084205"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469801"
 ---
 # <a name="grouping-data-visual-basic"></a>데이터 그룹화 (Visual Basic)
 

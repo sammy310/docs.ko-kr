@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: Get은 런타임에 지원 되지 않습니다.'
 title: Get은 런타임에 지원되지 않습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID393
 ms.assetid: b527c5a8-3f24-42e9-871f-e6305c9f514b
-ms.openlocfilehash: 8fe3bf37c28ed34265e82a05b74928cb620c729f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6f4a78da9c3cfc76ebe3d671c698e6a6ca41995b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100414"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462942"
 ---
 # <a name="get-not-supported-at-run-time"></a>Get은 런타임에 지원되지 않습니다.
 

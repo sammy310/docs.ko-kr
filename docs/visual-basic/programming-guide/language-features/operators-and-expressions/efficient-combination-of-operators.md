@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연산자의 효율적인 조합 (Visual Basic)'
 title: 연산자의 효율적 결합
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: 9ba6be8e1dd03c0589f712b0e9b39258953cd223
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a4d2d0c1caeea95dd8d34b2033a398d26bcf63ef
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077087"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476269"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>연산자의 효율적 결합(Visual Basic)
 
@@ -48,7 +49,7 @@ ms.locfileid: "91077087"
   
  앞의 예제에서 `z + 2` 는 먼저 계산 된 다음 다른 괄호 식이 계산 됩니다. 더하기 또는 곱하기 보다 우선 순위가 높은 지 수는 다른 식이 괄호로 묶여 있기 때문에이 예제에서는 마지막으로 계산 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic의 산술 연산자](arithmetic-operators.md)
 - [Comparison Operators in Visual Basic](comparison-operators.md)

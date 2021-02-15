@@ -1,20 +1,21 @@
 ---
+description: '자세한 정보: Visual Basic의 조건부 컴파일'
 title: 조건부 컴파일
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-ms.openlocfilehash: e59296882edc018259816c73b6ae861b3b296783
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e9cb8a5af4dfbf2ffadef8edd8f6583614188391
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098971"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476139"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic의 조건부 컴파일
 
-*조건부 컴파일에서*프로그램의 특정 코드 블록은 선택적으로 컴파일되고 다른 항목은 무시 됩니다.  
+*조건부 컴파일에서* 프로그램의 특정 코드 블록은 선택적으로 컴파일되고 다른 항목은 무시 됩니다.  
   
  예를 들어 서로 다른 방법의 속도와 동일한 프로그래밍 작업을 비교 하는 디버깅 문을 작성 하거나 응용 프로그램에서 여러 언어를 지역화할 수 있습니다. 조건부 컴파일 문은 런타임에 실행 되지 않고 컴파일 시간에 실행 되도록 설계 되었습니다.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "91098971"
 |상수 설정 방법|상수 범위|  
 |---|---|  
 |**프로젝트 디자이너**|프로젝트의 모든 파일에 공개|  
-|명령줄|명령줄 컴파일러에 전달 된 모든 파일에 공용|  
+|명령 줄|명령줄 컴파일러에 전달 된 모든 파일에 공용|  
 |`#Const` 코드의 문|선언 된 파일 전용|  
   
 |프로젝트 디자이너에서 상수를 설정 하려면|  
@@ -51,7 +52,7 @@ ms.locfileid: "91098971"
   
 |명령줄에서 상수를 설정 하려면|  
 |---|  
-|-다음 예제와 같이- **d** 스위치를 사용 하 여 조건부 컴파일 상수를 입력 합니다.<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     **-D** 스위치와 첫 번째 상수 사이에는 공간이 필요 하지 않습니다. 자세한 내용은 [-define (Visual Basic)](../../reference/command-line-compiler/define.md)을 참조 하세요.<br />     명령줄 선언은 **프로젝트 디자이너**에 입력 된 선언을 재정의 하지만이를 지우지 않습니다. **프로젝트 디자이너** 에 설정 되는 인수는 후속 컴파일에서 적용 됩니다.<br />     코드 자체에서 상수를 작성 하는 경우 해당 범위는 선언 된 전체 모듈 이므로 배치에 대 한 엄격한 규칙이 없습니다.|  
+|-다음 예제와 같이- **d** 스위치를 사용 하 여 조건부 컴파일 상수를 입력 합니다.<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     **-D** 스위치와 첫 번째 상수 사이에는 공간이 필요 하지 않습니다. 자세한 내용은 [-define (Visual Basic)](../../reference/command-line-compiler/define.md)을 참조 하세요.<br />     명령줄 선언은 **프로젝트 디자이너** 에 입력 된 선언을 재정의 하지만이를 지우지 않습니다. **프로젝트 디자이너** 에 설정 되는 인수는 후속 컴파일에서 적용 됩니다.<br />     코드 자체에서 상수를 작성 하는 경우 해당 범위는 선언 된 전체 모듈 이므로 배치에 대 한 엄격한 규칙이 없습니다.|  
   
 |코드에서 상수를 설정 하려면|  
 |---|  

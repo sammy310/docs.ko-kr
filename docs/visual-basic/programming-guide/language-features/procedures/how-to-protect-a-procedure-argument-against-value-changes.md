@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 값 변경에 대해 프로시저 인수 보호 (Visual Basic)'
 title: '방법: 값 변경으로부터 프로시저 인수 보호'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 84eadf3d364b69120221d80e464b1175b1602e13
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2e47a584632f124a001617770aeae5104ef20abe
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071484"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476217"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>방법: 값 변경에 대해 프로시저 인수 보호(Visual Basic)
 
@@ -27,7 +28,7 @@ ms.locfileid: "91071484"
   
  프로시저에서 해당 하는 매개 변수 [ByVal](../../../language-reference/modifiers/byval.md) 을 선언 하 여 인수를 변경 으로부터 항상 보호할 수 있습니다. 일부 경우에는 지정 된 인수를 변경할 수 있지만 다른 경우에는 변경할 수 없는 경우에는 해당 인수를 선언 `ByRef` 하 고 호출 코드가 각 호출에서 전달 메커니즘을 결정 하도록 할 수 있습니다. 이를 위해 해당 인수를 괄호로 묶어 값으로 전달 하거나, 참조로 전달 하기 위해 괄호로 묶지 않습니다. 자세한 내용은 [방법: 인수를 값으로 전달](./how-to-force-an-argument-to-be-passed-by-value.md)하는 방법을 참조 하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예제에서는 배열 변수를 사용 하 고 해당 요소에 대해 작동 하는 두 개의 프로시저를 보여 줍니다. `increase`프로시저는 각 요소에 하나씩만 추가 합니다. `replace`프로시저는 매개 변수에 새 배열을 할당 한 `a()` 다음 각 요소에 하나를 추가 합니다. 그러나 다시 할당 해도 호출 코드의 기본 배열 변수에는 영향을 주지 않습니다.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "91071484"
 
  Visual Basic의 기본값은 인수를 값으로 전달 하는 것입니다. 그러나 선언 된 모든 매개 변수와 함께 [ByVal](../../../language-reference/modifiers/byval.md) 또는 [ByRef](../../../language-reference/modifiers/byref.md) 키워드를 포함 하는 것이 좋은 프로그래밍 습관입니다. 이렇게 하면 코드를 보다 쉽게 읽을 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

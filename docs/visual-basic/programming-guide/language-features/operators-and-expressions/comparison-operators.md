@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: Visual Basic의 비교 연산자'
 title: 비교 연산자
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-ms.openlocfilehash: fbe81532bb435e54e694f9b5fe9dd497392f31e1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f16b30ca3a0cd5aa4bd5c0b2673a51205714a00c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071770"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476412"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Comparison Operators in Visual Basic
 
@@ -93,7 +94,7 @@ ms.locfileid: "91071770"
   
  자세한 내용은 [TypeOf 연산자](../../../language-reference/operators/typeof-operator.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [값 비교](value-comparisons.md)
 - [비교 연산자](../../../language-reference/operators/comparison-operators.md)

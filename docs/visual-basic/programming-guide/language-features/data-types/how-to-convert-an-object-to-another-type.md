@@ -1,21 +1,22 @@
 ---
+description: '자세한 정보: 방법: 개체를 다른 형식으로 변환 Visual Basic'
 title: '방법: 개체를 다른 형식으로 변환'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: b89e996324d9ec22fc243b59502f3d36fefdee60
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d6840cfd440483720f8ca9a0fa0140c3727a8688
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090224"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100484030"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>방법: Visual Basic에서 Object를 다른 형식으로 변환
 
 `Object` [CType 함수와](../../../language-reference/functions/ctype-function.md)같은 변환 키워드를 사용 하 여 변수를 다른 데이터 형식으로 변환할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예제에서는 변수를 및으로 변환 합니다 `Object` `Integer` `String` .  
   
@@ -36,7 +37,7 @@ End Sub
   
 - <xref:System?displayProperty=nameWithType> 네임스페이스에 대한 참조  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Object>
 - [Visual Basic의 형식 변환](type-conversions.md)

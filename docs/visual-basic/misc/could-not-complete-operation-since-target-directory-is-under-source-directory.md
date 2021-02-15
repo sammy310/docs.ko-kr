@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 대상 디렉터리가 소스 디렉터리 아래에 있기 때문에 작업을 완료할 수 없습니다.'
 title: 대상 디렉터리가 소스 디렉터리 아래에 있기 때문에 작업을 완료할 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrIO_CyclicOperation
 ms.assetid: 850d3a24-5d51-4ac8-a912-630efcd75278
-ms.openlocfilehash: d159b9bb3a765a2fefe99fa15dff42e979fda9e3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5fb0bf1d761faf9d3d0c64e8815e28e14841b1fd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91079141"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100463522"
 ---
 # <a name="could-not-complete-operation-since-target-directory-is-under-source-directory"></a>대상 디렉터리가 소스 디렉터리 아래에 있기 때문에 작업을 완료할 수 없습니다.
 
@@ -19,7 +20,7 @@ ms.locfileid: "91079141"
   
 - 상속 시 순환 참조가 없어야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
-- [오류 형식](../programming-guide/language-features/error-types.md)
+- [오류 유형](../programming-guide/language-features/error-types.md)
 - [Visual Studio 디버거에서 중단점 사용](/visualstudio/debugger/using-breakpoints)

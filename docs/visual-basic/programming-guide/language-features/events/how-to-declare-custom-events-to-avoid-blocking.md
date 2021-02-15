@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 차단 방지를 위한 사용자 지정 이벤트 선언 (Visual Basic)'
 title: '방법: 차단을 방지하는 사용자 지정 이벤트 선언'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
-ms.openlocfilehash: a9350470836652f65532068402c78375b4c5495c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a4ad3162e8f95ebbf7567d427ea00060b19b2235
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077100"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100469723"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>방법: 차단을 방지하는 사용자 지정 이벤트 선언(Visual Basic)
 
@@ -21,7 +22,7 @@ ms.locfileid: "91077100"
   
  Visual Basic에서 제공 하는 이벤트의 기본 구현을 사용 하는 대신 사용자 지정 이벤트를 사용 하 여 이벤트 처리기를 비동기적으로 실행할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  이 예제에서 접근자는 `AddHandler` 이벤트의 각 처리기에 대 한 대리자를 `Click` <xref:System.Collections.ArrayList> 필드에 저장 된에 추가 합니다 `EventHandlerList` .  
   

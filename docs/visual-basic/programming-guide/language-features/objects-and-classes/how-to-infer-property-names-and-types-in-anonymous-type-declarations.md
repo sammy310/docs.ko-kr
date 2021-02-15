@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 익명 형식 선언에서 속성 이름 및 형식 유추 (Visual Basic)'
 title: '방법: 익명 형식 선언에서 속성 이름 및 형식 유추'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 9ebbbe9d2e6d36f5ab2bc7f7c916d18c9240a06d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e4bff8cd8dd879b97618a3bc69e1eaf1c7c269b7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404890"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483900"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>방법: 익명 형식 선언에서 속성 이름 및 형식 유추(Visual Basic)
 
@@ -126,7 +127,7 @@ ms.locfileid: "84404890"
 
   [!code-vb[VbVbalrAnonymousTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#16)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [개체 이니셜라이저: 명명된 형식 및 무명 형식](object-initializers-named-and-anonymous-types.md)
 - [지역 형식 유추](../variables/local-type-inference.md)

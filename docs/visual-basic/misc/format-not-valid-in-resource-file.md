@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 형식이 리소스 파일에서 유효 하지 않음'
 title: 리소스 파일의 형식이 잘못되었습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID325
 ms.assetid: e986ab45-e3ce-430e-8704-5882e5da1104
-ms.openlocfilehash: 91c7528eca03faf91b7d072032c80903590581b0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: b6a4ba613bbc0daefbc3f2a4fa2dbc9dad33ca86
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100427"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483757"
 ---
 # <a name="format-not-valid-in-resource-file"></a>리소스 파일의 형식이 잘못되었습니다.
 
@@ -21,6 +22,6 @@ ms.locfileid: "91100427"
   
 2. 프로젝트에서 잘못된 리소스 파일을 제거합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
-- [오류 형식](../programming-guide/language-features/error-types.md)
+- [오류 유형](../programming-guide/language-features/error-types.md)
