@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 선언 된 요소에 대 한 참조 (Visual Basic)'
 title: References to Declared Elements
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: af5be47335b6d48bd6c0bccc30b8db15c9912807
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 75cc05381f01af00ac75995739647810fb7ff1d7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085882"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471437"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>선언된 요소 참조(Visual Basic)
 
 코드가 선언 된 요소를 참조 하는 경우 Visual Basic 컴파일러는 참조의 이름을 해당 이름의 적절 한 선언과 일치 시킵니다. 동일한 이름을 사용 하 여 두 개 이상의 요소를 선언 하는 경우 해당 이름을 *정규화* 하 여 참조할 요소를 제어할 수 있습니다.  
   
- 컴파일러는 이름 참조를 가장 *좁은 범위의*이름 선언과 일치 시 키 려 고 합니다. 즉, 참조를 만드는 코드에서 시작 하 고 포함 하는 요소의 연속 수준을 통해 외부에서 작업 합니다.  
+ 컴파일러는 이름 참조를 가장 *좁은 범위의* 이름 선언과 일치 시 키 려 고 합니다. 즉, 참조를 만드는 코드에서 시작 하 고 포함 하는 요소의 연속 수준을 통해 외부에서 작업 합니다.  
   
  다음 예에서는 이름이 같은 두 변수에 대 한 참조를 보여 줍니다. 이 예제에서는 각각의 명명 된 두 변수를 `totalCount` 모듈의 서로 다른 범위 수준에서 선언 합니다 `container` . 한정자를 사용 하지 않고 프로시저를 표시 하는 경우 `showCount` `totalCount` Visual Basic 컴파일러는 범위를 가장 좁은 범위, 즉 내의 지역 선언으로 선언에 대 한 참조를 확인 합니다 `showCount` . 포함 하는 모듈을 사용 하 여 정규화 하는 경우 `totalCount` `container` 컴파일러는 더 넓은 범위의 선언에 대 한 참조를 확인 합니다.  
   
@@ -46,7 +47,7 @@ End Module
 
  이 검색 프로세스를 재정의 하 고 더 광범위 한 범위에서 선언 된 이름을 지정 하려면 광범위 한 범위의 포함 요소로 이름을 *한정* 해야 합니다. 경우에 따라 포함 하는 요소를 한 정해야 할 수도 있습니다.  
   
- 이름을 정규화 하면 원본 문의 앞에 target 요소가 정의 된 위치를 식별 하는 정보가 포함 됩니다. 이 정보를 *한정 문자열*이라고 합니다. 하나 이상의 네임 스페이스와 모듈, 클래스 또는 구조를 포함할 수 있습니다.  
+ 이름을 정규화 하면 원본 문의 앞에 target 요소가 정의 된 위치를 식별 하는 정보가 포함 됩니다. 이 정보를 *한정 문자열* 이라고 합니다. 하나 이상의 네임 스페이스와 모듈, 클래스 또는 구조를 포함할 수 있습니다.  
   
  한정 문자열은 대상 요소를 포함 하는 모듈, 클래스 또는 구조체를 명확 하 게 지정 해야 합니다. 컨테이너는 일반적으로 네임 스페이스를 포함 하는 다른 요소에 있을 수 있습니다. 한정 문자열에 포함 된 요소를 여러 개 포함 해야 할 수도 있습니다.  
   
@@ -198,14 +199,14 @@ Dim xDoc As xD.XmlDocument
   
 ## <a name="shadowing"></a>섀도잉  
 
- 두 프로그래밍 요소가 동일한 이름을 공유 하는 경우 그 중 하나는 다른 *요소를 숨기 거 나 숨길*수 있습니다. 숨겨진 요소는 참조에 사용할 수 없습니다. 대신, 코드가 숨겨진 요소 이름을 사용 하는 경우 Visual Basic 컴파일러는 숨기는 요소로이를 확인 합니다. 예제에 대 한 자세한 설명은 [Visual Basic에서 숨기기](shadowing.md)를 참조 하세요.  
+ 두 프로그래밍 요소가 동일한 이름을 공유 하는 경우 그 중 하나는 다른 *요소를 숨기 거 나 숨길* 수 있습니다. 숨겨진 요소는 참조에 사용할 수 없습니다. 대신, 코드가 숨겨진 요소 이름을 사용 하는 경우 Visual Basic 컴파일러는 숨기는 요소로이를 확인 합니다. 예제에 대 한 자세한 설명은 [Visual Basic에서 숨기기](shadowing.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Declared Element Names](declared-element-names.md)
 - [선언 요소의 특징](declared-element-characteristics.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
 - [변수](../variables/index.md)
 - [Imports 문(.NET 네임스페이스 및 형식)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [새 운영자](../../../language-reference/operators/new-operator.md)
+- [New 연산자](../../../language-reference/operators/new-operator.md)
 - [공용](../../../language-reference/modifiers/public.md)

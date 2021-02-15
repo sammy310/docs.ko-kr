@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연습: Visual Basic에서 문자열 암호화 및 암호 해독'
 title: 문자열 암호화 및 해독
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: e0e3fc332bf9430b1fa56dbb7630f849d3a29c2e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: afc1eeaec85b2e430aead7f16401289b6e2e9e49
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072407"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471086"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>연습: Visual Basic에서 문자열 암호화 및 암호 해독
 
@@ -75,7 +76,7 @@ ms.locfileid: "91072407"
   
      응용 프로그램을 테스트할 때 잘못 된 암호를 입력 하면 데이터의 암호를 해독 하지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Security.Cryptography>
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>

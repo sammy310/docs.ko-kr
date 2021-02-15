@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 방법: Async 및 Wait를 사용 하 여 여러 웹 요청을 병렬로 만들기 (Visual Basic)'
 title: '방법: Async 및 Await를 사용하여 병렬로 여러 웹 요청 만들기'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 40bab392af94ba941c2562e885a8d2e08aeea5b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e1137424911b77ba94a760a4b4b034e45ef83462
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396586"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474345"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>방법: Async 및 Await를 사용하여 병렬로 여러 웹 요청 만들기(Visual Basic)
 
@@ -205,7 +206,7 @@ Class MainWindow
 End Class
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](index.md)

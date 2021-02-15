@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 프로시저에 대 한 매개 변수 정의 (Visual Basic)'
 title: '방법: 프로시저의 매개 변수 정의'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 73b53dcf7cd732af1a4f1d23cd0d3b9ef5b5529b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e9405e01c81f50c361c8e7ff9736e2ac0cde144d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087442"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476230"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>방법: 프로시저의 매개 변수 정의(Visual Basic)
 
@@ -45,7 +46,7 @@ ms.locfileid: "91087442"
   
      형식 검사 스위치 ([Option Strict 문](../../../language-reference/statements/option-strict-statement.md))가 인 경우 `Off` `As` 매개 변수를 정의할 때 절은 선택 사항입니다. 그러나 한 매개 변수에서 절을 사용 하는 경우 모든 매개 변수는 `As` 이를 사용 해야 합니다. 형식 검사 스위치가 인 경우 `On` `As` 모든 매개 변수 정의에 절이 필요 합니다.  
   
-     모든 프로그래밍 요소에 대 한 데이터 형식을 지정 하는 것을 *강력한 형식화*라고 합니다. 를 설정 하면 `Option Strict On` Visual Basic 강력한 형식을 적용 합니다. 다음과 같은 이유로이 작업을 수행 하는 것이 좋습니다.  
+     모든 프로그래밍 요소에 대 한 데이터 형식을 지정 하는 것을 *강력한 형식화* 라고 합니다. 를 설정 하면 `Option Strict On` Visual Basic 강력한 형식을 적용 합니다. 다음과 같은 이유로이 작업을 수행 하는 것이 좋습니다.  
   
     - 변수 및 매개 변수에 대해 IntelliSense를 지원할 수 있습니다. 이렇게 하면 코드에 입력할 때 해당 속성 및 기타 멤버를 볼 수 있습니다.  
   
@@ -53,7 +54,7 @@ ms.locfileid: "91087442"
   
     - 그러면 코드 실행 속도가 빨라집니다. 한 가지 이유는 프로그래밍 요소에 대 한 데이터 형식을 지정 하지 않는 경우 Visual Basic 컴파일러에서 해당 형식을 할당 하는 것입니다 `Object` . 컴파일된 코드에서 및 기타 데이터 형식 사이를 변환 해야 하 여 성능이 저하 될 수 있습니다 `Object` .  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [하위 프로시저](./sub-procedures.md)

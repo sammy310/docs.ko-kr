@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 열거형을 사용 하는 경우 (Visual Basic)'
 title: 열거형을 사용하는 경우
 ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
-ms.openlocfilehash: 7b1b269a5d28d89cd491bac88fbefd4547fdc3c3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a29d0e3bb8ac99baf5d43827a8b58701eddcfbdd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095631"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480741"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>열거형을 사용하는 경우(Visual Basic)
 
@@ -39,7 +40,7 @@ ms.locfileid: "91095631"
 
  Visual Basic은 `FirstDayOfWeek` 코드를 용이 하 게 하는 및 등의 미리 정의 된 많은 열거형을 제공 `MsgBoxResult` 합니다. 이러한 목록은 [상수 및 열거형](../../../language-reference/constants-and-enumerations.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [방법: 열거형 선언](how-to-declare-enumerations.md)
 - [방법: 열거형 멤버 참조](how-to-refer-to-an-enumeration-member.md)

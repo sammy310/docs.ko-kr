@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 두 개체가 동일한 지 확인 (Visual Basic)'
 title: '방법: 두 개체가 동일한지 확인'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: 1bbc8083fcfb6f5ff0f4328c32b83a2e7218ecd6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 91f431b5a7e4cf51135c060ca0aebf1b3b968b25
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072277"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481898"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>방법: 두 개체가 동일한지 확인(Visual Basic)
 
@@ -41,7 +42,7 @@ Visual Basic 두 변수가 동일한 경우 (즉, 두 변수가 메모리에서 
   
      `IsNot``True`개체가 동일한 클래스 인스턴스를 가리키지 않으면를 반환 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예제에서는 변수 쌍을 테스트 `Object` 하 여 동일한 클래스 인스턴스를 가리켜야 하는지 확인 합니다.  
   
@@ -53,7 +54,7 @@ Visual Basic 두 변수가 동일한 경우 (즉, 두 변수가 메모리에서 
   
  `objA identical to objC? True`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Object Data Type](../../../language-reference/data-types/object-data-type.md)
 - [개체 변수](object-variables.md)

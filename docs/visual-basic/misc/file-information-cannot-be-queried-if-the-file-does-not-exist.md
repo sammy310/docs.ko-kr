@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 파일이 없으면 파일 정보를 쿼리할 수 없습니다.'
 title: 파일이 없으면 파일 정보를 쿼리할 수 없습니다.
 ms.date: 07/20/2015
 ms.assetid: 2bf50d79-2a74-403f-833c-6cabd2c213ce
-ms.openlocfilehash: a23fcb01196588618cdb1b87a11924c9812d164f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d0ad7d2d0ca7bb00e2a7fc5ff0f2e3933f66a258
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090913"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480858"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>파일이 없으면 파일 정보를 쿼리할 수 없습니다.
 
@@ -17,7 +18,7 @@ ms.locfileid: "91090913"
   
 - 올바른 파일 이름을 제공했는지 확인합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [My.user. 컴퓨터 파일 시스템](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [방법: Visual Basic에서 파일에 대한 정보 가져오기](/previous-versions/visualstudio/visual-studio-2010/abtzf6f7(v=vs.100))

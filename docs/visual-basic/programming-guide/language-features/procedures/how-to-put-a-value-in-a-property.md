@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 속성에 값 배치 (Visual Basic)'
 title: '방법: 속성 값 입력'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: 7d85066d4678ee2a53b8339bee2db20374482579
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 62f5552f821fb98bd3a4695505aba5ff73b08fc7
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071406"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476204"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>방법: 속성 값 입력(Visual Basic)
 
@@ -35,7 +36,7 @@ ms.locfileid: "91071406"
   
 4. 대입문의 오른쪽에 생성 된 값은 속성에 저장 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
 - [속성 프로시저](./property-procedures.md)

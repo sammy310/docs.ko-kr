@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연결 연산자 Visual Basic'
 title: 연결 연산자
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-ms.openlocfilehash: c123438a86a2c3293a99770107d970535fcdbdf8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7d007a830e4547f87e937cc7313c248485b4b574
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388792"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100476399"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Visual Basic의 연결 연산자
 
@@ -40,7 +41,7 @@ Dim y As String = "Mic" + "ro" + "soft"
 
 문자열에서 연결, 삭제, 대체 등의 조작을 많이 수행하는 경우 <xref:System.Text.StringBuilder> 네임스페이스에서 <xref:System.Text> 클래스를 사용하면 성능을 개선할 수 있습니다. <xref:System.Text.StringBuilder> 개체를 만들고 초기화하려면 추가 명령이 필요하며 최종 값을 `String`으로 변환하려면 또 다른 명령이 필요하지만, <xref:System.Text.StringBuilder>가 더 빠르게 실행되기 때문에 전체적인 작업 시간은 줄일 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [Option Strict 문](../../../language-reference/statements/option-strict-statement.md)
 - [Visual Basic의 문자열 조작 메서드 유형](../strings/types-of-string-manipulation-methods.md)

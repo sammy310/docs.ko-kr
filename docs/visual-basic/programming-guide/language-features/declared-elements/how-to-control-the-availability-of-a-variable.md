@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 변수의 가용성 제어 (Visual Basic)'
 title: '방법: 변수의 사용 가능성 제어'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: e6173a0eaa0bf84abb1979711c6df932533c5ce9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3fa21a804008f31da9003aa847752f749154d602
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086116"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429886"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>방법: 변수의 사용 가능성 제어(Visual Basic)
 
-*액세스 수준을*지정 하 여 변수의 가용성을 제어 합니다. 액세스 수준에 따라 변수에 대 한 읽기 또는 쓰기 권한이 있는 코드가 결정 됩니다.  
+*액세스 수준을* 지정 하 여 변수의 가용성을 제어 합니다. 액세스 수준에 따라 변수에 대 한 읽기 또는 쓰기 권한이 있는 코드가 결정 됩니다.  
   
 - *멤버 변수* (모듈 수준 및 프로시저 외부에서 정의 됨)는 기본적으로 공용 액세스로 사용 됩니다. 즉, 해당 변수를 볼 수 있는 모든 코드에서 액세스할 수 있습니다. 액세스 한정자를 지정 하 여이를 변경할 수 있습니다.  
   
@@ -74,7 +75,7 @@ ms.locfileid: "91086116"
   
      모듈, 클래스 또는 구조체의 모든 위치 뿐만 아니라 동일한 어셈블리의 모든 코드에서 변수를 읽거나 쓸 수 있습니다. 단, 어셈블리 외부에서는 읽을 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예제에서는 `Public` ,, `Protected` `Friend` , `Protected Friend` 및 `Private` 액세스 수준을 사용 하 여 변수 선언을 보여 줍니다. `Dim`문이 액세스 수준을 지정 하는 경우 키워드를 포함할 필요가 없습니다 `Dim` .  
   
@@ -90,11 +91,11 @@ Private numberForMeOnly As Integer
 
  변수의 액세스 수준이 더 제한적 이면 악의적인 코드가이를 부적절 하 게 사용할 수 있는 가능성이 줄어듭니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic의 액세스 수준](access-levels.md)
 - [Dim 문](../../../language-reference/statements/dim-statement.md)
 - [공용](../../../language-reference/modifiers/public.md)
-- [보호](../../../language-reference/modifiers/protected.md)
+- [보호됨](../../../language-reference/modifiers/protected.md)
 - [Friend](../../../language-reference/modifiers/friend.md)
 - [개인](../../../language-reference/modifiers/private.md)

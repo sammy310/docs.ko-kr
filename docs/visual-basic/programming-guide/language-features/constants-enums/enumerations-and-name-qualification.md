@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 열거형 및 이름 한정 (Visual Basic)'
 title: 열거형 및 이름 한정
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
-ms.openlocfilehash: 6e067d72e557b97f8626b148e173e3d1583f92b8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 83f5b894dad821fea920386be905de0b51f9c42f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086272"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477478"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>열거형 및 이름 한정(Visual Basic)
 
@@ -50,7 +51,7 @@ ms.locfileid: "91086272"
   
  [!code-vb[VbEnumsTask#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#32)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [상수 및 열거형](../../../language-reference/constants-and-enumerations.md)
 - [방법: 열거형 선언](how-to-declare-enumerations.md)

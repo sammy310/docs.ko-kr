@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 매개 변수 배열 (Visual Basic)'
 title: 매개 변수 배열
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: 2c8c60015d834ffa3f8618dd98616350e13f0e5c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e71524d9d62f0ece3a8310934eba15e9db16aaa1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100661"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100427585"
 ---
 # <a name="parameter-arrays-visual-basic"></a>매개 변수 배열(Visual Basic)
 
-일반적으로 프로시저 선언에서 지정 하는 것 보다 더 많은 인수를 사용 하 여 프로시저를 호출할 수 없습니다. 무제한 개수의 인수가 필요한 경우 프로시저에서 매개 변수에 대 한 값 배열을 허용할 수 있도록 *매개 변수 배열을*선언할 수 있습니다. 프로시저를 정의할 때 매개 변수 배열의 요소 수를 몰라도 됩니다. 배열 크기는 프로시저를 호출할 때마다 개별적으로 결정 됩니다.  
+일반적으로 프로시저 선언에서 지정 하는 것 보다 더 많은 인수를 사용 하 여 프로시저를 호출할 수 없습니다. 무제한 개수의 인수가 필요한 경우 프로시저에서 매개 변수에 대 한 값 배열을 허용할 수 있도록 *매개 변수 배열을* 선언할 수 있습니다. 프로시저를 정의할 때 매개 변수 배열의 요소 수를 몰라도 됩니다. 배열 크기는 프로시저를 호출할 때마다 개별적으로 결정 됩니다.  
   
 ## <a name="declaring-a-paramarray"></a>ParamArray 선언  
 
@@ -48,7 +49,7 @@ ms.locfileid: "91100661"
 > [!IMPORTANT]
 > 무한정 클 수 있는 배열을 처리할 때마다 응용 프로그램의 내부 용량을 overrunning 위험이 있습니다. 매개 변수 배열을 허용 하는 경우 호출 코드에서 전달 된 배열의 크기를 테스트 해야 합니다. 응용 프로그램에 너무 클 경우 적절 한 단계를 수행 합니다. 자세한 내용은 [배열](../arrays/index.md)을 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예제에서는 함수를 정의 하 고 호출 합니다 `calcSum` . `ParamArray`매개 변수에 대 한 한정자를 `args` 사용 하면 함수에서 다양 한 수의 인수를 사용할 수 있습니다.  
   
@@ -60,7 +61,7 @@ ms.locfileid: "91100661"
   
  [!code-vb[VbVbcnProcedures#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#49)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
 - [절차](./index.md)

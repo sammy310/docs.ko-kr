@@ -1,4 +1,5 @@
 ---
+description: '방법에 대 한 자세한 정보: 방법: 문자열을 패턴에 일치 (Visual Basic)'
 title: '방법: 패턴에 대해 문자열 비교'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: d8a3c363d1a443db4a0b7633e380562af1913aca
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f3e3426f85d420726571f03c88546d181cdccf97
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403448"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461946"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>방법: 패턴에 대해 문자열 비교(Visual Basic)
 
 [문자열 데이터 형식의](../../../language-reference/data-types/string-data-type.md) 식이 패턴을 충족 하는지 확인 하려는 경우 [Like 연산자](../../../language-reference/operators/like-operator.md)를 사용할 수 있습니다.
 
-`Like`두 개의 피연산자를 사용 합니다. 왼쪽 피연산자는 문자열 식이고 오른쪽 피연산자는 일치에 사용할 패턴이 포함 된 문자열입니다. `Like``Boolean`문자열 식이 패턴을 충족 하는지 여부를 나타내는 값을 반환 합니다.
+`Like` 두 개의 피연산자를 사용 합니다. 왼쪽 피연산자는 문자열 식이고 오른쪽 피연산자는 일치에 사용할 패턴이 포함 된 문자열입니다. `Like``Boolean`문자열 식이 패턴을 충족 하는지 여부를 나타내는 값을 반환 합니다.
 
 문자열 식의 각 문자를 특정 문자, 와일드 카드 문자, 문자 목록 또는 문자 범위에 대해 일치 시킬 수 있습니다. 패턴 문자열의 사양 위치는 문자열 식에서 일치 시킬 문자의 위치에 해당 합니다.
 
@@ -66,7 +67,7 @@ ms.locfileid: "84403448"
 
 ## <a name="matching-empty-strings"></a>빈 문자열 일치
 
-`Like`시퀀스를 `[]` 길이가 0 인 문자열 ()로 처리 합니다 `""` . 를 사용 하 여 `[]` 전체 문자열 식이 비어 있는지 여부를 테스트할 수 있지만 문자열 식의 특정 위치가 비어 있는지 테스트 하는 데 사용할 수는 없습니다. 빈 위치가 테스트 해야 하는 옵션 중 하나인 경우 두 번 이상 사용할 수 있습니다 `Like` .
+`Like` 시퀀스를 `[]` 길이가 0 인 문자열 ()로 처리 합니다 `""` . 를 사용 하 여 `[]` 전체 문자열 식이 비어 있는지 여부를 테스트할 수 있지만 문자열 식의 특정 위치가 비어 있는지 테스트 하는 데 사용할 수는 없습니다. 빈 위치가 테스트 해야 하는 옵션 중 하나인 경우 두 번 이상 사용할 수 있습니다 `Like` .
 
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>문자열 식의 문자를 문자 목록에 대해 일치 하거나 문자를 검색 하지 않으려면
 
@@ -80,7 +81,7 @@ ms.locfileid: "84403448"
 
     [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [비교 연산자](../../../language-reference/operators/comparison-operators.md)
 - [연산자 및 식](index.md)

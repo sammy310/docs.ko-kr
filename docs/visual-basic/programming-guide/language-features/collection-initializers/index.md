@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 컬렉션 이니셜라이저 (Visual Basic)'
 title: 컬렉션 이니셜라이저
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: 1d2d5adc7266faaa1636e568d6433429761eeaab
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: afae9278092934ead4572f16fb1ec4a29d631803
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414545"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475463"
 ---
 # <a name="collection-initializers-visual-basic"></a>컬렉션 이니셜라이저(Visual Basic)
 
-*컬렉션 이니셜라이저*는 컬렉션을 만들고 값의 초기 집합으로 채울 수 있도록 하는 약식 구문을 제공합니다. 컬렉션 이니셜라이저는 알려진 값(예: 메뉴 옵션 또는 범주 목록, 숫자 값의 초기 집합, 일 또는 월 이름과 같은 문자열의 정적 목록 또는 유효성 검사에 사용되는 상태 목록과 같은 지리적 위치)의 집합에서 컬렉션을 만드는 경우에 유용합니다.
+*컬렉션 이니셜라이저* 는 컬렉션을 만들고 값의 초기 집합으로 채울 수 있도록 하는 약식 구문을 제공합니다. 컬렉션 이니셜라이저는 알려진 값(예: 메뉴 옵션 또는 범주 목록, 숫자 값의 초기 집합, 일 또는 월 이름과 같은 문자열의 정적 목록 또는 유효성 검사에 사용되는 상태 목록과 같은 지리적 위치)의 집합에서 컬렉션을 만드는 경우에 유용합니다.
 
 항목 컬렉션에 대한 자세한 내용은 [컬렉션](../../concepts/collections.md)을 참조하세요.
 
@@ -26,7 +27,7 @@ ms.locfileid: "84414545"
 > [!NOTE]
 > C#에서도 컬렉션 이니셜라이저를 제공합니다. C# 컬렉션 이니셜라이저는 Visual Basic 컬렉션 이니셜라이저와 같은 기능을 제공합니다. C# 컬렉션 이니셜라이저에 대한 자세한 내용은 [개체 및 컬렉션 이니셜라이저](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)를 참조하세요.
 
-## <a name="syntax"></a>구문
+## <a name="syntax"></a>Syntax
 
 컬렉션 이니셜라이저는 다음 코드에서처럼 `From` 키워드 뒤에서 중괄호(`{}`)로 묶인 쉼표로 구분된 값 목록으로 구성됩니다.
 
@@ -75,17 +76,17 @@ ms.locfileid: "84414545"
 
 ## <a name="related-topics"></a>관련 항목
 
-|제목|Description|
+|제목|설명|
 |---|---|
 |[방법: 컬렉션 이니셜라이저에서 사용되는 확장 메서드 만들기 및 추가](how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|컬렉션 이니셜라이저의 값으로 컬렉션을 채우는 데 사용될 수 있는 `Add`라는 확장 메서드를 만드는 방법을 보여 줍니다.|
 |[방법: 컬렉션 이니셜라이저에서 사용되는 컬렉션 만들기](how-to-create-a-collection-used-by-a-collection-initializer.md)|`IEnumerable`을 구현하는 컬렉션 클래스에 `Add` 메서드를 포함하여 컬렉션 이니셜라이저를 사용할 수 있도록 설정하는 방법을 보여 줍니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [컬렉션](../../concepts/collections.md)
 - [배열](../arrays/index.md)
 - [개체 이니셜라이저: 명명된 형식 및 무명 형식](../objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [새 운영자](../../../language-reference/operators/new-operator.md)
+- [New 연산자](../../../language-reference/operators/new-operator.md)
 - [자동으로 구현된 속성](../procedures/auto-implemented-properties.md)
 - [방법: Visual Basic에서 배열 변수 초기화](../arrays/how-to-initialize-an-array-variable.md)
 - [지역 형식 유추](../variables/local-type-inference.md)

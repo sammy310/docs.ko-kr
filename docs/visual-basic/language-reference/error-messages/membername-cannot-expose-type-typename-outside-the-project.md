@@ -1,5 +1,5 @@
 ---
-description: "자세한 내용은 BC30909: ' '에서 ' ' <membername> <typename> 을 통해 프로젝트 외부에 ' ' 형식을 노출할 수 없습니다 <containertype> . '<containertypename>"
+description: "자세한 내용은 BC30909: ' '에서 ' ' <membername> <typename> 을 통해 프로젝트 외부에 ' ' 형식을 노출할 수 없습니다. <containertype> <containertypename>"
 title: "'<membername>'은(는) <typename> '<containertype>'을(를) 통해 '<containertypename>' 형식을 프로젝트 외부로 노출할 수 없습니다."
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
-ms.openlocfilehash: e2cc1d950b646bb787dfe714c39efea78a530129
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 8acff03c80316e0f2aa4157ea9cce399c2e6975d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99795861"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100470995"
 ---
 # <a name="bc30909-membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>BC30909: ' '는 ' ' \<membername> \<typename> 을 통해 프로젝트 외부의 ' \<containertype> ' 형식을 노출할 수 없습니다. \<containertypename>
 
@@ -37,6 +37,6 @@ End Class
 
 - 변수, 프로시저 매개 변수 또는 함수 반환의 액세스 수준을 해당 데이터 형식의 액세스 수준 보다 최소한 제한적으로 변경 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic의 액세스 수준](../../programming-guide/language-features/declared-elements/access-levels.md)

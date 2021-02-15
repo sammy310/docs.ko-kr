@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: 관련 상수 값 그룹화 (Visual Basic)'
 title: '방법: 관련 상수 값 그룹화'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic], constants
 - constants [Visual Basic], grouping together
 ms.assetid: 09d61da5-c940-4126-a79f-ba93c36653dc
-ms.openlocfilehash: 0f694aee722e8ce31f663ec9fe52a09a2eb2a958
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ddd60696d2c751810e49ecbcb537589bedc58abf
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058731"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471593"
 ---
 # <a name="how-to-group-related-constant-values-together-visual-basic"></a>방법: 관련 상수 값 그룹화(Visual Basic)
 
@@ -26,7 +27,7 @@ ms.locfileid: "91058731"
   
      [!code-vb[VbEnumsTask#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#1)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [열거형 및 이름 한정](enumerations-and-name-qualification.md)
 - [방법: 열거형 멤버 참조](how-to-refer-to-an-enumeration-member.md)

@@ -1,16 +1,17 @@
 ---
+description: '다음에 대 한 자세한 정보: 보간된 문자열 (Visual Basic 참조)'
 title: 보간된 문자열
 ms.date: 10/31/2017
-ms.openlocfilehash: c427b48ce58a59ff3878f24f1989db6ac8c8239a
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: c054401070079bdf85181619ef43c246feea5e18
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805280"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429664"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>보간된 문자열 (Visual Basic 참조)
 
-문자열을 생성하는 데 사용됩니다.  보간된 문자열은 *보간된 식*이 포함된 템플릿 문자열과 유사합니다.  보간된 문자열은 포함하는 보간된 식을 해당 문자열 표현으로 바꾸는 문자열을 반환합니다. 이 기능은 Visual Basic 14 이상 버전에서 사용할 수 있습니다.
+문자열을 생성하는 데 사용됩니다.  보간된 문자열은 *보간된 식* 이 포함된 템플릿 문자열과 유사합니다.  보간된 문자열은 포함하는 보간된 식을 해당 문자열 표현으로 바꾸는 문자열을 반환합니다. 이 기능은 Visual Basic 14 이상 버전에서 사용할 수 있습니다.
 
 보간된 문자열의 인수는 [복합 형식 문자열](../../../../standard/base-types/composite-formatting.md#composite-format-string)보다 더 쉽게 이해할 수 있습니다.  예를 들어 보간된 문자열
 
@@ -32,9 +33,9 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 여기서
 
-- *필드 너비*는 필드의 문자 수를 나타내는 부호 있는 정수입니다. 양수이면 필드가 오른쪽에 맞춰지고, 음수이면 왼쪽에 맞춰집니다.
+- *필드 너비* 는 필드의 문자 수를 나타내는 부호 있는 정수입니다. 양수이면 필드가 오른쪽에 맞춰지고, 음수이면 왼쪽에 맞춰집니다.
 
-- *형식 문자열*은 형식을 지정할 개체 형식에 적합한 형식 문자열입니다. 예를 들어 값의 경우 <xref:System.DateTime> "d" 또는 "d"와 같은 [표준 날짜 및 시간 형식 문자열일](../../../../standard/base-types/standard-date-and-time-format-strings.md) 수 있습니다.
+- *형식 문자열* 은 형식을 지정할 개체 형식에 적합한 형식 문자열입니다. 예를 들어 값의 경우 <xref:System.DateTime> "d" 또는 "d"와 같은 [표준 날짜 및 시간 형식 문자열일](../../../../standard/base-types/standard-date-and-time-format-strings.md) 수 있습니다.
 
 > [!IMPORTANT]
 > 문자열을 시작하는 `$` 및 `"` 사이에 공백이 없어야 합니다. 이렇게 하면 컴파일러 오류가 발생 합니다.

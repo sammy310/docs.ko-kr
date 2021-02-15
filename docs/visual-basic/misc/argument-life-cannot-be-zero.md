@@ -1,15 +1,16 @@
 ---
+description: "자세한 정보: ' Life ' 인수는 0 일 수 없습니다."
 title: "'Life' 인수는 0일 수 없습니다."
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_LifeNEZero
 ms.assetid: c402da97-a2b2-4219-a83a-0cebbfdffef2
-ms.openlocfilehash: 280571b9f9c799305efd53359e079d25d16ffd03
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e07c31ab73d6ad3f055adcbf7f4f67d48311c6cd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087208"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474878"
 ---
 # <a name="argument-life-cannot-be-zero"></a>'Life' 인수는 0일 수 없습니다.
 
@@ -21,6 +22,6 @@ ms.locfileid: "91087208"
   
 - 이전 작업에서 식의 변수 특히, 다른 프로시저에서 해당 프로시저로 인수로 전달된 변수를 검사합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [값 또는 참조로 인수 전달](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

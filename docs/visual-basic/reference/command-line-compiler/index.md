@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic 명령줄 컴파일러'
 title: 명령줄 컴파일러
 ms.date: 02/20/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - compiler options, Visual Basic
 - Visual Basic compiler, options
 ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
-ms.openlocfilehash: 67606df833eeab17e878056d372a82ef95cdd24e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a3deb0a4ef18158bb85d357ef6e2655d28b9c732
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85840310"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100470176"
 ---
 # <a name="visual-basic-command-line-compiler"></a>Visual Basic 명령줄 컴파일러
 
@@ -31,4 +32,3 @@ Visual Studio IDE 내에서 프로그램을 컴파일하는 대신 사용할 수
 
 [Visual Basic 컴파일러 옵션 범주별 목록](compiler-options-listed-by-category.md)  
 기능 그룹의 컴파일러 옵션을 소개합니다.
-  

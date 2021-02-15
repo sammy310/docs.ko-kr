@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 개체 변수 값 (Visual Basic)'
 title: 개체 변수 값
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: 800b9754ce27cc6a494dd781d06f4bdca8a10e87
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3259a0b04ed629feea89c1a3e9dba69ed7d226f6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91080233"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481677"
 ---
 # <a name="object-variable-values-visual-basic"></a>개체 변수 값(Visual Basic)
 
@@ -22,7 +23,7 @@ ms.locfileid: "91080233"
 
  Visual Basic는 `Object` 다음 표와 같이 변수가 참조 하는 내용에 대 한 정보를 반환 하는 함수를 제공 합니다.  
   
-|함수|개체 변수가 참조 하는 경우 True를 반환 합니다.|  
+|기능|개체 변수가 참조 하는 경우 True를 반환 합니다.|  
 |--------------|---------------------------------------------------|  
 |<xref:Microsoft.VisualBasic.Information.IsArray%2A>|단일 값이 아닌 값의 배열입니다.|  
 |<xref:Microsoft.VisualBasic.Information.IsDate%2A>|날짜 [데이터 형식](../../../language-reference/data-types/date-data-type.md) 값 또는 날짜 및 시간 값으로 해석 될 수 있는 문자열입니다.|  
@@ -70,7 +71,7 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
 
  변수 배열을 선언 하 고 사용할 수 있습니다 `Object` . 이는 다양 한 데이터 형식 및 개체 클래스를 처리 해야 하는 경우에 유용 합니다. 배열의 모든 요소에는 동일한 선언 된 데이터 형식이 있어야 합니다. 이 데이터 형식을로 선언 하면 `Object` 개체와 클래스 인스턴스를 배열에 있는 다른 데이터 형식과 함께 저장할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [개체 변수](object-variables.md)
 - [개체 변수 선언](object-variable-declaration.md)
