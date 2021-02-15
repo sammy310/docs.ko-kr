@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 그룹을 사용 하 여 파일을 여러 파일로 분할 (LINQ) (Visual Basic)'
 title: '방법: 그룹을 사용하여 여러 파일로 파일 분할(LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: f6b11ab4b4fe11dbf1cb4cf07654b5ef3f6785ad
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 545b572e6cd2414823a46db9c757a1876b56a5a5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397715"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100465628"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>방법: 그룹을 사용 하 여 파일을 여러 파일로 분할 (LINQ) (Visual Basic)
 
@@ -120,7 +121,7 @@ End Class
 
 System.xml `Imports` 네임 스페이스에 대 한 문을 사용 하 여 Visual Basic 콘솔 응용 프로그램 프로젝트를 만듭니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [LINQ 및 문자열(Visual Basic)](linq-and-strings.md)
 - [LINQ 및 파일 디렉터리(Visual Basic)](linq-and-file-directories.md)

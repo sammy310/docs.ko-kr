@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 변수와 이름이 같은 변수 숨기기 (Visual Basic)'
 title: '방법: 사용자 변수와 이름이 같은 변수 숨기기'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: c1f4c2fbf339358be77e76468b1db94616bf04a2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c6699abdc163c6ae1a78f6035cd08439d1b029f0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357234"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429859"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>방법: 이름이 같은 변수 숨기기(Visual Basic)
 
@@ -35,7 +36,7 @@ ms.locfileid: "84357234"
 
     |변수의 영역|재정의할 수 있는 하위 영역|
     |-----------------------|-------------------------------------------|
-    |Module|모듈 내의 클래스|
+    |모듈|모듈 내의 클래스|
     |클래스|클래스 내의 하위 클래스<br /><br /> 클래스 내의 프로시저|
 
     해당 프로시저 내에서 프로시저 변수를 다시 정의할 수 없습니다 (예: `If` ... `End If` 생성 또는 `For` 루프).
@@ -105,7 +106,7 @@ ms.locfileid: "84357234"
 
 섀도잉 시 이름이 같은 변수의 버전이 두 개 이상 도입 되었습니다. 코드 문이 변수 이름을 참조 하는 경우 컴파일러가 참조를 확인 하는 버전은 코드 문의 위치 및 한정 된 문자열이 있는지 여부와 같은 요소에 따라 달라 집니다. 이로 인해 숨겨진 변수의 의도 하지 않은 버전을 참조 하는 위험이 늘어날 수 있습니다. 숨겨진 변수에 대 한 모든 참조를 정규화 하 여이 위험을 낮출 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [References to Declared Elements](references-to-declared-elements.md)
 - [Visual Basic에서 숨김](shadowing.md)

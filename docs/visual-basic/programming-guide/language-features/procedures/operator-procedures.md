@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연산자 프로시저 (Visual Basic)'
 title: 연산자 프로시저
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: a1dd183570c8aa50efff85bdaebef90bd3b0120f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 836eeb2e705a96c49b5fa53e277ccf025d1915b2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364320"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100479961"
 ---
 # <a name="operator-procedures-visual-basic"></a>연산자 프로시저(Visual Basic)
 
-연산자 프로시저는 `*` `<>` `And` 사용자가 정의한 클래스 또는 구조체에서 표준 연산자 (예:, 또는)의 동작을 정의 하는 일련의 Visual Basic 문입니다. 이를 *연산자 오버 로드*라고도 합니다.
+연산자 프로시저는 `*` `<>` `And` 사용자가 정의한 클래스 또는 구조체에서 표준 연산자 (예:, 또는)의 동작을 정의 하는 일련의 Visual Basic 문입니다. 이를 *연산자 오버 로드* 라고도 합니다.
 
 ## <a name="when-to-define-operator-procedures"></a>연산자 프로시저를 정의 하는 경우
 
@@ -88,7 +89,7 @@ End Operator
 
 [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [하위 프로시저](./sub-procedures.md)

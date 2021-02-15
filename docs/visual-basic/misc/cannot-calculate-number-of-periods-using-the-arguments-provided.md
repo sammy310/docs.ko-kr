@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: 제공 된 인수를 사용 하 여 기간 수를 계산할 수 없습니다.'
 title: 지정한 인수를 사용하여 기간을 계산할 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_CannotCalculateNPer
 ms.assetid: a96fed1c-73e6-4a2b-9906-0190bc3d4c3c
-ms.openlocfilehash: aaf272dcad8fc5398f538d1dcb39db4d37ac435e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 211c9a4fe068acfd0624c0684d3330caedceef2f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059862"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100460724"
 ---
 # <a name="cannot-calculate-number-of-periods-using-the-arguments-provided"></a>지정한 인수를 사용하여 기간을 계산할 수 없습니다.
 

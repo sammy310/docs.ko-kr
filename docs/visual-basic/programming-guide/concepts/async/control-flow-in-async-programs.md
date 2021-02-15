@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 비동기 프로그램의 제어 흐름 (Visual Basic)'
 title: 비동기 프로그램의 제어 흐름
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 0c479b9dd2a691b1b353fac54ee3320a895b1c7f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bf0ca6a083971cb02cfb6dff2dfcaaabd5405b36
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396664"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428248"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>비동기 프로그램의 제어 흐름(Visual Basic)
 
@@ -101,11 +102,11 @@ Length of the downloaded string: 33946.
 
 ### <a name="download-the-program"></a>프로그램 다운로드
 
-[Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)(Async 샘플: 비동기 프로그램의 제어 흐름(C# 및 Visual Basic))에서 이 항목에 대한 애플리케이션을 다운로드할 수 있습니다. 다음 단계에서 프로그램을 열고 실행합니다.
+[비동기 샘플: 비동기 프로그램의 제어 흐름](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)에서 이 항목의 애플리케이션을 다운로드할 수 있습니다. 다음 단계에서 프로그램을 열고 실행합니다.
 
 1. 다운로드한 파일의 압축을 풀고 Visual Studio를 시작합니다.
 
-2. 메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.
+2. 메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션** 을 선택합니다.
 
 3. 압축을 푼 샘플 코드가 포함된 폴더로 이동하고, 솔루션(.sln) 파일을 열고, F5 키를 선택하여 프로젝트를 빌드하고 실행합니다.
 
@@ -117,19 +118,19 @@ Length of the downloaded string: 33946.
 
 1. Visual Studio를 시작합니다.
 
-2. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.
+2. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트** 를 차례로 선택합니다.
 
     **새 프로젝트** 대화 상자가 열립니다.
 
-3. **설치 된 템플릿** 창에서 **Visual Basic**을 선택한 다음 프로젝트 형식 목록에서 **WPF 응용 프로그램** 을 선택 합니다.
+3. **설치 된 템플릿** 창에서 **Visual Basic** 을 선택한 다음 프로젝트 형식 목록에서 **WPF 응용 프로그램** 을 선택 합니다.
 
 4. 프로젝트의 이름으로 `AsyncTracer`를 입력한 다음 **확인** 단추를 선택합니다.
 
-    **솔루션 탐색기**에 새 프로젝트가 표시됩니다.
+    **솔루션 탐색기** 에 새 프로젝트가 표시됩니다.
 
 5. Visual Studio 코드 편집기에서 **MainWindow.xaml** 탭을 선택합니다.
 
-    탭이 표시되지 않는 경우 **솔루션 탐색기**에서 MainWindow.xaml의 바로 가기 메뉴를 열고 **코드 보기**를 선택합니다.
+    탭이 표시되지 않는 경우 **솔루션 탐색기** 에서 MainWindow.xaml의 바로 가기 메뉴를 열고 **코드 보기** 를 선택합니다.
 
 6. MainWindow.xaml의 **XAML** 보기에서 코드를 다음 코드로 바꿉니다.
 
@@ -151,7 +152,7 @@ Length of the downloaded string: 33946.
 
 7. <xref:System.Net.Http>에 대한 참조를 추가합니다.
 
-8. **솔루션 탐색기**에서 mainwindow.xaml의 바로 가기 메뉴를 열고 **코드 보기**를 선택 합니다.
+8. **솔루션 탐색기** 에서 mainwindow.xaml의 바로 가기 메뉴를 열고 **코드 보기** 를 선택 합니다.
 
 9. Mainwindow.xaml에서 코드를 다음 코드로 바꿉니다.
 
@@ -218,7 +219,7 @@ Length of the downloaded string: 33946.
     End Class
     ```
 
-10. F5 키를 선택하여 프로그램을 실행한 후 **시작** 단추를 선택합니다.
+10. F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.
 
     다음과 같은 출력이 표시 됩니다.
 
@@ -288,7 +289,7 @@ Dim urlContents As String = Await getStringTask
 
 다음 이미지에서는에서로의 제어 흐름과 `client.GetStringAsync` `getStringTask` `getStringTask` wait 연산자의 응용 프로그램을 만드는 방법에 대 한 제어 흐름을 보여 줍니다.
 
-![3 단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-3")
+![3단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")
 
 await 식은 `client.GetStringAsync`가 반환될 때까지 `AccessTheWebAsync`를 일시 중단합니다. 그리고 제어는 `AccessTheWebAsync`의 호출자, `startButton_Click`으로 반환됩니다.
 
@@ -323,7 +324,7 @@ Dim contentLength As Integer = Await getLengthTask
 
 다음 그림에서 화살표는 `AccessTheWebAsync`의 await 식에서 `getLengthTask`에 대한 값 할당으로의 제어 흐름에 이어 `getLengthTask`가 대기 상태가 될 때까지 `startButton_Click`의 일반적인 처리를 보여 줍니다.
 
-![4 단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-4")
+![4단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")
 
 ### <a name="step-five"></a>5단계
 
@@ -340,7 +341,7 @@ return 문의 피연산자, `urlContents.Length`는 `AccessTheWebAsync`가 반�
 
 다음 그림은 `client.GetStringAsync`(및 `getStringTask`)가 완료된 후 제어의 전송을 보여 줍니다.
 
-![5단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-5")
+![5단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")
 
 `AccessTheWebAsync`는 완료될 때까지 실행되고 제어는 완료를 기다리고 있는 `startButton_Click`으로 반환됩니다.
 
@@ -365,11 +366,11 @@ Dim contentLength As Integer = Await getLengthTask
 
 다음 그림은 `AccessTheWebAsync`에서 `startButton_Click`로의 제어 반환을 보여 줍니다.
 
-![6단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-6")
+![6단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](index.md)
 - [비동기 반환 형식(Visual Basic)](async-return-types.md)
 - [연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)(Async 샘플: 비동기 프로그램의 제어 흐름(C# 및 Visual Basic))
+- [비동기 샘플: 비동기 프로그램의 제어 흐름(C# 및 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

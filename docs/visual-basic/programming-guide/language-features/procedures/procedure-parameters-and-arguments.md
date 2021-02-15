@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 프로시저 매개 변수 및 인수 (Visual Basic)'
 title: 프로시저 매개 변수 및 인수
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: c7f8eb1fa4e1fa3d87474d048d5a60994b0b7fc5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c2239c76450f503e74dbf5f191cd212e05d11600
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071276"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423162"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>프로시저 매개 변수 및 인수(Visual Basic)
 
@@ -31,9 +32,9 @@ ms.locfileid: "91071276"
   
  *매개 변수* 는 프로시저에서 호출할 때 제공할 것으로 예상 하는 값을 나타냅니다. 프로시저의 선언에서 매개 변수를 정의 합니다.  
   
- 매개 변수 없이 프로시저를 정의 하거나, 매개 변수를 하나 이상 정의할 수 있습니다. 매개 변수를 지정 하는 프로시저 정의의 일부를 *매개 변수 목록*이라고 합니다.  
+ 매개 변수 없이 프로시저를 정의 하거나, 매개 변수를 하나 이상 정의할 수 있습니다. 매개 변수를 지정 하는 프로시저 정의의 일부를 *매개 변수 목록* 이라고 합니다.  
   
- *인수* 는 프로시저를 호출할 때 프로시저 매개 변수에 제공 하는 값을 나타냅니다. 호출 코드는 프로시저를 호출할 때 인수를 제공 합니다. 인수를 지정 하는 프로시저 호출의 일부를 *인수 목록*이라고 합니다.  
+ *인수* 는 프로시저를 호출할 때 프로시저 매개 변수에 제공 하는 값을 나타냅니다. 호출 코드는 프로시저를 호출할 때 인수를 제공 합니다. 인수를 지정 하는 프로시저 호출의 일부를 *인수 목록* 이라고 합니다.  
   
  다음 그림에서는 `safeSquareRoot` 서로 다른 두 위치에서 프로시저를 호출 하는 코드를 보여 줍니다. 첫 번째 호출은 변수 값 `x` (4.0)을 매개 변수에 전달 `number` 하 고 `root` (2.0)의 반환 값이 변수에 할당 됩니다 `y` . 두 번째 호출은 리터럴 값 9.0를에 전달 하 `number` 고 반환 값 (3.0)을 변수에 할당 합니다 `z` .  
   
@@ -61,7 +62,7 @@ ms.locfileid: "91071276"
 
  *제네릭 프로시저* 는 일반 매개 변수 외에도 하나 이상의 *형식 매개 변수도* 정의 합니다. 제네릭 프로시저를 사용 하면 호출 코드가 프로시저를 호출할 때마다 서로 다른 데이터 형식을 전달할 수 있으므로 각 개별 호출의 요구 사항에 맞게 데이터 형식을 조정할 수 있습니다. [Generic Procedures in Visual Basic](../data-types/generic-procedures.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [하위 프로시저](./sub-procedures.md)

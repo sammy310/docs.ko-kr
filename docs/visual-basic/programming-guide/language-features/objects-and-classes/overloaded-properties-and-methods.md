@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 오버 로드 된 속성 및 메서드 (Visual Basic)'
 title: 오버 로드 된 속성 및 메서드
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - method overloading
 - Overloads keyword [Visual Basic], overloaded members
 ms.assetid: b686fb97-e7d7-4001-afaa-6650cba08f0d
-ms.openlocfilehash: 1672f12773ece012c580253b6dafbf9d0ac8f07c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fb46876d346ad5f391241aee0b07175df290e656
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84389154"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100438777"
 ---
 # <a name="overloaded-properties-and-methods-visual-basic"></a>오버 로드 된 속성 및 메서드 (Visual Basic)
 
@@ -51,13 +52,13 @@ ms.locfileid: "84389154"
 
 `Overloads`오버 로드 하는 경우 키워드는 선택 사항 이지만 오버 로드 된 멤버에 키워드를 사용 하는 경우에는 `Overloads` 이름이 같은 오버 로드 된 다른 모든 멤버도이 키워드를 지정 해야 합니다.
 
-파생 된 클래스는 동일한 매개 변수 및 매개 변수 형식이 있는 멤버로 상속 된 멤버를 오버 로드할 수 있습니다 .이 프로세스는 *이름 및 시그니처로 섀도잉*이라고 합니다. `Overloads`이름 및 시그니처로 숨길 때 키워드를 사용 하는 경우 기본 클래스의 구현 대신 파생 클래스의 멤버 구현이 사용 되며, 해당 멤버에 대 한 다른 모든 오버 로드는 파생 클래스의 인스턴스에서 사용할 수 있습니다.
+파생 된 클래스는 동일한 매개 변수 및 매개 변수 형식이 있는 멤버로 상속 된 멤버를 오버 로드할 수 있습니다 .이 프로세스는 *이름 및 시그니처로 섀도잉* 이라고 합니다. `Overloads`이름 및 시그니처로 숨길 때 키워드를 사용 하는 경우 기본 클래스의 구현 대신 파생 클래스의 멤버 구현이 사용 되며, 해당 멤버에 대 한 다른 모든 오버 로드는 파생 클래스의 인스턴스에서 사용할 수 있습니다.
 
-`Overloads`동일한 매개 변수 및 매개 변수 형식을 가진 멤버를 사용 하 여 상속 된 멤버를 오버 로드할 때 키워드를 생략 하면 *이름으로 숨김과*오버 로드를 호출 합니다. 이름으로 숨김은 멤버의 상속 된 구현을 대체 하 고 파생 클래스의 인스턴스와 다른 모든 오버 로드를 사용할 수 없게 만듭니다.
+`Overloads`동일한 매개 변수 및 매개 변수 형식을 가진 멤버를 사용 하 여 상속 된 멤버를 오버 로드할 때 키워드를 생략 하면 *이름으로 숨김과* 오버 로드를 호출 합니다. 이름으로 숨김은 멤버의 상속 된 구현을 대체 하 고 파생 클래스의 인스턴스와 다른 모든 오버 로드를 사용할 수 없게 만듭니다.
 
 `Overloads`및 `Shadows` 한정자는 동일한 속성 또는 메서드와 함께 사용할 수 없습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 다음 예에서는 `String` `Decimal` 달러 금액의 또는 표현을 허용 하 고 판매 세금을 포함 하는 문자열을 반환 하는 오버 로드 된 메서드를 만듭니다.
 
@@ -77,9 +78,9 @@ ms.locfileid: "84389154"
 
 5. 프로젝트를 실행 하 고 폼의 단추를 클릭 하 여 오버 로드 된 프로시저를 테스트 합니다 `ShowTax` .
 
-런타임에는 컴파일러에서 사용 되는 매개 변수와 일치 하는 오버 로드 된 적절 한 함수를 선택 합니다. 단추를 클릭 하면 오버 로드 된 메서드는 `Price` 문자열 및 메시지 "Price가 문자열인 매개 변수를 사용 하 여 먼저 호출 됩니다. 세금은 $5.12이 표시 됩니다. `TaxAmount`는 두 번째 시간 값을 사용 하 여 호출 되 `Decimal` 고 메시지 "Price는 10 진수입니다. 세금은 $5.12이 표시 됩니다.
+런타임에는 컴파일러에서 사용 되는 매개 변수와 일치 하는 오버 로드 된 적절 한 함수를 선택 합니다. 단추를 클릭 하면 오버 로드 된 메서드는 `Price` 문자열 및 메시지 "Price가 문자열인 매개 변수를 사용 하 여 먼저 호출 됩니다. 세금은 $5.12이 표시 됩니다. `TaxAmount` 는 두 번째 시간 값을 사용 하 여 호출 되 `Decimal` 고 메시지 "Price는 10 진수입니다. 세금은 $5.12이 표시 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [개체 및 클래스](index.md)
 - [Visual Basic에서 숨김](../declared-elements/shadowing.md)

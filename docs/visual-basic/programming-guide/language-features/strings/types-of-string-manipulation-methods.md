@@ -1,16 +1,17 @@
 ---
+description: 자세히 알아보기:의 문자열 조작 메서드 형식 Visual Basic
 title: 문자열 조작 메서드 형식
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], manipulating [Visual Basic]
 - string manipulation
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
-ms.openlocfilehash: c44f02880858b8a9fc1f0e70c3226623d05baa3a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 02b127d5cd023a8bd73a3042a8bcec340ce63ed8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072472"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429756"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Visual Basic의 문자열 조작 메서드 유형
 
@@ -32,7 +33,7 @@ ms.locfileid: "91072472"
   
 #### <a name="shared-methods"></a>공유 메서드  
 
- 공유 메서드는 `String` 클래스 자체에서 생기고 해당 클래스의 인스턴스가 작동 하지 않아도 되는 메서드입니다. 이러한 메서드는 클래스의 인스턴스가 아닌 클래스 이름 ()으로 정규화 될 수 있습니다 `String` `String` . 다음은 그 예입니다.  
+ 공유 메서드는 `String` 클래스 자체에서 생기고 해당 클래스의 인스턴스가 작동 하지 않아도 되는 메서드입니다. 이러한 메서드는 클래스의 인스턴스가 아닌 클래스 이름 ()으로 정규화 될 수 있습니다 `String` `String` . 예를 들면 다음과 같습니다.  
   
  [!code-vb[VbVbalrStrings#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#45)]  
   
@@ -40,7 +41,7 @@ ms.locfileid: "91072472"
   
 #### <a name="instance-methods"></a>인스턴스 메서드  
 
- 이와 대조적으로 인스턴스 메서드는의 특정 인스턴스에서 생기고 `String` 인스턴스 이름으로 한정 되어야 합니다. 다음은 그 예입니다.  
+ 이와 대조적으로 인스턴스 메서드는의 특정 인스턴스에서 생기고 `String` 인스턴스 이름으로 한정 되어야 합니다. 예를 들면 다음과 같습니다.  
   
  [!code-vb[VbVbalrStrings#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#46)]  
   
@@ -48,6 +49,6 @@ ms.locfileid: "91072472"
   
  자세한 내용은 클래스에 대 한 설명서를 참조 하세요 <xref:System.String> .  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic의 문자열 소개](introduction-to-strings.md)
