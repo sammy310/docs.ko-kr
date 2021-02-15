@@ -1,19 +1,20 @@
 ---
+description: '자세한 정보: 대리자의 가변성 사용 (Visual Basic)'
 title: 대리자에서 가변성 사용
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: 842392a1342f7d3689d4d1f2a2adb7470eeda05e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d146460c515c1579a9a98d31aa48441f9584b83b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375786"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100482002"
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a>대리자의 가변성 사용(Visual Basic)
 
 메서드를 대리자에 할당하면 *공변성(covariance)* 및 *반공변성(Contravariance)* 은 대리자 형식과 메서드 시그니처의 일치를 확인하는 유연성을 제공합니다. 공변성(covariance)은 메서드가 대리자에 정의된 것보다 더 많은 수의 파생된 형식을 반환하도록 허용합니다. 반공변성(contravariance)은 메서드가 대리자 형식보다 더 적은 수의 파생된 매개 변수 형식을 갖도록 허용합니다.
 
-## <a name="example-1-covariance"></a>예제 1: 공변성(Covariance)
+## <a name="example-1-covariance"></a>예제 1: 공변성
 
 ### <a name="description"></a>설명
 
@@ -44,7 +45,7 @@ Class Test
 End Class
 ```
 
-## <a name="example-2-contravariance"></a>예제 2: 반공변성(Contravariance)
+## <a name="example-2-contravariance"></a>예제 2: 반공변성(contravariance)
 
 ### <a name="description"></a>설명
 
@@ -86,7 +87,7 @@ Private Sub Form1_Load(ByVal sender As System.Object,
 End Sub
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [대리자의 가변성(Visual Basic)](variance-in-delegates.md)
 - [Func 및 Action 제네릭 대리자에 가변성 사용(Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)

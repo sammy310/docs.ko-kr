@@ -1,4 +1,5 @@
 ---
+description: '에 대 한 자세한 정보: 연산자 및 식 Visual Basic'
 title: 연산자 및 식
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: 01e3a53e998774caee8863675b9151a140606852
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 526051e16da29cd139abf587e1393ad331fdcdaa
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071679"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471398"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic의 연산자 및 식
 
-*연산자*는 값을 가지는 하나 이상의 코드 요소에서 작업을 수행하는 코드 요소입니다. 값 요소는 변수, 상수, 리터럴, 속성을 포함하고 `Function` 및 `Operator` 프로시저와 식에서 반환됩니다.  
+*연산자* 는 값을 가지는 하나 이상의 코드 요소에서 작업을 수행하는 코드 요소입니다. 값 요소는 변수, 상수, 리터럴, 속성을 포함하고 `Function` 및 `Operator` 프로시저와 식에서 반환됩니다.  
   
- *식*은 연산자와 결합된 일련의 값 요소로서, 새 값을 생성합니다. 연산자는 계산, 비교 또는 기타 작업을 수행하여 값 요소에 적용됩니다.  
+ *식* 은 연산자와 결합된 일련의 값 요소로서, 새 값을 생성합니다. 연산자는 계산, 비교 또는 기타 작업을 수행하여 값 요소에 적용됩니다.  
   
 ## <a name="types-of-operators"></a>연산자 형식  
 
@@ -35,7 +36,7 @@ ms.locfileid: "91071679"
   
 - [Visual Basic의 논리 및 비트 연산자](logical-and-bitwise-operators.md)는 `Boolean` 또는 숫자 값을 결합하고 값과 같은 데이터 형식의 결과를 반환합니다.  
   
- 연산자와 결합된 값 요소를 해당 연산자의 *피연산자*라고 합니다. *문*을 구성하는 대입 연산자를 제외하고 값 요소와 결합된 연산자는 식을 구성합니다. 자세한 내용은 [문](../statements.md)을 참조하십시오.  
+ 연산자와 결합된 값 요소를 해당 연산자의 *피연산자* 라고 합니다. *문* 을 구성하는 대입 연산자를 제외하고 값 요소와 결합된 연산자는 식을 구성합니다. 자세한 내용은 [문](../statements.md)을 참조하십시오.  
   
 ## <a name="evaluation-of-expressions"></a>식 평가  
 
@@ -65,7 +66,7 @@ ms.locfileid: "91071679"
   
  앞의 예제에서 Visual Basic는 대입 연산자의 오른쪽에 있는 식에서 작업 ( `=` )을 수행 하 고 결과 값을 왼쪽의 변수에 할당 합니다 `x` . 식에 결합할 수 있는 연산자 수에는 실제로 제한이 없지만 예상하는 결과를 얻으려면 [Visual Basic의 연산자 우선 순위](../../../language-reference/operators/operator-precedence.md)를 이해해야 합니다.  
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [연산자](../../../language-reference/operators/index.md)
 - [연산자의 효율적 결합](efficient-combination-of-operators.md)

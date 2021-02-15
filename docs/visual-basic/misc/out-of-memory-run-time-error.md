@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 메모리 부족 (Visual Basic Run-Time 오류)'
 title: 메모리가 부족합니다(Visual Basic 런타임 오류).
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID7
 ms.assetid: 96cc12e1-d40a-425f-b365-1ac39e5ddcb0
-ms.openlocfilehash: 58e673ffe0983c91fcca3fff8f867042f51eafc0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 152fabd55b8a5724a12f24bc2a078d622a2689bf
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084192"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100478856"
 ---
 # <a name="out-of-memory-visual-basic-run-time-error"></a>메모리가 부족합니다(Visual Basic 런타임 오류).
 
@@ -27,6 +28,6 @@ ms.locfileid: "91084192"
   
 5. 공용 변수 수를 줄입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
-- [오류 형식](../programming-guide/language-features/error-types.md)
+- [오류 유형](../programming-guide/language-features/error-types.md)

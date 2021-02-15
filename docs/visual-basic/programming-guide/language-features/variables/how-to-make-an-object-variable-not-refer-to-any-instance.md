@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 방법: 개체 변수가 인스턴스를 참조 하지 않도록 설정 (Visual Basic)'
 title: '방법: 개체 변수가 인스턴스를 참조하지 않도록 만들기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Nothing keyword [Visual Basic], variable assignment
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
-ms.openlocfilehash: 61bb06401ebd1e479c9256a80a12d87240831063
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2897720b52e708847fdd139be512e578a7420241
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91080257"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481872"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>방법: 개체 변수가 인스턴스를 참조하지 않도록 설정(Visual Basic)
 
@@ -34,10 +35,10 @@ ms.locfileid: "91080257"
 
  기밀 데이터 나 중요 한 데이터가 포함 된 개체에 대해 개체 변수를 사용 하는 경우 `Nothing` 해당 개체 중 하나를 적극적으로 처리 하지 않을 때 변수를로 설정할 수 있습니다. 이렇게 하면 악의적인 코드가 데이터에 액세스 하는 가능성을 줄일 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.NullReferenceException>
 - [개체 변수](object-variables.md)
 - [개체 변수 할당](object-variable-assignment.md)
-- [없는지](../../../language-reference/nothing.md)
-- [Try ... Catch ... Finally 문](../../../language-reference/statements/try-catch-finally-statement.md)
+- [Nothing](../../../language-reference/nothing.md)
+- [Try...Catch...Finally 문](../../../language-reference/statements/try-catch-finally-statement.md)

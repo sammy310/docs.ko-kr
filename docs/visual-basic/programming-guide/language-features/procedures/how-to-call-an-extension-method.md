@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: 방법: 확장 메서드 호출 (Visual Basic)'
 title: '방법: 확장 메서드 호출'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 38d6e8534283f475be2409f4b7c74ef48f1f248b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ec5217526eb0cb28d172ab917df08a8bfe87fe95
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91074994"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471385"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>방법: 확장명 메서드 호출(Visual Basic)
 
@@ -63,7 +64,7 @@ End Module
 
      이 시간에 대 한 결과입니다 `or not!!!` .
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
  다음 코드는 간단한 확장 메서드를 만들고 사용 하는 전체 예제입니다.
 
@@ -96,7 +97,7 @@ End Module
 ' Goodbye?
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [방법: 확장 메서드 쓰기](./how-to-write-an-extension-method.md)
 - [확장명 메서드](./extension-methods.md)

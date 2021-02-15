@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: Visual Basic에서 MaskedTextBox 컨트롤을 사용 하 여 정규식 사용'
 title: MaskedTextBox 컨트롤과 함께 정규식 사용
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 493da7b8583b5cc73a9832afa81b7b1d84742f2d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 68ffca6761d8f0634634ea2755786d3c0c02a6e2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072433"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471138"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic에서 MaskedTextBox 컨트롤과 함께 정규식 사용
 
@@ -51,14 +52,14 @@ ms.locfileid: "91072433"
   
  다음 표에서는 정규식 4 개와 각 정규식에 해당 하는 마스크를 비교 합니다.  
   
-|정규식|Mask|메모|  
+|정규식|Mask|참고|  
 |------------------------|----------|-----------|  
 |`\d{2}/\d{2}/\d{4}`|`00/00/0000`|`/`마스크의 문자는 논리적 날짜 구분 기호 이며, 사용자에 게 응용 프로그램의 현재 문화권에 적절 한 날짜 구분 기호로 표시 됩니다.|  
 |`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|미국 형식으로 된 날짜 (일, 월 약어 및 연도)로, 세 문자 월 약어가 앞에 대문자를 표시 하 고 두 개의 소문자를 표시 합니다.|  
 |`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|미국 전화 번호, 지역 번호 (선택 사항). 사용자가 선택적 문자를 입력 하지 않으려는 경우 공백을 입력 하거나 처음 0으로 표시 되는 마스크의 위치에 직접 마우스 포인터를 놓을 수 있습니다.|  
 |`$\d{6}.00`|`$999,999.00`|0 ~ 999999 범위의 통화 값입니다. 통화, 1000, 10 진수 문자는 런타임에 해당 하는 문화권 관련 항목으로 바뀝니다.|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 서로 다른 파일의 콘텐츠 조인 (LINQ) (Visual Basic)'
 title: '방법: 서로 다른 파일의 콘텐츠 조인(LINQ)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 7dac73a16d0d3fbf409f58628bc5c69716dcee14
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a0718463a36e1a3e1e312fbe0c0947e39648846d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398372"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468514"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>방법: 서로 다른 파일의 콘텐츠 조인 (LINQ) (Visual Basic)
 
@@ -120,7 +121,7 @@ End Class
 ' 12 total names in list
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [LINQ 및 문자열(Visual Basic)](linq-and-strings.md)
 - [LINQ 및 파일 디렉터리(Visual Basic)](linq-and-file-directories.md)

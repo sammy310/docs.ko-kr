@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 방법: 새 변수 만들기 (Visual Basic)'
 title: '방법: 새 변수 만들기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Dim statement [Visual Basic]
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
-ms.openlocfilehash: 501c8f3aff4c5b204d231bdc26213e13d125a7cf
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b473a247bc5b4d9c1d65f4721ecba3621b232e27
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410531"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481963"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>방법: 새 변수 만들기(Visual Basic)
 
@@ -56,7 +57,7 @@ ms.locfileid: "84410531"
     Public Static newCustomer As New Customer
     ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [변수](index.md)
 - [변수 선언](variable-declaration.md)

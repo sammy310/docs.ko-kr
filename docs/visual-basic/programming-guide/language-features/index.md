@@ -1,16 +1,17 @@
 ---
+description: Visual Basic 언어 기능에 대해 자세히 알아보세요.
 title: 언어 기능
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: ae226520ecd7dff09023bcc88e610ff400c4019d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9d02d6e17c0f2bea852130c5e975a1ed315a0aba
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91057860"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468475"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 언어 기능
 
@@ -37,7 +38,7 @@ ms.locfileid: "91057860"
  [데이터 형식](data-types/index.md)  
  프로그래밍 요소가 보유할 수 있는 데이터 종류와 데이터가 저장되는 방식을 설명합니다.  
   
- [선언 된 요소](declared-elements/index.md)  
+ [선언 요소](declared-elements/index.md)  
  선언할 수 있는 프로그래밍 요소, 해당 이름과 특성, 컴파일러가 해당 참조를 확인하는 방법을 설명합니다.  
   
  [대리자](delegates/index.md)  
@@ -56,7 +57,7 @@ ms.locfileid: "91057860"
  인터페이스의 정의와 애플리케이션에서 사용할 수 있는 방법을 설명합니다.  
   
  [LINQ](linq/index.md)  
- LINQ (언어 통합 쿼리) 기능 및 프로그래밍을 소개 하는 항목에 대 한 링크를 제공 합니다.  
+ LINQ (Language-Integrated Query) 기능 및 프로그래밍을 소개 하는 항목에 대 한 링크를 제공 합니다.  
   
  [개체 및 클래스](objects-and-classes/index.md)  
  개체 및 클래스의 개요, 사용 방법, 서로 간의 관계, 개체와 클래스가 노출하는 속성, 메서드 및 이벤트의 개요를 제공합니다.  
@@ -79,7 +80,7 @@ ms.locfileid: "91057860"
  [XML](xml/index.md)  
  Visual Basic에서 XML을 사용하는 방법을 설명하는 항목에 대한 링크를 제공합니다.  
   
-## <a name="related-sections"></a>관련 섹션
+## <a name="related-sections"></a>관련 단원
 
  [컬렉션](../concepts/collections.md)  
  .NET Framework에서 제공되는 컬렉션의 형식 중 일부에 대해 설명 합니다. 간단한 컬렉션 및 키/값 쌍의 컬렉션을 사용하는 방법을 보여 줍니다.  

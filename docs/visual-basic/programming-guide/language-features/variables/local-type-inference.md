@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 지역 형식 유추 (Visual Basic)'
 title: 지역 형식 유추
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: 3979396d32aa5d3b853aa087d43f70d5987e510b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 50be8544229360287d2aef27f31360d7140640ac
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410401"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481703"
 ---
 # <a name="local-type-inference-visual-basic"></a>지역 형식 유추(Visual Basic)
 
@@ -63,7 +64,7 @@ Visual Basic 컴파일러는 *형식 유추* 를 사용 하 여 절 없이 선�
 
 ## <a name="option-infer"></a>Option Infer
 
-`Option Infer`특정 파일에서 로컬 형식 유추가 허용 되는지 여부를 지정할 수 있습니다. 옵션을 사용 하도록 설정 하거나 차단 하려면 파일의 시작 부분에 다음 문 중 하나를 입력 합니다.
+`Option Infer` 특정 파일에서 로컬 형식 유추가 허용 되는지 여부를 지정할 수 있습니다. 옵션을 사용 하도록 설정 하거나 차단 하려면 파일의 시작 부분에 다음 문 중 하나를 입력 합니다.
 
 `Option Infer On`
 
@@ -75,7 +76,7 @@ Visual Basic 컴파일러는 *형식 유추* 를 사용 하 여 절 없이 선�
 
 자세한 내용은 [Option 유추 문](../../../language-reference/statements/option-infer-statement.md) 및 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [익명 형식](../objects-and-classes/anonymous-types.md)
 - [초기 바인딩 및 런타임에 바인딩](../early-late-binding/index.md)

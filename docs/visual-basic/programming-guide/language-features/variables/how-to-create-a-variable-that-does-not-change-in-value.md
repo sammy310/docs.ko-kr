@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 방법: 값에서 변경 되지 않는 변수 만들기 (Visual Basic)'
 title: '방법: 값을 변경하지 않는 변수 만들기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 04e08784b5cfbdeb6db73b9b00fe9afa201bd06d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0392a27249de3bf604a73c8f8aaa16caf6f1c3e2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410518"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481937"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>방법: 값이 변경되지 않는 변수 만들기(Visual Basic)
 
@@ -44,7 +45,7 @@ ms.locfileid: "84410518"
 
     컴파일 시간에 값을 알 수 없거나 컴파일 타임에 단일 문에서이 값을 계산할 수 없는 경우 생성자에서 런타임에 해당 값을 할당할 수 있습니다. 이렇게 하려면 `ReadOnly` 클래스 또는 구조체 수준에서 변수를 선언 해야 합니다. 해당 클래스 또는 구조체에 대 한 생성자에서 변수의 고정 값을 계산 하 고 생성자에서 반환 하기 전에 변수에 할당 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [WriteOnly](../../../language-reference/modifiers/writeonly.md)
 - [Const 문](../../../language-reference/statements/const-statement.md)

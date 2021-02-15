@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 선언 된 요소 특성 (Visual Basic)'
 title: 선언 요소의 특징
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 36c55475b4930dc6c3202d52ef742072d5cee3e1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c441b5f55144bead5b11b1d5ddbd0119d6def86b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075280"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468462"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>선언된 요소 특성(Visual Basic)
 
@@ -39,25 +40,25 @@ ms.locfileid: "91075280"
 |요소|데이터 형식|수명|범위 <sup>1</sup>|액세스 수준|  
 |-------------|---------------|--------------|------------------------|------------------|  
 |변수|예|예|예|예|  
-|상수|예|아니요|예|예|  
-|열거형|예|아니요|예|예|  
-|구조체|아니요|아니요|예|예|  
+|상수|예|예|예|예|  
+|열거형|예|예|예|예|  
+|구조체|예|예|예|예|  
 |속성|예|예|예|예|  
 |메서드|아니요|예|예|예|  
-|프로시저 ( `Sub` 또는 `Function` )|아니요|예|예|예|  
-|프로시저 매개 변수|예|예|예|아니요|  
-|함수 반환|예|예|예|아니요|  
-|연산자|예|아니요|예|예|  
-|인터페이스|예|아니요|예|예|  
-|클래스|아니요|아니요|예|예|  
-|이벤트|아니요|아니요|예|예|  
-|대리자|예|아니요|예|예|  
+|프로시저 ( `Sub` 또는 `Function` )|예|예|예|예|  
+|프로시저 매개 변수|예|예|예|예|  
+|함수 반환|예|예|예|예|  
+|연산자|예|예|예|예|  
+|인터페이스|예|예|예|예|  
+|클래스|예|예|예|예|  
+|이벤트|예|예|예|예|  
+|대리자|예|예|예|예|  
   
- <sup>1</sup> 범위는 *표시 유형*이 라고도 합니다.  
+ <sup>1</sup> 범위는 *표시 유형* 이 라고도 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
-- [선언 된 요소](index.md)
+- [선언 요소](index.md)
 - [Declared Element Names](declared-element-names.md)
 - [References to Declared Elements](references-to-declared-elements.md)
 - [Visual Basic의 수명](lifetime.md)

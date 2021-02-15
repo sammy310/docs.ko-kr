@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 연습: 암호가 복잡 한지 확인 (Visual Basic)'
 title: 암호 복잡도 확인
 ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: 9597d7a9d6b68b8c91f32d97da3532f181585cf6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 608d9c7708058ca99196f2a06fd4ddd018aa0363
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072355"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471011"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>연습: 암호의 복합성 검사(Visual Basic)
 
@@ -47,7 +48,7 @@ ms.locfileid: "91072355"
   
 - 모든 기호가 키보드의 맨 위 행에서 입력 되는 암호를 허용 하지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Text.RegularExpressions.Regex>
 - [ASP.NET 웹 애플리케이션 보안](/previous-versions/aspnet/330a99hc(v=vs.100))

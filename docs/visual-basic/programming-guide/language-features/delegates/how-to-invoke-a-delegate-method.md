@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 방법: 대리자 메서드 호출 (Visual Basic)'
 title: '방법: 대리자 메서드 호출'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: f319727c007b93c7b334af0598f1b9f7c034144d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c5c20048969f2fef16b8b7f65e84a094a3f1cf9f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410723"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434474"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>방법: 대리자 메서드 호출(Visual Basic)
 
@@ -43,7 +44,7 @@ ms.locfileid: "84410723"
     End Sub
     ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [Delegate 문](../../../language-reference/statements/delegate-statement.md)
 - [대리자](index.md)

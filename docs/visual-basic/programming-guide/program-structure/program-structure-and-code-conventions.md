@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 프로그램 구조 및 코드 규칙 (Visual Basic)'
 title: 프로그램 구조 및 코드 규칙
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: ee61c676f3ff554267f6659453ec55e45df69aee
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7d4202ead0550cf54a80eac89c4a4274a22d0315
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072121"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468488"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>프로그램 구조 및 코드 규칙(Visual Basic)
 
@@ -79,7 +80,7 @@ ms.locfileid: "91072121"
  [Visual Basic 제한 사항](limitations.md)  
  Visual Basic 내에서 알려진 코딩 제한을 제거 하는 방법을 설명 합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 
  [글꼴 표시 및 코드 규칙](../../language-reference/typographic-and-code-conventions.md)  
  Visual Basic에 대 한 표준 코딩 규칙을 제공 합니다.  

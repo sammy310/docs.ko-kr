@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: Visual Basic의 변수 문제 해결'
 title: 변수 문제 해결
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: e2bcf0b779d98ea4b109ea6d33b69a15110d423c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c6348ee8eb13ccd19d83c2809d1684396b94be67
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91080168"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481638"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Visual Basic의 변수 문제 해결
 
@@ -36,7 +37,7 @@ ms.locfileid: "91080168"
   
 ## <a name="other-components-cannot-access-your-variable"></a>다른 구성 요소에서 사용자 변수에 액세스할 수 없습니다.  
 
- Visual Basic 이름은 *대/소문자를 구분*하지 않습니다. 따라서 컴파일러에서는 대/소문자만 다른 두 이름을 동일한 이름으로 간주합니다. 예를 들어, `ABC` 와 `abc` 는 동일한 선언 요소를 참조하는 것으로 간주합니다.  
+ Visual Basic 이름은 *대/소문자를 구분* 하지 않습니다. 따라서 컴파일러에서는 대/소문자만 다른 두 이름을 동일한 이름으로 간주합니다. 예를 들어, `ABC` 와 `abc` 는 동일한 선언 요소를 참조하는 것으로 간주합니다.  
   
  그러나, CLR(공용 언어 런타임)에서는 *대/소문자를 구분하는* 바인딩을 사용합니다. 그러므로, 어셈블리나 DLL을 작성하여 다른 어셈블리에서 이를 사용하게 되면 이름의 대/소문자가 구분됩니다. 예를 들어, `ABC`라는 이름의 요소를 포함하는 클래스를 정의하고 다른 어셈블리에서 공용 언어 런타임을 통해 이 클래스를 사용할 경우 해당 어셈블리에서 이 요소를 `ABC`로 참조해야 합니다. 클래스를 다시 컴파일하고 요소 이름을 `abc`로 변경하면 이 클래스를 사용하는 다른 어셈블리가 더 이상 이 요소에 액세스할 수 없습니다. 따라서, 어셈블리를 업데이트하여 릴리스하는 경우 공용 요소의 알파벳 대/소문자를 변경하지 않아야 합니다.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "91080168"
 
  이름은 같지만 범위가 다른 변수를 사용하지 않습니다. 다른 어셈블리나 프로젝트를 사용하는 경우에는 가능하면 이러한 외부 구성 요소에 정의된 이름을 사용하지 않습니다. 이름이 같은 변수가 두 개 이상 있는 경우 모든 참조를 해당 이름으로 한정해야 합니다. 자세한 내용은 [References to Declared Elements](../declared-elements/references-to-declared-elements.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [변수](index.md)
 - [변수 선언](variable-declaration.md)

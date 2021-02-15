@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 개체 변수 할당 (Visual Basic)'
 title: 개체 변수 할당
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: 9ae1a307e8c886166d516140b7f100a411cedcfa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ac5e534a03d651a23e651e1049477b2bd0769b82
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410376"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481651"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>개체 변수 할당(Visual Basic)
 
@@ -32,7 +33,7 @@ thisObject = Form1
 thisObject = Nothing
 ```
 
-`Nothing`현재 변수에 할당 된 개체가 없음을 의미 합니다.
+`Nothing` 현재 변수에 할당 된 개체가 없음을 의미 합니다.
 
 ## <a name="initialization"></a>초기화
 
@@ -57,7 +58,7 @@ End If
 
 변수가 참조 하는 개체가 다른 응용 프로그램에 있는 경우이 테스트는 해당 응용 프로그램이 종료 되었는지 아니면 무효화 되었는지를 확인할 수 없습니다.
 
-값을 포함 하는 개체 변수 `Nothing` 를 *null 참조*라고도 합니다.
+값을 포함 하는 개체 변수 `Nothing` 를 *null 참조* 라고도 합니다.
 
 ## <a name="current-instance"></a>현재 인스턴스
 
@@ -73,13 +74,13 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub
 ```
 
-그러면 모든 XML 문서 개체가 프로시저를 호출 하 고 현재 인스턴스를 인수로 전달할 수 있습니다. 다음 예에 이러한 부하 분산 방식이 나와 있습니다.
+그러면 모든 XML 문서 개체가 프로시저를 호출 하 고 현재 인스턴스를 인수로 전달할 수 있습니다. 다음은 이에 대한 예입니다.
 
 ```vb
 addStandardText(Me)
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [개체 변수](object-variables.md)
 - [개체 변수 선언](object-variable-declaration.md)
