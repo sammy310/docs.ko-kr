@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 부울 식 (Visual Basic)'
 title: 부울 식
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: 51340bf95795d837c055df796424f3cad912adc7
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3b752e2146755e1272b261f32931e3022e8ef354
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085752"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100465316"
 ---
 # <a name="boolean-expressions-visual-basic"></a>부울 식(Visual Basic)
 
@@ -51,9 +52,9 @@ ms.locfileid: "91085752"
   
  앞의 예제에서 전체 식의 값은 연산자의 양쪽에 있는 식의 값에 따라 달라 집니다 `And` . 두 식이 모두 이면 `True` 전체 식이로 평가 `True` 됩니다. 두 식이 모두 이면 `False` 전체 식이로 평가 `False` 됩니다.  
   
-## <a name="short-circuiting-operators"></a>단락 연산자  
+## <a name="short-circuiting-operators"></a>Short-Circuiting 연산자  
 
- 논리 연산자 `AndAlso` 및 `OrElse` *표현 동작은 단락*이라고 합니다. 단락 연산자는 왼쪽 피연산자를 먼저 계산 합니다. 왼쪽 피연산자가 전체 식의 값을 결정 하는 경우 오른쪽 식을 계산 하지 않고 프로그램 실행이 진행 됩니다. 다음은 이에 대한 예입니다.  
+ 논리 연산자 `AndAlso` 및 `OrElse` *표현 동작은 단락* 이라고 합니다. 단락 연산자는 왼쪽 피연산자를 먼저 계산 합니다. 왼쪽 피연산자가 전체 식의 값을 결정 하는 경우 오른쪽 식을 계산 하지 않고 프로그램 실행이 진행 됩니다. 다음은 이에 대한 예입니다.  
   
  [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   
@@ -73,7 +74,7 @@ ms.locfileid: "91085752"
 
  괄호를 사용 하 여 부울 식의 계산 순서를 제어할 수 있습니다. 괄호로 묶은 식이 먼저 계산 됩니다. 여러 중첩 수준에 대해 가장 많이 중첩 된 식에 우선 순위가 부여 됩니다. 괄호 안에 연산자 우선 순위 규칙에 따라 계산이 진행 됩니다. 자세한 내용은 [Visual Basic 연산자 우선 순위](../../../language-reference/operators/operator-precedence.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic의 논리 및 비트 연산자](logical-and-bitwise-operators.md)
 - [값 비교](value-comparisons.md)

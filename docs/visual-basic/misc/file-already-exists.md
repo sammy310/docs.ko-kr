@@ -1,15 +1,16 @@
 ---
+description: '에 대 한 자세한 정보: 파일이 이미 있음'
 title: 파일이 이미 있습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID58
 ms.assetid: 04c2811f-b164-4e46-b4f0-ee9c948adade
-ms.openlocfilehash: 1517dd658fa8469faef112683e85f230afb13d60
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 73caec076f342834d3f5b58c7ba154a26dee85aa
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91091043"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459047"
 ---
 # <a name="file-already-exists"></a>파일이 이미 있습니다.
 
@@ -19,6 +20,6 @@ ms.locfileid: "91091043"
   
 - 이름을 확인하고 충돌하지 않는 이름으로 변경하거나, 더 이상 필요하지 않은 경우 기존 파일이나 프로젝트를 삭제합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
-- [오류 형식](../programming-guide/language-features/error-types.md)
+- [오류 유형](../programming-guide/language-features/error-types.md)

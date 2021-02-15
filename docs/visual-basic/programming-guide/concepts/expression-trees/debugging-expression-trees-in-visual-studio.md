@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: Visual Studio에서 식 트리 디버깅 (Visual Basic)'
 title: Visual Studio에서 식 트리 디버그
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: ae37f9b8ca05ba915d394922b73c519273e2d415
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 0221533a79dbc76be479380bd9b6e6df4156e288
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086571"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100459086"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Visual Studio에서 식 트리 디버깅 (Visual Basic)
 
@@ -15,7 +16,7 @@ ms.locfileid: "91086571"
 
 ![식 트리의 DebugView의 스크린샷](media/debugging-expression-trees-in-visual-studio/debugview-visual-basic.png)
 
-`DebugView`는 문자열이므로 `DebugView` 레이블 옆의 돋보기 아이콘에서 **텍스트 시각화 도우미**를 선택하여 [기본 제공 텍스트 시각화 도우미](/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer)를 사용하여 여러 줄에서 볼 수 있습니다.
+`DebugView`는 문자열이므로 `DebugView` 레이블 옆의 돋보기 아이콘에서 **텍스트 시각화 도우미** 를 선택하여 [기본 제공 텍스트 시각화 도우미](/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer)를 사용하여 여러 줄에서 볼 수 있습니다.
 
  ![DebugView의 결과에 적용 된 텍스트 시각화 도우미의 스크린샷](media/debugging-expression-trees-in-visual-studio/string-visualizer-vb.png)
 

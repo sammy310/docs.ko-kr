@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 개체 이니셜라이저: 명명 된 형식과 익명 형식 (Visual Basic)'
 title: '개체 이니셜라이저: 명명된 형식 및 무명 형식'
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 724407fed5bf90ed6e3e470cbabc9e42856cb99a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 47182653e74b16b9911f4b727eb1595bf3eceba6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087481"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455251"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>개체 이니셜라이저: 명명된 형식과 익명 형식(Visual Basic)
 
@@ -99,7 +100,7 @@ ms.locfileid: "91087481"
   
 ## <a name="anonymous-types"></a>익명 형식  
 
- 무명 형식은 개체 이니셜라이저를 사용 하 여 명시적으로 정의 하지 않고 이름을 지정 하는 새 형식의 인스턴스를 만듭니다. 대신, 컴파일러는 개체 이니셜라이저 목록에서 지정 하는 속성에 따라 형식을 생성 합니다. 형식의 이름을 지정 하지 않았기 때문에 *익명 형식*이라고 합니다. 예를 들어 다음 선언을의 이전 선언과 비교 합니다 `cust6` .  
+ 무명 형식은 개체 이니셜라이저를 사용 하 여 명시적으로 정의 하지 않고 이름을 지정 하는 새 형식의 인스턴스를 만듭니다. 대신, 컴파일러는 개체 이니셜라이저 목록에서 지정 하는 속성에 따라 형식을 생성 합니다. 형식의 이름을 지정 하지 않았기 때문에 *익명 형식* 이라고 합니다. 예를 들어 다음 선언을의 이전 선언과 비교 합니다 `cust6` .  
   
  [!code-vb[VbVbalrObjectInit#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#13)]  
   
@@ -132,11 +133,11 @@ ms.locfileid: "91087481"
   
      무명 형식의 속성을 정의 하는 옵션에 대 한 자세한 내용은 [방법: 익명 형식 선언에서 속성 이름 및 형식 유추](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [지역 형식 유추](../variables/local-type-inference.md)
 - [익명 형식](anonymous-types.md)
 - [Visual Basic의 LINQ 소개](../linq/introduction-to-linq.md)
 - [방법: 익명 형식 선언에서 속성 이름 및 형식 유추](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
-- [Key](../../../language-reference/modifiers/key.md)
+- [키](../../../language-reference/modifiers/key.md)
 - [방법: 개체 이니셜라이저를 사용하여 개체 선언](how-to-declare-an-object-by-using-an-object-initializer.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 선택적 매개 변수 (Visual Basic)'
 title: 선택적 매개 변수
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: 73a51ab65a8ea4c38b6fd6737279fb19fb1cfe73
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 048f940f25fc05a66245e267ff23dc9845fcafdd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071861"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436138"
 ---
 # <a name="optional-parameters-visual-basic"></a>선택적 매개 변수(Visual Basic)
 
@@ -63,7 +64,7 @@ Sub name(argument 1, , , argument 4)
 
  선택적 매개 변수가 있는 프로시저를 정의하는 또 다른 방법은 오버로드를 사용하는 것입니다. 선택적 매개 변수가 하나이면 프로시저의 오버로드된 두 버전을 매개 변수를 사용하는 버전과 매개 변수를 사용하지 않는 버전으로 정의할 수 있습니다. 이러한 방식은 선택적 매개 변수의 개수가 증가할수록 더욱 복잡해지지만 호출 프로그램이 각 선택적 인수를 제공했는지 여부를 확실히 알 수 있다는 장점이 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

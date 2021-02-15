@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 프로시저 오버 로드 시 고려 사항 (Visual Basic)'
 title: 프로시저 오버로드에서 고려해야 할 사항
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: 6197fa4041a22944542b2657e35bc293a6e5c244
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: ee6dc0ce23f0706f52ac58673d37d1b72936d2bc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075059"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472620"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>프로시저를 오버로드할 때 고려해야 할 사항(Visual Basic)
 
@@ -132,7 +133,7 @@ ms.locfileid: "91075059"
   
 - 호출 하는 코드가 프로시저에서 지원 하지 않는 데이터 형식을 전달 하는 경우 컴파일러에서 오류를 알릴 수 없습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

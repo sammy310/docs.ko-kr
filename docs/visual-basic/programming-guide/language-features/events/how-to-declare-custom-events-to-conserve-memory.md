@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 메모리를 절약 하는 사용자 지정 이벤트 선언 (Visual Basic)'
 title: '방법: 메모리를 절약하는 사용자 지정 이벤트 선언'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 87ebee87-260c-462f-979c-407874debd19
-ms.openlocfilehash: 78934e3e5ae7d5a3f5867c99a9f1db760c65ecbf
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7371ec3df41ad0efd4598e0902f6937881d1e1a2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075124"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100460087"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>방법: 메모리를 절약하는 사용자 지정 이벤트 선언(Visual Basic)
 
@@ -21,7 +22,7 @@ ms.locfileid: "91075124"
   
  Visual Basic에서 제공 하는 이벤트의 기본 구현을 사용 하는 대신 사용자 지정 이벤트를 사용 하 여 메모리 사용을 보다 신중 하 게 관리할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  이 예제에서 클래스는 필드에 저장 된 클래스의 인스턴스 하나를 사용 하 여 <xref:System.ComponentModel.EventHandlerList> `Events` 사용 중인 이벤트에 대 한 정보를 저장 합니다. <xref:System.ComponentModel.EventHandlerList>클래스는 대리자를 포함 하도록 디자인 된 최적화 된 목록 클래스입니다.  
   

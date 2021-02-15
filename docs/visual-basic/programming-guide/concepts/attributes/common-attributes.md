@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 공통 특성 (Visual Basic)'
 title: 공통 특성
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 57ef8f103d64a51d896f46d2889d78ec99ff3223
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 875554b69a23640c2d67367c93b56c34c286df37
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400721"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437789"
 ---
 # <a name="common-attributes-visual-basic"></a>일반 특성(Visual Basic)
 
@@ -15,7 +16,7 @@ ms.locfileid: "84400721"
 
 - [전역 특성](#Global)
 
-- [사용되지 않는 특성](#Obsolete)
+- [사용 되지 않는 특성](#Obsolete)
 
 - [조건부 특성](#Conditional)
 
@@ -23,7 +24,7 @@ ms.locfileid: "84400721"
 
 - [Visual Basic 특성](#VB)
 
-## <a name="global-attributes"></a><a name="Global"></a>전역 특성
+## <a name="global-attributes"></a><a name="Global"></a> 전역 특성
 
 대부분의 특성은 클래스나 메서드와 같은 특정 언어 요소에 적용되지만 일부 특성은 전체 어셈블리나 모듈에 적용되는 전역 특성입니다. 예를 들어 다음과 같이 <xref:System.Reflection.AssemblyVersionAttribute> 특성을 사용하여 버전 정보를 어셈블리에 포함할 수 있습니다.
 
@@ -122,7 +123,7 @@ b.NewMethod()
 
 `Obsolete` 특성은 단일 사용 특성이고 특성을 허용하는 모든 엔터티에 적용할 수 있습니다. `Obsolete`는 <xref:System.ObsoleteAttribute>의 별칭입니다.
 
-## <a name="conditional-attribute"></a><a name="Conditional"></a>조건부 특성
+## <a name="conditional-attribute"></a><a name="Conditional"></a> 조건부 특성
 
 `Conditional` 특성을 사용하면 메서드 실행이 전처리 식별자에 따라 달라집니다. `Conditional` 특성은 <xref:System.Diagnostics.ConditionalAttribute>의 별칭이고 메서드 또는 특성 클래스에 적용할 수 있습니다.
 
@@ -218,13 +219,13 @@ Class SampleClass
 End Class
 ```
 
-## <a name="caller-info-attributes"></a><a name="CallerInfo"></a>호출자 정보 특성
+## <a name="caller-info-attributes"></a><a name="CallerInfo"></a> 호출자 정보 특성
 
 호출자 정보 특성을 사용하여 메서드 호출자에 대한 정보를 얻을 수 있습니다. 소스 코드 파일 경로, 소스 코드 줄 번호 및 호출자의 멤버 이름을 얻을 수 있습니다.
 
 멤버 호출자 정보를 얻으려면 선택적 매개 변수에 적용되는 특성을 사용합니다. 각 선택적 매개 변수는 기본값을 지정합니다. 다음 표에서는 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 네임스페이스에 정의된 호출자 정보 특성을 보여줍니다.
 
-|특성|Description|형식|
+|특성|설명|형식|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|호출자를 포함한 소스 파일의 전체 경로입니다. 컴파일 시간의 경로입니다.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|메서드가 호출되는 소스 파일의 줄 번호입니다.|`Integer`|
@@ -232,11 +233,11 @@ End Class
 
 호출자 정보 특성에 대 한 자세한 내용은 [호출자 정보 (Visual Basic)](../caller-information.md)를 참조 하세요.
 
-## <a name="visual-basic-attributes"></a><a name="VB"></a>Visual Basic 특성
+## <a name="visual-basic-attributes"></a><a name="VB"></a> Visual Basic 특성
 
 다음 표에서는 Visual Basic 관련 된 특성을 나열 합니다.
 
-|특성|용도|
+|attribute|용도|
 |---------------|-------------|
 |<xref:Microsoft.VisualBasic.ComClassAttribute>|클래스가 COM 개체로 노출 되어야 함을 컴파일러에 나타냅니다.|
 |<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|모듈에 필요한 한정자만 사용 하 여 모듈 멤버에 액세스할 수 있습니다.|
@@ -269,7 +270,7 @@ End Structure
 
 `VBFixedArrayAttribute`크기가 고정 된 배열을 선언 하는 데 사용 합니다. Visual Basic 문자열과 마찬가지로 배열은 기본적으로 가변 길이입니다. 이 특성은 파일에 데이터를 직렬화 하거나 쓸 때 유용 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>

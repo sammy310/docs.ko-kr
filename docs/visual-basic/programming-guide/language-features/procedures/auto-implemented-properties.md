@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 자동 구현 속성 (Visual Basic)'
 title: 자동으로 구현된 속성
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: f50b1f40ef9843391c6622561bfd8a8eaae6fc17
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 61f6565f9d4e7ea8731bb09c59cd6d942ab8c129
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090056"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472698"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>자동 구현 속성(Visual Basic)
 
@@ -77,7 +78,7 @@ End Class
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>표준 구문이 요구되는 속성 정의  
 
- 자동 구현 속성은 편리하며 많은 프로그래밍 시나리오를 지원합니다. 그러나 자동으로 구현 된 속성을 사용할 수 없으며 대신 표준 또는 *확장*된 속성 구문을 사용 해야 하는 경우도 있습니다.  
+ 자동 구현 속성은 편리하며 많은 프로그래밍 시나리오를 지원합니다. 그러나 자동으로 구현 된 속성을 사용할 수 없으며 대신 표준 또는 *확장* 된 속성 구문을 사용 해야 하는 경우도 있습니다.  
   
  다음 중 하나를 수행하려는 경우 확장된 속성 정의 구문을 사용해야 합니다.  
   
@@ -97,7 +98,7 @@ End Class
 
  자동 구현 속성을 `Get` 또는 `Set` 프로시저가 포함된 확장된 속성으로 변환해야 하는 경우 Visual Basic 코드 편집기는 속성에 대한 `Get` 및 `Set` 프로시저와 `End Property` 문을 자동으로 생성할 수 있습니다. 문 뒤에 있는 빈 줄에 커서를 놓고 `Property` `G` (의 경우 `Get` ) 또는 (의 경우)를 입력 하 `S` `Set` 고 enter 키를 누르면 코드가 생성 됩니다. `Property` 문 끝에서 Enter 키를 누르면 Visual Basic 코드 편집기에서 읽기 전용 및 쓰기 전용 속성에 대한 `Get` 또는 `Set` 프로시저가 자동으로 생성됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [방법: Visual Basic에서 기본 속성 선언 및 호출](./how-to-declare-and-call-a-default-property.md)
 - [방법: 액세스 수준이 혼합된 속성 선언](./how-to-declare-a-property-with-mixed-access-levels.md)

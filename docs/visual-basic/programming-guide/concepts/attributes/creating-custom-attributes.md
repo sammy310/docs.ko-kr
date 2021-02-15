@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 사용자 지정 특성 만들기 (Visual Basic)'
 title: 사용자 지정 특성 만들기
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 84b400c2fa1b2d4019eec32092f954d680e64978
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e989a4ce219609aafcec90d12f9d460681e98be9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400696"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437776"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>사용자 지정 특성 만들기(Visual Basic)
 
@@ -63,7 +64,7 @@ End Class
 > [!NOTE]
 > 특성 클래스에 속성이 포함되면 해당 속성은 읽기-쓰기여야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Reflection>
 - [Visual Basic 프로그래밍 가이드](../../index.md)

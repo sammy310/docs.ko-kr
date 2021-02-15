@@ -1,15 +1,16 @@
 ---
+description: 자세한 정보:이 단일 인스턴스 응용 프로그램을 원본 인스턴스에 연결할 수 없습니다.
 title: 이 단일 인스턴스 애플리케이션을 원본 인스턴스에 연결할 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 8e2caa158c3874d216671979430a03b11bf60066
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 123cf2cded43c10d0f538fc12f31f4065caeb6dd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095683"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100427923"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>이 단일 인스턴스 애플리케이션을 원본 인스턴스에 연결할 수 없습니다.
 
@@ -33,6 +34,6 @@ ms.locfileid: "91095683"
   
 5. 오류가 발생한 상황을 파악하여 Microsoft 기술 지원 서비스에 전화로 문의합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [디버거 기본 사항](/visualstudio/debugger/debugger-feature-tour)
