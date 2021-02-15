@@ -1,20 +1,21 @@
 ---
+description: LINQ를 지 원하는 Visual Basic 기능에 대해 자세히 알아보세요.
 title: LINQ를 지 원하는 기능
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: bd63cd36c1f85fd89349293a71ecc5b281165380
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 58862ac4083bcd58ee08ef1afeebf95541c53e98
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078308"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428641"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>LINQ를 지원하는 Visual Basic 기능
 
-LINQ (이름 언어 통합 쿼리)는 언어에서 직접 쿼리 구문 및 기타 언어 구문을 지 원하는 Visual Basic의 기술을 나타냅니다. LINQ를 사용 하면 외부 데이터 원본에 대해 쿼리 하는 새 언어를 배울 필요가 없습니다. Visual Basic를 사용 하 여 관계형 데이터베이스, XML 저장소 또는 개체의 데이터에 대해 쿼리할 수 있습니다. 이러한 쿼리 기능을 언어에 통합 하면 구문 오류 및 형식 안전성에 대 한 컴파일 시간 검사를 수행할 수 있습니다. 또한이 통합은 Visual Basic에서 다양 한 가변 쿼리를 작성 하기 위해 알고 있어야 하는 사항 대부분을 이미 알고 있습니다.  
+LINQ (이름 Language-Integrated 쿼리)는 언어에서 직접 쿼리 구문 및 기타 언어 구문을 지 원하는 Visual Basic의 기술을 나타냅니다. LINQ를 사용 하면 외부 데이터 원본에 대해 쿼리 하는 새 언어를 배울 필요가 없습니다. Visual Basic를 사용 하 여 관계형 데이터베이스, XML 저장소 또는 개체의 데이터에 대해 쿼리할 수 있습니다. 이러한 쿼리 기능을 언어에 통합 하면 구문 오류 및 형식 안전성에 대 한 컴파일 시간 검사를 수행할 수 있습니다. 또한이 통합은 Visual Basic에서 다양 한 가변 쿼리를 작성 하기 위해 알고 있어야 하는 사항 대부분을 이미 알고 있습니다.  
   
  다음 섹션에서는 소개 문서, 코드 예제 및 예제 응용 프로그램을 읽을 수 있는 충분 한 정보를 제공 하는 언어 구문에 대해 설명 합니다. 또한 링크를 클릭 하 여 언어 기능을 함께 사용 하 여 언어 통합 쿼리를 사용 하는 방법에 대 한 자세한 설명을 찾을 수 있습니다. [연습: Visual Basic에서 쿼리 작성](walkthrough-writing-queries.md)을 시작 하는 것이 좋습니다.  
   
@@ -28,7 +29,7 @@ LINQ (이름 언어 통합 쿼리)는 언어에서 직접 쿼리 구문 및 기�
   
 ## <a name="implicitly-typed-variables"></a>암시적으로 형식화 된 변수  
 
- 변수를 선언 하 고 초기화할 때 형식을 명시적으로 지정 하는 대신 컴파일러가 형식을 유추 하 고 할당 하도록 할 수 있습니다. 이를 *로컬 형식 유추*라고 합니다.  
+ 변수를 선언 하 고 초기화할 때 형식을 명시적으로 지정 하는 대신 컴파일러가 형식을 유추 하 고 할당 하도록 할 수 있습니다. 이를 *로컬 형식 유추* 라고 합니다.  
   
  형식을 명시적으로 지정 하는 변수와 마찬가지로 형식이 유추 되는 변수가 강력한 형식입니다. 지역 형식 유추는 메서드 본문 내에서 지역 변수를 정의 하는 경우에만 작동 합니다. 자세한 내용은 [Option 유추 문](../../../language-reference/statements/option-infer-statement.md) 및 [지역 형식 유추](../../language-features/variables/local-type-inference.md)를 참조 하세요.  
   
@@ -100,7 +101,7 @@ LINQ (이름 언어 통합 쿼리)는 언어에서 직접 쿼리 구문 및 기�
   
  자세한 내용은 [람다 식](../../language-features/procedures/lambda-expressions.md)을 참조하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [LINQ(Language-Integrated Query)(Visual Basic)](index.md)
 - [Visual Basic에서 LINQ 시작](getting-started-with-linq.md)

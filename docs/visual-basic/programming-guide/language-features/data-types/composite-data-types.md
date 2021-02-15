@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 복합 데이터 형식 (Visual Basic)'
 title: 복합 데이터 형식
 ms.date: 04/25/2017
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: 842b74aa7cc99c8196fdfb1eb6c976d9e72a4fa4
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 981ee36c416f2524be155b1238f5b306c98aa92b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077165"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456434"
 ---
 # <a name="composite-data-types-visual-basic"></a>복합 데이터 형식(Visual Basic)
 
@@ -66,7 +67,7 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
   
  클래스에 대 한 자세한 내용은 [개체 및 클래스](../objects-and-classes/index.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [데이터 형식](index.md)
 - [기본 데이터 형식](elementary-data-types.md)

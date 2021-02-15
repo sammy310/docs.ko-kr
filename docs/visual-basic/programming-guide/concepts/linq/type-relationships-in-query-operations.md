@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 쿼리 작업의 형식 관계 (Visual Basic)'
 title: 쿼리 작업의 형식 관계
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,22 +12,22 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 73a287541ddf115510bf6ab5c830eafac370cc3a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b6a59308e76afdcf1aaf7084904b9925cd5bef14
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406731"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428222"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>쿼리 작업의 형식 관계(Visual Basic)
 
-LINQ (언어 통합 쿼리) 쿼리 작업에 사용 되는 변수는 강력한 형식 이므로 서로 호환 되어야 합니다. 강력한 형식 지정은 데이터 소스, 쿼리 자체 및 쿼리 실행에서 사용 됩니다. 다음 그림은 LINQ 쿼리를 설명 하는 데 사용 되는 용어를 나타냅니다. 쿼리 파트에 대 한 자세한 내용은 [기본 쿼리 작업 (Visual Basic)](basic-query-operations.md)을 참조 하세요.
+LINQ (Language-Integrated Query) 쿼리 작업에 사용 되는 변수는 강력한 형식 이므로 서로 호환 되어야 합니다. 강력한 형식 지정은 데이터 소스, 쿼리 자체 및 쿼리 실행에서 사용 됩니다. 다음 그림은 LINQ 쿼리를 설명 하는 데 사용 되는 용어를 나타냅니다. 쿼리 파트에 대 한 자세한 내용은 [기본 쿼리 작업 (Visual Basic)](basic-query-operations.md)을 참조 하세요.
 
 ![요소가 강조 표시 된 의사 코드 쿼리를 보여 주는 스크린샷](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
 쿼리의 범위 변수 형식은 데이터 소스에 있는 요소의 형식과 호환 되어야 합니다. 쿼리 변수의 형식은 절에 정의 된 sequence 요소와 호환 되어야 합니다 `Select` . 마지막으로 시퀀스 요소의 형식은 `For Each` 쿼리를 실행 하는 문에 사용 되는 루프 제어 변수의 형식과도 호환 되어야 합니다. 이 강력한 형식화는 컴파일 시간에 형식 오류의 식별을 용이 하 게 합니다.
 
-Visual Basic는 *암시적*형식이 라고도 하는 로컬 형식 유추를 구현 하 여 강력한 형식화를 편리 하 게 만듭니다. 이전 예제에서이 기능을 사용 하 고 LINQ 샘플 및 설명서 전체에서이 기능을 사용 하는 것을 볼 수 있습니다. Visual Basic에서는 절이 없는 문을 사용 하 여 로컬 형식 유추를 간단히 수행 `Dim` `As` 합니다. 다음 예제에서 `city` 는 문자열로 강력 하 게 형식화 됩니다.
+Visual Basic는 *암시적* 형식이 라고도 하는 로컬 형식 유추를 구현 하 여 강력한 형식화를 편리 하 게 만듭니다. 이전 예제에서이 기능을 사용 하 고 LINQ 샘플 및 설명서 전체에서이 기능을 사용 하는 것을 볼 수 있습니다. Visual Basic에서는 절이 없는 문을 사용 하 여 로컬 형식 유추를 간단히 수행 `Dim` `As` 합니다. 다음 예제에서 `city` 는 문자열로 강력 하 게 형식화 됩니다.
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 
@@ -120,7 +121,7 @@ Next
 
 3. 루프의 반복 변수 형식은 `For Each` 2 단계에서 만든 익명 형식입니다. 형식에 사용할 수 있는 이름이 없으므로 루프 반복 변수의 형식은 암시적으로 결정 되어야 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic에서 LINQ 시작](getting-started-with-linq.md)
 - [익명 형식](../../language-features/objects-and-classes/anonymous-types.md)

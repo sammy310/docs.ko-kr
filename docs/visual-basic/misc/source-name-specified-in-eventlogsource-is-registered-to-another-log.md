@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: EventLogSource에 지정 된 소스 이름이 EventLogName에 지정 된 것과 다른 로그에 등록 되어 있습니다.'
 title: EventLogSource에 지정된 소스 이름이 EventLogName에 지정된 로그가 아닌 로그에 등록되었습니다.
 ms.date: 07/20/2015
 ms.assetid: 7317e100-098b-408d-86e5-7c74cf8558c7
-ms.openlocfilehash: 1b577e3b0613001b6241dcfdc59c8c84029197d2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d6b9c1265276f94369d37e6ac55604b761fb9bcc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058932"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455459"
 ---
 # <a name="source-name-specified-in-eventlogsource-is-registered-to-a-log-other-than-that-specified-in-eventlogname"></a>EventLogSource에 지정된 소스 이름이 EventLogName에 지정된 로그가 아닌 로그에 등록되었습니다.
 
@@ -19,7 +20,7 @@ ms.locfileid: "91058932"
   
 - 소스가 올바른 로그에 등록되었는지 확인합니다. 이렇게 하려면 <xref:System.Diagnostics.EventLog.CreateEventSource%2A> 메서드 또는 해당 오버로드 중 하나를 사용하여 이벤트 로그에 구성 요소를 고유하게 식별하는 문자열을 지정합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [이벤트 로그 관리](/previous-versions/visualstudio/visual-studio-2008/4f69axw4(v=vs.90))
 - [이벤트 로그 참조](/previous-versions/visualstudio/visual-studio-2008/k43k9z2a(v=vs.90))

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 데이터 형식 변환 (Visual Basic)'
 title: 데이터 형식 변환
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-ms.openlocfilehash: 1394f53923ba850ae11fbc326a25c279589c3be1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7650f5d5d6f727b7815b9dd2de8a565e27fa18d9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410853"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428716"
 ---
 # <a name="converting-data-types-visual-basic"></a>데이터 형식 변환 (Visual Basic)
 
@@ -27,16 +28,16 @@ ms.locfileid: "84410853"
 
 이 표에서 이름이 "As"로 시작하는 변환 메서드는 소스 컬렉션의 정적 형식을 변경하지만 열거하지는 않습니다. 이름이 "To"로 시작하는 메서드는 소스 컬렉션을 열거하고 항목을 해당하는 컬렉션 형식에 삽입합니다.
 
-|메서드 이름|Description|Visual Basic 쿼리 식 구문|추가 정보|
+|메서드 이름|설명|Visual Basic 쿼리 식 구문|추가 정보|
 |-----------------|-----------------|------------------------------------------|----------------------|
-|AsEnumerable|<xref:System.Collections.Generic.IEnumerable%601>로 형식화된 입력을 반환합니다.|해당 사항 없음|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
-|AsQueryable|(제네릭) <xref:System.Collections.IEnumerable>을 (제네릭) <xref:System.Linq.IQueryable>로 변환합니다.|해당 사항 없음|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
+|AsEnumerable|<xref:System.Collections.Generic.IEnumerable%601>로 형식화된 입력을 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
+|AsQueryable|(제네릭) <xref:System.Collections.IEnumerable>을 (제네릭) <xref:System.Linq.IQueryable>로 변환합니다.|해당 사항 없음.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
 |Cast|컬렉션의 요소를 지정된 형식으로 캐스트합니다.|`From … As …`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|
-|OfType|지정된 형식으로 캐스트할 수 있는지 여부에 따라 값을 필터링합니다.|해당 사항 없음|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
-|ToArray|컬렉션을 배열로 변환합니다. 이 메서드는 쿼리를 강제로 실행합니다.|해당 사항 없음|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|
-|ToDictionary|키 선택기 함수에 따라 <xref:System.Collections.Generic.Dictionary%602>에 요소를 배치합니다. 이 메서드는 쿼리를 강제로 실행합니다.|해당 사항 없음|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|
-|ToList|컬렉션을 <xref:System.Collections.Generic.List%601>로 변환합니다. 이 메서드는 쿼리를 강제로 실행합니다.|해당 사항 없음|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|
-|ToLookup|키 선택기 함수에 따라 <xref:System.Linq.Lookup%602>(일 대 다 사전)에 요소를 배치합니다. 이 메서드는 쿼리를 강제로 실행합니다.|해당 사항 없음|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|
+|OfType|지정된 형식으로 캐스트할 수 있는지 여부에 따라 값을 필터링합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
+|ToArray|컬렉션을 배열로 변환합니다. 이 메서드는 쿼리를 강제로 실행합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|
+|ToDictionary|키 선택기 함수에 따라 <xref:System.Collections.Generic.Dictionary%602>에 요소를 배치합니다. 이 메서드는 쿼리를 강제로 실행합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|
+|ToList|컬렉션을 <xref:System.Collections.Generic.List%601>로 변환합니다. 이 메서드는 쿼리를 강제로 실행합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|
+|ToLookup|키 선택기 함수에 따라 <xref:System.Linq.Lookup%602>(일 대 다 사전)에 요소를 배치합니다. 이 메서드는 쿼리를 강제로 실행합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|
 
 ## <a name="query-expression-syntax-example"></a>쿼리 식 구문 예제
 
@@ -80,7 +81,7 @@ Sub Cast()
 End Sub
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(Visual Basic)](standard-query-operators-overview.md)

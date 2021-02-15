@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 구조체 선언 (Visual Basic)'
 title: '방법: 구조 선언'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: bffdc5974eff6b71e0abc4780a61aa300769eed6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7560f22db70fd5804ca309720d32477bcb9a3782
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058549"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436931"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>방법: 구조체 선언(Visual Basic)
 
-Structure [문을](../../../language-reference/statements/structure-statement.md)사용 하 여 구조체 선언을 시작 하 고 `End Structure` 문으로 종료 합니다. 이러한 두 문 사이에는 하나 이상의 *요소*를 선언 해야 합니다. 요소는 모든 데이터 형식이 될 수 있지만 하나 이상 비공유 변수 이거나 비공유 noncustom 이벤트 여야 합니다.  
+Structure [문을](../../../language-reference/statements/structure-statement.md)사용 하 여 구조체 선언을 시작 하 고 `End Structure` 문으로 종료 합니다. 이러한 두 문 사이에는 하나 이상의 *요소* 를 선언 해야 합니다. 요소는 모든 데이터 형식이 될 수 있지만 하나 이상 비공유 변수 이거나 비공유 noncustom 이벤트 여야 합니다.  
   
  구조체 선언에서 구조체 요소를 초기화할 수 없습니다. 구조체 형식으로 변수를 선언 하는 경우 변수를 통해 값에 액세스 하 여 요소에 값을 할당 합니다.  
   
@@ -54,9 +55,9 @@ Structure [문을](../../../language-reference/statements/structure-statement.md
   
      `salary`앞의 예제에서 필드는 `Private` 를 포함 하는 클래스 에서도 구조체 외부에서 액세스할 수 없음을 의미 하는입니다. 그러나 프로시저는 이므로 `giveRaise` `Public` 구조 외부에서 호출할 수 있습니다. 마찬가지로 구조 외부에서 이벤트를 발생 시킬 수 있습니다 `salaryReviewTime` .  
   
-     변수, `Sub` 프로시저 및 이벤트 외에도 구조에서 상수, 프로시저 및 속성을 정의할 수 있습니다 `Function` . 하나 이상의 인수를 사용 하는 경우 *기본 속성*으로 최대 하나의 속성을 지정할 수 있습니다. [공유](../../../language-reference/modifiers/shared.md) 프로시저를 사용 하 여 이벤트를 처리할 수 있습니다 `Sub` . 자세한 내용은 [방법: Visual Basic에서 기본 속성 선언 및 호출](../procedures/how-to-declare-and-call-a-default-property.md)을 참조 하세요.  
+     변수, `Sub` 프로시저 및 이벤트 외에도 구조에서 상수, 프로시저 및 속성을 정의할 수 있습니다 `Function` . 하나 이상의 인수를 사용 하는 경우 *기본 속성* 으로 최대 하나의 속성을 지정할 수 있습니다. [공유](../../../language-reference/modifiers/shared.md) 프로시저를 사용 하 여 이벤트를 처리할 수 있습니다 `Sub` . 자세한 내용은 [방법: Visual Basic에서 기본 속성 선언 및 호출](../procedures/how-to-declare-and-call-a-default-property.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [데이터 형식](index.md)
 - [기본 데이터 형식](elementary-data-types.md)

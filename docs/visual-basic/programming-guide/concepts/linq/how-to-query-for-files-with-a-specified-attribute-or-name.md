@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 방법: 지정 된 특성 또는 이름으로 파일 쿼리 (Visual Basic)'
 title: '방법: 지정된 특성 또는 이름이 있는 파일 쿼리'
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: eeacd94fb303a439e8034b84d285ab11b2333581
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 3eb58bf683b97c5806145395cb489f0e85c2071b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059316"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425726"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>방법: 지정 된 특성 또는 이름으로 파일 쿼리 (Visual Basic)
 

@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 같음 연산 (Visual Basic)'
 title: 같음 연산
 ms.date: 07/20/2015
 ms.assetid: 1f2fcf87-6f52-4830-b9af-861f9ad999dc
-ms.openlocfilehash: d91627a8566e5c04ff3fd930543066fed5b58384
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f9bfe826c856e8471de3894f09438c651e012d0f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078296"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428650"
 ---
 # <a name="equality-operations-visual-basic"></a>같음 연산 (Visual Basic)
 

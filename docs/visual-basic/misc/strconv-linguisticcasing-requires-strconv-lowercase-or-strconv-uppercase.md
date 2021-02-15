@@ -1,15 +1,16 @@
 ---
+description: 에 대해 자세히 알아보세요. ' LinguisticCasing '에는 ' StrConv ' 또는 ' StrConv. 대문자 '가 필요 합니다.
 title: "'StrConv.LinguisticCasing'에는 'StrConv.LowerCase' 또는 'StrConv.UpperCase'가 필요합니다."
 ms.date: 07/20/2015
 f1_keywords:
 - vbrLinguisticRequirements
 ms.assetid: 99cdb11d-9488-460b-84fb-a27f43da8be4
-ms.openlocfilehash: 4f28f54ac974b97b3e8c5585ad49cf0b94adac81
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e2693da23d3adcc2c475fc60125d1820096150e6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078699"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455433"
 ---
 # <a name="strconvlinguisticcasing-requires-strconvlowercase-or-strconvuppercase"></a>'StrConv.LinguisticCasing'에는 'StrConv.LowerCase' 또는 'StrConv.UpperCase'가 필요합니다.
 

@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 잘못 된 레코드 번호'
 title: 레코드 개수가 잘못되었습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID63
 ms.assetid: 1fcc33f8-822a-4de9-a6e3-228ddb5824a6
-ms.openlocfilehash: 8cbffc7714211fb10bedc3a73729eac59d98f0bb
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a250419c131f75381426705d52563732322631cb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086987"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100460997"
 ---
 # <a name="bad-record-number"></a>레코드 개수가 잘못되었습니다.
 
@@ -19,6 +20,6 @@ ms.locfileid: "91086987"
   
 1. 레코드 번호를 생성하는 데 사용한 계산을 확인합니다. 레코드 번호를 계산하는 데 사용한 변수 또는 레코드 번호가 포함된 변수의 철자를 확인합니다. 모듈에서 `Option Explicit On` 을 사용하지 않으면 철자가 잘못된 변수 이름이 암시적으로 선언되고 0으로 초기화됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Option Explicit 문](../language-reference/statements/option-explicit-statement.md)

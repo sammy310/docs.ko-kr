@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: Visual Studio IDE 및 LINQ 용 도구 지원 (Visual Basic)'
 title: LINQ를 위한 Visual Studio IDE 및 도구 지원
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
-ms.openlocfilehash: 9b1fa503b3c51cf50872e82d9a60206874c8e642
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 96d1cd54e8b4cc507aa697a2228d341b29f94f8f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077295"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428105"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>LINQ에 대한 Visual Studio IDE 및 도구 지원(Visual Basic)
 

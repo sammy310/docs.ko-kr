@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 익명 형식 (Visual Basic)'
 title: 익명 형식
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 5ab3cf8c3c02ff35890f71ad6c7f314b51b87133
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 447ca914726d4b426ad4ba2ec370a4bbe9589b81
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075241"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425622"
 ---
 # <a name="anonymous-types-visual-basic"></a>익명 형식(Visual Basic)
 
-Visual Basic는 데이터 형식에 대 한 클래스 정의를 작성 하지 않고 개체를 만들 수 있도록 하는 익명 형식을 지원 합니다. 대신 컴파일러가 클래스를 생성합니다. 클래스에는 사용할 수 있는 이름이 없고에서 직접 상속 <xref:System.Object> 되며 개체를 선언할 때 지정 하는 속성이 포함 됩니다. 데이터 형식의 이름을 지정 하지 않았기 때문에 *익명 형식*이라고 합니다.  
+Visual Basic는 데이터 형식에 대 한 클래스 정의를 작성 하지 않고 개체를 만들 수 있도록 하는 익명 형식을 지원 합니다. 대신 컴파일러가 클래스를 생성합니다. 클래스에는 사용할 수 있는 이름이 없고에서 직접 상속 <xref:System.Object> 되며 개체를 선언할 때 지정 하는 속성이 포함 됩니다. 데이터 형식의 이름을 지정 하지 않았기 때문에 *익명 형식* 이라고 합니다.  
   
  다음 예제에서는 변수를 선언 하 고 `product` , 및 라는 두 개의 속성이 있는 무명 형식의 인스턴스로 만듭니다 `Name` `Price` .  
   
@@ -82,7 +83,7 @@ Visual Basic는 데이터 형식에 대 한 클래스 정의를 작성 하지 �
   
  [!code-vb[VbVbalrAnonymousTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#7)]  
   
-### <a name="read-only-values"></a>읽기 전용 값  
+### <a name="read-only-values"></a>Read-Only 값  
 
  키 속성의 값은 변경할 수 없습니다. 예를 들어 `prod8` 앞의 예제에서 `Name` 및 필드는 이지만 `Price` `read-only` `OnHand` 변경할 수 있습니다.  
   
@@ -134,11 +135,11 @@ Visual Basic는 데이터 형식에 대 한 클래스 정의를 작성 하지 �
   
  컴파일러에서 생성 되는 코드 및 재정의 된 메서드의 기능에 대 한 자세한 내용은 [익명 형식 정의](anonymous-type-definition.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [개체 이니셜라이저: 명명된 형식 및 무명 형식](object-initializers-named-and-anonymous-types.md)
 - [지역 형식 유추](../variables/local-type-inference.md)
 - [Visual Basic의 LINQ 소개](../linq/introduction-to-linq.md)
 - [방법: 익명 형식 선언에서 속성 이름 및 형식 유추](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [익명 형식 정의](anonymous-type-definition.md)
-- [Key](../../../language-reference/modifiers/key.md)
+- [키](../../../language-reference/modifiers/key.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 여러 버전의 프로시저 정의 (Visual Basic)'
 title: '방법: 여러 버전의 프로시저 정의'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: 2661603ba33dd0bc28ac1a192794a4534225b641
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4b470e478c22c3a827f71b9b28056e16d6d9b7cd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071640"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456031"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>방법: 여러 버전의 프로시저 정의(Visual Basic)
 
@@ -31,7 +32,7 @@ ms.locfileid: "91071640"
   
 4. 또는 문을 사용 하 여 프로시저의 각 버전을 적절 하 게 종료 `End Sub` `End Function` 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예에서는 `Sub` 고객의 잔액에 대해 트랜잭션을 게시 하는 프로시저를 정의 합니다. 키워드를 사용 하 여 `Overloads` 두 가지 버전의 프로시저를 정의 합니다. 하나는 이름으로 고객을 수락 하 고 다른 하나는 계정 번호로 지정 합니다.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "91071640"
 
  오버 로드 된 각 버전에 동일한 프로시저 이름이 있지만 다른 매개 변수 목록이 있는지 확인 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

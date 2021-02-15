@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 방법: 작업을 사용 하 여 비동기 연습 확장 (Visual Basic)'
 title: '방법: Task.WhenAll을 사용하여 비동기 연습 확장'
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-ms.openlocfilehash: fb323852c83b1edf51396a0b800c2d54a833d0c0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fc303d6b2ed64cb2003c06724fcd21000d0b3abf
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396625"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474384"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>방법: Task.WhenAll을 사용하여 비동기 연습 확장(Visual Basic)
 
@@ -422,7 +423,7 @@ Class MainWindow
 End Class
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>
 - [연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
