@@ -1,17 +1,18 @@
 ---
+description: '자세한 정보: Variant 제네릭 인터페이스 만들기 (Visual Basic)'
 title: 변형 제네릭 인터페이스 만들기
 ms.date: 07/20/2015
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-ms.openlocfilehash: 884349159d2738d8481b217f9dab383483616f2b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 41da9040709ff053ba05cc7c44be989b7fa39c44
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400644"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485265"
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>Variant 제네릭 인터페이스 만들기(Visual Basic)
 
-인터페이스에서 제네릭 형식 매개 변수를 공변(covariant) 또는 반공변(contravariant)으로 선언할 수 있습니다. *공변성(covariance)* 은 인터페이스 메서드가 제네릭 형식 매개 변수에 정의된 것보다 더 많은 수의 파생된 반환 형식을 갖도록 허용합니다. *반공변성(contravariance)* 은 인터페이스 메서드가 제네릭 매개 변수에 지정된 것보다 더 적은 수의 파생된 형식의 인수 형식을 갖도록 허용합니다. 공변(covariant) 또는 반공변(contravariant) 제네릭 형식 매개 변수가 포함된 제네릭 인터페이스를 *variant*라고 합니다.
+인터페이스에서 제네릭 형식 매개 변수를 공변(covariant) 또는 반공변(contravariant)으로 선언할 수 있습니다. *공변성(covariance)* 은 인터페이스 메서드가 제네릭 형식 매개 변수에 정의된 것보다 더 많은 수의 파생된 반환 형식을 갖도록 허용합니다. *반공변성(contravariance)* 은 인터페이스 메서드가 제네릭 매개 변수에 지정된 것보다 더 적은 수의 파생된 형식의 인수 형식을 갖도록 허용합니다. 공변(covariant) 또는 반공변(contravariant) 제네릭 형식 매개 변수가 포함된 제네릭 인터페이스를 *variant* 라고 합니다.
 
 > [!NOTE]
 > .NET Framework 4에서는 기존의 몇몇 제네릭 인터페이스에 대한 가변성 지원이 추가되었습니다. .NET Framework의 variant 인터페이스 목록은 [제네릭 인터페이스의 가변성 (Visual Basic)](variance-in-generic-interfaces.md)을 참조 하세요.
@@ -21,7 +22,7 @@ ms.locfileid: "84400644"
 제네릭 형식 매개 변수에 `in` 및 `out` 키워드를 사용하여 Variant 제네릭 인터페이스를 선언할 수 있습니다.
 
 > [!IMPORTANT]
-> `ByRef`Visual Basic의 매개 변수는 variant 일 수 없습니다. 또한 값 형식은 가변성을 지원하지 않습니다.
+> `ByRef` Visual Basic의 매개 변수는 variant 일 수 없습니다. 또한 값 형식은 가변성을 지원하지 않습니다.
 
 `out` 키워드를 사용하여 제네릭 형식 매개 변수를 공변(covariant)으로 선언할 수 있습니다. 공변(covariant) 형식은 다음 조건을 충족해야 합니다.
 
@@ -230,7 +231,7 @@ End Sub
 
 이 예제에서는 `pets.GetEnumerator` 메서드가 `Cat` 및 `Dog` 중에 선택하는 방법이 지정되어 있지 않습니다. 이로 인해 코드에서 문제가 발생할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [제네릭 인터페이스의 가변성(Visual Basic)](variance-in-generic-interfaces.md)
 - [Func 및 Action 제네릭 대리자에 가변성 사용(Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)

@@ -2,12 +2,12 @@
 title: 복원력 있는 애플리케이션 구현
 description: 마이크로 서비스 아키텍처의 핵심 개념인 복원력에 대해 알아봅니다. 일시적 오류가 발생하면 해당 오류를 적절하게 처리하는 방법을 알아야 합니다.
 ms.date: 01/30/2020
-ms.openlocfilehash: 46276a6b9b36a494bfae657275692ca9d5554d86
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3ed4474eaa1225e80f05db86965e4ba53b5d2301
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78847234"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429327"
 ---
 # <a name="implement-resilient-applications"></a>복원력 있는 애플리케이션 구현
 
@@ -20,7 +20,7 @@ ms.locfileid: "78847234"
 애플리케이션의 여러 개별 구성 요소도 상태 모니터링 기능과 통합해야 합니다. 이 장의 지침을 따라 가동 중지 시간 또는 복잡한 클라우드 기반 배포의 일반적인 문제가 발생하는 환경에서도 원활하게 작동하는 애플리케이션을 만들 수 있습니다.
 
 >[!IMPORTANT]
-> eShopOnContainer는 릴리스 3.0.0까지 [Polly 라이브러리](http://www.thepollyproject.org/)를 사용하여 [형식화된 클라이언트](./use-httpclientfactory-to-implement-resilient-http-requests.md)로 복원력을 구현해 왔습니다.
+> eShopOnContainer는 릴리스 3.0.0까지 [Polly 라이브러리](https://thepollyproject.azurewebsites.net/)를 사용하여 [형식화된 클라이언트](./use-httpclientfactory-to-implement-resilient-http-requests.md)로 복원력을 구현해 왔습니다.
 >
 > 릴리스 3.0.0부터는 Kubernetes 클러스터 내에서 투명하고 구성 가능한 방식으로 재시도를 처리하기 때문에 코드에서 문제를 처리할 필요가 없는 [Linkerd 메시](https://linkerd.io/)를 사용하여 HTTP 호출 복원력이 구현됩니다.
 >

@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 개체 이니셜라이저를 사용 하 여 개체 선언 (Visual Basic)'
 title: '방법: 개체 이니셜라이저를 사용하여 개체 선언'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 61f520a528c3d40b9d34807d517a9bf27ad40da8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 12f64dc4d1efb3ed2654084203241e6606ad4da6
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075228"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483913"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>방법: 개체 이니셜라이저를 사용하여 개체 선언(Visual Basic)
 
@@ -60,7 +61,7 @@ ms.locfileid: "91075228"
   
      자세한 내용은 [지역 형식 유추](../variables/local-type-inference.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [지역 형식 유추](../variables/local-type-inference.md)
 - [방법: 항목 목록 만들기](../../concepts/linq/how-to-create-a-list-of-items.md)

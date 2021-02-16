@@ -2,12 +2,12 @@
 title: 분산 추적 - .NET
 description: .NET 분산 추적에 대해 소개합니다.
 ms.date: 02/02/2021
-ms.openlocfilehash: d21d2a978cfe58d89db689dec07107f089363912
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d29c803dfec00474562abdc61ce65ea3f3faa133
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99640123"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431440"
 ---
 # <a name="net-distributed-tracing"></a>.NET 분산 추적
 
@@ -79,7 +79,7 @@ ms.locfileid: "99640123"
 추적 데이터를 게시하는 첫 번째 단계는 ActivitySource 클래스의 인스턴스를 만드는 것입니다. ActivitySource는 활동 개체를 만들고 시작하는 API와 활동 이벤트를 수신 대기하기 위해 ActivityListener 개체를 등록하는 API를 제공하는 클래스입니다.
 
 ```csharp
-    internal static ActivitySource source = new ActivitySource("MyCompany.MyComponent.SourceName", "v1");
+    private static ActivitySource source = new ActivitySource("MyCompany.MyComponent.SourceName", "v1");
 ```
 
 #### <a name="best-practices"></a>모범 사례

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 암시적 변환과 명시적 변환 (Visual Basic)'
 title: 암시적 변환과 명시적 변환
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 2858dafd2531bd846ad89672348d103f385c4511
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6a53c0998025cc8c19274c67d9dfe1c50a4f1373
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393833"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483952"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>암시적 변환과 명시적 변환(Visual Basic)
 
@@ -56,8 +57,8 @@ k = CInt(q)
 
 |형식 변환 키워드|식을 데이터 형식으로 변환 합니다.|변환할 수 있는 식의 데이터 형식|
 |---|---|---|
-|`CBool`|[Boolean 데이터 형식](../../../language-reference/data-types/boolean-data-type.md)|모든 숫자 형식 ( `Byte` , `SByte` , 열거형 형식 포함), `String` ,`Object`|
-|`CByte`|[Byte 데이터 형식](../../../language-reference/data-types/byte-data-type.md)|모든 숫자 형식 ( `SByte` 및 열거 형식 포함), `Boolean` , `String` ,`Object`|
+|`CBool`|[Boolean 데이터 형식](../../../language-reference/data-types/boolean-data-type.md)|모든 숫자 형식 ( `Byte` , `SByte` , 열거형 형식 포함), `String` , `Object`|
+|`CByte`|[Byte 데이터 형식](../../../language-reference/data-types/byte-data-type.md)|모든 숫자 형식 ( `SByte` 및 열거 형식 포함), `Boolean` , `String` , `Object`|
 |`CChar`|[Char 데이터 형식](../../../language-reference/data-types/char-data-type.md)|`String`, `Object`|
 |`CDate`|[Date 데이터 형식](../../../language-reference/data-types/date-data-type.md)|`String`, `Object`|
 |`CDbl`|[Double 데이터 형식](../../../language-reference/data-types/double-data-type.md)|모든 숫자 형식 ( `Byte` , `SByte` , 열거형 형식 포함), `Boolean` ,, `String``Object`|
@@ -65,11 +66,11 @@ k = CInt(q)
 |`CInt`|[Integer 데이터 형식](../../../language-reference/data-types/integer-data-type.md)|모든 숫자 형식 ( `Byte` , `SByte` , 열거형 형식 포함), `Boolean` ,, `String``Object`|
 |`CLng`|[Long 데이터 형식](../../../language-reference/data-types/long-data-type.md)|모든 숫자 형식 ( `Byte` , `SByte` , 열거형 형식 포함), `Boolean` ,, `String``Object`|
 |`CObj`|[Object Data Type](../../../language-reference/data-types/object-data-type.md)|모든 형식|
-|`CSByte`|[SByte 데이터 형식](../../../language-reference/data-types/sbyte-data-type.md)|모든 숫자 형식 ( `Byte` 및 열거 형식 포함), `Boolean` , `String` ,`Object`|
+|`CSByte`|[SByte 데이터 형식](../../../language-reference/data-types/sbyte-data-type.md)|모든 숫자 형식 ( `Byte` 및 열거 형식 포함), `Boolean` , `String` , `Object`|
 |`CShort`|[Short 데이터 형식](../../../language-reference/data-types/short-data-type.md)|모든 숫자 형식 ( `Byte` , `SByte` , 열거형 형식 포함), `Boolean` ,, `String``Object`|
 |`CSng`|[Single 데이터 형식](../../../language-reference/data-types/single-data-type.md)|모든 숫자 형식 ( `Byte` , `SByte` , 열거형 형식 포함), `Boolean` ,, `String``Object`|
-|`CStr`|[문자열 데이터 형식](../../../language-reference/data-types/string-data-type.md)|모든 숫자 형식 ( `Byte` , `SByte` , 열거형 형식 포함), `Boolean` , `Char` , `Char` array, `Date` ,`Object`|
-|`CType`|쉼표 () 뒤에 지정 된 형식 `,`|기본 *데이터 형식* (기본 형식의 배열 포함)으로 변환 하는 경우 해당 변환 키워드에 대해 허용 되는 것과 동일한 형식입니다.<br /><br /> *복합 데이터 형식*으로 변환 하는 경우, 구현 하는 인터페이스 및 해당 형식이 상속 하는 클래스<br /><br /> 오버 로드 된 클래스 또는 구조체 `CType` (해당 클래스 또는 구조체)로 변환 하는 경우|
+|`CStr`|[문자열 데이터 형식](../../../language-reference/data-types/string-data-type.md)|모든 숫자 형식 ( `Byte` , `SByte` , 열거형 형식 포함), `Boolean` , `Char` , `Char` array, `Date` , `Object`|
+|`CType`|쉼표 () 뒤에 지정 된 형식 `,`|기본 *데이터 형식* (기본 형식의 배열 포함)으로 변환 하는 경우 해당 변환 키워드에 대해 허용 되는 것과 동일한 형식입니다.<br /><br /> *복합 데이터 형식* 으로 변환 하는 경우, 구현 하는 인터페이스 및 해당 형식이 상속 하는 클래스<br /><br /> 오버 로드 된 클래스 또는 구조체 `CType` (해당 클래스 또는 구조체)로 변환 하는 경우|
 |`CUInt`|[UInteger 데이터 형식](../../../language-reference/data-types/uinteger-data-type.md)|모든 숫자 형식 ( `Byte` , `SByte` , 열거형 형식 포함), `Boolean` ,, `String``Object`|
 |`CULng`|[ULong 데이터 형식](../../../language-reference/data-types/ulong-data-type.md)|모든 숫자 형식 ( `Byte` , `SByte` , 열거형 형식 포함), `Boolean` ,, `String``Object`|
 |`CUShort`|[UShort 데이터 형식](../../../language-reference/data-types/ushort-data-type.md)|모든 숫자 형식 ( `Byte` , `SByte` , 열거형 형식 포함), `Boolean` ,, `String``Object`|
@@ -78,7 +79,7 @@ k = CInt(q)
 
 [CType 함수](../../../language-reference/functions/ctype-function.md) 는 두 인수에 대해 작동 합니다. 첫 번째는 변환할 식이고 두 번째는 대상 데이터 형식 또는 개체 클래스입니다. 첫 번째 인수는 형식이 아니라 식 이어야 합니다.
 
-`CType`는 *인라인 함수*입니다. 즉, 컴파일 코드에서 함수 호출을 생성 하지 않고 변환을 수행 하는 경우가 많습니다. 이렇게 하면 성능이 향상됩니다.
+`CType` 는 *인라인 함수* 입니다. 즉, 컴파일 코드에서 함수 호출을 생성 하지 않고 변환을 수행 하는 경우가 많습니다. 이렇게 하면 성능이 향상됩니다.
 
 를 `CType` 다른 형식 변환 키워드와 비교 하려면 [DirectCast Operator](../../../language-reference/operators/directcast-operator.md) 및 [TryCast operator](../../../language-reference/operators/trycast-operator.md)를 참조 하세요.
 
@@ -105,9 +106,9 @@ Dim cZ As cZone
 h = CType(cZ, iZone)
 ```
 
-### <a name="array-types"></a>배열 형식
+### <a name="array-types"></a>배열 유형
 
-`CType`는 다음 예제와 같이 배열 데이터 형식을 변환할 수도 있습니다.
+`CType` 는 다음 예제와 같이 배열 데이터 형식을 변환할 수도 있습니다.
 
 ```vb
 Dim v() As classV
@@ -136,7 +137,7 @@ End If
 
 명시적 변환을 수행 하는 것은 지정 된 데이터 형식 또는 개체 클래스로 식을 *캐스팅* 하는 것으로 알려져 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic의 형식 변환](type-conversions.md)
 - [문자열과 다른 형식 사이의 변환](conversions-between-strings-and-other-types.md)

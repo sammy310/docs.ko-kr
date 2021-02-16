@@ -2,12 +2,12 @@
 title: 부분 실패 처리 전략
 description: 부분 실패를 정상적으로 처리하기 위한 여러 전략을 알아봅니다.
 ms.date: 10/16/2018
-ms.openlocfilehash: abf87df5afed02b4d794a1307a0ed943cafb4db3
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 948870aedec7bef4e7db0ed3752fb5185ed134b2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988806"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429236"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>부분 실패 처리 전략
 
@@ -23,7 +23,7 @@ ms.locfileid: "80988806"
 
 **대체 제공**. 이 방법에서 클라이언트 프로세스는 캐시된 데이터 또는 기본값 반환처럼 요청이 실패한 경우 대체 논리를 수행 합니다. 이 방법은 쿼리에 적합하며 업데이트나 명령에 관해서는 더욱 복잡합니다.
 
-**큐에 대기 중인 요청 수 제한**. 클라이언트는 클라이언트 마이크로 서비스가 특정 서비스에 보낼 수 있는 대기 중인 요청 수에 대한 상한값을 입력해야 합니다. 제한치에 도달한 경우 추가 요청을 하는 것은 무의미하며 이런 시도는 즉각 실패합니다. 구현 관점에서 Polly [Bulkhead 격리](https://github.com/App-vNext/Polly/wiki/Bulkhead) 정책은 이 요구 사항을 충족하는 데 사용할 수 있습니다. 이 방법은 기본적으로 <xref:System.Threading.SemaphoreSlim>을 구현으로 사용하는 병렬화 제한입니다. 또한 Bulkhead 외부에 "큐"를 허용합니다. 실행 전에도 과부하를 미리 줄일 수 있습니다(예를 들어, 용량이 가득찼다고 여겨지기 때문에). 이렇게 하면 특정 오류 시나리오에 대한 응답이 회로 차단기보다 더 빠르게 됩니다. 회로 차단기는 오류를 대기하기 때문입니다. [Polly](http://www.thepollyproject.org/)의 BulkheadPolicy 개체는 Bulkhead와 큐가 얼마나 차 있는지 드러내며 오버플로에 대한 이벤트를 제공하므로 자동화된 수평 확장에 사용될 수 있습니다.
+**큐에 대기 중인 요청 수 제한**. 클라이언트는 클라이언트 마이크로 서비스가 특정 서비스에 보낼 수 있는 대기 중인 요청 수에 대한 상한값을 입력해야 합니다. 제한치에 도달한 경우 추가 요청을 하는 것은 무의미하며 이런 시도는 즉각 실패합니다. 구현 관점에서 Polly [Bulkhead 격리](https://github.com/App-vNext/Polly/wiki/Bulkhead) 정책은 이 요구 사항을 충족하는 데 사용할 수 있습니다. 이 방법은 기본적으로 <xref:System.Threading.SemaphoreSlim>을 구현으로 사용하는 병렬화 제한입니다. 또한 Bulkhead 외부에 "큐"를 허용합니다. 실행 전에도 과부하를 미리 줄일 수 있습니다(예를 들어, 용량이 가득찼다고 여겨지기 때문에). 이렇게 하면 특정 오류 시나리오에 대한 응답이 회로 차단기보다 더 빠르게 됩니다. 회로 차단기는 오류를 대기하기 때문입니다. [Polly](https://thepollyproject.azurewebsites.net/)의 BulkheadPolicy 개체는 Bulkhead와 큐가 얼마나 차 있는지 드러내며 오버플로에 대한 이벤트를 제공하므로 자동화된 수평 확장에 사용될 수 있습니다.
 
 ## <a name="additional-resources"></a>추가 자료
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 45ae10a92b66bc1b487e3ed4e1e29b6905b895f5
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 48bbdcabcf025b2924fd722308664ebe9affaad0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190782"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100464783"
 ---
 # <a name="install-the-net-framework-for-developers"></a>개발자용 .NET Framework 설치
 
@@ -138,7 +138,7 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
 - .NET Framework 4.5 이상 버전을 설치하려면 관리자 자격 증명이 있어야 합니다.
 
-- .NET Framework 4.5 재배포 가능 패키지는 Microsoft에서 생성 및 서명된 파일의 디지털 서명이 중간에 만료되도록 한 디지털 서명의 부적절한 타임스탬프 관련 문제를 해결하기 위해 2012년 10월 9일 업데이트되었습니다. 이전에 2012년 8월 16일자 .NET Framework 4.5 재배포 가능 패키지를 설치한 경우 [.NET Framework 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-framework/net45)에서 최신 재배포 가능 패키지로 업데이트하는 것이 좋습니다. 이 문제에 대한 자세한 내용은 [Microsoft 보안 공지 2749655](/security-updates/SecurityAdvisories/2012/2749655) 및 [기술 자료 문서 2770445](https://support.microsoft.com/kb/2770445)를 참조하십시오.
+- .NET Framework 4.5 재배포 가능 패키지는 Microsoft에서 생성 및 서명된 파일의 디지털 서명이 중간에 만료되도록 한 디지털 서명의 부적절한 타임스탬프 관련 문제를 해결하기 위해 2012년 10월 9일 업데이트되었습니다. 이전에 2012년 8월 16일자 .NET Framework 4.5 재배포 가능 패키지를 설치한 경우 [.NET Framework 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-framework/net45)에서 최신 재배포 가능 패키지로 업데이트하는 것이 좋습니다. 이 문제에 대한 자세한 내용은 [Microsoft 보안 공지 2749655](/security-updates/SecurityAdvisories/2012/2749655)를 참조하세요.
 
 ## <a name="to-install-language-packs"></a>언어 팩을 설치하려면
 

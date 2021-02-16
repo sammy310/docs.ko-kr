@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 공 분산 및 반공 분산 (Visual Basic)'
 title: 공 분산 및 반공 분산
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-ms.openlocfilehash: 11dd71a8cfde12b7af1de79e3f5a095f79d8aa6e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6569b2c6c4790a5fcf53a9991543286ad6c4314c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400631"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485252"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>공변성(Covariance) 및 반공변성(Contravariance)(Visual Basic)
 
@@ -88,11 +89,11 @@ Dim strings As IEnumerable(Of String) = New List(Of String)
 Dim objects As IEnumerable(Of Object) = strings
 ```
 
-제네릭 매개 변수가 선언된 공변(covariant) 또는 반공변(contravariant)인 경우 제네릭 인터페이스 또는 대리자를 *variant*라고 합니다. Visual Basic에서는 사용자 고유의 variant 인터페이스 및 대리자를 만들 수 있습니다. 자세한 내용은 [Variant 제네릭 인터페이스 만들기(Visual Basic)](creating-variant-generic-interfaces.md) 및 [대리자의 가변성(Visual Basic)](variance-in-delegates.md)을 참조하세요.
+제네릭 매개 변수가 선언된 공변(covariant) 또는 반공변(contravariant)인 경우 제네릭 인터페이스 또는 대리자를 *variant* 라고 합니다. Visual Basic에서는 사용자 고유의 variant 인터페이스 및 대리자를 만들 수 있습니다. 자세한 내용은 [Variant 제네릭 인터페이스 만들기(Visual Basic)](creating-variant-generic-interfaces.md) 및 [대리자의 가변성(Visual Basic)](variance-in-delegates.md)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
-|제목|Description|
+|제목|설명|
 |-----------|-----------------|
 |[제네릭 인터페이스의 가변성(Visual Basic)](variance-in-generic-interfaces.md)|제네릭 인터페이스의 공분산 및 반공분산에 대해 설명하고 .NET Framework의 Variant 제네릭 인터페이스의 목록을 제공합니다.|
 |[Variant 제네릭 인터페이스 만들기(Visual Basic)](creating-variant-generic-interfaces.md)|사용자 지정 variant 인터페이스를 만드는 방법을 보여 줍니다.|

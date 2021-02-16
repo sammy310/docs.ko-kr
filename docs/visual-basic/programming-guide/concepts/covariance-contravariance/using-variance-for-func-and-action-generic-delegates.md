@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: Func 및 Action 제네릭 대리자에 가변성 사용 (Visual Basic)'
 title: 함수 및 작업 제네릭 대리자에 가변성 사용
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: f824d2422d67f1395d21a0863ca8c95d9f108989
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4a445d9ad1cf1bd6ca6e13bdd2e40545c6b28fe8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375760"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485239"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Func 및 Action 제네릭 대리자에 가변성 사용(Visual Basic)
 
@@ -92,7 +93,7 @@ Class AddressBook
 End Class
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [공변성(covariance) 및 반공변성(contravariance)(Visual Basic)](index.md)
 - [제네릭](../../../../standard/generics/index.md)

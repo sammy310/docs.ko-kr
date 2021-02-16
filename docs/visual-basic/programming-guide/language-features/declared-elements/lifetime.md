@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 수명 Visual Basic'
 title: 수명
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 67fe63eecd2aa0c134682708cdeddb21ba06db12
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7c95358209c61b42862f4e995d02a97dfb6e8487
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087494"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471463"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic의 수명
 
@@ -83,10 +84,10 @@ ms.locfileid: "91087494"
 
  위의 예에서는 모듈 수준에서을 선언 하 여 동일한 수명을 생성할 수 있습니다 `applesSold` . 그러나 이러한 방식으로 변수의 범위를 변경한 경우 프로시저는 더 이상 단독으로 액세스할 수 없습니다. 다른 프로시저 `applesSold` 에서 해당 값에 액세스 하 고 해당 값을 변경할 수 있으므로 누계를 신뢰할 수 없으며 코드를 유지 관리 하기가 더 어려울 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [공유](../../../language-reference/modifiers/shared.md)
-- [없는지](../../../language-reference/nothing.md)
+- [Nothing](../../../language-reference/nothing.md)
 - [Declared Element Names](declared-element-names.md)
 - [References to Declared Elements](references-to-declared-elements.md)
 - [Visual Basic의 범위](scope.md)
