@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: LINQ 소개 (Visual Basic)'
 title: LINQ 소개
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-ms.openlocfilehash: e99da74eb69511b92ddccfb42f8002adc7be83d1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: b6be93bbf9b458ca19068961617ee08f67601edc
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098283"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100426792"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>LINQ 소개(Visual Basic)
 
@@ -35,6 +36,6 @@ LINQ(Language-Integrated Query)는 개체 환경과 데이터 환경 간의 간�
   
 - .NET 컬렉션, 파일, 문자열 등: [LINQ to Objects (Visual Basic)](linq-to-objects.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [LINQ(Language-Integrated Query)(Visual Basic)](index.md)

@@ -2,12 +2,12 @@
 title: Lazy 식
 description: 'F # 지연 식으로 앱과 라이브러리의 성능을 향상 시킬 수 있는 방법을 알아봅니다.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 71c466ca3b74c9e92b81a3c268e07438ec944905
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0b8496467295ce6793f80c341af88bb1819f4a47
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558090"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100425505"
 ---
 # <a name="lazy-expressions"></a>Lazy 식
 
@@ -21,7 +21,7 @@ let identifier = lazy ( expression )
 
 ## <a name="remarks"></a>설명
 
-이전 구문에서 *expression* 은 결과가 필요한 경우에만 평가 되는 코드이 고, *identifier* 는 결과를 저장 하는 값입니다. 값은 형식입니다 [`Lazy<'T>`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-lazy-1-0.html) . 여기서에 사용 되는 실제 형식은 `'T` 식의 결과에서 결정 됩니다.
+이전 구문에서 *expression* 은 결과가 필요한 경우에만 평가 되는 코드이 고, *identifier* 는 결과를 저장 하는 값입니다. 값은 형식입니다 `Lazy<'T>` . 여기서에 사용 되는 실제 형식은 `'T` 식의 결과에서 결정 됩니다.
 
 지연 식은 결과가 필요한 상황 으로만 식의 실행을 제한 하 여 성능을 향상 시킬 수 있습니다.
 

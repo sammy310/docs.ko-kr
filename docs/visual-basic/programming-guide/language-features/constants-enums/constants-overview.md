@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 상수 개요 (Visual Basic)'
 title: 상수 개요
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 7f2a2dc140352588246d80a7feb46ce1f609b358
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: af5a64339c04306538fe1b9dc195a044aa89ab9f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086285"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475450"
 ---
 # <a name="constants-overview-visual-basic"></a>상수 개요(Visual Basic)
 
@@ -47,7 +48,7 @@ ms.locfileid: "91086285"
 |[Const 문](../../../language-reference/statements/const-statement.md)|문과 사용에 대해 설명 합니다 `Const` .|  
 |[Option Strict 문](../../../language-reference/statements/option-strict-statement.md)|문과 사용에 대해 설명 합니다 `Option Strict` .|  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [열거형 개요](enumerations-overview.md)
 - [방법: Visual Basic에서 배열 변수 초기화](../arrays/how-to-initialize-an-array-variable.md)

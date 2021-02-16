@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 대리자의 가변성 (Visual Basic)'
 title: 대리자의 가변성
 ms.date: 07/20/2015
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-ms.openlocfilehash: 86ea9f3f744381bcff71a88e9d88485cafa4a568
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d47f05a5ce3f3e59223f1f37ab09fb8a21e6e7ba
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375618"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100458965"
 ---
 # <a name="variance-in-delegates-visual-basic"></a>대리자의 가변성(Visual Basic)
 
@@ -137,7 +138,7 @@ End Sub
 
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>제네릭 대리자에서 Variant 형식 매개 변수 선언
 
-제네릭 대리자가 공변(covariant) 또는 반공변(contravariant) 제네릭 형식 매개 변수를 가지고 있는 경우 이를 *variant 제네릭 대리자*라고 할 수 있습니다.
+제네릭 대리자가 공변(covariant) 또는 반공변(contravariant) 제네릭 형식 매개 변수를 가지고 있는 경우 이를 *variant 제네릭 대리자* 라고 할 수 있습니다.
 
 `out` 키워드를 사용하여 제네릭 대리자에서 제네릭 형식 매개 변수를 공변(covariant)으로 선언할 수 있습니다. 공변(covariant) 형식은 메서드 반환 형식으로만 사용할 수 있으며 메서드 인수의 형식으로는 사용할 수 없습니다. 다음 코드 예제에서는 공변(covariant) 제네릭 대리자를 선언하는 방법을 보여 줍니다.
 
@@ -152,9 +153,9 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```
 
 > [!IMPORTANT]
-> `ByRef`Visual Basic의 매개 변수는 variant로 표시할 수 없습니다.
+> `ByRef` Visual Basic의 매개 변수는 variant로 표시할 수 없습니다.
 
-동일한 대리자에서, 그러나 서로 다른 형식 매개 변수에 대해 분산 및 공변성(covariance)을 모두 지원하는 것도 가능합니다. 이는 다음 예에서 확인할 수 있습니다.
+동일한 대리자에서, 그러나 서로 다른 형식 매개 변수에 대해 분산 및 공변성(covariance)을 모두 지원하는 것도 가능합니다. 다음 예제에서 이를 확인할 수 있습니다.
 
 ```vb
 Public Delegate Function DVariant(Of In A, Out R)(ByVal a As A) As R
@@ -211,7 +212,7 @@ End Sub
 
 완화 된 대리자 변환을 사용 하면 메서드 시그니처를 대리자 형식과 보다 유연 하 게 일치 시킬 수 있습니다. 예를 들어, 대리자에 메서드를 할당할 때 매개 변수 사양을 생략 하 고 함수 반환 값을 생략할 수 있습니다. 자세한 내용은 [완화 대리자 변환](../../language-features/delegates/relaxed-delegate-conversion.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [제네릭](../../../../standard/generics/index.md)
 - [Func 및 Action 제네릭 대리자에 가변성 사용(Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)

@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 0으로 나누기 (Visual Basic Run-Time 오류)'
 title: 0으로 나누기(Visual Basic 런타임 오류)
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID11
 ms.assetid: 5b9bc5d6-792e-48bc-a974-012e07ad95f3
-ms.openlocfilehash: 2dc36123478c0946b3ba5931dcc283acc08920cc
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 50358e7ef24a0366d13145950282a3696173b6df
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084361"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468592"
 ---
 # <a name="division-by-zero-visual-basic-run-time-error"></a>0으로 나누기(Visual Basic 런타임 오류)
 
@@ -21,6 +22,6 @@ ms.locfileid: "91084361"
   
 2. 이전 작업에서 식의 변수 특히, 다른 프로시저에서 해당 프로시저로 인수로 전달된 변수를 검사합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [값 또는 참조로 인수 전달](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

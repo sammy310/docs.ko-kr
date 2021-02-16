@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: 방법: XML 리터럴 만들기 (Visual Basic)'
 title: '방법: XML 리터럴 만들기'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: c7ad8d684dde31550b6e1b74c098d152b227f6c1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 0e57b037d0567002fd570025e147771c4fab38f4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058224"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433293"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>방법: XML 리터럴 만들기(Visual Basic)
 
@@ -53,7 +54,7 @@ XML 리터럴을 사용 하 여 코드에서 직접 XML 문서, 조각 또는 �
   
      `</books>`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [XML](index.md)
 - [Visual Basic에서 XML 만들기](creating-xml.md)

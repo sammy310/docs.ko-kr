@@ -1,16 +1,17 @@
 ---
+description: '자세히 알아보기: 숨김과 재정의 간의 차이점 (Visual Basic)'
 title: 섀도잉과 재정의 간의 차이점
 ms.date: 07/20/2015
 helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: 98c073f8fa403416b2425431ff4334b990726f44
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 94e661c83b95448e7a78931b81c87b6e974059ed
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095449"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485200"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>숨기기와 재정의의 차이점(Visual Basic)
 
@@ -25,7 +26,7 @@ ms.locfileid: "91095449"
 ||||  
 |---|---|---|  
 |비교 지점|섀도잉|대체|  
-|목적|파생 클래스에 이미 정의 된 멤버를 소개 하는 후속 기본 클래스 수정 으로부터 보호 합니다.|동일한 호출 시퀀스<sup>1</sup> 을 사용 하 여 프로시저 또는 속성의 다른 구현을 정의 함으로써 다형성을 달성 합니다.|  
+|용도|파생 클래스에 이미 정의 된 멤버를 소개 하는 후속 기본 클래스 수정 으로부터 보호 합니다.|동일한 호출 시퀀스<sup>1</sup> 을 사용 하 여 프로시저 또는 속성의 다른 구현을 정의 함으로써 다형성을 달성 합니다.|  
 |다시 정의 요소|선언 된 모든 요소 형식|프로시저 ( `Function` , `Sub` 또는 `Operator` ) 또는 속성만|  
 |요소 재정의|선언 된 모든 요소 형식|동일한 호출 시퀀스<sup>1</sup> 을 사용 하는 프로시저나 속성만|  
 |재정의 요소의 액세스 수준|모든 액세스 수준|재정의 된 요소의 액세스 수준을 변경할 수 없습니다.|  
@@ -54,7 +55,7 @@ ms.locfileid: "91095449"
   
 - 요소 형식 또는 호출 시퀀스를 자유롭게 변경 하려고 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [References to Declared Elements](references-to-declared-elements.md)
 - [Visual Basic에서 숨김](shadowing.md)

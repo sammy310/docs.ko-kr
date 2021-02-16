@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 연산자를 정의 하는 클래스 사용 (Visual Basic)'
 title: '방법: 연산자를 정의하는 클래스 사용'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 083916a420bf4ad182536363ea46448f6b4c1da5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4bf5321fbf1868ad0214d0f4781df30dc8f92ac9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071354"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455745"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>방법: 연산자를 정의하는 클래스 사용(Visual Basic)
 
@@ -24,9 +25,9 @@ ms.locfileid: "91071354"
   
  클래스 또는 구조체에서 연산자를 정의 하는 것을 연산자 *오버 로드* 라고도 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
- 다음 예에서는 sql <xref:System.Data.SqlTypes.SqlString> 문자열과 Visual Basic 문자열 사이에서 양방향으로 변환 연산자 ([CType 함수](../../../language-reference/functions/ctype-function.md))를 정의 하는 sql 구조에 액세스 합니다. Sql 문자열 식을 사용 하 여 `CType(` *SQL string expression* `String)` sql 문자열을 Visual Basic 문자열로 변환 하 고 `CType(` *문자열 식을 Visual Basic*하 여 <xref:System.Data.SqlTypes.SqlString> `)` 다른 방향으로 변환 합니다.  
+ 다음 예에서는 sql <xref:System.Data.SqlTypes.SqlString> 문자열과 Visual Basic 문자열 사이에서 양방향으로 변환 연산자 ([CType 함수](../../../language-reference/functions/ctype-function.md))를 정의 하는 sql 구조에 액세스 합니다. Sql 문자열 식을 사용 하 여 `CType(`  `String)` sql 문자열을 Visual Basic 문자열로 변환 하 고 `CType(` *문자열 식을 Visual Basic* 하 여 <xref:System.Data.SqlTypes.SqlString> `)` 다른 방향으로 변환 합니다.  
   
  [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
@@ -42,7 +43,7 @@ ms.locfileid: "91071354"
   
  프로젝트에는 System.object와 System.XML에 대 한 참조가 있어야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [연산자 프로시저](./operator-procedures.md)
 - [방법: 연산자 정의](./how-to-define-an-operator.md)

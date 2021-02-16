@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: Visual Basic에서 COM 개체 참조'
 title: '방법: Visual Basic에서 COM 개체 참조'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 43ba068663db9f8c3816a6f731395a6682a130e6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f0c08e5be9144bdefc3fe0b4609bad2421889d52
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91083295"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477569"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>방법: Visual Basic에서 COM 개체 참조
 
@@ -53,7 +54,7 @@ Visual Basic에서 형식 라이브러리가 있는 COM 개체에 대 한 참조
   
      Tlbimp를 사용 하 여 등록 되지 않은 COM 개체의 경우에도 형식 라이브러리에 대 한 interop 어셈블리를 만들 수 있습니다. 그러나 interop 어셈블리에서 참조 하는 COM 개체를 사용 하려는 컴퓨터에 올바르게 등록 해야 합니다. Windows 운영 체제에 포함 된 Regsvr32 유틸리티를 사용 하 여 COM 개체를 등록할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [COM Interop](index.md)
 - [Tlbimp.exe(형식 라이브러리 가져오기)](../../../framework/tools/tlbimp-exe-type-library-importer.md)

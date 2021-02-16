@@ -1,20 +1,21 @@
 ---
+description: '에 대 한 자세한 정보: 개체 및 클래스 Visual Basic'
 title: 개체 및 클래스
 ms.date: 05/26/2020
 helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 9e3cf262ef617a1ae5ee92bcc3d6fd5c691602f9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9cefcc117c9dd4ac42940f342dbf75d8ddb4f41d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600414"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462726"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic의 개체 및 클래스
 
-*개체*는 하나의 단위로 취급될 수 있는 코드 및 데이터의 조합입니다. 개체는 컨트롤 또는 폼과 같은 애플리케이션의 부분일 수 있습니다. 전체 애플리케이션이 하나의 개체가 될 수도 있습니다.
+*개체* 는 하나의 단위로 취급될 수 있는 코드 및 데이터의 조합입니다. 개체는 컨트롤 또는 폼과 같은 애플리케이션의 부분일 수 있습니다. 전체 애플리케이션이 하나의 개체가 될 수도 있습니다.
 
 Visual Basic에서 응용 프로그램을 만들 때 개체를 계속 사용 합니다. Visual Basic에서 제공 하는 개체 (예: 컨트롤, 폼 및 데이터 액세스 개체)를 사용할 수 있습니다. Visual Basic 응용 프로그램 내에서 다른 응용 프로그램의 개체를 사용할 수도 있습니다. 개체를 직접 만들고 해당 개체에 대해 추가 속성 및 메서드를 정의할 수 있습니다. 개체는 프로그램에 대한 조립식 빌딩 블록처럼 작동합니다. 즉, 코드 조각을 한 번 작성한 후 반복해서 다시 사용할 수 있습니다.
 
@@ -22,7 +23,7 @@ Visual Basic에서 응용 프로그램을 만들 때 개체를 계속 사용 합
 
 ## <a name="objects-and-classes"></a>개체 및 클래스
 
-Visual Basic의 각 개체는 *클래스*에 의해 정의 됩니다. 클래스는 개체의 변수, 속성, 프로시저 및 이벤트를 설명합니다. 개체는 클래스의 인스턴스입니다. 클래스를 정의한 후에는 필요한 수만큼 개체를 만들 수 있습니다.
+Visual Basic의 각 개체는 *클래스* 에 의해 정의 됩니다. 클래스는 개체의 변수, 속성, 프로시저 및 이벤트를 설명합니다. 개체는 클래스의 인스턴스입니다. 클래스를 정의한 후에는 필요한 수만큼 개체를 만들 수 있습니다.
 
 개체와 해당 클래스 간의 관계를 이해하기 위해 쿠키 커터와 쿠키를 생각해 보세요. 쿠키 커터는 클래스입니다. 각 쿠키에 대해 크기와 모양 같은 특징을 정의합니다. 클래스는 개체를 만드는 데 사용됩니다. 개체는 쿠키입니다.
 
@@ -57,7 +58,7 @@ Visual Basic의 각 개체는 *클래스*에 의해 정의 됩니다. 클래스�
    ```
 
 > [!NOTE]
-> 가능하면 항상 할당하려는 클래스 형식으로 변수를 선언해야 합니다. 이것을 *초기 바인딩*이라고 합니다. 컴파일 시간의 클래스 형식을 모르는 경우 변수를 [개체 데이터 형식](../../../language-reference/data-types/object-data-type.md)으로 선언하여 *런타임에 바인딩*을 호출할 수 있습니다. 그러나 런타임에 바인딩을 사용하면 성능이 저하되고 런타임 개체 멤버에 대한 액세스가 제한됩니다. 자세한 내용은 [개체 변수 선언](../variables/object-variable-declaration.md)을 참조하세요.
+> 가능하면 항상 할당하려는 클래스 형식으로 변수를 선언해야 합니다. 이것을 *초기 바인딩* 이라고 합니다. 컴파일 시간의 클래스 형식을 모르는 경우 변수를 [개체 데이터 형식](../../../language-reference/data-types/object-data-type.md)으로 선언하여 *런타임에 바인딩* 을 호출할 수 있습니다. 그러나 런타임에 바인딩을 사용하면 성능이 저하되고 런타임 개체 멤버에 대한 액세스가 제한됩니다. 자세한 내용은 [개체 변수 선언](../variables/object-variable-declaration.md)을 참조하세요.
 
 ### <a name="multiple-instances"></a>여러 인스턴스
 
@@ -65,7 +66,7 @@ Visual Basic의 각 개체는 *클래스*에 의해 정의 됩니다. 클래스�
 
 ## <a name="object-members"></a>개체 멤버
 
-개체는 애플리케이션의 요소로, 클래스의 *인스턴스*를 나타냅니다. 필드, 속성, 메서드 및 이벤트는 개체의 구성 요소이며 해당 *멤버*로 구성됩니다.
+개체는 애플리케이션의 요소로, 클래스의 *인스턴스* 를 나타냅니다. 필드, 속성, 메서드 및 이벤트는 개체의 구성 요소이며 해당 *멤버* 로 구성됩니다.
 
 ### <a name="member-access"></a>멤버 액세스
 
@@ -81,14 +82,14 @@ IntelliSense는 멤버 나열 옵션을 호출할 때(예를 들어 멤버 액�
 
 ### <a name="fields-and-properties"></a>필드 및 속성
 
-*필드* 및 *속성*은 개체에 저장된 정보를 나타냅니다. 프로시저에서 지역 변수를 검색하고 설정하는 것과 동일한 방식으로 대입문을 사용하여 해당 값을 검색하고 설정합니다. 다음 예제에서는 <xref:System.Windows.Forms.Control.Width%2A> 속성을 검색하고 <xref:System.Windows.Forms.Label> 개체의 <xref:System.Windows.Forms.Control.ForeColor%2A> 속성을 설정합니다.
+*필드* 및 *속성* 은 개체에 저장된 정보를 나타냅니다. 프로시저에서 지역 변수를 검색하고 설정하는 것과 동일한 방식으로 대입문을 사용하여 해당 값을 검색하고 설정합니다. 다음 예제에서는 <xref:System.Windows.Forms.Control.Width%2A> 속성을 검색하고 <xref:System.Windows.Forms.Label> 개체의 <xref:System.Windows.Forms.Control.ForeColor%2A> 속성을 설정합니다.
 
 ```vb
 Dim warningWidth As Integer = warningLabel.Width
 warningLabel.ForeColor = System.Drawing.Color.Red
 ```
 
-필드를 *멤버 변수*라고도 합니다.
+필드를 *멤버 변수* 라고도 합니다.
 
 다음 경우에 Property 프로시저를 사용합니다.
 
@@ -117,7 +118,7 @@ warningLabel.ForeColor = System.Drawing.Color.Red
 
 ### <a name="methods"></a>메서드
 
-*메서드*는 개체에서 수행할 수 있는 작업입니다. 예를 들어 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>는 콤보 상자에 새 항목을 추가하는 <xref:System.Windows.Forms.ComboBox> 개체의 메서드입니다.
+*메서드* 는 개체에서 수행할 수 있는 작업입니다. 예를 들어 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>는 콤보 상자에 새 항목을 추가하는 <xref:System.Windows.Forms.ComboBox> 개체의 메서드입니다.
 
 다음 예제에서는 <xref:System.Windows.Forms.Timer> 개체의 <xref:System.Windows.Forms.Timer.Start%2A> 메서드를 설명합니다.
 
@@ -126,21 +127,21 @@ Dim safetyTimer As New System.Windows.Forms.Timer
 safetyTimer.Start()
 ```
 
-메서드는 개체에 의해 노출되는 *프로시저*일 뿐입니다.
+메서드는 개체에 의해 노출되는 *프로시저* 일 뿐입니다.
 
 자세한 내용은 [프로시저](../procedures/index.md)를 참조하세요.
 
 ### <a name="events"></a>이벤트
 
-이벤트는 마우스 클릭이나 키 누르기와 같이 개체가 인식하는 동작이며 응답하기 위해 코드를 작성할 수 있습니다. 이벤트는 사용자 동작 또는 프로그램 코드의 결과로 발생하거나 시스템에 의해 발생할 수 있습니다. 이벤트에 신호를 보내는 코드를 이벤트 *발생*이라고 하고, 신호에 응답하는 코드를 *처리*라고 합니다.
+이벤트는 마우스 클릭이나 키 누르기와 같이 개체가 인식하는 동작이며 응답하기 위해 코드를 작성할 수 있습니다. 이벤트는 사용자 동작 또는 프로그램 코드의 결과로 발생하거나 시스템에 의해 발생할 수 있습니다. 이벤트에 신호를 보내는 코드를 이벤트 *발생* 이라고 하고, 신호에 응답하는 코드를 *처리* 라고 합니다.
 
 개체에 의해 발생하고 다른 개체에서 처리되는 사용자 지정 이벤트를 개발할 수도 있습니다. 자세한 내용은 [이벤트](../events/index.md)를 참조하세요.
 
 ### <a name="instance-members-and-shared-members"></a>인스턴스 멤버 및 공유 멤버
 
-클래스에서 개체를 만들 때 결과는 해당 클래스의 인스턴스가 됩니다. [Shared](../../../language-reference/modifiers/shared.md) 키워드로 선언되지 않은 멤버는 해당 특정 인스턴스에 반드시 속하는 *인스턴스 멤버*입니다. 한 인스턴스의 인스턴스 멤버는 동일한 클래스의 다른 인스턴스에 있는 동일한 멤버와 무관합니다. 예를 들어 인스턴스 멤버 변수는 서로 다른 인스턴스에서 다른 값을 가질 수 있습니다.
+클래스에서 개체를 만들 때 결과는 해당 클래스의 인스턴스가 됩니다. [Shared](../../../language-reference/modifiers/shared.md) 키워드로 선언되지 않은 멤버는 해당 특정 인스턴스에 반드시 속하는 *인스턴스 멤버* 입니다. 한 인스턴스의 인스턴스 멤버는 동일한 클래스의 다른 인스턴스에 있는 동일한 멤버와 무관합니다. 예를 들어 인스턴스 멤버 변수는 서로 다른 인스턴스에서 다른 값을 가질 수 있습니다.
 
-`Shared` 키워드로 선언된 멤버는 특정 인스턴스가 아니라 전체 클래스에 속하는 *공유 멤버*입니다. 공유 멤버는 사용자가 만드는 클래스의 인스턴스 수에 관계 없이, 사용자가 인스턴스를 만들지 않더라도 한 번만 존재합니다. 예를 들어 공유 멤버 변수는 클래스에 액세스할 수 있는 모든 코드에서 사용할 수 있는 하나의 값만 갖습니다.
+`Shared` 키워드로 선언된 멤버는 특정 인스턴스가 아니라 전체 클래스에 속하는 *공유 멤버* 입니다. 공유 멤버는 사용자가 만드는 클래스의 인스턴스 수에 관계 없이, 사용자가 인스턴스를 만들지 않더라도 한 번만 존재합니다. 예를 들어 공유 멤버 변수는 클래스에 액세스할 수 있는 모든 코드에서 사용할 수 있는 하나의 값만 갖습니다.
 
 #### <a name="accessing-non-shared-members"></a>비공유 멤버 액세스
 
@@ -201,11 +202,11 @@ End Sub
 
 ## <a name="relationships-among-objects"></a>개체 간 관계
 
-개체는 여러 가지 방법으로 서로 관련될 수 있습니다. 관계의 주요 종류로는 *계층적* 및 *포함*이 있습니다.
+개체는 여러 가지 방법으로 서로 관련될 수 있습니다. 관계의 주요 종류로는 *계층적* 및 *포함* 이 있습니다.
 
 ### <a name="hierarchical-relationship"></a>계층적 관계
 
-클래스가 보다 기본적인 클래스에서 파생되면 *계층적 관계*에 있다고 할 수 있습니다. 클래스 계층 구조는 보다 일반적인 클래스의 하위 항목을 설명하는 경우에 유용합니다.
+클래스가 보다 기본적인 클래스에서 파생되면 *계층적 관계* 에 있다고 할 수 있습니다. 클래스 계층 구조는 보다 일반적인 클래스의 하위 항목을 설명하는 경우에 유용합니다.
 
 다음 예제에서는 일반적인 <xref:System.Windows.Forms.Button>처럼 작동하지만 전경색 및 배경색을 거꾸로 뒤집는 메서드도 제공하는 특수한 종류의 <xref:System.Windows.Forms.Button>을 정의하려 한다고 가정합니다.
 
@@ -250,11 +251,11 @@ End Sub
 
 ### <a name="containment-relationship"></a>포함 관계
 
-개체를 연관지을 수 있는 또 다른 방법은 *포함 관계*입니다. 컨테이너 개체는 논리적으로 다른 개체를 캡슐화합니다. 예를 들어 <xref:System.OperatingSystem> 개체에 논리적으로 <xref:System.Version> 개체를 포함하며, 이는 해당 <xref:System.OperatingSystem.Version%2A> 속성을 통해 반환됩니다. 컨테이너 개체가 다른 개체를 물리적으로 포함하는 것은 아닙니다.
+개체를 연관지을 수 있는 또 다른 방법은 *포함 관계* 입니다. 컨테이너 개체는 논리적으로 다른 개체를 캡슐화합니다. 예를 들어 <xref:System.OperatingSystem> 개체에 논리적으로 <xref:System.Version> 개체를 포함하며, 이는 해당 <xref:System.OperatingSystem.Version%2A> 속성을 통해 반환됩니다. 컨테이너 개체가 다른 개체를 물리적으로 포함하는 것은 아닙니다.
 
 #### <a name="collections"></a>컬렉션
 
-특정 형식의 개체 포함을 *컬렉션*으로 나타냅니다. 컬렉션은 열거할 수 있는 유사한 개체의 그룹입니다. Visual Basic는 [For Each ... ](../../../language-reference/statements/for-each-next-statement.md)컬렉션의 항목을 반복 하는 데 사용할 수 있는 다음 문입니다. 또한 컬렉션을 사용하면<xref:Microsoft.VisualBasic.Collection.Item%2A>을 사용하여 인덱스별로 또는 고유 문자열에 연결하여 요소를 검색할 수 있습니다. 컬렉션은 인덱스를 사용하지 않고도 항목을 추가 또는 제거할 수 있도록 하므로 배열보다 더 쉽게 사용할 수 있습니다. 사용 편의성 때문에 컬렉션을 폼 및 컨트롤을 저장하는 데 종종 사용합니다.
+특정 형식의 개체 포함을 *컬렉션* 으로 나타냅니다. 컬렉션은 열거할 수 있는 유사한 개체의 그룹입니다. Visual Basic는 [For Each ... ](../../../language-reference/statements/for-each-next-statement.md) 컬렉션의 항목을 반복 하는 데 사용할 수 있는 다음 문입니다. 또한 컬렉션을 사용하면<xref:Microsoft.VisualBasic.Collection.Item%2A>을 사용하여 인덱스별로 또는 고유 문자열에 연결하여 요소를 검색할 수 있습니다. 컬렉션은 인덱스를 사용하지 않고도 항목을 추가 또는 제거할 수 있도록 하므로 배열보다 더 쉽게 사용할 수 있습니다. 사용 편의성 때문에 컬렉션을 폼 및 컨트롤을 저장하는 데 종종 사용합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

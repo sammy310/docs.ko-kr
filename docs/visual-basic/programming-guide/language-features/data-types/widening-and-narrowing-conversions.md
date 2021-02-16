@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 확대 및 축소 변환 (Visual Basic)'
 title: Widening and Narrowing Conversions
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: c0e10f5593ce5c81002233516444e415571541f3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2ccd7d51b811aaf0f3e29dc0dc1730dffad2106b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058536"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468436"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>확대 변환과 축소 변환(Visual Basic)
 
@@ -44,20 +45,20 @@ ms.locfileid: "91058536"
 |[Byte](../../../language-reference/data-types/byte-data-type.md)|`Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`|  
 |[Short](../../../language-reference/data-types/short-data-type.md)|`Short`, `Integer`, `Long`, `Decimal`, `Single`, `Double`|  
 |[UShort](../../../language-reference/data-types/ushort-data-type.md)|`UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, `Double`|  
-|[정수](../../../language-reference/data-types/integer-data-type.md)|`Integer`, `Long` , `Decimal` , `Single` , `Double` <sup>2</sup>|  
+|[Integer](../../../language-reference/data-types/integer-data-type.md)|`Integer`, `Long` , `Decimal` , `Single` , `Double` <sup>2</sup>|  
 |[UInteger](../../../language-reference/data-types/uinteger-data-type.md)|`UInteger`,,, `Long` `ULong` `Decimal` , `Single` , `Double` <sup>2</sup>|  
 |[Long](../../../language-reference/data-types/long-data-type.md)|`Long`, `Decimal` , `Single` , `Double` <sup>2</sup>|  
 |[ULong](../../../language-reference/data-types/ulong-data-type.md)|`ULong`, `Decimal` , `Single` , `Double` <sup>2</sup>|  
-|[Decimal](../../../language-reference/data-types/decimal-data-type.md)|`Decimal`, `Single` , `Double` <sup>2</sup>|  
+|[10진수](../../../language-reference/data-types/decimal-data-type.md)|`Decimal`, `Single` , `Double` <sup>2</sup>|  
 |[Single](../../../language-reference/data-types/single-data-type.md)|`Single`, `Double`|  
 |[double](../../../language-reference/data-types/double-data-type.md)|`Double`|  
 |모든 열거 형식 ([열거형](../../../language-reference/statements/enum-statement.md))|기본 정수 형식 및 기본 형식이 확대 되는 모든 형식입니다.|  
 |[Char](../../../language-reference/data-types/char-data-type.md)|`Char`, `String`|  
 |`Char` 배열|`Char` 배열과 `String`|  
-|모든 형식|[Object](../../../language-reference/data-types/object-data-type.md)|  
+|모든 형식|[개체](../../../language-reference/data-types/object-data-type.md)|  
 |모든 파생 형식|파생 되는 기본 형식 <sup>3</sup>입니다.|  
 |모든 형식|구현 하는 인터페이스입니다.|  
-|[없는지](../../../language-reference/nothing.md)|모든 데이터 형식 또는 개체 유형입니다.|  
+|[Nothing](../../../language-reference/nothing.md)|모든 데이터 형식 또는 개체 유형입니다.|  
   
  <sup>1</sup> 정의에 따라 모든 데이터 형식이 그 자체로 확대 됩니다.  
   
@@ -113,7 +114,7 @@ Dim square As cSquare = New cSquare
 shape = square  
 ```  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [데이터 형식](index.md)
 - [Visual Basic의 형식 변환](type-conversions.md)

@@ -2,12 +2,12 @@
 title: Ocelot을 사용하여 API 게이트웨이 구현
 description: Ocelot을 사용하여 API 게이트웨이를 구현하는 방법과 컨테이너 기반 환경에서 Ocelot을 사용하는 방법을 알아봅니다.
 ms.date: 03/02/2020
-ms.openlocfilehash: 5da8533eff394b587d123970742727484a7236ad
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 3f8fcaac162d2bffd221f07b2e5061455d73e1bd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678129"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429301"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot을 사용하여 API 게이트웨이 구현
 
@@ -196,7 +196,7 @@ namespace OcelotApiGw
 
 구성에는 재라우팅의 배열과 전역 구성의 두 가지 섹션이 있습니다. 재라우팅은 업스트림 요청을 처리하는 방법을 Ocelot에 알려주는 개체입니다. 전역 구성을 사용하면 재라우팅 특정 설정을 재정의할 수 있습니다. 이는 많은 재라우팅 특정 설정을 관리하지 않으려는 경우에 유용합니다.
 
-eShopOnContainers의 API 게이트웨이 중 하나에 있는 [ 구성 파일](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/ApiGateways/Web.Bff.Shopping/apigw/configuration.json)을 간단히 보여주는 예제는 다음과 같습니다.
+eShopOnContainers의 API 게이트웨이 중 하나에 있는 [ 구성 파일](https://github.com/dotnet-architecture/eShopOnContainers/blob/main/src/ApiGateways/Mobile.Bff.Shopping/apigw/configuration.json)을 간단히 보여주는 예제는 다음과 같습니다.
 
 ```json
 {
