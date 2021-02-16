@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 켜기 (Visual Basic)'
 title: 켜기
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - On keyword [Visual Basic]
 ms.assetid: 8619c328-1637-4f41-b466-cbe693f4fe73
-ms.openlocfilehash: fa854c4197f792b8cfd3d3d95b6e824c7a0aba1f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: b33ef07e9f7b7e3150b120fa2de547578e1619ea
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084335"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100478882"
 ---
 # <a name="on-visual-basic"></a>On(Visual Basic)
 
@@ -36,6 +37,6 @@ ms.locfileid: "91084335"
   
  [Option Strict 문](../language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
-- [키워드](../language-reference/keywords/index.md)
+- [C++ 키워드](../language-reference/keywords/index.md)

@@ -1,4 +1,5 @@
 ---
+description: '에 대 한 자세한 정보: .NET Framework 응용 프로그램의 COM 상호 운용성 (Visual Basic)'
 title: .NET Framework 애플리케이션의 COM 상호 운용성
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: 377958a21886fe0257633ea19417f9a19bd51ff3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ad531ab689db104ff7f1ed8639f3c65eeed717d1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396871"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483731"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework 애플리케이션의 COM 상호 운용성(Visual Basic)
 

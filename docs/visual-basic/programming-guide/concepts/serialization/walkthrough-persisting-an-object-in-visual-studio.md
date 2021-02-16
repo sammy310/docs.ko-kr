@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 연습: Visual Studio에서 개체 유지 (Visual Basic)'
 title: Visual Studio에서 개체 유지
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 0b2fff171164a29e6066839371fc95ad41b452f1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4145f84d14eadae6a305a4a1f5860cdcc38450c8
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91086467"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100486864"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>연습: Visual Studio에서 개체 유지(Visual Basic)
 
@@ -35,7 +36,7 @@ ms.locfileid: "91086467"
   
 1. 새 클래스 라이브러리 프로젝트를 만들고 "LoanClass"라는 이름을 지정합니다. 자세한 내용은 [솔루션 및 프로젝트 만들기](/visualstudio/ide/creating-solutions-and-projects)를 참조하세요.  
   
-2. **솔루션 탐색기**에서 Class1 파일에 대한 바로 가기 메뉴를 열고 **이름 바꾸기**를 선택합니다. 파일 이름을 `Loan`로 바꾸고 ENTER 키를 누릅니다. 파일 이름을 바꾸면 클래스 이름도 `Loan`으로 바뀝니다.  
+2. **솔루션 탐색기** 에서 Class1 파일에 대한 바로 가기 메뉴를 열고 **이름 바꾸기** 를 선택합니다. 파일 이름을 `Loan`로 바꾸고 ENTER 키를 누릅니다. 파일 이름을 바꾸면 클래스 이름도 `Loan`으로 바뀝니다.  
   
 3. 클래스에 다음 공용 멤버를 추가합니다.  
   
@@ -79,15 +80,15 @@ ms.locfileid: "91086467"
   
 ### <a name="to-create-a-test-application"></a>테스트 애플리케이션을 만들려면  
   
-1. Windows Forms 애플리케이션 프로젝트를 솔루션에 추가하려면 **파일** 메뉴에서 **추가**, **새 프로젝트**를 차례로 선택합니다.  
+1. Windows Forms 애플리케이션 프로젝트를 솔루션에 추가하려면 **파일** 메뉴에서 **추가**, **새 프로젝트** 를 차례로 선택합니다.  
   
-2. **새 프로젝트 추가** 대화 상자에서 **Windows Forms 애플리케이션**을 선택하고, 프로젝트 이름으로 `LoanApp`를 입력한 다음, **확인**을 클릭하여 대화 상자를 닫습니다.  
+2. **새 프로젝트 추가** 대화 상자에서 **Windows Forms 애플리케이션** 을 선택하고, 프로젝트 이름으로 `LoanApp`를 입력한 다음, **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
-3. **솔루션 탐색기**에서 LoanApp 프로젝트를 선택합니다.  
+3. **솔루션 탐색기** 에서 LoanApp 프로젝트를 선택합니다.  
   
-4. **프로젝트** 메뉴에서 **시작 프로젝트로 설정**을 선택합니다.  
+4. **프로젝트** 메뉴에서 **시작 프로젝트로 설정** 을 선택합니다.  
   
-5. **프로젝트** 메뉴에서 **참조 추가**를 선택 합니다.  
+5. **프로젝트** 메뉴에서 **참조 추가** 를 선택합니다.  
   
 6. **참조 추가** 대화 상자에서 **프로젝트** 탭을 선택한 다음 LoanClass 프로젝트를 선택합니다.  
   
@@ -218,7 +219,7 @@ ms.locfileid: "91086467"
   
  이 시점에서 다시 애플리케이션을 빌드 및 실행할 수 있습니다. 처음에는 텍스트 상자에 기본값이 나타납니다. 값을 변경하고 네 번째 텍스트 상자에 이름을 입력합니다. 애플리케이션을 닫았다가 다시 엽니다. 이제 새 값이 텍스트 상자에 나타납니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Serialization(Visual Basic)](index.md)
 - [Visual Basic 프로그래밍 가이드](../../index.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 샘플 컴파일 명령줄(Visual Basic)'
 title: 샘플 컴파일 명령줄
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: 496627d3b77b0382ae7d15c8225a6fbd41f1db73
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fbd35b7f12b3bee9690698a24dcb70d850081f95
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403124"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474007"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>샘플 컴파일 명령줄(Visual Basic)
 
@@ -34,7 +35,7 @@ Visual Basic 명령줄 컴파일러는 입력 및 출력 파일, 어셈블리, �
 |현재 디렉터리에 있는 모든 Visual Basic 파일을 Something.dll로 컴파일합니다.|`vbc -target:library -out:Something.dll *.vb`|
 
 > [!TIP]
-> Visual Studio IDE를 사용하여 프로젝트를 빌드할 때 출력 창에 해당 컴파일러 옵션과 함께 연결된 **vbc** 명령에 대한 정보를 표시할 수 있습니다. 이 정보를 표시하려면 [옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)을 연 다음, **MSBuild 프로젝트 빌드 출력 상세도**를 **보통** 또는 더 높은 수준의 자세한 정보 표시로 설정합니다.
+> Visual Studio IDE를 사용하여 프로젝트를 빌드할 때 출력 창에 해당 컴파일러 옵션과 함께 연결된 **vbc** 명령에 대한 정보를 표시할 수 있습니다. 이 정보를 표시하려면 [옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)을 연 다음, **MSBuild 프로젝트 빌드 출력 상세도** 를 **보통** 또는 더 높은 수준의 자세한 정보 표시로 설정합니다.
 
 ## <a name="see-also"></a>참조
 

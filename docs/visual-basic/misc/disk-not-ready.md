@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: 디스크가 준비 되지 않음'
 title: 디스크가 준비되지 않았습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID71
 ms.assetid: 5e2528f5-81b3-4e5e-a294-a43cc738a42e
-ms.openlocfilehash: cdd853ddcf5958326711b180ab1d57b44ea19c90
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1975b5303b83d601355b65546abec48ae2799df3
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084452"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100483744"
 ---
 # <a name="disk-not-ready"></a>디스크가 준비되지 않았습니다.
 
@@ -21,6 +22,6 @@ ms.locfileid: "91084452"
   
 2. 드라이브 문을 닫습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
-- [오류 형식](../programming-guide/language-features/error-types.md)
+- [오류 유형](../programming-guide/language-features/error-types.md)

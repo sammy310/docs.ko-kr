@@ -1,15 +1,16 @@
 ---
+description: '자세히 알아보기: 마우스 휠이 없습니다.'
 title: 마우스 휠이 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMouse_NoWheelIsPresent
 ms.assetid: e924ffba-4af1-4247-9a6f-d19a03738f62
-ms.openlocfilehash: a9b468d876945a177f3e326a7dc37e6c8a80285d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c712903f41aa9f7c37c0cf1e3ffdc76edfd85b7f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078842"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100479103"
 ---
 # <a name="no-mouse-wheel-is-present"></a>마우스 휠이 없습니다.
 
@@ -23,7 +24,7 @@ ms.locfileid: "91078842"
   
 - 컴퓨터에 스크롤 휠이 있는 마우스를 설치합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [My.computer.mouse.wheelscrolllines.](xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines)
 - [My.computer.mouse.wheelexists.](xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists)

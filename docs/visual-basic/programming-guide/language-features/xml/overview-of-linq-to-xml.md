@@ -1,22 +1,23 @@
 ---
+description: 자세히 알아보기:의 LINQ to XML 개요 Visual Basic
 title: LINQ to XML 개요
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 4ec1c96bdca96a6e9b68b240c147b70536514d85
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e70998706f62076a2528ac646df29e0c7081cb3d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91099192"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480221"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic의 LINQ to XML 개요
 
 Visual Basic는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] xml 리터럴 및 xml 축 속성을 통해에 대 한 지원을 제공 합니다. 이렇게 하면 Visual Basic 코드에서 XML로 작업 하는 데 친숙 하 고 편리한 구문을 사용할 수 있습니다. *Xml 리터럴을* 사용 하면 코드에 xml을 직접 포함할 수 있습니다. *Xml 축 속성* 을 사용 하면 자식 노드, 하위 노드 및 xml 리터럴의 특성에 액세스할 수 있습니다. 자세한 내용은 [Xml 리터럴 개요](xml-literals-overview.md) 및 [Visual Basic의 xml 액세스](accessing-xml.md)를 참조 하세요.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 는 LINQ (통합 언어 쿼리)를 활용 하기 위해 특별히 설계 된 메모리 내 XML 프로그래밍 API입니다. LINQ Api를 직접 호출할 수 있지만 Visual Basic만 XML 리터럴을 선언 하 고 XML 축 속성에 직접 액세스할 수 있습니다.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 는 LINQ (Language-Integrated 쿼리)를 활용 하기 위해 특별히 설계 된 메모리 내 XML 프로그래밍 API입니다. LINQ Api를 직접 호출할 수 있지만 Visual Basic만 XML 리터럴을 선언 하 고 XML 축 속성에 직접 액세스할 수 있습니다.  
   
 > [!NOTE]
 > XML 리터럴 및 XML 축 속성은 ASP.NET 페이지의 선언적 코드에서 지원 되지 않습니다. Visual Basic XML 기능을 사용 하려면 코드를 ASP.NET 응용 프로그램의 코드를 사용 하는 페이지에 저장 합니다.  
@@ -67,7 +68,7 @@ Visual Basic는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] xml 리터
   
  [!code-vb[VbXMLSamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#4)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [XML](index.md)
 - [Visual Basic에서 XML 만들기](creating-xml.md)

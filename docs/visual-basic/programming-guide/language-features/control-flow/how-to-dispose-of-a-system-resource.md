@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 시스템 리소스 삭제 (Visual Basic)'
 title: '방법: 시스템 리소스 삭제'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: c430bc7744f5aefaa65f2a86f3e5e22743ffed57
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 6594c9e2eedf756cc7a46c2c17deab58fcba3a8c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077204"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480663"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>방법: 시스템 리소스 해제(Visual Basic)
 
@@ -45,7 +46,7 @@ ms.locfileid: "91077204"
   
      이 동일한 기술을 파일 핸들, COM 래퍼 등의 시스템 리소스에서 사용할 수 있습니다. `Using`블록을 종료 한 후에 다른 구성 요소에서 리소스를 사용할 수 있도록 하려는 경우 블록을 사용 `Using` 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Data.SqlClient.SqlConnection>
 - [제어 흐름](index.md)
