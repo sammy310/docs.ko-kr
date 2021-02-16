@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 속성에서 값 가져오기 (Visual Basic)'
 title: '방법: 속성에서 값 가져오기'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 983e2fd22badf4296004404d885df0a07ab2dc74
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5626ad1a248c3bb51e0f80076628c8108e424186
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071562"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100427598"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>방법: 속성에서 값 가져오기(Visual Basic)
 
@@ -39,7 +40,7 @@ ms.locfileid: "91071562"
   
  속성의 값은 변수 또는 상수와 마찬가지로 식에 참여 하거나 대입문의 왼쪽에 있는 변수나 속성에 저장 됩니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [속성 프로시저](./property-procedures.md)

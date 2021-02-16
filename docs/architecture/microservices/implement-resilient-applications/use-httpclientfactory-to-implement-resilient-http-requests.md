@@ -2,12 +2,12 @@
 title: IHttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 description: 애플리케이션에서 사용하기 쉽도록 .NET Core 2.1부터 제공되는 IHttpClientFactory를 사용하여 `HttpClient` 인스턴스를 만드는 방법을 알아봅니다.
 ms.date: 01/13/2021
-ms.openlocfilehash: 056a8982fe4331e7e680b33cf1f43785b48da7d6
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: fc5da088b1ed7573532dff101aff03d39a02a6f4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189000"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429314"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>IHttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
 
@@ -27,7 +27,7 @@ ms.locfileid: "98189000"
 
 위에서 언급한 문제를 해결하고 `HttpClient` 인스턴스를 관리할 수 있게 만들기 위해 .NET Core 2.1에서는 DI(종속성 주입)를 통해 앱에서 `HttpClient` 인스턴스를 구성하고 만드는 데 사용할 수 있는 <xref:System.Net.Http.IHttpClientFactory> 인터페이스를 도입했습니다. 또한 Polly 기반 미들웨어에 대한 확장을 제공하여 HttpClient에서의 처리기 위임을 활용합니다.
 
-[Polly](http://www.thepollyproject.org/)는 미리 정의된 정책을 사용하여 개발자가 흐름 및 스레드로부터 안전한 방식으로 애플리케이션에 복원력을 추가하는 데 도움이 되는 일시적인 오류 처리 라이브러리입니다.
+[Polly](https://thepollyproject.azurewebsites.net/)는 미리 정의된 정책을 사용하여 개발자가 흐름 및 스레드로부터 안전한 방식으로 애플리케이션에 복원력을 추가하는 데 도움이 되는 일시적인 오류 처리 라이브러리입니다.
 
 ## <a name="benefits-of-using-ihttpclientfactory"></a>IHttpClientFactory 사용의 이점
 
@@ -197,7 +197,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
   <https://github.com/dotnet/extensions/tree/v3.1.8/src/HttpClientFactory>
 
 - **Polly(.NET 복원력 및 transient-fault-handling 라이브러리)**  
-  <http://www.thepollyproject.org/>
+  <https://thepollyproject.azurewebsites.net/>
   
 - **종속성 주입 없이 IHttpClientFactory 사용(GitHub 문제)**  
   <https://github.com/dotnet/extensions/issues/1345>

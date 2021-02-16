@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: 설정 허용 안 함'
 title: Set은 허용되지 않습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID387
 ms.assetid: 809f6768-7dd7-4632-b4dd-83856edfdb48
-ms.openlocfilehash: 061e611d5b35068f82a76e0ad642ad14679362c9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 891a34401266c095260e3cedcdb51784b9eed1af
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91060642"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100485772"
 ---
 # <a name="set-not-permitted"></a>Set은 허용되지 않습니다.
 
@@ -19,6 +20,6 @@ ms.locfileid: "91060642"
   
 1. 속성을 확인하고 설정할 수 있는 조건을 결정합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

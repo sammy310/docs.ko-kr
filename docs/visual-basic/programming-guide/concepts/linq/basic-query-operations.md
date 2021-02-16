@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 기본 쿼리 작업 (Visual Basic)'
 title: 기본 쿼리 작업
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: 6f4c58b15c33d8d2007069df88b2984e692df0a8
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1f8fbda83c21fe9032415d96ff2d7e184083a839
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078374"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100428690"
 ---
 # <a name="basic-query-operations-visual-basic"></a>기본 쿼리 작업(Visual Basic)
 
-이 항목에서는 Visual Basic의 LINQ (통합 언어 쿼리) 식 및 쿼리에서 수행 하는 몇 가지 일반적인 작업 종류에 대 한 간략 한 소개를 제공 합니다. 자세한 내용은 아래 항목을 참조하세요.  
+이 항목에서는 Visual Basic의 LINQ (Language-Integrated Query) 식 및 쿼리에서 수행 하는 몇 가지 일반적인 작업 종류에 대해 간략하게 소개 합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
  [Visual Basic의 LINQ 소개](../../language-features/linq/introduction-to-linq.md)  
   
@@ -38,7 +39,7 @@ ms.locfileid: "91078374"
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
- `From`절은 데이터 소스, `customers` 및 *범위 변수*를 지정 합니다 `cust` . 범위 변수는 쿼리 식에서 실제 반복이 발생 하지 않는다는 점을 제외 하 고 루프 반복 변수와 유사 합니다. 루프를 사용 하 여 쿼리를 실행할 때 `For Each` 범위 변수는의 각 연속 요소에 대 한 참조로 사용 됩니다 `customers` . 컴파일러에서 `cust` 형식을 유추할 수 있으므로 명시적으로 지정할 필요가 없습니다. 명시적 형식 지정을 사용 하거나 사용 하지 않고 작성 된 쿼리의 예는 [쿼리 작업의 형식 관계 (Visual Basic)](type-relationships-in-query-operations.md)를 참조 하세요.  
+ `From`절은 데이터 소스, `customers` 및 *범위 변수* 를 지정 합니다 `cust` . 범위 변수는 쿼리 식에서 실제 반복이 발생 하지 않는다는 점을 제외 하 고 루프 반복 변수와 유사 합니다. 루프를 사용 하 여 쿼리를 실행할 때 `For Each` 범위 변수는의 각 연속 요소에 대 한 참조로 사용 됩니다 `customers` . 컴파일러에서 `cust` 형식을 유추할 수 있으므로 명시적으로 지정할 필요가 없습니다. 명시적 형식 지정을 사용 하거나 사용 하지 않고 작성 된 쿼리의 예는 [쿼리 작업의 형식 관계 (Visual Basic)](type-relationships-in-query-operations.md)를 참조 하세요.  
   
  Visual Basic에서 절을 사용 하는 방법에 대 한 자세한 내용은 `From` [from 절](../../../language-reference/queries/from-clause.md)을 참조 하세요.  
   
@@ -74,7 +75,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
 ## <a name="selecting-data-select"></a>데이터 선택 (Select)  
 
- `Select`절은 반환 된 요소의 형식 및 내용을 지정 합니다. 예를 들어 결과가 전체 `Customer` 개체, 하나의 `Customer` 속성, 속성의 하위 집합, 다양 한 데이터 원본의 속성 조합 또는 계산을 기반으로 하는 몇 가지 새로운 결과 형식으로 구성 될 지 여부를 지정할 수 있습니다. `Select` 절이 소스 요소의 복사본이 아닌 다른 항목을 생성하는 경우 이 작업을 *프로젝션*이라고 합니다.  
+ `Select`절은 반환 된 요소의 형식 및 내용을 지정 합니다. 예를 들어 결과가 전체 `Customer` 개체, 하나의 `Customer` 속성, 속성의 하위 집합, 다양 한 데이터 원본의 속성 조합 또는 계산을 기반으로 하는 몇 가지 새로운 결과 형식으로 구성 될 지 여부를 지정할 수 있습니다. `Select` 절이 소스 요소의 복사본이 아닌 다른 항목을 생성하는 경우 이 작업을 *프로젝션* 이라고 합니다.  
   
  전체 개체로 구성 된 컬렉션을 검색 하려면 `Customer` 범위 변수 자체를 선택 합니다.  
   
@@ -159,7 +160,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  에 대 한 자세한 내용은 `Group By` [Group by 절](../../../language-reference/queries/group-by-clause.md)을 참조 하십시오.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Visual Basic에서 LINQ 시작](getting-started-with-linq.md)

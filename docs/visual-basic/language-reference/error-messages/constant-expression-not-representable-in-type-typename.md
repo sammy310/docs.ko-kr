@@ -1,5 +1,5 @@
 ---
-description: '자세히 알아보기: BC30439: 상수 식을 형식에서 표현할 수 없습니다.<typename>'
+description: "자세한 정보: BC30439: 상수 식을 ' ' 형식으로 표현할 수 없습니다. <typename>"
 title: 상수 식은 '<typename>' 형식으로 표현할 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
-ms.openlocfilehash: 763ed8a414d8dda3e950ae85a4b1152a459518a5
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 034278523fc25cea2e8bb6c749d4c6d412620372
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99796745"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100471372"
 ---
 # <a name="bc30439-constant-expression-not-representable-in-type-typename"></a>BC30439: 상수 식은 ' ' 형식으로 표현할 수 없습니다. \<typename>
 
@@ -25,7 +25,7 @@ ms.locfileid: "99796745"
 
 1. 대상 형식을 상수를 처리할 수 있는 형식으로 변경 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [상수 개요](../../programming-guide/language-features/constants-enums/constants-overview.md)
 - [상수 및 열거형](../constants-and-enumerations.md)

@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 방법: 여러 소스에서 개체 컬렉션 채우기 (LINQ) (Visual Basic)'
 title: '방법: 여러 원본에서 개체 컬렉션 채우기(LINQ)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 9c6d8ff5165bf886d8aad87b64305819e65361ab
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a1a02382efb31895edb880d2137f08d79dc4e97b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396521"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100477556"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>방법: 여러 소스로 개체 컬렉션 채우기 (LINQ) (Visual Basic)
 
@@ -18,7 +19,7 @@ ms.locfileid: "84396521"
 
 ## <a name="to-create-the-data-file"></a>데이터 파일을 만들려면
 
-- [방법: 서로 다른 파일의 콘텐츠 조인 (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md)에 설명 된 대로 이름 .csv 및 점수 .csv 파일을 프로젝트 폴더에 복사 합니다.
+- [방법: 서로 다른 파일의 콘텐츠 조인 (LINQ) (Visual Basic)](how-to-join-content-from-dissimilar-files-linq.md)에 설명 된 대로 names.csv 및 scores.csv 파일을 프로젝트 폴더에 복사 합니다.
 
 ## <a name="example"></a>예제
 
@@ -128,6 +129,6 @@ For Each s In queryNamesScores2
 Next
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [LINQ 및 문자열(Visual Basic)](linq-and-strings.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연습: Visual Basic 사용 하 여 COM 개체 만들기'
 title: '연습: COM 개체 만들기'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 90a21b70b45902a9f4fd559a97e777f26043fffb
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 469466189e264253f3588a0a2735afe651bbd36f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91075618"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100427273"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>연습: Visual Basic을 사용하여 COM 개체 만들기
 
@@ -28,13 +29,13 @@ ms.locfileid: "91075618"
   
 ### <a name="to-create-a-com-object-by-using-the-com-class-template"></a>COM 클래스 템플릿을 사용 하 여 COM 개체를 만들려면  
   
-1. **파일** 메뉴에서 새 **프로젝트**를 클릭 하 여 새 Windows 응용 프로그램 프로젝트를 엽니다.  
+1. **파일** 메뉴에서 새 **프로젝트** 를 클릭 하 여 새 Windows 응용 프로그램 프로젝트를 엽니다.  
   
-2. **새 프로젝트** 대화 상자의 **프로젝트 형식** 필드에서 Windows가 선택 되어 있는지 확인 합니다. **템플릿** 목록에서 **클래스 라이브러리** 를 선택 하 고 **확인**을 클릭 합니다. 새 프로젝트가 표시 됩니다.  
+2. **새 프로젝트** 대화 상자의 **프로젝트 형식** 필드에서 Windows가 선택 되어 있는지 확인 합니다. **템플릿** 목록에서 **클래스 라이브러리** 를 선택 하 고 **확인** 을 클릭 합니다. 새 프로젝트가 표시 됩니다.  
   
 3. **프로젝트** 메뉴에서 **새 항목 추가** 를 선택 합니다. **새 항목 추가** 대화 상자가 표시됩니다.  
   
-4. **템플릿** 목록에서 **COM 클래스** 를 선택한 다음 **추가**를 클릭 합니다. Visual Basic 새 클래스를 추가 하 고 COM interop에 대 한 새 프로젝트를 구성 합니다.  
+4. **템플릿** 목록에서 **COM 클래스** 를 선택한 다음 **추가** 를 클릭 합니다. Visual Basic 새 클래스를 추가 하 고 COM interop에 대 한 새 프로젝트를 구성 합니다.  
   
 5. 속성, 메서드 및 이벤트와 같은 코드를 COM 클래스에 추가 합니다.  
   
@@ -46,11 +47,11 @@ ms.locfileid: "91075618"
   
 #### <a name="to-set-up-your-project-to-generate-a-com-object"></a>COM 개체를 생성 하도록 프로젝트를 설정 하려면  
   
-1. **Newproject**를 클릭 하 여 **파일** 메뉴에서 새 Windows 응용 프로그램 프로젝트를 엽니다.  
+1. **Newproject** 를 클릭 하 여 **파일** 메뉴에서 새 Windows 응용 프로그램 프로젝트를 엽니다.  
   
-2. **새 프로젝트** 대화 상자의 **프로젝트 형식** 필드에서 Windows가 선택 되어 있는지 확인 합니다. **템플릿** 목록에서 **클래스 라이브러리** 를 선택 하 고 **확인**을 클릭 합니다. 새 프로젝트가 표시 됩니다.  
+2. **새 프로젝트** 대화 상자의 **프로젝트 형식** 필드에서 Windows가 선택 되어 있는지 확인 합니다. **템플릿** 목록에서 **클래스 라이브러리** 를 선택 하 고 **확인** 을 클릭 합니다. 새 프로젝트가 표시 됩니다.  
   
-3. **솔루션 탐색기**에서 프로젝트를 오른쪽 마우스 단추로 클릭하고 **속성**을 클릭합니다. **프로젝트 디자이너가** 표시 됩니다.  
+3. **솔루션 탐색기** 에서 프로젝트를 오른쪽 마우스 단추로 클릭하고 **속성** 을 클릭합니다. **프로젝트 디자이너가** 표시 됩니다.  
   
 4. **컴파일** 탭을 클릭합니다.  
   
@@ -58,7 +59,7 @@ ms.locfileid: "91075618"
   
 #### <a name="to-set-up-the-code-in-your-class-to-create-a-com-object"></a>COM 개체를 만들기 위해 클래스에 코드를 설정 하려면  
   
-1. **솔루션 탐색기**에서 **Class1 .vb** 를 두 번 클릭 하 여 해당 코드를 표시 합니다.  
+1. **솔루션 탐색기** 에서 **Class1 .vb** 를 두 번 클릭 하 여 해당 코드를 표시 합니다.  
   
 2. 클래스의 이름을 `ComClass1`으로 변경합니다.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "91075618"
   
      [!code-vb[VbVbalrInterop#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#2)]  
   
-4. **도구** 메뉴에서 **GUID 만들기**를 클릭합니다. **GUID 만들기** 대화 상자에서 **레지스트리 형식**과 **복사**를 차례로 클릭합니다. **끝내기**를 클릭합니다.  
+4. **도구** 메뉴에서 **GUID 만들기** 를 클릭합니다. **GUID 만들기** 대화 상자에서 **레지스트리 형식** 과 **복사** 를 차례로 클릭합니다. **종료** 를 클릭합니다.  
   
 5. 에 대 한 빈 문자열을 `ClassId` GUID로 바꾸고 선행 중괄호와 후행 중괄호를 제거 합니다. 예를 들어, Guidgen.exe에서 제공 하는 GUID가 이면 `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` 코드가 다음과 같이 표시 됩니다.  
   
@@ -92,7 +93,7 @@ ms.locfileid: "91075618"
     > [!NOTE]
     > Visual Basic를 사용 하 여 생성 하는 COM 개체는 진정한 COM 개체가 아니기 때문에 다른 Visual Basic 응용 프로그램에서 사용할 수 없습니다. 이러한 COM 개체에 대 한 참조를 추가 하려고 하면 오류가 발생 합니다. 자세한 내용은 참조 하세요 [.NET Framework 애플리케이션의 COM 상호 운용성](com-interoperability-in-net-framework-applications.md)합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
 - [COM Interop](index.md)
