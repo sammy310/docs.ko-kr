@@ -1,17 +1,18 @@
 ---
+description: '자세한 정보: 반복기 (Visual Basic)'
 title: 반복기
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: e638d35aeb86837d91fb14681d300772e3c2375a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9d12bd436a976e3f84dbd063ca746fc7e3b17bfb
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410931"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100462154"
 ---
 # <a name="iterators-visual-basic"></a>반복기(Visual Basic)
 
-*반복기*는 목록 및 배열과 같은 컬렉션을 단계별로 실행하는 데 사용할 수 있습니다.
+*반복기* 는 목록 및 배열과 같은 컬렉션을 단계별로 실행하는 데 사용할 수 있습니다.
 
 반복기 메서드 또는 `get` 접근자는 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기 메서드는 [Yield](../../language-reference/statements/yield-statement.md) 문을 사용 하 여 각 요소를 한 번에 하나씩 반환 합니다. `Yield` 문에 도달하면 코드의 현재 위치가 기억됩니다. 다음에 반복기 함수가 호출되면 해당 위치에서 실행이 다시 시작됩니다.
 
@@ -64,7 +65,7 @@ Visual Basic 반복기 함수 또는 `get` 접근자 선언에는 [반복기](..
 > [!NOTE]
 > 간단한 반복기 예제를 제외한 항목의 모든 예제에 대해서는 및 네임 스페이스에 대 한 [Imports](../../language-reference/statements/imports-statement-net-namespace-and-type.md) 문을 포함 `System.Collections` `System.Collections.Generic` 합니다.
 
-## <a name="simple-iterator"></a><a name="BKMK_SimpleIterator"></a>단순 반복기
+## <a name="simple-iterator"></a><a name="BKMK_SimpleIterator"></a> 단순 반복기
 
 다음 예제에는 `Yield` [에 대 한 단일 문이 있습니다 ... Next](../../language-reference/statements/for-next-statement.md) 루프. `Main`에서 `For Each` 문 본문을 반복할 때마다 다음 `Yield` 문으로 진행하는 반복기 함수에 대한 호출이 생성됩니다.
 
@@ -216,7 +217,7 @@ Public Class Zoo
 End Class
 ```
 
-## <a name="try-blocks"></a><a name="BKMK_TryBlocks"></a>Try 블록
+## <a name="try-blocks"></a><a name="BKMK_TryBlocks"></a> Try 블록
 
 `Yield`Try 블록에 문을 사용할 수 있는 Visual Basic. `Try` [ Catch ... Finally 문](../../language-reference/statements/try-catch-finally-statement.md). `Try`문이 있는 블록은 블록 `Yield` 을 포함할 수 있으며 블록을 `Catch` 포함할 수 있습니다 `Finally` .
 
@@ -257,7 +258,7 @@ End Function
 
 `For Each`반복기 메서드 대신 본문이 예외를 throw 하는 경우 `Catch` 에는 반복기 함수의 블록이 실행 되지 않지만 `Finally` 반복기 함수의 블록이 실행 됩니다. `Catch`반복기 함수 내의 블록은 반복기 함수 내에서 발생 하는 예외만 catch 합니다.
 
-## <a name="anonymous-methods"></a><a name="BKMK_AnonymousMethods"></a>무명 메서드
+## <a name="anonymous-methods"></a><a name="BKMK_AnonymousMethods"></a> 무명 메서드
 
 Visual Basic에서 익명 함수는 반복기 함수 일 수 있습니다. 다음은 이에 대한 예입니다.
 
@@ -429,7 +430,7 @@ Visual Basic 반복기 메서드에는 매개 변수를 사용할 수 없습니�
 
 Visual Basic에서 "Yield"는 예약 된 단어가 아니므로 메서드나 접근자에서 사용 되는 경우에만 특별 한 의미가 있습니다 `Iterator` `get` .
 
-## <a name="technical-implementation"></a><a name="BKMK_Technical"></a>기술 구현
+## <a name="technical-implementation"></a><a name="BKMK_Technical"></a> 기술 구현
 
 반복기를 메서드로 작성하는 경우에도 컴파일러는 실제로 상태 시스템인 중첩 클래스로 변환합니다. 이 클래스는 클라이언트 코드의 `For Each...Next` 루프가 계속되는 한 반복기의 위치를 추적합니다.
 
@@ -443,7 +444,7 @@ Visual Basic에서 "Yield"는 예약 된 단어가 아니므로 메서드나 접
 
 자세한 내용은 [Visual Basic 언어 사양](../../reference/language-specification/index.md)을 참조 하세요.
 
-## <a name="use-of-iterators"></a><a name="BKMK_UseOfIterators"></a>반복기 사용
+## <a name="use-of-iterators"></a><a name="BKMK_UseOfIterators"></a> 반복기 사용
 
 반복기를 사용하면 복잡한 코드를 사용하여 목록 시퀀스를 채워야 하는 경우 `For Each` 루프의 단순성을 유지할 수 있습니다. 이 기능은 다음을 수행하려는 경우에 유용할 수 있습니다.
 
@@ -453,10 +454,10 @@ Visual Basic에서 "Yield"는 예약 된 단어가 아니므로 메서드나 접
 
 - 반복기에서 목록 작성을 캡슐화합니다. 반복기 메서드에서 목록을 빌드한 후 루프에서 각 결과를 생성할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [For Each...Next 문](../../language-reference/statements/for-each-next-statement.md)
 - [Yield 문](../../language-reference/statements/yield-statement.md)
-- [반복기](../../language-reference/modifiers/iterator.md)
+- [Iterator](../../language-reference/modifiers/iterator.md)

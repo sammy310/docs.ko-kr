@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 데이터 정렬 (Visual Basic)'
 title: 데이터 정렬
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: a5ccff745995ed7f41731cf98fb7c49d3247d994
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 83e05b2af1b3421d004a87630cd5df43f2a21ae4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406796"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468553"
 ---
 # <a name="sorting-data-visual-basic"></a>데이터 정렬 (Visual Basic)
 
@@ -27,7 +28,7 @@ ms.locfileid: "84406796"
 |OrderByDescending|값을 내림차순으로 정렬합니다.|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|
 |ThenBy|2차 정렬을 오름차순으로 수행합니다.|`Order By …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=nameWithType>|
 |ThenByDescending|2차 정렬을 내림차순으로 수행합니다.|`Order By …, … Descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=nameWithType>|
-|Reverse|컬렉션에서 요소의 순서를 반대로 바꿉니다.|적용할 수 없음|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|
+|Reverse|컬렉션에서 요소의 순서를 반대로 바꿉니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|
 
 ## <a name="query-expression-syntax-examples"></a>쿼리 식 구문 예제
 
@@ -147,7 +148,7 @@ MsgBox(sb.ToString())
 ' brown
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(Visual Basic)](standard-query-operators-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 연습: 인터페이스 만들기 및 구현 (Visual Basic)'
 title: 인터페이스 만들기 및 구현
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], walkthrough
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
-ms.openlocfilehash: 89e8f91a04b25b84bc783d5c4f4b91cf12426f72
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 058011d311fdecba626a59228816f9bced319c97
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405069"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468423"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>연습: 인터페이스 만들기 및 구현(Visual Basic)
 
@@ -31,7 +32,7 @@ ms.locfileid: "84405069"
   
 2. **프로젝트** 메뉴에서 **모듈 추가** 를 클릭 하 여 프로젝트에 새 모듈을 추가 합니다.  
   
-3. 새 모듈의 이름을로 `Module1.vb` 하 고 **추가**를 클릭 합니다. 새 모듈의 코드가 표시 됩니다.  
+3. 새 모듈의 이름을로 `Module1.vb` 하 고 **추가** 를 클릭 합니다. 새 모듈의 코드가 표시 됩니다.  
   
 4. `TestInterface` `Module1` 및 문 사이에를 입력 하 `Interface TestInterface` `Module` 고 enter 키를 눌러 내에 명명 된 인터페이스를 정의 `End Module` 합니다. **코드 편집기** 는 키워드를 들여쓰기 하 `Interface` 고 `End Interface` 문을 추가 하 여 코드 블록을 구성 합니다.  
   
@@ -83,7 +84,7 @@ ms.locfileid: "84405069"
   
 ### <a name="to-test-the-implementation-of-the-interface"></a>인터페이스 구현을 테스트 하려면
   
-1. **솔루션 탐색기**에서 프로젝트의 시작 폼을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 클릭 합니다. 편집기에서 시작 폼의 클래스를 표시 합니다. 기본적으로 시작 폼이 호출 됩니다 `Form1` .  
+1. **솔루션 탐색기** 에서 프로젝트의 시작 폼을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기** 를 클릭 합니다. 편집기에서 시작 폼의 클래스를 표시 합니다. 기본적으로 시작 폼이 호출 됩니다 `Form1` .  
   
 2. 클래스에 다음 필드를 추가 합니다 `testInstance` `Form1` .  
   
@@ -107,7 +108,7 @@ ms.locfileid: "84405069"
   
 6. `Test`F5 키를 눌러 프로시저를 실행 합니다. "Prop1가 9로 설정 되었습니다." 라는 메시지가 표시 됩니다. 확인을 클릭 하면 "Method1의 X 매개 변수가 5입니다." 라는 메시지가 표시 됩니다. 확인을 클릭 하면 "이벤트를 catch 했습니다." 라는 메시지가 표시 됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [Implements 문](../../../language-reference/statements/implements-statement.md)
 - [인터페이스](index.md)

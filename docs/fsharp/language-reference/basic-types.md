@@ -2,18 +2,18 @@
 title: 기본 형식
 description: 'F # 언어에서 사용 되는 기본 기본 형식을 검색 합니다.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 659ac8424c62985affcca1741e1b2a74c9c3ee8d
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 2bfc9ba9370cb8ba1fcc1d42369c2551cbb57623
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557700"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456915"
 ---
 # <a name="basic-types"></a>기본 형식
 
 이 항목에서는 F # 언어에 정의 된 기본 형식을 나열 합니다. 이러한 형식은 F #에서 가장 기본적인 것 이며 거의 모든 F # 프로그램의 기본을 형성 합니다. .NET 기본 형식의 상위 집합입니다.
 
-|Type|.NET 형식|Description|예제|
+|Type|.NET 형식|설명|예|
 |----|---------|-----------|-------|
 |`bool`|<xref:System.Boolean>|가능한 값은 `true` 및 `false`입니다.|`true`/`false`|
 |`byte`|<xref:System.Byte>|0에서 255 사이의 값입니다.|`1uy`|
@@ -34,7 +34,7 @@ ms.locfileid: "88557700"
 |`unit`|적용할 수 없음|실제 값이 없음을 나타냅니다. 형식에는로 표시 되는 하나의 형식 값만 있습니다 `()` . 단위 값은 `()` 일반적으로 값이 필요한 자리 표시자로 사용 되지만 실제 값을 사용할 수 없거나 의미가 없습니다.|`()`|
 
 > [!NOTE]
-> [Bigint](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-bigint.html) 형식을 사용 하 여 64 비트 정수 형식에 대해 너무 큰 정수를 사용 하 여 계산을 수행할 수 있습니다. `bigint` 는 기본 형식으로 간주 되지 않습니다. 의 약어입니다 `System.Numerics.BigInteger` .
+> 형식을 사용 하 여 64 비트 정수 형식에 대해 너무 큰 정수를 사용 하 여 계산을 수행할 수 있습니다 `bigint` . `bigint` 는 기본 형식으로 간주 되지 않습니다. 의 약어입니다 `System.Numerics.BigInteger` .
 
 ## <a name="see-also"></a>참고 항목
 

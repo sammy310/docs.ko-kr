@@ -1,13 +1,14 @@
 ---
+description: '자세한 정보: 호출자 정보 (Visual Basic)'
 title: 호출자 정보
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 33c7367626d66d1db2705fc2882ca0780d1b867f
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bcb4f553a9840a76f24825c3c2b7e2e98914abc2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090354"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100437711"
 ---
 # <a name="caller-information-visual-basic"></a>호출자 정보(Visual Basic)
 
@@ -21,7 +22,7 @@ ms.locfileid: "91090354"
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|메서드가 호출되는 소스 파일의 줄 번호입니다.|`Integer`|  
 |<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|호출자의 메서드 또는 속성 이름입니다. 이 항목의 뒷부분에 있는 [멤버 이름](#MEMBERNAMES)을 참조하세요.|`String`|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예제에서는 호출자 정보 특성을 사용하는 방법을 보여줍니다. `TraceMessage` 메서드에 대한 각 호출에서 호출자 정보는 선택적 매개 변수에 대한 인수로 대체됩니다.  
   
@@ -60,7 +61,7 @@ End Sub
   
 ### <a name="member-names"></a><a name="MEMBERNAMES"></a> 멤버 이름  
 
- `CallerMemberName` 특성을 사용하여 멤버 이름을 호출된 메서드에 대한 `String` 인수로 지정하는 것을 피할 수 있습니다. 이 기술을 사용하여 **이름 바꾸기 리팩터링**이 `String` 값을 변경하지 못하는 문제를 피합니다. 이 이점은 다음 작업에 특히 유용합니다.  
+ `CallerMemberName` 특성을 사용하여 멤버 이름을 호출된 메서드에 대한 `String` 인수로 지정하는 것을 피할 수 있습니다. 이 기술을 사용하여 **이름 바꾸기 리팩터링** 이 `String` 값을 변경하지 못하는 문제를 피합니다. 이 이점은 다음 작업에 특히 유용합니다.  
   
 - 추적 및 진단 루틴 사용.  
   

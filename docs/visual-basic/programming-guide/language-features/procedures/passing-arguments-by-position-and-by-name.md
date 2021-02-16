@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 위치 및 이름으로 인수 전달 (Visual Basic)'
 title: 위치 및 이름으로 인수 전달
 ms.date: 02/01/2018
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: 686b64977f086c8128e56298a0ed8c5aa0c51efa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2938638bbdeb411bec53f338371d4215140dc4a0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364034"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466694"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>위치 및 이름으로 인수 전달(Visual Basic)
 
-또는 프로시저를 호출 하는 경우 `Sub` `Function` 프로시저 정의에 표시 되는 순서 대로 *위치를 기준으로* 인수를 전달 하거나 위치에 관계 없이 *이름을*사용 하 여 인수를 전달할 수 있습니다.
+또는 프로시저를 호출 하는 경우 `Sub` `Function` 프로시저 정의에 표시 되는 순서 대로 *위치를 기준으로* 인수를 전달 하거나 위치에 관계 없이 *이름을* 사용 하 여 인수를 전달할 수 있습니다.
 
 이름으로 인수를 전달 하는 경우 인수의 선언 된 이름, 콜론 및 등호 ( `:=` ), 인수 값을 차례로 지정 합니다. 순서에 관계 없이 명명 된 인수를 제공할 수 있습니다.
 
@@ -97,7 +98,7 @@ Visual Basic 15.5부터 끝 위치 인수가 올바른 위치에 있는 경우 �
 
 매개 변수 배열을 이름으로 전달할 수 없습니다. 이는 프로시저를 호출할 때 매개 변수 배열에 대해 쉼표로 구분 된 인수를 무제한으로 제공 하 고, 컴파일러는 단일 이름에 둘 이상의 인수를 연결할 수 없기 때문입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

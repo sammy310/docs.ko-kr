@@ -3,13 +3,13 @@ title: 유닛 테스트에 코드 검사 사용
 description: .NET 단위 테스트에 코드 검사 기능을 사용하는 방법을 알아봅니다.
 author: IEvangelist
 ms.author: dapine
-ms.date: 07/01/2020
-ms.openlocfilehash: 98652de8e8b5c3765dfee8e1b511399bc5a0be25
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/10/2021
+ms.openlocfilehash: 492e036593dcdc81f8256b05183c8f0a9e13b414
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189657"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432662"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>유닛 테스트에 코드 검사 사용
 
@@ -271,7 +271,7 @@ cd XUnit.Coverlet.Collector && dotnet test --collect:"XPlat Code Coverage"
 > dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
 > ```
 >
-> 결과 *coverage.cobertura.xml* 파일이 출력됩니다.  
+> 결과 *coverage.cobertura.xml* 파일이 출력됩니다.
 > [여기](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md)에서 msbuild 통합 가이드를 따르면 됩니다.
 
 ## <a name="generate-reports"></a>보고서 생성

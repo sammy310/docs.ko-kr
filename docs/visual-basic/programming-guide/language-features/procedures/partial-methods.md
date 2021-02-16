@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 부분 메서드 (Visual Basic)'
 title: 부분 메서드
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: 0e7c1315df50e83c919270f76405e80862bdd03b
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d9be2d318ca0da9e1197949c88db5332832bdb3b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071263"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466720"
 ---
 # <a name="partial-methods-visual-basic"></a>부분 메서드(Visual Basic)
 
@@ -57,7 +58,7 @@ End Sub
 
  다른 프로시저를 호출 하는 것 처럼 부분 메서드를 호출 `Sub` 합니다. 메서드가 구현 된 경우 인수가 평가 되 고 메서드의 본문이 실행 됩니다. 그러나 부분 메서드를 구현 하는 것은 선택 사항입니다. 메서드가 구현 되지 않은 경우에는 호출에 영향을 주지 않으며 메서드에 인수로 전달 된 식은 계산 되지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  이름이 node.js 인 파일에서 속성이 있는 클래스를 정의 합니다. `Product` `Quantity`  
   
@@ -75,7 +76,7 @@ End Sub
   
  `Quantity was changed to 100`  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Sub 문](../../../language-reference/statements/sub-statement.md)
 - [하위 프로시저](./sub-procedures.md)

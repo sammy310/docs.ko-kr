@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 명령줄에서 빌드(Visual Basic)'
 title: 명령줄에서 빌드
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: ec6ae3328c2042af950d1ee78a33d3de97219f10
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5f0f8dd61bd5b79987cc1e59dcf4bfd8071a925e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414300"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468267"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>명령줄에서 빌드(Visual Basic)
 
@@ -29,7 +30,7 @@ Visual Basic은 IDE(통합 개발 환경) 내에서 프로그램을 컴파일하
 Visual Studio IDE 내에서 원본 파일을 컴파일하려면 **Build** 메뉴에서 **Build** 명령을 선택합니다.
 
 > [!TIP]
-> Visual Studio IDE를 사용하여 프로젝트를 빌드할 때 출력 창에 연결된 **vbc** 명령과 해당 스위치에 대한 정보를 표시할 수 있습니다. 이 정보를 표시하려면 [옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)을 연 다음, **MSBuild 프로젝트 빌드 출력 상세도**를 **보통** 또는 더 높은 수준의 자세한 정보 표시로 설정합니다. 자세한 내용은 [방법: 빌드 로그 파일 보기, 저장 및 구성](/visualstudio/ide/how-to-view-save-and-configure-build-log-files)을 참조하세요.
+> Visual Studio IDE를 사용하여 프로젝트를 빌드할 때 출력 창에 연결된 **vbc** 명령과 해당 스위치에 대한 정보를 표시할 수 있습니다. 이 정보를 표시하려면 [옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)을 연 다음, **MSBuild 프로젝트 빌드 출력 상세도** 를 **보통** 또는 더 높은 수준의 자세한 정보 표시로 설정합니다. 자세한 내용은 [방법: 빌드 로그 파일 보기, 저장 및 구성](/visualstudio/ide/how-to-view-save-and-configure-build-log-files)을 참조하세요.
 
 MSBuild를 사용하여 명령 프롬프트에서 프로젝트(.vbproj) 파일을 컴파일할 수 있습니다. 자세한 내용은 [명령줄 참조](/visualstudio/msbuild/msbuild-command-line-reference) 및 [연습: MSBuild 사용](/visualstudio/msbuild/walkthrough-using-msbuild)을 참조하세요.
 

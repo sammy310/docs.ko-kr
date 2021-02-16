@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 코드 주석 (Visual Basic)'
 title: 코드 주석
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: b0077bdae3bad1d67c3d26e503d05f318982eb80
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 66e12a18c2532bb5b694affccb84153f01bcddd5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91099023"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461933"
 ---
 # <a name="comments-in-code-visual-basic"></a>코드 주석(Visual Basic)
 
-코드 예제를 읽다 보면 종종 주석 기호(`'`)를 보게 됩니다. 이 기호는 Visual Basic 컴파일러가 뒤에 나오는 텍스트 또는 *주석을*무시 하도록 지시 합니다. 주석이란 해당 코드를 읽을 사람의 편의를 위해 코드에 추가되는 간단한 설명입니다.  
+코드 예제를 읽다 보면 종종 주석 기호(`'`)를 보게 됩니다. 이 기호는 Visual Basic 컴파일러가 뒤에 나오는 텍스트 또는 *주석을* 무시 하도록 지시 합니다. 주석이란 해당 코드를 읽을 사람의 편의를 위해 코드에 추가되는 간단한 설명입니다.  
   
  모든 프로시저를 시작할 때 프로시저의 기능적 특징, 즉 해당 프로시저가 수행하는 작업에 대한 간단한 주석을 사용하는 것이 좋습니다. 이는 사용자 자신이나 코드를 보게 될 다른 사용자를 위한 것입니다. 프로시저의 구현 방식 등 구현에 대한 자세한 정보는 기능적 특징을 설명하는 주석과 분리되어야 합니다. 이 정보를 설명하는 부분에 포함시킨 경우에는 함수를 업데이트할 때 이 정보도 업데이트해야 합니다.  
   
@@ -42,8 +43,8 @@ ms.locfileid: "91099023"
 |||  
 |---|---|  
 |주석 형식|주석 설명|  
-|목적|프로시저의 작업 수행 방식이 아니라 해당 프로시저에서 수행하는 작업에 대해 설명합니다.|  
-|가정|프로시저에서 액세스하는 외부 변수, 컨트롤, 열린 파일 또는 기타 요소를 나열합니다.|  
+|용도|프로시저의 작업 수행 방식이 아니라 해당 프로시저에서 수행하는 작업에 대해 설명합니다.|  
+|Assumptions|프로시저에서 액세스하는 외부 변수, 컨트롤, 열린 파일 또는 기타 요소를 나열합니다.|  
 |효과|영향을 받은 외부 변수, 컨트롤 또는 파일을 나열하고, 분명하지 않은 경우에는 그 효과를 나열합니다.|  
 |입력|인수의 용도를 지정합니다.|  
 |반환|프로시저에 의해 반환된 값에 대해 설명합니다.|  
@@ -56,12 +57,12 @@ ms.locfileid: "91099023"
   
 - 줄 연속 시퀀스를 사용한 후에는 같은 줄에 주석을 쓸 수 없습니다.  
   
- 코드 줄을 하나 이상 선택 하 고 **주석** ( ![ visual Studio의 Visual Basic 주석 단추)을 선택 하 ](./media/comments-in-code/visual-basic-comment-button.gif) 고 **Uncomment** ![ ](./media/comments-in-code/visual-basic-uncomment-button.gif) **편집** 도구 모음에서 주석 처리를 제거 (visual studio의 Visual Basic 주석 제거 단추) 하는 방법으로 코드 블록의 주석 기호를 추가 하거나 제거할 수 있습니다.  
+ 코드 줄을 하나 이상 선택 하 고 **주석** ( ![ visual Studio의 Visual Basic 주석 단추)을 선택 하 ](./media/comments-in-code/visual-basic-comment-button.gif) 고  ![ ](./media/comments-in-code/visual-basic-uncomment-button.gif) **편집** 도구 모음에서 주석 처리를 제거 (visual studio의 Visual Basic 주석 제거 단추) 하는 방법으로 코드 블록의 주석 기호를 추가 하거나 제거할 수 있습니다.  
   
 > [!NOTE]
 > `REM` 키워드로 텍스트를 시작하여 코드에 주석을 추가할 수도 있습니다. 그러나 `'` 기호 및 **주석** / **주석 처리** 되지 않은 단추는 사용 하기 쉬우며 공간 및 메모리를 줄일 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Basic 직감-XML 주석을 사용 하 여 코드 문서화](/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
 - [방법: XML 설명서 만들기](how-to-create-xml-documentation.md)

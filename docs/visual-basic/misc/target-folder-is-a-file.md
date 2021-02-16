@@ -1,13 +1,14 @@
 ---
+description: '자세히 알아보기: 대상 폴더가 파일입니다.'
 title: 대상 폴더가 파일입니다.
 ms.date: 07/20/2015
 ms.assetid: c5e40bcb-2414-4484-b2b9-a9c391ad0029
-ms.openlocfilehash: 4885c4c5c6162dc527fcbc643f4770cafe00f17a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 52525bc2422e913457e2597086139b19931b510c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078621"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455368"
 ---
 # <a name="target-folder-is-a-file"></a>대상 폴더가 파일입니다.
 
@@ -17,7 +18,7 @@ ms.locfileid: "91078621"
   
 - 제공하는 경로를 확인하여 파일이 아니라 폴더를 지정해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [방법: 파일 경로 구문 분석](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
 - [My.user. 컴퓨터 파일 시스템](xref:Microsoft.VisualBasic.FileIO.FileSystem)

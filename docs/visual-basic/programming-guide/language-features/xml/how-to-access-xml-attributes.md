@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: XML 특성 액세스 (Visual Basic)'
 title: '방법: XML 특성에 액세스'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 66cd704f-990c-4f8d-9b49-2b6aa76ca8fd
-ms.openlocfilehash: 187364c1b5d89d90d49b9ac05e4456dfeefbaffc
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: cd2a0895662e74c836ccc22483a213769758bef9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058523"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433163"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>방법: XML 특성 액세스(Visual Basic)
 

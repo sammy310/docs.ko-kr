@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 속성 프로시저 (Visual Basic)'
 title: 속성 프로시저
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: cb5b0e12512e476b7c96bbfb19f8e4f470f6b498
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 55588278cdb8423a4f13a4e7ecc02f7ea692a618
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363735"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466590"
 ---
 # <a name="property-procedures-visual-basic"></a>Property 프로시저(Visual Basic)
 
-속성 프로시저는 모듈, 클래스 또는 구조체의 사용자 지정 속성을 조작 하는 일련의 Visual Basic 문입니다. 속성 프로시저를 *속성 접근자*라고도 합니다.
+속성 프로시저는 모듈, 클래스 또는 구조체의 사용자 지정 속성을 조작 하는 일련의 Visual Basic 문입니다. 속성 프로시저를 *속성 접근자* 라고도 합니다.
 
 Visual Basic는 다음 속성 프로시저를 제공 합니다.
 
@@ -119,7 +120,7 @@ Do While (propertyname[(argumentlist)] > expression)
 
 [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - [절차](index.md)
 - [함수 프로시저](function-procedures.md)

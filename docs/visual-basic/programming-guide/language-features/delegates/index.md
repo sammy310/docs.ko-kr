@@ -1,20 +1,21 @@
 ---
+description: '자세한 정보: 대리자 (Visual Basic)'
 title: 대리자
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-ms.openlocfilehash: 1f161248fa04f8fab0e5335413e69ca565732f71
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aba3c1483f2875600d925ec3edb0167ddfb18125
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410684"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434435"
 ---
 # <a name="delegates-visual-basic"></a>대리자(Visual Basic)
 
-대리자는 메서드를 참조하는 개체입니다. 다른 프로그래밍 언어에서 사용되는 함수 포인터와 비슷하기 때문에 *형식 안전 함수 포인터*라고도 합니다. 그러나 함수 포인터와는 달리 Visual Basic 대리자는 클래스를 기반으로 하는 참조 형식 <xref:System.Delegate?displayProperty=nameWithType> 입니다. 대리자는 공유 메서드(클래스의 특정 인스턴스 없이 호출할 수 있는 메서드) 및 인스턴스 메서드를 둘 다 참조할 수 있습니다.
+대리자는 메서드를 참조하는 개체입니다. 다른 프로그래밍 언어에서 사용되는 함수 포인터와 비슷하기 때문에 *형식 안전 함수 포인터* 라고도 합니다. 그러나 함수 포인터와는 달리 Visual Basic 대리자는 클래스를 기반으로 하는 참조 형식 <xref:System.Delegate?displayProperty=nameWithType> 입니다. 대리자는 공유 메서드(클래스의 특정 인스턴스 없이 호출할 수 있는 메서드) 및 인스턴스 메서드를 둘 다 참조할 수 있습니다.
 
 ## <a name="delegates-and-events"></a>대리자 및 이벤트
 
@@ -64,7 +65,7 @@ ms.locfileid: "84410684"
 
 ## <a name="related-topics"></a>관련 항목
 
-|제목|Description|
+|제목|설명|
 |-----------|-----------------|
 |[방법: 대리자 메서드 호출](how-to-invoke-a-delegate-method.md)|메서드를 대리자를 연결하고 대리자를 통해 해당 메서드를 호출하는 방법을 보여 주는 예제를 제공합니다.|
 |[방법: Visual Basic에서 프로시저에 다른 프로시저 전달](how-to-pass-procedures-to-another-procedure.md)|대리자를 사용하여 한 프로시저를 다른 프로시저에 전달하는 방법을 보여 줍니다.|

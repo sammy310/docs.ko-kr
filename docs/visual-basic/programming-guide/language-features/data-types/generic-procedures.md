@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: Visual Basic의 제네릭 프로시저'
 title: 제네릭 프로시저
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 558601f038fccdcb9b94acb7c796e2b49fb6e6f4
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c8f26d66f7b657e00382ea94ed0d6093211a3e96
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91059199"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434708"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
 
-제네릭 *메서드*라고도 하는 *제네릭 프로시저*는 하나 이상의 형식 매개 변수를 사용 하 여 정의 된 프로시저입니다. 이를 통해 호출 코드는 프로시저를 호출할 때마다 데이터 형식을 요구 사항에 맞게 조정할 수 있습니다.  
+제네릭 *메서드* 라고도 하는 *제네릭 프로시저* 는 하나 이상의 형식 매개 변수를 사용 하 여 정의 된 프로시저입니다. 이를 통해 호출 코드는 프로시저를 호출할 때마다 데이터 형식을 요구 사항에 맞게 조정할 수 있습니다.  
   
  프로시저는 제네릭 클래스 또는 제네릭 구조체 내에서 정의 되는 것 만으로는 제네릭이 아닙니다. 제네릭 하려면 프로시저에서 사용할 수 있는 일반 매개 변수 외에도 하나 이상의 형식 매개 변수를 사용 해야 합니다. 제네릭 클래스 또는 구조체는 제네릭이 아닌 프로시저를 포함할 수 있으며 제네릭이 아닌 클래스, 구조체 또는 모듈은 제네릭 프로시저를 포함할 수 있습니다.  
   
@@ -29,7 +30,7 @@ ms.locfileid: "91059199"
   
 ## <a name="type-inference"></a>형식 유추  
 
- 모든 형식 인수를 제공 하지 않고 제네릭 프로시저를 호출할 수 있습니다. 이러한 방식으로 호출 하는 경우 컴파일러는 적절 한 데이터 형식을 확인 하 여 프로시저의 형식 인수에 전달 합니다. 이를 *형식 유추*라고 합니다. 다음 코드는 컴파일러에서 형식 매개 변수에 형식을 전달 해야 한다는 것을 유추 하는 호출을 보여 줍니다 `String` `t` .  
+ 모든 형식 인수를 제공 하지 않고 제네릭 프로시저를 호출할 수 있습니다. 이러한 방식으로 호출 하는 경우 컴파일러는 적절 한 데이터 형식을 확인 하 여 프로시저의 형식 인수에 전달 합니다. 이를 *형식 유추* 라고 합니다. 다음 코드는 컴파일러에서 형식 매개 변수에 형식을 전달 해야 한다는 것을 유추 하는 호출을 보여 줍니다 `String` `t` .  
   
  [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
   
@@ -69,7 +70,7 @@ End Sub
   
  앞의 호출은 `MsgBox` 각각 "0", "1" 및 "-1"을 표시 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [Visual Basic의 제네릭 형식](generic-types.md)
 - [방법: 다른 데이터 형식에 동일한 기능을 제공할 수 있는 클래스 정의](how-to-define-a-class-that-can-provide-identical-functionality.md)
