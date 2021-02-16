@@ -4,12 +4,12 @@ description: .NET CLI를 사용하여 .NET 라이브러리를 만드는 방법�
 author: cartermp
 ms.topic: how-to
 ms.date: 12/14/2020
-ms.openlocfilehash: 6f4c1feac7630a6a0250e4b0b39ef01152f5a400
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 76d08007e191fe9090f3f14c906a40e84e37bd19
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633678"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548411"
 ---
 # <a name="develop-libraries-with-the-net-cli"></a>.NET CLI를 사용하여 라이브러리 개발
 
@@ -17,11 +17,11 @@ ms.locfileid: "97633678"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-머신에 [.NET SDK 및 CLI](https://dotnet.microsoft.com/download)를 설치해야 합니다.
+컴퓨터에 [.NET SDK](https://dotnet.microsoft.com/download)가 설치되어 있어야 합니다.
 
-.NET Framework 버전을 다루는 이 문서의 섹션에서는 [.NET Framework](https://dotnet.microsoft.com)가 설치된 Windows 컴퓨터가 필요합니다.
+.NET Framework 버전을 다루는 이 문서의 섹션에서는 [.NET Framework](https://dotnet.microsoft.com/download/dotnet-framework)가 설치된 Windows 컴퓨터가 필요합니다.
 
-또한 이전 .NET Framework 대상을 지원하려는 경우 [.NET 다운로드 보관 페이지](https://dotnet.microsoft.com/download/archives)에서 타기팅 팩 또는 개발자 팩을 설치해야 합니다. 다음 표를 참조하세요.
+또한 이전 .NET Framework 대상을 지원하려는 경우 [.NET Framework 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-framework)에서 타기팅 팩 또는 개발자 팩을 설치해야 합니다. 다음 표를 참조하세요.
 
 | .NET Framework 버전 | 다운로드할 파일                                       |
 | ---------------------- | ------------------------------------------------------ |

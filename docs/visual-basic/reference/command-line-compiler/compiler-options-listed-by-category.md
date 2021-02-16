@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: Visual Basic 컴파일러 옵션 범주별 목록'
 title: 컴파일러 옵션 범주별 목록
 ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 77a130b684d26cf7e4b9df9382348a371a60bc5d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f0535e2aa94cda96610acb0edb24f6d46cc4afa0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072043"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474176"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic 컴파일러 옵션 범주별 목록
 

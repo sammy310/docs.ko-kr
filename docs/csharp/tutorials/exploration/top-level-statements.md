@@ -2,12 +2,12 @@
 title: 최상위 문 - C# 자습서
 description: 이 자습서에서는 아이디어를 탐색하는 동안 최상위 문을 사용하여 개념을 실험하고 증명하는 방법을 보여 줍니다.
 ms.date: 10/28/2020
-ms.openlocfilehash: 5e5dc6cec382baa69ac8cb4625684315bb2cd5e0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: c56a40e7a9715ff0265a897c494b457a32e52df2
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282260"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585626"
 ---
 # <a name="tutorial-explore-ideas-using-top-level-statements-to-build-code-as-you-learn"></a>자습서: 배우는 동안 최상위 문을 사용하여 코드를 빌드하는 아이디어 탐색
 
@@ -84,7 +84,7 @@ System.String[]
 
 콘솔에 질문을 쓰려면 인수를 열거하고 공백으로 구분해야 합니다. `WriteLine` 호출을 다음 코드로 바꿉니다.
 
-:::code language="csharp" source="snippets/top-level-statements/Program.cs" ID="EchoInput":::
+:::code language="csharp" source="snippets/top-level-statements/ProgramSnippets.cs" ID="EchoInput":::
 
 이제 프로그램을 실행하면 질문을 인수 문자열로 올바르게 표시합니다.
 
@@ -92,11 +92,11 @@ System.String[]
 
 질문을 에코한 후에는 임의 응답을 생성하는 코드를 추가할 수 있습니다. 먼저 가능한 응답의 배열을 추가합니다.
 
-:::code language="csharp" source="snippets/top-level-statements/Program.cs" ID="Answers":::
+:::code language="csharp" source="snippets/top-level-statements/ProgramSnippets.cs" ID="Answers":::
 
 이 배열에는 긍정 응답 12개, 커밋이 아닌 응답 6개, 부정 응답 6개가 있습니다. 다음으로, 다음 코드를 추가하여 배열에서 임의 응답을 생성하고 표시합니다.
 
-:::code language="csharp" source="snippets/top-level-statements/Program.cs" ID="GenerateAnswer":::
+:::code language="csharp" source="snippets/top-level-statements/ProgramSnippets.cs" ID="GenerateAnswer":::
 
 애플리케이션을 다시 실행하여 결과를 볼 수 있습니다. 다음 출력과 같은 정보가 표시됩니다.
 
@@ -212,7 +212,11 @@ static async Task ShowConsoleAnimation()
 
 :::code language="csharp" source="snippets/top-level-statements/Utilities.cs" ID="Animation":::
 
-이제 전체 애플리케이션이 있으며 나중에 사용할 수 있도록 재사용 가능한 부분을 리팩터링했습니다.
+이제 전체 애플리케이션이 있으며 나중에 사용할 수 있도록 재사용 가능한 부분을 리팩터링했습니다. 아래와 같이 주 프로그램의 최종 버전에 표시된 대로 최상위 문에서 새 유틸리티 메서드를 호출할 수 있습니다.
+
+:::code language="csharp" source="snippets/top-level-statements/Program.cs":::
+
+그러면 `Utilities.ShowConsoleAnimation` 호출이 추가되고 `using` 문이 추가됩니다.
 
 ## <a name="summary"></a>요약
 

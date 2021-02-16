@@ -1,13 +1,13 @@
 ---
 title: Docker 컨테이너에 대해 .NET 5를 선택하는 경우
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | Docker 컨테이너에 대해 .NET을 선택하는 경우
-ms.date: 01/13/2021
-ms.openlocfilehash: 61909c91d795582af499456c65ae0d7b4f2911e2
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: d0480ac43c0090b72185bd23bbd11ac7e26001e6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189280"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653422"
 ---
 # <a name="when-to-choose-net-for-docker-containers"></a>Docker 컨테이너에 대해 .NET을 선택하는 경우
 
@@ -33,7 +33,7 @@ IDE 및 편집기 외에도 지원되는 모든 플랫폼에 [.NET CLI](../../..
 
 ## <a name="using-containers-for-new-green-field-projects"></a>새("그린-필드") 프로젝트에 컨테이너 사용
 
-컨테이너는 아키텍처 패턴을 따르는 웹앱 또는 서비스를 컨테이너화하는 데 사용할 수 있지만 일반적으로 마이크로 서비스 아키텍처와 연계하여 사용됩니다. Windows 컨테이너에 .NET Framework를 사용할 수 있지만, .NET 5는 모듈성 있고 간단하므로 컨테이너와 마이크로 서비스 아키텍처에 매우 적합합니다. 컨테이너를만들어 배포할 때 이미지 크기는 .NET Framework보다 .NET Core에서 훨씬 작습니다.
+컨테이너는 아키텍처 패턴을 따르는 웹앱 또는 서비스를 컨테이너화하는 데 사용할 수 있지만 일반적으로 마이크로 서비스 아키텍처와 연계하여 사용됩니다. Windows 컨테이너에 .NET Framework를 사용할 수 있지만, .NET 5는 모듈성 있고 간단하므로 컨테이너와 마이크로 서비스 아키텍처에 매우 적합합니다. 컨테이너를 만들어 배포할 때 이미지 크기는 .NET Framework보다 .NET 5에서 훨씬 작습니다.
 
 ## <a name="create-and-deploy-microservices-on-containers"></a>컨테이너에서 마이크로 서비스 만들기 및 배포
 

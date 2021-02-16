@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 기본 속성 선언 및 호출 Visual Basic'
 title: '방법: 기본 속성 선언 및 호출'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: 21aa6e6a9bba23d767b9d1fac610eaac3265550d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 2a0e82fe89bb89613996f613930ace1aa6e41b7f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087455"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472451"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>방법: Visual Basic에서 기본 속성 선언 및 호출
 
@@ -61,13 +62,13 @@ ms.locfileid: "91087455"
   
      [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예제에서는 클래스에 대 한 기본 속성을 선언 합니다.  
   
  [!code-vb[VbVbcnProcedures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#12)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예제에서는 클래스에서 기본 속성을 호출 하는 방법을 보여 줍니다 `myProperty` `class1` . 세 개의 대입문은에 값 `myProperty` 을 저장 하 고 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 호출은 값을 읽습니다.  
   
@@ -85,7 +86,7 @@ ms.locfileid: "91087455"
   
  이러한 단점 때문에 기본 속성을 정의 하지 않는 것이 좋습니다. 코드 가독성을 위해 기본 속성도 항상 모든 속성을 명시적으로 참조 하는 것도 고려해 야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 수정 가능 인수와 수정할 가능성이 없는 인수 간의 차이점 (Visual Basic)'
 title: 수정할 수 있는 인수와 수정할 수 없는 인수의 차이점
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 662ad3039bb3fd5c44847d5b2a97a033a18ad063
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 8d83802b4b8830a17412fdef44eabd2e5b8a7f2d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071964"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472633"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>수정할 수 있는 인수와 수정할 수 없는 인수 사이의 차이점(Visual Basic)
 
@@ -21,7 +22,7 @@ ms.locfileid: "91071964"
   
 ## <a name="modifiable-and-nonmodifiable-elements"></a>수정 가능 하 고 수정할 요소가 없는 요소  
 
- 프로그래밍 요소는 해당 값이 변경 될 수 있는 *수정 가능한 요소*이거나, 만들어진 후 고정 값이 있는 수정할 수 없는 *요소*일 수 있습니다.  
+ 프로그래밍 요소는 해당 값이 변경 될 수 있는 *수정 가능한 요소* 이거나, 만들어진 후 고정 값이 있는 수정할 수 없는 *요소* 일 수 있습니다.  
   
  다음 표에서는 수정 및 수정할 때의 프로그래밍 요소를 보여 줍니다.  
   
@@ -40,7 +41,7 @@ ms.locfileid: "91071964"
   
  호출 된 프로시저는 수정할 수 없는 인수의 로컬 복사본을 수정할 수 있지만이 수정 작업은 호출 코드의 기본 요소에는 영향을 주지 않습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

@@ -1,13 +1,13 @@
 ---
 title: Docker 앱에 대한 개발 워크플로
 description: Docker 기반 애플리케이션 개발 워크플로의 세부 정보를 확인하세요. 먼저 단계별로 살펴보고 Dockerfile 최적화에 대한 세부 정보를 알아본 후 Visual Studio 사용 시 사용 가능한 간소화된 워크플로를 마지막으로 확인하세요.
-ms.date: 01/13/2021
-ms.openlocfilehash: fff0a59bb6001eeb50c31c68bfeceeb71c439223
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: 678ff76575c70a253fbb06253fadb2f721f16831
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189548"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99719978"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 앱에 대한 개발 워크플로
 
@@ -53,7 +53,7 @@ Docker 애플리케이션 개발은 Docker 없이 애플리케이션을 개발�
 
 [Windows용 Docker CE 시작](https://docs.docker.com/docker-for-windows/)
 
-또한 그림 5-2에서 표시된 대로 **.NET Core 플랫폼 간 개발** 워크로드가 설치된 Visual Studio 2019 버전 16.4 이상이 필요합니다.
+또한 그림 5-2에서 표시된 대로 **.NET Core 플랫폼 간 개발** 워크로드가 설치된 Visual Studio 2019 버전 16.8이 필요합니다.
 
 ![.NET Core 플랫폼 간 개발 선택의 스크린샷](./media/docker-app-development-workflow/dotnet-core-cross-platform-development.png)
 
@@ -132,7 +132,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 ### <a name="using-multi-arch-image-repositories"></a>다중 아키텍처 이미지 리포지토리 사용
 
-단일 리포지토리는 Linux 이미지 및 Windows 이미지 같은 플랫폼 변형을 포함할 수 있습니다. 이 기능을 통해 Microsoft 같은 공급업체(기본 이미지 작성자)는 여러 플랫폼(즉, Linux 및 Windows)을 처리하는 단일 리포지토리를 만들 수 있습니다. 예를 들어 Docker Hub 레지스트리에서 제공되는 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet/) 리포지토리는 동일한 리포지토리 이름을 사용하여 Linux 및 Windows Nano Server에 대한 지원을 제공합니다.
+단일 리포지토리는 Linux 이미지 및 Windows 이미지 같은 플랫폼 변형을 포함할 수 있습니다. 이 기능을 통해 Microsoft 같은 공급업체(기본 이미지 작성자)는 여러 플랫폼(즉, Linux 및 Windows)을 처리하는 단일 리포지토리를 만들 수 있습니다. 예를 들어 Docker Hub 레지스트리에서 제공되는 [.NET](https://hub.docker.com/_/microsoft-dotnet/) 리포지토리는 동일한 리포지토리 이름을 사용하여 Linux 및 Windows Nano Server에 대한 지원을 제공합니다.
 
 태그를 지정하는 경우 다음과 같이 명시적인 플랫폼을 대상으로 지정합니다.
 
@@ -506,7 +506,7 @@ docker-compose up 및 docker run 명령(또는 Visual Studio에서 컨테이너�
 
 ## <a name="step-6-test-your-docker-application-using-your-local-docker-host"></a>6단계. 로컬 Docker 호스트를 사용하여 Docker 애플리케이션 테스트
 
-이 단계는 애플리케이션에서 하는 일에 따라 달라집니다. 단일 컨테이너 또는 서비스로 배포되는 간단한 .NET Core 웹 애플리케이션에서는 그림 5-13처럼 Docker 호스트에서 브라우저를 열고 해당 사이트로 이동하여 서비스에 액세스할 수 있습니다. (Dockerfile의 구성이 컨테이너를 호스트에 있는 80 이외의 포트로 매핑하는 경우 호스트 포트를 URL에 포함합니다.)
+이 단계는 애플리케이션에서 하는 일에 따라 달라집니다. 단일 컨테이너 또는 서비스로 배포되는 간단한 .NET 웹 애플리케이션에서는 그림 5-13처럼 Docker 호스트에서 브라우저를 열고 해당 사이트로 이동하여 서비스에 액세스할 수 있습니다. (Dockerfile의 구성이 컨테이너를 호스트에 있는 80 이외의 포트로 매핑하는 경우 호스트 포트를 URL에 포함합니다.)
 
 ![Localhost/API/값에서 오는 응답의 스크린샷](./media/docker-app-development-workflow/test-docker-app-locally-localhost.png)
 

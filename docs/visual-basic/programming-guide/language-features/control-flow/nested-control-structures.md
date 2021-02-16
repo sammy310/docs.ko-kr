@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 중첩 컨트롤 구조 (Visual Basic)'
 title: 중첩 제어 구조체
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 290366d9d9428cefee108ac472fbe7c0eb66d82e
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 086e1201cab3ea133b01a003de58f8d3e67bfc44
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084166"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100473604"
 ---
 # <a name="nested-control-structures-visual-basic"></a>중첩 제어 구조(Visual Basic)
 
-루프 내의 블록과 같은 다른 제어 문 내에 제어 문을 추가할 수 있습니다 `If...Then...Else` `For...Next` . 다른 제어 문 내에 배치 된 제어 문은 *중첩*된 것으로 간주 됩니다.  
+루프 내의 블록과 같은 다른 제어 문 내에 제어 문을 추가할 수 있습니다 `If...Then...Else` `For...Next` . 다른 제어 문 내에 배치 된 제어 문은 *중첩* 된 것으로 간주 됩니다.  
   
 ## <a name="nesting-levels"></a>중첩 수준  
 
@@ -75,7 +76,7 @@ Next ctl
   
  Visual Basic 컴파일러는 이러한 겹치는 제어 구조를 검색 하 고 컴파일 시간 오류를 신호로 보냅니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [제어 흐름](index.md)
 - [판단 구조체](decision-structures.md)

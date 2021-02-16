@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 변환 연산자 정의 (Visual Basic)'
 title: '방법: 변환 연산자 정의'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-ms.openlocfilehash: 2fabcf6c6ceb38fe77d4eed4f02dcb5a5e447bf1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: c090e183e809974163625c4bfcf33536b1082b66
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085674"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481989"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>방법: 변환 연산자 정의(Visual Basic)
 
@@ -24,7 +25,7 @@ ms.locfileid: "91085674"
   
  클래스 또는 구조체에서 연산자를 정의 하는 것을 연산자 *오버 로드* 라고도 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예제에서는 및 라는 구조체 간에 변환 연산자를 정의 합니다 `digit` `Byte` .  
   
@@ -34,7 +35,7 @@ ms.locfileid: "91085674"
   
  [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [연산자 프로시저](./operator-procedures.md)
 - [방법: 연산자 정의](./how-to-define-an-operator.md)

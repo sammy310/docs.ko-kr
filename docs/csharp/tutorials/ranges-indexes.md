@@ -4,12 +4,12 @@ description: 이 고급 자습서에서는 인덱스 및 범위를 사용하여 
 ms.date: 09/11/2020
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: cf6c83484332ed517b2326b3fd9d7458f191227e
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: c0484a42233466e3a2a70a673aee81fce91fe31b
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "90738868"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585405"
 ---
 # <a name="indices-and-ranges"></a>인덱스 및 범위
 
@@ -93,7 +93,7 @@ string[] words = new string[]
 
 예를 들어, .NET 형식 <xref:System.String>, <xref:System.Span%601> 및 <xref:System.ReadOnlySpan%601>은 인덱스와 범위를 모두 지원합니다. <xref:System.Collections.Generic.List%601>는 인덱스는 지원하고 범위는 지원하지 않습니다.
 
-<xref:System.Array>에는 좀 더 미묘한 동작이 더 있습니다. 1차원 배열은 인덱스와 범위를 모두 지원합니다. 다차원 배열은 그렇지 않습니다. 다차원 배열에 대한 인덱서에는 단일 매개 변수가 아닌 여러 개의 매개 변수가 있습니다. 배열의 배열이라고도 하는 가변 배열은 범위와 인덱서를 모두 지원합니다. 다음 예에서는 가변 배열의 사각형 하위 섹션을 반복하는 방법을 보여 줍니다. 첫 행과 마지막 3개 행을 제외하고, 선택된 각 행에서 첫 열과 마지막 2개 열을 제외하고 중앙의 섹션을 반복합니다.
+<xref:System.Array>에는 좀 더 미묘한 동작이 더 있습니다. 1차원 배열은 인덱스와 범위를 모두 지원합니다. 다차원 배열은 인덱서 또는 범위를 지원하지 않습니다. 다차원 배열에 대한 인덱서에는 단일 매개 변수가 아닌 여러 개의 매개 변수가 있습니다. 배열의 배열이라고도 하는 가변 배열은 범위와 인덱서를 모두 지원합니다. 다음 예에서는 가변 배열의 사각형 하위 섹션을 반복하는 방법을 보여 줍니다. 첫 행과 마지막 3개 행을 제외하고, 선택된 각 행에서 첫 열과 마지막 2개 열을 제외하고 중앙의 섹션을 반복합니다.
 
 [!code-csharp[JaggedArrays](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_JaggedArrays)]
 

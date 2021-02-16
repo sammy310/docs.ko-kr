@@ -1,15 +1,15 @@
 ---
 title: .NET을 사용하여 마이크로 서비스 도메인 모델 구현
 description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서비스 아키텍처 | DDD 지향 도메인 모델의 구현 세부 정보를 가져옵니다.
-ms.date: 01/13/2021
-ms.openlocfilehash: 9689058b77701eee35ef018ed2e3f18bd648b0f4
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.date: 02/02/2021
+ms.openlocfilehash: 87d832101d95f3ab69d1a40bbdc820e1e09af5db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188272"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99665278"
 ---
-# <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
+# <a name="implement-a-microservice-domain-model-with-net"></a>.NET을 사용하여 마이크로 서비스 도메인 모델 구현
 
 이전 섹션에서는 도메인 모델 설계을 위한 기본 설계 원칙과 패턴을 설명했습니다. 이제 .NET(일반 C\# 코드) 및 EF Core를 사용하여 도메인 모델을 구현할 수 있는 방법을 살펴보겠습니다. 도메인 모델은 코드를 통해 간단하게 구성됩니다. EF Core 모델 요구 사항은 있지만 실제로 EF에 대한 종속성은 아닙니다. EF Core나 도메인 모델의 다른 ORM에 대한 강도 높은 종속성이나 참조는 없어야 합니다.
 

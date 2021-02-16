@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 속성 만들기 (Visual Basic)'
 title: '방법: 속성 만들기'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: bd138177d5f4b7ee1eb63833360d227baa54f66d
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: cf6c76f6a6284cf055f16cf3973da1bb1c54e48d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072745"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472477"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>방법: 속성 만들기(Visual Basic)
 
@@ -52,7 +53,7 @@ ms.locfileid: "91072745"
   
  `Set`읽기/쓰기 속성 및 쓰기 전용 속성에 대 한 프로시저를 작성 해야 합니다. `Set`읽기 전용 속성에 대 한 프로시저를 정의 하면 안 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예에서는 전체 이름을 두 개의 구성 이름, 이름 및 성으로 저장 하는 읽기/쓰기 속성을 만듭니다. 호출 코드가 읽는 경우 `fullName` `Get` 프로시저는 두 가지 구성 이름을 결합 하 고 전체 이름을 반환 합니다. 호출 코드에서 새 전체 이름을 할당 하면 `Set` 프로시저는 두 개의 구성 된 이름으로 코드를 분리 하려고 시도 합니다. 공백을 찾지 못하면 모두 이름으로 저장 합니다.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "91072745"
   
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [속성 프로시저](./property-procedures.md)

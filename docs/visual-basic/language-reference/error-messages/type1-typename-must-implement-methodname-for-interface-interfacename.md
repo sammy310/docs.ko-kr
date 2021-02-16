@@ -1,5 +1,5 @@
 ---
-description: "자세한 정보: BC30149: <type1> ' <typename> ' <methodname> 인터페이스에 대해 ' '을 구현 해야 합니다. '<interfacename>"
+description: "자세한 내용은 BC30149: ' '에서 ' ' <type1> <typename> <methodname> 인터페이스에 대해 ' '을 (를) 구현 해야 합니다. <interfacename>"
 title: <type1>'<typename>'은 '<interfacename>' 인터페이스에 대한 '<methodname>'을 구현해야 합니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
-ms.openlocfilehash: 34635cbe5b8736d273d5972a1bb83aa3d975490b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: b2fb7f5ea019a86b18ea89456e353778e5246d2d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99675015"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100473439"
 ---
 # <a name="bc30149-type1typename-must-implement-methodname-for-interface-interfacename"></a>BC30149: \<type1> ' ' \<typename> 은 ' ' \<methodname> 인터페이스에 대해 ' '을 (를) 구현 해야 합니다. \<interfacename>
 
@@ -31,7 +31,7 @@ ms.locfileid: "99675015"
     Public Sub DoSomething() Implements IBaseInterface.DoSomething
     ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [Implements 문](../statements/implements-statement.md)
 - [인터페이스](../../programming-guide/language-features/interfaces/index.md)

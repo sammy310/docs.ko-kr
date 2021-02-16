@@ -1,28 +1,29 @@
 ---
+description: '자세한 정보: COM Interop 소개 (Visual Basic)'
 title: COM Interop 소개
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 7bfbf0c6de8519e91a458ab4cbb5693024cdbeb2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 86741958e63263f0788384a1261063d71d16df16
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090393"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480793"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Interop 소개(Visual Basic)
 
 COM (구성 요소 개체 모델)을 사용 하면 개체가 다른 구성 요소 및 호스트 응용 프로그램에 해당 기능을 노출할 수 있습니다. COM 개체는 대부분의 경우 Windows 프로그래밍에 대 한 기본 사항 이지만 CLR (공용 언어 런타임) 용으로 설계 된 응용 프로그램은 다양 한 이점을 제공 합니다.  
   
- .NET Framework 응용 프로그램은 궁극적으로 개발 된 응용 프로그램을 COM으로 바꿉니다. 그때까지 Visual Studio를 사용 하 여 COM 개체를 사용 하거나 만들어야 할 수 있습니다. COM 또는 *COM interop*와의 상호 운용성을 통해 사용자가 원하는 속도로 .NET Framework으로 전환 하는 동안 기존 com 개체를 사용할 수 있습니다.  
+ .NET Framework 응용 프로그램은 궁극적으로 개발 된 응용 프로그램을 COM으로 바꿉니다. 그때까지 Visual Studio를 사용 하 여 COM 개체를 사용 하거나 만들어야 할 수 있습니다. COM 또는 *COM interop* 와의 상호 운용성을 통해 사용자가 원하는 속도로 .NET Framework으로 전환 하는 동안 기존 com 개체를 사용할 수 있습니다.  
   
  .NET Framework를 사용 하 여 COM 구성 요소를 만들면 등록이 필요 없는 COM interop를 사용할 수 있습니다. 이렇게 하면 컴퓨터에 두 개 이상의 버전이 설치 되어 있을 때 사용할 수 있는 DLL 버전을 제어할 수 있으며, 최종 사용자는 XCOPY 또는 FTP를 사용 하 여 응용 프로그램을 실행할 수 있는 컴퓨터의 적절 한 디렉터리에 응용 프로그램을 복사할 수 있습니다. 자세한 내용은 [등록이 필요 없는 COM Interop](../../../framework/interop/registration-free-com-interop.md)를 참조 하세요.  
   
 ## <a name="managed-code-and-data"></a>관리 코드 및 데이터  
 
- .NET Framework 용으로 개발 된 코드를 *관리 코드*라고 하며 CLR에서 사용 하는 메타 데이터를 포함 합니다. 런타임에서 메모리 할당과 회수 및 형식 검사를 수행 하는 등의 데이터 관련 작업을 관리 하기 때문에 .NET Framework 응용 프로그램에서 사용 하는 데이터를 관리 되는 *데이터* 라고 합니다. 기본적으로 Visual Basic .NET은 관리 코드 및 데이터를 사용 하지만 interop 어셈블리를 사용 하 여 COM 개체의 비관리 코드 및 데이터에 액세스할 수 있습니다 (이 페이지 뒷부분에서 설명).  
+ .NET Framework 용으로 개발 된 코드를 *관리 코드* 라고 하며 CLR에서 사용 하는 메타 데이터를 포함 합니다. 런타임에서 메모리 할당과 회수 및 형식 검사를 수행 하는 등의 데이터 관련 작업을 관리 하기 때문에 .NET Framework 응용 프로그램에서 사용 하는 데이터를 관리 되는 *데이터* 라고 합니다. 기본적으로 Visual Basic .NET은 관리 코드 및 데이터를 사용 하지만 interop 어셈블리를 사용 하 여 COM 개체의 비관리 코드 및 데이터에 액세스할 수 있습니다 (이 페이지 뒷부분에서 설명).  
   
 ## <a name="assemblies"></a>어셈블리  
 
@@ -58,7 +59,7 @@ COM (구성 요소 개체 모델)을 사용 하면 개체가 다른 구성 요�
 
  모든 .NET Framework 응용 프로그램은 사용 되는 프로그래밍 언어에 관계 없이 개체의 상호 운용성을 가능 하 게 하는 공용 형식 집합을 공유 합니다. COM 개체의 매개 변수 및 반환 값은 관리 코드에서 사용 되는 것과 다른 데이터 형식을 사용 하는 경우도 있습니다. *상호 운용성 마샬링은* COM 개체에서 이동 하는 것과 동일한 데이터 형식으로 매개 변수 및 반환 값을 패키징하는 프로세스입니다. 자세한 내용은 [Interop 마샬링](../../../framework/interop/interop-marshaling.md)을 참조 하세요.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [COM Interop](index.md)
 - [연습: COM 개체를 사용한 상속 구현](walkthrough-implementing-inheritance-with-com-objects.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 개체 변수가 참조 하는 형식 확인 (Visual Basic)'
 title: '방법: 개체 변수가 참조하는 형식 확인'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: d3224000f5958a8619e38c4d2f6dc5dbb275ad45
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 699a8c5c075fc923a61a66f617c255f193cd8797
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410492"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100481924"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>방법: 개체 변수가 참조하는 형식 확인(Visual Basic)
 
@@ -54,7 +55,7 @@ ms.locfileid: "84410492"
 
 지정 된 형식은 변수나 식일 수 없습니다. 클래스, 구조체 또는 인터페이스와 같은 정의 된 형식의 이름 이어야 합니다. 여기에는 및와 같은 내장 형식이 포함 됩니다 `Integer` `String` .
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>

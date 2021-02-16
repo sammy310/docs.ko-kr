@@ -1,4 +1,5 @@
 ---
+description: '자세히 알아보기: 방법: 프로시저 인수의 값 변경 (Visual Basic)'
 title: '방법: 프로시저 인수의 값 변경'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: 9960dacc053c5dc8d8cfdfd6eaa0ea3258ed0fea
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: f8ccc80f7a9cb5d2b090fbc6b7f7e3423e5a1cae
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077074"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472581"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>방법: 프로시저 인수의 값 변경(Visual Basic)
 
@@ -56,7 +57,7 @@ ms.locfileid: "91077074"
   
 2. 프로시저 코드에서 매개 변수 이름을 사용 하 여 인수의 로컬 복사본에 값을 할당 합니다. 호출 코드의 내부 값은 변경 되지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예제에서는 배열 변수를 사용 하 고 해당 요소에 대해 작동 하는 두 개의 프로시저를 보여 줍니다. `increase`프로시저는 각 요소에 하나씩만 추가 합니다. `replace`프로시저는 매개 변수에 새 배열을 할당 한 `a()` 다음 각 요소에 하나를 추가 합니다.  
   
@@ -82,7 +83,7 @@ ms.locfileid: "91077074"
 
  프로시저에서 호출 코드의 인수를 기반으로 하는 값을 변경 하는 것이 항상 발생할 수 있는 위험이 있습니다. 이 값을 변경 하 고이 값을 사용 하기 전에 유효성 검사를 수행할 준비를 해야 합니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

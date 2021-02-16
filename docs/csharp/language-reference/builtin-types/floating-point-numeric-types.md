@@ -1,7 +1,7 @@
 ---
 title: 부동 소수점 숫자 형식 - C# 참조
 description: 기본 제공 C# 부동 소수점 형식인 float, double 및 decimal에 대해 알아보기
-ms.date: 02/10/2020
+ms.date: 02/04/2021
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: a1142d1aa04003ae1942902672cfc7a05edc99c0
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: a086e8de60bbb63408c3f2cd557feb36c4baa0f8
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662669"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585756"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>부동 소수점 숫자 형식(C# 참조)
 
-*부동 소수점 숫자 형식*은 실수를 나타냅니다. 모든 부동 소수점 숫자 형식은 [값 형식](value-types.md)입니다. 이것은 [기본 형식](value-types.md#built-in-value-types)이기도 하며, [리터럴](#real-literals)로 초기화할 수 있습니다. 모든 부동 소수점 숫자 형식은 [산술](../operators/arithmetic-operators.md), [비교](../operators/comparison-operators.md) 및 [같음](../operators/equality-operators.md) 연산자를 지원합니다.
+*부동 소수점 숫자 형식* 은 실수를 나타냅니다. 모든 부동 소수점 숫자 형식은 [값 형식](value-types.md)입니다. 이것은 [기본 형식](value-types.md#built-in-value-types)이기도 하며, [리터럴](#real-literals)로 초기화할 수 있습니다. 모든 부동 소수점 숫자 형식은 [산술](../operators/arithmetic-operators.md), [비교](../operators/comparison-operators.md) 및 [같음](../operators/equality-operators.md) 연산자를 지원합니다.
 
 ## <a name="characteristics-of-the-floating-point-types"></a>부동 소수점 형식의 특성
 
@@ -48,7 +48,7 @@ System.Double b = 12.3;
 
 각 부동 소수점 형식의 기본값은 `0`입니다. 각 부동 소수점 형식에는 해당 형식의 최소 및 최대 유한값을 제공하는 `MinValue` 및 `MaxValue` 상수가 있습니다. 또한 `float` 및 `double` 형식은 숫자가 아닌 무한 값을 나타내는 상수를 제공합니다. 예를 들어 `double` 형식은 <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> 및 <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>와 같은 상수를 제공합니다.
 
-`decimal` 형식은 `float` 및 `double`보다 정밀도가 높고 범위가 작으므로 재무 및 통화 계산에 적합합니다.
+필요한 전체 자릿수를 소수점 이하 자릿수에 따라 결정하는 경우에는 `decimal` 형식이 적합합니다. 이러한 숫자는 일반적으로 재무 애플리케이션에서 통화 금액(예: $1.00), 이자율(예: 2.625%) 등에 사용됩니다. 소수점 한 자리 숫자인 경우에도 `decimal` 형식에서 더 정확하게 처리됩니다. 예를 들어 0.1은 `decimal` 인스턴스로 정확하게 표현될 수 있지만 0.1을 정확히 표현하는 `double` 또는 `float` 인스턴스는 없습니다. 10진 데이터에 `double` 또는 `float`를 사용하는 경우 숫자 형식의 차이로 인해 산술 계산에서 예기치 않은 반올림 오류가 발생할 수 있습니다. 성능 최적화가 정확성을 보장하는 것보다 중요한 경우 `decimal` 대신 `double`을 사용할 수 있습니다. 그러나 성능 차이는 계산 집약적인 애플리케이션을 제외한 모든 애플리케이션에서 알지 못합니다. `decimal`을 사용하지 않는 또 다른 가능한 이유는 스토리지 요구 사항을 최소화하는 것입니다. 예를 들어 [ML.NET](../../../machine-learning/how-does-mldotnet-work.md)은 `float`를 사용합니다. 규모가 매우 큰 데이터 세트에서는 4바이트와 16바이트의 차이가 증폭되기 때문입니다. 자세한 내용은 <xref:System.Decimal?displayProperty=nameWithType>를 참조하세요.
 
 식에서 [정수](integral-numeric-types.md) 형식과 `float` 및 `double` 형식을 혼합할 수 있습니다. 이 경우 정수 형식이 암시적으로 부동 소수점 형식 중 하나로 변환되며, 필요한 경우 `float` 형식이 암시적으로 `double`로 변환됩니다. 이 식은 다음과 같이 계산됩니다.
 
@@ -90,7 +90,7 @@ decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
 ```
 
-앞의 예제에서는 C# 7.0부터 지원되는 *숫자 구분 기호*인 `_`를 사용하는 방법도 보여 줍니다. 모든 종류의 숫자 리터럴에서 숫자 구분 기호를 사용할 수 있습니다.
+앞의 예제에서는 C# 7.0부터 지원되는 *숫자 구분 기호* 인 `_`를 사용하는 방법도 보여 줍니다. 모든 종류의 숫자 리터럴에서 숫자 구분 기호를 사용할 수 있습니다.
 
 또한 다음 예제와 같이 과학적 표기법을 사용하여 real 리터럴의 지수 부분을 지정할 수도 있습니다.
 

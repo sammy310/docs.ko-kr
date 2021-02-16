@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 방법: 혼합 된 액세스 수준으로 속성 선언 (Visual Basic)'
 title: '방법: 액세스 수준이 혼합된 속성 선언'
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: 78363f7b2fb5b251f7409e53b2802baf83b05810
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e01849b0a590e499c1ee7b4a67d6aa794cd7cc5d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072706"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100472464"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>방법: 액세스 수준이 혼합된 속성 선언(Visual Basic)
 
@@ -35,7 +36,7 @@ ms.locfileid: "91072706"
   
      위의 예에서는 프로시저에 `Get` `Protected` 액세스 하는 동안 속성 자체와 동일한 액세스 권한을 가집니다 `Set` `Private` . 에서 파생 된 클래스는 `employee` `salary` 값을 읽을 수 있지만 클래스 에서만 값을 `employee` 설정할 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [절차](./index.md)
 - [속성 프로시저](./property-procedures.md)

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: 루프 구조 (Visual Basic)'
 title: 루프 구조체
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: 5019eaf219ad70f9c667356636d05ab69fc5a187
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 82ff36d8f5c05501fcff0f1d564e2613c9b78953
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91077217"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100480650"
 ---
 # <a name="loop-structures-visual-basic"></a>루프 구조(Visual Basic)
 
@@ -35,13 +36,13 @@ Visual Basic 루프 구조를 사용 하면 하나 이상의 코드 줄을 반�
   
 ## <a name="for-loops"></a>For 루프  
 
- `For`... 생성은 설정 된 횟수 만큼 루프를 수행 합니다. `Next` 루프 제어 변수 ( *카운터*라고도 함)를 사용 하 여 반복을 추적 합니다. 이 카운터에 대 한 시작 값과 끝 값을 지정 하 고, 필요에 따라 반복에서 다음 반복까지 늘리는 크기를 지정할 수 있습니다. 자세한 내용은 다음 [을 참조 하세요. 다음 문](../../../language-reference/statements/for-next-statement.md).  
+ `For`... 생성은 설정 된 횟수 만큼 루프를 수행 합니다. `Next` 루프 제어 변수 ( *카운터* 라고도 함)를 사용 하 여 반복을 추적 합니다. 이 카운터에 대 한 시작 값과 끝 값을 지정 하 고, 필요에 따라 반복에서 다음 반복까지 늘리는 크기를 지정할 수 있습니다. 자세한 내용은 다음 [을 참조 하세요. 다음 문](../../../language-reference/statements/for-next-statement.md).  
   
 ## <a name="for-each-loops"></a>For Each 루프  
 
  `For Each`... `Next` 생성은 컬렉션의 각 요소에 대해 문 집합을 한 번씩 실행 합니다. 루프 제어 변수를 지정 하지만 해당 변수를 시작 하거나 종료 하는 값을 결정할 필요가 없습니다. 자세한 내용은 For Each ...를 참조 하십시오. [ 다음 문](../../../language-reference/statements/for-each-next-statement.md).  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [제어 흐름](index.md)
 - [판단 구조체](decision-structures.md)

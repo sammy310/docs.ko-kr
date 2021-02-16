@@ -1,15 +1,15 @@
 ---
 title: 일정 기간 이후 비동기 작업 취소(C#)
 description: 일정 기간 내에 완료되지 않은 연결된 작업의 취소를 예약하는 방법을 알아봅니다.
-ms.date: 08/19/2020
+ms.date: 02/03/2021
 ms.topic: tutorial
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: ad9064f8f45a737982ffc35ab4ea2395ddae9016
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 98c42a2df6153d668b99b6dec49ffe380293b205
+ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811420"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585379"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>일정 기간 이후 비동기 작업 취소(C#)
 
@@ -52,12 +52,16 @@ static async Task Main()
     {
         Console.WriteLine("\nTasks cancelled: timed out.\n");
     }
+    finally
+    {
+        s_cts.Dispose();
+    }
 
     Console.WriteLine("Application ending.");
 }
 ```
 
-업데이트된 `Main` 메서드는 몇 가지 지침 메시지를 콘솔에 기록합니다. [try catch](../../../language-reference/keywords/try-catch.md) 내에서 <xref:System.Threading.CancellationTokenSource.CancelAfter(System.Int32)?displayProperty=nameWithType>를 호출하여 취소를 예약합니다. 이렇게 하면 일정 기간 후에 취소하라는 신호가 전송됩니다.
+업데이트된 `Main` 메서드는 몇 가지 지침 메시지를 콘솔에 기록합니다. [try catch](../../../language-reference/keywords/try-catch.md) 내에서 <xref:System.Threading.CancellationTokenSource.CancelAfter(System.Int32)?displayProperty=nameWithType> 호출은 취소를 예약합니다. 이렇게 하면 일정 기간 후에 취소하라는 신호가 전송됩니다.
 
 다음으로, `SumPageSizesAsync` 메서드는 대기합니다. 예약된 취소보다 모든 URL이 더 빠르게 처리되면 애플리케이션이 종료됩니다. 그러나 모든 URL이 처리되기 전에 예약된 취소가 트리거되면 <xref:System.Threading.Tasks.TaskCanceledException>이 throw됩니다.
 

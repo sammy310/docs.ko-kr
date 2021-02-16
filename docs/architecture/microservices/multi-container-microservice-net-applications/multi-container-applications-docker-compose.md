@@ -2,12 +2,12 @@
 title: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 description: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션에서 마이크로 서비스 컴퍼지션을 지정하는 방법입니다.
 ms.date: 01/13/2021
-ms.openlocfilehash: 224b06c6a10834b42218746964f05b055d947235
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: fa8a5736905f6bae7fec8da35638048707bb6fa1
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188792"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430562"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 
@@ -410,7 +410,7 @@ IdentityUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5105
 
 환경 변수는 호스트 환경(Linux, Windows, 클라우드 클러스터 등)에 따라 다양한 방법으로 생성 및 초기화됩니다. 그러나 편리한 방법은 .env 파일을 사용하는 것입니다. docker-compose 파일은 .env 파일의 기본 환경 변수 선언을 지원합니다. 환경 변수에 대한 이러한 값은 기본값입니다. 그러나 각 환경(호스트 OS 또는 클러스터의 환경 변수)에서 정의했을 수 있는 값으로 재정의될 수 있습니다. 이 .env 파일을 docker-compose 명령이 실행되는 폴더에 배치합니다.
 
-다음 예제에서는 eShopOnContainers 애플리케이션에 대한 [.env](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/.env) 파일과 같은 .env 파일을 보여 줍니다.
+다음 예제에서는 eShopOnContainers 애플리케이션에 대한 [.env](https://github.com/dotnet-architecture/eShopOnContainers/blob/main/src/.env) 파일과 같은 .env 파일을 보여 줍니다.
 
 ```sh
 # .env file

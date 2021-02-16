@@ -4,12 +4,12 @@ description: .NET을 설치할 수 있는 macOS 버전에 대해 알아봅니다
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: b1434938a8e8e81da81e495a6b99e6c99467aae1
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 871263b820aaf4cc04e573dd4aa3022caa401857
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009360"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506307"
 ---
 # <a name="install-net-on-macos"></a>macOS에 .NET 설치
 
@@ -53,13 +53,13 @@ ms.locfileid: "97009360"
 
 런타임은 .NET으로 만든 앱을 실행하는 데 사용됩니다. 앱 작성자는 앱을 게시할 때 앱과 함께 런타임을 포함할 수 있습니다. 앱 작성자가 런타임을 포함하지 않는 경우, 사용자가 런타임을 설치할 수 있습니다.
 
-macOS에 설치할 수 있는 세 가지 런타임이 있습니다.
+macOS에 설치할 수 있는 두 가지 런타임이 있습니다.
 
-‘ASP.NET Core 런타임’\
-ASP.NET Core 앱을 실행합니다. .NET 런타임을 포함합니다.
+- ‘ASP.NET Core 런타임’\
+  ASP.NET Core 앱을 실행합니다. .NET 런타임을 포함합니다.
 
-‘.NET 런타임’\
-이 런타임은 가장 간단한 런타임이며 다른 런타임을 포함하지 않습니다. .NET 앱과의 최상의 호환성을 위해 ‘ASP.NET Core 런타임’을 설치하는 것이 좋습니다.
+- ‘.NET 런타임’\
+  이 런타임은 가장 간단한 런타임이며 다른 런타임을 포함하지 않습니다. .NET 앱과의 최상의 호환성을 위해 ‘ASP.NET Core 런타임’을 설치하는 것이 좋습니다.
 
 > [!div class="button"]
 > [.NET 런타임 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
@@ -125,20 +125,15 @@ macOS에는 .NET 5.0 SDK를 설치하는 데 사용할 수 있는 독립 실행�
 
 런타임을 추출하고 터미널에서 .NET CLI 명령을 사용할 수 있도록 하려면 먼저 .NET 이진 릴리스를 다운로드합니다. 그런 다음, 터미널을 열고 파일이 저장된 디렉터리에서 다음 명령을 실행합니다. 보관 파일 이름은 다운로드한 항목에 따라 다를 수 있습니다.
 
-**다음 명령을 사용하여 런타임을 추출합니다.**
+**다음 명령을 사용하여 다운로드한 런타임 또는 SDK를 추출합니다.** `DOTNET_FILE` 값을 파일 이름으로 변경해야 합니다.
 
 ```bash
-mkdir -p "$HOME/dotnet" && tar zxf aspnetcore-runtime-5.0.0-osx-x64.tar.gz -C "$HOME/dotnet"
+DOTNET_FILE=dotnet-sdk-5.0.102-linux-x64.tar.gz
 export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
-```
 
-**다음 명령을 사용하여 SDK를 추출합니다.**
+mkdir -p "$DOTNET_ROOT" && tar zxf "$DOTNET_FILE" -C "$DOTNET_ROOT"
 
-```bash
-mkdir -p "$HOME/dotnet" && tar zxf dotnet-sdk-5.0.100-osx-x64.tar.gz -C "$HOME/dotnet"
-export DOTNET_ROOT=$HOME/dotnet
-export PATH=$PATH:$HOME/dotnet
+export PATH=$PATH:$DOTNET_ROOT
 ```
 
 > [!TIP]

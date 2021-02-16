@@ -1,4 +1,5 @@
 ---
+description: '에 대 한 자세한 정보: 구조체 및 기타 프로그래밍 요소 (Visual Basic)'
 title: 구조체 및 기타 프로그래밍 요소
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: 26c98adda7305783b0220141db35b08285b21554
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 62052389b617849566a3cd0c475a2eb5da9e61ca
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084088"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100430588"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>구조체 및 기타 프로그래밍 요소(Visual Basic)
 
@@ -85,7 +86,7 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- 앞의 예제에서는 구조체를 *참조로*전달 합니다. 그러면 프로시저에서 해당 요소를 수정 하 여 호출 코드에 변경 내용이 적용 되도록 할 수 있습니다. 이러한 수정에 대해 구조를 보호 하려면 값으로 전달 합니다.  
+ 앞의 예제에서는 구조체를 *참조로* 전달 합니다. 그러면 프로시저에서 해당 요소를 수정 하 여 호출 코드에 변경 내용이 적용 되도록 할 수 있습니다. 이러한 수정에 대해 구조를 보호 하려면 값으로 전달 합니다.  
   
  프로시저에서 구조체를 반환할 수도 있습니다 `Function` . 다음은 이에 대한 예입니다.  
   
@@ -127,7 +128,7 @@ allSystems(1).diskDrives(0).type = "Floppy"
   
  구조체에는 임의의 깊이에 대 한 다른 구조가 포함 될 수 있습니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 - [데이터 형식](index.md)
 - [기본 데이터 형식](elementary-data-types.md)
