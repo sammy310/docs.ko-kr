@@ -3,12 +3,12 @@ title: SQL Server에서 인증
 description: Windows 인증 모드 및 혼합 모드를 포함 하 여 ADO.NET에 대 한 SQL Server 인증에 대해 알아봅니다.
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 2c4f62391a0d9b5ada27f56eef4c3467d99b4c6d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a1ecc0debd584797f72a89318aadc6ccc8a41062
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197534"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100581927"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server에서 인증
 
@@ -69,7 +69,7 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
  불가피하게 혼합 모드 인증을 사용하는 경우 SQL Server 로그인을 만들어야 합니다. 이 로그인은 SQL Server에 저장됩니다. 그런 다음 런타임에 SQL Server 사용자 이름과 암호를 제공해야 합니다.  
   
 > [!IMPORTANT]
-> SQL Server는 `sa`("시스템 관리자"의 약어)라는 SQL Server 로그인을 사용하여 설치됩니다. `sa` 로그인에 강력한 암호를 할당하고 애플리케이션에서는 `sa` 로그인을 사용하지 마세요. `sa` 로그인은 전체 서버에 대한 해지할 수 없는 관리 자격 증명을 갖는 `sysadmin` 고정 서버 역할에 매핑됩니다. 공격자가 시스템 관리자 권한으로 액세스할 경우 잠재적 피해는 무제한입니다. Windows `BUILTIN\Administrators` 그룹(로컬 관리자 그룹)의 모든 멤버는 기본적으로 `sysadmin` 역할의 멤버이지만 이 역할에서 멤버를 제거할 수 있습니다.  
+> SQL Server는 `sa`("시스템 관리자"의 약어)라는 SQL Server 로그인을 사용하여 설치됩니다. `sa` 로그인에 강력한 암호를 할당하고 애플리케이션에서는 `sa` 로그인을 사용하지 마세요. `sa` 로그인은 전체 서버에 대한 해지할 수 없는 관리 자격 증명을 갖는 `sysadmin` 고정 서버 역할에 매핑됩니다. 공격자가 시스템 관리자 권한으로 액세스할 경우 잠재적 피해는 무제한입니다.
   
  SQL Server는 SQL Server 로그인에 대 한 Windows 암호 정책 메커니즘을 제공 합니다. 암호 복잡성 정책은 가능한 암호의 수를 늘려 문자 조합을 이용한 공격(brute force attacks)을 방지하도록 설계되었습니다. SQL Server SQL Server 내에서 사용 되는 암호에 동일한 복잡성 및 만료 정책을 적용할 수 있습니다.  
   
@@ -80,7 +80,7 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
 
  자세한 내용은 다음 리소스를 참조하세요.  
   
-|리소스|설명|  
+|리소스|Description|  
 |--------------|-----------------|  
 |[보안 주체](/sql/relational-databases/security/authentication-access/principals-database-engine)|SQL Server의 로그인 및 기타 보안 주체에 대해 설명합니다.|  
   

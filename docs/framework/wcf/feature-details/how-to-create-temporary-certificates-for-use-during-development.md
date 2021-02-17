@@ -6,19 +6,19 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: a249f0de00c45b1588762ffa0f826e890f961334
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 45df7b2c4dad1aa84ad39ca38fba8d2ec16c8fb3
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91607774"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100585354"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>방법: 개발 중에 사용할 임시 인증서 만들기
 
 WCF (Windows Communication Foundation)를 사용 하 여 보안 서비스 또는 클라이언트를 개발 하는 경우 자격 증명으로 사용할 x.509 인증서를 제공 해야 하는 경우가 많습니다. 일반적으로 인증서는 루트 인증 기관이 컴퓨터의 신뢰할 수 있는 루트 인증 기관 저장소에 있는 인증서 체인의 일부입니다. 인증서 체인을 사용하면 일반적으로 루트 인증 기관이 조직 또는 비즈니스 사업부에 있는 인증서 집합의 범위를 지정할 수 있습니다. 개발 시 이를 에뮬레이트하려면 보안 요구 사항에 맞는 두 개의 인증서를 만듭니다. 첫 번째 인증서는 신뢰할 수 있는 루트 인증 기관 저장소에 있는 자체 서명된 인증서이고, 두 번째 인증서는 첫 번째 인증서에서 만들어지고 로컬 컴퓨터 위치의 개인 저장소나 현재 사용자 위치의 개인 저장소에 있습니다. 이 항목에서는 PowerShell [new-selfsignedcertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet을 사용 하 여 이러한 두 인증서를 만드는 단계를 안내 합니다.
 
 > [!IMPORTANT]
-> New-selfsignedcertificate cmdlet에서 생성 하는 인증서는 테스트 목적 으로만 제공 됩니다. 서비스 또는 클라이언트를 배포할 때는 인증 기관에서 제공하는 적절한 인증서를 사용해야 합니다. 이는 조직 또는 타사의 Windows Server 인증서 서버에 있을 수 있습니다.
+> New-SelfSignedCertificate cmdlet이 생성 하는 인증서는 테스트 목적 으로만 제공 됩니다. 서비스 또는 클라이언트를 배포할 때는 인증 기관에서 제공하는 적절한 인증서를 사용해야 합니다. 이는 조직 또는 타사의 Windows Server 인증서 서버에 있을 수 있습니다.
 >
 > 기본적으로 [new-selfsignedcertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet은 자체 서명 된 인증서를 만들며 이러한 인증서는 안전 하지 않습니다. 자체 서명 된 인증서를 신뢰할 수 있는 루트 인증 기관 저장소에 배치 하면 배포 환경을 보다 긴밀 하 게 시뮬레이션 하는 개발 환경을 만들 수 있습니다.
 
@@ -29,15 +29,15 @@ WCF (Windows Communication Foundation)를 사용 하 여 보안 서비스 또는
 다음 명령은 현재 사용자 개인 저장소에서 주체 이름이 "Rootca.cer" 인 자체 서명 된 인증서를 만듭니다.
 
 ```powershell
-$rootcert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
+$rootCert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
 ```
 
 이후 단계에서 필요한 곳으로 가져올 수 있도록 인증서를 PFX 파일로 내보내야 합니다. 개인 키가 있는 인증서를 내보내는 경우 암호를 보호 해야 합니다. 에서 암호를 저장 하 `SecureString` 고 [get-pfxcertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlet을 사용 하 여 연결 된 개인 키가 포함 된 인증서를 PFX 파일로 내보냅니다. 또한 [내보내기 인증서](/powershell/module/pkiclient/export-certificate) cmdlet을 사용 하 여 공용 인증서만 CRT 파일에 저장 합니다.
 
 ```powershell
-[System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
-[String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
-Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
+[System.Security.SecureString]$rootCertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
+[String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootCert.Thumbprint)"
+Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootCertPassword
 Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 ```
 
@@ -53,7 +53,7 @@ $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -
 
 ```powershell
 [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
-Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword
+Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootCertPassword
 Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 ```
 
@@ -69,7 +69,7 @@ Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 3. **신뢰할 수 있는 루트 인증 기관** 폴더를 엽니다.
 
-4. **인증서** 폴더를 마우스 오른쪽 단추로 클릭하고 **모든 작업**을 클릭한 다음 **가져오기**를 클릭합니다.
+4. **인증서** 폴더를 마우스 오른쪽 단추로 클릭하고 **모든 작업** 을 클릭한 다음 **가져오기** 를 클릭합니다.
 
 5. 화면에 있는 마법사의 지침에 따라 Rootca.cer를 저장소로 가져옵니다.
 
@@ -111,9 +111,9 @@ WCF에서의 인증서 사용에 대한 자세한 내용은 [Working with Certif
 
 ## <a name="net-framework-security"></a>.NET Framework 보안
 
-인증서를 마우스 오른쪽 단추로 클릭한 다음 **삭제** 를 클릭하여 **신뢰할 수 있는 루트 인증 기관** 및 **개인**폴더에서 임시 루트 인증 기관 인증서를 모두 삭제합니다.
+인증서를 마우스 오른쪽 단추로 클릭한 다음 **삭제** 를 클릭하여 **신뢰할 수 있는 루트 인증 기관** 및 **개인** 폴더에서 임시 루트 인증 기관 인증서를 모두 삭제합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [인증서 사용](working-with-certificates.md)
 - [방법: MMC 스냅인을 사용하여 인증서 보기](how-to-view-certificates-with-the-mmc-snap-in.md)
