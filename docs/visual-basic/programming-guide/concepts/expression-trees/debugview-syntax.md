@@ -3,17 +3,17 @@ title: DebugView 속성에서 사용 되는 구문
 description: 식 트리의 문자열 표현을 생성하기 위해 DebugView 속성이 사용하는 특수 구문을 설명합니다.
 author: zspitz
 ms.author: wiwagn
-ms.date: 14/02/2021
+ms.date: 02/14/2021
 ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: 8a4feac72c2cd79485f5733b16d65b52cc50ee6c
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 1b6d117bb1ce0cb13344c72be3b55742c443448f
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/17/2021
-ms.locfileid: "100584896"
+ms.locfileid: "100639191"
 ---
 # <a name="debugview-syntax"></a>**Debugview** 구문
 
