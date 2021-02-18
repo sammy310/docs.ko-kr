@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: .NET Framework 참조 정보(Visual Basic)'
 title: .NET Framework 참조 정보
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework [Visual Basic], reference
 - .NET Framework class library [Visual Basic], reference information
 ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
-ms.openlocfilehash: a3ce3780818a6a07de1c594b9da3f4a5f9e03f37
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a6dc0fcebd9f0f0a43a010c25d8bedf2e5c2ea8d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058406"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433436"
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>.NET Framework 참조 정보(Visual Basic)
 

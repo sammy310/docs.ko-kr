@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -vbruntime'
 title: -vbruntime
 ms.date: 03/13/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-ms.openlocfilehash: 46d4b095d4a2bf9aac9124d5d4b2a09adb347ba1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d542324e64ce31224aa75f164f121898a25f7be9
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085063"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100470151"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 
@@ -42,7 +43,7 @@ ms.locfileid: "91085063"
   
 ## <a name="remarks"></a>설명  
 
- `-vbruntime` 컴파일러 옵션을 사용하면 컴파일러가 Visual Basic 런타임 라이브러리에 대한 참조 없이 컴파일하도록 지정할 수 있습니다. Visual Basic 런타임 라이브러리에 대한 참조 없이 컴파일하는 경우 Visual Basic 런타임 도우미에 대한 호출을 생성하는 코드 또는 언어 구문에 오류 또는 경고가 기록됩니다. (*Visual Basic 런타임 도우미*는 특정 언어 의미 체계를 실행하기 위해 런타임에 호출되는 Microsoft.VisualBasic.dll에 정의된 함수입니다.)  
+ `-vbruntime` 컴파일러 옵션을 사용하면 컴파일러가 Visual Basic 런타임 라이브러리에 대한 참조 없이 컴파일하도록 지정할 수 있습니다. Visual Basic 런타임 라이브러리에 대한 참조 없이 컴파일하는 경우 Visual Basic 런타임 도우미에 대한 호출을 생성하는 코드 또는 언어 구문에 오류 또는 경고가 기록됩니다. (*Visual Basic 런타임 도우미* 는 특정 언어 의미 체계를 실행하기 위해 런타임에 호출되는 Microsoft.VisualBasic.dll에 정의된 함수입니다.)  
   
  `-vbruntime+` 옵션은 `-vbruntime` 스위치가 지정되지 않은 경우에 발생하는 것과 동일한 동작을 생성합니다. `-vbruntime+` 옵션을 사용하여 이전 `-vbruntime` 스위치를 재정의할 수 있습니다.  
   

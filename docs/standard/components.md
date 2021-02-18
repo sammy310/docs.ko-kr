@@ -3,12 +3,12 @@ title: .NET 아키텍처 구성 요소
 description: .NET Standard, .NET 구현, .NET 런타임 및 도구와 같은 .NET 아키텍처 구성 요소에 대해 설명합니다.
 author: cartermp
 ms.date: 10/05/2020
-ms.openlocfilehash: 00d05ee328087042f7603779438436656c45be48
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c5f174034ce0cd0e1cf0b799c7b3f4bff99447a2
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819424"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100423137"
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
@@ -106,8 +106,8 @@ C# 언어 및 CLI(공용 언어 인프라) 사양은 [Ecma International&reg;](h
 다음과 같은 공식 Ecma 문서는 [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) 및 [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm)([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm))에서 사용할 수 있습니다.
 
 - **C# 언어 표준(버전 5.0)** : [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **CLI(공용 언어 인프라)** : [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) 및 [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) 형식으로 제공됩니다.
-- **파티션 IV XML 파일에서 파생된 정보**: [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) 및 [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) 형식으로 제공됩니다.
+- **CLI(공용 언어 인프라)** : [ECMA-335.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf).
+- **파티션 IV XML 파일에서 파생된 정보**: [ECMA-084.pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) format.
 
 공식 ISO/IEC 문서는 ISO/IEC [공개적으로 사용할 수 있는 표준](https://standards.iso.org/ittf/PubliclyAvailableStandards/) 페이지에서 사용할 수 있습니다. 이러한 링크는 해당 페이지에서 직접 제공됩니다.
 

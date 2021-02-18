@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -rootnamespace'
 title: -rootnamespace
 ms.date: 03/13/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -rootnamespace compiler option [Visual Basic]
 - rootnamespace compiler option [Visual Basic]
 ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
-ms.openlocfilehash: d9388ace03f654458eb955e989673b7441e72f23
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 0e034999a65bf5294e63c8f9cec1a4ce4de39a4b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085141"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474085"
 ---
 # <a name="-rootnamespace"></a>-rootnamespace
 
@@ -40,7 +41,7 @@ ms.locfileid: "91085141"
   
 |Visual Studio 통합 개발 환경에서 -rootnamespace을 설정하려면 다음을 수행합니다.|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **애플리케이션** 탭을 클릭합니다.<br />3.  **루트 네임스페이스** 상자에서 값을 수정합니다.|  
+|1.  **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다. <br />2.  **애플리케이션** 탭을 클릭합니다.<br />3.  **루트 네임스페이스** 상자에서 값을 수정합니다.|  
   
 ## <a name="example"></a>예제  
 

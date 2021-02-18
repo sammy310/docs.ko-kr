@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -out(Visual Basic)'
 title: -out
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - -out compiler option [Visual Basic]
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
-ms.openlocfilehash: 7c013270c8a6b7c2b28f02766df7437b43075dd2
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 82fb43ecf2239c38245f3afe7cacef8bad573175
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098906"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475892"
 ---
 # <a name="-out-visual-basic"></a>-out(Visual Basic)
 
@@ -37,7 +38,7 @@ ms.locfileid: "91098906"
   
 |Visual Studio 통합 개발 환경에서 -out을 설정하려면 다음을 수행합니다.|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **애플리케이션** 탭을 클릭합니다.<br />3.  **어셈블리 이름** 상자에서 값을 수정합니다.|  
+|1.  **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다. <br />2.  **애플리케이션** 탭을 클릭합니다.<br />3.  **어셈블리 이름** 상자에서 값을 수정합니다.|  
   
 ## <a name="example"></a>예제  
 

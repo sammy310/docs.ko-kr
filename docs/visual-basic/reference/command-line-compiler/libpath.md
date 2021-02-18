@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -libpath'
 title: -libpath
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: a91bd74d0be4f1cb223091ee2527f9567b4ca5db
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: cdc3f557e0d069930032ac3b0af7a0e88762189d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91058471"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455680"
 ---
 # <a name="-libpath"></a>-libpath
 
@@ -49,7 +50,7 @@ ms.locfileid: "91058471"
   
 |Visual Studio 통합 개발 환경에서 -libpath를 설정하려면 다음을 수행합니다.|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **참조** 탭을 클릭합니다.<br />3.  **참조 경로...** 단추를 클릭합니다.<br />4.  **참조 경로** 대화 상자의 **Folder:** 상자에 디렉터리 이름을 입력합니다.<br />5.  **폴더 추가**를 클릭합니다.|  
+|1.  **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다. <br />2.  **참조** 탭을 클릭합니다.<br />3.  **참조 경로...** 단추를 클릭합니다.<br />4.  **참조 경로** 대화 상자의 **Folder:** 상자에 디렉터리 이름을 입력합니다.<br />5.  **폴더 추가** 를 클릭합니다.|  
   
 ## <a name="example"></a>예제  
 

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -optionstrict'
 title: -optionstrict
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 3dd12971a082869c32b6292ed45e2014b8b0e2c0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ad58c7775eaa77c1bf693629cf12cc70e4222920
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400541"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475905"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 
@@ -42,7 +43,7 @@ ms.locfileid: "84400541"
 
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Visual Studio IDE에서 -optionstrict를 설정하려면 다음을 수행합니다.
 
-1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.
+1. **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다.
 
 2. **컴파일** 탭을 클릭합니다.
 

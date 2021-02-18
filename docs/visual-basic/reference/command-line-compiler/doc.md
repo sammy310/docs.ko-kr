@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -doc'
 title: -doc
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: 8b80629ce9b2cd62f10d9a53279b83ba41bc4ece
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: da1ff6ad133dd2f46484b61ff73e1c6159eae557
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097711"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461426"
 ---
 # <a name="-doc"></a>-doc
 
@@ -54,7 +55,7 @@ XML 파일에 대해 문서 주석을 처리합니다.
   
 |Visual Studio 통합 개발 환경에서 -doc를 설정하려면|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **XML 문서 파일 생성** 상자에 값을 설정합니다.|  
+|1.  **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **XML 문서 파일 생성** 상자에 값을 설정합니다.|  
   
 ## <a name="example"></a>예제  
 

@@ -2,12 +2,12 @@
 title: '호환성이 손상되는 변경: WPF 및 WinForms 앱에 대해 OutputType이 WinExe로 설정됨'
 description: Windows Forms 앱에 대해 OutputType이 WinExe로 자동으로 설정되는 .NET SDK 5.0.100의 호환성이 손상되는 변경에 대해 알아봅니다.
 ms.date: 09/18/2020
-ms.openlocfilehash: 0b56db57d5242f2fb001c4de339a7f696c088dfc
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 38d9b910374f9e44f7e35296808930c6a6d45f0d
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633859"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431466"
 ---
 # <a name="outputtype-set-to-winexe-for-wpf-and-winforms-apps"></a>WPF 및 WinForms 앱에 대해 OutputType이 WinExe로 설정됨
 
@@ -23,13 +23,15 @@ WPF(Windows Presentation Foundation) 및 Windows Forms 앱에 대해 `OutputType
 </PropertyGroup>
 ```
 
-.NET SDK의 5.0.100 버전부터 .NET Framework을 비롯한 모든 프레임워크 버전을 대상으로 하는 WPF 및 Windows Forms 앱에 대해 `OutputType`이 자동으로 `WinExe`로 설정됩니다. 예를 들면 다음과 같습니다.
+.NET SDK의 5.0.100 버전부터, `OutputType`이 `Exe`로 설정된 경우에는 .NET Framework를 비롯한 모든 프레임워크 버전을 대상으로 하는 WPF 및 Windows Forms 앱에 대해 자동으로 `WinExe`로 변경됩니다.
 
 ```xml
 <PropertyGroup>
   <OutputType>WinExe</OutputType>
 </PropertyGroup>
 ```
+
+ 프로젝트 파일에서 `OutputType`이 지정되지 않으면 기본적으로 `Library`로 설정되고 값이 변경되지 않습니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 

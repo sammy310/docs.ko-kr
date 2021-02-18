@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -nowarn'
 title: -nowarn
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - /nowarn compiler option [Visual Basic]
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
-ms.openlocfilehash: cde96fff975a65d6303ee62e6a811bfd83d5ff97
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4fb7d39aef48ff1443c342367f9e20bb37f9c5e0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097685"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434864"
 ---
 # <a name="-nowarn"></a>-nowarn
 
@@ -39,7 +40,7 @@ ms.locfileid: "91097685"
   
 |Visual Studio 통합 개발 환경에서 -nowarn을 설정하려면 다음을 수행합니다.|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **모든 경고 사용 안 함** 확인란을 선택하여 모든 경고를 사용하지 않습니다.<br />     또는<br />     특정 경고를 사용하지 않도록 설정하려면 경고 옆의 드롭다운 목록에서 **없음**을 클릭합니다.|  
+|1.  **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **모든 경고 사용 안 함** 확인란을 선택하여 모든 경고를 사용하지 않습니다.<br />     또는<br />     특정 경고를 사용하지 않도록 설정하려면 경고 옆의 드롭다운 목록에서 **없음** 을 클릭합니다.|  
   
 ## <a name="example"></a>예제  
 

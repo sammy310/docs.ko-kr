@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -define(Visual Basic)'
 title: -define
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: cb56e727479fd249cb0d7e5e7c3c50d5b68b3a72
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 9d6394ecad8e59d64ef3c51312ac85562ba3ec2c
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91072017"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100466980"
 ---
 # <a name="-define-visual-basic"></a>-define(Visual Basic)
 
@@ -51,7 +52,7 @@ ms.locfileid: "91072017"
   
 |Visual Studio 통합 개발 환경에서 -define을 설정하려면 다음을 수행합니다.|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급**을 클릭합니다.<br />4.  **사용자 지정 상수** 상자의 값을 수정합니다.|  
+|1.  **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급** 을 클릭합니다.<br />4.  **사용자 지정 상수** 상자의 값을 수정합니다.|  
   
 ## <a name="example"></a>예제  
 

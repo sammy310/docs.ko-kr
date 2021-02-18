@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -main'
 title: -main
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: fb317b3c555d151e132122c476ce19bdeceb1321
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4c225c5a0030de6de0aaa510080a586272aa920b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91065621"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100455667"
 ---
 # <a name="-main"></a>-main
 
@@ -40,7 +41,7 @@ ms.locfileid: "91065621"
   
 ### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>Visual Studio 통합 개발 환경에서 -main을 설정하려면  
   
-1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1. **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다.  
   
 2. **애플리케이션** 탭을 클릭합니다.  
   

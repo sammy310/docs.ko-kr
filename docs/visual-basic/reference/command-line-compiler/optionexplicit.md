@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -optionexplicit'
 title: -optionexplicit
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 65cc3fb1b2fa9daa04013caa2b93a3949d0a15b9
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4d1ab14bbf9de176de17fb5077f4bb919f5472b4
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098938"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433564"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 
@@ -37,7 +38,7 @@ ms.locfileid: "91098938"
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Visual Studio IDE에서 -optionexplicit를 설정하려면 다음을 수행합니다.  
   
-1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.
+1. **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다.
   
 2. **컴파일** 탭을 클릭합니다.  
   

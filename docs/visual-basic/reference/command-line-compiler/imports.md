@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -imports(Visual Basic)'
 title: -imports
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 69781dff1474e42ae5f735fdefd694c6447636b5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 8c6744ff857a15da9362b724a62fcf053e9fd8f0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085258"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100470202"
 ---
 # <a name="-imports-visual-basic"></a>-imports(Visual Basic)
 
@@ -37,7 +38,7 @@ ms.locfileid: "91085258"
   
 |Visual Studio 통합 개발 환경에서 -imports를 설정하려면 다음을 수행합니다.|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **참조** 탭을 클릭합니다.<br />3.  **사용자 가져오기 추가** 단추 옆의 상자에 네임스페이스 이름을 입력합니다.<br />4.  **사용자 가져오기 추가** 단추를 클릭합니다.|  
+|1.  **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다. <br />2.  **참조** 탭을 클릭합니다.<br />3.  **사용자 가져오기 추가** 단추 옆의 상자에 네임스페이스 이름을 입력합니다.<br />4.  **사용자 가져오기 추가** 단추를 클릭합니다.|  
   
 ## <a name="example"></a>예제  
 

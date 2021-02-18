@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -debug(Visual Basic)'
 title: -debug
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: 60c6e512a648f093bb9c70b5af86d5719e544adc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 44f1c1d233ff8ed38b6e96ef316bc118c269316b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408727"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100467032"
 ---
 # <a name="-debug-visual-basic"></a>-debug(Visual Basic)
 
@@ -47,7 +48,7 @@ ms.locfileid: "84408727"
 
 |Visual Studio 통합 개발 환경에서 -debug를 설정하려면 다음을 수행합니다.|
 |---|
-|1.  **솔루션 탐색기**에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급 컴파일 옵션**을 클릭합니다.<br />4.  **디버그 정보 생성** 상자에서 값을 수정합니다.|
+|1.  **솔루션 탐색기** 에서 프로젝트를 선택한 상태에서 **프로젝트** 메뉴에서 **속성** 을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급 컴파일 옵션** 을 클릭합니다.<br />4.  **디버그 정보 생성** 상자에서 값을 수정합니다.|
 
 ## <a name="example"></a>예제
 

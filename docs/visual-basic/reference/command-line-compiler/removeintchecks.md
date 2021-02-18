@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -removeintchecks'
 title: -removeintchecks
 ms.date: 03/13/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - /removeintchecks compiler option [Visual Basic]
 - -removeintchecks compiler option [Visual Basic]
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
-ms.openlocfilehash: ce1f24f25ea58cb6ddc2f5c582b6103d8f18d922
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 1dc484e1538718b68fe9f0cc450fa2480dc52412
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91085167"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100474098"
 ---
 # <a name="-removeintchecks"></a>-removeintchecks
 
@@ -34,7 +35,7 @@ ms.locfileid: "91085167"
   
 |Visual Studio 통합 개발 환경에서 -removeintchecks를 설정하려면 다음을 수행합니다.|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급** 단추를 클릭합니다.<br />4.  **정수 오버플로 검사 해제** 상자의 값을 수정합니다.|  
+|1.  **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급** 단추를 클릭합니다.<br />4.  **정수 오버플로 검사 해제** 상자의 값을 수정합니다.|  
   
 ## <a name="example"></a>예제  
 

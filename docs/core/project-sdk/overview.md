@@ -4,12 +4,16 @@ titleSuffix: ''
 description: .NET 프로젝트 SDK에 대해 알아봅니다.
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: d0eb4291f4def9263f37d2d09f09ef43d40dfbac
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+no-loc:
+- EmbeddedResource
+- Compile
+- None
+ms.openlocfilehash: e5a6d0a1c988818e507936b567fa0188675cedc3
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506398"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432649"
 ---
 # <a name="net-project-sdks"></a>.NET 프로젝트 SDK
 
@@ -25,7 +29,7 @@ ms.locfileid: "99506398"
 | `Microsoft.NET.Sdk.Web` | .NET [웹 SDK](/aspnet/core/razor-pages/web-sdk) | <https://github.com/dotnet/sdk> |
 | `Microsoft.NET.Sdk.Razor` | .NET [Razor SDK](/aspnet/core/razor-pages/sdk) |
 | `Microsoft.NET.Sdk.Worker` | .NET 작업자 서비스 SDK |
-| `Microsoft.NET.Sdk.WindowsDesktop` | WinForms 및 WPF SDK\* | <https://github.com/dotnet/winforms> 및 <https://github.com/dotnet/wpf> |
+| `Microsoft.NET.Sdk.WindowsDesktop` | WinForms(Windows Forms) 및 WPF(Windows Presentation Foundation)가 포함된 .NET [데스크톱 SDK](msbuild-props-desktop.md)\* | <https://github.com/dotnet/winforms> 및 <https://github.com/dotnet/wpf> |
 
 .NET SDK는 .NET용 기본 SDK입니다. 다른 SDK는 .NET SDK를 참조하며 다른 SDK와 연결된 프로젝트는 모든 .NET SDK 속성을 사용할 수 있습니다. 예를 들어 웹 SDK는 .NET SDK 및 Razor SDK에 종속됩니다.
 
@@ -93,18 +97,20 @@ SDK를 지정하는 또 다른 방법은 최상위 [Sdk](/visualstudio/msbuild/s
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
 | Compile           | \*\*/\*.cs(또는 기타 언어 확장) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                      |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                      |
-| 없음              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx |
+| None              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx |
 
 > [!NOTE]
 > `$(BaseOutputPath)` 및 `$(BaseIntermediateOutputPath)` MSBuild 속성으로 나타내는 `./bin` 및 `./obj` 폴더는 기본적으로 GLOB에서 제외됩니다. 제외는 [DefaultItemExcludes 속성](msbuild-props.md#defaultitemexcludes)으로 표시됩니다.
+
+.NET 데스크톱 SDK에는 WPF에 대한 더 많은 포함 및 제외가 있습니다. 자세한 내용은 [WPF 기본 포함 및 제외](msbuild-props-desktop.md#wpf-default-includes-and-excludes)를 참조하세요.
 
 ### <a name="build-errors"></a>빌드 오류
 
 프로젝트 파일에서 이러한 항목을 명시적으로 정의하는 경우 다음과 비슷한 "NETSDK1022" 빌드 오류가 발생할 수 있습니다.
 
-  > 중복된 'Compile' 항목이 포함되었습니다. .NET SDK에는 기본적으로 프로젝트 디렉터리의 'Compile' 항목이 포함됩니다. 프로젝트 파일에서 이러한 항목을 제거하거나, 프로젝트 파일에서 이러한 항목을 명시적으로 포함하려면 'EnableDefaultCompileItems' 속성을 'false'로 설정할 수 있습니다.
+> 중복 ‘Compile’ 항목이 포함되었습니다. .NET SDK에는 기본적으로 프로젝트 디렉터리의 ‘Compile’ 항목이 포함됩니다. 프로젝트 파일에서 해당 항목을 제거하거나, 프로젝트 파일에서 해당 항목을 명시적으로 포함하려면 ‘EnableDefaultCompileItems’ 속성을 ‘false’로 설정하면 됩니다.
 
-  > 중복된 'EmbeddedResource' 항목이 포함되었습니다. .NET SDK에는 기본적으로 프로젝트 디렉터리의 'EmbeddedResource' 항목이 포함됩니다. 프로젝트 파일에서 해당 항목을 제거하거나, 프로젝트 파일에 해당 항목을 명시적으로 포함하려면 'EnableDefaultEmbeddedResourceItems' 속성을 'false'로 설정할 수 있습니다.
+> 중복 ‘EmbeddedResource’ 항목이 포함되었습니다. .NET SDK에는 기본적으로 프로젝트 디렉터리의 ‘EmbeddedResource’ 항목이 포함됩니다. 프로젝트 파일에서 해당 항목을 제거하거나, 프로젝트 파일에서 해당 항목을 명시적으로 포함하려면 ‘EnableDefaultEmbeddedResourceItems’ 속성을 ‘false’로 설정하면 됩니다.
 
 오류를 해결하려면 다음 중 하나를 수행합니다.
 

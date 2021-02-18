@@ -3,18 +3,20 @@ title: 메모리 누수 디버그 자습서
 description: .NET Core의 메모리 누수를 디버그하는 방법을 알아봅니다.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: 7fa87a411606e81ffe91348c3cbce5f258a6e4e2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6764663eedc28cd75f9f68927a12ae5b2255d11b
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538594"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431453"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>.NET Core의 메모리 누수 디버그
 
 **이 문서의 적용 대상:** ✔️ .NET Core 3.1 SDK 이상 버전
 
-이 자습서에서는 .NET Core 메모리 누수를 분석하는 도구를 보여줍니다.
+앱에서 더 이상 원하는 작업을 수행할 필요가 없는 개체를 참조하는 경우 메모리 누수가 발생할 수 있습니다. 해당 개체를 참조하면 가비지 수집기가 사용되는 메모리를 회수할 수 없게 되어 성능이 저하되며 <xref:System.OutOfMemoryException>이 throw될 수도 있습니다.
+
+이 자습서에서는 .NET 진단 CLI 도구를 사용하여 .NET Core 앱에서 메모리 누수를 분석하는 도구를 보여 줍니다. Windows를 사용하는 경우 [Visual Studio의 메모리 진단 도구를 사용](/visualstudio/profiling/memory-usage)하여 메모리 누수를 디버그할 수 있습니다.
 
 이 자습서에서는 의도적으로 메모리가 누수되도록 설계된 샘플 앱을 사용합니다. 이 샘플은 연습용으로 제공됩니다. 의도치 않게 메모리 누수가 발생하는 앱을 분석할 수 있습니다.
 
@@ -146,7 +148,7 @@ dotnet-dump analyze core_20190430_185145
 여기서 `core_20190430_185145`는 분석하려는 코어 덤프의 이름입니다.
 
 > [!NOTE]
-> *libdl.so*를 찾을 수 없다는 오류가 표시되는 경우 *libc6-dev* 패키지를 설치해야 할 수 있습니다. 자세한 내용은 [Linux에서 .NET Core의 필수 조건](../install/linux.md)을 참조하세요.
+> *libdl.so* 를 찾을 수 없다는 오류가 표시되는 경우 *libc6-dev* 패키지를 설치해야 할 수 있습니다. 자세한 내용은 [Linux에서 .NET Core의 필수 조건](../install/linux.md)을 참조하세요.
 
 SOS 명령을 입력할 수 있는 프롬프트가 표시됩니다. 일반적으로는 관리되는 힙의 전반적인 상태를 확인하는 것이 가장 좋습니다.
 
@@ -238,6 +240,7 @@ Found 2 roots.
 - 관리되는 메모리 사용량을 검사하는 [dotnet-counters](dotnet-counters.md)
 - 덤프 파일을 수집 및 분석하는 [dotnet-dump](dotnet-dump.md)
 - [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+- [Visual Studio를 사용하여 메모리 누수 디버그](/visualstudio/profiling/memory-usage)
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -3,12 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: 7258dc8b8fcfbd6354b5ceee4183429bfee14038
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.openlocfilehash: 0f6739ba7a2dd0488c52b917c4a60a1b3f04a930
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97110730"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100456421"
 ---
 # <a name="the-history-of-c"></a>C\#의 역사
 
@@ -70,7 +70,7 @@ C# 버전 1.2는 Visual Studio .NET 2003과 함께 제공됩니다. 여기에는
 
 C#은 일반적인 OO(개체 지향) 언어로 시작되었지만 C# 버전 2.0을 통해 급격히 바뀌었습니다. C#이 자리를 잡은 후 개발자들은 몇 가지 심각한 고민을 겪었습니다. 이후 대대적인 문제가 발생했습니다.
 
-제네릭을 사용하면 형식을 안전하게 유지하면서 임의의 형식에서 형식 및 메서드를 작동할 수 있습니다. 예를 들어 <xref:System.Collections.Generic.List%601>를 사용하면 `List<string>` 또는 `List<int>`를 사용하고 이를 반복하는 동안 해당 문자열이나 정수에 형식이 안전한 작업을 수행할 수 있습니다. 제네릭을 사용하는 것은 모든 작업에서 `ArrayList`에서 파생되거나 `Object`에서 캐스팅한 `ListInt`를 만드는 것보다 좋습니다.
+제네릭을 사용하면 형식을 안전하게 유지하면서 임의의 형식에서 형식 및 메서드를 작동할 수 있습니다. 예를 들어 <xref:System.Collections.Generic.List%601>를 사용하면 `List<string>` 또는 `List<int>`를 사용하고 이를 반복하는 동안 해당 문자열이나 정수에 형식이 안전한 작업을 수행할 수 있습니다. 모든 작업에서 `ArrayList`에서 파생된 `ListInt` 형식을 만들거나 `Object`에서 캐스팅하는 것보다 제네릭을 사용하는 것이 좋습니다.
 
 C# 버전 2.0에서는 반복기라는 기능이 도입되었습니다. 간단히 말해서, 반복기를 사용하면 `List`(또는 다른 열거 가능 형식)의 모든 항목을 `foreach` 루프로 검사할 수 있습니다. 반복기를 언어의 첫 번째 클래스 부분에 사용하면 언어의 가독성과 사용자의 코드 추론 능력이 크게 향상됩니다.
 

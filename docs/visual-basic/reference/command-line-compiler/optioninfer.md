@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -optioninfer'
 title: -optioninfer
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 3edb1f74ab63497aeda0d72847bce92ad315a1a5
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: d45761914612a28788cc5c1a848d92238f05c162
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098919"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100475918"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 
@@ -40,7 +41,7 @@ ms.locfileid: "91098919"
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Visual Studio IDE에서 -optioninfer를 설정하려면 다음을 수행합니다.  
   
-1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1. **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다.  
   
 2. **컴파일** 탭에서 **Option infer** 상자의 값을 수정합니다.  
   

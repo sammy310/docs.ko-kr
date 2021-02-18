@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -warnaserror(Visual Basic)'
 title: -warnaserror
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: 2c243b05b7e819691165ef20996691c0bd38ae4a
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 38fc2d70f95228c715ef5ac4bfc9b4fdb6f67c0e
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91098867"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100470099"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror(Visual Basic)
 
@@ -43,11 +44,11 @@ ms.locfileid: "91098867"
   
 |Visual Studio IDE에서 모든 경고를 오류로 처리하도록 -warnaserror을 설정하려면|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **모든 경고 사용 안 함** 확인란이 선택 취소되어 있는지 확인합니다.<br />4.  **모든 경고를 오류로 처리** 확인란을 선택합니다.|  
+|1.  **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **모든 경고 사용 안 함** 확인란이 선택 취소되어 있는지 확인합니다.<br />4.  **모든 경고를 오류로 처리** 확인란을 선택합니다.|  
   
 |Visual Studio IDE에서 특정 경고를 오류로 처리하도록 -warnaserror을 설정하려면|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.<br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **모든 경고 사용 안 함** 확인란이 선택 취소되어 있는지 확인합니다.<br />4.  **모든 경고를 오류로 처리** 확인란이 선택 취소되어 있는지 확인합니다.<br />5.  오류로 처리할 경고 옆의 **알림** 열에서 **오류**를 선택합니다.|  
+|1.  **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다.<br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **모든 경고 사용 안 함** 확인란이 선택 취소되어 있는지 확인합니다.<br />4.  **모든 경고를 오류로 처리** 확인란이 선택 취소되어 있는지 확인합니다.<br />5.  오류로 처리할 경고 옆의 **알림** 열에서 **오류** 를 선택합니다.|  
   
 ## <a name="example"></a>예제  
 

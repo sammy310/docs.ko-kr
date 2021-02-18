@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -win32resource'
 title: -win32resource
 ms.date: 03/13/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-ms.openlocfilehash: d146f5967058b05795026cd7726ed5eda7ba3153
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a6f14fd2eb1349940c1e208a5baaa4205647f666
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91095410"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433486"
 ---
 # <a name="-win32resource"></a>-win32resource
 
@@ -35,7 +36,7 @@ Win32 리소스 파일을 출력 파일에 삽입합니다.
 
  Microsoft Windows RC(리소스 컴파일러)를 사용하여 Win32 리소스 파일을 만들 수 있습니다.  
   
- Win32 리소스는 **파일 탐색기**에서 애플리케이션을 식별하는 데 도움이 되는 버전 정보나 비트맵(아이콘) 정보를 포함할 수 있습니다. `-win32resource`를 지정하지 않으면 컴파일러에서 어셈블리 버전을 기반으로 버전 정보를 생성합니다. `-win32resource` 및 `-win32icon` 옵션은 함께 사용할 수 없습니다.  
+ Win32 리소스는 **파일 탐색기** 에서 애플리케이션을 식별하는 데 도움이 되는 버전 정보나 비트맵(아이콘) 정보를 포함할 수 있습니다. `-win32resource`를 지정하지 않으면 컴파일러에서 어셈블리 버전을 기반으로 버전 정보를 생성합니다. `-win32resource` 및 `-win32icon` 옵션은 함께 사용할 수 없습니다.  
   
  .NET Framework 리소스 파일 또는 [-resource (Visual Basic)](resource.md)를 참조하여 .NET Framework 리소스 파일을 연결하려면 [-linkresource(Visual Basic)](linkresource.md)를 참조하세요.  
   

@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -win32icon'
 title: -win32icon
 ms.date: 03/13/2018
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-ms.openlocfilehash: c6d5e054063592db5777a76fe19da79337ed5034
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 32a46771012708a42beb5450d28daf2fbab3f1c0
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91084959"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100433551"
 ---
 # <a name="-win32icon"></a>-win32icon
 
-출력 파일에 .ico 파일을 삽입합니다. 이 .ico 파일은 **파일 탐색기**에서 출력 파일을 나타냅니다.  
+출력 파일에 .ico 파일을 삽입합니다. 이 .ico 파일은 **파일 탐색기** 에서 출력 파일을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +38,7 @@ ms.locfileid: "91084959"
   
 |Visual Studio IDE에서 -win32icon을 설정하려면 다음을 수행합니다.|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **애플리케이션** 탭을 클릭합니다.<br />3.  **아이콘** 상자에서 값을 수정합니다.|  
+|1.  **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다. <br />2.  **애플리케이션** 탭을 클릭합니다.<br />3.  **아이콘** 상자에서 값을 수정합니다.|  
   
 ## <a name="example"></a>예제  
 

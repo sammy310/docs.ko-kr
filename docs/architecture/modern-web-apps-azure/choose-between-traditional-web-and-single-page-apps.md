@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 12/01/2020
-ms.openlocfilehash: c29e58fb4c748d6025b7c2fbe62a54a85cc71fba
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 309630b4b20105d0f64903c1920006dcfb945f76
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851655"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100429704"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>기존 웹앱 및 SPA(단일 페이지 앱) 중에서 선택
 
@@ -89,18 +89,15 @@ SPA를 작성하려면 JavaScript 및/또는 TypeScript와 클라이언트 쪽 �
 
 > ### <a name="references--spa-frameworks"></a>참조 - SPA 프레임워크
 >
-> - **Angular**  
->   <https://angular.io>
-> - **React**
->   <https://reactjs.org/>
-> - **JavaScript 프레임워크 비교**  
->   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
+> - **Angular**: <https://angular.io>
+> - **React**: <https://reactjs.org/>
+> - **Vue.js**: <https://vuejs.org/>
 
 **애플리케이션이 다른(내부 또는 공용) 클라이언트용 API를 이미 노출해야 하는 경우**
 
 다른 클라이언트에서 사용할 웹 API가 이미 지원되는 경우, 서버 쪽 양식의 논리를 재현하는 대신 이러한 API를 활용하는 SPA 구현을 만드는 데 필요한 노력이 줄어들 수 있습니다. SPA는 사용자가 애플리케이션과 상호 작용할 때 웹 API를 광범위하게 사용하여 데이터를 쿼리하고 업데이트합니다.
 
-## <a name="when-to-choose-no-locblazor"></a>Blazor를 선택하는 경우
+## <a name="when-to-choose-blazor"></a>Blazor를 선택하는 경우
 
 다음 섹션은 웹앱에 Blazor를 선택하는 경우에 관한 자세한 설명입니다.
 

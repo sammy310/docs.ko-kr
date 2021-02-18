@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -baseaddress'
 title: -baseaddress
 ms.date: 08/09/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-ms.openlocfilehash: c794d1fc1c9d20e22ffa747e3175c846341ad8ad
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: eaa2992c126ebb83b20cfdbef3ab995a30ee25fd
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91097763"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100468319"
 ---
 # <a name="-baseaddress"></a>-baseaddress
 
@@ -44,7 +45,7 @@ DLL을 만들 때 기본 기준 주소를 지정합니다.
   
 |Visual Studio IDE에서 -baseaddress를 설정하려면|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급**을 클릭합니다.<br />4.  **DLL 기준 주소:** 상자에서 값을 수정합니다. **참고:**      대상이 DLL이 아닌 한 **DLL 기준 주소:** 상자는 읽기 전용입니다.|  
+|1.  **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급** 을 클릭합니다.<br />4.  **DLL 기준 주소:** 상자에서 값을 수정합니다. **참고:**      대상이 DLL이 아닌 한 **DLL 기준 주소:** 상자는 읽기 전용입니다.|  
   
 ## <a name="see-also"></a>참조
 

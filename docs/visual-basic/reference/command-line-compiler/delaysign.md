@@ -1,4 +1,5 @@
 ---
+description: '자세한 정보: -delaysign'
 title: -delaysign
 ms.date: 03/10/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: c9bb302e2b34ebe1f51cf39bb3db1094d420d7f4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fc3e52f63431da870355e369e6ffeb8b7b14c5ab
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408701"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461504"
 ---
 # <a name="-delaysign"></a>-delaysign
 
@@ -40,7 +41,7 @@ ms.locfileid: "84408701"
 
 ### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>Visual Studio 통합 개발 환경에서 -delaysign을 설정하려면 다음을 수행합니다.
 
-1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.
+1. **솔루션 탐색기** 에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성** 을 클릭합니다.
 
 2. **시그니처** 탭을 클릭합니다.
 

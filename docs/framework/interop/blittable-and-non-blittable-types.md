@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-ms.openlocfilehash: 5f0f6b2f35c184b4df8c93af1c85e7169cb0cc95
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c9168bd245e10232a798b3e6f3b9448b24996a77
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96283148"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100436125"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 형식 및 비 Blittable 형식
 
@@ -47,13 +47,13 @@ ms.locfileid: "96283148"
   
  다음 복합 형식도 blittable 형식입니다.  
   
-- 정수 배열 등 blittable 형식의 1차원 배열. 그러나 blittable 형식의 변수 배열을 포함하는 형식 자체는 blittable이 아닙니다.  
+- 정수 배열 등 blittable 기본 형식의 1차원 배열. 그러나 blittable 형식의 변수 배열을 포함하는 형식 자체는 blittable이 아닙니다.
   
 - blittable 형식(및 서식이 지정된 형식으로 마샬링된 경우 클래스)만 포함하는 서식이 지정된 값 형식. 서식이 지정된 값 형식에 대한 자세한 내용은 [값 형식에 대한 기본 마샬링](default-marshaling-behavior.md#default-marshaling-for-value-types)을 참조하세요.  
   
  개체 참조는 blittable이 아닙니다. 여기에는 그 자체가 blittable인 개체에 대한 참조 배열이 포함됩니다. 예를 들어 blittable인 구조를 정의할 수 있지만 이러한 구조에 대한 참조 배열을 포함하는 blittable 형식을 정의할 수 없습니다.  
   
- 최적화로, blittable 형식의 배열 및 blittable 멤버만 포함하는 클래스는 마샬링 중 복사되지 않고 [고정](copying-and-pinning.md)됩니다. 호출자와 호출 수신자가 동일한 아파트에 있을 경우 이러한 형식은 In/Out 매개 변수로 마샬링되는 것처럼 보일 수 있습니다. 그러나 이러한 형식은 실제로 In 매개 변수로 마샬링되며, 인수를 In/Out 매개 변수로 마샬링하려는 경우 <xref:System.Runtime.InteropServices.InAttribute> 및 <xref:System.Runtime.InteropServices.OutAttribute> 특성을 적용해야 합니다.  
+ 최적화로, blittable 기본 형식의 배열 및 blittable 멤버만 포함하는 클래스는 마샬링 중 복사되지 않고 [고정](copying-and-pinning.md)됩니다. 호출자와 호출 수신자가 동일한 아파트에 있을 경우 이러한 형식은 In/Out 매개 변수로 마샬링되는 것처럼 보일 수 있습니다. 그러나 이러한 형식은 실제로 In 매개 변수로 마샬링되며, 인수를 In/Out 매개 변수로 마샬링하려는 경우 <xref:System.Runtime.InteropServices.InAttribute> 및 <xref:System.Runtime.InteropServices.OutAttribute> 특성을 적용해야 합니다.
   
  관리되는 일부 데이터 형식은 관리되지 않는 환경에서 다른 표현이 필요합니다. 이러한 비 blittable 데이터 형식을 마샬링할 수 있는 형식으로 변환해야 합니다. 예를 들어 관리되는 문자열은 문자열 개체로 변환해야 마샬링할 수 있기 때문에 비 blittable 형식입니다.  
   

@@ -1,16 +1,17 @@
 ---
+description: '자세한 정보: -deterministic'
 title: -deterministic
 ms.date: 04/11/2018
 helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: 0cf9aceef54998f269e9e377fe5d0a48492969c0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b339b76d4f95ba80f8e92c4961586fa390b0839a
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408688"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100461517"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -24,7 +25,7 @@ ms.locfileid: "84408688"
 
 ## <a name="remarks"></a>설명
 
-기본적으로 컴파일러에서 타임스탬프 및 난수에서 생성된 GUID를 추가하기 때문에 지정된 입력 집합의 컴파일러 출력은 고유합니다. `-deterministic` 옵션을 사용하여 *결정적 어셈블리*를 생성하고, 입력이 동일하게 유지되는 한 해당 이진 콘텐츠가 컴파일 간에 동일합니다.
+기본적으로 컴파일러에서 타임스탬프 및 난수에서 생성된 GUID를 추가하기 때문에 지정된 입력 집합의 컴파일러 출력은 고유합니다. `-deterministic` 옵션을 사용하여 *결정적 어셈블리* 를 생성하고, 입력이 동일하게 유지되는 한 해당 이진 콘텐츠가 컴파일 간에 동일합니다.
 
 결정성의 목적을 위해 컴파일러에서 고려하는 입력은 다음과 같습니다.
 

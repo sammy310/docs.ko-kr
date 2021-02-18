@@ -1,15 +1,16 @@
 ---
+description: '자세한 정보: @(지시 파일 지정)(Visual Basic)'
 title: '@(지시 파일 지정)'
 ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-ms.openlocfilehash: 91cf1b5a55d16ab47a83fbd259dd1d83d8e9c31a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7a28be0d0bf6da177d9cfe85ecdb40eccf8a339f
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403098"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100473916"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@(지시 파일 지정)(Visual Basic)
 

@@ -2,12 +2,12 @@
 title: 'C# 예약된 특성: null 허용 정적 분석'
 ms.date: 02/02/2021
 description: null 허용 참조 형식 및 null을 허용하지 않는 참조 형식에 대한 더 나은 정적 분석을 제공하기 위해 컴파일러가 이 특성을 해석합니다.
-ms.openlocfilehash: c1c3e0a0fe1ee9000e0a1a85ee08e6e966200be5
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: 91bba16506e2e8bbac9fdef2d1c4badcf59c1546
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99548359"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100432571"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>예약된 특성은 컴파일러의 null 상태 정적 분석에 사용됩니다.
 
@@ -240,7 +240,7 @@ string? GetTopLevelDomainFromFullUrl(string? url);
 
 ## <a name="constructor-helper-methods-membernotnull-and-membernotnullwhen"></a>생성자 도우미 메서드: `MemberNotNull` 및 `MemberNotNullWhen`
 
-이러한 특성은 생성자에서 공용 코드를 도우미 메서드로 리팩터링할 때 의도를 지정합니다. C# 컴파일러는 생성자 및 필드 이니셜라이저를 분석하여 각 생성자를 반환하기 전에 null을 허용하지 않는 모든 참조 필드가 초기화되도록 합니다. 그러나 C# 컴파일러가 모든 도우미 메서드에서 필드 할당을 추적하지는 않습니다. 컴파일러는 필드가 생성자에서 직접 초기화되지 않고 도우미 메서드에서 초기화되는 경우 `CS8618` 경고를 생성합니다. 메서드에서 null이 아닌 값으로 초기화되는 필드에 대한 메서드 선언에 <xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute>를 추가합니다. 예를 들어 다음 예제를 고려해 보겠습니다.
+이러한 특성은 생성자에서 공용 코드를 도우미 메서드로 리팩터링할 때 의도를 지정합니다. C# 컴파일러는 생성자 및 필드 이니셜라이저를 분석하여 각 생성자를 반환하기 전에 null을 허용하지 않는 모든 참조 필드가 초기화되도록 합니다. 그러나 C# 컴파일러가 모든 도우미 메서드에서 필드 할당을 추적하지는 않습니다. 컴파일러는 필드가 생성자에서 직접 초기화되지 않고 도우미 메서드에서 초기화되는 경우 `CS8618` 경고를 생성합니다. 메서드 선언에 <xref:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute>를 추가하고 메서드에서 Null이 아닌 값으로 초기화되는 필드를 지정합니다. 예를 들어 다음 예제를 고려해 보겠습니다.
 
 :::code language="csharp" source="snippets/InitializeMembers.cs" ID="MemberNotNullExample":::
 

@@ -3,12 +3,12 @@ description: '자세한 정보: 버전 3.5 SP1에서 HttpWebRequest에 대한 NT
 title: 버전 3.5 SP1에서 HttpWebRequest에 대한 NTLM 인증 변경 내용
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-ms.openlocfilehash: cdb17317dbafc167cce7a9b2785be68a35d3bd5b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 24787894d89f65024f7022a44b507c689bb0beb5
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99791636"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100434851"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>버전 3.5 SP1에서 HttpWebRequest에 대한 NTLM 인증 변경 내용
 
@@ -52,7 +52,7 @@ Windows 통합 인증과 함께 사용되는 NTLM 인증 프로세스는 대상 
 
 7. 레지스트리 편집기를 종료한 다음 IISAdmin 서비스를 다시 시작하고 IISReset을 실행합니다.
 
-보안 수준이 낮은 해결 방법은 <https://support.microsoft.com/kb/896861>에 설명된 대로 루프백 검사를 사용하지 않도록 설정하는 것입니다. 이렇게 하면 리플렉션 공격에 대한 보호가 해제됩니다. 따라서 대체 이름 집합을 컴퓨터에서 실제로 사용할 것으로 예상되는 이름으로만 제한하는 것이 좋습니다.
+보안 수준이 낮은 해결 방법은 루프백 검사를 사용하지 않도록 설정하는 것입니다. 이렇게 하면 리플렉션 공격에 대한 보호가 해제됩니다. 따라서 대체 이름 집합을 컴퓨터에서 실제로 사용할 것으로 예상되는 이름으로만 제한하는 것이 좋습니다.
 
 ## <a name="see-also"></a>참고 항목
 

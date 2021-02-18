@@ -1,15 +1,19 @@
 ---
-title: '호환성이 손상되는 변경: Blazor: 업데이트된 브라우저 지원'
-description: 'ASP.NET Core 5.0의 호환성이 손상되는 변경에 대해 알아보기. Blazor: 업데이트된 브라우저 지원'
+title: '호환성이 손상되는 변경: Blazor 업데이트된 브라우저 지원'
+description: 'ASP.NET Core 5.0의 호환성이 손상되는 변경에 관해 알아보기. Blazor: 업데이트된 브라우저 지원'
 author: scottaddie
 ms.author: scaddie
 ms.date: 10/01/2020
-ms.openlocfilehash: 63b35aa8cb73bfb82c565007704375bac3737299
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+no-loc:
+- Blazor
+- Blazor WebAssembly
+- Blazor Server
+ms.openlocfilehash: a14ab8d1afd4b662f61e30136d23e28ffbe2d496
+ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759989"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100431479"
 ---
 # <a name="blazor-updated-browser-support"></a>Blazor: 업데이트된 브라우저 지원
 
@@ -23,11 +27,11 @@ ASP.NET Core 5.0에는 [새로운 Blazor 기능](https://github.com/dotnet/aspne
 
 ## <a name="old-behavior"></a>이전 동작
 
-Blazor Server가 충분한 보충 기능으로 Microsoft Internet Explorer 11을 지원합니다. Blazor Server와 Blazor WebAssembly가 [Microsoft Edge 레거시](https://support.microsoft.com/help/4533505/what-is-microsoft-edge-legacy)에서도 작동합니다.
+Blazor Server가 충분한 폴리필로 Microsoft Internet Explorer 11을 지원합니다. Blazor Server 및 Blazor WebAssembly도 [Microsoft Edge 레거시](https://support.microsoft.com/help/4533505/what-is-microsoft-edge-legacy)에서 작동합니다.
 
 ## <a name="new-behavior"></a>새 동작
 
-ASP.NET Core 5.0의 Blazor Server가 Microsoft Internet Explorer 11에서 지원되지 않습니다. Blazor Server와 Blazor WebAssembly가 Microsoft Edge 레거시에서 완전히 작동하지 않습니다.
+ASP.NET Core 5.0의 Blazor Server가 Microsoft Internet Explorer 11에서 지원되지 않습니다. Blazor Server 및 Blazor WebAssembly는 Microsoft Edge 레거시에서 완전하게 작동하지 않습니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 
