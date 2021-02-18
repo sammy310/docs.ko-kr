@@ -311,22 +311,16 @@ items:
             tocHref: /dotnet/csharp/
             topicHref: /dotnet/csharp/index
             items:
-              - name: C# 소개
-                tocHref: /dotnet/csharp/tutorials/intro-to-csharp/
-                topicHref: /dotnet/csharp/tutorials/intro-to-csharp/index
-              - name: 시작
-                tocHref: /dotnet/csharp/getting-started/
-                topicHref: /dotnet/csharp/getting-started/index
+              - name: 시작하기
+                tocHref: /dotnet/csharp/tour-of-csharp/
+                topicHref: /dotnet/csharp/tour-of-csharp/index
                 items:
-                  - name: C# 둘러보기
-                    tocHref: /dotnet/csharp/tour-of-csharp/
-                    topicHref: /dotnet/csharp/tour-of-csharp/index
+                  - name: 자습서
+                    tocHref: /dotnet/csharp/tour-of-csharp/tutorials/
+                    topicHref: /dotnet/csharp/tour-of-csharp/tutorials/index
               - name: 자습서
                 tocHref: /dotnet/csharp/tutorials/
                 topicHref: /dotnet/csharp/tutorials/index
-              - name: 둘러보기
-                tocHref: /dotnet/csharp/tour-of-csharp/
-                topicHref: /dotnet/csharp/tour-of-csharp/index
               - name: 새로운 기능
                 tocHref: /dotnet/csharp/whats-new/
                 topicHref: /dotnet/csharp/whats-new/index
