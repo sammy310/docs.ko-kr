@@ -1,7 +1,7 @@
 items:
   - name: C# 설명서
     href: index.yml
-  - name: C# 둘러보기
+  - name: 시작
     items:
       - name: 소개
         href: tour-of-csharp/index.md
@@ -11,37 +11,39 @@ items:
         href: tour-of-csharp/program-building-blocks.md
       - name: 주 언어 영역
         href: tour-of-csharp/features.md
+      - name: 자습서
+        items:
+          - name: 첫 번째 단원 선택
+            href: tour-of-csharp/tutorials/index.md
+          - name: 자습서 기반 브라우저
+            items:
+              - name: Hello World
+                href: tour-of-csharp/tutorials/hello-world.yml
+              - name: C#의 숫자
+                href: tour-of-csharp/tutorials/numbers-in-csharp.yml
+              - name: 분기 및 루프
+                href: tour-of-csharp/tutorials/branches-and-loops.yml
+              - name: 목록 컬렉션
+                href: tour-of-csharp/tutorials/list-collection.yml
+          - name: 로컬 환경에서 작업
+            items:
+              - name: 환경 설정
+                href: tour-of-csharp/tutorials/local-environment.md
+              - name: C#의 숫자
+                href: tour-of-csharp/tutorials/numbers-in-csharp-local.md
+              - name: 분기 및 루프
+                href: tour-of-csharp/tutorials/branches-and-loops-local.md
+              - name: 목록 컬렉션
+                href: tour-of-csharp/tutorials/arrays-and-collections.md
   - name: 자습서
     items:
       - name: 개요
         displayName: tutorials
         href: tutorials/index.md
-      - name: C#을 사용한 프로그래밍 소개
-        items:
-          - name: 첫 번째 단원 선택
-            href: tutorials/intro-to-csharp/index.md
-          - name: Hello World
-            href: tutorials/intro-to-csharp/hello-world.yml
-          - name: C#의 숫자
-            href: tutorials/intro-to-csharp/numbers-in-csharp.yml
-          - name: 분기 및 루프
-            href: tutorials/intro-to-csharp/branches-and-loops.yml
-          - name: 목록 컬렉션
-            href: tutorials/intro-to-csharp/list-collection.yml
-          - name: 로컬 환경에서 작업
-            items:
-              - name: 환경 설정
-                href: tutorials/intro-to-csharp/local-environment.md
-              - name: C#의 숫자
-                href: tutorials/intro-to-csharp/numbers-in-csharp-local.md
-              - name: 분기 및 루프
-                href: tutorials/intro-to-csharp/branches-and-loops-local.md
-              - name: 목록 컬렉션
-                href: tutorials/intro-to-csharp/arrays-and-collections.md
-              - name: 클래스 소개
-                href: tutorials/intro-to-csharp/introduction-to-classes.md
-              - name: 개체 지향 프로그래밍
-                href: tutorials/intro-to-csharp/object-oriented-programming.md
+      - name: 클래스 소개
+        href: tutorials/intro-to-csharp/introduction-to-classes.md
+      - name: 개체 지향 프로그래밍
+        href: tutorials/intro-to-csharp/object-oriented-programming.md
       - name: 레코드 종류 탐색
         href: tutorials/exploration/records.md
       - name: 최상위 문 탐색
@@ -267,8 +269,6 @@ items:
         items:
           - name: C# 프로그램 내용
             href: programming-guide/inside-a-program/index.md
-          - name: Hello World -- 프로그램 처음 만들기
-            href: programming-guide/inside-a-program/hello-world-your-first-program.md
           - name: C# 프로그램의 일반적인 구조체
             href: programming-guide/inside-a-program/general-structure-of-a-csharp-program.md
           - name: 식별자 이름
