@@ -1,0 +1,39 @@
+- name: .NET 개발자용 Dapr
+  href: index.md
+  items:
+    - name: 서문
+      href: foreword.md
+      displayName: 'mark russinovich, foreword by mark russinovich, distributed system future, distributed application future, distributed architecture, microservice, monolithic, monolithic architecture'
+    - name: '전 세계는 20,000 피트로'
+      href: the-world-is-distributed.md
+      displayName: 'distributed system, distributed application, distributed architecture, microservice, SOA, monolithic, monolithic architecture'
+    - name: Dapr이 배포되어 있습니다.
+      href: dapr-at-20000-feet.md
+      displayName: 'dapr, distributed system, distributed application, dapr building blocks, dapr components, microservice, sidecar architecture, service mesh'
+    - name: 시작
+      href: getting-started.md
+      displayName: 'dapr, distributed system, distributed application, service invocation, state management, install dapr, component configuration files, multi-container dapr application'
+    - name: 참조 애플리케이션
+      href: reference-application.md
+      displayName: 'dapr, distributed system, distributed application, dapr building blocks, dapr components, microservice, eshop'
+    - name: 상태 관리
+      href: state-management.md
+      displayName: 'dapr, distributed system, distributed application, state management, dapr state management building block, cap theorem, concurrency, transactions'
+    - name: 서비스 호출
+      href: service-invocation.md
+      displayName: 'dapr, distributed system, distributed application, service invocation, dapr service invocation building block, envoy'
+    - name: 게시 & 등록
+      href: publish-subscribe.md
+      displayName: 'dapr, distributed system, distributed application, pub/sub, publish and subscribe, cloud events, publishing events, subscribing to events, dapr publish-subscribe building block'
+    - name: 바인딩
+      href: bindings.md
+      displayName: 'dapr bindings building block, input binding, output binding, binding components, dapr bindings building block'
+    - name: 가시성
+      href: observability.md
+      displayName: 'dapr, distributed system, distributed application, observability, distributed tracing, traces, metrics, logging, zipkin, jaeger, prometheus, new relic, dapr observability building block'
+    - name: 비밀
+      href: secrets.md
+      displayName: 'dapr, distributed system, distributed application, secrets, dapr secrets building block, kubernetes secrets, azure key vault'
+    - name: 요약 및 진행 방향
+      href: summary.md
+      displayName: 'dapr, distributed system, distributed application, dapr building blocks, dapr components, microservice, sidecar architecture, dapr futures'

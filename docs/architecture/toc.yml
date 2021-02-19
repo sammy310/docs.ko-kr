@@ -21,3 +21,5 @@
       href: microservices/
     - name: '서버리스 앱: 아키텍처, 패턴 및 Azure 구현'
       href: serverless/
+    - name: .NET 개발자용 Dapr
+      href: dapr-for-net-developers/
