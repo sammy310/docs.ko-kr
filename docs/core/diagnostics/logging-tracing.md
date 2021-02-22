@@ -2,12 +2,12 @@
 title: 로깅 및 추적 - .NET Core
 description: .NET Core 로깅 및 추적에 대해 간략히 설명합니다.
 ms.date: 10/12/2020
-ms.openlocfilehash: a8c6d82ddb7bc3f8b4cc9eae9dd7aaf65732a0b8
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: 70cff297688270d30b9850d123ffc8bb27ef7fbe
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99548397"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100582967"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 로깅 및 추적
 
@@ -64,9 +64,6 @@ ms.locfileid: "99548397"
   - .NET Core 및 .NET Framework용 [NuGet 패키지](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource)에 포함되어 있습니다.
   - 프로세스 내에서 직렬화할 수 없는 개체를 추적할 수 있습니다.
   - 로깅된 개체의 선택한 필드를 <xref:System.Diagnostics.Tracing.EventSource>에 쓸 수 있게 하는 브리지가 포함되어 있습니다.
-
-- <xref:System.Diagnostics.Activity?displayProperty=nameWithType>
-  - 특정 활동 또는 트랜잭션으로 인해 발생하는 로그 메시지를 식별할 수 있는 명확한 방법을 제공합니다. 이 개체를 사용하여 여러 서비스에서 로그를 상호 연결시킬 수 있습니다.
 
 - <xref:System.Diagnostics.EventLog?displayProperty=nameWithType>
   - Windows만 해당합니다.

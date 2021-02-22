@@ -5,12 +5,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/04/2020
-ms.openlocfilehash: 3ee644f05ea5929ffc7b11054ef1d974b811f418
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: acaaf025555c46f720452b8c9d4f875b8656125a
+ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634457"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101096815"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -58,43 +58,43 @@ dotnet new -h|--help
 
   다음 표에는 .NET SDK와 함께 사전 설치된 템플릿이 나와 있습니다. 템플릿의 기본 언어는 대괄호 안에 표시됩니다. 특정 템플릿 옵션을 보려면 약식 이름 링크를 클릭합니다.
 
-| 템플릿                                    | 짧은 이름                      | 언어     | Tags                                  | 도입 |
-|----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
-| 콘솔 애플리케이션                          | [콘솔](#console)             | [C#], F#, VB | 일반/콘솔                        | 1.0        |
-| 클래스 라이브러리                                | [classlib](#classlib)           | [C#], F#, VB | 일반/라이브러리                        | 1.0        |
-| WPF 애플리케이션                              | [wpf](#wpf)                     | [C#], VB     | 일반/WPF                            | 3.0(VB의 경우 5.0)|
-| WPF 클래스 라이브러리                            | [wpflib](#wpf)                  | [C#], VB     | 일반/WPF                            | 3.0(VB의 경우 5.0)|
-| WPF 사용자 지정 컨트롤 라이브러리                   | [wpfcustomcontrollib](#wpf)     | [C#], VB     | 일반/WPF                            | 3.0(VB의 경우 5.0)|
-| WPF 사용자 컨트롤 라이브러리                     | [wpfusercontrollib](#wpf)       | [C#], VB     | 일반/WPF                            | 3.0(VB의 경우 5.0)|
-| Windows Forms(WinForms) 애플리케이션         | [winforms](#winforms)           | [C#], VB     | 일반/WinForms                       | 3.0(VB의 경우 5.0)|
-| Windows Forms(WinForms) 클래스 라이브러리       | [winformslib](#winforms)        | [C#], VB     | 일반/WinForms                       | 3.0(VB의 경우 5.0)|
-| Worker Service                               | [worker](#web-others)           | [C#]         | 일반/Worker/웹                     | 3.0        |
-| 단위 테스트 프로젝트                            | [mstest](#test)                 | [C#], F#, VB | Test/MSTest                           | 1.0        |
-| NUnit 3 테스트 프로젝트                         | [nunit](#nunit)                 | [C#], F#, VB | Test/NUnit                            | 2.1.400    |
-| NUnit 3 테스트 항목                            | `nunit-test`                    | [C#], F#, VB | Test/NUnit                            | 2.2        |
-| xUnit 테스트 프로젝트                           | [xunit](#test)                  | [C#], F#, VB | Test/xUnit                            | 1.0        |
-| Razor 구성 요소                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3.0        |
-| Razor 페이지                                   | [page](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
-| MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
-| MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
-| Blazor 서버 앱                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
-| Blazor WebAssembly 앱                       | [blazorwasm](#blazorwasm)       | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
-| ASP.NET Core 비어 있음                           | [web](#web)                     | [C#], F#     | Web/Empty                             | 1.0        |
-| ASP.NET Core 웹앱(모델-뷰-컨트롤러) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
-| ASP.NET Core 웹앱                         | [webapp, razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2, 2.0   |
-| ASP.NET Core(Angular 사용)                    | [angular](#spa)                 | [C#]         | Web/MVC/SPA                           | 2.0        |
-| ASP.NET Core(React.js 사용)                   | [react](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
-| ASP.NET Core(React.js 및 Redux 사용)         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
-| Razor 클래스 라이브러리                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Library/Razor 클래스 라이브러리 | 2.1        |
-| ASP.NET Core 웹 API                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
-| ASP.NET Core gRPC 서비스                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
-| dotnet gitignore 파일                        | `gitignore`                     |              | Config                                | 3.0        |
-| global.json 파일                             | [globaljson](#globaljson)       |              | Config                                | 2.0        |
-| NuGet 구성                                 | `nugetconfig`                   |              | Config                                | 1.0        |
-| Dotnet 로컬 도구 매니페스트 파일              | `tool-manifest`                 |              | Config                                | 3.0        |
-| 웹 구성                                   | `webconfig`                     |              | Config                                | 1.0        |
-| 솔루션 파일                                | `sln`                           |              | 솔루션                              | 1.0        |
-| 프로토콜 버퍼 파일                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
+| 템플릿                                    | 짧은 이름                        | 언어     | Tags                                  | 도입 |
+|----------------------------------------------|-----------------------------------|--------------|---------------------------------------|------------|
+| 콘솔 애플리케이션                          | [`console`](#console)             | [C#], F#, VB | 일반/콘솔                        | 1.0        |
+| 클래스 라이브러리                                | [`classlib`](#classlib)           | [C#], F#, VB | 일반/라이브러리                        | 1.0        |
+| WPF 애플리케이션                              | [`wpf`](#wpf)                     | [C#], VB     | 일반/WPF                            | 3.0(VB의 경우 5.0)|
+| WPF 클래스 라이브러리                            | [`wpflib`](#wpf)                  | [C#], VB     | 일반/WPF                            | 3.0(VB의 경우 5.0)|
+| WPF 사용자 지정 컨트롤 라이브러리                   | [`wpfcustomcontrollib`](#wpf)     | [C#], VB     | 일반/WPF                            | 3.0(VB의 경우 5.0)|
+| WPF 사용자 컨트롤 라이브러리                     | [`wpfusercontrollib`](#wpf)       | [C#], VB     | 일반/WPF                            | 3.0(VB의 경우 5.0)|
+| Windows Forms(WinForms) 애플리케이션         | [`winforms`](#winforms)           | [C#], VB     | 일반/WinForms                       | 3.0(VB의 경우 5.0)|
+| Windows Forms(WinForms) 클래스 라이브러리       | [`winformslib`](#winforms)        | [C#], VB     | 일반/WinForms                       | 3.0(VB의 경우 5.0)|
+| Worker Service                               | [`worker`](#web-others)           | [C#]         | 일반/Worker/웹                     | 3.0        |
+| 단위 테스트 프로젝트                            | [`mstest`](#test)                 | [C#], F#, VB | Test/MSTest                           | 1.0        |
+| NUnit 3 테스트 프로젝트                         | [`nunit`](#nunit)                 | [C#], F#, VB | Test/NUnit                            | 2.1.400    |
+| NUnit 3 테스트 항목                            | `nunit-test`                      | [C#], F#, VB | Test/NUnit                            | 2.2        |
+| xUnit 테스트 프로젝트                           | [`xunit`](#test)                  | [C#], F#, VB | Test/xUnit                            | 1.0        |
+| Razor 구성 요소                              | `razorcomponent`                  | [C#]         | Web/ASP.NET                           | 3.0        |
+| Razor 페이지                                   | [`page`](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
+| MVC ViewImports                              | [`viewimports`](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
+| MVC ViewStart                                | `viewstart`                       | [C#]         | Web/ASP.NET                           | 2.0        |
+| Blazor 서버 앱                            | [`blazorserver`](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
+| Blazor WebAssembly 앱                       | [`blazorwasm`](#blazorwasm)       | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
+| ASP.NET Core 비어 있음                           | [`web`](#web)                     | [C#], F#     | Web/Empty                             | 1.0        |
+| ASP.NET Core 웹앱(모델-뷰-컨트롤러) | [`mvc`](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
+| ASP.NET Core 웹앱                         | [`webapp, razor`](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2, 2.0   |
+| ASP.NET Core(Angular 사용)                    | [`angular`](#spa)                 | [C#]         | Web/MVC/SPA                           | 2.0        |
+| ASP.NET Core(React.js 사용)                   | [`react`](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
+| ASP.NET Core(React.js 및 Redux 사용)         | [`reactredux`](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
+| Razor 클래스 라이브러리                          | [`razorclasslib`](#razorclasslib) | [C#]         | Web/Razor/Library/Razor 클래스 라이브러리 | 2.1        |
+| ASP.NET Core 웹 API                         | [`webapi`](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
+| ASP.NET Core gRPC 서비스                    | [`grpc`](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
+| dotnet gitignore 파일                        | `gitignore`                       |              | Config                                | 3.0        |
+| global.json 파일                             | [`globaljson`](#globaljson)       |              | Config                                | 2.0        |
+| NuGet 구성                                 | `nugetconfig`                     |              | Config                                | 1.0        |
+| Dotnet 로컬 도구 매니페스트 파일              | `tool-manifest`                   |              | Config                                | 3.0        |
+| 웹 구성                                   | `webconfig`                       |              | Config                                | 1.0        |
+| 솔루션 파일                                | `sln`                             |              | 솔루션                              | 1.0        |
+| 프로토콜 버퍼 파일                         | [`proto`](#namespace)             |              | Web/gRPC                              | 3.0        |
 
 ## <a name="options"></a>옵션
 
@@ -167,7 +167,7 @@ dotnet new -h|--help
 
 각 프로젝트 템플릿에는 사용할 수 있는 추가 옵션이 있을 수 있습니다. 코어 템플릿에는 다음과 같은 추가 옵션이 있습니다.
 
-### <a name="console"></a>콘솔
+### `console`
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -191,11 +191,11 @@ dotnet new -h|--help
 
   지정할 경우 프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다. .NET Core 2.2 SDK부터 사용할 수 있습니다.
 
-**_
+***
 
-### <a name="classlib"></a>classlib
+### `classlib`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. 값: `net5.0`, `netcoreapp<version>`(.NET 클래스 라이브러리를 만드는 경우) 또는 `netstandard<version>`(.NET Standard 클래스 라이브러리를 만드는 경우). .NET 5.0 SDK의 기본값은 `net5.0`입니다.
 
@@ -209,11 +209,11 @@ dotnet new -h|--help
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-**_
+***
 
-### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
+### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> `wpf`, `wpflib`, `wpfcustomcontrollib`, `wpfusercontrollib`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. 기본값은 `net5.0`입니다. .NET Core 3.1 SDK부터 사용할 수 있습니다.
 
@@ -227,11 +227,11 @@ dotnet new -h|--help
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-**_
+***
 
-### <a name="winforms-winformslib"></a><a name="winforms"></a> winforms, winformslib
+### <a name="winforms-winformslib"></a><a name="winforms"></a> `winforms`, `winformslib`
 
-- _ *`--langVersion <VERSION_NUMBER>`**
+- **`--langVersion <VERSION_NUMBER>`**
 
   생성된 프로젝트 파일에서 `LangVersion` 속성을 설정합니다. 예를 들어 C# 7.3을 사용하려면 `--langVersion 7.3`을 사용합니다.
 
@@ -241,11 +241,11 @@ dotnet new -h|--help
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-**_
+***
 
-### <a name="worker-grpc"></a><a name="web-others"></a> worker, grpc
+### <a name="worker-grpc"></a><a name="web-others"></a> `worker`, `grpc`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. 기본값은 `netcoreapp3.1`입니다. .NET Core 3.1 SDK부터 사용할 수 있습니다.
 
@@ -257,11 +257,11 @@ dotnet new -h|--help
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-**_
+***
 
-### <a name="mstest-xunit"></a><a name="test"></a> mstest, xunit
+### <a name="mstest-xunit"></a><a name="test"></a> `mstest`, `xunit`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다. .NET Core 3.0 SDK 이후 사용할 수 있는 옵션입니다.
 
@@ -281,11 +281,11 @@ dotnet new -h|--help
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-**_
+***
 
-### <a name="nunit"></a>nunit
+### `nunit`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.
 
@@ -307,11 +307,11 @@ dotnet new -h|--help
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-**_
+***
 
-### <a name="page"></a>페이지
+### `page`
 
-- _ *`-na|--namespace <NAMESPACE_NAME>`**
+- **`-na|--namespace <NAMESPACE_NAME>`**
 
   생성된 코드에 대한 네임스페이스입니다. 기본값은 `MyApp.Namespace`입니다.
 
@@ -319,19 +319,19 @@ dotnet new -h|--help
 
   PageModel 없이 페이지를 만듭니다.
 
-**_
+***
 
-### <a name="viewimports-proto"></a><a name="namespace"></a> viewimports, proto
+### <a name="viewimports-proto"></a><a name="namespace"></a> `viewimports`, `proto`
 
-- _ *`-na|--namespace <NAMESPACE_NAME>`**
+- **`-na|--namespace <NAMESPACE_NAME>`**
 
   생성된 코드에 대한 네임스페이스입니다. 기본값은 `MyApp.Namespace`입니다.
 
-**_
+***
 
-### <a name="blazorserver"></a>blazorserver
+### `blazorserver`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   사용할 인증 형식입니다. 가능한 값은 다음과 같습니다.
 
@@ -398,11 +398,11 @@ dotnet new -h|--help
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-**_
+***
 
-### <a name="blazorwasm"></a>blazorwasm
+### `blazorwasm`
 
-- _ *`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   대상으로 할 [프레임워크](../../standard/frameworks.md)를 지정합니다.
 
@@ -502,11 +502,11 @@ dotnet new -h|--help
 
   웹앱에서 API를 호출하기 위해 요청할 범위입니다. ASP.NET Core 호스트가 지정되지 않은 `SingleOrg` 또는 `IndividualB2C` 인증에만 적용됩니다. 기본값은 `user.read`입니다.
 
-**_
+***
 
-### <a name="web"></a>web
+### `web`
 
-- _ *`--exclude-launch-settings`**
+- **`--exclude-launch-settings`**
 
   생성된 템플릿에서 *launchSettings.json* 을 제외합니다.
 
@@ -531,11 +531,11 @@ dotnet new -h|--help
 
   HTTPS를 해제합니다.
 
-**_
+***
 
-### <a name="mvc-webapp"></a><a name="web-options"></a> mvc, webapp
+### <a name="mvc-webapp"></a><a name="web-options"></a> `mvc`, `webapp`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   사용할 인증 형식입니다. 가능한 값은 다음과 같습니다.
 
@@ -622,11 +622,11 @@ dotnet new -h|--help
 
   프로젝트가 디버그 빌드에서 [Razor 런타임 컴파일](/aspnet/core/mvc/views/view-compilation#runtime-compilation)을 사용하도록 구성되어 있는지 확인합니다. .NET Core 3.1.201 SDK 이후 사용할 수 있는 옵션입니다.
 
-**_
+***
 
-### <a name="angular-react"></a><a name="spa"></a> angular, react
+### <a name="angular-react"></a><a name="spa"></a> `angular`, `react`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   사용할 인증 형식입니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
   
@@ -664,11 +664,11 @@ dotnet new -h|--help
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
 
-**_
+***
 
-### <a name="reactredux"></a>reactredux
+### `reactredux`
 
-- _ *`--exclude-launch-settings`**
+- **`--exclude-launch-settings`**
 
   생성된 템플릿에서 *launchSettings.json* 을 제외합니다.
 
@@ -693,11 +693,11 @@ dotnet new -h|--help
 
   HTTPS를 해제합니다.
 
-**_
+***
 
-### <a name="razorclasslib"></a>razorclasslib
+### `razorclasslib`
 
-- _ *`--no-restore`**
+- **`--no-restore`**
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
@@ -705,11 +705,11 @@ dotnet new -h|--help
 
   이 라이브러리에 구성 요소 외에 기존의 Razor 페이지와 뷰를 추가하는 것을 지원합니다. .NET Core 3.0 SDK 이후 사용할 수 있습니다.
 
-**_
+***
   
-### <a name="webapi"></a>webapi
+### `webapi`
 
-- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   사용할 인증 형식입니다. 가능한 값은 다음과 같습니다.
 
@@ -775,11 +775,11 @@ dotnet new -h|--help
 
   프로젝트를 만드는 동안 암시적 복원을 실행하지 않습니다.
 
-**_
+***
 
-### <a name="globaljson"></a>globaljson
+### `globaljson`
 
-- _ *`--sdk-version <VERSION_NUMBER>`**
+- **`--sdk-version <VERSION_NUMBER>`**
 
   *global.json* 파일에서 사용할 .NET SDK 버전을 지정합니다.
 

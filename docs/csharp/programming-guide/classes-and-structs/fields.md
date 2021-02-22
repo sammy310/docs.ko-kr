@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 58e60e1dc0b574ae922e6a27a22978b91aca4ec4
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: 3210500719529f8bb7f2627abf634cc7b9dcb772
+ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899050"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101096827"
 ---
 # <a name="fields-c-programming-guide"></a>필드(C# 프로그래밍 가이드)
 
@@ -26,11 +26,11 @@ ms.locfileid: "98899050"
 
 [!code-csharp[fields#1](snippets/fields/Program.cs#1)]
 
-개체의 필드에 액세스하려면 `objectname.fieldname`와 같이 개체 이름과 필드 이름 뒤에 마침표를 추가합니다. 예를 들어:
+개체의 필드에 액세스하려면 `objectname._fieldName`와 같이 개체 이름과 필드 이름 뒤에 마침표를 추가합니다. 예를 들어:
 
 [!code-csharp[fields#2](snippets/fields/Program.cs#2)]
 
-필드를 선언할 때 대입 연산자를 사용하여 필드에 초기 값을 지정할 수 있습니다. 예를 들어 `day` 필드를 `"Monday"`에 자동으로 할당하려면 다음 예제와 같이 `day`를 선언합니다.
+필드를 선언할 때 대입 연산자를 사용하여 필드에 초기 값을 지정할 수 있습니다. 예를 들어 `Day` 필드를 `"Monday"`에 자동으로 할당하려면 다음 예제와 같이 `Day`를 선언합니다.
 
 [!code-csharp[fields#3](snippets/fields/Program.cs#3)]
 

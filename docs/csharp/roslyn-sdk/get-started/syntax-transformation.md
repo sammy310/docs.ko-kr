@@ -3,12 +3,12 @@ title: 구문 변환 시작(Roslyn API)
 description: 구문 트리를 트래버스하고, 탐색하고, 쿼리하는 방법을 소개합니다.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 5879dfd6ed0a5f6465829eec496d10cfcfd07362
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 706e4643ecc81d252a9192dc5e8850024770628f
+ms.sourcegitcommit: 456b3cd82a87b453fa737b4661295070d1b6d684
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202117"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100639405"
 ---
 # <a name="get-started-with-syntax-transformation"></a>구문 변환 시작
 
@@ -20,17 +20,17 @@ ms.locfileid: "84202117"
 
 ## <a name="immutability-and-the-net-compiler-platform"></a>불변성 및 .NET 컴파일러 플랫폼
 
-**불변성**은 .NET 컴파일러 플랫폼의 기본 원리입니다. 변경 불가능한 데이터 구조는 생성된 후 변경할 수 없습니다. 변경 불가능한 데이터 구조는 여러 소비자가 동시에 안전하게 공유하고 분석할 수 있습니다. 한 소비자가 예기치 않은 방식으로 다른 소비자에게 영향을 줄 위험이 없습니다. 분석기에는 잠금이나 기타 동시성 측정값이 필요하지 않습니다. 이 규칙은 구문 트리, 컴파일, 기호, 의미 체계 모델 및 사용자에게 나타나는 모든 기타 데이터 구조에 적용됩니다. 기존 구조를 수정하는 대신 API는 지정된 차이점을 기반으로 새 개체를 만듭니다. 이 개념을 구문 트리에 적용하여 변환을 통해 새 트리를 만듭니다.
+**불변성** 은 .NET 컴파일러 플랫폼의 기본 원리입니다. 변경 불가능한 데이터 구조는 생성된 후 변경할 수 없습니다. 변경 불가능한 데이터 구조는 여러 소비자가 동시에 안전하게 공유하고 분석할 수 있습니다. 한 소비자가 예기치 않은 방식으로 다른 소비자에게 영향을 줄 위험이 없습니다. 분석기에는 잠금이나 기타 동시성 측정값이 필요하지 않습니다. 이 규칙은 구문 트리, 컴파일, 기호, 의미 체계 모델 및 사용자에게 나타나는 모든 기타 데이터 구조에 적용됩니다. 기존 구조를 수정하는 대신 API는 지정된 차이점을 기반으로 새 개체를 만듭니다. 이 개념을 구문 트리에 적용하여 변환을 통해 새 트리를 만듭니다.
 
 ## <a name="create-and-transform-trees"></a>트리 만들기 및 변환
 
-구문 변환에 대해 두 가지 전략 중 하나를 선택합니다. **팩터리 메서드**는 대체할 특정 노드를 검색하거나 새 코드를 삽입할 특정 위치를 검색할 때 가장 유용합니다. **재작성기**는 대체할 코드 패턴을 전체 프로젝트에서 검색하려는 경우 가장 적합합니다.
+구문 변환에 대해 두 가지 전략 중 하나를 선택합니다. **팩터리 메서드** 는 대체할 특정 노드를 검색하거나 새 코드를 삽입할 특정 위치를 검색할 때 가장 유용합니다. **재작성기** 는 대체할 코드 패턴을 전체 프로젝트에서 검색하려는 경우 가장 적합합니다.
 
 ### <a name="create-nodes-with-factory-methods"></a>팩터리 메서드를 사용하여 노드 만들기
 
-첫 번째 구문 변환은 팩터리 메서드를 보여 줍니다. `using System.Collections;` 문을 `using System.Collections.Generic;` 문으로 바꾸려고 합니다. 이 예제는 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> 팩터리 메서드를 사용하여 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> 개체를 만드는 방법을 보여 줍니다. 각 종류의 **노드**, **토큰** 또는 **기타 정보**에 대해 해당 형식의 인스턴스를 만드는 팩터리 메서드가 있습니다. 노드를 상향식 계층 구조로 작성하여 구문 트리를 만듭니다. 그런 다음, 기존 노드를 직접 만든 새 트리로 바꿔서 기존 프로그램을 변환합니다.
+첫 번째 구문 변환은 팩터리 메서드를 보여 줍니다. `using System.Collections;` 문을 `using System.Collections.Generic;` 문으로 바꾸려고 합니다. 이 예제는 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> 팩터리 메서드를 사용하여 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> 개체를 만드는 방법을 보여 줍니다. 각 종류의 **노드**, **토큰** 또는 **기타 정보** 에 대해 해당 형식의 인스턴스를 만드는 팩터리 메서드가 있습니다. 노드를 상향식 계층 구조로 작성하여 구문 트리를 만듭니다. 그런 다음, 기존 노드를 직접 만든 새 트리로 바꿔서 기존 프로그램을 변환합니다.
 
-Visual Studio를 시작하고 새 C# **독립 실행형 코드 분석 도구** 프로젝트를 만듭니다. Visual Studio에서 **파일** > **새로 만들기** > **프로젝트**를 선택하여 새 프로젝트 대화 상자를 표시합니다. **Visual C#**  > **확장성** 아래에서 **독립 실행형 코드 분석 도구**를 선택합니다. 이 빠른 시작에는 두 개의 예제 프로젝트가 있으므로 솔루션 이름을 **SyntaxTransformationQuickStart**로 지정하고 프로젝트 이름을 **ConstructionCS**로 지정합니다. **확인**을 클릭합니다.
+Visual Studio를 시작하고 새 C# **독립 실행형 코드 분석 도구** 프로젝트를 만듭니다. Visual Studio에서 **파일** > **새로 만들기** > **프로젝트** 를 선택하여 새 프로젝트 대화 상자를 표시합니다. **Visual C#**  > **확장성** 아래에서 **독립 실행형 코드 분석 도구** 를 선택합니다. 이 빠른 시작에는 두 개의 예제 프로젝트가 있으므로 솔루션 이름을 **SyntaxTransformationQuickStart** 로 지정하고 프로젝트 이름을 **ConstructionCS** 로 지정합니다. **확인** 을 클릭합니다.
 
 이 프로젝트는 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> 클래스 메서드를 사용하여 `System.Collections.Generic` 네임스페이스를 나타내는 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>를 생성합니다.
 
@@ -38,7 +38,7 @@ Visual Studio를 시작하고 새 C# **독립 실행형 코드 분석 도구** �
 
 [!code-csharp[import the SyntaxFactory class](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#StaticUsings "import the Syntax Factory class and the System.Console class")]
 
-**name syntax nodes**를 만들어 `using System.Collections.Generic;` 문을 나타내는 트리를 빌드합니다. <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax>는 C#에 나타나는 네 가지 형식의 이름에 대한 기본 클래스입니다. 다음 네 가지 형식의 이름을 함께 작성하여 C# 언어로 표시할 수 있는 이름을 만듭니다.
+**name syntax nodes** 를 만들어 `using System.Collections.Generic;` 문을 나타내는 트리를 빌드합니다. <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax>는 C#에 나타나는 네 가지 형식의 이름에 대한 기본 클래스입니다. 다음 네 가지 형식의 이름을 함께 작성하여 C# 언어로 표시할 수 있는 이름을 만듭니다.
 
 * <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> - `System` 및 `Microsoft` 같은 단순 단일 식별자 이름을 나타냅니다.
 * <xref:Microsoft.CodeAnalysis.CSharp.Syntax.GenericNameSyntax?displayProperty=nameWithType> - `List<int>` 같은 제네릭 형식 또는 메서드 이름을 나타냅니다.
@@ -63,7 +63,7 @@ Visual Studio를 시작하고 새 C# **독립 실행형 코드 분석 도구** �
 
 ### <a name="create-a-modified-tree"></a>수정된 트리 만들기
 
-하나의 문을 포함하는 작은 구문 트리를 빌드했습니다. 단일 문 또는 기타 작은 코드 블록을 만드는 데는 새 노드를 만드는 API를 사용하는 것이 적합합니다. 그러나 더 큰 코드 블록을 빌드하려면 노드를 바꾸거나 노드를 기존 트리에 삽입하는 메서드를 사용해야 합니다. 구문 트리는 변경할 수 없습니다. **구문 API**는 생성 후 기존 구문 트리를 수정하기 위한 메커니즘을 제공하지 않습니다. 대신 기존 트리에 대한 변경 내용을 기반으로 새 트리를 생성하는 메서드를 제공합니다. `With*` 메서드는 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions> 클래스에서 선언된 확장 메서드 또는 <xref:Microsoft.CodeAnalysis.SyntaxNode>에서 파생되는 구체적인 클래스에서 정의됩니다. 이러한 메서드는 기존 노드의 자식 속성에 변경 내용을 적용하여 새 노드를 만듭니다. 또한 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> 확장 메서드를 사용하여 하위 트리의 하위 노드를 바꿀 수 있습니다. 이 메서드는 새로 만들어진 자식을 가리키도록 부모를 업데이트하고, 전체 트리에서 이 프로세스를 반복합니다(트리 ‘재회전’으로 알려진 프로세스).
+하나의 문을 포함하는 작은 구문 트리를 빌드했습니다. 단일 문 또는 기타 작은 코드 블록을 만드는 데는 새 노드를 만드는 API를 사용하는 것이 적합합니다. 그러나 더 큰 코드 블록을 빌드하려면 노드를 바꾸거나 노드를 기존 트리에 삽입하는 메서드를 사용해야 합니다. 구문 트리는 변경할 수 없습니다. **구문 API** 는 생성 후 기존 구문 트리를 수정하기 위한 메커니즘을 제공하지 않습니다. 대신 기존 트리에 대한 변경 내용을 기반으로 새 트리를 생성하는 메서드를 제공합니다. `With*` 메서드는 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions> 클래스에서 선언된 확장 메서드 또는 <xref:Microsoft.CodeAnalysis.SyntaxNode>에서 파생되는 구체적인 클래스에서 정의됩니다. 이러한 메서드는 기존 노드의 자식 속성에 변경 내용을 적용하여 새 노드를 만듭니다. 또한 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> 확장 메서드를 사용하여 하위 트리의 하위 노드를 바꿀 수 있습니다. 이 메서드는 새로 만들어진 자식을 가리키도록 부모를 업데이트하고, 전체 트리에서 이 프로세스를 반복합니다(트리 ‘재회전’으로 알려진 프로세스).
 
 다음 단계에서는 전체(작은) 프로그램을 나타내는 트리를 만든 다음, 수정합니다. 다음 코드를 `Program` 클래스의 시작 부분에 추가합니다.
 
@@ -82,7 +82,7 @@ Visual Studio를 시작하고 새 C# **독립 실행형 코드 분석 도구** �
 
 [!code-csharp[create a new subtree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#BuildNewUsing "Create the subtree with the replaced namespace")]
 
-프로그램을 실행하고 출력을 신중하게 확인합니다. `newusing`이 루트 트리에 없습니다. 원래 트리가 변경되지 않았습니다.
+프로그램을 실행하고 출력을 신중하게 확인합니다. `newUsing`이 루트 트리에 없습니다. 원래 트리가 변경되지 않았습니다.
 
 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> 확장 메서드를 통해 다음 코드를 추가하여 새 트리를 만듭니다. 새 트리는 기존 가져오기를 업데이트된 `newUsing` 노드로 바꾼 결과입니다. 기존 `root` 변수에 이 새 트리를 할당합니다.
 
@@ -94,7 +94,7 @@ Visual Studio를 시작하고 새 C# **독립 실행형 코드 분석 도구** �
 
 `With*` 및 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> 메서드는 구문 트리의 개별 분기를 변환하는 편리한 수단을 제공합니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> 클래스는 구문 트리에서 여러 변환을 수행합니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> 클래스는 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType>의 서브클래스입니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter>은 특정 형식의 <xref:Microsoft.CodeAnalysis.SyntaxNode>에 변환을 적용합니다. 구문 트리에 나타날 때마다 여러 형식의 <xref:Microsoft.CodeAnalysis.SyntaxNode> 개체에 변환을 적용할 수 있습니다. 이 빠른 시작의 두 번째 프로젝트는 형식 유추를 사용할 수 있는 모든 위치에서 지역 변수 선언의 명시적 형식을 제거하는 명령줄 리팩터링을 만듭니다.
 
-새 C# **독립 실행형 코드 분석 도구** 프로젝트를 만듭니다. Visual Studio에서 `SyntaxTransformationQuickStart` 솔루션 노드를 마우스 오른쪽 단추로 클릭합니다. **추가** > **새 프로젝트**를 선택하여 **새 프로젝트 대화 상자**를 표시합니다. **Visual C#**  > **확장성** 아래에서 **독립 실행형 코드 분석 도구**를 선택합니다. 프로젝트 이름을 `TransformationCS`로 지정하고 [확인]을 클릭합니다.
+새 C# **독립 실행형 코드 분석 도구** 프로젝트를 만듭니다. Visual Studio에서 `SyntaxTransformationQuickStart` 솔루션 노드를 마우스 오른쪽 단추로 클릭합니다. **추가** > **새 프로젝트** 를 선택하여 **새 프로젝트 대화 상자** 를 표시합니다. **Visual C#**  > **확장성** 아래에서 **독립 실행형 코드 분석 도구** 를 선택합니다. 프로젝트 이름을 `TransformationCS`로 지정하고 [확인]을 클릭합니다.
 
 첫 번째 단계는 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter>에서 파생되는 클래스를 만들어 변환을 수행하는 것입니다. 프로젝트에 새 클래스 파일을 추가합니다. Visual Studio에서 **프로젝트** > **클래스 추가...** 를 선택합니다. **새 항목 추가** 대화 상자에서 파일 이름으로 `TypeInferenceRewriter.cs`를 입력합니다.
 
@@ -160,7 +160,7 @@ Type variable;
 
 [!code-csharp[DeclareCompilation](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#DeclareTestCompilation "Declare the test compilation")]
 
-잠시 후에 `CreateTestCompilation` 메서드가 없음을 보고하는 오류 물결선이 표시됩니다. **Ctrl+마침표**를 눌러 전구를 열고 Enter 키를 눌러 **메서드 스텁 생성** 명령을 호출합니다. 이 명령은 `Program` 클래스에서 `CreateTestCompilation` 메서드에 대한 메서드 스텁을 생성합니다. 나중에 돌아와서 이 메서드를 입력합니다.
+잠시 후에 `CreateTestCompilation` 메서드가 없음을 보고하는 오류 물결선이 표시됩니다. **Ctrl+마침표** 를 눌러 전구를 열고 Enter 키를 눌러 **메서드 스텁 생성** 명령을 호출합니다. 이 명령은 `Program` 클래스에서 `CreateTestCompilation` 메서드에 대한 메서드 스텁을 생성합니다. 나중에 돌아와서 이 메서드를 입력합니다.
 
 ![사용법에서 C# 메서드 생성](./media/syntax-transformation/generate-from-usage.png)
 
@@ -178,6 +178,6 @@ Type variable;
 
 [!code-csharp[CreateTestCompilation](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#CreateTestCompilation "Create a test compilation using the code written for this quickstart.")]
 
-행운을 빌고 프로젝트를 실행합니다. Visual Studio에서 **디버그** > **디버깅 시작**을 선택합니다. Visual Studio에서 프로젝트의 파일이 변경되었다는 메시지가 표시됩니다. “**모두 예**”를 클릭하여 수정된 파일을 다시 로드합니다. 해당 파일을 살펴보면 놀라운 것을 관찰할 수 있습니다. 모든 명시적 및 중복 형식 지정자가 없는 코드는 놀라울 정도로 깔끔해 보입니다.
+행운을 빌고 프로젝트를 실행합니다. Visual Studio에서 **디버그** > **디버깅 시작** 을 선택합니다. Visual Studio에서 프로젝트의 파일이 변경되었다는 메시지가 표시됩니다. “**모두 예**”를 클릭하여 수정된 파일을 다시 로드합니다. 해당 파일을 살펴보면 놀라운 것을 관찰할 수 있습니다. 모든 명시적 및 중복 형식 지정자가 없는 코드는 놀라울 정도로 깔끔해 보입니다.
 
-지금까지 **컴파일러 API**를 사용하여 C# 프로젝트에서 특정 구문 패턴에 대한 모든 파일을 검색하고, 해당 패턴과 일치하는 소스 코드의 의미 체계를 분석하고, 소스 코드를 변환하는 고유한 리팩터링을 작성했습니다. 이제 공식적으로 리팩터링 작성자가 되었습니다.
+지금까지 **컴파일러 API** 를 사용하여 C# 프로젝트에서 특정 구문 패턴에 대한 모든 파일을 검색하고, 해당 패턴과 일치하는 소스 코드의 의미 체계를 분석하고, 소스 코드를 변환하는 고유한 리팩터링을 작성했습니다. 이제 공식적으로 리팩터링 작성자가 되었습니다.
