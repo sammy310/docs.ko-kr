@@ -4,12 +4,12 @@ description: 다양한 종류의 앱을 빌드하기 위한 무료 오픈 소스
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: e0c86b377d4ea73bb275bc48c0f0cccb2db249dd
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: d08e00ee9702c71cacc8a6588c1f4290b4ab3ae9
+ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190002"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "101096797"
 ---
 # <a name="introduction-to-net"></a>.NET 소개
 

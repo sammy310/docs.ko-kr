@@ -2,24 +2,24 @@
 title: C# 프로그램의 구성 요소
 description: C# 멤버, 식 및 문에 대해 알아봅니다. 형식에는 사용자가 작성하는 멤버가 포함됩니다. 이러한 멤버는 문과 식에서 빌드됩니다.
 ms.date: 08/06/2020
-ms.openlocfilehash: 0ac45eee180b60062a328fca9ab5c63a1537debe
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 79ba391a6c4c6dc453f6c6e07107e4dd831e111d
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216618"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100582952"
 ---
 # <a name="program-building-blocks"></a>프로그램 구성 요소
 
-이전 문서에 설명된 형식은 [***멤버** _](../programming-guide/classes-and-structs/members.md), [_*_식_*_, _*_문_*_](../programming-guide/statements-expressions-operators/index.md)이라는 구성 요소를 사용하여 빌드됩니다.
+이전 문서에 설명된 형식은 [**멤버**](../programming-guide/classes-and-structs/members.md), [식, 문](../programming-guide/statements-expressions-operators/index.md)이라는 구성 요소를 사용하여 빌드됩니다.
 
-## <a name="members"></a>멤버
+## <a name="members"></a>구성원
 
-`class`의 멤버는 정적 멤버 또는 인스턴스 멤버입니다.  정적 멤버는 클래스에 속하며 인스턴스 멤버는 개체(클래스의 인스턴스)에 속합니다.
+`class`의 멤버는 **정적 멤버** 또는 인스턴스 멤버입니다. 정적 멤버는 클래스에 속하며 인스턴스 멤버는 개체(클래스의 인스턴스)에 속합니다.
 
 다음은 클래스가 포함할 수는 멤버의 종류입니다.
 
-- 상수: 클래스와 연결된 상수 값
+- **상수**: 클래스와 연결된 상수 값
 - **필드**:  클래스와 연결된 변수
 - **메서드**:  클래스가 수행할 수 있는 작업
 - **Properties**: 클래스의 명명된 속성에 대한 읽기 및 쓰기와 관련된 작업

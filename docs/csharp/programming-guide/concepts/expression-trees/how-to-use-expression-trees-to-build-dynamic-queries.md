@@ -3,12 +3,12 @@ title: 런타임 상태에 따라 쿼리(C#)
 description: LINQ 메서드 호출 또는 해당 메서드에 전달된 식 트리를 다양화하여 코드에서 런타임 상태에 따라 동적으로 쿼리하는 데 사용할 수 있는 다양한 기술을 설명합니다.
 ms.date: 02/11/2021
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 0dcf1696ca323ac4823c80c7993fef7873fd8ed5
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 5e015bbc69b61b783abd7eba9cfcf13c29d5c3be
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100433785"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100581942"
 ---
 # <a name="querying-based-on-runtime-state-c"></a>런타임 상태에 따라 쿼리(C#)
 
@@ -53,7 +53,7 @@ LINQ 공급자가 지원하는 경우 동적으로 쿼리하는 가장 간단한
 * 메서드 호출을 나타내는 <xref:System.Linq.Expressions.MethodCallExpression>으로 현재 식 트리를 래핑합니다.
 * 래핑된 식 트리를 공급자에게 다시 전달하여 공급자의 <xref:System.Linq.IQueryProvider.Execute%2A?displayProperty=nameWithType> 메서드를 통해 값을 반환하거나 <xref:System.Linq.IQueryProvider.CreateQuery%2A?displayProperty=nameWithType> 메서드를 통해 변환된 쿼리 개체를 반환합니다.
 
-원래 쿼리를 [IQueryable\<T>](xref:System.Linq.IQueryable%601) 반환 메서드의 결과로 바꿔서 새 쿼리를 가져올 수 있습니다. 다음 예제와 같이 런타임 상태에 따라 해당 작업을 수행할 수 있습니다.
+원래 쿼리를 [IQueryable\<T>](xref:System.Linq.IQueryable%601) 반환 메서드의 결과로 바꿔서 새 쿼리를 가져올 수 있습니다. 다음 예제와 같이 런타임 상태에 따라 해당 작업을 조건부로 수행할 수 있습니다.
 
 :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Added_method_calls":::
 
@@ -69,7 +69,7 @@ LINQ 공급자가 지원하는 경우 동적으로 쿼리하는 가장 간단한
 
 ## <a name="construct-expression-trees-and-queries-using-factory-methods"></a>팩터리 메서드를 사용하여 식 트리 및 쿼리 생성
 
-지금까지 모든 예제에서 컴파일 시간의 요소 형식 `string` 및 이에 따른 쿼리 형식 `IQueryable<string>`을 알아보았습니다. 요소 형식의 쿼리에 구성 요소를 추가해야 할 수 있습니다. 요소 형식에 따라 다른 구성 요소를 추가해야 할 수 있습니다. <xref:System.Linq.Expressions.Expression?displayProperty=fullName>에서 팩터리 메서드를 사용하여 처음부터 식 트리를 만들 수 있으므로 특정 요소 형식에 맞게 식을 조정할 수 있습니다.
+지금까지 모든 예제에서 컴파일 시간의 요소 형식 `string` 및 이에 따른 쿼리 형식 `IQueryable<string>`을 알아보았습니다. 요소 유형의 쿼리에 구성 요소를 추가하거나 요소 유형에 따라 다른 구성 요소를 추가해야 할 수 있습니다. <xref:System.Linq.Expressions.Expression?displayProperty=fullName>에서 팩터리 메서드를 사용하여 처음부터 식 트리를 만들 수 있으므로 런타임에서 특정 요소 형식에 맞게 식을 조정할 수 있습니다.
 
 ### <a name="constructing-an-expressiontdelegate"></a>[Expression\<TDelegate>](xref:System.Linq.Expressions.Expression%601) 생성
 
@@ -77,9 +77,7 @@ LINQ 메서드 중 하나에 전달할 식을 생성하는 경우 실제로는 [
 
 [Expression\<TDelegate>](xref:System.Linq.Expressions.Expression%601)는 다음과 같은 전체 람다 식을 나타내는 <xref:System.Linq.Expressions.LambdaExpression>에서 상속됩니다.
 
-```csharp
-Expression<Func<string, bool>> expr = x => x.StartsWith("a");
-```
+:::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Compiler_generated_expression_tree":::
 
 <xref:System.Linq.Expressions.LambdaExpression>에는 다음 두 가지 구성 요소가 있습니다.
 
@@ -90,25 +88,15 @@ Expression<Func<string, bool>> expr = x => x.StartsWith("a");
 
 * <xref:System.Linq.Expressions.Expression.Parameter%2A> 팩터리 메서드를 사용하여 람다 식에서 각 매개 변수(있는 경우)에 대해 <xref:System.Linq.Expressions.ParameterExpression> 개체를 정의합니다.
 
-    ```csharp
-    ParameterExpression x = Parameter(typeof(string), "x");
-    ```
+    :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_method_expression_tree_parameter":::
 
-* 정의한 <xref:System.Linq.Expressions.ParameterExpression>을 사용하여 <xref:System.Linq.Expressions.LambdaExpression> 본문을 생성합니다. 예를 들어 `x.StartsWith("a")`를 나타내는 식은 다음과 같이 생성할 수 있습니다.
+* 사용자가 정의한 <xref:System.Linq.Expressions.ParameterExpression>과 <xref:System.Linq.Expressions.Expression>의 팩터리 메서드를 사용하여 <xref:System.Linq.Expressions.LambdaExpression>의 본문을 구성합니다. 예를 들어 `x.StartsWith("a")`를 나타내는 식은 다음과 같이 생성할 수 있습니다.
 
-    ```csharp
-    Expression body = Call(
-        x,
-        typeof(string).GetMethod("StartsWith", new [] {typeof(string)}),
-        Constant("a")
-    );
-    ```
+    :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_method_expression_tree_body":::
 
 * 적절한 <xref:System.Linq.Expressions.Expression.Lambda%2A> 팩터리 메서드 오버로드를 사용하여 컴파일 시간 형식의 [Expression\<TDelegate>](xref:System.Linq.Expressions.Expression%601)로 매개 변수와 본문을 래핑합니다.
 
-    ```csharp
-    Expression<Func<string, bool>> expr = Lambda<Func<string, bool>>(body, prm);
-    ```
+    :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_method_expression_tree_lambda":::
 
 다음 섹션에서는 LINQ 메서드에 전달할 [Expression\<TDelegate>](xref:System.Linq.Expressions.Expression%601)를 생성하려고 하는 시나리오를 설명하고 팩터리 메서드를 사용하여 해당 작업을 수행하는 방법의 전체 예제를 제공합니다.
 
@@ -116,10 +104,7 @@ Expression<Func<string, bool>> expr = x => x.StartsWith("a");
 
 여러 엔터티 형식이 있다고 가정해 보겠습니다.
 
-```csharp
-record Person(string LastName, string FirstName, DateTime DateOfBirth);
-record Car(string Model, int Year);
-```
+:::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Entities":::
 
 해당 엔터티 형식에 대해 해당 `string` 필드 중 하나에 지정된 텍스트가 포함된 엔터티만 필터링하고 반환하려고 합니다. `Person`의 경우 `FirstName` 및 `LastName` 속성을 검색하려고 합니다.
 
@@ -149,7 +134,7 @@ var carsQry = new List<Car>()
 
 :::code language="csharp" source="../../../../../samples/snippets/csharp/programming-guide/dynamic-linq-expression-trees/Program.cs" id="Factory_methods_expression_of_tdelegate_usage":::
 
-## <a name="adding-method-call-nodes-to-the-xrefsystemlinqiqueryables-expression-tree"></a><xref:System.Linq.IQueryable>의 식 트리에 메서드 호출 노드 추가
+## <a name="add-method-call-nodes-to-the-xrefsystemlinqiqueryables-expression-tree"></a><xref:System.Linq.IQueryable>의 식 트리에 메서드 호출 노드 추가
 
 [IQueryable\<T>](xref:System.Linq.IQueryable%601) 대신 <xref:System.Linq.IQueryable>이 있는 경우 제네릭 LINQ 메서드를 직접 호출할 수 없습니다. 한 가지 대안은 위와 같이 내부 식 트리를 빌드하고 리플렉션을 사용하여 식 트리를 전달하는 동안 적절한 LINQ 메서드를 호출하는 것입니다.
 

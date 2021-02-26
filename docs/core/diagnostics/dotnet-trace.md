@@ -2,12 +2,12 @@
 title: dotnet-trace 진단 도구 - .NET CLI
 description: .NET EventPipe를 사용하여 네이티브 프로파일러 없이 실행 중인 프로세스의 .NET 추적을 수집하기 위해 dotnet-trace CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
 ms.date: 11/17/2020
-ms.openlocfilehash: 93698882e94f58eda84abebc277e1eacfe22a3da
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: abf98df6e31747ea3e8013fc77b246613a3402ad
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189705"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583001"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace 성능 분석 유틸리티
 
@@ -180,6 +180,8 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
   - `Provider`의 형식: `KnownProviderName[:Flags[:Level][:KeyValueArgs]]`
   - `KeyValueArgs`의 형식: `[key1=value1][;key2=value2]`
 
+  .NET의 잘 알려진 몇 가지 공급자에 대해 자세히 알아보려면 [잘 알려진 이벤트 공급자](./well-known-event-providers.md)를 참조하세요.
+
 - **`-- <command>`(.NET 5.0을 실행하는 대상 애플리케이션만 해당)**
 
   사용자는 컬렉션 구성 매개 변수 다음에 `--`와 명령을 차례로 추가하여 5.0 런타임 이상에서 .NET 애플리케이션을 시작할 수 있습니다. 이 옵션은 시작 성능 문제 또는 어셈블리 로더 및 바인더 오류와 같이 프로세스 초기에 발생하는 문제를 진단할 때 도움이 될 수 있습니다.
@@ -195,6 +197,9 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 > [!NOTE]
 > `dotnet-trace`를 사용하여 추적을 수집하려면 대상 프로세스를 실행하는 사용자와 동일한 사용자 또는 루트로 실행해야 합니다. 그러지 않으면 도구는 대상 프로세스와 연결을 설정하지 못합니다.
+
+> [!NOTE]
+> `[ERROR] System.ComponentModel.Win32Exception (299): A 32 bit processes cannot access modules of a 64 bit process.`와 유사한 오류 메시지가 표시되는 경우, 대상 프로세스와 비트 수가 일치하지 않는 `dotnet-trace`를 사용하려고 합니다. [설치](#install) 링크에서 도구의 올바른 비트 수를 다운로드해야 합니다.
 
 ## <a name="dotnet-trace-convert"></a>dotnet-trace convert
 

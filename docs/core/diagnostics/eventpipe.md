@@ -3,12 +3,12 @@ title: EventPipe 개요
 description: EventPipe에 대해 알아보고 성능 문제를 진단하기 위해 .NET 애플리케이션 추적에 이를 사용하는 방법을 알아봅니다.
 ms.date: 11/09/2020
 ms.topic: overview
-ms.openlocfilehash: 00378c4f409b307afa9183e40de6078cdafd3ae7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f315beafabbd99bf78647b3f714fd76d93fcac28
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820620"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100582986"
 ---
 # <a name="eventpipe"></a>EventPipe
 
@@ -94,3 +94,5 @@ EventPipe를 사용하는 기본 메커니즘은 `dotnet-trace` 또는 `Microsof
   - `Microsoft-Windows-DotNETRuntime:4c14fccbd:5`
   - `Microsoft-Windows-DotNETRuntimePrivate:4002000b:5`
   - `Microsoft-DotNETCore-SampleProfiler:0:5`
+
+  .NET의 잘 알려진 몇 가지 공급자에 대해 자세히 알아보려면 [잘 알려진 이벤트 공급자](./well-known-event-providers.md)를 참조하세요.

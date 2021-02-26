@@ -2,12 +2,12 @@
 title: dotnet-counters 진단 도구 - .NET CLI
 description: 임시 상태 모니터링 및 1단계 수준 성능을 위해 dotnet-counter CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
 ms.date: 11/17/2020
-ms.openlocfilehash: 1842b1fb9cde0e0b7a570456766cbfdeb64c5896
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 1c802e33602c2d8f18600b9771a1f68e722d8fdf
+ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188584"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100583302"
 ---
 # <a name="investigate-performance-counters-dotnet-counters"></a>성능 카운터 조사(dotnet-counters)
 
@@ -236,6 +236,9 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-
 
 > [!NOTE]
 > `dotnet-counters`를 사용하여 메트릭을 모니터링하려면 대상 프로세스를 실행하는 사용자와 동일한 사용자 또는 루트로 실행해야 합니다.
+
+> [!NOTE]
+> `[ERROR] System.ComponentModel.Win32Exception (299): A 32 bit processes cannot access modules of a 64 bit process.`와 유사한 오류 메시지가 표시되는 경우, 대상 프로세스와 비트 수가 일치하지 않는 `dotnet-counters`를 사용하려고 합니다. [설치](#install) 링크에서 도구의 올바른 비트 수를 다운로드해야 합니다.
 
 ### <a name="examples"></a>예
 
