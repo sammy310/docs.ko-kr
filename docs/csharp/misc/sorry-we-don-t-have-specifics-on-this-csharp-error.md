@@ -737,26 +737,26 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: c16698fbbf42e0967978a3502243793835f541c5
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 21d74d5a4f8eb406c3a0e48f56e4df479f222183
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216904"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103337"
 ---
-# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a><span data-ttu-id="826db-103">죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="826db-103">Sorry, we don't have specifics on this C# error</span></span>
+# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a><span data-ttu-id="8a0f0-103">죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8a0f0-103">Sorry, we don't have specifics on this C# error</span></span>
 
-<span data-ttu-id="826db-104">죄송 하지만이 오류에 대 한 특정 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="826db-104">We're sorry, but we don't have any specific information about this error.</span></span> <span data-ttu-id="826db-105">오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826db-105">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="826db-106">또는 다음 중 하나를 사용 하 여 다른 개발자에 게 요청할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="826db-106">Or you can ask other developers using one of these:</span></span>
+<span data-ttu-id="8a0f0-104">죄송 하지만이 오류에 대 한 특정 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8a0f0-104">We're sorry, but we don't have any specific information about this error.</span></span> <span data-ttu-id="8a0f0-105">오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8a0f0-105">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="8a0f0-106">또는 다음 중 하나를 사용 하 여 다른 개발자에 게 요청할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8a0f0-106">Or you can ask other developers using one of these:</span></span>
   
- [<span data-ttu-id="826db-107">Msdn 포럼-Visual C #</span><span class="sxs-lookup"><span data-stu-id="826db-107">Msdn forums - Visual C#</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
- <span data-ttu-id="826db-108">다른 포럼에서 다루지 않는 Visual c # 관련 질문과 문제에 대 한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="826db-108">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
+ [<span data-ttu-id="8a0f0-107">Msdn 포럼-Visual C #</span><span class="sxs-lookup"><span data-stu-id="8a0f0-107">Msdn forums - Visual C#</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
+ <span data-ttu-id="8a0f0-108">다른 포럼에서 다루지 않는 Visual c # 관련 질문과 문제에 대 한 포럼을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a0f0-108">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
 
- [<span data-ttu-id="826db-109">스택 오버플로</span><span class="sxs-lookup"><span data-stu-id="826db-109">Stack Overflow</span></span>](https://stackoverflow.com/questions/tagged/c%23)  
-<span data-ttu-id="826db-110">Visual c # 관련 질문과 문제에 대 한 질문과 대답 웹 사이트를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="826db-110">Provides a QA website for questions about and issues with Visual C#.</span></span>  
+ [<span data-ttu-id="8a0f0-109">스택 오버플로</span><span class="sxs-lookup"><span data-stu-id="8a0f0-109">Stack Overflow</span></span>](https://stackoverflow.com/questions/tagged/c%23)  
+<span data-ttu-id="8a0f0-110">Visual c # 관련 질문과 문제에 대 한 질문과 대답 웹 사이트를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a0f0-110">Provides a QA website for questions about and issues with Visual C#.</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="826db-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="826db-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8a0f0-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8a0f0-111">See also</span></span>
 
-- [<span data-ttu-id="826db-112">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="826db-112">C# Programming Guide</span></span>](../programming-guide/index.md)
-- [<span data-ttu-id="826db-113">C# 참조</span><span class="sxs-lookup"><span data-stu-id="826db-113">C# Reference</span></span>](../language-reference/index.md)
-- [<span data-ttu-id="826db-114">의견 보내기</span><span class="sxs-lookup"><span data-stu-id="826db-114">Talk to Us</span></span>](/visualstudio/ide/feedback-options)
-- [<span data-ttu-id="826db-115">Visual C# 프로그래머를 위한 추가 리소스</span><span class="sxs-lookup"><span data-stu-id="826db-115">Additional Resources for Visual C# Programmers</span></span>](../tour-of-csharp/index.md)
+- [<span data-ttu-id="8a0f0-112">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="8a0f0-112">C# Programming Guide</span></span>](../programming-guide/index.md)
+- [<span data-ttu-id="8a0f0-113">C# 참조</span><span class="sxs-lookup"><span data-stu-id="8a0f0-113">C# Reference</span></span>](../language-reference/index.md)
+- [<span data-ttu-id="8a0f0-114">Visual Studio 피드백 옵션</span><span class="sxs-lookup"><span data-stu-id="8a0f0-114">Visual Studio feedback options</span></span>](/visualstudio/ide/feedback-options)
+- [<span data-ttu-id="8a0f0-115">Visual C# 프로그래머를 위한 추가 리소스</span><span class="sxs-lookup"><span data-stu-id="8a0f0-115">Additional Resources for Visual C# Programmers</span></span>](../tour-of-csharp/index.md)
