@@ -15,12 +15,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: e6e314a34469083433289c0fff9b404d4549824d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: a6a63ec742cf4a93080c9cc2f9906c5c6c21f0a8
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99792169"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102102895"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte 데이터 형식 (Visual Basic)
 
@@ -65,7 +65,7 @@ Dim number As SByte = &H_F9
 
 ## <a name="programming-tips"></a>프로그래밍 팁
 
-- **CLS 규격.** `SByte`데이터 형식이 cls ( [공용 언어 사양](https://www.ecma-international.org/publications/standards/Ecma-335.htm) )의 일부가 아니므로 cls 규격 코드는이를 사용 하는 구성 요소를 사용할 수 없습니다.
+- **CLS 규격.** `SByte`데이터 형식이 cls ( [공용 언어 사양](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) )의 일부가 아니므로 cls 규격 코드는이를 사용 하는 구성 요소를 사용할 수 없습니다.
 
 - **넓혀.** `SByte`데이터 형식은,,,, 및로 확대 변환 `Short` `Integer` `Long` `Decimal` `Single` `Double` 됩니다. 즉, `SByte` 오류가 발생 하지 않고 이러한 형식으로 변환할 수 있습니다 <xref:System.OverflowException?displayProperty=nameWithType> .
 
