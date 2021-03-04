@@ -2,12 +2,12 @@
 title: F# 코드 서식 지정 지침
 description: 'F # 코드의 서식을 지정 하기 위한 지침을 알아봅니다.'
 ms.date: 08/31/2020
-ms.openlocfilehash: b4b70d86b36f2ba50318cb50e54d65cc6abff450
-ms.sourcegitcommit: f8cd3ef517ee177c99feed944824c27d208cc0d1
+ms.openlocfilehash: 6f1cf8decbaf02aa7d5e202010d4c240c24bdcf9
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98570231"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103675"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 코드 서식 지정 지침
 
@@ -501,13 +501,23 @@ type Volume =
 
 ## <a name="formatting-discriminated-unions"></a>구별 된 공용 구조체 서식 지정
 
+구분 된 공용 구조체 케이스에 괄호로/튜플 된 매개 변수 앞에 공백을 사용 합니다.
+
+```fsharp
+// OK
+let opt = Some ("A", 1)
+
+// Not OK
+let opt = Some("A", 1)
+```
+
 여러 줄로 분할 된, 인스턴스화된 구별 된 공용 구조체는 포함 된 데이터에 들여쓰기를 사용 하 여 새 범위를 제공 해야 합니다.
 
 ```fsharp
 let tree1 =
     BinaryNode
-        (BinaryNode(BinaryValue 1, BinaryValue 2),
-         BinaryNode(BinaryValue 3, BinaryValue 4))
+        (BinaryNode (BinaryValue 1, BinaryValue 2),
+         BinaryNode (BinaryValue 3, BinaryValue 4))
 ```
 
 또한 닫는 괄호는 새 줄에 있을 수 있습니다.
@@ -515,8 +525,8 @@ let tree1 =
 ```fsharp
 let tree1 =
     BinaryNode(
-        BinaryNode(BinaryValue 1, BinaryValue 2),
-        BinaryNode(BinaryValue 3, BinaryValue 4)
+        BinaryNode (BinaryValue 1, BinaryValue 2),
+        BinaryNode (BinaryValue 3, BinaryValue 4)
     )
 ```
 

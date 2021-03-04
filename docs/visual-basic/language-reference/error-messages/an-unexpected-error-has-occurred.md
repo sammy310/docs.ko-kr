@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: 43ac84e053def32cd5fa0dfc798bd47a022c0471
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 76f7bd43c05ea3bd46b352a791debac984ca8fcd
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99797174"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103610"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>단일 인스턴스 시작에 필요한 운영 체제 리소스를 가져올 수 없기 때문에 예기치 않은 오류가 발생했습니다.
 
@@ -36,4 +36,4 @@ ms.locfileid: "99797174"
 
 - [프로젝트 디자이너, 애플리케이션 페이지(Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [디버거 기본 사항](/visualstudio/debugger/debugger-basics)
-- [의견 보내기](/visualstudio/ide/feedback-options)
+- [Visual Studio 피드백 옵션](/visualstudio/ide/feedback-options)

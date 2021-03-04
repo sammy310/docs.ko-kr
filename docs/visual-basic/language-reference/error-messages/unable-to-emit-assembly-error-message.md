@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 015ab6e1d186495d72bddd65678ab15088c0f1b2
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 393571f5b1fab518f379bbd6f4e6f1cb62a74b26
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99674885"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104785"
 ---
 # <a name="bc30145-unable-to-emit-assembly-error-message"></a>BC30145: 어셈블리를 내보낼 수 없습니다. \<error message>
 
@@ -39,8 +39,6 @@ Visual Basic 컴파일러는 어셈블리 링커 *Al.exe*(Alink 라고도 함)�
 
 3. [Visual Studio에 대 한 개발자 명령 프롬프트](../../../framework/tools/developer-command-prompt-for-vs.md)를 엽니다.
 
-   Windows 10에서 작업 표시줄의 검색 상자에 **개발자 명령 프롬프트** 를 입력 합니다. 그런 다음 결과 목록에서 **VS 2017에 대 한 개발자 명령 프롬프트** 를 선택 합니다.
-
 4. 어셈블리 래퍼를 저장 하려는 디렉터리로 디렉터리를 변경 합니다.
 
 5. 다음 명령을 입력합니다.
@@ -65,4 +63,4 @@ Visual Basic 컴파일러는 어셈블리 링커 *Al.exe*(Alink 라고도 함)�
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe(강력한 이름 도구)](../../../framework/tools/sn-exe-strong-name-tool.md)
 - [방법: 퍼블릭/프라이빗 키 쌍 만들기](../../../standard/assembly/create-public-private-key-pair.md)
-- [의견 보내기](/visualstudio/ide/feedback-options)
+- [Visual Studio 피드백 옵션](/visualstudio/ide/feedback-options)

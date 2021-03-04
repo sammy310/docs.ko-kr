@@ -17,12 +17,12 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: 5202619909de4a132bda8ab3dca63337c6f3493f
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c3c04f746f0e2cf15bc1881544b93a538dbdc04e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99792104"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104837"
 ---
 # <a name="uinteger-data-type"></a>UInteger 데이터 형식
 
@@ -69,7 +69,7 @@ Dim number = &H_0FAC_14D7ui
 
 - **음수.** `UInteger`는 부호 없는 형식이 기 때문에 음수를 나타낼 수 없습니다. `-`형식을 반환 하는 식에 단항 빼기 () 연산자를 사용 하는 경우 `UInteger` Visual Basic는 식을 `Long` 먼저 변환 합니다.
 
-- **CLS 규격.** `UInteger`데이터 형식이 cls ( [공용 언어 사양](https://www.ecma-international.org/publications/standards/Ecma-335.htm) )의 일부가 아니므로 cls 규격 코드는이를 사용 하는 구성 요소를 사용할 수 없습니다.
+- **CLS 규격.** `UInteger`데이터 형식이 cls ( [공용 언어 사양](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) )의 일부가 아니므로 cls 규격 코드는이를 사용 하는 구성 요소를 사용할 수 없습니다.
 
 - **Interop 고려 사항.** .NET Framework 용으로 작성 되지 않은 구성 요소 (예: Automation 또는 COM 개체)와 상호 작용 하는 경우와 같은 형식은 `uint` 다른 환경에서 서로 다른 데이터 너비 (16 비트)를 가질 수 있다는 점에 유의 하세요. 이러한 구성 요소에 16 비트 인수를 전달 하는 경우 `UShort` `UInteger` 관리 되는 Visual Basic 코드에서 대신로 선언 합니다.
 

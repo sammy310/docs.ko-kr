@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30655
 ms.assetid: 756db378-e758-48a9-88ff-496bc55bc0b6
-ms.openlocfilehash: aea1a80c0dbab60a57f8255837fbeba442b3623a
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 21d979789b5b04a0c2ef11753202124994ffa46e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100455212"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103896"
 ---
 # <a name="bc30655-unable-to-find-required-file-filename"></a>BC30655: ' ' 필수 파일을 찾을 수 없습니다. \<filename>
 
@@ -25,6 +25,6 @@ Visual Studio에 필요한 파일이 없거나 손상되었습니다.
 
 - Visual Studio를 다시 설치합니다.
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참조
 
-- [의견 보내기](/visualstudio/ide/feedback-options)
+- [Visual Studio 피드백 옵션](/visualstudio/ide/feedback-options)

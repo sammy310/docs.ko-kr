@@ -2,12 +2,12 @@
 title: 데스크톱용 .NET의 새로운 기능
 description: .NET, .NET과 .NET Framework의 차이점, 추가 된 새로운 기능에 대해 알아봅니다.
 ms.date: 12/29/2020
-ms.openlocfilehash: 9cae715f64e9de959b5b1ee6fb58ef381bab1040
-ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
+ms.openlocfilehash: 03dea849ad8a797b917dca953d93be6878d7ec72
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98618048"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106183"
 ---
 # <a name="whats-new-with-net-for-desktop"></a>데스크톱용 .NET의 새로운 기능
 
@@ -63,7 +63,7 @@ PCL을 사용 하면 개발 환경이 API 셰이프를 기반으로 하는 감�
 - .NET Core, .NET Framework, Xamarin, Mono를 활용하여 .NET의 기능을 확장합니다.
 - 개발자(Microsoft 및 커뮤니티)가 함께 작업하고 확장할 수 있으며 모든 시나리오를 개선하는 단일 코드 베이스에서 해당 제품을 빌드합니다.
 
-이 새 릴리스와 방향은 .NET 용 게임 교환기입니다. .NET 5에서 코드와 프로젝트 파일은 빌드하는 앱의 형식에 관계 없이 모양과 느낌이 동일 합니다. 각 앱과 동일한 런타임, Api 및 언어 기능에 액세스할 수 있습니다. 여기에는 실제로 매일 매일 런타임에 커밋되는 새로운 [성능 향상](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/) 이 포함 됩니다. 자세한 내용은 [.net 5의 새로운 기능](https://docs.microsoft.com/dotnet/core/dotnet-five)을 참조 하세요.
+이 새 릴리스와 방향은 .NET 용 게임 교환기입니다. .NET 5에서 코드와 프로젝트 파일은 빌드하는 앱의 형식에 관계 없이 모양과 느낌이 동일 합니다. 각 앱과 동일한 런타임, Api 및 언어 기능에 액세스할 수 있습니다. 여기에는 실제로 매일 매일 런타임에 커밋되는 새로운 [성능 향상](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/) 이 포함 됩니다. 자세한 내용은 [.net 5의 새로운 기능](../../core/dotnet-five.md)을 참조 하세요.
 
 ![.NET 5의 모든 도메인](./media/whats-new-dotnet-core/all-domains-of-dotnet5.png)
 

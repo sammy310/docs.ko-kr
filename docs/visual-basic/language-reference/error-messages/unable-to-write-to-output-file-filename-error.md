@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 4a1feff6429a5b82968d3a87e4c9c9ef80e6612a
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 86ddd01764d51c3050186e99e047edb8aba158eb
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99640903"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104808"
 ---
 # <a name="bc31019-unable-to-write-to-output-file-filename-error"></a>BC31019: 출력 파일 ' '에 쓸 수 없습니다 \<filename> . \<error>
 
@@ -59,6 +59,6 @@ ms.locfileid: "99640903"
 
 3. **확인** 을 누릅니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [의견 보내기](/visualstudio/ide/feedback-options)
+- [Visual Studio 피드백 옵션](/visualstudio/ide/feedback-options)

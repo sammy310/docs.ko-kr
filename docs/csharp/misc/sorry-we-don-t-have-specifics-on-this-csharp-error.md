@@ -737,12 +737,12 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: c16698fbbf42e0967978a3502243793835f541c5
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 21d74d5a4f8eb406c3a0e48f56e4df479f222183
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216904"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103337"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.
 
@@ -758,5 +758,5 @@ Visual c # 관련 질문과 문제에 대 한 질문과 대답 웹 사이트를 
 
 - [C# 프로그래밍 가이드](../programming-guide/index.md)
 - [C# 참조](../language-reference/index.md)
-- [의견 보내기](/visualstudio/ide/feedback-options)
+- [Visual Studio 피드백 옵션](/visualstudio/ide/feedback-options)
 - [Visual C# 프로그래머를 위한 추가 리소스](../tour-of-csharp/index.md)

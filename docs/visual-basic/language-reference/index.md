@@ -11,12 +11,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: 47a299437b5f3ceab1cb24b8a09666366c546a64
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 01a696d5faf4f33efd0f54aee7ba62a8d9f29467
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99731034"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103857"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic 언어 참조
 
@@ -42,7 +42,7 @@ ms.locfileid: "99731034"
  [데이터 형식](data-types/index.md)  
  Visual Basic에서 사용할 수 있는 데이터 형식을 설명 합니다.  
   
- [지시문](directives/index.md)  
+ [지시문](./directives/disable-enable.md)  
  Visual Basic에서 사용할 수 있는 컴파일러 지시문을 설명 합니다.  
   
  [함수](functions/index.md)  
@@ -84,7 +84,7 @@ ms.locfileid: "99731034"
  [오류 메시지](error-messages/index.md)  
  Visual Basic 컴파일러 및 런타임 오류 메시지의 목록과이를 처리 하는 방법에 대 한 도움말을 제공 합니다.  
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 
  [Visual Basic 명령줄 컴파일러](../reference/command-line-compiler/index.md)  
  Visual Studio IDE (통합 개발 환경) 내에서 프로그램을 컴파일하는 대신 명령줄 컴파일러를 사용 하는 방법을 설명 합니다.
