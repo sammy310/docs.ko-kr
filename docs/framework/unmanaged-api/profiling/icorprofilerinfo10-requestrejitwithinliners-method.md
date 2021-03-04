@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: da3434926b36408adfdee2171d56f23ba764f0eb
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 925a61bf2521950cad7fb0dce8f1484198f3f806
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99753265"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106516"
 ---
 # <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>ICorProfilerInfo10:: RequestReJITWithInliners 메서드
 
@@ -62,7 +62,7 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
 
 **라이브러리:** CorGuids.lib
 
-**.Net 버전:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.Net 버전:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>참고 항목
 

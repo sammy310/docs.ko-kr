@@ -12,18 +12,18 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d019b163c8c71331b2d9a77fc0384d42a04c1fbd
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 8cc098e4ae5f139f729ca0593b51c25eaf031704
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99794561"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106880"
 ---
 # <a name="icorprofilerinfo10suspendruntime-method"></a>ICorProfilerInfo10:: SuspendRuntime 메서드
 
 GC를 수행 하지 않고 런타임을 일시 중단 합니다.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>구문
 
 ```cpp
 HRESULT SuspendRuntime();
@@ -37,7 +37,7 @@ HRESULT SuspendRuntime();
 
 **라이브러리:** CorGuids.lib
 
-**.Net 버전:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.Net 버전:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>참고 항목
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 32ae854e9f1b037a17d9c378ce7ee4a3f9b43ad2
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 3961ba557ad2afd9c94f071b6615573419d7325b
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99641176"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106581"
 ---
 # <a name="bc30251-type-typename-has-no-constructors"></a>BC30251: ' \<typename> ' 형식에 생성자가 없습니다.
 
@@ -34,4 +34,4 @@ ms.locfileid: "99641176"
 ## <a name="see-also"></a>참고 항목
 
 - [개체 및 클래스](../../programming-guide/language-features/objects-and-classes/index.md)
-- [의견 보내기](/visualstudio/ide/feedback-options)
+- [Visual Studio 피드백 옵션](/visualstudio/ide/feedback-options)

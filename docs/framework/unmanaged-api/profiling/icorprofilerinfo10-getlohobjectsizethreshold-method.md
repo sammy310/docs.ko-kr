@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 665a08ae226f04d5282b9584932078736751d5d0
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 96c502dba5b2807f9cd9c3c5cceb6b3b9985a406
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99737311"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106958"
 ---
 # <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10:: GetLOHObjectSizeThreshold 메서드
 
@@ -47,7 +47,7 @@ HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 
 **라이브러리:** CorGuids.lib
 
-**.Net 버전:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.Net 버전:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>참고 항목
 

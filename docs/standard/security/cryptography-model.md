@@ -1,7 +1,7 @@
 ---
 title: .NET 암호화 모델
 description: .NET에서 일반적인 암호화 알고리즘의 구현을 검토 합니다. 개체 상속, 스트림 디자인 & 구성의 확장 가능한 암호화 모델에 대해 알아봅니다.
-ms.date: 07/14/2020
+ms.date: 02/26/2021
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cryptography [.NET], model
 - encryption [.NET], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f9ec08992cb8db8f81f11de661612e1b7d15131c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2208e36ac4521f43cfd2960d92588c8349a119ca
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831119"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106932"
 ---
 # <a name="net-cryptography-model"></a>.NET 암호화 모델
 
@@ -48,14 +48,14 @@ Windows의 .NET Framework:
 
 대부분의 경우와 같은 알고리즘 구현 클래스를 직접 참조할 필요가 없습니다 `AesCryptoServiceProvider` . 일반적으로 필요한 메서드 및 속성은와 같은 기본 알고리즘 클래스에 있습니다 `Aes` . 기본 알고리즘 클래스에서 팩터리 메서드를 사용 하 여 기본 구현 클래스의 인스턴스를 만들고 기본 알고리즘 클래스를 참조 합니다. 예를 들어 다음 예제에서 강조 표시 된 코드 줄을 참조 하세요.
 
-:::code language="csharp" source="snippets/encrypting-data/csharp/aes-encrypt.cs" highlight="16":::
-:::code language="vb" source="snippets/encrypting-data/vb/aes-encrypt.vb" highlight="12":::
+:::code language="csharp" source="snippets/encrypting-data/csharp/aes-encrypt.cs" highlight="20":::
+:::code language="vb" source="snippets/encrypting-data/vb/aes-encrypt.vb" highlight="17":::
 
 ## <a name="cryptographic-configuration"></a>암호화 구성
 
 암호화 구성을 사용 하면 알고리즘의 특정 구현을 알고리즘 이름으로 확인 하 여 .NET 암호화 클래스의 확장성을 허용할 수 있습니다. 알고리즘의 고유한 하드웨어 또는 소프트웨어 구현을 추가하고 선택한 알고리즘 이름에 해당 구현을 매핑할 수 있습니다. 구성 파일에 알고리즘이 지정되지 않은 경우 기본 설정이 사용됩니다.
 
-## <a name="choosing-an-algorithm"></a>알고리즘 선택
+## <a name="choose-an-algorithm"></a>알고리즘 선택
 
 데이터 무결성, 데이터 프라이버시 또는 키 생성과 같은 다양한 이유로 알고리즘을 선택할 수 있습니다. 대칭 및 해시 알고리즘은 무결성(변경 차단) 또는 프라이버시(보기 차단)를 위해 데이터를 보호하는 데 사용됩니다. 해시 알고리즘은 주로 데이터 무결성을 위해 사용됩니다.
 

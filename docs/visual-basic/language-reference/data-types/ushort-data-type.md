@@ -17,12 +17,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: 9c709e2110aef4281c348f697408044a191314c6
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 43c18bad3e24e14c28d2ca3d5d88170d584e55a8
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99774982"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106646"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort 데이터 형식 (Visual Basic)
 
@@ -67,7 +67,7 @@ Dim number = &H_5826us
   
 - **음수.** `UShort`는 부호 없는 형식이 기 때문에 음수를 나타낼 수 없습니다. `-`형식을 반환 하는 식에 단항 빼기 () 연산자를 사용 하는 경우 `UShort` Visual Basic는 식을 `Integer` 먼저 변환 합니다.  
   
-- **CLS 규격.** `UShort`데이터 형식이 cls ( [공용 언어 사양](https://www.ecma-international.org/publications/standards/Ecma-335.htm) )의 일부가 아니므로 cls 규격 코드는이를 사용 하는 구성 요소를 사용할 수 없습니다.
+- **CLS 규격.** `UShort`데이터 형식이 cls ( [공용 언어 사양](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) )의 일부가 아니므로 cls 규격 코드는이를 사용 하는 구성 요소를 사용할 수 없습니다.
   
 - **넓혀.** `UShort`데이터 형식은,,,,, 및로 확대 변환 `Integer` `UInteger` `Long` `ULong` `Decimal` `Single` `Double` 됩니다. 즉, `UShort` 오류가 발생 하지 않고 이러한 형식으로 변환할 수 있습니다 <xref:System.OverflowException?displayProperty=nameWithType> .  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 56aa88f9e4ca3c50e7fc3704685ae4ac535db12c
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 222c92413bd12e1769376c0f6eef7e34d7d5182e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100455238"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106568"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -252,7 +252,7 @@ yyyy-mm-dd 형식(`#2015-03-17 16:10 PM#`)의 날짜 리터럴을 사용할 수 
 
 코드를 더 읽기 쉽게 만들기 위해 `IsNot`과 함께 `TypeOf`를 사용할 수 있습니다.
 
-[#Disable Warning \<ID> 및 #Enable Warning \<ID>](../language-reference/directives/index.md)
+[#Disable Warning \<ID> 및 #Enable Warning \<ID>](../language-reference/directives/disable-enable.md)
 
 소스 파일 내의 영역에 대한 특정 경고를 사용하지 않거나 사용하도록 설정할 수 있습니다.
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
-ms.openlocfilehash: a247833cfb5fc89a500a4b644fff25f0f50d2efb
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: a3da70341ee32fd2dae42e227d729030e8d6eb82
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99796524"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106594"
 ---
 # <a name="bc30136-error-creating-win32-resources-error-message"></a>BC30136: Win32 리소스를 만드는 동안 오류가 발생 했습니다. \<error message>
 
@@ -30,4 +30,4 @@ Visual Basic 컴파일러는 어셈블리 링커 (Al.exe (Alink) 라고도 함)�
 ## <a name="see-also"></a>참고 항목
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [의견 보내기](/visualstudio/ide/feedback-options)
+- [Visual Studio 피드백 옵션](/visualstudio/ide/feedback-options)

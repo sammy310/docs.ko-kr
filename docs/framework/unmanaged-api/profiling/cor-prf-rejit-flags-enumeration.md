@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: a27b6d90b51254560f25fbadb18ac95fe838ab2b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: aad66285e9b31558a68b8ccdfc71f103d1772946
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99789023"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106919"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS 열거형
 
@@ -37,7 +37,7 @@ typedef enum
 } COR_PRF_REJIT_FLAGS;  
 ```  
   
-## <a name="members"></a>구성원  
+## <a name="members"></a>멤버  
   
 |멤버|설명|  
 |------------|-----------------|  
@@ -52,7 +52,7 @@ typedef enum
   
  **라이브러리:** CorGuids.lib  
   
- **.NET Framework 버전:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+ **.NET Framework 버전:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
   
 ## <a name="see-also"></a>참고 항목
 

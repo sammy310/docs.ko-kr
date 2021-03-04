@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31020
 ms.assetid: 23996dca-250f-4320-8211-1560e90172df
-ms.openlocfilehash: 54fe93a0fdcd05a585e0ca52dae54fafdfa01e58
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: cdaca9a386ae8ce797fdf2ed2e05b00ae6b99505
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99640916"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106828"
 ---
 # <a name="bc31020-unable-to-write-output-to-memory"></a>BC31020: 메모리에 출력을 쓸 수 없습니다.
 
@@ -31,6 +31,6 @@ ms.locfileid: "99640916"
 
 4. 다시 설치 후에도 오류가 계속 발생하면 Microsoft 기술 지원 서비스에 알립니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-- [의견 보내기](/visualstudio/ide/feedback-options)
+- [Visual Studio 피드백 옵션](/visualstudio/ide/feedback-options)

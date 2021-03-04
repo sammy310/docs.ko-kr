@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
-ms.openlocfilehash: 79c4c99dee252ae32837a99378fbf32d7d0d8470
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: fd53cda4040846a8b41573ebbec8f21b656a118a
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99640929"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106841"
 ---
 # <a name="bc30144-unable-to-link-to-resource-file-filename-error-message"></a>BC30144: 리소스 파일 ' '에 연결할 수 없습니다 \<filename> . \<error message>
 
@@ -30,4 +30,4 @@ Visual Basic 컴파일러는 어셈블리 링커 (Al.exe (Alink) 라고도 함)�
 ## <a name="see-also"></a>참고 항목
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [의견 보내기](/visualstudio/ide/feedback-options)
+- [Visual Studio 피드백 옵션](/visualstudio/ide/feedback-options)
