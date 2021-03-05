@@ -4,16 +4,16 @@ description: .NET Core, ASP.NET Core 및 .NET에 대해 배우는 데 도움이 
 author: BillWagner
 ms.author: wiwagn
 ms.date: 02/01/2021
-ms.openlocfilehash: c7bbb99eeb4e00771cd1e4a3ab33b7690620b194
-ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
+ms.openlocfilehash: 35cc5e74e764148b072438eea994905df778c835
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99585730"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103571"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 샘플 및 자습서
 
-.NET 설명서에는 .NET에 대해 설명하는 샘플 및 자습서 집합이 포함되어 있습니다. 이 문서에서는 .NET, ASP.NET Core, C# 샘플 및 자습서를 찾고, 보고, 다운로드하는 방법을 설명합니다. F# 프로그래밍 언어를 학습하기 위한 리소스는 [F# Foundation 사이트](https://fsharp.org/learn/)에서 찾을 수 있습니다. 온라인 코드 편집기를 사용하여 C#을 살펴보는 데 관심이 있는 경우 [이 대화형 자습서](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)로 시작하고 [C# 대화형 자습서](../csharp/tutorials/intro-to-csharp/index.md)를 계속 진행하세요. 샘플 코드를 보고 다운로드 하는 방법에 대한 지침은 [샘플 보기 및 다운로드](#view-and-download-samples) 섹션을 참조하세요.
+.NET 설명서에는 .NET에 대해 설명하는 샘플 및 자습서 집합이 포함되어 있습니다. 이 문서에서는 .NET, ASP.NET Core, C# 샘플 및 자습서를 찾고, 보고, 다운로드하는 방법을 설명합니다. F# 프로그래밍 언어를 학습하기 위한 리소스는 [F# Foundation 사이트](https://fsharp.org/learn/)에서 찾을 수 있습니다. 온라인 코드 편집기를 사용하여 C#을 살펴보는 데 관심이 있는 경우 [이 대화형 자습서](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)로 시작하고 [C# 대화형 자습서](../csharp/tour-of-csharp/tutorials/index.md)를 계속 진행하세요. 샘플 코드를 보고 다운로드 하는 방법에 대한 지침은 [샘플 보기 및 다운로드](#view-and-download-samples) 섹션을 참조하세요.
 
 ## <a name="net"></a>.NET
 

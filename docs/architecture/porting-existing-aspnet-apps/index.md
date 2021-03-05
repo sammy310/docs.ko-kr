@@ -3,12 +3,12 @@ title: 기존 ASP.NET 앱을 .NET Core로 포팅
 description: ASP.NET MVC 및 Web API 앱을 ASP.NET Core로 변환하기 위한 무료 가이드입니다.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 36c0cdbe03fb97ae82336d53e15be2108e9c6367
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 848f0e9533a65b59055853f1d502307abb69118c
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488167"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105947"
 ---
 # <a name="porting-existing-aspnet-apps-to-net-core"></a>기존 ASP.NET 앱을 .NET Core로 포팅
 
@@ -62,7 +62,7 @@ Docker 고래 로고는 Docker, Inc.의 등록 상표로, 허가하에 사용됩
 
 ## <a name="who-should-use-this-guide"></a>이 가이드의 대상 사용자
 
-이 가이드의 대상 그룹은 ASP.NET MVC 및 Web API(.NET Framework 4.x)로 작성한 기존 앱을 .NET Core로 마이그레이션하는 데 관심이 있는 개발자, 개발 리드 및 설계자입니다. ASP.NET Web Forms 개발자는 이 가이드를 활용하되 [ASP.NET Web Forms 개발자를 위한 Blazor](https://docs.microsoft.com/dotnet/architecture/blazor-for-web-forms-developers/) eBook도 읽는 것이 좋습니다.
+이 가이드의 대상 그룹은 ASP.NET MVC 및 Web API(.NET Framework 4.x)로 작성한 기존 앱을 .NET Core로 마이그레이션하는 데 관심이 있는 개발자, 개발 리드 및 설계자입니다. ASP.NET Web Forms 개발자는 이 가이드를 활용하되 [ASP.NET Web Forms 개발자를 위한 Blazor](../blazor-for-web-forms-developers/index.md) eBook도 읽는 것이 좋습니다.
 
 보조 대상 그룹은 앱을 .NET Core로 옮기려고 계획 중인 기술 의사 결정자입니다.
 

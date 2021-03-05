@@ -2,12 +2,12 @@
 title: 지역화된 IntelliSense 파일 설치
 description: Visual Studio에서 .NET 5 이상 프로젝트(.NET Core 포함)에 대해 지역화된 IntelliSense 파일을 사용하도록 개발 머신을 설정하는 방법을 알아봅니다.
 ms.date: 11/06/2020
-ms.openlocfilehash: 45eeae12ca79179cacb3d48fca28118de70e0a4f
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: febd748429dd3a2e13460354eb7402d25515f934
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506768"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105208"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net"></a>.NET에 대해 지역화된 IntelliSense 파일을 설치하는 방법
 
@@ -18,7 +18,7 @@ ms.locfileid: "94506768"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-- [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)와 같은 [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 이상 버전입니다.
+- [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)와 같은 [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet) 이상 버전입니다.
 - [Visual Studio 2019 버전 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 이상 버전
 
 ## <a name="download-and-install-the-localized-intellisense-files"></a>지역화된 IntelliSense 파일 다운로드 및 설치

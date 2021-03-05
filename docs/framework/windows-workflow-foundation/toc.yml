@@ -241,9 +241,8 @@
             - name: 워크플로 일시 중지 및 다시 시작
               href: pausing-and-resuming-a-workflow.md
         - name: 마이그레이션 지침
-          href: wf-migration-guidance.md
           items:
-            - name: 마이그레이션 지침
+            - name: 개요
               href: migration-guidance.md
             - name: .NET Framework 4에서 Interop 활동과 함께 .NET Framework 3.0 WF 활동 사용
               href: net-framework-3-0-wf-in-net-framework-4-interop.md

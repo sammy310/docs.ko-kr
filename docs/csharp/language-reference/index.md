@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 663d08921b1fb6c5013ce8dddb044ba12ead8409
-ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
+ms.openlocfilehash: dfbf7a2548f403bce895d388fe2cd1483e092b2e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98235237"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104065"
 ---
 # <a name="c-reference"></a>C# 참고자료
 
@@ -44,7 +44,7 @@ ms.locfileid: "98235237"
  C# 컴파일러 오류 및 경고의 원인과 해결 방법을 보여 주는 코드 조각을 포함합니다.  
   
  [C# 언어 사양](../../../_csharplang/spec/introduction.md)  
- C# 6.0 언어 사양. C# 6.0 언어에 대한 초안 제안입니다. 이 문서는 ECMA C# 표준 위원회와의 협력을 통해 구체화될 예정입니다. 버전 5.0은 2017년 12월에 [표준 ECMA-334 다섯 번째 버전](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf) 문서로 릴리스되었습니다.
+ C# 6.0 언어 사양. C# 6.0 언어에 대한 초안 제안입니다. 이 문서는 ECMA C# 표준 위원회와의 협력을 통해 구체화될 예정입니다. 버전 5.0은 2017년 12월에 [표준 ECMA-334 다섯 번째 버전](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf) 문서로 릴리스되었습니다.
 
 6\.0 이후 C# 버전에서 구현된 기능은 언어 사양 제안에 나타납니다. 이 문서는 이러한 새 기능을 추가하기 위해 언어 사양에 대한 델타를 설명합니다. 이는 초안 제안 양식입니다. 이러한 사양은 구체화되어 공식적인 검토를 위해 ECMA 표준 위원회에 제출되며, 이후 버전의 C# 표준으로 통합됩니다.
 

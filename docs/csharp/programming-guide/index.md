@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 6db16a86e949fb50254c301f5e5ac0904a6072a4
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 59928ce89dacc47534a1e7cb5ed0603d259b5a4e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063601"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104805"
 ---
 # <a name="c-programming-guide"></a>C# 프로그래밍 가이드
 
 이 섹션에서는 핵심 C# 언어 기능과 .NET을 통해 C#에서 액세스할 수 있는 기능에 대한 자세한 정보를 제공합니다.  
   
- 이 섹션 대부분에서는 사용자가 C# 및 일반적인 프로그래밍 개념에 대해 이미 알고 있다고 가정합니다. 프로그래밍 또는 C# 초급자는 프로그래밍에 대한 사전 지식이 필요하지 않은 [C# 자습서 소개](../tutorials/intro-to-csharp/index.md) 또는 [.NET In-Browser 자습서](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)를 참조할 수 있습니다.  
+ 이 섹션 대부분에서는 사용자가 C# 및 일반적인 프로그래밍 개념에 대해 이미 알고 있다고 가정합니다. 프로그래밍 또는 C# 초급자는 프로그래밍에 대한 사전 지식이 필요하지 않은 [C# 자습서 소개](../tour-of-csharp/tutorials/index.md) 또는 [.NET In-Browser 자습서](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)를 참조할 수 있습니다.  
   
  특정 키워드, 연산자 및 전처리기 지시문에 대한 자세한 내용은 [C# 참조](../language-reference/index.md)를 참조하세요. C# 언어 사양에 대한 자세한 내용은 [C# 언어 사양](/dotnet/csharp/language-reference/language-specification/introduction)을 참조하세요.  
   
