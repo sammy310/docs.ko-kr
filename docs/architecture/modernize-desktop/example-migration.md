@@ -2,12 +2,12 @@
 title: .NET 5로의 마이그레이션 예제
 description: .NET Framework를 대상으로 하는 샘플 응용 프로그램을 .NET 5로 마이그레이션하는 방법을 보여 줍니다.
 ms.date: 01/19/2021
-ms.openlocfilehash: 39ecdfa639f4d68a4a8821da839f014c8de42ab0
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 5b3743c68ee0426efffda6f999dffea788f493e9
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216267"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206544"
 ---
 # <a name="example-of-migrating-to-net"></a>.NET으로 마이그레이션하는 방법의 예
 
@@ -72,6 +72,9 @@ try-convert -p "<path to your project file>"
 ```dotnetcli
 try-convert -w "<path to your solution>"
 ```
+
+> [!NOTE]
+> 변환 도구는 [.Net 업그레이드 도우미 도구의](https://aka.ms/dotnet-upgrade-assistant)일부로 자동으로 실행 됩니다. 단순히 Convert를 사용해 서는 안 되며 전체 업그레이드 길잡이를 실행 하는 것이 좋습니다.
 
 도구에서 변환을 시도한 후에는 Visual Studio에서 파일을 다시 로드 하 여를 실행 하 고 테스트 합니다. 변환 시도에서 프로젝트의 세부 사항으로 인해 변환을 수행할 수 없는 경우가 있습니다. 이 경우 아래 단계를 참조할 수 있습니다.
 
