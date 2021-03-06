@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: tutorial
 ms.prod: dotnet
-ms.openlocfilehash: 7cf25f181997ed66639842727be57e7824ef5466
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 509616e3423fbb83b74bfbb8ecec1a7df49f0a20
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739989"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259744"
 ---
 <!--markdownlint-disable DOCSMD011 -->
 # <a name="read-values-from-an-analog-to-digital-converter"></a>아날로그에서 디지털로의 변환기에서 값 읽기
@@ -20,10 +20,10 @@ ms.locfileid: "96739989"
 
 이 항목에서는 potentiometer로 입력 전압을 조절 .NET을 사용 하 여 ADC에서 값을 읽습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [!INCLUDE [prereq-rpi](../includes/prereq-rpi.md)]
-- [MCP3008](https://www.microchip.com/wwwproducts/MCP3008) <span class="docon docon-navigate-external x-hidden-focus"></span> 아날로그에서 디지털 컨버터
+- [MCP3008](https://www.microchip.com/wwwproducts/MCP3008) 아날로그를 디지털로 변환
 - 3 핀 potentiometer
 - 브레드보드
 - 점퍼 와이어
@@ -104,7 +104,7 @@ Potentiometer의 외부 핀에 3.3 V 및 접지를 제공 합니다. 순서는 �
 
 ## <a name="get-the-source-code"></a>소스 코드 가져오기
 
-이 자습서의 소스는 [GitHub에서 사용할 수 있습니다](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/AdcTutorial) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+이 자습서의 소스는 [GitHub에서 사용할 수 있습니다](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/AdcTutorial).
 
 ## <a name="next-steps"></a>다음 단계
 

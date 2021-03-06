@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 393571f5b1fab518f379bbd6f4e6f1cb62a74b26
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: fc3b61c80cfd3b40d802c517cdca4085bc274197
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104785"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259436"
 ---
 # <a name="bc30145-unable-to-emit-assembly-error-message"></a>BC30145: 어셈블리를 내보낼 수 없습니다. \<error message>
 
@@ -37,7 +37,7 @@ Visual Basic 컴파일러는 어셈블리 링커 *Al.exe*(Alink 라고도 함)�
 
 2. 프로젝트에서 오류를 생성하는 COM 참조를 삭제합니다.
 
-3. [Visual Studio에 대 한 개발자 명령 프롬프트](../../../framework/tools/developer-command-prompt-for-vs.md)를 엽니다.
+3. [개발자 명령줄 셸을](/visualstudio/ide/reference/command-prompt-powershell)엽니다.
 
 4. 어셈블리 래퍼를 저장 하려는 디렉터리로 디렉터리를 변경 합니다.
 

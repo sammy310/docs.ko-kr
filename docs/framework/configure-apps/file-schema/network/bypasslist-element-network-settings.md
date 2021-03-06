@@ -9,12 +9,12 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 58cdcf046b2a5a292493c5704739b22aa4ec4f17
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0a03b391c839b7255fdd423a305d474d0e48ad39
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178413"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259358"
 ---
 # <a name="bypasslist-element-network-settings"></a>\<bypasslist> 요소(네트워크 설정)
 
@@ -58,7 +58,7 @@ ms.locfileid: "91178413"
 
  바이패스 목록에는 <xref:System.Net.WebRequest> 인스턴스가 프록시 서버를 통하지 않고 직접 액세스 하는 uri를 설명 하는 정규식이 포함 되어 있습니다.  
   
- 이 요소에 대 한 정규식을 지정할 때는 주의 해야 합니다. 정규식 "[a-z] + \\ . \\ .com"은 contoso.com 도메인의 모든 호스트와 일치 하지만 contoso.com.cpandl.com 도메인의 모든 호스트와 일치 합니다. Contoso.com 도메인의 호스트만 일치 시키려면 앵커 ("$"): "[a-z] + \\ . contoso \\ $"를 사용 합니다.  
+ 이 요소에 대 한 정규식을 지정할 때는 주의 해야 합니다. 정규식은 `[a-z]+\\.contoso\\.com` contoso.com 도메인의 모든 호스트와 일치 하지만 contoso.com.cpandl.com 도메인의 모든 호스트와 일치 합니다. Contoso.com 도메인의 호스트만 일치 시키려면 앵커 ()를 사용 `$` `[a-z]+\\.contoso\\.com$` 합니다.
   
  정규식에 대 한 자세한 내용은을 참조 하십시오. [정규식을 .NET Framework](../../../../standard/base-types/regular-expressions.md)합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "91178413"
 
  이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
 
  다음 예에서는 바이패스 목록에 두 개의 주소를 추가 합니다. 첫 번째는 contoso.com 도메인에 있는 모든 서버에 대 한 프록시를 무시 합니다. 두 번째는 IP 주소가 192.168으로 시작 하는 모든 서버에 대해 프록시를 무시 합니다.  
   

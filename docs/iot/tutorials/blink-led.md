@@ -6,18 +6,18 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: tutorial
 ms.prod: dotnet
-ms.openlocfilehash: 07a050c0655f9cae3d7f2b924c0dd07ac1c6c0b9
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 0d5db19faac0293b9982731f26dfd85d6ce07b3a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96594148"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259028"
 ---
 # <a name="blink-an-led"></a>LED 깜박이기
 
 범용 i/o (GPIO) 핀은 개별적으로 제어할 수 있습니다. 이는 Led, 릴레이 및 기타 상태 저장 장치를 제어 하는 데 유용 합니다. 이 항목에서는 .NET 및 Raspberry Pi의 GPIO 핀을 사용 하 여 LED를 켜고 반복적으로 깜박임 합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [!INCLUDE [prereq-rpi](../includes/prereq-rpi.md)]
 - 5mm LED
@@ -60,7 +60,7 @@ ms.locfileid: "96594148"
 
     :::code language="csharp" source="~/iot-samples/tutorials/BlinkTutorial/Program.cs" :::
 
-    앞의 코드에서 다음을 확인할 수 있습니다.
+    위의 코드에서
 
     - [Using 선언은](../../csharp/whats-new/csharp-8.md#using-declarations) 의 인스턴스를 만듭니다 `GpioController` . `using`선언은 개체가 삭제 되 고 하드웨어 리소스가 제대로 해제 되도록 합니다.
     - 출력에 대 한 GPIO 핀 18이 열립니다.
@@ -85,7 +85,7 @@ ms.locfileid: "96594148"
 
 ## <a name="get-the-source-code"></a>소스 코드 가져오기
 
-이 자습서의 소스는 [GitHub에서 사용할 수 있습니다](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/BlinkTutorial) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+이 자습서의 소스는 [GitHub에서 사용할 수 있습니다](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/BlinkTutorial).
 
 ## <a name="next-steps"></a>다음 단계
 

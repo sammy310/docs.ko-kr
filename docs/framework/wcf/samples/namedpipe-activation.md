@@ -3,16 +3,16 @@ description: '다음에 대 한 자세한 정보: NamedPipe 활성화'
 title: NamedPipe 활성화
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 4955511f24d831f4aa9e3aa67fdb3f6a218d7af0
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 32878b08450b6d4d2d88b3d36c019b3e2138625f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99752215"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259540"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 활성화
 
-이 샘플에서는 WAS(Windows Process Activation Service)를 사용하는 서비스를 호스트하여 이름 파이프를 통해 통신하는 서비스를 활성화하는 방법을 보여 줍니다. 이 샘플은 [시작](getting-started-sample.md) 을 기반으로 하며 Windows Vista를 실행 하는 데 필요 합니다.
+이 샘플에서는 WAS (Windows Process Activation Service)를 사용 하 여 명명 된 파이프를 통해 통신 하는 서비스를 호스팅하는 서비스를 호스트 하는 방법을 보여 줍니다. 이 샘플은 [시작](getting-started-sample.md) 을 기반으로 하며 Windows Vista를 실행 하는 데 필요 합니다.
 
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.

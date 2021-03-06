@@ -3,12 +3,12 @@ description: '자세히 알아보기: CacheMetadata를 사용 하 여 데이터 
 title: CacheMetadata를 사용하여 데이터 노출
 ms.date: 03/30/2017
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
-ms.openlocfilehash: ac4623881ebd76270f773a3b7acfe205ad365118
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: e3f4dc83a0e268ae548c904a714753fa025c77ae
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99742344"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259787"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>CacheMetadata를 사용하여 데이터 노출
 
@@ -60,7 +60,7 @@ protected override void CacheMetadata(NativeActivityMetadata metadata)
 
 변수를 사용하여 작업에서 예약될 자식 작업에 데이터를 전달하려면 변수를 구현 변수로 추가해야 합니다. 공용 변수의 값은 이런 방식으로 설정할 수 없습니다. 이것은 작업이 속성을 가진 캡슐화된 클래스가 아니라 매개 변수를 가진 함수의 구현으로 실행되기 때문입니다. 하지만 예약된 작업은 자식 작업과 동일한 방식으로 부모 작업의 인수에 액세스할 수 없기 때문에 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>를 사용하는 경우와 같이 인수를 명시적으로 설정해야 하는 경우도 있습니다.
 
-다음 코드 조각에서는 <xref:System.Activities.Activity.CacheMetadata%2A>를 사용하여 기본 작업의 인수를 예약된 작업에 전달하는 방법을 보여 줍니다.
+다음 코드 조각에서는를 사용 하 여 네이티브 활동에서 예약 된 활동으로 인수를 전달 하는 방법을 보여 줍니다 <xref:System.Activities.Activity.CacheMetadata%2A> .
 
 ```csharp
 public sealed class ChildActivity : NativeActivity

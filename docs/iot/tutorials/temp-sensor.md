@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/14/2020
 ms.topic: tutorial
 ms.prod: dotnet
-ms.openlocfilehash: 1270e7629e9afc12b1d76d260d4b8b51428f1040
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: bc5c2b9f0876603c152da859547c58b83826969c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96594153"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259839"
 ---
 # <a name="read-environmental-conditions-from-a-sensor"></a>센서에서 환경 조건 읽기
 
@@ -19,10 +19,10 @@ IoT 장치에 대 한 가장 일반적인 시나리오 중 하나는 환경 조�
 
 이 항목에서는 .NET을 사용 하 여 센서에서 환경 조건을 읽습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [!INCLUDE [prereq-rpi](../includes/prereq-rpi.md)]
-- [BME280](https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout) <span class="docon docon-navigate-external x-hidden-focus"></span> 습도/무게 ometric 압력/온도 센서 브레이크 아웃
+- [BME280](https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout) 습도/바 ometric 압력/온도 센서 브레이크 아웃
 - 점퍼 와이어
 - 실험용 회로판 (선택 사항)
 - Raspberry Pi GPIO 브레이크 보드 (선택 사항)
@@ -65,7 +65,7 @@ IoT 장치에 대 한 가장 일반적인 시나리오 중 하나는 환경 조�
 
     :::code language="csharp" source="~/iot-samples/tutorials/SensorTutorial/Program.cs" :::
 
-    앞의 코드에서 다음을 확인할 수 있습니다.
+    위의 코드에서
 
     - `i2cSettings` 는의 새 인스턴스로 설정 됩니다 `I2cConnectionSettings` . 생성자는 `busId` 매개 변수를 1로 설정 하 고 `deviceAddress` 매개 변수를로 설정 `Bme280.DefaultI2cAddress` 합니다.
 
@@ -102,7 +102,7 @@ IoT 장치에 대 한 가장 일반적인 시나리오 중 하나는 환경 조�
 
 ## <a name="get-the-source-code"></a>소스 코드 가져오기
 
-이 자습서의 소스는 [GitHub에서 사용할 수 있습니다](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/SensorTutorial) <span class="docon docon-navigate-external x-hidden-focus"></span> .
+이 자습서의 소스는 [GitHub에서 사용할 수 있습니다](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/SensorTutorial).
 
 ## <a name="next-steps"></a>다음 단계
 

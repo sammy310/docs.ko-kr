@@ -2,12 +2,12 @@
 title: F# 코드 서식 지정 지침
 description: 'F # 코드의 서식을 지정 하기 위한 지침을 알아봅니다.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 6f1cf8decbaf02aa7d5e202010d4c240c24bdcf9
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4562242b82b0d7efac19bdcf2c04c29482af11dc
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102103675"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259904"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 코드 서식 지정 지침
 
@@ -928,6 +928,20 @@ let printListWithOffsetPiped a list1 =
 
 람다 식의 본문이 여러 줄 길면 로컬 범위 함수로 리팩터링 하는 것을 고려해 야 합니다.
 
+함수가 단일 여러 튜플 인수를 사용 하는 경우 [형식 지정 생성자, 정적 멤버 및 멤버 호출](#formatting-constructors-static-members-and-member-invocations) 에 대 한 동일한 규칙이 적용 됩니다.
+
+```fsharp
+let myFunction (a: int, b: string, c: int, d: bool) =
+    ()
+
+myFunction(
+    478815516,
+    "A very long string making all of this multi-line",
+    1515,
+    false
+)
+```
+
 ### <a name="formatting-infix-operators"></a>중 위 연산자 서식 지정
 
 연산자를 공백으로 구분 합니다. 이 규칙에 대 한 명백한 예외는 `!` 및 `.` 연산자입니다.
@@ -1084,6 +1098,26 @@ let untypedRes =
         sourceText,
         parsingOptionsWithDefines
     )
+```
+
+단일 multiline 인수만 있는 경우에도 동일한 규칙이 적용 됩니다.
+
+```fsharp
+let poemBuilder = StringBuilder()
+poemBuilder.AppendLine(
+    """
+The last train is nearly due
+The Underground is closing soon
+And in the dark, deserted station
+Restless in anticipation
+A man waits in the shadows
+    """
+)
+
+Option.traverse(
+    create
+    >> Result.setError [ invalidHeader "Content-Checksum" ]
+)
 ```
 
 ## <a name="formatting-attributes"></a>서식 특성
