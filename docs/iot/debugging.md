@@ -7,12 +7,12 @@ ms.date: 11/13/2020
 ms.topic: how-to
 ms.prod: dotnet
 zone_pivot_groups: ide-set-one
-ms.openlocfilehash: 7b9872304ee53071452772e3da02081a7def4d80
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 58858384c49a296e0b33d663f3ef930caf9cace6
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "96594016"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258067"
 ---
 # <a name="debug-net-apps-on-raspberry-pi"></a>Raspberry Pi에서 .NET 앱 디버그
 
@@ -26,7 +26,7 @@ Visual Studio Code에서 Raspberry Pi의 .NET을 디버깅 하려면 Raspberry P
 
 ### <a name="enable-ssh-on-the-raspberry-pi"></a>Raspberry Pi에서 SSH를 사용 하도록 설정
 
-SSH는 원격 디버깅에 필요 합니다. SSH를 사용 하도록 설정 하려면 [Raspberry Pi 설명서에서 *ssh 사용* 을 참조](https://www.raspberrypi.org/documentation/remote-access/ssh/) <span class="docon docon-navigate-external x-hidden-focus"></span> 하세요.
+SSH는 원격 디버깅에 필요 합니다. SSH를 사용 하도록 설정 하려면 [Raspberry Pi 설명서에서 *ssh 사용* 을 참조](https://www.raspberrypi.org/documentation/remote-access/ssh/)하세요.
 
 ### <a name="install-the-visual-studio-remote-debugger-on-the-raspberry-pi"></a>Raspberry Pi에 Visual Studio 원격 디버거를 설치 합니다.
 
@@ -46,7 +46,7 @@ Raspberry Pi (로컬 또는 SSH를 통해)의 Bash 콘솔 내에서 다음 단�
 
 1. Visual Studio Code SSH 프로토콜을 사용 하 여 원격으로 디버깅 합니다. 보안상의 이유로 `root` 는 기본적으로 SSH를 통해 로그온 할 수 없습니다. SSH를 `root` 통해 로그온 할 수 있게 하려면 다음 단계를 완료 합니다.
 
-    1. 다음 명령을 실행 하 여 [nano](https://www.nano-editor.org/docs.php) 에서 */etc/ssh/sshd_config* 를 엽니다 <span class="docon docon-navigate-external x-hidden-focus"></span> .
+    1. 다음 명령을 실행 하 여 [nano](https://www.nano-editor.org/docs.php)에서 */etc/ssh/sshd_config* 를 엽니다.
 
         ```bash
         sudo nano /etc/ssh/sshd_config
@@ -110,7 +110,7 @@ Raspberry Pi (로컬 또는 SSH를 통해)의 Bash 콘솔 내에서 다음 단�
 - `pipeArgs` SSH 클라이언트에 전달 되는 매개 변수입니다. 암호 매개 변수 및 형식의 사용자를 지정 해야 `root` `<user>@<hostname>` 합니다.
 
 > [!IMPORTANT]
-> 위의 예제에서는 [PuTTY](https://www.ssh.com/ssh/putty/) SSH 클라이언트의 구성 요소인 *plink* 를 사용 <span class="docon docon-navigate-external x-hidden-focus"></span> 합니다. [OpenSSH](https://www.openssh.com/) <span class="docon docon-navigate-external x-hidden-focus"></span> 최신 버전의 Windows 및 Linux에 포함 된 OpenSSH를 대신 사용할 수 있습니다. 그러나 OpenSSH은 명령줄 매개 변수로 암호 보내기를 지원 하지 않습니다. OpenSSH를 사용 하려면 [암호 없는 SSH 액세스에 대해 Raspberry Pi를 구성](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md) <span class="docon docon-navigate-external x-hidden-focus"></span> 합니다.
+> 위의 예제에서는 [PuTTY](https://www.ssh.com/ssh/putty/) SSH 클라이언트의 구성 요소인 *plink* 를 사용 <span class="docon docon-navigate-external x-hidden-focus"></span> 합니다. [](https://www.openssh.com/) <span class="docon docon-navigate-external x-hidden-focus"></span> 최신 버전의 Windows 및 Linux에 포함 된 OpenSSH를 대신 사용할 수 있습니다. 그러나 OpenSSH은 명령줄 매개 변수로 암호 보내기를 지원 하지 않습니다. OpenSSH를 사용 하려면 [암호 없는 SSH 액세스에 대해 Raspberry Pi를 구성](https://www.raspberrypi.org/documentation/remote-access/ssh/passwordless.md)합니다.
 
 ### <a name="deploy-the-app"></a>앱 배포
 
@@ -122,7 +122,7 @@ Raspberry Pi (로컬 또는 SSH를 통해)의 Bash 콘솔 내에서 다음 단�
 
 ## <a name="references"></a>참조
 
-[ARM의 .Net Core를 사용 하 여 Raspberry Pi에 대 한 Windows의 VS Code 원격 디버깅](https://www.hanselman.com/blog/remote-debugging-with-vs-code-on-windows-to-a-raspberry-pi-using-net-core-on-arm)<span class="docon docon-navigate-external x-hidden-focus"></span>
+[ARM의 .NET Core를 사용 하 여 Raspberry Pi에 대 한 Windows의 VS Code 원격 디버깅](https://www.hanselman.com/blog/remote-debugging-with-vs-code-on-windows-to-a-raspberry-pi-using-net-core-on-arm)
 
 ::: zone-end
 

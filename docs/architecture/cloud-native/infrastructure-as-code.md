@@ -2,12 +2,12 @@
 title: 코드 제공 인프라(Infrastructure as code)
 description: 클라우드 네이티브 응용 프로그램을 사용 하 여 IaC (Infrastructure as Code) 수용
 ms.date: 05/13/2020
-ms.openlocfilehash: d130705e19e0d3d7a9e15c73f4758a22ee8ecd43
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5a7cd3a0b4906b1a4aec9e1015d6128867ae9963
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163741"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255446"
 ---
 # <a name="infrastructure-as-code"></a>코드 제공 인프라(Infrastructure as code)
 
@@ -60,7 +60,7 @@ Azure Resource Manager 템플릿은 Azure에서 다양 한 리소스를 정의 �
 
 ARM 템플릿은 동적 환경 및 구성 정보를 사용 하 여 매개 변수화 할 수 있습니다. 이렇게 하면 개발, QA, 프로덕션 등의 다른 환경을 정의 하는 데 다시 사용할 수 있습니다. 일반적으로 템플릿은 단일 Azure 리소스 그룹 내에 모든 리소스를 만듭니다. 필요한 경우 단일 리소스 관리자 템플릿에서 여러 리소스 그룹을 정의할 수 있습니다. 리소스 그룹 자체를 삭제 하 여 환경의 모든 리소스를 삭제할 수 있습니다. 비용 분석은 리소스 그룹 수준에서 실행 될 수도 있으므로 각 환경의 비용을 신속 하 게 확인할 수 있습니다.
 
-GitHub의 [Azure 빠른 시작 템플릿](https://github.com/Azure/azure-quickstart-templates) 프로젝트에서 사용할 수 있는 많은 예제 또는 ARM 템플릿이 있습니다. 새 템플릿을 만들거나 기존 템플릿을 수정 하는 데 도움이 될 수 있습니다.
+GitHub의 [Azure 빠른 시작 템플릿](https://github.com/Azure/azure-quickstart-templates) 프로젝트에서 사용할 수 있는 ARM 템플릿의 많은 예가 있습니다. 새 템플릿을 만들거나 기존 템플릿을 수정 하는 데 도움이 될 수 있습니다.
 
 리소스 관리자 템플릿은 다양 한 방법으로 실행할 수 있습니다. 가장 간단한 방법은 단순히 Azure Portal에 붙여 넣는 것입니다. 실험적 배포의 경우이 방법은 빠르게 수행할 수 있습니다. Azure DevOps에서 빌드 또는 릴리스 프로세스의 일부로 실행 될 수도 있습니다. Azure에 대 한 연결을 활용 하 여 템플릿을 실행 하는 작업이 있습니다. 리소스 관리자 템플릿에 대 한 변경 내용은 증분 방식으로 적용 됩니다. 즉, 새 리소스를 추가 하려면 단순히 템플릿에 추가 해야 합니다. 도구는 현재 리소스와 템플릿에 정의 된 리소스 간의 차이점을 조정 합니다. 그러면 리소스는 템플릿에 정의 된 것과 일치 하도록 만들어지거나 변경 됩니다.  
 

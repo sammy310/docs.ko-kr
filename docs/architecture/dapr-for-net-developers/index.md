@@ -3,12 +3,12 @@ title: .NET 개발자용 Dapr
 description: Microsoft의 오픈 소스 Distributed Application Runtime의 전체 기능을 이해하고 활용하기 위한 .NET 개발자용 안내서입니다.
 author: robvet
 ms.date: 02/07/2021
-ms.openlocfilehash: 53d5356c8e010f0c4e168a2186d48dd9af369ff6
-ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
+ms.openlocfilehash: fc38dd1a98570cc4d2b367d272a107e3ad67ead9
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "101096741"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206570"
 ---
 # <a name="dapr-for-net-developers"></a>.NET 개발자용 Dapr
 
@@ -65,7 +65,7 @@ Docker 고래 로고는 Docker, Inc.의 등록 상표로, 허가하에 사용됩
 편집자:
 
 > **David Pine**, 선임 콘텐츠 개발자, Microsoft .NET 팀
-
+>
 > **Maira Wenzel**, 선임 프로그램 관리자, .NET 팀, Microsoft
 
 ## <a name="version"></a>버전

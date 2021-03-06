@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: overview
 ms.prod: dotnet
-ms.openlocfilehash: c3d05ec5b05780f91404c3c27e91bcd602b0faeb
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 13460fdafbfd7ef4e047cb7537e832ae4039c614
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "96594028"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255433"
 ---
 # <a name="develop-apps-for-iot-devices-with-the-net-iot-libraries"></a>.NET IoT 라이브러리를 사용 하 여 IoT 장치용 앱 개발
 
@@ -26,12 +26,12 @@ ms.locfileid: "96594028"
 
 .NET IoT 라이브러리는 두 개의 NuGet 패키지로 구성 됩니다.
 
-- [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio/) <span class="docon docon-navigate-external x-hidden-focus"></span>
-- [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings/) <span class="docon docon-navigate-external x-hidden-focus"></span>
+- [System.Device.Gpio](https://www.nuget.org/packages/System.Device.Gpio/)
+- [Iot.Device.Bindings](https://www.nuget.org/packages/Iot.Device.Bindings/)
 
 ### <a name="systemdevicegpio"></a>System.Device.Gpio
 
-`System.Device.Gpio` 는 하위 수준 하드웨어 핀과 상호 작용 하 여 장치를 제어 하기 위한 다양 한 프로토콜을 지원 합니다. 이러한 위협은 다음과 같습니다.
+`System.Device.Gpio` 는 하위 수준 하드웨어 핀과 상호 작용 하 여 장치를 제어 하기 위한 다양 한 프로토콜을 지원 합니다. 여기에는 다음이 포함됩니다.
 
 - 범용 i/o (GPIO)
 - Inter-Integrated 회로 (I2C)
@@ -43,23 +43,23 @@ ms.locfileid: "96594028"
 
 `Iot.Device.Bindings`패키지:
 
-* [device bindings](https://github.com/dotnet/iot/blob/master/src/devices/README.md) <span class="docon docon-navigate-external x-hidden-focus"></span> 시스템. 장치를 래핑하여 앱 개발을 간소화 하는 장치 바인딩을 포함 합니다.
+* 시스템. 장치를 래핑하여 앱 개발을 간소화 하는 [장치 바인딩을](https://github.com/dotnet/iot/blob/master/src/devices/README.md) 포함 합니다.
 * 는 커뮤니티에서 지원 되며 추가 바인딩은 지속적으로 추가 됩니다.
 
 일반적으로 사용 되는 장치 바인딩은 다음과 같습니다.
 
-- [CharacterLcd-LCD 문자 표시](https://github.com/dotnet/iot/tree/master/src/devices/CharacterLcd)<span class="docon docon-navigate-external x-hidden-focus"></span>
-- [SN74HC595-8 비트 시프트 레지스터](https://github.com/dotnet/iot/tree/master/src/devices/Sn74hc595)<span class="docon docon-navigate-external x-hidden-focus"></span>
-- [BrickPi3](https://github.com/dotnet/iot/tree/master/src/devices/BrickPi3)<span class="docon docon-navigate-external x-hidden-focus"></span>
-- [Max7219-LED 매트릭스 드라이버](https://github.com/dotnet/iot/tree/master/src/devices/Max7219)<span class="docon docon-navigate-external x-hidden-focus"></span>
-- [RGBLEDMATRIX LED 매트릭스](https://github.com/dotnet/iot/tree/master/src/devices/RGBLedMatrix)<span class="docon docon-navigate-external x-hidden-focus"></span>
+- [CharacterLcd-LCD 문자 표시](https://github.com/dotnet/iot/tree/master/src/devices/CharacterLcd)
+- [SN74HC595-8 비트 시프트 레지스터](https://github.com/dotnet/iot/tree/master/src/devices/Sn74hc595)
+- [BrickPi3](https://github.com/dotnet/iot/tree/master/src/devices/BrickPi3)
+- [Max7219-LED 매트릭스 드라이버](https://github.com/dotnet/iot/tree/master/src/devices/Max7219)
+- [RGBLedMatrix LED 매트릭스](https://github.com/dotnet/iot/tree/master/src/devices/RGBLedMatrix)
 
 ## <a name="supported-operating-systems"></a>지원되는 운영 체제
 
 `System.Device.Gpio` 는 ARM/ARM64 및 Windows 10 IoT Core를 지 원하는 대부분의 Linux 버전에서 지원 됩니다.
 
 > [!TIP]
-> Raspberry Pi의 경우 [Raspberry PI OS](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) <span class="docon docon-navigate-external x-hidden-focus"></span> (이전의 Raspbian)를 권장 합니다.  
+> Raspberry Pi의 경우 [Raspberry PI OS](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)  (이전의 Raspbian)를 권장 합니다.
 
 ## <a name="supported-hardware-platforms"></a>지원 되는 하드웨어 플랫폼
 
@@ -72,4 +72,4 @@ PC 플랫폼은 USB-SPI/I2C 브리지를 사용 하 여 지원 됩니다.
 
 ## <a name="resources"></a>리소스
 
-- [Github의 .Net IoT 라이브러리](https://github.com/dotnet/iot)<span class="docon docon-navigate-external x-hidden-focus"></span>
+- [Github의 .NET IoT 라이브러리](https://github.com/dotnet/iot)
