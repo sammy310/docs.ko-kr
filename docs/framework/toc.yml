@@ -397,8 +397,6 @@ items:
         href: tools/certmgr-exe-certificate-manager-tool.md
       - name: Clrver.exe(CLR 버전 도구)
         href: tools/clrver-exe-clr-version-tool.md
-      - name: 명령 프롬프트
-        href: tools/developer-command-prompt-for-vs.md
       - name: CorFlags.exe(CorFlags 변환 도구)
         href: tools/corflags-exe-corflags-conversion-tool.md
       - name: Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)
