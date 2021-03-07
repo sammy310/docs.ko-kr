@@ -1,0 +1,31 @@
+---
+title: Razor Pages와 ASP.NET MVC 비교
+description: Razor Pages는 페이지 기반 앱에 대 한 기존 MVC 보기 보다 더 나은 책임을 구성 하는 방법을 제공 합니다. 이 섹션에서 일반적인 ASP.NET MVC 방법과 비교 하는 방법에 대해 알아봅니다.
+author: ardalis
+ms.date: 11/13/2020
+ms.openlocfilehash: c188e7336e129fa710002081f1bef1f635cbe1fd
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102401795"
+---
+# <a name="compare-razor-pages-to-aspnet-mvc"></a><span data-ttu-id="d7cb5-104">Razor Pages와 ASP.NET MVC 비교</span><span class="sxs-lookup"><span data-stu-id="d7cb5-104">Compare Razor Pages to ASP.NET MVC</span></span>
+
+<span data-ttu-id="d7cb5-105">Razor Pages은 ASP.NET Core에서 페이지 또는 양식 기반 앱을 만드는 데 선호 되는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb5-105">Razor Pages is the preferred way to create page- or form-based apps in ASP.NET Core.</span></span> <span data-ttu-id="d7cb5-106">[문서](/aspnet/core/razor-pages/)에서 "Razor Pages는 컨트롤러 및 뷰를 사용 하는 것 보다 더 쉽고 생산성을 코딩 하는 페이지 중심 시나리오를 만들 수 있습니다."</span><span class="sxs-lookup"><span data-stu-id="d7cb5-106">From the [docs](/aspnet/core/razor-pages/), "Razor Pages can make coding page-focused scenarios easier and more productive than using controllers and views."</span></span> <span data-ttu-id="d7cb5-107">ASP.NET MVC 앱에서 뷰를 많이 사용 하는 경우 작업 및 보기에서 Razor Pages로 마이그레이션하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb5-107">If your ASP.NET MVC app makes heavy use of views, you may want to consider migrating from actions and views to Razor Pages.</span></span>
+
+<span data-ttu-id="d7cb5-108">일반적인 강력한 형식의 뷰 기반 MVC 앱은 하나 이상의 작업을 포함 하는 컨트롤러를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb5-108">A typical strongly typed view-based MVC app will use a controller to contain one or more actions.</span></span> <span data-ttu-id="d7cb5-109">컨트롤러는 도메인 또는 데이터 모델과 상호 작용 하 고 viewmodel 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb5-109">The controller will interact with the domain or data model, and create an instance of a viewmodel class.</span></span> <span data-ttu-id="d7cb5-110">그러면이 viewmodel 클래스가 해당 작업과 연결 된 뷰로 전달 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb5-110">Then this viewmodel class is passed to the view associated with that action.</span></span> <span data-ttu-id="d7cb5-111">MVC 앱의 기본 폴더 구조와 함께이 방법을 사용 하 여 앱에 새 페이지를 추가 하려면 한 폴더의 컨트롤러, 다른 폴더의 중첩 된 하위 폴더에 있는 보기 및 다른 폴더의 viewmodel을 수정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb5-111">Using this approach, coupled with the default folder structure of MVC apps, to add a new page to an app requires modifying a controller in one folder, a view in a nested subfolder in another folder, and a viewmodel in yet another folder.</span></span>
+
+<span data-ttu-id="d7cb5-112">작업 (now *처리기*) 및 Viewmodel ( *PageModel* 라고 함)을 하나로 그룹화 하 고이 클래스를 뷰 (Razor 페이지)에 연결 Razor Pages.</span><span class="sxs-lookup"><span data-stu-id="d7cb5-112">Razor Pages group together the action (now a *handler*) and the viewmodel (called a *PageModel*) in one class, and link this class to the view (called a Razor Page).</span></span> <span data-ttu-id="d7cb5-113">모든 Razor Pages ASP.NET Core 프로젝트의 루트에 있는 *Pages* 폴더로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb5-113">All Razor Pages go into a *Pages* folder in the root of the ASP.NET Core project.</span></span> <span data-ttu-id="d7cb5-114">이 폴더의 이름 및 위치를 기반으로 하는 라우팅 규칙을 사용 Razor Pages 합니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb5-114">Razor Pages use a routing convention based on their name and location within this folder.</span></span> <span data-ttu-id="d7cb5-115">처리기는 작업 메서드와 동일 하 게 동작 하지만 해당 이름 (예:)에서 처리 하는 HTTP 동사를 포함 합니다 `OnGet` .</span><span class="sxs-lookup"><span data-stu-id="d7cb5-115">Handlers behave exactly like action methods but have the HTTP verb they handle in their name (for example, `OnGet`).</span></span> <span data-ttu-id="d7cb5-116">또한 기본적으로 연결 된 페이지를 반환 하는 것으로 간주 되므로 반드시 반환 해야 하는 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb5-116">They also don't necessarily need to return, since by default they're assumed to return the page they're associated with.</span></span> <span data-ttu-id="d7cb5-117">이는 동시에 Razor Pages 및 해당 처리기를 더 작고 더 집중 하 여 응용 프로그램의 특정 부분을 추가 하거나 수정 하는 데 필요한 모든 파일을 쉽게 찾고 작업할 수 있도록 하는 경향이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb5-117">This tends to keep Razor Pages and their handlers smaller and more focused while at the same time making it easier to find and work with all of the files needed to add or modify a particular part of an app.</span></span>
+
+<span data-ttu-id="d7cb5-118">ASP.NET MVC에서 ASP.NET Core로 이동 하는 과정의 일부로 팀은 컨트롤러 및 뷰를 ASP.NET Core 컨트롤러와 뷰로 마이그레이션할지, Razor Pages로 마이그레이션할지를 고려해 야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb5-118">As part of a move from ASP.NET MVC to ASP.NET Core, teams should consider whether they want to migrate controllers and views to ASP.NET Core controllers and views, or to Razor Pages.</span></span> <span data-ttu-id="d7cb5-119">전자는 전반적으로 약간 낮은 노력을 기울여야 하지만 팀이 기존의 보기 기반 파일 구성에 대 한 Razor Pages 이점을 활용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb5-119">The former will most likely require slightly less overall effort, but won't allow the team to take advantage of the benefits of Razor Pages over traditional view-based file organization.</span></span>
+
+## <a name="references"></a><span data-ttu-id="d7cb5-120">참조</span><span class="sxs-lookup"><span data-stu-id="d7cb5-120">References</span></span>
+
+- [<span data-ttu-id="d7cb5-121">ASP.NET Core의 Razor 페이지 소개</span><span class="sxs-lookup"><span data-stu-id="d7cb5-121">Introduction to Razor Pages in ASP.NET Core</span></span>](/aspnet/core/razor-pages/)
+- [<span data-ttu-id="d7cb5-122">Razor Pages를 사용 하는 ASP.NET Core 앱 간소화</span><span class="sxs-lookup"><span data-stu-id="d7cb5-122">Simpler ASP.NET Core Apps with Razor Pages</span></span>](/archive/msdn-magazine/2017/september/asp-net-core-simpler-asp-net-mvc-apps-with-razor-pages)
+
+>[!div class="step-by-step"]
+><span data-ttu-id="d7cb5-123">[이전](routing-differences.md)
+>[다음](webapi-differences.md)</span><span class="sxs-lookup"><span data-stu-id="d7cb5-123">[Previous](routing-differences.md)
+[Next](webapi-differences.md)</span></span>
