@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 96df5a0c8487d3ba344b3aa13ca74b92e428d5aa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 06311e977619418c5b3fb69be518353de51e6bd5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556683"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258779"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 도구
 
@@ -21,9 +21,9 @@ ms.locfileid: "90556683"
 
 이 단원에서 설명하는 대부분의 .NET Framework 도구는 Visual Studio와 함께 자동으로 설치됩니다. Visual Studio를 다운로드하려면 [Visual Studio 다운로드](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 페이지를 방문하세요.
 
-어셈블리 캐시 뷰어(*Shfusion.dll*)를 제외한 모든 도구는 명령줄에서 실행할 수 있습니다. *Shfusion.dll*에 액세스하려면 파일 탐색기를 사용해야 합니다.
+어셈블리 캐시 뷰어(*Shfusion.dll*)를 제외한 모든 도구는 명령줄에서 실행할 수 있습니다. *Shfusion.dll* 에 액세스하려면 파일 탐색기를 사용해야 합니다.
   
-명령줄 도구를 실행하는 가장 좋은 방법은 Visual Studio의 개발자 명령 프롬프트를 사용하는 것입니다. 이러한 유틸리티를 사용하면 설치 폴더로 이동하지 않아도 도구를 쉽게 실행할 수 있습니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
+명령줄 도구를 실행하는 가장 좋은 방법은 Visual Studio에서 설치하는 개발자 셸 중 하나를 사용하는 것입니다. 이러한 유틸리티를 사용하면 설치 폴더로 이동하지 않아도 도구를 쉽게 실행할 수 있습니다. 자세한 내용은 [Developer command-line shells](/visualstudio/ide/reference/command-prompt-powershell)(개발자 명령줄 셸)를 참조하세요.
 
 > [!NOTE]
 > 일부 도구는 32비트 컴퓨터 또는 64비트 컴퓨터 전용입니다. 컴퓨터에 적절한 버전의 도구를 실행하세요.
@@ -48,9 +48,6 @@ ActiveX 컨트롤용 COM 형식 라이브러리의 형식 정의를 Windows Form
 - [Clrver.exe(CLR 버전 도구)](clrver-exe-clr-version-tool.md)  
 컴퓨터에서 CLR(공용 언어 런타임)의 모든 설치 버전을 보고합니다.
 
-- [명령 프롬프트](developer-command-prompt-for-vs.md)  
-.NET Framework 도구를 보다 쉽게 사용할 수 있습니다. 이는 특정 환경 변수를 자동으로 설정하는 명령 프롬프트입니다.
-
 - [CorFlags.exe(CorFlags 변환 도구)](corflags-exe-corflags-conversion-tool.md)  
 PE(이식 가능한 실행) 이미지 헤더의 CorFlags 섹션을 구성할 수 있도록 합니다.
 
@@ -73,10 +70,10 @@ IL(Intermediate Language) 코드가 들어 있는 PE(이식 가능한 실행) �
 라이선스 정보가 들어 있는 텍스트 파일을 읽고, 공용 언어 런타임 실행 파일에 리소스로 포함할 수 있는 *.licenses* 파일을 생성합니다.
 
 - [Mage.exe(매니페스트 생성 및 편집 도구)](mage-exe-manifest-generation-and-editing-tool.md)  
-애플리케이션 및 배포 매니페스트를 만들고, 편집하고, 서명할 수 있도록 합니다. *Mage.exe*는 명령줄 도구로서 일괄 처리 스크립트뿐 아니라 ASP.NET 애플리케이션을 비롯한 Windows 기반 애플리케이션에서도 실행할 수 있습니다.
+애플리케이션 및 배포 매니페스트를 만들고, 편집하고, 서명할 수 있도록 합니다. *Mage.exe* 는 명령줄 도구로서 일괄 처리 스크립트뿐 아니라 ASP.NET 애플리케이션을 비롯한 Windows 기반 애플리케이션에서도 실행할 수 있습니다.
 
 - [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
-명령줄 도구인 Mage.exe와 동일한 기능을 지원하지만 Windows 기반 UI(사용자 인터페이스)를 사용합니다. 명령줄 도구인 *Mage.exe*와 동일한 기능을 지원하지만 Windows 기반 UI(사용자 인터페이스)를 사용합니다.
+명령줄 도구인 Mage.exe와 동일한 기능을 지원하지만 Windows 기반 UI(사용자 인터페이스)를 사용합니다. 명령줄 도구인 *Mage.exe* 와 동일한 기능을 지원하지만 Windows 기반 UI(사용자 인터페이스)를 사용합니다.
 
 - [MDbg.exe(.NET Framework 명령줄 디버거)](mdbg-exe.md)  
 도구 공급업체 및 애플리케이션 개발자가 .NET Framework 공용 언어 런타임을 대상으로 하는 프로그램에서 버그를 쉽게 찾아서 수정할 수 있도록 도와줍니다. 이 도구에는 디버깅 서비스를 제공하기 위해 런타임 디버깅 API가 사용됩니다.

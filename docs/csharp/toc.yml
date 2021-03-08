@@ -537,13 +537,15 @@ items:
             href: programming-guide/types/using-type-dynamic.md
           - name: '연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)'
             href: programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md
-      - name: 클래스 및 구조체
+      - name: '클래스, 레코드, 구조체'
         items:
           - name: 개요
-            displayName: classes
+            displayName: 'classes, records'
             href: programming-guide/classes-and-structs/index.md
           - name: 클래스
             href: programming-guide/classes-and-structs/classes.md
+          - name: 레코드
+            href: programming-guide/classes-and-structs/records.md
           - name: 개체
             href: programming-guide/classes-and-structs/objects.md
           - name: 상속

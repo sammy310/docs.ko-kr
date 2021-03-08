@@ -2,12 +2,12 @@
 title: 방법 문서(C# 가이드)
 description: 유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션
 ms.date: 12/20/2017
-ms.openlocfilehash: 26d3931ff3b4ecfcc052c3ace25a09801f84c505
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dae10bf0019c283f568c4850d3bfa0abad6df85a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537407"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258197"
 ---
 # <a name="how-to-c"></a>방법(C#)
 
@@ -24,9 +24,9 @@ C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변�
 - C# 프로그래머도 [Visual Basic에서 `My` 네임스페이스를 사용](../programming-guide/namespaces/how-to-use-the-my-namespace.md)하려 할 수 있습니다.
 - [확장 메서드를 사용하여 `enum` 형식에 대해 새 메서드를 만듭니다](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
-### <a name="class-and-struct-members"></a>클래스 및 구조체 멤버
+### <a name="class-record-and-struct-members"></a>클래스, 레코드, 구조체 멤버
 
-구조체 및 클래스를 만들어 프로그램을 구현합니다. 이러한 기술은 클래스 또는 구조체를 작성할 때 자주 사용됩니다.
+클래스, 레코드, 구조체를 만들어 프로그램을 구현합니다. 이러한 기술은 클래스, 레코드 또는 구조체를 작성할 때 자주 사용됩니다.
 
 - [자동 구현 속성을 선언합니다](../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md).
 - [읽기/쓰기 속성을 선언하고 사용합니다](../programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties.md).

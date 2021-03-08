@@ -35,6 +35,8 @@
           href: configuration-differences.md
         - name: 라우팅 차이점
           href: routing-differences.md
+        - name: 로깅 차이점
+          href: logging-differences.md
         - name: Razor Pages와 ASP.NET MVC 비교
           href: comparing-razor-pages-aspnet-mvc.md
         - name: Web API 차이점
