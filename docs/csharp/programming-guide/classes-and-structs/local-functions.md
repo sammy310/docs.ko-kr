@@ -4,12 +4,12 @@ description: C#의 로컬 함수는 다른 멤버에 중첩되어 포함된 멤�
 ms.date: 10/16/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 75accda2e40443073274ece4d8964c13a0945dad
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 1c0cd1b8122f9069e5d6385d698f0ff8278912dd
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92332902"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103246"
 ---
 # <a name="local-functions-c-programming-guide"></a>로컬 함수(C# 프로그래밍 가이드)
 
@@ -71,16 +71,6 @@ C# 9.0부터 다음 예제와 같이 로컬 함수, 매개 변수, 형식 매개
 로컬 함수에 반복기 논리를 추가하는 경우 다음 예제와 같이 열거자를 검색할 때 인수 유효성 검사 예외가 throw됩니다.
 
 :::code language="csharp" source="snippets/local-functions/IteratorWithLocal.cs" :::
-
-유사한 방식으로 비동기 작업과 함께 로컬 함수를 사용할 수 있습니다. 해당 작업이 대기되면 비동기 메서드에서 throw된 예외가 표시됩니다. 로컬 함수를 사용하면 코드가 빨리 실패하여 예외가 throw되는 동시에 관찰할 수 있습니다.
-
-다음 예제에서는 `GetMultipleAsync`라는 비동기 메서드를 사용하여 지정된 시간(초) 동안 일시 중지하고 해당 시간(초)의 임의 배수인 값을 반환합니다. 최대 지연 시간은 5초입니다. 값이 5보다 크면 <xref:System.ArgumentOutOfRangeException>이 발생합니다. 다음 예제와 같이 `GetMultipleAsync` 메서드에 값 6을 전달할 때 throw되는 예외는 작업이 대기된 경우에만 관찰됩니다.
-
-:::code language="csharp" source="snippets/local-functions/AsyncWithoutLocal.cs" :::
-
-메서드 반복기를 사용하는 경우와 마찬가지로 이전 예제를 리팩터링하여 로컬 함수에 비동기 작업 코드를 추가할 수 있습니다. 다음 예제 출력과 같이 `GetMultiple` 메서드를 호출하는 즉시 <xref:System.ArgumentOutOfRangeException>이 throw됩니다.
-
-:::code language="csharp" source="snippets/local-functions/AsyncWithLocal.cs" :::
 
 ## <a name="local-functions-vs-lambda-expressions"></a>로컬 함수 및 람다 식
 

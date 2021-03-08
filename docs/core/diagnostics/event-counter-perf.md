@@ -3,12 +3,12 @@ title: .NET Core에서 EventCounters를 사용하여 성능 측정
 description: 이 자습서에서는 EventCounters를 사용하여 성능을 측정하는 방법을 알아봅니다.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: 2ed7f234b685dab91ab275105d26b474e3bd1a87
-ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
+ms.openlocfilehash: bde54ce1996b2f4e2a703c23384eadece06e66cb
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97700745"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105312"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>자습서: .NET Core에서 EventCounters를 사용하여 성능 측정
 
@@ -27,7 +27,7 @@ ms.locfileid: "97700745"
 
 이 자습서에서는 다음을 사용합니다.
 
-- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 이상 버전.
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet) 이상 버전.
 - 이벤트 카운터를 모니터링하기 위한 [dotnet-counters](dotnet-counters.md)
 - 진단할 [샘플 디버그 대상](/samples/dotnet/samples/diagnostic-scenarios) 앱.
 

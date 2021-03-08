@@ -4,12 +4,12 @@ description: .NET을 설치할 수 있는 macOS 버전에 대해 알아봅니다
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 871263b820aaf4cc04e573dd4aa3022caa401857
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: fe42a1593d4e8249252d2bd964dbfd52cdcd81a9
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506307"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105195"
 ---
 # <a name="install-net-on-macos"></a>macOS에 .NET 설치
 
@@ -24,7 +24,7 @@ ms.locfileid: "99506307"
 .NET의 최신 버전은 5.0입니다.
 
 > [!div class="button"]
-> [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
+> [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet)
 
 ## <a name="supported-releases"></a>지원되는 릴리스
 
@@ -62,7 +62,7 @@ macOS에 설치할 수 있는 두 가지 런타임이 있습니다.
   이 런타임은 가장 간단한 런타임이며 다른 런타임을 포함하지 않습니다. .NET 앱과의 최상의 호환성을 위해 ‘ASP.NET Core 런타임’을 설치하는 것이 좋습니다.
 
 > [!div class="button"]
-> [.NET 런타임 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
+> [.NET 런타임 다운로드](https://dotnet.microsoft.com/download/dotnet)
 
 ## <a name="sdk-information"></a>SDK 정보
 
@@ -80,8 +80,8 @@ SDK는 .NET 앱과 라이브러리를 빌드하고 게시하는 데 사용됩니
 | 5.0               | High Sierra(10.13+)  | X64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md) |
 | 3.1               | High Sierra(10.13+)  | X64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
 | 3.0               | High Sierra(10.13+)  | X64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
-| 2.2               | Sierra(10.12+)       | X64 | [추가 정보](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
-| 2.1               | Sierra(10.12+)       | X64 | [추가 정보](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+| 2.2               | Sierra(10.12+)       | X64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
+| 2.1               | Sierra(10.12+)       | X64 | [자세한 정보](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
 
 macOS Catalina(버전10.15)부터, 2019년 6월 1일 이후에 빌드되어 개발자 ID로 배포되는 모든 소프트웨어는 공증을 받아야 합니다. 이 요구 사항은 .NET 런타임, .NET SDK, .NET으로 만든 소프트웨어에 적용됩니다.
 
@@ -106,20 +106,20 @@ brew install mono-libgdiplus
 
 macOS에는 .NET 5.0 SDK를 설치하는 데 사용할 수 있는 독립 실행형 설치 관리자가 있습니다.
 
-- [x64(64비트) CPU](https://dotnet.microsoft.com/download/dotnet-core/5.0)
+- [x64(64비트) CPU](https://dotnet.microsoft.com/download/dotnet/5.0)
 
 ## <a name="download-and-manually-install"></a>다운로드 및 수동으로 설치
 
 <!-- Note, this content is taken from includes/linux-install-manual.md but changed for macOS. Any fixes should be applied there too, though content may be different -->
 
-.NET용 macOS 설치 관리자 대신 SDK와 런타임을 다운로드하여 수동으로 설치할 수 있습니다. 수동 설치는 일반적으로 연속 통합 테스트의 일부로 수행됩니다. 개발자 또는 사용자의 경우 일반적으로 [설치 관리자](https://dotnet.microsoft.com/download/dotnet-core)를 사용하는 것이 좋습니다.
+.NET용 macOS 설치 관리자 대신 SDK와 런타임을 다운로드하여 수동으로 설치할 수 있습니다. 수동 설치는 일반적으로 연속 통합 테스트의 일부로 수행됩니다. 개발자 또는 사용자의 경우 일반적으로 [설치 관리자](https://dotnet.microsoft.com/download/dotnet)를 사용하는 것이 좋습니다.
 
 .NET SDK를 설치하면 해당 런타임을 설치할 필요가 없습니다. 먼저, 다음 사이트 중 한 곳에서 SDK 또는 런타임의 **이진** 릴리스를 다운로드합니다.
 
 - ✔️ [.NET 5.0 다운로드](https://dotnet.microsoft.com/download/dotnet/5.0)
-- ✔️ [.NET Core 3.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- ✔️ [.NET Core 2.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.1)
-- [모든 .NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
+- ✔️ [.NET Core 3.1 다운로드](https://dotnet.microsoft.com/download/dotnet/3.1)
+- ✔️ [.NET Core 2.1 다운로드](https://dotnet.microsoft.com/download/dotnet/2.1)
+- [모든 .NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet)
 
 그런 다음, 다운로드된 파일을 추출하고 `export` 명령을 사용하여 .NET에서 사용된 변수를 설정하고 .NET이 PATH에 있는지 확인합니다.
 
@@ -170,7 +170,7 @@ Visual Studio Code는 데스크톱에서 실행되는 강력한 경량 소스 �
 Visual Studio Code에 Visual Studio처럼 자동화된 .NET 설치 관리자가 포함되지 않은 경우 간편하게 .NET 지원을 추가할 수 있습니다.
 
 01. [Visual Studio Code를 다운로드하여 설치합니다](https://code.visualstudio.com/Download).
-01. [.NET SDK를 다운로드하여 설치합니다](https://dotnet.microsoft.com/download/dotnet-core).
+01. [.NET SDK를 다운로드하여 설치합니다](https://dotnet.microsoft.com/download/dotnet).
 01. [Visual Studio Code Marketplace에서 C# 확장을 설치합니다](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 ## <a name="install-with-bash-automation"></a>배시 자동화를 사용하여 설치

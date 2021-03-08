@@ -3,12 +3,12 @@ title: 제거 도구
 description: .NET SDK 및 런타임의 제어된 정리를 사용하도록 설정하는 단계별 도구인 .NET 제거 도구에 대한 개요입니다.
 author: sfoslund
 ms.date: 01/28/2021
-ms.openlocfilehash: a3819b11af94d4fec3ecb072ec3d5ddf6de706c9
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 9afcac150659a8f58a04f4c254b0a0219af42e74
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216319"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105436"
 ---
 # <a name="net-uninstall-tool"></a>.NET 제거 도구
 
@@ -215,7 +215,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 * **`--force`** 는 Visual Studio에서 사용할 수 있는 버전을 강제로 제거합니다.
 
-메모:
+참고:
 
 1. 정확히 `--sdk`, `--runtime`, `--aspnet-runtime` 및 `--hosting-bundle` 중 하나가 필요합니다.
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` 및 `[<VERSION>...]`은 배타적입니다.
@@ -269,7 +269,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
   
 * **`--force`** 는 Visual Studio 또는 SDK에서 사용할 수 있는 버전을 강제로 제거합니다.
 
-메모:
+참고:
 
 1. 정확히 `--sdk` 및 `--runtime` 중 하나가 필요합니다.
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` 및 `[<VERSION>...]`은 배타적입니다.
@@ -302,8 +302,8 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 > [!CAUTION]
 > 다음 사항에 주의하세요.
 >
->- 이 도구는 머신의 `global.json` 파일에 필요한 .NET SDK 버전을 제거할 수 있습니다. .NET SDK는 [.NET 다운로드](https://dotnet.microsoft.com/download/dotnet-core) 페이지에서 다시 설치할 수 있습니다.
->- 이 도구는 머신의 프레임워크 종속 애플리케이션에 필요한 .NET 런타임 버전을 제거할 수 있습니다. .NET 런타임은 [.NET 다운로드](https://dotnet.microsoft.com/download/dotnet-core) 페이지에서 다시 설치할 수 있습니다.
+>- 이 도구는 머신의 `global.json` 파일에 필요한 .NET SDK 버전을 제거할 수 있습니다. .NET SDK는 [.NET 다운로드](https://dotnet.microsoft.com/download/dotnet) 페이지에서 다시 설치할 수 있습니다.
+>- 이 도구는 머신의 프레임워크 종속 애플리케이션에 필요한 .NET 런타임 버전을 제거할 수 있습니다. .NET 런타임은 [.NET 다운로드](https://dotnet.microsoft.com/download/dotnet) 페이지에서 다시 설치할 수 있습니다.
 >- 이 도구는 Visual Studio에서 사용하는 .NET SDK 및 런타임 버전을 제거할 수 있습니다. Visual Studio 설치를 중단하는 경우 Visual Studio 설치 관리자에서 "복구"를 실행하여 작업 상태로 돌아갑니다.
 
 기본적으로 모든 명령은 Visual Studio 또는 기타 SDK에서 필요할 수 있는 .NET SDK 및 런타임을 유지합니다. 이러한 SDK 및 런타임은 명시적으로 인수로 나열하거나 `--force` 옵션을 사용하여 제거할 수 있습니다.
@@ -397,7 +397,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--force`** 는 Visual Studio에서 사용할 수 있는 버전을 강제로 제거합니다.
 
-메모:
+참고:
 
 1. 정확히 `--sdk`, `--runtime`, `--aspnet-runtime` 및 `--hosting-bundle` 중 하나가 필요합니다.
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` 및 `[<VERSION>...]`은 배타적입니다.
@@ -453,7 +453,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
   
 * **`--force`** 는 Visual Studio 또는 SDK에서 사용할 수 있는 버전을 강제로 제거합니다.
 
-메모:
+참고:
 
 1. 정확히 `--sdk` 및 `--runtime` 중 하나가 필요합니다.
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` 및 `[<VERSION>...]`은 배타적입니다.

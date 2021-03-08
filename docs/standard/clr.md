@@ -17,12 +17,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: 917649475271c288516f9eb0913a0959601427af
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 89aa77f7704a1d8caba12369cb82fff131a8aab0
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823877"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103649"
 ---
 # <a name="common-language-runtime-clr-overview"></a>CLR(공용 언어 런타임) 개요
 
@@ -63,7 +63,7 @@ ms.locfileid: "94823877"
 
 ## <a name="clr-versions"></a>CLR 버전
 
-.NET Core 및 .NET 5 이상 릴리스는 단일 제품 버전을 포함합니다. 즉, 별도의 CLR 버전이 없습니다. .NET Core 버전 목록은 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core)를 참조하세요.
+.NET Core 및 .NET 5 이상 릴리스는 단일 제품 버전을 포함합니다. 즉, 별도의 CLR 버전이 없습니다. .NET Core 버전 목록은 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet)를 참조하세요.
 
 그러나 .NET Framework 버전 번호는 포함하는 CLR 버전 번호와 반드시 일치하지는 않습니다. .NET Framework 버전 및 해당 CLR 버전 목록은 [.NET Framework 버전 및 종속성](../framework/migration-guide/versions-and-dependencies.md)을 참조하세요.
 

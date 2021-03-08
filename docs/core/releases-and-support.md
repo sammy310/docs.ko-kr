@@ -5,12 +5,12 @@ ms.date: 10/07/2020
 ms.topic: overview
 ms.author: tdykstra
 author: tdykstra
-ms.openlocfilehash: 896b88cbf1f7f31d2d26d69ec7d219da6b27ceff
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 65c13239f32a0166681d7a731de84a973a627f29
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "97866399"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104186"
 ---
 # <a name="releases-and-support-for-net-core-and-net-5"></a>.NET Core 및 .NET 5의 릴리스와 지원
 
@@ -93,7 +93,7 @@ LTS와 현재 릴리스가 번갈아 제공되므로 이전 릴리스가 이후 
 
 앱을 안전하고 지원되는 상태로 유지하기 위해 정기적으로 서비스 업데이트를 설치해야 합니다. 예를 들어 .NET Core 3.1의 최신 서비스 업데이트가 3.1.8인데 3.1.9가 제공되는 경우 3.1.8은 더 이상 최신이 아닙니다. 그러면 3.1에 대해 지원되는 서비스 수준은 3.1.9입니다.
 
-각 주 및 부 버전의 최신 서비스 업데이트에 대한 자세한 내용은 [.NET 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-core)를 참조하세요.
+각 주 및 부 버전의 최신 서비스 업데이트에 대한 자세한 내용은 [.NET 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet)를 참조하세요.
 
 ## <a name="end-of-support"></a>지원 종료
 

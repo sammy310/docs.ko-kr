@@ -5,12 +5,12 @@ author: adegeo
 ms.author: adegeo
 ms.date: 09/29/2020
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6ad2b96e668c52ee80b707e31a63eac2433f3c9e
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: f196f5cfe914fe7ecddec61d2abf618c21968bbd
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756093"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105156"
 ---
 # <a name="get-started-with-net"></a>.NET 시작
 
@@ -20,9 +20,9 @@ ms.locfileid: "91756093"
 
 ## <a name="create-an-application"></a>애플리케이션 만들기
 
-먼저 컴퓨터에 [.NET SDK](https://dotnet.microsoft.com/download/dotnet-core)를 다운로드하여 설치합니다.
+먼저 컴퓨터에 [.NET SDK](https://dotnet.microsoft.com/download/dotnet)를 다운로드하여 설치합니다.
 
-다음으로 **PowerShell**, **명령 프롬프트** 또는 **Bash**와 같은 터미널을 엽니다. 다음 `dotnet` 명령을 입력하여 C# 애플리케이션을 만들고 실행합니다.
+다음으로 **PowerShell**, **명령 프롬프트** 또는 **Bash** 와 같은 터미널을 엽니다. 다음 `dotnet` 명령을 입력하여 C# 애플리케이션을 만들고 실행합니다.
 
 ```dotnetcli
 dotnet new console --output sample1

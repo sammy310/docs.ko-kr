@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: WPF 및 WinForms 앱에 대해 OutputType이 WinExe로 설정됨'
 description: Windows Forms 앱에 대해 OutputType이 WinExe로 자동으로 설정되는 .NET SDK 5.0.100의 호환성이 손상되는 변경에 대해 알아봅니다.
-ms.date: 09/18/2020
-ms.openlocfilehash: 38d9b910374f9e44f7e35296808930c6a6d45f0d
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.date: 02/08/2021
+ms.openlocfilehash: 565007e9ce6be289456afc9facbd4c555a1110bd
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100431466"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256181"
 ---
 # <a name="outputtype-set-to-winexe-for-wpf-and-winforms-apps"></a>WPF 및 WinForms 앱에 대해 OutputType이 WinExe로 설정됨
 

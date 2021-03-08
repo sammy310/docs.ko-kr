@@ -4,16 +4,16 @@ description: 이 고급 자습서에서는 nullable 참조 형식을 소개합�
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: bd575b226a2ff61e938719b064ff5ede0cf66013
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 9d332e5331e8c9c7c54078460ec7c31957d7e38d
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805182"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103688"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>자습서: nullable 참조 형식 및 nullable이 아닌 참조 형식을 사용하여 디자인 의도를 보다 명확하게 표현
 
-C# 8.0에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한 방식으로 참조 형식을 보완하는 [nullable 참조 형식](../nullable-references.md)이 도입되었습니다. 형식에 `?`를 추가하여 변수를 **nullable 참조 형식**으로 선언합니다. 예를 들어 `string?`는 nullable `string`을 나타냅니다. 이러한 새 형식을 사용하여 디자인 의도를 보다 명확하게 표현할 수 있습니다. ‘항상 값이 있어야 하는’ 변수도 있고, ‘값이 누락될 수 있는’ 변수도 있습니다.  
+C# 8.0에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한 방식으로 참조 형식을 보완하는 [nullable 참조 형식](../nullable-references.md)이 도입되었습니다. 형식에 `?`를 추가하여 변수를 **nullable 참조 형식** 으로 선언합니다. 예를 들어 `string?`는 nullable `string`을 나타냅니다. 이러한 새 형식을 사용하여 디자인 의도를 보다 명확하게 표현할 수 있습니다. ‘항상 값이 있어야 하는’ 변수도 있고, ‘값이 누락될 수 있는’ 변수도 있습니다.  
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
@@ -26,7 +26,7 @@ C# 8.0에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일�
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 컴퓨터를 설정해야 합니다. C# 8.0 컴파일러는 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0)에서 사용할 수 있습니다.
+C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 컴퓨터를 설정해야 합니다. C# 8.0 컴파일러는 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 [.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet/3.0)에서 사용할 수 있습니다.
 
 이 자습서에서는 Visual Studio 또는 .NET Core CLI를 포함하여 C# 및 .NET에 익숙하다고 가정합니다.
 
@@ -38,7 +38,7 @@ C# 8.0 컴파일러를 포함하여 .NET Core를 실행하도록 컴퓨터를 �
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>애플리케이션을 만들고 nullable 참조 형식을 사용하도록 설정
 
-Visual Studio 또는 `dotnet new console`을 사용하여 명령줄에서 새로운 콘솔 애플리케이션을 만듭니다. 애플리케이션 이름을 `NullableIntroduction`으로 지정합니다. 애플리케이션을 만든 후에는 전체 프로젝트가 **활성화된 nullable 주석 컨텍스트**에서 컴파일하도록 지정해야 합니다. *.csproj* 파일을 열고 `Nullable` 요소에 `PropertyGroup` 요소를 추가합니다. 해당 값을 `enable`로 설정합니다. C# 8.0 프로젝트에서도 **nullable 참조 형식** 기능을 옵트인해야 합니다. 기능이 켜지고 나면 기존 참조 변수 선언이 **nullable이 아닌 참조 형식**으로 바뀌기 때문입니다. 이러한 의사 결정은 기존 코드에 적절한 null 확인이 없다는 문제를 찾는 데는 도움이 되지만, 원래 설계 의도를 정확하게 반영하지 않을 수 있습니다.
+Visual Studio 또는 `dotnet new console`을 사용하여 명령줄에서 새로운 콘솔 애플리케이션을 만듭니다. 애플리케이션 이름을 `NullableIntroduction`으로 지정합니다. 애플리케이션을 만든 후에는 전체 프로젝트가 **활성화된 nullable 주석 컨텍스트** 에서 컴파일하도록 지정해야 합니다. *.csproj* 파일을 열고 `Nullable` 요소에 `PropertyGroup` 요소를 추가합니다. 해당 값을 `enable`로 설정합니다. C# 8.0 프로젝트에서도 **nullable 참조 형식** 기능을 옵트인해야 합니다. 기능이 켜지고 나면 기존 참조 변수 선언이 **nullable이 아닌 참조 형식** 으로 바뀌기 때문입니다. 이러한 의사 결정은 기존 코드에 적절한 null 확인이 없다는 문제를 찾는 데는 도움이 되지만, 원래 설계 의도를 정확하게 반영하지 않을 수 있습니다.
 
 ```xml
 <Nullable>enable</Nullable>
@@ -131,7 +131,7 @@ namespace NullableIntroduction
 
 이전과 마찬가지로, 목록 개체를 null이 아닌 값으로 초기화해야 합니다. 초기화하지 않으면 컴파일러에서 경고를 실행합니다. `AddQuestion`의 두 번째 오버로드에는 null 확인이 없습니다. 왜냐하면 해당 변수를 nullable이 아닌 것으로 선언했기 때문입니다. 해당 값은 `null`일 수 있습니다.
 
-편집기에서 *Program.cs*로 전환하고 `Main`의 내용을 다음 코드 줄로 바꿉니다.
+편집기에서 *Program.cs* 로 전환하고 `Main`의 내용을 다음 코드 줄로 바꿉니다.
 
 [!code-csharp[AddQuestions](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 

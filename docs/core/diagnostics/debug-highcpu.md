@@ -3,12 +3,12 @@ title: 높은 CPU 사용량 디버그 - .NET 코어
 description: .NET Core의 높은 CPU 사용량을 디버깅하는 과정을 안내하는 자습서입니다.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 91f31f77b54398d2f9816890338955bc9b0852e4
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 3ba07f0bb40f8128c091fa427b957d824c07bcd5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437834"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105364"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>.NET 코어에서 높은 CPU 사용량 디버그
 
@@ -30,7 +30,7 @@ ms.locfileid: "96437834"
 
 이 자습서에서는 다음을 사용합니다.
 
-- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 이상 버전.
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet) 이상 버전.
 - 시나리오를 트리거하는 [샘플 디버그 대상](/samples/dotnet/samples/diagnostic-scenarios).
 - 프로세스를 나열하고 프로필을 생성하는 [dotnet-trace](dotnet-trace.md).
 - CPU 사용량을 모니터링하는 [dotnet-counters](dotnet-counters.md).

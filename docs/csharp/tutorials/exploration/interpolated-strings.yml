@@ -10,12 +10,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 072c232613073c10caf6f8927154ce8f24c19af5
-  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+  ms.openlocfilehash: 76af703567c7f6aecc409becfeb4bb0f580092e1
+  ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/17/2020
-  ms.locfileid: "88268012"
+  ms.lasthandoff: 03/04/2021
+  ms.locfileid: "102103168"
 items:
 - durationInMinutes: 2
   content: >
@@ -23,7 +23,7 @@ items:
 - title: 보간된 문자열 만들기
   durationInMinutes: 2
   content: >
-    대화형 창에서 다음 코드를 실행합니다. **포커스 모드 시작** 단추를 선택합니다. 그런 다음, 대화형 창에 다음 코드 블록을 입력하고(`<name>`을 사용자 이름으로 바꿈) **실행**을 선택합니다.
+    대화형 창에서 다음 코드를 실행합니다. **포커스 모드 시작** 단추를 선택합니다. 그런 다음, 대화형 창에 다음 코드 블록을 입력하고(`<name>`을 사용자 이름으로 바꿈) **실행** 을 선택합니다.
 
 
     ```csharp
@@ -35,7 +35,7 @@ items:
     ```
 
 
-    코드를 실행하면 인사말에 사용자 이름이 포함된 문자열이 **출력**에 표시됩니다. <xref:System.Console.WriteLine%2A> 메서드 호출의 문자열 인수는 ‘보간된 문자열 식’입니다. 이는 포함 코드가 들어있는 문자열에서 단일 문자열(*결과 문자열*이라고 함)을 생성할 수 있게 해주는 일종의 템플릿입니다. 보간된 문자열 식은 문자열에 값을 삽입하거나 여러 개의 문자열을 연결(함께 조인)하는 데 특히 유용합니다.
+    코드를 실행하면 인사말에 사용자 이름이 포함된 문자열이 **출력** 에 표시됩니다. <xref:System.Console.WriteLine%2A> 메서드 호출의 문자열 인수는 ‘보간된 문자열 식’입니다. 이는 포함 코드가 들어있는 문자열에서 단일 문자열(*결과 문자열* 이라고 함)을 생성할 수 있게 해주는 일종의 템플릿입니다. 보간된 문자열 식은 문자열에 값을 삽입하거나 여러 개의 문자열을 연결(함께 조인)하는 데 특히 유용합니다.
 
 
     위의 예제에는 모든 보간된 문자열 식이 포함해야 하는 두 가지 요소가 포함됩니다.
@@ -81,7 +81,7 @@ items:
 - title: 보간 식의 서식 제어
   durationInMinutes: 5
   content: >
-    이전 단계에서는 형식이 잘못 지정된 두 개의 문자열을 결과 문자열에 삽입했습니다. 하나는 날짜만 적절한 날짜 및 시간 값이었습니다. 두 번째는 통화 단위를 나타내지 않는 가격이었습니다. 두 가지 문제는 쉽게 해결할 수 있습니다. 문자열 보간을 통해 특정 유형의 형식을 제어하는 *형식 문자열*을 지정할 수 있습니다. 다음 줄에 표시된 것처럼 이전 예제의 `Console.WriteLine`에 대한 호출을 수정하여 날짜 및 가격 식의 형식 문자열을 포함시킵니다.
+    이전 단계에서는 형식이 잘못 지정된 두 개의 문자열을 결과 문자열에 삽입했습니다. 하나는 날짜만 적절한 날짜 및 시간 값이었습니다. 두 번째는 통화 단위를 나타내지 않는 가격이었습니다. 두 가지 문제는 쉽게 해결할 수 있습니다. 문자열 보간을 통해 특정 유형의 형식을 제어하는 *형식 문자열* 을 지정할 수 있습니다. 다음 줄에 표시된 것처럼 이전 예제의 `Console.WriteLine`에 대한 호출을 수정하여 날짜 및 가격 식의 형식 문자열을 포함시킵니다.
 
 
     ```csharp
@@ -91,7 +91,7 @@ items:
     ```
 
 
-    콜론(“:”)과 형식 문자열을 사용하여 보간 식에 따라 형식 문자열을 지정합니다. "d"는 간단한 날짜 형식을 나타내는 [표준 날짜 및 시간 형식 문자열](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)입니다. "C2"는 소수점 뒤 두 자릿수를 포함하는 통화 값으로 숫자를 나타내는 [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)입니다.
+    콜론(“:”)과 형식 문자열을 사용하여 보간 식에 따라 형식 문자열을 지정합니다. "d"는 간단한 날짜 형식을 나타내는 [표준 날짜 및 시간 형식 문자열](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)입니다. "C2"는 소수점 뒤 두 자릿수를 포함하는 통화 값으로 숫자를 나타내는 [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md#currency-format-specifier-c)입니다.
 
 
     .NET 라이브러리의 많은 형식은 미리 정의된 형식 문자열 집합을 지원합니다. 여기에는 모든 숫자 형식과 날짜 및 시간 형식이 포함됩니다. 형식 문자열을 지원하는 형식의 전체 목록을 보려면 [.NET의 서식 지정 형식](../../../standard/base-types/formatting-types.md) 문서의 [형식 문자열 및 .NET 클래스 라이브러리 형식](../../../standard/base-types/formatting-types.md#format-strings-and-net-types)을 참조하세요.

@@ -4,12 +4,12 @@ description: .NET 도구를 실행할 때 발생하는 일반적인 문제와 �
 author: kdollard
 ms.topic: troubleshooting
 ms.date: 02/14/2020
-ms.openlocfilehash: c5bac4c273cdddae609657c65448e3cc4bd3579d
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 9cf0320ec5b5d6f317a4ef7f9052c0068b3ad8e5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633910"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104091"
 ---
 # <a name="troubleshoot-net-tool-usage-issues"></a>.NET 도구 사용 문제 해결
 
@@ -94,7 +94,7 @@ dotnet --list-runtimes
 dotnet --info
 ```
 
-도구가 현재 설치된 런타임 버전을 지원해야 한다고 생각되는 경우, 도구 작성자에게 버전 번호 또는 다중 대상의 업데이트가 가능한지 문의할 수 있습니다. 작성자가 업데이트된 버전 번호로 도구 패키지를 다시 컴파일하고 NuGet에 다시 게시하면 복사본을 업데이트할 수 있습니다. 업데이트가 가능할 때까지 가장 빠른 해결 방법은 실행하려는 도구에서 작동하는 런타임 버전을 설치하는 것입니다. 특정 .NET 런타임 버전을 다운로드하려면 [.NET 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-core)로 이동합니다.
+도구가 현재 설치된 런타임 버전을 지원해야 한다고 생각되는 경우, 도구 작성자에게 버전 번호 또는 다중 대상의 업데이트가 가능한지 문의할 수 있습니다. 작성자가 업데이트된 버전 번호로 도구 패키지를 다시 컴파일하고 NuGet에 다시 게시하면 복사본을 업데이트할 수 있습니다. 업데이트가 가능할 때까지 가장 빠른 해결 방법은 실행하려는 도구에서 작동하는 런타임 버전을 설치하는 것입니다. 특정 .NET 런타임 버전을 다운로드하려면 [.NET 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet)로 이동합니다.
 
 기본 위치가 아닌 다른 위치에 .NET SDK를 설치하는 경우 환경 변수 `DOTNET_ROOT`를 `dotnet` 실행 파일이 있는 디렉터리로 설정해야 합니다.
 

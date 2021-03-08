@@ -3,12 +3,12 @@ title: ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
 description: ML.NET CLI(명령줄 인터페이스) 도구를 설치, 업그레이드, 다운그레이드 및 제거하는 방법에 대해 알아봅니다.
 ms.date: 06/08/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 13203246411deadf3ab13a5eba0d2c8e6e9027c5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a99ffa30dcbacba3341125fd0e37e617e0f4cd1e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602273"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103948"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET CLI(명령줄 인터페이스) 도구를 설치하는 방법
 
@@ -21,7 +21,7 @@ ML.NET CLI는 AutoML(자동화된 Machine Learning) 및 학습 데이터 세트�
 
 ## <a name="pre-requisites"></a>필수 구성 요소
 
-- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet/3.1)
 
 - (선택 사항) [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 
@@ -94,7 +94,7 @@ ML.NET CLI는 `System.CommandLine`을 기반으로 하므로 탭 완성을 기�
 
 ![이미지](./media/cli-tab-completion.gif)
 
-'탭 기반 자동 완성'(매개 변수 제안)은 *Windows PowerShell* 및 *macOS/Linux bash*에서 실행되나 *Windows CMD*에서는 작동하지 않습니다.
+'탭 기반 자동 완성'(매개 변수 제안)은 *Windows PowerShell* 및 *macOS/Linux bash* 에서 실행되나 *Windows CMD* 에서는 작동하지 않습니다.
 
 현재 미리 보기 버전에서 이를 사용하려면 최종 사용자가 아래에서 설명한 대로 셸마다 한 번씩 몇 가지 단계를 수행해야 합니다. 이 후에는 ML.NET CLI처럼 `System.CommandLine`을 사용하여 작성된 모든 앱에 완성이 적용됩니다.
 

@@ -3,12 +3,12 @@ title: '자습서: .NET 로컬 도구 설치 및 사용'
 description: .NET 도구를 로컬 도구로 설치하고 사용하는 방법을 알아봅니다.
 ms.topic: tutorial
 ms.date: 12/11/2020
-ms.openlocfilehash: f32a5c4091ff63c7c50cf339dddd89b78e543c4c
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 29c561d27aad99c0383fc8e0bb5a4543ae65705a
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512465"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104130"
 ---
 # <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a>자습서: .NET CLI를 사용하여 .NET 로컬 도구 설치 및 사용
 
@@ -21,7 +21,7 @@ ms.locfileid: "97512465"
 * [이 시리즈의 첫 번째 자습서](global-tools-how-to-create.md)를 완료합니다.
 * .NET Core 2.1 런타임을 설치합니다.
 
-  이 자습서에서는 .NET Core 2.1을 대상으로 하는 도구를 설치하고 사용하므로 해당 런타임이 컴퓨터에 설치되어 있어야 합니다. 2\.1 런타임을 설치하려면 [.NET Core 2.1 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-core/2.1)로 이동하여 **앱 실행 - 런타임** 열에서 런타임 설치 링크를 찾습니다.
+  이 자습서에서는 .NET Core 2.1을 대상으로 하는 도구를 설치하고 사용하므로 해당 런타임이 컴퓨터에 설치되어 있어야 합니다. 2\.1 런타임을 설치하려면 [.NET Core 2.1 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet/2.1)로 이동하여 **앱 실행 - 런타임** 열에서 런타임 설치 링크를 찾습니다.
 
 ## <a name="create-a-manifest-file"></a>매니페스트 파일 만들기
 

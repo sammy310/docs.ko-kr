@@ -2,12 +2,12 @@
 title: 문자열 보간 - C# 자습서
 description: 이 자습서에서는 C# 문자열 보간 기능을 사용하여 더 큰 문자열에 형식이 지정된 식을 포함하는 방법을 보여 줍니다.
 ms.date: 10/23/2018
-ms.openlocfilehash: d1b78670361e8b333499d12b68c0364ad9e40a85
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: a80f6d6b118a9dfc4e9ada2122dfc374a137fb4e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796056"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103207"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>문자열 보간을 사용하여 형식이 지정된 문자열 생성
 
@@ -17,7 +17,7 @@ ms.locfileid: "82796056"
 
 ## <a name="create-an-interpolated-string"></a>보간된 문자열 만들기
 
-*interpolated*라는 디렉터리를 만듭니다. 현재 디렉터리로 만들고 콘솔 창에서 다음 명령을 실행합니다.
+*interpolated* 라는 디렉터리를 만듭니다. 현재 디렉터리로 만들고 콘솔 창에서 다음 명령을 실행합니다.
 
 ```dotnetcli
 dotnet new console
@@ -25,14 +25,14 @@ dotnet new console
 
 이 명령은 현재 디렉터리에 새 .NET Core 콘솔 애플리케이션을 만듭니다.
 
-원하는 편집기에서 *Program.cs*를 열고 `Console.WriteLine("Hello World!");` 줄을 다음 코드로 바꿉니다. 여기서 `<name>`을 사용자 이름으로 바꿉니다.
+원하는 편집기에서 *Program.cs* 를 열고 `Console.WriteLine("Hello World!");` 줄을 다음 코드로 바꿉니다. 여기서 `<name>`을 사용자 이름으로 바꿉니다.
 
 ```csharp
 var name = "<name>";
 Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 ```
 
-콘솔 창에 `dotnet run`을 입력하여 이 코드를 사용해 봅니다. 프로그램을 실행하면 인사말에 사용자 이름이 포함된 단일 문자열이 표시됩니다. <xref:System.Console.WriteLine%2A> 메서드 호출에 포함된 문자열은 *보간된 문자열 식*입니다. 이는 포함 코드가 들어있는 문자열에서 단일 문자열(*결과 문자열*이라고 함)을 생성할 수 있게 해주는 일종의 템플릿입니다. 보간된 문자열은 문자열에 값을 삽입하거나 문자열을 연결(함께 조인)하는 데 특히 유용합니다.
+콘솔 창에 `dotnet run`을 입력하여 이 코드를 사용해 봅니다. 프로그램을 실행하면 인사말에 사용자 이름이 포함된 단일 문자열이 표시됩니다. <xref:System.Console.WriteLine%2A> 메서드 호출에 포함된 문자열은 *보간된 문자열 식* 입니다. 이는 포함 코드가 들어있는 문자열에서 단일 문자열(*결과 문자열* 이라고 함)을 생성할 수 있게 해주는 일종의 템플릿입니다. 보간된 문자열은 문자열에 값을 삽입하거나 문자열을 연결(함께 조인)하는 데 특히 유용합니다.
 
 다음 간단한 예제에서는 모든 보간된 문자열이 포함해야 하는 두 가지 요소를 보여 줍니다.
 
@@ -97,13 +97,13 @@ public class Program
 
 ## <a name="control-the-formatting-of-interpolation-expressions"></a>보간 식의 서식 제어
 
-이전 섹션에서는 형식이 잘못 지정된 두 개의 문자열을 결과 문자열에 삽입했습니다. 하나는 날짜만 적절한 날짜 및 시간 값이었습니다. 두 번째는 통화 단위를 나타내지 않는 가격이었습니다. 두 가지 문제는 쉽게 해결할 수 있습니다. 문자열 보간을 통해 특정 유형의 형식을 제어하는 *형식 문자열*을 지정할 수 있습니다. 다음 줄에 표시된 것처럼 이전 예제의 `Console.WriteLine`에 대한 호출을 수정하여 날짜 및 가격 식의 형식 문자열을 포함시킵니다.
+이전 섹션에서는 형식이 잘못 지정된 두 개의 문자열을 결과 문자열에 삽입했습니다. 하나는 날짜만 적절한 날짜 및 시간 값이었습니다. 두 번째는 통화 단위를 나타내지 않는 가격이었습니다. 두 가지 문제는 쉽게 해결할 수 있습니다. 문자열 보간을 통해 특정 유형의 형식을 제어하는 *형식 문자열* 을 지정할 수 있습니다. 다음 줄에 표시된 것처럼 이전 예제의 `Console.WriteLine`에 대한 호출을 수정하여 날짜 및 가격 식의 형식 문자열을 포함시킵니다.
 
 ```csharp
 Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
 ```
 
-콜론(“:”)과 형식 문자열을 사용하여 보간 식에 따라 형식 문자열을 지정합니다. "d"는 간단한 날짜 형식을 나타내는 [표준 날짜 및 시간 형식 문자열](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)입니다. "C2"는 소수점 뒤 두 자릿수를 포함하는 통화 값으로 숫자를 나타내는 [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)입니다.
+콜론(“:”)과 형식 문자열을 사용하여 보간 식에 따라 형식 문자열을 지정합니다. "d"는 간단한 날짜 형식을 나타내는 [표준 날짜 및 시간 형식 문자열](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)입니다. "C2"는 소수점 뒤 두 자릿수를 포함하는 통화 값으로 숫자를 나타내는 [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md#currency-format-specifier-c)입니다.
 
 .NET 라이브러리의 많은 형식은 미리 정의된 형식 문자열 집합을 지원합니다. 여기에는 모든 숫자 형식과 날짜 및 시간 형식이 포함됩니다. 형식 문자열을 지원하는 형식의 전체 목록을 보려면 [.NET의 서식 지정 형식](../../../standard/base-types/formatting-types.md) 문서의 [형식 문자열 및 .NET 클래스 라이브러리 형식](../../../standard/base-types/formatting-types.md#format-strings-and-net-types)을 참조하세요.
 

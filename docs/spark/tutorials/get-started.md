@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 52d37f3c6b4907361bf0933942d8f1757669be24
-ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
+ms.openlocfilehash: 44859d1c4819853c07454429e8a83f1fbb2e3af5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99426790"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103662"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>자습서: .NET for Apache Spark 시작
 
@@ -33,7 +33,7 @@ ms.locfileid: "99426790"
 
 .NET 앱 빌드를 시작하려면 .NET SDK(소프트웨어 개발 키트)를 다운로드하여 설치해야 합니다.
 
-[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)를 다운로드하여 설치합니다. SDK를 설치하면 `dotnet` 도구 체인이 PATH에 추가됩니다.
+[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet/3.1)를 다운로드하여 설치합니다. SDK를 설치하면 `dotnet` 도구 체인이 PATH에 추가됩니다.
 
 .NET Core SDK를 설치한 후에는 새 명령 프롬프트 또는 터미널을 열고 `dotnet`을 실행합니다.
 

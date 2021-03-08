@@ -3,12 +3,12 @@ title: 클래스 및 개체 - C# 소개 자습서
 description: 첫 번째 C# 프로그램을 만들고 개체 지향 개념을 살펴봅니다.
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: a48e5790d2872ca3074bd7ce06c23412086b00f3
-ms.sourcegitcommit: 65af0f0ad316858882845391d60ef7e303b756e8
+ms.openlocfilehash: 3da445e6c656628fffdb9ef9384fb1a1c556a2cd
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99585366"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255420"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>클래스 및 개체를 사용한 개체 지향 프로그래밍 살펴보기
 
@@ -16,7 +16,7 @@ ms.locfileid: "99585366"
 
 ## <a name="prerequisites"></a>사전 준비 사항
 
-이 자습서에서는 컴퓨터가 로컬 개발용으로 설정되어 있다고 가정합니다. Windows, Linux 또는 macOS에서 .NET CLI를 사용하여 애플리케이션을 만들고, 빌드하고, 실행할 수 있습니다. Windows에서 Visual Studio 2019를 사용할 수 있습니다. 설정 지침은 [로컬 환경 설정](local-environment.md)을 참조하세요.
+이 자습서에서는 컴퓨터가 로컬 개발용으로 설정되어 있다고 가정합니다. Windows, Linux 또는 macOS에서 .NET CLI를 사용하여 애플리케이션을 만들고, 빌드하고, 실행할 수 있습니다. Windows에서 Visual Studio 2019를 사용할 수 있습니다. 설정 지침은 [로컬 환경 설정](../../tour-of-csharp/tutorials/local-environment.md)을 참조하세요.
 
 ## <a name="create-your-application"></a>애플리케이션 만들기
 
@@ -214,7 +214,7 @@ Console.WriteLine(account.GetAccountHistory());
 
 ## <a name="next-steps"></a>다음 단계
 
-잘 알 수 없는 경우 [GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/introduction-to-classes)에서 이 자습서의 소스를 확인할 수 있습니다.
+잘 알 수 없는 경우 [GitHub 리포지토리](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/intro-to-csharp/snippets/introduction-to-classes)에서 이 자습서의 소스를 확인할 수 있습니다.
 
 [개체 지향 프로그래밍](object-oriented-programming.md) 자습서를 계속 진행할 수 있습니다.
 

@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: 89fc5169eee539aa857a9be03c82bf084fe4b60d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 47c38bb0b66a6fc08dd319583847dd83baedcd1e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554438"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102103701"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI를 사용하여 감정 분석
 
@@ -35,7 +35,7 @@ ML.NET CLI는 ML.NET의 일부이며, ML.NET 학습 시 .NET 개발자를 위해
 
 ## <a name="pre-requisites"></a>필수 구성 요소
 
-- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1) 이상
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet/3.1) 이상
 - (선택 사항) [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 - [ML.NET CLI](../how-to-guides/install-ml-net-cli.md)
 
@@ -86,12 +86,12 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
     mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
     ```
 
-    이 명령은 **`mlnet classification` 명령**을 사용합니다.
-    - *classification*의 **ML 작업**
+    이 명령은 **`mlnet classification` 명령** 을 사용합니다.
+    - *classification* 의 **ML 작업**
     - 학습 및 테스트 데이터 세트로 **데이터 세트 파일 `yelp_labelled.txt`** 사용(내부적으로 CLI는 교차 유효성 검증을 사용하거나, 하나는 학습, 그리고 하나는 테스트용으로 두 개의 데이터 세트로 분할함)
     - 여기서 예측하려는 **목표/대상 열**(일반적으로 **'레이블'** )은 **인덱스 1이 있는 열**(즉, 인덱스가 0 기반이므로 두 번째 열)임
     - 이 특정 데이터 세트 파일에는 헤더가 없으므로 열 이름으로 **파일 헤더를 사용하지 않음**
-    - 실험의 **목표 검색/학습 시간**은 **10초**임
+    - 실험의 **목표 검색/학습 시간** 은 **10초** 임
 
     CLI의 출력은 다음과 같이 보입니다.
 
@@ -107,7 +107,7 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
 
     단, 정확도 메트릭으로 측정하는 것으로 충분하지 않은, 특히 테스트 데이터 세트에서 레이블(이 경우에는 0과 1)의 균형이 맞지 않는 경우가 그렇습니다.
 
-    다른 모델을 평가하는 데 사용하는 정확도, AUC, AUCPR, F1-점수 등의 **메트릭에 대한 보다 자세한 정보**와 추가 메트릭은 [ML.NET 메트릭 이해](../resources/metrics.md)를 참조하세요.
+    다른 모델을 평가하는 데 사용하는 정확도, AUC, AUCPR, F1-점수 등의 **메트릭에 대한 보다 자세한 정보** 와 추가 메트릭은 [ML.NET 메트릭 이해](../resources/metrics.md)를 참조하세요.
 
     > [!NOTE]
     > 이 매우 동일한 데이터 세트를 사용해 보고 `--max-exploration-time`에 몇 분을 지정하여(예를 들어, 3분은 180초) 이 데이터 세트에 대한 다른 학습 파이프라인 구성(매우 작음, 1000개 행)에 더 나은 “최적 모델”을 찾게 됩니다.
@@ -136,8 +136,8 @@ Visual Studio 또는 `dotnet run`(.NET Core CLI)으로 생성된 C# 코드를 �
 
     ![CLI로 생성된 VS 솔루션](./media/mlnet-cli/mlnet-cli-solution-explorer.png)
 
-    - Serialize된 ML 모델(.zip 파일)과 데이터 클래스(데이터 모델)를 포함한 생성된 **클래스 라이브러리**는 클래스 라이브러리를 직접 참조하거나(원한다면 코드를 이동하여) 최종 사용자 애플리케이션에서 직접 사용할 수 있습니다.
-    - 생성된 **콘솔 앱**에는 사용자가 검토해야 하는 실행 코드가 있습니다. 그런 다음, 사용자가 예측하려는 최종 사용자 애플리케이션으로 해당 단순 코드(단 몇 개의 줄)를 이동하여 ‘채점 코드’(예측하기 위해 ML 모델을 실행하는 코드)를 재사용합니다.
+    - Serialize된 ML 모델(.zip 파일)과 데이터 클래스(데이터 모델)를 포함한 생성된 **클래스 라이브러리** 는 클래스 라이브러리를 직접 참조하거나(원한다면 코드를 이동하여) 최종 사용자 애플리케이션에서 직접 사용할 수 있습니다.
+    - 생성된 **콘솔 앱** 에는 사용자가 검토해야 하는 실행 코드가 있습니다. 그런 다음, 사용자가 예측하려는 최종 사용자 애플리케이션으로 해당 단순 코드(단 몇 개의 줄)를 이동하여 ‘채점 코드’(예측하기 위해 ML 모델을 실행하는 코드)를 재사용합니다.
 
 1. 클래스 라이브러리 프로젝트에서 **ModelInput.cs** 및 **ModelOutput.cs** 클래스 파일을 엽니다. 이러한 클래스는 데이터를 보유하기 위해 사용하는 ‘데이터 클래스’ 또는 POCO 클래스임을 알게 됩니다. '상용구 코드’지만 데이터 세트에 수십 또는 수백 개의 열이 있는 경우 생성하는 것이 유용합니다.
     - `ModelInput` 클래스는 데이터 세트에서 데이터를 읽을 때 사용됩니다.
