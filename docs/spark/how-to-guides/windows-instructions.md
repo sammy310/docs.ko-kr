@@ -4,52 +4,52 @@ description: Windows에서 .NET for Apache Spark 애플리케이션을 빌드하
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: 8f197c0050d149ed03e328e72868ad4ba2f728c1
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: d9e1721fbb13d963c3a690ded3e26885f268bc72
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688113"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106854"
 ---
-# <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a><span data-ttu-id="c7543-103">Windows에서 .NET for Apache Spark 애플리케이션을 빌드하는 방법</span><span class="sxs-lookup"><span data-stu-id="c7543-103">Learn how to build your .NET for Apache Spark application on Windows</span></span>
+# <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a><span data-ttu-id="8ebaf-103">Windows에서 .NET for Apache Spark 애플리케이션을 빌드하는 방법</span><span class="sxs-lookup"><span data-stu-id="8ebaf-103">Learn how to build your .NET for Apache Spark application on Windows</span></span>
 
-<span data-ttu-id="c7543-104">이 문서에서는 Windows에서 .NET for Apache Spark 애플리케이션을 빌드하는 방법을 배웁니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-104">This article teaches you how to build your .NET for Apache Spark applications on Windows.</span></span>
+<span data-ttu-id="8ebaf-104">이 문서에서는 Windows에서 .NET for Apache Spark 애플리케이션을 빌드하는 방법을 배웁니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-104">This article teaches you how to build your .NET for Apache Spark applications on Windows.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="c7543-105">사전 요구 사항</span><span class="sxs-lookup"><span data-stu-id="c7543-105">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="8ebaf-105">사전 요구 사항</span><span class="sxs-lookup"><span data-stu-id="8ebaf-105">Prerequisites</span></span>
 
-<span data-ttu-id="c7543-106">다음 사전 요구 사항이 모두 있는 경우 [빌드](#build) 단계로 건너뛰세요.</span><span class="sxs-lookup"><span data-stu-id="c7543-106">If you already have all of the following prerequisites, skip to the [build](#build) steps.</span></span>
+<span data-ttu-id="8ebaf-106">다음 사전 요구 사항이 모두 있는 경우 [빌드](#build) 단계로 건너뛰세요.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-106">If you already have all of the following prerequisites, skip to the [build](#build) steps.</span></span>
 
-  1. <span data-ttu-id="c7543-107">**[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** 를 다운로드하고 설치합니다. SDK를 설치하면 경로에 `dotnet` 도구 체인이 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-107">Download and install the **[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** - installing the SDK will add the `dotnet` toolchain to your path.</span></span> <span data-ttu-id="c7543-108">.NET Core 2.1, 2.2, 3.1이 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-108">.NET Core 2.1, 2.2 and 3.1 are supported.</span></span>
-  2. <span data-ttu-id="c7543-109">**[Visual Studio 2019](https://www.visualstudio.com/downloads/)** (버전 16.3 이상)를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-109">Install **[Visual Studio 2019](https://www.visualstudio.com/downloads/)** (Version 16.3 or later).</span></span> <span data-ttu-id="c7543-110">Community 버전은 완전 무료입니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-110">The Community version is completely free.</span></span> <span data-ttu-id="c7543-111">설치를 구성할 때 적어도 다음 구성 요소를 포함시킵니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-111">When configuring your installation, include these components at minimum:</span></span>
-     * <span data-ttu-id="c7543-112">.NET 데스크톱 개발</span><span class="sxs-lookup"><span data-stu-id="c7543-112">.NET desktop development</span></span>
-       * <span data-ttu-id="c7543-113">필요한 모든 구성 요소</span><span class="sxs-lookup"><span data-stu-id="c7543-113">All Required Components</span></span>
-         * <span data-ttu-id="c7543-114">.NET Framework 4.6.1 개발 도구</span><span class="sxs-lookup"><span data-stu-id="c7543-114">.NET Framework 4.6.1 Development Tools</span></span>
-     * <span data-ttu-id="c7543-115">.NET Core 플랫폼 간 개발</span><span class="sxs-lookup"><span data-stu-id="c7543-115">.NET Core cross-platform development</span></span>
-       * <span data-ttu-id="c7543-116">필요한 모든 구성 요소</span><span class="sxs-lookup"><span data-stu-id="c7543-116">All Required Components</span></span>
-  3. <span data-ttu-id="c7543-117">**[Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)** 을 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-117">Install **[Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)**.</span></span>
-     - <span data-ttu-id="c7543-118">운영 체제에 적합한 버전을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-118">Select the appropriate version for your operating system.</span></span> <span data-ttu-id="c7543-119">예를 들어 Windows x64 머신의 경우 *jdk-8u201-windows-x64.exe* 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-119">For example, *jdk-8u201-windows-x64.exe* for Windows x64 machine.</span></span>
-     - <span data-ttu-id="c7543-120">설치 프로그램을 사용하여 설치하고 명령줄에서 `java`를 실행할 수 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-120">Install using the installer and verify you are able to run `java` from your command line.</span></span>
-  4. <span data-ttu-id="c7543-121">**[Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)** 를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-121">Install **[Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)**.</span></span>
-     - <span data-ttu-id="c7543-122">[Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip)을 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-122">Download [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip).</span></span>
-     - <span data-ttu-id="c7543-123">로컬 디렉터리로 추출합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-123">Extract to a local directory.</span></span> <span data-ttu-id="c7543-124">예를 들어 \*C:\bin\apache-maven-3.6.0\*으로 추출합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-124">For example, \*C:\bin\apache-maven-3.6.0\*.</span></span>
-     - <span data-ttu-id="c7543-125">Apache Maven을 [PATH 환경 변수](https://www.java.com/en/download/help/path.xml)에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-125">Add Apache Maven to your [PATH environment variable](https://www.java.com/en/download/help/path.xml).</span></span> <span data-ttu-id="c7543-126">예를 들어 *C:\bin\apache-maven-3.6.0\bin* 과 같이 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-126">For example, *C:\bin\apache-maven-3.6.0\bin*.</span></span>
-     - <span data-ttu-id="c7543-127">명령줄에서 `mvn`을 실행할 수 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-127">Verify you are able to run `mvn` from your command-line.</span></span>
-  5. <span data-ttu-id="c7543-128">**[Apache Spark 2.3+](https://spark.apache.org/downloads.html)** 를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-128">Install **[Apache Spark 2.3+](https://spark.apache.org/downloads.html)**.</span></span>
-     - <span data-ttu-id="c7543-129">[Apache Spark 2.3+](https://spark.apache.org/downloads.html)를 다운로드하고 [7-zip](https://www.7-zip.org/)을 사용하여 로컬 폴더(예: *C:\bin\spark-3.0.1-bin-hadoop2.7\*)에 추출합니다. 지원되는 Spark 버전은 2.3.* , 2.4.0, 2.4.1, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7, 3.0.0 및 3.0.1입니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-129">Download [Apache Spark 2.3+](https://spark.apache.org/downloads.html) and extract it into a local folder (for example, *C:\bin\spark-3.0.1-bin-hadoop2.7\*) using [7-zip](https://www.7-zip.org/). (The supported spark versions are 2.3.*, 2.4.0, 2.4.1, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7, 3.0.0 and 3.0.1)</span></span>
-     - <span data-ttu-id="c7543-130">[새 환경 변수](https://www.java.com/en/download/help/path.xml) `SPARK_HOME`을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-130">Add a [new environment variable](https://www.java.com/en/download/help/path.xml) `SPARK_HOME`.</span></span> <span data-ttu-id="c7543-131">예를 들어 \*C:\bin\spark-3.0.1-bin-hadoop2.7\*과 같이 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-131">For example, \*C:\bin\spark-3.0.1-bin-hadoop2.7\*.</span></span>
+  1. <span data-ttu-id="8ebaf-107">**[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet/3.1)** 를 다운로드하고 설치합니다. SDK를 설치하면 경로에 `dotnet` 도구 체인이 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-107">Download and install the **[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet/3.1)** - installing the SDK will add the `dotnet` toolchain to your path.</span></span> <span data-ttu-id="8ebaf-108">.NET Core 2.1, 2.2, 3.1이 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-108">.NET Core 2.1, 2.2 and 3.1 are supported.</span></span>
+  2. <span data-ttu-id="8ebaf-109">**[Visual Studio 2019](https://www.visualstudio.com/downloads/)** (버전 16.3 이상)를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-109">Install **[Visual Studio 2019](https://www.visualstudio.com/downloads/)** (Version 16.3 or later).</span></span> <span data-ttu-id="8ebaf-110">Community 버전은 완전 무료입니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-110">The Community version is completely free.</span></span> <span data-ttu-id="8ebaf-111">설치를 구성할 때 적어도 다음 구성 요소를 포함시킵니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-111">When configuring your installation, include these components at minimum:</span></span>
+     * <span data-ttu-id="8ebaf-112">.NET 데스크톱 개발</span><span class="sxs-lookup"><span data-stu-id="8ebaf-112">.NET desktop development</span></span>
+       * <span data-ttu-id="8ebaf-113">필요한 모든 구성 요소</span><span class="sxs-lookup"><span data-stu-id="8ebaf-113">All Required Components</span></span>
+         * <span data-ttu-id="8ebaf-114">.NET Framework 4.6.1 개발 도구</span><span class="sxs-lookup"><span data-stu-id="8ebaf-114">.NET Framework 4.6.1 Development Tools</span></span>
+     * <span data-ttu-id="8ebaf-115">.NET Core 플랫폼 간 개발</span><span class="sxs-lookup"><span data-stu-id="8ebaf-115">.NET Core cross-platform development</span></span>
+       * <span data-ttu-id="8ebaf-116">필요한 모든 구성 요소</span><span class="sxs-lookup"><span data-stu-id="8ebaf-116">All Required Components</span></span>
+  3. <span data-ttu-id="8ebaf-117">**[Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)** 을 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-117">Install **[Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)**.</span></span>
+     - <span data-ttu-id="8ebaf-118">운영 체제에 적합한 버전을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-118">Select the appropriate version for your operating system.</span></span> <span data-ttu-id="8ebaf-119">예를 들어 Windows x64 머신의 경우 *jdk-8u201-windows-x64.exe* 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-119">For example, *jdk-8u201-windows-x64.exe* for Windows x64 machine.</span></span>
+     - <span data-ttu-id="8ebaf-120">설치 프로그램을 사용하여 설치하고 명령줄에서 `java`를 실행할 수 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-120">Install using the installer and verify you are able to run `java` from your command line.</span></span>
+  4. <span data-ttu-id="8ebaf-121">**[Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)** 를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-121">Install **[Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)**.</span></span>
+     - <span data-ttu-id="8ebaf-122">[Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip)을 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-122">Download [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip).</span></span>
+     - <span data-ttu-id="8ebaf-123">로컬 디렉터리로 추출합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-123">Extract to a local directory.</span></span> <span data-ttu-id="8ebaf-124">예를 들어 \*C:\bin\apache-maven-3.6.0\*으로 추출합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-124">For example, \*C:\bin\apache-maven-3.6.0\*.</span></span>
+     - <span data-ttu-id="8ebaf-125">Apache Maven을 [PATH 환경 변수](https://www.java.com/en/download/help/path.xml)에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-125">Add Apache Maven to your [PATH environment variable](https://www.java.com/en/download/help/path.xml).</span></span> <span data-ttu-id="8ebaf-126">예를 들어 *C:\bin\apache-maven-3.6.0\bin* 과 같이 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-126">For example, *C:\bin\apache-maven-3.6.0\bin*.</span></span>
+     - <span data-ttu-id="8ebaf-127">명령줄에서 `mvn`을 실행할 수 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-127">Verify you are able to run `mvn` from your command-line.</span></span>
+  5. <span data-ttu-id="8ebaf-128">**[Apache Spark 2.3+](https://spark.apache.org/downloads.html)** 를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-128">Install **[Apache Spark 2.3+](https://spark.apache.org/downloads.html)**.</span></span>
+     - <span data-ttu-id="8ebaf-129">[Apache Spark 2.3+](https://spark.apache.org/downloads.html)를 다운로드하고 [7-zip](https://www.7-zip.org/)을 사용하여 로컬 폴더(예: *C:\bin\spark-3.0.1-bin-hadoop2.7\*)에 추출합니다. 지원되는 Spark 버전은 2.3.* , 2.4.0, 2.4.1, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7, 3.0.0 및 3.0.1입니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-129">Download [Apache Spark 2.3+](https://spark.apache.org/downloads.html) and extract it into a local folder (for example, *C:\bin\spark-3.0.1-bin-hadoop2.7\*) using [7-zip](https://www.7-zip.org/). (The supported spark versions are 2.3.*, 2.4.0, 2.4.1, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7, 3.0.0 and 3.0.1)</span></span>
+     - <span data-ttu-id="8ebaf-130">[새 환경 변수](https://www.java.com/en/download/help/path.xml) `SPARK_HOME`을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-130">Add a [new environment variable](https://www.java.com/en/download/help/path.xml) `SPARK_HOME`.</span></span> <span data-ttu-id="8ebaf-131">예를 들어 \*C:\bin\spark-3.0.1-bin-hadoop2.7\*과 같이 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-131">For example, \*C:\bin\spark-3.0.1-bin-hadoop2.7\*.</span></span>
 
        ```powershell
        set SPARK_HOME=C:\bin\spark-3.0.1-bin-hadoop2.7\
        ```
 
-     - <span data-ttu-id="c7543-132">Apache Spark를 [PATH 환경 변수](https://www.java.com/en/download/help/path.xml)에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-132">Add Apache Spark to your [PATH environment variable](https://www.java.com/en/download/help/path.xml).</span></span> <span data-ttu-id="c7543-133">예를 들어 *C:\bin\spark-3.0.1-bin-hadoop2.7\bin* 과 같이 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-133">For example, *C:\bin\spark-3.0.1-bin-hadoop2.7\bin*.</span></span>
+     - <span data-ttu-id="8ebaf-132">Apache Spark를 [PATH 환경 변수](https://www.java.com/en/download/help/path.xml)에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-132">Add Apache Spark to your [PATH environment variable](https://www.java.com/en/download/help/path.xml).</span></span> <span data-ttu-id="8ebaf-133">예를 들어 *C:\bin\spark-3.0.1-bin-hadoop2.7\bin* 과 같이 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-133">For example, *C:\bin\spark-3.0.1-bin-hadoop2.7\bin*.</span></span>
 
        ```powershell
        set PATH=%SPARK_HOME%\bin;%PATH%
        ```
 
-     - <span data-ttu-id="c7543-134">명령줄에서 `spark-shell`을 실행할 수 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-134">Verify you are able to run `spark-shell` from your command-line.</span></span>
-        <span data-ttu-id="c7543-135">샘플 콘솔 출력:</span><span class="sxs-lookup"><span data-stu-id="c7543-135">Sample console output:</span></span>
+     - <span data-ttu-id="8ebaf-134">명령줄에서 `spark-shell`을 실행할 수 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-134">Verify you are able to run `spark-shell` from your command-line.</span></span>
+        <span data-ttu-id="8ebaf-135">샘플 콘솔 출력:</span><span class="sxs-lookup"><span data-stu-id="8ebaf-135">Sample console output:</span></span>
 
         ```output
         Welcome to
@@ -69,58 +69,58 @@ ms.locfileid: "94688113"
 
         </details>
 
-  6. <span data-ttu-id="c7543-136">**[WinUtils](https://github.com/steveloughran/winutils)** 를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-136">Install **[WinUtils](https://github.com/steveloughran/winutils)**.</span></span>
-     - <span data-ttu-id="c7543-137">[WinUtils 리포지토리](https://github.com/steveloughran/winutils)에서 `winutils.exe` 이진 파일을 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-137">Download `winutils.exe` binary from [WinUtils repository](https://github.com/steveloughran/winutils).</span></span> <span data-ttu-id="c7543-138">해당 Spark 배포의 컴파일에 사용된 Hadoop 버전을 선택해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-138">You should select the version of Hadoop the Spark distribution was compiled with.</span></span> <span data-ttu-id="c7543-139">예를 들어 Spark 3.0.1의 경우 hadoop-2.7.1을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-139">For exammple, use hadoop-2.7.1 for Spark 3.0.1.</span></span>
-     - <span data-ttu-id="c7543-140">`winutils.exe` 이진 파일을 원하는 디렉터리에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-140">Save `winutils.exe` binary to a directory of your choice.</span></span> <span data-ttu-id="c7543-141">예를 들어 *C:\hadoop\bin* 에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-141">For example, *C:\hadoop\bin*.</span></span>
-     - <span data-ttu-id="c7543-142">(bin 없이) winutils.exe가 있는 디렉터리를 반영하도록 `HADOOP_HOME`을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-142">Set `HADOOP_HOME` to reflect the directory with winutils.exe (without bin).</span></span> <span data-ttu-id="c7543-143">예를 들어 명령줄을 사용하여</span><span class="sxs-lookup"><span data-stu-id="c7543-143">For instance, using command-line:</span></span>
+  6. <span data-ttu-id="8ebaf-136">**[WinUtils](https://github.com/steveloughran/winutils)** 를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-136">Install **[WinUtils](https://github.com/steveloughran/winutils)**.</span></span>
+     - <span data-ttu-id="8ebaf-137">[WinUtils 리포지토리](https://github.com/steveloughran/winutils)에서 `winutils.exe` 이진 파일을 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-137">Download `winutils.exe` binary from [WinUtils repository](https://github.com/steveloughran/winutils).</span></span> <span data-ttu-id="8ebaf-138">해당 Spark 배포의 컴파일에 사용된 Hadoop 버전을 선택해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-138">You should select the version of Hadoop the Spark distribution was compiled with.</span></span> <span data-ttu-id="8ebaf-139">예를 들어 Spark 3.0.1의 경우 hadoop-2.7.1을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-139">For exammple, use hadoop-2.7.1 for Spark 3.0.1.</span></span>
+     - <span data-ttu-id="8ebaf-140">`winutils.exe` 이진 파일을 원하는 디렉터리에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-140">Save `winutils.exe` binary to a directory of your choice.</span></span> <span data-ttu-id="8ebaf-141">예를 들어 *C:\hadoop\bin* 에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-141">For example, *C:\hadoop\bin*.</span></span>
+     - <span data-ttu-id="8ebaf-142">(bin 없이) winutils.exe가 있는 디렉터리를 반영하도록 `HADOOP_HOME`을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-142">Set `HADOOP_HOME` to reflect the directory with winutils.exe (without bin).</span></span> <span data-ttu-id="8ebaf-143">예를 들어 명령줄을 사용하여</span><span class="sxs-lookup"><span data-stu-id="8ebaf-143">For instance, using command-line:</span></span>
 
        ```powershell
        set HADOOP_HOME=C:\hadoop
        ```
 
-     - <span data-ttu-id="c7543-144">`%HADOOP_HOME%\bin`을 포함하도록 PATH 환경 변수를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-144">Set PATH environment variable to include `%HADOOP_HOME%\bin`.</span></span> <span data-ttu-id="c7543-145">예를 들어 다음과 같이 명령줄을 사용하여 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-145">For instance, using command line:</span></span>
+     - <span data-ttu-id="8ebaf-144">`%HADOOP_HOME%\bin`을 포함하도록 PATH 환경 변수를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-144">Set PATH environment variable to include `%HADOOP_HOME%\bin`.</span></span> <span data-ttu-id="8ebaf-145">예를 들어 다음과 같이 명령줄을 사용하여 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-145">For instance, using command line:</span></span>
 
        ```powershell
        set PATH=%HADOOP_HOME%\bin;%PATH%
        ```
 
-<span data-ttu-id="c7543-146">다음 섹션으로 이동하기 전에 명령줄에서 `dotnet`, `java`, `mvn`, `spark-shell`을 실행할 수 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-146">Make sure you are able to run `dotnet`, `java`, `mvn`, `spark-shell` from your command line before you move to the next section.</span></span> <span data-ttu-id="c7543-147">더 나은 방법이 있나요?</span><span class="sxs-lookup"><span data-stu-id="c7543-147">Feel there is a better way?</span></span> <span data-ttu-id="c7543-148">[문제를 만들고](https://github.com/dotnet/spark/issues) 자유롭게 참여하세요.</span><span class="sxs-lookup"><span data-stu-id="c7543-148">[Open an issue](https://github.com/dotnet/spark/issues) and feel free to contribute.</span></span>
+<span data-ttu-id="8ebaf-146">다음 섹션으로 이동하기 전에 명령줄에서 `dotnet`, `java`, `mvn`, `spark-shell`을 실행할 수 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-146">Make sure you are able to run `dotnet`, `java`, `mvn`, `spark-shell` from your command line before you move to the next section.</span></span> <span data-ttu-id="8ebaf-147">더 나은 방법이 있나요?</span><span class="sxs-lookup"><span data-stu-id="8ebaf-147">Feel there is a better way?</span></span> <span data-ttu-id="8ebaf-148">[문제를 만들고](https://github.com/dotnet/spark/issues) 자유롭게 참여하세요.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-148">[Open an issue](https://github.com/dotnet/spark/issues) and feel free to contribute.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="c7543-149">환경 변수가 업데이트된 경우 명령줄의 새 인스턴스가 필요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-149">A new instance of the command line may be required if any environment variables were updated.</span></span>
+> <span data-ttu-id="8ebaf-149">환경 변수가 업데이트된 경우 명령줄의 새 인스턴스가 필요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-149">A new instance of the command line may be required if any environment variables were updated.</span></span>
 
-## <a name="build"></a><span data-ttu-id="c7543-150">빌드</span><span class="sxs-lookup"><span data-stu-id="c7543-150">Build</span></span>
+## <a name="build"></a><span data-ttu-id="8ebaf-150">빌드</span><span class="sxs-lookup"><span data-stu-id="8ebaf-150">Build</span></span>
 
-<span data-ttu-id="c7543-151">이 가이드의 나머지 부분에서는 .NET for Apache Spark 리포지토리를 컴퓨터에 복제해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-151">For the remainder of this guide, you will need to have cloned the .NET for Apache Spark repository into your machine.</span></span> <span data-ttu-id="c7543-152">복제된 리포지토리의 위치를 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-152">You can choose any location for the cloned repository.</span></span> <span data-ttu-id="c7543-153">예를 들어 \*C:\github\dotnet-spark\*를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-153">For example, \*C:\github\dotnet-spark\*.</span></span>
+<span data-ttu-id="8ebaf-151">이 가이드의 나머지 부분에서는 .NET for Apache Spark 리포지토리를 컴퓨터에 복제해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-151">For the remainder of this guide, you will need to have cloned the .NET for Apache Spark repository into your machine.</span></span> <span data-ttu-id="8ebaf-152">복제된 리포지토리의 위치를 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-152">You can choose any location for the cloned repository.</span></span> <span data-ttu-id="8ebaf-153">예를 들어 \*C:\github\dotnet-spark\*를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-153">For example, \*C:\github\dotnet-spark\*.</span></span>
 
 ```bash
 git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
 ```
 
-### <a name="build-net-for-apache-spark-scala-extensions-layer"></a><span data-ttu-id="c7543-154">.NET for Apache Spark Scala 확장 레이어 빌드</span><span class="sxs-lookup"><span data-stu-id="c7543-154">Build .NET for Apache Spark Scala extensions layer</span></span>
+### <a name="build-net-for-apache-spark-scala-extensions-layer"></a><span data-ttu-id="8ebaf-154">.NET for Apache Spark Scala 확장 레이어 빌드</span><span class="sxs-lookup"><span data-stu-id="8ebaf-154">Build .NET for Apache Spark Scala extensions layer</span></span>
 
-<span data-ttu-id="c7543-155">.NET 애플리케이션을 제출하면 .NET for Apache Spark에서 필요한 논리가 Scala로 작성되어 요청(예: 새 Spark 세션 만들기 요청, .NET 쪽에서 JVM 쪽으로 데이터 전송 요청 등)을 처리하는 방법을 Apache Spark에 알려줍니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-155">When you submit a .NET application, .NET for Apache Spark has the necessary logic written in Scala that informs Apache Spark how to handle your requests (for example, request to create a new Spark Session, request to transfer data from .NET side to JVM side etc.).</span></span> <span data-ttu-id="c7543-156">이 논리는 [.NET for Spark Scala 소스 코드](https://github.com/dotnet/spark/tree/master/src/scala)에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-156">This logic can be found in the [.NET for Spark Scala Source Code](https://github.com/dotnet/spark/tree/master/src/scala).</span></span>
+<span data-ttu-id="8ebaf-155">.NET 애플리케이션을 제출하면 .NET for Apache Spark에서 필요한 논리가 Scala로 작성되어 요청(예: 새 Spark 세션 만들기 요청, .NET 쪽에서 JVM 쪽으로 데이터 전송 요청 등)을 처리하는 방법을 Apache Spark에 알려줍니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-155">When you submit a .NET application, .NET for Apache Spark has the necessary logic written in Scala that informs Apache Spark how to handle your requests (for example, request to create a new Spark Session, request to transfer data from .NET side to JVM side etc.).</span></span> <span data-ttu-id="8ebaf-156">이 논리는 [.NET for Spark Scala 소스 코드](https://github.com/dotnet/spark/tree/master/src/scala)에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-156">This logic can be found in the [.NET for Spark Scala Source Code](https://github.com/dotnet/spark/tree/master/src/scala).</span></span>
 
-<span data-ttu-id="c7543-157">.NET Framework를 사용하는지 .NET Core를 사용하는지에 상관없이 .NET for Apache Spark Scala 확장 레이어를 빌드해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-157">Regardless of whether you are using .NET Framework or .NET Core, you will need to build the .NET for Apache Spark Scala extension layer:</span></span>
+<span data-ttu-id="8ebaf-157">.NET Framework를 사용하는지 .NET Core를 사용하는지에 상관없이 .NET for Apache Spark Scala 확장 레이어를 빌드해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-157">Regardless of whether you are using .NET Framework or .NET Core, you will need to build the .NET for Apache Spark Scala extension layer:</span></span>
 
 ```powershell
 cd src\scala
 mvn clean package
 ```
 
-<span data-ttu-id="c7543-158">지원되는 Spark 버전에 대해 생성된 JAR이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-158">You should see JARs created for the supported Spark versions:</span></span>
+<span data-ttu-id="8ebaf-158">지원되는 Spark 버전에 대해 생성된 JAR이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-158">You should see JARs created for the supported Spark versions:</span></span>
 
 * `microsoft-spark-2-3\target\microsoft-spark-2-3_2.11-<spark-dotnet-version>.jar`
 * `microsoft-spark-2-4\target\microsoft-spark-2-4_2.11-<spark-dotnet-version>.jar`
 * `microsoft-spark-3-0\target\microsoft-spark-3-0_2.12-<spark-dotnet-version>.jar`
 
-### <a name="build-the-net-for-spark-sample-applications"></a><span data-ttu-id="c7543-159">.NET for Spark 샘플 애플리케이션 빌드</span><span class="sxs-lookup"><span data-stu-id="c7543-159">Build the .NET for Spark sample applications</span></span>
+### <a name="build-the-net-for-spark-sample-applications"></a><span data-ttu-id="8ebaf-159">.NET for Spark 샘플 애플리케이션 빌드</span><span class="sxs-lookup"><span data-stu-id="8ebaf-159">Build the .NET for Spark sample applications</span></span>
 
-<span data-ttu-id="c7543-160">이 섹션에서는 .NET for Apache Spark용 [샘플 애플리케이션](https://github.com/dotnet/spark/tree/master/examples)을 빌드하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-160">This section explains how to build the [sample applications](https://github.com/dotnet/spark/tree/master/examples) for .NET for Apache Spark.</span></span> <span data-ttu-id="c7543-161">이러한 단계는 모든 .NET for Spark 애플리케이션의 전체 빌드 프로세스를 이해하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-161">These steps will help in understanding the overall building process for any .NET for Spark application.</span></span>
+<span data-ttu-id="8ebaf-160">이 섹션에서는 .NET for Apache Spark용 [샘플 애플리케이션](https://github.com/dotnet/spark/tree/master/examples)을 빌드하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-160">This section explains how to build the [sample applications](https://github.com/dotnet/spark/tree/master/examples) for .NET for Apache Spark.</span></span> <span data-ttu-id="8ebaf-161">이러한 단계는 모든 .NET for Spark 애플리케이션의 전체 빌드 프로세스를 이해하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-161">These steps will help in understanding the overall building process for any .NET for Spark application.</span></span>
 
-#### <a name="using-visual-studio-for-net-framework"></a><span data-ttu-id="c7543-162">.NET Framework 용 Visual Studio 사용</span><span class="sxs-lookup"><span data-stu-id="c7543-162">Using Visual Studio for .NET Framework</span></span>
+#### <a name="using-visual-studio-for-net-framework"></a><span data-ttu-id="8ebaf-162">.NET Framework 용 Visual Studio 사용</span><span class="sxs-lookup"><span data-stu-id="8ebaf-162">Using Visual Studio for .NET Framework</span></span>
 
-  1. <span data-ttu-id="c7543-163">Visual Studio에서 `src\csharp\Microsoft.Spark.sln`을 열고 `examples` 폴더 아래에 `Microsoft.Spark.CSharp.Examples` 프로젝트를 빌드합니다(그러면 .NET 바인딩 프로젝트도 빌드됨).</span><span class="sxs-lookup"><span data-stu-id="c7543-163">Open `src\csharp\Microsoft.Spark.sln` in Visual Studio and build the `Microsoft.Spark.CSharp.Examples` project under the `examples` folder (this will in turn build the .NET bindings project as well).</span></span> <span data-ttu-id="c7543-164">원하는 경우 `Microsoft.Spark.Examples` 프로젝트에서 자체 코드를 작성할 수 있습니다(이 예의 'input_file.json'은 데이터 프레임를 만들 데이터가 포함된 json 파일입니다).</span><span class="sxs-lookup"><span data-stu-id="c7543-164">If you want, you can write your own code in the `Microsoft.Spark.Examples` project (the 'input_file.json' in this example is a json file with the data you want to create the dataframe with):</span></span>
+  1. <span data-ttu-id="8ebaf-163">Visual Studio에서 `src\csharp\Microsoft.Spark.sln`을 열고 `examples` 폴더 아래에 `Microsoft.Spark.CSharp.Examples` 프로젝트를 빌드합니다(그러면 .NET 바인딩 프로젝트도 빌드됨).</span><span class="sxs-lookup"><span data-stu-id="8ebaf-163">Open `src\csharp\Microsoft.Spark.sln` in Visual Studio and build the `Microsoft.Spark.CSharp.Examples` project under the `examples` folder (this will in turn build the .NET bindings project as well).</span></span> <span data-ttu-id="8ebaf-164">원하는 경우 `Microsoft.Spark.Examples` 프로젝트에서 자체 코드를 작성할 수 있습니다(이 예의 'input_file.json'은 데이터 프레임를 만들 데이터가 포함된 json 파일입니다).</span><span class="sxs-lookup"><span data-stu-id="8ebaf-164">If you want, you can write your own code in the `Microsoft.Spark.Examples` project (the 'input_file.json' in this example is a json file with the data you want to create the dataframe with):</span></span>
   
       ```csharp
         // Instantiate a session
@@ -139,8 +139,8 @@ mvn clean package
         df.Filter(df["age"] > 21).Show();
       ```
 
-     <span data-ttu-id="c7543-165">빌드가 성공하면 출력 디렉터리에 생성된 적절한 이진 파일이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-165">Once the build is successful, you will see the appropriate binaries produced in the output directory.</span></span>
-     <span data-ttu-id="c7543-166">샘플 콘솔 출력:</span><span class="sxs-lookup"><span data-stu-id="c7543-166">Sample console output:</span></span>
+     <span data-ttu-id="8ebaf-165">빌드가 성공하면 출력 디렉터리에 생성된 적절한 이진 파일이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-165">Once the build is successful, you will see the appropriate binaries produced in the output directory.</span></span>
+     <span data-ttu-id="8ebaf-166">샘플 콘솔 출력:</span><span class="sxs-lookup"><span data-stu-id="8ebaf-166">Sample console output:</span></span>
 
       ```powershell
             Directory: C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461
@@ -162,19 +162,19 @@ mvn clean package
         ------------------------------------------- More framework files -------------------------------------
       ```
 
-#### <a name="using-net-core-cli-for-net-core"></a><span data-ttu-id="c7543-167">.NET Core용 .NET Core CLI 사용</span><span class="sxs-lookup"><span data-stu-id="c7543-167">Using .NET Core CLI for .NET Core</span></span>
+#### <a name="using-net-core-cli-for-net-core"></a><span data-ttu-id="8ebaf-167">.NET Core용 .NET Core CLI 사용</span><span class="sxs-lookup"><span data-stu-id="8ebaf-167">Using .NET Core CLI for .NET Core</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="c7543-168">현재 Spark .NET을 위한 .NET Core 빌드를 자동화하는 작업을 진행 중입니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-168">We are currently working on automating .NET Core builds for Spark .NET.</span></span> <span data-ttu-id="c7543-169">그때까지는 일부 단계를 수동으로 수행하는 것을 감수해 주시면 고맙겠습니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-169">Until then, we appreciate your patience in performing some of the steps manually.</span></span>
+> <span data-ttu-id="8ebaf-168">현재 Spark .NET을 위한 .NET Core 빌드를 자동화하는 작업을 진행 중입니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-168">We are currently working on automating .NET Core builds for Spark .NET.</span></span> <span data-ttu-id="8ebaf-169">그때까지는 일부 단계를 수동으로 수행하는 것을 감수해 주시면 고맙겠습니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-169">Until then, we appreciate your patience in performing some of the steps manually.</span></span>
 
-  1. <span data-ttu-id="c7543-170">작업자 빌드:</span><span class="sxs-lookup"><span data-stu-id="c7543-170">Build the worker:</span></span>
+  1. <span data-ttu-id="8ebaf-170">작업자 빌드:</span><span class="sxs-lookup"><span data-stu-id="8ebaf-170">Build the worker:</span></span>
 
       ```powershell
       cd C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker\
       dotnet publish -f netcoreapp3.1 -r win-x64
       ```
 
-      <span data-ttu-id="c7543-171">샘플 콘솔 출력:</span><span class="sxs-lookup"><span data-stu-id="c7543-171">Sample console output:</span></span>
+      <span data-ttu-id="8ebaf-171">샘플 콘솔 출력:</span><span class="sxs-lookup"><span data-stu-id="8ebaf-171">Sample console output:</span></span>
 
       ```powershell
       PS C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker> dotnet publish -f netcoreapp3.1 -r win-x64
@@ -188,14 +188,14 @@ mvn clean package
         Microsoft.Spark.Worker -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish\
       ```
 
-  2. <span data-ttu-id="c7543-172">샘플 빌드:</span><span class="sxs-lookup"><span data-stu-id="c7543-172">Build the samples:</span></span>
+  2. <span data-ttu-id="8ebaf-172">샘플 빌드:</span><span class="sxs-lookup"><span data-stu-id="8ebaf-172">Build the samples:</span></span>
 
       ```powershell
       cd C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples\
       dotnet publish -f netcoreapp3.1 -r win-x64
       ```
 
-      <span data-ttu-id="c7543-173">샘플 콘솔 출력:</span><span class="sxs-lookup"><span data-stu-id="c7543-173">Sample console output:</span></span>
+      <span data-ttu-id="8ebaf-173">샘플 콘솔 출력:</span><span class="sxs-lookup"><span data-stu-id="8ebaf-173">Sample console output:</span></span>
 
       ```powershell
       PS C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples> dotnet publish -f netcoreapp3.1 -r win-x64
@@ -209,23 +209,23 @@ mvn clean package
         Microsoft.Spark.CSharp.Examples -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish\
       ```
 
-## <a name="run-the-net-for-spark-sample-applications"></a><span data-ttu-id="c7543-174">.NET for Spark 샘플 애플리케이션 실행</span><span class="sxs-lookup"><span data-stu-id="c7543-174">Run the .NET for Spark sample applications</span></span>
+## <a name="run-the-net-for-spark-sample-applications"></a><span data-ttu-id="8ebaf-174">.NET for Spark 샘플 애플리케이션 실행</span><span class="sxs-lookup"><span data-stu-id="8ebaf-174">Run the .NET for Spark sample applications</span></span>
 
-<span data-ttu-id="c7543-175">샘플을 빌드한 후에는 .NET Framework 또는 .NET Core를 대상으로 하는지 여부에 관계 없이 `spark-submit`을 통해 샘플이 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-175">Once you build the samples, running them will be through `spark-submit` regardless of whether you are targeting .NET Framework or .NET Core.</span></span> <span data-ttu-id="c7543-176">[사전 요구 사항](#prerequisites) 섹션에 따라 Apache Spark를 설치했는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-176">Make sure you have followed the [prerequisites](#prerequisites) section and installed Apache Spark.</span></span>
+<span data-ttu-id="8ebaf-175">샘플을 빌드한 후에는 .NET Framework 또는 .NET Core를 대상으로 하는지 여부에 관계 없이 `spark-submit`을 통해 샘플이 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-175">Once you build the samples, running them will be through `spark-submit` regardless of whether you are targeting .NET Framework or .NET Core.</span></span> <span data-ttu-id="8ebaf-176">[사전 요구 사항](#prerequisites) 섹션에 따라 Apache Spark를 설치했는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-176">Make sure you have followed the [prerequisites](#prerequisites) section and installed Apache Spark.</span></span>
 
-  1. <span data-ttu-id="c7543-177">`Microsoft.Spark.Worker` 이진 파일이 생성된 경로(예: .NET Framework의 경우 *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461*, .NET Core의 경우 *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish*)를 포함하도록 `DOTNET_WORKER_DIR` 또는 `PATH` 환경 변수를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-177">Set the `DOTNET_WORKER_DIR` or `PATH` environment variable to include the path where the `Microsoft.Spark.Worker` binary has been generated (for example, *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461* for .NET Framework, *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish* for .NET Core):</span></span>
+  1. <span data-ttu-id="8ebaf-177">`Microsoft.Spark.Worker` 이진 파일이 생성된 경로(예: .NET Framework의 경우 *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461*, .NET Core의 경우 *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish*)를 포함하도록 `DOTNET_WORKER_DIR` 또는 `PATH` 환경 변수를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-177">Set the `DOTNET_WORKER_DIR` or `PATH` environment variable to include the path where the `Microsoft.Spark.Worker` binary has been generated (for example, *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461* for .NET Framework, *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish* for .NET Core):</span></span>
 
       ```powershell
       set DOTNET_WORKER_DIR=C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\x64\Debug\netcoreapp3.1\win-x64\publish
       ```
   
-  2. <span data-ttu-id="c7543-178">PowerShell을 열고 앱 이진 파일이 생성된 디렉터리(예: .NET Framework의 경우 *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461*, .NET Core의 경우 *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish*)로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-178">Open PowerShell and go to the directory where your app binary has been generated (for example, *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461* for .NET Framework, *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish* for .NET Core):</span></span>
+  2. <span data-ttu-id="8ebaf-178">PowerShell을 열고 앱 이진 파일이 생성된 디렉터리(예: .NET Framework의 경우 *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461*, .NET Core의 경우 *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish*)로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-178">Open PowerShell and go to the directory where your app binary has been generated (for example, *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461* for .NET Framework, *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish* for .NET Core):</span></span>
 
       ```powershell
       cd C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\x64\Debug\netcoreapp3.1\win-x64\publish
       ```
 
-  3. <span data-ttu-id="c7543-179">앱 실행은 기본적 구조를 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-179">Running your app follows the basic structure:</span></span>
+  3. <span data-ttu-id="8ebaf-179">앱 실행은 기본적 구조를 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-179">Running your app follows the basic structure:</span></span>
 
      ```powershell
      spark-submit.cmd `
@@ -236,9 +236,9 @@ mvn clean package
        <path-to-your-app-exe> <argument(s)-to-your-app>
      ```
 
-     <span data-ttu-id="c7543-180">다음은 실행할 수 있는 몇 가지 예입니다.</span><span class="sxs-lookup"><span data-stu-id="c7543-180">Here are some examples you can run:</span></span>
+     <span data-ttu-id="8ebaf-180">다음은 실행할 수 있는 몇 가지 예입니다.</span><span class="sxs-lookup"><span data-stu-id="8ebaf-180">Here are some examples you can run:</span></span>
 
-     - <span data-ttu-id="c7543-181">**[Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**</span><span class="sxs-lookup"><span data-stu-id="c7543-181">**[Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**</span></span>
+     - <span data-ttu-id="8ebaf-181">**[Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**</span><span class="sxs-lookup"><span data-stu-id="8ebaf-181">**[Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**</span></span>
 
          ```powershell
          spark-submit.cmd `
@@ -248,7 +248,7 @@ mvn clean package
          Microsoft.Spark.CSharp.Examples.exe Sql.Batch.Basic %SPARK_HOME%\examples\src\main\resources\people.json
          ```
 
-     - <span data-ttu-id="c7543-182">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="c7543-182">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**</span></span>
+     - <span data-ttu-id="8ebaf-182">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="8ebaf-182">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**</span></span>
 
          ```powershell
          spark-submit.cmd `
@@ -258,7 +258,7 @@ mvn clean package
          Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkWordCount localhost 9999
          ```
 
-     - <span data-ttu-id="c7543-183">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount(maven 액세스 가능)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="c7543-183">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (maven accessible)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span></span>
+     - <span data-ttu-id="8ebaf-183">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount(maven 액세스 가능)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="8ebaf-183">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (maven accessible)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span></span>
 
          ```powershell
          spark-submit.cmd `
@@ -269,7 +269,7 @@ mvn clean package
          Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredKafkaWordCount localhost:9092 subscribe test
          ```
 
-     - <span data-ttu-id="c7543-184">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount(jars 제공됨)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="c7543-184">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (jars provided)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span></span>
+     - <span data-ttu-id="8ebaf-184">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount(jars 제공됨)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="8ebaf-184">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (jars provided)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span></span>
 
          ```powershell
          spark-submit.cmd
