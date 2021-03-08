@@ -6,12 +6,12 @@ metadata:
   description: .NET 앱을 설계, 빌드 및 마이그레이션하는 권장 방법을 알아보세요.
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: aab236c52bf4217567fe76e8c4f9ffcb51ad17f5
-  ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+  ms.openlocfilehash: 68851c514723f6db7017c3000e88242f3fad2592
+  ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/17/2021
-  ms.locfileid: "100583100"
+  ms.lasthandoff: 03/05/2021
+  ms.locfileid: "102206702"
 landingContent:
 - title: ASP.NET Core 앱 개발
   linkLists:
@@ -23,6 +23,8 @@ landingContent:
       url: blazor-for-web-forms-developers/index.md
     - text: WCF 개발자를 위한 ASP.NET Core gRPC
       url: grpc-for-wcf-developers/index.md
+    - text: 기존 ASP.NET 앱을 .NET Core로 포팅
+      url: porting-existing-aspnet-apps/index.md
 - title: Azure용 클라우드 네이티브 .NET 앱 개발
   linkLists:
   - linkListType: concept
