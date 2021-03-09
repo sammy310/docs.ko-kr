@@ -4,16 +4,16 @@ description: 이 고급 자습서에서는 비동기 스트림을 생성하고 �
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: fd9fed3469d18c919102640df7bb501b116f5e0e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 48d749af47139ca97df9c05f2ef450870b41bef5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420372"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259629"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>자습서: C# 8.0 및 .NET Core 3.0을 사용하여 비동기 스트림 생성 및 사용
 
-C# 8.0에서는 데이터의 스트리밍 소스를 모델링하는 **비동기 스트림**을 도입합니다. 데이터 스트림은 종종 요소를 비동기적으로 검색하거나 생성합니다. 비동기 스트림은 .NET Standard 2.1에 도입된 새 인터페이스를 사용합니다. 이 인터페이스는 .NET Core 3.0 이상에서 지원됩니다. 비동기 스트리밍 데이터 소스의 자연스러운 프로그래밍 모델을 제공합니다.
+C# 8.0에서는 데이터의 스트리밍 소스를 모델링하는 **비동기 스트림** 을 도입합니다. 데이터 스트림은 종종 요소를 비동기적으로 검색하거나 생성합니다. 비동기 스트림은 .NET Standard 2.1에 도입된 새 인터페이스를 사용합니다. 이 인터페이스는 .NET Core 3.0 이상에서 지원됩니다. 비동기 스트리밍 데이터 소스의 자연스러운 프로그래밍 모델을 제공합니다.
 
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
@@ -42,13 +42,13 @@ GitHub API 엔드포인트의 액세스 권한을 부여하는 데 사용할 수
 
 ## <a name="run-the-starter-application"></a>시작 애플리케이션 실행
 
-[csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) 폴더의 [dotnet/docs](https://github.com/dotnet/docs) 리포지토리에서 이 자습서에 사용된 시작 애플리케이션의 코드를 가져올 수 있습니다.
+[csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) 폴더의 [dotnet/docs](https://github.com/dotnet/docs) 리포지토리에서 이 자습서에 사용된 시작 애플리케이션의 코드를 가져올 수 있습니다.
 
 시작 애플리케이션은 [GitHub GraphQL](https://developer.github.com/v4/) 인터페이스를 사용하여 [dotnet/docs](https://github.com/dotnet/docs) 리포지토리에 기록된 최근 문제를 검색하는 콘솔 애플리케이션입니다. 먼저 시작 앱 `Main` 메서드의 다음 코드를 살펴봅니다.
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetStarterAppMain" :::
 
-`GitHubKey` 환경 변수를 개인용 액세스 토큰으로 설정하거나, `GenEnvVariable` 호출의 마지막 인수를 개인용 액세스 토큰으로 바꿀 수 있습니다. 소스를 다른 사용자와 공유하는 경우 소스 코드에 액세스 코드를 넣지 마세요. 공유된 소스 리포지토리에 액세스 코드를 업로드하지 마세요.
+`GitHubKey` 환경 변수를 개인용 액세스 토큰으로 설정하거나, `GetEnvVariable` 호출의 마지막 인수를 개인용 액세스 토큰으로 바꿀 수 있습니다. 소스를 다른 사용자와 공유하는 경우 소스 코드에 액세스 코드를 넣지 마세요. 공유된 소스 리포지토리에 액세스 코드를 업로드하지 마세요.
 
 GitHub 클라이언트를 만든 후 `Main`의 코드는 진행 보고 개체 및 취소 토큰을 만듭니다. 해당 개체가 만들어지면 `Main`이 `runPagedQueryAsync`를 호출하여 250개의 가장 최근 생성된 문제를 검색합니다. 작업이 완료되면 결과가 표시됩니다.
 
@@ -144,7 +144,7 @@ try
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateWithCancellation" :::
 
-[csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) 폴더의 [dotnet/docs](https://github.com/dotnet/docs) 리포지토리에서 완료된 자습서의 코드를 가져올 수 있습니다.
+[csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) 폴더의 [dotnet/docs](https://github.com/dotnet/docs) 리포지토리에서 완료된 자습서의 코드를 가져올 수 있습니다.
 
 ## <a name="run-the-finished-application"></a>완료된 애플리케이션 실행
 

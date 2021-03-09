@@ -4,12 +4,12 @@ description: .NET Core 런타임의 작동 방식을 제어해야 하는 고급 
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 358cbff1ded3bd4ee9a3f78965eac1e1b1883ede
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 4b6b0d9765d78aac5f267dfac4a907f920230feb
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633848"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258223"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>사용자 지정 .NET Core 호스트를 작성하여 네이티브 코드에서 .NET 런타임 제어
 
@@ -40,11 +40,11 @@ ms.locfileid: "97633848"
 
 ## <a name="create-a-host-using-nethosth-and-hostfxrh"></a>`nethost.h` 및 `hostfxr.h`를 사용하여 호스트 만들기
 
-다음 단계에서는 `nethost` 및 `hostfxr` 라이브러리를 사용하여 네이티브 애플리케이션에서 .NET Core 런타임을 시작하고 관리형 정적 메서드를 호출하는 방법을 자세히 설명합니다. [샘플](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr)은 .NET SDK와 함께 설치된 `nethost` 헤더 및 라이브러리와 [dotnet/runtime](https://github.com/dotnet/runtime) 리포지토리의 [`coreclr_delegates.h`](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/coreclr_delegates.h) 및 [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/hostfxr.h) 파일 복사본을 사용합니다.
+다음 단계에서는 `nethost` 및 `hostfxr` 라이브러리를 사용하여 네이티브 애플리케이션에서 .NET Core 런타임을 시작하고 관리형 정적 메서드를 호출하는 방법을 자세히 설명합니다. [샘플](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr)은 .NET SDK와 함께 설치된 `nethost` 헤더 및 라이브러리와 [dotnet/runtime](https://github.com/dotnet/runtime) 리포지토리의 [`coreclr_delegates.h`](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/coreclr_delegates.h) 및 [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/native/corehost/hostfxr.h) 파일 복사본을 사용합니다.
 
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>1단계 - `hostfxr`을 로드하고 내보낸 호스팅 함수 가져오기
 
-`nethost` 라이브러리는 `hostfxr` 라이브러리를 찾기 위한 `get_hostfxr_path` 함수를 제공합니다. `hostfxr` 라이브러리는 .NET Core 런타임을 호스트하기 위한 함수를 공개합니다. 함수의 전체 목록은 [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/hostfxr.h) 및 [기본 호스팅 디자인 문서](https://github.com/dotnet/runtime/blob/master/docs/design/features/native-hosting.md)에서 확인할 수 있습니다. 샘플 및 이 자습서는 다음을 사용합니다.
+`nethost` 라이브러리는 `hostfxr` 라이브러리를 찾기 위한 `get_hostfxr_path` 함수를 제공합니다. `hostfxr` 라이브러리는 .NET Core 런타임을 호스트하기 위한 함수를 공개합니다. 함수의 전체 목록은 [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/native/corehost/hostfxr.h) 및 [기본 호스팅 디자인 문서](https://github.com/dotnet/runtime/blob/master/docs/design/features/native-hosting.md)에서 확인할 수 있습니다. 샘플 및 이 자습서는 다음을 사용합니다.
 
 * `hostfxr_initialize_for_runtime_config`: 호스트 컨텍스트를 초기화하고, 지정된 런타임 구성을 사용하여 .NET Core 런타임 초기화를 준비합니다.
 * `hostfxr_get_runtime_delegate`: 런타임 기능의 대리자를 가져옵니다.

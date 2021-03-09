@@ -4,12 +4,12 @@ description: 다양한 종류의 앱을 빌드하기 위한 무료 오픈 소스
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: d08e00ee9702c71cacc8a6588c1f4290b4ab3ae9
-ms.sourcegitcommit: b924ade6426cf61a4604c4e2ee54cb3592c29317
+ms.openlocfilehash: 7997346c9b248962b36688592d357247ec0ce6aa
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "101096797"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105091"
 ---
 # <a name="introduction-to-net"></a>.NET 소개
 
@@ -132,7 +132,7 @@ Microsoft .NET 이진 배포는 Microsoft에서 유지 관리하는 Azure 서버
 
 [.NET SDK](sdk.md)는 .NET 애플리케이션을 개발하고 실행하기 위한 라이브러리 및 도구 세트입니다.
 
-[.NET을 다운로드](https://dotnet.microsoft.com/download/dotnet-core/)할 때 .NET 런타임 또는 ASP.NET Core 런타임과 같은 ‘런타임’이나 SDK를 선택할 수 있습니다. .NET 앱을 실행하기 위해 준비할 머신에 런타임을 설치합니다. 개발에 사용할 머신에 SDK를 설치합니다. SDK를 다운로드할 때 런타임도 자동으로 가져옵니다.
+[.NET을 다운로드](https://dotnet.microsoft.com/download/dotnet)할 때 .NET 런타임 또는 ASP.NET Core 런타임과 같은 ‘런타임’이나 SDK를 선택할 수 있습니다. .NET 앱을 실행하기 위해 준비할 머신에 런타임을 설치합니다. 개발에 사용할 머신에 SDK를 설치합니다. SDK를 다운로드할 때 런타임도 자동으로 가져옵니다.
 
 SDK 다운로드에는 다음 구성 요소가 포함되어 있습니다.
 
@@ -340,7 +340,7 @@ LINQ(Language-Integrated Query)를 사용하면 데이터에서 실행할 선언
   |Context  |“런타임” 의미 |
   |---------|---------|
   | [CLR(공용 언어 런타임)](#clr)| 관리되는 프로그램의 실행 환경입니다. OS는 런타임 환경의 일부지만 .NET 런타임의 일부는 아닙니다. |
-  | [.NET 다운로드 페이지의 .NET 런타임](https://dotnet.microsoft.com/download/dotnet-core) | [프레임워크 종속](#deployment-models) 앱 실행을 지원하는 [CLR](#clr) 및 [런타임 라이브러리](#runtime-libraries)입니다. 페이지에서 ASP.NET Core 서버 앱과 Windows 데스크톱 앱의 런타임을 선택할 수도 있습니다. |
+  | [.NET 다운로드 페이지의 .NET 런타임](https://dotnet.microsoft.com/download/dotnet) | [프레임워크 종속](#deployment-models) 앱 실행을 지원하는 [CLR](#clr) 및 [런타임 라이브러리](#runtime-libraries)입니다. 페이지에서 ASP.NET Core 서버 앱과 Windows 데스크톱 앱의 런타임을 선택할 수도 있습니다. |
   | [RID(런타임 식별자)](rid-catalog.md) | .NET 앱이 실행되는 OS 플랫폼 및 CPU 아키텍처입니다. 예를 들어: Windows x64, Linux x64 |
 
 * **프레임워크**
@@ -350,7 +350,7 @@ LINQ(Language-Integrated Query)를 사용하면 데이터에서 실행할 선언
   | .NET Framework | Windows 전용인 원래 .NET 구현입니다. “Framework”가 대문자로 시작합니다. |
   | 대상 프레임워크(target framework) | .NET 앱이나 라이브러리에서 사용하는 API 컬렉션입니다. 예: .NET Core 3.1, .NET Standard 2.0 |
   | TFM(대상 프레임워크 모니커)  | TFM은 .NET 앱 또는 라이브러리의 대상 프레임워크를 지정하기 위한 표준화된 토큰 형식입니다. 예: .NET Framework 4.6.2의 경우 `net462` |
-  | 프레임워크 종속 앱 | [.NET 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-core)를 통해 런타임을 설치한 머신에서만 실행할 수 있는 앱입니다. 이때 사용된 “프레임워크”는 .NET 다운로드 페이지에서 다운로드하는 “런타임”과 동일합니다. |
+  | 프레임워크 종속 앱 | [.NET 다운로드 페이지](https://dotnet.microsoft.com/download/dotnet)를 통해 런타임을 설치한 머신에서만 실행할 수 있는 앱입니다. 이때 사용된 “프레임워크”는 .NET 다운로드 페이지에서 다운로드하는 “런타임”과 동일합니다. |
   | 프레임워크 라이브러리 | [런타임 라이브러리](#runtime-libraries)의 동의어로 사용되는 경우도 있습니다. |
 
 * **SDK**

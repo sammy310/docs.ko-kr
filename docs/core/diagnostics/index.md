@@ -3,12 +3,12 @@ title: 진단 도구 개요 - .NET Core
 description: .NET Core 애플리케이션을 진단하는 데 사용할 수 있는 도구 및 기술에 대한 개요입니다.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: ee79057e45700e17fdd37cc36288b790d64d7a09
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 9836ea11e7f17d6ed6e04bcba8bc0ed851bb368f
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188480"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105286"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core에서 사용할 수 있는 진단 도구는 무엇인가요?
 
@@ -38,7 +38,7 @@ ms.locfileid: "98188480"
 
 ## <a name="symbols"></a>기호
 
-기호는 디버깅 및 기타 진단 도구에 대한 기본 요구 사항입니다. 기호 파일의 콘텐츠는 언어, 컴파일러, 플랫폼마다 다릅니다. 아주 높은 수준에서 기호는 컴파일러에 의해 생성된 소스 코드와 이진 간의 매핑입니다. 이러한 매핑은 [Visual Studio](/visualstudio/debugger/what-is-debugging) 및 [Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) 같은 진단 도구에서 지역 변수의 줄 번호 정보 및 이름과 같은 항목을 제공하는 데 사용됩니다.  다음 링크에는 Windows용 [기호](/windows/win32/dxtecharts/debugging-with-symbols)에 대한 자세한 설명이 포함되어 있으며, 많은 개념이 다른 플랫폼에도 적용됩니다. [.NET 이식 가능 기호](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)에는 Windows PDB와 유사한 “PDB” 파일 확장명이 있지만, Windows PDB 형식과 호환되지는 않습니다.
+[기호](./symbols.md)는 컴파일러가 생성한 소스 코드와 이진 간의 매핑입니다. 일반적으로 .NET 디버거에서 소스 줄 번호, 지역 변수 이름 및 기타 진단 정보 유형을 확인 하는 데 사용 됩니다.
 
 ## <a name="collect-diagnostics-in-containers"></a>컨테이너에서 진단 정보 수집
 

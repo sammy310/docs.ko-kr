@@ -3,12 +3,12 @@ title: 디버깅 교착 상태 - .NET Core
 description: .NET Core의 잠금 문제를 디버깅하는 과정을 안내하는 자습서입니다.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: d9a9328b376de5886d22ca7315f6d7d9d73fd2c2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0f5862c9acc4c1ae892caf29cea2ca484116cabf
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538698"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105586"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>.NET Core의 교착 상태 디버그
 
@@ -30,7 +30,7 @@ ms.locfileid: "90538698"
 
 이 자습서에서는 다음을 사용합니다.
 
-- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 이상 버전
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet) 이상 버전
 - 시나리오를 트리거하는 [샘플 디버그 대상 - 웹앱](/samples/dotnet/samples/diagnostic-scenarios)
 - 프로세스를 나열하는 [dotnet-trace](dotnet-trace.md)
 - 덤프 파일을 수집 및 분석하는 [dotnet-dump](dotnet-dump.md)
@@ -237,7 +237,7 @@ ComClassFactory 0
 Free            0
 ```
 
-흥미로운 두 가지 열은 **MonitorHeld** 및 **Owning Thread Info**입니다. **MonitorHeld** 열에는 모니터 잠금이 스레드에 의해 획득되는지 여부와 대기 중인 스레드 수가 표시됩니다. **Owing Thread Info** 열에는 현재 모니터 잠금을 소유하고 있는 스레드가 표시됩니다. 스레드 정보에는 세 개의 다른 하위 열이 있습니다. 두 번째 하위 열은 운영 체제 스레드 ID를 표시합니다.
+흥미로운 두 가지 열은 **MonitorHeld** 및 **Owning Thread Info** 입니다. **MonitorHeld** 열에는 모니터 잠금이 스레드에 의해 획득되는지 여부와 대기 중인 스레드 수가 표시됩니다. **Owing Thread Info** 열에는 현재 모니터 잠금을 소유하고 있는 스레드가 표시됩니다. 스레드 정보에는 세 개의 다른 하위 열이 있습니다. 두 번째 하위 열은 운영 체제 스레드 ID를 표시합니다.
 
 현재 모니터 잠금을 보유하는 다른 두 가지 스레드(0x5634 및 0x51d4)를 알고 있습니다. 다음 단계로 이러한 스레드가 수행하는 작업을 살펴보겠습니다. 잠금을 무한정 보유하고 있지 않은지 확인해야 합니다. `setthread` 및 `clrstack` 명령을 사용하여 각 스레드로 전환하고 호출 스택을 표시합니다.
 

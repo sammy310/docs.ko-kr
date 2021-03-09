@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 9caecdcc3516db2bd71420184fbd21f7837552a7
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 8d086c5c595197894e01a347f82b2c6341263fc5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437932"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104967"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1의 새로운 기능
 
@@ -23,7 +23,7 @@ Visual Studio 2019를 사용하는 경우 .NET Core 3.1 프로젝트와 함께 �
 
 릴리스에 대한 자세한 내용은 [.NET Core 3.1 공지](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/)를 참조하세요.
 
-- Windows, macOS 또는 Linux에서 [.NET Core 3.1을 다운로드하여 시작](https://dotnet.microsoft.com/download/dotnet-core/3.1)하세요.
+- Windows, macOS 또는 Linux에서 [.NET Core 3.1을 다운로드하여 시작](https://dotnet.microsoft.com/download/dotnet/3.1)하세요.
 
 ## <a name="long-term-support"></a>장기 지원
 

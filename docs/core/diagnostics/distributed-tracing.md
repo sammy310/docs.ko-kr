@@ -2,12 +2,12 @@
 title: 분산 추적 - .NET
 description: .NET 분산 추적에 대해 소개합니다.
 ms.date: 02/02/2021
-ms.openlocfilehash: d29c803dfec00474562abdc61ce65ea3f3faa133
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 44022232d4451f8d8a255a352206d7bdc9cb4e5c
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100431440"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105573"
 ---
 # <a name="net-distributed-tracing"></a>.NET 분산 추적
 
@@ -119,14 +119,14 @@ ms.locfileid: "100431440"
 `ActivityListener` 클래스는 서로 다른 이벤트를 처리하는 다양한 콜백을 제공합니다.
 
 ```csharp
-
-ActivityListener listener = new ActivityListener()
-
-ShouldListenTo = (activitySource) => object.ReferenceEquals(source, activitySource),
-ActivityStarted = activity => /* Handle the Activity start event here */ DoSomething(),
-ActivityStopped = activity => /* Handle the Activity stop event here */ DoSomething(),
-SampleUsingParentId = (ref ActivityCreationOptions<string> activityOptions) => ActivitySamplingResult.AllData,
-Sample = (ref ActivityCreationOptions<ActivityContext> activityOptions) => ActivitySamplingResult.AllData
+var listener = new ActivityListener
+{
+    ShouldListenTo = (activitySource) => object.ReferenceEquals(source, activitySource),
+    ActivityStarted = activity => /* Handle the Activity start event here */ DoSomething(),
+    ActivityStopped = activity => /* Handle the Activity stop event here */ DoSomething(),
+    SampleUsingParentId = (ref ActivityCreationOptions<string> activityOptions) => ActivitySamplingResult.AllData,
+    Sample = (ref ActivityCreationOptions<ActivityContext> activityOptions) => ActivitySamplingResult.AllData
+};
 
 // Enable the listener
 ActivitySource.AddActivityListener(listener);

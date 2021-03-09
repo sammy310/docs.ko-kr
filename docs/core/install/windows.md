@@ -4,12 +4,12 @@ description: .NET을 설치할 수 있는 Windows 버전에 대해 알아봅니�
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 55746b29b579a6d3aacb7d11c5604dc601440ab5
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 7909a94c6384e53569db3ba17047cbcc93e80fe1
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506294"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105104"
 ---
 # <a name="install-net-on-windows"></a>Windows에 .NET 설치
 
@@ -24,7 +24,7 @@ ms.locfileid: "99506294"
 .NET의 최신 버전은 5.0입니다.
 
 > [!div class="button"]
-> [.NET 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
+> [.NET 다운로드](https://dotnet.microsoft.com/download/dotnet)
 
 ## <a name="supported-releases"></a>지원되는 릴리스
 
@@ -76,7 +76,7 @@ Windows에 설치할 수 있는 세 가지 런타임이 있습니다.
   이 런타임은 가장 간단한 런타임이며 다른 런타임을 포함하지 않습니다. .NET 앱과의 최상의 호환성을 위해 ‘ASP.NET Core 런타임’과 ‘데스크톱 런타임’을 모두 설치하는 것이 좋습니다. 
 
 > [!div class="button"]
-> [.NET 런타임 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
+> [.NET 런타임 다운로드](https://dotnet.microsoft.com/download/dotnet)
 
 ## <a name="sdk-information"></a>SDK 정보
 
@@ -263,12 +263,12 @@ Visual Studio Code는 데스크톱에서 실행되는 강력한 경량 소스 �
 Visual Studio Code에 Visual Studio처럼 자동화된 .NET Core 설치 프로그램이 포함되지 않은 경우, 간편하게 .NET Core 지원을 추가할 수 있습니다.
 
 01. [Visual Studio Code를 다운로드하여 설치합니다](https://code.visualstudio.com/Download).
-01. [.NET Core SDK를 다운로드하여 설치합니다](https://dotnet.microsoft.com/download/dotnet-core).
+01. [.NET Core SDK를 다운로드하여 설치합니다](https://dotnet.microsoft.com/download/dotnet).
 01. [Visual Studio Code Marketplace에서 C# 확장을 설치합니다](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp).
 
 ## <a name="windows-installer"></a>Windows Installer
 
-Windows Installer 실행 파일은 .NET [다운로드 페이지](https://dotnet.microsoft.com/download/dotnet-core)에서 제공합니다.
+Windows Installer 실행 파일은 .NET [다운로드 페이지](https://dotnet.microsoft.com/download/dotnet)에서 제공합니다.
 
 Windows Installer를 사용하여 .NET을 설치하는 경우 `DOTNETHOME_X64` 및 `DOTNETHOME_X86` 매개 변수를 설정하여 설치 경로를 사용자 지정할 수 있습니다.
 
@@ -298,14 +298,14 @@ dotnet-sdk-3.1.301-win-x64.exe /install /quiet /norestart
 
 ## <a name="download-and-manually-install"></a>다운로드 및 수동으로 설치
 
-.NET용 Windows 설치 관리자 대신 SDK나 런타임을 다운로드하여 수동으로 설치할 수 있습니다. 수동 설치는 일반적으로 연속 통합 테스트의 일부로 수행됩니다. 개발자 또는 사용자의 경우 일반적으로 [설치 관리자](https://dotnet.microsoft.com/download/dotnet-core)를 사용하는 것이 좋습니다.
+.NET용 Windows 설치 관리자 대신 SDK나 런타임을 다운로드하여 수동으로 설치할 수 있습니다. 수동 설치는 일반적으로 연속 통합 테스트의 일부로 수행됩니다. 개발자 또는 사용자의 경우 일반적으로 [설치 관리자](https://dotnet.microsoft.com/download/dotnet)를 사용하는 것이 좋습니다.
 
 .NET SDK와 .NET 런타임 모두 다운로드한 후 수동으로 설치할 수 있습니다. .NET SDK를 설치하면 해당 런타임을 설치할 필요가 없습니다. 먼저, 다음 사이트 중 한 곳에서 SDK 또는 런타임의 이진 릴리스를 다운로드합니다.
 
 - [.NET 5.0 다운로드](https://dotnet.microsoft.com/download/dotnet/5.0)
-- [.NET Core 3.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [.NET Core 2.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.1)
-- [모든 .NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
+- [.NET Core 3.1 다운로드](https://dotnet.microsoft.com/download/dotnet/3.1)
+- [.NET Core 2.1 다운로드](https://dotnet.microsoft.com/download/dotnet/2.1)
+- [모든 .NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet)
 
 .NET을 추출해서 넣을 디렉터리(예: `%USERPROFILE%\dotnet`)를 만듭니다. 그런 다음, 다운로드한 zip 파일을 이 디렉터리로 추출합니다.
 

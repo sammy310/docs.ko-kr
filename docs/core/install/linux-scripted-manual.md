@@ -4,12 +4,12 @@ description: Linux에서 패키지 관리자 없이 .NET SDK 및 .NET 런타임�
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 14789587a58c7b9d5ef2c9251ed599ce18a48f24
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 414246e472c3d58a6768311bd7a4635100f3b618
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505578"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105182"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-manually"></a>수동으로 .NET SDK 또는 .NET 런타임 설치
 
@@ -111,9 +111,9 @@ SDK 대신 .NET 런타임을 설치하려면 `--runtime` 매개 변수를 사용
 .NET SDK를 설치하면 해당 런타임을 설치할 필요가 없습니다. 먼저, 다음 사이트 중 한 곳에서 SDK 또는 런타임의 **이진** 릴리스를 다운로드합니다.
 
 - ✔️ [.NET 5.0 다운로드](https://dotnet.microsoft.com/download/dotnet/5.0)
-- ✔️ [.NET Core 3.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- ✔️ [.NET Core 2.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.1)
-- [모든 .NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core)
+- ✔️ [.NET Core 3.1 다운로드](https://dotnet.microsoft.com/download/dotnet/3.1)
+- ✔️ [.NET Core 2.1 다운로드](https://dotnet.microsoft.com/download/dotnet/2.1)
+- [모든 .NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet)
 
 그런 다음, 다운로드된 파일을 추출하고 `export` 명령을 사용하여 .NET에서 사용된 변수를 설정하고 .NET이 PATH에 있는지 확인합니다.
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - langversion compiler option [C#]
 ms.custom: updateeachrelease
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: b0e966bcc87303c0a7c2199fbfac743b22481424
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 987177cc203b4c6202e8c14d8a9f4b41721e836f
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125477"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104876"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion(C# 컴파일러 옵션)
 
@@ -41,11 +41,11 @@ ms.locfileid: "89125477"
 
 C# 애플리케이션에서 참조된 메타데이터에는 **-langversion** 컴파일러 옵션이 적용되지 않습니다.
 
-각 C# 컴파일러 버전에 언어 사양의 확장이 포함되어 있으므로 **-langversion**은 이전 컴파일러 버전의 동등한 기능을 제공하지 않습니다.
+각 C# 컴파일러 버전에 언어 사양의 확장이 포함되어 있으므로 **-langversion** 은 이전 컴파일러 버전의 동등한 기능을 제공하지 않습니다.
 
 또한 C# 버전 업데이트는 일반적으로 주 .NET Framework 릴리스와 일치하는 반면, 새 구문과 기능이 반드시 특정 프레임워크 버전에 연결되지는 않습니다. 새로운 기능에는 C# 버전과 함께 릴리스된 새 컴파일러 업데이트가 분명히 필요하지만, 각 특정 기능에 고유한 최소 .NET API 또는 공용 언어 런타임 요구 사항이 있으므로 NuGet 패키지 또는 다른 라이브러리를 포함하여 하위 수준 프레임워크에서 실행이 허용될 수도 있습니다.
 
-사용하는 **-langversion** 설정과 관계없이 현재 버전의 공용 언어 런타임을 사용하여 고유한 .exe 또는 .dll을 만듭니다. 한 가지 예외는 friend 어셈블리와 [-moduleassemblyname(C# 컴파일러 옵션)](./moduleassemblyname-compiler-option.md)으로, **-langversion:ISO-1**에서 작동합니다.
+사용하는 **-langversion** 설정과 관계없이 현재 버전의 공용 언어 런타임을 사용하여 고유한 .exe 또는 .dll을 만듭니다. 한 가지 예외는 friend 어셈블리와 [-moduleassemblyname(C# 컴파일러 옵션)](./moduleassemblyname-compiler-option.md)으로, **-langversion:ISO-1** 에서 작동합니다.
 
 C# 언어 버전을 지정하는 다른 방법은 [C# 언어 버전 선택](../configure-language-version.md) 문서를 참조하세요.
 
@@ -64,11 +64,11 @@ C# 언어 버전을 지정하는 다른 방법은 [C# 언어 버전 선택](../c
 | C# 1.0           | [DOC 다운로드][csharp-1]   | C# 언어 사양 버전 1.0: Microsoft Corporation            |
 
 [csharp-6]: /dotnet/csharp/language-reference/language-specification/introduction
-[csharp-5]: https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf
+[csharp-5]: https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf
 [csharp-3]: https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc
-[csharp-2]: https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf
-[csharp-1.2]: https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf
-[csharp-1]: https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf
+[csharp-2]: https://www.ecma-international.org/wp-content/uploads/ECMA-334_4th_edition_june_2006.pdf
+[csharp-1.2]: https://www.ecma-international.org/wp-content/uploads/ECMA-334_2nd_edition_december_2002.pdf
+[csharp-1]: https://www.ecma-international.org/wp-content/uploads/ECMA-334_1st_edition_december_2001.pdf
 
 ## <a name="minimum-sdk-version-needed-to-support-all-language-features"></a>모든 언어 기능을 지원하는 데 필요한 최소 SDK 버전
 

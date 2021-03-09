@@ -10,12 +10,12 @@ metadata:
   ms.technology: azure
   ms.service: multiple
   ms.prod: azure-dotnet
-  ms.openlocfilehash: 3f84758863561be809078b888f18308d5cbcfb82
-  ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+  ms.openlocfilehash: 121499bc7f26ba6b07851696ae20b9ebf730de2a
+  ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/30/2021
-  ms.locfileid: "99216066"
+  ms.lasthandoff: 03/04/2021
+  ms.locfileid: "102105719"
 landingContent:
 - title: Azure에서 .NET 시작
   linkLists:
@@ -26,7 +26,7 @@ landingContent:
   - linkListType: get-started
     links:
     - text: .NET 개발자 도구
-      url: tools.md
+      url: ./dotnet-dev-env-checklist.md
     - text: 앱 인증
       url: authentication.md
     - text: 로깅
@@ -220,4 +220,4 @@ landingContent:
     - text: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
       url: ../architecture/containerized-lifecycle/index.md
     - text: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화
-      url: /dotnet/architecture/modernize-with-azure-containers/
+      url: ../architecture/modernize-with-azure-containers/index.md

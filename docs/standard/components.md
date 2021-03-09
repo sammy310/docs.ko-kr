@@ -3,12 +3,12 @@ title: .NET 아키텍처 구성 요소
 description: .NET Standard, .NET 구현, .NET 런타임 및 도구와 같은 .NET 아키텍처 구성 요소에 대해 설명합니다.
 author: cartermp
 ms.date: 10/05/2020
-ms.openlocfilehash: c5f174034ce0cd0e1cf0b799c7b3f4bff99447a2
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 884deb61ab5cda5054fb54134c3338b4d05599ca
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100423137"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106399"
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
@@ -99,21 +99,21 @@ UWP는 IoT(사물 인터넷)에 대한 최신 터치 가능 Windows 애플리케
 
 C# 언어 및 CLI(공용 언어 인프라) 사양은 [Ecma International&reg;](https://www.ecma-international.org/)을 통해 표준화됩니다. 이러한 표준의 첫 번째 버전은 2001년 12월에 Ecma에서 게시했습니다.
 
-표준에 대한 후속 수정 사항은 프로그래밍 언어 기술 위원회([TC49](https://www.ecma-international.org/memento/tc49.htm)) 내에서 TC49-TG2(C#) 및 TC49-TG3(CLI) 작업 그룹을 통해 개발되었고 이후에는 Ecma General Assembly가, 그 이후에는 ISO/IEC JTC 1이 ISO Fast-Track 프로세스를 통해 도입했습니다.
+표준에 대한 후속 수정 사항은 프로그래밍 언어 기술 위원회([TC49](https://www.ecma-international.org/technical-committees/tc49/)) 내에서 TC49-TG2(C#) 및 TC49-TG3(CLI) 작업 그룹을 통해 개발되었고 이후에는 Ecma General Assembly가, 그 이후에는 ISO/IEC JTC 1이 ISO Fast-Track 프로세스를 통해 도입했습니다.
 
 ### <a name="latest-standards"></a>최신 표준
 
-다음과 같은 공식 Ecma 문서는 [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) 및 [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm)([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm))에서 사용할 수 있습니다.
+다음과 같은 공식 Ecma 문서는 [C#](https://www.ecma-international.org/publications-and-standards/standards/ecma-334/) 및 [CLI](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/)([TR-84](https://www.ecma-international.org/publications-and-standards/technical-reports/ecma-tr-84/))에서 사용할 수 있습니다.
 
-- **C# 언어 표준(버전 5.0)** : [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **CLI(공용 언어 인프라)** : [ECMA-335.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf).
+- **C# 언어 표준(버전 5.0)** : [ECMA-334.pdf](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf)
+- **CLI(공용 언어 인프라)** : [ECMA-335.pdf](hhttps://www.ecma-international.org/wp-content/uploads/ECMA-335_6th_edition_june_2012.pdf).
 - **파티션 IV XML 파일에서 파생된 정보**: [ECMA-084.pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) format.
 
 공식 ISO/IEC 문서는 ISO/IEC [공개적으로 사용할 수 있는 표준](https://standards.iso.org/ittf/PubliclyAvailableStandards/) 페이지에서 사용할 수 있습니다. 이러한 링크는 해당 페이지에서 직접 제공됩니다.
 
 - **정보 기술 - 프로그래밍 언어- C#** : [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
 - **정보 기술 - CLI(공용 언어 인프라) 파티션 I ~ VI**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
-- **정보 기술 - CLI (공용 언어 인프라) - 파티션 IV XML 파일에서 파생된 정보에 대한 기술 보고서**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
+- **정보 기술 - CLI (공용 언어 인프라) - 파티션 IV XML 파일에서 파생된 정보에 대한 기술 보고서**: [ISO/IEC TR 23272:2011](https://www.ecma-international.org/wp-content/uploads/ECMA_TR-84_6th_edition_june_2012.pdf)
 
 ## <a name="see-also"></a>참조
 
