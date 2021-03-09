@@ -425,6 +425,8 @@ items:
                 href: ../core/diagnostics/well-known-event-providers.md
               - name: 분산 추적
                 href: ../core/diagnostics/distributed-tracing.md
+          - name: 기호
+            href: ../core/diagnostics/symbols.md
           - name: 런타임 이벤트
             items:
               - name: 개요
@@ -2291,20 +2293,22 @@ items:
         items:
           - name: .NET Core 2.0 ~ 2.1
             href: ../core/migration/20-21.md
-          - name: Project. json에서 마이그레이션
-            href: ../core/migration/index.md
-          - name: project.json 및 csproj 간 매핑
-            href: ../core/tools/project-json-to-csproj.md
           - name: 속성에 AssemblyInfo 특성 매핑
             href: ../core/migration/assembly-info.md
-          - name: CLI의 변경 내용 개요
-            href: ../core/tools/cli-msbuild-architecture.md
-          - name: DNX에서 마이그레이션
-            href: ../core/migration/from-dnx.md
       - name: .NET Framework 포트
         items:
           - name: 개요
             href: ../core/porting/index.md
+          - name: .NET 업그레이드 도우미 도구
+            items:
+              - name: 개요
+                href: ../core/porting/upgrade-assistant-overview.md
+              - name: Windows Presentation Foundation
+                href: ../core/porting/upgrade-assistant-wpf-framework.md
+              - name: Windows Forms
+                href: ../core/porting/upgrade-assistant-winforms-framework.md
+              - name: ASP.NET Core
+                href: ../core/porting/upgrade-assistant-aspnetmvc.md
           - name: 타사 종속성 분석
             href: ../core/porting/third-party-deps.md
           - name: 포트 라이브러리
