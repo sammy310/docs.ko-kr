@@ -286,6 +286,8 @@ items:
             href: programming-guide/main-and-command-args/how-to-display-command-line-arguments.md
           - name: Main() 반환 값
             href: programming-guide/main-and-command-args/main-return-values.md
+          - name: 최상위 문
+            href: programming-guide/main-and-command-args/top-level-statements.md
       - name: 프로그래밍 개념
         items:
           - name: 개요
@@ -1133,6 +1135,8 @@ items:
                 href: language-reference/keywords/add.md
               - name: Get
                 href: language-reference/keywords/get.md
+              - name: init
+                href: language-reference/keywords/init.md
               - name: partial(형식)
                 href: language-reference/keywords/partial-type.md
               - name: partial(메서드)

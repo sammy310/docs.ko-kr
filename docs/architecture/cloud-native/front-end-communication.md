@@ -3,12 +3,12 @@ title: 프런트 엔드 클라이언트 통신
 description: 프런트 엔드 클라이언트가 클라우드 네이티브 시스템과 통신 하는 방법 알아보기
 author: robvet
 ms.date: 01/19/2021
-ms.openlocfilehash: 089f55f8f6b9320fe552602eb40bb83be28f119b
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: b28fd05aded652057deecd6814199e0360202a07
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506242"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604517"
 ---
 # <a name="front-end-client-communication"></a>프런트 엔드 클라이언트 통신
 
@@ -43,7 +43,7 @@ ms.locfileid: "99506242"
 
 API 게이트웨이를 간단 하 고 신속 하 게 유지 하기 위해 주의를 기울여야 합니다. 일반적으로 비즈니스 논리는 게이트웨이에서 유지 됩니다. 복잡 한 게이트웨이는 병목 상태가 되 고 궁극적으로는 모놀리식가 될 위험이 있습니다. 규모가 큰 시스템은 종종 클라이언트 유형 (모바일, 웹, 데스크톱) 또는 백 엔드 기능을 통해 분할 된 여러 API 게이트웨이를 노출 합니다. [백 엔드 For 프런트 엔드](/azure/architecture/patterns/backends-for-frontends) 패턴은 여러 게이트웨이를 구현 하는 방향을 제공 합니다. 이 패턴은 그림 4-4에 나와 있습니다.
 
-![API 게이트웨이 패턴](./media/backend-for-frontend-pattern.png)
+![프런트 엔드 패턴의 백 엔드](./media/backend-for-frontend-pattern.png)
 
 **그림 4-4.** 프런트 엔드 패턴의 백 엔드
 

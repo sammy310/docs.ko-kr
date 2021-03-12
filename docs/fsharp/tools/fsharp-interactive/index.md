@@ -4,12 +4,12 @@ description: F# 대화형(dotnet fsi)이 어떻게 콘솔에서 F# 코드를 대
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: fe48d4d7de92eea800a489b12342e3ae181e8cb1
-ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
+ms.openlocfilehash: 200caf6be5977e4a4d11bda8ba57f276cb4f5ff6
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99426980"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605128"
 ---
 # <a name="interactive-programming-with-f"></a>F\#을 사용한 대화형 프로그래밍
 
@@ -137,7 +137,7 @@ printfn $"{f (dsharp.tensor 1.2)}"
 > [!NOTE]
 > 현재 프레임워크 참조를 사용하는 스크립트에 대한 제한(예: `Microsoft.NET.Sdk.Web` 또는 `Microsoft.NET.Sdk.WindowsDesktop`)이 있습니다. Saturn, Giraffe, WinForms와 같은 패키지는 사용할 수 없습니다. 이는 [#9417](https://github.com/dotnet/fsharp/issues/9417) 이슈에서 추적되고 있습니다.
 
-자세한 내용은 [패키지 관리 확장성 및 기타 확장](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager)을 참조하세요.
+자세한 내용은 [패키지 관리 확장성 및 기타 확장](https://fsharp.github.io/FSharp.Compiler.Service/reference/Microsoft.DotNet.DependencyManager.html)을 참조하세요.
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>F# 대화형으로 디스크에서 어셈블리 참조
 

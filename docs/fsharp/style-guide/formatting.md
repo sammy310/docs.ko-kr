@@ -2,12 +2,12 @@
 title: F# 코드 서식 지정 지침
 description: 'F # 코드의 서식을 지정 하기 위한 지침을 알아봅니다.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 4562242b82b0d7efac19bdcf2c04c29482af11dc
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 74ab483a501dd5135ad5d98fd6dce988cf207ef8
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259904"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605453"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 코드 서식 지정 지침
 
@@ -621,10 +621,10 @@ type MyRecord =
 let foo a =
     a
     |> Option.map
-        (fun x ->
-            {
-                MyField = x
-            })
+           (fun x ->
+                {
+                    MyField = x
+                })
 ```
 
 목록 및 배열 요소에도 동일한 규칙이 적용 됩니다.
@@ -836,10 +836,10 @@ match lam with
 ```fsharp
 lambdaList
 |> List.map
-    (function
-        | Abs(x, body) -> 1 + sizeLambda 0 body
-        | App(lam1, lam2) -> sizeLambda (sizeLambda 0 lam1) lam2
-        | Var v -> 1)
+       (function
+            | Abs(x, body) -> 1 + sizeLambda 0 body
+            | App(lam1, lam2) -> sizeLambda (sizeLambda 0 lam1) lam2
+            | Var v -> 1)
 ```
 
 키워드를 사용 하는 경우에도 또는에서 정의한 함수의 패턴 일치는 `let` `let rec` 를 시작한 후 4 개의 공백으로 들여쓰기 되어야 합니다 `let` `function` .
@@ -916,17 +916,43 @@ let printVolumes x =
 let printListWithOffset a list1 =
     List.iter
         (fun elem ->
-            printfn $"%d{a + elem}")
+             printfn $"A very long line to format the value: %d{a + elem}")
         list1
 
 let printListWithOffsetPiped a list1 =
     list1
     |> List.iter
-        (fun elem ->
-            printfn $"%d{a + elem}")
+           (fun elem ->
+                printfn $"A very long line to format the value: %d{a + elem}")
 ```
 
 람다 식의 본문이 여러 줄 길면 로컬 범위 함수로 리팩터링 하는 것을 고려해 야 합니다.
+
+함수를 표시 하는 `fun` / `function` 컨텍스트에 관계 없이 일반적으로 함수 또는 키워드를 기준으로 매개 변수를 들여씁니다.
+
+```fsharp
+// With 4 spaces indentation
+list1
+|> List.fold
+       someLongParam
+       anotherLongParam
+
+list1
+|> List.iter
+       (fun elem ->
+            printfn $"A very long line to format the value: %d{elem}")
+
+// With 2 spaces indentation
+list1
+|> List.fold
+     someLongParam
+     anotherLongParam
+
+list1
+|> List.iter
+       (fun elem ->
+          printfn $"A very long line to format the value: %d{elem}")
+```
 
 함수가 단일 여러 튜플 인수를 사용 하는 경우 [형식 지정 생성자, 정적 멤버 및 멤버 호출](#formatting-constructors-static-members-and-member-invocations) 에 대 한 동일한 규칙이 적용 됩니다.
 

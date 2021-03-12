@@ -3,12 +3,12 @@ title: Dapr이 배포되어 있습니다.
 description: D 4의 용도, 수행 하는 방법 및 작동 방식에 대 한 개략적인 개요입니다.
 author: robvet
 ms.date: 02/07/2021
-ms.openlocfilehash: c6157d29274df73f6ea1fef44b8e5cd5d0239471
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: f0efb4652aaa35961d59979cb561941e5280a575
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102401903"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604751"
 ---
 # <a name="dapr-at-20000-feet"></a>Dapr이 배포되어 있습니다.
 
@@ -155,7 +155,6 @@ Azure Redis Cache에서 상태 저장소로 시작 하는 것일 수 있습니�
 | [바인딩](https://github.com/dapr/components-contrib/tree/master/bindings) | 외부 시스템에서 응용 프로그램 이벤트를 트리거하고 선택적 데이터 페이로드가 있는 외부 시스템을 호출 하는 일관 된 인터페이스를 제공 합니다. |
 | [미들웨어](https://github.com/dapr/components-contrib/tree/master/middleware) | 사용자 지정 미들웨어가 요청 처리 파이프라인에 연결 하 고 요청 또는 응답에 대 한 추가 작업을 호출할 수 있도록 허용 합니다. |
 | [비밀 저장소](https://github.com/dapr/components-contrib/tree/master/secretstores) | 클라우드,에 지, 상용, 오픈 소스 서비스를 비롯 하 여 외부 암호 저장소와 상호 작용 하는 일관 된 인터페이스를 제공 합니다. |
-| [내보내기 추적](https://github.com/dapr/components-contrib/tree/master/exporters) | 원격 분석 래퍼를 열 수 있는 일관 된 인터페이스를 제공 합니다. |
 
 Jet가 d 4의 즉석에서 날아오기를 완료 하는 경우에는 나중에 다시 연결 하 여 함께 연결 하는 방법을 확인할 수 있습니다.
 

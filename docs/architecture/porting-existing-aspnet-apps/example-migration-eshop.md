@@ -3,12 +3,12 @@ title: ASP.NET Core에 대 한 eShop 마이그레이션 예제
 description: 샘플 온라인 스토어 앱을 참조로 사용 하 여 기존 ASP.NET MVC 앱을 ASP.NET Core로 마이그레이션하는 연습입니다.
 author: ardalis
 ms.date: 11/13/2020
-ms.openlocfilehash: 83110909632e4eb433e1fabaedf3490ce594e12e
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 498eb3b11c44381ff6d261b37caed15a2698b166
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401777"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605258"
 ---
 # <a name="example-migration-of-eshop-to-aspnet-core"></a>ASP.NET Core에 대 한 eShop 마이그레이션 예제
 
@@ -26,7 +26,7 @@ ms.locfileid: "102401777"
 
 ## <a name="run-apiport-to-identify-problematic-apis"></a>*Apiport* 를 실행 하 여 문제가 있는 api 식별
 
-마이그레이션을 준비 하는 첫 번째 단계는 *Apiport* 도구를 실행 하는 것입니다. 이 도구는 앱에서 호출 하는 .NET Framework Api 수와 .NET Standard 또는 .NET Core의 해당 항목 수를 식별 합니다. 주로 사용자의 앱 논리에 초점을 맞춘 후 타사 종속성이 아니라 이식 해야 하는 종속성에 주의를 기울여야 `System.Web` 합니다. ApiPort 도구는 [종속성을 이해 하 고 업데이트 하](/understand-update-dependencies.md)는 마지막 챕터에서 도입 되었습니다.
+마이그레이션을 준비 하는 첫 번째 단계는 *Apiport* 도구를 실행 하는 것입니다. 이 도구는 앱에서 호출 하는 .NET Framework Api 수와 .NET Standard 또는 .NET Core의 해당 항목 수를 식별 합니다. 주로 사용자의 앱 논리에 초점을 맞춘 후 타사 종속성이 아니라 이식 해야 하는 종속성에 주의를 기울여야 `System.Web` 합니다. ApiPort 도구는 [종속성을 이해 하 고 업데이트 하](understand-update-dependencies.md)는 마지막 챕터에서 도입 되었습니다.
 
 [ *Apiport* 도구를 설치 하 고 구성한](../../standard/analyzers/portability-analyzer.md)후에는 그림 4-2에 나와 있는 것 처럼 Visual Studio 내에서 분석을 실행 합니다.
 

@@ -3,12 +3,12 @@ description: '자세한 정보: 예외 및 오류 처리'
 title: 예외 및 오류 처리
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: 9851d63705ba8b28819b11e3893bcd6b019d565d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 16ae72d54177b664bc41be6e639d0a44867df569
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99735077"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605063"
 ---
 # <a name="handling-exceptions-and-faults"></a>예외 및 오류 처리
 
@@ -49,8 +49,8 @@ ms.locfileid: "99735077"
 
  SOAP 1.1과 SOAP 1.2는 모두 오류의 특정 구조를 정의합니다. 두 사양 사이에 약간의 차이는 있지만 일반적으로 Message 및 MessageFault 형식을 사용하여 오류를 만들고 소비합니다.  
   
- ![예외 및 오류 처리](./media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif "wcfc_SOAP1 1AndSOAP1 2FaultComparisonc")  
-SOAP 1.2 오류(왼쪽)와 SOAP 1.1 오류(오른쪽). SOAP 1.1에서는 오류 요소의 네임스페이스만 정규화됩니다.  
+ ![SOAP 1.2 오류 및 SOAP 1.1 오류](./media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif)  
+SOAP 1.2 오류(왼쪽)와 SOAP 1.1 오류(오른쪽). SOAP 1.1에서는 오류 요소만 정규화 된 네임 스페이스입니다.  
   
  SOAP에서는 오류 메시지를 오류 요소(이름이 `<env:Fault>`인 요소)를 `<env:Body>`의 자식으로 포함하는 메시지로만 정의합니다. 그림 1에 표시된 것과 같이 오류 요소의 콘텐츠는 SOAP 1.1과 SOAP 1.2 사이에서 약간 다릅니다. 하지만 <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType> 클래스에서는 이런 차이를 한 개체 모델로 정규화합니다.  
   
@@ -324,7 +324,7 @@ public class MessageFault
   
 - 핵심 구성 요소 외에도 [서비스 추적 뷰어 도구 (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) 를 사용 하 여 WCF 추적을 보고 검색할 수 있습니다. 이 도구는 WCF에 의해 생성 되 고을 사용 하 여 작성 된 추적 파일용으로 특별히 설계 되었습니다 <xref:System.Diagnostics.XmlWriterTraceListener> . 다음 그림에서는 추적에 관련된 다양한 구성 요소를 소개합니다.  
   
- ![예외 및 오류 처리](./media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
+ ![구성 요소 추적](./media/wcfc-tracinginchannelsc.gif)  
   
 ### <a name="tracing-from-a-custom-channel"></a>사용자 지정 채널에서 추적  
 

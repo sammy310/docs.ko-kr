@@ -1,679 +1,688 @@
-- name: 호환성이 손상되는 변경이란?
-  href: index.md
-- name: 호환성 유형
-  href: categories.md
-- name: 참조
-  expanded: true
-  items:
-    - name: 개요
-      href: breaking-changes.md
-    - name: .NET Framework에서
-      items:
-        - name: 호환성이 손상되는 변경
-          href: fx-core.md
-        - name: 사용할 수 없는 기술
-          href: ../porting/net-framework-tech-unavailable.md
-        - name: 항상 throw하는 API
-          href: unsupported-apis.md
-    - name: 버전별 호환성이 손상되는 변경 사항
-      expanded: true
-      items:
-        - name: .NET 6.0
-          items:
-            - name: 개요
-              href: 6.0.md
-            - name: ASP.NET Core
-              items:
-                - name: Nullable 참조 형식 주석 변경
-                  href: aspnet-core/6.0/nullable-reference-type-annotations-changed.md
-                - name: 사용되지 않고 제거된 API
-                  href: aspnet-core/6.0/obsolete-removed-apis.md
-                - name: 'Blazor: RequestImageFileAsync 메서드에서 변경된 매개 변수 이름'
-                  href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
-                - name: 'Kestrel: 로그 메시지 특성이 변경됨'
-                  href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
-                - name: '미들웨어: HTTPS 리디렉션 미들웨어가 모호한 HTTPS 포트에 대해 예외 throw'
-                  href: aspnet-core/6.0/middleware-ambiguous-https-ports-exception.md
-                - name: 'Razor: 사용되지 않음으로 표시된 RazorEngine API'
-                  href: aspnet-core/6.0/razor-engine-apis-obsolete.md
-            - name: 핵심 .NET 라이브러리
-              items:
-                - name: Null 허용 여부 주석 변경
-                  href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
-                - name: 표준 숫자 형식 구문 분석 정밀도
-                  href: core-libraries/6.0/numeric-format-parsing-handles-higher-precision.md
-            - name: Windows Forms
-              items:
-                - name: API가 ArgumentNullException을 throw함
-                  href: windows-forms/6.0/apis-throw-argumentnullexception.md
-                - name: NotifyIcon.Text 최대 텍스트 길이가 늘어남
-                  href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
-                - name: TableLayoutSettings 속성이 InvalidEnumArgumentException을 throw함
-                  href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
-                - name: 노드가 다른 곳에 할당될 경우 TreeNodeCollection.Item이 예외를 throw함
-                  href: windows-forms/6.0/treenodecollection-item-throws-argumentexception.md
-        - name: .NET 5.0
-          items:
-            - name: 개요
-              href: 5.0.md
-            - name: ASP.NET Core
-              items:
-                - name: ASP.NET Core 앱이 따옴표 붙은 숫자를 역직렬화함
-                  href: serialization/5.0/jsonserializer-allows-reading-numbers-as-strings.md
-                - name: AzureAD.UI 및 AzureADB2C.UI API가 사용되지 않음
-                  href: aspnet-core/5.0/authentication-aad-packages-obsolete.md
-                - name: BinaryFormatter serialization 메서드가 사용되지 않음
-                  href: core-libraries/5.0/binaryformatter-serialization-obsolete.md
-                - name: 엔드포인트 라우팅의 리소스가 HttpContext임
-                  href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
-                - name: Microsoft 접두사가 있는 Azure 통합 패키지가 제거됨
-                  href: aspnet-core/5.0/azure-integration-packages-removed.md
-                - name: 'Blazor: Blazor 앱에서 경로 우선 순위 논리가 변경됨'
-                  href: aspnet-core/5.0/blazor-routing-logic-changed.md
-                - name: 'Blazor: 업데이트된 브라우저 지원'
-                  href: aspnet-core/5.0/blazor-browser-support-updated.md
-                - name: 'Blazor: 컴파일러에 의해 잘린 무효 공백'
-                  href: aspnet-core/5.0/blazor-components-trim-insignificant-whitespace.md
-                - name: 'Blazor: JSObjectReference 및 JSInProcessObjectReference 형식이 internal임'
-                  href: aspnet-core/5.0/blazor-jsobjectreference-to-internal.md
-                - name: 'Blazor: NuGet 패키지의 대상 프레임워크가 변경됨'
-                  href: aspnet-core/5.0/blazor-packages-target-framework-changed.md
-                - name: 'Blazor: ProtectedBrowserStorage 기능을 공유 프레임워크로 이동함'
-                  href: aspnet-core/5.0/blazor-protectedbrowserstorage-moved.md
-                - name: 'Blazor: RenderTreeFrame 읽기 전용 퍼블릭 필드가 이제 속성임'
-                  href: aspnet-core/5.0/blazor-rendertreeframe-fields-become-properties.md
-                - name: 'Blazor: 정적 웹 자산에 대한 유효성 검사 논리를 업데이트함'
-                  href: aspnet-core/5.0/blazor-static-web-assets-validation-logic-updated.md
-                - name: 브라우저에서 지원되지 않는 암호화 API
-                  href: cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md
-                - name: '확장: 패키지 참조 변경'
-                  href: aspnet-core/5.0/extensions-package-reference-changes.md
-                - name: Kestrel 및 IIS BadHttpRequestException 형식이 사용되지 않음
-                  href: aspnet-core/5.0/http-badhttprequestexception-obsolete.md
-                - name: IHttpClientFactory 로그 정수 상태 코드에서 생성된 HttpClient 인스턴스
-                  href: aspnet-core/5.0/http-httpclient-instances-log-integer-status-codes.md
-                - name: 'HttpSys: 클라이언트 인증서 재협상을 기본적으로 사용 안 함'
-                  href: aspnet-core/5.0/httpsys-client-certificate-renegotiation-disabled-by-default.md
-                - name: 'IIS: UrlRewrite 미들웨어 쿼리 문자열이 유지됨'
-                  href: aspnet-core/5.0/iis-urlrewrite-middleware-query-strings-are-preserved.md
-                - name: 'Kestrel: 기본적으로 검색되는 구성 변경'
-                  href: aspnet-core/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md
-                - name: 'Kestrel: 지원되는 기본 TLS 프로토콜 버전 변경됨'
-                  href: aspnet-core/5.0/kestrel-default-supported-tls-protocol-versions-changed.md
-                - name: 'Kestrel: 호환되지 않는 Windows 버전에서 TLS를 통한 HTTP/2 사용 안 함'
-                  href: aspnet-core/5.0/kestrel-disables-http2-over-tls.md
-                - name: 'Kestrel: 사용되지 않는 것으로 표시된 Libuv 전송'
-                  href: aspnet-core/5.0/kestrel-libuv-transport-obsolete.md
-                - name: ConsoleLoggerOptions에서 사용되지 않는 속성
-                  href: core-libraries/5.0/obsolete-consoleloggeroptions-properties.md
-                - name: ResourceManagerWithCultureStringLocalizer 클래스 및 WithCulture 인터페이스 멤버가 제거됨
-                  href: aspnet-core/5.0/localization-members-removed.md
-                - name: Pubternal API가 제거됨
-                  href: aspnet-core/5.0/localization-pubternal-apis-removed.md
-                - name: 요청 지역화 미들웨어에서 사용되지 않는 생성자가 제거됨
-                  href: aspnet-core/5.0/localization-requestlocalizationmiddleware-constructor-removed.md
-                - name: '미들웨어: 사용되지 않는 것으로 표시된 데이터베이스 오류 페이지'
-                  href: aspnet-core/5.0/middleware-database-error-page-obsolete.md
-                - name: 예외 처리기 미들웨어가 원래 예외를 throw함
-                  href: aspnet-core/5.0/middleware-exception-handler-throws-original-exception.md
-                - name: ObjectModelValidator가 Validate의 새 오버로드를 호출함
-                  href: aspnet-core/5.0/mvc-objectmodelvalidator-calls-new-overload.md
-                - name: 쿠키 이름 인코딩이 제거됨
-                  href: aspnet-core/5.0/security-cookie-name-encoding-removed.md
-                - name: IdentityModel NuGet 패키지 버전이 업데이트됨
-                  href: aspnet-core/5.0/security-identitymodel-nuget-package-versions-updated.md
-                - name: 'SignalR: MessagePack 허브 프로토콜 옵션 형식이 변경됨'
-                  href: aspnet-core/5.0/signalr-messagepack-hub-protocol-options-changed.md
-                - name: 'SignalR: MessagePack 허브 프로토콜이 이동됨'
-                  href: aspnet-core/5.0/signalr-messagepack-package.md
-                - name: UseSignalR 및 UseConnections 메서드가 제거됨
-                  href: aspnet-core/5.0/signalr-usesignalr-useconnections-removed.md
-                - name: CSV 콘텐츠 형식이 표준 규격으로 변경됨
-                  href: aspnet-core/5.0/static-files-csv-content-type-changed.md
-            - name: 코드 분석
-              items:
-                - name: CA1416 경고
-                  href: code-analysis/5.0/ca1416-platform-compatibility-analyzer.md
-                - name: CA1417 경고
-                  href: code-analysis/5.0/ca1417-outattributes-on-pinvoke-string-parameters.md
-                - name: CA1831 경고
-                  href: code-analysis/5.0/ca1831-range-based-indexer-on-string.md
-                - name: CA2013 경고
-                  href: code-analysis/5.0/ca2013-referenceequals-on-value-types.md
-                - name: CA2014 경고
-                  href: code-analysis/5.0/ca2014-stackalloc-in-loops.md
-                - name: CA2015 경고
-                  href: code-analysis/5.0/ca2015-finalizers-for-memorymanager-types.md
-                - name: CA2200 경고
-                  href: code-analysis/5.0/ca2200-rethrow-to-preserve-stack-details.md
-                - name: CA2247 경고
-                  href: code-analysis/5.0/ca2247-ctor-arg-should-be-taskcreationoptions.md
-            - name: 핵심 .NET 라이브러리
-              items:
-                - name: 단일 파일 게시를 위한 어셈블리 관련 API 변경
-                  href: core-libraries/5.0/assembly-api-behavior-changes-for-single-file-publish.md
-                - name: BinaryFormatter serialization 메서드가 사용되지 않음
-                  href: core-libraries/5.0/binaryformatter-serialization-obsolete.md
-                - name: 코드 액세스 보안 API가 사용되지 않음
-                  href: core-libraries/5.0/code-access-security-apis-obsolete.md
-                - name: CreateCounterSetInstance가 InvalidOperationException을 throw함
-                  href: core-libraries/5.0/createcountersetinstance-throws-invalidoperation.md
-                - name: 기본 ActivityIdFormat이 W3C임
-                  href: core-libraries/5.0/default-activityidformat-changed.md
-                - name: Environment.OSVersion이 올바른 버전을 반환함
-                  href: core-libraries/5.0/environment-osversion-returns-correct-version.md
-                - name: FrameworkDescription의 값이 .NET Core가 아니라 .NET임
-                  href: core-libraries/5.0/frameworkdescription-returns-net-not-net-core.md
-                - name: GAC API가 사용되지 않음
-                  href: core-libraries/5.0/global-assembly-cache-apis-obsolete.md
-                - name: 하드웨어 내장 IsSupported 검사
-                  href: core-libraries/5.0/hardware-instrinsics-issupported-checks.md
-                - name: IntPtr 및 UIntPtr에서 IFormattable 구현
-                  href: core-libraries/5.0/intptr-uintptr-implement-iformattable.md
-                - name: LastIndexOf가 빈 검색 문자열을 처리함
-                  href: core-libraries/5.0/lastindexof-improved-handling-of-empty-values.md
-                - name: Unix에서 ASCII가 아닌 문자를 포함하는 URI 경로
-                  href: core-libraries/5.0/non-ascii-chars-in-uri-parsed-correctly.md
-                - name: 기본이 아닌 진단 ID를 사용하는 API 사용되지 않음
-                  href: core-libraries/5.0/obsolete-apis-with-custom-diagnostics.md
-                - name: ConsoleLoggerOptions에서 사용되지 않는 속성
-                  href: core-libraries/5.0/obsolete-consoleloggeroptions-properties.md
-                - name: LINQ OrderBy.First의 복잡성
-                  href: core-libraries/5.0/orderby-firstordefault-complexity-increase.md
-                - name: OSPlatform 특성이 제거되었거나 특성 이름이 바뀜
-                  href: core-libraries/5.0/os-platform-attributes-renamed.md
-                - name: Microsoft.DotNet.PlatformAbstractions 패키지 제거됨
-                  href: core-libraries/5.0/platformabstractions-package-removed.md
-                - name: PrincipalPermissionAttribute가 사용되지 않음
-                  href: core-libraries/5.0/principalpermissionattribute-obsolete.md
-                - name: 미리 보기 버전에서 매개 변수 이름 변경
-                  href: core-libraries/5.0/reference-assembly-parameter-names-rc1.md
-                - name: 참조 어셈블리의 매개 변수 이름 변경
-                  href: core-libraries/5.0/reference-assembly-parameter-names.md
-                - name: 원격 API가 사용되지 않음
-                  href: core-libraries/5.0/remoting-apis-obsolete.md
-                - name: Activity.Tags 목록의 순서가 반대로 표시됨
-                  href: core-libraries/5.0/reverse-order-of-tags-in-activity-property.md
-                - name: SSE 및 SSE2 비교 메서드가 NaN을 처리함
-                  href: core-libraries/5.0/sse-comparegreaterthan-intrinsics.md
-                - name: Thread.Abort는 사용되지 않음
-                  href: core-libraries/5.0/thread-abort-obsolete.md
-                - name: Unix에서 UNC 경로의 URI 인식
-                  href: core-libraries/5.0/unc-path-recognition-unix.md
-                - name: UTF-7 코드 경로가 사용되지 않음
-                  href: core-libraries/5.0/utf-7-code-paths-obsolete.md
-                - name: Vector2.Lerp 및 Vector4.Lerp의 동작 변경
-                  href: core-libraries/5.0/vector-lerp-behavior-change.md
-                - name: Vector<T>가 NotSupportedException을 throw함
-                  href: core-libraries/5.0/vectort-throws-notsupportedexception.md
-            - name: 암호화
-              items:
-                - name: 브라우저에서 지원되지 않는 암호화 API
-                  href: cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md
-                - name: Cryptography.Oid가 초기값 전용임
-                  href: cryptography/5.0/cryptography-oid-init-only.md
-                - name: Linux의 기본 TLS 암호 그룹
-                  href: cryptography/5.0/default-cipher-suites-for-tls-on-linux.md
-                - name: 암호화 추상화에 대한 Create() 오버 로드가 사용되지 않음
-                  href: cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md
-                - name: 기본 FeedbackSize 값이 변경됨
-                  href: cryptography/5.0/tripledes-default-feedback-size-change.md
-            - name: Entity Framework Core
-              href: /ef/core/what-is-new/ef-core-5.0/breaking-changes?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
-            - name: 전역화
-              items:
-                - name: Windows에서 ICU 라이브러리 사용
-                  href: globalization/5.0/icu-globalization-api.md
-                - name: StringInfo 및 TextElementEnumerator가 UAX29 규격임
-                  href: globalization/5.0/uax29-compliant-grapheme-enumeration.md
-                - name: 라틴어-1 문자의 유니코드 범주가 변경됨
-                  href: globalization/5.0/unicode-categories-for-latin1-chars.md
-                - name: ListSeparator 값이 변경됨
-                  href: globalization/5.0/listseparator-value-change.md
-            - name: Interop
-              items:
-                - name: WinRT에 대한 지원이 제거됨
-                  href: interop/5.0/built-in-support-for-winrt-removed.md
-                - name: RCW를 InterfaceIsIInspectable로 캐스팅하면 예외가 throw됨
-                  href: interop/5.0/casting-rcw-to-inspectable-interface-throws-exception.md
-                - name: 비 Windows 플랫폼에서 A/W 접미사 검색 안 함
-                  href: interop/5.0/function-suffix-pinvoke.md
-            - name: MSBuild
-              items:
-                - name: 기본적으로 Directory.Packages.props 파일을 가져옴
-                  href: msbuild/5.0/directory-packages-props-imported-by-default.md
-                - name: NETCOREAPP3_1 전처리기 기호가 정의되지 않음
-                  href: msbuild/5.0/netcoreapp3_1-preprocessor-symbol-not-defined.md
-                - name: PublishDepsFilePath 동작 변경
-                  href: msbuild/5.0/publishdepsfilepath-behavior-change.md
-                - name: netcoreapp에서 net으로 TargetFramework 변경
-                  href: msbuild/5.0/targetframework-name-change.md
-            - name: 네트워킹
-              items:
-                - name: 쿠키 경로 처리가 RFC 6265를 준수함
-                  href: networking/5.0/cookie-path-conforms-to-rfc6265.md
-                - name: SendToAsync 호출 후 LocalEndPoint가 업데이트됨
-                  href: networking/5.0/localendpoint-updated-on-sendtoasync.md
-                - name: MulticastOption.Group에서 null을 허용하지 않음
-                  href: networking/5.0/multicastoption-group-doesnt-accept-null.md
-                - name: 스트림이 연속 Begin 작업을 허용함
-                  href: networking/5.0/negotiatestream-sslstream-dont-fail-on-successive-begin-calls.md
-                - name: .NET 런타임에서 WinHttpHandler 제거됨
-                  href: networking/5.0/winhttphandler-removed-from-runtime.md
-            - name: 보안
-              items:
-                - name: 코드 액세스 보안 API가 사용되지 않음
-                  href: core-libraries/5.0/code-access-security-apis-obsolete.md
-                - name: PrincipalPermissionAttribute가 사용되지 않음
-                  href: core-libraries/5.0/principalpermissionattribute-obsolete.md
-                - name: UTF-7 코드 경로가 사용되지 않음
-                  href: core-libraries/5.0/utf-7-code-paths-obsolete.md
-            - name: Serialization
-              items:
-                - name: BinaryFormatter.Deserialize가 예외를 다시 래핑함
-                  href: serialization/5.0/binaryformatter-deserialize-rewraps-exceptions.md
-                - name: JsonSerializer.Deserialize에는 단일 문자열이 필요함
-                  href: serialization/5.0/deserializing-json-into-char-requires-single-character.md
-                - name: ASP.NET Core 앱이 따옴표 붙은 숫자를 역직렬화함
-                  href: serialization/5.0/jsonserializer-allows-reading-numbers-as-strings.md
-                - name: JsonSerializer.Serialize가 ArgumentNullException을 throw함
-                  href: serialization/5.0/jsonserializer-serialize-throws-argumentnullexception-for-null-type.md
-                - name: 역직렬화에 사용되지 않는 비공용 매개 변수가 없는 생성자
-                  href: serialization/5.0/non-public-parameterless-constructors-not-used-for-deserialization.md
-                - name: 키-값 쌍을 직렬화할 때 옵션이 적용됨
-                  href: serialization/5.0/options-honored-when-serializing-key-value-pairs.md
-            - name: Windows Forms
-              items:
-                - name: 네이티브 코드는 Windows Forms 개체에 액세스하지 못함
-                  href: windows-forms/5.0/winforms-objects-not-accessible-from-native-code.md
-                - name: OutputType이 WinExe로 설정됨
-                  href: windows-forms/5.0/automatically-infer-winexe-output-type.md
-                - name: DataGridView가 사용자 지정 글꼴을 다시 설정하지 않음
-                  href: windows-forms/5.0/datagridview-doesnt-reset-custom-font-settings.md
-                - name: 메서드가 ArgumentException을 throw함
-                  href: windows-forms/5.0/invalid-args-cause-argumentexception.md
-                - name: 메서드가 ArgumentNullException을 throw함
-                  href: windows-forms/5.0/null-args-cause-argumentnullexception.md
-                - name: 속성이 ArgumentOutOfRangeException을 throw함
-                  href: windows-forms/5.0/invalid-args-cause-argumentoutofrangeexception.md
-                - name: TextFormatFlags.ModifyString은 사용되지 않음
-                  href: windows-forms/5.0/modifystring-field-of-textformatflags-obsolete.md
-                - name: DataGridView API가 InvalidOperationException을 throw함
-                  href: windows-forms/5.0/null-owner-causes-invalidoperationexception.md
-                - name: WinForms 앱이 Microsoft.NET.Sdk를 사용함
-                  href: windows-forms/5.0/sdk-and-target-framework-change.md
-                - name: 상태 표시줄 컨트롤 제거
-                  href: windows-forms/5.0/winforms-deprecated-controls.md
-            - name: WPF
-              items:
-                - name: OutputType이 WinExe로 설정됨
-                  href: windows-forms/5.0/automatically-infer-winexe-output-type.md
-                - name: WPF 앱이 Microsoft.NET.Sdk를 사용함
-                  href: windows-forms/5.0/sdk-and-target-framework-change.md
-        - name: .NET Core 3.1
-          href: 3.1.md
-        - name: .NET Core 3.0
-          href: 3.0.md
-        - name: .NET Core 2.1
-          href: 2.1.md
-    - name: 호환성이 손상되는 변경(영역별)
-      items:
-        - name: ASP.NET Core
-          items:
-            - name: .NET 6.0
-              items:
-                - name: Nullable 참조 형식 주석 변경
-                  href: aspnet-core/6.0/nullable-reference-type-annotations-changed.md
-                - name: 사용되지 않고 제거된 API
-                  href: aspnet-core/6.0/obsolete-removed-apis.md
-                - name: 'Blazor: RequestImageFileAsync 메서드에서 변경된 매개 변수 이름'
-                  href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
-                - name: 'Kestrel: 로그 메시지 특성이 변경됨'
-                  href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
-                - name: '미들웨어: HTTPS 리디렉션 미들웨어가 모호한 HTTPS 포트에 대해 예외 throw'
-                  href: aspnet-core/6.0/middleware-ambiguous-https-ports-exception.md
-                - name: 'Razor: 사용되지 않음으로 표시된 RazorEngine API'
-                  href: aspnet-core/6.0/razor-engine-apis-obsolete.md
-            - name: .NET 5.0
-              items:
-                - name: ASP.NET Core 앱이 따옴표 붙은 숫자를 역직렬화함
-                  href: serialization/5.0/jsonserializer-allows-reading-numbers-as-strings.md
-                - name: AzureAD.UI 및 AzureADB2C.UI API가 사용되지 않음
-                  href: aspnet-core/5.0/authentication-aad-packages-obsolete.md
-                - name: BinaryFormatter serialization 메서드가 사용되지 않음
-                  href: core-libraries/5.0/binaryformatter-serialization-obsolete.md
-                - name: 엔드포인트 라우팅의 리소스가 HttpContext임
-                  href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
-                - name: Microsoft 접두사가 있는 Azure 통합 패키지가 제거됨
-                  href: aspnet-core/5.0/azure-integration-packages-removed.md
-                - name: 'Blazor: Blazor 앱에서 경로 우선 순위 논리가 변경됨'
-                  href: aspnet-core/5.0/blazor-routing-logic-changed.md
-                - name: 'Blazor: 업데이트된 브라우저 지원'
-                  href: aspnet-core/5.0/blazor-browser-support-updated.md
-                - name: 'Blazor: 컴파일러에 의해 잘린 무효 공백'
-                  href: aspnet-core/5.0/blazor-components-trim-insignificant-whitespace.md
-                - name: 'Blazor: JSObjectReference 및 JSInProcessObjectReference 형식이 internal임'
-                  href: aspnet-core/5.0/blazor-jsobjectreference-to-internal.md
-                - name: 'Blazor: NuGet 패키지의 대상 프레임워크가 변경됨'
-                  href: aspnet-core/5.0/blazor-packages-target-framework-changed.md
-                - name: 'Blazor: ProtectedBrowserStorage 기능을 공유 프레임워크로 이동함'
-                  href: aspnet-core/5.0/blazor-protectedbrowserstorage-moved.md
-                - name: 'Blazor: RenderTreeFrame 읽기 전용 퍼블릭 필드가 이제 속성임'
-                  href: aspnet-core/5.0/blazor-rendertreeframe-fields-become-properties.md
-                - name: 'Blazor: 정적 웹 자산에 대한 유효성 검사 논리를 업데이트함'
-                  href: aspnet-core/5.0/blazor-static-web-assets-validation-logic-updated.md
-                - name: 브라우저에서 지원되지 않는 암호화 API
-                  href: cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md
-                - name: '확장: 패키지 참조 변경'
-                  href: aspnet-core/5.0/extensions-package-reference-changes.md
-                - name: Kestrel 및 IIS BadHttpRequestException 형식이 사용되지 않음
-                  href: aspnet-core/5.0/http-badhttprequestexception-obsolete.md
-                - name: IHttpClientFactory 로그 정수 상태 코드에서 생성된 HttpClient 인스턴스
-                  href: aspnet-core/5.0/http-httpclient-instances-log-integer-status-codes.md
-                - name: 'HttpSys: 클라이언트 인증서 재협상을 기본적으로 사용 안 함'
-                  href: aspnet-core/5.0/httpsys-client-certificate-renegotiation-disabled-by-default.md
-                - name: 'IIS: UrlRewrite 미들웨어 쿼리 문자열이 유지됨'
-                  href: aspnet-core/5.0/iis-urlrewrite-middleware-query-strings-are-preserved.md
-                - name: 'Kestrel: 기본적으로 검색되는 구성 변경'
-                  href: aspnet-core/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md
-                - name: 'Kestrel: 지원되는 기본 TLS 프로토콜 버전 변경됨'
-                  href: aspnet-core/5.0/kestrel-default-supported-tls-protocol-versions-changed.md
-                - name: 'Kestrel: 호환되지 않는 Windows 버전에서 TLS를 통한 HTTP/2 사용 안 함'
-                  href: aspnet-core/5.0/kestrel-disables-http2-over-tls.md
-                - name: 'Kestrel: 사용되지 않는 것으로 표시된 Libuv 전송'
-                  href: aspnet-core/5.0/kestrel-libuv-transport-obsolete.md
-                - name: ConsoleLoggerOptions에서 사용되지 않는 속성
-                  href: core-libraries/5.0/obsolete-consoleloggeroptions-properties.md
-                - name: ResourceManagerWithCultureStringLocalizer 클래스 및 WithCulture 인터페이스 멤버가 제거됨
-                  href: aspnet-core/5.0/localization-members-removed.md
-                - name: Pubternal API가 제거됨
-                  href: aspnet-core/5.0/localization-pubternal-apis-removed.md
-                - name: 요청 지역화 미들웨어에서 사용되지 않는 생성자가 제거됨
-                  href: aspnet-core/5.0/localization-requestlocalizationmiddleware-constructor-removed.md
-                - name: '미들웨어: 사용되지 않는 것으로 표시된 데이터베이스 오류 페이지'
-                  href: aspnet-core/5.0/middleware-database-error-page-obsolete.md
-                - name: 예외 처리기 미들웨어가 원래 예외를 throw함
-                  href: aspnet-core/5.0/middleware-exception-handler-throws-original-exception.md
-                - name: ObjectModelValidator가 Validate의 새 오버로드를 호출함
-                  href: aspnet-core/5.0/mvc-objectmodelvalidator-calls-new-overload.md
-                - name: 쿠키 이름 인코딩이 제거됨
-                  href: aspnet-core/5.0/security-cookie-name-encoding-removed.md
-                - name: IdentityModel NuGet 패키지 버전이 업데이트됨
-                  href: aspnet-core/5.0/security-identitymodel-nuget-package-versions-updated.md
-                - name: 'SignalR: MessagePack 허브 프로토콜 옵션 형식이 변경됨'
-                  href: aspnet-core/5.0/signalr-messagepack-hub-protocol-options-changed.md
-                - name: 'SignalR: MessagePack 허브 프로토콜이 이동됨'
-                  href: aspnet-core/5.0/signalr-messagepack-package.md
-                - name: UseSignalR 및 UseConnections 메서드가 제거됨
-                  href: aspnet-core/5.0/signalr-usesignalr-useconnections-removed.md
-                - name: CSV 콘텐츠 형식이 표준 규격으로 변경됨
-                  href: aspnet-core/5.0/static-files-csv-content-type-changed.md
-            - name: .NET Core 3.0~3.1
-              href: aspnetcore.md
-        - name: 코드 분석
-          items:
-            - name: .NET 5.0
-              items:
-                - name: CA1416 경고
-                  href: code-analysis/5.0/ca1416-platform-compatibility-analyzer.md
-                - name: CA1417 경고
-                  href: code-analysis/5.0/ca1417-outattributes-on-pinvoke-string-parameters.md
-                - name: CA1831 경고
-                  href: code-analysis/5.0/ca1831-range-based-indexer-on-string.md
-                - name: CA2013 경고
-                  href: code-analysis/5.0/ca2013-referenceequals-on-value-types.md
-                - name: CA2014 경고
-                  href: code-analysis/5.0/ca2014-stackalloc-in-loops.md
-                - name: CA2015 경고
-                  href: code-analysis/5.0/ca2015-finalizers-for-memorymanager-types.md
-                - name: CA2200 경고
-                  href: code-analysis/5.0/ca2200-rethrow-to-preserve-stack-details.md
-                - name: CA2247 경고
-                  href: code-analysis/5.0/ca2247-ctor-arg-should-be-taskcreationoptions.md
-        - name: 핵심 .NET 라이브러리
-          items:
-            - name: .NET 6.0
-              items:
-                - name: Null 허용 여부 주석 변경
-                  href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
-                - name: 표준 숫자 형식 구문 분석 정밀도
-                  href: core-libraries/6.0/numeric-format-parsing-handles-higher-precision.md
-            - name: .NET 5.0
-              items:
-                - name: 단일 파일 게시를 위한 어셈블리 관련 API 변경
-                  href: core-libraries/5.0/assembly-api-behavior-changes-for-single-file-publish.md
-                - name: BinaryFormatter serialization 메서드가 사용되지 않음
-                  href: core-libraries/5.0/binaryformatter-serialization-obsolete.md
-                - name: 코드 액세스 보안 API가 사용되지 않음
-                  href: core-libraries/5.0/code-access-security-apis-obsolete.md
-                - name: CreateCounterSetInstance가 InvalidOperationException을 throw함
-                  href: core-libraries/5.0/createcountersetinstance-throws-invalidoperation.md
-                - name: 기본 ActivityIdFormat이 W3C임
-                  href: core-libraries/5.0/default-activityidformat-changed.md
-                - name: Environment.OSVersion이 올바른 버전을 반환함
-                  href: core-libraries/5.0/environment-osversion-returns-correct-version.md
-                - name: FrameworkDescription의 값이 .NET Core가 아니라 .NET임
-                  href: core-libraries/5.0/frameworkdescription-returns-net-not-net-core.md
-                - name: GAC API가 사용되지 않음
-                  href: core-libraries/5.0/global-assembly-cache-apis-obsolete.md
-                - name: 하드웨어 내장 IsSupported 검사
-                  href: core-libraries/5.0/hardware-instrinsics-issupported-checks.md
-                - name: IntPtr 및 UIntPtr에서 IFormattable 구현
-                  href: core-libraries/5.0/intptr-uintptr-implement-iformattable.md
-                - name: LastIndexOf가 빈 검색 문자열을 처리함
-                  href: core-libraries/5.0/lastindexof-improved-handling-of-empty-values.md
-                - name: Unix에서 ASCII가 아닌 문자를 포함하는 URI 경로
-                  href: core-libraries/5.0/non-ascii-chars-in-uri-parsed-correctly.md
-                - name: 기본이 아닌 진단 ID를 사용하는 API 사용되지 않음
-                  href: core-libraries/5.0/obsolete-apis-with-custom-diagnostics.md
-                - name: ConsoleLoggerOptions에서 사용되지 않는 속성
-                  href: core-libraries/5.0/obsolete-consoleloggeroptions-properties.md
-                - name: LINQ OrderBy.First의 복잡성
-                  href: core-libraries/5.0/orderby-firstordefault-complexity-increase.md
-                - name: OSPlatform 특성이 제거되었거나 특성 이름이 바뀜
-                  href: core-libraries/5.0/os-platform-attributes-renamed.md
-                - name: Microsoft.DotNet.PlatformAbstractions 패키지 제거됨
-                  href: core-libraries/5.0/platformabstractions-package-removed.md
-                - name: PrincipalPermissionAttribute가 사용되지 않음
-                  href: core-libraries/5.0/principalpermissionattribute-obsolete.md
-                - name: 미리 보기 버전에서 매개 변수 이름 변경
-                  href: core-libraries/5.0/reference-assembly-parameter-names-rc1.md
-                - name: 참조 어셈블리의 매개 변수 이름 변경
-                  href: core-libraries/5.0/reference-assembly-parameter-names.md
-                - name: 원격 API가 사용되지 않음
-                  href: core-libraries/5.0/remoting-apis-obsolete.md
-                - name: Activity.Tags 목록의 순서가 반대로 표시됨
-                  href: core-libraries/5.0/reverse-order-of-tags-in-activity-property.md
-                - name: SSE 및 SSE2 비교 메서드가 NaN을 처리함
-                  href: core-libraries/5.0/sse-comparegreaterthan-intrinsics.md
-                - name: Thread.Abort는 사용되지 않음
-                  href: core-libraries/5.0/thread-abort-obsolete.md
-                - name: Unix에서 UNC 경로의 URI 인식
-                  href: core-libraries/5.0/unc-path-recognition-unix.md
-                - name: UTF-7 코드 경로가 사용되지 않음
-                  href: core-libraries/5.0/utf-7-code-paths-obsolete.md
-                - name: Vector2.Lerp 및 Vector4.Lerp의 동작 변경
-                  href: core-libraries/5.0/vector-lerp-behavior-change.md
-                - name: Vector<T>가 NotSupportedException을 throw함
-                  href: core-libraries/5.0/vectort-throws-notsupportedexception.md
-            - name: .NET 1.0 ~ 3.1
-              href: corefx.md
-        - name: 암호화
-          items:
-            - name: .NET 5.0
-              items:
-                - name: 브라우저에서 지원되지 않는 암호화 API
-                  href: cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md
-                - name: Cryptography.Oid가 초기값 전용임
-                  href: cryptography/5.0/cryptography-oid-init-only.md
-                - name: Linux의 기본 TLS 암호 그룹
-                  href: cryptography/5.0/default-cipher-suites-for-tls-on-linux.md
-                - name: 암호화 추상화에 대한 Create() 오버 로드가 사용되지 않음
-                  href: cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md
-                - name: 기본 FeedbackSize 값이 변경됨
-                  href: cryptography/5.0/tripledes-default-feedback-size-change.md
-            - name: .NET Core 2.1~3.0
-              href: cryptography.md
-        - name: Entity Framework Core
-          items:
-            - name: EF Core 5.0
-              href: /ef/core/what-is-new/ef-core-5.0/breaking-changes?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
-            - name: EF Core 3.1
-              href: /ef/core/what-is-new/ef-core-3.x/breaking-changes?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
-        - name: 전역화
-          items:
-            - name: .NET 5.0
-              items:
-                - name: Windows에서 ICU 라이브러리 사용
-                  href: globalization/5.0/icu-globalization-api.md
-                - name: StringInfo 및 TextElementEnumerator가 UAX29 규격임
-                  href: globalization/5.0/uax29-compliant-grapheme-enumeration.md
-                - name: 라틴어-1 문자의 유니코드 범주가 변경됨
-                  href: globalization/5.0/unicode-categories-for-latin1-chars.md
-                - name: ListSeparator 값이 변경됨
-                  href: globalization/5.0/listseparator-value-change.md
-            - name: .NET 3.0
-              href: globalization.md
-        - name: Interop
-          items:
-            - name: .NET 5.0
-              items:
-                - name: WinRT에 대한 지원이 제거됨
-                  href: interop/5.0/built-in-support-for-winrt-removed.md
-                - name: RCW를 InterfaceIsIInspectable로 캐스팅하면 예외가 throw됨
-                  href: interop/5.0/casting-rcw-to-inspectable-interface-throws-exception.md
-                - name: 비 Windows 플랫폼에서 A/W 접미사 검색 안 함
-                  href: interop/5.0/function-suffix-pinvoke.md
-        - name: MSBuild
-          items:
-            - name: .NET 5.0
-              items:
-                - name: 기본적으로 Directory.Packages.props 파일을 가져옴
-                  href: msbuild/5.0/directory-packages-props-imported-by-default.md
-                - name: NETCOREAPP3_1 전처리기 기호가 정의되지 않음
-                  href: msbuild/5.0/netcoreapp3_1-preprocessor-symbol-not-defined.md
-                - name: PublishDepsFilePath 동작 변경
-                  href: msbuild/5.0/publishdepsfilepath-behavior-change.md
-                - name: netcoreapp에서 net으로 TargetFramework 변경
-                  href: msbuild/5.0/targetframework-name-change.md
-            - name: .NET Core 2.1 - 3.1
-              href: msbuild.md
-        - name: 네트워킹
-          items:
-            - name: .NET 5.0
-              items:
-                - name: 쿠키 경로 처리가 RFC 6265를 준수함
-                  href: networking/5.0/cookie-path-conforms-to-rfc6265.md
-                - name: SendToAsync 호출 후 LocalEndPoint가 업데이트됨
-                  href: networking/5.0/localendpoint-updated-on-sendtoasync.md
-                - name: MulticastOption.Group에서 null을 허용하지 않음
-                  href: networking/5.0/multicastoption-group-doesnt-accept-null.md
-                - name: 스트림이 연속 Begin 작업을 허용함
-                  href: networking/5.0/negotiatestream-sslstream-dont-fail-on-successive-begin-calls.md
-                - name: .NET 런타임에서 WinHttpHandler 제거됨
-                  href: networking/5.0/winhttphandler-removed-from-runtime.md
-            - name: .NET 2.0 ~ 3.0
-              href: networking.md
-        - name: 보안
-          items:
-            - name: .NET 5.0
-              items:
-                - name: 코드 액세스 보안 API가 사용되지 않음
-                  href: core-libraries/5.0/code-access-security-apis-obsolete.md
-                - name: PrincipalPermissionAttribute가 사용되지 않음
-                  href: core-libraries/5.0/principalpermissionattribute-obsolete.md
-                - name: UTF-7 코드 경로가 사용되지 않음
-                  href: core-libraries/5.0/utf-7-code-paths-obsolete.md
-        - name: Serialization
-          items:
-            - name: .NET 5.0
-              items:
-                - name: BinaryFormatter.Deserialize가 예외를 다시 래핑함
-                  href: serialization/5.0/binaryformatter-deserialize-rewraps-exceptions.md
-                - name: JsonSerializer.Deserialize에는 단일 문자열이 필요함
-                  href: serialization/5.0/deserializing-json-into-char-requires-single-character.md
-                - name: ASP.NET Core 앱이 따옴표 붙은 숫자를 역직렬화함
-                  href: serialization/5.0/jsonserializer-allows-reading-numbers-as-strings.md
-                - name: JsonSerializer.Serialize가 ArgumentNullException을 throw함
-                  href: serialization/5.0/jsonserializer-serialize-throws-argumentnullexception-for-null-type.md
-                - name: 역직렬화에 사용되지 않는 비공용 매개 변수가 없는 생성자
-                  href: serialization/5.0/non-public-parameterless-constructors-not-used-for-deserialization.md
-                - name: 키-값 쌍을 직렬화할 때 옵션이 적용됨
-                  href: serialization/5.0/options-honored-when-serializing-key-value-pairs.md
-        - name: Visual Basic
-          items:
-            - name: .NET Core 3.0
-              href: visualbasic.md
-        - name: Windows Forms
-          items:
-            - name: .NET 6.0
-              items:
-                - name: API가 ArgumentNullException을 throw함
-                  href: windows-forms/6.0/apis-throw-argumentnullexception.md
-                - name: NotifyIcon.Text 최대 텍스트 길이가 늘어남
-                  href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
-                - name: TableLayoutSettings 속성이 InvalidEnumArgumentException을 throw함
-                  href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
-                - name: 노드가 다른 곳에 할당될 경우 TreeNodeCollection.Item이 예외를 throw함
-                  href: windows-forms/6.0/treenodecollection-item-throws-argumentexception.md
-            - name: .NET 5.0
-              items:
-                - name: 네이티브 코드는 Windows Forms 개체에 액세스하지 못함
-                  href: windows-forms/5.0/winforms-objects-not-accessible-from-native-code.md
-                - name: OutputType이 WinExe로 설정됨
-                  href: windows-forms/5.0/automatically-infer-winexe-output-type.md
-                - name: DataGridView가 사용자 지정 글꼴을 다시 설정하지 않음
-                  href: windows-forms/5.0/datagridview-doesnt-reset-custom-font-settings.md
-                - name: 메서드가 ArgumentException을 throw함
-                  href: windows-forms/5.0/invalid-args-cause-argumentexception.md
-                - name: 메서드가 ArgumentNullException을 throw함
-                  href: windows-forms/5.0/null-args-cause-argumentnullexception.md
-                - name: 속성이 ArgumentOutOfRangeException을 throw함
-                  href: windows-forms/5.0/invalid-args-cause-argumentoutofrangeexception.md
-                - name: TextFormatFlags.ModifyString은 사용되지 않음
-                  href: windows-forms/5.0/modifystring-field-of-textformatflags-obsolete.md
-                - name: DataGridView API가 InvalidOperationException을 throw함
-                  href: windows-forms/5.0/null-owner-causes-invalidoperationexception.md
-                - name: WinForms 앱이 Microsoft.NET.Sdk를 사용함
-                  href: windows-forms/5.0/sdk-and-target-framework-change.md
-                - name: 상태 표시줄 컨트롤 제거
-                  href: windows-forms/5.0/winforms-deprecated-controls.md
-            - name: .NET Core 3.0~3.1
-              href: winforms.md
-        - name: WPF
-          items:
-            - name: .NET 5.0
-              items:
-                - name: OutputType이 WinExe로 설정됨
-                  href: windows-forms/5.0/automatically-infer-winexe-output-type.md
-                - name: WPF 앱이 Microsoft.NET.Sdk를 사용함
-                  href: windows-forms/5.0/sdk-and-target-framework-change.md
-    - name: SYSLIB 경고
-      items:
-        - name: 개요
-          displayName: 'syslib, obsolete, obsoletion'
-          href: syslib-obsoletions.md
-        - name: SYSLIB0001
-          href: syslib-warnings/syslib0001.md
-        - name: SYSLIB0002
-          href: syslib-warnings/syslib0002.md
-        - name: SYSLIB0003
-          href: syslib-warnings/syslib0003.md
-        - name: SYSLIB0004
-          href: syslib-warnings/syslib0004.md
-        - name: SYSLIB0005
-          href: syslib-warnings/syslib0005.md
-        - name: SYSLIB0006
-          href: syslib-warnings/syslib0006.md
-        - name: SYSLIB0007
-          href: syslib-warnings/syslib0007.md
-        - name: SYSLIB0008
-          href: syslib-warnings/syslib0008.md
-        - name: SYSLIB0009
-          href: syslib-warnings/syslib0009.md
-        - name: SYSLIB0010
-          href: syslib-warnings/syslib0010.md
-        - name: SYSLIB0011
-          href: syslib-warnings/syslib0011.md
-        - name: SYSLIB0012
-          href: syslib-warnings/syslib0012.md
+items:
+  - name: 호환성이 손상되는 변경이란?
+    href: index.md
+  - name: 호환성 유형
+    href: categories.md
+  - name: 참조
+    expanded: true
+    items:
+      - name: 개요
+        href: breaking-changes.md
+      - name: .NET Framework에서
+        items:
+          - name: 호환성이 손상되는 변경
+            href: fx-core.md
+          - name: 사용할 수 없는 기술
+            href: ../porting/net-framework-tech-unavailable.md
+          - name: 항상 throw하는 API
+            href: unsupported-apis.md
+      - name: 버전별 호환성이 손상되는 변경 사항
+        expanded: true
+        items:
+          - name: .NET 6
+            items:
+              - name: 개요
+                href: 6.0.md
+              - name: ASP.NET Core
+                items:
+                  - name: Nullable 참조 형식 주석 변경
+                    href: aspnet-core/6.0/nullable-reference-type-annotations-changed.md
+                  - name: 사용되지 않고 제거된 API
+                    href: aspnet-core/6.0/obsolete-removed-apis.md
+                  - name: 'Blazor: RequestImageFileAsync 메서드에서 변경된 매개 변수 이름'
+                    href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
+                  - name: 'Blazor: WebEventDescriptor.EventArgsType 속성 대체됨'
+                    href: aspnet-core/6.0/blazor-eventargstype-property-replaced.md
+                  - name: 'Kestrel: 로그 메시지 특성이 변경됨'
+                    href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
+                  - name: '미들웨어: HTTPS 리디렉션 미들웨어가 모호한 HTTPS 포트에 대해 예외 throw'
+                    href: aspnet-core/6.0/middleware-ambiguous-https-ports-exception.md
+                  - name: 'Razor: 사용되지 않음으로 표시된 RazorEngine API'
+                    href: aspnet-core/6.0/razor-engine-apis-obsolete.md
+              - name: 핵심 .NET 라이브러리
+                items:
+                  - name: Null 허용 여부 주석 변경
+                    href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
+                  - name: Stream에서 파생된 형식의 매개 변수 이름이 변경됨
+                    href: core-libraries/6.0/parameters-renamed-on-stream-derived-types.md
+                  - name: 표준 숫자 형식 구문 분석 정밀도
+                    href: core-libraries/6.0/numeric-format-parsing-handles-higher-precision.md
+              - name: Windows Forms
+                items:
+                  - name: API가 ArgumentNullException을 throw함
+                    href: windows-forms/6.0/apis-throw-argumentnullexception.md
+                  - name: NotifyIcon.Text 최대 텍스트 길이가 늘어남
+                    href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
+                  - name: TableLayoutSettings 속성이 InvalidEnumArgumentException을 throw함
+                    href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
+                  - name: 노드가 다른 곳에 할당될 경우 TreeNodeCollection.Item이 예외를 throw함
+                    href: windows-forms/6.0/treenodecollection-item-throws-argumentexception.md
+          - name: .NET 5
+            items:
+              - name: 개요
+                href: 5.0.md
+              - name: ASP.NET Core
+                items:
+                  - name: ASP.NET Core 앱이 따옴표 붙은 숫자를 역직렬화함
+                    href: serialization/5.0/jsonserializer-allows-reading-numbers-as-strings.md
+                  - name: AzureAD.UI 및 AzureADB2C.UI API가 사용되지 않음
+                    href: aspnet-core/5.0/authentication-aad-packages-obsolete.md
+                  - name: BinaryFormatter serialization 메서드가 사용되지 않음
+                    href: core-libraries/5.0/binaryformatter-serialization-obsolete.md
+                  - name: 엔드포인트 라우팅의 리소스가 HttpContext임
+                    href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
+                  - name: Microsoft 접두사가 있는 Azure 통합 패키지가 제거됨
+                    href: aspnet-core/5.0/azure-integration-packages-removed.md
+                  - name: 'Blazor: Blazor 앱에서 경로 우선 순위 논리가 변경됨'
+                    href: aspnet-core/5.0/blazor-routing-logic-changed.md
+                  - name: 'Blazor: 업데이트된 브라우저 지원'
+                    href: aspnet-core/5.0/blazor-browser-support-updated.md
+                  - name: 'Blazor: 컴파일러에 의해 잘린 무효 공백'
+                    href: aspnet-core/5.0/blazor-components-trim-insignificant-whitespace.md
+                  - name: 'Blazor: JSObjectReference 및 JSInProcessObjectReference 형식이 internal임'
+                    href: aspnet-core/5.0/blazor-jsobjectreference-to-internal.md
+                  - name: 'Blazor: NuGet 패키지의 대상 프레임워크가 변경됨'
+                    href: aspnet-core/5.0/blazor-packages-target-framework-changed.md
+                  - name: 'Blazor: ProtectedBrowserStorage 기능을 공유 프레임워크로 이동함'
+                    href: aspnet-core/5.0/blazor-protectedbrowserstorage-moved.md
+                  - name: 'Blazor: RenderTreeFrame 읽기 전용 퍼블릭 필드가 이제 속성임'
+                    href: aspnet-core/5.0/blazor-rendertreeframe-fields-become-properties.md
+                  - name: 'Blazor: 정적 웹 자산에 대한 유효성 검사 논리를 업데이트함'
+                    href: aspnet-core/5.0/blazor-static-web-assets-validation-logic-updated.md
+                  - name: 브라우저에서 지원되지 않는 암호화 API
+                    href: cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md
+                  - name: '확장: 패키지 참조 변경'
+                    href: aspnet-core/5.0/extensions-package-reference-changes.md
+                  - name: Kestrel 및 IIS BadHttpRequestException 형식이 사용되지 않음
+                    href: aspnet-core/5.0/http-badhttprequestexception-obsolete.md
+                  - name: IHttpClientFactory 로그 정수 상태 코드에서 생성된 HttpClient 인스턴스
+                    href: aspnet-core/5.0/http-httpclient-instances-log-integer-status-codes.md
+                  - name: 'HttpSys: 클라이언트 인증서 재협상을 기본적으로 사용 안 함'
+                    href: aspnet-core/5.0/httpsys-client-certificate-renegotiation-disabled-by-default.md
+                  - name: 'IIS: UrlRewrite 미들웨어 쿼리 문자열이 유지됨'
+                    href: aspnet-core/5.0/iis-urlrewrite-middleware-query-strings-are-preserved.md
+                  - name: 'Kestrel: 기본적으로 검색되는 구성 변경'
+                    href: aspnet-core/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md
+                  - name: 'Kestrel: 지원되는 기본 TLS 프로토콜 버전 변경됨'
+                    href: aspnet-core/5.0/kestrel-default-supported-tls-protocol-versions-changed.md
+                  - name: 'Kestrel: 호환되지 않는 Windows 버전에서 TLS를 통한 HTTP/2 사용 안 함'
+                    href: aspnet-core/5.0/kestrel-disables-http2-over-tls.md
+                  - name: 'Kestrel: 사용되지 않는 것으로 표시된 Libuv 전송'
+                    href: aspnet-core/5.0/kestrel-libuv-transport-obsolete.md
+                  - name: ConsoleLoggerOptions에서 사용되지 않는 속성
+                    href: core-libraries/5.0/obsolete-consoleloggeroptions-properties.md
+                  - name: ResourceManagerWithCultureStringLocalizer 클래스 및 WithCulture 인터페이스 멤버가 제거됨
+                    href: aspnet-core/5.0/localization-members-removed.md
+                  - name: Pubternal API가 제거됨
+                    href: aspnet-core/5.0/localization-pubternal-apis-removed.md
+                  - name: 요청 지역화 미들웨어에서 사용되지 않는 생성자가 제거됨
+                    href: aspnet-core/5.0/localization-requestlocalizationmiddleware-constructor-removed.md
+                  - name: '미들웨어: 사용되지 않는 것으로 표시된 데이터베이스 오류 페이지'
+                    href: aspnet-core/5.0/middleware-database-error-page-obsolete.md
+                  - name: 예외 처리기 미들웨어가 원래 예외를 throw함
+                    href: aspnet-core/5.0/middleware-exception-handler-throws-original-exception.md
+                  - name: ObjectModelValidator가 Validate의 새 오버로드를 호출함
+                    href: aspnet-core/5.0/mvc-objectmodelvalidator-calls-new-overload.md
+                  - name: 쿠키 이름 인코딩이 제거됨
+                    href: aspnet-core/5.0/security-cookie-name-encoding-removed.md
+                  - name: IdentityModel NuGet 패키지 버전이 업데이트됨
+                    href: aspnet-core/5.0/security-identitymodel-nuget-package-versions-updated.md
+                  - name: 'SignalR: MessagePack 허브 프로토콜 옵션 형식이 변경됨'
+                    href: aspnet-core/5.0/signalr-messagepack-hub-protocol-options-changed.md
+                  - name: 'SignalR: MessagePack 허브 프로토콜이 이동됨'
+                    href: aspnet-core/5.0/signalr-messagepack-package.md
+                  - name: UseSignalR 및 UseConnections 메서드가 제거됨
+                    href: aspnet-core/5.0/signalr-usesignalr-useconnections-removed.md
+                  - name: CSV 콘텐츠 형식이 표준 규격으로 변경됨
+                    href: aspnet-core/5.0/static-files-csv-content-type-changed.md
+              - name: 코드 분석
+                items:
+                  - name: CA1416 경고
+                    href: code-analysis/5.0/ca1416-platform-compatibility-analyzer.md
+                  - name: CA1417 경고
+                    href: code-analysis/5.0/ca1417-outattributes-on-pinvoke-string-parameters.md
+                  - name: CA1831 경고
+                    href: code-analysis/5.0/ca1831-range-based-indexer-on-string.md
+                  - name: CA2013 경고
+                    href: code-analysis/5.0/ca2013-referenceequals-on-value-types.md
+                  - name: CA2014 경고
+                    href: code-analysis/5.0/ca2014-stackalloc-in-loops.md
+                  - name: CA2015 경고
+                    href: code-analysis/5.0/ca2015-finalizers-for-memorymanager-types.md
+                  - name: CA2200 경고
+                    href: code-analysis/5.0/ca2200-rethrow-to-preserve-stack-details.md
+                  - name: CA2247 경고
+                    href: code-analysis/5.0/ca2247-ctor-arg-should-be-taskcreationoptions.md
+              - name: 핵심 .NET 라이브러리
+                items:
+                  - name: 단일 파일 게시를 위한 어셈블리 관련 API 변경
+                    href: core-libraries/5.0/assembly-api-behavior-changes-for-single-file-publish.md
+                  - name: BinaryFormatter serialization 메서드가 사용되지 않음
+                    href: core-libraries/5.0/binaryformatter-serialization-obsolete.md
+                  - name: 코드 액세스 보안 API가 사용되지 않음
+                    href: core-libraries/5.0/code-access-security-apis-obsolete.md
+                  - name: CreateCounterSetInstance가 InvalidOperationException을 throw함
+                    href: core-libraries/5.0/createcountersetinstance-throws-invalidoperation.md
+                  - name: 기본 ActivityIdFormat이 W3C임
+                    href: core-libraries/5.0/default-activityidformat-changed.md
+                  - name: Environment.OSVersion이 올바른 버전을 반환함
+                    href: core-libraries/5.0/environment-osversion-returns-correct-version.md
+                  - name: FrameworkDescription의 값이 .NET Core가 아니라 .NET임
+                    href: core-libraries/5.0/frameworkdescription-returns-net-not-net-core.md
+                  - name: GAC API가 사용되지 않음
+                    href: core-libraries/5.0/global-assembly-cache-apis-obsolete.md
+                  - name: 하드웨어 내장 IsSupported 검사
+                    href: core-libraries/5.0/hardware-instrinsics-issupported-checks.md
+                  - name: IntPtr 및 UIntPtr에서 IFormattable 구현
+                    href: core-libraries/5.0/intptr-uintptr-implement-iformattable.md
+                  - name: LastIndexOf가 빈 검색 문자열을 처리함
+                    href: core-libraries/5.0/lastindexof-improved-handling-of-empty-values.md
+                  - name: Unix에서 ASCII가 아닌 문자를 포함하는 URI 경로
+                    href: core-libraries/5.0/non-ascii-chars-in-uri-parsed-correctly.md
+                  - name: 기본이 아닌 진단 ID를 사용하는 API 사용되지 않음
+                    href: core-libraries/5.0/obsolete-apis-with-custom-diagnostics.md
+                  - name: ConsoleLoggerOptions에서 사용되지 않는 속성
+                    href: core-libraries/5.0/obsolete-consoleloggeroptions-properties.md
+                  - name: LINQ OrderBy.First의 복잡성
+                    href: core-libraries/5.0/orderby-firstordefault-complexity-increase.md
+                  - name: OSPlatform 특성이 제거되었거나 특성 이름이 바뀜
+                    href: core-libraries/5.0/os-platform-attributes-renamed.md
+                  - name: Microsoft.DotNet.PlatformAbstractions 패키지 제거됨
+                    href: core-libraries/5.0/platformabstractions-package-removed.md
+                  - name: PrincipalPermissionAttribute가 사용되지 않음
+                    href: core-libraries/5.0/principalpermissionattribute-obsolete.md
+                  - name: 미리 보기 버전에서 매개 변수 이름 변경
+                    href: core-libraries/5.0/reference-assembly-parameter-names-rc1.md
+                  - name: 참조 어셈블리의 매개 변수 이름 변경
+                    href: core-libraries/5.0/reference-assembly-parameter-names.md
+                  - name: 원격 API가 사용되지 않음
+                    href: core-libraries/5.0/remoting-apis-obsolete.md
+                  - name: Activity.Tags 목록의 순서가 반대로 표시됨
+                    href: core-libraries/5.0/reverse-order-of-tags-in-activity-property.md
+                  - name: SSE 및 SSE2 비교 메서드가 NaN을 처리함
+                    href: core-libraries/5.0/sse-comparegreaterthan-intrinsics.md
+                  - name: Thread.Abort는 사용되지 않음
+                    href: core-libraries/5.0/thread-abort-obsolete.md
+                  - name: Unix에서 UNC 경로의 URI 인식
+                    href: core-libraries/5.0/unc-path-recognition-unix.md
+                  - name: UTF-7 코드 경로가 사용되지 않음
+                    href: core-libraries/5.0/utf-7-code-paths-obsolete.md
+                  - name: Vector2.Lerp 및 Vector4.Lerp의 동작 변경
+                    href: core-libraries/5.0/vector-lerp-behavior-change.md
+                  - name: Vector<T>가 NotSupportedException을 throw함
+                    href: core-libraries/5.0/vectort-throws-notsupportedexception.md
+              - name: 암호화
+                items:
+                  - name: 브라우저에서 지원되지 않는 암호화 API
+                    href: cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md
+                  - name: Cryptography.Oid가 초기값 전용임
+                    href: cryptography/5.0/cryptography-oid-init-only.md
+                  - name: Linux의 기본 TLS 암호 그룹
+                    href: cryptography/5.0/default-cipher-suites-for-tls-on-linux.md
+                  - name: 암호화 추상화에 대한 Create() 오버 로드가 사용되지 않음
+                    href: cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md
+                  - name: 기본 FeedbackSize 값이 변경됨
+                    href: cryptography/5.0/tripledes-default-feedback-size-change.md
+              - name: Entity Framework Core
+                href: /ef/core/what-is-new/ef-core-5.0/breaking-changes?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
+              - name: 전역화
+                items:
+                  - name: Windows에서 ICU 라이브러리 사용
+                    href: globalization/5.0/icu-globalization-api.md
+                  - name: StringInfo 및 TextElementEnumerator가 UAX29 규격임
+                    href: globalization/5.0/uax29-compliant-grapheme-enumeration.md
+                  - name: 라틴어-1 문자의 유니코드 범주가 변경됨
+                    href: globalization/5.0/unicode-categories-for-latin1-chars.md
+                  - name: ListSeparator 값이 변경됨
+                    href: globalization/5.0/listseparator-value-change.md
+              - name: Interop
+                items:
+                  - name: WinRT에 대한 지원이 제거됨
+                    href: interop/5.0/built-in-support-for-winrt-removed.md
+                  - name: RCW를 InterfaceIsIInspectable로 캐스팅하면 예외가 throw됨
+                    href: interop/5.0/casting-rcw-to-inspectable-interface-throws-exception.md
+                  - name: 비 Windows 플랫폼에서 A/W 접미사 검색 안 함
+                    href: interop/5.0/function-suffix-pinvoke.md
+              - name: MSBuild
+                items:
+                  - name: 기본적으로 Directory.Packages.props 파일을 가져옴
+                    href: msbuild/5.0/directory-packages-props-imported-by-default.md
+                  - name: NETCOREAPP3_1 전처리기 기호가 정의되지 않음
+                    href: msbuild/5.0/netcoreapp3_1-preprocessor-symbol-not-defined.md
+                  - name: PublishDepsFilePath 동작 변경
+                    href: msbuild/5.0/publishdepsfilepath-behavior-change.md
+                  - name: netcoreapp에서 net으로 TargetFramework 변경
+                    href: msbuild/5.0/targetframework-name-change.md
+              - name: 네트워킹
+                items:
+                  - name: 쿠키 경로 처리가 RFC 6265를 준수함
+                    href: networking/5.0/cookie-path-conforms-to-rfc6265.md
+                  - name: SendToAsync 호출 후 LocalEndPoint가 업데이트됨
+                    href: networking/5.0/localendpoint-updated-on-sendtoasync.md
+                  - name: MulticastOption.Group에서 null을 허용하지 않음
+                    href: networking/5.0/multicastoption-group-doesnt-accept-null.md
+                  - name: 스트림이 연속 Begin 작업을 허용함
+                    href: networking/5.0/negotiatestream-sslstream-dont-fail-on-successive-begin-calls.md
+                  - name: .NET 런타임에서 WinHttpHandler 제거됨
+                    href: networking/5.0/winhttphandler-removed-from-runtime.md
+              - name: 보안
+                items:
+                  - name: 코드 액세스 보안 API가 사용되지 않음
+                    href: core-libraries/5.0/code-access-security-apis-obsolete.md
+                  - name: PrincipalPermissionAttribute가 사용되지 않음
+                    href: core-libraries/5.0/principalpermissionattribute-obsolete.md
+                  - name: UTF-7 코드 경로가 사용되지 않음
+                    href: core-libraries/5.0/utf-7-code-paths-obsolete.md
+              - name: Serialization
+                items:
+                  - name: BinaryFormatter.Deserialize가 예외를 다시 래핑함
+                    href: serialization/5.0/binaryformatter-deserialize-rewraps-exceptions.md
+                  - name: JsonSerializer.Deserialize에는 단일 문자열이 필요함
+                    href: serialization/5.0/deserializing-json-into-char-requires-single-character.md
+                  - name: ASP.NET Core 앱이 따옴표 붙은 숫자를 역직렬화함
+                    href: serialization/5.0/jsonserializer-allows-reading-numbers-as-strings.md
+                  - name: JsonSerializer.Serialize가 ArgumentNullException을 throw함
+                    href: serialization/5.0/jsonserializer-serialize-throws-argumentnullexception-for-null-type.md
+                  - name: 역직렬화에 사용되지 않는 비공용 매개 변수가 없는 생성자
+                    href: serialization/5.0/non-public-parameterless-constructors-not-used-for-deserialization.md
+                  - name: 키-값 쌍을 직렬화할 때 옵션이 적용됨
+                    href: serialization/5.0/options-honored-when-serializing-key-value-pairs.md
+              - name: Windows Forms
+                items:
+                  - name: 네이티브 코드는 Windows Forms 개체에 액세스하지 못함
+                    href: windows-forms/5.0/winforms-objects-not-accessible-from-native-code.md
+                  - name: OutputType이 WinExe로 설정됨
+                    href: windows-forms/5.0/automatically-infer-winexe-output-type.md
+                  - name: DataGridView가 사용자 지정 글꼴을 다시 설정하지 않음
+                    href: windows-forms/5.0/datagridview-doesnt-reset-custom-font-settings.md
+                  - name: 메서드가 ArgumentException을 throw함
+                    href: windows-forms/5.0/invalid-args-cause-argumentexception.md
+                  - name: 메서드가 ArgumentNullException을 throw함
+                    href: windows-forms/5.0/null-args-cause-argumentnullexception.md
+                  - name: 속성이 ArgumentOutOfRangeException을 throw함
+                    href: windows-forms/5.0/invalid-args-cause-argumentoutofrangeexception.md
+                  - name: TextFormatFlags.ModifyString은 사용되지 않음
+                    href: windows-forms/5.0/modifystring-field-of-textformatflags-obsolete.md
+                  - name: DataGridView API가 InvalidOperationException을 throw함
+                    href: windows-forms/5.0/null-owner-causes-invalidoperationexception.md
+                  - name: WinForms 앱이 Microsoft.NET.Sdk를 사용함
+                    href: windows-forms/5.0/sdk-and-target-framework-change.md
+                  - name: 상태 표시줄 컨트롤 제거
+                    href: windows-forms/5.0/winforms-deprecated-controls.md
+              - name: WPF
+                items:
+                  - name: OutputType이 WinExe로 설정됨
+                    href: windows-forms/5.0/automatically-infer-winexe-output-type.md
+                  - name: WPF 앱이 Microsoft.NET.Sdk를 사용함
+                    href: windows-forms/5.0/sdk-and-target-framework-change.md
+          - name: .NET Core 3.1
+            href: 3.1.md
+          - name: .NET Core 3.0
+            href: 3.0.md
+          - name: .NET Core 2.1
+            href: 2.1.md
+      - name: 호환성이 손상되는 변경(영역별)
+        items:
+          - name: ASP.NET Core
+            items:
+              - name: .NET 6
+                items:
+                  - name: Nullable 참조 형식 주석 변경
+                    href: aspnet-core/6.0/nullable-reference-type-annotations-changed.md
+                  - name: 사용되지 않고 제거된 API
+                    href: aspnet-core/6.0/obsolete-removed-apis.md
+                  - name: 'Blazor: RequestImageFileAsync 메서드에서 변경된 매개 변수 이름'
+                    href: aspnet-core/6.0/blazor-parameter-name-changed-in-method.md
+                  - name: 'Blazor: WebEventDescriptor.EventArgsType 속성 대체됨'
+                    href: aspnet-core/6.0/blazor-eventargstype-property-replaced.md
+                  - name: 'Kestrel: 로그 메시지 특성이 변경됨'
+                    href: aspnet-core/6.0/kestrel-log-message-attributes-changed.md
+                  - name: '미들웨어: HTTPS 리디렉션 미들웨어가 모호한 HTTPS 포트에 대해 예외 throw'
+                    href: aspnet-core/6.0/middleware-ambiguous-https-ports-exception.md
+                  - name: 'Razor: 사용되지 않음으로 표시된 RazorEngine API'
+                    href: aspnet-core/6.0/razor-engine-apis-obsolete.md
+              - name: .NET 5
+                items:
+                  - name: ASP.NET Core 앱이 따옴표 붙은 숫자를 역직렬화함
+                    href: serialization/5.0/jsonserializer-allows-reading-numbers-as-strings.md
+                  - name: AzureAD.UI 및 AzureADB2C.UI API가 사용되지 않음
+                    href: aspnet-core/5.0/authentication-aad-packages-obsolete.md
+                  - name: BinaryFormatter serialization 메서드가 사용되지 않음
+                    href: core-libraries/5.0/binaryformatter-serialization-obsolete.md
+                  - name: 엔드포인트 라우팅의 리소스가 HttpContext임
+                    href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
+                  - name: Microsoft 접두사가 있는 Azure 통합 패키지가 제거됨
+                    href: aspnet-core/5.0/azure-integration-packages-removed.md
+                  - name: 'Blazor: Blazor 앱에서 경로 우선 순위 논리가 변경됨'
+                    href: aspnet-core/5.0/blazor-routing-logic-changed.md
+                  - name: 'Blazor: 업데이트된 브라우저 지원'
+                    href: aspnet-core/5.0/blazor-browser-support-updated.md
+                  - name: 'Blazor: 컴파일러에 의해 잘린 무효 공백'
+                    href: aspnet-core/5.0/blazor-components-trim-insignificant-whitespace.md
+                  - name: 'Blazor: JSObjectReference 및 JSInProcessObjectReference 형식이 internal임'
+                    href: aspnet-core/5.0/blazor-jsobjectreference-to-internal.md
+                  - name: 'Blazor: NuGet 패키지의 대상 프레임워크가 변경됨'
+                    href: aspnet-core/5.0/blazor-packages-target-framework-changed.md
+                  - name: 'Blazor: ProtectedBrowserStorage 기능을 공유 프레임워크로 이동함'
+                    href: aspnet-core/5.0/blazor-protectedbrowserstorage-moved.md
+                  - name: 'Blazor: RenderTreeFrame 읽기 전용 퍼블릭 필드가 이제 속성임'
+                    href: aspnet-core/5.0/blazor-rendertreeframe-fields-become-properties.md
+                  - name: 'Blazor: 정적 웹 자산에 대한 유효성 검사 논리를 업데이트함'
+                    href: aspnet-core/5.0/blazor-static-web-assets-validation-logic-updated.md
+                  - name: 브라우저에서 지원되지 않는 암호화 API
+                    href: cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md
+                  - name: '확장: 패키지 참조 변경'
+                    href: aspnet-core/5.0/extensions-package-reference-changes.md
+                  - name: Kestrel 및 IIS BadHttpRequestException 형식이 사용되지 않음
+                    href: aspnet-core/5.0/http-badhttprequestexception-obsolete.md
+                  - name: IHttpClientFactory 로그 정수 상태 코드에서 생성된 HttpClient 인스턴스
+                    href: aspnet-core/5.0/http-httpclient-instances-log-integer-status-codes.md
+                  - name: 'HttpSys: 클라이언트 인증서 재협상을 기본적으로 사용 안 함'
+                    href: aspnet-core/5.0/httpsys-client-certificate-renegotiation-disabled-by-default.md
+                  - name: 'IIS: UrlRewrite 미들웨어 쿼리 문자열이 유지됨'
+                    href: aspnet-core/5.0/iis-urlrewrite-middleware-query-strings-are-preserved.md
+                  - name: 'Kestrel: 기본적으로 검색되는 구성 변경'
+                    href: aspnet-core/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md
+                  - name: 'Kestrel: 지원되는 기본 TLS 프로토콜 버전 변경됨'
+                    href: aspnet-core/5.0/kestrel-default-supported-tls-protocol-versions-changed.md
+                  - name: 'Kestrel: 호환되지 않는 Windows 버전에서 TLS를 통한 HTTP/2 사용 안 함'
+                    href: aspnet-core/5.0/kestrel-disables-http2-over-tls.md
+                  - name: 'Kestrel: 사용되지 않는 것으로 표시된 Libuv 전송'
+                    href: aspnet-core/5.0/kestrel-libuv-transport-obsolete.md
+                  - name: ConsoleLoggerOptions에서 사용되지 않는 속성
+                    href: core-libraries/5.0/obsolete-consoleloggeroptions-properties.md
+                  - name: ResourceManagerWithCultureStringLocalizer 클래스 및 WithCulture 인터페이스 멤버가 제거됨
+                    href: aspnet-core/5.0/localization-members-removed.md
+                  - name: Pubternal API가 제거됨
+                    href: aspnet-core/5.0/localization-pubternal-apis-removed.md
+                  - name: 요청 지역화 미들웨어에서 사용되지 않는 생성자가 제거됨
+                    href: aspnet-core/5.0/localization-requestlocalizationmiddleware-constructor-removed.md
+                  - name: '미들웨어: 사용되지 않는 것으로 표시된 데이터베이스 오류 페이지'
+                    href: aspnet-core/5.0/middleware-database-error-page-obsolete.md
+                  - name: 예외 처리기 미들웨어가 원래 예외를 throw함
+                    href: aspnet-core/5.0/middleware-exception-handler-throws-original-exception.md
+                  - name: ObjectModelValidator가 Validate의 새 오버로드를 호출함
+                    href: aspnet-core/5.0/mvc-objectmodelvalidator-calls-new-overload.md
+                  - name: 쿠키 이름 인코딩이 제거됨
+                    href: aspnet-core/5.0/security-cookie-name-encoding-removed.md
+                  - name: IdentityModel NuGet 패키지 버전이 업데이트됨
+                    href: aspnet-core/5.0/security-identitymodel-nuget-package-versions-updated.md
+                  - name: 'SignalR: MessagePack 허브 프로토콜 옵션 형식이 변경됨'
+                    href: aspnet-core/5.0/signalr-messagepack-hub-protocol-options-changed.md
+                  - name: 'SignalR: MessagePack 허브 프로토콜이 이동됨'
+                    href: aspnet-core/5.0/signalr-messagepack-package.md
+                  - name: UseSignalR 및 UseConnections 메서드가 제거됨
+                    href: aspnet-core/5.0/signalr-usesignalr-useconnections-removed.md
+                  - name: CSV 콘텐츠 형식이 표준 규격으로 변경됨
+                    href: aspnet-core/5.0/static-files-csv-content-type-changed.md
+              - name: .NET Core 3.0~3.1
+                href: aspnetcore.md
+          - name: 코드 분석
+            items:
+              - name: .NET 5
+                items:
+                  - name: CA1416 경고
+                    href: code-analysis/5.0/ca1416-platform-compatibility-analyzer.md
+                  - name: CA1417 경고
+                    href: code-analysis/5.0/ca1417-outattributes-on-pinvoke-string-parameters.md
+                  - name: CA1831 경고
+                    href: code-analysis/5.0/ca1831-range-based-indexer-on-string.md
+                  - name: CA2013 경고
+                    href: code-analysis/5.0/ca2013-referenceequals-on-value-types.md
+                  - name: CA2014 경고
+                    href: code-analysis/5.0/ca2014-stackalloc-in-loops.md
+                  - name: CA2015 경고
+                    href: code-analysis/5.0/ca2015-finalizers-for-memorymanager-types.md
+                  - name: CA2200 경고
+                    href: code-analysis/5.0/ca2200-rethrow-to-preserve-stack-details.md
+                  - name: CA2247 경고
+                    href: code-analysis/5.0/ca2247-ctor-arg-should-be-taskcreationoptions.md
+          - name: 핵심 .NET 라이브러리
+            items:
+              - name: .NET 6
+                items:
+                  - name: Null 허용 여부 주석 변경
+                    href: core-libraries/6.0/nullable-ref-type-annotation-changes.md
+                  - name: Stream에서 파생된 형식의 매개 변수 이름이 변경됨
+                    href: core-libraries/6.0/parameters-renamed-on-stream-derived-types.md
+                  - name: 표준 숫자 형식 구문 분석 정밀도
+                    href: core-libraries/6.0/numeric-format-parsing-handles-higher-precision.md
+              - name: .NET 5
+                items:
+                  - name: 단일 파일 게시를 위한 어셈블리 관련 API 변경
+                    href: core-libraries/5.0/assembly-api-behavior-changes-for-single-file-publish.md
+                  - name: BinaryFormatter serialization 메서드가 사용되지 않음
+                    href: core-libraries/5.0/binaryformatter-serialization-obsolete.md
+                  - name: 코드 액세스 보안 API가 사용되지 않음
+                    href: core-libraries/5.0/code-access-security-apis-obsolete.md
+                  - name: CreateCounterSetInstance가 InvalidOperationException을 throw함
+                    href: core-libraries/5.0/createcountersetinstance-throws-invalidoperation.md
+                  - name: 기본 ActivityIdFormat이 W3C임
+                    href: core-libraries/5.0/default-activityidformat-changed.md
+                  - name: Environment.OSVersion이 올바른 버전을 반환함
+                    href: core-libraries/5.0/environment-osversion-returns-correct-version.md
+                  - name: FrameworkDescription의 값이 .NET Core가 아니라 .NET임
+                    href: core-libraries/5.0/frameworkdescription-returns-net-not-net-core.md
+                  - name: GAC API가 사용되지 않음
+                    href: core-libraries/5.0/global-assembly-cache-apis-obsolete.md
+                  - name: 하드웨어 내장 IsSupported 검사
+                    href: core-libraries/5.0/hardware-instrinsics-issupported-checks.md
+                  - name: IntPtr 및 UIntPtr에서 IFormattable 구현
+                    href: core-libraries/5.0/intptr-uintptr-implement-iformattable.md
+                  - name: LastIndexOf가 빈 검색 문자열을 처리함
+                    href: core-libraries/5.0/lastindexof-improved-handling-of-empty-values.md
+                  - name: Unix에서 ASCII가 아닌 문자를 포함하는 URI 경로
+                    href: core-libraries/5.0/non-ascii-chars-in-uri-parsed-correctly.md
+                  - name: 기본이 아닌 진단 ID를 사용하는 API 사용되지 않음
+                    href: core-libraries/5.0/obsolete-apis-with-custom-diagnostics.md
+                  - name: ConsoleLoggerOptions에서 사용되지 않는 속성
+                    href: core-libraries/5.0/obsolete-consoleloggeroptions-properties.md
+                  - name: LINQ OrderBy.First의 복잡성
+                    href: core-libraries/5.0/orderby-firstordefault-complexity-increase.md
+                  - name: OSPlatform 특성이 제거되었거나 특성 이름이 바뀜
+                    href: core-libraries/5.0/os-platform-attributes-renamed.md
+                  - name: Microsoft.DotNet.PlatformAbstractions 패키지 제거됨
+                    href: core-libraries/5.0/platformabstractions-package-removed.md
+                  - name: PrincipalPermissionAttribute가 사용되지 않음
+                    href: core-libraries/5.0/principalpermissionattribute-obsolete.md
+                  - name: 미리 보기 버전에서 매개 변수 이름 변경
+                    href: core-libraries/5.0/reference-assembly-parameter-names-rc1.md
+                  - name: 참조 어셈블리의 매개 변수 이름 변경
+                    href: core-libraries/5.0/reference-assembly-parameter-names.md
+                  - name: 원격 API가 사용되지 않음
+                    href: core-libraries/5.0/remoting-apis-obsolete.md
+                  - name: Activity.Tags 목록의 순서가 반대로 표시됨
+                    href: core-libraries/5.0/reverse-order-of-tags-in-activity-property.md
+                  - name: SSE 및 SSE2 비교 메서드가 NaN을 처리함
+                    href: core-libraries/5.0/sse-comparegreaterthan-intrinsics.md
+                  - name: Thread.Abort는 사용되지 않음
+                    href: core-libraries/5.0/thread-abort-obsolete.md
+                  - name: Unix에서 UNC 경로의 URI 인식
+                    href: core-libraries/5.0/unc-path-recognition-unix.md
+                  - name: UTF-7 코드 경로가 사용되지 않음
+                    href: core-libraries/5.0/utf-7-code-paths-obsolete.md
+                  - name: Vector2.Lerp 및 Vector4.Lerp의 동작 변경
+                    href: core-libraries/5.0/vector-lerp-behavior-change.md
+                  - name: Vector<T>가 NotSupportedException을 throw함
+                    href: core-libraries/5.0/vectort-throws-notsupportedexception.md
+              - name: .NET 1.0 ~ 3.1
+                href: corefx.md
+          - name: 암호화
+            items:
+              - name: .NET 5
+                items:
+                  - name: 브라우저에서 지원되지 않는 암호화 API
+                    href: cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md
+                  - name: Cryptography.Oid가 초기값 전용임
+                    href: cryptography/5.0/cryptography-oid-init-only.md
+                  - name: Linux의 기본 TLS 암호 그룹
+                    href: cryptography/5.0/default-cipher-suites-for-tls-on-linux.md
+                  - name: 암호화 추상화에 대한 Create() 오버 로드가 사용되지 않음
+                    href: cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md
+                  - name: 기본 FeedbackSize 값이 변경됨
+                    href: cryptography/5.0/tripledes-default-feedback-size-change.md
+              - name: .NET Core 2.1~3.0
+                href: cryptography.md
+          - name: Entity Framework Core
+            items:
+              - name: EF Core 5.0
+                href: /ef/core/what-is-new/ef-core-5.0/breaking-changes?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
+              - name: EF Core 3.1
+                href: /ef/core/what-is-new/ef-core-3.x/breaking-changes?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
+          - name: 전역화
+            items:
+              - name: .NET 5
+                items:
+                  - name: Windows에서 ICU 라이브러리 사용
+                    href: globalization/5.0/icu-globalization-api.md
+                  - name: StringInfo 및 TextElementEnumerator가 UAX29 규격임
+                    href: globalization/5.0/uax29-compliant-grapheme-enumeration.md
+                  - name: 라틴어-1 문자의 유니코드 범주가 변경됨
+                    href: globalization/5.0/unicode-categories-for-latin1-chars.md
+                  - name: ListSeparator 값이 변경됨
+                    href: globalization/5.0/listseparator-value-change.md
+              - name: .NET 3.0
+                href: globalization.md
+          - name: Interop
+            items:
+              - name: .NET 5
+                items:
+                  - name: WinRT에 대한 지원이 제거됨
+                    href: interop/5.0/built-in-support-for-winrt-removed.md
+                  - name: RCW를 InterfaceIsIInspectable로 캐스팅하면 예외가 throw됨
+                    href: interop/5.0/casting-rcw-to-inspectable-interface-throws-exception.md
+                  - name: 비 Windows 플랫폼에서 A/W 접미사 검색 안 함
+                    href: interop/5.0/function-suffix-pinvoke.md
+          - name: MSBuild
+            items:
+              - name: .NET 5
+                items:
+                  - name: 기본적으로 Directory.Packages.props 파일을 가져옴
+                    href: msbuild/5.0/directory-packages-props-imported-by-default.md
+                  - name: NETCOREAPP3_1 전처리기 기호가 정의되지 않음
+                    href: msbuild/5.0/netcoreapp3_1-preprocessor-symbol-not-defined.md
+                  - name: PublishDepsFilePath 동작 변경
+                    href: msbuild/5.0/publishdepsfilepath-behavior-change.md
+                  - name: netcoreapp에서 net으로 TargetFramework 변경
+                    href: msbuild/5.0/targetframework-name-change.md
+              - name: .NET Core 2.1 - 3.1
+                href: msbuild.md
+          - name: 네트워킹
+            items:
+              - name: .NET 5
+                items:
+                  - name: 쿠키 경로 처리가 RFC 6265를 준수함
+                    href: networking/5.0/cookie-path-conforms-to-rfc6265.md
+                  - name: SendToAsync 호출 후 LocalEndPoint가 업데이트됨
+                    href: networking/5.0/localendpoint-updated-on-sendtoasync.md
+                  - name: MulticastOption.Group에서 null을 허용하지 않음
+                    href: networking/5.0/multicastoption-group-doesnt-accept-null.md
+                  - name: 스트림이 연속 Begin 작업을 허용함
+                    href: networking/5.0/negotiatestream-sslstream-dont-fail-on-successive-begin-calls.md
+                  - name: .NET 런타임에서 WinHttpHandler 제거됨
+                    href: networking/5.0/winhttphandler-removed-from-runtime.md
+              - name: .NET 2.0 ~ 3.0
+                href: networking.md
+          - name: 보안
+            items:
+              - name: .NET 5
+                items:
+                  - name: 코드 액세스 보안 API가 사용되지 않음
+                    href: core-libraries/5.0/code-access-security-apis-obsolete.md
+                  - name: PrincipalPermissionAttribute가 사용되지 않음
+                    href: core-libraries/5.0/principalpermissionattribute-obsolete.md
+                  - name: UTF-7 코드 경로가 사용되지 않음
+                    href: core-libraries/5.0/utf-7-code-paths-obsolete.md
+          - name: Serialization
+            items:
+              - name: .NET 5
+                items:
+                  - name: BinaryFormatter.Deserialize가 예외를 다시 래핑함
+                    href: serialization/5.0/binaryformatter-deserialize-rewraps-exceptions.md
+                  - name: JsonSerializer.Deserialize에는 단일 문자열이 필요함
+                    href: serialization/5.0/deserializing-json-into-char-requires-single-character.md
+                  - name: ASP.NET Core 앱이 따옴표 붙은 숫자를 역직렬화함
+                    href: serialization/5.0/jsonserializer-allows-reading-numbers-as-strings.md
+                  - name: JsonSerializer.Serialize가 ArgumentNullException을 throw함
+                    href: serialization/5.0/jsonserializer-serialize-throws-argumentnullexception-for-null-type.md
+                  - name: 역직렬화에 사용되지 않는 비공용 매개 변수가 없는 생성자
+                    href: serialization/5.0/non-public-parameterless-constructors-not-used-for-deserialization.md
+                  - name: 키-값 쌍을 직렬화할 때 옵션이 적용됨
+                    href: serialization/5.0/options-honored-when-serializing-key-value-pairs.md
+          - name: Visual Basic
+            items:
+              - name: .NET Core 3.0
+                href: visualbasic.md
+          - name: Windows Forms
+            items:
+              - name: .NET 6
+                items:
+                  - name: API가 ArgumentNullException을 throw함
+                    href: windows-forms/6.0/apis-throw-argumentnullexception.md
+                  - name: NotifyIcon.Text 최대 텍스트 길이가 늘어남
+                    href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
+                  - name: TableLayoutSettings 속성이 InvalidEnumArgumentException을 throw함
+                    href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
+                  - name: 노드가 다른 곳에 할당될 경우 TreeNodeCollection.Item이 예외를 throw함
+                    href: windows-forms/6.0/treenodecollection-item-throws-argumentexception.md
+              - name: .NET 5
+                items:
+                  - name: 네이티브 코드는 Windows Forms 개체에 액세스하지 못함
+                    href: windows-forms/5.0/winforms-objects-not-accessible-from-native-code.md
+                  - name: OutputType이 WinExe로 설정됨
+                    href: windows-forms/5.0/automatically-infer-winexe-output-type.md
+                  - name: DataGridView가 사용자 지정 글꼴을 다시 설정하지 않음
+                    href: windows-forms/5.0/datagridview-doesnt-reset-custom-font-settings.md
+                  - name: 메서드가 ArgumentException을 throw함
+                    href: windows-forms/5.0/invalid-args-cause-argumentexception.md
+                  - name: 메서드가 ArgumentNullException을 throw함
+                    href: windows-forms/5.0/null-args-cause-argumentnullexception.md
+                  - name: 속성이 ArgumentOutOfRangeException을 throw함
+                    href: windows-forms/5.0/invalid-args-cause-argumentoutofrangeexception.md
+                  - name: TextFormatFlags.ModifyString은 사용되지 않음
+                    href: windows-forms/5.0/modifystring-field-of-textformatflags-obsolete.md
+                  - name: DataGridView API가 InvalidOperationException을 throw함
+                    href: windows-forms/5.0/null-owner-causes-invalidoperationexception.md
+                  - name: WinForms 앱이 Microsoft.NET.Sdk를 사용함
+                    href: windows-forms/5.0/sdk-and-target-framework-change.md
+                  - name: 상태 표시줄 컨트롤 제거
+                    href: windows-forms/5.0/winforms-deprecated-controls.md
+              - name: .NET Core 3.0~3.1
+                href: winforms.md
+          - name: WPF
+            items:
+              - name: .NET 5
+                items:
+                  - name: OutputType이 WinExe로 설정됨
+                    href: windows-forms/5.0/automatically-infer-winexe-output-type.md
+                  - name: WPF 앱이 Microsoft.NET.Sdk를 사용함
+                    href: windows-forms/5.0/sdk-and-target-framework-change.md
+      - name: SYSLIB 경고
+        items:
+          - name: 개요
+            displayName: 'syslib, obsolete, obsoletion'
+            href: syslib-obsoletions.md
+          - name: SYSLIB0001
+            href: syslib-warnings/syslib0001.md
+          - name: SYSLIB0002
+            href: syslib-warnings/syslib0002.md
+          - name: SYSLIB0003
+            href: syslib-warnings/syslib0003.md
+          - name: SYSLIB0004
+            href: syslib-warnings/syslib0004.md
+          - name: SYSLIB0005
+            href: syslib-warnings/syslib0005.md
+          - name: SYSLIB0006
+            href: syslib-warnings/syslib0006.md
+          - name: SYSLIB0007
+            href: syslib-warnings/syslib0007.md
+          - name: SYSLIB0008
+            href: syslib-warnings/syslib0008.md
+          - name: SYSLIB0009
+            href: syslib-warnings/syslib0009.md
+          - name: SYSLIB0010
+            href: syslib-warnings/syslib0010.md
+          - name: SYSLIB0011
+            href: syslib-warnings/syslib0011.md
+          - name: SYSLIB0012
+            href: syslib-warnings/syslib0012.md

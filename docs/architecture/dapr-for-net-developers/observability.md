@@ -4,12 +4,12 @@ description: 관찰성 빌딩 블록에 대 한 설명, 해당 기능, 이점 �
 author: edwinvw
 ms.date: 02/07/2021
 ms.reviewer: robvet
-ms.openlocfilehash: c7c941625f5867ad58eee602bfc42183bee87183
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 6add36b2030c3061ee522604b2e07f05875b98a9
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401873"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604712"
 ---
 # <a name="the-dapr-observability-building-block"></a>Eapr 관찰성 빌딩 블록
 
@@ -36,11 +36,11 @@ Eapr를 사용 하면 가능 합니다. 관찰성가 배포 응용 프로그램�
 
 관찰성를 추상화 하는 경우 응용 프로그램은 구현 방법을 인식 하지 못합니다. 라이브러리를 참조 하거나 사용자 지정 계측 코드를 구현할 필요가 없습니다. 관찰성는 개발자가 비즈니스 논리를 구축 하는 데 집중할 수 있도록 합니다. 관찰성는 다른 팀에서 만들고 다른 기술 스택을 사용 하 여 구축 된 경우에도 수준에서 구성 되 고 서비스 간에 일관 됩니다.
 
-## <a name="how-it-works"></a>작동 방법
+## <a name="how-it-works"></a>작동 방식
 
 [사이드카 아키텍처](dapr-at-20000-feet.md#sidecar-architecture) 는 기본 제공 관찰성 기능을 사용 합니다. 서비스가 통신할 때, 사이드카는 트래픽을 가로채서 추적, 메트릭 및 로깅 정보를 추출 합니다. 원격 분석은 개방형 표준 형식으로 게시 됩니다. 기본적으로 [OpenTelemetry](https://opentelemetry.io/) 및 [Zipkin](https://zipkin.io/)를 지원 합니다.
 
-D 4는 다른 백 엔드 모니터링 도구에 원격 분석을 게시할 수 있는 [수집기](https://docs.dapr.io/operations/monitoring/open-telemetry-collector/) 를 제공 합니다. 이러한 도구는 분석 및 쿼리를 위한 4Apr 원격 분석을 제공 합니다. 그림 9-1은 Eapr 관찰성 아키텍처를 보여 줍니다.
+D 4는 다른 백 엔드 모니터링 도구에 원격 분석을 게시할 수 있는 [수집기](https://docs.dapr.io/operations/monitoring/tracing/open-telemetry-collector/) 를 제공 합니다. 이러한 도구는 분석 및 쿼리를 위한 4Apr 원격 분석을 제공 합니다. 그림 9-1은 Eapr 관찰성 아키텍처를 보여 줍니다.
 
 ![Eapr 관찰성 아키텍처](media/observability/observability-architecture.png)
 
@@ -285,7 +285,7 @@ apiVersion: dapr.io/v1alpha1
 | dapr_http_server_request_count     | 런타임 | HTTP 서버에서 시작 된 HTTP 요청 수입니다.           |
 | dapr_http/client/sent_bytes        | 런타임 | HTTP 클라이언트에서 요청 본문 (헤더 포함 안 함)으로 보낸 총 바이트 수입니다. |
 
-사용 가능한 메트릭에 대 한 자세한 내용은 참조는 [64 메트릭 설명서](https://docs.dapr.io/developing-applications/building-blocks/observability/metrics)입니다.
+사용 가능한 메트릭에 대 한 자세한 내용은 참조는 [64 메트릭 설명서](https://docs.dapr.io/operations/monitoring/metrics/)입니다.
 
 #### <a name="configure-dapr-metrics"></a>= 4 월 메트릭 구성
 
@@ -312,7 +312,7 @@ spec:
 
 ![Grafana 시스템 서비스 메트릭을 표시 하는 대시보드](media/observability/grafana-sample.png)
 
-이 문서에는 [프로메테우스 및 Grafana을 설치 하는 방법에 대 한 자습서](https://docs.dapr.io/operations/monitoring/grafana/)가 포함 되어 있습니다.
+이 문서에는 [프로메테우스 및 Grafana을 설치 하는 방법에 대 한 자습서](https://docs.dapr.io/operations/monitoring/metrics/grafana/)가 포함 되어 있습니다.
 
 ### <a name="logging"></a>로깅
 
@@ -322,11 +322,11 @@ spec:
 
 D 4에서 구조적 로깅을 내보냅니다. 각 로그 항목의 형식은 다음과 같습니다.
 
-| 필드    | 설명                                          | 예제                             |
+| 필드    | 설명                                          | 예                             |
 | -------- | ---------------------------------------------------- | ----------------------------------- |
 | time     | ISO8601 형식이 지정 된 타임 스탬프                          | `2021-01-10T14:19:31.000Z`          |
 | 수준    | 항목의 수준 ( `debug` \| `info` \| `warn` \| `error` )   | `info`                              |
-| type     | 로그 형식                                             | `log`                               |
+| 형식     | 로그 형식                                             | `log`                               |
 | msg      | 로그 메시지                                          | `metrics server started on :62408/` |
 | scope    | 로깅 범위                                        | `dapr.runtime`                      |
 | 인스턴스 | D 4가 실행 되는 호스트 이름                             | TSTSRV01                            |
@@ -381,7 +381,7 @@ helm install dapr dapr/dapr --namespace dapr-system --set global.logAsJson=true
 
 #### <a name="collect-logs"></a>로그 수집
 
-Analysis에 대 한 모니터링 백 엔드에는 4Apr에서 내보낸 로그를 공급할 수 있습니다. 로그 수집기는 시스템에서 로그를 수집 하 여 모니터링 백 엔드에 전송 하는 구성 요소입니다. 인기 있는 로그 수집기는 [Fluentd](https://www.fluentd.org/)입니다. 자세한 내용은 [Fluentd에서 How to: Set Up, 탄력적 검색 및 Kibana in The Kubernetes in](https://docs.dapr.io/operations/monitoring/fluentd/) The eapr 설명서를 참조 하세요. 이 문서에는 Fluentd as 로그 수집기 및 [Elk Stack](https://www.elastic.co/elastic-stack) (탄력적 검색 및 Kibana)을 모니터링 백 엔드로 설정 하기 위한 지침이 포함 되어 있습니다.
+Analysis에 대 한 모니터링 백 엔드에는 4Apr에서 내보낸 로그를 공급할 수 있습니다. 로그 수집기는 시스템에서 로그를 수집 하 여 모니터링 백 엔드에 전송 하는 구성 요소입니다. 인기 있는 로그 수집기는 [Fluentd](https://www.fluentd.org/)입니다. 자세한 내용은 [Fluentd에서 How to: Set Up, 탄력적 검색 및 Kibana in The Kubernetes in](https://docs.dapr.io/operations/monitoring/logging/fluentd/) The eapr 설명서를 참조 하세요. 이 문서에는 Fluentd as 로그 수집기 및 [Elk Stack](https://www.elastic.co/elastic-stack) (탄력적 검색 및 Kibana)을 모니터링 백 엔드로 설정 하기 위한 지침이 포함 되어 있습니다.
 
 ### <a name="health-status"></a>상태
 

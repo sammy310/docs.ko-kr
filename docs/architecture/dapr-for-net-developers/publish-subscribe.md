@@ -3,12 +3,12 @@ title: D Apr 게시 & 구독 구성 블록
 description: 빌드 블록 구독 및이를 적용 하는 방법에 대 한 자세한 내용은 &
 author: edwinvw
 ms.date: 02/07/2021
-ms.openlocfilehash: 3d00c5a3171dd5a7287d07675f5a3742697e784b
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 4cb249bafc8241eb54153be2605c33d0a3adb619
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102401921"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604686"
 ---
 # <a name="the-dapr-publish--subscribe-building-block"></a>D Apr 게시 & 구독 구성 블록
 
@@ -39,7 +39,7 @@ Publish-Subscribe 패턴의 주요 이점은 **느슨한 결합** 이며, 때로
 
 D Apr 게시 & 구독 빌딩 블록은 메시징 추상화 및 구현을 제공 합니다. 작성 해야 하는 사용자 지정 코드는 미리 빌드된 후에는 Eapr 빌딩 블록 내에 캡슐화 됩니다. 이를 바인딩하고 사용 합니다. 메시징 배관 코드를 작성 하는 대신 사용자와 팀은 고객에 게 가치를 더하는 비즈니스 기능을 만드는 데 주력 합니다.
 
-## <a name="how-it-works"></a>작동 방법
+## <a name="how-it-works"></a>작동 방식
 
 D Apr 게시 & 구독 구성 요소는 메시지를 보내고 받기 위한 플랫폼 독립적인 API 프레임 워크를 제공 합니다. 서비스는 명명 된 [항목](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions#topics-and-subscriptions)에 메시지를 게시 합니다. 서비스는 항목을 구독 하 여 메시지를 사용 합니다.
 
@@ -293,7 +293,7 @@ scopes:
 
 ## <a name="reference-application-eshopondapr"></a>참조 응용 프로그램: eShopOnDapr
 
-함께 제공 되는 [eShopOnDapr](https://github.com/dotnet-architecture/eShopOnDapr) 앱은 4apr를 구현 하는 마이크로 서비스 응용 프로그램을 생성 하는 종단 간 참조 아키텍처를 제공 합니다. eShopOnDapr은 몇 년 전에 만들어진 널리 사용 되는 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainer) 앱의 진화입니다. 두 버전 모두 마이크로 서비스에서 [통합 이벤트](https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/#integration-events) 를 전달 하기 위해 pub/sub 패턴을 사용 합니다. 통합 이벤트는 다음과 같습니다.
+함께 제공 되는 [eShopOnDapr](https://github.com/dotnet-architecture/eShopOnDapr) 앱은 4apr를 구현 하는 마이크로 서비스 응용 프로그램을 생성 하는 종단 간 참조 아키텍처를 제공 합니다. eShopOnDapr은 몇 년 전에 만들어진 널리 사용 되는 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 앱의 진화입니다. 두 버전 모두 마이크로 서비스에서 [통합 이벤트](https://devblogs.microsoft.com/cesardelatorre/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/#integration-events) 를 전달 하기 위해 pub/sub 패턴을 사용 합니다. 통합 이벤트는 다음과 같습니다.
 
 - 사용자가 쇼핑 바구니를 체크 아웃 하는 경우
 - 주문에 대 한 지불에 성공한 경우

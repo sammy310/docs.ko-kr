@@ -3,12 +3,12 @@ description: '자세한 정보: 메시지 교환 패턴 선택'
 title: 메시지 교환 패턴 선택
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: c452a65e4d4108123deaab93be9bd825127eba70
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c0849ddb16596ebd6e064bb39f0727ac51642eb7
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99685857"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605362"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>메시지 교환 패턴 선택
 
@@ -30,7 +30,7 @@ ms.locfileid: "99685857"
   
      이중 MEP를 사용하면 임의 개수의 메시지를 클라이언트에서 보내고 임의의 순서로 받을 수 있습니다. 이중 MEP는 말로 전달되는 각 단어가 메시지에 해당하는 전화 통화와 같습니다. 이 MEP에서는 양측의 송/수신이 가능하기 때문에 클라이언트와 서비스 채널에서 <xref:System.ServiceModel.Channels.IDuplexChannel> 인터페이스를 구현합니다.  
   
- ![메시지 교환 패턴 선택](./media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
+ ![세 가지 기본 메시지 교환 패턴을 보여 주는 순서도](./media/wcfc-basicthreemepsc.gif)  
 다음은 세 가지 기본 메시지 교환 패턴으로 위에서부터 차례로 데이터그램, 요청-응답 및 이중 교환 패턴입니다.  
   
  이러한 MEPs는 각각 *세션* 을 지원할 수도 있습니다. 세션(및 <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> 형식의 <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType> 구현)은 채널에서 주고 받는 모든 메시지와 상호 관련됩니다. 요청-응답 패턴은 요청과 회신이 상호 관련되어 있지만 독립 실행형 두 메시지 세션입니다. 반면, 세션을 지원하는 요청-응답 패턴은 해당 채널의 모든 요청/응답 쌍이 상호 관련되어 있음을 의미합니다. 이런 식으로 다음과 같이 총 여섯 개의 MEP가 제공됩니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "99685857"
   
  채널 개체 모델에서 각각의 논리적 세션은 세션 채널의 인스턴스로 매니페스트됩니다. 따라서 클라이언트에서 만들어져 서비스에서 허용되는 모든 새 세션은 클라이언트와 서비스 측의 새 세션 채널에 해당합니다. 다음은 위와 아래에 세션 없는 채널 구조와 세션 채널 구조가 각각 표시된 다이어그램입니다.  
   
- ![메시지 교환 패턴 선택](./media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
+ ![세션 없는 및 세션 채널의 구조를 보여 주는 순서도](./media/wcfc-sessionandsessionlesschannelsc.gif)  
   
  클라이언트는 새로운 세션 채널을 만들어 메시지를 보냅니다. 그러면 서비스 측에서 채널 수신기가 이 메시지를 받고 해당 메시지가 새 세션에 속하는 것으로 감지하여, 새 세션 채널을 만들고 채널 수신기의 AcceptChannel을 호출하는 애플리케이션에 대한 응답으로 이를 애플리케이션에 전달합니다. 그럼 다음 애플리케이션에서는 이 메시지를 비롯한, 동일한 세션 채널을 통해 같은 세션에서 보내진 모든 후속 메시지를 받습니다.  
   
