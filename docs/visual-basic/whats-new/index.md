@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 222c92413bd12e1769376c0f6eef7e34d7d5182e
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 1e5f7dec0476d0b7fbf09fa3b253d3d5dfedf426
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106568"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190374"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -32,17 +32,14 @@ Visual Basic 16.9/Visual Studio 2019 버전 16.9\
 Visual Basic 16.0/Visual Studio 2019 버전 16.0\
 새 기능은 [Visual Basic 16.0](#visual-basic-160)을 참조하세요.
 
-Visual Basic 15.8/Visual Studio 2017 버전 15.8\
-새 기능은 [Visual Basic 15.8](#visual-basic-158)을 참조하세요.
-
 Visual Basic 15.5/Visual Studio 2017 버전 15.5\
 새 기능은 [Visual Basic 15.5](#visual-basic-155)를 참조하세요.
 
 Visual Basic 15.3/Visual Studio 2017 버전 15.3\
 새 기능은 [Visual Basic 15.3](#visual-basic-153)을 참조하세요.
 
-Visual Basic 2017/Visual Studio 2017\
-새 기능은 [Visual Basic 2017](#visual-basic-2017)을 참조하세요.
+Visual Basic 15 / Visual Studio 2017\
+새 기능은 [Visual Basic 2017](#visual-basic-15)을 참조하세요.
 
 Visual Basic/Visual Studio 2015\
 새 기능은 [Visual Basic 14](#visual-basic-14)를 참조하세요.
@@ -89,8 +86,6 @@ Public Sub Main()
         & "WHERE Publishers.State = 'CA'"
 End Sub
 ```
-
-## <a name="visual-basic-158"></a>Visual Basic 15.8
 
 **최적화된 부동 소수점-정수 변환**
 
@@ -166,7 +161,7 @@ Dim number As Integer = &H_C305_F860
 
 이제 Visual Basic 명령줄 컴파일러는 참조 어셈블리의 출력을 제어하기 위해 [ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) 및 [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) 컴파일러 옵션을 지원합니다. **-refout** 는 참조 어셈블리의 출력 디렉터리를 정의하고 **-refonly** 는 참조 어셈블리만 컴파일로 출력되도록 지정합니다.
 
-## <a name="visual-basic-2017"></a>Visual Basic 2017
+## <a name="visual-basic-15"></a>Visual Basic 15
 
 [**튜플**](../programming-guide/language-features/data-types/tuples.md)
 
