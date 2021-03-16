@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: 일부 TableLayoutSettings 속성이 InvalidEnumArgumentException을 throw함'
-description: 이제 일부 TableLayoutSettings API가 잘못된 인수에 대해 InvalidEnumArgumentException을 throw하는 .NET 6.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 이제 일부 TableLayoutSettings API가 잘못된 인수에 대해 InvalidEnumArgumentException을 throw하는 .NET 6의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 01/18/2021
-ms.openlocfilehash: 8397952e4647347718f11597a100c5d764e7186b
-ms.sourcegitcommit: f8cd3ef517ee177c99feed944824c27d208cc0d1
+ms.openlocfilehash: 2da097122b935ec3a60c2bb009cc8ebbcff6468e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98570244"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255726"
 ---
 # <a name="selected-tablelayoutsettings-properties-throw-invalidenumargumentexception"></a>선택한 TableLayoutSettings 속성이 InvalidEnumArgumentException을 throw함
 
@@ -15,7 +15,7 @@ ms.locfileid: "98570244"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-이전 .NET 버전에서는 잘못된 값을 할당하려고 하면 해당 속성이 <xref:System.ArgumentOutOfRangeException>을 throw합니다. .NET 6.0부터 해당 속성은 이러한 경우에 <xref:System.ComponentModel.InvalidEnumArgumentException>을 throw합니다.
+이전 .NET 버전에서는 잘못된 값을 할당하려고 하면 해당 속성이 <xref:System.ArgumentOutOfRangeException>을 throw합니다. .NET 6부터 해당 속성은 이 경우에 <xref:System.ComponentModel.InvalidEnumArgumentException>을 throw합니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 

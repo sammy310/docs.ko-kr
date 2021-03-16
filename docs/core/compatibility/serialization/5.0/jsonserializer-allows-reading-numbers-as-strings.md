@@ -1,23 +1,23 @@
 ---
 title: '호환성이 손상되는 변경: ASP.NET Core 앱은 따옴표 붙은 숫자를 역직렬화할 수 있음'
-description: ASP.NET Core 앱이 예외를 throw하는 대신 JSON 문자열로 표현되는 숫자를 역직렬화하는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: ASP.NET Core 앱이 예외를 throw하는 대신 JSON 문자열로 표현되는 숫자를 역직렬화하는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 10/21/2020
-ms.openlocfilehash: fc8a4c6638be391c22c7cfb2fc7c216c88377f29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f541af5bf5f0a519fd5205f44d68a9b401569909
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759672"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256311"
 ---
 # <a name="aspnet-core-apps-allow-deserializing-quoted-numbers"></a>ASP.NET Core 앱은 따옴표 붙은 숫자를 역직렬화할 수 있음
 
-.NET 5.0부터 ASP.NET Core 앱은 <xref:System.Text.Json.JsonSerializerDefaults.Web?displayProperty=nameWithType>에 지정된 대로 기본 deserialization 옵션을 사용합니다. 옵션의 <xref:System.Text.Json.JsonSerializerDefaults.Web> 집합에는 <xref:System.Text.Json.JsonSerializerOptions.NumberHandling>을 <xref:System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString?displayProperty=nameWithType>으로 설정하는 작업이 포함됩니다. 이 변경 내용은 ASP.NET Core 앱이 예외를 throw하는 대신 JSON 문자열로 표현되는 숫자를 역직렬화함을 의미합니다.
+.NET 5부터 ASP.NET Core 앱은 <xref:System.Text.Json.JsonSerializerDefaults.Web?displayProperty=nameWithType>에 지정된 대로 기본 deserialization 옵션을 사용합니다. 옵션의 <xref:System.Text.Json.JsonSerializerDefaults.Web> 집합에는 <xref:System.Text.Json.JsonSerializerOptions.NumberHandling>을 <xref:System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString?displayProperty=nameWithType>으로 설정하는 작업이 포함됩니다. 이 변경 내용은 ASP.NET Core 앱이 예외를 throw하는 대신 JSON 문자열로 표현되는 숫자를 역직렬화함을 의미합니다.
 
 ## <a name="change-description"></a>변경 내용 설명
 
 .NET Core 3.0 - 3.1에서는 JSON 페이로드에 따옴표 붙은 숫자가 있는 경우 <xref:System.Text.Json.JsonSerializer>에서 deserialization 중에 <xref:System.Text.Json.JsonException>을 throw합니다. 따옴표 붙은 숫자는 개체 그래프의 숫자 속성으로 매핑하는 데 사용됩니다. .NET Core 3.0 - 3.1에서 숫자는 <xref:System.Text.Json.JsonTokenType.Number?displayProperty=nameWithType> 토큰에서만 읽을 수 있습니다.
 
-.NET 5.0부터 JSON 페이로드의 따옴표 붙은 숫자는 기본적으로 ASP.NET Core 앱에 유효한 것으로 간주합니다. 따옴표 붙은 숫자 deserialization 중에는 예외가 throw되지 않습니다.
+.NET 5부터 JSON 페이로드의 따옴표 붙은 숫자는 기본적으로 ASP.NET Core 앱에 유효한 것으로 간주합니다. 따옴표 붙은 숫자 deserialization 중에는 예외가 throw되지 않습니다.
 
 > [!TIP]
 >

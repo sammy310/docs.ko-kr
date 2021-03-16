@@ -3,12 +3,12 @@ title: 무시 항목 - C# 가이드
 description: 할당되지 않은 무시 가능한 변수인 무시 항목에 대한 C#의 지원과 무시 항목을 사용할 수 있는 방법에 관해 설명합니다.
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
-ms.openlocfilehash: 3c18fbb0bbb80c2c29c9f5d8334a5dd711b68cc5
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: eefa81d3bd8d56c9296e01533aaf93c4725323a3
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100432636"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104954"
 ---
 # <a name="discards---c-guide"></a>무시 항목 - C# 가이드
 
@@ -42,9 +42,9 @@ C# 9.0부터 무시 항목을 사용하여 람다 식의 사용하지 않는 입
 
 ## <a name="pattern-matching-with-switch"></a>`switch`를 사용한 패턴 일치
 
-무시 패턴은 [switch](language-reference/keywords/switch.md) 키워드를 사용한 패턴 일치에서 사용할 수 있습니다. 모든 식은 무시 패턴과 항상 일치됩니다. ([is](language-reference/keywords/is.md) 식과 함께 사용할 수 있습니다. 그러나 해당 의미를 변경하지 않고 무시 항목을 제거할 수 있으므로 그렇게 사용하는 경우는 드뭅니다.)
+‘무시 패턴’은 [switch 식](language-reference/operators/switch-expression.md)을 사용한 패턴 일치에서 사용할 수 있습니다. `null`을 포함한 모든 식은 무시 패턴과 항상 일치합니다.
 
-다음 예제에서는 [is](language-reference/keywords/is.md) 문을 사용하여 개체가 <xref:System.IFormatProvider> 구현을 제공하고 개체가 `null`인지 테스트하는지를 결정하는 `ProvidesFormatInfo` 메서드를 정의합니다. 또한 무시 패턴을 사용하여 다른 형식의 null이 아닌 개체도 처리합니다.
+다음 예제에서는 `switch` 식을 사용하여 개체가 <xref:System.IFormatProvider> 구현을 제공하고 개체가 `null`인지 테스트하는지를 결정하는 `ProvidesFormatInfo` 메서드를 정의합니다. 또한 무시 패턴을 사용하여 다른 형식의 null이 아닌 개체도 처리합니다.
 
 :::code language="csharp" source="snippets/discards/discard-pattern2.cs" ID="DiscardSwitchExample" :::
 

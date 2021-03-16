@@ -4,12 +4,12 @@ description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능�
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 4c32b08c3e7eeaedce687ea5bc572e6a7bee0d3e
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: fc5e8a929dfe0b7a3f55174e38e596331900edc7
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804896"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231383"
 ---
 # <a name="console-app"></a>콘솔 앱
 
@@ -55,7 +55,7 @@ namespace TeleprompterConsole
 
 ## <a name="reading-and-echoing-the-file"></a>파일 읽기 및 에코
 
-추가할 첫 번째 기능은 텍스트 파일을 읽고 콘솔에 해당 텍스트를 모두 표시하는 기능입니다. 먼저 텍스트 파일을 추가해 보겠습니다. 이 [샘플](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)에 대한 GitHub 리포지토리의 [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) 파일을 프로젝트 디렉터리로 복사합니다. 이 파일은 애플리케이션에 대한 스크립트로 작동합니다. 이 항목에 대한 샘플 앱을 다운로드하는 방법에 대한 정보를 원하는 경우 [샘플 및 자습서](../../samples-and-tutorials/index.md#view-and-download-samples) 항목의 지침을 참조하세요.
+추가할 첫 번째 기능은 텍스트 파일을 읽고 콘솔에 해당 텍스트를 모두 표시하는 기능입니다. 먼저 텍스트 파일을 추가해 보겠습니다. 이 [샘플](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)에 대한 GitHub 리포지토리의 [sampleQuotes.txt](https://github.com/dotnet/samples/raw/main/csharp/getting-started/console-teleprompter/sampleQuotes.txt) 파일을 프로젝트 디렉터리로 복사합니다. 이 파일은 애플리케이션에 대한 스크립트로 작동합니다. 이 항목에 대한 샘플 앱을 다운로드하는 방법에 대한 정보를 원하는 경우 [샘플 및 자습서](../../samples-and-tutorials/index.md#view-and-download-samples) 항목의 지침을 참조하세요.
 
 다음에는 다음 메서드를 `Program` 클래스에 추가합니다(`Main` 메서드 바로 아래).
 
@@ -82,11 +82,11 @@ using System.IO;
 
 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스는 <xref:System.Collections.Generic> 네임스페이스에 정의되어 있습니다. <xref:System.IO.File> 클래스는 <xref:System.IO> 네임스페이스에 있습니다.
 
-이 메서드는 *반복기 메서드*라는 특수한 형식의 C# 메서드입니다. 열거자 메서드는 지연 계산되는 시퀀스를 반환합니다. 즉, 시퀀스의 각 항목은 시퀀스를 사용하는 코드에서 요청된 것처럼 생성됩니다. 열거자 메서드는 하나 이상의 [`yield return`](../language-reference/keywords/yield.md) 문을 포함하는 메서드입니다. `ReadFrom` 메서드에서 반환된 개체는 시퀀스의 각 항목을 생성하는 코드를 포함합니다. 이 예제에서는 소스 파일에서 다음 텍스트 줄을 읽고 해당 문자열을 반환하는 코드에 해당합니다. 호출하는 코드가 시퀀스에서 다음 항목을 요청할 때마다 코드는 파일에서 다음 텍스트 줄을 읽고 반환합니다. 파일이 완전히 읽히면 시퀀스는 더 이상 항목이 없음을 나타냅니다.
+이 메서드는 *반복기 메서드* 라는 특수한 형식의 C# 메서드입니다. 열거자 메서드는 지연 계산되는 시퀀스를 반환합니다. 즉, 시퀀스의 각 항목은 시퀀스를 사용하는 코드에서 요청된 것처럼 생성됩니다. 열거자 메서드는 하나 이상의 [`yield return`](../language-reference/keywords/yield.md) 문을 포함하는 메서드입니다. `ReadFrom` 메서드에서 반환된 개체는 시퀀스의 각 항목을 생성하는 코드를 포함합니다. 이 예제에서는 소스 파일에서 다음 텍스트 줄을 읽고 해당 문자열을 반환하는 코드에 해당합니다. 호출하는 코드가 시퀀스에서 다음 항목을 요청할 때마다 코드는 파일에서 다음 텍스트 줄을 읽고 반환합니다. 파일이 완전히 읽히면 시퀀스는 더 이상 항목이 없음을 나타냅니다.
 
 여러분에게 생소할 수 있는 두 개의 다른 C# 구문 요소가 있습니다. 이 메서드의 [`using`](../language-reference/keywords/using-statement.md) 문은 리소스 정리를 관리합니다. `using` 문(이 예제의 `reader`)에서 초기화되는 변수는 <xref:System.IDisposable> 인터페이스를 구현해야 합니다. 이 인터페이스는 리소스를 해제해야 할 때 호출되어야 하는 단일 메서드 `Dispose`를 정의합니다. 컴파일러는 실행 중에 `using` 문의 닫는 중괄호에 도달하면 해당 호출을 생성합니다. 컴파일러에서 생성된 코드는 using 문으로 정의된 블록의 코드에서 예외가 throw되더라도 리소스가 해제되도록 합니다.
 
-`reader` 변수는 `var` 키워드를 사용하여 정의됩니다. [`var`](../language-reference/keywords/var.md)은 *암시적으로 형식화한 지역 변수*를 정의합니다. 즉, 변수의 형식이 변수에 할당된 개체의 컴파일 시간 형식에 의해 결정됩니다. 여기서는 <xref:System.IO.StreamReader> 개체에 해당하는 <xref:System.IO.File.OpenText(System.String)> 메서드의 반환 값입니다.
+`reader` 변수는 `var` 키워드를 사용하여 정의됩니다. [`var`](../language-reference/keywords/var.md)은 *암시적으로 형식화한 지역 변수* 를 정의합니다. 즉, 변수의 형식이 변수에 할당된 개체의 컴파일 시간 형식에 의해 결정됩니다. 여기서는 <xref:System.IO.StreamReader> 개체에 해당하는 <xref:System.IO.File.OpenText(System.String)> 메서드의 반환 값입니다.
 
 이제 `Main` 메서드에서 파일을 읽는 코드를 채웁니다.
 

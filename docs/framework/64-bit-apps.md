@@ -7,12 +7,12 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-ms.openlocfilehash: 2a44d4a7ec9de1747fd8e7321d5c88c2a9e8ac20
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8274fe8f5d32b0f6258e450cc7d649fe3e184d78
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285085"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477206"
 ---
 # <a name="64-bit-applications"></a>64비트 애플리케이션
 
@@ -56,7 +56,7 @@ ms.locfileid: "96285085"
 |컴파일러|컴파일러 옵션|  
 |--------------|---------------------|  
 |Visual Basic|[-platform(Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
-|Visual C#|[-platform(C# 컴파일러 옵션)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
+|Visual C#|[-platform(C# 컴파일러 옵션)](../csharp/language-reference/compiler-options/output.md#platformtarget)|  
 |Visual C++|**/clr:safe** 를 사용하여 플랫폼 제약 없는 MSIL(Microsoft intermediate language) 애플리케이션을 만들 수 있습니다. 자세한 내용은 [-clr(공용 언어 런타임 컴파일)](/cpp/build/reference/clr-common-language-runtime-compilation)을 참조하세요.<br /><br /> Visual C++에는 각 64비트 운영 체제에 대한 별도의 컴파일러가 포함됩니다. Visual C++를 사용하여 64비트 Windows 운영 체제에서 실행되는 네이티브 애플리케이션을 만드는 방법에 대한 자세한 내용은 [64비트 프로그래밍](/cpp/build/configuring-programs-for-64-bit-visual-cpp)을 참조하세요.|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>.exe 파일 또는 .dll 파일 상태 확인  

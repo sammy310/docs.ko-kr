@@ -1,21 +1,21 @@
 ---
 title: '호환성이 손상되는 변경: 네이티브 코드에서 WinForms 개체에 액세스할 수 없음'
-description: 더 이상 네이티브 코드에서 Windows Forms 개체에 액세스할 수 없는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 더 이상 네이티브 코드에서 Windows Forms 개체에 액세스할 수 없는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 01/29/2021
-ms.openlocfilehash: 53343f3f07817f735fa3b0ee77a352dcc80d4b6c
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 823d37cb8115b8669b254878325a350809393e79
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99506493"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256096"
 ---
 # <a name="native-code-cant-access-windows-forms-objects"></a>네이티브 코드는 Windows Forms 개체에 액세스하지 못함
 
-.NET 5.0부터 더 이상 네이티브 코드에서 Windows Forms 개체에 액세스할 수 없습니다.
+.NET 5부터 더 이상 네이티브 코드에서 Windows Forms 개체에 액세스할 수 없습니다.
 
 ## <a name="change-description"></a>변경 내용 설명
 
-이전 .NET 버전에서는 일부 Windows Forms 형식이 COM interop에 표시되는 것으로 데코레이팅되었으므로 네이티브 코드에서 액세스할 수 있었습니다. .NET 5.0부터 Windows Forms API는 COM interop에 표시되거나 네이티브 코드에 액세스할 수 없습니다. .NET 런타임은 더 이상 기본적으로 사용자 지정 형식 라이브러리 만들기를 지원하지 않습니다. 또한 .NET 런타임은 .NET Framework에 대한 형식 라이브러리에 의존할 수 없습니다(.NET Framework에 있는 것처럼 클래스의 모양을 유지해야 함).
+이전 .NET 버전에서는 일부 Windows Forms 형식이 COM interop에 표시되는 것으로 데코레이팅되었으므로 네이티브 코드에서 액세스할 수 있었습니다. .NET 5부터 Windows Forms API는 COM interop에 표시되거나 네이티브 코드에 액세스할 수 없습니다. .NET 런타임은 더 이상 기본적으로 사용자 지정 형식 라이브러리 만들기를 지원하지 않습니다. 또한 .NET 런타임은 .NET Framework에 대한 형식 라이브러리에 의존할 수 없습니다(.NET Framework에 있는 것처럼 클래스의 모양을 유지해야 함).
 
 ## <a name="reason-for-change"></a>변경 이유
 
@@ -67,7 +67,7 @@ public class Form1 : Form
 }
 ```
 
-이 예제가 .NET 5.0 이상 버전에서 작동하도록 할 수 있는 방법은 두 가지가 있습니다.
+예제가 .NET 5 이상 버전에서 작동하도록 할 수 있는 방법은 두 가지가 있습니다.
 
 - 프로젝트 수준에서 명시적으로 변경되지 않는 한 기본적으로 적용되는 `IDispatch`를 지원하는 사용자 선언 `ObjectForScripting` 개체를 도입합니다.
 

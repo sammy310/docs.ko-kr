@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 4485a9f8e3581aa80ed65221258dc40310b3a695
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 123c3768414ee9a577c49c218acfb7415d83572e
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303051"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605284"
 ---
 # <a name="interfaces-c-programming-guide"></a>인터페이스(C# 프로그래밍 가이드)
 
@@ -31,7 +31,7 @@ ms.locfileid: "87303051"
 
 추상 클래스에 대한 자세한 내용은 [추상 및 봉인 클래스와 클래스 멤버](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.
 
-인터페이스에는 인스턴스 메서드, 속성, 이벤트, 인덱서 또는 이러한 네 가지 멤버 형식의 조합이 포함될 수 있습니다. 인터페이스에는 정적 생성자, 필드, 상수 또는 연산자가 포함될 수 있습니다. 예제에 대한 링크는[관련 단원](./index.md#BKMK_RelatedSections)을 참조하세요. 인터페이스에는 인스턴스 필드, 인스턴스 생성자 또는 종료자가 포함될 수 없습니다. 인터페이스 멤버는 기본적으로 public입니다.
+인터페이스에는 인스턴스 메서드, 속성, 이벤트, 인덱서 또는 이러한 네 가지 멤버 형식의 조합이 포함될 수 있습니다. 인터페이스에는 정적 생성자, 필드, 상수 또는 연산자가 포함될 수 있습니다. 예제에 대한 링크는[관련 단원](./index.md#BKMK_RelatedSections)을 참조하세요. 인터페이스에는 인스턴스 필드, 인스턴스 생성자 또는 종료자가 포함될 수 없습니다. 인터페이스 멤버는 기본적으로 공용이며, `public`, `protected`, `internal`, `private`, `protected internal` 또는 `private protected` 등의 접근성 한정자를 명시적으로 지정할 수 있습니다. `private` 멤버에는 기본 구현이 있어야 합니다.
 
 인터페이스 멤버를 구현하려면 구현 클래스의 해당 멤버가 공용이고 비정적이어야 하며 인터페이스 멤버와 동일한 이름 및 서명을 사용해야 합니다.
 

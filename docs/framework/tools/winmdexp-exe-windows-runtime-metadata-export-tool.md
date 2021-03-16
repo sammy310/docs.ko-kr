@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-ms.openlocfilehash: 42a57334f9f3e50a4d3c3ec48d57d26357d57510
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: b9a30076fdd67a90dc3e605a8014ead88141f43b
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439497"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477542"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)
 
@@ -19,7 +19,7 @@ Windows 런타임 메타데이터 내보내기 도구(Winmdexp.exe)는 .NET Fram
   
  **Microsoft Store** 에 있는 Visual Studio 2013 또는 Visual Studio 2012의 C# 및 Visual Basic용 **Windows 런타임 구성 요소** 템플릿을 사용할 경우 컴파일러 대상은 .winmdobj 파일이고, 이후 빌드 단계에서는 Winmdexp.exe를 호출하여 .winmdobj 파일을 .winmd 파일로 내보냅니다. 이러한 방법으로 Windows 런타임 구성 요소를 빌드하는 것이 좋습니다. Visual Studio가 제공하는 것보다 빌드 프로세스를 더 자세하게 제어하려면 Winmdexp.exe를 사용합니다.  
   
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
   
  명령 프롬프트에 다음을 입력합니다.  
   
@@ -33,7 +33,7 @@ winmdexp [options] winmdmodule
   
 |인수 또는 옵션|설명|  
 |------------------------|-----------------|  
-|`winmdmodule`|내보낼 모듈(.winmdobj)을 지정합니다. 하나의 모듈만 허용됩니다. 이 모듈을 만들려면 `/target` 컴파일러 옵션을 `winmdobj` 대상과 함께 사용합니다. [-target:winmdobj(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) 또는 [-target(Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)을 참조하세요.|  
+|`winmdmodule`|내보낼 모듈(.winmdobj)을 지정합니다. 하나의 모듈만 허용됩니다. 이 모듈을 만들려면 `/target` 컴파일러 옵션을 `winmdobj` 대상과 함께 사용합니다. [-target:winmdobj(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/output.md#targettype) 또는 [-target(Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)을 참조하세요.|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Winmdexp.exe가 생성하는 출력 XML 문서 파일을 지정합니다. .NET Framework 4.5에서는 기본적으로 출력 파일이 XML 설명서 파일과 같습니다.|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|컴파일러가 `winmdmodule`로 생성한 XML 문서 파일의 이름을 지정합니다.|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|`winmdmodule`에 대한 기호를 포함하는 프로그램 데이터베이스(PDB) 파일의 이름을 지정합니다.|  

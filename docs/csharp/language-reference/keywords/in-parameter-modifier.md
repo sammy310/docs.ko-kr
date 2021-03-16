@@ -5,16 +5,16 @@ ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: b9cd308a1eaf2ae8f4e3e89b1a4770933b3978cc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 171218dcc4904b797b0c9a66b56bcb970607684e
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91188410"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104850"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 매개 변수 한정자(C# 참조)
 
-`in` 키워드를 사용하면 참조를 통해 인수를 전달할 수 있습니다. 이 키워드는 정식 매개 변수를 위해 해당 인수의 별칭을 만드는데, 이는 반드시 변수여야 합니다. 즉, 매개 변수에 대한 모든 작업이 인수에서 수행됩니다. 이 키워드는 호출된 메서드에서 `in` 인수를 수정할 수 없다는 점을 제외하고 [ref](ref.md) 또는 [out](out-parameter-modifier.md) 키워드와 유사합니다. `ref` 인수는 수정할 수 있지만 `out` 인수는 호출된 메서드가 수정해야 하며, 해당 수정 사항은 호출 컨텍스트에서 식별 가능합니다.
+`in` 키워드를 사용하면 인수가 참조로 전달되지만 인수가 수정되지 않습니다. 이 키워드는 정식 매개 변수를 위해 해당 인수의 별칭을 만드는데, 이는 반드시 변수여야 합니다. 즉, 매개 변수에 대한 모든 작업이 인수에서 수행됩니다. 이 키워드는 호출된 메서드에서 `in` 인수를 수정할 수 없다는 점을 제외하고 [ref](ref.md) 또는 [out](out-parameter-modifier.md) 키워드와 유사합니다. `ref` 인수는 수정할 수 있지만 `out` 인수는 호출된 메서드가 수정해야 하며, 해당 수정 사항은 호출 컨텍스트에서 식별 가능합니다.
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -120,14 +120,8 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 - 확장 메서드의 첫 번째 인수는 구조체인 경우가 아니면 `in` 한정자를 가질 수 없음
 - 해당 인수가 제네릭 형식인 확장 메서드의 첫 번째 인수(해당 형식이 구조체로 제한되는 경우도 포함)
 
+[안전하고 효율적인 코드 작성](../../write-safe-efficient-code.md)의 문서에서 `in` 한정자, 해당 한정자와 `ref` 및 `out`의 차이점을 자세히 알아볼 수 있습니다.
+
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>참고 항목
-
-- [C# 참조](../index.md)
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)
-- [C# 키워드](index.md)
-- [메서드 매개 변수](method-parameters.md)
-- [안전하고 효율적인 코드 작성](../../write-safe-efficient-code.md)

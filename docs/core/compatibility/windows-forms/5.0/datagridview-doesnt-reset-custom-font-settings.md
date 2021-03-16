@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: DataGridView에서 더 이상 사용자 지정 셀 스타일의 글꼴을 다시 설정하지 않음'
-description: 셀 스타일 글꼴이 사용자 지정된 경우 DataGridView에서 더 이상 앰비언트 글꼴과 일치하도록 기본 셀 스타일 글꼴을 다시 설정하지 않는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 셀 스타일 글꼴이 사용자 지정된 경우 DataGridView에서 더 이상 앰비언트 글꼴과 일치하도록 기본 셀 스타일 글꼴을 다시 설정하지 않는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 10/18/2020
-ms.openlocfilehash: 708b12ba1305681f5c38eb605861d02e3b2c8eb1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fd28fb5a0b508157289dde1b720522ed49163e31
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760071"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256130"
 ---
 # <a name="datagridview-no-longer-resets-fonts-for-customized-cell-styles"></a>DataGridView에서 더 이상 사용자 지정 셀 스타일의 글꼴을 다시 설정하지 않음
 
@@ -17,7 +17,7 @@ ms.locfileid: "95760071"
 
 이전 .NET 버전에서 앰비언트 글꼴이 변경되면 <xref:System.Windows.Forms.DataGridViewElement.DataGridView>는 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle>, <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle> 속성의 사용자 정의 글꼴을 다시 설정하고 재정의합니다.
 
-.NET 5.0부터 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle> 또는 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle> 속성에 구성한 글꼴 설정은 앰비언트 글꼴이 변경된 경우에도 유지됩니다. 글꼴을 사용자 지정하지 않은 속성의 경우 앰비언트 글꼴 설정과 일치하도록 글꼴이 변경됩니다.
+.NET 5부터 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle> 또는 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle> 속성에 구성한 글꼴 설정은 앰비언트 글꼴이 변경된 경우에도 유지됩니다. 글꼴을 사용자 지정하지 않은 속성의 경우 앰비언트 글꼴 설정과 일치하도록 글꼴이 변경됩니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 

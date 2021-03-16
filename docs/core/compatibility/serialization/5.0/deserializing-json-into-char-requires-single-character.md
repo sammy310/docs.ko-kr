@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: Char 역직렬화에 단일 문자열이 필요함'
-description: Char 대상으로 역직렬화할 때 System.Text.Json에서 JSON에 단일 문자 문자열이 필요한 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: Char 대상으로 역직렬화할 때 System.Text.Json에서 JSON에 단일 문자 문자열이 필요한 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 12/15/2020
-ms.openlocfilehash: 39a2d25b00bf8855cfbf46a4d78b8545052703e5
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: e901f8ee7e7521af948a3bcde5cf969640436f7f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633873"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256337"
 ---
 # <a name="systemtextjson-requires-single-char-string-to-deserialize-a-char"></a>Char를 역직렬화하기 위해 System.Text.Json에 단일 문자 문자열 필요
 
@@ -19,11 +19,11 @@ ms.locfileid: "97633873"
 
 ```csharp
 // .NET Core 3.0 and 3.1: Returns the first char 'a'.
-// .NET 5.0 and later: Throws JsonException because payload has more than one char.
+// .NET 5 and later: Throws JsonException because payload has more than one char.
 char deserializedChar = JsonSerializer.Deserialize<char>("\"abc\"");
 ```
 
-.NET 5.0 이상에서는 역직렬화 대상이 `char`인 경우 단일 `char` 문자열 이외의 모든 항목은 <xref:System.Text.Json.JsonException>을 throw합니다. 다음 예제 문자열은 모든 .NET 버전에서 역직렬화됩니다.
+.NET 5 이상에서는 deserialization 대상이 `char`인 경우 단일 `char` 문자열 이외의 모든 항목은 <xref:System.Text.Json.JsonException>을 throw합니다. 다음 예제 문자열은 모든 .NET 버전에서 역직렬화됩니다.
 
 ```csharp
 // Correct usage.

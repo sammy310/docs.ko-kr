@@ -3,12 +3,12 @@ title: SYSLIB0004 경고
 description: 컴파일 시간 경고 SYSLIB0004를 생성하는 사용되지 않음에 대해 알아봅니다.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 03be8bb54f71f74ed94ee2c3f8489397ae1e99b5
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 76726e233e2900c82dce1b0872533e5356e91c8c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97596340"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256371"
 ---
 # <a name="syslib0004-the-constrained-execution-region-cer-feature-is-not-supported"></a>SYSLIB0004: CER(제약이 있는 실행 영역) 기능이 지원되지 않음
 
@@ -28,7 +28,7 @@ ms.locfileid: "97596340"
 
 ## <a name="workarounds"></a>해결 방법
 
-- 메서드에 CER 특성을 적용한 경우 특성을 제거합니다. 이러한 특성은 .NET 5.0 이상 버전에 영향을 주지 않습니다.
+- 메서드에 CER 특성을 적용한 경우 특성을 제거합니다. 해당 특성은 .NET 5 이상 버전에 영향을 주지 않습니다.
 
   ```csharp
   // REMOVE the attribute below.
@@ -44,7 +44,7 @@ ms.locfileid: "97596340"
   }
   ```
 
-- `RuntimeHelpers.ProbeForSufficientStack` 또는 `RuntimeHelpers.PrepareContractedDelegate`를 호출하는 경우 호출을 제거합니다. 이러한 호출은 .NET 5.0 이상 버전에 영향을 주지 않습니다.
+- `RuntimeHelpers.ProbeForSufficientStack` 또는 `RuntimeHelpers.PrepareContractedDelegate`를 호출하는 경우 호출을 제거합니다. 해당 호출은 .NET 5 이상 버전에 영향을 주지 않습니다.
 
   ```csharp
   public void DoSomething()
@@ -56,7 +56,7 @@ ms.locfileid: "97596340"
   }
   ```
 
-- `RuntimeHelpers.PrepareConstrainedRegions`를 호출하는 경우 호출을 제거합니다. 이 호출은 .NET 5.0 이상 버전에 영향을 주지 않습니다.
+- `RuntimeHelpers.PrepareConstrainedRegions`를 호출하는 경우 호출을 제거합니다. 해당 호출은 .NET 5 이상 버전에 영향을 주지 않습니다.
 
   ```csharp
   public void DoSomething_Old()
