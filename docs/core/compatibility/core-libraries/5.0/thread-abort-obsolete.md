@@ -1,23 +1,23 @@
 ---
 title: '호환성이 손상되는 변경: Thread.Abort는 사용되지 않음'
-description: Thread.Abort API가 사용되지 않는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: Thread.Abort API가 사용되지 않는 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 6d7dfce8fda393bfd88c9b4cf0c59d53942cee25
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 29c688250593801bab9b32b9e787911e561ec000
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759636"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257065"
 ---
 # <a name="threadabort-is-obsolete"></a>Thread.Abort는 사용되지 않음
 
-<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> API는 사용되지 않습니다. 해당 메서드가 호출되는 경우 .NET 5.0 이상 버전을 대상으로 하는 프로젝트에서는 컴파일 시간 경고 `SYSLIB0006`이 발생합니다.
+<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> API는 사용되지 않습니다. 해당 메서드가 호출되는 경우 .NET 5 이상 버전을 대상으로 하는 프로젝트에서는 컴파일 시간 경고 `SYSLIB0006`이 발생합니다.
 
 ## <a name="change-description"></a>변경 내용 설명
 
 이전에는 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 호출이 컴파일 시간 경고가 생성되지 않았지만 해당 메서드는 런타임에 <xref:System.PlatformNotSupportedException>을 throw했습니다.
 
-.NET 5.0부터 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>는 경고로 사용되지 않는 것으로 표시됩니다. 해당 메서드를 호출하면 컴파일러 경고 `SYSLIB0006`이 생성됩니다. 메서드의 구현은 변경되지 않으며 계속해서 <xref:System.PlatformNotSupportedException>을 throw합니다.
+.NET 5부터 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>는 경고로 사용되지 않는 것으로 표시됩니다. 해당 메서드를 호출하면 컴파일러 경고 `SYSLIB0006`이 생성됩니다. 메서드의 구현은 변경되지 않으며 계속해서 <xref:System.PlatformNotSupportedException>을 throw합니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 

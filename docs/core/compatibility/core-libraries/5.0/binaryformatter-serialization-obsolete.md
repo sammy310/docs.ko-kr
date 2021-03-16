@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: ASP.NET 앱에서 BinaryFormatter serialization 메서드가 사용되지 않고 금지됨'
-description: BinaryFormatter, Formatter, IFormatter에서 serialize 및 deserialize 메서드가 사용되지 않는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: BinaryFormatter, Formatter, IFormatter에서 serialize 및 deserialize 메서드가 사용되지 않는 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 1dca30d33f2aa0a6fe8f05fe728557092f836b2d
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 8c31a95683526ba394101d449b5ae3328f57f3c3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189846"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257663"
 ---
 # <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>ASP.NET 앱에서 BinaryFormatter serialization 메서드가 사용되지 않고 금지됨
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: 328c085035927b3f271a39a0ea3992dde29f5119
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 050822d12ef4e0a7dfa752e4789f9861c4894cfa
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279105"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259384"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe(관리되는 프로필 기반 최적화 도구)
 
@@ -24,7 +24,9 @@ ms.locfileid: "96279105"
 
 중간 언어(IL) 어셈블리에 대한 시작 시간 및 작업 집합에서 성능 문제가 발생하면 먼저 Ngen.exe를 사용하여 JIT(Just-In-Time) 컴파일 비용을 제거하고 코드 공유를 지원하는 것이 좋습니다. 추가 개선이 필요한 경우 Mpgo.exe를 사용하여 애플리케이션을 더 최적화할 수 있습니다. 최적화되지 않은 네이티브 이미지 어셈블리의 성능 데이터를 성능 향상을 평가하는 기준선으로 사용할 수 있습니다. Mpgo.exe를 사용하면 콜드 시작 시간이 단축되고 작업 집합 크기가 작아질 수 있습니다. Mpgo.exe는 Ngen.exe가 정보 최적화 네이티브 이미지 어셈블리를 생성하는 데 사용하는 정보를 IL 어셈블리에 추가합니다. 자세한 내용은 .NET 블로그의 [데스크톱 애플리케이션의 시작 성능 개선](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/) 항목을 참조하세요.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 관리자 자격 증명과 함께 사용하고 다음 명령 프롬프트를 입력합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 관리자 자격 증명과 함께 [개발자 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
+
+명령 프롬프트에서 다음 명령을 입력합니다.
 
 데스크톱 응용 프로그램:
 
@@ -33,8 +35,6 @@ mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <a
 ```
 
 Windows 8.x 스토어 앱:
-
-## <a name="syntax"></a>구문
 
 ```console
 mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
@@ -133,6 +133,6 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ## <a name="see-also"></a>참조
 
 - [Ngen.exe(네이티브 이미지 생성기)](ngen-exe-native-image-generator.md)
-- [명령 프롬프트](developer-command-prompt-for-vs.md)
+- [개발자 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)
 - [데스크톱 애플리케이션의 시작 성능 개선](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/)
 - [.NET Framework 4.5의 성능 개선 개요](/archive/msdn-magazine/2012/april/clr-an-overview-of-performance-improvements-in-net-4-5)

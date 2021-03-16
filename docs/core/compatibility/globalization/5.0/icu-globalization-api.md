@@ -1,23 +1,23 @@
 ---
 title: '호환성이 손상되는 변경: Windows에서 세계화 API가 ICU 라이브러리를 사용'
-description: NLS 대신 ICU 라이브러리가 세계화 기능에 사용되는 .NET 5.0의 세계화 관련 호환성이 손상되는 변경에 대해 알아봅니다.
+description: NLS 대신 ICU 라이브러리가 세계화 기능에 사용되는 .NET 5의 세계화 관련 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 05/19/2020
-ms.openlocfilehash: efc20e21969ea4a83c9122e40b262e1dc38e6770
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4b8580fcb3ba3c9b95357a7922e3a3062ccd3728
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760055"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256753"
 ---
 # <a name="globalization-apis-use-icu-libraries-on-windows"></a>Windows에서 세계화 API가 ICU 라이브러리를 사용
 
-.NET 5.0 이상 버전에서는 Windows 10 2019년 5월 업데이트 이상에서 실행되는 경우 세계화 기능에 [ICU(International Components for Unicode)](http://site.icu-project.org/home) 라이브러리를 사용합니다.
+.NET 5 이상 버전에서는 Windows 10 2019년 5월 업데이트 이상에서 실행되는 경우 세계화 기능에 [ICU(International Components for Unicode)](http://site.icu-project.org/home) 라이브러리를 사용합니다.
 
 ## <a name="change-description"></a>변경 내용 설명
 
 .NET Core 1.0~3.1 및 .NET Framework 4 이상에서 .NET 라이브러리는 Windows의 세계화 기능에 [국가별 언어 지원(NLS)](/windows/win32/intl/national-language-support) API를 사용합니다. 예를 들어 NLS 함수는 문자열 비교, 문화권 정보 가져오기, 해당 문화권에서 문자열 대/소문자 구분 수행에 사용되었습니다.
 
-.NET 5.0부터 앱이 Windows 10 2019년 5월 업데이트 이상에서 실행되는 경우 .NET 라이브러리는 기본적으로 [ICU](http://site.icu-project.org/home) 세계화 API를 사용합니다.
+.NET 5부터 앱이 Windows 10 2019년 5월 업데이트 이상에서 실행되는 경우 .NET 라이브러리는 기본적으로 [ICU](http://site.icu-project.org/home) 세계화 API를 사용합니다.
 
 > [!NOTE]
 > Windows 10 2019년 5월 업데이트 이상 버전에는 ICU 네이티브 라이브러리가 함께 제공됩니다. .NET 런타임에서 ICU를 로드할 수 없는 경우 대신 NLS를 사용합니다.
@@ -37,7 +37,7 @@ Console.WriteLine(idx);
 ```
 
 - Windows의 .NET 이전 버전에서는 코드 조각이 `6`을 인쇄합니다.
-- Windows 19H1 이상 버전의 .NET 5.0 이상 버전에서는 코드 조각이 `-1`을 인쇄합니다.
+- Windows 19H1 이상 버전의 .NET 5 이상 버전에서는 코드 조각이 `-1`을 인쇄합니다.
 
 문화권을 구분하는 검색 대신 서수 검색을 수행하여 이 코드를 수정하려면 <xref:System.String.IndexOf(System.String,System.StringComparison)> 오버로드를 호출하고 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>을 인수로 전달합니다.
 
@@ -55,7 +55,7 @@ string text = string.Format("{0:C}", 100);
 ```
 
 - Windows의 .NET 이전 버전에서 텍스트의 값은 `"100,00 €"`입니다.
-- Windows 19H1 이상 버전의 .NET 5.0 이상 버전에서 텍스트의 값은 유로 대신 국제 통화 기호를 사용하는 `"100,00 ¤"`입니다. ICU의 의도는 통화가 언어가 아닌 국가 또는 지역의 속성이라는 것입니다.
+- Windows 19H1 이상 버전의 .NET 5 이상 버전에서 텍스트의 값은 유로 대신 국제 통화 기호를 사용하는 `"100,00 ¤"`입니다. ICU의 의도는 통화가 언어가 아닌 국가 또는 지역의 속성이라는 것입니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 
