@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: FrameworkDescription의 값은 .NET Core가 아닌 .NET입니다.'
-description: RuntimeInformation.FrameworkDescription에서 “.NET Core” 대신 “.NET”을 반환하는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: RuntimeInformation.FrameworkDescription에서 “.NET Core” 대신 “.NET”을 반환하는 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 3925fb092135c26291e1e60b99f359974d21553c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 18aa9a30a149b3c38d4bbfe4a0c99446f4372f07
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759833"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257520"
 ---
 # <a name="frameworkdescriptions-value-is-net-instead-of-net-core"></a>FrameworkDescription의 값은 .NET Core가 아닌 .NET입니다.
 
@@ -17,7 +17,7 @@ ms.locfileid: "95759833"
 
 이전 .NET 버전에서 <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType>은 `.NET Core 3.1.1`과 같은 설명 문자열의 일부로 ".NET Core"를 반환합니다.
 
-.NET 5.0부터 <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType>은 `.NET 5.0.0`과 같은 설명 문자열의 일부로 ".NET Core"를 반환합니다.
+.NET 5부터 <xref:System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription?displayProperty=nameWithType>은 `.NET 5.0.0`과 같은 설명 문자열의 일부로 ".NET"을 반환합니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 

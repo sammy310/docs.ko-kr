@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: 97e5201aecc540594aa154bb5a2e93e85c925570
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4d3b5b1720f29c70b5276d1c79275d8c057b179a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247345"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259475"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX 컨트롤 가져오기)
 
@@ -24,7 +24,7 @@ ActiveX 컨트롤 가져오기를 사용하면 ActiveX 컨트롤에 대한 COM �
   
  ActiveX 컨트롤을 호스팅하려면 <xref:System.Windows.Forms.AxHost>에서 파생된 래퍼 컨트롤을 생성해야 합니다. 이 래퍼 컨트롤에는 내부 ActiveX 컨트롤의 인스턴스가 들어 있으며, ActiveX 컨트롤과 통신할 수는 있지만 Windows Forms 컨트롤로 나타납니다. 이렇게 생성된 컨트롤은 ActiveX 컨트롤을 호스팅하며, 해당 속성, 메서드 및 이벤트를 생성된 컨트롤의 속성, 메서드 및 이벤트로 표시합니다.  
   
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
   
  명령 프롬프트에 다음을 입력합니다.  
   

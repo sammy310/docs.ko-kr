@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: d1644ff4d69c857e36e87f7e83f668908b7ba021
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1a9806cd71f9990d9ce70b35b3af760a22347003
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275764"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258805"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe(라이선스 컴파일러)
 
@@ -28,7 +28,7 @@ ms.locfileid: "96275764"
   
  프로젝트를 빌드할 때 라이선스 컴파일러를 사용하면 32비트 및 64비트 간에 크로스 컴파일이 지원되지 않습니다. 그 이유는 라이선스 컴파일러가 어셈블리를 로드해야 하며 32비트 애플리케이션에서 64비트 어셈블리를 로드하는 것은 허용되지 않으며 그 반대의 경우도 마찬가지입니다. 이 경우 명령줄의 라이선스 컴파일러를 사용하여 라이선스를 수동으로 컴파일하고 해당 아키텍처를 지정하세요.  
   
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.  
   
  명령 프롬프트에 다음을 입력합니다.  
   
@@ -99,4 +99,4 @@ lc @response.rsp
 
 - [도구](index.md)
 - [Al.exe(어셈블리 링커)](al-exe-assembly-linker.md)
-- [명령 프롬프트](developer-command-prompt-for-vs.md)
+- [개발자 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)

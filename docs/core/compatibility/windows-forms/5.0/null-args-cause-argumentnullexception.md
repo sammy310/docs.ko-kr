@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: WinForms 메서드는 이제 ArgumentNullException을 throw함'
-description: 일부 Windows Forms 메서드가 null 인수에 대해 ArgumentNullException을 throw하는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 일부 Windows Forms 메서드가 Null 인수에 대해 ArgumentNullException을 throw하는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 09/18/2020
-ms.openlocfilehash: 77280827d44b0e58533339a09357d518a0bfe508
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9d72f8e3320430396132de20c252cd5e8759dce3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759912"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256102"
 ---
 # <a name="winforms-methods-now-throw-argumentnullexception"></a>WinForms 메서드는 이제 ArgumentNullException을 throw함
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759912"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-이전에는 특정 Windows Forms 메서드가 null인 인수를 전달한 경우 <xref:System.NullReferenceException>을 throw했습니다. .NET 5.0부터 해당 메서드는 이제 null 인수에 대한 <xref:System.ArgumentNullException>을 throw합니다.
+이전에는 특정 Windows Forms 메서드가 null인 인수를 전달한 경우 <xref:System.NullReferenceException>을 throw했습니다. .NET 5부터 해당 메서드는 이제 Null 인수에 대한 <xref:System.ArgumentNullException>을 throw합니다.
 
 <xref:System.ArgumentNullException> throw는 .NET 런타임의 동작을 따릅니다. 또한 인수가 null이고 어떤 인수임을 명확하게 전달하여 디버깅 환경을 개선합니다.
 

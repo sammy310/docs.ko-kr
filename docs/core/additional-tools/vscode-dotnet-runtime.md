@@ -3,12 +3,12 @@ title: VS Code 확장 작성자용 .NET 설치 도구
 description: .NET 런타임 설치를 위한 Visual Studio Code 확장인 확장 작성자용 .NET 설치 도구에 대한 개요입니다.
 author: sfoslund
 ms.date: 11/18/2020
-ms.openlocfilehash: 37be1b9dcdb9fba99554800fea23f28443efb5fa
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 4be931a254e4ce969f9eaf2efde7939cb54e1d5f
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599901"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605154"
 ---
 # <a name="net-install-tool-for-extension-authors"></a>확장 작성자용 .NET 설치 도구
 
@@ -33,4 +33,4 @@ ms.locfileid: "96599901"
 
 ## <a name="getting-started-end-users"></a>시작: 최종 사용자
 
-일반적으로 최종 사용자는 확장 작성자용 .NET 설치 도구와 상호 작용할 필요가 없습니다. 확장에 문제가 있는 경우 [문제 해결 페이지](https://github.com/dotnet/vscode-dotnet-runtime/blob/master/Documentation/troubleshooting.md)를 확인하거나 [GitHub](https://github.com/dotnet/vscode-dotnet-runtime/issues)에서 문제를 제출하세요.
+일반적으로 최종 사용자는 확장 작성자용 .NET 설치 도구와 상호 작용할 필요가 없습니다. 확장에 문제가 있는 경우 [문제 해결 페이지](https://github.com/dotnet/vscode-dotnet-runtime/blob/master/Documentation/troubleshooting-runtime.md)를 확인하거나 [GitHub](https://github.com/dotnet/vscode-dotnet-runtime/issues)에서 문제를 제출하세요.

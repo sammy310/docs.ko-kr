@@ -12,18 +12,18 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 35d1324d5ea7a72ffd5ea594530d1312e717cd7c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 723daa7703828ea6eb103ce3b63164bf787cc10b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543227"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258665"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe(Windows 리소스 지역화 편집기)
 
 Winres.exe(Windows 리소스 지역화 편집기)는 지역화 전문가가 폼에 사용된 Windows Forms UI(사용자 인터페이스)를 쉽게 지역화하는 데 사용할 수 있는 시각적 레이아웃 도구입니다. Winres.exe의 입력으로 사용되는 .resx 또는 .resources 파일은 Microsoft Visual Studio 같은 시각적 디자인 환경을 사용하여 만들 수 있습니다. .NET Framework 애플리케이션의 리소스를 배포하는 데 대한 자세한 내용은 [데스크톱 앱의 리소스](../resources/index.md)를 참조하세요.
 
-Winres.exe는 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
+Winres.exe는 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -38,7 +38,7 @@ winres /?
 |--------------|-----------------|
 |`resourceFile`|지역화할 리소스 파일입니다. 이 파일은 Visual Studio 디자이너에서 생성한 Windows Forms 폼 .resx 또는 .resources 파일이어야 합니다. Winres.exe는 일반 .resx 또는 .resources 파일을 열 수 없습니다.|
 
-|옵션|설명|
+|옵션|Description|
 |------------|-----------------|
 |**/?**|이 도구의 명령 구문 및 옵션을 표시합니다.|
 
@@ -70,7 +70,7 @@ Visual Studio는 통합 개발 및 지역화 환경을 제공하지만 타사 �
 
 ## <a name="using-winresexe"></a>Winres.exe 사용
 
-Winres.exe를 사용하여 지역화하려면 먼저 Visual Studio의 **Windows Forms 디자이너** 같은 시각적 디자이너를 사용하여 애플리케이션을 개발해야 합니다. 개발이 완료되면 폼의 <xref:System.ComponentModel.LocalizableAttribute>(**속성 편집기**의 **Localizable** 속성)를 `true`로 설정한 다음, 기본 문화권에 대한 .resx 파일을 타사 지역화 담당자에게 전달합니다. 이 .resx 파일에는 Winres.exe가 원래 폼의 디자인 타임 버전을 다시 만들 때 사용하는 추가 정보가 있습니다.
+Winres.exe를 사용하여 지역화하려면 먼저 Visual Studio의 **Windows Forms 디자이너** 같은 시각적 디자이너를 사용하여 애플리케이션을 개발해야 합니다. 개발이 완료되면 폼의 <xref:System.ComponentModel.LocalizableAttribute>(**속성 편집기** 의 **Localizable** 속성)를 `true`로 설정한 다음, 기본 문화권에 대한 .resx 파일을 타사 지역화 담당자에게 전달합니다. 이 .resx 파일에는 Winres.exe가 원래 폼의 디자인 타임 버전을 다시 만들 때 사용하는 추가 정보가 있습니다.
 
 > [!NOTE]
 > Winres.exe에서는 기본 리소스 파일을 편집할 수 없습니다. Winres.exe는 모든 변경된 속성을 지역화된 속성으로 해석하여 대상 문화권 리소스 파일에 저장합니다.
@@ -132,7 +132,7 @@ Winres.exe에는 다음 기능과 특징이 있습니다.
 
 4. .resx 또는 .resources 파일의 지역화된 버전을 저장하려면 **저장** 아이콘 또는 **파일** 메뉴에 있는 동일한 명령을 클릭합니다. **문화권 선택** 창이 표시됩니다.
 
-5. 문화권 및 파일 모드를 적절히 선택한 다음 **확인**을 클릭합니다.
+5. 문화권 및 파일 모드를 적절히 선택한 다음 **확인** 을 클릭합니다.
 
    도구는 지역화된 리소스 파일에 대해 런타임에서 예상하는 명명 규칙을 사용하여 파일을 저장합니다. 예를 들어, `TestApp.resources`를 독일어(독일)로 지역화하는 경우 이 도구는 파일을 `TestApp.de-DE.resources`로 저장하고 `TestApp.resx`를 독일어(독일)로 지역화하는 경우 `TestApp.de-DE.resx`로 저장합니다. 리소스 명명 규칙에 대한 자세한 내용은 [리소스 패키지 및 배포](../resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요. 런타임에서 사용하는 미리 정의된 문화권 이름의 목록은 <xref:System.Globalization.CultureInfo> 클래스를 참조하세요.
 

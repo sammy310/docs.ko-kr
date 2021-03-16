@@ -3,12 +3,12 @@ title: Azure Key Vault를 사용하여 프로덕션 시 비밀 보호
 description: .NET 마이크로 서비스 및 웹 애플리케이션의 보안 - Azure Key Vault는 관리자가 완전히 제어하는 애플리케이션 비밀을 처리하는 뛰어난 방법입니다. 개발자가 처리하지 않고도 관리자가 개발 값을 할당하고 철회할 수도 있습니다.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: 5d024894fe1540df04514031bf0b6e0754ddc75c
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 94243468b35e2db9818ae9afacd5beec0a12075e
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633925"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604621"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Azure Key Vault를 사용하여 프로덕션 시 비밀 보호
 
@@ -47,9 +47,6 @@ ms.locfileid: "97633925"
 
 - **ASP.NET Core에서 데이터 보호 키 관리 및 수명** \
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
-
-- **Microsoft.Extensions.Configuration** GitHub 리포지토리입니다. \
-  <https://github.com/dotnet/extensions/tree/master/src/Configuration>
 
 >[!div class="step-by-step"]
 >[이전](developer-app-secrets-storage.md)

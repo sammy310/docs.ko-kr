@@ -11,18 +11,18 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-ms.openlocfilehash: 6810fc4fbe39fa82a02faa967b1afd8ad9c7a3cc
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fa835b95d0dab1c5139fe9b1dfbf81d1c4400a82
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244888"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258678"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe(형식 라이브러리 가져오기)
 
 형식 라이브러리 가져오기 도구는 COM 형식 라이브러리에 있는 형식 정의를 공용 언어 런타임 어셈블리의 동등한 정의로 변환합니다. Tlbimp.exe의 출력은 원본 형식 라이브러리에 정의된 형식의 런타임 메타데이터를 포함하는 이진 파일(어셈블리)입니다. [Ildasm.exe](ildasm-exe-il-disassembler.md)와 같은 도구를 사용하여 이 파일을 검토할 수 있습니다.  
   
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
   
  명령 프롬프트에 다음을 입력합니다.  
   
@@ -139,4 +139,4 @@ void SomeMethod(out bool x);
 - [Sn.exe(강력한 이름 도구)](sn-exe-strong-name-tool.md)
 - [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md)
 - [Interop 어셈블리로 형식 라이브러리를 가져오는 특성](/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
-- [명령 프롬프트](developer-command-prompt-for-vs.md)
+- [개발자 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)

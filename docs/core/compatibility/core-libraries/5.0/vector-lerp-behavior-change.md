@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: Vector2.Lerp 및 Vector4.Lerp의 동작 변경'
-description: Vector2.Lerp 및 Vector4.Lerp의 구현이 부동 소수점 반올림 오차를 올바르게 고려하도록 변경된 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: Vector2.Lerp 및 Vector4.Lerp의 구현이 부동 소수점 반올림 오차를 올바르게 고려하도록 변경된 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 8e363a559dba8b7563c40637c47f101d59951216
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a7014c30f2b102dc9a19e9a58f97b7c0ed8cd648
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759663"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257000"
 ---
 # <a name="behavior-change-for-vector2lerp-and-vector4lerp"></a>Vector2.Lerp 및 Vector4.Lerp의 동작 변경
 
@@ -17,7 +17,7 @@ ms.locfileid: "95759663"
 
 이전에는 <xref:System.Numerics.Vector2.Lerp(System.Numerics.Vector2,System.Numerics.Vector2,System.Single)?displayProperty=nameWithType> 및 <xref:System.Numerics.Vector4.Lerp(System.Numerics.Vector4,System.Numerics.Vector4,System.Single)?displayProperty=nameWithType>이 `value1 + (value2 - value1) * amount`로 구현되었습니다. 그러나 부동 소수점 반올림 오차로 인해 `amount`가 `1.0f`이면 알고리즘에서 `value2`를 반환하지 않는 경우가 있습니다.
 
-.NET 5.0 이상 구현에서는 <xref:System.Numerics.Vector3.Lerp(System.Numerics.Vector3,System.Numerics.Vector3,System.Single)?displayProperty=nameWithType>과 동일한 알고리즘(`(value1 * (1.0f - amount)) + (value2 * amount)`)을 사용합니다. 이 알고리즘은 반올림 오차를 올바르게 고려합니다. 이제 `amount`가 `1.0f`인 경우 결과는 정확하게 `value2`가 됩니다. 업데이트된 알고리즘이 제공되면 <xref:System.MathF.FusedMultiplyAdd%2A?displayProperty=nameWithType>을 사용하여 알고리즘을 자유롭게 최적화할 수도 있습니다.
+.NET 5 이상 구현에서는 <xref:System.Numerics.Vector3.Lerp(System.Numerics.Vector3,System.Numerics.Vector3,System.Single)?displayProperty=nameWithType>과 동일한 알고리즘(`(value1 * (1.0f - amount)) + (value2 * amount)`)을 사용합니다. 이 알고리즘은 반올림 오차를 올바르게 고려합니다. 이제 `amount`가 `1.0f`인 경우 결과는 정확하게 `value2`가 됩니다. 업데이트된 알고리즘이 제공되면 <xref:System.MathF.FusedMultiplyAdd%2A?displayProperty=nameWithType>을 사용하여 알고리즘을 자유롭게 최적화할 수도 있습니다.
 
 ## <a name="version-introduced"></a>도입된 버전
 

@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: PropertyNamingPolicy, PropertyNameCaseInsensitive 및 Encoder 옵션이 키-값 쌍에 적용됨'
-description: 키-값 쌍 인스턴스의 Key 및 Value 속성 이름을 직렬화하고 역직렬화할 때 PropertyNamingPolicy, PropertyNameCaseInsensitive 및 Encoder 옵션이 적용되는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 키-값 쌍 인스턴스의 Key 및 Value 속성 이름을 직렬화하고 역직렬화할 때 PropertyNamingPolicy, PropertyNameCaseInsensitive, Encoder 옵션이 적용되는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 10/18/2020
-ms.openlocfilehash: 5d75cb7feea32cc4b942e5261c5b609e00a5082c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fe6298a677488574fdd7bdc7e887ed3b244ba8d6
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759942"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256324"
 ---
 # <a name="propertynamingpolicy-propertynamecaseinsensitive-and-encoder-options-are-honored-when-serializing-and-deserializing-key-value-pairs"></a>PropertyNamingPolicy, PropertyNameCaseInsensitive 및 Encoder 옵션은 키-값 쌍을 직렬화 및 역직렬화할 때 적용됩니다.
 
@@ -27,7 +27,7 @@ Console.WriteLine(JsonSerializer.Serialize(kvp, options));
 // Actual: {"Key":1,"Value":1}
 ```
 
-.NET 5.0부터 <xref:System.Collections.Generic.KeyValuePair%602> 인스턴스를 직렬화할 때 <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> 및 <xref:System.Text.Json.JsonSerializerOptions.Encoder> 옵션이 적용됩니다. 다음 코드 예제는 지정된 특성 이름 지정 정책에 따라 직렬화 후 <xref:System.Collections.Generic.KeyValuePair%602.Key> 및 <xref:System.Collections.Generic.KeyValuePair%602.Value> 특성이 어떻게 카멜식 대/소문자를 구분하는지 보여줍니다.
+.NET 5부터 <xref:System.Collections.Generic.KeyValuePair%602> 인스턴스를 직렬화할 때 <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> 및 <xref:System.Text.Json.JsonSerializerOptions.Encoder> 옵션이 적용됩니다. 다음 코드 예제는 지정된 특성 이름 지정 정책에 따라 직렬화 후 <xref:System.Collections.Generic.KeyValuePair%602.Key> 및 <xref:System.Collections.Generic.KeyValuePair%602.Value> 특성이 어떻게 카멜식 대/소문자를 구분하는지 보여줍니다.
 
 ```csharp
 var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
@@ -47,7 +47,7 @@ string json = @"{""key"":1,""value"":1}";
 JsonSerializer.Deserialize<KeyValuePair<int, int>>(json, options);
 ```
 
-.NET 5.0부터 <xref:System.Text.Json.JsonSerializer>를 사용하여 역직렬화할 때 <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> 및 <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive> 옵션이 적용됩니다. 예를 들어, 다음 코드 조각은 지정된 속성 이름 지정 정책에서 허용하기 때문에 소문자의 <xref:System.Collections.Generic.KeyValuePair%602.Key> 및 <xref:System.Collections.Generic.KeyValuePair%602.Value> 속성 이름을 성공적으로 역직렬화하는 것을 보여줍니다.
+.NET 5부터 <xref:System.Text.Json.JsonSerializer>를 사용하여 역직렬화할 때 <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy> 및 <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive> 옵션이 적용됩니다. 예를 들어, 다음 코드 조각은 지정된 속성 이름 지정 정책에서 허용하기 때문에 소문자의 <xref:System.Collections.Generic.KeyValuePair%602.Key> 및 <xref:System.Collections.Generic.KeyValuePair%602.Value> 속성 이름을 성공적으로 역직렬화하는 것을 보여줍니다.
 
 ```csharp
 var options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };

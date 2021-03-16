@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: 비 Windows 플랫폼에서 A/W 접미사 검색 안 함'
-description: Windows가 아닌 플랫폼에서 P/Invoke를 검색하는 동안 함수 내보내기 이름에 접미사가 더 이상 추가되지 않는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: Windows가 아닌 플랫폼에서 P/Invoke를 검색하는 동안 함수 내보내기 이름에 접미사가 더 이상 추가되지 않는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 08/13/2020
-ms.openlocfilehash: a4c612a81796faf80fa257df21232a54f7b95431
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 924cbcb6c432e2f7c52c7218d48a938b61306c9c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759821"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256623"
 ---
 # <a name="no-aw-suffix-probing-on-non-windows-platforms"></a>비 Windows 플랫폼에서 A/W 접미사 검색 안 함
 
@@ -23,7 +23,7 @@ Windows에는 `A` 또는 `W` 접미사를 각각 Windows 코드 페이지 및 �
 
 이전 버전의 .NET에서는 CoreCLR 및 Mono 런타임 둘 다 ‘모든 플랫폼에서’ P/Invokes 내보내기 검색 중에 `A` 또는 `W` 접미사를 내보내기 이름에 추가합니다.
 
-.NET 5.0 이상 버전에서는 ‘Windows에서만’ 내보내기 검색 중에 `A` 또는 `W` 접미사를 내보내기 이름에 추가합니다 Unix 플랫폼에서 접미사는 추가되지 않습니다. Windows 플랫폼에서 두 런타임의 의미 체계는 그대로 유지됩니다.
+.NET 5 이상 버전에서는 ‘Windows에서만’ 내보내기 검색 중에 `A` 또는 `W` 접미사를 내보내기 이름에 추가합니다. Unix 플랫폼에서 접미사는 추가되지 않습니다. Windows 플랫폼에서 두 런타임의 의미 체계는 그대로 유지됩니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 

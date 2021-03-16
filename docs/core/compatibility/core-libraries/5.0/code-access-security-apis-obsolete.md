@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: 대부분의 코드 액세스 보안 API가 사용되지 않음'
-description: .NET에서 대부분의 CAS(코드 액세스 보안) 관련 형식이 경고로 사용되지 않는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: .NET에서 대부분의 CAS(코드 액세스 보안) 관련 형식이 경고로 사용되지 않는 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: e793043e83389730934137d441f7ee776d44540b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cc4be58622e81022e74476cf824a19689ba23ea4
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759840"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257637"
 ---
 # <a name="most-code-access-security-apis-are-obsolete"></a>대부분의 코드 액세스 보안 API가 사용되지 않음
 
@@ -54,7 +54,7 @@ public void DoDeny()
 }
 ```
 
-.NET 5.0 이상 버전에서 대부분의 CAS 관련 API는 더 이상 사용되지 않으며 `SYSLIB0003` 컴파일 시간 경고를 생성합니다.
+.NET 5 이상 버전에서 대부분의 CAS 관련 API는 더 이상 사용되지 않으며 `SYSLIB0003` 컴파일 시간 경고를 생성합니다.
 
 ```csharp
 [SocketPermission(SecurityAction.Assert, Host = "contoso.com", Port = "443")] // warning SYSLIB0003
@@ -65,7 +65,7 @@ public void DoSomething()
 }
 ```
 
-이는 컴파일 시간 전용 변경입니다. .NET Core의 이전 버전에서 런타임 변경은 없습니다. .NET Core 2.x - 3.x에서 작업을 수행하지 않는 메서드는 .NET 5.0 이상에서도 런타임에 계속 작업을 수행하지 않습니다. .NET Core 2.x - 3.x에서 <xref:System.PlatformNotSupportedException>을 throw하는 메서드는 .NET 5.0 이상에서도 런타임에 <xref:System.PlatformNotSupportedException>을 계속 throw합니다.
+이는 컴파일 시간 전용 변경입니다. .NET Core의 이전 버전에서 런타임 변경은 없습니다. .NET Core 2.x - 3.x에서 작업을 수행하지 않는 메서드는 .NET 5 이상에서도 런타임에 계속 작업을 수행하지 않습니다. .NET Core 2.x - 3.x에서 <xref:System.PlatformNotSupportedException>을 throw하는 메서드는 .NET 5 이상에서도 런타임에 <xref:System.PlatformNotSupportedException>을 계속 throw합니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 

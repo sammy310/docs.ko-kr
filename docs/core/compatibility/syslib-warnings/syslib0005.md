@@ -3,16 +3,16 @@ title: SYSLIB0005 경고
 description: 컴파일 시간 경고 SYSLIB0005를 생성하는 사용되지 않음에 대해 알아봅니다.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 1263a4d327c735268f77ed56bdcea6a4cbed4bfa
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 9ed36d247d31bcebc499bd7ed3945490d9d901f9
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97596369"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256372"
 ---
 # <a name="syslib0005-the-global-assembly-cache-gac-is-not-supported"></a>SYSLIB0005: GAC(전역 어셈블리 캐시)가 지원되지 않음
 
-.NET Core 및 .NET 5.0 이상 버전에서는 .NET Framework에 있었던 GAC(전역 어셈블리 캐시) 개념이 사라집니다. 개발자가 이러한 API를 사용하지 않도록 하기 위해 .NET 5.0부터 일부 GAC 관련 API는 사용되지 않는 것으로 표시됩니다. 이러한 API를 사용하면 컴파일 시간에 `SYSLIB0005` 경고가 생성됩니다.
+.NET Core 및 .NET 5 이상 버전에서는 .NET Framework에 있었던 GAC(전역 어셈블리 캐시) 개념이 사라집니다. 개발자가 이러한 API를 사용하지 않도록 하기 위해 .NET 5.0부터 일부 GAC 관련 API는 사용되지 않는 것으로 표시됩니다. 이러한 API를 사용하면 컴파일 시간에 `SYSLIB0005` 경고가 생성됩니다.
 
 다음은 사용되지 않는 것으로 표시되는 GAC 관련 API입니다.
 

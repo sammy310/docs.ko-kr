@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-ms.openlocfilehash: 08a5475d74327265f28b65676ae56be15afb57d3
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 581736d27d8b90430838fc78aa192a3efa21cbb5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104665"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258301"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>방법: 글로벌 어셈블리 캐시에 어셈블리 설치
 
@@ -36,9 +36,9 @@ Windows 설치 엔진인 [Windows Installer](/windows/desktop/Msi/installation-o
 [.NET 전역 어셈블리 캐시 유틸리티(gacutil.exe)](../tools/gacutil-exe-gac-tool.md)를 사용하여 어셈블리를 전역 어셈블리 캐시에 추가하고 전역 어셈블리 캐시의 콘텐츠를 볼 수 있습니다.
 
    > [!NOTE]
-   > *Gacutil.exe*는 개발 목적으로만 사용됩니다. 해당 파일을 사용하여 프로덕션 어셈블리를 글로벌 어셈블리 캐시에 설치하지 마세요.
+   > *Gacutil.exe* 는 개발 목적으로만 사용됩니다. 해당 파일을 사용하여 프로덕션 어셈블리를 글로벌 어셈블리 캐시에 설치하지 마세요.
 
-GAC에 어셈블리를 설치하기 위해 *gacutil.exe*를 사용하는 구문은 다음과 같습니다.
+GAC에 어셈블리를 설치하기 위해 *gacutil.exe* 를 사용하는 구문은 다음과 같습니다.
 
 ```cmd
 gacutil -i <assembly name>
@@ -46,16 +46,16 @@ gacutil -i <assembly name>
 
 이 명령에서 *\<assembly name>* 은 전역 어셈블리 캐시에 설치할 어셈블리의 이름입니다.
 
-*gacutil.exe*가 시스템 경로에 없는 경우 [VS *\<version>* 용 개발자 명령 프롬프트](../tools/developer-command-prompt-for-vs.md)를 사용합니다.
+*gacutil.exe* 가 시스템 경로에 없는 경우 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
 
-다음 예제는 파일 이름이 *hello.dll*인 어셈블리를 글로벌 어셈블리 캐시에 설치합니다.
+다음 예제는 파일 이름이 *hello.dll* 인 어셈블리를 글로벌 어셈블리 캐시에 설치합니다.
 
 ```cmd
 gacutil -i hello.dll
 ```
 
 > [!NOTE]
-> 이전 버전의 .NET Framework에서는 *Shfusion.dll* Windows 셸 확장을 통해 파일 탐색기로 어셈블리를 끌어와서 설치할 수 있었습니다. .NET Framework 4부터는 *Shfusion.dll*이 사용되지 않습니다.
+> 이전 버전의 .NET Framework에서는 *Shfusion.dll* Windows 셸 확장을 통해 파일 탐색기로 어셈블리를 끌어와서 설치할 수 있었습니다. .NET Framework 4부터는 *Shfusion.dll* 이 사용되지 않습니다.
 
 ## <a name="see-also"></a>참조
 

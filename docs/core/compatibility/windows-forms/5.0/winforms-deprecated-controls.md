@@ -1,21 +1,21 @@
 ---
 title: '호환성이 손상되는 변경: 상태 표시줄 컨트롤 제거'
-description: 일부 Windows Forms 컨트롤을 더 이상 사용할 수 없는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 일부 Windows Forms 컨트롤을 더 이상 사용할 수 없는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 07/18/2020
-ms.openlocfilehash: 70aaa20f3fee1f4c342c4d9e547b0658aaf533b1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c93b16047896b263248858e807b74c547cfa6d9d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759906"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256193"
 ---
 # <a name="removed-status-bar-controls"></a>상태 표시줄 컨트롤 제거
 
-.NET 5.0부터 일부 Windows Forms 컨트롤을 더 이상 사용할 수 없습니다.
+.NET 5부터 일부 Windows Forms 컨트롤을 더 이상 사용할 수 없습니다.
 
 ## <a name="change-description"></a>변경 내용 설명
 
-.NET 5.0부터 상태 표시줄 관련 Windows Forms 컨트롤 중 일부를 더 이상 사용할 수 없습니다. 향상된 디자인 및 지원을 제공하는 대체 컨트롤이 .NET Framework 2.0에 도입되었습니다. 사용되지 않는 컨트롤은 이전에 디자이너 도구 상자에서 제거되었지만, 여전히 사용할 수 있습니다. 이제 완전히 제거되었습니다.
+.NET 5부터 상태 표시줄 관련 Windows Forms 컨트롤 중 일부를 더 이상 사용할 수 없습니다. 향상된 디자인 및 지원을 제공하는 대체 컨트롤이 .NET Framework 2.0에 도입되었습니다. 사용되지 않는 컨트롤은 이전에 디자이너 도구 상자에서 제거되었지만, 여전히 사용할 수 있습니다. 이제 완전히 제거되었습니다.
 
 다음 형식은 더 이상 사용할 수 없습니다.
 

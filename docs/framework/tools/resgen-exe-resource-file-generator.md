@@ -16,12 +16,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-ms.openlocfilehash: 27ff0ea4e014f440d14e2972a8ba2963386f142b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 61ae4503876718e63993af5a180dead34540afde
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238562"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259113"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe(리소스 파일 생성기)
 
@@ -55,7 +55,7 @@ resgen /?
   
  Resgen.exe를 사용하여 이진 .resources 파일을 만드는 경우 언어 컴파일러를 사용하여 이진 파일을 실행 가능 어셈블리에 포함하거나 [어셈블리 링커(Al.exe)](al-exe-assembly-linker.md)를 사용하여 위성 어셈블리에 컴파일할 수 있습니다.  
   
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.  
   
  명령 프롬프트에 다음을 입력합니다.  
   
@@ -352,4 +352,4 @@ resgen StringResources.txt /str:vb,,StringResources
 - [데스크톱 앱의 리소스](../resources/index.md)
 - [리소스 파일 만들기](../resources/creating-resource-files-for-desktop-apps.md)
 - [Al.exe(어셈블리 링커)](al-exe-assembly-linker.md)
-- [명령 프롬프트](developer-command-prompt-for-vs.md)
+- [개발자 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)

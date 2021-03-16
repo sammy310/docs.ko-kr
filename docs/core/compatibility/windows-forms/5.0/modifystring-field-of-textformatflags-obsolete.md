@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: TextFormatFlags.ModifyString은 사용되지 않음'
-description: TextFormatFlags.ModifyString 필드가 경고로 사용되지 않는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: TextFormatFlags.ModifyString 필드가 경고로 사용되지 않는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/05/2020
-ms.openlocfilehash: 83dca65a770ccdcd5ce48bb669f5122dc2d5ad77
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9fe1e04b1ad36070b08af2affdca1e058ec74bb8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759680"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256168"
 ---
 # <a name="textformatflagsmodifystring-is-obsolete"></a>TextFormatFlags.ModifyString은 사용되지 않음
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759680"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-이전 .NET 버전에서 <xref:System.Windows.Forms.TextFormatFlags.ModifyString?displayProperty=nameWithType> 열거형 필드는 사용되지 않음으로 표시되지 않습니다. .NET 5.0 이상 버전에서는 경고로 사용되지 않는 것으로 표시됩니다. 이 필드는 이후 .NET 버전에서 제거될 수 있습니다.
+이전 .NET 버전에서 <xref:System.Windows.Forms.TextFormatFlags.ModifyString?displayProperty=nameWithType> 열거형 필드는 사용되지 않음으로 표시되지 않습니다. .NET 5 이상 버전에서는 경고로 사용되지 않는 것으로 표시됩니다. 이 필드는 이후 .NET 버전에서 제거될 수 있습니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 

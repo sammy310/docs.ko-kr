@@ -19,12 +19,12 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: 12ef6724a76ec59bd412427a0a353565b1be2c8e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a553be6877af5875692e5c0745b6b9ee766e143e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558419"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259267"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe(네이티브 이미지 생성기)
 
@@ -58,7 +58,7 @@ Ngen.exe 및 네이티브 이미지 서비스 사용에 대한 자세한 내용�
 > [!NOTE]
 > .NET Framework 버전 1.0 및 1.1의 Ngen.exe 구문은 [네이티브 이미지 생성기(Ngen.exe) 레거시 구문](/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100))에 있습니다.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
 
 명령 프롬프트에 다음을 입력합니다.
 
@@ -403,7 +403,7 @@ Ngen.exe는 네이티브 이미지를 생성할 때 이 정보를 기록합니�
 
 ### <a name="assembly-binding-log-viewer"></a>어셈블리 바인딩 로그 뷰어
 
-애플리케이션에서 네이티브 이미지를 사용하고 있는지 확인하려면 [Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)](fuslogvw-exe-assembly-binding-log-viewer.md)를 사용할 수 있습니다. 바인딩 로그 뷰어 창의 **로그 범주** 상자에서 **네이티브 이미지**를 선택합니다. Fuslogvw.exe는 네이티브 이미지를 거부하는 이유에 대한 정보를 제공합니다.
+애플리케이션에서 네이티브 이미지를 사용하고 있는지 확인하려면 [Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)](fuslogvw-exe-assembly-binding-log-viewer.md)를 사용할 수 있습니다. 바인딩 로그 뷰어 창의 **로그 범주** 상자에서 **네이티브 이미지** 를 선택합니다. Fuslogvw.exe는 네이티브 이미지를 거부하는 이유에 대한 정보를 제공합니다.
 
 <a name="MDA"></a>
 
@@ -641,4 +641,4 @@ ngen executeQueuedItems
 - [도구](index.md)
 - [관리되는 실행 프로세스](../../standard/managed-execution-process.md)
 - [런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)
-- [명령 프롬프트](developer-command-prompt-for-vs.md)
+- [개발자 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: a3af6a0fbc7c9c695e18448da285977f04fd72ef
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 14dbaf0e100204718e78292b038bf016b5607bc8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517258"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259192"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe(어셈블리 등록 도구)
 
 어셈블리 등록 도구를 사용하면 어셈블리 내의 메타데이터를 읽고 필요한 엔트리를 레지스트리에 추가할 수 있습니다. 이렇게 하면 COM 클라이언트에서 .NET Framework 클래스를 투명하게 만들 수 있습니다. 클래스가 등록되고 나면 COM 클라이언트에서는 해당 클래스가 마치 COM 클래스인 것처럼 사용할 수 있습니다. 클래스는 어셈블리가 설치될 때 한 번만 등록됩니다. 클래스가 실제로 등록되어야만 COM에서 어셈블리 내의 클래스 인스턴스를 만들 수 있습니다.
 
-도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
+도구를 실행하려면 [개발자 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
 
 명령 프롬프트에 다음을 입력합니다.
 
@@ -44,12 +44,12 @@ regasm assemblyFile [options]
 |**/regfile** [ **:** *regFile*]|어셈블리에 대해 필요한 레지스트리 항목이 들어 있는 지정된 .reg 파일을 생성합니다. 이 옵션을 지정할 경우 레지스트리는 변경되지 않습니다. 이 옵션은 **/u** 또는 **/tlb** 옵션과 함께 사용할 수 없습니다.|
 |**/silent** 또는 **/s**|성공 메시지를 표시하지 않습니다.|
 |**/tlb** [ **:** *typeLibFile*]|어셈블리 내에 정의된 액세스 가능 형식에 대한 정의가 들어 있는 지정된 어셈블리에서 형식 라이브러리를 생성합니다.|
-|**/unregister** 또는 **/u**|*assemblyFile*에 있는 생성 가능한 클래스를 등록 취소합니다. 이 옵션을 지정하지 않으면 Regasm.exe를 통해 해당 어셈블리의 생성 가능한 클래스가 등록됩니다.|
+|**/unregister** 또는 **/u**|*assemblyFile* 에 있는 생성 가능한 클래스를 등록 취소합니다. 이 옵션을 지정하지 않으면 Regasm.exe를 통해 해당 어셈블리의 생성 가능한 클래스가 등록됩니다.|
 |**/verbose**|세부 정보 표시 모드를 지정합니다. 즉, **/tlb** 옵션과 함께 지정할 경우 형식 라이브러리가 생성되어야 하는 참조된 어셈블리의 목록을 표시합니다.|
 |**/?** 또는 **/help**|이 도구의 명령 구문 및 옵션을 표시합니다.|
 
 > [!NOTE]
-> Regasm.exe의 명령줄 옵션은 대/소문자가 구분되지 않습니다. 따라서 옵션을 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 예를 들어 **/n**은 **/nologo**와 같고, **/t:** *outfile.tlb*는 **/tlb:** *outfile.tlb*와 같습니다.
+> Regasm.exe의 명령줄 옵션은 대/소문자가 구분되지 않습니다. 따라서 옵션을 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 예를 들어 **/n** 은 **/nologo** 와 같고, **/t:** *outfile.tlb* 는 **/tlb:** *outfile.tlb* 와 같습니다.
 
 ## <a name="remarks"></a>설명
 
@@ -89,4 +89,4 @@ regasm myTest.dll /tlb:myTest.tlb
 - [Tlbexp.exe(형식 라이브러리 내보내기)](tlbexp-exe-type-library-exporter.md)
 - [Tlbimp.exe(형식 라이브러리 가져오기)](tlbimp-exe-type-library-importer.md)
 - [COM에 어셈블리 등록](../interop/registering-assemblies-with-com.md)
-- [명령 프롬프트](developer-command-prompt-for-vs.md)
+- [개발자 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)

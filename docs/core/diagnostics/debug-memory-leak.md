@@ -3,12 +3,12 @@ title: 메모리 누수 디버그 자습서
 description: .NET Core의 메모리 누수를 디버그하는 방법을 알아봅니다.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: 6764663eedc28cd75f9f68927a12ae5b2255d11b
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 2cdc6e2f27ac04b6057aca3787564024d084fe63
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100431453"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255674"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>.NET Core의 메모리 누수 디버그
 
@@ -32,8 +32,7 @@ ms.locfileid: "100431453"
 
 이 자습서에서는 다음을 사용합니다.
 
-- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 이상 버전.
-- 프로세스를 나열하는 [dotnet-trace](dotnet-trace.md).
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet) 이상 버전.
 - 관리되는 메모리 사용량을 검사하는 [dotnet-counters](dotnet-counters.md).
 - 덤프 파일을 수집 및 분석하는 [dotnet-dump](dotnet-dump.md).
 - 진단할 [샘플 디버그 대상](/samples/dotnet/samples/diagnostic-scenarios/) 앱.
@@ -50,10 +49,10 @@ ms.locfileid: "100431453"
 dotnet run
 ```
 
-별도의 콘솔에서 [dotnet-trace](dotnet-trace.md) 도구를 사용하여 프로세스 ID를 찾습니다.
+별도 콘솔에서 프로세스 ID를 찾습니다.
 
 ```console
-dotnet-trace ps
+dotnet-counters ps
 ```
 
 출력은 다음과 비슷해야 합니다.
@@ -116,7 +115,7 @@ Press p to pause, r to resume, q to quit.
 
 ### <a name="generate-memory-dump"></a>메모리 덤프 생성
 
-가능한 메모리 누수를 분석할 때 앱의 메모리 힙에 액세스해야 합니다. 그런 다음 메모리 내용을 분석할 수 있습니다. 개체 간의 관계를 살펴보면 메모리가 확보되지 않는 이유에 대하여 이론을 만들 수 있습니다. 일반적인 진단 데이터 원본은 Windows의 메모리 덤프 또는 Linux의 해당 코어 덤프입니다. .NET Core 애플리케이션의 덤프를 생성하려면 [dotnet-dump)](dotnet-dump.md) 도구를 사용할 수 있습니다.
+가능한 메모리 누수를 분석할 때 앱의 메모리 힙에 액세스해야 합니다. 그런 다음 메모리 내용을 분석할 수 있습니다. 개체 간의 관계를 살펴보면 메모리가 확보되지 않는 이유에 대하여 이론을 만들 수 있습니다. 일반적인 진단 데이터 원본은 Windows의 메모리 덤프 또는 Linux의 해당 코어 덤프입니다. .NET Core 애플리케이션의 덤프를 생성하기 위해 [dotnet-dump](dotnet-dump.md) 도구를 사용할 수 있습니다.
 
 이전에 시작된 [샘플 디버그 대상](/samples/dotnet/samples/diagnostic-scenarios/)을 사용하여 다음 명령을 실행하고 Linux 코어 덤프를 생성합니다.
 

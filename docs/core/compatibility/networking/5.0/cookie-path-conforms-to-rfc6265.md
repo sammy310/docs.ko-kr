@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: 이제 쿠키 경로 처리가 RFC 6265를 준수함'
-description: RFC 6265에 정의된 경로 처리 알고리즘이 Cookie 및 CookieContainer 클래스에 대해 구현된 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: RFC 6265에 정의된 경로 처리 알고리즘이 Cookie 및 CookieContainer 클래스에 대해 구현된 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 08/18/2020
-ms.openlocfilehash: 4aea06f434c4bbbef7d94b4b39ff647dd954745e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5ee1bccc79a5ac271904dd3223b58cc168f18cfa
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759700"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256467"
 ---
 # <a name="cookie-path-handling-now-conforms-to-rfc-6265"></a>이제 쿠키 경로 처리가 RFC 6265를 준수함
 

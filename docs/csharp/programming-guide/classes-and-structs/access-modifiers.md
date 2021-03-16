@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: d800116137e088a54edb221fb4f81ecd47b0278f
-ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
+ms.openlocfilehash: 168965a3d7f5c3d2436bfdc25edb6c78cdabbc05
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98757865"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258340"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>액세스 한정자(C# 프로그래밍 가이드)
 
@@ -30,19 +30,19 @@ ms.locfileid: "98757865"
 
 모든 액세스 한정자를 모든 컨텍스트에서 모든 형식 또는 멤버에서 사용할 수 있는 것은 아닙니다. 형식 멤버의 액세스 수준이 해당 형식 멤버를 포함하는 형식의 액세스 수준으로 제한되는 경우도 있습니다.
 
-## <a name="class-and-struct-accessibility"></a>클래스 및 구조체 액세스 수준  
+## <a name="class-record-and-struct-accessibility"></a>클래스, 레코드 및 구조체 액세스 수준  
 
-네임스페이스 내에서 직접 선언된(즉, 다른 클래스 또는 구조체 내에 중첩되지 않은) 클래스와 구조체는 `public`과 `internal` 중 하나일 수 있습니다. 액세스 한정자가 지정되지 않은 경우 기본값은 `internal`입니다.
+네임스페이스 내에서 직접 선언된(즉, 다른 클래스 또는 구조체 내에 중첩되지 않은) 클래스, 레코드 및 구조체는 `public`과 `internal` 중 하나일 수 있습니다. 액세스 한정자가 지정되지 않은 경우 기본값은 `internal`입니다.
 
 구조체 멤버(중첩 클래스 및 구조체 포함)는 `public`, `internal` 또는 `private`으로 선언할 수 있습니다. 클래스 멤버(중첩 클래스 포함)는 `public`, `protected internal`, `protected`, `internal`, `private protected` 또는 `private`으로 선언할 수 있습니다. 클래스 멤버와 구조체 멤버(중첩 클래스 및 구조체 포함)의 액세스 수준은 기본적으로 `private`입니다. private 중첩 형식은 해당 형식을 포함하는 형식 외부에서 액세스할 수 없습니다.
 
-파생 클래스는 기본 형식보다 높은 액세스 수준을 가질 수 없습니다. internal 클래스 `A`에서 파생된 public 클래스 `B`를 선언할 수 없습니다. 이것이 허용된다면 파생 클래스에서 `A`의 모든 `protected` 또는 `internal` 멤버에 액세스할 수 있게 되므로 결과적으로 `A`가 public이 되는 것과 같아집니다.
+파생 클래스 및 파생 레코드는 기본 형식보다 높은 액세스 수준을 가질 수 없습니다. internal 클래스 `A`에서 파생된 public 클래스 `B`를 선언할 수 없습니다. 이것이 허용된다면 파생 클래스에서 `A`의 모든 `protected` 또는 `internal` 멤버에 액세스할 수 있게 되므로 결과적으로 `A`가 public이 되는 것과 같아집니다.
 
 다른 특정 어셈블리에서 internal 형식에 액세스할 수 있도록 하려면 `InternalsVisibleToAttribute`를 시용하면 됩니다. 자세한 내용은 [Friend 어셈블리](../../../standard/assembly/friend.md)를 참조하세요.
 
-## <a name="class-and-struct-member-accessibility"></a>클래스 및 구조체 멤버 액세스 수준  
+## <a name="class-record-and-struct-member-accessibility"></a>클래스, 레코드 및 구조체 멤버 액세스 수준  
 
-중첩 클래스 및 구조체를 포함한 클래스 멤버는 6가지 액세스 형식으로 선언될 수 있습니다. 구조체는 상속을 지원하지 않으므로 구조체 멤버는 `protected`, `protected internal` 또는 `private protected`로 선언할 수 없습니다.
+클래스, 레코드 및 구조체를 포함한 클래스 및 레코드 멤버는 6가지 액세스 형식으로 선언될 수 있습니다. 구조체는 상속을 지원하지 않으므로 구조체 멤버는 `protected`, `protected internal` 또는 `private protected`로 선언할 수 없습니다.
 
 일반적으로 멤버의 액세스 수준은 해당 멤버를 포함하는 형식의 액세스 수준보다 크지 않습니다. 그러나 멤버가 인터페이스 메서드를 구현하거나 public 기본 클래스에 정의된 가상 메서드를 재정의하는 경우에는 어셈블리 외부에서 internal 클래스의 `public` 멤버에 액세스할 수 있습니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "98757865"
 
 종료자에는 접근성 한정자를 사용할 수 없습니다.
 
-`class` 또는 `struct` 멤버의 액세스 수준을 설정하려면 다음 예제와 같이 멤버 선언에 해당 키워드를 추가하세요.
+`class`, `record` 또는 `struct` 멤버의 액세스 수준을 설정하려면 다음 예제와 같이 멤버 선언에 해당 키워드를 추가하세요.
 
 [!code-csharp[MethodAccess](~/samples/snippets/csharp/objectoriented/accessmodifiers.cs#MethodAccess)]
 

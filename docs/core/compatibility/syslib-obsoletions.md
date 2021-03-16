@@ -1,17 +1,17 @@
 ---
 title: .NET 5+에서 사용되지 않는 기능
-description: .NET 5.0 이상 버전에서 SYSLIB 컴파일러 경고를 생성하고 사용되지 않는 것으로 표시되는 API에 대해 알아봅니다.
+description: .NET 5 이상 버전에서 SYSLIB 컴파일러 경고를 생성하고 사용되지 않는 것으로 표시되는 API에 관해 알아봅니다.
 ms.date: 10/20/2020
-ms.openlocfilehash: 336958c93e3db8f66cfbec89476a666e5e103b70
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: d6563f21624456d74801242268ecf72652fc4f88
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593307"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256285"
 ---
 # <a name="obsolete-features-in-net-5"></a>.NET 5+에서 사용되지 않는 기능
 
-.NET 5.0부터 사용되지 않는 것으로 새로 표시되는 일부 API는 <xref:System.ObsoleteAttribute>에서 두 개의 새 속성을 사용합니다.
+.NET 5부터 사용되지 않는 것으로 새로 표시되는 일부 API는 <xref:System.ObsoleteAttribute>에서 두 개의 새 속성을 사용합니다.
 
 - <xref:System.ObsoleteAttribute.DiagnosticId?displayProperty=nameWithType> 속성은 사용자 지정 진단 ID를 사용하여 빌드 경로를 생성하도록 컴파일러에 알립니다. 사용자 지정 ID를 사용하면 사용되지 않음 경고를 별도로 표시하지 않을 수 있습니다. .NET 5+ 사용되지 않음에서 사용자 지정 진단 ID의 형식은 `SYSLIBxxxx`입니다.
 

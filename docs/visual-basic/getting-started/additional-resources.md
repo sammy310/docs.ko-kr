@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: 4b2d671e310763e6ddfa114bd63b031afba83a20
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 06746347910f62a428d4897693a88b5efe78e86f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400619"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258971"
 ---
 # <a name="additional-resources"></a>추가 자료
 
@@ -32,13 +32,14 @@ ms.locfileid: "93400619"
 
 |URL|설명|
 |----------|----------------|
-|[Visual Basic 설명서 샘플](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|Visual Basic 및 .NET 설명서 전체에서 사용되는 샘플을 포함합니다.|
+|[Visual Basic 설명서 샘플](https://github.com/dotnet/docs/tree/main/samples/snippets/visualbasic)|Visual Basic 및 .NET 설명서 전체에서 사용되는 샘플을 포함합니다.|
+|[샘플 브라우저](https://docs.microsoft.com/samples/browse/?languages=vb)|Visual Basic으로 작성된 코드 샘플을 포함합니다.|
 
 ### <a name="forums"></a>포럼
 
 |URL|설명|
 |----------|----------------|
-|[Visual Basic 포럼](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|일반적인 Visual Basic 문제를 설명합니다.|
+|[Microsoft Q&A](https://docs.microsoft.com/answers/topics/dotnet-visual-basic.html)|Visual Basic 프로그래밍 언어에 대한 기술적인 질문입니다.|
 
 ### <a name="videos-and-webcasts"></a>비디오 및 웹캐스트
 
@@ -64,4 +65,4 @@ ms.locfileid: "93400619"
 ## <a name="see-also"></a>참조
 
 - [Visual Basic 시작](index.md)
-- [의견 보내기](/visualstudio/ide/feedback-options)
+- [Visual Studio 피드백 옵션](/visualstudio/ide/feedback-options)

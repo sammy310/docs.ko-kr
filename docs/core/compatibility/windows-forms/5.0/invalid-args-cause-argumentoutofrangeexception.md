@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: WinForms 속성은 이제 ArgumentOutOfRangeException을 throw함'
-description: 일부 Windows Forms 속성이 잘못된 인수에 대해 ArgumentOutOfRangeException을 throw하는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 일부 Windows Forms 속성이 잘못된 인수에 대해 ArgumentOutOfRangeException을 throw하는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 06/18/2020
-ms.openlocfilehash: 94593047d16304ce401b23993ad4ca173c10812b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 493669af1ed5646d93e7c7d2688afd40f3fa731c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759875"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256155"
 ---
 # <a name="winforms-properties-now-throw-argumentoutofrangeexception"></a>WinForms 속성은 이제 ArgumentOutOfRangeException을 throw함
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759875"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-이전에 범위를 벗어난 인수를 전달하면 이 속성은 <xref:System.NullReferenceException>, <xref:System.IndexOutOfRangeException>,<xref:System.ArgumentException>과 같은 다양한 예외를 throw했습니다. .NET 5.0부터 범위를 벗어난 인수를 전달하면 이 속성은 이제 <xref:System.ArgumentOutOfRangeException>을 throw합니다.
+이전에 범위를 벗어난 인수를 전달하면 이 속성은 <xref:System.NullReferenceException>, <xref:System.IndexOutOfRangeException>,<xref:System.ArgumentException>과 같은 다양한 예외를 throw했습니다. .NET 5부터 범위를 벗어난 인수를 전달하면 해당 속성은 이제 <xref:System.ArgumentOutOfRangeException>을 throw합니다.
 
 <xref:System.ArgumentOutOfRangeException> throw는 .NET 런타임의 동작을 따릅니다. 또한 잘못된 인수를 명확하게 전달하여 디버깅 환경을 개선합니다.
 

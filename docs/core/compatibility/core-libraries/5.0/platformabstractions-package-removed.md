@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: Microsoft.DotNet.PlatformAbstractions 패키지 제거됨'
-description: Microsoft.DotNet.PlatformAbstractions 패키지가 제거된 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: Microsoft.DotNet.PlatformAbstractions 패키지가 제거된 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 대해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 38ffe5e592d01c3bae14fc41becb594283b975a3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: aff7be816815b016e3ce694c4e9a97410538c08d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759780"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257247"
 ---
 # <a name="microsoftdotnetplatformabstractions-package-removed"></a>Microsoft.DotNet.PlatformAbstractions 패키지 제거됨
 
@@ -19,7 +19,7 @@ ms.locfileid: "95759780"
 
 <xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName> 라이브러리는 System.\* 네임스페이스에 이미 설정된 API와 겹칩니다. 또한 일부 <xref:Microsoft.DotNet.PlatformAbstractions> API는 조사 및 장기 지원 수준이 나머지 System.\* API와 동일하게 설계되지 않았습니다. 예를 들어 <xref:Microsoft.DotNet.PlatformAbstractions>는 `Platform` 열거형을 사용하여 현재 운영 체제 플랫폼을 설명합니다. 이 열거형 설계는 <xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform)?displayProperty=nameWithType> API를 설계할 때 새로운 플랫폼과 향후 유연성을 위해 명시적으로 거부되었습니다.
 
-<xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName> 라이브러리에서 사용하도록 설정된 시나리오를 이제 이 열거형 없이 사용할 수 있습니다. 기존 버전은 .NET 5.0 이상에서도 계속 작동하며, 이전 버전의 .NET Core와 함께 서비스됩니다. 그러나 라이브러리에 새로운 기능은 추가되지 않습니다. 대신, 새로운 기능은 다른 라이브러리와 API에 추가됩니다.
+<xref:Microsoft.DotNet.PlatformAbstractions?displayProperty=fullName> 라이브러리에서 사용하도록 설정된 시나리오를 이제 이 열거형 없이 사용할 수 있습니다. 기존 버전은 .NET 5 이상에서도 계속 작동하며, 이전 버전의 .NET Core와 함께 서비스됩니다. 그러나 라이브러리에 새로운 기능은 추가되지 않습니다. 대신, 새로운 기능은 다른 라이브러리와 API에 추가됩니다.
 
 ## <a name="version-introduced"></a>도입된 버전
 

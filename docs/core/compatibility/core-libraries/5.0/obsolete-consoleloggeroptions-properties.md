@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: ConsoleLoggerOptions에서 사용되지 않는 속성'
-description: ConsoleLoggerFormat 형식 및 ConsoleLoggerOptions의 일부 속성이 이제 사용되지 않는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: ConsoleLoggerFormat 형식 및 ConsoleLoggerOptions의 일부 속성이 이제 사용되지 않는 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: bd039dfa84ae3399d7fb36f992010a9a3c9f6ddf
-ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
+ms.openlocfilehash: c6ee294f90e304cebd517bd0139c58a6c7a41e0c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99548385"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257312"
 ---
 # <a name="obsolete-properties-on-consoleloggeroptions"></a>ConsoleLoggerOptions에서 사용되지 않는 속성
 
@@ -15,7 +15,7 @@ ms.locfileid: "99548385"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-.NET 5.0부터 <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerFormat?displayProperty=nameWithType> 형식과 <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions>의 여러 속성은 사용되지 않습니다. 사용되지 않는 속성은 다음과 같습니다.
+.NET 5부터 <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerFormat?displayProperty=nameWithType> 형식과 <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions>의 여러 속성은 사용되지 않습니다. 사용되지 않는 속성은 다음과 같습니다.
 
 - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.DisableColors?displayProperty=nameWithType>
 - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.IncludeScopes?displayProperty=nameWithType>
@@ -49,7 +49,7 @@ ms.locfileid: "99548385"
   <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.FormatterName>과 <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.Format> 간에는 몇 가지 차이점이 있습니다.
 
   - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.Format>에는 `Default`와 `Systemd`의 두 가지 옵션만 사용할 수 있습니다.
-  - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.FormatterName>은 대/소문자를 구분하지 않으며 임의 문자열일 수 있습니다. 예약된 기본 제공 이름은 `Simple`, `Systemd`, `Json`(.NET 5.0 이상)입니다.
+  - <xref:Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions.FormatterName>은 대/소문자를 구분하지 않으며 임의 문자열일 수 있습니다. 예약된 기본 제공 이름은 `Simple`, `Systemd`, `Json`(.NET 5 이상)입니다.
   - `"Format": "Systemd"`은 `"FormatterName": "Systemd"`에 매핑됩니다.
   - `"Format": "Default"`은 `"FormatterName": "Simple"`에 매핑됩니다.
 

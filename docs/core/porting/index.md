@@ -1,122 +1,172 @@
 ---
-title: .NET Framework에서 .NET Core로 이식
-description: 이식 프로세스를 이해하고 .NET Framework 프로젝트를 .NET Core로 이식할 때 유용한 도구에 관해 알아보세요.
-author: cartermp
-ms.date: 10/22/2019
-ms.openlocfilehash: 247e709ac6898a6a89318626e3aa9a2a8e239a9a
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+title: .NET Framework에서 .NET 5로 이식
+description: 이식 프로세스를 이해하고 .NET Framework 프로젝트를 .NET 5(및 .NET Core 3.1)로 이식할 때 유용한 도구에 관해 알아보세요.
+author: adegeo
+ms.date: 03/03/2020
+no-loc:
+- package.config
+- PackageReference
+ms.openlocfilehash: 8515689cf4a1be917f12bb8f3315cda89988d773
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189937"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605050"
 ---
-# <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework에서 .NET Core로의 이식 개요
+# <a name="overview-of-porting-from-net-framework-to-net"></a>.NET Framework에서 .NET로의 이식 개요
 
-현재 .NET Framework에서 실행되는 코드를 .NET Core로 이식해야 하는 경우가 있습니다. 이 문서에서는 다음을 제공합니다.
+이 문서에서는 .NET Framework에서 .NET(이전 이름은 .NET Core)으로 코드를 이식할 때 고려해야 할 사항의 개요를 제공합니다. 프로젝트가 여러 개일 때 .NET Framework에서 .NET으로 이식하는 작업은 비교적 간단합니다. 프로젝트의 복잡도에 따라 프로젝트 파일의 초기 마이그레이션 후에 수행할 작업의 양이 결정됩니다.
 
-* 이식 프로세스 개요
-* 코드를 .NET Core로 이식할 때 유용하게 사용할 수 있는 도구 목록
+.NET에서 앱 모델을 사용할 수 있는 프로젝트(라이브러리, 콘솔 앱, 데스크톱 앱 등)에는 보통 적은 수의 변경만 필요합니다. ASP.NET에서 ASP.NET Core로 이동하는 것처럼 새 앱 모델이 필요한 프로젝트에는 더 많은 작업이 필요합니다. 이전 앱 모델의 여러 패턴과 동등한 패턴을 변환 중에 사용할 수 있습니다.
 
-## <a name="overview-of-the-porting-process"></a>포팅 프로세스 개요
+## <a name="unavailable-technologies"></a>사용할 수 없는 기술
 
-여러 프로젝트에 대해 .NET Framework에서 .NET Core(또는 .NET Standard)로 포팅하는 작업은 비교적 간단합니다. 몇 가지 변경이 필요하긴 하나, 대부분 아래에서 설명하는 패턴을 따릅니다. .NET Core에 앱 모델이 있는 프로젝트(라이브러리, 콘솔 앱, 데스크톱 애플리케이션 등)에는 보통 적은 수의 변경만 필요합니다. ASP.NET에서 ASP.NET Core로의 전환과 같이 새로운 앱 모델이 필요한 프로젝트는 비교적 많은 작업이 필요하지만, 전환에서 사용할 수 있는 비슷한 패턴이 다수 존재합니다. 이 문서는 사용자가 코드 기반을 대상 .NET Standard 또는 .NET Core로 성공적으로 변환하는 데 사용한 주요 전략을 식별하는 데 도움이 되며, 두 가지 수준(솔루션 전체와 프로젝트별)에서 변환을 다룹니다. 앱 모델별 변환에 대한 지침은 맨 아래에 있는 링크를 참조하세요.
+.NET Framework에는 .NET에 없는 기술이 몇 가지 있습니다.
 
-프로젝트를 .NET Core로 이식할 때는 다음과 같은 프로세스를 사용하는 것이 권장됩니다. 각 단계에서는 동작 변경이 발생할 수 있는 위치가 도입되므로 다음 단계로 넘어가기 전에 라이브러리 또는 애플리케이션을 적절히 테스트하세요. 첫 번째 단계는 .NET Standard 또는 .NET Core로의 전환을 위해 프로젝트를 준비하는 것입니다. 단위 테스트가 있는 경우에는 작업 중인 제품에서 계속해서 변경 사항을 테스트할 수 있도록 단위 테스트를 먼저 변환하는 것이 좋습니다. .NET Core로 이식하면 코드베이스가 많이 변경되기 때문에 코드를 이식할 때 테스트를 실행할 수 있도록 테스트를 이식하는 것이 좋습니다. MSTest, xUnit 및 NUnit은 모두 .NET Core에서 작동합니다.
+- [애플리케이션 도메인](net-framework-tech-unavailable.md#application-domains)
 
-## <a name="getting-started"></a>시작
+  추가 애플리케이션 도메인 만들기는 지원되지 않습니다. 코드 격리의 경우 별도의 프로세스 또는 컨테이너를 대신 사용하세요.
 
-다음은 프로세스 전반에서 사용하게 될 도구입니다.
+- [원격 통신](net-framework-tech-unavailable.md#remoting)
 
-- Visual Studio 2019
-- [.NET 이식성 분석기](../../standard/analyzers/portability-analyzer.md) 다운로드
-- (선택 사항) [dotnet try-convert](https://github.com/dotnet/try-convert) 설치
+  원격 통신은 더 이상 지원되지 않는 애플리케이션 도메인 간의 통신에 사용됩니다. 프로세스 간 통신을 위해 <xref:System.IO.Pipes> 클래스 또는 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> 클래스 같은 IPC(Inter-process communication) 메커니즘을 원격 대신 사용할 수 있습니다.
 
-## <a name="porting-a-solution"></a>솔루션 이식
+- [CAS(코드 액세스 보안)](net-framework-tech-unavailable.md#code-access-security-cas)
 
-솔루션에 여러 프로젝트가 있는 경우에는 프로젝트를 특정 순서에 따라 처리해야 하므로 이식이 더 복잡하게 느껴질 수 있습니다. 변환 프로세스는 솔루션의 다른 프로젝트에 종속되지 않은 프로젝트를 먼저 변환한 후에 전체 솔루션으로 계속 진행하는 상향식 접근 방식이어야 합니다.
+  CAS는 .NET Framework에서 지원하는 샌드박싱 기술이지만 .NET Framework 4.0에서는 사용되지 않습니다. CAS는 보안 투명도로 대체되었으며 .NET에서는 지원되지 않습니다. 대신 가상화, 컨테이너 또는 사용자 계정과 같이 운영 체제에서 제공하는 보안 경계를 사용하세요.
 
-프로젝트를 마이그레이션할 순서를 확인하려면 다음과 같은 도구가 필요합니다.
+- [보안 투명도](net-framework-tech-unavailable.md#security-transparency)
 
-- [Visual Studio의 종속성 다이어그램](/visualstudio/modeling/create-layer-diagrams-from-your-code)을 사용하여 솔루션에 포함된 코드의 방향성 그래프를 만들 수 있습니다.
-- `msbuild _SolutionPath_ /t:GenerateRestoreGraphFile /p:RestoreGraphOutputPath=graph.dg.json`을 실행하여 프로젝트 참조 목록을 포함하는 json 문서를 생성합니다.
-- `-r DGML` 스위치를 사용해 [.NET 이식성 분석기](../../standard/analyzers/portability-analyzer.md)를 실행하여 어셈블리의 종속성 다이어그램을 검색합니다. 자세한 내용은 [여기](../../standard/analyzers/portability-analyzer.md#solution-wide-view)를 참조하세요.
+  CAS와 마찬가지로 이 샌드박싱 기술은 .NET Framework 애플리케이션에 더 이상 권장되지 않으며 .NET에서 지원되지 않습니다. 대신 가상화, 컨테이너 또는 사용자 계정과 같이 운영 체제에서 제공하는 보안 경계를 사용하세요.
+  
+- <xref:System.EnterpriseServices?displayProperty=fullName>
 
-종속성 정보를 확보한 후 해당 정보를 사용하여 리프 노드에서 시작하고 종속성 트리 작업을 차근차근 진행하여 다음 섹션의 단계를 적용하는 작업까지 계속 진행할 수 있습니다.
+  <xref:System.EnterpriseServices?displayProperty=fullName> (COM+)는 .NET에서 지원되지 않습니다.
 
-## <a name="per-project-steps"></a>프로젝트 단계별
+- Windows Workflow Foundation(WF) 및 Windows Communication Foundation(WCF)
 
-다음은 프로젝트를 .NET Core로 이식할 때 사용 권장되는 프로세스입니다.
+  WF와 WCF는 .NET Core를 포함하여 .NET 5 이상에서 지원되지 않습니다. 대체 방법은 [CoreWF](https://github.com/UiPath/corewf) 및 [CoreWCF](https://github.com/CoreWCF/CoreWCF)를 참조하세요.
 
-1. [Visual Studio의 변환 도구](/nuget/consume-packages/migrate-packages-config-to-package-reference)를 사용하여 `packages.config` 종속성을 모두 [PackageReference](/nuget/consume-packages/package-references-in-project-files) 형식으로 변환합니다.
+지원되지 않는 이러한 기술에 대한 자세한 내용은 [.NET Core와 .NET 5 이상에서 사용할 수 없는 .NET Framework 기술](net-framework-tech-unavailable.md)을 참조하세요.
 
-   이 단계에서는 종속성을 레거시 `packages.config` 형식에서 변환하는 작업이 이루어집니다. `packages.config`는 .NET Core에서 작동하지 않으므로 패키지 종속성이 있는 경우 이 변환이 필요합니다. 또한 프로젝트에서 직접 사용하는 종속성만 필요하며, 이는 관리해야 하는 종속성의 개수를 줄여 줌으로써 이후 단계를 더 쉽게 만들어 줍니다.
+## <a name="windows-desktop-technologies"></a>Windows 데스크톱 기술
 
-1. 프로젝트 파일을 새로운 SDK 스타일 파일 구조체로 변환합니다. .NET Core를 위한 새 프로젝트를 만들고 소스 파일을 복사하거나 도구를 사용하여 기존 프로젝트 파일의 변환을 시도할 수 있습니다.
+.NET Framework용으로 만든 많은 애플리케이션이 Windows Forms 또는 WPF(Windows Presentation Foundation)와 같은 데스크톱 기술을 사용합니다. Windows Forms와 WPF 모두 .NET으로 이식되었지만 여전히 Windows 전용 기술입니다.
 
-   .NET Core는 .NET Framework와 다른 단순화된 [프로젝트 파일 형식](../project-sdk/overview.md)을 사용합니다. 계속하려면 프로젝트 파일을 이 형식으로 변환해야 합니다. 이 프로젝트 스타일에서는 이 시점에서 아직 대상으로 삼아야 하는 .NET Framework를 대상으로 지정할 수 있도록 지원합니다.
+Windows Forms 또는 WPF 애플리케이션을 마이그레이션하기 전에 다음 종속성을 고려하세요.
 
-   [dotnet try-convert](https://github.com/dotnet/try-convert) 도구를 사용하여 한 번에 보다 작은 솔루션 또는 개별 프로젝트를 .NET Core 프로젝트 파일 형식으로 이식해 볼 수 있습니다. `dotnet try-convert`가 모든 프로젝트에서 작동한다는 보장은 없으며, 종속성의 대상이 되는 동작이 미묘하게 변경될 수도 있습니다. 이 도구는 자동화가 가능한 기본 항목들을 자동화하기 위한 _‘시작점’_ 으로 사용됩니다. 기존 스타일의 프로젝트 파일에 비해 SDK 스타일 프로젝트에서 사용하는 대상에는 여러 가지 차이점이 있으므로 이것은 프로젝트 마이그레이션을 위해 보장되는 솔루션은 아닙니다.
+01. .NET용 프로젝트 파일은 .NET Framework와는 다른 형식을 사용합니다.
+01. .NET에서 사용할 수 없는 API가 프로젝트에서 사용될 수 있습니다.
+01. 타사 컨트롤 및 라이브러리가 .NET으로 이식되지 않아 .NET Framework에만 사용할 수 있습니다.
+01. .NET에서 [더 이상 사용할 수 없는 기술](net-framework-tech-unavailable.md)이 프로젝트에서 사용됩니다.
 
-1. 이식하려는 모든 프로젝트의 대상을 .NET Framework 4.7.2 이상으로 다시 지정합니다.
+.NET은 Windows Forms 및 WPF의 오픈 소스 버전을 사용하며 .NET Framework보다 향상된 기능을 포함합니다.
 
-   이 단계에서는 .NET Core에서 특정 API를 지원하지 않는 경우 .NET Framework 특정 대상에 대한 API 대안을 사용할 수 있도록 합니다.
+데스크톱 애플리케이션을 .NET 5로 마이그레이션하는 방법에 대한 자습서는 다음 문서 중 하나를 참조하세요.
 
-1. 모든 종속성을 최신 버전으로 업데이트합니다. 프로젝트가 .NET Standard가 지원되지 않는 오래된 버전의 라이브러리를 사용하고 있을 수 있습니다. 하지만 최신 버전에서는 간단한 전환만으로 .NET Standard를 지원할 수 있습니다. 라이브러리에 호환성이 손상되는 변경이 있는 경우 이를 위해 코드 변경이 필요할 수 있습니다.
+- [.NET Framework WPF 앱을 .NET으로 마이그레이션](/dotnet/desktop/wpf/migration/convert-project-from-net-framework?view=netdesktop-5.0&preserve-view=true)
+- [.NET Framework Windows Forms 앱을 .NET으로 마이그레이션](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true)
 
-1. [.NET 이식성 분석기](../../standard/analyzers/portability-analyzer.md)로 어셈블리를 분석하여 .NET Core로 이식 가능한지 확인합니다.
+## <a name="windows-specific-apis"></a>Windows 특정 API
 
-   .NET 이식성 분석기 도구는 컴파일된 어셈블리를 분석하고 보고서를 생성합니다. 이 보고서에서는 개괄적인 이식성 요약과 현재 사용 중인 API 중에서 .NET Core에서 사용할 수 없는 API 각각의 내역을 보여 줍니다. 이 도구를 사용할 때는 잠재적으로 필요한 API 변경 사항에 집중할 수 있도록 변환하는 개별 프로젝트만 제출하세요. 사용자가 전환하려는 .NET Core에서는 대다수의 API가 동일한 가용성을 갖습니다.
+애플리케이션은 .NET이 지원하는 플랫폼에서 네이티브 라이브러리를 여전히 P/Invoke할 수 있습니다. 이 기술은 Windows로 제한되지 않습니다. 그러나 참조하는 라이브러리가 _user32.dll_ 또는 _kernel32.dll_ 과 같은 Windows 특정 라이브러리인 경우 코드는 Windows에서만 작동합니다. 앱을 실행하려는 각 플랫폼마다 플랫폼별 버전을 찾거나 모든 플랫폼에서 실행할 수 있도록 코드를 충분히 제네릭하게 만들어야 합니다.
 
-   분석기에서 생성한 보고서를 살펴볼 때 중요한 정보는 대상 플랫폼의 지원 백분율이 아니라 사용되고 있는 실제 API입니다. 대다수의 API가 .NET Standard와 Core에서 동일한 옵션을 가지므로 라이브러리 또는 애플리케이션에서 해당 API를 필요로 하는 시나리오를 이해하면 이식의 영향을 확인하는 데 도움이 됩니다.
+애플리케이션을 .NET Framework에서 .NET으로 이식하는 경우 애플리케이션은 .NET Framework와 함께 배포된 라이브러리를 사용했을 수 있습니다. .NET Framework에서 사용할 수 있는 여러 API는 Windows 레지스트리 또는 GDI+ 그리기 모델과 같은 Windows 특정 기술에 의존하기 때문에 .NET으로 이식되지 않았습니다.
 
-   API가 동일하지 않아 컴파일러 전처리기 지시문(`#if NET45`)을 통해 플랫폼을 특별 케이스로 처리해야 하는 경우가 있습니다. 지금은 프로젝트가 여전히 .NET Framework를 대상으로 지정하고 있습니다. 대상으로 지정된 각 케이스에 대해 시나리오로 이해될 수 있는 잘 알려진 조건을 사용하는 것이 좋습니다.  예를 들어 .NET Core에서 AppDomain 지원은 제한적이지만 어셈블리의 로드 및 로드 취소 시나리오의 경우 .NET Core에 없는 새로운 API가 있습니다. 코드에서 이를 처리하는 일반적인 방법은 다음과 같습니다.
+**Windows 호환성 팩** 은 .NET Framework API 표면의 많은 부분을 .NET에 제공하며, [Microsoft.Windows.Compatibility NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)를 통해 제공됩니다.
 
-   ```csharp
-   #if FEATURE_APPDOMAIN_LOADING
-   // Code that uses appdomains
-   #elif FEATURE_ASSEMBLY_LOAD_CONTEXT
-   // Code that uses assembly load context
-   #else
-   #error Unsupported platform
-   #endif
-   ```
+자세한 내용은 [Windows 호환성 팩을 사용하여 코드를 .NET Core로 이식](windows-compat-pack.md)을 참조하세요.
 
-1. [.NET API 분석기](../../standard/analyzers/api-analyzer.md)를 프로젝트에 설치하여 일부 플랫폼에서 <xref:System.PlatformNotSupportedException>을 throw하는 API와 그 밖의 잠재적인 호환성 문제를 식별합니다.
+## <a name="net-framework-compatibility-mode"></a>.NET Framework 호환 모드
 
-   이 도구는 이식성 분석기와 비슷하나, .NET Core에서 빌드가 가능한지를 분석하는 대신 런타임에 <xref:System.PlatformNotSupportedException>을 throw하는 방식으로 API를 사용하고 있는지 여부를 분석합니다. .NET Framework 4.7.2 이상에서 이식할 때 이 예외가 throw되는 경우는 드물긴 하지만 확인하는 것이 좋습니다. .NET Core에서 예외를 throw하는 API에 대한 자세한 내용은 [.NET Core에서 항상 예외를 throw하는 API](../compatibility/unsupported-apis.md)를 참조하세요.
+.NET Framework 호환 모드는 .NET Standard 2.0에서 도입되었습니다. 이 호환 모드를 통해 .NET Standard 및 .NET 5 이상(및 .NET Core 3.1) 프로젝트가 Windows 전용 .NET Framework 라이브러리를 참조할 수 있습니다. .NET Framework 라이브러리 참조는 라이브러리가 WPF(Windows Presentation Foundation) API를 사용하는 것처럼 모든 프로젝트에 대해 작동하지 않지만 많은 이식 시나리오를 차단 해제합니다. 자세한 내용은 [.NET Framework에서 .NET으로 코드를 이식하기 위한 종속성 분석](third-party-deps.md#net-framework-compatibility-mode)을 참조하세요.
 
-1. 이 시점에서는 .NET Core(일반적으로 애플리케이션의 경우) 또는 .NET Standard(라이브러리의 경우)로 대상을 전환할 수 있습니다.
+## <a name="cross-platform"></a>플랫폼 간 사용 가능
 
-   .NET Core와 .NET Standard 중 어느 것을 선택할지는 프로젝트가 어디에서 실행될지에 크게 좌우됩니다. 프로젝트가 다른 애플리케이션에 의해 사용되거나 NuGet을 통해 배포될 라이브러리이면 보통 .NET Standard를 대상으로 지정하는 것이 좋습니다. 그러나 성능이나 그 밖의 이유로 인해 .NET Core에서만 사용 가능한 API가 있을 수 있으며, 이 경우에는 .NET Core를 대상으로 지정하되 성능 또는 기능이 저하된 .NET Standard 빌드도 만드는 것이 좋습니다. .NET Standard를 대상으로 지정하면 프로젝트를 새로운 플랫폼(예: WebAssembly)에서 실행할 준비가 됩니다. 프로젝트가 특정 앱 프레임워크(예: ASP.NET Core)에서 종속성을 갖는 경우 대상은 해당 종속성이 지원하는 것으로 제한됩니다.
+.NET(이전 이름은 .NET Core)은 플랫폼 간에 사용 가능하도록 설계되었습니다. Windows 특정 기술에 의존하지 않는 코드는 macOS, Linux, Android 등의 다른 플랫폼에서 실행될 수 있습니다. 여기에는 다음과 같은 프로젝트 형식이 포함됩니다.
 
-   .NET Framework 또는 .NET Standard에 대해 코드를 조건부로 컴파일할 전처리기 지시문이 없는 경우 이것은 프로젝트 파일에서 다음을 찾아서
+- 라이브러리
+- 콘솔 기반 도구
+- Automation
+- ASP.NET 사이트
 
-   ```xml
-   <TargetFramework>net472</TargetFramework>
-   ```
+.NET Framework은 Windows 전용 구성 요소입니다. Windows Forms 및 WPF(Windows Presentation Foundation) 같은 Windows 특정 기술이나 API를 사용하는 코드는 .NET에서 계속 실행될 수 있지만 다른 운영 체제에서는 실행되지 않습니다.
 
-   원하는 프레임워크로 전환하는 간단한 작업이 됩니다. .NET Core 3.1의 경우에는 다음과 같습니다.
+라이브러리 또는 콘솔 기반 애플리케이션을 많이 변경하지 않고도 플랫폼 간에 사용할 수 있습니다. .NET으로 이식할 때 이를 고려하고 다른 플랫폼에서 애플리케이션을 테스트하는 것이 좋습니다.
 
-   ```xml
-   <TargetFramework>netcoreapp3.1</TargetFramework>
-   ```
+## <a name="the-future-of-net-standard"></a>.NET Standard의 미래
 
-   그러나 프로젝트가 계속해서 .NET Framework 빌드를 지원해야 하는 라이브러리인 경우 이를 다음으로 바꾸어서 [대상을 여러 개 지정](../../standard/library-guidance/cross-platform-targeting.md)할 수 있습니다.
+[.NET Standard](https://github.com/dotnet/standard)는 여러 .NET 구현에서 사용할 수 있는 .NET API의 공식 규격입니다. .NET Standard는 .NET 에코시스템의 통일성을 높이기 위한 것이었습니다. .NET 5부터 통일성을 위한 다른 접근 방식이 채택되었으며, 이 새로운 접근 방식으로 많은 시나리오에서 .NET Standard가 필요 없어집니다. 자세한 내용은 [.NET 5 및 .NET Standard](../../standard/net-standard.md#net-5-and-net-standard)를 참조하세요.
 
-   ```xml
-   <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
-   ```
+.NET Standard 2.0은 .NET Framework를 지원하는 마지막 버전이었습니다.
 
-   Windows 전용 API(예: 레지스트리 액세스)를 사용하는 경우에는 [Windows 호환 기능 팩](./windows-compat-pack.md)을 설치하세요.
+## <a name="tools-to-assist-porting"></a>이식 지원 도구
 
-## <a name="next-steps"></a>다음 단계
+애플리케이션을 .NET Framework에서 .NET으로 수동으로 이식하는 대신 다양한 도구를 사용하여 마이그레이션의 일부 측면을 자동화할 수 있습니다. 복잡한 프로젝트 이식은 그 자체가 복잡한 프로세스입니다. 이러한 도구가 이 과정에서 도움이 될 수 있습니다.
 
-> [!div class="nextstepaction"]
-> [종속성 분석](third-party-deps.md)
-> [NuGet 패키지 패키징](../deploying/creating-nuget-packages.md)
+애플리케이션 이식에 도움이 되는 도구를 사용하는 경우에도 이 문서의 [이식 시 고려 사항 섹션](#considerations-when-porting)을 검토해야 합니다.
+
+### <a name="net-upgrade-assistant"></a>.NET 업그레이드 도우미
+
+[.NET 업그레이드 도우미](upgrade-assistant-overview.md)는 다양한 종류의 .NET Framework 앱에서 실행할 수 있는 명령줄 도구입니다. 이 도구는 .NET Framework 앱을 .NET 5로 업그레이드하는 데 도움이 되도록 설계되었습니다. 도구를 실행한 후 **앱 마이그레이션을 완료하려면 더 많은 작업이 필요한 경우가 대부분** 입니다. 이 도구에는 마이그레이션 완료에 도움이 될 수 있는 분석기 설치가 포함됩니다. 이 도구가 작동하는 .NET Framework 애플리케이션 유형은 다음과 같습니다.
+
+- Windows Forms
+- WPF
+- ASP.NET MVC
+- 콘솔
+- 클래스 라이브러리
+
+이 도구는 이 문서에 나열된 다른 도구를 사용하고 마이그레이션 프로세스를 안내합니다. 도구에 대한 자세한 내용은 [.NET 업그레이드 도우미 개요](upgrade-assistant-overview.md)를 참조하세요.
+
+### <a name="try-convert"></a>try-convert
+
+try-convert 도구는 데스크톱 앱을 .NET 5로 이동하는 것을 포함하여 프로젝트나 전체 솔루션을 .NET SDK로 변환할 수 있는 .NET 전역 도구입니다. 다만 프로젝트에 사용자 지정 작업, 대상 또는 가져오기와 같은 복잡한 빌드 프로세스가 있는 경우에는 이 도구를 권장하지 않습니다.
+
+자세한 내용은 [try-convert GitHub 리포지토리](https://github.com/dotnet/try-convert)를 참조하세요.
+
+### <a name="net-portability-analyzer"></a>.NET 이식성 분석기
+
+.NET 이식성 분석기는 어셈블리를 분석하고, 지정된 대상 .NET 플랫폼에 애플리케이션 또는 라이브러리를 이식하는 데 필요한 누락된 .NET API에 대한 자세한 보고서를 제공하는 도구입니다.
+
+Visual Studio에서 .NET 이식성 분석기를 사용하려면 [마켓플레이스에서 확장](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)을 설치하세요.
+
+자세한 내용은 [.NET 이식성 분석기](../../standard/analyzers/portability-analyzer.md)를 참조하세요.
+
+### <a name="net-api-analyzer"></a>.NET API 분석기
+
+[.NET API 분석기](../../standard/analyzers/api-analyzer.md)는 런타임에 <xref:System.PlatformNotSupportedException>을 throw하는 API를 사용하고 있는지 여부를 분석합니다. .NET Framework 4.7.2 이상에서 이식할 때 이 예외가 throw되는 경우는 드물긴 하지만 확인하는 것이 좋습니다. .NET에서 예외를 throw하는 API에 대한 자세한 내용은 [.NET Core에서 항상 예외를 throw하는 API](../compatibility/unsupported-apis.md)를 참조하세요.
+
+API 분석기는 프로젝트에 추가하는 NuGet 패키지인 [Microsoft.DotNet.Analyzers.Compatibility](https://www.nuget.org/packages/Microsoft.DotNet.Analyzers.Compatibility/)로 제공됩니다.
+
+자세한 내용은 [.NET API 분석기](../../standard/analyzers/api-analyzer.md)를 참조하세요.
+
+## <a name="considerations-when-porting"></a>이식 시 고려 사항
+
+애플리케이션을 .NET으로 이식하는 경우 다음 제안 사항을 순서대로 고려하세요.
+
+✔️ [.NET 업그레이드 도우미](upgrade-assistant-overview.md)를 사용하여 프로젝트를 마이그레이션하는 것이 좋습니다. 이 도구는 미리 보기 상태이지만 이 문서에서 설명하는 대부분의 수동 단계를 자동화하고 마이그레이션 경로를 계속하기 위한 좋은 출발점을 제공합니다.
+
+✔️ 종속성을 먼저 조사하는 것이 좋습니다. 종속성은 .NET 5, .NET Standard 또는 .NET Core를 대상으로 지정해야 합니다.
+
+✔️ NuGet _packages.config_ 파일에서 프로젝트 파일의 [PackageReference](/nuget/consume-packages/package-references-in-project-files) 설정으로 마이그레이션하세요. Visual Studio를 사용하여 [ _package.config_ 파일을 변환하세요](/nuget/consume-packages/migrate-packages-config-to-package-reference#migration-steps).
+
+✔️ 앱을 아직 이식할 수 없더라도 최신 프로젝트 파일 형식으로 업그레이드하는 것이 좋습니다. .NET Framework 프로젝트는 오래된 프로젝트 형식을 사용합니다. SDK 스타일 프로젝트라고 하는 최신 프로젝트 형식은 .NET Core 이상을 위해 만들어졌지만 .NET Framework에서도 작동합니다. 프로젝트 파일이 최신 형식이면 나중에 앱을 이식할 수 있는 좋은 기반이 됩니다.
+
+✔️ .NET Framework 프로젝트의 대상을 .NET Framework 4.7.2 이상으로 변경하세요. 그러면 .NET Standard에서 기존 API를 지원하지 않는 경우 최신 API를 대신 사용할 수 있습니다.
+
+✔️ .NET Core 3.1 대신 .NET 5를 대상으로 지정하는 것이 좋습니다. .NET Core 3.1은 LTS(장기 지원)에 포함되지만 .NET 5가 최신 버전이며 .NET 6는 릴리스되면 LTS가 됩니다.
+
+✔️ **Windows Forms 및 WPF** 프로젝트의 경우 .NET 5를 대상으로 지정하세요. .NET 5에는 데스크톱 앱을 위한 향상된 기능이 많이 포함되어 있습니다.
+
+✔️ .NET Framework 프로젝트에도 사용할 수 있는 라이브러리를 마이그레이션하는 경우 .NET Standard 2.0을 대상으로 지정하는 것이 좋습니다. 라이브러리를 다중 대상 지정하여 .NET Framework와 .NET Standard를 모두 대상으로 지정할 수도 있습니다.
+
+✔️ 마이그레이션 후 누락된 API 오류가 발생하는 경우 [Microsoft.Windows.Compatibility NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)에 대한 참조를 추가하세요. .NET Framework API 표면의 많은 부분은 NuGet 패키지를 통해 .NET에서 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
+- [.NET 업그레이드 도우미 개요](upgrade-assistant-overview.md)
 - [ASP.NET에서 ASP.NET Core로 마이그레이션](/aspnet/core/migration/proper-to-2x)
-- [WPF 앱을 .NET Core로 마이그레이션](/dotnet/desktop/wpf/migration/convert-project-from-net-framework)
+- [.NET Framework WPF 앱을 .NET으로 마이그레이션](/dotnet/desktop/wpf/migration/convert-project-from-net-framework?view=netdesktop-5.0&preserve-view=true)
 - [.NET Framework Windows Forms 앱을 .NET으로 마이그레이션](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true)
+- [.NET으로 .NET Framework 라이브러리 이식](libraries.md)
+- [서버 앱에 대한 .NET 5와 .NET Framework 비교](../../standard/choosing-core-framework-server.md)

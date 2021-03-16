@@ -1,17 +1,17 @@
 ---
 title: '호환성이 손상되는 변경: .NET 5를 대상으로 하는 경우 NETCOREAPP3_1 전처리기 기호가 정의되지 않음'
-description: 프로젝트가 이전 버전의 전처리기 기호를 더 이상 정의하지 않는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 프로젝트가 이전 버전의 전처리기 기호를 더 이상 정의하지 않는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 09/17/2020
-ms.openlocfilehash: 61a5e4fce258d2be3d584318e154bb752b88ebe1
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 390c8f5af97510db4652f3f42db577e6de158020
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759704"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256532"
 ---
 # <a name="netcoreapp3_1-preprocessor-symbol-is-not-defined-when-targeting-net-5"></a>.NET 5를 대상으로 하는 경우 NETCOREAPP3_1 전처리기 기호가 정의되지 않음
 
-.NET 5.0 RC2 이상 버전에서는 프로젝트에서 이전 버전의 전처리기 기호를 더 이상 정의하지 않고 대상으로 하는 버전의 기호만 정의합니다. 이는 .NET Core 1.0~3.1과 동일한 동작입니다.
+.NET 5 RC2 이상 버전에서는 프로젝트에서 이전 버전의 전처리기 기호를 더 이상 정의하지 않고 대상으로 하는 버전의 기호만 정의합니다. 이는 .NET Core 1.0~3.1과 동일한 동작입니다.
 
 ## <a name="version-introduced"></a>도입된 버전
 
@@ -19,9 +19,9 @@ ms.locfileid: "95759704"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-.NET 5.0 미리 보기 7~RC1에서는 `net5.0`을 대상으로 하는 프로젝트에서 `NETCOREAPP3_1` 및 `NET5_0` 전처리기 기호를 모두 정의합니다. 이와 같이 동작을 변경하는 이유는 .NET 5.0부터 조건부 컴파일 [기호가 누적되기](https://github.com/dotnet/designs/blob/main/accepted/2020/net5/net5.md#preprocessor-symbols) 때문이었습니다.
+.NET 5 미리 보기 7~RC1에서는 `net5.0`을 대상으로 하는 프로젝트에서 `NETCOREAPP3_1` 및 `NET5_0` 전처리기 기호를 모두 정의합니다. 이와 같이 동작을 변경하는 의도는 .NET 5부터 조건부 컴파일 [기호가 누적되기](https://github.com/dotnet/designs/blob/main/accepted/2020/net5/net5.md#preprocessor-symbols) 때문이었습니다.
 
-.NET 5.0 RC2 이상에서는 프로젝트에서 이전 버전이 아니라 대상으로 하는 TFM(대상 프레임워크 모니커)의 기호만 정의합니다.
+.NET 5 RC2 이상에서는 프로젝트에서 이전 버전이 아니라 대상으로 하는 TFM(대상 프레임워크 모니커)의 기호만 정의합니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 

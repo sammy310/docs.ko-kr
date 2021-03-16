@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: 일부 API가 ArgumentNullException을 throw함'
-description: 일부 API가 인수의 유효성을 검사하고 이제 ArgumentNullException을 throw하는 .NET 6.0의 주요 변경 내용에 대해 알아봅니다.
+description: 일부 API가 인수의 유효성을 검사하고 이제 ArgumentNullException을 throw하는 .NET 6의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 01/29/2021
-ms.openlocfilehash: f9d7dc8bb57ed8dc5b4ff41bda9b3bde7db7b880
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ca7f32739237715657350f52d2523b0ce378364d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99804153"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255739"
 ---
 # <a name="some-apis-throw-argumentnullexception"></a>일부 API가 ArgumentNullException을 throw함
 
@@ -17,7 +17,7 @@ ms.locfileid: "99804153"
 
 이전 .NET 버전에서 영향을 받는 API는 `null`인 인수를 사용하여 호출된 경우 <xref:System.NullReferenceException>을 throw합니다.
 
-.NET 6.0부터 영향을 받는 API는 `null`인 인수를 사용하여 호출된 경우 <xref:System.ArgumentNullException>을 throw합니다.
+.NET 6부터 영향을 받는 API는 `null`인 인수를 사용하여 호출된 경우 <xref:System.ArgumentNullException>을 throw합니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 

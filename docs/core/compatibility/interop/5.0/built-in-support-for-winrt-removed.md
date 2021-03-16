@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: WinRT의 기본 제공 지원이 .NET에서 제거됨'
-description: WinRT의 기본 제공 지원이 .NET에서 제거되는 .NET 5.0의 interop 호환성이 손상되는 변경에 대해 알아봅니다.
+description: WinRT의 기본 제공 지원이 .NET에서 제거되는 .NET 5의 interop 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 10/13/2020
-ms.openlocfilehash: 61d8e26d06c232a7bfa1891a2159f5232f747b8a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 986b810b74c7e7d7514ec2b734bfab45e29b87fa
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759822"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256688"
 ---
 # <a name="built-in-support-for-winrt-is-removed-from-net"></a>WinRT의 기본 제공 지원이 .NET에서 제거됨
 
@@ -19,7 +19,7 @@ ms.locfileid: "95759822"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-이전에는 CoreCLR이 [WinMD(Windows 메타데이터) 파일](/uwp/winrt-cref/winmd-files)을 사용하여 WinRT 형식을 활성화하고 사용할 수 있었습니다. .NET 5.0부터 CoreCLR은 더 이상 WinMD 파일을 직접 사용할 수 없습니다.
+이전에는 CoreCLR이 [WinMD(Windows 메타데이터) 파일](/uwp/winrt-cref/winmd-files)을 사용하여 WinRT 형식을 활성화하고 사용할 수 있었습니다. .NET 5부터 CoreCLR은 더 이상 WinMD 파일을 직접 사용할 수 없습니다.
 
 지원되지 않는 어셈블리를 참조하려고 하면 <xref:System.IO.FileNotFoundException>이 발생합니다. WinRT 클래스를 활성화하는 경우 <xref:System.PlatformNotSupportedException>이 발생합니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "95759822"
   <TargetFramework>net5.0-windows10.0.19041</TargetFramework>
   ```
 
-- [C#/WinRT](/windows/uwp/csharp-winrt/) 도구 체인을 사용하여 .NET 5.0 이상 버전용 WinRT API 및 형식을 생성하거나 사용자 지정합니다.
+- [C#/WinRT](/windows/uwp/csharp-winrt/) 도구 체인을 사용하여 .NET 5 이상 버전용 WinRT API 및 형식을 생성하거나 사용자 지정합니다.
 
 ## <a name="affected-apis"></a>영향을 받는 API
 

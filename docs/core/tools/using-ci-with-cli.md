@@ -2,12 +2,12 @@
 title: .NET SDK 및 도구를 사용한 CI(연속 통합)
 description: 빌드 서버에서 .NET SDK 및 도구를 연속 통합에 사용하는 방법을 알아봅니다.
 ms.date: 05/18/2017
-ms.openlocfilehash: 6d92bf7250ab4aea33325b1a23e7661a296e9756
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: fd1548f5c2d0a5191dd54c315c90a8ce3f8a5305
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633820"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189997"
 ---
 # <a name="using-the-net-sdk-and-tools-in-continuous-integration-ci"></a>CI(연속 통합)에서 .NET SDK 및 도구 사용
 
@@ -126,7 +126,7 @@ Travis CI는 앱에 대한 빌드 조합을 설명하기 위해 런타임, 환�
 
 ### <a name="appveyor"></a>AppVeyor
 
-[AppVeyor](https://www.appveyor.com/)는 `Visual Studio 2017` 빌드 작업자 이미지를 사용하여 .NET Core 1.0.1 SDK를 설치합니다. 여러 버전의 .NET SDK가 포함된 다른 빌드 이미지를 사용할 수 있습니다. 자세한 내용은 [appveyor.yml 예제](https://github.com/dotnet/docs/blob/master/appveyor.yml) 및 AppVeyor 문서의 [빌드 작업자 이미지](https://www.appveyor.com/docs/build-environment/#build-worker-images) 문서를 참조하세요.
+[AppVeyor](https://www.appveyor.com/)는 `Visual Studio 2017` 빌드 작업자 이미지를 사용하여 .NET Core 1.0.1 SDK를 설치합니다. 여러 버전의 .NET SDK가 포함된 다른 빌드 이미지를 사용할 수 있습니다. 자세한 내용은 [appveyor.yml 예제](https://github.com/dotnet/docs/blob/main/appveyor.yml) 및 AppVeyor 문서의 [빌드 작업자 이미지](https://www.appveyor.com/docs/build-environment/#build-worker-images) 문서를 참조하세요.
 
 .NET SDK 이진 파일은 설치 스크립트를 통해 다운로드하여 하위 디렉터리에 압축을 풀면 `PATH` 환경 변수에 추가됩니다. 빌드 행렬을 추가하여 .NET SDK의 여러 버전으로 통합 테스트를 실행합니다.
 

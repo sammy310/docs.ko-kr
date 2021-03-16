@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, walkthroughs
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
-ms.openlocfilehash: bbf9ab7d06c952aa2e076fc36c71f37f1bb10884
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: b6e4937b71c50f887a7eb784bc9106360a05fdc2
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608389"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259800"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>자습서: Windows 서비스 앱 만들기
 
@@ -24,18 +24,18 @@ ms.locfileid: "91608389"
 
 우선 프로젝트를 만들고 서비스가 제대로 작동하는 데 필요한 값을 설정합니다.
 
-1. Visual Studio **파일** 메뉴에서 **새로 만들기** > **프로젝트**를 선택하거나 **Ctrl**+**Shift**+**N**을 눌러 **새 프로젝트** 창을 엽니다.
+1. Visual Studio **파일** 메뉴에서 **새로 만들기** > **프로젝트** 를 선택하거나 **Ctrl**+**Shift**+**N** 을 눌러 **새 프로젝트** 창을 엽니다.
 
-2. **Windows 서비스(.NET Framework)** 프로젝트 템플릿을 검색하여 선택합니다. 템플릿을 찾으려면 **설치됨**과 **Visual C#** 또는 **Visual Basic**을 차례로 확장한 후 **Windows 데스크톱**을 선택합니다. 또는 오른쪽 상단의 검색 상자에서 *Windows 서비스*를 입력하고 **Enter** 키를 누릅니다.
+2. **Windows 서비스(.NET Framework)** 프로젝트 템플릿을 검색하여 선택합니다. 템플릿을 찾으려면 **설치됨** 과 **Visual C#** 또는 **Visual Basic** 을 차례로 확장한 후 **Windows 데스크톱** 을 선택합니다. 또는 오른쪽 상단의 검색 상자에서 *Windows 서비스* 를 입력하고 **Enter** 키를 누릅니다.
 
    ![Visual Studio의 새 프로젝트 대화 상자에 있는 Windows 서비스 템플릿](./media/new-project-dialog.png)
 
    > [!NOTE]
    > **Windows 서비스** 템플릿이 표시되지 않는 경우 **.NET 데스크톱 개발** 워크로드를 설치해야 할 수 있습니다.
    >
-   > **새 프로젝트** 대화 상자의 왼쪽 하단에서 **Visual Studio 설치 관리자 열기**를 선택합니다. **.NET 데스크톱 개발** 워크로드를 선택한 다음, **수정**을 선택합니다.
+   > **새 프로젝트** 대화 상자의 왼쪽 하단에서 **Visual Studio 설치 관리자 열기** 를 선택합니다. **.NET 데스크톱 개발** 워크로드를 선택한 다음, **수정** 을 선택합니다.
 
-3. **이름**에서 *MyNewService*를 입력한 다음, **확인**을 선택합니다.
+3. **이름** 에서 *MyNewService* 를 입력한 다음, **확인** 을 선택합니다.
 
    **디자인** 탭이 표시됩니다(**Service1.cs [디자인]** 또는 **Service1.vb [디자인]** ).
 
@@ -43,21 +43,21 @@ ms.locfileid: "91608389"
 
 ## <a name="rename-the-service"></a>서비스 이름 바꾸기
 
-서비스 이름을 **Service1**에서 **MyNewService**로 바꿉니다.
+서비스 이름을 **Service1** 에서 **MyNewService** 로 바꿉니다.
 
-1. **솔루션 탐색기**에서 **Service1.cs** 또는 **Service1.vb**를 선택하고 바로 가기 메뉴에서 **이름 바꾸기**를 선택합니다. 파일 이름을 **MyNewService.cs** 또는 **MyNewService.vb**로 바꾼 다음, **Enter** 키를 누릅니다.
+1. **솔루션 탐색기** 에서 **Service1.cs** 또는 **Service1.vb** 를 선택하고 바로 가기 메뉴에서 **이름 바꾸기** 를 선택합니다. 파일 이름을 **MyNewService.cs** 또는 **MyNewService.vb** 로 바꾼 다음, **Enter** 키를 누릅니다.
 
-    코드 요소 *Service1*에 대한 모든 참조 이름을 변경할지 여부를 묻는 팝업 창이 나타납니다.
+    코드 요소 *Service1* 에 대한 모든 참조 이름을 변경할지 여부를 묻는 팝업 창이 나타납니다.
 
-2. 팝업 창에서 **예**를 선택합니다.
+2. 팝업 창에서 **예** 를 선택합니다.
 
     ![프롬프트 이름 바꾸기](./media/windows-service-rename.png "Windows 서비스 이름 바꾸기 프롬프트")
 
-3. **디자인** 탭의 바로 가기 메뉴에서 **속성**을 선택합니다. **속성** 창에서 **ServiceName** 값을 *MyNewService*로 변경합니다.
+3. **디자인** 탭의 바로 가기 메뉴에서 **속성** 을 선택합니다. **속성** 창에서 **ServiceName** 값을 *MyNewService* 로 변경합니다.
 
     ![서비스 속성](./media/windows-service-properties.png "Windows 서비스 속성")
 
-4. **파일** 메뉴에서 **모두 저장**을 선택합니다.
+4. **파일** 메뉴에서 **모두 저장** 을 선택합니다.
 
 ## <a name="add-features-to-the-service"></a>서비스에 기능 추가
 
@@ -65,18 +65,18 @@ ms.locfileid: "91608389"
 
 ### <a name="add-custom-event-log-functionality"></a>사용자 지정 이벤트 로그 기능 추가
 
-1. **솔루션 탐색기**에서 **MyNewService.cs** 또는 **MyNewService.vb**의 바로 가기 메뉴에 있는 **뷰 디자이너**를 선택합니다.
+1. **솔루션 탐색기** 에서 **MyNewService.cs** 또는 **MyNewService.vb** 의 바로 가기 메뉴에 있는 **뷰 디자이너** 를 선택합니다.
 
-2. **도구 상자**에서 **구성 요소**를 확장한 다음, **EventLog** 구성 요소를 **Service1.cs [디자인]** 또는 **Service1.vb [디자인]** 탭으로 끕니다.
+2. **도구 상자** 에서 **구성 요소** 를 확장한 다음, **EventLog** 구성 요소를 **Service1.cs [디자인]** 또는 **Service1.vb [디자인]** 탭으로 끕니다.
 
-3. **솔루션 탐색기**에서 **MyNewService.cs** 또는 **MyNewService.vb**의 바로 가기 메뉴에 있는 **코드 보기**를 선택합니다.
+3. **솔루션 탐색기** 에서 **MyNewService.cs** 또는 **MyNewService.vb** 의 바로 가기 메뉴에 있는 **코드 보기** 를 선택합니다.
 
 4. 사용자 지정 이벤트 로그를 정의합니다. C#에서는 기존 `MyNewService()` 생성자를 편집하고 Visual Basic에서는 `New()` 생성자를 추가합니다.
 
    [!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#2)]
    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]
 
-5. `using` 문을 **MyNewService.cs**에 추가하거나(없는 경우) <xref:System.Diagnostics?displayProperty=nameWithType> 네임스페이스에 대해서는 `Imports` 문을 **MyNewService.vb**에 추가합니다.
+5. `using` 문을 **MyNewService.cs** 에 추가하거나(없는 경우) <xref:System.Diagnostics?displayProperty=nameWithType> 네임스페이스에 대해서는 `Imports` 문을 **MyNewService.vb** 에 추가합니다.
 
     ```csharp
     using System.Diagnostics;
@@ -86,11 +86,11 @@ ms.locfileid: "91608389"
     Imports System.Diagnostics
     ```
 
-6. **파일** 메뉴에서 **모두 저장**을 선택합니다.
+6. **파일** 메뉴에서 **모두 저장** 을 선택합니다.
 
 ### <a name="define-what-occurs-when-the-service-starts"></a>서비스가 시작될 때 수행되는 동작 정의
 
-**MyNewService.cs** 또는 **MyNewService.vb**의 코드 편집기에서 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드를 찾습니다. Visual Studio는 프로젝트를 만들 때 자동으로 빈 메서드 정의를 만듭니다. 서비스가 시작될 때 이벤트 로그에 항목을 기록하는 코드를 추가합니다.
+**MyNewService.cs** 또는 **MyNewService.vb** 의 코드 편집기에서 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드를 찾습니다. Visual Studio는 프로젝트를 만들 때 자동으로 빈 메서드 정의를 만듭니다. 서비스가 시작될 때 이벤트 로그에 항목을 기록하는 코드를 추가합니다.
 
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
@@ -124,7 +124,7 @@ ms.locfileid: "91608389"
    timer.Start()
    ```
 
-2. `using` 문을 **MyNewService.cs**에 추가하거나 <xref:System.Timers?displayProperty=nameWithType> 네임스페이스에 대해서는 `Imports` 문을 **MyNewService.vb**에 추가합니다.
+2. `using` 문을 **MyNewService.cs** 에 추가하거나 <xref:System.Timers?displayProperty=nameWithType> 네임스페이스에 대해서는 `Imports` 문을 **MyNewService.vb** 에 추가합니다.
 
    ```csharp
    using System.Timers;
@@ -188,7 +188,7 @@ ms.locfileid: "91608389"
 
 ### <a name="implement-service-pending-status"></a>서비스 보류 중 상태 구현
 
-1. `using` 문을 **MyNewService.cs**에 추가하거나 <xref:System.Runtime.InteropServices?displayProperty=nameWithType> 네임스페이스에 대해서는 `Imports` 문을 **MyNewService.vb**에 추가합니다.
+1. `using` 문을 **MyNewService.cs** 에 추가하거나 <xref:System.Runtime.InteropServices?displayProperty=nameWithType> 네임스페이스에 대해서는 `Imports` 문을 **MyNewService.vb** 에 추가합니다.
 
     ```csharp
     using System.Runtime.InteropServices;
@@ -198,7 +198,7 @@ ms.locfileid: "91608389"
     Imports System.Runtime.InteropServices
     ```
 
-2. `ServiceState` 값을 선언하고 상태에 대한 구조(플랫폼 호출에서 사용함)를 추가하려면 **MyNewService.cs** 또는 **MyNewService.vb**에 다음 코드를 추가합니다.
+2. `ServiceState` 값을 선언하고 상태에 대한 구조(플랫폼 호출에서 사용함)를 추가하려면 **MyNewService.cs** 또는 **MyNewService.vb** 에 다음 코드를 추가합니다.
 
     ```csharp
     public enum ServiceState
@@ -326,23 +326,23 @@ ms.locfileid: "91608389"
 
 Windows 서비스를 실행하려면 해당 서비스를 설치해야 합니다. 그러면 서비스 제어 관리자에 서비스가 등록됩니다. 등록 정보를 처리하는 설치 관리자를 프로젝트에 추가합니다.
 
-1. **솔루션 탐색기**에서 **MyNewService.cs** 또는 **MyNewService.vb**의 바로 가기 메뉴에 있는 **뷰 디자이너**를 선택합니다.
+1. **솔루션 탐색기** 에서 **MyNewService.cs** 또는 **MyNewService.vb** 의 바로 가기 메뉴에 있는 **뷰 디자이너** 를 선택합니다.
 
-2. **디자인** 뷰에서 백그라운드 영역을 선택한 다음, 바로 가기 메뉴에서 **설치 관리자 추가**를 선택합니다.
+2. **디자인** 뷰에서 백그라운드 영역을 선택한 다음, 바로 가기 메뉴에서 **설치 관리자 추가** 를 선택합니다.
 
      기본적으로 Visual Studio는 이름이 `ProjectInstaller`인 구성 요소 클래스를 추가하고 여기에는 프로젝트에 대한 두 개의 설치 관리자가 포함되어 있습니다. 이러한 설치 관리자는 서비스 및 서비스에 연결된 프로세스에 사용됩니다.
 
-3. **ProjectInstaller**의 **디자인**뷰에서 Visual C# 프로젝트의 경우 **serviceInstaller1**을 선택하고 Visual Basic 프로젝트의 경우 **ServiceInstaller1**을 선택한 다음, 바로 가기 메뉴에서 **속성**을 선택합니다.
+3. **ProjectInstaller** 의 **디자인** 뷰에서 Visual C# 프로젝트의 경우 **serviceInstaller1** 을 선택하고 Visual Basic 프로젝트의 경우 **ServiceInstaller1** 을 선택한 다음, 바로 가기 메뉴에서 **속성** 을 선택합니다.
 
-4. **속성** 창에서 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 속성이 **MyNewService**로 설정되어 있는지 확인합니다.
+4. **속성** 창에서 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 속성이 **MyNewService** 로 설정되어 있는지 확인합니다.
 
-5. <xref:System.ServiceProcess.ServiceInstaller.Description%2A> 속성에 *샘플 서비스*와 같은 텍스트를 추가합니다.
+5. <xref:System.ServiceProcess.ServiceInstaller.Description%2A> 속성에 *샘플 서비스* 와 같은 텍스트를 추가합니다.
 
      이 텍스트는 **서비스** 창의 **설명** 열에 표시되어 사용자에게 서비스를 설명합니다.
 
     ![서비스 창의 서비스 설명입니다.](./media/windows-service-description.png "서비스 설명")
 
-6. <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> 속성에 텍스트를 추가합니다. 예를 들어 *MyNewService 표시 이름*을 입력할 수 있습니다.
+6. <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> 속성에 텍스트를 추가합니다. 예를 들어 *MyNewService 표시 이름* 을 입력할 수 있습니다.
 
      이 텍스트는 **서비스** 창의 **표시 이름** 열에 표시됩니다. 이 이름은 시스템에서 사용하는 이름인 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 속성과 다를 수 있습니다(예: 시스템을 시작하는 `net start` 명령에 사용하는 이름).
 
@@ -352,7 +352,7 @@ Windows 서비스를 실행하려면 해당 서비스를 설치해야 합니다.
 
      ![Windows 서비스의 설치 관리자 속성](./media/windows-service-installer-properties.png "Windows 서비스 설치 관리자 속성")
 
-9. **ProjectInstaller**의 **디자인**뷰에서 Visual C# 프로젝트의 경우 **serviceProcessInstaller1**을 선택하고 Visual Basic 프로젝트의 경우 **ServiceProcessInstaller1**을 선택한 다음, 바로 가기 메뉴에서 **속성**을 선택합니다. 드롭 다운 목록에서 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 속성을 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>(으)로 설정합니다.
+9. **ProjectInstaller** 의 **디자인** 뷰에서 Visual C# 프로젝트의 경우 **serviceProcessInstaller1** 을 선택하고 Visual Basic 프로젝트의 경우 **ServiceProcessInstaller1** 을 선택한 다음, 바로 가기 메뉴에서 **속성** 을 선택합니다. 드롭 다운 목록에서 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 속성을 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>(으)로 설정합니다.
 
      이 설정은 서비스를 설치하고 로컬 시스템 계정을 사용하여 실행합니다.
 
@@ -372,12 +372,12 @@ Windows 서비스에는 명령줄 인수나 시작 매개 변수를 사용할 �
 
 ### <a name="to-add-startup-parameters"></a>시작 매개 변수를 추가하려면
 
-1. **Program.cs** 또는 **MyNewService.Designer.vb**를 선택한 다음, 바로 가기 메뉴에서 **코드 보기**를 선택합니다. `Main` 메서드에서 코드를 변경해 입력 매개 변수를 추가하고 서비스 생성자에게 전달합니다.
+1. **Program.cs** 또는 **MyNewService.Designer.vb** 를 선택한 다음, 바로 가기 메뉴에서 **코드 보기** 를 선택합니다. `Main` 메서드에서 코드를 변경해 입력 매개 변수를 추가하고 서비스 생성자에게 전달합니다.
 
    [!code-csharp[VbRadconService](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/Program-add-parameter.cs?highlight=1,6)]
    [!code-vb[VbRadconService](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.Designer-add-parameter.vb?highlight=1-2)]
 
-2. **MyNewService.cs** 또는 **MyNewService.vb**에서 `MyNewService` 생성자를 변경하여 입력 매개 변수를 다름과 같이 처리합니다.
+2. **MyNewService.cs** 또는 **MyNewService.vb** 에서 `MyNewService` 생성자를 변경하여 입력 매개 변수를 다름과 같이 처리합니다.
 
    ```csharp
    using System.Diagnostics;
@@ -435,7 +435,7 @@ Windows 서비스에는 명령줄 인수나 시작 매개 변수를 사용할 �
 
    이 코드는 사용자가 제공하는 시작 매개 변수에 따라 이벤트 소스와 로그 이름을 설정합니다. 인수가 제공되지 않으면 기본값이 사용됩니다.
 
-3. 명령줄 인수를 지정하려면 **ProjectInstaller.cs** 또는 **ProjectInstaller.vb**의 `ProjectInstaller` 클래스에 다음 코드를 추가합니다.
+3. 명령줄 인수를 지정하려면 **ProjectInstaller.cs** 또는 **ProjectInstaller.vb** 의 `ProjectInstaller` 클래스에 다음 코드를 추가합니다.
 
    ```csharp
    protected override void OnBeforeInstall(IDictionary savedState)
@@ -458,21 +458,21 @@ Windows 서비스에는 명령줄 인수나 시작 매개 변수를 사용할 �
 
 ## <a name="build-the-service"></a>서비스 빌드
 
-1. **솔루션 탐색기**에 있는 **MyNewService** 프로젝트의 바로 가기 메뉴에서 **속성**을 선택합니다.
+1. **솔루션 탐색기** 에 있는 **MyNewService** 프로젝트의 바로 가기 메뉴에서 **속성** 을 선택합니다.
 
    프로젝트의 속성 페이지가 나타납니다.
 
-2. **애플리케이션** 탭의 **시작 개체** 목록에서 **MyNewService.Program**을 선택하거나 Visual Basic 프로젝트의 **Sub Main**을 선택합니다.
+2. **애플리케이션** 탭의 **시작 개체** 목록에서 **MyNewService.Program** 을 선택하거나 Visual Basic 프로젝트의 **Sub Main** 을 선택합니다.
 
-3. 프로젝트를 빌드하려면 **솔루션 탐색기**를 열고 프로젝트의 바로 가기 메뉴에 있는 **빌드**를 선택합니다(또는 **Ctrl**+**Shift**+**B**를 누름).
+3. 프로젝트를 빌드하려면 **솔루션 탐색기** 를 열고 프로젝트의 바로 가기 메뉴에 있는 **빌드** 를 선택합니다(또는 **Ctrl**+**Shift**+**B** 를 누름).
 
 ## <a name="install-the-service"></a>서비스 설치
 
 이제 Windows 서비스를 빌드했으므로 이를 설치할 수 있습니다. Windows 서비스를 설치하려면 설치할 컴퓨터에서 관리자 자격 증명이 있어야 합니다.
 
-1. 관리자 자격 증명을 사용하여 [Visual Studio에 대한 개발자 명령 프롬프트](../tools/developer-command-prompt-for-vs.md)를 엽니다. Windows **시작** 메뉴에서 Visual Studio 폴더에 있는 **VS 2017에 대한 개발자 명령 프롬프트**를 선택한 다음, 바로 가기 메뉴에서 **자세히** > **관리자로 실행**을 선택합니다.
+1. 관리자 자격 증명을 사용하여 [Visual Studio에 대한 개발자 명령 프롬프트](/visualstudio/ide/reference/command-prompt-powershell)를 엽니다.
 
-2. **Visual Studio에 대한 개발자 명령 프롬프트** 창에서 프로젝트의 출력이 포함된 폴더(기본적으로 프로젝트의 *\bin\Debug* 하위 디렉터리)로 이동합니다.
+2. **Visual Studio용 개발자 명령 프롬프트** 에서 프로젝트의 출력이 포함된 폴더(기본적으로 프로젝트의 *\bin\Debug* 하위 디렉터리)로 이동합니다.
 
 3. 다음 명령을 입력합니다.
 
@@ -482,7 +482,7 @@ Windows 서비스에는 명령줄 인수나 시작 매개 변수를 사용할 �
 
     서비스를 성공적으로 설치한 경우 명령이 설치에 성공했음을 보고합니다.
 
-    시스템에서 *installutil.exe*를 찾을 수 없는 경우 해당 파일이 컴퓨터에 있는지 확인합니다. 이 도구는 *%windir%\Microsoft.NET\Framework[64]\\&lt;프레임워크 버전&gt;* 폴더에 .NET Framework와 함께 설치됩니다. 예를 들어 64비트 버전의 기본 경로는 *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*입니다.
+    시스템에서 *installutil.exe* 를 찾을 수 없는 경우 해당 파일이 컴퓨터에 있는지 확인합니다. 이 도구는 *%windir%\Microsoft.NET\Framework[64]\\&lt;프레임워크 버전&gt;* 폴더에 .NET Framework와 함께 설치됩니다. 예를 들어 64비트 버전의 기본 경로는 *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe* 입니다.
 
     **installutil.exe** 프로세스가 실패한 경우 설치 로그를 확인하여 이유를 찾아보세요. 기본적으로 로그는 서비스 실행 파일과 동일한 폴더에 있습니다. 다음과 같은 경우 설치에 실패할 수 있습니다.
     - <xref:System.ComponentModel.RunInstallerAttribute> 클래스가 `ProjectInstaller` 클래스에 없습니다.
@@ -493,26 +493,26 @@ Windows 서비스에는 명령줄 인수나 시작 매개 변수를 사용할 �
 
 ## <a name="start-and-run-the-service"></a>서비스 시작 및 실행
 
-1. Windows에서 **서비스** 데스크톱 앱을 엽니다. **Windows**+**R**을 눌러 **실행** 상자를 열고 *services.msc*를 입력한 다음, **Enter** 키를 누르거나 **확인**을 선택합니다.
+1. Windows에서 **서비스** 데스크톱 앱을 엽니다. **Windows**+**R** 을 눌러 **실행** 상자를 열고 *services.msc* 를 입력한 다음, **Enter** 키를 누르거나 **확인** 을 선택합니다.
 
-     해당 서비스가 설정된 표시 이름의 사전순으로 **서비스**에 표시됩니다.
+     해당 서비스가 설정된 표시 이름의 사전순으로 **서비스** 에 표시됩니다.
 
      ![서비스 창의 MyNewService입니다.](./media/windowsservices-serviceswindow.PNG)
 
-2. 서비스를 시작하려면 서비스의 바로 가기 메뉴에서 **시작**을 선택합니다.
+2. 서비스를 시작하려면 서비스의 바로 가기 메뉴에서 **시작** 을 선택합니다.
 
-3. 서비스를 중지하려면 서비스의 바로 가기 메뉴에서 **중지**를 선택합니다.
+3. 서비스를 중지하려면 서비스의 바로 가기 메뉴에서 **중지** 를 선택합니다.
 
 4. (선택 사항) 명령줄에서 **net start &lt;서비스 이름&gt;** 및 **net stop &lt;서비스 이름&gt;** 명령을 사용하여 서비스를 시작하고 중지할 수 있습니다.
 
 ### <a name="verify-the-event-log-output-of-your-service"></a>서비스의 이벤트 로그 출력 확인
 
-1. Windows에서 **이벤트 뷰어** 데스크톱 앱을 엽니다. Windows 검색 창에서 *이벤트 뷰어*를 입력한 다음, 검색 결과에서 **이벤트 뷰어**를 선택합니다.
+1. Windows에서 **이벤트 뷰어** 데스크톱 앱을 엽니다. Windows 검색 창에서 *이벤트 뷰어* 를 입력한 다음, 검색 결과에서 **이벤트 뷰어** 를 선택합니다.
 
    > [!TIP]
-   > Visual Studio의 **보기** 메뉴에서 **서버 탐색기**를 열고(또는 **Ctrl**+**Alt**+**S**를 누름) 로컬 컴퓨터의 **이벤트 로그** 노드를 확장하면 이벤트 로그에 액세스할 수 있습니다.
+   > Visual Studio의 **보기** 메뉴에서 **서버 탐색기** 를 열고(또는 **Ctrl**+**Alt**+**S** 를 누름) 로컬 컴퓨터의 **이벤트 로그** 노드를 확장하면 이벤트 로그에 액세스할 수 있습니다.
 
-2. **이벤트 뷰어**에서 **애플리케이션 및 서비스 로그**를 확장합니다.
+2. **이벤트 뷰어** 에서 **애플리케이션 및 서비스 로그** 를 확장합니다.
 
 3. **MyNewLog**(또는 절차에 따라 명령줄 인수를 추가한 경우 **MyLogFile1**)의 목록을 찾아서 확장합니다. 서비스에서 수행한 두 작업(시작 및 중지)의 항목이 표시됩니다.
 
@@ -522,7 +522,7 @@ Windows 서비스에는 명령줄 인수나 시작 매개 변수를 사용할 �
 
 Windows 서비스 앱이 더 이상 필요 없는 경우 제거할 수 있습니다.
 
-1. 관리자 자격 증명을 사용하여 **Visual Studio에 대한 개발자 명령 프롬프트**를 엽니다.
+1. 관리자 자격 증명을 사용하여 **Visual Studio에 대한 개발자 명령 프롬프트** 를 엽니다.
 
 2. **Visual Studio에 대한 개발자 명령 프롬프트** 창에서 프로젝트의 출력이 포함된 폴더로 이동합니다.
 

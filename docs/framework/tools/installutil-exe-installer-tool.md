@@ -14,18 +14,18 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-ms.openlocfilehash: 042e5f64a7a863173db9c4e601d3152b0df46d97
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 0e03a2a7033d3e210727e2eb080140ad87240dba
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164439"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259943"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe(설치 관리자 도구)
 
 설치 관리자 도구는 특정 어셈블리에서 설치 관리자 구성 요소를 실행하는 방법으로 서버 리소스를 설치하고 제거하는 데 사용할 수 있는 명령줄 유틸리티입니다. 이 도구는 <xref:System.Configuration.Install> 네임스페이스의 클래스와 함께 사용됩니다.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
 
 명령 프롬프트에 다음을 입력합니다.
 
@@ -51,7 +51,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 |`/help` *assembly*<br /><br /> 또는<br /><br /> `/?` *assembly*|InstallUtil.exe에 대한 명령 구문 및 옵션과 함께 지정된 어셈블리 내의 개별 설치 프로그램에서 재구성한 추가 옵션을 표시합니다. 이 옵션은 각 설치 관리자 구성 요소의 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 속성에서 반환되는 텍스트를 InstallUtil.exe의 도움말 텍스트에 추가합니다.|
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|전역 어셈블리 캐시에 등록해야 하는 어셈블리의 이름 또는 강력한 이름을 지정합니다. 어셈블리의 버전, 문화권 및 공개 키 토큰을 사용하여 어셈블리 이름을 정규화해야 합니다. 정규화된 어셈블리 이름은 따옴표로 묶어야 합니다.<br /><br /> 예를 들어, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0"은 정규화된 어셈블리 이름입니다.|
 |`/InstallStateDir=[` *directoryName* `]`|어셈블리를 제거하는 데 사용한 데이터가 포함된 .InstallState 파일의 디렉터리를 지정합니다. 기본 디렉터리는 어셈블리가 들어 있는 디렉터리입니다.|
-|`/LogFile=`[*filename*]|설치 진행 정보가 기록되는 로그 파일의 이름을 지정합니다. 기본적으로 `/LogFile` 옵션을 생략하면 *assemblyname*.InstallLog라는 로그 파일이 생성됩니다. *filename*을 생략하면 로그 파일이 생성되지 않습니다.|
+|`/LogFile=`[*filename*]|설치 진행 정보가 기록되는 로그 파일의 이름을 지정합니다. 기본적으로 `/LogFile` 옵션을 생략하면 *assemblyname*.InstallLog라는 로그 파일이 생성됩니다. *filename* 을 생략하면 로그 파일이 생성되지 않습니다.|
 |`/LogToConsole`={`true`&#124;`false`}|`true`인 경우 출력을 콘솔에 표시합니다. `false`(기본값)이면 출력 내용을 콘솔에 표시하지 않습니다.|
 |`/ShowCallStack`|설치 도중 어느 한 지점에서 예외가 발생하면 호출 스택을 로그 파일에 출력합니다.|
 |`/u`[`ninstall`]|지정된 어셈블리를 제거합니다. 다른 옵션과 달리, `/u`는 명령줄에서 옵션이 표시되는 위치에 관계없이 모든 어셈블리에 적용됩니다.|
@@ -170,4 +170,4 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallL
 
 - <xref:System.Configuration.Install>
 - [도구](index.md)
-- [명령 프롬프트](developer-command-prompt-for-vs.md)
+- [개발자 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)

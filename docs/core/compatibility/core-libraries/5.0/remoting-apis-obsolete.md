@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: 원격 API가 사용되지 않음'
-description: 일부 원격 관련 API가 사용되지 않는 것으로 표시되고 사용자 지정 진단 ID를 사용하여 경고를 생성하는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 일부 원격 관련 API가 사용되지 않는 것으로 표시되고 사용자 지정 진단 ID를 사용하여 경고를 생성하는 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 5687b1471028b077674cfd31cb77ce95dc51bef5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c4f7cd200cadd11321da60f2b4a0d191497aae8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759751"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257171"
 ---
 # <a name="remoting-apis-are-obsolete"></a>원격 API가 사용되지 않음
 
@@ -24,7 +24,7 @@ ms.locfileid: "95759751"
 
 .NET Framework 2.x - 4.x에서 <xref:System.MarshalByRefObject.GetLifetimeService> 및 <xref:System.MarshalByRefObject.InitializeLifetimeService> 메서드는 .NET Remoting과 관련된 인스턴스의 수명을 제어합니다. .NET Core 2.x- 3.x에서 이러한 메서드는 런타임에 항상 <xref:System.PlatformNotSupportedException>을 throw합니다.
 
-.NET 5.0 이상 버전에서 <xref:System.MarshalByRefObject.GetLifetimeService> 및 <xref:System.MarshalByRefObject.InitializeLifetimeService> 메서드는 경고로 표시되며 사용되지 않지만 런타임에 <xref:System.PlatformNotSupportedException>을 계속 throw합니다.
+.NET 5 이상 버전에서 <xref:System.MarshalByRefObject.GetLifetimeService> 및 <xref:System.MarshalByRefObject.InitializeLifetimeService> 메서드는 경고로 표시되며 사용되지 않지만 런타임에 <xref:System.PlatformNotSupportedException>을 계속 throw합니다.
 
 ```csharp
 // MemoryStream, like all Stream instances, subclasses MarshalByRefObject.
@@ -37,7 +37,7 @@ obj.InitializeLifetimeService();
 
 ## <a name="reason-for-change"></a>변경 이유
 
-[.NET Remoting](/previous-versions/dotnet/netframework-1.1/kwdt6w2k(v=vs.71))은 레거시 기술입니다. 다른 프로세스(잠재적으로 다른 머신에서도 가능)에서 개체를 인스턴스화하고 일반 in-process .NET 개체 인스턴스인 경우 해당 개체와 상호 작용할 수 있습니다. .NET Remoting 인프라는 .NET Framework 2.x - 4.x에만 있습니다. .NET Core 및 .NET 5.0 이상 버전은 .NET Remoting을 지원하지 않으며 원격 API는 없거나 런타임에 대해 항상 예외를 throw합니다.
+[.NET Remoting](/previous-versions/dotnet/netframework-1.1/kwdt6w2k(v=vs.71))은 레거시 기술입니다. 다른 프로세스(잠재적으로 다른 머신에서도 가능)에서 개체를 인스턴스화하고 일반 in-process .NET 개체 인스턴스인 경우 해당 개체와 상호 작용할 수 있습니다. .NET Remoting 인프라는 .NET Framework 2.x - 4.x에만 있습니다. .NET Core 및 .NET 5 이상 버전은 .NET Remoting을 지원하지 않으며 원격 API는 없거나 런타임에 대해 항상 예외를 throw합니다.
 
 개발자가 이러한 API를 사용하지 않도록 하기 위해 선택한 원격 관련 API를 사용되지 않는 것으로 표시합니다. 이러한 API는 향후 .NET 버전에서 완전히 제거될 수 있습니다.
 

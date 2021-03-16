@@ -1,17 +1,17 @@
 ---
 title: '호환성이 손상되는 변경: 전역 어셈블리 캐시 API가 사용되지 않음'
-description: GAC를 처리하는 API가 실패하거나 작업을 수행하지 않는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: GAC를 처리하는 API가 실패하거나 작업을 수행하지 않는 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 2f74fccc68b7a925d909938d77578df8ebe8d60d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 39c7b092b06754a28723693c0147b7ec3a0b705e
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759828"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257481"
 ---
 # <a name="global-assembly-cache-apis-are-obsolete"></a>전역 어셈블리 캐시 API가 사용되지 않음
 
-.NET Core 및 .NET 5.0 이상 버전에서는 .NET Framework에 있었던 GAC(전역 어셈블리 캐시) 개념이 사라집니다. 따라서 GAC를 처리하는 모든 .NET Core 및 .NET 5+ API가 실패하거나 작업을 수행하지 않습니다.
+.NET Core 및 .NET 5 이상 버전에서는 .NET Framework에 있었던 GAC(전역 어셈블리 캐시) 개념이 사라집니다. 따라서 GAC를 처리하는 모든 .NET Core 및 .NET 5+ API가 실패하거나 작업을 수행하지 않습니다.
 
 개발자가 이러한 API를 사용하지 않도록 하기 위해 일부 GAC 관련 API는 사용되지 않는 것으로 표시되고 컴파일 시간에 `SYSLIB0005` 경고를 생성합니다. 이러한 API는 향후 .NET 버전에서 제거될 수 있습니다.
 
@@ -31,7 +31,7 @@ Assembly asm = typeof(object).Assembly;
 Console.WriteLine(asm.GlobalAssemblyCache);
 ```
 
-.NET 5.0 이상 버전에서 <xref:System.Reflection.Assembly.GlobalAssemblyCache> 속성은 항상 `false`를 반환합니다. 그러나 속성 getter도 사용되지 않는 것으로 표시되어 속성 액세스를 중지해야 함을 호출자에게 표시합니다. 라이브러리와 앱은 런타임 동작에 대한 결정을 내릴 때 <xref:System.Reflection.Assembly.GlobalAssemblyCache> API를 사용하면 안 됩니다. 이 API는 .NET Core 및 .NET 5.0 이상 버전에서 항상 `false`를 반환하기 때문입니다.
+.NET 5 이상 버전에서 <xref:System.Reflection.Assembly.GlobalAssemblyCache> 속성은 항상 `false`를 반환합니다. 그러나 속성 getter도 사용되지 않는 것으로 표시되어 속성 액세스를 중지해야 함을 호출자에게 표시합니다. 라이브러리와 앱은 런타임 동작에 대한 결정을 내릴 때 <xref:System.Reflection.Assembly.GlobalAssemblyCache> API를 사용하면 안 됩니다. 이 API는 .NET Core 및 .NET 5 이상 버전에서 항상 `false`를 반환하기 때문입니다.
 
 ```csharp
 Assembly asm = typeof(object).Assembly;
@@ -43,7 +43,7 @@ Console.WriteLine(asm.GlobalAssemblyCache);
 
 ## <a name="reason-for-change"></a>변경 이유
 
-GAC(전역 어셈블리 캐시)는 .NET Core 및 .NET 5.0 이상 버전에서 개념으로 존재하지 않습니다.
+GAC(전역 어셈블리 캐시)는 .NET Core 및 .NET 5 이상 버전에서 개념으로 존재하지 않습니다.
 
 ## <a name="version-introduced"></a>도입된 버전
 

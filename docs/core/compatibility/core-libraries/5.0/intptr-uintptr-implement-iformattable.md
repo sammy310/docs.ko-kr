@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: IntPtr 및 UIntPtr에서 IFormattable 구현'
-description: IntPtr 및 UIntPtr에서 IFormattable을 구현하는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: IntPtr 및 UIntPtr에서 IFormattable을 구현하는 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 0684652cdc2b8cf1d237074263bf0809082b0dcd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: adfb68807d5fa5f0c750fb41ef75951f63a4b2d5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759954"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257442"
 ---
 # <a name="intptr-and-uintptr-implement-iformattable"></a>IntPtr 및 UIntPtr에서 IFormattable 구현
 
@@ -17,7 +17,7 @@ ms.locfileid: "95759954"
 
 이전 버전의 .NET에서는 <xref:System.IntPtr> 및 <xref:System.UIntPtr>이 <xref:System.IFormattable>을 구현하지 않습니다. <xref:System.IFormattable>을 확인하는 함수는 <xref:System.IntPtr.ToString%2A?displayProperty=nameWithType> 또는 <xref:System.UIntPtr.ToString%2A?displayProperty=nameWithType>를 호출하는 것으로 대체될 수 있습니다. 이 경우 형식 지정자와 문화권이 적용되지 않습니다.
 
-.NET 5.0 이상 버전에서는 <xref:System.IntPtr> 및 <xref:System.UIntPtr>이 <xref:System.IFormattable>을 구현합니다. <xref:System.IFormattable> 지원을 확인하는 함수는 형식 지정자와 문화권을 전달할 수 있으므로 이러한 형식에 대해 다른 결과를 반환할 수 있습니다.
+.NET 5 이상 버전에서는 <xref:System.IntPtr> 및 <xref:System.UIntPtr>이 <xref:System.IFormattable>을 구현합니다. <xref:System.IFormattable> 지원을 확인하는 함수는 형식 지정자와 문화권을 전달할 수 있으므로 이러한 형식에 대해 다른 결과를 반환할 수 있습니다.
 
 이러한 변경은 보간된 문자열 및 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>과 같은 시나리오에 영향을 줍니다.
 

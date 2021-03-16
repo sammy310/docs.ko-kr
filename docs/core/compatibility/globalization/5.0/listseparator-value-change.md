@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: TextInfo.ListSeparator 값 변경'
-description: 버전 5.0과 5.0.1 간에 TextInfo.ListSeparator의 기본값이 변경된 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 버전 5.0과 5.0.1 간에 TextInfo.ListSeparator의 기본값이 변경된 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 12/10/2020
-ms.openlocfilehash: 720d46c1908bcd70812f575a90f580470dbc7f32
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 9a319da8ea8e3cbf62cbf4730e553b03f5bfdc89
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97596392"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256727"
 ---
 # <a name="textinfolistseparator-values-changed"></a>TextInfo.ListSeparator 값이 변경됨
 
@@ -21,7 +21,7 @@ ms.locfileid: "97596392"
 
 다음 표에 <xref:System.Globalization.TextInfo.ListSeparator?displayProperty=nameWithType> 값의 변경 내용이 요약되어 있습니다.
 
-| | .NET Framework<br/>.NET Core 1.0 - 3.1 | .NET 5.0 | .NET 5.0.1 |
+| | .NET Framework<br/>.NET Core 1.0 - 3.1 | .NET 5 | .NET 5.0.1 |
 -|-|-|-
 | **Windows** | NLS에서 가져옴 | ICU의 소수 구분 기호.<br/>다시 NLS로 전환할 수 있습니다. | NLS와 같음 |
 | **Linux 및 macOS** | ICU의 소수 구분 기호 | ICU의 소수 구분 기호 | NLS와 같음 |

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-ms.openlocfilehash: 76f616c36d81b8245f77f011b5c2f9b945e6916b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b5e58c5943eba8db7497b4db56bfbd99b17b1043
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96255106"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477630"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>방법: 형식 라이브러리에 참조 추가
 
@@ -42,12 +42,12 @@ Visual Studio에서는 형식 라이브러리에 참조를 추가하면 메타�
   
 1. [방법: 형식 라이브러리에서 Interop 어셈블리 생성](how-to-generate-interop-assemblies-from-type-libraries.md)을 참조하세요.  
   
-2. interop 어셈블리 이름을 포함한 [-link(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/link-compiler-option.md) 또는 [-link(Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 컴파일러 옵션을 사용하여 COM 형식에 대한 형식 정보를 실행 파일에 포함합니다.  
+2. interop 어셈블리 이름을 포함한 [-link(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/inputs.md#embedinteroptypes) 또는 [-link(Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 컴파일러 옵션을 사용하여 COM 형식에 대한 형식 정보를 실행 파일에 포함합니다.  
   
 ## <a name="see-also"></a>참조
 
 - [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)
 - [.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)
 - [연습: Visual Studio에 관리되는 어셈블리의 형식 포함](../../standard/assembly/embed-types-visual-studio.md)
-- [-link(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [-link(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/inputs.md#embedinteroptypes)
 - [-link(Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

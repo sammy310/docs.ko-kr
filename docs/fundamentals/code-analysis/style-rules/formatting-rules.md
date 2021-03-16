@@ -1,6 +1,6 @@
 ---
 title: 코드 스타일 서식 지정 규칙
-description: 들여쓰기, 공백 및 새 줄의 서식을 지정 하는 코드 스타일 규칙에 대해 알아봅니다.
+description: 들여쓰기, 공백, 새 줄의 서식을 지정하는 코드 스타일 규칙에 대해 알아봅니다.
 ms.date: 09/25/2020
 ms.topic: reference
 author: gewarren
@@ -16,33 +16,33 @@ helpviewer_keywords:
 - formatting code style rules [EditorConfig]
 - formatting rules
 - EditorConfig formatting conventions
-ms.openlocfilehash: 61e6f6a6afdc6aaf9710eef3143af8ae700ef612
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
-ms.translationtype: MT
+ms.openlocfilehash: 866949692341f65a5b78c7dd5b8eec918873d3b7
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "96593199"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511803"
 ---
 # <a name="formatting-rules"></a>서식 지정 규칙
 
-서식 지정 규칙은 들여쓰기, 공백 및 새 줄이 .NET 프로그래밍 언어 구문 주위에 정렬 되는 방식에 영향을 줍니다. 규칙은 다음과 같은 범주로 분류 됩니다.
+서식 지정 규칙은 들여쓰기, 공백, 새 줄이 .NET 프로그래밍 언어 구문 주위에 정렬되는 방식에 영향을 줍니다. 이 규칙은 다음 범주로 구분됩니다.
 
-- [.Net 서식 지정 규칙](#net-formatting-rules): c # 및 Visual Basic 모두에 적용 되는 규칙입니다. 이러한 규칙에 대 한 EditorConfig 옵션 이름은 접두사로 시작 합니다 `dotnet_` .
-- [C # 서식 지정 규칙](#c-formatting-rules): c # 언어에만 적용 되는 규칙입니다. 이러한 규칙에 대 한 EditorConfig 옵션 이름은 접두사로 시작 합니다 `csharp_` .
+- [.NET 서식 지정 규칙](#net-formatting-rules): C# 및 Visual Basic 모두에 적용되는 규칙입니다. 이러한 규칙에 대한 EditorConfig 옵션 이름은 `dotnet_` 접두사로 시작합니다.
+- [C# 서식 지정 규칙](#c-formatting-rules): C# 언어에만 적용되는 규칙입니다. 이러한 규칙에 대한 EditorConfig 옵션 이름은 `csharp_` 접두사로 시작합니다.
 
-## <a name="rule-id-ide0055-fix-formatting"></a>규칙 ID: "IDE0055" (형식 수정)
+## <a name="rule-id-ide0055-fix-formatting"></a>규칙 ID: "IDE0055"(서식 수정)
 
-모든 서식 옵션에는 규칙 ID `IDE0055` 와 제목이 있습니다 `Fix formatting` . 다음 구성 줄을 사용 하 여 EditorConfig 파일에서 서식 위반의 심각도를 설정 합니다.
+모든 서식 옵션에는 규칙 ID `IDE0055`와 제목 `Fix formatting`이 있습니다. 다음 구성 줄을 사용하여 EditorConfig 파일에서 서식 지정 위반의 심각도를 설정합니다.
 
 ```ini
 dotnet_diagnostic.IDE0055.severity = <severity value>
 ```
 
-심각도 값은 `warning` `error` [빌드 시 적용](../overview.md#code-style-analysis)해야 합니다. 가능한 모든 심각도 값은 [심각도 수준](../configuration-options.md#severity-level)을 참조 하세요.
+심각도 값은 [빌드 시 적용](../overview.md#code-style-analysis)해야 하는 `warning` 또는 `error`여야 합니다. 가능한 모든 심각도 값은 [심각도 수준](../configuration-options.md#severity-level)을 참조하세요.
 
 ## <a name="option-format"></a>옵션 형식
 
-서식 지정 규칙에 대 한 옵션은 다음과 같은 형식의 EditorConfig 파일에 지정할 수 있습니다.
+서식 지정 규칙에 대한 옵션은 EditorConfig 파일에서 다음 형식을 사용하여 지정할 수 있습니다.
 
 `rule_name = value`
 
@@ -50,7 +50,7 @@ dotnet_diagnostic.IDE0055.severity = <severity value>
 
 ## <a name="net-formatting-rules"></a>.NET 서식 지정 규칙
 
-이 단원의 서식 지정 규칙은 c # 및 Visual Basic에 모두 적용 됩니다.
+이 섹션의 서식 지정 규칙은 C# 및 Visual Basic 모두에 적용됩니다.
 
 - [using 구성](#organize-using-directives)
   - dotnet_sort_system_directives_first
@@ -76,7 +76,7 @@ dotnet_separate_import_directive_groups = true
 | **옵션 이름** | dotnet_sort_system_directives_first |
 | **해당 언어** | C# 및 Visual Basic |
 | **도입된 버전** | Visual Studio 2017 15.3 버전 |
-| **옵션 값** | `true` - `System.*` `using` 지시문을 사전순으로 정렬 하 고 다른 using 지시문 앞에 추가 합니다.<br /><br />`false` - `System.*` `using` 다른 지시문 앞에 지시문을 추가 하지 않습니다 `using` . |
+| **옵션 값** | `true` - `System.*` `using` 지시문을 사전순으로 정렬하고 다른 using 지시문 앞에 배치합니다.<br /><br />`false` - `System.*` `using` 지시문을 다른 `using` 지시문 앞에 배치하지 않습니다. |
 
 코드 예제:
 
@@ -116,7 +116,7 @@ using System.Threading.Tasks;
 using Octokit;
 ```
 
-## <a name="c-formatting-rules"></a>C # 서식 지정 규칙
+## <a name="c-formatting-rules"></a>C# 서식 지정 규칙
 
 이 섹션의 서식 설정 규칙은 C# 코드에만 적용됩니다.
 
@@ -1040,7 +1040,7 @@ for (int i = 0; i < x.Length; i++)
 for (int i = 0;i < x.Length;i++)
 ```
 
-##### <a name="csharp_space_before_semicolon_in_for_statement"></a>csharp_space_before_semicolon_in_for_statement
+#### <a name="csharp_space_before_semicolon_in_for_statement"></a>csharp_space_before_semicolon_in_for_statement
 
 |속성|값|
 |-|-|

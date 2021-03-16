@@ -2,12 +2,12 @@
 title: 컨테이너 기반 애플리케이션의 Azure 컴퓨팅 플랫폼 선택
 description: Azure Cloud 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화 | 컨테이너 기반 애플리케이션용 Azure 컴퓨팅 플랫폼 선택
 ms.date: 02/18/2020
-ms.openlocfilehash: 4bc72fb5a5be30d47cffe73d53a82b3237a959a6
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 9246b8dfb4e1d68fbd965d25e2e9d3272563798c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987818"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257995"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>컨테이너 기반 애플리케이션의 Azure 컴퓨팅 플랫폼 선택
 
@@ -31,7 +31,7 @@ ms.locfileid: "80987818"
 |:------------------------:|:--:|:--:|:--:|:--:|:--:|:--:|
 | **웹앱(모놀리식)**         | ![VM에서 가능](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![ACI에서 가능](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![App Service에서 권장](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![AKS에서 가능](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | |
 | **N 계층 앱(서비스)**        | ![VM에서 가능](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![ACI에서 가능](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![App Service에서 권장](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![AKS에서 가능](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Azure Fuctions에서 가능](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | |
-| **클라우드 네이티브(마이크로 서비스)**  | | ![ACI에서 가능](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | ![AKS에서 권장](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Linux&nbsp;컨테이너)| ![Azure Functions에서 권장](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (이벤트 기반) | |
+| **클라우드 네이티브(마이크로 서비스)**  | | ![ACI에서 가능](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![ACI에서 가능](media/choosing-azure-compute-options-for-container-based-applications/possible.png) <br/> (컨테이너&nbsp;포함) | ![AKS에서 권장](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Linux&nbsp;컨테이너)| ![Azure Functions에서 권장](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (이벤트 기반) | |
 | **일괄 처리/작업(백그라운드 작업)** | ![VM에서 가능](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![ACI에서 가능](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![App Service에서 가능](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![AKS에서 가능](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Azure Functions에서 권장](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (백그라운드&nbsp;작업) | ![Azure Batch에서 권장](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (대규모) |
 
 **범례**

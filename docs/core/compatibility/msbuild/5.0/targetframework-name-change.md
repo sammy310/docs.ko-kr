@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: netcoreapp에서 net으로 TargetFramework 변경'
-description: MSBuild TargetFramework 속성의 값이 netcoreapp3.1에서 net5.0으로 변경된 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: MSBuild TargetFramework 속성의 값이 netcoreapp3.1에서 net5.0으로 변경된 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 10/17/2020
-ms.openlocfilehash: c3b39a36548d58d6ed75fd8b1c84b0cccfc738f0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 88bfe7602c83f61b56f11c4e0336702571369e3c
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759703"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256493"
 ---
 # <a name="targetframework-change-from-netcoreapp-to-net"></a>netcoreapp에서 net으로 TargetFramework 변경
 
@@ -19,7 +19,7 @@ MSBuild `TargetFramework` 속성 값이 `netcoreapp3.1`에서 `net5.0`로 변경
 
 ## <a name="change-description"></a>변경 내용 설명
 
-.NET Core 1.0 - 3.1에서 MSBuild `TargetFramework` 속성 값은 `netcoreapp`으로 시작합니다(예: .NET Core 3.1을 대상으로 하는 앱의 경우 `netcoreapp3.1`). .NET 5.0부터 이 값은 `net`으로만 시작하도록 단순화됩니다(예: .NET 5.0의 경우 `net5.0`).
+.NET Core 1.0 - 3.1에서 MSBuild `TargetFramework` 속성 값은 `netcoreapp`으로 시작합니다(예: .NET Core 3.1을 대상으로 하는 앱의 경우 `netcoreapp3.1`). .NET 5부터 해당 값은 `net`으로만 시작하도록 단순화됩니다(예: .NET 5.0의 경우 `net5.0`).
 
 자세한 내용은 [.NET Standard의 미래 ](https://devblogs.microsoft.com/dotnet/the-future-of-net-standard/) 및 [.NET 5의 대상 프레임워크 이름](https://github.com/dotnet/designs/blob/main/accepted/2020/net5/net5.md)을 참조하세요.
 

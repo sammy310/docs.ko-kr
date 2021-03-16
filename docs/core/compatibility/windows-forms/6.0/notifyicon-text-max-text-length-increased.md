@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: NotifyIcon.Text 최대 텍스트 길이가 늘어남'
-description: NotifyIcon.Text 속성의 최대 텍스트 길이가 늘어난 .NET 6.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: NotifyIcon.Text 속성의 최대 텍스트 길이가 늘어난 .NET 6의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 01/19/2021
-ms.openlocfilehash: 0029556f3ec2795fb079575b329e7fbd187d486f
-ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
+ms.openlocfilehash: f87b98dd852ce202689ae9360bee9b6cfbf01794
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98617980"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255778"
 ---
 # <a name="notifyicontext-maximum-text-length-increased"></a>NotifyIcon.Text 최대 텍스트 길이가 늘어남
 
@@ -15,7 +15,7 @@ ms.locfileid: "98617980"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-이전 .NET 버전에서 <xref:System.Windows.Forms.NotifyIcon.Text?displayProperty=nameWithType> 속성에 허용되는 최대 텍스트 길이는 63자입니다. .NET 6.0부터 허용되는 최대 텍스트 길이가 127자입니다. 모든 버전에서 제한보다 긴 값을 설정하려고 하면 <xref:System.ArgumentException>이 throw됩니다.
+이전 .NET 버전에서 <xref:System.Windows.Forms.NotifyIcon.Text?displayProperty=nameWithType> 속성에 허용되는 최대 텍스트 길이는 63자입니다. .NET 6부터 허용되는 최대 텍스트 길이가 127자입니다. 모든 버전에서 제한보다 긴 값을 설정하려고 하면 <xref:System.ArgumentException>이 throw됩니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 
@@ -23,7 +23,7 @@ ms.locfileid: "98617980"
 
 ## <a name="version-introduced"></a>도입된 버전
 
-.NET 6.0 미리 보기 1
+.NET 6 미리 보기 1
 
 ## <a name="recommended-action"></a>권장 조치
 

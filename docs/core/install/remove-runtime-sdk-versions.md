@@ -3,14 +3,14 @@ title: .NET 런타임 및 SDK 제거
 description: 이 문서에서는 현재 설치된 .NET 런타임 및 SDK 버전을 확인하는 방법과 Windows, Mac, Linux에서 이를 제거하는 방법을 설명합니다.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/20/2020
+ms.date: 03/02/2021
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: f07a9acdc5be310d38da18602dde2ebf678e9a1b
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 8ef6ab531d6c3eada5226b1682f19bfe5537bfe4
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031724"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255635"
 ---
 # <a name="how-to-remove-the-net-runtime-and-sdk"></a>.NET 런타임 및 SDK를 제거하는 방법
 
@@ -71,15 +71,15 @@ Linux에는 .NET(SDK 또는 런타임)을 제거하는 옵션이 더 있습니�
 
 tarball을 사용하여 설치한 경우 수동 메서드를 사용하여 .NET을 제거해야 합니다.
 
-Linux에서는 버전이 지정된 디렉터리를 제거하여 SDK와 런타임을 별도로 제거해야 합니다. 디렉터리를 제거하면 디스크에서 SDK 및 런타임이 삭제됩니다. 예는 들어 1.0.1 SDK 및 런타임을 제거하려면 다음 bash 명령을 사용합니다.
+Linux에서는 버전이 지정된 디렉터리를 제거하여 SDK와 런타임을 별도로 제거해야 합니다. 해당 디렉터리는 Linux 배포에 따라 달라질 수 있습니다. 디렉터리를 제거하면 디스크에서 SDK 및 런타임이 삭제됩니다. 예는 들어 1.0.1 SDK 및 런타임을 제거하려면 다음 bash 명령을 사용합니다.
 
 ```bash
 version="1.0.1"
-sudo rm -rf /usr/local/share/dotnet/sdk/$version
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.NETCore.App/$version
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.All/$version
-sudo rm -rf /usr/local/share/dotnet/shared/Microsoft.AspNetCore.App/$version
-sudo rm -rf /usr/local/share/dotnet/host/fxr/$version
+sudo rm -rf /usr/share/dotnet/sdk/$version
+sudo rm -rf /usr/share/dotnet/shared/Microsoft.NETCore.App/$version
+sudo rm -rf /usr/share/dotnet/shared/Microsoft.AspNetCore.All/$version
+sudo rm -rf /usr/share/dotnet/shared/Microsoft.AspNetCore.App/$version
+sudo rm -rf /usr/share/dotnet/host/fxr/$version
 ```
 
 SDK 및 런타임에 대한 부모 디렉터리는 이전 표에 표시된 것처럼 `dotnet --list-sdks` 및 `dotnet --list-runtimes` 명령의 출력에 나열됩니다.
@@ -107,6 +107,8 @@ SDK 및 런타임에 대한 부모 디렉터리는 이전 표에 표시된 것�
 
 [.NET 제거 도구](../additional-tools/uninstall-tool.md)(`dotnet-core-uninstall`)를 사용하면 시스템에서 .NET SDK 및 런타임을 제거할 수 있습니다. 제거해야 하는 버전을 지정할 수 있는 옵션 컬렉션이 제공됩니다.
 
+::: zone pivot="os-windows"
+
 ## <a name="visual-studio-dependency-on-net-core-sdk-versions"></a>.NET Core SDK 버전에 대한 Visual Studio 종속성
 
 Visual Studio 2019 버전 16.3 이전에는 Visual Studio 설치 관리자가 독립 실행형 .NET Core SDK 설치 관리자를 호출했습니다. 따라서 SDK 버전은 Windows **앱 및 기능** 대화 상자에 표시됩니다. 독립 실행형 설치 관리자를 사용하여 Visual Studio에서 설치한 .NET Core SDK를 제거하면 Visual Studio가 중단될 수 있습니다. SDK를 제거한 후 Visual Studio에서 문제가 발생하는 경우 해당 특정 버전의 Visual Studio에서 복구를 실행합니다. 다음 표에서는 .NET Core SDK 버전에 대한 몇 가지 Visual Studio 종속성을 보여줍니다.
@@ -120,6 +122,8 @@ Visual Studio 2019 버전 16.3 이전에는 Visual Studio 설치 관리자가 �
 | Visual Studio 2017 버전 15.8 | .NET Core SDK 2.1.4xx          |
 
 Visual Studio 2019 버전 16.3부터 Visual Studio는 .NET SDK의 자체 복사본을 담당합니다. 그런 이유로 **앱 및 기능** 대화 상자에 해당 SDK 버전이 더 이상 표시되지 않습니다.
+
+::: zone-end
 
 ## <a name="remove-the-nuget-fallback-folder"></a>NuGet 대체 폴더 제거
 

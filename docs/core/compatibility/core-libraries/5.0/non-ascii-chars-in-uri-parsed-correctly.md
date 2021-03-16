@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: Unix에서 비ASCII 문자를 포함하는 URI 경로가 올바르게 구문 분석됨'
-description: ASCII가 아닌 문자를 포함하는 절대 URI 경로가 Unix 플랫폼에서 올바르게 구문 분석되는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: ASCII가 아닌 문자를 포함하는 절대 URI 경로가 Unix 플랫폼에서 올바르게 구문 분석되는 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 94de4e0eb94a11153d873871d4003422a4286a0c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 50e9b4597a5ac0b73732a38ce662037292777a03
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759628"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257416"
 ---
 # <a name="uri-paths-with-non-ascii-characters-parse-correctly-on-unix"></a>Unix에서 비ASCII 문자를 포함하는 URI 경로가 올바르게 구문 분석됨
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759628"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-이전 버전의 .NET에서는 비ASCII 문자를 포함하는 절대 URI 경로가 Unix 플랫폼에서 잘못 구문 분석되고 경로 세그먼트가 중복됩니다. 절대 경로는 “/”로 시작하는 경로입니다. .NET 5.0에서는 구문 분석 문제가 해결되었습니다. 이전 버전의 .NET에서 .NET 5.0 이상으로 이동하는 경우 <xref:System.Uri.AbsoluteUri?displayProperty=nameWithType>, <xref:System.Uri.ToString?displayProperty=nameWithType>, 기타 <xref:System.Uri> 멤버에서 다른 값이 생성됩니다.
+이전 버전의 .NET에서는 비ASCII 문자를 포함하는 절대 URI 경로가 Unix 플랫폼에서 잘못 구문 분석되고 경로 세그먼트가 중복됩니다. 절대 경로는 “/”로 시작하는 경로입니다. .NET 5.0에서는 구문 분석 문제가 해결되었습니다. 이전 버전의 .NET에서 .NET 5 이상으로 이동하는 경우 <xref:System.Uri.AbsoluteUri?displayProperty=nameWithType>, <xref:System.Uri.ToString?displayProperty=nameWithType>, 기타 <xref:System.Uri> 멤버에서 다른 값이 생성됩니다.
 
 Unix에서 실행할 때 다음 코드의 출력을 살펴봅니다.
 
@@ -33,7 +33,7 @@ AbsoluteUri: /%C3%BCri/%C3%BCri
 ToString: /üri/üri
 ```
 
-.NET 5.0 이상 버전에서의 출력:
+.NET 5 이상 버전의 출력:
 
 ```text
 AbsoluteUri: /%C3%BCri

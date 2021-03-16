@@ -2,12 +2,12 @@
 title: dotnet 설치 스크립트
 description: .NET SDK 및 공유 런타임을 설치하는 dotnet-install 스크립트에 대해 알아봅니다.
 ms.date: 09/22/2020
-ms.openlocfilehash: 1904d0322774de25aeba7e7a53ab36ce135d685d
-ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
+ms.openlocfilehash: 51482ca70d08d86e02a493f1da49b056fed8d11c
+ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98957881"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102206689"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
@@ -52,6 +52,9 @@ dotnet-install.sh --help
 
 * Windows에서 작동하는 PowerShell 스크립트
 * Linux/macOS에서 작동하는 bash 스크립트
+
+> [!NOTE]
+> .NET은 원격 분석 데이터를 수집합니다. 옵트아웃하는 방법에 관한 자세한 내용은 [.NET SDK 원격 분석](telemetry.md)을 참조하세요.
 
 ### <a name="purpose"></a>용도
 
