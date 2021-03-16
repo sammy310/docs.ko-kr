@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: 역직렬화에 사용되지 않는 비공용 매개 변수가 없는 생성자'
-description: public이 아닌, 매개 변수가 없는 생성자가 JsonSerializer를 사용한 deserialization에 더 이상 사용되지 않는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 퍼블릭이 아닌, 매개 변수가 없는 생성자가 JsonSerializer를 사용한 deserialization에 더 이상 사용되지 않는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 10/18/2020
-ms.openlocfilehash: a2ea54b6a76692dae7d6e01b06b11218d66b1cd7
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 9781061fa89eb3bffb53a4f08bacbd88f3bc9265
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794701"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256272"
 ---
 # <a name="non-public-parameterless-constructors-not-used-for-deserialization"></a>역직렬화에 사용되지 않는 비공용 매개 변수가 없는 생성자
 
@@ -17,7 +17,7 @@ ms.locfileid: "98794701"
 
 .NET Standard 2.0 이상, 즉 버전 4.6.0-4.7.2를 지원하는 독립 실행형 [System.Text.Json NuGet 패키지](https://www.nuget.org/packages/System.Text.Json/)는 .NET Core 3.0 및 3.1의 기본 제공 동작과 일관되지 않게 작동합니다. .NET Core 3.x에서는 내부 및 프라이빗 생성자를 역직렬화에 사용할 수 있습니다. 독립형 패키지에서 비공용 생성자는 허용되지 않으며 비공용 매개 변수가 없는 생성자가 정의되지 않은 경우 <xref:System.MissingMethodException>이 throw됩니다.
 
-.NET 5.0 및 System.Text.Json NuGet 패키지 5.0.0부터 NuGet 패키지와 기본 제공 API 간에 동작이 일관됩니다. 매개 변수가 없는 생성자를 비롯한 비공용 생성자는 기본적으로 직렬 변환기에서 무시됩니다. 직렬 변환기는 역직렬화를 위해 다음 생성자 중 하나를 사용합니다.
+.NET 5 및 System.Text.Json NuGet 패키지 5.0.0부터 NuGet 패키지와 기본 제공 API 간에 동작이 일관됩니다. 매개 변수가 없는 생성자를 비롯한 비공용 생성자는 기본적으로 직렬 변환기에서 무시됩니다. 직렬 변환기는 역직렬화를 위해 다음 생성자 중 하나를 사용합니다.
 
 - <xref:System.Text.Json.Serialization.JsonConstructorAttribute> 주석이 달린 공용 생성자.
 - 공용 매개 변수가 없는 생성자.

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 69fd1a1944987d08a6ce1aee2790d0dbe06b9452
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4080cb38ca3b7d79c0ad4291198b13567511093c
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106373"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480836"
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 
@@ -594,8 +594,6 @@ C# 소스 코드 파일을 모듈로 컴파일하려면 다음 명령을 사용�
 ```console
 csc /t:module NumberUtil.cs
 ```
-
-C# 컴파일러의 명령줄 구문에 대한 자세한 내용은 [csc.exe를 사용한 명령줄 빌드](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요.
 
 그런 다음, [링커 옵션](/cpp/build/reference/linker-options)을 사용하여 두 모듈을 하나의 어셈블리로 컴파일합니다.
 

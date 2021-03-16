@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: af2198360670360f94f7fdf30d2890bc7dfd436d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d2695b1f271e57bb44ed3f94acbbe17b830fdd60
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99773864"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255695"
 ---
 # <a name="publish-net-apps-with-the-net-cli"></a>.NET CLI를 사용하여 .NET 앱 게시
 
@@ -137,7 +137,7 @@ FDE를 게시하면 앱을 실행하는 시스템에서 사용할 수 있는 최
 
 - `-r <RID>` 이 스위치는 식별자(RID)를 사용하여 대상 플랫폼을 지정합니다. 런타임 식별자 목록은 [런타임 식별자(RID) 카탈로그](../rid-catalog.md)를 참조하세요.
 
-- `--self-contained false` 이 스위치는 .NET Core SDK에 실행 파일을 FDE로 생성하도록 지시합니다.
+- `--self-contained false` 이 스위치는 SCD(자체 포함 배포)를 만드는 `-r` 스위치의 기본 동작을 사용하지 않도록 설정합니다. 해당 스위치는 FDE를 만듭니다.
 
 | 게시 모드                   | SDK 버전 | 명령                                                     |
 |--------------------------------|-------------|-------------------------------------------------------------|

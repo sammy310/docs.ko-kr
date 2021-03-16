@@ -2,12 +2,12 @@
 title: 레코드 형식 사용 - C# 자습서
 description: 레코드 종류를 사용하는 방법, 레코드의 계층 구조를 작성하는 방법, 클래스에 대해 레코드를 선택하는 시기에 대해 알아봅니다.
 ms.date: 11/12/2020
-ms.openlocfilehash: 8a2cb6966ab4f93432723fd6f82618efa86b26aa
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 33075c4cafc9a91683960daa8101c9f1defaa36a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688560"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258958"
 ---
 # <a name="create-record-types"></a>레코드 종류 만들기
 
@@ -23,7 +23,7 @@ C# 9에서는 클래스나 구조체 대신 만들 수 있는 새 참조 형식�
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-C# 9.0 이상 컴파일러를 포함하여 .NET 5 이상을 실행하도록 머신을 설정해야 합니다. C# 9.0 컴파일러는 [Visual Studio 2019 버전 16.8](https://visualstudio.microsoft.com/vs) 또는 [.NET 5.0 SDK](https://dotnet.microsoft.com/download)부터 사용할 수 있습니다.
+C# 9.0 이상 컴파일러를 포함하여 .NET 5 이상을 실행하도록 컴퓨터를 설정해야 합니다. C# 9.0 컴파일러는 [Visual Studio 2019 버전 16.8](https://visualstudio.microsoft.com/vs) 또는 [.NET 5.0 SDK](https://dotnet.microsoft.com/download)부터 사용할 수 있습니다.
 
 ## <a name="characteristics-of-records"></a>레코드의 특징
 
@@ -155,8 +155,8 @@ var growingDegreeDaysCopy = growingDegreeDays with { };
 
 ## <a name="summary"></a>요약
 
-이 자습서에서는 레코드의 여러 측면을 보여 주었습니다. 레코드는 기본 용도가 데이터 저장인 참조 형식에 대해 간결한 구문을 제공합니다. 개체 지향 클래스의 기본 용도는 책임을 정의하는 것입니다. 이 자습서에서는 간결한 구문을 사용하여 레코드에 대한 init 전용 속성을 선언할 수 있는 ‘위치 레코드’를 집중적으로 살펴보았습니다. 컴파일러는 레코드를 복사하고 비교하기 위해 레코드의 여러 멤버를 합성합니다. 레코드 종류에 필요한 다른 멤버를 추가할 수 있습니다. 컴파일러 생성 멤버는 상태가 변경되지 않는다는 점을 이해하고 변경 불가능한 레코드 형식을 만들 수 있습니다. 위치 레코드의 경우 `with` 식을 사용하여 비파괴적 변경을 쉽게 지원할 수 있습니다.
+이 자습서에서는 레코드의 여러 측면을 보여 주었습니다. 레코드는 기본 용도가 데이터 저장인 참조 형식에 대해 간결한 구문을 제공합니다. 개체 지향 클래스의 기본 용도는 책임을 정의하는 것입니다. 이 자습서에서는 간결한 구문을 사용하여 레코드에 대한 init 전용 속성을 선언할 수 있는 ‘위치 레코드’를 집중적으로 살펴보았습니다. 컴파일러는 레코드를 복사하고 비교하기 위해 레코드의 여러 멤버를 합성합니다. 레코드 종류에 필요한 다른 멤버를 추가할 수 있습니다. 컴파일러 생성 멤버는 상태가 변경되지 않는다는 점을 이해하고 변경 불가능한 레코드 형식을 만들 수 있습니다. 그리고 `with` 식을 사용하여 비파괴적 변경을 쉽게 지원할 수 있습니다.
 
 레코드는 형식을 정의하는 또 다른 방법을 추가합니다. `class` 정의를 사용하여 개체의 책임이나 동작에 중점을 둔 개체 지향 계층 구조를 만듭니다. 데이터를 저장할 뿐만 아니라 아주 작아서 효율적으로 복사할 수 있는 데이터 구조에 대해 `struct` 형식을 만듭니다. 값 기반 같음 및 비교를 원하지만 값을 복사하지 않고 참조 변수를 사용하려는 경우 레코드를 만듭니다.
 
-레코드에 대한 전체 설명은 [제안된 레코드 종류 사양](~/_csharplang/proposals/csharp-9.0/records.md)을 참조하세요.
+[레코드 형식에 대한 C# 언어 참조 설명서](../../language-reference/builtin-types/record.md) 및 [제안된 레코드 형식 사양](~/_csharplang/proposals/csharp-9.0/records.md)을 참조하여 레코드에 대한 자세한 설명을 확인할 수 있습니다.

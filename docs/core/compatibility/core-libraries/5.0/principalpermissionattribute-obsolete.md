@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: PrincipalPermissionAttribute는 오류로 인해 사용되지 않습니다.'
-description: PrincipalPermissionAttribute 생성자가 사용되지 않고 컴파일 시간 오류를 생성하는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: PrincipalPermissionAttribute 생성자가 사용되지 않고 컴파일 시간 오류를 생성하는 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 138bbf25fd493c1bb9c2b3f10b62681c735ea7b3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7568883935633e98b884b553efccf50504448b77
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759756"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257234"
 ---
 # <a name="principalpermissionattribute-is-obsolete-as-error"></a>PrincipalPermissionAttribute는 오류로 인해 사용되지 않습니다.
 
@@ -25,13 +25,13 @@ public void MyMethod()
 }
 ```
 
-.NET 5.0부터 메서드에 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 특성을 적용할 수 없습니다. 특성의 생성자는 사용되지 않으며 컴파일 시간 오류를 생성합니다. 다른 사용 중지 경고와 달리 이 오류는 표시되지 않도록 할 수 없습니다.
+.NET 5부터 메서드에 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 특성을 적용할 수 없습니다. 특성의 생성자는 사용되지 않으며 컴파일 시간 오류를 생성합니다. 다른 사용 중지 경고와 달리 이 오류는 표시되지 않도록 할 수 없습니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 
-<xref:System.Security.Permissions.SecurityAttribute>를 서브클래스하는 다른 형식처럼 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 형식은 . NET의 CAS(코드 액세스 보안) 인프라에 속합니다. .NET Framework 2.x - 4.x에서는 애플리케이션이 완전 신뢰 시나리오에서 실행되는 경우에도 런타임은 메서드 항목에 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 주석을 강제 적용합니다. .NET Core 및 .NET 5.0 이상에서는 CAS 특성을 지원하지 않으며 런타임에서는 이 특성을 무시합니다.
+<xref:System.Security.Permissions.SecurityAttribute>를 서브클래스하는 다른 형식처럼 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 형식은 . NET의 CAS(코드 액세스 보안) 인프라에 속합니다. .NET Framework 2.x - 4.x에서는 애플리케이션이 완전 신뢰 시나리오에서 실행되는 경우에도 런타임은 메서드 항목에 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 주석을 강제 적용합니다. .NET Core 및 .NET 5 이상에서는 CAS 특성을 지원하지 않으며 런타임에서는 해당 특성을 무시합니다.
 
-.NET Framework와 .NET Core 및 .NET 5.0 간의 이러한 동작 차이로 인해, 액세스가 차단되어야 했지만 실제로는 허용되어 “열기 실패” 시나리오가 발생할 수 있습니다. “열기 실패” 시나리오를 방지하기 위해 .NET 5.0 이상을 대상으로 하는 코드에는 더 이상 이 특성을 적용할 수 없습니다.
+.NET Framework와 .NET Core 및 .NET 5 간의 관련 동작 차이로 인해, 액세스가 차단되어야 했지만 실제로는 허용되어 “열기 실패” 시나리오가 발생할 수 있습니다. “열기 실패” 시나리오를 방지하기 위해 .NET 5 이상을 대상으로 하는 코드에는 더 이상 해당 특성을 적용할 수 없습니다.
 
 ## <a name="version-introduced"></a>도입된 버전
 

@@ -2,19 +2,19 @@
 title: 개체 지향 프로그래밍(C#)
 description: C#은 추상화, 캡슐화, 상속, 다형성 등 개체 지향 프로그래밍에 대한 모든 지원을 제공합니다.
 ms.date: 09/30/2020
-ms.openlocfilehash: b778b7c42bbfb1f20bdd2d83b9cb10512ea3f41b
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 57f1759edd2dd5f239e81351aed64bf061766b7b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794843"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102255407"
 ---
 # <a name="object-oriented-programming-c"></a>개체 지향 프로그래밍(C#)
 
 C#는 개체 지향 언어입니다. 개체 지향 프로그래밍에 사용되는 네 가지 주요 방법은 다음과 같습니다.
 
-- ‘추상화’는 형식 소비자의 불필요한 세부 정보를 숨기는 것입니다.
-- *캡슐화* 는 서로 관련된 속성, 메서드 및 기타 멤버의 그룹을 하나의 단위나 개체로 취급하는 것을 말합니다.
+- ‘추상화’는 관련된 속성, 메서드, 기타 멤버의 그룹을 단일 단위나 개체로 처리하는 것을 말합니다.
+- ‘캡슐화’는 형식 소비자의 불필요한 세부 정보를 숨기는 것입니다.
 - *상속* 은 기존 클래스를 기반으로 새로운 클래스를 만들 수 있는 능력을 나타냅니다.
 - *다형성* 은 동일한 속성 또는 메서드를 각각 다른 방식으로 구현하는 여러 클래스를 서로 교체하여 사용할 수 있음을 의미합니다.
 
@@ -183,7 +183,7 @@ public void MakeWithdrawal(decimal amount, DateTime date, string note)
 
 ## <a name="summary"></a>요약
 
-잘 알 수 없는 경우 [GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming)에서 이 자습서의 소스를 확인할 수 있습니다.
+잘 알 수 없는 경우 [GitHub 리포지토리](https://github.com/dotnet/docs/tree/main/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming)에서 이 자습서의 소스를 확인할 수 있습니다.
 
 이 자습서에서 개체 지향 프로그래밍에 사용되는 다양한 방법을 살펴봤습니다.
 

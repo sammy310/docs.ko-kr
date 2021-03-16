@@ -5,12 +5,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: f0535e2aa94cda96610acb0edb24f6d46cc4afa0
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 015be752e5c98ec732e1b95130979446071810f1
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100474176"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478063"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic 컴파일러 옵션 범주별 목록
 
@@ -26,7 +26,7 @@ Visual Basic IDE(통합 개발 환경) 내에서 프로그램을 컴파일하는
 |[-utf8output](utf8output.md)|UTF-8 인코딩을 사용하여 컴파일러 출력을 표시합니다.|  
 |[-verbose](verbose.md)|컴파일하는 동안 추가 정보를 출력합니다.|  
 |`-modulename:<string>`|소스 모듈의 이름을 지정합니다.|  
-|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|컴파일러 출력 언어를 지정합니다.|
+|[/preferreduilang](../../../csharp/language-reference/compiler-options/advanced.md#preferreduilang)|컴파일러 출력 언어를 지정합니다.|
   
 ## <a name="optimization"></a>최적화  
   

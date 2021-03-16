@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: 일부 라틴어-1 문자의 유니코드 범주가 변경됨'
-description: Char 메서드가 라틴어-1 범위의 문자에 대해 올바른 유니코드 범주를 반환하는 .NET 5.0의 세계화 관련 호환성이 손상되는 변경에 대해 알아봅니다.
+description: Char 메서드가 라틴어-1 범위의 문자에 대해 올바른 유니코드 범주를 반환하는 .NET 5의 세계화 관련 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 04/07/2020
-ms.openlocfilehash: 8bd093a89857c83921fc0bf987348b529f74ce68
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 03355c488d2bdae78f989e647c9b5b7913d73649
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760050"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256675"
 ---
 # <a name="unicode-category-changed-for-some-latin-1-characters"></a>일부 라틴어-1 문자의 유니코드 범주가 변경됨
 
@@ -15,11 +15,11 @@ ms.locfileid: "95760050"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-이전 .NET 버전에서 <xref:System.Char> 메서드는 라틴어-1 범위의 문자에 대해 유니코드 범주의 고정 목록을 사용했습니다. 그러나 유니코드 표준은 해당 API가 구현된 이후 이러한 문자 중 일부의 범주를 변경했으며 이에 따른 불일치가 발생합니다. 또한 <xref:System.Char> API와 <xref:System.Globalization.CharUnicodeInfo> API 간에 불일치가 있었으며, 이는 유니코드 표준을 따릅니다. .NET 5.0 이상 버전에서 <xref:System.Char> 메서드는 모든 문자에 대한 유니코드 표준과 일치하는 유니코드 범주를 사용하고 반환합니다.
+이전 .NET 버전에서 <xref:System.Char> 메서드는 라틴어-1 범위의 문자에 대해 유니코드 범주의 고정 목록을 사용했습니다. 그러나 유니코드 표준은 해당 API가 구현된 이후 이러한 문자 중 일부의 범주를 변경했으며 이에 따른 불일치가 발생합니다. 또한 <xref:System.Char> API와 <xref:System.Globalization.CharUnicodeInfo> API 간에 불일치가 있었으며, 이는 유니코드 표준을 따릅니다. .NET 5 이상 버전에서 <xref:System.Char> 메서드는 모든 문자에 대한 유니코드 표준과 일치하는 유니코드 범주를 사용하고 반환합니다.
 
 다음 표에서는 .NET 5.0에서 유니코드 범주가 변경된 문자를 보여 줍니다.
 
-| 문자    | 유니코드 범주<br>이전 .NET 버전 | 유니코드 범주<br>.NET 5.0 이상 버전 |
+| 문자    | 유니코드 범주<br>이전 .NET 버전 | 유니코드 범주<br>.NET 5 이상 버전 |
 |:------------:|:---------------------------------------------:|:--------------------------------------------------:|
 | §(\u00a7)   | `OtherSymbol`                                 | `OtherPunctuation`                                 |
 | ª(\u00aa)   | `LowercaseLetter`                             | `OtherLetter`                                      |

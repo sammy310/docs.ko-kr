@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 28a84814d1df96935f7533fa00f0bb50cf84def8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3f08c1d8aabae3e698dbf2fcd0a52511136ba899
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279183"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259917"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)
 
 MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지만 Windows 기반 UI(사용자 인터페이스)를 사용합니다. 이 도구를 사용하면 배포 및 애플리케이션 매니페스트를 만들고, 편집하고, 서명할 수 있습니다. Mageui.exe로 만든 새 매니페스트는 .NET Framework 4 클라이언트 프로필을 대상으로 합니다. 이전 버전의 MageUI.exe는 이전 .NET Framework 버전을 대상으로 사용해야 합니다. 매니페스트에서 어셈블리를 추가 또는 제거하거나 기존 매니페스트를 다시 서명할 때 MageUI.exe는 매니페스트를 대상 .NET Framework 4 클라이언트 프로필로 업데이트하지 않습니다. 자세한 내용은 [Mage.exe(매니페스트 생성 및 편집 도구)](mage-exe-manifest-generation-and-editing-tool.md)를 참조하세요.
 
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
 
  Mage.exe 및 MageUI.exe의 두 버전이 Visual Studio의 구성 요소로 포함되어 있습니다. 버전 정보를 보려면 MageUI.exe를 실행하고 **도움말** 을 선택하고 **정보** 를 선택합니다. 이 설명서는 Mage.exe 및 MageUI.exe의 버전 4.0.x.x에 대해 설명합니다.
 
@@ -83,7 +83,7 @@ MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지�
   
  **애플리케이션 매니페스트** 탭은 다음 탭으로 구성됩니다.  
   
-|UI 요소|설명|  
+|UI 요소|Description|  
 |----------------|-----------------|  
 |**이름**|이 배포에 대한 식별 정보를 지정합니다.|  
 |**설명**|게시자, 제품 및 지원 정보를 지정합니다.|  
@@ -95,7 +95,7 @@ MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지�
 
  **이름** 탭은 애플리케이션 매니페스트를 처음 만들거나 열 때 표시됩니다. 이 탭은 배포를 고유하게 식별하고 선택적으로 유효한 대상 플랫폼을 지정합니다.  
   
-|UI 요소|설명|  
+|UI 요소|Description|  
 |----------------|-----------------|  
 |**이름**|필수 요소. 애플리케이션 매니페스트의 이름입니다. 대개 파일 이름과 같습니다.|  
 |**Version**|필수 요소. *N.N.N.N* 형식으로 된 배포의 버전 번호이며 첫 번째 주요 빌드 번호만 필요합니다. 예를 들어 애플리케이션 버전 1.0에 대한 유효한 값에는 `1`, `1.0`, `1.0.0` 및 `1.0.0.0`이 포함됩니다.|  
@@ -144,7 +144,7 @@ MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지�
 
  **배포 매니페스트** 탭은 다음 탭으로 구성됩니다.  
   
-|UI 요소|설명|  
+|UI 요소|Description|  
 |----------------|-----------------|  
 |**이름**|이 배포에 대한 식별 정보를 지정합니다.|  
 |**설명**|게시자, 제품 및 지원 정보를 지정합니다.|  
@@ -156,7 +156,7 @@ MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지�
 
  **이름** 탭은 배포 매니페스트를 처음 만들거나 열 때 표시됩니다. 이 탭은 배포를 고유하게 식별하고 선택적으로 유효한 대상 플랫폼을 지정합니다.  
   
-|UI 요소|설명|  
+|UI 요소|Description|  
 |----------------|-----------------|  
 |**이름**|필수 요소. 배포 매니페스트의 이름입니다. 대개 파일 이름과 같습니다.|  
 |**Version**|필수 요소. *N.N.N.N* 형식으로 된 배포의 버전 번호이며 첫 번째 주요 빌드 번호만 필요합니다. 예를 들어 애플리케이션 버전 1.0에 대한 유효한 값에는 `1`, `1.0`, `1.0.0` 및 `1.0.0.0`이 포함됩니다.|  

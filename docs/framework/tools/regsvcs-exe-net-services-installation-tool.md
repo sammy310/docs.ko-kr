@@ -10,12 +10,12 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-ms.openlocfilehash: 58a20084457cb217f3af73f4b4ff9ea251647782
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a989ddf8b14806879917e4078f60486f225b00e3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238551"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259205"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe(.NET 서비스 설치 도구)
 
@@ -27,7 +27,7 @@ ms.locfileid: "96238551"
   
 - 프로그래밍 방식으로 클래스에 추가한 서비스를 구성합니다.  
   
- 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
+ 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.  
   
  명령 프롬프트에 다음을 입력합니다.  
   
@@ -92,4 +92,4 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
 
 - [도구](index.md)
 - [방법: 강력한 이름으로 어셈블리 서명](../../standard/assembly/sign-strong-name.md)
-- [명령 프롬프트](developer-command-prompt-for-vs.md)
+- [개발자 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)

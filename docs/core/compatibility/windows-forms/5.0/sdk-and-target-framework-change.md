@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: WinForms 및 WPF 앱이 Microsoft.NET.Sdk를 사용함'
-description: Windows Forms 및 Windows Presentation Framework 앱이 .NET Core WinForms 및 WPF SDK 대신 .NET SDK를 사용하는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: Windows Forms 및 Windows Presentation Framework 앱이 .NET Core WinForms 및 WPF SDK 대신 .NET SDK를 사용하는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 09/18/2020
-ms.openlocfilehash: 5eafed03fbf034f6a6457217a8527a877214e239
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 408233f6f8801fb3d4e53beab28c26a777a4a3e1
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633821"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256207"
 ---
 # <a name="winforms-and-wpf-apps-use-microsoftnetsdk"></a>WinForms 및 WPF 앱이 Microsoft.NET.Sdk를 사용함
 
@@ -15,7 +15,7 @@ Windows Forms 앱과 WPF(Windows Presentation Framework) 앱은 이제 .NET Core
 
 ## <a name="change-description"></a>변경 내용 설명
 
-이전 .NET Core 버전에서는 WinForms 앱과 WPF 앱이 별도의 [프로젝트 SDK](../../../project-sdk/overview.md)(`Microsoft.NET.Sdk.WindowsDesktop`)를 사용했습니다. .NET 5.0부터 WinForms 및 WPF SDK는 .NET SDK(`Microsoft.NET.Sdk`)와 통합되었습니다. 또한 .NET 5에서 새 [TFM(대상 프레임워크 모니커)](../../../../standard/frameworks.md)이 `netcoreapp` 및 `netstandard`를 대체합니다. 다음 예제에서는 .NET 5.0 이상으로 대상을 변경할 때 WPF 프로젝트 파일에 수행해야 하는 변경을 보여 줍니다.
+이전 .NET Core 버전에서는 WinForms 앱과 WPF 앱이 별도의 [프로젝트 SDK](../../../project-sdk/overview.md)(`Microsoft.NET.Sdk.WindowsDesktop`)를 사용했습니다. .NET 5부터 WinForms 및 WPF SDK는 .NET SDK(`Microsoft.NET.Sdk`)와 통합되었습니다. 또한 .NET 5에서 새 [TFM(대상 프레임워크 모니커)](../../../../standard/frameworks.md)이 `netcoreapp` 및 `netstandard`를 대체합니다. 다음 예제에서는 .NET 5 이상으로 대상을 변경할 때 WPF 프로젝트 파일에서 변경할 내용을 보여 줍니다.
 
 이전 .NET Core 버전:
 
@@ -31,7 +31,7 @@ Windows Forms 앱과 WPF(Windows Presentation Framework) 앱은 이제 .NET Core
 </Project>
 ```
 
-.NET 5.0 이상 버전:
+.NET 5 이상 버전:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

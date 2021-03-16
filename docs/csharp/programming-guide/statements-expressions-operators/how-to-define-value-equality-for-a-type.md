@@ -1,6 +1,6 @@
 ---
-title: 형식에 대한 값 같음을 정의하는 방법 - C# 프로그래밍 가이드
-description: 형식에 대한 값 같음을 정의하는 방법을 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
+title: 클래스 또는 구조체에 대한 값 같음을 정의하는 방법 - C# 프로그래밍 가이드
+description: 클래스 또는 구조체에 대한 값 같음을 정의하는 방법을 알아봅니다. 코드 예제를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 9523ba99f877fde7207042ecb8d28548168a68cb
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: a63fd8d11d0241063364e0156ee73a86aaeb7b35
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162728"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259566"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>형식에 대한 값 같음을 정의하는 방법(C# 프로그래밍 가이드)
+# <a name="how-to-define-value-equality-for-a-class-or-struct-c-programming-guide"></a>클래스 또는 구조체에 대한 값 같음을 정의하는 방법(C# 프로그래밍 가이드)
 
-클래스 또는 구조체를 정의할 때 형식에 대한 값 같음(또는 동등)의 사용자 지정 정의를 만드는 것이 적합한지 결정합니다. 일반적으로 형식의 개체를 일종의 컬렉션에 추가해야 하는 경우 또는 주요 용도가 필드 또는 속성 집합 저장인 경우 값 같음을 구현합니다. 형식의 모든 필드 및 속성 비교를 기준으로 값 같음의 정의를 만들거나, 하위 집합을 기준으로 정의를 만들 수 있습니다.
+[레코드](../classes-and-structs/records.md)를 정의하는 경우 컴파일러가 값 같음을 자동으로 구현합니다. 클래스 또는 구조체를 정의할 때 형식에 대한 값 같음(또는 동등)의 사용자 지정 정의를 만드는 것이 적합한지 결정합니다. 일반적으로 형식의 개체를 일종의 컬렉션에 추가해야 하는 경우 또는 주요 용도가 필드 또는 속성 집합 저장인 경우 값 같음을 구현합니다. 형식의 모든 필드 및 속성 비교를 기준으로 값 같음의 정의를 만들거나, 하위 집합을 기준으로 정의를 만들 수 있습니다.
 
 두 경우 모두 및 클래스와 구조체 둘 다에서 구현은 다음과 같은 동등의 5가지 사항을 따라야 합니다(다음 규칙의 경우 `x`, `y` 및 `z`가 Null이 아닌 것으로 가정).  
   

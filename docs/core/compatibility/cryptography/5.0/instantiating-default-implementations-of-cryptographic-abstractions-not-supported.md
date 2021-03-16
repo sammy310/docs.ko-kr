@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: 암호화 추상화의 기본 구현 인스턴스화는 지원되지 않습니다.'
-description: 암호화 추상화에 대한 매개 변수가 없는 Create() 오버로드가 사용되지 않는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 암호화 추상화에 대한 매개 변수가 없는 Create() 오버로드가 사용되지 않는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 10/16/2020
-ms.openlocfilehash: 8ed7d0b72347ec41ec65ccd9e4004266619c84f7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b75f3568317d1db8ae1bb629f760aaec7e69776a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759888"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256792"
 ---
 # <a name="instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported"></a>암호화 추상화의 기본 구현 인스턴스화는 지원되지 않습니다.
 
@@ -41,7 +41,7 @@ Console.WriteLine(alg.GetType());
 HashAlgorithm alg = HashAlgorithm.Create();
 ```
 
-.NET 5.0 이상 버전에서 <xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType>과 같은 추상 암호화 기본 팩터리는 사용되지 않는 것으로 표시되고 ID `SYSLIB0007`을 사용하여 컴파일 타임 경고를 생성합니다. 런타임 시 이러한 메서드는 <xref:System.PlatformNotSupportedException>을 계속 throw합니다.
+.NET 5 이상 버전에서 <xref:System.Security.Cryptography.HashAlgorithm.Create?displayProperty=nameWithType>과 같은 추상 암호화 기본 팩터리는 사용되지 않는 것으로 표시되고 ID `SYSLIB0007`을 사용하여 컴파일 시간 경고를 생성합니다. 런타임 시 이러한 메서드는 <xref:System.PlatformNotSupportedException>을 계속 throw합니다.
 
 ```csharp
 // Throws PlatformNotSupportedException.

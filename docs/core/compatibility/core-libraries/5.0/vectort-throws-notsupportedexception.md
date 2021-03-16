@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: Vector<T>가 NotSupportedException을 throw함'
-description: Vector<T>가 지원되지 않는 형식 매개 변수에 대해 항상 예외를 throw하는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: Vector<T>가 지원되지 않는 형식 매개 변수에 대해 항상 예외를 throw하는 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 63db7c6b720735b180ed11098227b31a14008f74
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: dccd39c01f4debd7d1432195e7f3cb14aeda5f65
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759768"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257013"
 ---
 # <a name="vectort-always-throws-notsupportedexception-for-unsupported-types"></a>Vector\<T>가 지원되지 않는 형식에 대해 항상 NotSupportedException을 throw
 
@@ -17,7 +17,7 @@ ms.locfileid: "95759768"
 
 이전에는 `T`가 [지원되지 않는 형식](#unsupported-types)인 경우 <xref:System.Numerics.Vector%601>의 멤버가 항상 <xref:System.NotSupportedException>을 throw하지는 않았습니다. 하드웨어 가속을 지원하는 코드 경로 때문에 예외가 throw되지 않는 경우가 있었습니다. 예를 들어 ARM32 같이 하드웨어 가속이 없는 플랫폼에서는 `Vector<bool> + Vector<bool>`가 예외를 throw하는 대신 `default`를 반환했습니다. 지원되지 않는 형식의 경우 <xref:System.Numerics.Vector%601> 멤버는 다양한 플랫폼 및 하드웨어 구성에서 일관되지 않은 동작을 보였습니다.
 
-.NET 5.0부터 <xref:System.Numerics.Vector%601> 멤버는 `T`가 지원되는 형식이 아닌 경우 모든 하드웨어 구성에서 항상 <xref:System.NotSupportedException>을 throw합니다.
+.NET 5부터 <xref:System.Numerics.Vector%601> 멤버는 `T`가 지원되는 형식이 아닌 경우 모든 하드웨어 구성에서 항상 <xref:System.NotSupportedException>을 throw합니다.
 
 ### <a name="unsupported-types"></a>지원되지 않는 형식
 

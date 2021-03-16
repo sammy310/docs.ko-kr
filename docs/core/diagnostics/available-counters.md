@@ -3,12 +3,12 @@ title: .NET의 잘 알려진 EventCounters
 description: .NET 런타임 및 라이브러리에서 게시하는 EventCounters를 검토합니다.
 ms.topic: reference
 ms.date: 12/17/2020
-ms.openlocfilehash: 8bd14c7caf004cefe73d5b0676b9fa3280840442
-ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
+ms.openlocfilehash: db7417993786eae18c9d7b6cc3bb79284d543dd3
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97737296"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189945"
 ---
 # <a name="well-known-eventcounters-in-net"></a>.NET의 잘 알려진 EventCounters
 
@@ -16,7 +16,7 @@ ms.locfileid: "97737296"
 
 ## <a name="systemruntime-counters"></a>System.Runtime 카운터
 
-다음 카운터는 .NET 런타임(CoreCLR)의 일부로 게시되며 [`RuntimeEventSource.cs`](https://github.com/dotnet/coreclr/blob/master/src/System.Private.CoreLib/src/System/Diagnostics/Eventing/RuntimeEventSource.cs)에서 유지 관리됩니다.
+다음 카운터는 .NET 런타임(CoreCLR)의 일부로 게시되며 [`RuntimeEventSource.cs`](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Private.CoreLib/src/System/Diagnostics/Tracing/RuntimeEventSource.cs)에서 유지 관리됩니다.
 
 | 카운터 | 설명 |
 |--|--|

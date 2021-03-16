@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: UTF-7 코드 경로가 사용되지 않음'
-description: UTF7 및 UTF7Encoding 생성자가 사용되지 않는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: UTF7 및 UTF7Encoding 생성자가 사용되지 않는 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: d58305f59a30cdf31a525c3789bd6497201c50ba
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7a0ba771e0fac2908ca37f16afb10118e1537161
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759655"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256987"
 ---
 # <a name="utf-7-code-paths-are-obsolete"></a>UTF-7 코드 경로가 사용되지 않음
 
@@ -26,7 +26,7 @@ Encoding enc2 = Encoding.GetEncoding(65000); // By code page.
 
 또한 UTF-7 인코딩을 나타내는 인스턴스는 시스템에 등록된 모든 <xref:System.Text.Encoding> 인스턴스를 열거하는 <xref:System.Text.Encoding.GetEncodings?displayProperty=nameWithType> 메서드로 열거되었습니다.
 
-.NET 5.0부터 <xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> 속성 및 <xref:System.Text.UTF7Encoding.%23ctor%2A> 생성자는 사용되지 않으며 경고 `SYSLIB0001`(또는 미리 보기 버전의 `MSLIB0001`)을 생성합니다. 그러나 <xref:System.Text.UTF7Encoding> 클래스를 사용할 때 호출자가 수신하는 경고 수를 줄이기 위해 <xref:System.Text.UTF7Encoding> 형식 자체는 사용되지 않음으로 표시되지 않습니다.
+.NET 5부터 <xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> 속성 및 <xref:System.Text.UTF7Encoding.%23ctor%2A> 생성자는 사용되지 않으며 경고 `SYSLIB0001`(또는 미리 보기 버전의 `MSLIB0001`)을 생성합니다. 그러나 <xref:System.Text.UTF7Encoding> 클래스를 사용할 때 호출자가 수신하는 경고 수를 줄이기 위해 <xref:System.Text.UTF7Encoding> 형식 자체는 사용되지 않음으로 표시되지 않습니다.
 
 ```csharp
 // The next line generates warning SYSLIB0001.

@@ -4,12 +4,12 @@ description: 시계열 데이터에 대한 변칙 검색 애플리케이션을 �
 ms.date: 12/04/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f001cb912bb695a7edb0917f3306ca9bfbe311ac
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 7edb84ae53f1da7903cf4b3f77d215206ffbf1ef
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98187784"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259826"
 ---
 # <a name="tutorial-detect-anomalies-in-time-series-with-mlnet"></a>자습서: ML.NET을 사용하여 시계열의 변칙 검색
 
@@ -32,7 +32,7 @@ ms.locfileid: "98187784"
 
 ## <a name="create-a-console-application"></a>콘솔 애플리케이션 만들기
 
-1. “ProductSalesAnomalyDetection”이라고 하는 **C# .NET Core 콘솔 애플리케이션** 을 만듭니다.
+1. “PhoneCallsAnomalyDetection”이라고 하는 **C# .NET Core 콘솔 애플리케이션** 을 만듭니다.
 
 2. 프로젝트에서 *Data* 디렉터리를 만들어 데이터 세트 파일을 저장합니다.
 

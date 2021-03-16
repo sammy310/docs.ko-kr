@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: LastIndexOf에서 빈 검색 문자열 처리 기능이 향상됨'
-description: LastIndexOf 및 관련 API가 길이가 0인 substring을 검색할 때 올바른 값을 반환하는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: LastIndexOf 및 관련 API가 길이가 0인 substring을 검색할 때 올바른 값을 반환하는 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 6d1a676eb2b9ed3de6a745db27d53bd43560a32f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9dc34300d867fe1bb9264494b3f2261bad2c1eea
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759631"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257429"
 ---
 # <a name="lastindexof-has-improved-handling-of-empty-search-strings"></a>LastIndexOf에서 빈 검색 문자열 처리 기능이 향상됨
 
@@ -24,7 +24,7 @@ ReadOnlySpan<char> span = "Hello";
 Console.WriteLine(span.LastIndexOf("")); // prints '0' (incorrect)
 ```
 
-.NET 5.0부터는 이러한 API가 `LastIndexOf`에 대한 올바른 값을 반환합니다.
+.NET 5부터는 해당 API가 `LastIndexOf`에 대한 올바른 값을 반환합니다.
 
 ```csharp
 Console.WriteLine("Hello".LastIndexOf("")); // prints '5' (correct)
@@ -45,7 +45,7 @@ Console.WriteLine(span.LastIndexOf("")); // prints '5' (correct)
 
 ## <a name="recommended-action"></a>권장 조치
 
-아무 작업도 수행할 필요가 없습니다. .NET 5.0 런타임은 새로운 동작을 자동으로 제공합니다.
+아무 작업도 수행할 필요가 없습니다. .NET 5 런타임은 새로운 동작을 자동으로 제공합니다.
 
 이전 동작을 복원할 호환성 스위치가 없습니다.
 

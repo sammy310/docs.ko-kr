@@ -2,12 +2,12 @@
 title: RabbitMQ를 사용하여 개발 또는 테스트 환경에 대한 이벤트 서비스 구현
 description: 컨테이너화된 .NET 애플리케이션의 .NET 마이크로 서비스 아키텍처 | RabbitMQ를 사용하여 개발 또는 테스트 환경의 통합 이벤트에 대해 이벤트 버스 메시징 구현
 ms.date: 01/13/2021
-ms.openlocfilehash: a1e7d11e376080a03269f202fa6ae24ffeb0f4d2
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: b67b6cf92ac2c29b9eff07c2c9603206e42968a3
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98188083"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258080"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>RabbitMQ를 사용하여 개발 또는 테스트 환경에 대한 이벤트 서비스 구현
 
@@ -35,7 +35,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>RabbitMQ를 사용하여 단순 게시 메서드 구현
 
-다음 코드는 전체 시나리오를 보여 주기 위해 RabbitMQ에서 이벤트 버스를 구현하는 *_간소화된_* 버전입니다. 실제로는 이러한 방식으로 연결을 처리하지 않습니다. 전체 구현을 확인하려면 [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) 리포지토리에서 실제 코드를 참조하세요.
+다음 코드는 전체 시나리오를 보여주기 위해 RabbitMQ에서 이벤트 버스를 구현하는 ***간소화된*** 버전입니다. 실제로는 이러한 방식으로 연결을 처리하지 않습니다. 전체 구현을 확인하려면 [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) 리포지토리에서 실제 코드를 참조하세요.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -116,12 +116,14 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 RabbitMQ에 대한 지원을 제공하는 프로덕션 준비가 완료된 솔루션입니다.
 
-- _ *EasyNetQ** - RabbitMQ용 오픈 소스 .NET API 클라이언트
+- **EasyNetQ** - RabbitMQ용 오픈 소스 .NET API 클라이언트\
   <https://easynetq.com/>
 
 - **MassTransit** \
   <https://masstransit-project.com/>
   
+- **Rebus** - 오픈 소스 .NET Service Bus <https://github.com/rebus-org/Rebus>
+
 > [!div class="step-by-step"]
 > [이전](integration-event-based-microservice-communications.md)
 > [다음](subscribe-events.md)

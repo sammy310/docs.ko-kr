@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: SSE 및 SSE2 CompareGreaterThan 메서드가 NaN 입력을 올바르게 처리함'
-description: SSE 및 SSE2 비교 메서드가 NaN 입력을 올바르게 처리하도록 수정된 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: SSE 및 SSE2 비교 메서드가 NaN 입력을 올바르게 처리하도록 수정된 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 4abffa8d8bf2abfa9ef83673db9154de035d952c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 23955f08f70d82635a0a93b9bbb9a05efbbab6a9
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759640"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257117"
 ---
 # <a name="sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs"></a>SSE 및 SSE2 CompareGreaterThan 메서드가 NaN 입력을 올바르게 처리함
 
@@ -26,7 +26,7 @@ ms.locfileid: "95759640"
 
 이전에는 나열된 <xref:System.Runtime.Intrinsics.X86.Sse> 및 <xref:System.Runtime.Intrinsics.X86.Sse2> 메서드에 대한 `NaN` 입력이 잘못된 결과를 반환했습니다. 또한 결과가 <xref:System.Runtime.Intrinsics.X86.Avx> 클래스의 해당 메서드에서 생성되는 결과와 달랐습니다.
 
-.NET 5.0부터는 이러한 메서드가 `NaN` 입력을 올바르게 처리하고 <xref:System.Runtime.Intrinsics.X86.Avx> 클래스의 해당 메서드와 동일한 결과를 반환합니다.
+.NET 5부터는 해당 메서드가 `NaN` 입력을 올바르게 처리하고 <xref:System.Runtime.Intrinsics.X86.Avx> 클래스의 해당 메서드와 동일한 결과를 반환합니다.
 
 SSE(스트리밍 SIMD 확장) 및 SSE2(스트리밍 SIMD 확장 2) ISA(업계 표준 아키텍처)는 이러한 비교 방법을 위한 직접적인 하드웨어 지원을 제공하지 않으므로 소프트웨어에서 구현됩니다. 이전에는 메서드가 잘못 구현되었으며 `NaN` 입력을 잘못 처리했습니다. 네이티브에서 포팅된 코드의 경우 잘못된 동작으로 인해 버그가 발생할 수 있습니다. 256비트 코드 경로의 경우 메서드는 <xref:System.Runtime.Intrinsics.X86.Avx> 클래스의 동등한 메서드에 다른 결과를 생성할 수도 있습니다.
 
