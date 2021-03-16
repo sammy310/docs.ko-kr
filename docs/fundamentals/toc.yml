@@ -172,7 +172,7 @@ items:
       - name: 개요
         displayName: 'diagnostics,tools,tooling,productivity,instrumentation'
         href: tools-and-productivity.md
-      - name: .NET Core SDK
+      - name: .NET SDK
         items:
           - name: 개요
             displayName: '.net sdk,software development kit,software dev kit,tool'
@@ -2288,46 +2288,38 @@ items:
                 href: ../standard/design-guidelines/dependency-properties.md
   - name: 마이그레이션 가이드
     items:
+      - name: 개요
+        href: ../core/porting/index.md
+      - name: .NET 업그레이드 도우미 도구
+        items:
+          - name: 개요
+            href: ../core/porting/upgrade-assistant-overview.md
+          - name: Windows Presentation Foundation
+            href: ../core/porting/upgrade-assistant-wpf-framework.md
+          - name: Windows Forms
+            href: ../core/porting/upgrade-assistant-winforms-framework.md
+          - name: ASP.NET Core
+            href: ../core/porting/upgrade-assistant-aspnetmvc.md
       - name: 주요 변경 내용
         displayName: app compatibility
         href: ../core/compatibility/
-      - name: 마이그레이션
-        items:
-          - name: .NET Core 2.0 ~ 2.1
-            href: ../core/migration/20-21.md
-          - name: 속성에 AssemblyInfo 특성 매핑
-            href: ../core/migration/assembly-info.md
-      - name: .NET Framework 포트
-        items:
-          - name: 개요
-            href: ../core/porting/index.md
-          - name: .NET 업그레이드 도우미 도구
-            items:
-              - name: 개요
-                href: ../core/porting/upgrade-assistant-overview.md
-              - name: Windows Presentation Foundation
-                href: ../core/porting/upgrade-assistant-wpf-framework.md
-              - name: Windows Forms
-                href: ../core/porting/upgrade-assistant-winforms-framework.md
-              - name: ASP.NET
-                href: ../core/porting/upgrade-assistant-aspnetmvc.md
-          - name: 타사 종속성 분석
-            href: ../core/porting/third-party-deps.md
-          - name: 포트 라이브러리
-            href: ../core/porting/libraries.md
-          - name: .NET에 대한 프로젝트 구성
-            href: ../core/porting/project-structure.md
-          - name: 사용할 수 없는 기술
-            href: ../core/porting/net-framework-tech-unavailable.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
-          - name: 도구
-            href: ../core/porting/tools.md
-          - name: Windows 호환 기능 팩 사용
-            href: ../core/porting/windows-compat-pack.md
-          - name: Windows Forms 프로젝트 포팅
-            href: /dotnet/desktop/winforms/migration/?view=netdesktop-5.0
-          - name: WPF 프로젝트 포팅
-            href: /dotnet/desktop/wpf/migration/convert-project-from-net-framework
-          - name: 포트 C++/CLI 프로젝트
-            href: ../core/porting/cpp-cli.md
+      - name: 프로젝트 AssemblyInfo 특성을 속성에 매핑
+        href: ../core/migration/assembly-info.md
+      - name: 타사 종속성 분석
+        href: ../core/porting/third-party-deps.md
+      - name: 포트 라이브러리
+        href: ../core/porting/libraries.md
+      - name: .NET에 대한 프로젝트 구성
+        href: ../core/porting/project-structure.md
+      - name: 사용할 수 없는 기술
+        href: ../core/porting/net-framework-tech-unavailable.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
+      - name: Windows 호환 기능 팩 사용
+        href: ../core/porting/windows-compat-pack.md
+      - name: Windows Forms 프로젝트 포팅
+        href: /dotnet/desktop/winforms/migration/?view=netdesktop-5.0
+      - name: WPF 프로젝트 포팅
+        href: /dotnet/desktop/wpf/migration/convert-project-from-net-framework?view=netdesktop-5.0
+      - name: 포트 C++/CLI 프로젝트
+        href: ../core/porting/cpp-cli.md
       - name: 서버 앱에 대해 .NET 5와 .NET Framework 중에서 선택
         href: ../standard/choosing-core-framework-server.md
