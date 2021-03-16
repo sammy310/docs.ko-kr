@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: DataGridView 관련 API가 InvalidOperationException을 throw함'
-description: 개체의 DataGridViewCellAccessibleObject.Owner 값이 null인 경우 일부 DataGridView 관련 API가 예외를 throw하는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 개체의 DataGridViewCellAccessibleObject.Owner 값이 null인 경우 일부 DataGridView 관련 API가 예외를 throw하는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 09/18/2020
-ms.openlocfilehash: 927b1c9160700159a45aa1472b8d96f1a9ecfe25
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e49ce0ebecb5a9ab4ed7f0e0d70d994ab751bc58
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759911"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256116"
 ---
 # <a name="datagridview-related-apis-now-throw-invalidoperationexception"></a>DataGridView 관련 API가 이제 InvalidOperationException을 throw함
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759911"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-이전 .NET 버전에서는 영향을 받는 API가 호출되고 <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> 값이 `null`일 때 <xref:System.NullReferenceException>을 throw합니다. .NET 5.0부터 이러한 API는 호출될 때 <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> 값이 `null`인 경우 <xref:System.NullReferenceException> 대신 <xref:System.InvalidOperationException>을 throw합니다.
+이전 .NET 버전에서는 영향을 받는 API가 호출되고 <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> 값이 `null`일 때 <xref:System.NullReferenceException>을 throw합니다. .NET 5부터 해당 API는 호출될 때 <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Owner> 값이 `null`인 경우 <xref:System.NullReferenceException> 대신 <xref:System.InvalidOperationException>을 throw합니다.
 
 <xref:System.InvalidOperationException> throw는 .NET 런타임의 동작을 따릅니다. 또한 잘못된 속성을 명확하게 전달하여 디버깅 환경을 개선합니다.
 

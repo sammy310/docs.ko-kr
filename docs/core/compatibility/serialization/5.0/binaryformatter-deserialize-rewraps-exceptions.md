@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: BinaryFormatter.Deserialize가 일부 예외를 다시 래핑함'
-description: BinaryFormatter.Deserialize가 SerializationException 내에서 일부 예외 개체를 다시 래핑하는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: BinaryFormatter.Deserialize가 SerializationException 내에서 일부 예외 개체를 다시 래핑하는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 08/18/2020
-ms.openlocfilehash: 90dc4cce6785fdb38644cca2a2e9aff65eb7a313
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8e357035908f34c6c5c77d2a0728ab213bdc791a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759684"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256350"
 ---
 # <a name="binaryformatterdeserialize-rewraps-some-exceptions-in-serializationexception"></a>BinaryFormatter.Deserialize가 SerializationException에서 일부 예외를 다시 래핑
 
@@ -17,7 +17,7 @@ ms.locfileid: "95759684"
 
 이전에는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> 메서드가 <xref:System.ArgumentNullException> 같은 임의 예외에서 스택을 호출자에게 전파하도록 허용했습니다.
 
-.NET 5.0 이상에서 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> 메서드는 잘못된 deserialization 작업으로 인해 발생하는 예외를 더 적극적으로 catch하여 <xref:System.Runtime.Serialization.SerializationException>에 래핑합니다.
+.NET 5 이상에서 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> 메서드는 잘못된 deserialization 작업으로 인해 발생하는 예외를 더 적극적으로 catch하여 <xref:System.Runtime.Serialization.SerializationException>에 래핑합니다.
 
 ## <a name="version-introduced"></a>도입된 버전
 

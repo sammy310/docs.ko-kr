@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: PublishDepsFilePath 동작 변경'
-description: 단일 파일 애플리케이션에 대해 PublishDepsFilePath MSBuild 속성이 비어 있는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 단일 파일 애플리케이션에 대해 PublishDepsFilePath MSBuild 속성이 비어 있는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 09/17/2020
-ms.openlocfilehash: 70631beff31aa3388e59f3b79875ef437351451a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3a32f733ceaa2a24eb55d5e89f2eb1791c277f0d
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760080"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256506"
 ---
 # <a name="publishdepsfilepath-behavior-change"></a>PublishDepsFilePath 동작 변경
 
@@ -21,7 +21,7 @@ ms.locfileid: "95760080"
 
 이전 .NET 버전에서 `PublishDepsFilePath` MSBuild 속성은 비단일 파일 애플리케이션의 출력 디렉터리에 있는 앱 *deps.json* 파일의 경로이며 중간 디렉터리에 있는 단일 파일 앱 경로입니다.
 
-.NET 5.0부터 단일 파일 애플리케이션의 `PublishDepsFilePath`는 비어 있으며 새로운 `IntermediateDepsFilePath` 속성이 중간 디렉터리 내의 *deps.json* 위치를 지정합니다. 또한 비단일 파일 애플리케이션의 경우 빌드 후반까지는 *deps.json* 파일이 출력 디렉터리(`PublishDepsFilePath`에 지정된 경로)에 복사되지 않을 수도 있습니다.
+.NET 5부터 단일 파일 애플리케이션의 `PublishDepsFilePath`는 비어 있으며 새로운 `IntermediateDepsFilePath` 속성이 중간 디렉터리 내의 *deps.json* 위치를 지정합니다. 또한 비단일 파일 애플리케이션의 경우 빌드 후반까지는 *deps.json* 파일이 출력 디렉터리(`PublishDepsFilePath`에 지정된 경로)에 복사되지 않을 수도 있습니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 

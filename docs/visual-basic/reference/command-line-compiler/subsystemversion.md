@@ -7,19 +7,19 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: 7f15d0257d65c0883d3028b20515e29caf25be9b
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 2aecf08b95249b6c4285ca7fe71f4e488f8db3c8
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100456408"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480828"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion(Visual Basic)
 
 생성된 실행 파일을 실행할 수 있는 하위 시스템의 최소 버전을 지정하여 실행 파일을 실행할 수 있는 Windows 버전을 결정합니다. 가장 일반적으로, 이 옵션은 실행 파일이 이전 버전의 Windows에서 사용할 수 없는 특정 보안 기능을 활용할 수 있도록 합니다.
 
 > [!NOTE]
-> 하위 시스템 자체를 지정하려면 [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) 컴파일러 옵션을 사용합니다.
+> 하위 시스템 자체를 지정하려면 [-target](target.md) 컴파일러 옵션을 사용합니다.
 
 ## <a name="syntax"></a>구문
 

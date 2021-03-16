@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: Blazor WebAssembly에서 지원되지 않는 System.Security.Cryptography API'
-description: 암호화 API가 브라우저에서 실행될 때 예외를 throw하는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 암호화 API가 브라우저에서 실행될 때 예외를 throw하는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 09/16/2020
-ms.openlocfilehash: ec10fa777e91f641b5582378830536a0cfa8dd72
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ecbdda4c04642af6b1737e888491eb6565ba7479
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759651"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256883"
 ---
 # <a name="systemsecuritycryptography-apis-not-supported-on-blazor-webassembly"></a>Blazor WebAssembly에서 지원되지 않는 System.Security.Cryptography API
 
@@ -15,10 +15,10 @@ ms.locfileid: "95759651"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-이전 .NET 버전에서는 대부분의 <xref:System.Security.Cryptography> API를 Blazor WebAssembly 앱에 사용할 수 없었습니다. .NET 5.0부터 Blazor WebAssembly 앱이 전체 .NET 5 API 노출 영역을 대상으로 하지만, 브라우저 샌드박스 제약 조건으로 인해 일부 .NET 5 API는 지원되지 않습니다. .NET 5.0 이상 버전에서 지원되지 않는 <xref:System.Security.Cryptography> API는 WebAssembly에서 실행될 때 <xref:System.PlatformNotSupportedException>을 throw합니다.
+이전 .NET 버전에서는 대부분의 <xref:System.Security.Cryptography> API를 Blazor WebAssembly 앱에 사용할 수 없었습니다. .NET 5부터 Blazor WebAssembly 앱이 전체 .NET 5 API 노출 영역을 대상으로 하지만, 브라우저 샌드박스 제약 조건으로 인해 일부 .NET 5 API는 지원되지 않습니다. .NET 5 이상 버전에서 지원되지 않는 <xref:System.Security.Cryptography> API는 WebAssembly에서 실행될 때 <xref:System.PlatformNotSupportedException>을 throw합니다.
 
 > [!TIP]
-> [플랫폼 호환성 분석기](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md)는 브라우저 플랫폼을 지원하는 프로젝트를 빌드할 때 영향을 받는 API에 대한 모든 호출에 플래그를 지정합니다. 이 분석기는 .NET 5.0 이상 앱에서 기본적으로 실행됩니다.
+> [플랫폼 호환성 분석기](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md)는 브라우저 플랫폼을 지원하는 프로젝트를 빌드할 때 영향을 받는 API에 대한 모든 호출에 플래그를 지정합니다. 이 분석기는 .NET 5 이상 앱에서 기본적으로 실행됩니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 

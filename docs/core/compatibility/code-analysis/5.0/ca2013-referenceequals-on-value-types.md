@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: CA2013: 값 형식과 함께 ReferenceEquals를 사용하지 마세요.'
-description: 코드 분석 규칙 CA2013 사용으로 발생하는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 코드 분석 규칙 CA2013 사용으로 발생하는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 09/03/2020
-ms.openlocfilehash: ca2b845427eff547b996b577394c6859e30f50bf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fc68d9a3af0d629dc39aba0091d32b1982d6f2c5
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759580"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257767"
 ---
 # <a name="warning-ca2013-do-not-use-referenceequals-with-value-types"></a>경고 CA2013: 값 형식과 함께 ReferenceEquals를 사용하지 마세요.
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759580"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-.Net 5.0부터 .Net SDK에는 [.NET 소스 코드 분석기](../../../../fundamentals/code-analysis/overview.md)가 포함됩니다. [CA2013](/visualstudio/code-quality/ca2013)을 포함하여 해당 규칙 중 여러 개가 기본적으로 사용됩니다. 해당 규칙을 위반하는 코드가 프로젝트에 포함되고 프로젝트가 경고를 오류로 처리하도록 구성된 경우 해당 변경으로 인해 빌드의 호환성이 손상될 수 있습니다.
+.NET 5부터 .NET SDK에는 [.NET 소스 코드 분석기](../../../../fundamentals/code-analysis/overview.md)가 포함됩니다. [CA2013](/visualstudio/code-quality/ca2013)을 포함하여 해당 규칙 중 여러 개가 기본적으로 사용됩니다. 해당 규칙을 위반하는 코드가 프로젝트에 포함되고 프로젝트가 경고를 오류로 처리하도록 구성된 경우 해당 변경으로 인해 빌드의 호환성이 손상될 수 있습니다.
 
 규칙 CA2013은 <xref:System.Object.ReferenceEquals(System.Object,System.Object)>를 사용하여 하나 이상의 값 형식이 같은지 비교하는 인스턴스를 찾습니다. 이런 방식으로 값 형식이 같은지 비교하면 비교되기 전에 값이 boxing되므로 잘못된 결과가 발생할 수 있습니다. 비교된 값이 동일한 값 형식 인스턴스를 나타내는 경우에도 <xref:System.Object.ReferenceEquals(System.Object,System.Object)>는 `false`를 반환합니다.
 

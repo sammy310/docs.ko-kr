@@ -12,12 +12,12 @@ helpviewer_keywords:
 - list of assemblies in global assembly cache
 - Global Assembly Cache tool
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
-ms.openlocfilehash: 8b81f78f4ea28b3b9fca374029fe49f809826d8e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a40c371e6f95f6c90ecbfbf28183226632a58e5b
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558565"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102258314"
 ---
 # <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>방법: 글로벌 어셈블리 캐시의 내용 보기
 
@@ -25,7 +25,7 @@ ms.locfileid: "90558565"
 
 ## <a name="view-the-assemblies-in-the-gac"></a>GAC의 어셈블리 보기
 
-전역 어셈블리 캐시의 어셈블리 목록을 보려면 [Visual Studio에 대한 개발자 명령 프롬프트](../tools/developer-command-prompt-for-vs.md)를 열고 다음 명령을 입력합니다.
+전역 어셈블리 캐시의 어셈블리 목록을 보려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 열고 다음 명령을 입력합니다.
 
 ```shell
 gacutil -l

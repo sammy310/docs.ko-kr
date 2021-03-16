@@ -1,23 +1,23 @@
 ---
 title: '호환성이 손상되는 변경: TripleDES.Create에서 생성된 인스턴스의 기본 FeedbackSize 값이 변경됨'
-description: TripleDES.Create()에서 반환된 TripleDES 인스턴스의 FeedbackSize 속성에 대한 기본값이 64에서 8로 변경된 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: TripleDES.Create()에서 반환된 TripleDES 인스턴스의 FeedbackSize 속성에 대한 기본값이 64에서 8로 변경된 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 10/16/2020
-ms.openlocfilehash: 4179da17bf2e5cc5fcc7d64d83ba92119f912042
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9d3259da30cce84e83a3f13c610dad5884b445b8
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759894"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256766"
 ---
 # <a name="default-feedbacksize-value-for-instances-created-by-tripledescreate-changed"></a>TripleDES.Create에서 생성된 인스턴스의 기본 FeedbackSize 값이 변경됨
 
 <xref:System.Security.Cryptography.TripleDES.Create?displayProperty=nameWithType>에서 반환된 <xref:System.Security.Cryptography.TripleDES> 인스턴스에서 <xref:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize?displayProperty=nameWithType> 속성의 기본값은 .NET Framework에서 더 쉽게 마이그레이션할 수 있도록 64에서 8로 변경되었습니다. 호출자 코드에서 직접 사용되지 않는 경우 이 속성은 <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode> 속성이 <xref:System.Security.Cryptography.CipherMode.CFB?displayProperty=nameWithType>인 경우에만 사용됩니다.
 
-<xref:System.Security.Cryptography.CipherMode.CFB> 모드 지원은 5.0 RC1 릴리스의 .NET에 처음 추가되었으므로 .NET 5.0 RC1 및 .NET 5.0 RC2 애플리케이션만 이 변경의 영향을 받습니다.
+<xref:System.Security.Cryptography.CipherMode.CFB> 모드 지원은 5.0 RC1 릴리스의 .NET에 처음 추가되었으므로 .NET 5 RC1 및 .NET 5 RC2 애플리케이션만 해당 변경의 영향을 받습니다.
 
 ## <a name="change-description"></a>변경 내용 설명
 
-.NET Core 및 이전 .NET 5.0 시험판 버전에서 `TripleDES.Create().FeedbackSize`의 기본값은 64입니다. RTM 버전의 .NET 5.0부터 `TripleDES.Create().FeedbackSize`의 기본값은 8입니다.
+.NET Core 및 이전 .NET 5 시험판 버전에서 `TripleDES.Create().FeedbackSize`의 기본값은 64입니다. RTM 버전의 .NET 5부터 `TripleDES.Create().FeedbackSize`의 기본값은 8입니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 
@@ -31,7 +31,7 @@ ms.locfileid: "95759894"
 
 ## <a name="recommended-action"></a>권장 조치
 
-다음 조건이 충족되면 RC1 또는 RC2 버전의 .NET 5.0에서 데이터를 암호화하거나 암호 해독하는 애플리케이션은 CFB64를 사용하여 해당 작업을 수행합니다.
+다음 조건이 충족되면 RC1 또는 RC2 버전의 .NET 5에서 데이터를 암호화하거나 암호 해독하는 애플리케이션은 CFB64를 사용하여 해당 작업을 수행합니다.
 
 - <xref:System.Security.Cryptography.TripleDES.Create?displayProperty=nameWithType>의 <xref:System.Security.Cryptography.TripleDES> 인스턴스 포함.
 - <xref:System.Security.Cryptography.SymmetricAlgorithm.FeedbackSize>의 기본값 사용.

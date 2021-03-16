@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: StringInfo 및 TextElementEnumerator가 이제 UAX29 규격임'
-description: StringInfo 및 TextElementEnumerator가 최신 버전의 유니코드 표준에 따라 문자소 클러스터를 처리하는 .NET 5.0의 세계화 관련 호환성이 손상되는 변경 내용에 대해 알아봅니다.
+description: StringInfo 및 TextElementEnumerator가 최신 버전의 유니코드 표준에 따라 문자소 클러스터를 처리하는 .NET 5의 세계화 관련 호환성이 손상되는 변경 내용에 관해 알아봅니다.
 ms.date: 04/07/2020
-ms.openlocfilehash: cd5ae5a3eb9f2dd9c02bc179a40d454d24101199
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cf770e30bfadf1973bbe018cc9d2783ed6234723
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759624"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256707"
 ---
 # <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>StringInfo 및 TextElementEnumerator가 이제 UAX29 규격임
 

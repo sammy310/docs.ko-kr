@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: CA1416: 플랫폼 호환성'
-description: 코드 분석 규칙 CA1416 사용으로 발생하는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 코드 분석 규칙 CA1416 사용으로 발생하는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 09/29/2020
-ms.openlocfilehash: ec3fc809b8de382a2093fc9f2d33c2f96b91613d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0464e7bb5a494543c0201efa4630e82897b464c0
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759595"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257858"
 ---
 # <a name="warning-ca1416-platform-compatibility"></a>경고 CA1416: 플랫폼 호환성
 
@@ -15,9 +15,9 @@ ms.locfileid: "95759595"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-.Net 5.0부터 .Net SDK에는 [.NET 소스 코드 분석기](../../../../fundamentals/code-analysis/overview.md)가 포함됩니다. [CA1416](/visualstudio/code-quality/ca1416)을 포함하여 해당 규칙 중 여러 개가 기본적으로 사용됩니다. 해당 규칙을 위반하는 코드가 프로젝트에 포함되고 프로젝트가 경고를 오류로 처리하도록 구성된 경우 해당 변경으로 인해 빌드의 호환성이 손상될 수 있습니다. 규칙 CA1416은 플랫폼 컨텍스트가 확인되지 않는 위치에서 플랫폼별 API를 사용하는 경우 알림을 제공합니다.
+.NET 5부터 .NET SDK에는 [.NET 소스 코드 분석기](../../../../fundamentals/code-analysis/overview.md)가 포함됩니다. [CA1416](/visualstudio/code-quality/ca1416)을 포함하여 해당 규칙 중 여러 개가 기본적으로 사용됩니다. 해당 규칙을 위반하는 코드가 프로젝트에 포함되고 프로젝트가 경고를 오류로 처리하도록 구성된 경우 해당 변경으로 인해 빌드의 호환성이 손상될 수 있습니다. 규칙 CA1416은 플랫폼 컨텍스트가 확인되지 않는 위치에서 플랫폼별 API를 사용하는 경우 알림을 제공합니다.
 
-규칙 [CA1416](/visualstudio/code-quality/ca1416), 플랫폼 호환성 분석기는 .NET 5.0에 새로 도입된 다른 일부 기능과 함께 작동합니다. .NET 5.0에는 API를 ‘지원’하거나 ‘지원하지 않는’ 플랫폼을 지정할 수 있는 <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> 및 <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute>가 도입되었습니다.  이러한 특성이 없으면 API는 모든 플랫폼에서 지원되는 것으로 간주됩니다. 해당 특성은 핵심 .NET 라이브러리의 플랫폼별 API에 적용되었습니다.
+규칙 [CA1416](/visualstudio/code-quality/ca1416), 플랫폼 호환성 분석기는 .NET 5.0에 새로 도입된 다른 일부 기능과 함께 작동합니다. .NET 5에는 API를 ‘지원’하거나 ‘지원하지 않는’ 플랫폼을 지정할 수 있는 <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> 및 <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute>가 도입되었습니다.  이러한 특성이 없으면 API는 모든 플랫폼에서 지원되는 것으로 간주됩니다. 해당 특성은 핵심 .NET 라이브러리의 플랫폼별 API에 적용되었습니다.
 
 해당 API를 사용할 수 없는 플랫폼을 대상으로 하는 프로젝트에서 규칙 [CA1416](/visualstudio/code-quality/ca1416)은 플랫폼 컨텍스트가 확인되지 않는 플랫폼별 API 호출을 플래그로 지정합니다. 현재 <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> 및 <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> 특성으로 데코레이트된 대부분의 API는 지원되지 않는 운영 체제에서 호출되는 경우 <xref:System.PlatformNotSupportedException> 예외를 throw합니다. 이러한 API는 플랫폼별로 표시되어 있으므로 규칙 [CA1416](/visualstudio/code-quality/ca1416)을 사용하면 호출 사이트에 OS 검사를 추가하여 런타임 <xref:System.PlatformNotSupportedException> 예외를 방지하는 데 도움이 됩니다.
 
