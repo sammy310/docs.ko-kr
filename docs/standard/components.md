@@ -3,12 +3,12 @@ title: .NET 아키텍처 구성 요소
 description: .NET Standard, .NET 구현, .NET 런타임 및 도구와 같은 .NET 아키텍처 구성 요소에 대해 설명합니다.
 author: cartermp
 ms.date: 10/05/2020
-ms.openlocfilehash: 884deb61ab5cda5054fb54134c3338b4d05599ca
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: d1780d8f85159c12ef4e11b2ac53091b61629352
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106399"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605323"
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
@@ -106,7 +106,7 @@ C# 언어 및 CLI(공용 언어 인프라) 사양은 [Ecma International&reg;](h
 다음과 같은 공식 Ecma 문서는 [C#](https://www.ecma-international.org/publications-and-standards/standards/ecma-334/) 및 [CLI](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/)([TR-84](https://www.ecma-international.org/publications-and-standards/technical-reports/ecma-tr-84/))에서 사용할 수 있습니다.
 
 - **C# 언어 표준(버전 5.0)** : [ECMA-334.pdf](https://www.ecma-international.org/wp-content/uploads/ECMA-334_5th_edition_december_2017.pdf)
-- **CLI(공용 언어 인프라)** : [ECMA-335.pdf](hhttps://www.ecma-international.org/wp-content/uploads/ECMA-335_6th_edition_june_2012.pdf).
+- **CLI(공용 언어 인프라)** : [ECMA-335.pdf](https://www.ecma-international.org/wp-content/uploads/ECMA-335_6th_edition_june_2012.pdf).
 - **파티션 IV XML 파일에서 파생된 정보**: [ECMA-084.pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) format.
 
 공식 ISO/IEC 문서는 ISO/IEC [공개적으로 사용할 수 있는 표준](https://standards.iso.org/ittf/PubliclyAvailableStandards/) 페이지에서 사용할 수 있습니다. 이러한 링크는 해당 페이지에서 직접 제공됩니다.

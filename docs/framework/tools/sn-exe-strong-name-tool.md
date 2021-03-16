@@ -11,12 +11,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: bb9640bbb46683a3facf290c8157853007f4407d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 76999ab305f9924bafaa95884b634e2a59251ff0
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238446"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102259049"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe(강력한 이름 도구)
 
@@ -27,7 +27,7 @@ ms.locfileid: "96238446"
 
  강력한 이름 지정 및 강력한 이름의 어셈블리에 대한 자세한 내용은 [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md) 및 [방법: 강력한 이름으로 어셈블리 서명](../../standard/assembly/sign-strong-name.md)을 참조하세요.  
   
- 강력한 이름 도구는 Visual Studio와 함께 자동으로 설치됩니다. 이 도구를 시작하려면 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
+ 강력한 이름 도구는 Visual Studio와 함께 자동으로 설치됩니다. 도구를 시작하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.  
 
 > [!NOTE]
 > 64비트 컴퓨터에서는 Visual Studio용 개발자 명령 프롬프트를 사용하여 32비트 Sn.exe 버전을 실행하고 Visual Studio x64 Win64 명령 프롬프트를 사용하여 64비트 버전을 실행합니다.
@@ -131,4 +131,4 @@ sn -d MyContainer
 - [도구](index.md)
 - [Al.exe(어셈블리 링커)](al-exe-assembly-linker.md)
 - [강력한 이름의 어셈블리](../../standard/assembly/strong-named.md)
-- [명령 프롬프트](developer-command-prompt-for-vs.md)
+- [개발자 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)

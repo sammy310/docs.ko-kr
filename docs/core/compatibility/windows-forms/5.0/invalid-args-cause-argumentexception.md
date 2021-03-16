@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: WinForms 메서드는 이제 ArgumentException을 throw함'
-description: 일부 Windows Forms 메서드가 잘못된 인수에 대해 ArgumentException을 throw하는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 일부 Windows Forms 메서드가 잘못된 인수에 대해 ArgumentException을 throw하는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 07/18/2020
-ms.openlocfilehash: 892f4d16b80f3e42187480a7fcfb24e81868d07c
-ms.sourcegitcommit: f8cd3ef517ee177c99feed944824c27d208cc0d1
+ms.openlocfilehash: 9823e9162a562081cdd64346a502ca136b51fa75
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98570218"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256141"
 ---
 # <a name="winforms-methods-now-throw-argumentexception"></a>WinForms 메서드는 이제 ArgumentException을 throw함
 
@@ -15,7 +15,7 @@ ms.locfileid: "98570218"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-이전에는 예기치 않거나 잘못된 형식의 인수를 특정 Windows Forms 메서드에 전달하면 불분명한 상태가 되었습니다. .NET 5.0부터 이러한 메서드는 잘못된 인수를 전달하면 <xref:System.ArgumentException>을 throw합니다.
+이전에는 예기치 않거나 잘못된 형식의 인수를 특정 Windows Forms 메서드에 전달하면 불분명한 상태가 되었습니다. .NET 5부터 해당 메서드는 잘못된 인수를 전달하면 <xref:System.ArgumentException>을 throw합니다.
 
 <xref:System.ArgumentException> throw는 .NET 런타임의 동작을 따릅니다. 또한 잘못된 인수를 명확하게 전달하여 디버깅 환경을 개선합니다.
 

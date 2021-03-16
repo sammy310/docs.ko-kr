@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: 기본이 아닌 진단 ID를 사용하는 API 사용되지 않음'
-description: 일부 API가 사용자 지정 진단 ID를 사용하여 사용되지 않음으로 표시된 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: 일부 API가 사용자 지정 진단 ID를 사용하여 사용되지 않음으로 표시된 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 9bd7ce18aed38955f9abc91e0c8b09e827c401d6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9aa4543ae6660f2d2fceac2419340bc6c90f1c54
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759929"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257377"
 ---
 # <a name="api-obsoletions-with-non-default-diagnostic-ids"></a>기본이 아닌 진단 ID를 사용하는 API 사용되지 않음
 
@@ -15,7 +15,7 @@ ms.locfileid: "95759929"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-이전 .NET 버전에서는 빌드 경고 없이 이러한 API를 사용할 수 있습니다. .NET 5.0 이상 버전에서 이러한 API를 사용하면 사용자 지정 진단 ID를 사용하는 컴파일 시간 경고 또는 오류가 생성됩니다. 사용자 지정 진단 ID를 사용하면 모든 사용되지 않음 경고를 완전히 표시하지 않는 대신 사용되지 않음 경고를 개별적으로 표시하지 않을 수 있습니다.
+이전 .NET 버전에서는 빌드 경고 없이 이러한 API를 사용할 수 있습니다. .NET 5 이상 버전에서 해당 API를 사용하면 사용자 지정 진단 ID를 사용하는 컴파일 시간 경고 또는 오류가 생성됩니다. 사용자 지정 진단 ID를 사용하면 모든 사용되지 않음 경고를 완전히 표시하지 않는 대신 사용되지 않음 경고를 개별적으로 표시하지 않을 수 있습니다.
 
 다음 표에는 사용되지 않는 API에 대한 사용자 지정 진단 ID와 해당 경고 메시지가 나열되어 있습니다.
 

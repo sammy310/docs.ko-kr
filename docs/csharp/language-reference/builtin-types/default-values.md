@@ -5,12 +5,12 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 5e34d291ec15c738f3bc9409df321ede454b6710
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 72d6249ed56ae6ae34a6f51102e1e7bbd3f64ab7
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507258"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104117"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>C# 형식의 기본값(C# 참조)
 
@@ -18,7 +18,7 @@ ms.locfileid: "79507258"
 
 |Type|기본값|
 |---------|------------------|
-|임의 참조 형식|`null`|
+|임의 [참조 형식](../keywords/reference-types.md)|`null`|
 |임의 [기본 제공 정수 숫자 유형](integral-numeric-types.md)|0(영)|
 |임의 [기본 제공 부동 소수점 숫자 유형](floating-point-numeric-types.md)|0(영)|
 |[bool](bool.md)|`false`|

@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: MulticastOption.Group에서 null 값을 허용하지 않음'
-description: MulticastOption.Group에서 null 값을 더 이상 허용하지 않는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: MulticastOption.Group에서 Null 값을 더 이상 허용하지 않는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 08/18/2020
-ms.openlocfilehash: 164ac8c2c8dd14f9e0758017e54eeb377f88a7e5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 09c6415d275361abee8285aabdda13ccd9727043
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759691"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256454"
 ---
 # <a name="multicastoptiongroup-doesnt-accept-a-null-value"></a>MulticastOption.Group에서 null 값을 허용하지 않음
 
@@ -21,7 +21,7 @@ ms.locfileid: "95759691"
 
 이전 버전의 .NET에서는 <xref:System.Net.Sockets.MulticastOption.Group?displayProperty=nameWithType> 속성을 `null`로 설정할 수 있습니다. 나중에 <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType>에 <xref:System.Net.Sockets.MulticastOption>을 전달하면 런타임에서 <xref:System.NullReferenceException>이 throw됩니다.
 
-.NET 5.0 이상에서 속성을 `null`로 설정하면 <xref:System.ArgumentNullException>이 throw됩니다.
+.NET 5 이상에서 속성을 `null`로 설정하면 <xref:System.ArgumentNullException>이 throw됩니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 

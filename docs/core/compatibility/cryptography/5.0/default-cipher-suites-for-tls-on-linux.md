@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: Linux의 .NET용 기본 TLS 암호 그룹'
-description: Linux에서 .NET이 TLS/SSL을 수행할 때 기본 암호 그룹에 대한 OpenSSL 구성을 따르는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: Linux에서 .NET이 TLS/SSL을 수행할 때 기본 암호 그룹에 대한 OpenSSL 구성을 따르는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 10/16/2020
-ms.openlocfilehash: f1c23517161ac213a9cd7cf6e7da8eebeb91583b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c28207aa5bf4324a7921deb006c57fbd5e1d6f5f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759572"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256818"
 ---
 # <a name="default-tls-cipher-suites-for-net-on-linux"></a>Linux의 .NET용 기본 TLS 암호 그룹
 
@@ -17,7 +17,7 @@ Linux에서 .NET은 이제 <xref:System.Net.Security.SslStream> 클래스를 통
 
 이전 .NET 버전에서 .NET은 기본 암호 그룹에 대한 시스템 구성을 고려하지 않습니다. Linux의 .NET용 기본 암호 그룹 목록은 매우 관대합니다.
 
-.NET 5.0부터 Linux의 .NET은 *openssl.cnf* 에 지정된 경우 기본 암호 그룹에 대한 OpenSSL 구성을 따릅니다. 암호 그룹이 명시적으로 구성되지 않은 경우 허용되는 유일한 암호 그룹은 다음과 같습니다.
+.NET 5부터 Linux의 .NET은 *openssl.cnf* 에 지정된 경우 기본 암호 그룹에 대한 OpenSSL 구성을 따릅니다. 암호 그룹이 명시적으로 구성되지 않은 경우 허용되는 유일한 암호 그룹은 다음과 같습니다.
 
 - TLS 1.3 암호 그룹
 - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
@@ -45,7 +45,7 @@ Linux에서 .NET을 실행하는 사용자가 <xref:System.Net.Security.SslStrea
 
 새로운 기본값은 최신 클라이언트 또는 서버와 통신할 때 사용할 수 있습니다. 기본 암호 그룹 목록을 확장하여 레거시 클라이언트를 허용하거나 레거시 서버에 연결하는 경우 `CipherSuitePolicy` 값을 지정하거나 OpenSSL 구성 파일을 변경합니다. 대부분의 Linux 배포에서 OpenSSL 구성 파일은 */etc/ssl/openssl.cnf* 에 있습니다.
 
-이 샘플 *opensssl.cnf* 파일은 Linux의 .NET 5.0 이상에 대한 기본 암호 그룹 정책과 동일한 최소 파일입니다. 시스템 파일을 바꾸는 대신 이러한 개념을 시스템에 있는 파일과 병합합니다.
+이 샘플 *opensssl.cnf* 파일은 Linux의 .NET 5 이상에 대한 기본 암호 그룹 정책과 동일한 최소 파일입니다. 시스템 파일을 바꾸는 대신 이러한 개념을 시스템에 있는 파일과 병합합니다.
 
 ```ini
 openssl_conf = default_conf

@@ -3,12 +3,12 @@ title: EventPipe 개요
 description: EventPipe에 대해 알아보고 성능 문제를 진단하기 위해 .NET 애플리케이션 추적에 이를 사용하는 방법을 알아봅니다.
 ms.date: 11/09/2020
 ms.topic: overview
-ms.openlocfilehash: f315beafabbd99bf78647b3f714fd76d93fcac28
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: 213d15e48ac9d50af0c87565738f952295c4f041
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100582986"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105299"
 ---
 # <a name="eventpipe"></a>EventPipe
 
@@ -77,10 +77,11 @@ EventPipe를 사용하는 기본 메커니즘은 `dotnet-trace` 또는 `Microsof
 
 * `COMPlus_EventPipeOutputPath`: `COMPlus_EnableEventPipe`를 통해 실행하도록 구성된 경우 출력 EventPipe 추적 파일의 경로입니다. 기본값은 `trace.nettrace`이며, 앱이 실행되는 것과 동일한 디렉터리에 생성됩니다.
 
-* `COMPlus_CircularBufferMB`: `COMPlus_EnableEventPipe`를 통해 실행하도록 구성된 경우 EventPipe에서 사용하는 내부 버퍼의 크기입니다.
+* `COMPlus_EventPipeCircularMB`: EventPipe의 내부 버퍼 크기(MB)를 나타내는 16진수 값입니다. 해당 구성 값은 EventPipe가 `COMPlus_EnableEventPipe`를 통해 실행되도록 구성된 경우에만 사용됩니다. 기본 버퍼 크기는 1,024MB이며 `0x400` == `1024`이므로 `400`으로 설정되는 해당 환경 변수로 변환됩니다.
+
+* `COMPlus_EventPipeProcNumbers`: `1`로 설정하여 EventPipe 이벤트 헤더에서 프로세서 번호를 캡처할 수 있도록 합니다. 기본값은 `0`입니다.
 
 * `COMPlus_EventPipeConfig`: `COMPlus_EnableEventPipe`를 사용하여 EventPipe 세션을 시작할 때 EventPipe 세션 구성을 설정합니다.
-
   구문은 다음과 같습니다.
 
   `<provider>:<keyword>:<level>`

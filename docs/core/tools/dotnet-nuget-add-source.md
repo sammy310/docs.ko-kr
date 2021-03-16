@@ -2,12 +2,12 @@
 title: dotnet nuget add source 명령
 description: dotnet nuget add source 명령은 NuGet 구성 파일에 새 패키지 소스를 추가합니다.
 ms.date: 03/20/2020
-ms.openlocfilehash: b847d987de2d88cb3452d32d1bc84232a1e20b6e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: df31a2eaba997d0e9fe4f4c2666052fd7c7c2f03
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537975"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105053"
 ---
 # <a name="dotnet-nuget-add-source"></a>dotnet nuget add source
 
@@ -30,6 +30,9 @@ dotnet nuget add source -h|--help
 ## <a name="description"></a>Description
 
 `dotnet nuget add source` 명령은 NuGet 구성 파일에 새 패키지 소스를 추가합니다.
+
+> [!WARNING]
+> 여러 패키지 소스를 추가할 때 [종속성 혼동 취약성](https://aka.ms/pkg-sec-wp)이 도입되지 않도록 주의하세요.
 
 ## <a name="arguments"></a>인수
 

@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: Unix에서 UNC 경로의 URI 인식'
-description: Uri 클래스가 두 개의 슬래시로 시작하는 문자열을 Unix의 UNC 경로로 인식하는 핵심 .NET 라이브러리의 .NET 5.0 호환성이 손상되는 변경에 대해 알아봅니다.
+description: Uri 클래스가 두 개의 슬래시로 시작하는 문자열을 Unix의 UNC 경로로 인식하는 핵심 .NET 라이브러리의 .NET 5 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 11/01/2020
-ms.openlocfilehash: 0d5d9cd8dd869f24e94d15724e5e16eaddf6ed47
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 65baaad5e1be7a8f61e3e62c976fd7e28f48730f
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759639"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102257026"
 ---
 # <a name="uri-recognition-of-unc-paths-on-unix"></a>Unix에서 UNC 경로의 URI 인식
 
@@ -17,7 +17,7 @@ ms.locfileid: "95759639"
 
 이전 버전의 .NET에서는 <xref:System.Uri> 클래스가 두 개의 슬래시로 시작하는 문자열(예: `//contoso`)을 Unix 운영 체제의 절대 파일 경로로 인식합니다. 그러나 Windows에서는 해당 문자열이 UNC 경로로 인식됩니다.
 
-.NET 5.0부터 <xref:System.Uri> 클래스는 Unix를 비롯한 모든 플랫폼에서 두 개의 슬래시로 시작하는 문자열을 UNC 경로로 인식합니다. 또한 속성이 UNC 의미 체계에 따라 동작합니다.
+.NET 5부터 <xref:System.Uri> 클래스는 Unix를 비롯한 모든 플랫폼에서 두 개의 슬래시로 시작하는 문자열을 UNC 경로로 인식합니다. 또한 속성이 UNC 의미 체계에 따라 동작합니다.
 
 - <xref:System.Uri.IsUnc?displayProperty=nameWithType>가 `true`를 반환하는 경우
 - 경로의 백슬래시가 슬래시로 바뀝니다. 예를 들어 `//first\second`는 `//first/second`가 됩니다.

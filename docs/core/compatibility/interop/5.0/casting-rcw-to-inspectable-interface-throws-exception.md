@@ -1,13 +1,13 @@
 ---
 title: '호환성이 손상되는 변경: RCW를 `InterfaceIsIInspectable`로 캐스팅하면 예외가 throw됨'
-description: RCW를 `InterfaceIsIInspectable` 인터페이스로 캐스팅하면 PlatformNotSupportedException이 throw되는 .NET 5.0의 호환성이 손상되는 변경에 대해 알아봅니다.
+description: RCW를 `InterfaceIsIInspectable` 인터페이스로 캐스팅하면 PlatformNotSupportedException이 throw되는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 09/13/2020
-ms.openlocfilehash: 7c0f37057aebcc41d0c00d949b921ec3a4bdf012
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9f777ee9396f7822c9ff6bf5209021c07b8b618a
+ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759816"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102256636"
 ---
 # <a name="casting-rcw-to-an-interfaceisiinspectable-interface-throws-platformnotsupportedexception"></a>RCW를 `InterfaceIsIInspectable` 인터페이스로 캐스팅하면 PlatformNotSupportedException이 throw됨
 
@@ -19,13 +19,13 @@ ms.locfileid: "95759816"
 
 ## <a name="change-description"></a>변경 내용 설명
 
-.NET 5.0 미리 보기 6 이전의 .NET 버전에서는 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable>로 표시된 인터페이스로 RCW를 캐스팅하는 기능이 예상대로 작동합니다. .NET 5.0 미리 보기 6~8 및 RC1에서는 RCW를 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 인터페이스로 캐스팅할 수 있습니다. 그러나 런타임에서의 기본 지원이 [.NET 5.0 미리 보기 6에서 제거](built-in-support-for-winrt-removed.md)되었으므로 인터페이스에서 메서드를 실행하면 액세스를 위반할 수 있습니다.
+.NET 5 미리 보기 6 이전의 .NET 버전에서는 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable>로 표시된 인터페이스로 RCW를 캐스팅하는 기능이 예상대로 작동합니다. .NET 5 미리 보기 6~8 및 RC1에서는 RCW를 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 인터페이스로 캐스팅할 수 있습니다. 그러나 런타임의 기본 지원이 [.NET 5 미리 보기 6에서 제거](built-in-support-for-winrt-removed.md)되었으므로 인터페이스에서 메서드를 실행하면 액세스를 위반할 수 있습니다.
 
-.NET 5.0 RC2 이상 버전에서 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable>로 표시된 인터페이스로 RCW를 캐스팅하면 캐스트 시간에 <xref:System.PlatformNotSupportedException>이 throw됩니다.
+.NET 5 RC2 이상 버전에서 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable>로 표시된 인터페이스로 RCW를 캐스팅하면 캐스트 시간에 <xref:System.PlatformNotSupportedException>이 throw됩니다.
 
 ## <a name="reason-for-change"></a>변경 이유
 
-<xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 지원은 [이전 .NET 5.0 미리 보기에서 제거](built-in-support-for-winrt-removed.md)되었습니다. 그러나 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 인터페이스로의 캐스팅은 실수로 간과되었습니다. 런타임에서 기본 지원이 더 이상 존재하지 않으므로 <xref:System.PlatformNotSupportedException>을 throw하여 정상적인 실패 경로를 지원합니다. 또한 예외를 throw하여 기능이 더 이상 지원되지 않음을 더 쉽게 검색할 수 있게 합니다.
+<xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 지원은 [이전 .NET 5 미리 보기에서 제거](built-in-support-for-winrt-removed.md)되었습니다. 그러나 <xref:System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIInspectable> 인터페이스로의 캐스팅은 실수로 간과되었습니다. 런타임에서 기본 지원이 더 이상 존재하지 않으므로 <xref:System.PlatformNotSupportedException>을 throw하여 정상적인 실패 경로를 지원합니다. 또한 예외를 throw하여 기능이 더 이상 지원되지 않음을 더 쉽게 검색할 수 있게 합니다.
 
 ## <a name="recommended-action"></a>권장 조치
 

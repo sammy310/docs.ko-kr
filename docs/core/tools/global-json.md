@@ -4,12 +4,12 @@ description: .NET CLI 명령을 실행할 때 global.json 파일을 사용하여
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 02a0ab478a23f7df55a8cc2e872e480b311304fe
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: cc471cf5b50cf91c38b46607ccf38bd4d087aa6a
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634001"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104143"
 ---
 # <a name="globaljson-overview"></a>global.json 개요
 
@@ -153,7 +153,7 @@ SDK 버전을 선택할 때, 특정 SDK 버전이 누락된 경우 대체하거�
 
 *global json* 파일에 버전을 설정하기 위해서는 컴퓨터에 설치된 SDK 버전을 알고 있는 것이 좋습니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 [.NET이 이미 설치되어 있는지 확인하는 방법](../install/how-to-detect-installed-versions.md#check-sdk-versions)을 참조하세요.
 
-머신에 추가 .NET SDK 버전을 설치하려면 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core) 페이지를 방문하세요.
+머신에 추가 .NET SDK 버전을 설치하려면 [.NET 다운로드](https://dotnet.microsoft.com/download/dotnet) 페이지를 방문하세요.
 
 다음 예제와 비슷한 [dotnet new](dotnet-new.md) 명령을 실행하여 현재 디렉터리에서 *global.json* 파일을 새로 만들 수 있습니다.
 

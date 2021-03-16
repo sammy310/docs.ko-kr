@@ -3,12 +3,12 @@ title: .NET의 잘 알려진 이벤트 공급자
 description: .NET 런타임 및 라이브러리에서 게시하는 공급자 및 이벤트를 검토합니다.
 ms.topic: reference
 ms.date: 12/21/2020
-ms.openlocfilehash: 03d505f33e300b094958676bb768fb542d828aeb
-ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
+ms.openlocfilehash: 37aa9551397bb3e3e8858a1289ddc3921327b722
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97738191"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102105169"
 ---
 # <a name="well-known-event-providers-in-net"></a>.NET의 잘 알려진 이벤트 공급자
 
@@ -113,3 +113,9 @@ ms.locfileid: "97738191"
 ASP.NET Core에서는 ASP.NET Core 스택의 문제를 진단하는 데 도움이 되는 여러 이벤트도 제공합니다.
 
 ASP.NET Core의 이벤트와 해당 이벤트를 사용하는 방법에 대한 자세한 내용은 [.NET Core 및 ASP.NET Core의 로깅](/aspnet/core/fundamentals/logging/)을 참조하세요.
+
+## <a name="entity-framework-core"></a>Entity Framework Core
+
+EF Core에서는 EF Core의 문제를 진단하는 데 도움이 되는 이벤트도 제공합니다.
+
+EF Core의 이벤트와 해당 이벤트를 사용하는 방법에 관한 자세한 내용은 [EF Core의 .NET 이벤트](/ef/core/logging-events-diagnostics/events)를 참조하세요.

@@ -3,12 +3,12 @@ title: dotnet nuget push 명령
 description: dotnet nuget push 명령은 서버에 패키지를 푸시하고 게시합니다.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 99e735f7bb18b7af1c12c3ef77fc150a19083542
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 92e2593633343bda6990ca51d593455ff13f0df7
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970657"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478189"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -22,7 +22,7 @@ ms.locfileid: "97970657"
 
 ```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
-    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols true]
+    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source <SOURCE>] [--skip-duplicate]
     [-sk|--symbol-api-key <API_KEY>] [-ss|--symbol-source <SOURCE>]
     [-t|--timeout <TIMEOUT>]
@@ -64,7 +64,7 @@ dotnet nuget push -h|--help
 
   서버에 대한 API 키입니다.
 
-- **`-n|--no-symbols true`**
+- **`-n|--no-symbols`**
 
   기호를 푸시하지 않습니다(있는 경우).
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-ms.openlocfilehash: bd618714a9bd27bc309b7933b656de6bd139cfe7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3901bb74e4091406140f8c2d955a3a5150604b57
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554894"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605349"
 ---
 # <a name="interop-marshaling"></a>Interop 마샬링
 
@@ -69,7 +69,7 @@ COM에는 COM 아파트 간이나 서로 다른 COM 프로세스 간에 데이�
 
 관리되는 클라이언트와 관리되지 않는 서버가 동일한 아파트에 있으므로 interop 마샬링 서비스에서 모든 데이터 마샬링을 처리합니다. 그러나 클라이언트와 서버가 서로 다른 아파트에서 초기화된 경우 COM 마샬링도 필요합니다. 다음 그림에서는 아파트 간 호출의 요소를 보여 줍니다.
 
-![COM 마샬링](./media/interop-marshaling/single-process-across-multi-apartment.gif ".NET 클라이언트와 COM 개체 간의 아파트 간 호출")
+![.NET 클라이언트와 COM 개체 간의 아파트 간 호출](./media/interop-marshaling/single-process-across-multi-apartment.gif)
 
 아파트 간 마샬링의 경우 다음을 수행할 수 있습니다.
 
@@ -90,7 +90,7 @@ COM에는 COM 아파트 간이나 서로 다른 COM 프로세스 간에 데이�
 
 다음 그림에서는 interop 마샬링과 COM 마샬링이 프로세스 및 호스트 경계 간에 통신 채널을 제공하는 방법을 보여 줍니다.
 
-![COM 마샬링](./media/interop-marshaling/interop-and-com-marshaling.gif "크로스 프로세스 마샬링")
+![크로스 프로세스 마샬링](./media/interop-marshaling/interop-and-com-marshaling.gif)
 
 ### <a name="preserving-identity"></a>ID 유지
 

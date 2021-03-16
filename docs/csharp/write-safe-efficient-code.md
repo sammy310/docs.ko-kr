@@ -4,12 +4,12 @@ description: 최근 C# 언어의 향상된 기능을 통해 성능이 이전에�
 ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: c324f3603c69555b40efa56d8e26c046c28f3a7c
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: b739a4ce1f723798cbe50ef9eae673494996751c
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "82021482"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102106620"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>안전하고 효율적인 C# 코드 작성
 
@@ -21,14 +21,14 @@ C#의 새 기능을 사용하면 향상된 성능으로 안정형의 안전 코�
 
 이 문서에서는 다음과 같은 리소스 관리 기술에 중점을 둡니다.
 
-- [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct)를 선언하여 형식이 **변경 불가능**임을 표현합니다. 이를 통해 컴파일러는 [`in`](language-reference/keywords/in-parameter-modifier.md) 매개 변수를 사용할 때 방어형 복사본을 저장할 수 있습니다.
+- [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct)를 선언하여 형식이 **변경 불가능** 임을 표현합니다. 이를 통해 컴파일러는 [`in`](language-reference/keywords/in-parameter-modifier.md) 매개 변수를 사용할 때 방어형 복사본을 저장할 수 있습니다.
 - 형식을 변경할 수 없는 경우 `struct` 멤버를 [`readonly`](language-reference/builtin-types/struct.md#readonly-instance-members)로 선언하여 멤버가 상태를 수정하지 않음을 나타냅니다.
 - 반환 값이 <xref:System.IntPtr.Size?displayProperty=nameWithType>보다 큰 `struct`이고 스토리지 수명이 값을 반환하는 메서드보다 클 경우 [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) 반환을 사용합니다.
 - 성능 상의 이유로 `readonly struct`의 크기가 <xref:System.IntPtr.Size?displayProperty=nameWithType>보다 큰 경우 `in` 매개 변수로 전달해야 합니다.
 - `readonly` 한정자로 선언되었거나 메서드가 구조체의 `readonly` 멤버만 호출하는 경우를 제외하고 `struct`를 `in` 매개 변수로 전달하면 안 됩니다. 이 지침을 위반하면 성능이 저하되고 모호한 동작이 발생할 수 있습니다.
 - 메모리를 바이트의 시퀀스로 사용하도록[`ref struct`](language-reference/builtin-types/struct.md#ref-struct) 또는 `readonly ref struct`(예: <xref:System.Span%601> 또는 <xref:System.ReadOnlySpan%601>)를 사용합니다.
 
-이러한 기술을 통해 **참조** 및 **값**에 관한 상충적인 두 가지 목표 간에 균형을 유지할 수 있습니다. [참조 형식](programming-guide/types/index.md#reference-types)인 변수는 메모리의 위치에 대한 참조를 유지합니다. [값 형식](programming-guide/types/index.md#value-types)인 변수는 직접 해당 값을 포함합니다. 이러한 차이는 메모리 리소스를 관리하는 데 중요한 차이점을 강조합니다. **값 형식**은 일반적으로 메서드에 전달되거나 메서드에서 반환된 경우 복사됩니다. 이 동작에는 값 형식의 멤버를 호출하는 경우 `this`의 값을 복사하는 동작이 포함됩니다. 복사의 비용은 형식의 크기와 관련이 있습니다. **참조 형식**은 관리형 힙에 할당됩니다. 각 새 개체는 새로 할당해야 하고 이후에 회수되어야 합니다. 이러한 두 작업은 모두 시간이 걸립니다. 참조 형식이 메서드에 인수로 전달되거나 메서드에서 반환되면 참조가 복사됩니다.
+이러한 기술을 통해 **참조** 및 **값** 에 관한 상충적인 두 가지 목표 간에 균형을 유지할 수 있습니다. [참조 형식](programming-guide/types/index.md#reference-types)인 변수는 메모리의 위치에 대한 참조를 유지합니다. [값 형식](programming-guide/types/index.md#value-types)인 변수는 직접 해당 값을 포함합니다. 이러한 차이는 메모리 리소스를 관리하는 데 중요한 차이점을 강조합니다. **값 형식** 은 일반적으로 메서드에 전달되거나 메서드에서 반환된 경우 복사됩니다. 이 동작에는 값 형식의 멤버를 호출하는 경우 `this`의 값을 복사하는 동작이 포함됩니다. 복사의 비용은 형식의 크기와 관련이 있습니다. **참조 형식** 은 관리형 힙에 할당됩니다. 각 새 개체는 새로 할당해야 하고 이후에 회수되어야 합니다. 이러한 두 작업은 모두 시간이 걸립니다. 참조 형식이 메서드에 인수로 전달되거나 메서드에서 반환되면 참조가 복사됩니다.
 
 이 문서에서는 이러한 권장 사항을 설명하기 위해 3D 요소 구조체의 다음 예제 개념을 사용합니다.
 
@@ -160,8 +160,7 @@ public struct Point3D
 
 `readonly` 한정자는 `originReference` 선언에 필요합니다.
 
-컴파일러는 호출자가 참조를 수정할 수 없도록 합니다. 값을 직접 할당하려고 하면 컴파일 시간 오류가 발생합니다. 그러나 컴파일러는 멤버 메서드가 구조체의 상태를 수정하는지를 알 수 없습니다.
-개체가 수정되지 않도록 하기 위해 컴파일러는 복사본을 만들고 해당 복사본을 사용하여 멤버 참조를 호출합니다. 모든 수정은 해당 방어 복사본에 대한 것입니다.
+컴파일러는 호출자가 참조를 수정할 수 없도록 합니다. 값을 직접 할당하려고 하면 컴파일 시간 오류가 발생합니다. 다른 경우에는 읽기 전용 참조를 안전하게 사용할 수 없는 경우 컴파일러는 방어 복사본을 할당합니다. 정적 분석 규칙은 구조체를 수정할 수 있는지를 결정합니다. 구조체가 `readonly struct`이거나 멤버가 구조체의 `readonly` 멤버인 경우 컴파일러는 방어 복사본을 만들지 않습니다. 방어 복사본은 구조체를 `in` 인수로 전달할 필요가 없습니다.
 
 ## <a name="apply-the-in-modifier-to-readonly-struct-parameters-larger-than-systemintptrsize"></a>`in` 한정자를 `System.IntPtr.Size`보다 큰 `readonly struct` 매개 변수에 적용
 
@@ -216,7 +215,7 @@ public struct Point3D
 
 ## <a name="avoid-mutable-structs-as-an-in-argument"></a>변경 가능한 구조체를 `in` 인수로 사용하지 마세요.
 
-앞에서 설명한 기술은 반환 참조에 의한 복사 및 참조로 값 전달을 방지하는 방법을 설명합니다. 이러한 기술은 인수 형식이 `readonly struct` 형식으로 선언되는 경우에 가장 적합합니다. 그렇지 않은 경우, 인수의 읽기 전용 특성을 적용하기 위해 많은 상황에서 컴파일러는 **방어 복사본**을 만들어야 합니다. 원점에서 3D 요소의 거리를 계산하는 다음과 같은 예제를 살펴보세요.
+앞에서 설명한 기술은 반환 참조에 의한 복사 및 참조로 값 전달을 방지하는 방법을 설명합니다. 이러한 기술은 인수 형식이 `readonly struct` 형식으로 선언되는 경우에 가장 적합합니다. 그렇지 않은 경우, 인수의 읽기 전용 특성을 적용하기 위해 많은 상황에서 컴파일러는 **방어 복사본** 을 만들어야 합니다. 원점에서 3D 요소의 거리를 계산하는 다음과 같은 예제를 살펴보세요.
 
 [!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
@@ -262,7 +261,7 @@ GitHub에 있는 [샘플 리포지토리](https://github.com/dotnet/samples/tree
 
 C# 언어에 대한 이러한 향상된 기능은 메모리 할당을 최소화하는 것이 필요한 성능을 달성하는 데 중요한 요인이 되는 성능 중요 알고리즘을 위해 설계되었습니다. 작성하는 코드에서 이러한 기능을 자주 사용하지 않을 수 있습니다. 그러나 이러한 향상된 기능은 .NET 전반에서 채택되었습니다. 점점 더 많은 API에서 이러한 기능을 사용하므로 사용자의 애플리케이션 성능이 개선되는 것을 확인할 수 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [ref 키워드](language-reference/keywords/ref.md)
 - [Ref return 및 ref local](programming-guide/classes-and-structs/ref-returns.md)

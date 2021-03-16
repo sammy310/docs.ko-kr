@@ -5,12 +5,12 @@ ms.topic: error-reference
 ms.date: 02/12/2021
 f1_keywords:
 - NETSDK1045
-ms.openlocfilehash: 900402ae01f945b1096170ea4fc79d00ea789b62
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 7f21270fdc7c2db862a49302a302bf8121fc86a5
+ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100488223"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102104104"
 ---
 # <a name="netsdk1045-the-current-net-sdk-does-not-support-newer-version-as-a-target"></a>NETSDK1045: 현재 .NET SDK는 대상으로 ‘최신 버전’을 지원하지 않습니다.
 
@@ -40,7 +40,7 @@ dotnet --list-sdks
 
 각 버전의 .NET SDK는 x86 및 x64 아키텍처에서 사용할 수 있습니다. 프로젝트가 잘못된 아키텍처용 .NET SDK를 찾으려고 하거나 프로젝트에 필요한 아키텍처용 .NET SDK가 설치되지 않을 수 있습니다. 필요한 아키텍처의 설치 폴더를 확인합니다. 예를 들어 Windows에서 x86 버전의 .NET SDK는 *C:\Program Files (x86)\dotnet* 에 설치되고 x64 버전은 *C:\Program Files\dotnet* 에 설치됩니다. [.NET이 이미 설치되어 있는지 확인하는 방법](../../install/how-to-detect-installed-versions.md)을 참조하고 운영 체제를 선택하여 머신에 설치된 항목을 검색하는 방법을 알아보세요.
 
-필요한 버전이 설치되어 있지 않으면 [여기](https://dotnet.microsoft.com/download/dotnet-core)에서 다운로드합니다.
+필요한 버전이 설치되어 있지 않으면 [.NET 다운로드](https://dotnet.microsoft.com/download/dotnet) 페이지에서 필요한 버전을 찾습니다.
 
 ## <a name="preview-not-enabled"></a>미리 보기가 사용되지 않음
 

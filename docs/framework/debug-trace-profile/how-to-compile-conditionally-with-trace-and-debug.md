@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-ms.openlocfilehash: 895e39593b5e84d708392d3d994267b25bc4eeea
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 90c989bcf21e24cf7ccf410c9a18a44cde81233e
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244173"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478208"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>방법: 추적 및 디버그를 사용하여 조건부 컴파일
 
@@ -67,7 +67,7 @@ ms.locfileid: "96244173"
     |`-d:`|조건부 컴파일 기호를 정의합니다.|  
   
     > [!NOTE]
-    > TRACE 또는 DEBUG를 대문자로 사용해야 합니다. 조건부 컴파일 명령에 대한 자세한 내용을 보려면 명령 프롬프트에 `vbc /?`(Visual Basic의 경우) 또는 `csc /?`(C#의 경우)를 입력합니다. 자세한 내용은 [명령줄에서 빌드](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)(C#) 또는 [명령줄 컴파일러 호출](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)(Visual Basic)을 참조하세요.  
+    > TRACE 또는 DEBUG를 대문자로 사용해야 합니다. 조건부 컴파일 명령에 대한 자세한 내용을 보려면 명령 프롬프트에 `vbc /?`(Visual Basic의 경우) 또는 `csc /?`(C#의 경우)를 입력합니다. 자세한 내용은 [명령줄에서 빌드](../../csharp/language-reference/compiler-options/index.md)(C#) 또는 [명령줄 컴파일러 호출](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)(Visual Basic)을 참조하세요.  
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>#CONST 또는 #define을 사용하여 조건부 컴파일을 수행하려면  
   
@@ -102,5 +102,5 @@ ms.locfileid: "96244173"
 - [추적 스위치](trace-switches.md)
 - [추적 수신기](trace-listeners.md)
 - [방법: 애플리케이션 코드에 Trace 문 추가](how-to-add-trace-statements-to-application-code.md)
-- [Visual Studio 명령줄에 필요한 환경 변수를 설정하는 방법](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Visual Studio 명령줄에 필요한 환경 변수를 설정하는 방법](../../csharp/language-reference/compiler-options/index.md)
 - [방법: 명령줄 컴파일러 호출](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
