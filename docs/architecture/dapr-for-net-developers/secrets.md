@@ -2,13 +2,13 @@
 title: 4Apr 비밀 빌딩 블록
 description: 비밀 구성 요소에 대 한 설명, 해당 기능, 이점 및 적용 방법
 author: edwinvw
-ms.date: 02/07/2021
-ms.openlocfilehash: 94942b396af947b2a3e49b918b2b082c15f4bb08
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 02/17/2021
+ms.openlocfilehash: 52b899b4d496aab6762f69bbee99faecfcd23d59
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401850"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623748"
 ---
 # <a name="the-dapr-secrets-building-block"></a>4Apr 비밀 빌딩 블록
 
@@ -43,7 +43,7 @@ D 4는 위의 모든 문제를 처리 합니다.
 
 비밀에 대 한 액세스는 인증 및 권한 부여를 통해 보안이 유지 됩니다. 충분 한 권한이 있는 응용 프로그램만 비밀에 액세스할 수 있습니다. Kubernetes에서 실행 되는 응용 프로그램은 기본 제공 암호 관리 메커니즘을 사용할 수도 있습니다.
 
-## <a name="how-it-works"></a>작동 방법
+## <a name="how-it-works"></a>작동 방식
 
 응용 프로그램은 다음 두 가지 방법으로 암호 구성 요소를 사용 합니다.
 

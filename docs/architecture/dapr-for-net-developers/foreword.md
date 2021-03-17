@@ -2,13 +2,13 @@
 title: 서문
 description: Russinovich를 표시 하 여 .NET 개발자를 위한 foreword
 author: markrussinovich
-ms.date: 02/14/2021
-ms.openlocfilehash: 5484d537ec949f168ea8eb752e354ed334be5d71
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.date: 02/17/2021
+ms.openlocfilehash: 611cccd7dee253959b06c77c8550b833eec9ddd7
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "102401568"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623969"
 ---
 # <a name="foreword"></a>서문
 

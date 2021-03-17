@@ -1,7 +1,7 @@
 ---
 title: Main()과 명령줄 인수 - C# 프로그래밍 가이드
 description: Main()과 명령줄 인수에 대해 알아봅니다. ‘Main’ 메서드는 실행 가능한 프로그램의 진입점입니다.
-ms.date: 08/02/2017
+ms.date: 03/08/2021
 f1_keywords:
 - main_CSharpKeyword
 - Main
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 611b0c8818f8f800cf1cf5c0f6b2789882939b7b
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: 35117642f38885aab08a5c0249d1f65ec76c59f3
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957540"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190205"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main()과 명령줄 인수(C# 프로그래밍 가이드)
 
@@ -26,6 +26,12 @@ ms.locfileid: "88957540"
 C# 프로그램에는 하나의 진입점만 있을 수 있습니다. `Main` 메서드가 있는 클래스가 둘 이상 있는 경우 `-main` 컴파일러 옵션으로 프로그램을 컴파일하여 진입점으로 사용할 `Main` 메서드를 지정해야 합니다. 자세한 내용은 [-main(C# 컴파일러 옵션)](../../language-reference/compiler-options/main-compiler-option.md)을 참조하세요.
 
 [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
+
+C# 9를 시작으로 `Main` 메서드를 생략하고 다음 예제와 같이 `Main` 메서드 내에 있는 것처럼 C# 문구를 작성할 수 있습니다.
+
+:::code language="csharp" source="snippets/top-level-statements-1/Program.cs":::
+
+암시적 진입점 메서드를 사용하여 애플리케이션 코드를 작성하는 방법에 대한 자세한 내용은 [최상위 문구](top-level-statements.md)를 참조하세요.
 
 ## <a name="overview"></a>개요
 

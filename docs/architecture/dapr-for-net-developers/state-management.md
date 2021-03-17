@@ -2,14 +2,14 @@
 title: D Apr 상태 관리 빌딩 블록
 description: 상태 관리 구성 요소, 해당 기능, 이점 및 적용 방법에 대 한 설명입니다.
 author: amolenk
-ms.date: 02/07/2021
+ms.date: 02/17/2021
 ms.reviewer: robvet
-ms.openlocfilehash: 05daf18ece1da377f3d5d6a91c4839f196f14f80
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 67b7f839ccbe24752281fb537b0473d4984d9e37
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401837"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623930"
 ---
 # <a name="the-dapr-state-management-building-block"></a>D Apr 상태 관리 빌딩 블록
 
@@ -19,7 +19,7 @@ ms.locfileid: "102401837"
 
 ## <a name="what-it-solves"></a>해결 방법
 
-배포 응용 프로그램의 상태를 추적 하는 것은 어려울 수 있습니다. 예를 들면 다음과 같습니다.
+배포 응용 프로그램의 상태를 추적 하는 것은 어려울 수 있습니다. 예를 들어:
 
 - 응용 프로그램에는 다양 한 유형의 데이터 저장소가 필요할 수 있습니다.
 - 데이터에 액세스 하 고 업데이트 하는 데 다른 일관성 수준이 필요할 수 있습니다.
@@ -31,7 +31,7 @@ ms.locfileid: "102401837"
 > [!IMPORTANT]
 > Eapr 상태 관리는 [키/값](/azure/architecture/guide/technology-choices/data-store-overview#keyvalue-stores) API를 제공 합니다. 이 기능은 관계형 또는 그래프 데이터 저장소를 지원 하지 않습니다.
 
-## <a name="how-it-works"></a>작동 방법
+## <a name="how-it-works"></a>작동 방식
 
 응용 프로그램은 사이드카와 상호 작용 하 여 키/값 데이터를 저장 하 고 검색 합니다. 내부적으로 사이드카 API는 구성 가능한 상태 저장소 구성 요소를 사용 하 여 데이터를 유지 합니다. 개발자는 Azure Cosmos DB, SQL Server 및 Cassandra를 포함 하는 증가 하는 [지원 되는 상태 저장소](https://docs.dapr.io/operations/components/setup-state-store/supported-state-stores/) 컬렉션에서 선택할 수 있습니다.
 

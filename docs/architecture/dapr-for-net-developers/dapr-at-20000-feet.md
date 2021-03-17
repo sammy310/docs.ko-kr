@@ -2,13 +2,13 @@
 title: Dapr이 배포되어 있습니다.
 description: D 4의 용도, 수행 하는 방법 및 작동 방식에 대 한 개략적인 개요입니다.
 author: robvet
-ms.date: 02/07/2021
-ms.openlocfilehash: f0efb4652aaa35961d59979cb561941e5280a575
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.date: 02/17/2021
+ms.openlocfilehash: 9f23e9822fd0d4b5eda648d2fc1359cce14cf59d
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604751"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624047"
 ---
 # <a name="dapr-at-20000-feet"></a>Dapr이 배포되어 있습니다.
 
@@ -26,7 +26,9 @@ Jet에서 2만 피트로 비행을 생각해 보세요. 창을 확인 하 고 �
 
 D 4는 최신 분산 응용 프로그램: **복잡성** 에 내재 된 큰 과제를 해결 합니다.
 
-플러그형 구성 요소의 아키텍처를 통해, d 4는 분산 응용 프로그램의 기반이 되는 것을 크게 간소화 합니다. 이 클래스는 응용 프로그램을 Capr 런타임의 인프라 기능과 바인딩하는 **동적 붙이기를** 제공 합니다. 예를 들어 응용 프로그램에 상태 저장소가 필요할 수 있습니다. Redis Cache 대상으로 지정 하는 사용자 지정 코드를 작성 하 여 런타임에 서비스에 삽입할 수 있습니다. 그러나 기본 제공 되는 분산 캐시 기능을 제공 하 여 사용자 환경을 단순화 합니다. 서비스는 Eapr **구성** 을 통해 Redis Cache **구성 요소** 에 동적으로 바인딩하는 eapr **빌딩 블록** 을 호출 합니다. 이 모델을 사용 하면 서비스는 사용자를 대신해 서 Redis를 호출 하는 Eapr에 호출을 위임 합니다. 서비스에 SDK, 라이브러리 또는 Redis에 대 한 직접 참조가 없습니다. Redis Cache API가 아닌 일반적인 Eapr 상태 관리 API에 대해 코딩 합니다.
+플러그형 구성 요소의 아키텍처를 통해, d 4는 분산 응용 프로그램의 기반이 되는 것을 크게 간소화 합니다. 이 클래스는 응용 프로그램을 Capr 런타임의 인프라 기능과 바인딩하는 **동적 붙이기를** 제공 합니다.
+
+서비스의 상태를 변경 하는 데 필요한 요구 사항을 고려 하세요. 디자인은 무엇 인가요? Redis Cache와 같은 상태 저장소를 대상으로 하는 사용자 지정 코드를 작성할 수 있습니다. 그러나 6Apr는 상태 관리 기능을 기본 제공 합니다. 서비스는 Capr 구성 **요소 구성** yaml 파일을 통해 상태 저장소 **구성 요소** 에 동적으로 바인딩하는 eapr 상태 관리 **빌딩 블록** 을 호출 합니다. Redis를 포함 하 여 몇 가지 미리 작성 된 상태 저장소 구성 요소가 포함 된 capr. 이 모델을 사용 하면 서비스에서 상태 관리를 Capr 런타임에 위임 합니다. 서비스에 SDK, 라이브러리 또는 기본 구성 요소에 대 한 직접 참조가 없습니다. 코드를 변경 하지 않고도 Redis에서 MySQL 또는 Cassandra로 상태 저장소를 변경할 수도 있습니다.
 
 그림 2-1에는 2만 피트의 44가 나와 있습니다.
 
@@ -57,7 +59,7 @@ D 4는 최신 분산 응용 프로그램: **복잡성** 에 내재 된 큰 과�
 
 다음 표에서는 각 블록에서 제공 하는 인프라 서비스에 대해 설명 합니다.
 
-| 구성 요소 | 설명 |
+| 구성 요소 | Description |
 |----------------|-------------|
 | [상태 관리](state-management.md) | 장기 실행 상태 저장 서비스에 대 한 컨텍스트 정보를 지원 합니다. |
 | [서비스 호출](service-invocation.md) | 플랫폼을 알 수 없는 프로토콜 및 잘 알려진 끝점을 사용 하 여 직접, 보안 서비스 간 호출을 호출 합니다. |
@@ -147,7 +149,7 @@ Azure Redis Cache에서 상태 저장소로 시작 하는 것일 수 있습니�
 
 이 문서를 작성할 당시에는 다음과 같은 구성 요소 유형을 d 4에서 제공 합니다.
 
-| 구성 요소 | 설명 |
+| 구성 요소 | Description |
 |-----------|-------------|
 | [서비스 검색](https://github.com/dapr/components-contrib/tree/master/nameresolution) | 서비스 간 검색을 제공 하기 위해 호스팅 환경과 통합 하는 서비스 호출 구성 요소에서 사용 됩니다. |
 | [State](https://github.com/dapr/components-contrib/tree/master/state) | 다양 한 상태 저장소 구현과 상호 작용 하기 위한 균일 한 인터페이스를 제공 합니다. |
@@ -208,6 +210,8 @@ gRPC는 오래 된 [원격 프로시저 호출 (RPC)](https://en.wikipedia.org/w
 - 클라이언트 요청과 서버 응답을 동시에 전송 하기 위한 양방향 전이중 통신입니다.
 - 대량 데이터 집합을 비동기적으로 스트림 하는 요청 및 응답을 설정 하는 기본 제공 스트리밍입니다.
 
+자세한 내용은 [Azure 전자책에 대 한 .Net 앱 설계 Cloud-Native](https://docs.microsoft.com/dotnet/architecture/cloud-native/) 에서 [grpc 개요](https://docs.microsoft.com/dotnet/architecture/cloud-native/grpc#what-is-grpc) 를 확인 하세요.  
+
 ## <a name="dapr-and-service-meshes"></a>4apr 및 서비스 메시
 
 서비스 메시는 분산 응용 프로그램에 대 한 또 다른 빠르게 진화 하는 기술입니다.
@@ -220,7 +224,7 @@ gRPC는 오래 된 [원격 프로시저 호출 (RPC)](https://en.wikipedia.org/w
 
 **그림 2-8**. 측 자동차를 사용 하는 서비스 메시.
 
-위의 그림은 각 서비스와 함께 실행 되는 프록시가 메시지를 가로채는 방법을 보여 줍니다. 각 프록시는 서비스와 관련 된 트래픽 규칙으로 구성할 수 있습니다. 메시지를 이해 하 고 서비스와 외부 세계에서 메시지를 라우팅할 수 있습니다.
+위의 그림은 각 서비스와 함께 실행 되는 사이드카 프록시가 메시지를 가로채는 방법을 보여 줍니다. 각 프록시는 서비스와 관련 된 트래픽 규칙으로 구성할 수 있습니다. 메시지를 이해 하 고 서비스와 외부 세계에서 메시지를 라우팅할 수 있습니다.
 
 따라서 "서비스 메시는 ' 서비스 메시 인가요?" 라는 질문이 됩니다.
 
@@ -234,7 +238,7 @@ gRPC는 오래 된 [원격 프로시저 호출 (RPC)](https://en.wikipedia.org/w
 
 **그림 2-9**. D apr 및 서비스 메시를 함께 연결 합니다.
 
-책에서는 Haishi Bai 및 Yaron Schneider를 [학습](https://www.amazon.com/Learning-Dapr-Building-Distributed-Applications/dp/1492072427/ref=sr_1_1?dchild=1&keywords=dapr&qid=1604794794&sr=8-1)하는 방법에 대해 설명 합니다.
+D [apr 온라인 설명서](https://docs.dapr.io/concepts/faq/#networking-and-service-meshes) 에는 eapr 및 service 메시 통합이 포함 되어 있습니다.
 
 ## <a name="summary"></a>요약
 

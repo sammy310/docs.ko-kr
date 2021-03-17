@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-ms.openlocfilehash: 63fdf49ba688c0b3c4ee6653e1c2960c49f526ce
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e477a474ab850239068246057e94b94c983a99c8
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257121"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624203"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>애플리케이션 추적 및 조율
 
@@ -33,7 +33,7 @@ ms.locfileid: "96257121"
   
 - **성능 카운터** - 애플리케이션의 성능을 추적할 수 있게 해주는 구성 요소입니다. 자세한 내용은 [성능 카운터](performance-counters.md)를 참조하세요.  
   
-- **이벤트 로그** - 애플리케이션의 실행에서 주요 이벤트를 수신하고 추적할 수 있게 해주는 구성 요소입니다. 자세한 내용은 <xref:System.Diagnostics.EventLog> 클래스를 참조하세요.  
+- **이벤트 로그** -응용 프로그램 실행 시 주요 이벤트를 수신 하 고 추적할 수 있게 해 주는 구성 요소입니다. 자세한 내용은 <xref:System.Diagnostics.EventLog> 클래스를 참조하세요.  
   
  분산 애플리케이션에서는 코드의 전략적 위치에 trace 문을 배치하여 애플리케이션을 계측하는 것이 특히 유용합니다. trace 문을 통해 애플리케이션을 계측하여 문제가 발생할 때 정보를 표시하는 것은 물론 애플리케이션의 성능을 모니터링할 수 있습니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "96257121"
   
 ## <a name="code-tracing-and-debugging"></a>코드 추적 및 디버깅  
 
- 개발하는 동안 <xref:System.Diagnostics.Debug> 클래스의 출력 메서드를 사용하여 Visual Studio IDE(통합 개발 환경)의 출력 창에 메시지를 표시할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 개발하는 동안 <xref:System.Diagnostics.Debug> 클래스의 출력 메서드를 사용하여 Visual Studio IDE(통합 개발 환경)의 출력 창에 메시지를 표시할 수 있습니다. 예를 들어:  
   
 ```vb  
 Trace.WriteLine("Hello World!")  
@@ -127,7 +127,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 |메서드|출력|  
 |------------|------------|  
-|`Assert`|지정된 텍스트 또는 지정되지 않은 경우 호출 스택입니다. 문에 인수로 지정 된 조건이 false 인 경우에만 출력이 기록 됩니다 `Assert` . **false**|  
+|`Assert`|지정된 텍스트 또는 지정되지 않은 경우 호출 스택입니다. 문에 인수로 지정 된 조건이 false 인 경우에만 출력이 기록 됩니다 `Assert` . |  
 |`Fail`|지정된 텍스트 또는 지정되지 않은 경우 호출 스택입니다.|  
 |`Write`|지정한 텍스트|  
 |`WriteIf`|문에 인수로 지정 된 조건이 충족 되는 경우 지정 된 텍스트입니다 `WriteIf` .|  
@@ -144,7 +144,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 
  ASP.NET 애플리케이션을 배포하기 전에 추적 및 디버깅을 사용하지 않도록 설정하지 않으면 애플리케이션이 해당 정보를 노출하여 악성 프로그램에서 악용될 수 있습니다. 자세한 내용은 [방법: 추적 및 디버그를 사용한 조건부 컴파일](how-to-compile-conditionally-with-trace-and-debug.md), [컴파일 및 빌드](/visualstudio/ide/compiling-and-building-in-visual-studio) 및 [방법: 추적 스위치 만들기, 초기화 및 구성](how-to-create-initialize-and-configure-trace-switches.md)을 참조하세요. IIS(인터넷 정보 서비스)를 통해 디버깅을 구성할 수도 있습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>

@@ -3,12 +3,12 @@ title: D 4에서 시작
 description: 로컬 개발 환경을 준비 하 고, .NET 응용 프로그램을 사용 하 여 첫 번째 .NET 응용 프로그램을 구축 하기 위한 가이드입니다.
 author: amolenk
 ms.date: 02/25/2021
-ms.openlocfilehash: 68b1982c7283e0717ff7e1e254e5f313cd480d7b
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.openlocfilehash: 1b6ecd2cc2bf077375262155f0866cfef2dab708
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102401904"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623813"
 ---
 # <a name="get-started-with-dapr"></a>D 4에서 시작
 
@@ -255,7 +255,7 @@ Core를 사용 하 여 .Net Core 3.1 개발 도구를 설치 했는지 확인 �
     }
     ```
 
-    호출은 `AddDapr` `DaprClient` ASP.NET Core 종속성 주입 시스템에 클래스를 등록 합니다. 나중에이 클래스를 사용 하 여 `DaprClient` 사이드카와 통신 합니다.
+    호출은 `AddDapr` `DaprClient` ASP.NET Core 종속성 주입 시스템에 클래스를 등록 합니다. 클라이언트를 등록 하면 이제 `DaprClient` 서비스 코드에 인스턴스를 삽입 하 여 사이드카, 빌딩 블록 및 구성 요소와 통신할 수 있습니다.
 
 1. *WeatherForecast* 라는 새 c # 클래스 파일을 프로젝트에 추가 합니다 `DaprFrontEnd` .
 

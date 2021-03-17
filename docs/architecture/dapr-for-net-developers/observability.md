@@ -2,14 +2,14 @@
 title: Eapr 관찰성 빌딩 블록
 description: 관찰성 빌딩 블록에 대 한 설명, 해당 기능, 이점 및 적용 방법
 author: edwinvw
-ms.date: 02/07/2021
+ms.date: 02/17/2021
 ms.reviewer: robvet
-ms.openlocfilehash: 6add36b2030c3061ee522604b2e07f05875b98a9
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 745b9c07c31cc3ee11d5df945f2ccb87d0c9c2ed
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604712"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623982"
 ---
 # <a name="the-dapr-observability-building-block"></a>Eapr 관찰성 빌딩 블록
 
@@ -54,7 +54,7 @@ D 4는 다른 백 엔드 모니터링 도구에 원격 분석을 게시할 수 �
 
 이 챕터의 시작 부분에서 4 개의 원격 분석 범주가 식별 되었습니다. 다음 섹션에서는 각 범주에 대 한 세부 정보를 제공 합니다. 여기에는 인기 있는 모니터링 백 엔드와 통합 되는 수집기를 구성 하는 방법에 대 한 지침이 포함 됩니다.
 
-### <a name="distributed-tracing"></a>분산된 추적
+### <a name="distributed-tracing"></a>분산 추적
 
 분산 추적은 분산 응용 프로그램의 서비스 간에 흐르는 트래픽에 대 한 통찰력을 제공 합니다. 교환 된 요청 및 응답 메시지의 로그는 문제 해결을 위한 중요 한 정보입니다. 하드 파트는 동일한 작업에서 발생 하는 *메시지의 상관* 관계를 말합니다.
 
@@ -274,7 +274,7 @@ apiVersion: dapr.io/v1alpha1
 
 6apr는 cccsystem 서비스 및 해당 런타임에 대 한 많은 메트릭을 생성 합니다. 일부 사례:
 
-| 메트릭                                         | 원본 | 설명                                                  |
+| 메트릭                                         | 원본 | Description                                                  |
 | ---------------------------------------------- | :----: | ------------------------------------------------------------ |
 | dapr_operator_service_created_total            | 시스템 | Eapr 운영자 서비스에서 만든 총 Capr 서비스 수입니다. |
 | dapr_injector_sidecar_injection/requests_total | 시스템 | Sidecar-Injector service에서 받은 총 사이드카 주입 요청 수입니다. |
@@ -322,7 +322,7 @@ spec:
 
 D 4에서 구조적 로깅을 내보냅니다. 각 로그 항목의 형식은 다음과 같습니다.
 
-| 필드    | 설명                                          | 예                             |
+| 필드    | Description                                          | 예제                             |
 | -------- | ---------------------------------------------------- | ----------------------------------- |
 | time     | ISO8601 형식이 지정 된 타임 스탬프                          | `2021-01-10T14:19:31.000Z`          |
 | 수준    | 항목의 수준 ( `debug` \| `info` \| `warn` \| `error` )   | `info`                              |

@@ -2,13 +2,13 @@
 title: 전 세계는 20,000 피트로
 description: 분산 응용 프로그램의 이점과 문제는 모놀리식 및 SOA 접근 방식을 살펴보세요.
 author: robvet
-ms.date: 02/07/2021
-ms.openlocfilehash: b857355880c3942526d751312d98f2b822704759
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 02/17/2021
+ms.openlocfilehash: df182e81bcf95a84fc283dbb945d20f2218b0d0b
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401832"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623943"
 ---
 # <a name="the-world-is-distributed"></a>전 세계는 20,000 피트로
 

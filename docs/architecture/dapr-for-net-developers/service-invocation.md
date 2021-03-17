@@ -2,13 +2,13 @@
 title: 6Apr 서비스 호출 빌딩 블록
 description: 서비스 호출 빌딩 블록에 대 한 설명, 해당 기능, 이점 및 적용 방법
 author: amolenk
-ms.date: 02/07/2021
-ms.openlocfilehash: 2b64aa1e9b079a3fefe120e687cd6d395981c633
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 02/17/2021
+ms.openlocfilehash: f6d5f10ae476d85a9925c4fa387a16d575cacf6a
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102401843"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624099"
 ---
 # <a name="the-dapr-service-invocation-building-block"></a>6Apr 서비스 호출 빌딩 블록
 
@@ -16,7 +16,7 @@ ms.locfileid: "102401843"
 
 ## <a name="what-it-solves"></a>해결 방법
 
-분산 응용 프로그램에서 서비스 간의 호출은 쉽게 나타날 수 있지만 관련 된 많은 과제가 있습니다. 예를 들면 다음과 같습니다.
+분산 응용 프로그램에서 서비스 간의 호출은 쉽게 나타날 수 있지만 관련 된 많은 과제가 있습니다. 예를 들어:
 
 - 다른 서비스를 찾을 수 있습니다.
 - 서비스 주소를 지정 하 여 서비스를 안전 하 게 호출 하는 방법입니다.
@@ -26,7 +26,7 @@ ms.locfileid: "102401843"
 
 서비스 호출 빌딩 블록은 서비스에 대 한 [역방향 프록시로](https://kemptechnologies.com/reverse-proxy/reverse-proxy/) 서 사이드카를 사용 하 여 이러한 문제를 해결 합니다.
 
-## <a name="how-it-works"></a>작동 방법
+## <a name="how-it-works"></a>작동 방식
 
 예부터 살펴보겠습니다. "서비스 A"와 "Service B"의 두 가지 서비스를 고려 합니다. 서비스 A는 `catalog/items` 서비스 B에서 API를 호출 해야 합니다. 서비스 A는 서비스 B에 대 한 종속성을 사용 하 고이에 대 한 직접 호출을 수행할 수 있지만, 서비스 A는 대신 사이드카에서 서비스 호출 API를 호출 합니다. 그림 6-1은 작업을 보여 줍니다.
 

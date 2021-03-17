@@ -2,13 +2,13 @@
 title: 6Apr 바인딩 빌딩 블록
 description: 바인딩 구성 요소에 대 한 설명, 해당 기능, 이점 및 적용 방법
 author: edwinvw
-ms.date: 02/07/2021
-ms.openlocfilehash: 757d2560016407119fe9244c100a971977852cc5
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.date: 02/17/2021
+ms.openlocfilehash: d6f8b2aa90b15e5b9cd7b5c29938660d1b2907e9
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102401891"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623956"
 ---
 # <a name="the-dapr-bindings-building-block"></a>6Apr 바인딩 빌딩 블록
 
@@ -26,7 +26,7 @@ Azure Functions 및 AWS 람다와 같은 클라우드 기반 *서버* 를 사용
 
 처음에는이 책의 앞부분에서 설명한 [게시/구독 패턴과](publish-subscribe.md) 비슷한 방법으로 리소스 바인딩 동작이 표시 될 수 있습니다. 유사성을 공유 하는 경우 차이점이 있습니다. 게시/구독은 Eapr 서비스 간의 비동기 통신을 중심으로 합니다. 리소스 바인딩의 범위는 훨씬 더 큽니다. 소프트웨어 플랫폼 간의 시스템 상호 운용성에 중점을 둔 것입니다. 마이크로 서비스 응용 프로그램 외부의 서로 다른 응용 프로그램, 데이터 저장소 및 서비스 간에 정보를 교환 합니다.
 
-## <a name="how-it-works"></a>작동 방법
+## <a name="how-it-works"></a>작동 방식
 
 Eapr 리소스 바인딩은 구성 요소 구성 파일로 시작 합니다. 이 YAML 파일은 구성 설정과 함께 바인딩할 리소스의 유형을 설명 합니다. 구성 된 서비스는 리소스에서 이벤트를 받거나 이벤트를 트리거할 수 있습니다.
 
