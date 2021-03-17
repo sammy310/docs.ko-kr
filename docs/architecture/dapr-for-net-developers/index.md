@@ -2,13 +2,13 @@
 title: .NET 개발자용 Dapr
 description: Microsoft의 오픈 소스 Distributed Application Runtime의 전체 기능을 이해하고 활용하기 위한 .NET 개발자용 안내서입니다.
 author: robvet
-ms.date: 02/07/2021
-ms.openlocfilehash: fc38dd1a98570cc4d2b367d272a107e3ad67ead9
-ms.sourcegitcommit: bdbf6472de867a0a11aaa5b9384a2506c24f27d2
+ms.date: 02/17/2021
+ms.openlocfilehash: 2ab66257cca6f99074e2aa45a24869012b4976fe
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102206570"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623722"
 ---
 # <a name="dapr-for-net-developers"></a>.NET 개발자용 Dapr
 
