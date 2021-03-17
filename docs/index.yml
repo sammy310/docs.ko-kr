@@ -1,97 +1,83 @@
 ### YamlMime:Hub
 title: .NET 문서
-summary: .NET을 사용하여 C#, Visual Basic 및 F#으로 모든 플랫폼에서 애플리케이션을 만드는 방법을 알아봅니다. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
+summary: .NET을 사용하여 C#, F# 및 Visual Basic으로 모든 플랫폼에서 애플리케이션을 만드는 방법을 알아봅니다. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
 brand: dotnet
 metadata:
   title: .NET 문서
-  description: .NET을 사용하여 C#, Visual Basic 및 F#으로 모든 플랫폼에서 애플리케이션을 만드는 방법을 알아봅니다. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
+  description: .NET을 사용하여 C#, F# 및 Visual Basic으로 모든 플랫폼에서 애플리케이션을 만드는 방법을 알아봅니다. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
   ms.product: dotnet
   ms.topic: hub-page
   ms.collection: collection
   author: BillWagner
   ms.author: wiwagn
-  ms.date: 10/9/2020
-  ms.openlocfilehash: 0fea12666b59df2be802b9b3785533d1034e619e
-  ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+  ms.date: 03/11/2021
+  ms.openlocfilehash: ca8e6d7d817a324c72d95d39bf50b409d70a66aa
+  ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 03/04/2021
-  ms.locfileid: "102103056"
+  ms.lasthandoff: 03/11/2021
+  ms.locfileid: "103190400"
 highlightedContent:
   items:
   - title: .NET 다운로드
     itemType: download
     url: https://dotnet.microsoft.com/download
-  - title: C# 소개 빠른 대화형 시작입니다.
-    itemType: get-started
-    url: ./csharp/tour-of-csharp/tutorials/hello-world.yml
-  - title: 첫 번째 콘솔 앱을 만듭니다.
+  - title: C#으로 .NET 애플리케이션 빌드
+    itemType: learn
+    url: /learn/paths/build-dotnet-applications-csharp
+  - title: 첫 번째 콘솔 앱 생성
     itemType: tutorial
     url: core/get-started.md
-  - title: 첫 번째 웹앱을 만듭니다.
+  - title: 첫 번째 웹앱 만들기
     itemType: learn
     url: https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro
-  - title: C#을 사용하여 .NET 애플리케이션 빌드
-    itemType: learn
-    url: /learn/paths/build-dotnet-applications-csharp/
-  - title: 모든 .NET 학습 경로 및 모듈 찾아보기
+  - title: .NET 학습 경로 탐색
     itemType: learn
     url: /learn/dotnet/
-  - title: .NET의 새로운 기능 문서
-    itemType: whats-new
-    url: whats-new/index.yml
   - title: .NET 개발자용 Azure
     itemType: overview
     url: azure/index.yml
+  - title: .NET의 새로운 기능 문서
+    itemType: whats-new
+    url: whats-new/index.yml
+  - title: C#에 대한 대화형 소개
+    itemType: get-started
+    url: csharp/tour-of-csharp/tutorials/hello-world.yml
 conceptualContent:
   title: '.NET: 비어 있음. 플랫폼 간에 사용할 수 있습니다. 오픈 소스.'
   summary: 웹, 모바일, 데스크톱, 게임, IoT 등 모든 앱을 빌드하기 위한 개발자 플랫폼. Windows, Linux, macOS에서 지원됩니다.
   items:
   - title: 오픈 소스 .NET
-    summary: .NET Core에 대한 자세한 정보
     links:
     - url: core/introduction.md
       itemType: overview
-      text: .NET Core 개요
-    - url: core/whats-new/dotnet-core-3-1.md
-      itemType: whats-new
-      text: .NET Core 3.1의 새로운 기능
-    - url: ./core/introduction.md
-      itemType: overview
-      text: .NET 둘러보기
-    - url: core/deploying/index.md
-      itemType: deploy
-      text: .NET Core 앱 배포
-    - url: core/docker/build-container.md
-      itemType: tutorial
-      text: Docker를 사용하여 .NET Core 앱 컨테이너화
+      text: .NET 개요
     - url: core/tutorials/index.md
       itemType: tutorial
-      text: 자습서
-    - url: https://dotnet.microsoft.com/platform/community
+      text: .NET 자습서
+    - url: core/dotnet-five.md
       itemType: whats-new
-      text: 커뮤니티
-    - url: https://dotnetfoundation.org/
+      text: .NET 5의 새로운 기능
+    - url: core/deploying/index.md
+      itemType: deploy
+      text: .NET 앱 배포
+    - url: https://dotnetfoundation.org
       itemType: overview
       text: .NET Foundation
+    - url: https://dotnet.microsoft.com/platform/community
+      itemType: whats-new
+      text: .NET 개발자 커뮤니티
+    - url: standard/library-guidance/index.md
+      itemType: concept
+      text: 오픈 소스 라이브러리 지침
   - title: .NET 개념
-    summary: .NET의 기본 개념에 대한 자세한 정보
     links:
-    - url: https://channel9.msdn.com/Series/NET-Core-101/What-is-NET
+    - url: https://channel9.msdn.com/series/net-core-101/what-is-net
       itemType: video
       text: .NET이란?
-    - url: /answers/products/dotnet
-      itemType: get-started
-      text: .NET 질문 및 답변
-    - url: ./core/introduction.md
-      itemType: overview
-      text: .NET 개요
-    - url: core/dotnet-five.md
+    - url: fundamentals/index.yml
       itemType: concept
-      text: .NET 5의 새로운 기능
-    - url: standard/net-standard.md
-      itemType: overview
-      text: .NET Standard
+      text: .NET 기본 사항
     - url: /aspnet/core/
       itemType: overview
       text: ASP.NET Core
@@ -104,42 +90,52 @@ conceptualContent:
     - url: framework/index.yml
       itemType: overview
       text: .NET Framework(Windows) 앱
+    - url: /answers/products/dotnet
+      itemType: get-started
+      text: .NET Q&A
   - title: .NET 앱 개발
-    summary: .NET을 사용하여 개발 시작
     links:
     - url: core/sdk.md
-      itemType: download
-      text: .NET Core SDK 다운로드
+      itemType: overview
+      text: .NET SDK 개요
     - url: core/tools/index.md
       itemType: overview
-      text: .NET Core CLI 개요
+      text: .NET CLI 개요
+    - url: standard/net-standard.md
+      itemType: overview
+      text: .NET Standard
     - url: core/porting/index.md
-      itemType: how-to-guide
-      text: .NET Framework에서 .NET Core로 이식
+      itemType: overview
+      text: .NET Framework에서 .NET으로 이식
+    - url: core/docker/build-container.md
+      itemType: tutorial
+      text: Docker를 사용하여 .NET 애플리케이션 컨테이너화
     - url: core/compatibility/index.md
       itemType: concept
-      text: .NET Core 호환성이 손상되는 변경 사항
-    - url: /dotnet/desktop/wpf/overview/
-      itemType: overview
-      text: Windows용 .NET Core 데스크톱 앱 만들기
-    - url: standard/library-guidance/index.md
-      itemType: concept
-      text: 오픈 소스 라이브러리 지침
+      text: .NET 호환성이 손상되는 변경
+    - url: /dotnet/desktop/wpf/get-started/create-app-visual-studio?view=netdesktop-5.0&preserve-view=true
+      itemType: tutorial
+      text: Windows용 .NET 데스크톱 애플리케이션 생성
   - title: .NET 아키텍처 가이드
-    summary: .NET의 기본 개발 및 아키텍처 지침 읽기
     links:
+    - url: architecture/dapr-for-net-developers/index.md
+      itemType: architecture
+      text: .NET 개발자용 Dapr
     - url: architecture/microservices/index.md
       itemType: architecture
-      text: '.NET 마이크로 서비스: 컨테이너화된 .NET 앱의 아키텍처'
+      text: .NET microservices architecture guidance(.NET 마이크로 서비스 아키텍처 가이드)
     - url: architecture/modern-web-apps-azure/index.md
       itemType: architecture
-      text: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계
+      text: ASP.NET Core 및 Azure를 사용한 최신 웹앱
     - url: architecture/containerized-lifecycle/index.md
       itemType: architecture
-      text: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
+      text: 컨테이너화된 Docker 앱 수명 주기
+    - url: architecture/cloud-native/index.md
+      itemType: architecture
+      text: Azure용 클라우드 기본 .NET 앱
     - url: architecture/modernize-with-azure-containers/index.md
       itemType: architecture
-      text: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션 현대화
+      text: Azure를 사용한 .NET 앱 최신화
     footerLink:
       url: architecture/index.yml
       text: 모든 아키텍처 가이드
@@ -147,7 +143,7 @@ tools:
   title: 프로그래밍 언어
   summary: C#, F# 또는 Visual Basic에서 .NET 앱을 작성할 수 있습니다.
   items:
-  - title: C 제품군의 개체 지향적이고 형식이 안전한 현대적인 멤버
+  - title: 개체 지향적이고 안전 형식의 최신 언어
     imageSrc: https://docs.microsoft.com/media/logos/logo_Csharp.svg
     url: csharp/index.yml
   - title: .NET의 함수 프로그래밍 언어
@@ -163,8 +159,6 @@ additionalContent:
     items:
     - title: 웹
       links:
-      - url: /aspnet/core/getting-started
-        text: 첫 번째 웹앱 만들기
       - url: /aspnet/core/tutorials
         text: ASP.NET Core 자습서
       - url: /aspnet/core
@@ -175,50 +169,54 @@ additionalContent:
         text: Windows 컨테이너에 ASP.NET MVC 앱
       - url: /aspnet/core/blazor/
         text: 'Blazor: .NET을 사용한 대화형 클라이언트 쪽 웹 UI'
-    - title: 클라우드 기본 및 마이크로 서비스
+    - title: 모바일
       links:
-      - url: ./azure/index.yml
-        text: .NET 설명서에 대한 Azure
-      - url: /azure/storage
-        text: 스토리지
-      - url: ./fsharp/using-fsharp-on-azure/index.md
-        text: Azure에서 F# 사용
-      - url: architecture/serverless/index.md
-        text: '서버리스 앱: 아키텍처, 패턴 및 Azure 구현'
-      - url: architecture/microservices/index.md
-        text: '.NET 마이크로 서비스: 컨테이너화된 .NET 애플리케이션을 위한 아키텍처'
-    - title: 휴대폰
-      links:
-      - url: /xamarin/ios/
+      - url: /xamarin/xamarin-forms
+        text: Xamarin.Forms
+      - url: /xamarin/ios
         text: Xamarin.iOS
       - url: /xamarin/android
         text: Xamarin.Android
-      - url: /xamarin/xamarin-forms
-        text: Xamarin.Forms
       - url: /azure/developer/mobile-apps
         text: Azure를 사용하여 Xamarin 앱 개발
     - title: 바탕 화면
       links:
       - url: /uwp
         text: 유니버설 Windows 앱
-      - url: /dotnet/desktop/wpf/
-        text: Windows Presentation Foundation(.NET Core)
-      - url: /dotnet/desktop/wpf/?view=netframeworkdesktop-4.8
+      - url: /dotnet/desktop/wpf/?view=netdesktop-5.0&preserve-view=true
+        text: Windows Presentation Foundation(.NET 5+)
+      - url: /dotnet/desktop/wpf/?view=netframeworkdesktop-4.8&preserve-view=true
         text: Windows Presentation Foundation(.NET Framework)
-      - url: /dotnet/desktop/winforms/?view=netframeworkdesktop-4.8
-        text: Windows Forms
+      - url: /dotnet/desktop/winforms/?view=netdesktop-5.0&preserve-view=true
+        text: Windows Forms(.NET 5+)
+      - url: /dotnet/desktop/winforms/?view=netframeworkdesktop-4.8&preserve-view=true
+        text: Windows Forms(.NET Framework)
       - url: /xamarin/mac
         text: macOS용 Xamarin
-    - title: 게임
+    - title: 마이크로 서비스
       links:
-      - url: https://visualstudio.microsoft.com/vs/features/game-development/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link
-        text: Visual Studio를 사용한 게임 개발
-      - url: https://docs.cryengine.com/display/CEPROG/C%23+Programming
-        text: CRYENGINE을 사용하여 C#으로 게임을 빌드하는 방법 알아보기
-      - url: https://docs.monogame.net/?page=main
-        text: MonoGame 라이브러리를 사용하여 C#으로 게임 빌드
-      - url: https://docs.unity3d.com/Manual/index.html
-        text: Unity를 사용하여 C#으로 2D 및 3D 게임을 빌드하는 방법 알아보기
+      - url: architecture/dapr-for-net-developers/index.md
+        text: .NET 개발자용 Dapr
+      - url: architecture/cloud-native/index.md
+        text: 클라우드 기본 .NET 앱
+      - url: /learn/aspnet/microservice-tutorial/intro
+        text: 첫 번째 .NET 마이크로 서비스 생성
+      - url: architecture/serverless/index.md
+        text: Azure를 사용한 서버리스 앱
+      - url: architecture/microservices/index.md
+        text: 컨테이너화된 .NET 앱의 아키텍처
+    - title: 클라우드
+      links:
+      - url: azure/index.yml
+        text: .NET 개발자용 Azure
+      - url: /dotnet/azure/migration/app-service?view=azure-dotnet&preserve-view=true
+        text: 온-프레미스 .NET 웹앱 또는 서비스 마이그레이션
+      - url: /dotnet/azure/key-azure-services
+        text: .NET 개발자를 위한 Azure 서비스
+      - url: /dotnet/azure/sdk/azure-sdk-for-dotnet
+        text: Azure .NET SDK
+      - url: fsharp/using-fsharp-on-azure/index.md
+        text: Azure에서 F# 사용
     - title: 기계 학습 및 AI
       links:
       - url: machine-learning/index.yml
@@ -229,34 +227,47 @@ additionalContent:
         text: Azure Machine Learning
       - url: spark/index.yml
         text: Apache Spark용 .NET
+    - title: 게임 개발
+      links:
+      - url: https://visualstudio.microsoft.com/vs/features/game-development/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link
+        text: Visual Studio를 사용한 게임 개발
+      - url: https://docs.cryengine.com/display/CEPROG/C%23+Programming
+        text: CRYENGINE을 사용하여 C#으로 게임을 빌드하는 방법 알아보기
+      - url: https://docs.monogame.net/?page=main
+        text: MonoGame 라이브러리를 사용하여 C#으로 게임 빌드
+      - url: https://docs.unity3d.com/Manual/index.html
+        text: Unity를 사용하여 C#으로 2D 및 3D 게임을 빌드하는 방법 알아보기
     - title: IoT(사물 인터넷)
       links:
-      - url: ./iot/index.yml
+      - url: iot/index.yml
         text: .NET IoT 라이브러리
-      - url: ./iot/quickstarts/sensehat.md
+      - url: iot/quickstarts/sensehat.md
         text: 5분 만에 시작
-      - url: ./iot/tutorials/blink-led.md
+      - url: iot/tutorials/blink-led.md
         text: LED 깜박이기
       - url: https://aka.ms/IoTNet101
         text: .NET IoT 101 동영상 시리즈
   - title: API 및 언어 참조
     summary: .NET API 및 언어 참조 문서를 검색합니다.
     items:
+    - title: .NET API 참조
+      summary: .NET의 API 참조 문서
+      url: ../api/index.md?view=net-5.0
     - title: .NET Core API 참조
       summary: .NET Core의 API 참조 문서
-      url: ../api/index.md?view=netcore-3.1
+      url: ../api/index.md?view=netcore-3.1&preserve-view=true
     - title: .NET Framework API 참조
       summary: .NET Framework의 API 참조 문서
-      url: ../api/index.md?view=netframework-4.8
+      url: ../api/index.md?view=netframework-4.8&preserve-view=true
     - title: ASP.NET Core API 참조
       summary: ASP.NET Core의 API 참조 문서
-      url: ../api/index.md?view=aspnetcore-3.1
+      url: ../api/index.md?view=aspnetcore-3.1&preserve-view=true
     - title: ML.NET API 참조
       summary: ML.NET의 API 참조 문서
-      url: ../api/index.md?view=ml-dotnet
+      url: ../api/index.md?view=ml-dotnet&preserve-view=true
     - title: .NET for Apache Spark API 참조
       summary: .NET for Apache Spark의 API 참조 문서
-      url: ../api/index.md?view=spark-dotnet
+      url: ../api/index.md?view=spark-dotnet&preserve-view=true
     - title: C# 언어 참조
       summary: C# 언어 참조 및 사양
       url: csharp/language-reference/index.md
@@ -266,4 +277,4 @@ additionalContent:
     - title: Visual Basic 언어 참조
       summary: Visual Basic 언어 참조 및 사양
       url: visual-basic/language-reference/index.md
-  footer: .NET 문서에 참여합니다. [기여자 가이드](/contribute/dotnet/dotnet-contribute)를 참조하세요.
+  footer: .NET 문서에 참여하길 원하십니까? 자세한 내용은 [참여자 가이드](/contribute/dotnet/dotnet-contribute)를 참조하세요.
