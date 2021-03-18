@@ -2,12 +2,12 @@
 title: C#의 비동기 프로그래밍
 description: async, await 및 Task를 사용하여 비동기 프로그래밍을 지원하는 C# 언어에 대해 간략히 설명합니다.<T>
 ms.date: 06/04/2020
-ms.openlocfilehash: 02290e374aa97cb5d5ec6410c917751066949b23
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: ffc2289f3b5abfe3865e1a096ee91e2e649a6427
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91438104"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624242"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>async 및 await를 사용한 비동기 프로그래밍
 
@@ -45,7 +45,7 @@ ms.locfileid: "91438104"
 
 이러한 문제는 현재 작성하는 프로그램에 중요합니다. 클라이언트 프로그램을 작성할 때 UI에서 사용자 입력에 응답해야 합니다. 웹에서 데이터를 다운로드하는 동안 애플리케이션에서 휴대폰이 중지된 것처럼 표시하면 안 됩니다. 서버 프로그램을 작성하는 경우 스레드가 차단되지 않도록 합니다. 이러한 스레드는 다른 요청을 처리할 수 있습니다. 비동기 대안이 있을 때 동기 코드를 사용하면 비용이 적게 드는 규모 확장 기능이 저하됩니다. 차단된 스레드에 대한 비용을 지불합니다.
 
-성공적인 최신 애플리케이션에는 비동기 코드가 필요합니다. 언어 지원 없이 비동기 코드를 작성하는 경우 콜백, 완료 이벤트 또는 코드의 원래 의도를 모호하게 하는 다른 수단이 필요했습니다. 동기 코드의 이점은 단계별 작업을 통해 쉽게 검사하고 이해할 수 있다는 것입니다. 기존의 비동기 모델에서는 코드의 기본 동작이 아니라 코드의 비동기적 특성에 집중할 수 밖에 없었습니다.
+성공적인 최신 애플리케이션에는 비동기 코드가 필요합니다. 언어 지원 없이 비동기 코드를 작성하는 경우 콜백, 완료 이벤트 또는 코드의 원래 의도를 모호하게 하는 다른 수단이 필요했습니다. 동기 코드의 이점은 단계별 작업을 통해 쉽게 검사하고 이해할 수 있다는 점입니다. 기존의 비동기 모델에서는 코드의 기본 동작이 아니라 코드의 비동기적 특성에 집중할 수 밖에 없었습니다.
 
 ## <a name="dont-block-await-instead"></a>차단하는 대신 대기
 
@@ -53,7 +53,7 @@ ms.locfileid: "91438104"
 
 먼저 이 코드를 업데이트하여 작업이 실행되는 동안 스레드가 차단되지 않도록 하겠습니다. `await` 키워드는 작업을 차단하지 않는 방식으로 시작한 다음, 해당 작업이 완료되면 실행을 계속합니다. 간단한 비동기 버전의 아침 식사 준비 코드는 다음과 같습니다.
 
-:::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" ID="SnippetMain":::
 
 > [!IMPORTANT]
 > 총 경과 시간은 초기 동기 버전과 거의 같습니다. 이 코드에서는 아직 비동기 프로그래밍의 몇 가지 주요 기능을 활용하지 않았습니다.
@@ -123,9 +123,9 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
-:::image type="content" source="media/asynchronous-breakfast.png" alt-text="동기 아침 식사":::
+:::image type="content" source="media/asynchronous-breakfast.png" alt-text="비동기 아침 식사":::
 
-비동기적으로 준비된 아침 식사에는 대략 20분이 걸렸는데, 일부 작업을 동시에 실행할 수 있었기 때문입니다.
+비동기적으로 준비된 아침 식사에는 대략 20분이 걸렸는데, 일부 작업이 동시에 실행되었기 때문에 이렇게 시간을 절약할 수 있는 것입니다.
 
 앞의 코드가 더 잘 작동합니다. 모든 비동기 작업을 한 번에 시작합니다. 결과가 필요할 때만 각 작업을 기다립니다. 앞의 코드는 다른 마이크로서비스를 요청한 다음, 결과를 단일 페이지로 결합하는 웹 애플리케이션의 코드와 비슷할 수 있습니다. 모든 요청을 즉시 수행한 다음, 이러한 모든 작업을 기다리고(`await`) 웹 페이지를 구성합니다.
 
@@ -138,13 +138,82 @@ Console.WriteLine("Breakfast is ready!");
 
 이전 코드에서는 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체를 사용하여 실행 중인 작업을 유지할 수 있음을 보여 주었습니다. 결과를 사용하기 전에 각 작업을 기다립니다(`await`). 다음 단계는 다른 작업의 결합을 나타내는 메서드를 만드는 것입니다. 아침 식사를 제공하기 전에 빵을 구운 후에 버터와 잼을 바르는 것을 나타내는 작업을 기다리려고 합니다. 이 작업은 다음 코드를 사용하여 나타낼 수 있습니다.
 
-:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" id="SnippetComposeToastTask":::
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" ID="SnippetComposeToastTask":::
 
 앞의 메서드에서 해당 시그니처에는 `async` 한정자가 있습니다. 이 경우 이 메서드에서 비동기 작업이 포함된 `await` 문을 포함하고 있다고 컴파일러에 알립니다. 이 메서드는 빵을 구운 다음, 버터와 잼을 바르는 작업을 나타내며, 이러한 세 가지 작업의 구성을 나타내는 <xref:System.Threading.Tasks.Task%601>를 반환합니다. 이제 main 코드 블록은 다음과 같습니다.
 
-:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" id="SnippetMain":::
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" ID="SnippetMain":::
 
 앞의 변경에서는 비동기 코드를 사용하는 데 있어 중요한 기술을 보여 주었습니다. 작업을 반환하는 새 메서드로 구분하여 작업을 구성합니다. 해당 작업을 기다리는 시기를 선택할 수 있습니다. 다른 작업을 동시에 시작할 수 있습니다.
+
+## <a name="asynchronous-exceptions"></a>비동기 예외
+
+이 시점까지 이러한 모든 작업이 성공적으로 완료된다고 암시적으로 가정했습니다. 비동기 메서드는 동기 메서드와 마찬가지로 예외를 throw합니다. 예외 및 오류 처리에 대한 비동기 지원은 일반적인 비동기 지원과 같은 목표를 달성하려고 합니다. 즉, 일련의 동기 문처럼 읽는 코드를 작성해야 합니다. 작업은 성공적으로 완료될 수 없는 경우 예외를 throw합니다. 시작된 작업이 `awaited`인 경우 클라이언트 코드에서 해당 예외를 catch할 수 있습니다. 예를 들어 토스트를 만드는 동안 토스터에 불이 난다고 가정해 보겠습니다. `ToastBreadAsync` 메서드를 다음 코드와 일치하도록 수정하여 이 상황을 시뮬레이션할 수 있습니다.
+
+```csharp
+private static async Task<Toast> ToastBreadAsync(int slices)
+{
+    for (int slice = 0; slice < slices; slice++)
+    {
+        Console.WriteLine("Putting a slice of bread in the toaster");
+    }
+    Console.WriteLine("Start toasting...");
+    await Task.Delay(2000);
+    Console.WriteLine("Fire! Toast is ruined!");
+    throw new InvalidOperationException("The toaster is on fire");
+    await Task.Delay(1000);
+    Console.WriteLine("Remove toast from toaster");
+
+    return new Toast();
+}
+```
+
+> [!NOTE]
+> 연결할 수 없는 코드에 대해 앞의 코드를 컴파일하면 경고가 표시됩니다. 토스터에 불이 나면 작업이 정상적으로 진행되지 않으므로 이는 의도적입니다.
+
+이러한 변경을 수행한 후 애플리케이션을 실행하면 다음 텍스트와 유사하게 출력됩니다.
+
+```console
+Pouring coffee
+coffee is ready
+Warming the egg pan...
+putting 3 slices of bacon in the pan
+cooking first side of bacon...
+Putting a slice of bread in the toaster
+Putting a slice of bread in the toaster
+Start toasting...
+Fire! Toast is ruined!
+flipping a slice of bacon
+flipping a slice of bacon
+flipping a slice of bacon
+cooking the second side of bacon...
+cracking 2 eggs
+cooking the eggs ...
+Put bacon on plate
+Put eggs on plate
+eggs are ready
+bacon is ready
+Unhandled exception. System.InvalidOperationException: The toaster is on fire
+   at AsyncBreakfast.Program.ToastBreadAsync(Int32 slices) in Program.cs:line 65
+   at AsyncBreakfast.Program.MakeToastWithButterAndJamAsync(Int32 number) in Program.cs:line 36
+   at AsyncBreakfast.Program.Main(String[] args) in Program.cs:line 24
+   at AsyncBreakfast.Program.<Main>(String[] args)
+```
+
+토스터에 불이 난 시점과 예외가 관찰된 시점 사이에 완료되는 작업이 꽤 많습니다. 비동기적으로 실행되는 작업에서 예외를 throw하면 해당 Task가 ‘오류’ 상태가 됩니다. Task 개체는 <xref:System.Threading.Tasks.Task.Exception?displayProperty=nameWithType> 속성에서 throw된 예외를 포함합니다. 오류 상태인 작업이 대기되면 예외를 throw합니다.
+
+이해해야 할 두 가지 중요한 메커니즘이 있습니다. 하나는 예외가 오류 상태인 작업에 저장되는 방식이고 다른 하나는 코드가 오류 상태인 작업을 대기할 때 예외가 패키지 해제되었다가 다시 throw되는 방식입니다.
+
+비동적으로 실행되는 코드가 예외를 throw하면 해당 예외는 `Task`에 저장됩니다. 비동기 작업 중에는 둘 이상의 예외가 throw될 수 있으므로 <xref:System.Threading.Tasks.Task.Exception?displayProperty=nameWithType> 속성은 <xref:System.AggregateException?displayProperty=nameWithType>입니다. throw된 모든 예외는 <xref:System.AggregateException.InnerExceptions?displayProperty=nameWithType> 컬렉션에 추가됩니다. 해당 `Exception` 속성이 null이면 새 `AggregateException`이 만들어지고 throw된 예외는 컬렉션의 첫 번째 항목이 됩니다.
+
+오류 상태인 작업의 가장 일반적인 시나리오는 `Exception` 속성이 정확히 하나의 예외를 포함하는 것입니다. 코드가 오류 상태인 작업을 `awaits`하면 <xref:System.AggregateException.InnerExceptions?displayProperty=nameWithType> 컬렉션의 첫 번째 예외가 다시 throw됩니다. 그렇기 때문에 이 예제의 출력에 `AggregateException` 대신 `InvalidOperationException`이 표시되는 것입니다. 첫 번째 내부 예외를 추출하면 동기 메서드로 작업하는 것과 최대한 유사하게 비동기 메서드로 작업할 수 있습니다. 시나리오에서 여러 예외를 생성할 수 있는 경우 코드에서 `Exception` 속성을 검사할 수 있습니다.
+
+계속하기 전에 `ToastBreadAsync` 메서드에서 다음 두 줄을 주석으로 처리합니다. 또 다른 불이 시작되기를 원치는 않으니까요.
+
+```csharp
+Console.WriteLine("Fire! Toast is ruined!");
+throw new InvalidOperationException("The toaster is on fire");
+```
 
 ## <a name="await-tasks-efficiently"></a>효율적인 작업 대기
 
@@ -184,13 +253,13 @@ while (breakfastTasks.Count > 0)
 변경 내용을 모두 적용한 후 코드의 최종 버전은 다음과 같습니다. <a id="final-version"></a>
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
 
-:::image type="content" source="media/whenany-async-breakfast.png" alt-text="동기 아침 식사":::
+:::image type="content" source="media/whenany-async-breakfast.png" alt-text="모든 비동기 아침 식사의 경우":::
 
-비동기적으로 준비된 아침 식사의 최종 버전에는 대략 15분이 걸렸는데, 일부 작업을 동시에 실행할 수 있었고 코드가 여러 작업을 한 번에 모니터링하고 필요한 경우에만 작업을 수행할 수 있었기 때문입니다.
+비동기적으로 준비된 아침 식사의 최종 버전에는 대략 15분이 걸렸는데, 일부 작업을 동시에 실행하고 코드가 여러 작업을 한 번에 모니터링하고 필요한 경우에만 작업을 수행했기 때문입니다.
 
 이 최종 코드는 비동기입니다. 이 코드는 아침 식사를 요리하는 방법을 더 정확하게 반영하고 있습니다. 앞의 코드를 이 문서의 첫 번째 코드 샘플과 비교해 보세요. 핵심 작업은 코드를 읽어 파악할 수 있습니다. 이 코드는 이 문서의 시작 부분에 나와 있는 아침 식사 준비 지침을 읽는 것과 동일한 방식으로 읽을 수 있습니다. `async` 및 `await` 언어 기능을 사용하면 모든 사용자가 작성된 이러한 지침을 따를 수 있습니다. 가능한 한 작업을 시작하지만 작업이 완료될 때까지 기다리는 것을 차단하지 않도록 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
-> [작업 비동기 프로그래밍 모델에 대해 알아보기](task-asynchronous-programming-model.md)
+> [비동기 프로그램의 실제 시나리오 살펴보기](../../../async.md)
