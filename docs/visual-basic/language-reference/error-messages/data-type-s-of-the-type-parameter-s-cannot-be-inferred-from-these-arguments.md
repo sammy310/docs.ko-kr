@@ -1,6 +1,6 @@
 ---
-description: BC36647 및 BC36644에 대 한 자세한 정보:이 인수에서 형식 매개 변수의 데이터 형식을 유추할 수 없습니다.
 title: 이 인수에서 형식 매개 변수의 데이터 형식을 유추할 수 없습니다.
+description: BC36647 및 BC36644에 대 한 자세한 정보:이 인수에서 형식 매개 변수의 데이터 형식을 유추할 수 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - bc36644
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: 8689a0b95ed11a2eee5814e0171ae8ecd8b206b2
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 26b4358dc2059aaff0a6a72d1489216c854f79a6
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99796693"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653675"
 ---
 # <a name="bc36647-and-bc36644-data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>BC36647 및 BC36644:이 인수에서 형식 매개 변수의 데이터 형식을 유추할 수 없습니다.
 

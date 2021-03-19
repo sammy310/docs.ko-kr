@@ -3,12 +3,12 @@ title: 인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 description: IIS에서 호스트 되는 WCF 서비스를 개발 하 고 배포 하는 데 필요한 작업에 대해 알아봅니다. 구성 요소 설치를 확인 하는 것부터 시작 합니다.
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: ae01533efbeddba75efd159d187a896e2d97ec1a
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: a51cf09309a5a5c9ac8c8a4cc4fecc0a203b7b3c
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259891"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653480"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포
 
@@ -36,7 +36,7 @@ IIS에서 호스팅되는 WCF 서비스가 올바르게 작동 하려면 WCF, II
 
 IIS가 컴퓨터에 이미 있는 경우 .NET Framework 설치 프로세스에서 자동으로 WCF를 IIS에 등록 합니다. .NET Framework 후 IIS가 설치 된 경우에는 IIS 및 ASP.NET를 사용 하 여 WCF를 등록 하려면 추가 단계가 필요 합니다. 이러한 작업을 수행하려면 운영 체제에 따라 다음과 같이 하십시오.
 
-- Windows 7 및 Windows Server 2003: [ServiceModel 등록 도구 (ServiceModelReg.exe)](../servicemodelreg-exe.md) 도구를 사용 하 여 WCF를 IIS에 등록 합니다. 이 도구를 사용 하려면 `ServiceModelReg.exe /i /x` [개발자 명령줄 셸에](/visualstudio/ide/reference/command-prompt-powershell)를 입력 합니다.
+- Windows 7 및 Windows Server 2003: [ServiceModel 등록 도구 (ServiceModelReg.exe)](../servicemodelreg-exe.md) 도구를 사용 하 여 WCF를 IIS에 등록 합니다. 이 도구를 사용 하려면 `ServiceModelReg.exe /i /x` [visual studio 개발자 명령 프롬프트 또는 Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell)에를 입력 합니다.
 
 - Windows 7: 마지막으로 ASP.NET가 .NET Framework 버전 4 이상을 사용 하도록 구성 되어 있는지 확인 해야 합니다. 옵션으로 ASPNET_Regiis 도구를 실행 하 여이 작업을 수행할 수 있습니다 `–i` . 자세한 내용은 [ASP.NET IIS 등록 도구](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))를 참조 하세요.
 
