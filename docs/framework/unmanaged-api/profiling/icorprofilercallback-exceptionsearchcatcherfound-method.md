@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 190f424d-5e37-4163-a191-0895686e9476
 topic_type:
 - apiref
-ms.openlocfilehash: b222e629cbfce2fde27c2d266b3a343466a1419c
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 080e9be61e4f10cbfb60696a5089aca0c3f2843f
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706320"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759991"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>ICorProfilerCallback::ExceptionSearchCatcherFound 메서드
 
@@ -36,9 +36,7 @@ RESULT ExceptionSearchCatcherFound(
   
 ## <a name="parameters"></a>매개 변수
 
-- `functionId`
-
-  \[in] 예외 처리기를 포함 하는 함수의 ID입니다.
+`functionId` 진행 예외 처리기를 포함 하는 함수의 ID입니다.
 
 ## <a name="requirements"></a>요구 사항  
 
@@ -50,6 +48,6 @@ RESULT ExceptionSearchCatcherFound(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

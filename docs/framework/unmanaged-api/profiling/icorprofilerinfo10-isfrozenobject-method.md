@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 3b47204630056e2797b5cf126bd7c291830cea05
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: c4d31c96fd7470a153437ffb0125e81ca8ea77bd
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102103454"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759757"
 ---
 # <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10:: IsFrozenObject 메서드
 
@@ -32,13 +32,9 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 
 ## <a name="parameters"></a>매개 변수
 
-- `objectId`
+`objectId` 진행 검사할 개체입니다.
 
-  \[in] 검사할 개체입니다.
-
-- `pbFrozen`
-
-  \[out] `BOOL` 개체가 읽기 전용 세그먼트에 있는지 여부를 나타내는입니다.
+`pbFrozen` 제한이 `BOOL` 개체가 읽기 전용 세그먼트에 있는지 여부를 나타내는입니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -50,6 +46,6 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 
 **.Net 버전:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo10 인터페이스](icorprofilerinfo10-interface.md)

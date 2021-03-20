@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: c18532450e420f38413028a18630dbf3e308fa61
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: bcd374aec2944977a0745177995ba8adf0cce9b7
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106724"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759419"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences 메서드
 
@@ -33,17 +33,11 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 ## <a name="parameters"></a>매개 변수
 
-- `objectId`
+`objectId` 진행 참조를 열거할 개체입니다.
 
-  \[in] 참조를 열거 하는 개체입니다.
+`callback` 진행 개체에 대 한 참조를 사용 하 여 호출 되는 함수입니다.
 
-- `callback`
-
-  \[in] 개체에 대 한 참조를 사용 하 여 호출 되는 함수입니다.
-
-- `clientData`
-
-  \[in] 프로파일러에서 함수에 전달할 데이터를 제공 `callback` 합니다.
+`clientData` 진행 프로파일러에서 함수에 전달할 데이터를 제공 `callback` 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -59,6 +53,6 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 **.Net 버전:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo10 인터페이스](icorprofilerinfo10-interface.md)

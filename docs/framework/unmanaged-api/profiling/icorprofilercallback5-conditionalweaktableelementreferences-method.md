@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 532c7a02-a9de-4cea-bb2b-7f470da594de
 topic_type:
 - apiref
-ms.openlocfilehash: 40114f6e1d80719eceaf2dbc398b74c1e790c76a
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ded43da029fe0b4c2a645823e62ca66b480f095c
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99788672"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760277"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences 메서드
 
@@ -40,17 +40,13 @@ HRESULT ConditionalWeakTableElementReferences(
 
 ## <a name="parameters"></a>매개 변수
 
-`cRootRefs`\
-[in] `keyRefIds`, `valueRefIds` 및 `rootIds` 배열의 요소 수입니다.
+`cRootRefs` 진행 `keyRefIds`, `valueRefIds` 및 배열의 요소 수 `rootIds` 입니다.
 
-`keyRefIds`\
-[in] 각각 종속 핸들 쌍의 주 요소에 대한 `ObjectID`를 포함하는 개체 ID의 배열입니다.
+`keyRefIds` 진행 각각 `ObjectID` 종속 핸들 쌍의 기본 요소에 대 한를 포함 하는 개체 id의 배열입니다.
 
-`valueRefIds`\
-[in] 각각 종속 핸들 쌍의 보조 요소에 대한 `ObjectID`를 포함하는 개체 ID의 배열입니다. ( `keyRefIds[i]` `valueRefIds[i]` 활성 상태를 유지 합니다.)
+`valueRefIds` 진행 각각 `ObjectID` 종속 핸들 쌍의 보조 요소에 대 한를 포함 하는 개체 id의 배열입니다. ( `keyRefIds[i]` `valueRefIds[i]` 활성 상태를 유지 합니다.)
 
-`rootIds`\
-[in] 가비지 컬렉션 루트에 대한 추가 정보를 포함하는 정수를 가리키는 `GCHandleID` 값의 배열입니다.
+`rootIds` 진행 `GCHandleID` 가비지 컬렉션 루트에 대 한 추가 정보를 포함 하는 정수를 가리키는 값의 배열입니다.
 
 콜백 자체가 진행되는 동안 `ObjectID` 메서드에서 반환되는 `ConditionalWeakTableElementReferences` 값은 유효하지 않습니다. 가비지 수집기가 이전 위치에서 새 위치로 개체를 이동하는 중일 수 있기 때문입니다. 그러므로 프로파일러는 `ConditionalWeakTableElementReferences` 호출 중에 개체 검사를 시도하지 않아야 합니다. `GarbageCollectionFinished` 시에는 모든 개체가 새 위치로 이동했으므로 검사를 수행해도 됩니다.
 
@@ -91,6 +87,6 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 **.NET Framework 버전:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback5 인터페이스](icorprofilercallback5-interface.md)

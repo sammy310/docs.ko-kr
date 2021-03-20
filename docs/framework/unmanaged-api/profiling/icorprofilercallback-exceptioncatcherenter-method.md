@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41462329-a648-46f0-ae6d-728b94c31aa9
 topic_type:
 - apiref
-ms.openlocfilehash: 3a813936a7d1f3a5041e192c85d02b37976e3388
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: f9ea2b44e7a783f9b21f4aa385585dfebc48b1d4
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99657634"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760524"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>ICorProfilerCallback::ExceptionCatcherEnter 메서드
 
@@ -37,13 +37,9 @@ HRESULT ExceptionCatcherEnter(
   
 ## <a name="parameters"></a>매개 변수
 
-- `functionId`
-
-  \[in] 블록을 포함 하는 함수의 식별자입니다 `catch` .
+`functionId` 진행 블록을 포함 하는 함수의 식별자입니다 `catch` .
   
-- `objectId`
-
-  \[in] 처리 되는 예외의 식별자입니다.
+`objectId` 진행 처리 되는 예외의 식별자입니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -63,7 +59,7 @@ HRESULT ExceptionCatcherEnter(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ExceptionCatcherLeave 메서드](icorprofilercallback-exceptioncatcherleave-method.md)

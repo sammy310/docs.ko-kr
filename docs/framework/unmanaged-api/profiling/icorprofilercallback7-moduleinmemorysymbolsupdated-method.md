@@ -10,12 +10,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
-ms.openlocfilehash: 74adf7edc5269824a924933eb3284a5964e1bac1
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: fa6056beb5685ca9ce9545efea567ca0df6029ce
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99781729"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759861"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7:: Moduleinmemory기호 및 날짜 메서드
 
@@ -33,8 +33,8 @@ HRESULT ModuleInMemorySymbolsUpdated(
   
 ## <a name="parameters"></a>매개 변수  
 
- [in] `moduleId`  
- 기호 스트림이 업데이트 되는 메모리 내 모듈의 식별자입니다.  
+ `moduleId`  
+ 진행 기호 스트림이 업데이트 되는 메모리 내 모듈의 식별자입니다.  
   
 ## <a name="remarks"></a>설명  
 
@@ -55,7 +55,7 @@ HRESULT ModuleInMemorySymbolsUpdated(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ModuleLoadFinished 메서드](icorprofilercallback-moduleloadfinished-method.md)
 - [SetEventMask2 메서드](icorprofilerinfo5-seteventmask2-method.md)

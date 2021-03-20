@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8205b60-1893-4303-8cff-7ac5a00892aa
 topic_type:
 - apiref
-ms.openlocfilehash: dca39d9d5269148fda12c50130f35bdeb10cb19d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 2db616509bf5dcb5b8aee9cea76a9841369ec49d
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648651"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759252"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper 함수
 
@@ -37,15 +37,11 @@ UINT_PTR __stdcall FunctionIDMapper (
   
 ## <a name="parameters"></a>매개 변수
 
-- `funcId`
+`funcId` 진행 다시 매핑할 함수 식별자입니다.
 
-  \[in] 다시 매핑할 함수 식별자입니다.
+`pbHookFunction` 제한이 , 및 콜백을 받으려는 경우 프로파일러가 설정 하는 값에 대 한 포인터이 고, `true` `FunctionEnter2` `FunctionLeave2` `FunctionTailcall2` 그렇지 않으면이 값을로 설정 `false` 합니다.
 
-- `pbHookFunction`
-
-  \[out], 및 콜백을 받으려는 경우 프로파일러가 설정 하는 값에 대 한 포인터이 고, `true` `FunctionEnter2` `FunctionLeave2` `FunctionTailcall2` 그렇지 않으면이 값을로 설정 `false` 합니다.
-
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 
  프로파일러는 실행 엔진이 대체 함수 식별자로 사용하는 값을 반환합니다. `false`가 `pbHookFunction`에 반환되지 않는 한 반환 값은 null일 수 없습니다. 그렇지 않으면 null 반환 값이 프로세스 중지를 포함 하 여 예기치 않은 결과를 생성 합니다.  
   
@@ -69,7 +65,7 @@ UINT_PTR __stdcall FunctionIDMapper (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [SetFunctionIDMapper 메서드](icorprofilerinfo-setfunctionidmapper-method.md)
 - [FunctionIDMapper2 함수](functionidmapper2-function.md)

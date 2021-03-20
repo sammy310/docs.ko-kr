@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: 134ca44cbcd7a275e3ad61a3dd4decaa92668b5b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 04ba37b9c1307539c9fdf299f4667e7026d571be
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99657712"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760576"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated 메서드
 
@@ -39,21 +39,13 @@ HRESULT COMClassicVTableCreated(
   
 ## <a name="parameters"></a>매개 변수
 
-- `wrappedClasId`
+`wrappedClasId` 진행 Vtable이 생성 된 클래스의 ID입니다.
 
-  \[in] vtable이 생성 된 클래스의 ID입니다.
+`implementedIID` 진행 클래스에서 구현 하는 인터페이스의 ID입니다. 인터페이스가 내부 전용 이면이 값은 NULL 일 수 있습니다.
 
-- `implementedIID`
+`pVTable` 진행 Vtable의 시작에 대 한 포인터입니다.
 
-  \[in] 클래스에서 구현 하는 인터페이스의 ID입니다. 인터페이스가 내부 전용 이면이 값은 NULL 일 수 있습니다.
-
-- `pVTable`
-
-  \[in] vtable의 시작에 대 한 포인터입니다.
-
-- `cSlots`
-
-  \[in] vtable에 있는 슬롯의 수입니다.
+`cSlots` 진행 Vtable에 있는 슬롯의 수입니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -71,7 +63,7 @@ HRESULT COMClassicVTableCreated(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [COMClassicVTableDestroyed 메서드](icorprofilercallback-comclassicvtabledestroyed-method.md)

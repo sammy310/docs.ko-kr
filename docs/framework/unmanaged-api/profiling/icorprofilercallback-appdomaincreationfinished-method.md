@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: 6995c6cda168b5be5815e6f7b2b4d900ae0d4d67
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 51ed9ba19d96fd6ea05d05b07fe329aa9c01f290
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648365"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760758"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished 메서드
 
@@ -37,13 +37,9 @@ HRESULT AppDomainCreationFinished(
   
 ## <a name="parameters"></a>매개 변수
 
-- `appDomainId`
+`appDomainId` 진행 만든 도메인을 식별 합니다.
 
-  \[in] 생성 된 도메인을 식별 합니다.
-
-- `hrStatus`
-
-  \[in] 응용 프로그램 도메인 만들기가 성공적으로 완료 되었는지 여부를 나타내는 HRESULT입니다.
+`hrStatus` 진행 응용 프로그램 도메인 만들기가 성공적으로 완료 되었는지 여부를 나타내는 HRESULT입니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -61,6 +57,6 @@ HRESULT AppDomainCreationFinished(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

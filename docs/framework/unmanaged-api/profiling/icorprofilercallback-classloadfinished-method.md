@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-ms.openlocfilehash: ba0a6a643ab49a4e7a0ed10dda0dadff5741234d
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 52fd26c1efaf9b85caeb5af7184ae70e1d29b9ff
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706424"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760221"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished 메서드
 
@@ -37,13 +37,9 @@ HRESULT ClassLoadFinished(
   
 ## <a name="parameters"></a>매개 변수
 
-- `classId`
+`classId` 진행 로드 된 클래스를 식별 합니다.
 
-  \[in] 로드 된 클래스를 식별 합니다.
-
-- `hrStatus`
-
-  \[in] 클래스가 성공적으로 로드 되었는지 여부를 나타내는 HRESULT입니다.
+`hrStatus` 진행 클래스가 성공적으로 로드 되었는지 여부를 나타내는 HRESULT입니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -61,7 +57,7 @@ HRESULT ClassLoadFinished(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ClassLoadStarted 메서드](icorprofilercallback-classloadstarted-method.md)

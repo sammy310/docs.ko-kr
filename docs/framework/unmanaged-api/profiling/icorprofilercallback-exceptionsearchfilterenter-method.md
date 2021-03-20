@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: acc239ce-3eef-418c-b1df-c5a6dd8e8a4c
 topic_type:
 - apiref
-ms.openlocfilehash: ca0eb80f57d7c00d0abfab1bb602650c951a30e3
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 29a9eed75e5d8a954dfb23dedf3d2080e0d139d2
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99745367"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760220"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a>ICorProfilerCallback::ExceptionSearchFilterEnter 메서드
 
@@ -36,9 +36,7 @@ HRESULT ExceptionSearchFilterEnter(
   
 ## <a name="parameters"></a>매개 변수
 
-- `functionId`
-
-  \[in] 필터를 포함 하는 함수의 ID입니다.
+`functionId` 진행 필터를 포함 하는 함수의 ID입니다.
 
 ## <a name="requirements"></a>요구 사항  
 
@@ -50,7 +48,7 @@ HRESULT ExceptionSearchFilterEnter(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ExceptionSearchFilterLeave 메서드](icorprofilercallback-exceptionsearchfilterleave-method.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f728de8-45c2-45a5-ac4a-45660bd36ecf
 topic_type:
 - apiref
-ms.openlocfilehash: 2474f8041b0858cbcb81d3f4042f1748cb99df3e
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 4950f1d806efb304a860fa6fce18f8655bdc0976
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706476"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759253"
 ---
 # <a name="icorprofilercallbackclassloadstarted-method"></a>ICorProfilerCallback::ClassLoadStarted 메서드
 
@@ -36,9 +36,7 @@ HRESULT ClassLoadStarted(
   
 ## <a name="parameters"></a>매개 변수
 
-- `classId`
-
-  \[in] 로드 되는 클래스를 식별 합니다.
+`classId` 진행 로드 되는 클래스를 식별 합니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -54,6 +52,6 @@ HRESULT ClassLoadStarted(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

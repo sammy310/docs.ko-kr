@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 96c502dba5b2807f9cd9c3c5cceb6b3b9985a406
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 7dca887f6d0ff5f9360b0edaa1568bc4b1bb42ac
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106958"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759770"
 ---
 # <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10:: GetLOHObjectSizeThreshold 메서드
 
@@ -31,9 +31,7 @@ HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 
 ## <a name="parameters"></a>매개 변수
 
-- `pThreshold`
-
-  \[out] 대량 개체 힙 임계값 (바이트)입니다.
+`pThreshold` 제한이 대량 개체 힙 임계값 (바이트)입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -49,6 +47,6 @@ HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 
 **.Net 버전:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo10 인터페이스](icorprofilerinfo10-interface.md)

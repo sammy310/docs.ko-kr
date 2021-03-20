@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5cba642c-0d80-48ee-889d-198c5044d821
 topic_type:
 - apiref
-ms.openlocfilehash: 1faaf8fbc1e0fee9ce76850cfedcd4e8cf934371
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 3f384c1a02da1747b28701d2eba994b56a85c18f
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99705774"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759957"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted 메서드
 
@@ -37,13 +37,9 @@ HRESULT JITCachedFunctionSearchStarted(
   
 ## <a name="parameters"></a>매개 변수
 
-- `functionId`
+`functionId` 진행 검색을 수행 하는 함수의 ID입니다.
 
-  \[in] 검색을 수행할 함수의 ID입니다.
-
-- `pbUseCachedFunction`
-
-  \[out] `true` 실행 엔진이 캐시 된 버전의 함수 (있는 경우)를 사용 해야 하면이 고, 그렇지 않으면 `false` 입니다. 값이 이면 `false` 실행 엔진이 jit 컴파일되지 않는 버전을 사용 하는 대신 함수를 jit 컴파일합니다.
+`pbUseCachedFunction` [out] `true` 실행 엔진이 캐시 된 버전의 함수 (있는 경우)를 사용 해야 하면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false` 입니다. 값이 이면 `false` 실행 엔진이 jit 컴파일되지 않는 버전을 사용 하는 대신 함수를 jit 컴파일합니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -65,6 +61,6 @@ HRESULT JITCachedFunctionSearchStarted(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

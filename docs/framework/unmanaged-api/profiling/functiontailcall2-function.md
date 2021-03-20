@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: 03547537d43a76f26d6946666589f38ca4e02ec4
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: e06c3bde7ad0700de3d7f08b33159032b31eae8a
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687430"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760069"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 함수
 
@@ -38,19 +38,13 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="parameters"></a>매개 변수
 
-- `funcId`
+`funcId` 진행 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.
 
-  \[in] 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.
-
-- `clientData`
-
-  \[in] 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 함수에서 이전에 함수 [Id매퍼](functionidmapper-function.md)를 통해 지정한 다시 매핑된 함수 식별자입니다.
+`clientData` 진행 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 함수에 대해 이전에 [Functionidmapper](functionidmapper-function.md)를 통해 지정한 다시 매핑된 함수 식별자입니다.
   
-- `func`
+`func` 진행 `COR_PRF_FRAME_INFO` 스택 프레임에 대 한 정보를 가리키는 값입니다.
 
-  \[in] `COR_PRF_FRAME_INFO` 스택 프레임에 대 한 정보를 가리키는 값입니다.
-
-  프로파일러는 [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 메서드에서 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이를 처리 해야 합니다.
+프로파일러는 [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 메서드에서 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이를 처리 해야 합니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -80,7 +74,7 @@ void __stdcall FunctionTailcall2 (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [FunctionEnter2 함수](functionenter2-function.md)
 - [FunctionLeave2 함수](functionleave2-function.md)

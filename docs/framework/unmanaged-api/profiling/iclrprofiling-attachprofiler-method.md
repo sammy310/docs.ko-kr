@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 11b53b39d3332d1f72304352fad525e5881e05a6
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 00ae5ca76462d8800a77c2869ef73703a4f1d980
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648456"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760771"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler 메서드
 
@@ -41,31 +41,19 @@ HRESULT AttachProfiler(
   
 ## <a name="parameters"></a>매개 변수
 
-- `dwProfileeProcessID`
+`dwProfileeProcessID` 진행 프로파일러를 연결 해야 하는 프로세스의 프로세스 ID입니다. 64비트 컴퓨터에서는 프로파일링된 프로세스의 비트가 `AttachProfiler`를 호출하는 트리거 프로세스의 비트와 일치해야 합니다. `AttachProfiler`가 호출되는 사용자 계정에 관리 권한이 있는 경우 대상 프로세스는 시스템의 모든 프로세스일 수 있습니다. 그러지 않으면 대상 프로세스가 동일한 사용자 계정에 의해 소유되어야 합니다.
 
-  \[in] 프로파일러를 연결 해야 하는 프로세스의 프로세스 ID입니다. 64비트 컴퓨터에서는 프로파일링된 프로세스의 비트가 `AttachProfiler`를 호출하는 트리거 프로세스의 비트와 일치해야 합니다. `AttachProfiler`가 호출되는 사용자 계정에 관리 권한이 있는 경우 대상 프로세스는 시스템의 모든 프로세스일 수 있습니다. 그러지 않으면 대상 프로세스가 동일한 사용자 계정에 의해 소유되어야 합니다.
-
-- `dwMillisecondsMax`
-
-  \[in]를 완료 하기 위한 시간 기간 (밀리초) `AttachProfiler` 입니다. 트리거 프로세스는 특정 프로파일러가 초기화를 완료하기에 충분한 것으로 알려진 시간 제한을 전달해야 합니다.
+`dwMillisecondsMax` 진행 이 완료 될 때 까지의 시간 기간 (밀리초) `AttachProfiler` 입니다. 트리거 프로세스는 특정 프로파일러가 초기화를 완료하기에 충분한 것으로 알려진 시간 제한을 전달해야 합니다.
   
-- `pClsidProfiler`
+`pClsidProfiler` 진행 로드할 프로파일러의 CLSID에 대 한 포인터입니다. 트리거 프로세스는 `AttachProfiler`가 반환된 후 이 메모리를 다시 사용할 수 있습니다.
 
-  \[in] 로드할 프로파일러의 CLSID에 대 한 포인터입니다. 트리거 프로세스는 `AttachProfiler`가 반환된 후 이 메모리를 다시 사용할 수 있습니다.
+`wszProfilerPath` 진행 로드할 프로파일러 DLL 파일의 전체 경로입니다. 이 문자열에는 null 종결자를 포함하여 260자 이하가 포함되어야 합니다. `wszProfilerPath`가 null 또는 빈 문자열인 경우 CLR(공용 언어 런타임)은 `pClsidProfiler`가 가리키는 CLSID를 레지스트리에서 찾아 프로파일러 DLL 파일의 위치를 찾으려고 합니다.
 
-- `wszProfilerPath`
+`pvClientData` 진행 [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) 메서드로 프로파일러에 전달 될 데이터에 대 한 포인터입니다. 트리거 프로세스는 `AttachProfiler`가 반환된 후 이 메모리를 다시 사용할 수 있습니다. `pvClientData`가 null이면 `cbClientData`는 0이어야 합니다.
 
-  \[in] 로드할 프로파일러 DLL 파일의 전체 경로입니다. 이 문자열에는 null 종결자를 포함하여 260자 이하가 포함되어야 합니다. `wszProfilerPath`가 null 또는 빈 문자열인 경우 CLR(공용 언어 런타임)은 `pClsidProfiler`가 가리키는 CLSID를 레지스트리에서 찾아 프로파일러 DLL 파일의 위치를 찾으려고 합니다.
+`cbClientData` 진행 가 가리키는 데이터의 크기 (바이트)입니다 `pvClientData` .
 
-- `pvClientData`
-
-  \[in] [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) 메서드로 프로파일러에 전달 될 데이터에 대 한 포인터입니다. 트리거 프로세스는 `AttachProfiler`가 반환된 후 이 메모리를 다시 사용할 수 있습니다. `pvClientData`가 null이면 `cbClientData`는 0이어야 합니다.
-
-- `cbClientData`
-
-  \[in]를 가리키는 데이터의 크기 (바이트) `pvClientData` 입니다.
-
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
 
  이 메서드는 다음과 같은 HRESULT를 반환합니다.  
   
@@ -100,7 +88,7 @@ HRESULT AttachProfiler(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 인터페이스](icorprofilerinfo3-interface.md)

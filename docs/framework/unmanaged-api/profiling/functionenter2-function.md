@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: 8b8061b213d02efd845e214c1177db4e5351869b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: f68aeffdd63222cd78d7dc361f09e0b4c3e5af51
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99788984"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759393"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 함수
 
@@ -39,25 +39,17 @@ void __stdcall FunctionEnter2 (
   
 ## <a name="parameters"></a>매개 변수
 
-- `funcId`
+`funcId` 진행 제어가 전달 되는 함수의 식별자입니다.
 
-  \[in] 컨트롤이 전달 되는 함수의 식별자입니다.
-
-- `clientData`
-
-  \[in] 이전에 [Functionidmapper](functionidmapper-function.md) 함수를 사용 하 여 지정한 프로파일러에서 다시 매핑된 함수 식별자입니다.
+`clientData` 진행 이전에 [Functionidmapper](functionidmapper-function.md) 함수를 사용 하 여 지정한 프로파일러에서 다시 매핑된 함수 식별자입니다.
   
-- `func`
-
-  \[in] `COR_PRF_FRAME_INFO` 스택 프레임에 대 한 정보를 가리키는 값입니다.
+`func` 진행 `COR_PRF_FRAME_INFO` 스택 프레임에 대 한 정보를 가리키는 값입니다.
   
-  프로파일러는 [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 메서드에서 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이를 처리 해야 합니다.  
+프로파일러는 [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) 메서드에서 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이를 처리 해야 합니다.  
   
-- `argumentInfo`
+`argumentInfo` 진행 함수의 인수 메모리에서 위치를 지정 하는 [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) 구조체에 대 한 포인터입니다.
 
-  \[in] 함수 인수의 메모리에서 위치를 지정 하는 [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) 구조체에 대 한 포인터입니다.
-
-  인수 정보에 액세스 하려면 `COR_PRF_ENABLE_FUNCTION_ARGS` 플래그를 설정 해야 합니다. 프로파일러는 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) 메서드를 사용 하 여 이벤트 플래그를 설정할 수 있습니다.
+인수 정보에 액세스 하려면 `COR_PRF_ENABLE_FUNCTION_ARGS` 플래그를 설정 해야 합니다. 프로파일러는 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) 메서드를 사용 하 여 이벤트 플래그를 설정할 수 있습니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -85,7 +77,7 @@ void __stdcall FunctionEnter2 (
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [FunctionLeave2 함수](functionleave2-function.md)
 - [FunctionTailcall2 함수](functiontailcall2-function.md)

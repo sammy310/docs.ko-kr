@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c325c82-cddd-4b00-b3da-e450c36abf62
 topic_type:
 - apiref
-ms.openlocfilehash: b5025a7d33800047bb6244b82308ba2ab158cea7
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 3dc655c2a049a2cac08f6e4856aab98ee690b9df
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99705852"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759962"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a>ICorProfilerCallback::JITCachedFunctionSearchFinished 메서드
 
@@ -37,13 +37,9 @@ HRESULT JITCachedFunctionSearchFinished(
   
 ## <a name="parameters"></a>매개 변수
 
-- `functionId`
+`functionId` 진행 검색이 수행 된 함수의 ID입니다.
 
-  \[in] 검색을 수행한 함수의 ID입니다.
-
-- `result`
-
-  \[in] 검색 결과를 나타내는 [COR_PRF_JIT_CACHE](cor-prf-jit-cache-enumeration.md) 열거형의 값입니다.
+`result` 진행 검색 결과를 나타내는 [COR_PRF_JIT_CACHE](cor-prf-jit-cache-enumeration.md) 열거형의 값입니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -59,6 +55,6 @@ HRESULT JITCachedFunctionSearchFinished(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

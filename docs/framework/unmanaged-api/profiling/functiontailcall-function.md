@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: 8da3efde7d925fdb02232ca98662f8d6a6fd0adf
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: aeb6e7dcbf52fc57ebb7b6dca22331c27cadc186
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687313"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760030"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall 함수
 
@@ -39,9 +39,7 @@ void __stdcall FunctionTailcall (
   
 ## <a name="parameters"></a>매개 변수
 
-- `funcID`
-
-  \[in] 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.
+`funcID` 진행 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -69,7 +67,7 @@ void __stdcall FunctionTailcall (
   
  **.NET Framework 버전:** 1.1, 1.0  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [FunctionEnter2 함수](functionenter2-function.md)
 - [FunctionLeave2 함수](functionleave2-function.md)

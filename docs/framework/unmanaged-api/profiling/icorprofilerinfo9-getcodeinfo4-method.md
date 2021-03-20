@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 765f3dfee6c56148eb7807b0606e79d4b3a2e7a1
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c7897e266fbb84d44df719c127e24bd375b560bb
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99783809"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759093"
 ---
 # <a name="icorprofilerinfo9getcodeinfo4-method"></a>ICorProfilerInfo9:: GetCodeInfo4 메서드
 
@@ -34,21 +34,13 @@ HRESULT GetCodeInfo4( [in]  UINT_PTR pNativeCodeStartAddress,
 
 ## <a name="parameters"></a>매개 변수
 
-- `pNativeCodeStartAddress`
+`pNativeCodeStartAddress` 진행 네이티브 함수의 시작 부분에 대 한 포인터입니다.
 
-  \[in] 네이티브 함수의 시작 부분에 대 한 포인터입니다.
+`cCodeInfos` 진행 `codeInfos` 배열의 크기입니다.
 
-- `cCodeInfos`
+`pcCodeInfos` 제한이 사용할 수 있는 [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) 구조체의 총 수에 대 한 포인터입니다.
 
-  \[in] `codeInfos` 배열의 크기입니다.
-
-- `pcCodeInfos`
-
-  \[out] 사용할 수 있는 [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) 구조체의 총 수에 대 한 포인터입니다.
-
-- `codeInfos`
-
-  \[out] 호출자가 제공한 버퍼입니다. 메서드가 반환된 후에는 각각 네이티브 코드 블록을 설명하는 `COR_PRF_CODE_INFO` 구조체의 배열을 포함합니다.
+`codeInfos` 제한이 호출자가 제공한 버퍼입니다. 메서드가 반환된 후에는 각각 네이티브 코드 블록을 설명하는 `COR_PRF_CODE_INFO` 구조체의 배열을 포함합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -71,8 +63,8 @@ HRESULT GetCodeInfo4( [in]  UINT_PTR pNativeCodeStartAddress,
 
 **라이브러리:** CorGuids.lib
 
-**.Net 버전:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.Net 버전:**[!INCLUDE[net_core_21](../../../../includes/net-core-21-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo9 인터페이스](ICorProfilerInfo9-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46380fcc-0198-43ae-a1f5-2d4939425886
 topic_type:
 - apiref
-ms.openlocfilehash: efa8b2e965ba4a365bbd72db4c5af69db006f6d5
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d84cac19acb8a1d696030fe372d29c655c5f97a6
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648508"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760797"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo 함수
 
@@ -36,13 +36,9 @@ void __stdcall FunctionTailcall3WithInfo(
   
 ## <a name="parameters"></a>매개 변수  
 
-- `functionIDOrClientID`
+`functionIDOrClientID` 진행 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.
 
-  \[in] 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.
-
-- `eltInfo`
-
-  \[in] 지정 된 스택 프레임에 대 한 정보를 나타내는 불투명 핸들입니다. 이 핸들은 전달 되는 콜백 중에만 유효 합니다.
+`eltInfo` 진행 지정 된 스택 프레임에 대 한 정보를 나타내는 불투명 핸들입니다. 이 핸들은 전달 되는 콜백 중에만 유효 합니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -70,7 +66,7 @@ void __stdcall FunctionTailcall3WithInfo(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [FunctionEnter3](functionenter3-function.md)
 - [FunctionLeave3](functionleave3-function.md)

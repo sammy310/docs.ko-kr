@@ -9,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: d076307b9e57c27753297cad8eebc1b9aa9433f6
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d610024af9959790b37a724c2bdbf4dabc89dd20
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99781716"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759822"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::D ynamicMethodJITCompilationFinished 메서드
 
@@ -34,13 +34,12 @@ HRESULT DynamicMethodJITCompilationFinished(
   
 ## <a name="parameters"></a>매개 변수  
 
-[in] `functionId`  
-JIT 컴파일이 시작 되는 메모리 내 함수의 식별자입니다.
+`functionId`  
+진행 JIT 컴파일이 시작 되는 메모리 내 함수의 식별자입니다.
 
-[in] `hrStatus` JIT 컴파일에 성공 했는지 여부를 나타내는 값입니다.
+`hrStatus` 진행 JIT 컴파일에 성공 했는지 여부를 나타내는 값입니다.
 
-[in] `fIsSafeToBlock` 
- `true` 차단으로 인해 런타임에서 호출 스레드가이 콜백에서 반환 될 때까지 대기 하 게 될 수 있음을 나타내려면이 고, `false`를 지정 하면 차단이 런타임 작업에 영향을 주지 않습니다.  
+`fIsSafeToBlock` [in] `true` 차단으로 인해 런타임에서 호출 스레드가이 콜백에서 반환 될 때까지 대기 하 게 될 수 있음을 나타내려면이 고, `false` 를 지정 하면 차단이 런타임 작업에 영향을 주지 않습니다.  
 
 ## <a name="remarks"></a>설명  
 
@@ -59,7 +58,7 @@ JIT 컴파일이 시작 되는 메모리 내 함수의 식별자입니다.
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [DynamicMethodJITCompilationStarted 메서드](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [ICorProfilerCallback8 인터페이스](icorprofilercallback8-interface.md)

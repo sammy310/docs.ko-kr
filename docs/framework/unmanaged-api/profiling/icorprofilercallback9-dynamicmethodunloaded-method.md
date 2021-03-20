@@ -9,12 +9,12 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 243660d3159e3c8c1d052c08e9c7499e7065d301
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: bc7f95b5101658c93eeb9fcef51e9c0f1bd2f2bd
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99753330"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760199"
 ---
 # <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9::D ynamicMethodUnloaded 메서드
 
@@ -32,8 +32,7 @@ HRESULT DynamicMethodUnloaded(
   
 ## <a name="parameters"></a>매개 변수  
 
-[in] `functionId`  
-가비지 수집 및 언로드된 메모리 내 함수의 식별자입니다.
+`functionId` 진행 가비지 수집 및 언로드된 메모리 내 함수의 식별자입니다.
 
 ## <a name="requirements"></a>요구 사항  
 
@@ -45,7 +44,7 @@ HRESULT DynamicMethodUnloaded(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback8 DynamicMethodJITCompilationStarted 메서드](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [ICorProfilerCallback8 DynamicMethodJITCompilationFinished 메서드](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)

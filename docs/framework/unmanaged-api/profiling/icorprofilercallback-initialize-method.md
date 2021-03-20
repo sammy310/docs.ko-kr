@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc5fab2a-4b45-4b12-8727-b89c9915f23e
 topic_type:
 - apiref
-ms.openlocfilehash: b3ff579dee384b331450aa54aace39890febfe30
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: c7138a1a39a1d32c751c205a86c00e6070a236b3
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99705943"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760420"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>ICorProfilerCallback::Initialize 메서드
 
@@ -36,9 +36,7 @@ HRESULT Initialize(
   
 ## <a name="parameters"></a>매개 변수
 
-- `pICorProfilerInfoUnk`
-
-  \[in] 프로파일러가 [ICorProfilerInfo](icorprofilerinfo-interface.md) 인터페이스 포인터를 쿼리해야 하는 [IUnknown](/cpp/atl/iunknown) 인터페이스에 대 한 포인터입니다.  
+`pICorProfilerInfoUnk`진행 프로파일러가 [ICorProfilerInfo](icorprofilerinfo-interface.md) 인터페이스 포인터를 쿼리해야 하는 [IUnknown](/cpp/atl/iunknown) 인터페이스에 대 한 포인터입니다.  
 
 ## <a name="remarks"></a>설명  
 
@@ -54,7 +52,7 @@ HRESULT Initialize(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [Shutdown 메서드](icorprofilercallback-shutdown-method.md)

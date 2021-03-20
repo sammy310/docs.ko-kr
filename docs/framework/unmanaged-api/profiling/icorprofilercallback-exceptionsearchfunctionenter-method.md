@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bfd54573-b7e6-4bd1-a184-7f08a8b39fae
 topic_type:
 - apiref
-ms.openlocfilehash: 6e77ab5dc8c15a1d0785fb83310183c0a4693225
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: d9989ef8b1ae50202ba6900b95504a7d50e10dfc
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706190"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759484"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>ICorProfilerCallback::ExceptionSearchFunctionEnter 메서드
 
@@ -36,9 +36,7 @@ HRESULT ExceptionSearchFunctionEnter(
   
 ## <a name="parameters"></a>매개 변수
 
-- `functionId`
-
-  \[in] 입력 한 함수의 ID입니다.
+`functionId` 진행 입력 된 함수의 ID입니다.
   
 ## <a name="requirements"></a>요구 사항  
 
@@ -50,7 +48,7 @@ HRESULT ExceptionSearchFunctionEnter(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ExceptionSearchFunctionLeave 메서드](icorprofilercallback-exceptionsearchfunctionleave-method.md)

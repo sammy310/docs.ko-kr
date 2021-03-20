@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c7fab986-b69f-4ec8-b7b7-91dcfc239cd0
 topic_type:
 - apiref
-ms.openlocfilehash: e4a701597b318a387405a152f2c3b4758d616eb0
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: a142aa39f1c601c8c814d2f760cb6414d84b8494
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706086"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759445"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a>ICorProfilerCallback::ExceptionUnwindFinallyEnter 메서드
 
@@ -36,9 +36,7 @@ HRESULT ExceptionUnwindFinallyEnter(
   
 ## <a name="parameters"></a>매개 변수
 
-- `functionId`
-
-  \[in] 절을 포함 하는 함수의 ID입니다 `finally` .
+`functionId` 진행 절이 포함 된 함수의 ID입니다 `finally` .
 
 ## <a name="remarks"></a>설명  
 
@@ -56,7 +54,7 @@ HRESULT ExceptionUnwindFinallyEnter(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [GetNotifiedExceptionClauseInfo 메서드](icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md)

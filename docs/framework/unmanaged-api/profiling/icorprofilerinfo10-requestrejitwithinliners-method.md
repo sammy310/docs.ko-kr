@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 925a61bf2521950cad7fb0dce8f1484198f3f806
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 3d85537030e042d53bb4ff859eb1d2c3a24a45a5
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102106516"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760784"
 ---
 # <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>ICorProfilerInfo10:: RequestReJITWithInliners 메서드
 
@@ -34,21 +34,13 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
 
 ## <a name="parameters"></a>매개 변수
 
-- `dwRejitFlags`
+`dwRejitFlags` 진행 [COR_PRF_REJIT_FLAGS](cor-prf-rejit-flags-enumeration.md)의 비트 마스크입니다.
 
-  \[in] [COR_PRF_REJIT_FLAGS](cor-prf-rejit-flags-enumeration.md)의 비트 마스크입니다.
+`cFunctions` 진행 다시 컴파일할 함수 수입니다.
 
-- `cFunctions`
+`moduleIds` 진행 다시 `moduleId` `module` `methodDef` 컴파일할 함수를 식별 하는 (,) 쌍의 부분을 지정 합니다.
 
-  \[in] 다시 컴파일할 함수 수입니다.
-
-- `moduleIds`
-
-  \[in] 다시 `moduleId` `module` `methodDef` 컴파일할 함수를 식별 하는 (,) 쌍의 부분을 지정 합니다.
-
-- `methodIds`
-
-  \[in] 다시 `methodId` `module` `methodDef` 컴파일할 함수를 식별 하는 (,) 쌍의 부분을 지정 합니다.
+`methodIds` 진행 다시 `methodId` `module` `methodDef` 컴파일할 함수를 식별 하는 (,) 쌍의 부분을 지정 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -64,6 +56,6 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
 
 **.Net 버전:**[!INCLUDE[net_core_30](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo10 인터페이스](icorprofilerinfo10-interface.md)

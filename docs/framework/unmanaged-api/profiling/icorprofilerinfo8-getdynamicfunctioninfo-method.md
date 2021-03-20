@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 48c8dbe20ccafb3fb23e9e289f728d5e3370613a
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: b38bd7a4f440edba0a7156176f223ba38c9807cf
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99646584"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759119"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8:: GetDynamicFunctionInfo 메서드
 
@@ -37,33 +37,19 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 ## <a name="parameters"></a>매개 변수
 
-- `functionId`
+`functionId` 진행 정보를 검색할 함수의 ID입니다.
 
-  \[in] 정보를 검색할 함수의 ID입니다.
+`moduleId` 진행 함수의 부모 클래스가 정의 되어 있는 모듈에 대 한 포인터입니다.
 
-- `moduleId`
+`ppvSig` 제한이 함수의 시그니처에 대 한 포인터입니다.
 
-  \[in] 함수의 부모 클래스가 정의 되어 있는 모듈에 대 한 포인터입니다.
+`pbSig` 제한이 함수 시그니처의 바이트 수에 대 한 포인터입니다.
 
-- `ppvSig`
+`cchName` 진행 배열의 최대 크기 `wszName` 입니다.
 
-  \[out] 함수에 대 한 시그니처에 대 한 포인터입니다.
+`pcchName` 제한이 배열에 있는 문자의 수 `wszName` 입니다.
 
-- `pbSig`
-
-  \[out] 함수 시그니처의 바이트 수에 대 한 포인터입니다.
-
-- `cchName`
-
-  \[in] 배열의 최대 크기 `wszName` 입니다.
-
-- `pcchName`
-
-  \[out] 배열의 문자 수 `wszName` 입니다.
-
-- `wszName`
-
-  \[out] 함수 이름 (있는 경우)의 배열입니다 `WCHAR` .
+`wszName` 제한이 함수 이름이 있는 경우이 배열에 해당 하는 배열입니다 `WCHAR` .
 
 ## <a name="remarks"></a>설명
 
@@ -81,6 +67,6 @@ IL 스텁 또는 LCG와 같은 특정 메서드에는 [IMetaDataImport](../metad
 
 **.NET Framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo8 인터페이스](icorprofilerinfo8-interface.md)

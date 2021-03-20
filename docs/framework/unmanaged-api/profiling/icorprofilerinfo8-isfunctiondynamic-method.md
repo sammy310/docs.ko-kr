@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 8ab942e6919f8029ef0d1c20336917622a1d22ad
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 139edeed3e078668974382f1719c8e03f83e2a09
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99646532"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759080"
 ---
 # <a name="icorprofilerinfo8isfunctiondynamic-method"></a>ICorProfilerInfo8:: IsFunctionDynamic 메서드
 
@@ -32,13 +32,9 @@ HRESULT IsFunctionDynamic( [in]  FunctionID  functionId,
 
 ## <a name="parameters"></a>매개 변수
 
-- `functionId`
+`functionId` 진행  `FunctionID` 문제의 함수를 식별 하는입니다.
 
-  \[in] `FunctionID` 문제의 함수를 식별 하는입니다.
-
-- `isDynamic`
-
-  \[out] `BOOL` 함수가 메타 데이터를 포함 하지 않는지 여부를 나타내는 값을 포함 하는에 대 한 포인터입니다.
+`isDynamic` 제한이 `BOOL` 함수가 메타 데이터를 포함 하지 않는지 여부를 나타내는 값을 포함 하는에 대 한 포인터입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -54,6 +50,6 @@ HRESULT IsFunctionDynamic( [in]  FunctionID  functionId,
 
 **.NET Framework 버전:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo8 인터페이스](icorprofilerinfo8-interface.md)

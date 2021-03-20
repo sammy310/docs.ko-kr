@@ -7,12 +7,12 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], profiling
 - structures [.NET Framework profiling]
 ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
-ms.openlocfilehash: 7a76c49aaa301ba45c41fb2eb3f7770539dcc6c0
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 176830cac519f22864ba004b176cb575d80e50e2
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99798890"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760238"
 ---
 # <a name="profiling-structures"></a>프로파일링 구조체
 
@@ -40,8 +40,14 @@ ms.locfileid: "99798890"
   
  [COR_PRF_GC_GENERATION_RANGE 구조체](cor-prf-gc-generation-range-structure.md)  
  가비지 수집이 진행 중인 메모리 범위(블록)를 설명합니다.  
+
+ [COR_PRF_EVENTPIPE_PROVIDER_CONFIG 구조체](cor-prf-eventpipe-provider-config-structure.md) EventPipe 공급자를 구성 하는 데 필요한 필드에 대해 설명 합니다.
+
+ [COR_PRF_EVENTPIPE_PARAM_DESC 구조체](cor-prf-eventpipe-param-desc-structure.md) EventPipe 이벤트의 매개 변수 이름 및 유형을 설명 합니다.
+
+ [COR_PRF_EVENT_DATA 구조체](cor-prf-event-data-structure.md) 작성 중인 EventPipe 이벤트에 대 한 이벤트 데이터를 설명 합니다.
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 
  COR_DEBUG_IL_TO_NATIVE_MAP  
   

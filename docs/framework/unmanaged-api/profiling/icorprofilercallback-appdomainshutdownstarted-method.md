@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-ms.openlocfilehash: 16545142a512ca1c5f4167f61b81ea949e3d14e4
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: f43997dca1d34b9fbaae34da4dabe2c6d926052c
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648118"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760615"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted 메서드
 
@@ -36,9 +36,7 @@ HRESULT AppDomainShutdownStarted(
   
 ## <a name="parameters"></a>매개 변수
 
-- `appDomainId`
-
-  \[in] 응용 프로그램의 어셈블리가 저장 된 도메인을 식별 합니다.
+`appDomainId` 진행 응용 프로그램의 어셈블리가 저장 된 도메인을 식별 합니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -54,6 +52,6 @@ HRESULT AppDomainShutdownStarted(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

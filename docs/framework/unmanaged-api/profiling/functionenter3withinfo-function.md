@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 277c3344-d0cb-431e-beae-eb1eeeba8eea
 topic_type:
 - apiref
-ms.openlocfilehash: 573326c05275192a7b324377237ba057fb54bffb
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 9bcebba724f7ebb405bb3d404f028e3ebca3e0d7
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648742"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759314"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 함수
 
@@ -36,13 +36,9 @@ void __stdcall FunctionEnter3WithInfo(
   
 ## <a name="parameters"></a>매개 변수
 
-- `functionIDOrClientID`
+`functionIDOrClientID` 진행 제어가 전달 되는 함수의 식별자입니다.
 
-  \[in] 컨트롤이 전달 되는 함수의 식별자입니다.
-
-- `eltInfo`
-
-  \[in] 지정 된 스택 프레임에 대 한 정보를 나타내는 불투명 핸들입니다. 이 핸들은 전달 되는 콜백 중에만 유효 합니다.
+`eltInfo` 진행 지정 된 스택 프레임에 대 한 정보를 나타내는 불투명 핸들입니다. 이 핸들은 전달 되는 콜백 중에만 유효 합니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -70,7 +66,7 @@ void __stdcall FunctionEnter3WithInfo(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [GetFunctionEnter3Info](icorprofilerinfo3-getfunctionenter3info-method.md)
 - [FunctionEnter3](functionenter3-function.md)

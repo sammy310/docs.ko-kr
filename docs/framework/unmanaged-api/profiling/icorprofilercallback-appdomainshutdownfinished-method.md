@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-ms.openlocfilehash: e08a4f7e03bfd18d9c6a2fdf56bfab8c68f9c379
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 8cd45f73741bd26cb54fa85d7d6a186ebaeab5d8
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99648239"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760693"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished 메서드
 
@@ -37,13 +37,9 @@ HRESULT AppDomainShutdownFinished(
   
 ## <a name="parameters"></a>매개 변수
 
-- `appDomainId`
+`appDomainId` 진행 응용 프로그램의 어셈블리가 저장 된 도메인을 식별 합니다.
 
-  \[in] 응용 프로그램의 어셈블리가 저장 된 도메인을 식별 합니다.
-
-- `hrStatus`
-
-  \[in] 응용 프로그램 도메인이 언로드 되었는지 여부를 나타내는 HRESULT입니다.
+`hrStatus` 진행 응용 프로그램 도메인이 성공적으로 언로드 되었는지 여부를 나타내는 HRESULT입니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -61,6 +57,6 @@ HRESULT AppDomainShutdownFinished(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)

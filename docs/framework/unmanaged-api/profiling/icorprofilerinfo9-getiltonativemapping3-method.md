@@ -12,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 867375d57f9d166ed08bf68ada81fb5cdbb8afe3
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 865545e2352209447b3942da3a62f3733c165b35
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99646519"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759328"
 ---
 # <a name="icorprofilerinfo9getiltonativemapping3-method"></a>ICorProfilerInfo9:: GetILToNativeMapping3 메서드
 
@@ -34,21 +34,13 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 
 ## <a name="parameters"></a>매개 변수
 
-- `pNativeCodeStartAddress`
+`pNativeCodeStartAddress` 진행 네이티브 함수의 시작 부분에 대 한 포인터입니다.
 
-  \[in] 네이티브 함수의 시작 부분에 대 한 포인터입니다.
+`cMap` 진행 배열의 최대 크기 `map` 입니다.
 
-- `cMap`
+`pcMap` 제한이 사용 가능한 COR_DEBUG_IL_TO_NATIVE_MAP 구조체의 총 수입니다.
 
-  \[in] 배열의 최대 크기 `map` 입니다.
-
-- `pcMap`
-
-  \[out] 사용 가능한 COR_DEBUG_IL_TO_NATIVE_MAP 구조의 총 수입니다.
-
-- `map`
-
-  \[out] 각각 오프셋을 지정 하는 [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) 구조체의 배열입니다. `GetILToNativeMapping3` 메서드가 반환되면 `map`에 `COR_DEBUG_IL_TO_NATIVE_MAP` 구조체가 일부 또는 모두 포함됩니다.
+`map` 제한이 각각 오프셋을 지정 하는 [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) 구조체의 배열입니다. `GetILToNativeMapping3` 메서드가 반환되면 `map`에 `COR_DEBUG_IL_TO_NATIVE_MAP` 구조체가 일부 또는 모두 포함됩니다.
 
 ## <a name="remarks"></a>설명
 
@@ -62,8 +54,8 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 
 **라이브러리:** CorGuids.lib
 
-**.NET Framework 버전:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET Framework 버전:**[!INCLUDE[net_core_21](../../../../includes/net-core-21-md.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerInfo9 인터페이스](icorprofilerinfo9-interface.md)

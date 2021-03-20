@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework profiling]
 - unmanaged enumerations [.NET Framework], profiling
 ms.assetid: 8d5f9570-9853-4ce8-8101-df235d5b258e
-ms.openlocfilehash: f202e70dd27654dd39740851549477d4a6bf77a3
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: a4fcd812642698237d32afff5a681a99bf9cf12f
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99736754"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759067"
 ---
 # <a name="profiling-enumerations"></a>프로파일링 열거형
 
@@ -70,8 +70,12 @@ ms.locfileid: "99736754"
   
  [COR_PRF_TRANSITION_REASON 열거형](cor-prf-transition-reason-enumeration.md)  
  관리 코드에서 비관리 코드로 전환 또는 그 반대의 경우로 전환하는 이유를 나타냅니다.  
+
+ [COR_PRF_EVENTPIPE_PARAM_TYPE](cor-prf-eventpipe-param-type-enumeration.md) EventPipe 매개 변수의 형식을 나타냅니다.
+
+ [COR_PRF_EVENTPIPE_LEVEL](cor-prf-eventpipe-level-enumeration.md) EventPipe 이벤트의 수준을 Indivates 합니다.
   
-## <a name="related-sections"></a>관련 섹션  
+## <a name="related-sections"></a>관련 단원  
 
  [프로파일링 개요](profiling-overview.md)  
   

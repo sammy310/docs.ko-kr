@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-ms.openlocfilehash: 91ed5bb65d3a64f1f85a09a710b507974f51c79b
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: e8ed6be2519a9f8959ac4f59313f73f13d6c569b
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99706385"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760563"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed 메서드
 
@@ -41,17 +41,11 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="parameters"></a>매개 변수
 
-- `wrappedClassId`
+`wrappedClassId` 진행 이 vtable이 생성 된 클래스의 ID입니다.
 
-  \[in]이 vtable이 생성 된 클래스의 ID입니다.
+`implementedIID` 진행 클래스에서 구현 하는 인터페이스의 ID입니다. 인터페이스가 내부 전용 이면이 값은 NULL 일 수 있습니다.
 
-- `implementedIID`
-
-  \[in] 클래스에서 구현 하는 인터페이스의 ID입니다. 인터페이스가 내부 전용 이면이 값은 NULL 일 수 있습니다.
-
-- `pVTable`
-
-  \[in] vtable의 시작에 대 한 포인터입니다.
+`pVTable` 진행 Vtable의 시작에 대 한 포인터입니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -69,7 +63,7 @@ HRESULT COMClassicVTableDestroyed(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [COMClassicVTableCreated 메서드](icorprofilercallback-comclassicvtablecreated-method.md)

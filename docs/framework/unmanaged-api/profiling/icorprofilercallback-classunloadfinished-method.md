@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-ms.openlocfilehash: ae1ef56a1eb3b9b45c2165ecceb0af826cc7a2ea
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 7d4fd1c85d496b7adea0096b03520a14c2fab11c
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99657738"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759255"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished 메서드
 
@@ -37,13 +37,9 @@ HRESULT ClassUnloadFinished(
   
 ## <a name="parameters"></a>매개 변수
 
-- `classId`
+`classId` 진행 언로드된 클래스를 식별 합니다.
 
-  \[in] 언로드된 클래스를 식별 합니다.
-
-- `hrStatus`
-
-  \[in] 클래스가 성공적으로 언로드 되었는지 여부를 나타내는 HRESULT입니다.
+`hrStatus` 진행 클래스가 성공적으로 언로드 되었는지 여부를 나타내는 HRESULT입니다.
   
 ## <a name="remarks"></a>설명  
 
@@ -59,7 +55,7 @@ HRESULT ClassUnloadFinished(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [ICorProfilerCallback 인터페이스](icorprofilercallback-interface.md)
 - [ClassUnloadStarted 메서드](icorprofilercallback-classunloadstarted-method.md)

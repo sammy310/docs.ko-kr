@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5fa68a67-ced6-41c6-a2c0-467060fd0692
 topic_type:
 - apiref
-ms.openlocfilehash: 6a861f455e827258368764b80547c3b3e9c986cd
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 617ca023f58a180c198751fea9752fe737249331
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99687417"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104760082"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo 함수
 
@@ -36,13 +36,9 @@ void __stdcall FunctionLeave3WithInfo(
   
 ## <a name="parameters"></a>매개 변수
 
-- `functionIDOrClientID`
+`functionIDOrClientID` 진행 컨트롤이 반환 되는 함수의 식별자입니다.
 
-  \[in] 컨트롤이 반환 되는 함수의 식별자입니다.
-
-- `eltInfo`
-
-  \[in] 지정 된 스택 프레임에 대 한 정보를 나타내는 불투명 핸들입니다. 이 핸들은 전달 되는 콜백 중에만 유효 합니다.
+`eltInfo` 진행 지정 된 스택 프레임에 대 한 정보를 나타내는 불투명 핸들입니다. 이 핸들은 전달 되는 콜백 중에만 유효 합니다.
 
 ## <a name="remarks"></a>설명  
 
@@ -70,7 +66,7 @@ void __stdcall FunctionLeave3WithInfo(
   
  **.NET Framework 버전:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [GetFunctionLeave3Info](icorprofilerinfo3-getfunctionleave3info-method.md)
 - [FunctionEnter3](functionenter3-function.md)
