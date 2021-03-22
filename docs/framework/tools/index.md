@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 06311e977619418c5b3fb69be518353de51e6bd5
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 606ead6010ddfd223e4ed38e0271642d36079bcc
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258779"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654095"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 도구
 
@@ -23,7 +23,7 @@ ms.locfileid: "102258779"
 
 어셈블리 캐시 뷰어(*Shfusion.dll*)를 제외한 모든 도구는 명령줄에서 실행할 수 있습니다. *Shfusion.dll* 에 액세스하려면 파일 탐색기를 사용해야 합니다.
   
-명령줄 도구를 실행하는 가장 좋은 방법은 Visual Studio에서 설치하는 개발자 셸 중 하나를 사용하는 것입니다. 이러한 유틸리티를 사용하면 설치 폴더로 이동하지 않아도 도구를 쉽게 실행할 수 있습니다. 자세한 내용은 [Developer command-line shells](/visualstudio/ide/reference/command-prompt-powershell)(개발자 명령줄 셸)를 참조하세요.
+명령줄 도구를 실행하는 가장 좋은 방법은 Visual Studio에서 설치하는 개발자 셸 중 하나를 사용하는 것입니다. 이러한 유틸리티를 사용하면 설치 폴더로 이동하지 않아도 도구를 쉽게 실행할 수 있습니다. 자세한 내용은 [개발자 명령 프롬프트 및 개발자 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 참조하세요.
 
 > [!NOTE]
 > 일부 도구는 32비트 컴퓨터 또는 64비트 컴퓨터 전용입니다. 컴퓨터에 적절한 버전의 도구를 실행하세요.
