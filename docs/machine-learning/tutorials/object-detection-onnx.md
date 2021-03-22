@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 49817f9ad712e50669bab958296946c06d5c19eb
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 305a440634120395dba6881584b2ff46646da211
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679418"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653584"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>자습서: ML.NET에서 ONNX를 사용하여 개체 검색
 
@@ -39,7 +39,7 @@ ML.NET에서 미리 학습된 ONNX 모델을 사용하여 이미지에서 개체
 
 ## <a name="onnx-object-detection-sample-overview"></a>ONNX 개체 검색 샘플 개요
 
-이 샘플에서는 미리 학습된 딥 러닝 ONNX 모델을 사용하여 이미지 내에서 개체를 검색하는 .NET core 콘솔 애플리케이션을 만듭니다. 이 샘플의 코드는 GitHub의 [dotnet/machinelearning-samples repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)에서 찾을 수 있습니다.
+이 샘플에서는 미리 학습된 딥 러닝 ONNX 모델을 사용하여 이미지 내에서 개체를 검색하는 .NET core 콘솔 애플리케이션을 만듭니다. 이 샘플의 코드는 GitHub의 [dotnet/machinelearning-samples repository](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)에서 찾을 수 있습니다.
 
 ## <a name="what-is-object-detection"></a>개체 검색의 개념
 
@@ -86,21 +86,21 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 ### <a name="create-a-console-application"></a>콘솔 애플리케이션 만들기
 
-1. “ObjectDetection”이라는 **.NET Core 콘솔 애플리케이션**을 만듭니다.
+1. “ObjectDetection”이라는 **.NET Core 콘솔 애플리케이션** 을 만듭니다.
 
-1. **Microsoft.ML NuGet 패키지**를 설치합니다.
+1. **Microsoft.ML NuGet 패키지** 를 설치합니다.
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    - 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
-    - 패키지 소스로 “nuget.org”를 선택하고, [찾아보기] 탭을 선택하고, **Microsoft.ML**을 검색합니다.
+    - 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리** 를 선택합니다.
+    - 패키지 소스로 “nuget.org”를 선택하고, [찾아보기] 탭을 선택하고, **Microsoft.ML** 을 검색합니다.
     - **설치** 단추를 선택합니다.
     - **변경 내용 미리 보기** 대화 상자에서 **확인** 단추를 선택한 다음, 나열된 패키지의 사용 조건에 동의하는 경우 **라이선스 승인** 대화 상자에서 **동의함** 단추를 선택합니다.
-    - **Microsoft.ML.ImageAnalytics**, **Microsoft.ML.OnnxTransformer** 및 **Microsoft.ML.OnnxRuntime**에 대해 이 단계를 반복합니다.
+    - **Microsoft.ML.ImageAnalytics**, **Microsoft.ML.OnnxTransformer** 및 **Microsoft.ML.OnnxRuntime** 에 대해 이 단계를 반복합니다.
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>데이터 및 미리 학습된 모델 준비
 
-1. [프로젝트 자산 디렉터리 zip 파일](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/assets.zip)을 다운로드하고 압축을 풉니다.
+1. [프로젝트 자산 디렉터리 zip 파일](https://github.com/dotnet/machinelearning-samples/raw/main/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/assets.zip)을 다운로드하고 압축을 풉니다.
 
 1. `assets` 디렉터리를 *ObjectDetection* 프로젝트 디렉터리에 복사합니다. 이 디렉터리 및 해당 하위 디렉터리에는 이 자습서에 필요한 이미지 파일이 포함되어 있습니다(다음 단계에서 다운로드 및 추가하는 Tiny YOLOv2 모델 제외).
 
@@ -114,7 +114,7 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 1. 방금 압축을 푼 디렉터리에서 *ObjectDetection* 프로젝트 `assets\Model` 디렉터리로 추출된 `model.onnx` 파일을 복사하고 이름을 `TinyYolo2_model.onnx`로 변경합니다. 이 디렉터리에는 이 자습서에 필요한 모델이 포함되어 있습니다.
 
-1. 솔루션 탐색기에서 자산 디렉터리 및 하위 디렉터리의 각 파일을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **고급** 아래에서 **출력 디렉터리에 복사** 값을 **변경된 내용만 복사**로 변경합니다.
+1. 솔루션 탐색기에서 자산 디렉터리 및 하위 디렉터리의 각 파일을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다. **고급** 아래에서 **출력 디렉터리에 복사** 값을 **변경된 내용만 복사** 로 변경합니다.
 
 ### <a name="create-classes-and-define-paths"></a>클래스 만들기 및 경로 정의
 
@@ -134,14 +134,14 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 프로젝트에 새 디렉터리를 추가하여 입력 데이터 및 예측 클래스를 저장합니다.
 
-**솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 폴더**를 선택합니다. 새 폴더가 솔루션 탐색기에 표시되면 이름을 “DataStructures”로 표시합니다.
+**솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 폴더** 를 선택합니다. 새 폴더가 솔루션 탐색기에 표시되면 이름을 “DataStructures”로 표시합니다.
 
 새로 만든 *DataStructures* 디렉터리에 입력 데이터 클래스를 만듭니다.
 
-1. **솔루션 탐색기**에서 *DataStructures* 디렉터리를 마우스 오른쪽 단추로 클릭한 다음 **추가** > **새 항목**을 선택합니다.
-1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *ImageNetData.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
+1. **솔루션 탐색기** 에서 *DataStructures* 디렉터리를 마우스 오른쪽 단추로 클릭한 다음 **추가** > **새 항목** 을 선택합니다.
+1. **새 항목 추가** 대화 상자에서 **클래스** 를 선택하고 **이름** 필드를 *ImageNetData.cs* 로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
 
-    *ImageNetData.cs* 파일이 코드 편집기에서 열립니다. 다음 `using` 문을 *ImageNetData.cs*의 맨 위에 추가합니다.
+    *ImageNetData.cs* 파일이 코드 편집기에서 열립니다. 다음 `using` 문을 *ImageNetData.cs* 의 맨 위에 추가합니다.
 
     [!code-csharp [ImageNetDataUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/DataStructures/ImageNetData.cs#L1-L4)]
 
@@ -158,10 +158,10 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 *DataStructures* 디렉터리에 예측 클래스를 만듭니다.
 
-1. **솔루션 탐색기**에서 *DataStructures* 디렉터리를 마우스 오른쪽 단추로 클릭한 다음 **추가** > **새 항목**을 선택합니다.
-1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *ImageNetPrediction.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
+1. **솔루션 탐색기** 에서 *DataStructures* 디렉터리를 마우스 오른쪽 단추로 클릭한 다음 **추가** > **새 항목** 을 선택합니다.
+1. **새 항목 추가** 대화 상자에서 **클래스** 를 선택하고 **이름** 필드를 *ImageNetPrediction.cs* 로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
 
-    *ImageNetPrediction.cs* 파일이 코드 편집기에서 열립니다. 다음 `using` 문을 *ImageNetPrediction.cs*의 맨 위에 추가합니다.
+    *ImageNetPrediction.cs* 파일이 코드 편집기에서 열립니다. 다음 `using` 문을 *ImageNetPrediction.cs* 의 맨 위에 추가합니다.
 
     [!code-csharp [ImageNetPredictionUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/DataStructures/ImageNetPrediction.cs#L1)]
 
@@ -177,7 +177,7 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 [MLContext 클래스](xref:Microsoft.ML.MLContext)는 모든 ML.NET 작업의 시작점이며, `mlContext`를 초기화하면 모델 생성 워크플로 개체 간에 공유할 수 있는 새 ML.NET 환경이 생성됩니다. 개념적으로 Entity Framework의 `DBContext`와 유사합니다.
 
-`outputFolder` 필드 아래 *Program.cs*의 `Main` 메서드에 다음 줄을 추가하여 `MLContext`의 새로운 인스턴스로 `mlContext` 변수를 초기화합니다.
+`outputFolder` 필드 아래 *Program.cs* 의 `Main` 메서드에 다음 줄을 추가하여 `MLContext`의 새로운 인스턴스로 `mlContext` 변수를 초기화합니다.
 
 [!code-csharp [InitMLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L24)]
 
@@ -200,14 +200,14 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 프로젝트에 새 디렉터리를 추가하여 파서 클래스 집합을 구성합니다.
 
-1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 폴더**를 선택합니다. 새 폴더가 솔루션 탐색기에 표시되면 이름을 “YoloParser”로 표시합니다.
+1. **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 폴더** 를 선택합니다. 새 폴더가 솔루션 탐색기에 표시되면 이름을 “YoloParser”로 표시합니다.
 
 ### <a name="create-bounding-boxes-and-dimensions"></a>경계 상자 및 차원 만들기
 
 모델의 데이터 출력에는 이미지 내 개체의 경계 상자에 대한 좌표와 크기가 포함됩니다. 차원의 기본 클래스를 만듭니다.
 
-1. **솔루션 탐색기**에서 *YoloParser* 디렉터리를 마우스 오른쪽 단추로 클릭한 다음 **추가** > **새 항목**을 선택합니다.
-1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *DimensionsBase.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
+1. **솔루션 탐색기** 에서 *YoloParser* 디렉터리를 마우스 오른쪽 단추로 클릭한 다음 **추가** > **새 항목** 을 선택합니다.
+1. **새 항목 추가** 대화 상자에서 **클래스** 를 선택하고 **이름** 필드를 *DimensionsBase.cs* 로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
 
     *DimensionsBase.cs* 파일이 코드 편집기에서 열립니다. 모든 `using` 문과 기존 클래스 정의를 제거합니다.
 
@@ -224,10 +224,10 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 다음으로 경계 상자의 클래스를 만듭니다.
 
-1. **솔루션 탐색기**에서 *YoloParser* 디렉터리를 마우스 오른쪽 단추로 클릭한 다음 **추가** > **새 항목**을 선택합니다.
-1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *YoloBoundingBox.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
+1. **솔루션 탐색기** 에서 *YoloParser* 디렉터리를 마우스 오른쪽 단추로 클릭한 다음 **추가** > **새 항목** 을 선택합니다.
+1. **새 항목 추가** 대화 상자에서 **클래스** 를 선택하고 **이름** 필드를 *YoloBoundingBox.cs* 로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
 
-    *YoloBoundingBox.cs* 파일이 코드 편집기에서 열립니다. 다음 `using` 문을 *YoloBoundingBox.cs*의 맨 위에 추가합니다.
+    *YoloBoundingBox.cs* 파일이 코드 편집기에서 열립니다. 다음 `using` 문을 *YoloBoundingBox.cs* 의 맨 위에 추가합니다.
 
     [!code-csharp [YoloBoundingBoxUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L1)]
 
@@ -251,10 +251,10 @@ ONNX(Open Neural Network Exchange)는 AI 모델의 오픈 소스 형식입니다
 
 이제 차원 및 경계 상자의 클래스가 생성되므로, 파서를 만들 때입니다.
 
-1. **솔루션 탐색기**에서 *YoloParser* 디렉터리를 마우스 오른쪽 단추로 클릭한 다음 **추가** > **새 항목**을 선택합니다.
-1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *YoloOutputParser.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
+1. **솔루션 탐색기** 에서 *YoloParser* 디렉터리를 마우스 오른쪽 단추로 클릭한 다음 **추가** > **새 항목** 을 선택합니다.
+1. **새 항목 추가** 대화 상자에서 **클래스** 를 선택하고 **이름** 필드를 *YoloOutputParser.cs* 로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
 
-    *YoloOutputParser.cs* 파일이 코드 편집기에서 열립니다. 다음 `using` 문을 *YoloOutputParser.cs*의 맨 위에 추가합니다.
+    *YoloOutputParser.cs* 파일이 코드 편집기에서 열립니다. 다음 `using` 문을 *YoloOutputParser.cs* 의 맨 위에 추가합니다.
 
     [!code-csharp [YoloParserUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L1-L4)]
 
@@ -456,10 +456,10 @@ for (var j = i + 1; j < boxes.Count; j++)
 
 후처리와 마찬가지로 채점 단계에는 몇 가지 단계가 있습니다. 이 작업을 지원하기 위해 채점 로직을 포함하는 클래스를 프로젝트에 추가합니다.
 
-1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 항목**을 선택합니다.
-1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *OnnxModelScorer.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
+1. **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 항목** 을 선택합니다.
+1. **새 항목 추가** 대화 상자에서 **클래스** 를 선택하고 **이름** 필드를 *OnnxModelScorer.cs* 로 변경합니다. 그런 다음, **추가** 단추를 선택합니다.
 
-    *OnnxModelScorer.cs* 파일이 코드 편집기에서 열립니다. 다음 `using` 문을 *OnnxModelScorer.cs*의 위에 추가합니다.
+    *OnnxModelScorer.cs* 파일이 코드 편집기에서 열립니다. 다음 `using` 문을 *OnnxModelScorer.cs* 의 위에 추가합니다.
 
     [!code-csharp [ScorerUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L1-L7)]
 
@@ -575,7 +575,7 @@ catch (Exception ex)
 
 ### <a name="visualize-predictions"></a>예측 시각화
 
-모델에서 이미지를 채점하고 출력이 처리되고 나면 이미지에 경계 상자를 그려야 합니다. 그렇게 하려면 `DrawBoundingBox` 메서드를 *Program.cs*의 `GetAbsolutePath` 메서드 아래 추가합니다.
+모델에서 이미지를 채점하고 출력이 처리되고 나면 이미지에 경계 상자를 그려야 합니다. 그렇게 하려면 `DrawBoundingBox` 메서드를 *Program.cs* 의 `GetAbsolutePath` 메서드 아래 추가합니다.
 
 ```csharp
 private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
@@ -709,7 +709,7 @@ person and its Confidence score: 0.5551759
 
 지금까지 이제 ML.NET에서 미리 학습된 `ONNX` 모델을 다시 사용하여 개체 검색을 위한 기계 학습 모델을 성공적으로 빌드했습니다.
 
-[dotnet/samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx) 리포지토리에서 이 자습서의 소스 코드를 찾을 수 있습니다.
+[dotnet/samples](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx) 리포지토리에서 이 자습서의 소스 코드를 찾을 수 있습니다.
 
 본 자습서에서는 다음 작업에 관한 방법을 학습했습니다.
 > [!div class="checklist"]
@@ -722,4 +722,4 @@ person and its Confidence score: 0.5551759
 
 기계 학습 샘플 GitHub 리포지토리를 확인하여 확장된 개체 검색 샘플을 살펴보세요.
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning-samples GitHub 리포지토리](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)
+> [dotnet/machinelearning-samples GitHub 리포지토리](https://github.com/dotnet/machinelearning-samples/tree/main/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)

@@ -2,12 +2,12 @@
 title: '호환성이 손상되는 변경: ASP.NET Core 앱은 따옴표 붙은 숫자를 역직렬화할 수 있음'
 description: ASP.NET Core 앱이 예외를 throw하는 대신 JSON 문자열로 표현되는 숫자를 역직렬화하는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 10/21/2020
-ms.openlocfilehash: f541af5bf5f0a519fd5205f44d68a9b401569909
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: bc1531bb9b159bfd9e80eafacafb50aa509973cc
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102256311"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624151"
 ---
 # <a name="aspnet-core-apps-allow-deserializing-quoted-numbers"></a>ASP.NET Core 앱은 따옴표 붙은 숫자를 역직렬화할 수 있음
 
@@ -41,7 +41,7 @@ ASP.NET Core MVC 및 웹 API 앱의 경우 다음 코드를 사용하여 `Startu
 
 ```csharp
 services.AddControllers()
-   .AddJsonOptions(options.NumberHandling = JsonNumberHandling.Strict);
+   .AddJsonOptions(options => options.JsonSerializerOptions.NumberHandling = JsonNumberHandling.Strict);
 ```
 
 ## <a name="affected-apis"></a>영향을 받는 API
