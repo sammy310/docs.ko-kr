@@ -2,12 +2,12 @@
 title: 응용 프로그램 성능 관리-WCF 개발자를 위한 gRPC
 description: ASP.NET Core gRPC 응용 프로그램에 대 한 로깅, 메트릭 및 추적입니다.
 ms.date: 12/15/2020
-ms.openlocfilehash: 8a2a89e268e3b2dffdcc945ac71b2de85b4d4964
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.openlocfilehash: 06515762e3e5febf2d11dea14524d5e3f586a760
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938457"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874552"
 ---
 # <a name="application-performance-management"></a>애플리케이션 성능 관리
 
@@ -51,7 +51,7 @@ public class StockData : Stocks.StocksBase
 
 ## <a name="metrics-in-aspnet-core-grpc"></a>ASP.NET Core gRPC의 메트릭
 
-.NET Core 런타임은 메트릭을 내보내고 관찰 하기 위한 구성 요소 집합을 제공 합니다. 여기에는 및 클래스와 같은 Api가 포함 <xref:System.Diagnostics.Tracing.EventSource> <xref:System.Diagnostics.Tracing.EventCounter> 됩니다. 이러한 Api는 [dotnet 카운터 전역 ETW(Windows용 이벤트 추적) 도구](../../core/diagnostics/dotnet-counters.md)등의 외부 프로세스에서 사용할 수 있는 기본 숫자 데이터를 내보낼 수 있습니다. 사용자 고유의 코드에서를 사용 하는 방법에 대 한 자세한 내용은 `EventCounter` [eventcounter 소개](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)를 참조 하세요.
+.NET Core 런타임은 메트릭을 내보내고 관찰 하기 위한 구성 요소 집합을 제공 합니다. 여기에는 및 클래스와 같은 Api가 포함 <xref:System.Diagnostics.Tracing.EventSource> <xref:System.Diagnostics.Tracing.EventCounter> 됩니다. 이러한 Api는 [dotnet 카운터 전역 ETW(Windows용 이벤트 추적) 도구](../../core/diagnostics/dotnet-counters.md)등의 외부 프로세스에서 사용할 수 있는 기본 숫자 데이터를 내보낼 수 있습니다. 사용자 고유의 코드에서를 사용 하는 방법에 대 한 자세한 내용은 `EventCounter` [eventcounter 소개](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)를 참조 하세요.
 
 고급 메트릭 및 더 광범위 한 데이터 저장소에 메트릭 데이터를 작성 하는 경우 [앱 메트릭](https://www.app-metrics.io)이라는 오픈 소스 프로젝트를 사용해 볼 수 있습니다. 이 라이브러리 집합은 코드를 계측할 수 있는 광범위 한 형식을 제공 합니다. 또한 [Application Insights](/azure/azure-monitor/app/app-insights-overview)InfluxDB와 같은 시계열 데이터베이스를 포함 하는 다양 한 종류의 대상에 메트릭을 기록 하는 패키지를 제공 합니다. [AspNetCore](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) NuGet 패키지는 ASP.NET Core 프레임 워크와의 통합을 통해 자동으로 생성 되는 포괄적인 기본 메트릭 집합을 추가 합니다. 프로젝트 웹 사이트는 [Grafana](https://grafana.com/) 시각화 플랫폼을 사용 하 여 이러한 메트릭을 표시 하기 위한 [템플릿을](https://www.app-metrics.io/samples/grafana/) 제공 합니다.
 
@@ -59,13 +59,13 @@ public class StockData : Stocks.StocksBase
 
 대부분의 메트릭 플랫폼은 다음 형식을 지원 합니다.
 
-| 메트릭 유형 | 설명 |
+| 메트릭 유형 | Description |
 | ----------- | ----------- |
 | 카운터     | 요청 및 오류와 같은 상황이 발생 하는 빈도를 추적 합니다. |
 | 계기       | 활성 연결과 같이 시간이 지남에 따라 변경 되는 단일 값을 기록 합니다. |
 | 히스토그램   | 임의의 한도에 걸쳐 값의 분포를 측정 합니다. 예를 들어 히스토그램은 데이터 집합 크기를 추적할 수 있습니다. 여기에 포함 된 <10 개 레코드 수, 포함 된 11-100 레코드 수, 포함 된 101-1000 레코드 수, 포함 된 >1000 레코드 수를 계산 합니다. |
 | 미터       | 다양 한 시간 범위에서 이벤트가 발생 하는 속도를 측정 합니다. |
-| Timer       | 히스토그램으로 저장 된 이벤트 기간과 발생 비율을 추적 합니다. |
+| 타이머       | 히스토그램으로 저장 된 이벤트 기간과 발생 비율을 추적 합니다. |
 
 *앱 메트릭을* 사용 하 여 `IMetrics` 종속성 주입을 통해 인터페이스를 가져오고 grpc 서비스에 대해 이러한 메트릭을 기록 하는 데 사용할 수 있습니다. 다음 예제에서는 `Get` 시간이 지남에 따라 생성 된 요청 수를 계산 하는 방법을 보여 줍니다.
 
@@ -108,7 +108,7 @@ public class StockData : Stocks.StocksBase
 
 메트릭 데이터의 숫자 특성은 값이 정의 된 허용 오차를 벗어날 때 개발자에 게 알리거나 지원 엔지니어에 게 알리기 위해 가장 적합 한 경고 시스템을 의미 합니다. 이미 언급 된 플랫폼은 전자 메일, 문자 메시지 또는 대시보드 내 시각화를 비롯 한 다양 한 옵션을 통해 경고에 대 한 지원을 제공 합니다.
 
-## <a name="distributed-tracing"></a>분산된 추적
+## <a name="distributed-tracing"></a>분산 추적
 
 분산 추적은 마이크로 서비스 및 분산 아키텍처를 사용 하 여 확신이 없을 하는 모니터링의 비교적 최근 개발입니다. 클라이언트 브라우저, 응용 프로그램 또는 장치의 단일 요청을 여러 단계와 하위 요청으로 분할 하 고 네트워크에서 많은 서비스를 사용 하는 것을 포함할 수 있습니다. 이 활동을 사용 하면 로그 메시지와 메트릭이 트리거된 특정 요청과의 상관 관계를 지정 하기가 어렵습니다. 분산 추적은 요청에 식별자를 적용 하 고 로그 및 메트릭이 특정 작업과 상관 관계를 지정할 수 있도록 합니다. 이 추적은 [WCF의 종단 간 추적과](../../framework/wcf/diagnostics/tracing/end-to-end-tracing.md)유사 하지만 여러 플랫폼에서 적용 됩니다.
 
@@ -120,7 +120,7 @@ public class StockData : Stocks.StocksBase
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>분산 추적 `DiagnosticSource`
 
-.NET에는 분산 추적 및 범위에 잘 매핑되는 내부 모듈이 있습니다. [DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). 프로세스 내에서 진단을 생성 하 고 사용 하는 간단한 방법을 제공 하는 것 외에도 모듈에는 `DiagnosticSource` *활동* 의 개념이 있습니다. 활동은 효과적으로 분산 추적의 구현 이거나 추적 내의 범위입니다. 모듈의 내부에서는 식별자 할당을 비롯 한 부모/자식 활동을 처리 합니다. 형식을 사용 하는 방법에 대 한 자세한 내용은 `Activity` [GitHub의 작업 사용자 가이드](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)를 참조 하세요.
+.NET에는 분산 추적 및 범위에 잘 매핑되는 내부 모듈이 있습니다. [DiagnosticSource](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). 프로세스 내에서 진단을 생성 하 고 사용 하는 간단한 방법을 제공 하는 것 외에도 모듈에는 `DiagnosticSource` *활동* 의 개념이 있습니다. 활동은 효과적으로 분산 추적의 구현 이거나 추적 내의 범위입니다. 모듈의 내부에서는 식별자 할당을 비롯 한 부모/자식 활동을 처리 합니다. 형식을 사용 하는 방법에 대 한 자세한 내용은 `Activity` [GitHub의 작업 사용자 가이드](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)를 참조 하세요.
 
 `DiagnosticSource`는 핵심 프레임 워크의 일부 이며 이후 몇 가지 핵심 구성 요소에서 지원 됩니다. 여기에는 <xref:System.Net.Http.HttpClient> gRPC 프레임 워크의 명시적 지원을 포함 하 여 Entity Framework Core 및 ASP.NET Core 있습니다. ASP.NET Core 요청을 받으면 [W3C 추적 컨텍스트](https://www.w3.org/TR/trace-context) 표준과 일치 하는 HTTP 헤더 쌍을 확인 합니다. 헤더가 발견 되 면 헤더의 id 값과 컨텍스트를 사용 하 여 활동이 시작 됩니다. 헤더를 찾을 수 없는 경우 작업은 표준 형식과 일치 하는 생성 된 id 값으로 시작 됩니다. 이 활동의 수명 동안 프레임 워크 또는 응용 프로그램 코드에 의해 생성 된 진단은 추적 및 범위 식별자로 태그를 지정할 수 있습니다. `HttpClient`지원에서는 모든 요청에 대 한 현재 작업을 확인 하 고 보내는 요청에 추적 헤더를 자동으로 추가 하 여이 기능을 추가로 확장 합니다.
 
@@ -131,7 +131,7 @@ ASP.NET Core gRPC 클라이언트 및 서버 라이브러리는 및에 대 한 �
 
 ### <a name="add-your-own-diagnosticsource-and-activity"></a>`DiagnosticSource`직접 추가`Activity`
 
-사용자 고유의 진단을 추가 하거나 응용 프로그램 코드 내에서 명시적 범위를 만들려면 [DiagnosticSource 사용자 가이드](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener) 및 [활동 사용자 가이드](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage)를 참조 하세요.
+사용자 고유의 진단을 추가 하거나 응용 프로그램 코드 내에서 명시적 범위를 만들려면 [DiagnosticSource 사용자 가이드](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener) 및 [활동 사용자 가이드](https://github.com/dotnet/runtime/blob/main/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage)를 참조 하세요.
 
 ### <a name="store-distributed-trace-data"></a>분산 추적 데이터 저장
 

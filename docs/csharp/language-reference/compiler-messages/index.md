@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, errors
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: a7c0290c799a7ae4a371578396d2d2d747d00d28
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ecc040fb0c19ac19b7a4a922702b70ac2d9a426e
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89126244"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103479544"
 ---
 # <a name="c-compiler-errors"></a>C# 컴파일러 오류
 
@@ -33,7 +33,6 @@ ms.locfileid: "89126244"
 ## <a name="see-also"></a>참조
 
 - [C# 컴파일러 옵션](../compiler-options/index.md)
-- [죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.](../../misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
 - [프로젝트 디자이너, 빌드 페이지(C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
-- [-warn(C# 컴파일러 옵션)](../compiler-options/warn-compiler-option.md)
-- [-nowarn(C# 컴파일러 옵션)](../compiler-options/nowarn-compiler-option.md)
+- [**WarningLevel**(C# 컴파일러 옵션)](../compiler-options/errors-warnings.md#warninglevel)
+- [**DisabledWarnings**(C# 컴파일러 옵션)](../compiler-options/errors-warnings.md#disabledwarnings)

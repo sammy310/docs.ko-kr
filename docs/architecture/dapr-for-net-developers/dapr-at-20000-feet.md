@@ -3,12 +3,12 @@ title: Dapr이 배포되어 있습니다.
 description: D 4의 용도, 수행 하는 방법 및 작동 방식에 대 한 개략적인 개요입니다.
 author: robvet
 ms.date: 02/17/2021
-ms.openlocfilehash: 9f23e9822fd0d4b5eda648d2fc1359cce14cf59d
-ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
+ms.openlocfilehash: 6e5d73f8c49ecb3eec518986e2af60c68195c0ab
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103624047"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881083"
 ---
 # <a name="dapr-at-20000-feet"></a>Dapr이 배포되어 있습니다.
 
@@ -210,7 +210,7 @@ gRPC는 오래 된 [원격 프로시저 호출 (RPC)](https://en.wikipedia.org/w
 - 클라이언트 요청과 서버 응답을 동시에 전송 하기 위한 양방향 전이중 통신입니다.
 - 대량 데이터 집합을 비동기적으로 스트림 하는 요청 및 응답을 설정 하는 기본 제공 스트리밍입니다.
 
-자세한 내용은 [Azure 전자책에 대 한 .Net 앱 설계 Cloud-Native](https://docs.microsoft.com/dotnet/architecture/cloud-native/) 에서 [grpc 개요](https://docs.microsoft.com/dotnet/architecture/cloud-native/grpc#what-is-grpc) 를 확인 하세요.  
+자세한 내용은 [Azure 전자책에 대 한 .Net 앱 설계 Cloud-Native](../cloud-native/index.md) 에서 [grpc 개요](../cloud-native/grpc.md#what-is-grpc) 를 확인 하세요.  
 
 ## <a name="dapr-and-service-meshes"></a>4apr 및 서비스 메시
 
