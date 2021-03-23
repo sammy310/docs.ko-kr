@@ -4,12 +4,12 @@ title: ICorProfilerInfo9 인터페이스
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 954cb16d2b789359693f6a8fa3e0f6e19ad19b3e
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 44e3d694b426f87ee4e4bc12181f46322b0d246f
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99736910"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104805677"
 ---
 # <a name="icorprofilerinfo9-interface"></a>ICorProfilerInfo9 인터페이스
 
@@ -27,8 +27,8 @@ ms.locfileid: "99736910"
 
 **플랫폼:** [.Net Core 지원 운영 체제](../../../core/install/windows.md?pivots=os-windows)를 참조 하세요.  
 **헤더:** CorProf.idl, CorProf.h  
-**.Net 버전:**[!INCLUDE[net_core](../../../../includes/net-core-22-md.md)]  
+**.Net 버전:**[!INCLUDE[net_core](../../../../includes/net-core-21-md.md)]  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [프로파일링 인터페이스](profiling-interfaces.md)

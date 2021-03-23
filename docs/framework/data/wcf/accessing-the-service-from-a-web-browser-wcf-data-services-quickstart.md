@@ -3,14 +3,16 @@ title: 웹 브라우저에서 서비스 액세스(WCF Data Services 빠른 시�
 description: Visual Studio에서 WCF Data Services를 시작 하 고 브라우저에서 피드 읽기를 사용 하지 않도록 설정 하는 방법을 알아봅니다. 서비스 정의 문서를 가져오고 데이터 서비스 리소스에 액세스 합니다.
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: 713436c31bc3f622c4f44a83e33fff3fcbba1c1c
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 27b599b6bf28b2ee0810564a3fb73b14274467ff
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247780"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104805547"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>웹 브라우저에서 서비스 액세스(WCF Data Services 빠른 시작)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services 빠른 시작의 두 번째 작업입니다. 이 작업에서는 Visual Studio에서 WCF Data Services를 시작 하 고 웹 브라우저에서 선택적으로 피드 읽기를 사용 하지 않도록 설정 합니다. 그런 다음 웹 브라우저를 통해 HTTP GET 요청을 노출 된 리소스로 전송 하 여 서비스 정의 문서를 검색 하 고 데이터 서비스 리소스에 액세스 합니다.
 
@@ -19,7 +21,7 @@ WCF Data Services 빠른 시작의 두 번째 작업입니다. 이 작업에서�
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Internet Explorer를 사용하여 기본 서비스 문서를 요청하려면
 
-1. Internet Explorer의 **도구** 메뉴에서 **인터넷 옵션**을 선택 하 고 **콘텐츠** 탭을 클릭 한 다음 **설정**을 클릭 하 고 **피드 보기 켜기**를 선택 취소 합니다.
+1. Internet Explorer의 **도구** 메뉴에서 **인터넷 옵션** 을 선택 하 고 **콘텐츠** 탭을 클릭 한 다음 **설정** 을 클릭 하 고 **피드 보기 켜기** 를 선택 취소 합니다.
 
      이렇게 하면 피드 읽기가 사용되지 않습니다. 이 기능을 사용하지 않도록 설정하지 않으면 웹 브라우저에서 원시 XML 데이터를 표시하지 않고 반환된 AtomPub 인코딩 문서를 XML 피드로 처리합니다.
 
@@ -77,6 +79,6 @@ WCF Data Services 빠른 시작의 두 번째 작업입니다. 이 작업에서�
 > [!div class="nextstepaction"]
 > [.NET Framework 클라이언트 애플리케이션 만들기](creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [데이터 서비스 리소스 액세스](accessing-data-service-resources-wcf-data-services.md)

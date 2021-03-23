@@ -7,14 +7,16 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: d1554dd149e3d447a67cd2ef41aef9042e14fd06
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3d8a0f869454ce24d847127c2097239886f3395b
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204361"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104805664"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Data Services 클라이언트 라이브러리
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 모든 응용 프로그램은 HTTP 요청을 보내고 데이터 서비스에서 반환 하는 OData 피드를 처리할 수 있는 경우 OData (Open Data Protocol) 기반 데이터 서비스와 상호 작용할 수 있습니다. 이러한 상호 운용성을 통해 광범위 한 웹 사용 응용 프로그램에서 OData 기반 서비스에 액세스할 수 있습니다. WCF Data Services에는 .NET Framework 또는 Silverlight 기반 응용 프로그램에서 OData 피드를 사용할 때 보다 다양 한 프로그래밍 환경을 제공 하는 클라이언트 라이브러리가 포함 되어 있습니다.  
   
@@ -54,7 +56,7 @@ ms.locfileid: "91204361"
  [이진 데이터 사용](working-with-binary-data-wcf-data-services.md)  
  데이터 서비스에서 데이터 스트림으로 반환하는 이진 데이터에 액세스하고 해당 데이터를 변경하는 방법에 대해 설명합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [WCF Data Services 정의](defining-wcf-data-services.md)
 - [시작](getting-started-with-wcf-data-services.md)

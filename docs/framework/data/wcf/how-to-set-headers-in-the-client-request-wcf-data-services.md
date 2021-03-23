@@ -8,14 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
-ms.openlocfilehash: 47e40f416b256fbd06160a5ee2683eb8364d48b7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: cfd2adbbf0dccafffef11b0f501db4832bc5e006
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204387"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104805807"
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>방법: 클라이언트 요청의 헤더 설정(WCF Data Services)
+
+[!INCLUDE [wcf-deprecated](~/includes/wcf-deprecated.md)]
 
 WCF Data Services 클라이언트 라이브러리를 사용 하 여 OData (Open Data Protocol)를 지 원하는 데이터 서비스에 액세스 하는 경우 클라이언트 라이브러리는 데이터 서비스에 전송 된 요청 메시지에 필요한 HTTP 헤더를 자동으로 설정 합니다. 하지만 클라이언트 라이브러리는 데이터 서비스에 청구 기반 인증이나 쿠키가 필요한 경우와 같은 특정 상황에서 필요한 메시지 헤더를 설정하지 못합니다. 자세한 내용은 [Securing WCF Data Services](securing-wcf-data-services.md#clientAuthentication)을 참조하세요. 이런 경우에는 전송하기 전에 요청 메시지의 메시지 헤더를 수동으로 설정해야 합니다. 이 항목의 예제에서는 데이터 서비스로 전송하기 전에 요청 메시지에 새로운 헤더를 추가하도록 <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> 이벤트를 처리하는 방법을 설명합니다.  
   
@@ -38,7 +40,7 @@ WCF Data Services 클라이언트 라이브러리를 사용 하 여 OData (Open 
  [!code-csharp[Astoria Northwind Client#OnSendingRequest](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#onsendingrequest)]  
  [!code-vb[Astoria Northwind Client#OnSendingRequest](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#onsendingrequest)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [WCF Data Services에 보안 설정](securing-wcf-data-services.md)
 - [WCF Data Services 클라이언트 라이브러리](wcf-data-services-client-library.md)
