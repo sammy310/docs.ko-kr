@@ -3,12 +3,12 @@ title: D 4에서 시작
 description: 로컬 개발 환경을 준비 하 고, .NET 응용 프로그램을 사용 하 여 첫 번째 .NET 응용 프로그램을 구축 하기 위한 가이드입니다.
 author: amolenk
 ms.date: 02/25/2021
-ms.openlocfilehash: 1b6ecd2cc2bf077375262155f0866cfef2dab708
-ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
+ms.openlocfilehash: 1c60f731138911d7d22ff871c9a3849704d81dd6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103623813"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874383"
 ---
 # <a name="get-started-with-dapr"></a>D 4에서 시작
 
@@ -244,7 +244,7 @@ Core를 사용 하 여 .Net Core 3.1 개발 도구를 설치 했는지 확인 �
     > [!NOTE]
     > 시험판에 있는 버전을 대상으로 하는 경우 `Dapr.AspNetCore` 플래그를 지정 해야 `-Prerelease` 합니다.
 
-1. 프로젝트에서 `DaprFrontEnd` *Startup.cs* 파일을 열고 `ConfigureServices` 메서드를 다음 코드로 바꿉니다.
+1. 프로젝트에서 `DaprFrontEnd` *시작 .cs* 파일을 열고 `ConfigureServices` 메서드를 다음 코드로 바꿉니다.
 
     ```csharp
     // This method gets called by the runtime. Use this method to add services to the container.
@@ -277,7 +277,7 @@ Core를 사용 하 여 .Net Core 3.1 개발 도구를 설치 했는지 확인 �
     }
     ```
 
-1. *Pages* 폴더에서 *Index.cshtml.cs* 파일을 열고 내용을 다음 코드로 바꿉니다.
+1. *Pages* 폴더에서 *Index. cshtml* 파일을 열고 해당 내용을 다음 코드로 바꿉니다.
 
     ```csharp
     using System;
@@ -462,7 +462,7 @@ Core를 사용 하 여 .Net Core 3.1 개발 도구를 설치 했는지 확인 �
 
     ```yaml
     version: '3.4'
-    
+
     services:
       daprfrontend:
         image: ${DOCKER_REGISTRY-}daprfrontend

@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 9fbeee7475b49a5b6514d4983142ae3be5a2f026
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 1a0b31f7aca6415510ed0fcd08e9f9a0f8f39bf5
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605297"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876606"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>.NET 소스 코드 분석 개요
 
@@ -53,7 +53,7 @@ ms.locfileid: "102605297"
 
 이러한 규칙의 심각도를 변경하여 사용하지 않도록 설정하거나 오류로 수준을 올릴 수 있습니다. [더 많은 규칙을 사용하도록 설정](#enable-additional-rules)할 수도 있습니다.
 
-- 각 .NET SDK 버전에 포함된 규칙 목록은 [분석기 릴리스](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)를 참조하세요.
+- 각 .NET SDK 버전에 포함된 규칙 목록은 [분석기 릴리스](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)를 참조하세요.
 - 모든 코드 품질 규칙 목록은 [코드 품질 규칙](quality-rules/index.md)을 참조하세요.
 
 ### <a name="enable-additional-rules"></a>추가 규칙 사용
@@ -66,7 +66,7 @@ ms.locfileid: "102605297"
 | `AllEnabledByDefault` | 가장 적극적인 모드입니다. 모든 규칙이 빌드 경고로 사용하도록 설정됩니다. 개별 규칙을 선택적으로 [옵트아웃](configuration-options.md)하여 사용하지 않도록 설정할 수 있습니다.<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
 | `Default` | 기본 모드로, 몇 가지 규칙은 경고로 사용하도록 설정되고 다른 규칙은 해당하는 코드 수정 사항이 있는 Visual Studio IDE 제안으로만 사용하도록 설정되며 나머지는 완전히 사용하지 않도록 설정됩니다. 개별 규칙을 선택적으로 [옵트인 또는 옵트아웃](configuration-options.md)하여 사용하지 않도록 설정할 수 있습니다.<br /><br />`<AnalysisMode>Default</AnalysisMode>` |
 
-사용할 수 있는 각 규칙의 기본 심각도와 기본 분석 모드에서 규칙을 사용할 수 있는지를 확인하려면 [규칙 전체 목록](https://github.com/dotnet/roslyn-analyzers/blob/master/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)을 참조하세요.
+사용할 수 있는 각 규칙의 기본 심각도와 기본 분석 모드에서 규칙을 사용할 수 있는지를 확인하려면 [규칙 전체 목록](https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md)을 참조하세요.
 
 ### <a name="treat-warnings-as-errors"></a>경고를 오류로 처리
 

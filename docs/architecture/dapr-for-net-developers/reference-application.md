@@ -3,12 +3,12 @@ title: EShopOnDapr 참조 응용 프로그램 소개
 description: EShopOnDapr reference 응용 프로그램 및 해당 기록의 개요입니다.
 author: amolenk
 ms.date: 02/17/2021
-ms.openlocfilehash: 8fd0ccade45f4f6609046e00d22ffd5693c4a529
-ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
+ms.openlocfilehash: 47d99246eec8e3288738c911cccb23bb9cac8df3
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103623891"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874565"
 ---
 # <a name="dapr-reference-application"></a>Eapr 참조 응용 프로그램
 
@@ -119,9 +119,9 @@ EShopOnDapr codebase는 eShopOnContainers codebase 보다 더 효율적입니다
 
 ### <a name="references"></a>참조
 
-- [eShopOnDapr](https://github.com/dotnet-architecture/eShopOnDapr)
+- [GitHub의 eShopOnDapr](https://github.com/dotnet-architecture/eShopOnDapr)
 
-- [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
+- [GitHub의 eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
 
 - [컨테이너 화 된 .NET 응용 프로그램용 .NET 마이크로 서비스](https://dotnet.microsoft.com/download/e-book/microservices-architecture/pdf)
 

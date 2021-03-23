@@ -2,12 +2,12 @@
 title: F# 코드 서식 지정 지침
 description: 'F # 코드의 서식을 지정 하기 위한 지침을 알아봅니다.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 74ab483a501dd5135ad5d98fd6dce988cf207ef8
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: 22020d69c13fbf8317cbf5e871073a290f8967b7
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605453"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876359"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 코드 서식 지정 지침
 
@@ -306,6 +306,17 @@ let myFunBad (a: decimal) b c:decimal = a + b + c
 ```fsharp
 let f x = x + 1 // Increment by one.
 ```
+
+## <a name="formatting-string-literals-and-interpolated-strings"></a>문자열 리터럴 및 보간된 문자열 서식 지정
+
+문자열 리터럴과 보간된 문자열은 줄의 길이에 관계 없이 한 줄에 바로 남겨둘 수 있습니다.
+
+```fsharp
+let serviceStorageConnection =
+    $"DefaultEndpointsProtocol=https;AccountName=%s{serviceStorageAccount.Name};AccountKey=%s{serviceStorageAccountKey.Value}"
+```
+
+여러 줄 보간된 식은 권장 되지 않습니다. 대신 식 결과를 값에 바인딩하고 보간된 문자열에 사용 합니다.
 
 ## <a name="naming-conventions"></a>명명 규칙
 
@@ -1144,6 +1155,50 @@ Option.traverse(
     create
     >> Result.setError [ invalidHeader "Content-Checksum" ]
 )
+```
+
+## <a name="formatting-generic-type-arguments-and-constraints"></a>제네릭 형식 인수 및 제약 조건 서식 지정
+
+아래 지침은 함수, 멤버 및 형식 정의에 모두 적용 됩니다.
+
+제네릭 형식 인수 및 제약 조건을 너무 길지 않은 경우 한 줄에 유지 합니다.
+
+```fsharp
+let f<'a, 'b when 'a : equality and 'b : comparison> param =
+    // function body
+```
+
+제네릭 형식 인수/제약 조건 및 함수 매개 변수가 둘 다 맞지 않지만 형식 매개 변수/제약 조건만 있으면 새 줄에 매개 변수를 추가 합니다.
+
+```fsharp
+let f<'a, 'b when 'a : equality and 'b : comparison>
+    param
+    =
+    // function body
+```
+
+형식 매개 변수 또는 제약 조건이 너무 길면 아래와 같이 분할 하 여 정렬 합니다. 길이에 관계 없이 함수와 동일한 줄에 형식 매개 변수 목록을 유지 합니다. 제약 조건의 경우 `when` 첫 번째 줄에 놓고 각 제약 조건을 길이에 관계 없이 한 줄에 유지 합니다. `>`마지막 줄의 끝에 위치 합니다. 제약 조건을 한 수준 내립니다.
+
+```fsharp
+let inline f< ^a, ^b
+    when ^a : (static member Foo1: unit -> ^b)
+    and ^b : (member Foo2: unit -> int)
+    and ^b : (member Foo3: string -> ^a option)>
+    arg1
+    arg2
+    =
+    // function body
+```
+
+형식 매개 변수/제약 조건이 분리 되었지만 일반적인 함수 매개 변수가 없는 경우 `=` 다음에 관계 없이 새 줄에를 추가 합니다.
+
+```f#
+let inline f<^a, ^b
+    when ^a : (static member Foo1: unit -> ^b)
+    and ^b : (member Foo2: unit -> int)
+    and ^b : (member Foo3: string -> ^a option)>
+    =
+    // function body
 ```
 
 ## <a name="formatting-attributes"></a>서식 특성

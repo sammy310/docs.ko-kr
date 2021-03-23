@@ -2,12 +2,12 @@
 title: 'F # 5.0의 새로운 기능-F # 가이드'
 description: 'F # 5.0에서 사용할 수 있는 새로운 기능에 대 한 개요를 확인 하세요.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 9b138e4801a3e599db650990acd53c0f956b78b8
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: c686bcf5df18d24ac35bbafb2b2d90f768ef7947
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98190730"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876710"
 ---
 # <a name="whats-new-in-f-50"></a>F# 5.0의 새로운 기능
 
@@ -15,7 +15,7 @@ F # 5.0은 F # 언어 및 F# 대화형에 몇 가지 향상 된 기능을 추가
 
 [.NET 다운로드 페이지](https://dotnet.microsoft.com/download)에서 최신 .NET SDK를 다운로드할 수 있습니다.
 
-## <a name="get-started"></a>시작하기
+## <a name="get-started"></a>시작
 
 F # 5.0은 모든 .NET Core 배포 및 Visual Studio 도구에서 사용할 수 있습니다. 자세한 내용은 [F # 시작](../get-started/index.md) 을 참조 하세요.
 
@@ -237,12 +237,14 @@ F # 5.0은 기본 제공 3D 및 4D 배열 형식의 고정 인덱스를 사용 �
 이를 설명 하기 위해 다음 3D 배열을 고려 합니다.
 
 *z = 0*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 0 | 1 |
 | **1** | 2 | 3 |
 
 *z = 1*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 4 | 5 |
@@ -366,7 +368,7 @@ iaString.Get() // "hello"
 
 ## <a name="default-interface-member-consumption"></a>기본 인터페이스 멤버 사용
 
-F # 5를 사용 하면 [기본 구현으로 인터페이스](../../csharp/tutorials/default-interface-methods-versions.md)를 사용할 수 있습니다.
+F # 5를 사용 하면 [기본 구현으로 인터페이스](../../csharp/whats-new/tutorials/default-interface-methods-versions.md)를 사용할 수 있습니다.
 
 다음과 같이 c #으로 정의 된 인터페이스를 살펴보겠습니다.
 
