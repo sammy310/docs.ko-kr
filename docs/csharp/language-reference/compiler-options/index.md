@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: cbe4db51652e8bfd00c555b6ddd230e124a08360
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: e9fc2fccdb48ab8646cdbf02db14b6ec1b9842df
+ms.sourcegitcommit: 5ce37699c2a51ed173171813be68ef7577b1aba5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103478471"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881161"
 ---
 # <a name="c-compiler-options"></a>C# 컴파일러 옵션
 
@@ -45,6 +45,6 @@ ms.locfileid: "103478471"
 
 .NET Framework 프로젝트의 경우 명령줄에서 *csc.exe* 를 실행할 수도 있습니다. 모든 컴파일러 옵션은 **-옵션** 및 **/옵션** 의 두 가지 형태로 사용할 수 있습니다. .NET Framework 웹 프로젝트에서는 *web.config* 파일에서 코드 숨김으로 컴파일하는 옵션을 지정합니다. 자세한 내용은 [\<compiler> 요소](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)를 참조하세요.
 
-**Visual Studio용 개발자 명령 프롬프트** 창을 사용하는 경우 필요한 환경 변수가 모두 설정됩니다. 이 도구에 액세스하는 방법에 대한 자세한 내용은 [Visual Studio용 개발자 명령 프롬프트](../../../framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.
+**Visual Studio용 개발자 명령 프롬프트** 창을 사용하는 경우 필요한 환경 변수가 모두 설정됩니다. 이 도구에 액세스하는 방법에 대한 자세한 내용은 [Visual Studio용 개발자 명령 프롬프트](/visualstudio/ide/reference/command-prompt-powershell)를 참조하세요.
 
 *csc.exe* 실행 파일은 대개 *Windows* 디렉터리 아래의 Microsoft.NET\Framework\\ *\<Version>* 폴더에 있습니다. 이 위치는 개별 컴퓨터의 구성에 따라 다를 수 있습니다. 컴퓨터에 .NET Framework 버전이 두 개 이상 설치된 경우 이 파일의 여러 버전을 찾을 수 있습니다. 해당 설치에 대한 자세한 내용은 [방법: 설치된 .NET Framework 버전 확인](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하세요.

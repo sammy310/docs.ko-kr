@@ -1,7 +1,7 @@
 ---
-title: 데이터 해독
+title: 데이터 암호 해독
 description: 대칭 알고리즘 또는 비대칭 알고리즘을 사용 하 여 .NET에서 데이터의 암호를 해독 하는 방법에 대해 알아봅니다.
-ms.date: 07/16/2020
+ms.date: 03/22/2021
 dev_langs:
 - csharp
 - vb
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-ms.openlocfilehash: cf286eeca8a9372c6532c56701e4775d5e09d786
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 14d8b6185c1c5b3aaee4f2041f98c500f2d3c313
+ms.sourcegitcommit: 26721a2260deabb3318cc98af8619306711153cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831106"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105027911"
 ---
-# <a name="decrypting-data"></a>데이터 해독
+# <a name="decrypting-data"></a>데이터 암호 해독
 
 암호 해독은 암호화의 반대 작업입니다. 비밀 키 암호화의 경우 데이터를 암호화하는 데 사용된 키 및 IV를 모두 알고 있어야 합니다. 퍼블릭 키 암호화의 경우 퍼블릭 키(프라이빗 키를 사용하여 데이터가 암호화된 경우) 또는 프라이빗 키(퍼블릭 키를 사용하여 데이터가 암호화된 경우)를 알고 있어야 합니다.
 
@@ -30,12 +30,14 @@ ms.locfileid: "94831106"
 
 ```vb
 Dim aes As Aes = Aes.Create()
-Dim cryptStream As New CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
+Dim cryptStream As New CryptoStream(
+    myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
 ```
 
 ```csharp
 Aes aes = Aes.Create();
-CryptoStream cryptStream = new CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read);
+CryptoStream cryptStream = new CryptoStream(
+    myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read);
 ```
 
 다음 예제에서는 스트림을 만들고, 스트림을 암호 해독하고, 스트림에서 읽고, 스트림을 닫는 전체 프로세스를 보여 줍니다. *TestData.txt* 라는 파일을 읽는 파일 스트림 개체가 만들어집니다. 그런 다음 **CryptoStream** 클래스와 **Aes** 클래스를 사용 하 여 파일 스트림을 해독 합니다. 이 예에서는 [데이터 암호화](encrypting-data.md)를 위한 대칭 암호화 예제에서 사용 되는 키 값을 지정 합니다. 이러한 값을 암호화 및 전송하는 데 필요한 코드는 표시되지 않습니다.
@@ -79,7 +81,7 @@ symmetricIV = rsa.Decrypt(encryptedSymmetricIV , RSAEncryptionPadding.Pkcs1);
 
 ## <a name="see-also"></a>참고 항목
 
-- [암호화 및 해독용 키 생성](generating-keys-for-encryption-and-decryption.md)
+- [암호화 및 암호 해독을 위한 키 생성](generating-keys-for-encryption-and-decryption.md)
 - [데이터 암호화](encrypting-data.md)
 - [암호화 서비스](cryptographic-services.md)
 - [암호화 모델](cryptography-model.md)

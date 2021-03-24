@@ -3,12 +3,12 @@ title: C# 소개 - 대화형 자습서
 description: 브라우저에서 C#에 대해 알아보고 사용자만의 개발 환경을 시작합니다.
 ms.date: 02/02/2021
 ms.custom: mvc
-ms.openlocfilehash: 3b5da67458d665946b42bf49ceb3799473354567
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: ed869271cd6f4ec13f769f46d41aefae9e1dad8d
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100626009"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104872420"
 ---
 # <a name="introduction-to-c"></a>C\# 소개
 
@@ -50,6 +50,6 @@ Hello World 단원 다음에 나오는 모든 소개 자습서는 온라인 브�
 
 이 자습서에서는 위에 나열된 단원을 완료했다고 가정합니다.
 
-## <a name="101-linq-samples"></a>[101 LINQ 샘플](https://github.com/dotnet/try-samples/tree/master/101-linq-samples)
+## <a name="101-linq-samples"></a>[101 LINQ 샘플](https://github.com/dotnet/try-samples/tree/main/101-linq-samples)
 
 이 샘플을 사용하려면 [dotnet-try](https://github.com/dotnet/try/blob/main/README.md#setup) 전역 도구가 필요합니다. 도구를 설치하고 [try-samples](https://github.com/dotnet/try-samples) 리포지토리를 복제한 후에는 대화형으로 실행할 수 있는 101개 샘플의 세트를 통해 LINQ(Language Integrated Query)를 배울 수 있습니다. 데이터 시퀀스를 쿼리, 탐색 및 변환하는 다양한 방법을 탐색할 수 있습니다.

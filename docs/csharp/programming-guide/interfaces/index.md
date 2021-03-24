@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 123c3768414ee9a577c49c218acfb7415d83572e
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: df96ce4cc2348637b262b7380832dde1e2ee3afb
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102605284"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876342"
 ---
 # <a name="interfaces-c-programming-guide"></a>인터페이스(C# 프로그래밍 가이드)
 
@@ -51,7 +51,7 @@ ms.locfileid: "102605284"
 
 인터페이스에는 다음과 같은 속성이 있습니다.
 
-- 인터페이스는 일반적으로 추상 멤버만 갖는 추상 기본 클래스와 같습니다. 인터페이스를 구현하는 모든 클래스 또는 구조체는 모든 멤버를 구현해야 합니다. 필요에 따라 인터페이스에서 해당 멤버 일부 또는 모두의 기본 구현을 정의할 수 있습니다. 자세한 내용은 [기본 인터페이스 메서드](../../tutorials/default-interface-methods-versions.md)를 참조하세요.
+- 인터페이스는 일반적으로 추상 멤버만 갖는 추상 기본 클래스와 같습니다. 인터페이스를 구현하는 모든 클래스 또는 구조체는 모든 멤버를 구현해야 합니다. 필요에 따라 인터페이스에서 해당 멤버 일부 또는 모두의 기본 구현을 정의할 수 있습니다. 자세한 내용은 [기본 인터페이스 메서드](../../whats-new/tutorials/default-interface-methods-versions.md)를 참조하세요.
 - 인터페이스는 직접 인스턴스화할 수 없습니다. 해당 멤버는 인터페이스를 구현하는 클래스 또는 구조체에 의해 구현됩니다.
 - 클래스 또는 구조체는 여러 인터페이스를 구현할 수 있습니다. 클래스는 기본 클래스를 상속할 수 있으며 하나 이상의 인터페이스를 제공할 수도 있습니다.
 

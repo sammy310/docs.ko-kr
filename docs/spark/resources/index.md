@@ -2,12 +2,12 @@
 title: Apache Spark용 .NET 리소스
 description: 사용자 지정 데이터 과학 솔루션 생성 및 .NET 애플리케이션에 통합을 지원하기 위해 이러한 Apache Spark용 .NET 리소스를 살펴봅니다.
 ms.date: 10/09/2020
-ms.openlocfilehash: bc7f36b13eaf28b9e6808a8490f92f38531a883b
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 1174358385226a8593a141f67683c773553afc48
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955501"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876931"
 ---
 # <a name="net-for-apache-spark-resources"></a>Apache Spark용 .NET 리소스
 
@@ -21,4 +21,4 @@ ms.locfileid: "91955501"
 
 ### <a name="how-to-engage-contribute-and-provide-feedback"></a>참여 및 기여하고 사용자 의견을 보내는 방법
 
-Apache Spark용 .NET 팀은 이슈 및 끌어오기 요청의 형식으로 [기여](https://github.com/dotnet/spark/blob/master/docs/contributing.md)를 장려합니다. 첫 번째 단계는 기여하려는 기존의 [이슈](https://github.com/dotnet/spark/issues)를 찾는 것입니다. 이슈가 없는 경우 [새 이슈](https://github.com/dotnet/spark/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+)를 엽니다.
+Apache Spark용 .NET 팀은 이슈 및 끌어오기 요청의 형식으로 [기여](https://github.com/dotnet/spark/blob/main/docs/contributing.md)를 장려합니다. 첫 번째 단계는 기여하려는 기존의 [이슈](https://github.com/dotnet/spark/issues)를 찾는 것입니다. 이슈가 없는 경우 [새 이슈](https://github.com/dotnet/spark/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+)를 엽니다.

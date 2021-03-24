@@ -11,12 +11,12 @@ helpviewer_keywords:
 - exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-ms.openlocfilehash: c18482335947c8d24ba7ed6552bb78c70a0a054f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3b64b9121cc784db7d76ff5501aedfd125d0002c
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827999"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104876476"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>.NET의 예외 처리 및 Throw
 
@@ -67,4 +67,4 @@ ms.locfileid: "94827999"
 - [방법: Finally 블록 사용](how-to-use-finally-blocks.md)
 - [COM Interop 예외 처리](handling-com-interop-exceptions.md)
 - [예외에 대한 모범 사례](best-practices-for-exceptions.md)
-- [모든 개발자가 런타임 예외에 대해 알아야 할 사항](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/exceptions.md)
+- [모든 개발자가 런타임 예외에 대해 알아야 할 사항](https://github.com/dotnet/runtime/blob/main/docs/design/coreclr/botr/exceptions.md)
