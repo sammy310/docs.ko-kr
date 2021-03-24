@@ -2,12 +2,12 @@
 title: 애플리케이션 게시
 description: .NET 애플리케이션을 게시하는 방법을 알아봅니다. .NET에서는 플랫폼별 또는 플랫폼 간 앱을 게시할 수 있습니다. 앱을 자체 포함이나 프레임워크 종속으로 게시할 수 있습니다. 각 모드는 사용자가 앱을 실행하는 방법에 영향을 줍니다.
 ms.date: 02/05/2021
-ms.openlocfilehash: 3f10aae139626bd2b09f71b32eaf2d680890e100
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: ca0fa4ff5e17a3fa4c636604ae81b63ffbbc99f6
+ms.sourcegitcommit: c7f0beaa2bd66ebca86362ca17d673f7e8256ca6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99699781"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104874292"
 ---
 # <a name="net-application-publishing-overview"></a>.NET 애플리케이션 게시 개요
 
@@ -129,7 +129,7 @@ dotnet publish -r linux-x64 --self-contained false
 앱에는 .NET 런타임 및 모든 앱 종속성이 포함되어 있으므로 필요한 다운로드 크기와 하드 드라이브 공간이 [프레임워크 종속](#publish-framework-dependent) 버전보다 큽니다.
 
   > [!TIP]
-  > .NET [*globalization invariant mode*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)(세계화 고정 모드)를 사용하여 Linux 시스템에서 배포 크기를 약 28MB까지 줄일 수 있습니다. 이렇게 하면 앱이 모든 문화권을 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)처럼 처리합니다.
+  > .NET [*globalization invariant mode*](https://github.com/dotnet/runtime/blob/main/docs/design/features/globalization-invariant-mode.md)(세계화 고정 모드)를 사용하여 Linux 시스템에서 배포 크기를 약 28MB까지 줄일 수 있습니다. 이렇게 하면 앱이 모든 문화권을 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)처럼 처리합니다.
 
   > [!TIP]
   > 배포의 크기를 더 줄일 수 있는 [미리 보기 트리밍 기능](trim-self-contained.md)이 있습니다.
