@@ -35,41 +35,55 @@ items:
                 href: tour-of-csharp/tutorials/branches-and-loops-local.md
               - name: 목록 컬렉션
                 href: tour-of-csharp/tutorials/arrays-and-collections.md
+  - name: C#의 새로운 기능
+    items:
+      - name: C# 9.0
+        displayName: what's new
+        href: whats-new/csharp-9.md
+      - name: C# 8.0
+        href: whats-new/csharp-8.md
+      - name: C# 7.0~7.3
+        href: whats-new/csharp-7.md
+      - name: 컴파일러 관련 호환성이 손상되는 변경
+        href: whats-new/breaking-changes.md
+      - name: C# 버전 기록
+        href: whats-new/csharp-version-history.md
+      - name: .NET 라이브러리와의 관계
+        href: whats-new/relationships-between-language-and-library.md
+      - name: 버전 호환성
+        href: whats-new/version-update-considerations.md
+      - name: 자습서
+        items:
+          - name: 레코드 종류 탐색
+            href: whats-new/tutorials/records.md
+          - name: 최상위 문 탐색
+            href: whats-new/tutorials/top-level-statements.md
+          - name: 개체 패턴 탐색
+            href: whats-new/tutorials/patterns-objects.md
+          - name: 기본 인터페이스 메서드로 인터페이스를 안전하게 업데이트
+            href: whats-new/tutorials/default-interface-methods-versions.md
+          - name: 기본 인터페이스 메서드로 믹스인 기능 만들기
+            href: whats-new/tutorials/mixins-with-default-interface-methods.md
+          - name: 인덱스 및 범위 탐색
+            href: whats-new/tutorials/ranges-indexes.md
+          - name: nullable 참조 형식 작업
+            href: whats-new/tutorials/nullable-reference-types.md
+          - name: 앱을 nullable 참조 형식으로 업그레이드
+            href: whats-new/tutorials/upgrade-to-nullable-references.md
+          - name: 비동기 스트림 생성 및 사용
+            href: whats-new/tutorials/generate-consume-asynchronous-stream.md
   - name: 자습서
     items:
-      - name: 개요
-        displayName: tutorials
-        href: tutorials/index.md
       - name: 클래스 소개
         href: tutorials/intro-to-csharp/introduction-to-classes.md
       - name: 개체 지향 프로그래밍
         href: tutorials/intro-to-csharp/object-oriented-programming.md
-      - name: 레코드 종류 탐색
-        href: tutorials/exploration/records.md
-      - name: 최상위 문 탐색
-        href: tutorials/exploration/top-level-statements.md
-      - name: 개체 패턴 탐색
-        href: tutorials/exploration/patterns-objects.md
       - name: 문자열 보간 탐색 - 대화형 자습서
         href: tutorials/exploration/interpolated-strings.yml
       - name: 사용자 환경에서 문자열 보간 탐색
         href: tutorials/exploration/interpolated-strings-local.md
       - name: 문자열 보간용 고급 시나리오
         href: tutorials/string-interpolation.md
-      - name: 기본 인터페이스 메서드로 인터페이스를 안전하게 업데이트
-        href: tutorials/default-interface-methods-versions.md
-      - name: 기본 인터페이스 메서드로 믹스인 기능 만들기
-        href: tutorials/mixins-with-default-interface-methods.md
-      - name: 인덱스 및 범위 탐색
-        href: tutorials/ranges-indexes.md
-      - name: nullable 참조 형식 작업
-        href: tutorials/nullable-reference-types.md
-      - name: 앱을 nullable 참조 형식으로 업그레이드
-        href: tutorials/upgrade-to-nullable-references.md
-      - name: 비동기 스트림 생성 및 사용
-        href: tutorials/generate-consume-asynchronous-stream.md
-      - name: 패턴 일치를 통한 데이터 기반 알고리즘 빌드
-        href: tutorials/pattern-matching.md
       - name: 콘솔 애플리케이션
         href: tutorials/console-teleprompter.md
       - name: REST 클라이언트
@@ -80,23 +94,8 @@ items:
         href: tutorials/working-with-linq.md
       - name: 특성 사용
         href: tutorials/attributes.md
-  - name: C#의 새로운 기능
-    items:
-      - name: C# 9.0
-        displayName: what's new
-        href: whats-new/csharp-9.md
-      - name: C# 8.0
-        href: whats-new/csharp-8.md
-      - name: C# 7.0~7.3
-        href: whats-new/csharp-7.md
-      - name: 컴파일러의 호환성이 손상되는 변경
-        href: whats-new/breaking-changes.md
-      - name: C# 버전 기록
-        href: whats-new/csharp-version-history.md
-      - name: 언어와 프레임워크 간 관계
-        href: whats-new/relationships-between-language-and-library.md
-      - name: 버전 및 업데이트 고려 사항
-        href: whats-new/version-update-considerations.md
+      - name: 패턴 일치를 통한 데이터 기반 알고리즘 빌드
+        href: tutorials/pattern-matching.md
   - name: C# 개념
     items:
       - name: C# 형식 시스템
