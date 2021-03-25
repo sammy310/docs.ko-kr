@@ -2,12 +2,12 @@
 title: 'C# 예약된 특성: null 허용 정적 분석'
 ms.date: 02/02/2021
 description: null 허용 참조 형식 및 null을 허용하지 않는 참조 형식에 대한 더 나은 정적 분석을 제공하기 위해 컴파일러가 이 특성을 해석합니다.
-ms.openlocfilehash: 91bba16506e2e8bbac9fdef2d1c4badcf59c1546
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 50fb987ed5c8200e5418d2ea0211b32626538176
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100432571"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652687"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>예약된 특성은 컴파일러의 null 상태 정적 분석에 사용됩니다.
 
@@ -36,12 +36,12 @@ bool TryGetMessage(string key, out string message)
 
 API에 대한 규칙은 `TryGetValue` API 시나리오에서 살펴본 것처럼 더 복잡할 수 있습니다. 대부분의 API에는 변수가 `null`일 수 있거나 없는 경우에 대한 더 복잡한 규칙이 있습니다. 이 경우에는 다음 특성 중 하나를 사용하여 해당 규칙을 표현합니다.
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null을 허용하지 않는 입력 인수는 null일 수 있습니다.
-- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null 허용 입력 인수는 null이 아니어야 합니다.
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null을 허용하지 않는 인수는 null일 수 있습니다.
+- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null 허용 인수는 null이 아니어야 합니다.
 - [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): null을 허용하지 않는 반환 값은 null일 수 있습니다.
 - [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): null 허용 반환 값은 null이 아닙니다.
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): 메서드가 지정된 `bool` 값을 반환하는 경우 null을 허용하지 않는 입력 인수는 null일 수 있습니다.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): 메서드가 지정된 `bool` 값을 반환하는 경우 null 허용 입력 인수는 null이 아닙니다.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): 메서드가 지정된 `bool` 값을 반환하는 경우 null을 허용하지 않는 인수는 null일 수 있습니다.
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): 메서드가 지정된 `bool` 값을 반환하는 경우 null 허용 인수는 null이 아닙니다.
 - [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): 지정된 매개 변수의 인수가 null이 아닌 경우 반환 값은 null이 아닙니다.
 - [DoesNotReturn](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute): 메서드는 값을 반환하지 않습니다. 즉, 항상 예외를 throw합니다.
 - [DoesNotReturnIf](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute): 연결된 `bool` 매개 변수에 지정된 값이 있는 경우 이 메서드는 값을 반환하지 않습니다.
@@ -77,16 +77,16 @@ public string ScreenName
 private string _screenName = GenerateRandomScreenName();
 ```
 
-이 특성과 이 문서에 설명된 다른 특성을 사용하려면 <xref:System.Diagnostics.CodeAnalysis>에 대한 `using` 지시문을 추가해야 할 수 있습니다. 이 특성은 `set` 접근자가 아니라 속성에 적용됩니다. `AllowNull` 특성은 ‘전제 조건’을 지정하며 입력에만 적용됩니다.  `get` 접근자에는 반환 값이 있지만 입력 인수가 없습니다. 따라서 `AllowNull` 특성은 `set` 접근자에만 적용됩니다.
+이 특성과 이 문서에 설명된 다른 특성을 사용하려면 <xref:System.Diagnostics.CodeAnalysis>에 대한 `using` 지시문을 추가해야 할 수 있습니다. 이 특성은 `set` 접근자가 아니라 속성에 적용됩니다. `AllowNull` 특성은 사전 조건을 지정하며 인수에만 적용됩니다. `get` 접근자에는 반환 값이 있지만 매개 변수가 없습니다. 따라서 `AllowNull` 특성은 `set` 접근자에만 적용됩니다.
 
 앞의 예제에서는 인수에 대한 `AllowNull` 특성을 추가할 때 검색할 항목을 보여 줍니다.
 
 1. 해당 변수에 대한 일반 계약은 `null`이 아니어야 하므로 null을 허용하지 않는 참조 형식이 필요합니다.
-1. 가장 일반적인 사용은 아니지만 입력 변수가 `null`이 되는 시나리오가 있습니다.
+1. 가장 일반적인 사용은 아니지만 매개 변수가 `null`이 되는 시나리오가 있습니다.
 
 일반적으로 속성이나 `in`, `out` 및 `ref` 인수의 경우 이 특성이 필요합니다. `AllowNull` 특성은 일반적으로 변수가 null이 아닌 경우에 가장 적합하지만, `null`을 전제 조건으로 허용해야 합니다.
 
-`DisallowNull` 사용에 대한 시나리오와 비교해 보세요. 이 특성을 사용하여 null 허용 참조 형식의 입력 변수가 `null`이 아니도록 지정합니다. 기본값이 `null`이지만 클라이언트에서 null이 아닌 값으로만 설정할 수 있는 속성을 살펴봅니다. 다음 코드를 살펴보세요.
+`DisallowNull` 사용에 대한 시나리오와 비교해 보세요. 이 특성을 사용하여 null 허용 참조 형식의 인수가 `null`이 아니도록 지정합니다. 기본값이 `null`이지만 클라이언트에서 null이 아닌 값으로만 설정할 수 있는 속성을 살펴봅니다. 다음 코드를 살펴보세요.
 
 ```csharp
 public string ReviewComment
@@ -118,8 +118,8 @@ null 허용 컨텍스트에서 `ReviewComment` `get` 접근자는 `null`의 기�
 
 `AllowNull` 및 `DisallowNull` 특성을 사용하여 변수에 대한 전제 조건이 해당 변수의 null 허용 주석과 일치하지 않을 수 있도록 지정할 수 있습니다. 이 특성은 API의 특징에 대한 자세한 정보를 제공합니다. 이 추가 정보는 호출자가 API를 올바르게 사용하는 데 도움이 됩니다. 다음 특성을 사용하여 전제 조건을 지정해야 합니다.
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null을 허용하지 않는 입력 인수는 null일 수 있습니다.
-- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null 허용 입력 인수는 null이 아니어야 합니다.
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null을 허용하지 않는 인수는 null일 수 있습니다.
+- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null 허용 인수는 null이 아니어야 합니다.
 
 ## <a name="specify-post-conditions-maybenull-and-notnull"></a>사후 조건 지정: `MaybeNull` 및 `NotNull`
 
@@ -146,7 +146,7 @@ public T Find<T>(IEnumerable<T> sequence, Func<T, bool> predicate)
 
 이전 코드는 계약이 null을 허용하지 않는 형식을 의미한다는 것을 호출자에게 알리지만, 반환 값은 실제로 null’일 수 있습니다’.   API가 null을 허용하지 않는 형식(일반적으로 제네릭 형식 매개 변수)이어야 하지만 `null`이 반환되는 인스턴스가 있을 수 있는 경우 `MaybeNull` 특성을 사용합니다.
 
-형식이 null 허용 참조 형식인 경우에도 반환 값이나 `out` 또는 `ref` 인수가 null이 아니도록 지정할 수도 있습니다. 배열이 많은 요소를 포함할 만큼 충분히 큰지 확인하는 메서드를 살펴봅니다. 입력 인수에 용량이 없으면 루틴은 새 배열을 할당하고 기존 요소를 모두 새 배열로 복사합니다. 입력 인수가 `null`이면 루틴은 새 스토리지를 할당합니다. 충분한 용량이 있는 경우 루틴은 아무 작업도 수행하지 않습니다.
+형식이 null 허용 참조 형식인 경우에도 반환 값이나 `out` 또는 `ref` 인수가 null이 아니도록 지정할 수도 있습니다. 배열이 많은 요소를 포함할 만큼 충분히 큰지 확인하는 메서드를 살펴봅니다. 인수에 용량이 없으면 루틴은 새 배열을 할당하고 기존 요소를 모두 새 배열로 복사합니다. 인수가 `null`이면 루틴은 새 스토리지를 할당합니다. 충분한 용량이 있는 경우 루틴은 아무 작업도 수행하지 않습니다.
 
 ```csharp
 public void EnsureCapacity<T>(ref T[] storage, int size)
@@ -182,7 +182,7 @@ public void EnsureCapacity<T>([NotNull] ref T[]? storage, int size)
 bool IsNullOrEmpty([NotNullWhen(false)] string? value);
 ```
 
-이를 통해 반환 값이 `false`인 코드는 null 검사가 필요하지 않음을 컴파일러에 알립니다. 특성을 추가하여 `IsNullOrEmpty`가 필요한 null 검사를 수행한다는 것을 컴파일러의 정적 분석에 알립니다. `false`를 반환하는 경우 입력 인수는 `null`이 아닙니다.
+이를 통해 반환 값이 `false`인 코드는 null 검사가 필요하지 않음을 컴파일러에 알립니다. 특성을 추가하여 `IsNullOrEmpty`가 필요한 null 검사를 수행한다는 것을 컴파일러의 정적 분석에 알립니다. `false`를 반환하는 경우 인수는 `null`이 아닙니다.
 
 ```csharp
 string? userInput = GetUserInput();
@@ -211,19 +211,19 @@ bool TryGetMessage(string key, [NotNullWhen(true)] out string? message)
 
 이전 예제에서 `TryGetMessage`가 `true`를 반환하는 경우 `message` 값은 null이 아닌 것으로 알려져 있습니다. 동일한 방식으로 코드베이스에서 비슷한 메서드를 주석으로 처리해야 합니다. 인수는 `null`일 수 있으며 메서드가 `true`를 반환하는 경우 null이 아닌 것으로 알려져 있습니다.
 
-한 가지 마지막 특성이 필요할 수도 있습니다. 경우에 따라 반환 값의 null 상태는 하나 이상 입력 인수의 null 상태에 따라 달라집니다. 해당 메서드는 특정 입력 인수가 `null`이 아닐 때마다 null이 아닌 값을 반환합니다. 해당 메서드를 주석으로 올바르게 처리하려면 `NotNullIfNotNull` 특성을 사용합니다. 다음 태그를 살펴봅니다.
+한 가지 마지막 특성이 필요할 수도 있습니다. 경우에 따라 반환 값의 null 상태는 하나 이상의 인수의 null 상태에 따라 달라집니다. 해당 메서드는 특정 인수가 `null`이 아닐 때마다 null이 아닌 값을 반환합니다. 해당 메서드를 주석으로 올바르게 처리하려면 `NotNullIfNotNull` 특성을 사용합니다. 다음 태그를 살펴봅니다.
 
 ```csharp
 string GetTopLevelDomainFromFullUrl(string url);
 ```
 
-`url` 인수가 null이 아니면 출력은 `null`이 아닙니다. null 허용 참조가 사용하도록 설정되면 API에서 null 입력을 허용하지 않는 경우 해당 시그니처가 제대로 작동합니다. 그러나 입력이 null일 수 있는 경우에는 반환 값도 null일 수 있습니다. 시그니처를 다음 코드로 변경할 수 있습니다.
+`url` 인수가 null이 아니면 출력은 `null`이 아닙니다. null 허용 참조가 사용하도록 설정되면 API에서 null 인수를 허용하지 않는 경우 해당 시그니처가 제대로 작동합니다. 그러나 인수가 null일 수 있는 경우에는 반환 값도 null일 수 있습니다. 시그니처를 다음 코드로 변경할 수 있습니다.
 
 ```csharp
 string? GetTopLevelDomainFromFullUrl(string? url);
 ```
 
-또한 시그니처가 작동하지만 호출자가 추가 `null` 검사를 강제로 구현하는 경우가 많습니다. 계약은 입력 인수 `url`이 `null`인 경우에만 반환 값이 `null`이라는 것입니다. 해당 계약을 표현하려면 다음 코드와 같이 이 메서드를 주석으로 처리합니다.
+또한 시그니처가 작동하지만 호출자가 추가 `null` 검사를 강제로 구현하는 경우가 많습니다. 계약은 인수 `url`이 `null`인 경우에만 반환 값이 `null`이라는 것입니다. 해당 계약을 표현하려면 다음 코드와 같이 이 메서드를 주석으로 처리합니다.
 
 ```csharp
 [return: NotNullIfNotNull("url")]
@@ -234,9 +234,9 @@ string? GetTopLevelDomainFromFullUrl(string? url);
 
 해당 특성을 사용하여 조건부 사후 조건을 지정합니다.
 
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): 메서드가 지정된 `bool` 값을 반환하는 경우 null을 허용하지 않는 입력 인수는 null일 수 있습니다.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): 메서드가 지정된 `bool` 값을 반환하는 경우 null 허용 입력 인수는 null이 아닙니다.
-- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): 지정된 매개 변수의 입력 인수가 null이 아닌 경우 반환 값은 null이 아닙니다.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): 메서드가 지정된 `bool` 값을 반환하는 경우 null을 허용하지 않는 인수는 null일 수 있습니다.
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): 메서드가 지정된 `bool` 값을 반환하는 경우 null 허용 인수는 null이 아닙니다.
+- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): 지정된 매개 변수의 인수가 null이 아닌 경우 반환 값은 null이 아닙니다.
 
 ## <a name="constructor-helper-methods-membernotnull-and-membernotnullwhen"></a>생성자 도우미 메서드: `MemberNotNull` 및 `MemberNotNullWhen`
 
@@ -299,14 +299,14 @@ public void SetState(object containedField)
 
 null 허용 참조 형식을 추가하면 `null`일 수 있는 변수의 API 기대치를 설명하는 초기 어휘가 제공됩니다. 특성은 변수의 null 상태를 전제 조건 및 사후 조건으로 설명하는 다양한 어휘를 제공합니다. 해당 특성은 기대치를 명확하게 설명하며 API를 사용하는 개발자에게 더 나은 환경을 제공합니다.
 
-null 허용 컨텍스트의 라이브러리를 업데이트할 때 해당 특성을 추가하여 API 사용자가 올바르게 사용하도록 안내합니다. 해당 특성을 통해 입력 인수 및 반환 값의 null 상태를 완벽하게 설명할 수 있습니다.
+null 허용 컨텍스트의 라이브러리를 업데이트할 때 해당 특성을 추가하여 API 사용자가 올바르게 사용하도록 안내합니다. 해당 특성을 통해 인수 및 반환 값의 null 상태를 완벽하게 설명할 수 있습니다.
 
-- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null을 허용하지 않는 입력 인수는 null일 수 있습니다.
-- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null 허용 입력 인수는 null이 아니어야 합니다.
+- [AllowNull](xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute): null을 허용하지 않는 인수는 null일 수 있습니다.
+- [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): null 허용 인수는 null이 아니어야 합니다.
 - [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): null을 허용하지 않는 반환 값은 null일 수 있습니다.
 - [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): null 허용 반환 값은 null이 아닙니다.
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): 메서드가 지정된 `bool` 값을 반환하는 경우 null을 허용하지 않는 입력 인수는 null일 수 있습니다.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): 메서드가 지정된 `bool` 값을 반환하는 경우 null 허용 입력 인수는 null이 아닙니다.
-- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): 지정된 매개 변수의 입력 인수가 null이 아닌 경우 반환 값은 null이 아닙니다.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): 메서드가 지정된 `bool` 값을 반환하는 경우 null을 허용하지 않는 인수는 null일 수 있습니다.
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): 메서드가 지정된 `bool` 값을 반환하는 경우 null 허용 인수는 null이 아닙니다.
+- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): 지정된 매개 변수의 인수가 null이 아닌 경우 반환 값은 null이 아닙니다.
 - [DoesNotReturn](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute): 메서드는 값을 반환하지 않습니다. 즉, 항상 예외를 throw합니다.
 - [DoesNotReturnIf](xref:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute): 연결된 `bool` 매개 변수에 지정된 값이 있는 경우 이 메서드는 값을 반환하지 않습니다.

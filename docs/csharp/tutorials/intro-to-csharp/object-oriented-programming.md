@@ -2,12 +2,12 @@
 title: 개체 지향 프로그래밍(C#)
 description: C#은 추상화, 캡슐화, 상속, 다형성 등 개체 지향 프로그래밍에 대한 모든 지원을 제공합니다.
 ms.date: 09/30/2020
-ms.openlocfilehash: 57f1759edd2dd5f239e81351aed64bf061766b7b
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: e6261e9018217094e0c3ce742ff0172b8559deaf
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102255407"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624216"
 ---
 # <a name="object-oriented-programming-c"></a>개체 지향 프로그래밍(C#)
 
@@ -187,8 +187,8 @@ public void MakeWithdrawal(decimal amount, DateTime date, string note)
 
 이 자습서에서 개체 지향 프로그래밍에 사용되는 다양한 방법을 살펴봤습니다.
 
-- 각 클래스에 많은 세부 정보를 `private`으로 유지하는 경우 추상화를 사용했습니다.
-- 서로 다른 각 계좌 유형의 클래스를 정의할 때 캡슐화를 사용했습니다. 이러한 클래스는 해당 계좌 유형의 동작을 설명합니다.
+- 각 계좌 유형의 클래스를 정의할 때 추상화를 사용했습니다. 이러한 클래스는 해당 계좌 유형의 동작을 설명합니다.
+- 각 클래스에서 많은 세부 정보를 `private`으로 유지하는 경우 캡슐화를 사용했습니다.
 - `BankAccount` 클래스에서 이미 만든 구현을 활용하여 코드를 저장하는 경우 상속을 사용했습니다.
 - 파생 클래스가 해당 계좌 유형의 특정 동작을 만들기 위해 재정의할 수 있는 `virtual` 메서드를 만들 때 다형성을 사용했습니다.
 

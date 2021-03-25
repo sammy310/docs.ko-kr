@@ -3,12 +3,12 @@ title: 비동기 반환 형식(C#)
 description: 각 형식 및 추가 리소스에 대한 코드 예제를 통해 C#에서 비동기 메서드의 가능한 반환 형식에 대해 알아봅니다.
 ms.date: 08/19/2020
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 71e560ed8ee0cae14da396e5ea2f3ab29611ebab
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 53eb3bedebb99cd829101eee4c2e190c0fb952bf
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811498"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653454"
 ---
 # <a name="async-return-types-c"></a>비동기 반환 형식(C#)
 
@@ -38,12 +38,7 @@ Windows 워크로드와 관련된 몇 가지 다른 형식도 있습니다.
 
 :::code language="csharp" source="snippets/async-return-types/async-returns2.cs" id="TaskReturn":::
 
-동기 void를 반환하는 메서드에 대한 호출 문과 비슷하게 await 식 대신 await 문을 사용하여 `WaitAndApologizeAsync`가 대기됩니다. 이 경우 await 연산자를 적용하면 값이 산출되지 않습니다. 문 및 식이라는 용어를 분명하게 설명하려면 아래 표를 참조하세요.
-
-| Await 종류 | 예제                                      | Type                                   |
-|------------|----------------------------------------------|----------------------------------------|
-| 인수를 제거합니다.  | `await SomeTaskMethodAsync()`                | <xref:System.Threading.Tasks.Task>     |
-| 식 | `T result = await SomeTaskMethodAsync<T>();` | <xref:System.Threading.Tasks.Task%601> |
+동기 void를 반환하는 메서드에 대한 호출 문과 비슷하게 await 식 대신 await 문을 사용하여 `WaitAndApologizeAsync`가 대기됩니다. 이 경우 await 연산자를 적용하면 값이 산출되지 않습니다. `await`의 오른쪽 피연산자가 <xref:System.Threading.Tasks.Task%601>인 경우 `await` 식의 결과는 `T`입니다. `await`의 오른쪽 피연산자가 <xref:System.Threading.Tasks.Task>인 경우 `await` 및 해당 피연산자는 문입니다.
 
 다음 코드와 같이 `WaitAndApologizeAsync` 호출을 await 연산자의 적용과 구분할 수 있습니다. 그러나 `Task`에는 `Result` 속성이 없으므로 await 연산자가 `Task`에 적용될 때 값이 생성되지 않습니다.
 
@@ -84,13 +79,15 @@ Void를 반환하는 비동기 메서드의 호출자는 메서드에서 throw�
 
 ## <a name="generalized-async-return-types-and-valuetasktresult"></a>일반화된 비동기 반환 형식 및 ValueTask\<TResult\>
 
-C# 7.0부터 비동기 메서드는 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식을 반환할 수 있습니다.
+C# 7.0부터 비동기 메서드는 awaiter 형식의 인스턴스를 반환하는 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식을 반환할 수 있습니다. 또한 `GetAwaiter` 메서드가 반환하는 형식에는 <xref:System.Runtime.CompilerServices.AsyncMethodBuilderAttribute?displayProperty=nameWithType> 특성이 있어야 합니다. [작업과 유사한 반환 형식](../../../../../_csharplang/proposals/csharp-7.0/task-types.md)에 대한 기능 사양에서 자세한 내용을 알아볼 수 있습니다.
 
-<xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601>는 참조 형식이므로 특히 타이트 루프에서 할당이 발생하는 경우 성능이 중요한 경로의 메모리 할당으로 인해 성능이 저하될 수 있습니다. 일반화된 반환 형식이 지원되면 추가 메모리 할당을 방지하기 위해 참조 형식 대신 간단한 값 형식을 반환할 수 있습니다.
+이 기능은 `await`의 피연산자에 대한 요구 사항을 설명하는 [대기 가능 식](../../../../../_csharplang/spec/expressions.md#awaitable-expressions)을 보완합니다. 일반화된 비동기 반환 형식을 사용하면 컴파일러가 다른 형식을 반환하는 `async` 메서드를 생성할 수 있습니다. 일반화된 비동기 반환 형식은 .NET 라이브러리의 성능 향상을 지원합니다. <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601>는 참조 형식이므로 특히 타이트 루프에서 할당이 발생하는 경우 성능이 중요한 경로의 메모리 할당으로 인해 성능이 저하될 수 있습니다. 일반화된 반환 형식이 지원되면 추가 메모리 할당을 방지하기 위해 참조 형식 대신 간단한 값 형식을 반환할 수 있습니다.
 
 .NET에서는 <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 구조체를 일반화된 작업 반환 값의 간단한 구현으로 제공합니다. <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 형식을 사용하려면 `System.Threading.Tasks.Extensions` NuGet 패키지를 프로젝트에 추가해야 합니다. 다음 예제에서는 <xref:System.Threading.Tasks.ValueTask%601> 구조체를 사용하여 두 주사위 굴리기 값을 검색합니다.
 
 :::code language="csharp" source="snippets/async-return-types/async-valuetask.cs":::
+
+일반화된 비동기 반환 형식 작성은 고급 시나리오이며 매우 특수한 환경에서 사용할 수 있습니다. 비동기 코드에 대한 대부분의 시나리오에 적용되는 `Task`, `Task<T>` 및 `ValueTask<T>` 형식을 대신 사용하는 것이 좋습니다.
 
 ## <a name="async-streams-with-iasyncenumerablet"></a>IAsyncEnumerable\<T\>을 사용하는 비동기 스트림
 
