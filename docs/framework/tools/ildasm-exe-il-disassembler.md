@@ -10,18 +10,18 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-ms.openlocfilehash: efa07ee4166d3f02ca3885c5efc4373be8eac2fd
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 128257e8b1879ef712dd5c33239784fd03de31e2
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258535"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654117"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe(IL 디스어셈블러)
 
 IL 디스어셈블러는 IL 어셈블러(*Ilasm.exe*)의 자매 도구입니다. *Ildasm.exe* 는 IL(intermediate language) 코드가 포함된 PE(이식 가능한 실행) 파일을 가져와서 *Ildasm.exe* 에 입력하기에 적합한 텍스트 파일을 만듭니다.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [Visual Studio 개발자 명령 프롬프트 또는 Visual Studio 개발자 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
 
 명령 프롬프트에 다음을 입력합니다.
 

@@ -11,18 +11,18 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-ms.openlocfilehash: b51b01e639719df7ecfde53819e3137813f7c46f
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: ba8b4cd7f398eee9129d24d25d8fdb754c89a3ee
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259249"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653298"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe(PEVerify 도구)
 
 MSIL(Microsoft 중간 언어)을 생성하는 개발자(컴파일러 작성자, 스크립트 엔진 개발자 등)는 PEVerify 도구를 사용하여 MSIL 코드 및 관련 메타데이터가 형식 안전성 요구 사항을 충족하는지 쉽게 확인할 수 있습니다. 일부 컴파일러에서는 특정 언어 구문을 사용하지 않는 경우에만 확인 가능한 형식 안전 코드가 생성됩니다. 이러한 컴파일러를 사용하는 경우 해당 코드의 형식 안전성이 손상되지 않았는지 확인하는 것이 좋습니다. 해당 파일에 대해 PEVerify 도구를 실행하면 MSIL 및 메타데이터를 검사할 수 있습니다.  
   
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [Visual Studio 개발자 명령 프롬프트 또는 Visual Studio 개발자 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
   
 ## <a name="syntax"></a>구문  
   

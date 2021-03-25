@@ -2,12 +2,12 @@
 title: .NET의 기호
 description: .NET의 기호 및 이식 가능한 PDB 소개
 ms.date: 02/08/2021
-ms.openlocfilehash: da59a07166cd1f73160da8d9ac53b5823bf13e7b
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 8f217bf8b62ff12a6ea1dc6a5b14b34d8037dd2d
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108379"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759900"
 ---
 # <a name="symbols"></a>기호
 
@@ -39,7 +39,7 @@ PDB 파일은 컴파일러에서 주 실행 파일의 콘텐츠 및 해당 콘�
 
 * 이식 가능한 PDB를 지원하지 않는 이전 버전의 프로파일러가 있을 수 있습니다.
 
-이식 가능한 PDB를 지원하지 않는 도구에서 해당 형식을 사용하려면 이식 가능한 PDB와 Windows PDB 간에 변환되는 Pdb2Pdb[https://github.com/dotnet/symreader-converter#pdb2pdb ]를 사용해 보세요.
+이식 가능한 PDB를 지원하지 않는 도구에서 해당 형식을 사용하려면 이식 가능한 PDB와 Windows PDB 간에 변환되는 [Pdb2Pdb](https://github.com/dotnet/symreader-converter#pdb2pdb)를 사용해 보세요.
 
 ### <a name="support-for-windows-pdbs"></a>Windows PDB 지원
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-ms.openlocfilehash: a989ddf8b14806879917e4078f60486f225b00e3
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 03787ecacc00c35f31f1fa5101fff5882e5314f6
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259205"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653311"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe(.NET 서비스 설치 도구)
 
@@ -27,7 +27,7 @@ ms.locfileid: "102259205"
   
 - 프로그래밍 방식으로 클래스에 추가한 서비스를 구성합니다.  
   
- 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.  
+ 도구를 실행하려면 [Visual Studio 개발자 명령 프롬프트 또는 Visual Studio 개발자 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.  
   
  명령 프롬프트에 다음을 입력합니다.  
   

@@ -4,12 +4,12 @@ description: .NET Core 런타임의 작동 방식을 제어해야 하는 고급 
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: db458e9ebb0c6ad930f82e1d67619632a493ae3b
-ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
+ms.openlocfilehash: d7568c377e09b95fbc863610ec6bdc444f924976
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102604699"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652713"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>사용자 지정 .NET Core 호스트를 작성하여 네이티브 코드에서 .NET 런타임 제어
 
@@ -84,7 +84,7 @@ public delegate int ComponentEntryPoint(IntPtr args, int sizeBytes);
 
 다음 단계에서는 `coreclrhost.h` API를 사용하여 네이티브 애플리케이션에서 .NET Core 런타임을 시작하고 관리형 정적 메서드를 호출하는 방법을 자세히 설명합니다. 이 문서의 코드 조각은 Windows 관련 API를 사용하지만 [전체 샘플 호스트](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithCoreClrHost)는 Windows 및 Linux 코드 경로를 모두 보여줍니다.
 
-[Unix CoreRun 호스트](https://github.com/dotnet/runtime/tree/master/src/coreclr/hosts/unixcorerun)는 `coreclrhost.h`를 사용하여 더욱 복잡하고 현실적인 호스팅 예를 보여 줍니다.
+[corerun 호스트](https://github.com/dotnet/runtime/tree/main/src/coreclr/hosts/corerun)는 `coreclrhost.h`를 사용하는 더욱 복잡하고 현실적인 플랫폼 간 호스팅 예를 보여 줍니다.
 
 ### <a name="step-1---find-and-load-coreclr"></a>1단계 - CoreCLR 찾기 및 로드
 

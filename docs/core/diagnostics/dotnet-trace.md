@@ -2,12 +2,12 @@
 title: dotnet-trace 진단 도구 - .NET CLI
 description: .NET EventPipe를 사용하여 네이티브 프로파일러 없이 실행 중인 프로세스의 .NET 추적을 수집하기 위해 dotnet-trace CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
 ms.date: 11/17/2020
-ms.openlocfilehash: abf98df6e31747ea3e8013fc77b246613a3402ad
-ms.sourcegitcommit: f0fc5db7bcbf212e46933e9cf2d555bb82666141
+ms.openlocfilehash: e4e5bf91a7e6a9bf98e8cb006864b4cbc5ca17a2
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100583001"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624190"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace 성능 분석 유틸리티
 
@@ -91,6 +91,9 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 - **`--buffersize <size>`**
 
   메모리 내 순환 버퍼의 크기를 MB(메가바이트) 단위로 설정합니다. 기본값은 256MB입니다.
+
+  > [!NOTE]
+  > 대상 프로세스가 이벤트를 너무 자주 기록하는 경우 이 버퍼가 오버플로되고 일부 이벤트가 삭제될 수 있습니다. 너무 많은 이벤트가 삭제되는 경우에는 버퍼 크기를 늘려 삭제된 이벤트 수가 감소하는지 확인하세요. 버퍼 크기를 늘려도 삭제된 이벤트 수가 감소하지 않는다면 이는 느린 판독기로 인해 대상 프로세스의 버퍼가 플러시되지 않기 때문일 수 있습니다.
 
 - **`--clreventlevel <clreventlevel>`**
 

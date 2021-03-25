@@ -18,18 +18,18 @@ helpviewer_keywords:
 - global assembly cache, Gacutil.exe
 - Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
-ms.openlocfilehash: 3cdc9e2b07ad176f2a46aa419920d5fa3f47f6e7
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 68a85b74333e978adc0b9953d408b36d5e91738f
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259250"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654143"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe(전역 어셈블리 캐시 도구)
 
 전역 어셈블리 캐시 도구를 사용하면 전역 어셈블리 캐시와 다운로드 캐시의 내용을 보고 조작할 수 있습니다.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [Visual Studio 개발자 명령 프롬프트 또는 Visual Studio 개발자 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
 
 명령 프롬프트에 다음을 입력합니다.
 

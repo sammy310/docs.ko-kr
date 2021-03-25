@@ -5,18 +5,18 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 6f3c1e2d4d6a0b8e794863f2c0b4fd947ac12836
-ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
+ms.openlocfilehash: 917932e208851763cc75244e08b081a7acf1f3a7
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "103190088"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759614"
 ---
 # <a name="contextual-keywords-c-reference"></a>상황별 키워드(C# 참조)
 
 상황별 키워드는 코드에서 특정 의미를 제공하는 데 사용되지만 C#의 예약어입니다. 다음 상황별 키워드를 이 섹션에서 소개합니다.  
   
-|키워드|설명|  
+|키워드|Description|  
 |-------------|-----------------|  
 |[add](./add.md)|클라이언트 코드가 이벤트를 구독할 때 호출되는 사용자 지정 이벤트 접근자를 정의합니다.|  
 |[async](./async.md)|수정된 메서드, 람다 식 또는 무명 메서드가 비동기임을 나타냅니다.|  
@@ -25,6 +25,8 @@ ms.locfileid: "103190088"
 |[get](./get.md)|속성 또는 인덱서에 대한 접근자 메서드를 정의합니다.|  
 |[global](../operators/namespace-alias-qualifier.md)|별도로 명명되지 않은 전역 네임스페이스의 별칭입니다.|  
 |[init](./init.md)|속성 또는 인덱서에 대한 접근자 메서드를 정의합니다.|  
+|[nint](../builtin-types/nint-nuint.md)|기본 크기 정수 데이터 형식을 정의합니다.|  
+|[nuint](../builtin-types/nint-nuint.md)|기본 크기 부호 없는 정수 데이터 형식을 정의합니다.|  
 |[partial](./partial-type.md)|같은 컴파일 단위 전체에서 partial 클래스, 구조체 및 인터페이스를 정의합니다.|  
 |[remove](./remove.md)|클라이언트 코드가 이벤트를 구독 취소할 때 호출되는 사용자 지정 이벤트 접근자를 정의합니다.|  
 |[set](./set.md)|속성 또는 인덱서에 대한 접근자 메서드를 정의합니다.|  

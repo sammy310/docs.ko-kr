@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-ms.openlocfilehash: 581736d27d8b90430838fc78aa192a3efa21cbb5
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 0034c6d7a7184e8fc3a6384c829f6bf13aad6cdd
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258301"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653467"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>방법: 글로벌 어셈블리 캐시에 어셈블리 설치
 
@@ -46,7 +46,7 @@ gacutil -i <assembly name>
 
 이 명령에서 *\<assembly name>* 은 전역 어셈블리 캐시에 설치할 어셈블리의 이름입니다.
 
-*gacutil.exe* 가 시스템 경로에 없는 경우 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
+*gacutil.exe* 가 시스템 경로에 없는 경우 [Visual Studio 개발자 명령 프롬프트 또는 Visual Studio 개발자 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
 
 다음 예제는 파일 이름이 *hello.dll* 인 어셈블리를 글로벌 어셈블리 캐시에 설치합니다.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-ms.openlocfilehash: 467a1d7ba06862b37002e5db75bf6a6ef2a9e65a
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 07c41a50292e55af57effec821756f0ffbc2142d
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259103"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653831"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe(.NET Security Annotator 도구)
 
@@ -19,7 +19,7 @@ ms.locfileid: "102259103"
   
  Visual Studio 확장인 [Security Annotator](https://marketplace.visualstudio.com/items?itemName=sheldonb.SecurityAnnotator)는 SecAnnotate.exe에 대한 그래픽 사용자 인터페이스를 제공하며 Visual Studio에서 도구를 실행할 수 있습니다.  
   
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.  
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [Visual Studio 개발자 명령 프롬프트 또는 Visual Studio 개발자 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.  
   
  명령 프롬프트에서 다음을 입력하세요. *parameters* 는 다음 섹션에서 설명하며 *assemblies* 는 공백으로 구분된 하나 이상의 어셈블리 이름으로 구성됩니다.  
   

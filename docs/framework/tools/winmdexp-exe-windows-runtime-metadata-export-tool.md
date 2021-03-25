@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-ms.openlocfilehash: b9a30076fdd67a90dc3e605a8014ead88141f43b
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: 450ecf041d2be0ccc9f8b5ab4f1cb848bb4705c2
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103477542"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652882"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)
 
@@ -19,7 +19,7 @@ Windows 런타임 메타데이터 내보내기 도구(Winmdexp.exe)는 .NET Fram
   
  **Microsoft Store** 에 있는 Visual Studio 2013 또는 Visual Studio 2012의 C# 및 Visual Basic용 **Windows 런타임 구성 요소** 템플릿을 사용할 경우 컴파일러 대상은 .winmdobj 파일이고, 이후 빌드 단계에서는 Winmdexp.exe를 호출하여 .winmdobj 파일을 .winmd 파일로 내보냅니다. 이러한 방법으로 Windows 런타임 구성 요소를 빌드하는 것이 좋습니다. Visual Studio가 제공하는 것보다 빌드 프로세스를 더 자세하게 제어하려면 Winmdexp.exe를 사용합니다.  
   
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [Visual Studio 개발자 명령 프롬프트 또는 Visual Studio 개발자 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
   
  명령 프롬프트에 다음을 입력합니다.  
   

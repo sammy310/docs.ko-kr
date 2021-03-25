@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 3f08c1d8aabae3e698dbf2fcd0a52511136ba899
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: c3901145e00f1a58f87e5a8925078278f847668e
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259917"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654000"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)
 
 MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지만 Windows 기반 UI(사용자 인터페이스)를 사용합니다. 이 도구를 사용하면 배포 및 애플리케이션 매니페스트를 만들고, 편집하고, 서명할 수 있습니다. Mageui.exe로 만든 새 매니페스트는 .NET Framework 4 클라이언트 프로필을 대상으로 합니다. 이전 버전의 MageUI.exe는 이전 .NET Framework 버전을 대상으로 사용해야 합니다. 매니페스트에서 어셈블리를 추가 또는 제거하거나 기존 매니페스트를 다시 서명할 때 MageUI.exe는 매니페스트를 대상 .NET Framework 4 클라이언트 프로필로 업데이트하지 않습니다. 자세한 내용은 [Mage.exe(매니페스트 생성 및 편집 도구)](mage-exe-manifest-generation-and-editing-tool.md)를 참조하세요.
 
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [Visual Studio 개발자 명령 프롬프트 또는 Visual Studio 개발자 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
 
  Mage.exe 및 MageUI.exe의 두 버전이 Visual Studio의 구성 요소로 포함되어 있습니다. 버전 정보를 보려면 MageUI.exe를 실행하고 **도움말** 을 선택하고 **정보** 를 선택합니다. 이 설명서는 Mage.exe 및 MageUI.exe의 버전 4.0.x.x에 대해 설명합니다.
 

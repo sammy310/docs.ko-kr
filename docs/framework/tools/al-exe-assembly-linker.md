@@ -8,12 +8,12 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-ms.openlocfilehash: 112e3880e76d4e81ab42cece592fcfd0f4dff312
-ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
+ms.openlocfilehash: dff7ab7ccc6543b1c13cb2b49cbdf712eba301ae
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103480794"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652960"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe(어셈블리 링커)
 
@@ -22,7 +22,7 @@ ms.locfileid: "103480794"
 > [!NOTE]
 > Visual Studio 2008부터 C# 및 Visual Basic 컴파일러가 모두 Win32 매니페스트를 어셈블리에 자동으로 포함합니다. 자세한 내용은 [-win32manifest(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/resources.md#win32manifest)를 참조하세요.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [Visual Studio 개발자 명령 프롬프트 또는 Visual Studio 개발자 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
 
 명령 프롬프트에 다음을 입력합니다.
 

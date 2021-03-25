@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/20/2020
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 58f650e7932d4f5862d545429376b3e417bb433c
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: c3fbcdec2bf181a5211e89024855967d687388ff
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512244"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103623735"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 
@@ -268,5 +268,5 @@ LINQ의 람다 식은 연기된 실행을 사용합니다. 즉, 예상치 않은
 ## <a name="other-resources"></a>기타 리소스
 
 * [세부 비동기](../standard/async-in-depth.md)에서는 작업이 어떻게 작동하는지 자세히 설명합니다.
-* [async 및 await를 사용한 비동기 프로그래밍(C#)](./programming-guide/concepts/async/index.md)
+* [작업 비동기 프로그래밍 모델(C#)](./programming-guide/concepts/async/task-asynchronous-programming-model.md)
 * Lucian Wischik의 [Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async)(비동기에 대한 6가지 필수 팁)는 비동기 프로그래밍에 대한 훌륭한 리소스입니다.

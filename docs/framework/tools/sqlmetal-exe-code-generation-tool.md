@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: b3d52e5ce070f1a86554a2c8b8cd581b2e4bc685
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 57229ce767a140e1756fddb2c19fb31893a0ab90
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258766"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653623"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe(코드 생성 도구)
 
@@ -32,7 +32,7 @@ SqlMetal 명령줄 도구는 .NET Framework의 [!INCLUDE[vbtecdlinq](../../../in
 > [!NOTE]
 > Visual Studio를 사용하는 개발자는 개체 관계형 디자이너를 사용하여 엔터티 클래스를 생성할 수도 있습니다. 명령줄 방식을 사용하면 대규모 데이터베이스에 대해 효율적으로 크기를 조정할 수 있습니다. SqlMetal은 명령줄 도구이므로 빌드 프로세스에서 사용할 수 있습니다.  
   
-도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다. 명령 프롬프트에서 다음 명령을 입력합니다.
+도구를 실행하려면 [Visual Studio 개발자 명령 프롬프트 또는 Visual Studio 개발자 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다. 명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```console  
 sqlmetal [options] [<input file>]  

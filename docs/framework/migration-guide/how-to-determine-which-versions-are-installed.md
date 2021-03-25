@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining installed versions
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: 817e7ad7b10e11675fb055b1243a8584196cc2b5
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 027c29969b7dd0a2ed0dec62e612754d2d217eed
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258626"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653389"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
 
@@ -208,7 +208,7 @@ v4.0
 
 - **Clrver.exe 도구**
 
-  [CLR 버전 도구(Clrver.exe)](../tools/clrver-exe-clr-version-tool.md)를 사용하여 컴퓨터에 설치된 CRL의 버전을 확인합니다. [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 열고 `clrver`를 입력합니다.
+  [CLR 버전 도구(Clrver.exe)](../tools/clrver-exe-clr-version-tool.md)를 사용하여 컴퓨터에 설치된 CRL의 버전을 확인합니다. [Visual Studio 개발자 명령 프롬프트 또는 Visual Studio Developer PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 열고 `clrver`을 입력합니다.
 
   샘플 출력:
 

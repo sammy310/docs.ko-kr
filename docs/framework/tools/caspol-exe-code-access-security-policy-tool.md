@@ -16,12 +16,12 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: d26443d07dd76d8d18e0d21112d1e40de5b83c83
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 402f9e2c4ca378af4b6ed0cc0c8c39e2d337876d
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258283"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652895"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe(코드 액세스 보안 정책 도구)
 
@@ -33,7 +33,7 @@ CAS(코드 액세스 보안 정책 도구)(Caspol.exe)를 사용하면 사용자
 > [!NOTE]
 > 64비트 컴퓨터에 64비트 및 32비트 버전의 보안 정책이 포함됩니다. 정책 변경 내용을 32비트와 64비트 애플리케이션에 적용하도록 하려면, Caspol.exe의 32비트와 64비트 버전을 모두 실행해야 합니다.  
   
- 코드 액세스 보안 정책 도구는 .NET Framework 또는 Visual Studio와 함께 자동으로 설치됩니다. Caspol.exe는 32비트 시스템의 경우 %windir%\Microsoft.NET\Framework\\*version* 에서, 64비트 시스템의 경우 %windir%\Microsoft.NET\Framework64\\*version* 에서 찾을 수 있습니다. (예를 들어 64비트 시스템의 .NET Framework 4인 경우 위치는 %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe입니다.) 컴퓨터에 여러 .NET Framework 버전이 함께 실행 중인 경우 도구의 여러 버전을 설치할 수 있습니다. 설치 디렉터리에서 도구를 실행할 수 있습니다. 하지만 설치 폴더로 이동할 필요가 없는 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용하는 것이 좋습니다.  
+ 코드 액세스 보안 정책 도구는 .NET Framework 또는 Visual Studio와 함께 자동으로 설치됩니다. Caspol.exe는 32비트 시스템의 경우 %windir%\Microsoft.NET\Framework\\*version* 에서, 64비트 시스템의 경우 %windir%\Microsoft.NET\Framework64\\*version* 에서 찾을 수 있습니다. (예를 들어 64비트 시스템의 .NET Framework 4인 경우 위치는 %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe입니다.) 컴퓨터에 여러 .NET Framework 버전이 함께 실행 중인 경우 도구의 여러 버전을 설치할 수 있습니다. 설치 디렉터리에서 도구를 실행할 수 있습니다. 하지만 설치 폴더로 이동할 필요가 없는 [Visual Studio 개발자 명령 프롬프트 또는 Visual Studio 개발자 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 사용하는 것이 좋습니다.  
   
  명령 프롬프트에 다음을 입력합니다.  
   

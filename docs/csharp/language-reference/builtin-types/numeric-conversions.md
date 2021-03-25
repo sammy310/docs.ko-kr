@@ -1,7 +1,7 @@
 ---
 description: C#의 기본 제공 숫자 형식 간 암시적 및 명시적 변환에 대해 알아봅니다.
 title: 기본 제공 숫자 변환 - C# 참조
-ms.date: 10/22/2019
+ms.date: 03/17/2021
 helpviewer_keywords:
 - implicit numeric conversions [C#]
 - explicit numeric conversion [C#]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - numeric conversions [C#], explicit
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
-ms.openlocfilehash: ee5def3b5e0e067919a8c8335db701dbb6dd4d88
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5ff0289f5365a7d3d334dd0130b3b0efcdf34c60
+ms.sourcegitcommit: 20b4565974d185c7716656a6c63e3cfdbdf4bf41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142247"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104759692"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>기본 제공 숫자 변환(C# 참조)
 
@@ -26,18 +26,20 @@ C#에서는 [정수](integral-numeric-types.md) 및 [부동 소수점](floating-
 
 |시작|대상|
 |----------|--------|
-|[sbyte](integral-numeric-types.md)|`short`, `int`, `long`, `float`, `double` 또는 `decimal`|
-|[byte](integral-numeric-types.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` 또는 `decimal`|
-|[short](integral-numeric-types.md)|`int`, `long`, `float`, `double` 또는 `decimal`|
-|[ushort](integral-numeric-types.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` 또는 `decimal`|
-|[int](integral-numeric-types.md)|`long`, `float`, `double` 또는 `decimal`|
-|[uint](integral-numeric-types.md)|`long`, `ulong`, `float`, `double` 또는 `decimal`|
+|[sbyte](integral-numeric-types.md)|`short`, `int`, `long`, `float`, `double`, `decimal` 또는 `nint`|
+|[byte](integral-numeric-types.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, `decimal`, `nint` 또는 `nuint`|
+|[short](integral-numeric-types.md)|`int`, `long`, `float`, `double` 또는 `decimal` 또는 `nint`|
+|[ushort](integral-numeric-types.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` 또는 `decimal`, `nint` 또는 `nuint`|
+|[int](integral-numeric-types.md)|`long`, `float`, `double` 또는 `decimal`, `nint`|
+|[uint](integral-numeric-types.md)|`long`, `ulong`, `float`, `double` 또는 `decimal` 또는 `nuint`|
 |[long](integral-numeric-types.md)|`float`, `double`또는 `decimal`|
 |[ulong](integral-numeric-types.md)|`float`, `double`또는 `decimal`|
 |[float](floating-point-numeric-types.md)|`double`|
+|[nint](nint-nuint.md)|`long`, `float`, `double` 또는 `decimal`|
+|[nuint](nint-nuint.md)|`ulong`, `float`, `double` 또는 `decimal`|
 
 > [!NOTE]
-> `int`, `uint`, `long` 또는 `ulong`에서 `float`로 암시적 변환하거나 `long` 또는 `ulong`에서 `double`로 암시적 변환하는 경우 정밀도가 손실될 수도 있지만, 자릿수 손실은 없습니다. 다른 암시적 숫자 변환 시에는 정보 손실이 없습니다.
+> `int`, `uint`, `long`, `ulong`, `nint` 또는 `nuint`에서 `float`로 암시적으로 변환하거나 `long`, `ulong`, `nint` 또는 `nuint`에서 `double`로 암시적으로 변환하는 경우 정밀도가 손실될 수도 있지만, 자릿수 손실은 없습니다. 다른 암시적 숫자 변환 시에는 정보 손실이 없습니다.
 
 다음 사항에도 유의하세요.
 
@@ -47,7 +49,7 @@ C#에서는 [정수](integral-numeric-types.md) 및 [부동 소수점](floating-
 
 - `decimal` 형식과 `float` 또는 `double` 형식 간의 암시적 변환은 없습니다.
 
-- 대상 형식의 범위 내에 있는 경우 `int` 형식의 상수 식 값(예: 정수 리터럴로 표시된 값)을 `sbyte`, `byte`, `short`, `ushort`, `uint` 또는 `ulong`으로 암시적으로 변환할 수 있습니다.
+- 대상 형식의 범위 내에 있는 경우 `int` 형식의 상수 식 값(예: 정수 리터럴로 표시된 값)을 `sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong`, `nint` 또는 `nuint`으로 암시적으로 변환할 수 있습니다.
 
   ```csharp
   byte a = 13;
@@ -62,17 +64,19 @@ C#에서는 [정수](integral-numeric-types.md) 및 [부동 소수점](floating-
 
 |시작|대상|
 |----------|--------|
-|[sbyte](integral-numeric-types.md)|`byte`, `ushort`, `uint` 또는 `ulong`|
+|[sbyte](integral-numeric-types.md)|`byte`, `ushort`, `uint` 또는 `ulong` 또는 `nuint`|
 |[byte](integral-numeric-types.md)|`sbyte`|
-|[short](integral-numeric-types.md)|`sbyte`, `byte`, `ushort`, `uint` 또는 `ulong`|
+|[short](integral-numeric-types.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong` 또는 `nuint`|
 |[ushort](integral-numeric-types.md)|`sbyte`, `byte`또는 `short`|
-|[int](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `uint` 또는 `ulong`|
+|[int](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` 또는 `nuint`|
 |[uint](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort` 또는 `int`|
-|[long](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint` 또는 `ulong`|
-|[ulong](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint` 또는 `long`|
-|[float](floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong` 또는 `decimal`|
-|[double](floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float` 또는 `decimal`|
-|[decimal](floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float` 또는 `double`|
+|[long](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong`, `nint` 또는 `nuint`|
+|[ulong](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `nint` 또는 `nuint`|
+|[float](floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `decimal`, `nint` 또는 `nuint`|
+|[double](floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `decimal`, `nint` 또는 `nuint`|
+|[decimal](floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, `nint` 또는 `nuint`|
+|[nint](nint-nuint.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` 또는 `nuint`|
+|[nuint](nint-nuint.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` 또는 `nint`|
 
 > [!NOTE]
 > 명시적 숫자 변환으로 인해 데이터가 손실되거나 예외(일반적으로 <xref:System.OverflowException>)가 throw될 수 있습니다.

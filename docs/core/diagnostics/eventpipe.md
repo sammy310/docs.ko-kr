@@ -3,12 +3,12 @@ title: EventPipe 개요
 description: EventPipe에 대해 알아보고 성능 문제를 진단하기 위해 .NET 애플리케이션 추적에 이를 사용하는 방법을 알아봅니다.
 ms.date: 11/09/2020
 ms.topic: overview
-ms.openlocfilehash: 213d15e48ac9d50af0c87565738f952295c4f041
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 0b4782306c85590d74b521edd254659fb162b0c2
+ms.sourcegitcommit: d623f686701b94bef905ec5e93d8b55d031c5d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105299"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "103624164"
 ---
 # <a name="eventpipe"></a>EventPipe
 
@@ -78,6 +78,9 @@ EventPipe를 사용하는 기본 메커니즘은 `dotnet-trace` 또는 `Microsof
 * `COMPlus_EventPipeOutputPath`: `COMPlus_EnableEventPipe`를 통해 실행하도록 구성된 경우 출력 EventPipe 추적 파일의 경로입니다. 기본값은 `trace.nettrace`이며, 앱이 실행되는 것과 동일한 디렉터리에 생성됩니다.
 
 * `COMPlus_EventPipeCircularMB`: EventPipe의 내부 버퍼 크기(MB)를 나타내는 16진수 값입니다. 해당 구성 값은 EventPipe가 `COMPlus_EnableEventPipe`를 통해 실행되도록 구성된 경우에만 사용됩니다. 기본 버퍼 크기는 1,024MB이며 `0x400` == `1024`이므로 `400`으로 설정되는 해당 환경 변수로 변환됩니다.
+
+  > [!NOTE]
+  > 대상 프로세스가 이벤트를 너무 자주 기록하는 경우 이 버퍼가 오버플로되고 일부 이벤트가 삭제될 수 있습니다. 너무 많은 이벤트가 삭제되는 경우에는 버퍼 크기를 늘려 삭제된 이벤트 수가 감소하는지 확인하세요. 버퍼 크기를 늘려도 삭제된 이벤트 수가 감소하지 않는다면 이는 느린 판독기로 인해 대상 프로세스의 버퍼가 플러시되지 않기 때문일 수 있습니다.
 
 * `COMPlus_EventPipeProcNumbers`: `1`로 설정하여 EventPipe 이벤트 헤더에서 프로세서 번호를 캡처할 수 있도록 합니다. 기본값은 `0`입니다.
 

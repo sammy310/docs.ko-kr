@@ -2,14 +2,14 @@
 title: 메서드 - C# 가이드
 description: 메서드, 메서드 매개 변수 및 메서드 반환 값의 개요
 ms.technology: csharp-fundamentals
-ms.date: 05/21/2018
+ms.date: 03/16/2021
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: ea07553d20ea6c18bac048a2e8d697f665bfb949
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 5d7f654ca268deff4a0c8e69b76e4d636d2f495e
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031678"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104652934"
 ---
 # <a name="methods-in-c"></a>메서드(C#)
 
@@ -246,7 +246,7 @@ Console.WriteLine($"{person.FName} {person.LName}: age = {person.Age}");
 > [!NOTE]
 > 비동기 메서드는 아직 완료되지 않은 첫 번째 대기된 개체를 검색할 때나 비동기 메서드의 끝에 도달할 때 중에서 먼저 발생하는 시점에 호출자에게 반환됩니다.
 
-비동기 메서드의 반환 형식은 <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> 또는 `void`일 수 있습니다. `void` 반환 형식은 기본적으로 `void` 반환 형식이 필요할 때 이벤트 처리기를 정의하는 데 사용됩니다. `void`를 반환하는 비동기 메서드는 대기할 수 없고 void를 반환하는 메서드의 호출자는 메서드가 throw하는 예외를 catch할 수 없습니다. C# 7.0부터 비동기 메서드에는 [작업과 유사한 반환 형식](./whats-new/csharp-7.md#generalized-async-return-types)이 있을 수 있습니다.
+비동기 메서드는 일반적으로 반환 형식이 <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, <xref:System.Collections.Generic.IAsyncEnumerable%601> 또는 `void`입니다. `void` 반환 형식은 기본적으로 `void` 반환 형식이 필요할 때 이벤트 처리기를 정의하는 데 사용됩니다. `void`를 반환하는 비동기 메서드는 대기할 수 없고 void를 반환하는 메서드의 호출자는 메서드가 throw하는 예외를 catch할 수 없습니다. C# 7.0부터 비동기 메서드에는 [작업과 유사한 반환 형식](./whats-new/csharp-7.md#generalized-async-return-types)이 있을 수 있습니다.
 
 다음 예제에서 `DelayAsync`는 정수를 반환하는 return 문을 포함하는 비동기 메서드입니다. 비동기 메서드이기 때문에 해당 메서드 선언의 반환 형식은 `Task<int>`여야 합니다. 반환 형식이 `Task<int>`이므로 `DoSomethingAsync`의 `await` 식 계산에서 다음 `int result = await delayTask` 문과 같이 정수가 생성됩니다.
 

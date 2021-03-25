@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: 050822d12ef4e0a7dfa752e4789f9861c4894cfa
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 0336c3a98fb93a3b3d3689048e5c313b811630d9
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259384"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653909"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe(관리되는 프로필 기반 최적화 도구)
 
@@ -24,7 +24,7 @@ ms.locfileid: "102259384"
 
 중간 언어(IL) 어셈블리에 대한 시작 시간 및 작업 집합에서 성능 문제가 발생하면 먼저 Ngen.exe를 사용하여 JIT(Just-In-Time) 컴파일 비용을 제거하고 코드 공유를 지원하는 것이 좋습니다. 추가 개선이 필요한 경우 Mpgo.exe를 사용하여 애플리케이션을 더 최적화할 수 있습니다. 최적화되지 않은 네이티브 이미지 어셈블리의 성능 데이터를 성능 향상을 평가하는 기준선으로 사용할 수 있습니다. Mpgo.exe를 사용하면 콜드 시작 시간이 단축되고 작업 집합 크기가 작아질 수 있습니다. Mpgo.exe는 Ngen.exe가 정보 최적화 네이티브 이미지 어셈블리를 생성하는 데 사용하는 정보를 IL 어셈블리에 추가합니다. 자세한 내용은 .NET 블로그의 [데스크톱 애플리케이션의 시작 성능 개선](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/) 항목을 참조하세요.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 관리자 자격 증명과 함께 [개발자 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 관리자 자격 증명으로 [개발자 명령 프롬프트 또는 개발자 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
 
 명령 프롬프트에서 다음 명령을 입력합니다.
 

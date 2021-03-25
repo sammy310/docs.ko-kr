@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: 6c810a7116f88f2eb7fc25efbfc6f44b60f2768b
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 3b4bfa70ed91f98ae49b6df3a5a29f68b30f1e0a
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259127"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104653857"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe(서명 도구)
 
 서명 도구는 파일에 디지털 서명을 하고, 파일의 서명을 확인하고, 파일에 타임스탬프를 기록하는 명령줄 도구입니다.  
   
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 [Visual Studio 개발자 명령 프롬프트 또는 Visual Studio 개발자 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
 
 > [!Note]  
 > Windows 10 SDK, Windows 10 HLK, Windows 10 WDK, Windows 10 ADK **빌드 20236 이상** 에서는 다이제스트 알고리즘을 지정해야 합니다. SignTool `sign` 명령을 사용하려면 `/fd` **파일 다이제스트 알고리즘** 및 `/td` **타임스탬프 다이제스트 알고리즘** 옵션을 각각 서명 및 타임스탬프 처리 중에 지정해야 합니다. 서명 중에 `/fd`가 지정되지 않고 타임 스탬프 처리 중에 `/td`가 지정되지 않으면 경고(처음에는 오류 코드 0)가 throw됩니다. 이후 버전의 SignTool에서는 경고가 오류가 됩니다. SHA256이 권장되며, 업계에서는 SHA1보다 안전한 것으로 간주됩니다.  

@@ -3,12 +3,12 @@ description: '자세한 정보: Authenticode(관리되지 않는 API 참조)'
 title: Authenticode(관리되지 않는 API 참조)
 ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
-ms.openlocfilehash: d7a1684fde900bfc01161193d0747b156c6856a8
-ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
+ms.openlocfilehash: 0a4a9b4ba3cc9a5818896508c80bc31073f514e7
+ms.sourcegitcommit: 26721a2260deabb3318cc98af8619306711153cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99772837"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105027846"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode(관리되지 않는 API 참조)
 
@@ -42,6 +42,10 @@ Authenticode XrML 라이센스 만들기 및 확인 모듈을 지원합니다.
   
  [AXL_AUTHENTICODE_TIMESTAMPER_INFO 구조](axl-authenticode-timestamper-info-structure.md)  
  Authenticode 타임스탬퍼 정보를 정의합니다.  
+
+## <a name="requirements"></a>요구 사항
+
+**라이브러리**: clr.dll
   
 ## <a name="see-also"></a>참조
 

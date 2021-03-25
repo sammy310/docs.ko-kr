@@ -10,12 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
-ms.openlocfilehash: d9c028507c19ef8599e58b38dcdf15af2ede1dee
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: 6d6482edd3b8c78ad230cfc34ed84bd5db712fde
+ms.sourcegitcommit: 1dbe25ff484a02025d5c34146e517c236f7161fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102259280"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104654156"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)
 
@@ -24,7 +24,7 @@ ms.locfileid: "102259280"
 > [!IMPORTANT]
 > Fuslogvw.exe는 관리자 권한으로 실행해야 합니다.
 
-이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 관리자 자격 증명으로 [개발자용 명령줄 셸](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
+이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 도구를 실행하려면 관리자 자격 증명으로 [Visual Studio 개발자 명령 프롬프트 또는 Visual Studio 개발자 PowerShell](/visualstudio/ide/reference/command-prompt-powershell)을 사용합니다.
 
 명령 프롬프트에서 다음 명령을 입력합니다.
 
