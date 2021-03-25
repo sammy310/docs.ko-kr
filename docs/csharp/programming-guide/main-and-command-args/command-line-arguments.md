@@ -1,87 +1,99 @@
 ---
 title: 명령줄 인수 - C# 프로그래밍 가이드
 description: 명령줄 인수에 대해 알아봅니다. 콘솔 애플리케이션에서 명령줄 인수를 사용하는 예제를 살펴봅니다.
-ms.date: 07/20/2015
+ms.date: 03/11/2021
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 35ff0425d3f09cf4ad116cf688b943cef3ef02e3
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: f495efb3bc2c76a98f74c173d5b777ebe383edcb
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381920"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190413"
 ---
-# <a name="command-line-arguments-c-programming-guide"></a><span data-ttu-id="e6ca6-104">명령줄 인수(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="e6ca6-104">Command-Line Arguments (C# Programming Guide)</span></span>
+# <a name="command-line-arguments-c-programming-guide"></a><span data-ttu-id="1ff82-104">명령줄 인수(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="1ff82-104">Command-Line Arguments (C# Programming Guide)</span></span>
 
-<span data-ttu-id="e6ca6-105">다음 방법 중 하나로 메서드를 정의하여 인수를 `Main` 메서드에 보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-105">You can send arguments to the `Main` method by defining the method in one of the following ways:</span></span>
+<span data-ttu-id="1ff82-105">다음 방법 중 하나로 메서드를 정의하여 인수를 `Main` 메서드에 보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-105">You can send arguments to the `Main` method by defining the method in one of the following ways:</span></span>
 
-[!code-csharp[csProgGuideMain#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#2)]  
+| <span data-ttu-id="1ff82-106">`Main` 메서드 코드</span><span class="sxs-lookup"><span data-stu-id="1ff82-106">`Main` method code</span></span>                 | <span data-ttu-id="1ff82-107">`Main` 서명</span><span class="sxs-lookup"><span data-stu-id="1ff82-107">`Main` signature</span></span>                             |
+|------------------------------------|----------------------------------------------|
+| <span data-ttu-id="1ff82-108">반환 값 없음, `await` 사용 없음</span><span class="sxs-lookup"><span data-stu-id="1ff82-108">No return value, no use of `await`</span></span> | `static void Main(string[] args)`            |
+| <span data-ttu-id="1ff82-109">반환 값, `await` 사용 없음</span><span class="sxs-lookup"><span data-stu-id="1ff82-109">Return value, no use of `await`</span></span>    | `static int Main(string[] args)`             |
+| <span data-ttu-id="1ff82-110">반환 값 없음, `await` 사용</span><span class="sxs-lookup"><span data-stu-id="1ff82-110">No return value, uses `await`</span></span>      | `static async Task Main(string[] args)`      |
+| <span data-ttu-id="1ff82-111">반환 값, `await` 사용</span><span class="sxs-lookup"><span data-stu-id="1ff82-111">Return value, uses `await`</span></span>         | `static async Task<int> Main(string[] args)` |
 
-[!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]
+<span data-ttu-id="1ff82-112">인수가 사용되지 않는 경우 약간 더 간단한 코드를 위해 메서드 서명에서 `args`를 생략할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-112">If the arguments are not used, you can omit `args` from the method signature for slightly simpler code:</span></span>
+
+| <span data-ttu-id="1ff82-113">`Main` 메서드 코드</span><span class="sxs-lookup"><span data-stu-id="1ff82-113">`Main` method code</span></span>                 | <span data-ttu-id="1ff82-114">`Main` 서명</span><span class="sxs-lookup"><span data-stu-id="1ff82-114">`Main` signature</span></span>                |
+|------------------------------------|---------------------------------|
+| <span data-ttu-id="1ff82-115">반환 값 없음, `await` 사용 없음</span><span class="sxs-lookup"><span data-stu-id="1ff82-115">No return value, no use of `await`</span></span> | `static void Main()`            |
+| <span data-ttu-id="1ff82-116">반환 값, `await` 사용 없음</span><span class="sxs-lookup"><span data-stu-id="1ff82-116">Return value, no use of `await`</span></span>    | `static int Main()`             |
+| <span data-ttu-id="1ff82-117">반환 값 없음, `await` 사용</span><span class="sxs-lookup"><span data-stu-id="1ff82-117">No return value, uses `await`</span></span>      | `static async Task Main()`      |
+| <span data-ttu-id="1ff82-118">반환 값, `await` 사용</span><span class="sxs-lookup"><span data-stu-id="1ff82-118">Return value, uses `await`</span></span>         | `static async Task<int> Main()` |
 
 > [!NOTE]
-> <span data-ttu-id="e6ca6-106">Windows Forms 애플리케이션의 `Main` 메서드에서 명령줄 인수를 사용하도록 설정하려면 *program.cs*에서 `Main`의 시그니처를 수동으로 수정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-106">To enable command-line arguments in the `Main` method in a Windows Forms application, you must manually modify the signature of `Main` in *program.cs*.</span></span> <span data-ttu-id="e6ca6-107">Windows Forms 디자이너에서 생성된 코드는 입력 매개 변수 없이 `Main`을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-107">The code generated by the Windows Forms designer creates a `Main` without an input parameter.</span></span> <span data-ttu-id="e6ca6-108"><xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 또는 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType>를 사용하여 콘솔 또는 Windows 애플리케이션의 임의 지점에서 명령줄 인수에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-108">You can also use <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> or <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> to access the command-line arguments from any point in a console or Windows application.</span></span>
+> <span data-ttu-id="1ff82-119">Windows Forms 애플리케이션의 `Main` 메서드에서 명령줄 인수를 사용하도록 설정하려면 *program.cs* 에서 `Main`의 시그니처를 수동으로 수정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-119">To enable command-line arguments in the `Main` method in a Windows Forms application, you must manually modify the signature of `Main` in *program.cs*.</span></span> <span data-ttu-id="1ff82-120">Windows Forms 디자이너에서 생성된 코드는 입력 매개 변수 없이 `Main`을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-120">The code generated by the Windows Forms designer creates a `Main` without an input parameter.</span></span> <span data-ttu-id="1ff82-121"><xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 또는 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType>를 사용하여 콘솔 또는 Windows 애플리케이션의 임의 지점에서 명령줄 인수에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-121">You can also use <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> or <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> to access the command-line arguments from any point in a console or Windows application.</span></span>
 
-<span data-ttu-id="e6ca6-109">`Main` 메서드의 매개 변수는 명령줄 인수를 나타내는 <xref:System.String> 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-109">The parameter of the `Main` method is a <xref:System.String> array that represents the command-line arguments.</span></span> <span data-ttu-id="e6ca6-110">일반적으로 다음과 같이 `Length` 속성을 테스트하여 인수가 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-110">Usually you determine whether arguments exist by testing the `Length` property, for example:</span></span>
+<span data-ttu-id="1ff82-122">`Main` 메서드의 매개 변수는 명령줄 인수를 나타내는 <xref:System.String> 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-122">The parameter of the `Main` method is a <xref:System.String> array that represents the command-line arguments.</span></span> <span data-ttu-id="1ff82-123">일반적으로 다음과 같이 `Length` 속성을 테스트하여 인수가 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-123">Usually you determine whether arguments exist by testing the `Length` property, for example:</span></span>
 
 [!code-csharp[csProgGuideMain#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#4)]
 
 > [!TIP]
-> <span data-ttu-id="e6ca6-111">`args` 배열은 null일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-111">The `args` array cannot be null.</span></span> <span data-ttu-id="e6ca6-112">따라서 null 검사 없이 `Length` 속성에 액세스하는 것이 안전합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-112">So, it's safe to access the `Length` property without null checking.</span></span>
+> <span data-ttu-id="1ff82-124">`args` 배열은 null일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-124">The `args` array cannot be null.</span></span> <span data-ttu-id="1ff82-125">따라서 null 검사 없이 `Length` 속성에 액세스하는 것이 안전합니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-125">So, it's safe to access the `Length` property without null checking.</span></span>
 
-<span data-ttu-id="e6ca6-113"><xref:System.Convert> 클래스 또는 `Parse` 메서드를 사용하여 문자열 인수를 숫자 형식으로 변환할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-113">You can also convert the string arguments to numeric types by using the <xref:System.Convert> class or the `Parse` method.</span></span> <span data-ttu-id="e6ca6-114">예를 들어 다음 문은 <xref:System.Int64.Parse%2A> 메서드를 사용하여 `string`을 `long` 숫자로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-114">For example, the following statement converts the `string` to a `long` number by using the <xref:System.Int64.Parse%2A> method:</span></span>
+<span data-ttu-id="1ff82-126"><xref:System.Convert> 클래스 또는 `Parse` 메서드를 사용하여 문자열 인수를 숫자 형식으로 변환할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-126">You can also convert the string arguments to numeric types by using the <xref:System.Convert> class or the `Parse` method.</span></span> <span data-ttu-id="1ff82-127">예를 들어 다음 문은 <xref:System.Int64.Parse%2A> 메서드를 사용하여 `string`을 `long` 숫자로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-127">For example, the following statement converts the `string` to a `long` number by using the <xref:System.Int64.Parse%2A> method:</span></span>
 
 ```csharp
 long num = Int64.Parse(args[0]);
 ```
 
-<span data-ttu-id="e6ca6-115">`Int64`의 별칭을 지정하는 C# 형식 `long`을 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-115">It is also possible to use the C# type `long`, which aliases `Int64`:</span></span>
+<span data-ttu-id="1ff82-128">`Int64`의 별칭을 지정하는 C# 형식 `long`을 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-128">It is also possible to use the C# type `long`, which aliases `Int64`:</span></span>
 
 ```csharp
 long num = long.Parse(args[0]);
 ```
 
-<span data-ttu-id="e6ca6-116">`Convert` 클래스 메서드 `ToInt64`를 사용하여 같은 작업을 수행할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-116">You can also use the `Convert` class method `ToInt64` to do the same thing:</span></span>
+<span data-ttu-id="1ff82-129">`Convert` 클래스 메서드 `ToInt64`를 사용하여 같은 작업을 수행할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-129">You can also use the `Convert` class method `ToInt64` to do the same thing:</span></span>
 
 ```csharp
 long num = Convert.ToInt64(s);
 ```
 
-<span data-ttu-id="e6ca6-117">자세한 내용은 <xref:System.Int64.Parse%2A> 및 <xref:System.Convert>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-117">For more information, see <xref:System.Int64.Parse%2A> and <xref:System.Convert>.</span></span>
+<span data-ttu-id="1ff82-130">자세한 내용은 <xref:System.Int64.Parse%2A> 및 <xref:System.Convert>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1ff82-130">For more information, see <xref:System.Int64.Parse%2A> and <xref:System.Convert>.</span></span>
 
-## <a name="example"></a><span data-ttu-id="e6ca6-118">예제</span><span class="sxs-lookup"><span data-stu-id="e6ca6-118">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1ff82-131">예제</span><span class="sxs-lookup"><span data-stu-id="1ff82-131">Example</span></span>
 
-<span data-ttu-id="e6ca6-119">다음 예제에서는 콘솔 애플리케이션에서 명령줄 인수를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-119">The following example shows how to use command-line arguments in a console application.</span></span> <span data-ttu-id="e6ca6-120">애플리케이션은 런타임에 하나의 인수를 사용하고, 인수를 정수로 변환하고, 숫자의 계승을 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-120">The application takes one argument at run time, converts the argument to an integer, and calculates the factorial of the number.</span></span> <span data-ttu-id="e6ca6-121">인수가 제공되지 않으면 애플리케이션에서는 프로그램의 올바른 사용법을 설명하는 메시지를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-121">If no arguments are supplied, the application issues a message that explains the correct usage of the program.</span></span>
+<span data-ttu-id="1ff82-132">다음 예제에서는 콘솔 애플리케이션에서 명령줄 인수를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-132">The following example shows how to use command-line arguments in a console application.</span></span> <span data-ttu-id="1ff82-133">애플리케이션은 런타임에 하나의 인수를 사용하고, 인수를 정수로 변환하고, 숫자의 계승을 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-133">The application takes one argument at run time, converts the argument to an integer, and calculates the factorial of the number.</span></span> <span data-ttu-id="1ff82-134">인수가 제공되지 않으면 애플리케이션에서는 프로그램의 올바른 사용법을 설명하는 메시지를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-134">If no arguments are supplied, the application issues a message that explains the correct usage of the program.</span></span>
 
-<span data-ttu-id="e6ca6-122">명령 프롬프트에서 애플리케이션을 컴파일 및 실행하려면 다음 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-122">To compile and run the application from a command prompt, follow these steps:</span></span>
+<span data-ttu-id="1ff82-135">명령 프롬프트에서 애플리케이션을 컴파일 및 실행하려면 다음 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-135">To compile and run the application from a command prompt, follow these steps:</span></span>
 
-1. <span data-ttu-id="e6ca6-123">다음 코드를 텍스트 편집기에 붙여넣고 이름 *Factorial.cs*를 사용하여 파일을 텍스트 파일로 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-123">Paste the following code into any text editor, and then save the file as  a text file with the name *Factorial.cs*.</span></span>
+1. <span data-ttu-id="1ff82-136">다음 코드를 텍스트 편집기에 붙여넣고 이름 *Factorial.cs* 를 사용하여 파일을 텍스트 파일로 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-136">Paste the following code into any text editor, and then save the file as  a text file with the name *Factorial.cs*.</span></span>
 
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]
 
-2. <span data-ttu-id="e6ca6-124">**시작** 화면이나 **시작** 메뉴에서 Visual Studio **개발자 명령 프롬프트** 창을 열고 방금 만든 파일이 포함된 폴더로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-124">From the **Start** screen or **Start** menu, open a Visual Studio **Developer Command Prompt** window, and then navigate to the folder that contains the file that you just created.</span></span>
+2. <span data-ttu-id="1ff82-137">**시작** 화면이나 **시작** 메뉴에서 Visual Studio **개발자 명령 프롬프트** 창을 열고 방금 만든 파일이 포함된 폴더로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-137">From the **Start** screen or **Start** menu, open a Visual Studio **Developer Command Prompt** window, and then navigate to the folder that contains the file that you just created.</span></span>
 
-3. <span data-ttu-id="e6ca6-125">다음 명령을 입력하여 애플리케이션을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-125">Enter the following command to compile the application.</span></span>
+3. <span data-ttu-id="1ff82-138">다음 명령을 입력하여 애플리케이션을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-138">Enter the following command to compile the application.</span></span>
   
      `csc Factorial.cs`  
   
-     <span data-ttu-id="e6ca6-126">애플리케이션에 컴파일 오류가 없으면 *Factorial.exe*라는 실행 파일이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-126">If your application has no compilation errors, an executable file that's named *Factorial.exe* is created.</span></span>
+     <span data-ttu-id="1ff82-139">애플리케이션에 컴파일 오류가 없으면 *Factorial.exe* 라는 실행 파일이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-139">If your application has no compilation errors, an executable file that's named *Factorial.exe* is created.</span></span>
   
-4. <span data-ttu-id="e6ca6-127">다음 명령을 입력하여 3의 계승을 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-127">Enter the following command to calculate the factorial of 3:</span></span>
+4. <span data-ttu-id="1ff82-140">다음 명령을 입력하여 3의 계승을 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-140">Enter the following command to calculate the factorial of 3:</span></span>
   
      `Factorial 3`  
   
-5. <span data-ttu-id="e6ca6-128">이 명령은 다음 출력을 생성합니다. `The factorial of 3 is 6.`</span><span class="sxs-lookup"><span data-stu-id="e6ca6-128">The command produces this output: `The factorial of 3 is 6.`</span></span>
+5. <span data-ttu-id="1ff82-141">이 명령은 다음 출력을 생성합니다. `The factorial of 3 is 6.`</span><span class="sxs-lookup"><span data-stu-id="1ff82-141">The command produces this output: `The factorial of 3 is 6.`</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e6ca6-129">Visual Studio에서 애플리케이션을 실행할 경우 [프로젝트 디자이너, 디버그 페이지](/visualstudio/ide/reference/debug-page-project-designer)에서 명령줄 인수를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e6ca6-129">When running an application in Visual Studio, you can specify command-line arguments in the [Debug Page, Project Designer](/visualstudio/ide/reference/debug-page-project-designer).</span></span>
+> <span data-ttu-id="1ff82-142">Visual Studio에서 애플리케이션을 실행할 경우 [프로젝트 디자이너, 디버그 페이지](/visualstudio/ide/reference/debug-page-project-designer)에서 명령줄 인수를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1ff82-142">When running an application in Visual Studio, you can specify command-line arguments in the [Debug Page, Project Designer](/visualstudio/ide/reference/debug-page-project-designer).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e6ca6-130">참조</span><span class="sxs-lookup"><span data-stu-id="e6ca6-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ff82-143">참조</span><span class="sxs-lookup"><span data-stu-id="1ff82-143">See also</span></span>
 
 - <xref:System.Environment?displayProperty=nameWithType>
-- [<span data-ttu-id="e6ca6-131">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="e6ca6-131">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="e6ca6-132">Main()과 명령줄 인수</span><span class="sxs-lookup"><span data-stu-id="e6ca6-132">Main() and Command-Line Arguments</span></span>](index.md)
-- [<span data-ttu-id="e6ca6-133">명령줄 인수를 표시하는 방법</span><span class="sxs-lookup"><span data-stu-id="e6ca6-133">How to display command line arguments</span></span>](how-to-display-command-line-arguments.md)
-- [<span data-ttu-id="e6ca6-134">Main() 반환 값</span><span class="sxs-lookup"><span data-stu-id="e6ca6-134">Main() Return Values</span></span>](main-return-values.md)
-- [<span data-ttu-id="e6ca6-135">클래스</span><span class="sxs-lookup"><span data-stu-id="e6ca6-135">Classes</span></span>](../classes-and-structs/classes.md)
+- [<span data-ttu-id="1ff82-144">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="1ff82-144">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="1ff82-145">Main()과 명령줄 인수</span><span class="sxs-lookup"><span data-stu-id="1ff82-145">Main() and Command-Line Arguments</span></span>](index.md)
+- [<span data-ttu-id="1ff82-146">명령줄 인수를 표시하는 방법</span><span class="sxs-lookup"><span data-stu-id="1ff82-146">How to display command line arguments</span></span>](how-to-display-command-line-arguments.md)
+- [<span data-ttu-id="1ff82-147">Main() 반환 값</span><span class="sxs-lookup"><span data-stu-id="1ff82-147">Main() Return Values</span></span>](main-return-values.md)
+- [<span data-ttu-id="1ff82-148">클래스</span><span class="sxs-lookup"><span data-stu-id="1ff82-148">Classes</span></span>](../classes-and-structs/classes.md)
