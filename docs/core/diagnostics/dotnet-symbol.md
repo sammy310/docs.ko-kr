@@ -2,12 +2,12 @@
 title: dotnet-symbol 진단 도구 - .NET CLI
 description: .NET 덤프 및 미니덤프를 디버그하는 데 필요한 파일을 다운로드하기 위해 dotnet-symbol CLI 도구를 설치하고 사용하는 방법을 알아봅니다.
 ms.date: 11/17/2020
-ms.openlocfilehash: 5cc304a3917921a964ceb61bc2c58e942b0baa85
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 4543bd965c889d93d7dc0b89ff2d6f62c4343e5f
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102105325"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189906"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>기호 다운로더(dotnet-symbol)
 
@@ -102,4 +102,4 @@ dotnet-symbol --host-only --debugging <dump file path>
 ## <a name="see-also"></a>참조
 
 * [기호를 사용하여 디버깅](/windows/win32/dxtecharts/debugging-with-symbols)
-* [이식 가능 PDB](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)
+* [기호 및 이식 가능 PDB](./symbols.md)

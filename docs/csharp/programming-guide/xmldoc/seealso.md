@@ -13,12 +13,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: e8618ef352a4fa7f0fd4c88733c6568b0e12e376
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: c5baefbfca3a94095a90eb43c2bf13eb924c8cdc
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87380646"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477762"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso>(C# 프로그래밍 가이드)
 
@@ -40,7 +40,7 @@ ms.locfileid: "87380646"
 
 `<seealso>` 태그를 사용하면 참고 항목 섹션에 표시할 텍스트를 지정할 수 있습니다. 텍스트 내에서 링크를 지정하려면 [\<see>](./see.md)를 사용합니다.
 
-[-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.
+[**DocumentationFile**](../../language-reference/compiler-options/output.md#documentationfile)로 컴파일하여 문서 주석을 파일로 처리합니다.
 
 ## <a name="example"></a>예제
 

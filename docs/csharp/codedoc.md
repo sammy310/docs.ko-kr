@@ -1,17 +1,17 @@
 ---
-title: XML 주석을 사용하여 코드 문서화
+title: XML 주석으로 C# 코드 문서화
 description: XML 문서 주석을 사용하여 코드를 문서화하고 컴파일 시간에 XML 문서 파일을 생성하는 방법을 알아봅니다.
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 91de11c610ea17999dabff6d0552de9440f532e6
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: cdc3937ba3b641b90aed85a604ca05195ea34fe7
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465301"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478492"
 ---
-# <a name="document-your-code-with-xml-comments"></a>XML 주석을 사용하여 코드 문서화
+# <a name="document-your-c-code-with-xml-comments"></a>XML 주석으로 C# 코드 문서화
 
 XML 문서 주석은 사용자 정의 형식이나 멤버의 정의 위에 추가되는 특수 주석입니다.
 컴파일 시간에 XML 문서 파일을 생성하기 위해 컴파일러에서 처리될 수 있으므로 특별합니다.
@@ -33,9 +33,9 @@ XML 문서 주석은 모든 다른 주석처럼 컴파일러에서 무시됩니�
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
    ```
 
-- Visual Studio를 사용하여 애플리케이션을 개발할 경우 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. [속성] 대화 상자에서 **빌드** 탭을 선택하고 **XML 문서 파일**을 선택합니다. 컴파일러가 파일을 쓰는 위치를 변경할 수도 있습니다.
+- Visual Studio를 사용하여 애플리케이션을 개발할 경우 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다. [속성] 대화 상자에서 **빌드** 탭을 선택하고 **XML 문서 파일** 을 선택합니다. 컴파일러가 파일을 쓰는 위치를 변경할 수도 있습니다.
 
-- 명령줄에서 .NET 애플리케이션을 컴파일할 경우 컴파일 시 [-doc 컴파일러 옵션](language-reference/compiler-options/doc-compiler-option.md)을 추가합니다.  
+- 명령줄에서 .NET 애플리케이션을 컴파일할 경우 컴파일 시 [**DocumentationFile** 컴파일러 옵션](language-reference/compiler-options/output.md#documentationfile)을 추가합니다.  
 
 XML 문서 주석에는 삼중 슬래시(`///`) 및 XML 형식의 주석 본문이 사용됩니다. 예를 들어:
 

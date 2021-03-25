@@ -2,12 +2,12 @@
 title: 기존 .NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트
 description: Azure 클라우드 및 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션을 현대화합니다.
 ms.date: 12/21/2020
-ms.openlocfilehash: fb875c38cac236826007bba217189238b7c00898
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 69e89702b41cd7388ee6c90e77efafc7cd2bebe8
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025396"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605115"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>기존 .NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트
 
@@ -63,7 +63,7 @@ Azure Migrate를 통해 비즈니스에 미치는 영향을 최소화하는 가�
 
 그림 2-2는 Azure Migrate에서 수행되는 모든 서버 및 애플리케이션 연결에 대한 기본 제공 종속성 매핑을 보여줍니다.
 
-![클라우드 인프라 지원 애플리케이션 위치 지정](./media/image2-2.png)
+![서버 및 애플리케이션 연결의 종속성](./media/image2-2.png)
 
 **그림 2-2.** 클라우드 인프라 지원 애플리케이션 위치 지정
 
@@ -75,7 +75,7 @@ Site Recovery는 일부분은 온-프레미스로, 일부는 Azure로 구성된 
 
 그림 2-3은 Azure Site Recovery를 사용하여 여러 VM 마이그레이션을 실행하는 방법을 보여줍니다.
 
-![클라우드 인프라 지원 애플리케이션 위치 지정](./media/image2-3.png)
+![Azure Site Recovery를 사용한 VM 마이그레이션](./media/image2-3.png)
 
 **그림 2-3.** 클라우드 인프라 지원 애플리케이션 위치 지정
 

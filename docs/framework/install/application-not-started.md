@@ -2,12 +2,12 @@
 title: ‘이 애플리케이션을 시작할 수 없음’ 문제 해결
 description: "'이 애플리케이션을 시작할 수 없음' 대화 상자가 표시되면 어떻게 해야 하는지 알아보세요."
 ms.date: 09/05/2019
-ms.openlocfilehash: 864c6ea23e9a048f060eee39d904bd4377be5084
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 92055bf40500eba4f7c892d11af12d8e675ddd5d
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76965908"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605245"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>‘이 애플리케이션을 시작할 수 없음’ 오류 메시지 문제 해결
 
@@ -15,7 +15,7 @@ ms.locfileid: "76965908"
 
 ![이 애플리케이션을 시작할 수 없습니다.](media/application-not-started/app-could-not-be-started.png)
 
-이것은 일반적으로 다음 조건 중 하나를 나타냅니다.
+이 오류는 일반적으로 다음 조건 중 하나를 나타냅니다.
 
 - 시스템의 .NET Framework 설치가 손상되었습니다.
 
@@ -25,13 +25,13 @@ ms.locfileid: "76965908"
 
 1. [.NET Framework 복구 도구(NetFxRepairTool.exe)](https://www.microsoft.com/download/details.aspx?id=30135)를 다운로드합니다. 다운로드가 완료되면 도구가 자동으로 실행됩니다.
 
-1. .NET Framework 복구 도구에서 다음 그림에 표시된 것과 같은 추가 작업을 권장하는 경우 **다음**을 선택합니다.
+1. .NET Framework 복구 도구에서 다음 그림에 표시된 것과 같은 추가 작업을 권장하는 경우 **다음** 을 선택합니다.
 
-   ![권장 변경 내용](media/application-not-started/repair-tool-recommended-changes.png)
+   ![복구 도구 권장 변경 내용](media/application-not-started/repair-tool-recommended-changes.png)
 
 1. .NET Framework 복구 도구는 다음 그림에 표시된 대화 상자를 표시하여 변경이 완료되었음을 나타냅니다. 애플리케이션을 다시 실행하는 동안 이 대화 상자를 열어 둡니다. .NET Framework 복구 도구에서 손상된 .NET Framework 설치를 확인하고 해결한 경우 이 작업은 성공입니다.
 
-   ![권장 변경 내용](media/application-not-started/repair-tool-changes-complete.png)
+   ![복구 도구 변경 완료](media/application-not-started/repair-tool-changes-complete.png)
 
 1. 애플리케이션이 성공적으로 실행되는 경우 **마침** 단추를 선택합니다. 그렇지 않으면 **다음** 단추를 선택합니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "76965908"
 
    ![이 문제를 해결할 수 없음](media/application-not-started/repair-tool-no-resolution.png)
 
-1. 애플리케이션을 여전히 실행할 수 없는 경우 다음 표에 표시된 것처럼 사용 중인 Windows에서 지원하는 최신 버전의 .NET Framework를 설치합니다.
+1. 애플리케이션을 여전히 실행할 수 없는 경우 다음 표에 표시된 대로 사용 중인 Windows에서 지원하는 최신 버전의 .NET Framework를 설치합니다.
 
    |Windows 버전|.NET Framework 설치|
    |---|---|
@@ -55,9 +55,9 @@ ms.locfileid: "76965908"
 
 1. 애플리케이션을 시작하려고 합니다.
 
-1. 경우에 따라 .NET Framework 3.5를 설치하도록 요구하는 다음과 같은 대화 상자가 나타날 수 있습니다. **이 기능 다운로드 및 설치**를 선택하여 .NET Framework 3.5를 설치한 다음, 애플리케이션을 다시 시작합니다.
+1. 경우에 따라 .NET Framework 3.5를 설치하도록 요구하는 다음과 같은 대화 상자가 나타날 수 있습니다. **이 기능 다운로드 및 설치** 를 선택하여 .NET Framework 3.5를 설치한 다음, 애플리케이션을 다시 시작합니다.
 
-   ![이 문제를 해결할 수 없음](media/application-not-started/install-3-5.png)
+   ![.NET Framework 3.5를 설치하도록 제안하는 Windows 기능 대화 상자](media/application-not-started/install-3-5.png)
 
 ## <a name="see-also"></a>참고 항목
 

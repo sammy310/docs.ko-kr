@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-ms.openlocfilehash: e461d46df619a351048ae7942e59847d39e490f9
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 6a098208a51ca31fe2278b7c696deb15a13f8e1e
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381400"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477814"
 ---
 # <a name="returns-c-programming-guide"></a>\<returns>(C# 프로그래밍 가이드)
 
@@ -34,7 +34,7 @@ ms.locfileid: "87381400"
 
 `<returns>` 태그는 메서드 선언의 주석에서 반환 값을 설명하는 데 사용해야 합니다.
 
-[-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.
+[**DocumentationFile**](../../language-reference/compiler-options/output.md#documentationfile)로 컴파일하여 문서 주석을 파일로 처리합니다.
 
 ## <a name="example"></a>예제
 

@@ -4,12 +4,12 @@ description: .NET SDK에서 이해하는 MSBuild 속성 및 항목에 대한 참
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 9cd387a4a8ad7f5b31a797d4d019a53799d926ff
-ms.sourcegitcommit: 10e719780594efc781b15295e499c66f316068b8
+ms.openlocfilehash: 18f2be734fa10e2fd4977166ab4334332b120a91
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100432704"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604764"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 프로젝트용 MSBuild 참조
 
@@ -409,6 +409,9 @@ MSBuild 항목의 `CopyToPublishDirectory` 메타데이터는 항목이 게시 �
   <EnableNETAnalyzers>true</EnableNETAnalyzers>
 </PropertyGroup>
 ```
+
+> [!NOTE]
+> 이 속성은 특히 .NET 5+ SDK의 기본 제공 분석기에 적용됩니다. NuGet 코드 분석 패키지를 설치할 때 사용해서는 안 됩니다.
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
 

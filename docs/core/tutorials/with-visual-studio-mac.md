@@ -2,12 +2,12 @@
 title: Mac용 Visual Studio를 사용하여 .NET 콘솔 애플리케이션 만들기
 description: Mac용 Visual Studio를 사용하여 .NET 콘솔 애플리케이션을 만드는 방법을 알아봅니다.
 ms.date: 11/30/2020
-ms.openlocfilehash: 1351b06eec32cd8d3d9d44926655405fe2246f58
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 4add8309338b8618265a66b9e71dab2df38ca8d0
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599488"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511829"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio-for-mac"></a>자습서: Mac용 Visual Studio를 사용하여 .NET 콘솔 애플리케이션 만들기
 
@@ -84,7 +84,7 @@ namespace HelloWorld
 
    해당 코드는 콘솔 창에 프롬프트를 표시하고 사용자가 문자열을 입력한 후 <kbd>Enter</kbd> 키를 누를 때까지 기다립니다. 이 문자열을 `name`이라는 변수에 저장합니다. 또한 현재 현지 시간을 포함하는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성 값을 검색한 후 `date`라는 변수에 할당합니다. 또한 콘솔 창에 해당 값을 표시합니다. 마지막으로 콘솔 창에 프롬프트를 표시하고 <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> 메서드를 호출하여 사용자 입력을 기다립니다.
 
-   `\n`은 줄 바꿈 문자를 나타냅니다.
+   <xref:System.Environment.NewLine>은 줄 바꿈을 나타내는 플랫폼과 언어에 독립적인 방법입니다. 대안은 C#의 `\n` 및 Visual Basic의 `vbCrLf`입니다.
 
    문자열 앞의 달러 기호(`$`)를 사용하면 변수 이름과 같은 식을 문자열의 중괄호 안에 넣을 수 있습니다. 식 값은 식 대신 문자열에 삽입됩니다. 이 구문을 [보간된 문자열](../../csharp/language-reference/tokens/interpolated.md)이라고 합니다.
 

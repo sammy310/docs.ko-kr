@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 6f8a278ed842cd9c4176f3efff423ee048f7e9b9
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 5ce0f311ccc16b4eca8d499578c217d93cc93165
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381543"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477868"
 ---
 # <a name="process-the-xml-file-c-programming-guide"></a>XML 파일 처리(C# 프로그래밍 가이드)
 
@@ -61,7 +61,7 @@ XML 파일은 코드의 계층적 표현이 아닙니다. 각 요소에 대해 �
 
   - ELEMENT_TYPE_ARRAY는 [*lowerbound*:`size`,*lowerbound*:`size`]로 표시됩니다. 여기서 쉼표 수는 순위 - 1에 해당하는 값이고, 각 차원의 하한과 크기(확인된 경우)는 10진수로 표시됩니다. 하한이나 크기가 지정되지 않은 경우에는 생략됩니다. 특정 차원의 하한과 크기를 생략하면 ':'도 생략됩니다. 예를 들어 하한이 1이고 크기가 지정되지 않은 2차원 배열은 [1:,1:]로 표시됩니다.
 
-  - ELEMENT_TYPE_FNPTR은 "=FUNC:`type`(*signature*)"로 표시됩니다. 여기서 `type`은 반환 형식이고 *signature*는 메서드의 인수입니다. 인수가 없으면 괄호는 생략됩니다. C# 컴파일러에서는 이 인수가 생성되지 않습니다.
+  - ELEMENT_TYPE_FNPTR은 "=FUNC:`type`(*signature*)"로 표시됩니다. 여기서 `type`은 반환 형식이고 *signature* 는 메서드의 인수입니다. 인수가 없으면 괄호는 생략됩니다. C# 컴파일러에서는 이 인수가 생성되지 않습니다.
 
   다음 시그니처 구성 요소는 오버로드된 메서드를 구분하는 데 사용되지 않으므로 표시되지 않습니다.
 
@@ -88,5 +88,5 @@ XML 파일은 코드의 계층적 표현이 아닙니다. 각 요소에 대해 �
 ## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
-- [-doc(C# 컴파일러 옵션)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [**DocumentationFile**(C# 컴파일러 옵션)](../../language-reference/compiler-options/output.md#documentationfile)
 - [XML 문서 주석](./index.md)

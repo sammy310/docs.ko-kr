@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: 2e047a4cff77877862c5cbbb5e49eb1a75b42499
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5be895621966dd10b2b1b0f53ebf0f3c688f1ef0
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89141961"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480660"
 ---
 # <a name="unsafe-c-reference"></a>unsafe(C# 참조)
 
@@ -43,7 +43,7 @@ unsafe
 }
 ```
 
-안전하지 않은 코드를 컴파일하려면 [`-unsafe`](../compiler-options/unsafe-compiler-option.md) 컴파일러 옵션을 지정해야 합니다. 안전하지 않은 코드는 공용 언어 런타임에서 확인할 수 없습니다.
+안전하지 않은 코드를 컴파일하려면 [**AllowUnsafeBlocks**](../compiler-options/language.md#allowunsafeblocks) 컴파일러 옵션을 지정해야 합니다. 안전하지 않은 코드는 공용 언어 런타임에서 확인할 수 없습니다.
 
 ## <a name="example"></a>예제
 

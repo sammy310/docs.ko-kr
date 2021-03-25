@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: dc3e235db49279691203a0db4d124239fb972c69
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: a3f72719ba4ce722aef33bbd5de338d3d06b2aa0
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065238"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480366"
 ---
 # <a name="if-c-reference"></a>#if(C# 참조)
 
@@ -34,7 +34,7 @@ C# 컴파일러는 `#if` 지시문과 [#endif](preprocessor-endif.md) 지시문�
 
 `#define`을 사용하여 기호를 정의할 수 있습니다. 그러면 `#if` 지시문으로 전달되는 식으로 해당 기호를 사용하는 경우 식이 `true`로 평가됩니다.
 
-[-define](../compiler-options/define-compiler-option.md) 컴파일러 옵션으로 기호를 정의할 수도 있습니다. [#undef](preprocessor-undef.md)로 기호 정의를 해제할 수 있습니다.
+[**DefineConstants**](../compiler-options/language.md#defineconstants) 컴파일러 옵션을 사용하여 기호를 정의할 수도 있습니다. [#undef](preprocessor-undef.md)로 기호 정의를 해제할 수 있습니다.
 
 `-define` 또는 `#define`으로 정의하는 기호는 동일한 이름의 변수와 충돌하지 않습니다. 즉, 변수 이름이 전처리기 지시문에 전달되지 않아야 하며 전처리기 지시문을 통해서만 기호를 평가할 수 있습니다.
 

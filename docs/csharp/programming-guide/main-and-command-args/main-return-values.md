@@ -1,28 +1,40 @@
 ---
 title: Main() 반환 값 - C# 프로그래밍 가이드
 description: Main() 반환 값에 대해 알아봅니다. 코드 예제, 컴파일러 생성 코드를 살펴보고 사용 가능한 추가 리소스를 확인합니다.
-ms.date: 08/02/2017
+ms.date: 03/11/2021
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 2e1df125d677cd6b845b516173117ef0190a7580
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.openlocfilehash: 6f4001ecd490d5627d3a1ec74ecf7d593451e104
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102104039"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190361"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 반환 값(C# 프로그래밍 가이드)
 
-`Main` 메서드는 `void`를 반환할 수 있습니다.
+다음 방법 중 하나로 메서드를 정의하여 `Main` 메서드에서 `int`를 반환할 수 있습니다.
 
- [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
+| `Main` 메서드 코드             | `Main` 서명                             |
+|--------------------------------|----------------------------------------------|
+| `args` 또는 `await` 사용 안 함    | `static int Main()`                          |
+| `args` 사용, `await` 사용 안 함 | `static int Main(string[] args)`             |
+| `args` 사용 안 함 , `await` 사용 | `static async Task<int> Main()`              |
+| `args` 및 `await` 사용        | `static async Task<int> Main(string[] args)` |
 
-`int`를 반환할 수도 있습니다.
+`Main`의 반환 값을 사용하지 않는 경우 `void` 또는 `Task`를 반환하면 코드가 다소 단순해집니다.
 
- [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
+| `Main` 메서드 코드             | `Main` 서명                        |
+|--------------------------------|-----------------------------------------|
+| `args` 또는 `await` 사용 안 함    | `static void Main()`                    |
+| `args` 사용, `await` 사용 안 함 | `static void Main(string[] args)`       |
+| `args` 사용 안 함 , `await` 사용 | `static async Task Main()`              |
+| `args` 및 `await` 사용        | `static async Task Main(string[] args)` |
 
-`Main`의 반환 값을 사용하지 않는 경우 `void`를 반환하면 코드가 다소 단순해집니다. 그러나 정수를 반환하면 프로그램이 실행 파일을 호출하는 다른 프로그램 또는 스크립트에 상태 정보를 전달할 수 있습니다. `Main`의 반환 값은 프로세스에 대한 종료 코드로 처리됩니다. `void`가 `Main`에서 반환되는 경우 종료 코드는 암시적으로 `0`이 됩니다. 다음 예제에서는 `Main`의 반환 값을 어떻게 액세스할 수 있는지를 보여 줍니다.
+그러나 `int` 또는 `Task<int>`를 반환하면 프로그램이 실행 파일을 호출하는 다른 프로그램이나 스크립트에 상태 정보를 전달할 수 있습니다.
+
+다음 예제에서는 프로세스의 종료 코드에 액세스할 수 있는 방법을 보여줍니다.
 
 ## <a name="example"></a>예제
 

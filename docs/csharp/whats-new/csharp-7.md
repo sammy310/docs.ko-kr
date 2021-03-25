@@ -3,12 +3,12 @@ title: C# 7.0의 새로운 기능 - C# 가이드
 description: C# 언어 버전 7.0의 새로운 기능을 살펴봅니다.
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: c238439b0f435e579d932b3b1eb13e9b0061fa5f
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 897729022e45e96d0f54057ef4dad1a4fc0d6799
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678228"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480855"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>C# 7.0~C# 7.3의 새로운 기능
 
@@ -522,17 +522,17 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 ### <a name="reference-assembly-generation"></a>참조 어셈블리 생성
 
-*참조 전용 어셈블리* 인 [-refout](../language-reference/compiler-options/refout-compiler-option.md) 및 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)를 생성하는 두 개의 새로운 컴파일러 옵션이 있습니다.
+*참조 전용 어셈블리* 를 생성하는 두 가지 새로운 컴파일러 옵션인 [**ProduceReferenceAssembly**](../language-reference/compiler-options/output.md#producereferenceassembly) 및 [**ProduceOnlyReferenceAssembly**](../language-reference/compiler-options/code-generation.md#produceonlyreferenceassembly)가 있습니다.
 연결된 문서에서는 이러한 옵션과 참조 어셈블리를 보다 자세히 설명합니다.
 
 ### <a name="public-or-open-source-signing"></a>공개 또는 오픈 소스 서명
 
-`-publicsign` 컴파일러 옵션은 공개 키를 사용하여 어셈블리에 서명하도록 컴파일러에 지시합니다. 어셈블리는 서명됨으로 표시되지만 시그니처는 공개 키에서 가져옵니다. 이 옵션을 사용하면 공개 키를 사용하여 오픈 소스 프로젝트에서 서명된 어셈블리를 빌드할 수 있습니다.
+**PublicSign** 컴파일러 옵션은 공개 키를 사용하여 어셈블리에 서명하도록 컴파일러에 지시합니다. 어셈블리는 서명됨으로 표시되지만 시그니처는 공개 키에서 가져옵니다. 이 옵션을 사용하면 공개 키를 사용하여 오픈 소스 프로젝트에서 서명된 어셈블리를 빌드할 수 있습니다.
 
-자세한 내용은 [-publicsign 컴파일러 옵션](../language-reference/compiler-options/publicsign-compiler-option.md) 문서를 참조하세요.
+자세한 내용은 [**PublicSign** 컴파일러 옵션](../language-reference/compiler-options/security.md#publicsign) 문서를 참조하세요.
 
 ### <a name="pathmap"></a>pathmap
 
-`-pathmap` 컴파일러 옵션은 빌드 환경의 소스 경로를 매핑된 소스 경로로 바꾸도록 컴파일러에 지시합니다. `-pathmap` 옵션은 컴파일러에서 작성된 PDB 파일의 소스 경로 또는 <xref:System.Runtime.CompilerServices.CallerFilePathAttribute>를 제어합니다.
+**PathMap** 컴파일러 옵션은 빌드 환경의 소스 경로를 매핑된 소스 경로로 바꾸도록 컴파일러에 지시합니다. **PathMap** 옵션은 컴파일러가 PDB 파일 또는 <xref:System.Runtime.CompilerServices.CallerFilePathAttribute>에 대해 작성한 소스 경로를 제어합니다.
 
-자세한 내용은 [-pathmap 컴파일러 옵션](../language-reference/compiler-options/pathmap-compiler-option.md) 문서를 참조하세요.
+자세한 내용은 [**PathMap** 컴파일러 옵션](../language-reference/compiler-options/advanced.md#pathmap) 문서를 참조하세요.

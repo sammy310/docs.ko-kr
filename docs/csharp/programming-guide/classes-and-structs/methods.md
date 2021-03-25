@@ -1,21 +1,23 @@
 ---
 title: 메서드 - C# 프로그래밍 가이드
 description: C#의 메서드는 일련의 문을 포함하는 코드 블록입니다. 프로그램은 메서드를 호출하고 인수를 지정하여 문을 실행합니다.
-ms.date: 07/20/2015
+ms.date: 03/08/2021
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 879e57cfbce82f1aa77f8810e23d6a61a6ea5bc8
-ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
+ms.openlocfilehash: e8fad125167774d69344ebb9045a4ead84706bfb
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98899453"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189970"
 ---
 # <a name="methods-c-programming-guide"></a>메서드(C# 프로그래밍 가이드)
 
-메서드는 일련의 문을 포함하는 코드 블록입니다. 프로그램을 통해 메서드를 호출하고 필요한 메서드 인수를 지정하여 문을 실행합니다. C#에서는 실행된 모든 명령이 메서드의 컨텍스트에서 수행됩니다. `Main` 메서드는 모든 C# 애플리케이션의 진입점이고 프로그램이 시작될 때 CLR(공용 언어 런타임)에서 호출됩니다.
+메서드는 일련의 문을 포함하는 코드 블록입니다. 프로그램을 통해 메서드를 호출하고 필요한 메서드 인수를 지정하여 문을 실행합니다. C#에서는 실행된 모든 명령이 메서드의 컨텍스트에서 수행됩니다.
+
+`Main` 메서드는 모든 C# 애플리케이션의 진입점이고 프로그램이 시작될 때 CLR(공용 언어 런타임)에서 호출됩니다. [최상위 문](../main-and-command-args/top-level-statements.md)을 사용하는 애플리케이션에서 `Main` 메서드는 컴파일러에 의해 생성되며 모든 최상위 문을 포함합니다.
 
 > [!NOTE]
 > 이 항목에서는 명명된 메서드에 대해 설명합니다. 익명 함수에 대한 자세한 내용은 [익명 함수](../statements-expressions-operators/anonymous-functions.md)를 참조하세요.

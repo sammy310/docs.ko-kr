@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 3728778b31a4b4adc51933e8fdc6287f28e03d83
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 2d522e9357fb6da7b8d66a663e99e8858c9dd521
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916712"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480385"
 ---
 # <a name="pointer-related-operators-c-reference"></a>포인터 관련 연산자(C# 참조)
 
@@ -40,7 +40,7 @@ ms.locfileid: "87916712"
 포인터 형식에 대한 내용은 [포인터 형식](../../programming-guide/unsafe-code-pointers/pointer-types.md)을 참조하세요.
 
 > [!NOTE]
-> 포인터를 사용한 작업에는 [안전하지 않은](../keywords/unsafe.md) 컨텍스트가 필요합니다. 안전하지 않은 블록을 포함하는 코드는 [`-unsafe`](../compiler-options/unsafe-compiler-option.md) 컴파일러 옵션으로 컴파일해야 합니다.
+> 포인터를 사용한 작업에는 [안전하지 않은](../keywords/unsafe.md) 컨텍스트가 필요합니다. 안전하지 않은 블록을 포함하는 코드는 [**AllowUnsafeBlocks**](../compiler-options/language.md#allowunsafeblocks) 컴파일러 옵션을 사용하여 컴파일해야 합니다.
 
 ## <a name="address-of-operator-amp"></a><a name="address-of-operator-"></a> Address-of 연산자 &amp;
 
@@ -185,7 +185,7 @@ x->y
 - [포인터 증가 및 감소](~/_csharplang/spec/unsafe-code.md#pointer-increment-and-decrement)
 - [포인터 비교](~/_csharplang/spec/unsafe-code.md#pointer-comparison)
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
 - [C# 연산자 및 식](index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 5ecafa5a989bc183d7f52ac3d4b4d50a81b36014
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 230e9d7169e8924749f234af2fa411950f68ce78
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203347"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477476"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias(C# 참조)
 
@@ -43,7 +43,7 @@ ms.locfileid: "91203347"
 
 Visual Studio를 사용하는 경우 별칭을 비슷한 방식으로 제공할 수 있습니다.
 
-Visual Studio의 프로젝트에 *grid.dll* 및 *grid20.dll*의 참조를 추가합니다. 속성 탭을 열고 별칭을 전역에서 GridV1 및 GridV2로 각각 변경합니다.
+Visual Studio의 프로젝트에 *grid.dll* 및 *grid20.dll* 의 참조를 추가합니다. 속성 탭을 열고 별칭을 전역에서 GridV1 및 GridV2로 각각 변경합니다.
 
 다음 별칭을 위와 동일한 방식으로 사용합니다.
 
@@ -71,4 +71,4 @@ using Class1V2 = GridV2::Namespace.Class1;
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 키워드](./index.md)
 - [:: 연산자](../operators/namespace-alias-qualifier.md)
-- [-reference(C# 컴파일러 옵션)](../compiler-options/reference-compiler-option.md)
+- [**References**(C# 컴파일러 옵션)](../compiler-options/inputs.md#references)

@@ -2,20 +2,20 @@
 title: WPF 앱을 .NET 5로 업그레이드
 description: .NET 업그레이드 도우미를 사용하여 기존 .NET Framework WPF 앱을 .NET 5로 업그레이드합니다. .NET 업그레이드 도우미는 .NET Framework에서 .NET 5로 앱을 마이그레이션하는 데 도움이 되는 CLI 도구입니다.
 author: ardalis
-ms.date: 02/25/2021
-ms.openlocfilehash: e71cdc0ef5b72fcb7ae3985a26672e23ed0c1f12
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 03/08/2021
+ms.openlocfilehash: b0c9baa25be6da4e7849f28c875a1d8f5f5a5d07
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108294"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604842"
 ---
 # <a name="upgrade-a-wpf-app-to-net-5-with-the-net-upgrade-assistant"></a>.NET 업그레이드 도우미를 사용하여 WPF 앱을 .NET 5로 업그레이드
 
 [.NET 업그레이드 도우미](upgrade-assistant-overview.md)는 .NET Framework WPF 앱을 .NET 5로 업그레이드하는 데 도움이 될 수 있는 명령줄 도구입니다. 이 문서에서는 다음을 제공합니다.
 
-* .NET Framework WPF 앱에 대해 도구를 실행하는 방법의 데모
-* 문제 해결 팁
+- .NET Framework WPF 앱에 대해 도구를 실행하는 방법의 데모
+- 문제 해결 팁
 
 ## <a name="upgrade-net-framework-wpf-apps"></a>.NET Framework WPF 앱 업그레이드
 
@@ -59,7 +59,7 @@ upgrade-assistant .\WpfTest.csproj
 
 프로젝트 형식이 업데이트된 후 다음 단계는 프로젝트의 TFM을 업데이트하는 것입니다.
 
-:::image type="content" source="media/upgrade-assistant-wpf-framework/update-tfm.png" alt-text=".NET 업그레이드 도우미 SDK 스타일로 프로젝트 변환":::
+:::image type="content" source="media/upgrade-assistant-wpf-framework/update-tfm.png" alt-text=".NET 업그레이드 도우미 업데이트 TFM":::
 
 그런 다음, 도구는 프로젝트의 NuGet 패키지를 업데이트합니다.
 

@@ -3,12 +3,12 @@ title: C# 언어 버전 관리 - C# 가이드
 description: C# 언어 버전은 프로젝트에 따라 결정된다는 사실과 그 이유를 알아봅니다. 기본값을 수동으로 재정의하는 방법을 알아봅니다.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: ba6f453123668248b2c65ee6a431cb16dfe74c46
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: e1b5848f5cd589b0ea61518f0b19efb8fe801337
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102258405"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477456"
 ---
 # <a name="c-language-versioning"></a>C# 언어 버전 관리
 
@@ -50,7 +50,7 @@ C# 버전을 명시적으로 지정해야 하는 경우 다음과 같은 여러 
 
 - [프로젝트 파일](#edit-the-project-file)을 수동으로 편집합니다.
 - [하위 디렉터리에 있는 여러 프로젝트의](#configure-multiple-projects) 언어 버전을 설정합니다.
-- [`-langversion` 컴파일러 옵션](compiler-options/langversion-compiler-option.md)을 구성합니다.
+- [**LangVersion** 컴파일러 옵션](compiler-options/language.md#langversion)을 구성합니다.
 
 > [!TIP]
 > 현재 사용 중인 언어 버전을 확인하려면 코드에 `#error version`(대/소문자 구분)을 입력합니다. 이렇게 하면 컴파일러가 사용 중인 컴파일러 버전 및 현재 선택된 언어 버전을 포함하는 메시지가 있는 컴파일러 오류 CS8304를 보고합니다. 자세한 내용은 [#error(C# 참조)](preprocessor-directives/preprocessor-error.md)를 참조하세요.
@@ -94,7 +94,7 @@ C# 버전을 명시적으로 지정해야 하는 경우 다음과 같은 여러 
 > csc -langversion:?
 > ```
 >
-> 이와 같이 [-langversion](compiler-options/langversion-compiler-option.md) 컴파일 옵션을 쿼리하면 다음과 같은 내용이 출력됩니다.
+> 이와 같이 [**LangVersion](compiler-options/language.md#langversion) 컴파일 옵션을 쿼리하면 다음과 같은 내용이 출력됩니다.
 >
 > ```CMD
 > Supported language versions:

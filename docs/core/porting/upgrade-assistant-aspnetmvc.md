@@ -2,20 +2,20 @@
 title: ASP.NET MVC 앱을 .NET 5로 업그레이드
 description: .NET 업그레이드 도우미를 사용하여 기존 .NET Framework ASP.NET MVC 앱을 .NET 5로 업그레이드합니다. .NET 업그레이드 도우미는 .NET Framework에서 .NET 5로 앱을 마이그레이션하는 데 도움이 되는 CLI 도구입니다.
 author: ardalis
-ms.date: 02/25/2021
-ms.openlocfilehash: 0c9af9e12b78df7c4a2aaed18155f7ee9f02870d
-ms.sourcegitcommit: 42d436ebc2a7ee02fc1848c7742bc7d80e13fc2f
+ms.date: 03/08/2021
+ms.openlocfilehash: 421d8ce16bc1800451ee39c20c4746ea321fafd0
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102108360"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604959"
 ---
 # <a name="upgrade-an-aspnet-mvc-app-to-net-5-with-the-net-upgrade-assistant"></a>.NET 업그레이드 도우미를 사용하여 ASP.NET MVC 앱을 .NET 5로 업그레이드
 
 [.NET 업그레이드 도우미](upgrade-assistant-overview.md)는 .NET Framework ASP.NET MVC 앱을 .NET 5로 업그레이드하는 데 도움이 될 수 있는 명령줄 도구입니다. 이 문서에서는 다음을 제공합니다.
 
-* .NET Framework ASP.NET MVC 앱에 대해 도구를 실행하는 방법의 데모
-* 문제 해결 팁
+- .NET Framework ASP.NET MVC 앱에 대해 도구를 실행하는 방법의 데모
+- 문제 해결 팁
 
 ## <a name="upgrade-net-framework-aspnet-mvc-apps"></a>.NET Framework ASP.NET MVC 앱 업그레이드
 
@@ -63,7 +63,7 @@ upgrade-assistant .\AspNetMvcTest.csproj
 
 프로젝트 형식이 업데이트된 후 다음 단계는 프로젝트의 TFM을 업데이트하는 것입니다.
 
-:::image type="content" source="media/upgrade-assistant-aspnetmvc/update-tfm.png" alt-text=".NET 업그레이드 도우미 SDK 스타일로 프로젝트 변환":::
+:::image type="content" source="media/upgrade-assistant-aspnetmvc/update-tfm.png" alt-text=".NET 업그레이드 도우미 업데이트 TFM":::
 
 그런 다음, 도구는 프로젝트의 NuGet 패키지를 업데이트합니다. 여러 패키지에 업데이트가 필요하며 새 분석기 패키지가 추가됩니다.
 
@@ -86,7 +86,7 @@ upgrade-assistant .\AspNetMvcTest.csproj
 
 도구는 `system.web.webPages.razor/pages/namespaces`를 마이그레이션하여 구성 파일의 마이그레이션을 완료합니다.
 
-:::image type="content" source="media/upgrade-assistant-aspnetmvc/migrate-config2.png" alt-text=".NET 업그레이드 도우미 구성 마이그레이션":::
+:::image type="content" source="media/upgrade-assistant-aspnetmvc/migrate-config2.png" alt-text=".NET 업그레이드 도우미 마이그레이션 구성 완료":::
 
 도구는 알려진 수정 사항을 적용하여 C# 참조를 새 대응 항목으로 마이그레이션합니다.
 
@@ -113,7 +113,7 @@ upgrade-assistant .\AspNetMvcTest.csproj
   </ItemGroup>
 ```
 
-웹 서버에서 제공해야 하는 정적 파일은 `wwwroot`라는 루트 수준 폴더 내의 적절한 폴더로 이동되어야 합니다. 자세한 내용은 [ASP.NET Core의 정적 파일](/aspnet/core/fundamentals/static-files?view=aspnetcore-5.0)을 참조하세요. 파일이 이동된 후에는 이 파일에 해당하는 프로젝트 파일의 `<Content>` 요소가 삭제될 수 있습니다. 실제로 모든 `<Content>` 요소와 포함하는 그룹이 제거될 수 있습니다. 또한 `bootstrap` 또는 `jQuery`와 같은 클라이언트 쪽 라이브러리에 대한 `<PackageReference>`가 제거되어야 합니다.
+웹 서버에서 제공해야 하는 정적 파일은 `wwwroot`라는 루트 수준 폴더 내의 적절한 폴더로 이동되어야 합니다. 자세한 내용은 [ASP.NET Core의 정적 파일](/aspnet/core/fundamentals/static-files?view=aspnetcore-5.0&preserve-view=true)을 참조하세요. 파일이 이동된 후에는 이 파일에 해당하는 프로젝트 파일의 `<Content>` 요소가 삭제될 수 있습니다. 실제로 모든 `<Content>` 요소와 포함하는 그룹이 제거될 수 있습니다. 또한 `bootstrap` 또는 `jQuery`와 같은 클라이언트 쪽 라이브러리에 대한 `<PackageReference>`가 제거되어야 합니다.
 
 기본적으로 프로젝트는 클래스 라이브러리로 변환됩니다. 첫 번째 줄의 `Sdk` 특성을 `Microsoft.NET.Sdk.Web`으로 변경하고 `<TargetFramework>`를 `net5.0`으로 설정합니다. 프로젝트를 컴파일합니다. 이때 오류 수는 상당히 적습니다. 새 ASP.NET 4.6.1 MVC 프로젝트를 이동할 때 나머지 오류는 `App_Start` 폴더의 파일을 참조합니다.
 
@@ -123,7 +123,7 @@ upgrade-assistant .\AspNetMvcTest.csproj
 
 해당 파일과 전체 `App_Start` 폴더가 삭제될 수 있습니다. 마찬가지로 `Global.asax` 및 `Global.asax.cs` 파일도 제거될 수 있습니다.
 
-이때 남아 있는 오류만 묶음과 관련이 있습니다. [ASP.NET Core에서 묶음 및 축소를 구성하는 여러 가지 방법](/aspnet/core/migration/mvc?view=aspnetcore-5.0#configure-bundling-and-minification)이 있습니다. 프로젝트에 가장 적합한 항목을 선택합니다.
+이때 남아 있는 오류만 묶음과 관련이 있습니다. [ASP.NET Core에서 묶음 및 축소를 구성하는 여러 가지 방법](/aspnet/core/migration/mvc?view=aspnetcore-5.0&preserve-view=true#configure-bundling-and-minification)이 있습니다. 프로젝트에 가장 적합한 항목을 선택합니다.
 
 ## <a name="troubleshooting-tips"></a>문제 해결 팁
 

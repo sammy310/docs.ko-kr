@@ -6,12 +6,12 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 6e1a5bddc0d40b0b62c7b07dbc6b4134a3447a95
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 509902e9998af421c0afd31070b1be36d64df0f8
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91168792"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102604595"
 ---
 # <a name="accessibility-levels-c-reference"></a>액세스 가능성 수준(C# 참조)
 
@@ -40,10 +40,12 @@ ms.locfileid: "91168792"
 |----------------|----------------------------------|--------------------------------------------------|  
 |`enum`|`public`|None|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|없음|  
+|`interface`|`public`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`\*<br /><br /> `protected internal` <br /><br />`private protected`|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
-  
- 중첩된 형식의 액세스 가능성은 액세스 가능 도메인에 따라 다릅니다. [액세스 가능성 도메인](./accessibility-domain.md)은 멤버에 대해 선언된 액세스 가능성 및 한 수준 위 형식의 액세스 가능성 도메인에 의해 결정됩니다. 그러나 중첩 형식의 액세스 가능 도메인은 포함하는 형식의 액세스 가능 도메인을 벗어날 수는 없습니다.  
+
+\*: `private` 액세스 가능성이 있는 `interface` 멤버에는 기본 구현이 있어야 합니다.
+
+중첩된 형식의 액세스 가능성은 액세스 가능 도메인에 따라 다릅니다. [액세스 가능성 도메인](./accessibility-domain.md)은 멤버에 대해 선언된 액세스 가능성 및 한 수준 위 형식의 액세스 가능성 도메인에 의해 결정됩니다. 그러나 중첩 형식의 액세스 가능 도메인은 포함하는 형식의 액세스 가능 도메인을 벗어날 수는 없습니다.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 

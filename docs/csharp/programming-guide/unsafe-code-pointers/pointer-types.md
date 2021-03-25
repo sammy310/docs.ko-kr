@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 9c62a31f9a4a090fe56fb10ac45fe2f93f1b036e
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 0e384084ef1fbb9139c11880ffa8a79bad23b32e
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382037"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480574"
 ---
 # <a name="pointer-types-c-programming-guide"></a>포인터 형식(C# 프로그래밍 가이드)
 
@@ -21,7 +21,7 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-포인터 형식에서 `*` 앞에 지정된 형식을 **참조 형식**이라고 합니다. [비관리형 형식](../../language-reference/builtin-types/unmanaged-types.md)만 참조 형식일 수 있습니다.
+포인터 형식에서 `*` 앞에 지정된 형식을 **참조 형식** 이라고 합니다. [비관리형 형식](../../language-reference/builtin-types/unmanaged-types.md)만 참조 형식일 수 있습니다.
 
 포인터 형식은 [개체](../../language-reference/builtin-types/reference-types.md)에서 상속되지 않으며 포인터 형식과 `object`는 서로 변환되지 않습니다. 또한 boxing과 unboxing은 포인터를 지원하지 않습니다. 그러나 다른 포인터 형식 간의 변환 및 포인터 형식과 정수 형식 사이의 변환은 허용됩니다.
 
@@ -52,7 +52,7 @@ int* myVariable;
 
 여기서 `*myVariable` 식은 `int`에 포함된 주소에 있는 `myVariable` 변수를 가리킵니다.
 
-[fixed 문](../../language-reference/keywords/fixed-statement.md) 및 [포인터 변환](./pointer-conversions.md) 항목에 포인터에 대한 몇 가지 예제가 나와 있습니다. 다음 예제는 `unsafe` 키워드 및 `fixed` 문을 사용하고 정수 포인터를 증분하는 방법을 보여줍니다.  이 코드를 실행하려면 콘솔 애플리케이션의 주 함수에 붙여 넣습니다. 이러한 예제는 [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) 컴파일러 옵션 집합으로 컴파일되어야 합니다.
+[fixed 문](../../language-reference/keywords/fixed-statement.md) 및 [포인터 변환](./pointer-conversions.md) 항목에 포인터에 대한 몇 가지 예제가 나와 있습니다. 다음 예제는 `unsafe` 키워드 및 `fixed` 문을 사용하고 정수 포인터를 증분하는 방법을 보여줍니다.  이 코드를 실행하려면 콘솔 애플리케이션의 주 함수에 붙여 넣습니다. 이러한 예제는 [**AllowUnsafeBlocks**](../../language-reference/compiler-options/language.md#allowunsafeblocks) 컴파일러 옵션 집합으로 컴파일되어야 합니다.
 
 [!code-csharp[Using pointer types](snippets/FixedKeywordExamples.cs#5)]
 

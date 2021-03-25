@@ -3,12 +3,12 @@ title: nullable 참조 형식
 description: 이 문서에서는 C# 8.0에 추가된 nullable 참조 형식에 대해 간략하게 설명합니다. 이 기능이 신규 및 기존의 프로젝트의 null 참조 예외에 대해 어떻게 안전성을 제공하는지 알아봅니다.
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: b4906987ee23f458c1da9754ed7b402621169f63
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 36078031eebc1890edf04744475c330c2ba31f96
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099345"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480093"
 ---
 # <a name="nullable-reference-types"></a>nullable 참조 형식
 
@@ -218,4 +218,4 @@ public static class Program
 - [Nullable 참조 형식 사양 초안](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)
 - [Nullable 참조 소개 자습서](tutorials/nullable-reference-types.md)
 - [기존 코드베이스를 nullable 참조로 마이그레이션](tutorials/upgrade-to-nullable-references.md)
-- [-nullable(C# 컴파일러 옵션)](language-reference/compiler-options/nullable-compiler-option.md)
+- [**Null 허용**(C# 컴파일러 옵션)](language-reference/compiler-options/language.md#nullable)

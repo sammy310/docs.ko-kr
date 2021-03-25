@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: bc4b5755bf56a013a0deb4efdb821df18db5a18e
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 6c2c49a9fd55c406b69c02586a9b0e4a1d16ccd4
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303025"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103479931"
 ---
 # <a name="how-to-access-office-interop-objects-c-programming-guide"></a>Office interop 개체에 액세스하는 방법(C# 프로그래밍 가이드)
 
@@ -31,31 +31,31 @@ C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능이 있
 
 1. Visual Studio를 시작합니다.
 
-2. **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다. **새 프로젝트** 대화 상자가 나타납니다.
+2. **파일** 메뉴에서 **새로 만들기** 를 가리킨 다음 **프로젝트** 를 클릭합니다. **새 프로젝트** 대화 상자가 나타납니다.
 
-3. **설치된 템플릿** 창에서 **Visual C#** 을 확장한 다음 **Windows**를 클릭합니다.
+3. **설치된 템플릿** 창에서 **Visual C#** 을 확장한 다음 **Windows** 를 클릭합니다.
 
 4. **새 프로젝트** 대화 상자 위쪽에서 **.NET Framework 4** 이상 버전이 대상 프레임워크로 선택되어 있는지 확인합니다.
 
-5. **템플릿** 창에서 **콘솔 애플리케이션**을 클릭합니다.
+5. **템플릿** 창에서 **콘솔 애플리케이션** 을 클릭합니다.
 
 6. **이름** 필드에 프로젝트의 이름을 입력합니다.
 
-7. **확인**을 클릭합니다.
+7. **확인** 을 클릭합니다.
 
-     **솔루션 탐색기**에 새 프로젝트가 표시됩니다.
+     **솔루션 탐색기** 에 새 프로젝트가 표시됩니다.
 
 ## <a name="to-add-references"></a>참조를 추가하려면
 
-1. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다. **참조 추가** 대화 상자가 나타납니다.
+1. **솔루션 탐색기** 에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **참조 추가** 를 클릭합니다. **참조 추가** 대화 상자가 나타납니다.
 
-2. **어셈블리** 페이지의 **구성 요소 이름** 목록에서 **Microsoft.Office.Interop.Word**를 선택하고 Ctrl 키를 누른 상태로 **Microsoft.Office.Interop.Excel**을 선택합니다.  이러한 어셈블리가 보이지 않으면 어셈블리가 설치되어 있으며 표시되는지를 확인해야 할 수 있습니다. [방법: Office Primary Interop Assemblies](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)를 설치합니다.
+2. **어셈블리** 페이지의 **구성 요소 이름** 목록에서 **Microsoft.Office.Interop.Word** 를 선택하고 Ctrl 키를 누른 상태로 **Microsoft.Office.Interop.Excel** 을 선택합니다.  이러한 어셈블리가 보이지 않으면 어셈블리가 설치되어 있으며 표시되는지를 확인해야 할 수 있습니다. [방법: Office Primary Interop Assemblies](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)를 설치합니다.
 
-3. **확인**을 클릭합니다.
+3. **확인** 을 클릭합니다.
 
 ## <a name="to-add-necessary-using-directives"></a>필요한 using 지시문을 추가하려면
 
-1. **솔루션 탐색기**에서 *Program.cs* 파일을 마우스 오른쪽 단추로 클릭하고 **코드 보기**를 클릭합니다.
+1. **솔루션 탐색기** 에서 *Program.cs* 파일을 마우스 오른쪽 단추로 클릭하고 **코드 보기** 를 클릭합니다.
 
 2. 다음 `using` 지시문을 코드 파일의 맨 위에 추가합니다.
 
@@ -63,7 +63,7 @@ C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능이 있
 
 ## <a name="to-create-a-list-of-bank-accounts"></a>은행 계좌 목록을 만들려면
 
-1. 다음 클래스 정의를 **Program.cs**의 `Program` 클래스 아래에 붙여 넣습니다.
+1. 다음 클래스 정의를 **Program.cs** 의 `Program` 클래스 아래에 붙여 넣습니다.
 
      [!code-csharp[csProgGuideOfficeHowTo#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#2)]
 
@@ -95,7 +95,7 @@ C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능이 있
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C# 4 이상 버전에서는 [-link](../../language-reference/compiler-options/link-compiler-option.md) 컴파일러 옵션이 어셈블리를 참조한 경우 또는 이와 동등하게 Excel의 **Interop 형식 포함** 속성이 true로 설정되어 있는 경우, 반환된 `Object`를 `dynamic`으로 자동 변환합니다. 이 속성의 기본값은 true입니다.
+     C# 4 이상 버전에서는 [**EmbedInteropTypes**](../../language-reference/compiler-options/inputs.md#embedinteroptypes) 컴파일러 옵션이 어셈블리를 참조한 경우 또는 이와 동등하게 Excel의 **Interop 형식 포함** 속성이 true로 설정되어 있는 경우, 반환된 `Object`를 `dynamic`으로 자동 변환합니다. 이 속성의 기본값은 true입니다.
 
 ## <a name="to-run-the-project"></a>프로젝트를 실행하려면
 
@@ -145,11 +145,11 @@ C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능이 있
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-2. 형식 정보를 포함하는 대신 기본값을 변경하여 PIA를 사용하려면 **솔루션 탐색기**에서 **참조** 노드를 확장하고 **Microsoft.Office.Interop.Excel** 또는 **Microsoft.Office.Interop.Word**를 선택합니다.
+2. 형식 정보를 포함하는 대신 기본값을 변경하여 PIA를 사용하려면 **솔루션 탐색기** 에서 **참조** 노드를 확장하고 **Microsoft.Office.Interop.Excel** 또는 **Microsoft.Office.Interop.Word** 를 선택합니다.
 
-3. **속성** 창이 보이지 않으면 **F4**키를 누릅니다.
+3. **속성** 창이 보이지 않으면 **F4** 키를 누릅니다.
 
-4. 속성 목록에서 **Interop 형식 포함**을 찾은 다음 해당 값을 **False**로 변경합니다. 마찬가지로 명령 프롬프트에서 [-link](../../language-reference/compiler-options/link-compiler-option.md) 대신 [-reference](../../language-reference/compiler-options/reference-compiler-option.md) 컴파일러 옵션을 사용하여 컴파일할 수 있습니다.
+4. 속성 목록에서 **Interop 형식 포함** 을 찾은 다음 해당 값을 **False** 로 변경합니다. 마찬가지로 명령 프롬프트에서 [**EmbedInteropTypes**](../../language-reference/compiler-options/inputs.md#embedinteroptypes) 대신 [**References**](../../language-reference/compiler-options/inputs.md#references) 컴파일러 옵션을 사용하여 컴파일할 수 있습니다.
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>표에 서식을 더 추가하려면
 

@@ -5,16 +5,16 @@ ms.date: 02/08/2020
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: 0741ae88103b16ce34fd5a38b789beaf428e734a
-ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
+ms.openlocfilehash: 853138beed6ad9ddffa789f0080ca1fd2ba9d700
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96918582"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511920"
 ---
 # <a name="nested-types-c-programming-guide"></a>중첩 형식(C# 프로그래밍 가이드)
 
-[클래스](../../language-reference/keywords/class.md), [구조체](../../language-reference/builtin-types/struct.md), [대리자](../../language-reference/builtin-types/reference-types.md#the-delegate-type) 또는 [인터페이스](../../language-reference/keywords/interface.md) 내에서 정의된 형식을 중첩 형식이라고 합니다. 예
+[클래스](../../language-reference/keywords/class.md), [구조체](../../language-reference/builtin-types/struct.md) 또는 [인터페이스](../../language-reference/keywords/interface.md) 내에서 선언된 형식을 중첩 형식이라고 합니다. 예
 
 [!code-csharp[DeclareNestedClass](~/samples/snippets/csharp/objectoriented/nestedtypes.cs#DeclareNestedClass)]
 
@@ -25,7 +25,9 @@ ms.locfileid: "96918582"
 - **클래스** 의 중첩 형식은 [public](../../language-reference/keywords/public.md), [protected](../../language-reference/keywords/protected.md), [internal](../../language-reference/keywords/internal.md), [protected internal](../../language-reference/keywords/protected-internal.md), [private](../../language-reference/keywords/private.md) 또는 [private protected](../../language-reference/keywords/private-protected.md)일 수 있습니다.
 
    그러나 [sealed 클래스](../../language-reference/keywords/sealed.md) 내에서 `protected`, `protected internal` 또는 `private protected` 중첩 클래스를 정의하면 컴파일러 경고 [CS0628](../../misc/cs0628.md), “sealed 클래스에 새 protected 멤버가 선언되었습니다.”가 생성됩니다.
-  
+
+   또한 중첩 형식을 외부에서 볼 수 있도록 하는 것은 코드 품질 규칙 [CA1034](../../../fundamentals/code-analysis/quality-rules/ca1034.md)("중첩 형식은 노출되면 안됨")를 위반한다는 점에 유의하세요.
+
 - **구조체** 의 중첩 형식은 [public](../../language-reference/keywords/public.md), [internal](../../language-reference/keywords/internal.md) 또는 [private](../../language-reference/keywords/private.md)일 수 있습니다.
 
 다음 예제에서는 `Nested` 클래스를 public으로 설정합니다.
@@ -48,3 +50,4 @@ ms.locfileid: "96918582"
 - [클래스 및 구조체](./index.md)
 - [액세스 한정자](./access-modifiers.md)
 - [생성자](./constructors.md)
+- [CA1034 규칙](../../../fundamentals/code-analysis/quality-rules/ca1034.md)

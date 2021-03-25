@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 5e5333e384e8c77b500f74ab7c6038146df6e2c0
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 1b9d5d30c1a507e3bb7938ee0c036cdac3ef2f90
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87380789"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477684"
 ---
 # <a name="typeparam-c-programming-guide"></a>\<typeparam>(C# 프로그래밍 가이드)
 
@@ -41,7 +41,7 @@ ms.locfileid: "87380789"
 
 `<typeparam>` 태그에 대한 텍스트는 IntelliSense와 [개체 브라우저 창](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser)의 코드 주석 웹 보고서에 표시됩니다.
 
-[-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.
+[**DocumentationFile**](../../language-reference/compiler-options/output.md#documentationfile)로 컴파일하여 문서 주석을 파일로 처리합니다.
 
 ## <a name="example"></a>예제
 

@@ -3,12 +3,12 @@ title: 모델 작성기란 무엇이며 어떻게 작동하나요?
 description: ML.NET 모델 작성기를 사용하여 기계 학습 모델을 자동으로 학습하는 방법
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: da6348fb5dde83827558b66b6115d681f08948db
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: d7566a03f83eb76999d995a39aaae408405db2e1
+ms.sourcegitcommit: b27645cb378d4e8137a267e5467ff31409acf6c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161142"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231422"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>모델 작성기란 무엇이며 어떻게 작동하나요?
 
@@ -34,6 +34,21 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 - 은행 트랜잭션이 사기인지 여부를 검색
 - 고객 피드백 문제를 회사의 올바른 팀에 전달
 
+각 시나리오는 다음을 포함하는 다른 Machine Learning 작업에 매핑됩니다.
+
+- 이진 분류
+- 다중 클래스 분류
+- 회귀
+- Clustering
+- 변칙 탐지
+- 순위
+- 권장
+- 예측
+
+예를 들어 감정을 긍정 또는 부정으로 분류하는 시나리오는 이진 분류 작업에 속합니다.
+
+ML.NET에서 지원하는 다양한 ML 작업에 대한 자세한 내용은 [ML.NET의 기계 학습 작업](resources/tasks.md)을 참조하세요.
+
 ### <a name="which-machine-learning-scenario-is-right-for-me"></a>어떤 기계 학습 시나리오가 나에게 적합한가요?
 
 모델 작성기에서 시나리오를 선택해야 합니다. 시나리오 형식은 수행하려는 예측의 종류에 따라 다릅니다.
@@ -48,7 +63,7 @@ ML.NET 모델 작성기는 사용자 지정 기계 학습 모델을 빌드, 학�
 
 #### <a name="value-prediction"></a>값 예측
 
-회귀는 숫자를 예측하는 데 사용됩니다.
+회귀 작업에 속하는 값 예측은 숫자를 예측하는 데 사용됩니다.
 
 ![가격 예측, 매출 예측 및 예측 유지 관리와 같은 회귀 예를 보여 주는 다이어그램](media/regression-examples.png)
 

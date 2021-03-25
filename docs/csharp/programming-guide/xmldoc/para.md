@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: 146078bcb556b4085724ddcdac561ea868ab0481
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 5cb1c22dceae7a45a47fcb8807303d11e1220935
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381855"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478002"
 ---
 # <a name="para-c-programming-guide"></a>\<para>(C# 프로그래밍 가이드)
 
@@ -34,7 +34,7 @@ ms.locfileid: "87381855"
 
 `<para>` 태그는 [\<summary>](./summary.md), [\<remarks>](./remarks.md) 또는 [\<returns>](./returns.md) 같은 태그 내에 사용되어 텍스트에 구조를 추가할 수 있게 합니다.
 
-[-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.
+[**DocumentationFile**](../../language-reference/compiler-options/output.md#documentationfile)로 컴파일하여 문서 주석을 파일로 처리합니다.
 
 ## <a name="example"></a>예제
 

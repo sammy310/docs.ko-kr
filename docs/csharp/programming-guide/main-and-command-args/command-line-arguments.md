@@ -1,27 +1,39 @@
 ---
 title: 명령줄 인수 - C# 프로그래밍 가이드
 description: 명령줄 인수에 대해 알아봅니다. 콘솔 애플리케이션에서 명령줄 인수를 사용하는 예제를 살펴봅니다.
-ms.date: 07/20/2015
+ms.date: 03/11/2021
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 35ff0425d3f09cf4ad116cf688b943cef3ef02e3
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: f495efb3bc2c76a98f74c173d5b777ebe383edcb
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381920"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103190413"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>명령줄 인수(C# 프로그래밍 가이드)
 
 다음 방법 중 하나로 메서드를 정의하여 인수를 `Main` 메서드에 보낼 수 있습니다.
 
-[!code-csharp[csProgGuideMain#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#2)]  
+| `Main` 메서드 코드                 | `Main` 서명                             |
+|------------------------------------|----------------------------------------------|
+| 반환 값 없음, `await` 사용 없음 | `static void Main(string[] args)`            |
+| 반환 값, `await` 사용 없음    | `static int Main(string[] args)`             |
+| 반환 값 없음, `await` 사용      | `static async Task Main(string[] args)`      |
+| 반환 값, `await` 사용         | `static async Task<int> Main(string[] args)` |
 
-[!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]
+인수가 사용되지 않는 경우 약간 더 간단한 코드를 위해 메서드 서명에서 `args`를 생략할 수 있습니다.
+
+| `Main` 메서드 코드                 | `Main` 서명                |
+|------------------------------------|---------------------------------|
+| 반환 값 없음, `await` 사용 없음 | `static void Main()`            |
+| 반환 값, `await` 사용 없음    | `static int Main()`             |
+| 반환 값 없음, `await` 사용      | `static async Task Main()`      |
+| 반환 값, `await` 사용         | `static async Task<int> Main()` |
 
 > [!NOTE]
-> Windows Forms 애플리케이션의 `Main` 메서드에서 명령줄 인수를 사용하도록 설정하려면 *program.cs*에서 `Main`의 시그니처를 수동으로 수정해야 합니다. Windows Forms 디자이너에서 생성된 코드는 입력 매개 변수 없이 `Main`을 만듭니다. <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 또는 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType>를 사용하여 콘솔 또는 Windows 애플리케이션의 임의 지점에서 명령줄 인수에 액세스할 수 있습니다.
+> Windows Forms 애플리케이션의 `Main` 메서드에서 명령줄 인수를 사용하도록 설정하려면 *program.cs* 에서 `Main`의 시그니처를 수동으로 수정해야 합니다. Windows Forms 디자이너에서 생성된 코드는 입력 매개 변수 없이 `Main`을 만듭니다. <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 또는 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType>를 사용하여 콘솔 또는 Windows 애플리케이션의 임의 지점에서 명령줄 인수에 액세스할 수 있습니다.
 
 `Main` 메서드의 매개 변수는 명령줄 인수를 나타내는 <xref:System.String> 배열입니다. 일반적으로 다음과 같이 `Length` 속성을 테스트하여 인수가 있는지 확인합니다.
 
@@ -56,7 +68,7 @@ long num = Convert.ToInt64(s);
 
 명령 프롬프트에서 애플리케이션을 컴파일 및 실행하려면 다음 단계를 수행합니다.
 
-1. 다음 코드를 텍스트 편집기에 붙여넣고 이름 *Factorial.cs*를 사용하여 파일을 텍스트 파일로 저장합니다.
+1. 다음 코드를 텍스트 편집기에 붙여넣고 이름 *Factorial.cs* 를 사용하여 파일을 텍스트 파일로 저장합니다.
 
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]
 
@@ -66,7 +78,7 @@ long num = Convert.ToInt64(s);
   
      `csc Factorial.cs`  
   
-     애플리케이션에 컴파일 오류가 없으면 *Factorial.exe*라는 실행 파일이 만들어집니다.
+     애플리케이션에 컴파일 오류가 없으면 *Factorial.exe* 라는 실행 파일이 만들어집니다.
   
 4. 다음 명령을 입력하여 3의 계승을 계산합니다.
   

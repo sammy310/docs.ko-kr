@@ -8,24 +8,24 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 231e8e6a11f2655ccdea5489f054910a1ecf2586
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 6079fc5d2611ed1111d39d3f39e4c91817db528f
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863944"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189880"
 ---
 # <a name="properties-c-programming-guide"></a>속성(C# 프로그래밍 가이드)
 
-속성은 전용 필드의 값을 읽거나 쓰거나 계산하는 유연한 메커니즘을 제공하는 멤버입니다. 공용 데이터 멤버인 것처럼 속성을 사용할 수 있지만, 실제로 *접근자*라는 특수 메서드입니다. 이렇게 하면 데이터에 쉽게 액세스할 수 있으며 메서드의 안전성과 유연성 수준을 올리는 데에도 도움이 됩니다.  
+속성은 전용 필드의 값을 읽거나 쓰거나 계산하는 유연한 메커니즘을 제공하는 멤버입니다. 공용 데이터 멤버인 것처럼 속성을 사용할 수 있지만, 실제로 *접근자* 라는 특수 메서드입니다. 이렇게 하면 데이터에 쉽게 액세스할 수 있으며 메서드의 안전성과 유연성 수준을 올리는 데에도 도움이 됩니다.  
 
 ## <a name="properties-overview"></a>속성 개요  
   
 - 속성을 사용하면 클래스가 구현 또는 검증 코드를 숨기는 동시에 값을 가져오고 설정하는 방법을 공개적으로 노출할 수 있습니다.  
   
-- [get](../../language-reference/keywords/get.md) 속성 접근자는 속성 값을 반환하는 데 사용되고 [set](../../language-reference/keywords/set.md) 속성 접근자는 새 값을 할당하는 데 사용됩니다. 이러한 접근자는 각기 다른 액세스 수준을 가질 수 있습니다. 자세한 내용은 [접근자 액세스 가능성 제한](./restricting-accessor-accessibility.md)을 참조하세요.  
+- [get](../../language-reference/keywords/get.md) 속성 접근자는 속성 값을 반환하는 데 사용되고 [set](../../language-reference/keywords/set.md) 속성 접근자는 새 값을 할당하는 데 사용됩니다. C# 9 이상에서는 개체 생성 중에만 새 값을 할당하는 데 [init](../../language-reference/keywords/init.md) 속성 접근자가 사용됩니다. 이러한 접근자는 각기 다른 액세스 수준을 가질 수 있습니다. 자세한 내용은 [접근자 액세스 가능성 제한](./restricting-accessor-accessibility.md)을 참조하세요.  
   
-- [value](../../language-reference/keywords/value.md) 키워드는 `set` 접근자가 할당하는 값을 정의하는 데 사용됩니다.  
+- [value](../../language-reference/keywords/value.md) 키워드는 `set` 또는 `init` 접근자가 할당하는 값을 정의하는 데 사용됩니다.  
 - 속성은 *읽기/쓰기*(`get` 및 `set` 접근자 모두 포함), *읽기 전용*(`get` 접근자는 포함하지만 `set` 접근자는 포함 안 함) 또는 *쓰기 전용*(`set` 접근자는 포함하지만 `get` 접근자는 포함 안 함)일 수 있습니다. 쓰기 전용 속성은 거의 없으며 주로 중요한 데이터에 대한 액세스를 제한하는 데 사용됩니다.
 
 - 사용자 지정 접근자 코드가 필요 없는 단순한 속성은 식 본문 정의나 [자동 구현 속성](./auto-implemented-properties.md)으로 구현할 수 있습니다.
@@ -54,7 +54,7 @@ ms.locfileid: "86863944"
 
 경우에 따라 `get` 속성과 `set` 접근자에서 지원 필드에 값을 할당하거나 지원 필드에서 값을 검색하기만 하고 추가 논리를 포함하지 않을 수 있습니다. 자동 구현 속성을 사용하면 코드를 간소화할 수 있을 뿐 아니라 C# 컴파일러에서 지원 필드를 투명하게 제공하도록 할 수 있습니다.
 
-속성에 `get` 및 `set` 접근자가 모두 포함된 경우 두 접근자를 모두 자동 구현해야 합니다. 구현을 제공하지 않고 `get` 및 `set` 키워드를 사용하여 자동 구현 속성을 정의합니다. 다음 예제에서는 `Name` 및 `Price`가 자동 구현 속성인 점만 제외하고 이전 예제와 동일합니다. 이 예제에서는 매개 변수화된 생성자도 제거하므로 이제 `SaleItem` 개체가 매개 변수 없는 생성자 및 [개체 이니셜라이저](object-and-collection-initializers.md)에 대한 호출을 통해 초기화됩니다.
+속성에 `get` 및 `set`(또는 `get` 및 `init`) 접근자가 모두 포함된 경우 두 접근자를 모두 자동 구현해야 합니다. 구현을 제공하지 않고 `get` 및 `set` 키워드를 사용하여 자동 구현 속성을 정의합니다. 다음 예제에서는 `Name` 및 `Price`가 자동 구현 속성인 점만 제외하고 이전 예제와 동일합니다. 이 예제에서는 매개 변수화된 생성자도 제거하므로 이제 `SaleItem` 개체가 매개 변수 없는 생성자 및 [개체 이니셜라이저](object-and-collection-initializers.md)에 대한 호출을 통해 초기화됩니다.
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 

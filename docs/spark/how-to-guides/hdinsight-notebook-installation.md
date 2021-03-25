@@ -4,12 +4,12 @@ description: Azure HDInsight의 Jupyter Notebook에 .NET for Apache Spark를 설
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: ff6b3a64c01fb9148d3abe3d04579233d11a4f73
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: b84d61c29d2b2aa7a9fee20a8af9f3eee23f7e8b
+ms.sourcegitcommit: 46cfed35d79d70e08c313b9c664c7e76babab39e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599657"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102605479"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Azure HDInsight Spark 클러스터의 Jupyter Notebook에 .NET for Apache Spark 설치
 
@@ -38,20 +38,20 @@ Azure Portal에서 이전 단계에서 만든 **HDInsight Spark 클러스터** �
 
 1. 포털에서 **개요** 를 선택하고 **Ambari 홈** 을 선택합니다. 메시지가 표시되면 클러스터에 대한 로그인 자격 증명을 입력합니다.
 
-   ![Livy 서버 중지](./media/hdinsight-notebook-installation/select-ambari.png)
+   ![클러스터 대시보드 아래에서 Ambari 홈을 선택합니다.](./media/hdinsight-notebook-installation/select-ambari.png)
 
 2. 왼쪽 탐색 메뉴에서 **Spark2** 를 선택하고 **LIVY FOR SPARK2 SERVER** 를 선택합니다.
 
-   ![Livy 서버 중지](./media/hdinsight-notebook-installation/select-livyserver.png)
+   ![Livy for Spark2 Server 선택](./media/hdinsight-notebook-installation/select-livyserver.png)
 
 3. **hn0... host** 를 선택합니다.
 
-   ![Livy 서버 중지](./media/hdinsight-notebook-installation/select-host.png)
+   !["hno..."를 표시하는 호스트가 선택됨](./media/hdinsight-notebook-installation/select-host.png)
 
 4. **Livy for Spark2 Server** 옆에 있는 줄임표를 선택하고 **중지** 를 선택합니다. 메시지가 표시되면 **확인** 을 선택하여 계속합니다.
 
    Livy for Spark2 Server를 중지합니다.
-   ![Livy 서버 중지](./media/hdinsight-notebook-installation/stop-server.png)
+   ![줄임표를 선택한 다음, 중지 선택](./media/hdinsight-notebook-installation/stop-server.png)
 
 5. **hn1... host** 에 대해서도 위 단계를 반복합니다.
 
@@ -87,9 +87,9 @@ Azure Portal에서 이전 단계에서 만든 **HDInsight Spark 클러스터** �
 
 2. **Spark2**, **CONFIGS** 를 선택합니다. 그런 다음 **Custom spark2-defaults** 를 선택합니다.
 
-   ![구성 설정](./media/hdinsight-notebook-installation/spark-configs.png)
+   ![Ambari의 구성 탭](./media/hdinsight-notebook-installation/spark-configs.png)
 
-3. **속성 추가...** 를 선택하여 Spark 기본 설정을 추가합니다.
+3. **속성 추가** 를 선택하여 Spark 기본 설정을 추가합니다.
 
    ![속성 추가](./media/hdinsight-notebook-installation/add-property.png)
 
@@ -109,7 +109,7 @@ Azure Portal에서 이전 단계에서 만든 **HDInsight Spark 클러스터** �
 
    예를 들어 다음 이미지는 속성 1을 추가하는 설정입니다.
 
-   ![구성 설정](./media/hdinsight-notebook-installation/add-sparkconfig.png)
+   ![텍스트 속성 추가](./media/hdinsight-notebook-installation/add-sparkconfig.png)
 
    세 개의 속성을 추가한 후 **저장** 을 선택합니다. 구성 권장 사항의 경고 화면이 표시되면 **계속 진행** 을 선택합니다.
 
@@ -117,7 +117,7 @@ Azure Portal에서 이전 단계에서 만든 **HDInsight Spark 클러스터** �
 
    새 속성을 추가한 후 변경 내용의 영향을 받는 구성 요소를 다시 시작해야 합니다. 맨 위에 있는 **다시 시작** 을 선택하고, 드롭다운에서 **영향을 받는 모든 항목을 다시 시작** 합니다.
 
-   ![구성 설정](./media/hdinsight-notebook-installation/restart-affected.png)
+   ![다시 시작 > 영향을 받은 모든 항목 다시 시작이 강조 표시된 구성 탭](./media/hdinsight-notebook-installation/restart-affected.png)
 
    메시지가 표시되면 **모두 다시 시작 확인** 을 선택하고 계속 진행하고 **확인** 을 클릭하여 완료합니다.
 
@@ -142,7 +142,7 @@ Azure Portal에서 이전 단계에서 만든 **HDInsight Spark 클러스터** �
    df.Show();
    ```
 
-   ![Spark 작업 제출](./media/hdinsight-notebook-installation/create-df.png)
+   ![명령 실행을 보여주는 DataFrame 만들기](./media/hdinsight-notebook-installation/create-df.png)
 
    다음 코드 조각을 사용하여 UDF(사용자 정의 함수)를 등록하고 데이터 프레임에 UDF를 사용합니다.
 
@@ -151,7 +151,7 @@ Azure Portal에서 이전 단계에서 만든 **HDInsight Spark 클러스터** �
    df.Select(myawesomeudf(df["id"])).Show();
    ```
 
-   ![Spark 작업 제출](./media/hdinsight-notebook-installation/run-udf.png)
+   ![UDF 등록 및 사용](./media/hdinsight-notebook-installation/run-udf.png)
 
 ## <a name="next-steps"></a>다음 단계
 

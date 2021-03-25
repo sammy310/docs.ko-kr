@@ -3,12 +3,12 @@ title: PerfCollect를 사용하여 .NET 애플리케이션 추적
 description: .NET에서 perfcollect를 사용하여 추적을 수집하는 과정을 안내하는 자습서입니다.
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 53e4584953d2af4e766daadfa757cca752ae7329
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: 20e1bf56714fb32b5231d45b0ba35cdfcedaea2e
+ms.sourcegitcommit: e3cf8227573e13b8e1f4e3dc007404881cdafe47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593222"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103189932"
 ---
 # <a name="trace-net-applications-with-perfcollect"></a>PerfCollect를 사용하여 .NET 애플리케이션 추적
 
@@ -158,6 +158,9 @@ PerfView는 추적 파일에 포함된 데이터에 따라 지원되는 보기 �
 - 필요한 정보에 대한 보기가 없는 경우 원시 이벤트 보기에서 이벤트를 검색해 볼 수 있습니다.  **이벤트** 를 선택합니다.
 
 PerfView에서 보기를 해석하는 방법에 대한 자세한 내용은 보기 자체의 도움말 링크를 참조하거나 PerfView의 주 창에서 **도움말-> 사용자 가이드** 를 선택합니다.
+
+> [!NOTE]
+> <xref:System.Diagnostics.Tracing.EventSource?displayProperty=nameWithType> API를 통해 작성된 이벤트(프레임워크의 이벤트 포함)는 해당 공급자 이름 아래에 표시되지 않습니다. 대신, `Microsoft-Windows-DotNETRuntime` 공급자 아래에 `EventSourceEvent` 이벤트로 작성되고 해당 페이로드는 JSON 직렬화됩니다.
 
 ### <a name="use-tracecompass-to-open-the-trace-file"></a>TraceCompass를 사용하여 추적 파일 열기
 

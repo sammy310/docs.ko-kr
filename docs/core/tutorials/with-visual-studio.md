@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: a3a27c1baaab135108ef475d77c35d607c45fa82
-ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
+ms.openlocfilehash: 3986ef4083b964799be33d2876570ac4cf2082b8
+ms.sourcegitcommit: 1d3af230ec30d8d061be7a887f6ba38a530c4ece
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98794794"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102511855"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio"></a>자습서: Visual Studio를 사용하여 .NET 콘솔 애플리케이션 만들기
 
@@ -46,7 +46,7 @@ ms.locfileid: "98794794"
    > [!TIP]
    > .NET 템플릿이 표시되지 않으면 필요한 워크로드가 없을 수 있습니다. **원하는 항목을 찾을 수 없나요?** 메시지에서 **추가 도구 및 기능 설치** 링크를 선택합니다. Visual Studio 설치 관리자가 열립니다. **.NET Core 플랫폼 간 개발** 워크로드가 설치되어 있어야 합니다.
 
-1. **새 프로젝트 구성** 대화 상자에서 **프로젝트 이름** 상자에 **HelloWorld** 를 입력합니다. 그런 다음, **만들기** 를 선택합니다.
+1. **새 프로젝트 구성** 대화 상자에서 **프로젝트 이름** 상자에 **HelloWorld** 를 입력합니다. 그리고 **다음** 을 선택합니다.
 
    :::image type="content" source="./media/with-visual-studio/configure-new-project.png" alt-text="프로젝트 이름, 위치 및 솔루션 이름 필드를 사용하여 새 프로젝트 창을 구성합니다.":::
 
@@ -108,7 +108,7 @@ End Module
 
    해당 코드는 콘솔 창에 프롬프트를 표시하고 사용자가 문자열을 입력한 후 <kbd>Enter</kbd> 키를 누를 때까지 기다립니다. 이 문자열을 `name`이라는 변수에 저장합니다. 또한 현재 현지 시간을 포함하는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성 값을 검색한 후 `date`라는 변수(Visual Basic에서는 `currentDate`)에 할당합니다. 또한 콘솔 창에 해당 값을 표시합니다. 마지막으로 콘솔 창에 프롬프트를 표시하고 <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> 메서드를 호출하여 사용자 입력을 기다립니다.
 
-   `\n`(또는 Visual Basic 코드의 `vbCrLf`)은 줄 바꿈 문자를 나타냅니다.
+   <xref:System.Environment.NewLine>은 줄 바꿈을 나타내는 플랫폼과 언어에 독립적인 방법입니다. 대안은 C#의 `\n` 및 Visual Basic의 `vbCrLf`입니다.
 
    문자열 앞의 달러 기호(`$`)를 사용하면 변수 이름과 같은 식을 문자열의 중괄호 안에 넣을 수 있습니다. 식 값은 식 대신 문자열에 삽입됩니다. 이 구문을 [보간된 문자열](../../csharp/language-reference/tokens/interpolated.md)이라고 합니다.
 

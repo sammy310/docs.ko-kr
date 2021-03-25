@@ -2,12 +2,12 @@
 title: '호환성이 손상되는 변경: CA1416: 플랫폼 호환성'
 description: 코드 분석 규칙 CA1416 사용으로 발생하는 .NET 5의 호환성이 손상되는 변경에 관해 알아봅니다.
 ms.date: 09/29/2020
-ms.openlocfilehash: 0464e7bb5a494543c0201efa4630e82897b464c0
-ms.sourcegitcommit: 9c589b25b005b9a7f87327646020eb85c3b6306f
+ms.openlocfilehash: fa03e1f0bfa8438b3b2899aaf7c97f42533c7c02
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102257858"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477553"
 ---
 # <a name="warning-ca1416-platform-compatibility"></a>경고 CA1416: 플랫폼 호환성
 
@@ -94,7 +94,7 @@ public void PlayCMajor()
 
 모든 호출 사이트를 수정하지는 않으려면 다음 옵션 중 하나를 선택하여 경고를 중지할 수 있습니다.
 
-- 규칙 CA1416을 중지하려면 `#pragma` 또는 [-nowarn](../../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) 컴파일러 플래그를 사용하거나 editorconfig 파일에서 [규칙의 심각도](../../../../fundamentals/code-analysis/configuration-options.md#severity-level)를 `none`으로 설정하면 됩니다.
+- 규칙 CA1416을 중지하려면 `#pragma` 또는 [**DisabledWarnings**](../../../../csharp/language-reference/compiler-options/errors-warnings.md#disabledwarnings) 컴파일러 플래그를 사용하거나 editorconfig 파일에서 [규칙의 심각도](../../../../fundamentals/code-analysis/configuration-options.md#severity-level)를 `none`으로 설정하면 됩니다.
 
   ```csharp
   public void PlayCMajor()

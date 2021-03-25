@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 0ab30eb238a4db21233da612d132dfcbdb9e8895
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0121090265881bfa8287e2f9e83ad4b886bf17c1
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160517"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477490"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked 및 Unchecked(C# 참조)
 
@@ -33,7 +33,7 @@ checked 컨텍스트 또는 unchecked 컨텍스트에서 C# 문을 실행할 수
   
 - 정수 형식 간이나 `float` 또는 `double`에서 정수 형식으로의 명시적 숫자 변환  
   
- `checked`도 `unchecked`도 지정하지 않으면 상수가 아닌 식(런타임에 계산되는 식)의 기본 컨텍스트는 [-checked](../compiler-options/checked-compiler-option.md) 컴파일러 옵션의 값으로 정의됩니다. 기본적으로 이 옵션의 값은 설정되지 않으며 unchecked 컨텍스트에서 산술 연산이 실행됩니다.
+ `checked`와 `unchecked`가 모두 지정되지 않으면 상수가 아닌 식(런타임에 계산되는 식)의 기본 컨텍스트는 [**CheckForOverflowUnderflow**](../compiler-options/language.md#checkforoverflowunderflow) 컴파일러 옵션의 값으로 정의됩니다. 기본적으로 이 옵션의 값은 설정되지 않으며 unchecked 컨텍스트에서 산술 연산이 실행됩니다.
 
  상수 식(컴파일 시간에 완전히 계산될 수 있는 식)의 경우 기본 컨텍스트는 항상 checked입니다. 상수 식이 unchecked 컨텍스트에 명시적으로 배치되지 않는 경우 식에 대한 컴파일 시간 계산 중 발생하는 오버플로로 인해 컴파일 시간 오류가 발생합니다.
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 9ad2cfe62c70174eec9020ad4c8ce11608aca36d
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 3a030e07e6f0e48a37c1682ef1d93b33932bbaaa
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87380672"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103478415"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>XML 문서 기능을 사용하는 방법
 
@@ -113,7 +113,7 @@ ms.locfileid: "87380672"
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-이 명령으로 `TYPE` 명령을 사용하거나 브라우저에서 볼 수 있는 XML 파일 *XMLsample.xml*이 생성됩니다.
+이 명령으로 `TYPE` 명령을 사용하거나 브라우저에서 볼 수 있는 XML 파일 *XMLsample.xml* 이 생성됩니다.
 
 ## <a name="robust-programming"></a>강력한 프로그래밍
 
@@ -135,7 +135,7 @@ XML 문서는 `///`로 시작합니다. 새 프로젝트를 만드는 경우 마
 ## <a name="see-also"></a>참조
 
 - [C# 프로그래밍 가이드](../index.md)
-- [-doc(C# 컴파일러 옵션)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [**DocumentationFile**(C# 컴파일러 옵션](../../language-reference/compiler-options/output.md#documentationfile)
 - [XML 문서 주석](./index.md)
 - [DocFX 설명서 프로세서](https://dotnet.github.io/docfx/)
 - [Sandcastle 설명서 프로세서](https://github.com/EWSoftware/SHFB)

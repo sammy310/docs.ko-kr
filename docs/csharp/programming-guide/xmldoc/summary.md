@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: f9243e598aaf0c12dd48b48045f461b4b307c18f
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: e20970971636f13357c165f3065050fcf5914ada
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87380607"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477709"
 ---
 # <a name="summary-c-programming-guide"></a>\<summary>(C# 프로그래밍 가이드)
 
@@ -36,7 +36,7 @@ ms.locfileid: "87380607"
 
 `<summary>` 태그의 텍스트는 IntelliSense의 형식에 대한 유일한 정보 소스이며 개체 브라우저 창에도 표시됩니다.
 
-[-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다. 컴파일러에서 생성한 파일을 기반으로 해서 최종 문서를 만들려면 사용자 지정 도구를 만들거나 [DocFX](https://dotnet.github.io/docfx/) 또는 [Sandcastle](https://github.com/EWSoftware/SHFB)과 같은 도구를 사용하면 됩니다.
+[**DocumentationFile**](../../language-reference/compiler-options/output.md#documentationfile)로 컴파일하여 문서 주석을 파일로 처리합니다. 컴파일러에서 생성한 파일을 기반으로 해서 최종 문서를 만들려면 사용자 지정 도구를 만들거나 [DocFX](https://dotnet.github.io/docfx/) 또는 [Sandcastle](https://github.com/EWSoftware/SHFB)과 같은 도구를 사용하면 됩니다.
 
 ## <a name="example"></a>예제
 
@@ -67,7 +67,7 @@ ms.locfileid: "87380607"
 </doc>
 ```
 
-## <a name="example"></a>예제
+## <a name="cref-example"></a>cref 예
 
 다음 예제에서는 제네릭 형식에 대한 `cref` 참조를 만드는 방법을 보여 줍니다.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: a9e3b2e86528afcbe1330788e248f0143efb5c1b
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 1385365b2cdf18563686fdf4a5a1b17b89feafcd
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381556"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103477987"
 ---
 # <a name="param-c-programming-guide"></a>\<param>(C# 프로그래밍 가이드)
 
@@ -40,7 +40,7 @@ ms.locfileid: "87381556"
 
 `<param>` 태그에 대한 텍스트는 IntelliSense, 개체 브라우저, 코드 주석 웹 보고서에 표시됩니다.
 
-[-doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.
+[**DocumentationFile**](../../language-reference/compiler-options/output.md#documentationfile)로 컴파일하여 문서 주석을 파일로 처리합니다.
 
 ## <a name="example"></a>예제
 

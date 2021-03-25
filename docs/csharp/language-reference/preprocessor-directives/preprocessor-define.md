@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 961c20c091a4a6d7da421d94500abd41d2d60a5b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: dddc60b99a55762ae26a470fcd6b6a0e9b98bcf8
+ms.sourcegitcommit: 0bb8074d524e0dcf165430b744bb143461f17026
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160504"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103480361"
 ---
 # <a name="define-c-reference"></a>#define(C# 참조)
 
@@ -31,7 +31,7 @@ ms.locfileid: "91160504"
   
  기호를 정의할 수 있지만 기호에 값을 할당할 수는 없습니다. `#define` 지시문은 파일에서 전처리기 지시문이 아닌 명령을 사용하기 전에 나와야 합니다.  
   
- [-define](../compiler-options/define-compiler-option.md) 컴파일러 옵션으로 기호를 정의할 수도 있습니다. [#undef](./preprocessor-undef.md)로 기호 정의를 해제할 수 있습니다.  
+ [**DefineConstants**](../compiler-options/language.md#defineconstants) 컴파일러 옵션을 사용하여 기호를 정의할 수도 있습니다. [#undef](./preprocessor-undef.md)로 기호 정의를 해제할 수 있습니다.  
   
  `-define` 또는 `#define`으로 정의하는 기호는 동일한 이름의 변수와 충돌하지 않습니다. 즉, 변수 이름이 전처리기 지시문에 전달되지 않아야 하며 전처리기 지시문을 통해서만 기호를 평가할 수 있습니다.  
   
