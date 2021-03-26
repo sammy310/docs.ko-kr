@@ -426,7 +426,15 @@ items:
               - name: 잘 알려진 이벤트 공급자
                 href: ../core/diagnostics/well-known-event-providers.md
               - name: 분산 추적
-                href: ../core/diagnostics/distributed-tracing.md
+                items:
+                  - name: 개요
+                    href: ../core/diagnostics/distributed-tracing.md
+                  - name: 개념
+                    href: ../core/diagnostics/distributed-tracing-concepts.md
+                  - name: 계측
+                    href: ../core/diagnostics/distributed-tracing-instrumentation-walkthroughs.md
+                  - name: 컬렉션
+                    href: ../core/diagnostics/distributed-tracing-collection-walkthroughs.md
           - name: 기호
             href: ../core/diagnostics/symbols.md
           - name: 런타임 이벤트
